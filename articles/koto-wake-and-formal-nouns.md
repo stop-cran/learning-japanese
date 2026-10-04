@@ -80,20 +80,39 @@ Another common use is to spell out what some information amounts to:
 
 Useful English equivalents include "no wonder," "so that means," and "in other words." None is a universal translation. わけだ can also be used to develop an explanation without expressing a dramatic new realization.
 
+## How the preceding expression attaches
+
+Use the appropriate **noun-modifying form**, not an unchanged polite sentence: 読みます becomes **読むこと**, and 行きました becomes **行ったこと**. The connector depends on both the preceding expression and the following word.
+
+These are common **affirmative nonpast** patterns, not a universal attachment rule for every member of the family:
+
+| Preceding expression | Pattern | Examples |
+| --- | --- | --- |
+| Verb | Plain form directly before the noun | 読むこと, 読むわけ, 読むとき |
+| I-adjective | Plain form directly before the noun | 高いこと, 高いわけ, 高いとき |
+| Na-adjective | な before these nouns | 静かなこと, 上手なわけ, 静かなとき |
+| Noun with とき, ころ, まま, or ため | の | 学生のとき, 子供のころ, 昔のまま, 雨のため |
+| Noun predicate with explanatory わけ | な, or a formulation with という | 学生なわけだ, 学生というわけだ |
+| Noun predicate nominalized with こと | である | 学生であること |
+
+The last row avoids a useful trap: **学生であること** means "being a student," whereas **学生のこと** concerns a student or students: "matters about the student(s)." They do not mean the same thing.
+
+Past and negative predicates keep their appropriate plain-form endings: **行ったこと**, **学生だったわけ**, and **静かではないとき**. Do not insert an extra な or の after those endings.
+
 ## Learn the whole construction
 
 The words' central meanings help, but particles and surrounding verbs determine the construction:
 
 | Construction | Example | Meaning in this example |
 | --- | --- | --- |
-| Verb + ことにする | 毎日歩くことにした。 | I decided to walk every day. |
-| Past verb + ことがある | 京都に行ったことがある。 | I have been to Kyoto. |
+| Dictionary/ない-form verb + ことにする | 毎日歩くことにした。 | I decided to walk every day. |
+| た-form verb (plain past) + ことがある | 京都に行ったことがある。 | I have been to Kyoto. |
 | Dictionary-form verb + ことができる | 日本語を読むことができる。 | I can read Japanese. |
 | Dictionary-form verb + ことはない | 心配することはない。 | There is no need to worry. |
 | Clause + わけだ | 日本語が上手なわけだ。 | No wonder their Japanese is good. |
 | Clause + わけがない | 彼がそんなことを言うわけがない。 | There is no way he would say that. |
 | Clause + わけではない | 日本語が嫌いなわけではない。 | It is not that I dislike Japanese. |
-| Verb + わけにはいかない | 約束したので、休むわけにはいかない。 | I made a promise, so I cannot take time off. |
+| Dictionary/ない-form verb + わけにはいかない | 約束したので、休むわけにはいかない。 | I made a promise, so I cannot take time off. |
 
 The last example concerns obligations or circumstances that make an action unacceptable, rather than a lack of physical ability. Also, ことはない has other uses: the "no need to" interpretation above should not be applied mechanically to every occurrence.
 
@@ -102,6 +121,8 @@ The three negative わけ constructions are especially important to keep separat
 - **わけがない** strongly rejects a possibility.
 - **わけではない** rejects a characterization or inference; with an appropriate context, it can express "not necessarily" or "not always."
 - **わけにはいかない** says that circumstances, duties, or social considerations prevent an action.
+
+Negating the embedded verb changes the last pattern: **行かないわけにはいかない** means "I cannot very well not go," or, in context, "I have to go."
 
 There is overlap between larger expressions. **～ということだ** can also mean "that means ...," for example. "こと concerns content; わけ concerns explanatory reasoning" is a useful starting point, not a rule that こと can never appear in a conclusion.
 
@@ -124,13 +145,44 @@ These are representative uses, not exhaustive definitions. Classification as a f
 | **とき** (toki) | A time or occasion | 困ったとき - when in trouble |
 | **ころ** (koro) | An approximate time or a period of life | 子供のころ - when I was a child |
 
+### まま: a state remains unchanged
+
+The preceding expression identifies the state that continues:
+
+| Example | Meaning |
+| --- | --- |
+| 窓を開けたまま寝た。 | I slept with the window left open: the resulting state continued. |
+| 食べないまま出かけた。 | I left without eating: the action remained undone. |
+| この部屋は昔のままだ。 | This room is just as it used to be: its previous state is unchanged. |
+
+The past form in 開けたまま describes the result of opening the window, not simply an action happening at the same time as sleeping.
+
+### かぎり: scope or a continuing condition
+
+**私が知るかぎり** limits a claim to the speaker's knowledge. With a condition, かぎり instead means "as long as that condition holds":
+
+> 生きているかぎり、学び続けたい。  
+> I want to keep learning as long as I live.
+
+A negative condition often corresponds to English "unless":
+
+> 予約しないかぎり入れない。  
+> You cannot get in unless you make a reservation.
+
+The last example says that making a reservation is necessary; it does not by itself guarantee admission.
+
 ### とき versus ころ
 
 **とき** identifies a time or occasion. **ころ** frames it as an approximate time or period, often a period of life.
 
-The distinction is **not simply "short time versus long time."** Both 学生のとき and 学生のころ can refer to your student years. The latter more naturally evokes that period of your life as a whole, rather than selecting an occasion within it.
+The distinction is **not simply "short time versus long time."** Both 学生のとき and 学生のころ can refer to your student years as a whole. ころ makes the temporal boundaries less exact and often suits reminiscence; とき marks the relevant time without necessarily making it brief or precise.
 
-In **三時ごろ** ("around three o'clock"), ごろ is normally treated as a suffix. In **子供のころ**, ころ is a noun. Related meaning does not guarantee identical grammatical classification.
+| Example | Emphasis |
+| --- | --- |
+| 駅に着いたとき、雨が降り出した。 | It started raining when I arrived at the station. |
+| 駅に着いたころ、雨が降り出した。 | It started raining around the time I arrived at the station. |
+
+**ごろ** is the voiced suffix form used after time expressions, as in **三時ごろ** ("around three o'clock"). In **子供のころ**, ころ is a noun. Related meaning does not guarantee identical grammatical classification.
 
 ### A particularly important neighbor: の
 
@@ -146,12 +198,47 @@ It often overlaps with こと, but not everywhere:
 
 For directly perceived events like this, の is used rather than こと. Conversely, fixed expressions such as **ことができる** do not simply allow こと to be replaced by の.
 
+Some teaching grammars include nominalizing の among 形式名詞; other descriptions classify it as a **準体助詞（じゅんたいじょし, nominalizing particle）**. This concerns the nominalizing use, not every function of の.
+
 For learning purposes, **こと versus の** is the closest comparison for nominalization. **こと versus わけ** is more about content itself versus its explanatory interpretation.
+
+### の, ん, なの, and なん
+
+In explanatory **のだ／のです**, の commonly contracts to **ん**: **んだ／んです**. These constructions supply an explanation, background information, or a realization, rather than merely naming an action:
+
+> 今日は行けないんです。  
+> The thing is, I cannot go today.
+
+The contraction is normal in speech, including polite んです. It is not a new formal noun, nor a rule allowing every の to become ん: **読むのが好き** is neutral standard Japanese, while 読むんが好き is dialectal or otherwise marked.
+
+**なの and なん are combinations.** In the affirmative nonpast, nouns and na-adjectives need な before explanatory の; verbs and i-adjectives do not:
+
+| Basic statement | With のだ | Contracted form |
+| --- | --- | --- |
+| 行く - "[I] go" | 行くのだ | 行くんだ |
+| 高い - "It is expensive" | 高いのだ | 高いんだ |
+| 静かだ - "It is quiet" | 静かなのだ | 静かなんだ |
+| 学生だ - "[I am] a student" | 学生なのだ | 学生なんだ |
+
+Thus, **学生なんだ = 学生 + な + ん + だ**, with ん representing の. The same な + の sequence appears in **学生なの？** ("Are you a student?"); its polite explanatory counterpart is **学生なんですか？** Past forms work differently: **学生だったんです**, not 学生だったなんです.
+
+Do not confuse this なん with **何（なん）**, "what": **これは何だ？** means "What is this?"
+
+**もの contracts to もん**, not normally to a lone ん: **食べるもの → 食べるもん**, "something to eat." Sentence-final もの／もん can also express an emotionally emphasized reason or justification:
+
+> だって、怖いんだもん。  
+> But I am scared!
+
+Here, **ん = の** and **もん = もの** occur together. Sentence-final もん is very casual and may sound insistent or childlike. For the family list, group ん with の and もん with もの, while learning the complete constructions and their different functions.
 
 ## References
 
 - [Japan Foundation: 「こと」（1）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201112.html) - nominalization, こと versus の, and fixed expressions.
 - [N1et: 形式名詞「こと・の」違い 他「ところ・とき・ため」など見分け方](https://jn1et.com/formal-noun/) - a teaching-oriented classification of formal nouns and their functions.
+- [Kotobank: 準体助詞](https://kotobank.jp/word/準体助詞-530025) - nominalizing particles and alternative grammatical classifications.
 - [Wasabi: Explanatory わけだ](https://wasabi-jpn.com/magazine/japanese-grammar/explanatory/?lang=ja) - conclusions, explanations, restatements, and negative constructions.
+- [Kotobank: 頃](https://kotobank.jp/word/頃-488090) - the approximate-time noun ころ and the suffix ごろ.
+- [Tofugu: Explanatory んだ, んです, のだ, and のです](https://www.tofugu.com/japanese-grammar/explanatory-nda-ndesu-noda-nodesu/) - contractions, attachment forms, and explanatory functions.
+- [Bunpro: もの・もん](https://bunpro.jp/grammar_points/もの-もん) - the sentence-final reason/justification construction.
 
 [Back to the article index](../README.md)

@@ -8,7 +8,7 @@ This repository starts as a collection of standalone articles prompted by specif
 
 | Area | Article | Main question |
 | --- | --- | --- |
-| Grammar | [Koto, wake, and Japanese noun-based grammar](articles/koto-wake-and-formal-nouns.md) | How do こと and わけ differ, and what connects them with まま, かぎり, とき, and ころ? |
+| Grammar | [Koto, wake, and Japanese noun-based grammar](articles/koto-wake-and-formal-nouns.md) | How do こと and わけ differ, and how do の/ん, まま, かぎり, とき, and ころ fit into the family? |
 | Vocabulary | [Strange, suspicious, and rare: ayashii and related words](articles/ayashii-and-related-words.md) | How do 怪しい, 妖しい, 疑わしい, いかがわしい, 変な, and 珍しい differ? |
 
 ## Approach
