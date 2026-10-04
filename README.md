@@ -20,3 +20,5 @@ This repository starts as a collection of standalone articles prompted by specif
 - Link to references for further study. Some source material is in Japanese even though the articles are in English.
 
 The notes focus on practical understanding rather than exhaustive coverage. Examples illustrate particular uses; their translations are not intended as universal replacements for the Japanese expressions.
+
+For contributors and reviewers, see the [writing and review guidance](.github/copilot-instructions.md).
