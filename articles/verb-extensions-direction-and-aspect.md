@@ -219,6 +219,31 @@ Even one compound can have different interpretations. NINJAL contrasts two uses 
 
 Likewise, **読み込む** also means "read/load" in computing. Understanding the components helps, but the whole word and context select the sense.
 
+### ～つく: reaching a target or an idea
+
+**追いつく** and **思いつく** are established **ます-stem + verb** compounds, not て-form auxiliaries:
+
+| First verb | Formation | Compound and selected meaning |
+| --- | --- | --- |
+| 追う（おう） - pursue | 追い + つく | 追いつく（おいつく） - catch up |
+| 思う（おもう） - think | 思い + つく | 思いつく（おもいつく） - think of, hit upon |
+
+For these uses, **reaching something** is a useful connection: a target in pursuit, or an idea in thought. This is a learning aid, not a universal definition of ～つく.
+
+> 彼を追いかけたが、追いつけなかった。  
+> I chased after him, but couldn't catch up.
+
+**追いかける（おいかける）** describes pursuit; **追いつく** describes reaching the other person's position or level. Pursuit need not succeed, and catching up does not necessarily mean touching or capturing someone. Here, **追いつけなかった** is the past negative potential form: "couldn't catch up."
+
+> しばらく考えて、いい方法を思いついた。  
+> After thinking for a while, I came up with a good way to do it.
+
+In this use, **思いつく** focuses on an idea coming to mind, not simply continuing or beginning to think. It can follow deliberate thought, as here; inspiration need not come out of nowhere. The word also has "remember/recall" uses, so a wholly new idea is not required.
+
+Dictionary spellings include **追い付く／追い着く** and **思い付く**; the kana spellings above are also valid. Learn the spelling with the word rather than forcing every つく into one kanji-based explanation.
+
+Like ～込む, this belongs among patterns whose **whole compounds must be learned**. Do not attach つく freely to mean "successfully finish doing something."
+
 ### ～出す: outward movement is not always onset
 
 > かばんから本を取り出した。  
@@ -274,6 +299,7 @@ The construction builds in stages:
 | Get done / end up doing | て-form + しまう | 読んでしまう - get it read / end up reading it |
 | Prepare or leave a state in place | て-form + おく | 読んでおく - read beforehand |
 | Inward movement or deeper involvement | Stem + 込む, where the compound is established | 考え込む - become absorbed in thought |
+| Reaching a target or an idea in selected compounds | ます-stem + つく, where the compound is established | 追いつく - catch up; 思いつく - hit upon an idea |
 
 Here, "て-form" includes the appropriate **で-form**, as in 読んで. This is a navigation aid, not a promise that every verb accepts every pattern.
 
@@ -282,8 +308,9 @@ Here, "て-form" includes the appropriate **で-form**, as in 読んで. This is
 1. You will discuss a passage tomorrow and want to read it in preparation. Which directly expresses that purpose: **読んでおく** or **読み始める**?
 2. Does **町が変わっていった** contradict the idea of ～ていく because it is past?
 3. Does **本を取り出す** mean "start taking a book"?
+4. Does **彼を追いかけた**, "I chased after him," guarantee that you **追いついた**, "caught up"?
 
-**Answers:** 1. 読んでおく; 読み始める merely marks beginning the reading. 2. No: change can unfold forward from a reference point in the past. 3. No: it means taking a book out.
+**Answers:** 1. 読んでおく; 読み始める merely marks beginning the reading. 2. No: change can unfold forward from a reference point in the past. 3. No: it means taking a book out. 4. No: pursuing someone does not guarantee reaching them.
 
 ## References
 
@@ -294,6 +321,7 @@ Here, "て-form" includes the appropriate **で-form**, as in 読んで. This is
 - [IMABI: Start to I - ～始める and ～出す](https://imabi.org/start-to-%EF%BD%9E%E5%A7%8B%E3%82%81%E3%82%8B-%EF%BD%9E%E5%87%BA%E3%81%99-%EF%BD%9E%E3%81%8B%E3%81%91%E3%82%8B/) - onset, lexical senses, and restrictions on interchangeability.
 - Jisho's JMdict entries for [終わる](https://jisho.org/word/終わる), [切る](https://jisho.org/word/切る), and [しまう](https://jisho.org/word/仕舞う) - completion and related suffix/auxiliary senses.
 - Jisho's JMdict entries for [降り続く](https://jisho.org/word/降り続く), [読み込む](https://jisho.org/word/読み込む), and [読みかけ](https://jisho.org/word/読みかけ) - specific compounds and senses illustrated here.
+- Jisho's JMdict entries for [追いつく](https://jisho.org/word/追いつく) and [思い付く](https://jisho.org/word/思い付く) - catch-up, idea, and recall senses, with recorded spellings.
 - [Japan Foundation: ～てある, ～ている, and ～ておく (PDF)](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/pdf/NK51_16-17.pdf) - preparation and state comparisons.
 - [Tofugu: ～ておく](https://www.tofugu.com/japanese-grammar/teoku/) - preparation, leaving a state, and casual contractions.
 
