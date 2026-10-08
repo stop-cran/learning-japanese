@@ -9,7 +9,7 @@ This repository contains original notes plus data derived from open dictionary p
   and word spellings and readings against [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project). Both are the
   property of the [Electronic Dictionary Research and Development Group](https://www.edrdg.org), used under its
   [licence](https://www.edrdg.org/edrdg/licence.html). The articles are written text and do not copy dictionary entries.
-- **JLPT levels** use the old four-level lists in KANJIDIC2 mapped to N5 (level 4); the JLPT publishes no official kanji lists.
+- **JLPT levels** are community-maintained estimates taken from [kanjiapi.dev](https://kanjiapi.dev) (derived from KANJIDIC2 and community lists); the JLPT publishes no official kanji lists.
 
 The original articles and cards are licensed under
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) (see `LICENSE`); `strokes/` stays under CC BY-SA 3.0 as described above.
