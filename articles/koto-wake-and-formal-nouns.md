@@ -241,4 +241,4 @@ Here, **ん = の** and **もん = もの** occur together. Sentence-final も�
 - [Tofugu: Explanatory んだ, んです, のだ, and のです](https://www.tofugu.com/japanese-grammar/explanatory-nda-ndesu-noda-nodesu/) - contractions, attachment forms, and explanatory functions.
 - [Bunpro: もの・もん](https://bunpro.jp/grammar_points/もの-もん) - the sentence-final reason/justification construction.
 
-[Back to the article index](../README.md)
+[Article index on GitHub](https://github.com/stop-cran/learning-japanese#articles)

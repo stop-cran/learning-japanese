@@ -18,9 +18,16 @@ This repository starts as a collection of standalone articles prompted by specif
 Kanji cards, word articles and stroke data feed the [Kanji Cards Android app](https://github.com/stop-cran/kanji-cards-android). The
 format is described in [docs/content-format.md](docs/content-format.md); data sources are in [NOTICE.md](NOTICE.md).
 
-- `kanji/` – one card per kanji (118 so far): meaning, origin, key, readings, common words. The deck is a words-driven "starter" set (tag `starter`) containing kanji of all levels, not only N5: the 79 N5 kanji plus kanji from other levels that the starter words need. JLPT published no official kanji lists after 2010, so `jlpt` follows the community lists as mirrored by [kanjiapi.dev](https://kanjiapi.dev) (79 kanji at N5).
-- `words/` – one article per word (159 so far, mostly kango): composition of the kanji, synonyms, antonyms, nuance.
+- `kanji/` – one card per kanji (252): meaning, radical, readings, common words, and origin notes or explicitly labelled modern-shape mnemonics.
+  The deck covers all 79 N5 and all 166 N4 kanji in the selected [kanjiapi.dev](https://kanjiapi.dev) community sets.
+  It also includes 分 as a documented N5 exception and six higher-level kanji from the original words-driven starter set:
+  80 N5, 166 N4, five N3 and one N2. The `starter` tag identifies the original 118-card cohort, not every N4 addition.
+- `words/` – one article per word (279): native words and Sino-Japanese compounds, kanji composition, synonyms, antonyms and usage distinctions.
 - `strokes/` – generated stroke data. Validate with `python tools/validate.py`.
+
+The revised JLPT does not publish an exhaustive kanji syllabus. "N4 coverage" here means the exact named community set, not a guarantee
+about every examination question. See the [level-source policy](docs/jlpt-levels.md) and [N4 source snapshot](docs/n4-source-snapshot.json)
+for the list, exceptions, dictionary versions and provenance.
 
 ## Approach
 

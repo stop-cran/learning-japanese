@@ -13,6 +13,11 @@ You review `kanji/*.md` and `words/*.md` for **correctness only**. Do not edit f
 4. **Look-alike and Notes claims** - confirm every comparison (shape, meaning, reading) is true.
 5. **Examples** - every Japanese example sentence must be grammatical, natural and correctly translated; kana readings must be right.
 6. **Distractors** - they must be plausible confusions, not synonyms that make the quiz answer ambiguous, and each must have a card.
+   Follow the [quiz-authoring rule](../../docs/content-format.md#quiz-authoring), including the fallback risk when too few choices are curated.
+
+Use the [JLPT source policy](../../docs/jlpt-levels.md) for level checks, including documented exceptions. A missing API value is not a
+contradiction of an independently sourced label. Keep metadata verification separate from historical interpretation: KANJIDIC readings
+and a visually recognizable component do not by themselves prove an etymology or phonetic role.
 
 ## Report
 

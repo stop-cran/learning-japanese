@@ -325,4 +325,4 @@ Here, "て-form" includes the appropriate **で-form**, as in 読んで. This is
 - [Japan Foundation: ～てある, ～ている, and ～ておく (PDF)](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/pdf/NK51_16-17.pdf) - preparation and state comparisons.
 - [Tofugu: ～ておく](https://www.tofugu.com/japanese-grammar/teoku/) - preparation, leaving a state, and casual contractions.
 
-[Back to the article index](../README.md)
+[Article index on GitHub](https://github.com/stop-cran/learning-japanese#articles)

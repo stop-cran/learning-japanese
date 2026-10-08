@@ -229,4 +229,4 @@ This article is an English adaptation of an earlier Japanese-vocabulary note. Th
 - [Kotobank: 奇し](https://kotobank.jp/word/奇し-483239) - the separate classical adjectives くし and くすし, with links to surviving expressions.
 - [Wiktionary: 怪しい](https://en.wiktionary.org/wiki/怪しい) - an English-language overview of modern senses, alternate spellings, and inflection.
 
-[Back to the article index](../README.md)
+[Article index on GitHub](https://github.com/stop-cran/learning-japanese#articles)

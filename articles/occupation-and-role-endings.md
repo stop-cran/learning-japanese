@@ -200,4 +200,4 @@ The linked dictionary pages sometimes contain several entries or senses. The ref
 - Jisho's JMdict entries for [研究員](https://jisho.org/word/研究員) and [配信者](https://jisho.org/word/配信者) - readings and established lexical meanings.
 - [Kotobank: ブロガー](https://kotobank.jp/word/ぶろがー-3194694), デジタル大辞泉 - the borrowed label and its meaning.
 
-[Back to the article index](../README.md)
+[Article index on GitHub](https://github.com/stop-cran/learning-japanese#articles)

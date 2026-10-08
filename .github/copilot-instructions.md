@@ -41,7 +41,15 @@ Native PR reviews keep their platform's supported format. Do not assume support 
 ## Independent review and reconciliation
 
 - When multi-model review is requested, use different model families on the same identified snapshot. Keep initial reviewers independent of one another's findings and the author's prior review rationale. Record the models actually used rather than pinning versions in this guide.
-- Have reviewers cover correctness, scoped coverage, and comprehensibility; do not multiply reviewers merely to assign one per facet. Do not require multi-model review for every small edit.
+- Cover correctness, scoped coverage, and comprehensibility. A small article normally fits one reviewer per model; a large card batch
+  may use bounded facet-specific reviewers to avoid context overload. State each reviewer's files and facet, so no unassigned area is
+  accidentally reported as reviewed. Do not require multi-model review for every small edit.
+- Keep initial findings blind to other reviewers' reports and the author's rationale. If comparing model contributions, give the models
+  a common snapshot, scope, rubric, and source access for at least one shared sample; do not rank models from disjoint facet assignments.
+  Deduplicate by underlying defect, not wording. Record verified useful findings unique to each model, shared findings, unsupported
+  suggestions, and coverage limitations. This is evidence about the reviewed sample, not a general model benchmark.
+  When identifying unique contributions, compare equivalent observations anywhere in a report, including findings, optional suggestions,
+  limits, tentative hypotheses, and per-file notes; a different label or severity does not make the same observation a new discovery.
 - After authorized fixes, reuse the original reviewers where possible. Give them their original findings, the revised snapshot, and the actual diff.
 - Reconcile each finding as **resolved**, **partially resolved**, **unresolved**, **withdrawn**, or **optional**. Reassess severity when the evidence changes, and check changed passages for regressions.
 - Stop when no actionable defect or consequential unresolved claim remains in scope. Do not expand the assignment just to prolong the review or force agreement.
@@ -86,3 +94,8 @@ Keep that offer opt-in and at most once per session unless a distinct failure mo
 For each revision of the review rules, add a rule grounded in an observed failure, retire one that has not proved useful, or resolve a demonstrated conflict. Record the evidence and add/remove/regroup decision in the commit or PR and a short entry below. Do not add speculative process.
 
 - **2026-10-04 - Initial guide (add):** Records the agreed lessons from the [article revisions](https://github.com/stop-cran/learning-japanese/commit/0a813d9d1e3c180edd7c9691cfeffc93806711d8) and independent review/reconciliation: explicit attachment guidance, careful rare-spelling evidence, calibrated severity, and scope-aware closure. The limits above remain outside this guide's guarantees.
+- **2026-10-08 - Card expansion (add/regroup):** The 134-card N4 expansion and the request for facet-separated, three-model review
+  require explicit coverage assignments and a matched shared sample for contribution comparisons. Preserve blind initial findings and
+  distinguish source-backed defects from repeated or unsupported suggestions; reconcile against evidence rather than model votes.
+- **2026-10-08 - Reconciliation (regroup):** The shared N4 review reported the same quiz/register concerns under findings, hypotheses,
+  and unverified limits. Compare those sections together before crediting a model with a unique contribution.
