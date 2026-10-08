@@ -19,8 +19,8 @@ YAML front matter followed by the Markdown article.
 | --- | --- |
 | `kanji` | The character; must equal the file name. This is the card's stable ID. |
 | `title` | Short English meaning shown in the question state; unique across cards. |
-| `jlpt` | 1–5 (unofficial lists; N5 is easiest). |
-| `tags` | Free tags, e.g. `jlpt-n5`, `grade-1`, `pictograph`, `indicative`, `compound`. Stacks will filter on tags. |
+| `jlpt` | 1–5 (N5 is easiest). JLPT published no official kanji lists after 2010, so this follows the community lists as mirrored by kanjiapi.dev (79 kanji at N5). The deck is a words-driven starter set with kanji of all levels; kanji outside N5 are included because the starter words need them. |
+| `tags` | Free tags, e.g. `jlpt-n5` (must match `jlpt`), `starter` (all cards; the words-driven starter set), `grade-1`, `pictograph`, `indicative`, `compound`. Stacks will filter on tags. |
 | `strokes` | Stroke count; must match `strokes/<char>.json`. |
 | `radical`, `radicalNumber` | The key (radical) and its classical number (1–214). |
 | `phonetic` | Optional; the phonetic component, only if there is one. |
@@ -34,7 +34,7 @@ YAML front matter followed by the Markdown article.
 | `word` | The word as written; must equal the file name. |
 | `reading` | Kana reading. |
 | `title` | Short English gloss. |
-| `type` | `kango`, `wago`, `jukujikun` or `gairaigo`. |
+| `type` | `kango`, `wago`, `jukujikun` or `gairaigo`. Mixed on+kun words (e.g. 円高 えんだか) have no type of their own: use `kango` for an on-first compound and say in the body that it is mixed (jūbakoyomi). |
 | `kanji` | Kanji occurring in the word. |
 | `tags` | Free tags. |
 

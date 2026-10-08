@@ -19,7 +19,7 @@ Reviewers are read-only. They report; the maintainer decides what to apply.
 3. Collect findings; treat them as hypotheses and check disputed claims against a dictionary (kanjiapi.dev, Jisho/JMdict, Wiktionary, KanjiVG).
 4. Apply fixes, run `validate.py`, then `python tools/build_manifest.py` and commit the manifest with the change.
 
-## Review of the N5 set (106 kanji, 159 words)
+## Review of the first starter set (106 kanji, 159 words)
 
 Done once after the content was drafted: 6 accuracy, 3 comprehension and 1 consistency review.
 
@@ -32,9 +32,19 @@ What it found and what was fixed:
 
 Known gaps, deliberately left for later:
 
-- Twelve kanji used in words have no card yet: 側 海 達 供 旅 京 自 動 物 銀 短 事. 物 and 事 are the strongest candidates for a next batch.
+- The twelve kanji that words needed (側 海 達 供 旅 京 自 動 物 銀 短 事) now have cards; 118 kanji in total.
 - Some word `kanji:` lists omit characters without cards (地, 曜, 心).
 - Many words link to a kanji card that does not list the word under Common words (backlinks are not required for every prose link).
 - Words that mix on and kun readings (半年, 駅前, 毎月) are typed `kango`; the schema has no on+kun type.
 - Radicals were checked against the Kangxi table, not fetched per kanji from KANJIDIC2/Unihan. Word readings were checked from memory and spot lookups, not every entry in JMdict.
-- `jlpt: 5` follows an unofficial list. kanjiapi's old JLPT data puts several of these kanji (安, 新, 古, 多, 少, 黒, 赤, 青, 駅, 道, 店, 会, 社, 花, 魚, 犬) at N4.
+- Resolved afterwards: `jlpt` now follows the community lists mirrored by kanjiapi.dev, so cards for kanji such as 安, 新, 古, 多 and 会 are N4 (and 短 N2); all cards carry the `starter` tag.
+
+## Cross-model review (12 new cards plus 12 older ones)
+
+The same accuracy and comprehension prompts were run on gpt-6.1-sol and grok-4.7, in three chunks of 8 cards plus their words, after the earlier Claude-based review and fixes. All three families found real errors the previous round had missed, including in already-reviewed articles (the 東京/京都 "same kanji reversed" claim, the 北 compass-order rule, 下さい filed under くだ.る, 来てください listed as an imperative, 九人 explained via 苦, 三和土 as an example of ゾウ).
+
+- Both models found: 東京/京都, the 北 ordering rule, 犬 listing 犯 as an animal kanji, 食事 "ジ in compounds", the 中 うち example, 円高 reading and type, 銀行 "only" claims, the stale 長短 note.
+- Only gpt-6.1-sol found: the 来る request row, 子供/幼児 wording, 水中 contrast, 高 description.
+- Only grok-4.7 found: 下 ください, 発達, 九/苦, 三和土, 未/末, 北海道 etymology, 円 shape, 自 kun reading.
+
+Conclusion: no single model is a reliable sole reviewer; each caught roughly half. Run at least two model families per batch and treat findings as hypotheses. Fixes were applied by file group and are not independently re-reviewed.

@@ -18,7 +18,7 @@ This repository starts as a collection of standalone articles prompted by specif
 Kanji cards, word articles and stroke data feed the [Kanji Cards Android app](https://github.com/stop-cran/kanji-cards-android). The
 format is described in [docs/content-format.md](docs/content-format.md); data sources are in [NOTICE.md](NOTICE.md).
 
-- `kanji/` – one card per kanji (106 kanji so far, covering the unofficial JLPT N5 list): meaning, origin, key, readings, common words.
+- `kanji/` – one card per kanji (118 so far): meaning, origin, key, readings, common words. The deck is a words-driven "starter" set (tag `starter`) containing kanji of all levels, not only N5: the 79 N5 kanji plus kanji from other levels that the starter words need. JLPT published no official kanji lists after 2010, so `jlpt` follows the community lists as mirrored by [kanjiapi.dev](https://kanjiapi.dev) (79 kanji at N5).
 - `words/` – one article per word (159 so far, mostly kango): composition of the kanji, synonyms, antonyms, nuance.
 - `strokes/` – generated stroke data. Validate with `python tools/validate.py`.
 
