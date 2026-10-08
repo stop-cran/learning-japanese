@@ -18,8 +18,8 @@ This repository starts as a collection of standalone articles prompted by specif
 Kanji cards, word articles and stroke data feed the [Kanji Cards Android app](https://github.com/stop-cran/kanji-cards-android). The
 format is described in [docs/content-format.md](docs/content-format.md); data sources are in [NOTICE.md](NOTICE.md).
 
-- `kanji/` – one card per kanji (20 JLPT N5 samples so far): meaning, origin, key, readings, common words.
-- `words/` – one article per word (20 so far, mostly kango): composition of the kanji, synonyms, antonyms, nuance.
+- `kanji/` – one card per kanji (106 kanji so far, covering the unofficial JLPT N5 list): meaning, origin, key, readings, common words.
+- `words/` – one article per word (159 so far, mostly kango): composition of the kanji, synonyms, antonyms, nuance.
 - `strokes/` – generated stroke data. Validate with `python tools/validate.py`.
 
 ## Approach
@@ -32,4 +32,4 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
 
 The notes focus on practical understanding rather than exhaustive coverage. Examples illustrate particular uses; their translations are not intended as universal replacements for the Japanese expressions.
 
-For contributors and reviewers, see the [writing and review guidance](.github/copilot-instructions.md).
+For contributors and reviewers, see the [writing and review guidance](.github/copilot-instructions.md) and [REVIEW.md](REVIEW.md).
