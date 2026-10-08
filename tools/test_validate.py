@@ -560,6 +560,46 @@ class ValidateTests(unittest.TestCase):
         self.assertEqual(0, validate.check_strokes(self.stroke_path))
         self.assertEqual([], validate.errors)
 
+    def test_order_variants_accept_empty_and_nondefault_permutations(self):
+        for variants in ([], [[1, 3, 2, 4]], [[4, 3, 2, 1], [2, 1, 3, 4]]):
+            with self.subTest(variants=variants):
+                self.write_strokes(dict(self.stroke_data, orderVariants=variants))
+                self.check_card(self.kanji_path)
+                self.assertEqual([], validate.errors)
+
+    def test_order_variants_require_nested_integer_permutations(self):
+        cases = [None, {}, "orders", 1, True]
+        for order in (None, {}, "1324", 1, True, [], [1, 3, 2], [1, 3, 2, 4, 5],
+                      [1, 2, 3, 4], [1, 3, 2, 2], [0, 3, 2, 4], [1, 3, 2, 5],
+                      [1, "3", 2, 4], [True, 3, 2, 4], [1.0, 3, 2, 4],
+                      [1, None, 2, 4], [1, {}, 2, 4], [1, [3], 2, 4],
+                      [1, 2**31, 2, 4]):
+            cases.append([order])
+        for variants in cases:
+            with self.subTest(variants=variants):
+                validate.errors.clear()
+                self.write_strokes(dict(self.stroke_data, orderVariants=variants))
+                self.assertEqual(4, validate.check_strokes(self.stroke_path))
+                self.assert_error("orderVariants")
+                self.assertEqual(1, len(validate.errors))
+
+    def test_order_variants_do_not_allocate_from_invalid_declared_count(self):
+        for count in (3, 2**31 - 1, None, "4"):
+            with self.subTest(count=count):
+                validate.errors.clear()
+                self.write_strokes(dict(self.stroke_data, strokeCount=count,
+                                        orderVariants=[[1, 3, 2, 4]]))
+                validate.check_strokes(self.stroke_path)
+                self.assert_error("'strokeCount'")
+                self.assertEqual(1, len(validate.errors))
+
+    def test_main_reports_invalid_order_variants(self):
+        self.write_strokes(dict(self.stroke_data, orderVariants=[[1, 2, 3, 4]]))
+        output = io.StringIO()
+        with redirect_stdout(output):
+            self.assertEqual(1, validate.main())
+        self.assertIn("strokes/日.json: orderVariants[0]", output.getvalue())
+
     def test_copied_strokes_with_matching_counts_have_wrong_identity(self):
         other = self.root / "strokes" / "月.json"
         other.write_text(json.dumps(dict(self.stroke_data, kanji="月")), encoding="utf-8")

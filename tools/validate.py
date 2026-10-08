@@ -266,6 +266,16 @@ def check_strokes(path: Path) -> int | None:
         return count
     if count is not None and len(strokes) != count:
         err(path, "'strokeCount' does not match the number of strokes")
+    variants = data.get("orderVariants", [])
+    if not isinstance(variants, list):
+        err(path, "'orderVariants' must be a list of stroke-order lists")
+    else:
+        want = list(range(1, len(strokes) + 1))
+        for index, order in enumerate(variants):
+            if (not isinstance(order, list) or len(order) != len(want)
+                    or not all(is_int32(value) for value in order)
+                    or sorted(order) != want or order == want):
+                err(path, f"orderVariants[{index}] must be a different permutation of 1..{len(strokes)}")
     for index, stroke in enumerate(strokes):
         if not isinstance(stroke, dict):
             err(path, f"strokes[{index}] must be an object")

@@ -65,6 +65,10 @@ Body: meaning and usage, how the kanji combine, synonyms and antonyms, and the d
   "strokes": [ { "id": 1, "type": "㇒", "points": [[x, y], ...] } ] }
 ```
 
+Optional `orderVariants` lists extra stroke orders the app accepts as clean. Each entry must be a different permutation of the
+integers `1..strokeCount`, not the default order (e.g. `[[1, 3, 2]]` for three strokes). Edit `tools/order_variants.json`
+(`{ "<char>": [[...]] }`) and run `generate_strokes.py`; only add orders backed by a source (MEXT 筆順指導の手びき, KanjiVG variants).
+
 Strokes are listed in stroke order; each stroke is 16 points sampled by arc length from the KanjiVG path.
 Validation also checks file/kanji identity, schema, numeric fields and point structure. Sixteen points is the generator's convention;
 the importer requires at least two finite two-coordinate points per stroke.
