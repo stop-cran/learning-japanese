@@ -84,6 +84,10 @@ def check_kanji(path: Path, meta: dict, titles: dict) -> None:
         data = json.loads(strokes_path.read_text(encoding="utf-8"))
         if data.get("strokeCount") != meta["strokes"] or len(data.get("strokes", [])) != meta["strokes"]:
             err(path, f"strokes count {meta['strokes']} does not match {strokes_path.name}")
+        want = list(range(1, meta['strokes'] + 1))
+        for order in data.get('orderVariants', []):
+            if sorted(order) != want or order == want:
+                err(path, f"orderVariants entry {order} must be a different permutation of 1..{meta['strokes']}")
     for other in meta.get("distractors", []):
         if not (ROOT / "kanji" / f"{other}.md").is_file():
             err(path, f"distractor '{other}' has no card")

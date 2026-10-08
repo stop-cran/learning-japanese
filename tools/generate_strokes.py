@@ -71,12 +71,23 @@ def convert(char: str, svg_text: str) -> dict:
 def main() -> int:
     force = "--force" in sys.argv
     (ROOT / "strokes").mkdir(exist_ok=True)
+    variants_file = ROOT / "tools" / "order_variants.json"
+    variants = json.loads(variants_file.read_text(encoding="utf-8")) if variants_file.exists() else {}
     for card in sorted((ROOT / "kanji").glob("*.md")):
         char = card.stem
         target = ROOT / "strokes" / f"{char}.json"
         if target.exists() and not force:
+            existing = json.loads(target.read_text(encoding="utf-8"))
+            if existing.get("orderVariants", []) != variants.get(char, []):
+                existing.pop("orderVariants", None)
+                if char in variants:
+                    existing["orderVariants"] = variants[char]
+                target.write_text(json.dumps(existing, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+                print(f"{char}: order variants updated")
             continue
         data = convert(char, fetch_svg(char))
+        if char in variants:
+            data["orderVariants"] = variants[char]
         target.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
         print(f"{char}: {data['strokeCount']} strokes")
     return 0
