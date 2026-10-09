@@ -13,6 +13,12 @@ This repository starts as a collection of standalone articles prompted by specif
 | Vocabulary | [Strange, suspicious, and rare: ayashii and related words](articles/ayashii-and-related-words.md) | How do 怪しい, 妖しい, 疑わしい, いかがわしい, 変な, and 珍しい differ? |
 | Vocabulary | [Japanese occupation and role endings](articles/occupation-and-role-endings.md) | What do 者, 家, 師, 士, 手, 員, and 屋 contribute, and how do they relate to prestige and new word formation? |
 
+## Confusable vocabulary
+
+The [candidate inventory](docs/confusable-words.md) collects overlapping meanings, misleading English glosses,
+similar forms, false friends, and other easy-to-conflate cases for future comparison articles. It is a working list with
+provisional notation and links to existing material, not yet a complete usage reference or new app metadata.
+
 ## Kanji cards and words
 
 Kanji cards, word articles and stroke data feed the [Kanji Cards Android app](https://github.com/stop-cran/kanji-cards-android). The
