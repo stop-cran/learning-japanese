@@ -16,11 +16,26 @@ This repository contains original notes plus data derived from open dictionary p
   JMdict entries for the selected spellings and readings; not every sense of those entries applies to an article.
   The N3 index identifies a non-exhaustive selection of primary teaching senses and distinguishes new articles from two reused ones.
   Individual pages may explain and cite additional applicable senses; the index is not a complete inventory of those explanations.
+  The [N5/N4 vocabulary snapshot](docs/n5-n4-vocabulary-snapshot.json) and
+  [source-row index](docs/n5-n4-vocabulary-sources.tsv) reuse the same dictionary snapshot and distinguish supplied source IDs
+  from corrected lexical identities. Selected sense indices are one-based within that inspected dictionary version, not stable
+  identifiers for every future JMdict revision.
 - **Canonical radical glyphs for the N4 and N3 additions** are mapped from the compatibility decompositions in Unicode 17.0
   [UnicodeData.txt](https://www.unicode.org/Public/17.0.0/ucd/UnicodeData.txt), copyright Unicode, Inc., under the
   [Unicode License V3](docs/UNICODE-LICENSE.txt). Positional component shapes may differ from these canonical glyphs.
-- **JLPT levels** follow the community sets mirrored by [kanjiapi.dev](https://kanjiapi.dev), with explicitly sourced exceptions.
-  See the [level-source policy](docs/jlpt-levels.md). These are study classifications, not official post-2010 examination lists.
+- **Kanji JLPT levels** follow the community sets mirrored by [kanjiapi.dev](https://kanjiapi.dev), with explicitly sourced exceptions.
+- **N5/N4 vocabulary membership** derives from [Stephen Kraus's Yomitan JLPT vocabulary data](https://github.com/stephenmk/yomitan-jlpt-vocab),
+  revision `b062d4e38c4bdd0950ae1d4ec55f04b176182e03`, using `original_data/n5.csv` and `original_data/n4.csv`.
+  Credit Stephen Kraus, Jonathan Waller (the underlying [Tanos community lists](https://www.tanos.co.uk/jlpt/)), and EDRDG for
+  the dictionary data. Kraus's distribution is explicitly
+  [CC BY-SA 4.0](https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/yomitan-jlpt-vocab/index.json#L10-L12).
+  Waller's [archived sharing notice](https://web.archive.org/web/20240223231910id_/http://www.tanos.co.uk/jlpt/sharing/) permits reuse
+  with attribution under CC BY but does not name a license version. This repository uses the pinned Kraus distribution under
+  CC BY-SA 4.0; that does not re-label Waller's original notice as a version it did not state.
+  Transformations include documented spelling normalization, reuse of existing articles, grouping some readings on one page,
+  and correction of mistaken homograph IDs. Teaching explanations and examples are newly authored.
+  See the [level-source policy](docs/jlpt-levels.md). Both kanji and vocabulary levels are community study classifications,
+  not official post-2010 examination lists.
 
 The original articles and cards are licensed under
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) (see `LICENSE`); `strokes/` stays under CC BY-SA 3.0 as described above.

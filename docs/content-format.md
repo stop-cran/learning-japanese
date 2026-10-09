@@ -46,16 +46,46 @@ larger quizzes or a changed app can still require fallback choices. The validato
 
 ## Word article
 
+Word-header keys must be unquoted, unindented identifiers matching `[A-Za-z_][A-Za-z0-9_-]*`;
+whitespace before the colon is allowed. Quoted, escaped, tagged and anchored keys are unsupported, even if a later plain
+declaration repeats the same field. This is checked before YAML can decode or collapse duplicate names.
+The closing `---` delimiter may have trailing whitespace or a whitespace-separated `#` comment; this exception does not allow
+inline comments on fields. A prefix such as `---notes` is not a closing delimiter.
+
 | Field | Meaning |
 | --- | --- |
 | `word` | The word as written; must equal the file name. |
 | `reading` | Kana reading. |
 | `title` | Short English gloss. |
+| `jlpt` | Optional integer 1–5 identifying the word's sourced community vocabulary level, independently of its kanji. Declare it once at the top level with an unquoted key and number. Omit when no level is established; do not use a blank, `null`, a quoted number, a duplicate declaration, or an inferred level. |
 | `type` | `kango`, `wago`, `jukujikun` or `gairaigo`. Mixed on+kun words (e.g. 円高 えんだか) have no type of their own: use `kango` for an on-first compound and say in the body that it is mixed (jūbakoyomi). |
-| `kanji` | Every distinct kanji occurring in the written word, including characters whose cards have not been added. Do not omit a character merely to avoid a missing-card reference. |
+| `kanji` | Every distinct kanji occurring in the written word, including characters whose cards have not been added. Use `[]` for a kana-only spelling. Do not omit a character merely to avoid a missing-card reference. |
 | `tags` | Free tags. |
+| `quiz_exclusions` | Optional inline list of other exact `word` IDs that must not appear together as quiz choices. Omission or `[]` means no curated exclusions. Use one top-level unquoted key; reject duplicate declarations, repeated/self IDs and missing targets. |
 
 Body: meaning and usage, how the kanji combine, synonyms and antonyms, and the distinctive nuance.
+For kana-only words, keep the same section headings and explain the spelling or word formation instead of inventing a kanji decomposition.
+
+Vocabulary-aware app versions use an explicit word `jlpt` first. For legacy articles without this field, they retain the previous
+fallback based on the hardest known written kanji; that fallback is not a vocabulary-level source. Earlier app versions ignore
+word `jlpt` and always use the kanji-based calculation. N4 word study is cumulative and includes N5.
+Unlike kanji cards, word articles do not require a matching JLPT tag; `tags` remain free study metadata.
+
+The word quiz also uses `title` as the English answer label. The earlier
+[candidate builder](https://github.com/stop-cran/kanji-cards-android/blob/8c9713f77083a1ff8b10b5ccb4438b51f0231fec/app/src/main/java/io/github/stopcran/kanji/core/words/Words.kt)
+deduplicates exact titles and written forms, not semantic equivalents. Related tags, word type and shared kanji influence candidate
+selection. Check glosses against actual meaning and register; different English wording alone does not make two synonyms valid
+opposing choices. Do not distort a word's meaning merely to make its title look unique.
+
+Exclusion-aware app versions additionally honor `quiz_exclusions`, for example `quiz_exclusions: [気分]` on 気.
+That pair is excluded in both directions even if only one article declares it. Exclusions also apply between other choices
+within a question, in both Japanese-to-English and English-to-Japanese quizzes. They are pairwise, not transitive:
+excluding A/B and B/C does not automatically exclude A/C. The app never restores an excluded choice just to fill four slots;
+a small pool can yield fewer options, as with exact-title deduplication.
+
+Curate these pairs from actual overlapping meanings and register, not merely shared tags or similar spelling. This mechanism
+does not discover every synonym or guarantee semantic uniqueness for uncurated pairs. Earlier apps ignore this field.
+The validator checks declaration shape and reference integrity; editorial review establishes which pairs belong in the list.
 
 ## Strokes file
 

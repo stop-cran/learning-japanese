@@ -416,6 +416,204 @@ class ValidateTests(unittest.TestCase):
         validate.check_kanji(self.kanji_path, meta, {})
         self.assertEqual([], validate.errors)
 
+    def test_word_jlpt_is_optional_and_independent_of_written_kanji(self):
+        self.check_card(self.word_path)
+        for level in range(1, 6):
+            with self.subTest(level=level):
+                self.write("words/土地.md", WORD_HEADER + f"\njlpt: {level}", WORD_BODY)
+                meta = self.check_card(self.word_path)
+                self.assertEqual(level, meta["jlpt"])
+                self.assertEqual([], validate.errors)
+        header = WORD_HEADER.replace("土地", "カレー").replace("とち", "カレー")
+        header = header.replace("type: kango", "type: gairaigo").replace("[土, 地]", "[]")
+        path = self.write("words/カレー.md", header + "\njlpt: 5", WORD_BODY)
+        meta = self.check_card(path)
+        self.assertEqual([], meta["kanji"])
+        self.assertEqual(5, meta["jlpt"])
+        self.assertEqual([], validate.errors)
+
+    def test_word_jlpt_rejects_invalid_types_and_ranges(self):
+        for value in ("true", "false", "'5'", "5.0", "null", "", "[]", "[5]", "{}",
+                      "0", "6", "-1", "2147483648"):
+            with self.subTest(value=value):
+                validate.errors.clear()
+                self.write("words/土地.md", WORD_HEADER + f"\njlpt: {value}", WORD_BODY)
+                self.check_card(self.word_path)
+                self.assert_error("'jlpt' must be")
+
+    def test_word_jlpt_android_interpretation_cannot_be_shadowed(self):
+        for extra in ("\njlpt: 5 # level", "\njlpt: 0x5",
+                      "\njlpt: 5\nnote: |\n  jlpt: 4",
+                      "\nnote: |\n  jlpt: 5"):
+            with self.subTest(extra=extra):
+                validate.errors.clear()
+                self.write("words/土地.md", WORD_HEADER + extra, WORD_BODY)
+                self.check_card(self.word_path)
+                self.assert_error("'jlpt' is interpreted differently by YAML and Android")
+
+    def test_word_jlpt_rejects_duplicate_declarations_even_when_values_match(self):
+        for first in ("5", "4", "null", "", "[5]", "'5'"):
+            with self.subTest(first=first):
+                validate.errors.clear()
+                self.write("words/土地.md", WORD_HEADER + f"\njlpt: {first}\njlpt: 5", WORD_BODY)
+                self.check_card(self.word_path)
+                self.assert_error("'jlpt' must be a single top-level unquoted integer")
+
+    def test_word_jlpt_rejects_same_value_multiline_shadowing_and_quoted_keys(self):
+        for extra in ("\njlpt: 5\nnote: |\n  jlpt: 5",
+                      "\n'jlpt': 5", '\n"jlpt": 5'):
+            with self.subTest(extra=extra):
+                validate.errors.clear()
+                self.write("words/土地.md", WORD_HEADER + extra, WORD_BODY)
+                self.check_card(self.word_path)
+                self.assert_error("'jlpt' must be a single top-level unquoted integer")
+
+    def test_word_jlpt_comments_and_unrelated_scalar_text_are_not_declarations(self):
+        for extra in ("\n# jlpt: 4\njlpt: 5", "\n  # jlpt: 4\njlpt: 5",
+                      "\nnote: 'jlpt: 4'\njlpt: 5"):
+            with self.subTest(extra=extra):
+                validate.errors.clear()
+                self.write("words/土地.md", WORD_HEADER + extra, WORD_BODY)
+                self.check_card(self.word_path)
+                self.assertEqual([], validate.errors)
+
+    def test_word_jlpt_raw_declaration_rule_does_not_change_legacy_kanji_behavior(self):
+        self.write("kanji/日.md", KANJI_HEADER + "\njlpt: 5", KANJI_BODY)
+        self.check_card(self.kanji_path)
+        self.assertEqual([], validate.errors)
+
+    def test_word_quiz_exclusions_are_optional_and_allow_one_sided_references(self):
+        other_header = WORD_HEADER.replace("土地", "場所").replace("とち", "ばしょ")
+        other_header = other_header.replace("[土, 地]", "[場, 所]")
+        other = self.write("words/場所.md", other_header, WORD_BODY.replace("土地", "場所"))
+        self.check_card(other)
+        for extra in ("", "\nquiz_exclusions: []", "\nquiz_exclusions: [ ]",
+                      "\nquiz_exclusions: [場所]", "\nquiz_exclusions: ['場所']",
+                      '\nquiz_exclusions: ["場所"]'):
+            with self.subTest(extra=extra):
+                self.write("words/土地.md", WORD_HEADER + extra, WORD_BODY)
+                self.check_card(self.word_path)
+                self.assertEqual([], validate.errors)
+
+    def test_word_quiz_exclusions_reject_non_lists_and_nonstring_items(self):
+        for value in ("null", "true", "5", "{}", "場所", "'[]'", "[1]", "[true]", "[null]", "[{}]"):
+            with self.subTest(value=value):
+                validate.errors.clear()
+                self.write("words/土地.md", WORD_HEADER + f"\nquiz_exclusions: {value}", WORD_BODY)
+                self.check_card(self.word_path)
+                self.assert_error("'quiz_exclusions'")
+
+    def test_word_quiz_exclusions_reject_duplicate_and_shadowed_declarations(self):
+        for extra in ("\nquiz_exclusions: []\nquiz_exclusions: []",
+                      "\nquiz_exclusions: null\nquiz_exclusions: []",
+                      "\nquiz_exclusions: []\nnote: |\n  quiz_exclusions: []",
+                      "\n'quiz_exclusions': []", '\n"quiz_exclusions": []',
+                      "\nquiz_exclusions: [] # comment", "\nquiz_exclusions:\n  - 場所"):
+            with self.subTest(extra=extra):
+                validate.errors.clear()
+                self.write("words/土地.md", WORD_HEADER + extra, WORD_BODY)
+                validate.parse(self.word_path)
+                self.assert_error("'quiz_exclusions' must be a single top-level")
+        for indent in (" ", "\t", "\u00a0", "\u2003"):
+            with self.subTest(indent=repr(indent)):
+                validate.errors.clear()
+                self.write("words/土地.md", WORD_HEADER + f"\n{indent}quiz_exclusions: []", WORD_BODY)
+                validate.parse(self.word_path)
+                self.assert_error("'quiz_exclusions' must be a single top-level")
+
+    def test_word_quiz_exclusions_reject_duplicate_self_and_unknown_ids(self):
+        (self.root / "words" / "場所.md").touch()
+        original, _ = validate.parse(self.word_path)
+        for choices, message in (
+                (["場所", "場所"], "must not contain repeated entries"),
+                (["土地"], "must not include the word itself"),
+                (["不明"], "has no word article with that exact ID"),
+                ([""], "has no word article with that exact ID"),
+                (["場所 "], "has no word article with that exact ID"),
+                (["../words/場所"], "has no word article with that exact ID"),
+                (["..\\words\\場所"], "has no word article with that exact ID")):
+            with self.subTest(choices=choices):
+                validate.errors.clear()
+                validate.check_word(self.word_path, dict(original, quiz_exclusions=choices))
+                self.assert_error(message)
+        validate.errors.clear()
+        validate.check_word(self.word_path, dict(original, quiz_exclusions=["場所"]), set())
+        self.assert_error("has no word article with that exact ID")
+
+    def test_word_quiz_exclusions_ignore_comments_and_unrelated_scalar_text(self):
+        for extra in ("\n# quiz_exclusions: [不明]\nquiz_exclusions: []",
+                      "\n  # quiz_exclusions: [不明]\nquiz_exclusions: []",
+                      "\nnote: 'quiz_exclusions: [不明]'\nquiz_exclusions: []"):
+            with self.subTest(extra=extra):
+                self.write("words/土地.md", WORD_HEADER + extra, WORD_BODY)
+                self.check_card(self.word_path)
+                self.assertEqual([], validate.errors)
+
+    def test_word_quiz_exclusion_rule_does_not_change_legacy_kanji_behavior(self):
+        self.write("kanji/日.md", KANJI_HEADER + "\nquiz_exclusions: []\nquiz_exclusions: []", KANJI_BODY)
+        self.check_card(self.kanji_path)
+        self.assertEqual([], validate.errors)
+
+    def test_word_keys_reject_encoded_tagged_and_anchored_duplicate_exclusions(self):
+        for key in (r'"\u0071uiz_exclusions"', r'"\x71uiz_exclusions"',
+                    r'"\U00000071uiz_exclusions"', "!!str quiz_exclusions",
+                    "!<tag:yaml.org,2002:str> quiz_exclusions", "&key quiz_exclusions"):
+            with self.subTest(key=key):
+                validate.errors.clear()
+                self.write("words/土地.md", WORD_HEADER + f"\n{key}: [場所]\nquiz_exclusions: []", WORD_BODY)
+                self.check_card(self.word_path)
+                self.assert_error("word front matter keys must be unquoted")
+
+    def test_word_key_rule_covers_encoded_levels_and_other_keys(self):
+        for extra in (r'"\u006alpt": 4' + "\njlpt: 5",
+                      "!!str jlpt: 4\njlpt: 5",
+                      r'"\u0074itle": hidden' + "\ntitle: land; plot",
+                      "!!str title: hidden\ntitle: land; plot"):
+            with self.subTest(extra=extra):
+                validate.errors.clear()
+                self.write("words/土地.md", WORD_HEADER + "\n" + extra, WORD_BODY)
+                self.check_card(self.word_path)
+                self.assert_error("word front matter keys must be unquoted")
+
+    def test_word_plain_keys_allow_comments_values_and_space_before_colon(self):
+        for extra in ("\n# !!str quiz_exclusions: [場所]\nquiz_exclusions: []",
+                      "\nnote: '!!str quiz_exclusions: [場所]'",
+                      "\nnote: " + r"""'"\u0071uiz_exclusions": [場所]'""",
+                      "\n_note-2 : ordinary value"):
+            with self.subTest(extra=extra):
+                self.write("words/土地.md", WORD_HEADER.replace("title:", "title :") + extra, WORD_BODY)
+                self.check_card(self.word_path)
+                self.assertEqual([], validate.errors)
+
+    def test_word_plain_key_rule_preserves_legacy_kanji_parsing(self):
+        self.write("kanji/日.md", KANJI_HEADER + "\n" + r'"\u006alpt": 4' + "\njlpt: 5", KANJI_BODY)
+        self.check_card(self.kanji_path)
+        self.assertEqual([], validate.errors)
+
+    def test_word_closing_marker_prefix_cannot_hide_declarations(self):
+        for marker in ("---not-a-delimiter: ignored", "---: ignored", "----: ignored",
+                       "--- notes: ignored", "---#not-separated: ignored"):
+            with self.subTest(marker=marker):
+                validate.errors.clear()
+                header = WORD_HEADER + "\n" + marker + "\n" + r'"\u0071uiz_exclusions": [場所]'
+                self.write("words/土地.md", header + "\nquiz_exclusions: []", WORD_BODY)
+                self.check_card(self.word_path)
+                self.assert_error("word front matter must end with a standalone '---' delimiter")
+
+    def test_word_closing_marker_allows_whitespace_and_separated_comments(self):
+        for closing in ("---", "--- \t", "--- # closing comment", "---\u00a0# closing comment"):
+            with self.subTest(closing=closing):
+                text = f"---\n{WORD_HEADER}\nquiz_exclusions: []\n{closing}\n{WORD_BODY}"
+                self.word_path.write_text(text, encoding="utf-8")
+                self.check_card(self.word_path)
+                self.assertEqual([], validate.errors)
+
+    def test_word_closing_rule_preserves_legacy_kanji_parsing(self):
+        self.write("kanji/日.md", KANJI_HEADER + "\n---not-a-delimiter: ignored", KANJI_BODY)
+        meta, _ = validate.parse(self.kanji_path)
+        self.assertEqual("日", meta["kanji"])
+        self.assertEqual([], validate.errors)
+
     def test_word_kanji_includes_uncatalogued_and_supplementary_han(self):
         for word, reading, characters, missing in (
                 ("土地", "とち", ["土", "地"], "地"),

@@ -35,6 +35,115 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## N5/N4 vocabulary expansion (2026-10-09; reconciled)
+
+The expansion adds 924 word articles and reuses 384, covering all 1,324 rows in the pinned community vocabulary source:
+684 N5 rows and 640 additional N4 rows. Those rows map to 1,308 articles, including shared pages for multiple readings.
+The repository now contains 1,516 words. Source-covered articles have explicit vocabulary levels: 672 N5 and 636 N4;
+208 legacy articles remain without a sourced word-level label. No kanji cards, stroke assets or long-form articles were added.
+See the [source snapshot](docs/n5-n4-vocabulary-snapshot.json) and [row index](docs/n5-n4-vocabulary-sources.tsv).
+
+This is named-source coverage, not an official JLPT syllabus or a complete beginner curriculum. In particular, the selected
+lists omit several basic standalone particles. Their descendants share a source lineage, so agreement between those mirrors
+is not independent corroboration of level membership.
+
+### Source identity and independent coverage
+
+A separate all-row source audit checked lexical identity, spelling/reading restrictions and gloss qualifications against the
+recorded JMdict snapshot. Nine supplied dictionary IDs were corrected without rewriting the original CSV fields. コート,
+ビル and マッチ distinguish separately recorded homographs; their subsidiary senses do not acquire separate JLPT assignments.
+The terse source gloss for マッチ does not settle which "match" sense was intended. Dictionary recognition does not establish
+commonness, and uncertain source intent is not silently replaced by a preferred interpretation.
+
+All 32 initial editorial reports are complete and fingerprinted. For each of sixteen disjoint batches, both families received
+the same original frozen articles and factual source packet, without the other reviews or the author's review rationale.
+Each article was assessed separately for correctness, scoped coverage and comprehensibility.
+
+| Review family | Assignment | Declared coverage |
+| --- | --- | --- |
+| `gpt-6-astra`, as identified in the initial reports | Sixteen reviewers, one batch each | All 1,308 articles and 1,324 source rows |
+| `claude-opus-5.5`, explicitly selected and recorded by the runtime | Eight reviewers, two batches each | The same 1,308 articles and 1,324 source rows |
+
+The snapshots use baseline `fe82cb649b097a4897f8209f1336ce46199e5530` plus the authored changes. Each batch was frozen
+independently; they are not represented as one simultaneously captured original checkout. Content hashes normalize CRLF to LF.
+Two Claude JSON reports omit a reviewer field; their model attribution is retained separately from the explicit selection and
+runtime record rather than added retroactively to the initial reports.
+
+The corrected reconciliation input is imported-content version `e9a9b8f280e5c13c`, with frozen ZIP SHA-256
+`4388108bdd26921b5975e225d84abdc9ec815e65379deec29b42a17a4d73f42e`.
+There are 85 changed articles in R2 relative to the initial batches, including metadata-only changes. All original reviewers
+reconciled the actual diffs and revised passages. Unchanged assessments were carried forward only after hash comparison;
+declared reading extent and matching hashes are not machine proof of editorial attention.
+
+An additional review observation prompted a bounded colour-pair check. 青/青い and 白/白い need explicit exclusions;
+red, black and yellow pairs already have identical titles and are handled by exact-title deduplication. The R3 follow-up changes
+only metadata on 青 and 白, not teaching prose. Both original review families accepted that delta separately, bringing the
+number of distinct revised articles to 86. The final imported-content version is `919f5024dcf9724a`; its frozen review ZIP has
+SHA-256 `63b562aad2e7129dbfedc384d88c80155e60a9b47d35b30bcca1e555f18220e0`.
+
+**Result:** all 32 R2 reports and four narrow R3 reports are complete, with CLEAN verdicts within their recorded scopes.
+Required findings and consequential linguistic uncertainties have explicit dispositions; optional and contextual suggestions
+are not silently promoted into defects. Coverage, preserved hashes and those dispositions were checked separately from editorial
+judgment. The independent code-review finding was fixed and reconciled by its original reviewer.
+
+### Implemented corrections and calibrated judgments
+
+- Separate character readings, written kana endings and grammatical stems: 足りる/足す, 夫婦, 話す/話 and 出来る.
+  Replace the misleading vowel-length contrast for こう and the silent-pause cue before 雑誌's fricative.
+- Repair sense and usage explanations: medical 診る versus 視る, the aesthetic contrast in 花より団子, both person and
+  area objects of 案内, and 車's compound readings. Teach 午後 as afternoon as well as a p.m. label, and keep the
+  numerical 時/時間 contrast distinct from their wider lexical uses.
+- Make assigned meanings usable through translated examples and selective readings, including bare もう for an approaching
+  event and a complete negative-question exchange for いいえ. Clarify clothing verbs, warm versus cooled drinks,
+  phone-device versus phone-call contexts, and ordinary versus honorific or humble uses.
+- Remove unsupported frequency, register and historical claims rather than asserting their opposites. Examples include
+  毎月's reading-frequency comparison, the school/university cutoff, 電車's blanket commuter-service claim, and component
+  origin stories. Meaning aids are labelled as such. Official spelling recommendations are not turned into universal
+  ungrammaticality rules, and a contextual English article or number choice is not automatically a mistranslation.
+- Preserve word identities, readings, types and tags. Two original title changes are explicitly recorded in the source snapshot:
+  一杯 makes "full" co-primary with "one cupful", and 青い qualifies its conventional green uses. New `jlpt` and
+  `quiz_exclusions` fields are separate, deliberate metadata additions.
+
+The families produced overlapping and complementary observations. For example, both noticed the 夫婦 reading and the
+見る/花 explanations; other useful input concerned 午後, 案内, unsupported frequency claims and spelling-versus-stem wording.
+Defects, useful optional refinements and disputed recommendations remain distinct. The different reviewer group sizes and
+shared source dependencies prevent interpreting raw finding totals as a general model ranking.
+
+### App integration and limits
+
+The accompanying app change gives explicit word levels precedence over kanji-based inference, while retaining the legacy
+fallback only for omitted levels. Native SQLite migration/reopen checks cover preservation of word identities and review history;
+they are not an Android-device study session.
+
+The final app run passed 55 tests and a debug build against the immutable R3 directory and ZIP, importing all 1,516 words with
+zero problems. It checked 12,928 full-pool selections, 560 among-option cases and 40 triangle cases, plus 2,000 selections after
+native database reopen/reimport. All full-pool cases retained four choices without the declared conflicting pairs. The later app
+schema-document clarification did not change runtime or test source.
+
+The independent code review found a real format-enforcement gap: escaped or explicitly tagged YAML keys could hide duplicate
+declarations and silently remove an exclusion. The paired fix validates raw word keys before map collapse, also protecting `jlpt`;
+it rejects delimiter prefixes that could conceal later keys. The original reviewer reran the failing cases, checked 121 paired
+key/delimiter cases across Python and Kotlin, and accepted the fix. The content validator's 70 regression tests and full-corpus
+check pass. These code changes did not alter the reviewed word articles; validation-tool and documentation changes after the
+frozen corpus are recorded separately.
+
+The initial reviews also exposed a cross-word quiz issue. 気 and 気分 have valid, overlapping English glosses, and the
+inspected old selection rule ranked them as each other's strongest distractor across the full 1,516-word pool. Changing
+accurate meanings to make answer strings different would not solve that problem. The user authorized explicit pair exclusions,
+now documented in the [word format](docs/content-format.md#word-article): fourteen pairs, declared on thirteen articles and involving
+25 words. The 固い/堅い/硬い triangle has three independently supported edges, not inferred transitive closure.
+
+These constraints do not discover every synonym or guarantee semantic uniqueness for uncurated pairs. Older apps ignore them.
+Context-dependent secondary overlaps, including 緑 versus the conventional green uses of 青/青い, remain nonblocking follow-up
+notes rather than a claim that the curated set is exhaustive.
+The existing small-pool behavior is retained: if every distractor is excluded, only the target can remain; the current collection
+has many alternatives, but arbitrary forks or reduced pools need separate consideration.
+
+The editorial reviews are not exhaustive native-speaker, corpus-frequency, pitch-accent or historical-etymology audits.
+The 208 unsourced legacy words did not receive a new full linguistic review. An alternative mirror's 叱る versus the pinned
+然る item remains an upstream-source uncertainty, not authorization to rewrite the selected row or claim official membership.
+Optional sense expansion, additional examples and uniform citation styling are not represented as completed repairs.
+
 ## N3 expansion (2026-10-09; reconciled)
 
 The addition contains 362 kanji cards, 313 word articles and 362 generated stroke files, reaching 614 kanji and 592 words.

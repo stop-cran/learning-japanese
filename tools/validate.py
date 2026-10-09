@@ -28,7 +28,7 @@ KANJI_REQUIRED = ["kanji", "title", "jlpt", "tags", "strokes", "radical", "radic
 WORD_REQUIRED = ["word", "reading", "title", "type", "kanji", "tags"]
 WORD_TYPES = {"kango", "wago", "jukujikun", "gairaigo"}
 KANJI_LISTS = ("tags", "onyomi", "kunyomi", "distractors")
-WORD_LISTS = ("kanji", "tags")
+WORD_LISTS = ("kanji", "tags", "quiz_exclusions")
 KANJI_INTS = ("jlpt", "strokes", "radicalNumber")
 KANJI_SECTIONS = ["Meaning and origin", "Readings", "Common words", "Notes"]
 WORD_SECTIONS = ["Meaning", "How the kanji combine", "Synonyms and antonyms", "Distinctive meaning"]
@@ -54,6 +54,15 @@ def parse(path: Path):
     after_marker = text.find("\n", end + 1)
     body = text[after_marker + 1:].lstrip("\n") if after_marker >= 0 else ""
     fields = parse_android_header(header)
+    if path.parent.name == "words":
+        suffix = text[end + 4:after_marker] if after_marker >= 0 else text[end + 4:]
+        if suffix.strip(KOTLIN_WHITESPACE) and (
+                suffix[0] not in KOTLIN_WHITESPACE
+                or not suffix.lstrip(KOTLIN_WHITESPACE).startswith("#")):
+            err(path, "word front matter must end with a standalone '---' delimiter")
+        check_word_header_keys(path, header)
+        check_word_jlpt_declaration(path, header)
+        check_word_quiz_exclusions_declaration(path, header)
     article = path.parent.name == "articles"
     try:
         if article and fields is None and not has_yaml_mapping_root(header):
@@ -111,6 +120,45 @@ def parse_android_header(header: str) -> dict[str, str | list[str]] | None:
     return fields
 
 
+def check_word_header_keys(path: Path, header: str) -> None:
+    # Validate raw keys before YAML can decode aliases or collapse duplicate names.
+    for line in header.split("\n"):
+        if not line.strip(KOTLIN_WHITESPACE) or line.lstrip(KOTLIN_WHITESPACE).startswith("#"):
+            continue
+        key, colon, _ = line.partition(":")
+        if colon and (line[0] in KOTLIN_WHITESPACE
+                      or not re.fullmatch(r"[A-Za-z_][A-Za-z0-9_-]*", key.strip(KOTLIN_WHITESPACE))):
+            err(path, "word front matter keys must be unquoted, unindented plain identifiers")
+
+
+def word_declarations(header: str, name: str) -> list[tuple[str, str, bool]]:
+    declarations = []
+    for line in header.split("\n"):
+        if not line.strip(KOTLIN_WHITESPACE) or line.lstrip(KOTLIN_WHITESPACE).startswith("#"):
+            continue
+        key, colon, raw = line.partition(":")
+        key = key.strip(KOTLIN_WHITESPACE)
+        if colon and key.strip("'\"") == name:
+            declarations.append((key, raw.strip(KOTLIN_WHITESPACE), line[0] in KOTLIN_WHITESPACE))
+    return declarations
+
+
+def check_word_jlpt_declaration(path: Path, header: str) -> None:
+    # Last-value-wins parsing can hide duplicate or indented declarations.
+    declarations = word_declarations(header, "jlpt")
+    if declarations and (len(declarations) != 1 or declarations[0][0] != "jlpt"
+                         or declarations[0][2] or not re.fullmatch("[1-5]", declarations[0][1])):
+        err(path, "'jlpt' must be a single top-level unquoted integer from 1 to 5")
+
+
+def check_word_quiz_exclusions_declaration(path: Path, header: str) -> None:
+    declarations = word_declarations(header, "quiz_exclusions")
+    if declarations and (len(declarations) != 1 or declarations[0][0] != "quiz_exclusions"
+                         or declarations[0][2] or not declarations[0][1].startswith("[")
+                         or not declarations[0][1].endswith("]")):
+        err(path, "'quiz_exclusions' must be a single top-level unquoted key with an inline list")
+
+
 def check_android_front_matter(path: Path, fields: dict | None, meta: dict) -> None:
     if fields is None:
         err(path, "Android front matter requires 'key: value' on each non-comment header line")
@@ -118,7 +166,7 @@ def check_android_front_matter(path: Path, fields: dict | None, meta: dict) -> N
     if path.parent.name == "kanji":
         known = KANJI_REQUIRED + ["phonetic", "distractors"]
     elif path.parent.name == "words":
-        known = WORD_REQUIRED
+        known = WORD_REQUIRED + ["jlpt", "quiz_exclusions"]
     else:
         known = ["title"]
     for key in known:
@@ -339,9 +387,11 @@ def check_kanji(path: Path, meta: dict, titles: dict,
         err(path, "'distractors' must include at least 2 distinct existing nonself kanji")
 
 
-def check_word(path: Path, meta: dict) -> None:
-    if not check_metadata(path, meta, WORD_REQUIRED, WORD_LISTS):
+def check_word(path: Path, meta: dict, known_words: set[str] | None = None) -> None:
+    if not check_metadata(path, meta, WORD_REQUIRED, WORD_LISTS, ("jlpt",), ("jlpt",)):
         return
+    if "jlpt" in meta and meta["jlpt"] not in (1, 2, 3, 4, 5):
+        err(path, "'jlpt' must be 1-5 when supplied")
     if meta["word"] != path.stem:
         err(path, "'word' must equal the file name")
     if not KANA.match(meta["reading"]):
@@ -359,6 +409,18 @@ def check_word(path: Path, meta: dict) -> None:
     missing = written - set(meta["kanji"])
     if missing:
         err(path, "'kanji' is missing written Han characters: " + ", ".join(sorted(missing)))
+    exclusions = meta.get("quiz_exclusions", [])
+    if len(exclusions) != len(set(exclusions)):
+        err(path, "'quiz_exclusions' must not contain repeated entries")
+    if not exclusions:
+        return
+    if known_words is None:
+        known_words = {other.stem for other in (ROOT / "words").glob("*.md")}
+    for other in exclusions:
+        if other == meta["word"]:
+            err(path, "'quiz_exclusions' must not include the word itself")
+        elif other not in known_words:
+            err(path, f"quiz exclusion '{other}' has no word article with that exact ID")
 
 
 def err_count_for(path: Path) -> int:
@@ -369,6 +431,7 @@ def err_count_for(path: Path) -> int:
 def main() -> int:
     errors.clear()
     stroke_counts = {path.stem: check_strokes(path) for path in sorted((ROOT / "strokes").glob("*.json"))}
+    word_ids = {path.stem for path in (ROOT / "words").glob("*.md")}
     titles: dict[str, str] = {}
     for folder in ("kanji", "words", "articles"):
         for path in sorted((ROOT / folder).glob("*.md")):
@@ -383,7 +446,7 @@ def main() -> int:
             if folder == "kanji":
                 check_kanji(path, meta, titles, stroke_counts)
             else:
-                check_word(path, meta)
+                check_word(path, meta, word_ids)
             check_body(path, meta, body)
             check_links(path, body)
     for message in errors:

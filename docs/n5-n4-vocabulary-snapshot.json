@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "fe82cb649b097a4897f8209f1336ce46199e5530",
+  "scope": "Coverage of the pinned community N5/N4 vocabulary source rows, not an official syllabus or a complete beginner curriculum.",
+  "source": {
+    "repository": "stephenmk/yomitan-jlpt-vocab",
+    "commit": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+    "attribution": "Stephen Kraus; underlying community lists by Jonathan Waller.",
+    "license": "CC BY-SA 4.0 for the selected Kraus distribution.",
+    "files": [
+      {
+        "level": 5,
+        "url": "https://raw.githubusercontent.com/stephenmk/yomitan-jlpt-vocab/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n5.csv",
+        "sha256": "07dc6f197b51cc076c65c3c9f23218d10c2b67f76545f5c1c4d9e3750495533a",
+        "rows": 684
+      },
+      {
+        "level": 4,
+        "url": "https://raw.githubusercontent.com/stephenmk/yomitan-jlpt-vocab/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n4.csv",
+        "sha256": "a14dcc7fdc02259b22331a486c6ff66df74c16472c8aeb5a0ebe7e5fa8ee8eb4",
+        "rows": 640
+      }
+    ]
+  },
+  "jmdict": {
+    "snapshotDate": "2026-10-08",
+    "url": "https://www.edrdg.org/pub/Nihongo/JMdict_e.gz",
+    "downloadSha256": "3d5fc0a0f768df4d044744732348f09a47db97a6286c2de1d565e5766212a1ea",
+    "xmlSha256": "2de8f1a662c8ce69d3fa05f86d1dda224fabf21c2d45d07daa9e8da150189e0d",
+    "attribution": "Copyright James William Breen and the Electronic Dictionary Research and Development Group; CC BY-SA 4.0."
+  },
+  "coverageIndex": "n5-n4-vocabulary-sources.tsv",
+  "coverageIndexSha256": "35a1cdc9c79d14a178db362accb5a6216a97185e88a1f4ba8c5d946bdcdde130",
+  "sourceRowCounts": {
+    "N4": 640,
+    "N5": 684
+  },
+  "articleLevelCounts": {
+    "N4": 636,
+    "N5": 672
+  },
+  "coveredArticles": 1308,
+  "newArticles": 924,
+  "reusedArticles": 384,
+  "baselineMetadataAmendments": [
+    {
+      "word": "一杯",
+      "metadataChanges": {
+        "title": {
+          "before": "one cupful",
+          "after": "full; one cupful"
+        }
+      },
+      "reason": "Make the pinned N4:43 full sense co-primary in the quiz label while preserving the valid cupful sense and stable word identity.",
+      "evidence": "Claude batch05 V05-01; JMdict1165670 sense3 and source rowN4:43. Parent-approved exact amendment, not a general permission to rewrite baseline metadata."
+    },
+    {
+      "word": "青い",
+      "metadataChanges": {
+        "title": {
+          "before": "blue; green",
+          "after": "blue; sometimes green"
+        }
+      },
+      "reason": "Qualify the conventional green uses in the learner-facing label while preserving the legitimate sense and the primary blue meaning.",
+      "evidence": "Claude batch15 V15-01 and initial batch15 O15-01; JMdict1381390 sense2 usage qualification. Parent-approved exact amendment; no word identity or level change."
+    }
+  ],
+  "identityCorrections": [
+    {
+      "source_id": "N4:352",
+      "source_jmdict_entry": "1006610",
+      "jmdict_entry": 2137720,
+      "identity_note": "Use the independent adverb/interjection entry, interpreting the terse source 'really' as the response 'really?/is that so?', not the appearance auxiliary. The source English is underspecified; do not teach this as a general-purpose intensifier meaning 'very' or 'truly'."
+    },
+    {
+      "source_id": "N5:42",
+      "source_jmdict_entry": "2847612",
+      "jmdict_entry": 1000580,
+      "identity_note": "The demonstrative source gloss is incompatible with the interjection entry."
+    },
+    {
+      "source_id": "N4:229",
+      "source_jmdict_entry": "2524270",
+      "jmdict_entry": 1313580,
+      "identity_note": "Thing or matter, not the homographic sentence-final particle."
+    },
+    {
+      "source_id": "N5:246",
+      "source_jmdict_entry": "2846389",
+      "jmdict_entry": 1050390,
+      "identity_note": "Original entry 2846389 has only rare slang cop/police officer, contradicting the source gloss a glass. Corrected entry 1050390 sense 1 means glass (drinking vessel)/tumbler with unrestricted reading コップ and usual kana spelling. Drinking vessel, not the rare loanword for police officer."
+    },
+    {
+      "source_id": "N5:375",
+      "source_jmdict_entry": "2546180",
+      "jmdict_entry": 1597350,
+      "identity_note": "2546180 has only the Izumo-dialect interjection thank you, which does not match sourceGloss gradually. 1597350 sense 1 is gradually/by degrees/little by little, usually kana, reading だんだん with no sense restriction."
+    },
+    {
+      "source_id": "N5:571",
+      "source_jmdict_entry": "1182880",
+      "jmdict_entry": 1123880,
+      "identity_note": "1182880 refers to tree peony; its boar-meat sense is restricted to ぼたん. Neither matches sourceGloss button. 1123880 has unrestricted reading ボタン, clothing button sense 1 and push-button sense 2, both usually kana."
+    },
+    {
+      "source_id": "N5:254",
+      "source_jmdict_entry": "2216120",
+      "jmdict_entry": 1628530,
+      "identity_note": "Demonstrative this, not the homographic calling interjection."
+    },
+    {
+      "source_id": "N5:348",
+      "source_jmdict_entry": "2216210",
+      "jmdict_entry": 1006970,
+      "identity_note": "Demonstrative, not an attention-getting or encouraging interjection."
+    },
+    {
+      "source_id": "N4:585",
+      "source_jmdict_entry": "2607730",
+      "jmdict_entry": 1012500,
+      "identity_note": "Conditional if, not the homographic calling interjection."
+    }
+  ],
+  "indexSemantics": {
+    "source_id": "N-level:physical CSV line number, including the header at line 1.",
+    "source_kanji": "Original CSV kanji field, including empty values; the original written form is this or source_reading.",
+    "source_gloss": "Original Waller gloss retained for identification, not endorsed verbatim as teaching guidance.",
+    "article": "Stable repository-relative word page covering this row's reading and intended meaning.",
+    "article_level": "Easiest sourced level among the source rows taught by the article; individual senses/readings can have different source levels.",
+    "sense_indices": "Non-exhaustive selected teaching senses, one-based within the recorded JMdict snapshot; other entry senses are not automatically article claims.",
+    "additional_senses": "Other explicitly distinguished homograph senses, as semicolon-separated entry:sense pairs; not extra source rows or separate level assignments.",
+    "mapping_note": "Documented spelling normalization, stable article reuse or unchanged source spelling.",
+    "identity_note": "Correction of an incorrect supplied lexical identity; source_jmdict_entry is never overwritten.",
+    "source_note": "Source-gloss qualification, spelling/sense distinction or an explicitly retained ambiguity; not a new membership assignment."
+  },
+  "limits": [
+    "Rows, dictionary IDs, lexical identities and articles are different counting units.",
+    "Kana surfaces may be valid even when the dictionary pair index enumerates only kanji spellings.",
+    "Sense restrictions are checked against compatible spellings and readings; the particular intended use still requires editorial adjudication.",
+    "Dictionary identity does not establish examination membership, usage frequency or sentence naturalness.",
+    "N4 study is cumulative with N5; the selected source files omit standalone entries for several fundamental particles.",
+    "Alternative distributions descended from Waller are not independent level corroboration.",
+    "For マッチ, the source English 'match' does not settle contest versus matchstick. The supplied primary identity is preserved and both are distinguished; no sense-specific official N5 assignment is claimed."
+  ]
+}
