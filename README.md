@@ -18,16 +18,17 @@ This repository starts as a collection of standalone articles prompted by specif
 Kanji cards, word articles and stroke data feed the [Kanji Cards Android app](https://github.com/stop-cran/kanji-cards-android). The
 format is described in [docs/content-format.md](docs/content-format.md); data sources are in [NOTICE.md](NOTICE.md).
 
-- `kanji/` – one card per kanji (252): meaning, radical, readings, common words, and origin notes or explicitly labelled modern-shape mnemonics.
-  The deck covers all 79 N5 and all 166 N4 kanji in the selected [kanjiapi.dev](https://kanjiapi.dev) community sets.
-  It also includes 分 as a documented N5 exception and six higher-level kanji from the original words-driven starter set:
-  80 N5, 166 N4, five N3 and one N2. The `starter` tag identifies the original 118-card cohort, not every N4 addition.
-- `words/` – one article per word (279): native words and Sino-Japanese compounds, kanji composition, synonyms, antonyms and usage distinctions.
+- `kanji/` – one card per kanji (614): meaning, radical, readings, common words, and origin notes or explicitly labelled modern-shape mnemonics.
+  The deck covers all 79 N5, 166 N4 and 367 N3 kanji in the selected [kanjiapi.dev](https://kanjiapi.dev) community sets.
+  It also includes 分 as a documented N5 exception and one N2 kanji from the original words-driven starter set:
+  80 N5, 166 N4, 367 N3 and one N2. The `starter` tag identifies the original 118-card cohort, not the later expansions.
+- `words/` – one article per word (592): native words and Sino-Japanese compounds, kanji composition, synonyms, antonyms and usage distinctions.
 - `strokes/` – generated stroke data. Validate with `python tools/validate.py`.
 
-The revised JLPT does not publish an exhaustive kanji syllabus. "N4 coverage" here means the exact named community set, not a guarantee
-about every examination question. See the [level-source policy](docs/jlpt-levels.md) and [N4 source snapshot](docs/n4-source-snapshot.json)
-for the list, exceptions, dictionary versions and provenance.
+The revised JLPT does not publish an exhaustive kanji syllabus. Level coverage here means the exact named community set, not a guarantee
+about every examination question. The linked words are teaching examples, not an official vocabulary list for that level.
+See the [level-source policy](docs/jlpt-levels.md) and the [N4](docs/n4-source-snapshot.json) and
+[N3](docs/n3-source-snapshot.json) source snapshots for the lists, exceptions, dictionary versions and provenance.
 
 ## Approach
 

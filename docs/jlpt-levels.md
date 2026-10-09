@@ -10,9 +10,10 @@ Use the community sets exposed by [kanjiapi.dev](https://kanjiapi.dev/):
 
 - [N5](https://kanjiapi.dev/v1/kanji/jlpt-5): 79 characters in the snapshot inspected on 2026-10-08.
 - [N4](https://kanjiapi.dev/v1/kanji/jlpt-4): 166 characters in that snapshot, excluding the N5 set.
+- [N3](https://kanjiapi.dev/v1/kanji/jlpt-3): 367 characters in the snapshot inspected on 2026-10-09.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
-toward its coverage; do not create duplicate cards. "All N4" means all characters in this named source set, not an official guarantee
+toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee
 about every character that could appear in the exam. Earlier-level knowledge is still needed for higher-level study.
 
 An API `null`, a missing entry, or a network failure does not authorize an inferred level. Check another identified learning source

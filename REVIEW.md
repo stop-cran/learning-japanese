@@ -35,6 +35,114 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## N3 expansion (2026-10-09; reconciled)
+
+The addition contains 362 kanji cards, 313 word articles and 362 generated stroke files, reaching 614 kanji and 592 words.
+It covers all 367 characters in the named community N3 set, including five existing cards; this is not an official JLPT syllabus. The
+[N3 source snapshot](docs/n3-source-snapshot.json) and [primary-word index](docs/n3-word-sources.tsv) record the exact set,
+dictionary versions, selected word senses and transformations. The two reused word articles, 場所 and 部屋, now link their
+newly available components.
+
+All new kanji metadata was compared with the pinned KANJIDIC2 records, and all new word spelling/reading pairs were checked
+against restriction-aware JMdict records. The 315 primary pairs include the two reused words. Their indexed senses are
+non-exhaustive teaching anchors, not an inventory of every sense explained on a page. Modern-shape mnemonics are distinguished
+from historical etymology. Dictionary inclusion alone does not establish frequency or the naturalness of an invented example.
+
+### Independent coverage
+
+All sixteen initial reviews used the same immutable snapshot, based on `0fb9bf27b6686443457b8439364298c89e286722`
+plus the uncommitted expansion: app content version `e12b36c6323c28a1`, snapshot SHA-256
+`c025cc01c0ac7f40bbf0f1dbf6b5bd67b6d535b53d82e9b50da749ea42412a06`.
+Initial reports were preserved and fingerprinted before reconciliation, not overwritten with the revised verdicts.
+
+| Scope | Accuracy | Comprehension and scoped coverage |
+| --- | --- | --- |
+| Shared: 24 kanji + 24 words | Each of `claude-opus-5.5`, `gpt-6-astra`, `grok-4.7` checked all facets independently | Same three reviewers and rubric |
+| A: 55 kanji + 52 words | `claude-opus-5.5` | `gpt-6-astra` |
+| B: 56 kanji + 47 words | `gpt-6-astra` | `grok-4.7` |
+| C: 55 kanji + 49 words | `grok-4.7` | `claude-opus-5.5` |
+| D: 58 kanji + 48 words | `claude-opus-5.5` | `gpt-6-astra` |
+| E: 57 kanji + 48 words | `gpt-6-astra` | `grok-4.7` |
+| F: 57 kanji + 47 words | `grok-4.7` | `claude-opus-5.5` |
+
+The shared words include the two reused articles. These disjoint scopes cover all 677 relevant pages, with at least two model
+families per page. A separate `gpt-6-astra` reviewer checked whole-set consistency. The table records actual models used;
+no unavailable model was silently replaced.
+
+All sixteen original reviewers then reconciled a separate immutable corrected snapshot: app content version `1e2d7dc8d50fc546`,
+snapshot SHA-256 `8a425feb3ad48925eada24447934434b437e93c6160ba847fe2872b8f878f773`.
+The shared/A/B/C/D/E/F patches contain 16/15/13/32/12/13/31 changed pages respectively, totaling 132; two provenance files
+also changed. Reviewers read the actual diffs and revised changed passages, including changed front matter on tag-only pages.
+Unchanged prose was not generally reread. Reported file coverage was checked against the exact assignments; it remains a
+declared reading extent, not machine proof of editorial attention.
+
+All original findings have a resolved, withdrawn or optional disposition, with no consequential in-scope issue left open.
+Separate scope-label corrigenda preserve two accuracy reviewers' original reports while clarifying that reading every assigned
+file is not a curricular-coverage verdict. The final review-record update is outside the app manifest; imported content remains
+identical after the documented line-ending normalization to the reconciled snapshot.
+
+### Adjudicated changes
+
+- Correct the interpretation of secondary KANJIDIC2 stroke counts in 込 and 収: they are common miscounts, not equally accepted
+  alternatives. Primary metadata counts and stroke assets were already correct and remain unchanged.
+- Separate spelling boundaries from the learner's conjugation stem, especially 流れる: the ます-stem is 流れ, not なが.
+  Clarify that omitting an understood object does not make 洗う intransitive. Explain 怒る's おこる/いかる readings without
+  calling them different written forms, and distinguish 降る/降りる as different words rather than polite/casual readings.
+- Add missing kana and explanatory links between meanings: 生命/せいめい, 公苑/こうえん, 制度's 度 contribution,
+  等/など and 際's occasion use. Teach 息をする positively, and explain 生徒/学生/児童 as qualified institutional tendencies,
+  not absolute age rules. Fix the overbroad 更 nighttime-reading statement and improve the polite listener-family example.
+- Replace quiz-author instructions in 34 new kanji pages with learner-facing comparisons. Refine five titles (昨, 晩, 突, 等, 経)
+  without claiming their original narrower source-backed glosses were false. All ten affected complete default quiz sets were
+  semantically reassessed; no distractor arrays changed.
+- Preserve the practical 初めて/始める distinction while acknowledging 始めて as another spelling of the adverb.
+  Make the 昔 sense boundary and contextual English translations explicit. The 昨日 translation is more literal; 残念 retains
+  "with you" and explains the assumed scene. Contextual English is not inherently an incorrect translation.
+- Normalize three plural POS-tag aliases on exactly 59 new word pages, preserving all other tags and baseline metadata.
+  Clarify the primary-sense index in both public provenance locations. This does not imply that the earlier tags violated the
+  schema or caused a demonstrated app-filter failure.
+
+Adopted polish remains distinct from verified defects. Katakana retention in pronunciation aids is a consistency convention:
+the former hiragana transcriptions did not misspell the original Japanese sentences or change their pronunciation.
+The D-accuracy reviewer withdrew its contrary defect claim and its mistaken claim that 留学 was the only such conversion.
+The F-comprehension reviewer likewise reclassified its reading-aid concern as optional.
+
+### Model contributions in this sample
+
+Only the identical shared sample supports the comparison below. Observations were deduplicated across entire initial reports,
+including optional suggestions, source checks and per-page notes, not just their findings lists.
+
+| Model | Useful contribution in the shared sample |
+| --- | --- |
+| `claude-opus-5.5` | Additional minor findings on the listener's-family example, the broad 更 rule and 降's politeness implication; also the adopted optional 歳/年 clarification. |
+| `gpt-6-astra` | Independently identified the 込 common-miscount issue; additionally suggested 程 "refers to a level", adopted as local polish. Its extra age-counter pronunciation list remains optional and deferred. |
+| `grok-4.7` | Additional 日程 duration and 性格 component-wording suggestions, both adopted as localized polish. Its 初めて spelling observation overlaps Claude's optional note and is not a unique discovery. |
+
+Claude and Astra independently caught the same 込 source-interpretation issue. Claude and Grok differed on whether the original
+初めて spelling wording was a defect or optional qualification; both accept the revised version. Source inspection without a
+reported objection is not discovery credit. The broader review also retained a severity disagreement about the original 昔
+generalization while agreeing that the added sense qualifier closes the concern.
+
+Useful findings outside the matched sample included Astra's 流れる/洗う explanations, Claude's 息をする and school-term
+coverage, and Grok's missing pronunciation aids for 生命 and 公苑. Different files and facets offer different opportunities;
+neither these results nor raw finding counts support a numerical ranking. This is one small, task-specific comparison.
+
+### Limits and deferred observations
+
+Whole-set checks cover source membership, metadata, required links, structural stroke data and the deterministic manifest.
+All 362 new cards have three curated choices. For the 25 baseline cards needing one default fallback choice, the highest eligible
+candidate bands are unchanged: no new N3 card can displace them under the inspected full-pool, four-choice algorithm.
+This does not establish safety for arbitrary filtered pools or larger quizzes. For example, 晩's legitimate "evening; night"
+title overlaps 夕 and 夜, although they are not paired in the affected authored default sets.
+
+The reviews are not exhaustive native-speaker/corpus validation, pitch-accent or historical-origin audits, visual verification
+of every stroke trajectory, or Android device testing. Existing articles outside the declared scopes did not receive a fresh
+linguistic audit. Optional examples, mnemonic preferences and exhaustive sense expansion remain deferred.
+
+Word tags remain freeform rather than a complete POS ontology. The additional observation that 備える, 割る, 殺す, 求める and
+決める have subtype tags without a generic `verb` tag was checked separately: all five are new N3 pages, but their metadata
+did not change during reconciliation, and no documented parent-tag requirement or current app-filter defect was established.
+Broader POS-tag coverage is optional future taxonomy work, not an unresolved instance of the corrected plural aliases.
+
 ## Review of the first starter set (106 kanji, 159 words)
 
 Done once after the content was drafted: 6 accuracy, 3 comprehension and 1 consistency review.
