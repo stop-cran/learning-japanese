@@ -89,6 +89,13 @@ Send concrete corrections or guidance gaps to [repository issues](https://github
 When a user corrects the agent, a rule wrongly blocks reasonable work, conflicting sources require the user's resolution, or the user supplies missing guidance, offer to record that feedback.
 Keep that offer opt-in and at most once per session unless a distinct failure mode appears. Do not create an issue without authorization.
 
+## Editing cards (any file under `kanji/`, `words/`, `articles/`, `strokes/`)
+
+After every content edit, before committing: `python tools/validate.py` and `python tools/build_manifest.py`, and commit the regenerated
+`manifest.json` with the change. CI fails on a stale manifest, and the app drops any file whose hash no longer matches (a card silently
+disappears, and cards that reference it fail to parse). Then check pairs in [docs/confusable-words.md](../docs/confusable-words.md) against
+`quiz_exclusions` (see `docs/content-format.md`) whenever a word `title` is added or reworded.
+
 ## Maintaining this guide
 
 For each revision of the review rules, add a rule grounded in an observed failure, retire one that has not proved useful, or resolve a demonstrated conflict. Record the evidence and add/remove/regroup decision in the commit or PR and a short entry below. Do not add speculative process.
