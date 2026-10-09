@@ -87,6 +87,12 @@ Curate these pairs from actual overlapping meanings and register, not merely sha
 does not discover every synonym or guarantee semantic uniqueness for uncurated pairs. Earlier apps ignore this field.
 The validator checks declaration shape and reference integrity; editorial review establishes which pairs belong in the list.
 
+When to add one: a pair needs an exclusion when a learner could reasonably accept either `title` as the answer for either word
+(for example あげる/くれる, 開く/開ける, 良い/いい). Titles that are exactly equal need none, because the app already keeps them apart.
+Homophones such as 暑い/熱い need none either: the reading quiz asks for the reading of a written word and compares readings, and
+the meaning quizzes show different titles. Work through the pairs in [confusable-words.md](confusable-words.md) when you add or
+reword a `title`; declare the exclusion on one of the two cards.
+
 ## Strokes file
 
 ```json
