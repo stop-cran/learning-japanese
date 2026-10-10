@@ -47,7 +47,8 @@ Thinking of こと as "the fact that" can help with factual clauses, but that tr
 
 ### The ordinary noun meaning
 
-As an ordinary noun, わけ can mean "reason" or "circumstances":
+As an ordinary noun, **[わけ](../words/訳.md)** can mean "reason" or "circumstances".
+It can also be written **[訳](../kanji/訳.md)**; kana is common in grammatical constructions:
 
 > 彼が来ないわけは知っている。  
 > I know why he is not coming.
@@ -136,13 +137,13 @@ Each row gives a starting point and one translated example, not every constructi
 
 | Word | Central idea in these uses | Example |
 | --- | --- | --- |
-| **こと** (koto) | An action, event, fact, or content | 本を読むことが好きだ。 - I like reading books. |
+| **[こと](../words/こと.md)** (koto) | An action, event, fact, or content | 本を読むことが好きだ。 - I like reading books. |
 | **もの** (mono) | The general nature of things or characteristic behavior | 人は変わるものだ。 - People change; that is how people are. |
 | **わけ** (wake) | An explanation or conclusion | なるほど、忙しいわけだ。 - Ah, no wonder you are busy. |
 | **ところ** (tokoro) | A stage or point in an action | 今、出るところだ。 - I am just about to leave. |
-| **はず** (hazu) | Expectation based on reasons | 彼は来るはずだ。 - I expect him to come. |
-| **つもり** (tsumori) | Intention; in other uses, one's own understanding | 行くつもりだ。 - I intend to go. |
-| **まま** (mama) | A state remaining unchanged | 窓を開けたまま寝た。 - I slept with the window left open. |
+| **[はず](../words/はず.md)** (hazu) | Expectation based on reasons | 彼は来るはずだ。 - I expect him to come. |
+| **[つもり](../words/つもり.md)** (tsumori) | Intention; in other uses, one's own understanding | 行くつもりだ。 - I intend to go. |
+| **[まま](../words/まま.md)** (mama) | A state remaining unchanged | 窓を開けたまま寝た。 - I slept with the window left open. |
 | **とおり** (toori) | Correspondence with a model or instruction | 言われたとおりにした。 - I did as instructed. |
 | **ほう** (hou) | One alternative or side of a comparison | 電車で行くほうが安い。 - Going by train is cheaper. |
 
@@ -153,7 +154,7 @@ Each row gives a starting point and one translated example, not every constructi
 | **うち** (uchi) | Within a period, or while an opportunity lasts | 忘れないうちに - before I forget |
 | **あいだ** (aida) | An interval during which something happens | 待っているあいだ - while waiting |
 | **とき** (toki) | A time or occasion | 困ったとき - when in trouble |
-| **ころ** (koro) | An approximate time or a period of life | 子供のころ - when I was a child |
+| **[ころ](../words/ころ.md)** (koro) | An approximate time or a period of life | 子供のころ - when I was a child |
 | **まえ** (mae) | Before an event | 寝るまえに歯を磨く。 - I brush my teeth before going to bed. |
 | **あと** (ato) | After an event | 食べたあとで散歩した。 - I took a walk after eating. |
 | **たび** (tabi) | Each occurrence of an event | 会うたびに新しい話を聞く。 - Every time we meet, I hear a new story. |
@@ -166,16 +167,16 @@ For the basic event-order patterns, use **dictionary-form verb + まえに**, bu
 
 | Word | Central idea in these uses | Example |
 | --- | --- | --- |
-| **ため** (tame) | Purpose or cause | 留学するために貯金している。 - I am saving to study abroad. |
-| **おかげ** (okage) | A cause credited with a favorable result; also used ironically | 先生のおかげで合格できた。 - Thanks to my teacher, I was able to pass. |
+| **[ため](../words/ため.md)** (tame) | Purpose or cause | 留学するために貯金している。 - I am saving to study abroad. |
+| **[おかげ](../words/おかげ.md)** (okage) | A cause credited with a favorable result; also used ironically | 先生のおかげで合格できた。 - Thanks to my teacher, I was able to pass. |
 | **せい** (sei) | A cause blamed for an unwanted result | 雨のせいで試合が中止になった。 - The game was canceled because of the rain. |
 | **かわり** (kawari) | Substitution; other constructions express compensation or a trade-off | 私のかわりに彼が行った。 - He went instead of me. |
 | **ついで** (tsuide) | Using one activity as an opportunity for another | 買い物のついでに、郵便局に寄った。 - While out shopping, I stopped by the post office. |
-| **かぎり** (kagiri) | Limit, scope, or a continuing condition | 私が知るかぎり - as far as I know |
-| **ばあい** (baai) | A case, situation, or condition | 雨のばあいは中止です。 - It will be canceled if it rains. |
+| **[かぎり](../words/かぎり.md)** (kagiri) | Limit, scope, or a continuing condition | 私が知るかぎり - as far as I know |
+| **[ばあい](../words/場合.md)** (baai) | A case, situation, or condition | 雨のばあいは中止です。 - It will be canceled if it rains. |
 | **うえ** (ue) | A relationship between events: here, completing a step before acting | 内容を確認したうえで、申し込んだ。 - I checked the details before applying. |
 | **もと** (moto) | Being under guidance, authority, or conditions | 先生のもとで研究している。 - I am doing research under my teacher's guidance. |
-| **ほか** (hoka) | Something additional or outside a stated set | 英語のほかに、日本語も話せる。 - Besides English, I can also speak Japanese. |
+| **[ほか](../words/ほか.md)** (hoka) | Something additional or outside a stated set | 英語のほかに、日本語も話せる。 - Besides English, I can also speak Japanese. |
 | **わり** (wari) | An outcome judged against an expectation or proportion | この店は安いわりにおいしい。 - This restaurant's food is good considering how inexpensive it is. |
 | **すえ** (sue) | An eventual outcome after a process | 何度も話し合ったすえに、決めた。 - After repeated discussions, we reached a decision. |
 | **あげく** (ageku) | An eventual outcome, usually involving an unwelcome result or a troublesome process | 迷ったあげく、何も買わなかった。 - After much indecision, I bought nothing. |
@@ -286,7 +287,7 @@ These are worth recognizing alongside noun-based grammar, but **the uses in the 
 
 ### ほど: degree, extent, and comparison
 
-**程（ほど）** has noun uses meaning "degree" or "extent": **実力のほど**, "the extent of someone's ability." Daijisen separates these from its **副助詞（ふくじょし, adverbial particle）** entry, which covers the following uses:
+**[程](../kanji/程.md)（ほど）** has noun uses meaning "degree" or "extent": **実力のほど**, "the extent of someone's ability." Daijisen separates these from its **副助詞（ふくじょし, adverbial particle）** entry, which covers the following uses:
 
 | Use | Example | Meaning |
 | --- | --- | --- |
@@ -301,9 +302,9 @@ Notice the actual patterns: **quantity + ほど**, **昨日 + ほど + a negativ
 
 | Item | Selected function | Example |
 | --- | --- | --- |
-| **くらい／ぐらい** (kurai/gurai) | Approximate amount or degree | 10分くらい待った。 - I waited about ten minutes. |
-| **だけ** (dake) | Limitation; other uses express extent | 一つだけ選んだ。 - I chose just one. |
-| **ばかり** (bakari) | Concentration on one thing or activity; other uses include approximation | 甘いものばかり食べている。 - You keep eating nothing but sweet things. |
+| **[くらい／ぐらい](../words/くらい.md)** (kurai/gurai) | Approximate amount or degree | 10分くらい待った。 - I waited about ten minutes. |
+| **[だけ](../words/だけ.md)** (dake) | Limitation; other uses express extent | 一つだけ選んだ。 - I chose just one. |
+| **[ばかり](../words/ばかり.md)** (bakari) | Concentration on one thing or activity; other uses include approximation | 甘いものばかり食べている。 - You keep eating nothing but sweet things. |
 
 **た-form verb + ばかり** has a different use: **食べたばかりだ**, "I have just eaten." It presents the event as recent from the speaker's perspective, not as repeated eating. Similar meanings do not make ほど, くらい, だけ, and ばかり interchangeable in every construction.
 

@@ -25,12 +25,12 @@ kunyomi: [ひ, -び, -か]
 distractors: [月, 口]"""
 KANJI_BODY = """# 日 — sun, day
 
-**Strokes:** 4 · **Key (radical):** 日 (no. 72) · **Phonetic:** none · **JLPT:** N5
+**Strokes:** 4 · **Key (radical):** 日 (no. 72) · **JLPT:** N5
 
 ## Meaning and origin
 Meaning.
 ## Readings
-Readings.
+ひ (sun), -び (voiced), -か (day count).
 ## Common words
 Words.
 ## Notes
@@ -104,14 +104,22 @@ class ValidateTests(unittest.TestCase):
     def test_valid_fixtures_and_optional_phonetic(self):
         self.check_card(self.kanji_path)
         self.check_card(self.word_path)
-        body = KANJI_BODY.replace("**Phonetic:** none", "**Phonetic:** not identified here")
-        self.write("kanji/日.md", KANJI_HEADER, body)
         meta = self.check_card(self.kanji_path)
         self.assertNotIn("phonetic", meta)
-        body = KANJI_BODY.replace("**Phonetic:** none", "**Phonetic:** 日")
+        body = KANJI_BODY.replace("· **JLPT:**", "· **Phonetic:** 日 · **JLPT:**")
         self.write("kanji/日.md", KANJI_HEADER + "\nphonetic: 日", body)
         meta = self.check_card(self.kanji_path)
         self.assertEqual("日", meta["phonetic"])
+        self.assertEqual([], validate.errors)
+
+    def test_n5_kunyomi_must_be_explained_in_body(self):
+        self.write("kanji/日.md", KANJI_HEADER, KANJI_BODY.replace("-か (day count)", "day count"))
+        self.check_card(self.kanji_path)
+        self.assert_error("kunyomi '-か' is not explained")
+        validate.errors.clear()
+        header = KANJI_HEADER.replace("[ひ, -び, -か]", "[ひ, あ.かる]").replace("jlpt: 5", "jlpt: 3").replace("n5", "n3")
+        self.write("kanji/日.md", header, KANJI_BODY)
+        self.check_card(self.kanji_path)
         self.assertEqual([], validate.errors)
 
     def test_app_optional_fields_do_not_weaken_authoring_requirements(self):
@@ -151,8 +159,7 @@ class ValidateTests(unittest.TestCase):
             with self.subTest(tags=tags):
                 validate.errors.clear()
                 header = KANJI_HEADER.replace("[jlpt-n5, starter]", tags)
-                body = KANJI_BODY.replace("**Phonetic:** none", "**Phonetic:** not identified here")
-                self.write("kanji/日.md", header, body)
+                self.write("kanji/日.md", header, KANJI_BODY)
                 meta = self.check_card(self.kanji_path)
                 self.assertNotIn("starter", meta["tags"])
                 self.assertEqual([], validate.errors)
@@ -495,6 +502,36 @@ class ValidateTests(unittest.TestCase):
                 self.check_card(self.word_path)
                 self.assertEqual([], validate.errors)
 
+    def test_word_quiz_distractors_are_optional_and_validated(self):
+        other_header = WORD_HEADER.replace("土地", "場所").replace("とち", "ばしょ")
+        other_header = other_header.replace("[土, 地]", "[場, 所]")
+        other = self.write("words/場所.md", other_header, WORD_BODY.replace("土地", "場所"))
+        self.check_card(other)
+        for extra in ("", "\nquiz_distractors: []", "\nquiz_distractors: [場所]", "\nquiz_distractors: ['場所']"):
+            with self.subTest(extra=extra):
+                self.write("words/土地.md", WORD_HEADER + extra, WORD_BODY)
+                self.check_card(self.word_path)
+                self.assertEqual([], validate.errors)
+
+    def test_word_quiz_distractors_reject_bad_lists(self):
+        other_header = WORD_HEADER.replace("土地", "場所").replace("とち", "ばしょ")
+        other_header = other_header.replace("[土, 地]", "[場, 所]")
+        self.check_card(self.write("words/場所.md", other_header, WORD_BODY.replace("土地", "場所")))
+        cases = {
+            "\nquiz_distractors: [場所, 場所]": "must not contain repeated",
+            "\nquiz_distractors: [土地]": "must not include the word itself",
+            "\nquiz_distractors: [不明]": "no word article",
+            "\nquiz_distractors: [場所]\nquiz_exclusions: [場所]": "also listed in",
+            "\nquiz_distractors: [a, b, c, d]": "at most 3",
+            "\nquiz_distractors: 場所": "single top-level unquoted key with an inline list",
+            "\nquiz_distractors: []\nquiz_distractors: []": "single top-level unquoted key with an inline list",
+        }
+        for extra, message in cases.items():
+            with self.subTest(extra=extra):
+                self.write("words/土地.md", WORD_HEADER + extra, WORD_BODY)
+                self.check_card(self.word_path)
+                self.assertTrue(any(message in e for e in validate.errors), validate.errors)
+
     def test_word_quiz_exclusions_reject_non_lists_and_nonstring_items(self):
         for value in ("null", "true", "5", "{}", "場所", "'[]'", "[1]", "[true]", "[null]", "[{}]"):
             with self.subTest(value=value):
@@ -723,11 +760,24 @@ class ValidateTests(unittest.TestCase):
                 validate.check_body(self.kanji_path, meta, KANJI_BODY.replace("# 日 — sun, day", heading))
                 self.assert_error("single H1 matching metadata")
 
+    def test_placeholder_phonetic_is_rejected(self):
+        meta, _ = validate.parse(self.kanji_path)
+        for value in ("none", "not identified here"):
+            with self.subTest(value=value):
+                validate.errors.clear()
+                validate.check_body(self.kanji_path, meta,
+                                    KANJI_BODY.replace("· **JLPT:**", f"· **Phonetic:** {value} · **JLPT:**"))
+                self.assert_error("omit the Phonetic item")
+        validate.errors.clear()
+        validate.check_body(self.kanji_path, meta,
+                            KANJI_BODY.replace("· **JLPT:**", "· **Phonetic:** none (ideographic) · **JLPT:**"))
+        self.assertEqual([], validate.errors)
+
     def test_kanji_facts_line_is_before_sections(self):
         meta, _ = validate.parse(self.kanji_path)
         facts = next(line for line in KANJI_BODY.splitlines() if line.startswith("**Strokes:"))
         for body in (KANJI_BODY.replace(facts, ""), KANJI_BODY.replace(facts, "") + facts,
-                     KANJI_BODY.replace("**Phonetic:** none · ", "")):
+                     KANJI_BODY.replace("**Key (radical):** 日 (no. 72) · ", "")):
             with self.subTest(body=body):
                 validate.errors.clear()
                 validate.check_body(self.kanji_path, meta, body)

@@ -38,9 +38,9 @@ N4 cross-model review (2026-10-08); the older review records below remain histor
 ## N3 vocabulary expansion (2026-10-09; review in progress)
 
 The draft adds 1,490 word articles and reuses 208, covering all 1,730 rows in the pinned N3 community vocabulary source.
-Those rows map to 1,698 articles; the full collection now has 3,006 words. Explicit article-level labels are 672 N5, 636 N4
+Those rows map to 1,698 articles; the full collection at the pre-merge checkpoint had 3,006 words. Explicit article-level labels were 672 N5, 636 N4
 and 1,624 N3, with 74 legacy articles still unlabelled. Existing easier labels, stable metadata and quiz exclusions are preserved.
-No kanji cards, stroke assets or long-form articles were changed.
+The N3 vocabulary work itself changed no kanji cards, stroke assets or long-form articles; separately integrated parallel changes are described below.
 See the [source snapshot](docs/n3-vocabulary-snapshot.json) and [row index](docs/n3-vocabulary-sources.tsv).
 
 A separate all-row source audit inspected lexical identities and spelling, reading and sense restrictions against the pinned
@@ -96,7 +96,7 @@ residual safeguards from those two earlier follow-ups are applied, with exact be
 These later checks are not additional blind reviews or evidence of exhaustive synonym coverage.
 
 The first `revised-r2` application (2026-10-10) adds 385 direct pairs from 387 distinct parent selections, changing only
-262 word headers. The full graph now has 1,426 direct excluded pairs, including the 14 baseline pairs, declared by 856
+262 word headers. The graph at that application checkpoint had 1,426 direct excluded pairs, including the 14 baseline pairs, declared by 856
 word cards. The ledger retains its earlier 984 approvals and appends 385, for 1,369 approval records. All 3,006 word bodies
 and their non-exclusion metadata are unchanged by this wave; a repeat application makes no changes.
 
@@ -105,6 +105,14 @@ cannot authorize the proposed declaration owners. They remain held, not linguist
 The application preserves exact before-images, all 22 parent-selection bindings, duplicate observations, optional-safeguard
 status, weaker remedy suggestions and source limitations. It does not approve findings from the 23 reports still awaiting
 adjudication, resolve the separate editorial backlog, or imply exhaustive quiz safety.
+
+Publication also integrates 11 parallel commits through `c7cb0ac`, including article-subject cards, reciprocal links,
+kanji-reading explanations and curated quiz distractors. The combined collection has 3,022 words and 620 kanji;
+[README.md](README.md) gives its combined level counts. 作家 consolidates the two additions for the same lexical identity.
+訳 retains both the N3 expansion's separate やく teaching and the parallel わけ grammar explanation, with their sources.
+The merged graph preserves all 1,426 application-checkpoint pairs plus 57 independently published pairs, for 1,483 direct pairs.
+Those 57 additional pairs are not part of the N3 parent adjudications or their approval ledger.
+These parallel changes and merge resolutions are not part of the frozen `revised-r2` review; the outstanding adjudications remain open.
 
 ## N5/N4 vocabulary expansion (2026-10-09; reconciled)
 

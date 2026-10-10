@@ -156,13 +156,13 @@ The linked articles are the seed evidence for these rows. Refinement should fill
 
 | ID | Candidates | Tags | Question to refine |
 | --- | --- | --- | --- |
-| CW070 | 政治家（せいじか）, 政治屋（せいじや） | `O G F U` | Same broad referent, different evaluation: why is this not evidence that every ～屋 word is insulting? [Existing article](../articles/occupation-and-role-endings.md). |
-| CW071 | 作者（さくしゃ）, 作家（さっか） | `O G F U` | "Author/creator": relationship to a particular work versus a creative identity. [Existing article](../articles/occupation-and-role-endings.md). |
-| CW072 | 研究者（けんきゅうしゃ）, 研究員（けんきゅういん） | `O G F U` | "Researcher": activity/identity versus an organizational role, without inventing a universal seniority ranking. [Existing article](../articles/occupation-and-role-endings.md). |
+| CW070 | [政治家（せいじか）](../words/政治家.md), 政治屋（せいじや） | `O G F U` | Same broad referent, different evaluation: why is this not evidence that every ～屋 word is insulting? [Existing article](../articles/occupation-and-role-endings.md). |
+| CW071 | [作者（さくしゃ）](../words/作者.md), [作家（さっか）](../words/作家.md) | `O G F U` | "Author/creator": relationship to a particular work versus a creative identity. [Existing article](../articles/occupation-and-role-endings.md). |
+| CW072 | [研究者（けんきゅうしゃ）](../words/研究者.md), [研究員（けんきゅういん）](../words/研究員.md) | `O G F U` | "Researcher": activity/identity versus an organizational role, without inventing a universal seniority ranking. [Existing article](../articles/occupation-and-role-endings.md). |
 | CW073 | 医師（いし）, [医者（いしゃ）](../words/医者.md) | `O G F U` | "Doctor": naming and usage, not different qualification levels. [Existing article](../articles/occupation-and-role-endings.md). |
-| CW074 | 怪しい（あやしい）, 妖しい（あやしい）, 奇しい（あやしい; rare spelling） | `O G F U` | Spelling choices for the same spoken adjective, not three rigidly separated definitions; keep classical 奇し separate. [Existing article](../articles/ayashii-and-related-words.md). |
-| CW075 | 怪しい（あやしい）, 疑わしい（うたがわしい）, いかがわしい | `O G U` | "Suspicious/dubious": suspicion, doubts about credibility, and disreputability; which collocations resist substitution? [Existing article](../articles/ayashii-and-related-words.md). |
-| CW076 | 変な（へんな）, [珍しい（めずらしい）](../words/珍しい.md), 不思議な（ふしぎな）, 奇妙な（きみょうな） | `O G U` | "Strange/unusual": abnormality, rarity, puzzlement, and peculiarity are not the same judgment. [Existing article](../articles/ayashii-and-related-words.md). |
+| CW074 | [怪しい（あやしい）](../words/怪しい.md), [妖しい（あやしい）](../words/妖しい.md), [奇しい（あやしい; rare spelling）](../words/奇しい.md) | `O G F U` | Spelling choices for the same spoken adjective, not three rigidly separated definitions; keep classical 奇し separate. [Existing article](../articles/ayashii-and-related-words.md). |
+| CW075 | [怪しい（あやしい）](../words/怪しい.md), [疑わしい（うたがわしい）](../words/疑わしい.md), [いかがわしい](../words/いかがわしい.md) | `O G U` | "Suspicious/dubious": suspicion, doubts about credibility, and disreputability; which collocations resist substitution? [Existing article](../articles/ayashii-and-related-words.md). |
+| CW076 | [変な（へんな）](../words/変.md), [珍しい（めずらしい）](../words/珍しい.md), 不思議な（ふしぎな）, 奇妙な（きみょうな） | `O G U` | "Strange/unusual": abnormality, rarity, puzzlement, and peculiarity are not the same judgment. [Existing article](../articles/ayashii-and-related-words.md). |
 
 ### Word-based grammar boundary
 
@@ -171,9 +171,9 @@ words are lexical synonyms. A complete grammar-confusion inventory is outside th
 
 | ID | Candidates | Tags | Question to refine |
 | --- | --- | --- | --- |
-| CW077 | こと, の, わけ | `G U P` | Nominalization versus explanation: こと/の is a different comparison from こと/わけ. [Existing article](../articles/koto-wake-and-formal-nouns.md). |
-| CW078 | とき, ころ, ごろ | `O G F U` | "When/around": an occasion, an approximate period, and the suffixed form; not simply short versus long duration. [Existing article](../articles/koto-wake-and-formal-nouns.md). |
-| CW079 | ほど, くらい／ぐらい, ばかり | `O G U P` | Approximation and degree versus the other uses of each item. Compare whole constructions, not a universal "about" replacement. [Existing article](../articles/koto-wake-and-formal-nouns.md). |
+| CW077 | [こと](../words/こと.md), の, [わけ](../words/訳.md) | `G U P` | Nominalization versus explanation: こと/の is a different comparison from こと/わけ. [Existing article](../articles/koto-wake-and-formal-nouns.md). |
+| CW078 | とき, [ころ／ごろ](../words/ころ.md) | `O G F U` | "When/around": an occasion, an approximate period, and the suffixed form; not simply short versus long duration. [Existing article](../articles/koto-wake-and-formal-nouns.md). |
+| CW079 | [ほど](../words/ほど.md), [くらい／ぐらい](../words/くらい.md), [ばかり](../words/ばかり.md) | `O G U P` | Approximation and degree versus the other uses of each item. Compare whole constructions, not a universal "about" replacement. [Existing article](../articles/koto-wake-and-formal-nouns.md). |
 | CW080 | ～ていく, ～てくる | `G U P` | Direction and temporal viewpoint; why "past versus future" is not the distinction. [Existing article](../articles/verb-extensions-direction-and-aspect.md). |
 | CW081 | ～始める（はじめる）, ～出す（だす） | `O G U P` | Onset uses of "start": what changes in focus and available constructions? Other ～出す compounds need separate senses. [Existing article](../articles/verb-extensions-direction-and-aspect.md). |
 | CW082 | ～終わる（おわる）, ～切る（きる）, ～てしまう | `O G U P` | "Finish": an endpoint, completeness, or another interpretation of ～てしまう; neither achievement nor regret is universal. [Existing article](../articles/verb-extensions-direction-and-aspect.md). |
