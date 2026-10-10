@@ -30,7 +30,7 @@ KANJI_BODY = """# 日 — sun, day
 ## Meaning and origin
 Meaning.
 ## Readings
-Readings.
+ひ (sun), -び (voiced), -か (day count).
 ## Common words
 Words.
 ## Notes
@@ -112,6 +112,16 @@ class ValidateTests(unittest.TestCase):
         self.write("kanji/日.md", KANJI_HEADER + "\nphonetic: 日", body)
         meta = self.check_card(self.kanji_path)
         self.assertEqual("日", meta["phonetic"])
+        self.assertEqual([], validate.errors)
+
+    def test_n5_kunyomi_must_be_explained_in_body(self):
+        self.write("kanji/日.md", KANJI_HEADER, KANJI_BODY.replace("-か (day count)", "day count"))
+        self.check_card(self.kanji_path)
+        self.assert_error("kunyomi '-か' is not explained")
+        validate.errors.clear()
+        header = KANJI_HEADER.replace("[ひ, -び, -か]", "[ひ, あ.かる]").replace("jlpt: 5", "jlpt: 4").replace("n5", "n4")
+        self.write("kanji/日.md", header, KANJI_BODY)
+        self.check_card(self.kanji_path)
         self.assertEqual([], validate.errors)
 
     def test_app_optional_fields_do_not_weaken_authoring_requirements(self):
