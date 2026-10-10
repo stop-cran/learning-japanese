@@ -40,13 +40,13 @@ The table gives useful starting points, not definitions that predict every word:
 
 | Ending | Typical contribution in words for people | Examples |
 | --- | --- | --- |
-| **者（しゃ／じゃ）** | A person identified by an activity, involvement, or condition | 研究者 - researcher; 参加者（さんかしゃ） - participant |
-| **家（か）** | A practitioner or specialist in a field; also someone characterized by a disposition | 漫画家 - manga artist; 専門家（せんもんか） - expert |
-| **師（し）** | A practitioner of a specialized skill or art; also teaching-related roles | 医師（いし） - physician; 美容師（びようし） - hairdresser; 教師（きょうし） - teacher |
+| **[者](../kanji/者.md)（しゃ／じゃ）** | A person identified by an activity, involvement, or condition | 研究者 - researcher; 参加者（さんかしゃ） - participant |
+| **[家](../kanji/家.md)（か）** | A practitioner or specialist in a field; also someone characterized by a disposition | 漫画家 - manga artist; 専門家（せんもんか） - expert |
+| **[師](../kanji/師.md)（し）** | A practitioner of a specialized skill or art; also teaching-related roles | 医師（いし） - physician; 美容師（びようし） - hairdresser; [教師](../words/教師.md)（きょうし） - teacher |
 | **士（し）** | An established skilled or qualified role, including many professional titles | 弁護士（べんごし） - lawyer; 建築士（けんちくし） - architect |
-| **手（しゅ／て）** | A performer, operator, or person carrying out an activity | 歌手 - singer; 運転手（うんてんしゅ） - driver; 読み手 - reader |
-| **員（いん）** | Membership, staffing, or an assigned role in an organization | 会社員（かいしゃいん） - company employee; 研究員 - research staff member |
-| **屋（や）** | A shop, seller, or trade practitioner; also a characterization of someone | 本屋（ほんや） - bookshop/bookseller; パン屋 - bakery/baker |
+| **[手](../kanji/手.md)（しゅ／て）** | A performer, operator, or person carrying out an activity | 歌手 - singer; [運転手](../words/運転手.md)（うんてんしゅ） - driver; 読み手 - reader |
+| **[員](../kanji/員.md)（いん）** | Membership, staffing, or an assigned role in an organization | 会社員（かいしゃいん） - company employee; 研究員 - research staff member |
+| **[屋](../kanji/屋.md)（や）** | A shop, seller, or trade practitioner; also a characterization of someone | 本屋（ほんや） - bookshop/bookseller; パン屋 - bakery/baker |
 
 Some tempting shortcuts fail:
 
@@ -99,7 +99,7 @@ This contrast illustrates why 家 often fits creative practitioners. It does **n
 
 For example, **美容師** and **弁護士** are both regulated professions in Japan, despite their different endings. The requirements belong to each profession and its governing rules, not to the choice of character alone.
 
-Likewise, **医師** and **医者（いしゃ）** can refer to the same physician. They are not different qualification levels obtained by changing the ending.
+Likewise, **医師** and **[医者](../words/医者.md)（いしゃ）** can refer to the same physician. They are not different qualification levels obtained by changing the ending.
 
 There is also a decisive counterexample to "師 means an honorable specialist":
 

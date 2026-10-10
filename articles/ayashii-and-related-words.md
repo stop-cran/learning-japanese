@@ -2,7 +2,7 @@
 
 The adjective **あやしい (ayashii)** is normally written **怪しい**, but **妖しい** and, much less commonly, **奇しい** also occur. In the uses discussed here, these are spellings of the same spoken word; related-looking classical forms can have different readings, as explained below. A choice of kanji can highlight a particular shade of meaning, but it does not create rigid boundaries between suspicion, supernatural allure, and unusualness.
 
-Several neighboring words overlap with it: **疑わしい**, **いかがわしい**, **変な**, and **珍しい**. English translations such as "strange," "dubious," and "unusual" can obscure their differences. The most useful question is **what makes the thing seem unusual or questionable**.
+Several neighboring words overlap with it: **疑わしい**, **いかがわしい**, **[変な](../words/変.md)**, and **[珍しい](../words/珍しい.md)**. English translations such as "strange," "dubious," and "unusual" can obscure their differences. The most useful question is **what makes the thing seem unusual or questionable**.
 
 ## 怪しい: suspicious, doubtful, or unexplained
 
@@ -105,7 +105,7 @@ Thus, **彼の説明は怪しい** suggests that his explanation sounds suspicio
 
 Some combinations nevertheless strongly favor one word. **怪しい人影（ひとかげ）** is a suspicious figure or silhouette, and **雲行きが怪しい** describes an ominous outlook; 疑わしい is not a natural replacement for those meanings. Conversely, the established legal maxim **疑わしきは罰せず（うたがわしきはばっせず）**, roughly "do not punish when guilt is in doubt," uses 疑わしい in a classical form. These are reminders to learn common combinations as well as the broad contrast, not to impose an absolute rule about the availability of evidence.
 
-The kanji **疑** directly concerns doubt, suspicion, and distrust. Unlike 怪, it does not itself suggest eeriness, abnormality, or mystery.
+The kanji **[疑](../kanji/疑.md)** directly concerns doubt, suspicion, and distrust. Unlike 怪, it does not itself suggest eeriness, abnormality, or mystery.
 
 Consequently, **疑わしい音** is not the usual way to describe a merely unfamiliar noise. A recording's authenticity or a claim about the sound's source could be questionable, but the odd sound itself is more naturally **変な音** or **怪しい音**.
 
@@ -160,7 +160,7 @@ Sounds make the contrast particularly clear:
 | **不気味な音（ぶきみなおと）** | An eerie or creepy sound that provokes unease. |
 | **奇妙な音** | A peculiar or bizarre sound; somewhat more literary than 変な音. |
 
-The kanji **変** also means "change." Linking change with a departure from an expected state is a useful memory aid, but the relevant distinction here is **abnormality, not rarity**.
+The kanji **[変](../kanji/変.md)** also means "change." Linking change with a departure from an expected state is a useful memory aid, but the relevant distinction here is **abnormality, not rarity**.
 
 Grammatically, 変 is a **na-adjective**: **変な人**, but **その人は変だ**. The other main adjectives discussed here, including 怪しい and 珍しい, are **i-adjectives** and directly modify nouns without な.
 

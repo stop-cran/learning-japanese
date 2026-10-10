@@ -55,7 +55,7 @@ Imagine standing by a lake and watching a bird:
 | 鳥が飛んできた。 | A bird flew toward me. |
 | 鳥が飛んでいった。 | A bird flew away from me. |
 
-**～てくる** presents movement toward a viewpoint; **～ていく** presents movement away from it. The viewpoint is often the speaker's location, but context can establish another center. These are relative directions, not compass directions.
+**[～てくる](../words/来る.md)** presents movement toward a viewpoint; **[～ていく](../words/行く.md)** presents movement away from it. The viewpoint is often the speaker's location, but context can establish another center. These are relative directions, not compass directions.
 
 The final verbs are still conjugated: くる becomes **きた**, and いく becomes **いった**.
 
@@ -103,7 +103,7 @@ Do not force every ～てくる into that explanation. Spoken before stepping ou
 
 ### Beginning: ～始める and ～出す
 
-Both take the **ます-stem**. **～始める（はじめる）** is a relatively neutral way to mark a beginning; onset **～出す（だす）** brings the beginning into focus, often as something abrupt or noticeable.
+Both take the **ます-stem**. **[～始める](../words/始める.md)（はじめる）** is a relatively neutral way to mark a beginning; onset **[～出す](../words/出す.md)（だす）** brings the beginning into focus, often as something abrupt or noticeable.
 
 | Example | Natural interpretation |
 | --- | --- |
@@ -118,7 +118,7 @@ Nor does every compound ending in 出す mean "start." We will return to its out
 
 ### Continuation: ～続ける
 
-**～続ける（つづける）** makes continuation or persistence explicit:
+**[～続ける](../words/続ける.md)（つづける）** makes continuation or persistence explicit:
 
 > 疲れたが、本を読み続けた。  
 > I was tired, but I kept reading the book.
@@ -135,8 +135,8 @@ These can all occur around the end of an activity, but they do not express the s
 
 | Form | Attachment | What it highlights in these uses |
 | --- | --- | --- |
-| **～終わる（おわる）** | ます-stem | Finishing an activity |
-| **～切る（きる）** | ます-stem | Doing something all the way through or completely |
+| **[～終わる](../words/終わる.md)（おわる）** | ます-stem | Finishing an activity |
+| **[～切る](../words/切る.md)（きる）** | ます-stem | Doing something all the way through or completely |
 | **～てしまう** | て/で-form | Getting something done; in other contexts, ending up doing something, often with an emotional reaction |
 
 Compare:
@@ -169,7 +169,7 @@ Likewise, not every ～切る compound describes completing a task: **疲れ切�
 
 ### Preparation with ～ておく
 
-**～ておく** often presents an action as preparation for later:
+**[～ておく](../words/置く.md)** often presents an action as preparation for later:
 
 > 明日の授業の前に、この文章を読んでおく。  
 > I'll read this passage beforehand, before tomorrow's class.
@@ -205,7 +205,7 @@ For recognition in casual conversation, **～ておく → ～とく** and **～
 
 ### ～込む: inward movement and more
 
-**～込む（こむ）** takes the **ます-stem**, but does not have one freely applicable translation:
+**[～込む](../words/込む.md)（こむ）** takes the **ます-stem**, but does not have one freely applicable translation:
 
 | Compound | Meaning in the selected use |
 | --- | --- |
