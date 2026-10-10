@@ -452,6 +452,19 @@ def check_word(path: Path, meta: dict, known_words: set[str] | None = None) -> N
             err(path, f"quiz distractor '{other}' is also listed in 'quiz_exclusions'")
 
 
+def check_word_kanji_links(path: Path, meta: dict, body: str) -> None:
+    """Every kanji of a word that has its own card must be linked from the word's article (kanji without a card are exempt)."""
+    kanji_dir = (ROOT / "kanji").resolve()
+    linked = set()
+    for target in LINK.findall(body):
+        target_path = (path.parent / unquote(target.split("#", 1)[0])).resolve()
+        if target_path.parent == kanji_dir:
+            linked.add(target_path.stem)
+    for char in dict.fromkeys(meta.get("kanji", [])):
+        if (kanji_dir / f"{char}.md").is_file() and char not in linked:
+            err(path, f"kanji '{char}' has a card but the article does not link to it (add [{char}](../kanji/{char}.md))")
+
+
 def err_count_for(path: Path) -> int:
     rel = path.relative_to(ROOT).as_posix()
     return sum(1 for e in errors if e.startswith(rel + ":"))
@@ -476,6 +489,7 @@ def main() -> int:
                 check_kanji(path, meta, titles, stroke_counts)
             else:
                 check_word(path, meta, word_ids)
+                check_word_kanji_links(path, meta, body)
             check_body(path, meta, body)
             check_links(path, body)
     for message in errors:

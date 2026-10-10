@@ -115,6 +115,7 @@ the importer requires at least two finite two-coordinate points per stroke.
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.
   Relative links in imported content must target `kanji/`, `words/`, or `articles/`: `docs/` is not included in the content manifest.
 - Other links must be `https://`. Raw HTML is not allowed. Text that names a kanji or word without a card is left as plain text.
+- A word article must link (e.g. `[冗](../kanji/冗.md)`) every kanji listed in its `kanji:` field that has a card in `kanji/`; kanji without a card are exempt. `tools/validate.py` enforces this.
 - Review state in the app is keyed by the kanji character, so don't rename cards; change `title` and body freely.
 
 ## Tools

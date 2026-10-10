@@ -680,6 +680,21 @@ class ValidateTests(unittest.TestCase):
                 validate.check_word(self.root / "words" / f"{word}.md", meta)
         self.assertEqual([], validate.errors)
 
+    def test_word_must_link_kanji_that_have_cards(self):
+        meta, body = validate.parse(self.word_path)
+        # 土 and 地 have no card in the fixture, so nothing is required.
+        validate.check_word_kanji_links(self.word_path, meta, body)
+        self.assertEqual([], validate.errors)
+        for char in "土地":
+            (self.root / "kanji" / f"{char}.md").touch()
+        validate.check_word_kanji_links(self.word_path, meta, body)
+        self.assert_error("kanji '土' has a card")
+        self.assert_error("kanji '地' has a card")
+        validate.errors.clear()
+        linked = body + "\n[土](../kanji/土.md) and [地](../kanji/地.md#x)\n"
+        validate.check_word_kanji_links(self.word_path, meta, linked)
+        self.assertEqual([], validate.errors)
+
     def test_word_kanji_entries_must_be_characters_in_the_word(self):
         meta, _ = validate.parse(self.word_path)
         for extra, message in (("土地", "single character"), ("日", "does not occur")):
