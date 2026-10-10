@@ -28,7 +28,8 @@ KANJI_REQUIRED = ["kanji", "title", "jlpt", "tags", "strokes", "radical", "radic
 WORD_REQUIRED = ["word", "reading", "title", "type", "kanji", "tags"]
 WORD_TYPES = {"kango", "wago", "jukujikun", "gairaigo"}
 KANJI_LISTS = ("tags", "onyomi", "kunyomi", "distractors")
-WORD_LISTS = ("kanji", "tags", "quiz_exclusions")
+WORD_LISTS = ("kanji", "tags", "quiz_exclusions", "quiz_distractors")
+MAX_QUIZ_DISTRACTORS = 3
 KANJI_INTS = ("jlpt", "strokes", "radicalNumber")
 KANJI_SECTIONS = ["Meaning and origin", "Readings", "Common words", "Notes"]
 WORD_SECTIONS = ["Meaning", "How the kanji combine", "Synonyms and antonyms", "Distinctive meaning"]
@@ -63,6 +64,7 @@ def parse(path: Path):
         check_word_header_keys(path, header)
         check_word_jlpt_declaration(path, header)
         check_word_quiz_exclusions_declaration(path, header)
+        check_word_list_declaration(path, header, "quiz_distractors")
     article = path.parent.name == "articles"
     try:
         if article and fields is None and not has_yaml_mapping_root(header):
@@ -151,12 +153,16 @@ def check_word_jlpt_declaration(path: Path, header: str) -> None:
         err(path, "'jlpt' must be a single top-level unquoted integer from 1 to 5")
 
 
-def check_word_quiz_exclusions_declaration(path: Path, header: str) -> None:
-    declarations = word_declarations(header, "quiz_exclusions")
-    if declarations and (len(declarations) != 1 or declarations[0][0] != "quiz_exclusions"
+def check_word_list_declaration(path: Path, header: str, name: str) -> None:
+    declarations = word_declarations(header, name)
+    if declarations and (len(declarations) != 1 or declarations[0][0] != name
                          or declarations[0][2] or not declarations[0][1].startswith("[")
                          or not declarations[0][1].endswith("]")):
-        err(path, "'quiz_exclusions' must be a single top-level unquoted key with an inline list")
+        err(path, f"'{name}' must be a single top-level unquoted key with an inline list")
+
+
+def check_word_quiz_exclusions_declaration(path: Path, header: str) -> None:
+    check_word_list_declaration(path, header, "quiz_exclusions")
 
 
 def check_android_front_matter(path: Path, fields: dict | None, meta: dict) -> None:
@@ -166,7 +172,7 @@ def check_android_front_matter(path: Path, fields: dict | None, meta: dict) -> N
     if path.parent.name == "kanji":
         known = KANJI_REQUIRED + ["phonetic", "distractors"]
     elif path.parent.name == "words":
-        known = WORD_REQUIRED + ["jlpt", "quiz_exclusions"]
+        known = WORD_REQUIRED + ["jlpt", "quiz_exclusions", "quiz_distractors"]
     else:
         known = ["title"]
     for key in known:
@@ -412,7 +418,12 @@ def check_word(path: Path, meta: dict, known_words: set[str] | None = None) -> N
     exclusions = meta.get("quiz_exclusions", [])
     if len(exclusions) != len(set(exclusions)):
         err(path, "'quiz_exclusions' must not contain repeated entries")
-    if not exclusions:
+    distractors = meta.get("quiz_distractors", [])
+    if len(distractors) != len(set(distractors)):
+        err(path, "'quiz_distractors' must not contain repeated entries")
+    if len(distractors) > MAX_QUIZ_DISTRACTORS:
+        err(path, f"'quiz_distractors' may list at most {MAX_QUIZ_DISTRACTORS} words")
+    if not exclusions and not distractors:
         return
     if known_words is None:
         known_words = {other.stem for other in (ROOT / "words").glob("*.md")}
@@ -421,6 +432,13 @@ def check_word(path: Path, meta: dict, known_words: set[str] | None = None) -> N
             err(path, "'quiz_exclusions' must not include the word itself")
         elif other not in known_words:
             err(path, f"quiz exclusion '{other}' has no word article with that exact ID")
+    for other in distractors:
+        if other == meta["word"]:
+            err(path, "'quiz_distractors' must not include the word itself")
+        elif other not in known_words:
+            err(path, f"quiz distractor '{other}' has no word article with that exact ID")
+        elif other in exclusions:
+            err(path, f"quiz distractor '{other}' is also listed in 'quiz_exclusions'")
 
 
 def err_count_for(path: Path) -> int:

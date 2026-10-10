@@ -495,6 +495,36 @@ class ValidateTests(unittest.TestCase):
                 self.check_card(self.word_path)
                 self.assertEqual([], validate.errors)
 
+    def test_word_quiz_distractors_are_optional_and_validated(self):
+        other_header = WORD_HEADER.replace("土地", "場所").replace("とち", "ばしょ")
+        other_header = other_header.replace("[土, 地]", "[場, 所]")
+        other = self.write("words/場所.md", other_header, WORD_BODY.replace("土地", "場所"))
+        self.check_card(other)
+        for extra in ("", "\nquiz_distractors: []", "\nquiz_distractors: [場所]", "\nquiz_distractors: ['場所']"):
+            with self.subTest(extra=extra):
+                self.write("words/土地.md", WORD_HEADER + extra, WORD_BODY)
+                self.check_card(self.word_path)
+                self.assertEqual([], validate.errors)
+
+    def test_word_quiz_distractors_reject_bad_lists(self):
+        other_header = WORD_HEADER.replace("土地", "場所").replace("とち", "ばしょ")
+        other_header = other_header.replace("[土, 地]", "[場, 所]")
+        self.check_card(self.write("words/場所.md", other_header, WORD_BODY.replace("土地", "場所")))
+        cases = {
+            "\nquiz_distractors: [場所, 場所]": "must not contain repeated",
+            "\nquiz_distractors: [土地]": "must not include the word itself",
+            "\nquiz_distractors: [不明]": "no word article",
+            "\nquiz_distractors: [場所]\nquiz_exclusions: [場所]": "also listed in",
+            "\nquiz_distractors: [a, b, c, d]": "at most 3",
+            "\nquiz_distractors: 場所": "single top-level unquoted key with an inline list",
+            "\nquiz_distractors: []\nquiz_distractors: []": "single top-level unquoted key with an inline list",
+        }
+        for extra, message in cases.items():
+            with self.subTest(extra=extra):
+                self.write("words/土地.md", WORD_HEADER + extra, WORD_BODY)
+                self.check_card(self.word_path)
+                self.assertTrue(any(message in e for e in validate.errors), validate.errors)
+
     def test_word_quiz_exclusions_reject_non_lists_and_nonstring_items(self):
         for value in ("null", "true", "5", "{}", "場所", "'[]'", "[1]", "[true]", "[null]", "[{}]"):
             with self.subTest(value=value):

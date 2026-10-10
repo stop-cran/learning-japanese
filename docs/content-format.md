@@ -61,6 +61,7 @@ inline comments on fields. A prefix such as `---notes` is not a closing delimite
 | `type` | `kango`, `wago`, `jukujikun` or `gairaigo`. Mixed on+kun words (e.g. 円高 えんだか) have no type of their own: use `kango` for an on-first compound and say in the body that it is mixed (jūbakoyomi). |
 | `kanji` | Every distinct kanji occurring in the written word, including characters whose cards have not been added. Use `[]` for a kana-only spelling. Do not omit a character merely to avoid a missing-card reference. |
 | `tags` | Free tags. |
+| `quiz_distractors` | Optional inline list of up to 3 other exact `word` IDs that make good wrong choices for this word (plausible but clearly different, e.g. 今日 vs 今朝). Used first, before the automatic tag/kanji scoring, in both directions. Must exist, must not repeat, include the word itself, or overlap `quiz_exclusions`. Omission means automatic choices only. |
 | `quiz_exclusions` | Optional inline list of other exact `word` IDs that must not appear together as quiz choices. Omission or `[]` means no curated exclusions. Use one top-level unquoted key; reject duplicate declarations, repeated/self IDs and missing targets. |
 
 Body: meaning and usage, how the kanji combine, synonyms and antonyms, and the distinctive nuance.
