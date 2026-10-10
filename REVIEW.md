@@ -35,6 +35,77 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## N3 vocabulary expansion (2026-10-09; review in progress)
+
+The draft adds 1,490 word articles and reuses 208, covering all 1,730 rows in the pinned N3 community vocabulary source.
+Those rows map to 1,698 articles; the full collection now has 3,006 words. Explicit article-level labels are 672 N5, 636 N4
+and 1,624 N3, with 74 legacy articles still unlabelled. Existing easier labels, stable metadata and quiz exclusions are preserved.
+No kanji cards, stroke assets or long-form articles were changed.
+See the [source snapshot](docs/n3-vocabulary-snapshot.json) and [row index](docs/n3-vocabulary-sources.tsv).
+
+A separate all-row source audit inspected lexical identities and spelling, reading and sense restrictions against the pinned
+JMdict snapshot. Six supplied dictionary IDs were corrected, with the original fields retained. Twenty-seven historical
+source-intent ambiguities remain explicitly qualified; supported teaching selections are not claims to have recovered the
+source compiler's intention.
+
+The initial complete frozen corpus is `draft-r1`, baseline `cdf871bc235bc1822c2d8940c9aa77d9e175118f` plus the draft changes,
+with imported-content version `d9b86029e1f5b2b3`. All 48 initial reports are complete: both `gpt-6-astra` and
+`claude-opus-5.5` reviewed each of twenty-four disjoint factual packets, covering correctness, scoped coverage and
+comprehensibility for every assigned article and source row. Initial reviewers received neither author reports nor
+one another's findings. The original reports remain unchanged; separate Claude batch 08 and 09 addenda address omitted
+reused-card quiz analysis, and an errata supplement corrects dictionary quotations in Claude batch 19.
+**All 48 `revised-r2` reconciliation reports are collected: 46 report remaining fixes and two are scoped-clean.
+Parent adjudication is complete for 25 reports; 23 remain. A bounded application of the adjudicated quiz safeguards
+is complete, with two citation-blocked pairs held separately. No final CLEAN verdict or model-contribution comparison is claimed.**
+
+Reconciliation used the frozen revised cards, each reviewer's original findings and the actual changes, with separately
+attributed parent evidence. Replacement agents were used when the original processes were unavailable. Report authentication
+and structural checks do not themselves adjudicate linguistic claims; the original reports, receipts and snapshots remain unchanged.
+
+Recovery checks confirmed all author reports and the exact planned file scope. One author correctly refused to replace
+昇る's rising/promotion senses with 登る's climbing sense merely to satisfy a filename-based checker. The corrected check
+uses the explicitly taught spelling, preserves the original report, and records the disposition separately.
+The same spelling-sensitive mapping check was applied to 明ける/開ける, 二十/二十歳, 張る/貼る and 街/町.
+This resolves a provenance-validation defect, not a substitute for linguistic review.
+
+Review-driven corrections include scoped sense additions for 加わる, 馬鹿, 平ら, 平均 and 氏, alongside prose,
+classification, link and attachment fixes. These changes and their evidence are recorded separately from the original
+author and reviewer reports; implementation does not itself resolve a review finding.
+
+Before the `revised-r2` reconciliation application, the draft passed format, link, selected-sense, source-coverage and manifest checks. Imported-content version
+`0121c69c12312ec9` contains 4,238 files; the complete archive projection has 4,277 entries including directories and
+8,765,568 uncompressed bytes, within the existing importer budgets. These are historical package metrics, not the current
+manifest version. Such checks do not establish naturalness or semantic uniqueness of quiz options.
+
+Before that reconciliation, quiz adjudication added 1,027 direct excluded pairs, recorded in 984 approval records, while preserving baseline exclusions.
+The residual application changed 80 word headers; all 3,006 word files were checked to confirm that their bodies and other
+metadata were unchanged by that application. Repeat application changed no files. Exact-title duplicates are handled separately by the app. Exclusions are symmetric
+direct pairs, not automatic cliques or transitive closure. Of two focused early-batch follow-ups, the batch 07–12 residual
+review is complete: 100 comparisons yielded 48 additional parent-selected safeguards, 41 already-protected pairs,
+three exact-title duplicates, six rejected proposals and two retained optional deferrals. All 48 selections are applied:
+14 have genuine initial citations and 34 have separately registered supplemental evidence.
+
+The batch 01–06 follow-up is also complete. Its 148 comparisons received 46 parent selections, 63 already-protected
+dispositions, 18 exact-title dispositions, eight rejections, two retained optional deferrals and 11 nonexplicit group-comparison
+dispositions that authorize no new pair. Five selections use genuine initial observations; 41 use separately registered
+supplemental evidence, including five whose proposed initial citations were unrelated or contrary to approval. The parent
+explicitly resolved the earlier 期間/時期 deferral using the complete lessons and dictionary evidence; 出/元 and
+がっかり/失望 remain optional deferrals rather than being silently upgraded to rejections. Across both follow-ups, 94 selected
+records produced 89 additional distinct direct pairs; duplicate evidence is retained, not expanded into cliques. All selected
+residual safeguards from those two earlier follow-ups are applied, with exact before-images and separate evidence, ledger and application records preserved.
+These later checks are not additional blind reviews or evidence of exhaustive synonym coverage.
+
+The first `revised-r2` application (2026-10-10) adds 385 direct pairs from 387 distinct parent selections, changing only
+262 word headers. The full graph now has 1,426 direct excluded pairs, including the 14 baseline pairs, declared by 856
+word cards. The ledger retains its earlier 984 approvals and appends 385, for 1,369 approval records. All 3,006 word bodies
+and their non-exclusion metadata are unchanged by this wave; a repeat application makes no changes.
+
+The unapplied pairs are とうとう/やっと and お酒/アルコール: their cited findings belong to other cards, so those citations
+cannot authorize the proposed declaration owners. They remain held, not linguistically rejected or silently reassigned.
+The application preserves exact before-images, all 22 parent-selection bindings, duplicate observations, optional-safeguard
+status, weaker remedy suggestions and source limitations. It does not approve findings from the 23 reports still awaiting
+adjudication, resolve the separate editorial backlog, or imply exhaustive quiz safety.
+
 ## N5/N4 vocabulary expansion (2026-10-09; reconciled)
 
 The expansion adds 924 word articles and reuses 384, covering all 1,324 rows in the pinned community vocabulary source:
@@ -144,7 +215,7 @@ The 208 unsourced legacy words did not receive a new full linguistic review. An 
 然る item remains an upstream-source uncertainty, not authorization to rewrite the selected row or claim official membership.
 Optional sense expansion, additional examples and uniform citation styling are not represented as completed repairs.
 
-## N3 expansion (2026-10-09; reconciled)
+## N3 kanji expansion (2026-10-09; reconciled)
 
 The addition contains 362 kanji cards, 313 word articles and 362 generated stroke files, reaching 614 kanji and 592 words.
 It covers all 367 characters in the named community N3 set, including five existing cards; this is not an official JLPT syllabus. The

@@ -68,7 +68,7 @@ For kana-only words, keep the same section headings and explain the spelling or 
 
 Vocabulary-aware app versions use an explicit word `jlpt` first. For legacy articles without this field, they retain the previous
 fallback based on the hardest known written kanji; that fallback is not a vocabulary-level source. Earlier app versions ignore
-word `jlpt` and always use the kanji-based calculation. N4 word study is cumulative and includes N5.
+word `jlpt` and always use the kanji-based calculation. N4 word study includes N5; N3 word study includes N5 and N4.
 Unlike kanji cards, word articles do not require a matching JLPT tag; `tags` remain free study metadata.
 
 The word quiz also uses `title` as the English answer label. The earlier

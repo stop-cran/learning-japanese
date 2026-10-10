@@ -20,12 +20,15 @@ This repository contains original notes plus data derived from open dictionary p
   [source-row index](docs/n5-n4-vocabulary-sources.tsv) reuse the same dictionary snapshot and distinguish supplied source IDs
   from corrected lexical identities. Selected sense indices are one-based within that inspected dictionary version, not stable
   identifiers for every future JMdict revision.
+  The separate [N3 vocabulary snapshot](docs/n3-vocabulary-snapshot.json) and
+  [source-row index](docs/n3-vocabulary-sources.tsv) use that same dictionary version for the later vocabulary expansion.
+  They preserve original source fields, selected teaching identities, spelling-sensitive coverage and retained source-intent uncertainty.
 - **Canonical radical glyphs for the N4 and N3 additions** are mapped from the compatibility decompositions in Unicode 17.0
   [UnicodeData.txt](https://www.unicode.org/Public/17.0.0/ucd/UnicodeData.txt), copyright Unicode, Inc., under the
   [Unicode License V3](docs/UNICODE-LICENSE.txt). Positional component shapes may differ from these canonical glyphs.
 - **Kanji JLPT levels** follow the community sets mirrored by [kanjiapi.dev](https://kanjiapi.dev), with explicitly sourced exceptions.
-- **N5/N4 vocabulary membership** derives from [Stephen Kraus's Yomitan JLPT vocabulary data](https://github.com/stephenmk/yomitan-jlpt-vocab),
-  revision `b062d4e38c4bdd0950ae1d4ec55f04b176182e03`, using `original_data/n5.csv` and `original_data/n4.csv`.
+- **N5/N4/N3 vocabulary membership** derives from [Stephen Kraus's Yomitan JLPT vocabulary data](https://github.com/stephenmk/yomitan-jlpt-vocab),
+  revision `b062d4e38c4bdd0950ae1d4ec55f04b176182e03`, using `original_data/n5.csv`, `original_data/n4.csv` and `original_data/n3.csv`.
   Credit Stephen Kraus, Jonathan Waller (the underlying [Tanos community lists](https://www.tanos.co.uk/jlpt/)), and EDRDG for
   the dictionary data. Kraus's distribution is explicitly
   [CC BY-SA 4.0](https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/yomitan-jlpt-vocab/index.json#L10-L12).

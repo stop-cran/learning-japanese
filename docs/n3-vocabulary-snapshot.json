@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "cdf871bc235bc1822c2d8940c9aa77d9e175118f",
+  "scope": "Coverage of the pinned community N3 vocabulary rows, not an official syllabus.",
+  "source": {
+    "repository": "stephenmk/yomitan-jlpt-vocab",
+    "commit": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+    "attribution": "Stephen Kraus; underlying community lists by Jonathan Waller.",
+    "license": "CC BY-SA 4.0 for the selected Kraus distribution.",
+    "files": [
+      {
+        "level": 3,
+        "url": "https://raw.githubusercontent.com/stephenmk/yomitan-jlpt-vocab/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n3.csv",
+        "sha256": "bd4d68c59cfee861351e1bdf9d99818e434392201eabbed4d3657225fe53a3ac",
+        "rows": 1730
+      }
+    ]
+  },
+  "jmdict": {
+    "snapshotDate": "2026-10-08",
+    "url": "https://www.edrdg.org/pub/Nihongo/JMdict_e.gz",
+    "downloadSha256": "3d5fc0a0f768df4d044744732348f09a47db97a6286c2de1d565e5766212a1ea",
+    "xmlSha256": "2de8f1a662c8ce69d3fa05f86d1dda224fabf21c2d45d07daa9e8da150189e0d",
+    "attribution": "Copyright James William Breen and the Electronic Dictionary Research and Development Group; CC BY-SA 4.0."
+  },
+  "coverageIndex": "n3-vocabulary-sources.tsv",
+  "coverageIndexSha256": "0727d4da5d83efba733c36bfe625afd60ac1aad4b7b2f9529ee7afd174c9014e",
+  "sourceRowCounts": {
+    "N3": 1730
+  },
+  "coveredArticles": 1698,
+  "newArticles": 1490,
+  "reusedArticles": 208,
+  "articleLevelCounts": {
+    "N3": 1624,
+    "N4": 39,
+    "N5": 35
+  },
+  "indexSemantics": {
+    "source_id": "N-level:physical CSV line number, including the header at line 1.",
+    "source_kanji": "Original CSV kanji field, including empty values; the original written form is this or source_reading.",
+    "source_gloss": "Original Waller gloss retained for identification, not endorsed verbatim as teaching guidance.",
+    "article": "Stable repository-relative word page covering this row's reading and intended meaning.",
+    "article_level": "Easiest sourced level among the source rows taught by the article; individual senses/readings can have different source levels.",
+    "sense_indices": "Non-exhaustive selected teaching senses, one-based within the recorded JMdict snapshot; other entry senses are not automatically article claims.",
+    "additional_senses": "Other explicitly distinguished homograph senses, as semicolon-separated entry:sense pairs; not extra source rows or separate level assignments.",
+    "mapping_note": "Documented spelling normalization, stable article reuse or unchanged source spelling.",
+    "identity_note": "Correction of an incorrect supplied lexical identity; source_jmdict_entry is never overwritten.",
+    "source_note": "Source-gloss qualification, spelling/sense distinction or an explicitly retained ambiguity; not a new membership assignment."
+  },
+  "identityCorrections": [
+    {
+      "sourceId": "N3:144",
+      "suppliedEntry": 1253570,
+      "teachingEntry": 1478010,
+      "note": "Correct the lexical identity to 1478010 for the supplied attack/defeat meaning, retaining 1253570 unchanged as the original source ID. The replacement entry itself was inspected in full: it accepts 撃つ/うつ as well as 討つ/うつ, so this correction does not require inventing a new reading. 討つ is a useful target for distinguishing attack/defeat from shooting; do not assert that 撃つ can only mean shoot. The inspected snapshot uses two distinct entries, not one unrestricted polysemous record."
+    },
+    {
+      "sourceId": "N3:220",
+      "suppliedEntry": 1001560,
+      "teachingEntry": 1365040,
+      "note": "Use corrected lexical identity 1365040 and the target 親/おや for the source's explicit parents meaning. Preserve original ID 1001560, source kana and source row unchanged in provenance. The complete replacement entry was inspected, including its alternate spelling 祖, which must not inherit the parent sense."
+    },
+    {
+      "sourceId": "N3:447",
+      "suppliedEntry": 1577650,
+      "teachingEntry": 2868440,
+      "note": "Use corrected lexical identity 2868440, sense 1, while preserving original sourceEntry=1577650 and the source reading くだ. Do not change the reading to かん or invent a pronunciation. The full replacement entry was inspected."
+    },
+    {
+      "sourceId": "N3:706",
+      "suppliedEntry": 2179090,
+      "teachingEntry": 1005580,
+      "note": "Use corrected lexical identity 1005580, sense 1, while preserving sourceEntry=2179090 in provenance. Keep the target in kana. The complete replacement entry was inspected, not inferred merely from matching kana."
+    },
+    {
+      "sourceId": "N3:1163",
+      "suppliedEntry": 1632200,
+      "teachingEntry": 1454350,
+      "note": "Historical source intent remains uncertain. The kana spelling does not disambiguate the homophones. Select inspected JMdict 1454350, 銅貨/どうか, because its copper-coin sense agrees with the source's specific English clue. Preserve supplied expression ID 1632200 separately; do not claim that the source establishes the please/somehow expression's level."
+    },
+    {
+      "sourceId": "N3:1637",
+      "suppliedEntry": 2771700,
+      "teachingEntry": 1570120,
+      "note": "Correct the teaching identity to inspected entry 1570120, sense 1, while preserving original sourceEntry 2771700. Keep kana やや; do not replace it with the entry's rare kanji spellings."
+    }
+  ],
+  "sourceIntentUncertainRows": [
+    "N3:91",
+    "N3:141",
+    "N3:191",
+    "N3:210",
+    "N3:267",
+    "N3:308",
+    "N3:311",
+    "N3:314",
+    "N3:321",
+    "N3:322",
+    "N3:366",
+    "N3:387",
+    "N3:417",
+    "N3:419",
+    "N3:463",
+    "N3:712",
+    "N3:1160",
+    "N3:1163",
+    "N3:1357",
+    "N3:1415",
+    "N3:1419",
+    "N3:1420",
+    "N3:1444",
+    "N3:1476",
+    "N3:1614",
+    "N3:1628",
+    "N3:1693"
+  ],
+  "teachingSpellingClarifications": [
+    {
+      "sourceId": "N3:20",
+      "articleWord": "開ける",
+      "teachingWord": "明ける",
+      "mappingNote": "Reuse the stable 開ける article; source coverage explicitly teaches the spelling 明ける for dawn, not the primary door-opening use.",
+      "evidence": "Inspected article and JMdict 1202450 sense 6; the report selects the dawn sense. Class-level check of source/article spelling differences."
+    },
+    {
+      "sourceId": "N3:1307",
+      "articleWord": "登る",
+      "teachingWord": "昇る",
+      "mappingNote": "Reuse the stable 登る article; source coverage explicitly teaches 昇る natural rising and promotion (JMdict 1352570 senses 2 and 4), not the primary climbing spelling.",
+      "evidence": "Inspected article and full JMdict 1352570 restrictions: sense 2 上る/昇る, sense 4 昇る, sense 1 上る/登る."
+    },
+    {
+      "sourceId": "N3:1533",
+      "articleWord": "町",
+      "teachingWord": "街",
+      "mappingNote": "Reuse the stable 町 article; source coverage explicitly teaches 街/まち for town and streets, while distinguishing the 街-only downtown/main-street sense.",
+      "evidence": "Inspected article and JMdict 1603990 spelling restrictions; source/article aliases differ for sense 2. Claimed senses 1 and 3 remain unchanged."
+    }
+  ],
+  "teachingSenseAdditions": [
+    {
+      "sourceId": "N3:475",
+      "article": "words/加わる.md",
+      "entry": 1189980,
+      "originalSenses": [
+        1,
+        2,
+        4
+      ],
+      "addedSenses": [
+        3
+      ],
+      "coverageNote": "Added the increase-in-degree/intensity use, with 暑さが加わる illustrating the increasing quality as subject. This supplements the original joining, addition and applied-force teachings.",
+      "evidence": "JMdict 1189980 sense 3; the actual Japanese dictionary entry at https://www.weblio.jp/content/%E5%8A%A0%E3%82%8F%E3%82%8B separately describes increasing degree in its third numbered meaning and gives 暑さが加わる, contrasted with applied pressure in meaning 4."
+    },
+    {
+      "sourceId": "N3:1321",
+      "article": "words/馬鹿.md",
+      "entry": 1601260,
+      "originalSenses": [
+        1,
+        2
+      ],
+      "addedSenses": [
+        3
+      ],
+      "coverageNote": "Add the source-requested trivial/insignificant meaning through the verified fixed expression ばかにならない, without replacing the fool/foolish meanings or treating the idiom as necessarily insulting.",
+      "evidence": "Parent inspected full JMdict 1601260: sense 3 is trivial/insignificant/disappointing, usually written in kana, with no incompatible reading or spelling restriction. Separately inspected full entry 1471660, sense 1, defines ばかにならない as not insignificant/not to be sneezed at. N3:1321 includes the source clue trivial matter."
+    },
+    {
+      "sourceId": "N3:995",
+      "article": "words/平ら.md",
+      "entry": 1506930,
+      "originalSenses": [
+        1
+      ],
+      "addedSenses": [
+        2
+      ],
+      "coverageNote": "Added the calm/composed sense through 心を平らにする, contrasting a mental state with the retained physical flatness examples. Sitting-posture and place-name suffix meanings remain outside the selected teaching.",
+      "evidence": "JMdict 1506930 sense 2 is an unrestricted calm/tranquil/composed na-adjective sense. The actual Japanese entry at https://www.weblio.jp/content/%E5%B9%B3%E3%82%89, reading たいら, gives 心を平らにする under meaning 2. N3:995 explicitly includes calm."
+    },
+    {
+      "sourceId": "N3:1470",
+      "article": "words/平均.md",
+      "entry": 1583870,
+      "originalSenses": [
+        1
+      ],
+      "addedSenses": [
+        2
+      ],
+      "coverageNote": "Add the source-requested balance/equilibrium sense through the attested 平均を保つ and the established compound 平均台. Distinguish its intransitive suru classification from transitive averaging without claiming frequency or obsolescence.",
+      "evidence": "Parent inspected complete JMdict 1583870: sense 2 has n/vs/vi, no incompatible restrictions or obsolescence tag. Entry 2104180 gives 平均台/へいきんだい, balance beam in gymnastics. Actual Weblio Digital Daijisen 平均 meaning 3 explicitly describes equilibrium/balance and gives 平均を保つ."
+    },
+    {
+      "sourceId": "N3:657",
+      "article": "words/氏.md",
+      "entry": 2101130,
+      "originalSenses": [
+        1
+      ],
+      "addedSenses": [
+        2
+      ],
+      "coverageNote": "Add the compatible し clan sense with 藤原氏, keeping the respectful personal suffix primary and distinguishing the separately indexed うじ family-name/lineage identity.",
+      "evidence": "Parent inspected complete JMdict 2101130: sense 2 is unrestricted n/suf clan for し. Entry 1311010 separately covers うじ. Actual Weblio Digital Daijisen し entry identifies the lineage-group meaning and gives 藤原― in its clan-name suffix sense."
+    }
+  ],
+  "limits": [
+    "N3 study is cumulative with N5 and N4, whose indexes remain separate.",
+    "Existing easier article labels are preserved even when an N3 reading or sense is added.",
+    "Dictionary identity and selected senses do not establish frequency or example naturalness.",
+    "Supplied lexical IDs are preserved separately from explicitly adjudicated corrections.",
+    "Coverage means every pinned source row mapped to explicitly selected dictionary-supported teaching, not endorsement of every source gloss or recovery of unresolved historical source intent.",
+    "For source-intent conflicts, the index records the selected teaching and retained discrepancy; historical intent is not claimed to be recovered.",
+    "Blank source glosses do not establish a full sense inventory; the selected dictionary-backed teaching senses are editorial anchors."
+  ]
+}
