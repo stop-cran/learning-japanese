@@ -242,11 +242,14 @@ def check_body(path: Path, meta: dict, body: str) -> None:
             err(path, f"body must start with a single H1 matching metadata: # {title}")
     start = headings[0][0] if headings else -1
     end = next((number for number, level, _ in headings if level == 2), len(body.splitlines()))
-    labels = (r"\bStrokes:", r"\bKey\s*\(radical\):", r"\bPhonetic:", r"\bJLPT:")
+    labels = (r"\bStrokes:", r"\bKey\s*\(radical\):", r"\bJLPT:")
     if not any(all(re.search(label, line.replace("**", ""), re.I) for label in labels)
                for number, line in visible if start < number < end):
-        err(path, "kanji body needs a facts line (Strokes, Key (radical), Phonetic, JLPT) "
+        err(path, "kanji body needs a facts line (Strokes, Key (radical), JLPT; Phonetic only when known) "
             "between the H1 and the first ## section")
+    for number, line in visible:
+        if start < number < end and re.search(r"\bPhonetic:\**\s*(none|none established|none given|not identified here)\s*(·|$)", line, re.I):
+            err(path, "omit the Phonetic item from the facts line when no phonetic component is known")
     # Ratchet: N3 cards still have unexplained kunyomi; extend this to them once they are fixed.
     if meta.get("jlpt") in (4, 5) and isinstance(meta.get("kunyomi"), list):
         text = body.replace(".", "")

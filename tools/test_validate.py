@@ -25,7 +25,7 @@ kunyomi: [ひ, -び, -か]
 distractors: [月, 口]"""
 KANJI_BODY = """# 日 — sun, day
 
-**Strokes:** 4 · **Key (radical):** 日 (no. 72) · **Phonetic:** none · **JLPT:** N5
+**Strokes:** 4 · **Key (radical):** 日 (no. 72) · **JLPT:** N5
 
 ## Meaning and origin
 Meaning.
@@ -104,11 +104,9 @@ class ValidateTests(unittest.TestCase):
     def test_valid_fixtures_and_optional_phonetic(self):
         self.check_card(self.kanji_path)
         self.check_card(self.word_path)
-        body = KANJI_BODY.replace("**Phonetic:** none", "**Phonetic:** not identified here")
-        self.write("kanji/日.md", KANJI_HEADER, body)
         meta = self.check_card(self.kanji_path)
         self.assertNotIn("phonetic", meta)
-        body = KANJI_BODY.replace("**Phonetic:** none", "**Phonetic:** 日")
+        body = KANJI_BODY.replace("· **JLPT:**", "· **Phonetic:** 日 · **JLPT:**")
         self.write("kanji/日.md", KANJI_HEADER + "\nphonetic: 日", body)
         meta = self.check_card(self.kanji_path)
         self.assertEqual("日", meta["phonetic"])
@@ -161,8 +159,7 @@ class ValidateTests(unittest.TestCase):
             with self.subTest(tags=tags):
                 validate.errors.clear()
                 header = KANJI_HEADER.replace("[jlpt-n5, starter]", tags)
-                body = KANJI_BODY.replace("**Phonetic:** none", "**Phonetic:** not identified here")
-                self.write("kanji/日.md", header, body)
+                self.write("kanji/日.md", header, KANJI_BODY)
                 meta = self.check_card(self.kanji_path)
                 self.assertNotIn("starter", meta["tags"])
                 self.assertEqual([], validate.errors)
@@ -763,11 +760,24 @@ class ValidateTests(unittest.TestCase):
                 validate.check_body(self.kanji_path, meta, KANJI_BODY.replace("# 日 — sun, day", heading))
                 self.assert_error("single H1 matching metadata")
 
+    def test_placeholder_phonetic_is_rejected(self):
+        meta, _ = validate.parse(self.kanji_path)
+        for value in ("none", "not identified here"):
+            with self.subTest(value=value):
+                validate.errors.clear()
+                validate.check_body(self.kanji_path, meta,
+                                    KANJI_BODY.replace("· **JLPT:**", f"· **Phonetic:** {value} · **JLPT:**"))
+                self.assert_error("omit the Phonetic item")
+        validate.errors.clear()
+        validate.check_body(self.kanji_path, meta,
+                            KANJI_BODY.replace("· **JLPT:**", "· **Phonetic:** none (ideographic) · **JLPT:**"))
+        self.assertEqual([], validate.errors)
+
     def test_kanji_facts_line_is_before_sections(self):
         meta, _ = validate.parse(self.kanji_path)
         facts = next(line for line in KANJI_BODY.splitlines() if line.startswith("**Strokes:"))
         for body in (KANJI_BODY.replace(facts, ""), KANJI_BODY.replace(facts, "") + facts,
-                     KANJI_BODY.replace("**Phonetic:** none · ", "")):
+                     KANJI_BODY.replace("**Key (radical):** 日 (no. 72) · ", "")):
             with self.subTest(body=body):
                 validate.errors.clear()
                 validate.check_body(self.kanji_path, meta, body)

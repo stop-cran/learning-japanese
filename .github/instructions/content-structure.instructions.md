@@ -42,12 +42,12 @@ does not establish linguistic correctness. Read a real card alongside the format
    Every `kunyomi` entry must be explained in `## Readings`: a row giving at least one real word (written form, kana, short gloss) or, for a prefix, suffix or
    bound stem, an example compound and what the part means. Check each word in a dictionary (e.g. 明るむ あかるむ "grow light" is real) and mark rare or
    literary readings as such. Do not drop a reading from the metadata because it is rare. `tools/validate.py` enforces this for N5 and N4 cards.
-3. Body sections in order: heading `# 字 — title` and a facts line (strokes, key, phonetic, JLPT); `## Meaning and origin`; `## Readings`
+3. Body sections in order: heading `# 字 — title` and a facts line (strokes, key, JLPT, and phonetic only when a verified component is known); `## Meaning and origin`; `## Readings`
    (table: reading, on/kun, typical words with kana); `## Common words`; `## Notes` (look-alikes, differences, special readings).
 4. Origin: name the components and the idea of their composition. Hedge with "commonly explained" or "debated" where scholars disagree;
    mnemonic associations are not etymology and must be labelled as mnemonics. Cite a source for substantive historical or phonetic claims.
    When the history is unverified, give an explicitly labelled modern-shape mnemonic instead of inventing an origin. Use
-   `structure-unclassified` and "not identified here" if the structural type or phonetic component has not been established;
+   `structure-unclassified` if the structural type has not been established, and omit the Phonetic item from the facts line (no placeholder);
    absence of a `phonetic` field does not prove that no phonetic component exists.
    If the canonical indexing radical looks different in the character, explain its visible form in the facts line or body
    (for example, 艸 appearing as 艹); do not replace source metadata with the positional glyph.
