@@ -20,12 +20,18 @@ This repository contains original notes plus data derived from open dictionary p
   [source-row index](docs/n5-n4-vocabulary-sources.tsv) reuse the same dictionary snapshot and distinguish supplied source IDs
   from corrected lexical identities. Selected sense indices are one-based within that inspected dictionary version, not stable
   identifiers for every future JMdict revision.
+  The [article-subject snapshot](docs/article-subjects-source-snapshot.json) uses dictionaries retrieved on 2026-10-10
+  and records six added kanji, 17 new word articles, and the reused 訳 article. It distinguishes rare character-dictionary
+  readings from verified ordinary word spellings. The rare 奇しい/あやしい spelling is supported by the cited
+  *Seisenban Nihon Kokugo Daijiten* entry rather than claimed as a spelling in JMdict.
 - **Canonical radical glyphs for the N4 and N3 additions** are mapped from the compatibility decompositions in Unicode 17.0
   [UnicodeData.txt](https://www.unicode.org/Public/17.0.0/ucd/UnicodeData.txt), copyright Unicode, Inc., under the
   [Unicode License V3](docs/UNICODE-LICENSE.txt). Positional component shapes may differ from these canonical glyphs.
 - **Kanji JLPT levels** follow the community sets mirrored by [kanjiapi.dev](https://kanjiapi.dev), with explicitly sourced exceptions.
-- **N5/N4 vocabulary membership** derives from [Stephen Kraus's Yomitan JLPT vocabulary data](https://github.com/stephenmk/yomitan-jlpt-vocab),
+- **Vocabulary membership** derives from [Stephen Kraus's Yomitan JLPT vocabulary data](https://github.com/stephenmk/yomitan-jlpt-vocab),
   revision `b062d4e38c4bdd0950ae1d4ec55f04b176182e03`, using `original_data/n5.csv` and `original_data/n4.csv`.
+  Selected article-subject additions also use `n1.csv`, `n2.csv`, and `n3.csv` at that revision; their source record
+  preserves the chosen rows and explains why ambiguous homographs or absent levels were not inferred.
   Credit Stephen Kraus, Jonathan Waller (the underlying [Tanos community lists](https://www.tanos.co.uk/jlpt/)), and EDRDG for
   the dictionary data. Kraus's distribution is explicitly
   [CC BY-SA 4.0](https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/yomitan-jlpt-vocab/index.json#L10-L12).

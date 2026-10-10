@@ -2,7 +2,7 @@
 
 **Japanese endings such as 者, 家, and 師 help describe what someone does, what they specialize in, or what position they hold. They are not a ranking of how honorable a profession is.** There are useful patterns, but established words and their contexts still decide the meaning.
 
-Compare **研究者（けんきゅうしゃ）**, "researcher," with **研究員（けんきゅういん）**, "research staff member." One person can be both: the first identifies their activity, while the second presents them through an organizational role.
+Compare **[研究者](../words/研究者.md)（けんきゅうしゃ）**, "researcher," with **[研究員](../words/研究員.md)（けんきゅういん）**, "research staff member." One person can be both: the first identifies their activity, while the second presents them through an organizational role.
 
 This article explains seven common endings, how they attach, and what they contribute to existing and newly formed words. It is a practical guide to interpretation, not an exhaustive list of occupation names or a history of each kanji.
 
@@ -43,7 +43,7 @@ The table gives useful starting points, not definitions that predict every word:
 | **[者](../kanji/者.md)（しゃ／じゃ）** | A person identified by an activity, involvement, or condition | 研究者 - researcher; 参加者（さんかしゃ） - participant |
 | **[家](../kanji/家.md)（か）** | A practitioner or specialist in a field; also someone characterized by a disposition | 漫画家 - manga artist; 専門家（せんもんか） - expert |
 | **[師](../kanji/師.md)（し）** | A practitioner of a specialized skill or art; also teaching-related roles | 医師（いし） - physician; 美容師（びようし） - hairdresser; [教師](../words/教師.md)（きょうし） - teacher |
-| **士（し）** | An established skilled or qualified role, including many professional titles | 弁護士（べんごし） - lawyer; 建築士（けんちくし） - architect |
+| **[士](../kanji/士.md)（し）** | An established skilled or qualified role, including many professional titles | 弁護士（べんごし） - lawyer; 建築士（けんちくし） - architect |
 | **[手](../kanji/手.md)（しゅ／て）** | A performer, operator, or person carrying out an activity | 歌手 - singer; [運転手](../words/運転手.md)（うんてんしゅ） - driver; 読み手 - reader |
 | **[員](../kanji/員.md)（いん）** | Membership, staffing, or an assigned role in an organization | 会社員（かいしゃいん） - company employee; 研究員 - research staff member |
 | **[屋](../kanji/屋.md)（や）** | A shop, seller, or trade practitioner; also a characterization of someone | 本屋（ほんや） - bookshop/bookseller; パン屋 - bakery/baker |
@@ -57,6 +57,9 @@ Some tempting shortcuts fail:
 - **屋 does not always identify a person.** 本屋 often refers to the shop itself.
 
 These observations concern the illustrated uses. They do not exhaust the meanings or readings of the individual kanji.
+
+For example, 士 also occurs in the historical word **[武士](../words/武士.md)（ぶし）**, "samurai; warrior,"
+not just in modern professional titles.
 
 ## 3. Contrasts are more useful than a prestige scale
 
@@ -78,8 +81,8 @@ These share the character 作, but they are established words with different use
 
 | Word | Useful distinction |
 | --- | --- |
-| **作者（さくしゃ）** | The person who created a work: its author or maker |
-| **作家（さっか）** | A creative practitioner; often a writer, especially a novelist, but also used for creators in other arts |
+| **[作者](../words/作者.md)（さくしゃ）** | The person who created a work: its author or maker |
+| **[作家](../words/作家.md)（さっか）** | A creative practitioner; often a writer, especially a novelist, but also used for creators in other arts |
 
 > この小説の作者は誰ですか。  
 > Who is the author of this novel?
@@ -116,7 +119,7 @@ Compare:
 
 | Word | Interpretation |
 | --- | --- |
-| **政治家（せいじか）** | Politician: the ordinary occupational label |
+| **[政治家](../words/政治家.md)（せいじか）** | Politician: the ordinary occupational label |
 | **政治屋（せいじや）** | A derogatory label for a politician characterized as pursuing personal advantage |
 
 Here, replacing the ending changes the evaluation, not merely the job description.

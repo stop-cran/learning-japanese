@@ -25,8 +25,9 @@ Historical KANJIDIC levels are not modern N-numbers: [old Level 4 corresponds to
 | Kanji | Repository label | Evidence and reason |
 | --- | --- | --- |
 | 分 | N5 | kanjiapi.dev returned `jlpt: null` on 2026-10-08. [Kanshudo](https://www.kanshudo.com/kanji/%E5%88%86) explicitly labels 分 N5; [JLPT Sensei's N5 list](https://jlptsensei.com/jlpt-n5-kanji-list/) includes it. These are community sources, not an official ruling. |
+| 妖 | N1 | kanjiapi.dev returned `jlpt: null` on 2026-10-10. [Kanshudo's 妖 details](https://www.kanshudo.com/kanji/%E5%A6%96) explicitly display **JLPT: N1**. This is the kanji's level label, not an inference from its usefulness rating or school grade. |
 
-With this exception, the repository's N5 study set has 80 characters. Keep the card's `jlpt`, its `jlpt-nX` tag, and its facts line
+With the 分 exception, the repository's N5 study set has 80 characters. Keep the card's `jlpt`, its `jlpt-nX` tag, and its facts line
 in agreement. Reassess an exception if its cited evidence changes; do not overwrite it merely because the baseline still has no value.
 
 ## Vocabulary baseline
@@ -48,6 +49,28 @@ Word articles may supply an explicit integer `jlpt: 1..5`. When an article cover
 level (the largest number), while retaining each row's level in the index. This is an **article-level study label**, not a claim
 that every reading or sense on the page belongs to that level. Leave `jlpt` absent when no vocabulary source is established;
 do not use a blank or `null`, and do not assign the remaining words a speculative level.
+
+### Selected article-subject additions
+
+The [2026-10-10 source record](article-subjects-source-snapshot.json) also inspects `n1.csv`, `n2.csv`, and `n3.csv`
+at the same pinned revision for selected article subjects, without claiming complete coverage of those levels.
+It records the exact source rows, dictionary identities, and spelling normalizations:
+
+- **N2:** 怪しい, 作者, 武士.
+- **N3:** 作家, ころ (source spelling 頃).
+- **N1:** くらい (source reading ぐらい), だけ (source spelling 丈).
+- **Reused N4 card:** 訳, also teaching the spelling わけ; no duplicate kana card.
+
+The N3 位/くらい row names the noun entry for rank, even though its gloss also includes "about".
+The particle card instead uses the unambiguous N1 ぐらい row for JMdict 1154340; it does not silently borrow
+the rank noun's level. Similarly, N1 間々/まま means "occasionally", not the unchanged-state noun まま.
+These list labels do not imply that useful basic grammar such as だけ should be postponed until N1.
+
+No vocabulary level was established for 妖しい, 奇しい, 疑わしい, いかがわしい, unchanged-state まま,
+かぎり, ばかり, 研究者, 研究員, or 政治家 in the inspected sources. Their cards omit `jlpt`.
+Do not copy 怪しい's level to its separately recorded or rare alternative spellings merely because they share a reading.
+
+### App interpretation
 
 Vocabulary-aware app versions give this explicit field precedence, including for kana-only words and words containing kanji
 from a harder study set. Older articles without it retain the app's kanji-based fallback; that fallback is not vocabulary provenance.
