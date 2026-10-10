@@ -119,7 +119,7 @@ class ValidateTests(unittest.TestCase):
         self.check_card(self.kanji_path)
         self.assert_error("kunyomi '-か' is not explained")
         validate.errors.clear()
-        header = KANJI_HEADER.replace("[ひ, -び, -か]", "[ひ, あ.かる]").replace("jlpt: 5", "jlpt: 4").replace("n5", "n4")
+        header = KANJI_HEADER.replace("[ひ, -び, -か]", "[ひ, あ.かる]").replace("jlpt: 5", "jlpt: 3").replace("n5", "n3")
         self.write("kanji/日.md", header, KANJI_BODY)
         self.check_card(self.kanji_path)
         self.assertEqual([], validate.errors)

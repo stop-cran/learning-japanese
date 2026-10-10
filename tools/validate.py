@@ -247,8 +247,8 @@ def check_body(path: Path, meta: dict, body: str) -> None:
                for number, line in visible if start < number < end):
         err(path, "kanji body needs a facts line (Strokes, Key (radical), Phonetic, JLPT) "
             "between the H1 and the first ## section")
-    # Ratchet: N4 and N3 cards still have unexplained kunyomi; extend this to them once they are fixed.
-    if meta.get("jlpt") == 5 and isinstance(meta.get("kunyomi"), list):
+    # Ratchet: N3 cards still have unexplained kunyomi; extend this to them once they are fixed.
+    if meta.get("jlpt") in (4, 5) and isinstance(meta.get("kunyomi"), list):
         text = body.replace(".", "")
         for reading in meta["kunyomi"]:
             okurigana = reading.partition(".")[2]
