@@ -14,9 +14,9 @@ CARD_KEYS = {"id", "kind", "text", "en", "noun", "phrase", "reading", "good", "k
 REQUIRED = ("id", "kind", "text", "en", "noun", "phrase", "reading", "good", "kana", "distractors")
 
 
-def check_counters(err) -> int:
+def check_counters(err, root: Path = ROOT) -> int:
     """Reports problems through err(path, message); returns the number of counter files read."""
-    files = sorted((ROOT / "counters").glob("*.json"))
+    files = sorted((root / "counters").glob("*.json"))
     cards: dict[str, dict] = {}
     accepted: dict[str, set[str]] = {}
     reverse: list[tuple[Path, dict, str]] = []
@@ -24,7 +24,7 @@ def check_counters(err) -> int:
     for path in files:
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
-        except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        except (UnicodeDecodeError, json.JSONDecodeError, RecursionError) as exc:
             err(path, f"not valid JSON: {exc}")
             continue
         if not isinstance(data, dict):

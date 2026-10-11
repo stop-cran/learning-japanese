@@ -493,7 +493,7 @@ def main() -> int:
             check_body(path, meta, body)
             check_links(path, body)
     from validate_counters import check_counters
-    check_counters(err)
+    check_counters(err, ROOT)
     for message in errors:
         print(message)
     print(f"{len(errors)} error(s)")
