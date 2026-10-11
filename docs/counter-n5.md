@@ -1,8 +1,11 @@
 # N5-oriented counter application set
 
 [Issue #41](https://github.com/stop-cran/kanji-cards-android/issues/41) expansion of the
-[20-card pilot](counter-pilot.md). [Data: counter-n5.yaml](counter-n5.yaml).
+[20-card pilot](counter-pilot.md). [Draft data: counter-n5.yaml](counter-n5.yaml).
 
+**Live content** now lives in `counters/<id>.json` (one file per counter, validated by
+`tools/validate_counters.py` and listed in `manifest.json`); the YAML is the historical
+draft and is no longer read by anything except `tools/validate_counter_draft.py`.
 The agreed scope is ten counters with twelve forward examples each: **120 forward cards**,
 plus **20 authored reverse questions** using those examples' nouns/contexts.
 The choose and typed forward modes share cards, not duplicate content.

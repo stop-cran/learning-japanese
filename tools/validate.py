@@ -492,6 +492,8 @@ def main() -> int:
                 check_word_kanji_links(path, meta, body)
             check_body(path, meta, body)
             check_links(path, body)
+    from validate_counters import check_counters
+    check_counters(err)
     for message in errors:
         print(message)
     print(f"{len(errors)} error(s)")
