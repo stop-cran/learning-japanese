@@ -1,0 +1,291 @@
+# Independently authored examples; not in the app manifest. See counter-n5.md.
+schema: counter-n5-draft-v1
+status: editorial-draft
+level: 5
+numerals: kanji-preferred
+sources:
+  hon: https://www.tofugu.com/japanese/japanese-counter-hon/
+  hiki: https://www.tofugu.com/japanese/japanese-counter-hiki/
+  mai: https://www.tofugu.com/japanese/japanese-counter-mai/
+  nin: https://www.tofugu.com/japanese/japanese-counter-nin/
+  ko: https://www.tofugu.com/japanese/japanese-counter-ko/
+  satsu: https://www.tofugu.com/japanese/japanese-counter-satsu/
+  dai: https://www.tofugu.com/japanese/japanese-counter-dai/
+  hai: https://en.wiktionary.org/wiki/杯
+  kai: https://www.tofugu.com/japanese/japanese-counter-kai-times/
+  tsu: https://www.tofugu.com/japanese/japanese-counter-tsu/
+# Each group has 12 cards. {} hides the counter; phrase is the complete counting expression.
+# good and kana are authored forms, never an instruction to derive Japanese morphology.
+# hard variants are per-card, with replacement phrase/reading and contextual explanation.
+# distractors are three unsuitable counters for this specific context, not all possible alternatives.
+counters:
+  - id: hon
+    counter: 本
+    reading: ほん
+    title: long objects, bottles and films
+    sources: [hon, tsu, ko]
+    cards:
+      - {id: hon-pen-1, kind: floated-quantity, text: "机の上にペンが三{}あります。", en: "There are three pens on the desk.", noun: ペン, phrase: 三本, reading: さんぼん, good: [本, 三本], kana: [さんぼん], distractors: [匹, 冊, 回]}
+      - {id: hon-umbrella-1, kind: plain, text: "雨なので、傘を二{}持っていきます。", en: "It is raining, so I will take two umbrellas.", noun: 傘, phrase: 二本, reading: にほん, good: [本, 二本], kana: [にほん], distractors: [人, 冊, 杯]}
+      - {id: hon-film-1, kind: plain, text: "昨日、映画を二{}見ました。", en: "I watched two films yesterday.", noun: 映画, phrase: 二本, reading: にほん, good: [本, 二本], kana: [にほん], distractors: [台, 匹, 杯], note: "本 counts films; 回 would instead count viewings, so it must not be a wrong option in this ambiguous sentence."}
+      - {id: hon-question-1, kind: question, text: "冷蔵庫にビールのびんは何{}ありますか。", en: "How many bottles of beer are in the fridge?", noun: ビールのびん, phrase: 何本, reading: なんぼん, good: [本, 何本], kana: [なんぼん, なんほん, なんぽん], distractors: [人, 匹, 冊]}
+      - {id: hon-approx-1, kind: approximate-range, text: "公園に木が五、六{}あります。", en: "There are five or six trees in the park.", noun: 公園の木, phrase: "五、六本", reading: ごろっぽん, good: [本, "五、六本", 五六本], kana: [ごろっぽん], distractors: [匹, 冊, 杯]}
+      - {id: hon-pencil-1, kind: plain, text: "学校で使うえんぴつを六{}買いました。", en: "I bought six pencils to use at school.", noun: えんぴつ, phrase: 六本, reading: ろっぽん, good: [本, 六本], kana: [ろっぽん], distractors: [人, 匹, 回]}
+      - {id: hon-banana-1, kind: plain, text: "朝ご飯にバナナを一{}食べました。", en: "I ate one banana for breakfast.", noun: バナナ, phrase: 一本, reading: いっぽん, good: [本, 一本], kana: [いっぽん], distractors: [冊, 台, 匹]}
+      - {id: hon-flower-1, kind: plain, text: "母に赤い花を四{}あげました。", en: "I gave my mother four red flowers.", noun: 茎のある花, phrase: 四本, reading: よんほん, good: [本, 四本], kana: [よんほん], distractors: [人, 冊, 回], note: "Individual flowers with stems, not pots or bouquets."}
+      - {id: hon-water-1, kind: plain, text: "水のペットボトルを二{}かばんに入れました。", en: "I put two plastic bottles of water in my bag.", noun: 水のペットボトル, phrase: 二本, reading: にほん, good: [本, 二本], kana: [にほん], distractors: [匹, 冊, 人]}
+      - {id: hon-negative-1, kind: negative, text: "えんぴつが一{}もありません。", en: "There is not even one pencil.", noun: えんぴつ, phrase: 一本, reading: いっぽん, good: [本, 一本], kana: [いっぽん], distractors: [匹, 人, 杯]}
+      - {id: hon-carrot-1, kind: noun, text: "にんじん 三{}", en: "Three carrots", noun: にんじん, phrase: 三本, reading: さんぼん, good: [本, 三本], kana: [さんぼん], distractors: [冊, 台, 匹]}
+      - {id: hon-spoon-1, kind: plain, text: "スプーンを五{}テーブルに置いてください。", en: "Please put five spoons on the table.", noun: スプーン, phrase: 五本, reading: ごほん, good: [本, 五本], kana: [ごほん], distractors: [匹, 冊, 回]}
+  - id: hiki
+    counter: 匹
+    reading: ひき
+    title: small animals, living fish and insects
+    sources: [hiki]
+    cards:
+      - {id: hiki-fish-1, kind: noun, text: "水そうの魚 三{}", en: "Three fish in an aquarium", noun: 水そうの魚, phrase: 三匹, reading: さんびき, good: [匹, 三匹], kana: [さんびき], distractors: [枚, 冊, 杯]}
+      - {id: hiki-dog-1, kind: plain, text: "公園で小さい犬が二{}走っています。", en: "Two small dogs are running in the park.", noun: 小さい犬, phrase: 二匹, reading: にひき, good: [匹, 二匹], kana: [にひき], distractors: [枚, 冊, 杯]}
+      - {id: hiki-approx-1, kind: approximate, text: "庭に虫が十{}ぐらいいます。", en: "There are about ten insects in the garden.", noun: 虫, phrase: 十匹, reading: じゅっぴき, good: [匹, 十匹], kana: [じゅっぴき, じっぴき], distractors: [本, 冊, 杯]}
+      - {id: hiki-question-1, kind: question, text: "家に猫は何{}いますか。", en: "How many cats do you have at home?", noun: 猫, phrase: 何匹, reading: なんびき, good: [匹, 何匹], kana: [なんびき], distractors: [枚, 冊, 回]}
+      - {id: hiki-cat-1, kind: floated-quantity, text: "いすの下に猫が一{}います。", en: "There is one cat under the chair.", noun: 猫, phrase: 一匹, reading: いっぴき, good: [匹, 一匹], kana: [いっぴき], distractors: [枚, 本, 冊]}
+      - {id: hiki-frog-1, kind: plain, text: "池の近くにかえるが四{}います。", en: "There are four frogs near the pond.", noun: かえる, phrase: 四匹, reading: よんひき, good: [匹, 四匹], kana: [よんひき], distractors: [冊, 杯, 回]}
+      - {id: hiki-goldfish-1, kind: plain, text: "弟は金魚を六{}飼っています。", en: "My younger brother keeps six goldfish.", noun: 生きた金魚, phrase: 六匹, reading: ろっぴき, good: [匹, 六匹], kana: [ろっぴき], distractors: [台, 枚, 冊]}
+      - {id: hiki-mouse-1, kind: plain, text: "小さいねずみが二{}走っています。", en: "Two small mice are running.", noun: ねずみ, phrase: 二匹, reading: にひき, good: [匹, 二匹], kana: [にひき], distractors: [冊, 枚, 杯]}
+      - {id: hiki-ant-1, kind: plain, text: "パンの近くにありを八{}見つけました。", en: "I found eight ants near the bread.", noun: あり, phrase: 八匹, reading: はっぴき, good: [匹, 八匹], kana: [はっぴき, はちひき], distractors: [台, 冊, 杯]}
+      - {id: hiki-turtle-1, kind: plain, text: "池に小さいかめが五{}います。", en: "There are five small turtles in the pond.", noun: 小さいかめ, phrase: 五匹, reading: ごひき, good: [匹, 五匹], kana: [ごひき], distractors: [本, 冊, 回]}
+      - {id: hiki-negative-1, kind: negative, text: "今日は部屋に虫が一{}もいません。", en: "There is not even one insect in the room today.", noun: 虫, phrase: 一匹, reading: いっぴき, good: [匹, 一匹], kana: [いっぴき], distractors: [冊, 杯, 台]}
+      - {id: hiki-shrimp-1, kind: plain, text: "水そうの中でえびが三{}泳いでいます。", en: "Three shrimp are swimming in the aquarium.", noun: 生きたえび, phrase: 三匹, reading: さんびき, good: [匹, 三匹], kana: [さんびき], distractors: [枚, 台, 冊]}
+  - id: mai
+    counter: 枚
+    reading: まい
+    title: sheets, flat objects and clothing
+    sources: [mai, tsu]
+    cards:
+      - {id: mai-paper-1, kind: plain, text: "紙を三{}ください。", en: "Please give me three sheets of paper.", noun: 紙, phrase: 三枚, reading: さんまい, good: [枚, 三枚], kana: [さんまい], distractors: [人, 匹, 杯]}
+      - {id: mai-shirt-1, kind: plain, text: "シャツを二{}買いました。", en: "I bought two shirts.", noun: シャツ, phrase: 二枚, reading: にまい, good: [枚, 二枚, 着, 二着], kana: [にまい, にちゃく], distractors: [人, 匹, 杯]}
+      - {id: mai-ticket-1, kind: plain, text: "友だちと行くので、映画のチケットを四{}買いました。", en: "I bought four movie tickets because I am going with friends.", noun: 映画のチケット, phrase: 四枚, reading: よんまい, good: [枚, 四枚], kana: [よんまい], distractors: [人, 匹, 杯]}
+      - {id: mai-stamp-1, kind: noun, text: "切手 五{}", en: "Five stamps", noun: 切手, phrase: 五枚, reading: ごまい, good: [枚, 五枚], kana: [ごまい], distractors: [人, 匹, 冊]}
+      - {id: mai-photo-1, kind: plain, text: "旅行の写真を六{}見せてください。", en: "Please show me six photos from your trip.", noun: 紙の写真, phrase: 六枚, reading: ろくまい, good: [枚, 六枚], kana: [ろくまい], distractors: [冊, 本, 台], note: "Individual photographs, not photo albums."}
+      - {id: mai-plate-1, kind: plain, text: "白いお皿を一{}洗いました。", en: "I washed one white plate.", noun: 空のお皿, phrase: 一枚, reading: いちまい, good: [枚, 一枚], kana: [いちまい], distractors: [人, 匹, 冊]}
+      - {id: mai-postcard-1, kind: plain, text: "友だちに葉書を二{}書きました。", en: "I wrote two postcards to a friend.", noun: 葉書, phrase: 二枚, reading: にまい, good: [枚, 二枚, 通, 二通], kana: [にまい, につう], distractors: [人, 匹, 杯]}
+      - {id: mai-handkerchief-1, kind: plain, text: "かばんにハンカチが三{}あります。", en: "There are three handkerchiefs in my bag.", noun: ハンカチ, phrase: 三枚, reading: さんまい, good: [枚, 三枚], kana: [さんまい], distractors: [冊, 台, 杯]}
+      - {id: mai-question-1, kind: question, text: "宿題には紙が何{}必要ですか。", en: "How many sheets of paper do we need for the homework?", noun: 紙, phrase: 何枚, reading: なんまい, good: [枚, 何枚], kana: [なんまい], distractors: [人, 匹, 杯]}
+      - {id: mai-negative-1, kind: negative, text: "切手を一{}も持っていません。", en: "I do not have even one stamp.", noun: 切手, phrase: 一枚, reading: いちまい, good: [枚, 一枚], kana: [いちまい], distractors: [人, 匹, 冊]}
+      - {id: mai-approx-1, kind: approximate, text: "箱の中に写真が十{}ぐらいあります。", en: "There are about ten photos in the box.", noun: 紙の写真, phrase: 十枚, reading: じゅうまい, good: [枚, 十枚], kana: [じゅうまい], distractors: [人, 匹, 杯]}
+      - {id: mai-towel-1, kind: plain, text: "お風呂で使うタオルを四{}持っていきます。", en: "I will take four towels to use in the bath.", noun: タオル, phrase: 四枚, reading: よんまい, good: [枚, 四枚], kana: [よんまい], distractors: [冊, 台, 杯]}
+  - id: nin
+    counter: 人
+    reading: にん
+    title: people
+    sources: [nin]
+    cards:
+      - {id: nin-one-1, kind: irregular, text: "教室に学生が一{}います。", en: "There is one student in the classroom.", noun: 学生, phrase: 一人, reading: ひとり, good: [人, 一人], kana: [ひとり], distractors: [枚, 本, 杯]}
+      - {id: nin-four-1, kind: irregular, text: "私の家族は四{}です。", en: "There are four people in my family.", noun: 家族, phrase: 四人, reading: よにん, good: [人, 四人], kana: [よにん], distractors: [本, 匹, 冊]}
+      - {id: nin-two-1, kind: irregular, text: "駅で友だちが二{}待っています。", en: "Two friends are waiting at the station.", noun: 友だち, phrase: 二人, reading: ふたり, good: [人, 二人], kana: [ふたり], distractors: [枚, 台, 杯]}
+      - {id: nin-teacher-1, kind: plain, text: "この学校には先生が十{}います。", en: "There are ten teachers at this school.", noun: 先生, phrase: 十人, reading: じゅうにん, good: [人, 十人], kana: [じゅうにん], distractors: [匹, 冊, 回]}
+      - {id: nin-child-1, kind: plain, text: "公園で子どもが三{}遊んでいます。", en: "Three children are playing in the park.", noun: 子ども, phrase: 三人, reading: さんにん, good: [人, 三人], kana: [さんにん], distractors: [枚, 本, 杯]}
+      - {id: nin-customer-1, kind: plain, text: "店の前にお客さんが五{}います。", en: "There are five customers in front of the shop.", noun: お客さん, phrase: 五人, reading: ごにん, good: [人, 五人, 名, 五名], kana: [ごにん, ごめい], distractors: [枚, 匹, 冊], note: "名 is equally suitable for counting customers."}
+      - {id: nin-question-1, kind: question, text: "今日、クラスに学生は何{}いますか。", en: "How many students are in class today?", noun: 学生, phrase: 何人, reading: なんにん, good: [人, 何人], kana: [なんにん], distractors: [枚, 本, 杯]}
+      - {id: nin-approx-1, kind: approximate, text: "バスの中に二十{}ぐらいいます。", en: "There are about twenty people on the bus.", noun: バスの乗客, phrase: 二十人, reading: にじゅうにん, good: [人, 二十人], kana: [にじゅうにん], distractors: [枚, 匹, 冊]}
+      - {id: nin-negative-1, kind: negative, text: "今日は教室に一{}もいません。", en: "There is not even one person in the classroom today.", noun: 教室の人, phrase: 一人, reading: ひとり, good: [人, 一人], kana: [ひとり], distractors: [匹, 枚, 冊]}
+      - {id: nin-sister-1, kind: plain, text: "妹が二{}います。", en: "I have two younger sisters.", noun: 妹, phrase: 二人, reading: ふたり, good: [人, 二人], kana: [ふたり], distractors: [匹, 本, 台]}
+      - {id: nin-woman-1, kind: noun, text: "女の人 七{}", en: "Seven women", noun: 女の人, phrase: 七人, reading: ななにん, good: [人, 七人], kana: [ななにん, しちにん], distractors: [枚, 匹, 冊]}
+      - {id: nin-swim-1, kind: plain, text: "プールで六{}泳いでいます。", en: "Six people are swimming in the pool.", noun: 泳いでいる人, phrase: 六人, reading: ろくにん, good: [人, 六人], kana: [ろくにん], distractors: [枚, 本, 冊]}
+  - id: ko
+    counter: 個
+    reading: こ
+    title: individual compact objects
+    sources: [ko, tsu]
+    cards:
+      - {id: ko-apple-1, kind: plain, text: "りんごを三{}買いました。", en: "I bought three apples.", noun: りんご, phrase: 三個, reading: さんこ, good: [個, 三個, つ, 三つ], kana: [さんこ, みっつ], distractors: [人, 匹, 冊]}
+      - {id: ko-egg-1, kind: plain, text: "卵を六{}ください。", en: "Please give me six eggs.", noun: 卵, phrase: 六個, reading: ろっこ, good: [個, 六個, つ, 六つ], kana: [ろっこ, むっつ], distractors: [人, 匹, 冊]}
+      - {id: ko-negative-1, kind: negative, text: "小さいケーキを一{}も食べませんでした。", en: "I did not eat even one small cake.", noun: 小さいケーキ, phrase: 一個, reading: いっこ, good: [個, 一個, つ, 一つ], kana: [いっこ, ひとつ], distractors: [人, 匹, 冊]}
+      - {id: ko-comparison-1, kind: comparison, text: "りんごはみかんより三{}多いです。", en: "There are three more apples than mandarins.", noun: りんご, phrase: 三個, reading: さんこ, good: [個, 三個, つ, 三つ], kana: [さんこ, みっつ], distractors: [人, 匹, 冊]}
+      - {id: ko-orange-1, kind: plain, text: "お弁当にみかんを二{}入れました。", en: "I put two mandarins in my lunch box.", noun: みかん, phrase: 二個, reading: にこ, good: [個, 二個, つ, 二つ], kana: [にこ, ふたつ], distractors: [人, 匹, 台]}
+      - {id: ko-ball-1, kind: floated-quantity, text: "箱の中にボールが四{}あります。", en: "There are four balls in the box.", noun: ボール, phrase: 四個, reading: よんこ, good: [個, 四個, つ, 四つ], kana: [よんこ, よっつ], distractors: [人, 冊, 回]}
+      - {id: ko-candy-1, kind: plain, text: "弟にあめを五{}あげました。", en: "I gave my younger brother five candies.", noun: あめ, phrase: 五個, reading: ごこ, good: [個, 五個, つ, 五つ], kana: [ごこ, いつつ], distractors: [人, 匹, 台]}
+      - {id: ko-stone-1, kind: plain, text: "川の近くで小さい石を八{}拾いました。", en: "I picked up eight small stones near the river.", noun: 小さい石, phrase: 八個, reading: はっこ, good: [個, 八個, つ, 八つ], kana: [はっこ, はちこ, やっつ], distractors: [人, 匹, 冊]}
+      - {id: ko-question-1, kind: question, text: "冷蔵庫に卵は何{}ありますか。", en: "How many eggs are in the fridge?", noun: 卵, phrase: 何個, reading: なんこ, good: [個, 何個, いくつ], kana: [なんこ], distractors: [人, 匹, 冊], note: "いくつ replaces 何個; do not construct 何つ."}
+      - {id: ko-approx-1, kind: approximate, text: "袋の中にりんごが十{}ぐらいあります。", en: "There are about ten apples in the bag.", noun: りんご, phrase: 十個, reading: じゅっこ, good: [個, 十個, 十], kana: [じゅっこ, じっこ, とお], distractors: [人, 匹, 冊], note: "The native count is 十 (とお), not 十つ."}
+      - {id: ko-eraser-1, kind: noun, text: "消しゴム 二{}", en: "Two erasers", noun: 消しゴム, phrase: 二個, reading: にこ, good: [個, 二個, つ, 二つ], kana: [にこ, ふたつ], distractors: [人, 匹, 冊]}
+      - {id: ko-potato-1, kind: plain, text: "夕ご飯に使うじゃがいもを四{}洗いました。", en: "I washed four potatoes to use for dinner.", noun: じゃがいも, phrase: 四個, reading: よんこ, good: [個, 四個, つ, 四つ], kana: [よんこ, よっつ], distractors: [人, 匹, 冊]}
+  - id: satsu
+    counter: 冊
+    reading: さつ
+    title: bound books and notebooks
+    sources: [satsu]
+    cards:
+      - {id: satsu-book-1, kind: plain, text: "図書館で本を三{}借りました。", en: "I borrowed three books from the library.", noun: 本, phrase: 三冊, reading: さんさつ, good: [冊, 三冊], kana: [さんさつ], distractors: [本, 匹, 杯]}
+      - {id: satsu-notebook-1, kind: plain, text: "学校で使うノートを二{}買いました。", en: "I bought two notebooks to use at school.", noun: ノート, phrase: 二冊, reading: にさつ, good: [冊, 二冊], kana: [にさつ], distractors: [本, 人, 杯]}
+      - {id: satsu-dictionary-1, kind: plain, text: "机の上に辞書が一{}あります。", en: "There is one dictionary on the desk.", noun: 辞書, phrase: 一冊, reading: いっさつ, good: [冊, 一冊], kana: [いっさつ], distractors: [本, 匹, 回]}
+      - {id: satsu-magazine-1, kind: plain, text: "父は雑誌を四{}持っています。", en: "My father has four magazines.", noun: 雑誌, phrase: 四冊, reading: よんさつ, good: [冊, 四冊, 部, 四部], kana: [よんさつ, よんぶ], distractors: [本, 人, 杯]}
+      - {id: satsu-picturebook-1, kind: plain, text: "子どもに絵本を五{}読みました。", en: "I read five picture books to the child.", noun: 絵本, phrase: 五冊, reading: ごさつ, good: [冊, 五冊], kana: [ごさつ], distractors: [本, 匹, 杯]}
+      - {id: satsu-comic-1, kind: plain, text: "かばんに漫画の本を六{}入れました。", en: "I put six comic books in my bag.", noun: 漫画の本, phrase: 六冊, reading: ろくさつ, good: [冊, 六冊], kana: [ろくさつ], distractors: [本, 人, 杯]}
+      - {id: satsu-textbook-1, kind: plain, text: "教科書を二{}学校に持っていきます。", en: "I will take two textbooks to school.", noun: 教科書, phrase: 二冊, reading: にさつ, good: [冊, 二冊], kana: [にさつ], distractors: [本, 匹, 回]}
+      - {id: satsu-question-1, kind: question, text: "この本棚に本は何{}ありますか。", en: "How many books are on this bookshelf?", noun: 本, phrase: 何冊, reading: なんさつ, good: [冊, 何冊], kana: [なんさつ], distractors: [本, 人, 杯]}
+      - {id: satsu-negative-1, kind: negative, text: "日本語の辞書は一{}も持っていません。", en: "I do not have even one Japanese dictionary.", noun: 日本語の辞書, phrase: 一冊, reading: いっさつ, good: [冊, 一冊], kana: [いっさつ], distractors: [本, 匹, 杯]}
+      - {id: satsu-approx-1, kind: approximate, text: "弟の部屋に漫画の本が十{}ぐらいあります。", en: "There are about ten comic books in my younger brother's room.", noun: 漫画の本, phrase: 十冊, reading: じゅっさつ, good: [冊, 十冊], kana: [じゅっさつ, じっさつ], distractors: [本, 人, 回]}
+      - {id: satsu-memopad-1, kind: noun, text: "メモ帳 八{}", en: "Eight memo pads", noun: メモ帳, phrase: 八冊, reading: はっさつ, good: [冊, 八冊], kana: [はっさつ, はちさつ], distractors: [本, 匹, 杯]}
+      - {id: satsu-album-1, kind: plain, text: "写真のアルバムを二{}見ました。", en: "I looked at two photo albums.", noun: 写真のアルバム, phrase: 二冊, reading: にさつ, good: [冊, 二冊], kana: [にさつ], distractors: [枚, 匹, 杯], note: "Count bound albums, not individual photo sheets."}
+  - id: dai
+    counter: 台
+    reading: だい
+    title: vehicles, appliances, furniture and large instruments
+    sources: [dai, tsu]
+    cards:
+      - {id: dai-car-1, kind: plain, text: "家の前に車が二{}止まっています。", en: "Two cars are parked in front of the house.", noun: 車, phrase: 二台, reading: にだい, good: [台, 二台], kana: [にだい], distractors: [人, 匹, 杯]}
+      - {id: dai-bicycle-1, kind: plain, text: "学校の前に自転車が三{}あります。", en: "There are three bicycles in front of the school.", noun: 自転車, phrase: 三台, reading: さんだい, good: [台, 三台], kana: [さんだい], distractors: [人, 冊, 杯]}
+      - {id: dai-bus-1, kind: plain, text: "駅の前でバスが四{}待っています。", en: "Four buses are waiting in front of the station.", noun: バス, phrase: 四台, reading: よんだい, good: [台, 四台], kana: [よんだい], distractors: [人, 匹, 冊]}
+      - {id: dai-tv-1, kind: plain, text: "新しいテレビを一{}買いました。", en: "I bought one new television.", noun: テレビ, phrase: 一台, reading: いちだい, good: [台, 一台, 個, 一個], kana: [いちだい, いっこ], distractors: [匹, 人, 杯]}
+      - {id: dai-computer-1, kind: plain, text: "教室にパソコンが六{}あります。", en: "There are six computers in the classroom.", noun: パソコン, phrase: 六台, reading: ろくだい, good: [台, 六台], kana: [ろくだい], distractors: [人, 匹, 冊]}
+      - {id: dai-fridge-1, kind: plain, text: "台所に冷蔵庫が一{}あります。", en: "There is one refrigerator in the kitchen.", noun: 冷蔵庫, phrase: 一台, reading: いちだい, good: [台, 一台], kana: [いちだい], distractors: [人, 冊, 杯]}
+      - {id: dai-camera-1, kind: plain, text: "旅行にカメラを二{}持っていきました。", en: "I took two cameras on the trip.", noun: カメラ, phrase: 二台, reading: にだい, good: [台, 二台], kana: [にだい], distractors: [匹, 人, 杯]}
+      - {id: dai-piano-1, kind: plain, text: "音楽の教室にピアノが一{}あります。", en: "There is one piano in the music classroom.", noun: ピアノ, phrase: 一台, reading: いちだい, good: [台, 一台], kana: [いちだい], distractors: [人, 匹, 杯]}
+      - {id: dai-bed-1, kind: plain, text: "この部屋にはベッドが二{}あります。", en: "There are two beds in this room.", noun: ベッド, phrase: 二台, reading: にだい, good: [台, 二台, つ, 二つ], kana: [にだい, ふたつ], distractors: [人, 冊, 杯]}
+      - {id: dai-question-1, kind: question, text: "家に自転車は何{}ありますか。", en: "How many bicycles do you have at home?", noun: 自転車, phrase: 何台, reading: なんだい, good: [台, 何台], kana: [なんだい], distractors: [人, 匹, 冊]}
+      - {id: dai-negative-1, kind: negative, text: "今日は店の前に車が一{}もありません。", en: "There is not even one car in front of the shop today.", noun: 車, phrase: 一台, reading: いちだい, good: [台, 一台], kana: [いちだい], distractors: [人, 匹, 杯]}
+      - {id: dai-phone-1, kind: noun, text: "携帯電話 五{}", en: "Five mobile phones", noun: 携帯電話, phrase: 五台, reading: ごだい, good: [台, 五台], kana: [ごだい], distractors: [人, 匹, 冊]}
+  - id: hai
+    counter: 杯
+    reading: はい
+    title: cups, glasses and bowls of their contents
+    sources: [hai, tsu]
+    cards:
+      - {id: hai-tea-1, kind: plain, text: "朝、お茶を一{}飲みます。", en: "I drink one cup of tea in the morning.", noun: お茶, phrase: 一杯, reading: いっぱい, good: [杯, 一杯], kana: [いっぱい], distractors: [匹, 冊, 台]}
+      - {id: hai-coffee-1, kind: plain, text: "コーヒーを二{}ください。", en: "Please give me two cups of coffee.", noun: コーヒー, phrase: 二杯, reading: にはい, good: [杯, 二杯, つ, 二つ], kana: [にはい, ふたつ], distractors: [匹, 冊, 人], note: "つ is a normal way to order portions here."}
+      - {id: hai-water-1, kind: plain, text: "運動の後、水を三{}飲みました。", en: "I drank three glasses of water after exercising.", noun: コップの水, phrase: 三杯, reading: さんばい, good: [杯, 三杯], kana: [さんばい], distractors: [匹, 冊, 台]}
+      - {id: hai-milk-1, kind: plain, text: "子どもは牛乳を一{}飲みました。", en: "The child drank one glass of milk.", noun: コップの牛乳, phrase: 一杯, reading: いっぱい, good: [杯, 一杯], kana: [いっぱい], distractors: [匹, 冊, 回]}
+      - {id: hai-juice-1, kind: plain, text: "ジュースを四{}テーブルに持ってきてください。", en: "Please bring four glasses of juice to the table.", noun: グラスのジュース, phrase: 四杯, reading: よんはい, good: [杯, 四杯], kana: [よんはい], distractors: [匹, 冊, 人]}
+      - {id: hai-beer-1, kind: plain, text: "グラスでビールを二{}飲みました。", en: "I drank two glasses of beer.", noun: グラスのビール, phrase: 二杯, reading: にはい, good: [杯, 二杯], kana: [にはい], distractors: [匹, 冊, 台]}
+      - {id: hai-rice-1, kind: plain, text: "弟はご飯を三{}食べました。", en: "My younger brother ate three bowls of rice.", noun: 茶わんのご飯, phrase: 三杯, reading: さんばい, good: [杯, 三杯], kana: [さんばい], distractors: [匹, 冊, 台]}
+      - {id: hai-soup-1, kind: plain, text: "スープを一{}飲みました。", en: "I had one bowl of soup.", noun: 器のスープ, phrase: 一杯, reading: いっぱい, good: [杯, 一杯], kana: [いっぱい], distractors: [匹, 冊, 人]}
+      - {id: hai-question-1, kind: question, text: "今日はコーヒーを何{}飲みましたか。", en: "How many cups of coffee did you drink today?", noun: コーヒー, phrase: 何杯, reading: なんばい, good: [杯, 何杯], kana: [なんばい], distractors: [匹, 冊, 台]}
+      - {id: hai-negative-1, kind: negative, text: "今日はお茶を一{}も飲んでいません。", en: "I have not had even one cup of tea today.", noun: お茶, phrase: 一杯, reading: いっぱい, good: [杯, 一杯], kana: [いっぱい], distractors: [匹, 冊, 人]}
+      - {id: hai-many-1, kind: plain, text: "お客さんにお茶を六{}出しました。", en: "I served six cups of tea to the guests.", noun: お茶, phrase: 六杯, reading: ろっぱい, good: [杯, 六杯], kana: [ろっぱい], distractors: [匹, 冊, 台]}
+      - {id: hai-noun-1, kind: noun, text: "グラスの水 八{}", en: "Eight glasses of water", noun: コップの水, phrase: 八杯, reading: はっぱい, good: [杯, 八杯], kana: [はっぱい, はちはい], distractors: [匹, 冊, 人]}
+  - id: kai
+    counter: 回
+    reading: かい
+    title: occurrences and repeated actions
+    sources: [kai]
+    cards:
+      - {id: kai-read-1, kind: plain, text: "この本を二{}読みました。", en: "I read this book twice.", noun: 本を読むこと, phrase: 二回, reading: にかい, good: [回, 二回, 度, 二度], kana: [にかい, にど], distractors: [冊, 枚, 杯], note: "Count readings of this one book, not the number of books."}
+      - {id: kai-phone-1, kind: plain, text: "昨日、母に三{}電話しました。", en: "I phoned my mother three times yesterday.", noun: 電話すること, phrase: 三回, reading: さんかい, good: [回, 三回, 度, 三度], kana: [さんかい, さんど], distractors: [枚, 冊, 台]}
+      - {id: kai-movie-1, kind: plain, text: "同じ映画を四{}見ました。", en: "I watched the same film four times.", noun: 映画を見ること, phrase: 四回, reading: よんかい, good: [回, 四回, 度, 四度], kana: [よんかい, よんど], distractors: [本, 枚, 台]}
+      - {id: kai-meal-1, kind: frequency, text: "毎日三{}ご飯を食べます。", en: "I eat three times every day.", noun: ご飯を食べること, phrase: 三回, reading: さんかい, good: [回, 三回, 度, 三度], kana: [さんかい, さんど], distractors: [枚, 匹, 台]}
+      - {id: kai-bath-1, kind: frequency, text: "毎日一{}お風呂に入ります。", en: "I take a bath once every day.", noun: お風呂に入ること, phrase: 一回, reading: いっかい, good: [回, 一回, 度, 一度], kana: [いっかい, いちど], distractors: [枚, 匹, 杯]}
+      - {id: kai-write-1, kind: plain, text: "この漢字を十{}書いてください。", en: "Please write this kanji ten times.", noun: 漢字を書くこと, phrase: 十回, reading: じゅっかい, good: [回, 十回, 度, 十度], kana: [じゅっかい, じっかい, じゅうど], distractors: [匹, 台, 杯]}
+      - {id: kai-song-1, kind: plain, text: "同じ歌を六{}歌いました。", en: "I sang the same song six times.", noun: 歌を歌うこと, phrase: 六回, reading: ろっかい, good: [回, 六回, 度, 六度], kana: [ろっかい, ろくど], distractors: [枚, 匹, 台]}
+      - {id: kai-question-1, kind: question, text: "昨日、この歌を何{}聞きましたか。", en: "How many times did you listen to this song yesterday?", noun: 歌を聞くこと, phrase: 何回, reading: なんかい, good: [回, 何回, 度, 何度], kana: [なんかい, なんど], distractors: [枚, 匹, 台]}
+      - {id: kai-negative-1, kind: negative, text: "今週は一{}も映画館に行きませんでした。", en: "I did not go to the cinema even once this week.", noun: 映画館に行くこと, phrase: 一回, reading: いっかい, good: [回, 一回, 度, 一度], kana: [いっかい, いちど], distractors: [枚, 匹, 杯]}
+      - {id: kai-repeat-1, kind: plain, text: "もう一{}名前を言ってください。", en: "Please say your name one more time.", noun: 名前を言うこと, phrase: 一回, reading: いっかい, good: [回, 一回, 度, 一度], kana: [いっかい, いちど], distractors: [枚, 匹, 台]}
+      - {id: kai-button-1, kind: plain, text: "このボタンを二{}押してください。", en: "Please press this button twice.", noun: ボタンを押すこと, phrase: 二回, reading: にかい, good: [回, 二回, 度, 二度], kana: [にかい, にど], distractors: [個, 枚, 台]}
+      - {id: kai-approx-1, kind: approximate, text: "昨日はこの言葉を五{}ぐらい聞きました。", en: "I heard this word about five times yesterday.", noun: 言葉を聞くこと, phrase: 五回, reading: ごかい, good: [回, 五回, 度, 五度], kana: [ごかい, ごど], distractors: [枚, 匹, 杯]}
+  - id: tsu
+    counter: つ
+    reading: つ
+    title: general things, orders and abstract items
+    sources: [tsu, ko]
+    cards:
+      - {id: tsu-apple-1, kind: plain, text: "りんごを二{}食べました。", en: "I ate two apples.", noun: りんご, phrase: 二つ, reading: ふたつ, good: [つ, 二つ, 個, 二個], kana: [ふたつ, にこ], distractors: [人, 匹, 冊]}
+      - {id: tsu-egg-1, kind: plain, text: "卵を四{}買いました。", en: "I bought four eggs.", noun: 卵, phrase: 四つ, reading: よっつ, good: [つ, 四つ, 個, 四個], kana: [よっつ, よんこ], distractors: [人, 匹, 冊]}
+      - {id: tsu-questionitem-1, kind: abstract, text: "先生に質問が三{}あります。", en: "I have three questions for the teacher.", noun: 質問, phrase: 三つ, reading: みっつ, good: [つ, 三つ], kana: [みっつ], distractors: [人, 匹, 台]}
+      - {id: tsu-room-1, kind: plain, text: "この家には部屋が五{}あります。", en: "There are five rooms in this house.", noun: 部屋, phrase: 五つ, reading: いつつ, good: [つ, 五つ, 室, 五室], kana: [いつつ, ごしつ], distractors: [人, 匹, 杯]}
+      - {id: tsu-season-1, kind: abstract, text: "日本には季節が四{}あります。", en: "Japan has four seasons.", noun: 季節, phrase: 四つ, reading: よっつ, good: [つ, 四つ], kana: [よっつ], distractors: [人, 匹, 台]}
+      - {id: tsu-cake-1, kind: plain, text: "小さいケーキを六{}買いました。", en: "I bought six small cakes.", noun: 小さいケーキ, phrase: 六つ, reading: むっつ, good: [つ, 六つ, 個, 六個], kana: [むっつ, ろっこ], distractors: [人, 匹, 冊]}
+      - {id: tsu-order-1, kind: order, text: "コーヒーを三{}ください。", en: "Please give me three coffees.", noun: 注文するコーヒー, phrase: 三つ, reading: みっつ, good: [つ, 三つ, 杯, 三杯], kana: [みっつ, さんばい], distractors: [人, 匹, 冊], note: "Counting menu orders; 杯 is equally natural for cups of coffee."}
+      - {id: tsu-bread-1, kind: plain, text: "小さいパンを八{}買いました。", en: "I bought eight small bread rolls.", noun: 小さいパン, phrase: 八つ, reading: やっつ, good: [つ, 八つ, 個, 八個], kana: [やっつ, はっこ, はちこ], distractors: [人, 匹, 冊]}
+      - {id: tsu-orange-1, kind: plain, text: "袋にみかんを九{}入れました。", en: "I put nine mandarins in the bag.", noun: みかん, phrase: 九つ, reading: ここのつ, good: [つ, 九つ, 個, 九個], kana: [ここのつ, きゅうこ], distractors: [人, 匹, 冊]}
+      - {id: tsu-box-1, kind: noun, text: "空の箱 七{}", en: "Seven empty boxes", noun: 空の箱, phrase: 七つ, reading: ななつ, good: [つ, 七つ, 個, 七個], kana: [ななつ, ななこ, しちこ], distractors: [人, 匹, 冊]}
+      - {id: tsu-negative-1, kind: negative, text: "今日は宿題が一{}もありません。", en: "I do not have even one homework task today.", noun: 宿題の課題, phrase: 一つ, reading: ひとつ, good: [つ, 一つ], kana: [ひとつ], distractors: [人, 匹, 台]}
+      - {id: tsu-question-1, kind: question, text: "りんごはいく{}ありますか。", en: "How many apples are there?", noun: りんご, phrase: いくつ, reading: いくつ, good: [つ, いくつ, 何個], kana: [なんこ], distractors: [人, 匹, 冊], note: "The whole phrase 何個 replaces いくつ. Never construct いく個."}
+
+# Only these explicitly authored yellow variants are approved for the draft.
+# Missing variants do not prove that another expression is impossible; see editorial limits.
+hard_variants:
+  hon-pen-1:
+    - {forms: [つ, 三つ, みっつ], phrase: 三つ, reading: みっつ, reason: "Usable general counting; 本 is the usual specific counter for pens."}
+    - {forms: [個, 三個, さんこ], phrase: 三個, reading: さんこ, reason: "General object counting; this exercise targets long, thin pens with 本."}
+  hon-umbrella-1:
+    - {forms: [つ, 二つ, ふたつ], phrase: 二つ, reading: ふたつ, reason: "A usable general count; 本 is the usual specific counter for umbrellas."}
+  hon-question-1:
+    - {forms: [いくつ], phrase: いくつ, reading: いくつ, reason: "A general how-many question; 何本 specifically counts the bottles."}
+  hon-pencil-1:
+    - {forms: [つ, 六つ, むっつ], phrase: 六つ, reading: むっつ, reason: "General counting is understandable; 本 is the usual pencil counter."}
+  hon-banana-1:
+    - {forms: [つ, 一つ, ひとつ], phrase: 一つ, reading: ひとつ, reason: "A general count; 本 is the targeted shape-based counter."}
+    - {forms: [個, 一個, いっこ], phrase: 一個, reading: いっこ, reason: "A general object count; 本 is the targeted shape-based counter."}
+  hon-carrot-1:
+    - {forms: [つ, 三つ, みっつ], phrase: 三つ, reading: みっつ, reason: "General counting; 本 is the targeted counter for individual long carrots."}
+  hon-spoon-1:
+    - {forms: [つ, 五つ, いつつ], phrase: 五つ, reading: いつつ, reason: "Natural general counting; yellow here means practice the target 本, not that 五つ is bad Japanese."}
+  mai-ticket-1:
+    - {forms: [つ, 四つ, よっつ], phrase: 四つ, reading: よっつ, reason: "A usable general count; 枚 targets the individual tickets."}
+  mai-stamp-1:
+    - {forms: [つ, 五つ, いつつ], phrase: 五つ, reading: いつつ, reason: "General object counting; 枚 is the usual specific counter for stamps."}
+  nin-one-1:
+    - {forms: [名, 一名, いちめい], phrase: 一名, reading: いちめい, reason: "A usable formal person count; this ordinary classroom scene targets 人."}
+  nin-teacher-1:
+    - {forms: [名, 十名, じゅうめい], phrase: 十名, reading: じゅうめい, reason: "A formal staff count; 人 is the everyday target of this card."}
+  nin-question-1:
+    - {forms: [名, 何名, なんめい], phrase: 何名, reading: なんめい, reason: "A formal person count; 人 is the everyday target of this card."}
+  dai-tv-1:
+    - {forms: [つ, 一つ, ひとつ], phrase: 一つ, reading: ひとつ, reason: "A general object count; 台 is the targeted machine counter."}
+  dai-phone-1:
+    - {forms: [つ, 五つ, いつつ], phrase: 五つ, reading: いつつ, reason: "Natural general counting; yellow here means practice the device counter 台, not that 五つ is bad Japanese."}
+
+# Selective reading support; display alongside these words in prompts and reverse noun labels.
+# Full English sentence translations are answer-screen feedback, not pre-answer hints.
+vocabulary:
+  金魚: {reading: きんぎょ, gloss: goldfish}
+  飼う: {reading: かう, gloss: keep an animal}
+  飼っています: {reading: かっています, gloss: keeps an animal}
+  葉書: {reading: はがき, gloss: postcard}
+  教科書: {reading: きょうかしょ, gloss: textbook}
+  携帯電話: {reading: けいたいでんわ, gloss: mobile phone}
+  季節: {reading: きせつ, gloss: season}
+  切手: {reading: きって, gloss: postage stamp}
+  必要: {reading: ひつよう, gloss: necessary}
+  冷蔵庫: {reading: れいぞうこ, gloss: refrigerator}
+  水そう: {reading: すいそう, gloss: aquarium}
+  茶わん: {reading: ちゃわん, gloss: rice bowl}
+  器: {reading: うつわ, gloss: container or bowl}
+  漫画: {reading: まんが, gloss: comics}
+  絵本: {reading: えほん, gloss: picture book}
+  メモ帳: {reading: メモちょう, gloss: memo pad}
+  消しゴム: {reading: けしゴム, gloss: eraser}
+  運動: {reading: うんどう, gloss: exercise}
+  言葉: {reading: ことば, gloss: word or language}
+  拾いました: {reading: ひろいました, gloss: picked up}
+  見つけました: {reading: みつけました, gloss: found}
+  泳いでいます: {reading: およいでいます, gloss: is swimming}
+  押してください: {reading: おしてください, gloss: please press}
+  乗客: {reading: じょうきゃく, gloss: passenger}
+  課題: {reading: かだい, gloss: task}
+  質問: {reading: しつもん, gloss: question}
+  注文: {reading: ちゅうもん, gloss: order}
+  茎: {reading: くき, gloss: stem}
+
+# Reverse fixtures: show counter, choose noun/context. Options refer to forward-card IDs.
+# All known accepted tiers count when checking compatibility.
+reverse_cards:
+  - {id: hon-noun-1, counter: 本, answer: hon-umbrella-1, options: [hon-umbrella-1, hiki-cat-1, nin-child-1, satsu-notebook-1]}
+  - {id: hon-noun-2, counter: 本, answer: hon-film-1, options: [hon-film-1, dai-tv-1, hai-tea-1, nin-sister-1]}
+  - {id: hiki-noun-1, counter: 匹, answer: hiki-frog-1, options: [hiki-frog-1, hon-carrot-1, satsu-book-1, nin-teacher-1]}
+  - {id: hiki-noun-2, counter: 匹, answer: hiki-goldfish-1, options: [hiki-goldfish-1, dai-camera-1, mai-ticket-1, hai-coffee-1]}
+  - {id: mai-noun-1, counter: 枚, answer: mai-paper-1, options: [mai-paper-1, nin-two-1, hiki-mouse-1, kai-bath-1]}
+  - {id: mai-noun-2, counter: 枚, answer: mai-shirt-1, options: [mai-shirt-1, dai-bus-1, hiki-turtle-1, satsu-album-1]}
+  - {id: nin-noun-1, counter: 人, answer: nin-teacher-1, options: [nin-teacher-1, satsu-textbook-1, hon-pencil-1, ko-egg-1]}
+  - {id: nin-noun-2, counter: 人, answer: nin-sister-1, options: [nin-sister-1, mai-handkerchief-1, dai-car-1, hai-rice-1]}
+  - {id: ko-noun-1, counter: 個, answer: ko-egg-1, options: [ko-egg-1, nin-child-1, hiki-ant-1, kai-write-1]}
+  - {id: ko-noun-2, counter: 個, answer: ko-stone-1, options: [ko-stone-1, nin-teacher-1, hiki-frog-1, kai-phone-1]}
+  - {id: satsu-noun-1, counter: 冊, answer: satsu-notebook-1, options: [satsu-notebook-1, mai-paper-1, hon-pen-1, nin-one-1]}
+  - {id: satsu-noun-2, counter: 冊, answer: satsu-album-1, options: [satsu-album-1, mai-photo-1, dai-bicycle-1, hai-water-1]}
+  - {id: dai-noun-1, counter: 台, answer: dai-piano-1, options: [dai-piano-1, hiki-cat-1, nin-four-1, hai-coffee-1]}
+  - {id: dai-noun-2, counter: 台, answer: dai-bed-1, options: [dai-bed-1, satsu-magazine-1, mai-stamp-1, kai-read-1]}
+  - {id: hai-reverse-1, counter: 杯, answer: hai-rice-1, options: [hai-rice-1, ko-apple-1, hiki-shrimp-1, nin-two-1]}
+  - {id: hai-noun-2, counter: 杯, answer: hai-beer-1, options: [hai-beer-1, hon-water-1, satsu-dictionary-1, dai-camera-1]}
+  - {id: kai-noun-1, counter: 回, answer: kai-read-1, options: [kai-read-1, satsu-book-1, mai-ticket-1, nin-teacher-1]}
+  - {id: kai-noun-2, counter: 回, answer: kai-phone-1, options: [kai-phone-1, dai-phone-1, hai-water-1, hiki-cat-1]}
+  - {id: tsu-noun-1, counter: つ, answer: tsu-questionitem-1, options: [tsu-questionitem-1, nin-one-1, hiki-ant-1, hiki-turtle-1]}
+  - {id: tsu-noun-2, counter: つ, answer: tsu-season-1, options: [tsu-season-1, nin-sister-1, hiki-mouse-1, hiki-cat-1]}

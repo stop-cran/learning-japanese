@@ -3,7 +3,9 @@
 Draft for [app issue #41](https://github.com/stop-cran/kanji-cards-android/issues/41).
 The author-written examples and provisional grading data are in [counter-pilot.yaml](counter-pilot.yaml).
 They are not in `manifest.json`, are not consumed by the app, and do not change the existing content schema.
-Do not bulk-generate or publish until the remaining editorial questions below are resolved.
+The user-approved expansion is now in [counter-n5.md](counter-n5.md) and
+[counter-n5.yaml](counter-n5.yaml). Both sets remain outside published app content;
+the editorial questions below still apply before automatic grading is enabled.
 
 ## Numerals and prompts
 
