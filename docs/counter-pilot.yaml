@@ -1,0 +1,320 @@
+# Author-written draft, not app content. See counter-pilot.md for sources and limits.
+schema: counter-pilot-v1
+status: draft
+numerals: kanji-preferred
+# {} hides only the counter. phrase identifies the whole replaceable counting expression.
+# Written variants retain their tier after Arabic/kanji numeral normalization.
+# A generic variant can require replacing the phrase, not just inserting a counter.
+counters:
+  - id: hon
+    counter: 本
+    reading: ほん
+    sources: [hon, tsu, ko]
+  - id: hiki
+    counter: 匹
+    reading: ひき
+    sources: [hiki]
+  - id: mai
+    counter: 枚
+    reading: まい
+    sources: [mai, tsu, ko]
+  - id: nin
+    counter: 人
+    reading: にん
+    sources: [readings]
+  - id: ko
+    counter: 個
+    reading: こ
+    sources: [ko, tsu]
+cards:
+  - id: hon-pen-1
+    counter: 本
+    kind: floated-quantity
+    level: 5
+    text: "机の上にペンが三{}あります。"
+    en: "There are three pens on the desk."
+    phrase: 三本
+    reading: さんぼん
+    noun: pen
+    good: [本, 三本]
+    hard:
+      - {forms: [つ, 三つ, みっつ], phrase: 三つ, reading: みっつ, reason: "A usable general count; 本 practices the usual counter for pens."}
+      - {forms: [個, 三個, さんこ], phrase: 三個, reading: さんこ, reason: "A general object count; 本 is the target for long, thin pens."}
+    kana: [さんぼん]
+  - id: hon-umbrella-1
+    counter: 本
+    kind: plain
+    level: 5
+    text: "雨なので、傘を二{}持っていきます。"
+    en: "It is raining, so I will take two umbrellas."
+    phrase: 二本
+    reading: にほん
+    noun: umbrella
+    good: [本, 二本]
+    hard:
+      - {forms: [つ, 二つ, ふたつ], phrase: 二つ, reading: ふたつ, reason: "A usable general count; 本 is the usual specific counter for umbrellas."}
+    kana: [にほん]
+  - id: hon-film-1
+    counter: 本
+    kind: plain
+    level: 5
+    text: "昨日、映画を二{}見ました。"
+    en: "I watched two films yesterday."
+    phrase: 二本
+    reading: にほん
+    noun: film
+    good: [本, 二本]
+    hard: []
+    kana: [にほん]
+    note: "本 also counts films, not just physical long objects."
+    review: "Do not infer that every unlisted general counter is impossible; alternative grading needs usage evidence."
+  - id: hon-question-1
+    counter: 本
+    kind: question
+    level: 5
+    text: "冷蔵庫にビールのびんは何{}ありますか。"
+    en: "How many bottles of beer are in the fridge?"
+    phrase: 何本
+    reading: なんぼん
+    noun: beer-bottle
+    good: [本, 何本]
+    hard:
+      - {forms: [いくつ], phrase: いくつ, reading: いくつ, reason: "A general how-many question; 何本 asks specifically about bottles."}
+    kana: [なんぼん, なんほん, なんぽん]
+    note: "An いくつ answer replaces 何本. Never construct 何つ."
+  - id: hon-approx-1
+    counter: 本
+    kind: approximate-range
+    level: 5
+    text: "公園に木が五、六{}あります。"
+    en: "There are five or six trees in the park."
+    phrase: "五、六本"
+    reading: ごろっぽん
+    noun: standing-tree
+    good: [本, "五、六本", 五六本]
+    hard: []
+    kana: [ごろっぽん]
+    review: "The range reading and acceptability of alternative counters need further dictionary/editor confirmation."
+  - id: hiki-fish-1
+    counter: 匹
+    kind: noun
+    level: 5
+    text: "水そうの魚 三{}"
+    en: "Three fish in an aquarium"
+    phrase: 三匹
+    reading: さんびき
+    noun: aquarium-fish
+    good: [匹, 三匹]
+    hard: []
+    kana: [さんびき]
+    note: "The context is living aquarium fish. Other fish-counting contexts need their own cards."
+  - id: hiki-dog-1
+    counter: 匹
+    kind: plain
+    level: 5
+    text: "公園で小さい犬が二{}走っています。"
+    en: "Two small dogs are running in the park."
+    phrase: 二匹
+    reading: にひき
+    noun: small-dog
+    good: [匹, 二匹]
+    hard:
+      - {forms: [頭, 二頭, にとう], phrase: 二頭, reading: にとう, reason: "頭 can count dogs in professional contexts; 匹 is the target for these small dogs in an ordinary scene."}
+    kana: [にひき]
+  - id: hiki-approx-1
+    counter: 匹
+    kind: approximate
+    level: 5
+    text: "庭に虫が十{}ぐらいいます。"
+    en: "There are about ten insects in the garden."
+    phrase: 十匹
+    reading: じゅっぴき
+    noun: insect
+    good: [匹, 十匹]
+    hard: []
+    kana: [じゅっぴき, じっぴき]
+  - id: hiki-question-1
+    counter: 匹
+    kind: question
+    level: 5
+    text: "家に猫は何{}いますか。"
+    en: "How many cats do you have at home?"
+    phrase: 何匹
+    reading: なんびき
+    noun: cat
+    good: [匹, 何匹]
+    hard:
+      - {forms: [頭, 何頭, なんとう], phrase: 何頭, reading: なんとう, reason: "A professional animal count can use 頭; this exercise targets everyday 匹."}
+    kana: [なんびき]
+    review: "Confirm the proposed 頭 tier for this particular household context before publication."
+  - id: mai-paper-1
+    counter: 枚
+    kind: plain
+    level: 5
+    text: "紙を三{}ください。"
+    en: "Please give me three sheets of paper."
+    phrase: 三枚
+    reading: さんまい
+    noun: paper-sheet
+    good: [枚, 三枚]
+    hard:
+      - {forms: [つ, 三つ, みっつ], phrase: 三つ, reading: みっつ, reason: "A general count is understandable; 枚 specifies sheets."}
+    kana: [さんまい]
+  - id: mai-shirt-1
+    counter: 枚
+    kind: plain
+    level: 5
+    text: "シャツを二{}買いました。"
+    en: "I bought two shirts."
+    phrase: 二枚
+    reading: にまい
+    noun: shirt
+    good: [枚, 二枚, 着, 二着]
+    hard: []
+    kana: [にまい, にちゃく]
+    note: "着 is a standard clothing counter, not automatically a less-correct answer or merely formal."
+  - id: mai-ticket-1
+    counter: 枚
+    kind: plain
+    level: 5
+    text: "友だちと行くので、映画のチケットを四{}買いました。"
+    en: "I bought four movie tickets because I am going with friends."
+    phrase: 四枚
+    reading: よんまい
+    noun: ticket
+    good: [枚, 四枚]
+    hard:
+      - {forms: [つ, 四つ, よっつ], phrase: 四つ, reading: よっつ, reason: "A usable general count; 枚 is the specific counter for tickets."}
+    kana: [よんまい]
+  - id: mai-stamp-1
+    counter: 枚
+    kind: noun
+    level: 5
+    text: "切手 五{}"
+    en: "Five stamps"
+    phrase: 五枚
+    reading: ごまい
+    noun: stamp
+    good: [枚, 五枚]
+    hard:
+      - {forms: [つ, 五つ, いつつ], phrase: 五つ, reading: いつつ, reason: "A general object count; 枚 is the usual specific counter for stamps."}
+    kana: [ごまい]
+  - id: nin-one-1
+    counter: 人
+    kind: irregular
+    level: 5
+    text: "教室に学生が一{}います。"
+    en: "There is one student in the classroom."
+    phrase: 一人
+    reading: ひとり
+    noun: student
+    good: [人, 一人]
+    hard:
+      - {forms: [名, 一名, いちめい], phrase: 一名, reading: いちめい, reason: "名 is a polite or formal person count; this ordinary scene practices 人."}
+    kana: [ひとり]
+  - id: nin-four-1
+    counter: 人
+    kind: irregular
+    level: 5
+    text: "私の家族は四{}です。"
+    en: "There are four people in my family."
+    phrase: 四人
+    reading: よにん
+    noun: family-member
+    good: [人, 四人]
+    hard: []
+    kana: [よにん]
+    note: "四人 is read よにん, not よんにん."
+  - id: nin-each-1
+    counter: 人
+    kind: distributive
+    level: 4
+    text: "子どもたちは一{}ずつ名前を言いました。"
+    en: "The children said their names one at a time."
+    phrase: 一人
+    reading: ひとり
+    noun: child
+    good: [人, 一人]
+    hard:
+      - {forms: [名, 一名, いちめい], phrase: 一名, reading: いちめい, reason: "名 is a formal person count; 人 is the target in this everyday account."}
+    kana: [ひとり]
+    note: "Provisional N4 grammar stretch for ずつ; not asserted to be official JLPT content."
+  - id: ko-apple-1
+    counter: 個
+    kind: plain
+    level: 5
+    text: "りんごを三{}買いました。"
+    en: "I bought three apples."
+    phrase: 三個
+    reading: さんこ
+    noun: apple
+    good: [個, 三個, つ, 三つ]
+    hard: []
+    kana: [さんこ, みっつ]
+    note: "つ is equally natural here. General counters are not always yellow."
+  - id: ko-egg-1
+    counter: 個
+    kind: plain
+    level: 5
+    text: "卵を六{}ください。"
+    en: "Please give me six eggs."
+    phrase: 六個
+    reading: ろっこ
+    noun: egg
+    good: [個, 六個, つ, 六つ]
+    hard: []
+    kana: [ろっこ, むっつ]
+  - id: ko-negative-1
+    counter: 個
+    kind: negative
+    level: 5
+    text: "ケーキを一{}も食べませんでした。"
+    en: "I did not eat even one cake."
+    phrase: 一個
+    reading: いっこ
+    noun: small-cake
+    good: [個, 一個, つ, 一つ]
+    hard: []
+    kana: [いっこ, ひとつ]
+    note: "Individual small cakes, not slices or whole large celebration cakes."
+  - id: ko-comparison-1
+    counter: 個
+    kind: comparison
+    level: 5
+    text: "りんごはみかんより三{}多いです。"
+    en: "There are three more apples than mandarins."
+    phrase: 三個
+    reading: さんこ
+    noun: apple
+    good: [個, 三個, つ, 三つ]
+    hard: []
+    kana: [さんこ, みっつ]
+
+# Compatibility describes accepted relations, including yellow answers.
+# Reverse: show a counter, choose a noun. Never offer a compatible noun as a wrong option.
+nouns:
+  - {id: pen, display: ペン, compatible: [本, 個, つ]}
+  - {id: umbrella, display: 傘, compatible: [本, つ]}
+  - {id: film, display: 映画, compatible: [本]}
+  - {id: beer-bottle, display: ビールのびん, compatible: [本, つ]}
+  - {id: standing-tree, display: 公園の木, compatible: [本]}
+  - {id: aquarium-fish, display: 水そうの魚, compatible: [匹]}
+  - {id: small-dog, display: 小さい犬, compatible: [匹, 頭]}
+  - {id: insect, display: 虫, compatible: [匹]}
+  - {id: cat, display: 猫, compatible: [匹, 頭]}
+  - {id: paper-sheet, display: 紙, compatible: [枚, つ]}
+  - {id: shirt, display: シャツ, compatible: [枚, 着]}
+  - {id: ticket, display: 映画のチケット, compatible: [枚, つ]}
+  - {id: stamp, display: 切手, compatible: [枚, つ]}
+  - {id: student, display: 学生, compatible: [人, 名]}
+  - {id: family-member, display: 家族, compatible: [人]}
+  - {id: child, display: 子ども, compatible: [人, 名]}
+  - {id: apple, display: りんご, compatible: [個, つ]}
+  - {id: egg, display: 卵, compatible: [個, つ]}
+  - {id: small-cake, display: 小さいケーキ, compatible: [個, つ]}
+reverse_examples:
+  - {id: hon-noun-1, counter: 本, options: [umbrella, cat, paper-sheet, student], answer: umbrella}
+  - {id: hiki-noun-1, counter: 匹, options: [cat, ticket, egg, umbrella], answer: cat}
+  - {id: mai-noun-1, counter: 枚, options: [paper-sheet, student, insect, apple], answer: paper-sheet}
+  - {id: nin-noun-1, counter: 人, options: [student, egg, standing-tree, paper-sheet], answer: student}
+  - {id: ko-noun-1, counter: 個, options: [egg, insect, student, standing-tree], answer: egg}
