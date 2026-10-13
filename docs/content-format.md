@@ -1,6 +1,6 @@
 # Content format (schema version 1, draft)
 
-The Android app [kanji-cards-android](https://github.com/stop-cran/kanji-cards-android) reads this repository. Anyone can fork it and
+The Android app [Ensō Nihongo](https://github.com/stop-cran/kanji-cards-android) reads this repository. Anyone can fork it and
 point the app at their fork. `tools/validate.py` checks structural constraints; dictionary accuracy, origins, natural examples,
 and useful navigation still require editorial review.
 

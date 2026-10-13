@@ -22,7 +22,7 @@ provisional notation and links to existing material, not yet a complete usage re
 
 ## Kanji cards and words
 
-Kanji cards, word articles and stroke data feed the [Kanji Cards Android app](https://github.com/stop-cran/kanji-cards-android). The
+Kanji cards, word articles and stroke data feed the [Ensō Nihongo Android app](https://github.com/stop-cran/kanji-cards-android). The
 format is described in [docs/content-format.md](docs/content-format.md); data sources are in [NOTICE.md](NOTICE.md).
 
 - `kanji/` – one card per kanji (620): meaning, radical, readings, common words, and origin notes or explicitly labelled modern-shape mnemonics.
