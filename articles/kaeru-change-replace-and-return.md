@@ -115,6 +115,15 @@ Thus, learn conventional expressions and the writer's emphasis rather than decla
 
 The destination takes **に** or **へ**. In **家に帰る**, 家 is the destination, not an object being returned. Remember the godan forms **帰ります・帰らない・帰って**.
 
+A familiar homecoming exchange makes this verb easy to remember:
+
+| Speaker | Japanese | Meaning |
+| --- | --- | --- |
+| Returning person | ただいま。 | I'm home. |
+| Person welcoming them | お帰りなさい。（おかえりなさい。） | Welcome home. |
+
+Here, **帰り（かえり）** is the **ます-stem** of godan **帰る**, as in **帰ります（かえります）**. Contrast ichidan **変える**, whose polite form is **変えます（かえます）**. The whole **お帰りなさい** expression is a conventional greeting, not an instruction to go home despite its **なさい** ending.
+
 **[戻る](../words/戻る.md)（もどる）**, with **[戻](../kanji/戻.md)**, is a broader "go back; return": the place need not be home, and the verb can also describe a return to an earlier state. **帰る and 戻る can both describe going home**; this is not an absolute home/non-home split.
 
 ## 返る: something comes back or a state returns
@@ -183,6 +192,7 @@ The central distinction is between **grammar**, **word meaning**, and **spelling
 - [Kotobank: 交える](https://kotobank.jp/word/交える-634112): the reading まじえる and its mixing/interaction meanings.
 - [Jisho / JMdict: かえる](https://jisho.org/search/かえる): entries for the verb groups, 孵る, and the noun 蛙. For substitution spellings, inspect the sense-specific "usually written as" notes, not just the spelling list.
 - [Jisho / JMdict: 孵す](https://jisho.org/search/孵す): the reading かえす and the transitive meaning "hatch; incubate."
+- [Jisho / JMdict: お帰りなさい](https://jisho.org/search/お帰りなさい) and [ただいま](https://jisho.org/search/ただいま): meanings and homecoming usage of the greeting pair.
 - [WURK: 帰る・還る・返る](https://eigobu.jp/magazine/kaeru-2): a supplementary usage discussion attesting 土に還る. Its people/things shortcut should not be treated as an absolute rule.
 
 The linked kanji and word cards link back to this comparison. Spellings without a card remain plain text rather than linking to a nonexistent page.
