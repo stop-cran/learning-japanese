@@ -39,6 +39,35 @@ The question column deliberately stops short of giving unrestricted substitution
 
 ## Candidate list
 
+### Onomatopoeia starter comparisons
+
+These guides cover a selected sense or construction, not exhaustive synonym equivalence.
+Spelling similarity alone is not a reason for `quiz_exclusions`; overlapping meanings in the
+displayed quiz labels are.
+
+| Candidates | Relationship and guide |
+| --- | --- |
+| [ころころ](../words/ころころ.md), [ごろごろ](../words/ごろごろ.md); [くるくる](../words/くるくる.md), [ぐるぐる](../words/ぐるぐる.md) | Light/heavy or manner tendencies with overlapping and additional senses; [sound patterns](../articles/onomatopoeia-sound-patterns.md). |
+| [ぽかぽか](../words/ぽかぽか.md), [ほかほか](../words/ほかほか.md); [ふわふわ](../words/ふわふわ.md), [ふかふか](../words/ふかふか.md) | Warmth and softness have overlapping domains; [warmth and texture](../articles/onomatopoeia-texture-and-warmth.md). |
+| [ぺたぺた](../words/ぺたぺた.md), [べたべた](../words/べたべた.md), [ぺらぺら](../words/ぺらぺら.md), [ぺこぺこ](../words/ぺこぺこ.md) | First pair warrants a tactile/action contrast; the larger group is similar-sounding, not four synonyms. See [scene comparisons](../articles/onomatopoeia-sound-and-movement.md). |
+| [しとしと](../words/しとしと.md), [ざあざあ](../words/ざあざあ.md), [ぱらぱら](../words/ぱらぱら.md), [ぽつぽつ](../words/ぽつぽつ.md) | Sustained quiet rain, noisy rain, scattered drops, or intermittent occurrences; [rain comparison](../articles/onomatopoeia-sound-and-movement.md#rain-is-not-just-rain-noise). |
+| [どきどき](../words/どきどき.md), [わくわく](../words/わくわく.md) | Heart-pounding unease/excitement versus eager anticipation; both may describe a happy event. |
+| [しっとり](../words/しっとり.md), [じめじめ](../words/じめじめ.md), [じとじと](../words/じとじと.md), [びしょびしょ](../words/びしょびしょ.md), [ぐっしょり](../words/ぐっしょり.md) | Appropriate moisture, unpleasant damp, and soaking wetness; [texture guide](../articles/onomatopoeia-texture-and-warmth.md#moist-damp-or-drenched). |
+
+The starter review also identified overlaps with words outside this theme:
+[すっきり](../words/すっきり.md)/[さっぱり](../words/さっぱり.md) (refreshed),
+[とんとん](../words/とんとん.md) or [さくさく](../words/さくさく.md)/[順調](../words/順調.md)
+(smooth progress), and [ぺらぺら](../words/ぺらぺら.md) or [べちゃべちゃ](../words/べちゃべちゃ.md)/
+[おしゃべり](../words/おしゃべり.md) (chatter).
+Other protected secondary-sense overlaps include
+[ころころ](../words/ころころ.md)/[ぷくぷく](../words/ぷくぷく.md) (chubby),
+[ころころ](../words/ころころ.md)/[くるくる](../words/くるくる.md) (frequent changes),
+[ごろごろ](../words/ごろごろ.md)/[ぶらぶら](../words/ぶらぶら.md) (idling),
+[しっとり](../words/しっとり.md)/[穏やか](../words/穏やか.md) (a calm, gentle manner), and
+[ばたばた](../words/ばたばた.md)/[どんどん](../words/どんどん.md) or [次々](../words/次々.md)
+(rapid succession). These are pairwise quiz exclusions, not claims that every Japanese construction
+in a pair is interchangeable.
+
 ### Knowing, learning, perception, and communication
 
 | ID | Candidates | Tags | Question to refine |

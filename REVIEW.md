@@ -35,6 +35,40 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Onomatopoeia starter collection (2026-10-15)
+
+**Snapshot:** `7e2b498` plus the phase-1 working-tree addition: 90 new word cards, 10 enriched
+existing cards, four learner guides, and the accompanying source and navigation documentation.
+The [overview](articles/japanese-onomatopoeia.md#first-100-word-cards) enumerates all 100 selected IDs.
+
+**Scope:** One independent reviewer checked correctness of every card in ten ten-card batches;
+another checked comprehension and whole-set consistency for the same 100 plus the guides and
+documentation. A separate bounded review covered the four guides. They used the repository's
+accuracy, comprehension, and consistency rubrics. Runtime model identifiers were not exposed;
+this is not a verified multi-model comparison or evidence of different model-family coverage.
+
+**Verdicts and reconciliation:** No new grammatical, reading, translation, or word-type defect
+was established. Review findings and maintainer dispositions:
+
+| Finding | Disposition |
+| --- | --- |
+| Missing secondary-sense quiz protections | Resolved: 11 new pairwise exclusion edges cover refreshed feelings, smooth progress, chatter, chubbiness, calm manner, rapid succession, frequent changes, and idling. Existing exclusions are preserved; see the [inventory](docs/confusable-words.md#onomatopoeia-starter-comparisons). |
+| Unfamiliar kanji in sensory examples without selective reading support | Resolved: 59 reading annotations across 46 example lines in 34 cards; sentences and translations are preserved. |
+| Repeated nasal forms listed beneath a “Non-repeated forms” heading | Resolved: the guide now labels that mixed table “Endings and other form patterns.” |
+| Peripheral senses and dictionary spelling status | Optional improvements applied: archaic labels on peripheral ふかふか/さくさく senses and a search-only qualification for うとっと. |
+| Existing どんどん/急に, どんどん/急速, and そっと/静か quiz ambiguity | Deferred as baseline-only: unchanged meanings, titles, and candidate identities already existed before this phase. They are not claimed to have been fixed. |
+
+Dictionary identities and selected senses were independently compared to the actual hash-pinned
+local JMdict snapshot, including original XML checks. The two source records are linked from
+[the collection notes](docs/onomatopoeia.md); their upstream release date is not inferred.
+All ten retained JLPT declarations were checked against the existing pinned vocabulary-source indexes.
+No new JLPT labels were invented. The set is a practical starter selection, not a measured frequency list.
+
+**Limits:** Editorial review is not native-speaker certification or corpus attestation of every
+original sentence. No Android runtime or end-to-end randomized quiz was exercised. The checks establish
+the documented exclusion edges, not exhaustive semantic uniqueness for every possible existing word.
+No images, image review, app filter, or scheduling changes belong to this phase.
+
 ## N3 vocabulary expansion (2026-10-09; review in progress)
 
 The draft adds 1,490 word articles and reuses 208, covering all 1,730 rows in the pinned N3 community vocabulary source.

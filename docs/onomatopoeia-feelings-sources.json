@@ -1,0 +1,454 @@
+{
+  "schema_version": 1,
+  "batch": "phase-1-feelings-movement",
+  "inspected_on": "2026-10-15",
+  "baseline_commit": "7e2b49835a21edcba134a521a1b27674044ad707",
+  "dictionary": {
+    "name": "JMdict",
+    "project_url": "https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project",
+    "license_url": "https://www.edrdg.org/edrdg/licence.html",
+    "snapshot": "Local pinned review-c1c6fcf snapshot; no upstream revision date inferred",
+    "files": [
+      {"name": "jmdict_compact.jsonl", "sha256": "f171478f8d87e269d664a219db362e06c02fbc88db2d4c322ba8715a65c42aaf"},
+      {"name": "JMdict_e.gz", "sha256": "0fbeca9b22498621372d68438b93ea82def8a9adddd66b6a15f278b4f416c45b"}
+    ],
+    "inspection": "Matched exact readings to entries in the compact snapshot; parsed the corresponding entries from the gzip XML and checked complete reading arrays and gloss arrays for equality. The external session artifact onomato-feelings-sources.json retains the complete compact entries and corresponding expanded XML.",
+    "record_format": "Below, entry_id is ent_seq; readings and kanji enumerate the entry's recorded forms, not recommendations of equal frequency. Senses preserve numbering and selected exact English glosses, with POS codes, consequential restrictions and usage notes. No historical etymology or example sentence is claimed to come from JMdict.",
+    "pos_codes": {"adv": "adverb", "adv-to": "adverb taking to", "vs": "suru verb", "vi": "intransitive verb", "adj-na": "adjectival noun", "adj-no": "noun used with no", "n": "noun"},
+    "misc_codes": {"arch": "archaic", "chn": "children's language", "col": "colloquial", "uk": "usually kana", "on-mim": "onomatopoeic or mimetic"},
+    "form_codes": {"rK": "rare kanji form", "sK": "search-only kanji form", "oK": "outdated kanji form", "sk": "search-only kana form"}
+  },
+  "scope": {
+    "card_count": 50,
+    "existing_count": 10,
+    "new_count": 40,
+    "stable_id_policy": "Search all existing word-card readings and the selected entries' spellings; retain existing kana IDs. No alternate-spelling stable-ID exceptions were found.",
+    "jlpt_policy": "Retain all ten existing sourced JLPT declarations. Omit JLPT from all forty new cards; do not infer a level from a dictionary or kanji.",
+    "examples": "Original Japanese examples with English translations; editorial constructions are not quoted dictionary examples.",
+    "classification": "All selected lexemes are treated as wago. Giongo marks non-vocal sound depiction, giseigo human or animal vocalization, and gitaigo non-auditory depiction; one lexeme may have multiple tags. Pattern tags describe the selected card spelling, not every variant.",
+    "homophones_not_merged": [
+      {"reading": "しくしく", "excluded_entry_id": "2426010", "forms": ["頻く頻く", "頻々", "頻頻"], "reason": "Separate incessantly/without-stop lexeme."},
+      {"reading": "こんこん", "excluded_entry_id": "1593490", "forms": ["滾々", "渾々", "混々", "混混", "滾滾", "渾渾"], "reason": "Separate copiously-flowing lexeme."},
+      {"reading": "こんこん", "excluded_entry_id": "1724070", "forms": ["昏々", "昏昏"], "reason": "Separate deeply-asleep lexeme."},
+      {"reading": "こんこん", "excluded_entry_id": "1804500", "forms": ["懇々", "懇懇", "悃々", "悃悃"], "reason": "Separate earnest/sincere lexeme."},
+      {"reading": "そっと", "excluded_entry_id": "1551230", "forms": ["率土"], "reason": "Separate outer-reaches/borderland noun."}
+    ]
+  },
+  "existing_baseline": {
+    "いらいら": {"path": "words/いらいら.md", "jlpt": 3, "sha256": "f8a2e13f68b70ff69409c11fc5d2fb47cd9bde91a73f89b89d4f90f1a6366640"},
+    "ぐっすり": {"path": "words/ぐっすり.md", "jlpt": 3, "sha256": "a69d73774bee2b776e725bb7800e78b877935f335e72a5d088e02ca637a51cf2"},
+    "しっかり": {"path": "words/しっかり.md", "jlpt": 4, "sha256": "b2a31b1a96269eb3d4327f9b506ec2accd9533e06f425a366b7078db2169e5e0"},
+    "じっと": {"path": "words/じっと.md", "jlpt": 3, "sha256": "fd53c116e4f41ae20d45ab718823ae9a64284e861621358d333a028626d2aa2b"},
+    "そっと": {"path": "words/そっと.md", "jlpt": 3, "sha256": "8c4e2b145a580fd70b1ad039faf1ee80fe680b6869decfd03284e6a3bd75ef14"},
+    "どんどん": {"path": "words/どんどん.md", "jlpt": 4, "sha256": "d8a1ad26ebaa22621a3efa4440be2690d736a5ed77ba8acb2dc7321710b1592c"},
+    "にっこり": {"path": "words/にっこり.md", "jlpt": 3, "sha256": "de3635c2439713790bb666068652651d18ddb299742c37b81ca89ed18298c8c0"},
+    "のんびり": {"path": "words/のんびり.md", "jlpt": 3, "sha256": "6da2a81d489fbe471956ec7bd5eed2d8580a4d14dda3ac3afbd53d21d06b5b79"},
+    "ばったり": {"path": "words/ばったり.md", "jlpt": 3, "sha256": "f002b6472495e3a9f01cd779490d94e267728c9b93b6e852bccce0419d0ad0f7"},
+    "ぼんやり": {"path": "words/ぼんやり.md", "jlpt": 3, "sha256": "02bd208e9afe039b3db0c4cdd74a1be2ad83fcc7ec051e4e3c21de6345edf712"}
+  },
+  "cards": [
+    {
+      "id": "ころころ", "path": "words/ころころ.md", "entry_id": "1004840",
+      "kanji": [], "readings": ["コロコロ", "ころころ", "ころんころん", "コロンコロン"],
+      "form_notes": {"コロンコロン": ["sk"]},
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to"], "gloss": ["(rolling) along", "(rolling) over and over"]},
+        {"number": 2, "pos": ["adv", "adv-to"], "gloss": ["with a bright, ringing sound (e.g. of a bell)", "(laughing) in a bright, high-pitched tone", "merrily"]},
+        {"number": 3, "pos": ["adv", "adv-to"], "gloss": ["(changing) frequently (of opinions, conversation topic, etc.)", "constantly", "often", "always"]},
+        {"number": 4, "pos": ["adv", "adv-to"], "gloss": ["(losing) all too easily", "(being defeated) one after another", "in quick succession"]},
+        {"number": 5, "pos": ["adv", "adv-to", "vs"], "gloss": ["chubby (and cute)", "plump", "round"]},
+        {"number": 6, "pos": ["adv", "adv-to"], "gloss": ["chirping (of insects)"]},
+        {"number": 7, "pos": ["adv", "adv-to"], "gloss": ["croaking (of a frog)", "ribbit ribbit"]},
+        {"number": 8, "pos": ["n"], "reading_restrictions": ["コロコロ", "ころころ"], "field": ["tradem"], "gloss": ["roller", "lint roller", "paint roller"]}
+      ]
+    },
+    {
+      "id": "ぐるぐる", "path": "words/ぐるぐる.md", "entry_id": "1004140",
+      "kanji": [], "readings": ["ぐるぐる", "グルグル"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to"], "gloss": ["(turning) round and round", "in circles"]},
+        {"number": 2, "pos": ["adv", "adv-to"], "gloss": ["wrapping around", "winding around"]}
+      ]
+    },
+    {
+      "id": "くるくる", "path": "words/くるくる.md", "entry_id": "1003960",
+      "kanji": [], "readings": ["くるくる", "クルクル"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["whirling", "revolving", "spinning", "going round and round"]},
+        {"number": 2, "pos": ["adv", "adv-to", "vs"], "gloss": ["coiling around", "winding around", "rolling around"]},
+        {"number": 3, "pos": ["adv", "adv-to", "vs"], "gloss": ["working tirelessly", "working hard"]},
+        {"number": 4, "pos": ["adv", "adv-to", "vs"], "gloss": ["constantly changing"]}
+      ]
+    },
+    {
+      "id": "ぶらぶら", "path": "words/ぶらぶら.md", "entry_id": "1011230",
+      "kanji": [], "readings": ["ぶらぶら", "ブラブラ"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to", "vs", "adj-na"], "gloss": ["dangling", "swaying", "swinging"]},
+        {"number": 2, "pos": ["adv", "adv-to", "vs"], "gloss": ["(walking) leisurely", "aimlessly", "strolling", "wandering", "rambling"]},
+        {"number": 3, "pos": ["adv", "adv-to", "vs"], "gloss": ["idly", "lazily", "leisurely", "aimlessly"]}
+      ]
+    },
+    {
+      "id": "うろうろ", "path": "words/うろうろ.md", "entry_id": "1001060",
+      "kanji": [], "readings": ["うろうろ", "ウロウロ"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to"], "gloss": ["restlessly", "aimlessly", "without purpose"]},
+        {"number": 2, "pos": ["vs"], "gloss": ["to loiter", "to drift", "to hang about doing nothing", "to wander aimlessly", "to be restless"]},
+        {"number": 3, "pos": ["vs"], "gloss": ["to be restless", "to fuss", "to be in a fidget"]}
+      ]
+    },
+    {
+      "id": "すたすた", "path": "words/すたすた.md", "entry_id": "1006090",
+      "kanji": [], "readings": ["すたすた"],
+      "senses": [{"number": 1, "pos": ["adv-to"], "gloss": ["(walk) briskly", "at a brisk pace", "quickly"]}]
+    },
+    {
+      "id": "とぼとぼ", "path": "words/とぼとぼ.md", "entry_id": "1008700",
+      "kanji": [], "readings": ["とぼとぼ", "トボトボ"],
+      "senses": [{"number": 1, "pos": ["adv", "adv-to"], "gloss": ["trudging (along)", "plodding", "slowly and with heavy steps"]}]
+    },
+    {
+      "id": "のろのろ", "path": "words/のろのろ.md", "entry_id": "1010040",
+      "kanji": [], "readings": ["のろのろ"],
+      "senses": [{"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["slowly", "sluggishly"]}]
+    },
+    {
+      "id": "よちよち", "path": "words/よちよち.md", "entry_id": "1013170",
+      "kanji": [], "readings": ["ヨチヨチ", "よちよち"],
+      "senses": [{"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["totteringly", "with tottering steps", "toddling"]}]
+    },
+    {
+      "id": "ふらふら", "path": "words/ふらふら.md", "entry_id": "1011060",
+      "kanji": [], "readings": ["ふらふら", "フラフラ"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to", "vs", "adj-na"], "gloss": ["unsteadily (e.g. on one's feet)", "shakily", "staggering", "tottering", "reeling", "dizzily", "giddily"]},
+        {"number": 2, "pos": ["adv", "adv-to", "vs"], "gloss": ["wavering (in one's mind)", "unsteadily", "indecisively"]},
+        {"number": 3, "pos": ["adv", "adv-to"], "gloss": ["aimlessly", "unconsciously", "whimsically", "without thinking"]}
+      ]
+    },
+    {
+      "id": "どきどき", "path": "words/どきどき.md", "entry_id": "1009050",
+      "kanji": [], "readings": ["ドキドキ", "どきどき", "どきんどきん", "ドキンドキン", "ドッキドキ", "どっきどき"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to"], "gloss": ["thump-thump", "bang-bang", "pit-a-pat", "pitapat", "pitter-patter"]},
+        {"number": 2, "pos": ["vs"], "gloss": ["to beat fast (of one's heart)", "to throb", "to pound", "to palpitate"]}
+      ]
+    },
+    {
+      "id": "わくわく", "path": "words/わくわく.md", "entry_id": "1013310",
+      "kanji": [], "readings": ["わくわく", "ワクワク", "ワックワク"],
+      "senses": [{"number": 1, "pos": ["vs", "adv", "adv-to"], "gloss": ["to be excited", "to be nervous", "to be thrilled"]}]
+    },
+    {
+      "id": "はらはら", "path": "words/はらはら.md", "entry_id": "1096260",
+      "kanji": [], "readings": ["ハラハラ", "はらはら"],
+      "senses": [
+        {"number": 1, "pos": ["vs", "adv"], "gloss": ["to feel anxious", "to feel nervous", "to be kept in suspense", "to feel excited", "to feel thrilled"]},
+        {"number": 2, "pos": ["adv", "adv-to"], "gloss": ["fluttering down", "trickling down (e.g. tears)"]},
+        {"number": 3, "pos": ["adv", "adv-to"], "gloss": ["hanging untidily (of hair)", "straggling"]}
+      ]
+    },
+    {
+      "id": "びくびく", "path": "words/びくびく.md", "entry_id": "1010730",
+      "kanji": [], "readings": ["ビクビク", "びくびく"],
+      "senses": [
+        {"number": 1, "pos": ["adv-to", "adv", "vs", "adj-no"], "gloss": ["being afraid of", "being fearful", "being timid", "being nervous"]},
+        {"number": 2, "pos": ["adv-to", "adv", "vs", "adj-no"], "gloss": ["trembling", "shivering"]}
+      ]
+    },
+    {
+      "id": "おどおど", "path": "words/おどおど.md", "entry_id": "1001400",
+      "kanji": [], "readings": ["オドオド", "おどおど"],
+      "senses": [{"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["timidly", "nervously", "hesitantly", "trembling (with fear)", "fearfully", "anxiously"]}]
+    },
+    {
+      "id": "いらいら", "path": "words/いらいら.md", "entry_id": "1587700",
+      "kanji": ["苛々", "苛苛", "刺々", "刺刺"], "readings": ["いらいら", "イライラ"],
+      "form_notes": {"刺々": ["oK"], "刺刺": ["oK"]},
+      "senses": [{"number": 1, "pos": ["vs", "n", "adv", "adv-to", "vi"], "misc": ["uk", "on-mim"], "gloss": ["to get irritated", "to get annoyed", "to be on the edge", "to fret", "to lose patience"]}]
+    },
+    {
+      "id": "むかむか", "path": "words/むかむか.md", "entry_id": "1012330",
+      "kanji": [], "readings": ["ムカムカ", "むかむか"],
+      "senses": [
+        {"number": 1, "pos": ["adv-to", "adv", "vs"], "gloss": ["feeling sick", "feeling queasy", "feeling nauseated"]},
+        {"number": 2, "pos": ["adv-to", "adv", "vs"], "gloss": ["being angry", "being offended", "being disgusted"]}
+      ]
+    },
+    {
+      "id": "もやもや", "path": "words/もやもや.md", "entry_id": "1012690",
+      "kanji": [], "readings": ["もやもや", "モヤモヤ"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["hazy", "misty", "foggy", "murky", "fuzzy"]},
+        {"number": 2, "pos": ["n", "adv", "adv-to", "vs"], "gloss": ["hazy feeling", "uncertain feeling", "feeling gloomy", "feeling depressed", "pent-up feelings", "ill feeling"]}
+      ]
+    },
+    {
+      "id": "くよくよ", "path": "words/くよくよ.md", "entry_id": "1003930",
+      "kanji": [], "readings": ["くよくよ", "クヨクヨ"],
+      "senses": [
+        {"number": 1, "pos": ["vs"], "gloss": ["to fret (over)", "to brood (about)", "to mope", "to worry"]},
+        {"number": 2, "pos": ["adv", "adv-to"], "gloss": ["worriedly", "(fretting) constantly", "(worrying) over this and that", "(obsessing) to no end"]}
+      ]
+    },
+    {
+      "id": "めそめそ", "path": "words/めそめそ.md", "entry_id": "1012450",
+      "kanji": [], "readings": ["メソメソ", "めそめそ"],
+      "senses": [{"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["sobbing", "weeping", "whimpering"]}]
+    },
+    {
+      "id": "にこにこ", "path": "words/にこにこ.md", "entry_id": "1091130",
+      "kanji": [], "readings": ["ニコニコ", "にこにこ"],
+      "senses": [{"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["with a friendly grin", "smilingly"]}]
+    },
+    {
+      "id": "にやにや", "path": "words/にやにや.md", "entry_id": "1009620",
+      "kanji": [], "readings": ["ニヤニヤ", "にやにや"],
+      "senses": [{"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["grinning", "smirking"]}]
+    },
+    {
+      "id": "げらげら", "path": "words/げらげら.md", "entry_id": "1629790",
+      "kanji": [], "readings": ["ゲラゲラ", "げらげら"],
+      "senses": [{"number": 1, "pos": ["adv", "adv-to"], "gloss": ["guffawing", "roaring (with laughter)", "(laughing) heartily"]}]
+    },
+    {
+      "id": "くすくす", "path": "words/くすくす.md", "entry_id": "2007850",
+      "kanji": [], "readings": ["くすくす", "クスクス"],
+      "senses": [{"number": 1, "pos": ["adv", "adv-to"], "gloss": ["chuckle", "giggle"]}]
+    },
+    {
+      "id": "しくしく", "path": "words/しくしく.md", "entry_id": "2121270",
+      "kanji": [], "readings": ["しくしく"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to"], "gloss": ["weeping", "sobbing", "softly (crying)"]},
+        {"number": 2, "pos": ["adv", "adv-to", "vs"], "gloss": ["with a prolonged dull pain", "having a griping pain"]}
+      ]
+    },
+    {
+      "id": "ぺらぺら", "path": "words/ぺらぺら.md", "entry_id": "1011580",
+      "kanji": [], "readings": ["ペラペラ", "ぺらぺら"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to", "adj-na"], "gloss": ["fluently (speaking a foreign language)"]},
+        {"number": 2, "pos": ["adv", "adv-to"], "gloss": ["incessantly (speaking)", "glibly", "garrulously", "volubly"]},
+        {"number": 3, "pos": ["adv", "adv-to"], "gloss": ["one after the other (flipping through pages)"]},
+        {"number": 4, "pos": ["adj-no", "adj-na", "adv", "vs"], "gloss": ["thin (paper, cloth, etc.)", "flimsy", "weak"]}
+      ]
+    },
+    {
+      "id": "ぺこぺこ", "path": "words/ぺこぺこ.md", "entry_id": "1011540",
+      "kanji": [], "readings": ["ペコペコ", "ぺこぺこ"],
+      "senses": [
+        {"number": 1, "pos": ["adj-na"], "gloss": ["very hungry", "starving", "famished"]},
+        {"number": 2, "pos": ["adv", "vs"], "gloss": ["bowing repeatedly", "kowtowing", "bowing and scraping", "being obsequious", "being servile"]},
+        {"number": 3, "pos": ["adv", "adv-to", "vs", "adj-na"], "gloss": ["denting", "buckling", "giving (in)"]}
+      ]
+    },
+    {
+      "id": "こそこそ", "path": "words/こそこそ.md", "entry_id": "1004420",
+      "kanji": [], "readings": ["こそこそ", "コソコソ"],
+      "senses": [{"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["sneakily", "secretly", "stealthily", "on the sly"]}]
+    },
+    {
+      "id": "ひそひそ", "path": "words/ひそひそ.md", "entry_id": "1010520",
+      "kanji": [], "readings": ["ヒソヒソ", "ひそひそ"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to"], "gloss": ["in a whisper", "in a low voice", "in undertones"]},
+        {"number": 2, "pos": ["adv", "adv-to"], "gloss": ["in secret", "stealthily"]}
+      ]
+    },
+    {
+      "id": "がやがや", "path": "words/がやがや.md", "entry_id": "1003280",
+      "kanji": [], "readings": ["がやがや", "ガヤガヤ", "かやかや", "カヤカヤ"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["noisily (crowd of people talking)", "clamorously", "in a hubbub", "jabberingly", "chatteringly", "buzzingly"]},
+        {"number": 2, "pos": ["adv", "adv-to"], "reading_restrictions": ["かやかや", "カヤカヤ"], "misc": ["on-mim", "arch"], "gloss": ["loudly (laughing)"]}
+      ],
+      "editorial_note": "The second sense is not assigned to the modern がやがや card spelling."
+    },
+    {
+      "id": "ばたばた", "path": "words/ばたばた.md", "entry_id": "1098660",
+      "kanji": [], "readings": ["バタバタ", "ばたばた"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["flapping", "rattling", "fluttering"]},
+        {"number": 2, "pos": ["adv", "adv-to", "vs"], "gloss": ["(running) with a clatter", "noisily", "thrashing (around)", "floundering", "flailing"]},
+        {"number": 3, "pos": ["adv", "adv-to"], "gloss": ["(falling) one after another", "in quick succession"]},
+        {"number": 4, "pos": ["adv", "adv-to", "vs"], "gloss": ["busily", "hurriedly", "in a fluster", "in a rush", "rushing around", "bustling about", "scurrying"]},
+        {"number": 5, "pos": ["adv", "adv-to"], "gloss": ["quickly", "briskly", "with dispatch"]},
+        {"number": 6, "pos": ["n"], "misc": ["col"], "gloss": ["motorcycle", "three-wheeler truck"]}
+      ]
+    },
+    {
+      "id": "どたどた", "path": "words/どたどた.md", "entry_id": "2017090",
+      "kanji": [], "readings": ["どたどた", "ドタドタ"],
+      "senses": [{"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["noisily (esp. the noise of heavy feet)"]}]
+    },
+    {
+      "id": "とんとん", "path": "words/とんとん.md", "entry_id": "1008800",
+      "kanji": [], "readings": ["とんとん", "トントン"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to"], "gloss": ["with a tap", "with a knock", "with a knocking sound", "with a rap-tap"]},
+        {"number": 2, "pos": ["adv", "adv-to"], "gloss": ["smoothly (proceed)", "without a hitch", "without delay"]},
+        {"number": 3, "pos": ["adj-na"], "gloss": ["even", "equal", "break-even"]}
+      ]
+    },
+    {
+      "id": "こんこん", "path": "words/こんこん.md", "entry_id": "1004870",
+      "kanji": [], "readings": ["コンコン", "こんこん"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to"], "gloss": ["tap-tap", "knock-knock", "bang-bang"]},
+        {"number": 2, "pos": ["adv", "adv-to"], "gloss": ["cough-cough"]},
+        {"number": 3, "pos": ["adv", "adv-to"], "gloss": ["bark (of a fox)", "yelp", "cry"]},
+        {"number": 4, "pos": ["adv", "adv-to"], "gloss": ["heavily (e.g. of snow falling)"]},
+        {"number": 5, "pos": ["n"], "misc": ["chn"], "gloss": ["fox"]}
+      ]
+    },
+    {
+      "id": "どんどん", "path": "words/どんどん.md", "entry_id": "1009320",
+      "kanji": [], "readings": ["どんどん", "ドンドン"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to"], "gloss": ["drumming (noise)", "beating", "pounding", "banging", "booming", "stamping"]},
+        {"number": 2, "pos": ["adv", "adv-to"], "gloss": ["rapidly", "quickly", "steadily"]},
+        {"number": 3, "pos": ["adv", "adv-to"], "gloss": ["continuously", "one after the other", "in succession"]}
+      ]
+    },
+    {
+      "id": "ぐっすり", "path": "words/ぐっすり.md", "entry_id": "1004060",
+      "kanji": [], "readings": ["ぐっすり", "グッスリ"],
+      "senses": [{"number": 1, "pos": ["adv", "adv-to"], "gloss": ["soundly (sleeping)", "fast (asleep)"]}]
+    },
+    {
+      "id": "うとうと", "path": "words/うとうと.md", "entry_id": "1001030",
+      "kanji": [], "readings": ["うとうと", "ウトウト", "うとっと", "ウトッと", "ウトっと"],
+      "senses": [{"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["falling into a doze", "dozing off", "nodding off"]}]
+    },
+    {
+      "id": "すやすや", "path": "words/すやすや.md", "entry_id": "1006230",
+      "kanji": [], "readings": ["すやすや", "スヤスヤ"],
+      "senses": [{"number": 1, "pos": ["adv", "adv-to"], "gloss": ["peacefully (sleeping)", "quietly", "soundly"]}]
+    },
+    {
+      "id": "ぼんやり", "path": "words/ぼんやり.md", "entry_id": "1011920",
+      "kanji": ["呆んやり"], "readings": ["ぼんやり", "ボンヤリ"],
+      "form_notes": {"呆んやり": ["sK"]},
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["dimly", "faintly", "indistinctly", "vaguely"]},
+        {"number": 2, "pos": ["adv", "adv-to", "vs"], "gloss": ["absentmindedly", "vacantly", "carelessly", "in a spaced out manner"]},
+        {"number": 3, "pos": ["adv", "adv-to", "vs"], "gloss": ["idly", "aimlessly"]},
+        {"number": 4, "pos": ["n"], "gloss": ["absentmindedness"]},
+        {"number": 5, "pos": ["n"], "gloss": ["absentminded person", "fool", "dunce"]}
+      ]
+    },
+    {
+      "id": "のんびり", "path": "words/のんびり.md", "entry_id": "1010050",
+      "kanji": [], "readings": ["のんびり", "ノンビリ"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to"], "gloss": ["at leisure", "in a relaxed manner", "in a carefree manner", "quietly", "peacefully"]},
+        {"number": 2, "pos": ["vs", "vi"], "gloss": ["to relax", "to take it easy", "to chill"]}
+      ]
+    },
+    {
+      "id": "ぐったり", "path": "words/ぐったり.md", "entry_id": "1004070",
+      "kanji": [], "readings": ["ぐったり", "グッタリ", "グタリ", "ぐたり"],
+      "senses": [{"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["limply", "wearily", "listlessly", "languidly", "exhaustedly", "unenergetically"]}]
+    },
+    {
+      "id": "へとへと", "path": "words/へとへと.md", "entry_id": "1011330",
+      "kanji": [], "readings": ["ヘトヘト", "へとへと"],
+      "senses": [{"number": 1, "pos": ["adj-na", "adj-no"], "gloss": ["completely exhausted", "dead tired", "knackered"]}]
+    },
+    {
+      "id": "くたくた", "path": "words/くたくた.md", "entry_id": "1003770",
+      "kanji": [], "readings": ["くたくた", "クタクタ", "くったくた"],
+      "senses": [
+        {"number": 1, "pos": ["adj-na", "adv", "adv-to"], "gloss": ["exhausted", "worn out", "dead tired"]},
+        {"number": 2, "pos": ["adj-no", "adj-na"], "gloss": ["battered (esp. of clothing)", "worn out", "ragged", "tattered"]},
+        {"number": 3, "pos": ["adv", "adv-to", "adj-na"], "gloss": ["(boiling) to a pulp", "to a mash", "to a mush"]}
+      ]
+    },
+    {
+      "id": "ぴんぴん", "path": "words/ぴんぴん.md", "entry_id": "1010960",
+      "kanji": [], "readings": ["ぴんぴん", "ピンピン"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["lively", "energetic", "full of life"]},
+        {"number": 2, "pos": ["adv", "adv-to", "vs"], "gloss": ["vigorously (jumping, flopping, etc.)"]},
+        {"number": 3, "pos": ["adv", "adv-to"], "gloss": ["piercing (e.g. sound)", "penetrating", "grating"]}
+      ]
+    },
+    {
+      "id": "すっきり", "path": "words/すっきり.md", "entry_id": "1006120",
+      "kanji": [], "readings": ["すっきり", "スッキリ"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["refreshingly", "with a feeling of relief", "pleasantly", "(a weight) off one's shoulder"]},
+        {"number": 2, "pos": ["adv", "adv-to", "vs"], "gloss": ["shapely", "neatly", "refinedly"]},
+        {"number": 3, "pos": ["adv", "adv-to", "vs"], "gloss": ["cleanly", "without trouble"]},
+        {"number": 4, "pos": ["adv", "adv-to", "vs"], "gloss": ["clearly", "plainly", "distinctly"]},
+        {"number": 5, "pos": ["adv", "adv-to", "vs"], "gloss": ["completely", "thoroughly"]},
+        {"number": 6, "pos": ["adv", "adv-to", "vs"], "gloss": ["not at all (with negative sentence)", "not even slightly"]}
+      ]
+    },
+    {
+      "id": "じっと", "path": "words/じっと.md", "entry_id": "1005870",
+      "kanji": ["凝乎と"], "readings": ["じっと", "じーっと", "じーと", "じいっと"],
+      "form_notes": {"凝乎と": ["rK"]},
+      "senses": [
+        {"number": 1, "pos": ["adv", "vs"], "misc": ["on-mim", "uk"], "info": ["じーっと is more emphatic"], "gloss": ["motionlessly (e.g. stand, wait)", "(be) still"]},
+        {"number": 2, "pos": ["adv", "vs"], "misc": ["uk"], "gloss": ["fixedly (e.g. gaze, stare)", "intently (e.g. listen, think)"]},
+        {"number": 3, "pos": ["adv", "vs"], "misc": ["uk"], "gloss": ["patiently (endure)", "stoically"]},
+        {"number": 4, "pos": ["adv", "vs"], "misc": ["uk"], "gloss": ["firmly (e.g. hold)", "restrained"]}
+      ]
+    },
+    {
+      "id": "そっと", "path": "words/そっと.md", "entry_id": "1006810",
+      "kanji": [], "readings": ["そっと", "そうっと", "そおっと", "そーっと"],
+      "senses": [
+        {"number": 1, "pos": ["adv"], "gloss": ["softly", "gently", "quietly", "lightly"]},
+        {"number": 2, "pos": ["adv"], "gloss": ["stealthily", "secretly", "in secret"]},
+        {"number": 3, "pos": ["vs"], "info": ["as 〜しておく"], "gloss": ["to leave alone", "to leave as it is"]}
+      ]
+    },
+    {
+      "id": "にっこり", "path": "words/にっこり.md", "entry_id": "1632320",
+      "kanji": [], "readings": ["にっこり", "ニッコリ", "にこり", "ニコリ"],
+      "senses": [{"number": 1, "pos": ["adv", "adv-to", "vs"], "gloss": ["sweetly (smiling)", "broadly (grinning)"]}]
+    },
+    {
+      "id": "ばったり", "path": "words/ばったり.md", "entry_id": "1632430",
+      "kanji": [], "readings": ["ばったり", "バッタリ", "ばたり", "バタリ", "ばったん", "バッタン"],
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to"], "gloss": ["with a clash", "with a thud", "with a bang", "with a flop"]},
+        {"number": 2, "pos": ["adv", "adv-to"], "gloss": ["unexpectedly (meeting someone)"]},
+        {"number": 3, "pos": ["adv", "adv-to"], "gloss": ["suddenly (ending)", "abruptly (coming to a halt)"]}
+      ]
+    },
+    {
+      "id": "しっかり", "path": "words/しっかり.md", "entry_id": "1594400",
+      "kanji": ["確り", "聢り"], "readings": ["しっかり"],
+      "form_notes": {"確り": ["rK"], "聢り": ["rK"]},
+      "senses": [
+        {"number": 1, "pos": ["adv", "adv-to", "vs"], "misc": ["uk", "on-mim"], "gloss": ["tightly (holding on)", "firmly", "securely"]},
+        {"number": 2, "pos": ["adv", "adv-to", "vs"], "misc": ["uk", "on-mim"], "gloss": ["strongly (built)", "solidly", "sturdily", "steadily"]},
+        {"number": 3, "pos": ["adv", "adv-to", "vs"], "misc": ["uk", "on-mim"], "gloss": ["properly", "well", "sufficiently", "hard (working, etc.)", "fully", "completely"]},
+        {"number": 4, "pos": ["adv", "adv-to", "vs"], "misc": ["uk", "on-mim"], "gloss": ["reliably", "dependably", "levelheadedly", "shrewdly", "wisely", "cleverly"]}
+      ]
+    }
+  ],
+  "verification_results": {
+    "scoped_cards": 50,
+    "exact_snapshot_readings_pos_and_glosses": "pass; all fifty repository source records compared with the actual extracted entries",
+    "source_xml_agreement": "pass; complete reading and gloss arrays agree for all selected entries and the five inspected homophones",
+    "existing_metadata": "pass; all ten existing IDs, titles, JLPT values and prior tags retained",
+    "new_levels": "pass; no JLPT field on the forty new cards",
+    "sections_examples_and_links": "pass; all four headings, two or three translated bullet examples and both required article links on each card",
+    "alternate_spelling_id_search": "pass; no pre-existing spelling-variant IDs were found",
+    "repository_validator": "python tools/validate.py: 0 error(s)",
+    "whitespace": "git diff --check: pass",
+    "manifest": "not regenerated by this batch, as requested"
+  },
+  "verification_limits": [
+    "Dictionary recognition does not establish equal frequency of variants or validate every original example.",
+    "No independent native-speaker or corpus review of the original examples was performed.",
+    "Quiz exclusions are curated semantic overlaps, not a guarantee that all possible answer ambiguities in the full repository have been eliminated.",
+    "The parent owns article completion and final manifest regeneration; this batch does not alter manifest.json."
+  ]
+}

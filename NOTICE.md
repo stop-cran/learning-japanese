@@ -27,6 +27,11 @@ This repository contains original notes plus data derived from open dictionary p
   and records six added kanji, 17 new word articles, and the reused 訳 article. It distinguishes rare character-dictionary
   readings from verified ordinary word spellings. The rare 奇しい/あやしい spelling is supported by the cited
   *Seisenban Nihon Kokugo Daijiten* entry rather than claimed as a spelling in JMdict.
+  The onomatopoeia starter collection uses a separately hash-pinned local JMdict snapshot;
+  [sensory-word records](docs/onomatopoeia-sensory-sources.json) and
+  [movement/feeling records](docs/onomatopoeia-feelings-sources.json) identify its entries.
+  Its explanations and example sentences are original teaching material, not excerpts from manga,
+  news stories, or recipes. This thematic selection does not establish new JLPT membership.
 - **Canonical radical glyphs for the N4 and N3 additions** are mapped from the compatibility decompositions in Unicode 17.0
   [UnicodeData.txt](https://www.unicode.org/Public/17.0.0/ucd/UnicodeData.txt), copyright Unicode, Inc., under the
   [Unicode License V3](docs/UNICODE-LICENSE.txt). Positional component shapes may differ from these canonical glyphs.

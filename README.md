@@ -13,6 +13,10 @@ This repository starts as a collection of standalone articles prompted by specif
 | Vocabulary | [Strange, suspicious, and rare: ayashii and related words](articles/ayashii-and-related-words.md) | How do 怪しい, 妖しい, 疑わしい, いかがわしい, 変な, and 珍しい differ? |
 | Vocabulary | [Kaeru: change, replace, exchange, and return](articles/kaeru-change-replace-and-return.md) | How do 変える, 替える, 換える, 代える, 帰る, 返る, 還る, and 孵る differ, and why is 交える not read かえる? |
 | Vocabulary | [Japanese occupation and role endings](articles/occupation-and-role-endings.md) | What do 者, 家, 師, 士, 手, 員, and 屋 contribute, and how do they relate to prestige and new word formation? |
+| Vocabulary | [Japanese onomatopoeia: first 100 words](articles/japanese-onomatopoeia.md) | How do sound words and mimetic words describe everyday scenes, and which constructions go with them? |
+| Vocabulary | [Onomatopoeia sound patterns](articles/onomatopoeia-sound-patterns.md) | What can repetition, endings, and voiced consonants suggest without becoming rigid meaning rules? |
+| Vocabulary | [Warmth and texture](articles/onomatopoeia-texture-and-warmth.md) | How do ぽかぽか, ほかほか, ふわふわ, ふかふか, ぺたぺた, and べたべた differ? |
+| Vocabulary | [Rain, rolling, walking, and similar forms](articles/onomatopoeia-sound-and-movement.md) | How do vivid scene descriptions differ, and why are similar-looking words not necessarily synonyms? |
 
 ## Confusable vocabulary
 
@@ -29,7 +33,7 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   The deck covers all 79 N5, 166 N4 and 367 N3 kanji in the selected [kanjiapi.dev](https://kanjiapi.dev) community sets.
   It also includes 分 as a documented N5 exception, one original N2 card, and six article-subject additions:
   80 N5, 166 N4, 367 N3, two N2 and five N1. The `starter` tag identifies the original 118-card cohort, not the later expansions.
-- `words/` – one article per written word form (3,022): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
+- `words/` – one article per written word form (3,112): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
   Articles explain meaning, spelling or formation, synonyms, antonyms and usage distinctions.
   The selected community vocabulary list's 684 N5 and 640 additional N4 rows are covered by 1,308 articles:
   924 new articles and 384 reused ones. Multiple source readings can share an article.
@@ -51,12 +55,25 @@ The [article-subject snapshot](docs/article-subjects-source-snapshot.json) recor
 作家 is shared with the N3 vocabulary expansion, so merging these additions adds 16 distinct word cards to that collection.
 
 Source-covered word articles carry their own `jlpt` metadata: 672 N5, 636 N4, 1,625 N3, three N2 and two N1 articles, independently of the kanji they contain.
-This article-level label does not assign every subsidiary sense or reading to that level. The remaining 84 articles have no
+This article-level label does not assign every subsidiary sense or reading to that level. The remaining 174 articles have no
 sourced word-level label. In particular, the pinned list's N1 labels for くらい and だけ are not recommendations to postpone these basic particles.
 Vocabulary-aware app versions use explicit levels first and retain kanji-based inference only when the
 field is absent; older versions ignore word-level metadata. N4 study includes N5; N3 study includes both.
 Known ambiguous word pairs are marked with [`quiz_exclusions`](docs/content-format.md#word-article);
 these require an exclusion-aware app version and do not imply that every possible ambiguity has been identified.
+
+## Onomatopoeia starter collection
+
+The [100-word index](articles/japanese-onomatopoeia.md#first-100-word-cards) groups sound words and
+mimetic words by everyday situation. Cards carry the `onomatopoeia` tag, a broad category such as
+`giongo`, `giseigo`, or `gitaigo`, and a form tag where applicable. Categories can overlap by sense;
+these tags are not new word types or JLPT levels. Existing word IDs and sourced level labels are retained.
+
+This is content-only: the app can import the ordinary word cards and linked guides, but this addition
+does not create an app section, tag filter, image quiz, or separate review schedule.
+New kana-only words without a sourced level may require the app's All word stack rather than a JLPT stack.
+Images and their generation/review pipeline remain later phases of
+[app issue #45](https://github.com/stop-cran/kanji-cards-android/issues/45).
 
 ## Approach
 
