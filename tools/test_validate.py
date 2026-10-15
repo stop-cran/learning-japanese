@@ -55,6 +55,10 @@ Nuance.
 """
 
 
+def webp(extra):
+    return b"RIFF" + (extra + 4).to_bytes(4, "little") + b"WEBP" + b"x" * extra
+
+
 class ValidateTests(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory()
@@ -1031,6 +1035,49 @@ class ValidateTests(unittest.TestCase):
                     with self.subTest(folder=folder, name=name):
                         self.check_card(REPO / folder / f"{name}.md")
         self.assertEqual([], validate.errors)
+
+    def image_card(self, header_extra):
+        header = WORD_HEADER + header_extra
+        self.write("words/土地.md", header, WORD_BODY)
+        meta, _ = validate.parse(self.word_path)
+        validate.check_word_image(self.word_path, meta)
+
+    def test_word_images(self):
+        (self.root / "images").mkdir()
+        good = webp(20)
+        (self.root / "images" / "a.webp").write_bytes(good)
+        self.image_card("\nimage: images/a.webp\nimage_scene: A scene")
+        self.assertEqual([], validate.errors)
+        validate.check_images({"土地": "images/a.webp"})
+        self.assertEqual([], validate.errors)
+
+    def test_word_image_rejections(self):
+        (self.root / "images").mkdir()
+        (self.root / "images" / "bad.webp").write_bytes(b"PNG" + b"x" * 20)
+        (self.root / "images" / "big.webp").write_bytes(webp(validate.MAX_IMAGE_BYTES))
+        cases = (
+            ("\nimage: images/bad.webp\nimage_scene: s", "not a WebP"),
+            ("\nimage: images/big.webp\nimage_scene: s", "the limit is"),
+            ("\nimage: images/none.webp\nimage_scene: s", "does not exist"),
+            ("\nimage: images/sub/x.webp\nimage_scene: s", "flat path"),
+            ("\nimage: images/bad.webp", "must be given together"),
+        )
+        for extra, message in cases:
+            with self.subTest(message=message):
+                validate.errors.clear()
+                self.image_card(extra)
+                self.assert_error(message)
+
+    def test_orphan_and_duplicate_images(self):
+        (self.root / "images").mkdir()
+        (self.root / "images" / "a.webp").write_bytes(webp(4))
+        (self.root / "images" / "notes.txt").write_text("x")
+        validate.check_images({})
+        self.assert_error("orphan image")
+        self.assert_error("only .webp files")
+        validate.errors.clear()
+        validate.check_images({"a": "images/a.webp", "b": "images/a.webp"})
+        self.assert_error("also used by")
 
 
 if __name__ == "__main__":

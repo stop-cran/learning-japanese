@@ -23,12 +23,23 @@ def main() -> None:
         for path in sorted((ROOT / folder).glob("*")):
             if path.is_file():
                 files[path.relative_to(ROOT).as_posix()] = sha256(path)
-    combined = hashlib.sha256(json.dumps(files, sort_keys=True, ensure_ascii=False).encode("utf-8")).hexdigest()
+    # Binary images are hashed byte-for-byte (no CRLF normalisation) and listed apart from `files`,
+    # so apps that predate images ignore the unknown key instead of reporting every image as missing.
+    images = {
+        path.relative_to(ROOT).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
+        for path in sorted((ROOT / "images").glob("*")) if path.is_file()
+    }
+    combined = hashlib.sha256(
+        json.dumps({"files": files, "images": images} if images else files, sort_keys=True, ensure_ascii=False).encode("utf-8")
+    ).hexdigest()
     manifest = {"schemaVersion": SCHEMA_VERSION, "contentVersion": combined[:16], "files": files}
+    if images:
+        manifest["images"] = images
+    files = {**files, **images}
     (ROOT / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n"
     )
-    print(f"manifest.json: {len(files)} files, version {manifest['contentVersion']}")
+    print(f"manifest.json: {len(files)} files incl. {len(images)} images, version {manifest['contentVersion']}")
 
 
 if __name__ == "__main__":

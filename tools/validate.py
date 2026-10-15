@@ -30,6 +30,9 @@ WORD_TYPES = {"kango", "wago", "jukujikun", "gairaigo"}
 KANJI_LISTS = ("tags", "onyomi", "kunyomi", "distractors")
 WORD_LISTS = ("kanji", "tags", "quiz_exclusions", "quiz_distractors")
 MAX_QUIZ_DISTRACTORS = 3
+IMAGE_PATH = re.compile(r"images/[^/\\\s]+\.webp")
+MAX_IMAGE_BYTES = 100 * 1024
+MAX_IMAGES_TOTAL_BYTES = 25 * 1024 * 1024
 KANJI_INTS = ("jlpt", "strokes", "radicalNumber")
 KANJI_SECTIONS = ["Meaning and origin", "Readings", "Common words", "Notes"]
 KANJI_COMBINE_SECTION = "How the kanji combine"
@@ -173,7 +176,7 @@ def check_android_front_matter(path: Path, fields: dict | None, meta: dict) -> N
     if path.parent.name == "kanji":
         known = KANJI_REQUIRED + ["phonetic", "distractors"]
     elif path.parent.name == "words":
-        known = WORD_REQUIRED + ["jlpt", "quiz_exclusions", "quiz_distractors"]
+        known = WORD_REQUIRED + ["jlpt", "quiz_exclusions", "quiz_distractors", "image", "image_scene"]
     else:
         known = ["title"]
     for key in known:
@@ -414,8 +417,9 @@ def check_kanji(path: Path, meta: dict, titles: dict,
 
 
 def check_word(path: Path, meta: dict, known_words: set[str] | None = None) -> None:
-    if not check_metadata(path, meta, WORD_REQUIRED, WORD_LISTS, ("jlpt",), ("jlpt",)):
+    if not check_metadata(path, meta, WORD_REQUIRED, WORD_LISTS, ("jlpt",), ("jlpt", "image", "image_scene")):
         return
+    check_word_image(path, meta)
     if "jlpt" in meta and meta["jlpt"] not in (1, 2, 3, 4, 5):
         err(path, "'jlpt' must be 1-5 when supplied")
     if meta["word"] != path.stem:
@@ -461,6 +465,53 @@ def check_word(path: Path, meta: dict, known_words: set[str] | None = None) -> N
             err(path, f"quiz distractor '{other}' is also listed in 'quiz_exclusions'")
 
 
+def check_word_image(path: Path, meta: dict) -> None:
+    """`image` is a flat images/<name>.webp file within the size budget; `image_scene` documents it."""
+    if ("image" in meta) != ("image_scene" in meta):
+        err(path, "'image' and 'image_scene' must be given together")
+    image = meta.get("image")
+    if image is None:
+        return
+    if not IMAGE_PATH.fullmatch(image):
+        err(path, "'image' must be a flat path like images/<name>.webp")
+        return
+    file = ROOT / image
+    if not file.is_file():
+        err(path, f"image file '{image}' does not exist")
+    else:
+        check_image_file(path, file)
+
+
+def check_image_file(path: Path, file: Path) -> None:
+    data = file.read_bytes()
+    if len(data) > MAX_IMAGE_BYTES:
+        err(path, f"image '{file.name}' is {len(data)} bytes; the limit is {MAX_IMAGE_BYTES}")
+    if data[:4] != b"RIFF" or data[8:12] != b"WEBP":
+        err(path, f"image '{file.name}' is not a WebP file")
+    elif int.from_bytes(data[4:8], "little") + 8 != len(data):
+        err(path, f"image '{file.name}' is truncated or corrupt (RIFF size mismatch)")
+
+
+def check_images(words: dict[str, str]) -> None:
+    """Every file in images/ must be a .webp referenced by exactly one word card."""
+    folder = ROOT / "images"
+    if not folder.is_dir():
+        return
+    used: dict[str, str] = {}
+    for word, image in words.items():
+        if image in used:
+            err(ROOT / "words" / f"{word}.md", f"image '{image}' is also used by {used[image]}")
+        used[image] = word
+    for file in sorted(folder.iterdir()):
+        rel = f"images/{file.name}"
+        if file.is_dir() or file.suffix != ".webp":
+            errors.append(f"{rel}: only .webp files are allowed in images/")
+        elif rel not in used:
+            errors.append(f"{rel}: orphan image, no word card references it")
+    if sum(f.stat().st_size for f in folder.glob("*.webp")) > MAX_IMAGES_TOTAL_BYTES:
+        errors.append(f"images/: total size exceeds {MAX_IMAGES_TOTAL_BYTES} bytes")
+
+
 def check_word_kanji_links(path: Path, meta: dict, body: str) -> None:
     """Every kanji of a word that has its own card must be linked from the word's article (kanji without a card are exempt)."""
     kanji_dir = (ROOT / "kanji").resolve()
@@ -484,6 +535,7 @@ def main() -> int:
     stroke_counts = {path.stem: check_strokes(path) for path in sorted((ROOT / "strokes").glob("*.json"))}
     word_ids = {path.stem for path in (ROOT / "words").glob("*.md")}
     titles: dict[str, str] = {}
+    word_images: dict[str, str] = {}
     for folder in ("kanji", "words", "articles"):
         for path in sorted((ROOT / folder).glob("*.md")):
             meta, body = parse(path)
@@ -498,9 +550,12 @@ def main() -> int:
                 check_kanji(path, meta, titles, stroke_counts)
             else:
                 check_word(path, meta, word_ids)
+                if isinstance(meta.get("image"), str):
+                    word_images[path.stem] = meta["image"]
                 check_word_kanji_links(path, meta, body)
             check_body(path, meta, body)
             check_links(path, body)
+    check_images(word_images)
     from validate_counters import check_counters
     check_counters(err, ROOT)
     for message in errors:

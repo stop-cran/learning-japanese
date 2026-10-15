@@ -69,10 +69,16 @@ mimetic words by everyday situation. Cards carry the `onomatopoeia` tag, a broad
 `giongo`, `giseigo`, or `gitaigo`, and a form tag where applicable. Categories can overlap by sense;
 these tags are not new word types or JLPT levels. Existing word IDs and sourced level labels are retained.
 
-This is content-only: the app can import the ordinary word cards and linked guides, but this addition
-does not create an app section, tag filter, image quiz, or separate review schedule.
-New kana-only words without a sourced level may require the app's All word stack rather than a JLPT stack.
-Images and their generation/review pipeline remain later phases of
+The app has an Onomatopoeia stack with the normal word quizzes. Words with a scene picture (`images/`) also
+get a "Picture → word" quiz and show the picture in their article. New kana-only words without a sourced
+level may require the app's All word stack rather than a JLPT stack.
+
+### Generated images
+
+The pilot pictures in `images/` are AI-generated (Azure OpenAI image model) from the prompts in
+`tools/image_prompts.json`, then compressed to 512 px WebP. They are original generated illustrations
+meant to illustrate meaning, are text-free by design, and were reviewed by hand; they may still contain
+small inaccuracies. Progress is tracked in
 [app issue #45](https://github.com/stop-cran/kanji-cards-android/issues/45).
 
 ## Approach

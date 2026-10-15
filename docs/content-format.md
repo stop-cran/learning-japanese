@@ -63,6 +63,7 @@ inline comments on fields. A prefix such as `---notes` is not a closing delimite
 | `tags` | Free tags. |
 | `quiz_distractors` | Optional inline list of up to 3 other exact `word` IDs that make good wrong choices for this word (plausible but clearly different, e.g. 今日 vs 今朝). Used first, before the automatic tag/kanji scoring, in both directions. Must exist, must not repeat, include the word itself, or overlap `quiz_exclusions`. Omission means automatic choices only. |
 | `quiz_exclusions` | Optional inline list of other exact `word` IDs that must not appear together as quiz choices. Omission or `[]` means no curated exclusions. Use one top-level unquoted key; reject duplicate declarations, repeated/self IDs and missing targets. |
+| `image`, `image_scene` | Optional, given together. `image` is a flat `images/<name>.webp` path (WebP, at most 100 KiB, used by one word only); `image_scene` is the English description shown as alt text and after answering. Scenes must contain no text, kana or letters. Images are generated with `tools/generate_images.py` (prompts in `tools/image_prompts.json`) and listed with raw-byte hashes under `images` in `manifest.json`. |
 
 Body: meaning and usage, how the kanji combine, synonyms and antonyms, and the distinctive nuance.
 For kana-only words (`kanji: []`), the `## How the kanji combine` section is optional: omit it unless there is a spelling or
