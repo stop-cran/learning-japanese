@@ -767,6 +767,19 @@ class ValidateTests(unittest.TestCase):
             validate.check_body(path, meta, fenced)
             self.assertEqual([], validate.errors)
 
+    def test_kanji_combine_section_is_optional_only_for_kana_only_words(self):
+        without = WORD_BODY.replace("## How the kanji combine\nCombination.\n", "")
+        kana_meta = {"kanji": []}
+        validate.check_body(self.word_path, kana_meta, without)
+        validate.check_body(self.word_path, kana_meta, WORD_BODY)
+        self.assertEqual([], validate.errors)
+        validate.check_body(self.word_path, kana_meta, without.replace("## Meaning", "## Other"))
+        self.assert_error("sections once each, in order")
+        validate.errors.clear()
+        meta, _ = validate.parse(self.word_path)
+        validate.check_body(self.word_path, meta, without)
+        self.assert_error("sections once each, in order")
+
     def test_kanji_h1_matches_metadata(self):
         meta, _ = validate.parse(self.kanji_path)
         for heading in ("# 日 — wrong title", "# 月 — sun, day", "## 日 — sun, day"):

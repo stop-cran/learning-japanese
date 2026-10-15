@@ -60,7 +60,7 @@ does not establish linguistic correctness. Read a real card alongside the format
 1. Front matter: `word`, `reading`, `title` (short gloss), `type` (`kango`, `wago`, `jukujikun`, `gairaigo`), `kanji` (every kanji in the word),
    `tags`.
 2. Sections: `## Meaning` (with examples, each with English translation), `## How the kanji combine` (relation: opposites, synonyms,
-   modifier+head, verb+object, etc.), `## Synonyms and antonyms`, `## Distinctive meaning` (register, nuance, when not to use it).
+   modifier+head, verb+object, etc.; optional for kana-only words with `kanji: []`), `## Synonyms and antonyms`, `## Distinctive meaning` (register, nuance, when not to use it).
 3. For kango, explain what each kanji contributes and the relation between them (e.g. opposite pair 長 + 短).
 4. Verify word/reading pairs in JMdict. Use natural or attested examples only; do not invent collocations to prove a point.
    Respect restrictions that tie a reading or sense to particular spellings. A dictionary's inclusion of an item does not establish that it is common.

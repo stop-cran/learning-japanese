@@ -65,7 +65,8 @@ inline comments on fields. A prefix such as `---notes` is not a closing delimite
 | `quiz_exclusions` | Optional inline list of other exact `word` IDs that must not appear together as quiz choices. Omission or `[]` means no curated exclusions. Use one top-level unquoted key; reject duplicate declarations, repeated/self IDs and missing targets. |
 
 Body: meaning and usage, how the kanji combine, synonyms and antonyms, and the distinctive nuance.
-For kana-only words, keep the same section headings and explain the spelling or word formation instead of inventing a kanji decomposition.
+For kana-only words (`kanji: []`), the `## How the kanji combine` section is optional: omit it unless there is a spelling or
+word-formation point worth making. The other three sections remain required, in order.
 
 Vocabulary-aware app versions use an explicit word `jlpt` first. For legacy articles without this field, they retain the previous
 fallback based on the hardest known written kanji; that fallback is not a vocabulary-level source. Earlier app versions ignore

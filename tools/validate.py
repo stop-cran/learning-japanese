@@ -32,7 +32,8 @@ WORD_LISTS = ("kanji", "tags", "quiz_exclusions", "quiz_distractors")
 MAX_QUIZ_DISTRACTORS = 3
 KANJI_INTS = ("jlpt", "strokes", "radicalNumber")
 KANJI_SECTIONS = ["Meaning and origin", "Readings", "Common words", "Notes"]
-WORD_SECTIONS = ["Meaning", "How the kanji combine", "Synonyms and antonyms", "Distinctive meaning"]
+KANJI_COMBINE_SECTION = "How the kanji combine"
+WORD_SECTIONS = ["Meaning", KANJI_COMBINE_SECTION, "Synonyms and antonyms", "Distinctive meaning"]
 
 errors: list[str] = []
 
@@ -230,6 +231,14 @@ def check_body(path: Path, meta: dict, body: str) -> None:
         if match:
             headings.append((number, len(match.group(1)), match.group(2)))
     sections = KANJI_SECTIONS if path.parent.name == "kanji" else WORD_SECTIONS
+    if sections is WORD_SECTIONS and meta.get("kanji") == []:
+        # Kana-only words have no kanji to decompose, so this section may be omitted.
+        kana_only = [s for s in sections if s != KANJI_COMBINE_SECTION]
+        actual = [title for _, level, title in headings if level == 2 and title in sections]
+        if actual not in (sections, kana_only):
+            err(path, "body must contain these ## sections once each, in order: " + "; ".join(kana_only)
+                + " (\"" + KANJI_COMBINE_SECTION + "\" is optional for kana-only words, after Meaning)")
+        sections = actual
     actual = [title for _, level, title in headings if level == 2 and title in sections]
     if actual != sections:
         err(path, "body must contain these ## sections once each, in order: " + "; ".join(sections))
