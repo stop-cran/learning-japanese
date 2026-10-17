@@ -1552,5 +1552,84 @@ class GrammarKiriCoverageTests(unittest.TestCase):
         self.assertIn("does not contradict", call["explanation"])
 
 
+class GrammarYouChangeEffortCoverageTests(unittest.TestCase):
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((root / "grammar" / "formal-nouns-you-change-effort.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_three_contexts_per_target_and_both_directions(self):
+        self.assertEqual({
+            "you-new-ability": 3,
+            "you-new-habit": 3,
+            "you-effort-do": 3,
+            "you-effort-avoid": 3,
+        }, Counter(exercise["target"] for exercise in self.exercises.values()))
+        for relationship in self.data["relationships"]:
+            exercises = [exercise for exercise in self.exercises.values() if exercise["relationship"] == relationship["id"]]
+            self.assertEqual(set(relationship["constructions"]), {exercise["target"] for exercise in exercises})
+            for exercise in exercises:
+                self.assertEqual(
+                    set(relationship["constructions"]),
+                    {option["id"] for option in exercise["options"]}, exercise["id"],
+                )
+
+    def test_change_pairs_keep_the_same_outer_tense_and_question_visible_focus(self):
+        pairs = [
+            ("you-new-ability-larger-display", "you-new-habit-bedtime-novels", {"読める", "よめる"}, {"読む", "よむ"}),
+            ("you-new-ability-bicycle-balance", "you-new-habit-bicycle-commute", {"乗れる", "のれる"}, {"乗る", "のる"}),
+            ("you-new-ability-conversation", "you-new-habit-neighbor-conversations", {"話せる", "はなせる"}, {"話す", "はなす"}),
+        ]
+        for ability_id, habit_id, ability_answers, habit_answers in pairs:
+            for exercise_id, answers, focus in (
+                (ability_id, ability_answers, "Report a newly possible action, not a new habit"),
+                (habit_id, habit_answers, "Report a new habit, not a newly acquired ability"),
+            ):
+                exercise = self.exercises[exercise_id]
+                self.assertEqual(answers, set(exercise["acceptedAnswers"]), exercise_id)
+                self.assertIn("____ようになりました", exercise["prompt"], exercise_id)
+                self.assertIn("dictionary or potential form, without added words", exercise["translation"], exercise_id)
+                self.assertIn(focus, exercise["translation"], exercise_id)
+            self.assertEqual(
+                [option["label"] for option in self.exercises[ability_id]["options"]],
+                [option["label"] for option in self.exercises[habit_id]["options"]],
+            )
+
+    def test_effort_pairs_keep_action_polarity_inside_the_supplied_pattern(self):
+        pairs = [
+            ("you-effort-do-read-instructions", "you-effort-avoid-work-email", {"読む", "よむ"}, {"読まない", "よまない"}),
+            ("you-effort-do-use-stairs", "you-effort-avoid-bedtime-phone", {"使う", "つかう"}, {"使わない", "つかわない"}),
+            ("you-effort-do-speak-slowly", "you-effort-avoid-sharing-private-story", {"話す", "はなす"}, {"話さない", "はなさない"}),
+        ]
+        for do_id, avoid_id, do_answers, avoid_answers in pairs:
+            for exercise_id, answers in ((do_id, do_answers), (avoid_id, avoid_answers)):
+                exercise = self.exercises[exercise_id]
+                self.assertEqual(answers, set(exercise["acceptedAnswers"]), exercise_id)
+                self.assertIn("____ようにしています", exercise["prompt"], exercise_id)
+                self.assertIn("dictionary or ない form, without added words", exercise["translation"], exercise_id)
+                self.assertIn("State the maintained practice:", exercise["translation"], exercise_id)
+            self.assertEqual(
+                [option["label"] for option in self.exercises[do_id]["options"]],
+                [option["label"] for option in self.exercises[avoid_id]["options"]],
+            )
+
+    def test_changes_and_efforts_preserve_their_contextual_qualifications(self):
+        display = self.exercises["you-new-ability-larger-display"]
+        self.assertIn("文字の表示を大きくしたら", display["prompt"])
+        self.assertIn("not only from learning a skill", display["explanation"])
+        self.assertIn("簡単なことなら", self.exercises["you-new-ability-conversation"]["prompt"])
+        for exercise_id, prior_ability in (
+            ("you-new-habit-bedtime-novels", "前から漢字は読めました"),
+            ("you-new-habit-bicycle-commute", "前から自転車には乗れました"),
+            ("you-new-habit-neighbor-conversations", "以前から近所の人とは日本語で話せました"),
+        ):
+            self.assertIn(prior_ability, self.exercises[exercise_id]["prompt"])
+        phone = self.exercises["you-effort-avoid-bedtime-phone"]
+        self.assertIn("たまに見てしまう日もあります", phone["prompt"])
+        self.assertIn("does not guarantee perfect success", phone["explanation"])
+        self.assertIn("近い階へ行くとき", self.exercises["you-effort-do-use-stairs"]["prompt"])
+        self.assertIn("本人の許可なく", self.exercises["you-effort-avoid-sharing-private-story"]["prompt"])
+
+
 if __name__ == "__main__":
     unittest.main()

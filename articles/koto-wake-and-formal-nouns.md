@@ -675,7 +675,47 @@ Stating the purpose does not guarantee its achievement.
 Neither に nor a potential/negative verb alone makes every よう expression a purpose.
 Read how the clause relates to the rest of the sentence: a model, an example and a desired outcome are different relationships.
 Other purpose formulations, including suitable **ために** sentences, are not globally ruled out by this controlled task.
-Changes with **ようになる**, efforts with **ようにする**, indirect instructions and sentence-final wishes need separate practice.
+Changes with **ようになる** and efforts with **ようにする** are treated next; indirect instructions and sentence-final wishes remain outside these exercises.
+
+### ようになる and ようにする: a change or a deliberate practice
+
+**ようになる** describes a change in what happens or what is possible. It is not limited to potential verbs:
+
+| Pattern | Example | Meaning |
+| --- | --- | --- |
+| Potential verb + ようになる | 練習して、自転車に乗れるようになりました。 | After practicing, I became able to ride a bicycle. |
+| Dictionary-form verb + ようになる | 今は通勤で毎日自転車に乗るようになりました。 | I now ride a bicycle every day for my commute. |
+| Dictionary-form verb + ようにしている | 新しい道具を使う前には説明書を読むようにしています。 | I make a point of reading the instructions before using a new tool. |
+| ない form + ようにしている | 休日は仕事のメールを読まないようにしています。 | I make a point of not reading work emails on days off. |
+
+In **乗れるようになりました**, the newly available ability is the focus; in **乗るようになりました**, it is the
+changed behavior. Someone who could already ride can begin commuting by bicycle.
+The potential forms used in practice are **読む → 読める**, **乗る → 乗れる** and **話す → 話せる**.
+These verb forms stay nonpast before よう even when **なりました** reports a completed change.
+
+A change need not happen without deliberate action. Enlarging a screen's text can make it readable without glasses,
+and repeated practice can develop a skill. Conversely, **ようになる** need not describe acquiring a skill:
+the changed circumstances or the new routine may be what matters.
+Do not treat なる as proof that nobody tried or する as proof that no change occurred.
+
+In the effort use, **Vる／Vない＋ようにする** means making an effort or taking care to do or not do something.
+**ようにしている** presents that care as a maintained practice, rather than simply the original decision to begin.
+**読むことにした**, "I decided to read," can describe a related decision; it does not foreground the same ongoing care.
+Both descriptions can apply to one person's routine without being interchangeable in every context.
+Other **ようにする** constructions concern arranging a desired result, so the effort pattern is not its only use.
+
+**読まないようにしている** is an effort **not to read**, not an absence of effort.
+Likewise, **眠る前はスマートフォンを使わないようにしていますが、たまに見てしまいます。**
+"I try not to use my smartphone before sleep, but I occasionally end up looking at it."
+The effort expression does not guarantee success every time.
+For an ability or habit that stops, a common basic pattern is instead **Vなくなる**:
+**自転車に乗れなくなった**, "I became unable to ride a bicycle." That loss is not the same as deliberately avoiding cycling.
+
+The first six questions supply **ようになりました** and request a dictionary or potential verb form.
+They explicitly ask whether to report a new possibility or a new habit; the same three verbs appear in both directions.
+The next six supply **ようにしています** and request a dictionary or ない form, contrasting doing with avoiding.
+They practice the meaning and attachment of these supplied patterns, not unrestricted selection of **なる** versus **する**.
+Other appropriate formulations of change, intention or effort remain possible outside those visible form restrictions.
 
 ### まま: a state remains unchanged
 
@@ -984,6 +1024,7 @@ This practice does not cover every use, such as **寝たきり**, **これっき
 - [Tofugu: つもり](https://www.tofugu.com/japanese-grammar/tsumori/) - intentions, intended representations, attachment and つもりで.
 - [Bunpro: つもりだ](https://bunpro.jp/grammar_points/つもりだ) and [JMdict via Jisho: つもり](https://jisho.org/search/つもり) - affirmative and negative plans, and the lexical distinction between intention and belief; Tofugu also explains past intentions versus believed completion.
 - [Japan Foundation: ように／ような（例示・比況）](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00010/ja/render.do), [ように（目的）](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00057/ja/render.do), and [TUFS: potential forms](https://www.coelang.tufs.ac.jp/mt/ja/gmod/contents/explanation/074.html) - comparison scope, exemplification, desired states and the potential forms used in the exercises.
+- [Japan Foundation: Vようになります](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00086/ja/render.do) and [Vようにします](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00105/ja/render.do) - changed habits or possibilities, deliberate positive/negative practices, and the distinction between a decision and maintained care.
 - [Tae Kim: Things that should be a certain way](https://guidetojapanese.org/learn/grammar/should) - noun/na-adjective attachment for はず and the distinction from normative べき.
 - [Bunpro: べき](https://bunpro.jp/grammar_points/べき), [べきではない](https://bunpro.jp/grammar_points/べきではない), and [ものだ](https://bunpro.jp/grammar_points/ものだ) - normative judgments, past and negative forms, and context-dependent generalizations.
 - [Japan Foundation: 「こと」（2）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201203.html) - the advice/instruction use of ことだ alongside other constructions.

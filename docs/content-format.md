@@ -388,6 +388,21 @@ the noon viewpoint with an evening return planned, and the call gap that has alr
 also fit appropriate situations; the visible two-pattern attachment task, not a global ban, keeps them outside these blanks.
 Each exercise still has one SRS identity and one representative correct button.
 
+`formal-nouns-you-change-effort.json` adds 12 exercises; see the
+[source record](grammar-you-change-effort-sources.json). Three newly possible actions and three new habitual actions
+request dictionary or potential forms before supplied ようになりました. The same three verbs occur in both directions,
+and the question-side instruction identifies the intended focus. Preserve the deliberately enlarged display,
+the practiced bicycle skill, the limited French ability and the habitual examples' pre-existing abilities.
+ようになる is not restricted to potential verbs or unintentional changes.
+
+Three positive and three negative maintained practices request dictionary or ない forms before supplied ようにしています,
+again using the same verbs on both sides. The negative belongs to the avoided behavior, not the effort.
+Keep the smartphone lapse, the nearby-floor scope for stairs and the permission qualification for sharing personal stories.
+Effort need not guarantee success, and a changed routine can also be deliberately maintained.
+These are controlled verb-form exercises, not independent discrimination of なる versus する; the article explains that
+distinction without counting it as a separate tested target. Broader contextual selection, cessation, instructions and wishes
+remain separate coverage. Only the missing verb form belongs in accepted answers, with kana and ordinary kanji spellings.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.
