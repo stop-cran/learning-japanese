@@ -162,6 +162,13 @@ already printed. Accept the literal missing form, including kana spellings and c
 This is a controlled stage/form contrast, not an unrestricted cloze or a test that たところ must exclude たばかり.
 Do not move the form restriction into answer-only feedback or generalize these activity patterns to every use of ている.
 
+`formal-nouns-states.json` adds six exercises contrasting たまま (retaining an action's result) with ないまま (leaving the
+action undone), three per pattern; see the [source record](grammar-states-sources.json). The question-side instruction limits
+the answer to the supplied verb's た- or ない-form, with まま already printed. Each verb appears on both sides of the contrast.
+In particular, 消したまま keeps the lights off while 消さないまま leaves switching off undone; do not equate grammatical
+polarity with an on/off state or a positive/negative evaluation. Noun/adjective and conformity uses of まま are not covered by
+these exercises. Natural whole-sentence alternatives are not wrong merely because they fall outside this controlled task.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.

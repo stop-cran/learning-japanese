@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-states",
+  "title": "Formal nouns: a state retained or an action left undone",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "mama-result", "label": "Vた + まま: the resulting state continues" },
+    { "id": "mama-undone", "label": "Vない + まま: the action remains undone" }
+  ],
+  "relationships": [
+    {
+      "id": "mama-result-vs-undone",
+      "label": "retaining an action's result / leaving the action unperformed",
+      "constructions": ["mama-result", "mama-undone"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "mama-result-window",
+      "target": "mama-result",
+      "relationship": "mama-result-vs-undone",
+      "prompt": "朝、窓を大きく開け、仕事が終わるまで一度も閉めませんでした。窓を____まま机で仕事をしました。",
+      "translation": "Use 開ける (あける, open): た or ない form only. In the morning I opened the window wide and did not close it until my work was over. I worked at my desk with the window left open.",
+      "evidence": "Opening has taken place; closing has not. The open state continues throughout the work.",
+      "explanation": "開けたまま identifies the result of opening as the state that remains. It does not mean that the speaker continuously performs the opening action while working. 開けないまま would leave opening undone, contrary to the explicitly opened window. Enter only 開けた before the printed まま.",
+      "answer": "mama-result",
+      "acceptedAnswers": ["開けた", "あけた"],
+      "options": [
+        { "id": "mama-result", "label": "開けた", "rationale": "Keeps the window in the open state established that morning." },
+        { "id": "mama-undone", "label": "開けない", "rationale": "Would mean working without opening the window, but the speaker has explicitly opened it." }
+      ]
+    },
+    {
+      "id": "mama-result-lights",
+      "target": "mama-result",
+      "relationship": "mama-result-vs-undone",
+      "prompt": "映画を見る前に照明（しょうめい）のスイッチを切りました。映画の間、照明はずっと消えていました。私たちは電気を____まま映画を見ました。",
+      "translation": "Use 消す (けす, turn off): た or ない form only. We switched the lights off before the film, and they stayed off throughout it. We watched the film with the lights kept off.",
+      "evidence": "The switching-off action happened, and its result continued. Here the affirmative た-form describes lights staying off, not on.",
+      "explanation": "消したまま retains the result of 消す: the lights are off. 消さないまま would leave the switching-off action undone. Do not associate the た-form mechanically with something being on or open; the meaning of the supplied verb determines the resulting state. Keeping the room dark for a film is deliberate, not necessarily a mistake.",
+      "answer": "mama-result",
+      "acceptedAnswers": ["消した", "けした"],
+      "options": [
+        { "id": "mama-result", "label": "消した", "rationale": "Matches switching the lights off and keeping them off during the film." },
+        { "id": "mama-undone", "label": "消さない", "rationale": "Would mean not carrying out the switching-off action, contrary to the stated switch operation and unlit room." }
+      ]
+    },
+    {
+      "id": "mama-result-bags",
+      "target": "mama-result",
+      "relationship": "mama-result-vs-undone",
+      "prompt": "荷物をずっと両手で抱えていて、床には一度も置きませんでした。荷物を____まま受付の人と話しました。",
+      "translation": "Use 持つ (もつ, hold): た or ない form only. I kept holding my luggage with both hands and never put it on the floor. I spoke to the receptionist while still holding it.",
+      "evidence": "The luggage remains in the speaker's hands during the conversation. It has not been put down or left behind.",
+      "explanation": "持ったまま describes continuing to hold the luggage while talking. The た-form does not mean that holding has ended: the state persists. 持たないまま would describe proceeding without holding the luggage, which does not match the occupied hands.",
+      "answer": "mama-result",
+      "acceptedAnswers": ["持った", "もった"],
+      "options": [
+        { "id": "mama-result", "label": "持った", "rationale": "Preserves the holding state throughout the conversation." },
+        { "id": "mama-undone", "label": "持たない", "rationale": "Would describe not holding the luggage, contrary to both hands continuing to hold it." }
+      ]
+    },
+    {
+      "id": "mama-undone-window",
+      "target": "mama-undone",
+      "relationship": "mama-result-vs-undone",
+      "prompt": "窓は朝から閉まっていて、出かけるまでずっとその状態でした。換気（かんき）をする予定だったのに、窓を____まま外出してしまいました。",
+      "translation": "Use 開ける (あける, open): た or ない form only. The window was shut all morning and stayed that way until I left. Although I had planned to air the room, I went out without opening it.",
+      "evidence": "The window stays closed until departure, so the planned opening is not carried out.",
+      "explanation": "開けないまま leaves the opening action undone when the speaker goes out. In this basic pattern the negative verb stays in the ない-form even though 外出してしまいました is past. 開けたまま would instead keep the result of opening, contradicting the continuously closed window.",
+      "answer": "mama-undone",
+      "acceptedAnswers": ["開けない", "あけない"],
+      "options": [
+        { "id": "mama-result", "label": "開けた", "rationale": "Would describe leaving the window open after opening it, but it stayed closed." },
+        { "id": "mama-undone", "label": "開けない", "rationale": "Matches going out before carrying out the intended opening." }
+      ]
+    },
+    {
+      "id": "mama-undone-lights",
+      "target": "mama-undone",
+      "relationship": "mama-result-vs-undone",
+      "prompt": "昨日は、部屋が明るい状態で眠ってしまいました。照明（しょうめい）は夜から朝までずっとついていました。電気を____まま寝てしまったのです。",
+      "translation": "Use 消す (けす, turn off): た or ない form only. Yesterday I fell asleep in the lit room. The lights stayed on all night until morning. I had fallen asleep without turning them off.",
+      "evidence": "The lights remain on for the entire night. The switching-off action is the step left undone.",
+      "explanation": "消さないまま means that turning the lights off is not done before sleeping. The verb 消す already means 'turn off', so negating it leaves the lights on in this context. 消したまま would mean keeping the lights off after switching them off. Negation here concerns the action, not whether the resulting situation is desirable.",
+      "answer": "mama-undone",
+      "acceptedAnswers": ["消さない", "けさない"],
+      "options": [
+        { "id": "mama-result", "label": "消した", "rationale": "Would leave the lights off, contrary to their staying on all night." },
+        { "id": "mama-undone", "label": "消さない", "rationale": "Leaves switching off undone, consistent with the continuously lit room." }
+      ]
+    },
+    {
+      "id": "mama-undone-bags",
+      "target": "mama-undone",
+      "relationship": "mama-result-vs-undone",
+      "prompt": "荷物は部屋の机の上に置いたままで、私は手ぶら（てぶら）でした。荷物を____まま部屋を出たことに、廊下（ろうか）で気づきました。",
+      "translation": "Use 持つ (もつ, take or carry): た or ない form only. My luggage was still on the desk in the room, and I was empty-handed. In the corridor I realized that I had left the room without taking my luggage.",
+      "evidence": "The luggage remains on the desk while the speaker leaves empty-handed. Taking it along has not happened.",
+      "explanation": "持たないまま describes leaving without taking the luggage. 持ったまま would mean keeping it in hand or with the speaker during departure, which conflicts with leaving it on the desk. 持たずに部屋を出た is another natural sentence, but this controlled task supplies まま and requests the た- or ない-form of 持つ, not a replacement for the whole phrase.",
+      "answer": "mama-undone",
+      "acceptedAnswers": ["持たない", "もたない"],
+      "options": [
+        { "id": "mama-result", "label": "持った", "rationale": "Would keep the luggage with the departing speaker, contradicting its location on the desk." },
+        { "id": "mama-undone", "label": "持たない", "rationale": "Matches leaving empty-handed with the luggage still in the room." }
+      ]
+    }
+  ]
+}

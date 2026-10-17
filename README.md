@@ -41,11 +41,12 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   The level indexes overlap where an existing article teaches an additional reading or meaning.
 - `strokes/` – generated stroke data. Validate with `python tools/validate.py`.
 - `grammar/` – versioned, contrast-focused exercises for the app's Grammar section: the original 8-exercise pilot, an
-  18-exercise foundations batch on nominalization and negative meanings, and 12 exercises on ability, occurrence, decisions and
-  outcomes, 9 on intended meaning, inference and normative judgment, and 9 on ところ action stages (56 in total).
+  18-exercise foundations batch on nominalization and negative meanings, 12 exercises on ability, occurrence, decisions and
+  outcomes, 9 on intended meaning, inference and normative judgment, 9 on ところ action stages, and 6 on まま state contrasts
+  (62 in total).
   See the [content format](docs/content-format.md#grammar-exercises), [foundations sources](docs/grammar-foundations-sources.json),
-  [actions sources](docs/grammar-actions-sources.json), [intent sources](docs/grammar-intent-sources.json) and
-  [action-stage sources](docs/grammar-stages-sources.json).
+  [actions sources](docs/grammar-actions-sources.json), [intent sources](docs/grammar-intent-sources.json),
+  [action-stage sources](docs/grammar-stages-sources.json) and [state sources](docs/grammar-states-sources.json).
   Further coverage is being added in reviewed batches.
 
 The revised JLPT does not publish exhaustive kanji or vocabulary syllabi. Level coverage here means the exact named community set,

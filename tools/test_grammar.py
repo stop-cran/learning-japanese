@@ -271,5 +271,47 @@ class GrammarStagesCoverageTests(unittest.TestCase):
                 )
 
 
+class GrammarStatesCoverageTests(unittest.TestCase):
+    FORMS = {
+        "window": ("開ける", ("開けた", "あけた"), ("開けない", "あけない")),
+        "lights": ("消す", ("消した", "けした"), ("消さない", "けさない")),
+        "bags": ("持つ", ("持った", "もった"), ("持たない", "もたない")),
+    }
+    TARGETS = ("mama-result", "mama-undone")
+
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        data = json.loads((root / "grammar" / "formal-nouns-states.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in data["exercises"]}
+
+    def test_three_paired_examples_in_both_directions(self):
+        self.assertEqual(
+            {f"{target}-{frame}" for target in self.TARGETS for frame in self.FORMS},
+            set(self.exercises),
+        )
+        counts = Counter(exercise["target"] for exercise in self.exercises.values())
+        self.assertEqual({target: 3 for target in self.TARGETS}, counts)
+        for exercise in self.exercises.values():
+            self.assertEqual("mama-result-vs-undone", exercise["relationship"], exercise["id"])
+            self.assertEqual(
+                set(self.TARGETS), {option["id"] for option in exercise["options"]}, exercise["id"],
+            )
+
+    def test_answers_preserve_polarity_and_exclude_supplied_mama(self):
+        for frame, (_, result, undone) in self.FORMS.items():
+            for target, answers in zip(self.TARGETS, (result, undone)):
+                exercise = self.exercises[f"{target}-{frame}"]
+                self.assertEqual(target, exercise["target"], exercise["id"])
+                self.assertIn("____まま", exercise["prompt"], exercise["id"])
+                self.assertEqual(set(answers), set(exercise["acceptedAnswers"]), exercise["id"])
+
+    def test_question_supplies_verb_and_form_limit(self):
+        for frame, (verb, _, _) in self.FORMS.items():
+            for target in self.TARGETS:
+                exercise = self.exercises[f"{target}-{frame}"]
+                self.assertIn(f"Use {verb} (", exercise["translation"], exercise["id"])
+                self.assertIn("た or ない form only.", exercise["translation"], exercise["id"])
+
+
 if __name__ == "__main__":
     unittest.main()

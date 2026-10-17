@@ -277,6 +277,28 @@ The preceding expression identifies the state that continues:
 
 The past form in 開けたまま describes the result of opening the window, not simply an action happening at the same time as sleeping.
 
+For these basic patterns, compare **た-form + まま**, retaining the result of an action, with **ない-form + まま**, leaving the
+action undone. The verb's meaning determines which state continues:
+
+| With the action's result retained | With the action left undone |
+| --- | --- |
+| 窓を開けたまま - with the window left open | 窓を開けないまま - without opening the window |
+| 電気を消したまま - with the lights kept off | 電気を消さないまま - without turning the lights off |
+| 荷物を持ったまま - still holding the luggage | 荷物を持たないまま - without taking or holding the luggage |
+
+Notice the reversal in the second row: **消す（けす）** means "turn off," so 消したまま keeps the lights **off**.
+The affirmative form does not automatically mean "on" or "open," and the negative form does not automatically mean "off" or "closed."
+まま need not describe a mistake: keeping the lights off while watching a film can be intentional.
+
+Keep the **ない-form** in the basic "without doing" pattern even when the main event is past:
+**窓を開けないまま外出しました**, "I went out without opening the window."
+Other whole-sentence formulations, such as **窓を開けずに外出しました**, can also express going out without opening it;
+they are not additional verb forms to insert directly before a supplied まま.
+
+Unlike **たところ**, the retained-state use of **たまま** does not say that the action has just happened.
+And unlike an ordinary **ながら** expression for simultaneous activities, it need not keep the preceding action in progress:
+the window stays open, rather than repeatedly being opened.
+
 ### かぎり: scope or a continuing condition
 
 **私が知るかぎり** limits a claim to the speaker's knowledge. With a condition, かぎり instead means "as long as that condition holds":
@@ -391,6 +413,8 @@ Notice the actual patterns: **quantity + ほど**, **昨日 + ほど + a negativ
 - [Japan Foundation: 「そうだ／ようだ／らしい」（1）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201012.html) and [(2)](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201103.html) - direct and indirect information in inferential judgments, including the comparison with はず.
 - [Japan Foundation: Vところです／Vているところです／Vたところです](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00036/ja/render.do) - the three action stages, past reference points, and the overlap with たばかり.
 - [Tae Kim: Other uses of the te-form](https://guidetojapanese.org/learn/grammar/teform) - ongoing and resulting states, and conversational omission of い in ている.
+- [Japan Foundation: まま](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00025/ja/render.do) - た／ない attachment, unchanged states, deliberately maintaining them, and the distinction from simultaneous activities.
+- [Bunpro: ずに](https://bunpro.jp/grammar_points/ずに) - an alternative "without doing" construction, not a form to insert before まま.
 - [Kotobank: 形式名詞](https://kotobank.jp/word/形式名詞-488640) - definitions and the difficulty of drawing a single boundary against ordinary nouns.
 - [N1et: 形式名詞「こと・の」違い 他「ところ・とき・ため」など見分け方](https://jn1et.com/formal-noun/) - a teaching-oriented classification of formal nouns and their functions.
 - [Kotobank: 準体助詞](https://kotobank.jp/word/準体助詞-530025) - nominalizing particles and alternative grammatical classifications.
