@@ -2,6 +2,7 @@
 """Validate the versioned grammar exercise sets in grammar/*.json."""
 import json
 import re
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -128,6 +129,17 @@ def check_grammar(err, root: Path = ROOT) -> int:
                 for field in ("label", "rationale"):
                     if not isinstance(option[field], str) or not option[field].strip():
                         err(path, f"{ident}: option '{option['id']}' is missing '{field}'")
+            normalized_answers = {unicodedata.normalize("NFKC", value.strip()) for value in accepted}
+            normalized_labels = [
+                unicodedata.normalize("NFKC", option["label"].strip())
+                for option in options if isinstance(option["label"], str)
+            ]
+            if len(normalized_labels) != len(set(normalized_labels)):
+                err(path, f"{ident}: option labels must remain distinct after answer normalization")
+            for option in options:
+                if (option["id"] != target and isinstance(option["label"], str)
+                        and unicodedata.normalize("NFKC", option["label"].strip()) in normalized_answers):
+                    err(path, f"{ident}: distractor label must not be an accepted typed answer")
             answer_labels = [option["label"] for option in options if option["id"] == target]
             if len(answer_labels) == 1 and answer_labels[0] not in accepted:
                 err(path, f"{ident}: acceptedAnswers must include the answer option label")

@@ -122,7 +122,27 @@ must have examples targeting each of its constructions. Its linked `article` mus
 Author examples where context makes one choice clearly better than the closest alternative; do not include examples where both
 forms are equally natural. Keep the evidence and rationale specific to the contrast, not just a definition of the answer. The
 validator checks structure and references, not Japanese naturalness or grammatical accuracy, so grammar content needs editorial
-review. The initial pilot covers こと／わけ and はず／べき; this schema does not imply that other formal nouns are covered.
+review. Check the full inventory in the linked article, including constructions not offered as buttons: typed answers are not
+restricted to the displayed multiple-choice alternatives. Reject an underdetermined item rather than use an unstated intended
+nuance to make an otherwise natural alternative wrong.
+
+The tested unit may be a grammatical function with equivalent realizations, not necessarily a single word. For example,
+the foundations `non-necessary-inference` examples accept わけではない, ものではない and とは限らない where the completed
+sentence expresses the same non-guarantee. They do not pretend to measure a distinction between those realizations.
+Keep equivalent forms inside one answer class, never as competing buttons. Accept contracted and
+kanji-written forms where appropriate to that sentence. An accepted form must preserve the tested meaning and fit the entire
+completed sentence; do not import an equivalence into unrelated contexts. The validator rejects duplicate option labels and
+distractors that collide with accepted answers after the app's trim/NFKC normalization.
+
+A blank may ask for the diagnostic part of a construction whose stem is already printed. For example,
+`写っているわけ____` tests the ending がない against にはいかない without falsely rejecting the whole-sentence alternatives
+写っているはずがない or 写っていることはない. Option labels and accepted answers must contain only the missing span.
+Explain such alternatives in the answer feedback; do not claim that the corresponding whole sentences are invalid.
+
+The eight original exercises in `formal-nouns-pilot.json` retain their IDs and their construction/relationship identities.
+`formal-nouns-foundations.json` adds three examples each for six functions, including the double negative 行かないわけにはいかない.
+The [source record](grammar-foundations-sources.json) identifies the scope and inspected references. Broader article coverage is
+being added in reviewed batches, not claimed by the existence of the schema. Keep source records free of personal progress exports.
 
 ## Links and safety
 

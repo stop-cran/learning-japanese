@@ -1,5 +1,6 @@
 """Regression tests for the grammar exercise authoring format."""
 import copy
+from collections import Counter
 import json
 import tempfile
 import unittest
@@ -77,6 +78,59 @@ class GrammarValidationTests(unittest.TestCase):
             data["exercises"][0]["options"][0]["id"] = {}
         _, problems = self.check(mutate)
         self.assertTrue(problems)
+
+    def test_rejects_distractor_that_is_an_accepted_equivalent(self):
+        def mutate(data):
+            data["exercises"][0]["acceptedAnswers"].append("乙")
+        _, problems = self.check(mutate)
+        self.assertTrue(any("distractor label" in message for message in problems), problems)
+
+    def test_rejects_normalized_answer_collision(self):
+        def mutate(data):
+            data["exercises"][0]["acceptedAnswers"].append(" Ａ ")
+            data["exercises"][0]["options"][1]["label"] = "A"
+        _, problems = self.check(mutate)
+        self.assertTrue(any("distractor label" in message for message in problems), problems)
+
+    def test_rejects_normalized_duplicate_option_labels(self):
+        def mutate(data):
+            data["exercises"][0]["options"][0]["label"] = "Ａ"
+            data["exercises"][0]["options"][1]["label"] = " A "
+            data["exercises"][0]["acceptedAnswers"] = ["Ａ"]
+        _, problems = self.check(mutate)
+        self.assertTrue(any("option labels must remain distinct" in message for message in problems), problems)
+
+
+class GrammarFoundationsCoverageTests(unittest.TestCase):
+    def test_foundations_has_three_examples_per_function(self):
+        root = Path(__file__).resolve().parent.parent
+        data = json.loads((root / "grammar" / "formal-nouns-foundations.json").read_text(encoding="utf-8"))
+        counts = Counter(exercise["target"] for exercise in data["exercises"])
+        expected = {
+            "koto-activity", "no-perception", "koto-no-need", "wake-constraint",
+            "inferred-impossibility", "non-necessary-inference",
+        }
+        self.assertEqual(expected, set(counts))
+        self.assertTrue(all(count >= 3 for count in counts.values()), counts)
+        self.assertTrue(any("行かない____" in exercise["prompt"] for exercise in data["exercises"]))
+
+    def test_pilot_exercise_identities_are_retained(self):
+        root = Path(__file__).resolve().parent.parent
+        data = json.loads((root / "grammar" / "formal-nouns-pilot.json").read_text(encoding="utf-8"))
+        identities = {
+            exercise["id"]: (exercise["target"], exercise["relationship"])
+            for exercise in data["exercises"]
+        }
+        self.assertEqual({
+            "koto-work-hours-fact": ("koto", "koto-vs-wake"),
+            "koto-entry-rule": ("koto", "koto-vs-wake"),
+            "wake-impossible-arrival": ("wake", "koto-vs-wake"),
+            "wake-realization": ("wake", "koto-vs-wake"),
+            "hazu-shipping-estimate": ("hazu", "hazu-vs-beki"),
+            "hazu-scheduled-arrival": ("hazu", "hazu-vs-beki"),
+            "beki-safety-report": ("beki", "hazu-vs-beki"),
+            "beki-public-conduct": ("beki", "hazu-vs-beki"),
+        }, identities)
 
 
 if __name__ == "__main__":

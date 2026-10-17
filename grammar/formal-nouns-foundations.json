@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-foundations",
+  "title": "Formal nouns: nominalization and negative meanings",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "koto-activity", "label": "こと: naming an activity" },
+    { "id": "no-perception", "label": "の: a directly perceived event" },
+    { "id": "koto-no-need", "label": "ことはない: no need" },
+    { "id": "wake-constraint", "label": "わけにはいかない: circumstances prevent an action" },
+    { "id": "inferred-impossibility", "label": "わけがない: ruling something out" },
+    { "id": "non-necessary-inference", "label": "わけではない: not necessarily" }
+  ],
+  "relationships": [
+    { "id": "activity-vs-perceived-event", "label": "naming an activity / directly perceiving an event", "constructions": ["koto-activity", "no-perception"] },
+    { "id": "negative-meanings", "label": "no need / circumstantial constraint / impossibility / not necessarily", "constructions": ["koto-no-need", "wake-constraint", "inferred-impossibility", "non-necessary-inference"] }
+  ],
+  "exercises": [
+    {
+      "id": "koto-activity-weekend-reading",
+      "target": "koto-activity",
+      "relationship": "activity-vs-perceived-event",
+      "prompt": "「週末の楽しみは何ですか。」「私の楽しみは、静かな公園で本を読む____です。」",
+      "translation": "\"What do you enjoy on weekends?\" \"What I enjoy is reading books in a quiet park.\"",
+      "evidence": "The answer names the activity that constitutes the speaker's enjoyment. It is not an explanation of why somebody reads.",
+      "explanation": "こと makes 読む into an activity noun phrase that can be the predicate of 私の楽しみは ... です. のです would instead be an explanatory ending; it cannot simply replace ことです in this identification of an activity.",
+      "answer": "koto-activity",
+      "acceptedAnswers": ["こと", "事", "ということ", "という事"],
+      "options": [
+        { "id": "koto-activity", "label": "こと", "rationale": "Names reading as the activity the speaker enjoys." },
+        { "id": "no-perception", "label": "の", "rationale": "のです would be explanatory, not the activity-naming predicate requested by the question. This is not a direct-perception construction." }
+      ]
+    },
+    {
+      "id": "koto-activity-water-testing",
+      "target": "koto-activity",
+      "relationship": "activity-vs-perceived-event",
+      "prompt": "「担当している作業を一つ教えてください。」「私の仕事は、毎朝水質を調べる____です。」",
+      "translation": "\"Please name one task you are responsible for.\" \"My job is to check the water quality every morning.\"",
+      "evidence": "The question requests the name of a task, and the answer identifies checking the water quality as that task.",
+      "explanation": "In X は ... ことです, こと can name an action as X. This is different from using の to nominalize an event directly heard or seen, and from explanatory のです.",
+      "answer": "koto-activity",
+      "acceptedAnswers": ["こと", "事", "ということ", "という事"],
+      "options": [
+        { "id": "koto-activity", "label": "こと", "rationale": "Turns checking the water quality into the task identified as the speaker's job." },
+        { "id": "no-perception", "label": "の", "rationale": "Changing the ending to のです does not supply the activity-naming predicate in this answer." }
+      ]
+    },
+    {
+      "id": "koto-activity-diary-goal",
+      "target": "koto-activity",
+      "relationship": "activity-vs-perceived-event",
+      "prompt": "「今年の目標は何ですか。」「私の目標は、日本語で短い日記を毎日書く____です。」",
+      "translation": "\"What is your goal for this year?\" \"My goal is to write a short diary entry in Japanese every day.\"",
+      "evidence": "Writing daily is being named as a goal, not reported as an event that the speaker perceived.",
+      "explanation": "こと makes the action usable as the predicate identifying a goal. It does not say that the goal has already been achieved. The superficially similar 書くのです has an explanatory function instead.",
+      "answer": "koto-activity",
+      "acceptedAnswers": ["こと", "事", "ということ", "という事"],
+      "options": [
+        { "id": "koto-activity", "label": "こと", "rationale": "Names the intended activity as the goal, without asserting that it already happens." },
+        { "id": "no-perception", "label": "の", "rationale": "のです would change the construction rather than name the activity as the goal." }
+      ]
+    },
+    {
+      "id": "no-perception-roof-rain",
+      "target": "no-perception",
+      "relationship": "activity-vs-perceived-event",
+      "prompt": "静かな屋根裏部屋にいると、雨が屋根をたたく____が聞こえた。窓から外は見えなかった。",
+      "translation": "In the quiet attic room, I could hear the rain beating against the roof. I could not see outside through the window.",
+      "evidence": "The speaker directly hears the rain, rather than learning the fact that it is raining from a report.",
+      "explanation": "の nominalizes the event directly perceived through 聞こえる. こと would package factual content, not supply the normal event nominalizer for this immediate auditory perception.",
+      "answer": "no-perception",
+      "acceptedAnswers": ["の"],
+      "options": [
+        { "id": "koto-activity", "label": "こと", "rationale": "A factual-content nominalizer is not the normal choice for the sound directly reaching the speaker's ears." },
+        { "id": "no-perception", "label": "の", "rationale": "Presents the rain striking the roof as an audible event." }
+      ]
+    },
+    {
+      "id": "no-perception-doorbell",
+      "target": "no-perception",
+      "relationship": "activity-vs-perceived-event",
+      "prompt": "台所で料理をしていたら、玄関のベルが鳴る____がはっきり聞こえた。それで火を止めて玄関に向かった。",
+      "translation": "While I was cooking in the kitchen, I clearly heard the doorbell ring. I then turned off the heat and went to the entrance.",
+      "evidence": "Hearing the bell directly prompts the speaker to go to the door; nobody reports the ringing to them.",
+      "explanation": "With the directly audible event ベルが鳴る, の is the appropriate nominalizer before が聞こえた. This is not the broader fact-reporting use where こと and の can overlap.",
+      "answer": "no-perception",
+      "acceptedAnswers": ["の"],
+      "options": [
+        { "id": "koto-activity", "label": "こと", "rationale": "Does not naturally present this directly heard ringing as the object of auditory perception." },
+        { "id": "no-perception", "label": "の", "rationale": "Nominalizes the actual ringing that the speaker hears." }
+      ]
+    },
+    {
+      "id": "no-perception-cat-at-door",
+      "target": "no-perception",
+      "relationship": "activity-vs-perceived-event",
+      "prompt": "まだ暗くて姿は見えなかったが、戸の外で猫が鳴く____が聞こえた。戸を開けると、いつもの猫がいた。",
+      "translation": "It was still too dark to see it, but I could hear a cat meowing outside the door. When I opened the door, the usual cat was there.",
+      "evidence": "The speaker first detects the cat by its actual meowing and only sees it afterward.",
+      "explanation": "の presents the meowing as the event that is heard. こと would not be the normal nominalizer for this direct perception. Seeing a reported fact and hearing an actual sound are not the same construction.",
+      "answer": "no-perception",
+      "acceptedAnswers": ["の"],
+      "options": [
+        { "id": "koto-activity", "label": "こと", "rationale": "Treats the clause as factual content rather than the directly audible event required here." },
+        { "id": "no-perception", "label": "の", "rationale": "Makes the cat's meowing the event perceived through hearing." }
+      ]
+    },
+    {
+      "id": "koto-no-need-confirm-again",
+      "target": "koto-no-need",
+      "relationship": "negative-meanings",
+      "prompt": "「予約を確認するために、もう一度電話したほうがいいですか。」「確認メールが届いているから、電話する____よ。かけても構わないけれど、確認は済んでいるよ。」",
+      "translation": "\"Should I phone again to confirm the booking?\" \"You have the confirmation email, so there is no need to call. You may call if you want, but it is already confirmed.\"",
+      "evidence": "Calling is explicitly permitted but unnecessary because confirmation has already arrived.",
+      "explanation": "Dictionary-form verb + ことはない can reassure someone that an action is unnecessary. わけにはいかない would say that circumstances prevent the call, contradicting the explicit permission.",
+      "answer": "koto-no-need",
+      "acceptedAnswers": ["ことはない", "事はない", "こともない", "事もない"],
+      "options": [
+        { "id": "koto-no-need", "label": "ことはない", "rationale": "Says that a second confirmation call is unnecessary, without forbidding it." },
+        { "id": "wake-constraint", "label": "わけにはいかない", "rationale": "Would present calling as something circumstances do not allow, whereas the reply explicitly permits it." }
+      ]
+    },
+    {
+      "id": "koto-no-need-early-arrival",
+      "target": "koto-no-need",
+      "relationship": "negative-meanings",
+      "prompt": "「席を取るために、一時間前に来たほうがいいですか。」「指定席だから、そんなに早く来る____よ。早く来てもいいけれど、開演十分前で十分だよ。」",
+      "translation": "\"Should I come an hour early to get a seat?\" \"The seats are reserved, so there is no need to come that early. You may, but ten minutes before the performance is enough.\"",
+      "evidence": "The seat is guaranteed, and arriving early is explicitly allowed. The advice removes a perceived need, not a permission.",
+      "explanation": "来ることはない means there is no need to come in this advice context. It does not mean that nobody ever comes early. わけにはいかない would instead introduce a reason that one cannot come early.",
+      "answer": "koto-no-need",
+      "acceptedAnswers": ["ことはない", "事はない", "こともない", "事もない"],
+      "options": [
+        { "id": "koto-no-need", "label": "ことはない", "rationale": "Removes the unnecessary precaution of arriving an hour early." },
+        { "id": "wake-constraint", "label": "わけにはいかない", "rationale": "Would express a constraint against early arrival, incompatible with 早く来てもいい." }
+      ]
+    },
+    {
+      "id": "koto-no-need-print-map",
+      "target": "koto-no-need",
+      "relationship": "negative-meanings",
+      "prompt": "「会場の地図を紙に印刷したほうがいいですか。」「印刷して持ってきてもいいけれど、スマホで見られるなら、わざわざ印刷する____よ。」",
+      "translation": "\"Should I print out the map of the venue?\" \"You may bring a printout, but if you can view it on your phone, there is no need to go to the trouble of printing it.\"",
+      "evidence": "A printout is allowed, but the phone makes the extra effort unnecessary.",
+      "explanation": "わざわざ and the available alternative support the no-need use of ことはない. わけにはいかない would say printing is prevented by circumstances, which the reply has already denied.",
+      "answer": "koto-no-need",
+      "acceptedAnswers": ["ことはない", "事はない", "こともない", "事もない"],
+      "options": [
+        { "id": "koto-no-need", "label": "ことはない", "rationale": "Reassures the listener that making a paper copy is unnecessary." },
+        { "id": "wake-constraint", "label": "わけにはいかない", "rationale": "Would suggest that printing is not an available or acceptable course, not merely an unnecessary one." }
+      ]
+    },
+    {
+      "id": "wake-constraint-confidential-name",
+      "target": "wake-constraint",
+      "relationship": "negative-meanings",
+      "prompt": "名前は知っているし、話すこともできる。しかし、秘密を守ると約束した以上、その人の名前をあなたに教えるわけ____。",
+      "translation": "I know the name and am able to say it. However, having promised confidentiality, I cannot very well tell you the person's name.",
+      "evidence": "The speaker has the information and the physical ability to disclose it, but a promise prevents disclosure. わけ is already supplied, so only its ending belongs in the blank.",
+      "explanation": "わけにはいかない expresses a constraint arising from responsibilities or circumstances. The whole sentence could also use 教えることはできない, but that expression cannot fill this blank after the supplied わけ. ことはない has a separate nonoccurrence use as well as its no-need use; those are not being contrasted by this ending-only question.",
+      "answer": "wake-constraint",
+      "acceptedAnswers": ["にはいかない", "にいかない", "にもいかない"],
+      "options": [
+        { "id": "non-necessary-inference", "label": "ではない", "rationale": "Would deny that the speaker is telling the name, rather than state that the promise prevents disclosure." },
+        { "id": "wake-constraint", "label": "にはいかない", "rationale": "Completes わけにはいかない, expressing the binding circumstance despite the speaker's ability to speak." }
+      ]
+    },
+    {
+      "id": "wake-constraint-lone-receptionist",
+      "target": "wake-constraint",
+      "relationship": "negative-meanings",
+      "prompt": "一人で受付を任されていて、交代の人はまだ来ていない。外に出ようと思えば出られるが、今ここを離れるわけ____。",
+      "translation": "I have been put in sole charge of reception, and my replacement has not arrived. I could physically go outside, but I cannot leave my post now.",
+      "evidence": "Leaving is physically possible, but responsibility for an unattended reception desk prevents it. Complete the already supplied わけ rather than replacing it.",
+      "explanation": "わけにはいかない explicitly presents a responsibility-based restriction. This does not imply that ことはできない can only express physical inability: it can also express circumstantial inability in a different completion of the whole sentence. Here, the supplied わけ fixes the construction being completed.",
+      "answer": "wake-constraint",
+      "acceptedAnswers": ["にはいかない", "にいかない", "にもいかない"],
+      "options": [
+        { "id": "non-necessary-inference", "label": "ではない", "rationale": "Would deny leaving rather than state the obligation that prevents it." },
+        { "id": "wake-constraint", "label": "にはいかない", "rationale": "Completes the expression for the obligation to stay until someone can take over." }
+      ]
+    },
+    {
+      "id": "wake-constraint-must-attend",
+      "target": "wake-constraint",
+      "relationship": "negative-meanings",
+      "prompt": "休みたいが、明日の会議では私だけが説明できる資料を使う。出席を約束したので、行かない____。",
+      "translation": "I would like to take the day off, but tomorrow's meeting uses material that only I can explain. I promised to attend, so I cannot very well not go.",
+      "evidence": "The promise and the speaker's unique role make attendance necessary. The negative verb 行かない is already outside the blank.",
+      "explanation": "行かないわけにはいかない means that not going is unacceptable: in context, the speaker has to go. Keep the two negatives separate. 行かないことはない would instead weakly deny not going and would not express this obligation.",
+      "answer": "wake-constraint",
+      "acceptedAnswers": ["わけにはいかない", "訳にはいかない", "わけにいかない", "訳にいかない", "わけにもいかない", "訳にもいかない"],
+      "options": [
+        { "id": "koto-no-need", "label": "ことはない", "rationale": "After 行かない this would no longer be the ordinary no-need pattern; it would not state that the promise requires attendance." },
+        { "id": "wake-constraint", "label": "わけにはいかない", "rationale": "Rejects not going as an acceptable option, so attendance is required." }
+      ]
+    },
+    {
+      "id": "impossibility-red-balls-only",
+      "target": "inferred-impossibility",
+      "relationship": "negative-meanings",
+      "prompt": "この箱には赤い玉しか入っていない。何も入れ足さずに一個取り出しても、青い玉が出るわけ____。青い玉は一個もないのだから。",
+      "translation": "This box contains only red balls. If you take one out without adding anything, there is no way a blue ball will come out: there are no blue balls in it.",
+      "evidence": "The contents exclude blue entirely. The claim is impossibility, not merely uncertainty about which color will appear. わけ is already in the sentence.",
+      "explanation": "がない completes わけがない, strongly ruling out the result. The whole sentence could also use 出るはずがない or 出ることはない, with ことはない expressing nonoccurrence rather than no-need advice. Those are not wrong Japanese; this question asks for the ending of the supplied わけ.",
+      "answer": "inferred-impossibility",
+      "acceptedAnswers": ["がない", "はない", "もない"],
+      "options": [
+        { "id": "inferred-impossibility", "label": "がない", "rationale": "Completes the strong rejection of any blue result, based on the box's contents." },
+        { "id": "wake-constraint", "label": "にはいかない", "rationale": "Would treat the blue ball's appearance as a course of action prevented by duties or circumstances, rather than an impossible result of the contents." }
+      ]
+    },
+    {
+      "id": "impossibility-island-without-railway",
+      "target": "inferred-impossibility",
+      "relationship": "negative-meanings",
+      "prompt": "この島には鉄道も駅も一度も造られていない。だから、島の中を電車で移動できるわけ____。線路そのものがないのだ。",
+      "translation": "No railway or station has ever been built on this island. There is therefore no way to travel around it by train: there are no tracks at all.",
+      "evidence": "The complete absence of railway infrastructure rules out the proposed means of transport. Fill the ending after わけ.",
+      "explanation": "The missing がない completes an evidence-based rejection: 移動できるわけがない. This is not a restriction on a traveler who actually could take a train. A whole-sentence paraphrase using はずがない is also possible, but はず is not the word supplied before this blank.",
+      "answer": "inferred-impossibility",
+      "acceptedAnswers": ["がない", "はない", "もない"],
+      "options": [
+        { "id": "inferred-impossibility", "label": "がない", "rationale": "Completes the rejection of the claimed ability to travel by train." },
+        { "id": "wake-constraint", "label": "にはいかない", "rationale": "A duty-based restriction on being able to travel does not fit: the tracks needed for that ability do not exist." }
+      ]
+    },
+    {
+      "id": "impossibility-new-building-old-photo",
+      "target": "inferred-impossibility",
+      "relationship": "negative-meanings",
+      "prompt": "その建物は去年初めて建てられた。加工していない十年前の写真に、その建物が写っているわけ____。撮影時にはまだ存在していなかった。",
+      "translation": "That building was first built last year. There is no way it appears in an unaltered photograph from ten years ago: it did not exist when the photograph was taken.",
+      "evidence": "The building did not exist at the time of the authentic photograph. The question supplies わけ and asks how to complete the negative inference.",
+      "explanation": "わけがない rules out the proposed state of affairs using the dates. 写っていることはない could also deny occurrence in a differently worded sentence, and はずがない could express the inference. Neither is a substitute for just the ending after the わけ already printed here.",
+      "answer": "inferred-impossibility",
+      "acceptedAnswers": ["がない", "はない", "もない"],
+      "options": [
+        { "id": "inferred-impossibility", "label": "がない", "rationale": "Completes the inference that the building could not be present when the photograph was taken." },
+        { "id": "wake-constraint", "label": "にはいかない", "rationale": "Would suggest that being in the photograph is unacceptable under some obligation, rather than excluded by the dates." }
+      ]
+    },
+    {
+      "id": "inference-expensive-products",
+      "target": "non-necessary-inference",
+      "relationship": "negative-meanings",
+      "prompt": "高価な製品が、必ずしも長持ちする____。長く使える製品もあるが、高いのにすぐ壊れる製品もある。",
+      "translation": "Expensive products do not necessarily last a long time. Some can be used for years, but others break quickly despite their high price.",
+      "evidence": "Both outcomes occur. 必ずしも questions a necessary connection between price and durability, rather than rejecting durability altogether.",
+      "explanation": "必ずしも ... わけではない rejects a general inference while allowing positive cases. わけがない would strongly rule out long-lasting products, contrary to the explicitly acknowledged positive examples. Equivalent expressions of non-necessity are accepted for this functional target.",
+      "answer": "non-necessary-inference",
+      "acceptedAnswers": ["わけではない", "訳ではない", "わけじゃない", "訳じゃない", "というわけではない", "という訳ではない", "というわけじゃない", "という訳じゃない", "ということではない", "という事ではない", "ということじゃない", "という事じゃない", "とは限らない", "とはかぎらない", "ものではない", "物ではない", "ものじゃない", "物じゃない", "もんではない", "もんじゃない"],
+      "options": [
+        { "id": "inferred-impossibility", "label": "わけがない", "rationale": "Strongly rules out durability, whereas the context explicitly allows durable expensive products and denies only a general guarantee." },
+        { "id": "non-necessary-inference", "label": "わけではない", "rationale": "Combines with 必ずしも to reject the automatic inference without denying the positive cases." }
+      ]
+    },
+    {
+      "id": "inference-residence-and-language",
+      "target": "non-necessary-inference",
+      "relationship": "negative-meanings",
+      "prompt": "外国に住んでいる人が、必ずしもその国の言葉に詳しい____。よく知っている人もいるし、引っ越したばかりで勉強を始めた人もいる。",
+      "translation": "People living abroad are not necessarily knowledgeable about that country's language. Some know it well, while others have only just moved there and started studying.",
+      "evidence": "The sentence explicitly includes both knowledgeable residents and beginners, so residence alone does not guarantee knowledge.",
+      "explanation": "わけではない under 必ずしも denies the generalization, not the existence of knowledgeable residents. The strong negation わけがない would conflict with the positive cases. ということではない and とは限らない are accepted here because they preserve the tested non-necessary inference.",
+      "answer": "non-necessary-inference",
+      "acceptedAnswers": ["わけではない", "訳ではない", "わけじゃない", "訳じゃない", "というわけではない", "という訳ではない", "というわけじゃない", "という訳じゃない", "ということではない", "という事ではない", "ということじゃない", "という事じゃない", "とは限らない", "とはかぎらない", "ものではない", "物ではない", "ものじゃない", "物じゃない", "もんではない", "もんじゃない"],
+      "options": [
+        { "id": "inferred-impossibility", "label": "わけがない", "rationale": "Would strongly reject language knowledge, not merely reject the assumption that every resident has it." },
+        { "id": "non-necessary-inference", "label": "わけではない", "rationale": "Allows both kinds of resident while denying that residence guarantees knowledge." }
+      ]
+    },
+    {
+      "id": "inference-practice-and-winning",
+      "target": "non-necessary-inference",
+      "relationship": "negative-meanings",
+      "prompt": "長く練習した人が、必ずしも試合で勝つ____。勝つ人もいるが、十分に練習しても負ける人もいる。",
+      "translation": "People who have practiced for a long time do not necessarily win their matches. Some win, but others lose even after plenty of practice.",
+      "evidence": "Practice and winning sometimes go together, but the stated losses show that victory is not guaranteed.",
+      "explanation": "必ずしも ... わけではない rejects an automatic connection. It does not claim that practice is useless or that a practiced player cannot win. Those would be stronger and different claims, so わけがない does not fit.",
+      "answer": "non-necessary-inference",
+      "acceptedAnswers": ["わけではない", "訳ではない", "わけじゃない", "訳じゃない", "というわけではない", "という訳ではない", "というわけじゃない", "という訳じゃない", "ということではない", "という事ではない", "ということじゃない", "という事じゃない", "とは限らない", "とはかぎらない", "ものではない", "物ではない", "ものじゃない", "物じゃない", "もんではない", "もんじゃない"],
+      "options": [
+        { "id": "inferred-impossibility", "label": "わけがない", "rationale": "Would rule out winning, contradicting 勝つ人もいる." },
+        { "id": "non-necessary-inference", "label": "わけではない", "rationale": "Rejects guaranteed victory while retaining the possibility of winning." }
+      ]
+    }
+  ]
+}
