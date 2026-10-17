@@ -403,6 +403,22 @@ These are controlled verb-form exercises, not independent discrimination of な�
 distinction without counting it as a separate tested target. Broader contextual selection, cessation, instructions and wishes
 remain separate coverage. Only the missing verb form belongs in accepted answers, with kana and ordinary kanji spellings.
 
+`formal-nouns-self-assessment.json` adds 12 exercises; see the
+[source record](grammar-self-assessment-sources.json). Six matched predicate pairs contain two nouns, two な-adjectives
+and two い-adjectives, not three of every class. Every item prints つもりです and requests the complete missing predicate:
+noun + の versus noun + になる; な-adjective + な versus な-adjective + になる; unchanged い-adjective versus its
+く form + なる. The question-side instructions supply these forms and distinguish current self-view from intended change.
+Accept kana/kanji forms and the change verb's recognized spellings without recommending rare orthography.
+The history pair also accepts 委しい／精しい and their く forms with all supported spellings of なる;
+keep ordinary 詳しい／詳しくなる as its model labels.
+Other predicate expansions are outside this basic attachment task, not globally ungrammatical.
+
+Keep the corroborating client treatment, careful checking and tournament results alongside the cooking criticism and
+knowledge gaps: self-assessment need not be objectively false, but neither is it independent proof. An intention to become
+something does not guarantee achievement, and the shared outer present tense does not mean every goal is already realized.
+These self-views are distinct from the existing intended-picture/gesture examples. Denying an intention and broader
+contextual selection remain separate follow-ups. One exercise identity covers its accepted spellings.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.

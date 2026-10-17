@@ -1631,5 +1631,81 @@ class GrammarYouChangeEffortCoverageTests(unittest.TestCase):
         self.assertIn("本人の許可なく", self.exercises["you-effort-avoid-sharing-private-story"]["prompt"])
 
 
+class GrammarSelfAssessmentCoverageTests(unittest.TestCase):
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((root / "grammar" / "formal-nouns-self-assessment.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+        self.pairs = [
+            ("tsumori-selfview-local-expert", "tsumori-becoming-local-expert",
+             ("専門家", "せんもんか"), "の", "に", "followed by の or になる"),
+            ("tsumori-selfview-working-professional", "tsumori-becoming-photography-professional",
+             ("プロ", "ぷろ"), "の", "に", "followed by の or になる"),
+            ("tsumori-selfview-cooking-skill", "tsumori-becoming-better-cook",
+             ("上手", "じょうず"), "な", "に", "followed by な or になる"),
+            ("tsumori-selfview-careful-checking", "tsumori-becoming-more-careful",
+             ("慎重", "しんちょう"), "な", "に", "followed by な or になる"),
+            ("tsumori-selfview-local-history", "tsumori-becoming-history-knowledgeable",
+             ("詳し", "くわし", "委し", "精し"), "い", "く", "its unchanged form, or its く form followed by なる"),
+            ("tsumori-selfview-shogi-strength", "tsumori-becoming-stronger-shogi-player",
+             ("強", "つよ"), "い", "く", "its unchanged form, or its く form followed by なる"),
+        ]
+
+    def test_six_matched_predicates_cover_both_functional_targets(self):
+        self.assertEqual({
+            "tsumori-current-selfview": 6,
+            "tsumori-becoming-plan": 6,
+        }, Counter(exercise["target"] for exercise in self.exercises.values()))
+        relationship = self.data["relationships"][0]
+        for self_id, plan_id, *_ in self.pairs:
+            self.assertEqual("tsumori-current-selfview", self.exercises[self_id]["target"])
+            self.assertEqual("tsumori-becoming-plan", self.exercises[plan_id]["target"])
+            for exercise_id in (self_id, plan_id):
+                exercise = self.exercises[exercise_id]
+                self.assertEqual(relationship["id"], exercise["relationship"])
+                self.assertEqual(
+                    set(relationship["constructions"]),
+                    {option["id"] for option in exercise["options"]}, exercise_id,
+                )
+            self.assertEqual(
+                [option["label"] for option in self.exercises[self_id]["options"]],
+                [option["label"] for option in self.exercises[plan_id]["options"]],
+            )
+
+    def test_attachment_and_spelling_sets_fit_only_the_missing_span(self):
+        for self_id, plan_id, stems, self_ending, change_link, _ in self.pairs:
+            self.assertEqual(
+                {stem + self_ending for stem in stems},
+                set(self.exercises[self_id]["acceptedAnswers"]), self_id,
+            )
+            self.assertEqual(
+                {stem + change_link + verb for stem in stems for verb in ("なる", "成る", "為る")},
+                set(self.exercises[plan_id]["acceptedAnswers"]), plan_id,
+            )
+
+    def test_the_same_present_ending_keeps_both_task_frames_visible(self):
+        for self_id, plan_id, _, _, _, form_instruction in self.pairs:
+            for exercise_id, focus in (
+                (self_id, "State my current self-assessment, not a future change:"),
+                (plan_id, "State an intended future change, not a current self-assessment:"),
+            ):
+                exercise = self.exercises[exercise_id]
+                self.assertIn("____つもりです", exercise["prompt"], exercise_id)
+                self.assertIn(form_instruction, exercise["translation"], exercise_id)
+                self.assertIn("Fill only the part before the printed つもりです.", exercise["translation"], exercise_id)
+                self.assertIn(focus, exercise["translation"], exercise_id)
+
+    def test_selfviews_and_plans_keep_accuracy_and_outcome_qualifications(self):
+        professional = self.exercises["tsumori-selfview-working-professional"]
+        self.assertIn("依頼主もプロとして仕事を任せてくれます", professional["prompt"])
+        self.assertIn("supports that view", professional["explanation"])
+        self.assertIn("二度確認しています", self.exercises["tsumori-selfview-careful-checking"]["prompt"])
+        self.assertIn("何度か優勝しました", self.exercises["tsumori-selfview-shogi-strength"]["prompt"])
+        self.assertIn("味が濃すぎる", self.exercises["tsumori-selfview-cooking-skill"]["prompt"])
+        self.assertIn("まだ知らない話", self.exercises["tsumori-selfview-local-history"]["prompt"])
+        self.assertIn("not guarantee", self.exercises["tsumori-becoming-local-expert"]["explanation"])
+        self.assertIn("not a guarantee of winning", self.exercises["tsumori-becoming-stronger-shogi-player"]["explanation"])
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -298,7 +298,48 @@ Likewise, a belief in completion need not be false:
 The plan questions supply **つもりです** and request only the given verb's dictionary or ない form.
 The past-viewpoint questions all supply **つもりでした** and request dictionary or た form, with the intended mental
 stance stated before answering. They practice those controlled contrasts, not unrestricted rejection of other ways to
-express intention or belief. Noun/adjective self-assessments and imagined-role uses need their own contexts.
+express intention or belief. The next subsection treats self-assessment with noun and adjective predicates.
+
+### つもり: how I see myself versus what I intend to become
+
+Not every **つもりです** means a future plan. With a noun or adjective, it can describe how someone sees themselves:
+
+| Basic attachment | Current self-assessment | Intended change |
+| --- | --- | --- |
+| Noun + のつもり | 自分ではプロのつもりです。 - I regard myself as a professional. | 来年はプロになるつもりです。 - I intend to turn professional next year. |
+| な-adjective + なつもり | 自分では料理が上手なつもりです。 - I consider myself good at cooking. | 練習して、もっと上手になるつもりです。 - I intend to practice and become more skilled. |
+| い-adjective + つもり | 自分では将棋が強いつもりです。 - I consider myself a strong shogi player. | 次の大会までにはもっと強くなるつもりです。 - I intend to become stronger by the next tournament. |
+
+**将棋（しょうぎ）** is Japanese chess; **上手（じょうず）** means skillful.
+For the basic self-assessment forms, link a noun with **の**, a な-adjective with **な**, and an い-adjective directly.
+Do not add another の or な after **強い**.
+For a change, use **noun／な-adjective + になる** or **い-adjective's く form + なる**:
+**専門家になる**, "become an expert"; **慎重になる**, "become careful"; **詳しくなる**, "become knowledgeable."
+The resulting plain verb phrase then attaches to つもり.
+
+The same outer **つもりです** can report a current self-view or a current intention whose goal lies in the future.
+It is the predicate and context, not です alone, that tell you which.
+**プロのつもり** foregrounds the speaker's professional self-image; **プロになるつもり** explicitly makes becoming
+a professional the intended change. These are not a universal rule that every noun/adjective つもり concerns only the present:
+other contexts can describe an intended role or an assumed situation.
+
+A self-assessment is a perspective, not independent proof. Someone may regard their cooking as good while their family
+finds the seasoning too strong. Other information may instead support the assessment, such as clients treating a photographer
+as a professional or a player winning tournaments. Do not infer from つもり alone that the speaker must be mistaken.
+Likewise, a plan to become more skilled does not guarantee the eventual result.
+Knowingly acting as if something were true is another use: **親のつもりで世話をする**, "look after someone as if one
+were their parent," describes an adopted role rather than a professional qualification or a future plan.
+
+The exercises use six matched predicates: two nouns (**専門家／プロ**), two な-adjectives (**上手／慎重**) and
+two い-adjectives (**詳しい／強い**). **専門家（せんもんか）** means expert, **慎重（しんちょう）** careful,
+and **詳しい（くわしい）** knowledgeable in these contexts.
+Each question names the two attachment patterns, supplies **つもりです**, and requests the missing predicate span.
+These are controlled form-and-meaning tasks, not an unrestricted choice among every way to express self-belief or intention.
+Other formulations such as **自分はプロだと思っています**, "I think of myself as a professional," remain possible.
+For the change verb, kana **なる** is usual; dictionary spellings **成る／為る** are accepted without recommending them
+as equally common or clear. The uncommon spellings **委しい／精しい** of **詳しい** are also accepted, including their
+**く** forms with the supported spellings of なる; the models keep ordinary **詳しい／詳しくなる**.
+Denying an intention with **つもりはない／つもりがない** remains separate practice.
 
 ### ところ: locating an action's stage
 
@@ -1023,6 +1064,7 @@ This practice does not cover every use, such as **寝たきり**, **これっき
 - [ARC Tokyo: ことになりました](https://arc.ac.jp/Tokyo/mimi-bunpou053/) and [E-Japanese: ことになる](https://www.e-japanese.jp/?p=650) - personal decisions announced indirectly and results derived by calculation.
 - [Tofugu: つもり](https://www.tofugu.com/japanese-grammar/tsumori/) - intentions, intended representations, attachment and つもりで.
 - [Bunpro: つもりだ](https://bunpro.jp/grammar_points/つもりだ) and [JMdict via Jisho: つもり](https://jisho.org/search/つもり) - affirmative and negative plans, and the lexical distinction between intention and belief; Tofugu also explains past intentions versus believed completion.
+- [Japan Foundation: Aく／ANに／Nになります](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00126/ja/render.do), [Daijisen: 積り](https://kotobank.jp/word/積り-572631), [JMdict via Jisho: なる](https://jisho.org/search/なる), and [Daijisen: 詳しい](https://kotobank.jp/word/詳しい-487503) - noun/adjective change attachment, intention versus assumed-role uses, and recognized spellings of the change verb and 詳しい; Tofugu's つもり attachment sections also cover noun and adjective predicates.
 - [Japan Foundation: ように／ような（例示・比況）](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00010/ja/render.do), [ように（目的）](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00057/ja/render.do), and [TUFS: potential forms](https://www.coelang.tufs.ac.jp/mt/ja/gmod/contents/explanation/074.html) - comparison scope, exemplification, desired states and the potential forms used in the exercises.
 - [Japan Foundation: Vようになります](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00086/ja/render.do) and [Vようにします](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00105/ja/render.do) - changed habits or possibilities, deliberate positive/negative practices, and the distinction between a decision and maintained care.
 - [Tae Kim: Things that should be a certain way](https://guidetojapanese.org/learn/grammar/should) - noun/na-adjective attachment for はず and the distinction from normative べき.
