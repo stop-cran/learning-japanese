@@ -40,6 +40,7 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   Its 1,730 additional N3 rows are covered by 1,698 articles: 1,490 new and 208 reused from the preceding collection.
   The level indexes overlap where an existing article teaches an additional reading or meaning.
 - `strokes/` – generated stroke data. Validate with `python tools/validate.py`.
+- `grammar/` – versioned, contrast-focused exercises for the app's Grammar pilot; see the [content format](docs/content-format.md#grammar-exercises).
 
 The revised JLPT does not publish exhaustive kanji or vocabulary syllabi. Level coverage here means the exact named community set,
 not a guarantee about every examination question or a complete beginner curriculum.

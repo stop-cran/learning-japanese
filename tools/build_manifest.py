@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-FOLDERS = ["kanji", "words", "articles", "strokes", "counters"]
+FOLDERS = ["kanji", "words", "articles", "strokes", "counters", "grammar"]
 SCHEMA_VERSION = 1
 
 

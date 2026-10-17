@@ -112,6 +112,18 @@ Strokes are listed in stroke order; each stroke is 16 points sampled by arc leng
 Validation also checks file/kanji identity, schema, numeric fields and point structure. Sixteen points is the generator's convention;
 the importer requires at least two finite two-coordinate points per stroke.
 
+## Grammar exercises
+
+`grammar/<set-id>.json` files use `schemaVersion: 1` and contain stable construction, relationship and exercise IDs. Each exercise
+has a Japanese prompt with exactly one `____` blank, an English translation, evidence from the context, an explanation,
+the correct construction ID, accepted typed forms, and answer options with a rationale for every alternative. Every relationship
+must have examples targeting each of its constructions. Its linked `article` must be an existing `articles/<slug>.md` file.
+
+Author examples where context makes one choice clearly better than the closest alternative; do not include examples where both
+forms are equally natural. Keep the evidence and rationale specific to the contrast, not just a definition of the answer. The
+validator checks structure and references, not Japanese naturalness or grammatical accuracy, so grammar content needs editorial
+review. The initial pilot covers こと／わけ and はず／べき; this schema does not imply that other formal nouns are covered.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.

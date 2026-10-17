@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-pilot",
+  "title": "Formal nouns: こと／わけ and はず／べき",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "koto", "label": "こと" },
+    { "id": "wake", "label": "わけ" },
+    { "id": "hazu", "label": "はず" },
+    { "id": "beki", "label": "べき" }
+  ],
+  "relationships": [
+    { "id": "koto-vs-wake", "label": "fact or event／reason or conclusion", "constructions": ["koto", "wake"] },
+    { "id": "hazu-vs-beki", "label": "expected／ought to", "constructions": ["hazu", "beki"] }
+  ],
+  "exercises": [
+    {
+      "id": "koto-work-hours-fact",
+      "target": "koto",
+      "relationship": "koto-vs-wake",
+      "prompt": "勤務時間が来月から午前九時開始に変わるという____を、全員に伝えた。",
+      "translation": "I told everyone the fact that the new workday starts at 9 a.m. next month.",
+      "evidence": "The sentence conveys a piece of information, not the reason for something or a conclusion drawn from premises.",
+      "explanation": "こと can package a fact or event as a noun. わけ is used for a reason or an inferred conclusion, neither of which is being asked for here.",
+      "answer": "koto",
+      "acceptedAnswers": ["こと"],
+      "options": [
+        { "id": "koto", "label": "こと", "rationale": "Packages the reported fact as information." },
+        { "id": "wake", "label": "わけ", "rationale": "Would point to a reason or a conclusion; no such explanation is being given." }
+      ]
+    },
+    {
+      "id": "koto-entry-rule",
+      "target": "koto",
+      "relationship": "koto-vs-wake",
+      "prompt": "この施設では、入館時に受付で名前を書く____になっている。",
+      "translation": "At this facility, visitors are required to write their name at reception when entering.",
+      "evidence": "The sentence describes an established procedure that applies to everyone entering.",
+      "explanation": "ことになっている expresses a rule or established arrangement. わけになっている does not express this ordinary rule pattern.",
+      "answer": "koto",
+      "acceptedAnswers": ["こと"],
+      "options": [
+        { "id": "koto", "label": "こと", "rationale": "ことになっている is the established rule or arrangement pattern." },
+        { "id": "wake", "label": "わけ", "rationale": "わけ does not form the ordinary rule pattern intended here." }
+      ]
+    },
+    {
+      "id": "wake-impossible-arrival",
+      "target": "wake",
+      "relationship": "koto-vs-wake",
+      "prompt": "彼は朝からずっと別の町にいた。だから、会場に来た____がない。",
+      "translation": "He was in another town all morning, so there is no way he came to the venue.",
+      "evidence": "Being elsewhere all morning rules out the arrival; the speaker draws an impossibility conclusion.",
+      "explanation": "わけがない rejects a conclusion as impossible. ことがない would describe a lack of occasions or experience, not this inference from where he was.",
+      "answer": "wake",
+      "acceptedAnswers": ["わけ"],
+      "options": [
+        { "id": "koto", "label": "こと", "rationale": "ことがない concerns occasions or experience, not an impossibility inferred from evidence." },
+        { "id": "wake", "label": "わけ", "rationale": "わけがない expresses that the inferred event could not have happened." }
+      ]
+    },
+    {
+      "id": "wake-realization",
+      "target": "wake",
+      "relationship": "koto-vs-wake",
+      "prompt": "電車が止まり、代わりのバスもなかった。彼が遅れた____だ。",
+      "translation": "The train stopped and there was no replacement bus. That explains why he was late.",
+      "evidence": "The speaker connects the preceding facts to an explanatory conclusion about his lateness.",
+      "explanation": "わけだ marks the conclusion that now makes sense in light of the preceding facts. ことだ would not express this explanatory inference.",
+      "answer": "wake",
+      "acceptedAnswers": ["わけ"],
+      "options": [
+        { "id": "koto", "label": "こと", "rationale": "Does not mark the conclusion that explains the lateness." },
+        { "id": "wake", "label": "わけ", "rationale": "わけだ presents the lateness as the understandable conclusion from the facts." }
+      ]
+    },
+    {
+      "id": "hazu-shipping-estimate",
+      "target": "hazu",
+      "relationship": "hazu-vs-beki",
+      "prompt": "公式サイトには発送済みとある。荷物は明日届く____だ。",
+      "translation": "The official site says it has shipped. The package should arrive tomorrow.",
+      "evidence": "The arrival is a prediction based on the site's shipping information, not a duty imposed on the package.",
+      "explanation": "はず expresses an expectation based on evidence. べき expresses what someone ought to do, so it does not fit a prediction about delivery.",
+      "answer": "hazu",
+      "acceptedAnswers": ["はず"],
+      "options": [
+        { "id": "hazu", "label": "はず", "rationale": "Marks the expected arrival based on shipping information." },
+        { "id": "beki", "label": "べき", "rationale": "Expresses an obligation or recommendation, not an evidence-based prediction." }
+      ]
+    },
+    {
+      "id": "hazu-scheduled-arrival",
+      "target": "hazu",
+      "relationship": "hazu-vs-beki",
+      "prompt": "彼女は一時間前に空港へ向かった。順調なら、今ごろ空港に着いている____だ。",
+      "translation": "She headed to the airport an hour ago. If all went well, she should be there by now.",
+      "evidence": "The speaker estimates her present location from the elapsed time and the assumption that the trip went normally.",
+      "explanation": "はず marks an expectation based on the known timeline. べき would say that she ought to be at the airport, which is not the intended inference.",
+      "answer": "hazu",
+      "acceptedAnswers": ["はず"],
+      "options": [
+        { "id": "hazu", "label": "はず", "rationale": "Expresses the speaker's expectation from the timeline." },
+        { "id": "beki", "label": "べき", "rationale": "Would express what she ought to do, rather than where she is expected to be." }
+      ]
+    },
+    {
+      "id": "beki-safety-report",
+      "target": "beki",
+      "relationship": "hazu-vs-beki",
+      "prompt": "安全に関わる不具合を見つけたら、すぐ責任者に報告する____だ。",
+      "translation": "If you find a safety-related defect, you ought to report it to the person in charge immediately.",
+      "evidence": "This is guidance about the responsible action someone should take.",
+      "explanation": "べき expresses an obligation or strong recommendation. はず would express an expectation, not the action the listener ought to take.",
+      "answer": "beki",
+      "acceptedAnswers": ["べき"],
+      "options": [
+        { "id": "hazu", "label": "はず", "rationale": "Expresses expectation, not what a person ought to do." },
+        { "id": "beki", "label": "べき", "rationale": "Marks the action presented as the responsible thing to do." }
+      ]
+    },
+    {
+      "id": "beki-public-conduct",
+      "target": "beki",
+      "relationship": "hazu-vs-beki",
+      "prompt": "公共の場所では、他の人の迷惑にならないように行動する____だ。",
+      "translation": "In public places, people should behave in a way that does not bother others.",
+      "evidence": "The sentence states a social expectation about appropriate conduct, not a prediction.",
+      "explanation": "べき recommends or prescribes appropriate conduct. はず would describe what is expected to happen, rather than what people should do.",
+      "answer": "beki",
+      "acceptedAnswers": ["べき"],
+      "options": [
+        { "id": "hazu", "label": "はず", "rationale": "Describes an expectation, but does not prescribe appropriate conduct." },
+        { "id": "beki", "label": "べき", "rationale": "States what people ought to do in this situation." }
+      ]
+    }
+  ]
+}

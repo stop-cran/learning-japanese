@@ -558,6 +558,8 @@ def main() -> int:
     check_images(word_images)
     from validate_counters import check_counters
     check_counters(err, ROOT)
+    from validate_grammar import check_grammar
+    check_grammar(err, ROOT)
     for message in errors:
         print(message)
     print(f"{len(errors)} error(s)")
