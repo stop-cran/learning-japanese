@@ -157,6 +157,39 @@ Each row gives a starting point and one translated example, not every constructi
 | **とおり** (toori) | Correspondence with a model or instruction | 言われたとおりにした。 - I did as instructed. |
 | **ほう** (hou) | One alternative or side of a comparison | 電車で行くほうが安い。 - Going by train is cheaper. |
 
+### Intention, expectation, and what ought to happen
+
+English "supposed to" can hide different meanings. **つもり** can state what someone intends an action or object to mean;
+**はず** expresses an expectation supported by reasons. **べき** is a useful auxiliary-grammar comparison here, not another
+formal noun: it expresses what ought to be done rather than predicting what will happen.
+
+| Construction | Example | Meaning |
+| --- | --- | --- |
+| Noun + のつもりで | これは犬のつもりで作った。 | I made this intending it to be a dog. |
+| Noun + のはずだ | ラベルからすると、中身は水のはずだ。 | Judging by the label, the contents should be water. |
+| Dictionary-form verb + べきだ | 約束の時間を守るべきだ。 | One ought to keep to the agreed time. |
+
+The first use of つもり concerns the maker's intention, not whether the result is convincing. It is related to, but not identical
+with, the future-plan use **行くつもりだ**. With はず, match the connector to the preceding expression: **水のはず**,
+**静かなはず**, **高いはず**, **来るはず**. An expectation is not a wish or a guarantee of what you will actually observe.
+
+**ようだ** can also express an information-based judgment, including from indirect information: **水のようだ** can mean
+"It seems to be water," not just "It resembles water." Whether you have directly inspected a property does not by itself settle
+the choice between はず and よう. Their uses can overlap without having identical nuance or a fixed difference in confidence.
+
+**べき** can sound forceful; it is not the default for every friendly suggestion. **行くべきではない** says one ought not to go,
+whereas **行くべきだった** says one ought to have gone. In the latter, the verb remains 行く and the past appears on だった.
+For する, both **するべき** and **すべき** are possible.
+
+Some normative statements also allow **ものだ／ものではない**, and **ことだ** can give advice or instructions. These are not
+unrestricted replacements for べき: judge the complete sentence and its communicative purpose. Likewise, **ものではない** can
+reject a generalization rather than prohibit conduct, as in a discussion of what does not necessarily happen.
+
+**のだ／んだ** can also urge an action, and **のではない／んではない** can prohibit one. With an appropriate retrospective
+context, **調べておくのだった／調べておくんだった** can mean "I should have checked beforehand," expressing regret without
+necessarily asserting a past plan. These forms have other uses too, including explanation, denial and recalling a forgotten plan;
+they are not automatic substitutes for べき in every sentence.
+
 ### Time, recurrence, and occasions
 
 | Word | Central idea in these uses | Example |
@@ -323,6 +356,12 @@ Notice the actual patterns: **quantity + ほど**, **昨日 + ほど + a negativ
 - [Japan Foundation: 「こと」（1）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201112.html) - nominalization, こと versus の, and fixed expressions.
 - [Bunpro: ことにする](https://bunpro.jp/grammar_points/ことにする), [ことになる](https://bunpro.jp/grammar_points/ことになる), and [ことができる](https://bunpro.jp/grammar_points/ことができる) - decisions versus resulting situations, and ability or possibility.
 - [ARC Tokyo: ことになりました](https://arc.ac.jp/Tokyo/mimi-bunpou053/) and [E-Japanese: ことになる](https://www.e-japanese.jp/?p=650) - personal decisions announced indirectly and results derived by calculation.
+- [Tofugu: つもり](https://www.tofugu.com/japanese-grammar/tsumori/) - intentions, intended representations, attachment and つもりで.
+- [Tae Kim: Things that should be a certain way](https://guidetojapanese.org/learn/grammar/should) - noun/na-adjective attachment for はず and the distinction from normative べき.
+- [Bunpro: べき](https://bunpro.jp/grammar_points/べき), [べきではない](https://bunpro.jp/grammar_points/べきではない), and [ものだ](https://bunpro.jp/grammar_points/ものだ) - normative judgments, past and negative forms, and context-dependent generalizations.
+- [Japan Foundation: 「こと」（2）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201203.html) - the advice/instruction use of ことだ alongside other constructions.
+- [Daijisen: のだ](https://kotobank.jp/word/のだ-596938), [IMABI: The mood marker のだ](https://imabi.org/the-mood-marker-%EF%BD%9E%E3%81%AE%E3%81%A0/), and [Bunpro: んじゃない](https://bunpro.jp/grammar_points/んじゃない) - directive uses, retrospective regret and prohibition, distinct from the forms' other functions.
+- [Japan Foundation: 「そうだ／ようだ／らしい」（1）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201012.html) and [(2)](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201103.html) - direct and indirect information in inferential judgments, including the comparison with はず.
 - [Kotobank: 形式名詞](https://kotobank.jp/word/形式名詞-488640) - definitions and the difficulty of drawing a single boundary against ordinary nouns.
 - [N1et: 形式名詞「こと・の」違い 他「ところ・とき・ため」など見分け方](https://jn1et.com/formal-noun/) - a teaching-oriented classification of formal nouns and their functions.
 - [Kotobank: 準体助詞](https://kotobank.jp/word/準体助詞-530025) - nominalizing particles and alternative grammatical classifications.

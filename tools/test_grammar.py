@@ -172,5 +172,41 @@ class GrammarActionsCoverageTests(unittest.TestCase):
         )
 
 
+class GrammarIntentCoverageTests(unittest.TestCase):
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        data = json.loads((root / "grammar" / "formal-nouns-intent.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in data["exercises"]}
+
+    def test_intent_has_three_examples_per_function(self):
+        counts = Counter(exercise["target"] for exercise in self.exercises.values())
+        self.assertEqual({
+            "intended-meaning", "reasoned-inference", "normative-judgment",
+        }, set(counts))
+        self.assertTrue(all(count >= 3 for count in counts.values()), counts)
+
+    def test_inference_items_preserve_noun_attachment_and_equivalents(self):
+        for exercise in self.exercises.values():
+            if exercise["target"] == "reasoned-inference":
+                self.assertIn("の____だ", exercise["prompt"])
+                self.assertTrue(
+                    {"はず", "筈", "よう", "様"} <= set(exercise["acceptedAnswers"]),
+                    exercise["id"],
+                )
+
+    def test_normative_forms_cover_past_and_negative_contexts(self):
+        past = self.exercises["judgment-checking-station-exit"]
+        negative = self.exercises["judgment-permission-before-publishing"]
+        self.assertIn("確かめておく____だった", past["prompt"])
+        self.assertIn("べき", past["acceptedAnswers"])
+        self.assertIn("____ではない", negative["prompt"])
+        self.assertTrue({"べき", "もの", "もん"} <= set(negative["acceptedAnswers"]))
+
+    def test_normative_contexts_accept_no_and_n(self):
+        for exercise in self.exercises.values():
+            if exercise["target"] == "normative-judgment":
+                self.assertTrue({"の", "ん"} <= set(exercise["acceptedAnswers"]), exercise["id"])
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -149,6 +149,12 @@ being added in reviewed batches, not claimed by the existence of the schema. Kee
 the exercise ID and verb form distinguish the use. Decision questions explicitly request the act-of-deciding frame, rather than
 pretend that a personal decision cannot also be announced as an arrangement. The printed こと／ことに stays outside the blank.
 
+`formal-nouns-intent.json` adds nine exercises on intended meaning/representation, reasoned inference, and normative
+judgment; see the [source record](grammar-intent-sources.json). The つもり examples here use noun + のつもりで, not every
+future-plan or assumed-state construction. The inference target groups はず／よう in the selected sentences rather than claim
+to measure a distinction between those forms. Normative answers group べき with other forms, including の／ん directives or
+regret, only where the whole sentence supports that function. Accepted forms are not global substitution rules.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.
