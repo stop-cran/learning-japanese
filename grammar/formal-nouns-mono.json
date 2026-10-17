@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-mono",
+  "title": "Formal nouns: patterns, memories and personal reasons",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "mono-characteristic", "label": "a characteristic pattern or tendency (ものだ)" },
+    { "id": "mono-recollection", "label": "recall a recurring past experience (たものだ)" },
+    { "id": "mono-personal-reason", "label": "a casual personal reason (もの／もん)" },
+    { "id": "wake-conclusion", "label": "an explanatory conclusion (わけだ)" }
+  ],
+  "relationships": [
+    {
+      "id": "characteristic-vs-recollection",
+      "label": "describe a characteristic pattern / recall a past pattern",
+      "constructions": ["mono-characteristic", "mono-recollection"]
+    },
+    {
+      "id": "personal-reason-vs-conclusion",
+      "label": "give a casual personal reason / express an explanatory conclusion",
+      "constructions": ["mono-personal-reason", "wake-conclusion"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "mono-characteristic-unused-words",
+      "target": "mono-characteristic",
+      "relationship": "characteristic-vs-recollection",
+      "prompt": "人は、長く使わない言葉を少しずつ____ものです。",
+      "translation": "Use 忘れる (わすれる, forget) in dictionary or た form only; ものです is already printed. Describe a general tendency, not a personal recollection: people tend to gradually forget words they have not used for a long time.",
+      "evidence": "The statement concerns a general human tendency, not a remembered series of particular past incidents.",
+      "explanation": "忘れるものです presents forgetting unused words as a characteristic tendency. It is not an instruction to forget, nor a guarantee about every word or person. 忘れた would shift the account toward a past pattern rather than the general tendency requested here.",
+      "answer": "mono-characteristic",
+      "acceptedAnswers": ["忘れる", "わすれる"],
+      "options": [
+        { "id": "mono-characteristic", "label": "忘れる", "rationale": "Presents forgetting as the characteristic tendency being described." },
+        { "id": "mono-recollection", "label": "忘れた", "rationale": "Would shift toward a past-looking account instead of the requested general tendency." }
+      ]
+    },
+    {
+      "id": "mono-characteristic-gathering",
+      "target": "mono-characteristic",
+      "relationship": "characteristic-vs-recollection",
+      "prompt": "楽しそうな場所には、自然と人が____ものです。",
+      "translation": "Use 集まる (あつまる, gather) in dictionary or た form only; ものです is already printed. Describe a familiar tendency, not a personal recollection: people naturally tend to gather in places that look enjoyable.",
+      "evidence": "The speaker describes an expected tendency rather than remembering a particular group of people.",
+      "explanation": "集まるものです treats gathering as a familiar tendency in these circumstances. This is a description, not an order that everyone must gather. 集まった would give a past-looking account, which is outside the explicitly requested frame.",
+      "answer": "mono-characteristic",
+      "acceptedAnswers": ["集まる", "あつまる"],
+      "options": [
+        { "id": "mono-characteristic", "label": "集まる", "rationale": "States the tendency for people to gather." },
+        { "id": "mono-recollection", "label": "集まった", "rationale": "Would look back on gathering rather than state the requested general tendency." }
+      ]
+    },
+    {
+      "id": "mono-characteristic-winter-snow",
+      "target": "mono-characteristic",
+      "relationship": "characteristic-vs-recollection",
+      "prompt": "この地方では、冬になるとたくさん雪が____ものです。今も毎年そうです。",
+      "translation": "Use 降る (ふる, fall as rain or snow) in dictionary or た form only; ものです is already printed. Describe a characteristic current pattern, not a nostalgic recollection: this region normally gets a lot of snow in winter, and still does each year.",
+      "evidence": "The speaker explicitly presents the snowfall as a current characteristic of the region.",
+      "explanation": "雪が降るものです presents the snowfall as an expected local pattern. 降ったものです could look back on past winters, but that is not the current-pattern frame requested. The second sentence supplies a fact about this example's region; ものです itself is not a universal guarantee about weather.",
+      "answer": "mono-characteristic",
+      "acceptedAnswers": ["降る", "ふる"],
+      "options": [
+        { "id": "mono-characteristic", "label": "降る", "rationale": "Presents the snowfall as the stated current pattern." },
+        { "id": "mono-recollection", "label": "降った", "rationale": "Would shift to a retrospective account rather than the requested current characterization." }
+      ]
+    },
+    {
+      "id": "mono-recollection-forgotten-umbrellas",
+      "target": "mono-recollection",
+      "relationship": "characteristic-vs-recollection",
+      "prompt": "学生のころは、よく傘を電車に____ものです。今では、乗るたびに荷物を確かめています。",
+      "translation": "Use 忘れる (わすれる, forget) in dictionary or た form only; ものです is already printed. Reflect on a recurring past experience, not a general rule: I remember often leaving my umbrella on the train as a student. These days I check my belongings whenever I ride.",
+      "evidence": "The student-period reference and よく identify a recurring past experience being reflected on.",
+      "explanation": "忘れたものです recalls the speaker's repeated past forgetting. The recollection need not concern a pleasant habit. 忘れる would instead sound like a general characterization, not this requested reflection. The current checking habit is stated separately; たものです alone does not prove an old behavior has entirely ceased.",
+      "answer": "mono-recollection",
+      "acceptedAnswers": ["忘れた", "わすれた"],
+      "options": [
+        { "id": "mono-characteristic", "label": "忘れる", "rationale": "Would characterize a tendency rather than give the requested remembered past habit." },
+        { "id": "mono-recollection", "label": "忘れた", "rationale": "Recalls the repeated past incidents." }
+      ]
+    },
+    {
+      "id": "mono-recollection-festival-square",
+      "target": "mono-recollection",
+      "relationship": "characteristic-vs-recollection",
+      "prompt": "昔は夏祭りの夜になると、みんなでこの広場に____ものです。今でもあのにぎやかさを思い出します。",
+      "translation": "Use 集まる (あつまる, gather) in dictionary or た form only; ものです is already printed. Recall a recurring past experience, not a general rule: we used to gather in this square on summer festival nights. I still remember the lively atmosphere.",
+      "evidence": "昔, the recurring festival occasion and the remembered atmosphere establish a reflective past account.",
+      "explanation": "集まったものです looks back on the repeated gatherings. It does not merely say there has been at least one gathering, as an experience statement with たことがある could. 集まる would give a different, general characterization rather than the requested recollection.",
+      "answer": "mono-recollection",
+      "acceptedAnswers": ["集まった", "あつまった"],
+      "options": [
+        { "id": "mono-characteristic", "label": "集まる", "rationale": "Would state a characteristic pattern instead of the requested recollection." },
+        { "id": "mono-recollection", "label": "集まった", "rationale": "Recalls the gatherings as a familiar past experience." }
+      ]
+    },
+    {
+      "id": "mono-recollection-childhood-snow",
+      "target": "mono-recollection",
+      "relationship": "characteristic-vs-recollection",
+      "prompt": "子どものころは、毎年冬になるとこの町に雪がたくさん____ものです。雪遊びをした日々が懐かしいです。",
+      "translation": "Use 降る (ふる, fall as rain or snow) in dictionary or た form only; ものです is already printed. Give a nostalgic recollection, not a current generalization: I remember the heavy snow every winter in this town when I was a child, and fondly recall playing in it.",
+      "evidence": "Childhood, repeated winters and the explicitly nostalgic final sentence establish the recollection.",
+      "explanation": "降ったものです recalls the repeated snowfall in the speaker's childhood. It does not by itself assert that the town no longer gets snow. 降る would characterize a general pattern, rather than give the nostalgic past account explicitly requested.",
+      "answer": "mono-recollection",
+      "acceptedAnswers": ["降った", "ふった"],
+      "options": [
+        { "id": "mono-characteristic", "label": "降る", "rationale": "Would state a general pattern rather than the requested nostalgic recollection." },
+        { "id": "mono-recollection", "label": "降った", "rationale": "Looks back on the childhood winters." }
+      ]
+    },
+    {
+      "id": "mono-reason-sleepy",
+      "target": "mono-personal-reason",
+      "relationship": "personal-reason-vs-conclusion",
+      "prompt": "「もう寝るの？」「だって、眠い____。」",
+      "translation": "Use exactly one of these endings as written: もの, もん, わけだ. Complete a casual personal justification, not a conclusion drawn from new information. 'Are you going to bed already?' 'Because I am sleepy!'",
+      "evidence": "The reply offers the speaker's own sleepiness as the personal reason for going to bed.",
+      "explanation": "Sentence-final もの or もん gives an emotionally colored personal reason here. もん is especially casual and can sound insistent or childlike. わけだ would frame an explanatory conclusion instead. から and longer endings such as んだもん can also give reasons in other formulations, but the task explicitly supplies three exact endings.",
+      "answer": "mono-personal-reason",
+      "acceptedAnswers": ["もの", "もん"],
+      "options": [
+        { "id": "mono-personal-reason", "label": "もん", "rationale": "Supplies the requested casual personal reason; もの is accepted too." },
+        { "id": "wake-conclusion", "label": "わけだ", "rationale": "Would present a conclusion rather than the requested casual justification." }
+      ]
+    },
+    {
+      "id": "mono-reason-unread-kanji",
+      "target": "mono-personal-reason",
+      "relationship": "personal-reason-vs-conclusion",
+      "prompt": "「どうしてこの言葉を声に出して読まないの？」「だって、この漢字がまだ読めない____。」",
+      "translation": "Use exactly one of these endings as written: もの, もん, わけだ. Complete a casual personal justification, not a conclusion drawn from new information. 'Why will you not read this word aloud?' 'Because I cannot read this kanji yet!'",
+      "evidence": "The speaker offers their own present inability as the reason for not reading aloud.",
+      "explanation": "読めないもの and 読めないもん both supply the requested personal reason. The negative verb is already complete before the ending. This is not a statement about a physical thing called もの, or a new conclusion that the speaker has just derived from evidence.",
+      "answer": "mono-personal-reason",
+      "acceptedAnswers": ["もの", "もん"],
+      "options": [
+        { "id": "mono-personal-reason", "label": "もの", "rationale": "Gives the personal reason for not reading aloud; もん is accepted too." },
+        { "id": "wake-conclusion", "label": "わけだ", "rationale": "Would shift to an explanatory-conclusion frame rather than the requested justification." }
+      ]
+    },
+    {
+      "id": "mono-reason-first-time",
+      "target": "mono-personal-reason",
+      "relationship": "personal-reason-vs-conclusion",
+      "prompt": "「どうして使い方が分からないの？」「だって、初めてなんだ____。」",
+      "translation": "Use exactly one of these endings as written: もの, もん, わけだ. Complete a casual personal justification, not a conclusion drawn from new information. 'Why do you not know how to use it?' 'Because this is my first time!'",
+      "evidence": "The speaker uses being a first-time user as a personal justification for not knowing the procedure.",
+      "explanation": "初めてなんだもの and 初めてなんだもん both fit. The printed なんだ contains な + ん + だ, with ん from explanatory の; the added もん is the contraction of もの, not another contraction of の. わけだ does not fit after this printed なんだ, and is not the requested personal-reason ending.",
+      "answer": "mono-personal-reason",
+      "acceptedAnswers": ["もの", "もん"],
+      "options": [
+        { "id": "mono-personal-reason", "label": "もん", "rationale": "Completes the casual explanatory ending; もの is accepted too." },
+        { "id": "wake-conclusion", "label": "わけだ", "rationale": "Does not fit the supplied なんだ frame or the requested personal justification." }
+      ]
+    },
+    {
+      "id": "wake-conclusion-short-sleep",
+      "target": "wake-conclusion",
+      "relationship": "personal-reason-vs-conclusion",
+      "prompt": "昨夜は三時間しか寝なかったの？　それなら、今眠い____。",
+      "translation": "Use exactly one of these endings as written: もの, もん, わけだ. Express a conclusion that explains an observed state, not a casual personal justification. 'You only slept three hours last night? No wonder you are sleepy now.'",
+      "evidence": "The short sleep provides a newly understood explanation for the other person's sleepiness.",
+      "explanation": "眠いわけだ expresses the resulting understanding: now the sleepiness makes sense. Sentence-final もの or もん could give a personal reason in a different exchange, but that is not the conclusion frame requested here. わけだ is not merely a more formal spelling of もん.",
+      "answer": "wake-conclusion",
+      "acceptedAnswers": ["わけだ"],
+      "options": [
+        { "id": "mono-personal-reason", "label": "もん", "rationale": "Would give a casual personal-reason ending instead of the requested explanatory conclusion." },
+        { "id": "wake-conclusion", "label": "わけだ", "rationale": "Expresses the understanding reached from the sleep information." }
+      ]
+    },
+    {
+      "id": "wake-conclusion-untaught-kanji",
+      "target": "wake-conclusion",
+      "relationship": "personal-reason-vs-conclusion",
+      "prompt": "この漢字はまだ習っていないのか。なるほど、読めない____。",
+      "translation": "Use exactly one of these endings as written: もの, もん, わけだ. Express a conclusion that explains an observed state, not a casual personal justification. 'Oh, you have not learned this kanji yet. Now I understand why you cannot read it.'",
+      "evidence": "The speaker understands the already observed difficulty after learning that the character has not been taught.",
+      "explanation": "読めないわけだ expresses the newly understood explanation for this person's difficulty. It does not establish a universal rule that an untaught character can never be guessed. もの and もん are available personal-reason endings in other exchanges, but do not give the specifically requested conclusion here.",
+      "answer": "wake-conclusion",
+      "acceptedAnswers": ["わけだ"],
+      "options": [
+        { "id": "mono-personal-reason", "label": "もの", "rationale": "Would use a personal-reason ending rather than the requested resulting understanding." },
+        { "id": "wake-conclusion", "label": "わけだ", "rationale": "Connects the observed difficulty with the newly supplied explanation." }
+      ]
+    },
+    {
+      "id": "wake-conclusion-siblings",
+      "target": "wake-conclusion",
+      "relationship": "personal-reason-vs-conclusion",
+      "prompt": "二人は兄弟なんですね。なるほど、顔が似ている____。",
+      "translation": "Use exactly one of these endings as written: もの, もん, わけだ. Express a conclusion that explains an observed state, not a casual personal justification. 'So they are brothers. No wonder their faces look alike.'",
+      "evidence": "Learning that the two people are brothers explains the resemblance already noticed.",
+      "explanation": "似ているわけだ gives an explanatory conclusion from the newly supplied relationship. The speaker is not using their own resemblance as a personal excuse. Other inference expressions exist, but this task restricts the ending to the three written forms.",
+      "answer": "wake-conclusion",
+      "acceptedAnswers": ["わけだ"],
+      "options": [
+        { "id": "mono-personal-reason", "label": "もん", "rationale": "Does not provide the requested conclusion from the newly learned relationship." },
+        { "id": "wake-conclusion", "label": "わけだ", "rationale": "Expresses why the previously observed resemblance now makes sense." }
+      ]
+    }
+  ]
+}

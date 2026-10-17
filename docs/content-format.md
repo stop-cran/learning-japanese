@@ -169,6 +169,130 @@ In particular, 消したまま keeps the lights off while 消さないまま lea
 polarity with an on/off state or a positive/negative evaluation. Noun/adjective and conformity uses of まま are not covered by
 these exercises. Natural whole-sentence alternatives are not wrong merely because they fall outside this controlled task.
 
+`formal-nouns-before-after.json` adds six まえ／あと examples, three per target; see the
+[source record](grammar-before-after-sources.json). The paired frames include a past report, a future plan and a recurring
+noun-based event. Verb blanks contain the supplied verb's dictionary/た form plus まえ／あと; noun blanks contain only
+まえ／あと after a printed の. Every blank is followed by a printed に. The question-side instruction names the permitted
+forms; feedback does not pretend that other temporal expressions are globally invalid. Preserve the past まえ case and the
+future あと case: the subordinate verb form is not chosen merely from the main sentence's past or future time.
+
+`formal-nouns-time.json` adds 27 exercises on time windows, periods and occasions; see the
+[source record](grammar-time-sources.json). It contains six うち, six あいだ, three dedicated とき, three ころ,
+three たび and six shared occasion-reference exercises. Preserve the different task contracts:
+
+- うち blanks take only the supplied verb's ない or ている form, including kana and conversational contractions.
+  They contrast acting before a change with a change developing during activity. Other natural うち patterns are not
+  invalid merely because they are outside this visible form restriction.
+- あいだ blanks include は or に. The question explicitly requests an interval-as-topic frame or a within-interval frame;
+  it does not claim that an event's duration alone makes the other construction ungrammatical.
+- とき／ころ questions explicitly request either a neutral time reference or approximate framing. Keep the long
+  student-period とき and short arrival-window ころ cases; duration alone does not distinguish the words.
+- たび／occasion questions visibly restrict the noun list and specify whether the missing noun must explicitly quantify
+  every occurrence. All six occasion-reference items accept とき／おり／さい in kana and kanji within one answer class.
+  The correct-option models use おり three times and さい three times; those are shared practice, not six independently
+  discriminated noun targets. A habit can be described with an occasion word without that word itself meaning "every."
+
+Do not remove question-side framing instructions while retaining the narrower answer sets. These examples practice
+controlled realization and explicit meaning choices, not unrestricted discrimination of every construction in the article.
+The ごろ suffix, additional temporal uses, and the remaining non-temporal inventory still need further exercises.
+
+`formal-nouns-causes.json` adds 24 exercises on ため, おかげ, せい, かわり and ついで; see the
+[source record](grammar-causes-sources.json). Three ため purpose items contrast with three completed-cause items through
+the supplied verb's dictionary/た form. The past hotel-booking item still requires a dictionary-form future goal.
+Three further causal ため items use nonpast adjectives, including a favorable result; causal ため does not universally
+require past tense or an undesirable outcome.
+
+Three おかげ and three せい items explicitly request literal, non-sarcastic attribution. The two rain contexts deliberately
+give the same kind of cause different evaluations. Keep the irony restriction visible rather than pretending おかげ
+cannot introduce a bad result.
+
+Three replacement and three secondary-errand items request かわり／ついで; the context specifies whether the main activity
+is replaced or actually happens with an added task. ついで has event-noun, dictionary-verb and past-verb frames.
+The library example explicitly excludes the exchange meaning of かわり. Three additional かわり items compare compensating
+trade-offs with the adjective-cause items; their instructions distinguish weighing two features from asserting causation.
+Keep kana/kanji spellings and literal blank boundaries. These are controlled contrasts, not a rule that alternative cause,
+purpose, occasion or contrast constructions are globally invalid.
+
+`formal-nouns-conditions.json` adds 12 exercises: three each for evidence-scope かぎり, procedural ばあい,
+affirmative maintained conditions and negative necessary conditions; see the
+[source record](grammar-conditions-sources.json). Seven noun-choice questions visibly request かぎり or ばあい and
+the intended frame. In particular, 必要なかぎり can have a continuing-condition reading; the registration question
+explicitly requests a procedural case instead. Do not turn that task restriction into a general ungrammaticality claim.
+That item and the continuing-study item use their own reciprocal maintained-condition-versus-case relationship;
+do not label their contrast as an evidential limit.
+
+The other five blanks take only the supplied verb's dictionary or ない form, with かぎり already printed.
+Every negative-condition example includes an additional requirement: a prerequisite can be necessary without being
+sufficient. Preserve these details so that "cannot unless" is not taught as a guarantee that satisfying one prerequisite
+ensures the desired result. Knowledge, investigation and visual-inspection limits are distinct from continuing conditions.
+
+`formal-nouns-relations.json` adds 12 exercises: three とおり／どおり, three もと, three additive うえ and three
+preliminary-step うえ; see the [source record](grammar-relations-sources.json). The noun-choice items visibly request
+とおり or もと with any needed の or voicing, while に／で is already printed. Preserve both 予定どおり and 予定のとおり
+as answers for the direct-noun blank. After a supplied の or a verb clause, the answer is unvoiced とおり without another の.
+The もと unit covers guidance/supervision in two items and shared conditions in one, not three of each sub-use;
+accepted spellings are もと／下／許.
+
+The other six blanks request only に or で after printed うえ, with the intended additive or preliminary-step relationship
+specified before answering. Keep the past-verb additive item: a past form does not automatically choose で.
+Keep the future consultation/decision item: 相談した is completed relative to the decision, not necessarily already completed
+at the present time. Additive omission of に is grammatical but outside the explicit two-particle task.
+Other うえで uses and alternative formulations with よう, まま, あと or ほか are not globally rejected by these controlled questions.
+
+`formal-nouns-comparisons.json` adds 12 exercises: three ほう comparisons, three ほか additions, and three each for
+affirmative and negative advice with ほうがいい; see the [source record](grammar-comparisons-sources.json).
+The noun questions visibly request ほう or ほか. Each has noun + の and directly attached verb-clause frames.
+Keep the comparison direction consistent with the explicitly stated weights, temperatures and journey times.
+The additive ほか items do not claim coverage of its exclusion or no-other-option constructions.
+
+The advice questions request only the supplied verb's た or ない form, with ほうがいい already printed.
+The same three verbs appear in both directions; retain the future 明日行った case and the だ-ending 読んだ form.
+Dictionary-form affirmative ほうがいい and other advice expressions can be valid outside the visible form restriction.
+The negative spoiler example discourages reading the commentary, not reading the novel itself.
+
+`formal-nouns-expectations.json` adds 15 exercises; see the [source record](grammar-expectations-sources.json).
+Three わり questions request an assessment without a mocking/reproachful tone; three くせ questions request the
+construction conventionally marking reproach itself. Keep those restrictions visible. わり and のに can be critical in
+context, while くせに can occur in teasing praise; neither anger nor a favorable result alone guarantees a unique answer.
+Accept わり／割／割り and くせ／癖 in their literal noun blanks.
+
+Six eventual-outcome items group すえ／あげく in one answer class, with three model options for each noun.
+They include four past-verb and two event-noun frames, all with an unfavorable outcome after effort or difficulty.
+Do not count them as independently discriminated nouns, or infer that すえ is positive-only or あげく bad-result-only.
+The spelling list includes 末, 挙句, 挙げ句, 揚句 and 揚げ句.
+Three additive うえ items supply the other side of the relationship. All nine questions restrict the noun list and supply に;
+the past-verb office example still asks for an additive relation rather than an eventual outcome.
+
+`formal-nouns-mono.json` adds 12 exercises; see the [source record](grammar-mono-sources.json).
+Three characteristic-pattern and three recurring-past recollection questions request only the supplied verb's dictionary
+or た form before printed ものです. The same three verbs occur on both sides. Keep the question-side framing:
+not every ものだ is normative, not every たものだ is a nostalgic habit, and a recalled pattern need not be pleasant or
+have completely ceased. This is controlled practice, not exhaustive coverage of もの.
+
+Three personal-reason and three explanatory-conclusion questions explicitly restrict the endings to the written forms
+もの, もん and わけだ. Both reason endings share one answer class. Keep the personal-justification versus resulting-understanding
+instruction visible, and do not generalize it into a ban on other explanatory uses of わけ.
+The first-time question already prints なんだ; accept only もの／もん after it.
+Other spellings, から and longer んだもの／んだもん formulations are outside the explicit task, not globally wrong.
+
+`particle-neighbors.json` adds 15 exercises; see the [source record](grammar-particles-sources.json).
+Six approximate-quantity items group ほど, くらい／ぐらい and ばかり in one answer class, including the dictionary spellings
+程, 位, 許り and 許. The question names uncontracted forms and requests approximation rather than limitation.
+Three model buttons show ほど and three show くらい／ぐらい; ばかり is an accepted alternative.
+These are not independently discriminated word targets or a universal equivalence across other constructions.
+
+The three だけ limitation questions deliberately name only ほど／くらい／ぐらい／だけ as candidates and request an
+exclusive limit. Keep that narrower list visible: ばかり can also express limitation in other formulations.
+Accept だけ／丈; do not interpret だけ as necessarily a small amount.
+
+Three activity-concentration and three recent-completion questions request only the supplied verb's て or た form,
+with ばかりです printed. The same three verbs appear on both sides; preserve the で／だ forms too.
+てばかりです can describe activity concentration without an obligatory いる.
+Keep the enjoyable holiday-reading case and yesterday's completed novel: criticism and a fixed immediate-recency cutoff
+are not universal requirements. Alternative whole constructions such as たところです remain outside this verb-form blank,
+not globally invalid. The family inventory now appears in practice, but additional degree, comparison, extent and other
+sub-uses still need dedicated coverage.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.

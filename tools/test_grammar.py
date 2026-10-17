@@ -313,5 +313,862 @@ class GrammarStatesCoverageTests(unittest.TestCase):
                 self.assertIn("た or ない form only.", exercise["translation"], exercise["id"])
 
 
+class GrammarBeforeAfterCoverageTests(unittest.TestCase):
+    FORMS = {
+        "mae-snack-cleaning": {"食べるまえ", "食べる前", "たべるまえ", "たべる前"},
+        "ato-snack-cleaning": {"食べたあと", "食べた後", "たべたあと", "たべた後"},
+        "mae-departure-call": {"出るまえ", "出る前", "でるまえ", "でる前"},
+        "ato-departure-call": {"出たあと", "出た後", "でたあと", "でた後"},
+        "mae-class-library": {"まえ", "前"},
+        "ato-class-library": {"あと", "後"},
+    }
+    TARGETS = {"mae": "mae-before-event", "ato": "ato-after-event"}
+
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        data = json.loads((root / "grammar" / "formal-nouns-before-after.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in data["exercises"]}
+
+    def test_three_paired_examples_per_target(self):
+        self.assertEqual(set(self.FORMS), set(self.exercises))
+        counts = Counter(exercise["target"] for exercise in self.exercises.values())
+        self.assertEqual({target: 3 for target in self.TARGETS.values()}, counts)
+        for identifier, exercise in self.exercises.items():
+            self.assertEqual(self.TARGETS[identifier.split("-")[0]], exercise["target"], identifier)
+            self.assertEqual("before-vs-after", exercise["relationship"], identifier)
+            self.assertEqual(
+                set(self.TARGETS.values()), {option["id"] for option in exercise["options"]}, identifier,
+            )
+
+    def test_exact_blank_spans_accept_kana_and_kanji(self):
+        for identifier, answers in self.FORMS.items():
+            exercise = self.exercises[identifier]
+            self.assertIn("____に", exercise["prompt"], identifier)
+            self.assertEqual(answers, set(exercise["acceptedAnswers"]), identifier)
+
+    def test_past_future_and_noun_contexts_are_retained(self):
+        self.assertIn("昨日", self.exercises["mae-snack-cleaning"]["prompt"])
+        self.assertIn("明日", self.exercises["ato-departure-call"]["prompt"])
+        for prefix in self.TARGETS:
+            self.assertIn("授業の____に", self.exercises[f"{prefix}-class-library"]["prompt"])
+
+    def test_controlled_instruction_remains_question_visible(self):
+        for identifier, exercise in self.exercises.items():
+            if identifier.endswith("class-library"):
+                instruction = "Use まえ or あと; の and に are already printed."
+            else:
+                verb = "食べる" if identifier.endswith("snack-cleaning") else "出る"
+                self.assertIn(f"Use the dictionary or た form of {verb}", exercise["translation"], identifier)
+                instruction = "+ まえ or あと; に is already printed."
+            self.assertIn(instruction, exercise["translation"], identifier)
+
+
+class GrammarTimeCoverageTests(unittest.TestCase):
+    TARGET_COUNTS = {
+        "uchi-before-change": 3,
+        "uchi-change-during": 3,
+        "aida-duration-topic": 3,
+        "aida-event-within": 3,
+        "toki-reference": 3,
+        "koro-approximate": 3,
+        "tabi-each-occasion": 3,
+        "occasion-reference": 6,
+    }
+    UCHI_FORMS = {
+        "uchi-before-rain-laundry": ("降る", {"降らない", "ふらない"}),
+        "uchi-before-forgetting-number": ("忘れる", {"忘れない", "わすれない"}),
+        "uchi-before-shop-crowds": ("混む", {"混まない", "込まない", "こまない"}),
+        "uchi-during-reading-interest": ("読む", {"読んでいる", "よんでいる", "読んでる", "よんでる"}),
+        "uchi-during-conversation-relaxing": ("話す", {"話している", "はなしている", "話してる", "はなしてる"}),
+        "uchi-during-walking-familiarity": ("歩く", {"歩いている", "あるいている", "歩いてる", "あるいてる"}),
+    }
+
+    def setUp(self):
+        self.root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((self.root / "grammar" / "formal-nouns-time.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_target_counts_and_relationship_directions(self):
+        counts = Counter(exercise["target"] for exercise in self.exercises.values())
+        self.assertEqual(self.TARGET_COUNTS, counts)
+        self.assertEqual(27, len(self.data["exercises"]))
+        relationships = {
+            relationship["id"]: set(relationship["constructions"])
+            for relationship in self.data["relationships"]
+        }
+        self.assertEqual(4, len(relationships))
+        for exercise in self.exercises.values():
+            self.assertEqual(
+                relationships[exercise["relationship"]],
+                {option["id"] for option in exercise["options"]},
+                exercise["id"],
+            )
+
+    def test_uchi_exact_forms_and_visible_restriction(self):
+        for identifier, (verb, answers) in self.UCHI_FORMS.items():
+            exercise = self.exercises[identifier]
+            self.assertIn("____うちに", exercise["prompt"], identifier)
+            self.assertEqual(answers, set(exercise["acceptedAnswers"]), identifier)
+            self.assertIn(f"Use {verb} (", exercise["translation"], identifier)
+            self.assertIn(
+                "in its ない or ている form only; contractions accepted.",
+                exercise["translation"],
+                identifier,
+            )
+
+    def test_aida_pairs_include_particles_and_question_side_framing(self):
+        frames = (("meeting-wait", "meeting-call"), ("nap-quiet", "nap-parcel"), ("train-seated", "train-message"))
+        expected = {
+            f"aida-{kind}-{frame}"
+            for pair in frames
+            for kind, frame in zip(("topic", "within"), pair)
+        }
+        actual = {identifier for identifier in self.exercises if identifier.startswith("aida-")}
+        self.assertEqual(expected, actual)
+        for identifier in expected:
+            exercise = self.exercises[identifier]
+            topic = exercise["target"] == "aida-duration-topic"
+            self.assertEqual(
+                {"あいだは", "間は"} if topic else {"あいだに", "間に"},
+                set(exercise["acceptedAnswers"]),
+                identifier,
+            )
+            self.assertIn("____、", exercise["prompt"], identifier)
+            self.assertIn("Use あいだは or あいだに only.", exercise["translation"], identifier)
+            self.assertIn(
+                "a topic for" if topic else "not an interval-as-topic construction",
+                exercise["translation"],
+                identifier,
+            )
+
+    def test_toki_koro_spellings_and_non_duration_shortcut_cases(self):
+        for exercise in self.exercises.values():
+            if exercise["target"] not in {"toki-reference", "koro-approximate"}:
+                continue
+            approximate = exercise["target"] == "koro-approximate"
+            self.assertEqual(
+                {"ころ", "頃"} if approximate else {"とき", "時"},
+                set(exercise["acceptedAnswers"]),
+                exercise["id"],
+            )
+            self.assertIn("Use とき or ころ only.", exercise["translation"], exercise["id"])
+            self.assertIn(
+                "Explicitly" if approximate else "without",
+                exercise["translation"],
+                exercise["id"],
+            )
+        self.assertIn("四年間ずっと", self.exercises["toki-student-years"]["prompt"])
+        self.assertIn("少し前", self.exercises["koro-arrival-rain"]["prompt"])
+        self.assertIn("少しあと", self.exercises["koro-arrival-rain"]["prompt"])
+        self.assertIn("静かな____", self.exercises["toki-quiet-reading"]["prompt"])
+
+    def test_occasion_equivalents_share_one_option_and_keep_quantification_visible(self):
+        models = Counter()
+        for exercise in self.exercises.values():
+            if exercise["relationship"] != "occasion-vs-each-time":
+                continue
+            self.assertIn(
+                "Use one noun from たび／とき／おり／さい, in kana or kanji.",
+                exercise["translation"],
+                exercise["id"],
+            )
+            self.assertIn("____に", exercise["prompt"], exercise["id"])
+            self.assertIn("explicitly", exercise["translation"].lower(), exercise["id"])
+            if exercise["target"] == "occasion-reference":
+                self.assertEqual(
+                    {"とき", "時", "おり", "折", "さい", "際"},
+                    set(exercise["acceptedAnswers"]),
+                    exercise["id"],
+                )
+                self.assertIn("neutral and formal wording are both accepted", exercise["translation"])
+                correct = next(option for option in exercise["options"] if option["id"] == exercise["answer"])
+                models[correct["label"]] += 1
+            else:
+                self.assertEqual({"たび", "度"}, set(exercise["acceptedAnswers"]), exercise["id"])
+        self.assertEqual({"おり": 3, "さい": 3}, models)
+
+    def test_source_record_covers_the_actual_targets(self):
+        sources = json.loads((self.root / "docs" / "grammar-time-sources.json").read_text(encoding="utf-8"))
+        self.assertEqual(self.data["id"], sources["setId"])
+        self.assertEqual(self.data["article"], sources["article"])
+        self.assertEqual(
+            set(self.TARGET_COUNTS),
+            {target for source in sources["sources"] for target in source["supports"]},
+        )
+
+
+class GrammarCausesCoverageTests(unittest.TestCase):
+    TARGET_COUNTS = {
+        "tame-purpose": 3, "tame-cause": 6, "okage-credit": 3, "sei-blame": 3,
+        "kawari-substitution": 3, "tsuide-secondary": 3, "kawari-tradeoff": 3,
+    }
+    TAME_FORMS = {
+        "printer": ("買う", {"買う", "かう"}, {"買った", "かった"}),
+        "moving": (
+            "引っ越す",
+            {"引っ越す", "引越す", "引っこす", "ひっこす"},
+            {"引っ越した", "引越した", "引っこした", "ひっこした"},
+        ),
+        "seminar": ("参加する", {"参加する", "さんかする"}, {"参加した", "さんかした"}),
+    }
+    KAWARI_SPELLINGS = {"かわり", "代わり", "代り", "替わり", "替り"}
+
+    def setUp(self):
+        self.root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((self.root / "grammar" / "formal-nouns-causes.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_target_counts_and_relationship_directions(self):
+        self.assertEqual(24, len(self.data["exercises"]))
+        self.assertEqual(
+            self.TARGET_COUNTS,
+            Counter(exercise["target"] for exercise in self.exercises.values()),
+        )
+        relationships = {
+            relationship["id"]: set(relationship["constructions"])
+            for relationship in self.data["relationships"]
+        }
+        self.assertEqual(4, len(relationships))
+        for exercise in self.exercises.values():
+            self.assertEqual(
+                relationships[exercise["relationship"]],
+                {option["id"] for option in exercise["options"]},
+                exercise["id"],
+            )
+
+    def test_tame_goal_and_realized_cause_keep_exact_verb_spans(self):
+        for frame, (verb, purpose, cause) in self.TAME_FORMS.items():
+            for kind, answers in (("purpose", purpose), ("cause", cause)):
+                identifier = f"tame-{kind}-{frame}"
+                exercise = self.exercises[identifier]
+                self.assertEqual(f"tame-{kind}", exercise["target"], identifier)
+                self.assertIn("____ために", exercise["prompt"], identifier)
+                self.assertEqual(answers, set(exercise["acceptedAnswers"]), identifier)
+                self.assertIn(f"Use {verb} (", exercise["translation"], identifier)
+                self.assertIn("in dictionary or た form only", exercise["translation"], identifier)
+        past_preparation = self.exercises["tame-purpose-seminar"]
+        self.assertIn("来週", past_preparation["prompt"])
+        self.assertIn("昨日", past_preparation["prompt"])
+        self.assertIn("参加する", past_preparation["acceptedAnswers"])
+
+    def test_credit_blame_accept_spellings_and_exclude_sarcasm_visibly(self):
+        for exercise in self.exercises.values():
+            if exercise["relationship"] != "credit-vs-blame":
+                continue
+            credit = exercise["target"] == "okage-credit"
+            self.assertEqual(
+                {"おかげ", "お陰", "お蔭", "御陰", "御蔭"} if credit else {"せい", "所為"},
+                set(exercise["acceptedAnswers"]),
+                exercise["id"],
+            )
+            self.assertIn("____で", exercise["prompt"], exercise["id"])
+            self.assertIn(
+                "Use おかげ or せい, in kana or kanji, literally and without sarcasm.",
+                exercise["translation"],
+                exercise["id"],
+            )
+        self.assertIn("雨の____で", self.exercises["okage-rain-flowers"]["prompt"])
+        self.assertIn("雨の____で", self.exercises["sei-rain-concert"]["prompt"])
+        self.assertIn("静かな____で", self.exercises["okage-quiet-room"]["prompt"])
+        self.assertIn("うるさい____で", self.exercises["sei-noisy-room"]["prompt"])
+        self.assertIn("忘れた____で", self.exercises["sei-forgotten-room-key"]["prompt"])
+
+    def test_substitution_and_secondary_errands_keep_noun_and_verb_frames(self):
+        for exercise in self.exercises.values():
+            if exercise["relationship"] != "substitution-vs-secondary":
+                continue
+            substitution = exercise["target"] == "kawari-substitution"
+            self.assertEqual(
+                self.KAWARI_SPELLINGS if substitution else {"ついで", "序で", "序"},
+                set(exercise["acceptedAnswers"]),
+                exercise["id"],
+            )
+            self.assertIn("____に", exercise["prompt"], exercise["id"])
+            self.assertIn(
+                "Use かわり or ついで, in kana or kanji; に is already printed.",
+                exercise["translation"],
+                exercise["id"],
+            )
+        self.assertIn("買い物の____に", self.exercises["tsuide-shopping-post-office"]["prompt"])
+        self.assertIn("返した____に", self.exercises["tsuide-library-card"]["prompt"])
+        self.assertIn("散歩する____に", self.exercises["tsuide-walk-letter"]["prompt"])
+        self.assertIn("not as payment or an exchange", self.exercises["tsuide-library-card"]["translation"])
+        self.assertIn("田中さんの____に", self.exercises["kawari-colleague-meeting"]["prompt"])
+
+    def test_cause_and_tradeoff_frames_preserve_present_adjective_causes(self):
+        for frame in ("high-rent", "quiet-location", "infrequent-bus"):
+            for target, answers in (("tame-cause", {"ため", "為"}), ("kawari-tradeoff", self.KAWARI_SPELLINGS)):
+                identifier = f"{target}-{frame}"
+                exercise = self.exercises[identifier]
+                self.assertEqual(target, exercise["target"], identifier)
+                self.assertEqual(answers, set(exercise["acceptedAnswers"]), identifier)
+                self.assertIn(
+                    "Use ため or かわり, in kana or kanji; に is already printed.",
+                    exercise["translation"],
+                    identifier,
+                )
+                self.assertIn(
+                    "State a cause" if target == "tame-cause" else "without claiming",
+                    exercise["translation"],
+                    identifier,
+                )
+        self.assertIn("高い____に", self.exercises["tame-cause-high-rent"]["prompt"])
+        self.assertIn("静かな____に", self.exercises["tame-cause-quiet-location"]["prompt"])
+        self.assertIn("よく眠れます", self.exercises["tame-cause-quiet-location"]["prompt"])
+
+    def test_sources_cover_all_declared_targets(self):
+        sources = json.loads((self.root / "docs" / "grammar-causes-sources.json").read_text(encoding="utf-8"))
+        self.assertEqual(self.data["id"], sources["setId"])
+        self.assertEqual(self.data["article"], sources["article"])
+        self.assertEqual(
+            set(self.TARGET_COUNTS),
+            {target for source in sources["sources"] for target in source["supports"]},
+        )
+
+
+class GrammarConditionsCoverageTests(unittest.TestCase):
+    TARGETS = {
+        "kagiri-evidence-scope", "baai-case",
+        "kagiri-maintained-condition", "kagiri-negative-condition",
+    }
+    VERB_FORMS = {
+        "kagiri-maintained-clock": ("動く", {"動く", "うごく"}),
+        "kagiri-maintained-promise": ("守る", {"守る", "まもる"}),
+        "kagiri-unless-reservation": ("予約する", {"予約しない", "よやくしない"}),
+        "kagiri-unless-fee": ("払う", {"払わない", "はらわない"}),
+        "kagiri-unless-correction": ("直す", {"直さない", "なおさない"}),
+    }
+
+    def setUp(self):
+        self.root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((self.root / "grammar" / "formal-nouns-conditions.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_three_examples_per_function_and_complete_relationships(self):
+        self.assertEqual(12, len(self.data["exercises"]))
+        self.assertEqual(
+            {target: 3 for target in self.TARGETS},
+            Counter(exercise["target"] for exercise in self.exercises.values()),
+        )
+        relationships = {
+            relationship["id"]: set(relationship["constructions"])
+            for relationship in self.data["relationships"]
+        }
+        self.assertEqual(3, len(relationships))
+        for exercise in self.exercises.values():
+            self.assertEqual(
+                relationships[exercise["relationship"]],
+                {option["id"] for option in exercise["options"]},
+                exercise["id"],
+            )
+
+    def test_scope_and_case_spellings_and_frames(self):
+        for exercise in self.exercises.values():
+            if exercise["relationship"] not in {"evidence-scope-vs-case", "maintained-condition-vs-case"}:
+                continue
+            kagiri = exercise["target"].startswith("kagiri-")
+            self.assertEqual(
+                {"かぎり", "限り"} if kagiri else {"ばあい", "場合"},
+                set(exercise["acceptedAnswers"]),
+                exercise["id"],
+            )
+            self.assertIn(
+                "Use かぎり or ばあい, in kana or kanji.",
+                exercise["translation"],
+                exercise["id"],
+            )
+            if exercise["target"] == "kagiri-evidence-scope":
+                span = "____では"
+            elif exercise["target"] == "kagiri-maintained-condition":
+                span = "____、"
+            else:
+                span = "____は"
+            self.assertIn(span, exercise["prompt"], exercise["id"])
+        self.assertIn("雨の____は", self.exercises["baai-rain-practice"]["prompt"])
+        self.assertIn("忘れた____は", self.exercises["baai-forgotten-password"]["prompt"])
+        self.assertIn("必要な____は", self.exercises["baai-necessary-registration"]["prompt"])
+        self.assertIn("not a commitment continuing", self.exercises["baai-necessary-registration"]["translation"])
+        for identifier in ("baai-necessary-registration", "kagiri-maintained-study"):
+            exercise = self.exercises[identifier]
+            self.assertEqual("maintained-condition-vs-case", exercise["relationship"], identifier)
+            self.assertEqual(
+                {"kagiri-maintained-condition", "baai-case"},
+                {option["id"] for option in exercise["options"]},
+                identifier,
+            )
+
+    def test_polarity_tasks_keep_exact_forms_and_visible_restriction(self):
+        for identifier, (verb, answers) in self.VERB_FORMS.items():
+            exercise = self.exercises[identifier]
+            target = "kagiri-negative-condition" if identifier.startswith("kagiri-unless-") else "kagiri-maintained-condition"
+            self.assertEqual(target, exercise["target"], identifier)
+            self.assertEqual(answers, set(exercise["acceptedAnswers"]), identifier)
+            self.assertIn("____かぎり", exercise["prompt"], identifier)
+            self.assertIn(f"Use {verb} (", exercise["translation"], identifier)
+            self.assertIn("in dictionary or ない form only", exercise["translation"], identifier)
+
+    def test_negative_conditions_do_not_imply_sufficiency(self):
+        additional_requirements = {
+            "kagiri-unless-reservation": "身分証",
+            "kagiri-unless-fee": "申込書",
+            "kagiri-unless-correction": "必要な書類",
+        }
+        for identifier, requirement in additional_requirements.items():
+            exercise = self.exercises[identifier]
+            self.assertIn(requirement, exercise["prompt"], identifier)
+            self.assertIn("unless", exercise["translation"], identifier)
+            self.assertTrue(all(answer.endswith("ない") for answer in exercise["acceptedAnswers"]), identifier)
+
+    def test_source_record_covers_declared_targets(self):
+        sources = json.loads((self.root / "docs" / "grammar-conditions-sources.json").read_text(encoding="utf-8"))
+        self.assertEqual(self.data["id"], sources["setId"])
+        self.assertEqual(self.data["article"], sources["article"])
+        self.assertEqual(self.TARGETS, {target for source in sources["sources"] for target in source["supports"]})
+
+
+class GrammarRelationsCoverageTests(unittest.TestCase):
+    TARGETS = {"toori-conformity", "moto-governing-context", "ue-addition", "ue-prerequisite"}
+
+    def setUp(self):
+        self.root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((self.root / "grammar" / "formal-nouns-relations.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_three_examples_per_function_and_reciprocal_relationships(self):
+        self.assertEqual(12, len(self.data["exercises"]))
+        self.assertEqual(
+            {target: 3 for target in self.TARGETS},
+            Counter(exercise["target"] for exercise in self.exercises.values()),
+        )
+        self.assertEqual(2, len(self.data["relationships"]))
+        for relationship in self.data["relationships"]:
+            exercises = [exercise for exercise in self.exercises.values() if exercise["relationship"] == relationship["id"]]
+            self.assertEqual(
+                {target: 3 for target in relationship["constructions"]},
+                Counter(exercise["target"] for exercise in exercises),
+            )
+            for exercise in exercises:
+                self.assertEqual(
+                    set(relationship["constructions"]),
+                    {option["id"] for option in exercise["options"]},
+                    exercise["id"],
+                )
+
+    def test_toori_spans_keep_voicing_and_noun_connector_alternatives(self):
+        expected = {
+            "toori-instruction-manual": ("説明書の____に", {"とおり", "通り"}),
+            "toori-planned-departure": ("予定____に", {"どおり", "通り", "のとおり", "の通り"}),
+            "toori-demonstrated-movement": ("した____に", {"とおり", "通り"}),
+        }
+        for identifier, (frame, answers) in expected.items():
+            exercise = self.exercises[identifier]
+            self.assertIn(frame, exercise["prompt"], identifier)
+            self.assertEqual(answers, set(exercise["acceptedAnswers"]), identifier)
+            self.assertEqual("toori-conformity", exercise["target"], identifier)
+
+    def test_moto_guidance_and_conditions_accept_both_kanji_spellings(self):
+        for identifier in ("moto-teacher-guidance", "moto-equal-conditions", "moto-supervised-work"):
+            exercise = self.exercises[identifier]
+            self.assertEqual("moto-governing-context", exercise["target"], identifier)
+            self.assertEqual({"もと", "下", "許"}, set(exercise["acceptedAnswers"]), identifier)
+            self.assertIn("の____で", exercise["prompt"], identifier)
+        self.assertIn("温度も時間もそろえます", self.exercises["moto-equal-conditions"]["prompt"])
+
+    def test_noun_tasks_keep_visible_list_and_connection_instruction(self):
+        for exercise in self.exercises.values():
+            if exercise["relationship"] != "conformity-vs-governing-context":
+                continue
+            self.assertIn(
+                "Use とおり or もと (kanji allowed); include の or voicing only if needed.",
+                exercise["translation"],
+                exercise["id"],
+            )
+
+    def test_ue_particles_preserve_relationship_and_relative_time(self):
+        for exercise in self.exercises.values():
+            if exercise["relationship"] != "ue-addition-vs-prerequisite":
+                continue
+            additive = exercise["target"] == "ue-addition"
+            self.assertEqual({"に"} if additive else {"で"}, set(exercise["acceptedAnswers"]), exercise["id"])
+            self.assertEqual({"に", "で"}, {option["label"] for option in exercise["options"]}, exercise["id"])
+            self.assertIn("うえ____", exercise["prompt"], exercise["id"])
+            self.assertIn("Use に or で only; うえ is already printed.", exercise["translation"], exercise["id"])
+        self.assertIn("安いうえ____", self.exercises["ue-addition-price-portions"]["prompt"])
+        self.assertIn("静かなうえ____", self.exercises["ue-addition-quiet-location"]["prompt"])
+        past_addition = self.exercises["ue-addition-shop-improvements"]
+        self.assertIn("したうえ____", past_addition["prompt"])
+        self.assertIn("without specifying an order", past_addition["translation"])
+        future_step = self.exercises["ue-prerequisite-family-plan"]
+        self.assertIn("相談したうえ____", future_step["prompt"])
+        self.assertIn("明日", future_step["prompt"])
+        self.assertIn("not fixed yet", future_step["translation"])
+        self.assertIn("検討（けんとう）のうえ____", self.exercises["ue-prerequisite-considered-plan"]["prompt"])
+
+    def test_source_record_covers_declared_targets(self):
+        sources = json.loads((self.root / "docs" / "grammar-relations-sources.json").read_text(encoding="utf-8"))
+        self.assertEqual(self.data["id"], sources["setId"])
+        self.assertEqual(self.data["article"], sources["article"])
+        self.assertEqual(self.TARGETS, {target for source in sources["sources"] for target in source["supports"]})
+
+
+class GrammarComparisonsCoverageTests(unittest.TestCase):
+    TARGETS = {"hou-comparison", "hoka-addition", "hou-advice-do", "hou-advice-not-do"}
+    ADVICE_FORMS = {
+        "hou-advice-reserve-seat": ("予約する", "hou-advice-do", {"予約した", "よやくした"}),
+        "hou-advice-visit-open-day": ("行く", "hou-advice-do", {"行った", "いった"}),
+        "hou-advice-read-instructions": ("読む", "hou-advice-do", {"読んだ", "よんだ"}),
+        "hou-advice-wait-to-reserve": ("予約する", "hou-advice-not-do", {"予約しない", "よやくしない"}),
+        "hou-advice-avoid-closed-day": ("行く", "hou-advice-not-do", {"行かない", "いかない"}),
+        "hou-advice-avoid-spoilers": ("読む", "hou-advice-not-do", {"読まない", "よまない"}),
+    }
+
+    def setUp(self):
+        self.root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((self.root / "grammar" / "formal-nouns-comparisons.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_three_examples_per_target_and_reciprocal_relationships(self):
+        self.assertEqual(12, len(self.exercises))
+        self.assertEqual(
+            {target: 3 for target in self.TARGETS},
+            Counter(exercise["target"] for exercise in self.exercises.values()),
+        )
+        self.assertEqual(2, len(self.data["relationships"]))
+        for relationship in self.data["relationships"]:
+            exercises = [exercise for exercise in self.exercises.values() if exercise["relationship"] == relationship["id"]]
+            self.assertEqual(
+                {target: 3 for target in relationship["constructions"]},
+                Counter(exercise["target"] for exercise in exercises),
+            )
+            for exercise in exercises:
+                self.assertEqual(
+                    set(relationship["constructions"]),
+                    {option["id"] for option in exercise["options"]},
+                    exercise["id"],
+                )
+
+    def test_noun_and_verb_frames_keep_exact_noun_spellings(self):
+        for exercise in self.exercises.values():
+            if exercise["relationship"] != "comparison-vs-addition":
+                continue
+            comparison = exercise["target"] == "hou-comparison"
+            self.assertEqual(
+                {"ほう", "方"} if comparison else {"ほか", "他", "外"},
+                set(exercise["acceptedAnswers"]),
+                exercise["id"],
+            )
+            self.assertIn("____が" if comparison else "____に", exercise["prompt"], exercise["id"])
+            self.assertIn("Use ほう or ほか, in kana or kanji.", exercise["translation"], exercise["id"])
+        self.assertIn("青いかばんの____が", self.exercises["hou-comparison-bag-weight"]["prompt"])
+        self.assertIn("乗る____が", self.exercises["hou-comparison-bus-walk"]["prompt"])
+        self.assertIn("パンの____に", self.exercises["hoka-addition-bakery-products"]["prompt"])
+        self.assertIn("教えている____に", self.exercises["hoka-addition-teaching-interpreting"]["prompt"])
+
+    def test_advice_keeps_both_directions_and_visible_form_restriction(self):
+        for identifier, (verb, target, answers) in self.ADVICE_FORMS.items():
+            exercise = self.exercises[identifier]
+            self.assertEqual(target, exercise["target"], identifier)
+            self.assertEqual(answers, set(exercise["acceptedAnswers"]), identifier)
+            self.assertIn("____ほうがいい", exercise["prompt"], identifier)
+            self.assertIn(f"Use {verb} (", exercise["translation"], identifier)
+            self.assertIn("in た or ない form only", exercise["translation"], identifier)
+
+    def test_comparison_facts_and_advice_reference_points_are_preserved(self):
+        self.assertIn("赤いかばんは二キロ、青いかばんは一キロ", self.exercises["hou-comparison-bag-weight"]["prompt"])
+        self.assertIn("昼は二十五度、夜は十五度", self.exercises["hou-comparison-day-night"]["prompt"])
+        self.assertIn("歩くと三十分、バスなら十分", self.exercises["hou-comparison-bus-walk"]["prompt"])
+        future_advice = self.exercises["hou-advice-visit-open-day"]
+        self.assertIn("明日____", future_advice["prompt"])
+        self.assertIn("行った", future_advice["acceptedAnswers"])
+        self.assertIn("読んだ", self.exercises["hou-advice-read-instructions"]["acceptedAnswers"])
+        self.assertIn("小説を読み終わるまで", self.exercises["hou-advice-avoid-spoilers"]["prompt"])
+
+    def test_source_record_covers_declared_targets(self):
+        sources = json.loads((self.root / "docs" / "grammar-comparisons-sources.json").read_text(encoding="utf-8"))
+        self.assertEqual(self.data["id"], sources["setId"])
+        self.assertEqual(self.data["article"], sources["article"])
+        self.assertEqual(self.TARGETS, {target for source in sources["sources"] for target in source["supports"]})
+
+
+class GrammarExpectationsCoverageTests(unittest.TestCase):
+    TARGET_COUNTS = {"wari-expectation": 3, "kuse-reproach": 3, "process-outcome": 6, "ue-addition": 3}
+    OUTCOME_ANSWERS = {"すえ", "末", "あげく", "挙句", "挙げ句", "揚句", "揚げ句"}
+
+    def setUp(self):
+        self.root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((self.root / "grammar" / "formal-nouns-expectations.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_target_counts_and_reciprocal_relationships(self):
+        self.assertEqual(15, len(self.exercises))
+        self.assertEqual(self.TARGET_COUNTS, Counter(exercise["target"] for exercise in self.exercises.values()))
+        self.assertEqual(2, len(self.data["relationships"]))
+        for relationship in self.data["relationships"]:
+            exercises = [exercise for exercise in self.exercises.values() if exercise["relationship"] == relationship["id"]]
+            self.assertEqual(set(relationship["constructions"]), {exercise["target"] for exercise in exercises})
+            for exercise in exercises:
+                self.assertEqual(
+                    set(relationship["constructions"]),
+                    {option["id"] for option in exercise["options"]},
+                    exercise["id"],
+                )
+
+    def test_expectation_reproach_tasks_keep_visible_scope_and_spellings(self):
+        for exercise in self.exercises.values():
+            if exercise["relationship"] != "expectation-vs-reproach":
+                continue
+            expectation = exercise["target"] == "wari-expectation"
+            self.assertEqual(
+                {"わり", "割", "割り"} if expectation else {"くせ", "癖"},
+                set(exercise["acceptedAnswers"]),
+                exercise["id"],
+            )
+            self.assertIn("____に", exercise["prompt"], exercise["id"])
+            self.assertIn("Use わり or くせ, in hiragana or kanji.", exercise["translation"], exercise["id"])
+            self.assertIn(
+                "without a mocking or reproachful tone" if expectation else "construction that itself conventionally marks reproach",
+                exercise["translation"],
+                exercise["id"],
+            )
+        self.assertIn("値段の____に", self.exercises["wari-inexpensive-umbrella"]["prompt"])
+        self.assertIn("作った____に", self.exercises["wari-first-cake"]["prompt"])
+        self.assertIn("責任者の____に", self.exercises["kuse-avoiding-responsibility"]["prompt"])
+
+    def test_sue_ageku_share_answers_with_three_model_options_each(self):
+        models = Counter()
+        for exercise in self.exercises.values():
+            if exercise["target"] != "process-outcome":
+                continue
+            self.assertEqual(self.OUTCOME_ANSWERS, set(exercise["acceptedAnswers"]), exercise["id"])
+            correct = next(option for option in exercise["options"] if option["id"] == exercise["answer"])
+            models[correct["label"]] += 1
+            self.assertIn("Describe the eventual outcome of the process", exercise["translation"], exercise["id"])
+        self.assertEqual({"すえ": 3, "あげく": 3}, models)
+
+    def test_outcome_noun_and_verb_frames_keep_literal_spans(self):
+        noun_frames = {"process-outcome-cancelled-event", "process-outcome-failed-negotiation"}
+        outcomes = [exercise for exercise in self.exercises.values() if exercise["target"] == "process-outcome"]
+        self.assertEqual(6, len(outcomes))
+        for exercise in outcomes:
+            if exercise["id"] in noun_frames:
+                frame = "の____に"
+            elif exercise["id"] == "process-outcome-sold-out-tickets":
+                frame = "だ____に"
+            else:
+                frame = "た____に"
+            self.assertIn(frame, exercise["prompt"], exercise["id"])
+        self.assertIn("話し合いの____に", self.exercises["process-outcome-cancelled-event"]["prompt"])
+        self.assertIn("交渉の____に", self.exercises["process-outcome-failed-negotiation"]["prompt"])
+
+    def test_additions_do_not_become_outcomes_from_tense_alone(self):
+        for exercise in self.exercises.values():
+            if exercise["relationship"] != "outcome-vs-addition":
+                continue
+            self.assertIn(
+                "Use すえ, あげく or うえ, in hiragana or kanji; に is already printed.",
+                exercise["translation"],
+                exercise["id"],
+            )
+            self.assertIn("____に", exercise["prompt"], exercise["id"])
+            if exercise["target"] == "ue-addition":
+                self.assertEqual({"うえ", "上"}, set(exercise["acceptedAnswers"]), exercise["id"])
+        self.assertIn("明るい____に", self.exercises["ue-addition-bright-spacious-room"]["prompt"])
+        self.assertIn("平らな____に", self.exercises["ue-addition-flat-quiet-road"]["prompt"])
+        past_addition = self.exercises["ue-addition-office-improvements"]
+        self.assertIn("移した____に", past_addition["prompt"])
+        self.assertIn("not an outcome of the move", past_addition["translation"])
+
+    def test_source_record_covers_declared_targets(self):
+        sources = json.loads((self.root / "docs" / "grammar-expectations-sources.json").read_text(encoding="utf-8"))
+        self.assertEqual(self.data["id"], sources["setId"])
+        self.assertEqual(self.data["article"], sources["article"])
+        self.assertEqual(set(self.TARGET_COUNTS), {target for source in sources["sources"] for target in source["supports"]})
+
+
+class GrammarMonoCoverageTests(unittest.TestCase):
+    TARGET_COUNTS = {
+        "mono-characteristic": 3,
+        "mono-recollection": 3,
+        "mono-personal-reason": 3,
+        "wake-conclusion": 3,
+    }
+
+    def setUp(self):
+        self.root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((self.root / "grammar" / "formal-nouns-mono.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_target_counts_and_reciprocal_relationships(self):
+        self.assertEqual(12, len(self.exercises))
+        self.assertEqual(self.TARGET_COUNTS, Counter(exercise["target"] for exercise in self.exercises.values()))
+        self.assertEqual(2, len(self.data["relationships"]))
+        for relationship in self.data["relationships"]:
+            exercises = [exercise for exercise in self.exercises.values() if exercise["relationship"] == relationship["id"]]
+            self.assertEqual(set(relationship["constructions"]), {exercise["target"] for exercise in exercises})
+            for exercise in exercises:
+                self.assertEqual(
+                    set(relationship["constructions"]),
+                    {option["id"] for option in exercise["options"]},
+                    exercise["id"],
+                )
+
+    def test_characteristic_recollection_pairs_preserve_exact_verb_forms(self):
+        expected = {
+            "mono-characteristic-unused-words": {"忘れる", "わすれる"},
+            "mono-characteristic-gathering": {"集まる", "あつまる"},
+            "mono-characteristic-winter-snow": {"降る", "ふる"},
+            "mono-recollection-forgotten-umbrellas": {"忘れた", "わすれた"},
+            "mono-recollection-festival-square": {"集まった", "あつまった"},
+            "mono-recollection-childhood-snow": {"降った", "ふった"},
+        }
+        for exercise_id, answers in expected.items():
+            exercise = self.exercises[exercise_id]
+            self.assertEqual(answers, set(exercise["acceptedAnswers"]), exercise_id)
+            self.assertIn("____ものです", exercise["prompt"], exercise_id)
+            self.assertIn("dictionary or た form only; ものです is already printed.", exercise["translation"], exercise_id)
+
+    def test_recollection_does_not_require_pleasantness_or_cessation(self):
+        umbrella = self.exercises["mono-recollection-forgotten-umbrellas"]
+        self.assertIn("recurring past experience", umbrella["translation"])
+        self.assertIn("need not concern a pleasant habit", umbrella["explanation"])
+        self.assertIn("ceased", umbrella["explanation"])
+        snow = self.exercises["mono-recollection-childhood-snow"]
+        self.assertIn("nostalgic recollection", snow["translation"])
+        self.assertIn("does not by itself assert", snow["explanation"])
+        self.assertIn("今も毎年そうです", self.exercises["mono-characteristic-winter-snow"]["prompt"])
+
+    def test_personal_reasons_and_conclusions_keep_literal_ending_contract(self):
+        for exercise in self.exercises.values():
+            if exercise["relationship"] != "personal-reason-vs-conclusion":
+                continue
+            personal_reason = exercise["target"] == "mono-personal-reason"
+            self.assertEqual(
+                {"もの", "もん"} if personal_reason else {"わけだ"},
+                set(exercise["acceptedAnswers"]),
+                exercise["id"],
+            )
+            self.assertIn(
+                "Use exactly one of these endings as written: もの, もん, わけだ.",
+                exercise["translation"],
+                exercise["id"],
+            )
+            self.assertIn(
+                "Complete a casual personal justification" if personal_reason else "Express a conclusion",
+                exercise["translation"],
+                exercise["id"],
+            )
+
+    def test_first_time_reason_does_not_duplicate_printed_nanda(self):
+        exercise = self.exercises["mono-reason-first-time"]
+        self.assertIn("初めてなんだ____", exercise["prompt"])
+        self.assertEqual({"もの", "もん"}, set(exercise["acceptedAnswers"]))
+        self.assertIn("ん from explanatory の", exercise["explanation"])
+        self.assertIn("contraction of もの", exercise["explanation"])
+
+    def test_source_record_covers_declared_targets(self):
+        sources = json.loads((self.root / "docs" / "grammar-mono-sources.json").read_text(encoding="utf-8"))
+        self.assertEqual(self.data["id"], sources["setId"])
+        self.assertEqual(self.data["article"], sources["article"])
+        self.assertEqual(set(self.TARGET_COUNTS), {target for source in sources["sources"] for target in source["supports"]})
+
+
+class GrammarParticleCoverageTests(unittest.TestCase):
+    TARGET_COUNTS = {
+        "approximate-quantity": 6,
+        "dake-limit": 3,
+        "bakari-concentration": 3,
+        "bakari-recent-completion": 3,
+    }
+    APPROXIMATION_ANSWERS = {"ほど", "程", "くらい", "ぐらい", "位", "ばかり", "許り", "許"}
+
+    def setUp(self):
+        self.root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((self.root / "grammar" / "particle-neighbors.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_target_counts_and_reciprocal_relationships(self):
+        self.assertEqual(15, len(self.exercises))
+        self.assertEqual(self.TARGET_COUNTS, Counter(exercise["target"] for exercise in self.exercises.values()))
+        self.assertEqual(2, len(self.data["relationships"]))
+        for relationship in self.data["relationships"]:
+            exercises = [exercise for exercise in self.exercises.values() if exercise["relationship"] == relationship["id"]]
+            self.assertEqual(set(relationship["constructions"]), {exercise["target"] for exercise in exercises})
+            for exercise in exercises:
+                self.assertEqual(
+                    set(relationship["constructions"]),
+                    {option["id"] for option in exercise["options"]},
+                    exercise["id"],
+                )
+
+    def test_approximation_answers_are_shared_not_competing_options(self):
+        models = Counter()
+        for exercise in self.exercises.values():
+            if exercise["target"] != "approximate-quantity":
+                continue
+            self.assertEqual(self.APPROXIMATION_ANSWERS, set(exercise["acceptedAnswers"]), exercise["id"])
+            self.assertIn(
+                "Use ほど, くらい, ぐらい, ばかり or だけ, uncontracted, in hiragana or kanji.",
+                exercise["translation"],
+                exercise["id"],
+            )
+            self.assertIn("Mark an approximate quantity, not an exclusive limit", exercise["translation"], exercise["id"])
+            correct = next(option for option in exercise["options"] if option["id"] == exercise["answer"])
+            models[correct["label"]] += 1
+            distractors = {option["label"] for option in exercise["options"] if option["id"] != exercise["answer"]}
+            self.assertTrue(self.APPROXIMATION_ANSWERS.isdisjoint(distractors), exercise["id"])
+        self.assertEqual({"ほど": 3, "くらい": 2, "ぐらい": 1}, models)
+
+    def test_limits_keep_their_narrower_visible_candidate_list(self):
+        for exercise in self.exercises.values():
+            if exercise["target"] != "dake-limit":
+                continue
+            self.assertEqual({"だけ", "丈"}, set(exercise["acceptedAnswers"]), exercise["id"])
+            self.assertIn(
+                "Use ほど, くらい, ぐらい or だけ, in hiragana or kanji.",
+                exercise["translation"],
+                exercise["id"],
+            )
+            self.assertIn("Mark an exclusive limit, not an estimate", exercise["translation"], exercise["id"])
+        self.assertIn("三人目には別の券が必要", self.exercises["dake-limit-admission-ticket"]["prompt"])
+        self.assertIn("二個でも四個でもなく、三個", self.exercises["dake-limit-three-balls"]["prompt"])
+        self.assertIn("五分を過ぎたら", self.exercises["dake-limit-five-minute-break"]["prompt"])
+
+    def test_bakari_pairs_keep_literal_te_ta_forms(self):
+        expected = {
+            "bakari-concentration-snacking": {"食べて", "たべて"},
+            "bakari-concentration-holiday-reading": {"読んで", "よんで"},
+            "bakari-concentration-weekend-play": {"遊んで", "あそんで"},
+            "bakari-recent-completion-dinner": {"食べた", "たべた"},
+            "bakari-recent-completion-yesterday-book": {"読んだ", "よんだ"},
+            "bakari-recent-completion-play": {"遊んだ", "あそんだ"},
+        }
+        for exercise_id, answers in expected.items():
+            exercise = self.exercises[exercise_id]
+            self.assertEqual(answers, set(exercise["acceptedAnswers"]), exercise_id)
+            self.assertIn("____ばかりです", exercise["prompt"], exercise_id)
+            self.assertIn("て or た form only; ばかりです is already printed.", exercise["translation"], exercise_id)
+            self.assertIn(
+                "Describe activity that dominates" if exercise["target"] == "bakari-concentration" else "Describe recent completion",
+                exercise["translation"],
+                exercise_id,
+            )
+
+    def test_activity_and_recency_do_not_acquire_universal_tone_or_clock_limits(self):
+        holiday = self.exercises["bakari-concentration-holiday-reading"]
+        self.assertIn("楽しくて時間を忘れます", holiday["prompt"])
+        self.assertIn("criticism is not mandatory", holiday["explanation"])
+        book = self.exercises["bakari-recent-completion-yesterday-book"]
+        self.assertIn("昨日、最後まで", book["prompt"])
+        self.assertIn("does not impose a fixed seconds-or-minutes cutoff", book["explanation"])
+        self.assertIn("いる is not required", self.exercises["bakari-concentration-snacking"]["explanation"])
+        self.assertIn("食べたところです can also", self.exercises["bakari-recent-completion-dinner"]["explanation"])
+
+    def test_source_record_covers_declared_targets(self):
+        sources = json.loads((self.root / "docs" / "grammar-particles-sources.json").read_text(encoding="utf-8"))
+        self.assertEqual(self.data["id"], sources["setId"])
+        self.assertEqual(self.data["article"], sources["article"])
+        self.assertEqual(set(self.TARGET_COUNTS), {target for source in sources["sources"] for target in source["supports"]})
+
+
 if __name__ == "__main__":
     unittest.main()

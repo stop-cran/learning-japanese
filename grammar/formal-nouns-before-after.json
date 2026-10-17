@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-before-after",
+  "title": "Formal nouns: before and after an event",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "mae-before-event", "label": "まえ: before the event" },
+    { "id": "ato-after-event", "label": "あと: after the event" }
+  ],
+  "relationships": [
+    {
+      "id": "before-vs-after",
+      "label": "the main action precedes / follows the reference event",
+      "constructions": ["mae-before-event", "ato-after-event"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "mae-snack-cleaning",
+      "target": "mae-before-event",
+      "relationship": "before-vs-after",
+      "prompt": "昨日は二時五十分に机をふき、三時におやつを食べ始めました。おやつを____に机をふいたのです。",
+      "translation": "Use the dictionary or た form of 食べる (たべる, eat) + まえ or あと; に is already printed. Yesterday I wiped the table at 2:50 and started my snack at 3:00. I wiped the table before eating the snack.",
+      "evidence": "Wiping at 2:50 precedes the start of eating at 3:00. The two events both happened yesterday, but their relative order is still before.",
+      "explanation": "食べるまえに puts wiping before eating. Use the dictionary form 食べる before まえ even though the main action ふいた is past. 食べたあとに would put wiping after eating, reversing the given order. The answer is the verb plus まえ; do not repeat the supplied に.",
+      "answer": "mae-before-event",
+      "acceptedAnswers": ["食べるまえ", "食べる前", "たべるまえ", "たべる前"],
+      "options": [
+        { "id": "mae-before-event", "label": "食べるまえ", "rationale": "Places the 2:50 wiping before the 3:00 start of eating." },
+        { "id": "ato-after-event", "label": "食べたあと", "rationale": "Would put wiping after the snack, contrary to the stated times." }
+      ]
+    },
+    {
+      "id": "ato-snack-cleaning",
+      "target": "ato-after-event",
+      "relationship": "before-vs-after",
+      "prompt": "昨日は三時におやつを食べ終え、三時十分に机をふきました。おやつを____に机をふいたのです。",
+      "translation": "Use the dictionary or た form of 食べる (たべる, eat) + まえ or あと; に is already printed. Yesterday I finished my snack at 3:00 and wiped the table at 3:10. I wiped the table after eating the snack.",
+      "evidence": "The snack is finished at 3:00; wiping happens ten minutes later, not before or during the meal.",
+      "explanation": "食べたあとに places wiping after eating. The た-form marks eating as completed relative to the wiping. 食べるまえに would reverse that order. 食べたあとで is also a natural whole-sentence formulation, but this question already prints に, so only 食べたあと belongs in the blank.",
+      "answer": "ato-after-event",
+      "acceptedAnswers": ["食べたあと", "食べた後", "たべたあと", "たべた後"],
+      "options": [
+        { "id": "mae-before-event", "label": "食べるまえ", "rationale": "Would put wiping before the snack, but wiping happens after it is finished." },
+        { "id": "ato-after-event", "label": "食べたあと", "rationale": "Matches the completed snack followed by wiping at 3:10." }
+      ]
+    },
+    {
+      "id": "mae-departure-call",
+      "target": "mae-before-event",
+      "relationship": "before-vs-after",
+      "prompt": "明日は九時に家を出る予定です。友達に電話するのは八時四十五分の予定です。家を____に友達に電話します。",
+      "translation": "Use the dictionary or た form of 出る (でる, leave) + まえ or あと; に is already printed. Tomorrow I plan to leave home at 9:00 and call my friend at 8:45. I will call before leaving home.",
+      "evidence": "The planned call is fifteen minutes before departure. Both events are future, but the question asks which one comes first.",
+      "explanation": "出るまえに places the call before leaving. The dictionary form attaches directly to まえ. 出たあとに would also be grammatical in a future plan, but would reverse these particular times; its problem here is the event order, not the fact that tomorrow is still ahead.",
+      "answer": "mae-before-event",
+      "acceptedAnswers": ["出るまえ", "出る前", "でるまえ", "でる前"],
+      "options": [
+        { "id": "mae-before-event", "label": "出るまえ", "rationale": "Matches the 8:45 call followed by the 9:00 departure." },
+        { "id": "ato-after-event", "label": "出たあと", "rationale": "Would schedule the call after leaving, not fifteen minutes before." }
+      ]
+    },
+    {
+      "id": "ato-departure-call",
+      "target": "ato-after-event",
+      "relationship": "before-vs-after",
+      "prompt": "明日は九時に家を出る予定です。友達に電話するのは九時十五分の予定です。家を____に友達に電話します。",
+      "translation": "Use the dictionary or た form of 出る (でる, leave) + まえ or あと; に is already printed. Tomorrow I plan to leave home at 9:00 and call my friend at 9:15. I will call after leaving home.",
+      "evidence": "Departure is planned for 9:00 and the call for 9:15. The departure will already be complete when the future call happens.",
+      "explanation": "出たあとに is correct even with 明日 and 電話します: た expresses completion relative to the call, not necessarily an event before now. Do not change it to 出るあと merely because the whole plan is future. 出るまえに would put the call before departure and contradict the timetable.",
+      "answer": "ato-after-event",
+      "acceptedAnswers": ["出たあと", "出た後", "でたあと", "でた後"],
+      "options": [
+        { "id": "mae-before-event", "label": "出るまえ", "rationale": "Would put the call before the 9:00 departure rather than at 9:15." },
+        { "id": "ato-after-event", "label": "出たあと", "rationale": "Marks departure as completed before the future call." }
+      ]
+    },
+    {
+      "id": "mae-class-library",
+      "target": "mae-before-event",
+      "relationship": "before-vs-after",
+      "prompt": "毎週水曜日、授業（じゅぎょう）は午後一時から二時までです。図書館に寄る（よる）のは、その日の昼十二時半です。私は授業の____に図書館に寄ります。",
+      "translation": "Use まえ or あと; の and に are already printed. Every Wednesday, class runs from 1:00 to 2:00 p.m. I stop at the library at 12:30 p.m. that day. I visit the library before class.",
+      "evidence": "The library visit is at 12:30, before the class begins at 1:00. It is not during the class or after its 2:00 end.",
+      "explanation": "With an event noun, use noun + の + まえに: 授業のまえに. The connector の is already supplied, so enter only まえ or 前. 授業のあとに would put the visit after class, contrary to the stated schedule. The question explicitly requests まえ or あと rather than any temporal expression.",
+      "answer": "mae-before-event",
+      "acceptedAnswers": ["まえ", "前"],
+      "options": [
+        { "id": "mae-before-event", "label": "まえ", "rationale": "Matches visiting at 12:30 before the 1:00 class starts." },
+        { "id": "ato-after-event", "label": "あと", "rationale": "Would put the visit after the class ends at 2:00, not at 12:30." }
+      ]
+    },
+    {
+      "id": "ato-class-library",
+      "target": "ato-after-event",
+      "relationship": "before-vs-after",
+      "prompt": "毎週水曜日、授業（じゅぎょう）は午後一時から二時までです。図書館に寄る（よる）のは、その日の午後二時半です。私は授業の____に図書館に寄ります。",
+      "translation": "Use まえ or あと; の and に are already printed. Every Wednesday, class runs from 1:00 to 2:00 p.m. I stop at the library at 2:30 p.m. that day. I visit the library after class.",
+      "evidence": "The library visit follows the end of the class by half an hour, so the entire class is over before the visit.",
+      "explanation": "授業のあとに places the visit after class. Use の after the noun 授業, but do not type it again because it is printed. あと specifies later order; it does not itself require the very next instant, so the half-hour gap fits. 授業のまえに would give the opposite order.",
+      "answer": "ato-after-event",
+      "acceptedAnswers": ["あと", "後"],
+      "options": [
+        { "id": "mae-before-event", "label": "まえ", "rationale": "Would put the visit before the class starts at 1:00, contrary to the 2:30 visit." },
+        { "id": "ato-after-event", "label": "あと", "rationale": "Matches visiting half an hour after the class has ended." }
+      ]
+    }
+  ]
+}

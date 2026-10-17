@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-relations",
+  "title": "Formal nouns: models, conditions and linked steps",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "toori-conformity", "label": "conform to a stated model or plan (とおり／どおり)" },
+    { "id": "moto-governing-context", "label": "under guidance, supervision or conditions (もと)" },
+    { "id": "ue-addition", "label": "add another fact (うえに)" },
+    { "id": "ue-prerequisite", "label": "complete a preliminary step before acting (うえで)" }
+  ],
+  "relationships": [
+    {
+      "id": "conformity-vs-governing-context",
+      "label": "follow a model / act under guidance or conditions",
+      "constructions": ["toori-conformity", "moto-governing-context"]
+    },
+    {
+      "id": "ue-addition-vs-prerequisite",
+      "label": "add another fact / establish a preliminary step",
+      "constructions": ["ue-addition", "ue-prerequisite"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "toori-instruction-manual",
+      "target": "toori-conformity",
+      "relationship": "conformity-vs-governing-context",
+      "prompt": "部品の順番を変えずに、説明書の____に並べてください。",
+      "translation": "Use とおり or もと (kanji allowed); include の or voicing only if needed. Arrange the parts exactly as the instructions specify, without changing their order.",
+      "evidence": "The instruction manual supplies the model for the order of the parts.",
+      "explanation": "説明書のとおりに means in accordance with the instructions. の is already printed, so とおり fills the blank without another の or voicing to どおり. もと describes an encompassing authority or condition, not this requested match to a specified order. ように and, in suitable contexts, まま can also express related conformity meanings; this task explicitly limits the noun list.",
+      "answer": "toori-conformity",
+      "acceptedAnswers": ["とおり", "通り"],
+      "options": [
+        { "id": "toori-conformity", "label": "とおり", "rationale": "Makes the arrangement match the model in the instructions." },
+        { "id": "moto-governing-context", "label": "もと", "rationale": "Does not express the requested match to the specified order." }
+      ]
+    },
+    {
+      "id": "toori-planned-departure",
+      "target": "toori-conformity",
+      "relationship": "conformity-vs-governing-context",
+      "prompt": "予定では九時に出発することになっていました。変更はなく、予定____に九時に出発しました。",
+      "translation": "Use とおり or もと (kanji allowed); include の or voicing only if needed. We were scheduled to leave at nine. There was no change, and we left at nine as planned.",
+      "evidence": "The actual departure time matches the scheduled time.",
+      "explanation": "Directly after 予定, the voiced form is どおり: 予定どおりに. 予定のとおりに is also valid, so のとおり is accepted as the missing span. Both can be written with 通り. The point is correspondence with the plan, not supervision or the circumstances under which an activity takes place.",
+      "answer": "toori-conformity",
+      "acceptedAnswers": ["どおり", "通り", "のとおり", "の通り"],
+      "options": [
+        { "id": "toori-conformity", "label": "どおり", "rationale": "States that the actual departure matched the plan." },
+        { "id": "moto-governing-context", "label": "のもと", "rationale": "Would frame an encompassing context rather than state that the departure matched the plan." }
+      ]
+    },
+    {
+      "id": "toori-demonstrated-movement",
+      "target": "toori-conformity",
+      "relationship": "conformity-vs-governing-context",
+      "prompt": "動かし方を変えずに、私が実演（じつえん）した____に、手を動かしてください。",
+      "translation": "Use とおり or もと (kanji allowed); include の or voicing only if needed. Move your hands exactly as I demonstrated, without changing the movement.",
+      "evidence": "The completed demonstration supplies the movement to reproduce.",
+      "explanation": "A verb clause attaches directly to とおり: 実演したとおりに. Do not add の or voice と to ど after this verb. This asks for conformity to a demonstrated movement, not merely acting under the demonstrator's supervision. 実演したように can give a related formulation, but よう is outside the question's stated list.",
+      "answer": "toori-conformity",
+      "acceptedAnswers": ["とおり", "通り"],
+      "options": [
+        { "id": "toori-conformity", "label": "とおり", "rationale": "Uses the demonstration as the model to reproduce." },
+        { "id": "moto-governing-context", "label": "もと", "rationale": "Does not give the requested conformity construction after 実演した." }
+      ]
+    },
+    {
+      "id": "moto-teacher-guidance",
+      "target": "moto-governing-context",
+      "relationship": "conformity-vs-governing-context",
+      "prompt": "大学では、指導を受けながら、田中先生の____で日本語の発音を研究しています。",
+      "translation": "Use とおり or もと (kanji allowed); include の or voicing only if needed. At university, I am researching Japanese pronunciation under Professor Tanaka's guidance.",
+      "evidence": "The professor provides guidance for the research, rather than being a model of pronunciation to copy.",
+      "explanation": "先生のもとで places the research under the teacher's guidance. Here もと can be written 下 or 許. The construction is noun + のもとで; の and で are already outside the blank. It does not say the researcher must reproduce the teacher's pronunciation or personal manner.",
+      "answer": "moto-governing-context",
+      "acceptedAnswers": ["もと", "下", "許"],
+      "options": [
+        { "id": "toori-conformity", "label": "とおり", "rationale": "Does not express researching under someone's guidance in this frame." },
+        { "id": "moto-governing-context", "label": "もと", "rationale": "Identifies whose guidance the research is conducted under." }
+      ]
+    },
+    {
+      "id": "moto-equal-conditions",
+      "target": "moto-governing-context",
+      "relationship": "conformity-vs-governing-context",
+      "prompt": "二つの材料を公平に比べるため、同じ条件の____で試験を行います。温度も時間もそろえます。",
+      "translation": "Use とおり or もと (kanji allowed); include の or voicing only if needed. To compare two materials fairly, we will test them under the same conditions, using the same temperature and duration.",
+      "evidence": "Equal temperature and duration are the conditions under which both tests take place.",
+      "explanation": "同じ条件のもとで names the conditions governing the tests. もと here is not limited to a person providing guidance, and it does not mean that one material is a model for the other to imitate. 下 and 許 are accepted spellings for this use of もと.",
+      "answer": "moto-governing-context",
+      "acceptedAnswers": ["もと", "下", "許"],
+      "options": [
+        { "id": "toori-conformity", "label": "とおり", "rationale": "Does not supply the requested under-the-same-conditions construction with printed で." },
+        { "id": "moto-governing-context", "label": "もと", "rationale": "Makes the shared experimental conditions the setting for the comparison." }
+      ]
+    },
+    {
+      "id": "moto-supervised-work",
+      "target": "moto-governing-context",
+      "relationship": "conformity-vs-governing-context",
+      "prompt": "作業は責任者（せきにんしゃ）の____で行います。責任者が全体を管理します。",
+      "translation": "Use とおり or もと (kanji allowed); include の or voicing only if needed. The work will be carried out under the person in charge, who will oversee it as a whole.",
+      "evidence": "The person in charge supervises the work as a whole.",
+      "explanation": "責任者のもとで identifies the supervision under which work proceeds. It is not a statement that workers copy that person's movements. Other ways to express supervision exist, but the visible task asks for とおり or もと with the printed connectors.",
+      "answer": "moto-governing-context",
+      "acceptedAnswers": ["もと", "下", "許"],
+      "options": [
+        { "id": "toori-conformity", "label": "とおり", "rationale": "Does not express the requested supervision relation in this frame." },
+        { "id": "moto-governing-context", "label": "もと", "rationale": "Places the work under the stated person's supervision." }
+      ]
+    },
+    {
+      "id": "ue-addition-price-portions",
+      "target": "ue-addition",
+      "relationship": "ue-addition-vs-prerequisite",
+      "prompt": "この店は安いうえ____、料理の量も多いので、よく利用します。",
+      "translation": "Use に or で only; うえ is already printed. Add another favorable feature, rather than a preliminary step: this restaurant is inexpensive and also serves generous portions, so I often eat there.",
+      "evidence": "Low prices and generous portions are two favorable features.",
+      "explanation": "安いうえに adds the generous portions to the low prices. An i-adjective attaches directly to うえ. This is additive うえに, not completing a preliminary action before doing something else. ほか and other additive expressions can occur in other formulations, but cannot replace the requested particle after printed うえ.",
+      "answer": "ue-addition",
+      "acceptedAnswers": ["に"],
+      "options": [
+        { "id": "ue-addition", "label": "に", "rationale": "Adds another favorable feature of the restaurant." },
+        { "id": "ue-prerequisite", "label": "で", "rationale": "The low price is not a completed preliminary step for the portion size." }
+      ]
+    },
+    {
+      "id": "ue-addition-quiet-location",
+      "target": "ue-addition",
+      "relationship": "ue-addition-vs-prerequisite",
+      "prompt": "この会議室は静かなうえ____、駅からも近いので、便利です。",
+      "translation": "Use に or で only; うえ is already printed. Add another favorable feature, rather than a preliminary step: this meeting room is quiet and also close to the station, so it is convenient.",
+      "evidence": "Quietness and proximity to the station are two useful features of the same room.",
+      "explanation": "静かなうえに adds a second feature. A na-adjective needs な here, unlike 安いうえに. Nothing in the sentence presents quietness as an action to complete before the room can be near the station. The question tests the additive ending, not a general rule that every うえ construction uses に.",
+      "answer": "ue-addition",
+      "acceptedAnswers": ["に"],
+      "options": [
+        { "id": "ue-addition", "label": "に", "rationale": "Adds the convenient location to the room's quietness." },
+        { "id": "ue-prerequisite", "label": "で", "rationale": "Does not express the requested addition of a second feature." }
+      ]
+    },
+    {
+      "id": "ue-addition-shop-improvements",
+      "target": "ue-addition",
+      "relationship": "ue-addition-vs-prerequisite",
+      "prompt": "この店は内装（ないそう）を新しくしたうえ____、営業時間も延ばしました。どちらの変化もうれしいです。",
+      "translation": "Use に or で only; うえ is already printed. Add a second welcome change without specifying an order: the shop renovated its interior and also extended its opening hours. I welcome both changes.",
+      "evidence": "The speaker welcomes two changes without presenting one as a required preliminary step for the other.",
+      "explanation": "新しくしたうえに adds another completed change. A past verb before うえ does not automatically require で: the intended relationship matters. 新しくしたうえで could frame the renovation as a preliminary step before extending the hours, but that is not the additive framing explicitly requested here.",
+      "answer": "ue-addition",
+      "acceptedAnswers": ["に"],
+      "options": [
+        { "id": "ue-addition", "label": "に", "rationale": "Adds the longer opening hours as a second welcome change." },
+        { "id": "ue-prerequisite", "label": "で", "rationale": "Would introduce a preliminary-step relation instead of simply adding another change." }
+      ]
+    },
+    {
+      "id": "ue-prerequisite-check-and-sign",
+      "target": "ue-prerequisite",
+      "relationship": "ue-addition-vs-prerequisite",
+      "prompt": "内容の確認を先に済ませる必要があります。内容をよく確認したうえ____、同意書に署名してください。",
+      "translation": "Use に or で only; うえ is already printed. Present checking as a required preliminary step: first check the contents carefully, then sign the consent form.",
+      "evidence": "The instruction expressly requires checking to be completed before signing.",
+      "explanation": "確認したうえで treats the completed check as the basis for the subsequent signature. The た-form is relative to signing; it does not claim that the learner has already checked the contents. うえに would add signing to checking without itself giving the requested preliminary-step relation. あとで is a possible temporal formulation in another task, but うえ is already printed.",
+      "answer": "ue-prerequisite",
+      "acceptedAnswers": ["で"],
+      "options": [
+        { "id": "ue-addition", "label": "に", "rationale": "Would add another action rather than express the required preliminary step." },
+        { "id": "ue-prerequisite", "label": "で", "rationale": "Makes the completed check precede and prepare for signing." }
+      ]
+    },
+    {
+      "id": "ue-prerequisite-family-plan",
+      "target": "ue-prerequisite",
+      "relationship": "ue-addition-vs-prerequisite",
+      "prompt": "旅行の日程はまだ決まっていません。まず家族の希望を聞き、家族と相談したうえ____、明日決めます。",
+      "translation": "Use に or で only; うえ is already printed. Present consultation as a preliminary step before deciding: the travel dates are not fixed yet. I will first hear my family's wishes, consult them, and then decide tomorrow.",
+      "evidence": "Consultation is still to happen and must precede the decision.",
+      "explanation": "相談したうえで marks consultation as completed before the later decision, even though both belong to the plan for the future. Do not choose the subordinate verb form from the present date alone. うえに would give an additive relation; the visible task asks for consultation as the preliminary step.",
+      "answer": "ue-prerequisite",
+      "acceptedAnswers": ["で"],
+      "options": [
+        { "id": "ue-addition", "label": "に", "rationale": "Adds another action but does not itself mark the requested preliminary-step relation." },
+        { "id": "ue-prerequisite", "label": "で", "rationale": "Makes consultation precede and inform the decision." }
+      ]
+    },
+    {
+      "id": "ue-prerequisite-considered-plan",
+      "target": "ue-prerequisite",
+      "relationship": "ue-addition-vs-prerequisite",
+      "prompt": "計画をすぐに実行することはできません。十分な検討（けんとう）のうえ____、実行します。",
+      "translation": "Use に or で only; うえ is already printed. Present thorough consideration as a required preliminary step: we cannot put the plan into action immediately. We will implement it after giving it thorough consideration.",
+      "evidence": "Thorough consideration is required before implementation, rather than simply being an additional activity.",
+      "explanation": "With an event noun, use のうえで: 検討のうえで. This makes consideration a preliminary step before implementation. The printed の belongs to the noun connection, and only で is missing. It is not the additive 上に pattern, nor the physical meaning of being on top of an object.",
+      "answer": "ue-prerequisite",
+      "acceptedAnswers": ["で"],
+      "options": [
+        { "id": "ue-addition", "label": "に", "rationale": "Does not give the explicitly requested preliminary-step relation." },
+        { "id": "ue-prerequisite", "label": "で", "rationale": "Places implementation after the required consideration." }
+      ]
+    }
+  ]
+}

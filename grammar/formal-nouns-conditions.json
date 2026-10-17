@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-conditions",
+  "title": "Formal nouns: evidence, cases and continuing conditions",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "kagiri-evidence-scope", "label": "かぎり: within the available evidence" },
+    { "id": "baai-case", "label": "ばあい: what applies in a particular case" },
+    { "id": "kagiri-maintained-condition", "label": "かぎり: while the affirmative condition holds" },
+    { "id": "kagiri-negative-condition", "label": "ないかぎり: unless the stated action happens" }
+  ],
+  "relationships": [
+    {
+      "id": "evidence-scope-vs-case",
+      "label": "limit the evidence for a claim / identify a case for a rule",
+      "constructions": ["kagiri-evidence-scope", "baai-case"]
+    },
+    {
+      "id": "maintained-condition-vs-case",
+      "label": "maintain a commitment while a condition holds / identify a procedural case",
+      "constructions": ["kagiri-maintained-condition", "baai-case"]
+    },
+    {
+      "id": "kagiri-affirmative-vs-negative",
+      "label": "the affirmative state continues / the required action has not happened",
+      "constructions": ["kagiri-maintained-condition", "kagiri-negative-condition"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "kagiri-evidence-shop-hours",
+      "target": "kagiri-evidence-scope",
+      "relationship": "evidence-scope-vs-case",
+      "prompt": "私が知っている____では、この店は日曜日も開いています。ただ、最近の営業時間は確認していません。",
+      "translation": "Use かぎり or ばあい, in kana or kanji. Limit the claim to what I know, rather than state a rule for a hypothetical case. As far as I know, the shop opens on Sundays too, but I have not checked its recent hours.",
+      "evidence": "The speaker qualifies the evidence available for the claim and acknowledges that it may be outdated.",
+      "explanation": "知っているかぎりでは limits the statement to the speaker's knowledge. It does not guarantee that the hours have not changed. ばあい would frame a case or situation instead of the requested evidence limit. では is already printed, so enter only the noun.",
+      "answer": "kagiri-evidence-scope",
+      "acceptedAnswers": ["かぎり", "限り"],
+      "options": [
+        { "id": "kagiri-evidence-scope", "label": "かぎり", "rationale": "Restricts the assertion to the knowledge the speaker actually has." },
+        { "id": "baai-case", "label": "ばあい", "rationale": "Would introduce a case rather than the requested limit on the evidence." }
+      ]
+    },
+    {
+      "id": "kagiri-evidence-timetable",
+      "target": "kagiri-evidence-scope",
+      "relationship": "evidence-scope-vs-case",
+      "prompt": "今日、公式サイトで調べた____では、最終バスは十時です。ほかの案内はまだ見ていません。",
+      "translation": "Use かぎり or ばあい, in kana or kanji. Limit the report to the information checked, rather than specify what to do in a case. As far as I found on the official website today, the last bus is at ten; I have not checked other notices.",
+      "evidence": "The source and extent of the investigation are expressly limited.",
+      "explanation": "調べたかぎりでは presents the result within the scope of the completed check. The past verb attaches directly: do not add の after 調べた. It is not a promise that every possible source agrees, and it is not a rule conditional on someone checking the site.",
+      "answer": "kagiri-evidence-scope",
+      "acceptedAnswers": ["かぎり", "限り"],
+      "options": [
+        { "id": "kagiri-evidence-scope", "label": "かぎり", "rationale": "States the conclusion within the scope of the actual investigation." },
+        { "id": "baai-case", "label": "ばあい", "rationale": "Would change the framing to a case instead of the requested evidential qualification." }
+      ]
+    },
+    {
+      "id": "kagiri-evidence-box-surface",
+      "target": "kagiri-evidence-scope",
+      "relationship": "evidence-scope-vs-case",
+      "prompt": "箱を外から見た____では、傷はありません。まだ開けていないので、中の物の状態は分かりません。",
+      "translation": "Use かぎり or ばあい, in kana or kanji. Restrict the claim to the visual inspection, rather than formulate a hypothetical case. From looking at the outside, the box has no damage; I have not opened it and do not know the condition of the contents.",
+      "evidence": "Only the outside has been inspected, so the claim must not extend to the unseen contents.",
+      "explanation": "見たかぎりでは limits the evidence to what was seen. This is a scope qualification, not the continuing-condition use of かぎり. ばあい would not itself supply the requested limitation to the inspection's evidence.",
+      "answer": "kagiri-evidence-scope",
+      "acceptedAnswers": ["かぎり", "限り"],
+      "options": [
+        { "id": "kagiri-evidence-scope", "label": "かぎり", "rationale": "Limits the claim to the inspected exterior." },
+        { "id": "baai-case", "label": "ばあい", "rationale": "Does not give the requested 'as far as the inspection shows' qualification." }
+      ]
+    },
+    {
+      "id": "baai-rain-practice",
+      "target": "baai-case",
+      "relationship": "evidence-scope-vs-case",
+      "prompt": "明日の練習についての案内です。雨の____は体育館に集まってください。晴れなら校庭に集まってください。",
+      "translation": "Use かぎり or ばあい, in kana or kanji. Specify what applies in the rainy case, rather than limit the evidence for a claim. For tomorrow's practice, gather in the gym if it rains, and in the schoolyard if it is sunny.",
+      "evidence": "The notice gives different instructions for two possible cases.",
+      "explanation": "雨のばあいは selects the rainy case in this procedure. A noun takes の before ばあい, and that connector is supplied. かぎり is not the requested case expression here. 雨のときは could also be natural wording, but とき is outside this question's stated noun list.",
+      "answer": "baai-case",
+      "acceptedAnswers": ["ばあい", "場合"],
+      "options": [
+        { "id": "kagiri-evidence-scope", "label": "かぎり", "rationale": "Does not provide the requested case expression after 雨の." },
+        { "id": "baai-case", "label": "ばあい", "rationale": "Identifies the rainy case and the instruction that applies to it." }
+      ]
+    },
+    {
+      "id": "baai-forgotten-password",
+      "target": "baai-case",
+      "relationship": "evidence-scope-vs-case",
+      "prompt": "パスワードを忘れた____は、画面の「再設定（さいせってい）」を押してください。覚えている人は、そのまま入力してください。",
+      "translation": "Use かぎり or ばあい, in kana or kanji. Give the procedure for the case of a forgotten password, rather than limit a claim to available evidence. If you have forgotten your password, press 'Reset'; otherwise enter the password you remember.",
+      "evidence": "The instructions distinguish the forgotten-password case from the remembered-password case.",
+      "explanation": "忘れたばあいは introduces the case in which forgetting has occurred. The plain past verb attaches directly, without の or な. The instructions do not assert that every reader has already forgotten a password: a past-form clause can describe a case that may arise.",
+      "answer": "baai-case",
+      "acceptedAnswers": ["ばあい", "場合"],
+      "options": [
+        { "id": "kagiri-evidence-scope", "label": "かぎり", "rationale": "Does not give the requested procedural case expression." },
+        { "id": "baai-case", "label": "ばあい", "rationale": "Selects the procedure for someone in the forgotten-password case." }
+      ]
+    },
+    {
+      "id": "baai-necessary-registration",
+      "target": "baai-case",
+      "relationship": "maintained-condition-vs-case",
+      "prompt": "講座（こうざ）によって手続きが違います。事前登録（じぜんとうろく）が必要な____は、申込書を送ってください。不要なら送らなくてかまいません。",
+      "translation": "Use かぎり or ばあい, in kana or kanji. Identify the case for a procedure, not a commitment continuing while a condition lasts. Procedures differ by course: send the form if advance registration is required; if it is unnecessary, you need not send one.",
+      "evidence": "The learner must choose the relevant branch of a procedure, according to whether registration is required.",
+      "explanation": "必要なばあいは uses な after the na-adjective 必要. 必要なかぎり can express a condition continuing as long as something is necessary, but this controlled question requests the case-based procedural frame. That alternative is not globally ungrammatical; it is a different requested framing.",
+      "answer": "baai-case",
+      "acceptedAnswers": ["ばあい", "場合"],
+      "options": [
+        { "id": "kagiri-maintained-condition", "label": "かぎり", "rationale": "Would suggest a continuing condition, not the requested procedural case frame." },
+        { "id": "baai-case", "label": "ばあい", "rationale": "Identifies the case in which the form must be sent." }
+      ]
+    },
+    {
+      "id": "kagiri-maintained-clock",
+      "target": "kagiri-maintained-condition",
+      "relationship": "kagiri-affirmative-vs-negative",
+      "prompt": "この古い時計は今も正しく動いています。この時計が____かぎり、新しい時計は買わずに使い続けます。",
+      "translation": "Use 動く (うごく, work or move) in dictionary or ない form only; かぎり is already printed. This old clock still works correctly. As long as it works, I will keep using it rather than buy a new one.",
+      "evidence": "Continued use is tied to the clock continuing to work, not to it being broken.",
+      "explanation": "動くかぎり states the affirmative condition for the commitment to keep using the clock. 動かないかぎり would instead make the period of not working the condition. ている forms are natural in other formulations, but this task requests dictionary or ない form only.",
+      "answer": "kagiri-maintained-condition",
+      "acceptedAnswers": ["動く", "うごく"],
+      "options": [
+        { "id": "kagiri-maintained-condition", "label": "動く", "rationale": "Keeps the commitment conditional on the clock working." },
+        { "id": "kagiri-negative-condition", "label": "動かない", "rationale": "Would tie continued use to the clock not working, reversing the stated condition." }
+      ]
+    },
+    {
+      "id": "kagiri-maintained-promise",
+      "target": "kagiri-maintained-condition",
+      "relationship": "kagiri-affirmative-vs-negative",
+      "prompt": "使用後に片づける約束をしています。あなたがその約束を____かぎり、私はこの部屋を貸します。",
+      "translation": "Use 守る (まもる, keep or honor) in dictionary or ない form only; かぎり is already printed. You have promised to tidy up after use. I will lend you this room as long as you keep that promise.",
+      "evidence": "Keeping the promise, not breaking it, is the condition under which the speaker commits to lending the room.",
+      "explanation": "約束を守るかぎり states the condition for the speaker's offer. 守らないかぎり would tie the offer to not keeping the promise, contrary to the English and Japanese setup. Here かぎり concerns a condition, not a limit on what the speaker knows.",
+      "answer": "kagiri-maintained-condition",
+      "acceptedAnswers": ["守る", "まもる"],
+      "options": [
+        { "id": "kagiri-maintained-condition", "label": "守る", "rationale": "Makes keeping the promise the condition for the offer." },
+        { "id": "kagiri-negative-condition", "label": "守らない", "rationale": "Would reverse the condition and connect the offer to not keeping the promise." }
+      ]
+    },
+    {
+      "id": "kagiri-maintained-study",
+      "target": "kagiri-maintained-condition",
+      "relationship": "maintained-condition-vs-case",
+      "prompt": "先生は「あなたが日本語の勉強を続けている____、私も応援します」と言ってくれました。",
+      "translation": "Use かぎり or ばあい, in kana or kanji. Present a commitment maintained as long as a condition continues, not a branch of a procedure. My teacher said, 'As long as you continue studying Japanese, I will support you too.'",
+      "evidence": "The teacher's stated support continues while the learner continues studying.",
+      "explanation": "続けているかぎり maintains the teacher's commitment while the study continues. ばあい could frame the situation as a case in another presentation, but the visible task asks for the continuing-commitment frame. あいだ or うち can express related temporal meanings in suitable formulations; they are outside this question's noun list.",
+      "answer": "kagiri-maintained-condition",
+      "acceptedAnswers": ["かぎり", "限り"],
+      "options": [
+        { "id": "kagiri-maintained-condition", "label": "かぎり", "rationale": "Expresses the requested commitment maintained while the condition continues." },
+        { "id": "baai-case", "label": "ばあい", "rationale": "Would select a case frame rather than explicitly maintain the requested commitment." }
+      ]
+    },
+    {
+      "id": "kagiri-unless-reservation",
+      "target": "kagiri-negative-condition",
+      "relationship": "kagiri-affirmative-vs-negative",
+      "prompt": "この見学会は予約が必要です。____かぎり、参加できません。ただし、予約した人も当日は身分証を見せる必要があります。",
+      "translation": "Use 予約する (よやくする, reserve) in dictionary or ない form only; かぎり is already printed. You cannot attend this tour unless you reserve. A reservation alone is not enough: attendees must also show identification.",
+      "evidence": "Without a reservation attendance is impossible; having one does not remove the additional identification requirement.",
+      "explanation": "予約しないかぎり参加できない means that attendance is impossible while the reservation has not been made. It makes reservation necessary, not sufficient. Do not reverse it into 'everyone who reserves is guaranteed entry.' 予約するかぎり参加できない would instead connect the inability to attend with reserving.",
+      "answer": "kagiri-negative-condition",
+      "acceptedAnswers": ["予約しない", "よやくしない"],
+      "options": [
+        { "id": "kagiri-maintained-condition", "label": "予約する", "rationale": "Would connect inability to attend with reserving, reversing the stated rule." },
+        { "id": "kagiri-negative-condition", "label": "予約しない", "rationale": "States that no reservation means no attendance, without guaranteeing admission after reserving." }
+      ]
+    },
+    {
+      "id": "kagiri-unless-fee",
+      "target": "kagiri-negative-condition",
+      "relationship": "kagiri-affirmative-vs-negative",
+      "prompt": "参加費は前払いです。参加費を____かぎり、道具を借りられません。支払いのほかに、申込書も必要です。",
+      "translation": "Use 払う (はらう, pay) in dictionary or ない form only; かぎり is already printed. The fee must be paid in advance. You cannot borrow the equipment unless you pay it; an application form is required as well.",
+      "evidence": "Nonpayment prevents borrowing, but payment is not the only requirement.",
+      "explanation": "払わないかぎり makes continued nonpayment the condition under which borrowing is unavailable. 払うかぎり would give the wrong polarity. The additional form requirement shows why the negative conditional does not guarantee borrowing merely upon payment.",
+      "answer": "kagiri-negative-condition",
+      "acceptedAnswers": ["払わない", "はらわない"],
+      "options": [
+        { "id": "kagiri-maintained-condition", "label": "払う", "rationale": "Would connect the borrowing prohibition with paying instead of nonpayment." },
+        { "id": "kagiri-negative-condition", "label": "払わない", "rationale": "Correctly makes payment necessary while leaving other requirements intact." }
+      ]
+    },
+    {
+      "id": "kagiri-unless-correction",
+      "target": "kagiri-negative-condition",
+      "relationship": "kagiri-affirmative-vs-negative",
+      "prompt": "申込書には入力の間違いがあります。この間違いを____かぎり、受け付けてもらえません。訂正（ていせい）したあとも、必要な書類の確認があります。",
+      "translation": "Use 直す (なおす, correct) in dictionary or ない form only; かぎり is already printed. The application has an input error. It will not be accepted unless I correct that error; the required documents will still need to be checked afterward.",
+      "evidence": "Leaving the error uncorrected prevents acceptance; correcting it does not bypass the remaining document check.",
+      "explanation": "直さないかぎり gives the necessary correction through a negative condition: if the error remains uncorrected, acceptance is unavailable. 直すかぎり would reverse the intended polarity. The main clause's negative and the verb's negative both matter to the 'cannot unless' meaning.",
+      "answer": "kagiri-negative-condition",
+      "acceptedAnswers": ["直さない", "なおさない"],
+      "options": [
+        { "id": "kagiri-maintained-condition", "label": "直す", "rationale": "Would link nonacceptance with correcting rather than leaving the error uncorrected." },
+        { "id": "kagiri-negative-condition", "label": "直さない", "rationale": "Makes correcting the error necessary, without claiming it is sufficient." }
+      ]
+    }
+  ]
+}

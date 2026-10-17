@@ -1,0 +1,445 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-time",
+  "title": "Formal nouns: time windows, periods and occasions",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "uchi-before-change", "label": "ないうちに: before a change occurs" },
+    { "id": "uchi-change-during", "label": "ているうちに: a change during an activity" },
+    { "id": "aida-duration-topic", "label": "あいだは: the interval as a topic" },
+    { "id": "aida-event-within", "label": "あいだに: an event within the interval" },
+    { "id": "toki-reference", "label": "とき: identify the relevant time" },
+    { "id": "koro-approximate", "label": "ころ: around a time or period" },
+    { "id": "tabi-each-occasion", "label": "たび: explicitly mark each occurrence" },
+    { "id": "occasion-reference", "label": "とき／おり／さい: an occasion, without explicit recurrence" }
+  ],
+  "relationships": [
+    {
+      "id": "uchi-before-vs-during",
+      "label": "act before a change / a change develops during an activity",
+      "constructions": ["uchi-before-change", "uchi-change-during"]
+    },
+    {
+      "id": "aida-topic-vs-within",
+      "label": "present the interval as a topic / locate an event within it",
+      "constructions": ["aida-duration-topic", "aida-event-within"]
+    },
+    {
+      "id": "toki-vs-koro-framing",
+      "label": "name the relevant time / explicitly frame it approximately",
+      "constructions": ["toki-reference", "koro-approximate"]
+    },
+    {
+      "id": "occasion-vs-each-time",
+      "label": "refer to an occasion / explicitly quantify every occurrence",
+      "constructions": ["tabi-each-occasion", "occasion-reference"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "uchi-before-rain-laundry",
+      "target": "uchi-before-change",
+      "relationship": "uchi-before-vs-during",
+      "prompt": "まだ雨は降っていませんが、黒い雲が近づいています。雨が____うちに、洗濯物（せんたくもの）を取り込もう。",
+      "translation": "Use 降る (ふる, rain) in its ない or ている form only; contractions accepted. うちに is already printed. It has not started raining, but dark clouds are approaching. Let's bring in the laundry before it starts to rain.",
+      "evidence": "The rain has not begun; the speaker wants to finish the task before that changes.",
+      "explanation": "降らないうちに means while it is still not raining, hence before rain begins. 降っているうちに would place the task in a period when rain is falling. 降るまえに is another natural way to express the order, but the supplied うちに calls for the negative form in this task.",
+      "answer": "uchi-before-change",
+      "acceptedAnswers": ["降らない", "ふらない"],
+      "options": [
+        { "id": "uchi-before-change", "label": "降らない", "rationale": "Keeps the task inside the current rain-free window." },
+        { "id": "uchi-change-during", "label": "降っている", "rationale": "Would locate the task while rain is falling, not before it starts." }
+      ]
+    },
+    {
+      "id": "uchi-before-forgetting-number",
+      "target": "uchi-before-change",
+      "relationship": "uchi-before-vs-during",
+      "prompt": "聞いた部屋の番号は、今は全部覚えています。でも、あとでは思い出せないかもしれません。____うちに、メモしておきます。",
+      "translation": "Use 忘れる (わすれる, forget) in its ない or ている form only; contractions accepted. うちに is already printed. I still remember the whole room number I was told, but may not remember it later. I will write it down before I forget.",
+      "evidence": "The number is fully remembered now; writing it down is meant to precede possible forgetting.",
+      "explanation": "忘れないうちに identifies the period before the number is forgotten. 忘れている would describe being in a state of having forgotten, which is not the stated situation. This negative うち construction need not assert that forgetting will definitely happen.",
+      "answer": "uchi-before-change",
+      "acceptedAnswers": ["忘れない", "わすれない"],
+      "options": [
+        { "id": "uchi-before-change", "label": "忘れない", "rationale": "Fits recording the information while it is still remembered." },
+        { "id": "uchi-change-during", "label": "忘れている", "rationale": "Would put the action in a state of forgetting rather than the present remembered state." }
+      ]
+    },
+    {
+      "id": "uchi-before-shop-crowds",
+      "target": "uchi-before-change",
+      "relationship": "uchi-before-vs-during",
+      "prompt": "店は今すいています。昼にはお客さんが増えるそうです。店が____うちに、買い物を済ませよう。",
+      "translation": "Use 混む (こむ, become crowded) in its ない or ている form only; contractions accepted. うちに is already printed. The shop is not crowded now, but more customers are expected at noon. Let's finish shopping before it gets crowded.",
+      "evidence": "The desired shopping window is the uncrowded present, before the expected increase in customers.",
+      "explanation": "混まないうちに means before the shop becomes crowded. 混んでいるうちに would instead locate shopping in a crowded period. An affirmative state can also precede うちに, as in すいているうちに, but that uses a different verb from the one requested here.",
+      "answer": "uchi-before-change",
+      "acceptedAnswers": ["混まない", "込まない", "こまない"],
+      "options": [
+        { "id": "uchi-before-change", "label": "混まない", "rationale": "Places shopping before the expected crowded state." },
+        { "id": "uchi-change-during", "label": "混んでいる", "rationale": "Describes the crowded period that the speaker wants to avoid." }
+      ]
+    },
+    {
+      "id": "uchi-during-reading-interest",
+      "target": "uchi-change-during",
+      "relationship": "uchi-before-vs-during",
+      "prompt": "最初はこの小説（しょうせつ）が退屈（たいくつ）でした。でも、五ページ、十ページと実際に____うちに、続きが気になってきました。",
+      "translation": "Use 読む (よむ, read) in its ない or ている form only; contractions accepted. うちに is already printed. At first I found this novel boring. As I actually read five pages, then ten, I became interested in what would happen next.",
+      "evidence": "Reading is taking place, and interest develops over the course of that activity.",
+      "explanation": "読んでいるうちに locates the developing interest within the ongoing reading. Here うちに is not an instruction to act before an opportunity disappears. 読まないうちに would mean before reading or while not reading, contrary to the pages actually being read. The dictionary-form 読む can occur with うちに too, but this controlled task asks for ない or ている.",
+      "answer": "uchi-change-during",
+      "acceptedAnswers": ["読んでいる", "よんでいる", "読んでる", "よんでる"],
+      "options": [
+        { "id": "uchi-before-change", "label": "読まない", "rationale": "Would put the change before reading or in a period without reading." },
+        { "id": "uchi-change-during", "label": "読んでいる", "rationale": "Matches interest developing as the reader proceeds through the pages." }
+      ]
+    },
+    {
+      "id": "uchi-during-conversation-relaxing",
+      "target": "uchi-change-during",
+      "relationship": "uchi-before-vs-during",
+      "prompt": "初めは緊張（きんちょう）していました。でも、先生と十分、二十分と____うちに、だんだん気持ちが楽になりました。",
+      "translation": "Use 話す (はなす, talk) in its ない or ている form only; contractions accepted. うちに is already printed. I was nervous at first. As I talked with the teacher for ten minutes, then twenty, I gradually felt more relaxed.",
+      "evidence": "The conversation is already underway, and relaxation develops as it continues.",
+      "explanation": "話しているうちに presents the change during the conversation. 話さないうちに would instead place it before talking or while no conversation takes place. あいだに can also locate a change within a period in a different formulation; it is not globally incompatible with this kind of event.",
+      "answer": "uchi-change-during",
+      "acceptedAnswers": ["話している", "はなしている", "話してる", "はなしてる"],
+      "options": [
+        { "id": "uchi-before-change", "label": "話さない", "rationale": "Does not match the ten and twenty minutes of conversation already taking place." },
+        { "id": "uchi-change-during", "label": "話している", "rationale": "Locates the gradual relaxation during the ongoing conversation." }
+      ]
+    },
+    {
+      "id": "uchi-during-walking-familiarity",
+      "target": "uchi-change-during",
+      "relationship": "uchi-before-vs-during",
+      "prompt": "引っ越したばかりの町で、最初は道がよく分かりませんでした。毎日あちこちを____うちに、少しずつ道を覚えました。",
+      "translation": "Use 歩く (あるく, walk) in its ない or ている form only; contractions accepted. うちに is already printed. I did not know the streets of the town I had just moved to. Through walking around different parts each day, I gradually learned my way.",
+      "evidence": "Actual repeated walking provides the period over which familiarity develops; the learning does not precede the walks.",
+      "explanation": "歩いているうちに can describe a change developing across repeated activity, not just one uninterrupted walk. 歩かないうちに would locate the learning before walking or while not walking. The context supplies the daily repetition; うちに itself does not mean every single time.",
+      "answer": "uchi-change-during",
+      "acceptedAnswers": ["歩いている", "あるいている", "歩いてる", "あるいてる"],
+      "options": [
+        { "id": "uchi-before-change", "label": "歩かない", "rationale": "Would detach the learning from the actual walks described as its setting." },
+        { "id": "uchi-change-during", "label": "歩いている", "rationale": "Fits familiarity developing over the continuing practice of walking around." }
+      ]
+    },
+    {
+      "id": "aida-topic-meeting-wait",
+      "target": "aida-duration-topic",
+      "relationship": "aida-topic-vs-within",
+      "prompt": "会議は九時から十時まででした。その会議の____、私は隣の部屋でずっと待っていました。会議が終わると帰りました。",
+      "translation": "Use あいだは or あいだに only. Explicitly make the meeting interval a topic for the continuing state, rather than just mark a time window for an event. The meeting ran from nine to ten; throughout that interval I waited in the next room, then went home.",
+      "evidence": "The sentence is to present the entire meeting interval as the topic of the continued waiting, contrasting it with what happened afterward.",
+      "explanation": "あいだは makes the interval a topic: during that period, I kept waiting. あいだに locates something within an interval; it does not itself make the interval a topic. It is excluded here by the explicitly requested framing, not by a claim that every sentence with continuous waiting and に is impossible. Bare あいだ is another formulation, but this task requests one of the two printed patterns.",
+      "answer": "aida-duration-topic",
+      "acceptedAnswers": ["あいだは", "間は"],
+      "options": [
+        { "id": "aida-duration-topic", "label": "あいだは", "rationale": "Marks the interval as the topic of the continuing state, as requested." },
+        { "id": "aida-event-within", "label": "あいだに", "rationale": "Marks an occurrence within the interval rather than the requested interval-as-topic frame." }
+      ]
+    },
+    {
+      "id": "aida-within-meeting-call",
+      "target": "aida-event-within",
+      "relationship": "aida-topic-vs-within",
+      "prompt": "会議は九時から十時まででした。その会議の____、九時半に受付から電話が一度かかってきました。",
+      "translation": "Use あいだは or あいだに only. Use a time-window construction to locate the call inside the meeting, not an interval-as-topic construction. The meeting ran from nine to ten. At nine thirty, I received one call from reception.",
+      "evidence": "The call is a single occurrence inside the hour; the requested wording locates it within that interval.",
+      "explanation": "あいだに locates the call within the meeting interval. It does not say that the call lasted the whole meeting. A speaker could also make the meeting interval a topic with あいだは in another presentation; the question explicitly requests the time-window frame instead. Event duration alone is not a universal ban on は.",
+      "answer": "aida-event-within",
+      "acceptedAnswers": ["あいだに", "間に"],
+      "options": [
+        { "id": "aida-duration-topic", "label": "あいだは", "rationale": "Would make the interval a topic, which is not the framing requested here." },
+        { "id": "aida-event-within", "label": "あいだに", "rationale": "Locates the nine-thirty call within the nine-to-ten window." }
+      ]
+    },
+    {
+      "id": "aida-topic-nap-quiet",
+      "target": "aida-duration-topic",
+      "relationship": "aida-topic-vs-within",
+      "prompt": "子供は一時から二時まで寝ていました。子供が寝ている____、私たちはずっと静かにしていました。起きてから、いつもの声で話しました。",
+      "translation": "Use あいだは or あいだに only. Explicitly make the nap interval a topic for a continuing state, contrasted with afterward. The child slept from one to two; we stayed quiet throughout the nap and spoke normally after the child woke.",
+      "evidence": "The quiet state extends through the nap, and the question asks to contrast that interval with the later situation.",
+      "explanation": "寝ているあいだは presents the nap interval as the topic of staying quiet. The verb phrase attaches directly to あいだ; do not insert の. あいだに is the within-interval frame, not the topic frame requested here. The nonpast 寝ている can describe what was ongoing at this past reference time.",
+      "answer": "aida-duration-topic",
+      "acceptedAnswers": ["あいだは", "間は"],
+      "options": [
+        { "id": "aida-duration-topic", "label": "あいだは", "rationale": "Introduces the nap interval as a topic contrasted with the time after waking." },
+        { "id": "aida-event-within", "label": "あいだに", "rationale": "Does not give the requested explicit topic framing." }
+      ]
+    },
+    {
+      "id": "aida-within-nap-parcel",
+      "target": "aida-event-within",
+      "relationship": "aida-topic-vs-within",
+      "prompt": "子供は一時から二時まで寝ていました。子供が寝ている____、一時二十分に小包（こづつみ）が届きました。",
+      "translation": "Use あいだは or あいだに only. Use a time-window construction to locate the delivery within the nap, not an interval-as-topic construction. The child slept from one to two. A parcel arrived at one twenty during that nap.",
+      "evidence": "The delivery occurs at a specified point inside the sleeping interval.",
+      "explanation": "寝ているあいだに places the parcel's arrival within the nap. The main event need not occupy the whole interval. あいだは could introduce a topic in a different presentation, but this task specifically asks for the within-interval construction. Other natural temporal formulations are not being judged as errors.",
+      "answer": "aida-event-within",
+      "acceptedAnswers": ["あいだに", "間に"],
+      "options": [
+        { "id": "aida-duration-topic", "label": "あいだは", "rationale": "Would introduce the interval as a topic instead of using the requested time-window form." },
+        { "id": "aida-event-within", "label": "あいだに", "rationale": "Places the one-twenty delivery inside the one-to-two nap." }
+      ]
+    },
+    {
+      "id": "aida-topic-train-seated",
+      "target": "aida-duration-topic",
+      "relationship": "aida-topic-vs-within",
+      "prompt": "電車には三時から四時まで乗りました。電車に乗っている____、私はずっと座っていました。降りてからは歩きました。",
+      "translation": "Use あいだは or あいだに only. Explicitly make the train journey a topic for the continuing state, contrasted with afterward. I rode the train from three to four and remained seated throughout; after getting off, I walked.",
+      "evidence": "The whole ride is to be the topic of a state that continues until getting off.",
+      "explanation": "乗っているあいだは makes the ride interval the topic and fits the contrast with walking afterward. あいだに locates something within the ride rather than explicitly topicalizing it. This is a controlled framing choice, not a claim that sitting during a train journey can only ever be described with は.",
+      "answer": "aida-duration-topic",
+      "acceptedAnswers": ["あいだは", "間は"],
+      "options": [
+        { "id": "aida-duration-topic", "label": "あいだは", "rationale": "Provides the requested interval-as-topic frame for staying seated." },
+        { "id": "aida-event-within", "label": "あいだに", "rationale": "Provides a within-interval frame rather than the requested topic construction." }
+      ]
+    },
+    {
+      "id": "aida-within-train-message",
+      "target": "aida-event-within",
+      "relationship": "aida-topic-vs-within",
+      "prompt": "電車には三時から四時まで乗りました。電車に乗っている____、三時四十分に友達からメッセージが一通届きました。",
+      "translation": "Use あいだは or あいだに only. Use a time-window construction to locate the message inside the train journey, not an interval-as-topic construction. I rode the train from three to four. One message from a friend arrived at three forty.",
+      "evidence": "The message arrives inside the ride's start and end points; the task asks for the within-interval frame.",
+      "explanation": "乗っているあいだに locates the message's arrival within the journey. The に belongs in this blank because it is not supplied afterward. A topic-marked version with は is not globally ungrammatical, but it is not the explicitly requested construction.",
+      "answer": "aida-event-within",
+      "acceptedAnswers": ["あいだに", "間に"],
+      "options": [
+        { "id": "aida-duration-topic", "label": "あいだは", "rationale": "Would topicalize the interval, instead of using the requested within-interval form." },
+        { "id": "aida-event-within", "label": "あいだに", "rationale": "Marks the arrival as an event within the hour-long ride." }
+      ]
+    },
+    {
+      "id": "toki-arrival-bell",
+      "target": "toki-reference",
+      "relationship": "toki-vs-koro-framing",
+      "prompt": "昨日、駅に着いた____、ちょうど時計台の鐘（かね）が鳴りました。",
+      "translation": "Use とき or ころ only. Identify the occasion without adding an 'around that time' approximation. Yesterday, just when I arrived at the station, the clock-tower bell rang.",
+      "evidence": "The requested wording identifies the arrival as the relevant occasion without introducing approximate-time framing.",
+      "explanation": "着いたとき identifies the time of arrival. ころ would frame it as around that time rather than simply when. Both can occur in natural reports, so the wording instruction is part of this question. This does not mean とき always denotes an exact instant or that ころ requires a long period.",
+      "answer": "toki-reference",
+      "acceptedAnswers": ["とき", "時"],
+      "options": [
+        { "id": "toki-reference", "label": "とき", "rationale": "Names the arrival occasion without adding approximation." },
+        { "id": "koro-approximate", "label": "ころ", "rationale": "Adds the approximate-time framing that the question asks not to add." }
+      ]
+    },
+    {
+      "id": "koro-arrival-rain",
+      "target": "koro-approximate",
+      "relationship": "toki-vs-koro-framing",
+      "prompt": "駅に着いた____、雨が降り始めました。着く少し前だったか、少しあとだったかは覚えていません。",
+      "translation": "Use とき or ころ only. Explicitly express 'around the time', allowing a little before or after the arrival. Rain began around the time I arrived at the station; I do not remember whether it started just before or just after.",
+      "evidence": "The speaker deliberately leaves a small range around the arrival instead of identifying an exact coincidence.",
+      "explanation": "着いたころ explicitly frames the arrival time approximately. とき can be used with broad time references too, but does not itself add the 'around' meaning requested in this controlled contrast. A short window is enough for ころ; it is not restricted to years or childhood.",
+      "answer": "koro-approximate",
+      "acceptedAnswers": ["ころ", "頃"],
+      "options": [
+        { "id": "toki-reference", "label": "とき", "rationale": "Does not explicitly mark the approximate range requested for this answer." },
+        { "id": "koro-approximate", "label": "ころ", "rationale": "Expresses around the arrival time, consistent with uncertainty about a small gap." }
+      ]
+    },
+    {
+      "id": "toki-student-years",
+      "target": "toki-reference",
+      "relationship": "toki-vs-koro-framing",
+      "prompt": "大学生の____、四年間ずっとこの町に住んでいました。",
+      "translation": "Use とき or ころ only. Identify the relevant period as 'when I was a university student', without explicitly adding approximate-time framing. I lived in this town throughout my four university years.",
+      "evidence": "The reference is an extended period, but the requested expression simply names when it was.",
+      "explanation": "大学生のとき can refer to the whole period of being a university student. It is not limited to brief or precise moments. 大学生のころ is also a natural way to reminisce about those years; it is excluded only by this question's request not to add approximate-time framing. の is supplied after the noun.",
+      "answer": "toki-reference",
+      "acceptedAnswers": ["とき", "時"],
+      "options": [
+        { "id": "toki-reference", "label": "とき", "rationale": "Can name the entire student period without itself marking approximation." },
+        { "id": "koro-approximate", "label": "ころ", "rationale": "Would choose the approximate-period framing instead of the explicitly requested neutral time reference." }
+      ]
+    },
+    {
+      "id": "koro-childhood-tree",
+      "target": "koro-approximate",
+      "relationship": "toki-vs-koro-framing",
+      "prompt": "子供の____、庭に大きな木がありました。何歳から何歳までかは、はっきり覚えていません。",
+      "translation": "Use とき or ころ only. Explicitly frame this as an approximate period of life. During my childhood there was a large tree in the garden; I do not remember exactly which ages that covered.",
+      "evidence": "The speaker recalls a loosely bounded period of childhood rather than fixing its endpoints.",
+      "explanation": "子供のころ is a natural approximate-period expression for this memory. 子供のとき is also natural Japanese, even with uncertainty about ages; the question specifically requests the approximate-period wording. Do not treat とき as wrong in every childhood reminiscence. Use ころ here, not the clock-time suffix ごろ.",
+      "answer": "koro-approximate",
+      "acceptedAnswers": ["ころ", "頃"],
+      "options": [
+        { "id": "toki-reference", "label": "とき", "rationale": "Names the time but does not itself select the approximate-period expression requested." },
+        { "id": "koro-approximate", "label": "ころ", "rationale": "Fits the explicitly requested loosely bounded period of life." }
+      ]
+    },
+    {
+      "id": "toki-quiet-reading",
+      "target": "toki-reference",
+      "relationship": "toki-vs-koro-framing",
+      "prompt": "図書館が静かな____、私は難しい本をゆっくり読みます。",
+      "translation": "Use とき or ころ only. Identify when the stated condition holds, without adding an 'around that time' approximation. When the library is quiet, I take my time reading difficult books.",
+      "evidence": "The relevant time is identified by the quiet condition; the task does not request an approximate period around an event.",
+      "explanation": "静かなとき uses な after the na-adjective 静か. とき can identify occasions defined by a condition, not only a clock time or a single event. The supplied な stays outside the blank. ころ is not the requested neutral reference to occasions when that condition holds.",
+      "answer": "toki-reference",
+      "acceptedAnswers": ["とき", "時"],
+      "options": [
+        { "id": "toki-reference", "label": "とき", "rationale": "Identifies occasions when the quiet condition holds." },
+        { "id": "koro-approximate", "label": "ころ", "rationale": "Would introduce a period-style framing rather than the requested neutral occasion reference." }
+      ]
+    },
+    {
+      "id": "koro-cherry-blossom-plan",
+      "target": "koro-approximate",
+      "relationship": "toki-vs-koro-framing",
+      "prompt": "来年、桜（さくら）が咲く____に、またこの町を訪ねたいです。日付はまだ決めていません。",
+      "translation": "Use とき or ころ only. Explicitly say 'around the time' the blossoms come out, rather than simply naming when. I want to visit this town again around cherry-blossom time next year; I have not fixed a date.",
+      "evidence": "The plan is framed approximately around a seasonal event.",
+      "explanation": "咲くころに explicitly identifies the approximate period around blooming. 咲くときに could also be used in a natural plan, but does not explicitly provide the 'around' framing required here. The dictionary-form verb attaches directly; do not add の. The printed に is not part of the answer.",
+      "answer": "koro-approximate",
+      "acceptedAnswers": ["ころ", "頃"],
+      "options": [
+        { "id": "toki-reference", "label": "とき", "rationale": "Does not explicitly provide the approximate-time expression requested." },
+        { "id": "koro-approximate", "label": "ころ", "rationale": "Expresses a loosely scheduled visit around the seasonal event." }
+      ]
+    },
+    {
+      "id": "tabi-friend-new-story",
+      "target": "tabi-each-occasion",
+      "relationship": "occasion-vs-each-time",
+      "prompt": "あの友達は話題（わだい）が豊富（ほうふ）です。会う____に、まだ聞いたことのない話をしてくれます。",
+      "translation": "Use one noun from たび／とき／おり／さい, in kana or kanji. The missing noun must explicitly mean 'each occurrence', not merely 'when'. Every time I meet that friend, who has plenty to talk about, they tell me a story I have not heard before.",
+      "evidence": "The claim is explicitly about each meeting, not merely an occasion for meeting.",
+      "explanation": "会うたびに explicitly associates a new story with each meeting. とき／おり／さい can identify meeting occasions but do not themselves quantify each occurrence in the way たび does. They are not universally wrong in sentences about habits; this task asks for explicit recurrence in the missing noun. ごとに is another recurrence construction, outside the requested noun list.",
+      "answer": "tabi-each-occasion",
+      "acceptedAnswers": ["たび", "度"],
+      "options": [
+        { "id": "tabi-each-occasion", "label": "たび", "rationale": "Explicitly marks every occurrence of meeting the friend." },
+        { "id": "occasion-reference", "label": "とき", "rationale": "Identifies when, but does not itself supply the requested each-occurrence meaning." }
+      ]
+    },
+    {
+      "id": "tabi-business-trip-souvenir",
+      "target": "tabi-each-occasion",
+      "relationship": "occasion-vs-each-time",
+      "prompt": "兄は出張（しゅっちょう）の____に、その土地のお菓子を買ってきます。一度も忘れたことがありません。",
+      "translation": "Use one noun from たび／とき／おり／さい, in kana or kanji. The missing noun must explicitly mean 'each occurrence', not merely name an occasion. On every business trip, my brother brings back local sweets; he has never forgotten.",
+      "evidence": "The habit applies to each business trip, and explicit recurrence is requested in the construction itself.",
+      "explanation": "出張のたびに uses の after the event noun and explicitly means on every business trip. 出張のおりに is natural for referring to a business-trip occasion, including in descriptions of habits, but does not itself say every occurrence. The distinction tested here is explicit quantification, not whether formal occasion words can ever accompany repeated events.",
+      "answer": "tabi-each-occasion",
+      "acceptedAnswers": ["たび", "度"],
+      "options": [
+        { "id": "tabi-each-occasion", "label": "たび", "rationale": "Explicitly assigns the souvenir-buying to every business trip." },
+        { "id": "occasion-reference", "label": "おり", "rationale": "Names an occasion without itself explicitly quantifying every trip." }
+      ]
+    },
+    {
+      "id": "tabi-printer-jam",
+      "target": "tabi-each-occasion",
+      "relationship": "occasion-vs-each-time",
+      "prompt": "このプリンターは調子が悪く、一回目も二回目も三回目も紙が詰まりました。印刷（いんさつ）する____に、紙が詰まるのです。",
+      "translation": "Use one noun from たび／とき／おり／さい, in kana or kanji. Explicitly mark each occurrence in the missing noun, not just the occasion for an event. This printer jammed on the first, second and third attempts: it jams every time I print.",
+      "evidence": "The repeated failure is stated as applying to every printing attempt.",
+      "explanation": "印刷するたびに explicitly marks each printing occurrence. 印刷するさいに locates something at printing time, but does not itself quantify every attempt. たび is not limited to pleasant events, and it does not inherently mean a gradual change: the same unwanted result repeats here.",
+      "answer": "tabi-each-occasion",
+      "acceptedAnswers": ["たび", "度"],
+      "options": [
+        { "id": "tabi-each-occasion", "label": "たび", "rationale": "Expressly marks the repeated result at each attempt." },
+        { "id": "occasion-reference", "label": "さい", "rationale": "Would name the occasion without itself expressing every occurrence." }
+      ]
+    },
+    {
+      "id": "occasion-kyoto-visit",
+      "target": "occasion-reference",
+      "relationship": "occasion-vs-each-time",
+      "prompt": "先月、一度だけ京都を訪ねました。京都を訪ねた____に、大学時代の友人と再会（さいかい）しました。",
+      "translation": "Use one noun from たび／とき／おり／さい, in kana or kanji. Refer to the occasion of this visit without explicitly asserting recurrence; neutral and formal wording are both accepted. I visited Kyoto once last month and reunited with a university friend on that visit.",
+      "evidence": "The sentence reports the occasion of one concrete visit, not an explicit every-visit claim.",
+      "explanation": "訪ねたおりに refers to the occasion of that visit and has a more formal feel than 訪ねたときに. 訪ねたさいに also fits here. These are one contextual answer class, not three competing answers. たび would select explicit recurrence rather than the requested single-occasion report.",
+      "answer": "occasion-reference",
+      "acceptedAnswers": ["とき", "時", "おり", "折", "さい", "際"],
+      "options": [
+        { "id": "tabi-each-occasion", "label": "たび", "rationale": "Selects explicit each-occurrence wording, not the requested occasion report." },
+        { "id": "occasion-reference", "label": "おり", "rationale": "Refers to the occasion of the stated visit; とき and さい are also accepted here." }
+      ]
+    },
+    {
+      "id": "occasion-business-trip-exhibition",
+      "target": "occasion-reference",
+      "relationship": "occasion-vs-each-time",
+      "prompt": "先週の出張（しゅっちょう）は一回だけでした。その出張の____に、駅前の写真展を見ました。",
+      "translation": "Use one noun from たび／とき／おり／さい, in kana or kanji. Refer to the occasion without explicitly quantifying every trip; neutral and formal wording are both accepted. On my one business trip last week, I saw the photography exhibition near the station.",
+      "evidence": "The exhibition visit is located on one specified business trip.",
+      "explanation": "その出張のおりに names the business-trip occasion. とき and さい also fit this noun + の frame. This wording does not by itself say the exhibition was the main purpose of the trip, nor does it express the secondary-errand relationship of ついでに. That different construction is outside the noun list requested in this question.",
+      "answer": "occasion-reference",
+      "acceptedAnswers": ["とき", "時", "おり", "折", "さい", "際"],
+      "options": [
+        { "id": "tabi-each-occasion", "label": "たび", "rationale": "Would explicitly quantify occurrences rather than simply identify this trip's occasion." },
+        { "id": "occasion-reference", "label": "おり", "rationale": "Locates the exhibition visit on the specified trip; neutral とき also fits." }
+      ]
+    },
+    {
+      "id": "occasion-teacher-visit-book",
+      "target": "occasion-reference",
+      "relationship": "occasion-vs-each-time",
+      "prompt": "昨日、先生のお宅を初めて訪問（ほうもん）しました。訪問した____に、先生から本を一冊いただきました。",
+      "translation": "Use one noun from たび／とき／おり／さい, in kana or kanji. Refer to the occasion of the stated first visit, without explicitly expressing recurrence; neutral and formal wording are both accepted. Yesterday, on my first visit to the teacher's home, the teacher gave me a book.",
+      "evidence": "The book was received on a particular first visit; the requested construction simply identifies that occasion.",
+      "explanation": "訪問したおりに suits this polite report. 訪問したさいに and 訪問したときに also express the occasion naturally here. Register alone does not make とき incorrect, and おり and さい are not contrasted as if only one could fit. This item does not establish what would happen on future visits.",
+      "answer": "occasion-reference",
+      "acceptedAnswers": ["とき", "時", "おり", "折", "さい", "際"],
+      "options": [
+        { "id": "tabi-each-occasion", "label": "たび", "rationale": "Would introduce explicit recurrence rather than merely refer to this first visit." },
+        { "id": "occasion-reference", "label": "おり", "rationale": "Fits a polite occasion report; さい and とき are contextual equivalents." }
+      ]
+    },
+    {
+      "id": "occasion-enrollment-handbook",
+      "target": "occasion-reference",
+      "relationship": "occasion-vs-each-time",
+      "prompt": "今年四月にこの学校に入学しました。入学の____に、受付で案内の冊子（さっし）を受け取りました。",
+      "translation": "Use one noun from たび／とき／おり／さい, in kana or kanji. Refer to the occasion of this enrollment, without explicitly saying every enrollment; neutral and formal wording are both accepted. I enrolled this April and received an information booklet at reception on that occasion.",
+      "evidence": "The booklet is associated with a specified enrollment occasion.",
+      "explanation": "入学のさいに is common occasion wording for a procedure like enrollment. 入学のおりに and 入学のときに also fit this report, so they are accepted together. の connects the event noun to the occasion noun and is already printed. さい is not a marker that an event can happen only once in a person's life.",
+      "answer": "occasion-reference",
+      "acceptedAnswers": ["とき", "時", "おり", "折", "さい", "際"],
+      "options": [
+        { "id": "tabi-each-occasion", "label": "たび", "rationale": "Would explicitly quantify enrollments rather than name the stated occasion." },
+        { "id": "occasion-reference", "label": "さい", "rationale": "Names the enrollment occasion; おり and とき also fit." }
+      ]
+    },
+    {
+      "id": "occasion-library-first-use",
+      "target": "occasion-reference",
+      "relationship": "occasion-vs-each-time",
+      "prompt": "昨日、この図書館を初めて利用しました。利用した____に、職員から本の返し方を教えてもらいました。",
+      "translation": "Use one noun from たび／とき／おり／さい, in kana or kanji. Name the occasion of this first use without explicitly expressing recurrence; neutral and formal wording are both accepted. When I first used this library yesterday, a staff member explained how to return books.",
+      "evidence": "The explanation belongs to a concrete first-use occasion.",
+      "explanation": "利用したさいに identifies the occasion on which the library was used. おり and とき can also fill this exact blank. The plain past verb attaches directly, without an extra の or な. These accepted forms do not imply that every use of さい, おり and とき is interchangeable.",
+      "answer": "occasion-reference",
+      "acceptedAnswers": ["とき", "時", "おり", "折", "さい", "際"],
+      "options": [
+        { "id": "tabi-each-occasion", "label": "たび", "rationale": "Selects recurrence instead of the requested first-occasion report." },
+        { "id": "occasion-reference", "label": "さい", "rationale": "Locates the explanation on the first-use occasion; おり and とき also fit." }
+      ]
+    },
+    {
+      "id": "occasion-departure-gift",
+      "target": "occasion-reference",
+      "relationship": "occasion-vs-each-time",
+      "prompt": "先月、一年間の留学（りゅうがく）に出かけました。その出発の____に、友人が小さな辞書をくれました。",
+      "translation": "Use one noun from たび／とき／おり／さい, in kana or kanji. Identify the occasion of this departure without explicitly quantifying repeated departures; neutral and formal wording are both accepted. Last month I left for a year's study abroad, and a friend gave me a small dictionary on that departure occasion.",
+      "evidence": "The gift is located on the stated departure, not presented as an explicit every-departure habit.",
+      "explanation": "その出発のさいに names the departure occasion; おり and とき also fit naturally. The phrase identifies the occasion without by itself specifying a measured before/after gap. If a precise order were the point, a まえ／あと formulation could make it explicit, but that is outside the noun list requested here.",
+      "answer": "occasion-reference",
+      "acceptedAnswers": ["とき", "時", "おり", "折", "さい", "際"],
+      "options": [
+        { "id": "tabi-each-occasion", "label": "たび", "rationale": "Would explicitly quantify repeated departures, not just identify this occasion." },
+        { "id": "occasion-reference", "label": "さい", "rationale": "Fits the specified departure occasion; おり and とき are also accepted." }
+      ]
+    }
+  ]
+}

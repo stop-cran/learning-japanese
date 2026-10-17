@@ -1,0 +1,399 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-causes",
+  "title": "Formal nouns: purposes, causes and alternatives",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "tame-purpose", "label": "ために: an intended goal" },
+    { "id": "tame-cause", "label": "ために: a cause of a result" },
+    { "id": "okage-credit", "label": "おかげで: credit a beneficial cause" },
+    { "id": "sei-blame", "label": "せいで: blame an unwanted cause" },
+    { "id": "kawari-substitution", "label": "かわりに: use or do something instead" },
+    { "id": "tsuide-secondary", "label": "ついでに: do an additional task on the occasion" },
+    { "id": "kawari-tradeoff", "label": "かわりに: balance an advantage and a disadvantage" }
+  ],
+  "relationships": [
+    {
+      "id": "tame-purpose-vs-cause",
+      "label": "intended goal / already realized cause",
+      "constructions": ["tame-purpose", "tame-cause"]
+    },
+    {
+      "id": "credit-vs-blame",
+      "label": "sincere appreciative attribution / literal blame",
+      "constructions": ["okage-credit", "sei-blame"]
+    },
+    {
+      "id": "substitution-vs-secondary",
+      "label": "replace the main action / add a secondary action",
+      "constructions": ["kawari-substitution", "tsuide-secondary"]
+    },
+    {
+      "id": "cause-vs-tradeoff",
+      "label": "state a cause / balance contrasting features",
+      "constructions": ["tame-cause", "kawari-tradeoff"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "tame-purpose-printer",
+      "target": "tame-purpose",
+      "relationship": "tame-purpose-vs-cause",
+      "prompt": "新しいプリンターはまだ持っていません。来月それを____ために、今は毎週お金を貯めています。",
+      "translation": "Use 買う (かう, buy) in dictionary or た form only; ために is already printed. I do not yet own the new printer. I am saving money each week in order to buy it next month.",
+      "evidence": "Buying is the intended future goal of saving, not an event that has already happened.",
+      "explanation": "買うために presents buying as the goal. 買ったために would normally present a completed purchase as the cause of what follows, which contradicts the stated plan. ため can express either purpose or cause; it is the whole sentence, not the English word 'for' alone, that identifies the use.",
+      "answer": "tame-purpose",
+      "acceptedAnswers": ["買う", "かう"],
+      "options": [
+        { "id": "tame-purpose", "label": "買う", "rationale": "Presents the planned purchase as the goal of saving." },
+        { "id": "tame-cause", "label": "買った", "rationale": "Would refer to a completed purchase, contrary to the current plan." }
+      ]
+    },
+    {
+      "id": "tame-cause-printer",
+      "target": "tame-cause",
+      "relationship": "tame-purpose-vs-cause",
+      "prompt": "昨日、高いプリンターの代金を全額払いました。そのプリンターを____ために、貯金が大きく減りました。",
+      "translation": "Use 買う (かう, buy) in dictionary or た form only; ために is already printed. Yesterday I paid the full price of an expensive printer. My savings fell substantially because I bought it.",
+      "evidence": "The completed purchase caused the reduction in savings; reducing savings was not the goal of buying.",
+      "explanation": "買ったために presents the completed purchase as a cause. 買うために would frame buying as a goal instead of reporting this completed purchase as the reason for the decrease. Causal ため is not always preceded by a past verb; the past form is appropriate to this specific completed event.",
+      "answer": "tame-cause",
+      "acceptedAnswers": ["買った", "かった"],
+      "options": [
+        { "id": "tame-purpose", "label": "買う", "rationale": "Does not express the already completed purchase as the stated cause." },
+        { "id": "tame-cause", "label": "買った", "rationale": "Matches the purchase that already caused the savings to fall." }
+      ]
+    },
+    {
+      "id": "tame-purpose-moving",
+      "target": "tame-purpose",
+      "relationship": "tame-purpose-vs-cause",
+      "prompt": "引っ越しは来月です。新しい町へ____ために、今、荷物を整理しています。",
+      "translation": "Use 引っ越す (ひっこす, move home) in dictionary or た form only; ために is already printed. My move is next month. I am sorting my belongings now in order to move to the new town.",
+      "evidence": "The move is still ahead; the current sorting is preparation toward that goal.",
+      "explanation": "引っ越すために identifies the intended move as the purpose of sorting. 引っ越したために would present moving as already completed and as a cause. The spelling variants 引越す and 引っこす are accepted here, as is kana.",
+      "answer": "tame-purpose",
+      "acceptedAnswers": ["引っ越す", "引越す", "引っこす", "ひっこす"],
+      "options": [
+        { "id": "tame-purpose", "label": "引っ越す", "rationale": "Matches preparation for the future move." },
+        { "id": "tame-cause", "label": "引っ越した", "rationale": "Would place the move before the present preparations rather than next month." }
+      ]
+    },
+    {
+      "id": "tame-cause-moving",
+      "target": "tame-cause",
+      "relationship": "tame-purpose-vs-cause",
+      "prompt": "先週、会社から遠い町へ引っ越しました。そこへ____ために、今は通勤（つうきん）に一時間かかります。",
+      "translation": "Use 引っ越す (ひっこす, move home) in dictionary or た form only; ために is already printed. Last week I moved to a town far from work. Because I moved there, my commute now takes an hour.",
+      "evidence": "The earlier move explains the present long commute.",
+      "explanation": "引っ越したために introduces the completed move as the cause of a current result. The main clause need not be past just because the causal event was past. 引っ越すために would not express the already completed move as the reason here.",
+      "answer": "tame-cause",
+      "acceptedAnswers": ["引っ越した", "引越した", "引っこした", "ひっこした"],
+      "options": [
+        { "id": "tame-purpose", "label": "引っ越す", "rationale": "Does not give the completed move as the cause of the present commute." },
+        { "id": "tame-cause", "label": "引っ越した", "rationale": "Relates last week's completed move to the present commuting time." }
+      ]
+    },
+    {
+      "id": "tame-purpose-seminar",
+      "target": "tame-purpose",
+      "relationship": "tame-purpose-vs-cause",
+      "prompt": "研修（けんしゅう）は来週です。その研修に____ために、昨日、会場の近くのホテルを予約しました。",
+      "translation": "Use 参加する (さんかする, participate) in dictionary or た form only; ために is already printed. The training seminar is next week. Yesterday I booked a hotel near the venue in order to attend it.",
+      "evidence": "The booking is past, but attending the seminar is still the intended future goal.",
+      "explanation": "参加するために remains dictionary form even though 予約しました is past. The verb before purpose ために identifies the goal relative to the preparation; do not simply copy the main clause's past tense. 参加したために would give an already completed attendance as the cause, contradicting next week's event.",
+      "answer": "tame-purpose",
+      "acceptedAnswers": ["参加する", "さんかする"],
+      "options": [
+        { "id": "tame-purpose", "label": "参加する", "rationale": "Names the future goal of yesterday's booking." },
+        { "id": "tame-cause", "label": "参加した", "rationale": "Would describe attendance as completed rather than scheduled for next week." }
+      ]
+    },
+    {
+      "id": "tame-cause-seminar",
+      "target": "tame-cause",
+      "relationship": "tame-purpose-vs-cause",
+      "prompt": "昨日は朝から夕方まで研修（けんしゅう）を受けました。その研修に____ために、普段の仕事は夜にすることになりました。",
+      "translation": "Use 参加する (さんかする, participate) in dictionary or た form only; ために is already printed. Yesterday I attended training all day. Because I attended it, my usual work ended up being scheduled for the evening.",
+      "evidence": "Attending the training is the stated realized cause of the later work schedule, not a future goal.",
+      "explanation": "参加したために reports the completed attendance as the cause. 参加するために could express arrangements made in order to attend in a different sentence, but the task here asks for the realized cause described in the report.",
+      "answer": "tame-cause",
+      "acceptedAnswers": ["参加した", "さんかした"],
+      "options": [
+        { "id": "tame-purpose", "label": "参加する", "rationale": "Would suggest the attendance goal rather than the completed cause requested here." },
+        { "id": "tame-cause", "label": "参加した", "rationale": "Presents the day's actual attendance as the reason for doing regular work later." }
+      ]
+    },
+    {
+      "id": "okage-teacher-help",
+      "target": "okage-credit",
+      "relationship": "credit-vs-blame",
+      "prompt": "先生が何度も丁寧に教えてくれました。先生の____で、難しい問題が解けました。本当に感謝しています。",
+      "translation": "Use おかげ or せい, in kana or kanji, literally and without sarcasm. で is already printed. My teacher explained patiently several times. Thanks to the teacher, I solved the difficult problem, and I am genuinely grateful.",
+      "evidence": "The cause is sincerely credited for a result the speaker welcomes.",
+      "explanation": "先生のおかげで expresses appreciative attribution. せいで would assign blame, contrary to the explicitly grateful, non-sarcastic presentation. ため can report a cause more neutrally in a different formulation; it is not one of the two nouns requested here.",
+      "answer": "okage-credit",
+      "acceptedAnswers": ["おかげ", "お陰", "お蔭", "御陰", "御蔭"],
+      "options": [
+        { "id": "okage-credit", "label": "おかげ", "rationale": "Credits the teacher's help for the welcome result." },
+        { "id": "sei-blame", "label": "せい", "rationale": "Would express blame rather than the requested sincere gratitude." }
+      ]
+    },
+    {
+      "id": "sei-forgotten-room-key",
+      "target": "sei-blame",
+      "relationship": "credit-vs-blame",
+      "prompt": "先生が教室の鍵を忘れた____で、授業の開始が三十分遅れました。予定が崩れて困りました。",
+      "translation": "Use おかげ or せい, in kana or kanji, literally and without sarcasm. で is already printed. Because the teacher forgot the classroom key, class started thirty minutes late. The disrupted schedule was an unwanted problem.",
+      "evidence": "The forgotten key is blamed for an explicitly unwelcome delay.",
+      "explanation": "忘れたせいで attributes the unwanted delay to forgetting the key. おかげで can be used ironically for a bad result, but this question expressly asks for literal, non-sarcastic blame. The plain past verb attaches directly; do not add の after 忘れた.",
+      "answer": "sei-blame",
+      "acceptedAnswers": ["せい", "所為"],
+      "options": [
+        { "id": "okage-credit", "label": "おかげ", "rationale": "Would require appreciative or ironic framing, neither of which is requested." },
+        { "id": "sei-blame", "label": "せい", "rationale": "Literally blames the forgotten key for the unwanted delay." }
+      ]
+    },
+    {
+      "id": "okage-rain-flowers",
+      "target": "okage-credit",
+      "relationship": "credit-vs-blame",
+      "prompt": "水不足で弱っていた庭の花が、昨夜の雨の____で元気になりました。雨が降って、本当に助かりました。",
+      "translation": "Use おかげ or せい, in kana or kanji, literally and without sarcasm. で is already printed. The garden flowers were suffering from a lack of water. Thanks to last night's rain, they recovered, which was genuinely welcome.",
+      "evidence": "Rain has a beneficial result in this context, even though rain can be inconvenient in other situations.",
+      "explanation": "雨のおかげで credits the rain for helping the flowers. Do not select せい merely because weather sometimes causes trouble: the speaker's evaluation of this result matters. This question explicitly excludes an ironic reading.",
+      "answer": "okage-credit",
+      "acceptedAnswers": ["おかげ", "お陰", "お蔭", "御陰", "御蔭"],
+      "options": [
+        { "id": "okage-credit", "label": "おかげ", "rationale": "Fits the beneficial rain and sincere relief." },
+        { "id": "sei-blame", "label": "せい", "rationale": "Would blame the rain rather than credit it for the welcome recovery." }
+      ]
+    },
+    {
+      "id": "sei-rain-concert",
+      "target": "sei-blame",
+      "relationship": "credit-vs-blame",
+      "prompt": "楽しみにしていた野外（やがい）コンサートが、大雨の____で中止になりました。行けなくなって、本当に残念です。",
+      "translation": "Use おかげ or せい, in kana or kanji, literally and without sarcasm. で is already printed. Heavy rain caused the cancellation of the outdoor concert I had been looking forward to, and I am genuinely disappointed.",
+      "evidence": "The rain is presented as the cause of an unwanted cancellation.",
+      "explanation": "大雨のせいで blames the rain for the disappointing cancellation. おかげで could convey irony in another telling, but sarcasm is excluded here. Compare the flowers example: the same kind of cause can be evaluated differently according to its result.",
+      "answer": "sei-blame",
+      "acceptedAnswers": ["せい", "所為"],
+      "options": [
+        { "id": "okage-credit", "label": "おかげ", "rationale": "Would credit the rain or invoke sarcasm, contrary to the requested literal blame." },
+        { "id": "sei-blame", "label": "せい", "rationale": "Matches blaming the rain for a genuinely disappointing result." }
+      ]
+    },
+    {
+      "id": "okage-quiet-room",
+      "target": "okage-credit",
+      "relationship": "credit-vs-blame",
+      "prompt": "この部屋が静かな____で、勉強に集中（しゅうちゅう）できました。この環境を選んでよかったです。",
+      "translation": "Use おかげ or せい, in kana or kanji, literally and without sarcasm. で is already printed. Thanks to this room being quiet, I could concentrate on studying. I am glad I chose this environment.",
+      "evidence": "Quietness is sincerely credited for successful concentration.",
+      "explanation": "静かなおかげで uses な after the na-adjective 静か. おかげ assigns appreciative credit to the quiet environment. せい would select blame instead. Do not replace the supplied な with の: the preceding expression is an adjective predicate here.",
+      "answer": "okage-credit",
+      "acceptedAnswers": ["おかげ", "お陰", "お蔭", "御陰", "御蔭"],
+      "options": [
+        { "id": "okage-credit", "label": "おかげ", "rationale": "Credits the quiet room for the desired concentration." },
+        { "id": "sei-blame", "label": "せい", "rationale": "Would blame quietness for a result the speaker explicitly welcomes." }
+      ]
+    },
+    {
+      "id": "sei-noisy-room",
+      "target": "sei-blame",
+      "relationship": "credit-vs-blame",
+      "prompt": "この部屋がうるさい____で、勉強に集中（しゅうちゅう）できませんでした。静かな場所に移りたいです。",
+      "translation": "Use おかげ or せい, in kana or kanji, literally and without sarcasm. で is already printed. Because this room was noisy, I could not concentrate on studying. I want to move somewhere quiet.",
+      "evidence": "The noise is blamed for an unwanted inability to concentrate.",
+      "explanation": "うるさいせいで attaches directly to the i-adjective. It expresses the negative attribution required here. おかげ would need a beneficial or ironic interpretation, neither of which matches the visible instruction and stated preference.",
+      "answer": "sei-blame",
+      "acceptedAnswers": ["せい", "所為"],
+      "options": [
+        { "id": "okage-credit", "label": "おかげ", "rationale": "Does not fit the literal negative attribution requested." },
+        { "id": "sei-blame", "label": "せい", "rationale": "Blames the noisy environment for the failure to concentrate." }
+      ]
+    },
+    {
+      "id": "kawari-shopping-reading",
+      "target": "kawari-substitution",
+      "relationship": "substitution-vs-secondary",
+      "prompt": "今日は買い物に行く予定をやめました。買い物の____に、家で読書をすることにしました。",
+      "translation": "Use かわり or ついで, in kana or kanji; に is already printed. I canceled today's plan to go shopping. I decided to read at home instead of shopping, not as an extra activity on a shopping trip.",
+      "evidence": "Shopping is canceled and replaced, not used as the occasion for another activity.",
+      "explanation": "買い物のかわりに presents reading as an alternative to the abandoned shopping plan. 買い物のついでに would use shopping as the occasion for an additional task, but the shopping does not take place. The noun 買い物 takes the supplied の.",
+      "answer": "kawari-substitution",
+      "acceptedAnswers": ["かわり", "代わり", "代り", "替わり", "替り"],
+      "options": [
+        { "id": "kawari-substitution", "label": "かわり", "rationale": "Replaces the canceled shopping activity with reading." },
+        { "id": "tsuide-secondary", "label": "ついで", "rationale": "Would rely on a shopping occasion that does not happen." }
+      ]
+    },
+    {
+      "id": "tsuide-shopping-post-office",
+      "target": "tsuide-secondary",
+      "relationship": "substitution-vs-secondary",
+      "prompt": "買い物が外出の主な目的でした。買い物を済ませ、同じ外出で郵便局にも寄りました。買い物の____に、郵便局で切手を買ったのです。",
+      "translation": "Use かわり or ついで, in kana or kanji; に is already printed. Shopping was the main purpose of going out. I completed it and used the same outing to buy stamps at the post office as an additional errand, not instead of shopping.",
+      "evidence": "The shopping happens and provides the occasion for a secondary errand.",
+      "explanation": "買い物のついでに connects stamp-buying with the main shopping outing. かわりに would select substitution here, contrary to the explicit statement that shopping was completed. ついでに need not mean the two tasks happen at the exact same instant.",
+      "answer": "tsuide-secondary",
+      "acceptedAnswers": ["ついで", "序で", "序"],
+      "options": [
+        { "id": "kawari-substitution", "label": "かわり", "rationale": "Would replace shopping rather than add an errand to the actual shopping outing." },
+        { "id": "tsuide-secondary", "label": "ついで", "rationale": "Makes the post-office visit a secondary use of the shopping occasion." }
+      ]
+    },
+    {
+      "id": "kawari-call-email",
+      "target": "kawari-substitution",
+      "relationship": "substitution-vs-secondary",
+      "prompt": "電話は一度もかけませんでした。電話の____に、用件をメールで伝えました。",
+      "translation": "Use かわり or ついで, in kana or kanji; に is already printed. I did not make a call. I conveyed the message by email instead of phoning.",
+      "evidence": "Email takes the place of the phone call, which never happens.",
+      "explanation": "電話のかわりに names the replaced means of communication. 電話のついでに would treat a call as the occasion for something additional, which contradicts the explicit absence of a call. The common model spelling for this use is 代わり.",
+      "answer": "kawari-substitution",
+      "acceptedAnswers": ["かわり", "代わり", "代り", "替わり", "替り"],
+      "options": [
+        { "id": "kawari-substitution", "label": "かわり", "rationale": "Expresses email in place of the unmade phone call." },
+        { "id": "tsuide-secondary", "label": "ついで", "rationale": "Would require a call to serve as the occasion for the additional action." }
+      ]
+    },
+    {
+      "id": "tsuide-library-card",
+      "target": "tsuide-secondary",
+      "relationship": "substitution-vs-secondary",
+      "prompt": "図書館では、まず借りていた本を返しました。本を返した____に、利用カードの更新（こうしん）も頼みました。",
+      "translation": "Use かわり or ついで, in kana or kanji; に is already printed. I first returned my borrowed books at the library. On that same visit, I also asked to renew my library card as an additional errand, not as payment or an exchange for returning books.",
+      "evidence": "Returning the books is the main errand, and card renewal is added on the same occasion.",
+      "explanation": "返したついでに can refer to a completed action used as the occasion for another task. かわりに also has an exchange meaning, but this question expressly says the renewal is not a payment or exchange for the return. とき or おり could merely name the occasion in another formulation; ついで specifies the secondary-errand relationship.",
+      "answer": "tsuide-secondary",
+      "acceptedAnswers": ["ついで", "序で", "序"],
+      "options": [
+        { "id": "kawari-substitution", "label": "かわり", "rationale": "Would introduce substitution or an exchange, both excluded by the stated relationship." },
+        { "id": "tsuide-secondary", "label": "ついで", "rationale": "Adds card renewal to the occasion provided by returning the books." }
+      ]
+    },
+    {
+      "id": "kawari-colleague-meeting",
+      "target": "kawari-substitution",
+      "relationship": "substitution-vs-secondary",
+      "prompt": "田中さんは今日は会議に出席できません。田中さんの____に、私が出席して報告します。",
+      "translation": "Use かわり or ついで, in kana or kanji; に is already printed. Tanaka cannot attend today's meeting. I will attend and report in Tanaka's place.",
+      "evidence": "One person fills the role that the absent person would have performed.",
+      "explanation": "田中さんのかわりに expresses acting in another person's place. ついで does not express that representative role. にかわって is another whole-sentence construction for acting on someone's behalf, but it cannot be substituted into this blank after the already printed の.",
+      "answer": "kawari-substitution",
+      "acceptedAnswers": ["かわり", "代わり", "代り", "替わり", "替り"],
+      "options": [
+        { "id": "kawari-substitution", "label": "かわり", "rationale": "Names the person whose role the speaker will fill." },
+        { "id": "tsuide-secondary", "label": "ついで", "rationale": "Does not express attending as a substitute for Tanaka." }
+      ]
+    },
+    {
+      "id": "tsuide-walk-letter",
+      "target": "tsuide-secondary",
+      "relationship": "substitution-vs-secondary",
+      "prompt": "夕方は予定どおり散歩しました。駅前を散歩する____に、持っていた手紙をポストに入れました。",
+      "translation": "Use かわり or ついで, in kana or kanji; に is already printed. I took my planned evening walk. While out walking near the station, I used the opportunity to post a letter as an extra task, not instead of taking the walk.",
+      "evidence": "The planned walk takes place; posting the letter is secondary to it.",
+      "explanation": "散歩するついでに identifies the walk as the occasion for the added task. The dictionary form can occur before ついで even when the main report is past. かわりに would not express the requested additional-task relationship. This is different from merely saying when an event occurred.",
+      "answer": "tsuide-secondary",
+      "acceptedAnswers": ["ついで", "序で", "序"],
+      "options": [
+        { "id": "kawari-substitution", "label": "かわり", "rationale": "Does not give the requested secondary-task relationship to the actual walk." },
+        { "id": "tsuide-secondary", "label": "ついで", "rationale": "Presents posting the letter as an extra task on the walking occasion." }
+      ]
+    },
+    {
+      "id": "tame-cause-high-rent",
+      "target": "tame-cause",
+      "relationship": "cause-vs-tradeoff",
+      "prompt": "この部屋は家賃（やちん）が高い____に、私の予算（よさん）では借りられません。",
+      "translation": "Use ため or かわり, in kana or kanji; に is already printed. State a cause, not a compensating trade-off. Because this room's rent is high, I cannot rent it within my budget.",
+      "evidence": "High rent explains the budget problem; no offsetting advantage is being offered.",
+      "explanation": "高いために introduces high rent as a cause. The i-adjective attaches directly, showing that causal ため is not restricted to past verbs. かわりに would present a compensating contrast, not the causal relationship requested. せいで could add blame in a different wording, but is outside the stated noun list.",
+      "answer": "tame-cause",
+      "acceptedAnswers": ["ため", "為"],
+      "options": [
+        { "id": "tame-cause", "label": "ため", "rationale": "Gives high rent as the reason the speaker cannot afford to rent the room." },
+        { "id": "kawari-tradeoff", "label": "かわり", "rationale": "Would ask for an offsetting feature rather than the requested cause and result." }
+      ]
+    },
+    {
+      "id": "kawari-tradeoff-high-rent",
+      "target": "kawari-tradeoff",
+      "relationship": "cause-vs-tradeoff",
+      "prompt": "この部屋は家賃（やちん）が高い____に、会社まで歩いて三分です。高い家賃と短い通勤時間を比べて、ここを選びました。",
+      "translation": "Use ため or かわり, in kana or kanji; に is already printed. Balance a drawback against an advantage, without claiming the high rent causes the location. The rent is high, but in return work is only a three-minute walk away; I chose this trade-off.",
+      "evidence": "The short commute is presented as a benefit offsetting high rent, not as its causal effect.",
+      "explanation": "高いかわりに balances an unfavorable feature against a favorable one. This is the compensating use of かわり, not literal replacement of the room's rent. ために would assert a cause rather than the trade-off specified in the question.",
+      "answer": "kawari-tradeoff",
+      "acceptedAnswers": ["かわり", "代わり", "代り", "替わり", "替り"],
+      "options": [
+        { "id": "tame-cause", "label": "ため", "rationale": "Would introduce a causal explanation, which the instruction expressly does not request." },
+        { "id": "kawari-tradeoff", "label": "かわり", "rationale": "Balances high rent against the benefit of a short commute." }
+      ]
+    },
+    {
+      "id": "tame-cause-quiet-location",
+      "target": "tame-cause",
+      "relationship": "cause-vs-tradeoff",
+      "prompt": "この宿は周りが静かな____に、夜はよく眠れます。",
+      "translation": "Use ため or かわり, in kana or kanji; に is already printed. State a cause without balancing advantages against drawbacks. Because the area around this inn is quiet, I sleep well at night.",
+      "evidence": "Quiet surroundings explain the good sleep; the result is not an offsetting disadvantage.",
+      "explanation": "静かなために gives a cause with a favorable result. Causal ため is not limited to bad outcomes. Keep な after the na-adjective 静か. おかげで could add appreciative credit in another formulation, but this question requests one of two specified nouns.",
+      "answer": "tame-cause",
+      "acceptedAnswers": ["ため", "為"],
+      "options": [
+        { "id": "tame-cause", "label": "ため", "rationale": "Connects the quiet surroundings causally to sleeping well." },
+        { "id": "kawari-tradeoff", "label": "かわり", "rationale": "Would present an offsetting contrast rather than the requested causal explanation." }
+      ]
+    },
+    {
+      "id": "kawari-tradeoff-quiet-location",
+      "target": "kawari-tradeoff",
+      "relationship": "cause-vs-tradeoff",
+      "prompt": "この宿は周りが静かな____に、駅から歩いて四十分かかります。静けさは好きですが、この距離は不便です。",
+      "translation": "Use ため or かわり, in kana or kanji; に is already printed. Balance an advantage against a drawback, without claiming quietness causes the distance. The surroundings are quiet, but the trade-off is a forty-minute walk from the station.",
+      "evidence": "The speaker weighs welcome quietness against inconvenient access.",
+      "explanation": "静かなかわりに can introduce a drawback after an advantage. The compensating contrast need not always run from bad to good. ために would choose a causal frame; the question instead requests a balance between two features. な is required after 静か and is already supplied.",
+      "answer": "kawari-tradeoff",
+      "acceptedAnswers": ["かわり", "代わり", "代り", "替わり", "替り"],
+      "options": [
+        { "id": "tame-cause", "label": "ため", "rationale": "Would treat quietness as a cause rather than frame the two features as a trade-off." },
+        { "id": "kawari-tradeoff", "label": "かわり", "rationale": "Balances the benefit of quietness against inconvenient access." }
+      ]
+    },
+    {
+      "id": "tame-cause-infrequent-bus",
+      "target": "tame-cause",
+      "relationship": "cause-vs-tradeoff",
+      "prompt": "この路線（ろせん）はバスの本数（ほんすう）が少ない____に、一本逃すと次まで長く待ちます。",
+      "translation": "Use ため or かわり, in kana or kanji; に is already printed. State a cause, not a compensating trade-off. Because this route has few buses, missing one means a long wait for the next.",
+      "evidence": "The infrequent service explains the long wait; the wait is not a compensating benefit.",
+      "explanation": "少ないために expresses the causal link. Here 少ない is an i-adjective, not a verb's ない-form. かわりに would require the compensating comparison requested in other items, not this straightforward cause and result.",
+      "answer": "tame-cause",
+      "acceptedAnswers": ["ため", "為"],
+      "options": [
+        { "id": "tame-cause", "label": "ため", "rationale": "Gives the low frequency as the reason for the long wait." },
+        { "id": "kawari-tradeoff", "label": "かわり", "rationale": "Does not express the requested cause-and-result relationship." }
+      ]
+    },
+    {
+      "id": "kawari-tradeoff-infrequent-bus",
+      "target": "kawari-tradeoff",
+      "relationship": "cause-vs-tradeoff",
+      "prompt": "この路線（ろせん）はバスの本数（ほんすう）が少ない____に、運賃（うんちん）は百円だけです。待つこともありますが、安さは魅力です。",
+      "translation": "Use ため or かわり, in kana or kanji; に is already printed. Present an advantage that offsets a drawback, without claiming one causes the other. The buses are infrequent, but in return the fare is only one hundred yen; I value the low price despite the waiting.",
+      "evidence": "Low cost is presented as an advantage offsetting infrequent service.",
+      "explanation": "少ないかわりに frames two contrasting features as a trade-off. It does not prove that the low frequency caused the price or that somebody negotiated an exchange. ために would select a causal account rather than the requested compensating comparison.",
+      "answer": "kawari-tradeoff",
+      "acceptedAnswers": ["かわり", "代わり", "代り", "替わり", "替り"],
+      "options": [
+        { "id": "tame-cause", "label": "ため", "rationale": "Would assert a causal relationship rather than the requested balance of features." },
+        { "id": "kawari-tradeoff", "label": "かわり", "rationale": "Offsets the drawback of infrequent buses with their low fare." }
+      ]
+    }
+  ]
+}

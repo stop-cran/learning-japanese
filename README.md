@@ -42,12 +42,36 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
 - `strokes/` – generated stroke data. Validate with `python tools/validate.py`.
 - `grammar/` – versioned, contrast-focused exercises for the app's Grammar section: the original 8-exercise pilot, an
   18-exercise foundations batch on nominalization and negative meanings, 12 exercises on ability, occurrence, decisions and
-  outcomes, 9 on intended meaning, inference and normative judgment, 9 on ところ action stages, and 6 on まま state contrasts
-  (62 in total).
+  outcomes, 9 on intended meaning, inference and normative judgment, 9 on ところ action stages, 6 on まま state contrasts,
+  6 on before/after event order, 27 on time windows, periods and occasions, 24 on purposes, causes and alternatives,
+  12 on evidence, cases and conditions, 12 on models, governing conditions and linked steps,
+  12 on comparison, addition and advice, 15 on expectations and eventual outcomes,
+  12 on characteristic patterns, recollections and reasons, and 15 on particle neighbors (197 in total).
+  Time practice includes うち, あいだ, とき, ころ, たび and shared とき／おり／さい occasion answers;
+  shared alternatives are not independently contrasted targets.
+  Purpose/cause practice adds ため, おかげ, せい, かわり and ついで, including compensating trade-offs.
+  Condition practice covers かぎり evidence limits and positive/negative conditions, plus ばあい procedural cases.
+  Relational practice covers とおり／どおり, もと, and additive versus preliminary-step うえ.
+  Comparison/advice practice adds ほう and additive ほか, including recommendations to do or not do something.
+  Expectation/outcome practice adds わり and くせに, plus six shared すえ／あげく answers contrasted with additive うえ.
+  The shared outcome items show three model options per noun, not independent discrimination between the two nouns.
+  The もの batch practices general patterns and past recollections, plus casual もの／もん reasons versus わけだ conclusions.
+  Particle practice groups six shared approximate quantities with ほど／くらい／ぐらい／ばかり, adds three constrained だけ
+  limits, and contrasts three activity-concentration with three recent-completion ばかり items.
+  The six shared quantity items are not independently discriminated particle targets.
   See the [content format](docs/content-format.md#grammar-exercises), [foundations sources](docs/grammar-foundations-sources.json),
   [actions sources](docs/grammar-actions-sources.json), [intent sources](docs/grammar-intent-sources.json),
-  [action-stage sources](docs/grammar-stages-sources.json) and [state sources](docs/grammar-states-sources.json).
-  Further coverage is being added in reviewed batches.
+  [action-stage sources](docs/grammar-stages-sources.json), [state sources](docs/grammar-states-sources.json),
+  [before/after sources](docs/grammar-before-after-sources.json),
+  [time-expression sources](docs/grammar-time-sources.json), [cause/alternative sources](docs/grammar-causes-sources.json),
+  [condition sources](docs/grammar-conditions-sources.json), [relation sources](docs/grammar-relations-sources.json),
+  [comparison/advice sources](docs/grammar-comparisons-sources.json),
+  [expectation/outcome sources](docs/grammar-expectations-sources.json),
+  [pattern/recollection/reason sources](docs/grammar-mono-sources.json) and
+  [particle-neighbor sources](docs/grammar-particles-sources.json).
+  Every named formal-noun/particle family in the article now appears in practice, but this is not complete construction
+  coverage. Further uses, including ほど comparison/proportional change, だけ extent and previously covered nouns' additional
+  patterns, are still being added in reviewed batches.
 
 The revised JLPT does not publish exhaustive kanji or vocabulary syllabi. Level coverage here means the exact named community set,
 not a guarantee about every examination question or a complete beginner curriculum.

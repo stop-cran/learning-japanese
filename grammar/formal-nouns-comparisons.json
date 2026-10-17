@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-comparisons",
+  "title": "Formal nouns: comparisons, additions and advice",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "hou-comparison", "label": "one side of a comparison (ほう)" },
+    { "id": "hoka-addition", "label": "something in addition (ほか)" },
+    { "id": "hou-advice-do", "label": "advice to do something (たほうがいい)" },
+    { "id": "hou-advice-not-do", "label": "advice not to do something (ないほうがいい)" }
+  ],
+  "relationships": [
+    {
+      "id": "comparison-vs-addition",
+      "label": "compare alternatives / add another item",
+      "constructions": ["hou-comparison", "hoka-addition"]
+    },
+    {
+      "id": "advice-do-vs-not-do",
+      "label": "recommend doing / recommend not doing",
+      "constructions": ["hou-advice-do", "hou-advice-not-do"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "hou-comparison-bag-weight",
+      "target": "hou-comparison",
+      "relationship": "comparison-vs-addition",
+      "prompt": "赤いかばんは二キロ、青いかばんは一キロです。この二つなら、赤いかばんより青いかばんの____が軽いです。",
+      "translation": "Use ほう or ほか, in kana or kanji. The red bag weighs two kilograms and the blue one weighs one. Of these two, the blue bag is lighter than the red one.",
+      "evidence": "The two weights establish which of the two bags is lighter.",
+      "explanation": "赤いかばんより青いかばんのほうが軽い compares the blue bag against the red one. より marks the comparison standard; 青いかばんのほう names the side described as lighter. This is not adding an unspecified third bag outside the pair.",
+      "answer": "hou-comparison",
+      "acceptedAnswers": ["ほう", "方"],
+      "options": [
+        { "id": "hou-comparison", "label": "ほう", "rationale": "Identifies the blue bag as the lighter side of the comparison." },
+        { "id": "hoka-addition", "label": "ほか", "rationale": "Would refer outside the named item instead of identifying the blue bag as lighter." }
+      ]
+    },
+    {
+      "id": "hou-comparison-day-night",
+      "target": "hou-comparison",
+      "relationship": "comparison-vs-addition",
+      "prompt": "昼は二十五度、夜は十五度です。昼より夜の____が涼しいです。",
+      "translation": "Use ほう or ほか, in kana or kanji. It is twenty-five degrees in the daytime and fifteen at night. Nighttime is cooler than daytime.",
+      "evidence": "Nighttime has the lower temperature in the stated comparison.",
+      "explanation": "夜のほうが涼しい selects nighttime as the cooler alternative, with 昼より supplying the comparison standard. ほう does not itself mean hotter, larger or better: the predicate 涼しい determines the property being compared.",
+      "answer": "hou-comparison",
+      "acceptedAnswers": ["ほう", "方"],
+      "options": [
+        { "id": "hou-comparison", "label": "ほう", "rationale": "Compares nighttime with daytime on the stated temperature property." },
+        { "id": "hoka-addition", "label": "ほか", "rationale": "Does not identify nighttime as the cooler member of this comparison." }
+      ]
+    },
+    {
+      "id": "hou-comparison-bus-walk",
+      "target": "hou-comparison",
+      "relationship": "comparison-vs-addition",
+      "prompt": "駅まで歩くと三十分、バスなら十分で着きます。歩くよりバスに乗る____が早いです。",
+      "translation": "Use ほう or ほか, in kana or kanji. It takes thirty minutes to walk to the station, but ten minutes by bus. Taking the bus gets you there sooner than walking.",
+      "evidence": "The bus journey takes ten minutes instead of thirty.",
+      "explanation": "A verb clause attaches directly to ほう: バスに乗るほうが早い. Do not add の after 乗る. This compares travel methods by arrival time; it does not merely list the bus as another available method. The printed frame asks only for the noun, not a whole alternative comparison sentence.",
+      "answer": "hou-comparison",
+      "acceptedAnswers": ["ほう", "方"],
+      "options": [
+        { "id": "hou-comparison", "label": "ほう", "rationale": "Identifies taking the bus as the faster alternative." },
+        { "id": "hoka-addition", "label": "ほか", "rationale": "Does not express the stated comparison in favor of taking the bus." }
+      ]
+    },
+    {
+      "id": "hoka-addition-two-bags",
+      "target": "hoka-addition",
+      "relationship": "comparison-vs-addition",
+      "prompt": "赤いかばんを持っています。赤いかばんの____に、青いかばんも持っています。",
+      "translation": "Use ほう or ほか, in kana or kanji. I own a red bag. In addition to the red bag, I also own a blue one.",
+      "evidence": "The speaker owns both bags; the second is an additional possession.",
+      "explanation": "赤いかばんのほかに adds the blue bag to the red one. Nouns connect with の. 他 and 外 are accepted spellings of ほか here. There is no claim that either bag is better, lighter or otherwise preferred. The second bag does not replace ownership of the first.",
+      "answer": "hoka-addition",
+      "acceptedAnswers": ["ほか", "他", "外"],
+      "options": [
+        { "id": "hou-comparison", "label": "ほう", "rationale": "Does not express owning an additional bag in this frame." },
+        { "id": "hoka-addition", "label": "ほか", "rationale": "Adds the blue bag to the possessions already mentioned." }
+      ]
+    },
+    {
+      "id": "hoka-addition-bakery-products",
+      "target": "hoka-addition",
+      "relationship": "comparison-vs-addition",
+      "prompt": "この店ではパンを売っています。パンの____に、ケーキも売っています。",
+      "translation": "Use ほう or ほか, in kana or kanji. This shop sells bread. Besides bread, it also sells cakes.",
+      "evidence": "Both bread and cakes are included in the shop's products.",
+      "explanation": "パンのほかに introduces another kind of product. It does not compare the quality or popularity of bread and cakes. Other additive formulations can be natural in other sentences, but this task explicitly names ほう and ほか and leaves に outside the blank.",
+      "answer": "hoka-addition",
+      "acceptedAnswers": ["ほか", "他", "外"],
+      "options": [
+        { "id": "hou-comparison", "label": "ほう", "rationale": "Does not add cakes as another product sold by the shop." },
+        { "id": "hoka-addition", "label": "ほか", "rationale": "States that cakes are sold in addition to bread." }
+      ]
+    },
+    {
+      "id": "hoka-addition-teaching-interpreting",
+      "target": "hoka-addition",
+      "relationship": "comparison-vs-addition",
+      "prompt": "田中さんは日本語を教えている____に、通訳の仕事もしています。どちらも続けています。",
+      "translation": "Use ほう or ほか, in kana or kanji. In addition to teaching Japanese, Tanaka also works as an interpreter and continues doing both.",
+      "evidence": "Interpreting is added to teaching; neither activity replaces the other.",
+      "explanation": "A verb clause attaches directly to ほか: 教えているほかに. Do not insert の after 教えている. The sentence adds another activity rather than saying one is preferable. うえに can express a related addition in another formulation, but うえ is outside this question's visible noun list.",
+      "answer": "hoka-addition",
+      "acceptedAnswers": ["ほか", "他", "外"],
+      "options": [
+        { "id": "hou-comparison", "label": "ほう", "rationale": "Does not express continuing both activities as an additive list." },
+        { "id": "hoka-addition", "label": "ほか", "rationale": "Adds interpreting to the existing teaching work." }
+      ]
+    },
+    {
+      "id": "hou-advice-reserve-seat",
+      "target": "hou-advice-do",
+      "relationship": "advice-do-vs-not-do",
+      "prompt": "この店はすぐに満席になります。席を確保したいなら、先に____ほうがいいですよ。",
+      "translation": "Use 予約する (よやくする, reserve) in た or ない form only; ほうがいい is already printed. The restaurant fills up quickly. If you want to secure a seat, you should reserve in advance.",
+      "evidence": "The recommendation is to reserve before the restaurant fills up.",
+      "explanation": "予約したほうがいい recommends making a reservation. The た-form does not say that a reservation has already been made. 予約しないほうがいい would recommend the opposite action. Dictionary-form 予約するほうがいい can occur in a comparative formulation, but the visible task specifically asks for た or ない form.",
+      "answer": "hou-advice-do",
+      "acceptedAnswers": ["予約した", "よやくした"],
+      "options": [
+        { "id": "hou-advice-do", "label": "予約した", "rationale": "Recommends reserving in advance to obtain a seat." },
+        { "id": "hou-advice-not-do", "label": "予約しない", "rationale": "Would recommend not making the reservation." }
+      ]
+    },
+    {
+      "id": "hou-advice-visit-open-day",
+      "target": "hou-advice-do",
+      "relationship": "advice-do-vs-not-do",
+      "prompt": "明日は図書館が開いていますが、あさってから一週間休みです。借りたい本があるなら、明日____ほうがいいですよ。",
+      "translation": "Use 行く (いく, go) in た or ない form only; ほうがいい is already printed. The library is open tomorrow but will then close for a week. If you want to borrow a book, you should go tomorrow.",
+      "evidence": "Tomorrow is an opportunity to borrow the book before the week-long closure.",
+      "explanation": "明日行ったほうがいい gives advice about tomorrow. 行った is the た-form of 行く, but the sentence does not report a completed trip. 行かない would advise against using the stated opportunity. The recommendation is tied to the borrowing goal and opening schedule.",
+      "answer": "hou-advice-do",
+      "acceptedAnswers": ["行った", "いった"],
+      "options": [
+        { "id": "hou-advice-do", "label": "行った", "rationale": "Recommends going while the library is still open." },
+        { "id": "hou-advice-not-do", "label": "行かない", "rationale": "Would recommend not going on the available open day." }
+      ]
+    },
+    {
+      "id": "hou-advice-read-instructions",
+      "target": "hou-advice-do",
+      "relationship": "advice-do-vs-not-do",
+      "prompt": "組み立て方が分からないなら、作業を始める前に説明書を____ほうがいいですよ。",
+      "translation": "Use 読む (よむ, read) in た or ない form only; ほうがいい is already printed. If you do not know how to assemble it, you should read the instructions before starting.",
+      "evidence": "Reading the instructions is recommended as preparation for unfamiliar assembly work.",
+      "explanation": "読む becomes 読んだ in the た-form: 読んだほうがいい. The name た-form includes forms ending in だ, not just strings ending in た. The advice is to read, not to leave the instructions unread. This is a recommendation, not a report that the reading has already happened.",
+      "answer": "hou-advice-do",
+      "acceptedAnswers": ["読んだ", "よんだ"],
+      "options": [
+        { "id": "hou-advice-do", "label": "読んだ", "rationale": "Recommends reading to learn how to assemble the item." },
+        { "id": "hou-advice-not-do", "label": "読まない", "rationale": "Would recommend not reading the needed instructions." }
+      ]
+    },
+    {
+      "id": "hou-advice-wait-to-reserve",
+      "target": "hou-advice-not-do",
+      "relationship": "advice-do-vs-not-do",
+      "prompt": "旅行の日程はまだ決まっていません。このプランは予約後に日付を変えられないので、日程が決まるまでは____ほうがいいですよ。",
+      "translation": "Use 予約する (よやくする, reserve) in た or ない form only; ほうがいい is already printed. The travel dates are not fixed, and this booking plan does not allow date changes. You should not reserve until the dates are decided.",
+      "evidence": "The recommendation is to wait rather than commit to an unchangeable date before knowing the travel schedule.",
+      "explanation": "予約しないほうがいい recommends not booking during the stated period of uncertainty. It does not ban all future reservations. 予約したほうがいい would advise making the reservation, reversing the recommendation in the question.",
+      "answer": "hou-advice-not-do",
+      "acceptedAnswers": ["予約しない", "よやくしない"],
+      "options": [
+        { "id": "hou-advice-do", "label": "予約した", "rationale": "Would recommend booking despite the unsettled dates." },
+        { "id": "hou-advice-not-do", "label": "予約しない", "rationale": "Recommends waiting until the dates are known." }
+      ]
+    },
+    {
+      "id": "hou-advice-avoid-closed-day",
+      "target": "hou-advice-not-do",
+      "relationship": "advice-do-vs-not-do",
+      "prompt": "明日は図書館が休みです。本を借りに行くつもりなら、明日は____ほうがいいですよ。",
+      "translation": "Use 行く (いく, go) in た or ない form only; ほうがいい is already printed. The library is closed tomorrow. If you intend to borrow books, you should not go tomorrow.",
+      "evidence": "A borrowing trip tomorrow would conflict with the library's closure.",
+      "explanation": "行かないほうがいい recommends not going tomorrow for the stated purpose. The ない-form is the basic negative form in this advice pattern. The sentence does not say the listener should never visit the library or that a past visit did not happen.",
+      "answer": "hou-advice-not-do",
+      "acceptedAnswers": ["行かない", "いかない"],
+      "options": [
+        { "id": "hou-advice-do", "label": "行った", "rationale": "Would recommend the borrowing trip on a closed day." },
+        { "id": "hou-advice-not-do", "label": "行かない", "rationale": "Recommends avoiding a borrowing trip while the library is closed." }
+      ]
+    },
+    {
+      "id": "hou-advice-avoid-spoilers",
+      "target": "hou-advice-not-do",
+      "relationship": "advice-do-vs-not-do",
+      "prompt": "小説の結末（けつまつ）を知りたくないなら、この解説は、小説を読み終わるまで____ほうがいいですよ。結末が書いてあります。",
+      "translation": "Use 読む (よむ, read) in た or ない form only; ほうがいい is already printed. If you do not want to know the novel's ending, you should not read this commentary until you have finished the novel: it reveals the ending.",
+      "evidence": "The commentary contains the ending that the listener wants to avoid learning in advance.",
+      "explanation": "読まないほうがいい advises against reading this commentary yet. The action being discouraged is reading the spoiler-containing commentary, not reading the novel itself. 読んだ would recommend the opposite. Other advice expressions exist, but the blank is restricted to the supplied verb's た or ない form.",
+      "answer": "hou-advice-not-do",
+      "acceptedAnswers": ["読まない", "よまない"],
+      "options": [
+        { "id": "hou-advice-do", "label": "読んだ", "rationale": "Would recommend reading material that reveals the unwanted spoiler." },
+        { "id": "hou-advice-not-do", "label": "読まない", "rationale": "Recommends avoiding the commentary until the novel is finished." }
+      ]
+    }
+  ]
+}

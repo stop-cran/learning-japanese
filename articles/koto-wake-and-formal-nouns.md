@@ -157,6 +157,80 @@ Each row gives a starting point and one translated example, not every constructi
 | **とおり** (toori) | Correspondence with a model or instruction | 言われたとおりにした。 - I did as instructed. |
 | **ほう** (hou) | One alternative or side of a comparison | 電車で行くほうが安い。 - Going by train is cheaper. |
 
+### ものだ: characteristic patterns and remembered habits
+
+**ものだ／ものです** can present a pattern as familiar, characteristic or naturally expected.
+That is different from simply naming a physical object with もの:
+
+> 人は、長く使わない言葉を少しずつ忘れるものです。  
+> People tend to gradually forget words they have not used for a long time.
+
+Here the speaker characterizes a tendency, not an obligation to forget or a rule guaranteed for every person and word.
+Other ものだ sentences can be normative; the complete context matters.
+
+With a **た-form verb**, ものだ can look back on a recurring past experience, often with nostalgia or reflection:
+
+> 学生のころは、よく傘を電車に忘れたものです。  
+> I remember often leaving my umbrella on the train when I was a student.
+>
+> 昔は夏祭りの夜になると、みんなで広場に集まったものです。  
+> We used to gather in the square on summer festival nights.
+
+The first memory need not be a pleasant one. Nor does this construction alone prove that the old pattern has completely
+ceased. It is more than merely reporting that something has happened at least once with **たことがある**.
+Past form alone does not settle every ものだ reading; the repeated occasions and reflective context are important here.
+
+The pattern/memory questions supply **ものです** and explicitly request only the preceding verb's dictionary or た form.
+For example, **降るものです** characterizes snowfall, while **降ったものです** can recall past winters.
+This is controlled practice of those readings, not a full account of every use of ものだ.
+
+### ほう and ほか: compare alternatives or add something else
+
+**AよりBのほうが...** describes B in comparison with A. The predicate determines the property;
+ほう does not itself mean "bigger" or "better":
+
+| Example | Relationship |
+| --- | --- |
+| 赤いかばんより青いかばんのほうが軽い。 | The blue bag is lighter than the red one. |
+| 昼より夜のほうが涼しい。 | Nighttime is cooler than daytime. |
+| 歩くよりバスに乗るほうが早い。 | Taking the bus gets you there sooner than walking. |
+
+After a noun, use **のほう**; after a verb clause, attach **ほう** directly.
+**方** is read **ほう** in this comparison, not **かた** as in **読み方**, "how to read."
+The comparison standard can also be understood from context rather than always stated with より.
+
+**[ほか](../words/ほか.md)** can add something outside the item already named:
+
+> パンのほかに、ケーキも売っています。  
+> Besides bread, the shop also sells cakes.
+>
+> 日本語を教えているほかに、通訳の仕事もしています。  
+> In addition to teaching Japanese, I also work as an interpreter.
+
+Use **noun + のほかに** or **verb clause + ほかに**. Here ほか can be written **他／外**.
+Addition does not mean one item replaces the other or ranks above it.
+The rest of the sentence matters: **私のほかに誰もいません**, "there is nobody here except me,"
+excludes other people rather than asserting that another person is present.
+Other expressions, including うえに in suitable sentences, can add information too.
+
+### ほうがいい: recommend doing or not doing
+
+| Advice | Example | Meaning |
+| --- | --- | --- |
+| た-form + ほうがいい | 先に予約したほうがいい。 | You should reserve in advance. |
+| ない-form + ほうがいい | まだ予約しないほうがいい。 | You should not reserve yet. |
+
+The first construction need not refer to the past: **明日行ったほうがいい**, "you should go tomorrow,"
+is advice about a future trip. The た-form includes endings in **だ**, as in **読んだほうがいい**.
+For the basic negative advice pattern, use **行かない／読まない**, not simply a past negative form.
+
+Dictionary-form **行くほうがいい** can also compare choices or express what would be better.
+The quiz's advice questions explicitly request **た** or **ない** forms; the narrower answer list is not a claim that
+every dictionary-form example is wrong.
+ほうがいい can sound direct, and it is not automatically a gentle request or a rule binding everyone.
+Advice with **べき**, **ことだ** and other expressions has overlapping territory, with context-dependent differences;
+learn the whole sentence rather than equating every English "should" with one construction.
+
 ### Intention, expectation, and what ought to happen
 
 English "supposed to" can hide different meanings. **つもり** can state what someone intends an action or object to mean;
@@ -231,7 +305,81 @@ it can also describe a resulting state. A past reference point can appear on the
 | **おり** (ori) | An occasion or opportunity | 東京に行ったおりに、友人を訪ねた。 - On a visit to Tokyo, I visited a friend. |
 | **さい** (sai) | An occasion or situation, often in formal notices | 入国のさいに、パスポートを見せた。 - I showed my passport when entering the country. |
 
-For the basic event-order patterns, use **dictionary-form verb + まえに**, but **た-form verb + あとで／あとに**. These forms locate one event relative to another, not necessarily relative to the present: **明日は食べたあとで出かける**, "Tomorrow I will go out after eating," still uses 食べた. With nouns, compare **食事のまえに／食事のあとで**, "before/after the meal."
+For the basic event-order patterns, use **dictionary-form verb + まえに**, but **た-form verb + あとで／あとに**.
+These forms locate one event relative to another, not necessarily relative to the present:
+
+| Time of the whole situation | Example | Why this verb form? |
+| --- | --- | --- |
+| Past report | 昨日は食べるまえに机をふきました。 - Yesterday I wiped the table before eating. | 食べる remains dictionary form before まえ, despite the past main clause. |
+| Future plan | 明日は食べたあとで出かけます。 - Tomorrow I will go out after eating. | 食べた marks eating as completed relative to going out, even though both events are future. |
+
+With event nouns, use **の**: **授業のまえに／授業のあとに**, "before/after class."
+あと does not itself mean "immediately afterward"; it can describe an action later in the sequence with a gap between events.
+With suitable verbs and context, **とき** can also locate the main action before or after the other action's completion.
+Do not assume that every とき sentence describes two strictly simultaneous actions.
+
+### うち and あいだ: a window, a developing change, or a continuing state
+
+**うちに** can present a state as an opportunity that may end:
+
+> 店が混まないうちに、買い物を済ませよう。  
+> Let's finish shopping before the shop gets crowded.
+
+Here **ないうちに** means before the change occurs, while the negative state still holds. It does not assert that the
+change will definitely happen. An affirmative state also works: **店がすいているうちに**, "while the shop is not crowded."
+Common attachment patterns include **明るいうちに**, "while it is light," **元気なうちに**, "while one is healthy,"
+and **学生のうちに**, "while one is a student."
+
+With an ongoing or repeated activity, **うちに** can instead locate a change that develops during it:
+
+> 新しい町を毎日歩いているうちに、少しずつ道を覚えた。  
+> Through walking around the new town each day, I gradually learned my way.
+
+This is not a command to finish something before an opportunity disappears. Both dictionary-form and **ている** verbs
+can occur before うちに; choose according to the whole expression. The negative pattern also has uses beyond warnings
+about a missed opportunity.
+
+**あいだに** locates an event within an interval. **あいだは** makes the interval a topic, often contrasting it with afterward:
+
+| Example | Framing |
+| --- | --- |
+| 会議のあいだに、九時半に電話が来た。 | A call came at 9:30 within the meeting interval. |
+| 会議のあいだは、隣の部屋でずっと待っていた。 | During the meeting, I kept waiting in the next room: that interval is the topic. |
+
+The familiar **あいだ** versus **あいだに** contrast is a useful starting point for a continuing action versus an event
+within its duration. It is not a mechanical test that makes every alternative particle ungrammatical: **は** can introduce
+an interval even when the following sentence reports a single event. Learn what the speaker is choosing to foreground.
+Use **の** after an event noun, as in 会議のあいだ; a verb phrase attaches directly, as in **寝ているあいだ**, "while sleeping."
+
+**うちに**, **あいだに** and **ときに** can overlap. うちに often brings out the possibility that a useful state will end;
+あいだに locates something within a period. This difference in emphasis does not make them mutually exclusive answers
+in every sentence about acting while there is time.
+
+### たび, おり and さい: recurrence versus an occasion
+
+**たびに** explicitly associates something with each occurrence of an action or event:
+
+> あの友達に会うたびに、新しい話を聞く。  
+> Every time I meet that friend, I hear a new story.
+
+For the basic recurrence pattern, use **dictionary-form verb + たびに**, or **event noun + のたびに**,
+as in **出張のたびに**, "on every business trip."
+The repeated result can be pleasant or unwelcome; たび does not itself mean gradual change.
+
+**おりに** and **さいに** refer to occasions and often suit more formal wording than **ときに**:
+
+> 京都を訪ねたおりに、友人と再会した。  
+> On a visit to Kyoto, I reunited with a friend.
+>
+> 入学のさいに、案内の冊子を受け取った。  
+> On enrolling, I received an information booklet.
+
+In these examples, **とき**, **おり** and **さい** can all express the occasion, with differences in register and emphasis.
+Do not make them competing quiz answers merely because one sounds more formal. Nor does さい mean an event can only
+happen once. An occasion expression can appear in an account of habits; the distinction is that **たび itself explicitly
+marks each occurrence**, while とき／おり／さい need not quantify occurrences that way.
+**ついでに** adds a different relationship: doing a secondary activity in connection with a main one, not simply locating
+something on an occasion.
 
 ### Causes, circumstances, and relationships
 
@@ -254,6 +402,179 @@ For the basic event-order patterns, use **dictionary-form verb + まえに**, bu
 Learn the connectors with the expression: **先生のおかげで**, **静かなわりに**, **確認したうえで**. For the outcome uses of **すえ** and **あげく**, common patterns are **た-form verb + すえ（に）／あげく（に）** and **noun + の + すえ（に）／あげく（に）**. Do not extend the まえ／あと rule to every time-related entry.
 
 The selected use of **うえ** is not its only grammatical one: **安いうえにおいしい**, "cheap and tasty as well," adds a fact rather than sequencing events. Likewise, the **もと** here can be written **下／許**; it is not **元**, "former."
+
+### とおり and もと: a model to follow or a context to act under
+
+**とおり** connects an action or result to a model, instruction, expectation or plan that it matches.
+**もと** in **のもとで** instead identifies guidance, supervision or conditions under which something takes place:
+
+| Example | Relationship |
+| --- | --- |
+| 説明書のとおりに、部品を並べた。 | I arranged the parts as the instructions specified: the instructions supply the model. |
+| 予定どおりに、九時に出発した。 | I left at nine as planned: the result matches the plan. |
+| 先生のもとで、発音を研究している。 | I am researching pronunciation under my teacher's guidance: the teacher supervises the work. |
+| 同じ条件のもとで、二つの材料を比べた。 | I compared two materials under the same conditions: the conditions apply to the comparison. |
+
+Learn the connection as well as the meaning. After a noun, **予定どおり** and **予定のとおり** are both possible.
+The direct compound uses voiced **どおり**; after **の**, keep **とおり**. Both are written **通り**.
+A verb clause connects directly: **私が説明したとおりに**, "as I explained," and
+**私が言うとおりに**, "as I tell you." Do not insert の or voice と after these verbs.
+
+In **先生のもとで**, the noun connects through **の**. This **もと** can be written **下／許**;
+recognizing both spellings does not mean that they are equally usual in every expression.
+It does not imply that the researcher imitates the teacher's voice, nor is the conditions use limited to a human supervisor.
+Learn this whole construction separately from **をもとに**, "using something as a basis," and **元**, "former."
+
+Conformity expressions can overlap: **言われたとおりに**, **言われたように** and **言われたままに**
+can all relate an action to what someone said, with context-dependent differences in emphasis.
+Do not make them competing answers solely because one names "conformity" more explicitly.
+The model/context exercises specify their noun list and supply the final に or で; they are controlled practice,
+not a claim that these are the only possible ways to describe following instructions or receiving guidance.
+
+### うえに and うえで: add a fact or establish a preliminary step
+
+| Example | Relationship |
+| --- | --- |
+| この店は安いうえに、量も多い。 | The shop is inexpensive and also serves generous portions: a second fact is added. |
+| 内装を新しくしたうえに、営業時間も延ばした。 | The shop renovated its interior and also extended its opening hours: two changes are added together. |
+| 内容を確認したうえで、署名してください。 | Check the contents before signing: the check prepares for the signature. |
+| 家族と相談したうえで、明日決めます。 | I will decide tomorrow after consulting my family: consultation comes before the decision. |
+
+For additive **うえに**, verbs and i-adjectives connect directly, as in **新しくしたうえに** and **安いうえに**.
+Use **な** after a na-adjective, as in **静かなうえに**, and **の** after a noun, as in
+**学生のうえに**, "besides being a student." に can be omitted in additive **うえ、...**;
+that does not make で an equivalent additive ending.
+
+For the preliminary-step **うえで**, the basic connections are **た-form verb + うえで** and
+**event noun + のうえで**, as in **十分な検討（けんとう）のうえで**, "after thorough consideration."
+The first action is completed relative to the next one, not necessarily relative to now.
+Consultation can still be in the future in **相談したうえで、明日決めます**.
+This pattern often appears in instructions or fairly formal explanations of a procedure.
+
+A past verb before うえ does **not** by itself choose between に and で: compare the second and third examples.
+Use the relationship being expressed. Adding two actions does not itself specify their order or make one a prerequisite.
+Conversely, preliminary-step うえで is not the whole inventory of うえで uses; do not extend this selected pattern's
+attachment chart to every expression translated as "in doing" or "when considering."
+The quiz's particle blanks explicitly request に or で and state the intended relationship.
+
+### ため, おかげ and せい: a goal, a cause, or an evaluation
+
+**ために** can introduce an intended goal or a cause of a result:
+
+| Example | Relationship |
+| --- | --- |
+| 新しいプリンターを買うために、お金を貯めている。 | I am saving to buy a new printer: buying is the goal. |
+| 新しいプリンターを買ったために、貯金が減った。 | My savings fell because I bought a new printer: the purchase is the cause. |
+
+In the basic verb-goal pattern, use **dictionary-form verb + ために**, even with a past main clause:
+**研修に参加するために、ホテルを予約した**, "I booked a hotel in order to attend the training."
+With a noun, use **の**, as in **家族のために**, "for my family."
+
+Do not turn the first table into a rule that every nonpast form expresses purpose and every cause needs a past verb.
+**家賃が高いために借りられない**, "I cannot rent it because the rent is high," gives a cause with an i-adjective.
+**周りが静かなために、よく眠れる**, "I sleep well because the surroundings are quiet," has a na-adjective and a favorable result.
+The connectors are **高いため**, **静かなため** and **雨のため**. Causal ため can also occur without に.
+
+**おかげで** normally credits a cause for a welcome result; **せいで** normally blames one for an unwanted result.
+Neither word classifies the cause itself as inherently good or bad:
+
+> 雨のおかげで、庭の花が元気になった。  
+> Thanks to the rain, the garden flowers recovered.
+>
+> 雨のせいで、コンサートが中止になった。  
+> The rain caused the concert to be canceled.
+
+おかげ can also be ironic, much like sarcastic "thanks to" in English. Tone and context matter; a negative outcome does not
+make every おかげ sentence impossible. ため often reports a cause without the same explicit credit or blame.
+For attachment, compare **先生のおかげで**, **静かなおかげで**, **うるさいせいで** and **鍵を忘れたせいで**.
+Do not add の after a completed plain verb clause such as 鍵を忘れた.
+
+### かわり and ついで: replacement, an additional errand, or a trade-off
+
+**かわりに** can express doing something instead, or acting in someone else's place.
+**ついでに** uses a main activity as the occasion for another, secondary task:
+
+| Example | Relationship |
+| --- | --- |
+| 電話のかわりに、メールを送った。 | I sent an email instead of phoning: one method replaces another. |
+| 田中さんのかわりに、会議に出た。 | I attended the meeting in Tanaka's place. |
+| 買い物のついでに、郵便局に寄った。 | I stopped at the post office while out shopping: shopping supplies the occasion. |
+| 本を返したついでに、利用カードを更新した。 | On the occasion of returning books, I also renewed my library card. |
+
+Use **の** after these event or person nouns. Verb phrases attach directly; ついで can follow a dictionary or past verb form,
+as in **散歩するついでに**, "while out for a walk," or **本を返したついでに**, "on the occasion of returning the books."
+The two actions need not happen at the same instant, and an additional errand need not replace the main one.
+
+かわり also has exchange and compensating-contrast uses:
+
+> 手伝うかわりに、夕食をごちそうしてもらう。  
+> I will help in exchange for being treated to dinner.
+>
+> この宿は静かなかわりに、駅から遠い。  
+> This inn is quiet, but the trade-off is that it is far from the station.
+
+The second sentence weighs two features rather than replacing quietness or claiming that quietness causes the distance.
+A drawback can also come first, as in **家賃が高いかわりに、会社に近い**, "The rent is high, but in return it is close to work."
+Compare **高いかわりに** with **静かなかわりに**; use な after a na-adjective.
+These are not all instances of the same "instead of" translation, and かわり is not a universal replacement for neutral "but."
+
+### わりに and くせに: an expected standard or a reproachful contrast
+
+**わりに** assesses something against an expectation suggested by the preceding description.
+The result can be favorable or unfavorable:
+
+> この車は小さいわりに、荷物がたくさん入る。  
+> This car holds a lot of luggage for its small size.
+>
+> 練習したわりに、うまくできなかった。  
+> I did not do very well considering the practice I had put in.
+
+**くせに** conventionally puts reproach, dissatisfaction or a mocking edge into the contrast:
+
+> 答えを知っているくせに、知らないふりをしている。  
+> You know the answer, yet you are pretending not to know.
+
+This is not simply an interchangeable neutral "although." The speaker's attitude is part of how the construction is used.
+However, **わりに** and **のに** can also occur in critical sentences, and **くせに** can occur in teasing praise.
+Anger or a good result alone is therefore not a reliable one-word answer key.
+The quiz makes its frame explicit: an unmocking assessment against an expected standard, or the construction that
+conventionally marks reproach itself. That is a controlled wording task, not unrestricted proof that another sentence
+could never express a similar attitude.
+
+For attachment, compare **値段のわりに／責任者のくせに** after nouns,
+**静かなわりに／好きなくせに** after na-adjectives, and **小さいわりに／弱いくせに** after i-adjectives.
+Verb clauses attach directly: **初めて作ったわりに** and **答えを知っているくせに**.
+わり can be written **割／割り**; くせ can be written **癖**. These spellings do not create different constructions.
+Nor does choosing わりに guarantee that a remark about another person will sound tactful: the standard being assumed
+can itself be unwelcome.
+
+### すえ and あげく: the outcome of a process
+
+**すえ** presents an outcome after going through a process, often involving time or effort.
+**あげく** commonly presents an unwelcome outcome after time, effort or trouble:
+
+| Example | Interpretation |
+| --- | --- |
+| 何度も話し合ったすえに、計画がまとまった。 | After repeated discussions, the plan took shape. |
+| いろいろな方法を試したすえに、修理をあきらめた。 | After trying various methods, I gave up the repair. |
+| いろいろな方法を試したあげくに、修理をあきらめた。 | After all those attempts, I ended up giving up the repair. |
+
+**すえ is not positive-only.** Both すえ and あげく fit the unsuccessful repair.
+And **あげく is not an absolute ban on a favorable final result**: the trouble or negative evaluation can concern
+the process of reaching it. Do not force these words into a good-result/bad-result opposition.
+
+For the completed-process patterns here, use **た-form verb + すえ（に）／あげく（に）** or
+**event noun + のすえ（に）／のあげく（に）**, as in **長い話し合いのすえに**.
+The six eventual-outcome exercises all accept **すえ／あげく** in one answer class.
+Three show すえ as the model option and three show あげく; this is shared practice, not six independent noun contrasts.
+They cover difficult processes with disappointing outcomes, not every positive outcome or other use of either noun.
+Spellings include **末** for すえ and **挙句／挙げ句／揚句／揚げ句** for あげく.
+
+Distinguish that relationship from **うえに**, which adds a fact:
+**事務所を移したうえに、設備も新しくした**, "We moved the office and also renewed its equipment."
+The completed verb does not by itself turn the second improvement into the outcome of the move.
+The quiz supplies に and explicitly asks for an additive or eventual-outcome relation; it does not reject every
+alternative temporal formulation in a less restricted task.
 
 ### Construction-dependent classifications
 
@@ -312,6 +633,40 @@ A negative condition often corresponds to English "unless":
 > You cannot get in unless you make a reservation.
 
 The last example says that making a reservation is necessary; it does not by itself guarantee admission.
+
+Keep these two kinds of limit separate:
+
+| Example | What is limited? |
+| --- | --- |
+| 外から見たかぎりでは、箱に傷はない。 | As far as an outside inspection shows, the box has no damage: the claim is limited to that evidence. |
+| この時計が動くかぎり、使い続ける。 | I will keep using this clock as long as it works: the commitment holds under a continuing condition. |
+
+In the first example, unseen contents may still be damaged. A knowledge or observation limit is not a guarantee that
+unexamined evidence would agree. Plain verb phrases attach directly: **知っているかぎり**, **調べたかぎり**.
+For a noun predicate used as a condition, **学生であるかぎり**, "as long as one is a student," uses **である**,
+not the ordinary noun-linking の of 学生のとき.
+
+With **ないかぎり**, read the whole conditional and the main clause's polarity:
+**参加費を払わないかぎり、道具を借りられない**, "You cannot borrow the equipment unless you pay the fee."
+If a form is also required, paying alone is still not enough. Conversely, a negative かぎり condition does not require
+a negative main clause: **雨が降らないかぎり、予定どおり散歩する**, "Unless it rains, I will take the walk as planned."
+
+### ばあい: identify the case that a procedure applies to
+
+**ばあい** names a case or situation rather than, by itself, limiting the evidence for a claim:
+
+| Pattern | Example |
+| --- | --- |
+| Noun + のばあいは | 雨の場合は体育館に集まってください。 - If it rains, gather in the gym. |
+| Plain verb + ばあいは | パスワードを忘れた場合は、再設定してください。 - If you have forgotten your password, reset it. |
+| Na-adjective + なばあいは | 登録が必要な場合は、申込書を送ってください。 - If registration is required, send the application form. |
+| I-adjective + ばあいは | 料金が高い場合は、別の方法を考えます。 - If the fee is high, I will consider another method. |
+
+The past verb in 忘れた場合 describes the case in which forgetting has occurred; an instruction with that form does
+not assert that every reader has already forgotten a password. とき can often give natural alternative wording.
+Likewise, **必要なかぎり** can mean "as long as it is necessary," but that explicitly maintains a condition rather than
+simply naming one branch of a procedure. These differences in framing do not make the expressions mutually exclusive
+in every context.
 
 ### とき versus ころ
 
@@ -373,6 +728,25 @@ Do not confuse this なん with **何（なん）**, "what": **これは何だ�
 
 Here, **ん = の** and **もん = もの** occur together. Sentence-final もん is very casual and may sound insistent or childlike. For the family list, group ん with の and もん with もの, while learning the complete constructions and their different functions.
 
+### もの／もん versus わけだ: a personal reason or a conclusion
+
+Compare the speaker's purpose in these exchanges:
+
+| Example | What the speaker is doing |
+| --- | --- |
+| 「もう寝るの？」「だって、眠いもん。」 | "Are you going to bed already?" "Because I am sleepy!" — offering a casual personal reason. |
+| 三時間しか寝なかったの？　それなら、眠いわけだ。 | "You only slept three hours? No wonder you are sleepy." — reaching an explanatory understanding. |
+
+In the first exchange, **もの** is also possible instead of **もん**. These sentence-final reason forms are casual and
+can sound emotional or insistent; もん can also sound childlike. They are not default formal explanations.
+**初めてなんだもん**, "because this is my first time," combines the already explained な＋ん＋だ with もん from もの.
+
+Both kinds of sentence can relate to reasons. This comparison does not mean that わけ can never justify something,
+or that every もの is an excuse. The exercises explicitly request either the casual personal-reason ending or a resulting
+explanatory conclusion, and supply three exact endings in hiragana.
+Natural alternatives such as **から**, longer **んだもの／んだもん** endings, or different conclusion expressions are not
+made globally wrong by that restricted task.
+
 ## Particle neighbors: ほど, くらい／ぐらい, だけ, and ばかり
 
 These are worth recognizing alongside noun-based grammar, but **the uses in the tables below are classified as particles, not simply as formal nouns**. Noun-like behavior in one construction, or a noun origin, does not settle a word's present-day classification in another.
@@ -400,6 +774,38 @@ Notice the actual patterns: **quantity + ほど**, **昨日 + ほど + a negativ
 
 **た-form verb + ばかり** has a different use: **食べたばかりだ**, "I have just eaten." It presents the event as recent from the speaker's perspective, not as repeated eating. Similar meanings do not make ほど, くらい, だけ, and ばかり interchangeable in every construction.
 
+### Practicing quantities and action patterns
+
+An estimate and an exclusive limit make different claims:
+
+| Example | Meaning |
+| --- | --- |
+| バスを三十分ほど待ちました。 | I waited about thirty minutes for the bus. |
+| 休憩は五分だけです。 | The break is only five minutes. |
+
+In the estimated-duration example, **くらい／ぐらい** and **ばかり** can also follow 三十分.
+The quantity questions therefore group these natural alternatives in one answer class, rather than mark one wrong for not
+being the model button. Their dictionary spellings **程／位／許り／許** are accepted too; kana is normal, especially for ばかり.
+The tasks request uncontracted forms, not colloquial variants such as ばっかり.
+
+The three exclusive-limit questions explicitly name only **ほど／くらい／ぐらい／だけ** as candidates.
+They are a controlled contrast, not a claim that ばかり can never mean "only," or that だけ is the sole way to express a limit.
+The spelling **丈（だけ）** is accepted, although kana is usual.
+Do not transfer the quantity overlap to every degree, comparison or proportional-change pattern.
+
+Before **ばかり**, the verb form changes the construction:
+
+| Example | Meaning |
+| --- | --- |
+| 好きな小説を読んでばかりです。 | I am spending my time doing little but reading novels I enjoy. |
+| この小説は昨日、最後まで読んだばかりです。 | I only just finished this novel yesterday. |
+
+**てばかりです** can describe concentration on an activity, as **てばかりいます** does; いる is not obligatory in the first
+version. This often occurs in complaints, but a speaker can also describe a happily chosen activity.
+**たばかりです** presents an action as recently completed. "Recent" is relative to the situation and speaker, not a fixed
+seconds-or-minutes cutoff. The questions supply ばかりです and request only the preceding verb's て or た form.
+An alternative whole construction such as **たところです** is not globally wrong merely because it is outside that blank.
+
 ## References
 
 - [Japan Foundation: 「こと」（1）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201112.html) - nominalization, こと versus の, and fixed expressions.
@@ -415,6 +821,23 @@ Notice the actual patterns: **quantity + ほど**, **昨日 + ほど + a negativ
 - [Tae Kim: Other uses of the te-form](https://guidetojapanese.org/learn/grammar/teform) - ongoing and resulting states, and conversational omission of い in ている.
 - [Japan Foundation: まま](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00025/ja/render.do) - た／ない attachment, unchanged states, deliberately maintaining them, and the distinction from simultaneous activities.
 - [Bunpro: ずに](https://bunpro.jp/grammar_points/ずに) - an alternative "without doing" construction, not a form to insert before まま.
+- [Japan Foundation: まえに](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00130/ja/render.do) and [あとで](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00129/ja/render.do) - verb and noun attachment, event order, and verb forms independent of the main clause's tense.
+- [TUFS: とき](https://www.coelang.tufs.ac.jp/mt/ja/gmod/contents/explanation/093.html) - section 2 illustrates relative event order and the overlap with before/after expressions.
+- [Japan Foundation: うちに／ないうちに](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00065/ja/render.do) - attachment, before-change windows and changes developing during activity.
+- [Japan Foundation: Expression intentions - time (2)](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201609.html) - overlapping within-period expressions and the interval-as-topic framing of あいだは／うちは.
+- [Bunpro: たびに](https://bunpro.jp/grammar_points/たびに) - explicit recurrence and verb/noun attachment.
+- [Bunpro: Purpose ために](https://bunpro.jp/grammar_points/ため-に) and [causal ために](https://bunpro.jp/grammar_points/ために) - distinguish the intended goal from a cause; causal attachment is not restricted to past verbs.
+- [Bunpro: おかげで](https://bunpro.jp/grammar_points/おかげで) and [せいで](https://bunpro.jp/grammar_points/せいで) - appreciative and negative attribution, attachment, and the possibility of ironic おかげ.
+- [Bunpro: ついでに](https://bunpro.jp/grammar_points/ついでに), [Nihon Kokugo Daijiten: かわり](https://kotobank.jp/word/代り-468939), and [Benkyoumashou: かわりに](https://benkyoumashou.com/grammar/kawari-ni/) - secondary errands, replacement, exchange and compensating contrasts; use the dictionary's noun entry, not its separate suffix entry.
+- [Bunpro: 限り](https://bunpro.jp/grammar_points/限り) and [JLPT Sensei: 限り](https://jlptsensei.com/learn-japanese-grammar/限り-kagiri-meaning/) - evidence scope, continuing conditions and negative conditions.
+- [Bunpro: ばあいは](https://bunpro.jp/grammar_points/ばあいは) - case framing and noun/adjective attachment.
+- [Bunpro: とおり](https://bunpro.jp/grammar_points/とおり) - conformity, verb/noun attachment and voiced どおり.
+- [Tae Kim: Using 方 for comparisons](https://guidetojapanese.org/learn/grammar/comparison), [Bunpro: たほうがいい](https://bunpro.jp/grammar_points/たほうがいい) and [ないほうがいい](https://bunpro.jp/grammar_points/ないほうがいい) - comparisons, noun/verb attachment and advice in both directions.
+- [JMdict via Jisho: ほか](https://jisho.org/search/ほか) - the 他／外 entry's addition and exclusion senses, with noun and verb attachment.
+- [Bunpro: わりに](https://bunpro.jp/grammar_points/わりに) and [Daijisen: 癖に](https://kotobank.jp/word/癖に-483705) - assessment against an expected standard versus a conventionally reproachful contrast; neither makes context irrelevant.
+- [JMdict via Jisho: あげく](https://jisho.org/search/あげく) and [Daijisen via Weblio: あげく](https://www.weblio.jp/content/あげく) - the process-outcome sense and variant spellings; see also the 末 and あげく references below.
+- [JMdict via Jisho: もと](https://jisho.org/search/もと) - the **下／許（もと）** entry for guidance and conditions, not the separate 元 entries.
+- [Bunpro: 上に](https://bunpro.jp/grammar_points/上に) and [上で](https://bunpro.jp/grammar_points/上で) - additive facts versus a completed preliminary step; their attachment patterns should not be generalized to every うえ use.
 - [Kotobank: 形式名詞](https://kotobank.jp/word/形式名詞-488640) - definitions and the difficulty of drawing a single boundary against ordinary nouns.
 - [N1et: 形式名詞「こと・の」違い 他「ところ・とき・ため」など見分け方](https://jn1et.com/formal-noun/) - a teaching-oriented classification of formal nouns and their functions.
 - [Kotobank: 準体助詞](https://kotobank.jp/word/準体助詞-530025) - nominalizing particles and alternative grammatical classifications.
@@ -429,5 +852,8 @@ Notice the actual patterns: **quantity + ほど**, **昨日 + ほど + a negativ
 - Kotobank's entries for [程](https://kotobank.jp/word/程-573325), [位](https://kotobank.jp/word/位-429901), [だけ](https://kotobank.jp/word/だけ-559985), and [ばかり](https://kotobank.jp/word/ばかり-357062) - noun/particle distinctions and the illustrated particle uses.
 - [Tofugu: Explanatory んだ, んです, のだ, and のです](https://www.tofugu.com/japanese-grammar/explanatory-nda-ndesu-noda-nodesu/) - contractions, attachment forms, and explanatory functions.
 - [Bunpro: もの・もん](https://bunpro.jp/grammar_points/もの-もん) - the sentence-final reason/justification construction.
+- [Bunpro: ものだ](https://bunpro.jp/grammar_points/ものだ), [たものだ](https://bunpro.jp/grammar_points/たものだ), and [わけだ](https://bunpro.jp/grammar_points/わけだ) - characteristic patterns, reflective past recollection and explanatory conclusions; these are not interchangeable functions of an isolated noun.
+- [JMdict via Jisho: ほど](https://jisho.org/search/ほど), [くらい](https://jisho.org/search/くらい), [だけ](https://jisho.org/search/だけ), and [ばかり](https://jisho.org/search/ばかり) - the matching particle readings, senses and spellings, not adjacent homophones or noun entries.
+- [Maggie Sensei: ばかり](https://maggiesensei.com/2013/07/02/%E3%81%B0%E3%81%8B%E3%82%8A-bakari/), [Bunpro: ばかり](https://bunpro.jp/grammar_points/ばかり), [たばかり](https://bunpro.jp/grammar_points/たばかり), and [だけ](https://bunpro.jp/grammar_points/だけ) - quantity, limitation, activity concentration and recent completion; the construction determines the function.
 
 [Article index on GitHub](https://github.com/stop-cran/learning-japanese#articles)

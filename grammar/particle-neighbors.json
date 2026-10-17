@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "id": "particle-neighbors",
+  "title": "Particle neighbors: quantities and action patterns",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "approximate-quantity", "label": "an approximate quantity (ほど／くらい／ぐらい／ばかり)" },
+    { "id": "dake-limit", "label": "an exclusive limit (だけ)" },
+    { "id": "bakari-concentration", "label": "concentration on an activity (てばかり)" },
+    { "id": "bakari-recent-completion", "label": "a recently completed action (たばかり)" }
+  ],
+  "relationships": [
+    {
+      "id": "approximation-vs-limit",
+      "label": "an estimated amount / an exclusive limit",
+      "constructions": ["approximate-quantity", "dake-limit"]
+    },
+    {
+      "id": "concentration-vs-recent-completion",
+      "label": "keep doing an activity / have just completed it",
+      "constructions": ["bakari-concentration", "bakari-recent-completion"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "approximate-quantity-bus-wait",
+      "target": "approximate-quantity",
+      "relationship": "approximation-vs-limit",
+      "prompt": "正確には測っていませんが、バスを三十分____待ちました。",
+      "translation": "Use ほど, くらい, ぐらい, ばかり or だけ, uncontracted, in hiragana or kanji. Mark an approximate quantity, not an exclusive limit: I did not time it exactly, but waited about thirty minutes for the bus.",
+      "evidence": "The waiting time is explicitly an estimate rather than a precisely timed interval or a stated limit.",
+      "explanation": "三十分ほど, 三十分くらい, 三十分ぐらい and 三十分ばかり can all mark the approximate duration here. They share this answer class, without a claim of identical register. だけ would limit the amount rather than itself mark it as approximate.",
+      "answer": "approximate-quantity",
+      "acceptedAnswers": ["ほど", "程", "くらい", "ぐらい", "位", "ばかり", "許り", "許"],
+      "options": [
+        { "id": "approximate-quantity", "label": "ほど", "rationale": "Marks the estimated waiting time; the other accepted approximation forms fit too." },
+        { "id": "dake-limit", "label": "だけ", "rationale": "Would express a limit instead of marking the quantity as an estimate." }
+      ]
+    },
+    {
+      "id": "approximate-quantity-meeting-duration",
+      "target": "approximate-quantity",
+      "relationship": "approximation-vs-limit",
+      "prompt": "会議は一時間____続きました。時計を見ていなかったので、おおよその時間です。",
+      "translation": "Use ほど, くらい, ぐらい, ばかり or だけ, uncontracted, in hiragana or kanji. Mark an approximate quantity, not an exclusive limit: the meeting lasted about an hour. I was not watching the clock, so this is a rough duration.",
+      "evidence": "The final sentence explicitly identifies the duration as rough.",
+      "explanation": "ほど, くらい, ぐらい and ばかり all work after 一時間 to mark the rough duration. だけ would add a limiting meaning, not the approximation being requested. This is a length of time, not a clock-time expression with ごろ.",
+      "answer": "approximate-quantity",
+      "acceptedAnswers": ["ほど", "程", "くらい", "ぐらい", "位", "ばかり", "許り", "許"],
+      "options": [
+        { "id": "approximate-quantity", "label": "くらい", "rationale": "Marks the duration as approximate; the other approximation forms are accepted too." },
+        { "id": "dake-limit", "label": "だけ", "rationale": "Would limit the duration rather than mark the estimate." }
+      ]
+    },
+    {
+      "id": "approximate-quantity-station-walk",
+      "target": "approximate-quantity",
+      "relationship": "approximation-vs-limit",
+      "prompt": "ここから駅までは、歩いて十分____かかります。歩く速さによって変わる目安です。",
+      "translation": "Use ほど, くらい, ぐらい, ばかり or だけ, uncontracted, in hiragana or kanji. Mark an approximate quantity, not an exclusive limit: the station is about a ten-minute walk from here. This is a guide that varies with walking speed.",
+      "evidence": "The travel time is a variable estimate rather than an exact limit.",
+      "explanation": "十分ほど, 十分くらい, 十分ぐらい and 十分ばかり can all give the approximate time needed. Here 十分 is read じゅっぷん or じっぷん, ten minutes, not じゅうぶん, sufficient. The answer supplies only the particle, not the already printed duration.",
+      "answer": "approximate-quantity",
+      "acceptedAnswers": ["ほど", "程", "くらい", "ぐらい", "位", "ばかり", "許り", "許"],
+      "options": [
+        { "id": "approximate-quantity", "label": "ほど", "rationale": "Gives the approximate duration; the other listed approximation forms fit too." },
+        { "id": "dake-limit", "label": "だけ", "rationale": "Would supply a limiting meaning rather than the requested approximation." }
+      ]
+    },
+    {
+      "id": "approximate-quantity-audience",
+      "target": "approximate-quantity",
+      "relationship": "approximation-vs-limit",
+      "prompt": "一人ずつ数えたわけではありませんが、会場には三十人____いました。",
+      "translation": "Use ほど, くらい, ぐらい, ばかり or だけ, uncontracted, in hiragana or kanji. Mark an approximate quantity, not an exclusive limit: I did not count everyone individually, but there were about thirty people at the venue.",
+      "evidence": "The head count is an estimate rather than an assertion that thirty and no more were there.",
+      "explanation": "The approximation forms all fit after 三十人 here. だけ could make a different point about the number being limited, but does not itself encode the estimate requested. This shared-quantity item does not independently distinguish ほど from くらい or ばかり.",
+      "answer": "approximate-quantity",
+      "acceptedAnswers": ["ほど", "程", "くらい", "ぐらい", "位", "ばかり", "許り", "許"],
+      "options": [
+        { "id": "approximate-quantity", "label": "ぐらい", "rationale": "Marks the estimated head count; くらい and the other approximation forms fit too." },
+        { "id": "dake-limit", "label": "だけ", "rationale": "Would mark a limit rather than the requested approximation." }
+      ]
+    },
+    {
+      "id": "approximate-quantity-rice",
+      "target": "approximate-quantity",
+      "relationship": "approximation-vs-limit",
+      "prompt": "正確には量っていませんが、この袋の米は二キロ____あります。",
+      "translation": "Use ほど, くらい, ぐらい, ばかり or だけ, uncontracted, in hiragana or kanji. Mark an approximate quantity, not an exclusive limit: I have not weighed it exactly, but this bag contains about two kilograms of rice.",
+      "evidence": "The rice has not been weighed precisely, so the quantity is being presented as approximate.",
+      "explanation": "All four approximation forms can follow 二キロ in this estimate. Their dictionary spellings are accepted too, although kana is normal, especially for ばかり. だけ would make a limiting claim rather than itself express approximation.",
+      "answer": "approximate-quantity",
+      "acceptedAnswers": ["ほど", "程", "くらい", "ぐらい", "位", "ばかり", "許り", "許"],
+      "options": [
+        { "id": "approximate-quantity", "label": "ほど", "rationale": "Presents the weight as approximate; the other approximation forms are accepted too." },
+        { "id": "dake-limit", "label": "だけ", "rationale": "Would mark a limit rather than the requested estimate." }
+      ]
+    },
+    {
+      "id": "approximate-quantity-walking-distance",
+      "target": "approximate-quantity",
+      "relationship": "approximation-vs-limit",
+      "prompt": "距離は測っていませんが、今日は五キロ____歩いたと思います。",
+      "translation": "Use ほど, くらい, ぐらい, ばかり or だけ, uncontracted, in hiragana or kanji. Mark an approximate quantity, not an exclusive limit: I did not measure the distance, but think I walked about five kilometers today.",
+      "evidence": "The distance is explicitly being estimated rather than measured or capped.",
+      "explanation": "ほど, くらい, ぐらい and ばかり can all mark this approximate distance. だけ would express limitation instead. The shared answers apply to this numeric-quantity frame; they are not a rule for substituting these particles in negative comparisons or proportional-change constructions.",
+      "answer": "approximate-quantity",
+      "acceptedAnswers": ["ほど", "程", "くらい", "ぐらい", "位", "ばかり", "許り", "許"],
+      "options": [
+        { "id": "approximate-quantity", "label": "くらい", "rationale": "Marks the estimated distance; the other approximation forms fit too." },
+        { "id": "dake-limit", "label": "だけ", "rationale": "Would add a limiting meaning rather than mark the distance as approximate." }
+      ]
+    },
+    {
+      "id": "dake-limit-admission-ticket",
+      "target": "dake-limit",
+      "relationship": "approximation-vs-limit",
+      "prompt": "この券で入れるのは二人____です。三人目には別の券が必要です。",
+      "translation": "Use ほど, くらい, ぐらい or だけ, in hiragana or kanji. Mark an exclusive limit, not an estimate: this ticket admits only two people. A third person needs a separate ticket.",
+      "evidence": "The explicit third-person rule makes two a limit, not a rough head count.",
+      "explanation": "二人だけ marks the limit supplied by this ticket. The requested alternatives ほど, くらい and ぐらい would instead offer approximation here. Other limitation expressions, including some uses of ばかり, are outside this question's explicit list; this is not a claim that only だけ can ever express a limit.",
+      "answer": "dake-limit",
+      "acceptedAnswers": ["だけ", "丈"],
+      "options": [
+        { "id": "approximate-quantity", "label": "ほど", "rationale": "Would mark a rough count rather than the specified admission limit." },
+        { "id": "dake-limit", "label": "だけ", "rationale": "Marks the exclusive numerical limit." }
+      ]
+    },
+    {
+      "id": "dake-limit-three-balls",
+      "target": "dake-limit",
+      "relationship": "approximation-vs-limit",
+      "prompt": "箱に玉を三個____入れてください。二個でも四個でもなく、三個です。",
+      "translation": "Use ほど, くらい, ぐらい or だけ, in hiragana or kanji. Mark an exclusive limit, not an estimate: put only three balls in the box, neither two nor four.",
+      "evidence": "The requested number is fixed explicitly rather than approximate.",
+      "explanation": "三個だけ limits the balls put in to the stated three. Approximation with ほど, くらい or ぐらい is not the requested meaning. だけ limits what is included; it does not inherently mean a small amount in every sentence.",
+      "answer": "dake-limit",
+      "acceptedAnswers": ["だけ", "丈"],
+      "options": [
+        { "id": "approximate-quantity", "label": "くらい", "rationale": "Would mark a rough quantity rather than the exact requested limit." },
+        { "id": "dake-limit", "label": "だけ", "rationale": "Limits the action to the specified three balls." }
+      ]
+    },
+    {
+      "id": "dake-limit-five-minute-break",
+      "target": "dake-limit",
+      "relationship": "approximation-vs-limit",
+      "prompt": "休憩は五分____です。五分を過ぎたらすぐ作業に戻ってください。",
+      "translation": "Use ほど, くらい, ぐらい or だけ, in hiragana or kanji. Mark an exclusive limit, not an estimate: the break is only five minutes. Return to work as soon as those five minutes are up.",
+      "evidence": "The instruction sets a limit on the break, not a rough estimate of how long it might last.",
+      "explanation": "五分だけ marks the restricted break length. ほど, くらい and ぐらい would give a different, approximate-quantity framing. しか is another limitation device in suitable negative-predicate constructions, but is not a drop-in replacement in this affirmative ____です frame.",
+      "answer": "dake-limit",
+      "acceptedAnswers": ["だけ", "丈"],
+      "options": [
+        { "id": "approximate-quantity", "label": "ぐらい", "rationale": "Would present an approximate duration instead of the requested limit." },
+        { "id": "dake-limit", "label": "だけ", "rationale": "Marks the explicitly limited break length." }
+      ]
+    },
+    {
+      "id": "bakari-concentration-snacking",
+      "target": "bakari-concentration",
+      "relationship": "concentration-vs-recent-completion",
+      "prompt": "休憩時間にはいつも、お菓子を____ばかりです。",
+      "translation": "Use 食べる (たべる, eat) in て or た form only; ばかりです is already printed. Describe activity that dominates these breaks, not the recency of a completed meal: during breaks, I keep doing little but eating snacks.",
+      "evidence": "The requested focus is the repeated activity that occupies the breaks.",
+      "explanation": "食べてばかりです describes concentration on eating, as 食べてばかりいます can also do. いる is not required in this version. 食べたばかりです would instead say the eating has just been completed. This contrast concerns the verb form before the already printed ばかり.",
+      "answer": "bakari-concentration",
+      "acceptedAnswers": ["食べて", "たべて"],
+      "options": [
+        { "id": "bakari-concentration", "label": "食べて", "rationale": "Describes the concentration on eating during the breaks." },
+        { "id": "bakari-recent-completion", "label": "食べた", "rationale": "Would express a recently completed eating event, not the requested activity pattern." }
+      ]
+    },
+    {
+      "id": "bakari-concentration-holiday-reading",
+      "target": "bakari-concentration",
+      "relationship": "concentration-vs-recent-completion",
+      "prompt": "休みを取った今週は、好きな小説を____ばかりです。楽しくて時間を忘れます。",
+      "translation": "Use 読む (よむ, read) in て or た form only; ばかりです is already printed. Describe activity that dominates this holiday, not a recently completed book: I am spending this week off doing little but reading novels I enjoy, happily losing track of time.",
+      "evidence": "The speaker describes how the holiday time is being spent and explicitly enjoys it.",
+      "explanation": "読んでばかりです presents reading as the dominant activity. This use can occur in complaints, but the pleased context here shows that criticism is not mandatory. 読んだばかりです would instead focus on having recently completed a reading event.",
+      "answer": "bakari-concentration",
+      "acceptedAnswers": ["読んで", "よんで"],
+      "options": [
+        { "id": "bakari-concentration", "label": "読んで", "rationale": "Describes the concentration on reading during the holiday." },
+        { "id": "bakari-recent-completion", "label": "読んだ", "rationale": "Would focus on recent completion, not the requested activity pattern." }
+      ]
+    },
+    {
+      "id": "bakari-concentration-weekend-play",
+      "target": "bakari-concentration",
+      "relationship": "concentration-vs-recent-completion",
+      "prompt": "彼は週末になると、宿題をせずに友達と____ばかりです。",
+      "translation": "Use 遊ぶ (あそぶ, play or spend leisure time) in て or た form only; ばかりです is already printed. Describe activity that dominates his weekends, not a just-completed outing: he keeps playing with friends instead of doing his homework.",
+      "evidence": "The recurring weekend pattern and neglected homework identify the focus on one activity.",
+      "explanation": "遊んでばかりです describes the concentration on playing with friends. The context supplies the complaint about neglected homework. 遊んだばかりです would focus on having just played, a different meaning rather than a different spelling of the same pattern.",
+      "answer": "bakari-concentration",
+      "acceptedAnswers": ["遊んで", "あそんで"],
+      "options": [
+        { "id": "bakari-concentration", "label": "遊んで", "rationale": "Describes the repeated activity dominating his weekends." },
+        { "id": "bakari-recent-completion", "label": "遊んだ", "rationale": "Would say a playing event was just completed instead of describing the requested pattern." }
+      ]
+    },
+    {
+      "id": "bakari-recent-completion-dinner",
+      "target": "bakari-recent-completion",
+      "relationship": "concentration-vs-recent-completion",
+      "prompt": "夕食を____ばかりですから、今はお腹がすいていません。",
+      "translation": "Use 食べる (たべる, eat) in て or た form only; ばかりです is already printed. Describe recent completion, not repeated snacking: I have just finished dinner, so I am not hungry now.",
+      "evidence": "The recently completed dinner explains the present lack of hunger.",
+      "explanation": "食べたばかりです says the eating has just been completed. 食べてばかりです would describe concentration on eating rather than the requested completed meal. 食べたところです can also describe a just-completed meal, but the printed ばかり is outside this verb-form blank.",
+      "answer": "bakari-recent-completion",
+      "acceptedAnswers": ["食べた", "たべた"],
+      "options": [
+        { "id": "bakari-concentration", "label": "食べて", "rationale": "Would describe an activity pattern rather than the requested recent completion." },
+        { "id": "bakari-recent-completion", "label": "食べた", "rationale": "Presents dinner as just completed." }
+      ]
+    },
+    {
+      "id": "bakari-recent-completion-yesterday-book",
+      "target": "bakari-recent-completion",
+      "relationship": "concentration-vs-recent-completion",
+      "prompt": "この小説は昨日、最後まで____ばかりです。内容をまだはっきり覚えています。",
+      "translation": "Use 読む (よむ, read) in て or た form only; ばかりです is already printed. Describe recent completion, not an ongoing reading habit: I only just finished this novel yesterday and still remember its contents clearly.",
+      "evidence": "The reading was finished yesterday and is presented as recent from the speaker's perspective.",
+      "explanation": "読んだばかりです can describe a completion yesterday as still recent. たばかり does not impose a fixed seconds-or-minutes cutoff. 読んでばかりです would describe concentration on reading, not the requested recent completion.",
+      "answer": "bakari-recent-completion",
+      "acceptedAnswers": ["読んだ", "よんだ"],
+      "options": [
+        { "id": "bakari-concentration", "label": "読んで", "rationale": "Would describe an activity pattern rather than the requested completed reading." },
+        { "id": "bakari-recent-completion", "label": "読んだ", "rationale": "Presents yesterday's completion as recent." }
+      ]
+    },
+    {
+      "id": "bakari-recent-completion-play",
+      "target": "bakari-recent-completion",
+      "relationship": "concentration-vs-recent-completion",
+      "prompt": "友達と____ばかりです。遊び終わって帰宅したところなので、少し休みたいです。",
+      "translation": "Use 遊ぶ (あそぶ, play or spend leisure time) in て or た form only; ばかりです is already printed. Describe recent completion, not a repeated leisure habit: I have just finished playing with friends and returned home, so I would like a short rest.",
+      "evidence": "The following sentence explicitly places the playing before the return home and desired rest.",
+      "explanation": "遊んだばかりです presents the playing as recently completed. 遊んでばかりです would describe concentration on that activity instead. The answer must be 遊んだ, not the whole 遊んだばかりです phrase, because the ending is already printed.",
+      "answer": "bakari-recent-completion",
+      "acceptedAnswers": ["遊んだ", "あそんだ"],
+      "options": [
+        { "id": "bakari-concentration", "label": "遊んで", "rationale": "Would describe concentration on playing, not the requested completed outing." },
+        { "id": "bakari-recent-completion", "label": "遊んだ", "rationale": "Presents the activity before the return home as recently completed." }
+      ]
+    }
+  ]
+}
