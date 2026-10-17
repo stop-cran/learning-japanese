@@ -208,5 +208,68 @@ class GrammarIntentCoverageTests(unittest.TestCase):
                 self.assertTrue({"の", "ん"} <= set(exercise["acceptedAnswers"]), exercise["id"])
 
 
+class GrammarStagesCoverageTests(unittest.TestCase):
+    FORMS = {
+        "lunch": (
+            ("食べる", "たべる"),
+            ("食べている", "たべている", "食べてる", "たべてる"),
+            ("食べた", "たべた"),
+        ),
+        "letter": (
+            ("書く", "かく"),
+            ("書いている", "かいている", "書いてる", "かいてる"),
+            ("書いた", "かいた"),
+        ),
+        "novel": (
+            ("読む", "よむ"),
+            ("読んでいる", "よんでいる", "読んでる", "よんでる"),
+            ("読んだ", "よんだ"),
+        ),
+    }
+    STAGES = ("before", "during", "after")
+
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        data = json.loads((root / "grammar" / "formal-nouns-stages.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in data["exercises"]}
+
+    def test_each_lexical_frame_covers_every_stage(self):
+        self.assertEqual(
+            {f"tokoro-{stage}-{frame}" for stage in self.STAGES for frame in self.FORMS},
+            set(self.exercises),
+        )
+        counts = Counter(exercise["target"] for exercise in self.exercises.values())
+        self.assertEqual({f"tokoro-{stage}": 3 for stage in self.STAGES}, counts)
+        directions = Counter(
+            (exercise["target"], option["id"])
+            for exercise in self.exercises.values()
+            for option in exercise["options"]
+            if option["id"] != exercise["target"]
+        )
+        self.assertEqual({
+            (f"tokoro-{target}", f"tokoro-{other}"): 3
+            for target in self.STAGES for other in self.STAGES if target != other
+        }, directions)
+
+    def test_answers_are_exact_missing_forms_with_kana_and_contractions(self):
+        for frame, forms in self.FORMS.items():
+            for stage, answers in zip(self.STAGES, forms):
+                exercise = self.exercises[f"tokoro-{stage}-{frame}"]
+                self.assertEqual(f"tokoro-{stage}", exercise["target"], exercise["id"])
+                self.assertIn("____ところです", exercise["prompt"], exercise["id"])
+                self.assertEqual(set(answers), set(exercise["acceptedAnswers"]), exercise["id"])
+
+    def test_controlled_form_instruction_is_visible_in_each_question(self):
+        for frame, forms in self.FORMS.items():
+            for stage in self.STAGES:
+                exercise = self.exercises[f"tokoro-{stage}-{frame}"]
+                self.assertIn(f"Use {forms[0][0]}", exercise["translation"], exercise["id"])
+                self.assertIn(
+                    "dictionary, ている or た form; contractions accepted.",
+                    exercise["translation"],
+                    exercise["id"],
+                )
+
+
 if __name__ == "__main__":
     unittest.main()

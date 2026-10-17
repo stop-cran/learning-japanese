@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-stages",
+  "title": "Formal nouns: before, during and just after an action",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "tokoro-before", "label": "V dictionary form + ところ: about to start" },
+    { "id": "tokoro-during", "label": "Vている + ところ: in progress" },
+    { "id": "tokoro-after", "label": "Vた + ところ: just completed" }
+  ],
+  "relationships": [
+    {
+      "id": "tokoro-action-stages",
+      "label": "about to start / in progress / just completed",
+      "constructions": ["tokoro-before", "tokoro-during", "tokoro-after"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "tokoro-before-lunch",
+      "target": "tokoro-before",
+      "relationship": "tokoro-action-stages",
+      "prompt": "昼ご飯がテーブルにそろいました。食事はまだ始めていません。箸（はし）を持って、これから昼ご飯を____ところです。",
+      "translation": "Use 食べる (たべる, eat): dictionary, ている or た form; contractions accepted. Lunch is on the table, but I have not started the meal. With chopsticks in hand, I am just about to eat lunch.",
+      "evidence": "The meal has not begun, but the food and chopsticks are ready and これから places its start immediately ahead.",
+      "explanation": "食べるところです locates the speaker just before starting the meal. The dictionary form attaches directly to ところ, even though the sentence ends politely with です. This is a controlled choice of verb form before the printed ところ, not a request for any possible expression of intention.",
+      "answer": "tokoro-before",
+      "acceptedAnswers": ["食べる", "たべる"],
+      "options": [
+        { "id": "tokoro-before", "label": "食べる", "rationale": "Places eating just ahead, matching the meal that is ready but not yet begun." },
+        { "id": "tokoro-during", "label": "食べている", "rationale": "Would put the speaker in the middle of eating, contrary to 食事はまだ始めていません." },
+        { "id": "tokoro-after", "label": "食べた", "rationale": "Would present the meal as just eaten, not about to begin." }
+      ]
+    },
+    {
+      "id": "tokoro-before-letter",
+      "target": "tokoro-before",
+      "relationship": "tokoro-action-stages",
+      "prompt": "便箋（びんせん）とペンを机に置きました。便箋はまだ真っ白です。今から友達への手紙を____ところです。",
+      "translation": "Use 書く (かく, write): dictionary, ている or た form; contractions accepted. I have put writing paper and a pen on the desk. The paper is still blank. I am just about to write a letter to a friend.",
+      "evidence": "The writing materials are ready, the paper is blank, and 今から explicitly introduces the coming action.",
+      "explanation": "書くところです presents writing as about to start. 書いているところです would describe writing in progress, and 書いたところです would describe a letter just written. A future plan can also be expressed with つもり in another sentence, but this question supplies ところ and asks for one of the stated verb forms.",
+      "answer": "tokoro-before",
+      "acceptedAnswers": ["書く", "かく"],
+      "options": [
+        { "id": "tokoro-before", "label": "書く", "rationale": "Matches the blank paper and the explicit 今から." },
+        { "id": "tokoro-during", "label": "書いている", "rationale": "Would describe the writing as already underway rather than starting now." },
+        { "id": "tokoro-after", "label": "書いた", "rationale": "Would present a completed letter, conflicting with the still-blank paper." }
+      ]
+    },
+    {
+      "id": "tokoro-before-novel",
+      "target": "tokoro-before",
+      "relationship": "tokoro-action-stages",
+      "prompt": "新しい小説（しょうせつ）を開きました。まだ一行も目を通していません。今からこの小説を____ところです。",
+      "translation": "Use 読む (よむ, read): dictionary, ている or た form; contractions accepted. I have opened a new novel, but have not read a single line yet. I am just about to read it.",
+      "evidence": "Opening the book is preparation; reading the text has explicitly not started.",
+      "explanation": "読むところです places the reading immediately ahead. The fact that 開きました is past does not make the reading past: it is a different action. Keep the dictionary form 読む before the printed ところ.",
+      "answer": "tokoro-before",
+      "acceptedAnswers": ["読む", "よむ"],
+      "options": [
+        { "id": "tokoro-before", "label": "読む", "rationale": "Marks reading as about to begin after opening the book." },
+        { "id": "tokoro-during", "label": "読んでいる", "rationale": "Would mean the reading is underway, but not even one line has been read yet." },
+        { "id": "tokoro-after", "label": "読んだ", "rationale": "Would say the novel has just been read, not merely opened." }
+      ]
+    },
+    {
+      "id": "tokoro-during-lunch",
+      "target": "tokoro-during",
+      "relationship": "tokoro-action-stages",
+      "prompt": "昼ご飯はまだ半分残っています。私は箸（はし）を動かしながら食事を続けています。今、昼ご飯を____ところです。",
+      "translation": "Use 食べる (たべる, eat): dictionary, ている or た form; contractions accepted. Half my lunch remains, and I am still eating, moving my chopsticks. I am in the middle of eating lunch.",
+      "evidence": "The meal has begun and is continuing; half of it remains. Neither the before-start nor the completed-meal reading fits.",
+      "explanation": "食べているところです focuses on the ongoing stage of the meal. 食べてる is an accepted conversational contraction of 食べている. 食べるところ would move the reference point to before starting, while 食べたところ would present the meal as just completed.",
+      "answer": "tokoro-during",
+      "acceptedAnswers": ["食べている", "たべている", "食べてる", "たべてる"],
+      "options": [
+        { "id": "tokoro-before", "label": "食べる", "rationale": "Would put the meal's start ahead, although eating is already continuing." },
+        { "id": "tokoro-during", "label": "食べている", "rationale": "Matches the continuing meal and the food still left." },
+        { "id": "tokoro-after", "label": "食べた", "rationale": "Would locate the speaker just after the meal rather than in its ongoing middle." }
+      ]
+    },
+    {
+      "id": "tokoro-during-letter",
+      "target": "tokoro-during",
+      "relationship": "tokoro-action-stages",
+      "prompt": "便箋（びんせん）は半分ほど文字で埋まり、今もペンを動かしています。手紙はまだ完成していません。今、友達への手紙を____ところです。",
+      "translation": "Use 書く (かく, write): dictionary, ている or た form; contractions accepted. About half the writing paper is covered with text, and I am still moving my pen. The letter is not finished. I am in the middle of writing it.",
+      "evidence": "Text is already on the page, the pen is still moving, and the letter is explicitly unfinished.",
+      "explanation": "書いているところです identifies the writing as ongoing. 書く forms 書いて, then 書いている; the conversational 書いてる is also accepted. The two other choices would place the action before its start or just after its completion.",
+      "answer": "tokoro-during",
+      "acceptedAnswers": ["書いている", "かいている", "書いてる", "かいてる"],
+      "options": [
+        { "id": "tokoro-before", "label": "書く", "rationale": "Would indicate that writing is about to start, not that the current letter is already half written." },
+        { "id": "tokoro-during", "label": "書いている", "rationale": "Matches the active writing of an unfinished letter." },
+        { "id": "tokoro-after", "label": "書いた", "rationale": "Would present the letter as just written, contrary to its unfinished state and the continuing pen movement." }
+      ]
+    },
+    {
+      "id": "tokoro-during-novel",
+      "target": "tokoro-during",
+      "relationship": "tokoro-action-stages",
+      "prompt": "小説（しょうせつ）の真ん中のページで、登場人物（とうじょうじんぶつ）の会話を目で追っています。結末（けつまつ）はまだ知りません。今、この小説を____ところです。",
+      "translation": "Use 読む (よむ, read): dictionary, ている or た form; contractions accepted. I am following the characters' dialogue on a page in the middle of the novel. I do not know the ending yet. I am in the middle of reading it.",
+      "evidence": "The speaker is actively following the text in the middle of the book, rather than waiting to begin or reporting completion.",
+      "explanation": "読んでいるところです focuses on the reading in progress. The て-form of 読む is 読んで, so the ongoing form contains でいる; its accepted conversational contraction is 読んでる.",
+      "answer": "tokoro-during",
+      "acceptedAnswers": ["読んでいる", "よんでいる", "読んでる", "よんでる"],
+      "options": [
+        { "id": "tokoro-before", "label": "読む", "rationale": "Would place the start of reading ahead, despite the speaker already following text mid-book." },
+        { "id": "tokoro-during", "label": "読んでいる", "rationale": "Describes the reading that is happening in the visible context." },
+        { "id": "tokoro-after", "label": "読んだ", "rationale": "Would present the reading as just completed rather than currently in progress." }
+      ]
+    },
+    {
+      "id": "tokoro-after-lunch",
+      "target": "tokoro-after",
+      "relationship": "tokoro-action-stages",
+      "prompt": "最後の一口を飲み込んで（のみこんで）、たった今、箸（はし）を置きました。お皿は空です。昼ご飯を____ところです。",
+      "translation": "Use 食べる (たべる, eat): dictionary, ている or た form; contractions accepted. I have swallowed the last bite and just put down my chopsticks. My plate is empty. I have just eaten lunch.",
+      "evidence": "The final bite is finished and the chopsticks have just been put down. The reference point is immediately after the meal.",
+      "explanation": "食べたところです places the speaker just after eating. 食べたばかりです can also describe a recently finished meal in a different sentence; it is not a wrong synonym here. This task supplies ところ and asks only for one of the three stated verb forms, so enter 食べた, not an entire replacement sentence.",
+      "answer": "tokoro-after",
+      "acceptedAnswers": ["食べた", "たべた"],
+      "options": [
+        { "id": "tokoro-before", "label": "食べる", "rationale": "Would put the meal ahead, although its last bite has already been swallowed." },
+        { "id": "tokoro-during", "label": "食べている", "rationale": "Would present the meal as ongoing after the final bite and the end of eating." },
+        { "id": "tokoro-after", "label": "食べた", "rationale": "Matches the moment immediately after completing lunch." }
+      ]
+    },
+    {
+      "id": "tokoro-after-letter",
+      "target": "tokoro-after",
+      "relationship": "tokoro-action-stages",
+      "prompt": "たった今、手紙の最後に自分の名前を書き、ペンを置きました。本文も完成しています。友達への手紙を____ところです。",
+      "translation": "Use 書く (かく, write): dictionary, ている or た form; contractions accepted. I have just signed the end of the letter and put down my pen. The body of the letter is complete too. I have just written the letter to my friend.",
+      "evidence": "Both the body and final signature are finished, and たった今 locates completion at the present moment.",
+      "explanation": "書いたところです describes a letter just written. Use 書いた, the た-form of 書く, before the printed ところ. 書いたばかりです is another possible whole-sentence formulation, but choosing between ところ and ばかり is not what this verb-form question measures.",
+      "answer": "tokoro-after",
+      "acceptedAnswers": ["書いた", "かいた"],
+      "options": [
+        { "id": "tokoro-before", "label": "書く", "rationale": "Would put writing before its start, contrary to the finished body and signature." },
+        { "id": "tokoro-during", "label": "書いている", "rationale": "Would describe continuing writing, but the letter is complete and the pen has been put down." },
+        { "id": "tokoro-after", "label": "書いた", "rationale": "Presents writing as just completed, matching the finished letter." }
+      ]
+    },
+    {
+      "id": "tokoro-after-novel",
+      "target": "tokoro-after",
+      "relationship": "tokoro-action-stages",
+      "prompt": "小説（しょうせつ）の最後の一文まで目を通し、たった今、本を閉じました。結末（けつまつ）も分かりました。この小説を____ところです。",
+      "translation": "Use 読む (よむ, read): dictionary, ている or た form; contractions accepted. I have read through the novel's last sentence and just closed the book. I now know the ending. I have just read the novel.",
+      "evidence": "The last sentence has been read and the book has just been closed; this is not merely a pause somewhere in the middle.",
+      "explanation": "読んだところです marks the point just after reading. 読む has the た-form 読んだ, not 読みた. A たばかり sentence can also report recent reading, but ところ is fixed in this exercise and only the missing verb form belongs in the answer.",
+      "answer": "tokoro-after",
+      "acceptedAnswers": ["読んだ", "よんだ"],
+      "options": [
+        { "id": "tokoro-before", "label": "読む", "rationale": "Would mean reading is about to begin, though the final sentence has already been read." },
+        { "id": "tokoro-during", "label": "読んでいる", "rationale": "Would put the reading in progress, contrary to completion and closing the book." },
+        { "id": "tokoro-after", "label": "読んだ", "rationale": "Matches the moment just after finishing the novel." }
+      ]
+    }
+  ]
+}

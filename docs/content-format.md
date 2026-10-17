@@ -155,6 +155,13 @@ future-plan or assumed-state construction. The inference target groups はず／
 to measure a distinction between those forms. Normative answers group べき with other forms, including の／ん directives or
 regret, only where the whole sentence supports that function. Accepted forms are not global substitution rules.
 
+`formal-nouns-stages.json` adds nine exercises on the three basic ところ action stages: immediately before, during, and just
+after an activity; see the [source record](grammar-stages-sources.json). Each stage uses the same three verbs in different
+contexts. The question-side English explicitly asks for the given verb's dictionary, ている or た form; ところです is
+already printed. Accept the literal missing form, including kana spellings and conversational てる／でる contractions.
+This is a controlled stage/form contrast, not an unrestricted cloze or a test that たところ must exclude たばかり.
+Do not move the form restriction into answer-only feedback or generalize these activity patterns to every use of ている.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.

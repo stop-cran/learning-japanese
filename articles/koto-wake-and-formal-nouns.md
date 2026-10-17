@@ -190,6 +190,33 @@ context, **調べておくのだった／調べておくんだった** can mean 
 necessarily asserting a past plan. These forms have other uses too, including explanation, denial and recalling a forgotten plan;
 they are not automatic substitutes for べき in every sentence.
 
+### ところ: locating an action's stage
+
+For activities such as writing a letter, the verb form before **ところ** distinguishes three stages:
+
+| Form | Example | Stage |
+| --- | --- | --- |
+| Dictionary-form verb + ところだ／です | 手紙を書くところです。 | I am just about to write a letter. |
+| て-form verb + いるところだ／です | 手紙を書いているところです。 | I am in the middle of writing a letter. |
+| た-form verb + ところだ／です | 手紙を書いたところです。 | I have just written a letter. |
+
+Use the plain verb form before ところ even when the sentence ends in polite **です**. For example, 書く becomes **書いている**
+in the ongoing pattern and **書いた** in the completed pattern; 読む becomes **読んでいる／読んだ**.
+In conversation, the い in ている／でいる may be omitted: **書いてるところです**, "I am in the middle of writing,"
+or **読んでるところです**, "I am in the middle of reading." The uncontracted forms are the neutral learning models.
+
+Context identifies the relevant action and its stage. Opening a book can be finished while reading it has not yet begun.
+Likewise, finishing one bite does not mean the whole meal is over. **これから**, "from now," and **たった今**, "just now,"
+often help locate the stage, but read the whole situation rather than treating these words as automatic answer keys.
+
+**食べたところです**, "I have just eaten," overlaps with **食べたばかりです**, "I have only just eaten."
+ところ focuses on the point just after the action; ばかり presents the event as still recent from the speaker's perspective,
+even when more time has passed. Both can fit an immediately completed meal: this is not a contrast where one must always be wrong.
+
+This table covers the three basic activity patterns, not every use of ところ. Nor does **ている** always mean an action is underway:
+it can also describe a resulting state. A past reference point can appear on the final copula, as in
+**電話が鳴ったとき、手紙を書いているところでした**, "When the phone rang, I was in the middle of writing a letter."
+
 ### Time, recurrence, and occasions
 
 | Word | Central idea in these uses | Example |
@@ -362,6 +389,8 @@ Notice the actual patterns: **quantity + ほど**, **昨日 + ほど + a negativ
 - [Japan Foundation: 「こと」（2）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201203.html) - the advice/instruction use of ことだ alongside other constructions.
 - [Daijisen: のだ](https://kotobank.jp/word/のだ-596938), [IMABI: The mood marker のだ](https://imabi.org/the-mood-marker-%EF%BD%9E%E3%81%AE%E3%81%A0/), and [Bunpro: んじゃない](https://bunpro.jp/grammar_points/んじゃない) - directive uses, retrospective regret and prohibition, distinct from the forms' other functions.
 - [Japan Foundation: 「そうだ／ようだ／らしい」（1）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201012.html) and [(2)](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201103.html) - direct and indirect information in inferential judgments, including the comparison with はず.
+- [Japan Foundation: Vところです／Vているところです／Vたところです](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00036/ja/render.do) - the three action stages, past reference points, and the overlap with たばかり.
+- [Tae Kim: Other uses of the te-form](https://guidetojapanese.org/learn/grammar/teform) - ongoing and resulting states, and conversational omission of い in ている.
 - [Kotobank: 形式名詞](https://kotobank.jp/word/形式名詞-488640) - definitions and the difficulty of drawing a single boundary against ordinary nouns.
 - [N1et: 形式名詞「こと・の」違い 他「ところ・とき・ため」など見分け方](https://jn1et.com/formal-noun/) - a teaching-oriented classification of formal nouns and their functions.
 - [Kotobank: 準体助詞](https://kotobank.jp/word/準体助詞-530025) - nominalizing particles and alternative grammatical classifications.
