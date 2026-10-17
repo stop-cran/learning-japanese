@@ -133,5 +133,44 @@ class GrammarFoundationsCoverageTests(unittest.TestCase):
         }, identities)
 
 
+class GrammarActionsCoverageTests(unittest.TestCase):
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((root / "grammar" / "formal-nouns-actions.json").read_text(encoding="utf-8"))
+
+    def test_actions_has_three_examples_per_pattern(self):
+        counts = Counter(exercise["target"] for exercise in self.data["exercises"])
+        self.assertEqual({
+            "koto-ability", "koto-occurrence", "koto-self-decision", "koto-outcome",
+        }, set(counts))
+        self.assertTrue(all(count >= 3 for count in counts.values()), counts)
+
+    def test_occurrence_includes_experience_and_nonpast_events(self):
+        exercises = {
+            exercise["id"]: exercise for exercise in self.data["exercises"]
+            if exercise["target"] == "koto-occurrence"
+        }
+        self.assertIn("見たこと____", exercises["koto-experience-drift-ice"]["prompt"])
+        self.assertIn("見たこと____", exercises["koto-experience-noh-theater"]["prompt"])
+        self.assertIn("食べること____", exercises["koto-occurrence-lunch-out"]["prompt"])
+
+    def test_actions_keep_supplied_stems_out_of_typed_answers(self):
+        for exercise in self.data["exercises"]:
+            self.assertTrue(
+                "こと____" in exercise["prompt"] or "ことに____" in exercise["prompt"],
+                exercise["id"],
+            )
+            for answer in exercise["acceptedAnswers"]:
+                self.assertNotIn("こと", answer, exercise["id"])
+
+    def test_transfer_accepts_established_arrangement(self):
+        exercise = next(
+            item for item in self.data["exercises"] if item["id"] == "koto-outcome-branch-transfer"
+        )
+        self.assertTrue(
+            {"なった", "なりました", "なっている", "なっています"} <= set(exercise["acceptedAnswers"])
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -107,6 +107,7 @@ The words' central meanings help, but particles and surrounding verbs determine 
 | Construction | Example | Meaning in this example |
 | --- | --- | --- |
 | Dictionary/ない-form verb + ことにする | 毎日歩くことにした。 | I decided to walk every day. |
+| Dictionary/ない-form verb + ことになる | 来月から大阪で働くことになった。 | It has been decided that I will work in Osaka from next month. |
 | た-form verb (plain past) + ことがある | 京都に行ったことがある。 | I have been to Kyoto. |
 | Dictionary-form verb + ことができる | 日本語を読むことができる。 | I can read Japanese. |
 | Dictionary-form verb + ことはない | 心配することはない。 | There is no need to worry. |
@@ -115,7 +116,16 @@ The words' central meanings help, but particles and surrounding verbs determine 
 | Clause + わけではない | 日本語が嫌いなわけではない。 | It is not that I dislike Japanese. |
 | Dictionary/ない-form verb + わけにはいかない | 約束したので、休むわけにはいかない。 | I made a promise, so I cannot take time off. |
 
-The last example concerns obligations or circumstances that make an action unacceptable, rather than a lack of physical ability. Also, ことはない has other uses: the "no need to" interpretation above should not be applied mechanically to every occurrence.
+**ことにする versus ことになる** is a difference of framing, not an absolute rule about who made the decision. ことにする directly
+presents an act of choosing; ことになる presents a resulting situation or arrangement. The latter often reports a decision made
+elsewhere, but can also announce a personal decision indirectly. It can express a consequence without anyone making a decision:
+**一袋に六個なら、三袋で十八個あることになる**, "If there are six in one bag, three bags amount to eighteen."
+
+**ことができる** covers ability and possibility provided by circumstances or rules, not only physical skill.
+With **ことがある**, the preceding verb matters: **行ったことがある** presents past experience, whereas **行くことがある**
+describes occasions when one goes. These are not interchangeable tense forms.
+
+The last わけ example concerns obligations or circumstances that make an action unacceptable, rather than a lack of physical ability. Also, ことはない has other uses: the "no need to" interpretation above should not be applied mechanically to every occurrence.
 
 The three negative わけ constructions are especially important to keep separate:
 
@@ -311,6 +321,8 @@ Notice the actual patterns: **quantity + ほど**, **昨日 + ほど + a negativ
 ## References
 
 - [Japan Foundation: 「こと」（1）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201112.html) - nominalization, こと versus の, and fixed expressions.
+- [Bunpro: ことにする](https://bunpro.jp/grammar_points/ことにする), [ことになる](https://bunpro.jp/grammar_points/ことになる), and [ことができる](https://bunpro.jp/grammar_points/ことができる) - decisions versus resulting situations, and ability or possibility.
+- [ARC Tokyo: ことになりました](https://arc.ac.jp/Tokyo/mimi-bunpou053/) and [E-Japanese: ことになる](https://www.e-japanese.jp/?p=650) - personal decisions announced indirectly and results derived by calculation.
 - [Kotobank: 形式名詞](https://kotobank.jp/word/形式名詞-488640) - definitions and the difficulty of drawing a single boundary against ordinary nouns.
 - [N1et: 形式名詞「こと・の」違い 他「ところ・とき・ため」など見分け方](https://jn1et.com/formal-noun/) - a teaching-oriented classification of formal nouns and their functions.
 - [Kotobank: 準体助詞](https://kotobank.jp/word/準体助詞-530025) - nominalizing particles and alternative grammatical classifications.

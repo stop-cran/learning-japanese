@@ -144,6 +144,11 @@ The eight original exercises in `formal-nouns-pilot.json` retain their IDs and t
 The [source record](grammar-foundations-sources.json) identifies the scope and inspected references. Broader article coverage is
 being added in reviewed batches, not claimed by the existence of the schema. Keep source records free of personal progress exports.
 
+`formal-nouns-actions.json` adds 12 exercises on ことができる, ことがある, ことにする and ことになる, with
+[its own source record](grammar-actions-sources.json). The occurrence unit includes both past experience and occasional behavior;
+the exercise ID and verb form distinguish the use. Decision questions explicitly request the act-of-deciding frame, rather than
+pretend that a personal decision cannot also be announced as an arrangement. The printed こと／ことに stays outside the blank.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.

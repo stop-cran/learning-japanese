@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-actions",
+  "title": "Formal nouns: ability, experience, decisions and outcomes",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "koto-ability", "label": "ことができる: ability or possibility" },
+    { "id": "koto-occurrence", "label": "ことがある: an occurrence or past experience" },
+    { "id": "koto-self-decision", "label": "ことにする: choosing an action" },
+    { "id": "koto-outcome", "label": "ことになる: a resulting situation or arrangement" }
+  ],
+  "relationships": [
+    { "id": "ability-vs-occurrence", "label": "being able to do something / an action occurring", "constructions": ["koto-ability", "koto-occurrence"] },
+    { "id": "decision-vs-outcome", "label": "expressing an act of deciding / reporting a result or arrangement", "constructions": ["koto-self-decision", "koto-outcome"] }
+  ],
+  "exercises": [
+    {
+      "id": "koto-ability-photo-printer",
+      "target": "koto-ability",
+      "relationship": "ability-vs-occurrence",
+      "prompt": "説明書には「このボタンで写真を印刷できます」と書いてある。つまり、この機械では写真を印刷すること____。",
+      "translation": "The manual says, \"You can print photos with this button.\" In other words, you can print photos with this machine.",
+      "evidence": "The second sentence restates the machine's capability. It does not report that someone sometimes prints photos or has printed them before. こと is already supplied.",
+      "explanation": "Dictionary-form verb + ことができる expresses ability or possibility. Fill only ができる after the printed こと. With a dictionary-form verb, ことがある can describe occasional events, but that would not restate the capability described by the manual.",
+      "answer": "koto-ability",
+      "acceptedAnswers": ["ができる", "が出来る", "ができます", "が出来ます"],
+      "options": [
+        { "id": "koto-ability", "label": "ができる", "rationale": "Completes the expression for what this machine makes possible." },
+        { "id": "koto-occurrence", "label": "がある", "rationale": "After 印刷する this would describe occasions, not the capability being explained. Past experience instead uses a past-tense verb before ことがある." }
+      ]
+    },
+    {
+      "id": "koto-ability-library-loans",
+      "target": "koto-ability",
+      "relationship": "ability-vs-occurrence",
+      "prompt": "この図書館の規則では、利用カードがあれば一人五冊まで本を借りること____。私はまだ利用していないが、この条件なら借りられると説明された。",
+      "translation": "Under this library's rules, a person with a library card can borrow up to five books. I have not used the service yet, but I was told that borrowing is possible under these conditions.",
+      "evidence": "The rule grants access to borrowing; the speaker explicitly has no experience using the service.",
+      "explanation": "ことができる can express a possibility provided by rules or circumstances, not only a physical skill. ことがある would describe occurrences, which is not what the library rule or the speaker's explanation states.",
+      "answer": "koto-ability",
+      "acceptedAnswers": ["ができる", "が出来る", "ができます", "が出来ます"],
+      "options": [
+        { "id": "koto-ability", "label": "ができる", "rationale": "Expresses the borrowing option available to a cardholder." },
+        { "id": "koto-occurrence", "label": "がある", "rationale": "Would describe occasions of borrowing, not the permission or possibility established by this rule." }
+      ]
+    },
+    {
+      "id": "koto-ability-braille",
+      "target": "koto-ability",
+      "relationship": "ability-vs-occurrence",
+      "prompt": "「点字（てんじ）は読めますか。」「はい、点字を読むこと____。文字を目で見なくても、指で触れて内容が分かります。」",
+      "translation": "\"Can you read braille?\" \"Yes, I can read braille. I can understand the content by touching the characters with my fingers, without seeing them.\"",
+      "evidence": "The question asks about a skill, and the reply demonstrates that skill. It is not a question about frequency or past experience.",
+      "explanation": "読むことができる answers the ability question 読めますか. 読むことがある would say that the speaker sometimes reads braille, which does not directly express the ability being asked about. The printed こと fixes the nominalizer in this exercise.",
+      "answer": "koto-ability",
+      "acceptedAnswers": ["ができる", "が出来る", "ができます", "が出来ます"],
+      "options": [
+        { "id": "koto-ability", "label": "ができます", "rationale": "Directly answers whether the speaker can perform the action." },
+        { "id": "koto-occurrence", "label": "があります", "rationale": "With 読む this would report occasional reading, rather than state the skill requested in the question." }
+      ]
+    },
+    {
+      "id": "koto-experience-drift-ice",
+      "target": "koto-occurrence",
+      "relationship": "ability-vs-occurrence",
+      "prompt": "子供のころ、北海道で一度だけ流氷（りゅうひょう）を見たこと____。今でも、海が白く見えた景色を覚えている。",
+      "translation": "I have seen drift ice in Hokkaido once, when I was a child. I still remember the sight of the sea looking white.",
+      "evidence": "A single past visit and a retained memory establish an actual experience. The verb 見た is already in the past form.",
+      "explanation": "Past-tense verb + ことがある says that the event has occurred in one's experience. The ordinary ability construction uses the dictionary form, 見ることができる, not 見たことができる.",
+      "answer": "koto-occurrence",
+      "acceptedAnswers": ["がある", "があります", "はある", "はあります", "もある", "もあります"],
+      "options": [
+        { "id": "koto-ability", "label": "ができる", "rationale": "The ordinary ability pattern cannot attach to the printed past-tense 見た in this way." },
+        { "id": "koto-occurrence", "label": "がある", "rationale": "Completes the statement that seeing drift ice is part of the speaker's past experience." }
+      ]
+    },
+    {
+      "id": "koto-experience-noh-theater",
+      "target": "koto-occurrence",
+      "relationship": "ability-vs-occurrence",
+      "prompt": "私は一度、能（のう）を劇場で見たこと____。そのときの番組表を今も持っている。",
+      "translation": "I have seen a noh performance in a theater once. I still have the program from that occasion.",
+      "evidence": "The retained program refers to a specific event that actually occurred, not a current ability to attend or watch.",
+      "explanation": "見たことがある expresses past experience. ある remains present because the speaker now has that experience; the event itself is located in the past by 見た. 見たことができる is not the ordinary ability construction.",
+      "answer": "koto-occurrence",
+      "acceptedAnswers": ["がある", "があります", "はある", "はあります", "もある", "もあります"],
+      "options": [
+        { "id": "koto-ability", "label": "ができる", "rationale": "Does not form the ability expression after 見た; that expression would require 見る." },
+        { "id": "koto-occurrence", "label": "がある", "rationale": "Connects the past viewing with the speaker's present store of experience." }
+      ]
+    },
+    {
+      "id": "koto-occurrence-lunch-out",
+      "target": "koto-occurrence",
+      "relationship": "ability-vs-occurrence",
+      "prompt": "「毎日、お弁当を持っていくのですか。」「いいえ。普段は持っていきますが、忙しくて作れない日には、外で昼ご飯を食べること____。先週も一度そうしました。」",
+      "translation": "\"Do you take a packed lunch every day?\" \"No. I usually do, but on busy days when I cannot make one, I sometimes eat lunch out. I did so once last week too.\"",
+      "evidence": "The speaker reports an occasional exception to an everyday habit and confirms an actual instance last week.",
+      "explanation": "Dictionary-form verb + ことがある describes occasions when something happens. Past-tense verb + ことがある instead presents past experience. Here, 食べることがある reports the occasional behavior; 食べることができる would describe ability or an available option, not the stated frequency.",
+      "answer": "koto-occurrence",
+      "acceptedAnswers": ["がある", "があります", "はある", "はあります", "もある", "もあります"],
+      "options": [
+        { "id": "koto-ability", "label": "ができます", "rationale": "Would state that eating out is possible, rather than answer how often the usual packed-lunch habit has exceptions." },
+        { "id": "koto-occurrence", "label": "があります", "rationale": "Reports actual occasional meals out, consistent with the example from last week." }
+      ]
+    },
+    {
+      "id": "koto-decision-reading-aloud",
+      "target": "koto-self-decision",
+      "relationship": "decision-vs-outcome",
+      "prompt": "三つの勉強法を試し、自分で一つ選んだ。自分の決断をはっきり述べるなら、「毎朝、音読をすることに____」と言う。",
+      "translation": "I tried three study methods and chose one myself. To state my own act of deciding explicitly: \"I decided to read aloud every morning.\"",
+      "evidence": "The task explicitly asks the speaker to express their own act of choosing, not simply announce the resulting arrangement. ことに is already printed.",
+      "explanation": "ことにした directly presents the choice as an act of deciding. ことになった presents a resulting situation or arrangement. It can sometimes announce a personal decision indirectly, so it is not banned whenever the speaker was involved; it does not fulfill this question's explicit request to state the act of deciding.",
+      "answer": "koto-self-decision",
+      "acceptedAnswers": ["した", "しました", "決めた", "決めました"],
+      "options": [
+        { "id": "koto-self-decision", "label": "した", "rationale": "Completes the direct statement of the speaker's decision." },
+        { "id": "koto-outcome", "label": "なった", "rationale": "Would frame the situation as an outcome or arrangement instead of explicitly stating the act of choosing requested here." }
+      ]
+    },
+    {
+      "id": "koto-decision-morning-run",
+      "target": "koto-self-decision",
+      "relationship": "decision-vs-outcome",
+      "prompt": "毎日の予定を比べ、私は夜ではなく朝に走ろうと決めた。その決断を自分の行為として述べると、「朝に走ることに____」となる。",
+      "translation": "I compared my daily schedules and decided to run in the morning rather than at night. To express that decision as my own action: \"I decided to run in the morning.\"",
+      "evidence": "The requested wording must explicitly report the speaker's act of deciding, rather than describe what the schedule has become.",
+      "explanation": "走ることにした expresses choosing to run. 走ることになった could announce an arrangement, including one the speaker helped make, but would not explicitly express deciding as the speaker's action in the way requested.",
+      "answer": "koto-self-decision",
+      "acceptedAnswers": ["した", "しました", "決めた", "決めました"],
+      "options": [
+        { "id": "koto-self-decision", "label": "した", "rationale": "Names the decision as the speaker's own act." },
+        { "id": "koto-outcome", "label": "なった", "rationale": "Presents the resulting arrangement rather than the act of deciding that the prompt asks for." }
+      ]
+    },
+    {
+      "id": "koto-decision-not-buying-car",
+      "target": "koto-self-decision",
+      "relationship": "decision-vs-outcome",
+      "prompt": "私は費用を計算し、今回は車を買わないと自分で決めた。この決断を明示するなら、「今回は車を買わないことに____」と言う。",
+      "translation": "I worked out the costs and decided for myself not to buy a car this time. To state that decision explicitly: \"I decided not to buy a car this time.\"",
+      "evidence": "The decision is positive and definite; its content is the negative action 買わない. The task asks to state that act of deciding.",
+      "explanation": "買わないことにした means that the speaker decided not to buy. Do not move the negative to しない: 買うことにしない means not deciding to buy, which need not amount to a definite decision against buying. ことになった would frame an outcome instead of explicitly stating this act of deciding.",
+      "answer": "koto-self-decision",
+      "acceptedAnswers": ["した", "しました", "決めた", "決めました"],
+      "options": [
+        { "id": "koto-self-decision", "label": "した", "rationale": "States a completed decision whose content is 買わない, not buying." },
+        { "id": "koto-outcome", "label": "なった", "rationale": "Reports a resulting situation rather than directly expressing the speaker's decision as requested." }
+      ]
+    },
+    {
+      "id": "koto-outcome-branch-transfer",
+      "target": "koto-outcome",
+      "relationship": "decision-vs-outcome",
+      "prompt": "人事部から異動の通知が届いた。私は決定に加わっておらず、通知された結果だけを報告する。来月から大阪の支店で働くことに____。",
+      "translation": "A transfer notice arrived from the personnel department. I was not involved in the decision and am only reporting the notified outcome: it has been decided that I will work at the Osaka branch from next month.",
+      "evidence": "The speaker explicitly reports the notified result, not their own choice to transfer.",
+      "explanation": "ことになった presents the new arrangement. ことになっている is also accepted here: it describes the established arrangement rather than the point when it became decided. ことにした would attribute an act of deciding to the subject, contrary to the requested first-person report of a result. This context disambiguates the forms; it is not a universal rule that ことになる always excludes the speaker's participation.",
+      "answer": "koto-outcome",
+      "acceptedAnswers": ["なった", "なりました", "なっている", "なっています"],
+      "options": [
+        { "id": "koto-self-decision", "label": "した", "rationale": "Would state an act of deciding, which the speaker explicitly says they are not reporting." },
+        { "id": "koto-outcome", "label": "なった", "rationale": "Reports the arrangement established by the transfer notice." }
+      ]
+    },
+    {
+      "id": "koto-outcome-return-fare",
+      "target": "koto-outcome",
+      "relationship": "decision-vs-outcome",
+      "prompt": "切符は片道二百五十円で、往復の割引はない。計算すると、往復で五百円かかることに____。",
+      "translation": "A one-way ticket costs 250 yen, and there is no return discount. Calculating the total, a return trip works out to cost 500 yen.",
+      "evidence": "The fare follows from the stated prices. The speaker is calculating a result, not deciding how much the railway should charge.",
+      "explanation": "ことになる can present a result or what a calculation amounts to; it is not limited to arrangements made by another person. かかることにする would mean deciding to treat the cost that way, not simply deriving it from the prices.",
+      "answer": "koto-outcome",
+      "acceptedAnswers": ["なる", "なります"],
+      "options": [
+        { "id": "koto-self-decision", "label": "する", "rationale": "Would treat the cost as something being decided or stipulated, rather than calculated from the fixed fares." },
+        { "id": "koto-outcome", "label": "なる", "rationale": "Presents 500 yen as the result of the fare calculation." }
+      ]
+    },
+    {
+      "id": "koto-outcome-three-bags",
+      "target": "koto-outcome",
+      "relationship": "decision-vs-outcome",
+      "prompt": "一袋に六個ずつ入っているので、三袋なら全部で十八個あることに____。中身を変える話ではなく、個数を確かめている。",
+      "translation": "Each bag contains six items, so three bags amount to eighteen items in all. We are checking the number, not changing what is inside.",
+      "evidence": "The number is a consequence of the known contents. Nobody is deciding or pretending how many items there are.",
+      "explanation": "ことになる states what follows from the given facts. ことにする can stipulate or decide to treat something as a certain way, but the prompt explicitly rules that out and asks for the count already implied by the contents.",
+      "answer": "koto-outcome",
+      "acceptedAnswers": ["なる", "なります"],
+      "options": [
+        { "id": "koto-self-decision", "label": "する", "rationale": "Would make eighteen a chosen stipulation, which is not the calculation being performed." },
+        { "id": "koto-outcome", "label": "なる", "rationale": "Expresses the eighteen-item total as a consequence of six items in each of three bags." }
+      ]
+    }
+  ]
+}
