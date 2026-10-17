@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-you",
+  "title": "よう: comparisons, examples and desired outcomes",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "you-adverbial-comparison", "label": "ように: describe how an action or property compares" },
+    { "id": "you-noun-modifier", "label": "ような: directly describe a noun by comparison or example" },
+    { "id": "you-enabled-goal", "label": "ように: act so that someone can do something" },
+    { "id": "you-prevented-goal", "label": "ように: act so that someone cannot do something" }
+  ],
+  "relationships": [
+    {
+      "id": "you-predicate-vs-noun-modification",
+      "label": "comparison applied to an action or property / comparison directly modifying a noun",
+      "constructions": ["you-adverbial-comparison", "you-noun-modifier"]
+    },
+    {
+      "id": "you-enable-vs-prevent-ability",
+      "label": "making an action possible / making an action unavailable",
+      "constructions": ["you-enabled-goal", "you-prevented-goal"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "you-manner-folding-model",
+      "target": "you-adverbial-comparison",
+      "relationship": "you-predicate-vs-noun-modification",
+      "prompt": "紙を、見本（みほん）のよう____折ってください。",
+      "translation": "Use only に or な after the printed よう. Describe how to fold the paper, not what kind of paper it is: fold the paper as in the model.",
+      "evidence": "The model specifies how to perform 折る, and the next word is the verb form 折って.",
+      "explanation": "見本のように modifies the folding action. の already connects the noun 見本 to よう. な would need a noun to modify rather than directly connecting this comparison to 折ってください. Other formulations, including 見本のとおりに, can also describe following a model; they are outside this ending-only blank.",
+      "answer": "you-adverbial-comparison",
+      "acceptedAnswers": ["に"],
+      "options": [
+        { "id": "you-adverbial-comparison", "label": "に", "rationale": "Connects the model comparison to the folding action." },
+        { "id": "you-noun-modifier", "label": "な", "rationale": "Would directly modify a noun, but the following 折って is a verb form." }
+      ]
+    },
+    {
+      "id": "you-comparison-february-warmth",
+      "target": "you-adverbial-comparison",
+      "relationship": "you-predicate-vs-noun-modification",
+      "prompt": "今日は春のよう____暖かいです。まだ二月なのに、上着はいりません。",
+      "translation": "Use only に or な after the printed よう. Apply the comparison to the property 暖かい (あたたかい, warm): today is warm like spring. Although it is still February, I do not need a jacket.",
+      "evidence": "The comparison characterizes how warm today is; it does not directly introduce a noun such as 日 or 天気.",
+      "explanation": "春のように暖かい compares today's warmth with spring. ように is not limited to modifying an action verb: here it relates to an adjective predicate. ような would directly modify a noun, which this sentence does not supply after the comparison.",
+      "answer": "you-adverbial-comparison",
+      "acceptedAnswers": ["に"],
+      "options": [
+        { "id": "you-adverbial-comparison", "label": "に", "rationale": "Applies the spring comparison to 暖かい." },
+        { "id": "you-noun-modifier", "label": "な", "rationale": "Does not connect directly to the adjective predicate 暖かいです in this sentence." }
+      ]
+    },
+    {
+      "id": "you-manner-teacher-writing",
+      "target": "you-adverbial-comparison",
+      "relationship": "you-predicate-vs-noun-modification",
+      "prompt": "この文字は、先生が書いたよう____書いてください。筆の動かし方もまねしましょう。",
+      "translation": "Use only に or な after the printed よう. Describe how to write, rather than directly describing a noun: write this character as the teacher wrote it. Imitate the brush movements too.",
+      "evidence": "The teacher's writing supplies a model for the requested writing action.",
+      "explanation": "先生が書いたように connects the teacher's demonstration to 書いてください. A plain verb clause attaches directly before よう: no の is needed after 書いた. This is a manner/model comparison, not a claim that every ように after a past verb expresses a purpose.",
+      "answer": "you-adverbial-comparison",
+      "acceptedAnswers": ["に"],
+      "options": [
+        { "id": "you-adverbial-comparison", "label": "に", "rationale": "Relates the requested writing to the teacher's model." },
+        { "id": "you-noun-modifier", "label": "な", "rationale": "Would need a following noun, rather than directly modifying 書いてください." }
+      ]
+    },
+    {
+      "id": "you-example-fruit-jam",
+      "target": "you-noun-modifier",
+      "relationship": "you-predicate-vs-noun-modification",
+      "prompt": "りんごのよう____果物を使ってジャムを作ります。今日は、りんごを使います。",
+      "translation": "Use only に or な after the printed よう. Make the example directly modify 果物 (くだもの, fruit), not the way of making jam: I make jam using fruit such as apples. Today I am using apples.",
+      "evidence": "Apples are presented as an example within the fruit category, and the second sentence actually selects that example.",
+      "explanation": "りんごのような果物 directly describes the fruit by giving apples as an example. This is not a claim that the fruit must merely resemble an apple while not being one. ような can introduce an actual member of a category, as well as figurative resemblances in other sentences.",
+      "answer": "you-noun-modifier",
+      "acceptedAnswers": ["な"],
+      "options": [
+        { "id": "you-adverbial-comparison", "label": "に", "rationale": "Would not make the example directly modify 果物 as requested." },
+        { "id": "you-noun-modifier", "label": "な", "rationale": "Forms the noun phrase meaning fruit such as apples." }
+      ]
+    },
+    {
+      "id": "you-resemblance-cloud-cushion",
+      "target": "you-noun-modifier",
+      "relationship": "you-predicate-vs-noun-modification",
+      "prompt": "雲のよう____形のクッションを探しています。丸い部分がいくつかつながった形が希望です。",
+      "translation": "Use only に or な after the printed よう. Make the comparison directly modify 形 (かたち, shape), not the way of searching: I am looking for a cushion with a cloud-like shape, with several rounded parts joined together.",
+      "evidence": "The cloud comparison describes the desired shape, rather than a manner of searching.",
+      "explanation": "雲のような形 makes the shape cloud-like. The cushion need not literally be a cloud; this is resemblance rather than the actual-category-example use in りんごのような果物. Both uses can have the same ような attachment.",
+      "answer": "you-noun-modifier",
+      "acceptedAnswers": ["な"],
+      "options": [
+        { "id": "you-adverbial-comparison", "label": "に", "rationale": "Would not directly attach the comparison to 形 as required." },
+        { "id": "you-noun-modifier", "label": "な", "rationale": "Directly describes the shape of the cushion sought." }
+      ]
+    },
+    {
+      "id": "you-example-cooking-work",
+      "target": "you-noun-modifier",
+      "relationship": "you-predicate-vs-noun-modification",
+      "prompt": "人に料理を教えるよう____仕事をしてみたいです。料理教室の講師などを考えています。",
+      "translation": "Use only に or な after the printed よう. Make the example directly modify 仕事 (しごと, work), not how to perform some other job: I would like to try work such as teaching people to cook. I am considering being an instructor at a cooking school, for example.",
+      "evidence": "Teaching cooking identifies an example of the work being considered, not an analogy for how to do an unspecified job.",
+      "explanation": "料理を教えるような仕事 uses a whole verb clause to describe the kind of work. 教える attaches directly before よう, without の. A different reading involving how to perform a job is not the noun-modifying relationship explicitly requested here.",
+      "answer": "you-noun-modifier",
+      "acceptedAnswers": ["な"],
+      "options": [
+        { "id": "you-adverbial-comparison", "label": "に", "rationale": "Would connect the comparison adverbially rather than directly describe 仕事 as requested." },
+        { "id": "you-noun-modifier", "label": "な", "rationale": "Makes teaching cooking an example of the kind of work the speaker wants to try." }
+      ]
+    },
+    {
+      "id": "you-enabled-goal-readable-notice",
+      "target": "you-enabled-goal",
+      "relationship": "you-enable-vs-prevent-ability",
+      "prompt": "子供でもこの案内が____ように、難しい漢字にふりがなを付けました。",
+      "translation": "Use 読む (よむ, read) in its potential form ending in る or ない, without added words; ように is already printed. State the purpose: I added furigana to the difficult kanji so that even children could read this notice.",
+      "evidence": "The furigana is intended to make reading possible, not prevent it.",
+      "explanation": "読めるように identifies being able to read as the desired result of adding furigana. The main action is past, but the goal uses nonpast 読める, not 読めた. The sentence states a purpose rather than independently proving that every child successfully read the notice.",
+      "answer": "you-enabled-goal",
+      "acceptedAnswers": ["読める", "よめる"],
+      "options": [
+        { "id": "you-enabled-goal", "label": "読める", "rationale": "Makes the goal being able to read the notice." },
+        { "id": "you-prevented-goal", "label": "読めない", "rationale": "Would make inability to read the goal, contrary to the stated purpose of adding furigana." }
+      ]
+    },
+    {
+      "id": "you-enabled-goal-tool-instructions",
+      "target": "you-enabled-goal",
+      "relationship": "you-enable-vs-prevent-ability",
+      "prompt": "初めて来る人もこの道具を____ように、使い方を絵で説明してあります。",
+      "translation": "Use 使う (つかう, use) in its potential form ending in る or ない, without added words; ように is already printed. State the purpose: instructions with pictures have been provided so that first-time visitors too can use this tool.",
+      "evidence": "The pictured instructions aim to enable new visitors to use the tool.",
+      "explanation": "使えるように gives the desired ability as the purpose of the instructions. The person preparing the explanation and the visitors meant to benefit need not be the same people. 使えない would reverse the intended result.",
+      "answer": "you-enabled-goal",
+      "acceptedAnswers": ["使える", "つかえる"],
+      "options": [
+        { "id": "you-enabled-goal", "label": "使える", "rationale": "Expresses the ability the instructions are intended to support." },
+        { "id": "you-prevented-goal", "label": "使えない", "rationale": "Would make preventing use the purpose rather than enabling it." }
+      ]
+    },
+    {
+      "id": "you-enabled-goal-venue-ramp",
+      "target": "you-enabled-goal",
+      "relationship": "you-enable-vs-prevent-ability",
+      "prompt": "車いすの人も会場に____ように、明日の朝までに入口にスロープを付けます。",
+      "translation": "Use 入る (はいる, enter) in its potential form ending in る or ない, without added words; ように is already printed. State the purpose: I will add a ramp at the entrance by tomorrow morning so that people using wheelchairs too can enter the venue.",
+      "evidence": "The planned ramp is meant to make entry possible for wheelchair users.",
+      "explanation": "入れるように states the intended ability to enter. Here 入れる is はいれる, the potential of 入る（はいる）, not the separate verb 入れる（いれる）, meaning put in. Both the preparation and the intended result can still be in the future.",
+      "answer": "you-enabled-goal",
+      "acceptedAnswers": ["入れる", "はいれる"],
+      "options": [
+        { "id": "you-enabled-goal", "label": "入れる", "rationale": "Expresses the entry the ramp is intended to enable." },
+        { "id": "you-prevented-goal", "label": "入れない", "rationale": "Would make inability to enter the goal, reversing the stated purpose." }
+      ]
+    },
+    {
+      "id": "you-prevented-goal-private-letter",
+      "target": "you-prevented-goal",
+      "relationship": "you-enable-vs-prevent-ability",
+      "prompt": "私の手紙を他の人が____ように、封筒に入れて封をしました。",
+      "translation": "Use 読む (よむ, read) in its potential form ending in る or ない, without added words; ように is already printed. State the purpose: I put my letter in an envelope and sealed it so that other people could not read it.",
+      "evidence": "The intended result is keeping the letter's contents unavailable to other readers.",
+      "explanation": "読めないように makes inability to read the desired state. The negative is inside the goal, not a denial that the speaker sealed the envelope. 読まれないように can be a natural passive alternative in a differently structured sentence, but this question explicitly requests the given verb's potential form.",
+      "answer": "you-prevented-goal",
+      "acceptedAnswers": ["読めない", "よめない"],
+      "options": [
+        { "id": "you-enabled-goal", "label": "読める", "rationale": "Would make enabling other people to read the letter the goal." },
+        { "id": "you-prevented-goal", "label": "読めない", "rationale": "Expresses the intended restriction on other people's access to the contents." }
+      ]
+    },
+    {
+      "id": "you-prevented-goal-phone-lock",
+      "target": "you-prevented-goal",
+      "relationship": "you-enable-vs-prevent-ability",
+      "prompt": "他の人が私のスマートフォンを____ように、画面ロックを設定しました。",
+      "translation": "Use 使う (つかう, use) in its potential form ending in る or ない, without added words; ように is already printed. State the purpose: I set a screen lock so that other people could not use my phone.",
+      "evidence": "The lock is intended to restrict other people's use, not make it easier for them.",
+      "explanation": "使えないように names the prevented ability as the intended result. A negative goal can be wanted by the person taking the precaution; negative grammatical form is not the same as an unwanted outcome. The sentence states the purpose, not a guarantee that all access is impossible.",
+      "answer": "you-prevented-goal",
+      "acceptedAnswers": ["使えない", "つかえない"],
+      "options": [
+        { "id": "you-enabled-goal", "label": "使える", "rationale": "Would express enabling the other people's use, contrary to the intended restriction." },
+        { "id": "you-prevented-goal", "label": "使えない", "rationale": "States the intended non-availability of phone use to other people." }
+      ]
+    },
+    {
+      "id": "you-prevented-goal-meeting-access",
+      "target": "you-prevented-goal",
+      "relationship": "you-enable-vs-prevent-ability",
+      "prompt": "関係のない人がオンラインの会議室に____ように、参加用のパスワードを設定しました。",
+      "translation": "Use 入る (はいる, enter) in its potential form ending in る or ない, without added words; ように is already printed. State the purpose: I set a password for joining so that people unrelated to the meeting could not enter the online meeting room.",
+      "evidence": "The intended restriction applies to people unrelated to the meeting, not to every participant.",
+      "explanation": "入れないように makes inability to enter the goal for the specified people. 入れない is read はいれない here, the negative potential of 入る. It does not say that the organizer intends to prevent everyone from participating, or that a negative clause before ように is always a purpose in every sentence.",
+      "answer": "you-prevented-goal",
+      "acceptedAnswers": ["入れない", "はいれない"],
+      "options": [
+        { "id": "you-enabled-goal", "label": "入れる", "rationale": "Would express making entry possible for the people the organizer intends to exclude." },
+        { "id": "you-prevented-goal", "label": "入れない", "rationale": "Expresses the intended restriction for the people identified in the subject." }
+      ]
+    }
+  ]
+}

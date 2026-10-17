@@ -15,8 +15,10 @@ Follow the [grammar exercise contract](content-format.md#grammar-exercises) and
    A search summary, guessed URL or successful fetch of the wrong entry is not evidence.
    Cross-check consequential restrictions and competing constructions; resolve disagreements by the exact claim, not a vote.
 4. Author original scenarios and screen the full linked article inventory. Sources support patterns, not automatically the
-   naturalness or unique answer of a new sentence. Keep genuine equivalents together or make a defensible task restriction
-   visible before answering, as required by the exercise contract, and retain editorial review.
+   naturalness of a new sentence or completeness of its accepted answer set. Multiple valid completions are welcome:
+   investigate their shared meaning and limits rather than force one wording. Follow the
+   [answer-set, quiz-option and feedback rules](content-format.md#grammar-exercises), use visible form restrictions only
+   for a clear learning goal, and retain editorial review. One correct quiz button does not mean only one acceptable typed answer.
 
 ## Starting points by purpose
 

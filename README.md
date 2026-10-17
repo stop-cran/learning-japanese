@@ -47,7 +47,9 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   12 on evidence, cases and conditions, 12 on models, governing conditions and linked steps,
   12 on comparison, addition and advice, 15 on expectations and eventual outcomes,
   12 on characteristic patterns, recollections and reasons, 15 on particle neighbors,
-  12 on degree, comparison and desired extent, and 12 on plans and believed completion (221 in total).
+  12 on degree, comparison and desired extent, 12 on plans and believed completion,
+  12 on よう comparisons, examples and desired outcomes,
+  and 12 on きり limits, estimates, last events and recurring follow-ups (245 in total).
   Time practice includes うち, あいだ, とき, ころ, たび and shared とき／おり／さい occasion answers;
   shared alternatives are not independently contrasted targets.
   Purpose/cause practice adds ため, おかげ, せい, かわり and ついで, including compensating trade-offs.
@@ -65,6 +67,9 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   Plan practice adds three each for affirmative and negative つもり intentions, past intentions and past beliefs in
   completed actions. It preserves the difference between 送るつもりでした and 送ったつもりでした, including a fulfilled
   plan and a confirmed belief; not every past plan failed or every completion belief was mistaken.
+  よう practice contrasts three adverbial comparisons with three direct noun modifiers, then three enabled-ability
+  goals with three prevented-ability goals. Noun modifiers include two category examples and one figurative resemblance;
+  they are not three independently tested examples of each meaning.
   See the [content format](docs/content-format.md#grammar-exercises), [foundations sources](docs/grammar-foundations-sources.json),
   [actions sources](docs/grammar-actions-sources.json), [intent sources](docs/grammar-intent-sources.json),
   [action-stage sources](docs/grammar-stages-sources.json), [state sources](docs/grammar-states-sources.json),
@@ -75,10 +80,11 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   [expectation/outcome sources](docs/grammar-expectations-sources.json),
   [pattern/recollection/reason sources](docs/grammar-mono-sources.json),
   [particle-neighbor sources](docs/grammar-particles-sources.json),
-  [degree/extent sources](docs/grammar-degree-extent-sources.json) and
-  [plan/belief sources](docs/grammar-plans-sources.json).
+  [degree/extent sources](docs/grammar-degree-extent-sources.json),
+  [plan/belief sources](docs/grammar-plans-sources.json) and
+  [よう sources](docs/grammar-you-sources.json).
   Every named formal-noun/particle family in the article now appears in practice, but this is not complete construction
-  coverage. Further uses, including くらい degree/minimum, だけ possible extent, よう manner/examples,
+  coverage. Further uses, including くらい degree/minimum, だけ possible extent, ようになる／ようにする,
   つもり noun/adjective self-assessment and other additional patterns, are still being added in reviewed batches.
 
 The revised JLPT does not publish exhaustive kanji or vocabulary syllabi. Level coverage here means the exact named community set,

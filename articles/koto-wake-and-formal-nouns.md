@@ -622,6 +622,61 @@ alternative temporal formulation in a less restricted task.
 
 Do not treat **くせに** as a neutral replacement for "although." Nor does the noun origin of **よう** make every よう a noun: the ending in **食べよう**, "let's eat," is a different construction.
 
+### ように and ような: comparisons and examples
+
+For these uses, **ように** applies a comparison to an action, property or clause; **ような** directly modifies a noun:
+
+| Example | What the comparison describes |
+| --- | --- |
+| 紙を見本（みほん）のように折ってください。 | How to fold the paper: follow the model. |
+| 今日は春のように暖かい。 | How warm today is: like spring. |
+| 先生が書いたように書いてください。 | How to write: as the teacher wrote it. |
+| 雲のような形のクッション | A cushion with a cloud-like shape. |
+| りんごのような果物 | Fruit such as apples. |
+| 人に料理を教えるような仕事 | Work such as teaching people to cook. |
+
+A preceding noun takes **の**, as in **見本のように**; a plain verb clause attaches directly, as in **先生が書いたように**.
+Do not add の after that verb. Like na-adjective patterns, よう takes **に** for adverbial modification and **な** for
+direct noun modification. This is not a rule that に must be followed immediately by an action verb:
+**春のように暖かい** has an adjective, and a comparison can also frame a larger clause.
+
+The scope of the comparison matters even inside a noun phrase:
+**春のように暖かい日**, "a day that is warm like spring," is also grammatical; に relates to **暖かい**.
+Simply spotting a noun somewhere later in the sentence does not choose between に and な.
+The questions explicitly request either action/property comparison or direct modification of the named noun.
+
+Resemblance and exemplification are not identical. A cloud-shaped cushion is not literally a cloud, but apples really
+are fruit and can be among the fruits actually used in **りんごのような果物を使う**.
+ような does not always mean "similar to, but not actually one of these."
+Following a model can also be described with **とおり** or, in suitable contexts, **まま**;
+other formulations such as **みたい** can express resemblance. The quiz supplies よう and tests only に／な,
+not a universal distinction between all those expressions.
+
+### ように: working toward a desired state
+
+In a purpose construction, the clause before **ように** describes the state or result that an action aims to bring about:
+
+| Example | Desired result |
+| --- | --- |
+| 子供でも案内が読めるように、ふりがなを付けた。 | I added furigana so that even children could read the notice. |
+| 他の人が手紙を読めないように、封筒に入れて封をした。 | I sealed the letter in an envelope so that other people could not read it. |
+
+The potential forms are **読む → 読める／読めない**, **使う → 使える／使えない** and
+**入る（はいる） → 入れる（はいれる）／入れない（はいれない）**.
+Here 入れる is the potential of "enter," not the separate **入れる（いれる）**, "put in."
+The exercises explicitly request these potential forms ending in る or ない before printed ように.
+They do not test every purpose pattern: **忘れないように**, "so as not to forget," has an ordinary negative verb.
+
+The goal stays nonpast in **読めるように、ふりがなを付けた**, even though the preparation is past.
+Preparation can also be planned for the future, and its actor need not be the person whose ability it is meant to affect.
+A negative ability can be the wanted result, as when protecting a private letter.
+Stating the purpose does not guarantee its achievement.
+
+Neither に nor a potential/negative verb alone makes every よう expression a purpose.
+Read how the clause relates to the rest of the sentence: a model, an example and a desired outcome are different relationships.
+Other purpose formulations, including suitable **ために** sentences, are not globally ruled out by this controlled task.
+Changes with **ようになる**, efforts with **ようにする**, indirect instructions and sentence-final wishes need separate practice.
+
 ### まま: a state remains unchanged
 
 The preceding expression identifies the state that continues:
@@ -783,7 +838,7 @@ explanatory conclusion, and supply three exact endings in hiragana.
 Natural alternatives such as **から**, longer **んだもの／んだもん** endings, or different conclusion expressions are not
 made globally wrong by that restricted task.
 
-## Particle neighbors: ほど, くらい／ぐらい, だけ, and ばかり
+## Particle neighbors: ほど, くらい／ぐらい, だけ, ばかり, and きり
 
 These are worth recognizing alongside noun-based grammar, but **the uses in the tables below are classified as particles, not simply as formal nouns**. Noun-like behavior in one construction, or a noun origin, does not settle a word's present-day classification in another.
 
@@ -871,6 +926,56 @@ This is not a global rule separating the words: **読めば読むだけ** can al
 and shorter **読むほど** or other extent formulations can be natural in appropriate sentences.
 Likewise, **くらい／ぐらい** can overlap with clause-based degree without replacing ほど in every comparison or repeated-verb pattern.
 
+### きり: only this set, or no further action since an event
+
+**きり** is another useful particle neighbor, not automatically a formal noun because it is related to **切る**.
+Daijisen gives it a separate particle entry. Other dictionaries divide some uses between particle and suffix entries;
+learn the whole construction rather than assume that the classifications must match.
+
+| Pattern | Example | Meaning |
+| --- | --- | --- |
+| A restricted occasion | チャンスは一度きりです。 | You have only one chance. |
+| One person, without anyone else | 一人きりで夕食を作ります。 | I will make dinner alone. |
+| Only the two participants | 二人きりで相談しました。 | Just the two of us discussed the matter. |
+| A last event with no follow-up so far | 兄はその本を借りたきり、まだ返してくれません。 | My older brother borrowed the book and has not returned it since. |
+| A follow-up on each occasion | 兄は本を借りるたびに、翌日には返してくれます。 | Every time my older brother borrows a book, he returns it by the next day. |
+
+The first three examples do **not** have only one valid wording. **一度だけ／一度のみ／一度限り（いちどかぎり）**
+can also express the one-chance limit. **一人だけで／二人だけで**, and the more formal **一人のみで／二人のみで**,
+fit the person-limit examples too. **のみ** is more formal, not automatically incorrect.
+Being **一人きり** need not mean feeling lonely, and **二人きり** need not describe a romantic situation.
+These overlaps are contextual: **かぎり**, **だけ** and **のみ** are not interchangeable across all their other constructions.
+
+The limit-versus-estimate questions name the particle families and request uncontracted forms.
+They accept the suitable limit alternatives together, not as separate meanings to distinguish.
+The estimates accept **ほど／くらい／ぐらい／ばかり** together; for example, **二十人ほどいました** gives an
+approximate count rather than an exclusive group. This is not a universal ban on other approximation expressions.
+
+**Vた＋きり** can mark the last completed event before a period with no further action, often specified by a negative clause.
+In the book example, the missing follow-up is **returning** the book, not borrowing it again.
+The reference time matters: **今朝出かけたきり、昼になってもまだ戻っていません。** means
+"They went out this morning and still have not returned, even though it is now noon."
+The person may still come home tonight. Likewise, **先週電話したきり、昨日まで連絡をくれませんでした。
+でも、今日はまた電話がありました。** means "They called me last week and did not contact me again through yesterday.
+But today they called again." This describes a gap that has now ended.
+It does not claim the earlier call was the first ever or the final call for all time.
+Do not turn this into a rule that きり always describes permanent consequences.
+
+The temporal questions request either **Vた＋きり** or **Vる＋たびに**, including the verb in the blank:
+**借りたきり／借りるたびに**, **出かけたきり／出かけるたびに**, **電話したきり／電話するたびに**.
+The first identifies the completed event; the second means each occasion.
+Other formulations can be natural: **借りたまま** describes an unchanged borrowing state, **借りて以来** introduces
+a since-borrowing account, and **借りるごとに** can express every borrowing occasion. They are outside this visible
+two-pattern attachment task, not globally wrong answers.
+
+Colloquial **っきり** occurs in **一人っきり**, **二人っきり** and **借りたっきり**.
+The temporal questions accept it; the earlier uncontracted-form questions deliberately do not.
+Kana is usual for particle きり. Dictionaries also recognize **切り／限り／切／限**;
+accepting those spellings is not recommending them as equally common or clear.
+In particular, the spelling **限り** can represent **きり** as well as the separate **かぎり**:
+do not infer from that spelling that **二人かぎり** is the ordinary way to say "just the two of us."
+This practice does not cover every use, such as **寝たきり**, **これっきり**, or negative-predicate limitation.
+
 ## References
 
 - [Japan Foundation: 「こと」（1）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201112.html) - nominalization, こと versus の, and fixed expressions.
@@ -878,6 +983,7 @@ Likewise, **くらい／ぐらい** can overlap with clause-based degree without
 - [ARC Tokyo: ことになりました](https://arc.ac.jp/Tokyo/mimi-bunpou053/) and [E-Japanese: ことになる](https://www.e-japanese.jp/?p=650) - personal decisions announced indirectly and results derived by calculation.
 - [Tofugu: つもり](https://www.tofugu.com/japanese-grammar/tsumori/) - intentions, intended representations, attachment and つもりで.
 - [Bunpro: つもりだ](https://bunpro.jp/grammar_points/つもりだ) and [JMdict via Jisho: つもり](https://jisho.org/search/つもり) - affirmative and negative plans, and the lexical distinction between intention and belief; Tofugu also explains past intentions versus believed completion.
+- [Japan Foundation: ように／ような（例示・比況）](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00010/ja/render.do), [ように（目的）](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00057/ja/render.do), and [TUFS: potential forms](https://www.coelang.tufs.ac.jp/mt/ja/gmod/contents/explanation/074.html) - comparison scope, exemplification, desired states and the potential forms used in the exercises.
 - [Tae Kim: Things that should be a certain way](https://guidetojapanese.org/learn/grammar/should) - noun/na-adjective attachment for はず and the distinction from normative べき.
 - [Bunpro: べき](https://bunpro.jp/grammar_points/べき), [べきではない](https://bunpro.jp/grammar_points/べきではない), and [ものだ](https://bunpro.jp/grammar_points/ものだ) - normative judgments, past and negative forms, and context-dependent generalizations.
 - [Japan Foundation: 「こと」（2）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201203.html) - the advice/instruction use of ことだ alongside other constructions.
@@ -923,5 +1029,7 @@ Likewise, **くらい／ぐらい** can overlap with clause-based degree without
 - [Maggie Sensei: ばかり](https://maggiesensei.com/2013/07/02/%E3%81%B0%E3%81%8B%E3%82%8A-bakari/), [Bunpro: ばかり](https://bunpro.jp/grammar_points/ばかり), [たばかり](https://bunpro.jp/grammar_points/たばかり), and [だけ](https://bunpro.jp/grammar_points/だけ) - quantity, limitation, activity concentration and recent completion; the construction determines the function.
 - [Maggie Sensei: ほど](https://maggiesensei.com/2012/10/10/how-to-use-%E7%A8%8B-%E3%81%BB%E3%81%A9-hodo/), [Bunpro: ば〜ほど](https://bunpro.jp/grammar_points/ば-ほど), and [Tae Kim: Expressing amounts](https://guidetojapanese.org/learn/grammar/amount) - degree, negative comparisons and correlated change; the exact construction matters.
 - [Daijisen: だけ](https://kotobank.jp/word/だけ-559985) and [Bunpro: たい](https://bunpro.jp/grammar_points/たい) - extent and desired-action attachment, underlying the たいだけ pattern; だけ also has proportional-change uses.
+- [Daijisen: きり［副助］](https://kotobank.jp/word/きり-480122), [Nihon Kokugo Daijiten: 切・限](https://kotobank.jp/word/切り-480110), and [JMdict via Jisho: きり](https://jisho.org/search/きり) - exclusive limits, no further action after an event, continuing states and spellings; use the particle entries, not adjacent homophones.
+- [JMdict via Jisho: 限り（かぎり）](https://jisho.org/search/限り) and [Bunpro: のみ](https://bunpro.jp/grammar_points/のみ) - context-appropriate limitation alternatives, not unrestricted substitution rules.
 
 [Article index on GitHub](https://github.com/stop-cran/learning-japanese#articles)

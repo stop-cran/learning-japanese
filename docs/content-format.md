@@ -123,25 +123,54 @@ has a Japanese prompt with exactly one `____` blank, an English translation, evi
 the correct construction ID, accepted typed forms, and answer options with a rationale for every alternative. Every relationship
 must have examples targeting each of its constructions. Its linked `article` must be an existing `articles/<slug>.md` file.
 
-Author examples where context makes one choice clearly better than the closest alternative; do not include examples where both
-forms are equally natural. Keep the evidence and rationale specific to the contrast, not just a definition of the answer. The
-validator checks structure and references, not Japanese naturalness or grammatical accuracy, so grammar content needs editorial
-review. Check the full inventory in the linked article, including constructions not offered as buttons: typed answers are not
-restricted to the displayed multiple-choice alternatives. Reject an underdetermined item rather than use an unstated intended
-nuance to make an otherwise natural alternative wrong.
+Author coherent examples with a clear learning goal. More than one natural completion is acceptable: do not reject an item
+solely because several forms express the tested meaning. The useful distinction is between a coherent accepted answer class
+and genuine distractors, not between every wording inside that class. Keep the evidence and rationale specific to the
+context; an unstated intended nuance or a stylistic preference must not make an otherwise suitable answer wrong.
+
+The validator checks structure and references, not Japanese naturalness or grammatical accuracy, so grammar content needs
+editorial review. Check the full inventory in the linked article, including constructions not offered as buttons.
+If a further natural completion fits the sentence and the visible task, include it in the answer class after checking its
+meaning and usage. If competing readings cannot be assessed or grouped coherently, revise the context or learning goal,
+or omit the item; do not silently narrow the answer list.
 
 The tested unit may be a grammatical function with equivalent realizations, not necessarily a single word. For example,
 the foundations `non-necessary-inference` examples accept わけではない, ものではない and とは限らない where the completed
 sentence expresses the same non-guarantee. They do not pretend to measure a distinction between those realizations.
-Keep equivalent forms inside one answer class, never as competing buttons. Accept contracted and
-kanji-written forms where appropriate to that sentence. An accepted form must preserve the tested meaning and fit the entire
-completed sentence; do not import an equivalence into unrelated contexts. The validator rejects duplicate option labels and
-distractors that collide with accepted answers after the app's trim/NFKC normalization.
+An accepted form must preserve the tested meaning and fit the entire completed sentence; do not import an equivalence into
+unrelated contexts. Accept contracted and kanji-written forms where appropriate to that sentence. Keep one exercise/SRS
+identity for the shared learning task, not separate identities for equivalent answers.
+
+**Typed answers:** `acceptedAnswers` contains the supported completions, not just the displayed model option.
+Do not cap it at one or two answers for quiz convenience. Check meaningful alternative constructions as well as spelling
+variants; all entries must fit the literal blank and the question-side instructions.
+
+**Fixed-option quiz, schema version 1:** author exactly one correct displayed option, representing the accepted answer class,
+plus genuinely unsuitable alternatives. The single `answer` ID equals `target`; the other accepted forms must not appear
+as wrong buttons. The model option's label must itself be in `acceptedAnswers`. The app shuffles option order; it does not
+automatically rotate the model label through the accepted forms. Different examples can use different representative
+forms without claiming independent discrimination between equivalents.
+The validator rejects duplicate option labels and distractors that collide with accepted answers after trim/NFKC normalization.
+
+An occasional activity with two correct displayed options is a separate possible design, not supported by this schema.
+It would need an explicit choice between "choose any acceptable answer" and "select all acceptable answers", with matching
+instructions, answer representation and grading. Do not simulate it by marking a natural alternative wrong, or assume
+that adding it to `acceptedAnswers` changes option grading. Keep one correct button in the current mode.
+This future interaction is tracked as [Android TBD work item #47](https://github.com/stop-cran/kanji-cards-android/issues/47).
+
+**Learner feedback:** explain why the substantive alternatives work here and any relevant differences in meaning, register
+or attachment. Do not describe the model as the only valid answer when others are accepted. Group spelling variants rather
+than present them as separate grammar distinctions, and explain why the actual distractors fail in this context.
+The app does not automatically display the full `acceptedAnswers` list: put useful alternative explanations in `explanation`
+and the linked article, rather than relying on grading data alone. Aim for completeness for the stated learning goal,
+not an unbounded list of paraphrases or a claim to cover every use of a construction.
 
 A blank may ask for the diagnostic part of a construction whose stem is already printed. For example,
 `写っているわけ____` tests the ending がない against にはいかない without falsely rejecting the whole-sentence alternatives
 写っているはずがない or 写っていることはない. Option labels and accepted answers must contain only the missing span.
 Explain such alternatives in the answer feedback; do not claim that the corresponding whole sentences are invalid.
+Use a visible form restriction when it serves a clear learning goal, not merely to force one wording where several natural
+completions could be taught together. Restrictions must be available before answering in both choose and type presentations.
 
 The eight original exercises in `formal-nouns-pilot.json` retain their IDs and their construction/relationship identities.
 `formal-nouns-foundations.json` adds three examples each for six functions, including the double negative 行かないわけにはいかない.
@@ -327,6 +356,37 @@ Keep the fulfilled Friday plan viewed from Monday, the confirmed window-closing 
 the wrong-sized room. Neither past intentions nor completion beliefs require a universal failed-action outcome.
 The source record preserves both the 197 committed exercises and the hash of the preceding 12 uncommitted exercises.
 Noun/adjective self-assessment and imagined-role uses are not claimed by these verb-form questions.
+
+`formal-nouns-you.json` adds 12 exercises; see the [source record](grammar-you-sources.json).
+Three adverbial model/comparison questions and three direct noun-modification questions request only に or な after
+printed よう. The question identifies the intended scope of the comparison before answering. A later noun does not by
+itself require な: ように can modify an adjective within a larger noun phrase. The three noun modifiers contain two
+category examples and one shape resemblance, not three of every semantic sub-use. Apples can be fruit actually used,
+whereas the cloud-shaped cushion is not literally a cloud. Both noun + の and directly attached verb clauses appear.
+
+Three enabled-ability and three prevented-ability goals request the supplied verb's potential form ending in る or ない,
+without added words, before printed ように. The same three verbs occur on both sides. Accept kana and kanji; in the
+entry questions, 入れる／入れない are read はいれる／はいれない, not the separate transitive verb いれる.
+Keep the nonpast goal with past preparation, the future ramp installation, and the possibility of different people
+performing the preparation and benefiting from it. The negative goal can be wanted, and purpose does not prove success.
+The requested potential-form blanks do not reject passive or nominalized ability formulations everywhere.
+These examples do not cover every purpose, inference, change, effort, indirect-instruction or wish use of よう.
+
+`particle-kiri.json` adds 12 exercises; see the [source record](grammar-kiri-sources.json).
+Three exclusive-limit items cover a single opportunity, being alone and a two-person conversation; three approximate
+quantities supply the reciprocal contrast. These questions visibly name the uncontracted particle families.
+Accept きり／だけ／のみ where they fit; the chance item also accepts かぎり. Formal のみ is not wrong merely for its
+register. Accepting 限り as a spelling of きり in the person items does not claim that the reading かぎり is an ordinary
+substitute there. The three estimates share ほど／くらい／ぐらい／ばかり; no accepted equivalent is a wrong button.
+The tasks are not an unrestricted cloze or independent discrimination between the accepted alternatives.
+
+Three completed-event-without-follow-up items and three recurring-follow-up items request the supplied verb in either
+Vた＋きり or Vる＋たびに without extra particles. The same verbs occur in both directions, including 電話する／電話した.
+Accept kana/kanji spellings and colloquial っきり in these temporal tasks. Preserve the still-unreturned book,
+the noon viewpoint with an evening return planned, and the call gap that has already ended at the time of reporting.
+たきり does not require a first-ever event or a permanent lack of follow-up. まま, て以来 and ごとに formulations can
+also fit appropriate situations; the visible two-pattern attachment task, not a global ban, keeps them outside these blanks.
+Each exercise still has one SRS identity and one representative correct button.
 
 ## Links and safety
 

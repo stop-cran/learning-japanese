@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "id": "particle-kiri",
+  "title": "Limits and last occasions: きり with its neighbors",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "kiri-shared-limit", "label": "only this amount or these people (きり and suitable alternatives)" },
+    { "id": "kiri-approximate-count", "label": "an approximate quantity, not an exclusive limit" },
+    { "id": "kiri-last-event", "label": "a completed event with no further action up to a reference point (Vたきり)" },
+    { "id": "tabi-repeated-followup", "label": "a follow-up on each occasion (Vるたびに)" }
+  ],
+  "relationships": [
+    {
+      "id": "kiri-limit-vs-estimate",
+      "label": "only this set / approximately this quantity",
+      "constructions": ["kiri-shared-limit", "kiri-approximate-count"]
+    },
+    {
+      "id": "last-event-vs-repeated-followup",
+      "label": "no follow-up since an event / a follow-up on every occasion",
+      "constructions": ["kiri-last-event", "tabi-repeated-followup"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "kiri-restricted-single-chance",
+      "target": "kiri-shared-limit",
+      "relationship": "kiri-limit-vs-estimate",
+      "prompt": "やり直しはできません。チャンスは一度____です。",
+      "translation": "Use an uncontracted form from きり, だけ, のみ, かぎり, ほど, くらい／ぐらい or ばかり, in kana or kanji. Express an exclusive limit: no retries are allowed; you have only one chance.",
+      "evidence": "The one opportunity is an exclusive allowance, not a guess about how many opportunities there might be.",
+      "explanation": "一度きり says this is the only chance. 一度だけ, 一度のみ and 一度限り（いちどかぎり） also fit; のみ is more formal, but that does not make it wrong here. These are shared answers, not independently contrasted meanings. ほど would express an estimate rather than the requested exclusive allowance. Colloquial 一度っきり also works, outside this question's uncontracted-form task.",
+      "answer": "kiri-shared-limit",
+      "acceptedAnswers": ["きり", "切り", "切", "限り", "限", "だけ", "丈", "のみ", "かぎり"],
+      "options": [
+        { "id": "kiri-shared-limit", "label": "きり", "rationale": "Limits the opportunity to this one occasion; suitable だけ, のみ and かぎり answers are accepted too." },
+        { "id": "kiri-approximate-count", "label": "ほど", "rationale": "Does not express the requested exclusive one-chance allowance." }
+      ]
+    },
+    {
+      "id": "kiri-restricted-alone-cooking",
+      "target": "kiri-shared-limit",
+      "relationship": "kiri-limit-vs-estimate",
+      "prompt": "家には私しかいません。今日は一人____で夕食を作ります。",
+      "translation": "Use an uncontracted form from きり, だけ, のみ, かぎり, ほど, くらい／ぐらい or ばかり, in kana or kanji. Express an exclusive limit: I am the only person at home and will make dinner alone, with nobody else joining me.",
+      "evidence": "There is just the speaker, not an approximately one-person group.",
+      "explanation": "一人きりで means alone, with no other person present. 一人だけで and the more formal 一人のみで also fit this stated situation. The expression does not by itself say that the speaker feels lonely. くらい would not assert the requested exclusion of other people. 一人っきり is a colloquial alternative outside the uncontracted-form task. The accepted spelling 限り can represent きり; this is not a rule to replace every person-limit きり with the reading かぎり.",
+      "answer": "kiri-shared-limit",
+      "acceptedAnswers": ["きり", "切り", "切", "限り", "限", "だけ", "丈", "のみ"],
+      "options": [
+        { "id": "kiri-shared-limit", "label": "きり", "rationale": "Expresses being alone; だけ and のみ also fit the exclusive-person meaning." },
+        { "id": "kiri-approximate-count", "label": "くらい", "rationale": "Does not state that no one else is present, as the question requests." }
+      ]
+    },
+    {
+      "id": "kiri-restricted-private-pair",
+      "target": "kiri-shared-limit",
+      "relationship": "kiri-limit-vs-estimate",
+      "prompt": "ほかの人には席を外してもらいました。私たちは二人____で相談しました。",
+      "translation": "Use an uncontracted form from きり, だけ, のみ, かぎり, ほど, くらい／ぐらい or ばかり, in kana or kanji. Express an exclusive limit: the others stepped away, and just the two of us discussed the matter. 席を外す (せきをはずす) means to step away.",
+      "evidence": "The others have left the conversation, leaving precisely the two participants and nobody else.",
+      "explanation": "二人きりで focuses on the absence of other participants. 二人だけで and the more formal 二人のみで are also suitable; this is not a uniquely correct きり sentence. 二人っきり is a colloquial alternative outside this uncontracted-form task. The meaning need not be romantic. ほど would make the number approximate instead of expressing the requested exclusion. 限り is accepted as a spelling of きり here, not as a general claim that 二人かぎり is the normal way to say just the two of us.",
+      "answer": "kiri-shared-limit",
+      "acceptedAnswers": ["きり", "切り", "切", "限り", "限", "だけ", "丈", "のみ"],
+      "options": [
+        { "id": "kiri-shared-limit", "label": "きり", "rationale": "Restricts the conversation to those two people; だけ and のみ also fit." },
+        { "id": "kiri-approximate-count", "label": "ほど", "rationale": "Would not express that the other participants were excluded." }
+      ]
+    },
+    {
+      "id": "kiri-estimate-event-crowd",
+      "target": "kiri-approximate-count",
+      "relationship": "kiri-limit-vs-estimate",
+      "prompt": "人数は数えていませんが、会場には二十人____いました。",
+      "translation": "Use an uncontracted form from きり, だけ, のみ, かぎり, ほど, くらい／ぐらい or ばかり, in kana or kanji. Express an estimate, not an exclusive limit: I did not count them, but there were about twenty people at the venue.",
+      "evidence": "The speaker is estimating an uncounted crowd, not asserting that the group consisted of only twenty people.",
+      "explanation": "二十人ほど, 二十人くらい／ぐらい and 二十人ばかり can all express the approximate count. The estimate does not independently impose an upper or lower bound. 二十人きり instead frames twenty as the exclusive group and does not express the requested estimate. 二十人前後 is another possible approximation outside the named particle families.",
+      "answer": "kiri-approximate-count",
+      "acceptedAnswers": ["ほど", "程", "くらい", "ぐらい", "位", "ばかり", "許り", "許"],
+      "options": [
+        { "id": "kiri-shared-limit", "label": "きり", "rationale": "Presents an exclusive group rather than the requested approximate count." },
+        { "id": "kiri-approximate-count", "label": "ほど", "rationale": "Gives an estimate; くらい／ぐらい and ばかり are also accepted." }
+      ]
+    },
+    {
+      "id": "kiri-estimate-document-sheets",
+      "target": "kiri-approximate-count",
+      "relationship": "kiri-limit-vs-estimate",
+      "prompt": "まだ正確には数えていませんが、この資料は十枚____あります。",
+      "translation": "Use an uncontracted form from きり, だけ, のみ, かぎり, ほど, くらい／ぐらい or ばかり, in kana or kanji. Express an estimate, not an exclusive limit: I have not counted them exactly, but this material runs to about ten sheets. 資料 (しりょう) means material or documents.",
+      "evidence": "The number of sheets has not been counted exactly; ten is an estimate.",
+      "explanation": "十枚くらい／ぐらい, 十枚ほど and 十枚ばかり all fit the approximate-quantity meaning. The number is not being asserted as the complete exclusive amount. 十枚きり would make that different claim. 十枚前後 can also express an approximation outside the named families; the exercise does not claim its model is the only possible Japanese wording.",
+      "answer": "kiri-approximate-count",
+      "acceptedAnswers": ["ほど", "程", "くらい", "ぐらい", "位", "ばかり", "許り", "許"],
+      "options": [
+        { "id": "kiri-shared-limit", "label": "きり", "rationale": "Would assert an exclusive amount, not the requested estimate." },
+        { "id": "kiri-approximate-count", "label": "ぐらい", "rationale": "Expresses the estimated quantity; ほど, くらい and ばかり also fit." }
+      ]
+    },
+    {
+      "id": "kiri-estimate-bus-wait",
+      "target": "kiri-approximate-count",
+      "relationship": "kiri-limit-vs-estimate",
+      "prompt": "時計は見ていませんでしたが、バスを十五分____待ちました。",
+      "translation": "Use an uncontracted form from きり, だけ, のみ, かぎり, ほど, くらい／ぐらい or ばかり, in kana or kanji. Express an estimate, not an exclusive limit: I was not watching the clock, but I waited about fifteen minutes for the bus.",
+      "evidence": "Fifteen minutes estimates an unmeasured wait rather than stating an exclusive allowance or cutoff.",
+      "explanation": "十五分ばかり can express an approximate duration, as 十五分ほど and 十五分くらい／ぐらい can. Here ばかり follows a quantity; it does not mean just finished waiting or repeated waiting. 十五分きり would instead limit the duration and would not express the requested estimate. Colloquial ばっかり is outside this question's uncontracted-form task.",
+      "answer": "kiri-approximate-count",
+      "acceptedAnswers": ["ほど", "程", "くらい", "ぐらい", "位", "ばかり", "許り", "許"],
+      "options": [
+        { "id": "kiri-shared-limit", "label": "きり", "rationale": "Limits the duration rather than expressing the requested estimate." },
+        { "id": "kiri-approximate-count", "label": "ばかり", "rationale": "Expresses an approximate quantity here; ほど and くらい／ぐらい also fit." }
+      ]
+    },
+    {
+      "id": "kiri-last-event-unreturned-book",
+      "target": "kiri-last-event",
+      "relationship": "last-event-vs-repeated-followup",
+      "prompt": "兄はよく私の本を借ります。でも、先月その本を____、まだ返してくれません。",
+      "translation": "Use 借りる (かりる, borrow) in either Vた＋きり or Vる＋たびに, without extra particles; colloquial っきり is also accepted. My older brother often borrows my books, but he borrowed this one last month and has not returned it since.",
+      "evidence": "A particular completed borrowing has not been followed by returning that book up to now.",
+      "explanation": "借りたきり uses the た form for the completed event, with the negative clause identifying the missing follow-up: returning the book. It need not be his first-ever borrowing or a permanent refusal. 借りたまま and 借りて以来 can also describe this situation in other formulations, but the visible task practices きり versus たびに attachment. 借りるたびに would say every time he borrows, not identify the one unresolved borrowing.",
+      "answer": "kiri-last-event",
+      "acceptedAnswers": ["借りたきり", "かりたきり", "借りた切り", "かりた切り", "借りた切", "かりた切", "借りた限り", "かりた限り", "借りた限", "かりた限", "借りたっきり", "かりたっきり", "借りたっ切り", "かりたっ切り"],
+      "options": [
+        { "id": "kiri-last-event", "label": "借りたきり", "rationale": "Identifies the completed borrowing since which the return has not happened." },
+        { "id": "tabi-repeated-followup", "label": "借りるたびに", "rationale": "Would describe each borrowing occasion rather than the specified outstanding loan." }
+      ]
+    },
+    {
+      "id": "kiri-last-event-still-out",
+      "target": "kiri-last-event",
+      "relationship": "last-event-vs-repeated-followup",
+      "prompt": "父は今朝____、昼になってもまだ戻っていません。今夜は帰る予定です。",
+      "translation": "Use 出かける (でかける, go out) in either Vた＋きり or Vる＋たびに, without extra particles; colloquial っきり is also accepted. My father went out this morning and still has not returned at noon. He plans to come home tonight.",
+      "evidence": "He has gone out and has not returned by noon; a return is still planned for later.",
+      "explanation": "出かけたきり identifies the completed departure, and まだ戻っていません says what has not happened afterward. The pattern does not predict that he will never return. 出かけたまま can also describe remaining away, outside the two named patterns. 出かけるたびに means on every outing and would not identify the particular departure this morning.",
+      "answer": "kiri-last-event",
+      "acceptedAnswers": ["出かけたきり", "でかけたきり", "出掛けたきり", "出かけた切り", "でかけた切り", "出掛けた切り", "出かけた切", "でかけた切", "出掛けた切", "出かけた限り", "でかけた限り", "出掛けた限り", "出かけた限", "でかけた限", "出掛けた限", "出かけたっきり", "でかけたっきり", "出掛けたっきり", "出かけたっ切り", "でかけたっ切り", "出掛けたっ切り"],
+      "options": [
+        { "id": "kiri-last-event", "label": "出かけたきり", "rationale": "Identifies a completed departure without a return by the stated reference time." },
+        { "id": "tabi-repeated-followup", "label": "出かけるたびに", "rationale": "Would refer to every outing, not this single still-unfinished absence." }
+      ]
+    },
+    {
+      "id": "kiri-last-event-contact-resumed",
+      "target": "kiri-last-event",
+      "relationship": "last-event-vs-repeated-followup",
+      "prompt": "妹は先週____、それから昨日まで連絡をくれませんでした。でも、今日はまた電話がありました。",
+      "translation": "Use 電話する (でんわする, call) in either Vた＋きり or Vる＋たびに, without extra particles; colloquial っきり is also accepted. My younger sister called last week and then did not contact me through yesterday, but she called again today.",
+      "evidence": "There was a gap after last week's call, viewed up to yesterday; today's call ended that gap.",
+      "explanation": "電話したきり identifies the last call before the described period without further contact. The past negative and 昨日まで bound that period; today's renewed contact does not contradict it. This was neither necessarily the first call ever nor the last call for all time. 電話して以来 can introduce a since-then account outside the named patterns. 電話するたびに would mean on each call, not this particular gap.",
+      "answer": "kiri-last-event",
+      "acceptedAnswers": ["電話したきり", "でんわしたきり", "電話した切り", "でんわした切り", "電話した切", "でんわした切", "電話した限り", "でんわした限り", "電話した限", "でんわした限", "電話したっきり", "でんわしたっきり", "電話したっ切り", "でんわしたっ切り"],
+      "options": [
+        { "id": "kiri-last-event", "label": "電話したきり", "rationale": "Marks the completed call before the gap that lasted through yesterday." },
+        { "id": "tabi-repeated-followup", "label": "電話するたびに", "rationale": "Would frame a recurring occasion rather than that one completed call and subsequent gap." }
+      ]
+    },
+    {
+      "id": "tabi-followup-returned-books",
+      "target": "tabi-repeated-followup",
+      "relationship": "last-event-vs-repeated-followup",
+      "prompt": "兄は私から本を____、翌日には返してくれます。",
+      "translation": "Use 借りる (かりる, borrow) in either Vた＋きり or Vる＋たびに, without extra particles; colloquial っきり is also accepted. Every time my older brother borrows a book from me, he returns it by the next day.",
+      "evidence": "Returning follows each borrowing occasion, rather than being absent after one completed loan.",
+      "explanation": "借りるたびに uses the dictionary form before たびに for the repeated occasion. It is the recurring return pattern that matters, not a numerical count supplied by たび itself. 借りたきり would not express that each loan is followed by a return. 借りるごとに and other every-time formulations can also fit outside the two named patterns.",
+      "answer": "tabi-repeated-followup",
+      "acceptedAnswers": ["借りるたびに", "かりるたびに", "借りる度に", "かりる度に"],
+      "options": [
+        { "id": "kiri-last-event", "label": "借りたきり", "rationale": "Does not express a return on every borrowing occasion." },
+        { "id": "tabi-repeated-followup", "label": "借りるたびに", "rationale": "Connects each borrowing occasion with its next-day return." }
+      ]
+    },
+    {
+      "id": "tabi-followup-travel-souvenirs",
+      "target": "tabi-repeated-followup",
+      "relationship": "last-event-vs-repeated-followup",
+      "prompt": "父は旅行に____、お土産を買ってきます。",
+      "translation": "Use 出かける (でかける, go out) in either Vた＋きり or Vる＋たびに, without extra particles; colloquial っきり is also accepted. Every time my father goes away on a trip, he brings back souvenirs.",
+      "evidence": "Bringing souvenirs happens on each trip, not after one departure without further activity.",
+      "explanation": "出かけるたびに presents each trip as an occasion for bringing back souvenirs. The dictionary form attaches to たびに. 出かけたきり would not express this recurring follow-up. This is a claim about his trips in the stated context, not a claim that たび always means travel.",
+      "answer": "tabi-repeated-followup",
+      "acceptedAnswers": ["出かけるたびに", "でかけるたびに", "出掛けるたびに", "出かける度に", "でかける度に", "出掛ける度に"],
+      "options": [
+        { "id": "kiri-last-event", "label": "出かけたきり", "rationale": "Would not describe souvenir-bringing on each trip." },
+        { "id": "tabi-repeated-followup", "label": "出かけるたびに", "rationale": "Relates every trip to its souvenir-bringing follow-up." }
+      ]
+    },
+    {
+      "id": "tabi-followup-asking-about-work",
+      "target": "tabi-repeated-followup",
+      "relationship": "last-event-vs-repeated-followup",
+      "prompt": "妹は私に____、仕事の様子を聞きます。",
+      "translation": "Use 電話する (でんわする, call) in either Vた＋きり or Vる＋たびに, without extra particles; colloquial っきり is also accepted. Every time my younger sister calls me, she asks how work is going.",
+      "evidence": "The work question occurs on each call rather than there being no contact after a last call.",
+      "explanation": "電話するたびに uses the dictionary form of 電話する and means on every calling occasion. 電話したきり would identify a completed call, not this repeated pattern. 電話するごとに and other every-time formulations remain possible outside the two named patterns.",
+      "answer": "tabi-repeated-followup",
+      "acceptedAnswers": ["電話するたびに", "でんわするたびに", "電話する度に", "でんわする度に"],
+      "options": [
+        { "id": "kiri-last-event", "label": "電話したきり", "rationale": "Would not express asking about work on each calling occasion." },
+        { "id": "tabi-repeated-followup", "label": "電話するたびに", "rationale": "Makes each call an occasion for the work question." }
+      ]
+    }
+  ]
+}
