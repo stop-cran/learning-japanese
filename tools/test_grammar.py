@@ -1707,5 +1707,87 @@ class GrammarSelfAssessmentCoverageTests(unittest.TestCase):
         self.assertIn("not a guarantee of winning", self.exercises["tsumori-becoming-stronger-shogi-player"]["explanation"])
 
 
+class GrammarIntentionDenialCoverageTests(unittest.TestCase):
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((root / "grammar" / "formal-nouns-intention-denial.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+        self.future_pairs = [
+            ("tsumori-negative-keep-guitar", "tsumori-affirmed-sell-guitar",
+             ("売る", "うる"), ("売らない", "うらない")),
+            ("tsumori-negative-own-camera", "tsumori-affirmed-borrow-camera",
+             ("借りる", "かりる"), ("借りない", "かりない")),
+            ("tsumori-negative-no-second-copy", "tsumori-affirmed-buy-dictionary",
+             ("買う", "かう"), ("買わない", "かわない")),
+        ]
+        self.past_pairs = [
+            ("tsumori-denied-accidental-file-deletion", "tsumori-affirmed-blocked-file-deletion", "消す"),
+            ("tsumori-denied-accidental-vase-movement", "tsumori-affirmed-completed-vase-movement", "動かす"),
+            ("tsumori-denied-needed-receipt-disposal", "tsumori-affirmed-unfinished-receipt-disposal", "捨てる"),
+        ]
+
+    def test_reciprocal_pairs_cover_all_four_functions(self):
+        self.assertEqual({
+            "tsumori-shared-negative-intent": 3,
+            "tsumori-affirmed-future-intent": 3,
+            "tsumori-denied-past-intent": 3,
+            "tsumori-affirmed-past-intent": 3,
+        }, Counter(exercise["target"] for exercise in self.exercises.values()))
+        for negative_id, positive_id, *_ in self.future_pairs + self.past_pairs:
+            negative = self.exercises[negative_id]
+            positive = self.exercises[positive_id]
+            self.assertEqual(negative["relationship"], positive["relationship"])
+            self.assertNotEqual(negative["target"], positive["target"])
+            self.assertEqual(
+                [option["label"] for option in negative["options"]],
+                [option["label"] for option in positive["options"]],
+            )
+
+    def test_negative_plans_and_denials_share_complete_visible_pattern_answers(self):
+        for negative_id, positive_id, verbs, negatives in self.future_pairs:
+            negative = self.exercises[negative_id]
+            expected = {verb + "つもりだ" for verb in negatives}
+            expected.update(
+                verb + "つもり" + ending
+                for verb in verbs for ending in ("はない", "がない", "ではない", "じゃない")
+            )
+            self.assertEqual(expected, set(negative["acceptedAnswers"]), negative_id)
+            self.assertEqual(
+                {verb + "つもりだ" for verb in verbs},
+                set(self.exercises[positive_id]["acceptedAnswers"]), positive_id,
+            )
+            for exercise_id in (negative_id, positive_id):
+                self.assertIn(
+                    "Vるつもりだ, Vないつもりだ, or Vるつもりは／が／では／じゃない",
+                    self.exercises[exercise_id]["translation"],
+                )
+                self.assertIn("Write つもり and the endings in kana.", self.exercises[exercise_id]["translation"])
+            self.assertIn("つもりだ", negative["explanation"])
+            self.assertIn("じゃない", negative["explanation"])
+
+    def test_past_endings_keep_the_printed_intention_not_a_completion_belief(self):
+        for negative_id, positive_id, verb in self.past_pairs:
+            self.assertEqual(
+                {"はなかった", "がなかった", "ではなかった", "じゃなかった"},
+                set(self.exercises[negative_id]["acceptedAnswers"]), negative_id,
+            )
+            self.assertEqual(["だった"], self.exercises[positive_id]["acceptedAnswers"])
+            for exercise_id in (negative_id, positive_id):
+                exercise = self.exercises[exercise_id]
+                self.assertIn(verb + "つもり____", exercise["prompt"], exercise_id)
+                self.assertIn("だった, or は／が／では／じゃなかった", exercise["translation"], exercise_id)
+                self.assertIn("Report my intention at that time, not a belief", exercise["translation"], exercise_id)
+
+    def test_outcomes_do_not_determine_intention_polarity(self):
+        self.assertIn("消してしまった", self.exercises["tsumori-denied-accidental-file-deletion"]["prompt"])
+        self.assertIn("ずれてしまった", self.exercises["tsumori-denied-accidental-vase-movement"]["prompt"])
+        self.assertIn("捨ててしまった", self.exercises["tsumori-denied-needed-receipt-disposal"]["prompt"])
+        self.assertIn("今も残っている", self.exercises["tsumori-affirmed-blocked-file-deletion"]["prompt"])
+        self.assertIn("予定どおりそこへ移した", self.exercises["tsumori-affirmed-completed-vase-movement"]["prompt"])
+        self.assertIn("捨てられなかった", self.exercises["tsumori-affirmed-unfinished-receipt-disposal"]["prompt"])
+        self.assertIn("does not require a failed plan", self.exercises["tsumori-affirmed-completed-vase-movement"]["explanation"])
+        self.assertIn("cannot be inserted", self.exercises["tsumori-denied-needed-receipt-disposal"]["explanation"])
+
+
 if __name__ == "__main__":
     unittest.main()

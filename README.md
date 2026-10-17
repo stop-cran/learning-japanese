@@ -51,7 +51,8 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   12 on よう comparisons, examples and desired outcomes,
   12 on きり limits, estimates, last events and recurring follow-ups,
   12 on よう changes in ability or habit and positive/negative practices,
-  and 12 on つもり self-assessment versus intended changes (269 in total).
+  12 on つもり self-assessment versus intended changes,
+  and 12 on negative plans and present/past intention denial (281 in total).
   Time practice includes うち, あいだ, とき, ころ, たび and shared とき／おり／さい occasion answers;
   shared alternatives are not independently contrasted targets.
   Purpose/cause practice adds ため, おかげ, せい, かわり and ついで, including compensating trade-offs.
@@ -77,6 +78,9 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   These verb-form tasks do not independently test selecting なる versus する in unrestricted contexts.
   Self-assessment practice adds six matched つもり pairs, using two nouns, two な-adjectives and two い-adjectives.
   It distinguishes a current self-view from an intention to become something or change a quality, with つもりです supplied.
+  Intention-denial practice groups three shared negative plans/denials against three affirmative future intentions,
+  then contrasts three denied past intentions with three affirmed ones. It includes accidental actions, blocked intentions
+  and a fulfilled plan; an outcome does not by itself establish whether it was intended.
   See the [content format](docs/content-format.md#grammar-exercises), [foundations sources](docs/grammar-foundations-sources.json),
   [actions sources](docs/grammar-actions-sources.json), [intent sources](docs/grammar-intent-sources.json),
   [action-stage sources](docs/grammar-stages-sources.json), [state sources](docs/grammar-states-sources.json),
@@ -90,11 +94,12 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   [degree/extent sources](docs/grammar-degree-extent-sources.json),
   [plan/belief sources](docs/grammar-plans-sources.json),
   [よう sources](docs/grammar-you-sources.json),
-  [change/effort sources](docs/grammar-you-change-effort-sources.json) and
-  [self-assessment sources](docs/grammar-self-assessment-sources.json).
+  [change/effort sources](docs/grammar-you-change-effort-sources.json),
+  [self-assessment sources](docs/grammar-self-assessment-sources.json) and
+  [intention-denial sources](docs/grammar-intention-denial-sources.json).
   Every named formal-noun/particle family in the article now appears in practice, but this is not complete construction
   coverage. Further uses, including くらい degree/minimum, だけ possible extent,
-  つもり intention denial and other additional patterns, are still being added in reviewed batches.
+  まま noun/adjective states, ほか exclusions and other additional patterns, are still being added in reviewed batches.
 
 The revised JLPT does not publish exhaustive kanji or vocabulary syllabi. Level coverage here means the exact named community set,
 not a guarantee about every examination question or a complete beginner curriculum.

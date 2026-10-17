@@ -339,7 +339,56 @@ Other formulations such as **自分はプロだと思っています**, "I think
 For the change verb, kana **なる** is usual; dictionary spellings **成る／為る** are accepted without recommending them
 as equally common or clear. The uncommon spellings **委しい／精しい** of **詳しい** are also accepted, including their
 **く** forms with the supported spellings of なる; the models keep ordinary **詳しい／詳しくなる**.
-Denying an intention with **つもりはない／つもりがない** remains separate practice.
+The next subsection practices denying an intention with **つもりはない／つもりがない** and related forms.
+
+### つもり: negative plans, denied intentions and actual outcomes
+
+Negation can appear before **つもり** or after it. The structures foreground different things:
+
+| Pattern | Example | Meaning |
+| --- | --- | --- |
+| Vない + つもりだ | このギターは売らないつもりだ。 | I intend not to sell this guitar. |
+| Vる + つもりは／がない | このギターを売るつもりはない。 | I have no intention of selling this guitar. |
+| Vる + つもりでは／じゃない | このギターを売るつもりじゃない。 | Selling this guitar is not my intention. |
+
+**売る（うる）** means sell; its ない form is **売らない**.
+The first pattern puts not selling inside the plan. The second denies having the selling intention;
+the third can correct or qualify what someone takes the intention to be.
+**じゃ** is the conversational contraction of **では**. **つもりがない** is also possible with a first-person speaker;
+it is not reserved for reports about other people.
+
+If someone assumes you will sell the guitar, but you have decided to keep playing it yourself, all three patterns can fit.
+The same practical choice can be described as a negative plan or as a denied intention.
+This does not make every absence of a plan a deliberate decision to avoid something.
+Nor are the formulations interchangeable in every context: **つもりはない** can sound like a firm refusal,
+while **つもりじゃない** often qualifies an apparent intention. Do not grade an otherwise fitting answer by a universal
+stronger/weaker ranking.
+
+The first six exercises name the basic plain patterns and ask for the whole verb-plus-つもり expression.
+Three shared negative answers contrast with three affirmative intentions, using **売る**, **借りる（かりる, borrow）**
+and **買う（かう, buy）** on both sides. The chosen negative plans and corrected assumptions make the alternatives coherent.
+The model button is just one representative; the other accepted formulations are not wrong distractors.
+These are not unrestricted paraphrase questions.
+
+In the past, keep the action and the intention separate:
+
+| Intention at that time | Example | Actual outcome |
+| --- | --- | --- |
+| Denied | そのファイルを消すつもりはなかった。でも、操作を間違えて消してしまった。 - I did not intend to delete that file, but made an operating mistake and deleted it. | The unintended action happened. |
+| Affirmed | そのファイルを消すつもりだった。でも、削除する権限がなかった。 - I intended to delete that file, but did not have permission to delete it. | The intended action could not be carried out. |
+
+**消す（けす）／削除する（さくじょする）** mean delete here; **権限（けんげん）** means authority or permission.
+**つもりはなかった／がなかった** denies the past intention; **つもりではなかった／じゃなかった** rejects the action
+as the intention. These alternatives fit the accidental-action examples without denying what actually happened.
+**つもりだった** affirms a past intention, whether or not it succeeded. One exercise explicitly recalls a morning plan
+to move a vase and confirms that it was carried out that afternoon.
+
+The six past questions print **dictionary-form verb + つもり** and request only **だった** or
+**は／が／では／じゃなかった**. The English instruction names the intended mental stance before answering.
+Do not change the printed verb to its た form: **消すつもりだった** reports an earlier intention, whereas
+**消したつもりだった** reports a past belief that deletion had been completed.
+A whole-sentence **捨てないつもりだった**, "I intended not to throw it away," may also be natural in a keeping-plan context,
+but it cannot fill the blank in **捨てるつもり____**. Denying an intention does not by itself establish a prior avoidance plan.
 
 ### ところ: locating an action's stage
 
@@ -1065,6 +1114,7 @@ This practice does not cover every use, such as **寝たきり**, **これっき
 - [Tofugu: つもり](https://www.tofugu.com/japanese-grammar/tsumori/) - intentions, intended representations, attachment and つもりで.
 - [Bunpro: つもりだ](https://bunpro.jp/grammar_points/つもりだ) and [JMdict via Jisho: つもり](https://jisho.org/search/つもり) - affirmative and negative plans, and the lexical distinction between intention and belief; Tofugu also explains past intentions versus believed completion.
 - [Japan Foundation: Aく／ANに／Nになります](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00126/ja/render.do), [Daijisen: 積り](https://kotobank.jp/word/積り-572631), [JMdict via Jisho: なる](https://jisho.org/search/なる), and [Daijisen: 詳しい](https://kotobank.jp/word/詳しい-487503) - noun/adjective change attachment, intention versus assumed-role uses, and recognized spellings of the change verb and 詳しい; Tofugu's つもり attachment sections also cover noun and adjective predicates.
+- [Japan Foundation: つもり（1）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201212.html) and [つもり（2）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201303.html) - intention versus belief, negation placement, correcting a perceived intention and past intentions; distinguish the second lesson's Vる intention-denial examples from its Vた belief-negation examples.
 - [Japan Foundation: ように／ような（例示・比況）](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00010/ja/render.do), [ように（目的）](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00057/ja/render.do), and [TUFS: potential forms](https://www.coelang.tufs.ac.jp/mt/ja/gmod/contents/explanation/074.html) - comparison scope, exemplification, desired states and the potential forms used in the exercises.
 - [Japan Foundation: Vようになります](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00086/ja/render.do) and [Vようにします](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00105/ja/render.do) - changed habits or possibilities, deliberate positive/negative practices, and the distinction between a decision and maintained care.
 - [Tae Kim: Things that should be a certain way](https://guidetojapanese.org/learn/grammar/should) - noun/na-adjective attachment for はず and the distinction from normative べき.

@@ -419,6 +419,21 @@ something does not guarantee achievement, and the shared outer present tense doe
 These self-views are distinct from the existing intended-picture/gesture examples. Denying an intention and broader
 contextual selection remain separate follow-ups. One exercise identity covers its accepted spellings.
 
+`formal-nouns-intention-denial.json` adds 12 exercises; see the
+[source record](grammar-intention-denial-sources.json). Three shared negative-plan/intention-denial answers contrast with
+three affirmative intentions, using 売る／借りる／買う on both sides. The visible task names Vるつもりだ,
+Vないつもりだ and Vるつもりは／が／では／じゃない, with kana つもり and endings. Include both negation placements
+and the copular negatives where the chosen non-action and corrected assumption support them. Do not turn a preference
+for a stronger-sounding refusal into rejection of another fitting answer, or infer an avoidance plan from every denied intention.
+
+The other six questions print dictionary-form verb + つもり and ask only for a plain past ending:
+だった or は／が／では／じゃなかった. Three denied intentions accompany actual accidental actions; three affirmed
+intentions include two blocked actions and one fulfilled plan. Preserve the same 消す／動かす／捨てる on both sides.
+An action happening does not prove intention, and failure or inability does not prove its absence.
+The affirmative past construction does not require a failed plan. Explain why suitable whole-sentence alternatives do not
+fit a supplied-stem blank; do not label them globally wrong. Keep one representative correct button and one SRS identity
+for each shared answer class. Broader contextual selection remains separate practice.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.
