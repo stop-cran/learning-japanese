@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-plans",
+  "title": "つもり: plans and beliefs about completion",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "tsumori-current-plan", "label": "intend to act (Vるつもりです)" },
+    { "id": "tsumori-negative-plan", "label": "intend not to act (Vないつもりです)" },
+    { "id": "tsumori-past-plan", "label": "had intended to act (Vるつもりでした)" },
+    { "id": "tsumori-believed-completion", "label": "believed the action was completed (Vたつもりでした)" }
+  ],
+  "relationships": [
+    {
+      "id": "tsumori-do-vs-not-do",
+      "label": "a plan to act / a plan not to act",
+      "constructions": ["tsumori-current-plan", "tsumori-negative-plan"]
+    },
+    {
+      "id": "tsumori-past-plan-vs-believed-completion",
+      "label": "an intention held in the past / a past belief that an action was completed",
+      "constructions": ["tsumori-past-plan", "tsumori-believed-completion"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "tsumori-plan-weekend-novel",
+      "target": "tsumori-current-plan",
+      "relationship": "tsumori-do-vs-not-do",
+      "prompt": "次の週末は、この小説を最後まで____つもりです。そのために、午後の予定を空けてあります。",
+      "translation": "Use only 読む (よむ, read) in its dictionary or ない form; つもりです is already printed. I plan to read this novel to the end next weekend. I have kept the afternoon free for that.",
+      "evidence": "The speaker has set aside time to carry out the reading, rather than deciding to leave it for another occasion.",
+      "explanation": "読むつもりです states the speaker's plan to read. The verb stays in plain dictionary form before つもり, even though the sentence ends politely in です. 読まない would instead make the plan one of not reading.",
+      "answer": "tsumori-current-plan",
+      "acceptedAnswers": ["読む", "よむ"],
+      "options": [
+        { "id": "tsumori-current-plan", "label": "読む", "rationale": "States the planned reading for which the afternoon has been kept free." },
+        { "id": "tsumori-negative-plan", "label": "読まない", "rationale": "Would express a plan not to read, contrary to the stated purpose of the free afternoon." }
+      ]
+    },
+    {
+      "id": "tsumori-plan-next-year-bicycle",
+      "target": "tsumori-current-plan",
+      "relationship": "tsumori-do-vs-not-do",
+      "prompt": "春から毎月お金を貯めています。来年、自分の自転車を____つもりです。",
+      "translation": "Use only 買う (かう, buy) in its dictionary or ない form; つもりです is already printed. I have been saving money each month since spring. I plan to buy my own bicycle next year.",
+      "evidence": "The speaker identifies a purchase planned for next year and describes preparation for it.",
+      "explanation": "買うつもりです expresses the intended purchase. つもり is not limited to something about to happen: this plan reaches into next year. It reports an intention, not a guarantee that the purchase will take place.",
+      "answer": "tsumori-current-plan",
+      "acceptedAnswers": ["買う", "かう"],
+      "options": [
+        { "id": "tsumori-current-plan", "label": "買う", "rationale": "Expresses the future purchase the speaker is preparing for." },
+        { "id": "tsumori-negative-plan", "label": "買わない", "rationale": "Would state a plan not to buy the bicycle, reversing the requested meaning." }
+      ]
+    },
+    {
+      "id": "tsumori-plan-camera",
+      "target": "tsumori-current-plan",
+      "relationship": "tsumori-do-vs-not-do",
+      "prompt": "明日の撮影では、スマートフォンではなく、このカメラを____つもりです。電池も充電してあります。",
+      "translation": "Use only 使う (つかう, use) in its dictionary or ない form; つもりです is already printed. For tomorrow's photography, I plan to use this camera rather than my phone. I have charged its battery too.",
+      "evidence": "The speaker has chosen the camera over the phone and prepared its battery.",
+      "explanation": "使うつもりです identifies the intended use of the camera. The negative ではなく earlier in the sentence rejects the phone, not the camera; it does not require a negative verb before つもり.",
+      "answer": "tsumori-current-plan",
+      "acceptedAnswers": ["使う", "つかう"],
+      "options": [
+        { "id": "tsumori-current-plan", "label": "使う", "rationale": "States the planned use of the camera, which is the selected device." },
+        { "id": "tsumori-negative-plan", "label": "使わない", "rationale": "Would express a plan not to use this camera, contrary to the requested meaning." }
+      ]
+    },
+    {
+      "id": "tsumori-negative-plan-novel",
+      "target": "tsumori-negative-plan",
+      "relationship": "tsumori-do-vs-not-do",
+      "prompt": "今週は試験勉強を優先します。この小説は来週の楽しみにして、今週は____つもりです。",
+      "translation": "Use only 読む (よむ, read) in its dictionary or ない form; つもりです is already printed. This week I am prioritizing exam study. I am saving this novel as something to enjoy next week and intend not to read it this week.",
+      "evidence": "Not reading the novel this week is a deliberate plan; the speaker still looks forward to reading it later.",
+      "explanation": "読まないつもりです puts the negative inside the planned action: the plan is not to read this week. It does not say the speaker cannot read or dislikes the novel. 読むつもりはありません could also deny an intention to read in a differently worded sentence, but it is not a verb form that fits before the printed つもりです.",
+      "answer": "tsumori-negative-plan",
+      "acceptedAnswers": ["読まない", "よまない"],
+      "options": [
+        { "id": "tsumori-current-plan", "label": "読む", "rationale": "Would make reading the plan for this week, rather than postponing it." },
+        { "id": "tsumori-negative-plan", "label": "読まない", "rationale": "Expresses the deliberate plan to leave this week's reading undone." }
+      ]
+    },
+    {
+      "id": "tsumori-negative-plan-bicycle",
+      "target": "tsumori-negative-plan",
+      "relationship": "tsumori-do-vs-not-do",
+      "prompt": "今の自転車はまだ使えるので、今年は新しい自転車を____つもりです。お金は旅行のために残しておきます。",
+      "translation": "Use only 買う (かう, buy) in its dictionary or ない form; つもりです is already printed. My current bicycle still works, so I intend not to buy a new one this year. I will keep the money for a trip.",
+      "evidence": "Keeping the current bicycle and reserving the money for travel explain the plan not to make the purchase.",
+      "explanation": "買わないつもりです states the negative plan. The ない form of 買う is 買わない, not 買うない. This is an intention about the purchase, not a statement that buying is physically or financially impossible.",
+      "answer": "tsumori-negative-plan",
+      "acceptedAnswers": ["買わない", "かわない"],
+      "options": [
+        { "id": "tsumori-current-plan", "label": "買う", "rationale": "Would state the purchase as the plan, rather than keeping the money for travel." },
+        { "id": "tsumori-negative-plan", "label": "買わない", "rationale": "Expresses the decision to go without a new bicycle this year." }
+      ]
+    },
+    {
+      "id": "tsumori-negative-plan-camera",
+      "target": "tsumori-negative-plan",
+      "relationship": "tsumori-do-vs-not-do",
+      "prompt": "明日の散歩には重い荷物を持っていきません。このカメラは家に置いて、撮影には____つもりです。スマートフォンで写真を撮ります。",
+      "translation": "Use only 使う (つかう, use) in its dictionary or ない form; つもりです is already printed. I will not take heavy luggage on tomorrow's walk. I will leave this camera at home and intend not to use it for photography. I will take photos with my phone.",
+      "evidence": "The plan excludes using this camera, not taking photographs altogether: the phone will be used instead.",
+      "explanation": "使わないつもりです makes not using the camera the plan. The referent matters: it does not mean the speaker intends not to use any device or take any photographs. Other ways of stating the plan are outside this question's supplied-verb and form restriction.",
+      "answer": "tsumori-negative-plan",
+      "acceptedAnswers": ["使わない", "つかわない"],
+      "options": [
+        { "id": "tsumori-current-plan", "label": "使う", "rationale": "Would say the camera left at home is the device the speaker plans to use." },
+        { "id": "tsumori-negative-plan", "label": "使わない", "rationale": "Expresses the intended non-use of this camera while still allowing phone photography." }
+      ]
+    },
+    {
+      "id": "tsumori-past-plan-application",
+      "target": "tsumori-past-plan",
+      "relationship": "tsumori-past-plan-vs-believed-completion",
+      "prompt": "昨日は夕方に申込書を____つもりでしたが、書き終わらず、まだ机の上にあります。",
+      "translation": "Use only 送る (おくる, send) in its dictionary or た form; つもりでした is already printed. Report my intention at that past time, not a belief that the action was already completed. I intended to send the application yesterday evening, but I did not finish writing it and it is still on my desk.",
+      "evidence": "The speaker reports the plan held yesterday. The unfinished application explains why the intended sending did not happen.",
+      "explanation": "送るつもりでした puts the intention in the past through でした while leaving the intended action in dictionary form. 送ったつもりでした would instead report a belief that sending had already been accomplished, not the past intention requested here.",
+      "answer": "tsumori-past-plan",
+      "acceptedAnswers": ["送る", "おくる"],
+      "options": [
+        { "id": "tsumori-past-plan", "label": "送る", "rationale": "Reports the earlier intention without claiming the speaker believed the form had been sent." },
+        { "id": "tsumori-believed-completion", "label": "送った", "rationale": "Would report a belief in completed sending rather than the requested past plan." }
+      ]
+    },
+    {
+      "id": "tsumori-past-plan-window",
+      "target": "tsumori-past-plan",
+      "relationship": "tsumori-past-plan-vs-believed-completion",
+      "prompt": "出かける前に窓を____つもりでしたが、電話で話しているうちに忘れてしまい、開けたまま出かけました。",
+      "translation": "Use only 閉める (しめる, close) in its dictionary or た form; つもりでした is already printed. Report my intention at that past time, not a belief that the action was already completed. I intended to close the window before going out, but forgot while talking on the phone and went out leaving it open.",
+      "evidence": "The requested account concerns an intended action that was forgotten, not an assertion that the speaker thought the window was already closed.",
+      "explanation": "閉めるつもりでした reports the earlier plan to close the window. The past intention does not require 閉めた before つもり: that would change the requested meaning to a belief in completed closing. 開けたまま later describes the actual state left behind.",
+      "answer": "tsumori-past-plan",
+      "acceptedAnswers": ["閉める", "しめる"],
+      "options": [
+        { "id": "tsumori-past-plan", "label": "閉める", "rationale": "Keeps the distinction between the intended action and the open state that actually remained." },
+        { "id": "tsumori-believed-completion", "label": "閉めた", "rationale": "Would describe a belief that closing had been done, not the intention requested here." }
+      ]
+    },
+    {
+      "id": "tsumori-past-plan-room-realized",
+      "target": "tsumori-past-plan",
+      "relationship": "tsumori-past-plan-vs-believed-completion",
+      "prompt": "先週の月曜日には、その週の金曜日に会議室を____つもりでした。実際に金曜日に予約の手続きを済ませました。",
+      "translation": "Use only 予約する (よやくする, reserve) in its dictionary or た form; つもりでした is already printed. Report my intention at that past time, not a belief that the action was already completed. On Monday last week, I intended to reserve the meeting room that Friday. I actually completed the reservation procedure on Friday.",
+      "evidence": "Friday was still in the future when the Monday intention was held. The next sentence separately confirms that the plan was carried out.",
+      "explanation": "予約するつもりでした reports the plan from Monday's viewpoint. The later fulfillment does not change the action inside that earlier intention into 予約した. A past intention can be followed by an account of either failure or fulfillment; here fulfillment is explicitly stated.",
+      "answer": "tsumori-past-plan",
+      "acceptedAnswers": ["予約する", "よやくする"],
+      "options": [
+        { "id": "tsumori-past-plan", "label": "予約する", "rationale": "Locates the reservation after the Monday viewpoint, as the action then intended." },
+        { "id": "tsumori-believed-completion", "label": "予約した", "rationale": "Would place completed reserving inside the Monday belief instead of stating the plan for the coming Friday." }
+      ]
+    },
+    {
+      "id": "tsumori-believed-completion-application",
+      "target": "tsumori-believed-completion",
+      "relationship": "tsumori-past-plan-vs-believed-completion",
+      "prompt": "昨日、送信（そうしん）ボタンを押したので、申込書を____つもりでしたが、さっき送信エラーに気づきました。",
+      "translation": "Use only 送る (おくる, send) in its dictionary or た form; つもりでした is already printed. Report my belief that the action was completed, not my past intention to act. Because I pressed the send button yesterday, I thought I had sent the application, but I only just noticed a transmission error.",
+      "evidence": "Pressing the button led the speaker to believe the sending was complete. The error challenges that belief, not merely a plan to send later.",
+      "explanation": "送ったつもりでした reports the speaker's belief that the application had been sent. The た form marks completion inside that belief; でした places the belief in the past. Neither by itself guarantees that the transmission succeeded.",
+      "answer": "tsumori-believed-completion",
+      "acceptedAnswers": ["送った", "おくった"],
+      "options": [
+        { "id": "tsumori-past-plan", "label": "送る", "rationale": "Would report an intention to send, not the belief that sending had already been completed." },
+        { "id": "tsumori-believed-completion", "label": "送った", "rationale": "Expresses the believed completion that the later error calls into question." }
+      ]
+    },
+    {
+      "id": "tsumori-believed-completion-windows-confirmed",
+      "target": "tsumori-believed-completion",
+      "relationship": "tsumori-past-plan-vs-believed-completion",
+      "prompt": "出かけるときには、窓を全部____つもりでした。あとで家族に確認してもらうと、やはり全部閉まっていました。",
+      "translation": "Use only 閉める (しめる, close) in its dictionary or た form; つもりでした is already printed. Report my belief that the action was completed, not my past intention to act. When I left, I believed I had closed all the windows. When I later asked my family to check, they were indeed all closed.",
+      "evidence": "The first sentence reports the speaker's belief on leaving. The later check confirms rather than contradicts it.",
+      "explanation": "閉めたつもりでした reports the believed completion of closing. This use of つもり often appears when belief and reality differ, but the belief need not be a mistake: here it is confirmed. 閉める would report an intention rather than the requested completed-action belief.",
+      "answer": "tsumori-believed-completion",
+      "acceptedAnswers": ["閉めた", "しめた"],
+      "options": [
+        { "id": "tsumori-past-plan", "label": "閉める", "rationale": "Would state a plan to close the windows, not the belief that they had already been closed." },
+        { "id": "tsumori-believed-completion", "label": "閉めた", "rationale": "States the completed-action belief that the family's check later confirms." }
+      ]
+    },
+    {
+      "id": "tsumori-believed-completion-room-size",
+      "target": "tsumori-believed-completion",
+      "relationship": "tsumori-past-plan-vs-believed-completion",
+      "prompt": "予約を終えたときは、大きな会議室を____つもりでしたが、届いた確認メールには小さな部屋の番号が書かれていました。",
+      "translation": "Use only 予約する (よやくする, reserve) in its dictionary or た form; つもりでした is already printed. Report my belief that the action was completed, not my past intention to act. When I finished booking, I thought I had reserved a large meeting room, but the confirmation email that arrived listed the number of a small room.",
+      "evidence": "A booking was made, but its result differs from what the speaker believed: the room size is wrong.",
+      "explanation": "予約したつもりでした presents the speaker's understanding of what they had booked. The mismatch concerns which room was reserved, not whether any reservation existed. 予約する would state an intention to book the large room instead of the belief about the completed booking requested here.",
+      "answer": "tsumori-believed-completion",
+      "acceptedAnswers": ["予約した", "よやくした"],
+      "options": [
+        { "id": "tsumori-past-plan", "label": "予約する", "rationale": "Would express the earlier intention, rather than what the speaker thought the completed booking had achieved." },
+        { "id": "tsumori-believed-completion", "label": "予約した", "rationale": "Expresses the believed result whose room size is contradicted by the confirmation." }
+      ]
+    }
+  ]
+}

@@ -264,6 +264,42 @@ context, **調べておくのだった／調べておくんだった** can mean 
 necessarily asserting a past plan. These forms have other uses too, including explanation, denial and recalling a forgotten plan;
 they are not automatic substitutes for べき in every sentence.
 
+### つもり: a plan or a belief about what has been done
+
+The verb before **つもり** and the ending after it do different jobs:
+
+| Pattern | Example | Meaning |
+| --- | --- | --- |
+| Dictionary form + つもりです | 来年、自転車を買うつもりです。 | I plan to buy a bicycle next year. |
+| ない form + つもりです | 今年は新しい自転車を買わないつもりです。 | I intend not to buy a new bicycle this year. |
+| Dictionary form + つもりでした | 昨日は申込書を送るつもりでした。 | I intended to send the application yesterday. |
+| た form + つもりでした | 申込書を送ったつもりでした。 | I thought I had sent the application. |
+
+Use a **plain verb form** before つもり, even with polite **です／でした** afterward.
+A plan need not be imminent: the bicycle purchase can be next year. Intending an action does not guarantee carrying it out.
+**買わないつもり** states a plan not to buy; it does not itself mean inability to buy.
+**買うつもりはない／買うつもりがない** instead denies having the intention to buy.
+The formulations can overlap in practical use; do not choose between them by a universal strength-of-refusal scale.
+
+Keep the two past expressions separate. In **送るつもりでした**, **でした** places the intention in the past;
+the intended sending is not changed into **送った** merely because we are now looking back.
+In **送ったつもりでした**, the sending is presented as completed **within the speaker's belief**.
+The actual outcome may differ: pressing a send button does not prove that an application was successfully transmitted.
+With a present belief, the ending can instead be **送ったつもりです**, "I believe I have sent it."
+
+The rest of the account tells us what actually happened. A past intention can be carried out:
+**月曜日には、金曜日に予約するつもりでした。実際に金曜日に予約しました。**
+"On Monday, I intended to make the reservation on Friday. I actually did so on Friday."
+Likewise, a belief in completion need not be false:
+**窓を全部閉めたつもりでした。あとで確認すると、やはり全部閉まっていました。**
+"I believed I had closed all the windows. When I checked later, they were indeed all closed."
+つもり foregrounds the speaker's mental stance, rather than independently verifying the result.
+
+The plan questions supply **つもりです** and request only the given verb's dictionary or ない form.
+The past-viewpoint questions all supply **つもりでした** and request dictionary or た form, with the intended mental
+stance stated before answering. They practice those controlled contrasts, not unrestricted rejection of other ways to
+express intention or belief. Noun/adjective self-assessments and imagined-role uses need their own contexts.
+
 ### ところ: locating an action's stage
 
 For activities such as writing a letter, the verb form before **ところ** distinguishes three stages:
@@ -806,12 +842,42 @@ version. This often occurs in complaints, but a speaker can also describe a happ
 seconds-or-minutes cutoff. The questions supply ばかりです and request only the preceding verb's て or た form.
 An alternative whole construction such as **たところです** is not globally wrong merely because it is outside that blank.
 
+### Degree, comparison and desired extent
+
+The words around **ほど** determine the relationship:
+
+| Pattern | Example | Meaning |
+| --- | --- | --- |
+| A degree illustrated by a situation | 一人では持ち上げられないほど重い。 | So heavy that I cannot lift it alone. |
+| Below a comparison standard | 青い箱は赤い箱ほど重くない。 | The blue box is not as heavy as the red one. |
+| Correlated change | 考えれば考えるほど分からなくなる。 | The more I think about it, the less I understand it. |
+| Desired extent with だけ | 使いたいだけ使ってください。 | Use as much as you want. |
+
+In **持ち上げられないほど重い**, the negative describes the inability to lift, while **重い** is affirmative.
+In **赤い箱ほど重くない**, the negative main adjective places the box below the comparison standard.
+"Not as heavy" does not mean weightless, just as "not as expensive" does not necessarily mean cheap.
+These degree examples describe stated consequences; other ほど descriptions can be figurative rather than literal.
+The adjective questions supply ほど and です and request the standard plain nonpast form without extra particles.
+Emphatic forms such as **高くはない** remain natural outside that explicit restriction.
+
+**Vば＋Vる＋ほど** repeats the same verb: **読めば読むほど**, **考えれば考えるほど**, **使えば使うほど**.
+It relates changes in degree; it does not promise improvement, as the growing-confusion example shows.
+**Vたい＋だけ** instead lets the desired amount set the extent: **読みたいだけ**, **考えたいだけ**, **使いたいだけ**.
+Form たい with the verb's ます stem. This amount need not be small.
+
+The full-pattern questions explicitly request one of those two constructions, with the same supplied verb throughout.
+Kana and kanji spellings are accepted, including **程** and **丈**, though kana is normal for these particles.
+This is not a global rule separating the words: **読めば読むだけ** can also express correlated change,
+and shorter **読むほど** or other extent formulations can be natural in appropriate sentences.
+Likewise, **くらい／ぐらい** can overlap with clause-based degree without replacing ほど in every comparison or repeated-verb pattern.
+
 ## References
 
 - [Japan Foundation: 「こと」（1）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201112.html) - nominalization, こと versus の, and fixed expressions.
 - [Bunpro: ことにする](https://bunpro.jp/grammar_points/ことにする), [ことになる](https://bunpro.jp/grammar_points/ことになる), and [ことができる](https://bunpro.jp/grammar_points/ことができる) - decisions versus resulting situations, and ability or possibility.
 - [ARC Tokyo: ことになりました](https://arc.ac.jp/Tokyo/mimi-bunpou053/) and [E-Japanese: ことになる](https://www.e-japanese.jp/?p=650) - personal decisions announced indirectly and results derived by calculation.
 - [Tofugu: つもり](https://www.tofugu.com/japanese-grammar/tsumori/) - intentions, intended representations, attachment and つもりで.
+- [Bunpro: つもりだ](https://bunpro.jp/grammar_points/つもりだ) and [JMdict via Jisho: つもり](https://jisho.org/search/つもり) - affirmative and negative plans, and the lexical distinction between intention and belief; Tofugu also explains past intentions versus believed completion.
 - [Tae Kim: Things that should be a certain way](https://guidetojapanese.org/learn/grammar/should) - noun/na-adjective attachment for はず and the distinction from normative べき.
 - [Bunpro: べき](https://bunpro.jp/grammar_points/べき), [べきではない](https://bunpro.jp/grammar_points/べきではない), and [ものだ](https://bunpro.jp/grammar_points/ものだ) - normative judgments, past and negative forms, and context-dependent generalizations.
 - [Japan Foundation: 「こと」（2）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201203.html) - the advice/instruction use of ことだ alongside other constructions.
@@ -855,5 +921,7 @@ An alternative whole construction such as **たところです** is not globally
 - [Bunpro: ものだ](https://bunpro.jp/grammar_points/ものだ), [たものだ](https://bunpro.jp/grammar_points/たものだ), and [わけだ](https://bunpro.jp/grammar_points/わけだ) - characteristic patterns, reflective past recollection and explanatory conclusions; these are not interchangeable functions of an isolated noun.
 - [JMdict via Jisho: ほど](https://jisho.org/search/ほど), [くらい](https://jisho.org/search/くらい), [だけ](https://jisho.org/search/だけ), and [ばかり](https://jisho.org/search/ばかり) - the matching particle readings, senses and spellings, not adjacent homophones or noun entries.
 - [Maggie Sensei: ばかり](https://maggiesensei.com/2013/07/02/%E3%81%B0%E3%81%8B%E3%82%8A-bakari/), [Bunpro: ばかり](https://bunpro.jp/grammar_points/ばかり), [たばかり](https://bunpro.jp/grammar_points/たばかり), and [だけ](https://bunpro.jp/grammar_points/だけ) - quantity, limitation, activity concentration and recent completion; the construction determines the function.
+- [Maggie Sensei: ほど](https://maggiesensei.com/2012/10/10/how-to-use-%E7%A8%8B-%E3%81%BB%E3%81%A9-hodo/), [Bunpro: ば〜ほど](https://bunpro.jp/grammar_points/ば-ほど), and [Tae Kim: Expressing amounts](https://guidetojapanese.org/learn/grammar/amount) - degree, negative comparisons and correlated change; the exact construction matters.
+- [Daijisen: だけ](https://kotobank.jp/word/だけ-559985) and [Bunpro: たい](https://bunpro.jp/grammar_points/たい) - extent and desired-action attachment, underlying the たいだけ pattern; だけ also has proportional-change uses.
 
 [Article index on GitHub](https://github.com/stop-cran/learning-japanese#articles)

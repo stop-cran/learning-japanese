@@ -1170,5 +1170,210 @@ class GrammarParticleCoverageTests(unittest.TestCase):
         self.assertEqual(set(self.TARGET_COUNTS), {target for source in sources["sources"] for target in source["supports"]})
 
 
+class GrammarDegreeExtentCoverageTests(unittest.TestCase):
+    TARGET_COUNTS = {
+        "hodo-stated-degree": 3,
+        "hodo-below-standard": 3,
+        "hodo-proportional-change": 3,
+        "dake-desired-extent": 3,
+    }
+
+    def setUp(self):
+        self.root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((self.root / "grammar" / "particle-degree-extent.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_target_counts_and_reciprocal_relationships(self):
+        self.assertEqual(12, len(self.exercises))
+        self.assertEqual(self.TARGET_COUNTS, Counter(exercise["target"] for exercise in self.exercises.values()))
+        self.assertEqual(2, len(self.data["relationships"]))
+        for relationship in self.data["relationships"]:
+            exercises = [exercise for exercise in self.exercises.values() if exercise["relationship"] == relationship["id"]]
+            self.assertEqual(set(relationship["constructions"]), {exercise["target"] for exercise in exercises})
+            for exercise in exercises:
+                self.assertEqual(
+                    set(relationship["constructions"]),
+                    {option["id"] for option in exercise["options"]},
+                    exercise["id"],
+                )
+
+    def test_adjective_pairs_keep_the_visible_standard_form_contract(self):
+        expected = {
+            "hodo-stated-degree-heavy-box": {"重い", "おもい"},
+            "hodo-stated-degree-expensive-watch": {"高い", "たかい"},
+            "hodo-stated-degree-chattering-teeth": {"寒い", "さむい"},
+            "hodo-below-standard-box-weights": {"重くない", "おもくない"},
+            "hodo-below-standard-watch-prices": {"高くない", "たかくない"},
+            "hodo-below-standard-warmer-day": {"寒くない", "さむくない"},
+        }
+        for exercise_id, answers in expected.items():
+            exercise = self.exercises[exercise_id]
+            self.assertEqual(answers, set(exercise["acceptedAnswers"]), exercise_id)
+            self.assertIn("ほど____です", exercise["prompt"], exercise_id)
+            self.assertIn(
+                "standard plain nonpast affirmative or negative form, without added particles; です is already printed.",
+                exercise["translation"],
+                exercise_id,
+            )
+
+    def test_negation_location_and_comparison_direction_are_preserved(self):
+        box_degree = self.exercises["hodo-stated-degree-heavy-box"]
+        self.assertIn("持ち上げられないほど____", box_degree["prompt"])
+        self.assertEqual("hodo-stated-degree", box_degree["answer"])
+        self.assertIn("買えないほど____", self.exercises["hodo-stated-degree-expensive-watch"]["prompt"])
+        boxes = self.exercises["hodo-below-standard-box-weights"]
+        self.assertIn("赤い箱は十キロ、青い箱は二キロ", boxes["prompt"])
+        self.assertIn("青い箱は赤い箱ほど____", boxes["prompt"])
+        watches = self.exercises["hodo-below-standard-watch-prices"]
+        self.assertIn("この時計は一万円、あの時計は十万円", watches["prompt"])
+        self.assertIn("この時計はあの時計ほど____", watches["prompt"])
+        self.assertIn("not an absolute claim", watches["explanation"])
+        weather = self.exercises["hodo-below-standard-warmer-day"]
+        self.assertIn("昨日より暖かく感じます", weather["prompt"])
+        self.assertIn("not necessarily mean today is not cold at all", weather["explanation"])
+
+    def test_full_patterns_accept_every_kana_kanji_combination(self):
+        pairs = [
+            ("hodo-proportional-novel", "dake-desired-extent-reading-time",
+             ("読めば", "よめば"), ("読む", "よむ"), ("読みたい", "よみたい")),
+            ("hodo-proportional-puzzling-problem", "dake-desired-extent-thinking-time",
+             ("考えれば", "かんがえれば"), ("考える", "かんがえる"), ("考えたい", "かんがえたい")),
+            ("hodo-proportional-familiar-tool", "dake-desired-extent-paper",
+             ("使えば", "つかえば"), ("使う", "つかう"), ("使いたい", "つかいたい")),
+        ]
+        for proportional_id, desired_id, conditionals, verbs, desires in pairs:
+            proportional = {
+                conditional + verb + particle
+                for conditional in conditionals for verb in verbs for particle in ("ほど", "程")
+            }
+            desired = {desire + particle for desire in desires for particle in ("だけ", "丈")}
+            self.assertEqual(proportional, set(self.exercises[proportional_id]["acceptedAnswers"]), proportional_id)
+            self.assertEqual(desired, set(self.exercises[desired_id]["acceptedAnswers"]), desired_id)
+            self.assertEqual(8, len(proportional))
+            self.assertEqual(4, len(desired))
+            for exercise_id in (proportional_id, desired_id):
+                self.assertIn(
+                    "ば-form + dictionary form + ほど, or たい-form + だけ. Fill the whole pattern, in kana or kanji.",
+                    self.exercises[exercise_id]["translation"],
+                    exercise_id,
+                )
+
+    def test_change_and_desire_frames_keep_their_meanings_visible(self):
+        for exercise in self.exercises.values():
+            if exercise["relationship"] != "proportional-change-vs-desired-extent":
+                continue
+            self.assertIn(
+                "Express correlated change, not a desired amount"
+                if exercise["target"] == "hodo-proportional-change"
+                else "Explicitly mark a desired amount, not correlated change",
+                exercise["translation"],
+                exercise["id"],
+            )
+        problem = self.exercises["hodo-proportional-puzzling-problem"]
+        self.assertIn("かえって分からなくなります", problem["prompt"])
+        self.assertIn("need not be beneficial", problem["explanation"])
+        self.assertIn("does not say the amount must be small", self.exercises["dake-desired-extent-reading-time"]["explanation"])
+
+    def test_source_record_covers_declared_targets_and_committed_baseline(self):
+        sources = json.loads((self.root / "docs" / "grammar-degree-extent-sources.json").read_text(encoding="utf-8"))
+        self.assertEqual(self.data["id"], sources["setId"])
+        self.assertEqual(self.data["article"], sources["article"])
+        self.assertEqual(set(self.TARGET_COUNTS), {target for source in sources["sources"] for target in source["supports"]})
+        self.assertEqual(197, sources["preservationBaseline"]["headExerciseCount"])
+        self.assertEqual(0, sources["preservationBaseline"]["uncommittedExerciseCount"])
+
+
+class GrammarPlansCoverageTests(unittest.TestCase):
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((root / "grammar" / "formal-nouns-plans.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_target_counts_and_reciprocal_relationships(self):
+        self.assertEqual({
+            "tsumori-current-plan": 3,
+            "tsumori-negative-plan": 3,
+            "tsumori-past-plan": 3,
+            "tsumori-believed-completion": 3,
+        }, Counter(exercise["target"] for exercise in self.exercises.values()))
+        for relationship in self.data["relationships"]:
+            exercises = [exercise for exercise in self.exercises.values() if exercise["relationship"] == relationship["id"]]
+            self.assertEqual(set(relationship["constructions"]), {exercise["target"] for exercise in exercises})
+            for exercise in exercises:
+                self.assertEqual(
+                    set(relationship["constructions"]),
+                    {option["id"] for option in exercise["options"]},
+                    exercise["id"],
+                )
+
+    def test_current_plans_keep_the_visible_form_contract_and_spelling_pairs(self):
+        pairs = [
+            ("tsumori-plan-weekend-novel", "tsumori-negative-plan-novel",
+             {"読む", "よむ"}, {"読まない", "よまない"}),
+            ("tsumori-plan-next-year-bicycle", "tsumori-negative-plan-bicycle",
+             {"買う", "かう"}, {"買わない", "かわない"}),
+            ("tsumori-plan-camera", "tsumori-negative-plan-camera",
+             {"使う", "つかう"}, {"使わない", "つかわない"}),
+        ]
+        for affirmative_id, negative_id, affirmative, negative in pairs:
+            for exercise_id, answers in ((affirmative_id, affirmative), (negative_id, negative)):
+                exercise = self.exercises[exercise_id]
+                self.assertEqual(answers, set(exercise["acceptedAnswers"]), exercise_id)
+                self.assertIn("____つもりです", exercise["prompt"], exercise_id)
+                self.assertIn("Use only", exercise["translation"], exercise_id)
+                self.assertIn(
+                    "dictionary or ない form; つもりです is already printed.",
+                    exercise["translation"], exercise_id,
+                )
+        self.assertIn("来年", self.exercises["tsumori-plan-next-year-bicycle"]["prompt"])
+        camera = self.exercises["tsumori-plan-camera"]
+        self.assertIn("スマートフォンではなく", camera["prompt"])
+        self.assertEqual({"使う", "つかう"}, set(camera["acceptedAnswers"]))
+        self.assertIn("スマートフォンで写真を撮ります", self.exercises["tsumori-negative-plan-camera"]["prompt"])
+
+    def test_past_pairs_keep_outer_tense_constant_and_mental_stance_visible(self):
+        pairs = [
+            ("tsumori-past-plan-application", "tsumori-believed-completion-application",
+             {"送る", "おくる"}, {"送った", "おくった"}),
+            ("tsumori-past-plan-window", "tsumori-believed-completion-windows-confirmed",
+             {"閉める", "しめる"}, {"閉めた", "しめた"}),
+            ("tsumori-past-plan-room-realized", "tsumori-believed-completion-room-size",
+             {"予約する", "よやくする"}, {"予約した", "よやくした"}),
+        ]
+        for plan_id, belief_id, planned, completed in pairs:
+            for exercise_id, answers in ((plan_id, planned), (belief_id, completed)):
+                exercise = self.exercises[exercise_id]
+                self.assertEqual(answers, set(exercise["acceptedAnswers"]), exercise_id)
+                self.assertIn("____つもりでした", exercise["prompt"], exercise_id)
+                self.assertIn("Use only", exercise["translation"], exercise_id)
+                self.assertIn(
+                    "dictionary or た form; つもりでした is already printed.",
+                    exercise["translation"], exercise_id,
+                )
+                self.assertIn(
+                    "Report my intention at that past time, not a belief that the action was already completed."
+                    if exercise_id == plan_id else
+                    "Report my belief that the action was completed, not my past intention to act.",
+                    exercise["translation"], exercise_id,
+                )
+            self.assertEqual(
+                [option["label"] for option in self.exercises[plan_id]["options"]],
+                [option["label"] for option in self.exercises[belief_id]["options"]],
+            )
+
+    def test_actual_outcome_does_not_replace_the_requested_viewpoint(self):
+        plan = self.exercises["tsumori-past-plan-room-realized"]
+        self.assertIn("先週の月曜日には、その週の金曜日に", plan["prompt"])
+        self.assertIn("実際に金曜日に予約の手続きを済ませました", plan["prompt"])
+        self.assertEqual({"予約する", "よやくする"}, set(plan["acceptedAnswers"]))
+        confirmed = self.exercises["tsumori-believed-completion-windows-confirmed"]
+        self.assertIn("やはり全部閉まっていました", confirmed["prompt"])
+        self.assertEqual({"閉めた", "しめた"}, set(confirmed["acceptedAnswers"]))
+        wrong_room = self.exercises["tsumori-believed-completion-room-size"]
+        self.assertIn("予約を終えたときは、大きな会議室を", wrong_room["prompt"])
+        self.assertIn("小さな部屋の番号", wrong_room["prompt"])
+        self.assertEqual({"予約した", "よやくした"}, set(wrong_room["acceptedAnswers"]))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -114,6 +114,10 @@ the importer requires at least two finite two-coordinate points per stroke.
 
 ## Grammar exercises
 
+For research starting points, consult the [grammar authoring source guide](grammar-authoring-sources.md).
+It links inspected examples and existing batch records, with source-specific retrieval caveats; it does not replace
+per-batch provenance or editorial review.
+
 `grammar/<set-id>.json` files use `schemaVersion: 1` and contain stable construction, relationship and exercise IDs. Each exercise
 has a Japanese prompt with exactly one `____` blank, an English translation, evidence from the context, an explanation,
 the correct construction ID, accepted typed forms, and answer options with a rationale for every alternative. Every relationship
@@ -292,6 +296,37 @@ Keep the enjoyable holiday-reading case and yesterday's completed novel: critici
 are not universal requirements. Alternative whole constructions such as たところです remain outside this verb-form blank,
 not globally invalid. The family inventory now appears in practice, but additional degree, comparison, extent and other
 sub-uses still need dedicated coverage.
+
+`particle-degree-extent.json` adds 12 exercises; see the [source record](grammar-degree-extent-sources.json).
+Three stated-degree and three below-standard comparison questions request standard plain nonpast affirmative/negative
+adjective forms, with ほど and です already printed. The same three adjectives appear on both sides.
+Preserve the negative clauses before ほど in the heavy-box and expensive-watch items: they still take affirmative main
+adjectives. Preserve the explicit comparison directions, and do not equate a relative lower degree with absolute absence
+of the property. Emphatic は and other reformulations are excluded by the visible no-added-particles instruction,
+not declared ungrammatical.
+
+Three correlated-change and three desired-extent questions request an entire named pattern: the supplied verb's
+ば form + dictionary form + ほど, or its たい form + だけ. The same three verbs occur on both sides.
+Accept all kana/kanji combinations of the repeated verb forms and the particle spellings 程／丈.
+Keep the question-side meaning frame and the full-pattern restriction: shorter 読むほど, proportional 読めば読むだけ
+and other extent formulations can be natural outside this task.
+The growing-confusion item prevents an implication that correlated change always brings improvement;
+the desired amount need not be small. These だけ items cover desired extent, not every possible-extent construction.
+
+`formal-nouns-plans.json` adds 12 exercises; see the [source record](grammar-plans-sources.json).
+Three current affirmative and three negative-plan questions request only the supplied verb's dictionary or ない form
+before printed つもりです. The same verbs occur in both directions. The negative plan is not inability or dislike;
+the camera example excludes that device, not photography altogether. The next-year bicycle plan is not imminent.
+Alternative negation with つもりはない／つもりがない can overlap in practical use but does not fit this literal verb blank.
+
+Three past-intention and three believed-completion questions all print つもりでした and request dictionary or た form.
+Their question-side instructions explicitly identify the intended mental stance; keep that framing visible.
+The same three verbs occur on both sides. 送るつもりでした reports an earlier intention, whereas
+送ったつもりでした reports an earlier belief in completed sending.
+Keep the fulfilled Friday plan viewed from Monday, the confirmed window-closing belief, and the reservation made for
+the wrong-sized room. Neither past intentions nor completion beliefs require a universal failed-action outcome.
+The source record preserves both the 197 committed exercises and the hash of the preceding 12 uncommitted exercises.
+Noun/adjective self-assessment and imagined-role uses are not claimed by these verb-form questions.
 
 ## Links and safety
 

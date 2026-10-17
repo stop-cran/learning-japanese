@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "id": "particle-degree-extent",
+  "title": "Degree and extent: ほど and だけ in whole patterns",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "hodo-stated-degree", "label": "a degree presented as reached (ほど)" },
+    { "id": "hodo-below-standard", "label": "below a comparison standard (ほど + negative)" },
+    { "id": "hodo-proportional-change", "label": "the more A, the more or less B (VばVるほど)" },
+    { "id": "dake-desired-extent", "label": "as much as one wants (Vたいだけ)" }
+  ],
+  "relationships": [
+    {
+      "id": "stated-degree-vs-below-standard",
+      "label": "a degree reached / a comparison degree not reached",
+      "constructions": ["hodo-stated-degree", "hodo-below-standard"]
+    },
+    {
+      "id": "proportional-change-vs-desired-extent",
+      "label": "correlated change / an amount defined by desire",
+      "constructions": ["hodo-proportional-change", "dake-desired-extent"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "hodo-stated-degree-heavy-box",
+      "target": "hodo-stated-degree",
+      "relationship": "stated-degree-vs-below-standard",
+      "prompt": "この箱は二十キロもあって、一人では持ち上げられないほど____です。",
+      "translation": "Use 重い (おもい, heavy) in its standard plain nonpast affirmative or negative form, without added particles; です is already printed. The box weighs twenty kilograms and is so heavy that I cannot lift it alone.",
+      "evidence": "The inability to lift the box illustrates how heavy it is, not a degree of heaviness that it falls short of.",
+      "explanation": "持ち上げられないほど重い describes a high degree of heaviness through its consequence. The negative before ほど belongs to the inability to lift; it does not make the main adjective negative. 重くない would deny reaching that degree and conflict with the requested meaning.",
+      "answer": "hodo-stated-degree",
+      "acceptedAnswers": ["重い", "おもい"],
+      "options": [
+        { "id": "hodo-stated-degree", "label": "重い", "rationale": "States the degree of heaviness illustrated by being unable to lift the box." },
+        { "id": "hodo-below-standard", "label": "重くない", "rationale": "Would deny reaching that degree of heaviness rather than state it." }
+      ]
+    },
+    {
+      "id": "hodo-stated-degree-expensive-watch",
+      "target": "hodo-stated-degree",
+      "relationship": "stated-degree-vs-below-standard",
+      "prompt": "この時計は百万円もして、私には買えないほど____です。",
+      "translation": "Use 高い (たかい, expensive) in its standard plain nonpast affirmative or negative form, without added particles; です is already printed. This watch costs a million yen and is so expensive that I cannot afford it.",
+      "evidence": "The speaker's inability to afford the watch illustrates the stated high price.",
+      "explanation": "買えないほど高い presents the price as reaching a degree beyond this speaker's means. 高くない would instead deny reaching that degree. The example says what this speaker can afford; it does not establish a universal affordability threshold.",
+      "answer": "hodo-stated-degree",
+      "acceptedAnswers": ["高い", "たかい"],
+      "options": [
+        { "id": "hodo-stated-degree", "label": "高い", "rationale": "States the high price illustrated by the speaker's inability to afford it." },
+        { "id": "hodo-below-standard", "label": "高くない", "rationale": "Would deny reaching that degree of expense." }
+      ]
+    },
+    {
+      "id": "hodo-stated-degree-chattering-teeth",
+      "target": "hodo-stated-degree",
+      "relationship": "stated-degree-vs-below-standard",
+      "prompt": "今日は、歯が鳴るほど____です。",
+      "translation": "Use 寒い (さむい, cold) in its standard plain nonpast affirmative or negative form, without added particles; です is already printed. It is so cold today that my teeth are chattering (歯が鳴る, はがなる).",
+      "evidence": "The chattering teeth illustrate the degree of cold being asserted.",
+      "explanation": "歯が鳴るほど寒い states a high degree of cold through the reaction it produces. 寒くない would deny that degree instead. This clause-based degree use does not require a negative main predicate just because another ほど construction means not as cold as a comparison day.",
+      "answer": "hodo-stated-degree",
+      "acceptedAnswers": ["寒い", "さむい"],
+      "options": [
+        { "id": "hodo-stated-degree", "label": "寒い", "rationale": "States the degree of cold illustrated by the chattering teeth." },
+        { "id": "hodo-below-standard", "label": "寒くない", "rationale": "Would deny reaching that degree rather than assert it." }
+      ]
+    },
+    {
+      "id": "hodo-below-standard-box-weights",
+      "target": "hodo-below-standard",
+      "relationship": "stated-degree-vs-below-standard",
+      "prompt": "赤い箱は十キロ、青い箱は二キロです。青い箱は赤い箱ほど____です。",
+      "translation": "Use 重い (おもい, heavy) in its standard plain nonpast affirmative or negative form, without added particles; です is already printed. The red box weighs ten kilograms and the blue one two: the blue box is not as heavy as the red one.",
+      "evidence": "The blue box's two kilograms are below the red box's ten kilograms.",
+      "explanation": "赤い箱ほど重くない puts the blue box below the red box's degree of heaviness. It does not mean the blue box has no weight or must feel light to everyone. 重い would not express the stated below-standard comparison.",
+      "answer": "hodo-below-standard",
+      "acceptedAnswers": ["重くない", "おもくない"],
+      "options": [
+        { "id": "hodo-stated-degree", "label": "重い", "rationale": "Would not state that the blue box falls below the red box's degree of heaviness." },
+        { "id": "hodo-below-standard", "label": "重くない", "rationale": "Expresses the direction established by the two weights." }
+      ]
+    },
+    {
+      "id": "hodo-below-standard-watch-prices",
+      "target": "hodo-below-standard",
+      "relationship": "stated-degree-vs-below-standard",
+      "prompt": "この時計は一万円、あの時計は十万円です。この時計はあの時計ほど____です。",
+      "translation": "Use 高い (たかい, expensive) in its standard plain nonpast affirmative or negative form, without added particles; です is already printed. This watch costs ten thousand yen and that one a hundred thousand: this one is not as expensive as that one.",
+      "evidence": "The stated price of this watch is lower than the comparison watch's price.",
+      "explanation": "あの時計ほど高くない makes a relative price comparison, not an absolute claim that this watch is cheap. 高くはない can also be used with emphatic は, but this question explicitly requests a form without added particles.",
+      "answer": "hodo-below-standard",
+      "acceptedAnswers": ["高くない", "たかくない"],
+      "options": [
+        { "id": "hodo-stated-degree", "label": "高い", "rationale": "Would not express the lower price established by the figures." },
+        { "id": "hodo-below-standard", "label": "高くない", "rationale": "Puts this watch below that watch's price level." }
+      ]
+    },
+    {
+      "id": "hodo-below-standard-warmer-day",
+      "target": "hodo-below-standard",
+      "relationship": "stated-degree-vs-below-standard",
+      "prompt": "昨日より暖かく感じます。今日は昨日ほど____です。",
+      "translation": "Use 寒い (さむい, cold) in its standard plain nonpast affirmative or negative form, without added particles; です is already printed. Today feels warmer than yesterday: it is not as cold as yesterday.",
+      "evidence": "The speaker explicitly feels less cold today than yesterday.",
+      "explanation": "昨日ほど寒くない compares today's cold with yesterday's and says it does not reach that degree. It does not necessarily mean today is not cold at all. 寒い would not express the comparison direction supplied by the first sentence.",
+      "answer": "hodo-below-standard",
+      "acceptedAnswers": ["寒くない", "さむくない"],
+      "options": [
+        { "id": "hodo-stated-degree", "label": "寒い", "rationale": "Would not express the stated lower degree of cold today." },
+        { "id": "hodo-below-standard", "label": "寒くない", "rationale": "States that today's cold falls below yesterday's." }
+      ]
+    },
+    {
+      "id": "hodo-proportional-novel",
+      "target": "hodo-proportional-change",
+      "relationship": "proportional-change-vs-desired-extent",
+      "prompt": "この小説は、____面白く感じられます。",
+      "translation": "Use 読む (よむ, read): ば-form + dictionary form + ほど, or たい-form + だけ. Fill the whole pattern, in kana or kanji. Express correlated change, not a desired amount: the more I read this novel, the more interesting I find it.",
+      "evidence": "The degree of interest increases with the reading, rather than being set by how much the speaker wants to read.",
+      "explanation": "読めば読むほど repeats the same verb in its ば and dictionary forms to relate more reading to greater interest. 読みたいだけ instead sets a desired amount and does not express that correlation. Shorter 読むほど and a corresponding だけ pattern can also express related change, but this task explicitly names two full patterns.",
+      "answer": "hodo-proportional-change",
+      "acceptedAnswers": ["読めば読むほど", "読めばよむほど", "よめば読むほど", "よめばよむほど", "読めば読む程", "読めばよむ程", "よめば読む程", "よめばよむ程"],
+      "options": [
+        { "id": "hodo-proportional-change", "label": "読めば読むほど", "rationale": "Expresses greater interest with more reading." },
+        { "id": "dake-desired-extent", "label": "読みたいだけ", "rationale": "Specifies a desired amount of reading instead of the requested correlation." }
+      ]
+    },
+    {
+      "id": "hodo-proportional-puzzling-problem",
+      "target": "hodo-proportional-change",
+      "relationship": "proportional-change-vs-desired-extent",
+      "prompt": "この問題は、____、かえって分からなくなります。",
+      "translation": "Use 考える (かんがえる, think): ば-form + dictionary form + ほど, or たい-form + だけ. Fill the whole pattern, in kana or kanji. Express correlated change, not a desired amount: the more I think about this problem, the less I understand it.",
+      "evidence": "Increasing thought brings decreasing understanding in this example.",
+      "explanation": "考えれば考えるほど relates more thought to the growing lack of understanding. The outcome need not be beneficial: the construction does not mean that more effort always improves things. 考えたいだけ defines how much thinking is wanted instead of this change.",
+      "answer": "hodo-proportional-change",
+      "acceptedAnswers": ["考えれば考えるほど", "考えればかんがえるほど", "かんがえれば考えるほど", "かんがえればかんがえるほど", "考えれば考える程", "考えればかんがえる程", "かんがえれば考える程", "かんがえればかんがえる程"],
+      "options": [
+        { "id": "hodo-proportional-change", "label": "考えれば考えるほど", "rationale": "Relates more thought to less understanding." },
+        { "id": "dake-desired-extent", "label": "考えたいだけ", "rationale": "Specifies a desired amount of thinking, not how understanding changes with it." }
+      ]
+    },
+    {
+      "id": "hodo-proportional-familiar-tool",
+      "target": "hodo-proportional-change",
+      "relationship": "proportional-change-vs-desired-extent",
+      "prompt": "この道具は、____手になじみます。",
+      "translation": "Use 使う (つかう, use): ば-form + dictionary form + ほど, or たい-form + だけ. Fill the whole pattern, in kana or kanji. Express correlated change, not a desired amount: the more I use this tool, the more comfortable it feels in my hand.",
+      "evidence": "The tool becomes more familiar in the hand as use increases.",
+      "explanation": "使えば使うほど connects increasing use with increasing familiarity. It does not mean to use the tool only as much as one wishes, which would be expressed by 使いたいだけ. The ば and dictionary forms both belong to the supplied verb 使う.",
+      "answer": "hodo-proportional-change",
+      "acceptedAnswers": ["使えば使うほど", "使えばつかうほど", "つかえば使うほど", "つかえばつかうほど", "使えば使う程", "使えばつかう程", "つかえば使う程", "つかえばつかう程"],
+      "options": [
+        { "id": "hodo-proportional-change", "label": "使えば使うほど", "rationale": "Expresses greater familiarity with greater use." },
+        { "id": "dake-desired-extent", "label": "使いたいだけ", "rationale": "Specifies how much use is wanted, not the requested change with increasing use." }
+      ]
+    },
+    {
+      "id": "dake-desired-extent-reading-time",
+      "target": "dake-desired-extent",
+      "relationship": "proportional-change-vs-desired-extent",
+      "prompt": "時間は十分ありますから、____読んでから帰ってください。",
+      "translation": "Use 読む (よむ, read): ば-form + dictionary form + ほど, or たい-form + だけ. Fill the whole pattern, in kana or kanji. Explicitly mark a desired amount, not correlated change: there is plenty of time, so read as much as you want before going home.",
+      "evidence": "The invitation lets the reader choose an amount according to their wish.",
+      "explanation": "読みたいだけ uses the たい form before だけ to set the extent by what is wanted. It does not say the amount must be small. 読めば読むほど would start a more-reading/more-result pattern rather than express the desired amount in this instruction.",
+      "answer": "dake-desired-extent",
+      "acceptedAnswers": ["読みたいだけ", "よみたいだけ", "読みたい丈", "よみたい丈"],
+      "options": [
+        { "id": "hodo-proportional-change", "label": "読めば読むほど", "rationale": "Introduces correlated change rather than the requested desired amount." },
+        { "id": "dake-desired-extent", "label": "読みたいだけ", "rationale": "Sets the amount of reading by the reader's wish." }
+      ]
+    },
+    {
+      "id": "dake-desired-extent-thinking-time",
+      "target": "dake-desired-extent",
+      "relationship": "proportional-change-vs-desired-extent",
+      "prompt": "急がなくていいので、____考えてから決めてください。",
+      "translation": "Use 考える (かんがえる, think): ば-form + dictionary form + ほど, or たい-form + だけ. Fill the whole pattern, in kana or kanji. Explicitly mark a desired amount, not correlated change: there is no hurry, so think about it as much as you want before deciding.",
+      "evidence": "The listener can choose how much thought to give the matter before making a decision.",
+      "explanation": "考えたいだけ expresses the desired extent of thinking. 考えれば考えるほど instead introduces a relationship between increasing thought and some changing result. Other formulations can also allow time for thought, but this question names two specific whole patterns.",
+      "answer": "dake-desired-extent",
+      "acceptedAnswers": ["考えたいだけ", "かんがえたいだけ", "考えたい丈", "かんがえたい丈"],
+      "options": [
+        { "id": "hodo-proportional-change", "label": "考えれば考えるほど", "rationale": "Introduces a correlation rather than setting the amount by desire." },
+        { "id": "dake-desired-extent", "label": "考えたいだけ", "rationale": "Lets the desired amount of thinking set the extent." }
+      ]
+    },
+    {
+      "id": "dake-desired-extent-paper",
+      "target": "dake-desired-extent",
+      "relationship": "proportional-change-vs-desired-extent",
+      "prompt": "この紙は、____使ってください。まだたくさんあります。",
+      "translation": "Use 使う (つかう, use): ば-form + dictionary form + ほど, or たい-form + だけ. Fill the whole pattern, in kana or kanji. Explicitly mark a desired amount, not correlated change: use as much of this paper as you want; there is plenty left.",
+      "evidence": "The speaker offers an amount chosen by the user's wish rather than describes a result increasing with use.",
+      "explanation": "使いたいだけ sets the extent of use by what is wanted. だけ is not limiting the invitation to a fixed small number here. 使えば使うほど would begin a correlation, not supply the requested desired-amount phrase before 使ってください.",
+      "answer": "dake-desired-extent",
+      "acceptedAnswers": ["使いたいだけ", "つかいたいだけ", "使いたい丈", "つかいたい丈"],
+      "options": [
+        { "id": "hodo-proportional-change", "label": "使えば使うほど", "rationale": "Introduces correlated change rather than this desired amount of paper." },
+        { "id": "dake-desired-extent", "label": "使いたいだけ", "rationale": "Sets the extent of use by the listener's wish." }
+      ]
+    }
+  ]
+}

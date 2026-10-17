@@ -33,6 +33,9 @@ Native PR reviews keep their platform's supported format. Do not assume support 
 
 ## Evidence and severity
 
+For grammar authoring, consult the [source guide](../docs/grammar-authoring-sources.md) and existing batch records before
+searching afresh. Use the guide for navigation; keep exact evidence and qualifications in the per-batch source records.
+
 - Prefer reputable dictionaries and established teaching sources for consequential claims. Inspect the actual entry, heading, reading, sense, and register; a search summary, plausible URL, or successful but irrelevant page fetch is not verification.
 - Match evidence to the claim: a dictionary spelling list supports recognition, not frequency; a grammatical example supports that use, not an unrestricted substitution rule. Link relevant sources so readers can check the reasoning.
 - Treat reviewer findings as hypotheses. Resolve disagreements using the precise claim and evidence, not majority vote, model reputation, or whichever criticism sounds strongest. Preserve unresolved disagreements explicitly.
@@ -106,3 +109,8 @@ For each revision of the review rules, add a rule grounded in an observed failur
   distinguish source-backed defects from repeated or unsupported suggestions; reconcile against evidence rather than model votes.
 - **2026-10-08 - Reconciliation (regroup):** The shared N4 review reported the same quiz/register concerns under findings, hypotheses,
   and unverified limits. Compare those sections together before crediting a model with a unique contribution.
+- **2026-10-17 - Grammar source navigation (regroup):** The
+  [comparison/advice](../docs/grammar-comparisons-sources.json) and
+  [outcome](../docs/grammar-expectations-sources.json) records document misleading page extraction and mixed dictionary content.
+  The [source guide](../docs/grammar-authoring-sources.md) consolidates search starting points and those observed pitfalls;
+  detailed evidence remains in the per-batch records, rather than being replaced by a site-level endorsement.
