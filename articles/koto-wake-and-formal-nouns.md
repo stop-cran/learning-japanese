@@ -841,6 +841,49 @@ Unlike **たところ**, the retained-state use of **たまま** does not say th
 And unlike an ordinary **ながら** expression for simultaneous activities, it need not keep the preceding action in progress:
 the window stays open, rather than repeatedly being opened.
 
+### まま with nouns and adjectives: staying the same versus becoming
+
+You can name the retained condition directly with a noun or adjective, without describing an earlier action:
+
+| Predicate | Retained condition | Change into that condition |
+| --- | --- | --- |
+| Noun | 学生のままだった。 - I remained a student. | 学生になった。 - I became a student. |
+| な-adjective | 静かなままだった。 - It remained quiet. | 静かになった。 - It became quiet. |
+| い-adjective | 冷たいままだった。 - It remained cold. | 冷たくなった。 - It became cold. |
+
+Before **まま**, the basic connectors are **noun + の**, **な-adjective + な**, and an **い-adjective directly**.
+For **なる**, use **noun／な-adjective + に** or the **い-adjective's く form**.
+The table puts both accounts in the past: **ままだった** reports a retained state, while **なった** reports a change.
+**きれい** is a な-adjective despite its final い sound: **きれいなままだった**, "remained clean,"
+versus **きれいになった**, "became clean," not *きれくなった*.
+
+Choose the relevant property and interval. A student can advance a year while remaining a student;
+grass can be cut while a piece of land remains a vacant lot. **まま** does not say that every detail was frozen.
+Likewise, an earlier change and a later retained state can both be true:
+**掃除をして床がきれいになった。その後、閉館まできれいなままだった。**
+"The floor became clean after cleaning. Afterward, it remained clean until closing."
+This is not a contradiction: the first sentence reports a transition, the second its subsequent persistence.
+
+Past **ままだった** does not promise that the state still holds now.
+**昨日は閉館まできれいなままだったが、今朝は泥の足跡がついている。**
+"It remained clean until closing yesterday, but this morning there are muddy footprints."
+Nor does まま automatically criticize the situation: continued quiet and water kept cold can be welcome,
+whereas a price that stays high may be unwelcome. Deliberate cleaning or enrollment can produce a **なる** change;
+なる does not mean that nobody acted intentionally.
+
+The twelve exercises use six matched predicates: two nouns (**学生／空き地**), two な-adjectives (**静か／きれい**)
+and two い-adjectives (**冷たい／高い**). **学生（がくせい）** means student, **空き地（あきち）** vacant lot,
+**静か（しずか）** quiet, **冷たい（つめたい）** cold, and **高い（たかい）** expensive in these examples.
+Each question names the two basic past patterns and asks for the whole missing predicate.
+The task fixes the endings in kana and permits kana or kanji for the predicate; it is not an unrestricted paraphrase task.
+The price-rise example means "became more expensive" relative to the earlier price, not necessarily expensive by everyone's standard.
+
+Recognized alternatives **空地／明き地**, **閑か**, and **綺麗／奇麗／キレイ** are accepted for their respective predicates;
+the models retain **空き地／静か／きれい**. The dictionary also records **つべたい** for 冷たい, so its corresponding forms
+are accepted, while **つめたい** remains the model pronunciation. Recognition does not imply equal frequency or preferred style.
+Longer expressions such as **きれいなままになっている**, "remains in a clean state," can also be natural.
+The appearance of なる inside such a whole expression does not turn it into the simple **きれいになった** change pattern.
+
 ### かぎり: scope or a continuing condition
 
 **私が知るかぎり** limits a claim to the speaker's knowledge. With a condition, かぎり instead means "as long as that condition holds":
@@ -1124,7 +1167,8 @@ This practice does not cover every use, such as **寝たきり**, **これっき
 - [Japan Foundation: 「そうだ／ようだ／らしい」（1）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201012.html) and [(2)](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201103.html) - direct and indirect information in inferential judgments, including the comparison with はず.
 - [Japan Foundation: Vところです／Vているところです／Vたところです](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00036/ja/render.do) - the three action stages, past reference points, and the overlap with たばかり.
 - [Tae Kim: Other uses of the te-form](https://guidetojapanese.org/learn/grammar/teform) - ongoing and resulting states, and conversational omission of い in ている.
-- [Japan Foundation: まま](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00025/ja/render.do) - た／ない attachment, unchanged states, deliberately maintaining them, and the distinction from simultaneous activities.
+- [Japan Foundation: まま](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00025/ja/render.do) - noun／な-adjective／い-adjective and た／ない attachment, unchanged states, deliberately maintaining them, and the distinction from simultaneous activities.
+- [JMdict via Jisho: 空き地](https://jisho.org/search/空き地), [静か](https://jisho.org/search/静か), [きれい](https://jisho.org/search/きれい), and [冷たい](https://jisho.org/search/冷たい) - the noun/adjective senses and recognized forms used in state/change practice, not a claim of equal frequency; the Japan Foundation's Aく／ANに／Nになります lesson above supplies the change attachment.
 - [Bunpro: ずに](https://bunpro.jp/grammar_points/ずに) - an alternative "without doing" construction, not a form to insert before まま.
 - [Japan Foundation: まえに](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00130/ja/render.do) and [あとで](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00129/ja/render.do) - verb and noun attachment, event order, and verb forms independent of the main clause's tense.
 - [TUFS: とき](https://www.coelang.tufs.ac.jp/mt/ja/gmod/contents/explanation/093.html) - section 2 illustrates relative event order and the overlap with before/after expressions.

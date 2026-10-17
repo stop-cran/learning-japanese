@@ -434,6 +434,22 @@ The affirmative past construction does not require a failed plan. Explain why su
 fit a supplied-stem blank; do not label them globally wrong. Keep one representative correct button and one SRS identity
 for each shared answer class. Broader contextual selection remains separate practice.
 
+`formal-nouns-state-change.json` adds 12 exercises; see the [source record](grammar-state-change-sources.json).
+Six matched noun/adjective pairs contrast a retained まま state with a なる change: two nouns, two な-adjectives and
+two い-adjectives, not three of every class. The visible task names basic past patterns: noun + のままだった／になった,
+な-adjective + なままだった／になった, and unchanged い-adjective + ままだった／its く form + なった.
+Accept the complete missing predicate, including its source-recognized forms, with the explicitly supplied endings in kana.
+Keep きれい's な-adjective attachment; do not infer word class from its final sound.
+
+Preserve the property and reference-interval distinctions: advancing a year need not end student status, cutting grass need
+not change a vacant lot into something else, and yesterday's retained clean floor need not still be clean now.
+An earlier change and a subsequent retained state can both hold; the prompt must identify the period and relationship being
+asked about, rather than reject one merely because the final state matches. Include desirable retained states and deliberate
+changes; まま is not necessarily a mistake, and なる is not necessarily unintentional.
+Explain accepted spelling/reading variants without recommending them as equally common. Longer predicates such as
+ままになっている and other reformulations remain outside these named basic patterns, not globally wrong.
+The existing six verb-form state exercises and their identities remain unchanged.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.

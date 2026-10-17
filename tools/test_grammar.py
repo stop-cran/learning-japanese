@@ -1789,5 +1789,77 @@ class GrammarIntentionDenialCoverageTests(unittest.TestCase):
         self.assertIn("cannot be inserted", self.exercises["tsumori-denied-needed-receipt-disposal"]["explanation"])
 
 
+class GrammarStateChangeCoverageTests(unittest.TestCase):
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((root / "grammar" / "formal-nouns-state-change.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+        self.pairs = [
+            ("mama-retained-student-status", "naru-became-student",
+             ("学生", "がくせい"), "の", "に", "noun"),
+            ("mama-retained-vacant-lot", "naru-became-vacant-lot",
+             ("空き地", "あきち", "空地", "明き地"), "の", "に", "noun"),
+            ("mama-retained-quiet-library", "naru-became-quiet-classroom",
+             ("静か", "しずか", "閑か"), "な", "に", "na"),
+            ("mama-retained-clean-floor", "naru-became-clean-floor",
+             ("きれい", "綺麗", "奇麗", "キレイ"), "な", "に", "na"),
+            ("mama-retained-cold-water", "naru-became-cold-water",
+             ("冷た", "つめた", "つべた"), "い", "く", "i"),
+            ("mama-retained-high-price", "naru-became-higher-price",
+             ("高", "たか"), "い", "く", "i"),
+        ]
+
+    def test_six_matched_pairs_cover_both_functions_and_three_word_classes(self):
+        self.assertEqual({
+            "mama-retained-predicate": 6, "naru-changed-predicate": 6,
+        }, Counter(exercise["target"] for exercise in self.exercises.values()))
+        self.assertEqual({"noun": 2, "na": 2, "i": 2}, Counter(pair[-1] for pair in self.pairs))
+        for retained_id, changed_id, *_ in self.pairs:
+            retained, changed = self.exercises[retained_id], self.exercises[changed_id]
+            self.assertEqual("mama-retained-predicate", retained["target"])
+            self.assertEqual("naru-changed-predicate", changed["target"])
+            self.assertEqual(retained["relationship"], changed["relationship"])
+            self.assertEqual(
+                [option["label"] for option in retained["options"]],
+                [option["label"] for option in changed["options"]],
+            )
+
+    def test_predicate_forms_keep_class_connectors_and_accepted_variants(self):
+        for retained_id, changed_id, stems, retained_link, change_link, _ in self.pairs:
+            self.assertEqual(
+                {stem + retained_link + "ままだった" for stem in stems},
+                set(self.exercises[retained_id]["acceptedAnswers"]), retained_id,
+            )
+            self.assertEqual(
+                {stem + change_link + "なった" for stem in stems},
+                set(self.exercises[changed_id]["acceptedAnswers"]), changed_id,
+            )
+
+    def test_question_side_names_the_basic_patterns_and_reference_focus(self):
+        for retained_id, changed_id, _, retained_link, _, word_class in self.pairs:
+            for exercise_id in (retained_id, changed_id):
+                translation = self.exercises[exercise_id]["translation"]
+                self.assertIn("Write the supplied endings in kana", translation, exercise_id)
+                self.assertIn("Report", translation, exercise_id)
+                if word_class == "i":
+                    self.assertIn("unchanged + ままだった, or its く form + なった", translation, exercise_id)
+                else:
+                    self.assertIn(retained_link + "ままだった or になった", translation, exercise_id)
+            self.assertIn("unchanged", self.exercises[retained_id]["translation"], retained_id)
+
+    def test_retention_is_property_and_interval_specific_not_always_unwanted(self):
+        student = self.exercises["mama-retained-student-status"]
+        self.assertIn("二年生から三年生へ進級", student["prompt"])
+        self.assertIn("every other detail", student["explanation"])
+        self.assertIn("草は刈られていた", self.exercises["mama-retained-vacant-lot"]["prompt"])
+        clean = self.exercises["mama-retained-clean-floor"]
+        self.assertIn("今朝は泥の足跡がついている", clean["prompt"])
+        self.assertIn("does not require the floor to remain clean now", clean["explanation"])
+        self.assertIn("need not be an unwanted condition", self.exercises["mama-retained-quiet-library"]["explanation"])
+        self.assertIn("not necessarily an oversight", self.exercises["mama-retained-cold-water"]["explanation"])
+        self.assertIn("not an absence of human action", self.exercises["naru-became-clean-floor"]["explanation"])
+        self.assertIn("different aspects and time intervals", self.exercises["naru-became-cold-water"]["explanation"])
+
+
 if __name__ == "__main__":
     unittest.main()
