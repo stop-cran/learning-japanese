@@ -1,5 +1,7 @@
 """Regression tests for the grammar exercise authoring format."""
 import copy
+import contextlib
+import io
 from collections import Counter
 import json
 import tempfile
@@ -60,6 +62,98 @@ class GrammarValidationTests(unittest.TestCase):
                 count, problems = self.check(lambda data: data["exercises"][0].update(jlpt=level))
                 self.assertEqual(1, count)
                 self.assertEqual([], problems)
+
+    @staticmethod
+    def add_groups(data):
+        additional = copy.deepcopy(data["exercises"])
+        for exercise in additional:
+            exercise["id"] += "-second"
+            exercise["prompt"] = "Another " + exercise["prompt"]
+        data["exercises"] += additional
+        data["introductionGroups"] = [{
+            "id": data["id"], "label": "Synthetic contrast",
+            "facets": [{"id": "alpha", "label": "Alpha"}, {"id": "beta", "label": "Beta"}],
+            "members": [{"exerciseId": e["id"], "facetId": e["target"], "exampleKey": e["id"]} for e in data["exercises"]],
+            "next": [], "requires": [],
+        }]
+
+    def test_valid_optional_groups_and_strict_nested_values(self):
+        self.assertEqual([], self.check(self.add_groups)[1])
+        changes = [
+            lambda data: data.update(introductionGroups=None),
+            lambda data: data["introductionGroups"][0].update(id=3),
+            lambda data: data["introductionGroups"][0].update(label=False),
+            lambda data: data["introductionGroups"][0].update(require=[]),
+            lambda data: data["introductionGroups"][0].update(requires=None),
+            lambda data: data["introductionGroups"][0].update(requires=[{"groupId": "absent"}]),
+            lambda data: data["introductionGroups"][0].update(next=None),
+            lambda data: data["introductionGroups"][0].update(facets=[]),
+            lambda data: data["introductionGroups"][0].update(members=[]),
+        ]
+        for change in changes:
+            with self.subTest(change=change):
+                _, problems = self.check(lambda data: (self.add_groups(data), change(data)))
+                self.assertTrue(problems)
+        for weight in (None, True, "3", 3.0, 0, 4):
+            _, problems = self.check(lambda data: (
+                self.add_groups(data),
+                data["introductionGroups"][0].update(next=[{"groupId": "absent", "importance": weight, "reason": "Compare"}]),
+            ))
+            self.assertTrue(any("recommendation" in message for message in problems), problems)
+
+    def test_group_context_coverage_ownership_and_target_coherence(self):
+        def duplicate(data):
+            members = data["introductionGroups"][0]["members"]
+            members.append(copy.deepcopy(members[0]))
+
+        def same_key(data):
+            for member in data["introductionGroups"][0]["members"]:
+                member["exampleKey"] = "same"
+
+        def mixed_target(data):
+            data["introductionGroups"][0]["members"][0]["facetId"] = "beta"
+
+        for change in (duplicate, same_key, mixed_target):
+            _, problems = self.check(lambda data: (self.add_groups(data), change(data)))
+            self.assertTrue(problems)
+
+    def test_missing_optional_link_warns_without_invalidating_the_set(self):
+        output = io.StringIO()
+        with contextlib.redirect_stderr(output):
+            _, problems = self.check(lambda data: (
+                self.add_groups(data),
+                data["introductionGroups"][0].update(next=[{"groupId": "absent", "importance": 3, "reason": "Compare"}]),
+            ))
+        self.assertEqual([], problems)
+        self.assertIn("missing optional next target", output.getvalue())
+
+    def test_global_group_duplicates_and_prerequisite_cycles(self):
+        def write(ident, requires=(), group_id=None):
+            data = copy.deepcopy(VALID)
+            data["id"] = ident
+            for exercise in data["exercises"]:
+                exercise["id"] = ident + "-" + exercise["id"]
+            self.add_groups(data)
+            group = data["introductionGroups"][0]
+            group["id"] = group_id or ident
+            group["requires"] = list(requires)
+            (self.root / "grammar" / (ident + ".json")).write_text(json.dumps(data), encoding="utf-8")
+
+        write("one", ["two"])
+        write("two", ["one"])
+        problems = []
+        check_grammar(lambda path, message: problems.append(message), self.root)
+        self.assertEqual(2, sum("prerequisite" in message for message in problems))
+        write("one")
+        write("two", group_id="one")
+        problems.clear()
+        check_grammar(lambda path, message: problems.append(message), self.root)
+        self.assertEqual(2, sum("source-global" in message for message in problems))
+        write("one", ["absent"])
+        write("two", ["one"])
+        problems.clear()
+        check_grammar(lambda path, message: problems.append(message), self.root)
+        self.assertEqual(2, sum("prerequisite" in message for message in problems))
 
     def test_rejects_malformed_jlpt_without_relaxing_exercise_shape(self):
         for level in (None, "4", True, False, 3.0, 3.5, 0, 6, -1, [], {}):

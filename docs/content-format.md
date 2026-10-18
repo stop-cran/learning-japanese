@@ -136,8 +136,25 @@ in contributor source records, and leave unestablished cases unclassified.
 
 The [reviewed introduction pilot](grammar-introductions-pilot.json) supplies the initial 19 labels: six before/after and nine
 action-stage exercises at N4, and four expectation/obligation exercises at N3. The other four koto/wake exercises in the mixed pilot
-file remain unclassified, as do the other 378 exercises. The design record's groups/links are not yet runtime metadata; do not copy
-them into `grammar/` until that later schema phase is implemented and reviewed.
+file remain unclassified, as do the other 378 exercises. The same three groups are now annotated as optional `introductionGroups`
+in their declaring files, with one recommendation from temporal sequence to action stages and no genuine prerequisites.
+
+**Optional introduction groups:** each group requires `id`, `label`, `facets` (`id`, `label`) and `members`
+(`exerciseId`, `facetId`, `exampleKey`). IDs use `[a-z0-9-]+`; labels/reasons are nonblank. Group IDs are source-global,
+but members must belong to the declaring file and have only one authored owner. Each facet targets one local construction/answer
+class and has at least two distinct context keys. Near-duplicate examples share a key; a paired context may share a key across facets.
+Do not merge unrelated same-spelled local constructions or change tested meaning while retaining an identity.
+
+Optional `next` contains `{groupId, importance, reason}` recommendations (integer importance 1-3); `requires` contains group-ID
+strings, not objects. Omitted arrays default empty; explicit null, duplicate/self links, unknown nested fields and malformed references
+are errors. Duplicate source-global groups and missing/cyclic prerequisites reject files and their dependents. Recommendation cycles
+are valid; missing optional targets warn and drop only that link. See the app's
+[complete group contract](https://github.com/stop-cran/kanji-cards-android/blob/main/docs/GRAMMAR-INTRODUCTIONS.md#additive-metadata).
+
+The app's opt-in focused-introduction pilot uses these groups without changing exercises, answers or SRS. Valid unowned exercises remain
+available through labeled compatibility contrasts. Invalid annotations never silently become compatibility groups. Phase C validates
+recommendations but gives all scores zero; relationship-based ranking is Phase D. Group coverage/familiarity are conservative pilot
+heuristics, not mastery or an official curriculum. Regenerate the manifest after adding/changing runtime metadata.
 
 Author coherent examples with a clear learning goal. More than one natural completion is acceptable: do not reject an item
 solely because several forms express the tested meaning. The useful distinction is between a coherent accepted answer class
