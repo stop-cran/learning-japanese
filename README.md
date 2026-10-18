@@ -58,7 +58,8 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   12 on past はず expectations, event time and actual outcomes,
   12 on possible versus desired extent with かぎり／だけ,
   12 on くらい degree/minimum versus のに counterexpectations,
-  and 12 mixed-context questions on changed routines, maintained practices and current inferences (353 in total).
+  12 mixed-context questions on changed routines, maintained practices and current inferences,
+  and 12 on recent completion, retained states and inferences about past actions (365 in total).
   Time practice includes うち, あいだ, とき, ころ, たび and shared とき／おり／さい occasion answers;
   shared alternatives are not independently contrasted targets.
   Purpose/cause practice adds ため, おかげ, せい, かわり and ついで, including compensating trade-offs.
@@ -106,6 +107,9 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   ことにする／はずだ／ようだ. Four questions per function now include contextual なる-versus-する selection, with shared
   ことにしている and habitual ようにする practice alternatives, plus ようだ inferences. The English meaning remains visible, but no item-specific
   form instruction selects the function or conjugation for the learner.
+  The next mixed set contrasts shared たところ／たばかり completion, retained たまま results and current はずだ／ようだ
+  judgments about past actions. Matching few-second window contexts prevent elapsed time alone from selecting the account;
+  deliberate states, lights remaining off and a coat drying in an unchanged position preserve the underlying distinctions.
   See the [content format](docs/content-format.md#grammar-exercises), [foundations sources](docs/grammar-foundations-sources.json),
   [actions sources](docs/grammar-actions-sources.json), [intent sources](docs/grammar-intent-sources.json),
   [action-stage sources](docs/grammar-stages-sources.json), [state sources](docs/grammar-states-sources.json),
@@ -126,8 +130,9 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   [exclusion/no-alternative sources](docs/grammar-hoka-exclusion-sources.json),
   [past-expectation sources](docs/grammar-past-expectation-sources.json),
   [possible-extent sources](docs/grammar-possible-extent-sources.json),
-  [くらい degree/minimum sources](docs/grammar-kurai-degree-minimum-sources.json) and
-  [mixed-routine sources](docs/grammar-mixed-routines-sources.json).
+  [くらい degree/minimum sources](docs/grammar-kurai-degree-minimum-sources.json),
+  [mixed-routine sources](docs/grammar-mixed-routines-sources.json) and
+  [mixed completion/state sources](docs/grammar-mixed-completion-state-sources.json).
   Every named formal-noun/particle family in the article now appears in practice, but this is not complete construction
   coverage. Mixed selection has begun within a stated pool; broader contrasts involving other studied families remain
   planned. These batches do not claim every construction or register, or unrestricted Japanese cloze.

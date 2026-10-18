@@ -2236,5 +2236,59 @@ class GrammarMixedRoutinesCoverageTests(unittest.TestCase):
         self.assertIn("本人の方針やほかの場面は知らない", self.exercises["mixed-inference-speaking-recordings"]["prompt"])
 
 
+class GrammarMixedCompletionStateCoverageTests(unittest.TestCase):
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((root / "grammar" / "formal-nouns-mixed-completion-state.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_shared_past_verbs_leave_the_whole_construction_to_choose(self):
+        targets = {"mixed-recent-completion", "mixed-retained-result", "mixed-past-action-inference"}
+        instruction = (
+            "Choose an appropriate form of ところだ, ばかりだ, ままだ, はずだ or ようだ. "
+            "Fill the whole ending in hiragana, using one complete, uncontracted plain-form construction; "
+            "keep the copula and do not add particles or auxiliary constructions. "
+        )
+        for topic, verb in {"window": "開けた", "lights": "消した", "materials": "置いた", "coat": "掛けた"}.items():
+            group = [exercise for exercise in self.exercises.values() if exercise["id"].endswith("-" + topic)]
+            self.assertEqual(3, len(group), topic)
+            self.assertEqual(targets, {exercise["target"] for exercise in group}, topic)
+            for exercise in group:
+                self.assertTrue(exercise["prompt"].endswith(verb + "____。"), exercise["id"])
+                self.assertTrue(exercise["translation"].startswith(instruction), exercise["id"])
+                self.assertEqual(targets, {option["id"] for option in exercise["options"]}, exercise["id"])
+
+    def test_completion_and_inference_alternatives_share_one_correct_button(self):
+        answers = {
+            "mixed-recent-completion": {"ところだ", "ばかりだ", "ところである", "ばかりである"},
+            "mixed-retained-result": {"ままだ", "ままである"},
+            "mixed-past-action-inference": {"はずだ", "ようだ", "はずである", "ようである"},
+        }
+        models = {target: set() for target in answers}
+        for exercise in self.exercises.values():
+            accepted = answers[exercise["target"]]
+            self.assertEqual(accepted, set(exercise["acceptedAnswers"]), exercise["id"])
+            self.assertEqual(1, sum(option["label"] in accepted for option in exercise["options"]), exercise["id"])
+            models[exercise["target"]].add(next(
+                option["label"] for option in exercise["options"] if option["id"] == exercise["answer"]
+            ))
+        self.assertEqual({"ところだ", "ばかりだ"}, models["mixed-recent-completion"])
+        self.assertEqual({"ままだ"}, models["mixed-retained-result"])
+        self.assertEqual({"はずだ", "ようだ"}, models["mixed-past-action-inference"])
+
+    def test_persistence_is_not_elapsed_time_repetition_or_complete_unchangeability(self):
+        for exercise_id in ("mixed-completion-window", "mixed-retained-window"):
+            self.assertIn("数秒前", self.exercises[exercise_id]["prompt"])
+        self.assertIn("still left open", self.exercises["mixed-retained-window"]["translation"])
+        self.assertIn("a week is not a universal disqualifier", self.exercises["mixed-retained-materials"]["explanation"])
+        self.assertIn("lights remain off", self.exercises["mixed-retained-lights"]["translation"])
+        self.assertIn("not necessarily careless", self.exercises["mixed-retained-lights"]["explanation"])
+        self.assertIn("夕方の今も少し湿っている", self.exercises["mixed-retained-coat"]["prompt"])
+        self.assertIn("every other property", self.exercises["mixed-retained-coat"]["explanation"])
+        self.assertIn("not a guarantee", self.exercises["mixed-past-inference-coat"]["explanation"])
+        self.assertIn("正確な時刻は確認していない", self.exercises["mixed-past-inference-materials"]["prompt"])
+        self.assertIn("current inference", self.exercises["mixed-past-inference-lights"]["explanation"])
+
+
 if __name__ == "__main__":
     unittest.main()

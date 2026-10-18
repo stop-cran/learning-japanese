@@ -531,6 +531,21 @@ baseline, and the distinction between publishing and writing times. The full-pre
 unlike the earlier verb-form tasks with those endings printed. This is the first bounded mixed set, not all-family completion.
 All341 earlier records and identities remain unchanged; no runtime, schema, grading or SRS changes.
 
+`formal-nouns-mixed-completion-state.json` adds 12 mixed time/state questions; see the
+[source record](grammar-mixed-completion-state-sources.json). Four just-completed actions, four retained results and four current
+inferences about past actions share window/lights/materials/coat frames. All print the same past verb within each frame and
+leave the whole ending blank, using the same ところだ／ばかりだ／ままだ／はずだ／ようだ pool and format instruction.
+Accept ところだ／ばかりだ together for these immediate completions, ままだ for the unchanged results, and はずだ／ようだ for
+the selected inferences, including the corresponding formal plain である alternatives. Preserve one model button per class.
+
+These are account-selection tasks with visible English meanings, not claims that each scene has only one grammatical description.
+The matching few-second window contexts distinguish completion from persistence without using elapsed time as a proxy.
+Preserve the lights-off result, deliberate retained states, a coat drying while its position persists, and uncertainty about the
+performer or action time in evidence-based judgments. Do not impose a fixed recency threshold for ばかり, equate まま with
+continuous repetition or neglect, or turn past-action はずだ into automatic failed expectation or criticism.
+The common complete-plain-hiragana format excludes additional particles, auxiliaries and combined constructions, not their
+grammaticality in wider Japanese. All353 prior records remain unchanged; broader mixed families and other uses remain open.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.

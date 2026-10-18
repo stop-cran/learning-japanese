@@ -1401,6 +1401,48 @@ patterns can be natural outside that format. In particular, an arrangement accou
 ungrammatical by being outside this five-pattern pool.
 This is less-scaffolded practice within a stated pool, not unrestricted cloze or mixed coverage of every family in the article.
 
+## Mixed contextual selection: completion, retained state, or inference
+
+The next mixed set uses the same past-form verbs with **ところだ／ばかりだ／ままだ／はずだ／ようだ**.
+The **whole ending** is missing: learners choose the account that fits the context and visible English meaning,
+rather than conjugating a verb before a supplied ところ or まま.
+
+| Account | Example | Meaning |
+| --- | --- | --- |
+| Just-completed action | 窓は開けたところだ。／窓は開けたばかりだ。 | I have just opened the window. |
+| Retained result | 窓は開けたままだ。 | The window is still left open. |
+| Current inference about a past action | 田中さんが窓を開けたはずだ。／田中さんが窓を開けたようだ。 | I infer that Tanaka opened the window. |
+
+Both **たところ** and **たばかり** fit the immediately completed actions in this set.
+ところ locates the point just after completion; ばかり presents the action as still recent from the speaker's perspective.
+This shared answer class does not make them interchangeable at every time distance, or impose a fixed cutoff for ばかり.
+The relevant action can finish before a larger task: hanging a coat need not complete everything involved in changing clothes.
+
+**たまま** instead reports that the resulting state continues. A window can have been opened **only a few seconds ago**
+and still be described as **開けたまま**. The two window questions deliberately use the same short elapsed time:
+one reports the recent completion, the other the continuing state. Both accounts can be true of one scene,
+but they answer different communicative needs. Do not choose by a time word alone.
+
+The selected state, not every property of the object, remains unchanged:
+**コートはハンガーに掛けたままだ**, "The coat is still hanging where I left it," can be true while the coat dries.
+Likewise, **電気は消したままだ** keeps the lights **off**; it does not mean repeatedly switching them off.
+Leaving the window open for ventilation or the coat hanging to dry can be deliberate and useful.
+The documents left on a desk may suggest neglected tidying, but まま does not always express criticism.
+
+In **開けたはずだ／開けたようだ**, the opening is past but the judgment is current.
+The first offers a reasoned expectation; the second presents what the available information suggests.
+The selected contexts accept both without assigning fixed certainty percentages.
+They are not reports of an earlier failed expectation or a rebuke meaning "should have opened it."
+A routine or instruction is not proof of compliance, a partial view does not verify every detail,
+and the arrival time of a completion message does not establish precisely when the work happened.
+
+There are four questions per account, using opening a window, turning lights off, putting materials on a desk
+and hanging a coat. The common instruction requests one complete, uncontracted plain hiragana ending,
+retaining the copula and adding no particles or auxiliary constructions.
+Formal plain **ところである／ばかりである／ままである／はずである／ようである** are accepted without being
+recommended as equally conversational. Other paraphrases and combinations can be natural outside that format.
+This adds mixed time/state selection, not unrestricted cloze or every use of these constructions.
+
 ## References
 
 - [Japan Foundation: 「こと」（1）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201112.html) - nominalization, こと versus の, and fixed expressions.

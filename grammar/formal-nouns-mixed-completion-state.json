@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-mixed-completion-state",
+  "title": "Mixed contexts: just completed, still unchanged, or inferred",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "mixed-recent-completion", "label": "an action that has just finished" },
+    { "id": "mixed-retained-result", "label": "the resulting state is still unchanged" },
+    { "id": "mixed-past-action-inference", "label": "a current inference about a past action" }
+  ],
+  "relationships": [
+    {
+      "id": "completion-state-past-inference",
+      "label": "just completed / still in that state / evidence of a past action",
+      "constructions": ["mixed-recent-completion", "mixed-retained-result", "mixed-past-action-inference"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "mixed-completion-window",
+      "target": "mixed-recent-completion",
+      "relationship": "completion-state-past-inference",
+      "prompt": "数秒前、換気を頼まれて窓を開け終えた。手を離してすぐ、同僚に作業が終わったことを伝える。窓は開けた____。",
+      "translation": "Choose an appropriate form of ところだ, ばかりだ, ままだ, はずだ or ようだ. Fill the whole ending in hiragana, using one complete, uncontracted plain-form construction; keep the copula and do not add particles or auxiliary constructions. A few seconds ago I finished opening the window after being asked to air the room. Immediately after taking my hand away, I report the completed task to my coworker: I have just opened the window. 換気 (かんき) means ventilation or airing a room.",
+      "evidence": "The speaker locates a directly known action at the point just after its completion, rather than describing how long its result persists.",
+      "explanation": "開けたところだ locates the action just after completion; 開けたばかりだ presents it as still very recent. Both fit this immediate report, and ところである／ばかりである are accepted formal plain endings. The window may also still be open, but ままだ would make that retained state the message, not the just-completed action requested. はずだ／ようだ would introduce an inference instead of reporting the known completion. A few seconds can also precede a retained-state report: elapsed time alone does not choose the construction.",
+      "answer": "mixed-recent-completion",
+      "acceptedAnswers": ["ところだ", "ばかりだ", "ところである", "ばかりである"],
+      "options": [
+        { "id": "mixed-recent-completion", "label": "ところだ", "rationale": "Reports the point immediately after opening; ばかりだ also fits the recent-completion framing." },
+        { "id": "mixed-retained-result", "label": "ままだ", "rationale": "Would foreground the window remaining open rather than the completion just reported." },
+        { "id": "mixed-past-action-inference", "label": "はずだ", "rationale": "Would infer that the opening happened instead of directly reporting it." }
+      ]
+    },
+    {
+      "id": "mixed-retained-window",
+      "target": "mixed-retained-result",
+      "relationship": "completion-state-past-inference",
+      "prompt": "数秒前、換気のために窓を開けた。まだ閉めずに、風を入れている。今の状態を伝えると、窓は開けた____。",
+      "translation": "Choose an appropriate form of ところだ, ばかりだ, ままだ, はずだ or ようだ. Fill the whole ending in hiragana, using one complete, uncontracted plain-form construction; keep the copula and do not add particles or auxiliary constructions. A few seconds ago I opened the window to air the room. I have not closed it and am still letting air in. Describing its present state: the window is still left open. 換気 (かんき) means ventilation or airing a room.",
+      "evidence": "The point is that the state produced by opening has not changed, even though the opening itself was very recent.",
+      "explanation": "開けたままだ reports that the window remains in the resulting open state; ままである is a more formal plain alternative. The opening need not be long ago. ところだ／ばかりだ could truthfully describe the recent event, but would not express the retained-state message in the visible translation. はずだ／ようだ would replace the direct state report with a judgment that the opening occurred. The window is not being opened repeatedly, and leaving it open for ventilation is intentional rather than a mistake.",
+      "answer": "mixed-retained-result",
+      "acceptedAnswers": ["ままだ", "ままである"],
+      "options": [
+        { "id": "mixed-recent-completion", "label": "ばかりだ", "rationale": "Would foreground the recent opening, not the unchanged state the speaker is describing." },
+        { "id": "mixed-retained-result", "label": "ままだ", "rationale": "Reports that the state resulting from opening the window continues." },
+        { "id": "mixed-past-action-inference", "label": "ようだ", "rationale": "Would infer the past opening instead of directly reporting the continuing state." }
+      ]
+    },
+    {
+      "id": "mixed-past-inference-window",
+      "target": "mixed-past-action-inference",
+      "relationship": "completion-state-past-inference",
+      "prompt": "この部屋の換気は田中さんの担当で、朝に窓を開ける手順になっている。今はカーテンが風で動き、廊下にも外の音がよく聞こえる。作業は見ていないが、手順と様子から考えると、田中さんが窓を開けた____。",
+      "translation": "Choose an appropriate form of ところだ, ばかりだ, ままだ, はずだ or ようだ. Fill the whole ending in hiragana, using one complete, uncontracted plain-form construction; keep the copula and do not add particles or auxiliary constructions. Tanaka is responsible for airing this room and is meant to open the window in the morning. The curtain is now moving in the breeze, and outside sounds are audible in the corridor. I did not watch the task. From the procedure and these signs, I infer that Tanaka opened the window. 手順 (てじゅん) means procedure.",
+      "evidence": "A known procedure and current traces support a present judgment about a completed action; its performer and exact timing were not directly verified.",
+      "explanation": "開けたはずだ makes a reasoned expectation about the past opening; 開けたようだ presents what the signs suggest. Both fit, with はずである／ようである as formal plain alternatives. The printed た marks the action as past; the judgment is current, not a remembered earlier expectation or a rebuke meaning 'should have opened it'. ところだ／ばかりだ would add a recent-completion focus and timing not established here. ままだ would directly describe a retained state rather than express this inference about the action. The clues are grounds for a judgment, not proof that excludes every other explanation.",
+      "answer": "mixed-past-action-inference",
+      "acceptedAnswers": ["はずだ", "ようだ", "はずである", "ようである"],
+      "options": [
+        { "id": "mixed-recent-completion", "label": "ところだ", "rationale": "Would place the opening just before now, although the exact timing was not established." },
+        { "id": "mixed-retained-result", "label": "ままだ", "rationale": "Would report an unchanged state instead of marking the evidence-based judgment." },
+        { "id": "mixed-past-action-inference", "label": "はずだ", "rationale": "Infers the completed action from the procedure and signs; ようだ also fits." }
+      ]
+    },
+    {
+      "id": "mixed-completion-lights",
+      "target": "mixed-recent-completion",
+      "relationship": "completion-state-past-inference",
+      "prompt": "映画を見る準備で、部屋の電気を消した。スイッチから手を離した直後に、友人へ作業の完了を伝える。電気は消した____。",
+      "translation": "Choose an appropriate form of ところだ, ばかりだ, ままだ, はずだ or ようだ. Fill the whole ending in hiragana, using one complete, uncontracted plain-form construction; keep the copula and do not add particles or auxiliary constructions. I switched off the room lights to get ready to watch a film. Immediately after taking my hand off the switch, I tell my friend that the task is complete: I have just turned the lights off. 直後 (ちょくご) means immediately afterward.",
+      "evidence": "The speaker directly reports the immediately completed switching-off action, not the duration of the darkness.",
+      "explanation": "消したばかりだ presents the switch-off as very recent, and 消したところだ locates the moment immediately after it. Both fit, as do the more formal plain ばかりである／ところである endings. ままだ would foreground the lights remaining off rather than the recent completion. はずだ／ようだ would turn a direct report into an inference. 消した is a completed switch-off: an affirmative past verb does not automatically describe an 'on' state. No universal seconds-or-minutes limit for ばかり is implied by this immediate example.",
+      "answer": "mixed-recent-completion",
+      "acceptedAnswers": ["ばかりだ", "ところだ", "ばかりである", "ところである"],
+      "options": [
+        { "id": "mixed-recent-completion", "label": "ばかりだ", "rationale": "Presents the switch-off as just completed; ところだ also fits the immediate point." },
+        { "id": "mixed-retained-result", "label": "ままだ", "rationale": "Would make continued darkness the point instead of the just-completed action." },
+        { "id": "mixed-past-action-inference", "label": "ようだ", "rationale": "Would infer the switch-off rather than directly report the speaker's action." }
+      ]
+    },
+    {
+      "id": "mixed-retained-lights",
+      "target": "mixed-retained-result",
+      "relationship": "completion-state-past-inference",
+      "prompt": "映画が始まる前に部屋の電気を消し、今も暗い部屋で見ている。途中で明かりをつける必要はない。電気は消した____。",
+      "translation": "Choose an appropriate form of ところだ, ばかりだ, ままだ, はずだ or ようだ. Fill the whole ending in hiragana, using one complete, uncontracted plain-form construction; keep the copula and do not add particles or auxiliary constructions. I turned the room lights off before the film began and am still watching in the dark. There is no need to switch them on partway through: the lights remain off.",
+      "evidence": "The resulting off state deliberately continues during the film; this is not a claim that switching is still underway.",
+      "explanation": "消したままだ describes the retained off state; ままである is accepted in a formal plain style. It does not mean repeatedly switching off or having failed to switch off. ところだ／ばかりだ would focus on when the switching ended, not on the continuing state requested. はずだ／ようだ would express an inference about the past action, whereas the speaker directly reports the known present state. This use of まま is intentional and useful, not necessarily careless or disapproving.",
+      "answer": "mixed-retained-result",
+      "acceptedAnswers": ["ままだ", "ままである"],
+      "options": [
+        { "id": "mixed-recent-completion", "label": "ところだ", "rationale": "Would foreground immediate completion rather than the state continuing through the film." },
+        { "id": "mixed-retained-result", "label": "ままだ", "rationale": "Reports that the lights have remained off." },
+        { "id": "mixed-past-action-inference", "label": "はずだ", "rationale": "Would infer a switch-off instead of directly describing the continuing off state." }
+      ]
+    },
+    {
+      "id": "mixed-past-inference-lights",
+      "target": "mixed-past-action-inference",
+      "relationship": "completion-state-past-inference",
+      "prompt": "最後に部屋を出る人が電気を消す決まりで、今日は佐藤さんが担当だ。佐藤さんはもう帰り、窓から部屋の明かりも見えない。操作は見ていないが、これらの情報から判断すると、佐藤さんは電気を消した____。",
+      "translation": "Choose an appropriate form of ところだ, ばかりだ, ままだ, はずだ or ようだ. Fill the whole ending in hiragana, using one complete, uncontracted plain-form construction; keep the copula and do not add particles or auxiliary constructions. The last person leaving must switch off the lights, and Sato has that duty today. Sato has gone home, and no light is visible through the room's window. I did not see the switch being used. From this information, I infer that Sato turned the lights off.",
+      "evidence": "The duty and absence of visible light support a judgment that the action happened, rather than a direct observation of Sato operating the switch.",
+      "explanation": "消したはずだ expresses a reasoned expectation that Sato completed the action; 消したようだ expresses what the available signs suggest. はずである／ようである are accepted formal plain alternatives. This is a current inference, not an earlier failed expectation or criticism of what Sato ought to have done. The rule alone does not guarantee compliance, and darkness alone does not prove who operated a switch. ところだ／ばかりだ would foreground unverified recency; ままだ would directly report a retained state instead of giving the requested inference about Sato's action.",
+      "answer": "mixed-past-action-inference",
+      "acceptedAnswers": ["はずだ", "ようだ", "はずである", "ようである"],
+      "options": [
+        { "id": "mixed-recent-completion", "label": "ばかりだ", "rationale": "Would present the action as still recent rather than mark the judgment from these clues." },
+        { "id": "mixed-retained-result", "label": "ままだ", "rationale": "Would report a continuing result directly, not infer the past switch-off." },
+        { "id": "mixed-past-action-inference", "label": "はずだ", "rationale": "Draws an expectation from the duty and visible result; ようだ also fits." }
+      ]
+    },
+    {
+      "id": "mixed-completion-materials",
+      "target": "mixed-recent-completion",
+      "relationship": "completion-state-past-inference",
+      "prompt": "受付でもらった資料を今、机へ運んだ。机に載せて手を離し、その直後に作業が終わったことを伝える。資料は机に置いた____。",
+      "translation": "Choose an appropriate form of ところだ, ばかりだ, ままだ, はずだ or ようだ. Fill the whole ending in hiragana, using one complete, uncontracted plain-form construction; keep the copula and do not add particles or auxiliary constructions. I brought the materials from reception to the desk, set them down and took my hands away. Immediately afterward I report completion: I have just put the materials on the desk. 資料 (しりょう) means materials or documents.",
+      "evidence": "Setting the materials down has just finished; the speaker is locating that completed action, not evaluating whether the desk stays occupied.",
+      "explanation": "置いたところだ and 置いたばかりだ both fit the just-completed placement; ところである／ばかりである are accepted formal plain endings. ままだ would foreground the materials still being where they were put, not the completion point in the English message. That state may also be true, so it is not a globally impossible description of the scene. はずだ／ようだ would infer placement instead of directly reporting it. Completing this placement does not mean every reception or desk task has finished.",
+      "answer": "mixed-recent-completion",
+      "acceptedAnswers": ["ところだ", "ばかりだ", "ところである", "ばかりである"],
+      "options": [
+        { "id": "mixed-recent-completion", "label": "ところだ", "rationale": "Locates the action immediately after setting the materials down; ばかりだ also fits." },
+        { "id": "mixed-retained-result", "label": "ままだ", "rationale": "Would foreground the retained location rather than the just-completed placement." },
+        { "id": "mixed-past-action-inference", "label": "ようだ", "rationale": "Would introduce a judgment instead of directly reporting the known completion." }
+      ]
+    },
+    {
+      "id": "mixed-retained-materials",
+      "target": "mixed-retained-result",
+      "relationship": "completion-state-past-inference",
+      "prompt": "一週間前にもらった資料を、その日のうちに机に置いた。片付けようと思いながら、今もそこから動かしていない。資料は机に置いた____。",
+      "translation": "Choose an appropriate form of ところだ, ばかりだ, ままだ, はずだ or ようだ. Fill the whole ending in hiragana, using one complete, uncontracted plain-form construction; keep the copula and do not add particles or auxiliary constructions. I put the materials I received a week ago on the desk that same day. Although I mean to tidy them away, I have not moved them: the materials are still left on the desk. 資料 (しりょう) means materials or documents.",
+      "evidence": "The location established by placing the materials has persisted without the intended tidying.",
+      "explanation": "置いたままだ reports the unchanged resulting location, with ままである as a formal plain alternative. The point is persistence, not an ongoing act of putting something down. ところだ would wrongly locate this known week-old placement immediately before now. ばかりだ can express subjective recency in other contexts, so a week is not a universal disqualifier; it still would not express the requested retained-state message here. はずだ／ようだ would replace the direct report with an inference. This example allows a sense of neglect, but まま does not always criticize.",
+      "answer": "mixed-retained-result",
+      "acceptedAnswers": ["ままだ", "ままである"],
+      "options": [
+        { "id": "mixed-recent-completion", "label": "ばかりだ", "rationale": "Would foreground subjective recency rather than the continued location described." },
+        { "id": "mixed-retained-result", "label": "ままだ", "rationale": "Reports that the materials have not been moved from where they were placed." },
+        { "id": "mixed-past-action-inference", "label": "はずだ", "rationale": "Would infer the placement instead of directly reporting the unchanged state." }
+      ]
+    },
+    {
+      "id": "mixed-past-inference-materials",
+      "target": "mixed-past-action-inference",
+      "relationship": "completion-state-past-inference",
+      "prompt": "担当者には資料を机に置くよう頼み、運び終えたという連絡が来た。ドアのすき間からは、机の上に資料らしい紙の束も見える。作業や正確な時刻は確認していないが、この情報から判断すると、担当者は資料を机に置いた____。",
+      "translation": "Choose an appropriate form of ところだ, ばかりだ, ままだ, はずだ or ようだ. Fill the whole ending in hiragana, using one complete, uncontracted plain-form construction; keep the copula and do not add particles or auxiliary constructions. I asked the person responsible to put the materials on the desk and received word that the carrying was finished. Through a gap in the door I can also see what looks like a stack of those papers on the desk. I have not verified the action or its exact time. From this information, I infer that the person put the materials on the desk. 束 (たば) means bundle or stack.",
+      "evidence": "The request, completion message and partial view jointly support a judgment about placement without direct verification of the action or its timing.",
+      "explanation": "置いたようだ expresses what the available information suggests; 置いたはずだ frames it as a reasoned expectation. Both fit, including formal plain ようである／はずである. The past verb identifies the event being inferred, not a past time at which the speaker held the expectation. ところだ／ばかりだ would foreground a recent completion not established by the message's arrival time alone. ままだ would report a retained location rather than mark the inference. A completion message and a partial view are evidence, not a guarantee that every detail was checked.",
+      "answer": "mixed-past-action-inference",
+      "acceptedAnswers": ["ようだ", "はずだ", "ようである", "はずである"],
+      "options": [
+        { "id": "mixed-recent-completion", "label": "ところだ", "rationale": "Would assert immediate completion without knowing exactly when the materials were placed." },
+        { "id": "mixed-retained-result", "label": "ままだ", "rationale": "Would report the unchanged location directly, rather than make the requested judgment." },
+        { "id": "mixed-past-action-inference", "label": "ようだ", "rationale": "States the inference from the report and partial view; はずだ also fits." }
+      ]
+    },
+    {
+      "id": "mixed-completion-coat",
+      "target": "mixed-recent-completion",
+      "relationship": "completion-state-past-inference",
+      "prompt": "外から戻ってコートを脱ぎ、今ハンガーに掛け終えた。手を離してすぐ、着替えの進み具合を家族に伝える。コートはハンガーに掛けた____。",
+      "translation": "Choose an appropriate form of ところだ, ばかりだ, ままだ, はずだ or ようだ. Fill the whole ending in hiragana, using one complete, uncontracted plain-form construction; keep the copula and do not add particles or auxiliary constructions. After coming in, I took off my coat and finished hanging it up. Immediately after letting go, I tell my family how far I have got with changing: I have just hung the coat on a hanger.",
+      "evidence": "Hanging up the coat is the particular action just completed; other parts of changing may remain.",
+      "explanation": "掛けたばかりだ presents the action as very recent; 掛けたところだ marks its immediate completion point. Both fit, with ばかりである／ところである accepted as formal plain alternatives. ままだ would emphasize the coat remaining there, not the just-completed hanging. はずだ／ようだ would infer the action instead of directly reporting it. The relevant completion is hanging this coat, not finishing every part of changing clothes, and the action's resulting state can coexist with its recent completion.",
+      "answer": "mixed-recent-completion",
+      "acceptedAnswers": ["ばかりだ", "ところだ", "ばかりである", "ところである"],
+      "options": [
+        { "id": "mixed-recent-completion", "label": "ばかりだ", "rationale": "Reports the hanging as just completed; ところだ also fits." },
+        { "id": "mixed-retained-result", "label": "ままだ", "rationale": "Would foreground where the coat remains rather than the action just finished." },
+        { "id": "mixed-past-action-inference", "label": "はずだ", "rationale": "Would infer the hanging instead of directly reporting the speaker's completed action." }
+      ]
+    },
+    {
+      "id": "mixed-retained-coat",
+      "target": "mixed-retained-result",
+      "relationship": "completion-state-past-inference",
+      "prompt": "午前中、ぬれたコートをハンガーに掛けて乾かし始めた。夕方の今も少し湿っているので、まだしまわずに待っている。コートはハンガーに掛けた____。",
+      "translation": "Choose an appropriate form of ところだ, ばかりだ, ままだ, はずだ or ようだ. Fill the whole ending in hiragana, using one complete, uncontracted plain-form construction; keep the copula and do not add particles or auxiliary constructions. This morning I hung the wet coat on a hanger to dry. It is still a little damp this evening, so I am waiting rather than putting it away: the coat is still hanging where I left it. 湿っている (しめっている) means damp.",
+      "evidence": "The coat's hanging position has been deliberately retained while its wetness changes.",
+      "explanation": "掛けたままだ reports the retained hanging state; ままである is accepted as a formal plain alternative. It does not claim that the coat's moisture or every other property stayed unchanged. ところだ would incorrectly locate the morning's hanging immediately before now; ばかりだ would express recency rather than the continuing-state message. No universal duration limit for ばかり follows from that mismatch. はずだ／ようだ would infer that someone hung it up instead of directly reporting its retained position. Leaving it there to dry is deliberate, not necessarily neglect.",
+      "answer": "mixed-retained-result",
+      "acceptedAnswers": ["ままだ", "ままである"],
+      "options": [
+        { "id": "mixed-recent-completion", "label": "ところだ", "rationale": "Would place the hanging just before now, contrary to the known morning action." },
+        { "id": "mixed-retained-result", "label": "ままだ", "rationale": "Reports the hanging position as still unchanged, not every property of the coat." },
+        { "id": "mixed-past-action-inference", "label": "ようだ", "rationale": "Would infer a past action rather than directly report the retained position." }
+      ]
+    },
+    {
+      "id": "mixed-past-inference-coat",
+      "target": "mixed-past-action-inference",
+      "relationship": "completion-state-past-inference",
+      "prompt": "兄には、帰宅すると玄関のハンガーにコートを掛ける習慣がある。今は兄の靴と手袋がいつもの場所にあり、ハンガーには兄のコートらしい服が見える。帰宅時の動作は見ていないが、習慣とこの様子から判断すると、兄はコートをハンガーに掛けた____。",
+      "translation": "Choose an appropriate form of ところだ, ばかりだ, ままだ, はずだ or ようだ. Fill the whole ending in hiragana, using one complete, uncontracted plain-form construction; keep the copula and do not add particles or auxiliary constructions. My older brother habitually hangs his coat on the entrance hanger when he comes home. His shoes and gloves are in their usual places, and a garment that looks like his coat is visible on the hanger. I did not see what he did on arriving. From the habit and these signs, I infer that he hung his coat on the hanger.",
+      "evidence": "A known routine and visible belongings support a current inference about one past action, without identifying the exact time or directly observing the actor.",
+      "explanation": "掛けたようだ gives the conclusion suggested by the signs; 掛けたはずだ gives a reasoned expectation based on the familiar routine and evidence. ようである／はずである are accepted formal plain alternatives. The context supports a judgment, not certainty about who handled each item or precisely when. ところだ／ばかりだ would foreground an unverified recent-completion point, and ままだ would directly describe a retained position instead of marking the inference about the action. A habit is evidence here, not a guarantee that every arrival follows it.",
+      "answer": "mixed-past-action-inference",
+      "acceptedAnswers": ["ようだ", "はずだ", "ようである", "はずである"],
+      "options": [
+        { "id": "mixed-recent-completion", "label": "ばかりだ", "rationale": "Would present the action as recent instead of expressing the evidence-based judgment." },
+        { "id": "mixed-retained-result", "label": "ままだ", "rationale": "Would assert a continuing position directly rather than mark the inferred past action." },
+        { "id": "mixed-past-action-inference", "label": "ようだ", "rationale": "Infers the completed hanging from routine and traces; はずだ also fits." }
+      ]
+    }
+  ]
+}
