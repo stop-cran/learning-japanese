@@ -2290,5 +2290,66 @@ class GrammarMixedCompletionStateCoverageTests(unittest.TestCase):
         self.assertIn("current inference", self.exercises["mixed-past-inference-lights"]["explanation"])
 
 
+class GrammarMixedIntentionNecessityCoverageTests(unittest.TestCase):
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((root / "grammar" / "formal-nouns-mixed-intention-necessity.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_shared_verbs_use_the_same_whole_ending_selection_task(self):
+        targets = {"mixed-current-intention", "mixed-unnecessary-action", "mixed-only-available-option"}
+        instruction = (
+            "Choose a complete plain nonpast ending from つもりだ, ことはない, 必要ない／必要はない／必要がない, "
+            "ほかない or しかない. Write it in hiragana. For つもり, である is also allowed; for ほか, "
+            "より before it and に／は／には after it are optional. "
+            "Use no contractions or other added particles or auxiliary constructions. "
+        )
+        for topic, verb in {"send": "送る", "borrow": "借りる", "wait": "待つ", "redo": "やり直す"}.items():
+            group = [exercise for exercise in self.exercises.values() if exercise["id"].endswith("-" + topic)]
+            self.assertEqual(3, len(group), topic)
+            self.assertEqual(targets, {exercise["target"] for exercise in group}, topic)
+            for exercise in group:
+                self.assertIn(verb + "____。", exercise["prompt"], exercise["id"])
+                self.assertTrue(exercise["translation"].startswith(instruction), exercise["id"])
+                self.assertEqual(targets, {option["id"] for option in exercise["options"]}, exercise["id"])
+
+    def test_no_need_and_no_alternative_variants_are_not_wrong_buttons(self):
+        answers = {
+            "mixed-current-intention": {"つもりだ", "つもりである"},
+            "mixed-unnecessary-action": {"ことはない", "ひつようない", "ひつようはない", "ひつようがない"},
+            "mixed-only-available-option": {
+                prefix + "ほか" + particle + "ない"
+                for prefix in ("", "より") for particle in ("", "に", "は", "には")
+            } | {"しかない"},
+        }
+        models = {target: set() for target in answers}
+        for exercise in self.exercises.values():
+            accepted = answers[exercise["target"]]
+            self.assertEqual(accepted, set(exercise["acceptedAnswers"]), exercise["id"])
+            self.assertEqual(1, sum(option["label"] in accepted for option in exercise["options"]), exercise["id"])
+            models[exercise["target"]].add(next(
+                option["label"] for option in exercise["options"] if option["id"] == exercise["answer"]
+            ))
+        self.assertEqual({"つもりだ"}, models["mixed-current-intention"])
+        self.assertEqual({"ことはない", "ひつようはない", "ひつようがない"}, models["mixed-unnecessary-action"])
+        self.assertEqual({"ほかない", "しかない", "よりほかない", "ほかにはない"}, models["mixed-only-available-option"])
+
+    def test_optional_intentions_and_goal_relative_constraints_remain_distinct(self):
+        self.assertIn("紙の書類を追加で出すかどうかは自由", self.exercises["mixed-plan-send"]["prompt"])
+        self.assertIn("提出し直す必要はない", self.exercises["mixed-plan-redo"]["prompt"])
+        self.assertIn("Optionality for one goal does not rule out necessity for another", self.exercises["mixed-plan-send"]["explanation"])
+        self.assertIn("may not achieve the new artistic goal", self.exercises["mixed-plan-redo"]["explanation"])
+        self.assertIn("送ってもかまわない", self.exercises["mixed-no-need-send"]["prompt"])
+        self.assertIn("借りてもかまわない", self.exercises["mixed-no-need-borrow"]["prompt"])
+        self.assertIn("そのままいてもよい", self.exercises["mixed-no-need-wait"]["prompt"])
+        self.assertIn("待たずにほかの作業に移ってよい", self.exercises["mixed-no-need-wait"]["prompt"])
+        self.assertIn("好みで整理するのは自由", self.exercises["mixed-no-need-redo"]["prompt"])
+        self.assertIn("ほかの展示を見てから戻ってもよい", self.exercises["mixed-plan-wait"]["prompt"])
+        self.assertIn("unavoidable passage of time", self.exercises["mixed-plan-wait"]["explanation"])
+        self.assertIn("can do unrelated tasks", self.exercises["mixed-only-option-wait"]["explanation"])
+        self.assertIn("Choosing not to exhibit", self.exercises["mixed-only-option-borrow"]["explanation"])
+        self.assertIn("does not guarantee", self.exercises["mixed-only-option-redo"]["explanation"])
+
+
 if __name__ == "__main__":
     unittest.main()

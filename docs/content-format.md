@@ -546,6 +546,20 @@ continuous repetition or neglect, or turn past-action はずだ into automatic f
 The common complete-plain-hiragana format excludes additional particles, auxiliaries and combined constructions, not their
 grammaticality in wider Japanese. All353 prior records remain unchanged; broader mixed families and other uses remain open.
 
+`formal-nouns-mixed-intention-necessity.json` adds 12 mixed account-selection questions; see the
+[source record](grammar-mixed-intention-necessity-sources.json). Four current intentions, four no-need statements and four
+goal-relative no-alternative conclusions use send/borrow/wait/redo in each class. The whole ending is blank after a dictionary
+verb, with one common basic-form instruction. The full English remains question-visible and defines the intended account.
+
+Accept つもりだ／つもりである for the plans; ことはない and hiragana 必要ない／必要はない／必要がない for the selected
+no-need contexts; and all eight optional より／に／は／には forms with ほか plus しかない for no alternative.
+These are shared answer classes, not competing correct/wrong variants or universal claims of equal nuance.
+The common instruction explicitly limits practice to the named complete, uncontracted plain nonpast hiragana endings and
+specified particle variants, excluding additional particles/auxiliaries rather than condemning wider paraphrases.
+Preserve voluntary unnecessary actions, optional extras, goal-relative alternatives, and the distinction between staying here
+and the unavoidable passage of time. Neither a plan nor a sole available route guarantees actual completion.
+All365 earlier records and identities remain unchanged; past intention/outcome and other mixed families remain open.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.

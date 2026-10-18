@@ -1443,9 +1443,52 @@ Formal plain **ところである／ばかりである／ままである／は�
 recommended as equally conversational. Other paraphrases and combinations can be natural outside that format.
 This adds mixed time/state selection, not unrestricted cloze or every use of these constructions.
 
+## Mixed contextual selection: intention, no need, or no other option
+
+A personal plan and a practical requirement answer different questions. The next mixed set asks learners to choose
+among **つもりだ**, **ことはない**, **必要ない／必要はない／必要がない**, and **ほかない／しかない**,
+with the complete ending missing after a dictionary-form verb.
+**必要（ひつよう）** means need or necessity.
+
+| Account | Example | Meaning |
+| --- | --- | --- |
+| My current intention | 明日、この書類を送るつもりだ。 | I intend to send these documents tomorrow. |
+| No need for the action | この書類を送ることはない。／送る必要はない。 | There is no need to send these documents. |
+| No available alternative for a goal | 受理してもらうには、原本を送るほかない。 | To have it accepted, there is no other available option but to send the original. |
+
+**受理（じゅり）** means formal acceptance; **原本（げんぽん）** means original document.
+Suppose an application has already been accepted online and additional paper documents are optional.
+Someone can still plan to send a supplementary explanation. **送るつもりだ** reports that intention;
+**送ることはない／必要はない** addresses the absence of a requirement. Both accounts can be true.
+The voluntary redo likewise concerns an already accepted piece of work: **unnecessary does not mean unintended**.
+
+In the no-need contexts, **ことはない** can reassure someone or discourage an unnecessary effort.
+**必要はない／必要がない／必要ない** also fit the selected messages by describing the absence of need.
+The shorter particleless form is accepted too; this does not assert identical register or emphasis for every alternative.
+None of these no-need statements inherently forbids an optional action, says it is impossible or predicts it never occurs.
+Other contexts give ことはない its separate nonoccurrence meaning, so do not translate it mechanically.
+
+**ほかない／しかない** instead express that another route is unavailable under the stated conditions.
+All eight combinations of optional **より** before ほか and **に／は／には** after it are accepted, alongside しかない.
+The restriction is relative to a goal: one might abandon an application or exhibition, or do unrelated work while
+waiting for a repair part. That does not create another route to achieving the specified goal under those conditions.
+A useful loan service need not provoke resignation; having only one route does not guarantee the eventual result.
+
+Preferences and circumstances also differ. Buying a novel may be possible even when the speaker prefers borrowing it.
+Waiting for an exhibition to open need not mean staying in this particular spot: **ここで待つつもりだ**
+can be a voluntary plan when leaving and returning is allowed. Read the whole predicate and the intended English message,
+not just the verb or whether the action sounds useful.
+
+There are four questions per account, with **送る／借りる／待つ／やり直す** in each class.
+The same basic-form instruction applies throughout: complete, uncontracted plain nonpast endings in hiragana,
+with the specified particle variants and formal **つもりである** also allowed.
+Other particles, polite/past forms, decisions with ことにする and longer paraphrases can be natural outside that task.
+This adds mixed intention/necessity selection, not every intention/outcome contrast or every expression of obligation.
+
 ## References
 
 - [Japan Foundation: 「こと」（1）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201112.html) - nominalization, こと versus の, and fixed expressions.
+- [Nihongo NET: ことはない](https://nihongokyoshi-net.com/2019/01/15/jlptn3-grammar-kotowanai/), [JLPT Sensei: 必要がある／必要がない](https://jlptsensei.com/learn-japanese-grammar/必要がある-hitsuyou-ga-aru-meaning/), and [JMdict via Jisho: 必要](https://jisho.org/search/必要) - no-need meanings, negative necessity and recognition of the separate 必要ない expression; not universal interchangeability or equal register.
 - [Bunpro: ことにする](https://bunpro.jp/grammar_points/ことにする), [ことになる](https://bunpro.jp/grammar_points/ことになる), and [ことができる](https://bunpro.jp/grammar_points/ことができる) - decisions versus resulting situations, and ability or possibility.
 - [ARC Tokyo: ことになりました](https://arc.ac.jp/Tokyo/mimi-bunpou053/) and [E-Japanese: ことになる](https://www.e-japanese.jp/?p=650) - personal decisions announced indirectly and results derived by calculation.
 - [Tofugu: つもり](https://www.tofugu.com/japanese-grammar/tsumori/) - intentions, intended representations, attachment and つもりで.
