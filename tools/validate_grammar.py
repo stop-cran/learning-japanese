@@ -87,12 +87,14 @@ def check_grammar(err, root: Path = ROOT) -> int:
             continue
         covered = {ident: set() for ident in relation_map}
         for exercise in exercises:
-            if not isinstance(exercise, dict) or set(exercise) != {
+            if not isinstance(exercise, dict) or set(exercise) - {"jlpt"} != {
                     "id", "target", "relationship", "prompt", "translation", "evidence",
                     "explanation", "answer", "acceptedAnswers", "options"}:
                 err(path, "each exercise has an invalid shape")
                 continue
             ident = exercise["id"]
+            if "jlpt" in exercise and (type(exercise["jlpt"]) is not int or not 1 <= exercise["jlpt"] <= 5):
+                err(path, f"{ident}: 'jlpt' must be an integer from 1 to 5, or omitted")
             if not isinstance(ident, str) or not ID.fullmatch(ident) or ident in exercise_ids:
                 err(path, f"invalid or duplicate exercise ID '{ident}'")
             else:

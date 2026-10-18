@@ -54,6 +54,23 @@ class GrammarValidationTests(unittest.TestCase):
         self.assertEqual(1, count)
         self.assertEqual([], problems)
 
+    def test_optional_single_jlpt_level(self):
+        for level in range(1, 6):
+            with self.subTest(level=level):
+                count, problems = self.check(lambda data: data["exercises"][0].update(jlpt=level))
+                self.assertEqual(1, count)
+                self.assertEqual([], problems)
+
+    def test_rejects_malformed_jlpt_without_relaxing_exercise_shape(self):
+        for level in (None, "4", True, False, 3.0, 3.5, 0, 6, -1, [], {}):
+            with self.subTest(level=level):
+                _, problems = self.check(lambda data: data["exercises"][0].update(jlpt=level))
+                self.assertTrue(any("'jlpt' must be an integer" in message for message in problems), problems)
+        _, problems = self.check(lambda data: data["exercises"][0].update(jlpt=4, tags=["jlpt-n4"]))
+        self.assertTrue(any("invalid shape" in message for message in problems), problems)
+        _, problems = self.check(lambda data: data["exercises"][0].pop("prompt"))
+        self.assertTrue(any("invalid shape" in message for message in problems), problems)
+
     def test_rejects_incomplete_relationship_coverage(self):
         _, problems = self.check(lambda data: data["exercises"].pop())
         self.assertTrue(any("every construction" in message for message in problems), problems)

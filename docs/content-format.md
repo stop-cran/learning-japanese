@@ -123,6 +123,22 @@ has a Japanese prompt with exactly one `____` blank, an English translation, evi
 the correct construction ID, accepted typed forms, and answer options with a rationale for every alternative. Every relationship
 must have examples targeting each of its constructions. Its linked `article` must be an existing `articles/<slug>.md` file.
 
+**Optional JLPT level:** an exercise may declare one `jlpt` integer from 1 to 5. Omit it when classification is uncertain;
+explicit `null`, quoted numbers, booleans, fractions and out-of-range values are invalid. Do not add redundant level tags or
+cumulative memberships. The app's new-material scope is cumulative (N3 includes N3/N4/N5), while browsing is exact; All and
+Unclassified remain explicit choices. Neither filtering nor adding/changing this field resets an exercise's existing progress.
+
+Classify the grammar required by the complete visible task, including its contrast, not merely the easier target, hardest word/kanji
+or most advanced optionally accepted formulation. An N5 grammar exercise need not contain only N5 words. Preserve accepted answers,
+comprehensible wording and existing translation/reading support; vocabulary assistance and clickable words are separate follow-ups.
+JLPT labels are sourced editorial estimates, not an official syllabus or mastery claims. Record the evidence and qualifications
+in contributor source records, and leave unestablished cases unclassified.
+
+The [reviewed introduction pilot](grammar-introductions-pilot.json) supplies the initial 19 labels: six before/after and nine
+action-stage exercises at N4, and four expectation/obligation exercises at N3. The other four koto/wake exercises in the mixed pilot
+file remain unclassified, as do the other 378 exercises. The design record's groups/links are not yet runtime metadata; do not copy
+them into `grammar/` until that later schema phase is implemented and reviewed.
+
 Author coherent examples with a clear learning goal. More than one natural completion is acceptable: do not reject an item
 solely because several forms express the tested meaning. The useful distinction is between a coherent accepted answer class
 and genuine distractors, not between every wording inside that class. Keep the evidence and rationale specific to the
