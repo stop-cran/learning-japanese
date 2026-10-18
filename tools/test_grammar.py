@@ -2028,5 +2028,87 @@ class GrammarPastExpectationCoverageTests(unittest.TestCase):
         self.assertIn("雨は一滴も降らなかった", self.exercises["hazu-recalled-rain-not-expected"]["prompt"])
 
 
+class GrammarPossibleExtentCoverageTests(unittest.TestCase):
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((root / "grammar" / "formal-nouns-possible-extent.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+        self.pairs = [
+            ("extent-possible-reading-access", "extent-wanted-reading-choice",
+             ("読める", "よめる"), ("読みたい", "よみたい")),
+            ("extent-possible-writing-space", "extent-wanted-writing-choice",
+             ("書ける", "かける"), ("書きたい", "かきたい")),
+            ("extent-possible-transport-capacity", "extent-wanted-transport-choice",
+             ("運べる", "はこべる"), ("運びたい", "はこびたい")),
+            ("extent-possible-paper-supply", "extent-wanted-paper-choice",
+             ("使える", "つかえる", "遣える"), ("使いたい", "つかいたい", "遣いたい")),
+            ("extent-possible-photo-service", "extent-wanted-photo-selection",
+             ("送れる", "おくれる"), ("送りたい", "おくりたい")),
+            ("extent-possible-speaking-slot", "extent-wanted-speaking-choice",
+             ("話せる", "はなせる", "咄せる"), ("話したい", "はなしたい", "咄したい")),
+        ]
+
+    def test_six_reciprocal_pairs_share_possible_extent_not_rival_particles(self):
+        self.assertEqual({
+            "kagiri-dake-possible-extent": 6, "dake-wanted-extent": 6,
+        }, Counter(exercise["target"] for exercise in self.exercises.values()))
+        models = []
+        for possible_id, wanted_id, *_ in self.pairs:
+            possible, wanted = self.exercises[possible_id], self.exercises[wanted_id]
+            self.assertEqual(possible["relationship"], wanted["relationship"])
+            self.assertNotEqual(possible["target"], wanted["target"])
+            self.assertEqual(
+                [option["label"] for option in possible["options"]],
+                [option["label"] for option in wanted["options"]],
+            )
+            model = next(option["label"] for option in possible["options"] if option["id"] == possible["answer"])
+            models.append("かぎり" if model.endswith("かぎり") else "だけ")
+            for exercise in (possible, wanted):
+                self.assertEqual(1, sum(option["label"] in exercise["acceptedAnswers"] for option in exercise["options"]))
+        self.assertEqual({"かぎり": 3, "だけ": 3}, Counter(models))
+
+    def test_all_supported_verb_and_particle_forms_fit_the_named_patterns(self):
+        for possible_id, wanted_id, potentials, desires in self.pairs:
+            self.assertEqual(
+                {verb + particle for verb in potentials for particle in ("かぎり", "限り", "だけ", "丈")},
+                set(self.exercises[possible_id]["acceptedAnswers"]), possible_id,
+            )
+            self.assertEqual(
+                {verb + particle for verb in desires for particle in ("だけ", "丈")},
+                set(self.exercises[wanted_id]["acceptedAnswers"]), wanted_id,
+            )
+            for exercise_id in (possible_id, wanted_id):
+                translation = self.exercises[exercise_id]["translation"]
+                self.assertIn("nonpast potential + かぎり or だけ, or たい form + だけ", translation)
+                self.assertIn("do not repeat the following verb", translation)
+
+    def test_contexts_keep_available_extent_distinct_from_desired_amount(self):
+        possible = self.exercises["extent-possible-reading-access"]
+        wanted = self.exercises["extent-wanted-reading-choice"]
+        self.assertIn("三話全部を読み終えた", possible["prompt"])
+        self.assertIn("まだ続きも読みたい", possible["prompt"])
+        self.assertIn("今日は全部読める", wanted["prompt"])
+        self.assertIn("三話で満足", wanted["prompt"])
+        self.assertIn("書きたいことはまだ残っている", self.exercises["extent-possible-writing-space"]["prompt"])
+        self.assertIn("五行書ける", self.exercises["extent-wanted-writing-choice"]["prompt"])
+        self.assertIn("今日は一往復しかできない", self.exercises["extent-possible-transport-capacity"]["prompt"])
+        self.assertIn("全部車に入る", self.exercises["extent-wanted-transport-choice"]["prompt"])
+        self.assertIn("あと二十枚使いたかった", self.exercises["extent-possible-paper-supply"]["prompt"])
+        self.assertIn("紙はまだ四十枚残っている", self.exercises["extent-wanted-paper-choice"]["prompt"])
+        self.assertIn("残りも早く送りたい", self.exercises["extent-possible-photo-service"]["prompt"])
+        self.assertIn("写真も十枚用意してある", self.exercises["extent-wanted-photo-selection"]["prompt"])
+        self.assertIn("話したいことはまだたくさん残った", self.exercises["extent-possible-speaking-slot"]["prompt"])
+        self.assertIn("三分で満足", self.exercises["extent-wanted-speaking-choice"]["prompt"])
+
+    def test_extent_feedback_qualifies_scope_not_global_substitution_or_smallness(self):
+        self.assertIn("not a promise to keep reading", self.exercises["extent-possible-reading-access"]["explanation"])
+        self.assertIn("not the writer's general ability", self.exercises["extent-possible-writing-space"]["explanation"])
+        self.assertIn("not the paper's useful lifetime", self.exercises["extent-possible-paper-supply"]["explanation"])
+        self.assertIn("does not always mean a small amount", self.exercises["extent-wanted-paper-choice"]["explanation"])
+        self.assertIn("not a claim that no other communication method exists", self.exercises["extent-possible-photo-service"]["explanation"])
+        self.assertIn("does not require the fastest physically possible speech", self.exercises["extent-possible-speaking-slot"]["explanation"])
+        self.assertIn("can sometimes describe the same actual amount", self.exercises["extent-wanted-speaking-choice"]["explanation"])
+
+
 if __name__ == "__main__":
     unittest.main()

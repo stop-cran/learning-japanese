@@ -480,6 +480,21 @@ Keep irregular 来ない（こない）, expected nonoccurrence versus prohibiti
 verification. Result-state forms, other tense combinations and unrestricted paraphrases remain outside these named-form
 tasks, not universally wrong. Preserve all earlier はず／よう answer classes and one SRS identity per new exercise.
 
+`formal-nouns-possible-extent.json` adds 12 exercises; see the [source record](grammar-possible-extent-sources.json).
+Six matched verb pairs contrast the full available extent with a desired amount: 読む／書く／運ぶ／使う／送る／話す.
+The visible task names nonpast potential + かぎり or だけ, or たい form + だけ; the main verb is already printed.
+Accept all fitting kana/kanji combinations, including 限り／丈 and recognized 遣う／咄す forms, without recommending
+unusual spellings as equally common. The potential-extent target is shared: three かぎり and three だけ model labels
+do not mean independent discrimination between those alternatives, and neither should be a wrong button for the other.
+
+Preserve the contextual separation of the two bounds. Possible-extent examples exhaust the stated opportunity while
+leaving some desire unsatisfied; desired-extent examples stop satisfied while capacity remains. The reading pair reaches
+the same three-story result under different bounds. These contrasts do not claim that desire and capacity never coincide.
+The available extent is relative to access, space, a single trip, supplies, a daily quota or a speaking slot, not necessarily
+physical ability or every imaginable alternative. Preserve the distinction from continuing-condition かぎり and from
+only-small-amount interpretations of だけ. Other tense forms, paraphrases and noun-based maximum-extent expressions
+are outside this named-form task, not universally wrong. Prior quantity/condition records and SRS identities stay unchanged.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.

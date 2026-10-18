@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-possible-extent",
+  "title": "かぎり and だけ: possible extent versus desired extent",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "kagiri-dake-possible-extent", "label": "as much as possible within the stated conditions" },
+    { "id": "dake-wanted-extent", "label": "as much as wanted, not necessarily all that is possible" }
+  ],
+  "relationships": [
+    {
+      "id": "possible-extent-vs-wanted-extent",
+      "label": "available capacity / desired amount",
+      "constructions": ["kagiri-dake-possible-extent", "dake-wanted-extent"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "extent-possible-reading-access",
+      "target": "kagiri-dake-possible-extent",
+      "relationship": "possible-extent-vs-wanted-extent",
+      "prompt": "この短編集は全八話で、全部読みたかった。しかし、このサービスで今日読めるのは三話までだった。今日は____読み、三話全部を読み終えた。まだ続きも読みたい。",
+      "translation": "Use 読む (よむ, read): nonpast potential + かぎり or だけ, or たい form + だけ. Fill the whole missing phrase in kana or kanji; do not repeat the following verb. I wanted to read all eight stories in this collection, but the service let me read only three today. I read as much as I could today and finished all three. I still want to read more. 短編集 (たんぺんしゅう) means short-story collection.",
+      "evidence": "All three available stories were read, while the desired eight-story amount remained out of reach.",
+      "explanation": "読めるかぎり and 読めるだけ both set the amount by what was possible under today's access limit. 読む becomes potential 読める; かぎり may be written 限り and だけ may be written 丈, though kana is usual for the particle. All fitting combinations are accepted. 読みたいだけ would set the amount by the reader's wish, but that wish has not been satisfied. This is a bounded amount of reading today, not a promise to keep reading for as long as the ability exists.",
+      "answer": "kagiri-dake-possible-extent",
+      "acceptedAnswers": ["読めるかぎり", "よめるかぎり", "読める限り", "よめる限り", "読めるだけ", "よめるだけ", "読める丈", "よめる丈"],
+      "options": [
+        { "id": "kagiri-dake-possible-extent", "label": "読めるかぎり", "rationale": "Uses the full amount available today; 読めるだけ also fits." },
+        { "id": "dake-wanted-extent", "label": "読みたいだけ", "rationale": "Would say the amount wanted was read, although the reader still wanted the unavailable stories." }
+      ]
+    },
+    {
+      "id": "extent-wanted-reading-choice",
+      "target": "dake-wanted-extent",
+      "relationship": "possible-extent-vs-wanted-extent",
+      "prompt": "この短編集は全八話で、今日は全部読める。時間も十分あるが、今読みたいのは最初の三話だけだ。____読み、三話で満足して本を閉じた。",
+      "translation": "Use 読む (よむ, read): nonpast potential + かぎり or だけ, or たい form + だけ. Fill the whole missing phrase in kana or kanji; do not repeat the following verb. All eight stories in this collection are accessible today, and there is enough time. I want to read only the first three now. I read as much as I wanted and, satisfied after three, closed the book. 短編集 (たんぺんしゅう) means short-story collection.",
+      "evidence": "Three stories satisfy the reader's wish even though all eight remain possible.",
+      "explanation": "読みたいだけ sets the amount by the reader's desire: 読む takes its ます stem 読み before たい. 読みたい丈 and kana verb spellings are also accepted; だけ is the ordinary particle spelling. 読めるかぎり／読めるだけ would describe using the available reading capacity, not this deliberately smaller desired amount. Choosing not to read the other stories is not an inability to read them.",
+      "answer": "dake-wanted-extent",
+      "acceptedAnswers": ["読みたいだけ", "よみたいだけ", "読みたい丈", "よみたい丈"],
+      "options": [
+        { "id": "kagiri-dake-possible-extent", "label": "読めるかぎり", "rationale": "Would use the available extent rather than stop at the smaller amount the reader wants." },
+        { "id": "dake-wanted-extent", "label": "読みたいだけ", "rationale": "Lets the reader's wish, not the access or time limit, determine the stopping point." }
+      ]
+    },
+    {
+      "id": "extent-possible-writing-space",
+      "target": "kagiri-dake-possible-extent",
+      "relationship": "possible-extent-vs-wanted-extent",
+      "prompt": "感想を五行書きたかったが、この用紙の記入欄には三行しか入らない。別紙は付けられないので、欄の中に____書いて三行を埋めた。書きたいことはまだ残っている。",
+      "translation": "Use 書く (かく, write): nonpast potential + かぎり or だけ, or たい form + だけ. Fill the whole missing phrase in kana or kanji; do not repeat the following verb. I wanted to write five lines of comments, but the form's field holds only three and no extra sheet may be attached. I wrote as much as I could in the field and filled all three lines. There is still more I want to write. 記入欄 (きにゅうらん) means a field to fill in.",
+      "evidence": "The form's available space is fully used, but it cannot accommodate all the desired comments.",
+      "explanation": "書けるだけ and 書けるかぎり share the possible-extent meaning in this space-limited task. 書く becomes potential 書ける. Accept kana verb forms and the corresponding 限り／丈 spellings too. 書きたいだけ would say that the writer had written the amount wanted, but two lines' worth of desired comments remain. The limit concerns this field under these rules, not the writer's general ability to write.",
+      "answer": "kagiri-dake-possible-extent",
+      "acceptedAnswers": ["書けるだけ", "かけるだけ", "書ける丈", "かける丈", "書けるかぎり", "かけるかぎり", "書ける限り", "かける限り"],
+      "options": [
+        { "id": "kagiri-dake-possible-extent", "label": "書けるだけ", "rationale": "Uses the full extent the field allows; 書けるかぎり also fits." },
+        { "id": "dake-wanted-extent", "label": "書きたいだけ", "rationale": "Would say the desired amount was written, contrary to the comments still left unwritten." }
+      ]
+    },
+    {
+      "id": "extent-wanted-writing-choice",
+      "target": "dake-wanted-extent",
+      "relationship": "possible-extent-vs-wanted-extent",
+      "prompt": "記入欄には五行書けるし、時間も十分ある。でも、今伝えたい感想は三行で全部書ける。____書き、三行で満足して提出した。",
+      "translation": "Use 書く (かく, write): nonpast potential + かぎり or だけ, or たい form + だけ. Fill the whole missing phrase in kana or kanji; do not repeat the following verb. The form holds five lines, and there is plenty of time. But all the comments I want to give now fit in three lines. I wrote as much as I wanted, was satisfied after three lines, and submitted it. 記入欄 (きにゅうらん) means a field to fill in.",
+      "evidence": "The writer stops after expressing all the desired content while space remains.",
+      "explanation": "書きたいだけ measures the writing by the speaker's wish, not the five-line capacity. Kana かきたい and the particle spelling 丈 are also accepted in the corresponding combinations. 書けるだけ／書けるかぎり would describe the maximum possible extent instead of the smaller amount deliberately chosen here. An empty part of the form does not mean the speaker was unable to write more.",
+      "answer": "dake-wanted-extent",
+      "acceptedAnswers": ["書きたいだけ", "かきたいだけ", "書きたい丈", "かきたい丈"],
+      "options": [
+        { "id": "kagiri-dake-possible-extent", "label": "書けるだけ", "rationale": "Would set the extent by the available capacity rather than the desired three lines." },
+        { "id": "dake-wanted-extent", "label": "書きたいだけ", "rationale": "Stops when the desired comments have been expressed, leaving unused space." }
+      ]
+    },
+    {
+      "id": "extent-possible-transport-capacity",
+      "target": "kagiri-dake-possible-extent",
+      "relationship": "possible-extent-vs-wanted-extent",
+      "prompt": "展示用の軽い箱を十個運びたかったが、車に入るのは六個で、今日は一往復しかできない。____運び、六個を会場に届けた。残りの四個も本当は今日運びたかった。",
+      "translation": "Use 運ぶ (はこぶ, transport): nonpast potential + かぎり or だけ, or たい form + だけ. Fill the whole missing phrase in kana or kanji; do not repeat the following verb. I wanted to transport ten lightweight display boxes, but the vehicle holds six and I can make only one round trip today. I transported as many as I could and delivered six to the venue. I had wanted to transport the other four today too. 一往復 (いちおうふく) means one round trip.",
+      "evidence": "The single trip uses the vehicle's full capacity without reaching the desired ten-box amount.",
+      "explanation": "運べるかぎり and 運べるだけ both describe the extent available under the vehicle and trip limits. 運ぶ becomes potential 運べる; kana forms and 限り／丈 are also accepted. 運びたいだけ would describe the amount wanted, which was ten rather than six. This is not a statement about carrying boxes until physical exhaustion or about every possible future trip.",
+      "answer": "kagiri-dake-possible-extent",
+      "acceptedAnswers": ["運べるかぎり", "はこべるかぎり", "運べる限り", "はこべる限り", "運べるだけ", "はこべるだけ", "運べる丈", "はこべる丈"],
+      "options": [
+        { "id": "kagiri-dake-possible-extent", "label": "運べるかぎり", "rationale": "Uses all the carrying capacity available for today's trip; 運べるだけ also fits." },
+        { "id": "dake-wanted-extent", "label": "運びたいだけ", "rationale": "Would say the desired amount was transported, though four wanted boxes remain." }
+      ]
+    },
+    {
+      "id": "extent-wanted-transport-choice",
+      "target": "dake-wanted-extent",
+      "relationship": "possible-extent-vs-wanted-extent",
+      "prompt": "展示用の軽い箱は六個あり、全部車に入る。ただ、今回私が会場へ運びたいのは二個だけだ。____運び、その二個を届けて満足した。",
+      "translation": "Use 運ぶ (はこぶ, transport): nonpast potential + かぎり or だけ, or たい form + だけ. Fill the whole missing phrase in kana or kanji; do not repeat the following verb. Six lightweight display boxes are available, and all six fit in the vehicle. But I want to take only two to the venue this time. I transported as many as I wanted and was satisfied after delivering those two.",
+      "evidence": "The chosen two-box amount is below the available six-box capacity.",
+      "explanation": "運びたいだけ lets the speaker's wish determine the amount transported. Accept はこびたい and 丈 variants as well. 運べるかぎり／運べるだけ would instead describe using the available extent, which is explicitly larger. Wanting to take only two does not make the vehicle incapable of holding six.",
+      "answer": "dake-wanted-extent",
+      "acceptedAnswers": ["運びたいだけ", "はこびたいだけ", "運びたい丈", "はこびたい丈"],
+      "options": [
+        { "id": "kagiri-dake-possible-extent", "label": "運べるかぎり", "rationale": "Would use the available extent instead of the intentionally smaller chosen load." },
+        { "id": "dake-wanted-extent", "label": "運びたいだけ", "rationale": "Sets the load by the desired two boxes, not the vehicle's limit." }
+      ]
+    },
+    {
+      "id": "extent-possible-paper-supply",
+      "target": "kagiri-dake-possible-extent",
+      "relationship": "possible-extent-vs-wanted-extent",
+      "prompt": "大きな貼り絵に色紙を六十枚使いたかったが、使ってよい紙は四十枚しかなかった。今回は____使い、四十枚を使い切った。あと二十枚使いたかったが、手に入らなかった。",
+      "translation": "Use 使う (つかう, use): nonpast potential + かぎり or だけ, or たい form + だけ. Fill the whole missing phrase in kana or kanji; do not repeat the following verb. I wanted to use sixty sheets of colored paper for a large collage, but only forty were available for me to use. I used as much as I could this time, using up all forty. I wanted twenty more sheets but could not obtain them. 貼り絵 (はりえ) means collage; 色紙 is read いろがみ here.",
+      "evidence": "The whole available supply is used, while the desired amount is larger and unavailable.",
+      "explanation": "使えるだけ and 使えるかぎり both set the amount by the available paper supply. Here 使える is the potential of 使う, not a たい desire form. The dictionary also recognizes 遣う for つかう, so 遣える forms are accepted, along with kana and 限り／丈 combinations; the model keeps ordinary 使う. 使いたいだけ would say the desired extent was reached, but twenty wanted sheets were unavailable. This particular かぎり refers to the full available amount, not the paper's useful lifetime.",
+      "answer": "kagiri-dake-possible-extent",
+      "acceptedAnswers": ["使えるだけ", "つかえるだけ", "遣えるだけ", "使える丈", "つかえる丈", "遣える丈", "使えるかぎり", "つかえるかぎり", "遣えるかぎり", "使える限り", "つかえる限り", "遣える限り"],
+      "options": [
+        { "id": "kagiri-dake-possible-extent", "label": "使えるだけ", "rationale": "Uses the full available supply; 使えるかぎり also fits." },
+        { "id": "dake-wanted-extent", "label": "使いたいだけ", "rationale": "Would describe the desired sixty sheets as used, contrary to the supply shortage." }
+      ]
+    },
+    {
+      "id": "extent-wanted-paper-choice",
+      "target": "dake-wanted-extent",
+      "relationship": "possible-extent-vs-wanted-extent",
+      "prompt": "貼り絵に使ってよい色紙は六十枚あるが、私の作品に使いたいのは二十枚だ。____使い、二十枚で思いどおりの作品ができた。紙はまだ四十枚残っている。",
+      "translation": "Use 使う (つかう, use): nonpast potential + かぎり or だけ, or たい form + だけ. Fill the whole missing phrase in kana or kanji; do not repeat the following verb. Sixty sheets of colored paper are available for the collage, but I want to use twenty for my work. I used as much as I wanted, and twenty sheets produced the work I had in mind. Forty sheets remain. 貼り絵 (はりえ) means collage; 色紙 is read いろがみ here.",
+      "evidence": "The chosen amount produces the desired work without exhausting the available supply.",
+      "explanation": "使いたいだけ sets the amount by the creator's wish, which is satisfied after twenty sheets. Kana つかいたい, recognized 遣いたい and the particle spelling 丈 are also accepted; 使いたいだけ remains the ordinary model. 使えるだけ／使えるかぎり would describe the available extent, not this smaller selected amount. The desire pattern does not always mean a small amount: it is small relative to supply only because of this scenario.",
+      "answer": "dake-wanted-extent",
+      "acceptedAnswers": ["使いたいだけ", "つかいたいだけ", "遣いたいだけ", "使いたい丈", "つかいたい丈", "遣いたい丈"],
+      "options": [
+        { "id": "kagiri-dake-possible-extent", "label": "使えるだけ", "rationale": "Would set the extent by the larger available supply rather than the desired twenty sheets." },
+        { "id": "dake-wanted-extent", "label": "使いたいだけ", "rationale": "Stops at the amount wanted for the work, leaving usable paper." }
+      ]
+    },
+    {
+      "id": "extent-possible-photo-service",
+      "target": "kagiri-dake-possible-extent",
+      "relationship": "possible-extent-vs-wanted-extent",
+      "prompt": "このサービスでは、一日に写真を五枚までしか送れない。旅行の写真を十枚送りたかったが、今日は____送り、上限の五枚を送信した。残りも早く送りたい。",
+      "translation": "Use 送る (おくる, send): nonpast potential + かぎり or だけ, or たい form + だけ. Fill the whole missing phrase in kana or kanji; do not repeat the following verb. This service allows only five photos to be sent per day. I wanted to send ten travel photos, but today I sent as many as I could and reached the five-photo limit. I want to send the rest soon too. 上限 (じょうげん) means upper limit; 送信 (そうしん) means transmission.",
+      "evidence": "The daily service allowance is used in full, while five more desired photos remain unsent.",
+      "explanation": "送れるかぎり and 送れるだけ both describe the maximum available extent through this service today. 送る becomes potential 送れる; kana and 限り／丈 combinations are accepted. 送りたいだけ would measure the sending by the desired ten photos, which have not all been sent. The limit is scoped to today's use of this service, not a claim that no other communication method exists.",
+      "answer": "kagiri-dake-possible-extent",
+      "acceptedAnswers": ["送れるかぎり", "おくれるかぎり", "送れる限り", "おくれる限り", "送れるだけ", "おくれるだけ", "送れる丈", "おくれる丈"],
+      "options": [
+        { "id": "kagiri-dake-possible-extent", "label": "送れるかぎり", "rationale": "Uses the whole daily allowance; 送れるだけ also fits." },
+        { "id": "dake-wanted-extent", "label": "送りたいだけ", "rationale": "Would describe sending the amount wanted, although half of that amount remains." }
+      ]
+    },
+    {
+      "id": "extent-wanted-photo-selection",
+      "target": "dake-wanted-extent",
+      "relationship": "possible-extent-vs-wanted-extent",
+      "prompt": "今日はこのサービスで写真を十枚送れるし、写真も十枚用意してある。でも、友人に送りたいのは気に入った三枚だけだ。____送り、その三枚で満足した。",
+      "translation": "Use 送る (おくる, send): nonpast potential + かぎり or だけ, or たい form + だけ. Fill the whole missing phrase in kana or kanji; do not repeat the following verb. I can send ten photos through this service today and have ten ready, but I want to send my friend only three favorites. I sent as many as I wanted and was satisfied with those three.",
+      "evidence": "A deliberate three-photo selection satisfies the wish without reaching the available ten-photo allowance.",
+      "explanation": "送りたいだけ sets the amount by the speaker's chosen photographs. Kana おくりたい and the corresponding 丈 forms are also accepted. 送れるかぎり／送れるだけ would use the available extent rather than the smaller chosen selection. The service limit did not force this stopping point; the speaker's preference did.",
+      "answer": "dake-wanted-extent",
+      "acceptedAnswers": ["送りたいだけ", "おくりたいだけ", "送りたい丈", "おくりたい丈"],
+      "options": [
+        { "id": "kagiri-dake-possible-extent", "label": "送れるかぎり", "rationale": "Would set the extent by the available allowance instead of the selected favorites." },
+        { "id": "dake-wanted-extent", "label": "送りたいだけ", "rationale": "Uses the desired three-photo amount despite the larger allowance." }
+      ]
+    },
+    {
+      "id": "extent-possible-speaking-slot",
+      "target": "kagiri-dake-possible-extent",
+      "relationship": "possible-extent-vs-wanted-extent",
+      "prompt": "旅行の話を十分ほどしたかったが、私の発表時間は一分だけだった。その一分間に____話したが、話したいことはまだたくさん残った。",
+      "translation": "Use 話す (はなす, talk): nonpast potential + かぎり or だけ, or たい form + だけ. Fill the whole missing phrase in kana or kanji; do not repeat the following verb. I wanted to talk about my trip for about ten minutes, but my presentation slot was only one minute. I talked as much as I could during that minute, yet much that I wanted to say remained.",
+      "evidence": "The allotted speaking time is fully used without satisfying the larger desired amount of talk.",
+      "explanation": "話せるだけ and 話せるかぎり both set the extent by the speaking opportunity available in that minute. 話す becomes potential 話せる. Recognized 咄す spellings, giving 咄せる, are accepted along with kana and 限り／丈 combinations; ordinary 話す remains the model. This is not a claim that all spellings are equally common. 話したいだけ would say the desired amount was spoken, whereas much desired content remained. The sentence does not require the fastest physically possible speech.",
+      "answer": "kagiri-dake-possible-extent",
+      "acceptedAnswers": ["話せるだけ", "はなせるだけ", "咄せるだけ", "話せる丈", "はなせる丈", "咄せる丈", "話せるかぎり", "はなせるかぎり", "咄せるかぎり", "話せる限り", "はなせる限り", "咄せる限り"],
+      "options": [
+        { "id": "kagiri-dake-possible-extent", "label": "話せるだけ", "rationale": "Uses the available speaking opportunity; 話せるかぎり also fits." },
+        { "id": "dake-wanted-extent", "label": "話したいだけ", "rationale": "Would say the desired amount was spoken despite much desired content remaining." }
+      ]
+    },
+    {
+      "id": "extent-wanted-speaking-choice",
+      "target": "dake-wanted-extent",
+      "relationship": "possible-extent-vs-wanted-extent",
+      "prompt": "友人は時間があるので、十分でも二十分でも話を聞けると言った。でも、今話したい旅行の話は三分で全部話せる。____話し、三分で満足して話を終えた。",
+      "translation": "Use 話す (はなす, talk): nonpast potential + かぎり or だけ, or たい form + だけ. Fill the whole missing phrase in kana or kanji; do not repeat the following verb. My friend has time and says they can listen for ten or even twenty minutes. But all the travel stories I want to tell now take only three minutes. I talked as much as I wanted and, satisfied after three minutes, finished.",
+      "evidence": "The speaker stops after the desired stories, although the listener is available for much longer.",
+      "explanation": "話したいだけ sets the amount by the speaker's wish, not the listener's available time. Kana はなしたい, recognized 咄したい and 丈 combinations are accepted without recommending unusual spellings over 話したいだけ. 話せるだけ／話せるかぎり would instead set the extent by what the opportunity permits. Both patterns can sometimes describe the same actual amount; this scenario separates the limits by making the desired talk shorter than the available time.",
+      "answer": "dake-wanted-extent",
+      "acceptedAnswers": ["話したいだけ", "はなしたいだけ", "咄したいだけ", "話したい丈", "はなしたい丈", "咄したい丈"],
+      "options": [
+        { "id": "kagiri-dake-possible-extent", "label": "話せるだけ", "rationale": "Would use the available speaking extent rather than stop at the smaller amount wanted." },
+        { "id": "dake-wanted-extent", "label": "話したいだけ", "rationale": "Lets satisfaction with the chosen stories determine the stopping point." }
+      ]
+    }
+  ]
+}

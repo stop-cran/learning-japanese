@@ -1197,6 +1197,54 @@ This is not a global rule separating the words: **読めば読むだけ** can al
 and shorter **読むほど** or other extent formulations can be natural in appropriate sentences.
 Likewise, **くらい／ぐらい** can overlap with clause-based degree without replacing ほど in every comparison or repeated-verb pattern.
 
+### かぎり and だけ: possible extent versus desired extent
+
+**かぎり** can express the fullest extent available, not only an evidence limit or continuing condition.
+**だけ** can also express that extent; it does not always mean "only a small amount."
+In a bounded episode, these patterns can overlap:
+
+| Pattern | Example | What sets the amount? |
+| --- | --- | --- |
+| Potential verb + かぎり | 読めるかぎり読んだ。 | I read as much as I could under the circumstances. |
+| Potential verb + だけ | 読めるだけ読んだ。 | The available reading capacity or opportunity. |
+| たい form + だけ | 読みたいだけ読んだ。 | I read as much as I wanted. |
+
+For example, if a service makes only three stories available today and I want all eight, reading the available three
+fits **読めるかぎり／読めるだけ** without satisfying my whole wish. If all eight are available and there is enough time,
+but I want only three and stop satisfied, **読みたいだけ** describes the chosen amount.
+The same number read does not determine which boundary explains it.
+
+All six verbs in this batch are **godan** verbs. For their potential forms, change the final **u** sound to **eru**;
+for たい, use the **ます stem + たい**:
+
+| Verb | Potential | Desired action |
+| --- | --- | --- |
+| 読む（よむ）, read | 読める | 読みたい |
+| 書く（かく）, write | 書ける | 書きたい |
+| 運ぶ（はこぶ）, transport | 運べる | 運びたい |
+| 使う（つかう）, use | 使える | 使いたい |
+| 送る（おくる）, send | 送れる | 送りたい |
+| 話す（はなす）, talk | 話せる | 話したい |
+
+The relevant limits may be access, space on a form, a vehicle's capacity, supplies, a service's quota or time.
+They are not always limits of physical skill. **話せるだけ話した** in a one-minute slot need not claim speech at the
+fastest humanly possible speed. Using everything available also need not complete a larger goal.
+These examples deliberately separate the desired and available amounts; in other situations the amounts can coincide.
+
+The surrounding construction matters. **読めるかぎり読んだ** in the bounded reading episode concerns extent,
+whereas **読めるかぎり、この仕事を続ける**, "I will keep doing this job as long as I can read," maintains a condition.
+Do not replace かぎり with だけ mechanically in every conditional or evidence-scope expression.
+Related extent phrases include **できるだけ／できるかぎり**, "as much as possible," and **力の限り**,
+"with all one's strength." The latter uses **noun + のかぎり**, not the potential-verb pattern tested here.
+
+The questions explicitly request **nonpast potential + かぎり／だけ** or **たい form + だけ** of the supplied verb.
+The following main verb is already printed. All fitting potential-extent alternatives share an answer, rather than
+becoming competing wrong options: six shared questions show three かぎり and three だけ model labels.
+Accept **限り** and the recognized particle spelling **丈（だけ）**, while keeping kana だけ as the model.
+The recognized **遣う／咄す** spellings also give accepted forms; ordinary **使う／話す** remain the models.
+Recognition does not imply equal frequency. Other tense forms, fuller paraphrases and noun-based extent expressions
+remain outside this named-form practice, not globally incorrect Japanese.
+
 ### きり: only this set, or no further action since an event
 
 **きり** is another useful particle neighbor, not automatically a formal noun because it is related to **切る**.
@@ -1307,6 +1355,7 @@ This practice does not cover every use, such as **寝たきり**, **これっき
 - [Maggie Sensei: ばかり](https://maggiesensei.com/2013/07/02/%E3%81%B0%E3%81%8B%E3%82%8A-bakari/), [Bunpro: ばかり](https://bunpro.jp/grammar_points/ばかり), [たばかり](https://bunpro.jp/grammar_points/たばかり), and [だけ](https://bunpro.jp/grammar_points/だけ) - quantity, limitation, activity concentration and recent completion; the construction determines the function.
 - [Maggie Sensei: ほど](https://maggiesensei.com/2012/10/10/how-to-use-%E7%A8%8B-%E3%81%BB%E3%81%A9-hodo/), [Bunpro: ば〜ほど](https://bunpro.jp/grammar_points/ば-ほど), and [Tae Kim: Expressing amounts](https://guidetojapanese.org/learn/grammar/amount) - degree, negative comparisons and correlated change; the exact construction matters.
 - [Daijisen: だけ](https://kotobank.jp/word/だけ-559985) and [Bunpro: たい](https://bunpro.jp/grammar_points/たい) - extent and desired-action attachment, underlying the たいだけ pattern; だけ also has proportional-change uses.
+- [Daijisen: 限り](https://kotobank.jp/word/限り-459951), [日本語NET: 限り（限界）](https://nihongokyoshi-net.com/2019/05/16/jlptn2-grammar-kagiri-2/), and [Hedgehog Japanese: potential／たい＋だけ](https://hedgehog-japanese.com/grammar/jlpt-n2/dake/) - fullest available extent and desired amount; compare the possible-extent だけ example in Daijisen above and the TUFS potential-form chart cited earlier.
 - [Daijisen: きり［副助］](https://kotobank.jp/word/きり-480122), [Nihon Kokugo Daijiten: 切・限](https://kotobank.jp/word/切り-480110), and [JMdict via Jisho: きり](https://jisho.org/search/きり) - exclusive limits, no further action after an event, continuing states and spellings; use the particle entries, not adjacent homophones.
 - [JMdict via Jisho: 限り（かぎり）](https://jisho.org/search/限り) and [Bunpro: のみ](https://bunpro.jp/grammar_points/のみ) - context-appropriate limitation alternatives, not unrestricted substitution rules.
 
