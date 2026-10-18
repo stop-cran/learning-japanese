@@ -1485,6 +1485,111 @@ with the specified particle variants and formal **つもりである** also allo
 Other particles, polite/past forms, decisions with ことにする and longer paraphrases can be natural outside that task.
 This adds mixed intention/necessity selection, not every intention/outcome contrast or every expression of obligation.
 
+## Mixed contextual selection: earlier intentions, completion beliefs, and current inferences
+
+The next mixed set leaves the **whole verb-plus-construction predicate** blank. It contrasts three accounts,
+not just three spellings of an ending:
+
+| Account | Example | Meaning |
+| --- | --- | --- |
+| An earlier intention | 保存するつもりだった。 | I intended to save it. |
+| An earlier completion belief | 保存したつもりだった。 | I believed I had saved it. |
+| A current inference about a past action | 保存したはずだ。／保存したようだ。 | I infer that it was saved. |
+
+**保存（ほぞん）する** means to save or preserve; here it means saving a file.
+In **保存するつもりだった**, the intention is past, but the saving is the intended action.
+In **保存したつもりだった**, the speaker recalls a belief that saving was already complete.
+In **保存したはずだ／ようだ**, the action is past but the judgment is being made **now**.
+An event happening yesterday does not automatically make the outer judgment past.
+
+Suppose someone planned at noon to save a finished file that evening, and then did so.
+The fulfilled plan still supports **保存するつもりだった** when recalling the noon intention.
+If someone instead closed an editing window believing the latest version was saved, only to discover otherwise,
+**保存したつもりだった** reports the earlier belief without claiming that it was true.
+Paying for course materials while believing the participation fee was paid is another possible mismatch:
+the person did perform an action, but not the particular payment they believed complete.
+
+**A discrepancy is common, not a mechanical answer key.** The set also includes an earlier belief that a door
+was locked, followed by a matching check, and an earlier booking belief supported by the confirmation email.
+Those explicit recollections preserve the distinction between **what was believed then** and **what was found later**.
+They do not make every isolated たつもりだった neutral in tone. Likewise, the two failed intentions do not imply
+that every つもりだった plan failed; two other intentions in the set are fulfilled.
+
+A first-person subject is not a shortcut either. A person who cannot clearly remember yesterday's operation
+may now infer their own saving or payment from a file record or receipt.
+That is a current **はずだ／ようだ** judgment, not necessarily a recollection of a particular earlier intention
+or self-assessment. Inferences about another person's locking or booking similarly concern an action;
+the evidence does not by itself establish that person's private thoughts or every procedural step.
+はず and よう share the selected inference answers without becoming global synonyms or certainty percentages.
+
+There are four questions per account, using **保存する**, **鍵を掛ける（かぎをかける）**,
+**払う（はらう）** and **予約する（よやくする）** in each class.
+The printed verb and one common instruction define the pool: dictionary-form verb + **つもりだった**,
+た-form verb + **つもりだった**, or た-form verb + **はずだ／ようだ**.
+The whole missing predicate is written in hiragana, without added particles, contractions or auxiliary patterns.
+Formal plain **であった** can replace **だった**, and **である** can replace **だ**;
+these alternatives are accepted, not recommended as equally conversational.
+
+Read the full visible English message as well as the Japanese situation. A present inference can be a true statement
+about a confirmed-belief scene without expressing the requested **earlier** belief.
+Other tense combinations, と思っていた recollections and longer paraphrases can be natural outside the named pool.
+This is bounded selection practice, not every past はず／つもり contrast; the earlier qualified はずだった
+recollection examples remain distinct. The next mixed set turns to normative judgment.
+
+## Mixed contextual selection: norms, predictions, and practical necessity
+
+English "should" can give advice, predict an event or point to a practical requirement. The final mixed set separates
+**what ought to be done**, **what the evidence suggests will happen**, and **the only available route to a stated goal**.
+Each question supplies a verb separately and leaves the whole verb-plus-construction predicate blank.
+
+| Account | Example | Meaning |
+| --- | --- | --- |
+| A norm | 借りた物は、約束の日までに返すべきだ。 | Borrowed items ought to be returned by the agreed date. |
+| A prediction | 準備を見ると、田中さんは明日、本を返すはずだ。 | From the preparation, I expect Tanaka to return the book tomorrow. |
+| No other available route | 預かり金を返してもらうには、道具を返すほかない。 | To get the deposit back, there is no available option but to return the tool. |
+
+**預かり金（あずかりきん）** is money held as a deposit.
+These are different accounts, not mutually exclusive worlds. A return can be proper conduct, likely to happen,
+and necessary for a refund at the same time. Read the complete visible English message:
+another true statement about the scene need not reproduce the account requested by the exercise.
+
+In the general conduct contexts, **べきだ** directly judges what ought to be done, while **ものだ** can present it
+as a proper customary standard. Both are accepted in those sentences. This does not make every ものだ normative
+or make the two constructions interchangeable everywhere. Two norms in the set are followed, and two are violated.
+Neither compliance nor failure chooses the construction for you, and a present norm is not automatically a past regret.
+The practice-recording norm concerns redoing the **affected part**, not restarting every activity after any mistake.
+
+The four predictions accept **はずだ／ようだ** together. A message, timetable or preparation can support a judgment
+about a future action; よう does not require seeing an already-started action. A promise or team rule may agree with
+the prediction, but is not proof of compliance. These shared answers do not test a fixed certainty scale or mastery
+of every nuance of はず and よう. A noisy recording and a new booking support an expected redo, not a claim that
+all other ways of improving the recording are impossible.
+
+**ほかない／しかない** instead exclude alternative means under the stated conditions. Keeping a borrowed tool may be
+permitted while returning it remains necessary for recovering its deposit today. Choosing a different room does not
+answer the question of whether **this** room is available. Withdrawing from an optional application does not produce
+its required recording. **An optional goal can still have a necessary means.**
+Waiting for a collection counter to open need not mean standing still there: other errands can be possible in the meantime.
+The only-route claim neither guarantees success nor requires resentment or resignation.
+
+The same four verbs recur across all three accounts: **返す（かえす）**, **待つ（まつ）**,
+**連絡する（れんらくする）** and **やり直す（やりなおす）**.
+Both **連絡するべきだ** and **連絡すべきだ** fit the normative contact question.
+That special する／す choice belongs before べき; keep する before もの, はず, よう, ほか and しか.
+The full-predicate blank accommodates both versions without duplicating a printed verb, object or recipient.
+
+One common instruction requests the supplied verb plus **べきだ／ものだ／はずだ／ようだ／ほかない／しかない**,
+as a complete plain nonpast hiragana predicate. Formal plain **である** may replace **だ**.
+For ほかない, optional **より** before ほか and **に／は／には** after it give eight accepted combinations,
+alongside しかない. There are 70 accepted renderings: 18 normative, 16 inferential and 36 no-alternative predicates.
+They share twelve exercise identities; they are not seventy independently tested distinctions.
+Formal variants are accepted without being recommended as equally conversational.
+
+Other added particles, contractions, tense changes and combined constructions are outside this stated pool,
+not universally bad Japanese. **ことだ**, directive **のだ／んだ**, **ほうがいい**, 必要 expressions and other
+paraphrases can serve related purposes in suitable contexts; the earlier tasks retain their own broader or narrower pools.
+The five mixed sets complete the bounded expansion described here, not every construction, register or possible cloze.
+
 ## References
 
 - [Japan Foundation: 「こと」（1）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201112.html) - nominalization, こと versus の, and fixed expressions.
@@ -1492,6 +1597,8 @@ This adds mixed intention/necessity selection, not every intention/outcome contr
 - [Bunpro: ことにする](https://bunpro.jp/grammar_points/ことにする), [ことになる](https://bunpro.jp/grammar_points/ことになる), and [ことができる](https://bunpro.jp/grammar_points/ことができる) - decisions versus resulting situations, and ability or possibility.
 - [ARC Tokyo: ことになりました](https://arc.ac.jp/Tokyo/mimi-bunpou053/) and [E-Japanese: ことになる](https://www.e-japanese.jp/?p=650) - personal decisions announced indirectly and results derived by calculation.
 - [Tofugu: つもり](https://www.tofugu.com/japanese-grammar/tsumori/) - intentions, intended representations, attachment and つもりで.
+- [Tae Kim: Formal expressions](https://guidetojapanese.org/learn/grammar/formal) - affirmative である／であった copulas and their written register; [JMdict via Jisho: 保存](https://jisho.org/search/保存), [掛ける](https://jisho.org/search/掛ける), [払う](https://jisho.org/search/払う), and [予約](https://jisho.org/search/予約) supply the relevant saving, locking, payment and booking senses, not independent attestation of every original sentence.
+- [JMdict via Jisho: 返す](https://jisho.org/search/返す), [待つ](https://jisho.org/search/待つ), [連絡](https://jisho.org/search/連絡), and [やり直す](https://jisho.org/search/やり直す) - the returning, waiting, contacting and redoing senses in mixed normative practice; lexical recognition does not independently attest the original scenarios.
 - [Bunpro: つもりだ](https://bunpro.jp/grammar_points/つもりだ) and [JMdict via Jisho: つもり](https://jisho.org/search/つもり) - affirmative and negative plans, and the lexical distinction between intention and belief; Tofugu also explains past intentions versus believed completion.
 - [Japan Foundation: Aく／ANに／Nになります](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00126/ja/render.do), [Daijisen: 積り](https://kotobank.jp/word/積り-572631), [JMdict via Jisho: なる](https://jisho.org/search/なる), and [Daijisen: 詳しい](https://kotobank.jp/word/詳しい-487503) - noun/adjective change attachment, intention versus assumed-role uses, and recognized spellings of the change verb and 詳しい; Tofugu's つもり attachment sections also cover noun and adjective predicates.
 - [Japan Foundation: つもり（1）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201212.html) and [つもり（2）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201303.html) - intention versus belief, negation placement, correcting a perceived intention and past intentions; distinguish the second lesson's Vる intention-denial examples from its Vた belief-negation examples.

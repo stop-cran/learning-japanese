@@ -560,6 +560,45 @@ Preserve voluntary unnecessary actions, optional extras, goal-relative alternati
 and the unavoidable passage of time. Neither a plan nor a sole available route guarantees actual completion.
 All365 earlier records and identities remain unchanged; past intention/outcome and other mixed families remain open.
 
+`formal-nouns-mixed-past-stance.json` adds 12 mixed viewpoint questions; see the
+[source record](grammar-mixed-past-stance-sources.json). Save/lock/pay/reserve recur across four earlier intentions,
+four earlier completion beliefs and four current inferences about past actions. The whole verb-plus-construction predicate
+is blank; a dictionary verb is supplied separately and one common pattern instruction applies to all questions.
+The full English meaning remains visible. Another true statement about a scene need not reproduce the requested account.
+
+Accept dictionary-form verb + つもりだった／つもりであった for the earlier intentions, た-form verb +
+つもりだった／つもりであった for the earlier completion beliefs, and た-form verb + はずだ／ようだ with
+their である alternatives for current inferences. All32 accepted renderings include the verb and are in hiragana.
+Two はず and two よう correct models share one inference class. Do not put an accepted equivalent on a wrong button.
+The named pool excludes other tense combinations, added particles, contractions and auxiliary constructions; it does not
+reject those constructions globally or claim unrestricted discrimination of past はず versus past つもり.
+Preserve the two fulfilled and two unfulfilled intentions, the two supported and two contradicted earlier beliefs, and
+the payment of a different fee rather than no payment at all. First-person current inferences prevent subject identity
+from replacing the time/attitude distinction. Keep event time, attitude time and later confirmation separate.
+All377 earlier records and identities remain unchanged; this set precedes the final normative mixed batch below.
+
+`formal-nouns-mixed-norms-expectations.json` adds the final 12 planned mixed questions; see the
+[source record](grammar-mixed-norms-expectations-sources.json). Return/wait/contact/redo recur across four norms,
+four future-action predictions and four goal-relative no-alternative conclusions. The whole predicate is blank and
+the dictionary verb is supplied separately. Every question uses the same visible six-pattern pool and instruction.
+
+Accept べきだ／ものだ for the selected general norms, はずだ／ようだ for the predictions, and all eight optional
+より／に／は／には forms with ほか plus しかない for necessity. All accepted predicates include the supplied verb
+in hiragana. The normative 連絡する item also accepts 連絡すべき; that alternation is not generalized to the other
+endings or the final す of 返す／やり直す. Formal plain である is allowed for the copular endings.
+The 70 renderings comprise 18 normative, 16 inferential and 36 no-alternative answers, not 70 independent targets.
+
+Preserve followed and violated norms, predictions consistent with a rule but not guaranteed by it, and the visible English
+account when several true statements coexist. Preserve the exact goal: a refund today, this collection service, this room's
+availability or the required self-read recording. Giving up or changing that goal is not another means to achieving it.
+Waiting for opening does not force physical inactivity. The normative partial redo and necessary whole redo have different
+objects; the noisy-file prediction does not assert impossible restoration. Keep these independent scenarios separate.
+No accepted equivalent belongs on a wrong button. The shared instruction excludes other particles, contractions, auxiliaries
+and tense changes, not the wider validity of directive こと／の, advice, necessity or other paraphrases.
+All389 prior records and identities, including the reviewed uncommitted past-stance set, remain unchanged.
+The five mixed sets complete the bounded formal-noun authoring expansion, not the separate Android engineering/docs/evidence
+acceptance or relationship-aware introduction policy. No runtime, schema, grading, counter or SRS changes.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.

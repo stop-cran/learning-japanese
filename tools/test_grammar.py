@@ -2351,5 +2351,144 @@ class GrammarMixedIntentionNecessityCoverageTests(unittest.TestCase):
         self.assertIn("does not guarantee", self.exercises["mixed-only-option-redo"]["explanation"])
 
 
+class GrammarMixedPastStanceCoverageTests(unittest.TestCase):
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((root / "grammar" / "formal-nouns-mixed-past-stance.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_shared_verbs_leave_the_whole_predicate_and_viewpoint_to_choose(self):
+        targets = {"mixed-earlier-intention", "mixed-earlier-completion-belief", "mixed-current-completion-inference"}
+        instruction = (
+            "Complete the whole predicate using the supplied verb: dictionary form + つもりだった, "
+            "た-form + つもりだった, or た-form + はずだ／ようだ. Write the verb and ending in hiragana. "
+            "You may replace だった with であった and だ with である. "
+            "Use no contractions, added particles or other auxiliary constructions. "
+        )
+        for topic, verb in {
+            "save": "保存する（ほぞんする）", "lock": "掛ける（かける）",
+            "pay": "払う（はらう）", "reserve": "予約する（よやくする）",
+        }.items():
+            group = [exercise for exercise in self.exercises.values() if exercise["id"].endswith("-" + topic)]
+            self.assertEqual(3, len(group), topic)
+            self.assertEqual(targets, {exercise["target"] for exercise in group}, topic)
+            for exercise in group:
+                self.assertTrue(exercise["prompt"].startswith("【動詞：" + verb + "】\n"), exercise["id"])
+                self.assertIn("を____。", exercise["prompt"], exercise["id"])
+                self.assertNotIn("つもり", exercise["prompt"], exercise["id"])
+                self.assertNotIn("はず", exercise["prompt"], exercise["id"])
+                self.assertTrue(exercise["translation"].startswith(instruction), exercise["id"])
+                self.assertEqual(targets, {option["id"] for option in exercise["options"]}, exercise["id"])
+
+    def test_complete_predicates_keep_all_named_copulas_and_shared_inferences(self):
+        models = set()
+        for topic, (dictionary, past) in {
+            "save": ("ほぞんする", "ほぞんした"), "lock": ("かける", "かけた"),
+            "pay": ("はらう", "はらった"), "reserve": ("よやくする", "よやくした"),
+        }.items():
+            answers = {
+                "mixed-earlier-plan-": {dictionary + ending for ending in ("つもりだった", "つもりであった")},
+                "mixed-earlier-belief-": {past + ending for ending in ("つもりだった", "つもりであった")},
+                "mixed-now-inference-": {past + ending for ending in ("はずだ", "ようだ", "はずである", "ようである")},
+            }
+            for prefix, accepted in answers.items():
+                exercise = self.exercises[prefix + topic]
+                self.assertEqual(accepted, set(exercise["acceptedAnswers"]), exercise["id"])
+                self.assertEqual(1, sum(option["label"] in accepted for option in exercise["options"]), exercise["id"])
+                if prefix == "mixed-now-inference-":
+                    model = next(option["label"] for option in exercise["options"] if option["id"] == exercise["answer"])
+                    models.add(model.removeprefix(past))
+        self.assertEqual({"はずだ", "ようだ"}, models)
+
+    def test_outcomes_and_first_person_do_not_replace_the_attitude_distinction(self):
+        self.assertIn("実際に夕方までに保存し", self.exercises["mixed-earlier-plan-save"]["prompt"])
+        self.assertIn("予定どおり自分で払い", self.exercises["mixed-earlier-plan-pay"]["prompt"])
+        self.assertIn("鍵を掛けないまま", self.exercises["mixed-earlier-plan-lock"]["prompt"])
+        self.assertIn("その日は予約しなかった", self.exercises["mixed-earlier-plan-reserve"]["prompt"])
+        self.assertIn("実際には保存されていなかった", self.exercises["mixed-earlier-belief-save"]["prompt"])
+        self.assertIn("払ったのは教材費だけ", self.exercises["mixed-earlier-belief-pay"]["prompt"])
+        self.assertIn("やはり鍵は掛かっていた", self.exercises["mixed-earlier-belief-lock"]["prompt"])
+        self.assertIn("その部屋と日付が正しく載っていた", self.exercises["mixed-earlier-belief-reserve"]["prompt"])
+        for topic in ("save", "pay"):
+            inference = self.exercises["mixed-now-inference-" + topic]
+            self.assertIn("覚えていない", inference["prompt"])
+            self.assertIn("今", inference["prompt"])
+            self.assertIn("私は", inference["prompt"])
+        self.assertIn("not a guarantee", self.exercises["mixed-now-inference-lock"]["explanation"])
+        self.assertIn("not the requested recollection", self.exercises["mixed-earlier-belief-reserve"]["options"][2]["rationale"])
+
+
+class GrammarMixedNormsExpectationsCoverageTests(unittest.TestCase):
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((root / "grammar" / "formal-nouns-mixed-norms-expectations.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_common_pool_and_full_predicate_across_matched_verbs(self):
+        targets = {"mixed-normative-judgment", "mixed-predicted-action", "mixed-goal-relative-necessity"}
+        instruction = (
+            "Complete the whole predicate in hiragana using the supplied verb + "
+            "べきだ／ものだ／はずだ／ようだ／ほかない／しかない. "
+            "You may use である for だ and すべき for するべき; with ほかない, "
+            "より before ほか and に／は／には after it are optional. "
+            "Use no other added particles, contractions, auxiliaries or tense changes. "
+        )
+        for topic, verb in {
+            "return": "返す（かえす）", "wait": "待つ（まつ）",
+            "contact": "連絡する（れんらくする）", "redo": "やり直す（やりなおす）",
+        }.items():
+            group = [exercise for exercise in self.exercises.values() if exercise["id"].endswith("-" + topic)]
+            self.assertEqual(3, len(group), topic)
+            self.assertEqual(targets, {exercise["target"] for exercise in group}, topic)
+            for exercise in group:
+                self.assertTrue(exercise["prompt"].startswith("【動詞：" + verb + "】\n"), exercise["id"])
+                self.assertEqual(1, exercise["prompt"].count("____"), exercise["id"])
+                self.assertIn("____。", exercise["prompt"], exercise["id"])
+                self.assertTrue(exercise["translation"].startswith(instruction), exercise["id"])
+                self.assertEqual(targets, {option["id"] for option in exercise["options"]}, exercise["id"])
+
+    def test_all_equivalents_fit_whole_predicates_including_su_beki(self):
+        hoka = {yori + "ほか" + particle + "ない" for yori in ("", "より") for particle in ("", "に", "は", "には")}
+        prediction_models = set()
+        for topic, verb in {
+            "return": "かえす", "wait": "まつ", "contact": "れんらくする", "redo": "やりなおす",
+        }.items():
+            normative = {verb + base + copula for base in ("べき", "もの") for copula in ("だ", "である")}
+            if topic == "contact":
+                normative |= {"れんらくすべきだ", "れんらくすべきである"}
+            answers = {
+                "mixed-norm-": normative,
+                "mixed-prediction-": {verb + base + copula for base in ("はず", "よう") for copula in ("だ", "である")},
+                "mixed-necessary-": {verb + ending for ending in hoka | {"しかない"}},
+            }
+            for prefix, accepted in answers.items():
+                exercise = self.exercises[prefix + topic]
+                self.assertEqual(accepted, set(exercise["acceptedAnswers"]), exercise["id"])
+                self.assertEqual(1, sum(option["label"] in accepted for option in exercise["options"]), exercise["id"])
+                if prefix == "mixed-prediction-":
+                    model = next(option["label"] for option in exercise["options"] if option["id"] == exercise["answer"])
+                    prediction_models.add(model.removeprefix(verb))
+        self.assertEqual({"はずだ", "ようだ"}, prediction_models)
+
+    def test_compliance_and_opt_out_do_not_replace_message_or_goal(self):
+        self.assertIn("過ぎても本を返していない", self.exercises["mixed-norm-return"]["prompt"])
+        self.assertIn("そのまま次へ進んでしまう", self.exercises["mixed-norm-redo"]["prompt"])
+        self.assertIn("全員が最後まで静かに", self.exercises["mixed-norm-wait"]["prompt"])
+        self.assertIn("全員、事前に知らせていた", self.exercises["mixed-norm-contact"]["prompt"])
+        self.assertIn("約束の日", self.exercises["mixed-prediction-return"]["prompt"])
+        self.assertIn("決まりがある", self.exercises["mixed-prediction-contact"]["prompt"])
+        self.assertIn("連絡先を開いている", self.exercises["mixed-prediction-contact"]["prompt"])
+        self.assertIn("まだ貸出期間内", self.exercises["mixed-necessary-return"]["prompt"])
+        self.assertIn("外で用事を済ませてもよく", self.exercises["mixed-necessary-wait"]["prompt"])
+        self.assertIn("別の部屋を選んでもよい", self.exercises["mixed-necessary-contact"]["prompt"])
+        redo = self.exercises["mixed-necessary-redo"]
+        self.assertIn("できず、コピーもない", redo["prompt"])
+        self.assertIn("応募をやめることもできる", redo["prompt"])
+        self.assertIn("最初から____", redo["prompt"])
+        self.assertIn("その部分の録音を____", self.exercises["mixed-norm-redo"]["prompt"])
+        self.assertIn("not proof", self.exercises["mixed-prediction-contact"]["explanation"])
+        self.assertIn("does not establish", self.exercises["mixed-prediction-redo"]["options"][2]["rationale"])
+
+
 if __name__ == "__main__":
     unittest.main()

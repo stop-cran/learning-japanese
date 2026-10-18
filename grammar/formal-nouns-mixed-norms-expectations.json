@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-mixed-norms-expectations",
+  "title": "Mixed practice: norms, predictions and practical necessity",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "mixed-normative-judgment", "label": "べき／もの: what ought to be done" },
+    { "id": "mixed-predicted-action", "label": "はず／よう: what the evidence suggests will happen" },
+    { "id": "mixed-goal-relative-necessity", "label": "ほか／しか: the only available route to a goal" }
+  ],
+  "relationships": [
+    {
+      "id": "norm-prediction-practical-necessity",
+      "label": "a judgment about conduct / a prediction / no other available means",
+      "constructions": ["mixed-normative-judgment", "mixed-predicted-action", "mixed-goal-relative-necessity"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "mixed-norm-return",
+      "target": "mixed-normative-judgment",
+      "relationship": "norm-prediction-practical-necessity",
+      "prompt": "【動詞：返す（かえす）】\n借りた物を長く使いたい場合も、持ち主との約束は大切だ。借りた物は、約束の日までに持ち主に____。ところが、健さんは期限（きげん）を過ぎても本を返していない。",
+      "translation": "Complete the whole predicate in hiragana using the supplied verb + べきだ／ものだ／はずだ／ようだ／ほかない／しかない. You may use である for だ and すべき for するべき; with ほかない, より before ほか and に／は／には after it are optional. Use no other added particles, contractions, auxiliaries or tense changes. Even if we want to use a borrowed item longer, our promise to its owner matters. We ought to return borrowed items to their owners by the agreed date. Yet Ken has kept a book past its due date.",
+      "evidence": "The requested message states how borrowers ought to act, even though the stated borrower has not complied. It is not a forecast of what Ken will actually do.",
+      "explanation": "返すべきだ directly judges the proper action; 返すものだ can present the same general borrowing norm. Both fit this requested account, including their formal である versions. The two constructions differ in framing and are not universal synonyms. Ken's failure to comply does not invalidate the norm or turn this into a past regret. A normative judgment does not by itself establish that returning is the only available means to some separate practical goal.",
+      "answer": "mixed-normative-judgment",
+      "acceptedAnswers": ["かえすべきだ", "かえすべきである", "かえすものだ", "かえすものである"],
+      "options": [
+        { "id": "mixed-normative-judgment", "label": "かえすべきだ", "rationale": "States what borrowers ought to do, regardless of this borrower's actual conduct." },
+        { "id": "mixed-predicted-action", "label": "かえすはずだ", "rationale": "Would express an expectation about actual returning, not the requested judgment about proper conduct." },
+        { "id": "mixed-goal-relative-necessity", "label": "かえすしかない", "rationale": "Would frame returning as the only available option, rather than state the requested borrowing norm." }
+      ]
+    },
+    {
+      "id": "mixed-prediction-return",
+      "target": "mixed-predicted-action",
+      "relationship": "norm-prediction-practical-necessity",
+      "prompt": "【動詞：返す（かえす）】\n明日は田中さんが図書館に本を返す約束の日だ。本人から明日返すという連絡があり、その本も明日持って行くかばんに入っている。こうした情報から考えると、田中さんは明日、その本を図書館に____。",
+      "translation": "Complete the whole predicate in hiragana using the supplied verb + べきだ／ものだ／はずだ／ようだ／ほかない／しかない. You may use である for だ and すべき for するべき; with ほかない, より before ほか and に／は／には after it are optional. Use no other added particles, contractions, auxiliaries or tense changes. Tomorrow is the day Tanaka promised to return the book to the library. Tanaka has said they will return it tomorrow, and the book is already in the bag Tanaka will take tomorrow. From this information, I expect Tanaka to return the book to the library tomorrow.",
+      "evidence": "The promise, message and preparation support a prediction about tomorrow's action. Returning also fulfills a promise, but that does not change the requested prediction into a prescription.",
+      "explanation": "返すはずだ expresses the reasoned expectation; 返すようだ presents what the information suggests will happen. Both fit this future-action judgment, with their である alternatives. The evidence supports rather than guarantees compliance. A duty and an expectation can coincide: 返すべきだ might be a defensible separate judgment here, but it does not reproduce the requested forecast. This is not independent discrimination of はず versus よう.",
+      "answer": "mixed-predicted-action",
+      "acceptedAnswers": ["かえすはずだ", "かえすはずである", "かえすようだ", "かえすようである"],
+      "options": [
+        { "id": "mixed-normative-judgment", "label": "かえすべきだ", "rationale": "Would judge what Tanaka ought to do. That can be true here, but it is not the requested prediction." },
+        { "id": "mixed-predicted-action", "label": "かえすはずだ", "rationale": "Predicts the return from the message and preparation, without guaranteeing it." },
+        { "id": "mixed-goal-relative-necessity", "label": "かえすほかない", "rationale": "Would assert that no other option is available, not report the action expected from this evidence." }
+      ]
+    },
+    {
+      "id": "mixed-necessary-return",
+      "target": "mixed-goal-relative-necessity",
+      "relationship": "norm-prediction-practical-necessity",
+      "prompt": "【動詞：返す（かえす）】\nこの貸出サービスでは、借りた道具を返した場合にだけ預かり金（あずかりきん）が戻る。まだ貸出期間内なので借り続けてもよいが、今日そのお金を返してもらうには、道具を____。",
+      "translation": "Complete the whole predicate in hiragana using the supplied verb + べきだ／ものだ／はずだ／ようだ／ほかない／しかない. You may use である for だ and すべき for するべき; with ほかない, より before ほか and に／は／には after it are optional. Use no other added particles, contractions, auxiliaries or tense changes. This loan service refunds the deposit only when the borrowed tool is returned. We may keep borrowing it because the loan period has not ended, but to get that money back today, there is no available option but to return the tool.",
+      "evidence": "The refund condition makes returning the tool necessary for recovering the deposit today. Keeping the tool remains permitted, but does not achieve that goal.",
+      "explanation": "返すほかない and 返すしかない state the absence of another available means to the specified refund. All eight named ほか combinations and しかない are accepted. This is goal-relative necessity, not a claim that everyone is morally obliged to return the tool today. Permission to keep borrowing does not supply another way to recover the deposit today. The statement need not express resentment or predict that the borrower will actually seek the refund.",
+      "answer": "mixed-goal-relative-necessity",
+      "acceptedAnswers": ["かえすほかない", "かえすほかにない", "かえすほかはない", "かえすほかにはない", "かえすよりほかない", "かえすよりほかにない", "かえすよりほかはない", "かえすよりほかにはない", "かえすしかない"],
+      "options": [
+        { "id": "mixed-normative-judgment", "label": "かえすべきだ", "rationale": "Would recommend or judge returning to be the proper action; it does not explicitly state the requested absence of another route to the refund." },
+        { "id": "mixed-predicted-action", "label": "かえすはずだ", "rationale": "Would predict returning. A refund condition does not by itself establish that someone will choose to seek the refund." },
+        { "id": "mixed-goal-relative-necessity", "label": "かえすほかない", "rationale": "Identifies the only available route to getting the deposit back under the stated condition." }
+      ]
+    },
+    {
+      "id": "mixed-norm-wait",
+      "target": "mixed-normative-judgment",
+      "relationship": "norm-prediction-practical-necessity",
+      "prompt": "【動詞：待つ（まつ）】\n相手を尊重（そんちょう）することは、話し合いの大切な礼儀（れいぎ）だ。人が話しているときは、途中で口を挟まず、話が終わるまで____。今日の話し合いでも、全員が最後まで静かに聞いていた。",
+      "translation": "Complete the whole predicate in hiragana using the supplied verb + べきだ／ものだ／はずだ／ようだ／ほかない／しかない. You may use である for だ and すべき for するべき; with ほかない, より before ほか and に／は／には after it are optional. Use no other added particles, contractions, auxiliaries or tense changes. Respect for others is an important part of discussion etiquette. When someone is speaking, we ought to wait until they finish instead of interrupting. In today's discussion, everyone did listen quietly to the end.",
+      "evidence": "The requested sentence states considerate conduct. Today's compliance illustrates that norm, but does not turn the requested message into a forecast.",
+      "explanation": "待つものだ presents the waiting as proper customary conduct; 待つべきだ directly states what ought to be done. Both complete this general norm, including である variants. The example deliberately includes compliance: an observed success does not force はず or よう. A general ものだ can also describe characteristic behavior elsewhere; the requested English message and the etiquette context select the normative account here.",
+      "answer": "mixed-normative-judgment",
+      "acceptedAnswers": ["まつべきだ", "まつべきである", "まつものだ", "まつものである"],
+      "options": [
+        { "id": "mixed-normative-judgment", "label": "まつものだ", "rationale": "States the expected standard of considerate conduct, not a prediction about a particular future wait." },
+        { "id": "mixed-predicted-action", "label": "まつようだ", "rationale": "Would report what information suggests people will do, instead of stating the requested etiquette norm." },
+        { "id": "mixed-goal-relative-necessity", "label": "まつしかない", "rationale": "Would present waiting as the only available option, not express the requested judgment about considerate behavior." }
+      ]
+    },
+    {
+      "id": "mixed-prediction-wait",
+      "target": "mixed-predicted-action",
+      "relationship": "norm-prediction-practical-necessity",
+      "prompt": "【動詞：待つ（まつ）】\n時刻表では、美咲さんの電車が友達の電車より20分早く着く。美咲さんは駅で待つと連絡しており、ほかの用事も入れていない。予定から考えると、美咲さんは明日、友達が着くまで駅で____。",
+      "translation": "Complete the whole predicate in hiragana using the supplied verb + べきだ／ものだ／はずだ／ようだ／ほかない／しかない. You may use である for だ and すべき for するべき; with ほかない, より before ほか and に／は／には after it are optional. Use no other added particles, contractions, auxiliaries or tense changes. The timetable has Misaki's train arriving twenty minutes before her friend's. Misaki has said she will wait at the station and has not scheduled any other errands. From these arrangements, it appears that tomorrow she will wait at the station until her friend arrives.",
+      "evidence": "The timetable and reported arrangement support an inference about a future action. The message is not advice to Misaki or a proof that staying at the station is the sole possible plan.",
+      "explanation": "待つようだ gives the information-based assessment, while 待つはずだ expresses the reasoned expectation; both are accepted with their である versions. よう does not require direct visual observation of an action that has already begun. Reported plans support a prediction but do not guarantee that the plan will be followed. They also do not establish that staying here is the only available way to meet the friend.",
+      "answer": "mixed-predicted-action",
+      "acceptedAnswers": ["まつはずだ", "まつはずである", "まつようだ", "まつようである"],
+      "options": [
+        { "id": "mixed-normative-judgment", "label": "まつべきだ", "rationale": "Would judge waiting to be the proper action, instead of report what the arrangements suggest will happen." },
+        { "id": "mixed-predicted-action", "label": "まつようだ", "rationale": "Presents the future waiting as what the available information suggests." },
+        { "id": "mixed-goal-relative-necessity", "label": "まつほかない", "rationale": "Would assert an absence of alternatives; the timetable and reported plan do not supply that requested meaning." }
+      ]
+    },
+    {
+      "id": "mixed-necessary-wait",
+      "target": "mixed-goal-relative-necessity",
+      "relationship": "norm-prediction-practical-necessity",
+      "prompt": "【動詞：待つ（まつ）】\n資料を受け取る窓口は10時に開き、開く前の受け取りや別の受け取り方は利用できない。今は9時50分だ。この窓口で今日資料を受け取るには、10時まで____。その間に外で用事を済ませてもよく、受け取りをやめてもよい。",
+      "translation": "Complete the whole predicate in hiragana using the supplied verb + べきだ／ものだ／はずだ／ようだ／ほかない／しかない. You may use である for だ and すべき for するべき; with ほかない, より before ほか and に／は／には after it are optional. Use no other added particles, contractions, auxiliaries or tense changes. The collection counter opens at ten; collection before opening and alternative collection methods are unavailable. It is now nine fifty. To collect the materials here today, we have no available option but to wait until ten. We may run errands elsewhere meanwhile or decide not to collect them.",
+      "evidence": "The opening time prevents this collection before ten. The goal requires waiting for that time, not necessarily remaining in one place without doing anything else.",
+      "explanation": "待つしかない and the eight named 待つほかない variants express the delay required for the specified collection. Going elsewhere meanwhile does not bring the opening time forward, and giving up collection does not achieve the collection goal. This is not an etiquette instruction to stand still or a forecast that someone will decide to collect the materials. Necessity is relative to the goal and the available service, not every imaginable activity.",
+      "answer": "mixed-goal-relative-necessity",
+      "acceptedAnswers": ["まつほかない", "まつほかにない", "まつほかはない", "まつほかにはない", "まつよりほかない", "まつよりほかにない", "まつよりほかはない", "まつよりほかにはない", "まつしかない"],
+      "options": [
+        { "id": "mixed-normative-judgment", "label": "まつべきだ", "rationale": "Would give a recommendation or judgment, rather than explicitly state the only available course for the specified collection." },
+        { "id": "mixed-predicted-action", "label": "まつはずだ", "rationale": "Would predict waiting. The service constraint alone does not establish what the person will actually choose to do." },
+        { "id": "mixed-goal-relative-necessity", "label": "まつしかない", "rationale": "Expresses the unavoidable delay if the materials are to be collected through this service." }
+      ]
+    },
+    {
+      "id": "mixed-norm-contact",
+      "target": "mixed-normative-judgment",
+      "relationship": "norm-prediction-practical-necessity",
+      "prompt": "【動詞：連絡する（れんらくする）】\n約束の時刻に遅れると分かったら、相手を待たせたままにせず、早めに相手に____。昨日の集合でも、遅れる人は全員、事前に知らせていた。",
+      "translation": "Complete the whole predicate in hiragana using the supplied verb + べきだ／ものだ／はずだ／ようだ／ほかない／しかない. You may use である for だ and すべき for するべき; with ほかない, より before ほか and に／は／には after it are optional. Use no other added particles, contractions, auxiliaries or tense changes. If we realize we will be late for an appointment, we ought to contact the other person promptly rather than leave them waiting without word. At yesterday's gathering, everyone who was running late did notify the others beforehand.",
+      "evidence": "The requested account judges what considerate participants ought to do. The later example of compliance supports the illustration without making the sentence a prediction.",
+      "explanation": "連絡するべきだ and 連絡すべきだ both state the duty; the special する／す choice applies before べき. 連絡するものだ also fits this general conduct norm. All three allow the formal である ending here. Do not shorten する to す before もの, はず, よう, ほか or しか. The full predicate is blank so both するべき and すべき can fit literally; a blank after printed 連絡する would not allow that same substitution.",
+      "answer": "mixed-normative-judgment",
+      "acceptedAnswers": ["れんらくするべきだ", "れんらくするべきである", "れんらくすべきだ", "れんらくすべきである", "れんらくするものだ", "れんらくするものである"],
+      "options": [
+        { "id": "mixed-normative-judgment", "label": "れんらくすべきだ", "rationale": "States the proper action with the accepted すべき form of the supplied する verb." },
+        { "id": "mixed-predicted-action", "label": "れんらくするようだ", "rationale": "Would assess what people apparently do or will do, not state the requested conduct norm." },
+        { "id": "mixed-goal-relative-necessity", "label": "れんらくするしかない", "rationale": "Would claim that contact is the only available option, instead of judging it to be proper conduct." }
+      ]
+    },
+    {
+      "id": "mixed-prediction-contact",
+      "target": "mixed-predicted-action",
+      "relationship": "norm-prediction-practical-necessity",
+      "prompt": "【動詞：連絡する（れんらくする）】\nこのチームでは、作業が終わったら担当者に知らせる決まりがある。田中さんは今、作業を終え、担当者の連絡先を開いている。こうした様子から、田中さんはこれから担当者に____。",
+      "translation": "Complete the whole predicate in hiragana using the supplied verb + べきだ／ものだ／はずだ／ようだ／ほかない／しかない. You may use である for だ and すべき for するべき; with ほかない, より before ほか and に／は／には after it are optional. Use no other added particles, contractions, auxiliaries or tense changes. This team has a rule that completed work is reported to the person in charge. Tanaka has just finished the work and has opened that person's contact details. From these signs, I expect Tanaka to contact that person next.",
+      "evidence": "A rule exists, but the requested account predicts a particular action from that rule and the visible preparation. It does not merely restate the rule.",
+      "explanation": "連絡するはずだ expresses the expectation, and 連絡するようだ can present the same evidence-based future assessment. Both permit である here. The prediction happens to agree with what the team requires: that overlap does not make べき the answer to a request for a forecast. The rule and preparation are evidence, not proof that the contact will occur. Keep する before はず and よう.",
+      "answer": "mixed-predicted-action",
+      "acceptedAnswers": ["れんらくするはずだ", "れんらくするはずである", "れんらくするようだ", "れんらくするようである"],
+      "options": [
+        { "id": "mixed-normative-judgment", "label": "れんらくするべきだ", "rationale": "Would state an appropriate obligation, but not the requested inference about what Tanaka will do next." },
+        { "id": "mixed-predicted-action", "label": "れんらくするはずだ", "rationale": "Predicts contact from the rule plus the current preparation, without treating the rule alone as proof." },
+        { "id": "mixed-goal-relative-necessity", "label": "れんらくするほかない", "rationale": "Would assert that no other option is available, not express the requested future-action judgment." }
+      ]
+    },
+    {
+      "id": "mixed-necessary-contact",
+      "target": "mixed-goal-relative-necessity",
+      "relationship": "norm-prediction-practical-necessity",
+      "prompt": "【動詞：連絡する（れんらくする）】\nこの部屋の未公開の利用予定を知っているのは管理者（かんりしゃ）だけで、ほかの人やウェブサイトからは確認できない。この部屋が今日使えるかを確かめるには、管理者に____。別の部屋を選んでもよいが、その場合はこの部屋についての確認をやめることになる。",
+      "translation": "Complete the whole predicate in hiragana using the supplied verb + べきだ／ものだ／はずだ／ようだ／ほかない／しかない. You may use である for だ and すべき for するべき; with ほかない, より before ほか and に／は／には after it are optional. Use no other added particles, contractions, auxiliaries or tense changes. Only the administrator knows this room's unpublished usage schedule; no other person or website can confirm it. To establish whether this room can be used today, we have no available option but to contact the administrator. We may choose another room, but that means abandoning this particular inquiry.",
+      "evidence": "The administrator is the only available source for confirming this room's availability. Choosing another room remains possible but does not answer the stated question about this one.",
+      "explanation": "連絡するよりほかない, the other seven named ほか variants, and 連絡するしかない all express the unavailable alternative route. The goal is checking this room's availability, not merely finding any venue. Switching rooms may be sensible, but it changes the goal. These expressions do not restrict contact to a particular communication channel or guarantee that the room will turn out to be available. Keep する in the full predicate.",
+      "answer": "mixed-goal-relative-necessity",
+      "acceptedAnswers": ["れんらくするほかない", "れんらくするほかにない", "れんらくするほかはない", "れんらくするほかにはない", "れんらくするよりほかない", "れんらくするよりほかにない", "れんらくするよりほかはない", "れんらくするよりほかにはない", "れんらくするしかない"],
+      "options": [
+        { "id": "mixed-normative-judgment", "label": "れんらくするべきだ", "rationale": "Could recommend contact, but does not explicitly express the requested absence of another way to confirm this room's availability." },
+        { "id": "mixed-predicted-action", "label": "れんらくするようだ", "rationale": "Would report an apparent action or plan, rather than identify the only available information route." },
+        { "id": "mixed-goal-relative-necessity", "label": "れんらくするよりほかない", "rationale": "States the only available route to answering the question about this particular room." }
+      ]
+    },
+    {
+      "id": "mixed-norm-redo",
+      "target": "mixed-normative-judgment",
+      "relationship": "norm-prediction-practical-necessity",
+      "prompt": "【動詞：やり直す（やりなおす）】\n録音（ろくおん）の練習で読み間違いに気づいたら、間違いをそのままにせず、その部分の録音を____。ところが、健さんは間違いに気づいても、そのまま次へ進んでしまう。",
+      "translation": "Complete the whole predicate in hiragana using the supplied verb + べきだ／ものだ／はずだ／ようだ／ほかない／しかない. You may use である for だ and すべき for するべき; with ほかない, より before ほか and に／は／には after it are optional. Use no other added particles, contractions, auxiliaries or tense changes. When we notice a reading mistake during recording practice, we ought to redo that part of the recording instead of leaving the mistake uncorrected. Yet Ken goes straight on even when he notices a mistake.",
+      "evidence": "The requested sentence gives a standard for how to approach this practice. Ken's contrary behavior does not make that standard a prediction or a report of an unavoidable technical constraint.",
+      "explanation": "やり直すものだ can present this as proper practice; やり直すべきだ directly judges what the learner ought to do. Both fit here, including である. The object is the affected part of the practice recording, not necessarily the entire recording. This is an original practice norm in the stated context, not a claim that every mistake in every activity requires starting over. Norms may be violated; the violation does not change the requested present judgment into a past expectation.",
+      "answer": "mixed-normative-judgment",
+      "acceptedAnswers": ["やりなおすべきだ", "やりなおすべきである", "やりなおすものだ", "やりなおすものである"],
+      "options": [
+        { "id": "mixed-normative-judgment", "label": "やりなおすものだ", "rationale": "Presents the redo as the proper practice standard despite the stated learner's noncompliance." },
+        { "id": "mixed-predicted-action", "label": "やりなおすはずだ", "rationale": "Would express an expectation about actual redoing, not the requested standard of conduct." },
+        { "id": "mixed-goal-relative-necessity", "label": "やりなおすしかない", "rationale": "Would describe having no available alternative, rather than judge how the practice ought to be approached." }
+      ]
+    },
+    {
+      "id": "mixed-prediction-redo",
+      "target": "mixed-predicted-action",
+      "relationship": "norm-prediction-practical-necessity",
+      "prompt": "【動詞：やり直す（やりなおす）】\n提出用の録音（ろくおん）に大きな雑音（ざつおん）が入っていた。鈴木さんは明日の録音時間を予約し、台本（だいほん）も練習し直している。こうした準備から考えると、鈴木さんは明日の午後、その録音を最初から____。",
+      "translation": "Complete the whole predicate in hiragana using the supplied verb + べきだ／ものだ／はずだ／ようだ／ほかない／しかない. You may use である for だ and すべき for するべき; with ほかない, より before ほか and に／は／には after it are optional. Use no other added particles, contractions, auxiliaries or tense changes. The recording intended for submission contained loud noise. Suzuki has reserved recording time tomorrow and is practicing the script again. From these preparations, it appears that Suzuki will redo that recording from the beginning tomorrow afternoon.",
+      "evidence": "The new booking and renewed practice are evidence for a forthcoming redo. The question asks for that assessment, not advice or a claim that the original file cannot be repaired.",
+      "explanation": "やり直すようだ presents the apparent forthcoming action, while やり直すはずだ expresses the reasoned expectation. Both fit with either だ or である. Preparations do not guarantee successful completion or establish that redoing is the only possible way to improve the audio. Contrast the separate lost-file item, which explicitly removes restoration and copies; these are independent scenarios, not stages of one story.",
+      "answer": "mixed-predicted-action",
+      "acceptedAnswers": ["やりなおすはずだ", "やりなおすはずである", "やりなおすようだ", "やりなおすようである"],
+      "options": [
+        { "id": "mixed-normative-judgment", "label": "やりなおすべきだ", "rationale": "Would judge a redo to be appropriate, rather than report the requested expectation from the preparations." },
+        { "id": "mixed-predicted-action", "label": "やりなおすようだ", "rationale": "Presents the redo as the future action suggested by the booking and practice." },
+        { "id": "mixed-goal-relative-necessity", "label": "やりなおすほかない", "rationale": "Would assert an absence of alternatives. The noisy-file scenario does not establish that restoration or other correction is impossible." }
+      ]
+    },
+    {
+      "id": "mixed-necessary-redo",
+      "target": "mixed-goal-relative-necessity",
+      "relationship": "norm-prediction-practical-necessity",
+      "prompt": "【動詞：やり直す（やりなおす）】\n自分で全文を読んだ録音ファイルを提出する必要があるが、用意したファイルは壊れて復元（ふくげん）できず、コピーもない。応募（おうぼ）するには、録音（ろくおん）を最初から____。応募をやめることもできる。",
+      "translation": "Complete the whole predicate in hiragana using the supplied verb + べきだ／ものだ／はずだ／ようだ／ほかない／しかない. You may use である for だ and すべき for するべき; with ほかない, より before ほか and に／は／には after it are optional. Use no other added particles, contractions, auxiliaries or tense changes. The application requires an audio file of us reading the complete text ourselves, but our prepared file is damaged beyond restoration and there is no copy. To apply, we have no available option but to redo the recording from the beginning. We may also choose not to apply.",
+      "evidence": "The required self-read recording is unavailable, restoration is impossible and no copy remains. Redoing it is necessary for this application, even though entering is optional.",
+      "explanation": "やり直すしかない and all eight named やり直すほかない variants state the remaining route to the required submission. An optional goal can still have a necessary means: withdrawing does not supply the required file. Unlike the practice norm, this concerns the whole recording because the complete file is unavailable. The only-route claim does not guarantee successful completion or require resignation. A recommendation to redo it would give a different account without explicitly excluding alternative routes.",
+      "answer": "mixed-goal-relative-necessity",
+      "acceptedAnswers": ["やりなおすほかない", "やりなおすほかにない", "やりなおすほかはない", "やりなおすほかにはない", "やりなおすよりほかない", "やりなおすよりほかにない", "やりなおすよりほかはない", "やりなおすよりほかにはない", "やりなおすしかない"],
+      "options": [
+        { "id": "mixed-normative-judgment", "label": "やりなおすべきだ", "rationale": "Would judge redoing to be the proper action, without explicitly stating the requested lack of another route to this submission." },
+        { "id": "mixed-predicted-action", "label": "やりなおすはずだ", "rationale": "Would predict a redo, but the person may instead abandon the optional application." },
+        { "id": "mixed-goal-relative-necessity", "label": "やりなおすしかない", "rationale": "States the remaining way to produce the required recording for this application." }
+      ]
+    }
+  ]
+}

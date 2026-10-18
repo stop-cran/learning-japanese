@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-mixed-past-stance",
+  "title": "Mixed practice: earlier intentions, completion beliefs and current inferences",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "mixed-earlier-intention", "label": "an intention held before acting" },
+    { "id": "mixed-earlier-completion-belief", "label": "an earlier belief that one's action was complete" },
+    { "id": "mixed-current-completion-inference", "label": "a present inference about a completed action" }
+  ],
+  "relationships": [
+    {
+      "id": "intention-belief-inference-viewpoint",
+      "label": "an earlier intention / an earlier completion belief / a current inference about the action",
+      "constructions": ["mixed-earlier-intention", "mixed-earlier-completion-belief", "mixed-current-completion-inference"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "mixed-earlier-plan-save",
+      "target": "mixed-earlier-intention",
+      "relationship": "intention-belief-inference-viewpoint",
+      "prompt": "【動詞：保存する（ほぞんする）】\n昨日の昼、まだ作業を始めていない時点では、私は完成後に最新版のファイルを____。その後、実際に夕方までに保存し、今もそのファイルが残っている。",
+      "translation": "Complete the whole predicate using the supplied verb: dictionary form + つもりだった, た-form + つもりだった, or た-form + はずだ／ようだ. Write the verb and ending in hiragana. You may replace だった with であった and だ with である. Use no contractions, added particles or other auxiliary constructions. At noon yesterday, before I had started the work, I intended to save the latest version of the file after finishing. I did save it by that evening, and the file is still there.",
+      "evidence": "The missing predicate reports the speaker's intention before beginning the work. The later successful save is stated separately.",
+      "explanation": "ほぞんするつもりだった recalls the intention held before the work was done. The past is on the intention, while dictionary-form 保存する identifies the intended action. The later successful save does not turn that earlier intention into a belief in already having saved. The formal past ほぞんするつもりであった also fits the named task.",
+      "answer": "mixed-earlier-intention",
+      "acceptedAnswers": ["ほぞんするつもりだった", "ほぞんするつもりであった"],
+      "options": [
+        { "id": "mixed-earlier-intention", "label": "ほぞんするつもりだった", "rationale": "Reports the earlier intention, which was subsequently carried out." },
+        { "id": "mixed-earlier-completion-belief", "label": "ほぞんしたつもりだった", "rationale": "Would recall a belief in completed saving, not the stated intention before starting the work." },
+        { "id": "mixed-current-completion-inference", "label": "ほぞんしたはずだ", "rationale": "A present assessment that saving happened would be a different message from the earlier intention requested here." }
+      ]
+    },
+    {
+      "id": "mixed-earlier-belief-save",
+      "target": "mixed-earlier-completion-belief",
+      "relationship": "intention-belief-inference-viewpoint",
+      "prompt": "【動詞：保存する（ほぞんする）】\n昨日の夕方、編集を終えて画面を閉じた時点では、私は最新版のファイルを____。翌朝調べた結果、実際には保存されていなかったことがわかった。",
+      "translation": "Complete the whole predicate using the supplied verb: dictionary form + つもりだった, た-form + つもりだった, or た-form + はずだ／ようだ. Write the verb and ending in hiragana. You may replace だった with であった and だ with である. Use no contractions, added particles or other auxiliary constructions. When I finished editing and closed the window yesterday evening, I believed I had saved the latest version of the file. Checking the next morning revealed that it had not actually been saved.",
+      "evidence": "The speaker recalls a belief in completion at the earlier closing time, then distinguishes it from the subsequently discovered fact.",
+      "explanation": "ほぞんしたつもりだった reports an earlier belief in completed saving. 保存した is completed relative to that belief; だった places the belief in the past. The later discovery contradicts the belief, but does not erase the fact that it was held. ほぞんしたつもりであった is also accepted.",
+      "answer": "mixed-earlier-completion-belief",
+      "acceptedAnswers": ["ほぞんしたつもりだった", "ほぞんしたつもりであった"],
+      "options": [
+        { "id": "mixed-earlier-intention", "label": "ほぞんするつもりだった", "rationale": "Would describe an intention to save, not the requested belief that saving was already complete." },
+        { "id": "mixed-earlier-completion-belief", "label": "ほぞんしたつもりだった", "rationale": "Preserves the earlier completion belief despite the later discovery." },
+        { "id": "mixed-current-completion-inference", "label": "ほぞんしたようだ", "rationale": "Would make completed saving the present inference, whereas the later check established that it had not been saved." }
+      ]
+    },
+    {
+      "id": "mixed-now-inference-save",
+      "target": "mixed-current-completion-inference",
+      "relationship": "intention-belief-inference-viewpoint",
+      "prompt": "【動詞：保存する（ほぞんする）】\n昨日の操作はよく覚えていないが、今、共有フォルダーには私のアカウントで保存された最新版のファイルがある。この記録から考えると、私は最新版のファイルを____。",
+      "translation": "Complete the whole predicate using the supplied verb: dictionary form + つもりだった, た-form + つもりだった, or た-form + はずだ／ようだ. Write the verb and ending in hiragana. You may replace だった with であった and だ with である. Use no contractions, added particles or other auxiliary constructions. I do not remember yesterday's operation well, but the shared folder now contains the latest version saved under my account. From this record, I infer that I saved the latest version of the file.",
+      "evidence": "The speaker makes a judgment now from a surviving file and account record, rather than remembering a particular earlier intention or self-assessment.",
+      "explanation": "Both ほぞんしたはずだ and ほぞんしたようだ fit this current inference about a past action. はずだ frames the event as expected from the record; ようだ presents it as what the evidence suggests. Their である alternatives also fit. First person does not force つもり: a person can infer their own earlier action without recalling the operation or their earlier mental stance.",
+      "answer": "mixed-current-completion-inference",
+      "acceptedAnswers": ["ほぞんしたはずだ", "ほぞんしたようだ", "ほぞんしたはずである", "ほぞんしたようである"],
+      "options": [
+        { "id": "mixed-earlier-intention", "label": "ほぞんするつもりだった", "rationale": "Would recall a plan; the requested account instead infers that the saving happened." },
+        { "id": "mixed-earlier-completion-belief", "label": "ほぞんしたつもりだった", "rationale": "Would recall an earlier completion belief, which the current file record does not reconstruct." },
+        { "id": "mixed-current-completion-inference", "label": "ほぞんしたはずだ", "rationale": "Expresses the present record-based judgment about yesterday's action." }
+      ]
+    },
+    {
+      "id": "mixed-earlier-plan-lock",
+      "target": "mixed-earlier-intention",
+      "relationship": "intention-belief-inference-viewpoint",
+      "prompt": "【動詞：掛ける（かける）】\n昨日の昼、閉館後の作業を考えたとき、私は最後に倉庫の戸に鍵を____。しかし夕方、急に呼ばれて、鍵を掛けないまま帰ってしまった。",
+      "translation": "Complete the whole predicate using the supplied verb: dictionary form + つもりだった, た-form + つもりだった, or た-form + はずだ／ようだ. Write the verb and ending in hiragana. You may replace だった with であった and だ with である. Use no contractions, added particles or other auxiliary constructions. At noon yesterday, when considering the work to do after closing, I intended to lock the storeroom door as my last task. But I was suddenly called away that evening and went home without locking it.",
+      "evidence": "The intention belongs to the earlier consideration of future closing tasks. The later failure to lock the door is an outcome, not the meaning of the intention itself.",
+      "explanation": "かけるつもりだった reports the earlier intention to lock the door. It was not carried out here, but failed execution is not a universal requirement for past intentions. Compare the fulfilled saving and payment plans in this set. かけるつもりであった is the accepted formal past alternative.",
+      "answer": "mixed-earlier-intention",
+      "acceptedAnswers": ["かけるつもりだった", "かけるつもりであった"],
+      "options": [
+        { "id": "mixed-earlier-intention", "label": "かけるつもりだった", "rationale": "Recalls the intention held when considering the later closing tasks." },
+        { "id": "mixed-earlier-completion-belief", "label": "かけたつもりだった", "rationale": "Would recall a belief that the door had already been locked, rather than the requested intention to do it later." },
+        { "id": "mixed-current-completion-inference", "label": "かけたはずだ", "rationale": "Would infer completed locking now, contrary to the stated outcome and different from the earlier intention." }
+      ]
+    },
+    {
+      "id": "mixed-earlier-belief-lock",
+      "target": "mixed-earlier-completion-belief",
+      "relationship": "intention-belief-inference-viewpoint",
+      "prompt": "【動詞：掛ける（かける）】\n昨日の閉館後、鍵を回して倉庫から離れた時点では、私は戸に鍵を____。十分後に戻って確かめると、やはり鍵は掛かっていた。",
+      "translation": "Complete the whole predicate using the supplied verb: dictionary form + つもりだった, た-form + つもりだった, or た-form + はずだ／ようだ. Write the verb and ending in hiragana. You may replace だった with であった and だ with である. Use no contractions, added particles or other auxiliary constructions. When I turned the key and walked away from the storeroom after closing yesterday, I believed I had locked its door. When I returned ten minutes later to check, the door was indeed locked.",
+      "evidence": "The missing predicate recalls the self-assessment at departure. The later locked-door check agrees with that assessment instead of exposing a mistake.",
+      "explanation": "かけたつもりだった reports what the speaker believed had been accomplished when leaving. The later check agrees with that belief; the task does not grade たつもりだった by a universal mistake rule. A discrepancy is common in other contexts, but this explicit recollection is followed by confirmation. かけたつもりであった is also accepted.",
+      "answer": "mixed-earlier-completion-belief",
+      "acceptedAnswers": ["かけたつもりだった", "かけたつもりであった"],
+      "options": [
+        { "id": "mixed-earlier-intention", "label": "かけるつもりだった", "rationale": "Would describe an intention to lock, not the requested belief in completion after turning the key." },
+        { "id": "mixed-earlier-completion-belief", "label": "かけたつもりだった", "rationale": "Recalls the completion belief held at departure, before the later check." },
+        { "id": "mixed-current-completion-inference", "label": "かけたようだ", "rationale": "A current inference could describe the scene, but it is not the requested recollection of what the speaker believed at departure." }
+      ]
+    },
+    {
+      "id": "mixed-now-inference-lock",
+      "target": "mixed-current-completion-inference",
+      "relationship": "intention-belief-inference-viewpoint",
+      "prompt": "【動詞：掛ける（かける）】\n今朝、倉庫の戸には鍵が掛かっていて、昨夜の当番は田中さんだった。私は施錠（せじょう）を見ていないが、この状況から考えると、田中さんが昨夜、戸に鍵を____。",
+      "translation": "Complete the whole predicate using the supplied verb: dictionary form + つもりだった, た-form + つもりだった, or た-form + はずだ／ようだ. Write the verb and ending in hiragana. You may replace だった with であった and だ with である. Use no contractions, added particles or other auxiliary constructions. This morning the storeroom door is locked, and Tanaka was on duty last night. I did not see the locking, but from these circumstances I infer that Tanaka locked the door last night.",
+      "evidence": "The current locked state and duty assignment support an inference about last night's action. No earlier statement of Tanaka's intention or completion belief is supplied.",
+      "explanation": "かけたようだ and かけたはずだ both fit the current judgment about Tanaka's earlier action. The current evidence supports an inference; it is not a guarantee of who operated the lock or a report of that person's earlier thoughts. The corresponding である endings are accepted too. A past event does not by itself require the outer predicate to be past.",
+      "answer": "mixed-current-completion-inference",
+      "acceptedAnswers": ["かけたはずだ", "かけたようだ", "かけたはずである", "かけたようである"],
+      "options": [
+        { "id": "mixed-earlier-intention", "label": "かけるつもりだった", "rationale": "Would report Tanaka's earlier intention, not the present inference that locking occurred." },
+        { "id": "mixed-earlier-completion-belief", "label": "かけたつもりだった", "rationale": "Would concern Tanaka's earlier completion belief; the duty assignment and locked door do not establish that mental stance." },
+        { "id": "mixed-current-completion-inference", "label": "かけたようだ", "rationale": "Presents the past action as what the current circumstances suggest." }
+      ]
+    },
+    {
+      "id": "mixed-earlier-plan-pay",
+      "target": "mixed-earlier-intention",
+      "relationship": "intention-belief-inference-viewpoint",
+      "prompt": "【動詞：払う（はらう）】\n昨日の朝、受付へ行く前には、私は講座の参加費を____。夕方には予定どおり自分で払い、領収書（りょうしゅうしょ）も受け取った。",
+      "translation": "Complete the whole predicate using the supplied verb: dictionary form + つもりだった, た-form + つもりだった, or た-form + はずだ／ようだ. Write the verb and ending in hiragana. You may replace だった with であった and だ with である. Use no contractions, added particles or other auxiliary constructions. Yesterday morning, before going to reception, I intended to pay the course participation fee. By that evening I had paid it myself as planned and received a receipt.",
+      "evidence": "The speaker recalls an intention before visiting reception; the payment and receipt are subsequent facts.",
+      "explanation": "はらうつもりだった reports the earlier intention, which was fulfilled. It does not say that payment had already been completed at that earlier viewpoint. The actual payment is stated separately, so success does not make the past-intention form wrong. はらうつもりであった is also accepted.",
+      "answer": "mixed-earlier-intention",
+      "acceptedAnswers": ["はらうつもりだった", "はらうつもりであった"],
+      "options": [
+        { "id": "mixed-earlier-intention", "label": "はらうつもりだった", "rationale": "Recalls the intention before reception, independently of its later fulfillment." },
+        { "id": "mixed-earlier-completion-belief", "label": "はらったつもりだった", "rationale": "Would report a belief in already having paid, not the requested intention before the visit." },
+        { "id": "mixed-current-completion-inference", "label": "はらったはずだ", "rationale": "Would present a current expectation of completed payment, rather than recall the earlier intention." }
+      ]
+    },
+    {
+      "id": "mixed-earlier-belief-pay",
+      "target": "mixed-earlier-completion-belief",
+      "relationship": "intention-belief-inference-viewpoint",
+      "prompt": "【動詞：払う（はらう）】\n昨日、受付を離れた時点では、私は講座の参加費を____。しかし、あとで確認すると、払ったのは教材費だけで、参加費は未払い（みばらい）だった。",
+      "translation": "Complete the whole predicate using the supplied verb: dictionary form + つもりだった, た-form + つもりだった, or た-form + はずだ／ようだ. Write the verb and ending in hiragana. You may replace だった with であった and だ with である. Use no contractions, added particles or other auxiliary constructions. When I left reception yesterday, I believed I had paid the course participation fee. But a later check showed that I had paid only for the materials; the participation fee was still unpaid.",
+      "evidence": "The earlier belief concerns payment of a particular fee. An actual payment occurred, but it was for something else.",
+      "explanation": "はらったつもりだった recalls the belief that the participation fee had been paid. The later check contradicts that specific belief, even though the speaker did pay for materials. Believed completion does not require that no action whatsoever occurred. はらったつもりであった is also accepted.",
+      "answer": "mixed-earlier-completion-belief",
+      "acceptedAnswers": ["はらったつもりだった", "はらったつもりであった"],
+      "options": [
+        { "id": "mixed-earlier-intention", "label": "はらうつもりだった", "rationale": "Would state an earlier intention to pay, not the belief that the specified payment was already complete." },
+        { "id": "mixed-earlier-completion-belief", "label": "はらったつもりだった", "rationale": "Preserves the earlier belief while allowing the later discovery that a different fee had been paid." },
+        { "id": "mixed-current-completion-inference", "label": "はらったようだ", "rationale": "Would make completed payment of the participation fee the current inference, contradicting the later finding that it remained unpaid." }
+      ]
+    },
+    {
+      "id": "mixed-now-inference-pay",
+      "target": "mixed-current-completion-inference",
+      "relationship": "intention-belief-inference-viewpoint",
+      "prompt": "【動詞：払う（はらう）】\n昨日は忙しく、支払いの場面をはっきり覚えていない。だが今、私の名前が書かれた領収書（りょうしゅうしょ）が手元にあり、参加費の一覧も「支払い済み」になっている。この記録から考えると、私は参加費を____。",
+      "translation": "Complete the whole predicate using the supplied verb: dictionary form + つもりだった, た-form + つもりだった, or た-form + はずだ／ようだ. Write the verb and ending in hiragana. You may replace だった with であった and だ with である. Use no contractions, added particles or other auxiliary constructions. Yesterday was busy, and I do not clearly remember the payment. But I now have a receipt in my name, and the participation-fee list says 'paid.' From these records, I infer that I paid the participation fee.",
+      "evidence": "The speaker is making an assessment now from records of payment, not reporting a remembered intention or earlier belief.",
+      "explanation": "はらったはずだ and はらったようだ fit the present inference, as do their である alternatives. The past verb places the payment before the current assessment. A first-person subject can make this kind of inference about their own action; lack of clear memory is not an automatic reason to choose つもりだった.",
+      "answer": "mixed-current-completion-inference",
+      "acceptedAnswers": ["はらったはずだ", "はらったようだ", "はらったはずである", "はらったようである"],
+      "options": [
+        { "id": "mixed-earlier-intention", "label": "はらうつもりだった", "rationale": "Would recall an intention to pay, whereas the requested message infers a completed payment from current evidence." },
+        { "id": "mixed-earlier-completion-belief", "label": "はらったつもりだった", "rationale": "Would recall a belief held earlier; the present documents do not establish what the speaker thought at the time." },
+        { "id": "mixed-current-completion-inference", "label": "はらったはずだ", "rationale": "Expresses the current record-based expectation that the payment happened." }
+      ]
+    },
+    {
+      "id": "mixed-earlier-plan-reserve",
+      "target": "mixed-earlier-intention",
+      "relationship": "intention-belief-inference-viewpoint",
+      "prompt": "【動詞：予約する（よやくする）】\n先週の月曜日の朝には、私はその日の夕方、土曜日に使う練習室を____。しかし別の用事で手続きに行けず、その日は予約しなかった。",
+      "translation": "Complete the whole predicate using the supplied verb: dictionary form + つもりだった, た-form + つもりだった, or た-form + はずだ／ようだ. Write the verb and ending in hiragana. You may replace だった with であった and だ with である. Use no contractions, added particles or other auxiliary constructions. Last Monday morning, I intended to book a practice room that evening for use on Saturday. But another errand prevented me from going to make the booking, and I did not reserve it that day.",
+      "evidence": "The morning intention concerns a booking to be made that evening. Saturday is the intended room-use date, not the time at which the booking belief is held.",
+      "explanation": "よやくするつもりだった recalls the intention to make a later booking. Both the booking time and the room-use date are later than that morning viewpoint; they are not beliefs in completed booking. The action did not happen here, but a fulfilled intention would still use the same pattern in a matching recollection. よやくするつもりであった is also accepted.",
+      "answer": "mixed-earlier-intention",
+      "acceptedAnswers": ["よやくするつもりだった", "よやくするつもりであった"],
+      "options": [
+        { "id": "mixed-earlier-intention", "label": "よやくするつもりだった", "rationale": "Reports the earlier intention to make the booking that evening." },
+        { "id": "mixed-earlier-completion-belief", "label": "よやくしたつもりだった", "rationale": "Would recall a belief that booking was already complete, not the requested intention to book later." },
+        { "id": "mixed-current-completion-inference", "label": "よやくしたはずだ", "rationale": "Would infer completed booking now, contrary to the stated nonbooking and different from the morning intention." }
+      ]
+    },
+    {
+      "id": "mixed-earlier-belief-reserve",
+      "target": "mixed-earlier-completion-belief",
+      "relationship": "intention-belief-inference-viewpoint",
+      "prompt": "【動詞：予約する（よやくする）】\n先週の月曜日、予約画面を閉じ、まだ確認メールが来ていない時点では、自分では土曜日に使う練習室を____。翌日のメールには、その部屋と日付が正しく載っていた。",
+      "translation": "Complete the whole predicate using the supplied verb: dictionary form + つもりだった, た-form + つもりだった, or た-form + はずだ／ようだ. Write the verb and ending in hiragana. You may replace だった with であった and だ with である. Use no contractions, added particles or other auxiliary constructions. Last Monday, after closing the booking screen but before the confirmation email arrived, I believed I had booked the practice room for Saturday. The next day's email listed the correct room and date.",
+      "evidence": "The speaker recalls a completion belief held before the confirmation email. The later message supports the belief about the specified room and date.",
+      "explanation": "よやくしたつもりだった reports the earlier self-assessment that booking was complete. The later email supports it rather than revealing a wrong room or date. This explicit past viewpoint does not make every isolated たつもりだった neutral in tone; it preserves a contextual confirmed-belief reading alongside the mistaken-belief cases. よやくしたつもりであった is also accepted.",
+      "answer": "mixed-earlier-completion-belief",
+      "acceptedAnswers": ["よやくしたつもりだった", "よやくしたつもりであった"],
+      "options": [
+        { "id": "mixed-earlier-intention", "label": "よやくするつもりだった", "rationale": "Would recall an intention to book, not the requested belief in completion after closing the booking screen." },
+        { "id": "mixed-earlier-completion-belief", "label": "よやくしたつもりだった", "rationale": "Recalls the earlier completion belief, which the later email supports." },
+        { "id": "mixed-current-completion-inference", "label": "よやくしたようだ", "rationale": "Could describe a present inference from the email, but that is not the requested recollection of the belief held before it arrived." }
+      ]
+    },
+    {
+      "id": "mixed-now-inference-reserve",
+      "target": "mixed-current-completion-inference",
+      "relationship": "intention-belief-inference-viewpoint",
+      "prompt": "【動詞：予約する（よやくする）】\n今、予約一覧を見ると、土曜日の練習室に鈴木さんの名前があり、鈴木さん宛ての予約完了メールもある。私は手続きを見ていないが、この記録から考えると、鈴木さんが練習室を____。",
+      "translation": "Complete the whole predicate using the supplied verb: dictionary form + つもりだった, た-form + つもりだった, or た-form + はずだ／ようだ. Write the verb and ending in hiragana. You may replace だった with であった and だ with である. Use no contractions, added particles or other auxiliary constructions. Looking at the booking list now, I see Suzuki's name against the practice room for Saturday and a booking-confirmation email addressed to Suzuki. I did not see the procedure, but from these records I infer that Suzuki booked the room.",
+      "evidence": "The speaker draws a conclusion now from booking records, without a report of Suzuki's earlier intention or self-assessment.",
+      "explanation": "よやくしたようだ and よやくしたはずだ both fit the current inference from the records. Their である variants also fit. The evidence concerns a booking, not private thoughts, and does not guarantee who personally completed every procedural step. Keep the time of the inference distinct from both the earlier booking and the later use of the room.",
+      "answer": "mixed-current-completion-inference",
+      "acceptedAnswers": ["よやくしたはずだ", "よやくしたようだ", "よやくしたはずである", "よやくしたようである"],
+      "options": [
+        { "id": "mixed-earlier-intention", "label": "よやくするつもりだった", "rationale": "Would report an earlier intention rather than the requested inference that booking occurred." },
+        { "id": "mixed-earlier-completion-belief", "label": "よやくしたつもりだった", "rationale": "Would concern Suzuki's earlier completion belief, which the current records do not establish." },
+        { "id": "mixed-current-completion-inference", "label": "よやくしたようだ", "rationale": "Expresses the present inference suggested by the booking list and confirmation email." }
+      ]
+    }
+  ]
+}

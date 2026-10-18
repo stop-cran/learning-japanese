@@ -60,7 +60,9 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   12 on くらい degree/minimum versus のに counterexpectations,
   12 mixed-context questions on changed routines, maintained practices and current inferences,
   12 on recent completion, retained states and inferences about past actions,
-  and 12 on current intentions, no need and no available alternative (377 in total).
+  12 on current intentions, no need and no available alternative,
+  12 on earlier intentions, completion beliefs and current inferences,
+  and 12 on norms, predictions and goal-relative practical necessity (401 in total).
   Time practice includes うち, あいだ, とき, ころ, たび and shared とき／おり／さい occasion answers;
   shared alternatives are not independently contrasted targets.
   Purpose/cause practice adds ため, おかげ, せい, かわり and ついで, including compensating trade-offs.
@@ -114,6 +116,14 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   Mixed intention/necessity practice adds voluntary unnecessary plans, shared ことはない／必要 no-need answers and all
   fitting basic ほか／しか no-alternative endings. Requirements do not determine intentions, and alternatives are evaluated
   relative to the stated goal rather than every imaginable action.
+  Mixed past-stance practice blanks the whole predicate and separates earlier intentions, earlier completion beliefs
+  and current はずだ／ようだ inferences about past actions. Fulfilled/unfulfilled plans and supported/contradicted beliefs
+  prevent outcome-based guessing; first-person inferences prevent pronouns from supplying the answer.
+  Basic だった／であった and だ／である alternatives remain within one shared visible task.
+  The final mixed set distinguishes normative べき／もの, predictive はず／よう and goal-relative ほか／しか.
+  The same return/wait/contact/redo verbs recur across the three accounts, with complete predicate blanks that retain
+  both 連絡するべき and 連絡すべき. Norms can be followed or violated, a prediction can align with a rule,
+  and an optional goal can still have a necessary means. Shared equivalents remain one answer class per exercise.
   See the [content format](docs/content-format.md#grammar-exercises), [foundations sources](docs/grammar-foundations-sources.json),
   [actions sources](docs/grammar-actions-sources.json), [intent sources](docs/grammar-intent-sources.json),
   [action-stage sources](docs/grammar-stages-sources.json), [state sources](docs/grammar-states-sources.json),
@@ -136,11 +146,14 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   [possible-extent sources](docs/grammar-possible-extent-sources.json),
   [くらい degree/minimum sources](docs/grammar-kurai-degree-minimum-sources.json),
   [mixed-routine sources](docs/grammar-mixed-routines-sources.json),
-  [mixed completion/state sources](docs/grammar-mixed-completion-state-sources.json) and
-  [mixed intention/necessity sources](docs/grammar-mixed-intention-necessity-sources.json).
+  [mixed completion/state sources](docs/grammar-mixed-completion-state-sources.json),
+  [mixed intention/necessity sources](docs/grammar-mixed-intention-necessity-sources.json),
+  [mixed past-stance sources](docs/grammar-mixed-past-stance-sources.json) and
+  [mixed norms/expectations sources](docs/grammar-mixed-norms-expectations-sources.json).
   Every named formal-noun/particle family in the article now appears in practice, but this is not complete construction
-  coverage. Mixed selection has begun within a stated pool; broader contrasts involving other studied families remain
-  planned. These batches do not claim every construction or register, or unrestricted Japanese cloze.
+  coverage. The five mixed sets complete the bounded formal-noun expansion planned in
+  [Android #46](https://github.com/stop-cran/kanji-cards-android/issues/46); the app's remaining engineering, documentation
+  and local-evidence acceptance is separate. Stated pools do not claim every construction or register, or unrestricted cloze.
 
 The revised JLPT does not publish exhaustive kanji or vocabulary syllabi. Level coverage here means the exact named community set,
 not a guarantee about every examination question or a complete beginner curriculum.
