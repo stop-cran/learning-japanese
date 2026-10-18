@@ -71,6 +71,10 @@ Continue with [sound patterns and voicing](onomatopoeia-sound-patterns.md),
 [textures and warmth](onomatopoeia-texture-and-warmth.md), or
 [rain, movement, and similar-looking words](onomatopoeia-sound-and-movement.md).
 
+The second batch adds guides to [eating and drinking](onomatopoeia-eating-and-drinking.md),
+[body sensations and feelings](onomatopoeia-body-and-feelings.md), and
+[motion, voices, and everyday sounds](onomatopoeia-motion-and-sound.md).
+
 ## First 100 word cards
 
 This is a practical starter selection, not a frequency ranking or an official JLPT syllabus.
@@ -99,6 +103,29 @@ The categories overlap; existing sourced JLPT metadata is retained where availab
 | Energy and recovery | [ぐったり](../words/ぐったり.md), [へとへと](../words/へとへと.md), [くたくた](../words/くたくた.md), [ぴんぴん](../words/ぴんぴん.md), [すっきり](../words/すっきり.md) |
 | Non-repeated forms | [じっと](../words/じっと.md), [そっと](../words/そっと.md), [にっこり](../words/にっこり.md), [ばったり](../words/ばったり.md), [しっかり](../words/しっかり.md) |
 
+## Second 100 word cards
+
+The collection now contains **200 tagged word cards**. This second thematic selection adds 97 new
+articles and enriches the existing さっぱり, がっかり, and びっくり cards without replacing their IDs
+or sourced levels. The scene groups below are navigation aids, not new SRS stacks or a frequency ranking.
+Spellings already grouped within one inspected dictionary identity do not become extra cards merely
+to increase the count. メーメー keeps a dictionary-recorded katakana form.
+
+| Scene | Cards |
+| --- | --- |
+| Eating and drinking | [ごくごく](../words/ごくごく.md), [がぶがぶ](../words/がぶがぶ.md), [ぐびぐび](../words/ぐびぐび.md), [ちびちび](../words/ちびちび.md), [もぐもぐ](../words/もぐもぐ.md), [むしゃむしゃ](../words/むしゃむしゃ.md), [ぱくぱく](../words/ぱくぱく.md), [ぺろぺろ](../words/ぺろぺろ.md), [ぺろり](../words/ぺろり.md), [ずるずる](../words/ずるずる.md) |
+| Food and texture | [あっさり](../words/あっさり.md), [こってり](../words/こってり.md), [さっぱり](../words/さっぱり.md), [ぼそぼそ](../words/ぼそぼそ.md), [ぽりぽり](../words/ぽりぽり.md), [もりもり](../words/もりもり.md), [かちかち](../words/かちかち.md), [がちがち](../words/がちがち.md), [ぼろぼろ](../words/ぼろぼろ.md), [ぐにゃぐにゃ](../words/ぐにゃぐにゃ.md) |
+| Body sensations | [ずきずき](../words/ずきずき.md), [ちくちく](../words/ちくちく.md), [ひりひり](../words/ひりひり.md), [きりきり](../words/きりきり.md), [がんがん](../words/がんがん.md), [じんじん](../words/じんじん.md), [むずむず](../words/むずむず.md), [ぞくぞく](../words/ぞくぞく.md), [ぶるぶる](../words/ぶるぶる.md), [げほげほ](../words/げほげほ.md) |
+| Handling and balance | [ごしごし](../words/ごしごし.md), [ぐしゃぐしゃ](../words/ぐしゃぐしゃ.md), [びりびり](../words/びりびり.md), [ぴりぴり](../words/ぴりぴり.md), [ぎゅうぎゅう](../words/ぎゅうぎゅう.md), [ぱんぱん](../words/ぱんぱん.md), [ぺちゃんこ](../words/ぺちゃんこ.md), [くるり](../words/くるり.md), [ぐらぐら](../words/ぐらぐら.md), [ゆらゆら](../words/ゆらゆら.md) |
+| Movement | [ぴょんぴょん](../words/ぴょんぴょん.md), [ひょいと](../words/ひょいと.md), [ひらひら](../words/ひらひら.md), [すいすい](../words/すいすい.md), [するする](../words/するする.md), [ずんずん](../words/ずんずん.md), [ぐいぐい](../words/ぐいぐい.md), [じりじり](../words/じりじり.md), [てくてく](../words/てくてく.md), [ちょこちょこ](../words/ちょこちょこ.md) |
+| Feelings and attention | [うきうき](../words/うきうき.md), [うんざり](../words/うんざり.md), [がっかり](../words/がっかり.md), [しょんぼり](../words/しょんぼり.md), [しんみり](../words/しんみり.md), [ほっと](../words/ほっと.md), [ぎょっと](../words/ぎょっと.md), [びっくり](../words/びっくり.md), [うっかり](../words/うっかり.md), [ぼうっと](../words/ぼうっと.md) |
+| Voices and breathing | [にゃあにゃあ](../words/にゃあにゃあ.md), [わんわん](../words/わんわん.md), [ぴよぴよ](../words/ぴよぴよ.md), [ちゅんちゅん](../words/ちゅんちゅん.md), [かあかあ](../words/かあかあ.md), [ぶうぶう](../words/ぶうぶう.md), [はあはあ](../words/はあはあ.md), [メーメー](../words/メーメー.md), [こけこっこー](../words/こけこっこー.md), [くんくん](../words/くんくん.md) |
+| Sounds and activity | [がたがた](../words/がたがた.md), [かたかた](../words/かたかた.md), [がちゃがちゃ](../words/がちゃがちゃ.md), [ばりばり](../words/ばりばり.md), [ばきばき](../words/ばきばき.md), [ぱちぱち](../words/ぱちぱち.md), [しーん](../words/しーん.md), [ざわざわ](../words/ざわざわ.md), [せっせと](../words/せっせと.md), [きびきび](../words/きびきび.md) |
+| Water, wind, and fire | [ぽたぽた](../words/ぽたぽた.md), [じゃぶじゃぶ](../words/じゃぶじゃぶ.md), [ばしゃばしゃ](../words/ばしゃばしゃ.md), [ざぶざぶ](../words/ざぶざぶ.md), [そよそよ](../words/そよそよ.md), [びゅうびゅう](../words/びゅうびゅう.md), [ごぼごぼ](../words/ごぼごぼ.md), [めらめら](../words/めらめら.md), [もくもく](../words/もくもく.md), [ぽちゃん](../words/ぽちゃん.md) |
+| Looking and speaking | [きょろきょろ](../words/きょろきょろ.md), [ちらちら](../words/ちらちら.md), [じろじろ](../words/じろじろ.md), [こっそり](../words/こっそり.md), [ずけずけ](../words/ずけずけ.md), [はきはき](../words/はきはき.md), [べらべら](../words/べらべら.md), [ぐずぐず](../words/ぐずぐず.md), [だらだら](../words/だらだら.md), [きっぱり](../words/きっぱり.md) |
+
+The second batch is text-only. It does not add pictures or change how the app schedules word reviews.
+
 ## Sources and limits
 
 - [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project): each linked card identifies
@@ -107,5 +134,6 @@ The categories overlap; existing sourced JLPT metadata is retained where availab
   accessible introduction to the five-way classification, spelling, forms, and grammar.
   Its sound-symbolism generalizations are learning tendencies, not exceptionless rules.
 
-The examples and contrasts here are original explanations. A picture, if later added, will illustrate one selected
-sense; it will not replace the word's sentence patterns or establish a universal image-to-word translation.
+The examples and contrasts here are original explanations. Some starter cards already have a pilot picture,
+which illustrates one selected sense; it does not replace the word's sentence patterns or establish a universal
+image-to-word translation.

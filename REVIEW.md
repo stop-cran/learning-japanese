@@ -35,6 +35,56 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Onomatopoeia second 100 (2026-10-18)
+
+**Snapshot:** content baseline `2ca54ae0580d7b99fa3bf48dc37fe13ad1adc5cc` plus the second
+100-word working-tree addition: 97 new cards, three enriched existing cards, three new guides,
+the expanded overview, and accompanying provenance/navigation documentation.
+The [second-batch index](articles/japanese-onomatopoeia.md#second-100-word-cards) and
+[source record](docs/onomatopoeia-batch2-sources.json) enumerate the exact scope.
+Final reviewed runtime manifest: `1ef73b9a7176207a`.
+
+**Scope and reviews:** independent `gpt-6-astra` and `claude-opus-5.5` reviews of the same frozen
+100 cards, three guides, overview and scoped documentation. Each review covers correctness,
+scoped coverage and comprehensibility in ten enumerated ten-word packets, with whole-set consistency.
+Both verified the 111-file initial snapshot (`42bed4cd756115f5`); their blind reports and before-images
+were preserved before fixes. The maintainer adjudicated against actual dictionary entries, restrictions
+and displayed labels, then returned the real before/after diffs to the same reviewers.
+Reconciliation verified the revised files while inheriting unchanged content's earlier assessments;
+it was not a claim to reread the entire corpus at each step.
+
+**Verdicts:** both reviewers conclude **CLEAN** for correctness, scoped coverage and comprehensibility
+of all 100 selected cards and all four scoped learner guides (the three new guides plus the overview).
+All actionable findings and the final residual pair are resolved; no consequential unresolved claim
+was established within this scope.
+
+| Finding | Disposition |
+| --- | --- |
+| Missing ordinary-word, older secondary-sense and within-batch quiz protections | Resolved: 105 further direct pairs beyond the authored draft, bringing this batch to 317 new pairs relative to the baseline. These include 75 distinct numbered-review pairs, 29 accepted optional candidates, and the final ちょこちょこ/たま guard. The source record enumerates every pair; no transitive or family-clique expansion is implied. |
+| Selective reading gaps | Resolved in eight cards and one guide, including ambiguous 生（なま）, 跳（と）んだ and 上（のぼ）り. Existing example meanings are preserved. |
+| Dictionary spelling status and figurative-source coverage | Resolved: explain the pinned JMdict search-only status of かちかち and ぶうぶう without renaming IDs or inferring frequency. Cite the inspected Digital Daijisen sense for ちくちく's figurative needling remarks, and that dictionary's child-directed pig sense of ぶうぶう. Raw dictionary flags were already preserved in the source record. |
+| Scene-based frequency title | Resolved: ちょこちょこ now says “small quick steps; every so often,” with the contextual frequency range still explained. Opus caught the remaining たま endpoint during reconciliation; both reviewers confirmed its final direct guard. |
+| Collection counts and navigation description | Resolved: 271 unlevelled articles, 3,209 word articles overall, 200 tagged onomatopoeia cards, and seven guides. |
+| Optional wording and broader collision hypotheses | Two clarity edits applied; the remaining stylistic suggestions and unestablished scene/manner equivalences remain optional. Both reviewers accepted these dispositions. Existing baseline-only ambiguity such as びっくり/意外 is not claimed fixed. |
+
+Both models found quiz-label omissions. Astra supplied additional secondary-sense guards, selective
+readings and the stale unlevelled count; Opus supplied spelling/source explanations, the frequency-title
+refinement, guide-list correction and the final residual guard. Some observations also appeared in
+the other report's optional hypotheses, so they are not all unique contributions. This describes the
+matched sample, not a general model ranking.
+
+**Preservation:** the three reused cards retain their identities, titles and sourced N3/N3/N4 levels.
+The first 100 word files, existing images, grammar, kanji, app code and scheduling remain unchanged.
+No new JLPT labels were inferred. Structural validation, all 4,523 manifest payload hashes, package
+budgets and the Android real-repository parser check passed for the final runtime snapshot.
+The later closure update to this review record does not change imported content or its manifest.
+
+**Limits:** new examples are original, not corpus quotations or native-speaker certification.
+Dictionary recognition is not a frequency rank, a level source, or a guarantee that every possible
+randomized quiz choice is unambiguous. The archive measurement is a local projection, not a downloaded
+GitHub release. No physical-phone rendering, image-quality review or APK delivery belongs to this
+text-only batch; the existing image pilot's owner review remains separate.
+
 ## Onomatopoeia starter collection (2026-10-15)
 
 **Snapshot:** `7e2b498` plus the phase-1 working-tree addition: 90 new word cards, 10 enriched

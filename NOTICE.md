@@ -30,6 +30,8 @@ This repository contains original notes plus data derived from open dictionary p
   The onomatopoeia starter collection uses a separately hash-pinned local JMdict snapshot;
   [sensory-word records](docs/onomatopoeia-sensory-sources.json) and
   [movement/feeling records](docs/onomatopoeia-feelings-sources.json) identify its entries.
+  The [second 100-word source record](docs/onomatopoeia-batch2-sources.json) reuses those verified
+  dictionary files and preserves entry identities, reading restrictions and the three retained level labels.
   Its explanations and example sentences are original teaching material, not excerpts from manga,
   news stories, or recipes. This thematic selection does not establish new JLPT membership.
 - **Canonical radical glyphs for the N4 and N3 additions** are mapped from the compatibility decompositions in Unicode 17.0

@@ -68,6 +68,40 @@ Other protected secondary-sense overlaps include
 (rapid succession). These are pairwise quiz exclusions, not claims that every Japanese construction
 in a pair is interchangeable.
 
+### Onomatopoeia second-batch comparisons
+
+The [second 100 cards](../articles/japanese-onomatopoeia.md#second-100-word-cards) add these
+comparison families. Entries in a row are not automatically an exclusion clique: the source-backed
+overlaps are declared as direct `quiz_exclusions` on individual cards, including secondary senses.
+The batch's source record enumerates the actual declarations. Distinct scenes and different glosses
+are not themselves proof that a pair is a safe wrong answer.
+
+Review also checks direct ordinary-word overlaps (for example もぐもぐ/噛む, げほげほ/咳,
+ぶうぶう/車, ちょこちょこ/しばしば and きっぱり/明確), older secondary senses such as
+くるくる's diligent work and からから's rattling, and the remaining within-batch pairs.
+The broad grumbling, pain, vigor, and crowding labels need their own guards rather than protection
+inferred through an intermediate card. These are quiz-label safeguards, not unrestricted synonyms.
+
+| Family | Comparison and guide |
+| --- | --- |
+| ごくごく・がぶがぶ・ぐびぐび・ぐいぐい; ちびちび | Overlapping gulping versus little amounts; [eating and drinking](../articles/onomatopoeia-eating-and-drinking.md#gulps-and-little-sips). |
+| もぐもぐ・むしゃむしゃ・ぱくぱく・もりもり・ぺろぺろ・ぺろり | Chewing, appetite, licking and completion overlap; not mandatory stages of eating. |
+| あっさり・さっぱり・こってり | Light/rich food contrasts do not transfer to all action, relief or negative-predicate senses. |
+| ずきずき・じんじん・がんがん; ちくちく・ひりひり・ぴりぴり・びりびり | Subjective throbbing/stinging/tingling overlap, not a diagnostic scale; [body and feelings](../articles/onomatopoeia-body-and-feelings.md#several-ways-pain-can-feel). |
+| ぞくぞく・ぶるぶる・がたがた・びくびく; うきうき・わくわく | Shivering, fear and excitement can overlap by sense. Same-reading 続々 is a different identity. |
+| がっかり・しょんぼり・しんみり; ほっと・安心・さっぱり・すっきり | Dejection/subdued mood and relief/refreshment; protections include existing non-theme words where labels overlap. |
+| かちかち・がちがち・こりこり・硬い; ぐにゃぐにゃ・くたくた・柔らかい | Hardness, stiffness, pliability and exhaustion need sense-specific comparison. |
+| かたかた・がたがた・がちゃがちゃ; ぱちぱち・ぱんぱん・ばりばり・ばきばき | Rattling, clapping, cracking and ripping overlap; ordinary 拍手 also needs protection. |
+| じゃぶじゃぶ・ざぶざぶ・ばしゃばしゃ・ぽちゃん; ごぼごぼ・ぶくぶく・ぐつぐつ | Splashing and bubbling prototypes are not precise depth, volume or temperature categories. |
+| ぴよぴよ・ちゅんちゅん; にゃあにゃあ・猫; わんわん・犬 | Overlapping bird chirps and explicitly recorded child-directed animal-noun senses. |
+| はきはき・きびきび・きっぱり・ずけずけ; べらべら・ぺらぺら | Clear delivery, brisk action, decisiveness, bluntness, chatter and thinness need separate comparisons. |
+| ぼうっと・ぼんやり・うっかり; ひょいと・ふと | Unfocused states versus inadvertent acts, and casual/unexpected occurrence. |
+| すいすい・するする・順調; ぐずぐず・ずるずる・だらだら | Smooth progress versus lingering/dawdling; secondary flowing-liquid or complaining senses remain distinct. |
+
+See [motion, voices and sounds](../articles/onomatopoeia-motion-and-sound.md) for original scene contrasts.
+These additions do not resolve every historical whole-corpus quiz ambiguity or imply free substitution
+between every construction using the paired words.
+
 ### Knowing, learning, perception, and communication
 
 | ID | Candidates | Tags | Question to refine |
