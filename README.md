@@ -57,7 +57,8 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   12 on ほか exclusions and no other option versus no need,
   12 on past はず expectations, event time and actual outcomes,
   12 on possible versus desired extent with かぎり／だけ,
-  and 12 on くらい degree/minimum versus のに counterexpectations (341 in total).
+  12 on くらい degree/minimum versus のに counterexpectations,
+  and 12 mixed-context questions on changed routines, maintained practices and current inferences (353 in total).
   Time practice includes うち, あいだ, とき, ころ, たび and shared とき／おり／さい occasion answers;
   shared alternatives are not independently contrasted targets.
   Purpose/cause practice adds ため, おかげ, せい, かわり and ついで, including compensating trade-offs.
@@ -101,6 +102,10 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   The latest particle batch adds three shared くらい／ぐらい／ほど degree illustrations and three くらい／ぐらい basic
   minimums, each with three reciprocal のに counterexpectations. It includes noun-predicate な attachment, optional は
   for the selected minimums, speaker-relative ease and tone, and a favorable outcome despite an obstacle.
+  The first mixed set blanks the whole ending and uses one common five-pattern pool throughout: ようになる／ようにする／
+  ことにする／はずだ／ようだ. Four questions per function now include contextual なる-versus-する selection, with shared
+  ことにしている and habitual ようにする practice alternatives, plus ようだ inferences. The English meaning remains visible, but no item-specific
+  form instruction selects the function or conjugation for the learner.
   See the [content format](docs/content-format.md#grammar-exercises), [foundations sources](docs/grammar-foundations-sources.json),
   [actions sources](docs/grammar-actions-sources.json), [intent sources](docs/grammar-intent-sources.json),
   [action-stage sources](docs/grammar-stages-sources.json), [state sources](docs/grammar-states-sources.json),
@@ -120,11 +125,12 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   [noun/adjective state sources](docs/grammar-state-change-sources.json),
   [exclusion/no-alternative sources](docs/grammar-hoka-exclusion-sources.json),
   [past-expectation sources](docs/grammar-past-expectation-sources.json),
-  [possible-extent sources](docs/grammar-possible-extent-sources.json) and
-  [くらい degree/minimum sources](docs/grammar-kurai-degree-minimum-sources.json).
+  [possible-extent sources](docs/grammar-possible-extent-sources.json),
+  [くらい degree/minimum sources](docs/grammar-kurai-degree-minimum-sources.json) and
+  [mixed-routine sources](docs/grammar-mixed-routines-sources.json).
   Every named formal-noun/particle family in the article now appears in practice, but this is not complete construction
-  coverage. Less-scaffolded mixed construction selection remains planned; the batches above cover named, bounded uses,
-  not every construction or register of each family.
+  coverage. Mixed selection has begun within a stated pool; broader contrasts involving other studied families remain
+  planned. These batches do not claim every construction or register, or unrestricted Japanese cloze.
 
 The revised JLPT does not publish exhaustive kanji or vocabulary syllabi. Level coverage here means the exact named community set,
 not a guarantee about every examination question or a complete beginner curriculum.

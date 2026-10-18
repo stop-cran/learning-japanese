@@ -514,6 +514,23 @@ and the appreciated outcome in the written-help のに item. Degree need not be 
 Noun predicates need な in the chosen のに frame; a past main event does not force all subordinate forms into past tense.
 All prior records and identities remain unchanged; unrestricted mixed selection and other uses remain outside this batch.
 
+`formal-nouns-mixed-routines.json` adds 12 mixed-context questions; see the [source record](grammar-mixed-routines-sources.json).
+Four changes, four maintained practices and four current inferences share one three-way relationship, with read/write/use/speak
+contexts. The whole ending is blank, and every translation starts with the same five-pattern pool:
+ようになる／ようにする／ことにする／はずだ／ようだ. No item-specific instruction supplies the correct function or conjugation.
+The visible English still defines the intended message; another grammatically possible description need not express that message.
+
+Accept ようになった／ようになっている for these established changes, ようにしている／ことにしている／ようにする for
+the maintained practices, and はずだ／ようだ with their plain である alternatives for these current judgments.
+In these recurring-event frames, ようにする can describe repeated care; ようにしている foregrounds the maintained state more
+explicitly. Do not turn that contextual overlap into global equivalence. Keep shared alternatives off wrong buttons and explain
+their nuances. The common format requests complete, uncontracted, plain hiragana endings without added particles or auxiliary
+constructions; it is not unrestricted Japanese paraphrasing.
+Preserve the deliberately cultivated change, existing rules with lapses, observations that do not reveal intention or a prior
+baseline, and the distinction between publishing and writing times. The full-predicate task now tests choosing なる versus する,
+unlike the earlier verb-form tasks with those endings printed. This is the first bounded mixed set, not all-family completion.
+All341 earlier records and identities remain unchanged; no runtime, schema, grading or SRS changes.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.

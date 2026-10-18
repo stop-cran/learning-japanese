@@ -2174,5 +2174,67 @@ class GrammarKuraiDegreeMinimumCoverageTests(unittest.TestCase):
         self.assertIn("not a scientific claim", self.exercises["noni-familiar-tea-different-taste"]["explanation"])
 
 
+class GrammarMixedRoutinesCoverageTests(unittest.TestCase):
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((root / "grammar" / "formal-nouns-mixed-routines.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_full_ending_selection_uses_one_common_pool_and_three_way_options(self):
+        targets = {"mixed-changed-routine", "mixed-maintained-practice", "mixed-current-inference"}
+        self.assertEqual({target: 4 for target in targets}, Counter(
+            exercise["target"] for exercise in self.exercises.values()
+        ))
+        for topic in ("reading", "writing", "using", "speaking"):
+            self.assertEqual(targets, {
+                exercise["target"] for exercise in self.exercises.values()
+                if exercise["id"].split("-")[2] == topic
+            })
+        instruction = (
+            "Choose an appropriate form of ようになる, ようにする, ことにする, はずだ or ようだ. "
+            "Fill the whole ending in hiragana, using one complete, uncontracted plain-form construction; "
+            "keep any copula and do not add particles or auxiliary constructions. "
+        )
+        for exercise in self.exercises.values():
+            self.assertTrue(exercise["translation"].startswith(instruction), exercise["id"])
+            self.assertRegex(exercise["prompt"], r"(読む|書く|使う|話す)____。$")
+            self.assertEqual(targets, {option["id"] for option in exercise["options"]})
+            self.assertEqual("routine-change-practice-inference", exercise["relationship"])
+
+    def test_shared_full_predicates_are_not_competing_wrong_buttons(self):
+        answers = {
+            "mixed-changed-routine": {"ようになった", "ようになっている"},
+            "mixed-maintained-practice": {"ようにしている", "ことにしている", "ようにする"},
+            "mixed-current-inference": {"はずだ", "ようだ", "はずである", "ようである"},
+        }
+        models = {target: set() for target in answers}
+        for exercise in self.exercises.values():
+            accepted = answers[exercise["target"]]
+            self.assertEqual(accepted, set(exercise["acceptedAnswers"]), exercise["id"])
+            self.assertEqual(1, sum(option["label"] in accepted for option in exercise["options"]), exercise["id"])
+            model = next(option["label"] for option in exercise["options"] if option["id"] == exercise["answer"])
+            models[exercise["target"]].add(model)
+        self.assertEqual({"ようにしている", "ことにしている"}, models["mixed-maintained-practice"])
+        self.assertEqual({"はずだ", "ようだ"}, models["mixed-current-inference"])
+        self.assertEqual({"ようになった", "ようになっている"}, models["mixed-changed-routine"])
+
+    def test_contexts_do_not_confuse_change_intention_evidence_and_perfect_success(self):
+        diary = self.exercises["mixed-change-writing-established-diary"]
+        self.assertIn("自分で決めて毎晩続けた結果", diary["prompt"])
+        self.assertIn("なる does not mean nobody acted intentionally", diary["explanation"])
+        self.assertIn("英語は以前から話せた", self.exercises["mixed-change-speaking-meeting-language"]["prompt"])
+        for exercise_id, lapse in {
+            "mixed-practice-reading-meeting-materials": "うっかり読み忘れる日もある",
+            "mixed-practice-writing-ideas": "まだ忘れることもある",
+            "mixed-practice-using-cloth-bag": "持っていくのを忘れることもある",
+            "mixed-practice-speaking-conclusion-first": "細かい話から始めてしまうこともある",
+        }.items():
+            self.assertIn("以前から", self.exercises[exercise_id]["prompt"])
+            self.assertIn(lapse, self.exercises[exercise_id]["prompt"])
+        self.assertIn("Publication times do not guarantee writing times", self.exercises["mixed-inference-writing-public-diary"]["explanation"])
+        self.assertIn("本人の方針やすべての買い物を確認したわけではない", self.exercises["mixed-inference-using-filled-cloth-bag"]["prompt"])
+        self.assertIn("本人の方針やほかの場面は知らない", self.exercises["mixed-inference-speaking-recordings"]["prompt"])
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1350,6 +1350,57 @@ In particular, the spelling **限り** can represent **きり** as well as the s
 do not infer from that spelling that **二人かぎり** is the ordinary way to say "just the two of us."
 This practice does not cover every use, such as **寝たきり**, **これっきり**, or negative-predicate limitation.
 
+## Mixed contextual selection: change, practice, or inference
+
+The earlier change/effort questions supplied **ようになりました／ようにしています** and asked for a verb form.
+The first mixed set instead leaves the **whole ending** blank and uses the same pool throughout:
+**ようになる／ようにする／ことにする／はずだ／ようだ**. The context and English meaning, not a different
+form hint for each question, determine the message to express.
+
+| Message | Example | What the ending contributes |
+| --- | --- | --- |
+| An established change | 今は毎晩日記を書くようになった。 | I have now come to write a diary every evening. |
+| A consciously maintained practice | 思いついたことは、その場で書くようにしている。 | I make a point of writing ideas down there and then. |
+| A chosen standing rule | 思いついたことは、その場で書くことにしている。 | I make it my practice to write ideas down there and then. |
+| A current inference | 記録から判断すると、友人は毎日日記を書くようだ。 | Judging from the record, my friend apparently writes a diary every day. |
+
+For the established changes in this set, **ようになった** reports the transition and **ようになっている**
+reports its resulting current state. Both can fit. One diary habit was deliberately cultivated:
+**なる does not mean that nobody acted intentionally**. The question reports what that effort produced.
+The other examples include an unplanned reading routine and changes in workplace conditions.
+All four use dictionary verbs for changed behavior, not potential verbs for newly acquired ability.
+
+For the chosen practices, **ようにしている** foregrounds care or effort, while **ことにしている** foregrounds
+the standing personal rule. Both fit the supplied accounts. Plain nonpast **ようにする** also fits these recurring-event
+contexts as a generic account of repeated care: **質問に答えるときは、まず結論から話すようにする。**
+("When answering questions, I make a point of stating the conclusion first.") It need not announce a new undertaking;
+**ようにしている** more explicitly presents the practice as currently maintained.
+These people sometimes forget; maintaining a practice is not a guarantee of perfect execution.
+Reporting that existing practice also differs from merely announcing a new decision with **ことにする**,
+or retelling its origin with **ことにした**.
+
+For the current judgments, **はずだ** offers a reasoned expectation and **ようだ** presents what the evidence suggests.
+Both are accepted in the selected contexts without being treated as identical in every nuance or interchangeable everywhere.
+The plain written predicates **はずである／ようである** are accepted too; they sound more formal.
+Do not attach fixed confidence percentages to these formulations.
+
+The observations do not independently establish everything about the person. A daily publication record can suggest a
+writing routine without proving exactly when each entry was written. Repeated bag use or recorded answers can support a
+judgment about behavior without revealing a private rule or proving that the behavior is newly acquired.
+Likewise, a person can both maintain a practice and change their routine: the task asks which account matches the intended
+English message, not which other statements could also be true of that person.
+
+There are **four questions per function**, using reading, writing, using and speaking contexts.
+Each question presents all three functions as options, with one representative for its accepted class.
+This includes actual contextual choice of **ようになる versus ようにする**, rather than leaving that choice printed
+in the question. Shared **ことにしている** and inferential **ようだ** alternatives must not become wrong buttons.
+
+The common instruction asks for one complete, uncontracted plain-form ending in hiragana, keeping any copula and adding
+no extra particles or auxiliary constructions. Polite forms, contractions, kanji spellings, omitted copulas and combined
+patterns can be natural outside that format. In particular, an arrangement account with **ことになる** is not made
+ungrammatical by being outside this five-pattern pool.
+This is less-scaffolded practice within a stated pool, not unrestricted cloze or mixed coverage of every family in the article.
+
 ## References
 
 - [Japan Foundation: 「こと」（1）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201112.html) - nominalization, こと versus の, and fixed expressions.
@@ -1412,6 +1463,7 @@ This practice does not cover every use, such as **寝たきり**, **これっき
 - [Daijisen: だけ](https://kotobank.jp/word/だけ-559985) and [Bunpro: たい](https://bunpro.jp/grammar_points/たい) - extent and desired-action attachment, underlying the たいだけ pattern; だけ also has proportional-change uses.
 - [Daijisen: 限り](https://kotobank.jp/word/限り-459951), [日本語NET: 限り（限界）](https://nihongokyoshi-net.com/2019/05/16/jlptn2-grammar-kagiri-2/), and [Hedgehog Japanese: potential／たい＋だけ](https://hedgehog-japanese.com/grammar/jlpt-n2/dake/) - fullest available extent and desired amount; compare the possible-extent だけ example in Daijisen above and the TUFS potential-form chart cited earlier.
 - [Daijisen and Seisenban Kokugo: 位, particle sections](https://kotobank.jp/word/位-429901), [Tanosuke: degree](https://tanosuke.com/gurai-hodo-teido) and [downplaying](https://tanosuke.com/gurai/), and [Tae Kim: concessive のに](https://guidetojapanese.org/learn/grammar/compound) - scoped degree/minimum uses and contrasting expectations. The teaching pages' blanket bans on high-degree くらい or every negative-superlative use are not adopted.
+- Japan Foundation: [ようになる](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00086/ja/render.do), [ようにする](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00105/ja/render.do), [こと patterns](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201112.html), and [information-based judgments](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201103.html) - the first mixed set combines these already introduced distinctions; the information discussion is not used as a fixed certainty scale.
 - [Daijisen: きり［副助］](https://kotobank.jp/word/きり-480122), [Nihon Kokugo Daijiten: 切・限](https://kotobank.jp/word/切り-480110), and [JMdict via Jisho: きり](https://jisho.org/search/きり) - exclusive limits, no further action after an event, continuing states and spellings; use the particle entries, not adjacent homophones.
 - [JMdict via Jisho: 限り（かぎり）](https://jisho.org/search/限り) and [Bunpro: のみ](https://bunpro.jp/grammar_points/のみ) - context-appropriate limitation alternatives, not unrestricted substitution rules.
 
