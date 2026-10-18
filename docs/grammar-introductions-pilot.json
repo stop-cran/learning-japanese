@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "kind": "phase-a-design-not-imported-content",
+  "retrievedOn": "2026-10-18",
+  "contentBaseline": "c2a98448ca7f7c5f77c199743b3d5ec21d851c97",
+  "issue": "https://github.com/stop-cran/kanji-cards-android/issues/48",
+  "contract": {
+    "repository": "stop-cran/kanji-cards-android",
+    "path": "docs/GRAMMAR-INTRODUCTIONS.md"
+  },
+  "scope": "Proposed classification and focused-introduction mapping for 19 unchanged exercises: 15 N4 temporal exercises and four N3 expectation/obligation exercises. No runtime fields or manifest changes are made in phase A. Other exercises remain unclassified and available through the documented compatibility path.",
+  "classifications": [
+    {
+      "setId": "formal-nouns-before-after",
+      "exerciseIds": ["mae-snack-cleaning", "ato-snack-cleaning", "mae-departure-call", "ato-departure-call", "mae-class-library", "ato-class-library"],
+      "jlpt": 4,
+      "sources": ["jlptsensei-mae", "jlptsensei-ato", "jpf-mae", "jpf-ato"],
+      "rationale": "The controlled contrast requires both before and after relations, including the relative-time verb attachment and noun patterns. JLPT Sensei places mae ni at N5 but ato de at N4; label the complete contrast N4 rather than its easier target alone. Extending the after-family classification to the supplied ato ni frames is editorial judgment, not a claim that the source labels those exact sentences or particle choices. Existing grammar-before-after-sources.json documents the ni/de qualification.",
+      "limits": "Not a claim that every isolated mae/no-ato expression is N4, that the prompt uses only N4 vocabulary, or that optional spelling variants each require separate study."
+    },
+    {
+      "setId": "formal-nouns-stages",
+      "exerciseIds": ["tokoro-before-lunch", "tokoro-before-letter", "tokoro-before-novel", "tokoro-during-lunch", "tokoro-during-letter", "tokoro-during-novel", "tokoro-after-lunch", "tokoro-after-letter", "tokoro-after-novel"],
+      "jlpt": 4,
+      "sources": ["bunpro-ru-tokoro", "bunpro-ta-tokoro", "jpf-tokoro"],
+      "rationale": "Bunpro explicitly places the about-to and just-completed tokoro lessons at N4. The Japan Foundation's BMA00036 covers the complete dictionary/teiru/ta three-stage contrast used here, with an old level-3 label. The modern N4 classification of the complete group is a corroborated editorial choice, not a mechanical conversion of an old JLPT label.",
+      "limits": "Controlled verb-form selection before printed tokoro does not establish unrestricted selection among tokoro, bakari, tsumori or every stative/resultative teiru use."
+    },
+    {
+      "setId": "formal-nouns-pilot",
+      "exerciseIds": ["hazu-shipping-estimate", "hazu-scheduled-arrival", "beki-safety-report", "beki-public-conduct"],
+      "jlpt": 3,
+      "sources": ["bunpro-hazu", "bunpro-beki"],
+      "rationale": "Bunpro places hazu da at N4 and beki at N3. These four questions explicitly contrast expectation with obligation/advisability, so N3 describes the required contrast, including questions whose answer is hazu. Other koto/wake functions in the same file are not classified by this record.",
+      "limits": "Do not adopt the source's claim that beki always names the only permissible action, its kanji-based explanation, or a universal strength rule. Existing exercise meanings and accepted answers are unchanged."
+    }
+  ],
+  "groupsBySet": [
+    {
+      "setId": "formal-nouns-before-after",
+      "introductionGroups": [
+        {
+          "id": "temporal-sequence",
+          "label": "Before and after an event",
+          "facets": [
+            {"id": "before", "label": "The main event is earlier"},
+            {"id": "after", "label": "The main event is later"}
+          ],
+          "members": [
+            {"exerciseId": "mae-snack-cleaning", "facetId": "before", "exampleKey": "snack-cleaning"},
+            {"exerciseId": "ato-snack-cleaning", "facetId": "after", "exampleKey": "snack-cleaning"},
+            {"exerciseId": "mae-departure-call", "facetId": "before", "exampleKey": "departure-call"},
+            {"exerciseId": "ato-departure-call", "facetId": "after", "exampleKey": "departure-call"},
+            {"exerciseId": "mae-class-library", "facetId": "before", "exampleKey": "class-library"},
+            {"exerciseId": "ato-class-library", "facetId": "after", "exampleKey": "class-library"}
+          ],
+          "next": [
+            {"groupId": "temporal-stages", "importance": 3, "reason": "Extend relative before/after timing to distinguishing immediately before, during and just after one action."}
+          ],
+          "requires": []
+        }
+      ]
+    },
+    {
+      "setId": "formal-nouns-stages",
+      "introductionGroups": [
+        {
+          "id": "temporal-stages",
+          "label": "About to act, acting, or just finished",
+          "facets": [
+            {"id": "before", "label": "Immediately before the action"},
+            {"id": "during", "label": "The action is in progress"},
+            {"id": "after", "label": "Immediately after completion"}
+          ],
+          "members": [
+            {"exerciseId": "tokoro-before-lunch", "facetId": "before", "exampleKey": "lunch"},
+            {"exerciseId": "tokoro-before-letter", "facetId": "before", "exampleKey": "letter"},
+            {"exerciseId": "tokoro-before-novel", "facetId": "before", "exampleKey": "novel"},
+            {"exerciseId": "tokoro-during-lunch", "facetId": "during", "exampleKey": "lunch"},
+            {"exerciseId": "tokoro-during-letter", "facetId": "during", "exampleKey": "letter"},
+            {"exerciseId": "tokoro-during-novel", "facetId": "during", "exampleKey": "novel"},
+            {"exerciseId": "tokoro-after-lunch", "facetId": "after", "exampleKey": "lunch"},
+            {"exerciseId": "tokoro-after-letter", "facetId": "after", "exampleKey": "letter"},
+            {"exerciseId": "tokoro-after-novel", "facetId": "after", "exampleKey": "novel"}
+          ],
+          "next": [],
+          "requires": []
+        }
+      ]
+    },
+    {
+      "setId": "formal-nouns-pilot",
+      "introductionGroups": [
+        {
+          "id": "expectation-obligation",
+          "label": "What is expected versus what ought to be done",
+          "facets": [
+            {"id": "expectation", "label": "Evidence-based expectation"},
+            {"id": "obligation", "label": "Obligation or strong recommendation"}
+          ],
+          "members": [
+            {"exerciseId": "hazu-shipping-estimate", "facetId": "expectation", "exampleKey": "shipping"},
+            {"exerciseId": "hazu-scheduled-arrival", "facetId": "expectation", "exampleKey": "airport-arrival"},
+            {"exerciseId": "beki-safety-report", "facetId": "obligation", "exampleKey": "safety-report"},
+            {"exerciseId": "beki-public-conduct", "facetId": "obligation", "exampleKey": "public-conduct"}
+          ],
+          "next": [],
+          "requires": []
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "jlptsensei-mae",
+      "url": "https://jlptsensei.com/learn-japanese-grammar/%E5%89%8D%E3%81%AB-%E3%81%BE%E3%81%88%E3%81%AB-mae-ni-meaning/",
+      "publisher": "JLPT Sensei",
+      "inspected": "The N5 lesson classification, temporal versus spatial uses, temporal examples and direct link to ato de. The source's spatial coverage is not part of this pilot."
+    },
+    {
+      "id": "jlptsensei-ato",
+      "url": "https://jlptsensei.com/learn-japanese-grammar/%e5%be%8c%e3%81%a7-%e3%81%82%e3%81%a8%e3%81%a7-ato-de-meaning/",
+      "publisher": "JLPT Sensei",
+      "inspected": "Actual HTML title and structured article classification identify the lesson as N4. Simplified extraction returned only one example; it is not used to reconstruct missing explanations or to certify the exercises' exact ato ni wording."
+    },
+    {
+      "id": "jpf-mae",
+      "url": "https://www.kyozai.jpf.go.jp/kyozai/material/BTS00130/ja/render.do",
+      "publisher": "The Japan Foundation, Minna no Kyozai",
+      "inspected": "Actual HTML lesson heading and explanation A plus examples 1-5: placing the main action before the reference event, including a past main action. Used for the temporal connection, not a modern JLPT level assignment."
+    },
+    {
+      "id": "jpf-ato",
+      "url": "https://www.kyozai.jpf.go.jp/kyozai/material/BTS00129/ja/render.do",
+      "publisher": "The Japan Foundation, Minna no Kyozai",
+      "inspected": "Actual HTML lesson heading, explanation A and examples 1-4: placing the main action after the reference event. Used for the temporal connection, not a modern JLPT level assignment."
+    },
+    {
+      "id": "bunpro-ru-tokoro",
+      "url": "https://bunpro.jp/grammar_points/%E3%82%8B%E3%81%A8%E3%81%93%E3%82%8D%E3%81%A0",
+      "publisher": "Bunpro",
+      "inspected": "Actual HTML title says N4; the main explanation describes nonpast verb + tokoro as about to act. No claim about spelling frequency or universal physical-location spelling is adopted."
+    },
+    {
+      "id": "bunpro-ta-tokoro",
+      "url": "https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%A8%E3%81%93%E3%82%8D%E3%81%A0",
+      "publisher": "Bunpro",
+      "inspected": "Actual HTML title says N4; the main explanation describes ta + tokoro as just having acted. Broader claims about every verb or spelling frequency are not adopted."
+    },
+    {
+      "id": "jpf-tokoro",
+      "url": "https://www.kyozai.jpf.go.jp/kyozai/material/BMA00036/ja/render.do",
+      "publisher": "The Japan Foundation, Minna no Kyozai",
+      "inspected": "Actual HTML heading, all three structure diagrams and explanations A-C: immediately before, ongoing, immediately after; the page explicitly labels the lesson old JLPT level 3. Simplified extraction showed only a helpfulness widget, so the actual HTML was inspected instead. Old level 3 is not itself asserted to be an official modern N4 item list."
+    },
+    {
+      "id": "bunpro-hazu",
+      "url": "https://bunpro.jp/grammar_points/%E3%81%AF%E3%81%9A%E3%81%A0",
+      "publisher": "Bunpro",
+      "inspected": "Actual HTML title says N4. Main explanation and caution distinguish evidence-based should/expectation from advice. Optional claims about exact certainty and omission of da are not needed."
+    },
+    {
+      "id": "bunpro-beki",
+      "url": "https://bunpro.jp/grammar_points/%E3%81%B9%E3%81%8D",
+      "publisher": "Bunpro",
+      "inspected": "Actual HTML title says N3. Main explanation concerns obligation/ought to and gives plain nonpast attachment. The source's universal only-permissible-choice wording and kanji-based derivation are not adopted."
+    }
+  ],
+  "authoringNotes": [
+    "All 401 runtime exercise records, article text, accepted answers, exercise IDs and the manifest remain unchanged in phase A.",
+    "The classifications are single proposed levels per exercise, not redundant N3/N2/N1 tags. Level membership is derived in the application.",
+    "The complete paired contrast determines the level; the easier model answer alone does not. Optional spelling/contraction acceptance is not a second learning item.",
+    "Example keys keep reused lexical contexts visible without counting repeated versions as independent context coverage within a facet.",
+    "The temporal recommendation is an editorial connection between related topics, not a source-attested prerequisite, equivalence of mae/ato and tokoro, proven transfer effect or requirement to finish one before the other.",
+    "No true prerequisites are authored. Their malformed/cyclic/missing-reference behavior belongs in synthetic implementation fixtures, not invented linguistic dependencies.",
+    "The other four koto/wake exercises in the pilot file remain unclassified and ungrouped. No broad level is inferred from that file's title or article.",
+    "N5 is intentionally empty in this classified subset. N2/N1 scopes include the classified N4/N3 exercises but no N2/N1 mastery or coverage is claimed.",
+    "The 404 guessed Bunpro URLs for mae ni and ta ato de and an unsuccessful broad web search were not evidence. Actual discovered URLs and HTML headings were inspected.",
+    "Independent review must assess classifications/grouping and the contract; the existing examples are unchanged, and this does not establish native-speaker validation, corpus frequency or learning effectiveness."
+  ]
+}
