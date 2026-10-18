@@ -1861,5 +1861,88 @@ class GrammarStateChangeCoverageTests(unittest.TestCase):
         self.assertIn("different aspects and time intervals", self.exercises["naru-became-cold-water"]["explanation"])
 
 
+class GrammarHokaExclusionCoverageTests(unittest.TestCase):
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((root / "grammar" / "formal-nouns-hoka-exclusion.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+        self.group_pairs = [
+            ("hoka-only-three-key-holders", "naka-none-of-three-key-holders", "この三人"),
+            ("hoka-only-four-spanish-speakers", "uchi-none-of-four-spanish-speakers", "この四人"),
+            ("hoka-only-two-library-books", "naka-neither-of-two-library-books", "右の二冊"),
+        ]
+        self.verb_pairs = [
+            ("hoka-only-option-wait-for-entry", "koto-no-need-wait-after-call", "待つ"),
+            ("shika-only-option-redo-file", "koto-no-need-redo-accepted-file", "やり直す"),
+            ("hoka-only-option-borrow-dictionary", "koto-no-need-borrow-extra-dictionary", "借りる"),
+        ]
+
+    def test_reciprocal_pairs_cover_both_group_scopes_and_action_meanings(self):
+        self.assertEqual({
+            "hoka-outside-exclusion": 3, "naka-uchi-within-exclusion": 3,
+            "hoka-shika-no-alternative": 3, "koto-unnecessary-action": 3,
+        }, Counter(exercise["target"] for exercise in self.exercises.values()))
+        for first_id, second_id, _ in self.group_pairs + self.verb_pairs:
+            first, second = self.exercises[first_id], self.exercises[second_id]
+            self.assertEqual(first["relationship"], second["relationship"])
+            self.assertNotEqual(first["target"], second["target"])
+            self.assertEqual(
+                [option["label"] for option in first["options"]],
+                [option["label"] for option in second["options"]],
+            )
+
+    def test_group_answers_preserve_shared_equivalents_and_printed_particles(self):
+        for outside_id, inside_id, group in self.group_pairs:
+            self.assertEqual({"ほか", "他", "外"}, set(self.exercises[outside_id]["acceptedAnswers"]))
+            self.assertEqual({"なか", "中", "うち", "内"}, set(self.exercises[inside_id]["acceptedAnswers"]))
+            for exercise_id in (outside_id, inside_id):
+                exercise = self.exercises[exercise_id]
+                self.assertIn(group + "の____には", exercise["prompt"])
+                self.assertIn("ほか, なか or うち, in kana or kanji", exercise["translation"])
+                self.assertIn("の and には are already printed", exercise["translation"])
+        for exercise_id in ("hoka-only-two-library-books", "naka-neither-of-two-library-books"):
+            self.assertIn("この机の本について言えば", self.exercises[exercise_id]["prompt"])
+        for exercise_id in ("hoka-only-four-spanish-speakers", "uchi-none-of-four-spanish-speakers"):
+            self.assertIn("この展示会のスタッフは八人", self.exercises[exercise_id]["prompt"])
+        self.assertIn("separately establish", self.exercises["hoka-only-three-key-holders"]["explanation"])
+        self.assertIn("does not itself assert", self.exercises["naka-neither-of-two-library-books"]["explanation"])
+
+    def test_no_alternative_endings_share_all_named_variants_not_wrong_buttons(self):
+        expected = {
+            prefix + "ほか" + particle + "ない"
+            for prefix in ("", "より") for particle in ("", "に", "は", "には")
+        } | {"しかない"}
+        models = set()
+        for only_id, no_need_id, verb in self.verb_pairs:
+            only = self.exercises[only_id]
+            self.assertEqual(expected, set(only["acceptedAnswers"]), only_id)
+            self.assertEqual(["ことはない"], self.exercises[no_need_id]["acceptedAnswers"])
+            models.add(next(option["label"] for option in only["options"] if option["id"] == only["answer"]))
+            for exercise_id in (only_id, no_need_id):
+                exercise = self.exercises[exercise_id]
+                self.assertIn(verb + "____", exercise["prompt"])
+                self.assertIn("optional より before ほか and に／は／には after it", exercise["translation"])
+                self.assertIn("しかない, or ことはない, in kana", exercise["translation"])
+                self.assertEqual(
+                    1, sum(option["label"] in exercise["acceptedAnswers"] for option in exercise["options"]),
+                )
+        self.assertEqual({"ほかない", "しかない", "よりほかない"}, models)
+
+    def test_no_option_has_goal_scope_and_no_need_allows_optional_actions(self):
+        for only_id, _, _ in self.verb_pairs:
+            self.assertIn("には", self.exercises[only_id]["prompt"])
+        self.assertIn("not a guarantee", self.exercises["shika-only-option-redo-file"]["explanation"])
+        self.assertIn("need not imply resentment", self.exercises["hoka-only-option-borrow-dictionary"]["explanation"])
+        wait = self.exercises["koto-no-need-wait-after-call"]
+        self.assertIn("今すぐ入ってよい", wait["prompt"])
+        self.assertIn("never happens", wait["explanation"])
+        redo = self.exercises["koto-no-need-redo-accepted-file"]
+        self.assertIn("任意の改善はしてもよい", redo["prompt"])
+        self.assertIn("not a prohibition", redo["explanation"])
+        borrow = self.exercises["koto-no-need-borrow-extra-dictionary"]
+        self.assertIn("借りてもかまわない", borrow["prompt"])
+        self.assertIn("neither forbids borrowing", borrow["explanation"])
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -450,6 +450,21 @@ Explain accepted spelling/reading variants without recommending them as equally 
 ままになっている and other reformulations remain outside these named basic patterns, not globally wrong.
 The existing six verb-form state exercises and their identities remain unchanged.
 
+`formal-nouns-hoka-exclusion.json` adds 12 exercises; see the [source record](grammar-hoka-exclusion-sources.json).
+Three outside-group ほか exclusions contrast with three inside-group なか／うち denials. The question supplies の and には
+and names the group words, with kana/kanji allowed. Keep なか／中／うち／内 in one accepted class; do not put its
+alternatives on competing buttons. Preserve the staff/exhibition/desk-book universe and the context that separately
+establishes qualifying insiders or outsiders. The construction alone does not determine those additional facts.
+
+Three shared no-alternative ほか／しか answers contrast with three no-need ことはない answers using the same
+待つ／やり直す／借りる verbs. The visible task requests basic plain kana endings and allows より before ほか
+and に／は／には after it. Accept all eight such ほか endings plus しかない; display one representative correct button.
+These are three shared examples, not three independently discriminated examples per variant.
+Scope no-alternative claims to the stated goal and available routes; neither resignation nor formality is a grading boundary.
+The no-need contexts establish satisfied requirements and allow optional actions, avoiding prohibition, inability and
+nonoccurrence readings. Other paraphrases and polite/past/kanji endings are outside this named-form task, not universally
+wrong. Existing addition and foundation examples remain unchanged, with one SRS identity per exercise.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.

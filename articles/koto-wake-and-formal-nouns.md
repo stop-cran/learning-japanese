@@ -213,6 +213,55 @@ The rest of the sentence matters: **私のほかに誰もいません**, "there 
 excludes other people rather than asserting that another person is present.
 Other expressions, including うえに in suitable sentences, can add information too.
 
+### ほか: exclusion and no other option
+
+With a negative predicate, **Nのほかに／ほかには...ない／いない** can exclude anything or anyone
+outside N. Contrast that with **Nのなか／うちには...ない／いない**, a denial *within* N:
+
+| Stated context | Example | Meaning |
+| --- | --- | --- |
+| These three staff each have a key; the other three do not. | この三人のほかには、倉庫の鍵を持っている職員はいない。 | No staff member apart from these three has a warehouse key. |
+| These three staff have no keys; the other three do. | この三人のなかには、倉庫の鍵を持っている職員はいない。 | None of these three staff has a warehouse key. |
+
+**倉庫（そうこ）** means warehouse; **鍵（かぎ）** means key.
+In the second sentence, **うち** also fits. Here なか／中 and うち／内 describe group membership,
+not physical location or the temporal **うちに** window. **中** can also write うち;
+recognition of an alternative spelling does not mean every spelling is equally common.
+The first sentence's context separately establishes that all three have keys: **ほかには...いない**
+itself excludes outsiders, rather than counting which members inside the named group qualify.
+Likewise, a within-group denial alone does not establish that someone outside the group qualifies.
+Always identify the relevant set: staff at this exhibition, for example, not everyone everywhere.
+
+After a dictionary-form verb, **Vるほかない** expresses **no other available option**.
+**Vるしかない** can express the same relationship:
+
+> 手続きは全部済んだが、まだ名前を呼ばれていない。入場するには、ここで待つほかない。
+>
+> All the paperwork is done, but my name has not been called yet. To gain entry, I have no option but to wait here.
+
+In this scenario, entry is allowed only after one's name is called. **待つしかない** also fits.
+The lack of alternatives is relative to that goal and the stated conditions, not a claim about every imaginable choice.
+Use the dictionary form directly: **待つほかない／借りるしかない**, without inserting noun-linking の.
+**ほかはない／ほかにない／ほかにはない** and forms with **より** before ほか are also possible.
+ほかない tends to be more formal than conversational しかない; it can convey resignation but need not do so.
+Neither tendency justifies rejecting an otherwise fitting alternative.
+
+By contrast, **Vることはない** can reassure someone that the action is **unnecessary**:
+
+> もう名前を呼ばれ、今すぐ入ってよいと言われた。ここでさらに待つことはない。
+>
+> My name has already been called, and I was told I may enter now. There is no need to wait here any longer.
+
+This does not forbid waiting or say it is impossible. The context selects the no-need reading, not the separate
+"it never happens" reading of ことはない. A file already checked and accepted need not be redone; optional improvements
+can still be allowed. Similarly, bringing the required dictionary can remove the need to borrow another without prohibiting it.
+
+The group-word questions supply の and には and request **ほか／なか／うち**, including their supported spellings.
+The verb questions request the basic plain kana endings **ほかない** (including より／に／は variants),
+**しかない** or **ことはない**. All fitting no-alternative endings share an answer; they are not competing wrong buttons.
+Longer formulations such as **待つよりほかしかたがない** or **待つ必要はない**, and polite/past endings,
+are outside this named-form practice, not globally incorrect. The earlier additive ほか exercises remain separate.
+
 ### ほうがいい: recommend doing or not doing
 
 | Advice | Example | Meaning |
@@ -1183,6 +1232,8 @@ This practice does not cover every use, such as **寝たきり**, **これっき
 - [Bunpro: とおり](https://bunpro.jp/grammar_points/とおり) - conformity, verb/noun attachment and voiced どおり.
 - [Tae Kim: Using 方 for comparisons](https://guidetojapanese.org/learn/grammar/comparison), [Bunpro: たほうがいい](https://bunpro.jp/grammar_points/たほうがいい) and [ないほうがいい](https://bunpro.jp/grammar_points/ないほうがいい) - comparisons, noun/verb attachment and advice in both directions.
 - [JMdict via Jisho: ほか](https://jisho.org/search/ほか) - the 他／外 entry's addition and exclusion senses, with noun and verb attachment.
+- [JMdict via Jisho: 中](https://jisho.org/search/中) and [内](https://jisho.org/search/内) - the なか／うち among-group senses and their spellings, distinct from temporal and other senses.
+- [Hedgehog Japanese: ほかない](https://hedgehog-japanese.com/grammar/jlpt-n3/hokanai/), [日本語NET: しかない／ほかない](https://nihongokyoshi-net.com/2018/07/04/jlptn3-grammar-shikanai-hokanai/), and [Bunpro: よりほかない](https://bunpro.jp/grammar_points/よりほかない) - no-alternative verb attachment, overlapping しかない answers and particle variants; resignation is not obligatory. Contrast the no-need ことはない in the Japan Foundation's 「こと」（1） lesson.
 - [Bunpro: わりに](https://bunpro.jp/grammar_points/わりに) and [Daijisen: 癖に](https://kotobank.jp/word/癖に-483705) - assessment against an expected standard versus a conventionally reproachful contrast; neither makes context irrelevant.
 - [JMdict via Jisho: あげく](https://jisho.org/search/あげく) and [Daijisen via Weblio: あげく](https://www.weblio.jp/content/あげく) - the process-outcome sense and variant spellings; see also the 末 and あげく references below.
 - [JMdict via Jisho: もと](https://jisho.org/search/もと) - the **下／許（もと）** entry for guidance and conditions, not the separate 元 entries.

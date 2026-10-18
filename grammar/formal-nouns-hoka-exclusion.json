@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-hoka-exclusion",
+  "title": "ほか: exclusion and no other option",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "hoka-outside-exclusion", "label": "no qualifying member outside the named group" },
+    { "id": "naka-uchi-within-exclusion", "label": "no qualifying member within the named group" },
+    { "id": "hoka-shika-no-alternative", "label": "no other available option for the stated goal" },
+    { "id": "koto-unnecessary-action", "label": "no need to do the action" }
+  ],
+  "relationships": [
+    {
+      "id": "hoka-outside-vs-within",
+      "label": "excluding outsiders / denying membership within",
+      "constructions": ["hoka-outside-exclusion", "naka-uchi-within-exclusion"]
+    },
+    {
+      "id": "hoka-no-alternative-vs-no-need",
+      "label": "only remaining option / unnecessary action",
+      "constructions": ["hoka-shika-no-alternative", "koto-unnecessary-action"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "hoka-only-three-key-holders",
+      "target": "hoka-outside-exclusion",
+      "relationship": "hoka-outside-vs-within",
+      "prompt": "職員は六人いる。この三人には一人ずつ倉庫の鍵があり、残りの三人にはない。この三人の____には、倉庫の鍵を持っている職員はいない。",
+      "translation": "Use one of the group words ほか, なか or うち, in kana or kanji; の and には are already printed. There are six staff members. These three each have a warehouse key, and the other three do not. Apart from these three, no staff member has a warehouse key. 倉庫 (そうこ) means warehouse; 鍵 (かぎ) means key.",
+      "evidence": "The named three have keys; every staff member outside that group lacks one.",
+      "explanation": "この三人のほかには excludes key holders outside the named three. The preceding facts separately establish that all three themselves have keys; the exclusion construction alone is not a count of qualifying members inside the group. ほか can also be written 他 or 外. なか／中 and うち／内 would mean within these three and contradict their possession of keys. の and には belong outside this word-only blank.",
+      "answer": "hoka-outside-exclusion",
+      "acceptedAnswers": ["ほか", "他", "外"],
+      "options": [
+        { "id": "hoka-outside-exclusion", "label": "ほか", "rationale": "Denies any key holder among the staff outside these three." },
+        { "id": "naka-uchi-within-exclusion", "label": "なか", "rationale": "Would deny key holders within the three who each have a key." }
+      ]
+    },
+    {
+      "id": "naka-none-of-three-key-holders",
+      "target": "naka-uchi-within-exclusion",
+      "relationship": "hoka-outside-vs-within",
+      "prompt": "職員は六人いる。この三人には倉庫の鍵がなく、残りの三人には一人ずつ鍵がある。この三人の____には、倉庫の鍵を持っている職員はいない。",
+      "translation": "Use one of the group words ほか, なか or うち, in kana or kanji; の and には are already printed. There are six staff members. These three do not have warehouse keys; the other three each have one. Among these three, no staff member has a warehouse key. 倉庫 (そうこ) means warehouse; 鍵 (かぎ) means key.",
+      "evidence": "None of the named three has a key, while people outside that group do.",
+      "explanation": "この三人のなかには and この三人のうちには both locate the negative statement within the named group. Accept なか／中 and うち／内; 中 is also a recognized spelling of うち. This is group membership, not a time window. ほか would exclude outsiders, but the other three do have keys. The within-group construction itself does not establish who has keys outside; that information comes from the context.",
+      "answer": "naka-uchi-within-exclusion",
+      "acceptedAnswers": ["なか", "中", "うち", "内"],
+      "options": [
+        { "id": "hoka-outside-exclusion", "label": "ほか", "rationale": "Would deny outside key holders even though the other three have keys." },
+        { "id": "naka-uchi-within-exclusion", "label": "なか", "rationale": "Denies key holders within the named three; うち also fits." }
+      ]
+    },
+    {
+      "id": "hoka-only-four-spanish-speakers",
+      "target": "hoka-outside-exclusion",
+      "relationship": "hoka-outside-vs-within",
+      "prompt": "この展示会のスタッフは八人いる。この四人は全員スペイン語が話せるが、残りの四人は話せない。スタッフでは、この四人の____には、スペイン語が話せる人はいない。",
+      "translation": "Use one of the group words ほか, なか or うち, in kana or kanji; の and には are already printed. This exhibition has eight staff members. These four can all speak Spanish, but the other four cannot. Among the exhibition staff, nobody apart from these four can speak Spanish. 展示会 (てんじかい) means exhibition.",
+      "evidence": "All Spanish-speaking staff are in the named four; no remaining staff member speaks it.",
+      "explanation": "この四人のほかには excludes Spanish speakers outside the named four, within the exhibition's staff. It does not claim that no visitor or person elsewhere speaks Spanish. The context separately says all four qualify. 他 and 外 are accepted spellings of ほか. なか／うち would put the negative claim inside the four, contradicting 全員スペイン語が話せる.",
+      "answer": "hoka-outside-exclusion",
+      "acceptedAnswers": ["ほか", "他", "外"],
+      "options": [
+        { "id": "hoka-outside-exclusion", "label": "ほか", "rationale": "Excludes qualifying staff outside the named four." },
+        { "id": "naka-uchi-within-exclusion", "label": "うち", "rationale": "Would deny Spanish speakers within four people who all speak it." }
+      ]
+    },
+    {
+      "id": "uchi-none-of-four-spanish-speakers",
+      "target": "naka-uchi-within-exclusion",
+      "relationship": "hoka-outside-vs-within",
+      "prompt": "この展示会のスタッフは八人いる。この四人は誰もスペイン語が話せないが、残りの四人は話せる。スタッフでは、この四人の____には、スペイン語が話せる人はいない。",
+      "translation": "Use one of the group words ほか, なか or うち, in kana or kanji; の and には are already printed. This exhibition has eight staff members. None of these four speaks Spanish, but the other four do. Among these four staff members, nobody can speak Spanish. 展示会 (てんじかい) means exhibition.",
+      "evidence": "The negative statement holds inside the named four, not outside them.",
+      "explanation": "この四人のうちには means among these four; なか also fits. Accept うち／内 and なか／中, without claiming that every spelling is equally common. This within-group use of うち is not the temporal うちに construction. ほか would say no other staff member speaks Spanish, contradicting the stated ability of the remaining four.",
+      "answer": "naka-uchi-within-exclusion",
+      "acceptedAnswers": ["うち", "内", "なか", "中"],
+      "options": [
+        { "id": "hoka-outside-exclusion", "label": "ほか", "rationale": "Would exclude speakers among the other four, who do speak Spanish." },
+        { "id": "naka-uchi-within-exclusion", "label": "うち", "rationale": "Places the negative statement inside the named four; なか also fits." }
+      ]
+    },
+    {
+      "id": "hoka-only-two-library-books",
+      "target": "hoka-outside-exclusion",
+      "relationship": "hoka-outside-vs-within",
+      "prompt": "机に本が五冊ある。右の二冊は図書館で借りた本で、残りの三冊は私の本だ。この机の本について言えば、右の二冊の____には、図書館で借りた本はない。",
+      "translation": "Use one of the group words ほか, なか or うち, in kana or kanji; の and には are already printed. There are five books on the desk. The two on the right are library loans; I own the other three. Of the books on this desk, none apart from the two on the right is borrowed from the library.",
+      "evidence": "Only the two on the right are library loans within the explicitly stated set of desk books.",
+      "explanation": "右の二冊のほかには excludes other library loans on this desk. The surrounding facts establish that both named books are loans; ほか alone does not supply that information. 他／外 are also accepted. なか／うち would deny loans inside the pair that consists of library loans. The sentence does not concern books on other desks or elsewhere.",
+      "answer": "hoka-outside-exclusion",
+      "acceptedAnswers": ["ほか", "他", "外"],
+      "options": [
+        { "id": "hoka-outside-exclusion", "label": "ほか", "rationale": "Excludes any library loan among the other desk books." },
+        { "id": "naka-uchi-within-exclusion", "label": "なか", "rationale": "Would deny library loans within the two books explicitly borrowed from the library." }
+      ]
+    },
+    {
+      "id": "naka-neither-of-two-library-books",
+      "target": "naka-uchi-within-exclusion",
+      "relationship": "hoka-outside-vs-within",
+      "prompt": "机に本が五冊ある。右の二冊は私の本で、残りの三冊は図書館で借りた本だ。この机の本について言えば、右の二冊の____には、図書館で借りた本はない。",
+      "translation": "Use one of the group words ほか, なか or うち, in kana or kanji; の and には are already printed. There are five books on the desk. I own the two on the right; the other three are library loans. Neither of the two books on the right is borrowed from the library.",
+      "evidence": "Neither member of the named pair is a library loan, while books outside the pair are.",
+      "explanation": "右の二冊のなかには and 右の二冊のうちには both restrict the denial to the pair on the right. Accept なか／中 and うち／内. ほか would deny library loans among the other three desk books, contrary to the context. A within-group denial does not itself assert that outsiders qualify; the preceding sentence supplies that fact.",
+      "answer": "naka-uchi-within-exclusion",
+      "acceptedAnswers": ["なか", "中", "うち", "内"],
+      "options": [
+        { "id": "hoka-outside-exclusion", "label": "ほか", "rationale": "Would deny loans outside the pair, even though the other three are library loans." },
+        { "id": "naka-uchi-within-exclusion", "label": "なか", "rationale": "Denies library loans within the named pair; うち also fits." }
+      ]
+    },
+    {
+      "id": "hoka-only-option-wait-for-entry",
+      "target": "hoka-shika-no-alternative",
+      "relationship": "hoka-no-alternative-vs-no-need",
+      "prompt": "手続きは全部済んだが、係員に名前を呼ばれるまでは入れない。今はまだ呼ばれていない。入場するには、ここで呼ばれるのを待つ____。",
+      "translation": "Complete the printed verb with a plain ほかない ending (including optional より before ほか and に／は／には after it), しかない, or ことはない, in kana. All the paperwork is done, but I cannot enter until the attendant calls my name. I have not been called yet. To gain entry, I have no option but to wait here to be called. 係員 (かかりいん) means attendant.",
+      "evidence": "Entry requires the call, and no preliminary task remains; waiting is the remaining step for that goal.",
+      "explanation": "待つほかない and 待つしかない both express the lack of another available option for gaining entry. Accept ほかない／ほかにない／ほかはない／ほかにはない, each also with より before ほか, and しかない. These variants share the no-option answer here; neither formality nor a feeling of resignation makes one the only correct choice. 待つことはない would reassure someone that waiting is unnecessary, contrary to the entry condition. The claim is relative to gaining entry under these rules, not every conceivable action in life.",
+      "answer": "hoka-shika-no-alternative",
+      "acceptedAnswers": ["ほかない", "ほかにない", "ほかはない", "ほかにはない", "よりほかない", "よりほかにない", "よりほかはない", "よりほかにはない", "しかない"],
+      "options": [
+        { "id": "hoka-shika-no-alternative", "label": "ほかない", "rationale": "Waiting is the remaining option for gaining entry; しかない also fits." },
+        { "id": "koto-unnecessary-action", "label": "ことはない", "rationale": "Would say waiting is unnecessary although the required call has not happened." }
+      ]
+    },
+    {
+      "id": "koto-no-need-wait-after-call",
+      "target": "koto-unnecessary-action",
+      "relationship": "hoka-no-alternative-vs-no-need",
+      "prompt": "手続きは全部済んだ。もう名前を呼ばれ、係員から今すぐ入ってよいと言われた。ここでさらに待つ____。",
+      "translation": "Complete the printed verb with a plain ほかない ending (including optional より before ほか and に／は／には after it), しかない, or ことはない, in kana. All the paperwork is done. My name has already been called, and the attendant said I may enter now. There is no need to wait here any longer. 係員 (かかりいん) means attendant.",
+      "evidence": "Permission to enter has already been given, removing the need for further waiting.",
+      "explanation": "待つことはない expresses no need to wait in this reassuring context. It does not predict that waiting never happens or forbid choosing to wait. 待つほかない／待つしかない would instead make waiting the only available option, although immediate entry is allowed. The task names the basic ことはない pattern; a longer paraphrase such as 待つ必要はない can communicate no need too, but is not one of the requested endings.",
+      "answer": "koto-unnecessary-action",
+      "acceptedAnswers": ["ことはない"],
+      "options": [
+        { "id": "hoka-shika-no-alternative", "label": "ほかない", "rationale": "Would make waiting unavoidable even though entry is already allowed." },
+        { "id": "koto-unnecessary-action", "label": "ことはない", "rationale": "Removes the need to keep waiting; it does not prohibit waiting." }
+      ]
+    },
+    {
+      "id": "shika-only-option-redo-file",
+      "target": "hoka-shika-no-alternative",
+      "relationship": "hoka-no-alternative-vs-no-need",
+      "prompt": "提出するファイルが壊れ、修復できず、コピーもない。期限までに提出するには、最初から作業をやり直す____。",
+      "translation": "Complete the printed verb with a plain ほかない ending (including optional より before ほか and に／は／には after it), しかない, or ことはない, in kana. The file to submit is corrupted, cannot be repaired, and has no backup copy. To submit the work by the deadline, I have no option but to do it again from the beginning. 修復 (しゅうふく) means repair or restoration; 期限 (きげん) means deadline.",
+      "evidence": "Neither repairing the file nor using a copy is possible; the stated goal requires recreating the work.",
+      "explanation": "やり直すしかない and やり直すほかない share the no-alternative meaning here. Accept しかない and ほかない／ほかにない／ほかはない／ほかにはない, including each ほか form with より. ほかない can sound more formal, but that tendency does not make it wrong in this context or require separate grading. やり直すことはない would remove the need to redo the work, contrary to the unavailable repair and backup routes. This is necessity for the stated submission goal, not a guarantee that the deadline will actually be met.",
+      "answer": "hoka-shika-no-alternative",
+      "acceptedAnswers": ["しかない", "ほかない", "ほかにない", "ほかはない", "ほかにはない", "よりほかない", "よりほかにない", "よりほかはない", "よりほかにはない"],
+      "options": [
+        { "id": "hoka-shika-no-alternative", "label": "しかない", "rationale": "Redoing is the remaining route to submission; the ほかない variants also fit." },
+        { "id": "koto-unnecessary-action", "label": "ことはない", "rationale": "Would deny the need to redo despite the lost file and unavailable recovery routes." }
+      ]
+    },
+    {
+      "id": "koto-no-need-redo-accepted-file",
+      "target": "koto-unnecessary-action",
+      "relationship": "hoka-no-alternative-vs-no-need",
+      "prompt": "提出したファイルは正常に開け、担当者も内容を確認して受理した。最初から作業をやり直す____。任意の改善はしてもよい。",
+      "translation": "Complete the printed verb with a plain ほかない ending (including optional より before ほか and に／は／には after it), しかない, or ことはない, in kana. The submitted file opens normally, and the person in charge has checked and accepted it. There is no need to do the work again from the beginning. Optional improvements are allowed. 受理 (じゅり) means formal acceptance; 任意 (にんい) means optional here.",
+      "evidence": "The required submission has been accepted; improvements are permitted but not required.",
+      "explanation": "やり直すことはない reassures the person that redoing the work is unnecessary. It is not a prohibition: the next sentence allows optional improvements. Nor is this the separate nonoccurrence meaning of ことはない. やり直すしかない／ほかない would make redoing the only option despite the already accepted work. Other no-need formulations can be natural, but the visible task requests one of the named basic endings.",
+      "answer": "koto-unnecessary-action",
+      "acceptedAnswers": ["ことはない"],
+      "options": [
+        { "id": "hoka-shika-no-alternative", "label": "しかない", "rationale": "Would make redoing unavoidable even though the required submission is already accepted." },
+        { "id": "koto-unnecessary-action", "label": "ことはない", "rationale": "Says redoing is unnecessary while leaving optional improvements possible." }
+      ]
+    },
+    {
+      "id": "hoka-only-option-borrow-dictionary",
+      "target": "hoka-shika-no-alternative",
+      "relationship": "hoka-no-alternative-vs-no-need",
+      "prompt": "この授業では一人一冊、紙の辞書を使う。自分の辞書を忘れ、授業までに買いに行く時間もない。今使えるのは教室の貸出用の辞書だけなので、授業に参加するには、一冊借りる____。",
+      "translation": "Complete the printed verb with a plain ほかない ending (including optional より before ほか and に／は／には after it), しかない, or ことはない, in kana. Each person uses a paper dictionary in this lesson. I forgot mine and have no time to buy one before class. Only the classroom's loan dictionaries are available now, so to participate I have no option but to borrow one. 貸出用 (かしだしよう) means for lending.",
+      "evidence": "A personal copy is absent, purchase is unavailable in time, and the lesson requires a dictionary; loan copies are available.",
+      "explanation": "借りるよりほかない presents borrowing as the remaining route to taking part under these conditions. The same answer class includes しかない and ほかない／ほかにない／ほかはない／ほかにはない, with or without より before ほか. These sentences need not imply resentment about using a convenient loan service. 借りることはない would say borrowing is unnecessary, although no other required dictionary is available. This does not claim that paper dictionaries are necessary for every Japanese lesson.",
+      "answer": "hoka-shika-no-alternative",
+      "acceptedAnswers": ["よりほかない", "ほかない", "ほかにない", "ほかはない", "ほかにはない", "よりほかにない", "よりほかはない", "よりほかにはない", "しかない"],
+      "options": [
+        { "id": "hoka-shika-no-alternative", "label": "よりほかない", "rationale": "Borrowing is the available way to satisfy this lesson's requirement; しかない also fits." },
+        { "id": "koto-unnecessary-action", "label": "ことはない", "rationale": "Would deny the need to borrow despite the unavailable personal and purchased copies." }
+      ]
+    },
+    {
+      "id": "koto-no-need-borrow-extra-dictionary",
+      "target": "koto-unnecessary-action",
+      "relationship": "hoka-no-alternative-vs-no-need",
+      "prompt": "この授業で必要な紙の辞書はもう持ってきた。先生もそれで十分だと言っている。もう一冊借りる____。比較したければ借りてもかまわない。",
+      "translation": "Complete the printed verb with a plain ほかない ending (including optional より before ほか and に／は／には after it), しかない, or ことはない, in kana. I have already brought the paper dictionary required for this lesson, and the teacher says it is sufficient. There is no need to borrow another one. Borrowing one for comparison is allowed.",
+      "evidence": "The requirement is already met; borrowing an extra dictionary is optional.",
+      "explanation": "借りることはない removes the need to borrow another dictionary; it neither forbids borrowing nor says borrowing is impossible. The following permission makes that distinction explicit. 借りるよりほかない／ほかない／しかない would make borrowing the only option, although using the dictionary already brought is sufficient. This basic no-need pattern is contrasted with no alternative, not with every possible negative expression.",
+      "answer": "koto-unnecessary-action",
+      "acceptedAnswers": ["ことはない"],
+      "options": [
+        { "id": "hoka-shika-no-alternative", "label": "よりほかない", "rationale": "Would make borrowing unavoidable despite the sufficient dictionary already brought." },
+        { "id": "koto-unnecessary-action", "label": "ことはない", "rationale": "Says another loan is unnecessary without prohibiting an optional comparison." }
+      ]
+    }
+  ]
+}
