@@ -2110,5 +2110,69 @@ class GrammarPossibleExtentCoverageTests(unittest.TestCase):
         self.assertIn("can sometimes describe the same actual amount", self.exercises["extent-wanted-speaking-choice"]["explanation"])
 
 
+class GrammarKuraiDegreeMinimumCoverageTests(unittest.TestCase):
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((root / "grammar" / "particle-kurai-degree-minimum.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+
+    def test_each_degree_or_minimum_group_has_reciprocal_counterexpectations(self):
+        expected = {
+            "illustrative-degree-vs-counterexpectation": {
+                "kurai-hodo-illustrative-degree": 3, "noni-counterexpectation": 3,
+            },
+            "low-bar-vs-counterexpectation": {
+                "kurai-low-bar": 3, "noni-counterexpectation": 3,
+            },
+        }
+        for relationship, counts in expected.items():
+            self.assertEqual(counts, Counter(
+                exercise["target"] for exercise in self.exercises.values()
+                if exercise["relationship"] == relationship
+            ))
+        for minimum, concession, noun in [
+            ("kurai-minimum-own-name", "noni-own-name-field-mistake", "自分の名前"),
+            ("kurai-minimum-practiced-greeting", "noni-practiced-greeting-hesitation", "短い挨拶"),
+            ("kurai-minimum-familiar-tea", "noni-familiar-tea-different-taste", "お茶"),
+        ]:
+            for exercise_id in (minimum, concession):
+                self.assertIn(noun + "____", self.exercises[exercise_id]["prompt"])
+
+    def test_shared_spellings_optional_topic_and_noun_connector_fit_visible_tasks(self):
+        for exercise in self.exercises.values():
+            if exercise["target"] == "kurai-hodo-illustrative-degree":
+                expected = {"くらい", "ぐらい", "位", "ほど", "程"}
+            elif exercise["target"] == "kurai-low-bar":
+                expected = {"くらい", "ぐらい", "位", "くらいは", "ぐらいは", "位は"}
+            elif exercise["relationship"] == "low-bar-vs-counterexpectation":
+                expected = {"なのに"}
+            else:
+                expected = {"のに"}
+            self.assertEqual(expected, set(exercise["acceptedAnswers"]), exercise["id"])
+            self.assertEqual(1, sum(
+                option["label"] in expected for option in exercise["options"]
+            ), exercise["id"])
+            if exercise["relationship"] == "illustrative-degree-vs-counterexpectation":
+                self.assertIn("bare くらい／ぐらい／ほど or connective のに", exercise["translation"])
+                self.assertIn("do not add は", exercise["translation"])
+            else:
+                self.assertIn("with or without は", exercise["translation"])
+                self.assertIn("plain noun-predicate ending なのに", exercise["translation"])
+        tea = self.exercises["kurai-minimum-familiar-tea"]
+        self.assertEqual("くらい", next(option["label"] for option in tea["options"] if option["id"] == tea["answer"]))
+
+    def test_context_and_feedback_preserve_degree_stance_and_favorable_contrast(self):
+        self.assertIn("熱気で寝つくのに時間がかかった", self.exercises["kurai-degree-muggy-bedroom"]["prompt"])
+        self.assertIn("くらい does not mean", self.exercises["kurai-degree-muggy-bedroom"]["explanation"])
+        self.assertIn("not proof that repeated viewings actually happened", self.exercises["kurai-degree-beautiful-video"]["explanation"])
+        self.assertIn("私には難しくない", self.exercises["kurai-minimum-own-name"]["prompt"])
+        self.assertIn("not necessarily for everyone", self.exercises["kurai-minimum-own-name"]["explanation"])
+        self.assertIn("or impose a numerical lower bound", self.exercises["kurai-minimum-own-name"]["explanation"])
+        self.assertIn("reproachful", self.exercises["kurai-minimum-practiced-greeting"]["explanation"])
+        self.assertIn("慣れている", self.exercises["kurai-minimum-familiar-tea"]["prompt"])
+        self.assertIn("helpful outcome", self.exercises["noni-voiceless-written-help"]["explanation"])
+        self.assertIn("not a scientific claim", self.exercises["noni-familiar-tea-different-taste"]["explanation"])
+
+
 if __name__ == "__main__":
     unittest.main()

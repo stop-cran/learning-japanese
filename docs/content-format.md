@@ -128,6 +128,11 @@ solely because several forms express the tested meaning. The useful distinction 
 and genuine distractors, not between every wording inside that class. Keep the evidence and rationale specific to the
 context; an unstated intended nuance or a stylistic preference must not make an otherwise suitable answer wrong.
 
+Test the defining relationship rather than a surface proxy. In the [possible-extent batch](grammar-possible-extent-sources.json),
+reading three stories can satisfy a person's wish or exhaust the available allowance; the number read alone does not decide.
+State the relevant capacity and desire when contrasting them, and consider matched outcomes with different contextual
+explanations. Apply the same check to other contrasts: an outcome alone need not reveal an earlier intention or expectation.
+
 The validator checks structure and references, not Japanese naturalness or grammatical accuracy, so grammar content needs
 editorial review. Check the full inventory in the linked article, including constructions not offered as buttons.
 If a further natural completion fits the sentence and the visible task, include it in the answer class after checking its
@@ -494,6 +499,20 @@ The available extent is relative to access, space, a single trip, supplies, a da
 physical ability or every imaginable alternative. Preserve the distinction from continuing-condition かぎり and from
 only-small-amount interpretations of だけ. Other tense forms, paraphrases and noun-based maximum-extent expressions
 are outside this named-form task, not universally wrong. Prior quantity/condition records and SRS identities stay unchanged.
+
+`particle-kurai-degree-minimum.json` adds 12 exercises; see the [source record](grammar-kurai-degree-minimum-sources.json).
+Three shared くらい／ぐらい／ほど degree illustrations contrast with three clausal のに counterexpectations.
+Three noun-based くらい／ぐらい minimums contrast with three nominal なのに counterexpectations, using name, greeting and tea.
+This is three dedicated degree and three dedicated minimum items, with six reciprocal concession items, not 12 independent
+くらい targets. One degree model uses each kana particle; the accepted class includes 位／程 without treating them as rival answers.
+
+The question-side degree task names bare particles or kana のに, without は. The noun task names くらい／ぐらい with optional は
+or the standard plain nonpast noun-predicate ending なのに. Preserve all fitting 位（は） variants and literal blank boundaries.
+Other minimum framings, connectors, topic-marked degree expressions and tense patterns can be natural outside those named tasks.
+Retain the speaker-relative low bar, possible reproach toward another person, distinction from a hard numerical minimum,
+and the appreciated outcome in the written-help のに item. Degree need not be slight or imply that a mentioned desire was fulfilled.
+Noun predicates need な in the chosen のに frame; a past main event does not force all subordinate forms into past tense.
+All prior records and identities remain unchanged; unrestricted mixed selection and other uses remain outside this batch.
 
 ## Links and safety
 

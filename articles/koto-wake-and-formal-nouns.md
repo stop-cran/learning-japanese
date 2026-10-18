@@ -1197,6 +1197,61 @@ This is not a global rule separating the words: **読めば読むだけ** can al
 and shorter **読むほど** or other extent formulations can be natural in appropriate sentences.
 Likewise, **くらい／ぐらい** can overlap with clause-based degree without replacing ほど in every comparison or repeated-verb pattern.
 
+### くらい: an illustrative degree or a basic minimum
+
+**くらい／ぐらい** is not limited to approximate quantities. A situation can illustrate a degree:
+
+| Example | Meaning |
+| --- | --- |
+| なかなか眠れないくらい蒸し暑かった。 | It was so muggy that I had trouble falling asleep. |
+| 声が出ないぐらい驚いた。 | I was so surprised that I could not speak. |
+| 何度も見たくなるほど美しかった。 | It was so beautiful that I wanted to watch it repeatedly. |
+
+**くらい／ぐらい／ほど** all fit these particular degree examples. They share the answer class; the quiz does not
+make one a wrong choice for another. The spellings **位／程** are accepted too, though kana is usual.
+The negative in **眠れない／声が出ない** belongs to the degree illustration; the main description is affirmative.
+くらい does not necessarily mark a low degree. Nor must every degree illustration be literal: a context may use exaggeration,
+and wanting to watch again does not by itself mean a second viewing happened.
+
+A different use presents something as **basic, modest or not very demanding in the speaker's assessment**:
+
+| Example | Meaning |
+| --- | --- |
+| 自分の名前くらいはカタカナで書ける。 | I can at least write something as basic as my own name in katakana. |
+| 短い挨拶ぐらいは自分でしよう。 | I will at least handle a short greeting myself. |
+| お茶くらい私が用意するよ。 | I will at least prepare the tea. |
+
+Here **くらい／ぐらい** attaches directly to a noun, without の. **は** can highlight the minimum against other tasks,
+but it is optional in these examples. The exercises explain why these particular tasks are familiar or practiced.
+They do not claim that names, greetings or tea preparation are easy for everyone.
+This is not an estimate such as **三分くらい**, "about three minutes," or an exact numerical lower bound such as
+**三分以上**, "three minutes or more."
+
+The stance matters: **挨拶くらいはして**, "at least say hello," can sound reproachful because it treats the task as basic.
+A polite ending alone does not remove that implication. The same pattern can instead describe one's own modest ability or
+offer a small contribution, as in the examples above; it is not always rude.
+**ほど does not replace くらい in this downplaying use.** The degree overlap is not a universal substitution rule.
+Other minimum framings, such as **だけは**, can be natural, but they are not the named target of these exercises.
+
+The companion questions use **のに**, "although/despite," to contrast an actual situation with what was expected:
+
+| Frame | Example | Meaning |
+| --- | --- | --- |
+| Plain verb clause + のに | 一晩中眠れなかったのに、今朝は眠くない。 | Although I could not sleep all night, I am not sleepy this morning. |
+| Plain nonpast noun predicate + なのに | いつものお茶なのに、今日は味が違う。 | Although it is my usual tea, it tastes different today. |
+
+In the noun frame, **な** is needed before のに: **名前なのに／挨拶なのに／お茶なのに**.
+Past or negative noun predicates have other forms; this task specifically names the plain nonpast one.
+Concessive のに does not always lead to a bad result: helpful written directions despite a lack of voice are an appreciated
+outcome in one question. Do not confuse this use with **のに** in a separate purpose or required-resource construction.
+
+The twelve questions contain **three shared degree items and three minimum items**, each with three reciprocal
+counterexpectation items. They name bare くらい／ぐらい／ほど or のに for the clause questions, and
+くらい／ぐらい（は） or なのに for the noun questions. Fill only the missing span.
+The selected wording supports a controlled relationship and attachment contrast, not unrestricted choice among every
+degree, minimum or contrast expression. Topic-marked degree expressions, other connectors and fuller paraphrases are not
+made globally wrong by those visible restrictions.
+
 ### かぎり and だけ: possible extent versus desired extent
 
 **かぎり** can express the fullest extent available, not only an evidence limit or continuing condition.
@@ -1356,6 +1411,7 @@ This practice does not cover every use, such as **寝たきり**, **これっき
 - [Maggie Sensei: ほど](https://maggiesensei.com/2012/10/10/how-to-use-%E7%A8%8B-%E3%81%BB%E3%81%A9-hodo/), [Bunpro: ば〜ほど](https://bunpro.jp/grammar_points/ば-ほど), and [Tae Kim: Expressing amounts](https://guidetojapanese.org/learn/grammar/amount) - degree, negative comparisons and correlated change; the exact construction matters.
 - [Daijisen: だけ](https://kotobank.jp/word/だけ-559985) and [Bunpro: たい](https://bunpro.jp/grammar_points/たい) - extent and desired-action attachment, underlying the たいだけ pattern; だけ also has proportional-change uses.
 - [Daijisen: 限り](https://kotobank.jp/word/限り-459951), [日本語NET: 限り（限界）](https://nihongokyoshi-net.com/2019/05/16/jlptn2-grammar-kagiri-2/), and [Hedgehog Japanese: potential／たい＋だけ](https://hedgehog-japanese.com/grammar/jlpt-n2/dake/) - fullest available extent and desired amount; compare the possible-extent だけ example in Daijisen above and the TUFS potential-form chart cited earlier.
+- [Daijisen and Seisenban Kokugo: 位, particle sections](https://kotobank.jp/word/位-429901), [Tanosuke: degree](https://tanosuke.com/gurai-hodo-teido) and [downplaying](https://tanosuke.com/gurai/), and [Tae Kim: concessive のに](https://guidetojapanese.org/learn/grammar/compound) - scoped degree/minimum uses and contrasting expectations. The teaching pages' blanket bans on high-degree くらい or every negative-superlative use are not adopted.
 - [Daijisen: きり［副助］](https://kotobank.jp/word/きり-480122), [Nihon Kokugo Daijiten: 切・限](https://kotobank.jp/word/切り-480110), and [JMdict via Jisho: きり](https://jisho.org/search/きり) - exclusive limits, no further action after an event, continuing states and spellings; use the particle entries, not adjacent homophones.
 - [JMdict via Jisho: 限り（かぎり）](https://jisho.org/search/限り) and [Bunpro: のみ](https://bunpro.jp/grammar_points/のみ) - context-appropriate limitation alternatives, not unrestricted substitution rules.
 
