@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-nouns-past-expectation",
+  "title": "はず: past expectations, past events and actual outcomes",
+  "article": "articles/koto-wake-and-formal-nouns.md",
+  "constructions": [
+    { "id": "hazu-earlier-forward-expectation", "label": "an earlier expectation about a later event" },
+    { "id": "hazu-current-past-inference", "label": "a current inference about a completed past event" },
+    { "id": "hazu-recalled-occurrence", "label": "a recalled expectation that the event would happen" },
+    { "id": "hazu-recalled-nonoccurrence", "label": "a recalled expectation that the event would not happen" }
+  ],
+  "relationships": [
+    {
+      "id": "hazu-expectation-time-vs-event-time",
+      "label": "earlier forward expectation / current inference about the past",
+      "constructions": ["hazu-earlier-forward-expectation", "hazu-current-past-inference"]
+    },
+    {
+      "id": "hazu-recalled-positive-vs-negative",
+      "label": "expected occurrence / expected nonoccurrence, independently of the outcome",
+      "constructions": ["hazu-recalled-occurrence", "hazu-recalled-nonoccurrence"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "hazu-earlier-delivery-postponed",
+      "target": "hazu-earlier-forward-expectation",
+      "relationship": "hazu-expectation-time-vs-event-time",
+      "prompt": "先週の金曜、配送通知を読んだ時点では、荷物は土曜に____。ところが配送が延期され、土曜には届かなかった。",
+      "translation": "Use 届く (とどく, arrive): dictionary form + はずだった, or た form + はずだ. Write はず and the endings in kana; the verb may be in kana or kanji. Report the earlier expectation about a still-future arrival, not a current inference about a completed event: when I read the delivery notice last Friday, the package was expected to arrive on Saturday. Delivery was postponed, however, and it did not arrive on Saturday. 配送 (はいそう) means delivery; 延期 (えんき) means postponement.",
+      "evidence": "Friday is the expectation's reference point; the expected arrival lay ahead on Saturday and was later prevented.",
+      "explanation": "届くはずだった places the expectation in the past while retaining dictionary-form 届く for the event that was still ahead at that reference point. The failed delivery is stated separately, matching the familiar disappointed-expectation use of はずだった. 届いたはずだ would instead make a current inference that an arrival already happened; it does not report the Friday viewpoint requested. Do not change 届く to 届いた merely because Saturday is now past.",
+      "answer": "hazu-earlier-forward-expectation",
+      "acceptedAnswers": ["届くはずだった", "とどくはずだった"],
+      "options": [
+        { "id": "hazu-earlier-forward-expectation", "label": "届くはずだった", "rationale": "Recalls the Friday expectation about an arrival that was still ahead." },
+        { "id": "hazu-current-past-inference", "label": "届いたはずだ", "rationale": "Would make a current inference about a completed arrival, not recall the earlier forecast." }
+      ]
+    },
+    {
+      "id": "hazu-current-delivery-inference",
+      "target": "hazu-current-past-inference",
+      "relationship": "hazu-expectation-time-vs-event-time",
+      "prompt": "今は日曜の朝だ。土曜に届けるという配送通知と、予定どおり配達を終えたという連絡から判断すると、荷物は昨日____。ただし、私はまだ受取人に確認していない。",
+      "translation": "Use 届く (とどく, arrive): dictionary form + はずだった, or た form + はずだ. Write はず and the endings in kana; the verb may be in kana or kanji. Make a current inference about the past arrival, not a report of an earlier forecast: it is Sunday morning. From the Saturday delivery notice and a message that deliveries finished as planned, I infer that the package arrived yesterday. I have not yet checked with the recipient. 受取人 (うけとりにん) means recipient.",
+      "evidence": "The speaker reasons now from messages about an arrival expected to have occurred yesterday.",
+      "explanation": "届いたはずだ combines the past event form 届いた with a present judgment, はずだ. It means that the package should have arrived, not that someone ought morally to have delivered it. 届くはずだった would look back at an earlier forward expectation instead of making the requested current inference. The messages are evidence, not direct verification with the recipient. A result-state expression such as 届いているはずだ may also be natural, but this task explicitly practices dictionary versus た forms with the named endings.",
+      "answer": "hazu-current-past-inference",
+      "acceptedAnswers": ["届いたはずだ", "とどいたはずだ"],
+      "options": [
+        { "id": "hazu-earlier-forward-expectation", "label": "届くはずだった", "rationale": "Would report an earlier expectation rather than the speaker's present conclusion about yesterday." },
+        { "id": "hazu-current-past-inference", "label": "届いたはずだ", "rationale": "Presents the past arrival as what the current evidence supports." }
+      ]
+    },
+    {
+      "id": "hazu-earlier-course-postponed",
+      "target": "hazu-earlier-forward-expectation",
+      "relationship": "hazu-expectation-time-vs-event-time",
+      "prompt": "月曜、案内を見た時点では、講座は翌日の十時に____。しかし講師の都合で水曜に延期され、火曜には始まらなかった。",
+      "translation": "Use 始まる (はじまる, begin): dictionary form + はずだった, or た form + はずだ. Write はず and the endings in kana; the verb may be in kana or kanji. Report the earlier expectation about a still-future start: when I read the announcement on Monday, the course was expected to begin at ten the following day. The instructor's circumstances led to postponement until Wednesday, and it did not begin on Tuesday. 講座 (こうざ) means course; 講師 (こうし) means instructor.",
+      "evidence": "The expected Tuesday start was future from Monday's viewpoint; the later postponement contradicted it.",
+      "explanation": "始まるはずだった reports the earlier expectation supported by the announcement. The course's later failure to start on Tuesday fits the common disappointed-expectation reading, but the time relationship also matters: 始まる looks forward from Monday. 始まったはずだ would make a current inference about a completed start, not preserve that earlier viewpoint. はず is an expectation here, not the speaker's personal intention to start a course.",
+      "answer": "hazu-earlier-forward-expectation",
+      "acceptedAnswers": ["始まるはずだった", "はじまるはずだった"],
+      "options": [
+        { "id": "hazu-earlier-forward-expectation", "label": "始まるはずだった", "rationale": "Recalls the expectation based on Monday's announcement." },
+        { "id": "hazu-current-past-inference", "label": "始まったはずだ", "rationale": "Would infer a completed start now instead of reporting Monday's forward expectation." }
+      ]
+    },
+    {
+      "id": "hazu-current-course-start-inference",
+      "target": "hazu-current-past-inference",
+      "relationship": "hazu-expectation-time-vs-event-time",
+      "prompt": "今日は水曜だ。昨日の講座は十時開始の予定で、事務局からは時間の変更なく開催したと聞いた。その情報から今判断すると、講座は昨日の十時に____。開始時刻の記録はまだ見ていない。",
+      "translation": "Use 始まる (はじまる, begin): dictionary form + はずだった, or た form + はずだ. Write はず and the endings in kana; the verb may be in kana or kanji. Make a current inference about the past start: it is Wednesday. Yesterday's course was scheduled for ten, and the office says it took place without a schedule change. From that information, I now infer that it began at ten yesterday. I have not checked the start-time record. 事務局 (じむきょく) means administrative office.",
+      "evidence": "The present judgment concerns yesterday's start, using the schedule and the office's report.",
+      "explanation": "始まったはずだ presents the start as a completed past event inferred now. The た form belongs to the starting event, while はずだ is the current assessment. 始まるはずだった would report an earlier expectation rather than this present reasoning. The office's information provides grounds for the inference, but the speaker distinguishes that from personally checking the start-time record.",
+      "answer": "hazu-current-past-inference",
+      "acceptedAnswers": ["始まったはずだ", "はじまったはずだ"],
+      "options": [
+        { "id": "hazu-earlier-forward-expectation", "label": "始まるはずだった", "rationale": "Would shift to an earlier expectation instead of the requested current inference." },
+        { "id": "hazu-current-past-inference", "label": "始まったはずだ", "rationale": "Infers now that the course began at the stated past time." }
+      ]
+    },
+    {
+      "id": "hazu-recalled-light-timer-fulfilled",
+      "target": "hazu-earlier-forward-expectation",
+      "relationship": "hazu-expectation-time-vs-event-time",
+      "prompt": "昨日の朝、開館前に係員はタイマーの設定を思い出した。「確か、展示室の照明は今日の夕方六時に____。」記録を調べると、実際に昨日の六時に消えていた。",
+      "translation": "Use 消える (きえる, go out, of a light): dictionary form + はずだった, or た form + はずだ. Write はず and the endings in kana; the verb may be in kana or kanji. Complete the attendant's recollection yesterday morning before opening, when the evening event was still ahead: \"If I remember correctly, the exhibition-room lights were supposed to go out at six this evening.\" The record later showed that they did go out at six yesterday. 照明 (しょうめい) means lighting.",
+      "evidence": "Inside the recalled thought, six that evening is still future; the later record confirms the expected event.",
+      "explanation": "消えるはずだった recalls previously held information about the upcoming timer action. The explicit 思い出した and 確か context supports a recollection reading rather than requiring a failed expectation; the later record confirms fulfillment. This is not evidence that every isolated Vるはずだった is a neutral past forecast. 消えたはずだ inside this morning recollection would infer an already completed event, not the upcoming six-o'clock event. The tense choice follows the viewpoint, not whether the light eventually went out.",
+      "answer": "hazu-earlier-forward-expectation",
+      "acceptedAnswers": ["消えるはずだった", "きえるはずだった"],
+      "options": [
+        { "id": "hazu-earlier-forward-expectation", "label": "消えるはずだった", "rationale": "Recalls the expected evening timer action from a point before opening; fulfillment is stated later." },
+        { "id": "hazu-current-past-inference", "label": "消えたはずだ", "rationale": "Would treat the light going out as already completed inside a thought that precedes it." }
+      ]
+    },
+    {
+      "id": "hazu-current-light-timer-inference",
+      "target": "hazu-current-past-inference",
+      "relationship": "hazu-expectation-time-vs-event-time",
+      "prompt": "今朝、昨日のタイマーの設定と、装置が正常に動いたという報告を見て判断している。展示室の照明は昨日の夕方六時に____。その時刻の映像はまだ確認していない。",
+      "translation": "Use 消える (きえる, go out, of a light): dictionary form + はずだった, or た form + はずだ. Write はず and the endings in kana; the verb may be in kana or kanji. Make a current inference about the past event: this morning I am reasoning from yesterday's timer settings and a report that the device worked normally. The exhibition-room lights should have gone out at six yesterday evening. I have not checked footage from that time. 照明 (しょうめい) means lighting; 装置 (そうち) means device.",
+      "evidence": "The evidence is being evaluated this morning to infer an event at a specific time yesterday.",
+      "explanation": "消えたはずだ puts the light-going-out event in the past and keeps the inference current. It does not say whether the lights remained off all night or are off now. 消えるはずだった would instead recall an earlier expectation, which is not the requested viewpoint. 消えているはずだ could describe an expected resulting state in a different formulation; it is outside the two expressly named event-time patterns, not globally wrong.",
+      "answer": "hazu-current-past-inference",
+      "acceptedAnswers": ["消えたはずだ", "きえたはずだ"],
+      "options": [
+        { "id": "hazu-earlier-forward-expectation", "label": "消えるはずだった", "rationale": "Would report an earlier expectation rather than the current inference requested." },
+        { "id": "hazu-current-past-inference", "label": "消えたはずだ", "rationale": "Infers a completed event yesterday without asserting its resulting state still holds." }
+      ]
+    },
+    {
+      "id": "hazu-recalled-visitor-expected-come",
+      "target": "hazu-recalled-occurrence",
+      "relationship": "hazu-recalled-positive-vs-negative",
+      "prompt": "昨日の会議前、佐藤さんから出席するという返事があったことを思い出した。「確か、佐藤さんも今日の会議に____はずだった。」実際、佐藤さんは会議に来た。",
+      "translation": "Use 来る (くる, come) in its dictionary or ない form before the printed はずだった, in kana or kanji. Reconstruct the recalled expectation, not the eventual outcome: before yesterday's meeting, I remembered Sato's reply saying they would attend. \"If I remember correctly, Sato was also supposed to come to today's meeting.\" Sato did in fact come.",
+      "evidence": "The remembered attendance reply supports expected presence, and the later arrival happens to agree with it.",
+      "explanation": "来るはずだった preserves the affirmative expectation recalled before the meeting. The actual arrival confirms it, but the answer follows the remembered reply, not the outcome alone. 来ないはずだった would instead predict absence. Explicit recollection makes a fulfilled outcome compatible with はずだった here; do not treat that ending as automatically announcing failure. 来る is irregular: its negative is 来ない（こない）, not くない.",
+      "answer": "hazu-recalled-occurrence",
+      "acceptedAnswers": ["来る", "くる"],
+      "options": [
+        { "id": "hazu-recalled-occurrence", "label": "来る", "rationale": "Retains the positive attendance expectation established by the reply." },
+        { "id": "hazu-recalled-nonoccurrence", "label": "来ない", "rationale": "Would predict absence, contrary to the remembered attendance reply." }
+      ]
+    },
+    {
+      "id": "hazu-recalled-visitor-expected-absent",
+      "target": "hazu-recalled-nonoccurrence",
+      "relationship": "hazu-recalled-positive-vs-negative",
+      "prompt": "昨日の会議前、佐藤さんから欠席するという返事があったことを思い出した。「確か、佐藤さんは今日の会議に____はずだった。」ところが予定が変わり、佐藤さんは会議に来た。",
+      "translation": "Use 来る (くる, come) in its dictionary or ない form before the printed はずだった, in kana or kanji. Reconstruct the recalled expectation, not the eventual outcome: before yesterday's meeting, I remembered Sato's reply saying they would be absent. \"If I remember correctly, Sato was not expected to come to today's meeting.\" Their plans changed, however, and Sato came.",
+      "evidence": "The remembered reply predicts nonattendance; the actual arrival contradicts that expectation.",
+      "explanation": "来ないはずだった recalls an expectation that Sato would not come. 来ない（こない） is the irregular negative of 来る. This is a prediction of absence, not an instruction forbidding attendance. The eventual arrival does not turn the earlier negative expectation into a positive one. 来るはずだった would misreport what the remembered absence reply supported. 確か marks recollection here; it does not guarantee that recalled information will match later events.",
+      "answer": "hazu-recalled-nonoccurrence",
+      "acceptedAnswers": ["来ない", "こない"],
+      "options": [
+        { "id": "hazu-recalled-occurrence", "label": "来る", "rationale": "Would change the remembered absence expectation into an attendance expectation." },
+        { "id": "hazu-recalled-nonoccurrence", "label": "来ない", "rationale": "Preserves the earlier expectation of absence despite the surprising arrival." }
+      ]
+    },
+    {
+      "id": "hazu-recalled-chime-expected-sound",
+      "target": "hazu-recalled-occurrence",
+      "relationship": "hazu-recalled-positive-vs-negative",
+      "prompt": "昨日の式の前、開始時にチャイムを鳴らす設定だったことを思い出した。「確か、開始の合図でチャイムが____はずだった。」しかしスピーカーが故障していて、実際には鳴らなかった。",
+      "translation": "Use 鳴る (なる, ring) in its dictionary or ない form before the printed はずだった, in kana or kanji. Reconstruct the recalled expectation, not the eventual outcome: before yesterday's ceremony, I remembered that a chime was set to sound at the start. \"If I remember correctly, the chime was supposed to ring as the starting signal.\" The speaker was broken, however, and it did not ring. 合図 (あいず) means signal; 故障 (こしょう) means malfunction.",
+      "evidence": "The recalled setting predicts a sound; the equipment failure prevents that expected sound.",
+      "explanation": "鳴るはずだった preserves the positive prediction made from the recalled setting. The absence of an actual sound is an outcome, not evidence that the earlier expectation was negative. 鳴らないはずだった would misreport the setting-based prediction. The intransitive 鳴る describes the chime sounding; the earlier 鳴らす describes the setting to make it sound. These are not interchangeable forms of the same verb.",
+      "answer": "hazu-recalled-occurrence",
+      "acceptedAnswers": ["鳴る", "なる"],
+      "options": [
+        { "id": "hazu-recalled-occurrence", "label": "鳴る", "rationale": "Reports the sound expected from the remembered setting." },
+        { "id": "hazu-recalled-nonoccurrence", "label": "鳴らない", "rationale": "Would report expected silence, not the expected sound that failed to occur." }
+      ]
+    },
+    {
+      "id": "hazu-recalled-chime-expected-silent",
+      "target": "hazu-recalled-nonoccurrence",
+      "relationship": "hazu-recalled-positive-vs-negative",
+      "prompt": "昨日の式の前、チャイムを使わないという連絡を思い出した。「確か、開始時にはチャイムは____はずだった。」実際、チャイムは鳴らず、司会者の声で式が始まった。",
+      "translation": "Use 鳴る (なる, ring) in its dictionary or ない form before the printed はずだった, in kana or kanji. Reconstruct the recalled expectation, not the eventual outcome: before yesterday's ceremony, I remembered the notice that no chime would be used. \"If I remember correctly, the chime was not expected to ring at the start.\" It remained silent, and the host's voice opened the ceremony. 司会者 (しかいしゃ) means host or presenter.",
+      "evidence": "The recalled notice predicts silence, and the actual ceremony follows that expectation.",
+      "explanation": "鳴らないはずだった reports expected nonoccurrence of the sound. It is not a statement that the equipment was incapable of ringing: the notice said that it would not be used. The later silence fulfills the negative expectation. 鳴るはずだった would predict the opposite. Both chime questions end in actual silence, but their remembered expectations differ; do not choose a verb's polarity from the result alone.",
+      "answer": "hazu-recalled-nonoccurrence",
+      "acceptedAnswers": ["鳴らない", "ならない"],
+      "options": [
+        { "id": "hazu-recalled-occurrence", "label": "鳴る", "rationale": "Would predict a sound despite the notice that the chime would not be used." },
+        { "id": "hazu-recalled-nonoccurrence", "label": "鳴らない", "rationale": "Recalls expected silence, subsequently confirmed by the ceremony." }
+      ]
+    },
+    {
+      "id": "hazu-recalled-rain-expected",
+      "target": "hazu-recalled-occurrence",
+      "relationship": "hazu-recalled-positive-vs-negative",
+      "prompt": "昨日の朝、午後から雨という前夜の予報を思い出した。「確か、今日は午後から雨が____はずだった。」実際、午後になると雨が降り始めた。",
+      "translation": "Use 降る (ふる, fall, of rain) in its dictionary or ない form before the printed はずだった, in kana or kanji. Reconstruct the recalled expectation, not the eventual outcome: yesterday morning, I remembered the previous evening's forecast of afternoon rain. \"If I remember correctly, it was supposed to rain from this afternoon.\" It did start raining in the afternoon. 予報 (よほう) means forecast.",
+      "evidence": "The remembered forecast supports an affirmative rain prediction; later weather confirms it.",
+      "explanation": "降るはずだった recalls the expected afternoon rain. はず does not mean the speaker wanted rain; the grounds are the forecast, not a wish. In the explicit recollection context, fulfillment is possible and is stated afterward. 降らないはずだった would reverse the remembered prediction. The plain nonpast 降る is retained because the afternoon lay ahead inside the morning recollection.",
+      "answer": "hazu-recalled-occurrence",
+      "acceptedAnswers": ["降る", "ふる"],
+      "options": [
+        { "id": "hazu-recalled-occurrence", "label": "降る", "rationale": "Recalls the positive forecast for the later afternoon." },
+        { "id": "hazu-recalled-nonoccurrence", "label": "降らない", "rationale": "Would predict no rain, contrary to the recalled forecast." }
+      ]
+    },
+    {
+      "id": "hazu-recalled-rain-not-expected",
+      "target": "hazu-recalled-nonoccurrence",
+      "relationship": "hazu-recalled-positive-vs-negative",
+      "prompt": "昨日の朝、一日中晴れという前夜の予報を思い出した。「確か、今日は一日、雨が____はずだった。」実際、夜まで雨は一滴も降らなかった。",
+      "translation": "Use 降る (ふる, fall, of rain) in its dictionary or ない form before the printed はずだった, in kana or kanji. Reconstruct the recalled expectation, not the eventual outcome: yesterday morning, I remembered the previous evening's forecast of sunshine all day. \"If I remember correctly, no rain was expected at any point today.\" Not a drop of rain fell through the evening. 一滴 (いってき) means one drop.",
+      "evidence": "The remembered all-day sunny forecast supports expected nonoccurrence of rain, later confirmed.",
+      "explanation": "降らないはずだった keeps the prediction negative while placing the recalled knowledge in the past. The actual dry day fulfills that negative expectation; はずだった is not being used to announce a failed forecast here. 降るはずだった would instead predict rain. An expectation of no rain is not a claim of logical impossibility, and a weather forecast is not a guarantee. The explicit recollection context matters, not merely the presence of a past ending.",
+      "answer": "hazu-recalled-nonoccurrence",
+      "acceptedAnswers": ["降らない", "ふらない"],
+      "options": [
+        { "id": "hazu-recalled-occurrence", "label": "降る", "rationale": "Would predict rain instead of recalling the dry-weather expectation." },
+        { "id": "hazu-recalled-nonoccurrence", "label": "降らない", "rationale": "Preserves expected nonoccurrence of rain, which the later dry day confirms." }
+      ]
+    }
+  ]
+}

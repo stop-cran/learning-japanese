@@ -313,6 +313,55 @@ context, **調べておくのだった／調べておくんだった** can mean 
 necessarily asserting a past plan. These forms have other uses too, including explanation, denial and recalling a forgotten plan;
 they are not automatic substitutes for べき in every sentence.
 
+### はず: past expectations, past events and the actual result
+
+The verb before **はず** and the ending after it locate different things in time:
+
+| Pattern | Example | Viewpoint |
+| --- | --- | --- |
+| Dictionary form + はずだった | 荷物は土曜に届くはずだった。 | An earlier expectation about an arrival still ahead from that viewpoint. |
+| た form + はずだ | 荷物は昨日届いたはずだ。 | A current inference that the arrival already happened. |
+| ない form + はずだった | 佐藤さんは来ないはずだった。 | An earlier expectation of nonattendance. |
+
+**届く（とどく）** means arrive or be delivered. In **届いたはずだ**, English "should have arrived" expresses an
+inference, not a judgment that someone ought to have delivered it. Evidence such as a delivery notice can support the
+inference without independently verifying receipt. A result-state formulation such as **届いているはずだ** can also be
+natural; it highlights the expected resulting state rather than simply the completed arrival.
+
+In ordinary accounts, **Vるはずだった** commonly suggests that an expectation was not fulfilled:
+**金曜の通知では、荷物は土曜に届くはずだった。しかし延期され、土曜には届かなかった。**
+"According to Friday's notice, the package was supposed to arrive on Saturday. It was postponed, however, and did not."
+Do not mechanically change 届く into 届いた just because Saturday is now past: the arrival was future from Friday's viewpoint.
+
+That familiar disappointed-expectation reading is not the only possibility. An explicit **recollection of previously held
+information** can support はずだった without requiring a failure. For example:
+
+> 昨日の朝、開館前に係員はタイマーの設定を思い出した。「確か、展示室の照明は今日の夕方六時に消えるはずだった。」
+>
+> Yesterday morning, before opening, the attendant recalled the timer setting: "If I remember correctly, the exhibition-room lights were supposed to go out at six this evening."
+>
+> 記録を調べると、実際に昨日の六時に消えていた。
+>
+> The record later showed that they did go out at six yesterday.
+
+**照明（しょうめい）** means lighting; **消える（きえる）** means go out, of a light.
+Within the quoted morning recollection, "today at six" still lies ahead. The later record establishes fulfillment.
+This contextual reading is discussed in [Park's study, section 3.2, especially pp. 63–66](https://doi.org/10.15083/00016538).
+It is not a claim that every isolated はずだった is a neutral report of a past prediction, or that adding **確か**
+automatically guarantees an accurate memory or a successful outcome.
+
+Keep the **polarity of the expectation** separate from the outcome. If an absence reply was recalled, **来ないはずだった**
+retains that negative expectation even when the person unexpectedly came. If a chime was set to sound, **鳴るはずだった**
+retains the positive expectation even when a malfunction kept it silent. Conversely, a forecast of no rain can be fulfilled
+by a dry day. Expected nonoccurrence is not prohibition, inability or logical impossibility; はず is not a wish or a guarantee.
+For **来る（くる）**, the negative is **来ない（こない）**, not くない.
+
+The time-viewpoint questions name **dictionary form + はずだった** and **た form + はずだ**, with the requested viewpoint
+visible before answering. The recollection questions supply **はずだった** and ask only for the given verb's dictionary or
+ない form. They include both fulfilled and contradicted expectations, with explicit recollection contexts for the fulfilled
+past forms. Other tense combinations, result-state expressions, polite endings and fuller paraphrases such as
+**来るはずだと思っていた** are outside these bounded tasks, not globally incorrect.
+
 ### つもり: a plan or a belief about what has been done
 
 The verb before **つもり** and the ending after it do different jobs:
@@ -1210,6 +1259,7 @@ This practice does not cover every use, such as **寝たきり**, **これっき
 - [Japan Foundation: ように／ような（例示・比況）](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00010/ja/render.do), [ように（目的）](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00057/ja/render.do), and [TUFS: potential forms](https://www.coelang.tufs.ac.jp/mt/ja/gmod/contents/explanation/074.html) - comparison scope, exemplification, desired states and the potential forms used in the exercises.
 - [Japan Foundation: Vようになります](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00086/ja/render.do) and [Vようにします](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00105/ja/render.do) - changed habits or possibilities, deliberate positive/negative practices, and the distinction between a decision and maintained care.
 - [Tae Kim: Things that should be a certain way](https://guidetojapanese.org/learn/grammar/should) - noun/na-adjective attachment for はず and the distinction from normative べき.
+- [Park Cheonhong: counterfactual meanings of はず, focusing on スル＋はずだった](https://doi.org/10.15083/00016538), [IMABI: はずだ](https://imabi.org/planning-obligation/), and [Meshclass: はずだった](https://meshclass.com/ja/grammar/detail/4d49455073554b4d623146562b5a5a5a77552b4261513d3d) - expectation/event tense, ordinary disappointed expectations, negative predicates and the qualified recollection reading; Park's section 3.2 supplies the memory-context qualification rather than a universal neutrality claim.
 - [Bunpro: べき](https://bunpro.jp/grammar_points/べき), [べきではない](https://bunpro.jp/grammar_points/べきではない), and [ものだ](https://bunpro.jp/grammar_points/ものだ) - normative judgments, past and negative forms, and context-dependent generalizations.
 - [Japan Foundation: 「こと」（2）](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201203.html) - the advice/instruction use of ことだ alongside other constructions.
 - [Daijisen: のだ](https://kotobank.jp/word/のだ-596938), [IMABI: The mood marker のだ](https://imabi.org/the-mood-marker-%EF%BD%9E%E3%81%AE%E3%81%A0/), and [Bunpro: んじゃない](https://bunpro.jp/grammar_points/んじゃない) - directive uses, retrospective regret and prohibition, distinct from the forms' other functions.

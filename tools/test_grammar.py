@@ -1944,5 +1944,89 @@ class GrammarHokaExclusionCoverageTests(unittest.TestCase):
         self.assertIn("neither forbids borrowing", borrow["explanation"])
 
 
+class GrammarPastExpectationCoverageTests(unittest.TestCase):
+    def setUp(self):
+        root = Path(__file__).resolve().parent.parent
+        self.data = json.loads((root / "grammar" / "formal-nouns-past-expectation.json").read_text(encoding="utf-8"))
+        self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
+        self.time_pairs = [
+            ("hazu-earlier-delivery-postponed", "hazu-current-delivery-inference",
+             ("届く", "とどく"), ("届いた", "とどいた")),
+            ("hazu-earlier-course-postponed", "hazu-current-course-start-inference",
+             ("始まる", "はじまる"), ("始まった", "はじまった")),
+            ("hazu-recalled-light-timer-fulfilled", "hazu-current-light-timer-inference",
+             ("消える", "きえる"), ("消えた", "きえた")),
+        ]
+        self.polarity_pairs = [
+            ("hazu-recalled-visitor-expected-come", "hazu-recalled-visitor-expected-absent",
+             ("来る", "くる"), ("来ない", "こない")),
+            ("hazu-recalled-chime-expected-sound", "hazu-recalled-chime-expected-silent",
+             ("鳴る", "なる"), ("鳴らない", "ならない")),
+            ("hazu-recalled-rain-expected", "hazu-recalled-rain-not-expected",
+             ("降る", "ふる"), ("降らない", "ふらない")),
+        ]
+
+    def test_pairs_cover_both_time_viewpoints_and_both_expectation_polarities(self):
+        self.assertEqual({
+            "hazu-earlier-forward-expectation": 3, "hazu-current-past-inference": 3,
+            "hazu-recalled-occurrence": 3, "hazu-recalled-nonoccurrence": 3,
+        }, Counter(exercise["target"] for exercise in self.exercises.values()))
+        for first_id, second_id, *_ in self.time_pairs + self.polarity_pairs:
+            first, second = self.exercises[first_id], self.exercises[second_id]
+            self.assertEqual(first["relationship"], second["relationship"])
+            self.assertNotEqual(first["target"], second["target"])
+            self.assertEqual(
+                [option["label"] for option in first["options"]],
+                [option["label"] for option in second["options"]],
+            )
+
+    def test_time_patterns_keep_event_form_distinct_from_expectation_ending(self):
+        for earlier_id, current_id, dictionary, past in self.time_pairs:
+            self.assertEqual(
+                {verb + "はずだった" for verb in dictionary},
+                set(self.exercises[earlier_id]["acceptedAnswers"]), earlier_id,
+            )
+            self.assertEqual(
+                {verb + "はずだ" for verb in past},
+                set(self.exercises[current_id]["acceptedAnswers"]), current_id,
+            )
+            for exercise_id in (earlier_id, current_id):
+                self.assertIn(
+                    "dictionary form + はずだった, or た form + はずだ",
+                    self.exercises[exercise_id]["translation"],
+                )
+                self.assertIn("Write はず and the endings in kana", self.exercises[exercise_id]["translation"])
+        self.assertIn("まだ受取人に確認していない", self.exercises["hazu-current-delivery-inference"]["prompt"])
+        self.assertIn("記録はまだ見ていない", self.exercises["hazu-current-course-start-inference"]["prompt"])
+        self.assertIn("does not say whether the lights remained off", self.exercises["hazu-current-light-timer-inference"]["explanation"])
+
+    def test_polarity_tasks_keep_recollection_context_and_irregular_negative(self):
+        for positive_id, negative_id, dictionary, negative in self.polarity_pairs:
+            self.assertEqual(set(dictionary), set(self.exercises[positive_id]["acceptedAnswers"]))
+            self.assertEqual(set(negative), set(self.exercises[negative_id]["acceptedAnswers"]))
+            for exercise_id in (positive_id, negative_id):
+                exercise = self.exercises[exercise_id]
+                self.assertIn("____はずだった", exercise["prompt"])
+                self.assertIn("思い出した", exercise["prompt"])
+                self.assertIn("確か", exercise["prompt"])
+                self.assertIn("Reconstruct the recalled expectation, not the eventual outcome", exercise["translation"])
+        self.assertIn("not an instruction forbidding attendance", self.exercises["hazu-recalled-visitor-expected-absent"]["explanation"])
+        self.assertIn("not a statement that the equipment was incapable", self.exercises["hazu-recalled-chime-expected-silent"]["explanation"])
+
+    def test_fulfilled_and_contradicted_outcomes_do_not_determine_expectation(self):
+        fulfilled = self.exercises["hazu-recalled-light-timer-fulfilled"]
+        self.assertIn("昨日の朝、開館前", fulfilled["prompt"])
+        self.assertIn("思い出した", fulfilled["prompt"])
+        self.assertIn("確か", fulfilled["prompt"])
+        self.assertIn("実際に昨日の六時に消えていた", fulfilled["prompt"])
+        self.assertIn("not evidence that every isolated", fulfilled["explanation"])
+        for exercise_id in ("hazu-recalled-visitor-expected-come", "hazu-recalled-visitor-expected-absent"):
+            self.assertIn("佐藤さんは会議に来た", self.exercises[exercise_id]["prompt"])
+        self.assertIn("実際には鳴らなかった", self.exercises["hazu-recalled-chime-expected-sound"]["prompt"])
+        self.assertIn("実際、チャイムは鳴らず", self.exercises["hazu-recalled-chime-expected-silent"]["prompt"])
+        self.assertIn("雨が降り始めた", self.exercises["hazu-recalled-rain-expected"]["prompt"])
+        self.assertIn("雨は一滴も降らなかった", self.exercises["hazu-recalled-rain-not-expected"]["prompt"])
+
+
 if __name__ == "__main__":
     unittest.main()

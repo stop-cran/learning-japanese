@@ -465,6 +465,21 @@ The no-need contexts establish satisfied requirements and allow optional actions
 nonoccurrence readings. Other paraphrases and polite/past/kanji endings are outside this named-form task, not universally
 wrong. Existing addition and foundation examples remain unchanged, with one SRS identity per exercise.
 
+`formal-nouns-past-expectation.json` adds 12 exercises; see the [source record](grammar-past-expectation-sources.json).
+Three earlier forward expectations contrast with three current inferences about completed events. Preserve the visible
+dictionary-form + はずだった versus た-form + はずだ task, with はず/endings in kana and the supplied verb in kana/kanji.
+The light-timer expectation is explicitly recalled before its later action and then confirmed; the other two forward
+expectations are disappointed. Do not erase the viewpoint or turn all はずだった endings into automatic failure markers.
+
+The six polarity questions print はずだった inside an earlier recollection and request dictionary or ない forms of
+来る／鳴る／降る. Preserve the explicit 思い出した／確か context: it supports the recollection reading without claiming
+every isolated past はず is neutral or every remembered forecast is true. Two positive and two negative expectations are
+fulfilled; one of each is contradicted. The visitor arrives in both visitor items, and the chime remains silent in both
+chime items, so the observed outcome cannot determine the recalled expectation's polarity.
+Keep irregular 来ない（こない）, expected nonoccurrence versus prohibition/inability, and present inference versus direct
+verification. Result-state forms, other tense combinations and unrestricted paraphrases remain outside these named-form
+tasks, not universally wrong. Preserve all earlier はず／よう answer classes and one SRS identity per new exercise.
+
 ## Links and safety
 
 - Links between imported pages are relative `.md` paths (`../words/大小.md`) so they also work on GitHub. The app turns them into in-app navigation with a back button.

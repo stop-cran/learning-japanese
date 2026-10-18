@@ -54,7 +54,8 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   12 on つもり self-assessment versus intended changes,
   12 on negative plans and present/past intention denial,
   12 on retained versus changed noun/adjective states,
-  and 12 on ほか exclusions and no other option versus no need (305 in total).
+  12 on ほか exclusions and no other option versus no need,
+  and 12 on past はず expectations, event time and actual outcomes (317 in total).
   Time practice includes うち, あいだ, とき, ころ, たび and shared とき／おり／さい occasion answers;
   shared alternatives are not independently contrasted targets.
   Purpose/cause practice adds ため, おかげ, せい, かわり and ついで, including compensating trade-offs.
@@ -89,6 +90,9 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   Exclusion practice contrasts three outside-group ほか answers with three shared within-group なか／うち answers,
   then three shared no-alternative ほか／しか answers with three no-need ことはない answers.
   It preserves the relevant group or goal, accepts fitting particle variants and distinguishes no need from prohibition.
+  Past-expectation practice separates earlier forward expectations from current inferences about completed events,
+  then affirmative from negative recalled expectations. It includes fulfilled and contradicted outcomes, preserving the
+  explicit recollection contexts that avoid treating every はずだった as an automatically failed forecast.
   See the [content format](docs/content-format.md#grammar-exercises), [foundations sources](docs/grammar-foundations-sources.json),
   [actions sources](docs/grammar-actions-sources.json), [intent sources](docs/grammar-intent-sources.json),
   [action-stage sources](docs/grammar-stages-sources.json), [state sources](docs/grammar-states-sources.json),
@@ -105,11 +109,12 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   [change/effort sources](docs/grammar-you-change-effort-sources.json),
   [self-assessment sources](docs/grammar-self-assessment-sources.json),
   [intention-denial sources](docs/grammar-intention-denial-sources.json),
-  [noun/adjective state sources](docs/grammar-state-change-sources.json) and
-  [exclusion/no-alternative sources](docs/grammar-hoka-exclusion-sources.json).
+  [noun/adjective state sources](docs/grammar-state-change-sources.json),
+  [exclusion/no-alternative sources](docs/grammar-hoka-exclusion-sources.json) and
+  [past-expectation sources](docs/grammar-past-expectation-sources.json).
   Every named formal-noun/particle family in the article now appears in practice, but this is not complete construction
   coverage. Further uses, including くらい degree/minimum, だけ possible extent,
-  かぎり fullest extent, past はず expectations and less-scaffolded mixed selection, are still being added in reviewed batches.
+  かぎり fullest extent and less-scaffolded mixed selection, are still being added in reviewed batches.
 
 The revised JLPT does not publish exhaustive kanji or vocabulary syllabi. Level coverage here means the exact named community set,
 not a guarantee about every examination question or a complete beginner curriculum.
