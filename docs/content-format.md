@@ -152,8 +152,10 @@ are valid; missing optional targets warn and drop only that link. See the app's
 [complete group contract](https://github.com/stop-cran/kanji-cards-android/blob/main/docs/GRAMMAR-INTRODUCTIONS.md#additive-metadata).
 
 The app's opt-in focused-introduction pilot uses these groups without changing exercises, answers or SRS. Valid unowned exercises remain
-available through labeled compatibility contrasts. Invalid annotations never silently become compatibility groups. Phase C validates
-recommendations but gives all scores zero; relationship-based ranking is Phase D. Group coverage/familiarity are conservative pilot
+available through labeled compatibility contrasts. Invalid annotations never silently become compatibility groups. Phase D uses the
+maximum incoming importance from supported familiar groups, not summed links or exercise counts; exploration prefers score-zero
+choices within its unfamiliar-first eligible pool. Recommendations cannot bypass scope/prerequisites or interrupt an active focus.
+The app explains the strongest links and their source evidence locally. Group coverage/familiarity are conservative pilot
 heuristics, not mastery or an official curriculum. Regenerate the manifest after adding/changing runtime metadata.
 
 Author coherent examples with a clear learning goal. More than one natural completion is acceptable: do not reject an item
