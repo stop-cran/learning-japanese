@@ -35,6 +35,40 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Onomatopoeia second-batch images (2026-10-19)
+
+**Snapshot and scope:** text commit `44216dc277a51b7fe8a9eb8603b8069a5eba6a63` plus
+100 new scene images and their `image`/`image_scene` fields. This includes all second-batch
+words, not just the 97 new files. Runtime manifest: `21e4f01fe7d16471`.
+The [image record](docs/onomatopoeia-batch2-images.json) identifies every output by raw-byte
+hash and records the actual generation scenes, final captions and per-picture observations.
+
+**Advisory review:** direct `gpt-6-astra` inspection of all 100 images in five contact sheets,
+with selected images enlarged to full size. The pass checked the chosen sense, visible text
+or answer leakage, scene/caption agreement, anatomy and plausible competing interpretations.
+All 100 final image/scene pairs are **ACCEPT** in that bounded advisory record.
+This is not the independent two-model linguistic review described in the next section.
+
+| Finding | Disposition |
+| --- | --- |
+| ぺちゃんこ's crushed can retained a raised round end and a strong crumpling cue | Resolved by regenerating the card's bread-under-a-box example. The final low side view shows intact bread flattened to a thin slice. The first output and its review are retained separately. |
+| ぱんぱん's open bag did not match the caption's “zipped” wording | Resolved by changing the caption to “zippered,” without regenerating or altering the image. The original generation prompt remains in provenance. |
+
+**Preservation:** the original 20 image files and pilot prompts/style are unchanged. The 100
+cards retain their reviewed teaching text, identities, titles, sourced levels and quiz exclusions.
+No new app field, app code, scheduling change or JLPT assignment is introduced. The collection
+has 120 images; the remaining 80 first-batch words are not illustrated.
+
+**Limits and owner status:** the previously approved pilot is separate from this new batch.
+On 2026-10-19 the owner **accepted the new batch for learning use** and authorized publication:
+“Ok, so far looks good. I'll see how it goes during learning.” This is batch-level acceptance,
+not a claim of a separate per-image review or completed study-use evaluation.
+A scene illustrates one use, not all senses.
+Sounds, repeated movement, tastes, feelings and preceding events are not fully demonstrable
+in a still image. Existing pairwise exclusions remain in force; this pass is not exhaustive
+proof of visually unique quiz choices. This image review does not certify physical-phone
+rendering or learning outcomes.
+
 ## Onomatopoeia second 100 (2026-10-18)
 
 **Snapshot:** content baseline `2ca54ae0580d7b99fa3bf48dc37fe13ad1adc5cc` plus the second

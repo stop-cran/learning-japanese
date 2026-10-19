@@ -191,15 +191,21 @@ these tags are not new word types or JLPT levels. Existing word IDs and sourced 
 The app has an Onomatopoeia stack with the normal word quizzes. Words with a scene picture (`images/`) also
 get a "Picture → word" quiz and show the picture in their article. The Onomatopoeia stack includes
 tagged words independently of JLPT level; unlevelled words also remain in All rather than a numbered JLPT stack.
-The second batch changes text only and leaves the 20-image pilot unchanged.
+All 100 second-batch words now have scene pictures, including the three enriched existing cards.
+Together with the unchanged 20-image pilot, that makes 120 illustrated words; 80 first-batch words
+still have no image.
 See the [collection and source notes](docs/onomatopoeia.md).
 
 ### Generated images
 
-The pilot pictures in `images/` are AI-generated (Azure OpenAI image model) from the prompts in
-`tools/image_prompts.json`, then compressed to 512 px WebP. They are original generated illustrations
-meant to illustrate meaning, are text-free by design, and were reviewed by hand; they may still contain
-small inaccuracies. Progress is tracked in
+The pictures in `images/` are AI-generated with Azure OpenAI from original scenes in
+`tools/image_prompts.json`, then compressed to 512 px WebP. Each illustrates one selected use, not
+every sense or a guarantee of unique quiz choices. The original 20-image pilot has owner approval.
+The new 100 received an assistant visual review and were **accepted by the owner for learning use
+on 2026-10-19**; feedback from actual study remains to come.
+The [image provenance and per-picture observations](docs/onomatopoeia-batch2-images.json) record
+the actual model, output hashes, corrections and limitations. The images are text-free by design,
+but generated art may still contain small inaccuracies. Progress is tracked in
 [app issue #45](https://github.com/stop-cran/kanji-cards-android/issues/45).
 
 ## Approach

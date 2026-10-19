@@ -37,6 +37,13 @@ This repository contains original notes plus data derived from open dictionary p
 - **Canonical radical glyphs for the N4 and N3 additions** are mapped from the compatibility decompositions in Unicode 17.0
   [UnicodeData.txt](https://www.unicode.org/Public/17.0.0/ucd/UnicodeData.txt), copyright Unicode, Inc., under the
   [Unicode License V3](docs/UNICODE-LICENSE.txt). Positional component shapes may differ from these canonical glyphs.
+- **Scene illustrations** (`images/*.webp`) are AI-generated with Azure OpenAI from original English scenes in
+  `tools/image_prompts.json`, then resized and compressed to 512 px WebP. They are not copied photographs or manga
+  panels, and the prompts do not request a particular artist's style. The
+  [second-batch image record](docs/onomatopoeia-batch2-images.json) identifies the generation model and parameters,
+  actual generation scenes, final captions, output hashes and advisory visual-review observations for its 100 images.
+  The original 20-image pilot is preserved. Generated illustrations may contain inaccuracies and depict selected
+  uses rather than complete dictionary definitions.
 - **Kanji JLPT levels** follow the community sets mirrored by [kanjiapi.dev](https://kanjiapi.dev), with explicitly sourced exceptions.
 - **Vocabulary membership** derives from [Stephen Kraus's Yomitan JLPT vocabulary data](https://github.com/stephenmk/yomitan-jlpt-vocab),
   revision `b062d4e38c4bdd0950ae1d4ec55f04b176182e03`, using `original_data/n5.csv`, `original_data/n4.csv` and `original_data/n3.csv`.

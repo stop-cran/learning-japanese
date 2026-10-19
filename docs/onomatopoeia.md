@@ -69,8 +69,34 @@ The original content phase was followed by the app's Onomatopoeia stack and a 20
 their implementation and limitations are recorded in issue #45. The stack now includes tagged words
 regardless of level, including the unlevelled new cards.
 
-The second 100 are another **text-only content batch**. No app code, parser fields, binary assets,
-image-generation calls, or scheduling rules change. The 20 existing images are neither expanded nor
-re-reviewed here, and no physical-phone delivery or new image-quiz result is implied.
+The second 100 were published as a **text-only content batch** at `44216dc`.
+That stage did not change app code, parser fields, binary assets or scheduling, and left the
+20 existing images unchanged. Its independent two-model text review remains a separate record
+in [REVIEW](../REVIEW.md).
 No new JLPT labels are assigned: the reused cards retain N3/N3/N4 respectively.
-The exact snapshot and independent two-model review status are recorded in [REVIEW](../REVIEW.md).
+
+## Second image batch
+
+The subsequent image batch covers **all 100 second-batch words**, including さっぱり, がっかり
+and びっくり. There are now 120 illustrated words: these 100 plus the unchanged original 20.
+The other 80 first-batch words still have no picture.
+
+The `onomatopoeia-batch2` set in `tools/image_prompts.json` uses the pilot's unchanged text-free
+editorial style. Original scenes are based on reviewed senses and examples, not copied source
+illustrations. Azure OpenAI's `gpt-image-2.5-sunburst` deployment generated the pictures, which
+are stored as 512 px WebP files under the existing 100 KiB content limit.
+The [image record](onomatopoeia-batch2-images.json) preserves actual generation scenes, final
+captions, model details, output hashes and per-picture advisory observations.
+
+All 100 were directly inspected in contact sheets, with unclear examples enlarged. One image
+was regenerated: ぺちゃんこ now shows intact bread squashed flat beneath a box, avoiding the
+first can illustration's competing crumpling cue. ぱんぱん's caption was corrected from
+“zipped” to “zippered” to match its open, overfilled bag; the image and original generation
+prompt are preserved. Existing quiz exclusions and reviewed lexical text are unchanged.
+
+The original pilot has owner approval. On 2026-10-19 the owner **accepted the new 100-image
+batch for learning use** and authorized publication; feedback from actual study is still pending.
+An illustration selects one usage, and a still picture cannot prove a sound, repeated motion,
+taste or private feeling. Assistant inspection does not guarantee unique randomized quiz
+choices or native-speaker approval. No app-code change is part of this image batch, and its
+review does not certify physical-phone rendering or learning outcomes.
