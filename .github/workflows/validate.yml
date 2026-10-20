@@ -15,6 +15,7 @@ jobs:
       - run: pip install pyyaml pillow
       - run: python -m unittest discover -s tools -p "test_*.py"
       - run: python tools/validate.py
+      - run: python tools/grammar_vocabulary.py check
       - run: |
           python tools/build_manifest.py
           git diff --exit-code manifest.json

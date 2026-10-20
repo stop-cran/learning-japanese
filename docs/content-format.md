@@ -210,7 +210,7 @@ Unclassified remain explicit choices. Neither filtering nor adding/changing this
 
 Classify the grammar required by the complete visible task, including its contrast, not merely the easier target, hardest word/kanji
 or most advanced optionally accepted formulation. An N5 grammar exercise need not contain only N5 words. Preserve accepted answers,
-comprehensible wording and existing translation/reading support; vocabulary assistance and clickable words are separate follow-ups.
+comprehensible wording and existing translation/reading support; optional vocabulary help below is independent of grammar difficulty.
 JLPT labels are sourced editorial estimates, not an official syllabus or mastery claims. Record the evidence and qualifications
 in contributor source records, and leave unestablished cases unclassified.
 
@@ -237,6 +237,40 @@ maximum incoming importance from supported familiar groups, not summed links or 
 choices within its unfamiliar-first eligible pool. Recommendations cannot bypass scope/prerequisites or interrupt an active focus.
 The app explains the strongest links and their source evidence locally. Group coverage/familiarity are conservative pilot
 heuristics, not mastery or an official curriculum. Regenerate the manifest after adding/changing runtime metadata.
+
+**Optional vocabulary:** an exercise may have `vocabulary` with exactly `schemaVersion: 1`, `promptSha256` and `spans`.
+The hash is SHA-256 of the exact decoded prompt encoded as UTF-8, without normalization. Omission is valid legacy content;
+explicit null is invalid. Each span contains `start`, `end`, `text`, `reading`, `headword`, `gloss` and optionally `word`.
+
+- Offsets are sorted, nonoverlapping half-open **Unicode code-point** intervals in the original prompt, before replacing `____`.
+  `text` must match that exact occurrence. For `𠮷野は____。`, `0..2` covers `𠮷野`; UTF-16 offsets would instead be `0..3`.
+  Do not split combining sequences or overlap the blank. Repeated spellings have separate occurrences and may have different senses/readings.
+- `reading` is the displayed form's pronunciation, not just its dictionary form: `建っていた` has `たっていた`, headword `建つ`.
+  Supply an original, context-specific English `gloss`. Keep compounds/inflections meaningful; do not infer sense from a kanji substring.
+- Optional `word` is the exact existing `words/<word>.md` identity, without a directory or extension. No slashes, control characters,
+  `.` or `..`. Do not fabricate a dictionary match; omit the reference for a local gloss. Canonical references need sense/spelling review.
+- At most 128 spans; nonblank text/reading/headword and word IDs are limited to 80 code points, glosses to 240.
+  Integers must be JSON numbers, not strings/booleans/fractions. Unknown fields are errors.
+- Annotate lexical vocabulary, not particles, grammatical auxiliaries, the blank, or the construction being tested. Never supply the
+  missing answer or its explanation as a hint. A visible inflected lexical verb may be annotated unless that form is protected by the task.
+
+The [vocabulary review inventory](grammar-vocabulary-review.json) freezes 401 prompts in 32 files at
+`4b53b854aa9138772f9f6d43c2f58c8474d0f5a3`. The initial pilot covers **four** state-change prompts, not the whole corpus.
+Its original glosses have author self-review, with per-exercise limitations; this is not independent review, owner approval or
+native-speaker certification. Non-BMP and conflicting-reading cases are synthetic parser fixtures, not invented published exercises.
+Remaining prompts are explicitly `pending`, never silently counted as covered.
+
+`python tools/grammar_vocabulary.py check` is the maintained repository's publication gate, separate from the app's optional import contract.
+Records bind file/ID, exact prompt, full exercise context (including answers), and annotation payload. Reviewed spans plus explicitly
+classified exclusions must cover the entire prompt. Edits/new exercises invalidate old claims. `--require-complete` additionally rejects
+pending coverage; set inventory `stage` to `complete` only after the frozen corpus is actually reviewed.
+`apply --proposal <file>` converts explicitly reviewed ordered segments to exact offsets and updates the inventory; it does not perform
+linguistic review. Its input includes the expected context hash, reviewer and per-exercise notes. Exclusions use `function`,
+`grammar-target`, `punctuation` or `supplied-reading`. A tokenizer or successful structural check is not coverage evidence on its own.
+
+Malformed hints disable only optional support in the app, with diagnostics; they do not remove valid exercises or block guided intake.
+Missing word articles remove the unsafe article reference but retain authored local glosses. Old clients may ignore this optional field.
+Rebuild `manifest.json` after changing runtime annotations.
 
 Author coherent examples with a clear learning goal. More than one natural completion is acceptable: do not reject an item
 solely because several forms express the tested meaning. The useful distinction is between a coherent accepted answer class

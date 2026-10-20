@@ -9,6 +9,7 @@ import unittest
 from pathlib import Path
 
 from validate_grammar import check_grammar
+from validate_grammar_vocabulary import prompt_hash
 
 
 VALID = {
@@ -62,6 +63,47 @@ class GrammarValidationTests(unittest.TestCase):
                 count, problems = self.check(lambda data: data["exercises"][0].update(jlpt=level))
                 self.assertEqual(1, count)
                 self.assertEqual([], problems)
+
+    @staticmethod
+    def add_vocabulary(data):
+        exercise = data["exercises"][0]
+        exercise["prompt"] = "𠮷野の生物は____。生物を食べる。"
+        exercise["vocabulary"] = {
+            "schemaVersion": 1, "promptSha256": prompt_hash(exercise["prompt"]),
+            "spans": [
+                dict(start=0, end=2, text="𠮷野", reading="よしの", headword="𠮷野", gloss="Yoshino"),
+                dict(start=3, end=5, text="生物", reading="せいぶつ", headword="生物", gloss="living organisms"),
+                dict(start=11, end=13, text="生物", reading="なまもの", headword="生物", gloss="raw food"),
+            ],
+        }
+
+    def test_vocabulary_occurrences_and_optional_dictionary_links(self):
+        self.assertEqual([], self.check(self.add_vocabulary)[1])
+        (self.root / "words").mkdir()
+        (self.root / "words" / "生物.md").write_text("# A fixture", encoding="utf-8")
+        self.assertEqual([], self.check(lambda data: (
+            self.add_vocabulary(data), data["exercises"][0]["vocabulary"]["spans"][1].update(word="生物"),
+        ))[1])
+
+    def test_vocabulary_rejects_stale_ambiguous_or_unsafe_support(self):
+        changes = [
+            lambda e: e.update(vocabulary=None),
+            lambda e: e.update(prompt="Changed ____ prompt."),
+            lambda e: e["vocabulary"].update(schemaVersion=True),
+            lambda e: e["vocabulary"]["spans"][0].update(start="0"),
+            lambda e: e["vocabulary"]["spans"][0].update(start=True),
+            lambda e: e["vocabulary"]["spans"][0].update(end=1),
+            lambda e: e["vocabulary"]["spans"][0].update(start=6, end=10, text="____"),
+            lambda e: e["vocabulary"]["spans"][1].update(start=1),
+            lambda e: e["vocabulary"]["spans"][0].update(word="../outside"),
+            lambda e: e["vocabulary"]["spans"][0].update(word="absent"),
+            lambda e: e["vocabulary"]["spans"][0].update(reading=""),
+            lambda e: e["vocabulary"]["spans"][0].update(unexpected=True),
+        ]
+        for change in changes:
+            with self.subTest(change=change):
+                _, problems = self.check(lambda data: (self.add_vocabulary(data), change(data["exercises"][0])))
+                self.assertTrue(problems)
 
     @staticmethod
     def add_groups(data):
