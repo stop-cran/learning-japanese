@@ -15,6 +15,8 @@ from urllib.parse import unquote
 
 import yaml
 
+from validate_scenes import IMAGE_PATH, check_scenes
+
 ROOT = Path(__file__).resolve().parent.parent
 # Kotlin Char.isWhitespace includes Unicode separators, but not U+0085 (NEL).
 KOTLIN_WHITESPACE = ("\t\n\v\f\r\x1c\x1d\x1e\x1f \u00a0\u1680"
@@ -30,7 +32,6 @@ WORD_TYPES = {"kango", "wago", "jukujikun", "gairaigo"}
 KANJI_LISTS = ("tags", "onyomi", "kunyomi", "distractors")
 WORD_LISTS = ("kanji", "tags", "quiz_exclusions", "quiz_distractors")
 MAX_QUIZ_DISTRACTORS = 3
-IMAGE_PATH = re.compile(r"images/[^/\\\s]+\.webp")
 MAX_IMAGE_BYTES = 100 * 1024
 MAX_IMAGES_TOTAL_BYTES = 25 * 1024 * 1024
 KANJI_INTS = ("jlpt", "strokes", "radicalNumber")
@@ -492,16 +493,20 @@ def check_image_file(path: Path, file: Path) -> None:
         err(path, f"image '{file.name}' is truncated or corrupt (RIFF size mismatch)")
 
 
-def check_images(words: dict[str, str]) -> None:
-    """Every file in images/ must be a .webp referenced by exactly one word card."""
+def check_images(words: dict[str, str], scenes: dict[str, list[str]] | None = None) -> None:
+    """A word may reference an image through legacy fields, its catalog, or both; ownership stays unique."""
     folder = ROOT / "images"
     if not folder.is_dir():
         return
     used: dict[str, str] = {}
-    for word, image in words.items():
-        if image in used:
-            err(ROOT / "words" / f"{word}.md", f"image '{image}' is also used by {used[image]}")
-        used[image] = word
+    references = {word: {image} for word, image in words.items()}
+    for word, images in (scenes or {}).items():
+        references.setdefault(word, set()).update(images)
+    for word, images in references.items():
+        for image in sorted(images):
+            if image in used:
+                err(ROOT / "words" / f"{word}.md", f"image '{image}' is also used by {used[image]}")
+            used[image] = word
     for file in sorted(folder.iterdir()):
         rel = f"images/{file.name}"
         if file.is_dir() or file.suffix != ".webp":
@@ -536,6 +541,7 @@ def main() -> int:
     word_ids = {path.stem for path in (ROOT / "words").glob("*.md")}
     titles: dict[str, str] = {}
     word_images: dict[str, str] = {}
+    word_metadata: dict[str, dict] = {}
     for folder in ("kanji", "words", "articles"):
         for path in sorted((ROOT / folder).glob("*.md")):
             meta, body = parse(path)
@@ -549,13 +555,15 @@ def main() -> int:
             if folder == "kanji":
                 check_kanji(path, meta, titles, stroke_counts)
             else:
+                word_metadata[path.stem] = meta
                 check_word(path, meta, word_ids)
                 if isinstance(meta.get("image"), str):
                     word_images[path.stem] = meta["image"]
                 check_word_kanji_links(path, meta, body)
             check_body(path, meta, body)
             check_links(path, body)
-    check_images(word_images)
+    scene_images = check_scenes(err, ROOT, word_metadata, check_image_file)
+    check_images(word_images, scene_images)
     from validate_counters import check_counters
     check_counters(err, ROOT)
     from validate_grammar import check_grammar
