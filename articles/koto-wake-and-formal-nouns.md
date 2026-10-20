@@ -1030,6 +1030,9 @@ Likewise, **必要なかぎり** can mean "as long as it is necessary," but that
 simply naming one branch of a procedure. These differences in framing do not make the expressions mutually exclusive
 in every context.
 
+For the wider comparison with たら, ば, なら and と, including event order, requests and actual discoveries,
+see [Japanese conditionals](japanese-conditionals.md).
+
 ### とき versus ころ
 
 **とき** identifies a time or occasion. **ころ** frames it as an approximate time or period, often a period of life.

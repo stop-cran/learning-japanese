@@ -1,0 +1,324 @@
+{
+  "setId": "conditionals-core",
+  "schemaVersion": 1,
+  "retrievedOn": "2026-10-20",
+  "article": "articles/japanese-conditionals.md",
+  "baselineCommit": "ab95097a6aaed3c14a5136f0254202b44c1563f7",
+  "articleReview": {
+    "sha256": "32bf7855fb573c07885c85dcef289b6b7661a341d576f84b0154e6cf427060f3",
+    "reviewer": "gpt-6-astra",
+    "method": "Direct author review of the complete written article, before exercise authoring; checked formation, event/state readings, clause roles, polarity, translations, selective readings and source restrictions.",
+    "correctness": "CLEAN",
+    "scopedCoverage": "CLEAN",
+    "comprehensibility": "CLEAN",
+    "findings": [],
+    "limits": "No actionable defect established within the basic comparison scope. This is not independent multi-model review, native-speaker certification, every register, or validation of every possible conditional sentence."
+  },
+  "exerciseReview": {
+    "file": "grammar/conditionals-core.json",
+    "beforeReviewSha256": "601959286e3f4c16f9e632756e302af31458ca03bb4696f39e2baa49c90fa2f7",
+    "finalSha256": "ac280a7a8ee2fe6fcc99194874eae287b6f9dfae3dd7b2c95c9839f7235041cd",
+    "reviewer": "gpt-6-astra",
+    "method": "Direct author review of all 30 generated prompts, visible task instructions, completed sentences, accepted forms, distractors, evidence, feedback, group membership and vocabulary occurrences. Reviewed after the separate article pass; not independent model review.",
+    "correctness": "CLEAN",
+    "scopedCoverage": "CLEAN",
+    "comprehensibility": "CLEAN",
+    "resolvedFindings": [
+      {
+        "scope": ["cond-form-baai-rain", "cond-form-baai-necessary"],
+        "facet": "correctness",
+        "severity": "minor",
+        "finding": "The original typed sets omitted the fitting nonpast de-aru predicate before baai.",
+        "resolution": "Accept 雨である and 必要である, including kana variants; qualify direct no/na attachment and explain the fuller predicate. Make the nonpast task scope explicit.",
+        "status": "resolved"
+      },
+      {
+        "scope": ["cond-premise-completed-visit"],
+        "facet": "comprehensibility",
+        "severity": "minor",
+        "finding": "The phrase 昨日の美術館から relied on an avoidable place-for-visit ellipsis.",
+        "resolution": "Use 昨日は美術館を見学したんですね and align its translation and vocabulary annotation.",
+        "status": "resolved"
+      },
+      {
+        "scope": ["cond-form-nara-sent", "cond-negative-time", "cond-mixed-regret-rush"],
+        "facet": "scopedCoverage",
+        "severity": "minor",
+        "finding": "Some support words were hidden in broad function exclusions rather than receiving lexical hints.",
+        "resolution": "Annotate ありません, しましょう and せい with occurrence-specific local glosses; leave particles and auxiliaries excluded.",
+        "status": "resolved"
+      }
+    ],
+    "exerciseCount": 30,
+    "acceptedRenderings": 307,
+    "groups": [
+      {"id": "conditionals-forms", "count": 10, "scope": "Two explicit form/attachment tasks per family."},
+      {"id": "conditionals-premises", "count": 6, "scope": "Three matched prospective/completed nara-premise pairs."},
+      {"id": "conditionals-polarity", "count": 6, "scope": "Time, fee and membership cases; equivalent conditionals share an answer class."},
+      {"id": "conditionals-mixed", "count": 8, "scope": "Two actual discoveries, four unrealized alternatives and two negative procedures."}
+    ],
+    "vocabulary": {
+      "reviewedPrompts": 30,
+      "lexicalSpans": 187,
+      "linkedSpans": 148,
+      "canonicalWordIdentities": 88,
+      "localOnlySpans": 39,
+      "review": "Checked occurrence readings and contextual glosses. Inspected canonical article metadata and meaning sections for all selected links; nonexistent or unsupported identities are not linked. Protected blanks and tested grammar; classified every remaining segment explicitly.",
+      "corpusReviewedAfterAddition": 34,
+      "corpusPendingAfterAddition": 397,
+      "inventoryStage": "pilot"
+    },
+    "limits": [
+      "This initial set teaches controlled formation, premise timing and context-appropriate polarity with shared realizations; it does not independently discriminate all five conditional families.",
+      "Named form restrictions are visible, not inferred from register preference. Feedback explains major accepted alternatives because the app does not automatically reveal the entire typed answer list.",
+      "No native-speaker certification, independent cross-model review, owner approval, measured learning outcome or physical-phone UI verification is claimed.",
+      "No new JLPT labels, runtime/schema changes, or review of the original 397 pending vocabulary prompts."
+    ]
+  },
+  "initialIntegration": {
+    "manifestVersion": "d562b4b694e57b7c",
+    "manifestSha256": "c08278d698e38cdcc65fa9fd5a49f7c15f039a6f5c21f5aa6724e840e5773b23",
+    "deterministicManifestRebuild": true,
+    "contentValidationErrors": 0,
+    "grammarRegressionTestsPassed": 148,
+    "androidImporter": {
+      "test": "io.github.stopcran.kanji.core.ContentTest.parsesRealContentRepoWhenPresent",
+      "executed": 1,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "scope": "Real manifest import, exact GrammarSet equality and typed-cache serialization roundtrip."
+    },
+    "preservation": {
+      "unchangedOriginalGrammarFiles": 32,
+      "unchangedOriginalExercises": 401,
+      "unchangedOriginalVocabularyRecords": 401,
+      "method": "Compared all original grammar file bytes and all prior vocabulary records against the baseline Git blobs.",
+      "completeStageGate": "Still rejects exactly the 397 original pending prompts; no new prompt is pending."
+    },
+    "publication": "Local working-tree content; not committed or pushed by this implementation."
+  },
+  "independentReview": {
+    "reviewer": "conditionals-independent-reviewer",
+    "agentId": "d97b0a01-80cf-4b92-8c42-6a859114952b",
+    "model": "Not reliably exposed by the reviewer runtime.",
+    "method": "Fresh-context, read-only review without consulting the author's review conclusions. The reviewer inspected all exercise renderings, vocabulary occurrences and selected canonical senses.",
+    "articleSha256": "32bf7855fb573c07885c85dcef289b6b7661a341d576f84b0154e6cf427060f3",
+    "exerciseSha256": "ac280a7a8ee2fe6fcc99194874eae287b6f9dfae3dd7b2c95c9839f7235041cd",
+    "inventorySha256": "699dd9a7ea430b2a2d98ab344b9d2f99af779fcf32f62c0f42d094f21a0b96a4",
+    "articleVerdicts": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+    "exerciseVerdicts": {"correctness": "NEEDS FIX", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+    "inspected": {"exercises": 30, "acceptedRenderings": 307, "displayedOptions": 70, "vocabularySpans": 187, "exclusions": 252, "canonicalWordIdentities": 88, "introductionGroups": 4},
+    "findings": [
+      {
+        "id": "conditional-polite-answers",
+        "severity": "moderate",
+        "facet": "correctness",
+        "exerciseIds": ["cond-positive-time", "cond-positive-member", "cond-mixed-discovery-box", "cond-mixed-discovery-home"],
+        "originalLines": ["1615-1639", "2061-2101", "2303-2316", "2426-2439"],
+        "finding": "Tasks without a plain-form restriction rejected fitting polite conditionals.",
+        "examples": ["ありましたら", "でしたら", "開けましたら", "帰りましたら"],
+        "remedy": "Accept fitting polite forms and spelling variants, and explain the register difference.",
+        "confidence": "high",
+        "sources": ["https://www.tofugu.com/japanese-grammar/conditional-form-tara/"]
+      },
+      {
+        "id": "conditional-baai-ni",
+        "severity": "minor",
+        "facet": "correctness",
+        "exerciseIds": ["cond-positive-price", "cond-negative-price", "cond-positive-member", "cond-negative-member"],
+        "originalLines": ["1812-1853", "1937-1978", "2061-2101", "2173-2230"],
+        "finding": "The stated case-pattern tasks omitted fitting 場合に forms while accepting bare 場合, 場合は and 場合には.",
+        "examples": ["高い場合に", "高くない場合に", "の場合に", "ではない場合に"],
+        "remedy": "Accept contextually fitting 場合に and ばあいに variants.",
+        "confidence": "medium-high naturalness; high answer-list mismatch",
+        "sources": ["https://kotobank.jp/jeword/場合"]
+      },
+      {
+        "id": "conditional-lexical-spellings",
+        "severity": "minor",
+        "facet": "correctness",
+        "exerciseIds": ["cond-form-to-no-card", "cond-positive-time", "cond-negative-time"],
+        "originalLines": ["851-861", "1615-1639", "1714-1738"],
+        "finding": "Lexical existence/possession answers rejected valid 有る/無い spellings without a kana-only restriction.",
+        "examples": ["無いと", "有れば", "無ければ"],
+        "remedy": "Accept appropriate lexical spellings without applying 無 to all negative auxiliaries.",
+        "confidence": "high",
+        "sources": ["https://kotobank.jp/word/有る", "https://kotobank.jp/word/無い"]
+      }
+    ],
+    "limits": "No native-speaker certification or measured learning outcome. Search services failed, but relevant source passages were inspected directly. The article's CLEAN result is bounded, not exhaustive correctness."
+  },
+  "corrections": {
+    "exerciseSha256": "4fa7391a8411e07369dcc2c20d289bb4ce6bbbcb681b0671029c72bfd8180404",
+    "inventorySha256": "3f19144048ef67a08fa401e75261bd4acf5a19ba21ca63b68d16f723f7112ad6",
+    "changedExercises": 9,
+    "unchangedExercises": 21,
+    "preservedAcceptedRenderings": 307,
+    "addedAcceptedRenderings": 96,
+    "acceptedRenderings": 403,
+    "changes": "Expanded fitting polite and case-particle variants and lexical kanji spellings, including directly related variants, with corresponding feedback.",
+    "preservation": "All article bytes, prompts, translations, vocabulary payloads, exclusions, displayed options, targets, IDs and introduction groups are unchanged. Only nine exercise answer lists/explanations and their inventory context hashes/notes changed.",
+    "reconciliationStatus": "resolved"
+  },
+  "reconciliation": {
+    "reviewer": "conditionals-reconciliation-reviewer",
+    "agentId": "f3eb4005-79cb-47f2-b6e6-5591c9dc2494",
+    "model": "Not reliably exposed by the reviewer runtime.",
+    "originalReviewerReuse": "Attempted, but the original synchronous agent could not accept follow-up messages. A fresh replacement reviewed the original findings and frozen before/after snapshots; the replacement handles both reconciliation rounds.",
+    "rounds": [
+      {
+        "round": 1,
+        "exerciseSha256": "0473d97154dac75798b88e72bdba8e92cd61ef8bb7d54c711839389e3c71c17c",
+        "inventorySha256": "336c3ea20764a2ad5db6f70411aa22ea946f93646feccdde8189f1cd1c1fb981",
+        "scope": "All 95 additions as full sentences, nine revised explanations and retained instructions, 19 displayed options/rationales, and preservation of the original answers, vocabulary records and groups.",
+        "verdicts": {"correctness": "NEEDS FIX", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+        "dispositions": {
+          "conditional-polite-answers": "partially resolved; residual severity minor",
+          "conditional-baai-ni": "resolved",
+          "conditional-lexical-spellings": "resolved"
+        },
+        "residualFinding": {
+          "exerciseId": "cond-positive-member",
+          "lines": "2124-2169",
+          "severity": "minor",
+          "facet": "correctness",
+          "confidence": "high",
+          "finding": "The membership rule still rejected ordinary polite ですと.",
+          "completedSentence": "店の規則です。会員ですと、毎回割引があります。",
+          "remedy": "Accept ですと and explain polite です versus plain だ before と.",
+          "evidence": {
+            "url": "https://www.nasu-hh.com/tomo.html",
+            "inspectedUse": "個人会員ですと in the membership privileges/discount explanation."
+          }
+        },
+        "regressions": "No invalid addition or newly unsuitable displayed option established. The residual was a remaining false negative, not a defect introduced by the additions.",
+        "additionalEvidence": [
+          {
+            "url": "https://www.mext.go.jp/b_menu/shingi/gijyutu/gijyutu4/051/gijiroku/mext_01467.html",
+            "inspectedUse": "もし何も御意見がありませんでしたら before proposed meeting closure; supports an actual polite negative condition, not a universal substitution rule."
+          },
+          {
+            "url": "https://www.alpico.co.jp/tateshina/news/1561/",
+            "inspectedUse": "ドアを開けますと followed by a past-state discovery; supports polite narrative と."
+          },
+          {
+            "url": "https://kotobank.jp/word/有る-428392",
+            "inspectedUse": "Modern Digital Daijisen lexical existence/possession entry."
+          },
+          {
+            "url": "https://kotobank.jp/word/無い-586951",
+            "inspectedUse": "Modern Digital Daijisen lexical absence entry."
+          }
+        ],
+        "limits": "Unchanged article verdicts carried forward on identical bytes. No fresh full audit of unchanged exercises or canonical-word semantics. Google/Bing/DuckDuckGo discovery was unusable; Yahoo discovery and actual source pages succeeded."
+      },
+      {
+        "round": 2,
+        "exerciseSha256": "4fa7391a8411e07369dcc2c20d289bb4ce6bbbcb681b0671029c72bfd8180404",
+        "inventorySha256": "3f19144048ef67a08fa401e75261bd4acf5a19ba21ca63b68d16f723f7112ad6",
+        "scope": "One additional ですと answer, its explanatory clause and the corresponding inventory context hash/note; all other round-one content is unchanged.",
+        "status": "complete",
+        "verdicts": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+        "dispositions": {
+          "conditional-polite-answers": "resolved; earlier fixes carried forward and residual ですと newly verified",
+          "conditional-baai-ni": "resolved; carried forward from round 1",
+          "conditional-lexical-spellings": "resolved; carried forward from round 1"
+        },
+        "residualResolution": {
+          "exerciseId": "cond-positive-member",
+          "answerLine": 2160,
+          "explanationLine": 2126,
+          "finding": "The previously rejected ですと completion is accepted and explained correctly.",
+          "status": "resolved"
+        },
+        "preservation": "Exactly one exercise changed since round 1; all 29 others and all 402 prior accepted answers were retained. One inventory context hash/note changed; all prompts, vocabulary, exclusions, options and groups are unchanged, with no option collision.",
+        "newFindings": [],
+        "optionalSuggestions": [],
+        "limits": "Fresh scrutiny covers the one-exercise delta. Earlier source assessments, the other two finding dispositions and the unchanged article's CLEAN verdicts are carried forward. Bounded reconciliation, not exhaustive alternative-answer certification, native-speaker certification or a fresh integration review. All final hashes matched before and after the read-only review."
+      }
+    ]
+  },
+  "integration": {
+    "exerciseSha256": "4fa7391a8411e07369dcc2c20d289bb4ce6bbbcb681b0671029c72bfd8180404",
+    "manifestVersion": "68b70c7a09a97e94",
+    "manifestSha256": "fa05ea4432a9ec8c882356ceb3238e05bb3aa52a465f2ece3510e0b9937eb648",
+    "deterministicManifestRebuild": true,
+    "contentValidationErrors": 0,
+    "grammarRegressionTestsPassed": 148,
+    "androidImporter": {
+      "test": "io.github.stopcran.kanji.core.ContentTest.parsesRealContentRepoWhenPresent",
+      "executed": 1,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "scope": "Corrected real-manifest import, exact GrammarSet equality and typed-cache serialization roundtrip."
+    },
+    "preservation": {
+      "unchangedOriginalGrammarFiles": 32,
+      "unchangedOriginalExercises": 401,
+      "unchangedOriginalVocabularyRecords": 401,
+      "changedConditionalsContextRecords": 9,
+      "completeStageGate": "Still rejects exactly the 397 original pending prompts."
+    },
+    "publication": "The owner authorized committing and pushing the reviewed article and exercises on 2026-10-20. This is publication approval, not native-speaker certification or measured learning efficacy; the containing Git commit identifies the published snapshot."
+  },
+  "sources": [
+    {
+      "url": "https://www.tofugu.com/japanese-grammar/conditional-form-tara/",
+      "publisher": "Tofugu",
+      "sections": "What Is Tara; When/After; If; Reference and Suggestion",
+      "supports": ["form-tara", "condition-positive", "condition-negative"],
+      "qualification": "The ta/da shape is not itself past time. Ongoing teita conditions need not describe completion. Do not adopt the unqualified claim that controlled past actions cannot occur with tara; teach the difference from a bare chronological list instead. No categorical ban on polite negative forms is adopted."
+    },
+    {
+      "url": "https://www.tofugu.com/japanese-grammar/verb-conditional-form-ba/",
+      "publisher": "Tofugu",
+      "sections": "Conjugating Verbs; General Truths; Habits; Future; Hypothetical Situations",
+      "supports": ["form-ba", "condition-positive", "condition-negative"],
+      "qualification": "Uses include present/future conditions, past habits and counterfactual results. The source itself includes a state predicate followed by a request. Neither certainty nor a blanket ban on volitional results is inferred."
+    },
+    {
+      "url": "https://www.tofugu.com/japanese-grammar/i-adjective-conditional-form-kereba/",
+      "publisher": "Tofugu",
+      "sections": "Forming Kereba; Intentions and Future Wishes; Common Mistakes",
+      "supports": ["form-ba", "condition-positive", "condition-negative"],
+      "qualification": "Verified positive/negative adjective formation, ii to yokereba, and adjective conditions followed by plans/invitations. Do not treat a noun merely ending in i as an i-adjective."
+    },
+    {
+      "url": "https://www.tofugu.com/japanese-grammar/conditional-form-nara/",
+      "publisher": "Tofugu",
+      "sections": "What Is Nara; Describing Conditions; Counterfactual Situations; Referring to Someone or Something",
+      "supports": ["form-nara", "premise-future", "premise-completed", "condition-positive", "condition-negative"],
+      "qualification": "Verified attachment without present copular da, past propositions and topic/premise framing. Do not adopt a universal ban on first-person premises or require every premise to be an unknown future event."
+    },
+    {
+      "url": "https://www.tofugu.com/japanese-grammar/verb-to/",
+      "publisher": "Tofugu",
+      "sections": "Things that Always Happen; Habits; General Conditions; Successive Actions; How Is To Different From Tara",
+      "supports": ["form-to", "condition-positive", "condition-negative"],
+      "qualification": "The actual page permits past habits and single narrative events as well as general tendencies. To does not always mean physical causation, a universal law or instantaneous action; narrative to and tara can both describe a discovery."
+    },
+    {
+      "url": "https://guidetojapanese.org/learn/grammar/conditionals",
+      "publisher": "Tae Kim's Guide to Japanese",
+      "sections": "Contextual Conditionals; General Conditionals; Past Conditional; Moshi",
+      "supports": ["form-tara", "form-ba", "form-nara", "form-to", "premise-future", "premise-completed"],
+      "qualification": "Inspected actual HTML text because simplified extraction drops Japanese examples. The general statement that only tara permits a past result is not adopted; the inspected to/ba habit and counterfactual examples contradict it. Moshi supplements rather than replaces a conditional."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/ばあいは",
+      "publisher": "Bunpro",
+      "sections": "Main grammar explanation and Caution",
+      "supports": ["form-baai", "condition-positive", "condition-negative"],
+      "qualification": "Supports nominal case framing and no/na attachment. As in grammar-conditions-sources.json, do not adopt its categorical exclusion of planned or controlled events. Existing baai material remains linked rather than replaced."
+    }
+  ],
+  "authoringPolicy": [
+    "Original examples, not copied dictionary or teaching-site sentences. Focus on the requested five families rather than every expression containing the same endings.",
+    "Distinguish controlled formation tasks from contextual answer classes; a named-form instruction is visible and is not evidence that other forms are generally ungrammatical.",
+    "Typed alternatives must fit the literal blank and the stated task. Shared meanings are not offered as competing wrong buttons or described as uniquely discriminated constructions.",
+    "New exercises receive vocabulary annotations and hash-bound review records at publication. Keep the original 401 records, including 397 pending prompts, intact.",
+    "No exercise JLPT level is inferred from a word's level or from generic familiarity with a construction; leave this new mixed comparison unclassified pending a sourced full-task classification."
+  ]
+}

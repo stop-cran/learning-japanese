@@ -10,6 +10,7 @@ This repository starts as a collection of standalone articles prompted by specif
 | --- | --- | --- |
 | Grammar | [Koto, wake, and Japanese noun-based grammar](articles/koto-wake-and-formal-nouns.md) | How do こと and わけ differ, which common formal nouns and noun-based expressions are useful to know, and where do の/ん and ほど fit? |
 | Grammar | [Japanese verb extensions: direction and aspect](articles/verb-extensions-direction-and-aspect.md) | How do ～ていく, ～てくる, ～ておく, ～込む, and related constructions express direction, continuation, and completion? |
+| Grammar | [Japanese conditionals: たら, ば, なら, と, and 場合](articles/japanese-conditionals.md) | How do conditions, premises, event order, discoveries, and procedural cases differ, and when can several patterns fit? |
 | Vocabulary | [Strange, suspicious, and rare: ayashii and related words](articles/ayashii-and-related-words.md) | How do 怪しい, 妖しい, 疑わしい, いかがわしい, 変な, and 珍しい differ? |
 | Vocabulary | [Kaeru: change, replace, exchange, and return](articles/kaeru-change-replace-and-return.md) | How do 変える, 替える, 換える, 代える, 帰る, 返る, 還る, and 孵る differ, and why is 交える not read かえる? |
 | Vocabulary | [Japanese occupation and role endings](articles/occupation-and-role-endings.md) | What do 者, 家, 師, 士, 手, 員, and 屋 contribute, and how do they relate to prestige and new word formation? |
@@ -65,7 +66,8 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   12 on recent completion, retained states and inferences about past actions,
   12 on current intentions, no need and no available alternative,
   12 on earlier intentions, completion beliefs and current inferences,
-  and 12 on norms, predictions and goal-relative practical necessity (401 in total).
+  12 on norms, predictions and goal-relative practical necessity,
+  and 30 on たら／ば／なら／と／場合 conditionals (431 in total).
   Time practice includes うち, あいだ, とき, ころ, たび and shared とき／おり／さい occasion answers;
   shared alternatives are not independently contrasted targets.
   Purpose/cause practice adds ため, おかげ, せい, かわり and ついで, including compensating trade-offs.
@@ -127,6 +129,10 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   The same return/wait/contact/redo verbs recur across the three accounts, with complete predicate blanks that retain
   both 連絡するべき and 連絡すべき. Norms can be followed or violated, a prediction can align with a rule,
   and an optional goal can still have a necessary means. Shared equivalents remain one answer class per exercise.
+  The conditionals set adds four introduction groups: 10 named-form tasks, six prospective/completed なら premises,
+  six positive/negative state conditions, and eight discoveries, counterfactuals and procedural cases.
+  It accepts fitting alternatives within the visible task, rather than claiming unique five-way conditional selection.
+  All 30 new prompts include reviewed vocabulary hints; total coverage is 34/431, with the original 397 still pending.
   See the [content format](docs/content-format.md#grammar-exercises), [foundations sources](docs/grammar-foundations-sources.json),
   [actions sources](docs/grammar-actions-sources.json), [intent sources](docs/grammar-intent-sources.json),
   [action-stage sources](docs/grammar-stages-sources.json), [state sources](docs/grammar-states-sources.json),
@@ -152,7 +158,8 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   [mixed completion/state sources](docs/grammar-mixed-completion-state-sources.json),
   [mixed intention/necessity sources](docs/grammar-mixed-intention-necessity-sources.json),
   [mixed past-stance sources](docs/grammar-mixed-past-stance-sources.json) and
-  [mixed norms/expectations sources](docs/grammar-mixed-norms-expectations-sources.json).
+  [mixed norms/expectations sources](docs/grammar-mixed-norms-expectations-sources.json),
+  plus the [conditionals sources and review](docs/grammar-conditionals-sources.json).
   Every named formal-noun/particle family in the article now appears in practice, but this is not complete construction
   coverage. The five mixed sets complete the bounded formal-noun expansion planned in
   [Android #46](https://github.com/stop-cran/kanji-cards-android/issues/46); the app's remaining engineering, documentation

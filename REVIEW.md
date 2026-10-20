@@ -35,6 +35,113 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Conditionals article (2026-10-20)
+
+**Snapshot:** `ab95097a6aaed3c14a5136f0254202b44c1563f7` plus the new
+`articles/japanese-conditionals.md`, SHA-256
+`32bf7855fb573c07885c85dcef289b6b7661a341d576f84b0154e6cf427060f3`.
+
+**Scope:** the complete article, reviewed directly by its author, `gpt-6-astra`, before exercise authoring.
+The pass checked positive/negative attachment, noun and adjective connectors, relative event time,
+premise versus result framing, requests, past habits/discoveries, counterfactuals, translations and readings.
+The [source record](docs/grammar-conditionals-sources.json) identifies inspected sections and the
+overbroad source restrictions that were not adopted.
+
+**Verdicts:** correctness **CLEAN**; scoped coverage **CLEAN**; comprehensibility **CLEAN**.
+**Findings:** no actionable defect established in this bounded article pass.
+**Optional:** a fuller treatment of conditional set expressions and registers is separate follow-up scope.
+**Limits:** direct author review, not independent multi-model review or native-speaker certification.
+It does not certify exercises that had not yet been written or every interchangeable formulation.
+
+## Initial conditionals exercises (2026-10-20)
+
+**Snapshot:** the same `ab95097` baseline plus `grammar/conditionals-core.json`, final SHA-256
+`ac280a7a8ee2fe6fcc99194874eae287b6f9dfae3dd7b2c95c9839f7235041cd`.
+The article review above preceded exercise authoring. The [source record](docs/grammar-conditionals-sources.json)
+also pins the before-correction exercise snapshot and the unchanged article bytes.
+
+**Scope:** direct author review by `gpt-6-astra` of all 30 exercises and 187 lexical annotations:
+completed Japanese sentences, translations, visible form restrictions, all 307 accepted renderings, wrong-option
+rationales, feedback, four introduction groups and canonical vocabulary senses.
+**Final verdicts:** correctness **CLEAN**; scoped coverage **CLEAN**; comprehensibility **CLEAN**.
+
+| Finding | Disposition |
+| --- | --- |
+| The two positive 場合 formation tasks omitted fitting である predicate variants | Resolved: accept and explain 雨である／必要である; make nonpast scope visible. |
+| The completed museum-visit prompt used an avoidable place-for-visit ellipsis | Resolved: explicitly say 見学した and align the translation and local hint. |
+| Broad function exclusions hid ありません, しましょう and せい | Resolved: give these occurrences lexical hints while retaining particle/auxiliary exclusions. |
+
+**Coverage:** 10 named-form tasks, six prospective/completed なら premises, six state-condition polarity tasks,
+and eight discoveries, counterfactuals and procedural cases. The groups have soft recommendations, not hard prerequisites.
+All 30 new prompts have hash-bound vocabulary review records. Canonical links cover 148 spans and 88 word identities;
+39 spans retain local-only glosses. The original four reviewed and 397 pending records are preserved.
+
+**Integration:** content validation and vocabulary coverage checks pass; 148 grammar regression tests pass.
+The real Android importer and typed-cache roundtrip ran successfully with one test executed and none skipped.
+Manifest `d562b4b694e57b7c` rebuilds deterministically. All 32 prior grammar files and all 401 prior vocabulary records
+match the baseline; complete-stage coverage still correctly rejects the original 397 pending prompts.
+
+**Optional:** broader contextual contrasts and further conditional set expressions remain outside this initial set.
+**Limits:** no actionable finding remains in this bounded author pass, but this is not independent review,
+native-speaker certification, unrestricted five-way discrimination, every dialect/register, owner approval or measured
+learning efficacy. No JLPT level is guessed. Structural validation does not replace the linguistic review.
+
+## Independent conditionals review and reconciliation (2026-10-20)
+
+**Snapshots:** original independent review of exercise SHA-256
+`ac280a7a8ee2fe6fcc99194874eae287b6f9dfae3dd7b2c95c9839f7235041cd`;
+corrected exercise SHA-256
+`4fa7391a8411e07369dcc2c20d289bb4ce6bbbcb681b0671029c72bfd8180404`.
+The article remains byte-identical to the snapshot above.
+
+**Initial independent scope:** a separate fresh-context reviewer inspected the entire article, all 30 exercises,
+307 accepted renderings, 70 options/rationales, 187 vocabulary spans, 252 exclusions, 88 linked word identities
+and four introduction groups without reading the author's review conclusions. Its actual model ID was not exposed.
+The article was **CLEAN** on all three facets. Exercises were correctness **NEEDS FIX**, scoped coverage **CLEAN**,
+and comprehensibility **CLEAN**.
+
+| Independent finding | Severity | Implemented correction |
+| --- | --- | --- |
+| Fitting polite conditionals were graded wrong without a plain-form restriction | Moderate | Accept appropriate polite forms and spellings; explain register in feedback. |
+| Fitting 場合に variants were missing from case-pattern answers | Minor | Include 場合に／ばあいに for the applicable time, fee and membership cases. |
+| Lexical 有る／無い spellings were rejected without a kana-only restriction | Minor | Accept fitting existence/possession spellings without generalizing 無 to negative auxiliaries. |
+
+**Correction scope:** nine exercises now accept 403 total renderings, preserving all original 307. The other 21 exercises,
+all question text, options, vocabulary hints/exclusions, IDs and introduction groups are unchanged. Only the nine affected
+inventory context hashes and correction notes were refreshed. All 401 original exercises and coverage records are preserved.
+
+**Reconciliation round 1:** the original synchronous reviewer could not accept follow-up messages, so a fresh independent
+reviewer received the initial findings, frozen snapshots and exact diff. It inspected all 95 additions, nine revised
+explanations and 19 options/rationales. 場合に and lexical spelling findings were **resolved**; the polite-form finding was
+**partially resolved**, with one minor residual: `cond-positive-member` still rejected **ですと**.
+No invalid addition or newly unsuitable option was established. Actual membership-rule usage at
+[Nasu Harmony Hall](https://www.nasu-hh.com/tomo.html) supports the residual finding; the
+[source record](docs/grammar-conditionals-sources.json) also records inspected formal-negative and narrative examples.
+
+**Reconciliation round 2:** the same replacement reviewer verified that **ですと** is accepted at
+`grammar/conditionals-core.json:2160`, with the plain/polite distinction explained at line 2126.
+Only this answer/explanation and its inventory context hash/note differ from round 1. All 402 round-one answers remain
+accepted, with no option collision. The polite-form finding is now **resolved**; the other two resolved dispositions
+are carried forward. No defect caused by the final delta was established.
+
+**Final corrected-scope verdicts:** correctness **CLEAN**; scoped coverage **CLEAN**; comprehensibility **CLEAN**.
+All three independent findings are **resolved**. The unchanged article's prior independent CLEAN verdicts are carried
+forward on identical bytes, not freshly re-reviewed. Neither reviewer's model ID was exposed; no independent model-family
+coverage is claimed.
+
+**Integration:** 148 grammar regression tests and content/vocabulary checks pass. The corrected real Android importer
+and typed-cache roundtrip ran once with no skips or failures. Manifest `68b70c7a09a97e94` rebuilds deterministically.
+Coverage remains 34/431 reviewed, with exactly 397 original prompts pending.
+
+**Optional:** none.
+**Limits:** bounded reconciliation, not exhaustive alternative-answer certification or a new full audit of unchanged
+exercises/canonical senses. The earlier author-review verdicts describe their identified historical snapshots.
+Source evidence, initial findings, both reconciliation rounds and current hashes are in the
+[source record](docs/grammar-conditionals-sources.json). No native-speaker certification is claimed.
+
+**Owner status:** on 2026-10-20 the owner approved committing and pushing the pending changes and delivering a release APK.
+This is publication approval, not a separate linguistic review or measured learning-use outcome.
+
 ## Onomatopoeia second-batch images (2026-10-19)
 
 **Snapshot and scope:** text commit `44216dc277a51b7fe8a9eb8603b8069a5eba6a63` plus

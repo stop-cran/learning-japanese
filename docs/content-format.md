@@ -218,8 +218,9 @@ in contributor source records, and leave unestablished cases unclassified.
 
 The [reviewed introduction pilot](grammar-introductions-pilot.json) supplies the initial 19 labels: six before/after and nine
 action-stage exercises at N4, and four expectation/obligation exercises at N3. The other four koto/wake exercises in the mixed pilot
-file remain unclassified, as do the other 378 exercises. The same three groups are now annotated as optional `introductionGroups`
-in their declaring files, with one recommendation from temporal sequence to action stages and no genuine prerequisites.
+file remain unclassified, as do the other 408 exercises, including all 30 new conditionals. The same three pilot groups
+are annotated as optional `introductionGroups` in their declaring files, with one recommendation from temporal sequence
+to action stages and no genuine prerequisites.
 
 **Optional introduction groups:** each group requires `id`, `label`, `facets` (`id`, `label`) and `members`
 (`exerciseId`, `facetId`, `exampleKey`). IDs use `[a-z0-9-]+`; labels/reasons are nonblank. Group IDs are source-global,
@@ -261,6 +262,11 @@ The [vocabulary review inventory](grammar-vocabulary-review.json) freezes 401 pr
 Its original glosses have author self-review, with per-exercise limitations; this is not independent review, owner approval or
 native-speaker certification. Non-BMP and conflicting-reading cases are synthetic parser fixtures, not invented published exercises.
 Remaining prompts are explicitly `pending`, never silently counted as covered.
+
+The conditionals addition extends this inventory without reinitializing it: 30 new reviewed prompts bring the current
+corpus to 431 exercises in 33 files and vocabulary coverage to **34/431**. All 397 original pending records remain pending,
+the baseline revision stays unchanged, and the inventory remains at `stage: "pilot"`. New coverage is also direct author
+review, not independent linguistic review; see the [conditionals record](grammar-conditionals-sources.json).
 
 `python tools/grammar_vocabulary.py check` is the maintained repository's publication gate, separate from the app's optional import contract.
 Records bind file/ID, exact prompt, full exercise context (including answers), and annotation payload. Reviewed spans plus explicitly
@@ -749,6 +755,34 @@ and tense changes, not the wider validity of directive こと／の, advice, nec
 All389 prior records and identities, including the reviewed uncommitted past-stance set, remain unchanged.
 The five mixed sets complete the bounded formal-noun authoring expansion, not the separate Android engineering/docs/evidence
 acceptance or relationship-aware introduction policy. No runtime, schema, grading, counter or SRS changes.
+
+### Initial conditionals set
+
+`conditionals-core.json` adds 30 exercises linked to the standalone
+[conditionals article](../articles/japanese-conditionals.md); see the [source and review record](grammar-conditionals-sources.json).
+Four optional introduction groups use soft recommendations, with no fabricated hard prerequisites:
+
+| Group | Items | Tested task |
+| --- | ---: | --- |
+| `conditionals-forms` | 10 | Two named-form/attachment tasks for each of たら, ば, なら, と and 場合 |
+| `conditionals-premises` | 6 | Dictionary versus た-form before printed なら, in three matched prospective/completed scenarios |
+| `conditionals-polarity` | 6 | Positive versus negative time, fee and membership conditions, with shared fitting realizations |
+| `conditionals-mixed` | 8 | Two actual discoveries, four counterfactuals and two negative procedural cases |
+
+Named-form tasks test production of the requested form, not unrestricted five-way choice. For the shared state conditions,
+the visible task uses a nonpast premise before なら/場合; the past-shaped たら conditional remains allowed.
+Discoveries explicitly practice narrative と/たら, and counterfactuals accept basic verbs and their stated ている forms
+with ば/たら. These controlled pools are not claims that other complete-sentence paraphrases are generally wrong.
+After the independent-review corrections, the 403 accepted renderings include spelling, contraction, politeness and
+attachment variants, not 403 independently tested meanings. The original 307 remain accepted. Suitable polite conditionals,
+場合に forms and lexical 有る／無い spellings no longer receive false-negative grades. This is not a blanket rule for
+writing every negative auxiliary with 無 or accepting every honorific/paraphrase.
+Rotate representative model forms across examples where useful; equivalent typed answers never belong on wrong buttons.
+
+All 30 prompts have occurrence-specific vocabulary support: 187 lexical spans, including 148 references to 88 existing
+word identities and 39 local-only glosses. Blanks, tested grammar and nonlexical segments have explicit exclusions in the
+review inventory. Preserve the distinction between a local gloss and a verified canonical word link. The new tasks remain
+unclassified by JLPT; all 401 prior exercises, their identities and their vocabulary review records are unchanged.
 
 ## Links and safety
 
