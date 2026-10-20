@@ -1,6 +1,7 @@
 {
   "schemaVersion": 1,
   "baseContentCommit": "df01062fb3cca7c32e9a751b639820635cca2dbf",
+  "additionScope": "After the original 200-card inventory below, individually requested additions are included with their own basisCommit and article hash. On 2026-10-20 this adds ぶかぶか, illustrated only for clothing and footwear fit; its other dictionary side notes are not expanded into taught scenes.",
   "scope": "Bounded scene inventory for Android issue #45: all 200 currently tagged onomatopoeia word cards, based on reading their complete current article bodies. Cover the distinct learner uses actually taught, not all retained JMdict senses, every example, synonym comparison, separate homophone or incidental object noun. coverageNotes identify grouped uses and deliberately unexpanded dictionary side notes. Preserve all 120 existing primary assets byte-for-byte, their exact legacy image_scene descriptions and established quiz eligibility; add 80 missing primary targets and bounded secondary targets owned only by their own word. Existing lexical exclusions and owner acceptance remain unchanged. New image eligibility is provisional intent unless accompanied by a hash-pinned advisoryReview of the actual output. Those observations are not owner approval or measured learning effectiveness. quizEligible=false explicitly means article-only, not a uniquely correct picture-quiz answer. Sound, sensation, mental state, time and figurative scenes are intended associations, not sensory proof. New scenarios use tools/image_prompts.json's shared original, text-free square editorial style; prompts omit that shared style. Use unlabelled generic objects, no letters, labels, kana, kanji, numbers, watermarks, named-artist imitation, copied media or graphic distress. This is the authoring inventory with advisory output observations, not a runtime scenes catalog or owner approval record.",
   "words": {
     "あっさり": {
@@ -5317,6 +5318,29 @@
             "imageSha256": "42d91c0d32349acb480d28cdafdb1505812c872a0f3ac6f09f2ce272d732bd57",
             "model": "gpt-6-astra",
             "note": "Dissatisfaction is clear, but silent impatience remains as plausible as voiced grumbling. Retain article-only."
+          }
+        }
+      ]
+    },
+    "ぶかぶか": {
+      "basisCommit": "c26dfec4dbd46fde7f1ad6411b0ca0aa3db4c990",
+      "articleSha256": "36e7a478e915babd46b48e79efed32957d8fa281d009289f3f65d7720b54d1dd",
+      "coverageNotes": "One oversized-fit sense groups the coat, shoes and hat examples. The separate dictionary notes about yielding swollen material and a horn-like sound are outside this card's illustrated teaching focus.",
+      "scenes": [
+        {
+          "id": "oversized-coat",
+          "sense": "Clothing too large for its wearer",
+          "image": "images/ぶかぶか--oversized-coat.webp",
+          "description": "An adult looks down at a very large blue coat, with dropped shoulders and wide sleeves surrounding almost all of the hands.",
+          "quizEligible": true,
+          "eligibilityReason": "Provisional until visual inspection: excess shoulder, sleeve and torso room must convey oversized fit, not cushiony fabric or worn clothing. The overlapping ぶくぶく is excluded directly.",
+          "prompt": "An adult of average build trying on a plain smooth blue coat several sizes too large in a simple fitting area. The coat's shoulder seams droop far below the natural shoulders, its sleeves hang well past the fingertips, and the extra-wide body hangs away from the torso in large empty folds. The adult holds both forearms slightly away from the body and looks down at the oversized sleeves with a mildly puzzled expression. Show the entire coat and the person's shoes; trousers and shoes fit normally. The coat is clean, dry, intact and unpadded, with no fluffy texture, wind, rips or stains. One wearer only; no signs, mirrors, words or symbols.",
+          "basis": "The original coat example shows an older brother's coat with enough extra sleeve length to hide the wearer's hands.",
+          "advisoryReview": {
+            "verdict": "ACCEPT",
+            "imageSha256": "bc9bcf916854931c3ba9b224611fb0c2d1dba62fb4f2ad361d8705f6de843d0f",
+            "model": "gpt-6-astra",
+            "note": "Inspected the actual 512x512 output. Dropped shoulders, a wide hanging torso and oversized cuffs clearly show a coat too large for its wearer. Fingertips remain visible, so the caption does not claim completely hidden hands. Smooth, intact, dry fabric avoids the cushiony, tattered and soaking-wet distractors; ぶくぶく is excluded. One coherent wearer, normal shoes and no visible lettering. This is advisory acceptance, not owner approval or proof of unique interpretation across every future quiz pool."
           }
         }
       ]

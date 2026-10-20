@@ -4,6 +4,7 @@ Phase 1 of [app issue #45](https://github.com/stop-cran/kanji-cards-android/issu
 content-only thematic selection of 100 word cards and four linked learner guides.
 The second content batch expands the collection to **200 tagged cards** and seven guides:
 97 new cards plus the enriched existing さっぱり, がっかり, and びっくり cards.
+The subsequent ぶかぶか addition brings the current collection to **201 tagged cards**.
 The learner-facing entry point is [Japanese onomatopoeia](../articles/japanese-onomatopoeia.md).
 
 ## Selection and identity
@@ -23,11 +24,15 @@ productive rules for inventing new meanings or attaching する to every word.
 
 ## Dictionary evidence and examples
 
-The source records enumerate the exact selected forms and inspected dictionary identities:
+The source records enumerate the original two cohorts' selected forms and inspected dictionary identities:
 
 - [Sensory words](onomatopoeia-sensory-sources.json)
 - [Movement, sound, and feeling words](onomatopoeia-feelings-sources.json)
 - [Second 100: everyday scenes](onomatopoeia-batch2-sources.json)
+
+Later additions cite evidence on their cards. The [named-scene record](onomatopoeia-scene-images.json)
+also records their dictionary identities, snapshot hashes, inspection dates and original-image provenance.
+ぶかぶか / ブカブカ shares JMdict entry 1011130; its examples and picture focus on oversized fit.
 
 They identify the inspected local JMdict snapshot by file hashes. Its upstream release date
 has not been established; it is not asserted to be the same snapshot as the earlier
@@ -55,7 +60,7 @@ The prose and original examples do not claim native-speaker certification or mea
 
 ## Quiz and navigation
 
-Each selected card links to the overview, which links back to all 200 cards. The focused
+Each selected card links to the overview, which links back to all 201 cards. The focused
 guides compare patterns, warmth/textures, rain/movement/similar-looking words, eating/drinking,
 body sensations/feelings, and motion/voices/everyday sounds.
 Confusable pairs are recorded in [the inventory](confusable-words.md).
@@ -78,8 +83,8 @@ No new JLPT labels are assigned: the reused cards retain N3/N3/N4 respectively.
 ## Second image batch
 
 The subsequent image batch covers **all 100 second-batch words**, including さっぱり, がっかり
-and びっくり. There are now 120 illustrated words: these 100 plus the unchanged original 20.
-The other 80 first-batch words still have no picture.
+and びっくり. At that stage there were 120 illustrated words: these 100 plus the unchanged original 20.
+The other 80 first-batch words were illustrated later through the named-scene expansion.
 
 The `onomatopoeia-batch2` set in `tools/image_prompts.json` uses the pilot's unchanged text-free
 editorial style. Original scenes are based on reviewed senses and examples, not copied source

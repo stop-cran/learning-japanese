@@ -13,7 +13,7 @@ This repository starts as a collection of standalone articles prompted by specif
 | Vocabulary | [Strange, suspicious, and rare: ayashii and related words](articles/ayashii-and-related-words.md) | How do 怪しい, 妖しい, 疑わしい, いかがわしい, 変な, and 珍しい differ? |
 | Vocabulary | [Kaeru: change, replace, exchange, and return](articles/kaeru-change-replace-and-return.md) | How do 変える, 替える, 換える, 代える, 帰る, 返る, 還る, and 孵る differ, and why is 交える not read かえる? |
 | Vocabulary | [Japanese occupation and role endings](articles/occupation-and-role-endings.md) | What do 者, 家, 師, 士, 手, 員, and 屋 contribute, and how do they relate to prestige and new word formation? |
-| Vocabulary | [Japanese onomatopoeia: 200 words](articles/japanese-onomatopoeia.md) | How do sound words and mimetic words describe everyday scenes, and which constructions go with them? |
+| Vocabulary | [Japanese onomatopoeia: 201 words](articles/japanese-onomatopoeia.md) | How do sound words and mimetic words describe everyday scenes, and which constructions go with them? |
 | Vocabulary | [Onomatopoeia sound patterns](articles/onomatopoeia-sound-patterns.md) | What can repetition, endings, and voiced consonants suggest without becoming rigid meaning rules? |
 | Vocabulary | [Warmth and texture](articles/onomatopoeia-texture-and-warmth.md) | How do ぽかぽか, ほかほか, ふわふわ, ふかふか, ぺたぺた, and べたべた differ? |
 | Vocabulary | [Rain, rolling, walking, and similar forms](articles/onomatopoeia-sound-and-movement.md) | How do vivid scene descriptions differ, and why are similar-looking words not necessarily synonyms? |
@@ -36,7 +36,7 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   The deck covers all 79 N5, 166 N4 and 367 N3 kanji in the selected [kanjiapi.dev](https://kanjiapi.dev) community sets.
   It also includes 分 as a documented N5 exception, one original N2 card, and six article-subject additions:
   80 N5, 166 N4, 367 N3, two N2 and five N1. The `starter` tag identifies the original 118-card cohort, not the later expansions.
-- `words/` – one article per written word form (3,209): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
+- `words/` – one article per written word form (3,210): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
   Articles explain meaning, spelling or formation, synonyms, antonyms and usage distinctions.
   The selected community vocabulary list's 684 N5 and 640 additional N4 rows are covered by 1,308 articles:
   924 new articles and 384 reused ones. Multiple source readings can share an article.
@@ -172,7 +172,7 @@ The [article-subject snapshot](docs/article-subjects-source-snapshot.json) recor
 作家 is shared with the N3 vocabulary expansion, so merging these additions adds 16 distinct word cards to that collection.
 
 Source-covered word articles carry their own `jlpt` metadata: 672 N5, 636 N4, 1,625 N3, three N2 and two N1 articles, independently of the kanji they contain.
-This article-level label does not assign every subsidiary sense or reading to that level. The remaining 271 articles have no
+This article-level label does not assign every subsidiary sense or reading to that level. The remaining 272 articles have no
 sourced word-level label. In particular, the pinned list's N1 labels for くらい and だけ are not recommendations to postpone these basic particles.
 Vocabulary-aware app versions use explicit levels first and retain kanji-based inference only when the
 field is absent; older versions ignore word-level metadata. N4 study includes N5; N3 study includes both.
@@ -181,31 +181,33 @@ these require an exclusion-aware app version and do not imply that every possibl
 
 ## Onomatopoeia collection
 
-The [200-word index](articles/japanese-onomatopoeia.md) preserves the first 100 and adds a
+The [201-word index](articles/japanese-onomatopoeia.md) preserves the first 100 and adds a
 [second 100](articles/japanese-onomatopoeia.md#second-100-word-cards), grouped by everyday situation.
 The second batch adds 97 cards and enriches three existing ones, plus three comparison guides.
+Later additions are listed separately, beginning with [ぶかぶか / ブカブカ](words/ぶかぶか.md), for oversized clothing or shoes.
 Cards carry the `onomatopoeia` tag, a broad category such as
 `giongo`, `giseigo`, or `gitaigo`, and a form tag where applicable. Categories can overlap by sense;
 these tags are not new word types or JLPT levels. Existing word IDs and sourced level labels are retained.
 
-The app has an Onomatopoeia stack with the normal word quizzes. Words with a scene picture (`images/`) also
-get a "Picture → word" quiz and show the picture in their article. The Onomatopoeia stack includes
+The app has an Onomatopoeia stack with the normal word quizzes. Eligible named scenes (`scenes/` and `images/`)
+support both picture-to-word and word-to-picture quizzes; article-only scenes remain visible in the article.
+The Onomatopoeia stack includes
 tagged words independently of JLPT level; unlevelled words also remain in All rather than a numbered JLPT stack.
-All 100 second-batch words now have scene pictures, including the three enriched existing cards.
-Together with the unchanged 20-image pilot, that makes 120 illustrated words; 80 first-batch words
-still have no image.
+All 201 tagged words have scene catalogs, with 396 illustrations in total. The original 120 image files
+are preserved; the latest addition is an oversized-coat scene for ぶかぶか.
 See the [collection and source notes](docs/onomatopoeia.md).
 
 ### Generated images
 
 The pictures in `images/` are AI-generated with Azure OpenAI from original scenes in
-`tools/image_prompts.json`, then compressed to 512 px WebP. Each illustrates one selected use, not
+`tools/image_prompts.json` and `tools/onomatopoeia_scene_plan.json`, then compressed to 512 px WebP. Each illustrates one selected use, not
 every sense or a guarantee of unique quiz choices. The original 20-image pilot has owner approval.
 The new 100 received an assistant visual review and were **accepted by the owner for learning use
 on 2026-10-19**; feedback from actual study remains to come.
-The [image provenance and per-picture observations](docs/onomatopoeia-batch2-images.json) record
+The [named-scene provenance and per-picture observations](docs/onomatopoeia-scene-images.json) record
 the actual model, output hashes, corrections and limitations. The images are text-free by design,
-but generated art may still contain small inaccuracies. Progress is tracked in
+but generated art may still contain small inaccuracies. Earlier batch acceptance does not imply owner
+approval of later additions. The original implementation is tracked in
 [app issue #45](https://github.com/stop-cran/kanji-cards-android/issues/45).
 
 ## Approach

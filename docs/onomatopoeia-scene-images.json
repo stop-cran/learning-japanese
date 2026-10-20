@@ -1,21 +1,43 @@
 {
   "baseline_commit": "df01062fb3cca7c32e9a751b639820635cca2dbf",
-  "scope": "All 200 current onomatopoeia cards, using their reviewed taught senses rather than every dictionary sub-sense.",
+  "scope": "The original 200 onomatopoeia cards and the subsequent ぶかぶか addition: 201 word catalogs, using their reviewed taught senses rather than every dictionary sub-sense.",
   "inventory": "tools/onomatopoeia_scene_plan.json",
   "lexical_source_records": [
     "docs/onomatopoeia-sensory-sources.json",
     "docs/onomatopoeia-feelings-sources.json",
     "docs/onomatopoeia-batch2-sources.json"
   ],
+  "additional_lexical_sources": [
+    {
+      "word": "ぶかぶか",
+      "path": "words/ぶかぶか.md",
+      "inspection_date": "2026-10-20",
+      "basis_commit": "c26dfec4dbd46fde7f1ad6411b0ca0aa3db4c990",
+      "dictionary": "JMdict",
+      "entry": "1011130",
+      "readings": ["ぶかぶか", "ブカブカ"],
+      "snapshot_file": "jmdict_compact.jsonl",
+      "snapshot_sha256": "f171478f8d87e269d664a219db362e06c02fbc88db2d4c322ba8715a65c42aaf",
+      "focus_senses": [1],
+      "dictionary_side_notes": [2, 3],
+      "sources": [
+        "https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project",
+        "https://www.weblio.jp/content/ぶかぶか",
+        "https://kotobank.jp/word/ぶかぶか-616788",
+        "https://www.weblio.jp/content/だぶだぶ"
+      ],
+      "review": "Direct author review of the actual dictionary entries and the complete new card. The examples and English explanations are original. Clothing and footwear fit is the taught focus; material deformation and instrument sound remain dictionary side notes. Both scripts share one identity, no JLPT level is inferred, and ぶくぶく is excluded for overlap. No independent or native-speaker review is claimed."
+    }
+  ],
   "counts": {
-    "words": 200,
-    "scenes": 395,
+    "words": 201,
+    "scenes": 396,
     "preserved_images": 120,
-    "new_images": 275,
-    "new_primary_images": 80,
-    "quiz_eligible_scenes": 273,
+    "new_images": 276,
+    "new_primary_images": 81,
+    "quiz_eligible_scenes": 274,
     "article_only_scenes": 122,
-    "image_bytes": 10606746
+    "image_bytes": 10620984
   },
   "provider": "Azure OpenAI",
   "generation_model": "gpt-image-2.5-sunburst",
@@ -32,7 +54,7 @@
   "request_prompt_rule": "generation_scene + one ASCII space + shared_style",
   "advisory_reviewer_model": "gpt-6-astra",
   "advisory_method": "Every new output inspected directly or in a contact sheet; unclear cases enlarged. Actual observations are hash-pinned and eligibility is explicit.",
-  "owner_review": "Prior 120-image batch acceptance is preserved. No owner approval of the new images is inferred.",
+  "owner_review": "Prior 120-image batch acceptance is preserved. Explicit later approvals are recorded per scene; no unrecorded owner approval is inferred.",
   "limits": [
     "Still images associate with taught uses; they do not prove sound, taste, temperature, private feelings or preceding events.",
     "Current symmetric word exclusions remain in force; no claim of exhaustive visual uniqueness across every future card is made.",
@@ -42,7 +64,7 @@
     "generation_invocations records outer generation attempts, not every internal rate-limit retry or a verified billing count.",
     "Physical-phone behavior and learning effectiveness are not certified by this visual review."
   ],
-  "updated_at": "2026-10-20T11:38:07.699569+00:00",
+  "updated_at": "2026-10-20T15:11:37.400Z",
   "retired_requests": [
     {
       "request": {
@@ -9549,6 +9571,47 @@
         "note": "Dissatisfaction is clear, but silent impatience remains as plausible as voiced grumbling. Retain article-only."
       },
       "owner_review": "not_yet_recorded"
+    },
+    {
+      "word": "ぶかぶか",
+      "id": "oversized-coat",
+      "sense": "Clothing too large for its wearer",
+      "image": "images/ぶかぶか--oversized-coat.webp",
+      "primary": true,
+      "description": "An adult looks down at a very large blue coat, with dropped shoulders and wide sleeves surrounding almost all of the hands.",
+      "quiz_eligible": true,
+      "sha256": "bc9bcf916854931c3ba9b224611fb0c2d1dba62fb4f2ad361d8705f6de843d0f",
+      "bytes": 14238,
+      "article_sha256": "36e7a478e915babd46b48e79efed32957d8fa281d009289f3f65d7720b54d1dd",
+      "basis_commit": "c26dfec4dbd46fde7f1ad6411b0ca0aa3db4c990",
+      "basis": "The original coat example shows an older brother's coat with enough extra sleeve length to hide the wearer's hands.",
+      "origin": "new_generation",
+      "generation_scene": "An adult of average build trying on a plain smooth blue coat several sizes too large in a simple fitting area. The coat's shoulder seams droop far below the natural shoulders, its sleeves hang well past the fingertips, and the extra-wide body hangs away from the torso in large empty folds. The adult holds both forearms slightly away from the body and looks down at the oversized sleeves with a mildly puzzled expression. Show the entire coat and the person's shoes; trousers and shoes fit normally. The coat is clean, dry, intact and unpadded, with no fluffy texture, wind, rips or stains. One wearer only; no signs, mirrors, words or symbols.",
+      "request_prompt_sha256": "7d94fe9f2a82feb60a7d456653b1c7e5a00d9c9ed90fe67f663357a2217a42aa",
+      "original_png_sha256": "d4f93a12ba39cf503fb10197bad987e0396a2244adb244b67358f5b1dfc6523f",
+      "generated_at": "2026-10-20T15:02:30.941397+00:00",
+      "generation_invocations": [
+        {
+          "startedAt": "2026-10-20T15:02:10.695892+00:00"
+        }
+      ],
+      "stored_format": {
+        "format": "WEBP",
+        "width": 512,
+        "height": 512,
+        "quality": 80,
+        "method": 6
+      },
+      "advisory_review": {
+        "verdict": "ACCEPT",
+        "imageSha256": "bc9bcf916854931c3ba9b224611fb0c2d1dba62fb4f2ad361d8705f6de843d0f",
+        "model": "gpt-6-astra",
+        "note": "Inspected the actual 512x512 output. Dropped shoulders, a wide hanging torso and oversized cuffs clearly show a coat too large for its wearer. Fingertips remain visible, so the caption does not claim completely hidden hands. Smooth, intact, dry fabric avoids the cushiony, tattered and soaking-wet distractors; ぶくぶく is excluded. One coherent wearer, normal shoes and no visible lettering. This is advisory acceptance, not owner approval or proof of unique interpretation across every future quiz pool."
+      },
+      "owner_review": "approved_for_publication",
+      "owner_approval_date": "2026-10-20",
+      "owner_approval_statement": "Great, please commit and push.",
+      "owner_approval_scope": "Publication approval for this single new card and illustration, not an independent linguistic review or measured learning-effectiveness result."
     },
     {
       "word": "ぶくぶく",

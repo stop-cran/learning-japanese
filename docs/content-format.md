@@ -133,7 +133,7 @@ catalog-only edits as well as word/image edits. Older apps understand only the o
 
 ### Generating and reviewing scenes
 
-`tools/onomatopoeia_scene_plan.json` inventories the uses actually taught by the current 200 cards. It is authoring input, not a
+`tools/onomatopoeia_scene_plan.json` inventories the uses taught by the original 200 cards and recorded later additions. It is authoring input, not a
 runtime payload. Article hashes pin that basis; existing-image hashes protect approved bytes. Planned eligibility is provisional
 until the generated picture is inspected. Do not infer either exhaustive coverage or owner acceptance from a generator succeeding.
 
@@ -175,6 +175,8 @@ The completed #45 collection is recorded in [onomatopoeia-scene-images.json](ono
 すべすべ, とぼとぼ, のんびり and ぺらぺら. Their articles and other word-practice modes remain available.
 Every new output has a hash-pinned advisory observation; prior owner acceptance applies only to the original 120 images.
 These are collection-snapshot counts, not schema limits or proof of learning effectiveness.
+The later ぶかぶか addition brings the current collection to 201 catalogs and 396 illustrations;
+its separately recorded source basis and visual review do not change the original #45 snapshot or imply owner approval.
 
 ## Strokes file
 

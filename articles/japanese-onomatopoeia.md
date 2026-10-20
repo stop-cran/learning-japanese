@@ -105,7 +105,7 @@ The categories overlap; existing sourced JLPT metadata is retained where availab
 
 ## Second 100 word cards
 
-The collection now contains **200 tagged word cards**. This second thematic selection adds 97 new
+The second thematic selection brought the collection to **200 tagged word cards**, adding 97 new
 articles and enriches the existing さっぱり, がっかり, and びっくり cards without replacing their IDs
 or sourced levels. The scene groups below are navigation aids, not new SRS stacks or a frequency ranking.
 Spellings already grouped within one inspected dictionary identity do not become extra cards merely
@@ -124,16 +124,25 @@ to increase the count. メーメー keeps a dictionary-recorded katakana form.
 | Water, wind, and fire | [ぽたぽた](../words/ぽたぽた.md), [じゃぶじゃぶ](../words/じゃぶじゃぶ.md), [ばしゃばしゃ](../words/ばしゃばしゃ.md), [ざぶざぶ](../words/ざぶざぶ.md), [そよそよ](../words/そよそよ.md), [びゅうびゅう](../words/びゅうびゅう.md), [ごぼごぼ](../words/ごぼごぼ.md), [めらめら](../words/めらめら.md), [もくもく](../words/もくもく.md), [ぽちゃん](../words/ぽちゃん.md) |
 | Looking and speaking | [きょろきょろ](../words/きょろきょろ.md), [ちらちら](../words/ちらちら.md), [じろじろ](../words/じろじろ.md), [こっそり](../words/こっそり.md), [ずけずけ](../words/ずけずけ.md), [はきはき](../words/はきはき.md), [べらべら](../words/べらべら.md), [ぐずぐず](../words/ぐずぐず.md), [だらだら](../words/だらだら.md), [きっぱり](../words/きっぱり.md) |
 
-The second batch is text-only. It does not add pictures or change how the app schedules word reviews.
+The second batch was first published as text-only; illustrations followed separately without changing word-level scheduling.
+
+## Further word cards
+
+The collection now contains **201 tagged word cards**. Later discoveries are added here without changing the original two 100-word groups.
+
+| Scene | Card |
+| --- | --- |
+| Clothes and shoes that are too large | [ぶかぶか / ブカブカ](../words/ぶかぶか.md) — too big and loose to fit; not the same as soft, cushiony ふかふか |
 
 ## Sources and limits
 
-- [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project): each linked card identifies
-  the inspected entry. Dictionary senses support lexical meanings, not a claim that every word is equally frequent.
+- [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project): the original batches identify
+  their inspected entries. Later cards cite their own dictionary evidence, including Japanese dictionary entries.
+  Dictionary senses support lexical meanings, not a claim that every word is equally frequent.
 - [Tofugu: Japanese onomatopoeia](https://www.tofugu.com/japanese/japanese-onomatopoeia/):
   accessible introduction to the five-way classification, spelling, forms, and grammar.
   Its sound-symbolism generalizations are learning tendencies, not exceptionless rules.
 
-The examples and contrasts here are original explanations. Some starter cards already have a pilot picture,
-which illustrates one selected sense; it does not replace the word's sentence patterns or establish a universal
-image-to-word translation.
+The examples and contrasts here are original explanations. Named scene illustrations show selected uses;
+they do not replace sentence patterns or establish a universal image-to-word translation. Some scenes are
+article-only rather than quiz choices.
