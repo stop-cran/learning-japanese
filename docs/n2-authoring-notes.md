@@ -62,6 +62,12 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   are an extraction limit, not evidence that those spellings or independent entries are absent from JMdict.
 - Web-search generated prose can disagree with its own citation URLs. In batch 03, a purported 副作用 URL resolved
   to 文七元結. Inspect the fetched headword and actual definition; do not treat the generated quotation as dictionary evidence.
+- A bound counter needs a usable count, not only the isolated dictionary suffix and a warning. Both batch 03 reviewers
+  requested concrete 匹 forms; the correction gives 一匹, 二匹 and 三匹 with kana and separate pronunciation evidence.
+- The equality family needs direct exclusions beyond 同じ. Both batch 03 reports raised 匹敵/同様 and 匹敵/同一,
+  albeit with different severity. A shared exclusion through 同じ would not protect either pair.
+- A part-of-speech observation should identify its sense when the word has others. 勢い is a noun in the force/momentum
+  sense discussed on its card; JMdict also records an adverb sense. The clarification does not require teaching every sense.
 
 ## Review and checkpoint protocol
 

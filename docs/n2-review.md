@@ -180,7 +180,7 @@ The 13 legacy word-link edits received related-context review, not fresh compreh
 
 Cards: 券 刺 則 副 劇 効 勇 募 勢 包 匹 区 卒 協 占.
 
-Status: **draft checkpoint; independent review pending**.
+Status: **corrections checkpoint; changed-passage confirmation pending**.
 Evidence: [batch-03.json](n2-batch-sources/batch-03.json), retaining 44 exact Japanese reading rows and
 63 inspected word pairs. Supporting word articles:
 [副作用](../words/副作用.md), [募集](../words/募集.md) and [匹敵](../words/匹敵.md).
@@ -192,3 +192,49 @@ The lookup-only rows are 効 `ききめ`/`なら.う`, 勢 `はずみ`, 区 `オ
 and 卒 `お.える`/`ついに`/`にわか`. Search-only 卒える is not a recommended word example.
 Kanjipedia independently supports 卒わる for `お.わる`; the source record identifies that external evidence
 separately from JMdict. Alternate-reading examples link only when they match the existing word article's reading.
+
+### Independent initial reviews
+
+Both reviewers inspected `408be09e0156fc6ed3c0ed1b1b0ac67f592eb1a9`, with identical scope and evidence access:
+all 18 new pages for correctness, scoped coverage and comprehensibility, plus the 20 legacy link passages in their
+narrower scope. Actual models: **gpt-6.1-sol** and **claude-opus-5.5**. The isolated read-only processes ran sequentially,
+exited before the next started and made no changes. Neither saw the other's report or the author's adjudication.
+The author verified the clean committed snapshot; the reviewers could not independently execute Git.
+
+Preserved initial reports: [GPT](n2-reviews/batch-03-gpt-initial.md) and
+[Claude](n2-reviews/batch-03-claude-initial.md). These describe the initial snapshot, not the corrections.
+
+### Initial-finding reconciliation
+
+| Reports | Observation | Disposition and evidence |
+| --- | --- | --- |
+| GPT R01; Claude O-4 | 匹敵's equality label overlaps with 同様 and 同一 | Resolved: add both direct exclusions and contextual comparisons. Their existing articles and inspected Jisho/JMdict records include equality; exclusion through 同じ is not transitive. GPT calls this required and Claude optional, but the underlying observation is shared. |
+| GPT R02; Claude F-01 | 匹 warns about changed pronunciations without a usable count | Resolved: add 二匹 にひき in the reading row and 一匹 いっぴき / 二匹 にひき / 三匹 さんびき in Notes. The inspected Tofugu pronunciation table supports all three, identified separately from the isolated JMdict counter entry. |
+| Claude O-1 | 刺し's learner-facing "sense 3" label is opaque | Optional polish adopted: remove the internal sense number from the row; retain the piercing gloss and adjacent explanation. The source packet still retains all exact senses. |
+| Claude O-2 | 勢い has an adverb sense as well as noun senses | Optional qualification adopted: specify that the force/momentum sense is a noun, not an i-adjective. JMdict 1375040 explicitly distinguishes noun senses 1-3 from adverb sense 4. No exhaustive new word article is needed. |
+| Claude O-3 | 卒去 also has the reading そっきょ | Optional, not adopted: the selected しゅっきょ pair validly demonstrates シュツ and does not deny another word reading. Exhaustive alternate readings of each example word are outside this card's scope. |
+| Claude O-5 | Consider excluding 招く and 誘う from 募集 | Optional, not adopted: the report offers a conservative extension from English "invitation" but does not establish that the existing title/construction distinctions are defective. 募集 teaches seeking applications, not an unrestricted substitution for inviting someone. Existing 招待 and 集める safeguards remain. |
+| Claude Limits, 則 | Standalone 則 のり's literary status is not established | No defect established: the page already identifies a dictionary reading and makes no literary or frequency claim. Do not add an unsupported register label. |
+| Claude Limits, 副作用 | Non-medical figurative use lacks verified evidence in the inspected sources | Resolved conservatively: remove that additional claim from this medicine-focused supporting article. This is not evidence against figurative use and does not assert medical exclusivity. The initial CLEAN verdict did not certify the claim identified as unverified in Limits. |
+
+Equality corroboration inspected on 2026-10-21:
+[同様](https://jisho.org/api/v1/search/words?keyword=%E5%90%8C%E6%A7%98), sense 1, and
+[同一](https://jisho.org/api/v1/search/words?keyword=%E5%90%8C%E4%B8%80), sense 1, both include "equal".
+Their exact spellings/readings and unrestricted applicable senses were inspected, not inferred from a search summary.
+
+### Dual-model usefulness
+
+The two established corrections are **shared**, not unique contributions: Claude's Optional section contains the equality
+observation that GPT puts in Findings, and both identify the missing usable counter forms. The different severity/facet
+labels do not make distinct discoveries. Claude additionally supplied useful optional sense qualification and wording
+polish, and uniquely surfaced the 副作用 evidence gap; the author removed that unsupported extra claim.
+No verified GPT-only defect was established in this batch. This sample demonstrates cross-checking and some complementary
+coverage, not a model ranking or proof that model bias has been eliminated.
+
+### Limits
+
+The author mechanically verified that all 20 legacy word changes are component links only. Neither reviewer ran Git.
+Claude refers to 45 distractor cards; those are 45 assignments over 42 distinct cards, not 45 distinct files.
+Neither review exhaustively audits stroke geometry or certifies native-speaker/corpus-wide naturalness.
+The external pronunciation and equality evidence received direct current-source inspection, not a new pinned dictionary
+extraction. Initial source-only readings remain qualified as lookup information.
