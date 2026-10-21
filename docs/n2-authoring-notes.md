@@ -68,6 +68,9 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   albeit with different severity. A shared exclusion through 同じ would not protect either pair.
 - A part-of-speech observation should identify its sense when the word has others. 勢い is a noun in the force/momentum
   sense discussed on its card; JMdict also records an adverb sense. The clarification does not require teaching every sense.
+- Compare each named neighbor on its own relevant dimension. Batch 03's first 匹敵 correction distinguished matching
+  from 同一's identity but not from 同様's contextual similarity. The revised comparison contrasts reaching a level
+  (`Bに匹敵する`) with kind or manner (`Bと同様`), without claiming their meanings can never overlap.
 
 ## Review and checkpoint protocol
 

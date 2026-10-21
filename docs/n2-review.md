@@ -180,7 +180,7 @@ The 13 legacy word-link edits received related-context review, not fresh compreh
 
 Cards: 券 刺 則 副 劇 効 勇 募 勢 包 匹 区 卒 協 占.
 
-Status: **corrections checkpoint; changed-passage confirmation pending**.
+Status: **second corrections checkpoint; final localized confirmation pending**.
 Evidence: [batch-03.json](n2-batch-sources/batch-03.json), retaining 44 exact Japanese reading rows and
 63 inspected word pairs. Supporting word articles:
 [副作用](../words/副作用.md), [募集](../words/募集.md) and [匹敵](../words/匹敵.md).
@@ -230,6 +230,24 @@ labels do not make distinct discoveries. Claude additionally supplied useful opt
 polish, and uniquely surfaced the 副作用 evidence gap; the author removed that unsupported extra claim.
 No verified GPT-only defect was established in this batch. This sample demonstrates cross-checking and some complementary
 coverage, not a model ranking or proof that model bias has been eliminated.
+
+### Changed-passage review and localized correction
+
+Both original reviewer contexts resumed sequentially at the clean correction snapshot
+`35e794f234701002bb2d09b54ce20ce2ad8506c0`. Each received its own initial report and the actual 83-line,
+seven-hunk teaching-content diff from the initial checkpoint. Both inspected all five changed pages:
+刺, 勢, 匹, 副作用 and 匹敵, with surrounding context and current evidence. Both confirmed the initial counter
+and equality-exclusion issues resolved. GPT reported all three facets CLEAN for all five; Claude reported a new
+minor comprehensibility issue on 匹敵 and CLEAN elsewhere. Both processes exited without changes.
+
+Preserved first follow-ups: [GPT](n2-reviews/batch-03-gpt-followup.md) and
+[Claude](n2-reviews/batch-03-claude-followup.md). Claude F-02 correctly identifies that contrasting matching with
+identity does not distinguish 匹敵 from 同様, whose existing article expressly allows non-identical similarity.
+The correction now contrasts kind/manner and `Bと同様` with reaching a comparison standard's level and
+`Bに匹敵する`, and removes the unclear "equality labels" phrase. This is a localized contrastive-explanation issue,
+not evidence that the equality senses or direct exclusions were wrong. Final confirmation is pending.
+This second-stage issue was uniquely identified by Claude on the common corrected snapshot; do not conflate that
+observation with the shared initial equality-exclusion finding.
 
 ### Limits
 
