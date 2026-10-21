@@ -86,3 +86,19 @@ not a fresh comprehensive review of their teaching text. Reconciliation is not a
 The author confirmed clean, unchanged committed content before both review stages. File-only reviewers could read the
 HEAD reference and supplied diff, not independently run Git. Source-record changes received current-record inspection,
 not a separate upstream re-extraction. Their remaining optional 乱りに allocation is not used as teaching evidence.
+
+## Batch 02
+
+Cards: 個 倍 停 傾 像 億 兆 児 党 兵 冊 再 凍 刊 刷.
+
+Status: **authored; awaiting independent review**. Evidence:
+[batch-02.json](n2-batch-sources/batch-02.json). New supporting word articles:
+[兆候](../words/兆候.md), [児童](../words/児童.md), [兵士](../words/兵士.md),
+[冊子](../words/冊子.md) and [刊行](../words/刊行.md).
+These five articles do not claim vocabulary JLPT levels without a selected vocabulary source.
+
+Related edits: component links in 13 existing word articles. The 15 new kanji cards have three curated wrong answers
+each; no direct synonymous label was established between this batch and a remaining legacy two-distractor card.
+The source record retains 47 exact Japanese reading rows and 64 inspected word pairs.
+Unmatched character-dictionary readings remain explicitly qualified: 児 ゲイ, 党 なかま/むら,
+冊 ふみ and 凍 こごる. They are not presented as ordinary word-use recommendations.

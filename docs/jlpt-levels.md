@@ -11,6 +11,9 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
 - [N5](https://kanjiapi.dev/v1/kanji/jlpt-5): 79 characters in the snapshot inspected on 2026-10-08.
 - [N4](https://kanjiapi.dev/v1/kanji/jlpt-4): 166 characters in that snapshot, excluding the N5 set.
 - [N3](https://kanjiapi.dev/v1/kanji/jlpt-3): 367 characters in the snapshot inspected on 2026-10-09.
+- [N2](https://kanjiapi.dev/v1/kanji/jlpt-2): 367 characters in the
+  [snapshot retrieved on 2026-10-21](n2-source-snapshot.json). Coverage is being expanded in
+  [reviewed batches](n2-review.md); the snapshot is the target set, not a claim that every card is already present.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee

@@ -38,6 +38,14 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   as defensible random fallback choices.
 - Use labelled modern-shape mnemonics when historical or phonetic analysis has not been established. Keep canonical radical
   metadata and explain visible variants rather than replacing the indexing radical.
+- Batch 02's 傾く かたぶく has an outdated-reading flag, not an outdated-spelling flag. Keep the two annotation
+  types separate, just as for rare spelling versus rare pronunciation.
+- A successful dictionary URL can resolve to the wrong headword: the 刷く page on Kotobank resolved to はだく,
+  and 凍る resolved to こおる, not the outstanding こごる reading. The inspected Kanjipedia はく entry
+  permits 刷く only for light brush application, not its separate sweeping sense.
+- New supporting vocabulary also needs quiz review. Batch 02 adds direct exclusions for the overlapping labels of
+  兆候/印/現れ, 児童/子/子供, 兵士/武士, 冊子/本/書物 and 刊行/出版/発行.
+  These are declared pairs on the new cards, not transitive groups or unrestricted substitution rules.
 
 ## Review and checkpoint protocol
 

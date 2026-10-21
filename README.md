@@ -35,12 +35,13 @@ provisional notation and links to existing material, not yet a complete usage re
 Kanji cards, word articles and stroke data feed the [Ensō Nihongo Android app](https://github.com/stop-cran/kanji-cards-android). The
 format is described in [docs/content-format.md](docs/content-format.md); data sources are in [NOTICE.md](NOTICE.md).
 
-- `kanji/` – one card per kanji (635): meaning, radical, readings, common words, and origin notes or explicitly labelled modern-shape mnemonics.
+- `kanji/` – one card per kanji (650): meaning, radical, readings, common words, and origin notes or explicitly labelled modern-shape mnemonics.
   The deck covers all 79 N5, 166 N4 and 367 N3 kanji in the selected [kanjiapi.dev](https://kanjiapi.dev) community sets.
   It also includes 分 as a documented N5 exception and five N1 article-subject additions:
-  80 N5, 166 N4, 367 N3, 17 N2 and five N1. The ongoing [N2 expansion](docs/n2-review.md) adds a 15-card pilot
-  to the two existing N2 cards; the pilot has independent GPT/Claude review and reconciled corrections. The `starter` tag identifies the original 118-card cohort, not the later expansions.
-- `words/` – one article per written word form (3,210): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
+  80 N5, 166 N4, 367 N3, 32 N2 and five N1. The ongoing [N2 expansion](docs/n2-review.md) has added 30 cards
+  to the two existing N2 cards; the 15-card pilot has independent GPT/Claude review and reconciled corrections,
+  and batch 02 awaits review. The `starter` tag identifies the original 118-card cohort, not the later expansions.
+- `words/` – one article per written word form (3,215): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
   Articles explain meaning, spelling or formation, synonyms, antonyms and usage distinctions.
   The selected community vocabulary list's 684 N5 and 640 additional N4 rows are covered by 1,308 articles:
   924 new articles and 384 reused ones. Multiple source readings can share an article.
