@@ -197,6 +197,9 @@ A **counterfactual** imagines a situation contrary to what is known to have happ
 
 **もっと早く家を出たら、間に合ったのに** can convey the same unrealized possibility. The context, past outcome and final **のに** make the regret clear; ば alone is not a dedicated "past unreal" tense.
 
+For the relation to concessive and nominalizing uses of のに, see
+[のに: unexpected outcomes, comparisons, and the other のに](noni-and-concessive-contrasts.md).
+
 **なら** can introduce an imagined identity or situation too:
 
 - 私が店長なら、閉店時間を変えたい。  

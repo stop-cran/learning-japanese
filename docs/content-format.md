@@ -218,7 +218,7 @@ in contributor source records, and leave unestablished cases unclassified.
 
 The [reviewed introduction pilot](grammar-introductions-pilot.json) supplies the initial 19 labels: six before/after and nine
 action-stage exercises at N4, and four expectation/obligation exercises at N3. The other four koto/wake exercises in the mixed pilot
-file remain unclassified, as do the other 438 exercises, including all 60 conditionals. The same three pilot groups
+file remain unclassified, as do the other 464 exercises, including all 60 conditionals and 26 のに follow-up questions. The same three pilot groups
 are annotated as optional `introductionGroups` in their declaring files, with one recommendation from temporal sequence
 to action stages and no genuine prerequisites.
 
@@ -263,13 +263,15 @@ Its original glosses have author self-review, with per-exercise limitations; thi
 native-speaker certification. Non-BMP and conflicting-reading cases are synthetic parser fixtures, not invented published exercises.
 Remaining prompts are explicitly `pending`, never silently counted as covered.
 
-The two conditionals additions extend this inventory without reinitializing it: 60 new reviewed prompts bring the current
-corpus to 461 exercises in 34 files and vocabulary coverage to **64/461**. All 397 original pending records remain pending,
+The two conditionals additions extended this inventory without reinitializing it to 461 exercises in 34 files and
+**64/461** vocabulary coverage. The のに follow-up adds 26 author-reviewed prompts, bringing the current corpus to
+487 exercises in 35 files and vocabulary coverage to **90/487**. All 397 original pending records remain pending,
 the baseline revision stays unchanged, and the inventory remains at `stage: "pilot"`. The first 30 subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the
 [initial conditionals record](grammar-conditionals-sources.json) and
 [second-batch record and coverage](grammar-conditionals-contexts-sources.json).
+The [のに record](grammar-noni-sources.json) keeps author, independent and reconciliation verdicts tied to their snapshots.
 
 `python tools/grammar_vocabulary.py check` is the maintained repository's publication gate, separate from the app's optional import contract.
 Records bind file/ID, exact prompt, full exercise context (including answers), and annotation payload. Reviewed spans plus explicitly
@@ -831,9 +833,46 @@ Full register paradigms and the article's excluded conditional set expressions a
 
 All 30 additional prompts have reviewed vocabulary support: 204 lexical spans, 145 linked occurrences across 88 canonical
 word identities, and 59 local-only glosses. No word card is invented to supply a missing link. All 431 preceding exercises
-and inventory records are preserved, leaving 64/461 reviewed prompts overall, including 60/60 conditionals prompts.
+and inventory records were preserved, bringing vocabulary coverage at that point to 64/461, including 60/60 conditionals prompts.
 The source record separates the original author pass, independent review and bounded correction/reconciliation;
 none is native-speaker certification. This batch adds no JLPT labels or runtime/schema changes.
+
+### のに: concessions, resource uses and overlapping contrasts
+
+`noni-contrasts.json` adds 26 exercises linked to the
+[focused article](../articles/noni-and-concessive-contrasts.md); the
+[source and coverage record](grammar-noni-sources.json) pins its review snapshots.
+Four introduction groups contain eight relationship/attachment tasks, six meaning-identification tasks,
+six overlapping contrast tasks and six はず／つもり compositions. Their nine facets have multiple example keys;
+three recommendations are soft links, not prerequisites.
+
+There are 20 connector-completion questions and six explicit meaning-label questions, with 56 accepted renderings overall.
+The meaning questions name Japanese labels and their readings before answering in both modes. They ask about the role of
+the quoted のに, not merely whether the sentence mentions time or a tool. They use the existing single-blank format and
+are not counted as connector-production tasks. In particular, the same spelling can identify different constructions;
+it does not make their meanings interchangeable.
+
+The six overlap questions accept のに with わりに, and in the three critical contexts also くせに, with fitting noun/
+な-adjective attachment and kanji spellings. One correct model button represents that contextual answer class; other
+accepted forms are never wrong buttons. Feedback distinguishes counterexpectation, comparison against a standard and
+marked reproach. These are not six independent tests of selecting exactly one of those overlapping connectors.
+The opening and composition questions explicitly name their uncontracted standard endings rather than silently rejecting
+other registers or paraphrases.
+
+All 26 prompts have reviewed vocabulary support: 182 lexical spans, 93 linked occurrences across 71 canonical identities,
+and 89 local-only glosses. All 461 preceding exercises and vocabulary records are preserved; the inventory remains `pilot`
+with 90/487 reviewed prompts and the original 397 pending. This batch adds no JLPT classifications.
+
+The unpublished `noni-rain-preparation` was retired after independent review could not settle its explanation of
+outcome-open causal past はずだったので. The new `noni-train-arrival-preparation` instead practices current
+はずなので: the timetable-based arrival expectation motivates having a ticket ready. It has a distinct exercise ID
+and example key in the same group/facet. The other 25 exercises and all 486 other inventory records are unchanged.
+This removes the unsettled claim from practice without declaring the retired sentence ungrammatical.
+
+The article gives a short ても / sentence-final のに bridge, not independently assessed coverage of those uses.
+Full register paradigms, unrestricted connector choice, speech-act restrictions and other concessive neighbors remain
+outside the initial set. Multiple correct displayed options remain separate work in
+[Android #47](https://github.com/stop-cran/kanji-cards-android/issues/47); no app/schema change is made here.
 
 ## Links and safety
 

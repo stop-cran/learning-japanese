@@ -1255,6 +1255,9 @@ The selected wording supports a controlled relationship and attachment contrast,
 degree, minimum or contrast expression. Topic-marked degree expressions, other connectors and fuller paraphrases are not
 made globally wrong by those visible restrictions.
 
+For a focused follow-up on concessive のに, its overlap with わりに／くせに, and nominalizing の plus に,
+see [のに: unexpected outcomes, comparisons, and the other のに](noni-and-concessive-contrasts.md).
+
 ### かぎり and だけ: possible extent versus desired extent
 
 **かぎり** can express the fullest extent available, not only an evidence limit or continuing condition.

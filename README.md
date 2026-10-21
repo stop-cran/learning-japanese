@@ -11,6 +11,7 @@ This repository starts as a collection of standalone articles prompted by specif
 | Grammar | [Koto, wake, and Japanese noun-based grammar](articles/koto-wake-and-formal-nouns.md) | How do こと and わけ differ, which common formal nouns and noun-based expressions are useful to know, and where do の/ん and ほど fit? |
 | Grammar | [Japanese verb extensions: direction and aspect](articles/verb-extensions-direction-and-aspect.md) | How do ～ていく, ～てくる, ～ておく, ～込む, and related constructions express direction, continuation, and completion? |
 | Grammar | [Japanese conditionals: たら, ば, なら, と, and 場合](articles/japanese-conditionals.md) | How do conditions, premises, event order, discoveries, and procedural cases differ, and when can several patterns fit? |
+| Grammar | [のに: unexpected outcomes, comparisons, and the other のに](articles/noni-and-concessive-contrasts.md) | How do concessive のに, わりに and くせに overlap, and how is nominalizing の plus に different? |
 | Vocabulary | [Strange, suspicious, and rare: ayashii and related words](articles/ayashii-and-related-words.md) | How do 怪しい, 妖しい, 疑わしい, いかがわしい, 変な, and 珍しい differ? |
 | Vocabulary | [Kaeru: change, replace, exchange, and return](articles/kaeru-change-replace-and-return.md) | How do 変える, 替える, 換える, 代える, 帰る, 返る, 還る, and 孵る differ, and why is 交える not read かえる? |
 | Vocabulary | [Japanese occupation and role endings](articles/occupation-and-role-endings.md) | What do 者, 家, 師, 士, 手, 員, and 屋 contribute, and how do they relate to prestige and new word formation? |
@@ -67,7 +68,7 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   12 on current intentions, no need and no available alternative,
   12 on earlier intentions, completion beliefs and current inferences,
   12 on norms, predictions and goal-relative practical necessity,
-  and 60 on たら／ば／なら／と／場合 conditionals in two batches (461 in total).
+  60 on たら／ば／なら／と／場合 conditionals in two batches, and 26 on のに and related contrasts (487 in total).
   Time practice includes うち, あいだ, とき, ころ, たび and shared とき／おり／さい occasion answers;
   shared alternatives are not independently contrasted targets.
   Purpose/cause practice adds ため, おかげ, せい, かわり and ついで, including compensating trade-offs.
@@ -138,7 +139,13 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   なら in 24, と in 14 and 場合 in 20; these overlapping counts measure supported forms, not independent discrimination.
   Nonhypothetical 私の場合, dedicated nominal なのなら practice and explicit necessary-versus-sufficient reasoning
   remain gaps in this dedicated comparison set. Conditional set expressions remain outside its basic scope.
-  All 60 conditionals prompts include reviewed vocabulary hints; total coverage is 64/461, with the original 397 still pending.
+  The のに follow-up adds eight relationship/attachment tasks, six explicit meaning-label questions, six overlapping
+  のに／わりに／くせに contrasts and six はず／つもり compositions, in four introduction groups.
+  It distinguishes concession from required time and tool use without judging by the spelling or tense alone.
+  The six overlap tasks accept fitting alternatives together; they are not independent discrimination of every connector.
+  All 60 conditionals and 26 new のに prompts include vocabulary hints; total author-reviewed coverage is **90/487**,
+  with the original 397 still pending. The のに source record keeps author and independent review snapshots separate;
+  the unsettled causal-past expectation card was retired in favor of a current timetable-based preparation example.
   See the [content format](docs/content-format.md#grammar-exercises), [foundations sources](docs/grammar-foundations-sources.json),
   [actions sources](docs/grammar-actions-sources.json), [intent sources](docs/grammar-intent-sources.json),
   [action-stage sources](docs/grammar-stages-sources.json), [state sources](docs/grammar-states-sources.json),
@@ -166,8 +173,9 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   [mixed past-stance sources](docs/grammar-mixed-past-stance-sources.json) and
   [mixed norms/expectations sources](docs/grammar-mixed-norms-expectations-sources.json),
   plus the [initial conditionals sources and review](docs/grammar-conditionals-sources.json) and
-  [second conditionals batch and combined coverage](docs/grammar-conditionals-contexts-sources.json).
-  Every named formal-noun/particle family in the article now appears in practice, but this is not complete construction
+  [second conditionals batch and combined coverage](docs/grammar-conditionals-contexts-sources.json), plus the
+  [のに source and coverage record](docs/grammar-noni-sources.json).
+  Every named formal-noun/particle family in the formal-nouns article now appears in practice, but this is not complete construction
   coverage. The five mixed sets complete the bounded formal-noun expansion planned in
   [Android #46](https://github.com/stop-cran/kanji-cards-android/issues/46); the app's remaining engineering, documentation
   and local-evidence acceptance is separate. Stated pools do not claim every construction or register, or unrestricted cloze.

@@ -35,6 +35,94 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## のに article and initial exercises (2026-10-21)
+
+**Snapshot:** `0045656b1e7a6dc55c73ae03f909c840e0eaed84` plus the local additions:
+`articles/noni-and-concessive-contrasts.md`, SHA-256
+`d3b44a090d9cd7ea622ef405d977aede3e2d0d11a51d29a50cc490f7f886426b`;
+`grammar/noni-contrasts.json`, SHA-256
+`30ae8194d44bc3eceef59d18453c6b1865248559bf3187261dadc2e71ea26fcd`.
+The vocabulary inventory is pinned at
+`7524052e91bcdf1378a42d35fa42ec7fe4cbdeb4156749ee766b72d00779e8a2`.
+
+**Scope:** direct author review by `gpt-6-astra` of the complete article, all 26 exercises, 56 accepted renderings,
+58 displayed options/rationales, four introduction groups, 182 lexical spans and 218 exclusions. The pass inspected
+metadata and relevant meaning passages for all 73 linked canonical word identities.
+The [source record](docs/grammar-noni-sources.json) identifies actual inspected source sections and qualifications.
+**Verdicts:** article and exercises each correctness **CLEAN**, scoped coverage **CLEAN**, comprehensibility **CLEAN**.
+
+| Authoring finding | Disposition |
+| --- | --- |
+| A whole-sentence meaning label could fit both a concession and a stated duration | Resolved: ask about the role of the single quoted のに, not every fact the sentence states. |
+| Meaning-label typing requires readings for unfamiliar labels | Resolved: show all three Japanese labels, kana readings and English meanings before answering. |
+| Two proposed canonical word targets did not exist | Resolved: retain local glosses for すぐ and 何も rather than fabricate links. |
+| An initial lexical span included the topic particle in 今回は | Resolved: separate 今回 from function-particle は. |
+
+**Coverage:** eight standard-ending relationship/attachment tasks, six meaning-label questions, six shared
+のに／わりに／くせに contrasts and six compositions around supplied はず／つもり. Thus 20 are connector-completion
+tasks and six are interpretation tasks, not 26 independent production tests. Six shared-answer questions do not
+independently discriminate every accepted connector. All new prompts have vocabulary support; the total is 90/487,
+with the original 397 pending and the inventory still `pilot`.
+
+**Integration:** zero content errors, 148 grammar regression tests, and one actual Android importer/cache-roundtrip
+test executed with zero skipped/failures/errors. Manifest `95f98270e9418a5a` has 5,106 payloads and rebuilds deterministically.
+All 34 preceding grammar files and all 461 preceding complete vocabulary records are preserved; the complete-stage gate
+still rejects precisely the same 397 pending records. The two existing articles have navigation-only crosslinks:
+removing the exact added bytes reproduces their baseline files, including their original line endings.
+Earlier review hashes/verdicts remain historical rather than being reassigned to the newly linked article.
+
+**Optional:** independent practice for ても and sentence-final のに, fuller register/context coverage, and the deferred
+multi-correct option interaction in [Android #47](https://github.com/stop-cran/kanji-cards-android/issues/47).
+Concrete representation and ambiguity notes were [added to that issue](https://github.com/stop-cran/kanji-cards-android/issues/47#issuecomment-6311563327);
+this pass makes no app/schema change.
+**Limits:** direct author review, not independent review, native-speaker certification, exhaustive paraphrase coverage,
+new JLPT labeling, physical-phone verification or measured learning efficacy.
+
+## Independent のに review and replacement reconciliation (2026-10-21)
+
+**Snapshots:** the initial independent review covered exercise SHA-256
+`30ae8194d44bc3eceef59d18453c6b1865248559bf3187261dadc2e71ea26fcd`.
+The replacement snapshot is
+`884317df71b85d136fefbaad8f160e25e75c1e9ddbd6b147dc8e9508a7003c1b`,
+with vocabulary inventory
+`27fe299a5b9a5e6ac2736b2bf9e4922a94ba382577c40f33769653e6b53e4a8d`.
+The article remains byte-identical to the snapshot above. The
+[source record](docs/grammar-noni-sources.json) preserves the distinct review stages.
+
+**Initial independent review:** one fresh-context reviewer inspected the full article, all 26 exercises,
+56 accepted renderings, 58 options/rationales, 182 lexical spans, 218 exclusions, 73 canonical identities and four groups.
+The article was **CLEAN** on all three facets. Exercise correctness was **UNVERIFIED** solely for NONI-U01;
+scoped coverage and comprehensibility were **CLEAN**, with no confirmed linguistic defects.
+The actual reviewer model ID was not exposed.
+
+| Item | Disposition |
+| --- | --- |
+| NONI-U01: the claimed outcome-open interpretation of causal past はずだったので in `noni-rain-preparation` could not be independently settled | Resolved in active content by retiring that unpublished card and replacing it with `noni-train-arrival-preparation`. The old interpretation remains unverified, not declared correct or incorrect. |
+
+The replacement uses a current timetable-based expectation:
+**時刻表では、電車はあと五分で来るはずなので、切符を用意して待っています。**
+It retains the causal-preparation role but has a new exercise ID and example key. The visible task requests
+なのに or なので; the expected arrival explains the preparation rather than contradicting it.
+
+**Bounded reconciliation:** the original synchronous reviewer could not receive follow-up messages, so a fresh replacement
+reviewer inspected the entire new card, both completed alternatives, all eight lexical spans/eight exclusions,
+five canonical cards, dependent metadata, exact diffs and preservation. Its actual model ID was not exposed.
+**Verdicts:** correctness **CLEAN**, scoped coverage **CLEAN**, comprehensibility **CLEAN**; no residual findings.
+The article and 25 unchanged exercises retain their original independent coverage. This is a reconciled verdict for the
+current batch, not a second full linguistic review or retrospective validation of the retired interpretation.
+
+**Preservation and integration:** all 25 other のに exercises, all 486 other complete inventory records and all 34 preceding
+grammar files remain unchanged. Counts remain 26 exercises, 56 accepted renderings and four groups.
+Current vocabulary support is 182 lexical spans, 93 linked occurrences across 71 canonical identities, 89 local-only spans
+and 217 exclusions; total coverage remains 90/487, `pilot`, with the same 397 pending records.
+Content validation reports zero errors; 148 focused tests pass. One real Android import/cache-roundtrip test ran with
+zero skipped/failures/errors. Manifest `6c6aea54806f0a43` rebuilds deterministically; only the のに grammar payload changed
+relative to the initial のに manifest.
+
+**Optional:** none from the reconciliation.
+**Limits:** bounded linguistic review, not native-speaker certification, exhaustive paraphrase coverage or a physical-phone
+check. The runtime integration evidence is separate from the reviewer's linguistic verdict.
+
 ## Conditionals article (2026-10-20)
 
 **Snapshot:** `ab95097a6aaed3c14a5136f0254202b44c1563f7` plus the new
