@@ -364,8 +364,9 @@ The author authenticated the Git snapshots, actual diffs and absence of unrelate
 
 Cards: 固 圧 坂 均 型 埋 城 域 塔 塗 塩 境 央 奥 姓.
 
-Status: **drafted; independent review pending**. Both models will receive the same frozen checkpoint, all
-15 new kanji and the three new supporting word articles for correctness, scoped coverage and comprehensibility.
+Status: **initial reviews complete; changed-passage confirmation pending**. Both models received the same
+frozen checkpoint, all 15 new kanji and the three new supporting word articles for correctness, scoped coverage
+and comprehensibility.
 Evidence: [batch-05.json](n2-batch-sources/batch-05.json), with 47 exact Japanese reading rows and 52 inspected
 word pairs, including the full-entry spelling evidence for 固い and the 名字/苗字 pair.
 
@@ -383,3 +384,40 @@ All 15 new kanji have three curated wrong answers. The source-only rows are 圧 
 spelling recommendations. 圧す へす and the document sense of 圧状 おうじょう retain their archaic labels.
 埋's reading rows preserve distinct whole-word readings and sense restrictions; 姓's 百姓 example carries
 the dictionary's sensitive-usage qualification. Canonical radicals include 大 for 央 and 奥 and 土 for 塗.
+
+### Independent initial reviews
+
+Both reviewed clean checkpoint `d9f323abaec692983e6ca2d31f419edb644974f5` with the same scope, rubric and source
+access. Actual models: **gpt-6.1-sol** and **claude-opus-5.5**. The isolated read-only processes ran sequentially,
+exited before the next started and made no changes. Neither received the other report or the author's adjudication.
+Preserved initial reports: [GPT](n2-reviews/batch-05-gpt-initial.md) and
+[Claude](n2-reviews/batch-05-claude-initial.md).
+
+GPT found one minor coverage issue on 城; Claude found no actionable defect and supplied eight optional points.
+These are judgments about the initial snapshot, not the following corrections.
+
+### Initial-finding reconciliation
+
+| Report | Observation | Disposition and evidence |
+| --- | --- | --- |
+| GPT F01 | 傾城's courtesan example lacks historical-register context | Resolved in the teaching text, pending reviewer confirmation. The author fetched the exact Kotobank page and inspected the Nipponica heading 傾城（花魁、娼妓） けいせい, not the page's separate けいせん heading or dance entry. It explicitly says the term largely fell out of use after the Meiji period. The row and note now qualify the courtesan term; セイ and the valid example are retained. The external source and exact short evidence are recorded in batch-05.json. |
+| Claude B05-O-04 | The 姓 card cites the 名字/苗字 entry without mentioning either word | Optional source/text alignment adopted: the note briefly compares both family-name words with 姓名. The two exact spelling/reading records were already inspected and retained before review, chiefly for the companion word article. No new frequency or register claim is inferred. |
+| Claude B05-O-08 | The 記入 comparison gives only an abstract attachment pattern | Optional clarity adopted: a concrete blank-field example with kana and translation now contrasts the particles in 空欄に名前を記入する and 空欄を埋める. The general particle distinction is preserved, not replaced with a universal substitution rule. |
+| Claude B05-O-01, O-02 | Add castle-name じょう and 心境 examples | Optional expansion not adopted. Existing companion articles already explain the uses; the current cards have verified examples for all their indicated readings. |
+| Claude B05-O-03 | Add 塊 as another かたまり spelling | Optional expansion not adopted. The existing 固まり example is valid; the report does not establish that its omission is a defect. Priority flags do not independently establish relative frequency. |
+| Claude B05-O-05, O-06 | Add name-order and 姓-versus-名字 register guidance | Optional expansion not adopted. The position warning already distinguishes the family-name category from ordering. The proposed register comparison lacks inspected evidence, as the report acknowledges. |
+| Claude B05-O-07 | Add プレッシャー as a near-synonym | Optional expansion not adopted. The current physical/social pressure distinction is complete within scope; no existing near-synonymous article was established as a missing direct exclusion. |
+
+### Dual-model usefulness and limits
+
+After comparing all findings, optional points, limits and per-card observations, GPT alone established the
+historical-register omission with an external encyclopedia entry. Claude supplied two uniquely useful optional
+clarifications: direct source/text alignment on 姓 and a concrete particle contrast in 埋める. These are not
+three equivalent defects, nor evidence of a general model ranking. The comparison shows complementary observations
+on this matched sample; it does not prove that model bias has been eliminated.
+
+Both reviewed all 45 distractor assignments and the 16 related link passages. The author mechanically verified
+the legacy word changes as links only and 中's change as a single distractor-line update, and authenticated the
+clean snapshot. Reviewers could not run Git. Claude checked stroke counts and the pinned revision; neither
+reviewer exhaustively inspected geometry. Claude fetched no public dictionary pages, while GPT's consequential
+register finding used an independently inspected public entry.

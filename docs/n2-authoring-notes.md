@@ -94,6 +94,9 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   not the separately documented chemical noun えん.
 - Preserve sensitive-usage labels even when the example is needed only for a character reading. The ショウ row
   of 姓 identifies 百姓's farmer sense as sensitive and its separate derogatory sense, not as neutral farm vocabulary.
+- Missing JMdict register flags do not prove current neutral use. In batch 05 review, an exact Nipponica entry
+  supplied historical context for 傾城's courtesan sense despite its unflagged JMdict record. Inspect the actual
+  headword when an aggregator also contains a different pronunciation or a separately named work.
 
 ## Review and checkpoint protocol
 
