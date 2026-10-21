@@ -445,3 +445,35 @@ within this bounded scope. Preserved final reports:
 Neither process changed files or remained running. The other 15 new pages retain initial dual-model coverage;
 the three revised pages retain first-follow-up coverage outside the final changes. The author authenticated
 the clean snapshots, actual diffs and unchanged other teaching content; file-only reviewers could not run Git.
+
+## Batch 06
+
+Cards: 委 季 孫 宇 宝 寺 封 専 将 尊 導 届 層 岩 岸.
+
+Status: **drafted; independent reviews pending**. The planned common review scope is all 15 new kanji,
+all three facets, all 45 curated distractor assignments, and the 19 existing word-article link passages.
+There are no new supporting word articles: every new kanji already has a relevant existing article.
+Evidence: [batch-06.json](n2-batch-sources/batch-06.json), with 37 exact Japanese reading rows and
+41 inspected dictionary spelling/reading pairs. Stroke files use the same pinned converter and 16-point format.
+
+### Authored scope and checks
+
+- All KANJIDIC2 readings are retained. 将's ソウ, まさ, ひきい.る and もって, and 届's カイ remain
+  source-only lookup readings: no suitable word example was established in the inspected JMdict snapshot.
+  The card does not infer that no such example can exist elsewhere.
+- 将に まさに and 専ら もっぱら retain JMdict's usual-kana qualification. The separate 将 はた
+  adverb is not conflated with the commander noun 将 しょう. The author inspected both precise Daijisen
+  headings on the live Kotobank page; this evidence does not establish frequency or a register classification.
+- 尊's two adjective readings and two verb readings have independent exact pairs. The card does not invent
+  fixed meaning compartments for the pronunciation variants.
+- 届's suffix row gives the verified compound 婚姻届 こんいんとどけ and explains the notification suffix.
+  The 届く/届ける particle contrast has kana and English translations.
+- 寺 uses 古寺 こじ for ジ rather than linking the separate counter entry to the てら article.
+  一層 retains the distinction between the noun one layer and adverb even more.
+- Every new kanji has three semantically wrong curated answers. The currently two-distractor legacy cards
+  were considered for newly activated fallback overlap; no new direct synonymous choice was established.
+- The related legacy word edits add component links only. Their spelling, reading, metadata and teaching prose
+  are preserved; no legacy kanji teaching passage is changed in this batch.
+
+The frozen draft commit will be recorded with the blind initial reports. Model usefulness is not assessed
+before both independent reports are available.

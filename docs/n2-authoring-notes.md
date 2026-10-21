@@ -120,7 +120,8 @@ Dual-model usefulness is an observation about the reviewed sample, not proof tha
 The first five batches' initial and changed-passage GPT/Claude reports are preserved in the review ledger. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
-remaining defect in that scope; this coverage does not yet extend to the remaining 290 unauthored additions.
+remaining defect in that scope; this coverage does not yet extend to the remaining 290 additions:
+the 15 drafted batch 06 cards and 275 not yet authored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
