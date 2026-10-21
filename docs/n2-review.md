@@ -582,3 +582,13 @@ Neither reviewed stroke geometry exhaustively or could independently authenticat
 tools. The author authenticated the clean frozen commit around the reviews. Public lookups are supplemental;
 the correction's spelling and sense conclusions rest on the exact pinned dictionary, not search ordering.
 Changed-passage confirmations will be recorded against the committed correction and actual teaching diff.
+
+Both original reviewers were resumed sequentially at correction `cce24eef4c57704c3a40fbc490fa80dc694bec50`,
+with their own initial report and the actual three-page teaching diff. Preserved confirmations:
+[GPT](n2-reviews/batch-07-gpt-followup.md) and [Claude](n2-reviews/batch-07-claude-followup.md).
+Both confirmed the 布 corrections and 干す title. Claude explicitly withdrew the comparative-frequency
+wording and the suggestion to remove sense 2 from 干す's citation. GPT confirmed every changed facet CLEAN.
+Claude established one additional direct quiz gap, B07-R1: ぐるぐる's winding label and quiz-eligible
+string-winding picture also admit 巻く. Its exclusion through くるくる is not transitive. The final
+correction adds the direct 巻く/ぐるぐる pair. Claude's new O6/O7 wording and table-placement proposals
+remain optional and are not adopted; the existing notes already convey the alternate reading.
