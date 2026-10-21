@@ -1,0 +1,51 @@
+# N2 expansion notes
+
+## Scope and evidence
+
+The [source snapshot](n2-source-snapshot.json) fixes the kanjiapi.dev N2 community set retrieved on 2026-10-21:
+367 characters, including the existing cards for 珍 and 短. The expansion therefore needs 365 additions, not an assumed
+generic N2 count. Modern JLPT does not publish an exhaustive kanji syllabus.
+
+The baseline is `7a92dde23107173af8aabef51971dbc66b754a93`. Existing cards and word identities are preserved.
+Use existing word articles where useful; add supporting articles only where needed. A kanji's level does not establish
+a word's vocabulary level. Dictionary readings and senses must respect spelling, reading and sense restrictions.
+Per-batch records under [n2-batch-sources](n2-batch-sources) retain the inspected metadata and dictionary entries.
+
+The canonical [format](content-format.md), [authoring checks](../.github/instructions/content-structure.instructions.md),
+[review guidance](../.github/copilot-instructions.md) and [JLPT policy](jlpt-levels.md) apply; this note does not replace them.
+
+## Observed authoring pitfalls
+
+- Candidate dictionary examples need inspection: an existing filename can teach a different reading or lexical identity.
+  For example, the companion 仲間 なかま is not the historical 仲間 ちゅうげん.
+- Adding a kanji card activates link checks in existing word articles that declare that kanji. Link the existing substantive
+  component explanation; a new card's forward link to the word does not satisfy that separate check.
+- Dictionary inclusion is not evidence of everyday frequency. Preserve unusual source readings without manufacturing
+  ordinary examples. The pilot retains the unmatched readings of 並 and 乱 as character-dictionary-only lookup information.
+- The current validator enforces explained kunyomi only for N5/N4. N2 needs an explicit metadata-to-reading-table audit,
+  even after structural validation passes.
+- Three curated wrong answers avoid default four-choice fallback for new cards. Review the meanings, not just title strings.
+  The pilot also gives existing 下 and 長 a third wrong answer because new low/long-time answers could otherwise appear
+  as defensible random fallback choices.
+- Use labelled modern-shape mnemonics when historical or phonetic analysis has not been established. Keep canonical radical
+  metadata and explain visible variants rather than replacing the indexing radical.
+
+## Review and checkpoint protocol
+
+Work in the source snapshot's batches, sequentially. Checkpoint content and regenerated manifests before review, then
+commit confirmed fixes and their reconciliation. Git author and committer are `stop-cran`.
+
+Each batch receives independent GPT and Claude review of the same frozen snapshot, files, facets and evidence.
+Run one short-lived reviewer process at a time and confirm exit before starting another; there is no explicit agent-unload
+tool in this environment. Initial reports stay blind to one another and to the author's preferred adjudication.
+Record actual models and review limits in the [review ledger](n2-review.md).
+
+Reconcile against evidence, not votes. Retain the initial reports and mark findings resolved, partially resolved, unresolved,
+withdrawn or optional. Review changed passages for regressions. Compare model contributions only after deduplicating
+equivalent observations across findings, optional suggestions, limits and per-card notes.
+
+## Current limits
+
+Source records and structural checks are not native-speaker certification or exhaustive historical analysis.
+Dual-model usefulness is an observation about the reviewed sample, not proof that model bias has been eliminated.
+No initial dual-model reports have been completed yet; conclusions will be recorded only after real reviews.
