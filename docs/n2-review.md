@@ -364,7 +364,7 @@ The author authenticated the Git snapshots, actual diffs and absence of unrelate
 
 Cards: 固 圧 坂 均 型 埋 城 域 塔 塗 塩 境 央 奥 姓.
 
-Status: **initial reviews complete; changed-passage confirmation pending**. Both models received the same
+Status: **reviewed and reconciled**. Both models received the same
 frozen checkpoint, all 15 new kanji and the three new supporting word articles for correctness, scoped coverage
 and comprehensibility.
 Evidence: [batch-05.json](n2-batch-sources/batch-05.json), with 47 exact Japanese reading rows and 52 inspected
@@ -435,4 +435,13 @@ Both noted one optional translation precision: 明治以後 means from Meiji onw
 period ended. The teaching note and source claim now use the exact chronology. Claude also suggested making
 名字/苗字's shared lexical identity explicit, naming the 空欄を埋める example instead of an ambiguous
 "form-filling example," and using 記入する rather than describing the noun 記入 as a verb.
-These narrow improvements are adopted; final confirmation of these Notes passages is pending.
+These narrow improvements are adopted and confirmed.
+
+Both original contexts then resumed sequentially at clean snapshot
+`91fc5e959ff73ca7ba6e75d0b7cc0874bd425fef`, receiving the actual 49-line, three-hunk precision diff.
+Both reviewed the three revised pages on all three facets and returned CLEAN with no remaining optional point
+within this bounded scope. Preserved final reports:
+[GPT](n2-reviews/batch-05-gpt-final.md) and [Claude](n2-reviews/batch-05-claude-final.md).
+Neither process changed files or remained running. The other 15 new pages retain initial dual-model coverage;
+the three revised pages retain first-follow-up coverage outside the final changes. The author authenticated
+the clean snapshots, actual diffs and unchanged other teaching content; file-only reviewers could not run Git.

@@ -96,7 +96,8 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   of 姓 identifies 百姓's farmer sense as sensitive and its separate derogatory sense, not as neutral farm vocabulary.
 - Missing JMdict register flags do not prove current neutral use. In batch 05 review, an exact Nipponica entry
   supplied historical context for 傾城's courtesan sense despite its unflagged JMdict record. Inspect the actual
-  headword when an aggregator also contains a different pronunciation or a separately named work.
+  headword when an aggregator also contains a different pronunciation or a separately named work. Translate
+  inclusive chronology precisely: 明治以後 is from Meiji onward, not necessarily after the period ended.
 
 ## Review and checkpoint protocol
 
@@ -116,11 +117,10 @@ equivalent observations across findings, optional suggestions, limits and per-ca
 
 Source records and structural checks are not native-speaker certification or exhaustive historical analysis.
 Dual-model usefulness is an observation about the reviewed sample, not proof that model bias has been eliminated.
-The first four batches' initial and changed-passage GPT/Claude reports are preserved in the review ledger. They found
+The first five batches' initial and changed-passage GPT/Claude reports are preserved in the review ledger. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
-remaining defect in that scope; this coverage does not yet extend to the remaining 305 additions.
-Those pending additions include the 15 drafted batch 05 cards and 290 not yet authored.
+remaining defect in that scope; this coverage does not yet extend to the remaining 290 unauthored additions.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
