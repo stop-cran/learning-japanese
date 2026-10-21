@@ -218,7 +218,7 @@ in contributor source records, and leave unestablished cases unclassified.
 
 The [reviewed introduction pilot](grammar-introductions-pilot.json) supplies the initial 19 labels: six before/after and nine
 action-stage exercises at N4, and four expectation/obligation exercises at N3. The other four koto/wake exercises in the mixed pilot
-file remain unclassified, as do the other 500 exercises, including all 60 conditionals, 26 のに and 36 listing questions. The same three pilot groups
+file remain unclassified, as do the other 536 exercises, including all 60 conditionals, 26 のに, 36 listing and 36 topic-particle questions. The same three pilot groups
 are annotated as optional `introductionGroups` in their declaring files, with one recommendation from temporal sequence
 to action stages and no genuine prerequisites.
 
@@ -265,8 +265,10 @@ Remaining prompts are explicitly `pending`, never silently counted as covered.
 
 The two conditionals additions extended this inventory without reinitializing it to 461 exercises in 34 files and
 **64/461** vocabulary coverage. The のに follow-up added 26 author-reviewed prompts, reaching 487 exercises in
-35 files and **90/487** coverage. The listing follow-up adds another 36, bringing the current corpus to
-523 exercises in 36 files and vocabulary coverage to **126/523**. All 397 original pending records remain pending,
+35 files and **90/487** coverage. The listing follow-up added another 36, reaching
+523 exercises in 36 files and vocabulary coverage of **126/523**. The topic-particle follow-up adds 36,
+bringing the current corpus to **559 exercises in 37 files** and vocabulary coverage to **162/559**.
+All 397 original pending records remain pending,
 the baseline revision stays unchanged, and the inventory remains at `stage: "pilot"`. The first 30 subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the
@@ -275,6 +277,8 @@ in six answer lists; bounded reconciliation resolved it without further actionab
 The [のに record](grammar-noni-sources.json) keeps author, independent and reconciliation verdicts tied to their snapshots.
 The [listing record](grammar-listing-sources.json) keeps article and initial exercise reviews tied to their
 own snapshots, with subsequent editorial refinements tracked separately.
+The [topic-particle record](grammar-topic-sources.json) separates the initial author review, blinded
+`gpt-6-astra` / `claude-opus-5.5` reviews and original-reviewer reconciliation of the article and exercises.
 
 `python tools/grammar_vocabulary.py check` is the maintained repository's publication gate, separate from the app's optional import contract.
 Records bind file/ID, exact prompt, full exercise context (including answers), and annotation payload. Reviewed spans plus explicitly
@@ -918,13 +922,48 @@ independently practiced coverage.
 
 All 36 prompts have author-reviewed vocabulary: 157 lexical spans, 152 linked occurrences across 90 canonical
 identities, and five local-only glosses. All 487 prior exercises and vocabulary records are unchanged.
-The inventory remains `pilot`, with 126/523 reviewed prompts and the same 397 pending.
+At that batch's publication, the inventory remained `pilot`, with 126/523 reviewed prompts and the same 397 pending.
 This batch adds no JLPT classifications or app/schema changes. The initial exercise snapshot received
 independent linguistic review; its blinding qualification is retained in the source record.
 Subsequent optional refinements clarify one malformed distractor and shorten the twelve meaning-task
 instructions by about 20%, preserving all label-definition wording, readings and decisive scenario text.
 The Japanese prompts, answer sets, option identities, vocabulary and group memberships are unchanged.
 The source record distinguishes the initial review from reconciliation of these refinements.
+
+### は, が and も: topic, contrast and inclusion
+
+`topic-and-inclusion.json` adds 36 exercises linked to the self-contained
+[topic-particle article](../articles/wa-ga-mo-topic-and-inclusion.md).
+The [source and coverage record](grammar-topic-sources.json) identifies inspected source passages,
+qualified teaching shortcuts, the four series issues and the separate author, independent and reconciliation scopes.
+
+Six groups of six cover explicitly requested topic/が patterns, contextual interpretation, stated comparisons,
+positive/negative inclusion, case-particle combinations and shared framings/omission.
+There are 13 facets, three soft recommendations and no hard prerequisites: the separate foundational article
+is planned but is not required to understand this one. The shop/bread, room/window and preference pairs share
+example keys within their group rather than counting a change of blank position as an unrelated scenario.
+
+The 21 completion tasks and 15 meaning-label tasks accept 54 renderings overall. All meaning labels have
+question-side readings and definitions; they are not counted as particle production.
+The comparison label 相違（そうい） means different stated outcomes, not every contrastive use of は.
+Three open-framing questions accept both は and が, with one substantive additional correct option each.
+Their visible pool permits those two framings without an added inclusion claim; it does not assert unrestricted
+interchangeability in every discourse. Case-combination drills explicitly retain a supplied に, で or と.
+Wrong-option feedback distinguishes violating that task from being ungrammatical in every possible context.
+
+Coverage includes a 好き frame without imposing one universal subject/object analysis, identifying a familiar
+person as the answer to a who-question, negative も without reversing polarity, unstated alternatives after は,
+and omission whose understood traveller is not the speaker. Relative clauses, が/の alternation, scalar も,
+question-word compounds and a complete formal-noun comparison remain outside this set.
+
+All 36 prompts have author-reviewed vocabulary: 110 lexical spans, all linked to 48 inspected canonical identities.
+All 523 previous exercises and complete vocabulary inventory records are preserved. The inventory remains `pilot`,
+with 162/559 reviewed prompts and the same 397 pending. No JLPT labels, app behavior or schema are changed.
+The initial article and all 36 exercises received blinded independent reviews by `gpt-6-astra` and `claude-opus-5.5`.
+Both original reviewers reconciled the full revised article and 11 changed exercises against the actual diff,
+with no remaining actionable findings; unchanged exercise/vocabulary coverage carries forward on matching content.
+The corrections clarify negation, predicate-specific が roles and identifying contexts, and replace the narrow
+対比 response label with 相違 without changing particle answers. See [review lessons](../REVIEW.md#reusable-grammar-review-lessons).
 
 ## Links and safety
 

@@ -20,6 +20,9 @@ Follow the [grammar exercise contract](content-format.md#grammar-exercises) and
    [answer-set, quiz-option and feedback rules](content-format.md#grammar-exercises), use visible form restrictions only
    for a clear learning goal, and retain editorial review. One correct quiz button does not mean only one acceptable typed answer.
 
+For observed feedback, matched-context and response-label pitfalls, see the
+[reusable grammar-review lessons](../REVIEW.md#reusable-grammar-review-lessons).
+
 ## Starting points by purpose
 
 Links in the first column are previously inspected seed pages, not an exhaustive bibliography or a blanket endorsement.

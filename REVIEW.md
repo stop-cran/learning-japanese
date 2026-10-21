@@ -35,6 +35,81 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## は／が／も independent review and reconciliation (2026-10-21)
+
+**Snapshots:** `7a92dde23107173af8aabef51971dbc66b754a93` plus the local topic-particle additions.
+The [source and review record](docs/grammar-topic-sources.json) preserves the initial article/exercise hashes
+`7c96233a…` / `3e561579…` and their historical author and independent verdicts.
+The reconciled article is SHA-256 `b6d1a5e9fc7ddf353c3ce6539301d3237710288c7abbb2a70a4b262f70ee90a1`;
+the exercise file is `57ae76fcf563c20ab0c5c9217657c2cc9b1e5a5c21c5b2425d3dcb538a5fbf93`.
+Vocabulary inventory: `96dec70f6fde272a87022d3b300b0b4a02089ecf42ce3fed539d1ff48b05a4f0`.
+
+**Initial independent scope:** `gpt-6-astra` and `claude-opus-5.5` each reviewed the complete article,
+all 36 exercises, 54 accepted renderings, 114 base options, three additional correct options, six groups,
+110 lexical spans, 180 exclusions and relevant senses/readings in 48 canonical cards. Both received the same
+frozen packet without author verdicts or the other review. Actual model IDs were confirmed from parent runtime
+metadata, separately from the reviewers' own inability to see their runtime identifiers.
+
+**Reconciliation scope:** both original reviewers received the revised snapshot, their original findings,
+the other initial report, parent adjudication and exact diff. Each read the complete 351-line revised article,
+all 11 changed exercises, dependent metadata and adjacent content. The 25 unchanged exercises and canonical
+senses carry forward on matching content; this is informed reconciliation, not another blind full-corpus audit.
+Neither reviewer saw the other's reconciliation report.
+
+**Final verdicts from both reviewers:** article correctness **CLEAN**, scoped coverage **CLEAN**,
+comprehensibility **CLEAN**; exercises correctness **CLEAN**, scoped coverage **CLEAN**, comprehensibility **CLEAN**.
+No new actionable regression or consequential unresolved claim was established.
+
+| Underlying observation | Contribution | Reconciled disposition |
+| --- | --- | --- |
+| Factual non-drinking was described as refusal | Astra | **Resolved:** feedback states only that the speaker does not drink coffee. |
+| Generic が feedback hid a buyer/eater/worker role change | Both; Opus additionally identified Tuesday | **Resolved:** predicate-specific explanations and wrong-option rationales. Different original severity labels do not make the shared object cases separate discoveries. |
+| The opening 私は／私が学生です pair lacked a direct matched-context explanation | Opus | **Resolved:** ordinary self-introduction versus identifying who is the student; concrete brother/book feedback. Both は and が remain accepted. |
+| 対比 was used for a narrower response class than general grammatical contrast | Opus | **Resolved:** 相違（そうい） and matching definitions, buttons, answers and metadata; the article distinguishes stated outcomes from implied contrast. |
+| Pronunciation/readings and the window example could be more accessible | Astra / Opus | **Resolved:** を pronounced o, 今 and 何も readings, and a room-tour context. |
+
+**Adjudication retained:** Opus accepted the downgrade of its first finding from moderate to minor and explicitly
+withdrew the proposed broad rule about が before です/property adjectives: the unfetched Kuno recollection did
+not support imposing that restriction. The narrower contextual repair is sufficient. Opus still rates the old
+対比 terminology concern minor, while the parent and Astra consider it optional because the task defined the
+response class before answering. That historical severity disagreement is preserved, not forced into consensus;
+all agree that the revised label resolves it and that the original answer key was not invalid.
+
+**Preservation and integration:** all prompts, lexical annotations and particle answers remain unchanged.
+Only two unpublished meaning-label answers change from 対比／たいひ to 相違／そうい; counts remain unchanged.
+Only the 11 changed exercises' inventory context hashes differ; all 548 other full records are identical.
+The parent checked the full inventory; reviewers explicitly limit their independent inventory checks to the
+36 records supplied in the packet. All 523 preceding exercises and 48 linked word cards are unchanged.
+Content/vocabulary checks and 150 focused tests pass; the real Android importer ran with one test and no skips
+or failures. Manifest `fd29624693a27ec9` is deterministic. Coverage remains 162/559, `pilot`, with 397 pending.
+
+**Optional:** a source explicitly naming neutral-description が would strengthen the existing bounded dictionary
+and contextual evidence; neither reviewer considers it a remaining defect. Stronger object-topic wording is
+stylistic, not required.
+**Limits:** no native-speaker certification, exhaustive paraphrase inventory, new JLPT classification, app change,
+phone UI check or measured learning outcome. This pass does not commit, push or deliver an APK.
+
+## Reusable grammar-review lessons
+
+The [は／が／も review record](docs/grammar-topic-sources.json) grounds these lessons in specific findings:
+
+- **Check what the predicate entails, not just a plausible scenario.** A factual negative such as 飲みません does not
+  inherently express refusal or deliberate rejection. Feedback must not add intention that the question never supplied
+  (ASTRA-TOPIC-001).
+- **Read the literal completion of every distractor.** Shared "different framing" feedback can hide a changed grammatical
+  role: 魚が食べません makes the fish the eater, not the food. Explain the role change in that exact predicate pattern;
+  do not replace the template with an equally broad ban on all object/time が constructions (ASTRA-TOPIC-O01 / WGM-OPUS-F2).
+- **Close the opening question with a matched example.** An explanation of identification with a motion verb can be
+  correct yet leave a promised occupation-predicate comparison implicit. Show the actual opening pair in contrasting
+  contexts, without converting a contextual tendency into an absolute restriction (WGM-OPUS-F1).
+- **Separate response-label definitions from grammatical terminology.** A task can be correctly graded under its visible
+  operational definition while using a familiar technical term too narrowly. Here 相違, with its reading and definition,
+  names different stated outcomes without redefining every contrastive use of は. Calibrate the original concern as
+  terminology polish rather than an invalid answer key (WGM-OPUS-F3).
+
+These are checks for observed failure modes, not a requirement to invent a finding in every review. The batch record
+preserves original severities, adjudication and reconciliation separately; agreement is not a substitute for evidence.
+
 ## のに article and initial exercises (2026-10-21)
 
 **Snapshot:** `0045656b1e7a6dc55c73ae03f909c840e0eaed84` plus the local additions:
