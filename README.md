@@ -39,7 +39,7 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   The deck covers all 79 N5, 166 N4 and 367 N3 kanji in the selected [kanjiapi.dev](https://kanjiapi.dev) community sets.
   It also includes 分 as a documented N5 exception and five N1 article-subject additions:
   80 N5, 166 N4, 367 N3, 17 N2 and five N1. The ongoing [N2 expansion](docs/n2-review.md) adds a 15-card pilot
-  to the two existing N2 cards; independent review is pending. The `starter` tag identifies the original 118-card cohort, not the later expansions.
+  to the two existing N2 cards; the pilot has independent GPT/Claude review and reconciled corrections. The `starter` tag identifies the original 118-card cohort, not the later expansions.
 - `words/` – one article per written word form (3,210): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
   Articles explain meaning, spelling or formation, synonyms, antonyms and usage distinctions.
   The selected community vocabulary list's 684 N5 and 640 additional N4 rows are covered by 1,308 articles:

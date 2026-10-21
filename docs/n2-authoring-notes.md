@@ -57,5 +57,11 @@ equivalent observations across findings, optional suggestions, limits and per-ca
 
 Source records and structural checks are not native-speaker certification or exhaustive historical analysis.
 Dual-model usefulness is an observation about the reviewed sample, not proof that model bias has been eliminated.
-The pilot's initial GPT and Claude reports are preserved in the review ledger. They found complementary issues, but also
-made unsupported frequency inferences and missed findings the other model established. Changed-passage review is pending.
+The pilot's initial and changed-passage GPT/Claude reports are preserved in the review ledger. They found complementary
+issues, but the reports also contained unsupported frequency inferences and each missed something the other established.
+Both confirmed the corrected passages without an actionable remaining defect in that scope.
+
+Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
+parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
+Grant only that artifact directory with `--add-dir`. Reviewer session IDs can be recovered from the local session store
+for same-task follow-up; `--resume` and `--trust-folder` cannot be combined. Exit each resumed process before the next.
