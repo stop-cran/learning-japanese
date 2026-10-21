@@ -515,13 +515,13 @@ the source-only qualification rests on the author's inspected snapshot, not that
 
 Cards: 島 州 巨 巻 布 希 帯 帽 幅 干 幼 庁 床 底 府.
 
-Status: **drafted; independent reviews pending**. The planned common scope is all 15 new kanji,
+Status: **initial reviews reconciled; changed-passage confirmations pending**. The common scope is all 15 new kanji,
 the three new supporting articles 巻く, 干す and 庁, all three facets, all 45 curated distractor
 assignments, and 17 existing word-article component-link passages. The only legacy kanji edit is
 大's third wrong answer, 犬, to prevent 巨's size synonym from becoming a defensible default fallback.
 
 Evidence: [batch-07.json](n2-batch-sources/batch-07.json), with 45 exact Japanese reading rows
-and 53 inspected dictionary spelling/reading records. All 15 stroke files use the pinned converter
+and 54 inspected dictionary spelling/reading records after adding 布地 ぬのじ. All 15 stroke files use the pinned converter
 and 16-point format.
 
 ### Authored scope and checks
@@ -544,5 +544,41 @@ and 16-point format.
 - The author mechanically verified all 17 legacy word changes as links only, and 大's edit as one
   distractor-line change. No other legacy teaching passage is edited.
 
-The frozen draft commit will be recorded with the blind initial reports. Model usefulness is not assessed
-before both independent reports are available.
+### Independent review and reconciliation
+
+Both reviewed clean checkpoint `860f2cdc0f63e420ebc83e6e2a719cc66d1f58a6` against baseline
+`52077285b9ca0f43adea4e1c9cd56e096b72ca6b`, with identical scope, rubric and source access.
+Actual models: **gpt-6.1-sol** and **claude-opus-5.5**. The read-only processes ran sequentially,
+exited before the next started and made no changes. Neither initial reviewer received the other report
+or the author's adjudication. Preserved reports: [GPT](n2-reviews/batch-07-gpt-initial.md) and
+[Claude](n2-reviews/batch-07-claude-initial.md).
+
+GPT returned CLEAN for every page and facet, with no optional point. Claude raised three minor findings
+and five optional observations. The author inspected the full pinned JMdict entries for 布く and both
+布地 readings, including the omitted non-N2 spelling aliases and the cross-reference between entries.
+
+| Report | Observation | Disposition and evidence |
+| --- | --- | --- |
+| Claude B07-F1 | The automatic 布く gloss uses the futon sense instead of the spelling-specific senses | Resolved in the correction draft. The reading row now names promulgating, railway tracks and troop deployment; the note identifies senses 3, 5 and 6 and retains the search-only qualification. JMdict 1497020's explicit sense notes support the change. |
+| Claude B07-F2 | 布地 きれじ could be mistaken for the spelling's only reading | Resolved in the correction draft by adding 布地 ぬのじ (1591910) and the alternate spelling 切れ地 (2859268). The report's proposed "usual"/"less common" ranking is not adopted: entry order, absent priorities and a rare label on the separate scraps sense do not establish comparative frequency. Both exact readings remain valid. |
+| Claude B07-F3 | The displayed English "wind" label permits both 風 and 巻く | Resolved in the correction draft by a direct 巻く/風 exclusion. This is an English-label ambiguity, not a claim that the Japanese weather noun and winding verb are synonyms. |
+| Claude O1 | 干す's bare "air" label could collide with air nouns | Optional disambiguation adopted: "hang out to dry; air out" retains the intended verb meaning without the bare noun-like answer label. |
+| Claude O2 | 巻く and くるくる have partially overlapping coiling labels | Optional conservative quiz safeguard adopted as a direct exclusion; it does not equate the adverb with the verb or assert unrestricted substitution. |
+| Claude O3 | Cite only sense 1 for 干す | Optional not adopted. The article also explicitly mentions draining, supported by sense 2, so the existing senses 1-2 citation covers the actual text. |
+| Claude O4 | Use a named agency instead of standalone 庁 in the example | Optional naturalness polish not adopted. The source supports the noun use; the report does not establish the existing sentence as defective. |
+| Claude O5 | Government and agency are distinguishable | No action needed, as the report itself states. |
+
+### Dual-model usefulness and limits
+
+Comparison included findings, optional points, limits and per-page observations. Claude uniquely established
+the 布く sense mismatch, a useful alternate-reading clarification and the English wind-label collision;
+GPT had no equivalent observation. These are sample-specific complementary contributions, not proof that one
+model is universally better or that dual review eliminates bias. Claude's comparative-frequency inference was
+not adopted, illustrating why findings still require evidence-based adjudication.
+
+Both read all 18 new teaching pages, the original 53 selected dictionary records, all 45 distractor
+assignments and all 17 related passages. Both considered overlapping legacy answers, including 大's repair.
+Neither reviewed stroke geometry exhaustively or could independently authenticate Git provenance with file-only
+tools. The author authenticated the clean frozen commit around the reviews. Public lookups are supplemental;
+the correction's spelling and sense conclusions rest on the exact pinned dictionary, not search ordering.
+Changed-passage confirmations will be recorded against the committed correction and actual teaching diff.

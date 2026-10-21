@@ -103,6 +103,15 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   A useful bound example also need not be a standalone match: 布地 きれじ demonstrates 布's きれ.
 - Adding 巨 activates a direct size synonym in the old 大 card's automatic fallback. Give 大 a third
   curated wrong answer; do not demand unrelated repairs merely because two characters have a loose association.
+- Inspect sense-level spelling notes even when the dictionary's formal spelling restrictions are empty.
+  Batch 07's 布く is indexed with 敷く, but the explicit 布く notes concern promulgating, railway tracks
+  and troop deployment, not the first sense's futon example. Automatic first-sense glosses can mislead.
+- A bound-reading example must not imply it is the only reading of the whole spelling. Batch 07 adds
+  布地 ぬのじ alongside the きれじ example and retains 切れ地 as an alternative spelling. Dictionary
+  order, missing priorities and a rare label on another sense do not establish their relative frequency.
+- English answer labels can collide even when the Japanese words are not synonyms. Batch 07 excludes
+  巻く/風 because the bare English label "wind" can be read as a verb or a weather noun. Check the
+  displayed text in both quiz directions; a Japanese part-of-speech distinction is not always visible.
 
 ## Review and checkpoint protocol
 
