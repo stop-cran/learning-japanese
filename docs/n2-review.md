@@ -91,7 +91,7 @@ not a separate upstream re-extraction. Their remaining optional 乱りに alloca
 
 Cards: 個 倍 停 傾 像 億 兆 児 党 兵 冊 再 凍 刊 刷.
 
-Status: **authored; awaiting independent review**. Evidence:
+Status: **initial reviews reconciled; corrected passages awaiting confirmation**. Evidence:
 [batch-02.json](n2-batch-sources/batch-02.json). New supporting word articles:
 [兆候](../words/兆候.md), [児童](../words/児童.md), [兵士](../words/兵士.md),
 [冊子](../words/冊子.md) and [刊行](../words/刊行.md).
@@ -99,6 +99,51 @@ These five articles do not claim vocabulary JLPT levels without a selected vocab
 
 Related edits: component links in 13 existing word articles. The 15 new kanji cards have three curated wrong answers
 each; no direct synonymous label was established between this batch and a remaining legacy two-distractor card.
-The source record retains 47 exact Japanese reading rows and 64 inspected word pairs.
+The source record retains 47 exact Japanese reading rows and 65 inspected word pairs.
 Unmatched character-dictionary readings remain explicitly qualified: 児 ゲイ, 党 なかま/むら,
 冊 ふみ and 凍 こごる. They are not presented as ordinary word-use recommendations.
+
+### Independent initial reviews
+
+Both reviewers inspected the clean committed snapshot `3ec3eeab4373dc84ade3cd189534d1eae55f4033`,
+with identical scope and evidence access: all 15 new kanji and all five new supporting word articles,
+all three review facets, and the 13 existing component-link passages in their narrower related context.
+Actual models: **gpt-6.1-sol** and **claude-opus-5.5**. The isolated processes ran sequentially,
+exited before the next started, made no changes, and did not see one another's reports or the author's rationale.
+The author confirmed the snapshot and clean worktree; file-only reviewers could not independently run Git.
+
+Preserved initial reports: [GPT](n2-reviews/batch-02-gpt-initial.md) and
+[Claude](n2-reviews/batch-02-claude-initial.md). Their verdicts describe that initial snapshot.
+
+### Initial-finding reconciliation
+
+| Reports | Observation | Disposition and evidence |
+| --- | --- | --- |
+| GPT G01; Claude O-02, symptom part | 兆候 competes with 症状 and サイン | Resolved: add both direct exclusions and explain their overlapping senses. JMdict 1597620 includes symptom; サイン's separate sign/indication sense is taught in its existing article and confirmed in the inspected JMdict API result. This is not its mathematical sine entry. |
+| GPT G02; Claude F-03 | 児童 and 少年 overlap in juvenile | Resolved: add the direct exclusion and a contextual comparison. Both actual titles include juvenile; this does not erase the everyday boy sense of 少年 or impose a universal legal age. |
+| Claude F-03, tentative 生徒 part | The school-pupil sense also overlaps with 生徒 | Optional safeguard adopted: add a direct exclusion and distinguish institutional school terminology from 生徒's broader learner sense. The existing 生徒 article explicitly teaches that broader sense; shared education tags alone would not justify the pair. |
+| GPT G03; Claude F-04 | 冊子 and 図書 overlap in book | Resolved: add the direct exclusion and comparison. JMdict 1298530 includes book; the existing 図書 article allows one book as well as books. Exclusions through 本 are not transitive. |
+| GPT G04; Claude F-02 | 兵士 omits the ordinary rank-and-file distinction | Resolved as a localized coverage/qualification issue: state ordinarily rank-and-file under officers, without specifying an exact rank or prohibiting every broader use. The inspected Seisenban へいし entry, sense 1, supports this; the separate historical ひょうじ entry is not the evidence. The initial examples remain valid. |
+| Claude F-01 | 兵法 also has the reading へいほう | Optional clarification adopted with both exact pairs from JMdict 1506680. The original explicitly said ヒョウ "also occurs" and did not deny へいほう, so the stronger incorrect-reading diagnosis is withdrawn. Dictionary reading order alone is not frequency evidence. |
+| Claude F-05 | 億万長者 lacks kana | Resolved: add おくまんちょうじゃ, already supported by the retained exact pair. |
+| GPT optional | 刷る's inflections make the contrast with する usable | Optional clarification adopted: 刷ります すります and 刷って すって versus します and して. JMdict 1298670 identifies the printing verb as a godan verb ending in る, not general-purpose irregular する. |
+| Claude O-01 | Consider excluding 軍隊 from 兵士 | Optional, not adopted: the inspected articles distinguish an individual soldier from organized armed forces. Sharing a military tag, or the broader meanings of the character 兵, does not establish interchangeable compound-word meanings. No contrary lexical evidence was supplied. |
+| Claude O-02, 徴候 part | Add the alternate 徴候 spelling | Optional, not adopted: not necessary for this article's stated scope. The symptom overlap is addressed separately above. |
+| Claude O-03 | 冊子 "names a publication" can suggest the publishing process | Optional polish adopted: say it names a book or booklet. The existing explicit object/process distinction was already correct; no exclusion from 出版 or 刊行 is established. |
+| Claude O-04 | Add 短冊, 兵器, 兵隊 and 刷毛 | Optional, not adopted: the existing examples already cover the readings and useful linked vocabulary. 冊封 remains explicitly historical; its valid reading need not be replaced to make coverage exhaustive. |
+| Claude wording polish | Mixed-language article, radical and location wording | Optional polish adopted for 像's "an 像", 党's radical and source-only-row wording, and 兵士's closing description. The remaining 冊, 停, 傾 and 兆候 preferences did not establish a consequential error and were not adopted. 停まる retains its adjacent rare-spelling qualification. |
+
+### Dual-model usefulness
+
+Deduplicating observations across the entire reports, shared useful findings include 少年, 図書 and the
+兵士 rank-and-file distinction. 症状 is also shared: Claude raised it under Optional, not Findings.
+GPT alone identified the consequential secondary-sense overlap with サイン; Claude alone identified
+the missing 億万長者 kana. Claude's 生徒 suggestion also supplied a useful optional quiz safeguard.
+These complementary results support using both families for this batch, not a general ranking or a claim
+that model bias is eliminated. The optional 兵法 clarification must not be counted as proof that its
+documented original pronunciation was wrong.
+
+Both initial reviews leave stroke-path geometry and corpus-wide/native-speaker naturalness outside their guarantees.
+The author's metadata check confirmed that this batch and the remaining legacy two-distractor cards share no tags,
+as Claude reported; absence of shared tags does not itself prevent fallback selection.
+The relevant semantic check found no established direct synonymous answer among those legacy cards.

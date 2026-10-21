@@ -46,6 +46,11 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
 - New supporting vocabulary also needs quiz review. Batch 02 adds direct exclusions for the overlapping labels of
   兆候/印/現れ, 児童/子/子供, 兵士/武士, 冊子/本/書物 and 刊行/出版/発行.
   These are declared pairs on the new cards, not transitive groups or unrestricted substitution rules.
+- A title-only overlap search is navigation, not a semantic audit. Batch 02's initial search missed plural
+  "symptoms" and サイン's secondary sign/indication sense. Inspect relevant article meanings and ordinary
+  number-neutral uses, then add direct pairs: a shared exclusion through 本 does not exclude 冊子/図書.
+- Distinguish a useful alternate-reading clarification from an incorrect-reading finding. Batch 02's
+  兵法 ひょうほう was valid before adding へいほう; dictionary order alone does not establish relative frequency.
 
 ## Review and checkpoint protocol
 
