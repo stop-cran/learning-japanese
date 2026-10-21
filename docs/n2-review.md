@@ -600,3 +600,38 @@ Both returned CLEAN on all three facets, with no remaining actionable finding or
 Claude's B07-R1 is resolved. Both inspected the scene declaration/description, not image bytes or runtime
 selection frequency. The author regenerated the manifest and audited all 105 additions and 316 exact
 source-reading rows; 260 source-set additions remain unauthored.
+
+## Batch 08
+
+Cards: 庫 延 弱 律 復 快 恋 患 悩 憎 戸 承 技 担 拝.
+
+Status: **authored checkpoint; independent dual-model review pending**. Scope: all 15 new kanji,
+the new supporting article 憎む, all three facets, all 45 curated distractor assignments, and
+22 existing word-article component-link passages. No legacy kanji card is edited.
+
+Evidence: [batch-08.json](n2-batch-sources/batch-08.json), with 50 exact Japanese reading rows
+and 58 inspected dictionary spelling/reading records. All 15 stroke files use the pinned converter
+and 16-point format.
+
+### Authored scope and checks
+
+- All source readings are retained. 拝's おろが.む remains source-only lookup information:
+  the inspected 拝む record establishes おがむ, not the different source reading.
+- 庫裏 くり demonstrates on ク without conflating it with native くら. 律 has separate examples
+  for リツ, リチ and レツ. 承和 じょうわ is explicitly an era name, without extra calendar claims.
+- 延びる/延ばす retain their intransitive/transitive distinction and spelling-specific postponement
+  senses. 延べ uses its aggregate prefix sense with the usable count 延べ三日 のべみっか,
+  not the entry's first futures-trading sense.
+- 復 また retains rare-spelling and usual-kana qualifications. 悩み retains its actual written み
+  despite the character source's undotted なやみ row. 悩ましい and the 憎 adjectives retain
+  qualifications for meanings outside the selected table gloss.
+- The full pinned JMdict spelling list for 承ける is preserved alongside its sense-specific notes;
+  recognition of the spelling is not an unrestricted substitution rule for every sense of うける.
+- 一戸 いっこ gives a usable house/household count. 戸's canonical radical remains 戶 with an
+  explanation of the modern visible shape. Other positional radical variants are also identified.
+- All new kanji have three semantically wrong curated answers. No newly activated direct synonym
+  was established for the remaining two-choice legacy cards. 憎む has direct exclusions with
+  嫌う and 嫌い; its vocabulary JLPT level is not inferred from 憎.
+- The author mechanically verified all 22 existing word edits as component links only. The content
+  validator reports zero errors; the audit covers all 120 additions and 366 exact source-reading rows.
+  Structural success does not establish linguistic correctness; independent review remains pending.

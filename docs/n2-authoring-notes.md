@@ -136,7 +136,7 @@ where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
 remaining defect in that scope; batch 06 required no teaching correction. This coverage does not yet extend to the
-remaining 260 additions, which are not yet authored.
+15 drafted batch-08 cards or the remaining 245 additions, which are not yet authored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
