@@ -67,7 +67,7 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   12 on current intentions, no need and no available alternative,
   12 on earlier intentions, completion beliefs and current inferences,
   12 on norms, predictions and goal-relative practical necessity,
-  and 30 on たら／ば／なら／と／場合 conditionals (431 in total).
+  and 60 on たら／ば／なら／と／場合 conditionals in two batches (461 in total).
   Time practice includes うち, あいだ, とき, ころ, たび and shared とき／おり／さい occasion answers;
   shared alternatives are not independently contrasted targets.
   Purpose/cause practice adds ため, おかげ, せい, かわり and ついで, including compensating trade-offs.
@@ -129,10 +129,16 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   The same return/wait/contact/redo verbs recur across the three accounts, with complete predicate blanks that retain
   both 連絡するべき and 連絡すべき. Norms can be followed or violated, a prediction can align with a rule,
   and an optional goal can still have a necessary means. Shared equivalents remain one answer class per exercise.
-  The conditionals set adds four introduction groups: 10 named-form tasks, six prospective/completed なら premises,
+  The first conditionals set adds four introduction groups: 10 named-form tasks, six prospective/completed なら premises,
   six positive/negative state conditions, and eight discoveries, counterfactuals and procedural cases.
   It accepts fitting alternatives within the visible task, rather than claiming unique five-way conditional selection.
-  All 30 new prompts include reviewed vocabulary hints; total coverage is 34/431, with the original 397 still pending.
+  The second set adds five six-exercise groups: further verb/negative-predicate forms; preparation, event triggers and
+  ongoing actions; mechanisms, past habits and state-based requests; planned/completed procedural cases; and imagined
+  present identities. The original 30 remain unchanged. Across the 60 exercises, たら is accepted in 33, ば in 27,
+  なら in 24, と in 14 and 場合 in 20; these overlapping counts measure supported forms, not independent discrimination.
+  Nonhypothetical 私の場合, dedicated nominal なのなら practice and explicit necessary-versus-sufficient reasoning
+  remain gaps in this dedicated comparison set. Conditional set expressions remain outside its basic scope.
+  All 60 conditionals prompts include reviewed vocabulary hints; total coverage is 64/461, with the original 397 still pending.
   See the [content format](docs/content-format.md#grammar-exercises), [foundations sources](docs/grammar-foundations-sources.json),
   [actions sources](docs/grammar-actions-sources.json), [intent sources](docs/grammar-intent-sources.json),
   [action-stage sources](docs/grammar-stages-sources.json), [state sources](docs/grammar-states-sources.json),
@@ -159,7 +165,8 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   [mixed intention/necessity sources](docs/grammar-mixed-intention-necessity-sources.json),
   [mixed past-stance sources](docs/grammar-mixed-past-stance-sources.json) and
   [mixed norms/expectations sources](docs/grammar-mixed-norms-expectations-sources.json),
-  plus the [conditionals sources and review](docs/grammar-conditionals-sources.json).
+  plus the [initial conditionals sources and review](docs/grammar-conditionals-sources.json) and
+  [second conditionals batch and combined coverage](docs/grammar-conditionals-contexts-sources.json).
   Every named formal-noun/particle family in the article now appears in practice, but this is not complete construction
   coverage. The five mixed sets complete the bounded formal-noun expansion planned in
   [Android #46](https://github.com/stop-cran/kanji-cards-android/issues/46); the app's remaining engineering, documentation

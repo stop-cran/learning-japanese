@@ -142,6 +142,136 @@ Source evidence, initial findings, both reconciliation rounds and current hashes
 **Owner status:** on 2026-10-20 the owner approved committing and pushing the pending changes and delivering a release APK.
 This is publication approval, not a separate linguistic review or measured learning-use outcome.
 
+## Second conditionals correction and reconciliation (2026-10-21)
+
+**Snapshot:** `98e5decee4bffdc53674d06f861a5b3c95a42763` plus corrected second-batch grammar
+SHA-256 `8366cff94044bd958b9cd44a96f96e4a89f78061c36cb0c934db9faddce1d224`
+and vocabulary inventory `8cbf13323aa9ec0c81efcbdd2f59ae4f92c788e9e1d31ca614a926da19ab02e4`.
+The original article and first batch are unchanged.
+
+**Scope:** bounded read-only `conditionals-batch2-reconciliation-reviewer`, using the original F1 report,
+frozen before/after snapshots and exact diff. Reuse of the original reviewer was attempted, but its synchronous
+agent could not accept follow-up messages. The fresh replacement's actual model was not reliably exposed.
+It inspected all 30 added complete renderings, six revised explanations and 12 displayed options/rationales,
+and independently checked preservation and vocabulary context bindings. This was informed reconciliation,
+not another blind initial review or full canonical-word audit.
+
+**Verdicts for the corrected scope:** correctness **CLEAN**; scoped coverage **CLEAN**; comprehensibility **CLEAN**.
+
+| Finding | Disposition |
+| --- | --- |
+| F1, omitted negative conditional contractions | **Resolved**, high confidence: six contextual tasks now accept fitting なきゃ and directly related なけりゃ forms, including kana/copular variants, with colloquial-register feedback. Named conjugation drills are unchanged. |
+
+The reviewer independently inspected the dictionary's ければ → けりゃ → きゃ account, Bunpro's register guidance
+and the relevant underlying ば contexts. It distinguished conditional contractions from abbreviated obligation,
+and found no invalid new acceptance, misleading explanation, distractor collision or consequential residual omission.
+Exact current locations and source qualifications are in the
+[reconciliation record](docs/grammar-conditionals-contexts-sources.json).
+
+**Preservation and coverage:** only six answer lists/explanations changed; all 282 original renderings remain in order,
+with 30 additions bringing this batch to **312** and the combined set to **715**. The other 24 exercises, all prompts,
+options and vocabulary payloads are unchanged. Only six inventory context hashes/notes changed; 455 records are identical.
+The scope remains **60 exercises in nine groups**, all with vocabulary support, and the family/model counts below are unchanged.
+The full inventory remains **64/461 reviewed**, with the same 397 pending records.
+
+**Integration:** 148 focused regression tests pass; content validation has zero errors. The real Android importer/cache
+roundtrip executes one test with no skips, failures or errors. Manifest `7504a72cbe1b389c` reconstructs deterministically.
+All 715 accepted completions were individually classified, including the contractions; the 33 preceding grammar files,
+431 preceding vocabulary records and all 5,103 preceding manifest payloads are preserved.
+
+**Limits:** unchanged-scope conclusions are carried forward from the original independent review, not freshly certified.
+No native-speaker, exhaustive paraphrase, learning-efficacy or physical-phone UI claim is made. The documented coverage
+gaps remain; unrelated vocabulary work is not expanded. Changes remain local and uncommitted; no publication or APK
+delivery is included.
+
+## Second conditionals independent review (2026-10-20)
+
+**Snapshot:** the second-batch grammar SHA-256
+`29b03d71c0cfa828aa8e64bbe7beffebe1d3c599a848a9e6e380527a183636c0`,
+vocabulary inventory `2c056320338c7e363c2d6467591fcec6dfbfb7ac443fb1e2f9f58e5598f912af`,
+and unchanged article/first batch on `98e5decee4bffdc53674d06f861a5b3c95a42763`.
+
+**Scope:** fresh-context, read-only `conditionals-batch2-independent-reviewer`; actual model not reliably exposed.
+The neutral packet withheld author verdicts and earlier findings. The review covered all 30 new exercises,
+282 complete accepted renderings, 60 displayed options/rationales, 204 vocabulary spans, 290 exclusions and
+88 canonical word identities, plus five groups, 11 facets and four recommendations. The article and first batch
+were read for relevant context and combined coverage, not freshly certified in full.
+
+**Verdicts at this snapshot:** correctness **NEEDS FIX**; scoped coverage **CLEAN**; comprehensibility **CLEAN**.
+
+| Finding | Evidence and recommended correction |
+| --- | --- |
+| F1, minor correctness: six negative-condition tasks reject ordinary contractions despite visible plain/basic wording | Accept fitting なきゃ forms and copular variants with colloquial-register feedback, or explicitly require full endings before answering. High confidence in equivalence; medium-high confidence in the wording-scope defect. |
+
+The [first dictionary entry for きゃ](https://kotobank.jp/word/%E3%81%8D%E3%82%84-3239243)
+describes ければ through けりゃ to きゃ, including でなきゃ; its separate restrictive-particle entry is not evidence
+for this construction. [Bunpro's contraction explanation](https://bunpro.jp/grammar_points/なくちゃ-なきゃ)
+supports the form/register relationship but its obligation examples alone do not establish all six substitutions.
+The [batch record](docs/grammar-conditionals-contexts-sources.json) pins the original occurrences and later disposition.
+
+**Coverage:** the reviewer confirmed 60 exercises in nine groups, 685 accepted renderings at this snapshot,
+the published overlapping family/model counts, and the stated remaining gaps. No invalid accepted completion,
+incorrect displayed alternative, vocabulary defect or answer leakage was established.
+
+**Limits:** not native-speaker certification, exhaustive paraphrase coverage or a full article/first-batch re-audit.
+The review did not independently audit unrelated corpus-wide pending vocabulary or Android runtime behavior.
+Shorter shared hypothesis instructions were optional polish, not a required correction.
+
+## Second conditionals author review and coverage (2026-10-20)
+
+This historical author pass applies to the original second-batch snapshot below, before independent finding F1
+and the subsequently authorized corrections. Its original counts and verdicts are retained, not presented as a review
+of later exercise bytes.
+
+**Snapshot:** `98e5decee4bffdc53674d06f861a5b3c95a42763` plus the new
+`grammar/conditionals-contexts.json`, SHA-256
+`29b03d71c0cfa828aa8e64bbe7beffebe1d3c599a848a9e6e380527a183636c0`.
+The article and first 30 exercises remain byte-identical to their previously reviewed versions.
+The [source and coverage record](docs/grammar-conditionals-contexts-sources.json) pins the vocabulary inventory too.
+
+**Scope:** direct author review by `gpt-6-astra` of all 30 new prompts, 282 accepted renderings,
+60 displayed options/rationales, translations, question-side restrictions, feedback, five introduction groups,
+204 lexical spans and 290 classified exclusions. All 88 canonical word identities were checked against their
+metadata and relevant meaning passages; local-only glosses do not imply an existing canonical card.
+The pass read the actual cited source passages and did not adopt their overbroad restrictions.
+
+**Verdicts:** correctness **CLEAN**; scoped coverage **CLEAN**; comprehensibility **CLEAN**.
+
+| Finding during authoring | Disposition |
+| --- | --- |
+| Proposed links for ランプ, 登録 and 通常 had no canonical card | Resolved: retain occurrence-specific local glosses; no fabricated links. |
+| A split 声をかけて idiom gave less useful partial hints | Resolved: annotate the meaningful phrase as a single occurrence. |
+| Attendance-document and application wording could be clearer | Resolved: use 参加証明書 and consistent 申し込み wording. |
+
+**Coverage:** five groups of six address further forms; preparation, event triggers and ongoing actions;
+mechanisms, past voluntary habits and state-based requests; planned/completed procedural cases; and imagined
+present identities. The combined set has **60 exercises in nine groups** and accepts 685 renderings.
+たら occurs in an accepted completion of 33 exercises, ば in 27, なら in 24, と in 14 and 場合 in 20.
+Those overlapping counts include supplied suffixes and are not independent discrimination or mastery measures.
+The displayed model counts are respectively 12, 17, 14, 7 and 10, totaling 60.
+The new batch contains six named-form tasks, six procedural-viewpoint tasks and 18 contextual polarity tasks
+with shared realizations. No valid accepted alternative is displayed as a wrong option.
+
+**Vocabulary:** all 60 conditionals prompts have reviewed support. The additional 204 spans comprise
+145 linked occurrences across 88 identities and 59 local-only glosses. Overall coverage is **64/461**;
+exactly the original 397 prompts remain pending and the inventory stays at `pilot`.
+
+**Integration:** 148 focused regression tests pass; content validation reports zero errors.
+The real Android importer/cache roundtrip executes one test with no skips, failures or errors.
+Manifest `3facf661d15c0b5a` matches a deterministic reconstruction.
+All 33 previous grammar files and all 431 prior vocabulary records are preserved against the baseline.
+The complete-stage gate still rejects exactly the same 397 pending records; no new exercise is pending.
+
+**Optional / remaining scope:** same-scenario comparison of valid alternatives, nonhypothetical 私の場合,
+dedicated nominal なのなら production and explicit necessary-versus-sufficient reasoning remain gaps in this
+60-exercise set. Related ないかぎり necessity tasks exist elsewhere. Complete register paradigms and the article's
+excluded conditional set expressions are not claimed as covered.
+
+**Limits:** this batch has author self-review only, not independent review or native-speaker certification.
+The earlier independent verdicts apply only to the unchanged article and first batch; they are not inherited by new
+exercises. No full-corpus vocabulary review, new JLPT classification, phone UI check, learning-effectiveness claim,
+commit or publication is included in this task.
+
 ## Onomatopoeia second-batch images (2026-10-19)
 
 **Snapshot and scope:** text commit `44216dc277a51b7fe8a9eb8603b8069a5eba6a63` plus

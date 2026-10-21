@@ -218,7 +218,7 @@ in contributor source records, and leave unestablished cases unclassified.
 
 The [reviewed introduction pilot](grammar-introductions-pilot.json) supplies the initial 19 labels: six before/after and nine
 action-stage exercises at N4, and four expectation/obligation exercises at N3. The other four koto/wake exercises in the mixed pilot
-file remain unclassified, as do the other 408 exercises, including all 30 new conditionals. The same three pilot groups
+file remain unclassified, as do the other 438 exercises, including all 60 conditionals. The same three pilot groups
 are annotated as optional `introductionGroups` in their declaring files, with one recommendation from temporal sequence
 to action stages and no genuine prerequisites.
 
@@ -263,10 +263,13 @@ Its original glosses have author self-review, with per-exercise limitations; thi
 native-speaker certification. Non-BMP and conflicting-reading cases are synthetic parser fixtures, not invented published exercises.
 Remaining prompts are explicitly `pending`, never silently counted as covered.
 
-The conditionals addition extends this inventory without reinitializing it: 30 new reviewed prompts bring the current
-corpus to 431 exercises in 33 files and vocabulary coverage to **34/431**. All 397 original pending records remain pending,
-the baseline revision stays unchanged, and the inventory remains at `stage: "pilot"`. New coverage is also direct author
-review, not independent linguistic review; see the [conditionals record](grammar-conditionals-sources.json).
+The two conditionals additions extend this inventory without reinitializing it: 60 new reviewed prompts bring the current
+corpus to 461 exercises in 34 files and vocabulary coverage to **64/461**. All 397 original pending records remain pending,
+the baseline revision stays unchanged, and the inventory remains at `stage: "pilot"`. The first 30 subsequently received
+independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
+in six answer lists; bounded reconciliation resolved it without further actionable findings. See the
+[initial conditionals record](grammar-conditionals-sources.json) and
+[second-batch record and coverage](grammar-conditionals-contexts-sources.json).
 
 `python tools/grammar_vocabulary.py check` is the maintained repository's publication gate, separate from the app's optional import contract.
 Records bind file/ID, exact prompt, full exercise context (including answers), and annotation payload. Reviewed spans plus explicitly
@@ -783,6 +786,54 @@ All 30 prompts have occurrence-specific vocabulary support: 187 lexical spans, i
 word identities and 39 local-only glosses. Blanks, tested grammar and nonlexical segments have explicit exclusions in the
 review inventory. Preserve the distinction between a local gloss and a verified canonical word link. The new tasks remain
 unclassified by JLPT; all 401 prior exercises, their identities and their vocabulary review records are unchanged.
+
+### Second conditionals set and combined coverage
+
+`conditionals-contexts.json` adds 30 exercises without changing the first set, its accepted answers or its review records.
+The [source, review and coverage record](grammar-conditionals-contexts-sources.json) pins the exact snapshot.
+Five new introduction groups have six exercises each and only soft recommendations:
+
+| Group suffix (`conditionals-contexts-`) | Scope |
+| --- | --- |
+| `forms` | 来る, する and negative な-adjective predicates with named たら/ば forms |
+| `timing` | Two advance-preparation premises, two event-triggered requests and two ongoing-action encounters |
+| `patterns` | Paired positive/negative device conditions, past voluntary habits and adjective-based requests |
+| `cases` | Three planned/completed pairs before printed 場合は; planned cases require advance preparation |
+| `hypotheses` | Three imagined present identities and three imagined absences of an actual identity |
+
+Question-side restrictions identify plain-form practice, permitted families, supplied suffixes and the relevant viewpoint.
+The 312 accepted renderings include kana spellings, contractions and fitting case particles, not 312 independent meanings.
+Six negative-condition tasks accept fitting なきゃ and なけりゃ contractions, with feedback distinguishing their
+colloquial register from the more neutral full endings. The named conjugation drills are unchanged.
+The six named-form tasks contrast the requested families; the six case tasks contrast prospective/completed predicates.
+The other 18 use shared conditional realizations with opposite-polarity distractors. They practice contextual production
+and comprehension, not exclusive choice between otherwise acceptable conditional families.
+In particular, なら/場合 can frame a plan requiring earlier preparation, ongoing ていたら does not require finishing the
+whole activity, and past voluntary habits can use と. A past predicate before 場合 is not invariably calendar past:
+these paired tasks identify the intended prospective/completed viewpoint and event, not a universal tense shortcut.
+
+The combined 60 exercises have nine introduction groups and 715 accepted renderings. Counts below include supplied
+suffixes as well as typed text. A family counts once per exercise even if many spellings are accepted;
+なきゃ and なけりゃ are contracted ば realizations, so the family counts are unchanged:
+
+| Conditional family | First batch: accepted in | Second batch: accepted in | Combined | Combined model options |
+| --- | ---: | ---: | ---: | ---: |
+| たら | 14 | 19 | 33 | 12 |
+| ば | 12 | 15 | 27 | 17 |
+| なら | 14 | 10 | 24 | 14 |
+| と | 8 | 6 | 14 | 7 |
+| 場合 | 10 | 10 | 20 | 10 |
+
+Accepted-family counts overlap; only the model-option column sums to 60. Neither column measures mastery or independent
+discrimination. The scope still lacks dedicated nonhypothetical 私の場合, nominal なのなら production, and explicit
+necessary-versus-sufficient reasoning tasks. Related ないかぎり necessity examples exist elsewhere in the corpus.
+Full register paradigms and the article's excluded conditional set expressions are not claimed as covered.
+
+All 30 additional prompts have reviewed vocabulary support: 204 lexical spans, 145 linked occurrences across 88 canonical
+word identities, and 59 local-only glosses. No word card is invented to supply a missing link. All 431 preceding exercises
+and inventory records are preserved, leaving 64/461 reviewed prompts overall, including 60/60 conditionals prompts.
+The source record separates the original author pass, independent review and bounded correction/reconciliation;
+none is native-speaker certification. This batch adds no JLPT labels or runtime/schema changes.
 
 ## Links and safety
 
