@@ -112,6 +112,11 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
 - English answer labels can collide even when the Japanese words are not synonyms. Batch 07 excludes
   巻く/風 because the bare English label "wind" can be read as a verb or a weather noun. Check the
   displayed text in both quiz directions; a Japanese part-of-speech distinction is not always visible.
+- Verify official reading-table status directly rather than treating a dictionary spelling list as a frequency
+  ranking. Batch 08's government Joyo table lists 庫's コ/ク but not くら, and 承's ショウ/うけたまわる
+  but not ジョウ/うける. The recognition qualifications do not claim that table absence proves rarity.
+- Preserve the force of spelling-specific notes. Batch 08's JMdict notes say "esp." for 延ばす's
+  postponement sense and ウケる's amusement sense; "especially" is not an exclusive spelling restriction.
 
 ## Review and checkpoint protocol
 
@@ -135,8 +140,9 @@ The first seven batches' GPT/Claude reports are preserved in the review ledger, 
 where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
-remaining defect in that scope; batch 06 required no teaching correction. This coverage does not yet extend to the
-15 drafted batch-08 cards or the remaining 245 additions, which are not yet authored.
+remaining defect in that scope; batch 06 required no teaching correction. Batch 08 has both initial reviews and
+evidence-backed corrections awaiting changed-passage confirmation. Its 15 additions are not yet closed; the remaining
+245 additions are not yet authored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.

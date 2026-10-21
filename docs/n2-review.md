@@ -605,7 +605,7 @@ source-reading rows; 260 source-set additions remain unauthored.
 
 Cards: 庫 延 弱 律 復 快 恋 患 悩 憎 戸 承 技 担 拝.
 
-Status: **authored checkpoint; independent dual-model review pending**. Scope: all 15 new kanji,
+Status: **initial dual-model review complete; corrections awaiting changed-passage confirmation**. Scope: all 15 new kanji,
 the new supporting article 憎む, all three facets, all 45 curated distractor assignments, and
 22 existing word-article component-link passages. No legacy kanji card is edited.
 
@@ -634,4 +634,54 @@ and 16-point format.
   嫌う and 嫌い; its vocabulary JLPT level is not inferred from 憎.
 - The author mechanically verified all 22 existing word edits as component links only. The content
   validator reports zero errors; the audit covers all 120 additions and 366 exact source-reading rows.
-  Structural success does not establish linguistic correctness; independent review remains pending.
+  Structural success does not establish linguistic correctness; changed-passage confirmation remains pending.
+
+### Independent initial reviews
+
+Both reviewed clean frozen checkpoint `92300150bee23b62f8c0558f97ddd224d0d48498` against baseline
+`43e664c8994edc45de427bed0d1e4b3fd40b03d0`, with the same files, facets, rubric and source access.
+Actual models: **gpt-6.1-sol** and **claude-opus-5.5**. The isolated read-only processes ran sequentially,
+exited before the next started, and made no changes. Neither received the other's report or the author's
+adjudication. Preserved reports: [GPT](n2-reviews/batch-08-gpt-initial.md) and
+[Claude](n2-reviews/batch-08-claude-initial.md).
+
+GPT found one minor register-coverage omission on 恋. Claude found two minor spelling-context omissions
+on 庫 and 承 and supplied seven optional observations. These judgments describe the frozen draft, not
+the corrected passages.
+
+### Initial-finding reconciliation
+
+The following corrections are adopted and await changed-passage confirmation.
+
+| Report | Observation | Disposition and evidence |
+| --- | --- | --- |
+| GPT B08-GPT-01; Claude O5 and Limits | 恋う's register is unexplained; special conjugations could be shown | Adopted. The author fetched the exact English Wiktionary Japanese こう verb entry, which explicitly labels its miss/love sense literary and gives 恋うて/恋うた. The row and note now state these facts and cite that secondary source. The pinned JMdict establishes the verb and special-class godan classification, not the literary label. Attempts to find a rendered publisher-dictionary register label did not establish one; a generated search claim about Kenkyusha was not accepted as an inspected entry. |
+| Claude B08-01 | 庫 くら lacks spelling/reading-status context | Adopted as recognition guidance, not a frequency finding. The author downloaded and extracted the official 2010 Joyo table: PDF p. 50 lists コ and ク for 庫, not くら. The complete pinned JMdict entry 1592380 confirms 蔵/倉/庫, now preserved in the packet. The card qualifies 庫 くら without claiming that dictionary order or table absence proves which spelling is usual or rare. |
+| Claude B08-02 | 承ける lacks spelling/reading-status context | Adopted as recognition guidance, not a comparative-frequency finding. Official-table PDF p. 79 lists ショウ and うけたまわる for 承, not ジョウ or うける. The note distinguishes a recognition example from a general replacement for 受ける. Full pinned entry 1329590 already preserves 受ける/請ける/承ける/享ける and its sense notes; the linguistic be-modified-by note is now identified without an invented example. |
+| Claude O1 | "Specifically associates/assigns" overstates JMdict's "esp." | Optional precision adopted in 延 and 承: use especially and explicitly avoid an exclusive spelling rule. The pinned sense notes, not a live mirror's entry order, support the change. |
+| Claude O2 | 悩's "undotted row" wording is source jargon | Optional clarity adopted: explain the actual spelling 悩み and final kana directly. |
+| Claude O3 | 戸's "house counter" title can suggest a countertop | Optional clarity adopted: "door; counter for households." Meaning, readings and curated wrong choices remain unchanged; the title remains unique. |
+| Claude O4 | Loosely overlapping kanji meanings can matter in larger quizzes | Optional future-app limitation, not a demonstrated defect in the current four-choice assignments. No unsupported kanji-exclusion field or unrelated legacy rewrite is added. |
+| Claude O6 | Label おろがむ archaic if a suitable source is found | Optional expansion not adopted. The existing source-only qualification makes no current-neutral-use claim; no independently inspected archaic-register entry was established. |
+| Claude O7 | Three existing articles write on readings in hiragana | Optional cosmetic legacy change not adopted. Their batch edits are component links only; lexical content remains preserved. |
+
+The official PDF was retrieved on 2026-10-22 from the government URL retained in the source packet;
+SHA256 `d9f28aeb4ce8250dbde07de20ac66cca71805ba09d94e4942c752dffa84d8d42`.
+PDF page numbers above are one-based file pages. The table supports reading status, not comparative spelling
+frequency, an exhaustive word inventory or a prohibition on outside-table readings. A generated web-search
+answer incorrectly claimed all three disputed readings were in the table; it was rejected against the actual PDF.
+
+### Dual-model usefulness and limits
+
+The underlying 恋う register topic is shared: GPT established an explicit secondary-source label, while Claude
+raised it optionally and left its evidence unresolved. It is not a uniquely noticed GPT defect merely because
+the reports used different headings. Claude uniquely supplied the two adopted recognition-context observations
+and three optional precision/clarity observations. The author independently established the table facts and rejected
+unsupported frequency implications. This is complementary evidence on this matched sample, not a model ranking
+or proof that model bias has been eliminated.
+
+Both reviewed all 16 teaching pages, all 45 distractors and the 22 related component passages. The author
+authenticated the clean Git snapshot and exact 58-file scope, mechanically verified link-only legacy edits,
+and audited source readings and strokes. File-only reviewers could not authenticate Git or reproduce upstream
+downloads; neither exhaustively inspected stroke geometry. External register evidence remains secondary,
+not native-speaker certification or an exhaustive corpus result.
