@@ -510,3 +510,39 @@ Both disclosed that file tools could not verify Git provenance. The author authe
 before and after the reviews and mechanically verified link-only preservation before checkpointing.
 Claude's additional Jisho lookup is version-limited and cannot establish absence from the full pinned dictionary;
 the source-only qualification rests on the author's inspected snapshot, not that negative lookup.
+
+## Batch 07
+
+Cards: 島 州 巨 巻 布 希 帯 帽 幅 干 幼 庁 床 底 府.
+
+Status: **drafted; independent reviews pending**. The planned common scope is all 15 new kanji,
+the three new supporting articles 巻く, 干す and 庁, all three facets, all 45 curated distractor
+assignments, and 17 existing word-article component-link passages. The only legacy kanji edit is
+大's third wrong answer, 犬, to prevent 巨's size synonym from becoming a defensible default fallback.
+
+Evidence: [batch-07.json](n2-batch-sources/batch-07.json), with 45 exact Japanese reading rows
+and 53 inspected dictionary spelling/reading records. All 15 stroke files use the pinned converter
+and 16-point format.
+
+### Authored scope and checks
+
+- Every source reading is retained. 州's on ス remains source-only; the separate native sandbank
+  noun す is not independent evidence of an on-reading word.
+- 布's し.く is retained with its search-only JMdict spelling qualification. 布地 きれじ
+  demonstrates the bound きれ reading; historical 布衣 ほい is not presented as ordinary modern clothing.
+  The existing 布団 ateji explanation and all other legacy teaching prose remain unchanged.
+- 帽's モウ, ずきん and おお.う and 庁's テイ and やくしょ remain source-only lookup information.
+  Missing selected examples are not claims that no such word can exist.
+- 希 まれ retains its usual-kana qualification. The exact Japanese dictionary entry for 希う
+  supports an earnest-wish distinction; its old quotations are not used to infer current frequency or register.
+- 巻's native noun spellings are distinguished from the verb and from the on-reading example 一巻.
+  干's prefix and suffix each have a usable verified compound, with written し explained explicitly.
+  床 とこ does not link to the separate ゆか article or imply fixed semantic compartments.
+- All new kanji have three semantically wrong curated answers. The supporting articles add direct
+  quiz exclusions for 巻く/包む and 庁/局, 庁/事務所 and 庁/オフィス, without assuming transitivity.
+  Their vocabulary JLPT levels are not inferred from the characters.
+- The author mechanically verified all 17 legacy word changes as links only, and 大's edit as one
+  distractor-line change. No other legacy teaching passage is edited.
+
+The frozen draft commit will be recorded with the blind initial reports. Model usefulness is not assessed
+before both independent reports are available.

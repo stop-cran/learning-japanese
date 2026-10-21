@@ -98,6 +98,11 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   supplied historical context for 傾城's courtesan sense despite its unflagged JMdict record. Inspect the actual
   headword when an aggregator also contains a different pronunciation or a separately named work. Translate
   inclusive chronology precisely: 明治以後 is from Meiji onward, not necessarily after the period ended.
+- Identical kana does not establish a reading's historical layer. Batch 07 preserves 州's on ス as
+  source-only rather than recycling the native sandbank word す as independent evidence of an on-reading word.
+  A useful bound example also need not be a standalone match: 布地 きれじ demonstrates 布's きれ.
+- Adding 巨 activates a direct size synonym in the old 大 card's automatic fallback. Give 大 a third
+  curated wrong answer; do not demand unrelated repairs merely because two characters have a loose association.
 
 ## Review and checkpoint protocol
 
@@ -122,7 +127,7 @@ where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
 remaining defect in that scope; batch 06 required no teaching correction. This coverage does not yet extend to the
-remaining 275 additions, which are not yet authored.
+remaining 275 additions: the 15 drafted batch 07 cards and 260 not yet authored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
