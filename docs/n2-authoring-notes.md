@@ -22,6 +22,15 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   component explanation; a new card's forward link to the word does not satisfy that separate check.
 - Dictionary inclusion is not evidence of everyday frequency. Preserve unusual source readings without manufacturing
   ordinary examples. The pilot retains the unmatched readings of 並 and 乱 as character-dictionary-only lookup information.
+- Inspect non-initial positions before declaring a reading source-only. The pilot's word-initial candidate heuristic
+  missed 胡乱 うろん for 乱's ロン. Candidate discovery now also considers word-final matches; a kana match is still not
+  proof of character-by-character reading allocation. The proposed 乱りに example does not by itself establish `みだ.る`.
+- Keep spelling, pronunciation and register qualifications separate. JMdict's rare-spelling flag on 依る does not make
+  よる a rare pronunciation; missing priority flags do not prove that a word is rare. Batch records retain spelling and
+  reading priorities separately, with their union used only for candidate navigation.
+- Preserve evidence for additional pairs asserted in notes, not only the reading-table examples. The pilot now records
+  仏語 ぶつご, 乳房 ちぶさ and 依存 いそん explicitly. For external dictionaries, inspect the exact headword and any notation
+  guide needed to interpret symbols; the 乾 usage notes cite the entries and Daijisen's outside-Joyo reading marker.
 - The current validator enforces explained kunyomi only for N5/N4. N2 needs an explicit metadata-to-reading-table audit,
   even after structural validation passes.
 - Three curated wrong answers avoid default four-choice fallback for new cards. Review the meanings, not just title strings.
@@ -48,4 +57,5 @@ equivalent observations across findings, optional suggestions, limits and per-ca
 
 Source records and structural checks are not native-speaker certification or exhaustive historical analysis.
 Dual-model usefulness is an observation about the reviewed sample, not proof that model bias has been eliminated.
-No initial dual-model reports have been completed yet; conclusions will be recorded only after real reviews.
+The pilot's initial GPT and Claude reports are preserved in the review ledger. They found complementary issues, but also
+made unsupported frequency inferences and missed findings the other model established. Changed-passage review is pending.
