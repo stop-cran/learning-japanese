@@ -71,6 +71,13 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
 - Compare each named neighbor on its own relevant dimension. Batch 03's first 匹敵 correction distinguished matching
   from 同一's identity but not from 同様's contextual similarity. The revised comparison contrasts reaching a level
   (`Bに匹敵する`) with kind or manner (`Bと同様`), without claiming their meanings can never overlap.
+- Missing exact standalone matches are not missing bound-stem examples. Batch 04 uses 双子 ふたご for 双's ふた.
+  A broader spelling search also finds rare 双ぶ ならぶ despite the source's undotted reading, while 双つ ふたつ
+  is search-only and remains index evidence. Inspect the written kana instead of trusting the candidate heuristic.
+- A legacy component explanation may mention only the complete word, as with 布団. Link 団 inside that existing
+  spelling at its substantive introduction rather than manufacturing an isolated meaning or rewriting the article.
+- Recheck two-distractor fallbacks as overlapping characters arrive. Batch 04 adds a third curated wrong answer to
+  毎, because the new 各 card's each/every answer could otherwise be defensible in a fallback choice.
 
 ## Review and checkpoint protocol
 
@@ -93,7 +100,7 @@ Dual-model usefulness is an observation about the reviewed sample, not proof tha
 The first three batches' initial and changed-passage GPT/Claude reports are preserved in the review ledger. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
-remaining defect in that scope; this coverage does not yet extend to the remaining 320 additions.
+remaining defect in that scope; this coverage does not yet extend to batch 04 or the remaining 305 additions.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
