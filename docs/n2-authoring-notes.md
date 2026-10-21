@@ -78,6 +78,11 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   spelling at its substantive introduction rather than manufacturing an isolated meaning or rewriting the article.
 - Recheck two-distractor fallbacks as overlapping characters arrive. Batch 04 adds a third curated wrong answer to
   毎, because the new 各 card's each/every answer could otherwise be defensible in a fallback choice.
+- A selected spelling can hide a useful alternative. Following batch 04 review, the full pinned JMdict entry for
+  巧咲 was inspected and its spellings 巧笑/巧咲 retained. Explain the alternative without treating dictionary order
+  as a frequency ranking, or an alternative spelling as an invalid word.
+- Separate a whole-word ateji label from a claim about each character's purely phonetic role. Batch 04's 布団 note
+  now states the source's whole-spelling label without inventing a component-by-component derivation.
 
 ## Review and checkpoint protocol
 
