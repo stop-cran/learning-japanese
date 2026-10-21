@@ -86,6 +86,14 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
 - Narrowing an overbroad technical explanation should not remove the term's only learner-facing gloss. The first
   batch 04 団 correction did that to "ateji"; the follow-up restores a short qualified explanation while retaining
   the whole-word versus component-role distinction.
+- An occurrence of a kana sequence is not a character-reading allocation. Batch 05 does not use the えん in
+  圧延 あつえん as evidence for 圧's エン, or the くま within 奥まる おくまる as evidence for 奥's くま.
+  Unestablished readings remain qualified lookup information rather than manufactured examples.
+- Identical spelling does not imply identical primary reading or sense restrictions. Batch 05 keeps 埋める
+  うめる separate from うずめる, and restricts 埋まる's vacancy/debt senses to うまる. Its 塩 link teaches しお,
+  not the separately documented chemical noun えん.
+- Preserve sensitive-usage labels even when the example is needed only for a character reading. The ショウ row
+  of 姓 identifies 百姓's farmer sense as sensitive and its separate derogatory sense, not as neutral farm vocabulary.
 
 ## Review and checkpoint protocol
 
@@ -109,6 +117,7 @@ The first four batches' initial and changed-passage GPT/Claude reports are prese
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
 remaining defect in that scope; this coverage does not yet extend to the remaining 305 additions.
+Those pending additions include the 15 drafted batch 05 cards and 290 not yet authored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.

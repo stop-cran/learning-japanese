@@ -359,3 +359,27 @@ and both remaining localized optional wording points are resolved. Preserved fin
 Neither final confirmation searched the forbidden ledgers/reports. Both processes exited and made no changes.
 The other 12 new pages retain initial dual-model coverage; 厚 and 双 retain first-follow-up coverage.
 The author authenticated the Git snapshots, actual diffs and absence of unrelated teaching changes.
+
+## Batch 05
+
+Cards: 固 圧 坂 均 型 埋 城 域 塔 塗 塩 境 央 奥 姓.
+
+Status: **drafted; independent review pending**. Both models will receive the same frozen checkpoint, all
+15 new kanji and the three new supporting word articles for correctness, scoped coverage and comprehensibility.
+Evidence: [batch-05.json](n2-batch-sources/batch-05.json), with 47 exact Japanese reading rows and 52 inspected
+word pairs, including the full-entry spelling evidence for 固い and the 名字/苗字 pair.
+
+Supporting articles: [圧力](../words/圧力.md), [埋める](../words/埋める.md) (うめる), and [姓](../words/姓.md)
+(せい), without inferred vocabulary JLPT levels. 埋める directly excludes 詰める and 記入; 姓 directly excludes
+名 and 名前. These protect overlapping answer meanings, not transitive synonym groups or unrestricted
+substitution rules.
+
+Related edits add component links in 16 existing word articles without changing lexical metadata or teaching text.
+中 receives 申 as its third curated wrong answer: its existing middle/inside title overlaps new 央 and 奥 answers
+that could otherwise enter random fallback. The existing 申 card's humbly-say answer was inspected.
+
+All 15 new kanji have three curated wrong answers. The source-only rows are 圧 `エン`, `お.す`, `おさ.える`,
+`お.さえる`, and 奥 `くま`; 圧す おす and 圧さえる おさえる remain search-index evidence, not ordinary
+spelling recommendations. 圧す へす and the document sense of 圧状 おうじょう retain their archaic labels.
+埋's reading rows preserve distinct whole-word readings and sense restrictions; 姓's 百姓 example carries
+the dictionary's sensitive-usage qualification. Canonical radicals include 大 for 央 and 奥 and 土 for 塗.
