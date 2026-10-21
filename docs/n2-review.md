@@ -450,7 +450,7 @@ the clean snapshots, actual diffs and unchanged other teaching content; file-onl
 
 Cards: 委 季 孫 宇 宝 寺 封 専 将 尊 導 届 層 岩 岸.
 
-Status: **drafted; independent reviews pending**. The planned common review scope is all 15 new kanji,
+Status: **closed after independent dual-model review**. The common review scope was all 15 new kanji,
 all three facets, all 45 curated distractor assignments, and the 19 existing word-article link passages.
 There are no new supporting word articles: every new kanji already has a relevant existing article.
 Evidence: [batch-06.json](n2-batch-sources/batch-06.json), with 37 exact Japanese reading rows and
@@ -475,5 +475,38 @@ Evidence: [batch-06.json](n2-batch-sources/batch-06.json), with 37 exact Japanes
 - The related legacy word edits add component links only. Their spelling, reading, metadata and teaching prose
   are preserved; no legacy kanji teaching passage is changed in this batch.
 
-The frozen draft commit will be recorded with the blind initial reports. Model usefulness is not assessed
-before both independent reports are available.
+### Independent review and reconciliation
+
+Both reviewed clean checkpoint `da00a42474b6b3bf8cb6acacfc5d9d31c549aca4` against baseline
+`63e437c54759373a7f32983908e425014e214444`, with identical scope, rubric and source access.
+Actual models: **gpt-6.1-sol** and **claude-opus-5.5**. The read-only processes ran sequentially,
+exited before the next started and made no changes. Neither initial reviewer received the other report
+or the author's adjudication. Preserved reports: [GPT](n2-reviews/batch-06-gpt-initial.md) and
+[Claude](n2-reviews/batch-06-claude-initial.md).
+
+Both returned CLEAN on every card and all three facets, with no actionable finding. GPT supplied no optional
+point; Claude supplied ten. No teaching changes were needed, so no changed-passage confirmation was required.
+
+| Report | Observation | Disposition and evidence |
+| --- | --- | --- |
+| Claude O-01, O-02, O-04, O-05, O-08 | Add committee, specialist, temple-name, social-layer and standalone-notification examples | Optional expansion not adopted. Current reading rows have verified examples, including 届's usable notification suffix; these proposals do not establish missing prerequisites. No new dictionary pairs are asserted from suggestions alone. |
+| Claude O-03 | Rephrase the 将来 replacement warning; add a literary label and 将軍 | Optional polish/expansion not adopted. The note already separates the lexical items and qualifies extended readings as lookup material. The proposed literary label and はたまた comparison are not established by the inspected Daijisen sense; lack of a register label does not prove neutrality either. |
+| Claude O-06 | Replace 岩塩 with a more common on-reading example | Optional expansion not adopted. 岩塩 is an exact valid pair; the report does not establish a comparative-frequency defect. |
+| Claude O-07 | Simplify 季's character-by-character translation warning | Optional polish not adopted. Its separate Notes example already states the intended warning concretely. |
+| Claude O-09 | Potential synonym collisions in automatic distractors | Optional future-risk observation, not a current defect. All new cards have three curated wrong answers. GPT independently checked all remaining two-choice legacy cards; no new direct fallback collision was established. The proposed 親/close association is not supported by 親's ordinary meanings and was not adopted. |
+| Claude O-10 | Add more cross-links to existing component cards | Optional expansion not adopted. Each new card already has a useful word article and all 19 required existing component passages are linked. Extra association links are not required backlinks. |
+
+### Dual-model usefulness and limits
+
+Comparison included findings, optional points, limits and per-card observations. This matched sample yielded no
+verified unique defect from either model; Claude supplied optional expansion and polish, not demonstrated corrections.
+Both independently confirmed the consequential 将 lexical distinction. Dual-model review added independent scrutiny,
+but this batch supplies no evidence of a unique corrective contribution or elimination of model bias.
+
+Both read all 15 cards, 41 selected evidence records, 45 curated distractor assignments and 19 related passages.
+GPT screened all 21 remaining two-choice legacy cards, while Claude's documented legacy check was narrower.
+Claude additionally checked all 15 stroke-file counts; neither exhaustively reviewed drawing geometry.
+Both disclosed that file tools could not verify Git provenance. The author authenticated the clean frozen commit
+before and after the reviews and mechanically verified link-only preservation before checkpointing.
+Claude's additional Jisho lookup is version-limited and cannot establish absence from the full pinned dictionary;
+the source-only qualification rests on the author's inspected snapshot, not that negative lookup.
