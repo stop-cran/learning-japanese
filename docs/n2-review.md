@@ -180,7 +180,7 @@ The 13 legacy word-link edits received related-context review, not fresh compreh
 
 Cards: 券 刺 則 副 劇 効 勇 募 勢 包 匹 区 卒 協 占.
 
-Status: **second corrections checkpoint; final localized confirmation pending**.
+Status: **reviewed**. Both models confirmed the final corrected passages with no actionable remaining defect in scope.
 Evidence: [batch-03.json](n2-batch-sources/batch-03.json), retaining 44 exact Japanese reading rows and
 63 inspected word pairs. Supporting word articles:
 [副作用](../words/副作用.md), [募集](../words/募集.md) and [匹敵](../words/匹敵.md).
@@ -245,9 +245,23 @@ Preserved first follow-ups: [GPT](n2-reviews/batch-03-gpt-followup.md) and
 identity does not distinguish 匹敵 from 同様, whose existing article expressly allows non-identical similarity.
 The correction now contrasts kind/manner and `Bと同様` with reaching a comparison standard's level and
 `Bに匹敵する`, and removes the unclear "equality labels" phrase. This is a localized contrastive-explanation issue,
-not evidence that the equality senses or direct exclusions were wrong. Final confirmation is pending.
+not evidence that the equality senses or direct exclusions were wrong.
 This second-stage issue was uniquely identified by Claude on the common corrected snapshot; do not conflate that
 observation with the shared initial equality-exclusion finding.
+
+Both original contexts then resumed sequentially at the clean final correction snapshot
+`c887594020787d735d4dc3cbc8321bffba5ee7b8`. Each inspected the actual 13-line, one-hunk teaching diff and
+the revised 匹敵 paragraph with the referenced 同様/同一 articles. Both reported all three facets CLEAN and
+no actionable finding; Claude F-02 is resolved. Completed final reports: [GPT](n2-reviews/batch-03-gpt-final.md)
+and [Claude](n2-reviews/batch-03-claude-final.md). Both processes exited and made no changes.
+The thirteen unchanged new pages retain their initial dual-model coverage; the other four corrected pages retain
+their first follow-up coverage. No unrelated comprehensive re-review is implied.
+
+The remaining expansions are optional: 卒去 そっきょ, extra 募集 exclusions, 串刺し, additional 匹 counts,
+and an adverb note on 勢い. They were not adopted; the qualified noun passage already avoids denying the adverb sense.
+The author verified Git snapshot, diff provenance and unchanged teaching content across both confirmation stages.
+File-only reviewers could not independently run Git. The first GPT follow-up's two Markdown hard-break spaces were
+removed for the whitespace gate; no report claim was altered.
 
 ### Limits
 
