@@ -515,7 +515,7 @@ the source-only qualification rests on the author's inspected snapshot, not that
 
 Cards: 島 州 巨 巻 布 希 帯 帽 幅 干 幼 庁 床 底 府.
 
-Status: **initial reviews reconciled; changed-passage confirmations pending**. The common scope is all 15 new kanji,
+Status: **closed after independent dual-model review and changed-passage confirmations**. The common scope is all 15 new kanji,
 the three new supporting articles 巻く, 干す and 庁, all three facets, all 45 curated distractor
 assignments, and 17 existing word-article component-link passages. The only legacy kanji edit is
 大's third wrong answer, 犬, to prevent 巨's size synonym from becoming a defensible default fallback.
@@ -581,7 +581,7 @@ assignments and all 17 related passages. Both considered overlapping legacy answ
 Neither reviewed stroke geometry exhaustively or could independently authenticate Git provenance with file-only
 tools. The author authenticated the clean frozen commit around the reviews. Public lookups are supplemental;
 the correction's spelling and sense conclusions rest on the exact pinned dictionary, not search ordering.
-Changed-passage confirmations will be recorded against the committed correction and actual teaching diff.
+Changed-passage confirmations are recorded below against the committed corrections and actual teaching diffs.
 
 Both original reviewers were resumed sequentially at correction `cce24eef4c57704c3a40fbc490fa80dc694bec50`,
 with their own initial report and the actual three-page teaching diff. Preserved confirmations:
@@ -592,3 +592,11 @@ Claude established one additional direct quiz gap, B07-R1: ぐるぐる's windin
 string-winding picture also admit 巻く. Its exclusion through くるくる is not transitive. The final
 correction adds the direct 巻く/ぐるぐる pair. Claude's new O6/O7 wording and table-placement proposals
 remain optional and are not adopted; the existing notes already convey the alternate reading.
+
+Both original reviewers then confirmed the final one-line exclusion change at
+`ddd5f71dc59f48ebf43d560c4ce3b1c3fbf83827`, sequentially and read-only:
+[GPT](n2-reviews/batch-07-gpt-final.md) and [Claude](n2-reviews/batch-07-claude-final.md).
+Both returned CLEAN on all three facets, with no remaining actionable finding or optional point.
+Claude's B07-R1 is resolved. Both inspected the scene declaration/description, not image bytes or runtime
+selection frequency. The author regenerated the manifest and audited all 105 additions and 316 exact
+source-reading rows; 260 source-set additions remain unauthored.
