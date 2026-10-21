@@ -275,7 +275,7 @@ extraction. Initial source-only readings remain qualified as lookup information.
 
 Cards: 印 卵 厚 双 叫 召 史 各 含 周 咲 喫 営 団 囲.
 
-Status: **independent initial reviews complete; changed-passage confirmation pending**.
+Status: **reviewed**. Both models confirmed the final corrected passages without an actionable remaining defect.
 Evidence: [batch-04.json](n2-batch-sources/batch-04.json), retaining 42 exact Japanese reading rows and
 47 inspected word pairs. New supporting word article: [各地](../words/各地.md), without an inferred vocabulary
 JLPT level. Related edits add component links in 22 existing word articles, preserving their lexical metadata
@@ -350,3 +350,12 @@ Both processes exited without changes. Claude discloses that a repo-wide search 
 ledger line about the 厚 title; it did not open the ledger or rely on that line. This affects the first follow-up's
 strict access claim, not the blind initial comparison. Subsequent confirmation searches are restricted to the
 specific teaching directories and evidence file.
+
+Both original contexts then resumed sequentially at clean snapshot
+`2ba6cbb6e7c5e0af47bd548ea864af8757ba559c`. Each inspected the actual 26-line, two-hunk diff,
+the two revised Notes passages and relevant records. Both returned CLEAN on all three facets; Claude B04-02
+and both remaining localized optional wording points are resolved. Preserved final reports:
+[GPT](n2-reviews/batch-04-gpt-final.md) and [Claude](n2-reviews/batch-04-claude-final.md).
+Neither final confirmation searched the forbidden ledgers/reports. Both processes exited and made no changes.
+The other 12 new pages retain initial dual-model coverage; 厚 and 双 retain first-follow-up coverage.
+The author authenticated the Git snapshots, actual diffs and absence of unrelated teaching changes.
