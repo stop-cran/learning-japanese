@@ -70,7 +70,7 @@ equivalent observations across findings, optional suggestions, limits and per-ca
 
 Source records and structural checks are not native-speaker certification or exhaustive historical analysis.
 Dual-model usefulness is an observation about the reviewed sample, not proof that model bias has been eliminated.
-The pilot's initial and changed-passage GPT/Claude reports are preserved in the review ledger. They found complementary
+The first two batches' initial and changed-passage GPT/Claude reports are preserved in the review ledger. They found complementary
 issues, but the reports also contained unsupported frequency inferences and each missed something the other established.
 Both confirmed the corrected passages without an actionable remaining defect in that scope.
 

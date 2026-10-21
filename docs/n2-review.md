@@ -91,7 +91,7 @@ not a separate upstream re-extraction. Their remaining optional 乱りに alloca
 
 Cards: 個 倍 停 傾 像 億 兆 児 党 兵 冊 再 凍 刊 刷.
 
-Status: **initial reviews reconciled; corrected passages awaiting confirmation**. Evidence:
+Status: **reviewed**. Both models confirmed the corrected passages with no actionable remaining defect in scope. Evidence:
 [batch-02.json](n2-batch-sources/batch-02.json). New supporting word articles:
 [兆候](../words/兆候.md), [児童](../words/児童.md), [兵士](../words/兵士.md),
 [冊子](../words/冊子.md) and [刊行](../words/刊行.md).
@@ -147,3 +147,31 @@ Both initial reviews leave stroke-path geometry and corpus-wide/native-speaker n
 The author's metadata check confirmed that this batch and the remaining legacy two-distractor cards share no tags,
 as Claude reported; absence of shared tags does not itself prevent fallback selection.
 The relevant semantic check found no established direct synonymous answer among those legacy cards.
+
+### Changed-passage confirmation
+
+Both original reviewer contexts were resumed sequentially against the clean committed correction snapshot
+`8f857fe0b6df3afa2847f3733cf56e9d714d9140`. Each received its own preserved initial report and the actual
+179-line, 14-hunk teaching-content diff from `3ec3eeab4373dc84ade3cd189534d1eae55f4033`.
+Both read all nine changed pages with surrounding context: 像, 億, 党, 兵, 刷, 兆候, 児童, 兵士 and 冊子.
+Both reported correctness, scoped coverage and comprehensibility CLEAN for all nine, with no actionable finding.
+The eleven unchanged new pages retain their initial dual-model coverage; the legacy links were not needlessly re-reviewed.
+
+Completed reports: [GPT](n2-reviews/batch-02-gpt-followup.md) and
+[Claude](n2-reviews/batch-02-claude-followup.md). Both processes exited and made no changes.
+The author verified Git state and diff provenance; file-only reviewers could not independently run Git.
+GPT's report counts 15 hunks, but the generated diff contains 14; its nine-page coverage matches the actual changed files.
+
+Remaining suggestions are optional: the unadopted initial expansions/polish, labelling the 兵士 evidence link more explicitly
+on the 兵 card, and moving 兵士's scope caution to another section. They were not adopted because no actionable defect
+was established. Claude confirmed that 学生's usual university-student meaning makes it distinguishable from 児童;
+it did not recommend adding that exclusion. Both confirmed the adopted 生徒 safeguard and the サイン overlap.
+Claude labels the 兵法 clarification resolved; the stronger initial diagnosis remains calibrated as optional above.
+
+### Limits
+
+No live-app quiz execution, native-speaker certification or exhaustive stroke-path audit is claimed.
+The source packet's new 兵法 pair and 兵士 citation received current-record inspection, not an independent
+re-extraction of the upstream dictionaries. Public dictionary corroboration may change after retrieval.
+The source-only character readings remain qualified, not ordinary-use recommendations.
+The 13 legacy word-link edits received related-context review, not fresh comprehensive teaching-text review.
