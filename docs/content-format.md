@@ -218,7 +218,7 @@ in contributor source records, and leave unestablished cases unclassified.
 
 The [reviewed introduction pilot](grammar-introductions-pilot.json) supplies the initial 19 labels: six before/after and nine
 action-stage exercises at N4, and four expectation/obligation exercises at N3. The other four koto/wake exercises in the mixed pilot
-file remain unclassified, as do the other 464 exercises, including all 60 conditionals and 26 のに follow-up questions. The same three pilot groups
+file remain unclassified, as do the other 500 exercises, including all 60 conditionals, 26 のに and 36 listing questions. The same three pilot groups
 are annotated as optional `introductionGroups` in their declaring files, with one recommendation from temporal sequence
 to action stages and no genuine prerequisites.
 
@@ -264,14 +264,17 @@ native-speaker certification. Non-BMP and conflicting-reading cases are syntheti
 Remaining prompts are explicitly `pending`, never silently counted as covered.
 
 The two conditionals additions extended this inventory without reinitializing it to 461 exercises in 34 files and
-**64/461** vocabulary coverage. The のに follow-up adds 26 author-reviewed prompts, bringing the current corpus to
-487 exercises in 35 files and vocabulary coverage to **90/487**. All 397 original pending records remain pending,
+**64/461** vocabulary coverage. The のに follow-up added 26 author-reviewed prompts, reaching 487 exercises in
+35 files and **90/487** coverage. The listing follow-up adds another 36, bringing the current corpus to
+523 exercises in 36 files and vocabulary coverage to **126/523**. All 397 original pending records remain pending,
 the baseline revision stays unchanged, and the inventory remains at `stage: "pilot"`. The first 30 subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the
 [initial conditionals record](grammar-conditionals-sources.json) and
 [second-batch record and coverage](grammar-conditionals-contexts-sources.json).
 The [のに record](grammar-noni-sources.json) keeps author, independent and reconciliation verdicts tied to their snapshots.
+The [listing record](grammar-listing-sources.json) keeps article and initial exercise reviews tied to their
+own snapshots, with subsequent editorial refinements tracked separately.
 
 `python tools/grammar_vocabulary.py check` is the maintained repository's publication gate, separate from the app's optional import contract.
 Records bind file/ID, exact prompt, full exercise context (including answers), and annotation payload. Reviewed spans plus explicitly
@@ -869,8 +872,8 @@ The opening and composition questions explicitly name their uncontracted standar
 other registers or paraphrases.
 
 All 26 prompts have reviewed vocabulary support: 182 lexical spans, 93 linked occurrences across 71 canonical identities,
-and 89 local-only glosses. All 461 preceding exercises and vocabulary records are preserved; the inventory remains `pilot`
-with 90/487 reviewed prompts and the original 397 pending. This batch adds no JLPT classifications.
+and 89 local-only glosses. At publication, all 461 preceding exercises and vocabulary records were preserved;
+the inventory was `pilot` with 90/487 reviewed prompts and the original 397 pending. This batch added no JLPT classifications.
 
 The unpublished `noni-rain-preparation` was retired after independent review could not settle its explanation of
 outcome-open causal past はずだったので. The new `noni-train-arrival-preparation` instead practices current
@@ -883,6 +886,45 @@ Full register paradigms, unrestricted connector choice, speech-act restrictions 
 outside the initial set. The original publication used one correct base button. The separate
 [Android #47 presentation pilot](grammar-multi-correct-sources.json) subsequently adds optional choose-any metadata to
 three of these existing exercises without changing their prompts, typed answers or linguistic coverage.
+
+### Listing, examples and addition
+
+`listing-and-examples.json` adds 36 exercises linked to the
+[listing article](../articles/japanese-listing-and-examples.md); the
+[source and coverage record](grammar-listing-sources.json) separates the article, initial exercise review
+and subsequent editorial reconciliation snapshots. The reviewed article remains unchanged.
+
+Six introduction groups contain six questions each: noun lists/single examples; たり forms;
+plain し/basic て attachment; examples/variation/denial; inclusion/alternatives/suggestions;
+and added facts/reasons/the のに bridge. Their 14 facets each have multiple example keys.
+Three recommendations are soft links; there are no hard prerequisites. There are 24 completion tasks
+and 12 meaning-identification tasks, with 73 accepted renderings overall. Meaning labels and readings are
+defined before answering; these questions are not counted as connector-production tasks.
+
+Three noun-list questions accept と／や／とか; three single-example questions accept など／とか;
+two invitations accept でも／など／とか. These eight questions have 13 substantive
+`additionalCorrectOptions`, using the existing choose-any presentation rather than making valid alternatives
+wrong buttons. All typed alternatives remain accepted regardless of which buttons are displayed.
+The visible instructions allow the relevant framing differences and bound the short-connector pool.
+Formation drills explicitly request たり, short plain し or basic て/で; parallel も and plain か tasks
+also name their patterns. They do not claim unrestricted exclusive choice among otherwise natural formulations.
+
+Practice includes a single たり example, verb/adjective/noun formation, item-level negation versus final denial,
+alternating opposite states without a required third state, one stated reason with し, noncausal added facts,
+いい → よくて, neither A nor B, and retained に in にも. Polite/expanded し paradigms, verb て formation,
+clausal とか, sentence-final suspended し, advanced listing forms and full formal-noun comparisons remain
+outside this initial practice batch; the article and existing related sets supply navigation, not proof of
+independently practiced coverage.
+
+All 36 prompts have author-reviewed vocabulary: 157 lexical spans, 152 linked occurrences across 90 canonical
+identities, and five local-only glosses. All 487 prior exercises and vocabulary records are unchanged.
+The inventory remains `pilot`, with 126/523 reviewed prompts and the same 397 pending.
+This batch adds no JLPT classifications or app/schema changes. The initial exercise snapshot received
+independent linguistic review; its blinding qualification is retained in the source record.
+Subsequent optional refinements clarify one malformed distractor and shorten the twelve meaning-task
+instructions by about 20%, preserving all label-definition wording, readings and decisive scenario text.
+The Japanese prompts, answer sets, option identities, vocabulary and group memberships are unchanged.
+The source record distinguishes the initial review from reconciliation of these refinements.
 
 ## Links and safety
 
