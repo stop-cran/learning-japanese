@@ -400,8 +400,8 @@ These are judgments about the initial snapshot, not the following corrections.
 
 | Report | Observation | Disposition and evidence |
 | --- | --- | --- |
-| GPT F01 | 傾城's courtesan example lacks historical-register context | Resolved in the teaching text, pending reviewer confirmation. The author fetched the exact Kotobank page and inspected the Nipponica heading 傾城（花魁、娼妓） けいせい, not the page's separate けいせん heading or dance entry. It explicitly says the term largely fell out of use after the Meiji period. The row and note now qualify the courtesan term; セイ and the valid example are retained. The external source and exact short evidence are recorded in batch-05.json. |
-| Claude B05-O-04 | The 姓 card cites the 名字/苗字 entry without mentioning either word | Optional source/text alignment adopted: the note briefly compares both family-name words with 姓名. The two exact spelling/reading records were already inspected and retained before review, chiefly for the companion word article. No new frequency or register claim is inferred. |
+| GPT F01 | 傾城's courtesan example lacks historical-register context | Resolved and confirmed by both reviewers. The author fetched the exact Kotobank page and inspected the Nipponica heading 傾城（花魁、娼妓） けいせい, not the page's separate けいせん heading or dance entry. It explicitly says the term largely fell out of use from the Meiji period onward. The row and note now qualify the courtesan term; セイ and the valid example are retained. The external source and exact short evidence are recorded in batch-05.json. |
+| Claude B05-O-04 | The 姓 card cites the 名字/苗字 entry without mentioning either word | Optional source/text alignment adopted: the note briefly compares the family-name word's two spellings with 姓名. The two exact spelling/reading records were already inspected and retained before review, chiefly for the companion word article. No new frequency or register claim is inferred. |
 | Claude B05-O-08 | The 記入 comparison gives only an abstract attachment pattern | Optional clarity adopted: a concrete blank-field example with kana and translation now contrasts the particles in 空欄に名前を記入する and 空欄を埋める. The general particle distinction is preserved, not replaced with a universal substitution rule. |
 | Claude B05-O-01, O-02 | Add castle-name じょう and 心境 examples | Optional expansion not adopted. Existing companion articles already explain the uses; the current cards have verified examples for all their indicated readings. |
 | Claude B05-O-03 | Add 塊 as another かたまり spelling | Optional expansion not adopted. The existing 固まり example is valid; the report does not establish that its omission is a defect. Priority flags do not independently establish relative frequency. |
@@ -421,3 +421,18 @@ the legacy word changes as links only and 中's change as a single distractor-li
 clean snapshot. Reviewers could not run Git. Claude checked stroke counts and the pinned revision; neither
 reviewer exhaustively inspected geometry. Claude fetched no public dictionary pages, while GPT's consequential
 register finding used an independently inspected public entry.
+
+### Changed-passage confirmation
+
+Both original contexts resumed sequentially at clean correction snapshot
+`ae79da1aa5ea5b20c91d356f3490e1bababa46de`, receiving their own initial report and the actual 59-line,
+four-hunk teaching diff. Both reviewed 城, 姓 and 埋める on all three facets, returned CLEAN and confirmed
+the substantive correction and both adopted optional points. Both independently fetched the exact Nipponica entry.
+Preserved reports: [GPT](n2-reviews/batch-05-gpt-followup.md) and
+[Claude](n2-reviews/batch-05-claude-followup.md). Both processes exited without changes.
+
+Both noted one optional translation precision: 明治以後 means from Meiji onward, not strictly after that
+period ended. The teaching note and source claim now use the exact chronology. Claude also suggested making
+名字/苗字's shared lexical identity explicit, naming the 空欄を埋める example instead of an ambiguous
+"form-filling example," and using 記入する rather than describing the noun 記入 as a verb.
+These narrow improvements are adopted; final confirmation of these Notes passages is pending.
