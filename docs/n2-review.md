@@ -605,7 +605,7 @@ source-reading rows; 260 source-set additions remain unauthored.
 
 Cards: 庫 延 弱 律 復 快 恋 患 悩 憎 戸 承 技 担 拝.
 
-Status: **initial dual-model review complete; corrections awaiting changed-passage confirmation**. Scope: all 15 new kanji,
+Status: **reviewed and reconciled**. Scope: all 15 new kanji,
 the new supporting article 憎む, all three facets, all 45 curated distractor assignments, and
 22 existing word-article component-link passages. No legacy kanji card is edited.
 
@@ -634,7 +634,7 @@ and 16-point format.
   嫌う and 嫌い; its vocabulary JLPT level is not inferred from 憎.
 - The author mechanically verified all 22 existing word edits as component links only. The content
   validator reports zero errors; the audit covers all 120 additions and 366 exact source-reading rows.
-  Structural success does not establish linguistic correctness; changed-passage confirmation remains pending.
+  Structural success does not establish linguistic correctness; independent review and its limits are recorded below.
 
 ### Independent initial reviews
 
@@ -651,13 +651,13 @@ the corrected passages.
 
 ### Initial-finding reconciliation
 
-The following corrections are adopted and await changed-passage confirmation.
+The following adopted corrections are resolved and confirmed by both reviewers.
 
 | Report | Observation | Disposition and evidence |
 | --- | --- | --- |
-| GPT B08-GPT-01; Claude O5 and Limits | 恋う's register is unexplained; special conjugations could be shown | Adopted. The author fetched the exact English Wiktionary Japanese こう verb entry, which explicitly labels its miss/love sense literary and gives 恋うて/恋うた. The row and note now state these facts and cite that secondary source. The pinned JMdict establishes the verb and special-class godan classification, not the literary label. Attempts to find a rendered publisher-dictionary register label did not establish one; a generated search claim about Kenkyusha was not accepted as an inspected entry. |
-| Claude B08-01 | 庫 くら lacks spelling/reading-status context | Adopted as recognition guidance, not a frequency finding. The author downloaded and extracted the official 2010 Joyo table: PDF p. 50 lists コ and ク for 庫, not くら. The complete pinned JMdict entry 1592380 confirms 蔵/倉/庫, now preserved in the packet. The card qualifies 庫 くら without claiming that dictionary order or table absence proves which spelling is usual or rare. |
-| Claude B08-02 | 承ける lacks spelling/reading-status context | Adopted as recognition guidance, not a comparative-frequency finding. Official-table PDF p. 79 lists ショウ and うけたまわる for 承, not ジョウ or うける. The note distinguishes a recognition example from a general replacement for 受ける. Full pinned entry 1329590 already preserves 受ける/請ける/承ける/享ける and its sense notes; the linguistic be-modified-by note is now identified without an invented example. |
+| GPT B08-GPT-01; Claude O5 and Limits | 恋う's register is unexplained; special conjugations could be shown | Resolved. The author fetched the exact English Wiktionary Japanese こう verb entry, which explicitly labels its miss/love sense literary and gives 恋うて/恋うた. The row and note now state these facts and cite that secondary source. The pinned JMdict establishes the verb and special-class godan classification, not the literary label. Attempts to find a rendered publisher-dictionary register label did not establish one; a generated search claim about Kenkyusha was not accepted as an inspected entry. |
+| Claude B08-01 | 庫 くら lacks spelling/reading-status context | Resolved as recognition guidance, not a frequency finding. The author downloaded and extracted the official 2010 Joyo table: PDF p. 50 lists コ and ク for 庫, not くら. The complete pinned JMdict entry 1592380 confirms 蔵/倉/庫, now preserved in the packet. The card qualifies 庫 くら without claiming that dictionary order or table absence proves which spelling is usual or rare. |
+| Claude B08-02 | 承ける lacks spelling/reading-status context | Resolved as recognition guidance, not a comparative-frequency finding. Official-table PDF p. 79 lists ショウ and うけたまわる for 承, not ジョウ or うける. The note distinguishes a recognition example from a general replacement for 受ける. Full pinned entry 1329590 already preserves 受ける/請ける/承ける/享ける and its sense notes; the linguistic be-modified-by note is now identified without an invented example. |
 | Claude O1 | "Specifically associates/assigns" overstates JMdict's "esp." | Optional precision adopted in 延 and 承: use especially and explicitly avoid an exclusive spelling rule. The pinned sense notes, not a live mirror's entry order, support the change. |
 | Claude O2 | 悩's "undotted row" wording is source jargon | Optional clarity adopted: explain the actual spelling 悩み and final kana directly. |
 | Claude O3 | 戸's "house counter" title can suggest a countertop | Optional clarity adopted: "door; counter for households." Meaning, readings and curated wrong choices remain unchanged; the title remains unique. |
@@ -685,3 +685,28 @@ authenticated the clean Git snapshot and exact 58-file scope, mechanically verif
 and audited source readings and strokes. File-only reviewers could not authenticate Git or reproduce upstream
 downloads; neither exhaustively inspected stroke geometry. External register evidence remains secondary,
 not native-speaker certification or an exhaustive corpus result.
+
+### Changed-passage confirmation
+
+Both original reviewer contexts resumed sequentially at clean correction snapshot
+`be11959de0714d98c0f7a7d95bdbc8e687d86fc6`, receiving their own initial report, the actual
+146-line, seven-hunk teaching diff and the six corrected pages. Both returned CLEAN on correctness,
+scoped coverage and comprehensibility, confirmed the adopted observations, and established no new defect
+or regression. Preserved reports: [GPT](n2-reviews/batch-08-gpt-followup.md) and
+[Claude](n2-reviews/batch-08-claude-followup.md). Both processes exited without changes before the next
+started. The remaining nine kanji, supporting word and legacy passages retain initial dual-model coverage.
+
+Both fetched the exact Wiktionary verb entry. Neither independently reproduced the binary government PDF
+extraction: GPT read the author's bounded receipt; Claude also attempted the official fetch, which timed out,
+and retained its earlier independent dictionary-table check. The author downloaded, hashed and extracted
+the government PDF directly. Both reports disclose this evidence boundary instead of treating a supplied
+hash as a reproduced one. The linguistic description of JMdict's be-modified-by sense follows its gloss;
+the packet does not supply a separate Linguistics field tag.
+
+Claude additionally checked teaching-directory title/distractor headers and relevant house-related cards
+for the revised 戸 title. It offered four optional points, not defects: quotation marks around especially
+and be modified by, an added 伸ばす contrast, a repeated table-status label in 承's ジョウ row, and a shorter
+悩 note. No further teaching edit is needed: the current notes already state the relevant qualifications.
+The proposed absolute "悩 alone is not read なやみ" is not adopted because the source retains that character
+reading; the current note correctly concerns the noun's written spelling rather than denying the metadata.
+No actionable defect or consequential unresolved claim remains in the corrected scope.
