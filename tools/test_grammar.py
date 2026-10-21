@@ -65,6 +65,44 @@ class GrammarValidationTests(unittest.TestCase):
                 self.assertEqual([], problems)
 
     @staticmethod
+    def add_correct_options(data):
+        exercise = data["exercises"][0]
+        exercise["acceptedAnswers"] += ["alternate", "another"]
+        exercise["additionalCorrectOptions"] = [
+            dict(id="alternate-realization", label="alternate", rationale="A fitting alternative."),
+            dict(id="another-realization", label="another", rationale="Another fitting alternative."),
+        ]
+
+    def test_authored_additional_options_and_legacy_projection(self):
+        self.assertEqual([], self.check(self.add_correct_options)[1])
+        self.assertEqual([], self.check(lambda d: d["exercises"][0].update(additionalCorrectOptions=[]))[1])
+        self.assertEqual([], self.check(lambda d: (
+            self.add_correct_options(d), d["exercises"][0].pop("additionalCorrectOptions"),
+        ))[1])
+
+    def test_rejects_invalid_additional_grading_metadata(self):
+        changes = [
+            lambda e: e.update(additionalCorrectOptions=None),
+            lambda e: e.update(additionalCorrectOptions={}),
+            lambda e: e.update(additionalCorrectOptions=["alternate"]),
+            lambda e: e["additionalCorrectOptions"][0].update(id="alpha"),
+            lambda e: e["additionalCorrectOptions"][0].update(id="another-realization"),
+            lambda e: e["additionalCorrectOptions"][0].update(id=3),
+            lambda e: e["additionalCorrectOptions"][0].update(id="Not a slug"),
+            lambda e: e["additionalCorrectOptions"][0].update(label="甲"),
+            lambda e: e["additionalCorrectOptions"][0].update(label="not accepted"),
+            lambda e: e["additionalCorrectOptions"][0].update(label=""),
+            lambda e: e["additionalCorrectOptions"][0].update(label=True),
+            lambda e: e["additionalCorrectOptions"][0].update(rationale=" "),
+            lambda e: e["additionalCorrectOptions"][0].update(unexpected=True),
+            lambda e: e["additionalCorrectOptions"][1].update(label="ａｌｔｅｒｎａｔｅ"),
+            lambda e: e["options"][1].update(label="alternate"),
+        ]
+        for change in changes:
+            with self.subTest(change=change):
+                self.assertTrue(self.check(lambda d: (self.add_correct_options(d), change(d["exercises"][0])))[1])
+
+    @staticmethod
     def add_vocabulary(data):
         exercise = data["exercises"][0]
         exercise["prompt"] = "𠮷野の生物は____。生物を食べる。"

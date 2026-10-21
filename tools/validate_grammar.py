@@ -98,7 +98,7 @@ def check_grammar(err, root: Path = ROOT) -> int:
             continue
         covered = {ident: set() for ident in relation_map}
         for exercise in exercises:
-            if not isinstance(exercise, dict) or set(exercise) - {"jlpt", "vocabulary"} != {
+            if not isinstance(exercise, dict) or set(exercise) - {"jlpt", "vocabulary", "additionalCorrectOptions"} != {
                     "id", "target", "relationship", "prompt", "translation", "evidence",
                     "explanation", "answer", "acceptedAnswers", "options"}:
                 err(path, "each exercise has an invalid shape")
@@ -158,6 +158,7 @@ def check_grammar(err, root: Path = ROOT) -> int:
             answer_labels = [option["label"] for option in options if option["id"] == target]
             if len(answer_labels) == 1 and answer_labels[0] not in accepted:
                 err(path, f"{ident}: acceptedAnswers must include the answer option label")
+            _check_additional_options(err, path, exercise, normalized_answers, normalized_labels)
         for ident, members in relation_map.items():
             if not members <= covered.get(ident, set()):
                 err(path, f"{ident}: exercises must target every construction in the relationship")
@@ -168,6 +169,34 @@ def check_grammar(err, root: Path = ROOT) -> int:
     groups = {path: items for path, items in groups.items() if path not in failed}
     _check_group_references(err, groups)
     return len(files)
+
+
+def _check_additional_options(err, path, exercise, accepted, labels):
+    additional = exercise.get("additionalCorrectOptions", [])
+    ident = exercise["id"]
+    if not isinstance(additional, list):
+        err(path, f"{ident}: additionalCorrectOptions must be an array, or omitted")
+        return
+    seen_ids = {option["id"] for option in exercise["options"] if isinstance(option["id"], str)}
+    seen_labels = set(labels)
+    for option in additional:
+        if not isinstance(option, dict) or set(option) != {"id", "label", "rationale"}:
+            err(path, f"{ident}: additional correct options need exactly id, label and rationale")
+            continue
+        option_id = option["id"]
+        if not isinstance(option_id, str) or not ID.fullmatch(option_id) or option_id in seen_ids:
+            err(path, f"{ident}: additional option IDs must be distinct lowercase slugs")
+        else:
+            seen_ids.add(option_id)
+        if any(not isinstance(option[key], str) or not option[key].strip() for key in ("label", "rationale")):
+            err(path, f"{ident}: additional options need nonblank labels and rationales")
+            continue
+        label = unicodedata.normalize("NFKC", option["label"].strip())
+        if label in seen_labels:
+            err(path, f"{ident}: all option labels must remain distinct after answer normalization")
+        seen_labels.add(label)
+        if label not in accepted:
+            err(path, f"{ident}: additional correct option label must be an accepted typed answer")
 
 
 def _shape(value, required, optional=()):

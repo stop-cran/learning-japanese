@@ -1,0 +1,75 @@
+{
+  "workItem": "https://github.com/stop-cran/kanji-cards-android/issues/47",
+  "baselineCommit": "5bf20e9dbdfa99535ef0b89d1d36e09668a18f93",
+  "exerciseFile": "grammar/noni-contrasts.json",
+  "exerciseSha256": "6ac6292690dfd4d036a8916c1f98c9085bf75d54d5a404f35eb9a214c200c472",
+  "vocabularyInventorySha256": "f831485f7c56855b682bba2caa89bca2bc2edc606024deb30ca5e7e986c7c5bb",
+  "scope": "Add four explicitly authored correct-option realizations to three previously reviewed exercises. No new exercises, typed answers, prompts, targets, articles or lexical annotations. This is a presentation pilot, not expanded linguistic coverage.",
+  "historicalReview": {
+    "record": "docs/grammar-noni-sources.json",
+    "qualification": "The original source/review record describes the original single-button publication snapshot and is preserved unchanged. Its linguistic evidence is reused here; external sources were not freshly reverified for these metadata additions."
+  },
+  "exercises": [
+    {
+      "id": "noni-small-room-capacity",
+      "additionalIds": ["wari-ni"],
+      "additionalLabels": ["わりに"],
+      "basis": "The reviewed visible unmocking task and explanation explicitly accept size-relative assessment alongside のに counterexpectation."
+    },
+    {
+      "id": "noni-beginner-neat-work",
+      "additionalIds": ["wari-ni"],
+      "additionalLabels": ["のわりに"],
+      "basis": "The reviewed task accepts beginner-relative assessment without teasing or reproach; noun + のわりに contrasts with noun-predicate + なのに."
+    },
+    {
+      "id": "noni-leader-uninformed",
+      "additionalIds": ["wari-ni", "kuse-ni"],
+      "additionalLabels": ["のわりに", "のくせに"],
+      "basis": "The reviewed critical task explicitly permits responsibility-relative assessment and stronger reproach, without requiring a single strongest marker. Only one added family is displayed alongside なのに per multi-correct appearance."
+    }
+  ],
+  "authorReview": {
+    "reviewer": "gpt-6-astra",
+    "correctness": "CLEAN",
+    "scopedCoverage": "CLEAN",
+    "comprehensibility": "CLEAN",
+    "notes": "Checked all four labels/rationales against the complete existing prompt, visible instruction, evidence, explanation and accepted answers. Preserved the distinct framing and noun attachment rather than claiming universal synonymy."
+  },
+  "planReview": {
+    "reviewer": "grammar47-plan-reviewer",
+    "actualModel": null,
+    "verdict": "APPROVE",
+    "comment": "https://github.com/stop-cran/kanji-cards-android/issues/47#issuecomment-6315720791",
+    "limits": "Read-only plan and pilot-context review; final rationale text and implementation were not yet present."
+  },
+  "preservation": {
+    "legacyExerciseProjectionUnchanged": true,
+    "unchangedVocabularyPayloads": 26,
+    "refreshedInventoryRecords": 3,
+    "unchangedInventoryRecords": 484,
+    "reviewedPrompts": 90,
+    "pendingPrompts": 397,
+    "baselineAndroidImporter": "Executed on unchanged Android 9b7cc6d with the new metadata: one test, zero skips/failures/errors."
+  },
+  "implementationReview": {
+    "reviewer": "grammar47-implementation-reviewer",
+    "actualModel": null,
+    "codeVerdict": "No actionable issues",
+    "correctness": "CLEAN",
+    "scopedCoverage": "CLEAN",
+    "comprehensibility": "CLEAN",
+    "scope": "Final four labels/rationales against all three complete visible tasks; companion metadata diff; app implementation, new choice tests and Room schema comparison.",
+    "limits": "Static review and narrow in-memory checks, not independent JVM/emulator execution or renewed external source verification."
+  },
+  "authorValidation": {
+    "grammarTests": 150,
+    "contentErrors": 0,
+    "androidJvmTests": 391,
+    "androidJvmSkipped": 0,
+    "androidJvmFailures": 0,
+    "localAnalyzerTests": 11,
+    "emulator": "Isolated test package on Pixel 9: naturally sampled two-correct question; both correct highlights after a wrong answer and give-up; accepted noun alternative used in the completed prompt; order preserved through vocabulary navigation and rotation.",
+    "physicalDevice": "Not tested"
+  }
+}

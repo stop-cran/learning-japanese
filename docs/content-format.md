@@ -312,18 +312,27 @@ identity for the shared learning task, not separate identities for equivalent an
 Do not cap it at one or two answers for quiz convenience. Check meaningful alternative constructions as well as spelling
 variants; all entries must fit the literal blank and the question-side instructions.
 
-**Fixed-option quiz, schema version 1:** author exactly one correct displayed option, representing the accepted answer class,
+**Fixed-option quiz, schema version 1:** author exactly one correct base option in `options`, representing the accepted answer class,
 plus genuinely unsuitable alternatives. The single `answer` ID equals `target`; the other accepted forms must not appear
 as wrong buttons. The model option's label must itself be in `acceptedAnswers`. The app shuffles option order; it does not
 automatically rotate the model label through the accepted forms. Different examples can use different representative
 forms without claiming independent discrimination between equivalents.
 The validator rejects duplicate option labels and distractors that collide with accepted answers after trim/NFKC normalization.
 
-An occasional activity with two correct displayed options is a separate possible design, not supported by this schema.
-It would need an explicit choice between "choose any acceptable answer" and "select all acceptable answers", with matching
-instructions, answer representation and grading. Do not simulate it by marking a natural alternative wrong, or assume
-that adding it to `acceptedAnswers` changes option grading. Keep one correct button in the current mode.
-This future interaction is tracked as [Android TBD work item #47](https://github.com/stop-cran/kanji-cards-android/issues/47).
+**Optional choose-any alternatives ([Android #47](https://github.com/stop-cran/kanji-cards-android/issues/47)):**
+`additionalCorrectOptions` is an optional array of `{id, label, rationale}` objects; omission or an empty array keeps single-answer
+presentations. Each field must be a nonblank string. IDs are exercise-local lowercase slugs, distinct from all base/additional IDs;
+they name realizations, not new construction targets or schedules. Every label must be a normalized accepted typed answer, and
+all labels across both lists must be distinct after trim/NFKC normalization. Null, malformed declarations and accepted distractors
+are rejected. Keep the original base options valid: older clients ignore this field and continue safely with one correct button.
+
+Author meaningful alternatives explicitly, with their contextual/register/attachment differences; do not turn spelling variants
+into additional buttons automatically. The app independently samples 20% of eligible Grammar choice appearances, appending one
+random authored alternative to the primary and all genuine distractors. Each such question therefore shows exactly two correct
+options even when more alternatives are authored. Other appearances keep the base options; typed acceptance has no one/two-answer cap.
+The instruction is choose any one correct answer, not select all. One tap creates one answer, not a separate review per alternative.
+After a wrong choice or give-up both displayed correct options are highlighted, with the selected wrong option marked separately.
+The [three-example pilot record](grammar-multi-correct-sources.json) preserves the original のに linguistic-review provenance.
 
 **Learner feedback:** explain why the substantive alternatives work here and any relevant differences in meaning, register
 or attachment. Do not describe the model as the only valid answer when others are accepted. Group spelling variants rather
@@ -871,8 +880,9 @@ This removes the unsettled claim from practice without declaring the retired sen
 
 The article gives a short ても / sentence-final のに bridge, not independently assessed coverage of those uses.
 Full register paradigms, unrestricted connector choice, speech-act restrictions and other concessive neighbors remain
-outside the initial set. Multiple correct displayed options remain separate work in
-[Android #47](https://github.com/stop-cran/kanji-cards-android/issues/47); no app/schema change is made here.
+outside the initial set. The original publication used one correct base button. The separate
+[Android #47 presentation pilot](grammar-multi-correct-sources.json) subsequently adds optional choose-any metadata to
+three of these existing exercises without changing their prompts, typed answers or linguistic coverage.
 
 ## Links and safety
 
