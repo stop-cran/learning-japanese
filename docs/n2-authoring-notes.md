@@ -83,6 +83,9 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   as a frequency ranking, or an alternative spelling as an invalid word.
 - Separate a whole-word ateji label from a claim about each character's purely phonetic role. Batch 04's 布団 note
   now states the source's whole-spelling label without inventing a component-by-component derivation.
+- Narrowing an overbroad technical explanation should not remove the term's only learner-facing gloss. The first
+  batch 04 団 correction did that to "ateji"; the follow-up restores a short qualified explanation while retaining
+  the whole-word versus component-role distinction.
 
 ## Review and checkpoint protocol
 

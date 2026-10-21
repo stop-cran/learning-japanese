@@ -329,3 +329,24 @@ Both inspected 45 distractor assignments over 40 distinct cards. The author sepa
 changes mechanically as links only, and authenticated the clean Git snapshot. File-only reviewers could not run Git.
 Claude inspected stroke-file existence, source revision and counts; neither reviewer exhaustively audited geometry.
 The source-only readings remain qualified; dictionary attestation is not native-speaker or corpus-wide certification.
+
+### Changed-passage review and localized correction
+
+Both original reviewer contexts resumed sequentially at the clean correction snapshot
+`3ba67bec5c4de79238be4ef25c3b2929d541485c`, with their own original reports and the actual 60-line,
+five-hunk teaching diff. Both read the four changed pages and the relevant evidence. Reports:
+[GPT](n2-reviews/batch-04-gpt-followup.md) and [Claude](n2-reviews/batch-04-claude-followup.md).
+Both confirmed the spelling clarification and initial optional points addressed; GPT found all four pages CLEAN.
+Claude found new minor comprehensibility issue B04-02 on 団: removing the overbroad explanation had also removed the
+only gloss for "ateji". This was a regression in the adopted suggestion, not evidence against the whole-word label.
+
+The new note restores a qualified plain-language gloss and quotes "cloth association" to identify the literal
+component translation being rejected. 咲's note now names こうしょう rather than using "this word" after a different
+example. These are two localized Notes changes, not a reopened full-batch assignment.
+Claude's second-stage term-gloss finding is a useful unique contribution on the common corrected snapshot.
+The author accepted it against the changed paragraph and the repository's explain-technical-terms guidance.
+
+Both processes exited without changes. Claude discloses that a repo-wide search incidentally returned one forbidden
+ledger line about the 厚 title; it did not open the ledger or rely on that line. This affects the first follow-up's
+strict access claim, not the blind initial comparison. Subsequent confirmation searches are restricted to the
+specific teaching directories and evidence file.
