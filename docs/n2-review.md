@@ -175,3 +175,20 @@ The source packet's new 兵法 pair and 兵士 citation received current-record 
 re-extraction of the upstream dictionaries. Public dictionary corroboration may change after retrieval.
 The source-only character readings remain qualified, not ordinary-use recommendations.
 The 13 legacy word-link edits received related-context review, not fresh comprehensive teaching-text review.
+
+## Batch 03
+
+Cards: 券 刺 則 副 劇 効 勇 募 勢 包 匹 区 卒 協 占.
+
+Status: **draft checkpoint; independent review pending**.
+Evidence: [batch-03.json](n2-batch-sources/batch-03.json), retaining 44 exact Japanese reading rows and
+63 inspected word pairs. Supporting word articles:
+[副作用](../words/副作用.md), [募集](../words/募集.md) and [匹敵](../words/匹敵.md).
+No vocabulary JLPT levels are inferred. Related edits add component links in 20 existing word articles without
+changing their lexical metadata or teaching text. All 15 new kanji have three curated wrong answers;
+no direct synonymous label was established with the remaining legacy two-distractor cards.
+
+The lookup-only rows are 効 `ききめ`/`なら.う`, 勢 `はずみ`, 区 `オウ`/`コウ`,
+and 卒 `お.える`/`ついに`/`にわか`. Search-only 卒える is not a recommended word example.
+Kanjipedia independently supports 卒わる for `お.わる`; the source record identifies that external evidence
+separately from JMdict. Alternate-reading examples link only when they match the existing word article's reading.

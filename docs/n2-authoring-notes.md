@@ -51,6 +51,17 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   number-neutral uses, then add direct pairs: a shared exclusion through 本 does not exclude 冊子/図書.
 - Distinguish a useful alternate-reading clarification from an incorrect-reading finding. Batch 02's
   兵法 ひょうほう was valid before adding へいほう; dictionary order alone does not establish relative frequency.
+- Batch 03's 卒える is flagged as a search-only spelling. Such an index form is not an ordinary example merely because
+  it occurs in a dictionary record. Exclude search-only forms from Common words and label any retained index evidence.
+- Verify the written okurigana boundary as well as the whole-word kana. 効き目 ききめ and 勢み はずみ do not establish
+  that a single 効 or 勢 ordinarily spells the entire reading. For 卒's `お.わる`, Kanjipedia explicitly lists 卒わる;
+  JMdict's different rare spelling 卒る does not by itself demonstrate that boundary.
+- Automatic word links must match the article's primary reading, not just its filename. Batch 03's 包む くるむ
+  must not link to the existing つつむ article; 大勢 たいせい must not link as though it were おおぜい.
+- The current candidate cache retains only spellings containing selected N2 characters. Its missing non-N2 aliases
+  are an extraction limit, not evidence that those spellings or independent entries are absent from JMdict.
+- Web-search generated prose can disagree with its own citation URLs. In batch 03, a purported 副作用 URL resolved
+  to 文七元結. Inspect the fetched headword and actual definition; do not treat the generated quotation as dictionary evidence.
 
 ## Review and checkpoint protocol
 
