@@ -518,7 +518,7 @@ Claude's later roughness finding and the author's additional safeguards.
 Neither the final confirmations nor the bounded candidate sweeps
 establish exhaustive synonymy or native-fluency certification.
 
-Batch 20 is authored, not independently review-closed. Its fifteen kanji
+Batch 20 has independent initial reviews and changed-passage confirmations. Its fifteen kanji
 and one supporting word, 蒸す, bring the authored total to 300 additions
 and 907 exact reading rows. Counts are 920 kanji, 3,266 words and 302
 selected N2 characters; 65 additions remain unauthored. The 59 new rows
@@ -549,5 +549,7 @@ Context-bound phrases such as "close friend" do not automatically
 inherit every dictionary meaning of bare "close." Claude's optional
 裏面 うらめん clarification and cleaner 補 distractor were also adopted.
 These complementary observations are useful sample-specific evidence,
-not a model ranking or a guarantee of completeness. Original-reviewer
-confirmation of the corrected passages remains pending.
+not a model ranking or a guarantee of completeness. Both original reviewers
+subsequently marked all five corrected pages CLEAN on correctness, scoped
+coverage and comprehensibility. The first twenty batches are review-closed;
+optional citation/link polish was not used to prolong confirmation.

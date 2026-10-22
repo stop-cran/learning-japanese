@@ -2227,7 +2227,7 @@ remain unauthored. These confirmations are bounded editorial
 judgments and author-run structural checks, not runtime-quiz testing,
 exhaustive stroke-path review or native-speaker certification.
 
-## Batch 20: 蒸蔵薄虫血衣袋被装裏補複角触訓 - authored, review pending
+## Batch 20: 蒸蔵薄虫血衣袋被装裏補複角触訓 - review-closed
 
 **Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke
 files; one supporting word article, 蒸す; twenty-one older word articles
@@ -2350,3 +2350,44 @@ links only, and no older kanji or stroke asset changed. Counts remain
 59-file batch scope includes the two initial reports. Changed-passage
 confirmation by the original reviewers is still pending; batch 20 is
 not yet review-closed.
+
+### Changed-passage confirmation and closure
+
+The twelve-file correction was committed as
+`d14467be49e710ad2c59a881fbf9726dc5c80f94`, author and committer
+`stop-cran`, with the same documented per-command unsigned-local
+handling. Both original sessions sequentially reviewed that identical
+clean snapshot, the actual five-page teaching diff and all five
+complete revised pages. GPT exited before Claude started; both
+completed successfully with zero recorded edits. Their unchanged final
+reports are [GPT](n2-reviews/batch-20-gpt-followup.md) and
+[Claude](n2-reviews/batch-20-claude-followup.md).
+
+Both mark 蒸, 袋, 裏, 補 and 蒸す CLEAN on correctness, scoped coverage
+and comprehensibility. GPT resolves GPT-20-01 with the practical-label
+confidence qualification intact. Claude resolves F-01 and confirms
+the two adopted optional improvements. Both verify the exact new
+records and the distinction between English-label safeguards and
+Japanese synonymy. No actionable regression or consequential
+unresolved claim was established.
+
+Claude's additional suggestions to name/link every "close" comparison
+in the prose, repeat their entry IDs in the word page and pluralize
+"cloth-bag reading" remain nonblocking polish, not another correction
+round. Its review limits do not certify untouched weather vocabulary
+or exhaustive candidate selection. The earlier frequency claims remain
+unadopted; nothing is promoted to native-speaker or runtime certification.
+
+The exact final scope is 61 files, including four unchanged review
+reports. Author checks still establish 85 exact records/81 complete
+families, 59 reading rows, nine direct word pairs, twenty-one links-only
+older-word edits and no older kanji/stroke changes. Repeated manifest
+builds remain byte-identical at content version `f07655f54123151e`;
+the validator reports zero errors and the cumulative audit covers
+300 additions/907 source-reading rows.
+
+Batch 20 is review-closed. The deck contains 920 kanji, 3,266 words and
+302 selected N2 characters. Another 65 selected additions remain
+unauthored. These confirmations are bounded editorial judgments,
+not exhaustive stroke-path review, runtime quiz testing or
+native-fluency certification.
