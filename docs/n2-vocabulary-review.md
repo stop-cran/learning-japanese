@@ -550,7 +550,7 @@ Coverage is **100 closed, 0 draft, 1,712 pending, 0 unresolved**:
 
 ## Batch 06: N2:102-N2:121
 
-**Status:** authored draft; independent reviews and reconciliation pending.
+**Status:** independently reviewed; corrections authored; bounded confirmation pending.
 
 The twenty rows add **sixteen articles**: 浮かぶ, 浮かべる, 承る,
 受け取り, 受け持つ, 薄暗い, 薄める, 打ち合わせ, 打ち消す, 映す,
@@ -579,6 +579,64 @@ Five new reciprocal N2 pairs are 承/承る, 薄/薄暗い, 薄/薄める,
 against actual English labels and complete entries, including receiving,
 floating, responsibility, image, respect and sound-negation uses.
 These twenty rows remain draft until the independent review loop closes.
+
+### Initial review
+
+Both initial reviewers examined clean authored commit
+`4c40b75eb68980ad3744c172f8adac8c32016342`, parent
+`59801b4d48ce48f27a165f6e9431e6e082bc5fec`, with the same frozen
+scope, rubric and source access. Sequential isolated processes used
+`gpt-6.1-sol` and `claude-opus-5.5`; each exited without editing files.
+The verbatim [GPT report](n2-vocabulary-reviews/batch-06-gpt-initial.md)
+and [Claude report](n2-vocabulary-reviews/batch-06-claude-initial.md)
+cover all sixteen new articles, ten related passages, four reuse claims
+and three aliases. Neither claims comprehensive review of unchanged
+comparison cards.
+
+### Reconciliation
+
+| Initial observation | Decision and evidence |
+| --- | --- |
+| GPT F01a: 浮かぶ/現れる and 浮かぶ/出る | Add both direct guards. Complete entries 1497430 sense 2, 1263510 and 1338240 support appearance; the actual Seisenban 浮ぶ entry [1][二]② corroborates outward appearance. Their existing mutual guard is not transitive. |
+| GPT F01b: 浮かべる/表す | Add the direct guard for facial expression. Complete entries 1497360 sense 2 and 1263490 sense 3, plus actual Daijisen 浮べる sense 2, support the overlap. This does not assert unrestricted Japanese substitution. |
+| GPT F01c: receiving/acceptance labels | Add 受け取り/頂戴, 承る/頂戴 and 承る/受付. Complete receiving, humble accepting and request-acceptance families support these context-dependent overlaps; existing guards through いただく or 受け取り do not close them. Humble formulas remain construction-sensitive. |
+| Both: 打ち合わせ/会合 | Add the direct guard. Complete entries 1588140 sense 1 and 1198530 sense 1, and actual Seisenban 会合 sense ①, support a meeting for consultation/discussion despite the preparatory nuance. |
+| GPT F01e: 映る/似合う | Add the guard for recognized visual harmonizing, supported by 1173710 sense 1, 1314680 and actual Seisenban 映る sense ②. Keep the reflection/display lesson focus; neither older example dates nor absence of an archaic flag measures current frequency. |
+| Both: missing 合わせる and 肯定 links | Link the substantive component explanation and antonym to their existing articles. Their teaching and actual complete comparison families support the uses. |
+| Claude B06-02: unnamed homophone warning in 有無 | Name 生む・産む (うむ), "give birth; produce," with complete family 1588410 as evidence. Remove the unrelated computer-flag aside, which Claude also identified as optional polish. No new homophone article is needed. |
+| Both: official PDF returned unreadable binary | Expose the same exact cached-page extraction to both confirmation reviewers with source URL, PDF SHA256, page locator and extraction hash. They can independently interpret entry 025 and its footnote, but shared author-extracted evidence is not independent reviewer retrieval. No demonstrated spelling error calls for changing the supported recording/display guidance. |
+
+The packet retains eight additional complete comparison families (including
+the separate 表す/ひょうす family, not used for あらわす), four exact
+monolingual inspection receipts and provenance for the readable official page.
+The actual footnote supports recording versus reproduction/display, including
+playback and live-camera viewpoints. It does not impose a photograph/video
+partition. The PDF's adjacent 生む/産む entry is not used to invent a
+spelling division beyond the simple homophone warning.
+
+Claude's optional extra examples and lexical expansions remain nonblocking:
+tone-down 薄める, vacancy-filling 埋める, receipt-document preferences,
+かき消す, 思い浮かべる, 裏返る and additional N4 backlinks.
+The comment about 出会い does not establish an exclusion: its encounter
+meaning is distinct from a preparatory meeting. No measured frequency
+claim or new general substitution restriction is adopted.
+
+**Model-usefulness note:** both independently found the 会合 guard,
+both missing links and the unreadable-PDF evidence gap. Compared across
+the entire reports, GPT uniquely proposed seven additional direct guards
+for appearance, expression, receiving/acceptance and harmonizing.
+Claude mentioned 領収書 preferences, not these 頂戴/受付 pairs.
+Claude uniquely identified the unnamed 有無 homophone warning and
+the removable computer aside; these form one local clarity correction.
+Both independently accepted the aliases, reuse claims, conjugations,
+transitivity and written-kanji metadata. This is complementary evidence
+on one sample, not a general model ranking.
+
+### Confirmation and closure
+
+Pending. The eight changed articles and the unchanged official-guide
+attributions in 映す, 写る and 映る require bounded confirmation.
+These twenty rows remain draft; no full-batch re-review is claimed.
 
 ## Final verification
 

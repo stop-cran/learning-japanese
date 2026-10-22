@@ -194,3 +194,13 @@ evidence and learning impact; issue creation requires authorization.
   contrasts image recording with reproduction/display and allows 映る for
   playback and simultaneous live displays. Keep that viewpoint distinction
   instead of imposing an absolute photograph-versus-video boundary.
+- **Batch 06 reconciliation:** A binary PDF response is not readable evidence.
+  Give both confirming reviewers the same provenance-labelled extraction of
+  the actual page and footnote; distinguish their independent interpretation
+  from independent retrieval. Do not rewrite supported spelling guidance
+  merely to conceal a tool-access limitation.
+- **Batch 06 reconciliation:** Check appearance, facial-expression and humble
+  acceptance senses against actual answer labels. Nearby exclusions through
+  現れる, いただく or 会議 do not protect another pair. A recognized
+  visual-harmonizing sense can justify a quiz guard without becoming the
+  lesson's production focus or an unsupported modern-frequency claim.
