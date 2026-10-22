@@ -687,7 +687,7 @@ mapped to 119 articles (103 new and sixteen reused).
 
 ## Batch 07: N2:122-N2:141
 
-**Status:** drafted; independent reviews pending.
+**Status:** corrected after blind initial reviews; bounded confirmations pending.
 
 Scope: 裏口, 占う, 恨み, 恨む, 羨ましい, 羨む, 売上, 売り切れ,
 売り切れる, 売行き, うろうろ, 運河, うんと, 英文, 英和, ええと,
@@ -718,6 +718,53 @@ the related content scope is nine existing files.
 No review closure is claimed by the authored commit. Current coverage:
 **120 closed, twenty draft, 1,672 pending and 0 unresolved** rows;
 139 mapped articles (121 new and eighteen reused).
+
+### Initial review
+
+Both initial reviewers examined clean authored commit
+`0648ec4f05747bfcfbc7d56fb82cf6ad20076ea7`, parent
+`2500e68f52564eafccb432331df5b1681b5bf11b`, with the same scope,
+rubric and source access. The GPT process exited before Claude started.
+Usage receipts verify `gpt-6.1-sol` and `claude-opus-5.5`, with no file
+edits. Both read all eighteen new articles and assessed the nine related
+passages, two reuse claims and three explicit aliases.
+
+The verbatim [GPT report](n2-vocabulary-reviews/batch-07-gpt-initial.md)
+and [Claude report](n2-vocabulary-reviews/batch-07-claude-initial.md)
+record their independent assessments. Both independently retrieved the
+four relevant Kotobank passages; neither independently executed Git,
+verified the frozen hashes, or ran the app.
+
+### Reconciliation
+
+| Initial observation | Decision and evidence |
+| --- | --- |
+| GPT N2B07-GPT-001: three degree guards | Add うんと/大変, うんと/実に and うんと/相当. Complete pinned entries 1415000 sense 1, 2820720 sense 1 and 1401240 sense 5 support the actual cards' very/high-degree uses. The separate 実に/まことに and 実に/げに families are preserved but not used for the じつに claim. |
+| Claude F-01: 英和/字引 | Add the direct guard. 字引's actual title and complete family 1315140 say dictionary; English-Japanese dictionary is an ordinary abbreviated 英和 use. An existing 辞書 guard cannot transitively cover 字引. |
+| Claude F-02: sold-out/run-out labels | Add 売り切れ/無くなる and 売り切れる/無くなる. Complete entry 1529550 sense 2 supports exhausted supply, overlapping the sold-out result in the actual new articles. This does not make every disappearance a selling-out event. |
+| Claude F-03: 裏口/玄関 | Add the direct English-answer guard. The actual 玄関 title says entrance/entryway, and complete family 1263400 includes those broad glosses. This resolves a standalone English-label ambiguity, not an asserted equivalence between an ordinary home's front entrance and rear service entrance. |
+| Claude Optional: 売れ行き/売れる | Adopt the direct guard after inspecting both complete families and actual sales-performance examples. The displayed how-well-goods-sell and sell/sell-well answers can overlap without making the noun and verb interchangeable or claiming all 売れ行き is good. |
+| Claude Optional: localized wording | Use natural English "read the future" for the card-divination example. Remove the unmotivated profit warning in 売り上げ's formation paragraph and the unnecessary i-adjective/verb negatives in 英和 and えっと. No Japanese example or lexical scope is changed. |
+
+Seven additional complete comparison families are retained in the packet;
+the two other inspected families were already in the initial evidence.
+Both compressed and expanded source hashes were checked again.
+
+The remaining optional expansions are not defects: 羨ましがる, figurative
+裏口, English-literature 英文 and 咳エチケット are outside the selected
+practical focus. No frequency or register rule is added for うんと, and
+the search-only flag on ええと is not turned into a claim that the form
+is incorrect or rare. Claude's failed additional headword lookup does
+not establish commonness either.
+
+**Model-usefulness note:** no initial actionable finding was shared.
+GPT uniquely established three high-degree answer overlaps. Claude
+uniquely proposed four further direct pairs in Findings and one adopted
+sales-performance pair in Optional, as well as the four small wording
+improvements. Attribution compares the complete reports, including
+Optional and Limits; it is not a general model ranking. Both accepted
+the source mappings, aliases, written-kanji metadata, reciprocal links
+and scoped reuse claims. Bounded confirmation remains pending.
 
 ## Final verification
 

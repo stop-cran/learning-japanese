@@ -213,3 +213,10 @@ evidence and learning impact; issue creation requires authorization.
   a native linking particle: 絵/エ + の + 具/グ. Preserve the actual
   construction rather than inventing a のぐ constituent reading or
   calling every kana-containing form an all-kun compound.
+- **Batch 07 reconciliation:** A dictionary's secondary adverbial sense
+  can create an English-answer collision even when the existing article's
+  title foregrounds an adjective: 大変 also means "very." Inspect the
+  actual uses, not just title strings or a chain of existing exclusions.
+  Apply the same direct-pair check to broad dictionary, entrance and
+  exhausted-supply labels without asserting unrestricted Japanese
+  substitution.
