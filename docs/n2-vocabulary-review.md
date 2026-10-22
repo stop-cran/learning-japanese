@@ -119,7 +119,7 @@ exhaustive quiz-pair coverage. Severity differences were adjudicated by learning
 
 ## Batch 02: N2:22-N2:41
 
-**Status:** authored draft; independent reviews pending.
+**Status:** independent initial reviews reconciled; changed-passage confirmation pending.
 
 Scope: 暖まる, 暖める, あたりまえ, あちらこちら, 厚かましい, 圧縮, 宛名,
 あてはまる, あてはめる, 暴れる, 脂, あぶる, あふれる, 雨戸, 甘やかす, 余る,
@@ -137,6 +137,44 @@ Ten existing kanji pages gain useful word links or examples. Reciprocal N2 links
 厚/厚かましい, 圧/圧縮, 戸/雨戸, 甘/甘やかす and 編/編物; 温 also links the explicitly
 taught 温まる/温める spellings to the new 暖まる/暖める articles.
 The collection now contains 3,304 word articles. None of this batch's rows is review-closed.
+
+### Initial review and reconciliation
+
+Both reviewers independently read authored snapshot
+`a0423388624ed50b0a348ad6f7dd7c212b3850b9` with the same assignment and evidence:
+all 14 new articles, the actual ten-kanji/four-level-only diff and six narrow reuse claims.
+The isolated `gpt-6.1-sol` process fully exited before `claude-opus-5.5` started.
+Usage receipts verify those actual models and zero file edits; the author checked the clean
+unchanged snapshot between runs.
+
+Reports are archived without rewriting:
+[GPT initial](n2-vocabulary-reviews/batch-02-gpt-initial.md) and
+[Claude initial](n2-vocabulary-reviews/batch-02-claude-initial.md).
+Both found the source mappings, related kanji passages and six reuse claims covered.
+
+| Finding | Disposition | Evidence and change |
+| --- | --- | --- |
+| GPT B02-GPT-01 / Claude B02-CL-01 | Resolved in author correction; confirmation pending | あてはめる and 適用 both teach applying a rule to a case. Add the direct guard and comparison link. This is one shared finding, not two independent defects. |
+| GPT B02-GPT-02 | Resolved in author correction; confirmation pending | 宛名 explicitly includes the recipient's name alone. Add direct guards against 名前 and 名, plus a qualified comparison; the existing 名/名前 guard is not transitive. |
+| Claude B02-CL-02 | Resolved in author correction; confirmation pending | あたりまえでしょう is taught as "of course," also もちろん's displayed label. Add that direct guard and link without claiming unrestricted grammatical substitution. |
+| Claude B02-CL-03 | Supported guidance gap resolved in author correction; confirmation pending | Inspect the actual official 2014 PDF, entry 007, which covers both verbs as well as adjectives. Add qualified room/air versus food/drink spelling guidance and examples of 温. The body/hand spelling preference was not established by this source: replace those examples without declaring their former spelling wrong or asserting an exclusive body rule. |
+
+The four direct quiz guards address localized answer ambiguity; they are treated as minor
+editorial defects rather than general quiz failure. The spelling issue is missing contextual
+guidance, not an established false dictionary spelling. The supplementary
+`reviewEvidence` retains complete comparison entry families, the inspected PDF's hash,
+exact location and the body/hand limitation.
+
+**Optional, not blocking:** broader 危うい constructions/register, additional figurative overflow,
+編み物 frequency guidance, あちらこちら register, a transitive title paraphrase and other prose polish.
+No frequency claim is added from a dictionary spelling list alone. The 温 card's "also teaches"
+links already identify the destination spelling; reversing that wording is not necessary for correctness.
+
+**Model-usefulness note:** both found あてはめる/適用. GPT uniquely identified the two missing
+recipient-name guards. Claude uniquely identified the "of course" label guard and the actionable
+暖/温 guidance gap, while its proposed body-specific preference exceeded the inspected evidence.
+These observations include the reports' optional notes and limits; they are shared-sample evidence
+for complementary review signal, not a ranking or proof of exhaustive coverage.
 
 ## Final verification
 

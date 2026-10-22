@@ -119,3 +119,11 @@ evidence and learning impact; issue creation requires authorization.
 - **Batch 02 authoring:** An alternate spelling can link to an article under another stable
   spelling when that article explicitly teaches it: 温まる/温める link to 暖まる/暖める.
   Keep the written-headword kanji metadata separate from these additional spelling links.
+- **Batch 02 reconciliation:** When an alternate-spelling article says to use context, give a
+  supported contextual contrast rather than leaving that instruction abstract. Official
+  異字同訓 entry 007 explicitly includes 暖まる/温まる and 暖める/温める; it supports
+  room/air versus food/drink tendencies, but not the body/hand preference proposed in review.
+  Replace uncertain teaching examples without treating an unverified preference as a strict error.
+- **Batch 02 reconciliation:** Check direct pairs even when another related pair is already
+  guarded: 名/名前 does not protect either from 宛名. A conversational translation such as
+  あたりまえでしょう, "of course," can also reveal an answer-label overlap with もちろん.
