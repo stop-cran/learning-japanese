@@ -100,3 +100,15 @@ evidence and learning impact; issue creation requires authorization.
   remains in provenance even when its broad English wording needs correction.
 - **Planning:** Source `明き` can map to stable `空き` only after explicit alias teaching is
   present. Source kana `あかんぼう` can reuse `赤ん坊` without changing its N4 label.
+- **Pilot review:** A displayed English label can collide through a taught secondary sense
+  (`挙げる`/`収める`) or an English noun/verb ambiguity (`味わう`/`味`).
+  Check actual labels as well as Japanese lexical substitution, and add direct pairs:
+  exclusion through a third article does not protect them.
+- **Pilot review:** Inspect useful alternate-spelling and comparison links, not only the written
+  headword's metadata: 相 in 相変わらず and 示す in 例を示す were missed in the first draft.
+- **Pilot reconciliation:** Check habitual-adverb candidates directly. Complete entries for
+  `いつも` and `普段`, not their existing mutual exclusions, supported the additional pairs.
+  Priority-tag counts were not used to invent a frequency distinction between spelling variants.
+- **Pilot reconciliation:** A mnemonic warning should not accidentally sound like a qualified
+  literal definition. The 飽くまで revision states the learner warning directly and names the
+  Japanese expressions being contrasted, rather than using an English gloss as the subject.
