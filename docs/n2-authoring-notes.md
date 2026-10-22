@@ -608,4 +608,15 @@ and four direct word pairs. Counts, reading rows, strokes and all
 twenty-three links-only older-word changes are unchanged. The useful
 initial actionable contribution was GPT's; Claude supplied the
 optional clarity improvement. This is sample-specific evidence,
-not a model ranking. Changed-passage confirmation is still pending.
+not a model ranking. Both original reviewers subsequently confirmed
+the same committed two-page correction CLEAN on correctness, scoped
+coverage and comprehensibility, with no established regression.
+
+Claude's follow-up floated a low-confidence optional おもちゃ guard:
+a spinning top is a toy, but that broader category alone did not
+establish the same lexical answer overlap as bare "top". No additional
+pair was added, and the decision does not depend on assuming that the
+quiz displays the primary reading. Optional quiz-related prose polish
+was also left alone. No actionable defect or consequential unresolved
+claim remained in the changed passages. The first twenty-one batches
+are review-closed; fifty additions remain unauthored.

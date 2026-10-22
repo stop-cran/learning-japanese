@@ -2488,7 +2488,7 @@ linked passages. Neither executed Git, the validator or the app;
 Claude also discloses not reading the general source-snapshot file.
 Their bounded coverage does not certify untouched material.
 
-- **GPT F01, minor correctness: corrected, confirmation pending.**
+- **GPT F01, minor correctness: resolved at the corrected snapshot below.**
   Written 貝 also realizes ばい's spinning-top sense, entry 2246880
   sense 2. Its unrestricted hiragana reading is valid with the kanji;
   the separate kana-only バイ reading is not the basis for this
@@ -2529,5 +2529,51 @@ polish. These are different useful contributions on this matched
 sample, not proof of eliminated bias or a general model ranking.
 All 35 new rows, 33 lexical/two qualified lookup examples, fifteen
 stroke assets, counts and twenty-three links-only older-word edits
-remain unchanged. Changed-passage confirmation by the original
-reviewers is pending; batch 21 is not yet review-closed.
+remain unchanged.
+
+### Changed-passage confirmation and closure
+
+The correction was committed as `stop-cran` (author and committer) at
+`7ba55d7748c6716a7573516169a73d32c0ec1363`. Both original reviewer
+sessions then received their own original report, that same clean
+corrected snapshot, the actual two-page teaching diff and both complete
+changed pages. GPT exited successfully before Claude started; both
+again recorded zero edits. Their unchanged final reports are
+[GPT confirmation](n2-reviews/batch-21-gpt-followup.md) and
+[Claude confirmation](n2-reviews/batch-21-claude-followup.md).
+
+Both marked 誌 and the 貝 word article CLEAN on correctness, scoped
+coverage and comprehensibility, with no established regression.
+GPT resolved F01 and accepted the optional terminology improvement.
+Claude confirmed the four direct guards and wording independently,
+resolved OPT-1, withdrew the tangential-aside suggestion OPT-2 and
+kept OPT-3 outside scope. No actionable defect or consequential
+unresolved claim remains in the changed passages.
+
+Claude additionally floated an optional, low-confidence おもちゃ
+exclusion: a spinning top belongs to the broader toy category. This
+was not adopted because the category relation alone did not establish
+the same lexical answer overlap as the bare "top" gloss. This decision
+does not rely on assuming that the quiz displays かい. Its optional
+style observation about teaching prose mentioning the quiz was also
+not adopted. Neither suggestion was promoted to an established defect
+or used to prolong review.
+
+These are bounded confirmations, not another whole-batch audit.
+Neither reviewer executed Git, validation or the app. Claude did not
+recount the 69 families; GPT did. Claude's public dictionary requests
+failed or returned no entry and were not treated as evidence.
+Exhaustive stroke-path review, runtime choice selection and
+native-fluency certification remain outside their claims.
+
+Author-run closure checks cover the exact 64-file cumulative scope,
+all 73 records/69 complete families, 35 reading rows, four direct
+word pairs, twenty-three links-only older-word edits and no older
+kanji or stroke changes. Validation has zero errors; the cumulative
+audit covers 315 additions/942 exact source-reading rows, with 50
+selected characters still unauthored. Repeated manifest builds are
+byte-identical, contentVersion `97fc713005a6a3b9`, SHA256
+`5a3a0125702ef7f08ac7ff840c8a8672836ebcf5174df6eb4e9a85d26b4c2e3d`.
+Totals remain 935 kanji, 3,268 words and 317 selected N2 characters.
+Batch 21 is review-closed; the overall selected-set expansion is not
+complete. Nothing is pushed.
