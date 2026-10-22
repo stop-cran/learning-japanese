@@ -261,6 +261,29 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   ほぼ, 上手い and the 固い/堅い spelling alternatives. Link their actual
   word articles without changing the demonstrated reading or pretending
   their spelling preferences are absolute sense restrictions.
+- Batch 16 preserves 祭's まつ.り/まつり spelling distinction without
+  inventing two nouns. 祀る is an alternate spelling of the verb 祭る,
+  not of the festival noun. 祭日 and 祝日 have overlapping holiday senses;
+  the characters alone do not establish a strict modern calendar divide.
+- 童 わらべ is explicitly dated. The renderer's automatic annotations do
+  not cover every register flag, so inspect the actual applicable senses
+  and include a necessary qualification in the authored gloss.
+- 競べる くらべる is search-only in the pinned record, despite an occasional
+  competing-spelling note. Keep its source reading for lookup, not as a
+  recommended everyday example. 競る is godan, not a causative of 競う.
+- 算's そろ remains lookup-only. The actual Kanjipedia character and 算盤
+  word headwords confirm the whole word そろばん, not a freely usable
+  standalone そろ. Do not import another dictionary's extra character
+  readings into the pinned KANJIDIC2 metadata or cite a search summary as
+  verification of their allocation.
+- 竹's pinned second sense is the middle option in 松・竹・梅, not flute.
+  The new word article guards the four directly overlapping middle labels
+  中/中央/半ば/真ん中, without declaring them unrestricted Japanese
+  synonyms or manufacturing exclusions from every English token match.
+- Existing 児童 was added after the baseline inventory. Discover component
+  links from the current word files, not just the original inventory.
+  Batch 16 changes 27 component passages and the 松/梅 comparisons by
+  links only, preserving all their lexical metadata and teaching text.
 
 ## Review and checkpoint protocol
 
@@ -303,6 +326,13 @@ The shared 玉/王 quiz finding and Claude's three linking findings are correcte
 both original reviewers confirmed all five revised teaching pages without a remaining
 actionable defect. Claude's final pronoun-polish suggestion remains nonblocking and
 unadopted; the shogi sentence supplies the 玉/王 context.
+Batch 16 is authored but not independently reviewed: fifteen more kanji and
+one supporting 竹 article bring the authored total to 240 additions and
+733 exact reading rows. The deck now has 860 kanji, 3,252 words and 242
+selected N2 characters, with 125 additions unauthored. Its 32 reading rows
+contain 30 lexical examples and two explicitly qualified lookup-only rows;
+29 older word edits are links only. These structural and source checks
+are not a batch-16 linguistic-review verdict.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.

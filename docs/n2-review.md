@@ -1525,3 +1525,41 @@ Git, validator and manifest checks are author-run, not reviewer-executed.
 Exhaustive drawing-path review, native-fluency certification and runtime quiz
 execution remain outside these verdicts; changed or larger quizzes can still
 require new semantic curation.
+
+## Batch 16: 祝祭禁秒移税章童競竹符筆筒算管 - draft awaiting independent review
+
+**Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke files;
+one supporting word article, 竹; 29 older word articles gaining links only.
+The source record is [batch-16.json](n2-batch-sources/batch-16.json).
+The pre-batch baseline is `8df545e4faeca74bd0e27e08e5d03123e4d5065a`.
+
+All 32 exact source-reading rows are retained: 30 have inspected lexical examples,
+and 競's くら.べる and 算's そろ are explicitly qualified lookup-only rows.
+The packet retains 52 exact spelling/reading records with 49 complete entry
+families and applicable senses. A search-only spelling is not recommended merely
+because the dictionary also notes occasional use. The actual Kanjipedia 算 and
+算盤 headwords corroborate the whole word そろばん, not an independently usable
+そろ. The pinned character metadata is not replaced by another source's readings.
+
+祭 preserves the two noun-spelling rows and distinguishes them from 祭る/祀る.
+童 わらべ is explicitly dated; 競う and 競る have separate godan explanations.
+筆's ふで and ひつ evidence and 管's くだ/かん records stay reading-specific.
+Every new kanji has a useful linked word article and three existing, semantically
+wrong distractors. Fourteen older two-choice kanji were screened for a newly
+activated direct-synonym fallback; no required repair was established.
+
+The new 竹 article explains both plant/material and middle-rank uses. Its four
+direct word-quiz exclusions protect 中, 中央, 半ば and 真ん中 without claiming
+free interchangeability. The actual 竹 entry does not support a flute sense.
+Existing 松 and 梅 comparisons gained links to 竹. Another 27 old component
+passages, including the later-added 児童 article, gained links to the new cards.
+A mechanical comparison confirms that all 29 old word edits preserve metadata
+and teaching text apart from links; no old kanji or stroke file changed.
+
+The author inspected all sixteen rendered teaching pages. The validator reports
+zero errors; the accumulated audit covers 240 additions and 733 exact reading rows.
+Counts are 860 kanji, 3,252 word articles and 242 selected N2 characters;
+125 additions remain unauthored. The first fifteen batches remain review-closed.
+Batch 16 has no independent review verdict yet. GPT and Claude will receive the
+same frozen draft, assigned pages, related passages, rubric and evidence access,
+in separate sequential processes with blind initial reports.
