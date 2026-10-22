@@ -298,7 +298,7 @@ deterministic at `ebc4e3f59c4d7584`. Source rows and the packet are now marked c
 
 ## Batch 04: N2:62-N2:81
 
-**Status:** independently reviewed; supported corrections drafted; bounded confirmations pending.
+**Status:** twelve-file correction confirmed; two supplementary quiz guards awaiting bounded confirmation.
 
 Scope: 育児, 幾分, 生け花, 以後, 以降, イコール, 勇ましい, 衣食住,
 意地悪, いちいち, 一応, 一段, 一流, 佚, 一昨日, 一昨年, 一斉, 一旦,
@@ -380,6 +380,33 @@ tradition. Neither executed Git, recomputed hashes or ran the app. Claude's
 wrong 一定 lookup is explicitly not evidence; the article's の/suru patterns
 remain supported by the pinned dictionary. Naturalness judgments are not
 native-speaker certification.
+
+### Changed-passage confirmation
+
+Correction snapshot: `68380b7c43f3dc42c56f88e5639b525357dd4e85`, parent
+`a14eb7276298c2231ac00aa70cea55948bb3e7fc`. Fresh original-family processes
+ran sequentially on the unchanged corrected commit, with their own initial
+reports and the actual twelve-file diff. Usage receipts verify `gpt-6.1-sol`,
+`claude-opus-5.5` and zero file edits. Both reports are archived verbatim:
+[GPT confirmation](n2-vocabulary-reviews/batch-04-gpt-confirmation.md) and
+[Claude confirmation](n2-vocabulary-reviews/batch-04-claude-confirmation.md).
+Both accept all twelve changed contexts and fifteen direct pairs as
+**CLEAN / CLEAN / CLEAN**, with no actionable regression or consequential
+unresolved claim in scope. They resolve their original findings and independently
+support leaving the frequency adverb 常に unguarded against 一定.
+
+Claude's optional confirmation notes identify two further approximation-label
+candidates, くらい and ほど. Their actual cards and complete pinned entries
+1154340 sense 1 and 1436510 sense 6 support cautious direct guards against
+一応's "roughly" label. Different syntax and fewer shared candidate-selection
+features do not eliminate fallback answer-label ambiguity. These two pairs
+are added in a separate one-file follow-up; they do not turn 一応 into a
+general numerical approximation particle or alter either baseline card.
+Supplementary changed-passage confirmation remains pending.
+
+Other confirmation suggestions about 幾分 wording and teaching 気持ち's
+additional adverb sense remain optional. Neither report independently verifies
+Git, frozen hashes or app execution; no new full-batch review is claimed.
 
 ## Final verification
 

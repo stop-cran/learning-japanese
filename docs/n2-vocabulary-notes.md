@@ -161,3 +161,8 @@ evidence and learning impact; issue creation requires authorization.
   them under Optional. Check newly proposed ordinary secondary senses, not just
   title text or a mutual exclusion neighbor. 一緒 has a same-time sense; 常に's
   frequency meaning alone does not make it a fixed-value synonym of 一定.
+- **Batch 04 confirmation:** Approximation particles can share a defensible
+  context-free English answer with a qualifying adverb even when their Japanese
+  syntax differs. Check actual labels and entries, not just shared candidate
+  tags: fallback choices still justify the cautious 一応/くらい and 一応/ほど
+  guards. Do not remove valid glosses merely to disguise label ambiguity.
