@@ -1526,7 +1526,7 @@ Exhaustive drawing-path review, native-fluency certification and runtime quiz
 execution remain outside these verdicts; changed or larger quizzes can still
 require new semantic curation.
 
-## Batch 16: 祝祭禁秒移税章童競竹符筆筒算管 - draft awaiting independent review
+## Batch 16: 祝祭禁秒移税章童競竹符筆筒算管 - corrections awaiting confirmation
 
 **Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke files;
 one supporting word article, 竹; 29 older word articles gaining links only.
@@ -1560,6 +1560,40 @@ The author inspected all sixteen rendered teaching pages. The validator reports
 zero errors; the accumulated audit covers 240 additions and 733 exact reading rows.
 Counts are 860 kanji, 3,252 word articles and 242 selected N2 characters;
 125 additions remain unauthored. The first fifteen batches remain review-closed.
-Batch 16 has no independent review verdict yet. GPT and Claude will receive the
-same frozen draft, assigned pages, related passages, rubric and evidence access,
-in separate sequential processes with blind initial reports.
+The draft was committed as `71dd9a70dcda63c2a0619f79eae8fbfcfcfb897a`,
+with author and committer both `stop-cran`. Its exact 65-file scope and
+deterministic manifest `76a3800f11921930` were verified before review.
+
+### Independent initial review
+
+Both reviewers received that same frozen draft, sixteen new teaching pages,
+29 related link-only passages, source access and three-facet rubric. Their
+processes ran sequentially and exited without code edits. Neither received the
+other report or the author's reconciliation:
+
+- **GPT:** actual `gpt-6.1-sol`, original session
+  `42d682c7-d1ce-44ce-8c6b-e516e6ed9e48`;
+  [initial report](n2-reviews/batch-16-gpt-initial.md).
+- **Claude:** actual `claude-opus-5.5`, original session
+  `49509a7a-f64d-475d-9e99-6a2a53645948`;
+  [initial report](n2-reviews/batch-16-claude-initial.md).
+
+### Evidence-based reconciliation
+
+| Finding | Disposition |
+| --- | --- |
+| GPT F01: 察's English answer observe can denote festival observance | Resolved in the author correction: replace 察 with 禁, prohibit/ban. The author fetched the actual [Oxford observe headword](https://www.oxfordlearnersdictionaries.com/definition/english/observe), sense 5, confirming celebration of festivals, and compared 祭's pinned celebrate meaning. This is ambiguity in a displayed English answer, not Japanese synonymy. No older 察 edit is needed. |
+| Claude O1: qualify 筆's まんねんひつ example | Optional clarification adopted: explicitly scope the ヒツ comparison to the linked 万年筆 article's primary reading and mention the source family's まんねんぴつ/まんねんふで alternatives. Entry 1526360 has no spelling or reading restrictions excluding them. The older word article already explicitly scopes its own reading; its prose remains unchanged. |
+| Claude O2: add 筆's land-counter sense | Optional expansion, not adopted. The article teaches brush/writing, not every standalone homograph sense; the source already retains the reading-specific counter evidence. |
+| Claude O3: add 算's sourced counting-stick history | Optional expansion, not adopted. The labelled modern-shape mnemonic makes no historical claim, and a historical account is not required for this focused lesson. |
+
+After comparing findings, optional suggestions, limits and per-page observations,
+GPT uniquely established the actionable English-label ambiguity; Claude did not
+identify an equivalent concern. Claude uniquely supplied the adopted reading
+qualification as optional polish. Both accepted the lookup-row qualifications
+and the related links. These are complementary contributions in this sample,
+not a general model ranking or proof that model bias has been eliminated.
+
+The author correction changes only two teaching pages, 祭 and 筆. Both original
+reviewers' confirmations on the committed correction and actual diff remain
+pending. No independent confirmation or batch-16 review closure is claimed yet.

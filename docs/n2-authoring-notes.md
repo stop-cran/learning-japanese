@@ -284,6 +284,14 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   links from the current word files, not just the original inventory.
   Batch 16 changes 27 component passages and the 松/梅 comparisons by
   links only, preserving all their lexical metadata and teaching text.
+- GPT's batch 16 review found an English-label ambiguity: 察's observe
+  can also mean celebrating a festival, as confirmed in the actual Oxford
+  headword, sense 5. Replace that 祭 distractor with 禁; this does not
+  declare the Japanese characters 察 and 祭 synonymous.
+- Claude suggested qualifying 筆's 万年筆 example. Its pinned complete
+  entry family also lists まんねんぴつ and まんねんふで. Scope the ヒツ
+  comparison to the linked article's まんねんひつ reading and retain the
+  attested alternatives without inferring their frequency.
 
 ## Review and checkpoint protocol
 
@@ -326,13 +334,14 @@ The shared 玉/王 quiz finding and Claude's three linking findings are correcte
 both original reviewers confirmed all five revised teaching pages without a remaining
 actionable defect. Claude's final pronoun-polish suggestion remains nonblocking and
 unadopted; the shogi sentence supplies the 玉/王 context.
-Batch 16 is authored but not independently reviewed: fifteen more kanji and
+Batch 16 has independent initial reviews: fifteen more kanji and
 one supporting 竹 article bring the authored total to 240 additions and
 733 exact reading rows. The deck now has 860 kanji, 3,252 words and 242
 selected N2 characters, with 125 additions unauthored. Its 32 reading rows
 contain 30 lexical examples and two explicitly qualified lookup-only rows;
-29 older word edits are links only. These structural and source checks
-are not a batch-16 linguistic-review verdict.
+29 older word edits are links only. GPT's 祭 quiz-label finding is corrected,
+and Claude's optional 筆 reading qualification is adopted. Both original
+reviewers' changed-passage confirmations remain pending; this is not review closure.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
