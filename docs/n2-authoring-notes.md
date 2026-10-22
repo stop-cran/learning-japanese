@@ -553,3 +553,37 @@ not a model ranking or a guarantee of completeness. Both original reviewers
 subsequently marked all five corrected pages CLEAN on correctness, scoped
 coverage and comprehensibility. The first twenty batches are review-closed;
 optional citation/link polish was not used to prolong confirmation.
+
+Batch 21 is drafted, not yet independently reviewed: fifteen kanji and
+two supporting words bring the authored total to 315 additions and
+942 exact source-reading rows. Counts are 935 kanji, 3,268 words and
+317 selected N2 characters; 50 additions remain unauthored. Its 35
+reading rows contain 33 lexical examples and two qualified lookup/index
+rows. Twenty-three older word changes are component links only; no
+older kanji or stroke changes. The packet retains 71 exact records
+from 67 complete entry families.
+
+Distinguish 詞's rare spelling from an allegedly rare pronunciation,
+and 谷まる's search-only index status from a recommended written form.
+The pinned full-entry scan found no 詰 spelling paired with a reading
+containing きち. That bounded absence cannot settle every historical
+realization of キチ; contracted きっ alone cannot distinguish キチ from キツ.
+豊前 is a historical place-name example, while 豊の秋 illustrates とよ
+inside a complete expression, not a productive modern adjective.
+貨's treasure-family membership establishes recognition, not equal
+frequency with 宝. 貯える's shared entry with 蓄える does not establish
+equal spelling preference in every collocation.
+
+A full pinned-entry sweep for the new words' island-group and shell
+labels considered applicable senses and primary article readings,
+not just English titles. Two direct pairs on 貝 protect the broad
+"outer covering" label on 皮 and the usually-kana specific-clam
+abbreviation in the 馬鹿 family. These are separate safeguards, not
+a claim that 皮 and 馬鹿 are synonyms or interchangeable with each
+other. A mantle is a body part, not a whole shellfish; English
+"shell" alone does not prove that a carapace identity shares the
+specific seashell label. No broad substring or taxonomic clique is
+inferred. The article distinguishes Japanese 貝's mollusc/shell
+category from broader English shellfish, using the inspected opening
+Kotobank definition as well as JMdict. The bounded sweep does not
+certify exhaustive synonymy.

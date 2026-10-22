@@ -2391,3 +2391,83 @@ Batch 20 is review-closed. The deck contains 920 kanji, 3,266 words and
 unauthored. These confirmations are bounded editorial judgments,
 not exhaustive stroke-path review, runtime quiz testing or
 native-fluency certification.
+
+## Batch 21 - 設詞詰誌課諸講谷豊象貝貨販貯貿
+
+### Sources, authoring and draft checks
+
+The baseline is the clean batch-20 closure,
+`6118337fa9470ecb8e906ed746703de93dbdff2d`. The fifteen characters
+follow the pinned community inventory order. Their exact non-nanori
+KANJIDIC2 readings, primary stroke counts, grades and classical
+radicals are retained in [batch-21.json](n2-batch-sources/batch-21.json).
+Fifteen new stroke assets use the unchanged pinned KanjiVG converter
+and revision. All history-unverified shape stories are labelled
+mnemonics, with no asserted phonetic component.
+
+The fifteen kanji and new 諸島 and 貝 word articles form the full
+seventeen-page teaching scope. 諸島 illustrates ショ in a geographic
+grouping, while 貝 distinguishes its general かい identity from the
+specific usually-kana snail name ばい. Neither new word receives an
+inferred vocabulary JLPT level. The source packet retains 71 exact
+word/reading records from 67 complete spelling/reading families,
+including restrictions and sense-specific flags.
+
+All 35 character-reading rows are present: 33 have lexical examples,
+キチ is source-only, and 谷まる is explicitly search-only index
+evidence. A full scan of the pinned JMdict found no entry with a
+spelling containing 詰 and a reading containing きち. That negative
+result is bounded by this snapshot and does not prove historical
+nonexistence. Contracted きっ does not itself choose between キチ and
+キツ. The separate source-only qualification keeps that uncertainty
+out of the recommended words.
+
+The author distinguishes rare 詞 spelling from ordinary ことば
+pronunciation, the independent noun 詰め from the -づめ suffix,
+historical 豊前 from a general ブ substitution rule, and complete
+豊の秋 from a free modern とよ adjective. 象's form and elephant
+entries stay separate. 貨's treasure-family membership and 貯える's
+broader applicable senses do not imply frequency or unrestricted
+spelling preference.
+
+A bounded island-group/shell sense sweep compared the current word
+identities and primary readings with all pinned entries, alongside
+the actual English titles and the confusable-word inventory.
+Two direct exclusions on 貝 protect 皮's broad "outer covering"
+label and the usually-kana specific-clam abbreviation in the 馬鹿
+family. 紐's mantle sense is a body part, not a whole shellfish.
+The carapace identity behind one dictionary こう reading does not
+establish the more specific seashell label, and the existing こう
+article teaches the separate manner adverb. No transitive clique or
+blanket substring exclusion is created. The inspected opening
+[Kotobank 貝 definition](https://kotobank.jp/word/%E8%B2%9D-456615),
+retrieved 2026-10-22, supports the mollusc/shell category distinction
+from broader English shellfish; it is not evidence for every example
+sentence's naturalness.
+
+The older-word scope is exactly twenty-three component-link changes:
+動詞, 印象, 対象, 建設, 現象, 硬貨, 設備, 設計, 詰める,
+課, 課長, 講堂, 講演, 講義, 谷, 豊か, 豊富, 象, 販売,
+貯金, 貿易, 銅貨 and 雑誌. Their teaching prose and metadata are
+preserved. No older kanji or stroke asset is changed. Three actual
+English wrong-answer labels were inspected for every new kanji;
+the older thirteen two-choice cards retain their existing behavior.
+
+The author has read all seventeen new pages and all twenty-three
+older-word diffs. The intended draft scope is sixty files, including
+the source packet, manifest and three progress documents. The deck
+now contains 935 kanji, 3,268 word articles and 317 selected N2
+characters. Across twenty-one authored batches there are 315
+additions and 942 source-reading rows; another 50 additions remain
+unauthored. The first twenty batches remain review-closed.
+
+The exact scope/source/preservation verifier passes for all sixty
+files. The structural validator reports zero errors, and the cumulative
+audit confirms 315 additions and 942 exact source-reading rows.
+Repeated manifest builds are byte-identical at content version
+`4276e22320e71bdd`, SHA-256
+`202f1f8ad6fd56eff03f4fb51d95d5a25f55baf22b577fbc1966a95d8bca1920`.
+Independent same-snapshot GPT/Claude review and reconciliation are
+pending; no independent verdict is claimed yet. The documented GPG
+stall is not retried: the draft uses per-command unsigned-local handling with
+`stop-cran` as both author and committer. Nothing is pushed.
