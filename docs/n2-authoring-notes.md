@@ -252,6 +252,15 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   spelling notes from its skilled sense. 磨る's rare-spelling label likewise
   does not make the godan pronunciation する rare or turn it into irregular
   する, do.
+- Both batch 15 reviewers found that 王 is a defensible meaning answer for 玉:
+  玉 ぎょく abbreviates the shogi king in pinned entry 1921990, sense 7,
+  and the inspected Daijisen sense 5. Keep the useful visual comparison but
+  replace 王 with 全 as the wrong option. A specialized attested standalone
+  sense still matters when the quiz supplies no disambiguating context.
+- Claude's batch 15 review found substantive comparisons left unlinked:
+  ほぼ, 上手い and the 固い/堅い spelling alternatives. Link their actual
+  word articles without changing the demonstrated reading or pretending
+  their spelling preferences are absolute sense restrictions.
 
 ## Review and checkpoint protocol
 
@@ -286,10 +295,12 @@ Batch 14's fifteen kanji and five supporting word articles have independent init
 Both original reviewers confirmed the four revised pages, resolving the source-grounded quiz
 correction and optional citation-label polish without a remaining actionable defect.
 Its source/reading audit brings the total to 210 additions and 655 exact reading rows; another 155 additions remain unauthored.
-Batch 15 is authored but not yet review-closed: fifteen more kanji and two supporting
+Batch 15 has independent initial reports but is not yet review-closed: fifteen more kanji and two supporting
 word articles bring the authored total to 225 additions and 701 exact reading rows.
 The deck now has 845 kanji, 3,251 word articles and 227 selected N2 characters;
 140 selected characters remain unauthored. Nineteen older word edits are links only.
+The shared 玉/王 quiz finding and Claude's three linking findings are corrected;
+both original reviewers' changed-passage confirmations are pending.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.

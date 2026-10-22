@@ -1418,7 +1418,7 @@ distractor repairs. No unresolved actionable claim remains in the assigned scope
 Git/validator/manifest verification is author-run, not reviewer-executed; stroke-path
 review, native-fluency certification and runtime quiz execution remain outside these verdicts.
 
-## Batch 15: 玉瓶甘畜略畳療皮皿省県砂硬磨祈 - draft, independent review pending
+## Batch 15: 玉瓶甘畜略畳療皮皿省県砂硬磨祈 - corrections awaiting confirmation
 
 **Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke files;
 two supporting word articles, 家畜 and 略語; nineteen older word articles gaining
@@ -1454,6 +1454,37 @@ comparison confirms that the nineteen older word changes preserve metadata and
 teaching text apart from links. The validator reports zero errors; the accumulated
 audit covers 225 additions and 701 source-reading rows. Counts are 845 kanji,
 3,251 word articles and 227 selected N2 characters; 140 additions remain unauthored.
-Independent GPT/Claude review of the seventeen new teaching pages and the narrow
-related edits is still pending. Draft counts and mechanical checks are not a
-linguistic-review closure.
+The draft was committed as `9f6464f5255dd6ece56e4c949a7a3102ae38fbcb`, with
+author and committer both `stop-cran`. Its exact 56-file scope and deterministic
+manifest `4689be69ba558789` were verified before independent review.
+
+### Independent initial review
+
+Both reviewers received the same frozen draft, seventeen new teaching pages,
+nineteen related link-only passages, source access and three-facet rubric.
+The processes ran sequentially and exited without code edits. Neither received
+the other's report or the author's preferred reconciliation.
+
+- **GPT:** actual `gpt-6.1-sol`, original session
+  `587cca0f-9673-49ac-b654-44a29accd006`;
+  [initial report](n2-reviews/batch-15-gpt-initial.md).
+- **Claude:** actual `claude-opus-5.5`, original session
+  `98ba540b-efbf-4d9f-9b8f-a2d96b0bb813`;
+  [initial report](n2-reviews/batch-15-claude-initial.md).
+
+### Evidence-based reconciliation
+
+| Finding | Disposition |
+| --- | --- |
+| GPT-01 / Claude F1: 王 is a defensible 玉 meaning answer | Resolved in the author correction: replace 王 with the existing 全, whole/complete. The author inspected pinned entry 1921990, sense 7, and the actual Daijisen ぎょく headword, sense 5, confirming the shogi king abbreviation. Preserve the visual 王 comparison and explain this limited semantic overlap rather than imply completely disjoint meanings. |
+| Claude F2: missing ほぼ link in 略 | Resolved: link the existing kana article at the substantive discussion. It teaches the same entry 1551940 and explicitly records the rare 略 spelling; the reading row remains accurately qualified. |
+| Claude F3: missing 上手い comparison link in 甘 | Resolved: link the existing うまい article, retaining the difference between tasty/skilled spelling preferences and strict restrictions. |
+| Claude F4: missing 固い/堅い word links in 硬 | Resolved: link both existing articles in the spelling comparison. Preserve the 固 character link and do not rewrite unchanged older word prose. |
+| Claude optional: ambiguous pronoun, duplicate spelling/kana labels, irregular する link | Adopted: name this card's ギョク row, remove duplicate wording while retaining renderer-supplied flags, and link the contrasted irregular verb's actual article. |
+| Claude optional: more 王-shaped components and additional 花瓶 readings | Optional expansion, not adopted. These are outside the focused examples; the existing 花瓶 claim is explicitly about the linked かびん article, not every dictionary reading. |
+| Claude optional: remove 畜's extra comparison citations | Not adopted: those retained entries intentionally support the new linked 家畜 article's category comparisons in the shared batch source packet. Their presence makes no false claim about an uninspected source. |
+| Claude optional: possible future title overlaps | No current defect established beyond 玉/王. The actual three-choice assignments and older two-choice fallbacks were checked. Larger or changed quizzes remain a disclosed limit, not a reason to manufacture unrelated card edits. |
+
+The correction changes five teaching pages: 玉, 甘, 略, 硬 and 磨.
+Both original reviewers' changed-passage confirmations remain pending; these author
+resolutions and the initial reports are not yet a batch review closure.
