@@ -234,6 +234,11 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
 - Batch 14 gives 火 and 分 a third curated distractor rather than relying on
   automatic choices around the new burning/fragment meanings. These are exact
   one-line changes; fifteen older word edits add links only.
+- GPT's batch 14 review found direct 乾燥 exclusions missing for figurative
+  dullness (つまらない/退屈) and 切れる's narrower moisture-draining use.
+  The author verified the actual Daijisen HTML definitions and pinned senses.
+  Add direct pairs even when another pair through 乾く or つまらない already
+  exists; retain the differences rather than teaching unrestricted synonymy.
 
 ## Review and checkpoint protocol
 
@@ -264,7 +269,8 @@ and confirmed corrections, including the linked 汗 article's consistency repair
 Batch 13 has independent initial reports for all eighteen new pages. Both original reviewers
 confirmed the eight revised teaching pages without a remaining actionable defect. Its 21 legacy word changes are component links
 only, including the kana-headword あびる lesson.
-Batch 14's fifteen kanji and five supporting word articles are authored but not yet independently reviewed.
+Batch 14's fifteen kanji and five supporting word articles have independent initial reviews;
+the source-grounded quiz correction and citation-label polish await changed-passage confirmation.
 Its source/reading audit brings the total to 210 additions and 655 exact reading rows; another 155 additions remain unauthored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the

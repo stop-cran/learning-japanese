@@ -1310,7 +1310,7 @@ and 水's exact one-line fallback repair is unchanged. No unresolved actionable 
 the assigned scope. Git/validator/manifest checks are author-run, not reviewer-executed; stroke-path
 and runtime-quiz execution and native-fluency certification remain outside these review verdicts.
 
-## Batch 14 - authored, independent review pending
+## Batch 14 - correction awaiting confirmation
 
 **Characters:** 溶滴漁濃濯灯灰炭焼照燃燥爆片版.
 
@@ -1333,7 +1333,7 @@ Sensitive evidence includes the full melting 溶ける/融ける/解ける famil
 money/time-used-up sense; 濯ぐ's restricted ゆすぐ reading; bound 灯影 ほかげ;
 焼き's standalone, prefix and suffix uses; 燃す もす; the rare spelling 燥ぐ;
 片's prefix classification and 版's はん/ばん family and 板 spelling overlap.
-The actually fetched [Seisenban Nihon Kokugo Daijiten 照らす, I.4](https://kotobank.jp/word/%E7%85%A7%E3%82%89%E3%81%99-577081)
+The actually fetched [Seisenban Nihon Kokugo Daijiten 照らす, sense 4](https://kotobank.jp/word/%E7%85%A7%E3%82%89%E3%81%99-577081)
 supports comparison against a standard. Irrelevant encyclopedia extractions for 乾燥 were
 not adopted as lexical confirmation; the pinned JMdict entry explicitly classifies both
 transitive and intransitive 乾燥する, and the new article illustrates each directly.
@@ -1349,4 +1349,40 @@ Author-run structural validation returned zero errors. The accumulated source au
 Repeated manifest builds were byte-identical, version `498287858197d157`.
 Content totals are 830 kanji, 3,249 word articles and 212 selected N2 characters.
 The first thirteen batches' 195 additions are review-closed; these fifteen additions and
-five supporting word articles still require independent GPT/Claude review.
+five supporting word articles received the independent initial reviews below.
+
+### Independent initial reviews and reconciliation
+
+The exact 57-file draft is `33aa3d86e64ef0aef7da500d221529d42cda572c`, with author
+and committer `stop-cran`. Both isolated reviewers received this same frozen snapshot,
+20-page scope, related-passage scope, three facets, rubric and evidence.
+They ran sequentially, made no edits, remained blind to the other's report and author
+adjudication, and exited before the next process began.
+
+| Reviewer | Actual model | Original session | Preserved report |
+| --- | --- | --- | --- |
+| GPT | `gpt-6.1-sol` | `5590b9b0-cd9a-4b13-8b6d-f1a39b75d068` | [Initial](n2-reviews/batch-14-gpt-initial.md) |
+| Claude | `claude-opus-5.5` | `2c226970-d191-482f-80b9-d3aa841f23a8` | [Initial](n2-reviews/batch-14-claude-initial.md) |
+
+| Observation | Adjudication and implemented change |
+| --- | --- |
+| GPT B14-GPT-01: missing direct 乾燥/つまらない and 乾燥/退屈 exclusions | **Resolved in the correction; confirmation pending.** Pinned 乾燥 entry 1209920 sense 2 is figurative insipidity. The actual Daijisen HTML noun/na-adjective definition establishes lack of interest or appeal. Pinned entries 1008190 sense 1 and 1596750 sense 1 support the existing boring/tedious labels. Added both direct exclusions and qualified comparisons. 退屈's separate exclusion of つまらない was not sufficient. |
+| GPT B14-GPT-01: missing direct 乾燥/切れる exclusion | **Resolved in the correction; confirmation pending.** Pinned 切れる entry 1384860 sense 12 is dry off; actual Daijisen sense 8 specifies moisture shaken or drained off. Added the direct exclusion and explained the narrow overlap, without equating every drying process with draining. |
+| Claude: all assigned pages initially CLEAN | No actionable finding in that report. This does not override GPT's independently source-supported quiz finding. |
+| Claude O1: snow/ice spelling convention | **Optional, not adopted.** The existing qualification already preserves 解ける's melting-family overlap. No unverified convention or frequency claim was added after the official-source lookup failed. |
+| Claude O2: 照らす citation numbering | **Optional, adopted.** The fetched Nikkoku entry displays subsense 4 without a main section I. Changed the two app-page labels and source-record label to sense 4. The underlying comparison claim and URL are unchanged. |
+| Claude O3: larger-quiz overlap | **Optional, not adopted.** Current default four-choice guards are checked. Larger-quiz fallback configurations remain outside the assigned runtime scope. |
+
+The correction retains 74 selected source pairs, including complete つまらない and 退屈
+families and the existing 切れる record. The source packet additionally retains the actual
+[Daijisen 乾燥](https://kotobank.jp/word/%E4%B9%BE%E7%87%A5-49135) and
+[切れる](https://kotobank.jp/word/%E5%88%87%E3%82%8C%E3%82%8B-480580) usage links.
+The author inspected the actual HTML dictionary bodies, not only page metadata or the
+earlier irrelevant encyclopedia extraction. Both physical 乾燥する classifications are
+also confirmed by that native entry. The old word articles remain unchanged beyond links.
+
+Corrected teaching pages are 乾燥 and its source-footer-only 燥 companion, plus citation-label-only
+照 and 照らす. Structural validation and the accumulated audit remain clean:
+210 additions, 655 exact reading rows and 155 unauthored characters.
+Repeated corrected manifest builds were byte-identical, version `492f83230e876e4a`.
+Original-session confirmation of these four revised pages is still pending; this batch is not review-closed.
