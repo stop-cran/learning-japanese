@@ -1310,7 +1310,7 @@ and 水's exact one-line fallback repair is unchanged. No unresolved actionable 
 the assigned scope. Git/validator/manifest checks are author-run, not reviewer-executed; stroke-path
 and runtime-quiz execution and native-fluency certification remain outside these review verdicts.
 
-## Batch 14 - correction awaiting confirmation
+## Batch 14 - review-closed
 
 **Characters:** 溶滴漁濃濯灯灰炭焼照燃燥爆片版.
 
@@ -1366,8 +1366,8 @@ adjudication, and exited before the next process began.
 
 | Observation | Adjudication and implemented change |
 | --- | --- |
-| GPT B14-GPT-01: missing direct 乾燥/つまらない and 乾燥/退屈 exclusions | **Resolved in the correction; confirmation pending.** Pinned 乾燥 entry 1209920 sense 2 is figurative insipidity. The actual Daijisen HTML noun/na-adjective definition establishes lack of interest or appeal. Pinned entries 1008190 sense 1 and 1596750 sense 1 support the existing boring/tedious labels. Added both direct exclusions and qualified comparisons. 退屈's separate exclusion of つまらない was not sufficient. |
-| GPT B14-GPT-01: missing direct 乾燥/切れる exclusion | **Resolved in the correction; confirmation pending.** Pinned 切れる entry 1384860 sense 12 is dry off; actual Daijisen sense 8 specifies moisture shaken or drained off. Added the direct exclusion and explained the narrow overlap, without equating every drying process with draining. |
+| GPT B14-GPT-01: missing direct 乾燥/つまらない and 乾燥/退屈 exclusions | **Resolved.** Pinned 乾燥 entry 1209920 sense 2 is figurative insipidity. The actual Daijisen HTML noun/na-adjective definition establishes lack of interest or appeal. Pinned entries 1008190 sense 1 and 1596750 sense 1 support the existing boring/tedious labels. Added both direct exclusions and qualified comparisons. 退屈's separate exclusion of つまらない was not sufficient. Both original reviewers confirmed the correction. |
+| GPT B14-GPT-01: missing direct 乾燥/切れる exclusion | **Resolved.** Pinned 切れる entry 1384860 sense 12 is dry off; actual Daijisen sense 8 specifies moisture shaken or drained off. Added the direct exclusion and explained the narrow overlap, without equating every drying process with draining. Both original reviewers confirmed the correction. |
 | Claude: all assigned pages initially CLEAN | No actionable finding in that report. This does not override GPT's independently source-supported quiz finding. |
 | Claude O1: snow/ice spelling convention | **Optional, not adopted.** The existing qualification already preserves 解ける's melting-family overlap. No unverified convention or frequency claim was added after the official-source lookup failed. |
 | Claude O2: 照らす citation numbering | **Optional, adopted.** The fetched Nikkoku entry displays subsense 4 without a main section I. Changed the two app-page labels and source-record label to sense 4. The underlying comparison claim and URL are unchanged. |
@@ -1385,4 +1385,35 @@ Corrected teaching pages are 乾燥 and its source-footer-only 燥 companion, pl
 照 and 照らす. Structural validation and the accumulated audit remain clean:
 210 additions, 655 exact reading rows and 155 unauthored characters.
 Repeated corrected manifest builds were byte-identical, version `492f83230e876e4a`.
-Original-session confirmation of these four revised pages is still pending; this batch is not review-closed.
+
+### Confirmation, model usefulness and closure
+
+The exact 11-file correction checkpoint is `23b6bd6c3799acc9dd1fe6597bbd176eae242387`,
+authored and committed as `stop-cran`. Both original sessions received the actual committed
+four-page teaching diff and identical revised-passage assignment. They resumed sequentially
+with the same actual models, made no edits and exited before the next process began.
+
+- [GPT confirmation](n2-reviews/batch-14-gpt-followup.md): all four revised pages CLEAN
+  on all three facets; B14-GPT-01 resolved, precise native-dictionary bodies checked,
+  citation-label polish confirmed, no new actionable issue or regression.
+- [Claude confirmation](n2-reviews/batch-14-claude-followup.md): all four revised pages CLEAN
+  on all three facets; explicitly corrected its original exclusion-coverage verdict,
+  confirmed all three direct pairs and qualified comparisons, and closed optional O2.
+
+After comparing findings, optional suggestions, limits and per-file observations in both
+initial reports, GPT uniquely established the actionable 乾燥 secondary-sense omission.
+Claude's adopted unique contribution was the nonblocking citation-label improvement, not
+another substantive defect. Its initial CLEAN verdict missed the quiz omission; the
+follow-up acknowledgement and agreement are confirmation, not independent discovery.
+The dual-family process was useful here, but this sample does not rank models generally
+or establish that model bias has been eliminated.
+
+**Closure:** all twenty new teaching pages have independent GPT/Claude initial review,
+and all four revised pages have both original reviewers' clean confirmations.
+The first fourteen batches' 210 additions are review-closed. Totals remain 830 kanji,
+3,249 word articles and 212 selected N2 characters; the accumulated audit covers 655 exact
+reading rows, with 155 additions still unauthored. Final mechanical comparison confirms
+the fifteen older word changes remain links only and 火/分 remain exact one-line
+distractor repairs. No unresolved actionable claim remains in the assigned scope.
+Git/validator/manifest verification is author-run, not reviewer-executed; stroke-path
+review, native-fluency certification and runtime quiz execution remain outside these verdicts.
