@@ -391,6 +391,18 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   preserve every nonlink character; 野菜 also loses the exact obsolete
   clause claiming that 菜 has no card. That exception is mechanically
   declared rather than hidden under a links-only claim.
+- Batch 19's GPT review found missing direct protections for 脳/気,
+  舟's container/aircraft uses and 荒れる/かさかさ. A bounded
+  pinned-dictionary candidate sweep also established 脳's direct mind
+  overlaps with 胸 and 腹. Different primary body-part labels do not
+  remove applicable figurative noun senses; do not credit the author's
+  later extensions as independent reviewer discoveries.
+- Both reviewers noticed the 舟/缶 container concern, although Claude
+  treated it as optional and low risk. Compare all report sections
+  before calling a contribution unique. Claude independently supplied
+  two useful teaching-clarity changes: align 脳's label with its taught
+  mind sense, and connect 般's ハン with the パン in 一般/全般.
+  The former is not a claim that KANJIDIC2's memory gloss is false.
 
 ## Review and checkpoint protocol
 
@@ -484,12 +496,13 @@ parent session's artifact directory. The event record showed a noninteractive pa
 Grant only that artifact directory with `--add-dir`. Reviewer session IDs can be recovered from the local session store
 for same-task follow-up; `--resume` and `--trust-folder` cannot be combined. Exit each resumed process before the next.
 
-Batch 19 is authored but not yet independently reviewed. Its fifteen
+Batch 19 has independent initial reports and corrected passages
+awaiting original-reviewer confirmation. Its fifteen
 kanji and four supporting words bring the authored total to 285 additions
 and 848 exact source-reading rows. Counts are 905 kanji, 3,265 words and
 287 selected N2 characters, with 80 additions unauthored. Its 40 reading
 rows contain 34 lexical examples and six qualified lookup-only rows;
-the selected packet has 68 exact records from 66 complete entry families.
-Fourteen direct word-quiz pairs are provisional author judgments pending
-independent review. Twelve old word edits have the precisely declared
+the corrected packet has 75 exact records from 73 complete entry families.
+Twenty-one direct word-quiz pairs protect the confirmed overlaps.
+Twelve old word edits have the precisely declared
 preservation scope above; no old kanji or stroke changes.

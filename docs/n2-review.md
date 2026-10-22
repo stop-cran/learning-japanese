@@ -2002,7 +2002,7 @@ defect-class extension. The reviewers did not execute Git,
 validation, the class sweep or runtime quizzes, certify native
 fluency, or exhaustively inspect stroke drawings.
 
-## Batch 19: 脳腕腰膚臓臣舟航般芸荒荷菓菜著 - authored; review pending
+## Batch 19: 脳腕腰膚臓臣舟航般芸荒荷菓菜著 - corrected; confirmation pending
 
 **Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke
 files; four supporting word articles, 脳, 皮膚, 舟 and 荒れる;
@@ -2054,3 +2054,88 @@ reviewer-executed.
 The first eighteen batches remain review-closed. Same-snapshot
 independent GPT/Claude review and source-grounded reconciliation of
 batch 19 are pending; no independent verdict is claimed yet.
+
+### Independent initial review and reconciliation
+
+The 51-file draft was committed as
+`42a8e121fad9901d0738f130164809fb926bc46c`, with author and committer
+`stop-cran`. GPT (`gpt-6.1-sol`, session
+`a3af0616-3ac8-45d9-a616-3df31efd5e85`) and Claude
+(`claude-opus-5.5`, session `06e6e570-2946-401f-9be7-3cef26876548`)
+independently reviewed the identical frozen snapshot, all nineteen
+new teaching pages and the twelve narrow related passages. Each
+read-only process exited successfully before the next began, with
+zero recorded edits. Their unchanged reports are
+[GPT](n2-reviews/batch-19-gpt-initial.md) and
+[Claude](n2-reviews/batch-19-claude-initial.md).
+
+- **GPT B19-GPT-01, medium correctness, resolved in the correction:**
+  気 has an applicable noun mind sense, pinned entry 1221520,
+  sense 1. Added the direct 脳/気 safeguard. Existing exclusions
+  through 精神 do not protect this pair transitively.
+- **GPT B19-GPT-02, medium correctness, resolved in the correction:**
+  舟's applicable container senses make 缶's container label unsafe;
+  replaced that distractor with 申, humbly say. Added direct ケース
+  and 箱 safeguards. Pinned entry 1602800, sense 2, has unrestricted
+  tank/tub/vat/trough senses. The inspected 精選版 日本国語大辞典
+  ふね entry, sense 1.2, explicitly covers box-shaped containers,
+  including sake-press and fish boxes. The linked public entry and
+  the full pinned ケース/箱 records support the correction.
+  Added the direct 飛行機 safeguard too: 1602800 sense 1 explicitly
+  permits seaplane with 舟, and 1485470 has airplane/aircraft.
+  This is a broad-label safeguard, not a claim of free substitution
+  for aircraft. The container evidence is high-confidence; GPT's
+  lower confidence for the broader airplane judgment remains recorded.
+- **GPT B19-GPT-03, medium correctness, resolved in the correction:**
+  荒れる's applicable rough/chapped-skin sense, entry 1281490,
+  overlaps かさかさ's dry/rough condition, entry 1037130. Added
+  the direct safeguard and a sense-scoped comparison. The rustling
+  sense is not equated with rough seas or unruly behavior.
+- **Claude B19-1, minor comprehensibility, resolved in the correction:**
+  changed 脳's title/heading from brain/memory to brain/mind,
+  matching the actual teaching and linked article. Memory is a
+  pinned KANJIDIC2 gloss, so the initial label was not established
+  as factually false; the fix aligns the short answer with the
+  material taught rather than adding an unrelated example.
+- **Claude B19-2, minor comprehensibility, resolved in the correction:**
+  reworded the on-reading note and explicitly connected ハン with
+  パン in 一般/全般 while retaining ハン in 諸般. The earlier
+  complete word readings were correct; the defect was the missing
+  learner-facing connection, not incorrect metadata.
+
+After GPT's mind-sense finding, the author swept the pinned JMdict
+download for mental, vessel and rough-condition candidate glosses
+against existing word forms and permitted readings. Complete inspection
+additionally confirms 胸/むね's mind sense, entry 1237820 sense 6,
+and 腹/はら's one's-mind sense, entry 1501110 sense 3. Added both
+direct 脳 safeguards, preserving the older articles. These are author
+extensions, not findings attributed to either reviewer. The candidate
+sweep is bounded English-gloss evidence, not exhaustive synonymy
+certification or a license to conflate every state of mind, rough
+surface, intensity adjective or matching kana reading.
+The title change also prompted an author-side check of 脳's curated
+kanji choices: replaced 胸's chest/breast/feelings label with 服,
+clothing, rather than retaining a mental-domain answer after broadening
+the target label to mind.
+
+Claude's optional 舟/缶 note is the same underlying container concern
+as GPT's finding; it is shared signal despite the different severity.
+GPT uniquely established the other reported word-quiz gaps. Claude
+uniquely supplied the two adopted clarity changes, which GPT's initial
+all-CLEAN verdicts on those kanji missed. Neither initial reviewer
+established the later author extensions. The optional 荒/嵐 link is
+adopted. 般's title change, further 野菜 wording removal and unsupported
+register cues remain optional and unadopted; none establishes another
+actionable defect. In particular, dictionary recognition alone does
+not prove the frequency or register of すさぶ/すさむ.
+
+The corrected packet contains 75 exact records and 73 complete families,
+with all restrictions retained; the four new words declare twenty-one
+direct exclusion pairs. The 40 reading rows, six qualified lookup-only
+rows, deck counts and old-content preservation are unchanged.
+The teaching correction covers seven pages: 脳, 舟, 般 and 荒 kanji;
+脳, 舟 and 荒れる words. The source additions also update the related
+kanji citations. Author-run validation reports zero errors; repeated final-correction
+manifest builds are byte-identical with content version `cbcc13ceec6bbbe2`.
+Confirmation of the actual committed seven-page diff by both original
+reviewers remains pending.
