@@ -2762,7 +2762,7 @@ from the corrected snapshot above. Both commit identities remain
 Batch 22 is review-closed, with 35 selected additions remaining.
 No push or PR was made.
 
-## Batch 23 - 述逆造郊郵量針鈍鉄鉱銅鋭録門防
+## Batch 23 - 述逆造郊郵量針鈍鉄鉱銅鋭録門防 - review-closed
 
 ### Sources, authoring and draft checks
 
@@ -2908,3 +2908,42 @@ contentVersion `e59e527490d48a92`, SHA256
 `c42f40166cf6fc02080819926460ba4cb952d14ddbe09102eddbdbfd3f3129df`.
 The two changed teaching pages are 門 and link-only 鉱石. Their
 original-reviewer confirmations remain pending.
+
+### Original-reviewer confirmation and closure
+
+The exact nine-file correction checkpoint is
+`b32b498c77ab63d635e63b573603882f423772d1`, with `stop-cran`
+as both author and committer. Both original reviewer sessions resumed
+sequentially on that same committed snapshot, the actual two-page
+teaching diff and both full changed pages. They made zero edits and
+exited before the next reviewer began.
+
+- [GPT confirmation](n2-reviews/batch-23-gpt-followup.md): both pages
+  CLEAN on correctness, scoped coverage and comprehensibility; the
+  pinned lexical 鳴門 example, actual native-dictionary disagreement
+  and link-only changes independently checked, with no regression.
+- [Claude confirmation](n2-reviews/batch-23-claude-followup.md): both
+  pages CLEAN on all three facets; B23-R-01 resolved and the adopted
+  links verified, with no regression. Its further optional 戸 link
+  does not establish a consequential defect and is not used to prolong
+  the correction loop.
+
+Both reviewers independently fetched the actual Daijisen 鳴門
+headword and confirmed the lexical なると allocation. GPT's
+follow-up source confirmation is not an independent discovery of the
+original issue. The source-first disposition and unique-contribution
+comparison above remain unchanged.
+
+**Closure:** all seventeen new teaching pages have independent
+GPT/Claude initial review, and both changed pages have clean
+confirmations from the original reviewers. All four reports are
+preserved unchanged. The first twenty-three batches' 345 additions
+are review-closed. The final cumulative scope is 60 files, with
+nineteen links-only older-word changes and no older kanji/stroke edit.
+Totals remain 965 kanji, 3,272 words, 347 selected N2 characters and
+1,022 audited reading rows; 20 additions remain unauthored. The
+manifest remains `e59e527490d48a92`. No actionable finding remains
+in the assigned scope. Git, structural validation and manifest
+verification are author-run; exhaustive stroke geometry, runtime
+quiz testing and native-fluency certification remain outside these
+review verdicts. Nothing is pushed.

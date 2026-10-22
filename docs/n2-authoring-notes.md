@@ -772,3 +772,13 @@ and reading audits; validation has zero errors. Repeated manifest
 builds are byte-identical at `e59e527490d48a92`. Counts and 39
 reading rows are unchanged. The actual two-page diff will accompany
 the corrected commit in both original-reviewer confirmations.
+
+Batch 23 is now review-closed at correction checkpoint
+`b32b498c77ab63d635e63b573603882f423772d1`. Both original
+reviewers confirmed the same two-page diff and full changed pages,
+sequentially and without edits, and independently checked the actual
+鳴門 headword. Both pages are CLEAN on all three facets; B23-R-01
+is resolved. Four unchanged reports are archived and both processes
+have exited. The final 60-file cumulative scope preserves all older
+nonlink content; the manifest stays `e59e527490d48a92`. Twenty
+selected additions remain unauthored.
