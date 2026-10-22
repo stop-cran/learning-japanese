@@ -928,3 +928,44 @@ confirmed that ID, headword, reading and sense directly in the pinned XML. A Kot
 the signal board はんぎ does not contradict the nonexclusive card wording or the pinned ばんぎ example.
 Neither report claims native-speaker certification. No actionable defect or consequential unresolved claim
 remains in the revised scope.
+
+## Batch 11
+
+Cards: 査 栄 根 械 棒 森 植 極 橋 欧 武 歴 殿 毒 比.
+
+Status: **authored; independent reviews pending**. Scope: all 15 new kanji and four supporting articles,
+栄える, 極める, 欧州 and 御殿; all three review facets and 45 curated distractor assignments.
+Related edits: component links in 21 existing word articles, with lexical metadata and teaching text preserved.
+
+Evidence: [batch-11.json](n2-batch-sources/batch-11.json), with 46 exact reading rows:
+40 JMdict-backed lexical examples, one externally verified written-boundary example, and five explicitly
+qualified source-only readings. The packet retains 52 selected restriction-aware spelling/reading records;
+14 sensitive families also retain complete spelling/reading lists, spelling flags and reading restrictions.
+These selected records are not the entire dictionary.
+
+### Authored scope and checks
+
+- All KANJIDIC2 readings, primary strokes, canonical radicals and grade tags are retained.
+  極 uses the primary 12-stroke count; 毒 keeps 毋, no. 80, with its 母-like visible lower portion explained.
+  Origins remain labelled modern-shape mnemonics rather than unverified historical or phonetic claims.
+- 栄's ヨウ and え, 欧's うたう and はく, and 武's bare たけ remain qualified source-only readings.
+  栄養 does not allocate its よう to 栄. The investigated 栄耀 えよう has an outdated-kana flag;
+  見栄 みえ is marked ateji. Neither is treated as independent proof of the unresolved native allocation.
+- 出来栄え, 屋根 and 月極め provide complete bound-reading examples. 殿 distinguishes the building
+  compound 仮殿 from the formal address suffix -どの, with an attached-title example and no universal
+  claim of greater respect than 様.
+- 極 keeps the ごく adverb separate from きょく and the きわめる/きめる entries separate.
+  Kanjipedia explicitly verifies 極まる きまる; JMdict's corresponding family instead spells 極る.
+  The external notation guide establishes an outside-Joyo reading, not rarity.
+  月極's irregular げっきょく is not presented as an unqualified alternative to つきぎめ.
+- 械's rare-spelling flag is not a rare-pronunciation claim. 武し is explicitly archaic, and 歴とした
+  is identified as usually written in kana. Reading-sensitive links do not redirect はえる to さかえる
+  or きめる to the new きわめる article.
+- Supporting vocabulary has no inferred JLPT labels. Direct quiz safeguards cover 栄える with 盛ん/豊か
+  and 極める with 達する/至る; sentence patterns remain distinct despite contextual English overlap.
+  欧州 and ヨーロッパ share the exact answer Europe, so the existing identical-title deduplication applies.
+  No newly activated direct synonym was established among the remaining two-distractor legacy kanji.
+- All 19 new teaching pages were inspected by the author. Structural validation reports 0 errors;
+  the accumulated source/stroke audit covers 165 additions and 502 exact reading rows, with 200 selected
+  characters still unauthored. The 21 existing word articles match their preceding versions after removing
+  only the new component links and normalizing CRLF. These checks do not substitute for independent review.

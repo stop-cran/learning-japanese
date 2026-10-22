@@ -140,6 +140,14 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   The original sense-qualified ハン example was valid; the added homograph context prevents a
   one-spelling/one-reading shortcut. Resolve this as a context improvement, not proof that the
   documented reading is incorrect. 枝葉's えだは alternative is optional additional context.
+- Batch 11 again requires an exact written boundary: JMdict's deciding/settling family has 極る
+  きまる, while the inspected Kanjipedia entry explicitly gives 極まる きまる. Preserve that
+  independent evidence and its outside-Joyo marker; the marker alone does not establish rarity.
+  Keep both readings of 極める separate from the linked article's primary きわめる.
+- A word-final sound is not enough to establish its historical reading layer. Batch 11 retains
+  栄's え as qualified lookup information: 栄耀 えよう is flagged outdated kana usage, while
+  見栄 みえ carries a whole-word ateji label. These inspected records do not by themselves establish
+  a regular native-reading allocation. Do not turn a generated search explanation into that evidence.
 
 ## Review and checkpoint protocol
 
@@ -164,7 +172,8 @@ where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
 remaining defect in that scope; batch 06 required no teaching correction.
-The remaining 215 additions are not yet authored.
+Batch 11's 15 cards and four supporting pages are authored but not independently reviewed yet.
+The remaining 200 additions are not yet authored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
