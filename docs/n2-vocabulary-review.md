@@ -298,7 +298,7 @@ deterministic at `ebc4e3f59c4d7584`. Source rows and the packet are now marked c
 
 ## Batch 04: N2:62-N2:81
 
-**Status:** authored draft; independent initial reviews pending.
+**Status:** independently reviewed; supported corrections drafted; bounded confirmations pending.
 
 Scope: 育児, 幾分, 生け花, 以後, 以降, イコール, 勇ましい, 衣食住,
 意地悪, いちいち, 一応, 一段, 一流, 佚, 一昨日, 一昨年, 一斉, 一旦,
@@ -323,6 +323,63 @@ The blank original gloss for いってらっしゃい also remains blank in prov
 Selected practical senses, spelling/reading restrictions, qualified temporal
 boundaries, and direct quiz guards remain subject to independent review.
 An authored commit or successful structural check is not review closure.
+
+### Initial review and reconciliation
+
+Common frozen snapshot: `a14eb7276298c2231ac00aa70cea55948bb3e7fc`, parent
+`760cf55d180e2ce3105ea569f9443632c653408c`. The same 18 articles, three
+changed kanji contexts and two unchanged reuse claims were assigned to fresh
+isolated `gpt-6.1-sol` and `claude-opus-5.5` processes. GPT fully exited before
+Claude started, with no intervening repository edits. Usage receipts confirm
+the actual models and zero file edits. Both [GPT](n2-vocabulary-reviews/batch-04-gpt-initial.md)
+and [Claude](n2-vocabulary-reviews/batch-04-claude-initial.md) reports are archived
+verbatim; neither initial reviewer saw the other report or author reconciliation.
+
+The author checked the actual comparison articles and complete hash-verified
+dictionary families before accepting direct guards:
+
+| Initial observation | Decision and evidence |
+| --- | --- |
+| GPT04-01 / Claude F1: 幾分 reading classification | Resolve with the established native-first `wago` grouping and mixed-reading tag, explicitly explaining native いく + on ブン. KANJIDIC2 and the existing 場所 treatment support this; it is not a claim that both readings are native. |
+| GPT04-02: 幾分 / 気持ち | Add a direct guard for 気持ち's ordinary slight-degree sense (entry 1591430, sense 4), not its unrelated feeling sense. |
+| GPT04-03 / Claude F4: temporal cards / 来 | Add separate direct guards on both 以後 and 以降 for the "since" label taught by 来, entry 1547710 sense 2. Claude flagged 以降; GPT also flagged 以後. |
+| GPT04-04 / Claude Optional: イコール / 同一 and 同様 | Add both direct equal/equivalent-label guards, supported by entries 1451900 and 1453550 sense 1. They were shared observations despite different severity labels. |
+| GPT04-05: いちいち / あらゆる | Add a direct guard for the every-single/every label overlap, entries 1587320 sense 2 and 1586780 sense 1; keep the different attachment forms. |
+| GPT04-06 / Claude F5: 一応 / およそ | Add the direct rough-assessment/roughly-label guard, entries 1161170 sense 1 and 1523450. Existing 大体 protection is not transitive. |
+| Claude F5: 一応 / 約 and ほぼ | Add both guards after checking actual approximation titles and entries 1538100 sense 1 and 1551940 sense 2. Keep the valid "roughly" title rather than relabel it to disguise English-answer ambiguity. The guards do not turn 一応 into a general numerical estimator. |
+| GPT04-07 / Claude F6 and Optional: 一流 / 上等 and 優秀 | Add two direct quality-evaluation guards, supported by entries 1354030 and 1539230 sense 1. 上等 was shared under Findings and 優秀 was shared across Findings/Optional. |
+| GPT04-08: 佚 / ゆっくり | Add a direct guard for the leisure/rest use in entry 1013050 senses 1/3, not every slow-speed use. |
+| Claude F2: 衣食住 collective gloss | Change the new title to "food, clothing and shelter," matching the heading and entry 1158780, rather than suggest independent alternative definitions separated by a semicolon. |
+| Claude F3: comparison navigation | Add five missing link occurrences across 育児, 以後, 以降, 衣食住 and 一定, targeting the four existing cards 教育, 以前, 生活 and 変化. |
+| Claude Optional: イコール / 平等 | Add a guard for the context-free equal/equality labels after checking actual equal-treatment/distribution teaching and entry 1507670 sense 1. This is not a claim that mathematical identity and equal treatment are identical concepts. |
+| Claude Optional: 一斉 / 一緒 | Add a guard after verifying 一緒's ordinary same-time sense, entry 1163400 sense 4, as well as its actual together-action title. |
+| Claude Optional: 一定 / 安定 | Add a guard for the fixed/constant versus stable-state answer overlap, entries 1164950 sense 2 and 1154120 senses 1/2. It does not impose exact numerical constancy on every 安定 situation. |
+| Claude Optional: 一定 / 常に | No additional guard established: the inspected entry 1355970 and actual card concern always/constantly as frequency or continuity, not the fixed or prescribed value described by 一定. A related constancy theme alone does not establish another interchangeable answer label. |
+
+The correction changes twelve new articles, adding fifteen direct quiz pairs,
+five comparison links, one collective title correction and an explicit
+native-first reading explanation. It preserves every baseline identity,
+primary reading, title, exclusion list and established level. Complete newly
+needed comparison families are retained in the packet; dictionary presence
+is not itself a pairing decision.
+
+The models supplied useful complementary signal on this common sample:
+both caught the mixed reading, 来 on 以降, approximation and quality guards;
+同一/同様 and 優秀 are shared even though Claude called them Optional.
+GPT uniquely proposed 気持ち, 来 on 以後, あらゆる and ゆっくり.
+Claude uniquely proposed the collective title fix, missing comparison links,
+約/ほぼ and the additional 平等/一緒/安定 candidates.
+No ranking or general model-performance conclusion follows from one batch.
+
+Other optional collocation, register, polite-greeting and kanji-stem expansions
+remain nonblocking and are not used to extend unchanged cards' review scope.
+Both initial reviewers independently retrieved the relevant Kotobank
+temporal and 佚 entries. GPT also retrieved Jisho comparison entries; that
+is independent retrieval of JMdict-derived data, not another dictionary
+tradition. Neither executed Git, recomputed hashes or ran the app. Claude's
+wrong 一定 lookup is explicitly not evidence; the article's の/suru patterns
+remain supported by the pinned dictionary. Naturalness judgments are not
+native-speaker certification.
 
 ## Final verification
 

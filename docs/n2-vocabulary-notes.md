@@ -151,3 +151,13 @@ evidence and learning impact; issue creation requires authorization.
   while retaining easier native primary readings. Reuse 一昨日 and 一昨年 unchanged
   after checking their bodies. Qualify normal temporal-boundary inclusion rather
   than claiming every event-based use of 以後 or 以降 has an absolute inclusive boundary.
+- **Batch 04 reconciliation:** Explain native-first mixed kun+on readings and use
+  the established `wago`/mixed-reading grouping, as on 場所; recognizing the whole
+  reading is not the same as explaining its components. Keep a collective gloss
+  such as "food, clothing and shelter" together instead of separating its parts
+  with the semicolons used for alternative senses.
+- **Batch 04 reconciliation:** Compare equivalent observations across all report
+  sections: 同一/同様 and 優秀 were shared observations even though Claude put
+  them under Optional. Check newly proposed ordinary secondary senses, not just
+  title text or a mutual exclusion neighbor. 一緒 has a same-time sense; 常に's
+  frequency meaning alone does not make it a fixed-value synonym of 一定.
