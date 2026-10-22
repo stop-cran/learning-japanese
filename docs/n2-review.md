@@ -933,7 +933,7 @@ remains in the revised scope.
 
 Cards: 査 栄 根 械 棒 森 植 極 橋 欧 武 歴 殿 毒 比.
 
-Status: **four-page corrections confirmed; final direct-exclusion confirmation pending**. Scope: all 15 new kanji and four supporting articles,
+Status: **closed after independent reviews and changed-passage confirmations**. Scope: all 15 new kanji and four supporting articles,
 栄える, 極める, 欧州 and 御殿; all three review facets and 45 curated distractor assignments.
 Related edits: component links in 21 existing word articles, with lexical metadata and teaching text preserved.
 
@@ -1033,4 +1033,26 @@ Claude's final optional suggestions were adjudicated separately:
   reading table; the other documents the exact written 極まる boundary and its independent source.
 
 The additional 選ぶ exclusion changes only one metadata list in words/極める.md, with no new teaching prose.
-Final confirmation of that direct pair is pending; the batch is not closed yet.
+It was committed at `c81161be3a918430076da745d079fca534a520e8`. Both original reviewers resumed sequentially
+on that clean checkpoint and the actual one-hunk diff, inspected the exact unrestricted spelling/reading/sense
+and 選ぶ's answer label, and confirmed the correction CLEAN on all three facets:
+[GPT final confirmation](n2-reviews/batch-11-gpt-final.md) and
+[Claude final confirmation](n2-reviews/batch-11-claude-final.md).
+Claude withdrew its earlier borderline framing; GPT superseded its earlier no-remaining-pair conclusion.
+There was no new teaching prose and no established regression. The author verified the exact seven-file
+commit, zero validator errors and a byte-identical repeated manifest, version `5c0699d25fad591e`.
+Neither reviewer executed the app or the validator; numerical candidate-pool assertions were not reproduced.
+
+### Model usefulness and closure
+
+Claude uniquely surfaced the qualification/context gaps and the written-homograph quiz risk in the initial
+shared sample; GPT's initial report missed those issues. Claude's reports also exposed the 光る, 決める and 選ぶ
+relationships, but initially dismissed or weakened them using candidate scores or the gloss's position.
+Author reconciliation adopted the directly supported pairs and rejected unsupported allocation/status
+inferences. GPT independently confirmed the revised passages and explicitly calibrated its earlier clearance.
+These observations are useful complementary review evidence for this batch, not a general model ranking
+or proof that model bias has been eliminated.
+
+All 15 new kanji pages and four supporting articles now have independent GPT/Claude coverage; all corrected
+passages have confirmation, with no actionable defect or consequential unresolved claim remaining in scope.
+Batch 11 is **closed**: 165 additions review-closed, 167 selected N2 cards present, and 200 additions unauthored.
