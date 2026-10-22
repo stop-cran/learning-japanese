@@ -818,12 +818,12 @@ No actionable defect or consequential unresolved claim remains in the corrected 
 
 Cards: 普 暴 曇 替 札 机 材 村 板 林 枚 枝 枯 柔 柱.
 
-Status: **drafted; independent review pending**. Scope: all 15 new kanji and four supporting articles,
+Status: **initial reviews preserved; changed-passage confirmations pending**. Scope: all 15 new kanji and four supporting articles,
 暴れる, 枚, 枯れる and 柱; all three review facets and 45 curated distractor assignments.
 Related edits: component links in 17 existing word articles and a third curated wrong answer on 木.
 
 Evidence: [batch-10.json](n2-batch-sources/batch-10.json), with 40 exact reading rows and
-48 selected restriction-aware dictionary spelling/reading records. Twelve sensitive entry families retain
+51 selected restriction-aware dictionary spelling/reading records. Thirteen sensitive entry families retain
 their complete spelling and reading lists, spelling flags and reading details, including kana-only
 restrictions. These selected records are not the entire dictionary.
 
@@ -855,3 +855,44 @@ restrictions. These selected records are not the entire dictionary.
   The 57-file draft preserves the 17 legacy word articles after stripping only their new component
   links, and 木 changes only its curated distractors. Two manifest builds are byte-identical.
   These checks do not substitute for independent review.
+
+### Independent initial reviews and reconciliation
+
+Both reviewers independently read the same clean draft, `013263037da18cd9f5f25e199685493011f94df5`,
+with the same 19-page scope, related passages, rubric and 48-record initial evidence packet.
+Each ran alone in a fresh short-lived process and exited before the next started. Both report no assigned
+teaching-page omission; neither independently executed Git, the validator or the manifest builder.
+
+- GPT, actual `gpt-6.1-sol`, session `ce8a660c-011a-4701-a4e9-52e86b9f7099`:
+  [initial report](n2-reviews/batch-10-gpt-initial.md). All 19 pages CLEAN on all three facets;
+  no findings or optional suggestions.
+- Claude, actual `claude-opus-5.5`, session `6de31bb4-146c-4e13-9e52-548a2bbe2ae2`:
+  [initial report](n2-reviews/batch-10-claude-initial.md). One minor 板 homograph finding;
+  otherwise CLEAN. Its arithmetic description that all 40 reading rows have JMdict pairs should
+  be read with the stated exception: 39 lexical examples and 普's one source-only あまねし.
+
+`B10-板-01` is **resolved in the revised text, pending reviewer confirmation**, with calibration:
+the printing-woodblock example 板木 はんぎ was valid and sense-qualified, not an incorrect reading.
+The competing separate word 板木 ばんぎ is confirmed in pinned JMdict entry 2868686, not just a live
+search result. The revised notes explicitly distinguish the signal board and avoid a one-spelling/one-reading
+shortcut. This is a localized coverage/comprehensibility improvement rather than invalidation of the ハン row.
+
+Claude's optional suggestions were assessed separately:
+
+- **Adopted optional context:** 枝葉 えだは and the dictionary's "esp. しよう" qualifier for the
+  figurative sense, without exclusive reading compartments. Pinned entry 1579520 confirms both readings;
+  its complete spelling/reading family and the additional pair are retained.
+- **Adopted direct quiz safeguard:** 柱 gains 棒, whose stick/rod/pole answer can overlap with a
+  structural post. The new comparison distinguishes shape from load-bearing role and cites entry 1519750.
+  This is one direct exclusion, not a transitive propagation to related words.
+- **Not adopted:** 激しい is an adjective, not the verb "act violently"; 台 is a supporting base,
+  骨 a supporting frame, and 基 a basis/foundation. Their related properties do not alone establish a
+  valid alternative to the displayed "pillar; mainstay" or "act violently; thrash about" answers.
+  No new direct ambiguity was established for those proposals.
+- **Optional, not required:** 人材, 千円札, 電柱 and additional 替 links. The existing examples and linked
+  supporting articles already satisfy the stated scope; no missing prerequisite was established.
+
+The revised packet has 51 selected pairs rather than 48 and 13 complete families rather than 12;
+the reading inventory and all 45 curated kanji choices are unchanged. Four teaching files change:
+板 and 枝 notes, 柱's metadata-source footer, and the supporting 柱 article. Both original reviewers
+must inspect the actual diff and revised pages before this batch is closed.

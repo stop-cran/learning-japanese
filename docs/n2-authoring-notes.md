@@ -136,6 +136,10 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
 - Batch 10 gives legacy 木 a third curated wrong answer because new 材 supplies a direct timber/wood
   synonym that could otherwise fill its default fourth slot. 林's woodland meaning is distinguished
   from wood as material rather than treated as proof of an exact size boundary between 林 and 森.
+- Batch 10's 板木 examples distinguish はんぎ, a printing block, from the separate ばんぎ signal board.
+  The original sense-qualified ハン example was valid; the added homograph context prevents a
+  one-spelling/one-reading shortcut. Resolve this as a context improvement, not proof that the
+  documented reading is incorrect. 枝葉's えだは alternative is optional additional context.
 
 ## Review and checkpoint protocol
 
@@ -160,7 +164,7 @@ where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
 remaining defect in that scope; batch 06 required no teaching correction.
-Batch 10's 15 kanji and four supporting articles are drafted but await independent GPT/Claude review.
+Batch 10's 15 kanji and four supporting articles have initial GPT/Claude reviews; revised passages await confirmation.
 The remaining 215 additions are not yet authored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
