@@ -428,7 +428,7 @@ equivalent observations across findings, optional suggestions, limits and per-ca
 
 Source records and structural checks are not native-speaker certification or exhaustive historical analysis.
 Dual-model usefulness is an observation about the reviewed sample, not proof that model bias has been eliminated.
-The first eighteen batches' GPT/Claude reports are preserved in the review ledger, including changed-passage confirmations
+The first nineteen batches' GPT/Claude reports are preserved in the review ledger, including changed-passage confirmations
 where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
@@ -502,8 +502,8 @@ parent session's artifact directory. The event record showed a noninteractive pa
 Grant only that artifact directory with `--add-dir`. Reviewer session IDs can be recovered from the local session store
 for same-task follow-up; `--resume` and `--trust-folder` cannot be combined. Exit each resumed process before the next.
 
-Batch 19 has independent initial reports and corrected passages
-awaiting original-reviewer confirmation. Its fifteen
+Batch 19 has independent initial reports and both original reviewers'
+confirmations of the corrected passages. Its fifteen
 kanji and four supporting words bring the authored total to 285 additions
 and 848 exact source-reading rows. Counts are 905 kanji, 3,265 words and
 287 selected N2 characters, with 80 additions unauthored. Its 40 reading
@@ -512,3 +512,8 @@ the corrected packet has 77 exact records from 75 complete entry families.
 Twenty-three direct word-quiz pairs protect the confirmed overlaps.
 Twelve old word edits have the precisely declared
 preservation scope above; no old kanji or stroke changes.
+The first nineteen batches are review-closed. The ledger distinguishes
+the shared container observation, initial model-specific contributions,
+Claude's later roughness finding and the author's additional safeguards.
+Neither the final confirmations nor the bounded candidate sweeps
+establish exhaustive synonymy or native-fluency certification.

@@ -2002,7 +2002,7 @@ defect-class extension. The reviewers did not execute Git,
 validation, the class sweep or runtime quizzes, certify native
 fluency, or exhaustively inspect stroke drawings.
 
-## Batch 19: 脳腕腰膚臓臣舟航般芸荒荷菓菜著 - corrected; confirmation pending
+## Batch 19: 脳腕腰膚臓臣舟航般芸荒荷菓菜著 - review closed
 
 **Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke
 files; four supporting word articles, 脳, 皮膚, 舟 and 荒れる;
@@ -2190,3 +2190,39 @@ citation, plus evidence, records and manifest. It raises the packet to
 to twenty-three, leaving all reading rows, old-content preservation and
 deck counts unchanged. Confirmation of this actual two-page correction
 by both original reviewers remains pending.
+
+### Final confirmation and closure
+
+The eight-file additional correction was committed as
+`610b71daec3156861f7b85e086fbb2e57ca091c2`, author and committer
+`stop-cran`. Both original sessions sequentially confirmed the identical
+committed two-page diff and complete revised pages, with the second
+process starting only after the first exited. Both completed
+successfully with zero recorded edits. Their unchanged final reports
+are [GPT](n2-reviews/batch-19-gpt-confirmation.md) and
+[Claude](n2-reviews/batch-19-claude-confirmation.md).
+
+Both mark the 荒れる word and 荒 kanji CLEAN on correctness, scoped
+coverage and comprehensibility, with no established regression.
+Claude resolves B19-C1; both verify the added direct 混雑 safeguard
+against 荒れる's disordered-state sense and 混雑's unrestricted second
+sense. All earlier accepted findings remain resolved. Claude withdraws
+the verbal かまう note; further citation polish and optional label
+changes remain unadopted and nonblocking. The medium-confidence
+ざらざら judgment is retained as such, not promoted to an attested
+skin collocation or universal synonymy claim.
+
+The author reran the exact baseline-preservation/source verifier,
+zero-error repository validator and cumulative 848-row audit.
+Repeated manifest builds are byte-identical at content version
+`9fda8d41f9409cfc`. The final batch scope is 57 files, including six
+unchanged review reports; no older kanji or stroke asset was modified.
+The twelve old word edits retain the declared links-only scope except
+the exact stale 菜-absence clause in 野菜.
+
+Batch 19 is review-closed: 285 additions and 848 exact reading rows
+across the first nineteen batches; 905 kanji, 3,265 words and 287
+selected N2 characters in the deck. Another 80 selected additions
+remain unauthored. These confirmations are bounded editorial
+judgments and author-run structural checks, not runtime-quiz testing,
+exhaustive stroke-path review or native-speaker certification.
