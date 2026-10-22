@@ -180,6 +180,29 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   English uses, so 汚す directly excludes 汚れる; put up overnight can describe the guest's stay,
   so 泊める's answer explicitly says put someone up. 沈める's separately applicable lower sense
   also needs direct exclusions from 下げる, 下ろす and 降ろす, regardless of their mutual pairs.
+- Batch 13 found an existing 浴びる lesson under the kana headword あびる with `kanji: []`.
+  Inventory searches by written kanji therefore missed it. Link that lesson rather than duplicating it
+  or changing its metadata to pretend that the headword contains a kanji.
+- Both 浴びる and 浴びせる are transitive ichidan verbs; their subjects have different roles.
+  English receiving/passive wording does not make 浴びる intransitive. The latter's pouring answer
+  also needs a direct guard against 掛ける's applicable secondary pouring sense, even though the
+  existing 掛ける lesson and title introduce hanging.
+- Preserve the exact reading being illustrated: 温い ぬるい does not establish bare ぬく.
+  Pinned entry 2567890 does attest 温 ぬく, but as an archaic derogatory noun; it is explicitly
+  recognition-only, not an everyday noun for warmth. Do not infer a suitable word from a reading list.
+- Mixed spelling/reading families require local qualifications: 清朝's Qing sense is restricted to
+  しんちょう, while the typeface sense is especially せいちょう; 清浄 accepts せいじょう and
+  しょうじょう. 準える is usually kana, and 準じる/準ずる's source-field kun labels are not
+  an etymological claim about the vocabulary's origin.
+- 湿る しめる is godan, not ichidan. The suffix -ま.じり needs a real compound and the
+  suffix's contribution, not merely an unsegmented headword. Batch 13 uses 雨混じり あめまじり.
+- A generated search answer proposed irrelevant dictionary URLs and universal absence claims.
+  Actual fetched 湾 and 準 headwords did not establish the proposed unusual word examples.
+  Batch 13 retains eleven exact readings as scoped lookup-only information, without claiming
+  that no attestation exists anywhere. A character's meaning list is not a lexical example.
+- Adding 湯 creates a potential hot-water overlap with the English title water. Batch 13 gives
+  the older two-choice 水 card a third curated wrong answer; its existing cold/hot-water teaching
+  distinction and all other content remain unchanged.
 
 ## Review and checkpoint protocol
 
@@ -207,7 +230,9 @@ remaining defect in that scope; batch 06 required no teaching correction.
 Batch 11 also preserves a final narrow confirmation of the direct 極める/選ぶ homograph exclusion.
 Batch 12's 15 additional kanji and three supporting verb articles have independent initial reports
 and confirmed corrections, including the linked 汗 article's consistency repair.
-Another 185 additions remain unauthored.
+Batch 13 has fifteen drafted kanji cards and three new supporting articles, awaiting independent
+review of all eighteen pages. Its 21 legacy word changes are component links only, including
+the kana-headword あびる lesson. Another 170 additions remain unauthored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.

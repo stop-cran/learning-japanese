@@ -1205,3 +1205,42 @@ Claude's initial review omitted the separate upstream source-snapshot document; 
 search did not verify hashes. The batch packet is selected evidence, not the entire dictionary.
 All unchanged reading/distractor qualifications retain their initial scoped reviews. Neither family
 performed exhaustive stroke drawing-path or runtime quiz review, and no verdict certifies native fluency.
+
+## Batch 13 - draft awaiting independent review
+
+**Characters:** 浅浴涙液涼混清減温測湖湯湾湿準.
+
+Fifteen kanji cards and three supporting word articles (浴びせる, 液体 and 湿度) are drafted.
+The existing 浴びる lesson is retained under its kana headword あびる rather than duplicated.
+All 21 existing word edits are component links only: 浅い, 涙, 涼しい, 混乱, 混雑, 清潔,
+加減, 減らす, 減る, 体温, 気温, 温い, 温度, 温暖, 予測, 湖, 湯, 湾, 水準,
+準備 and あびる. The only existing kanji edit is 水's third curated distractor 木, preventing
+an uncontrolled English water/hot-water fallback after adding 湯. Its teaching text is unchanged.
+
+The [batch source packet](n2-batch-sources/batch-13.json) retains exact character metadata,
+58 reading rows, 59 selected spelling/reading pairs and 27 complete sensitive entry families.
+There are 47 lexical reading examples and eleven explicitly qualified source-only readings:
+涙 レイ; 涼 うす.い/ひや.す/まことに; 湾 いりえ;
+湿 シュウ/うるお.う/うるお.す; 準 のり/ひと.しい/みずもり.
+These are lookup qualifications within inspected evidence, not universal claims of nonexistence.
+
+Sensitive evidence includes both transitive bathing/exposure verbs, 雨混じり's suffix,
+清浄 and 清朝's reading/sense families, 温's archaic derogatory ぬく, the 温/暖 families,
+測る/計る/量る, 湿る's godan conjugation and 準える's kana preference.
+The packet also retains 掛ける's applicable pouring sense for the new 浴びせる quiz exclusion;
+a narrow hanging lesson does not erase another applicable sense of that written form.
+The actual fetched [Digital Daijisen 浴びせる](https://kotobank.jp/word/%E6%B5%B4%E3%81%B3%E3%81%9B%E3%82%8B-426412)
+supports the water and question-showering uses. Other generated search claims were not adopted.
+
+All fifteen modern-shape mnemonics are labelled, retain `structure-unclassified`, and explain
+the indexing radical 水's 氵 form; 準 locates it at the upper left.
+Every new kanji has three curated wrong choices. New word articles declare no inferred vocabulary
+level. 浴びせる directly excludes 注ぐ, あびる, シャワー and 掛ける for pouring or English
+shower-label ambiguity; this is not a claim that their Japanese uses are unrestricted synonyms.
+液体 and 湿度 have distinct category/measurement labels rather than wetness or temperature.
+
+The content totals are 815 kanji and 3,244 word articles, with 197 selected N2 characters.
+The first twelve batches' 180 additions remain review-closed; the next fifteen are drafted,
+not yet independently approved. Another 170 selected characters remain unauthored.
+Independent GPT and Claude reports, reconciliation, validation and checkpoint details follow
+after this draft is frozen. No review or model-usefulness verdict is claimed for batch 13 yet.
