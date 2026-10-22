@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-03 review-closed; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-04 review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 60 rows are review-closed; 20 are drafted in batch 04 and 1,732 remain pending.
+The first 80 rows are review-closed; none are drafted and 1,732 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -298,13 +298,13 @@ deterministic at `ebc4e3f59c4d7584`. Source rows and the packet are now marked c
 
 ## Batch 04: N2:62-N2:81
 
-**Status:** twelve-file correction confirmed; two supplementary quiz guards awaiting bounded confirmation.
+**Status:** review-closed after sequential changed-passage and supplementary confirmation.
 
 Scope: 育児, 幾分, 生け花, 以後, 以降, イコール, 勇ましい, 衣食住,
 意地悪, いちいち, 一応, 一段, 一流, 佚, 一昨日, 一昨年, 一斉, 一旦,
 一定, いってらっしゃい.
 
-The draft adds **18 articles** and reuses the unchanged N5 一昨日 and 一昨年.
+The batch adds **18 articles** and reuses the unchanged N5 一昨日 and 一昨年.
 Both existing articles already explicitly teach the source on-readings
 いっさくじつ and いっさくねん. Their primary native readings and levels remain
 unchanged. The collection contains 3,341 word articles.
@@ -321,8 +321,8 @@ found in Koji Seigo o Shiru Jiten. No modern frequency claim is inferred.
 The blank original gloss for いってらっしゃい also remains blank in provenance.
 
 Selected practical senses, spelling/reading restrictions, qualified temporal
-boundaries, and direct quiz guards remain subject to independent review.
-An authored commit or successful structural check is not review closure.
+boundaries, and direct quiz guards were independently reviewed. An authored
+commit or successful structural check alone does not establish review closure.
 
 ### Initial review and reconciliation
 
@@ -402,11 +402,43 @@ candidates, くらい and ほど. Their actual cards and complete pinned entries
 features do not eliminate fallback answer-label ambiguity. These two pairs
 are added in a separate one-file follow-up; they do not turn 一応 into a
 general numerical approximation particle or alter either baseline card.
-Supplementary changed-passage confirmation remains pending.
+They receive the supplementary changed-passage confirmation recorded below.
 
 Other confirmation suggestions about 幾分 wording and teaching 気持ち's
 additional adverb sense remain optional. Neither report independently verifies
 Git, frozen hashes or app execution; no new full-batch review is claimed.
+
+### Supplementary confirmation and closure
+
+Supplementary snapshot: `dd4d6de435d91c2ab362a89660d97b173a9cf8d1`, parent
+`68380b7c43f3dc42c56f88e5639b525357dd4e85`. The actual one-line diff
+adds only the two 一応/くらい and 一応/ほど guards. Fresh `gpt-6.1-sol`
+and `claude-opus-5.5` processes reviewed that same unchanged commit
+sequentially, with each model's own reports and the same bounded evidence.
+Usage receipts confirm actual models and zero file edits. Their verbatim
+[GPT supplement](n2-vocabulary-reviews/batch-04-gpt-supplement.md) and
+[Claude supplement](n2-vocabulary-reviews/batch-04-claude-supplement.md)
+both accept correctness, scoped coverage and comprehensibility as **CLEAN**.
+No actionable regression or consequential unresolved claim remains in scope.
+Claude explicitly withdraws its earlier optional retitling alternative;
+English-label ambiguity should not be hidden by cosmetic rewording.
+
+The eighteen initial whole-article reviews, three related kanji-context
+assessments, two unchanged reuse checks, twelve-file confirmations and
+one-line supplementary confirmations jointly support this batch's closure.
+All six reports retain their file-only snapshot/hash and app-execution
+limits; scoped acceptance is not native-speaker certification or an
+exhaustive whole-corpus semantic guarantee.
+
+The author separately verified all 3,273 baseline identities, readings,
+titles, exclusion lists and established levels, exact source/index
+integrity, fifteen cumulative reciprocal N2 word pairs and `stop-cran`
+authorship. The seventeen correction pairs preserve all baseline metadata.
+Validation reports zero errors and repeated manifest generation is
+deterministic at `8d6cfcd10efadd70`. Coverage is **80 closed, 0 draft,
+1,732 pending, 0 unresolved**: 68 new and twelve reused articles overall.
+The collection contains 3,341 word articles; all twenty batch rows and the
+evidence packet are marked closed.
 
 ## Final verification
 
