@@ -3060,3 +3060,28 @@ Repeated manifest builds are byte-identical: contentVersion
 `501e3360cc7e90086944ba895a3655bb59c5550b611e2975cbf3c17aa8ef2ede`.
 The correction is committed before either reviewer resumes, with
 a separate immutable receipt and the actual three-page diff.
+
+### Changed-passage confirmations and closure
+
+The correction snapshot is
+`ea3744200666795bc56f280dc3a89c9c135d118a`. The original reviewer
+sessions resumed sequentially, GPT then Claude, against their own
+initial reports, the actual three-page diff, all three complete
+changed cards and the relevant dictionary evidence:
+[GPT confirmation](n2-reviews/batch-24-gpt-followup.md) and
+[Claude confirmation](n2-reviews/batch-24-claude-followup.md).
+Both exited without edits and marked all three facets CLEAN on
+階, 領 and 零. Both fetched the cited usage pages; Claude explicitly
+resolved F1 and F2 and confirmed the adopted ゼロ link without
+regression. GPT had no original finding IDs to resolve.
+
+Claude's final separator and dictionary-link-label preferences are
+optional polish, not unresolved teaching defects. No further
+content change was made. All reports preserve the distinction
+between author-run structural/preservation checks and reviewers'
+read-only linguistic checks; neither certifies corpus frequency,
+native fluency, exhaustive stroke paths or every future quiz.
+
+**Batch 24 is review-closed.** With all four archived reports the
+cumulative scope is 62 files. There remain five selected additions,
+`骨麦黄鼻齢`, for the final batch. Nothing is pushed.

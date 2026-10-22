@@ -856,3 +856,15 @@ cite only what was actually inspected. The optional ゼロ link is
 also adopted. Other optional expansion is not necessary for scoped
 coverage. The exact three-page correction goes back to the original
 reviewers sequentially; their confirmations remain pending.
+
+At correction `ea3744200666795bc56f280dc3a89c9c135d118a`, both
+original sessions resumed and independently marked all three
+changed pages CLEAN on correctness, scoped coverage and
+comprehensibility. Claude resolved F1/F2 and the adopted link;
+GPT confirmed the changes without claiming prior discovery.
+Both inspected the actual public usage evidence. Their processes
+exited sequentially without edits and all four reports are archived.
+The final punctuation/source-label preferences remain optional;
+no new content was added to prolong the loop. Batch 24 is closed,
+with the same manifest version `67808719c130984e`; five additions
+remain for batch 25.
