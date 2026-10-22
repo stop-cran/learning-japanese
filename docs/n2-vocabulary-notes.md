@@ -112,3 +112,10 @@ evidence and learning impact; issue creation requires authorization.
 - **Pilot reconciliation:** A mnemonic warning should not accidentally sound like a qualified
   literal definition. The 飽くまで revision states the learner warning directly and names the
   Japanese expressions being contrasted, rather than using an English gloss as the subject.
+- **Batch 02 authoring:** Preserve an established easier vocabulary label, not an incidental
+  kanji-based app fallback. The reused 暴れる, 脂, 余る and 編む previously had no vocabulary
+  level; their verified N2 rows now establish explicit N2 labels without changing their identities
+  or teaching. Existing あちこち retains N3 and explicitly teaches source あちらこちら.
+- **Batch 02 authoring:** An alternate spelling can link to an article under another stable
+  spelling when that article explicitly teaches it: 温まる/温める link to 暖まる/暖める.
+  Keep the written-headword kanji metadata separate from these additional spelling links.

@@ -5,7 +5,7 @@
 **Pilot review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 20 rows are review-closed; 1,792 remain pending.
+The first 20 rows are review-closed; the next 20 are drafted and 1,772 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -116,6 +116,27 @@ taste-label and suspicious-sense collisions and the 示す link. Claude addition
 habitual-adverb candidates and prompted clearer 飽くまで wording. The second review therefore
 added useful signal on this shared pilot, but the sample is not a model ranking or proof of
 exhaustive quiz-pair coverage. Severity differences were adjudicated by learning impact, not votes.
+
+## Batch 02: N2:22-N2:41
+
+**Status:** authored draft; independent reviews pending.
+
+Scope: 暖まる, 暖める, あたりまえ, あちらこちら, 厚かましい, 圧縮, 宛名,
+あてはまる, あてはめる, 暴れる, 脂, あぶる, あふれる, 雨戸, 甘やかす, 余る,
+編物, 編む, 危うい, 怪しい.
+
+The draft adds **14 articles** and reuses six: あちこち (N3, explicitly teaching
+あちらこちら), 怪しい (N2), and previously vocabulary-unclassified 暴れる, 脂, 余る
+and 編む. Only the latter four gain explicit N2 metadata from these verified source rows;
+their teaching text, stable identities and primary readings are unchanged.
+No harder kanji-derived fallback is treated as vocabulary provenance.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-02.json) retains the exact rows,
+complete relevant dictionary families, restrictions and component evidence.
+Ten existing kanji pages gain useful word links or examples. Reciprocal N2 links cover
+厚/厚かましい, 圧/圧縮, 戸/雨戸, 甘/甘やかす and 編/編物; 温 also links the explicitly
+taught 温まる/温める spellings to the new 暖まる/暖める articles.
+The collection now contains 3,304 word articles. None of this batch's rows is review-closed.
 
 ## Final verification
 
