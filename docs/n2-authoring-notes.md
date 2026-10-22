@@ -280,7 +280,7 @@ equivalent observations across findings, optional suggestions, limits and per-ca
 
 Source records and structural checks are not native-speaker certification or exhaustive historical analysis.
 Dual-model usefulness is an observation about the reviewed sample, not proof that model bias has been eliminated.
-The first fourteen batches' GPT/Claude reports are preserved in the review ledger, including changed-passage confirmations
+The first fifteen batches' GPT/Claude reports are preserved in the review ledger, including changed-passage confirmations
 where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
@@ -295,12 +295,14 @@ Batch 14's fifteen kanji and five supporting word articles have independent init
 Both original reviewers confirmed the four revised pages, resolving the source-grounded quiz
 correction and optional citation-label polish without a remaining actionable defect.
 Its source/reading audit brings the total to 210 additions and 655 exact reading rows; another 155 additions remain unauthored.
-Batch 15 has independent initial reports but is not yet review-closed: fifteen more kanji and two supporting
+Batch 15 is review-closed: fifteen more kanji and two supporting
 word articles bring the authored total to 225 additions and 701 exact reading rows.
 The deck now has 845 kanji, 3,251 word articles and 227 selected N2 characters;
 140 selected characters remain unauthored. Nineteen older word edits are links only.
 The shared 玉/王 quiz finding and Claude's three linking findings are corrected;
-both original reviewers' changed-passage confirmations are pending.
+both original reviewers confirmed all five revised teaching pages without a remaining
+actionable defect. Claude's final pronoun-polish suggestion remains nonblocking and
+unadopted; the shogi sentence supplies the 玉/王 context.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.

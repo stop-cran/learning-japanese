@@ -1418,7 +1418,7 @@ distractor repairs. No unresolved actionable claim remains in the assigned scope
 Git/validator/manifest verification is author-run, not reviewer-executed; stroke-path
 review, native-fluency certification and runtime quiz execution remain outside these verdicts.
 
-## Batch 15: 玉瓶甘畜略畳療皮皿省県砂硬磨祈 - corrections awaiting confirmation
+## Batch 15: 玉瓶甘畜略畳療皮皿省県砂硬磨祈 - review-closed
 
 **Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke files;
 two supporting word articles, 家畜 and 略語; nineteen older word articles gaining
@@ -1486,5 +1486,42 @@ the other's report or the author's preferred reconciliation.
 | Claude optional: possible future title overlaps | No current defect established beyond 玉/王. The actual three-choice assignments and older two-choice fallbacks were checked. Larger or changed quizzes remain a disclosed limit, not a reason to manufacture unrelated card edits. |
 
 The correction changes five teaching pages: 玉, 甘, 略, 硬 and 磨.
-Both original reviewers' changed-passage confirmations remain pending; these author
-resolutions and the initial reports are not yet a batch review closure.
+It was committed as `356a4582d1ea1d335474b8cdc6e3d07b5878c43a`, with author
+and committer both `stop-cran`. The exact twelve-file scope, validator result,
+accumulated audit and deterministic manifest `b2f9502a329d51e7` were verified.
+
+### Original-reviewer confirmations and contribution comparison
+
+Both original sessions resumed sequentially on that committed snapshot and the
+actual five-page teaching diff. Every resumed process exited without code edits:
+
+- [GPT confirmation](n2-reviews/batch-15-gpt-followup.md): all five pages CLEAN
+  on correctness, scoped coverage and comprehensibility; GPT-01 resolved;
+  the comparison links, retained flags and godan/irregular distinction accepted.
+- [Claude confirmation](n2-reviews/batch-15-claude-followup.md): all five pages
+  CLEAN on all three facets; F1-F4 resolved; adopted polish confirmed.
+  It withdrew its unused-citation suggestion after inspecting the shared-packet
+  rationale. Its further suggestion to name 玉/王 instead of the pronoun
+  "their" is nonblocking and unadopted: the immediately preceding shogi clause
+  supplies that comparison, and no consequential ambiguity was established.
+
+After comparing findings, optional suggestions, limits and per-page observations
+across both reports, the 玉/王 defect is shared, not a unique discovery by either
+family. Claude uniquely supplied the three actionable comparison-link omissions
+and adopted minor polish. GPT independently substantiated the shared semantic
+problem with a native dictionary fetch; the author also inspected the actual
+headword and sense rather than accepting either verdict by reputation.
+The second family usefully broadened coverage here, but this sample neither
+ranks models generally nor establishes that model bias has been eliminated.
+
+**Closure:** all seventeen new teaching pages have independent GPT/Claude initial
+review, and all five revised pages have both original reviewers' clean
+changed-passage confirmations. The first fifteen batches' 225 additions are
+review-closed. Totals remain 845 kanji, 3,251 word articles and 227 selected N2
+characters; 701 exact reading rows are audited and 140 additions remain unauthored.
+The nineteen legacy word edits remain links only; no legacy kanji or existing
+stroke file was changed. No actionable finding remains in the assigned scope.
+Git, validator and manifest checks are author-run, not reviewer-executed.
+Exhaustive drawing-path review, native-fluency certification and runtime quiz
+execution remain outside these verdicts; changed or larger quizzes can still
+require new semantic curation.
