@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-05 review-closed; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-06 review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 100 rows are review-closed; batch 06's 20 rows are drafted and 1,692 remain pending.
+The first 120 rows are review-closed; 1,692 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -550,7 +550,7 @@ Coverage is **100 closed, 0 draft, 1,712 pending, 0 unresolved**:
 
 ## Batch 06: N2:102-N2:121
 
-**Status:** independently reviewed; corrections authored; bounded confirmation pending.
+**Status:** closed after independent initial reviews, corrections and bounded confirmations.
 
 The twenty rows add **sixteen articles**: 浮かぶ, 浮かべる, 承る,
 受け取り, 受け持つ, 薄暗い, 薄める, 打ち合わせ, 打ち消す, 映す,
@@ -578,7 +578,7 @@ Five new reciprocal N2 pairs are 承/承る, 薄/薄暗い, 薄/薄める,
 埋/埋める was already reciprocal. Direct exclusions were assessed
 against actual English labels and complete entries, including receiving,
 floating, responsibility, image, respect and sound-negation uses.
-These twenty rows remain draft until the independent review loop closes.
+All twenty source rows are review-closed after the confirmations recorded below.
 
 ### Initial review
 
@@ -661,8 +661,29 @@ initial-review discovery. The suggested "image being played back"
 wording is optional; the existing displayed-image sentence is accurate
 in its recording/playback context.
 
-Supplement confirmation and closure remain pending. These twenty rows
-remain draft; no full-batch re-review is claimed.
+Supplement commit `b75d1d1f75d56c67f2b5fc14b2c4d681c7c4da52`
+directly follows the correction commit. Both original families independently
+checked its exact two-file, two-line metadata diff, actual comparison cards
+and complete pinned dictionary families. Each received the same bounded
+prompt and only its own preceding confirmation, not the other report
+or the author's adjudication. GPT exited before Claude started; usage
+receipts verified `gpt-6.1-sol` and `claude-opus-5.5`, with no file edits.
+
+The verbatim [GPT supplement](n2-vocabulary-reviews/batch-06-gpt-supplement.md)
+and [Claude supplement](n2-vocabulary-reviews/batch-06-claude-supplement.md)
+are CLEAN on all three facets for all four direct pairs. Both distinguish
+image-appearance overlaps from unrestricted Japanese substitution.
+Neither adds an optional expansion or establishes a regression.
+Their file-only Git/hash limits remain explicit. Claude also notes that
+the generated manifest is outside its allowed two-line content diff;
+the author independently checked the full committed scope and regenerated
+manifest, rather than attributing that check to the reviewer.
+
+No actionable defect or consequential unresolved claim remains in the
+assigned scope. These twenty rows are closed; no full-batch re-review
+or native-speaker certification is claimed. Cumulative coverage is
+**120 closed, 0 draft, 1,692 pending and 0 unresolved** source rows,
+mapped to 119 articles (103 new and sixteen reused).
 
 ## Final verification
 
