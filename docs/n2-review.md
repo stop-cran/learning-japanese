@@ -2995,3 +2995,68 @@ reviewer, with the same sixteen-page scope, related passages,
 rubric and source access. Neither will receive the authoring
 rationale or the other's initial findings. Batches 01-23 remain
 review-closed; this draft is not yet review-closed. Nothing is pushed.
+
+### Independent initial reviews and source-based reconciliation
+
+The shared frozen draft is
+`87860502861f01aebed7664f7ad5d6081425e277`. Both short-lived
+processes ran sequentially and exited without edits:
+[GPT](n2-reviews/batch-24-gpt-initial.md), actual `gpt-6.1-sol`,
+then [Claude](n2-reviews/batch-24-claude-initial.md), actual
+`claude-opus-5.5`. Both reports are preserved unchanged. GPT marked
+all sixteen pages CLEAN on all three facets with no findings or
+optional suggestions. Claude marked fourteen pages CLEAN and
+raised two minor comprehensibility findings, F1 on 階 and F2 on 領.
+
+F1 is accepted as a missing usage recommendation, not an incorrect
+JMdict reading. The author fetched the actual Japanese Wiktionary
+きざはし entry, which calls it an archaic or literary expression
+for 階段. The actual Daijisen/Nikkoku 階 headwords at
+`https://kotobank.jp/word/%E9%9A%8E-456625` confirm the stairs
+and noh-stage meanings without that same register label. The
+corrected row names the literary/archaic use and the note recommends
+階段 for everyday stairs, explicitly retaining JMdict's absence
+of a rarity flag and avoiding an obsolete-only or measured-frequency
+claim. A failed kana-only URL is not cited as evidence.
+
+F2 is accepted in its bounded spelling-status form. The actual
+Japanese Wiktionary 領 and 襟 reading tables mark リョウ for 領
+and えり for 襟 as within the jōyō table. Nipponica's actual
+えり section also recognizes 襟, 衿 and 領, so the alternative
+is not deleted or declared invalid. The correction recommends 襟
+for standard learner writing and labels 領えり for recognition.
+Jōyō status is not a corpus-frequency measurement; the literal
+suggestion to infer usualness from that status alone is not adopted.
+The cited source is the relevant encyclopedia section, not
+the unrelated biblical エリ entry on the same combined page.
+
+Claude's optional existing ゼロ link is adopted in 零's comparison
+note. Ship-size distinctions, more 香/革 compounds, a formal-register
+claim for 一隅, the 駐 title preference, an additional 震う
+comparison and a site-wide floor-numbering convention are not
+established batch defects and are not used to prolong the loop.
+No rarity or frequency is inferred from 香車's missing priority flags.
+
+Across all equivalent observations in findings, options and limits,
+Claude uniquely supplied F1, F2 and the adopted ゼロ navigation
+suggestion. GPT did not independently raise them. This is useful
+complementary coverage of this shared sample, not a general model
+ranking or proof that bias has been eliminated. Claude disclosed
+that it did not read the overall source-snapshot record and relied
+on Wiktionary/Wikipedia rather than an authoritative register source;
+the author inspected the native entries and retained their actual
+scope instead of treating a failed or irrelevant fetch as proof.
+
+Only 階, 領 and 零 teaching pages changed. Metadata, 38 reading
+rows, 57 pairs/58 records/57 families, fifteen stroke files and
+twenty-two links-only older-word changes are unchanged. Original-
+reviewer changed-passage confirmations are pending.
+
+The three corrected pages have been read in full. Validation has
+zero errors; the 1,060-row source audit and exact 60-file cumulative
+scope/preservation check pass with both initial reports present.
+Repeated manifest builds are byte-identical: contentVersion
+`67808719c130984e`, SHA256
+`501e3360cc7e90086944ba895a3655bb59c5550b611e2975cbf3c17aa8ef2ede`.
+The correction is committed before either reviewer resumes, with
+a separate immutable receipt and the actual three-page diff.

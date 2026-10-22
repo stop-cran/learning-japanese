@@ -41,7 +41,7 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   80 N5, 166 N4, 367 N3, 362 N2 and five N1. The ongoing [N2 expansion](docs/n2-review.md) has added 360 cards
   to the two existing N2 cards. The first twenty-three 15-card batches have independent GPT/Claude review and reconciled
   reports, including changed-passage confirmations.
-  Batch 24's fifteen cards are authored with independent review pending; another five additions remain unauthored.
+  Batch 24's fifteen cards are authored with review reconciliation pending; another five additions remain unauthored.
   The `starter` tag identifies the original 118-card cohort, not the later expansions.
 - `words/` – one article per written word form (3,273): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
   Articles explain meaning, spelling or formation, synonyms, antonyms and usage distinctions.

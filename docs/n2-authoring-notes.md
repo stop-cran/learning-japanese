@@ -835,3 +835,24 @@ selected N2 characters. The cumulative audit covers 360 additions
 and 1,060 source-reading rows; five additions remain unauthored.
 Validation has zero errors and repeated manifest builds are
 byte-identical at `bf113d3993595c44`. Independent review is pending.
+
+Both initial batch-24 reviewers have now exited and their reports
+are archived unchanged. GPT established no actionable defect;
+Claude uniquely supplied two minor usability recommendations:
+register guidance for きざはし and a standard-writing alternative
+for 領えり. The author inspected the actual cited Wiktionary
+entries and native dictionary/encyclopedia headwords. Preserve
+the source distinctions: JMdict does not label きざはし rare,
+Wiktionary calls it archaic/literary, and the native dictionaries
+recognize it without the same label. Recommend 階段 for ordinary
+stairs without declaring きざはし unusable today.
+
+For 領えり, recommend 襟 for standard learner writing and retain
+the recognized 領 reading for recognition. A jōyō-table distinction
+is not itself a frequency measurement or evidence that a dictionary
+entry is wrong. The combined Kotobank エリ page contains both an
+unrelated biblical entry and the relevant Nipponica えり section;
+cite only what was actually inspected. The optional ゼロ link is
+also adopted. Other optional expansion is not necessary for scoped
+coverage. The exact three-page correction goes back to the original
+reviewers sequentially; their confirmations remain pending.
