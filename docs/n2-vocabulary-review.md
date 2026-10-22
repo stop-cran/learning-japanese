@@ -2,10 +2,10 @@
 
 ## Status
 
-**Planning complete; content coverage pending.** The target is all 1,812 source rows,
+**Pilot drafted; independent review pending.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-No row is review-closed at this planning checkpoint.
+The first 20 rows are drafted; 1,792 remain pending. No row is review-closed yet.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -27,16 +27,24 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 01: N2:2-N2:21
 
-**Status:** pending authoring.
+**Status:** drafted, not independently reviewed.
 
 Scope: あいかわらず, アイデア, アイディア, 曖昧, 遭う, 扇ぐ, 青白い,
 あかんぼう, 明き, あきれる, アクセント, 欠伸, 飽くまで, 明け方, 揚げる,
 挙げる, 憧れる, 足跡, 味わう, 預かる.
 
-Expected reuse candidates are `会う`, `赤ん坊`, and `空き`, with stable levels retained.
-This is a plan, not a closed coverage assertion. Initial reviewer snapshots, actual models,
-reports, reconciliation, cross-reference changes and usefulness observations will be recorded
-after the authored snapshot exists.
+The draft adds **17 articles** and reuses `会う` (N5), `赤ん坊` (N4), and `空き` (N3).
+The first two already teach the applicable source identities; `空き` gains explicit `明き`
+alias teaching without changing its stable written form, primary reading, or level.
+The collection now contains 3,290 word articles.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-01.json) preserves the original rows,
+selected mappings, complete relevant JMdict entry families and component evidence.
+Ten existing kanji pages gain useful links, including reciprocal N2 links for
+`伸`/`欠伸`, `跡`/`足跡`, and `預`/`預かる`. The existing `預ける` comparison gains a word link.
+
+Initial reviewer snapshots, actual models, reports, reconciliation and usefulness observations
+will be recorded after review. The draft status is not a claim of independently established coverage.
 
 ## Final verification
 
