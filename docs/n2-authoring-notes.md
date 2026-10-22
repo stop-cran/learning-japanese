@@ -239,6 +239,19 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   The author verified the actual Daijisen HTML definitions and pinned senses.
   Add direct pairs even when another pair through 乾く or つまらない already
   exists; retain the differences rather than teaching unrestricted synonymy.
+- Batch 15 keeps 略's five unmatched native readings, 畳's チョウ/かさ.なる
+  and 県's か.ける as eight explicitly scoped lookup rows. In particular,
+  重畳 ちょうじょう does not allocate its initial ちょう to the final 畳.
+  Preserve a source reading without inventing an everyday spelling.
+- 玉's bound rows use 玉砂利 and 百円玉, with the part's contribution
+  explained. The inspected Daijisen entry confirms the gravel's rounded shape.
+  畳's counter row also gives a usable 六畳 ろくじょう construction rather
+  than only an isolated suffix.
+- 甘い あまい is not the separate usually-kana うまい entry, even though
+  甘い is one of the latter's spellings. Its tasty sense has different
+  spelling notes from its skilled sense. 磨る's rare-spelling label likewise
+  does not make the godan pronunciation する rare or turn it into irregular
+  する, do.
 
 ## Review and checkpoint protocol
 
@@ -273,6 +286,10 @@ Batch 14's fifteen kanji and five supporting word articles have independent init
 Both original reviewers confirmed the four revised pages, resolving the source-grounded quiz
 correction and optional citation-label polish without a remaining actionable defect.
 Its source/reading audit brings the total to 210 additions and 655 exact reading rows; another 155 additions remain unauthored.
+Batch 15 is authored but not yet review-closed: fifteen more kanji and two supporting
+word articles bring the authored total to 225 additions and 701 exact reading rows.
+The deck now has 845 kanji, 3,251 word articles and 227 selected N2 characters;
+140 selected characters remain unauthored. Nineteen older word edits are links only.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.

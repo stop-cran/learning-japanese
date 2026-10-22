@@ -1417,3 +1417,43 @@ the fifteen older word changes remain links only and 火/分 remain exact one-li
 distractor repairs. No unresolved actionable claim remains in the assigned scope.
 Git/validator/manifest verification is author-run, not reviewer-executed; stroke-path
 review, native-fluency certification and runtime quiz execution remain outside these verdicts.
+
+## Batch 15: 玉瓶甘畜略畳療皮皿省県砂硬磨祈 - draft, independent review pending
+
+**Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke files;
+two supporting word articles, 家畜 and 略語; nineteen older word articles gaining
+component links only. The source record is [batch-15.json](n2-batch-sources/batch-15.json).
+The pre-batch baseline is `d84e80eefe300d2eb93a2762c641952c6351d0d7`.
+
+All 46 exact source-reading rows are retained: 38 have inspected lexical examples
+and eight are explicitly qualified lookup-only rows. Those eight are 略's
+はぶ.く/おか.す/おさ.める/はかりごと/はか.る, 畳's チョウ/かさ.なる
+and 県's か.ける. An unmatched word example does not delete a KANJIDIC2 reading,
+and a matching sound in another character's part of a compound does not establish
+the required allocation.
+
+The selected source packet retains 57 exact spelling/reading records with complete
+spelling/reading families and applicable senses. It includes the new vocabulary's
+comparison evidence and the smartphone abbreviation example. Digital Daijisen's
+actual 玉砂利 entry independently confirms its reading and rounded-gravel meaning.
+玉's prefix/suffix rows explain their contribution; 畳's counter has a usable
+六畳 example. 甘い's あまい and うまい entries stay distinct, and 磨る's
+rare-spelling label is not misreported as a rare pronunciation or an irregular
+conjugation.
+
+Each new character has a useful linked word article and three existing, semantically
+wrong distractors. The new 家畜 word directly excludes 牛 because both source
+and existing answer label allow cattle, while explaining that livestock is broader.
+略語 is a noun for a shortened expression, not the verb 略す; the smartphone
+example prevents treating every abbreviation as an initial-letter acronym.
+The older two-distractor kanji were inspected for newly activated direct-synonym
+fallbacks; none requiring a batch-15 repair was established. No older kanji was changed.
+
+The author inspected every rendered kanji and both new word pages. A mechanical
+comparison confirms that the nineteen older word changes preserve metadata and
+teaching text apart from links. The validator reports zero errors; the accumulated
+audit covers 225 additions and 701 source-reading rows. Counts are 845 kanji,
+3,251 word articles and 227 selected N2 characters; 140 additions remain unauthored.
+Independent GPT/Claude review of the seventeen new teaching pages and the narrow
+related edits is still pending. Draft counts and mechanical checks are not a
+linguistic-review closure.
