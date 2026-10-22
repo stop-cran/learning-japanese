@@ -1790,7 +1790,7 @@ are author-run; neither reviewer executed Git or the validator. These
 bounded reviews do not certify native fluency, exhaustive drawing paths
 or executed runtime quiz behavior.
 
-## Batch 18: 編練績缶署群羽翌耕肌肩肯胃胸脂 - authored, review pending
+## Batch 18: 編練績缶署群羽翌耕肌肩肯胃胸脂 - initial reviews complete, confirmation pending
 
 **Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke
 files; six supporting word articles, 編む, 群れ, 翌日, 耕す, 肯定
@@ -1840,3 +1840,73 @@ mechanical checks are author-run, not reviewer-executed.
 The first seventeen batches remain review-closed. Independent
 same-snapshot GPT/Claude review of batch 18 and evidence-based
 reconciliation are pending; no independent verdict is claimed yet.
+
+### Independent initial review and reconciliation
+
+The 51-file draft was committed as
+`78ce7d7b97b863a034746ed2fcd43084233756db`, with author and committer
+`stop-cran`. GPT (`gpt-6.1-sol`, session
+`25bd88ed-70da-4f52-8712-f7b4a32e2fd1`) and Claude (`claude-opus-5.5`,
+session `f864b99a-c7d6-492f-b5b2-f2ea9d792375`) independently reviewed
+the identical frozen snapshot, all twenty-one new teaching pages and
+the narrow related link passages. Each read-only process exited
+successfully before the next began, with zero recorded edits.
+Unchanged initial reports are
+[GPT](n2-reviews/batch-18-gpt-initial.md) and
+[Claude](n2-reviews/batch-18-claude-initial.md).
+
+- **GPT F001, resolved in the correction:** 群れ's applicable
+  animal-group sense includes the English collective noun school,
+  while 学校's answer label is simply school. Added the direct
+  学校 exclusion. Pinned JMdict 1247510, sense 1, has no restriction
+  removing this group sense. This protects a context-free English-label
+  homograph; it does not make 群れ an educational institution.
+- **GPT F002, resolved in the correction:** 耕す lacked direct
+  protections with 起す and 打つ. Their beginner labels do not erase
+  the tillage senses of the written words. Independent inspection of
+  the pinned download confirms 起す/おこす, entry 1223660, sense 5,
+  and 打つ/うつ, entry 1408810, sense 9, with no spelling or reading
+  restriction excluding the selected pairs. Added both exclusions
+  and complete source records. The older articles remain unchanged.
+  Both GPT findings retain medium severity and high confidence;
+  runtime selection frequency is not claimed.
+- **Claude O-3, optional and adopted:** 石油's kerosene sense is
+  explicitly colloquial in pinned entry 1382830, sense 2. Added that
+  qualification to both new 脂 pages without restricting the primary
+  oil/petroleum sense or changing either exclusion.
+- **Claude O-1 and O-2, optional and not adopted:** adding 羽音 or
+  群雲 would expand the examples, but does not correct the attested
+  羽/は or 群/むら pairs. The existing notes distinguish the spelling/
+  reading families without claiming frequency. A prefix/suffix label
+  does not itself establish a mainly-used frequency ranking.
+- **Claude's remaining limits and judgement calls:** 次/つぎ,
+  entry 1316380, means next/following in a sequence; it does not
+  establish the specific following-day meaning of 翌日, entry
+  1547510. No direct synonym or actionable omission was established.
+  絡's entwine/get-entangled label is distinct from 編's knit/compile
+  meanings; thematic resemblance alone does not invalidate that
+  curated wrong answer. No additional repair is adopted.
+
+The corrected packet retains 78 exact records and 75 complete entry
+families. The new word articles now have twenty-three direct exclusion
+pairs. The 34 lexical reading rows, counts, ten links-only older word
+edits and old-stroke preservation are unchanged. Canonical authoring
+inputs match the regenerated cards and source packet. The actual
+teaching correction covers five pages: 群れ, 耕す and 脂 word articles,
+the 脂 kanji card, and a citation-only edit to the 耕 kanji card.
+
+After deduplicating every report section, GPT uniquely established
+both actionable word-quiz findings; Claude's initial all-CLEAN verdict
+missed them. Claude uniquely supplied the adopted optional register
+clarification. This is useful complementary signal in this sample,
+not a general model ranking or proof of eliminated bias. Neither
+family's optional suggestions are treated as mandatory by model vote.
+
+The correction's author-run validator reports zero errors, and the
+cumulative audit still covers 270 additions and 808 exact reading
+rows. The strict verifier accepts a 53-file cumulative scope including
+both initial reports, the exact source families, twenty-three exclusions
+and every preservation invariant. Repeated manifest builds are
+byte-identical with content version `515d15997b90eba1`.
+Original-reviewer confirmation of the committed five-page diff remains
+pending.

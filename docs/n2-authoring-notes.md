@@ -355,6 +355,17 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   has no standalone character. Preserve all old wording. Check new-word
   citation IDs against exact selected records too: 耕す, 耕作 and 耕地
   have separate entries 1280950, 1280970 and 1280990.
+- Batch 18's GPT review caught two word-quiz gaps that the author's
+  label scan and Claude's initial review missed. 群れ's animal-group
+  sense includes English school, colliding with 学校's unqualified
+  label without implying an educational-institution meaning for 群れ.
+  起す and 打つ have applicable tillage senses despite their beginner
+  wake/hit labels; protect each direct pair with 耕す.
+- Check register at sense level even in comparison notes. Claude's
+  optional suggestion correctly identifies 石油's kerosene sense as
+  colloquial; that qualifier is now explicit on both new 脂 pages.
+  A general next/following label on 次 does not itself establish the
+  specific following-day meaning of 翌日.
 
 ## Review and checkpoint protocol
 
@@ -426,15 +437,17 @@ its later wording/comparison suggestions remain optional, not unresolved
 defects. These observations concern this shared sample, not a general
 ranking or proof of eliminated bias.
 
-Batch 18 is authored but not yet independently reviewed. Its fifteen
+Batch 18 has independent initial reviews, with original-reviewer
+confirmation of five corrected pages pending. Its fifteen
 kanji and six supporting words bring the authored total to 270 additions
 and 808 exact source-reading rows. Counts are 890 kanji, 3,261 words and
 272 selected N2 characters, with 95 additions unauthored. All 34 new
-reading rows have lexical examples; the packet retains 76 exact pairs
-and 73 complete entry families, including genuinely kana-only families.
+reading rows have lexical examples; the corrected packet retains 78 exact
+pairs and 75 complete entry families, including genuinely kana-only families.
 Ten older word changes are links only; no older kanji or stroke changes.
-The first seventeen batches remain review-closed. Structural checks and
-author inspection do not substitute for batch 18's pending blind reviews.
+The first seventeen batches remain review-closed. The three new direct
+quiz safeguards and optional register clarification are recorded in the
+ledger; structural checks do not substitute for changed-passage confirmation.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
