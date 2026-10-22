@@ -1206,7 +1206,7 @@ search did not verify hashes. The batch packet is selected evidence, not the ent
 All unchanged reading/distractor qualifications retain their initial scoped reviews. Neither family
 performed exhaustive stroke drawing-path or runtime quiz review, and no verdict certifies native fluency.
 
-## Batch 13 - corrections awaiting confirmation
+## Batch 13 - review-closed
 
 **Characters:** 浅浴涙液涼混清減温測湖湯湾湿準.
 
@@ -1242,8 +1242,8 @@ shower-label ambiguity; this is not a claim that their Japanese uses are unrestr
 液体 and 湿度 have distinct category/measurement labels rather than wetness or temperature.
 
 The content totals are 815 kanji and 3,244 word articles, with 197 selected N2 characters.
-The first twelve batches' 180 additions remain review-closed; the next fifteen are drafted,
-not yet independently approved. Another 170 selected characters remain unauthored.
+The first thirteen batches' 195 additions are review-closed. Another 170 selected characters
+remain unauthored.
 The exact 60-file draft was frozen as `b943db187ef28180325d18358d1251547249d0bf`, with author
 and committer `stop-cran`. Structural validation returned zero errors, the accumulated source audit
 covered 195 additions and 608 exact reading rows, and repeated manifest builds produced identical
@@ -1263,16 +1263,49 @@ report and author adjudication, made no file edits and exited before the next pr
 
 | Observation | Adjudication and implemented change |
 | --- | --- |
-| GPT-01: missing direct 浴びせる/流す exclusion | **Resolved in correction, confirmation pending.** Pinned entry 1552120 sense 1 includes pour. The actual fetched [Seisenban Nihon Kokugo Daijiten 流す](https://kotobank.jp/word/%E6%B5%81%E3%81%99-587809), I.4, explicitly describes washing the body with poured water. Added the direct exclusion and a qualified comparison, not an unrestricted synonym claim. Separate pairs through 注ぐ were insufficient. |
-| Claude F1.1-F1.6: missing existing comparison links | **Resolved in correction, confirmation pending.** Linked 深い on 浅; 増 on 減; 計る, 則 and 側 on 測; 恋 and 変 on 湾; 込む on 混; 暖かい on 温. Missing 量る and 暖 cards remain unlinked. These are substantive introductions/comparisons covered by the repository linking rule. |
+| GPT-01: missing direct 浴びせる/流す exclusion | **Resolved.** Pinned entry 1552120 sense 1 includes pour. The actual fetched [Seisenban Nihon Kokugo Daijiten 流す](https://kotobank.jp/word/%E6%B5%81%E3%81%99-587809), I.4, explicitly describes washing the body with poured water. Added the direct exclusion and a qualified comparison, not an unrestricted synonym claim. Separate pairs through 注ぐ were insufficient. Both original reviewers confirmed the correction. |
+| Claude F1.1-F1.6: missing existing comparison links | **Resolved.** Linked 深い on 浅; 増 on 減; 計る, 則 and 側 on 測; 恋 and 変 on 湾; 込む on 混; 暖かい on 温. Missing 量る and 暖 cards remain unlinked. These are substantive introductions/comparisons covered by the repository linking rule. Both original reviewers confirmed the revisions. |
 | Claude O1: more mnemonic component links | **Optional, not adopted.** Substantive comparison links above are supplied; linking every shape mention is unnecessary. |
 | Claude O2: rule/ruler mnemonic bridge | **Optional, adopted.** 測 now uses a rule to follow and a separate marked scale; it does not imply that 則 means a measuring instrument. The mnemonic remains explicitly non-etymological. |
 | Claude O3: contextualize ぬく with 温もり | **Optional, adopted narrowly.** Pinned entry 1183330 attests 温もり ぬくもり, warmth, usually in kana. Added that separate word in a note while preserving the exact standalone 温 ぬく example's archaic/derogatory qualification. No unsupported frequency comparison was added. |
 | Claude O4-O5: lake-name example and additional common words | **Optional, not adopted.** The suffix has an exact source record; 湖's コ example 湖岸 and the useful linked words already meet the scope. No named-lake example or arbitrary common-word quota is required. |
 
-Changed-passage confirmation of the eight revised teaching pages is pending. Model-usefulness and
-final closure are recorded only after those reports return. The initial reports' Git/diff execution,
-stroke-path, native-fluency and runtime-quiz limits remain; Claude additionally omitted the source-pin
-file and did not re-fetch the bathing citation. The author verified the pinned sources separately.
+The initial reports' Git/diff execution, stroke-path, native-fluency and runtime-quiz limits remain;
+Claude additionally omitted the source-pin file and did not re-fetch the bathing citation.
+The author verified the pinned sources separately.
 Correction validation returned zero errors; the accumulated source audit still covers 195 additions
 and 608 exact reading rows. Repeated manifest builds were byte-identical, version `a95d528e603122bf`.
+
+### Confirmation, model usefulness and closure
+
+The exact 15-file correction checkpoint is `b6c33ca7cf8c3e445256be7ae84744275ca8f216`,
+again authored and committed as `stop-cran`. Both original sessions received the actual committed
+eight-page teaching diff and the same revised-passage assignment. They resumed sequentially
+with the same actual models, made no edits and exited before the next reviewer process started.
+
+- [GPT confirmation](n2-reviews/batch-13-gpt-followup.md): all eight revised pages CLEAN on all three
+  facets; GPT-01 resolved, comparison links and adopted optional wording checked, no actionable regression.
+- [Claude confirmation](n2-reviews/batch-13-claude-followup.md): F1.1-F1.6 resolved, O2/O3 confirmed,
+  new 流す exclusion and source-grounded comparison independently checked; all eight revised pages
+  CLEAN on all three facets with no new actionable issue.
+
+Claude's follow-up offered explicitly naming the pair behind "Their uses", adding an object-pattern
+contrast and explaining the linked 流す article's narrower scope. These remain **optional, not adopted**:
+the new paragraph already names 流す, immediately compares it with 浴びせる, qualifies the overlap,
+and cites the exact broader sense. The linked article does not claim exhaustive coverage.
+No unchanged optional expansion was reopened to prolong the loop.
+
+After comparing findings, optional suggestions, limits and per-file observations across both initial
+reports, the useful initial contributions were complementary: GPT uniquely established the direct
+pouring-pair omission; Claude uniquely identified the substantive comparison-link omissions and supplied
+the two adopted nonblocking clarifications. Neither initially reported the other's issue. Follow-up
+agreement is confirmation, not another independent discovery. This sample supports the practical
+usefulness of two model families, not a general ranking or proof that model bias has been eliminated.
+
+**Closure:** eighteen new teaching pages have dual initial review, and all eight revised pages have
+both original reviewers' clean changed-passage confirmations. Content totals remain 815 kanji,
+3,244 word articles and 197 selected N2 characters; 195 additions and 608 exact reading rows are
+audited, with 170 additions still unauthored. The 21 older word changes remain component links only,
+and 水's exact one-line fallback repair is unchanged. No unresolved actionable claim remains within
+the assigned scope. Git/validator/manifest checks are author-run, not reviewer-executed; stroke-path
+and runtime-quiz execution and native-fluency certification remain outside these review verdicts.

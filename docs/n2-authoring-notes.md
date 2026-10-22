@@ -232,7 +232,7 @@ equivalent observations across findings, optional suggestions, limits and per-ca
 
 Source records and structural checks are not native-speaker certification or exhaustive historical analysis.
 Dual-model usefulness is an observation about the reviewed sample, not proof that model bias has been eliminated.
-The first twelve batches' GPT/Claude reports are preserved in the review ledger, including changed-passage confirmations
+The first thirteen batches' GPT/Claude reports are preserved in the review ledger, including changed-passage confirmations
 where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
@@ -240,8 +240,8 @@ remaining defect in that scope; batch 06 required no teaching correction.
 Batch 11 also preserves a final narrow confirmation of the direct 極める/選ぶ homograph exclusion.
 Batch 12's 15 additional kanji and three supporting verb articles have independent initial reports
 and confirmed corrections, including the linked 汗 article's consistency repair.
-Batch 13 has independent initial reports for all eighteen new pages. Eight revised teaching
-pages await changed-passage confirmation. Its 21 legacy word changes are component links
+Batch 13 has independent initial reports for all eighteen new pages. Both original reviewers
+confirmed the eight revised teaching pages without a remaining actionable defect. Its 21 legacy word changes are component links
 only, including the kana-headword あびる lesson. Another 170 additions remain unauthored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
