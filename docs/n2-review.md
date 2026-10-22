@@ -1790,7 +1790,7 @@ are author-run; neither reviewer executed Git or the validator. These
 bounded reviews do not certify native fluency, exhaustive drawing paths
 or executed runtime quiz behavior.
 
-## Batch 18: 編練績缶署群羽翌耕肌肩肯胃胸脂 - initial reviews complete, confirmation pending
+## Batch 18: 編練績缶署群羽翌耕肌肩肯胃胸脂 - review-closed
 
 **Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke
 files; six supporting word articles, 編む, 群れ, 翌日, 耕す, 肯定
@@ -1963,3 +1963,41 @@ Claude's suggestion to add school-of-fish prose to 群れ remains
 optional and unadopted; the direct exclusion and existing broad group
 definition resolve the demonstrated ambiguity without another teaching
 change.
+
+### Final narrow confirmation and closure
+
+The additional eight-file correction was committed as
+`31860fc0aba7f7110b8e31e8787828e2bcc85a15`, with author and committer
+`stop-cran`. Both original review sessions resumed sequentially on
+this unchanged committed snapshot and the actual two-page diff.
+GPT ran as `gpt-6.1-sol` and Claude as `claude-opus-5.5`; each
+read-only process exited successfully before the next began, with
+zero recorded edits. Their unchanged final reports are
+[GPT](n2-reviews/batch-18-gpt-confirmation.md) and
+[Claude](n2-reviews/batch-18-claude-confirmation.md).
+
+Both reviewers independently inspected the complete revised 耕す
+and 耕 pages, the actual diff and the complete pinned 作る/つくる
+record. Both mark both pages CLEAN on correctness, scoped coverage
+and comprehensibility, confirming the new direct safeguard and
+citations without an established regression. Claude closes R-1;
+GPT acknowledges that its first confirmation missed this additional
+overlap. No actionable or consequential unresolved claim remains in
+the reviewed scope, and neither requests further optional polish.
+
+The final author-run strict verifier covers 57 cumulative files,
+including all six archived reports, 79 exact dictionary records,
+76 complete families, 34 lexical reading rows and twenty-four
+direct word-quiz pairs. Ten older word edits remain links only;
+no older kanji or stroke changed. The cumulative audit remains
+270 additions and 808 exact reading rows. The deterministic
+manifest remains `857d926be5ae70dc`.
+
+Batch 18 is review-closed. The first eighteen batches now cover
+270 additions; 95 remain unauthored. Counts remain 890 kanji,
+3,261 word articles and 272 selected N2 characters. The useful
+model complementarity is bounded as recorded above: initial GPT
+defects, an optional Claude qualifier and Claude's later-stage
+defect-class extension. The reviewers did not execute Git,
+validation, the class sweep or runtime quizzes, certify native
+fluency, or exhaustively inspect stroke drawings.

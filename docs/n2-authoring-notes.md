@@ -392,7 +392,7 @@ equivalent observations across findings, optional suggestions, limits and per-ca
 
 Source records and structural checks are not native-speaker certification or exhaustive historical analysis.
 Dual-model usefulness is an observation about the reviewed sample, not proof that model bias has been eliminated.
-The first seventeen batches' GPT/Claude reports are preserved in the review ledger, including changed-passage confirmations
+The first eighteen batches' GPT/Claude reports are preserved in the review ledger, including changed-passage confirmations
 where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
@@ -444,18 +444,22 @@ its later wording/comparison suggestions remain optional, not unresolved
 defects. These observations concern this shared sample, not a general
 ranking or proof of eliminated bias.
 
-Batch 18 has independent initial reviews and first changed-passage
-reports. Final narrow confirmation of the 耕す/作る safeguard and
-its citation-only kanji edit is pending. Its fifteen
+Batch 18 has independent initial reviews, first changed-passage
+reports and final narrow confirmations of the 耕す/作る safeguard and
+its citation-only kanji edit. Both original reviewers mark the final
+two-page change CLEAN on all three facets. Its fifteen
 kanji and six supporting words bring the authored total to 270 additions
 and 808 exact source-reading rows. Counts are 890 kanji, 3,261 words and
 272 selected N2 characters, with 95 additions unauthored. All 34 new
 reading rows have lexical examples; the corrected packet retains 79 exact
 pairs and 76 complete entry families, including genuinely kana-only families.
 Ten older word changes are links only; no older kanji or stroke changes.
-The first seventeen batches remain review-closed. The four new direct
+The first eighteen batches are review-closed. The four new direct
 quiz safeguards and optional register clarification are recorded in the
-ledger; structural checks do not substitute for changed-passage confirmation.
+ledger. GPT supplied the initial actionable findings; Claude supplied
+the adopted qualifier and the later 作る catch. This is complementary
+signal from different stages, not a blind initial-review win for the
+later finding or an exhaustive synonymy guarantee.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
