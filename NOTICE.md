@@ -25,6 +25,9 @@ This repository contains original notes plus data derived from open dictionary p
   The separate [N3 vocabulary snapshot](docs/n3-vocabulary-snapshot.json) and
   [source-row index](docs/n3-vocabulary-sources.tsv) use that same dictionary version for the later vocabulary expansion.
   They preserve original source fields, selected teaching identities, spelling-sensitive coverage and retained source-intent uncertainty.
+  The [N2 vocabulary snapshot](docs/n2-vocabulary-snapshot.json) and
+  [source-row index](docs/n2-vocabulary-sources.tsv) reuse the 2026-10-21 dictionary snapshot for
+  the N2 vocabulary expansion in progress; pending rows do not assert completed coverage.
   The [article-subject snapshot](docs/article-subjects-source-snapshot.json) uses dictionaries retrieved on 2026-10-10
   and records six added kanji, 17 new word articles, and the reused 訳 article. It distinguishes rare character-dictionary
   readings from verified ordinary word spellings. The rare 奇しい/あやしい spelling is supported by the cited
@@ -48,7 +51,8 @@ This repository contains original notes plus data derived from open dictionary p
   uses rather than complete dictionary definitions.
 - **Kanji JLPT levels** follow the community sets mirrored by [kanjiapi.dev](https://kanjiapi.dev), with explicitly sourced exceptions.
 - **Vocabulary membership** derives from [Stephen Kraus's Yomitan JLPT vocabulary data](https://github.com/stephenmk/yomitan-jlpt-vocab),
-  revision `b062d4e38c4bdd0950ae1d4ec55f04b176182e03`, using `original_data/n5.csv`, `original_data/n4.csv` and `original_data/n3.csv`.
+  revision `b062d4e38c4bdd0950ae1d4ec55f04b176182e03`, using `original_data/n5.csv`, `original_data/n4.csv`,
+  `original_data/n3.csv` and, for the N2 expansion in progress, `original_data/n2.csv`.
   Selected article-subject additions also use `n1.csv`, `n2.csv`, and `n3.csv` at that revision; their source record
   preserves the chosen rows and explains why ambiguous homographs or absent levels were not inferred.
   Credit Stephen Kraus, Jonathan Waller (the underlying [Tanos community lists](https://www.tanos.co.uk/jlpt/)), and EDRDG for

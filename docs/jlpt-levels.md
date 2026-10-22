@@ -36,7 +36,7 @@ in agreement. Reassess an exception if its cited evidence changes; do not overwr
 
 ## Vocabulary baseline
 
-Vocabulary levels are separate from kanji levels. For N5, N4 and N3, use Stephen Kraus's
+Vocabulary levels are separate from kanji levels. For N5, N4, N3 and N2, use Stephen Kraus's
 [Yomitan JLPT vocabulary data](https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data),
 pinned to commit `b062d4e38c4bdd0950ae1d4ec55f04b176182e03`. It derives from Jonathan Waller's community lists and adds JMdict entry IDs.
 The selected CSVs contain **684 N5 rows and 640 additional N4 rows**: 1,324 source rows for cumulative N4 study.
@@ -45,6 +45,13 @@ the [coverage index](n5-n4-vocabulary-sources.tsv) maps individual source rows t
 The same revision's N3 CSV adds **1,730 rows**, for 3,054 source rows across the three levels.
 Its separate [snapshot](n3-vocabulary-snapshot.json) and [coverage index](n3-vocabulary-sources.tsv) cover 1,698 articles,
 including 208 reused articles. The N5/N4 indexes remain unchanged.
+
+The same revision's N2 CSV contains **1,812 additional rows**. Its
+[snapshot](n2-vocabulary-snapshot.json), [source-row index](n2-vocabulary-sources.tsv), and
+[batch review ledger](n2-vocabulary-review.md) track the expansion in progress.
+Pending rows are not verified coverage; source spelling aliases must be explicitly taught before
+their mappings count. The [authoring plan](n2-vocabulary-notes.md) uses sequential 20-row batches
+and independent GPT/Claude reviews without concurrent reviewer processes.
 
 A source row, a dictionary entry, and an article are not the same unit. For example, 明日/あした is listed at N5 and 明日/あす at N4;
 one article can teach both readings. Conversely, shared dictionary IDs do not make every spelling or use interchangeable.

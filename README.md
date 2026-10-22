@@ -49,6 +49,8 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   924 new articles and 384 reused ones. Multiple source readings can share an article.
   Its 1,730 additional N3 rows are covered by 1,698 articles: 1,490 new and 208 reused from the preceding collection.
   The level indexes overlap where an existing article teaches an additional reading or meaning.
+  The [N2 vocabulary expansion](docs/n2-vocabulary-review.md) is in progress against 1,812 further
+  source rows, with separate pending/draft/closed coverage and sequential independent GPT/Claude reviews.
 - `strokes/` – generated stroke data. Validate with `python tools/validate.py`.
 - `grammar/` – versioned, contrast-focused exercises for the app's Grammar section: the original 8-exercise pilot, an
   18-exercise foundations batch on nominalization and negative meanings, 12 exercises on ability, occurrence, decisions and
