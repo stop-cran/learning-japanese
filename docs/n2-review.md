@@ -2471,3 +2471,63 @@ Independent same-snapshot GPT/Claude review and reconciliation are
 pending; no independent verdict is claimed yet. The documented GPG
 stall is not retried: the draft uses per-command unsigned-local handling with
 `stop-cran` as both author and committer. Nothing is pushed.
+
+### Independent initial review and reconciliation
+
+The same clean draft, `62d417f98be2f575ba851ecb4848923666a29fe8`,
+was reviewed first by GPT `gpt-6.1-sol`, session
+`7df7646b-3978-42da-a998-6a4203fe2be9`, then by Claude
+`claude-opus-5.5`, session `620646c1-fe40-4d6f-bbf3-a7ef03a1542e`.
+The first process exited before the second started. Both completed
+successfully with zero recorded edits, and their unchanged final
+reports were archived only after both exited:
+[GPT](n2-reviews/batch-21-gpt-initial.md) and
+[Claude](n2-reviews/batch-21-claude-initial.md).
+Both read all seventeen assigned new pages and the twenty-three
+linked passages. Neither executed Git, the validator or the app;
+Claude also discloses not reading the general source-snapshot file.
+Their bounded coverage does not certify untouched material.
+
+- **GPT F01, minor correctness: corrected, confirmation pending.**
+  Written 貝 also realizes ばい's spinning-top sense, entry 2246880
+  sense 2. Its unrestricted hiragana reading is valid with the kanji;
+  the separate kana-only バイ reading is not the basis for this
+  finding. The existing labels on トップ and 頂上 each retain bare
+  English "top". Two direct exclusions on 貝 now protect those
+  pairs, and the prose explicitly distinguishes English-label
+  ambiguity from Japanese synonymy and from かい's pronunciation.
+  Dictionary recognition and missing original guards are established;
+  practical ambiguity of the complete multi-gloss labels remains
+  medium-confidence, not a runtime observation.
+- **Claude OPT-1: optional clarity improvement adopted.** 誌 now
+  describes 持 and 時 as characters, rather than calling them words.
+  No metadata, reading or substantive meaning changes.
+- **Claude OPT-2: optional, not adopted.** The 馬鹿 clam aside stays:
+  it explains an existing direct safeguard without changing that
+  older article's ordinary fool/foolish lesson.
+- **Claude OPT-3: optional/outside scope, not adopted.** Unchanged
+  hiragana on-reading notation in 講堂 and 販売 is not made another
+  teaching correction.
+
+The author independently inspected the complete two added families,
+トップ entry 1085030 and 頂上 entry 1430220, as well as the applicable
+貝 ばい sense. The corrected packet has 73 exact records from 69
+complete families; genuinely kana-only loanword records retain their
+empty spelling list rather than inventing a kanji spelling. The four
+direct pairs remain pairwise, not a clique. A title sweep distinguishes
+bare "top" from "on top", "top and bottom" and "top grade"; no
+blanket substring exclusion is used. English-dictionary fetches did
+not establish a separate toy-headword source: American Heritage
+returned the other headword, while Cambridge and Merriam-Webster
+requests failed. Those lookups are not cited as supporting evidence.
+The retained dictionary evidence is the pinned JMdict spinning-top
+sense and the actual stored labels.
+
+GPT's finding was not duplicated elsewhere in Claude's report, which
+marked 貝 CLEAN. Claude supplied the adopted optional terminology
+polish. These are different useful contributions on this matched
+sample, not proof of eliminated bias or a general model ranking.
+All 35 new rows, 33 lexical/two qualified lookup examples, fifteen
+stroke assets, counts and twenty-three links-only older-word edits
+remain unchanged. Changed-passage confirmation by the original
+reviewers is pending; batch 21 is not yet review-closed.

@@ -554,13 +554,13 @@ subsequently marked all five corrected pages CLEAN on correctness, scoped
 coverage and comprehensibility. The first twenty batches are review-closed;
 optional citation/link polish was not used to prolong confirmation.
 
-Batch 21 is drafted, not yet independently reviewed: fifteen kanji and
-two supporting words bring the authored total to 315 additions and
+Batch 21's initial draft added fifteen kanji and
+two supporting words, bringing the authored total to 315 additions and
 942 exact source-reading rows. Counts are 935 kanji, 3,268 words and
 317 selected N2 characters; 50 additions remain unauthored. Its 35
 reading rows contain 33 lexical examples and two qualified lookup/index
 rows. Twenty-three older word changes are component links only; no
-older kanji or stroke changes. The packet retains 71 exact records
+older kanji or stroke changes. That draft's packet retained 71 exact records
 from 67 complete entry families.
 
 Distinguish 詞's rare spelling from an allegedly rare pronunciation,
@@ -587,3 +587,25 @@ inferred. The article distinguishes Japanese 貝's mollusc/shell
 category from broader English shellfish, using the inspected opening
 Kotobank definition as well as JMdict. The bounded sweep does not
 certify exhaustive synonymy.
+
+The same frozen batch-21 draft has now received independent initial
+GPT/Claude review, with the first process exited before the next.
+GPT identified the bare English "top" ambiguity activated by 貝's
+other ばい identity, a spinning top; Claude marked that word page
+CLEAN. Two additional direct safeguards protect トップ and 頂上,
+without asserting that those Japanese words mean a spinning toy or
+that かい names one. Context-bound "on top," "top and bottom" and
+"top grade" labels are not treated as the bare noun. Existing
+トップ/頂上 exclusions are not transitive. Dictionary recognition is
+established; practical ambiguity of the complete multi-gloss labels
+is medium-confidence, not a measured runtime failure.
+
+Claude's optional distinction between characters and words in the
+誌 comparison is adopted. The clam aside remains as an explanation
+of a real guard; unrelated old reading-notation polish is not adopted.
+The corrected packet has 73 exact records from 69 complete families
+and four direct word pairs. Counts, reading rows, strokes and all
+twenty-three links-only older-word changes are unchanged. The useful
+initial actionable contribution was GPT's; Claude supplied the
+optional clarity improvement. This is sample-specific evidence,
+not a model ranking. Changed-passage confirmation is still pending.
