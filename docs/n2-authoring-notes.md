@@ -903,7 +903,7 @@ readings and noun/adjective distinction.
 The older 年 target means both year and age. Its two curated wrong
 choices would leave a default-quiz fallback slot; the new 齢 answer,
 age, would be defensible for 年. Add 牛, cattle/cow, as a third wrong
-choice. This is the only old-kanji metadata edit in the expansion;
+choice. This is the final batch's only old-kanji metadata edit;
 all other 年 metadata and every byte of its teaching text are
 preserved. Curating three choices on 齢 alone would not fix the
 reverse-direction fallback. The seven old-word changes remain links
@@ -925,3 +925,15 @@ history, priority-based frequency ranking and wording preferences
 remain optional; no forced expansion is needed.
 Both original sessions will confirm this one-page correction
 sequentially. Their confirmations remain pending.
+
+Both original sessions subsequently confirmed the committed
+one-clause deletion, with GPT exiting before Claude started.
+Both marked the complete changed 黄 card CLEAN across the three
+facets; Claude explicitly resolved B25-1 and neither established a
+regression. All optional suggestions remain optional. Batch 25 is
+review-closed, completing review and reconciliation of all 365
+additions. The final-batch sample supplied one useful Claude-only
+wording catch and no GPT-only finding; it is complementary evidence
+for this sample, not a general model ranking or proof of eliminated
+bias. Unchanged-card verdicts come from the initial full-batch
+reviews, not from the bounded confirmations.

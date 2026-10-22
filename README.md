@@ -38,10 +38,10 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
 - `kanji/` – one card per kanji (985): meaning, radical, readings, common words, and origin notes or explicitly labelled modern-shape mnemonics.
   The deck covers all 79 N5, 166 N4 and 367 N3 kanji in the selected [kanjiapi.dev](https://kanjiapi.dev) community sets.
   It also includes 分 as a documented N5 exception and five N1 article-subject additions:
-  80 N5, 166 N4, 367 N3, 367 N2 and five N1. The ongoing [N2 expansion](docs/n2-review.md) has added 365 cards
-  to the two existing N2 cards. The first twenty-four 15-card batches have independent GPT/Claude review and reconciled
-  reports, including changed-passage confirmations.
-  The final five-card batch is authored and pending independent review.
+  80 N5, 166 N4, 367 N3, 367 N2 and five N1. The [N2 expansion](docs/n2-review.md) added 365 cards
+  to the two existing N2 cards in twenty-four 15-card batches and a final five-card batch.
+  All 25 batches have independent GPT/Claude review and reconciled reports, including changed-passage confirmations.
+  These community level sets are not official JLPT kanji lists.
   The `starter` tag identifies the original 118-card cohort, not the later expansions.
 - `words/` – one article per written word form (3,273): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
   Articles explain meaning, spelling or formation, synonyms, antonyms and usage distinctions.

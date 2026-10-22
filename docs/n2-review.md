@@ -3178,3 +3178,29 @@ has zero errors and the 1,073-row audit remains clean. Repeated
 manifest builds are byte-identical: contentVersion
 `6fc7220274c1cc12`, SHA256
 `f92eed3d3a51639477277a23d71e3e550a05c99dd75df24bd11a3df13ba99f9c`.
+
+### Original-reviewer confirmations and closure
+
+The correction was committed as
+`11de9d80c015ed96c5dfa335f909bf605008aeba`. Both original
+reviewer sessions received their own initial report, the corrected
+snapshot and the actual one-page diff. GPT ran to successful exit
+before Claude started. The read-only confirmations are archived:
+[GPT](n2-reviews/batch-25-gpt-followup.md) and
+[Claude](n2-reviews/batch-25-claude-followup.md).
+
+Both assessed the complete changed 黄 card as CLEAN for correctness,
+scoped coverage and comprehensibility. Claude marked B25-1
+**resolved**; GPT had no original finding to resolve and confirmed
+the deletion without establishing a regression. Neither added a
+frequency or register claim or required optional expansion.
+The unchanged four cards retain their initial review verdicts.
+These were changed-passage confirmations, not new full-batch reviews.
+Git identity, preservation, source audits, validation and manifest
+checks remain author-run checks, not reviewer-executed checks.
+
+**Batch 25 is review-closed.** With the four archived reports the
+cumulative batch scope is 27 files. All 365 selected additions have
+now completed independent GPT/Claude review and reconciliation.
+No selected character remains to be authored. Final project-wide
+coverage and preservation verification follows; nothing is pushed.
