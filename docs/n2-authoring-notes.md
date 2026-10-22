@@ -123,6 +123,9 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
 - New upward-movement vocabulary also activates a legacy fallback: batch 09 gives 上 a third curated
   wrong answer so 昇's rising answer cannot fill its default fourth slot. Useful semantic comparisons
   remain in teaching text rather than becoming wrong answers.
+- Test English polysemy in both word-quiz directions. Batch 09 adds direct 挟む exclusions for grasp,
+  catch and the noun/verb label sandwich. It narrows 昇る's answer to "rise (sun/moon); be promoted"
+  without restricting the body's broader natural-rising explanation or adding every increase/posture word.
 
 ## Review and checkpoint protocol
 
@@ -147,7 +150,8 @@ where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
 remaining defect in that scope; batch 06 required no teaching correction. Batch 09's 15 additions and four supporting
-articles are drafted but await independent review; the remaining 230 additions are not yet authored.
+articles have independent initial reports; their corrections await changed-passage confirmation.
+The remaining 230 additions are not yet authored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.

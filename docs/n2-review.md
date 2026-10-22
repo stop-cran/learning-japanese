@@ -715,14 +715,14 @@ No actionable defect or consequential unresolved claim remains in the corrected 
 
 Cards: 拾 挟 捜 捨 掃 掘 採 接 換 損 改 敬 旧 昇 星.
 
-Status: **drafted; independent review pending**. Scope: all 15 new kanji and four supporting
+Status: **initial dual-model review reconciled; corrections awaiting confirmation**. Scope: all 15 new kanji and four supporting
 articles, 挟む, 捜す, 採掘 and 昇る; all three review facets and 45 curated distractor assignments.
 Related edits: component links in 15 existing word articles and a third curated wrong answer on 上.
 
 Evidence: [batch-09.json](n2-batch-sources/batch-09.json), with 50 exact reading rows and
 52 selected restriction-aware dictionary spelling/reading records. The complete pinned spelling lists
-for eight relevant entry families are retained, including 挟む/差し挟む, 探す/捜す, 上る/登る/昇る,
-愛嬌/愛敬 and the かわる variants.
+for nine relevant entry families are retained, including 挟む/差し挟む, 探す/捜す, 上る/登る/昇る,
+愛嬌/愛敬 and the かわる variants. 客星's complete pinned reading list is also retained.
 
 ### Authored scope and checks
 
@@ -746,3 +746,48 @@ for eight relevant entry families are retained, including 挟む/差し挟む, �
 - Stroke data uses the pinned converter and 16 points per stroke. Structural validation reports
   zero errors; the metadata/reading/stroke audit covers 135 additions and 416 exact reading rows.
   These checks are not independent linguistic review or exhaustive stroke-path inspection.
+
+### Independent initial review
+
+Both models received the same frozen `d3166cb43733fa6c45908151ec3633044200d54f` snapshot,
+19-page full-content scope, 15 link-only passages, 上's third choice, three facets and pinned evidence.
+Reports are preserved unchanged apart from extracting the six-heading final report:
+
+| Reviewer | Actual model | Preserved report | Initial result |
+| --- | --- | --- | --- |
+| GPT | `gpt-6.1-sol` | [initial report](n2-reviews/batch-09-gpt-initial.md) | 17 pages CLEAN; two word-quiz metadata issues |
+| Claude | `claude-opus-5.5` | [initial report](n2-reviews/batch-09-claude-initial.md) | 18 pages CLEAN; two localized 星 qualifications/clarity findings |
+
+The processes ran sequentially and exited before the next began; usage receipts confirm the actual models
+and zero code edits. Each reviewed all assigned teaching pages, all 45 new distractor assignments and the
+related passages. Claude explicitly did not open the separate source-snapshot file. Neither could verify
+Git state, recompute source hashes or exhaustively inspect stroke paths; the author verified the frozen
+clean checkpoint and exact 55-file draft, source metadata/reading/stroke audit and deterministic manifest.
+
+### Reconciliation and authored corrections
+
+| Finding | Adjudication and correction | Status |
+| --- | --- | --- |
+| GPT G09-001: missing 挟む exclusions | Pinned JMdict 1600740 explicitly includes gripping from both sides, catching a finger and sandwiching between. Existing 掴む, 捕まえる and サンドイッチ answer labels permit these overlaps. Add all three direct exclusions; sharing an exclusion through 握る is insufficient. The sandwich pair concerns English noun/verb ambiguity, not unrestricted Japanese synonymy. | Authored correction; confirmation pending |
+| GPT G09-002: broad 昇る answer | The English rise can mean quantitative increase or getting to one's feet. Adopt the narrower proposed answer strategy: title and heading become rise (sun/moon); be promoted. Preserve the broader, source-supported natural-rising explanation. This avoids adding six unrelated increase/posture exclusions merely to preserve an overly broad answer label. | Authored correction; confirmation pending |
+| Claude B9-01: 客星 qualification | Adopt the factual alternative-reading clarification, not an unsupported frequency ranking. Direct inspection of pinned JMdict 2563200 establishes かくせい, きゃくせい and きゃくしょう with no reading-rarity tags. Retain all three in the source packet; explain why the table uses きゃくしょう and explicitly disavow an only/usual-reading claim. Dictionary ordering and the reviewer's reported headword arrangement do not by themselves establish pronunciation frequency. | Qualified adoption; confirmation pending |
+| Claude B9-02: In other words | Replace the ambiguous English transition with In some vocabulary, such as 白星 しろぼし, so a different word's mark/victory sense is not presented as a paraphrase of visible planets. | Authored correction; confirmation pending |
+
+The author inspected the complete pinned XML entries for 1600740, 1352570 and 2563200, and the actual
+existing quiz labels. Source-packet omissions were not treated as dictionary absence. No categorical
+claim that きゃくしょう is rare or that かくせい is most frequent is added; the reported Kotobank
+headword arrangement was not independently reproduced by the author.
+
+Claude's optional 採 phrasing, extra 愛敬/旧 ordering context and additional 挟む sense are nonblocking
+expansion or polish and are not adopted. Its larger-kanji-quiz comparisons are a disclosed existing limit,
+not defects in the current three curated choices. The promotion sentence's lack of independent corpus
+attestation is preserved as a review limit, not converted into a claim that the ordinary construction is wrong.
+
+### Model-usefulness observation
+
+GPT uniquely identified the two actionable word-quiz gaps; Claude explicitly reported no further English
+label clash. Claude uniquely identified the 客星 alternative-reading context and ambiguous English
+transition; GPT had called that page CLEAN. These observations are compared across findings, optional
+points and limits, not merely issue labels. The complementary catches are useful in this batch, but the
+frequency implication still required source-based qualification. Neither family alone found every adopted
+improvement, and this matched sample does not establish a general ranking or removal of model bias.
