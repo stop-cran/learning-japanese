@@ -3136,3 +3136,45 @@ remaining selected characters. The exact batch scope is 23 files.
 Repeated manifest builds are byte-identical: contentVersion
 `70f83c8392bf1fe4`, SHA256
 `a46984c2faee26f41b1c9f1ec30d7e2a4e2306b3b3f88194ce27dcb59dd540d1`.
+
+### Independent initial reviews and reconciliation
+
+Both isolated initial reviewers used the same committed draft,
+`7eedeb1589aedfbf26e84aa3d7a700b5930ebec8`, identical scope,
+rubric and source access. GPT (`gpt-6.1-sol`) ran first and exited
+before Claude (`claude-opus-5.5`) started. Neither edited files.
+Their reports are archived without rewriting:
+[GPT](n2-reviews/batch-25-gpt-initial.md) and
+[Claude](n2-reviews/batch-25-claude-initial.md).
+
+GPT marked all five new cards CLEAN on all three facets. Claude
+marked all correctness/coverage facets CLEAN and raised B25-1,
+a minor comprehensibility finding on 黄: "another source reading"
+is opaque learner-facing wording. Accept the offered deletion,
+not a new unsupported everyday/non-everyday classification of
+こうしょく and おうしょく. The note now simply preserves both
+adjacent い sounds and identifies the linked article's きいろ.
+No reading row, metadata or lexical evidence changes.
+
+Both checked the 年 safeguard and seven links-only passages
+without establishing a defect. Both fetched the actual 齢 source
+and confirmed the attested よわい noun and character-level とし
+qualification, preserving the distinction from a lexical example.
+Across findings, optional suggestions and limits, Claude uniquely
+supplied the useful B25-1 catch; GPT had no equivalent observation.
+This complementary sample does not rank the models generally or
+prove bias eliminated.
+
+The 黄金 reading/frequency preference, extra 麦 wording,
+non-jōyō/Jitsū labels, phonetic history and additional compound
+lists remain optional. Priority flags alone are not a comparative
+frequency measurement; no such claim or unverified new word was
+added. The original reviewers will assess the actual one-page
+correction and the complete changed card. Confirmation is pending.
+
+The exact correction changes six files, including the two archived
+initial reports; the cumulative batch scope is 25 files. Validation
+has zero errors and the 1,073-row audit remains clean. Repeated
+manifest builds are byte-identical: contentVersion
+`6fc7220274c1cc12`, SHA256
+`f92eed3d3a51639477277a23d71e3e550a05c99dd75df24bd11a3df13ba99f9c`.

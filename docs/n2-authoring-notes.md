@@ -914,3 +914,14 @@ the new meanings; the result is bounded to the default four-choice
 quiz, not a guarantee about larger quizzes. No new word article,
 word title, vocabulary JLPT label or exclusion is introduced.
 Independent review remains pending.
+
+Both initial final-batch reviewers have exited. GPT marked all
+five new cards CLEAN. Claude uniquely identified B25-1: the 黄
+note's "another source reading" is opaque learner-facing wording.
+Delete that clause while keeping the explicit きいろ pronunciation.
+Do not substitute an unverified claim that the dictionary's other
+readings are non-everyday. The other suggested compounds, phonetic
+history, priority-based frequency ranking and wording preferences
+remain optional; no forced expansion is needed.
+Both original sessions will confirm this one-page correction
+sequentially. Their confirmations remain pending.
