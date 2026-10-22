@@ -218,8 +218,8 @@ in contributor source records, and leave unestablished cases unclassified.
 
 The [reviewed introduction pilot](grammar-introductions-pilot.json) supplies the initial 19 labels: six before/after and nine
 action-stage exercises at N4, and four expectation/obligation exercises at N3. The other four koto/wake exercises in the mixed pilot
-file remain unclassified, as do the other 650 exercises, including all 60 conditionals, 26 のに, 36 listing,
-36 topic-particle, 64 basic-particle and 50 restriction/inclusion questions. The same three pilot groups
+file remain unclassified, as do the other 698 exercises, including all 60 conditionals, 26 のに, 36 listing,
+36 topic-particle, 64 basic-particle, 50 restriction/inclusion and 48 compound-relation questions. The same three pilot groups
 are annotated as optional `introductionGroups` in their declaring files, with one recommendation from temporal sequence
 to action stages and no genuine prerequisites.
 
@@ -271,8 +271,10 @@ The two conditionals additions extended this inventory without reinitializing it
 bringing that snapshot to 559 exercises in 37 files and vocabulary coverage to 162/559.
 The basic-noun/particle set adds 64, bringing that snapshot to 623 exercises in 38 files
 and vocabulary coverage to 226/623. The restriction/inclusion follow-up initially added 48, reaching 671 exercises
-and vocabulary coverage of 274/671. Two review-driven transfer questions bring the current corpus
-to **673 exercises in 39 files** and vocabulary coverage to **276/673**.
+and vocabulary coverage of 274/671. Two review-driven transfer questions bring that snapshot
+to 673 exercises in 39 files and vocabulary coverage to 276/673.
+The compound-relation follow-up adds 48, bringing the current corpus to **721 exercises in 40 files**
+and vocabulary coverage to **324/721**.
 All 397 original pending records remain pending,
 the baseline revision stays unchanged, and the inventory remains at `stage: "pilot"`. The first 30 subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
@@ -305,6 +307,24 @@ their defined metalinguistic labels do not introduce a new construction identity
 Polarity/ability predicates and minimum-count units are protected when their interpretation is the target.
 All 623 preceding inventory records remain unchanged. The original 48 prompts, vocabulary payloads and accepted
 answers are preserved; changed contexts are rebound and two new reviewed records are added.
+
+The [compound-relation record](grammar-compound-relations-sources.json) separates the original author pass,
+full initial independent review and informed fresh-reviewer reconciliation. Eight groups contain 48 exercises:
+22 formation, 22 interpretation and four contextual tasks,
+with 21 answer classes, 24 group/facet assignments, six soft recommendations and no hard prerequisites.
+Shared topic tasks accept について／に関して／のことを with four substantive extra buttons in total;
+spelling variants do not become separate buttons. Noun-modifying forms, intended benefit versus standpoint,
+Nのこと versus explicitly nominalized Nであること, and nominalizer/relation layers have distinct tasks.
+Case formation practices nouns, な-adjectives and plain verbs; supporting article examples and broader comparative
+attachment remain explicitly outside independently practiced facets. Closely paired contexts share keys across facets.
+Interpretation labels use answer-independent ordering; six noun-relation drills require complete phrase assembly,
+and two nominalization drills require polite-to-plain conversion plus こと. The enlarged answer units preserve every
+previously accepted completed sentence, with ordinary noun/verb spelling variants. Six repeated-context keys are aligned.
+All 124 lexical spans map to 34 checked canonical identities, including 答え to the existing 答 noun card.
+The two grammar-only `____場合` prompts deliberately have empty span arrays and fully protected coverage.
+All 673 preceding inventory records remain unchanged. The reconciler assessed 34 complete objects, including all
+22 interpretation tasks, and carried forward the original review of 14 unchanged objects. All three facets are CLEAN
+within that composite scope; the initial exercise coverage NEEDS FIX verdict remains attached to its original snapshot.
 
 `python tools/grammar_vocabulary.py check` is the maintained repository's publication gate, separate from the app's optional import contract.
 Records bind file/ID, exact prompt, full exercise context (including answers), and annotation payload. Reviewed spans plus explicitly

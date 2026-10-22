@@ -35,6 +35,97 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Compound relations: independent review and reconciliation (2026-10-22)
+
+**Snapshots:** `75f7f55ce7a7de27f9be4477eb39aeac526d8a56` plus the local article and exercises.
+Initial exercise SHA-256: `3ebfa4c1690aec56addeec6e9481b59d8cf36b66da9053704535a694d13245dc`;
+reconciled: `cd21fed8f78a77b4e7de8456b170ab39c0888a0ff6064a3d4f75ac1fd9b60ac1`
+(normalized LF). The 305-line article is unchanged. The
+[source record](docs/grammar-compound-relations-sources.json) preserves the author snapshot, full original reports,
+initial adjudication, exact diff/packet hashes and updated vocabulary/coverage evidence.
+
+**Initial independent scope:** one blinded reviewer assessed the whole article and all 48 complete exercises,
+110 accepted renderings, 126 base options, four additional options, 132 lexical spans, 219 exclusions and all
+34 canonical vocabulary cards. **Initial verdicts:** article CLEAN in all three facets; exercise correctness and
+comprehensibility CLEAN, scoped coverage NEEDS FIX. Both reviewers' actual model IDs were unavailable.
+
+| Observation | Disposition |
+| --- | --- |
+| CR-F01, Minor: all 22 interpretation instructions listed the keyed answer first | Resolved: definition lists now have fixed answer-independent ordering; short layered-choice lists are counterbalanced across their paired contexts. Definitions, readings and answer units are preserved. |
+| CR-O01, optional: repeated scenarios had inconsistent context keys | Adopted and resolved: six keys are aligned across travel/teacher/plan discussions, history-book reading and family-benefit tasks. |
+| CR-O02, optional: eight drills printed the exact fragment to copy | Adopted and resolved: six now assemble a noun-plus-relation phrase; two transform a polite verb to plain nonpast plus こと. Visible constraints and every old completed sentence are preserved. |
+
+**Reconciliation:** the original synchronous reviewer had no follow-up-capable agent ID. A fresh informed reviewer
+read the original report and exact diff, then assessed 34 complete current objects: all 22 interpretation tasks,
+all eight strengthened formation tasks and every context-key-changed task. This covers 95 accepted renderings,
+92 base options, two additional options, 92 lexical spans and 179 exclusions. The remaining 14 unchanged objects
+carry forward their initial review. The article's original CLEAN verdicts are carried forward with teaching/exercise
+consistency checks, not presented as a second full source audit.
+All three exercise facets are now **CLEAN within this bounded composite scope**, with no new actionable content
+finding or consequential unresolved linguistic claim. A nonblocking packet locator ended one line before the closing
+brace; complete object payloads were intact. Corrected ranges are in the report, and future packet generators were
+corrected without modifying the frozen evidence.
+
+**Preservation and integration:** 22 exercise payloads changed and 26 are unchanged; IDs, targets, answer classes,
+relationships, group/facet structure and recommendation edges are preserved. The eight enlarged blanks retain all
+18 former completed renderings and accept 41 current renderings. Other prompts, answers and vocabulary payloads
+are unchanged. The final set has 133 accepted renderings, 128 base options, four additional options, 124 lexical
+spans and the same 34 canonical identities. All 673 preceding inventory records, 39 published grammar files,
+existing runtime payloads and unrelated caches are preserved. Corpus/vocabulary totals remain 721 exercises in
+40 files and 324/721 reviewed, still `pilot` with 397 pending. Content/vocabulary checks, 150 focused tests and
+a freshly executed real Android importer pass; deterministic manifest `36be4fcdbd03e843`.
+These parent integration checks are separate from the reconciler's packet-only verification.
+
+**Usefulness and limits:** the independent pass caught a systematic assessment cue missed by the author, not an
+incorrect Japanese rule. Correct-label positions of 10/6/6, 32 context keys and stronger answer operations are
+descriptive checks, not measured mastery or independent discourse breadth. Formation remains scaffolded.
+No native-speaker certification, model comparison, APK, phone check or automatic issue closure is claimed.
+
+## Compound relations and formal-noun contrasts: earlier author pass (2026-10-22)
+
+**Snapshot:** published `75f7f55ce7a7de27f9be4477eb39aeac526d8a56` plus the new
+`articles/about-targets-and-perspectives.md` and `grammar/compound-relations.json`.
+Article SHA-256: `525895f8acad5fdd6282790b0fd6feedf86b92dab2931cb5490ffa6fd1524168`;
+exercise SHA-256: `3ebfa4c1690aec56addeec6e9481b59d8cf36b66da9053704535a694d13245dc`
+(normalized LF). The [source record](docs/grammar-compound-relations-sources.json) pins the inventory,
+manifest, inspected sources, canonical identities and article-to-exercise coverage. This is part 4 under issue #5.
+
+**Scope:** direct author review by `gpt-6-astra` of the complete article and all 48 exercises:
+110 accepted renderings, 126 base options, four additional correct options, 132 lexical spans,
+219 exclusions and all 34 complete linked vocabulary cards.
+**Author verdicts, separately for article and exercises:** correctness **CLEAN**; scoped coverage **CLEAN**;
+comprehensibility **CLEAN**. No actionable defect or consequential unresolved claim was established in this
+bounded pass. **No independent review or reconciliation had been performed at that author snapshot.**
+
+The eight groups have 21 answer classes and 24 facet assignments: 22 formation, 22 interpretation and four
+bounded contextual tasks, with six soft recommendations, no hard prerequisites and no inferred JLPT labels.
+Core relations, actual noun modifiers, shared subject-matter frames, intended benefit, noun-based attachment
+and nominalized/comparative layers are distinguished. Closely paired scenes share keys across facets;
+48 tasks are not 48 independently sampled discourse situations.
+
+**Authoring decisions:** accept fitting について／に関して／のことを frames in the shared talking tasks;
+keep named-family constraints visible elsewhere. Do not equate に対して with hostility, にとって with every
+English "for," or intended benefit with an actual result. Nのこと may concern someone's status, but it does
+not explicitly build the same predicate as Nであること. Nominalization does not establish completed experience.
+The ordinary 答え spelling correctly links to the existing 答 noun card, not the verb 答える.
+Two `____場合` prompts contain only protected grammar and deliberately have no lexical hints.
+
+**Source handling:** inspect actual main/dictionary sections when simplified extraction returns related text,
+irrelevant links or nearby entries. Do not adopt the inconsistent 付いて rare-kanji header for について,
+universal hostility or thinking-verb restrictions, or the 場合 page's randomness/uncontrollability shortcut.
+Dictionary recognition supports accepted spellings, not equal frequency or blanket interchangeability.
+
+**Integration:** all 673 preceding inventory records and 39 published grammar files are unchanged.
+The corpus is 721 exercises in 40 files; vocabulary coverage is 324/721, still `pilot` with the same 397 pending.
+Content/vocabulary checks, 150 focused tests and a freshly executed real Android importer pass;
+manifest `be50a3bc873a2e87` is deterministic. Existing runtime payloads, 396 images, 201 scene catalogs and
+unrelated caches are preserved; Android source is unchanged.
+
+**Limits:** supporting i-adjective cases, added は/も, nonhuman evaluators and broader comparative attachment
+are not independent new exercise facets. These are author judgments, not native-speaker certification or
+measured transfer/mastery. Article 3 was published first; at that stage this new batch remained local and uncommitted.
+No APK, phone check or issue closure is claimed.
+
 ## Restriction and unexpected inclusion: independent review and reconciliation (2026-10-22)
 
 **Snapshots:** `de0df855080b0bbc0bd9c0565184f21e4c1c9366` plus the local article and exercises.
@@ -327,6 +418,18 @@ The [restriction/inclusion review](docs/grammar-restriction-sources.json) adds t
   makes that inference part of the actual recognition task (RII-O03).
 - **Count transfer opportunities separately from templates.** Two new bounded existence/cash situations add useful
   practice without claiming that 50 items measure 50 independent decisions or demonstrated mastery (RII-O01).
+
+The [compound-relation review](docs/grammar-compound-relations-sources.json) adds three observed checks:
+
+- **Audit instruction ordering as well as answer buttons.** A shuffled quiz still leaks its answer when every
+  learner-facing definition list places the correct label first. Check the whole comparable task family, including
+  unchanged instructions, and keep ordering independent of the answer (CR-F01).
+- **Distinguish a new exercise from a new scenario.** Different target families or answer spans can reuse the same
+  underlying conversation or event. Align genuinely paired context keys without equating their grammar or counting
+  keys as independent discourse breadth (CR-O01).
+- **Name the operation in a scaffolded drill.** A named pattern can support a useful attachment or form conversion;
+  printing its exact missing fragment mostly supports copying. Preserve fair visible restrictions while requiring
+  a small operation, and do not describe the result as unrestricted mastery (CR-O02).
 
 ## のに article and initial exercises (2026-10-21)
 

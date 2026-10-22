@@ -16,6 +16,7 @@ This repository starts as a collection of standalone articles prompted by specif
 | Grammar | [Japanese nouns and basic particles: building a sentence](articles/japanese-nouns-and-basic-particles.md) | How do particles mark whole noun phrases, how does the predicate determine their roles, and how do に/で, に/へ, と/で, and まで/までに differ? |
 | Grammar | [は, が, and も: topic, contrast, and inclusion](articles/wa-ga-mo-topic-and-inclusion.md) | How do topic and grammatical role differ, what does も add, and when are several framings or an omitted participant natural? |
 | Grammar | [Only, even, and unexpected inclusion](articles/only-and-unexpected-inclusion.md) | How do だけ and しか differ under negation, what makes an included example unexpected, and when do さえ, でも, まで, or も overlap? |
+| Grammar | [About, towards, and from someone's perspective](articles/about-targets-and-perspectives.md) | How do について, に対して, にとって, and に関して differ, and how do they connect to こと, ため, 場合, and nominalized clauses? |
 | Vocabulary | [Strange, suspicious, and rare: ayashii and related words](articles/ayashii-and-related-words.md) | How do 怪しい, 妖しい, 疑わしい, いかがわしい, 変な, and 珍しい differ? |
 | Vocabulary | [Kaeru: change, replace, exchange, and return](articles/kaeru-change-replace-and-return.md) | How do 変える, 替える, 換える, 代える, 帰る, 返る, 還る, and 孵る differ, and why is 交える not read かえる? |
 | Vocabulary | [Japanese occupation and role endings](articles/occupation-and-role-endings.md) | What do 者, 家, 師, 士, 手, 員, and 屋 contribute, and how do they relate to prestige and new word formation? |
@@ -74,7 +75,8 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   12 on norms, predictions and goal-relative practical necessity,
   60 on たら／ば／なら／と／場合 conditionals in two batches, 26 on のに and related contrasts,
   36 on listing, examples and addition, 36 on は／が／も topic, contrast and inclusion,
-  64 on basic nouns and particles, and 50 on restriction and unexpected inclusion (673 in total).
+  64 on basic nouns and particles, 50 on restriction and unexpected inclusion,
+  and 48 on compound relations and formal-noun contrasts (721 in total).
   Time practice includes うち, あいだ, とき, ころ, たび and shared とき／おり／さい occasion answers;
   shared alternatives are not independently contrasted targets.
   Purpose/cause practice adds ため, おかげ, せい, かわり and ついで, including compensating trade-offs.
@@ -172,8 +174,16 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   The conditional questions distinguish a sufficient condition from an unestablished exclusive-route claim.
   The two shared questions accept fitting inclusion alternatives, with eight substantive extra buttons in total;
   this is not independent discrimination of every accepted framing.
-  All 60 conditional, 26 のに, 36 listing, 36 topic, 64 basic-particle and 50 restriction/inclusion prompts include vocabulary hints;
-  total author-reviewed coverage is **276/673**,
+  The compound-relation set has eight groups covering subject matter, directed targets, evaluative standpoints,
+  noun modifiers, shared topic frames, intended benefit, noun-based attachment and nominalized/comparative layers.
+  Its 22 formation, 22 interpretation and four bounded contextual questions distinguish the requested answer units.
+  Six drills assemble a supplied noun with its relation; two convert a polite verb to a plain form plus こと.
+  Interpretation-label ordering is independent of the answer, and repeated scenarios share context keys.
+  Two talking contexts accept について／に関して／のことを together, without pretending their structures or styles
+  are identical. The Nのこと／Nであること contrast tests explicit nominalization, not disjoint possible conversation topics.
+  All 60 conditional, 26 のに, 36 listing, 36 topic, 64 basic-particle, 50 restriction/inclusion and 48 compound-relation
+  prompts have reviewed vocabulary coverage; pure grammar prompts deliberately have no lexical hints.
+  Total author-reviewed coverage is **324/721**,
   with the original 397 still pending. The のに source record keeps author and independent review snapshots separate;
   the unsettled causal-past expectation card was retired in favor of a current timetable-based preparation example.
   The topic article and exercise set have independent `gpt-6-astra` and `claude-opus-5.5` reviews, followed by
@@ -188,6 +198,11 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   all three facets are CLEAN, combining review of the 18 changed and two new objects with unchanged prior coverage.
   Initial findings, reviewer-continuity limits, source evidence, coverage and exact snapshots are in the
   [restriction/inclusion record](docs/grammar-restriction-sources.json).
+  The compound-relation article and all 48 exercises have an initial independent review. Informed fresh-reviewer
+  reconciliation resolved an interpretation-answer ordering cue and the adopted metadata/formation refinements.
+  All three facets are CLEAN within the composite scope: 34 complete objects were freshly assessed and 14 unchanged
+  objects carry forward their initial review. Sources, original reports, corrected snapshots and recognition-only
+  boundaries are recorded in the [compound-relation source record](docs/grammar-compound-relations-sources.json).
   See the [content format](docs/content-format.md#grammar-exercises), [foundations sources](docs/grammar-foundations-sources.json),
   [actions sources](docs/grammar-actions-sources.json), [intent sources](docs/grammar-intent-sources.json),
   [action-stage sources](docs/grammar-stages-sources.json), [state sources](docs/grammar-states-sources.json),
