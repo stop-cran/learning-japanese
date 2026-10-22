@@ -218,7 +218,8 @@ in contributor source records, and leave unestablished cases unclassified.
 
 The [reviewed introduction pilot](grammar-introductions-pilot.json) supplies the initial 19 labels: six before/after and nine
 action-stage exercises at N4, and four expectation/obligation exercises at N3. The other four koto/wake exercises in the mixed pilot
-file remain unclassified, as do the other 536 exercises, including all 60 conditionals, 26 のに, 36 listing and 36 topic-particle questions. The same three pilot groups
+file remain unclassified, as do the other 600 exercises, including all 60 conditionals, 26 のに, 36 listing,
+36 topic-particle and 64 basic-particle questions. The same three pilot groups
 are annotated as optional `introductionGroups` in their declaring files, with one recommendation from temporal sequence
 to action stages and no genuine prerequisites.
 
@@ -267,7 +268,9 @@ The two conditionals additions extended this inventory without reinitializing it
 **64/461** vocabulary coverage. The のに follow-up added 26 author-reviewed prompts, reaching 487 exercises in
 35 files and **90/487** coverage. The listing follow-up added another 36, reaching
 523 exercises in 36 files and vocabulary coverage of **126/523**. The topic-particle follow-up adds 36,
-bringing the current corpus to **559 exercises in 37 files** and vocabulary coverage to **162/559**.
+bringing that snapshot to 559 exercises in 37 files and vocabulary coverage to 162/559.
+The basic-noun/particle set adds 64, bringing the current corpus to **623 exercises in 38 files**
+and vocabulary coverage to **226/623**.
 All 397 original pending records remain pending,
 the baseline revision stays unchanged, and the inventory remains at `stage: "pilot"`. The first 30 subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
@@ -279,6 +282,15 @@ The [listing record](grammar-listing-sources.json) keeps article and initial exe
 own snapshots, with subsequent editorial refinements tracked separately.
 The [topic-particle record](grammar-topic-sources.json) separates the initial author review, blinded
 `gpt-6-astra` / `claude-opus-5.5` reviews and original-reviewer reconciliation of the article and exercises.
+The [basic-particle record](grammar-basic-particles-sources.json) separates the unchanged article's independent
+review from the exercises' author, initial independent and informed reconciliation records. Its 11 groups contain
+64 tasks with explicit formation, contextual selection, interpretation or pronunciation instructions, plus seven soft
+recommendations and no hard prerequisites.
+Two broad destination tasks accept に／へ／まで, and a speaking task accepts language-medium で or language-object を;
+the fixed letter-writing task does not acquire an invalid second を. Typed spelling variants do not automatically become
+extra correct buttons. Negative-ending formation tasks explicitly distinguish standard versus rough and ordinary versus
+heightened-polite forms. Temporal-interpretation targets and pronunciation targets are
+protected from vocabulary hints. Canonical vocabulary checks and the article-to-exercise matrix are recorded separately.
 
 `python tools/grammar_vocabulary.py check` is the maintained repository's publication gate, separate from the app's optional import contract.
 Records bind file/ID, exact prompt, full exercise context (including answers), and annotation payload. Reviewed spans plus explicitly

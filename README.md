@@ -13,6 +13,7 @@ This repository starts as a collection of standalone articles prompted by specif
 | Grammar | [Japanese conditionals: たら, ば, なら, と, and 場合](articles/japanese-conditionals.md) | How do conditions, premises, event order, discoveries, and procedural cases differ, and when can several patterns fit? |
 | Grammar | [のに: unexpected outcomes, comparisons, and the other のに](articles/noni-and-concessive-contrasts.md) | How do concessive のに, わりに and くせに overlap, and how is nominalizing の plus に different? |
 | Grammar | [Japanese listing and examples: と, や, とか, など, たり, and し](articles/japanese-listing-and-examples.md) | How do named lists, representative examples, added reasons, and alternatives differ, and when is one stated item enough? |
+| Grammar | [Japanese nouns and basic particles: building a sentence](articles/japanese-nouns-and-basic-particles.md) | How do particles mark whole noun phrases, how does the predicate determine their roles, and how do に/で, に/へ, と/で, and まで/までに differ? |
 | Grammar | [は, が, and も: topic, contrast, and inclusion](articles/wa-ga-mo-topic-and-inclusion.md) | How do topic and grammatical role differ, what does も add, and when are several framings or an omitted participant natural? |
 | Vocabulary | [Strange, suspicious, and rare: ayashii and related words](articles/ayashii-and-related-words.md) | How do 怪しい, 妖しい, 疑わしい, いかがわしい, 変な, and 珍しい differ? |
 | Vocabulary | [Kaeru: change, replace, exchange, and return](articles/kaeru-change-replace-and-return.md) | How do 変える, 替える, 換える, 代える, 帰る, 返る, 還る, and 孵る differ, and why is 交える not read かえる? |
@@ -71,7 +72,8 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   12 on earlier intentions, completion beliefs and current inferences,
   12 on norms, predictions and goal-relative practical necessity,
   60 on たら／ば／なら／と／場合 conditionals in two batches, 26 on のに and related contrasts,
-  36 on listing, examples and addition, and 36 on は／が／も topic, contrast and inclusion (559 in total).
+  36 on listing, examples and addition, 36 on は／が／も topic, contrast and inclusion,
+  and 64 on basic nouns and particles (623 in total).
   Time practice includes うち, あいだ, とき, ころ, たび and shared とき／おり／さい occasion answers;
   shared alternatives are not independently contrasted targets.
   Purpose/cause practice adds ため, おかげ, せい, かわり and ついで, including compensating trade-offs.
@@ -154,11 +156,24 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   positive/negative inclusion; case-particle combinations; and shared framings/context-supported omission.
   Its 21 completion and 15 meaning-label tasks keep formation restrictions visible and avoid pretending that every
   isolated sentence has one uniquely natural particle. Three questions accept both は and が with optional choose-any buttons.
-  All 60 conditional, 26 のに, 36 listing and 36 topic prompts include vocabulary hints; total author-reviewed coverage is **162/559**,
+  The basic-particle set has 11 groups covering noun endings, sentence roles and whole phrases, existence/activity/event
+  locations, tools/transport/languages, destinations and other に patterns, companions/lists, の modification, ranges/deadlines,
+  clock times/durations, a は/も bridge and special particle pronunciations. Formation restrictions and interpretation labels
+  are visible before answering. Two broad destination questions accept に／へ／まで with their different nuances and optional
+  choose-any buttons. A third question accepts both 日本語で話します and 日本語を話します, explaining medium versus
+  language-as-object framing without transferring を into a letter-writing sentence that already contains 手紙を.
+  These shared-answer tasks do not claim to distinguish their accepted realizations independently.
+  All 60 conditional, 26 のに, 36 listing, 36 topic and 64 basic-particle prompts include vocabulary hints;
+  total author-reviewed coverage is **226/623**,
   with the original 397 still pending. The のに source record keeps author and independent review snapshots separate;
   the unsettled causal-past expectation card was retired in favor of a current timetable-based preparation example.
   The topic article and exercise set have independent `gpt-6-astra` and `claude-opus-5.5` reviews, followed by
   original-reviewer reconciliation; historical verdicts and corrected snapshots are recorded separately.
+  The unchanged basic-particle article has a fresh independent review, CLEAN in correctness, scoped coverage and
+  comprehensibility. Its exercises have a full initial independent review followed by informed fresh-reviewer
+  reconciliation, now CLEAN in all three facets within that scope. Initial findings and corrected verdicts remain
+  separate; see the snapshots, findings and coverage matrix in the
+  [basic-particle source record](docs/grammar-basic-particles-sources.json).
   See the [content format](docs/content-format.md#grammar-exercises), [foundations sources](docs/grammar-foundations-sources.json),
   [actions sources](docs/grammar-actions-sources.json), [intent sources](docs/grammar-intent-sources.json),
   [action-stage sources](docs/grammar-stages-sources.json), [state sources](docs/grammar-states-sources.json),

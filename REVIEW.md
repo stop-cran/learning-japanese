@@ -35,6 +35,125 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Basic nouns and particles: independent exercise review and reconciliation (2026-10-22)
+
+**Snapshots:** baseline `f6c45c5f9c4f35a8d6d94a6863862bd7edfcf178` plus local basic-particle content.
+Initial exercise SHA-256: `03c910a78a3c457f3a5b90942727dc73b2f26827932efa59cac73a4e6d4936ad`;
+corrected: `04cde4d224761003203502896656acbd03934ec2f1dc2b671a865b93718e0a15`.
+The [source record](docs/grammar-basic-particles-sources.json) preserves full reports, exact snapshot/diff hashes,
+parent adjudication, source passages and historical author verdicts. The independently reviewed article is unchanged.
+
+**Initial independent scope:** one fresh reviewer read all 64 exercises, every accepted form, 188 base options,
+four initial extra options, 159 lexical spans, 258 exclusions, all 52 canonical cards and the article as coverage context.
+Author rationale/verdicts and earlier article-review reports were withheld.
+**Initial verdicts:** correctness **NEEDS FIX**; scoped coverage **CLEAN**; comprehensibility **NEEDS FIX**.
+
+| Finding | Initial severity/status | Correction |
+| --- | --- | --- |
+| BPI-F01: the language-use request rejected 日本語を話します | Moderate | Accept を beside で with a substantive extra correct button; explain object versus medium. Keep the fixed 手紙を sentence distinct and rename the unpublished local class coherently to `language-use`. |
+| BPI-F02: meaningful typed spellings were omitted | Minor | Accept 迄, 迄に and 3時 in their applicable tasks; retain ordinary model buttons rather than adding spelling-only choices. |
+| BPI-F03: the polite negative did not exclude ではございません | Minor | State ordinary ありません/ないです formation explicitly and acknowledge that the more-polite alternative is grammatical but outside this drill. |
+| BPI-L01: allowed contractions could include rough ない variants | UNVERIFIED task boundary | Require standard ない in the plain drill and say that the permitted contraction is では to じゃ. Do not conflate neutral/rough with plain/polite. |
+
+Optional self-contained feedback, the formal わたくし reading with a register note, and explicit single-particle noun
+linking were adopted (O02/O04/O05). Extra route/departure/relative-time practice and broader transfer variation
+remain optional future work (O01/O03), not newly invented acceptance requirements.
+
+**Reconciliation:** F01-F03 and L01 **resolved**; adopted O02/O04/O05 **resolved**; O01/O03 remain **optional**.
+Correctness, scoped coverage and comprehensibility are **CLEAN within the bounded reconciliation scope**,
+with the initial review's unchanged-content coverage explicitly carried forward. No new actionable regression
+or consequential unresolved linguistic concern was identified.
+The original review session rejected follow-up messages because it ran in sync mode. A fresh reconciliation reviewer
+was therefore supplied the original report, before/after snapshots and exact diff. This is not same-reviewer
+reconciliation or a second fresh linguistic audit of all unchanged exercises. Neither actual model ID was exposed.
+
+**Preservation and integration:** 17 exercise objects changed and 47 remained identical; all 64 Japanese prompts,
+vocabulary payloads and canonical cards remain unchanged. Only context hashes changed in the corresponding
+17 inventory records; all 606 other complete records are preserved. There are now 98 accepted renderings and five
+meaningful extra choices across three eligible questions. Content/vocabulary checks, 150 focused tests and a freshly
+executed real Android importer pass; manifest `f89227c7dda18b9f` rebuilds deterministically.
+The corpus remains 623 exercises in 38 files, with vocabulary coverage 226/623, `pilot`, and the same 397 pending.
+The actual external `topic-architecture` recommendation and source-global group uniqueness are parent integration
+evidence, separate from the reviewer's initially bounded packet access.
+The reconciler verified the supplied target but left source-global uniqueness (BPI-L02) and full-inventory
+preservation (REC-L02) **UNVERIFIED** outside its packet. The parent checks above resolve those integration limits;
+the source record preserves both the reviewer's limits and the separate parent evidence.
+
+**Limits:** no native-speaker certification, exhaustive paraphrase/dialect claim, Android source change, APK or phone
+check. Signed publication is authorized after review; this entry does not assert a push before it happens.
+Unrelated Python cache files remain outside the publication batch, and issue #4 is not automatically closed.
+
+## Basic nouns and particles: earlier independent article review and exercise author pass (2026-10-21)
+
+**Snapshot:** `f6c45c5f9c4f35a8d6d94a6863862bd7edfcf178` plus the local basic-particle article.
+The independent packet pins article SHA-256
+`1818b4b3804d63c19b6175d40235cda836b5861e2431fa6dc6cfdb7dea1dde1f`
+and packet manifest SHA-256 `6ae696a8710f63f79d30830f9994de8dc2958da0aabee4828a5854dcf09480d9`.
+The [source record](docs/grammar-basic-particles-sources.json) preserves the original report, inspected evidence,
+author adjudication and separate later exercise/integration hashes.
+
+**Independent scope:** one fresh reviewer read all 424 article lines against the three-facet rubric and issue #4.
+The packet supplied the article, linked references and source navigation, withholding author verdicts/rationale.
+The actual model identifier was not exposed, so no model is attributed or comparison claimed.
+**Article verdicts:** correctness **CLEAN**; scoped coverage **CLEAN**; comprehensibility **CLEAN**.
+**Findings / optional:** none. No consequential unresolved claim was identified. The article was left byte-identical;
+no correction or reconciliation round was necessary or claimed.
+
+**Exercise author scope:** 64 new exercises in `grammar/basic-particles.json`, with 11 introduction groups,
+32 group-facet assignments, seven soft recommendations and no hard prerequisites or invented JLPT labels.
+Direct author review by `gpt-6-astra` covers whole completed sentences, visible task restrictions, accepted forms,
+every option/rationale and occurrence-specific vocabulary. The coverage matrix distinguishes graded facets from
+article-only signposts. **Exercise author verdicts:** correctness **CLEAN**; scoped coverage **CLEAN**;
+comprehensibility **CLEAN**.
+
+The exercises separate formation, contextual selection, interpretation and pronunciation. Broad destination tasks
+accept に／へ／まで, with the goal/direction/extent difference explained rather than silently rejecting a fitting form.
+Noun negatives retain appropriate contracted and uncontracted alternatives. Clock-time/duration expressions and
+tested particle sounds are protected targets, not lexical hints that supply the answer. Kana はさみ links to the
+existing 鋏 card rather than inventing a missing canonical identity.
+
+**Integration:** the source record contains the current content/vocabulary, focused-test, deterministic-manifest
+and real-importer results. The 559 existing exercises and all 559 prior vocabulary records are preserved;
+64 reviewed records bring coverage to 226/623, still `pilot` with the same 397 pending.
+
+**Limits:** the article's independent verdict does not extend to the subsequently authored exercises.
+No independent exercise review, native-speaker certification, exhaustive alternative inventory, physical-phone
+check, app/schema change, commit or push is claimed. Issue #4 remains open.
+
+## Basic nouns and particles: earlier article-only author pass (2026-10-21)
+
+**Snapshot:** `f6c45c5f9c4f35a8d6d94a6863862bd7edfcf178` plus
+`articles/japanese-nouns-and-basic-particles.md`, SHA-256
+`1818b4b3804d63c19b6175d40235cda836b5861e2431fa6dc6cfdb7dea1dde1f`.
+The [source and coverage record](docs/grammar-basic-particles-sources.json) identifies actual inspected
+passages, retrieval limits, linked-card checks and the article's bounded coverage.
+
+**Scope:** direct author review by `gpt-6-astra` of the complete 424-line article, its examples/readings/
+translations and the relevant meanings/patterns of all ten linked canonical words. This pass implements
+the article portion of [issue #4](https://github.com/stop-cran/learning-japanese/issues/4), not its exercise set.
+**Verdicts:** correctness **CLEAN**; scoped coverage **CLEAN**; comprehensibility **CLEAN**.
+
+| Authoring concern | Disposition |
+| --- | --- |
+| Calling the subject a doer and every を phrase an affected object creates false generalizations | Qualified: include state/existence subjects, preference-pattern navigation and route/departure を. |
+| A verb-only に/で shortcut misses event ある | Addressed: contrast locating a library with a class taking place at school. |
+| English at/with/to can hide different roles or fitting alternatives | Addressed: paired library and letter-writing contexts, vehicle-plus-predicate contrasts, and explicit に/へ overlap. |
+| Saying nouns do not decline could be mistaken for denying noun-predicate endings | Addressed: distinguish the stable noun from the changing だ/です, negative and past material. |
+| An exact-looking source URL or extraction may lead to the wrong lesson | Recorded: failed URLs are not evidence; Bunpro's emphatic まで page is not used as the temporal-limit explanation. |
+
+**Integration:** content validation and the real Android importer pass; manifest `d1a8b4e2c9963e3e`
+rebuilds deterministically with exactly one new runtime payload, the article. All previously published
+payloads, the 559 existing exercises and their complete vocabulary inventory remain unchanged.
+Vocabulary coverage stays 162/559, `pilot`, with 397 pending.
+
+**Optional / remaining work at this snapshot:** the covering exercises, their coverage matrix, vocabulary support
+and introduction groups had not yet been authored; the later pass is recorded above. Fuller word-order, copula,
+passive/causative, relative-clause and omission treatment
+is beyond this introductory article.
+**Limits:** author self-review only, not independent review, native-speaker certification, exhaustive alternatives,
+new JLPT classification or a physical-phone check. The preceding article's independent verdicts do not transfer
+to this new one. This article draft remains local; the topic-particle batch was published separately at `f6c45c5`.
+
 ## は／が／も independent review and reconciliation (2026-10-21)
 
 **Snapshots:** `7a92dde23107173af8aabef51971dbc66b754a93` plus the local topic-particle additions.
@@ -106,6 +225,18 @@ The [は／が／も review record](docs/grammar-topic-sources.json) grounds the
   operational definition while using a familiar technical term too narrowly. Here 相違, with its reading and definition,
   names different stated outcomes without redefining every contrastive use of は. Calibrate the original concern as
   terminology polish rather than an invalid answer key (WGM-OPUS-F3).
+
+The [basic-particle exercise review](docs/grammar-basic-particles-sources.json) adds three observed checks:
+
+- **A requested language is not necessarily only a means phrase.** 日本語を話します fits a broad language-use request
+  beside 日本語で話します. Read the complete predicate and visible task; do not transfer that を alternative to
+  英語で手紙を書きます, where 手紙を already supplies the object (BPI-F01).
+- **Separate the register axes before excluding an answer.** Plain/polite does not decide neutral/rough, and a request
+  for a polite form does not by itself exclude heightened-polite self-presentation. Bound an ordinary-ending drill
+  before answering rather than treating a marked but valid form as ungrammatical (BPI-F03 / BPI-L01).
+- **Normalization is not recognition of every spelling.** NFKC folds ３時 to 3時 but does not convert it to 三時 or
+  迄 to まで. Grammar tasks should accept appropriate recognized spellings without promoting them to separate
+  semantic choice buttons or claiming equal frequency (BPI-F02).
 
 These are checks for observed failure modes, not a requirement to invent a finding in every review. The batch record
 preserves original severities, adjudication and reconciliation separately; agreement is not a substitute for evidence.

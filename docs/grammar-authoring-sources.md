@@ -20,7 +20,7 @@ Follow the [grammar exercise contract](content-format.md#grammar-exercises) and
    [answer-set, quiz-option and feedback rules](content-format.md#grammar-exercises), use visible form restrictions only
    for a clear learning goal, and retain editorial review. One correct quiz button does not mean only one acceptable typed answer.
 
-For observed feedback, matched-context and response-label pitfalls, see the
+For observed predicate-role, register, typed-spelling, matched-context and response-label pitfalls, see the
 [reusable grammar-review lessons](../REVIEW.md#reusable-grammar-review-lessons).
 
 ## Starting points by purpose
@@ -30,6 +30,7 @@ The batch records contain the exact sections and qualifications used.
 
 | Sources and inspected seed pages | Useful starting point for | Existing batch records |
 | --- | --- | --- |
+| [Tofugu: に](https://www.tofugu.com/japanese-grammar/particle-ni/) / [で](https://www.tofugu.com/japanese-grammar/particle-de/) / [noun-modifying の](https://www.tofugu.com/japanese-grammar/particle-no-noun-modifier/), [Bunpro: までに](https://bunpro.jp/grammar_points/までに) | Predicate-dependent noun roles, activity versus existence, modification beyond ownership and temporal limits. Do not turn spatial metaphors into universal particle meanings. | [Basic-particle article review and exercise coverage](grammar-basic-particles-sources.json), [topic/contrast/inclusion](grammar-topic-sources.json) |
 | [Japan Foundation: こと](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/201112.html) / [TUFS: とき](https://www.coelang.tufs.ac.jp/mt/ja/gmod/contents/explanation/093.html) | Teaching explanations, attachment, event order and relative tense. Institutional authorship does not make every teaching shortcut universal. | [Actions](grammar-actions-sources.json), [before/after](grammar-before-after-sources.json), [time](grammar-time-sources.json) |
 | [Daijisen: 末](https://kotobank.jp/word/末-136437) / [Nihon Kokugo Daijiten: 代り](https://kotobank.jp/word/代り-468939), via Kotobank | Exact senses, readings, classification and distinctions lost in simplified glosses. Match the dictionary, not just the hosting site. | [Outcomes](grammar-expectations-sources.json), [causes/alternatives](grammar-causes-sources.json) |
 | [Bunpro: たほうがいい](https://bunpro.jp/grammar_points/たほうがいい) | Broad construction discovery, structure tables, related patterns and example leads. Cross-check categorical restrictions rather than adopting them wholesale. | [Comparison/advice](grammar-comparisons-sources.json), [conditions](grammar-conditions-sources.json) |
