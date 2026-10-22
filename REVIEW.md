@@ -35,6 +35,48 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## N5 pointing/questions: independent review and reconciliation (2026-10-22)
+
+**Snapshot and scope:** `c80d4533e613b8010b4d6e8b09f16eceeeea756c` plus installment 2 under
+[issue #13](https://github.com/stop-cran/learning-japanese/issues/13): the complete article and all 54 exercises.
+The [source and coverage ledger](docs/grammar-n5-pointing-sources.json) preserves the initial/revised hashes,
+all 19 assigned primary anchors, secondary-supported どうやって, complete reports, actual diff/packet hashes
+and integration evidence. One independent reviewer covered all three facets; its actual runtime model ID
+was unavailable. It incidentally saw unrelated historical review summaries while locating reusable lessons,
+but no earlier pointing/questions review or author verdict. Perfect historical blinding and model comparison
+are not claimed.
+
+| Initial observation | Reconciled disposition |
+| --- | --- |
+| N5PQ-F01, Minor: statement explanations described a requested question | Resolved: local statement feedback and explicitly conditional instructions in all four ending tasks. |
+| N5PQ-F02, Minor: four lists omitted spellings of already accepted optional wording | Resolved: 何方／如何 added without new semantic buttons or frequency claims. |
+| N5PQ-F03, Minor: four broadly worded person-phrase tasks omitted respectful variants | Resolved: どなたかに／どなたにも／どなたかと／どなたとも and their 何方 spellings accepted; register explained. |
+| N5PQ-O01/O02, optional: templated English and generic case/interpretation feedback | Adopted and resolved: remove doubled articles, identify the unknown book, and localize the relevant explanations. |
+
+**Same-reviewer reconciliation:** the original reviewer assessed the revised article passages, the exact
+498-line diff and all 38 complete changed objects; the initial review explicitly carries forward for
+16 unchanged objects and unchanged teaching/metadata. The article and exercises are **CLEAN in correctness,
+scoped coverage and comprehensibility within that composite scope**, with no new actionable defect or
+consequential unresolved claim. Initial exercise coverage/comprehensibility NEEDS FIX verdicts remain tied
+to the original snapshot; no incorrect Japanese model was established.
+
+**Preservation and integration:** all prompts, exercise identities, targets, levels, option IDs/labels,
+old accepted answers, vocabulary payloads and group metadata are preserved. Acceptance rises from 194
+to 206 renderings; there are still 162 base options, ten additional options and 81 lexical spans.
+The ten groups have 27 facets, four soft recommendations and no hard prerequisites.
+All 846 earlier exercise objects and inventory records remain unchanged. Current practice has **900
+exercises in 47 sets**, including **349 N5**, with **503/900** vocabulary-reviewed prompts and the same
+397 pending records at `pilot`. Content/vocabulary checks, deterministic manifest `bc2c96ccdb8fc270`,
+and a freshly executed real Android importer pass: one test, zero skips, failures or errors.
+Other runtime assets and unrelated caches remain intact. These are parent integration checks, not reviewer claims.
+
+**Reflection:** regroup three existing checks rather than add duplicate rules: shared-feedback branches,
+spellings of optional accepted wording, and respectful bases after case/polarity formation.
+The review improved feedback and typed-answer fairness, not the required grammar syllabus.
+The 30 context, 20 formation and four interpretation tasks remain scaffolded. Broader discourse pointing,
+embedded questions and affirmative question-word patterns are not independently assessed; どんな remains
+an optional N4 bridge. No native certification, mastery, second full audit, app/schema/SRS change, APK or phone check is claimed.
+
 ## N5 foundations: independent review and reconciliation (2026-10-22)
 
 **Snapshot and scope:** `c7ad52870843aece0b605e69af833c053a93d5cd` plus installment 1 under
@@ -448,9 +490,14 @@ The [basic-particle exercise review](docs/grammar-basic-particles-sources.json) 
 - **Separate the register axes before excluding an answer.** Plain/polite does not decide neutral/rough, and a request
   for a polite form does not by itself exclude heightened-polite self-presentation. Bound an ordinary-ending drill
   before answering rather than treating a marked but valid form as ungrammatical (BPI-F03 / BPI-L01).
+  Recheck that choice after combining a base with the taught particles: the unrestricted person-phrase tasks also
+  allow respectful どなたかに／どなたにも／どなたかと／どなたとも, not only bare どなた in a question
+  ([pointing/questions review](docs/grammar-n5-pointing-sources.json), N5PQ-F03; regroup).
 - **Normalization is not recognition of every spelling.** NFKC folds ３時 to 3時 but does not convert it to 三時 or
   迄 to まで. Grammar tasks should accept appropriate recognized spellings without promoting them to separate
   semantic choice buttons or claiming equal frequency (BPI-F02).
+  Include accepted optional wording in that check, not just the model: どなた／何方 and どう／如何 were the
+  omitted pairs in the pointing/questions review (N5PQ-F02; regroup).
 
 These are checks for observed failure modes, not a requirement to invent a finding in every review. The batch record
 preserves original severities, adjudication and reconciliation separately; agreement is not a substitute for evidence.
@@ -459,6 +506,9 @@ The [restriction/inclusion review](docs/grammar-restriction-sources.json) adds t
 
 - **Propagate a scenario change through every feedback path.** Changing a factual arrival to ability requires checking
   distractor rationales and shared explanations, not just the prompt and correct-answer explanation (RII-F01/O02).
+  Check every branch of a shared formation template too: a correct statement answer must not receive an explanation
+  of “the requested question.” Tie person-question distractors to the printed case role, and interpretation feedback
+  to its own example rather than a paired scenario (N5PQ-F01/O02; regroup).
 - **An explanation is not an assessed distinction.** Conditional feedback already separated sufficiency from necessity,
   but the options only contrasted a condition with an occurred surprise. Offering the exclusive-route alternative
   makes that inference part of the actual recognition task (RII-O03).

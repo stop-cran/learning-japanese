@@ -230,8 +230,9 @@ and disagreements rather than vocabulary-derived or guessed levels.
 
 The [original corpus classification record](grammar-jlpt-sources.json) covers its 721-exercise baseline in 40 sets:
 170 N5, 210 N4, 235 N3, 102 N2 and four N1, with none unclassified in that snapshot.
-The [N5 foundations ledger](grammar-n5-foundations-sources.json) adds 125 N5 tasks in six sets, bringing current practice
-to 846 exercises: 295 N5, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [N5 foundations ledger](grammar-n5-foundations-sources.json) adds 125 N5 tasks in six sets;
+the [pointing/questions ledger](grammar-n5-pointing-sources.json) adds another 54 in one set.
+Current practice is 900 exercises: 349 N5, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -298,6 +299,12 @@ The N5 foundations installment adds 125 annotated prompts, reaching **846 exerci
 vocabulary coverage of **449/846**. Its local glosses deliberately omit unverified canonical word-card identities.
 Six existing advice tasks retain their objects and owning file; a local introduction group makes them available
 as a recommendation from requests/rules, without copying tasks into another set.
+The pointing/questions installment adds 54 annotated prompts, reaching **900 exercises in 47 files** and
+vocabulary coverage of **503/900**. Its ten groups distinguish stated pointing scenes, phrase formation, polite endings,
+person/reason/method questions and whole indefinite/negative constructions. All ten groups have two distinct contexts
+per facet and no hard prerequisites; four edges are soft recommendations. The 30 context, 20 formation and four
+interpretation tasks remain scaffolded, not a claim of conversational mastery. Local vocabulary tips do not assert
+unverified canonical identities; negative endings and tested expressions are protected.
 All 397 original pending records remain pending,
 the baseline revision stays unchanged, and the inventory remains at `stage: "pilot"`. The first 30 subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue

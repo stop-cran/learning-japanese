@@ -116,6 +116,8 @@ Use [Bunpro's grammar library](https://bunpro.jp/grammar_points) as the primary 
 examination specifications. The [grammar classification record](grammar-jlpt-sources.json) preserves the inspected index
 URLs, retrieval dates, source hashes, selected entries, secondary comparisons and the decision for the original 721 exercises.
 The [N5 foundations ledger](grammar-n5-foundations-sources.json) records the subsequent 125 exercises and their complete-task mappings.
+The [pointing/questions ledger](grammar-n5-pointing-sources.json) adds 54 N5 tasks. Its six person/reason/method
+questions include the secondary-supported どうやって contrast; optional accepted wording is not a separate level prerequisite.
 
 **Classify grammar, not vocabulary or kanji.** Use the construction and substantive contrast needed for the complete
 visible task. Keep natural examples; unfamiliar words should be supported by readings, glosses and translations rather
@@ -148,8 +150,8 @@ metadata pass; the source record identifies it as author classification, not ind
 
 ### Current classified practice
 
-The original 2026-10-22 pass classified 721 exercises in 40 sets. With the 125 N5 foundations additions, current
-practice has **846 exercises in 46 sets**: **295 N5, 210 N4, 235 N3, 102 N2 and four N1**.
+The original 2026-10-22 pass classified 721 exercises in 40 sets. With 125 N5 foundations and 54 pointing/questions additions,
+current practice has **900 exercises in 47 sets**: **349 N5, 210 N4, 235 N3, 102 N2 and four N1**.
 The original 19 pilot labels are unchanged. No exercise remains unclassified in this snapshot, but omission remains the
 correct representation for future unresolved cases. These counts are coverage of our existing exercises, not coverage
 of every grammar item in any level's curriculum.
@@ -160,6 +162,7 @@ of every grammar item in any level's curriculum.
 | [Adjective foundations](../articles/japanese-adjective-foundations.md) | 22 | 0 | 0 | 0 | 0 |
 | [Actions, states and time](../articles/japanese-actions-states-and-time.md) | 24 | 0 | 0 | 0 | 0 |
 | [Requests, permission and rules](../articles/japanese-requests-permission-and-rules.md) | 22 | 0 | 0 | 0 | 0 |
+| [Pointing and asking questions](../articles/pointing-and-asking-questions.md) | 54 | 0 | 0 | 0 | 0 |
 | [Nouns and basic particles](../articles/japanese-nouns-and-basic-particles.md) | 73 | 3 | 0 | 0 | 0 |
 | [Topic, contrast and inclusion](../articles/wa-ga-mo-topic-and-inclusion.md) | 36 | 0 | 0 | 0 | 0 |
 | [Listing and examples](../articles/japanese-listing-and-examples.md) | 23 | 17 | 0 | 0 | 0 |
