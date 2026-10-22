@@ -2761,3 +2761,87 @@ from the corrected snapshot above. Both commit identities remain
 `stop-cran`; the per-command local signing workaround is unchanged.
 Batch 22 is review-closed, with 35 selected additions remaining.
 No push or PR was made.
+
+## Batch 23 - 述逆造郊郵量針鈍鉄鉱銅鋭録門防
+
+### Sources, authoring and draft checks
+
+The clean baseline is batch 22's closure,
+`5297e4f594f6587cb1d48abfb4e271cea3e83e10`.
+The fifteen characters follow the pinned community inventory order.
+Their non-nanori readings, primary stroke counts, grades and canonical
+radicals are retained in
+[batch-23.json](n2-batch-sources/batch-23.json). Fifteen new stroke
+assets use the unchanged pinned KanjiVG converter and revision.
+Modern-shape mnemonics make no historical or phonetic claim.
+
+The fifteen kanji and supporting 鈍い and 鉱石 articles form the
+seventeen-page teaching scope. Neither word receives an inferred
+vocabulary JLPT level. The full packet retains 72 exact word/reading
+pairs as 73 records from 68 complete entry families, including two
+separate しくしく families. It preserves spelling/reading flags,
+complete family inventories and applicable-sense restrictions.
+Of 39 character-reading rows, 38 have lexical examples. 録しる.す
+is explicitly qualified as a source-only lookup reading: no suitable
+exact JMdict example was established, and no word is manufactured.
+
+The draft distinguishes 逆ぎゃく and the separate さか identity,
+and illustrates ゲキ inside 莫逆. 造る's large-scale construction
+note is a tendency within its shared 作る family, not a rigid spelling
+partition. 酒造り illustrates bound -づくり. The shared 量る,
+計る and 測る family does not prove equal naturalness in every context.
+鈍る retains unflagged にぶる and なまる, while separate transitive
+鈍らす illustrates にぶ-. なまく.ら spells the complete word
+鈍ら, with ら after the character; its blunt-edge use is usually kana.
+The usually-kana 鈍いのろい identity is not merged into にぶい.
+鉄くろがね is marked archaic. Unflagged 鉱あらがね and 銅あかがね
+do not acquire inferred frequency labels. 銅's bronze-medal abbreviation
+is restricted to どう. 録る's applicable sense is audio/video recording,
+not every take/photograph sense in its larger family. 門と retains
+the applicable unmarked shutter sense; entrance and narrows are
+archaic, and the ordinary 戸 door sense does not automatically transfer.
+郊/郵 and 防 distinguish right-hand 邑 from left-hand 阜.
+
+A bounded restriction-aware full-JMdict sweep, current article readings,
+actual answer labels and the confusable-word inventory informed thirteen
+direct exclusions on 鈍い. Their per-pair bases distinguish slow
+responsiveness from mere lateness, dim colour/light from darkness in
+every sense, and obtuseness from all intelligence or insult uses.
+Several are conservative contextual or English-label guards, not
+unrestricted Japanese synonymy or measured runtime failures. Bare
+English dull in boring/tedious labels does not make 鈍い a general
+translation for an uninteresting film. The しくしく pain comparison
+does not transfer its sobbing sense, merge its separate archaic family,
+or attest an adjective collocation solely from 鈍痛.
+
+薄い's pale/faint gloss alone was insufficient to equate it with dull
+colour, so that proposed guard was removed. Gradual 徐々に,
+incremental じりじり, qualified blunt speaking and cold weather were
+not automatically excluded from substring matches. The existing くらい
+article teaches approximate degree, not the dark adjective. The
+ore/mineral/crystal sweep established no matching existing lexical
+identity; broader 石 and the metal 銅 are not automatically ore
+synonyms. 鉱石 has no direct exclusion. Pairwise guards are not
+transitive, and this bounded curation is not exhaustive synonymy.
+
+Nineteen older words receive links only: 述べる, 逆, 逆らう, 製造,
+郊外, 郵便, 郵便局, 量, 針, 地下鉄, 鉄, 鉄道, 銅貨, 鋭い,
+記録, 門, 予防, 消防 and 防ぐ. Metadata and nonlink prose are
+preserved; no older kanji or stroke file changes. 門's useful introduction
+link is in Meaning because its combination section has no written
+character mention to wrap. 鋭い also links its existing 鈍い comparison.
+The author read all seventeen new pages and nineteen older-word diffs,
+and checked all 45 new distractor assignments and thirteen older
+two-choice targets; no new fallback synonym was established.
+
+The draft scope is 56 files, including the packet, manifest and three
+progress documents. Validation reports zero errors; the cumulative
+audit covers 345 additions and 1,022 exact reading rows. Totals are
+965 kanji, 3,272 words and 347 selected N2 characters; 20 additions
+remain unauthored. Repeated manifest builds are byte-identical:
+contentVersion `63129c65a3f85e81`, SHA256
+`8953ae76fbc634aa8a8bb3731add70ef913af0d5cf910ee52ff569c96522b1c1`.
+Independent same-snapshot GPT/Claude review is pending; no independent
+verdict is claimed. Commits continue to use `stop-cran` as author
+and committer, with the documented per-command local signing workaround.
+Nothing is pushed.

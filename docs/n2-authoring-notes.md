@@ -703,3 +703,43 @@ change was needed. All four reports are archived unchanged, both
 reviewer processes have exited, and the final cumulative 63-file
 scope preserves all older nonlink content. The manifest is unchanged
 at `087a40fcf7840aab`. Thirty-five selected additions remain.
+
+## Batch 23 authoring notes
+
+The fifteen-character batch 述逆造郊郵量針鈍鉄鉱銅鋭録門防
+adds supporting 鈍い and 鉱石 pages. The 39 exact metadata rows
+have 38 lexical examples and one explicitly qualified 録しる.す
+lookup row. A source-only qualification is more honest than borrowing
+a differently spelled verb to fill the row. Complete family restrictions
+matter for 録る's audio/video sense, 門と's shutter sense, 銅あかがね's
+exclusion from the どう-only bronze abbreviation, and the separate
+usually-kana 鈍いのろい family. 鈍ら is the complete なまくら word,
+not a guessed 鈍くら spelling from the source dot.
+
+The full packet contains 72 exact pairs as 73 records from 68 complete
+families: a written/kana identity can still match two distinct entries.
+Both しくしく families remain visible, with only the applicable
+prolonged-dull-pain sense motivating its conservative guard. Do not
+promote the separate archaic incessantly family into that meaning.
+Likewise, an XML match for くらい's dark-adjective family does not
+change the existing article's approximate-degree particle identity.
+Regex dim must not accidentally match dimension or diminish.
+
+Thirteen direct 鈍い safeguards preserve distinctions between lexical
+overlap, contextual similarity and bare-English-dull ambiguity. 薄い's
+pale/faint sense was inspected but did not by itself justify a dull-colour
+guard. Gradualness, incrementality and speaking bluntly are not automatic
+synonyms for sluggishness or a blunt edge. No ore/mineral/crystal
+word candidate was established; broader stone and a metal are not
+automatically ore. Neither new word gets an inferred vocabulary level.
+
+Nineteen older words have links-only changes, preserving all metadata
+and nonlink prose. The useful 門 link belongs in its existing Meaning
+introduction because its combination section has no character mention;
+do not add filler prose just to satisfy a linking helper.
+All seventeen new pages and nineteen old-word diffs have been read.
+Validation and the cumulative audit pass at 345 additions/1,022 rows;
+the deterministic manifest is `63129c65a3f85e81`.
+There are 965 kanji, 3,272 words and 347 selected N2 characters.
+Twenty additions remain unauthored. Batch 23's independent review
+is pending; batches 01-22 remain review-closed.
