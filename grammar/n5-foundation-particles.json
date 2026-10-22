@@ -1,0 +1,726 @@
+{
+  "schemaVersion": 1,
+  "id": "n5-foundation-particles",
+  "title": "Noun and particle foundations: existence, space and movement",
+  "article": "articles/japanese-nouns-and-basic-particles.md",
+  "constructions": [
+    {
+      "id": "animate",
+      "label": "People / animals: いる"
+    },
+    {
+      "id": "inanimate",
+      "label": "Things / plants: ある"
+    },
+    {
+      "id": "spatial-existence",
+      "label": "Spatial noun phrase + に"
+    },
+    {
+      "id": "spatial-activity",
+      "label": "Spatial noun phrase + で"
+    },
+    {
+      "id": "route",
+      "label": "Route traversed"
+    },
+    {
+      "id": "departure",
+      "label": "Place left behind"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "existence",
+      "label": "Existence: いる or ある, including negation",
+      "constructions": [
+        "animate",
+        "inanimate"
+      ]
+    },
+    {
+      "id": "space",
+      "label": "Spatial noun phrases: location of existence or activity",
+      "constructions": [
+        "spatial-existence",
+        "spatial-activity"
+      ]
+    },
+    {
+      "id": "movement",
+      "label": "Movement を: route or point of departure",
+      "constructions": [
+        "route",
+        "departure"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "n5-particles-cat-present",
+      "jlpt": 5,
+      "target": "animate",
+      "relationship": "existence",
+      "prompt": "庭に猫が____。",
+      "translation": "There is a cat in the garden. Fill the affirmative nonpast existence verb in the ます-series.",
+      "evidence": "Choose the ordinary existence predicate for the referent, and preserve the requested polarity and style.",
+      "explanation": "Use いる／います for this ordinary animal-existence statement.",
+      "answer": "animate",
+      "acceptedAnswers": [
+        "います",
+        "居ます"
+      ],
+      "options": [
+        {
+          "id": "animate",
+          "label": "います",
+          "rationale": "Use いる／います for this ordinary animal-existence statement."
+        },
+        {
+          "id": "inanimate",
+          "label": "あります",
+          "rationale": "This is the ordinary existence predicate for the other referent class, not this scene."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "9b8b5cf11b296f4b76d8d8af57f39a762f8712d9ee005629e4863e766646dd91",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "庭",
+            "reading": "にわ",
+            "headword": "庭",
+            "gloss": "garden"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "猫",
+            "reading": "ねこ",
+            "headword": "猫",
+            "gloss": "cat"
+          }
+        ]
+      }
+    },
+    {
+      "id": "n5-particles-teacher-absent",
+      "jlpt": 5,
+      "target": "animate",
+      "relationship": "existence",
+      "prompt": "先生は教室に____。",
+      "translation": "The teacher is not in the classroom. Fill the negative nonpast existence verb in the ます-series.",
+      "evidence": "Choose the ordinary existence predicate for the referent, and preserve the requested polarity and style.",
+      "explanation": "The negative of います is いません; the teacher is absent, not an inanimate object.",
+      "answer": "animate",
+      "acceptedAnswers": [
+        "いません",
+        "居ません"
+      ],
+      "options": [
+        {
+          "id": "animate",
+          "label": "いません",
+          "rationale": "The negative of います is いません; the teacher is absent, not an inanimate object."
+        },
+        {
+          "id": "inanimate",
+          "label": "ありません",
+          "rationale": "This is the ordinary existence predicate for the other referent class, not this scene."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "4d9dd7a99730d930761572900e16a2c95362913e58e728e6fc8c4e5155e5f1b7",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "教室",
+            "reading": "きょうしつ",
+            "headword": "教室",
+            "gloss": "classroom"
+          }
+        ]
+      }
+    },
+    {
+      "id": "n5-particles-flowers-present",
+      "jlpt": 5,
+      "target": "inanimate",
+      "relationship": "existence",
+      "prompt": "庭に花が____。",
+      "translation": "There are flowers in the garden. Fill the affirmative nonpast existence verb in the ます-series.",
+      "evidence": "Choose the ordinary existence predicate for the referent, and preserve the requested polarity and style.",
+      "explanation": "Plants ordinarily take ある here even though they are biologically alive.",
+      "answer": "inanimate",
+      "acceptedAnswers": [
+        "あります",
+        "有ります",
+        "在ります"
+      ],
+      "options": [
+        {
+          "id": "inanimate",
+          "label": "あります",
+          "rationale": "Plants ordinarily take ある here even though they are biologically alive."
+        },
+        {
+          "id": "animate",
+          "label": "います",
+          "rationale": "This is the ordinary existence predicate for the other referent class, not this scene."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "7902ab81178df8c4e3771dc2e6e57947e82cb0edb3c8f9c0b62ebbe3a7a1a126",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "庭",
+            "reading": "にわ",
+            "headword": "庭",
+            "gloss": "garden"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "花",
+            "reading": "はな",
+            "headword": "花",
+            "gloss": "flower"
+          }
+        ]
+      }
+    },
+    {
+      "id": "n5-particles-desk-absent",
+      "jlpt": 5,
+      "target": "inanimate",
+      "relationship": "existence",
+      "prompt": "部屋に机は____。",
+      "translation": "There is no desk in the room. Fill the negative nonpast existence verb in the ます-series.",
+      "evidence": "Choose the ordinary existence predicate for the referent, and preserve the requested polarity and style.",
+      "explanation": "Use ありません for the absence of this inanimate thing; plain ない is a different requested style.",
+      "answer": "inanimate",
+      "acceptedAnswers": [
+        "ありません",
+        "有りません",
+        "在りません"
+      ],
+      "options": [
+        {
+          "id": "inanimate",
+          "label": "ありません",
+          "rationale": "Use ありません for the absence of this inanimate thing; plain ない is a different requested style."
+        },
+        {
+          "id": "animate",
+          "label": "いません",
+          "rationale": "This is the ordinary existence predicate for the other referent class, not this scene."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "ad6610fc818e6a80fb6fc145d8a3837e19705d1dcf1bf07ebed73397024421fc",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "部屋",
+            "reading": "へや",
+            "headword": "部屋",
+            "gloss": "room"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "机",
+            "reading": "つくえ",
+            "headword": "机",
+            "gloss": "desk"
+          }
+        ]
+      }
+    },
+    {
+      "id": "n5-particles-book-desk",
+      "jlpt": 5,
+      "target": "spatial-existence",
+      "relationship": "space",
+      "prompt": "____本があります。",
+      "translation": "There is a book on the desk. Assemble 机 (つくえ, desk) + 上 (うえ, top) with the linking and location particles; fill the whole location phrase.",
+      "evidence": "Build the reference-noun + の + spatial-noun phrase, then match the location particle to the supplied predicate.",
+      "explanation": "の links the reference object to 上; に marks where the book exists.",
+      "answer": "spatial-existence",
+      "acceptedAnswers": [
+        "机の上に",
+        "つくえの上に",
+        "机のうえに",
+        "つくえのうえに"
+      ],
+      "options": [
+        {
+          "id": "spatial-existence",
+          "label": "机の上に",
+          "rationale": "の links the reference object to 上; に marks where the book exists."
+        },
+        {
+          "id": "spatial-activity",
+          "label": "机の上で",
+          "rationale": "This supplies the other location-predicate frame."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "729dd4c02cb9ec0ef131f04867b4db942ae1e21bc07f1a9421d30a382d668bcd",
+        "spans": [
+          {
+            "start": 4,
+            "end": 5,
+            "text": "本",
+            "reading": "ほん",
+            "headword": "本",
+            "gloss": "book"
+          },
+          {
+            "start": 6,
+            "end": 10,
+            "text": "あります",
+            "reading": "あります",
+            "headword": "ある",
+            "gloss": "there is; exists"
+          }
+        ]
+      }
+    },
+    {
+      "id": "n5-particles-dog-bank",
+      "jlpt": 5,
+      "target": "spatial-existence",
+      "relationship": "space",
+      "prompt": "____犬がいます。",
+      "translation": "There is a dog behind the bank. Assemble 銀行 (ぎんこう) + 後ろ (うしろ, behind) with the linking and location particles.",
+      "evidence": "Build the reference-noun + の + spatial-noun phrase, then match the location particle to the supplied predicate.",
+      "explanation": "銀行の後ろ is the spatial noun phrase; に locates the dog there.",
+      "answer": "spatial-existence",
+      "acceptedAnswers": [
+        "銀行の後ろに",
+        "ぎんこうの後ろに",
+        "銀行のうしろに",
+        "ぎんこうのうしろに"
+      ],
+      "options": [
+        {
+          "id": "spatial-existence",
+          "label": "銀行の後ろに",
+          "rationale": "銀行の後ろ is the spatial noun phrase; に locates the dog there."
+        },
+        {
+          "id": "spatial-activity",
+          "label": "銀行の後ろで",
+          "rationale": "This supplies the other location-predicate frame."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "0ce75e16ec2cc9c173d10daa8eb9bc70a6e54c155861724a010e8c1f6f763edf",
+        "spans": [
+          {
+            "start": 4,
+            "end": 5,
+            "text": "犬",
+            "reading": "いぬ",
+            "headword": "犬",
+            "gloss": "dog"
+          },
+          {
+            "start": 6,
+            "end": 9,
+            "text": "います",
+            "reading": "います",
+            "headword": "いる",
+            "gloss": "is present; exists (person or animal)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "n5-particles-study-window",
+      "jlpt": 5,
+      "target": "spatial-activity",
+      "relationship": "space",
+      "prompt": "____勉強します。",
+      "translation": "I study to the right of the window. Assemble 窓 (まど) + 右 (みぎ, right side) with the linking and location particles.",
+      "evidence": "Build the reference-noun + の + spatial-noun phrase, then match the location particle to the supplied predicate.",
+      "explanation": "の builds 窓の右 and で marks the place of the studying activity.",
+      "answer": "spatial-activity",
+      "acceptedAnswers": [
+        "窓の右で",
+        "まどの右で",
+        "窓のみぎで",
+        "まどのみぎで"
+      ],
+      "options": [
+        {
+          "id": "spatial-activity",
+          "label": "窓の右で",
+          "rationale": "の builds 窓の右 and で marks the place of the studying activity."
+        },
+        {
+          "id": "spatial-existence",
+          "label": "窓の右に",
+          "rationale": "This supplies the other location-predicate frame."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "7eece0d7b9d7c8bf1f63e8206b285c33468bd9520e5b4954e57a0271876e38da",
+        "spans": [
+          {
+            "start": 4,
+            "end": 9,
+            "text": "勉強します",
+            "reading": "べんきょうします",
+            "headword": "勉強",
+            "gloss": "study"
+          }
+        ]
+      }
+    },
+    {
+      "id": "n5-particles-wait-school",
+      "jlpt": 5,
+      "target": "spatial-activity",
+      "relationship": "space",
+      "prompt": "____待ちます。",
+      "translation": "I wait outside the school. Assemble 学校 (がっこう) + 外 (そと, outside) with the linking and activity-location particles.",
+      "evidence": "Build the reference-noun + の + spatial-noun phrase, then match the location particle to the supplied predicate.",
+      "explanation": "The requested activity-location phrase uses で after 学校の外; に would need a different predicate frame such as いる.",
+      "answer": "spatial-activity",
+      "acceptedAnswers": [
+        "学校の外で",
+        "がっこうの外で",
+        "学校のそとで",
+        "がっこうのそとで"
+      ],
+      "options": [
+        {
+          "id": "spatial-activity",
+          "label": "学校の外で",
+          "rationale": "The requested activity-location phrase uses で after 学校の外; に would need a different predicate frame such as いる."
+        },
+        {
+          "id": "spatial-existence",
+          "label": "学校の外に",
+          "rationale": "This supplies the other location-predicate frame."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "032b198ab56b193c97d6df2a5bfc28308ae93de300f76a02bfdc0fa42343fe77",
+        "spans": [
+          {
+            "start": 4,
+            "end": 8,
+            "text": "待ちます",
+            "reading": "まちます",
+            "headword": "待つ",
+            "gloss": "wait"
+          }
+        ]
+      }
+    },
+    {
+      "id": "n5-particles-route-bridge",
+      "jlpt": 5,
+      "target": "route",
+      "relationship": "movement",
+      "prompt": "「橋を渡りました。」→____。",
+      "translation": "I crossed the bridge. 渡る is わたる. Interpret the を phrase: 通り道 (とおりみち, route traversed) or 出発点 (しゅっぱつてん, place/vehicle left behind).",
+      "evidence": "The movement verb identifies the relation; を is not always an ordinary object marker.",
+      "explanation": "A route is traversed; a departure phrase identifies what is left. Neither requires that place to be physically affected.",
+      "answer": "route",
+      "acceptedAnswers": [
+        "通り道",
+        "とおりみち"
+      ],
+      "options": [
+        {
+          "id": "route",
+          "label": "通り道",
+          "rationale": "This matches the verb's movement relation."
+        },
+        {
+          "id": "departure",
+          "label": "出発点",
+          "rationale": "This does not match the verb's movement relation."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "e53e011ce350beaa60125ce0babf1d7b9a4a883fb75d958eed689a40b195d141",
+        "spans": [
+          {
+            "start": 1,
+            "end": 2,
+            "text": "橋",
+            "reading": "はし",
+            "headword": "橋",
+            "gloss": "bridge"
+          }
+        ]
+      }
+    },
+    {
+      "id": "n5-particles-route-park",
+      "jlpt": 5,
+      "target": "route",
+      "relationship": "movement",
+      "prompt": "「公園を歩きました。」→____。",
+      "translation": "I walked through the park. 歩く is あるく. Interpret the を phrase: 通り道 (とおりみち, route traversed) or 出発点 (しゅっぱつてん, place/vehicle left behind).",
+      "evidence": "The movement verb identifies the relation; を is not always an ordinary object marker.",
+      "explanation": "A route is traversed; a departure phrase identifies what is left. Neither requires that place to be physically affected.",
+      "answer": "route",
+      "acceptedAnswers": [
+        "通り道",
+        "とおりみち"
+      ],
+      "options": [
+        {
+          "id": "route",
+          "label": "通り道",
+          "rationale": "This matches the verb's movement relation."
+        },
+        {
+          "id": "departure",
+          "label": "出発点",
+          "rationale": "This does not match the verb's movement relation."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "794632ba3103f3b3c533021b0d8911e1003a6bd84a2580b76dced993202ba88a",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "公園",
+            "reading": "こうえん",
+            "headword": "公園",
+            "gloss": "park"
+          }
+        ]
+      }
+    },
+    {
+      "id": "n5-particles-departure-house",
+      "jlpt": 5,
+      "target": "departure",
+      "relationship": "movement",
+      "prompt": "「家を出ました。」→____。",
+      "translation": "I left the house. 出る is でる. Interpret the を phrase: 通り道 (とおりみち, route traversed) or 出発点 (しゅっぱつてん, place/vehicle left behind).",
+      "evidence": "The movement verb identifies the relation; を is not always an ordinary object marker.",
+      "explanation": "A route is traversed; a departure phrase identifies what is left. Neither requires that place to be physically affected.",
+      "answer": "departure",
+      "acceptedAnswers": [
+        "出発点",
+        "しゅっぱつてん"
+      ],
+      "options": [
+        {
+          "id": "route",
+          "label": "通り道",
+          "rationale": "This does not match the verb's movement relation."
+        },
+        {
+          "id": "departure",
+          "label": "出発点",
+          "rationale": "This matches the verb's movement relation."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "48de7bf6bcd54fef503ef057bef526b55b4921f7bd3e61f1de9fea20f8fb90ce",
+        "spans": [
+          {
+            "start": 1,
+            "end": 2,
+            "text": "家",
+            "reading": "いえ",
+            "headword": "家",
+            "gloss": "house; home"
+          }
+        ]
+      }
+    },
+    {
+      "id": "n5-particles-departure-bus",
+      "jlpt": 5,
+      "target": "departure",
+      "relationship": "movement",
+      "prompt": "「バスを降りました。」→____。",
+      "translation": "I got off the bus. 降りる is おりる. Interpret the を phrase: 通り道 (とおりみち, route traversed) or 出発点 (しゅっぱつてん, place/vehicle left behind).",
+      "evidence": "The movement verb identifies the relation; を is not always an ordinary object marker.",
+      "explanation": "A route is traversed; a departure phrase identifies what is left. Neither requires that place to be physically affected.",
+      "answer": "departure",
+      "acceptedAnswers": [
+        "出発点",
+        "しゅっぱつてん"
+      ],
+      "options": [
+        {
+          "id": "route",
+          "label": "通り道",
+          "rationale": "This does not match the verb's movement relation."
+        },
+        {
+          "id": "departure",
+          "label": "出発点",
+          "rationale": "This matches the verb's movement relation."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "b91910e7f7ef317e22f889bb39acd399e7bb613efa018506b6992bb278f7e058",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "バス",
+            "reading": "ばす",
+            "headword": "バス",
+            "gloss": "bus"
+          }
+        ]
+      }
+    }
+  ],
+  "introductionGroups": [
+    {
+      "id": "n5-foundation-particles-existence",
+      "label": "Existence: いる or ある, including negation",
+      "facets": [
+        {
+          "id": "animate",
+          "label": "People / animals: いる"
+        },
+        {
+          "id": "inanimate",
+          "label": "Things / plants: ある"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "n5-particles-cat-present",
+          "facetId": "animate",
+          "exampleKey": "garden-cat"
+        },
+        {
+          "exerciseId": "n5-particles-teacher-absent",
+          "facetId": "animate",
+          "exampleKey": "absent-teacher"
+        },
+        {
+          "exerciseId": "n5-particles-flowers-present",
+          "facetId": "inanimate",
+          "exampleKey": "garden-flowers"
+        },
+        {
+          "exerciseId": "n5-particles-desk-absent",
+          "facetId": "inanimate",
+          "exampleKey": "no-desk"
+        }
+      ],
+      "next": [],
+      "requires": []
+    },
+    {
+      "id": "n5-foundation-particles-space",
+      "label": "Spatial noun phrases: location of existence or activity",
+      "facets": [
+        {
+          "id": "spatial-existence",
+          "label": "Spatial noun phrase + に"
+        },
+        {
+          "id": "spatial-activity",
+          "label": "Spatial noun phrase + で"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "n5-particles-book-desk",
+          "facetId": "spatial-existence",
+          "exampleKey": "book-on-desk"
+        },
+        {
+          "exerciseId": "n5-particles-dog-bank",
+          "facetId": "spatial-existence",
+          "exampleKey": "dog-behind-bank"
+        },
+        {
+          "exerciseId": "n5-particles-study-window",
+          "facetId": "spatial-activity",
+          "exampleKey": "study-window-right"
+        },
+        {
+          "exerciseId": "n5-particles-wait-school",
+          "facetId": "spatial-activity",
+          "exampleKey": "wait-outside-school"
+        }
+      ],
+      "next": [],
+      "requires": []
+    },
+    {
+      "id": "n5-foundation-particles-movement",
+      "label": "Movement を: route or point of departure",
+      "facets": [
+        {
+          "id": "route",
+          "label": "Route traversed"
+        },
+        {
+          "id": "departure",
+          "label": "Place left behind"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "n5-particles-route-bridge",
+          "facetId": "route",
+          "exampleKey": "crossing-bridge"
+        },
+        {
+          "exerciseId": "n5-particles-route-park",
+          "facetId": "route",
+          "exampleKey": "walking-through-park"
+        },
+        {
+          "exerciseId": "n5-particles-departure-house",
+          "facetId": "departure",
+          "exampleKey": "leaving-house"
+        },
+        {
+          "exerciseId": "n5-particles-departure-bus",
+          "facetId": "departure",
+          "exampleKey": "getting-off-bus"
+        }
+      ],
+      "next": [],
+      "requires": []
+    }
+  ]
+}

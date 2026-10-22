@@ -1,0 +1,2735 @@
+{
+  "schemaVersion": 1,
+  "recordType": "n5-grammar-installment",
+  "issue": "https://github.com/stop-cran/learning-japanese/issues/16",
+  "baselineCommit": "c7ad52870843aece0b605e69af833c053a93d5cd",
+  "recordedOn": "2026-10-22",
+  "scope": {
+    "newArticles": 4,
+    "existingArticleSupplements": 2,
+    "newExercises": 125,
+    "newSets": 6,
+    "newGroups": 16,
+    "reusedAdviceExercises": 6,
+    "existingAdviceGroupAdded": 1,
+    "taskTypes": {
+      "Formation": 87,
+      "Interpretation": 34,
+      "Context": 4
+    },
+    "allNewExercisesJlpt": 5,
+    "note": "The 80-120 estimate is not a quota; 125 tasks retain all normal godan endings and two distinct context keys per facet."
+  },
+  "primaryIndex": {
+    "url": "https://bunpro.jp/grammar_points",
+    "retrievedOn": "2026-10-22",
+    "sha256": "324f6c0d484b8df7b6be4fced4ac412c5f12bcf79461f69a754e4dd3b057f2ea"
+  },
+  "sources": [
+    {
+      "url": "https://www.tofugu.com/japanese-grammar/verb-conjugation-groups/",
+      "publisher": "Tofugu",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Basics, godan/ichidan patterns, irregular verbs and godan る examples.",
+      "supports": [
+        "verb-class",
+        "finite-forms"
+      ],
+      "qualifications": "No universal spelling classifier or claim of only two irregularities."
+    },
+    {
+      "url": "https://www.tofugu.com/japanese-grammar/verb-negative-nai-form/",
+      "publisher": "Tofugu",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Conjugation tables and basic nonpast/negative discussion.",
+      "supports": [
+        "godan-negatives",
+        "ichidan-negatives",
+        "suru-kuru",
+        "aru-negative"
+      ],
+      "qualifications": "う to わない and ある to ない are explicit; potential forms in later examples are not introduced."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/verb-て",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual HTML Structure table and About section, including all ordinary endings and 行く／する／来る.",
+      "supports": [
+        "te-forms",
+        "connections"
+      ],
+      "qualifications": "Do not adopt an unrestricted 'then' translation or the source's universal consistency claim; 問う／請う and historical/dialectal details are outside this entry lesson."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/う-verb-past",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Main past-form explanation and relationship between て／で and た／だ.",
+      "supports": [
+        "past-forms"
+      ],
+      "qualifications": "The article's selected standard table is not a complete account of every use of た."
+    },
+    {
+      "url": "https://www.tofugu.com/japanese-grammar/i-adjective/",
+      "publisher": "Tofugu",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Basic stem/negative/past forms; いい／よい, かっこいい and かわいい.",
+      "supports": [
+        "adjective-forms",
+        "ii"
+      ],
+      "qualifications": "No broad emotional-adjective/third-person shortcut adopted."
+    },
+    {
+      "url": "https://www.tofugu.com/japanese-grammar/na-adjective/",
+      "publisher": "Tofugu",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Basic predicate, modifier, negative and past patterns.",
+      "supports": [
+        "na-adjective-forms"
+      ],
+      "qualifications": "Do not adopt the implication that every past property must have ceased now."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/い-Adjective-くなかった",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Main explanation of くなかった and くありませんでした.",
+      "supports": [
+        "polite-negative-past"
+      ],
+      "qualifications": "ないです forms are not labelled globally incorrect or inherently non-polite."
+    },
+    {
+      "url": "https://www.tofugu.com/japanese-grammar/verb-continuous-form-teiru/",
+      "publisher": "Tofugu",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Basic ongoing/result distinction, conjugation table, contraction note, continuous-action discussion and habits heading.",
+      "supports": [
+        "te-iru-forms",
+        "ongoing",
+        "result",
+        "repetition"
+      ],
+      "qualifications": "The activation metaphor is not adopted as a literal semantic rule."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/ている1",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual main teaching explanation, not community replies.",
+      "supports": [
+        "ongoing"
+      ],
+      "qualifications": "Do not force an English -ing translation onto every verb."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/ている2",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual main teaching explanation, not community replies.",
+      "supports": [
+        "result"
+      ],
+      "qualifications": "Reject the source's cannot-happen-twice / over-90-percent heuristic; a window can open repeatedly."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/ている3",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual main teaching explanation, not community replies.",
+      "supports": [
+        "repeated"
+      ],
+      "qualifications": "A habitual ている does not make ordinary nonpast habit descriptions wrong."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/もう",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual main teaching explanation, not community replies.",
+      "supports": [
+        "timeline"
+      ],
+      "qualifications": "No universal surprise or unexpectedness requirement is imposed."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/まだ-ていません",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual main teaching explanation, not community replies.",
+      "supports": [
+        "not-yet"
+      ],
+      "qualifications": "The complete negative predicate matters; まだ alone is not always not yet."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/まえに",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual main teaching explanation, not community replies.",
+      "supports": [
+        "before"
+      ],
+      "qualifications": "Dictionary/nonpast verb attachment differs from noun + の; relative ordering is not necessarily future relative to now."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/v-まで",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual main teaching explanation, not community replies.",
+      "supports": [
+        "until"
+      ],
+      "qualifications": "The main predicate can be past; no unrestricted claim about every other sense of まで."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/たことがある",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual main teaching explanation, not community replies.",
+      "supports": [
+        "experience"
+      ],
+      "qualifications": "Do not adopt the blanket Fun Fact ban on の before verb phrases; only the fixed experience expression is at issue."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/ないでください",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual main teaching explanation, not community replies.",
+      "supports": [
+        "negative-request"
+      ],
+      "qualifications": "Do not adopt the erroneous conjunctive-form terminology for ください; no derivational classification is needed here."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/てもいい",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual main teaching explanation, not community replies.",
+      "supports": [
+        "nominal-acceptability"
+      ],
+      "qualifications": "Affirmative acceptability only, not the N4 negative なくてもいい contrast."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/てはいけない",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual main teaching explanation, not community replies.",
+      "supports": [
+        "prohibition"
+      ],
+      "qualifications": "Register tendencies for いけない／ならない are not categorical bans on spoken use."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/なくてはいけない",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual main teaching explanation, not community replies.",
+      "supports": [
+        "obligation"
+      ],
+      "qualifications": "Track both negatives; the opening must-not gloss cannot be copied in isolation."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/なくちゃ-なきゃ",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual main teaching explanation, not community replies.",
+      "supports": [
+        "contractions"
+      ],
+      "qualifications": "なくちゃ and なきゃ have different full sources; an isolated conditional fragment is not invariably an obligation."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/adjective-て-b",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual main teaching explanation, not community replies.",
+      "supports": [
+        "predicate-connections"
+      ],
+      "qualifications": "Main section includes noun/な-adjective で + a following clause. Cause and manner are explanation-only here."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/てください",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual HTML Structure/About and relevant register/contrast text after simplified extraction exposed a Related section or forum reply.",
+      "supports": [
+        "request"
+      ],
+      "qualifications": "Only the bounded main construction and register contrast are used; adjacent advanced related patterns are not N5 requirements."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/てから",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual HTML Structure/About and relevant register/contrast text after simplified extraction exposed a Related section or forum reply.",
+      "supports": [
+        "after"
+      ],
+      "qualifications": "Only the bounded main construction and register contrast are used; adjacent advanced related patterns are not N5 requirements."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/verb-てもいい",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual HTML Structure/About and relevant register/contrast text after simplified extraction exposed a Related section or forum reply.",
+      "supports": [
+        "verb-permission"
+      ],
+      "qualifications": "Only the bounded main construction and register contrast are used; adjacent advanced related patterns are not N5 requirements."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/な",
+      "publisher": "Bunpro",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Actual HTML Structure/About and relevant register/contrast text after simplified extraction exposed a Related section or forum reply.",
+      "supports": [
+        "strong-prohibition"
+      ],
+      "qualifications": "Only the bounded main construction and register contrast are used; adjacent advanced related patterns are not N5 requirements."
+    },
+    {
+      "url": "https://www.tofugu.com/japanese-grammar/iru-aru/",
+      "publisher": "Tofugu",
+      "inspectedOn": "2026-10-22",
+      "inspected": "Conjugation table; animate objects; explicit plants/flowers/trees discussion under inanimate physical objects.",
+      "supports": [
+        "existence",
+        "plant-exception"
+      ],
+      "qualifications": "Mobility is not asserted as an exhaustive classifier for every possible entity or discourse."
+    },
+    {
+      "url": "https://www.weblio.jp/content/迄",
+      "publisher": "Shogakukan Digital Daijisen via Weblio",
+      "inspectedOn": "2026-10-22",
+      "inspectedBy": "Independent reviewer, N5FI-F03",
+      "inspected": "Named まで【迄】 entry, sense 1: temporal/spatial limit and attributive-form attachment.",
+      "supports": [
+        "typed-spelling-temporal-boundary"
+      ],
+      "qualifications": "Recognized spelling of まで, not an equal-frequency claim or an additional semantic answer button."
+    },
+    {
+      "url": "https://www.weblio.jp/content/綺麗",
+      "publisher": "Shogakukan Digital Daijisen via Weblio",
+      "inspectedOn": "2026-10-22",
+      "inspectedBy": "Independent reviewer, N5FI-F03",
+      "inspected": "Named きれい【綺麗／奇麗】 entry, sense 4: clean, free of dirt.",
+      "supports": [
+        "typed-spelling-kirei"
+      ],
+      "qualifications": "The reviewer isolated the actual dictionary entry after simplified extraction exposed an unrelated album. 奇麗 is accepted without replacing the ordinary model spelling or claiming equal frequency."
+    }
+  ],
+  "reusedSourceRecords": [
+    {
+      "path": "docs/grammar-basic-particles-sources.json",
+      "normalizedLfSha256": "4b9c22b94999dd1189840416a6d13bc3e5e445396570578603dd95a021c19eb5",
+      "scope": "Established noun roles, spatial の/に/で and movement を explanations; prior actual sources, not newly claimed retrievals."
+    },
+    {
+      "path": "docs/grammar-listing-sources.json",
+      "normalizedLfSha256": "dc26419598938ca90404291bf4805222a82cd2b975d5b6029b8232ffe988c7e6",
+      "scope": "Existing listings, adjective connections and non-exhaustive/non-universally-sequential て explanation."
+    },
+    {
+      "path": "docs/grammar-jlpt-sources.json",
+      "normalizedLfSha256": "7b817e3b8b630409241086682c47b927ffd68a4c486cfa75fd866776c830a851",
+      "scope": "Frozen primary/secondary placements and unchanged existing exercise labels."
+    }
+  ],
+  "retrievalLimits": [
+    "Tofugu /verb-te-form/ returned 404 and supplies no evidence; actual Bunpro Structure/About was inspected instead.",
+    "Simplified Bunpro extraction sometimes exposed a Related comparison or forum reply; the request, te-kara, verb-permission and prohibitive-na main sections were retrieved directly.",
+    "Index placement is not a complete official syllabus or independent verification of new examples."
+  ],
+  "coverageAnchors": [
+    {
+      "primaryId": 1,
+      "title": "だ",
+      "primaryUrl": "https://bunpro.jp/grammar_points/だ",
+      "status": "existing-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/basic-particles.json",
+          "exerciseIds": [
+            "basic-self-student-nonpast",
+            "basic-brother-teacher-nonpast"
+          ]
+        }
+      ],
+      "boundary": "Reuse only the identified directly elicited targets, not every exercise from a broad classification decision. The へいく anchor is a semantic-family match to the existing going/coming destination tasks accepting へ."
+    },
+    {
+      "primaryId": 2,
+      "title": "です",
+      "primaryUrl": "https://bunpro.jp/grammar_points/です",
+      "status": "existing-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/basic-particles.json",
+          "exerciseIds": [
+            "basic-self-student-nonpast",
+            "basic-brother-teacher-nonpast"
+          ]
+        }
+      ],
+      "boundary": "Reuse only the identified directly elicited targets, not every exercise from a broad classification decision. The へいく anchor is a semantic-family match to the existing going/coming destination tasks accepting へ."
+    },
+    {
+      "primaryId": 3,
+      "title": "は",
+      "primaryUrl": "https://bunpro.jp/grammar_points/は",
+      "status": "existing-practice",
+      "article": "articles/wa-ga-mo-topic-and-inclusion.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/topic-and-inclusion.json",
+          "exerciseIds": [
+            "topic-shop-bread-topic",
+            "topic-room-window-topic",
+            "topic-self-cats-topic",
+            "topic-case-school-topic",
+            "topic-case-home-topic",
+            "topic-case-friend-topic"
+          ]
+        }
+      ],
+      "boundary": "Topic framing is directly practised; no duplicate introductory は set."
+    },
+    {
+      "primaryId": 4,
+      "title": "も",
+      "primaryUrl": "https://bunpro.jp/grammar_points/も",
+      "status": "existing-practice",
+      "article": "articles/wa-ga-mo-topic-and-inclusion.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/topic-and-inclusion.json",
+          "exerciseIds": [
+            "topic-add-person",
+            "topic-add-object",
+            "topic-add-time",
+            "topic-add-negative-person",
+            "topic-add-negative-object",
+            "topic-add-negative-time",
+            "topic-case-teacher-inclusion",
+            "topic-case-library-inclusion",
+            "topic-case-sister-inclusion"
+          ]
+        }
+      ],
+      "boundary": "Ordinary inclusion, not stronger numerical/emphatic も."
+    },
+    {
+      "primaryId": 6,
+      "title": "の",
+      "primaryUrl": "https://bunpro.jp/grammar_points/の",
+      "status": "existing-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/basic-particles.json",
+          "exerciseIds": [
+            "basic-school-teacher-modifier",
+            "basic-wood-desk-modifier",
+            "basic-my-book-head",
+            "basic-school-teacher-head"
+          ]
+        }
+      ],
+      "boundary": "Reuse only the identified directly elicited targets, not every exercise from a broad classification decision. The へいく anchor is a semantic-family match to the existing going/coming destination tasks accepting へ."
+    },
+    {
+      "primaryId": 10,
+      "title": "が",
+      "primaryUrl": "https://bunpro.jp/grammar_points/が",
+      "status": "existing-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/basic-particles.json",
+          "exerciseIds": [
+            "basic-caller-subject",
+            "basic-window-subject"
+          ]
+        }
+      ],
+      "boundary": "Reuse only the identified directly elicited targets, not every exercise from a broad classification decision. The へいく anchor is a semantic-family match to the existing going/coming destination tasks accepting へ."
+    },
+    {
+      "primaryId": 15,
+      "title": "と",
+      "primaryUrl": "https://bunpro.jp/grammar_points/と-and",
+      "status": "existing-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/basic-particles.json",
+          "exerciseIds": [
+            "basic-books-notebooks-list",
+            "basic-siblings-come-list"
+          ]
+        }
+      ],
+      "boundary": "Reuse only the identified directly elicited targets, not every exercise from a broad classification decision. The へいく anchor is a semantic-family match to the existing going/coming destination tasks accepting へ."
+    },
+    {
+      "primaryId": 21,
+      "title": "を",
+      "primaryUrl": "https://bunpro.jp/grammar_points/を",
+      "status": "existing-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/basic-particles.json",
+          "exerciseIds": [
+            "basic-book-object",
+            "basic-called-person-object",
+            "basic-topic-book-object",
+            "basic-included-fish-object"
+          ]
+        }
+      ],
+      "boundary": "Reuse only the identified directly elicited targets, not every exercise from a broad classification decision. The へいく anchor is a semantic-family match to the existing going/coming destination tasks accepting へ."
+    },
+    {
+      "primaryId": 25,
+      "title": "で",
+      "primaryUrl": "https://bunpro.jp/grammar_points/で",
+      "status": "existing-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/basic-particles.json",
+          "exerciseIds": [
+            "basic-park-play",
+            "basic-home-read"
+          ]
+        }
+      ],
+      "boundary": "Reuse only the identified directly elicited targets, not every exercise from a broad classification decision. The へいく anchor is a semantic-family match to the existing going/coming destination tasks accepting へ."
+    },
+    {
+      "primaryId": 32,
+      "title": "に",
+      "primaryUrl": "https://bunpro.jp/grammar_points/に",
+      "status": "existing-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/basic-particles.json",
+          "exerciseIds": [
+            "basic-garden-cat-location",
+            "basic-library-desk-location",
+            "basic-three-class",
+            "basic-nine-work"
+          ]
+        }
+      ],
+      "boundary": "Reuse only the identified directly elicited targets, not every exercise from a broad classification decision. The へいく anchor is a semantic-family match to the existing going/coming destination tasks accepting へ."
+    },
+    {
+      "primaryId": 33,
+      "title": "か",
+      "primaryUrl": "https://bunpro.jp/grammar_points/か-or",
+      "status": "existing-practice",
+      "article": "articles/japanese-listing-and-examples.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/listing-and-examples.json",
+          "exerciseIds": [
+            "listing-or-breakfast",
+            "listing-or-island-route"
+          ]
+        }
+      ],
+      "boundary": "Alternative-list か, not the separate question-marker anchor owned by installment 2."
+    },
+    {
+      "primaryId": 955,
+      "title": "と",
+      "primaryUrl": "https://bunpro.jp/grammar_points/と-with",
+      "status": "existing-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/basic-particles.json",
+          "exerciseIds": [
+            "basic-friend-write",
+            "basic-brother-go"
+          ]
+        }
+      ],
+      "boundary": "Reuse only the identified directly elicited targets, not every exercise from a broad classification decision. The へいく anchor is a semantic-family match to the existing going/coming destination tasks accepting へ."
+    },
+    {
+      "primaryId": 36,
+      "title": "で",
+      "primaryUrl": "https://bunpro.jp/grammar_points/で-by",
+      "status": "existing-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/basic-particles.json",
+          "exerciseIds": [
+            "basic-pen-letter",
+            "basic-scissors-paper",
+            "basic-train-library",
+            "basic-bus-school",
+            "basic-speak-japanese",
+            "basic-write-english"
+          ]
+        }
+      ],
+      "boundary": "Reuse only the identified directly elicited targets, not every exercise from a broad classification decision. The へいく anchor is a semantic-family match to the existing going/coming destination tasks accepting へ."
+    },
+    {
+      "primaryId": 38,
+      "title": "へ",
+      "primaryUrl": "https://bunpro.jp/grammar_points/へ",
+      "status": "existing-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/basic-particles.json",
+          "exerciseIds": [
+            "basic-school-destination",
+            "basic-library-destination"
+          ]
+        }
+      ],
+      "boundary": "Reuse only the identified directly elicited targets, not every exercise from a broad classification decision. The へいく anchor is a semantic-family match to the existing going/coming destination tasks accepting へ."
+    },
+    {
+      "primaryId": 40,
+      "title": "だった・でした",
+      "primaryUrl": "https://bunpro.jp/grammar_points/だった-でした",
+      "status": "existing-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/basic-particles.json",
+          "exerciseIds": [
+            "basic-self-student-past",
+            "basic-brother-teacher-past"
+          ]
+        }
+      ],
+      "boundary": "Reuse only the identified directly elicited targets, not every exercise from a broad classification decision. The へいく anchor is a semantic-family match to the existing going/coming destination tasks accepting へ."
+    },
+    {
+      "primaryId": 49,
+      "title": "じゃない",
+      "primaryUrl": "https://bunpro.jp/grammar_points/じゃない",
+      "status": "existing-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/basic-particles.json",
+          "exerciseIds": [
+            "basic-self-student-negative",
+            "basic-brother-teacher-negative"
+          ]
+        }
+      ],
+      "boundary": "Reuse only the identified directly elicited targets, not every exercise from a broad classification decision. The へいく anchor is a semantic-family match to the existing going/coming destination tasks accepting へ."
+    },
+    {
+      "primaryId": 50,
+      "title": "じゃなかった",
+      "primaryUrl": "https://bunpro.jp/grammar_points/じゃなかった",
+      "status": "new-practice",
+      "article": "articles/japanese-adjective-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-adjective-foundations.json",
+          "exerciseIds": [
+            "n5-adjective-student-past-negative",
+            "n5-adjective-doctor-past-negative"
+          ]
+        }
+      ],
+      "boundary": "Noun-predicate past-negative bridge; ordinary では／じゃ and polite variants are accepted."
+    },
+    {
+      "primaryId": 52,
+      "title": "から",
+      "primaryUrl": "https://bunpro.jp/grammar_points/から",
+      "status": "existing-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/basic-particles.json",
+          "exerciseIds": [
+            "basic-walk-start",
+            "basic-work-start"
+          ]
+        }
+      ],
+      "boundary": "Reuse only the identified directly elicited targets, not every exercise from a broad classification decision. The へいく anchor is a semantic-family match to the existing going/coming destination tasks accepting へ."
+    },
+    {
+      "primaryId": 58,
+      "title": "Noun + まで",
+      "primaryUrl": "https://bunpro.jp/grammar_points/noun-まで",
+      "status": "existing-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/basic-particles.json",
+          "exerciseIds": [
+            "basic-walk-end"
+          ]
+        }
+      ],
+      "boundary": "Reuse only the identified directly elicited targets, not every exercise from a broad classification decision. The へいく anchor is a semantic-family match to the existing going/coming destination tasks accepting へ."
+    },
+    {
+      "primaryId": 43,
+      "title": "だけ",
+      "primaryUrl": "https://bunpro.jp/grammar_points/だけ",
+      "status": "existing-practice",
+      "article": "articles/only-and-unexpected-inclusion.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/restriction-and-inclusion.json",
+          "exerciseIds": [
+            "restrict-books-dake",
+            "restrict-water-dake",
+            "restrict-recipient-dake",
+            "restrict-study-place-dake"
+          ]
+        }
+      ],
+      "boundary": "Basic exclusive restriction, not advanced maximum-extent だけ."
+    },
+    {
+      "primaryId": 61,
+      "title": "くらい ①",
+      "primaryUrl": "https://bunpro.jp/grammar_points/くらい1",
+      "status": "existing-practice",
+      "article": "articles/koto-wake-and-formal-nouns.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/particle-neighbors.json",
+          "exerciseIds": [
+            "approximate-quantity-meeting-duration",
+            "approximate-quantity-audience",
+            "approximate-quantity-walking-distance"
+          ]
+        }
+      ],
+      "boundary": "Three N5 quantity tasks accept くらい／ぐらい. Optional advanced variants do not become required N5 contrasts."
+    },
+    {
+      "primaryId": 13,
+      "title": "がある",
+      "primaryUrl": "https://bunpro.jp/grammar_points/がある",
+      "status": "new-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-foundation-particles.json",
+          "exerciseIds": [
+            "n5-particles-cat-present",
+            "n5-particles-teacher-absent",
+            "n5-particles-flowers-present",
+            "n5-particles-desk-absent"
+          ]
+        }
+      ],
+      "boundary": "Choose the existence predicate itself, including negatives and plants; not merely its location particle."
+    },
+    {
+      "primaryId": 23,
+      "title": "がいる",
+      "primaryUrl": "https://bunpro.jp/grammar_points/がいる",
+      "status": "new-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-foundation-particles.json",
+          "exerciseIds": [
+            "n5-particles-cat-present",
+            "n5-particles-teacher-absent",
+            "n5-particles-flowers-present",
+            "n5-particles-desk-absent"
+          ]
+        }
+      ],
+      "boundary": "Choose the existence predicate itself, including negatives and plants; not merely its location particle."
+    },
+    {
+      "primaryId": 31,
+      "title": "へいく",
+      "primaryUrl": "https://bunpro.jp/grammar_points/へいく",
+      "status": "existing-practice",
+      "article": "articles/japanese-nouns-and-basic-particles.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/basic-particles.json",
+          "exerciseIds": [
+            "basic-school-destination",
+            "basic-library-destination"
+          ]
+        }
+      ],
+      "boundary": "Reuse only the identified directly elicited targets, not every exercise from a broad classification decision. The へいく anchor is a semantic-family match to the existing going/coming destination tasks accepting へ."
+    },
+    {
+      "primaryId": 12,
+      "title": "る-Verb (Dictionary)",
+      "primaryUrl": "https://bunpro.jp/grammar_points/る-Verbs",
+      "status": "new-practice",
+      "article": "articles/japanese-verb-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-verb-foundations.json",
+          "exerciseIds": [
+            "n5-verb-read-routine",
+            "n5-verb-eat-tomorrow",
+            "n5-verb-read-negative",
+            "n5-verb-eat-negative",
+            "n5-verb-read-past",
+            "n5-verb-eat-past",
+            "n5-verb-read-past-negative",
+            "n5-verb-eat-past-negative",
+            "n5-verb-write-polite",
+            "n5-verb-see-polite",
+            "n5-verb-drink-polite-negative",
+            "n5-verb-see-polite-negative",
+            "n5-verb-return-polite-past",
+            "n5-verb-wake-polite-past",
+            "n5-verb-write-polite-past-negative",
+            "n5-verb-eat-polite-past-negative",
+            "n5-verb-return-negative",
+            "n5-verb-buy-negative",
+            "n5-verb-do-negative",
+            "n5-verb-come-negative",
+            "n5-verb-exist-negative"
+          ]
+        }
+      ],
+      "boundary": "Direct finite-form production across ichidan/godan and irregular verbs. Entries support different subsets of this coherent relation, not 21 independent drills of each entry."
+    },
+    {
+      "primaryId": 26,
+      "title": "う-Verb (Dictionary)",
+      "primaryUrl": "https://bunpro.jp/grammar_points/う-Verbs",
+      "status": "new-practice",
+      "article": "articles/japanese-verb-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-verb-foundations.json",
+          "exerciseIds": [
+            "n5-verb-read-routine",
+            "n5-verb-eat-tomorrow",
+            "n5-verb-read-negative",
+            "n5-verb-eat-negative",
+            "n5-verb-read-past",
+            "n5-verb-eat-past",
+            "n5-verb-read-past-negative",
+            "n5-verb-eat-past-negative",
+            "n5-verb-write-polite",
+            "n5-verb-see-polite",
+            "n5-verb-drink-polite-negative",
+            "n5-verb-see-polite-negative",
+            "n5-verb-return-polite-past",
+            "n5-verb-wake-polite-past",
+            "n5-verb-write-polite-past-negative",
+            "n5-verb-eat-polite-past-negative",
+            "n5-verb-return-negative",
+            "n5-verb-buy-negative",
+            "n5-verb-do-negative",
+            "n5-verb-come-negative",
+            "n5-verb-exist-negative"
+          ]
+        }
+      ],
+      "boundary": "Direct finite-form production across ichidan/godan and irregular verbs. Entries support different subsets of this coherent relation, not 21 independent drills of each entry."
+    },
+    {
+      "primaryId": 1082,
+      "title": "ます",
+      "primaryUrl": "https://bunpro.jp/grammar_points/polite-verb-endings",
+      "status": "new-practice",
+      "article": "articles/japanese-verb-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-verb-foundations.json",
+          "exerciseIds": [
+            "n5-verb-read-routine",
+            "n5-verb-eat-tomorrow",
+            "n5-verb-read-negative",
+            "n5-verb-eat-negative",
+            "n5-verb-read-past",
+            "n5-verb-eat-past",
+            "n5-verb-read-past-negative",
+            "n5-verb-eat-past-negative",
+            "n5-verb-write-polite",
+            "n5-verb-see-polite",
+            "n5-verb-drink-polite-negative",
+            "n5-verb-see-polite-negative",
+            "n5-verb-return-polite-past",
+            "n5-verb-wake-polite-past",
+            "n5-verb-write-polite-past-negative",
+            "n5-verb-eat-polite-past-negative",
+            "n5-verb-return-negative",
+            "n5-verb-buy-negative",
+            "n5-verb-do-negative",
+            "n5-verb-come-negative",
+            "n5-verb-exist-negative"
+          ]
+        }
+      ],
+      "boundary": "Direct finite-form production across ichidan/godan and irregular verbs. Entries support different subsets of this coherent relation, not 21 independent drills of each entry."
+    },
+    {
+      "primaryId": 51,
+      "title": "る-Verb (Negative)",
+      "primaryUrl": "https://bunpro.jp/grammar_points/るverb-ない",
+      "status": "new-practice",
+      "article": "articles/japanese-verb-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-verb-foundations.json",
+          "exerciseIds": [
+            "n5-verb-read-routine",
+            "n5-verb-eat-tomorrow",
+            "n5-verb-read-negative",
+            "n5-verb-eat-negative",
+            "n5-verb-read-past",
+            "n5-verb-eat-past",
+            "n5-verb-read-past-negative",
+            "n5-verb-eat-past-negative",
+            "n5-verb-write-polite",
+            "n5-verb-see-polite",
+            "n5-verb-drink-polite-negative",
+            "n5-verb-see-polite-negative",
+            "n5-verb-return-polite-past",
+            "n5-verb-wake-polite-past",
+            "n5-verb-write-polite-past-negative",
+            "n5-verb-eat-polite-past-negative",
+            "n5-verb-return-negative",
+            "n5-verb-buy-negative",
+            "n5-verb-do-negative",
+            "n5-verb-come-negative",
+            "n5-verb-exist-negative"
+          ]
+        }
+      ],
+      "boundary": "Direct finite-form production across ichidan/godan and irregular verbs. Entries support different subsets of this coherent relation, not 21 independent drills of each entry."
+    },
+    {
+      "primaryId": 888,
+      "title": "う-Verb (Negative)",
+      "primaryUrl": "https://bunpro.jp/grammar_points/うverb--ない",
+      "status": "new-practice",
+      "article": "articles/japanese-verb-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-verb-foundations.json",
+          "exerciseIds": [
+            "n5-verb-read-routine",
+            "n5-verb-eat-tomorrow",
+            "n5-verb-read-negative",
+            "n5-verb-eat-negative",
+            "n5-verb-read-past",
+            "n5-verb-eat-past",
+            "n5-verb-read-past-negative",
+            "n5-verb-eat-past-negative",
+            "n5-verb-write-polite",
+            "n5-verb-see-polite",
+            "n5-verb-drink-polite-negative",
+            "n5-verb-see-polite-negative",
+            "n5-verb-return-polite-past",
+            "n5-verb-wake-polite-past",
+            "n5-verb-write-polite-past-negative",
+            "n5-verb-eat-polite-past-negative",
+            "n5-verb-return-negative",
+            "n5-verb-buy-negative",
+            "n5-verb-do-negative",
+            "n5-verb-come-negative",
+            "n5-verb-exist-negative"
+          ]
+        }
+      ],
+      "boundary": "Direct finite-form production across ichidan/godan and irregular verbs. Entries support different subsets of this coherent relation, not 21 independent drills of each entry."
+    },
+    {
+      "primaryId": 22,
+      "title": "する",
+      "primaryUrl": "https://bunpro.jp/grammar_points/する",
+      "status": "new-practice",
+      "article": "articles/japanese-verb-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-verb-foundations.json",
+          "exerciseIds": [
+            "n5-verb-read-routine",
+            "n5-verb-eat-tomorrow",
+            "n5-verb-read-negative",
+            "n5-verb-eat-negative",
+            "n5-verb-read-past",
+            "n5-verb-eat-past",
+            "n5-verb-read-past-negative",
+            "n5-verb-eat-past-negative",
+            "n5-verb-write-polite",
+            "n5-verb-see-polite",
+            "n5-verb-drink-polite-negative",
+            "n5-verb-see-polite-negative",
+            "n5-verb-return-polite-past",
+            "n5-verb-wake-polite-past",
+            "n5-verb-write-polite-past-negative",
+            "n5-verb-eat-polite-past-negative",
+            "n5-verb-return-negative",
+            "n5-verb-buy-negative",
+            "n5-verb-do-negative",
+            "n5-verb-come-negative",
+            "n5-verb-exist-negative"
+          ]
+        }
+      ],
+      "boundary": "Direct finite-form production across ichidan/godan and irregular verbs. Entries support different subsets of this coherent relation, not 21 independent drills of each entry."
+    },
+    {
+      "primaryId": 39,
+      "title": "くる",
+      "primaryUrl": "https://bunpro.jp/grammar_points/くる",
+      "status": "new-practice",
+      "article": "articles/japanese-verb-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-verb-foundations.json",
+          "exerciseIds": [
+            "n5-verb-read-routine",
+            "n5-verb-eat-tomorrow",
+            "n5-verb-read-negative",
+            "n5-verb-eat-negative",
+            "n5-verb-read-past",
+            "n5-verb-eat-past",
+            "n5-verb-read-past-negative",
+            "n5-verb-eat-past-negative",
+            "n5-verb-write-polite",
+            "n5-verb-see-polite",
+            "n5-verb-drink-polite-negative",
+            "n5-verb-see-polite-negative",
+            "n5-verb-return-polite-past",
+            "n5-verb-wake-polite-past",
+            "n5-verb-write-polite-past-negative",
+            "n5-verb-eat-polite-past-negative",
+            "n5-verb-return-negative",
+            "n5-verb-buy-negative",
+            "n5-verb-do-negative",
+            "n5-verb-come-negative",
+            "n5-verb-exist-negative"
+          ]
+        }
+      ],
+      "boundary": "Direct finite-form production across ichidan/godan and irregular verbs. Entries support different subsets of this coherent relation, not 21 independent drills of each entry."
+    },
+    {
+      "primaryId": 895,
+      "title": "る-Verb (Past)",
+      "primaryUrl": "https://bunpro.jp/grammar_points/る-verb-past",
+      "status": "new-practice",
+      "article": "articles/japanese-verb-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-verb-foundations.json",
+          "exerciseIds": [
+            "n5-verb-read-routine",
+            "n5-verb-eat-tomorrow",
+            "n5-verb-read-negative",
+            "n5-verb-eat-negative",
+            "n5-verb-read-past",
+            "n5-verb-eat-past",
+            "n5-verb-read-past-negative",
+            "n5-verb-eat-past-negative",
+            "n5-verb-write-polite",
+            "n5-verb-see-polite",
+            "n5-verb-drink-polite-negative",
+            "n5-verb-see-polite-negative",
+            "n5-verb-return-polite-past",
+            "n5-verb-wake-polite-past",
+            "n5-verb-write-polite-past-negative",
+            "n5-verb-eat-polite-past-negative",
+            "n5-verb-return-negative",
+            "n5-verb-buy-negative",
+            "n5-verb-do-negative",
+            "n5-verb-come-negative",
+            "n5-verb-exist-negative"
+          ]
+        }
+      ],
+      "boundary": "Direct finite-form production across ichidan/godan and irregular verbs. Entries support different subsets of this coherent relation, not 21 independent drills of each entry."
+    },
+    {
+      "primaryId": 41,
+      "title": "う-Verb (Past)",
+      "primaryUrl": "https://bunpro.jp/grammar_points/う-verb-past",
+      "status": "new-practice",
+      "article": "articles/japanese-verb-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-verb-foundations.json",
+          "exerciseIds": [
+            "n5-verb-read-routine",
+            "n5-verb-eat-tomorrow",
+            "n5-verb-read-negative",
+            "n5-verb-eat-negative",
+            "n5-verb-read-past",
+            "n5-verb-eat-past",
+            "n5-verb-read-past-negative",
+            "n5-verb-eat-past-negative",
+            "n5-verb-write-polite",
+            "n5-verb-see-polite",
+            "n5-verb-drink-polite-negative",
+            "n5-verb-see-polite-negative",
+            "n5-verb-return-polite-past",
+            "n5-verb-wake-polite-past",
+            "n5-verb-write-polite-past-negative",
+            "n5-verb-eat-polite-past-negative",
+            "n5-verb-return-negative",
+            "n5-verb-buy-negative",
+            "n5-verb-do-negative",
+            "n5-verb-come-negative",
+            "n5-verb-exist-negative"
+          ]
+        }
+      ],
+      "boundary": "Direct finite-form production across ichidan/godan and irregular verbs. Entries support different subsets of this coherent relation, not 21 independent drills of each entry."
+    },
+    {
+      "primaryId": 896,
+      "title": "る-Verb (Negative-Past)",
+      "primaryUrl": "https://bunpro.jp/grammar_points/る-verb-neg-past",
+      "status": "new-practice",
+      "article": "articles/japanese-verb-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-verb-foundations.json",
+          "exerciseIds": [
+            "n5-verb-read-routine",
+            "n5-verb-eat-tomorrow",
+            "n5-verb-read-negative",
+            "n5-verb-eat-negative",
+            "n5-verb-read-past",
+            "n5-verb-eat-past",
+            "n5-verb-read-past-negative",
+            "n5-verb-eat-past-negative",
+            "n5-verb-write-polite",
+            "n5-verb-see-polite",
+            "n5-verb-drink-polite-negative",
+            "n5-verb-see-polite-negative",
+            "n5-verb-return-polite-past",
+            "n5-verb-wake-polite-past",
+            "n5-verb-write-polite-past-negative",
+            "n5-verb-eat-polite-past-negative",
+            "n5-verb-return-negative",
+            "n5-verb-buy-negative",
+            "n5-verb-do-negative",
+            "n5-verb-come-negative",
+            "n5-verb-exist-negative"
+          ]
+        }
+      ],
+      "boundary": "Direct finite-form production across ichidan/godan and irregular verbs. Entries support different subsets of this coherent relation, not 21 independent drills of each entry."
+    },
+    {
+      "primaryId": 897,
+      "title": "う-Verb (Negative-Past)",
+      "primaryUrl": "https://bunpro.jp/grammar_points/う-verb-neg-past",
+      "status": "new-practice",
+      "article": "articles/japanese-verb-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-verb-foundations.json",
+          "exerciseIds": [
+            "n5-verb-read-routine",
+            "n5-verb-eat-tomorrow",
+            "n5-verb-read-negative",
+            "n5-verb-eat-negative",
+            "n5-verb-read-past",
+            "n5-verb-eat-past",
+            "n5-verb-read-past-negative",
+            "n5-verb-eat-past-negative",
+            "n5-verb-write-polite",
+            "n5-verb-see-polite",
+            "n5-verb-drink-polite-negative",
+            "n5-verb-see-polite-negative",
+            "n5-verb-return-polite-past",
+            "n5-verb-wake-polite-past",
+            "n5-verb-write-polite-past-negative",
+            "n5-verb-eat-polite-past-negative",
+            "n5-verb-return-negative",
+            "n5-verb-buy-negative",
+            "n5-verb-do-negative",
+            "n5-verb-come-negative",
+            "n5-verb-exist-negative"
+          ]
+        }
+      ],
+      "boundary": "Direct finite-form production across ichidan/godan and irregular verbs. Entries support different subsets of this coherent relation, not 21 independent drills of each entry."
+    },
+    {
+      "primaryId": 950,
+      "title": "Verbs (Non-past)",
+      "primaryUrl": "https://bunpro.jp/grammar_points/verb-non-past",
+      "status": "new-practice",
+      "article": "articles/japanese-verb-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-verb-foundations.json",
+          "exerciseIds": [
+            "n5-verb-meaning-habit-books",
+            "n5-verb-meaning-habit-walk",
+            "n5-verb-meaning-future-letter",
+            "n5-verb-meaning-future-visit"
+          ]
+        }
+      ],
+      "boundary": "Two routines and two future actions; no claim that nonpast always means action happening now."
+    },
+    {
+      "primaryId": 7,
+      "title": "いい",
+      "primaryUrl": "https://bunpro.jp/grammar_points/いい",
+      "status": "new-practice",
+      "article": "articles/japanese-adjective-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-adjective-foundations.json",
+          "exerciseIds": [
+            "n5-adjective-high-nonpast",
+            "n5-adjective-quiet-nonpast",
+            "n5-adjective-cold-negative",
+            "n5-adjective-clean-negative",
+            "n5-adjective-cheap-past",
+            "n5-adjective-quiet-past",
+            "n5-adjective-cheap-past-negative",
+            "n5-adjective-convenient-past-negative",
+            "n5-adjective-cheap-polite",
+            "n5-adjective-clean-polite",
+            "n5-adjective-cold-polite-negative",
+            "n5-adjective-quiet-polite-negative",
+            "n5-adjective-large-polite-past",
+            "n5-adjective-clean-polite-past",
+            "n5-adjective-cold-polite-past-negative",
+            "n5-adjective-quiet-polite-past-negative",
+            "n5-adjective-good-negative",
+            "n5-adjective-good-past",
+            "n5-adjective-good-past-negative",
+            "n5-adjective-good-polite-past",
+            "n5-adjective-student-past-negative",
+            "n5-adjective-doctor-past-negative"
+          ]
+        }
+      ],
+      "boundary": "Plain/polite positive/negative nonpast/past are practised; いい and きれい are directly targeted. The appendix below maps actual task families; not every adjective row independently practises every anchor."
+    },
+    {
+      "primaryId": 24,
+      "title": "い-Adjectives",
+      "primaryUrl": "https://bunpro.jp/grammar_points/い-adjectives",
+      "status": "new-practice",
+      "article": "articles/japanese-adjective-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-adjective-foundations.json",
+          "exerciseIds": [
+            "n5-adjective-high-nonpast",
+            "n5-adjective-quiet-nonpast",
+            "n5-adjective-cold-negative",
+            "n5-adjective-clean-negative",
+            "n5-adjective-cheap-past",
+            "n5-adjective-quiet-past",
+            "n5-adjective-cheap-past-negative",
+            "n5-adjective-convenient-past-negative",
+            "n5-adjective-cheap-polite",
+            "n5-adjective-clean-polite",
+            "n5-adjective-cold-polite-negative",
+            "n5-adjective-quiet-polite-negative",
+            "n5-adjective-large-polite-past",
+            "n5-adjective-clean-polite-past",
+            "n5-adjective-cold-polite-past-negative",
+            "n5-adjective-quiet-polite-past-negative",
+            "n5-adjective-good-negative",
+            "n5-adjective-good-past",
+            "n5-adjective-good-past-negative",
+            "n5-adjective-good-polite-past",
+            "n5-adjective-student-past-negative",
+            "n5-adjective-doctor-past-negative"
+          ]
+        }
+      ],
+      "boundary": "Plain/polite positive/negative nonpast/past are practised; いい and きれい are directly targeted. The appendix below maps actual task families; not every adjective row independently practises every anchor."
+    },
+    {
+      "primaryId": 28,
+      "title": "な-Adjectives",
+      "primaryUrl": "https://bunpro.jp/grammar_points/な-adjectives",
+      "status": "new-practice",
+      "article": "articles/japanese-adjective-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-adjective-foundations.json",
+          "exerciseIds": [
+            "n5-adjective-high-nonpast",
+            "n5-adjective-quiet-nonpast",
+            "n5-adjective-cold-negative",
+            "n5-adjective-clean-negative",
+            "n5-adjective-cheap-past",
+            "n5-adjective-quiet-past",
+            "n5-adjective-cheap-past-negative",
+            "n5-adjective-convenient-past-negative",
+            "n5-adjective-cheap-polite",
+            "n5-adjective-clean-polite",
+            "n5-adjective-cold-polite-negative",
+            "n5-adjective-quiet-polite-negative",
+            "n5-adjective-large-polite-past",
+            "n5-adjective-clean-polite-past",
+            "n5-adjective-cold-polite-past-negative",
+            "n5-adjective-quiet-polite-past-negative",
+            "n5-adjective-good-negative",
+            "n5-adjective-good-past",
+            "n5-adjective-good-past-negative",
+            "n5-adjective-good-polite-past",
+            "n5-adjective-student-past-negative",
+            "n5-adjective-doctor-past-negative"
+          ]
+        }
+      ],
+      "boundary": "Plain/polite positive/negative nonpast/past are practised; いい and きれい are directly targeted. The appendix below maps actual task families; not every adjective row independently practises every anchor."
+    },
+    {
+      "primaryId": 874,
+      "title": "い-Adjective (Past)",
+      "primaryUrl": "https://bunpro.jp/grammar_points/past-tense-い-adjectives",
+      "status": "new-practice",
+      "article": "articles/japanese-adjective-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-adjective-foundations.json",
+          "exerciseIds": [
+            "n5-adjective-high-nonpast",
+            "n5-adjective-quiet-nonpast",
+            "n5-adjective-cold-negative",
+            "n5-adjective-clean-negative",
+            "n5-adjective-cheap-past",
+            "n5-adjective-quiet-past",
+            "n5-adjective-cheap-past-negative",
+            "n5-adjective-convenient-past-negative",
+            "n5-adjective-cheap-polite",
+            "n5-adjective-clean-polite",
+            "n5-adjective-cold-polite-negative",
+            "n5-adjective-quiet-polite-negative",
+            "n5-adjective-large-polite-past",
+            "n5-adjective-clean-polite-past",
+            "n5-adjective-cold-polite-past-negative",
+            "n5-adjective-quiet-polite-past-negative",
+            "n5-adjective-good-negative",
+            "n5-adjective-good-past",
+            "n5-adjective-good-past-negative",
+            "n5-adjective-good-polite-past",
+            "n5-adjective-student-past-negative",
+            "n5-adjective-doctor-past-negative"
+          ]
+        }
+      ],
+      "boundary": "Plain/polite positive/negative nonpast/past are practised; いい and きれい are directly targeted. The appendix below maps actual task families; not every adjective row independently practises every anchor."
+    },
+    {
+      "primaryId": 873,
+      "title": "い-Adjectives くない",
+      "primaryUrl": "https://bunpro.jp/grammar_points/negative-い-adjectives",
+      "status": "new-practice",
+      "article": "articles/japanese-adjective-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-adjective-foundations.json",
+          "exerciseIds": [
+            "n5-adjective-high-nonpast",
+            "n5-adjective-quiet-nonpast",
+            "n5-adjective-cold-negative",
+            "n5-adjective-clean-negative",
+            "n5-adjective-cheap-past",
+            "n5-adjective-quiet-past",
+            "n5-adjective-cheap-past-negative",
+            "n5-adjective-convenient-past-negative",
+            "n5-adjective-cheap-polite",
+            "n5-adjective-clean-polite",
+            "n5-adjective-cold-polite-negative",
+            "n5-adjective-quiet-polite-negative",
+            "n5-adjective-large-polite-past",
+            "n5-adjective-clean-polite-past",
+            "n5-adjective-cold-polite-past-negative",
+            "n5-adjective-quiet-polite-past-negative",
+            "n5-adjective-good-negative",
+            "n5-adjective-good-past",
+            "n5-adjective-good-past-negative",
+            "n5-adjective-good-polite-past",
+            "n5-adjective-student-past-negative",
+            "n5-adjective-doctor-past-negative"
+          ]
+        }
+      ],
+      "boundary": "Plain/polite positive/negative nonpast/past are practised; いい and きれい are directly targeted. The appendix below maps actual task families; not every adjective row independently practises every anchor."
+    },
+    {
+      "primaryId": 951,
+      "title": "い-Adjective (Predicate)",
+      "primaryUrl": "https://bunpro.jp/grammar_points/い-adjective-predicate",
+      "status": "new-practice",
+      "article": "articles/japanese-adjective-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-adjective-foundations.json",
+          "exerciseIds": [
+            "n5-adjective-high-nonpast",
+            "n5-adjective-quiet-nonpast",
+            "n5-adjective-cold-negative",
+            "n5-adjective-clean-negative",
+            "n5-adjective-cheap-past",
+            "n5-adjective-quiet-past",
+            "n5-adjective-cheap-past-negative",
+            "n5-adjective-convenient-past-negative",
+            "n5-adjective-cheap-polite",
+            "n5-adjective-clean-polite",
+            "n5-adjective-cold-polite-negative",
+            "n5-adjective-quiet-polite-negative",
+            "n5-adjective-large-polite-past",
+            "n5-adjective-clean-polite-past",
+            "n5-adjective-cold-polite-past-negative",
+            "n5-adjective-quiet-polite-past-negative",
+            "n5-adjective-good-negative",
+            "n5-adjective-good-past",
+            "n5-adjective-good-past-negative",
+            "n5-adjective-good-polite-past",
+            "n5-adjective-student-past-negative",
+            "n5-adjective-doctor-past-negative"
+          ]
+        }
+      ],
+      "boundary": "Plain/polite positive/negative nonpast/past are practised; いい and きれい are directly targeted. The appendix below maps actual task families; not every adjective row independently practises every anchor."
+    },
+    {
+      "primaryId": 952,
+      "title": "な-Adjective だ",
+      "primaryUrl": "https://bunpro.jp/grammar_points/な-adjective-predicate",
+      "status": "new-practice",
+      "article": "articles/japanese-adjective-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-adjective-foundations.json",
+          "exerciseIds": [
+            "n5-adjective-high-nonpast",
+            "n5-adjective-quiet-nonpast",
+            "n5-adjective-cold-negative",
+            "n5-adjective-clean-negative",
+            "n5-adjective-cheap-past",
+            "n5-adjective-quiet-past",
+            "n5-adjective-cheap-past-negative",
+            "n5-adjective-convenient-past-negative",
+            "n5-adjective-cheap-polite",
+            "n5-adjective-clean-polite",
+            "n5-adjective-cold-polite-negative",
+            "n5-adjective-quiet-polite-negative",
+            "n5-adjective-large-polite-past",
+            "n5-adjective-clean-polite-past",
+            "n5-adjective-cold-polite-past-negative",
+            "n5-adjective-quiet-polite-past-negative",
+            "n5-adjective-good-negative",
+            "n5-adjective-good-past",
+            "n5-adjective-good-past-negative",
+            "n5-adjective-good-polite-past",
+            "n5-adjective-student-past-negative",
+            "n5-adjective-doctor-past-negative"
+          ]
+        }
+      ],
+      "boundary": "Plain/polite positive/negative nonpast/past are practised; いい and きれい are directly targeted. The appendix below maps actual task families; not every adjective row independently practises every anchor."
+    },
+    {
+      "primaryId": 876,
+      "title": "い-Adjective くなかった",
+      "primaryUrl": "https://bunpro.jp/grammar_points/い-Adjective-くなかった",
+      "status": "new-practice",
+      "article": "articles/japanese-adjective-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-adjective-foundations.json",
+          "exerciseIds": [
+            "n5-adjective-high-nonpast",
+            "n5-adjective-quiet-nonpast",
+            "n5-adjective-cold-negative",
+            "n5-adjective-clean-negative",
+            "n5-adjective-cheap-past",
+            "n5-adjective-quiet-past",
+            "n5-adjective-cheap-past-negative",
+            "n5-adjective-convenient-past-negative",
+            "n5-adjective-cheap-polite",
+            "n5-adjective-clean-polite",
+            "n5-adjective-cold-polite-negative",
+            "n5-adjective-quiet-polite-negative",
+            "n5-adjective-large-polite-past",
+            "n5-adjective-clean-polite-past",
+            "n5-adjective-cold-polite-past-negative",
+            "n5-adjective-quiet-polite-past-negative",
+            "n5-adjective-good-negative",
+            "n5-adjective-good-past",
+            "n5-adjective-good-past-negative",
+            "n5-adjective-good-polite-past",
+            "n5-adjective-student-past-negative",
+            "n5-adjective-doctor-past-negative"
+          ]
+        }
+      ],
+      "boundary": "Plain/polite positive/negative nonpast/past are practised; いい and きれい are directly targeted. The appendix below maps actual task families; not every adjective row independently practises every anchor."
+    },
+    {
+      "primaryId": 416,
+      "title": "Verb + て",
+      "primaryUrl": "https://bunpro.jp/grammar_points/verb-て",
+      "status": "new-practice",
+      "article": "articles/japanese-verb-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-verb-foundations.json",
+          "exerciseIds": [
+            "n5-verb-te-buy",
+            "n5-verb-te-wait",
+            "n5-verb-te-return",
+            "n5-verb-te-read",
+            "n5-verb-te-play",
+            "n5-verb-te-die",
+            "n5-verb-te-write",
+            "n5-verb-te-swim",
+            "n5-verb-te-speak",
+            "n5-verb-te-eat",
+            "n5-verb-te-see",
+            "n5-verb-te-go",
+            "n5-verb-te-come",
+            "n5-verb-te-do",
+            "n5-verb-go-episode",
+            "n5-verb-come-episode"
+          ]
+        },
+        {
+          "file": "grammar/n5-foundation-connections.json",
+          "exerciseIds": [
+            "n5-connections-eat-school",
+            "n5-connections-walk-train"
+          ]
+        }
+      ],
+      "boundary": "All ordinary godan ending classes, ichidan, 行く, する and 来る are formed. The matching finite-past contrast is N5; no advanced aspect suffix is required. Connecting て is not always temporal sequence."
+    },
+    {
+      "primaryId": 770,
+      "title": "Verb + て+ B",
+      "primaryUrl": "https://bunpro.jp/grammar_points/verb-て-b",
+      "status": "new-practice",
+      "article": "articles/japanese-verb-foundations.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-verb-foundations.json",
+          "exerciseIds": [
+            "n5-verb-te-buy",
+            "n5-verb-te-wait",
+            "n5-verb-te-return",
+            "n5-verb-te-read",
+            "n5-verb-te-play",
+            "n5-verb-te-die",
+            "n5-verb-te-write",
+            "n5-verb-te-swim",
+            "n5-verb-te-speak",
+            "n5-verb-te-eat",
+            "n5-verb-te-see",
+            "n5-verb-te-go",
+            "n5-verb-te-come",
+            "n5-verb-te-do",
+            "n5-verb-go-episode",
+            "n5-verb-come-episode"
+          ]
+        },
+        {
+          "file": "grammar/n5-foundation-connections.json",
+          "exerciseIds": [
+            "n5-connections-eat-school",
+            "n5-connections-walk-train"
+          ]
+        }
+      ],
+      "boundary": "All ordinary godan ending classes, ichidan, 行く, する and 来る are formed. The matching finite-past contrast is N5; no advanced aspect suffix is required. Connecting て is not always temporal sequence."
+    },
+    {
+      "primaryId": 769,
+      "title": "Adjective + て・Noun + で",
+      "primaryUrl": "https://bunpro.jp/grammar_points/adjective-て-noun-で",
+      "status": "new-and-existing-practice",
+      "article": "articles/japanese-listing-and-examples.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/listing-and-examples.json",
+          "exerciseIds": [
+            "listing-te-cheap-shop",
+            "listing-te-good-view",
+            "listing-te-quiet-bright"
+          ]
+        },
+        {
+          "file": "grammar/n5-foundation-connections.json",
+          "exerciseIds": [
+            "n5-connections-doctor-teacher",
+            "n5-connections-student-friend"
+          ]
+        }
+      ],
+      "boundary": "Reuse all three adjective-connection tasks, including よくて; add noun-predicate connections."
+    },
+    {
+      "primaryId": 771,
+      "title": "Adjective + て + B",
+      "primaryUrl": "https://bunpro.jp/grammar_points/adjective-て-b",
+      "status": "new-and-existing-practice",
+      "article": "articles/japanese-listing-and-examples.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-foundation-connections.json",
+          "exerciseIds": [
+            "n5-connections-doctor-teacher",
+            "n5-connections-student-friend"
+          ]
+        }
+      ],
+      "boundary": "The primary lesson includes noun-で followed by a complete clause; the siblings-job task supplies that extension. Causal and manner readings remain explanation-only; this is not a drill for every sense of て."
+    },
+    {
+      "primaryId": 79,
+      "title": "たり～たりする",
+      "primaryUrl": "https://bunpro.jp/grammar_points/たり-たりする",
+      "status": "existing-practice",
+      "article": "articles/japanese-listing-and-examples.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/listing-and-examples.json",
+          "exerciseIds": [
+            "listing-tari-swim",
+            "listing-tari-single-visit",
+            "listing-tari-hot-weather",
+            "listing-tari-lively-room",
+            "listing-tari-day-off",
+            "listing-tari-negative-breakfast"
+          ]
+        }
+      ],
+      "boundary": "Six existing formation tasks include representative activities, variable states and negation."
+    },
+    {
+      "primaryId": 81,
+      "title": "や",
+      "primaryUrl": "https://bunpro.jp/grammar_points/や",
+      "status": "existing-practice",
+      "article": "articles/japanese-listing-and-examples.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/listing-and-examples.json",
+          "exerciseIds": [
+            "listing-bread-milk",
+            "listing-notebook-pencil"
+          ]
+        }
+      ],
+      "boundary": "Existing noun-list tasks accept suitable representative や alongside named-list wording; no false exclusive-list rule."
+    },
+    {
+      "primaryId": 27,
+      "title": "ている①",
+      "primaryUrl": "https://bunpro.jp/grammar_points/ている1",
+      "status": "new-practice",
+      "article": "articles/japanese-actions-states-and-time.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-actions-time.json",
+          "exerciseIds": [
+            "n5-time-reading-now",
+            "n5-time-cooking-now",
+            "n5-time-window-open",
+            "n5-time-gate-closed",
+            "n5-time-running-habit",
+            "n5-time-teaching-habit"
+          ]
+        }
+      ],
+      "boundary": "Two contexts for each of ongoing action, resulting state and repeated activity; English meanings and glossed labels remain deliberate scaffolding."
+    },
+    {
+      "primaryId": 764,
+      "title": "ている②",
+      "primaryUrl": "https://bunpro.jp/grammar_points/ている2",
+      "status": "new-practice",
+      "article": "articles/japanese-actions-states-and-time.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-actions-time.json",
+          "exerciseIds": [
+            "n5-time-reading-now",
+            "n5-time-cooking-now",
+            "n5-time-window-open",
+            "n5-time-gate-closed",
+            "n5-time-running-habit",
+            "n5-time-teaching-habit"
+          ]
+        }
+      ],
+      "boundary": "Two contexts for each of ongoing action, resulting state and repeated activity; English meanings and glossed labels remain deliberate scaffolding."
+    },
+    {
+      "primaryId": 64,
+      "title": "てから",
+      "primaryUrl": "https://bunpro.jp/grammar_points/てから",
+      "status": "new-practice",
+      "article": "articles/japanese-actions-states-and-time.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-actions-time.json",
+          "exerciseIds": [
+            "n5-time-bed-before",
+            "n5-time-medicine-before",
+            "n5-time-wash-then",
+            "n5-time-eat-then",
+            "n5-time-bus-until",
+            "n5-time-teacher-until"
+          ]
+        }
+      ],
+      "boundary": "Two constrained formation contexts per temporal construction. No N4 後で or とき is a required option."
+    },
+    {
+      "primaryId": 42,
+      "title": "もう",
+      "primaryUrl": "https://bunpro.jp/grammar_points/もう",
+      "status": "new-practice",
+      "article": "articles/japanese-actions-states-and-time.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-actions-time.json",
+          "exerciseIds": [
+            "n5-time-already-lunch",
+            "n5-time-already-homework",
+            "n5-time-still-reading",
+            "n5-time-still-waiting",
+            "n5-time-not-yet-lunch",
+            "n5-time-not-yet-homework",
+            "n5-time-no-longer-working",
+            "n5-time-no-longer-living"
+          ]
+        }
+      ],
+      "boundary": "Two contexts each for already, still, not yet and no longer; the whole predicate's polarity matters."
+    },
+    {
+      "primaryId": 72,
+      "title": "まだ",
+      "primaryUrl": "https://bunpro.jp/grammar_points/まだ",
+      "status": "new-practice",
+      "article": "articles/japanese-actions-states-and-time.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-actions-time.json",
+          "exerciseIds": [
+            "n5-time-already-lunch",
+            "n5-time-already-homework",
+            "n5-time-still-reading",
+            "n5-time-still-waiting",
+            "n5-time-not-yet-lunch",
+            "n5-time-not-yet-homework",
+            "n5-time-no-longer-working",
+            "n5-time-no-longer-living"
+          ]
+        }
+      ],
+      "boundary": "Two contexts each for already, still, not yet and no longer; the whole predicate's polarity matters."
+    },
+    {
+      "primaryId": 83,
+      "title": "まだ～ていません",
+      "primaryUrl": "https://bunpro.jp/grammar_points/まだ-ていません",
+      "status": "new-practice",
+      "article": "articles/japanese-actions-states-and-time.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-actions-time.json",
+          "exerciseIds": [
+            "n5-time-already-lunch",
+            "n5-time-already-homework",
+            "n5-time-still-reading",
+            "n5-time-still-waiting",
+            "n5-time-not-yet-lunch",
+            "n5-time-not-yet-homework",
+            "n5-time-no-longer-working",
+            "n5-time-no-longer-living"
+          ]
+        }
+      ],
+      "boundary": "Two contexts each for already, still, not yet and no longer; the whole predicate's polarity matters."
+    },
+    {
+      "primaryId": 53,
+      "title": "まえに",
+      "primaryUrl": "https://bunpro.jp/grammar_points/まえに",
+      "status": "new-practice",
+      "article": "articles/japanese-actions-states-and-time.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-actions-time.json",
+          "exerciseIds": [
+            "n5-time-bed-before",
+            "n5-time-medicine-before",
+            "n5-time-wash-then",
+            "n5-time-eat-then",
+            "n5-time-bus-until",
+            "n5-time-teacher-until"
+          ]
+        }
+      ],
+      "boundary": "Two constrained formation contexts per temporal construction. No N4 後で or とき is a required option."
+    },
+    {
+      "primaryId": 360,
+      "title": "Verb + まで",
+      "primaryUrl": "https://bunpro.jp/grammar_points/v-まで",
+      "status": "new-practice",
+      "article": "articles/japanese-actions-states-and-time.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-actions-time.json",
+          "exerciseIds": [
+            "n5-time-bed-before",
+            "n5-time-medicine-before",
+            "n5-time-wash-then",
+            "n5-time-eat-then",
+            "n5-time-bus-until",
+            "n5-time-teacher-until"
+          ]
+        }
+      ],
+      "boundary": "Two constrained formation contexts per temporal construction. No N4 後で or とき is a required option."
+    },
+    {
+      "primaryId": 63,
+      "title": "たことがある",
+      "primaryUrl": "https://bunpro.jp/grammar_points/たことがある",
+      "status": "new-practice",
+      "article": "articles/japanese-actions-states-and-time.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-actions-time.json",
+          "exerciseIds": [
+            "n5-time-experience-kyoto",
+            "n5-time-experience-sushi",
+            "n5-time-episode-kyoto",
+            "n5-time-episode-sushi"
+          ]
+        }
+      ],
+      "boundary": "Recognize explicit experience framing versus finite past reports; dates do not make an experience construction impossible. Negative experience is explained, not independently produced in this installment."
+    },
+    {
+      "primaryId": 765,
+      "title": "ている③",
+      "primaryUrl": "https://bunpro.jp/grammar_points/ている3",
+      "status": "new-practice",
+      "article": "articles/japanese-actions-states-and-time.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-actions-time.json",
+          "exerciseIds": [
+            "n5-time-reading-now",
+            "n5-time-cooking-now",
+            "n5-time-window-open",
+            "n5-time-gate-closed",
+            "n5-time-running-habit",
+            "n5-time-teaching-habit"
+          ]
+        }
+      ],
+      "boundary": "Two contexts for each of ongoing action, resulting state and repeated activity; English meanings and glossed labels remain deliberate scaffolding."
+    },
+    {
+      "primaryId": 46,
+      "title": "てもいい",
+      "primaryUrl": "https://bunpro.jp/grammar_points/てもいい",
+      "status": "new-practice",
+      "article": "articles/japanese-requests-permission-and-rules.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-requests-rules.json",
+          "exerciseIds": [
+            "n5-rules-cheap-acceptable",
+            "n5-rules-large-acceptable",
+            "n5-rules-quiet-acceptable",
+            "n5-rules-pencil-acceptable"
+          ]
+        }
+      ],
+      "boundary": "Two い-adjective examples and one noun/one な-adjective example; latter share the nominal でもいい answer class."
+    },
+    {
+      "primaryId": 35,
+      "title": "Verb + てもいい",
+      "primaryUrl": "https://bunpro.jp/grammar_points/verb-てもいい",
+      "status": "new-practice",
+      "article": "articles/japanese-requests-permission-and-rules.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-requests-rules.json",
+          "exerciseIds": [
+            "n5-rules-write-request",
+            "n5-rules-read-request",
+            "n5-rules-write-negative-request",
+            "n5-rules-open-negative-request",
+            "n5-rules-sit-permission",
+            "n5-rules-photo-permission",
+            "n5-rules-enter-prohibition",
+            "n5-rules-drink-prohibition",
+            "n5-rules-write-obligation",
+            "n5-rules-return-obligation"
+          ]
+        }
+      ],
+      "boundary": "Two tasks each for positive/negative requests, permission, prohibition and obligation. ならない is a supported shared ending, not an artificially discriminated formal-versus-spoken target."
+    },
+    {
+      "primaryId": 60,
+      "title": "てください",
+      "primaryUrl": "https://bunpro.jp/grammar_points/てください",
+      "status": "new-practice",
+      "article": "articles/japanese-requests-permission-and-rules.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-requests-rules.json",
+          "exerciseIds": [
+            "n5-rules-write-request",
+            "n5-rules-read-request",
+            "n5-rules-write-negative-request",
+            "n5-rules-open-negative-request",
+            "n5-rules-sit-permission",
+            "n5-rules-photo-permission",
+            "n5-rules-enter-prohibition",
+            "n5-rules-drink-prohibition",
+            "n5-rules-write-obligation",
+            "n5-rules-return-obligation"
+          ]
+        }
+      ],
+      "boundary": "Two tasks each for positive/negative requests, permission, prohibition and obligation. ならない is a supported shared ending, not an artificially discriminated formal-versus-spoken target."
+    },
+    {
+      "primaryId": 65,
+      "title": "ないでください",
+      "primaryUrl": "https://bunpro.jp/grammar_points/ないでください",
+      "status": "new-practice",
+      "article": "articles/japanese-requests-permission-and-rules.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-requests-rules.json",
+          "exerciseIds": [
+            "n5-rules-write-request",
+            "n5-rules-read-request",
+            "n5-rules-write-negative-request",
+            "n5-rules-open-negative-request",
+            "n5-rules-sit-permission",
+            "n5-rules-photo-permission",
+            "n5-rules-enter-prohibition",
+            "n5-rules-drink-prohibition",
+            "n5-rules-write-obligation",
+            "n5-rules-return-obligation"
+          ]
+        }
+      ],
+      "boundary": "Two tasks each for positive/negative requests, permission, prohibition and obligation. ならない is a supported shared ending, not an artificially discriminated formal-versus-spoken target."
+    },
+    {
+      "primaryId": 67,
+      "title": "てはいけない",
+      "primaryUrl": "https://bunpro.jp/grammar_points/てはいけない",
+      "status": "new-practice",
+      "article": "articles/japanese-requests-permission-and-rules.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-requests-rules.json",
+          "exerciseIds": [
+            "n5-rules-write-request",
+            "n5-rules-read-request",
+            "n5-rules-write-negative-request",
+            "n5-rules-open-negative-request",
+            "n5-rules-sit-permission",
+            "n5-rules-photo-permission",
+            "n5-rules-enter-prohibition",
+            "n5-rules-drink-prohibition",
+            "n5-rules-write-obligation",
+            "n5-rules-return-obligation"
+          ]
+        }
+      ],
+      "boundary": "Two tasks each for positive/negative requests, permission, prohibition and obligation. ならない is a supported shared ending, not an artificially discriminated formal-versus-spoken target."
+    },
+    {
+      "primaryId": 86,
+      "title": "なくてはいけない",
+      "primaryUrl": "https://bunpro.jp/grammar_points/なくてはいけない",
+      "status": "new-practice",
+      "article": "articles/japanese-requests-permission-and-rules.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-requests-rules.json",
+          "exerciseIds": [
+            "n5-rules-write-request",
+            "n5-rules-read-request",
+            "n5-rules-write-negative-request",
+            "n5-rules-open-negative-request",
+            "n5-rules-sit-permission",
+            "n5-rules-photo-permission",
+            "n5-rules-enter-prohibition",
+            "n5-rules-drink-prohibition",
+            "n5-rules-write-obligation",
+            "n5-rules-return-obligation"
+          ]
+        }
+      ],
+      "boundary": "Two tasks each for positive/negative requests, permission, prohibition and obligation. ならない is a supported shared ending, not an artificially discriminated formal-versus-spoken target."
+    },
+    {
+      "primaryId": 87,
+      "title": "なくてはならない",
+      "primaryUrl": "https://bunpro.jp/grammar_points/なくてはならない",
+      "status": "new-practice",
+      "article": "articles/japanese-requests-permission-and-rules.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-requests-rules.json",
+          "exerciseIds": [
+            "n5-rules-write-request",
+            "n5-rules-read-request",
+            "n5-rules-write-negative-request",
+            "n5-rules-open-negative-request",
+            "n5-rules-sit-permission",
+            "n5-rules-photo-permission",
+            "n5-rules-enter-prohibition",
+            "n5-rules-drink-prohibition",
+            "n5-rules-write-obligation",
+            "n5-rules-return-obligation"
+          ]
+        }
+      ],
+      "boundary": "Two tasks each for positive/negative requests, permission, prohibition and obligation. ならない is a supported shared ending, not an artificially discriminated formal-versus-spoken target."
+    },
+    {
+      "primaryId": 74,
+      "title": "なくちゃ・なきゃ",
+      "primaryUrl": "https://bunpro.jp/grammar_points/なくちゃ-なきゃ",
+      "status": "new-practice",
+      "article": "articles/japanese-requests-permission-and-rules.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-requests-rules.json",
+          "exerciseIds": [
+            "n5-rules-short-no-eating",
+            "n5-rules-short-no-drinking",
+            "n5-rules-short-homework",
+            "n5-rules-short-go"
+          ]
+        }
+      ],
+      "boundary": "Interpret なくちゃ／なきゃ obligations against ちゃ／じゃ prohibitions. Full inflected contraction production remains explanation-only."
+    },
+    {
+      "primaryId": 66,
+      "title": "な",
+      "primaryUrl": "https://bunpro.jp/grammar_points/な",
+      "status": "new-practice",
+      "article": "articles/japanese-requests-permission-and-rules.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/n5-requests-rules.json",
+          "exerciseIds": [
+            "n5-rules-strong-enter",
+            "n5-rules-strong-touch",
+            "n5-rules-polite-enter",
+            "n5-rules-polite-touch"
+          ]
+        }
+      ],
+      "boundary": "Two strong な warnings and two negative requests: register-sensitive recognition, not unguided strong-command production."
+    },
+    {
+      "primaryId": 68,
+      "title": "たほうがいい",
+      "primaryUrl": "https://bunpro.jp/grammar_points/たほうがいい",
+      "status": "existing-practice",
+      "article": "articles/koto-wake-and-formal-nouns.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/formal-nouns-comparisons.json",
+          "exerciseIds": [
+            "hou-advice-reserve-seat",
+            "hou-advice-visit-open-day",
+            "hou-advice-read-instructions",
+            "hou-advice-wait-to-reserve",
+            "hou-advice-avoid-closed-day",
+            "hou-advice-avoid-spoilers"
+          ]
+        }
+      ],
+      "boundary": "Six unchanged advice objects keep their owning file. A newly local n5-existing-advice group owns them; the rules group recommends it without cross-file membership."
+    },
+    {
+      "primaryId": 69,
+      "title": "ないほうがいい",
+      "primaryUrl": "https://bunpro.jp/grammar_points/ないほうがいい",
+      "status": "existing-practice",
+      "article": "articles/koto-wake-and-formal-nouns.md",
+      "exerciseReferences": [
+        {
+          "file": "grammar/formal-nouns-comparisons.json",
+          "exerciseIds": [
+            "hou-advice-reserve-seat",
+            "hou-advice-visit-open-day",
+            "hou-advice-read-instructions",
+            "hou-advice-wait-to-reserve",
+            "hou-advice-avoid-closed-day",
+            "hou-advice-avoid-spoilers"
+          ]
+        }
+      ],
+      "boundary": "Six unchanged advice objects keep their owning file. A newly local n5-existing-advice group owns them; the rules group recommends it without cross-file membership."
+    }
+  ],
+  "supplementCoverage": {
+    "spatialNounPhrases": {
+      "file": "grammar/n5-foundation-particles.json",
+      "exerciseIds": [
+        "n5-particles-book-desk",
+        "n5-particles-dog-bank",
+        "n5-particles-study-window",
+        "n5-particles-wait-school"
+      ]
+    },
+    "routeAndDepartureWo": {
+      "file": "grammar/n5-foundation-particles.json",
+      "exerciseIds": [
+        "n5-particles-route-bridge",
+        "n5-particles-route-park",
+        "n5-particles-departure-house",
+        "n5-particles-departure-bus"
+      ]
+    },
+    "ordinaryConnections": {
+      "file": "grammar/n5-foundation-connections.json",
+      "exerciseIds": [
+        "n5-connections-eat-school",
+        "n5-connections-walk-train",
+        "n5-connections-doctor-teacher",
+        "n5-connections-student-friend"
+      ]
+    },
+    "advice": {
+      "file": "grammar/formal-nouns-comparisons.json",
+      "exerciseIds": [
+        "hou-advice-reserve-seat",
+        "hou-advice-visit-open-day",
+        "hou-advice-read-instructions",
+        "hou-advice-wait-to-reserve",
+        "hou-advice-avoid-closed-day",
+        "hou-advice-avoid-spoilers"
+      ]
+    }
+  },
+  "practiceBoundaries": [
+    "Nonpast/past te-iru ending tables, contraction production and negative experience are explained; the new aspect/experience groups primarily practise interpretation.",
+    "Full noun-modifier and nominalization practice belongs to installment 3, issue #8; this installment gives the adjective/noun connector bridge.",
+    "N4 te-aru, toki, nakutemo-ii and without-doing naide remain optional references, never required alternatives. Existing N4 before/after and experience-versus-ability tasks and N3 state-change contrasts stay unchanged.",
+    "The questions intentionally retain English meaning and explicit formation constraints; counts are not evidence of unscaffolded transfer or mastery.",
+    "The 71 primary anchors are assigned exactly once here; reused entries do not require duplicate exercises. Noun-で + full clause supplies anchor 771; broader causal/manner readings are not newly drilled.",
+    "No pronunciation audio, app/schema/SRS changes or claim of native-speaker certification."
+  ],
+  "levelDecisions": [
+    {
+      "setId": "n5-verb-foundations",
+      "relationship": "finite",
+      "jlpt": 5,
+      "exerciseIds": [
+        "n5-verb-read-routine",
+        "n5-verb-eat-tomorrow",
+        "n5-verb-read-negative",
+        "n5-verb-eat-negative",
+        "n5-verb-read-past",
+        "n5-verb-eat-past",
+        "n5-verb-read-past-negative",
+        "n5-verb-eat-past-negative",
+        "n5-verb-write-polite",
+        "n5-verb-see-polite",
+        "n5-verb-drink-polite-negative",
+        "n5-verb-see-polite-negative",
+        "n5-verb-return-polite-past",
+        "n5-verb-wake-polite-past",
+        "n5-verb-write-polite-past-negative",
+        "n5-verb-eat-polite-past-negative",
+        "n5-verb-return-negative",
+        "n5-verb-buy-negative",
+        "n5-verb-do-negative",
+        "n5-verb-come-negative",
+        "n5-verb-exist-negative"
+      ],
+      "primaryGrammarPointIds": [
+        12,
+        26,
+        1082,
+        51,
+        888,
+        22,
+        39,
+        895,
+        41,
+        896,
+        897
+      ],
+      "rationale": "The complete required contrast stays within these N5 construction families. Glossed interpretation labels and supplied lexical words are not grammar-level prerequisites.",
+      "mappingLimits": "Entries map the relation's required forms, not every incidental construction in its prompts."
+    },
+    {
+      "setId": "n5-verb-foundations",
+      "relationship": "te",
+      "jlpt": 5,
+      "exerciseIds": [
+        "n5-verb-te-buy",
+        "n5-verb-te-wait",
+        "n5-verb-te-return",
+        "n5-verb-te-read",
+        "n5-verb-te-play",
+        "n5-verb-te-die",
+        "n5-verb-te-write",
+        "n5-verb-te-swim",
+        "n5-verb-te-speak",
+        "n5-verb-te-eat",
+        "n5-verb-te-see",
+        "n5-verb-te-go",
+        "n5-verb-te-come",
+        "n5-verb-te-do",
+        "n5-verb-go-episode",
+        "n5-verb-come-episode"
+      ],
+      "primaryGrammarPointIds": [
+        416,
+        41,
+        895,
+        22,
+        39
+      ],
+      "rationale": "The complete required contrast stays within these N5 construction families. Glossed interpretation labels and supplied lexical words are not grammar-level prerequisites.",
+      "mappingLimits": "Entries map the relation's required forms, not every incidental construction in its prompts."
+    },
+    {
+      "setId": "n5-verb-foundations",
+      "relationship": "nonpast-meaning",
+      "jlpt": 5,
+      "exerciseIds": [
+        "n5-verb-meaning-habit-books",
+        "n5-verb-meaning-habit-walk",
+        "n5-verb-meaning-future-letter",
+        "n5-verb-meaning-future-visit"
+      ],
+      "primaryGrammarPointIds": [
+        950
+      ],
+      "rationale": "The complete required contrast stays within these N5 construction families. Glossed interpretation labels and supplied lexical words are not grammar-level prerequisites.",
+      "mappingLimits": "Entries map the relation's required forms, not every incidental construction in its prompts."
+    },
+    {
+      "setId": "n5-adjective-foundations",
+      "relationship": "forms",
+      "jlpt": 5,
+      "exerciseIds": [
+        "n5-adjective-high-nonpast",
+        "n5-adjective-quiet-nonpast",
+        "n5-adjective-cold-negative",
+        "n5-adjective-clean-negative",
+        "n5-adjective-cheap-past",
+        "n5-adjective-quiet-past",
+        "n5-adjective-cheap-past-negative",
+        "n5-adjective-convenient-past-negative",
+        "n5-adjective-cheap-polite",
+        "n5-adjective-clean-polite",
+        "n5-adjective-cold-polite-negative",
+        "n5-adjective-quiet-polite-negative",
+        "n5-adjective-large-polite-past",
+        "n5-adjective-clean-polite-past",
+        "n5-adjective-cold-polite-past-negative",
+        "n5-adjective-quiet-polite-past-negative",
+        "n5-adjective-good-negative",
+        "n5-adjective-good-past",
+        "n5-adjective-good-past-negative",
+        "n5-adjective-good-polite-past",
+        "n5-adjective-student-past-negative",
+        "n5-adjective-doctor-past-negative"
+      ],
+      "primaryGrammarPointIds": [
+        7,
+        24,
+        28,
+        874,
+        873,
+        951,
+        952,
+        876,
+        40,
+        49,
+        50
+      ],
+      "rationale": "The complete required contrast stays within these N5 construction families. Glossed interpretation labels and supplied lexical words are not grammar-level prerequisites.",
+      "mappingLimits": "Adjective/noun time, polarity and politeness are combinations of the listed basic families; not every ending has its own separate index entry."
+    },
+    {
+      "setId": "n5-actions-time",
+      "relationship": "aspect",
+      "jlpt": 5,
+      "exerciseIds": [
+        "n5-time-reading-now",
+        "n5-time-cooking-now",
+        "n5-time-window-open",
+        "n5-time-gate-closed",
+        "n5-time-running-habit",
+        "n5-time-teaching-habit"
+      ],
+      "primaryGrammarPointIds": [
+        27,
+        764,
+        765
+      ],
+      "rationale": "The complete required contrast stays within these N5 construction families. Glossed interpretation labels and supplied lexical words are not grammar-level prerequisites.",
+      "mappingLimits": "Entries map the relation's required forms, not every incidental construction in its prompts."
+    },
+    {
+      "setId": "n5-actions-time",
+      "relationship": "timeline",
+      "jlpt": 5,
+      "exerciseIds": [
+        "n5-time-already-lunch",
+        "n5-time-already-homework",
+        "n5-time-still-reading",
+        "n5-time-still-waiting",
+        "n5-time-not-yet-lunch",
+        "n5-time-not-yet-homework",
+        "n5-time-no-longer-working",
+        "n5-time-no-longer-living"
+      ],
+      "primaryGrammarPointIds": [
+        42,
+        72,
+        83
+      ],
+      "rationale": "The complete required contrast stays within these N5 construction families. Glossed interpretation labels and supplied lexical words are not grammar-level prerequisites.",
+      "mappingLimits": "Entries map the relation's required forms, not every incidental construction in its prompts."
+    },
+    {
+      "setId": "n5-actions-time",
+      "relationship": "sequence",
+      "jlpt": 5,
+      "exerciseIds": [
+        "n5-time-bed-before",
+        "n5-time-medicine-before",
+        "n5-time-wash-then",
+        "n5-time-eat-then",
+        "n5-time-bus-until",
+        "n5-time-teacher-until"
+      ],
+      "primaryGrammarPointIds": [
+        53,
+        64,
+        360
+      ],
+      "rationale": "The complete required contrast stays within these N5 construction families. Glossed interpretation labels and supplied lexical words are not grammar-level prerequisites.",
+      "mappingLimits": "Entries map the relation's required forms, not every incidental construction in its prompts."
+    },
+    {
+      "setId": "n5-actions-time",
+      "relationship": "experience",
+      "jlpt": 5,
+      "exerciseIds": [
+        "n5-time-experience-kyoto",
+        "n5-time-experience-sushi",
+        "n5-time-episode-kyoto",
+        "n5-time-episode-sushi"
+      ],
+      "primaryGrammarPointIds": [
+        63,
+        41,
+        895
+      ],
+      "rationale": "The complete required contrast stays within these N5 construction families. Glossed interpretation labels and supplied lexical words are not grammar-level prerequisites.",
+      "mappingLimits": "Entries map the relation's required forms, not every incidental construction in its prompts."
+    },
+    {
+      "setId": "n5-requests-rules",
+      "relationship": "messages",
+      "jlpt": 5,
+      "exerciseIds": [
+        "n5-rules-write-request",
+        "n5-rules-read-request",
+        "n5-rules-write-negative-request",
+        "n5-rules-open-negative-request",
+        "n5-rules-sit-permission",
+        "n5-rules-photo-permission",
+        "n5-rules-enter-prohibition",
+        "n5-rules-drink-prohibition",
+        "n5-rules-write-obligation",
+        "n5-rules-return-obligation"
+      ],
+      "primaryGrammarPointIds": [
+        35,
+        60,
+        65,
+        67,
+        86,
+        87
+      ],
+      "rationale": "The complete required contrast stays within these N5 construction families. Glossed interpretation labels and supplied lexical words are not grammar-level prerequisites.",
+      "mappingLimits": "Entries map the relation's required forms, not every incidental construction in its prompts."
+    },
+    {
+      "setId": "n5-requests-rules",
+      "relationship": "acceptability",
+      "jlpt": 5,
+      "exerciseIds": [
+        "n5-rules-cheap-acceptable",
+        "n5-rules-large-acceptable",
+        "n5-rules-quiet-acceptable",
+        "n5-rules-pencil-acceptable"
+      ],
+      "primaryGrammarPointIds": [
+        46
+      ],
+      "rationale": "The complete required contrast stays within these N5 construction families. Glossed interpretation labels and supplied lexical words are not grammar-level prerequisites.",
+      "mappingLimits": "Entries map the relation's required forms, not every incidental construction in its prompts."
+    },
+    {
+      "setId": "n5-requests-rules",
+      "relationship": "contractions",
+      "jlpt": 5,
+      "exerciseIds": [
+        "n5-rules-short-no-eating",
+        "n5-rules-short-no-drinking",
+        "n5-rules-short-homework",
+        "n5-rules-short-go"
+      ],
+      "primaryGrammarPointIds": [
+        74,
+        67
+      ],
+      "rationale": "The complete required contrast stays within these N5 construction families. Glossed interpretation labels and supplied lexical words are not grammar-level prerequisites.",
+      "mappingLimits": "Entries map the relation's required forms, not every incidental construction in its prompts."
+    },
+    {
+      "setId": "n5-requests-rules",
+      "relationship": "register",
+      "jlpt": 5,
+      "exerciseIds": [
+        "n5-rules-strong-enter",
+        "n5-rules-strong-touch",
+        "n5-rules-polite-enter",
+        "n5-rules-polite-touch"
+      ],
+      "primaryGrammarPointIds": [
+        66,
+        65
+      ],
+      "rationale": "The complete required contrast stays within these N5 construction families. Glossed interpretation labels and supplied lexical words are not grammar-level prerequisites.",
+      "mappingLimits": "Entries map the relation's required forms, not every incidental construction in its prompts."
+    },
+    {
+      "setId": "n5-foundation-particles",
+      "relationship": "existence",
+      "jlpt": 5,
+      "exerciseIds": [
+        "n5-particles-cat-present",
+        "n5-particles-teacher-absent",
+        "n5-particles-flowers-present",
+        "n5-particles-desk-absent"
+      ],
+      "primaryGrammarPointIds": [
+        13,
+        23
+      ],
+      "rationale": "The complete required contrast stays within these N5 construction families. Glossed interpretation labels and supplied lexical words are not grammar-level prerequisites.",
+      "mappingLimits": "Entries map the relation's required forms, not every incidental construction in its prompts."
+    },
+    {
+      "setId": "n5-foundation-particles",
+      "relationship": "space",
+      "jlpt": 5,
+      "exerciseIds": [
+        "n5-particles-book-desk",
+        "n5-particles-dog-bank",
+        "n5-particles-study-window",
+        "n5-particles-wait-school"
+      ],
+      "primaryGrammarPointIds": [
+        6,
+        25,
+        32
+      ],
+      "rationale": "The complete required contrast stays within these N5 construction families. Glossed interpretation labels and supplied lexical words are not grammar-level prerequisites.",
+      "mappingLimits": "Entries map the relation's required forms, not every incidental construction in its prompts."
+    },
+    {
+      "setId": "n5-foundation-particles",
+      "relationship": "movement",
+      "jlpt": 5,
+      "exerciseIds": [
+        "n5-particles-route-bridge",
+        "n5-particles-route-park",
+        "n5-particles-departure-house",
+        "n5-particles-departure-bus"
+      ],
+      "primaryGrammarPointIds": [
+        21
+      ],
+      "rationale": "The complete required contrast stays within these N5 construction families. Glossed interpretation labels and supplied lexical words are not grammar-level prerequisites.",
+      "mappingLimits": "Route/departure を extends the indexed basic を family; the existing article's sourced movement uses supply the sense evidence, not a claim that every を sense is separately indexed as N5."
+    },
+    {
+      "setId": "n5-foundation-connections",
+      "relationship": "linking",
+      "jlpt": 5,
+      "exerciseIds": [
+        "n5-connections-eat-school",
+        "n5-connections-walk-train",
+        "n5-connections-doctor-teacher",
+        "n5-connections-student-friend"
+      ],
+      "primaryGrammarPointIds": [
+        416,
+        769,
+        770,
+        771
+      ],
+      "rationale": "The complete required contrast stays within these N5 construction families. Glossed interpretation labels and supplied lexical words are not grammar-level prerequisites.",
+      "mappingLimits": "Entries map the relation's required forms, not every incidental construction in its prompts."
+    }
+  ],
+  "vocabulary": {
+    "newReviewedPrompts": 125,
+    "coverage": {
+      "reviewed": 449,
+      "pending": 397
+    },
+    "stage": "pilot",
+    "existingRecordsPreserved": 721,
+    "canonicalReferences": 0,
+    "policy": "Every new prompt has a full revision-bound author-reviewed segmentation. Context-specific local glosses are intentional; no unchecked canonical word-card identity is inserted."
+  },
+  "snapshot": {
+    "normalization": "UTF-8 bytes, CRLF normalized to LF",
+    "files": {
+      "articles/japanese-actions-states-and-time.md": "2fda4484b23fc46bbe24e8c6635136615cd3940463f3e47561c352ad59e47e51",
+      "articles/japanese-adjective-foundations.md": "6501ed0d5ed7486628f4bfba222f6c437a6087ff74a4905bd4e55f1f8d3f53f9",
+      "articles/japanese-listing-and-examples.md": "4b0a96242bef79be9209ef9fafe7f289600cf4a7743899c68bde114033aa6cdc",
+      "articles/japanese-nouns-and-basic-particles.md": "8791617148725af1bb721d6a4023bf96c186b8c76b6626cf5edc7323fbd973bb",
+      "articles/japanese-requests-permission-and-rules.md": "1ea544ad08fa717702b6b88c445dcd409bd69db429f793e1a35db9ea4cfc05d7",
+      "articles/japanese-verb-foundations.md": "b01d7fe0ed09092d77954328113cfc69e2317df3dbce1ed81e13d2e81e05e811",
+      "grammar/formal-nouns-comparisons.json": "1153f177ae45acdb1c6478a45224a41633654ee05e5ac5c61f79f5a1b775f388",
+      "grammar/n5-actions-time.json": "077fdbecb9f3e53bde6cbd4f8ff7cf8475fbf060ff76f151fad8778287b10cd7",
+      "grammar/n5-adjective-foundations.json": "1191a6dd832b40b759af7b8e09aebaa76756493da847a89d6f05816c6d787161",
+      "grammar/n5-foundation-connections.json": "594d65c96d24698e7e10ff246c9fe85ed2b83cfe80e56bc1bc40338769e97490",
+      "grammar/n5-foundation-particles.json": "4246e995a06b0c291c219973ccf50a55493738cfa91a12e41887985052f18d09",
+      "grammar/n5-requests-rules.json": "a364591b6f456753e9f41f6db2667764f20aa96f3f669ed887de82b2b070e6fd",
+      "grammar/n5-verb-foundations.json": "1c711995daa0fda6e47f1b20c008495507037aa7e51896c4849cc277bd524b27"
+    }
+  },
+  "independentReview": {
+    "status": "complete",
+    "reviewer": "n5-foundations-review",
+    "actualModelId": null,
+    "modelDisclosure": "Runtime model ID was unavailable; no identity is inferred from the parent.",
+    "initialSnapshot": {
+      "normalization": "UTF-8 bytes, CRLF normalized to LF",
+      "files": {
+        "articles/japanese-actions-states-and-time.md": "2fda4484b23fc46bbe24e8c6635136615cd3940463f3e47561c352ad59e47e51",
+        "articles/japanese-adjective-foundations.md": "6501ed0d5ed7486628f4bfba222f6c437a6087ff74a4905bd4e55f1f8d3f53f9",
+        "articles/japanese-listing-and-examples.md": "4b0a96242bef79be9209ef9fafe7f289600cf4a7743899c68bde114033aa6cdc",
+        "articles/japanese-nouns-and-basic-particles.md": "8791617148725af1bb721d6a4023bf96c186b8c76b6626cf5edc7323fbd973bb",
+        "articles/japanese-requests-permission-and-rules.md": "6617e11b8a0a3992dfa303148397041f9fa3ebd6905b656efed6cd02a3aca5c7",
+        "articles/japanese-verb-foundations.md": "fc9dbe9882a804e713c550a15620a48c04da232242cfca6d334bf10d33ad58b3",
+        "grammar/formal-nouns-comparisons.json": "1153f177ae45acdb1c6478a45224a41633654ee05e5ac5c61f79f5a1b775f388",
+        "grammar/n5-actions-time.json": "8aff2816facfca0b9b18b0d3aa680e53558526b8c5a8229ebe2bdbf4a437f650",
+        "grammar/n5-adjective-foundations.json": "5b2a247b7853dfbd65ced0c03f8187bade337b524f8c027f49a5894017a7f33a",
+        "grammar/n5-foundation-connections.json": "594d65c96d24698e7e10ff246c9fe85ed2b83cfe80e56bc1bc40338769e97490",
+        "grammar/n5-foundation-particles.json": "fe6d797ee623358254171b70d6b3cb0092a8185be5d34629463f4359b935aacc",
+        "grammar/n5-requests-rules.json": "862080d80464d35ca2c81bfe6ddb2872fe671b3359d66dd339a653440f7952cf",
+        "grammar/n5-verb-foundations.json": "a070ff17648c432c507539633a7a005261101789a17024be47d206831a8faf6b"
+      }
+    },
+    "initialReport": {
+      "artifact": "n5-foundations-initial-independent-review.md",
+      "normalizedLfSha256": "a70004572dbd77aea052697b74effd474bdebecde803ebf988fcbe28b85ecc7f",
+      "publicationNormalization": "Only local absolute workspace prefixes are replaced with placeholders.",
+      "text": "# Installment 1: initial independent content review\n\n## Snapshot\n\n- Issue: https://github.com/stop-cran/learning-japanese/issues/16\n- Baseline: `c7ad52870843aece0b605e69af833c053a93d5cd`, plus the uncommitted installment represented by the supplied frozen snapshot.\n- Reviewed on: 2026-10-22.\n- Frozen record: `<session-files>\\n5-foundations-initial-review-snapshot.json`.\n- All 13 article/grammar file hashes in `snapshot.files` matched the files read, using the supplied CRLF-to-LF normalization. This was a snapshot-identity check, not a duplicate structural/import test.\n- Frozen record and current `docs\\grammar-n5-foundations-sources.json` both had normalized-LF SHA-256 `c3ee579ccdb16a67dbabfbe6d4aed85956cb6f7a18f9922b97a9561c88942fd0`.\n- The vocabulary inventory read had normalized-LF SHA-256 `393f28cf3efe2af78cf6aaa53b1ea8580d11743c40d25cd3d45555e09c9d6ea1`; only its six new file families are substantively reviewed here.\n\n## Scope\n\nOne independent reviewer; actual model ID **unavailable**. No delegation. No repository modifications, commits, pushes, or corrective edits were made. This report preserves the initial findings for subsequent informed reconciliation.\n\nRead the applicable repository instructions, grammar authoring source guide, grammar exercise contract, reusable grammar-review lessons, and `n5-work-items\\01-foundations.md`. The planning material was used as scope, not as a content verdict. Other reviewers' reports and the author's review verdict were not used.\n\nSubstantive coverage:\n\n- All four complete new articles.\n- The new existence/negation and spatial-noun paragraphs in the noun/particle article, and the four-line listing supplement, with their surrounding teaching sections and linked destinations considered for consistency.\n- **Every complete object in all 125 new exercises**, including prompt, translation/instructions, evidence, explanation, accepted answers, every option/rationale, vocabulary spans, constructions, relationships, and introduction groups. This was not a sample.\n- All new vocabulary exclusion segments for those 125 prompts.\n- The new local advice introduction group and its mapping to six existing, already-N5 advice tasks. Existing task text was read to establish pedagogic mapping, not to undertake another comprehensive comparison/advice review.\n- All 71 coverage-anchor records, all complete-task classification decisions, source qualifications, supplementary accounting, and explanation-only boundaries. The frozen primary index's actual entries were inspected for all 71 anchors. Existing referenced tasks were inspected sufficiently to establish what the ledger reuses.\n\nThe task distribution is coherent with the source record:\n\n| New set | Objects read | Controlled formation | Interpretation | Contextual predicate selection |\n| --- | ---: | ---: | ---: | ---: |\n| `n5-verb-foundations.json` | 41 | 37 | 4 | 0 |\n| `n5-adjective-foundations.json` | 22 | 22 | 0 | 0 |\n| `n5-actions-time.json` | 24 | 6 | 18 | 0 |\n| `n5-requests-rules.json` | 22 | 14 | 8 | 0 |\n| `n5-foundation-particles.json` | 12 | 4 | 4 | 4 |\n| `n5-foundation-connections.json` | 4 | 4 | 0 | 0 |\n| **Total** | **125** | **87** | **34** | **4** |\n\nThese are task formats, not separate schema facets or a measurement of independent transfer. English meanings and named form families remain substantial scaffolding.\n\n## Verdicts\n\n**CLEAN** means no actionable defect established in the stated bounded scope, not comprehensive correctness or native-speaker certification. A finding about answer recognition does not mean the displayed model Japanese is incorrect.\n\n| File / bounded portion | Correctness | Scoped coverage | Comprehensibility | Basis |\n| --- | --- | --- | --- | --- |\n| `articles\\japanese-verb-foundations.md` | CLEAN | NEEDS FIX | NEEDS FIX | F01: missing general godan polite-stem formation rule |\n| `articles\\japanese-adjective-foundations.md` | CLEAN | CLEAN | CLEAN | Predicate forms, いい, きれい, noun bridge, and qualified past meaning checked |\n| `articles\\japanese-actions-states-and-time.md` | CLEAN | CLEAN | CLEAN | Aspect readings, polarity, relative event order, and experience boundary checked |\n| `articles\\japanese-requests-permission-and-rules.md` | CLEAN | CLEAN | CLEAN | Formation, message distinctions, contractions and register checked; O01 is nonblocking wording calibration |\n| `articles\\japanese-nouns-and-basic-particles.md` — additions only | CLEAN | CLEAN | CLEAN | Negation, plants, and inner spatial phrase versus outer particle checked |\n| `articles\\japanese-listing-and-examples.md` — addition only | CLEAN | CLEAN | CLEAN | New links fit existing non-exhaustive/non-universally-sequential connection explanation |\n| `grammar\\n5-verb-foundations.json` | CLEAN | CLEAN | CLEAN | All 41 tasks; visible finite-form restrictions and answer-independent interpretation-label order |\n| `grammar\\n5-adjective-foundations.json` | NEEDS FIX | CLEAN | CLEAN | F03: three typed spelling omissions |\n| `grammar\\n5-actions-time.json` | NEEDS FIX | CLEAN | NEEDS FIX | F03: two typed spelling omissions; F02: response-label readings |\n| `grammar\\n5-requests-rules.json` | CLEAN | CLEAN | NEEDS FIX | F02: response-label readings |\n| `grammar\\n5-foundation-particles.json` | CLEAN | CLEAN | NEEDS FIX | F02: response-label readings |\n| `grammar\\n5-foundation-connections.json` | CLEAN | CLEAN | CLEAN | All four complete tasks; noun-で and verb-て are not treated as exhaustive lists |\n| `grammar\\formal-nouns-comparisons.json` — new introduction group only | CLEAN | CLEAN | CLEAN | Local ownership, target/facet mapping, distinct contexts and soft recommendation |\n| `docs\\grammar-n5-foundations-sources.json` — coverage/classification/source accounting | CLEAN | CLEAN | CLEAN | All anchors accounted for; recognition/production and higher-level boundaries disclosed |\n| `docs\\grammar-vocabulary-review.json` — six new record families only | CLEAN | CLEAN | CLEAN | Prompt exclusions and local lexical support checked; F02 concerns response instructions outside these prompt annotations |\n\n## Findings\n\n### N5FI-F01 — The entry article defines a ます-stem without teaching how to form it for godan verbs\n\n- **Severity:** Minor.\n- **Facet:** Scoped coverage and comprehensibility.\n- **Location:** `articles\\japanese-verb-foundations.md:26-53`, especially lines 30 and 52-53. Related application: `n5-verb-write-polite`, `n5-verb-drink-polite-negative`, and `n5-verb-return-polite-past`.\n- **Claim and impact:** The godan overview says only that the final sound changes according to the ending. The later definition obtains 読み from the already-inflected 読みます, and warns that removing the dictionary form's final kana is not always enough. Neither passage states the productive godan **u-row to corresponding i-row** operation. 読む/食べる examples and 帰ります are correct, but an entry learner is left to infer the rule needed to produce 書きます or 飲みません. The article explicitly teaches the corresponding a-row operation for negatives, so this is a localized missing formation prerequisite, not a demand for an exhaustive conjugation reference.\n- **Remedy:** Add a compact rule before the finite-form exercises: godan verbs change the final u-row kana to the corresponding i-row kana before the ます-series; include useful examples such as 書く→書き, 買う→買い, 待つ→待ち, and 話す→話し. Retain the ichidan remove-る explanation and the existing する/来る table.\n- **Evidence:** The local passages above contain a definition and examples but no general i-row rule. [Tofugu, “Verb Conjugation Groups,” Godan Verbs](https://www.tofugu.com/japanese-grammar/verb-conjugation-groups/) explicitly contrasts 聞く with 聞きます in its i-row table. [Bunpro, う-Verbs](https://bunpro.jp/grammar_points/う-Verbs) likewise explains く→き in the polite form. Both actual teaching passages were inspected.\n- **Confidence:** High.\n\n### N5FI-F02 — Thirty interpretation tasks omit the pronunciation of their required Japanese response labels\n\n- **Severity:** Minor.\n- **Facet:** Comprehensibility, especially typed mode.\n- **Locations / affected task families:**\n  - `grammar\\n5-actions-time.json`: all six `aspect` tasks, all eight `timeline` tasks, and all four `experience` tasks — 18 objects.\n  - `grammar\\n5-requests-rules.json`: `n5-rules-short-no-eating`, `n5-rules-short-no-drinking`, `n5-rules-short-homework`, `n5-rules-short-go`, `n5-rules-strong-enter`, `n5-rules-strong-touch`, `n5-rules-polite-enter`, and `n5-rules-polite-touch` — eight objects.\n  - `grammar\\n5-foundation-particles.json`: `n5-particles-route-bridge`, `n5-particles-route-park`, `n5-particles-departure-house`, and `n5-particles-departure-bus` — four objects.\n- **Claim and impact:** The question-side definitions supply English meanings but not kana readings for labels such as 進行, 状態, 継続, 未完了, 終了, 出来事, 義務, 丁寧な依頼, and 出発点. The corresponding kana answers exist only in `acceptedAnswers`. A learner who understands the Japanese construction and the English category may still be unable to enter the Japanese label using an ordinary kana-based IME without knowing unrelated metalinguistic vocabulary or resorting to copying/handwriting. The four verb-foundation interpretation tasks already avoid this problem by supplying 習慣（しゅうかん） and 予定（よてい） before answering.\n- **Remedy:** Add kana readings to **every alternative's** visible definition, retaining the current answer-independent ordering. For example: 進行（しんこう）, 状態（じょうたい）, 習慣（しゅうかん）; 完了（かんりょう）, 継続（けいぞく）, 未完了（みかんりょう）, 終了（しゅうりょう）; 経験（けいけん）, 出来事（できごと）; 禁止（きんし）, 義務（ぎむ）; 強い禁止（つよいきんし）, 丁寧な依頼（ていねいないらい）; 通り道（とおりみち）, 出発点（しゅっぱつてん）. Do not move this support to answer-only feedback or add a hint identifying which label is correct.\n- **Evidence:** Direct comparison of the affected `translation` fields with their kana `acceptedAnswers`, and with `n5-verb-meaning-habit-books` / `n5-verb-meaning-future-letter`. The repository contract says the app does not automatically display the full accepted-answer list. The review instructions request selective readings for unfamiliar words.\n- **Qualification:** The English definitions make the category distinctions adequately clear in choice mode. This is not a claim that the tasks have the wrong grammar level, that the labels must be dictionary-perfect technical terminology, or that their current definition order leaks the answer.\n- **Confidence:** High.\n\n### N5FI-F03 — Five typed tasks reject attested spellings of the same requested answers\n\n- **Severity:** Minor.\n- **Facet:** Correctness of typed-answer acceptance.\n- **Locations and omitted answers:**\n\n  | File | Exact exercise ID | Fitting omitted forms |\n  | --- | --- | --- |\n  | `grammar\\n5-actions-time.json` | `n5-time-bus-until` | `来る迄`, `くる迄` |\n  | `grammar\\n5-actions-time.json` | `n5-time-teacher-until` | `戻る迄`, `もどる迄` |\n  | `grammar\\n5-adjective-foundations.json` | `n5-adjective-clean-negative` | `奇麗ではない`, `奇麗じゃない` |\n  | `grammar\\n5-adjective-foundations.json` | `n5-adjective-clean-polite` | `奇麗です` |\n  | `grammar\\n5-adjective-foundations.json` | `n5-adjective-clean-polite-past` | `奇麗でした` |\n\n- **Claim and impact:** These instructions restrict the grammatical pattern, not the answer's script to kana or one selected kanji spelling. For example, バスが来る迄、ここで待ちます and この机は奇麗ではない preserve the exact construction and meaning being requested. The current arrays accept まで and 綺麗 but omit their recognized spellings above, so a grammatically correct typed response can be marked wrong. This does not affect the validity of the displayed quiz keys.\n- **Remedy:** Add the listed spellings to the applicable accepted-answer classes. Keep the normal displayed model spellings, and do not add duplicate semantic choice buttons merely for orthographic variants. No grammar-level change is indicated.\n- **Evidence:**\n  - [Digital Daijisen via Weblio, まで【迄】](https://www.weblio.jp/content/迄), sense 1: temporal/spatial limit, with attachment to a conjugated word's attributive form. The named dictionary heading and actual entry were inspected, not the site's automatically generated examples.\n  - [Digital Daijisen via Weblio, きれい【綺麗／奇麗】](https://www.weblio.jp/content/綺麗), sense 4: free of dirt, clean. The actual named dictionary entry explicitly supplies both spellings for the same word; the unrelated album entry returned by simplified extraction was not used.\n  - `REVIEW.md`'s reusable typed-spelling lesson specifically warns that normalization does not recognize 迄 as まで. Existing `basic-walk-end` and destination tasks already accept 迄.\n- **Qualification:** Dictionary recognition establishes acceptable spelling here, not equal frequency or a recommendation to teach 迄/奇麗 as the default. This is not an unbounded demand for paraphrases or advanced grammatical renderings.\n- **Confidence:** High.\n\n## Coverage and classification observations\n\n- The 71 ledger IDs correspond to N5 entries in the frozen Bunpro index. The ledger is a curriculum accounting device, not an official syllabus or 71 independent mastered skills.\n- New finite-form and adjective tasks genuinely require the supplied word's requested form rather than a conjugation-class name. Negative, past, and polite axes are kept distinct. The ます-series restriction fairly excludes otherwise possible ないです answers.\n- The new aspect and timeline groups are interpretation groups, not evidence of independent ている production. Negative experience, broader ている inflections, and contraction production are explicitly explained rather than falsely counted as newly produced skills.\n- Before/てから/verb-まで choices stay within the elementary required contrast. The existing N4 before/after and experience-versus-ability comparisons, and the N3 retained-state comparisons, are not silently relabeled by the new group metadata.\n- The primary noun/adjective てもいい lesson directly supports the acceptability task, distinct from example-giving or emphatic でも. The actual main lesson was inspected.\n- Bunpro's actual adjective-て+B lesson explicitly includes noun/な-adjective で followed by a full clause. The siblings' jobs task therefore supports the ledger's anchor 771 mapping; the article does not claim that every causal/manner extension is drilled.\n- The movement-を level entry openly discloses its semantic-family mapping. Bunpro's actual を lesson includes traversal, and the cited Tofugu movement section explains both route and departure uses. The ledger does not present every movement sense as its own separately indexed N5 entry.\n- All 16 new groups and the one reused-advice group have coherent local target/facet ownership. The advice group's six members belong to `formal-nouns-comparisons.json`, with three distinct contexts per advice facet, not duplicated objects in the requests file. Its N5 status is already present in the baseline classification.\n- Interpretation definition ordering is stable within comparable families rather than always placing the correct label first. No actionable answer leak was established in the authored vocabulary spans. Protecting the interpreted predicate from lexical hints is appropriate; the missing response-label readings in F02 are a separate issue.\n- Local lexical glosses without canonical word IDs are legitimate under the contract. No fabricated canonical-reference requirement was applied.\n\n## Optional\n\n### N5FI-O01 — Describe the requests practice as controlled formation and recognition\n\n`articles\\japanese-requests-permission-and-rules.md:99-100` refers to “Context tasks” distinguishing permission, prohibition and obligation. In this particular new set, the first 14 tasks name the requested construction family and the other eight classify supplied utterances; there is no separate unprompted message-selection task. Consider describing that scaffolding directly instead of suggesting contextual transfer. The source record already makes the limitation clear, so this is nonblocking claim calibration, **not** a requirement to add exercises or meet a transfer quota.\n\n### N5FI-O02 — Trim a generic lexical gloss to its actual context\n\nIn `n5-verb-te-swim`, the visible 飲みます applies to 水, but the local gloss is “drink; take medicine.” “Drink” would be more context-specific. The extra sense does not invalidate the sentence, identify the missing 泳いで, or create an unfair answer choice; this is nonblocking learner-help polish.\n\n## Evidence inspected and limits\n\nIn addition to the complete local scope, actual live teaching passages were inspected on:\n\n- Tofugu: verb conjugation groups; ている conjugation, ongoing/result and habitual readings; いる/ある conjugations and plants; movement を.\n- Bunpro: う-verbs; polite verb endings; adjective-て+B; noun/adjective てもいい; もう; verb-まで; なくちゃ/なきゃ; prohibitive な; を; and い-adjective past negative.\n- Digital Daijisen's actual まで【迄】 and きれい【綺麗／奇麗】 entries, via Weblio.\n\nThe initial simplified Bunpro な extraction returned a forum reply. Its main Structure/About and relevant contrast text were subsequently inspected directly. The initial simplified 綺麗 extraction returned an unrelated album entry; the actual Digital Daijisen entry was subsequently isolated. Neither misleading extraction was treated as supporting evidence.\n\nNot every navigation URL in the source record was independently reopened. No consequential disputed claim remains dependent on an unavailable passage in this report. This is not a new full review of unchanged historical articles/tasks, an exhaustive spelling/paraphrase inventory, a corpus-frequency study, native-speaker certification, or an official JLPT syllabus determination.\n\nMachine validation, manifest/import behavior, preservation checks, and Android presentation testing remain the parent's separate scope and were not duplicated. The typed-mode findings are grounded in the published answer contract and the authored data, not a claim of having exercised the phone UI.\n\nInitial findings remain open pending the parent's evidence-based adjudication and any authorized revisions. Available for same-task informed reconciliation against the revised snapshot and actual diff.\n"
+    },
+    "authorAdjudication": [
+      {
+        "id": "N5FI-F01",
+        "severity": "Minor",
+        "disposition": "resolved",
+        "change": "Added the productive godan u-row to i-row rule and ichidan/irregular contrast."
+      },
+      {
+        "id": "N5FI-F02",
+        "severity": "Minor",
+        "disposition": "resolved",
+        "change": "Added kana to every alternative in all 30 affected interpretation definition lists; order is unchanged."
+      },
+      {
+        "id": "N5FI-F03",
+        "severity": "Minor",
+        "disposition": "resolved",
+        "change": "Added eight recognized spelling renderings to five typed-answer classes; displayed keys/options are unchanged."
+      },
+      {
+        "id": "N5FI-O01",
+        "severity": "Optional",
+        "disposition": "resolved",
+        "change": "Calibrated requests practice to controlled formation and recognition rather than unprompted contextual transfer."
+      },
+      {
+        "id": "N5FI-O02",
+        "severity": "Optional",
+        "disposition": "resolved",
+        "change": "Split the shared 飲みます hint into context-specific drink and take-medicine glosses in its two occurrences."
+      }
+    ],
+    "reconciliation": {
+      "status": "complete",
+      "sameReviewer": true,
+      "informed": true,
+      "actualModelId": null,
+      "verdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "dispositions": {
+        "N5FI-F01": "resolved",
+        "N5FI-F02": "resolved",
+        "N5FI-F03": "resolved",
+        "N5FI-O01": "resolved",
+        "N5FI-O02": "resolved"
+      },
+      "changedCompleteExerciseObjectsReread": 37,
+      "unchangedObjectsCarriedForward": 88,
+      "changedArticlePassagesReread": 2,
+      "packetNormalizedLfSha256": "f5d21f63602c0b05c1ac22a95135910e9f253c32331818387f65115d7efd3082",
+      "diffNormalizedLfSha256": "c65019d70b7d08c5f2dfdda5407d415c38ca89ca3b09b37c70fe60908f3abc7f",
+      "report": {
+        "artifact": "n5-foundations-independent-reconciliation.md",
+        "normalizedLfSha256": "d3eec28422109600358efe1d14b25f14393c6b337fac6e975c7619ed08c60364",
+        "publicationNormalization": "Only local absolute workspace prefixes are replaced with placeholders.",
+        "text": "# Installment 1: same-reviewer informed reconciliation\n\n## Snapshot\n\n- Issue: https://github.com/stop-cran/learning-japanese/issues/16\n- Baseline: `c7ad52870843aece0b605e69af833c053a93d5cd`, plus the frozen revised uncommitted installment.\n- Reconciled on: 2026-10-22.\n- Initial report preserved unchanged: `n5-foundations-initial-independent-review.md`.\n- Packet: `n5-foundations-reconciliation-packet.json`, normalized-LF SHA-256 `f5d21f63602c0b05c1ac22a95135910e9f253c32331818387f65115d7efd3082`.\n- Exact diff: `n5-foundations-reconciliation.diff`, normalized-LF SHA-256 `c65019d70b7d08c5f2dfdda5407d415c38ca89ca3b09b37c70fe60908f3abc7f`. The calculated hash agrees with the packet.\n- Revised source snapshot: `n5-foundations-revised-review-snapshot.json`, normalized-LF SHA-256 `5578b30512e7bb82dee4474b122a2f35ee759418d37854ffa7bf155de7263d4b`. The repository source record matched this hash.\n- All 13 repository article/grammar files matched the packet's revised hash map. All 37 complete revised exercise objects read from the packet matched their repository counterparts.\n- Vocabulary inventory read: normalized-LF SHA-256 `299a351afcf607c1ec9709684aa9665f0c6bfbb8035e97cb26b4010dbc107734`.\n\nArtifact names above are relative to `<session-files>`.\n\n## Scope\n\nSame reviewer as the initial report; actual model ID **unavailable**. This is informed reconciliation, not another blind review. The author's adjudication was read, but the dispositions below are based on the revised passages, complete objects, and exact diff.\n\nRead:\n\n- Both revised article passages, with their surrounding explanations.\n- The entire exact content diff.\n- **All 37 complete changed exercise objects**, not merely their changed fields: literal prompts, question-side instructions, accepted answers, options/rationales, evidence, explanations, levels, and vocabulary payloads.\n- The corresponding current vocabulary exclusion segments, checking their semantic relationship to each prompt and the protected grammar target.\n- The added dictionary-source records and the source record's changes relative to the initial frozen record.\n\n| Exercise set | Complete revised objects reread | Unchanged objects carried forward |\n| --- | ---: | ---: |\n| `n5-verb-foundations.json` | 1 | 40 |\n| `n5-adjective-foundations.json` | 3 | 19 |\n| `n5-actions-time.json` | 21 | 3 |\n| `n5-requests-rules.json` | 8 | 14 |\n| `n5-foundation-particles.json` | 4 | 8 |\n| `n5-foundation-connections.json` | 0 | 4 |\n| **Total** | **37** | **88** |\n\nThe initial review is explicitly **carried forward** for those 88 unchanged objects, unchanged portions of the two edited articles, the other two new articles, both unchanged article supplements, and unchanged construction/relationship/introduction-group metadata, including the local six-task advice group. The original review of the 71-anchor coverage ledger and complete-task classifications is also carried forward; those substantive fields did not change.\n\nThe resulting verdict is therefore a **composite review of the bounded installment**, not a claim that all 125 objects and all articles underwent a second full audit. No repository files were modified and no work was delegated.\n\n## Verdicts\n\nFor the bounded composite installment:\n\n- **Correctness: CLEAN**\n- **Scoped coverage: CLEAN**\n- **Comprehensibility: CLEAN**\n\nAll three initial findings and both adopted optional suggestions are **resolved**. No new actionable defect or consequential unresolved claim was established.\n\n| File / original bounded scope | Correctness | Scoped coverage | Comprehensibility | Review basis |\n| --- | --- | --- | --- | --- |\n| `articles\\japanese-verb-foundations.md` | CLEAN | CLEAN | CLEAN | Revised formation passage plus initial review of remainder |\n| `articles\\japanese-adjective-foundations.md` | CLEAN | CLEAN | CLEAN | Initial review carried forward |\n| `articles\\japanese-actions-states-and-time.md` | CLEAN | CLEAN | CLEAN | Initial review carried forward |\n| `articles\\japanese-requests-permission-and-rules.md` | CLEAN | CLEAN | CLEAN | Revised practice passage plus initial review of remainder |\n| `articles\\japanese-nouns-and-basic-particles.md` — supplements only | CLEAN | CLEAN | CLEAN | Initial bounded review carried forward |\n| `articles\\japanese-listing-and-examples.md` — supplement only | CLEAN | CLEAN | CLEAN | Initial bounded review carried forward |\n| `grammar\\n5-verb-foundations.json` | CLEAN | CLEAN | CLEAN | One revised complete object plus 40 carried forward |\n| `grammar\\n5-adjective-foundations.json` | CLEAN | CLEAN | CLEAN | Three revised complete objects plus 19 carried forward |\n| `grammar\\n5-actions-time.json` | CLEAN | CLEAN | CLEAN | 21 revised complete objects plus three carried forward |\n| `grammar\\n5-requests-rules.json` | CLEAN | CLEAN | CLEAN | Eight revised complete objects plus 14 carried forward |\n| `grammar\\n5-foundation-particles.json` | CLEAN | CLEAN | CLEAN | Four revised complete objects plus eight carried forward |\n| `grammar\\n5-foundation-connections.json` | CLEAN | CLEAN | CLEAN | Initial review carried forward |\n| `grammar\\formal-nouns-comparisons.json` — added advice group only | CLEAN | CLEAN | CLEAN | Initial ownership/mapping review carried forward |\n| `docs\\grammar-n5-foundations-sources.json` — original accounting scope plus added evidence | CLEAN | CLEAN | CLEAN | New evidence attribution checked; original ledger/classification review carried forward |\n| `docs\\grammar-vocabulary-review.json` — six installment families only | CLEAN | CLEAN | CLEAN | Revised contexts/exclusions checked substantively; unchanged context review carried forward |\n\nCLEAN retains the initial report's definition: no actionable defect established within this scope, not exhaustive correctness, mastery, or native-speaker certification. The initial NEEDS FIX verdicts remain attached to the initial snapshot; they are not retroactively erased.\n\n## Reconciliation\n\n### N5FI-F01 — Resolved\n\n- **Original severity/facets:** Minor; scoped coverage and comprehensibility.\n- **Revised location:** `articles\\japanese-verb-foundations.md:52-57`.\n- **Evidence:** The passage now explicitly gives the godan final u-row → corresponding i-row operation, with 書く→書き, 買う→買い, 待つ→待ち, 話す→話し, and 読む→読み. It applies the stem to all four requested ます-series endings, distinguishes ichidan removal of る, and supplies the irregular し／来（き） stems.\n- **Assessment:** This closes the previously implicit productive operation. The examples are correct, agree with the existing table and the teaching evidence inspected during the initial review, and do not confuse the godan polite stem with either the negative a-row or the て-form sound changes.\n- **Confidence:** High. No remaining remedy required.\n\n### N5FI-F02 — Resolved\n\n- **Original severity/facet:** Minor; comprehensibility in typed mode.\n- **Revised locations:** All 18 interpretation objects in `n5-actions-time.json` (`aspect`, `timeline`, `experience`); all eight `contractions`/`register` interpretation objects in `n5-requests-rules.json`; all four `movement` interpretation objects in `n5-foundation-particles.json`.\n- **Evidence:** Every alternative in all 30 affected definition lists now includes the appropriate reading:\n  - 進行（しんこう）, 状態（じょうたい）, 習慣（しゅうかん）.\n  - 完了（かんりょう）, 継続（けいぞく）, 未完了（みかんりょう）, 終了（しゅうりょう）.\n  - 経験（けいけん）, 出来事（できごと）.\n  - 禁止（きんし）, 義務（ぎむ）.\n  - 強い禁止（つよいきんし）, 丁寧な依頼（ていねいないらい）.\n  - 通り道（とおりみち）, 出発点（しゅっぱつてん）.\n- **Assessment:** The readings are available in the question-side instructions, agree with the accepted kana responses, and remove the unrelated pronunciation prerequisite. Both correct and incorrect alternatives receive equal support. Their ordering remains unchanged and answer-independent within each family; the fix does not introduce correct-first ordering or a selective vocabulary hint.\n- **Confidence:** High. No remaining remedy required.\n\n### N5FI-F03 — Resolved\n\n- **Original severity/facet:** Minor; correctness of typed-answer acceptance.\n- **Evidence:** All eight identified renderings are present in the five appropriate answer classes:\n\n  | Exact exercise ID | Added forms verified in the complete object |\n  | --- | --- |\n  | `n5-time-bus-until` | `来る迄`, `くる迄` |\n  | `n5-time-teacher-until` | `戻る迄`, `もどる迄` |\n  | `n5-adjective-clean-negative` | `奇麗ではない`, `奇麗じゃない` |\n  | `n5-adjective-clean-polite` | `奇麗です` |\n  | `n5-adjective-clean-polite-past` | `奇麗でした` |\n\n- **Assessment:** Each addition fits the literal blank, requested construction, polarity/register and full sentence. The earlier accepted forms remain. Displayed models and distractors remain appropriate; spellings were not turned into redundant semantic choice buttons or separate construction targets. They introduce no harder required grammar.\n- **Source handling:** The two added records identify Digital Daijisen's まで【迄】 sense 1 and きれい【綺麗／奇麗】 sense 4, explicitly attributing inspection to the independent reviewer and N5FI-F03. This accurately carries forward my initial inspection, including the unrelated-album extraction caveat. It does not falsely claim a new author retrieval or equal spelling frequency.\n- **Confidence:** High. No remaining remedy required.\n\n### N5FI-O01 — Resolved, originally optional\n\n- **Original status/facet:** Nonblocking practice-description calibration.\n- **Revised location:** `articles\\japanese-requests-permission-and-rules.md:99-101`.\n- **Evidence:** The passage now describes requested formation and classification of supplied utterances/register, and explicitly says these do not demonstrate independently selecting a message in an unprompted conversation.\n- **Assessment:** This accurately describes the set's 14 controlled formation and eight recognition tasks without demanding new exercises or a transfer quota.\n- **Confidence:** High.\n\n### N5FI-O02 — Resolved, originally optional\n\n- **Original status/facet:** Nonblocking context-specific lexical gloss polish.\n- **Revised locations:** `n5-verb-te-swim` and the related `n5-time-medicine-before`.\n- **Evidence:** 飲みます now has `gloss: \"drink\"` with 水 in the swimming sentence, and `gloss: \"take medicine\"` with 薬 in the before-eating sentence. Both retain reading のみます and headword 飲む.\n- **Assessment:** The split is semantically appropriate in both complete contexts. The water annotation remains at code-point span 9–13, and the medicine annotation at 7–11, matching the unchanged visible 飲みます. Neither gloss supplies the missing 泳いで or 食べる前に. The medicine change is a directly related refinement, not an unrelated content expansion.\n- **Confidence:** High.\n\n## Regression and annotation/context observations\n\n- The 37-object reread established that the changes remain limited in substantive effect to 30 instruction-reading additions, five expanded spelling lists, and two context-specific glosses. The full unchanged option/rationale and explanation paths still agree with the revised instructions and answers.\n- The two new article passages are consistent with their surrounding formation and register explanations. No misleading new tense, politeness, attachment, or practice-coverage claim was found.\n- The existing prompt spans and exclusions remain semantically aligned. Interpretation predicates and grammar targets remain protected; additional label readings were placed in instructions rather than in a selective answer hint. No new canonical word-card reference was introduced.\n- All changed inventory records read remain marked reviewed. This report checks annotation meaning and fit against the revised complete context; it does not substitute for the parent's machine verification of context/vocabulary fingerprints.\n- The source comparison changes only `sources`, `snapshot`, and `independentReview`. The 71 anchors, complete-task classifications, explanation-only boundaries, and underlying practice accounting remain the material assessed initially.\n- The exact content diff contains no changes to levels, options, targets, relationships, or introduction groups. Broader baseline preservation remains the parent's independent check.\n\n## New findings\n\n**None established.** No remaining actionable issue or consequential unresolved claim in this bounded reconciliation.\n\n## Optional\n\nNo new optional request. Both original optional suggestions were adopted and resolved without being retrospectively promoted to blocking findings.\n\n## Limits\n\n- This is a same-reviewer composite reconciliation, not a second comprehensive audit of unchanged content or an independent second-model opinion.\n- The original inspected teaching and dictionary evidence remains the basis for the resolved linguistic claims; no new live-source retrieval was necessary or claimed.\n- Validators, real Android import, manifest/SRS behavior, automated vocabulary fingerprint verification, and broad baseline preservation were not rerun. The snapshot/object identity checks above only bind this review to the supplied frozen revision.\n- No claim of exhaustive paraphrase/spelling coverage, official JLPT syllabus completeness, native-speaker certification, or unscaffolded learner mastery.\n\nThe bounded reconciliation is complete. All five original IDs are resolved at the revised snapshot identified above.\n"
+      },
+      "limits": "Composite bounded review, not a second comprehensive audit or a second-model opinion. No native certification, official syllabus claim or unscaffolded mastery claim."
+    }
+  },
+  "reflection": {
+    "status": "complete",
+    "usefulness": "Independent review exposed a missing productive prerequisite, a typed-mode response-support gap, and missed valid spellings despite correct displayed Japanese. Two optional changes clarified scaffolding and contextual glosses.",
+    "maintenance": [
+      {
+        "action": "add",
+        "file": "REVIEW.md",
+        "evidence": "N5FI-F02",
+        "lesson": "Give question-side kana readings for every unfamiliar Japanese interpretation label, without answer-dependent ordering."
+      },
+      {
+        "action": "regroup",
+        "file": "REVIEW.md",
+        "evidence": "N5FI-F01 and CR-O02",
+        "lesson": "Extend the existing productive-operation lesson from exercise instructions to article prerequisites such as godan stem formation."
+      },
+      {
+        "action": "retain-without-duplication",
+        "file": "REVIEW.md",
+        "evidence": "N5FI-F03, N5FI-O01, N5FI-O02",
+        "lesson": "The existing spelling-recognition, transfer-accounting and context-specific-gloss rules already apply; the findings do not justify duplicate process."
+      }
+    ],
+    "modelComparison": "None; one independent reviewer with an unavailable runtime model ID."
+  },
+  "integration": {
+    "verifiedAt": "2026-10-22T18:39:19.814029+00:00",
+    "baselineCommit": "c7ad52870843aece0b605e69af833c053a93d5cd",
+    "contentVersion": "aea8964021b7fadb",
+    "unchangedExistingExerciseObjects": 721,
+    "unchangedExistingVocabularyRecords": 721,
+    "unchangedCaches": 5,
+    "runtimeAdditions": [
+      "articles/japanese-actions-states-and-time.md",
+      "articles/japanese-adjective-foundations.md",
+      "articles/japanese-requests-permission-and-rules.md",
+      "articles/japanese-verb-foundations.md",
+      "grammar/n5-actions-time.json",
+      "grammar/n5-adjective-foundations.json",
+      "grammar/n5-foundation-connections.json",
+      "grammar/n5-foundation-particles.json",
+      "grammar/n5-requests-rules.json",
+      "grammar/n5-verb-foundations.json"
+    ],
+    "runtimeUpdates": [
+      "articles/japanese-listing-and-examples.md",
+      "articles/japanese-nouns-and-basic-particles.md",
+      "grammar/formal-nouns-comparisons.json"
+    ],
+    "currentLevels": {
+      "1": 4,
+      "2": 102,
+      "3": 235,
+      "4": 210,
+      "5": 295
+    },
+    "newExercises": 125,
+    "interpretationTasksWithQuestionSideLabelReadings": 34,
+    "reviewedSpellingRenderingsAdded": 8,
+    "acceptedRenderings": 328,
+    "baseOptions": 331,
+    "lexicalSpans": 246,
+    "groups": 16,
+    "facets": 51,
+    "realAndroidImporter": {
+      "name": "io.github.stopcran.kanji.core.ContentTest",
+      "tests": "1",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-10-22T18:36:20.063Z",
+      "time": "1.685",
+      "xmlSha256": "e8b175eeac9accf12279386cd4c218cdc2f61b1c29e26227003ee022db132dcb"
+    },
+    "checks": [
+      "python -X utf8 -B tools\\validate.py",
+      "python -X utf8 -B tools\\grammar_vocabulary.py check",
+      "python -X utf8 -B tools\\build_manifest.py",
+      "gradlew.bat --console=plain --quiet :app:testDebugUnitTest --tests io.github.stopcran.kanji.core.ContentTest.parsesRealContentRepoWhenPresent --rerun-tasks"
+    ]
+  }
+}

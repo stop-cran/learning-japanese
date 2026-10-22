@@ -114,7 +114,8 @@ identity and applicable senses, not a modern examination assignment or the natur
 Use [Bunpro's grammar library](https://bunpro.jp/grammar_points) as the primary level reference, with
 [JLPT Sensei's grammar lists](https://jlptsensei.com/jlpt-n5-grammar-list/) for secondary comparisons. These are study curricula, not official
 examination specifications. The [grammar classification record](grammar-jlpt-sources.json) preserves the inspected index
-URLs, retrieval dates, source hashes, selected entries, secondary comparisons and the decision for every existing exercise.
+URLs, retrieval dates, source hashes, selected entries, secondary comparisons and the decision for the original 721 exercises.
+The [N5 foundations ledger](grammar-n5-foundations-sources.json) records the subsequent 125 exercises and their complete-task mappings.
 
 **Classify grammar, not vocabulary or kanji.** Use the construction and substantive contrast needed for the complete
 visible task. Keep natural examples; unfamiliar words should be supported by readings, glosses and translations rather
@@ -147,16 +148,21 @@ metadata pass; the source record identifies it as author classification, not ind
 
 ### Current classified practice
 
-The 2026-10-22 pass classifies all **721 exercises in 40 sets**: **170 N5, 210 N4, 235 N3, 102 N2 and four N1**.
+The original 2026-10-22 pass classified 721 exercises in 40 sets. With the 125 N5 foundations additions, current
+practice has **846 exercises in 46 sets**: **295 N5, 210 N4, 235 N3, 102 N2 and four N1**.
 The original 19 pilot labels are unchanged. No exercise remains unclassified in this snapshot, but omission remains the
 correct representation for future unresolved cases. These counts are coverage of our existing exercises, not coverage
 of every grammar item in any level's curriculum.
 
 | Linked article | N5 | N4 | N3 | N2 | N1 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| [Nouns and basic particles](../articles/japanese-nouns-and-basic-particles.md) | 61 | 3 | 0 | 0 | 0 |
+| [Verb foundations](../articles/japanese-verb-foundations.md) | 41 | 0 | 0 | 0 | 0 |
+| [Adjective foundations](../articles/japanese-adjective-foundations.md) | 22 | 0 | 0 | 0 | 0 |
+| [Actions, states and time](../articles/japanese-actions-states-and-time.md) | 24 | 0 | 0 | 0 | 0 |
+| [Requests, permission and rules](../articles/japanese-requests-permission-and-rules.md) | 22 | 0 | 0 | 0 | 0 |
+| [Nouns and basic particles](../articles/japanese-nouns-and-basic-particles.md) | 73 | 3 | 0 | 0 | 0 |
 | [Topic, contrast and inclusion](../articles/wa-ga-mo-topic-and-inclusion.md) | 36 | 0 | 0 | 0 | 0 |
-| [Listing and examples](../articles/japanese-listing-and-examples.md) | 19 | 17 | 0 | 0 | 0 |
+| [Listing and examples](../articles/japanese-listing-and-examples.md) | 23 | 17 | 0 | 0 | 0 |
 | [Restriction and unexpected inclusion](../articles/only-and-unexpected-inclusion.md) | 15 | 25 | 10 | 0 | 0 |
 | [Compound relations](../articles/about-targets-and-perspectives.md) | 8 | 2 | 38 | 0 | 0 |
 | [Conditionals](../articles/japanese-conditionals.md) | 2 | 58 | 0 | 0 | 0 |

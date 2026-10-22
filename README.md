@@ -8,6 +8,10 @@ This repository starts as a collection of standalone articles prompted by specif
 
 | Area | Article | Main question |
 | --- | --- | --- |
+| Grammar | [Japanese verb foundations](articles/japanese-verb-foundations.md) | How do plain/polite, nonpast/past, negative and て forms work, including important exceptions? |
+| Grammar | [Japanese adjective foundations](articles/japanese-adjective-foundations.md) | How do い／な adjectives and noun predicates change with time, negation and politeness? |
+| Grammar | [Japanese actions, states and time](articles/japanese-actions-states-and-time.md) | When does ている describe an action, a result or a routine, and how do basic temporal patterns differ? |
+| Grammar | [Japanese requests, permission and rules](articles/japanese-requests-permission-and-rules.md) | How do requests, permission, prohibition and obligation differ, including common contractions? |
 | Grammar | [Koto, wake, and Japanese noun-based grammar](articles/koto-wake-and-formal-nouns.md) | How do こと and わけ differ, which common formal nouns and noun-based expressions are useful to know, and where do の/ん and ほど fit? |
 | Grammar | [Japanese verb extensions: direction and aspect](articles/verb-extensions-direction-and-aspect.md) | How do ～ていく, ～てくる, ～ておく, ～込む, and related constructions express direction, continuation, and completion? |
 | Grammar | [Japanese conditionals: たら, ば, なら, と, and 場合](articles/japanese-conditionals.md) | How do conditions, premises, event order, discoveries, and procedural cases differ, and when can several patterns fit? |
@@ -27,6 +31,15 @@ This repository starts as a collection of standalone articles prompted by specif
 | Vocabulary | [Eating and drinking](articles/onomatopoeia-eating-and-drinking.md) | How do gulps, chewing, appetite, texture, and flavor differ? |
 | Vocabulary | [Body sensations and feelings](articles/onomatopoeia-body-and-feelings.md) | How do mimetics describe pain, excitement, disappointment, and attention without identifying their causes? |
 | Vocabulary | [Motion, voices, and everyday sounds](articles/onomatopoeia-motion-and-sound.md) | Which descriptions concern movement, sound, result, or manner, and where do they overlap? |
+
+## N5 grammar series
+
+The [N5 expansion series](https://github.com/stop-cran/learning-japanese/issues/16) begins with these four
+focused guides and supplements the existing noun/particle and listing material. Its
+[coverage and source ledger](docs/grammar-n5-foundations-sources.json) distinguishes new exercises,
+reused practice and explanation-only boundaries; it does not claim a complete official N5 syllabus.
+Later installments cover pointing/questions, noun descriptions, wants/plans/invitations, reasons/contrasts,
+comparisons/change, giving/receiving, and explanations/quotations. The higher-level desire comparison is a separate follow-up.
 
 ## Confusable vocabulary
 
@@ -76,12 +89,13 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   60 on たら／ば／なら／と／場合 conditionals in two batches, 26 on のに and related contrasts,
   36 on listing, examples and addition, 36 on は／が／も topic, contrast and inclusion,
   64 on basic nouns and particles, 50 on restriction and unexpected inclusion,
-  and 48 on compound relations and formal-noun contrasts (721 in total).
-  All 721 exercises have grammar-only study labels: **170 N5, 210 N4, 235 N3, 102 N2 and four N1**.
+  48 on compound relations and formal-noun contrasts, and 125 introductory N5 foundations exercises (846 in total).
+  All 846 exercises have grammar-only study labels: **295 N5, 210 N4, 235 N3, 102 N2 and four N1**.
   These are editorial estimates using Bunpro as the primary reference, with documented JLPT Sensei comparisons,
   not an official syllabus. Vocabulary and kanji difficulty do not determine them; natural examples remain unchanged.
   See the [policy and per-article distribution](docs/jlpt-levels.md#grammar-baseline) and
-  [exercise-level source record](docs/grammar-jlpt-sources.json). Mixed-level articles are browsed through matching exercises.
+  [original classification record](docs/grammar-jlpt-sources.json) and
+  [N5 foundations ledger](docs/grammar-n5-foundations-sources.json). Mixed-level articles are browsed through matching exercises.
   Time practice includes うち, あいだ, とき, ころ, たび and shared とき／おり／さい occasion answers;
   shared alternatives are not independently contrasted targets.
   Purpose/cause practice adds ため, おかげ, せい, かわり and ついで, including compensating trade-offs.
@@ -188,7 +202,7 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   are identical. The Nのこと／Nであること contrast tests explicit nominalization, not disjoint possible conversation topics.
   All 60 conditional, 26 のに, 36 listing, 36 topic, 64 basic-particle, 50 restriction/inclusion and 48 compound-relation
   prompts have reviewed vocabulary coverage; pure grammar prompts deliberately have no lexical hints.
-  Total author-reviewed coverage is **324/721**,
+  Total author-reviewed coverage is **449/846** after the 125 N5 foundations prompts,
   with the original 397 still pending. The のに source record keeps author and independent review snapshots separate;
   the unsettled causal-past expectation card was retired in favor of a current timetable-based preparation example.
   The topic article and exercise set have independent `gpt-6-astra` and `claude-opus-5.5` reviews, followed by

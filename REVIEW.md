@@ -35,6 +35,52 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## N5 foundations: independent review and reconciliation (2026-10-22)
+
+**Snapshot and scope:** `c7ad52870843aece0b605e69af833c053a93d5cd` plus installment 1 under
+[issue #16](https://github.com/stop-cran/learning-japanese/issues/16): four complete entry articles,
+two existing-article supplements and all 125 new exercises. The
+[source and coverage ledger](docs/grammar-n5-foundations-sources.json) pins the initial/revised content hashes,
+all 71 assigned primary anchors, full initial and reconciliation reports, exact diff/packet hashes,
+classification decisions and integration evidence. One independent reviewer covered correctness, scoped coverage
+and comprehensibility; its actual runtime model ID was unavailable. No model comparison is claimed.
+
+| Initial observation | Reconciled disposition |
+| --- | --- |
+| N5FI-F01, Minor: the verb article defined a ます-stem without the general godan formation operation | Resolved: added the u-row to i-row rule, useful examples, and the ichidan/irregular contrast. |
+| N5FI-F02, Minor: 30 interpretation instructions omitted response-label readings | Resolved: every alternative now has question-side kana, preserving answer-independent ordering. |
+| N5FI-F03, Minor: five typed-answer classes omitted recognized 迄／奇麗 spellings | Resolved: eight renderings added; existing answers, models and options retained. |
+| N5FI-O01/O02, optional: practice-description and lexical-gloss precision | Adopted: describe scaffolded formation/recognition accurately; split the water/medicine meanings of 飲みます. |
+
+**Same-reviewer reconciliation:** the original reviewer read both revised article passages, the entire exact diff
+and all 37 complete changed exercise objects. The initial review is explicitly carried forward for the other
+88 objects and unchanged teaching/metadata. Correctness, scoped coverage and comprehensibility are now
+**CLEAN within this composite scope**, with no new actionable defect or consequential unresolved claim.
+Initial NEEDS FIX verdicts remain attached to their original snapshot.
+
+**Preservation and integration:** all 125 prompts, identities, choices, targets, levels and group metadata survive
+the fixes. The final exercises have 328 accepted renderings, 331 base options and 246 lexical spans. All 721
+previous exercise objects and vocabulary records are preserved. Six old advice exercises remain in their
+own file and acquire one local group, recommended from the new rules practice. There are 16 new groups
+with 51 facets, six soft recommendations and no hard prerequisites.
+Current totals are **846 exercises in 46 sets**, including **295 N5**, and **449/846** vocabulary-reviewed
+prompts; all 397 old pending records remain pending and the stage remains `pilot`.
+Content and vocabulary checks, deterministic manifest `aea8964021b7fadb`, and a freshly executed real Android
+importer pass; the importer XML contains one test with zero skips, failures or errors. Other runtime assets
+and unrelated caches are preserved. These parent integration checks are separate from linguistic review.
+
+**Reflection and instruction maintenance:** add question-side response-label readings as an explicit check;
+regroup the existing productive-operation lesson to cover article prerequisites as well as drill instructions.
+Retain the existing spelling-recognition, transfer-accounting and contextual-gloss guidance rather than duplicate
+it. The independent pass was useful for learner interaction and a missing prerequisite, not evidence that
+the displayed Japanese was generally incorrect.
+
+**Limits:** the 87 formation, 34 interpretation and four contextual predicate-selection tasks remain scaffolded
+by English meanings and visible restrictions. Negative experience, broader ている inflection and contraction
+production are explained rather than independently produced in this installment. The ledger distinguishes
+those boundaries from newly practised and reused material. No complete official syllabus, mastery, native
+certification, second-model opinion, app/schema/SRS change, APK or phone check is claimed.
+
 ## Compound relations: independent review and reconciliation (2026-10-22)
 
 **Snapshots:** `75f7f55ce7a7de27f9be4477eb39aeac526d8a56` plus the local article and exercises.
@@ -430,6 +476,20 @@ The [compound-relation review](docs/grammar-compound-relations-sources.json) add
 - **Name the operation in a scaffolded drill.** A named pattern can support a useful attachment or form conversion;
   printing its exact missing fragment mostly supports copying. Preserve fair visible restrictions while requiring
   a small operation, and do not describe the result as unrestricted mastery (CR-O02).
+  The [N5 foundations review](docs/grammar-n5-foundations-sources.json) extends this to prerequisite explanations:
+  defining a ます-stem from an already-inflected example does not teach the productive godan u-row to i-row
+  operation needed to form it from a dictionary verb (N5FI-F01; regroup).
+
+The [N5 foundations review](docs/grammar-n5-foundations-sources.json) adds one response-support check:
+
+- **Make interpretation labels enterable before answering.** Supply kana readings as well as meanings for every
+  unfamiliar Japanese response label in the question-side instructions, retaining answer-independent ordering.
+  Kana strings hidden in `acceptedAnswers` do not help a learner enter the label using an ordinary IME
+  (N5FI-F02; add). This supports the response interface without revealing which interpretation is correct.
+
+The same review's 迄／奇麗 omissions reinforce the existing spelling-recognition lesson (N5FI-F03); no duplicate
+rule is added. Its practice-description and local-gloss refinements apply the existing transfer-accounting and
+context-specific-vocabulary guidance rather than introducing new process.
 
 ## のに article and initial exercises (2026-10-21)
 

@@ -165,6 +165,16 @@ For ordinary existence/location statements:
 The examples use their polite forms, います and あります.
 In each sentence, に marks the location and が marks what is there.
 
+For ordinary **negation**, use いません／いない for a person or animal and ありません／ない for a thing.
+先生は教室にいません（せんせいはきょうしつにいません） means "The teacher is not in the classroom";
+部屋に机はありません（へやにつくえはありません） means "There is no desk in the room."
+The topic or contrast particle は does not change the underlying choice of existence predicate.
+Plants ordinarily take ある: 庭に花があります（にわにはながあります）, "There are flowers in the garden."
+"Biologically alive versus not alive" is therefore an unreliable complete rule.
+The [verb foundations](japanese-verb-foundations.md#make-the-negative-carefully) explain why the ordinary plain negative
+of ある is ない, not あらない. The [adjective/noun bridge](japanese-adjective-foundations.md#a-noun-predicate-bridge)
+adds noun-predicate past negatives such as 学生ではなかった; that is a different pattern from absence with いない.
+
 ### Locating an activity or event
 
 > 公園で遊びます。  
@@ -295,6 +305,13 @@ Possession is one possible relationship, not the whole meaning:
 
 The words and context supply the particular relationship. の does not secretly mean "owns" in every row.
 
+Spatial nouns use the same inner linking pattern: **机の上**（つくえのうえ）, "on top of the desk,"
+**銀行の後ろ**（ぎんこうのうしろ）, "behind the bank," and **学校の外**（がっこうのそと）,
+"outside the school." Add a particle for the whole phrase's role:
+机の上に本があります, "There is a book on the desk," but 学校の外で待ちます,
+"I wait outside the school." の builds the phrase; に or で relates it to the predicate.
+Here 待ちます is まちます, "wait."
+
 The whole expression can then take another particle:
 
 > 学校の先生が来ます。  
@@ -417,6 +434,8 @@ that must be memorized before using these basic sentences.
   and preference/desire patterns require their own treatment.
 - [JMdict via Jisho: ある](https://jisho.org/search/ある): existence/location and an event happening
   are distinct senses; the exact sense matters when selecting the surrounding pattern.
+- [Tofugu: いる and ある](https://www.tofugu.com/japanese-grammar/iru-aru/): ordinary existence forms,
+  negatives and why plants still normally take ある.
 
 Teaching metaphors such as a "pin," an "arrow," or a "label" can help, but they do not establish an
 unrestricted substitution rule. The examples here are original teaching material using supported patterns,

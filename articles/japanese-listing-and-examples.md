@@ -337,6 +337,10 @@ Adjectives and noun predicates also connect:
 **医者（いしゃ）** means doctor; **教師（きょうし）** means teacher.
 The adjective **いい**, "good," uses **よくて**, not **いくて**.
 These are basic affirmative connections, not the full positive/negative conjugation system.
+For those foundations, use the [verb-form tables](japanese-verb-foundations.md) and
+[adjective/noun-predicate tables](japanese-adjective-foundations.md).
+The introductory connection exercises add ordinary verb-て and noun-predicate-で examples without replacing the
+existing たり, し, or adjective-connection practice.
 
 Quietness and brightness are simultaneous properties here, not successive events.
 Connections with て can also express reasons and other relationships. Treating て as the "closed-list version of たり"

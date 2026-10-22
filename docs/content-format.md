@@ -228,8 +228,10 @@ in contributor source records, and leave unestablished cases unclassified. Follo
 [grammar baseline](jlpt-levels.md#grammar-baseline): Bunpro primary, JLPT Sensei secondary, with documented scope differences
 and disagreements rather than vocabulary-derived or guessed levels.
 
-The [corpus classification record](grammar-jlpt-sources.json) covers all 721 exercises in 40 sets: 170 N5, 210 N4,
-235 N3, 102 N2 and four N1, with none unclassified in this snapshot. Mixed-level articles derive their browsing levels from
+The [original corpus classification record](grammar-jlpt-sources.json) covers its 721-exercise baseline in 40 sets:
+170 N5, 210 N4, 235 N3, 102 N2 and four N1, with none unclassified in that snapshot.
+The [N5 foundations ledger](grammar-n5-foundations-sources.json) adds 125 N5 tasks in six sets, bringing current practice
+to 846 exercises: 295 N5, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -290,8 +292,12 @@ The basic-noun/particle set adds 64, bringing that snapshot to 623 exercises in 
 and vocabulary coverage to 226/623. The restriction/inclusion follow-up initially added 48, reaching 671 exercises
 and vocabulary coverage of 274/671. Two review-driven transfer questions bring that snapshot
 to 673 exercises in 39 files and vocabulary coverage to 276/673.
-The compound-relation follow-up adds 48, bringing the current corpus to **721 exercises in 40 files**
+The compound-relation follow-up adds 48, bringing that snapshot to **721 exercises in 40 files**
 and vocabulary coverage to **324/721**.
+The N5 foundations installment adds 125 annotated prompts, reaching **846 exercises in 46 files** and
+vocabulary coverage of **449/846**. Its local glosses deliberately omit unverified canonical word-card identities.
+Six existing advice tasks retain their objects and owning file; a local introduction group makes them available
+as a recommendation from requests/rules, without copying tasks into another set.
 All 397 original pending records remain pending,
 the baseline revision stays unchanged, and the inventory remains at `stage: "pilot"`. The first 30 subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
