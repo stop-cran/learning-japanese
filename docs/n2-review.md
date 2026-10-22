@@ -933,7 +933,7 @@ remains in the revised scope.
 
 Cards: 査 栄 根 械 棒 森 植 極 橋 欧 武 歴 殿 毒 比.
 
-Status: **initial reviews reconciled; changed-passage confirmation pending**. Scope: all 15 new kanji and four supporting articles,
+Status: **four-page corrections confirmed; final direct-exclusion confirmation pending**. Scope: all 15 new kanji and four supporting articles,
 栄える, 極める, 欧州 and 御殿; all three review facets and 45 curated distractor assignments.
 Related edits: component links in 21 existing word articles, with lexical metadata and teaching text preserved.
 
@@ -964,7 +964,7 @@ These selected records are not the entire dictionary.
   or きめる to the new きわめる article.
 - Supporting vocabulary has no inferred JLPT labels. Direct quiz safeguards cover 栄える with 盛ん/豊か
   and 極める with 達する/至る; sentence patterns remain distinct despite contextual English overlap.
-  Revised safeguards additionally cover the written homographs: 栄える with 輝く/光る, and 極める with 決める.
+  Revised safeguards additionally cover the written homographs: 栄える with 輝く/光る, and 極める with 決める/選ぶ.
   欧州 and ヨーロッパ share the exact answer Europe, so the existing identical-title deduplication applies.
   No newly activated direct synonym was established among the remaining two-distractor legacy kanji.
 - All 19 new teaching pages were inspected by the author. Structural validation reports 0 errors;
@@ -997,4 +997,40 @@ the next started. Neither independently executed Git or the repository validatio
 The corrections affect four teaching pages: 栄 and 極 plus the two supporting verb articles.
 The selected 52 JMdict pairs, 14 complete families, all 46 reading rows, five source-only qualifications
 and all 45 curated kanji choices remain intact. One external character-reading-status record is added.
-Original reports are preserved unchanged. Changed-passage confirmations are still pending; the batch is not closed.
+Original reports are preserved unchanged.
+
+### Four-page correction confirmations
+
+Corrections are committed at `d47b7bcdf38197653989bf160bb744bd70b8fd51`. Each original reviewer resumed
+sequentially with its own report, the same clean checkpoint and the actual 101-line/six-hunk teaching/evidence
+diff. Both read the four revised pages and confirmed all three facets CLEAN without a regression.
+
+| Reviewer | Preserved report | Correctness | Scoped coverage | Comprehensibility |
+| --- | --- | --- | --- | --- |
+| GPT | [changed-passage confirmation](n2-reviews/batch-11-gpt-followup.md) | CLEAN | CLEAN | CLEAN |
+| Claude | [changed-passage confirmation](n2-reviews/batch-11-claude-followup.md) | CLEAN | CLEAN | CLEAN |
+
+B11-01, B11-02 and B11-03 are **resolved**, with calibration. Claude withdraws its overextended
+character-by-character ateji allocation, the inferred status of the derived 極 forms, and its low-score
+clearance of 極める/決める. GPT withdraws its initial assertion that no additional quiz exclusions were required.
+Both distinguish the written-form-only Japanese-to-English ambiguity from reverse choices that include readings;
+symmetric exclusions remain correct without claiming equal ambiguity in every presentation.
+
+The author verified zero validation errors, all 165 additions/502 exact reading rows, preservation of all
+52 selected pairs and character metadata, the exact ten-file correction scope, and a byte-identical repeated
+manifest (version `bcb443e33c2a17a9`). These are author checks, not independently executed reviewer tests.
+
+Claude's final optional suggestions were adjudicated separately:
+
+- **Adopted:** 極める/選ぶ. Pinned entry 1254180 explicitly includes "to choose" in the applicable きめる
+  sense, while 選ぶ's actual answer title is "choose". Its position among eleven glosses does not make the
+  direct written-homograph ambiguity irrelevant. This is an independent pair, not transitive propagation
+  through 決める.
+- **Not adopted:** 栄える/似合う. The latter's "suit; look good on" evaluates a wearer/item match, not
+  the mere shining or attractive appearance in the inspected はえる sense. No direct equivalent answer
+  was established; shared appearance subject matter alone is insufficient.
+- **Optional wording:** merging the two 極 status notes is nonblocking polish. One gives the character
+  reading table; the other documents the exact written 極まる boundary and its independent source.
+
+The additional 選ぶ exclusion changes only one metadata list in words/極める.md, with no new teaching prose.
+Final confirmation of that direct pair is pending; the batch is not closed yet.

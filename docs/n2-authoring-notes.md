@@ -152,7 +152,8 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   explanations are not evidence for either character's historical allocation.
 - A written-form-only meaning question can admit a homograph's other reading even when the article's
   primary reading is explicit. Batch 11 excludes 栄える from 輝く and 光る because its separate はえる
-  entry means shine; 極める excludes 決める because its separate きめる entry means decide or settle.
+  entry means shine; 極める excludes 決める and 選ぶ because its separate きめる entry includes decide,
+  settle and choose. An exact applicable gloss is not disqualified by being one of several glosses.
   Curate the direct ambiguity, not a supposedly permanent low candidate score. Exclusions are not transitive.
 - An isolated outside-Joyo marker can imply an unintended contrast with adjacent unmarked rows.
   Batch 11 gives Kanjipedia's actual 極 reading list and its explicit きめる/きまる outside-table marks
@@ -181,7 +182,8 @@ where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
 remaining defect in that scope; batch 06 required no teaching correction.
-Batch 11's initial independent reviews are preserved; four revised pages await changed-passage confirmation.
+Batch 11's initial reviews and four-page changed-passage confirmations are preserved; one final direct
+homograph exclusion awaits confirmation.
 The remaining 200 additions are not yet authored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
