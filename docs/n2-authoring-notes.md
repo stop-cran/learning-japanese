@@ -170,6 +170,15 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
 - New river character 河 activates 川's direct-synonym fallback, so batch 12 gives 川 a third
   curated wrong answer. The new 汚す word's English soil also needs a direct exclusion from the
   noun 土, despite their different parts of speech. Its 沈める counterpart directly excludes 沈む.
+- An idiom recommendation must not become a false grammatical ban. Batch 12's linked noun article
+  teaches 汗をかく, but the pinned dictionary also attests 汗する あせする. State the alternatives
+  without inventing a frequency ranking from an unflagged record.
+- Label a godan verb's 汚し form as its masu-stem, not its sole conjugation stem; 汚さない
+  uses another stem. Name an invoked homophone explicitly, as with 沈める versus 静める/鎮める.
+- English transitivity is not guaranteed by Japanese transitivity. Both soil and stain have intransitive
+  English uses, so 汚す directly excludes 汚れる; put up overnight can describe the guest's stay,
+  so 泊める's answer explicitly says put someone up. 沈める's separately applicable lower sense
+  also needs direct exclusions from 下げる, 下ろす and 降ろす, regardless of their mutual pairs.
 
 ## Review and checkpoint protocol
 
@@ -195,8 +204,8 @@ complementary issues, but also supplied unsupported frequency inferences and opt
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
 remaining defect in that scope; batch 06 required no teaching correction.
 Batch 11 also preserves a final narrow confirmation of the direct 極める/選ぶ homograph exclusion.
-Batch 12's 15 additional kanji and three supporting verb articles are authored but await independent review;
-185 additions remain unauthored. The new source-only qualifications have not yet received that review.
+Batch 12's 15 additional kanji and three supporting verb articles have independent initial reports;
+the reconciled corrections await changed-passage confirmations. Another 185 additions remain unauthored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.

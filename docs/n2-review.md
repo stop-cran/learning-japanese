@@ -1061,14 +1061,14 @@ Batch 11 is **closed**: 165 additions review-closed, 167 selected N2 cards prese
 
 Cards: 毛 氷 永 汗 汚 池 沈 河 沸 油 況 泉 泊 波 泥.
 
-Status: **authored; independent GPT/Claude reviews pending**. Scope: all 15 new kanji and three supporting articles,
+Status: **initial reviews reconciled; changed-passage confirmations pending**. Scope: all 15 new kanji and three supporting articles,
 汚す, 沈める and 泊める; all three review facets and 45 curated distractor assignments.
 Related edits: component links in 24 existing word articles, preserving their lexical metadata and teaching text,
 and a third curated wrong answer on legacy 川 to prevent the new 河 answer from filling its fallback slot.
 
 Evidence: [batch-12.json](n2-batch-sources/batch-12.json), with 48 exact reading rows:
 44 JMdict-backed lexical examples and four explicitly qualified source-only readings. The packet retains
-52 selected restriction-aware spelling/reading records. Sixteen inspected sensitive families additionally retain
+55 selected restriction-aware spelling/reading records, expanded from the initial 52. Eighteen inspected sensitive families additionally retain
 complete spelling/reading lists, spelling flags and reading restrictions, not every sense of the entire dictionary.
 
 ### Authored scope and checks
@@ -1096,15 +1096,51 @@ complete spelling/reading lists, spelling flags and reading restrictions, not ev
   the dated qualification, separate from 滞む's rare-spelling flag.
 - Supporting vocabulary has no inferred JLPT labels. Each new verb explains its object pattern,
   counterpart and conjugation. Direct quiz exclusions cover the bare English soil label with 土,
-  and the sinking labels of 沈める/沈む. Related meanings do not create transitive exclusion groups.
+  the intransitive English senses with 汚れる, and 沈める with 沈む/下げる/下ろす/降ろす.
+  泊める's answer explicitly says put someone up, not the potentially intransitive put up.
+  Related meanings do not create transitive exclusion groups.
 - All 18 new teaching pages were inspected by the author. Structural validation reports 0 errors;
   the accumulated source/stroke audit covers 180 additions and 550 exact reading rows, with 185 selected
   characters still unauthored. All 24 existing word articles match the preceding versions after removing
   only the new component links and normalizing CRLF. 川 differs only by its third distractor.
-  These author checks do not substitute for the pending independent reviews.
+  These author checks do not substitute for the independent reviews and pending correction confirmations.
 
-### Review status
+### Independent initial reviews and reconciliation
 
-Initial GPT and Claude reviews will use the same clean committed checkpoint, complete 18-page scope,
-related passages, rubric and evidence access. Each reviewer must run alone and exit before the next starts.
-The first eleven batches remain review-closed; these 15 additions are not yet claimed as reviewed.
+Both initial reviewers inspected the clean draft `dfe4fb06ebb16b9a224e63b56f23a787b8502880`,
+with the same 18-page scope, related passages, rubric and evidence access. The exact draft has 63 files.
+Each reviewer ran alone and exited before the next started, made no edits, and did not see the other report.
+Both read all 18 new pages completely; neither could execute Git or repository validation.
+
+- GPT, actual `gpt-6.1-sol`, session `e0de34e3-97df-4808-89ac-5ab4ad3c7526`:
+  [initial report](n2-reviews/batch-12-gpt-initial.md). Three minor quiz-label/exclusion findings;
+  all fifteen kanji pages CLEAN on all three facets.
+- Claude, actual `claude-opus-5.5`, session `5ca48cd3-9d17-4044-a56f-6787e1608703`:
+  [initial report](n2-reviews/batch-12-claude-initial.md). Three minor findings concerning 汗する,
+  the godan stem label and the unnamed しずめる homophone, plus optional wording and quiz observations.
+  Claude used the batch metadata but did not read the separate upstream source-snapshot document.
+
+| Observation | Evidence-based adjudication |
+| --- | --- |
+| GPT-01 and Claude optional 6, 汚す/汚れる | Direct exclusion adopted. The fetched American Heritage entries for soil and stain explicitly attest intransitive English uses. A Japanese transitivity distinction in the body does not remove those English-label ambiguities; unrelated legacy pairs are not a counterexample to the direct-safety contract. The existing 土 pair is retained separately. |
+| GPT-02, 沈める and lower | Direct exclusions adopted for 下げる, 下ろす and 降ろす. Pinned 1431680 sense 2 explicitly means lower one's body into a chair; all three actual neighboring titles include lower. Their article bodies preserve their own use/spelling distinctions, which do not remove the bare English-label ambiguity or make existing exclusions transitive. |
+| GPT-03, 泊める title | Adopted: lodge someone; put someone up overnight. Oxford's fetched put up entry distinguishes accommodating someone from the intransitive overnight-stay use. Making the object explicit removes that label ambiguity without claiming that 泊まる and 泊める are the same construction. |
+| Claude B12-01, 汗する | Wording corrected. The pinned JMdict entry 2463120 independently attests 汗する あせする as an intransitive suru-included verb. The card retains the linked article's 汗をかく pattern and names the alternative without an unsupported everyday-versus-rare ranking. |
+| Claude B12-02, 汚し stem | Corrected to masu-stem, with 汚します and the separate 汚さない negative. The godan conjugation explanation no longer implies that every form builds on 汚し. |
+| Claude B12-03, 沈める homophone | Adopted: explicitly name 静める/鎮める しずめる for quiet/calm, supported by pinned entry 1594280 senses 1-2. Its especially-鎮める notes on other senses are not projected into an exclusive rule. |
+| Claude optional 3-5, local wording | Adopted: 沈香's reading list, rather than spelling list; unambiguous seasonal 春 versus water-source 泉 wording; 況んや explicitly identified as an emphatic comparison, not a noun meaning situation. |
+| Other optional expansions | Not required: more voiced-ガ compounds, a fuller 油/脂 tendency, a 川→河 link and 浮かべる antonym. The current examples and direct distinctions already cover the assigned readings. English overlaps in larger fallback-driven quizzes are acknowledged, not claimed solved by three curated options; the older relevant cards already have three curated choices. Pre-existing 宿泊/泊まる metadata is outside this batch's scope. |
+
+The author's independent public-English checks used the actual fetched headwords:
+[soil](https://www.ahdictionary.com/word/search.html?q=soil),
+[stain](https://www.ahdictionary.com/word/search.html?q=stain) and
+[put up](https://www.oxfordlearnersdictionaries.com/definition/english/put-up).
+New Japanese evidence was extracted from the pinned dictionary, not reconstructed from generated search prose.
+The three additional pairs are 汗する あせする and 静める/鎮める しずめる; their two complete entry
+families bring the retained totals to 55 selected pairs and 18 complete spelling/reading families.
+All initial 52 records, 48 reading rows, four source-only qualifications and 45 kanji choices remain intact.
+
+The correction touches seven teaching pages: 汗, 沈, 況, 泉 and the three supporting verbs.
+Original reports are retained unchanged. Both original reviewers will receive the actual teaching/evidence diff
+and their own initial report for changed-passage confirmation, one short-lived process at a time.
+The first eleven batches remain review-closed; batch 12 is not yet closed.
