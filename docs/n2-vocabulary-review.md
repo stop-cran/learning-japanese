@@ -5,7 +5,7 @@
 **Batches 01-05 review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 100 rows are review-closed; none are drafted and 1,712 remain pending.
+The first 100 rows are review-closed; batch 06's 20 rows are drafted and 1,692 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -547,6 +547,38 @@ repeated manifest generation is deterministic at `a7c3668223ea557e`.
 Coverage is **100 closed, 0 draft, 1,712 pending, 0 unresolved**:
 87 new and twelve reused articles overall. The collection contains
 3,360 word articles; all twenty batch rows and the packet are closed.
+
+## Batch 06: N2:102-N2:121
+
+**Status:** authored draft; independent reviews and reconciliation pending.
+
+The twenty rows add **sixteen articles**: 浮かぶ, 浮かべる, 承る,
+受け取り, 受け持つ, 薄暗い, 薄める, 打ち合わせ, 打ち消す, 映す,
+写る, 映る, うどん, 有無, 敬う, 裏返す. Explicit spelling mappings are
+浮ぶ to 浮かぶ, 受取 to 受け取り, and 打合せ to 打ち合わせ.
+The existing 浮く, うっかり and 埋める gain sourced N2 labels;
+討つ already covers its source row and retains N3 unchanged.
+No existing identity, reading, title or exclusion list changes.
+The collection now contains 3,376 word articles.
+
+The [evidence packet](n2-vocabulary-batch-sources/batch-06.json) retains
+all original rows, complete main and comparison families, selected senses,
+component records and actual external inspections. The actual Daijisen
+受取 entry supports a written receipt as well as receiving; its unrelated
+reading and failed search-generated URLs are not evidence for this noun.
+Seisenban supports the humble uses of 承る.
+Official 異字同訓 entry 025, printed page 8, supports the practical
+recording/display distinction and explicitly admits overlapping camera
+contexts. The encyclopedia's Chinese-derived name history supports
+うどん's grouping, not invented modern character readings.
+
+Five new reciprocal N2 pairs are 承/承る, 薄/薄暗い, 薄/薄める,
+敬/敬う and 裏/裏返す. Existing N3 浮 gains useful linked examples;
+会議 and 写す gain narrow word-comparison links.
+埋/埋める was already reciprocal. Direct exclusions were assessed
+against actual English labels and complete entries, including receiving,
+floating, responsibility, image, respect and sound-negation uses.
+These twenty rows remain draft until the independent review loop closes.
 
 ## Final verification
 

@@ -184,3 +184,13 @@ evidence and learning impact; issue creation requires authorization.
   meaning. Actual manufacturer and printing-dictionary pages support consumer
   インク versus printing-industry インキ labels; they do not establish a
   composition boundary, universal substitution ban or measured frequency.
+- **Batch 06 authoring:** A historical Chinese-derived name can justify a
+  kana headword's grouping without inventing modern per-character readings.
+  For うどん, distinguish lexical name history from a comprehensive claim
+  about the dish's ancestry. Keep `kanji: []` for the actual kana headword,
+  while recognizing rare 饂飩 and outdated うんどん explicitly.
+- **Batch 06 authoring:** Official spelling guidance can expressly allow
+  overlap rather than partitioning homophones by medium. 異字同訓 entry 025
+  contrasts image recording with reproduction/display and allows 映る for
+  playback and simultaneous live displays. Keep that viewpoint distinction
+  instead of imposing an absolute photograph-versus-video boundary.
