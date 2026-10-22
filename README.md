@@ -36,7 +36,7 @@ Kanji cards, word articles and stroke data feed the [Ensō Nihongo Android app](
 format is described in [docs/content-format.md](docs/content-format.md); data sources are in [NOTICE.md](NOTICE.md).
 
 - `kanji/` – one card per kanji (985): meaning, radical, readings, common words, and origin notes or explicitly labelled modern-shape mnemonics.
-  The deck covers all 79 N5, 166 N4 and 367 N3 kanji in the selected [kanjiapi.dev](https://kanjiapi.dev) community sets.
+  The deck covers all 79 N5, 166 N4, 367 N3 and 367 N2 kanji in the selected [kanjiapi.dev](https://kanjiapi.dev) community sets.
   It also includes 分 as a documented N5 exception and five N1 article-subject additions:
   80 N5, 166 N4, 367 N3, 367 N2 and five N1. The [N2 expansion](docs/n2-review.md) added 365 cards
   to the two existing N2 cards in twenty-four 15-card batches and a final five-card batch.

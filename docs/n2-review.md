@@ -3204,3 +3204,102 @@ cumulative batch scope is 27 files. All 365 selected additions have
 now completed independent GPT/Claude review and reconciliation.
 No selected character remains to be authored. Final project-wide
 coverage and preservation verification follows; nothing is pushed.
+
+## Final project verification and completion
+
+**Complete:** the deck contains exactly the 367 N2 characters in the
+pinned [community source set](n2-source-snapshot.json), not merely
+the same count. The existing 珍 and 短 cards are unchanged and are
+not claimed as newly reviewed. All 365 additions are review-closed.
+This is community-list coverage, not an official JLPT syllabus.
+
+The final author-run audit used content snapshot
+`fb22ad4e2978c83967b910567fb15b3c9bf3bddd` against original baseline
+`7a92dde23107173af8aabef51971dbc66b754a93`. The closing documentation
+does not change the app payload.
+
+| Check | Final result |
+| --- | --- |
+| New kanji and matching stroke files | 365 pairs, in 25 batches |
+| New supporting word articles | 63; no inferred vocabulary JLPT labels |
+| Total deck | 985 kanji and 3,273 word articles |
+| Exact Japanese source-reading rows | 1,073: 976 lexical-example rows and 97 explicitly qualified source-only rows |
+| Public batch source records | 25 packets; 1,537 selected JMdict records including repeats between packets |
+| Distinct lexical evidence | 1,454 entry/spelling/reading records, 1,452 spelling/reading pairs, 1,372 JMdict entries |
+| Independent archived reviews | 114: 50 initial, 48 follow-up, 12 final and four additional confirmation reports |
+| Validator | Zero errors |
+| Manifest | Two rebuilds byte-identical to the committed payload |
+
+The compressed dictionary downloads, decompressed XML, community-list
+download and Unicode radical mapping match the public snapshot hashes.
+The final audit re-extracted every published selected JMdict record
+from that pinned XML, respecting reading/spelling/sense restrictions,
+kana-only entries, inherited parts of speech and optional
+cross-references. Every supplied source field matches. Complete-family
+fields are compared where published; earlier selected-record packets
+are not retroactively described as complete-family evidence.
+KANJIDIC2 metadata was also re-extracted, excluding nanori, and matched
+against all 365 new cards and packets. The 97 source-only rows remain
+qualified lookup information, not recommendations for ordinary use.
+
+Both initial families identify the same committed snapshot for every
+batch. Each new kanji appears in both initial reports; each supporting
+word has matching lexical evidence and same-batch dual-model coverage.
+All 114 reports are linked in this ledger. Batch 06 needed no
+correction and therefore has only its two initial reports; additional
+confirmation rounds elsewhere account for the other stage counts.
+The reports, dispositions and later confirmations remain separate:
+initial CLEAN verdicts and initial findings were not rewritten to
+describe corrected content.
+
+### Preservation and bounded exceptions
+
+Relative to the original baseline, 1,395 files differ. No files were
+deleted or renamed, no repository tooling changed, and original stroke
+files are unchanged. The converter is unchanged and matches its pinned
+normalized hash. All 365 new stroke files name KanjiVG revision
+`70a0b7ae0c18ceb5cb358274b029cce0234a43bc`, use the source coordinate
+space and retain sixteen sampled points per stroke. This checks
+provenance and structure, not a fresh regeneration or visual audit of
+every upstream path.
+
+Thirteen existing kanji receive only a third curated wrong answer:
+上, 下, 中, 分, 大, 小, 川, 年, 木, 毎, 水, 火 and 長.
+Their other metadata and teaching text are preserved, allowing
+line-ending normalization and trailing blank-line differences.
+These changes address new semantic fallback collisions in the default
+four-choice quiz; they are not broad rewrites of existing cards.
+
+All 443 modified existing word articles retain their exact metadata:
+identities, primary readings, titles, vocabulary levels and quiz
+settings are unchanged. Of those, 441 change links only. The two
+documented teaching-text exceptions are 汗's removal of a false
+prohibition on 汗する, with its verified dictionary citation, and
+野菜's removal of the now-stale claim that 菜 has no card.
+Both were reviewed in their respective batches. No other nonlink
+teaching change was found after line-ending/EOF normalization.
+
+The 63 new words declare 224 distinct direct quiz-exclusion pairs.
+Those safeguards are pairwise, not transitive and not exhaustive.
+All new kanji have three curated distractors; twelve older two-choice
+targets remain after the documented safeguards. Larger quizzes,
+different app behavior or future additions can require new curation.
+
+### Final payload and limits
+
+The final manifest has contentVersion `6fc7220274c1cc12`, SHA256
+`f92eed3d3a51639477277a23d71e3e550a05c99dd75df24bd11a3df13ba99f9c`.
+The repository validator and the complete 365-card/1,073-row audit pass.
+All 82 commits through the audited content snapshot have author and
+committer `stop-cran`; the closing record uses the same identity.
+Work was committed batch by batch. Nothing was pushed and no PR was
+opened.
+
+All actionable findings are reconciled within their recorded scopes;
+optional suggestions and evidential limits remain visible. The final
+source/preservation audit is an author-run check, not another linguistic
+review. Neither it nor the independent reports certifies native-speaker
+naturalness, corpus frequency, every historical derivation, exhaustive
+stroke geometry or live-app quiz behavior. Existing 珍/短 teaching
+content and unrelated legacy articles have not acquired a new
+comprehensive-review claim merely because the selected set is complete.

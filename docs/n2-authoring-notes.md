@@ -937,3 +937,47 @@ wording catch and no GPT-only finding; it is complementary evidence
 for this sample, not a general model ranking or proof of eliminated
 bias. Unchanged-card verdicts come from the initial full-batch
 reviews, not from the bounded confirmations.
+
+## Completion and bounded model-usefulness summary
+
+All 25 batches are review-closed. The pinned community N2 set has
+367 cards: 365 additions plus unchanged 珍 and 短. There are also
+63 new supporting word articles. The final source audit matches all
+1,073 source-reading rows and all published selected dictionary fields
+to the hash-verified inputs. The [completion record](n2-review.md#final-project-verification-and-completion)
+details preservation, narrow legacy exceptions and remaining limits.
+
+Using both model families was useful in this work. In the matched,
+blind pilot reviews, GPT alone established 仲/中's secondary-meaning
+quiz collision, while Claude alone supplied the missing 胡乱 example
+for 乱's ロン. In batch 02, GPT alone identified サイン's applicable
+secondary sign/indication sense, while Claude alone caught the missing
+億万長者 kana. Shared observations also improved spelling
+qualifications and context. These comparisons include optional
+suggestions and limits as well as labelled findings; a different
+severity label does not create a unique discovery.
+
+Later confirmation rounds sometimes caught defects missed by both
+initial passes. Those are useful later catches, not blind
+initial-review wins. The final batch's Claude-only opaque-wording
+finding is a small, independently confirmed contribution, not evidence
+that one model is generally superior. The reports also contain
+unsupported frequency inferences and optional expansions; adjudicating
+against exact dictionary entries was essential. Model agreement did
+not replace evidence, and disagreement did not automatically justify
+a change.
+
+The archive contains 114 reports, including 50 initial reports with
+the same snapshot, scope, rubric and source access within each batch.
+Review processes ran sequentially and exited before the next started;
+original contexts were resumed for corrections instead of maintaining
+a pool of live agents. This respected the memory constraint without
+giving either initial reviewer the other's conclusions or the author's
+adjudication.
+
+This is qualitative evidence of complementary error detection in this
+collection, not a controlled benchmark, a measured learning outcome,
+an exhaustive linguistic guarantee or proof that model bias was
+eliminated. Retain the sources, preserved reports and dispositions so
+future corrections can build on concrete evidence rather than treating
+any frozen review as permanent authority.
