@@ -374,6 +374,24 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   作る and 耕す. Check the defect class after a fix; do not stop at
   the first named instances or mistake a temporal till for tilling soil.
 
+- Batch 19 keeps six exact source readings as explicitly qualified lookup
+  information: 脳's ドウ/のうずる, 臓's はらわた, and 芸's
+  う.える/のり/わざ. Negative checks of particular word spellings
+  are bounded evidence, not proof that no compound could illustrate them.
+  芸香 うんこう supplies ウン without a frequency inference.
+- 膚's はだ example has a rare spelling, not a rare pronunciation.
+  Keep the full 肌/膚 spelling family and its reading restrictions.
+  舟's ふな- and -ぶね use actual 舟橋/小舟 compounds;
+  舟/船's small-craft distinction is a tendency, not an absolute rule.
+- Separate 著する's arrival sense from 著る's rare wear spelling.
+  負荷's noun load/workload sense does not inherit the formal/literary
+  flag of its separate suru sense. Use sense-scoped records rather than
+  a headword-wide register label.
+- Twelve old word articles gain substantive component links. Eleven
+  preserve every nonlink character; 野菜 also loses the exact obsolete
+  clause claiming that 菜 has no card. That exception is mechanically
+  declared rather than hidden under a links-only claim.
+
 ## Review and checkpoint protocol
 
 Work in the source snapshot's batches, sequentially. Checkpoint content and regenerated manifests before review, then
@@ -465,3 +483,13 @@ Reviewer file permissions are separate from tool permissions: `--allow-all-tools
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
 Grant only that artifact directory with `--add-dir`. Reviewer session IDs can be recovered from the local session store
 for same-task follow-up; `--resume` and `--trust-folder` cannot be combined. Exit each resumed process before the next.
+
+Batch 19 is authored but not yet independently reviewed. Its fifteen
+kanji and four supporting words bring the authored total to 285 additions
+and 848 exact source-reading rows. Counts are 905 kanji, 3,265 words and
+287 selected N2 characters, with 80 additions unauthored. Its 40 reading
+rows contain 34 lexical examples and six qualified lookup-only rows;
+the selected packet has 68 exact records from 66 complete entry families.
+Fourteen direct word-quiz pairs are provisional author judgments pending
+independent review. Twelve old word edits have the precisely declared
+preservation scope above; no old kanji or stroke changes.

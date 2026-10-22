@@ -2001,3 +2001,56 @@ defects, an optional Claude qualifier and Claude's later-stage
 defect-class extension. The reviewers did not execute Git,
 validation, the class sweep or runtime quizzes, certify native
 fluency, or exhaustively inspect stroke drawings.
+
+## Batch 19: 脳腕腰膚臓臣舟航般芸荒荷菓菜著 - authored; review pending
+
+**Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke
+files; four supporting word articles, 脳, 皮膚, 舟 and 荒れる;
+twelve older word articles gaining substantive component links.
+Eleven older articles preserve all nonlink text. 野菜 additionally
+loses only the obsolete clause claiming 菜 has no card in this deck.
+No older kanji or stroke file changes. The source record is
+[batch-19.json](n2-batch-sources/batch-19.json); the pre-batch baseline
+is `ccc1f7dd951e07be4dbb3f5fb80463ad9ca6c89f`.
+
+The packet retains 68 exact spelling/reading records from 66 complete
+entry families, with spelling/reading flags and all applicable-sense
+restrictions. Of 40 exact character-reading rows, 34 have inspected
+lexical examples. Six are explicitly qualified lookup information:
+脳's ドウ and のうずる, 臓's はらわた, and 芸's う.える,
+のり and わざ. Negative exact-spelling checks in the pinned JMdict
+download do not establish exhaustive absence from all compounds or
+modern frequency. A failed public search was not used as evidence.
+
+The cards distinguish 膚's rare spelling from the ordinary はだ
+pronunciation; 舟/船's small-craft tendency from a fixed size rule;
+舟橋/小舟's actual combining forms; and 著する's arrival sense
+from 著る's rare wear spelling. 芸香 illustrates ウン without a
+frequency claim. 負荷's illustrated noun sense is not assigned the
+formal/literary flag of its separate suru sense. 荒れる's intransitive
+ichidan forms are distinct from transitive 荒らす.
+
+Each new kanji has a useful linked word article and three existing
+semantically wrong distractors. The remaining thirteen older two-choice
+cards were screened against these new meanings; no related fallback
+repair was established. The new words declare fourteen direct quiz
+exclusions: 脳 with four mental labels, 皮膚 with 肌/皮, 舟 with
+five watercraft/tub labels, and 荒れる with three behavior/disorder
+labels. These are provisional direct answer-label safeguards pending
+independent adjudication, not unrestricted synonym groups. No new word
+receives a vocabulary JLPT level inferred from its kanji.
+
+The author inspected all nineteen rendered new teaching pages and all
+twelve older-word diffs. The strict preservation check permits only
+links plus the exact declared 野菜 clause removal. The validator
+reports zero errors, and the cumulative audit covers 285 additions
+and 848 exact source-reading rows. Counts are 905 kanji, 3,265 word
+articles and 287 selected N2 characters, with 80 additions unauthored.
+The expected exact draft scope is 51 files. Repeated manifest builds
+are byte-identical with content version `823c043a8e4d1c59`.
+Snapshot identity and mechanical checks are author-run, not
+reviewer-executed.
+
+The first eighteen batches remain review-closed. Same-snapshot
+independent GPT/Claude review and source-grounded reconciliation of
+batch 19 are pending; no independent verdict is claimed yet.
