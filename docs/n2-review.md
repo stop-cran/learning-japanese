@@ -2947,3 +2947,51 @@ in the assigned scope. Git, structural validation and manifest
 verification are author-run; exhaustive stroke geometry, runtime
 quiz testing and native-fluency certification remain outside these
 review verdicts. Nothing is pushed.
+
+## Batch 24 — 陸隅階隻雇雲零震革順預領額香駐
+
+**Draft scope:** fifteen new kanji/stroke pairs, the supporting 隻
+word article, twenty-two existing words with component links only,
+the batch source packet, manifest and three documentation updates:
+58 files. The baseline is batch 23's closure
+`483dd12e7c53315527dc861859231ad8bae7cc02`.
+No earlier kanji/stroke file, old-word metadata or nonlink teaching
+text changes. No vocabulary JLPT value is invented.
+
+The source packet contains 57 exact word/reading pairs as 58
+restriction-aware records from 57 complete JMdict entry families.
+All 38 pinned readings have lexical examples, including the
+script-normalized 零ぜろ/ゼロ correspondence.陸ろく's numeric
+and decent/proper families are kept separate; the numeric row
+selects the legal-document six entry. Dated 震う, usually-kana
+spilling verbs, 香きょう's shogi identity, native 額ひたい and
+領えり, and both transitive 預 verbs are explicitly distinguished.
+Mnemonic stories remain modern-shape associations, not historical
+or phonetic assertions.
+
+All 45 new-kanji wrong-answer assignments were checked against their
+actual English labels and whole meanings. 六, 皮, 振 and 住 are
+not used as wrong choices for the semantically overlapping 陸, 革,
+震 and 駐 respectively. The thirteen older two-choice targets have
+no newly established direct-synonym conflict. A restriction-aware
+dictionary scan of all existing article identities and inspection
+of actual counter/boat labels establish no new direct word exclusion
+for 隻; a ship noun is not the same lexical answer as a ship counter.
+The new word keeps the archaic bundle-counter flag separate from
+the unflagged ship and half-pair senses.
+
+The author read all sixteen new teaching pages and all twenty-two
+older linked passages. Structural validation has zero errors.
+The cumulative source audit covers 360 additions/1,060 reading
+rows. There are 980 kanji, 3,273 words and 362 selected N2
+characters, with five additions remaining unauthored. Repeated
+manifest builds are byte-identical: contentVersion
+`bf113d3993595c44`, SHA256
+`3b8a2d9edc375a552138ea106189c021dd78c93018a6fcde5fd593ddfdae4580`.
+
+**Review status:** pending. The frozen committed snapshot will go
+first to an isolated GPT reviewer and then an isolated Claude
+reviewer, with the same sixteen-page scope, related passages,
+rubric and source access. Neither will receive the authoring
+rationale or the other's initial findings. Batches 01-23 remain
+review-closed; this draft is not yet review-closed. Nothing is pushed.

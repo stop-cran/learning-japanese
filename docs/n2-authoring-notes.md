@@ -782,3 +782,56 @@ is resolved. Four unchanged reports are archived and both processes
 have exited. The final 60-file cumulative scope preserves all older
 nonlink content; the manifest stays `e59e527490d48a92`. Twenty
 selected additions remain unauthored.
+
+## Batch 24: script notation, homographic families and custody viewpoints
+
+The batch is 陸隅階隻雇雲零震革順預領額香駐. Its fifteen
+kanji and generated stroke files add 38 lexical reading rows; no
+source-only qualification is needed. The full-family source packet
+contains 57 exact pairs, 58 records and 57 entry families.
+
+Literal candidate lookup is not an absence proof. The raw pinned
+JMdict contains 隻せき, even though it was not among the candidate
+cache's leading suggestions. It also writes 零ゼロ in katakana,
+corresponding to KANJIDIC2's hiragana ぜろ. Keep the character metadata
+unchanged and retain the actual lexical-source spelling of the
+reading. The verifier normalizes kana script only for sound matching;
+it does not rewrite the exact evidence pair or infer an etymology
+from the character dictionary's kun-list grouping.
+
+陸ろく has both a legal-document numeral-six family and an unrelated,
+usually-kana decent/proper family. Inspection of the first rendered
+draft caught the generic first-record selector transferring the
+latter's kana flag onto the numeric example. The renderer now accepts
+an explicit entry selection for a reading row; the numeral selects
+1585310, with the separate 1013290 family still available for the
+comparison note. Check the rendered annotation and actual citation,
+not merely the correctness of the supplied English gloss.
+
+震う is dated; the renderer does not automatically attach that label,
+so it is explicit in both the row and note. 預ける and 預かる are
+both transitive, with different conjugation classes and custody
+viewpoints. The contrasting 荷物を examples demonstrate the
+participants without inventing a transitive/intransitive pair.
+Keep 香きょう's shogi identity apart from incense, 領えり from
+territory, and 額ひたい from the linked がく article's primary reading.
+
+The new 隻 word article teaches a ship counter rather than a boat
+noun, with numeral-counter placement and 一隻いっせき. A
+restriction-aware scan of all current article identities against the
+pinned dictionary found no other article with a matching ship,
+half-pair or bundle counter sense. Actual counter and boat answer
+labels were also inspected, including 枚, 軒, 回, 船, 舟 and ボート;
+no direct word exclusion was established. Broad object association
+alone is not synonymy. The thirteen older two-choice kanji targets
+have no newly established synonym in this batch. These checks do
+not certify arbitrary future decks or larger quizzes.
+
+All sixteen new pages and the twenty-two old-word component diffs
+have been read. The older edits are links only, including 総額;
+the helper's actual output, not the preliminary word count, defines
+the preservation scope. There are 980 kanji, 3,273 words and 362
+selected N2 characters. The cumulative audit covers 360 additions
+and 1,060 source-reading rows; five additions remain unauthored.
+Validation has zero errors and repeated manifest builds are
+byte-identical at `bf113d3993595c44`. Independent review is pending.
