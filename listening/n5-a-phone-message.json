@@ -1,0 +1,182 @@
+{
+  "audio": {
+    "contentSha256": "fbc16be3f534024186b6a05725fa1ec20281eb30d513932e817ec90ce859c846",
+    "durationMs": 29414,
+    "path": "audio/n5-a-phone-message.ogg",
+    "sha256": "4b29f1d44879eb08c00832dbbae391ea3ee475f8458c13863da95059507cc749",
+    "turns": [
+      {
+        "endMs": 12693,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 19933,
+        "id": "t2",
+        "startMs": 13043
+      },
+      {
+        "endMs": 29214,
+        "id": "t3",
+        "startMs": 20283
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "4b29f1d44879eb08c00832dbbae391ea3ee475f8458c13863da95059507cc749",
+    "contentSha256": "fbc16be3f534024186b6a05725fa1ec20281eb30d513932e817ec90ce859c846",
+    "note": "Author confirmed listening to the complete final set using the transcripts and answer checks, and approved all twelve recordings for publication. The three previously auditioned previews are unchanged.",
+    "reviewedOn": "2026-10-22",
+    "status": "approved"
+  },
+  "id": "n5-a-phone-message",
+  "jlpt": 5,
+  "kind": "monologue",
+  "levelRationale": "A familiar meeting context with explicit place, day, time and a てください request. There is no correction sequence or requirement to remember an earlier message.",
+  "questions": [
+    {
+      "answer": "a",
+      "evidence": [
+        "t1"
+      ],
+      "explanation": "映画を見ませんか is a film invitation, with 日曜日 specifying Sunday.",
+      "id": "invitation",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "To invite Ken to a film on Sunday",
+          "rationale": "The message opens with an invitation to see a film together on Sunday."
+        },
+        {
+          "id": "b",
+          "label": "To cancel a train journey",
+          "rationale": "The station is a meeting landmark, not a canceled trip."
+        },
+        {
+          "id": "c",
+          "label": "To ask Ken to buy a phone",
+          "rationale": "Saki asks for a return call, not a phone purchase."
+        },
+        {
+          "id": "d",
+          "label": "To invite Ken to dinner tonight",
+          "rationale": "Being home tonight concerns the return call, not a dinner invitation."
+        }
+      ],
+      "prompt": "Why is Saki calling?"
+    },
+    {
+      "answer": "c",
+      "evidence": [
+        "t2"
+      ],
+      "explanation": "一時半 belongs to meeting, whereas 二時 belongs to the film.",
+      "id": "meeting-time",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "2:00 p.m.",
+          "rationale": "Two is the film's starting time."
+        },
+        {
+          "id": "b",
+          "label": "1:00 p.m.",
+          "rationale": "The stated meeting time includes 半, half past."
+        },
+        {
+          "id": "c",
+          "label": "1:30 p.m.",
+          "rationale": "Saki says 一時半に会いましょう."
+        },
+        {
+          "id": "d",
+          "label": "2:30 p.m.",
+          "rationale": "This is later than the stated film start and is not proposed."
+        }
+      ],
+      "prompt": "What meeting time does Saki propose?"
+    },
+    {
+      "answer": "b",
+      "evidence": [
+        "t3"
+      ],
+      "explanation": "聞いてから links hearing the message to the requested return call.",
+      "id": "request",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Go straight to Saki's house",
+          "rationale": "Saki says she will be home, but does not ask Ken to visit."
+        },
+        {
+          "id": "b",
+          "label": "Call Saki back",
+          "rationale": "The explicit request is 電話してください."
+        },
+        {
+          "id": "c",
+          "label": "Buy the film tickets immediately",
+          "rationale": "No ticket purchase is requested."
+        },
+        {
+          "id": "d",
+          "label": "Wait at the cinema tonight",
+          "rationale": "The outing is proposed for Sunday, and the requested action is a call."
+        }
+      ],
+      "prompt": "What should Ken do after hearing the message?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "saki",
+      "ratePercent": -10,
+      "voice": "ja-JP-NanamiNeural"
+    }
+  ],
+  "title": "A short phone message",
+  "topic": "A friend leaves information about a meeting.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "saki",
+      "text": "もしもし、けんさん。さきです。日曜日の午後、一緒に映画を見ませんか。駅の前の映画館に行きたいです。",
+      "translation": "Hello, Ken. It's Saki. Would you like to see a film together on Sunday afternoon? I'd like to go to the cinema in front of the station."
+    },
+    {
+      "id": "t2",
+      "speaker": "saki",
+      "text": "映画は二時からです。一時半に、駅の入口で会いましょう。",
+      "translation": "The film starts at two. Let's meet at the station entrance at one thirty."
+    },
+    {
+      "id": "t3",
+      "speaker": "saki",
+      "text": "このメッセージを聞いてから、電話してください。今夜は家にいます。じゃ、また。",
+      "translation": "Please call me after you hear this message. I'll be at home tonight. See you."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "cinema; movie theater",
+      "reading": "えいがかん",
+      "surface": "映画館"
+    },
+    {
+      "gloss": "half past one",
+      "reading": "いちじはん",
+      "surface": "一時半"
+    },
+    {
+      "gloss": "telephone; telephone call",
+      "reading": "でんわ",
+      "surface": "電話",
+      "word": "電話"
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "audio": {
+    "contentSha256": "92f4e0781fa08417b37668d8a6d7d409b3850628bede228a8de1142ecafbd8d7",
+    "durationMs": 39039,
+    "path": "audio/n5-buying-fruit.ogg",
+    "sha256": "d462c1309cae98ec97f91c1512852b8f038c107c52975971c9ebafe50067a077",
+    "turns": [
+      {
+        "endMs": 4806,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 11350,
+        "id": "t2",
+        "startMs": 5156
+      },
+      {
+        "endMs": 16979,
+        "id": "t3",
+        "startMs": 11700
+      },
+      {
+        "endMs": 20690,
+        "id": "t4",
+        "startMs": 17329
+      },
+      {
+        "endMs": 33280,
+        "id": "t5",
+        "startMs": 21040
+      },
+      {
+        "endMs": 38839,
+        "id": "t6",
+        "startMs": 33630
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "d462c1309cae98ec97f91c1512852b8f038c107c52975971c9ebafe50067a077",
+    "contentSha256": "92f4e0781fa08417b37668d8a6d7d409b3850628bede228a8de1142ecafbd8d7",
+    "note": "Author confirmed listening to the complete final set using the transcripts and answer checks, and approved all twelve recordings for publication. The three previously auditioned previews are unchanged.",
+    "reviewedOn": "2026-10-22",
+    "status": "approved"
+  },
+  "id": "n5-buying-fruit",
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "Basic food adjectives, prices and common つ counters. The questions ask for stated facts, not arithmetic or knowledge of shopping conventions.",
+  "questions": [
+    {
+      "answer": "a",
+      "evidence": [
+        "t3",
+        "t5"
+      ],
+      "explanation": "The final decision is three apples, despite tasting a mandarin.",
+      "id": "purchase",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "Three apples only",
+          "rationale": "The customer requests three apples and later confirms りんごだけ."
+        },
+        {
+          "id": "b",
+          "label": "Three mandarins only",
+          "rationale": "A mandarin is tasted, but the customer chooses apples."
+        },
+        {
+          "id": "c",
+          "label": "One apple and three mandarins",
+          "rationale": "This combination is never requested."
+        },
+        {
+          "id": "d",
+          "label": "Apples and bananas",
+          "rationale": "Bananas are not mentioned."
+        }
+      ],
+      "prompt": "What does the customer decide to buy?"
+    },
+    {
+      "answer": "c",
+      "evidence": [
+        "t2"
+      ],
+      "explanation": "一つ百円 states one hundred yen per apple; no calculation is needed.",
+      "id": "price",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "50 yen",
+          "rationale": "Fifty yen is not stated."
+        },
+        {
+          "id": "b",
+          "label": "300 yen",
+          "rationale": "The question asks the stated price of one apple, not a total."
+        },
+        {
+          "id": "c",
+          "label": "100 yen",
+          "rationale": "The seller says 一つ百円."
+        },
+        {
+          "id": "d",
+          "label": "900 yen",
+          "rationale": "Nine belongs to tomorrow's opening hour."
+        }
+      ],
+      "prompt": "How much is one apple?"
+    },
+    {
+      "answer": "b",
+      "evidence": [
+        "t5",
+        "t6"
+      ],
+      "explanation": "朝九時から means from nine in the morning.",
+      "id": "opening",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "At 8 a.m.",
+          "rationale": "Eight is not the stated opening hour."
+        },
+        {
+          "id": "b",
+          "label": "At 9 a.m.",
+          "rationale": "The seller says 朝九時から."
+        },
+        {
+          "id": "c",
+          "label": "At noon",
+          "rationale": "The shop opens in the morning, not at noon."
+        },
+        {
+          "id": "d",
+          "label": "At 3 p.m.",
+          "rationale": "Three is the number of apples, not the opening hour."
+        }
+      ],
+      "prompt": "When does the shop open tomorrow?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "customer",
+      "ratePercent": -10,
+      "voice": "ja-JP-NanamiNeural"
+    },
+    {
+      "id": "seller",
+      "ratePercent": -10,
+      "voice": "ja-JP-DaichiNeural"
+    }
+  ],
+  "title": "Buying fruit",
+  "topic": "A customer talks with a fruit seller.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "customer",
+      "text": "こんにちは。このりんごは甘いですか。",
+      "translation": "Hello. Are these apples sweet?"
+    },
+    {
+      "id": "t2",
+      "speaker": "seller",
+      "text": "はい、とても甘いですよ。今日のりんごは一つ百円です。",
+      "translation": "Yes, very sweet. Today's apples are one hundred yen each."
+    },
+    {
+      "id": "t3",
+      "speaker": "customer",
+      "text": "じゃ、三つください。みかんもおいしいですか。",
+      "translation": "Then three, please. Are the mandarins good too?"
+    },
+    {
+      "id": "t4",
+      "speaker": "seller",
+      "text": "ええ、どうぞ一つ食べてください。",
+      "translation": "Yes, please try one."
+    },
+    {
+      "id": "t5",
+      "speaker": "customer",
+      "text": "ありがとうございます。おいしいですね。でも、今日はりんごだけお願いします。この店は明日も開いていますか。",
+      "translation": "Thank you. It's delicious. But just the apples today, please. Is this shop open tomorrow too?"
+    },
+    {
+      "id": "t6",
+      "speaker": "seller",
+      "text": "はい、朝九時からです。また来てくださいね。",
+      "translation": "Yes, from nine in the morning. Please come again."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "sweet",
+      "reading": "あまい",
+      "surface": "甘い"
+    },
+    {
+      "gloss": "three items",
+      "reading": "みっつ",
+      "surface": "三つ"
+    },
+    {
+      "gloss": "is open",
+      "reading": "あいています",
+      "surface": "開いています"
+    }
+  ]
+}

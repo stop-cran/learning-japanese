@@ -1,0 +1,221 @@
+{
+  "audio": {
+    "contentSha256": "3fa61485353327843885c6ed34fd0c74560c8a639b5969be196e4e6acd4d43e1",
+    "durationMs": 37284,
+    "path": "audio/n5-asking-the-way.ogg",
+    "sha256": "db4694421c0a4b83ce0a0aa40116411f3d18a900c37b5caf258df8d1e646c08c",
+    "turns": [
+      {
+        "endMs": 10151,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 15821,
+        "id": "t2",
+        "startMs": 10501
+      },
+      {
+        "endMs": 20533,
+        "id": "t3",
+        "startMs": 16171
+      },
+      {
+        "endMs": 28147,
+        "id": "t4",
+        "startMs": 20883
+      },
+      {
+        "endMs": 33637,
+        "id": "t5",
+        "startMs": 28497
+      },
+      {
+        "endMs": 37084,
+        "id": "t6",
+        "startMs": 33987
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "db4694421c0a4b83ce0a0aa40116411f3d18a900c37b5caf258df8d1e646c08c",
+    "contentSha256": "3fa61485353327843885c6ed34fd0c74560c8a639b5969be196e4e6acd4d43e1",
+    "note": "Author confirmed listening to the complete final set using the transcripts and answer checks, and approved all twelve recordings for publication. The three previously auditioned previews are unchanged.",
+    "reviewedOn": "2026-10-22",
+    "status": "approved"
+  },
+  "id": "n5-asking-the-way",
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "Basic location words, てください directions, a simple landmark and a short walking duration. Only one turn is required, without a long sequence to memorize.",
+  "questions": [
+    {
+      "answer": "b",
+      "evidence": [
+        "t2",
+        "t3"
+      ],
+      "explanation": "The visitor repeats 左 to confirm the left turn after going straight.",
+      "id": "route",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "Go straight and turn right at the next corner",
+          "rationale": "The direction is left, not right."
+        },
+        {
+          "id": "b",
+          "label": "Go straight and turn left at the next corner",
+          "rationale": "The directions are まっすぐ行って and 次の角を左に曲がって."
+        },
+        {
+          "id": "c",
+          "label": "Cross a bridge and turn left",
+          "rationale": "No bridge is mentioned."
+        },
+        {
+          "id": "d",
+          "label": "Take a bus to the next stop",
+          "rationale": "The directions are for a short walk, not a bus trip."
+        }
+      ],
+      "prompt": "Which route does the person describe?"
+    },
+    {
+      "answer": "c",
+      "evidence": [
+        "t4"
+      ],
+      "explanation": "郵便局 is the post office; 隣 means next to.",
+      "id": "landmark",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "A bank",
+          "rationale": "A bank is not named as the landmark."
+        },
+        {
+          "id": "b",
+          "label": "A hospital",
+          "rationale": "A hospital is not mentioned."
+        },
+        {
+          "id": "c",
+          "label": "A post office",
+          "rationale": "The library is 郵便局の隣."
+        },
+        {
+          "id": "d",
+          "label": "A station",
+          "rationale": "A station is not mentioned."
+        }
+      ],
+      "prompt": "What is next to the library?"
+    },
+    {
+      "answer": "a",
+      "evidence": [
+        "t4"
+      ],
+      "explanation": "歩いて specifies walking and 五分ぐらい gives an approximate five-minute duration.",
+      "id": "duration",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "5 minutes",
+          "rationale": "The person says 歩いて五分ぐらい."
+        },
+        {
+          "id": "b",
+          "label": "15 minutes",
+          "rationale": "The answer is five minutes, not fifteen."
+        },
+        {
+          "id": "c",
+          "label": "30 minutes",
+          "rationale": "Thirty minutes is not stated."
+        },
+        {
+          "id": "d",
+          "label": "An hour",
+          "rationale": "An hour is not stated."
+        }
+      ],
+      "prompt": "About how long does the walk take?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "visitor",
+      "ratePercent": -10,
+      "voice": "ja-JP-AoiNeural"
+    },
+    {
+      "id": "local",
+      "ratePercent": -10,
+      "voice": "ja-JP-KeitaNeural"
+    }
+  ],
+  "title": "Asking the way",
+  "topic": "A person asks for directions on a street.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "visitor",
+      "text": "すみません。図書館はどこですか。初めて来ました。道がよく分かりません。",
+      "translation": "Excuse me. Where is the library? This is my first visit. I don't really know the way."
+    },
+    {
+      "id": "t2",
+      "speaker": "local",
+      "text": "この道をまっすぐ行って、次の角を左に曲がってください。",
+      "translation": "Go straight along this road, then turn left at the next corner."
+    },
+    {
+      "id": "t3",
+      "speaker": "visitor",
+      "text": "左ですね。近いですか。",
+      "translation": "Left, right. Is it nearby?"
+    },
+    {
+      "id": "t4",
+      "speaker": "local",
+      "text": "はい、歩いて五分ぐらいです。図書館は郵便局の隣にあります。",
+      "translation": "Yes, about five minutes on foot. The library is next to the post office."
+    },
+    {
+      "id": "t5",
+      "speaker": "visitor",
+      "text": "分かりました。どうもありがとうございます。",
+      "translation": "I understand. Thank you very much."
+    },
+    {
+      "id": "t6",
+      "speaker": "local",
+      "text": "いいえ。気をつけて。",
+      "translation": "You're welcome. Take care."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "library",
+      "reading": "としょかん",
+      "surface": "図書館",
+      "word": "図書館"
+    },
+    {
+      "gloss": "corner of a street",
+      "reading": "かど",
+      "surface": "角"
+    },
+    {
+      "gloss": "post office",
+      "reading": "ゆうびんきょく",
+      "surface": "郵便局"
+    }
+  ]
+}

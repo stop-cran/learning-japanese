@@ -493,7 +493,8 @@ def check_image_file(path: Path, file: Path) -> None:
         err(path, f"image '{file.name}' is truncated or corrupt (RIFF size mismatch)")
 
 
-def check_images(words: dict[str, str], scenes: dict[str, list[str]] | None = None) -> None:
+def check_images(words: dict[str, str], scenes: dict[str, list[str]] | None = None,
+                 listening_images: set[str] | None = None) -> None:
     """A word may reference an image through legacy fields, its catalog, or both; ownership stays unique."""
     folder = ROOT / "images"
     if not folder.is_dir():
@@ -511,8 +512,8 @@ def check_images(words: dict[str, str], scenes: dict[str, list[str]] | None = No
         rel = f"images/{file.name}"
         if file.is_dir() or file.suffix != ".webp":
             errors.append(f"{rel}: only .webp files are allowed in images/")
-        elif rel not in used:
-            errors.append(f"{rel}: orphan image, no word card references it")
+        elif rel not in used and rel not in (listening_images or set()):
+            errors.append(f"{rel}: orphan image, no word card or listening passage references it")
     if sum(f.stat().st_size for f in folder.glob("*.webp")) > MAX_IMAGES_TOTAL_BYTES:
         errors.append(f"images/: total size exceeds {MAX_IMAGES_TOTAL_BYTES} bytes")
 
@@ -563,7 +564,9 @@ def main() -> int:
             check_body(path, meta, body)
             check_links(path, body)
     scene_images = check_scenes(err, ROOT, word_metadata, check_image_file)
-    check_images(word_images, scene_images)
+    from validate_listening import check_listening
+    listening_images = check_listening(err, ROOT, check_image_file)
+    check_images(word_images, scene_images, listening_images)
     from validate_counters import check_counters
     check_counters(err, ROOT)
     from validate_grammar import check_grammar

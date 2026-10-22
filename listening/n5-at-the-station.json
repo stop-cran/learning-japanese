@@ -1,0 +1,225 @@
+{
+  "audio": {
+    "contentSha256": "1fbc7bfeef12dadd60d958e0094a9bf655a9d5a821f7d39391f704cf6c14b2b4",
+    "durationMs": 34205,
+    "path": "audio/n5-at-the-station.ogg",
+    "sha256": "0034fba359fc10c4dc09e3bb276568fad1336b0b3c3ee7dfde2334e89af852d3",
+    "turns": [
+      {
+        "endMs": 6831,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 12515,
+        "id": "t2",
+        "startMs": 7181
+      },
+      {
+        "endMs": 17977,
+        "id": "t3",
+        "startMs": 12865
+      },
+      {
+        "endMs": 22899,
+        "id": "t4",
+        "startMs": 18327
+      },
+      {
+        "endMs": 28569,
+        "id": "t5",
+        "startMs": 23249
+      },
+      {
+        "endMs": 34005,
+        "id": "t6",
+        "startMs": 28919
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "0034fba359fc10c4dc09e3bb276568fad1336b0b3c3ee7dfde2334e89af852d3",
+    "contentSha256": "1fbc7bfeef12dadd60d958e0094a9bf655a9d5a821f7d39391f704cf6c14b2b4",
+    "note": "Author confirmed listening to the complete final set using the transcripts and answer checks, and approved all twelve recordings for publication. The three previously auditioned previews are unchanged.",
+    "reviewedOn": "2026-10-22",
+    "status": "approved"
+  },
+  "id": "n5-at-the-station",
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "Polite questions, destination へ, departure time and platform numbers. Number contrasts are stated clearly, without a fast correction or unstated timetable knowledge.",
+  "questions": [
+    {
+      "answer": "b",
+      "evidence": [
+        "t1",
+        "t2"
+      ],
+      "explanation": "The employee identifies the correct train and gives its departure as 9:20.",
+      "id": "departure",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "The 9:00 train",
+          "rationale": "The departure includes twenty minutes past nine."
+        },
+        {
+          "id": "b",
+          "label": "The 9:20 train",
+          "rationale": "The employee confirms this train and says 九時二十分に出ます."
+        },
+        {
+          "id": "c",
+          "label": "The 9:30 train",
+          "rationale": "Thirty minutes is the journey length, not the departure minute."
+        },
+        {
+          "id": "d",
+          "label": "The 10:20 train",
+          "rationale": "The stated hour is nine, not ten."
+        }
+      ],
+      "prompt": "Which departure should the traveler take?"
+    },
+    {
+      "answer": "c",
+      "evidence": [
+        "t3",
+        "t4"
+      ],
+      "explanation": "二番 answers the platform question; the stairs are the route to it.",
+      "id": "platform",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Platform 1",
+          "rationale": "The platform is not one."
+        },
+        {
+          "id": "b",
+          "label": "Platform 3",
+          "rationale": "The employee says two, not three."
+        },
+        {
+          "id": "c",
+          "label": "Platform 2",
+          "rationale": "The answer to 何番のホーム is 二番."
+        },
+        {
+          "id": "d",
+          "label": "Platform 9",
+          "rationale": "Nine belongs to the departure time, not the platform."
+        }
+      ],
+      "prompt": "Which platform does the employee give?"
+    },
+    {
+      "answer": "a",
+      "evidence": [
+        "t5",
+        "t6"
+      ],
+      "explanation": "The question どのくらいかかりますか asks about duration; the answer is about thirty minutes.",
+      "id": "duration",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "30 minutes",
+          "rationale": "The employee says 三十分ぐらい."
+        },
+        {
+          "id": "b",
+          "label": "2 minutes",
+          "rationale": "Two is the platform number."
+        },
+        {
+          "id": "c",
+          "label": "20 minutes",
+          "rationale": "Twenty is part of the departure time."
+        },
+        {
+          "id": "d",
+          "label": "An hour",
+          "rationale": "An hour is not stated."
+        }
+      ],
+      "prompt": "About how long is the train journey?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "traveler",
+      "ratePercent": -10,
+      "voice": "ja-JP-NanamiNeural"
+    },
+    {
+      "id": "employee",
+      "ratePercent": -10,
+      "voice": "ja-JP-KeitaNeural"
+    }
+  ],
+  "title": "At a station",
+  "topic": "A traveler asks about a train.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "traveler",
+      "spokenText": "すみません。かいたへ行きたいです。この電車ですか。",
+      "text": "すみません。海田へ行きたいです。この電車ですか。",
+      "translation": "Excuse me. I want to go to Kaita. Is this the train?"
+    },
+    {
+      "id": "t2",
+      "speaker": "employee",
+      "text": "はい、この電車です。九時二十分に出ます。",
+      "translation": "Yes, this is the train. It leaves at nine twenty."
+    },
+    {
+      "id": "t3",
+      "speaker": "traveler",
+      "text": "ありがとうございます。何番のホームですか。",
+      "translation": "Thank you. Which platform is it?"
+    },
+    {
+      "id": "t4",
+      "speaker": "employee",
+      "text": "二番です。あの階段を上がってください。",
+      "translation": "Platform two. Please go up those stairs."
+    },
+    {
+      "id": "t5",
+      "speaker": "traveler",
+      "spokenText": "二番ですね。かいたまでどのくらいかかりますか。",
+      "text": "二番ですね。海田までどのくらいかかりますか。",
+      "translation": "Platform two, right. How long does it take to Kaita?"
+    },
+    {
+      "id": "t6",
+      "speaker": "employee",
+      "text": "三十分ぐらいです。電車はもう来ていますよ。",
+      "translation": "About thirty minutes. The train is already here."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "train",
+      "reading": "でんしゃ",
+      "surface": "電車",
+      "word": "電車"
+    },
+    {
+      "gloss": "railway platform",
+      "reading": "ホーム",
+      "surface": "ホーム"
+    },
+    {
+      "gloss": "Kaita, the destination name in this fictional timetable",
+      "reading": "かいた",
+      "surface": "海田"
+    }
+  ]
+}

@@ -265,6 +265,16 @@ field is absent; older versions ignore word-level metadata. N4 study includes N5
 Known ambiguous word pairs are marked with [`quiz_exclusions`](docs/content-format.md#word-article);
 these require an exclusion-aware app version and do not imply that every possible ambiguity has been identified.
 
+## N5 listening pilot
+
+`listening/` contains twelve original passages (eight dialogues and four monologues) about introductions, ordering food,
+transport, travel, directions, shopping and everyday plans. Each has three English questions, explanations, transcript,
+translation and vocabulary tips. These are N5-oriented learning materials, not official JLPT exam items.
+The recordings use Microsoft Azure Speech's stock Nanami, Keita, Aoi and Daichi Japanese voices at a mildly slower -10% rate.
+They are synthetic speech, not recordings of human actors. Each exact final recording has been listened to and approved
+against its questions. See the [authoring and approval contract](docs/listening-n5.md).
+Approved mono Ogg Opus recordings are in `audio/`; PCM caches and Azure configuration do not belong in this repository.
+
 ## Onomatopoeia collection
 
 The [201-word index](articles/japanese-onomatopoeia.md) preserves the first 100 and adds a

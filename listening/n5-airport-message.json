@@ -1,0 +1,188 @@
+{
+  "audio": {
+    "contentSha256": "8dfe4b1105b25d191debc91dea8a50874a5bdc4cd385d7f466ed40d8f2952c01",
+    "durationMs": 25733,
+    "path": "audio/n5-airport-message.ogg",
+    "sha256": "02856325409b208a209b297073e6a49b32c5217c6cc9b3b1da858f6c770a0d99",
+    "turns": [
+      {
+        "endMs": 8748,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 16029,
+        "id": "t2",
+        "startMs": 9098
+      },
+      {
+        "endMs": 25533,
+        "id": "t3",
+        "startMs": 16379
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "02856325409b208a209b297073e6a49b32c5217c6cc9b3b1da858f6c770a0d99",
+    "contentSha256": "8dfe4b1105b25d191debc91dea8a50874a5bdc4cd385d7f466ed40d8f2952c01",
+    "note": "Author confirmed listening to the complete final set using the transcripts and answer checks, and approved all twelve recordings for publication. The three previously auditioned previews are unchanged.",
+    "reviewedOn": "2026-10-22",
+    "status": "approved"
+  },
+  "id": "n5-airport-message",
+  "jlpt": 5,
+  "kind": "monologue",
+  "levelRationale": "Short polite sentences, arrival in the past, current location and a simple future plan. Essential location, floor and transport words receive post-listening tips.",
+  "questions": [
+    {
+      "answer": "a",
+      "evidence": [
+        "t3"
+      ],
+      "explanation": "The plan is to travel by bus to the station and then call again.",
+      "id": "plan",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "Take a bus to the station",
+          "rationale": "The speaker says バスで駅まで行きます."
+        },
+        {
+          "id": "b",
+          "label": "Board another plane",
+          "rationale": "The plane journey has finished; the next transport is a bus."
+        },
+        {
+          "id": "c",
+          "label": "Walk to Yuki's house",
+          "rationale": "Neither walking nor going to Yuki's house is stated."
+        },
+        {
+          "id": "d",
+          "label": "Stay at an airport hotel",
+          "rationale": "No hotel plan is given."
+        }
+      ],
+      "prompt": "What is the traveler planning to do next, after waiting a little?"
+    },
+    {
+      "answer": "c",
+      "evidence": [
+        "t2"
+      ],
+      "explanation": "一階の出口にいます gives the current waiting location.",
+      "id": "location",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "At a station ticket window",
+          "rationale": "The station is the next destination, not the present location."
+        },
+        {
+          "id": "b",
+          "label": "Inside the plane",
+          "rationale": "The speaker has arrived and is at an airport exit."
+        },
+        {
+          "id": "c",
+          "label": "At the first-floor exit",
+          "rationale": "The current location is 一階の出口."
+        },
+        {
+          "id": "d",
+          "label": "At a second-floor cafe",
+          "rationale": "Neither the second floor nor a cafe is mentioned."
+        }
+      ],
+      "prompt": "Where is the speaker waiting now?"
+    },
+    {
+      "answer": "b",
+      "evidence": [
+        "t2"
+      ],
+      "explanation": "雨 means rain.",
+      "id": "weather",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Snowy",
+          "rationale": "Snow is not mentioned."
+        },
+        {
+          "id": "b",
+          "label": "Rainy",
+          "rationale": "The speaker says 外は雨です."
+        },
+        {
+          "id": "c",
+          "label": "Sunny",
+          "rationale": "The message says it is raining."
+        },
+        {
+          "id": "d",
+          "label": "Cloudy but dry",
+          "rationale": "Rain, not merely cloud, is explicitly reported."
+        }
+      ],
+      "prompt": "What is the weather like outside?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "traveler",
+      "ratePercent": -10,
+      "voice": "ja-JP-KeitaNeural"
+    }
+  ],
+  "title": "A message from the airport",
+  "topic": "A traveler leaves a short message for a friend.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "traveler",
+      "text": "もしもし、ゆきさん。今、空港に着きました。飛行機は少し遅かったです。",
+      "translation": "Hello, Yuki. I've just arrived at the airport. The plane was a little late."
+    },
+    {
+      "id": "t2",
+      "speaker": "traveler",
+      "text": "一階の出口にいます。外は雨です。ここで少し待ちます。",
+      "translation": "I'm at the exit on the first floor. It's raining outside. I'll wait here for a little while."
+    },
+    {
+      "id": "t3",
+      "speaker": "traveler",
+      "text": "それから、バスで駅まで行きます。駅に着いてから、また電話します。じゃ、また。",
+      "translation": "Then I'll go to the station by bus. I'll call again after I get to the station. See you."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "airport",
+      "reading": "くうこう",
+      "surface": "空港"
+    },
+    {
+      "gloss": "the exit on the first floor",
+      "reading": "いっかいのでぐち",
+      "surface": "一階の出口"
+    },
+    {
+      "gloss": "station",
+      "reading": "えき",
+      "surface": "駅",
+      "word": "駅"
+    },
+    {
+      "gloss": "rain",
+      "reading": "あめ",
+      "surface": "雨",
+      "word": "雨"
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "audio": {
+    "contentSha256": "ab55555a2b2452a3347c4a56fdfe16d3bf106b5ea4dbfef1510915dbc6c79f73",
+    "durationMs": 34326,
+    "path": "audio/n5-at-a-bus-stop.ogg",
+    "sha256": "ef7ebc6c1e05686c0107a37af721e02522567f49bf6bcf7aa8455dbeb1c779bb",
+    "turns": [
+      {
+        "endMs": 5678,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 12376,
+        "id": "t2",
+        "startMs": 6028
+      },
+      {
+        "endMs": 18088,
+        "id": "t3",
+        "startMs": 12726
+      },
+      {
+        "endMs": 23911,
+        "id": "t4",
+        "startMs": 18438
+      },
+      {
+        "endMs": 29275,
+        "id": "t5",
+        "startMs": 24261
+      },
+      {
+        "endMs": 34126,
+        "id": "t6",
+        "startMs": 29625
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "ef7ebc6c1e05686c0107a37af721e02522567f49bf6bcf7aa8455dbeb1c779bb",
+    "contentSha256": "ab55555a2b2452a3347c4a56fdfe16d3bf106b5ea4dbfef1510915dbc6c79f73",
+    "note": "Author confirmed listening to the complete final set using the transcripts and answer checks, and approved all twelve recordings for publication. The three previously auditioned previews are unchanged.",
+    "reviewedOn": "2026-10-22",
+    "status": "approved"
+  },
+  "id": "n5-at-a-bus-stop",
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "Basic destinations, demonstratives, route numbers, time and price. The target is the final explicit route advice, not recognizing an unfamiliar place name.",
+  "questions": [
+    {
+      "answer": "c",
+      "evidence": [
+        "t2",
+        "t4"
+      ],
+      "explanation": "The current bus goes elsewhere. The driver explicitly identifies bus number two for the park.",
+      "id": "bus",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "Take the bus to the hospital",
+          "rationale": "The driver explains that this is not the park bus."
+        },
+        {
+          "id": "b",
+          "label": "Take a taxi",
+          "rationale": "The driver recommends a numbered bus, not a taxi."
+        },
+        {
+          "id": "c",
+          "label": "Wait for bus number 2",
+          "rationale": "The park route is 二番のバス, which arrives after the current bus."
+        },
+        {
+          "id": "d",
+          "label": "Walk from the hospital",
+          "rationale": "No walking route from the hospital is given."
+        }
+      ],
+      "prompt": "What should the passenger do to get to the park?"
+    },
+    {
+      "answer": "a",
+      "evidence": [
+        "t3",
+        "t4"
+      ],
+      "explanation": "十一時十分 means ten minutes past eleven.",
+      "id": "time",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "11:10",
+          "rationale": "The answer is 十一時十分."
+        },
+        {
+          "id": "b",
+          "label": "10:10",
+          "rationale": "The hour is eleven, not ten."
+        },
+        {
+          "id": "c",
+          "label": "11:20",
+          "rationale": "The minute is ten, not twenty."
+        },
+        {
+          "id": "d",
+          "label": "12:10",
+          "rationale": "The hour is eleven, not twelve."
+        }
+      ],
+      "prompt": "When is the next bus to the park?"
+    },
+    {
+      "answer": "b",
+      "evidence": [
+        "t5",
+        "t6"
+      ],
+      "explanation": "二百円 gives the cost; it is independent of the bus number and time.",
+      "id": "fare",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "100 yen",
+          "rationale": "The driver says two hundred."
+        },
+        {
+          "id": "b",
+          "label": "200 yen",
+          "rationale": "The fare is 二百円."
+        },
+        {
+          "id": "c",
+          "label": "500 yen",
+          "rationale": "Five hundred yen is not stated."
+        },
+        {
+          "id": "d",
+          "label": "1,000 yen",
+          "rationale": "One thousand yen is not stated."
+        }
+      ],
+      "prompt": "How much does the trip to the park cost?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "passenger",
+      "ratePercent": -10,
+      "voice": "ja-JP-AoiNeural"
+    },
+    {
+      "id": "driver",
+      "ratePercent": -10,
+      "voice": "ja-JP-DaichiNeural"
+    }
+  ],
+  "title": "At a bus stop",
+  "topic": "A passenger checks a bus route.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "passenger",
+      "text": "すみません。このバスは公園へ行きますか。",
+      "translation": "Excuse me. Does this bus go to the park?"
+    },
+    {
+      "id": "t2",
+      "speaker": "driver",
+      "text": "いいえ、これは病院へ行きます。公園は二番のバスです。",
+      "translation": "No, this one goes to the hospital. For the park, take bus number two."
+    },
+    {
+      "id": "t3",
+      "speaker": "passenger",
+      "text": "二番ですね。次のバスは何時ですか。",
+      "translation": "Number two, right. What time is the next bus?"
+    },
+    {
+      "id": "t4",
+      "speaker": "driver",
+      "text": "十一時十分です。このバスの後に来ますよ。",
+      "translation": "At eleven ten. It comes after this bus."
+    },
+    {
+      "id": "t5",
+      "speaker": "passenger",
+      "text": "分かりました。公園までいくらですか。",
+      "translation": "I see. How much is it to the park?"
+    },
+    {
+      "id": "t6",
+      "speaker": "driver",
+      "text": "二百円です。あそこで待ってください。",
+      "translation": "Two hundred yen. Please wait over there."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "park",
+      "reading": "こうえん",
+      "surface": "公園"
+    },
+    {
+      "gloss": "hospital",
+      "reading": "びょういん",
+      "surface": "病院",
+      "word": "病院"
+    },
+    {
+      "gloss": "the next bus",
+      "reading": "つぎのバス",
+      "surface": "次のバス"
+    }
+  ]
+}

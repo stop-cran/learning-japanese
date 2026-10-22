@@ -1,0 +1,223 @@
+{
+  "audio": {
+    "contentSha256": "d992d4c2481b13b284d4fd6a2233ed667848855e11828abaf9c076d761ce2fd6",
+    "durationMs": 39736,
+    "path": "audio/n5-during-a-flight.ogg",
+    "sha256": "6449dd57d5118a773841cf0772f6e1d8f22d3d76d7415b77957332431cd24a18",
+    "turns": [
+      {
+        "endMs": 7915,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 13126,
+        "id": "t2",
+        "startMs": 8265
+      },
+      {
+        "endMs": 15646,
+        "id": "t3",
+        "startMs": 13476
+      },
+      {
+        "endMs": 24165,
+        "id": "t4",
+        "startMs": 15996
+      },
+      {
+        "endMs": 32086,
+        "id": "t5",
+        "startMs": 24515
+      },
+      {
+        "endMs": 39536,
+        "id": "t6",
+        "startMs": 32436
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "6449dd57d5118a773841cf0772f6e1d8f22d3d76d7415b77957332431cd24a18",
+    "contentSha256": "d992d4c2481b13b284d4fd6a2233ed667848855e11828abaf9c076d761ce2fd6",
+    "note": "Author confirmed listening to the complete final set using the transcripts and answer checks, and approved all twelve recordings for publication. The three previously auditioned previews are unchanged.",
+    "reviewedOn": "2026-10-22",
+    "status": "approved"
+  },
+  "id": "n5-during-a-flight",
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "Common food and drink words, adjective 冷たい, ください requests and simple questions about time. No specialized airport announcement vocabulary is needed for the scored facts.",
+  "questions": [
+    {
+      "answer": "c",
+      "evidence": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "explanation": "Listen for the passenger's choice, not simply a drink mentioned in the offer.",
+      "id": "drink",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "Hot tea",
+          "rationale": "Tea is offered, but the passenger chooses water."
+        },
+        {
+          "id": "b",
+          "label": "Coffee",
+          "rationale": "Coffee is offered but not chosen."
+        },
+        {
+          "id": "c",
+          "label": "Cold water",
+          "rationale": "The request is 冷たい水をください."
+        },
+        {
+          "id": "d",
+          "label": "Fruit juice",
+          "rationale": "Juice is neither offered nor requested."
+        }
+      ],
+      "prompt": "Which drink does the passenger choose?"
+    },
+    {
+      "answer": "a",
+      "evidence": [
+        "t4",
+        "t5"
+      ],
+      "explanation": "八時 is the serving time; あと十分 gives a separate waiting interval.",
+      "id": "time",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "8:00",
+          "rationale": "The crew member answers 八時です."
+        },
+        {
+          "id": "b",
+          "label": "8:10",
+          "rationale": "Ten minutes is the remaining wait, not ten minutes past eight."
+        },
+        {
+          "id": "c",
+          "label": "9:00",
+          "rationale": "Nine o'clock is not mentioned."
+        },
+        {
+          "id": "d",
+          "label": "10:00",
+          "rationale": "十分 is ten minutes, not ten o'clock."
+        }
+      ],
+      "prompt": "At what time will breakfast be served?"
+    },
+    {
+      "answer": "b",
+      "evidence": [
+        "t5"
+      ],
+      "explanation": "パンと卵 lists bread and eggs.",
+      "id": "food",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Rice and fish",
+          "rationale": "Neither rice nor fish is mentioned."
+        },
+        {
+          "id": "b",
+          "label": "Bread and eggs",
+          "rationale": "The crew member names パンと卵."
+        },
+        {
+          "id": "c",
+          "label": "Noodles and vegetables",
+          "rationale": "These foods are not named."
+        },
+        {
+          "id": "d",
+          "label": "Fruit and yogurt",
+          "rationale": "These foods are not named."
+        }
+      ],
+      "prompt": "What food is available for breakfast?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "crew",
+      "ratePercent": -10,
+      "voice": "ja-JP-NanamiNeural"
+    },
+    {
+      "id": "passenger",
+      "ratePercent": -10,
+      "voice": "ja-JP-DaichiNeural"
+    }
+  ],
+  "title": "During a flight",
+  "topic": "A passenger speaks with a cabin crew member.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "crew",
+      "text": "おはようございます。お茶とコーヒーはいかがですか。お水もあります。",
+      "translation": "Good morning. Would you like tea or coffee? We also have water."
+    },
+    {
+      "id": "t2",
+      "speaker": "passenger",
+      "text": "おはようございます。冷たい水をください。",
+      "translation": "Good morning. Cold water, please."
+    },
+    {
+      "id": "t3",
+      "speaker": "crew",
+      "text": "はい、どうぞ。",
+      "translation": "Here you are."
+    },
+    {
+      "id": "t4",
+      "speaker": "passenger",
+      "text": "ありがとうございます。あの、朝ご飯は何時ですか。少しおなかがすきました。",
+      "translation": "Thank you. Um, what time is breakfast? I'm a little hungry."
+    },
+    {
+      "id": "t5",
+      "speaker": "crew",
+      "text": "八時です。あと十分ですよ。今朝はパンと卵があります。",
+      "translation": "At eight. That's in ten minutes. This morning we have bread and eggs."
+    },
+    {
+      "id": "t6",
+      "speaker": "passenger",
+      "text": "そうですか。じゃ、もう少し待ちます。ありがとうございます。",
+      "translation": "I see. Then I'll wait a little longer. Thank you."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "cold water",
+      "reading": "つめたいみず",
+      "surface": "冷たい水",
+      "word": "水"
+    },
+    {
+      "gloss": "breakfast",
+      "reading": "あさごはん",
+      "surface": "朝ご飯"
+    },
+    {
+      "gloss": "ten more minutes; in ten minutes",
+      "reading": "あとじゅっぷん",
+      "surface": "あと十分"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "audio": {
+    "contentSha256": "7769455dc2d1d3c1a895901d5b7cd14881c7d5ea086774600b383843cd17bc85",
+    "durationMs": 37576,
+    "path": "audio/n5-small-restaurant.ogg",
+    "sha256": "86b9375ef44c03a9603b73252e1c8c3b1da88b39a64c30c73d5aaf79bb3795b8",
+    "turns": [
+      {
+        "endMs": 5428,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 10654,
+        "id": "t2",
+        "startMs": 5778
+      },
+      {
+        "endMs": 17310,
+        "id": "t3",
+        "startMs": 11004
+      },
+      {
+        "endMs": 24786,
+        "id": "t4",
+        "startMs": 17660
+      },
+      {
+        "endMs": 31901,
+        "id": "t5",
+        "startMs": 25136
+      },
+      {
+        "endMs": 37376,
+        "id": "t6",
+        "startMs": 32251
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "86b9375ef44c03a9603b73252e1c8c3b1da88b39a64c30c73d5aaf79bb3795b8",
+    "contentSha256": "7769455dc2d1d3c1a895901d5b7cd14881c7d5ea086774600b383843cd17bc85",
+    "note": "Author confirmed listening to the complete final set using the transcripts and answer checks, and approved all twelve recordings for publication. The three previously auditioned previews are unchanged.",
+    "reviewedOn": "2026-10-22",
+    "status": "approved"
+  },
+  "id": "n5-small-restaurant",
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "Basic time, price, food requests and permission with てもいいですか. The common service phrase お待ちください is contextual support, not a separate scored fact.",
+  "questions": [
+    {
+      "answer": "c",
+      "evidence": [
+        "t3",
+        "t4"
+      ],
+      "explanation": "ラーメンを一つと、お水をください requests one ramen and water; the employee confirms the ramen.",
+      "id": "order",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "Ramen and tea",
+          "rationale": "The food is ramen, but the requested drink is water, not tea."
+        },
+        {
+          "id": "b",
+          "label": "Curry and water",
+          "rationale": "The customer asks for ramen, not curry."
+        },
+        {
+          "id": "c",
+          "label": "Ramen and water",
+          "rationale": "The request names ラーメン and お水."
+        },
+        {
+          "id": "d",
+          "label": "Rice and coffee",
+          "rationale": "Neither rice nor coffee is ordered."
+        }
+      ],
+      "prompt": "What does the customer order?"
+    },
+    {
+      "answer": "a",
+      "evidence": [
+        "t2"
+      ],
+      "explanation": "午後 makes this three in the afternoon, and まで marks the closing-time boundary.",
+      "id": "closing",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "At 3 p.m.",
+          "rationale": "The employee says 午後三時まで."
+        },
+        {
+          "id": "b",
+          "label": "At noon",
+          "rationale": "Noon is not the stated closing time."
+        },
+        {
+          "id": "c",
+          "label": "At 7 p.m.",
+          "rationale": "Seven occurs in the price, 七百円, not the closing time."
+        },
+        {
+          "id": "d",
+          "label": "At 9 p.m.",
+          "rationale": "Nine o'clock is not mentioned."
+        }
+      ],
+      "prompt": "When does the restaurant close?"
+    },
+    {
+      "answer": "b",
+      "evidence": [
+        "t4"
+      ],
+      "explanation": "七百円 is ななひゃくえん, seven hundred yen.",
+      "id": "price",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "300 yen",
+          "rationale": "Three refers to the closing hour, not the price."
+        },
+        {
+          "id": "b",
+          "label": "700 yen",
+          "rationale": "The employee gives the price as 七百円."
+        },
+        {
+          "id": "c",
+          "label": "800 yen",
+          "rationale": "Eight hundred yen is not stated."
+        },
+        {
+          "id": "d",
+          "label": "1,000 yen",
+          "rationale": "One thousand yen is not stated."
+        }
+      ],
+      "prompt": "How much is the ramen?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "customer",
+      "ratePercent": -10,
+      "voice": "ja-JP-AoiNeural"
+    },
+    {
+      "id": "employee",
+      "ratePercent": -10,
+      "voice": "ja-JP-DaichiNeural"
+    }
+  ],
+  "title": "At a small restaurant",
+  "topic": "A customer speaks with a restaurant employee.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "customer",
+      "text": "すみません。この店は何時までですか。",
+      "translation": "Excuse me. Until what time is this restaurant open?"
+    },
+    {
+      "id": "t2",
+      "speaker": "employee",
+      "text": "午後三時までです。まだ大丈夫ですよ。",
+      "translation": "Until three in the afternoon. There's still time."
+    },
+    {
+      "id": "t3",
+      "speaker": "customer",
+      "text": "よかった。じゃ、ラーメンを一つと、お水をください。",
+      "translation": "Good. Then one bowl of ramen and some water, please."
+    },
+    {
+      "id": "t4",
+      "speaker": "employee",
+      "text": "はい、ラーメンですね。七百円です。少しお待ちください。",
+      "translation": "Certainly, ramen. That's seven hundred yen. Please wait a moment."
+    },
+    {
+      "id": "t5",
+      "speaker": "customer",
+      "text": "お願いします。あの、窓のそばに座ってもいいですか。",
+      "translation": "Thank you. Um, may I sit by the window?"
+    },
+    {
+      "id": "t6",
+      "speaker": "employee",
+      "text": "はい、どうぞ。今、お水を持ってきます。",
+      "translation": "Yes, please do. I'll bring your water now."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "shop; here, restaurant",
+      "reading": "みせ",
+      "surface": "店",
+      "word": "店"
+    },
+    {
+      "gloss": "water, with a polite prefix",
+      "reading": "おみず",
+      "surface": "お水",
+      "word": "水"
+    },
+    {
+      "gloss": "by the window",
+      "reading": "まどのそば",
+      "surface": "窓のそば"
+    },
+    {
+      "gloss": "please wait a moment",
+      "reading": "すこしおまちください",
+      "surface": "少しお待ちください"
+    }
+  ]
+}
