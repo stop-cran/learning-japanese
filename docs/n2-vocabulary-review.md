@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-02 review-closed; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-03 review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 40 rows are review-closed; batch 03 has 20 draft rows and 1,752 remain pending.
+The first 60 rows are review-closed; 1,752 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -202,7 +202,7 @@ Coverage is **40 closed, 0 draft, 1,772 pending, 0 unresolved**: 31 new and nine
 
 ## Batch 03: N2:42-N2:61
 
-**Status:** independently reviewed initial draft; corrections await bounded confirmation.
+**Status:** review-closed after sequential changed-passage confirmation.
 
 Scope: 荒い, 粗い, あらすじ, 争う, 改めて, 改める, 著す, 有難い, 在る,
 あれこれ, あわただしい, あわてる, 安易, 案外, アンテナ, 言い出す, 言い付ける,
@@ -220,9 +220,8 @@ to 争う. No kanji metadata or stroke data changes. The actual PDF of the offic
 異字同訓 guidance was inspected for entries 014-016; the packet records the hash, location,
 brief extracts and inspection limits.
 
-The collection contains 3,323 word articles. Coverage is **40 closed, 20 draft, 1,752 pending,
-0 unresolved**: 50 new and ten reused articles overall. These draft rows do not yet count as
-review-closed.
+The collection contains 3,323 word articles. Coverage is **60 closed, 0 draft, 1,752 pending,
+0 unresolved**: 50 new and ten reused articles overall. All 20 rows in this batch are closed.
 
 ### Initial review and reconciliation
 
@@ -269,6 +268,33 @@ live Jisho checks are JMdict-derived, not an independent dictionary tradition. C
 naturalness impressions for two constructions are not native-speaker certification; no contrary
 evidence or consequential unresolved claim was established in the practical teaching scope.
 GPT disclosed an incidental one-row TSV overread, which it did not assess or use.
+
+### Changed-passage confirmation and closure
+
+Correction snapshot: `f1bd2eb788772ddeb743f32cd818bb9b3d896081`, parent
+`eabe2e942e8e6fa67cc4dd4093c3e6ea14edaf3c`. Both original model families received
+the same actual eight-word correction diff, their own original report and the same bounded
+evidence access. Fresh short-lived processes ran sequentially: GPT fully exited before Claude
+started. Usage receipts confirm `gpt-6.1-sol`, `claude-opus-5.5` and zero file edits.
+
+[GPT confirmation](n2-vocabulary-reviews/batch-03-gpt-confirmation.md) resolves B03-GPT-01
+through B03-GPT-03, including both energetic-activity pairs, and confirms its optional 徐々に
+link was implemented. [Claude confirmation](n2-vocabulary-reviews/batch-03-claude-confirmation.md)
+resolves F1-F4 and confirms its optional roughness guard was implemented.
+Each report accepts all six direct pairs and all eight changed contexts as
+**CLEAN / CLEAN / CLEAN**. Neither establishes an actionable regression or consequential
+unresolved claim within the assigned scope.
+
+Claude's remaining warning-context wording, gratitude candidates, 生きる link and other
+initial optional expansions remain nonblocking; confirmation does not turn them into defects.
+No full-batch rereview or independent PDF/app execution is claimed. The initial full-article
+assessments and bounded confirmations jointly support closure, with their file-only snapshot
+and linguistic-certification limits preserved.
+
+The author separately verified all 3,273 baseline identities/readings/titles/exclusions and
+established levels, source/index integrity, twelve cumulative reciprocal N2 word pairs and
+`stop-cran` authorship. The validator reports zero errors and repeated manifest generation is
+deterministic at `ebc4e3f59c4d7584`. Source rows and the packet are now marked closed.
 
 ## Final verification
 
