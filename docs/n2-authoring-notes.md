@@ -126,6 +126,16 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
 - Test English polysemy in both word-quiz directions. Batch 09 adds direct 挟む exclusions for grasp,
   catch and the noun/verb label sandwich. It narrows 昇る's answer to "rise (sun/moon); be promoted"
   without restricting the body's broader natural-rising explanation or adding every increase/posture word.
+- An uncommon source reading does not establish a numeric sound change. Batch 10 keeps 枚's バイ
+  in the explicitly archaic expression 枚を含む; 一枚, 二枚 and 三枚 all use まい, with full sentence examples.
+- Separate a written bound form from a grammatical stem. Batch 10 illustrates 替's `か.え-` in 替え歌
+  and 柔's `やわ.ら` with the separately listed martial-arts noun 柔ら, not the i-adjective's stem.
+  柔らか and 柔らかい also require different attachment explanations before a noun.
+- Canonical radical distinctions can be subtle: 替 is indexed under 曰, no. 73, not 日, no. 72.
+  Keep the inspected indexing metadata even when the lower enclosure looks like 日.
+- Batch 10 gives legacy 木 a third curated wrong answer because new 材 supplies a direct timber/wood
+  synonym that could otherwise fill its default fourth slot. 林's woodland meaning is distinguished
+  from wood as material rather than treated as proof of an exact size boundary between 林 and 森.
 
 ## Review and checkpoint protocol
 
@@ -150,7 +160,8 @@ where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
 remaining defect in that scope; batch 06 required no teaching correction.
-The remaining 230 additions are not yet authored.
+Batch 10's 15 kanji and four supporting articles are drafted but await independent GPT/Claude review.
+The remaining 215 additions are not yet authored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.

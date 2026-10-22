@@ -813,3 +813,45 @@ inspection were not performed. Neither report claims native-speaker certificatio
 Claude's optional suggestion to add a moon example is not required to interpret the short answer label;
 the body already says natural rising, such as the sun, rather than restricting the subject to that example.
 No actionable defect or consequential unresolved claim remains in the corrected scope.
+
+## Batch 10
+
+Cards: 普 暴 曇 替 札 机 材 村 板 林 枚 枝 枯 柔 柱.
+
+Status: **drafted; independent review pending**. Scope: all 15 new kanji and four supporting articles,
+暴れる, 枚, 枯れる and 柱; all three review facets and 45 curated distractor assignments.
+Related edits: component links in 17 existing word articles and a third curated wrong answer on 木.
+
+Evidence: [batch-10.json](n2-batch-sources/batch-10.json), with 40 exact reading rows and
+48 selected restriction-aware dictionary spelling/reading records. Twelve sensitive entry families retain
+their complete spelling and reading lists, spelling flags and reading details, including kana-only
+restrictions. These selected records are not the entire dictionary.
+
+### Authored scope and checks
+
+- All KANJIDIC2 readings, primary strokes, canonical radicals and grade tags are retained.
+  普's あまねし remains source-only lookup information; 普く あまねく is marked usually written in kana.
+  普段's ateji qualification is preserved rather than replaced with a literal character derivation.
+- 替 retains 曰, no. 73, as its indexing radical, with the 日 resemblance explained.
+  Its bound かえ- has the complete example 替え歌. The かえる/かわる families retain spelling
+  tendencies and transitivity distinctions rather than exclusive compartments.
+- 札 ふだ remains separate from the linked さつ article. 板木 はんぎ has its 版木 alternative,
+  without a dictionary-order frequency claim. 村長 and 森林 supply concrete compound examples
+  rather than forcing every on reading into an independent native noun.
+- 枚 has usable 一枚, 二枚 and 三枚 counts and complete sentence examples. Its バイ is supported
+  by explicitly archaic 枚を含む, not presented as a counter alternation or everyday expression.
+- 柔 distinguishes the na-adjective 柔らか, i-adjective 柔らかい, usually-kana adjective やわ
+  and separate martial-arts noun 柔ら やわら. The last is recognition context, not a usual-name claim.
+- New supporting articles have no inferred vocabulary JLPT. Direct word-quiz exclusions account
+  for 暴れる's physical-struggle/commotion overlaps, 枯れる with 死ぬ and 乾く, and 柱 with the broad
+  English support labels of 支える, 援助 and 賛成. These are contextual overlaps and English-label
+  safeguards, not assertions that all the Japanese words are unrestricted synonyms.
+- Every new kanji has three existing semantically wrong curated choices. 木 gains 米 alongside
+  人 and 水 to avoid newly activated timber/wood fallback from 材; its teaching text is unchanged.
+  The 17 existing word edits preserve lexical metadata and teaching prose while adding component links.
+- Stroke data uses the pinned converter and 16 points per stroke. Author inspection covers all
+  19 generated teaching pages. Structural validation reports 0 errors; the accumulated audit covers
+  150 additions and 456 exact source-reading rows, with 215 selected characters still unauthored.
+  The 57-file draft preserves the 17 legacy word articles after stripping only their new component
+  links, and 木 changes only its curated distractors. Two manifest builds are byte-identical.
+  These checks do not substitute for independent review.
