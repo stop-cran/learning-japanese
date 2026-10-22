@@ -868,3 +868,49 @@ The final punctuation/source-label preferences remain optional;
 no new content was added to prolong the loop. Batch 24 is closed,
 with the same manifest version `67808719c130984e`; five additions
 remain for batch 25.
+
+## Final batch 25 - 骨麦黄鼻齢
+
+All five final cards use existing supporting word articles. Their
+thirteen source-reading rows have twelve lexical examples and one
+explicit source-only lookup row, 齢とし. The complete restriction-aware
+JMdict scan establishes 22 pairs in 21 complete entry families, but
+not that pair. Jitsū lists とし as a character reading; that confirms
+the lookup reading without manufacturing a modern lexical example.
+Daijisen supplies the actual age-noun construction 齢を重ねる.
+Neither its old citations nor its non-jōyō notation is used as a
+literary/rare label unsupported by the inspected entry.
+
+Respect sense-local flags: 骨こつ's knack sense is usually written
+in kana, but the same entry's bone/remains senses do not carry that
+flag. The ほね supporting article is not a link for こつ. 黄金こがね
+and 黄金おうごん belong to separate complete families; the obsolete
+きがね/くがね flags are retained in the former family's evidence,
+not transferred to こがね. 黄こ- is illustrated as a bound reading,
+not by a substring match to a コウ compound.
+
+The same よわい age noun also has the recognized spelling 歯.
+Do not misclassify that lexical spelling as merely a visual
+coincidence or infer that every tooth word is pronounced よわい.
+This does not make the displayed tooth answer a meaning of 齢.
+
+麦むぎ is not restricted to wheat: preserve the 小麦/大麦 crop
+distinction. 麥/麦, 黃/黄 and 齒/the visible 歯 form have explicit
+canonical-radical explanations without speculative historical claims.
+The linked 黄色 and 黄色い articles retain their own primary
+readings and noun/adjective distinction.
+
+The older 年 target means both year and age. Its two curated wrong
+choices would leave a default-quiz fallback slot; the new 齢 answer,
+age, would be defensible for 年. Add 牛, cattle/cow, as a third wrong
+choice. This is the only old-kanji metadata edit in the expansion;
+all other 年 metadata and every byte of its teaching text are
+preserved. Curating three choices on 齢 alone would not fix the
+reverse-direction fallback. The seven old-word changes remain links
+only, and the existing 年齢/年 word exclusion is unchanged.
+
+The remaining twelve older two-choice targets are screened against
+the new meanings; the result is bounded to the default four-choice
+quiz, not a guarantee about larger quizzes. No new word article,
+word title, vocabulary JLPT label or exclusion is introduced.
+Independent review remains pending.

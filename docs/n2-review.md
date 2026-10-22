@@ -3085,3 +3085,54 @@ native fluency, exhaustive stroke paths or every future quiz.
 **Batch 24 is review-closed.** With all four archived reports the
 cumulative scope is 62 files. There remain five selected additions,
 `骨麦黄鼻齢`, for the final batch. Nothing is pushed.
+
+## Batch 25 - 骨麦黄鼻齢
+
+The final five additions complete the authored selected set:
+985 kanji, 3,273 words and all 367 selected N2 characters.
+The cumulative expansion is 365 added kanji/stroke pairs.
+This is authored coverage, not yet final review closure.
+
+The five cards preserve thirteen KANJIDIC2 source readings, with
+twelve lexical rows and one explicitly qualified source-only
+齢とし row. The complete pinned JMdict scan establishes 22 exact
+word/reading pairs, 22 records and 21 complete families, with all
+spelling/reading/sense restrictions and flags. Jitsū's character
+reading confirms とし without establishing the missing lexical pair.
+Daijisen's actual 齢を重ねる supplies a concrete よわい context.
+No literary/rare status is inferred from old citations, non-jōyō
+marking or the absence of a JMdict priority flag.
+
+Sense-local evidence matters for 骨こつ: usually-kana applies to
+knack, not automatically to the bone/remains senses. 黄金こがね
+and 黄金おうごん are distinct entry families; obsolete sibling
+readings do not make こがね obsolete. 麦's grain sense is broader
+than 小麦's wheat sense. All three visibly different radical
+forms have canonical-index explanations, not invented etymologies.
+
+No new word article is needed. Seven older articles, 骨, 骨折,
+小麦, 黄色, 黄色い, 鼻 and 年齢, receive component links only.
+Their metadata and nonlink teaching text remain unchanged.
+The older 年 kanji receives 牛 as a third curated wrong choice:
+年 also means age, so the new 齢 age answer could otherwise be
+a defensible random fallback. Only that distractor field changes;
+the rest of 年 and every old stroke file remain unchanged.
+The other twelve older two-choice targets are screened for newly
+introduced synonyms. Word identities, titles, primary readings,
+vocabulary labels and exclusions, including 年齢/年, are unchanged.
+This does not certify arbitrary larger or future quizzes.
+
+**Review status:** pending. The five new cards, the precise 年
+distractor change and the related links-only word diffs will go
+to fresh GPT and Claude reviewers sequentially against one frozen
+committed snapshot and identical scope, rubric and source access.
+Neither receives the author's rationale or the other's report.
+Batches 01-24 remain review-closed. Nothing is pushed.
+
+The five complete cards and all eight related old-file diffs have
+been read. Validation reports zero errors. The cumulative audit
+covers 365 additions and 1,073 exact source-reading rows with zero
+remaining selected characters. The exact batch scope is 23 files.
+Repeated manifest builds are byte-identical: contentVersion
+`70f83c8392bf1fe4`, SHA256
+`a46984c2faee26f41b1c9f1ec30d7e2a4e2306b3b3f88194ce27dcb59dd540d1`.
