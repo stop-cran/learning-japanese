@@ -2577,3 +2577,81 @@ byte-identical, contentVersion `97fc713005a6a3b9`, SHA256
 Totals remain 935 kanji, 3,268 words and 317 selected N2 characters.
 Batch 21 is review-closed; the overall selected-set expansion is not
 complete. Nothing is pushed.
+
+## Batch 22 - 賞賢贈超跡踊軍軒軟軽輪輸辛農辺
+
+### Sources, authoring and draft checks
+
+The clean baseline is batch 21's closure,
+`95dcb10075d23a934e6ea2c801e27c71ff2de777`.
+The fifteen characters follow the pinned community inventory order.
+Their exact non-nanori readings, primary stroke counts, school grades
+and canonical radicals are retained in
+[batch-22.json](n2-batch-sources/batch-22.json).
+Fifteen new stroke assets use the unchanged pinned KanjiVG converter
+and revision. All unverified origin stories are explicitly
+modern-shape mnemonics; no phonetic component is asserted.
+
+The fifteen kanji and supporting 超過 and 軟らかい articles form
+the full seventeen-page teaching scope. Neither word receives an
+inferred vocabulary JLPT level. The packet preserves 92 exact
+word/reading records from 85 complete entry families, with spelling,
+reading and applicable-sense restrictions. All 41 character-reading
+rows have lexical examples; no source-only or search-only row is
+needed in this batch.
+
+The draft distinguishes 賞める's rare spelling from the ordinary
+ほめる pronunciation; an archaic sense within 軍 いくさ from that
+whole reading; and unflagged 寄贈 きそう, 軽忽 きょうこつ and
+輸入 しゅにゅう from claims about comparative frequency.
+剽軽 ひょうきん is labelled usually kana. 辛's bound -づらい
+attaches to the -ます stem, and かのと is a separate calendar
+identity. 辺り ほとり is valid lexical evidence with irregular
+okurigana and a usually-kana flag. 野辺 supports -べ inside a
+complete word, not a freely productive attachment rule. 辺 retains
+the primary five-stroke count, not the alternate four.
+
+軟らかい and 柔らかい share an unrestricted family, not mechanically
+exclusive physical/figurative compartments. Separate na-adjective
+軟らか does not license 軟らかいな. The written kanji boundary
+is distinguished from the inflectional base. 超過's intransitive
+dictionary classification is qualified alongside a natural
+制限時間を超過する construction; を is not presented as automatic
+proof of an affected transitive object.
+
+A bounded full-entry softness/excess sweep, current primary readings,
+actual answer labels and the confusable-word inventory informed thirty
+direct exclusions on the two new word pages. Secondary applicable
+senses include 出る's exceed, 豊か's bound well-over and あまり's
+surplus/more-than senses restricted to あまり, not あんまり.
+Each safeguard records its basis in the packet. Some are conservative
+English-label guards: bare light, soft or mild does not assert that
+the Japanese words are unrestricted synonyms. Warm temperature, low
+volume, light weight, illumination and non-serious topics remain
+distinct. Available surplus/margin is not identical to an exceeded
+limit. Practical co-selection ambiguity is not runtime-tested.
+The scan does not automatically exclude soft drink, soft-shelled
+turtle, the skull's soft spot, qualified light compounds, intensifiers,
+negated not-exceeding or mere excellence. No transitive clique is
+inferred, and bounded candidate coverage is not exhaustive synonymy.
+
+The older-word scope is twenty-two links-only edits: 指輪, 柔らかい,
+賞, 賢い, 贈り物, 贈る, 跡, 踊り, 踊る, 軍, 軍隊, 軒,
+軽い, 輪, 輸入, 輸出, 辛い, 農家, 農業, 農民, 辺 and 辺り.
+Their lexical metadata and nonlink prose are preserved. No older
+kanji or stroke file changes. The author inspected all 45 new kanji
+distractor labels and the thirteen older two-choice targets; no newly
+activated fallback synonym was established.
+
+The author read all seventeen new pages and all twenty-two older-word
+diffs. The intended draft scope is 59 files, including the packet,
+manifest and three progress documents. Validation reports zero errors;
+the cumulative audit covers 330 additions and 983 exact reading rows.
+Totals are 950 kanji, 3,270 words and 332 selected N2 characters;
+35 additions remain unauthored. Repeated manifest builds are
+byte-identical: contentVersion `46674ca31fcca1c6`, SHA256
+`97ed332304b0f374c1896d93242f6145c26923df045d4cea302ac9e61be78716`.
+Independent same-snapshot GPT/Claude review and reconciliation are
+pending; no independent verdict is claimed yet. The draft uses the
+documented per-command unsigned-local handling, with `stop-cran` as
+both author and committer. Nothing is pushed.

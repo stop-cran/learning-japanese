@@ -620,3 +620,43 @@ quiz displays the primary reading. Optional quiz-related prose polish
 was also left alone. No actionable defect or consequential unresolved
 claim remained in the changed passages. The first twenty-one batches
 are review-closed; fifty additions remain unauthored.
+
+Batch 22 adds fifteen kanji and the supporting 超過 and 軟らかい
+articles. All 41 exact source readings have lexical examples,
+including 軽's キョウ/キン, 輸's シュ, 辛's calendar かのと and
+辺り ほとり. The latter is marked irregular okurigana and usually
+kana, not incorrectly downgraded to search-only evidence.
+賞める's rare-spelling flag does not make ordinary ほめる a rare
+pronunciation. 軍 いくさ has an unmarked war/battle sense and an
+archaic troops sense; do not transfer the latter flag to the whole
+family. Unflagged alternate readings establish recognition, not equal
+frequency. Complete families retain spelling/reading/sense restrictions.
+
+The two new word pages receive no inferred JLPT level. 軟らかい
+shares an unrestricted family with 柔らかい; separate 軟らか is a
+na-adjective, not permission for 軟らかいな. The written 軟/らかい
+boundary is not an inflectional stem boundary. 超過's dictionary
+intransitive label and a natural limit-marking を construction must
+not be reduced to "を always means affected transitive object."
+
+A bounded softness/excess sweep produced candidates, not an automatic
+synonym clique. Thirty direct safeguards protect actual applicable
+senses and conservative English-label ambiguities. These include
+secondary 出る "exceed," 豊か "well over," and あまり's restricted
+surplus/over senses, not the alternate あんまり. Soft drink, turtle
+shells, the skull's soft spot, qualified compound illumination labels,
+mere excellence and negated "not exceeding" do not establish overlap.
+Bare English light/soft/mild guards do not assert Japanese
+interchangeability or a measured runtime failure. Even within the
+retained pairs, warm air, low voice volume, low weight and illumination
+remain distinct from softness. Surplus as available budget leeway is
+not the same situation as exceeding that budget.
+
+The packet retains 92 exact records from 85 complete families.
+Twenty-two older-word changes are links only; no older kanji or
+stroke changes. The author has read all seventeen new teaching pages
+and all twenty-two older-word diffs. Validation reports zero errors;
+the cumulative audit covers 330 additions and 983 reading rows.
+Totals are 950 kanji, 3,270 words and 332 selected N2 characters,
+with 35 additions still unauthored. Batch 22's independent review is
+pending; the first twenty-one batches remain review-closed.
