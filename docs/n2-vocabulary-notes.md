@@ -204,3 +204,12 @@ evidence and learning impact; issue creation requires authorization.
   現れる, いただく or 会議 do not protect another pair. A recognized
   visual-harmonizing sense can justify a quiz guard without becoming the
   lesson's production focus or an unsupported modern-frequency claim.
+- **Batch 07 authoring:** Keep source sales labels separate from the selected
+  practical comparison. Actual 売上 and 売れ行き entries support takings
+  versus how goods sell, not an absolute numerical-versus-trend partition.
+  A search-only source spelling can be recognized explicitly without
+  becoming the preferred written learning form.
+- **Batch 07 authoring:** A written expression can combine on readings with
+  a native linking particle: 絵/エ + の + 具/グ. Preserve the actual
+  construction rather than inventing a のぐ constituent reading or
+  calling every kana-containing form an all-kun compound.

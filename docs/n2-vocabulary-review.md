@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-06 review-closed; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-06 review-closed; batch 07 drafted; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 120 rows are review-closed; 1,692 remain pending.
+The first 120 rows are review-closed; twenty are drafted and 1,672 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -684,6 +684,40 @@ assigned scope. These twenty rows are closed; no full-batch re-review
 or native-speaker certification is claimed. Cumulative coverage is
 **120 closed, 0 draft, 1,692 pending and 0 unresolved** source rows,
 mapped to 119 articles (103 new and sixteen reused).
+
+## Batch 07: N2:122-N2:141
+
+**Status:** drafted; independent reviews pending.
+
+Scope: 裏口, 占う, 恨み, 恨む, 羨ましい, 羨む, 売上, 売り切れ,
+売り切れる, 売行き, うろうろ, 運河, うんと, 英文, 英和, ええと,
+液体, エチケット, 絵の具 and エプロン.
+
+The batch adds **eighteen articles** and reuses the established うろうろ
+and 液体 articles, adding only newly sourced N2 metadata to those two.
+Source 売上 is explicitly taught under 売り上げ. Search-only source
+spellings 売行き and ええと are explicitly recognized under 売れ行き
+and えっと, without being promoted to preferred production spellings.
+The collection now contains 3,394 word articles.
+
+The [batch packet](n2-vocabulary-batch-sources/batch-07.json) preserves
+all twenty original rows, complete relevant main and comparison JMdict
+families, spelling/reading restrictions, selected senses and hash-verified
+KANJIDIC2 component evidence. Actual-entry inspection receipts support
+the qualified 売り上げ/売れ行き comparison, the broader purposes of
+canals and the quantity/degree uses of うんと.
+
+Three N2 kanji pages gain reciprocal examples: 裏/裏口, 占/占う and
+河/運河. 液/液体 is already reciprocal. 恨 and 羨 remain in word
+metadata but have no existing kanji cards; no broken links or additional
+kanji scope are introduced. Four existing word passages gain useful
+links: ペンキ to 絵の具, and あの/さあ/まあ to the explicitly taught
+ええと variant under えっと. Together with the two metadata changes,
+the related content scope is nine existing files.
+
+No review closure is claimed by the authored commit. Current coverage:
+**120 closed, twenty draft, 1,672 pending and 0 unresolved** rows;
+139 mapped articles (121 new and eighteen reused).
 
 ## Final verification
 
