@@ -320,6 +320,16 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   and all prose. 線's word article has no literal character mention in
   its component paragraph; link the substantive definition instead of
   rewriting unchanged teaching text to satisfy a helper.
+- Batch 17's independent reviews caught complementary issues. A word's
+  secondary lexical reading can make an answer label ambiguous: 粒 needs
+  separate direct exclusions with both 玉 and 球, whose たま entry includes
+  beads or drops. An exclusion between 玉 and 球 does not cover either
+  pair with 粒. Verify the applicable sense, not just the primary reading.
+- Preserve the on/kun notation in cross-character explanations too:
+  毛糸 uses 毛's kun reading け, not an on reading suggested by ケ.
+  Keep a sense-specific kana-use flag next to the illustrated sense;
+  綿's わた row now illustrates the plant alone, while the meaning and
+  Notes retain the separate padding use.
 
 ## Review and checkpoint protocol
 
@@ -374,14 +384,19 @@ Claude accepted the previously missed English-label ambiguity; its additional
 際/occasion observation did not establish a direct synonym or actionable defect.
 The remaining counter and history suggestions are optional expansions, not
 unresolved findings.
-Batch 17 is authored but not independently reviewed: fifteen kanji and
+Batch 17 has independent initial GPT/Claude reviews: fifteen kanji and
 three supporting word articles bring the authored total to 255 additions
 and 774 exact reading rows. Counts are 875 kanji, 3,255 words and 257
 selected N2 characters, with 110 additions unauthored. Its 41 reading rows
 contain 38 lexical examples and three explicitly qualified lookup-only
 rows. Fifteen older word changes are links only; 小 gains only a third
-wrong answer. The source packet retains 74 exact pairs and 65 complete
-entry families. Reviewer findings and dual-model usefulness remain pending.
+wrong answer. The corrected source packet retains 76 exact pairs and 66
+complete entry families. GPT uniquely established the 粒/玉/球 answer-label
+defect; Claude uniquely established the 毛 reading-notation defect and
+supplied the adopted optional 綿 qualifier clarification. Neither initial
+reviewer caught the other's actionable issue. Original-reviewer
+changed-passage confirmation remains pending; these observations concern
+this shared sample, not a general ranking or proof of eliminated bias.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.

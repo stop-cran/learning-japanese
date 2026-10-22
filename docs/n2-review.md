@@ -1632,7 +1632,7 @@ are author-run, not reviewer-executed. These bounded reviews do not certify
 native fluency, exhaustive stroke drawing paths or runtime quiz behavior;
 larger or changed quizzes may still require new semantic curation.
 
-## Batch 17: 築簡籍粉粒糸紅純細紹絡綿総緑線 - authored, review pending
+## Batch 17: 築簡籍粉粒糸紅純細紹絡綿総緑線 - corrections awaiting confirmation
 
 **Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke files;
 three supporting word articles, 書籍, 粒 and 総額; fifteen older word
@@ -1686,3 +1686,66 @@ manifest is `35b043d0d29d1838`; reproducibility and preservation checks are
 author-run, not reviewer-executed. The first sixteen batches remain
 review-closed; independent same-snapshot GPT/Claude review of batch 17
 and evidence-based reconciliation are pending.
+
+### Independent initial review and reconciliation
+
+The 54-file draft was committed as
+`e80e0c452d4cd55c9bee9a3ab125b40fc85be953`, with author and committer
+`stop-cran`. GPT (`gpt-6.1-sol`, session
+`4399874e-97dd-4e00-8617-6d58df78239c`) and Claude (`claude-opus-5.5`,
+session `9be5503b-23ea-4c87-bb38-bf133b20aa0b`) independently reviewed
+the same frozen snapshot, all eighteen new teaching pages and the narrow
+related edits. The processes ran sequentially, exited successfully and
+recorded zero file edits. Their unchanged initial reports are
+[GPT](n2-reviews/batch-17-gpt-initial.md) and
+[Claude](n2-reviews/batch-17-claude-initial.md).
+
+- **GPT-17-01, resolved in the correction:** 粒's accurate answer label
+  includes bead/drop, but 玉 and 球 were still eligible opposite it.
+  Independent inspection of pinned JMdict entry 1240530, also preserved
+  in the batch-15 packet, confirms that sense 2 has no spelling or
+  reading restriction excluding 玉/たま or 球/たま. 球's primary きゅう
+  reading and its existing exclusion with 玉 do not protect either
+  direct pair. Added 玉 and 球 to 粒's exclusions, without changing the
+  definition or either older article. Severity remains medium; confidence
+  is high. This is an answer-label safeguard, not unrestricted Japanese
+  substitution.
+- **Claude F1, resolved in the correction:** 糸's note used ケ for 毛's
+  native reading, contrary to the repository's on/kun notation. The pinned
+  metadata and the existing 毛 card identify け as kun and モウ as on.
+  The note now explicitly says "kun reading け". Severity is minor;
+  confidence is high.
+- **Claude O4, optional and adopted:** narrowed 綿's わた table example
+  to the cotton-plant sense, placing the existing usually-kana annotation
+  beside that sense alone. The introduction and Notes still teach
+  padding and explicitly limit the kana-use flag. No claim that every
+  padding use is usually kana remains in the row.
+- **Claude O1-O3, optional and not adopted:** 築 and 建 already have
+  different titles and three curated, semantically wrong distractors;
+  their English overlap does not establish a defect in the default quiz.
+  紅 already explains べに's cosmetic sense in Notes. 粉/こ is attested
+  without a rare flag, and 小麦粉 already illustrates its use in the
+  Common words and Notes. No frequency claim or extra example is needed
+  to close an actionable finding.
+
+The corrected packet adds 玉/たま and 球/たま: 76 exact records and 66
+complete families. There are now sixteen direct new-word exclusion pairs;
+the 41 reading rows, card counts, old-word links-only preservation and
+old-stroke preservation are unchanged. Canonical authoring inputs are
+synchronized with the corrected pages.
+
+After deduplicating observations across every report section, GPT's
+quiz-label finding and Claude's reading-notation finding are distinct
+useful contributions; neither initial report identified the other's
+actionable defect. Claude also uniquely supplied the adopted optional
+qualifier clarification. This is complementary signal in this shared
+sample, not a general model ranking or evidence that model bias has been
+eliminated. Original-reviewer confirmation of the three corrected pages,
+粒's citation-only kanji edit and the actual committed correction diff
+remains pending.
+
+The correction's author-run validator reports zero errors, and the
+accumulated audit still covers 255 additions and 774 exact reading rows.
+The strict batch verifier accepts the 56-file cumulative scope including
+both initial reports, sixteen exclusion pairs and all preservation
+invariants. The regenerated manifest is `134fea0bf56ca3e1`.
