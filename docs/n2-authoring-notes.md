@@ -213,6 +213,27 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
 - The bare 温 ぬく example and 温もり ぬくもり are different lexical items. Retain both
   source records when explaining the latter's usually-kana warmth sense; the archaic
   standalone example is not evidence that every occurrence of the ぬく element is an insult.
+- Batch 14 distinguishes exact spelling/reading pairs: 灯/あかり is search-only in its
+  inspected family, but 灯/ひ and 灯/ともしび have separate ordinary entries.
+  Keep 灯影 ほかげ as evidence for bound ほ-; do not invent a standalone ほ noun.
+- Preserve the complete 溶ける/融ける/解ける melting family alongside the existing
+  undo/solve 解ける lesson. Its informal money/time-used-up sense also warrants direct
+  quiz exclusions with 無くなる, 切れる and 消える, not unrestricted synonym claims.
+- 濯ぐ's ゆすぐ reading does not inherit the revenge/wiping-disgrace sense of the
+  broader すすぐ/そそぐ family. Check spelling, reading and sense restrictions together.
+- 燥ぐ is a rare spelling of はしゃぐ, not evidence that the spoken verb is rare.
+  Conversely, the inspected 燃す もす pair has no source rarity flag; do not infer one.
+- 乾燥する has both transitive and intransitive source classifications. Illustrate
+  actual 木材を乾燥する as well as 空気が乾燥する; a causative-only example would
+  not demonstrate the former. 照らす's comparison/reference construction has both
+  pinned lexical evidence and an actually fetched native-dictionary explanation.
+- 片/かた is a prefix in the inspected entry, not an ordinary standalone noun.
+  Use 片手 to explain both native metadata rows. 版 also has a ばん suffix use and
+  a printing-block spelling overlap with 板; preserve ハン-only character metadata
+  without denying those word uses or treating 板 as a universally wrong answer.
+- Batch 14 gives 火 and 分 a third curated distractor rather than relying on
+  automatic choices around the new burning/fragment meanings. These are exact
+  one-line changes; fifteen older word edits add links only.
 
 ## Review and checkpoint protocol
 
@@ -242,7 +263,9 @@ Batch 12's 15 additional kanji and three supporting verb articles have independe
 and confirmed corrections, including the linked 汗 article's consistency repair.
 Batch 13 has independent initial reports for all eighteen new pages. Both original reviewers
 confirmed the eight revised teaching pages without a remaining actionable defect. Its 21 legacy word changes are component links
-only, including the kana-headword あびる lesson. Another 170 additions remain unauthored.
+only, including the kana-headword あびる lesson.
+Batch 14's fifteen kanji and five supporting word articles are authored but not yet independently reviewed.
+Its source/reading audit brings the total to 210 additions and 655 exact reading rows; another 155 additions remain unauthored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.

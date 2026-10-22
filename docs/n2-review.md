@@ -1309,3 +1309,44 @@ audited, with 170 additions still unauthored. The 21 older word changes remain c
 and 水's exact one-line fallback repair is unchanged. No unresolved actionable claim remains within
 the assigned scope. Git/validator/manifest checks are author-run, not reviewer-executed; stroke-path
 and runtime-quiz execution and native-fluency certification remain outside these review verdicts.
+
+## Batch 14 - authored, independent review pending
+
+**Characters:** 溶滴漁濃濯灯灰炭焼照燃燥爆片版.
+
+Fifteen kanji cards, their generated stroke files and five supporting word articles
+(溶ける, 水滴, 漁業, 照らす and 乾燥) are authored.
+Fifteen existing word edits are links only: 光る, 出版, 洗濯, 濃い, 灯, 灰, 灰皿,
+焼く, 焼ける, 燃える, 爆発, 片付ける, 石炭, 解ける and 電灯.
+Thirteen gain component links; 光る and 解ける link their newly available comparison articles.
+The only older kanji edits add a third curated distractor 木 to 火 and 分.
+All fifteen old word changes were mechanically checked against the pre-batch commit after
+removing Markdown links; both kanji changes were checked as exact single-line replacements.
+
+The [batch source packet](n2-batch-sources/batch-14.json) preserves exact metadata,
+47 reading rows and 72 selected spelling/reading evidence records.
+Forty-six reading rows have lexical examples. The remaining 灯 あかり pair is explicitly
+qualified as search-only within its inspected spelling family, not recommended in Common words.
+The separate ordinary 灯/ひ and 灯/ともしび entries remain distinguished.
+
+Sensitive evidence includes the full melting 溶ける/融ける/解ける family and its informal
+money/time-used-up sense; 濯ぐ's restricted ゆすぐ reading; bound 灯影 ほかげ;
+焼き's standalone, prefix and suffix uses; 燃す もす; the rare spelling 燥ぐ;
+片's prefix classification and 版's はん/ばん family and 板 spelling overlap.
+The actually fetched [Seisenban Nihon Kokugo Daijiten 照らす, I.4](https://kotobank.jp/word/%E7%85%A7%E3%82%89%E3%81%99-577081)
+supports comparison against a standard. Irrelevant encyclopedia extractions for 乾燥 were
+not adopted as lexical confirmation; the pinned JMdict entry explicitly classifies both
+transitive and intransitive 乾燥する, and the new article illustrates each directly.
+
+All fifteen mnemonics are explicitly modern-shape, retain `structure-unclassified`, and explain
+visible radical variants where needed. All new kanji have three curated wrong choices and a
+useful linked word article. Supporting word articles declare no inferred vocabulary level.
+Direct exclusions protect applicable melting, fishing, illumination/comparison and drying overlaps;
+they do not claim unrestricted interchangeability.
+
+Author-run structural validation returned zero errors. The accumulated source audit covers
+210 additions and 655 exact reading rows, leaving 155 selected characters unauthored.
+Repeated manifest builds were byte-identical, version `498287858197d157`.
+Content totals are 830 kanji, 3,249 word articles and 212 selected N2 characters.
+The first thirteen batches' 195 additions are review-closed; these fifteen additions and
+five supporting word articles still require independent GPT/Claude review.
