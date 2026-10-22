@@ -166,3 +166,12 @@ evidence and learning impact; issue creation requires authorization.
   syntax differs. Check actual labels and entries, not just shared candidate
   tags: fallback choices still justify the cautious 一応/くらい and 一応/ほど
   guards. Do not remove valid glosses merely to disguise label ambiguity.
+- **Batch 05 authoring:** Preserve source variants without promoting search-only
+  forms to preferred production spellings. Source ウエートレス is explicitly
+  taught under ウェイトレス. Same-entry 煎る/炒る can share an article
+  when both spellings and the actual cooking use are taught; homophonous いる
+  is not reusable. Actual dictionary entries support a qualified cooking
+  comparison, not a sharp oil-free division inferred from a search summary.
+- **Batch 05 authoring:** A kanji's written reading boundary is not necessarily
+  the verb's conjugation stem. 飢 writes う, but the ichidan stem retained
+  before ます is うえ-. Keep spelling explanation separate from inflection.

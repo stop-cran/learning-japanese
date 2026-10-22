@@ -5,7 +5,7 @@
 **Batches 01-04 review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 80 rows are review-closed; none are drafted and 1,732 remain pending.
+The first 80 rows are review-closed; 20 are drafted and 1,712 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -439,6 +439,34 @@ deterministic at `8d6cfcd10efadd70`. Coverage is **80 closed, 0 draft,
 1,732 pending, 0 unresolved**: 68 new and twelve reused articles overall.
 The collection contains 3,341 word articles; all twenty batch rows and the
 evidence packet are marked closed.
+
+## Batch 05: N2:82-N2:101
+
+**Status:** authored; independent review and reconciliation pending.
+
+The twenty rows add **nineteen articles**: いってまいります, いつのまにか,
+移転, 井戸, 緯度, 従姉妹, 威張る, 嫌がる, いよいよ, 煎る,
+入れ物, インキ, インタビュー, 引力, ウーマン, ウール, ウェイトレス,
+植木, 飢える. Source 煎る and 炒る explicitly share the cooking article;
+neither maps to the unrelated existing existence verb いる.
+
+The [evidence packet](n2-vocabulary-batch-sources/batch-05.json) retains
+the original source fields, complete relevant families, exact sense mappings,
+component records and complete comparison families. Source ウエートレス
+maps to primary dictionary reading ウェイトレス with explicit search-variant
+teaching; the original form remains unchanged in provenance. The departing
+speaker's formal greeting is distinguished from the send-off reply, and the
+female-cousin article preserves the whole-word reading いとこ.
+
+Three N2 kanji pages gain reciprocal links: 移/移転, 戸/井戸, 植/植木.
+Existing 従兄弟 and インク gain narrowly related comparison links.
+No baseline identity, primary reading, title, exclusion list or sourced
+level changes. The collection contains 3,360 word articles.
+
+Actual Digital Daijisen entries for 煎る and 炒める support the qualified
+cooking comparison. The failed initial search endpoint and an unsupported
+always-without-oil search-summary claim are not treated as evidence.
+No review-closed status is claimed for these twenty drafted rows.
 
 ## Final verification
 

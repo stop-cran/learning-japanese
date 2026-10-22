@@ -43,7 +43,7 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   All 25 batches have independent GPT/Claude review and reconciled reports, including changed-passage confirmations.
   These community level sets are not official JLPT kanji lists.
   The `starter` tag identifies the original 118-card cohort, not the later expansions.
-- `words/` – one article per written word form (3,341): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
+- `words/` – one article per written word form (3,360): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
   Articles explain meaning, spelling or formation, synonyms, antonyms and usage distinctions.
   The selected community vocabulary list's 684 N5 and 640 additional N4 rows are covered by 1,308 articles:
   924 new articles and 384 reused ones. Multiple source readings can share an article.
