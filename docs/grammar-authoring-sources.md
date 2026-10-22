@@ -23,6 +23,32 @@ Follow the [grammar exercise contract](content-format.md#grammar-exercises) and
 For observed predicate-role, register, typed-spelling, matched-context and response-label pitfalls, see the
 [reusable grammar-review lessons](../REVIEW.md#reusable-grammar-review-lessons).
 
+## Assigning exercise study levels
+
+For JLPT metadata, follow the [grammar-level policy](jlpt-levels.md#grammar-baseline) and
+[classification source record](grammar-jlpt-sources.json): Bunpro is primary, JLPT Sensei is secondary, and the exact
+construction sense matters. A dictionary meaning, vocabulary-card level or optional advanced answer does not establish
+an exercise's grammar level. These curriculum estimates are not an official JLPT grammar syllabus.
+
+The 2026-10-22 classification pass established these reusable authoring checks:
+
+- **Match the use, not just the spelling.** Separate past-experience from occasional-occurrence ことがある, the two のに
+  constructions, and concentration, recent-completion and approximation ばかり. Ordinary additive も and number-plus-も
+  also need distinct anchors; a particle's vocabulary-card level is not its grammar level.
+- **Inspect both answer modes.** A substantive contrast in the base fixed choices may require harder grammar than the
+  key alone. A required とか or 折 answer is not merely an optional typed alternative; conversely, optional すら or formal
+  copulas do not automatically raise a task that can be answered without them. Do not take the hardest string anywhere
+  in the record as the level.
+- **Separate the elicited skill from its surroundings.** A supplied compound relation need not raise an explicit
+  object-marker or noun-linking drill. Glossed interpretation labels are not vocabulary prerequisites. Keep natural
+  examples and support unfamiliar words rather than rewriting the language to fit a level.
+- **Record the strength of the mapping.** Distinguish an exact entry from an editorial semantic-family extension.
+  Document primary/secondary disagreements and overlapping entries within one reference. When the primary lacks the
+  relevant sense, cite an applicable secondary entry or leave the level absent; do not borrow a neighboring sense's label.
+- **Keep relabeling separate from content revision.** Preserve prompts, translations, answers, vocabulary annotations,
+  stable IDs and introduction metadata, then regenerate the manifest. Vocabulary context fingerprints exclude `jlpt`:
+  level-only changes must not invalidate lexical reviews or turn pending coverage into reviewed coverage.
+
 ## Starting points by purpose
 
 Links in the first column are previously inspected seed pages, not an exhaustive bibliography or a blanket endorsement.
@@ -61,6 +87,9 @@ on a listed site, or reject a relevant source merely because it is absent here.
   frequency for the accepted spellings.
 - **Tae Kim:** inline Japanese can disappear in simplified extraction. Inspect the actual HTML/body text before evaluating
   an incomplete example; see the [degree/extent record](grammar-degree-extent-sources.json).
+- **Grammar indexes:** follow pagination before claiming list coverage. An index entry supports its stated curriculum
+  placement, not every same-spelled sense or variant; inspect the relevant lesson when scope is unclear. Keep retrieved
+  URLs, dates and hashes in provenance rather than copying whole pages; see the [classification record](grammar-jlpt-sources.json).
 
 If the relevant passage remains unavailable, record the limitation instead of reconstructing it from a summary.
 

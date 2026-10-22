@@ -18,7 +18,7 @@ def digest(value):
 
 
 def context_hash(exercise):
-    return digest({k: v for k, v in exercise.items() if k != "vocabulary"})
+    return digest({k: v for k, v in exercise.items() if k not in {"vocabulary", "jlpt"}})
 
 
 def corpus(root):

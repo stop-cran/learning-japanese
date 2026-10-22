@@ -41,6 +41,8 @@ class VocabularyCoverageTests(unittest.TestCase):
         data = json.loads(self.path.read_text(encoding="utf-8"))
         self.assertEqual(2, data["exercises"][0]["vocabulary"]["spans"][0]["end"])
         for field, value in (("prompt", "別の____。"), ("acceptedAnswers", ["でした"]),
+                             ("translation", "A different interpretation."),
+                             ("options", [{"id": "different", "label": "でした"}]),
                              ("vocabulary", {"spans": []}), ("vocabulary", None), ("vocabulary", "bad")):
             changed = copy.deepcopy(data)
             changed["exercises"][0][field] = value
@@ -49,6 +51,23 @@ class VocabularyCoverageTests(unittest.TestCase):
         write_json(self.path, data)
         saved["records"][0]["exclusions"].pop()
         self.assertTrue(coverage_problems(self.root, saved))
+
+    def test_level_changes_preserve_pending_proposals_and_reviewed_coverage(self):
+        for level in (5, 3):
+            write_json(self.path, {"exercises": [self.exercise | {"jlpt": level}]})
+            self.assertEqual([], coverage_problems(self.root, self.inventory))
+        apply_review(self.root, self.inventory, self.proposal)
+        reviewed = json.loads(self.path.read_text(encoding="utf-8"))
+        for level in (4, 1, None):
+            with self.subTest(level=level):
+                changed = copy.deepcopy(reviewed)
+                exercise = changed["exercises"][0]
+                if level is None:
+                    exercise.pop("jlpt")
+                else:
+                    exercise["jlpt"] = level
+                write_json(self.path, changed)
+                self.assertEqual([], coverage_problems(self.root, self.inventory, require_complete=True))
 
     def test_new_prompt_and_changed_review_input_cannot_silently_reuse_coverage(self):
         with self.assertRaisesRegex(ValueError, "entire original prompt"):

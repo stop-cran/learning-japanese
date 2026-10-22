@@ -1,6 +1,6 @@
 # JLPT study levels and sources
 
-The `jlpt` field is a community study label, not an official assignment of an individual kanji or word to an examination.
+The `jlpt` field is a community study label, not an official assignment of an individual kanji, word or grammar item to an examination.
 The [official JLPT FAQ](https://www.jlpt.jp/e/faq/index.html#anchor28) explains why vocabulary, kanji, and grammar lists
 have not been published for the test revised in 2010. Official competence descriptions and sample questions are not exhaustive lists.
 
@@ -108,3 +108,65 @@ The selected files include expressions, suffixes and counters but omit standalon
 は, が, を, に, へ, で, と, も and の. Their absence does not make those particles unimportant.
 Other lists descended from Waller are not independent corroboration of an entry's level. Dictionary evidence establishes lexical
 identity and applicable senses, not a modern examination assignment or the naturalness of every possible example sentence.
+
+## Grammar baseline
+
+Use [Bunpro's grammar library](https://bunpro.jp/grammar_points) as the primary level reference, with
+[JLPT Sensei's grammar lists](https://jlptsensei.com/jlpt-n5-grammar-list/) for secondary comparisons. These are study curricula, not official
+examination specifications. The [grammar classification record](grammar-jlpt-sources.json) preserves the inspected index
+URLs, retrieval dates, source hashes, selected entries, secondary comparisons and the decision for every existing exercise.
+
+**Classify grammar, not vocabulary or kanji.** Use the construction and substantive contrast needed for the complete
+visible task. Keep natural examples; unfamiliar words should be supported by readings, glosses and translations rather
+than by inflating the grammar level or simplifying away useful language. Vocabulary-help coverage is a separate concern:
+the classification pass does not fill the existing annotation gaps.
+
+Assign one integer `jlpt` per exercise, not one blanket level per article or set. An explicit contrast can be harder than
+its correct answer alone: a はず/べき task requires the N3 contrast even when はず is the answer. Conversely, supplied
+background grammar, glossed interpretation labels, malformed distractors and advanced **optional** accepted answers do
+not automatically raise the level. A construction required by the base fixed choices is not merely an optional typed
+alternative. Simple noun-linking or object-marker drills can remain N5 inside an advanced lesson.
+
+When applicable entries disagree, retain Bunpro's placement and document the secondary placement, rather than averaging
+them or silently choosing the harder number. Examples include unchanged-state まま (Bunpro N3; JLPT Sensei N4),
+ことになっている (N2; N3), 上に and 際に (N2; N3), purpose ように (N4; N3), and とき (N4; N5).
+Match the actual sense: past-experience たことがある is not occasional nonpast ことがある, and concessive のに is not
+the resource/purpose construction with the same spelling.
+
+If the exact primary sense is not established, use a documented exact secondary entry where available; otherwise leave
+the exercise unclassified. This pass uses JLPT Sensei's N3 **maximum-extent だけ** and N2 **approximate-quantity ばかり**
+instead of borrowing Bunpro's levels for exclusive だけ, だけは or concentration ばかり. Optional versions elsewhere
+do not raise those exercises. Bunpro itself has overlapping N4/N3 だけでなく entries: the inspected N4 lesson explicitly
+supports the simple noun-plus-も tasks here, so they use N4.
+
+Some decisions are explicitly **semantic-family mappings**, not separate source labels for every ending: extended つもり
+self-view/completion-belief predicates use the N2 つもりで family, while ordinary past inflection of a future intention
+remains N5; established ことにしている practice uses the N3 ことにする family. These editorial estimates can be revised
+without changing exercise identities or resetting progress. Prior linguistic-review verdicts do not certify this new
+metadata pass; the source record identifies it as author classification, not independent review.
+
+### Current classified practice
+
+The 2026-10-22 pass classifies all **721 exercises in 40 sets**: **170 N5, 210 N4, 235 N3, 102 N2 and four N1**.
+The original 19 pilot labels are unchanged. No exercise remains unclassified in this snapshot, but omission remains the
+correct representation for future unresolved cases. These counts are coverage of our existing exercises, not coverage
+of every grammar item in any level's curriculum.
+
+| Linked article | N5 | N4 | N3 | N2 | N1 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| [Nouns and basic particles](../articles/japanese-nouns-and-basic-particles.md) | 61 | 3 | 0 | 0 | 0 |
+| [Topic, contrast and inclusion](../articles/wa-ga-mo-topic-and-inclusion.md) | 36 | 0 | 0 | 0 | 0 |
+| [Listing and examples](../articles/japanese-listing-and-examples.md) | 19 | 17 | 0 | 0 | 0 |
+| [Restriction and unexpected inclusion](../articles/only-and-unexpected-inclusion.md) | 15 | 25 | 10 | 0 | 0 |
+| [Compound relations](../articles/about-targets-and-perspectives.md) | 8 | 2 | 38 | 0 | 0 |
+| [Conditionals](../articles/japanese-conditionals.md) | 2 | 58 | 0 | 0 | 0 |
+| [のに contrasts](../articles/noni-and-concessive-contrasts.md) | 0 | 17 | 9 | 0 | 0 |
+| [こと, わけ and noun-based grammar](../articles/koto-wake-and-formal-nouns.md) | 29 | 88 | 178 | 102 | 4 |
+
+The four N1 tasks have formal 折(おり)に in their actual fixed-choice contrast; optional 折 answers elsewhere do not make
+those tasks N1. Bunpro's 折には entry explicitly includes 折に without は.
+
+Article browsing derives matching levels from linked exercises; no article front matter or blanket article label is
+needed. The table does not grade every passage in a mixed-level article. Articles without linked exercises, such as
+the verb-extensions overview, receive no exercise-derived level from this pass. The app's new-material scope remains
+cumulative, while article/exercise browsing uses exact matching levels; classification does not change SRS identities.

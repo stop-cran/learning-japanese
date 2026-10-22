@@ -214,14 +214,16 @@ Classify the grammar required by the complete visible task, including its contra
 or most advanced optionally accepted formulation. An N5 grammar exercise need not contain only N5 words. Preserve accepted answers,
 comprehensible wording and existing translation/reading support; optional vocabulary help below is independent of grammar difficulty.
 JLPT labels are sourced editorial estimates, not an official syllabus or mastery claims. Record the evidence and qualifications
-in contributor source records, and leave unestablished cases unclassified.
+in contributor source records, and leave unestablished cases unclassified. Follow the
+[grammar baseline](jlpt-levels.md#grammar-baseline): Bunpro primary, JLPT Sensei secondary, with documented scope differences
+and disagreements rather than vocabulary-derived or guessed levels.
 
-The [reviewed introduction pilot](grammar-introductions-pilot.json) supplies the initial 19 labels: six before/after and nine
-action-stage exercises at N4, and four expectation/obligation exercises at N3. The other four koto/wake exercises in the mixed pilot
-file remain unclassified, as do the other 698 exercises, including all 60 conditionals, 26 のに, 36 listing,
-36 topic-particle, 64 basic-particle, 50 restriction/inclusion and 48 compound-relation questions. The same three pilot groups
-are annotated as optional `introductionGroups` in their declaring files, with one recommendation from temporal sequence
-to action stages and no genuine prerequisites.
+The [corpus classification record](grammar-jlpt-sources.json) covers all 721 exercises in 40 sets: 170 N5, 210 N4,
+235 N3, 102 N2 and four N1, with none unclassified in this snapshot. Mixed-level articles derive their browsing levels from
+their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
+supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
+expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
+action stages, and absence of genuine prerequisites are unchanged by classification.
 
 **Optional introduction groups:** each group requires `id`, `label`, `facets` (`id`, `label`) and `members`
 (`exerciseId`, `facetId`, `exampleKey`). IDs use `[a-z0-9-]+`; labels/reasons are nonblank. Group IDs are source-global,
@@ -263,6 +265,11 @@ The [vocabulary review inventory](grammar-vocabulary-review.json) freezes 401 pr
 Its original glosses have author self-review, with per-exercise limitations; this is not independent review, owner approval or
 native-speaker certification. Non-BMP and conflicting-reading cases are synthetic parser fixtures, not invented published exercises.
 Remaining prompts are explicitly `pending`, never silently counted as covered.
+
+The inventory's context fingerprint excludes `jlpt` metadata as well as the separately checked `vocabulary` payload.
+Changing a study level alone does not invalidate lexical review; changing the prompt, translation, answers or other
+reviewed context still does. The grammar-level pass normalized only the 19 pre-existing labelled exercises' context
+fingerprints (all pending), preserving every annotation, review status and provenance field.
 
 The two conditionals additions extended this inventory without reinitializing it to 461 exercises in 34 files and
 **64/461** vocabulary coverage. The のに follow-up added 26 author-reviewed prompts, reaching 487 exercises in

@@ -77,6 +77,11 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   36 on listing, examples and addition, 36 on は／が／も topic, contrast and inclusion,
   64 on basic nouns and particles, 50 on restriction and unexpected inclusion,
   and 48 on compound relations and formal-noun contrasts (721 in total).
+  All 721 exercises have grammar-only study labels: **170 N5, 210 N4, 235 N3, 102 N2 and four N1**.
+  These are editorial estimates using Bunpro as the primary reference, with documented JLPT Sensei comparisons,
+  not an official syllabus. Vocabulary and kanji difficulty do not determine them; natural examples remain unchanged.
+  See the [policy and per-article distribution](docs/jlpt-levels.md#grammar-baseline) and
+  [exercise-level source record](docs/grammar-jlpt-sources.json). Mixed-level articles are browsed through matching exercises.
   Time practice includes うち, あいだ, とき, ころ, たび and shared とき／おり／さい occasion answers;
   shared alternatives are not independently contrasted targets.
   Purpose/cause practice adds ため, おかげ, せい, かわり and ついで, including compensating trade-offs.
