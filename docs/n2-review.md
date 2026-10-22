@@ -933,7 +933,7 @@ remains in the revised scope.
 
 Cards: 査 栄 根 械 棒 森 植 極 橋 欧 武 歴 殿 毒 比.
 
-Status: **authored; independent reviews pending**. Scope: all 15 new kanji and four supporting articles,
+Status: **initial reviews reconciled; changed-passage confirmation pending**. Scope: all 15 new kanji and four supporting articles,
 栄える, 極める, 欧州 and 御殿; all three review facets and 45 curated distractor assignments.
 Related edits: component links in 21 existing word articles, with lexical metadata and teaching text preserved.
 
@@ -951,6 +951,7 @@ These selected records are not the entire dictionary.
 - 栄's ヨウ and え, 欧's うたう and はく, and 武's bare たけ remain qualified source-only readings.
   栄養 does not allocate its よう to 栄. The investigated 栄耀 えよう has an outdated-kana flag;
   見栄 みえ is marked ateji. Neither is treated as independent proof of the unresolved native allocation.
+  The revised え qualification explicitly names 見栄 and does not discourage that spelling's everyday use.
 - 出来栄え, 屋根 and 月極め provide complete bound-reading examples. 殿 distinguishes the building
   compound 仮殿 from the formal address suffix -どの, with an attached-title example and no universal
   claim of greater respect than 様.
@@ -963,9 +964,37 @@ These selected records are not the entire dictionary.
   or きめる to the new きわめる article.
 - Supporting vocabulary has no inferred JLPT labels. Direct quiz safeguards cover 栄える with 盛ん/豊か
   and 極める with 達する/至る; sentence patterns remain distinct despite contextual English overlap.
+  Revised safeguards additionally cover the written homographs: 栄える with 輝く/光る, and 極める with 決める.
   欧州 and ヨーロッパ share the exact answer Europe, so the existing identical-title deduplication applies.
   No newly activated direct synonym was established among the remaining two-distractor legacy kanji.
 - All 19 new teaching pages were inspected by the author. Structural validation reports 0 errors;
   the accumulated source/stroke audit covers 165 additions and 502 exact reading rows, with 200 selected
   characters still unauthored. The 21 existing word articles match their preceding versions after removing
   only the new component links and normalizing CRLF. These checks do not substitute for independent review.
+
+### Independent initial reviews and reconciliation
+
+Both reviewers independently assessed the clean draft `586989dc37529aaa66ff39ba9d84d0560f2a244d`,
+with the same 19-page scope, 21 linked passages, rubric and source access. Each ran alone and exited before
+the next started. Neither independently executed Git or the repository validation commands.
+
+- GPT, actual `gpt-6.1-sol`, session `2ee345bc-1863-4c82-91a6-d46885b43ef6`:
+  [initial report](n2-reviews/batch-11-gpt-initial.md). All 19 pages CLEAN on all three facets;
+  no findings or optional suggestions.
+- Claude, actual `claude-opus-5.5`, session `2ee199ad-f493-4216-b911-9cf44bf88107`:
+  [initial report](n2-reviews/batch-11-claude-initial.md). Three minor findings concerning the
+  栄 qualification, 極 reading-status wording and 栄える quiz metadata.
+
+| Observation | Evidence-based adjudication |
+| --- | --- |
+| B11-01, 見栄 and the え qualification | Clarification adopted: explicitly retain the attested 見栄 みえ spelling and its show/vanity sense, and do not imply that spelling is unsuitable for everyday use. The proposed claim that a whole-word ateji flag proves each character's purely phonetic role, or establishes 栄's regular native allocation, is not adopted. The narrower allocation remains explicitly unverified lookup information, not a claim that the word is absent. |
+| B11-02, 極 reading status | Consistency improvement adopted: one note gives the actual five Joyo readings on Kanjipedia's 極 page and its explicit outside-table marks for きめる/きまる. No status is inferred for every derived form. The single reading-row marker is removed, and JMdict's 決める/極める spelling list is stated neutrally, without a primary-spelling or frequency claim. |
+| B11-03, 栄える and 輝く | Direct exclusion adopted. The separate はえる entry admits shine/glow for the displayed written form. The same direct reasoning adds 光る, without treating the 輝く/光る pair as transitive. Exact candidate probabilities are not required by the authoring contract and are not independently reproduced here. |
+| Claude's checked-and-cleared 極める/決める observation | Additional safeguard adopted after author adjudication: the きめる homograph admits decide/settle for the same written form. A low current score does not invalidate this direct ambiguity or guarantee future exclusion. |
+| Optional 欧州/西洋 | Not adopted: Europe and the Western world are related geographical/cultural concepts, not established interchangeable answer labels. No direct ambiguity was demonstrated. |
+| Optional 御殿 figurative sense, 極まる homograph note and 歴とした gloss | No additional expansion required. The 極 card already gives both 極まる readings and meanings; 歴とした's genuine gloss is compatible with the established senses. The assigned scope does not require every figurative 御殿 use. |
+
+The corrections affect four teaching pages: 栄 and 極 plus the two supporting verb articles.
+The selected 52 JMdict pairs, 14 complete families, all 46 reading rows, five source-only qualifications
+and all 45 curated kanji choices remain intact. One external character-reading-status record is added.
+Original reports are preserved unchanged. Changed-passage confirmations are still pending; the batch is not closed.

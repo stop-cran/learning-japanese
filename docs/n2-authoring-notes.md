@@ -144,10 +144,19 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   きまる, while the inspected Kanjipedia entry explicitly gives 極まる きまる. Preserve that
   independent evidence and its outside-Joyo marker; the marker alone does not establish rarity.
   Keep both readings of 極める separate from the linked article's primary きわめる.
-- A word-final sound is not enough to establish its historical reading layer. Batch 11 retains
-  栄's え as qualified lookup information: 栄耀 えよう is flagged outdated kana usage, while
-  見栄 みえ carries a whole-word ateji label. These inspected records do not by themselves establish
-  a regular native-reading allocation. Do not turn a generated search explanation into that evidence.
+- A word-final sound is not enough to establish its historical reading layer. Batch 11's 見栄 みえ
+  record carries a whole-word ateji label, not independent proof of a regular native-reading allocation.
+  Nevertheless, omitting this attested spelling from the え qualification made the lookup-only wording
+  overbroad. Name the spelling and explain the narrower unresolved allocation; do not imply that an
+  everyday spelling is unsuitable. 栄耀 えよう retains its outdated-kana flag. Generated search
+  explanations are not evidence for either character's historical allocation.
+- A written-form-only meaning question can admit a homograph's other reading even when the article's
+  primary reading is explicit. Batch 11 excludes 栄える from 輝く and 光る because its separate はえる
+  entry means shine; 極める excludes 決める because its separate きめる entry means decide or settle.
+  Curate the direct ambiguity, not a supposedly permanent low candidate score. Exclusions are not transitive.
+- An isolated outside-Joyo marker can imply an unintended contrast with adjacent unmarked rows.
+  Batch 11 gives Kanjipedia's actual 極 reading list and its explicit きめる/きまる outside-table marks
+  in one note, without inventing a status for every derived form or treating table status as frequency.
 
 ## Review and checkpoint protocol
 
@@ -172,7 +181,7 @@ where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
 remaining defect in that scope; batch 06 required no teaching correction.
-Batch 11's 15 cards and four supporting pages are authored but not independently reviewed yet.
+Batch 11's initial independent reviews are preserved; four revised pages await changed-passage confirmation.
 The remaining 200 additions are not yet authored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
