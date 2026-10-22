@@ -2734,3 +2734,30 @@ Repeated manifest builds are byte-identical: contentVersion
 `087a40fcf7840aab`, SHA256
 `d9a96db6d4134f1177710ed5ea13e9e8fc4b49dd595330586a971f2a483a2526`.
 Original-session changed-passage confirmations are pending.
+
+### Changed-passage confirmation and closure
+
+Both original sessions confirmed the same clean correction commit,
+`fd607e1404e6b7891ff643d31b8a201eecc1b527`, using the actual
+two-page diff and both complete changed pages. GPT ran and exited
+before Claude began; both successful processes recorded zero edits
+and have exited. Their unchanged final reports are archived:
+[GPT](n2-reviews/batch-22-gpt-followup.md) and
+[Claude](n2-reviews/batch-22-claude-followup.md).
+Each marks both pages CLEAN on correctness, scoped coverage and
+comprehensibility, with no established regression. Claude confirms
+B22-C-01 and B22-W-01 resolved and withdraws its overbroad
+"unrelated" description of 出. Both retain the lower confidence of
+the conservative もこもこ guard. Neither confirmation is a fresh
+whole-batch review or a runtime quiz test.
+
+No further teaching edits were needed. The author repeated validation,
+the cumulative reading audit, deterministic manifest generation and
+the exact cumulative scope/preservation check with all four archived
+reports: 63 files. The results remain zero errors, 330 additions and
+983 reading rows; counts remain 950 kanji, 3,270 words and 332
+selected N2 characters. Manifest version and SHA256 are unchanged
+from the corrected snapshot above. Both commit identities remain
+`stop-cran`; the per-command local signing workaround is unchanged.
+Batch 22 is review-closed, with 35 selected additions remaining.
+No push or PR was made.

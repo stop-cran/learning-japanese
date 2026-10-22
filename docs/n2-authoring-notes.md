@@ -693,3 +693,13 @@ All 41 rows, fifteen strokes, counts and twenty-two links-only older
 word edits are unchanged. Both corrected pages have been reread;
 scope verification and validation pass, and confirmation by the
 original reviewers is pending.
+
+Batch 22 is now review-closed. Both original sessions confirmed
+the same corrected commit `fd607e1404e6b7891ff643d31b8a201eecc1b527`,
+actual two-page diff and full changed pages, sequentially and with
+zero edits. Both pages are CLEAN on all three facets. Claude also
+corrected its initial blanket description of 出; no extra teaching
+change was needed. All four reports are archived unchanged, both
+reviewer processes have exited, and the final cumulative 63-file
+scope preserves all older nonlink content. The manifest is unchanged
+at `087a40fcf7840aab`. Thirty-five selected additions remain.
