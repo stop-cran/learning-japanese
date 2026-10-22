@@ -442,7 +442,7 @@ evidence packet are marked closed.
 
 ## Batch 05: N2:82-N2:101
 
-**Status:** authored; independent review and reconciliation pending.
+**Status:** initial reviews complete; corrections committed before bounded confirmation.
 
 The twenty rows add **nineteen articles**: いってまいります, いつのまにか,
 移転, 井戸, 緯度, 従姉妹, 威張る, 嫌がる, いよいよ, 煎る,
@@ -467,6 +467,56 @@ Actual Digital Daijisen entries for 煎る and 炒める support the qualified
 cooking comparison. The failed initial search endpoint and an unsupported
 always-without-oil search-summary claim are not treated as evidence.
 No review-closed status is claimed for these twenty drafted rows.
+
+### Initial review
+
+Both reviewers examined the same unchanged clean authored snapshot
+`7cc99e2535f9e4ac917278a5b4f2e49db954e4fa`, parent
+`5a85c2bc96780a9d2fdb2df0e64d33887bbb7902`, with identical scope,
+rubric and source access. Separate short-lived processes ran sequentially:
+GPT exited before Claude started. Usage receipts verify actual models
+`gpt-6.1-sol` and `claude-opus-5.5` and zero file edits.
+
+The verbatim [GPT report](n2-vocabulary-reviews/batch-05-gpt-initial.md)
+finds no actionable defect. The verbatim
+[Claude report](n2-vocabulary-reviews/batch-05-claude-initial.md) makes
+four localized recommendations in three new articles. Both assess all nineteen
+articles, the five existing-card passages and the explicit alias mappings;
+neither claims comprehensive review of unchanged comparison cards.
+
+### Reconciliation
+
+| Initial observation | Decision and evidence |
+| --- | --- |
+| Claude R1: いつのまにか/こっそり English-answer ambiguity | Add the direct exclusion. Actual titles overlap through "unnoticed"/"without being noticed"; complete entries 1188850 and 1004520 distinguish observer unawareness from secret action without removing that English-label ambiguity. |
+| Claude R2: unexplained departure/secrecy sentence | Replace the dangling departure reference with a named, linked こっそり comparison. Explain the contrast directly without asserting that an unnoticed event must be secret or that the Japanese adverbs substitute unrestrictedly. |
+| Claude R3: "Uman" obscures vowel length | Keep ウーマン itself in the English translation. The existing long-vowel explanation remains unchanged; no competing romanization convention is introduced. |
+| Claude R4: missing practical インキ/インク usage guidance | Add qualified consumer stationery/home-printer versus printing-industry terminology guidance. Actual T&K TOKA and Printing/Binding Terminology Online Dictionary pages corroborate the convention. Do not adopt a blanket ban on プリンターのインキ, measured frequency, unverified historical dating, or a material-composition boundary. |
+
+The added complete comparison family and exact external inspections are
+retained in the evidence packet. The search response contained inconsistent
+alternate URLs; those were not treated as evidence. Only actually fetched,
+relevant pages support the usage note. The separate インキ article is
+justified by its distinct source entry, not by inventing a different
+substance or requiring an absolute register split.
+
+Claude's optional expansion candidates remain nonblocking: additional
+いよいよ senses, a 鉢 gloss or 植木鉢 example, another 戸 voicing note,
+additional cousin spellings and reciprocal インク usage guidance. Its
+tentative えばる register and ウエートレス frequency suggestions were
+not verified and are not promoted into teaching claims.
+
+**Model-usefulness note:** the three correction groups are unique
+to Claude in this sample, including comparison against GPT's Optional
+and Limits sections. R1 and R2 concern the same comparison, affecting
+the quiz and explanation respectively; they are not counted as two
+independent discoveries. Both independently support the alias mappings,
+component links and qualified cooking contrast. This is useful
+complementary coverage, not a general ranking or a reason to adjudicate
+future disagreements by model identity.
+
+Bounded confirmation is still required for the three changed contexts.
+The initial whole-article verdicts alone do not close the twenty rows.
 
 ## Final verification
 

@@ -175,3 +175,12 @@ evidence and learning impact; issue creation requires authorization.
 - **Batch 05 authoring:** A kanji's written reading boundary is not necessarily
   the verb's conjugation stem. 飢 writes う, but the ichidan stem retained
   before ます is うえ-. Keep spelling explanation separate from inflection.
+- **Batch 05 reconciliation:** A semantic distinction can need both explanation
+  and a quiz guard: observer unawareness in いつのまにか differs from secret
+  action in こっそり, while their context-free English labels still overlap.
+  Name the contrast rather than leaving an unexplained situation in the text.
+- **Batch 05 reconciliation:** Industry terminology sources can support a
+  qualified usage convention when a general dictionary only establishes shared
+  meaning. Actual manufacturer and printing-dictionary pages support consumer
+  インク versus printing-industry インキ labels; they do not establish a
+  composition boundary, universal substitution ban or measured frequency.
