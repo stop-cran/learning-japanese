@@ -710,3 +710,39 @@ and be modified by, an added 伸ばす contrast, a repeated table-status label i
 The proposed absolute "悩 alone is not read なやみ" is not adopted because the source retains that character
 reading; the current note correctly concerns the noun's written spelling rather than denying the metadata.
 No actionable defect or consequential unresolved claim remains in the corrected scope.
+
+## Batch 09
+
+Cards: 拾 挟 捜 捨 掃 掘 採 接 換 損 改 敬 旧 昇 星.
+
+Status: **drafted; independent review pending**. Scope: all 15 new kanji and four supporting
+articles, 挟む, 捜す, 採掘 and 昇る; all three review facets and 45 curated distractor assignments.
+Related edits: component links in 15 existing word articles and a third curated wrong answer on 上.
+
+Evidence: [batch-09.json](n2-batch-sources/batch-09.json), with 50 exact reading rows and
+52 selected restriction-aware dictionary spelling/reading records. The complete pinned spelling lists
+for eight relevant entry families are retained, including 挟む/差し挟む, 探す/捜す, 上る/登る/昇る,
+愛嬌/愛敬 and the かわる variants.
+
+### Authored scope and checks
+
+- All KANJIDIC2 readings, primary strokes, radicals and grade tags are retained. Six readings remain
+  explicitly qualified source-only lookup information: 挟's ショウ and わきばさ.む, 捜's シュ and
+  シュウ, 掃's シュ, and 接's ショウ. Missing examples are not manufactured from an unrelated kana match.
+- 拾 じゅう is identified as the legal-document numeral ten, separate from 拾う ひろう. 挟む さしはさむ
+  is recognition spelling in the same entry as 差し挟む, not the reading of the linked はさむ article.
+- 損's two okurigana boundaries have their actual written forms: 損なう and irregular 損う.
+  Bound suffixes have complete examples 取り損なう and 見損ねる with kana and stem explanations.
+- 換わる uses the exchange sense rather than an unqualified first-sense replacement gloss.
+  The 探す/捜す and かえる/かわる notes preserve spelling tendencies rather than exclusive compartments.
+- The 昇る comparison preserves the dictionary's actual spelling-restricted senses. 旧い retains
+  its rare-spelling qualification; 旧 もと does not link as if the existing きゅう article taught it.
+  星's -ぼし has 白星 しろぼし, not an unexplained standalone suffix.
+- New supporting articles have no inferred vocabulary JLPT. Direct exclusions account for 挟む with
+  握る and 持つ, 捜す with 探す and 求める, and 昇る with 上がる, 登る and 増加. The last group also
+  considers the broad English answer label rise; exclusions are pairwise, not inherited transitively.
+- All new kanji have three existing semantically wrong curated choices. 上 also gains a third to
+  avoid newly activated upward-movement fallback. No unrelated legacy content is rewritten.
+- Stroke data uses the pinned converter and 16 points per stroke. Structural validation reports
+  zero errors; the metadata/reading/stroke audit covers 135 additions and 416 exact reading rows.
+  These checks are not independent linguistic review or exhaustive stroke-path inspection.

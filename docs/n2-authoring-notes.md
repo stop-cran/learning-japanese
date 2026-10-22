@@ -117,6 +117,12 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   but not ジョウ/うける. The recognition qualifications do not claim that table absence proves rarity.
 - Preserve the force of spelling-specific notes. Batch 08's JMdict notes say "esp." for 延ばす's
   postponement sense and ウケる's amusement sense; "especially" is not an exclusive spelling restriction.
+- Preserve both written okurigana and usable affix examples. Batch 09 distinguishes 損なう from the
+  irregular spelling 損う without inventing different pronunciations, and illustrates the suffix rows
+  with 取り損なう and 見損ねる rather than only repeating an independent verb.
+- New upward-movement vocabulary also activates a legacy fallback: batch 09 gives 上 a third curated
+  wrong answer so 昇's rising answer cannot fill its default fourth slot. Useful semantic comparisons
+  remain in teaching text rather than becoming wrong answers.
 
 ## Review and checkpoint protocol
 
@@ -140,8 +146,8 @@ The first eight batches' GPT/Claude reports are preserved in the review ledger, 
 where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
-remaining defect in that scope; batch 06 required no teaching correction. This coverage does not yet extend to the
-remaining 245 additions, which are not yet authored.
+remaining defect in that scope; batch 06 required no teaching correction. Batch 09's 15 additions and four supporting
+articles are drafted but await independent review; the remaining 230 additions are not yet authored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
