@@ -715,7 +715,7 @@ No actionable defect or consequential unresolved claim remains in the corrected 
 
 Cards: 拾 挟 捜 捨 掃 掘 採 接 換 損 改 敬 旧 昇 星.
 
-Status: **initial dual-model review reconciled; corrections awaiting confirmation**. Scope: all 15 new kanji and four supporting
+Status: **closed after independent review and changed-passage confirmation**. Scope: all 15 new kanji and four supporting
 articles, 挟む, 捜す, 採掘 and 昇る; all three review facets and 45 curated distractor assignments.
 Related edits: component links in 15 existing word articles and a third curated wrong answer on 上.
 
@@ -768,10 +768,10 @@ clean checkpoint and exact 55-file draft, source metadata/reading/stroke audit a
 
 | Finding | Adjudication and correction | Status |
 | --- | --- | --- |
-| GPT G09-001: missing 挟む exclusions | Pinned JMdict 1600740 explicitly includes gripping from both sides, catching a finger and sandwiching between. Existing 掴む, 捕まえる and サンドイッチ answer labels permit these overlaps. Add all three direct exclusions; sharing an exclusion through 握る is insufficient. The sandwich pair concerns English noun/verb ambiguity, not unrestricted Japanese synonymy. | Authored correction; confirmation pending |
-| GPT G09-002: broad 昇る answer | The English rise can mean quantitative increase or getting to one's feet. Adopt the narrower proposed answer strategy: title and heading become rise (sun/moon); be promoted. Preserve the broader, source-supported natural-rising explanation. This avoids adding six unrelated increase/posture exclusions merely to preserve an overly broad answer label. | Authored correction; confirmation pending |
-| Claude B9-01: 客星 qualification | Adopt the factual alternative-reading clarification, not an unsupported frequency ranking. Direct inspection of pinned JMdict 2563200 establishes かくせい, きゃくせい and きゃくしょう with no reading-rarity tags. Retain all three in the source packet; explain why the table uses きゃくしょう and explicitly disavow an only/usual-reading claim. Dictionary ordering and the reviewer's reported headword arrangement do not by themselves establish pronunciation frequency. | Qualified adoption; confirmation pending |
-| Claude B9-02: In other words | Replace the ambiguous English transition with In some vocabulary, such as 白星 しろぼし, so a different word's mark/victory sense is not presented as a paraphrase of visible planets. | Authored correction; confirmation pending |
+| GPT G09-001: missing 挟む exclusions | Pinned JMdict 1600740 explicitly includes gripping from both sides, catching a finger and sandwiching between. Existing 掴む, 捕まえる and サンドイッチ answer labels permit these overlaps. Add all three direct exclusions; sharing an exclusion through 握る is insufficient. The sandwich pair concerns English noun/verb ambiguity, not unrestricted Japanese synonymy. | Resolved |
+| GPT G09-002: broad 昇る answer | The English rise can mean quantitative increase or getting to one's feet. Adopt the narrower proposed answer strategy: title and heading become rise (sun/moon); be promoted. Preserve the broader, source-supported natural-rising explanation. This avoids adding six unrelated increase/posture exclusions merely to preserve an overly broad answer label. | Resolved |
+| Claude B9-01: 客星 qualification | Adopt the factual alternative-reading clarification, not an unsupported frequency ranking. Direct inspection of pinned JMdict 2563200 establishes かくせい, きゃくせい and きゃくしょう with no reading-rarity tags. Retain all three in the source packet; explain why the table uses きゃくしょう and explicitly disavow an only/usual-reading claim. Dictionary ordering and the reviewer's reported headword arrangement do not by themselves establish pronunciation frequency. | Resolved by qualified adoption |
+| Claude B9-02: In other words | Replace the ambiguous English transition with In some vocabulary, such as 白星 しろぼし, so a different word's mark/victory sense is not presented as a paraphrase of visible planets. | Resolved |
 
 The author inspected the complete pinned XML entries for 1600740, 1352570 and 2563200, and the actual
 existing quiz labels. Source-packet omissions were not treated as dictionary absence. No categorical
@@ -791,3 +791,25 @@ transition; GPT had called that page CLEAN. These observations are compared acro
 points and limits, not merely issue labels. The complementary catches are useful in this batch, but the
 frequency implication still required source-based qualification. Neither family alone found every adopted
 improvement, and this matched sample does not establish a general ranking or removal of model bias.
+
+### Changed-passage confirmation and closure
+
+Corrections are committed at `f5541b56583c3803328ed0c58c422c1344dcab89`. Each original reviewer resumed
+sequentially with its own initial report, the same revised clean checkpoint and the actual complete
+87-line/10-hunk teaching/evidence diff. Both read all three revised pages and the changed source evidence,
+confirmed their original findings resolved, and found no regression in the other changed passages.
+
+| Reviewer | Preserved report | Correctness | Scoped coverage | Comprehensibility |
+| --- | --- | --- | --- | --- |
+| GPT | [changed-passage confirmation](n2-reviews/batch-09-gpt-followup.md) | CLEAN | CLEAN | CLEAN |
+| Claude | [changed-passage confirmation](n2-reviews/batch-09-claude-followup.md) | CLEAN | CLEAN | CLEAN |
+
+The author verified zero validation errors, all 135 additions/416 exact reading rows, the three 客星
+readings, direct exclusion targets, exact ten-file correction scope and a byte-identical repeated manifest
+(`25d203f4b62d543e`). Reviewer limitations remain explicit: the supplied diff was not independently
+regenerated, the pinned XML was not re-parsed by the reviewers, and app execution and drawing-path
+inspection were not performed. Neither report claims native-speaker certification.
+
+Claude's optional suggestion to add a moon example is not required to interpret the short answer label;
+the body already says natural rising, such as the sun, rather than restricting the subject to that example.
+No actionable defect or consequential unresolved claim remains in the corrected scope.
