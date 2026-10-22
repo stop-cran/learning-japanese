@@ -2226,3 +2226,63 @@ selected N2 characters in the deck. Another 80 selected additions
 remain unauthored. These confirmations are bounded editorial
 judgments and author-run structural checks, not runtime-quiz testing,
 exhaustive stroke-path review or native-speaker certification.
+
+## Batch 20: 蒸蔵薄虫血衣袋被装裏補複角触訓 - authored, review pending
+
+**Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke
+files; one supporting word article, 蒸す; twenty-one older word articles
+gaining substantive component links. All older nonlink teaching text
+and lexical metadata are preserved. No older kanji or stroke file
+changes. The source record is
+[batch-20.json](n2-batch-sources/batch-20.json); the pre-batch baseline
+is `799bf28ae8fbc48c1af8e80b797bcb2ebfd57a2f`.
+
+The packet retains 77 exact spelling/reading records from 73 complete
+entry families, including spelling and reading flags and all applicable
+sense restrictions. Of 59 exact character-reading rows, 54 have lexical
+examples. Five are explicitly qualified lookup/index information:
+蔵's おさ.める and かく.れる, 袋's ダイ, and 訓's おし.える and
+よ.む. The latter two have search-only JMdict forms, not recommended
+word examples. Exact negative checks and the broader 袋/だい scan in
+the pinned dictionary do not establish absence from all historical
+uses or compounds.
+
+The cards distinguish rare spelling from rare pronunciation, preserve
+the obsolete-reading flag on 秘蔵 ひそう, and respect the kana-only
+ススキ alternate rather than combining it with every spelling.
+触り and 薄ら寒い illustrate their real written stem/kana boundaries.
+The old 被る and 角 articles are linked only for their actual primary
+readings; other readings remain separate lexical examples. No
+vocabulary JLPT level is inferred from a kanji's community level.
+
+Each new kanji has a useful linked word article and three existing
+semantically wrong distractors. The thirteen older two-choice cards
+were screened against the new meanings; no related fallback repair
+was established. 蒸す declares direct safeguards with 暑い, じめじめ
+and じとじと. The pinned humid-heat senses and the inspected public
+むす entry support these overlaps, not free substitution in every
+construction. A bounded whole-pinned-dictionary gloss sweep matched
+current card spellings and primary readings, including secondary
+applicable senses. Steam, steam trains, comfortably warm food and
+formal/stuffy style are not thereby treated as synonyms of steaming
+food or sultry weather.
+
+The author inspected all sixteen rendered new teaching pages and all
+twenty-one older-word diffs. The strict preservation check permits only
+links in those older pages. The validator reports zero errors, and the
+cumulative audit covers 300 additions and 907 exact source-reading
+rows. Counts are 920 kanji, 3,266 words and 302 selected N2 characters,
+with 65 additions unauthored. The exact draft scope is 57 files.
+Repeated manifest builds are byte-identical with content version
+`d4046e2f36729f9e`. Snapshot identity and mechanical checks are
+author-run, not reviewer-executed.
+
+The first nineteen batches remain review-closed. Same-snapshot
+independent GPT/Claude review and source-grounded reconciliation of
+batch 20 are pending; no independent verdict is claimed yet.
+
+The configured GPG signer stalled in both the ordinary commit attempt
+and a bounded noninteractive probe. Both attempts were stopped without
+changing Git configuration. The local draft therefore uses a per-command
+unsigned commit, retaining the requested `stop-cran` author and committer;
+it is not represented as signed. Nothing is pushed.

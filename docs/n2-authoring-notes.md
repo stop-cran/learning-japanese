@@ -517,3 +517,24 @@ the shared container observation, initial model-specific contributions,
 Claude's later roughness finding and the author's additional safeguards.
 Neither the final confirmations nor the bounded candidate sweeps
 establish exhaustive synonymy or native-fluency certification.
+
+Batch 20 is authored, not independently review-closed. Its fifteen kanji
+and one supporting word, 蒸す, bring the authored total to 300 additions
+and 907 exact reading rows. Counts are 920 kanji, 3,266 words and 302
+selected N2 characters; 65 additions remain unauthored. The 59 new rows
+contain 54 lexical examples and five qualified source-only/index rows.
+The packet retains 77 exact pairs from 73 complete entry families.
+Twenty-one old word changes are links only; no old kanji or stroke
+changes are needed.
+
+The new examples distinguish 秘蔵's obsolete ひそう reading flag from
+被う's rare spelling flag. 訓える and 訓む stay search-only index
+evidence, not recommended examples. 触's undotted さわ is illustrated
+inside 触り with its actual written kana boundary; 薄's bound forms
+likewise have complete examples. A pinned spelling-family scan found
+no 袋 spelling with a reading containing だい, but that bounded absence
+does not prove a historical or compound reading impossible. 蒸す has
+three direct humid-heat quiz safeguards. A bounded steam/sultry/humidity
+sense sweep against existing card identities distinguishes these
+overlaps from nouns for vapour, steam trains, and steaming-hot food
+states; it is not exhaustive synonymy certification.
