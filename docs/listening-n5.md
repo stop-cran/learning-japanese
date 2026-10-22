@@ -59,6 +59,11 @@ Pending content may be inspected as a draft but must never be enabled for gradin
 
 Publish useful synthetic-audio provenance, not resource endpoints, credentials, PCM caches or private run records.
 The shared `book-skills` engine owns synthesis/retry/cache behavior; this repository owns the learning package and publication.
+For this pilot, the paid-tier stock-voice output rights were checked against Microsoft's
+[Azure Product Terms](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftAzure/MCA), under
+"Foundry Tools and Content Safety" / "Text-to-Speech (TTS) Services". They permit paid-tier customers to use prebuilt neural-voice
+audio, including commercially, while restricting use of service output to create, train or improve a similar or competing service.
+Keep the recordings' synthetic origin disclosed; this collection is language-learning material, not voice-model training data.
 
 ## Manifest and budgets
 
