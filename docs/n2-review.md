@@ -1632,7 +1632,7 @@ are author-run, not reviewer-executed. These bounded reviews do not certify
 native fluency, exhaustive stroke drawing paths or runtime quiz behavior;
 larger or changed quizzes may still require new semantic curation.
 
-## Batch 17: 築簡籍粉粒糸紅純細紹絡綿総緑線 - corrections awaiting confirmation
+## Batch 17: 築簡籍粉粒糸紅純細紹絡綿総緑線 - review-closed
 
 **Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke files;
 three supporting word articles, 書籍, 粒 and 総額; fifteen older word
@@ -1749,3 +1749,43 @@ accumulated audit still covers 255 additions and 774 exact reading rows.
 The strict batch verifier accepts the 56-file cumulative scope including
 both initial reports, sixteen exclusion pairs and all preservation
 invariants. The regenerated manifest is `134fea0bf56ca3e1`.
+
+### Original-reviewer confirmation and closure
+
+The eleven-file correction was committed as
+`5d465aa16c582cd0f6d372c857711e27aef158b0`, again with author and
+committer `stop-cran`. Both original reviewer sessions resumed sequentially
+on the actual four-page teaching diff and the complete revised pages.
+Each exited successfully using its original model and recorded zero file
+edits. Unchanged confirmation reports are
+[GPT](n2-reviews/batch-17-gpt-followup.md) and
+[Claude](n2-reviews/batch-17-claude-followup.md).
+
+Both reviewers mark 糸, 綿, the 粒 word article and the citation-only 粒
+kanji edit **CLEAN** separately for correctness, scoped coverage and
+comprehensibility. GPT confirms GPT-17-01 resolved and independently
+accepts the other two corrections. Claude confirms F1 and adopted O4
+resolved, and explicitly acknowledges that its initial review missed the
+粒/玉/球 overlap. Neither establishes a regression or consequential
+unresolved claim.
+
+Claude's later suggestions to rephrase 綿's already-scoped flag note or
+add a 玉 comparison sentence remain optional and unadopted. The new
+exclusions and exact source records resolve the demonstrated quiz defect;
+neither suggestion is necessary to close it. No extra polish round is
+required.
+
+All eighteen new teaching pages have independent same-snapshot initial
+reviews, with original-reviewer confirmation of the four changed pages.
+The first seventeen batches' 255 additions are review-closed. Totals
+remain 875 kanji, 3,255 word articles and 257 selected N2 characters;
+110 selected additions remain unauthored. The cumulative reading audit
+retains 774 exact rows. All fifteen old word edits remain links only,
+小 retains its narrow third-distractor repair, and no old stroke changed.
+
+The strict closure scope is 58 files including four archived reports.
+Manifest `134fea0bf56ca3e1` remains unchanged. Snapshot identity,
+preservation, exact scope, all 66 entry families and mechanical checks
+are author-run; neither reviewer executed Git or the validator. These
+bounded reviews do not certify native fluency, exhaustive drawing paths
+or executed runtime quiz behavior.

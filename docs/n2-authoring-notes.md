@@ -349,7 +349,7 @@ equivalent observations across findings, optional suggestions, limits and per-ca
 
 Source records and structural checks are not native-speaker certification or exhaustive historical analysis.
 Dual-model usefulness is an observation about the reviewed sample, not proof that model bias has been eliminated.
-The first sixteen batches' GPT/Claude reports are preserved in the review ledger, including changed-passage confirmations
+The first seventeen batches' GPT/Claude reports are preserved in the review ledger, including changed-passage confirmations
 where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
@@ -384,7 +384,7 @@ Claude accepted the previously missed English-label ambiguity; its additional
 際/occasion observation did not establish a direct synonym or actionable defect.
 The remaining counter and history suggestions are optional expansions, not
 unresolved findings.
-Batch 17 has independent initial GPT/Claude reviews: fifteen kanji and
+Batch 17 is review-closed: fifteen kanji and
 three supporting word articles bring the authored total to 255 additions
 and 774 exact reading rows. Counts are 875 kanji, 3,255 words and 257
 selected N2 characters, with 110 additions unauthored. Its 41 reading rows
@@ -394,9 +394,12 @@ wrong answer. The corrected source packet retains 76 exact pairs and 66
 complete entry families. GPT uniquely established the 粒/玉/球 answer-label
 defect; Claude uniquely established the 毛 reading-notation defect and
 supplied the adopted optional 綿 qualifier clarification. Neither initial
-reviewer caught the other's actionable issue. Original-reviewer
-changed-passage confirmation remains pending; these observations concern
-this shared sample, not a general ranking or proof of eliminated bias.
+reviewer caught the other's actionable issue. Both original reviewers
+confirmed all four changed pages CLEAN on all three facets against the
+committed correction diff. Claude acknowledged the missed word-quiz overlap;
+its later wording/comparison suggestions remain optional, not unresolved
+defects. These observations concern this shared sample, not a general
+ranking or proof of eliminated bias.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
