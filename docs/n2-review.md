@@ -818,7 +818,7 @@ No actionable defect or consequential unresolved claim remains in the corrected 
 
 Cards: 普 暴 曇 替 札 机 材 村 板 林 枚 枝 枯 柔 柱.
 
-Status: **initial reviews preserved; changed-passage confirmations pending**. Scope: all 15 new kanji and four supporting articles,
+Status: **closed; both original reviewers confirmed the revised passages**. Scope: all 15 new kanji and four supporting articles,
 暴れる, 枚, 枯れる and 柱; all three review facets and 45 curated distractor assignments.
 Related edits: component links in 17 existing word articles and a third curated wrong answer on 木.
 
@@ -871,7 +871,7 @@ teaching-page omission; neither independently executed Git, the validator or the
   otherwise CLEAN. Its arithmetic description that all 40 reading rows have JMdict pairs should
   be read with the stated exception: 39 lexical examples and 普's one source-only あまねし.
 
-`B10-板-01` is **resolved in the revised text, pending reviewer confirmation**, with calibration:
+`B10-板-01` is **resolved and confirmed by both reviewers**, with calibration:
 the printing-woodblock example 板木 はんぎ was valid and sense-qualified, not an incorrect reading.
 The competing separate word 板木 ばんぎ is confirmed in pinned JMdict entry 2868686, not just a live
 search result. The revised notes explicitly distinguish the signal board and avoid a one-spelling/one-reading
@@ -894,5 +894,37 @@ Claude's optional suggestions were assessed separately:
 
 The revised packet has 51 selected pairs rather than 48 and 13 complete families rather than 12;
 the reading inventory and all 45 curated kanji choices are unchanged. Four teaching files change:
-板 and 枝 notes, 柱's metadata-source footer, and the supporting 柱 article. Both original reviewers
-must inspect the actual diff and revised pages before this batch is closed.
+板 and 枝 notes, 柱's metadata-source footer, and the supporting 柱 article.
+
+### Changed-passage confirmation and closure
+
+Corrections are committed at `a61167fec3c034abee9580d7edac20e2c077fe17`. Each original reviewer resumed
+sequentially with its own preserved initial report, the same clean revised checkpoint and the actual complete
+358-line/11-hunk teaching/evidence diff. Both read all four revised pages and the changed source evidence,
+accepted the sense-qualified 板木 and 枝葉 explanations, and confirmed the direct 柱/棒 safeguard without regressions.
+
+| Reviewer | Preserved report | Correctness | Scoped coverage | Comprehensibility |
+| --- | --- | --- | --- | --- |
+| GPT | [changed-passage confirmation](n2-reviews/batch-10-gpt-followup.md) | CLEAN | CLEAN | CLEAN |
+| Claude | [changed-passage confirmation](n2-reviews/batch-10-claude-followup.md) | CLEAN | CLEAN | CLEAN |
+
+The author verified zero validation errors, all 150 additions/456 exact reading rows, 51 selected pairs,
+13 complete dictionary families, exact eleven-file correction scope, and a byte-identical repeated manifest
+(version `b6468ed6e9b1bae2`). The original 48 selected pairs and all character metadata are preserved;
+only the intended 枝葉 family details are added to an existing record.
+
+**Observed model usefulness:** Claude uniquely raised the useful 板木 homograph context, optional 枝葉 reading
+context, and pole/post quiz overlap adopted here. GPT raised no initial defect but independently confirmed
+the complete revised scope and the calibrated sense distinctions. This is useful complementary review
+on this sample, not evidence of general model superiority or elimination of model bias.
+
+Claude's final optional source-footer observation is nonblocking: the 棒 entry supports the linked 柱
+word article and is deliberately retained in the per-card evidence. Its remaining optional 台/骨/基 proposals
+establish no new direct ambiguity. No further teaching expansion is required.
+
+Limits remain explicit. Neither reviewer regenerated Git diffs, hashes, the original dictionary extraction,
+or the app runtime. Claude could not confirm entry ID 2868686 on the public services it tried; the author
+confirmed that ID, headword, reading and sense directly in the pinned XML. A Kotobank alternative calling
+the signal board はんぎ does not contradict the nonexclusive card wording or the pinned ばんぎ example.
+Neither report claims native-speaker certification. No actionable defect or consequential unresolved claim
+remains in the revised scope.

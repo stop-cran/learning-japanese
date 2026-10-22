@@ -159,12 +159,11 @@ equivalent observations across findings, optional suggestions, limits and per-ca
 
 Source records and structural checks are not native-speaker certification or exhaustive historical analysis.
 Dual-model usefulness is an observation about the reviewed sample, not proof that model bias has been eliminated.
-The first nine batches' GPT/Claude reports are preserved in the review ledger, including changed-passage confirmations
+The first ten batches' GPT/Claude reports are preserved in the review ledger, including changed-passage confirmations
 where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
 remaining defect in that scope; batch 06 required no teaching correction.
-Batch 10's 15 kanji and four supporting articles have initial GPT/Claude reviews; revised passages await confirmation.
 The remaining 215 additions are not yet authored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
