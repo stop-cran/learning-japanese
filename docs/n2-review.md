@@ -1056,3 +1056,55 @@ or proof that model bias has been eliminated.
 All 15 new kanji pages and four supporting articles now have independent GPT/Claude coverage; all corrected
 passages have confirmation, with no actionable defect or consequential unresolved claim remaining in scope.
 Batch 11 is **closed**: 165 additions review-closed, 167 selected N2 cards present, and 200 additions unauthored.
+
+## Batch 12
+
+Cards: 毛 氷 永 汗 汚 池 沈 河 沸 油 況 泉 泊 波 泥.
+
+Status: **authored; independent GPT/Claude reviews pending**. Scope: all 15 new kanji and three supporting articles,
+汚す, 沈める and 泊める; all three review facets and 45 curated distractor assignments.
+Related edits: component links in 24 existing word articles, preserving their lexical metadata and teaching text,
+and a third curated wrong answer on legacy 川 to prevent the new 河 answer from filling its fallback slot.
+
+Evidence: [batch-12.json](n2-batch-sources/batch-12.json), with 48 exact reading rows:
+44 JMdict-backed lexical examples and four explicitly qualified source-only readings. The packet retains
+52 selected restriction-aware spelling/reading records. Sixteen inspected sensitive families additionally retain
+complete spelling/reading lists, spelling flags and reading restrictions, not every sense of the entire dictionary.
+
+### Authored scope and checks
+
+- All KANJIDIC2 readings, primary stroke counts, canonical radicals and grade tags are retained.
+  毛 keeps radical 毛, no. 82; the other fourteen keep 水, no. 85. The cards distinguish visible
+  left-hand 氵 from the water-like forms in 氷, 永 and 泉. Mnemonics are labelled modern-shape aids,
+  not unverified historical or phonetic derivations.
+- 氷 distinguishes everyday こおり from the archaic ice sense ひ and the rare spelling 氷る こおる.
+  The latter's spelling flag is not a pronunciation-frequency claim. 永い's selected sense is temporal,
+  not an instruction to replace 長い for physical length.
+- 汗 uses 発汗 はっかん for カン and 河 uses 河川 かせん for カ. Matching a native noun's initial
+  kana would not independently establish those on readings. 沸騰 preserves its full ふっとう reading;
+  bath-heating examples do not require boiling-temperature water.
+- 汚 keeps all six native source readings and their exact dictionary pairs. 汚す's two readings share
+  an entry whose disgrace/defile sense says especially けがす, not exclusively. The separately indexed
+  汚れる けがれる is not redirected to the existing よごれる article.
+- 沈香 じんこう/じんこ is agarwood, not the aloe plant. 油然 ゆうぜん illustrates ユウ in its
+  adverb-with-と construction rather than claiming it is a second native pronunciation of oil.
+- 況's `まし.て` and `おもむき` remain lookup-only with precise limits. Attested 況して まして is
+  explicitly retained, with its rare-kanji-spelling and usually-kana flags; it does not establish the
+  exact dotted boundary. 況んや いわんや has its own usually-kana qualification.
+- 泥 uses 汚泥 おでい for デイ and specialized 泥洹 ないおん for ナイ. No suitable デ or ニ
+  example was established. An initial でい in 泥水 cannot prove the shorter デ reading. 泥む retains
+  the dated qualification, separate from 滞む's rare-spelling flag.
+- Supporting vocabulary has no inferred JLPT labels. Each new verb explains its object pattern,
+  counterpart and conjugation. Direct quiz exclusions cover the bare English soil label with 土,
+  and the sinking labels of 沈める/沈む. Related meanings do not create transitive exclusion groups.
+- All 18 new teaching pages were inspected by the author. Structural validation reports 0 errors;
+  the accumulated source/stroke audit covers 180 additions and 550 exact reading rows, with 185 selected
+  characters still unauthored. All 24 existing word articles match the preceding versions after removing
+  only the new component links and normalizing CRLF. 川 differs only by its third distractor.
+  These author checks do not substitute for the pending independent reviews.
+
+### Review status
+
+Initial GPT and Claude reviews will use the same clean committed checkpoint, complete 18-page scope,
+related passages, rubric and evidence access. Each reviewer must run alone and exit before the next starts.
+The first eleven batches remain review-closed; these 15 additions are not yet claimed as reviewed.

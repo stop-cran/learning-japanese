@@ -158,6 +158,18 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
 - An isolated outside-Joyo marker can imply an unintended contrast with adjacent unmarked rows.
   Batch 11 gives Kanjipedia's actual 極 reading list and its explicit きめる/きまる outside-table marks
   in one note, without inventing a status for every derived form or treating table status as frequency.
+- Batch 12 retains 況's `まし.て` as qualified lookup information: the attested 況して まして
+  spelling does not establish that exact boundary, but must not be described as a missing word.
+  A meaning list containing おもむき likewise does not establish an ordinary standalone word example.
+- A shorter on-reading cannot be established by truncating the compound's sound. Batch 12 uses
+  汚泥 おでい for デイ, not デ; 泥's デ/ニ remain qualified after inspecting actual candidates.
+  Preserve 泥洹 ないおん as a specialized religious example without inventing a historical derivation.
+- 汚す's dictionary note says especially けがす for disgrace/defile, not exclusively that reading.
+  The same spelling 汚れる has separately indexed よごれる and けがれる entries; a link to the
+  existing primary よごれる article must not quietly stand in for both.
+- New river character 河 activates 川's direct-synonym fallback, so batch 12 gives 川 a third
+  curated wrong answer. The new 汚す word's English soil also needs a direct exclusion from the
+  noun 土, despite their different parts of speech. Its 沈める counterpart directly excludes 沈む.
 
 ## Review and checkpoint protocol
 
@@ -183,7 +195,8 @@ complementary issues, but also supplied unsupported frequency inferences and opt
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
 remaining defect in that scope; batch 06 required no teaching correction.
 Batch 11 also preserves a final narrow confirmation of the direct 極める/選ぶ homograph exclusion.
-The remaining 200 additions are not yet authored.
+Batch 12's 15 additional kanji and three supporting verb articles are authored but await independent review;
+185 additions remain unauthored. The new source-only qualifications have not yet received that review.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
