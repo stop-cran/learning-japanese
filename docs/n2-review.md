@@ -2655,3 +2655,82 @@ Independent same-snapshot GPT/Claude review and reconciliation are
 pending; no independent verdict is claimed yet. The draft uses the
 documented per-command unsigned-local handling, with `stop-cran` as
 both author and committer. Nothing is pushed.
+
+### Independent initial review and reconciliation
+
+The same clean draft, `e02823f4e2628344b9ba4fd896fde675e6bce08d`,
+was reviewed first by GPT `gpt-6.1-sol`, session
+`7d53311c-cfbc-43de-8a2f-2857f3cd3226`, and then by Claude
+`claude-opus-5.5`, session `eb94ada4-75ec-4344-b060-62aa1f189468`.
+The first process exited before the second began; both succeeded
+with zero recorded edits. Their unchanged final reports were
+archived only after both exited:
+[GPT](n2-reviews/batch-22-gpt-initial.md) and
+[Claude](n2-reviews/batch-22-claude-initial.md).
+Both read all seventeen new teaching pages and inspected all
+twenty-two related link passages in context. Neither executed Git,
+the validator or the app, or exhaustively reviewed the stroke paths.
+
+- **Claude B22-C-01, minor correctness: resolved in the correction
+  awaiting confirmation.** The original note specified 足跡 "here"
+  as あしあと, but its instruction not to use セキ could be read
+  as a wider prohibition. It now explicitly retains the same written
+  word's そくせき reading, using ソク + セキ. Entry 1581330
+  permits そくせき with 足跡, not 足あと, and supplies no
+  rarity flag. The change does not assert relative frequency or
+  replace the existing native-reading example.
+- **Claude B22-W-01, minor quiz coverage: resolved in the correction
+  awaiting confirmation.** Two direct guards now protect もちもち
+  and もこもこ against 軟らかい. Each older page already excludes
+  the same lexeme's 柔らかい spelling, but those declarations are
+  not transitive. The author inspected both complete source families
+  and actual articles, rather than treating precedent alone as proof.
+  Entry 2403780 records springy/doughy/elastic texture; the article
+  explicitly teaches soft-elastic food and supple skin. Entry
+  2104980 distinguishes fluffy from lumpy/uneven/bulging. The latter
+  guard is conservative and lower-confidence: a woolly/fluffy
+  material can overlap the broad soft label, while lumpiness alone
+  need not imply softness. The new comparison paragraph preserves
+  those differences and does not assert unrestricted substitution.
+- **GPT O1: optional reduced-pool hardening, not adopted.** 出る's
+  entry 1338240 sense 10 does record exceed/go over, matching an
+  ordinary 超える sense. The author independently retrieved the
+  [pinned QuizBuilder](https://github.com/stop-cran/kanji-cards-android/blob/8c130a25bdb4e444a80a2f78ef0d11b04bddc12f/app/src/main/java/io/github/stopcran/kanji/core/quiz/QuizBuilder.kt)
+  and checked the actual tags. It fills curated choices first, then
+  sorts fallback by descending shared-tag count. 日 is available
+  with a distinct title and three shared 出 tags; 超 shares none.
+  Thus 超 cannot fill 出's single default fallback slot with this
+  full pool. Larger quizzes, reduced imports and other app revisions
+  remain limits, not a measured defect. Claude's blanket statement
+  that all thirteen older two-choice meanings were unrelated is too
+  broad; the lexical overlap is real even though default exposure
+  is not established.
+- **Claude optional あんまり guard: not adopted.** Mere degree
+  "excessively" does not establish the same lexical amount/limit
+  answer. The existing あまり guard uses noun/suffix senses that
+  are restricted to that reading; no transitive or substring rule
+  transfers them to あんまり.
+- **Claude optional reading/register additions: not adopted.** The
+  sources inspected do not establish uncommon シュ, literary
+  軽忽, or 戦 as the usual いくさ spelling. Missing priority flags
+  and dictionary recognition do not establish those frequency claims.
+
+Claude's two adopted observations were not duplicated in any part
+of GPT's report, which marked all seventeen pages CLEAN. GPT supplied
+the useful lexical-overlap versus actual-fallback distinction.
+These complementary contributions are sample-specific evidence of
+value from the two families, not a general model ranking or proof
+of eliminated bias.
+
+Only 跡 and the 軟らかい word article change teaching content.
+The author reread both complete corrected pages and the actual diff.
+The packet now retains 95 exact records from 87 complete families,
+including explicit 足跡 そくせき, with 32 direct word pairs.
+All 41 reading rows, fifteen stroke assets, counts and twenty-two
+links-only older-word changes remain unchanged. The exact cumulative
+scope verifier passes for 61 files. Validation has zero errors and
+the audit still covers 330 additions/983 source-reading rows.
+Repeated manifest builds are byte-identical: contentVersion
+`087a40fcf7840aab`, SHA256
+`d9a96db6d4134f1177710ed5ea13e9e8fc4b49dd595330586a971f2a483a2526`.
+Original-session changed-passage confirmations are pending.

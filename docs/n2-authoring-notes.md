@@ -660,3 +660,36 @@ the cumulative audit covers 330 additions and 983 reading rows.
 Totals are 950 kanji, 3,270 words and 332 selected N2 characters,
 with 35 additions still unauthored. Batch 22's independent review is
 pending; the first twenty-one batches remain review-closed.
+
+Batch 22's same-snapshot initial reviews are complete, sequentially.
+Claude supplied two useful observations not present elsewhere in
+GPT's report. The 跡 note was scoped to the displayed あしあと
+example, but its imperative could be read as a wider ban; explicitly
+retain the same spelling's そくせき reading without claiming equal
+frequency. For a newly added spelling of an existing lexeme, inspect
+incoming direct exclusions on the older spelling as well as English
+gloss-search candidates. The glossary-only sweep missed もちもち's
+springy/doughy/elastic record despite the actual article's soft-elastic
+texture and supple-skin teaching. Its direct 柔らかい guard does not
+transitively protect 軟らかい. A second conservative guard retains
+もこもこ's fluffy-material overlap and existing same-lexeme precedent,
+while expressly distinguishing lumpiness/bulging from softness.
+These are pairwise, context-grounded decisions, not automatic copying
+of every older exclusion or unrestricted synonym claims.
+
+GPT separately inspected a real 出る/超える "exceed" overlap and
+the pinned fallback algorithm. With the full frozen pool, 日 shares
+three tags with 出 while 超 shares none, so it cannot take 出's
+single default fallback slot. Additional 出 hardening is optional
+for reduced pools, not an established default-quiz defect. Claude's
+"unrelated" wording for all older two-choice meanings was too broad.
+The two models therefore supplied complementary observations, not a
+vote about correctness. Unsupported frequency/register additions and
+an あんまり intensifier guard were not adopted.
+
+The corrected packet has 95 exact records from 87 complete families,
+including explicit 足跡 そくせき, and 32 direct word pairs.
+All 41 rows, fifteen strokes, counts and twenty-two links-only older
+word edits are unchanged. Both corrected pages have been reread;
+scope verification and validation pass, and confirmation by the
+original reviewers is pending.
