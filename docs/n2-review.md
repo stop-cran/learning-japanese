@@ -1631,3 +1631,58 @@ Snapshot identity, exact scope, preservation, validation and manifest checks
 are author-run, not reviewer-executed. These bounded reviews do not certify
 native fluency, exhaustive stroke drawing paths or runtime quiz behavior;
 larger or changed quizzes may still require new semantic curation.
+
+## Batch 17: 築簡籍粉粒糸紅純細紹絡綿総緑線 - authored, review pending
+
+**Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke files;
+three supporting word articles, 書籍, 粒 and 総額; fifteen older word
+articles gaining links only. 小 gains only a third curated distractor.
+The source record is [batch-17.json](n2-batch-sources/batch-17.json).
+The pre-batch baseline is `eb9376ba6afa36d7e3803c788427797f15fa1750`.
+
+All 41 exact source-reading rows are retained: 38 have inspected lexical
+examples. 簡's えら.ぶ, 総's す.べて and 線's すじ remain explicitly
+qualified lookup-only rows. 総べて is search-only, unlike the rare
+spelling 総て for the separate source boundary すべ.て. A word written
+筋 すじ does not by itself attest 線 すじ. The packet retains 74 exact
+spelling/reading records and 65 complete entry families, including reading
+and sense restrictions.
+
+粉 preserves the pinned katakana デシメートル in its kun field. The card
+explains the rare decimetre spelling rather than normalizing the metadata
+or inventing a native powder reading. 紅 keeps the べに-only cosmetic
+sense separate from くれない. 綿's plant and padding qualifications and
+木綿's spelling/reading/sense restrictions remain scoped. 細 distinguishes
+its two adjective forms, and 絡む/絡まる are both intransitive godan verbs.
+
+Each new kanji has a useful linked word article and three existing,
+semantically wrong distractors. The older two-choice cards were screened
+against the new meanings. 小's small/little label overlaps with the fine/
+small uses of 細, so a third curated 糸 option prevents default fallback
+without changing either original choice or the lesson. Thirteen older
+two-choice cards remain; no other required batch-related repair was
+established.
+
+The three new word articles declare fourteen direct quiz-exclusion pairs:
+書籍 protects 本/書物/図書/冊子 and the publication-activity labels
+出版/刊行/発行; 粒 protects 穀物/米/水滴; 総額 protects 合計/計/金額/額.
+These are answer-label safeguards, not unrestricted Japanese synonyms or
+transitive exclusion groups. None of the new words receives an inferred
+vocabulary JLPT level, and 総額 retains 額 in its metadata even though
+that kanji card is not authored yet.
+
+Fourteen old component passages gained links through the helper. 線's
+existing definition gained its character link without adding a literal
+mention to the unchanged component paragraph. A mechanical comparison
+preserves all fifteen old word articles' metadata and teaching text apart
+from links. No old stroke file or other old kanji was changed.
+
+The author inspected all eighteen rendered new teaching pages and every
+old word-link diff. The validator reports zero errors; the accumulated
+audit covers 255 additions and 774 exact source-reading rows. Counts are
+875 kanji, 3,255 word articles and 257 selected N2 characters, with 110
+additions unauthored. The draft's expected exact scope is 54 files and its
+manifest is `35b043d0d29d1838`; reproducibility and preservation checks are
+author-run, not reviewer-executed. The first sixteen batches remain
+review-closed; independent same-snapshot GPT/Claude review of batch 17
+and evidence-based reconciliation are pending.

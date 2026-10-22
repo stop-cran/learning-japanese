@@ -35,14 +35,15 @@ provisional notation and links to existing material, not yet a complete usage re
 Kanji cards, word articles and stroke data feed the [Ensō Nihongo Android app](https://github.com/stop-cran/kanji-cards-android). The
 format is described in [docs/content-format.md](docs/content-format.md); data sources are in [NOTICE.md](NOTICE.md).
 
-- `kanji/` – one card per kanji (860): meaning, radical, readings, common words, and origin notes or explicitly labelled modern-shape mnemonics.
+- `kanji/` – one card per kanji (875): meaning, radical, readings, common words, and origin notes or explicitly labelled modern-shape mnemonics.
   The deck covers all 79 N5, 166 N4 and 367 N3 kanji in the selected [kanjiapi.dev](https://kanjiapi.dev) community sets.
   It also includes 分 as a documented N5 exception and five N1 article-subject additions:
-  80 N5, 166 N4, 367 N3, 242 N2 and five N1. The ongoing [N2 expansion](docs/n2-review.md) has added 240 cards
+  80 N5, 166 N4, 367 N3, 257 N2 and five N1. The ongoing [N2 expansion](docs/n2-review.md) has added 255 cards
   to the two existing N2 cards. The first sixteen 15-card batches have independent GPT/Claude review and reconciled
-  reports, including changed-passage confirmations. Another 125 additions remain unauthored.
+  reports, including changed-passage confirmations. Batch 17's fifteen kanji and three supporting word articles are
+  authored but not independently reviewed yet. Another 110 additions remain unauthored.
   The `starter` tag identifies the original 118-card cohort, not the later expansions.
-- `words/` – one article per written word form (3,252): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
+- `words/` – one article per written word form (3,255): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
   Articles explain meaning, spelling or formation, synonyms, antonyms and usage distinctions.
   The selected community vocabulary list's 684 N5 and 640 additional N4 rows are covered by 1,308 articles:
   924 new articles and 384 reused ones. Multiple source readings can share an article.

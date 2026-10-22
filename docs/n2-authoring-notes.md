@@ -292,6 +292,34 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   entry family also lists まんねんぴつ and まんねんふで. Scope the ヒツ
   comparison to the linked article's まんねんひつ reading and retain the
   attested alternatives without inferring their frequency.
+- Batch 17 preserves 粉's katakana デシメートル exactly where the pinned
+  KANJIDIC2 record places it, in the kun field. JMdict confirms the rare
+  unit spelling and usually-kana qualification. Do not silently normalize
+  the source classification or call it a native powder word. The private
+  reading audit now recognizes both kana scripts rather than rejecting
+  this legitimate katakana example.
+- 総べて is search-only, while 総て is a rare kanji spelling of a
+  usually-kana word. Preserve the two source boundaries without calling
+  them different words or promoting the index form into Common words.
+  簡's えら.ぶ and 線's すじ remain explicitly scoped lookup-only rows;
+  筋 すじ does not establish a reading of the different spelling 線.
+- 紅's cosmetic sense is restricted to べに, not くれない. In 木綿's
+  full family, もめん is restricted to 木綿 and the cotton-material
+  sense; do not transfer the きわた tree-name sense. 綿's usually-kana
+  plant flag does not automatically qualify every padding use.
+- 細か and 細かい have distinct adjective forms and source okurigana
+  boundaries. 絡む and 絡まる are both intransitive godan verbs, not a
+  transitivity pair. These differences require examples, not just lists
+  of similar-looking kana.
+- The new 書籍, 粒 and 総額 lessons use direct word-quiz exclusions for
+  actual book/publication, grain/drop and monetary-total overlaps. English
+  object/activity ambiguity does not establish unrestricted Japanese
+  synonymy; pairwise protections are not transitive.
+- Adding 細 activates a small/fine overlap in 小's older two-choice
+  fallback. A third curated 糸 option preserves the original two choices
+  and all prose. 線's word article has no literal character mention in
+  its component paragraph; link the substantive definition instead of
+  rewriting unchanged teaching text to satisfy a helper.
 
 ## Review and checkpoint protocol
 
@@ -346,6 +374,14 @@ Claude accepted the previously missed English-label ambiguity; its additional
 際/occasion observation did not establish a direct synonym or actionable defect.
 The remaining counter and history suggestions are optional expansions, not
 unresolved findings.
+Batch 17 is authored but not independently reviewed: fifteen kanji and
+three supporting word articles bring the authored total to 255 additions
+and 774 exact reading rows. Counts are 875 kanji, 3,255 words and 257
+selected N2 characters, with 110 additions unauthored. Its 41 reading rows
+contain 38 lexical examples and three explicitly qualified lookup-only
+rows. Fifteen older word changes are links only; 小 gains only a third
+wrong answer. The source packet retains 74 exact pairs and 65 complete
+entry families. Reviewer findings and dual-model usefulness remain pending.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
