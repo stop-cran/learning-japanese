@@ -232,8 +232,9 @@ The [original corpus classification record](grammar-jlpt-sources.json) covers it
 170 N5, 210 N4, 235 N3, 102 N2 and four N1, with none unclassified in that snapshot.
 The [N5 foundations ledger](grammar-n5-foundations-sources.json) adds 125 N5 tasks in six sets;
 the [pointing/questions ledger](grammar-n5-pointing-sources.json) adds another 54 in one set;
-the [noun-description ledger](grammar-n5-descriptions-sources.json) adds 32 in one set.
-Current practice is 932 exercises: 381 N5, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+the [noun-description ledger](grammar-n5-descriptions-sources.json) adds 32 in one set;
+the [wants/plans ledger](grammar-n5-wants-sources.json) adds 38 in one set.
+Current practice is 970 exercises: 419 N5, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -313,6 +314,13 @@ and nonpast verb-modifier drills are recommended in their original `compound-att
 The article separates stated heads, understood items, nominalized activities and inner/outer roles; its broader
 negative, past-preference and omission qualifications are support, not separate assessed facets.
 The 24 example-key strings include paired scope/role contexts, not 32 independent scenarios or a mastery measure.
+The wants/plans installment adds 38 annotated prompts, reaching **970 exercises in 49 files** and
+vocabulary coverage of **573/970**. Eight new groups contain 19 facets, six soft recommendations and no
+hard prerequisites: 26 formation, eight contextual-selection and four scaffolded interpretation tasks.
+Six unchanged intention exercises gain a local two-facet group in their original file; their older pending
+vocabulary records remain pending. Ten additional correct options preserve fitting object/destination markers
+and shared invitation formulations. The 16 new context-key strings explicitly account for repeated and paired
+scenarios; choosing versus requesting an item is a named assembly task, not a false exclusive cafe-context contrast.
 All 397 original pending records remain pending,
 the baseline revision stays unchanged, and the inventory remains at `stage: "pilot"`. The first 30 subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue

@@ -122,6 +122,10 @@ The [noun-description ledger](grammar-n5-descriptions-sources.json) adds 32 N5 t
 modifiers from reused nonpast attachment, explicitly scoped の formation from harder の／こと selection, and
 bounded subject が／の recognition from unrestricted substitution. The N4 word-card level of 運転 does not raise
 an exercise practising these N5 grammatical roles.
+The [wants/plans ledger](grammar-n5-wants-sources.json) adds 38 N5 tasks. All four choice/request items
+need the secondary N5 noun + をください pattern in their visible contrast; はどうですか is supporting
+article material only. Optional N4 てほしい／がほしい and advanced intention/completion-belief reading
+are not required choices, and the six reused N5 intention objects retain their original levels.
 
 **Classify grammar, not vocabulary or kanji.** Use the construction and substantive contrast needed for the complete
 visible task. Keep natural examples; unfamiliar words should be supported by readings, glosses and translations rather
@@ -154,8 +158,9 @@ metadata pass; the source record identifies it as author classification, not ind
 
 ### Current classified practice
 
-The original 2026-10-22 pass classified 721 exercises in 40 sets. With 125 N5 foundations, 54 pointing/questions and
-32 noun-description additions, current practice has **932 exercises in 48 sets**: **381 N5, 210 N4, 235 N3, 102 N2 and four N1**.
+The original 2026-10-22 pass classified 721 exercises in 40 sets. With 125 N5 foundations, 54 pointing/questions,
+32 noun-description and 38 wants/plans additions, current practice has **970 exercises in 49 sets**:
+**419 N5, 210 N4, 235 N3, 102 N2 and four N1**.
 The original 19 pilot labels are unchanged. No exercise remains unclassified in this snapshot, but omission remains the
 correct representation for future unresolved cases. These counts are coverage of our existing exercises, not coverage
 of every grammar item in any level's curriculum.
@@ -168,6 +173,7 @@ of every grammar item in any level's curriculum.
 | [Requests, permission and rules](../articles/japanese-requests-permission-and-rules.md) | 22 | 0 | 0 | 0 | 0 |
 | [Pointing and asking questions](../articles/pointing-and-asking-questions.md) | 54 | 0 | 0 | 0 | 0 |
 | [Noun descriptions and activities](../articles/noun-descriptions-and-activities.md) | 32 | 0 | 0 | 0 | 0 |
+| [Wants, plans, invitations and offers](../articles/wants-plans-and-invitations.md) | 38 | 0 | 0 | 0 | 0 |
 | [Nouns and basic particles](../articles/japanese-nouns-and-basic-particles.md) | 73 | 3 | 0 | 0 | 0 |
 | [Topic, contrast and inclusion](../articles/wa-ga-mo-topic-and-inclusion.md) | 36 | 0 | 0 | 0 | 0 |
 | [Listing and examples](../articles/japanese-listing-and-examples.md) | 23 | 17 | 0 | 0 | 0 |

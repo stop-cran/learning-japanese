@@ -35,6 +35,47 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## N5 wants, plans and invitations: independent review and reconciliation (2026-10-22)
+
+**Snapshot and scope:** `dd621c44ff34343844ac33282c859402a9239559` plus installment 4 under
+[issue #10](https://github.com/stop-cran/learning-japanese/issues/10): the complete 249-line article,
+all 38 complete new exercises and selected vocabulary records, metadata, seven primary anchors,
+secondary-supported requests and bounded reuse of six existing intention drills.
+The [source ledger](docs/grammar-n5-wants-sources.json) preserves initial/revised hashes, complete
+reports, adjudication and integration evidence. One independent reviewer covered all three facets;
+its actual runtime model ID was unavailable. It read only the specified reusable-lesson range, not
+historical review reports or author verdicts. No model comparison is claimed.
+
+| Initial observation | Reconciled disposition |
+| --- | --- |
+| IND-WANTS-001, Minor: four typed-answer lists omitted verified ゆく／往く realizations of the supplied going verb | Resolved: add 14 same-sense renderings and rebind the four context hashes; model buttons and teaching defaults stay unchanged. |
+
+**Same-reviewer reconciliation:** the original reviewer read the complete 56-line answer diff,
+453-line packet, all four changed complete objects/records and separate 360-line formatting diff.
+The initial review carries forward for the unchanged article, 34 unchanged new objects and bounded
+reused material. Article and exercises are **CLEAN in correctness, scoped coverage and comprehensibility
+within that composite scope**. No new actionable defect, optional suggestion or consequential unresolved
+claim remains. The original exercise-correctness NEEDS FIX verdict stays bound to its initial snapshot.
+
+**Preservation and integration:** all 932 earlier exercise objects and inventory records are unchanged.
+Only accepted-answer lists change in four new objects, from 108 to **122** total renderings; only their
+inventory context hashes change. There are still 98 base options, ten additional correct options and
+74 lexical spans. Eight new groups have 19 facets, six soft recommendations and no hard prerequisites.
+The six reused intention tasks gain one two-facet group; their older vocabulary records remain pending.
+The old file's compact formatting is retained, and its parsed JSON equals the initial reviewed version.
+Current practice has **970 exercises in 49 sets**, including **419 N5**, with **573/970** vocabulary-reviewed
+prompts and the same 397 pending records at `pilot`. Content/vocabulary checks, deterministic manifest
+`7c0052a2314b4aa9` and the freshly executed real Android importer pass; unrelated caches and other
+runtime assets remain intact. These integration checks are separate from linguistic review.
+
+**Reflection:** regroup the existing recognition lesson to check a supplied verb's same-sense readings
+and spellings across parallel grammar frames, without promoting uncommon variants to default buttons.
+A default parenthetical reading is not a hidden pronunciation-only task. No duplicate checklist rule or
+exhaustive rare-spelling quota is added. The 26 formation, eight contextual-selection and four scaffolded
+interpretation tasks are not unrestricted conversational mastery; 16 context keys account for paired
+scenarios. はどうですか and the N4 desire bridge remain supporting reading, not additional scored facets.
+No second full audit, native certification or app/SRS change is claimed.
+
 ## N5 noun descriptions: independent review and reconciliation (2026-10-22)
 
 **Snapshot and scope:** `f3695d9601ce3a77e92e380c1a5b3930ef918f18` plus installment 3 under
@@ -540,6 +581,10 @@ The [basic-particle exercise review](docs/grammar-basic-particles-sources.json) 
   semantic choice buttons or claiming equal frequency (BPI-F02).
   Include accepted optional wording in that check, not just the model: どなた／何方 and どう／如何 were the
   omitted pairs in the pointing/questions review (N5PQ-F02; regroup).
+  Check a supplied verb across parallel grammar frames too: the wants/plans review found missing same-sense
+  ゆく／往く realizations in four desire, intention and purpose tasks. A default reading in parentheses is
+  not an explicit pronunciation-only restriction; verify lexical sense and preserve the teaching defaults
+  ([record](docs/grammar-n5-wants-sources.json), IND-WANTS-001; regroup).
 
 These are checks for observed failure modes, not a requirement to invent a finding in every review. The batch record
 preserves original severities, adjudication and reconciliation separately; agreement is not a substitute for evidence.
