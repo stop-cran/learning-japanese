@@ -137,6 +137,11 @@ Ordinary past controls and the substantive degree/excess choices are included in
 uses the exact secondary N5 とても entry. 結構 supplies shared optional degree wording, while たくさん remains
 lexical/context support. Five already-N5 quantity/limit objects are grouped without relabeling the neighboring
 N3 tasks or the existing N4 ほう／ほか and N3 なる／まま contrasts.
+The [giving/receiving ledger](grammar-n5-giving-sources.json) adds 36 N5 tasks using the basic あげる／くれる／もらう
+entries and N5 plain/polite past support. Participant-marker and viewpoint contrasts are mapped as complete tasks;
+the contextual choices include all three verbs. Defined role labels, optional kanji spellings and linked
+にとって／ため reading do not become harder assessed grammar. Benefactive auxiliaries and the honorific system
+remain outside this installment.
 
 **Classify grammar, not vocabulary or kanji.** Use the construction and substantive contrast needed for the complete
 visible task. Keep natural examples; unfamiliar words should be supported by readings, glosses and translations rather
@@ -170,9 +175,9 @@ metadata pass; the source record identifies it as author classification, not ind
 ### Current classified practice
 
 The original 2026-10-22 pass classified 721 exercises in 40 sets. With 125 N5 foundations, 54 pointing/questions,
-32 noun-description, 38 wants/plans, 34 reasons/contrasts and 42 comparisons/change additions,
-current practice has **1046 exercises in 51 sets**:
-**495 N5, 210 N4, 235 N3, 102 N2 and four N1**.
+32 noun-description, 38 wants/plans, 34 reasons/contrasts, 42 comparisons/change and 36 giving/receiving additions,
+current practice has **1082 exercises in 52 sets**:
+**531 N5, 210 N4, 235 N3, 102 N2 and four N1**.
 The original 19 pilot labels are unchanged. No exercise remains unclassified in this snapshot, but omission remains the
 correct representation for future unresolved cases. These counts are coverage of our existing exercises, not coverage
 of every grammar item in any level's curriculum.
@@ -188,6 +193,7 @@ of every grammar item in any level's curriculum.
 | [Wants, plans, invitations and offers](../articles/wants-plans-and-invitations.md) | 38 | 0 | 0 | 0 | 0 |
 | [Reasons, contrasts and prefaces](../articles/reasons-and-contrasts.md) | 34 | 0 | 0 | 0 | 0 |
 | [Comparisons, changes and degree](../articles/comparisons-change-and-degree.md) | 42 | 0 | 0 | 0 | 0 |
+| [Giving, receiving and viewpoint](../articles/giving-receiving-and-viewpoint.md) | 36 | 0 | 0 | 0 | 0 |
 | [Nouns and basic particles](../articles/japanese-nouns-and-basic-particles.md) | 73 | 3 | 0 | 0 | 0 |
 | [Topic, contrast and inclusion](../articles/wa-ga-mo-topic-and-inclusion.md) | 36 | 0 | 0 | 0 | 0 |
 | [Listing and examples](../articles/japanese-listing-and-examples.md) | 23 | 17 | 0 | 0 | 0 |

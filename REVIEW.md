@@ -35,6 +35,43 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## N5 giving, receiving and viewpoint: independent review (2026-10-22)
+
+**Snapshot and scope:** `cbdfd15ef7520624ea8cf748f601842157250a79` plus installment 7 under
+[issue #11](https://github.com/stop-cran/learning-japanese/issues/11): the complete 237-line article,
+all 36 complete new exercises and vocabulary records, every answer/option/rationale, all groups
+and the source ledger. One fresh independent reviewer covered correctness, scoped coverage and
+comprehensibility; its actual runtime model ID was unavailable. It read only the assigned reusable
+lessons, not historical reports or author research/generators. No model comparison is claimed.
+The [source ledger](docs/grammar-n5-giving-sources.json) retains the frozen hashes, complete initial
+report and separate integration evidence.
+
+**Result:** the article and complete exercise/lexical set are **CLEAN in all three facets**.
+There are no actionable findings, optional suggestions or consequential unresolved claims.
+The reviewer independently inspected the three basic-transfer lessons, three inflection lessons,
+supplementary Japanese teaching examples and exact dictionary senses/readings. It checked every
+literal completion, both fitting human-source markers, matched giver/receiver interpretations and
+the explicitly requested third-person viewpoints. No repair or artificial reconciliation round
+was needed: the reviewed runtime and all 36 lexical records remain unchanged.
+
+**Preservation and integration:** all 1046 previous complete objects, their vocabulary records,
+all prior runtime files and unrelated caches are preserved. The new set has 20 formation, eight
+interpretation and eight contextual-selection tasks, with 66 accepted renderings, 80 base options,
+two additional correct options, 108 lexical spans and 188 exclusions. Four groups contain 11 facets,
+three soft recommendations and no hard prerequisites. Current practice has **1082 exercises in
+52 sets**, including **531 N5**, with **685/1082** reviewed vocabulary records and the same 397 pending
+at `pilot`. Content/vocabulary checks, deterministic manifest `1a4cf7e602926e50` and the freshly
+executed real Android importer pass. Integration is separate from linguistic review.
+
+**Reflection:** retain the matched-event approach: the actual giver/receiver, grammatical frame and
+adopted viewpoint are distinct. The clean result reinforces the existing matched-example and
+literal-role checks, rather than establishing a new defect or a fixed family/person prohibition.
+This distinction is useful for the later benefactive/desire follow-up. Eleven context-key strings
+are not proof of 36 independent conversations or demonstrated mastery. The 35-set/525-object
+inventory screen was not a new full linguistic audit of older material; six supporting word-card
+reads were distinct from the reviewer's fresh dictionary retrievals. No native certification,
+app/SRS change or phone UI check is claimed.
+
 ## N5 comparisons, change and degree: independent review and reconciliation (2026-10-22)
 
 **Snapshot and scope:** `68359e278a075a9ef5562d126cf2c2ad037fdf5a` plus installment 6 under
@@ -646,6 +683,9 @@ The [は／が／も review record](docs/grammar-topic-sources.json) grounds the
   For interpretation labels, reject the actual wrong reading rather than affirmatively defining it: the noun-description
   review found four wrong-scope rationales that sounded like validation of the selected analysis
   ([record](docs/grammar-n5-descriptions-sources.json), IND-DESC-002; regroup).
+  The clean [giving/receiving review](docs/grammar-n5-giving-sources.json) illustrates the same check:
+  keep actual giver/receiver, grammatical frame and adopted viewpoint separate. A different grammatical viewpoint
+  can fall outside a requested framing without reversing roles or establishing a fixed family/person prohibition.
 - **Close the opening question with a matched example.** An explanation of identification with a motion verb can be
   correct yet leave a promised occupation-predicate comparison implicit. Show the actual opening pair in contrasting
   contexts, without converting a contextual tendency into an absolute restriction (WGM-OPUS-F1).

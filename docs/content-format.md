@@ -235,8 +235,9 @@ the [pointing/questions ledger](grammar-n5-pointing-sources.json) adds another 5
 the [noun-description ledger](grammar-n5-descriptions-sources.json) adds 32 in one set;
 the [wants/plans ledger](grammar-n5-wants-sources.json) adds 38 in one set;
 the [reasons/contrasts ledger](grammar-n5-reasons-sources.json) adds 34 in one set;
-the [comparisons/change ledger](grammar-n5-comparisons-sources.json) adds 42 in one set.
-Current practice is 1046 exercises: 495 N5, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+the [comparisons/change ledger](grammar-n5-comparisons-sources.json) adds 42 in one set;
+the [giving/receiving ledger](grammar-n5-giving-sources.json) adds 36 in one set.
+Current practice is 1082 exercises: 531 N5, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -335,6 +336,11 @@ vocabulary coverage of **649/1046**. Eight groups have 16 facets, six soft recom
 options preserve fitting shared degree wording. The 26 key strings account for paired word orders and predicate
 scenarios, not 42 independent contexts. Five already-N5 estimate/limit objects gain one local two-facet group in
 their original file; their complete objects, levels and pending vocabulary records stay unchanged.
+The giving/receiving installment adds 36 annotated prompts, reaching **1082 exercises in 52 files** and
+vocabulary coverage of **685/1082**. Four groups have 11 facets, three soft recommendations and no hard prerequisites:
+20 formation, eight role-interpretation and eight contextual-selection tasks. Two additional correct options retain
+both fitting human-source に／から markers. The 11 key strings account for deliberately shared events across forms,
+roles and viewpoints, not 36 independent conversations. No older exercise or group is modified.
 All 397 original pending records remain pending,
 the baseline revision stays unchanged, and the inventory remains at `stage: "pilot"`. The first 30 subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
