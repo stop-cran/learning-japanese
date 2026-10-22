@@ -2139,3 +2139,54 @@ kanji citations. Author-run validation reports zero errors; repeated final-corre
 manifest builds are byte-identical with content version `cbcc13ceec6bbbe2`.
 Confirmation of the actual committed seven-page diff by both original
 reviewers remains pending.
+
+### Changed-passage reviews and additional safeguards
+
+The fourteen-file correction was committed as
+`a1368845a79c8a659a60fed732b6d0a1c155a4c6`, with author and committer
+`stop-cran`. The original GPT and Claude sessions sequentially read
+the same committed seven-page teaching diff and complete revised pages.
+Both read-only processes exited successfully with zero recorded edits.
+Their unchanged reports are [GPT](n2-reviews/batch-19-gpt-followup.md)
+and [Claude](n2-reviews/batch-19-claude-followup.md). Both confirm the
+original fixes and find no regression. GPT marks all seven pages CLEAN
+on all facets. Claude marks 荒れる's scoped coverage NEEDS FIX.
+
+**Claude B19-C1, minor scoped coverage, resolved in the next correction:**
+the direct 荒れる/かさかさ pair still leaves ざらざら, rough and gritty,
+available beside the rough-skin sense. The author inspected complete
+pinned entry 1005420: its first sense explicitly covers roughness of
+touch, voice and other settings, with no spelling/reading restriction.
+Added the direct ざらざら pair and a texture-scoped comparison; the
+existing ざらざら/かさかさ edge is not transitive. The judgment remains
+medium-confidence label-overlap protection. No invented skin
+collocation or native-fluency claim is needed or made. A fetched
+精選版 日本国語大辞典 ざらざら entry corroborates tactile roughness;
+it is not represented as an attested 肌がざらざら example. An
+unrelated Weblio song extraction supplies no lexical evidence.
+
+The author rechecked all 26 sense matches in the bounded roughness/
+disorder candidate sweep and inspected the existing comparison pages.
+The unrestricted second sense of 混雑/こんざつ, entry 1290390,
+also supplies confusion/disorder; its older article already acknowledges
+this extension. Added a direct precaution and a narrow comparison,
+without equating crowding with unruly behavior. This is an author
+extension, not a reviewer finding. Context-bound draft/copy senses,
+wrong-reading homographs and related intensity labels were not treated
+as blanket synonym evidence.
+
+The optional かまう suggestion does not establish a defect: its verbal
+mind/be-concerned label is not 脳's noun mind sense. Further 嵐 citation
+polish is not required; the linked article already carries its source.
+Neither suggestion triggers unrelated older-content edits.
+
+The later Claude finding is useful complementary signal, not an
+independent initial discovery or a controlled second model benchmark.
+Claude's initial review and GPT's first confirmation both missed it;
+neither single model is treated as a completeness guarantee.
+The new correction changes only the 荒れる word and 荒 kanji's source
+citation, plus evidence, records and manifest. It raises the packet to
+77 exact records / 75 complete families and the direct exclusion count
+to twenty-three, leaving all reading rows, old-content preservation and
+deck counts unchanged. Confirmation of this actual two-page correction
+by both original reviewers remains pending.

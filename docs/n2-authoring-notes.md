@@ -403,6 +403,12 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   two useful teaching-clarity changes: align 脳's label with its taught
   mind sense, and connect 般's ハン with the パン in 一般/全般.
   The former is not a claim that KANJIDIC2's memory gloss is false.
+- Claude's batch-19 changed-passage review caught an additional
+  ざらざら tactile-roughness gap that its initial review and GPT's
+  confirmation missed. Add the direct pair, not a transitive path
+  through かさかさ. Rechecking the bounded disorder candidates also
+  justified the author's direct 混雑 precaution from its second sense;
+  do not infer unruly behavior from crowding alone.
 
 ## Review and checkpoint protocol
 
@@ -502,7 +508,7 @@ kanji and four supporting words bring the authored total to 285 additions
 and 848 exact source-reading rows. Counts are 905 kanji, 3,265 words and
 287 selected N2 characters, with 80 additions unauthored. Its 40 reading
 rows contain 34 lexical examples and six qualified lookup-only rows;
-the corrected packet has 75 exact records from 73 complete entry families.
-Twenty-one direct word-quiz pairs protect the confirmed overlaps.
+the corrected packet has 77 exact records from 75 complete entry families.
+Twenty-three direct word-quiz pairs protect the confirmed overlaps.
 Twelve old word edits have the precisely declared
 preservation scope above; no old kanji or stroke changes.
