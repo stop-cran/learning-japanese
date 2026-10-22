@@ -131,6 +131,12 @@ anchors, with subject が as an additional supporting entry. Attached nominal �
 explicit N5 connective lesson, not the separate N4 standalone だが／ですが entry. The preface tasks do not
 require N4 んだけど／んですが; sentence-level conjunctions remain article support. Existing N4 のに／ので
 comparisons keep their complete-task classifications and unchanged objects.
+The [comparisons/change ledger](grammar-n5-comparisons-sources.json) adds 42 N5 tasks. The exact combined
+より／ほう and set-plus-一番 patterns follow their N5 entries, not separate standalone N4 entries.
+Ordinary past controls and the substantive degree/excess choices are included in the mapping; the latter also
+uses the exact secondary N5 とても entry. 結構 supplies shared optional degree wording, while たくさん remains
+lexical/context support. Five already-N5 quantity/limit objects are grouped without relabeling the neighboring
+N3 tasks or the existing N4 ほう／ほか and N3 なる／まま contrasts.
 
 **Classify grammar, not vocabulary or kanji.** Use the construction and substantive contrast needed for the complete
 visible task. Keep natural examples; unfamiliar words should be supported by readings, glosses and translations rather
@@ -164,8 +170,9 @@ metadata pass; the source record identifies it as author classification, not ind
 ### Current classified practice
 
 The original 2026-10-22 pass classified 721 exercises in 40 sets. With 125 N5 foundations, 54 pointing/questions,
-32 noun-description, 38 wants/plans and 34 reasons/contrasts additions, current practice has **1004 exercises in 50 sets**:
-**453 N5, 210 N4, 235 N3, 102 N2 and four N1**.
+32 noun-description, 38 wants/plans, 34 reasons/contrasts and 42 comparisons/change additions,
+current practice has **1046 exercises in 51 sets**:
+**495 N5, 210 N4, 235 N3, 102 N2 and four N1**.
 The original 19 pilot labels are unchanged. No exercise remains unclassified in this snapshot, but omission remains the
 correct representation for future unresolved cases. These counts are coverage of our existing exercises, not coverage
 of every grammar item in any level's curriculum.
@@ -180,6 +187,7 @@ of every grammar item in any level's curriculum.
 | [Noun descriptions and activities](../articles/noun-descriptions-and-activities.md) | 32 | 0 | 0 | 0 | 0 |
 | [Wants, plans, invitations and offers](../articles/wants-plans-and-invitations.md) | 38 | 0 | 0 | 0 | 0 |
 | [Reasons, contrasts and prefaces](../articles/reasons-and-contrasts.md) | 34 | 0 | 0 | 0 | 0 |
+| [Comparisons, changes and degree](../articles/comparisons-change-and-degree.md) | 42 | 0 | 0 | 0 | 0 |
 | [Nouns and basic particles](../articles/japanese-nouns-and-basic-particles.md) | 73 | 3 | 0 | 0 | 0 |
 | [Topic, contrast and inclusion](../articles/wa-ga-mo-topic-and-inclusion.md) | 36 | 0 | 0 | 0 | 0 |
 | [Listing and examples](../articles/japanese-listing-and-examples.md) | 23 | 17 | 0 | 0 | 0 |

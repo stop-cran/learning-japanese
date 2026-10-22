@@ -16,6 +16,7 @@ This repository starts as a collection of standalone articles prompted by specif
 | Grammar | [Describing nouns and talking about activities](articles/noun-descriptions-and-activities.md) | How do noun descriptions, understood items and nominalized activities differ, and when can subject が become の? |
 | Grammar | [Wants, plans, invitations and offers](articles/wants-plans-and-invitations.md) | How do a wish, an intention, a joint proposal, an offer, a choice and a motion purpose differ? |
 | Grammar | [Reasons, contrasts and conversational prefaces](articles/reasons-and-contrasts.md) | How do reason and contrast connectors attach, and when does が mark a subject or introduce a question? |
+| Grammar | [Comparisons, changes and degree](articles/comparisons-change-and-degree.md) | What does a pair or set comparison establish, and how do a change, a high degree and excess differ? |
 | Grammar | [Koto, wake, and Japanese noun-based grammar](articles/koto-wake-and-formal-nouns.md) | How do こと and わけ differ, which common formal nouns and noun-based expressions are useful to know, and where do の/ん and ほど fit? |
 | Grammar | [Japanese verb extensions: direction and aspect](articles/verb-extensions-direction-and-aspect.md) | How do ～ていく, ～てくる, ～ておく, ～込む, and related constructions express direction, continuation, and completion? |
 | Grammar | [Japanese conditionals: たら, ば, なら, と, and 場合](articles/japanese-conditionals.md) | How do conditions, premises, event order, discoveries, and procedural cases differ, and when can several patterns fit? |
@@ -53,7 +54,10 @@ secondary-supported item requests, fair shared invitation answers and an optiona
 The [reasons/contrasts installment](articles/reasons-and-contrasts.md) adds 34 exercises;
 its [ledger](docs/grammar-n5-reasons-sources.json) accounts for five primary anchors, whole-predicate attachment,
 bounded が-role recognition and preface interpretation. Sentence-level linkers remain supporting reading.
-Later installments cover comparisons/change, giving/receiving, and explanations/quotations.
+The [comparisons/change installment](articles/comparisons-change-and-degree.md) adds 42 exercises and groups five
+existing N5 quantity/limit drills; its [ledger](docs/grammar-n5-comparisons-sources.json) distinguishes assessed
+comparison, change and excess patterns from shared degree wording and support-only quantity vocabulary.
+Later installments cover giving/receiving and explanations/quotations.
 The higher-level desire comparison is a separate follow-up.
 
 ## Confusable vocabulary
@@ -106,8 +110,9 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   64 on basic nouns and particles, 50 on restriction and unexpected inclusion,
   48 on compound relations and formal-noun contrasts, 125 introductory N5 foundations exercises,
   54 on pointing and asking questions, 32 on noun descriptions and activities,
-  38 on wants, plans, invitations and offers, and 34 on reasons, contrasts and prefaces (1004 in total).
-  All 1004 exercises have grammar-only study labels: **453 N5, 210 N4, 235 N3, 102 N2 and four N1**.
+  38 on wants, plans, invitations and offers, 34 on reasons, contrasts and prefaces,
+  and 42 on comparisons, changes and degree (1046 in total).
+  All 1046 exercises have grammar-only study labels: **495 N5, 210 N4, 235 N3, 102 N2 and four N1**.
   These are editorial estimates using Bunpro as the primary reference, with documented JLPT Sensei comparisons,
   not an official syllabus. Vocabulary and kanji difficulty do not determine them; natural examples remain unchanged.
   See the [policy and per-article distribution](docs/jlpt-levels.md#grammar-baseline) and
@@ -219,8 +224,8 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   are identical. The Nのこと／Nであること contrast tests explicit nominalization, not disjoint possible conversation topics.
   All 60 conditional, 26 のに, 36 listing, 36 topic, 64 basic-particle, 50 restriction/inclusion and 48 compound-relation
   prompts have reviewed vocabulary coverage; pure grammar prompts deliberately have no lexical hints.
-  Total author-reviewed coverage is **607/1004** after the 125 N5 foundations, 54 pointing/questions,
-  32 noun-description, 38 wants/plans and 34 reasons/contrasts prompts,
+  Total author-reviewed coverage is **649/1046** after the 125 N5 foundations, 54 pointing/questions,
+  32 noun-description, 38 wants/plans, 34 reasons/contrasts and 42 comparisons/change prompts,
   with the original 397 still pending. The のに source record keeps author and independent review snapshots separate;
   the unsettled causal-past expectation card was retired in favor of a current timetable-based preparation example.
   The topic article and exercise set have independent `gpt-6-astra` and `claude-opus-5.5` reviews, followed by

@@ -35,6 +35,55 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## N5 comparisons, change and degree: independent review and reconciliation (2026-10-22)
+
+**Snapshot and scope:** `68359e278a075a9ef5562d126cf2c2ad037fdf5a` plus installment 6 under
+[issue #15](https://github.com/stop-cran/learning-japanese/issues/15): the complete 250-line article,
+all 42 complete new exercises and vocabulary records, metadata, six primary anchors, exact secondary
+support and a new group owning five unchanged N5 quantity/limit tasks. The
+[source ledger](docs/grammar-n5-comparisons-sources.json) preserves original/revised hashes,
+complete reports, adjudication and integration evidence. One fresh independent reviewer covered
+all three facets; its actual runtime model ID was unavailable. It read only the assigned reusable
+lessons, not historical reports or author research/generators. No model comparison is claimed.
+
+| Initial observation | Reconciled disposition |
+| --- | --- |
+| IND-COMP-001, Minor: two weather tasks omitted recognized same-sense さぶい forms | Resolved: accept さぶくなりました and さぶいです in their respective tasks, explain the recorded pronunciation, and preserve the さむい models. |
+| O03, optional: one source sentence called required とても support-only | Resolved: clarify its required degree/excess role; the complete-task level mapping was already correct. |
+| O01/O02, optional: ordinary-form feedback order and more precise 操作 English wording | Remain optional and unapplied, not withdrawn or declared false. The reviewed Japanese forms and keys are sound. |
+
+**Same-reviewer reconciliation:** the original reviewer read the complete 59-line actual diff,
+251-line packet, both entire changed objects/records and the revised snapshot. The initial review
+carries forward for the unchanged article, other 40 new objects and bounded five-task reuse.
+Article, new exercises and reused group are **CLEAN in correctness, scoped coverage and
+comprehensibility within that composite scope**. No new actionable finding or consequential
+unresolved claim remains. The initial exercise-correctness NEEDS FIX verdict stays bound to its
+original snapshot; this is not a second full linguistic audit.
+
+**Preservation and integration:** all 1004 earlier complete objects and inventory records are
+unchanged, including all 15 old objects in the reused file. Reconciliation changes only two new
+answer lists and their explanatory notes, plus their two inventory context hashes. The new set has
+127 accepted renderings, 84 base options, two additional correct options, 93 lexical spans and
+199 exclusions. Eight groups contain 16 facets, six soft recommendations and no hard prerequisites.
+The reused group has five members and two facets; its five old lexical records remain pending.
+Current practice has **1046 exercises in 51 sets**, including **495 N5**, with **649/1046** reviewed
+vocabulary records and the same 397 pending at `pilot`. Content/vocabulary checks, deterministic
+manifest `0f4968e36448e7be` and the freshly executed real Android importer pass. All other runtime
+assets and unrelated caches are preserved. Integration is separate from linguistic review.
+Final staged-diff inspection also removed one stray CR before the inserted group's comma.
+The same reviewer checked the complete 12-line diff and exact one-byte removal: all other bytes
+and parsed content are unchanged, so the composite verdicts carry forward. Both earlier reports
+remain untouched; this follow-up is formatting verification, not another linguistic audit.
+
+**Reflection:** regroup the existing supplied-word recognition lesson to make its adjective
+application explicit, including words inside meaning-focused tasks. A default reading is not an
+exclusive-pronunciation instruction, and recognition does not establish equal frequency. The
+secondary-source wording repair reinforces the existing complete-required-choice level policy;
+neither finding warrants a duplicate checklist rule. The 26 formation, eight interpretation and
+eight contextual-selection tasks are scaffolded practice, not unrestricted discourse mastery;
+26 example-key strings are not proof of independent scenarios. No native certification, app/SRS
+change or phone UI check is claimed.
+
 ## N5 reasons and contrasts: independent review and reconciliation (2026-10-22)
 
 **Snapshot and scope:** `7a16f02d752812c9ae3b9a508af2847173115c8d` plus installment 5 under
@@ -624,10 +673,13 @@ The [basic-particle exercise review](docs/grammar-basic-particles-sources.json) 
   semantic choice buttons or claiming equal frequency (BPI-F02).
   Include accepted optional wording in that check, not just the model: どなた／何方 and どう／如何 were the
   omitted pairs in the pointing/questions review (N5PQ-F02; regroup).
-  Check a supplied verb across parallel grammar frames too: the wants/plans review found missing same-sense
+  Check a supplied word across parallel grammar frames too: the wants/plans review found missing same-sense
   ゆく／往く realizations in four desire, intention and purpose tasks. A default reading in parentheses is
   not an explicit pronunciation-only restriction; verify lexical sense and preserve the teaching defaults
   ([record](docs/grammar-n5-wants-sources.json), IND-WANTS-001; regroup).
+  This also applies to adjectives inside meaning-focused tasks: the comparison review found omitted
+  さぶい realizations of 寒い in the current-state and transition answer lists
+  ([record](docs/grammar-n5-comparisons-sources.json), IND-COMP-001; regroup).
 
 These are checks for observed failure modes, not a requirement to invent a finding in every review. The batch record
 preserves original severities, adjudication and reconciliation separately; agreement is not a substitute for evidence.
