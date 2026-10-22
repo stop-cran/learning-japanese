@@ -135,3 +135,9 @@ evidence and learning impact; issue creation requires authorization.
   the actual PDF. They ground the 荒い/粗い and 著す/表す/現す comparisons and corroborate
   recognizing 在る while usually writing ある. Keep reading-restricted senses separate:
   あれこれ does not inherit the approximate-duration use restricted to かれこれ.
+- **Batch 03 reconciliation:** Avoid unexplained references to "the source" inside app-facing
+  articles; state the learner's spelling or meaning guidance directly. English noun/verb
+  ambiguity such as "author" can require a direct quiz guard even when the Japanese
+  grammatical roles are different. Compare optional/tentative report notes too: 粗い/かさかさ
+  and the 徐々に link were shared observations, not unique findings of the model assigning
+  the higher severity.

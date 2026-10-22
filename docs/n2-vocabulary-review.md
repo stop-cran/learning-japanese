@@ -202,7 +202,7 @@ Coverage is **40 closed, 0 draft, 1,772 pending, 0 unresolved**: 31 new and nine
 
 ## Batch 03: N2:42-N2:61
 
-**Status:** authored draft; independent review and reconciliation pending.
+**Status:** independently reviewed initial draft; corrections await bounded confirmation.
 
 Scope: 荒い, 粗い, あらすじ, 争う, 改めて, 改める, 著す, 有難い, 在る,
 あれこれ, あわただしい, あわてる, 安易, 案外, アンテナ, 言い出す, 言い付ける,
@@ -222,7 +222,53 @@ brief extracts and inspection limits.
 
 The collection contains 3,323 word articles. Coverage is **40 closed, 20 draft, 1,752 pending,
 0 unresolved**: 50 new and ten reused articles overall. These draft rows do not yet count as
-independently reviewed.
+review-closed.
+
+### Initial review and reconciliation
+
+Both reviewers independently assessed authored snapshot
+`eabe2e942e8e6fa67cc4dd4093c3e6ea14edaf3c`, parent
+`f8eaca3bef6d3c90b5002e0d3b50b206acc73d5d`, on the same unchanged clean worktree.
+The short-lived `gpt-6.1-sol` process exited before `claude-opus-5.5` began.
+Usage receipts verify those actual models and no file edits. Reports are archived verbatim:
+[GPT initial](n2-vocabulary-reviews/batch-03-gpt-initial.md) and
+[Claude initial](n2-vocabulary-reviews/batch-03-claude-initial.md).
+
+All 19 new articles received separate correctness, scoped-coverage and comprehensibility
+verdicts. Both also assessed the twelve-kanji/one-word related diff and the narrow unchanged
+ある reuse claim. Neither established a defect in the source mappings or related edits.
+
+| Initial observation | Decision and evidence |
+| --- | --- |
+| GPT B03-GPT-01 / Claude Optional: 粗い and かさかさ | Add a direct guard for their rough-texture answer overlap. Inspect complete entries 1396910 and 1037130 and the actual cards; the guard does not say that 粗い implies dryness. |
+| GPT B03-GPT-02: 争う and 議論 | Add a direct guard for the documented dispute/argument use. Entry 1400620 sense 2 and entry 1226160 sense 1 support it; the existing 論争 relationships are not transitive. |
+| GPT B03-GPT-03: 生き生き and もりもり/ばりばり | Add both direct energetic-activity guards. Entry 1609130 sense 1, 1012700 sense 2 and 1010340 sense 4 support the actual working/activity meanings, not just an energy-related topic. |
+| Claude F1: 著す and 著者 | Add a direct guard for the English noun/verb label "author." Keep stable labels and the distinct Japanese roles; entries 1427080 and 1427110 do not make a person and an action grammatically interchangeable. |
+| Claude F2: あわただしい and あわてる | Add a direct guard after checking the actual hurried/hurrying uses in entries 1278810 and 1278830. A common exclusion with 急ぐ is not itself evidence or transitive protection. |
+| Claude F3: unexplained "source" references | Rewrite the three learner-facing passages in あわただしい, 安易 and 言い出す as direct spelling/meaning guidance. The public cards need no knowledge of the contributor's source CSV. |
+| Claude F4 / GPT Optional: 徐々に navigation | Link the existing comparison article from いきなり. This is the same observation in both reports despite different severity. |
+
+The six quiz pairs address localized English-answer ambiguity; no lexical definition or
+existing card's stable identity, reading, title, exclusion list or easier level changes.
+Complete comparison families from the pinned hash-verified JMdict bytes are retained in the
+batch packet. The roughness and 徐々に observations are shared, not unique model discoveries.
+GPT additionally found the dispute and two energetic-activity guards. Claude additionally
+found the author-role and hurried-activity guards and the unclear source references.
+This is useful complementary signal on one common sample, not a model ranking.
+
+Optional expansions remain nonblocking: additional semantic ordering or examples, historical
+derivation, 生きる navigation, clearer "usually written" wording and polishing 彼 explanations.
+Claude's optional gratitude candidates were checked against the actual 御礼 and ありがとう
+cards and complete entry families. They teach related thanks or thanking expressions, but
+that alone does not establish another missing direct answer-label guard for "grateful;
+appreciated"; no additional defect is claimed or exclusion inferred through 感謝.
+
+Initial-review limits remain explicit: neither reviewer ran Git, recomputed frozen hashes
+or executed the app; both relied on the author-inspected official PDF extract. GPT's independent
+live Jisho checks are JMdict-derived, not an independent dictionary tradition. Claude's
+naturalness impressions for two constructions are not native-speaker certification; no contrary
+evidence or consequential unresolved claim was established in the practical teaching scope.
+GPT disclosed an incidental one-row TSV overread, which it did not assess or use.
 
 ## Final verification
 
