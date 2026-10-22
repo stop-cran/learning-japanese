@@ -19,6 +19,7 @@ This repository starts as a collection of standalone articles prompted by specif
 | Grammar | [Comparisons, changes and degree](articles/comparisons-change-and-degree.md) | What does a pair or set comparison establish, and how do a change, a high degree and excess differ? |
 | Grammar | [Giving, receiving and viewpoint](articles/giving-receiving-and-viewpoint.md) | Who gives to whom, and how do あげる, くれる and もらう frame the same event? |
 | Grammar | [Explanations, quotations and sentence endings](articles/explanations-quotations-and-endings.md) | How do explanatory context, reported words, listener alignment and conjecture differ without relying on imagined intonation? |
+| Grammar | [Wanting to act, wanting a thing and wanting an outcome](articles/desire-actions-and-outcomes.md) | Whose wish is expressed, who would act, and how do たい, がほしい and てほしい differ? |
 | Grammar | [Koto, wake, and Japanese noun-based grammar](articles/koto-wake-and-formal-nouns.md) | How do こと and わけ differ, which common formal nouns and noun-based expressions are useful to know, and where do の/ん and ほど fit? |
 | Grammar | [Japanese verb extensions: direction and aspect](articles/verb-extensions-direction-and-aspect.md) | How do ～ていく, ～てくる, ～ておく, ～込む, and related constructions express direction, continuation, and completion? |
 | Grammar | [Japanese conditionals: たら, ば, なら, と, and 場合](articles/japanese-conditionals.md) | How do conditions, premises, event order, discoveries, and procedural cases differ, and when can several patterns fit? |
@@ -65,7 +66,9 @@ without treating family membership as a fixed partition.
 The [explanations/endings installment](articles/explanations-quotations-and-endings.md) adds 52 exercises;
 its [ledger](docs/grammar-n5-endings-sources.json) separates requested formation and bounded interpretation
 from recognition-only notes and optional advanced reading.
-The higher-level desire comparison is a separate follow-up.
+The [desire follow-up](articles/desire-actions-and-outcomes.md) adds 34 exercises;
+its [ledger](docs/grammar-desire-sources.json) separates 30 N4 tasks from four N5-only role interpretations,
+with sourced observation/benefactive bridges kept optional.
 
 ## Confusable vocabulary
 
@@ -119,8 +122,8 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   54 on pointing and asking questions, 32 on noun descriptions and activities,
   38 on wants, plans, invitations and offers, 34 on reasons, contrasts and prefaces,
   42 on comparisons, changes and degree, 36 on giving, receiving and viewpoint,
-  and 52 on explanations, quotations and endings (1134 in total).
-  All 1134 exercises have grammar-only study labels: **583 N5, 210 N4, 235 N3, 102 N2 and four N1**.
+  52 on explanations, quotations and endings, and 34 on desire, actors and outcomes (1168 in total).
+  All 1168 exercises have grammar-only study labels: **587 N5, 240 N4, 235 N3, 102 N2 and four N1**.
   These are editorial estimates using Bunpro as the primary reference, with documented JLPT Sensei comparisons,
   not an official syllabus. Vocabulary and kanji difficulty do not determine them; natural examples remain unchanged.
   See the [policy and per-article distribution](docs/jlpt-levels.md#grammar-baseline) and
@@ -232,9 +235,9 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   are identical. The Nのこと／Nであること contrast tests explicit nominalization, not disjoint possible conversation topics.
   All 60 conditional, 26 のに, 36 listing, 36 topic, 64 basic-particle, 50 restriction/inclusion and 48 compound-relation
   prompts have reviewed vocabulary coverage; pure grammar prompts deliberately have no lexical hints.
-  Total author-reviewed coverage is **737/1134** after the 125 N5 foundations, 54 pointing/questions,
+  Total author-reviewed coverage is **771/1168** after the 125 N5 foundations, 54 pointing/questions,
   32 noun-description, 38 wants/plans, 34 reasons/contrasts, 42 comparisons/change,
-  36 giving/receiving and 52 explanations/endings prompts,
+  36 giving/receiving, 52 explanations/endings and 34 desire-comparison prompts,
   with the original 397 still pending. The のに source record keeps author and independent review snapshots separate;
   the unsettled causal-past expectation card was retired in favor of a current timetable-based preparation example.
   The topic article and exercise set have independent `gpt-6-astra` and `claude-opus-5.5` reviews, followed by

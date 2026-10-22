@@ -237,8 +237,9 @@ the [wants/plans ledger](grammar-n5-wants-sources.json) adds 38 in one set;
 the [reasons/contrasts ledger](grammar-n5-reasons-sources.json) adds 34 in one set;
 the [comparisons/change ledger](grammar-n5-comparisons-sources.json) adds 42 in one set;
 the [giving/receiving ledger](grammar-n5-giving-sources.json) adds 36 in one set;
-the [explanations/endings ledger](grammar-n5-endings-sources.json) adds 52 in one set.
-Current practice is 1134 exercises: 583 N5, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+the [explanations/endings ledger](grammar-n5-endings-sources.json) adds 52 in one set;
+the [desire-comparison ledger](grammar-desire-sources.json) adds 34 in one set.
+Current practice is 1168 exercises: 587 N5 and 240 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -347,6 +348,11 @@ vocabulary coverage of **737/1134**. Eight groups have 20 facets, seven soft rec
 38 formation and 14 bounded interpretation tasks. Twelve additional correct options preserve contracted/uncontracted
 explanatory forms. The 36 context-key strings account for paired styles, case frames and conversational purposes,
 not 52 independent conversations. なあ and お／ご remain recognition notes, not new scored targets.
+The desire follow-up adds 34 annotated prompts, reaching **1168 exercises in 54 files** and
+vocabulary coverage of **771/1168**. Six groups have 17 facets, five soft recommendations and no hard prerequisites:
+16 formation, 12 interpretation and six contextual-selection tasks. Thirty tasks require N4 grammar;
+four interpret only N5 たい inside supplied quotations/questions. Sixteen context-key strings include paired roles/forms,
+not 34 independent conversations. Observation and てもらいたい remain recognition bridges.
 All 397 original pending records remain pending,
 the baseline revision stays unchanged, and the inventory remains at `stage: "pilot"`. The first 30 subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue

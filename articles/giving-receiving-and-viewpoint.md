@@ -215,6 +215,10 @@ also distinguishes purpose from cause. These are optional later comparisons, not
 construction and context checks. They are not assessed here, nor are a full honorific system or
 the interpretation of every English phrase containing "give."
 
+The [desire comparison](desire-actions-and-outcomes.md#wanting-to-receive-someones-action) briefly contrasts
+wanting an action with wanting to receive it through てもらいたい. This is optional later reading,
+not a new requirement of the basic-transfer exercises.
+
 ## Sources and scope
 
 - Bunpro's actual basic-transfer lessons: [あげる](https://bunpro.jp/grammar_points/あげる),

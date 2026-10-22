@@ -35,6 +35,48 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Desire comparison: independent review and reconciliation (2026-10-22 UTC)
+
+**Snapshot and scope:** `0a7e9eb414ca018352888fed31774d6aa1335039` plus installment 9 under
+[issue #14](https://github.com/stop-cran/learning-japanese/issues/14): the complete 238-line original article,
+all 34 complete exercises and lexical records, the source ledger, and the exact reciprocal-link changes with
+surrounding context in the wants and giving/receiving articles. One fresh independent reviewer covered all
+three facets; its actual runtime model ID was unavailable. Only reusable lessons, not historical reports or
+author research/generators, accompanied the initial assignment. The [source ledger](docs/grammar-desire-sources.json)
+preserves the unmodified initial report, reconciliation, severities and both snapshots.
+
+**Initial findings and resolution:** the article, lexical annotations and reciprocal edits were CLEAN.
+The reviewer found a **minor** accepted-answer omission: six fitting 手つだって... realizations were missing
+across three help tasks (IND-DESIRE-001). It also found **moderate** question-side leakage: two selection
+instructions prescribed the missing ほしい and five role questions named the requested participant in English
+(IND-DESIRE-002). Both findings were confirmed, not accepted merely by reviewer authority.
+
+The repair adds the documented same-sense spellings without new semantic buttons, presents the two noun-choice
+candidates symmetrically, and uses explicit Japanese 私/あなた references with common role-neutral English
+instructions in all eight paired role tasks. Necessary disambiguation was not simply removed. Thirteen objects
+and their records changed; the other 21 remain identical. IDs, targets, levels and groups are unchanged.
+The same reviewer independently reconciled **both findings as resolved**, retaining their original severities.
+It reread all 13 complete revised objects/records, checked the actual diff and all 34 bindings, and proved the
+other 21 identical. All facets are now **CLEAN** within that composite scope, with no regression, optional
+suggestion or consequential unresolved claim. This is not a fresh reread of every unchanged final-file line.
+
+**Preservation and integration:** all 1134 previous complete exercise objects and inventory records remain
+unchanged. Only the two declared reciprocal article links update existing runtime assets. The 34 new tasks
+comprise 16 formation, 12 interpretation and six contextual-selection items: **30 N4 and four N5-only**
+quotation/question role tasks. They have 98 accepted renderings, 68 base options, 105 lexical spans and
+197 exclusions. Six groups have 17 facets, five soft recommendations and no hard prerequisites.
+Current practice has **1168 exercises in 54 sets**, with **771/1168** reviewed vocabulary records and the
+original 397 pending at `pilot`. Content/vocabulary, preservation, deterministic manifest
+`abd5f846019eacf4` and the freshly executed real Android importer pass. Integration is not linguistic proof.
+
+**Reflection:** these findings reinforce the existing spelling-recognition and actual-operation lessons below.
+Checking only model-kanji plus all-kana answers misses mixed-script dictionary spellings. Correct Japanese
+and correct keys do not ensure a useful assessment if English instructions supply the requested role.
+The repair preserves support while requiring interpretation. Sixteen context-key strings include paired
+forms/roles, not 34 independent conversations or unrestricted mastery. Observation and benefactive forms stay
+optional; the 38-set/635-object construction screen is not a fresh audit of those older objects.
+No native certification, exhaustive official syllabus, app/SRS change or phone UI check is claimed.
+
 ## N5 explanations, quotations and endings: independent review (2026-10-22 UTC)
 
 **Snapshot and scope:** `1422bdf8e755dee9fe85ee0276a7db33b7258bf7` plus installment 8 under
@@ -759,6 +801,9 @@ The [basic-particle exercise review](docs/grammar-basic-particles-sources.json) 
   This also applies to adjectives inside meaning-focused tasks: the comparison review found omitted
   さぶい realizations of 寒い in the current-state and transition answer lists
   ([record](docs/grammar-n5-comparisons-sources.json), IND-COMP-001; regroup).
+  Check mixed-script spellings too, not just the model kanji and an all-kana rendering:
+  the desire review found six missing 手つだって... realizations across three help tasks
+  ([record](docs/grammar-desire-sources.json), IND-DESIRE-001; regroup).
 
 These are checks for observed failure modes, not a requirement to invent a finding in every review. The batch record
 preserves original severities, adjudication and reconciliation separately; agreement is not a substitute for evidence.
@@ -790,6 +835,10 @@ The [compound-relation review](docs/grammar-compound-relations-sources.json) add
   The [N5 foundations review](docs/grammar-n5-foundations-sources.json) extends this to prerequisite explanations:
   defining a ます-stem from an already-inflected example does not teach the productive godan u-row to i-row
   operation needed to form it from a dictionary verb (N5FI-F01; regroup).
+  The [desire review](docs/grammar-desire-sources.json) found two selection instructions prescribing the exact
+  missing ほしい and five role questions naming the requested participant in English (IND-DESIRE-002; regroup).
+  Present candidates symmetrically and leave the tested role to be interpreted. If omission genuinely needs
+  disambiguation, make the reference explicit in Japanese or ask a different role; do not simply delete necessary context.
 
 The [N5 foundations review](docs/grammar-n5-foundations-sources.json) adds one response-support check:
 

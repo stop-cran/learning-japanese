@@ -228,7 +228,8 @@ Simply expressing a desire is not automatically a tactful request or a guarantee
 The [てほしい lesson](https://bunpro.jp/grammar_points/てほしい) and
 [がほしい lesson](https://bunpro.jp/grammar_points/がほしい) are **N4 onward reading** in the chosen primary curriculum.
 The latter concerns wanting a thing, rather than using たい with an action.
-The separate higher-level comparison will explore these roles and limits; no N5 exercise here requires those forms,
+The [higher-level desire comparison](desire-actions-and-outcomes.md) explores these roles, negation and desired outcomes;
+no N5 exercise here requires those forms,
 たがる or the higher-level reporting patterns to choose an answer.
 
 ## Sources

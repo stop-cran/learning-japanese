@@ -147,6 +147,12 @@ Noun-list, companion and quotation と use their own supporting entries in the c
 Short copula and conjectural-form boundaries are visible before answering, while fitting explanatory forms and
 common conjectural contractions are retained. Defined response labels do not import their vocabulary grades.
 Secondary なあ／お・ご notes and optional nominalizer/わけ/conditional links are not assessed choices.
+The [desire-comparison ledger](grammar-desire-sources.json) adds 30 N4 tasks and four N5 tasks.
+Substantive たい／てほしい／がほしい contrasts are N4 even when たい is correct, but the four
+たい-only role interpretations use ordinary supplied N5 quotations/questions and do not require the harder forms.
+Bunpro's N4 がほしい placement governs despite JLPT Sensei's N5 placement; two Japanese teacher pages call their
+てほしい treatment N3. These disagreements are recorded rather than presented as an official consensus.
+Defined response labels and optional たがる／ほしがる／てもらいたい bridges do not raise unrelated tasks.
 
 **Classify grammar, not vocabulary or kanji.** Use the construction and substantive contrast needed for the complete
 visible task. Keep natural examples; unfamiliar words should be supported by readings, glosses and translations rather
@@ -180,9 +186,9 @@ metadata pass; the source record identifies it as author classification, not ind
 ### Current classified practice
 
 The original 2026-10-22 pass classified 721 exercises in 40 sets. With 125 N5 foundations, 54 pointing/questions,
-32 noun-description, 38 wants/plans, 34 reasons/contrasts, 42 comparisons/change, 36 giving/receiving
-and 52 explanations/endings additions, current practice has **1134 exercises in 53 sets**:
-**583 N5, 210 N4, 235 N3, 102 N2 and four N1**.
+32 noun-description, 38 wants/plans, 34 reasons/contrasts, 42 comparisons/change, 36 giving/receiving,
+52 explanations/endings and 34 desire-comparison additions, current practice has **1168 exercises in 54 sets**:
+**587 N5, 240 N4, 235 N3, 102 N2 and four N1**.
 The original 19 pilot labels are unchanged. No exercise remains unclassified in this snapshot, but omission remains the
 correct representation for future unresolved cases. These counts are coverage of our existing exercises, not coverage
 of every grammar item in any level's curriculum.
@@ -200,6 +206,7 @@ of every grammar item in any level's curriculum.
 | [Comparisons, changes and degree](../articles/comparisons-change-and-degree.md) | 42 | 0 | 0 | 0 | 0 |
 | [Giving, receiving and viewpoint](../articles/giving-receiving-and-viewpoint.md) | 36 | 0 | 0 | 0 | 0 |
 | [Explanations, quotations and sentence endings](../articles/explanations-quotations-and-endings.md) | 52 | 0 | 0 | 0 | 0 |
+| [Desire, actors and outcomes](../articles/desire-actions-and-outcomes.md) | 4 | 30 | 0 | 0 | 0 |
 | [Nouns and basic particles](../articles/japanese-nouns-and-basic-particles.md) | 73 | 3 | 0 | 0 | 0 |
 | [Topic, contrast and inclusion](../articles/wa-ga-mo-topic-and-inclusion.md) | 36 | 0 | 0 | 0 | 0 |
 | [Listing and examples](../articles/japanese-listing-and-examples.md) | 23 | 17 | 0 | 0 | 0 |
