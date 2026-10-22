@@ -1061,10 +1061,11 @@ Batch 11 is **closed**: 165 additions review-closed, 167 selected N2 cards prese
 
 Cards: 毛 氷 永 汗 汚 池 沈 河 沸 油 況 泉 泊 波 泥.
 
-Status: **initial reviews reconciled; changed-passage confirmations pending**. Scope: all 15 new kanji and three supporting articles,
+Status: **review-closed after reconciled corrections and confirmations**. Scope: all 15 new kanji and three supporting articles,
 汚す, 沈める and 泊める; all three review facets and 45 curated distractor assignments.
-Related edits: component links in 24 existing word articles, preserving their lexical metadata and teaching text,
+Related edits: component links in 24 existing word articles, preserving their lexical metadata,
 and a third curated wrong answer on legacy 川 to prevent the new 河 answer from filling its fallback slot.
+The final linked 汗 article also has a narrowly confirmed two-line consistency repair; the other 23 remain link-only.
 
 Evidence: [batch-12.json](n2-batch-sources/batch-12.json), with 48 exact reading rows:
 44 JMdict-backed lexical examples and four explicitly qualified source-only readings. The packet retains
@@ -1101,9 +1102,9 @@ complete spelling/reading lists, spelling flags and reading restrictions, not ev
   Related meanings do not create transitive exclusion groups.
 - All 18 new teaching pages were inspected by the author. Structural validation reports 0 errors;
   the accumulated source/stroke audit covers 180 additions and 550 exact reading rows, with 185 selected
-  characters still unauthored. All 24 existing word articles match the preceding versions after removing
-  only the new component links and normalizing CRLF. 川 differs only by its third distractor.
-  These author checks do not substitute for the independent reviews and pending correction confirmations.
+  characters still unauthored. At the draft checkpoint all 24 existing word articles matched the preceding versions after removing
+  only the new component links and normalizing CRLF; the later 汗 consistency repair is recorded below.
+  川 differs only by its third distractor. These author checks do not substitute for the independent reviews.
 
 ### Independent initial reviews and reconciliation
 
@@ -1140,7 +1141,67 @@ The three additional pairs are 汗する あせする and 静める/鎮める �
 families bring the retained totals to 55 selected pairs and 18 complete spelling/reading families.
 All initial 52 records, 48 reading rows, four source-only qualifications and 45 kanji choices remain intact.
 
-The correction touches seven teaching pages: 汗, 沈, 況, 泉 and the three supporting verbs.
-Original reports are retained unchanged. Both original reviewers will receive the actual teaching/evidence diff
-and their own initial report for changed-passage confirmation, one short-lived process at a time.
-The first eleven batches remain review-closed; batch 12 is not yet closed.
+### Changed-passage confirmations and closure
+
+The seven-page correction was committed as `stop-cran` at
+`55afc4add77d21ec8c8aae013bac072d39e9e881`. Its exact 14-file scope includes the two unchanged
+initial reports. The author mechanically checked all initial 52 source records and character metadata
+for exact preservation, the three additional pairs and 18 complete families, and a repeated byte-identical
+manifest `471a67d6dbdf63ec`. No stroke or legacy-link changes were introduced by the rerender.
+
+Both original reviewers resumed sequentially on that clean checkpoint, reading the complete actual
+481-line, 13-hunk teaching/evidence diff and all seven revised pages. Both gave CLEAN verdicts on all
+three facets and reported no remaining in-scope defect:
+
+- GPT: [seven-page confirmation](n2-reviews/batch-12-gpt-followup.md). The three quiz findings are
+  resolved. It explicitly calibrated its original CLEAN 汗 verdict after inspecting the attested 汗する.
+- Claude: [seven-page confirmation](n2-reviews/batch-12-claude-followup.md). Its three findings and
+  three adopted wording suggestions are resolved. It recalibrated the 汚す/汚れる exclusion as warranted,
+  rejected its legacy-precedent argument, accepted the lowering pairs and the explicit hosting label,
+  and withdrew the unsupported frequency implication in its original 汗する remedy.
+
+Both independently noticed the linked noun 汗 article's remaining する warning in Optional. Although
+outside the seven revised pages, leaving it would pull against the newly corrected kanji card.
+The author adopted a tightly coupled two-line repair: recognize the same attested verb without a
+frequency ranking, and cite existing entry 2463120. Front matter, examples, titles and other teaching
+text are unchanged. The repair and both seven-page reports were committed at
+`db1138dcae050e32c4eb859d64957c3352932af0`.
+
+Both original reviewers then inspected the actual one-hunk consistency diff, the complete noun article,
+linked kanji Notes and complete existing entry 2463120, again sequentially and read-only:
+[GPT final](n2-reviews/batch-12-gpt-final.md) and
+[Claude final](n2-reviews/batch-12-claude-final.md). Both confirmed all three changed-scope facets CLEAN.
+Claude correctly calibrated its suggested everyday wording as an unsupported frequency comparison.
+Its observation that only the sweating example uses 汗をかく, whereas the wiping example uses 汗を拭く,
+is a disclosed nonconsequential wording limit, not an unresolved lexical or grammatical claim.
+
+Other follow-up suggestions remain optional: citing the calming homophone on 沈 is harmless supporting
+evidence for the linked 沈める discussion, not a claim that 静める contains 沈. The current qualified
+quieting contrast does not need a stronger universal spelling/meaning prohibition. No new example,
+reading, frequency ranking or expanded cleanup was required to close this batch.
+
+The final content has 0 structural errors and a repeated byte-identical manifest
+`ad69e220cc204eb9`. The accumulated audit covers 180 additions and 550 exact source-reading rows;
+the repository contains 800 kanji and 3,241 word articles, including 182 selected N2 characters.
+All twelve batches are review-closed, with 185 selected characters still unauthored.
+
+### Dual-model usefulness and limits
+
+After deduplicating every report section, 汚す/汚れる was a shared initial observation, not a GPT-only
+discovery: Claude placed it in Optional and initially undervalued it. GPT uniquely established the
+three lowering pairs and the put-up hosting ambiguity in these initial reports. Claude uniquely
+established 汗する, the masu-stem label and the unnamed calming homophone, and supplied useful local
+wording corrections. GPT's initial CLEAN verdicts missed those points; Claude's initial assessment
+missed the lowering and hosting issues. Both later surfaced the linked 汗 consistency warning.
+
+The two families therefore supplied complementary verified observations in this sample, and each
+also required evidence-based calibration. This is not a model ranking, a measure of review recall,
+or proof that model bias has been eliminated. Every reviewer process exited before the next started;
+no retained or parallel reviewer was used.
+
+Reviewers had no Git or execution tool. Commit identities, exact scopes, original-record preservation,
+validation and manifest reproducibility are author checks, not independently executed reviewer tests.
+Claude's initial review omitted the separate upstream source-snapshot document; its follow-up source
+search did not verify hashes. The batch packet is selected evidence, not the entire dictionary.
+All unchanged reading/distractor qualifications retain their initial scoped reviews. Neither family
+performed exhaustive stroke drawing-path or runtime quiz review, and no verdict certifies native fluency.
