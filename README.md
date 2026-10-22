@@ -15,6 +15,7 @@ This repository starts as a collection of standalone articles prompted by specif
 | Grammar | [Japanese listing and examples: と, や, とか, など, たり, and し](articles/japanese-listing-and-examples.md) | How do named lists, representative examples, added reasons, and alternatives differ, and when is one stated item enough? |
 | Grammar | [Japanese nouns and basic particles: building a sentence](articles/japanese-nouns-and-basic-particles.md) | How do particles mark whole noun phrases, how does the predicate determine their roles, and how do に/で, に/へ, と/で, and まで/までに differ? |
 | Grammar | [は, が, and も: topic, contrast, and inclusion](articles/wa-ga-mo-topic-and-inclusion.md) | How do topic and grammatical role differ, what does も add, and when are several framings or an omitted participant natural? |
+| Grammar | [Only, even, and unexpected inclusion](articles/only-and-unexpected-inclusion.md) | How do だけ and しか differ under negation, what makes an included example unexpected, and when do さえ, でも, まで, or も overlap? |
 | Vocabulary | [Strange, suspicious, and rare: ayashii and related words](articles/ayashii-and-related-words.md) | How do 怪しい, 妖しい, 疑わしい, いかがわしい, 変な, and 珍しい differ? |
 | Vocabulary | [Kaeru: change, replace, exchange, and return](articles/kaeru-change-replace-and-return.md) | How do 変える, 替える, 換える, 代える, 帰る, 返る, 還る, and 孵る differ, and why is 交える not read かえる? |
 | Vocabulary | [Japanese occupation and role endings](articles/occupation-and-role-endings.md) | What do 者, 家, 師, 士, 手, 員, and 屋 contribute, and how do they relate to prestige and new word formation? |
@@ -73,7 +74,7 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   12 on norms, predictions and goal-relative practical necessity,
   60 on たら／ば／なら／と／場合 conditionals in two batches, 26 on のに and related contrasts,
   36 on listing, examples and addition, 36 on は／が／も topic, contrast and inclusion,
-  and 64 on basic nouns and particles (623 in total).
+  64 on basic nouns and particles, and 50 on restriction and unexpected inclusion (673 in total).
   Time practice includes うち, あいだ, とき, ころ, たび and shared とき／おり／さい occasion answers;
   shared alternatives are not independently contrasted targets.
   Purpose/cause practice adds ため, おかげ, せい, かわり and ついで, including compensating trade-offs.
@@ -163,8 +164,16 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   choose-any buttons. A third question accepts both 日本語で話します and 日本語を話します, explaining medium versus
   language-as-object framing without transferring を into a letter-writing sentence that already contains 手紙を.
   These shared-answer tasks do not claim to distinguish their accepted realizations independently.
-  All 60 conditional, 26 のに, 36 listing, 36 topic and 64 basic-particle prompts include vocabulary hints;
-  total author-reviewed coverage is **226/623**,
+  The restriction/inclusion set has eight groups: restriction formation and meaning; negative scope and not only;
+  retained case roles; さえ/でも and shared inclusion; negative addition and minimum counts; emphatic versus endpoint まで;
+  ordinary/scalar も and でも suggestions; and focus scope with a conditional-さえ recognition boundary.
+  Its 16 formation, 30 interpretation and four contextual questions make their answer units explicit.
+  Two bounded transfer questions apply restriction to refrigerator contents and cash in a wallet.
+  The conditional questions distinguish a sufficient condition from an unestablished exclusive-route claim.
+  The two shared questions accept fitting inclusion alternatives, with eight substantive extra buttons in total;
+  this is not independent discrimination of every accepted framing.
+  All 60 conditional, 26 のに, 36 listing, 36 topic, 64 basic-particle and 50 restriction/inclusion prompts include vocabulary hints;
+  total author-reviewed coverage is **276/673**,
   with the original 397 still pending. The のに source record keeps author and independent review snapshots separate;
   the unsettled causal-past expectation card was retired in favor of a current timetable-based preparation example.
   The topic article and exercise set have independent `gpt-6-astra` and `claude-opus-5.5` reviews, followed by
@@ -174,6 +183,11 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   reconciliation, now CLEAN in all three facets within that scope. Initial findings and corrected verdicts remain
   separate; see the snapshots, findings and coverage matrix in the
   [basic-particle source record](docs/grammar-basic-particles-sources.json).
+  The restriction/inclusion article and initial 48 exercises have a full independent review.
+  Informed fresh-reviewer reconciliation resolved one minor feedback defect and the adopted optional refinements;
+  all three facets are CLEAN, combining review of the 18 changed and two new objects with unchanged prior coverage.
+  Initial findings, reviewer-continuity limits, source evidence, coverage and exact snapshots are in the
+  [restriction/inclusion record](docs/grammar-restriction-sources.json).
   See the [content format](docs/content-format.md#grammar-exercises), [foundations sources](docs/grammar-foundations-sources.json),
   [actions sources](docs/grammar-actions-sources.json), [intent sources](docs/grammar-intent-sources.json),
   [action-stage sources](docs/grammar-stages-sources.json), [state sources](docs/grammar-states-sources.json),

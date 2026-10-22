@@ -218,8 +218,8 @@ in contributor source records, and leave unestablished cases unclassified.
 
 The [reviewed introduction pilot](grammar-introductions-pilot.json) supplies the initial 19 labels: six before/after and nine
 action-stage exercises at N4, and four expectation/obligation exercises at N3. The other four koto/wake exercises in the mixed pilot
-file remain unclassified, as do the other 600 exercises, including all 60 conditionals, 26 のに, 36 listing,
-36 topic-particle and 64 basic-particle questions. The same three pilot groups
+file remain unclassified, as do the other 650 exercises, including all 60 conditionals, 26 のに, 36 listing,
+36 topic-particle, 64 basic-particle and 50 restriction/inclusion questions. The same three pilot groups
 are annotated as optional `introductionGroups` in their declaring files, with one recommendation from temporal sequence
 to action stages and no genuine prerequisites.
 
@@ -269,8 +269,10 @@ The two conditionals additions extended this inventory without reinitializing it
 35 files and **90/487** coverage. The listing follow-up added another 36, reaching
 523 exercises in 36 files and vocabulary coverage of **126/523**. The topic-particle follow-up adds 36,
 bringing that snapshot to 559 exercises in 37 files and vocabulary coverage to 162/559.
-The basic-noun/particle set adds 64, bringing the current corpus to **623 exercises in 38 files**
-and vocabulary coverage to **226/623**.
+The basic-noun/particle set adds 64, bringing that snapshot to 623 exercises in 38 files
+and vocabulary coverage to 226/623. The restriction/inclusion follow-up initially added 48, reaching 671 exercises
+and vocabulary coverage of 274/671. Two review-driven transfer questions bring the current corpus
+to **673 exercises in 39 files** and vocabulary coverage to **276/673**.
 All 397 original pending records remain pending,
 the baseline revision stays unchanged, and the inventory remains at `stage: "pilot"`. The first 30 subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
@@ -291,6 +293,18 @@ the fixed letter-writing task does not acquire an invalid second を. Typed spel
 extra correct buttons. Negative-ending formation tasks explicitly distinguish standard versus rough and ordinary versus
 heightened-polite forms. Temporal-interpretation targets and pronunciation targets are
 protected from vocabulary hints. Canonical vocabulary checks and the article-to-exercise matrix are recorded separately.
+
+The [restriction/inclusion record](grammar-restriction-sources.json) separates the original author pass, full initial
+independent review and informed fresh-reviewer reconciliation. Eight groups now contain 50 exercises: 16 formation,
+30 interpretation and four contextual tasks, with six soft recommendations and no hard prerequisites.
+The restriction group has eight members and the others have six; the same 24 facet assignments remain.
+Named formation tasks preserve their visible restrictions; two shared inclusion tasks accept context-supported
+alternatives without pretending to grade every framing separately. Two bounded transfers use existence and cash
+contexts. The conditional interpretation items now contrast sufficiency with an exclusive-route inference;
+their defined metalinguistic labels do not introduce a new construction identity or claim full conditional formation.
+Polarity/ability predicates and minimum-count units are protected when their interpretation is the target.
+All 623 preceding inventory records remain unchanged. The original 48 prompts, vocabulary payloads and accepted
+answers are preserved; changed contexts are rebound and two new reviewed records are added.
 
 `python tools/grammar_vocabulary.py check` is the maintained repository's publication gate, separate from the app's optional import contract.
 Records bind file/ID, exact prompt, full exercise context (including answers), and annotation payload. Reviewed spans plus explicitly

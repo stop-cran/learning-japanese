@@ -35,6 +35,83 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Restriction and unexpected inclusion: independent review and reconciliation (2026-10-22)
+
+**Snapshots:** `de0df855080b0bbc0bd9c0565184f21e4c1c9366` plus the local article and exercises.
+Initial exercise SHA-256: `173a2a9c64876a37034ceb7b8ffef468b873ef186635e2396ba50c8a98a25d21`;
+reconciled: `09c15bbf7faabbf0007f86bcc0c4e7c2b769c19195a2673383b63fbd726a10ce`.
+The article remains byte-identical. The [source record](docs/grammar-restriction-sources.json) preserves the
+historical author pass, full original reports, adjudication, exact diff/snapshot hashes and updated coverage.
+
+**Initial independent scope:** one fresh reviewer read the whole article and all 48 complete exercises,
+126 accepted renderings, 122 base options, eight additional options, 93 vocabulary spans, 220 exclusions
+and all 31 canonical vocabulary identities. Author judgments and earlier reviews were withheld.
+**Initial verdicts:** article **CLEAN** in all three facets; exercises correctness/comprehensibility **NEEDS FIX**,
+scoped coverage **CLEAN**. Neither reviewer's actual model ID was exposed.
+
+| Observation | Disposition |
+| --- | --- |
+| RII-F01, Minor: a rationale turned ability to come into actual participation | Resolved: the teacher-only alternative now contradicts the friends' ability to come, not an invented attendance event. No answer-key change. |
+| RII-O01, optional: limited transfer beyond named/cued patterns | Adopted and resolved: two bounded refrigerator/wallet contexts require choosing the particle or polarity from the whole construction. |
+| RII-O02, optional: feedback retained a paired scenario's details | Adopted and resolved: affected explanations refer to their own reading/drinking, ability/error, absence/diet, endpoint, quantity or invitation context. |
+| RII-O03, optional: sufficiency versus necessity was explained but not directly offered as a contrast | Adopted and resolved: both conditional tasks offer an exclusive-route distractor and no longer pre-answer sufficiency in the English scene. |
+
+**Reconciliation:** a fresh informed reconciler reviewed all 18 changed and two new complete objects, their
+35 vocabulary spans and 82 exclusions, and the group metadata against the original report and exact diff.
+The original synchronous reviewer could not receive a follow-up; this is not same-reviewer reconciliation.
+All three exercise facets are now **CLEAN within this bounded composite scope**, carrying forward the
+original review of 30 unchanged objects. The article's original CLEAN verdicts are carried forward, not
+presented as a repeated full audit. No new actionable regression or consequential unresolved claim was found.
+
+**Preservation and integration:** the set now has 50 exercises, 129 accepted renderings, 128 base options,
+eight additional options, 97 lexical spans and 33 canonical identities. All original prompts, vocabulary payloads,
+targets, answers and accepted renderings are unchanged; only affected context bindings are refreshed.
+All 623 preceding exercise/inventory records and unrelated caches remain intact. The corpus is 673 exercises in
+39 files, vocabulary coverage 276/673, still `pilot` with the same 397 pending. Content/vocabulary checks,
+150 focused tests and a freshly executed real Android importer pass; manifest `2fe260ff984d31a4` is deterministic.
+These parent integration checks are separate from the reconciler's packet-only checks and disclosed limits.
+
+**Usefulness and limits:** the concrete gain was a small consistency defect missed when a scene changed to ability,
+not a newly discovered particle rule. The optional improvements make feedback local and align options with the
+distinctions explained. Four contextual tasks remain guided practice, not evidence of measured transfer or mastery.
+An exclusive-route inference is not established by the conditional sentence; this does not prove that its condition
+can never also be necessary in a particular situation. No native-speaker certification, app/schema change,
+APK, phone check, commit, push or automatic issue closure is claimed.
+
+## Restriction and unexpected inclusion: earlier article and exercise author pass (2026-10-22)
+
+**Snapshot:** `de0df855080b0bbc0bd9c0565184f21e4c1c9366` plus the new
+`articles/only-and-unexpected-inclusion.md` and `grammar/restriction-and-inclusion.json`.
+The [source record](docs/grammar-restriction-sources.json) pins their hashes, vocabulary binding, manifest and coverage matrix.
+This is part 3 under issue #7; parts 1 and 2 were published separately.
+
+**Scope:** direct author review by `gpt-6-astra` of the complete article and all 48 exercise objects:
+whole completed sentences, 126 accepted renderings, 122 base options, eight additional options,
+all 93 lexical spans and their exclusions, and all 31 linked canonical identities.
+**Author verdicts, separately for article and exercises:** correctness **CLEAN**; scoped coverage **CLEAN**;
+comprehensibility **CLEAN**. These are bounded author judgments, not independent confirmation.
+
+The eight groups cover restriction, polarity, retained case roles, unexpected inclusion, negative addition/minimum
+counts, emphatic versus endpoint まで, context-dependent も/でも, and focus scope with a sufficient-condition boundary.
+There are 16 formation, 30 interpretation and two contextual tasks, with 24 group/facet assignments, six soft
+recommendations and no hard prerequisites or inferred JLPT labels.
+
+**Authoring decisions:** compare subject-focused だけ negatives with しか negatives rather than assigning every
+object-negative sentence one scope. Keep fitting case-particle orders and recognized 丈/迄 spellings.
+Use explicit ability/generic-error contexts for broad shared inclusion, not an assumption that every past-arrival
+でも is scalar. Clarify that ability is not an actual arrival, ordinary も need not be surprising, and conditional
+さえ supplies sufficiency rather than logical uniqueness. Use books/newspapers rather than assume books/manga are
+disjoint categories; invitation glosses do not assert factual nondrinking/nonreading.
+
+**Integration:** all 623 prior exercises and complete inventory records are preserved. Vocabulary coverage is
+274/671, still `pilot`, with the same 397 pending. Content/vocabulary checks, 150 focused tests and a freshly executed
+real Android importer pass; only the article and exercise set are new runtime payloads.
+
+**Limits / remaining work:** no independent review or reconciliation has been performed for this draft.
+Matched contexts and shared alternatives are not separately mastered distinctions. Broader register, dialect,
+paraphrase and conditional coverage remain outside scope. No app/schema change, APK, physical-phone check, new
+commit or push is claimed; unrelated Python caches remain untouched and issue #7 is not automatically closed.
+
 ## Basic nouns and particles: independent exercise review and reconciliation (2026-10-22)
 
 **Snapshots:** baseline `f6c45c5f9c4f35a8d6d94a6863862bd7edfcf178` plus local basic-particle content.
@@ -240,6 +317,16 @@ The [basic-particle exercise review](docs/grammar-basic-particles-sources.json) 
 
 These are checks for observed failure modes, not a requirement to invent a finding in every review. The batch record
 preserves original severities, adjudication and reconciliation separately; agreement is not a substitute for evidence.
+
+The [restriction/inclusion review](docs/grammar-restriction-sources.json) adds three concrete lessons:
+
+- **Propagate a scenario change through every feedback path.** Changing a factual arrival to ability requires checking
+  distractor rationales and shared explanations, not just the prompt and correct-answer explanation (RII-F01/O02).
+- **An explanation is not an assessed distinction.** Conditional feedback already separated sufficiency from necessity,
+  but the options only contrasted a condition with an occurred surprise. Offering the exclusive-route alternative
+  makes that inference part of the actual recognition task (RII-O03).
+- **Count transfer opportunities separately from templates.** Two new bounded existence/cash situations add useful
+  practice without claiming that 50 items measure 50 independent decisions or demonstrated mastery (RII-O01).
 
 ## のに article and initial exercises (2026-10-21)
 
