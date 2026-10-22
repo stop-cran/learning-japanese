@@ -40,7 +40,7 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   It also includes 分 as a documented N5 exception and five N1 article-subject additions:
   80 N5, 166 N4, 367 N3, 197 N2 and five N1. The ongoing [N2 expansion](docs/n2-review.md) has added 195 cards
   to the two existing N2 cards. The first twelve 15-card batches have independent GPT/Claude review and reconciled
-  reports, including changed-passage confirmations. Batch 13's 15 cards are drafted and awaiting that review.
+  reports, including changed-passage confirmations. Batch 13 has initial reports; its corrections await confirmation.
   Another 170 additions remain unauthored.
   The `starter` tag identifies the original 118-card cohort, not the later expansions.
 - `words/` – one article per written word form (3,244): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.

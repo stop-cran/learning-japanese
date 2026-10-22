@@ -1206,19 +1206,21 @@ search did not verify hashes. The batch packet is selected evidence, not the ent
 All unchanged reading/distractor qualifications retain their initial scoped reviews. Neither family
 performed exhaustive stroke drawing-path or runtime quiz review, and no verdict certifies native fluency.
 
-## Batch 13 - draft awaiting independent review
+## Batch 13 - corrections awaiting confirmation
 
 **Characters:** 浅浴涙液涼混清減温測湖湯湾湿準.
 
-Fifteen kanji cards and three supporting word articles (浴びせる, 液体 and 湿度) are drafted.
+Fifteen kanji cards and three supporting word articles (浴びせる, 液体 and 湿度) have initial reviews.
 The existing 浴びる lesson is retained under its kana headword あびる rather than duplicated.
 All 21 existing word edits are component links only: 浅い, 涙, 涼しい, 混乱, 混雑, 清潔,
 加減, 減らす, 減る, 体温, 気温, 温い, 温度, 温暖, 予測, 湖, 湯, 湾, 水準,
 準備 and あびる. The only existing kanji edit is 水's third curated distractor 木, preventing
 an uncontrolled English water/hot-water fallback after adding 湯. Its teaching text is unchanged.
 
-The [batch source packet](n2-batch-sources/batch-13.json) retains exact character metadata,
-58 reading rows, 59 selected spelling/reading pairs and 27 complete sensitive entry families.
+The frozen draft's source packet retained exact character metadata, 58 reading rows,
+59 selected spelling/reading pairs and 27 complete sensitive entry families.
+The corrected [batch source packet](n2-batch-sources/batch-13.json) additionally retains 流す
+and 温もり, for 61 selected pairs and 29 complete sensitive entry families; the reading count is unchanged.
 There are 47 lexical reading examples and eleven explicitly qualified source-only readings:
 涙 レイ; 涼 うす.い/ひや.す/まことに; 湾 いりえ;
 湿 シュウ/うるお.う/うるお.す; 準 のり/ひと.しい/みずもり.
@@ -1235,12 +1237,42 @@ supports the water and question-showering uses. Other generated search claims we
 All fifteen modern-shape mnemonics are labelled, retain `structure-unclassified`, and explain
 the indexing radical 水's 氵 form; 準 locates it at the upper left.
 Every new kanji has three curated wrong choices. New word articles declare no inferred vocabulary
-level. 浴びせる directly excludes 注ぐ, あびる, シャワー and 掛ける for pouring or English
+level. 浴びせる directly excludes 注ぐ, あびる, シャワー, 掛ける and 流す for pouring or English
 shower-label ambiguity; this is not a claim that their Japanese uses are unrestricted synonyms.
 液体 and 湿度 have distinct category/measurement labels rather than wetness or temperature.
 
 The content totals are 815 kanji and 3,244 word articles, with 197 selected N2 characters.
 The first twelve batches' 180 additions remain review-closed; the next fifteen are drafted,
 not yet independently approved. Another 170 selected characters remain unauthored.
-Independent GPT and Claude reports, reconciliation, validation and checkpoint details follow
-after this draft is frozen. No review or model-usefulness verdict is claimed for batch 13 yet.
+The exact 60-file draft was frozen as `b943db187ef28180325d18358d1251547249d0bf`, with author
+and committer `stop-cran`. Structural validation returned zero errors, the accumulated source audit
+covered 195 additions and 608 exact reading rows, and repeated manifest builds produced identical
+bytes, version `e6ccbada6256346d`. The 21 legacy word diffs were mechanically verified as
+component-link-only; 水 was verified as exactly the single distractor-line change.
+
+### Independent initial reviews and reconciliation
+
+Both short-lived processes received the same frozen snapshot, 18-page scope, three facets,
+linked-passage scope, rubric and evidence. They ran sequentially, remained blind to the other's
+report and author adjudication, made no file edits and exited before the next process started.
+
+| Reviewer | Actual model | Original session | Preserved report |
+| --- | --- | --- | --- |
+| GPT | `gpt-6.1-sol` | `21fb82d5-9c1f-464e-9869-3d889a463151` | [Initial](n2-reviews/batch-13-gpt-initial.md) |
+| Claude | `claude-opus-5.5` | `5a95e1a6-4f45-4adc-aee1-1661d01f9038` | [Initial](n2-reviews/batch-13-claude-initial.md) |
+
+| Observation | Adjudication and implemented change |
+| --- | --- |
+| GPT-01: missing direct 浴びせる/流す exclusion | **Resolved in correction, confirmation pending.** Pinned entry 1552120 sense 1 includes pour. The actual fetched [Seisenban Nihon Kokugo Daijiten 流す](https://kotobank.jp/word/%E6%B5%81%E3%81%99-587809), I.4, explicitly describes washing the body with poured water. Added the direct exclusion and a qualified comparison, not an unrestricted synonym claim. Separate pairs through 注ぐ were insufficient. |
+| Claude F1.1-F1.6: missing existing comparison links | **Resolved in correction, confirmation pending.** Linked 深い on 浅; 増 on 減; 計る, 則 and 側 on 測; 恋 and 変 on 湾; 込む on 混; 暖かい on 温. Missing 量る and 暖 cards remain unlinked. These are substantive introductions/comparisons covered by the repository linking rule. |
+| Claude O1: more mnemonic component links | **Optional, not adopted.** Substantive comparison links above are supplied; linking every shape mention is unnecessary. |
+| Claude O2: rule/ruler mnemonic bridge | **Optional, adopted.** 測 now uses a rule to follow and a separate marked scale; it does not imply that 則 means a measuring instrument. The mnemonic remains explicitly non-etymological. |
+| Claude O3: contextualize ぬく with 温もり | **Optional, adopted narrowly.** Pinned entry 1183330 attests 温もり ぬくもり, warmth, usually in kana. Added that separate word in a note while preserving the exact standalone 温 ぬく example's archaic/derogatory qualification. No unsupported frequency comparison was added. |
+| Claude O4-O5: lake-name example and additional common words | **Optional, not adopted.** The suffix has an exact source record; 湖's コ example 湖岸 and the useful linked words already meet the scope. No named-lake example or arbitrary common-word quota is required. |
+
+Changed-passage confirmation of the eight revised teaching pages is pending. Model-usefulness and
+final closure are recorded only after those reports return. The initial reports' Git/diff execution,
+stroke-path, native-fluency and runtime-quiz limits remain; Claude additionally omitted the source-pin
+file and did not re-fetch the bathing citation. The author verified the pinned sources separately.
+Correction validation returned zero errors; the accumulated source audit still covers 195 additions
+and 608 exact reading rows. Repeated manifest builds were byte-identical, version `a95d528e603122bf`.

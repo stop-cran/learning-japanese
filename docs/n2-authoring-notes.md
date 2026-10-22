@@ -203,6 +203,16 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
 - Adding 湯 creates a potential hot-water overlap with the English title water. Batch 13 gives
   the older two-choice 水 card a third curated wrong answer; its existing cold/hot-water teaching
   distinction and all other content remain unchanged.
+- Batch 13's GPT review established 流す's relevant pouring use, not merely an abstract
+  causing-to-flow association: pinned entry 1552120 includes pour, and the actual fetched
+  Seisenban Nihon Kokugo Daijiten I.4 describes washing the body by pouring water over it.
+  Add the direct 浴びせる/流す exclusion; their separate exclusions through 注ぐ do not suffice.
+- Claude's batch 13 review found missing substantive comparison links on six cards.
+  Check antonyms and warnings as well as primary word tables. Its optional mnemonic polish
+  also removes the English rule/ruler bridge in 測 without pretending 則 means a measuring tool.
+- The bare 温 ぬく example and 温もり ぬくもり are different lexical items. Retain both
+  source records when explaining the latter's usually-kana warmth sense; the archaic
+  standalone example is not evidence that every occurrence of the ぬく element is an insult.
 
 ## Review and checkpoint protocol
 
@@ -230,9 +240,9 @@ remaining defect in that scope; batch 06 required no teaching correction.
 Batch 11 also preserves a final narrow confirmation of the direct 極める/選ぶ homograph exclusion.
 Batch 12's 15 additional kanji and three supporting verb articles have independent initial reports
 and confirmed corrections, including the linked 汗 article's consistency repair.
-Batch 13 has fifteen drafted kanji cards and three new supporting articles, awaiting independent
-review of all eighteen pages. Its 21 legacy word changes are component links only, including
-the kana-headword あびる lesson. Another 170 additions remain unauthored.
+Batch 13 has independent initial reports for all eighteen new pages. Eight revised teaching
+pages await changed-passage confirmation. Its 21 legacy word changes are component links
+only, including the kana-headword あびる lesson. Another 170 additions remain unauthored.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
