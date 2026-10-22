@@ -743,3 +743,32 @@ the deterministic manifest is `63129c65a3f85e81`.
 There are 965 kanji, 3,272 words and 347 selected N2 characters.
 Twenty additions remain unauthored. Batch 23's independent review
 is pending; batches 01-22 remain review-closed.
+
+Both initial reviewers have now exited and their reports are archived
+unchanged. GPT found no actionable defect. Claude uniquely identified
+a dictionary spelling-scope disagreement for 門と. The original
+shutter row follows pinned JMdict, so do not pretend the restriction
+was missed there: Daijisen explicitly assigns the fitting sense to 戸,
+while Nikkoku's earlier senses do not have the same division. The
+author inspected the actual と headwords after discarding an unrelated
+redirect from a guessed numeric URL. A successful fetch is not proof
+that the fetched entry is relevant; the non-Joyo mark is not a
+frequency measurement.
+
+The correction uses the actual pinned 鳴門なると entry 1753350
+for a lexical strait with roaring tides, not solely its proper-name
+senses. The source notes the word's origin in 鳴門海峡; food and
+place-name senses stay separate. The learner note retains the source
+disagreement and ordinary 戸 contrast. The expanded packet has
+73 pairs, 74 records and 69 complete families, including the original
+門と record. Two optional 鉱石 comparison/example links are also
+adopted; no more-familiar-example or register claim is assumed from
+reviewer preference. Both original reviewers' changed-passage
+confirmations are pending. This sample shows a useful unique Claude
+contribution, not a general family ranking.
+
+The corrected 58-file cumulative scope passes preservation, source
+and reading audits; validation has zero errors. Repeated manifest
+builds are byte-identical at `e59e527490d48a92`. Counts and 39
+reading rows are unchanged. The actual two-page diff will accompany
+the corrected commit in both original-reviewer confirmations.

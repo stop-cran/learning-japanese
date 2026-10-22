@@ -2845,3 +2845,66 @@ Independent same-snapshot GPT/Claude review is pending; no independent
 verdict is claimed. Commits continue to use `stop-cran` as author
 and committer, with the documented per-command local signing workaround.
 Nothing is pushed.
+
+### Independent initial reviews and source reconciliation
+
+Both isolated reviewers examined the same frozen draft
+`ba36c794cd3cff027e3b1bf8c6a7c6f2de800dd8`: all seventeen new
+teaching pages, nineteen related link passages, the three facets and
+the same source access. Their processes ran sequentially, made no edits
+and exited before the next began. Initial reports are preserved unchanged:
+
+| Reviewer | Actual model | Original session | Report |
+| --- | --- | --- | --- |
+| GPT | `gpt-6.1-sol` | `36482cec-d4f7-4b67-afb6-b0f9f6ec6759` | [Initial](n2-reviews/batch-23-gpt-initial.md) |
+| Claude | `claude-opus-5.5` | `e20c08ef-1f48-4d3b-aea0-b4e27b9b1c8f` | [Initial](n2-reviews/batch-23-claude-initial.md) |
+
+GPT found no actionable defect in its assigned scope. Claude marked
+sixteen pages CLEAN and raised the minor, medium-confidence B23-R-01
+on the standalone 門と shutter example. This is a real source-scope
+qualification, not a misreading of pinned JMdict: entry 1266970
+actually leaves that applicable shutter sense unrestricted.
+
+The author fetched the actual
+[と headwords in Daijisen and Nikkoku](https://kotobank.jp/word/%E6%88%B8-61194).
+Daijisen explicitly marks the opening/closing fitting sense 戸,
+whereas Nikkoku does not make the same earlier spelling division and
+explicitly marks its water-passage sense 門. These sources do not fully
+agree. A guessed numeric Kotobank URL that redirected to an unrelated
+literary entry was discarded, not cited as verification. The non-Joyo
+reading mark does not by itself establish rarity.
+
+**B23-R-01 is addressed in the author correction; original-reviewer
+confirmation is pending.** The reading row now uses 鳴門なると,
+whose pinned entry 1753350 explicitly includes a lexical strait with
+roaring tidal ebb and flow, separately from its food and place-name
+senses. The entry notes its origin in 鳴門海峡. This is not evidence
+borrowed solely from a proper name or a nanori. A note preserves the
+dictionary disagreement and the practical ordinary 戸 spelling,
+rather than silently declaring pinned JMdict wrong. All original
+KANJIDIC readings remain. The expanded packet has 73 distinct pairs,
+74 records and 69 complete families; the older 門と family remains
+inspectable alongside the new lexical evidence.
+
+Claude's optional links from 鉱石 to the existing 石 and 採掘 articles
+are adopted without changing their prose or metadata. More examples
+for 逆 and 門 are not required for the scoped coverage. No unsupported
+frequency or literary-register label is added to 莫逆, and かど's
+existing lexical example is not replaced merely to satisfy preference.
+
+Across findings, optional suggestions, limits and per-page observations,
+Claude uniquely supplied the source-disagreement qualification and the
+adopted navigation links; GPT did not independently raise either.
+This is useful complementary coverage of this shared sample, not a
+general model ranking or evidence that model bias has been eliminated.
+The preserved reports disclose different source-reading limits, and
+neither independently executed Git or the application's quiz runtime.
+
+The corrected cumulative scope is 58 files, including the two initial
+reports. Author-run validation has zero errors, the cumulative audit
+retains 345 additions and 1,022 rows, and all nineteen older word edits
+remain links only. Repeated manifest builds are byte-identical:
+contentVersion `e59e527490d48a92`, SHA256
+`c42f40166cf6fc02080819926460ba4cb952d14ddbe09102eddbdbfd3f3129df`.
+The two changed teaching pages are 門 and link-only 鉱石. Their
+original-reviewer confirmations remain pending.
