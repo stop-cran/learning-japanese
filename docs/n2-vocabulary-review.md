@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-04 review-closed; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-05 review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 80 rows are review-closed; 20 are drafted and 1,712 remain pending.
+The first 100 rows are review-closed; none are drafted and 1,712 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -442,7 +442,7 @@ evidence packet are marked closed.
 
 ## Batch 05: N2:82-N2:101
 
-**Status:** initial reviews complete; corrections committed before bounded confirmation.
+**Status:** closed after independent initial reviews, corrections and bounded confirmation.
 
 The twenty rows add **nineteen articles**: いってまいります, いつのまにか,
 移転, 井戸, 緯度, 従姉妹, 威張る, 嫌がる, いよいよ, 煎る,
@@ -466,7 +466,8 @@ level changes. The collection contains 3,360 word articles.
 Actual Digital Daijisen entries for 煎る and 炒める support the qualified
 cooking comparison. The failed initial search endpoint and an unsupported
 always-without-oil search-summary claim are not treated as evidence.
-No review-closed status is claimed for these twenty drafted rows.
+These twenty rows remained draft until correction confirmation and the
+separate author coverage audit were complete.
 
 ### Initial review
 
@@ -515,8 +516,37 @@ component links and qualified cooking contrast. This is useful
 complementary coverage, not a general ranking or a reason to adjudicate
 future disagreements by model identity.
 
-Bounded confirmation is still required for the three changed contexts.
-The initial whole-article verdicts alone do not close the twenty rows.
+### Confirmation and closure
+
+Correction commit `52b52704688827a30f8937a5930433b2f7cef8f0` directly
+follows the authored snapshot. The actual frozen content diff contains
+only the three correction contexts above. Each original model family
+received its own initial report, the same bounded prompt, revised source
+evidence and exact diff, without the other report or author adjudication.
+
+The verbatim [GPT confirmation](n2-vocabulary-reviews/batch-05-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-05-claude-confirmation.md)
+are CLEAN in all three facets for those contexts. Claude explicitly marks
+R1-R4 resolved; GPT independently accepts the revisions without inventing
+an original finding. Both fetched and inspected the actual two usage pages.
+Neither claims another full-batch review or native-speaker certification.
+Sequential processes exited without file edits; usage receipts verify
+the actual original models.
+
+The proposed viscosity detail and reciprocal インク note remain optional.
+Technical properties of particular printing inks are not needed for this
+lexical distinction and should not become a new spelling-based material
+boundary. No actionable defect or consequential unresolved claim remains
+in the assigned scope.
+
+The author separately verified the exact source/index mappings, all
+3,273 baseline identities, readings, titles, kanji arrays, exclusion lists
+and established levels, eighteen cumulative reciprocal N2 pairs and
+`stop-cran` authorship. The corrected content validates with zero errors;
+repeated manifest generation is deterministic at `a7c3668223ea557e`.
+Coverage is **100 closed, 0 draft, 1,712 pending, 0 unresolved**:
+87 new and twelve reused articles overall. The collection contains
+3,360 word articles; all twenty batch rows and the packet are closed.
 
 ## Final verification
 
