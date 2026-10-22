@@ -1789,3 +1789,54 @@ preservation, exact scope, all 66 entry families and mechanical checks
 are author-run; neither reviewer executed Git or the validator. These
 bounded reviews do not certify native fluency, exhaustive drawing paths
 or executed runtime quiz behavior.
+
+## Batch 18: 編練績缶署群羽翌耕肌肩肯胃胸脂 - authored, review pending
+
+**Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke
+files; six supporting word articles, 編む, 群れ, 翌日, 耕す, 肯定
+and 脂; ten older word articles gaining links only. No existing kanji
+or stroke file changes. The source record is
+[batch-18.json](n2-batch-sources/batch-18.json). The pre-batch baseline is
+`c3f3b0aebc7905e7a48421cd5230a1876b951d5d`.
+
+All 34 exact source-reading rows have inspected lexical examples, with
+no lookup-only row. The packet retains 76 exact spelling/reading
+records and 73 complete entry families, including kana-only loanword
+families and all spelling, reading and sense restrictions.
+
+The cards distinguish 編む's knitting, braiding and compiling uses;
+練る's transitivity by sense; 缶 かん from boiler かま; 羽's は/はね
+spelling restrictions and わ counter; and the actual bound forms in
+手編み and 胸元. 肌膚 supplies キ without a frequency claim. 強肩
+concerns a throwing arm. 肯 retains the pinned がえんじ.る boundary
+but illustrates the attested 肯んじる. 肌/皮 and 脂/油 comparisons
+avoid absolute semantic compartments.
+
+Each new kanji has a useful linked word article and three existing,
+semantically wrong distractors. The remaining thirteen older two-choice
+cards were screened against the new meanings; no required related
+fallback repair was established. The six new words declare twenty
+direct exclusion pairs: 編む/組む; 群れ with eleven relevant group/
+crowd labels; 翌日/明日; 肯定 with five affirmation/agreement labels;
+and 脂 with 油 and 石油. These are answer-label safeguards, not
+unrestricted substitution rules or transitive exclusion groups.
+No new word receives a vocabulary JLPT level inferred from its kanji.
+
+Nine older component passages gained links through the helper. 缶's
+substantive definition gained its link without adding a literal
+character to its unchanged component explanation. A mechanical
+comparison checks all ten articles for links-only preservation, and
+the new words' citation IDs are checked against exact selected records.
+
+The author inspected all twenty-one rendered new teaching pages and
+every old word-link diff. The validator reports zero errors; the
+accumulated audit covers 270 additions and 808 exact source-reading
+rows. Counts are 890 kanji, 3,261 word articles and 272 selected N2
+characters, with 95 additions unauthored. The expected exact draft
+scope is 51 files. Two manifest builds produce identical bytes and
+content version `28262d9380465d24`. Snapshot identity, preservation and
+mechanical checks are author-run, not reviewer-executed.
+
+The first seventeen batches remain review-closed. Independent
+same-snapshot GPT/Claude review of batch 18 and evidence-based
+reconciliation are pending; no independent verdict is claimed yet.

@@ -331,6 +331,31 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   綿's わた row now illustrates the plant alone, while the meaning and
   Notes retain the separate padding use.
 
+- Batch 18 preserves bound readings as metadata while illustrating actual
+  spellings: 編's -あ.み uses 手編み, 胸's むな- uses 胸元, and
+  肯's がえんじ.る uses the attested 肯んじる, not an invented 肯る.
+  Kana-only alternates and irregular-okurigana flags belong to their
+  exact spelling/reading pairs, not every spelling in a family.
+- Distinguish lexical senses rather than inventing frequency claims:
+  缶 かま is a boiler, 羽 は differs from the はね spelling family,
+  強肩 is a strong throwing arm, and 肌膚 supports キ without establishing
+  everyday frequency. 翌日 is the next day relative to a reference date,
+  not automatically tomorrow.
+- Keep transitivity scoped to the illustrated use. 練る's kneading and
+  planning uses take an object, but its procession sense is intransitive;
+  群れる and 群がる are both intransitive. 署名する takes a document
+  with に in the illustrated construction, not an invented を rule.
+- New word-quiz protections include secondary applicable senses and
+  English labels: 編む/組む share braiding, 群れ overlaps group/crowd
+  labels, 肯定 overlaps affirmation/agreement labels, and 脂 needs
+  separate 油 and 石油 safeguards. These are direct answer-label
+  protections, not unrestricted Japanese synonym groups or solid/liquid
+  and animal/plant rules.
+- Link 缶's substantive existing definition when its component paragraph
+  has no standalone character. Preserve all old wording. Check new-word
+  citation IDs against exact selected records too: 耕す, 耕作 and 耕地
+  have separate entries 1280950, 1280970 and 1280990.
+
 ## Review and checkpoint protocol
 
 Work in the source snapshot's batches, sequentially. Checkpoint content and regenerated manifests before review, then
@@ -400,6 +425,16 @@ committed correction diff. Claude acknowledged the missed word-quiz overlap;
 its later wording/comparison suggestions remain optional, not unresolved
 defects. These observations concern this shared sample, not a general
 ranking or proof of eliminated bias.
+
+Batch 18 is authored but not yet independently reviewed. Its fifteen
+kanji and six supporting words bring the authored total to 270 additions
+and 808 exact source-reading rows. Counts are 890 kanji, 3,261 words and
+272 selected N2 characters, with 95 additions unauthored. All 34 new
+reading rows have lexical examples; the packet retains 76 exact pairs
+and 73 complete entry families, including genuinely kana-only families.
+Ten older word changes are links only; no older kanji or stroke changes.
+The first seventeen batches remain review-closed. Structural checks and
+author inspection do not substitute for batch 18's pending blind reviews.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.
