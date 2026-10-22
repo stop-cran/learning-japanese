@@ -35,6 +35,42 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## N5 explanations, quotations and endings: independent review (2026-10-22 UTC)
+
+**Snapshot and scope:** `1422bdf8e755dee9fe85ee0276a7db33b7258bf7` plus installment 8 under
+[issue #12](https://github.com/stop-cran/learning-japanese/issues/12): the complete 279-line article,
+all 52 complete exercises, their lexical payloads and 52 full inventory records, all groups and the
+1674-line source ledger. One fresh independent reviewer covered all three facets; its actual runtime
+model ID was unavailable. Only the assigned reusable lessons were supplied, not historical reports
+or author research/generators. The [source ledger](docs/grammar-n5-endings-sources.json) preserves the
+original report and hashes. Its reviewer-local date is 2026-10-23; integration dates are UTC.
+
+**Result:** article, exercise set, lexical support and provenance are **CLEAN in correctness,
+scoped coverage and comprehensibility**. No actionable finding, optional suggestion or consequential
+unresolved claim remains. The reviewer independently read all eight primary and seven supporting
+lessons, supplementary teaching pages and the seven exact response-label entries. It additionally
+checked an explanatory-predicate conjugation chart through an actual source link. No repair or
+artificial reconciliation round was required; runtime and all 52 lexical records remain as reviewed.
+
+**Preservation and integration:** all 1082 previous complete exercise objects and inventory records,
+all prior runtime assets and unrelated caches are unchanged. The 52 new tasks comprise 38 formation
+and 14 bounded interpretation items, with 86 accepted renderings, 110 base options, 12 additional
+fitting options, 132 lexical spans and 225 exclusions. Eight groups have 20 facets, seven soft
+recommendations and no hard prerequisites. Current practice has **1134 exercises in 53 sets**,
+including **583 N5**, with **737/1134** reviewed vocabulary records and the original 397 pending at
+`pilot`. Content/vocabulary checks, deterministic manifest `b10336f60f893b3f` and the freshly
+executed real Android importer pass. Integration is separate from linguistic review.
+
+**Reflection:** the clean result reinforces existing visible-boundary and entailment guidance.
+Short-copula restrictions cover the inner past predicate as well as the final ending; interpretation
+separates grammatical presentation from factual truth. Requested formation avoids manufacturing a
+unique natural ending from an English gloss or imagined intonation. Recognition-only なあ／お・ご
+pages do not import every larger construction in their examples into N5 choices. These are
+applications of existing guidance, not a new failure or checklist quota. The 36 key strings account
+for paired forms and frames, not 52 independent conversations or unrestricted discourse mastery.
+The 35-set/477-object inventory screen is not a fresh full linguistic audit of older material.
+No audio/prosody assessment, native certification, app/SRS change or phone UI check is claimed.
+
 ## N5 giving, receiving and viewpoint: independent review (2026-10-22)
 
 **Snapshot and scope:** `cbdfd15ef7520624ea8cf748f601842157250a79` plus installment 7 under
@@ -677,6 +713,9 @@ The [は／が／も review record](docs/grammar-topic-sources.json) grounds the
 - **Check what the predicate entails, not just a plausible scenario.** A factual negative such as 飲みません does not
   inherently express refusal or deliberate rejection. Feedback must not add intention that the question never supplied
   (ASTRA-TOPIC-001).
+  The clean [explanations/endings review](docs/grammar-n5-endings-sources.json) applies the same discipline to
+  presentation versus truth: a quoted report or an assertion need not be correct, and a conjectural ending does not
+  assign a fixed numerical confidence. Judge the stated task and context, not an imagined voice or guarantee.
 - **Read the literal completion of every distractor.** Shared "different framing" feedback can hide a changed grammatical
   role: 魚が食べません makes the fish the eater, not the food. Explain the role change in that exact predicate pattern;
   do not replace the template with an equally broad ban on all object/time が constructions (ASTRA-TOPIC-O01 / WGM-OPUS-F2).

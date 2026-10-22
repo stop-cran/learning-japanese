@@ -142,6 +142,11 @@ entries and N5 plain/polite past support. Participant-marker and viewpoint contr
 the contextual choices include all three verbs. Defined role labels, optional kanji spellings and linked
 にとって／ため reading do not become harder assessed grammar. Benefactive auxiliaries and the honorific system
 remain outside this installment.
+The [explanations/endings ledger](grammar-n5-endings-sources.json) adds 52 N5 tasks across eight primary anchors.
+Noun-list, companion and quotation と use their own supporting entries in the complete interpretation contrast.
+Short copula and conjectural-form boundaries are visible before answering, while fitting explanatory forms and
+common conjectural contractions are retained. Defined response labels do not import their vocabulary grades.
+Secondary なあ／お・ご notes and optional nominalizer/わけ/conditional links are not assessed choices.
 
 **Classify grammar, not vocabulary or kanji.** Use the construction and substantive contrast needed for the complete
 visible task. Keep natural examples; unfamiliar words should be supported by readings, glosses and translations rather
@@ -175,9 +180,9 @@ metadata pass; the source record identifies it as author classification, not ind
 ### Current classified practice
 
 The original 2026-10-22 pass classified 721 exercises in 40 sets. With 125 N5 foundations, 54 pointing/questions,
-32 noun-description, 38 wants/plans, 34 reasons/contrasts, 42 comparisons/change and 36 giving/receiving additions,
-current practice has **1082 exercises in 52 sets**:
-**531 N5, 210 N4, 235 N3, 102 N2 and four N1**.
+32 noun-description, 38 wants/plans, 34 reasons/contrasts, 42 comparisons/change, 36 giving/receiving
+and 52 explanations/endings additions, current practice has **1134 exercises in 53 sets**:
+**583 N5, 210 N4, 235 N3, 102 N2 and four N1**.
 The original 19 pilot labels are unchanged. No exercise remains unclassified in this snapshot, but omission remains the
 correct representation for future unresolved cases. These counts are coverage of our existing exercises, not coverage
 of every grammar item in any level's curriculum.
@@ -194,6 +199,7 @@ of every grammar item in any level's curriculum.
 | [Reasons, contrasts and prefaces](../articles/reasons-and-contrasts.md) | 34 | 0 | 0 | 0 | 0 |
 | [Comparisons, changes and degree](../articles/comparisons-change-and-degree.md) | 42 | 0 | 0 | 0 | 0 |
 | [Giving, receiving and viewpoint](../articles/giving-receiving-and-viewpoint.md) | 36 | 0 | 0 | 0 | 0 |
+| [Explanations, quotations and sentence endings](../articles/explanations-quotations-and-endings.md) | 52 | 0 | 0 | 0 | 0 |
 | [Nouns and basic particles](../articles/japanese-nouns-and-basic-particles.md) | 73 | 3 | 0 | 0 | 0 |
 | [Topic, contrast and inclusion](../articles/wa-ga-mo-topic-and-inclusion.md) | 36 | 0 | 0 | 0 | 0 |
 | [Listing and examples](../articles/japanese-listing-and-examples.md) | 23 | 17 | 0 | 0 | 0 |
