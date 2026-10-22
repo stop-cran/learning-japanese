@@ -2,10 +2,10 @@
 
 ## Status
 
-**Pilot review-closed; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-02 review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 20 rows are review-closed; the next 20 are drafted and 1,772 remain pending.
+The first 40 rows are review-closed; 1,772 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -119,13 +119,13 @@ exhaustive quiz-pair coverage. Severity differences were adjudicated by learning
 
 ## Batch 02: N2:22-N2:41
 
-**Status:** independent initial reviews reconciled; changed-passage confirmation pending.
+**Status:** review-closed after sequential changed-passage confirmation.
 
 Scope: 暖まる, 暖める, あたりまえ, あちらこちら, 厚かましい, 圧縮, 宛名,
 あてはまる, あてはめる, 暴れる, 脂, あぶる, あふれる, 雨戸, 甘やかす, 余る,
 編物, 編む, 危うい, 怪しい.
 
-The draft adds **14 articles** and reuses six: あちこち (N3, explicitly teaching
+The batch adds **14 articles** and reuses six: あちこち (N3, explicitly teaching
 あちらこちら), 怪しい (N2), and previously vocabulary-unclassified 暴れる, 脂, 余る
 and 編む. Only the latter four gain explicit N2 metadata from these verified source rows;
 their teaching text, stable identities and primary readings are unchanged.
@@ -136,7 +136,7 @@ complete relevant dictionary families, restrictions and component evidence.
 Ten existing kanji pages gain useful word links or examples. Reciprocal N2 links cover
 厚/厚かましい, 圧/圧縮, 戸/雨戸, 甘/甘やかす and 編/編物; 温 also links the explicitly
 taught 温まる/温める spellings to the new 暖まる/暖める articles.
-The collection now contains 3,304 word articles. None of this batch's rows is review-closed.
+The collection now contains 3,304 word articles. All 20 rows in this batch are review-closed.
 
 ### Initial review and reconciliation
 
@@ -154,10 +154,10 @@ Both found the source mappings, related kanji passages and six reuse claims cove
 
 | Finding | Disposition | Evidence and change |
 | --- | --- | --- |
-| GPT B02-GPT-01 / Claude B02-CL-01 | Resolved in author correction; confirmation pending | あてはめる and 適用 both teach applying a rule to a case. Add the direct guard and comparison link. This is one shared finding, not two independent defects. |
-| GPT B02-GPT-02 | Resolved in author correction; confirmation pending | 宛名 explicitly includes the recipient's name alone. Add direct guards against 名前 and 名, plus a qualified comparison; the existing 名/名前 guard is not transitive. |
-| Claude B02-CL-02 | Resolved in author correction; confirmation pending | あたりまえでしょう is taught as "of course," also もちろん's displayed label. Add that direct guard and link without claiming unrestricted grammatical substitution. |
-| Claude B02-CL-03 | Supported guidance gap resolved in author correction; confirmation pending | Inspect the actual official 2014 PDF, entry 007, which covers both verbs as well as adjectives. Add qualified room/air versus food/drink spelling guidance and examples of 温. The body/hand spelling preference was not established by this source: replace those examples without declaring their former spelling wrong or asserting an exclusive body rule. |
+| GPT B02-GPT-01 / Claude B02-CL-01 | Resolved; confirmed | あてはめる and 適用 both teach applying a rule to a case. Add the direct guard and comparison link. This is one shared finding, not two independent defects. |
+| GPT B02-GPT-02 | Resolved; confirmed | 宛名 explicitly includes the recipient's name alone. Add direct guards against 名前 and 名, plus a qualified comparison; the existing 名/名前 guard is not transitive. |
+| Claude B02-CL-02 | Resolved; confirmed | あたりまえでしょう is taught as "of course," also もちろん's displayed label. Add that direct guard and link without claiming unrestricted grammatical substitution. |
+| Claude B02-CL-03 | Guidance gap resolved; unsupported body preference withdrawn | Inspect the actual official 2014 PDF, entry 007, which covers both verbs as well as adjectives. Add qualified room/air versus food/drink spelling guidance and examples of 温. The body/hand spelling preference was not established by this source: replace those examples without declaring their former spelling wrong or asserting an exclusive body rule. |
 
 The four direct quiz guards address localized answer ambiguity; they are treated as minor
 editorial defects rather than general quiz failure. The spelling issue is missing contextual
@@ -175,6 +175,30 @@ recipient-name guards. Claude uniquely identified the "of course" label guard an
 暖/温 guidance gap, while its proposed body-specific preference exceeded the inspected evidence.
 These observations include the reports' optional notes and limits; they are shared-sample evidence
 for complementary review signal, not a ranking or proof of exhaustive coverage.
+
+### Changed-passage confirmation
+
+Correction snapshot: `ae22a9861e76507bf8080c062b85a587c1ddaddd`, with the actual five-file
+diff and each model's own initial report. Fresh bounded `gpt-6.1-sol` and `claude-opus-5.5`
+processes ran sequentially on that unchanged clean snapshot and exited with zero file edits.
+Both found all five changed article contexts **CLEAN / CLEAN / CLEAN** for correctness,
+scoped coverage and comprehensibility; no actionable regression or consequential unresolved
+claim remained in those passages.
+
+[GPT confirmation](n2-vocabulary-reviews/batch-02-gpt-confirmation.md) resolves both original
+GPT findings. [Claude confirmation](n2-vocabulary-reviews/batch-02-claude-confirmation.md)
+resolves all three original Claude findings, explicitly withdraws the unverified body-spelling
+guess and supports the additional 宛名 guards. Remaining suggestions about example sequencing,
+kana presentation, explanatory wording and grammatical detail are optional, not new defects.
+The body/hand preference remains unestablished but is no longer asserted by these cards.
+
+Limits: file-only reviewers relied on author-verified snapshot/hash receipts and the supplied
+short extract from the inspected official PDF; neither independently parsed that PDF or ran
+the app. Closure is scoped editorial acceptance, not a native-speaker or whole-corpus guarantee.
+The mechanical audit preserves all 3,273 baseline identities/readings/titles/exclusions and
+established levels, separately recording the four source-backed formerly absent levels.
+Validation reports zero errors; manifest generation is deterministic at `275a7b984b18b4c8`.
+Coverage is **40 closed, 0 draft, 1,772 pending, 0 unresolved**: 31 new and nine reused articles.
 
 ## Final verification
 
