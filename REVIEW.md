@@ -35,6 +35,46 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## N5 reasons and contrasts: independent review and reconciliation (2026-10-22)
+
+**Snapshot and scope:** `7a16f02d752812c9ae3b9a508af2847173115c8d` plus installment 5 under
+[issue #9](https://github.com/stop-cran/learning-japanese/issues/9): the complete 284-line article,
+all 34 complete new exercises and vocabulary records, metadata, five primary anchors and bounded
+supporting material. The [source ledger](docs/grammar-n5-reasons-sources.json) preserves original and
+revised hashes, complete reports, adjudication and integration evidence. One independent reviewer
+covered all three facets; its actual runtime model ID was unavailable. It read only the specified
+reusable lessons, not historical reports or author conclusions. No model comparison is claimed.
+
+| Initial observation | Reconciled disposition |
+| --- | --- |
+| N5RC-F01, Minor: a nonpast-only copula restriction left two past-noun tasks rejecting fitting expanded plain-past forms | Resolved: explicitly request the ordinary short affirmative past noun predicate in those two instructions; rebind only their context hashes. The unchanged article's practice description is now accurate. |
+
+**Same-reviewer reconciliation:** the original reviewer read the complete 20-line diff, 253-line
+packet, both complete changed objects/records and the unchanged article practice-description passage.
+The initial full review carries forward for the other 32 objects and unchanged material. Article and
+exercises are **CLEAN in correctness, scoped coverage and comprehensibility within that composite
+scope**. No new actionable finding, optional finding or consequential unresolved claim remains.
+The initial article-correctness and exercise-correctness/comprehensibility NEEDS FIX verdicts remain
+attached to their original snapshot; this is not a second full linguistic audit.
+
+**Preservation and integration:** all 970 earlier exercise objects and inventory records are unchanged.
+Only two question-side instruction fields and their context hashes change during reconciliation.
+All 110 accepted renderings, 74 base options, six additional correct options and 101 lexical spans
+remain unchanged. Six groups contain 17 facets, five soft recommendations and no hard prerequisites.
+Current practice has **1004 exercises in 50 sets**, including **453 N5**, with **607/1004** reviewed
+vocabulary records and the same 397 pending at `pilot`. Content/vocabulary checks, deterministic
+manifest `67e6c78ccc87d886` and the freshly executed real Android importer pass; all older runtime
+assets and unrelated caches remain intact. Integration is separate from linguistic review.
+
+**Reflection:** regroup the existing register/visible-scope lesson with the observed tense-branch
+example: a restriction expressly limited to nonpast forms does not bound a past task. Existing
+template-branch checks already apply; no speculative or duplicate rule is needed. The 22 formation,
+four contextual-selection and eight interpretation tasks are scaffolded practice, not unrestricted
+discourse mastery; 24 key strings account for paired examples, not proven independent scenarios.
+Sentence-level conjunctions, open replies and explanatory んですが remain supporting reading.
+The CAPTCHA-blocked そして lesson was not inspected or bypassed; its bounded unscored use has
+separate index/card/dictionary support. No native certification or app/SRS change is claimed.
+
 ## N5 wants, plans and invitations: independent review and reconciliation (2026-10-22)
 
 **Snapshot and scope:** `dd621c44ff34343844ac33282c859402a9239559` plus installment 4 under
@@ -576,6 +616,9 @@ The [basic-particle exercise review](docs/grammar-basic-particles-sources.json) 
   Recheck that choice after combining a base with the taught particles: the unrestricted person-phrase tasks also
   allow respectful どなたかに／どなたにも／どなたかと／どなたとも, not only bare どなた in a question
   ([pointing/questions review](docs/grammar-n5-pointing-sources.json), N5PQ-F03; regroup).
+  Apply a short/expanded copula restriction to the requested tense: an expressly nonpast-only exclusion
+  did not rule out the plain past であった in two reason drills
+  ([record](docs/grammar-n5-reasons-sources.json), N5RC-F01; regroup).
 - **Normalization is not recognition of every spelling.** NFKC folds ３時 to 3時 but does not convert it to 三時 or
   迄 to まで. Grammar tasks should accept appropriate recognized spellings without promoting them to separate
   semantic choice buttons or claiming equal frequency (BPI-F02).

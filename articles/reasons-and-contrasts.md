@@ -1,0 +1,284 @@
+# Reasons, contrasts and conversational prefaces
+
+How do you explain **why**, say **but**, or introduce a question without making a contrast?
+Start with the relationship between complete messages, then check the predicate immediately before the connector.
+
+| Connection | Example | What the second part does |
+| --- | --- | --- |
+| Reason | 雨が降っているので、試合は中止です。 | Gives the cancellation as a consequence of the rain |
+| Contrast | 雨が降っているけど、試合は予定どおりです。 | Says the match remains as scheduled despite the rain |
+| Preface | すみませんが、駅はどこですか。 | Introduces a question to another person |
+
+Read **雨（あめ）**, **降っている（ふっている）**, **試合（しあい）**, **中止（ちゅうし）**,
+**予定どおり（よていどおり）** and **駅（えき）** as rain, is falling, match, cancellation, as scheduled and station.
+The full meanings are "The match is cancelled because it is raining," "It is raining, but the match is as scheduled,"
+and "Excuse me, where is the station?"
+
+The weather does not mechanically determine the connector. A speaker can present facts as a reason or a contrast;
+the surrounding message must support that relationship. Nor does every **が** mean "but."
+
+## から and ので: put the reason before the consequence
+
+**A から B** and **A ので B** can both say that A is the reason for B:
+
+> この道具は便利だから、毎日使います。  
+> （このどうぐはべんりだから、まいにちつかいます。）  
+> I use this tool every day because it is convenient.
+>
+> この道具は便利なので、毎日使います。  
+> （このどうぐはべんりなので、まいにちつかいます。）  
+> I use this tool every day because it is convenient.
+
+Here both are reasonable. **から** often presents the reason more directly; **ので** can present it as an explanatory
+background and can sound less insistent in an explanation or request. These are contextual tendencies, not
+"から is subjective, ので is objective" compartments. A polite setting does not automatically make から wrong,
+and ので does not guarantee tact.
+
+Neither connector says that this is the **only** reason. A consequence may also be a decision or a request, not
+just a physical event that has already happened. Do not use a one-reason/two-reason count as an answer key.
+
+### Keep the whole predicate
+
+Both connectors can follow plain or polite predicates. The special **だ／な** difference in the following table
+concerns the **short plain affirmative nonpast** noun/な-adjective pattern:
+
+| Preceding predicate | With から | With ので |
+| --- | --- | --- |
+| Verb, nonpast | 読むから | 読むので |
+| Verb, negative | 読まないから | 読まないので |
+| Verb, past | 読んだから | 読んだので |
+| Verb, past negative | 読まなかったから | 読まなかったので |
+| い-adjective | 寒いから | 寒いので |
+| Past い-adjective | 寒かったから | 寒かったので |
+| Negative い-adjective | 寒くないから | 寒くないので |
+| Past negative い-adjective | 寒くなかったから | 寒くなかったので |
+| な-adjective, affirmative nonpast | 便利だから | 便利なので |
+| Noun, affirmative nonpast | 学生だから | 学生なので |
+| Past noun/な-adjective predicate | 休みだったから／元気だったから | 休みだったので／元気だったので |
+| Negative noun/な-adjective predicate | 学生じゃないから／元気ではないから | 学生じゃないので／元気ではないので |
+| Past negative noun/な-adjective predicate | 学生じゃなかったから／元気ではなかったから | 学生じゃなかったので／元気ではなかったので |
+
+**読む（よむ）** means read; **寒い（さむい）** means cold; **便利（べんり）** means convenient;
+**学生（がくせい）** means student; **休み（やすみ）** means day off here; **元気（げんき）** concerns being well.
+
+Do not insert an extra **だ** or **な** after an already inflected **だった**, **ない** or **なかった**.
+**元気ではなかったので** is the complete pattern, not **元気ではなかったなので**.
+Ordinary negative **じゃない／ではない** and their past forms are both useful; **でない／でなかった** also occur.
+They do not make the positive **元気だ** into **元気い**.
+
+The [verb foundations](japanese-verb-foundations.md) explain how to make the actual forms, including **読む → 読んだ**
+and **ある → ない**. The [adjective foundations](japanese-adjective-foundations.md) cover **寒い → 寒かった／寒くない**
+and the different noun/な-adjective endings. A connector does not replace those operations.
+
+Polite predicates work too:
+
+> 明日は休みですから、家にいます。  
+> （あしたはやすみですから、いえにいます。）  
+> I will be at home because tomorrow is my day off.
+>
+> 明日は休みですので、家にいます。  
+> （あしたはやすみですので、いえにいます。）  
+> I will be at home because tomorrow is my day off.
+
+This is **ですので**, not **ですなので**. A plain subordinate predicate can also precede a polite main clause:
+**休みなので、家にいます** is not a politeness error.
+The formation exercises ask for the short plain patterns explicitly; they do not declare every fuller copular
+or polite formulation invalid.
+
+### Answers and contractions
+
+A reason can be the whole answer when the consequence is understood:
+
+> A: どうして仕事を休みましたか。  
+> （どうしてしごとをやすみましたか。）  
+> Why did you take time off work?
+>
+> B: 元気ではなかったからです。  
+> （げんきではなかったからです。）  
+> Because I was not feeling well.
+
+**からです** presents the reason as an answer. It is not the same arrangement as putting **ですから** after a nominal
+predicate before a consequence. Compare **学生だからです**, "because I am a student," with
+**学生ですから、学割を使います**, "because I am a student, I use the student discount."
+**学割（がくわり）** is a student discount.
+
+In conversation, **ので** can shorten to **んで**: **時間がないんで、先に帰ります**,
+"I do not have time, so I will go home first" (**じかんがないんで、さきにかえります**).
+That contraction is not automatically forbidden just because the main sentence ends politely.
+The full-form drills ask for **ので**; the contextual connector tasks also accept fitting **んで**.
+
+## が, けど and けれども: connect predicates, not just nouns
+
+These connectors can present different facts or an outcome contrary to a relevant expectation:
+
+> このアプリは便利だが、値段が高いです。  
+> （このあぷりはべんりだが、ねだんがたかいです。）  
+> This app is convenient, but its price is high.
+>
+> このアプリは便利だけど、値段が高いです。  
+> （このあぷりはべんりだけど、ねだんがたかいです。）  
+> This app is convenient, but its price is high.
+>
+> このアプリは便利だけれども、値段が高いです。  
+> （このあぷりはべんりだけれども、ねだんがたかいです。）  
+> This app is convenient, but its price is high.
+
+**けど** is conversational; **けれども** is a fuller form, with **けれど** also common.
+**けども** occurs too. **が** is used in both speech and writing; its impression depends on the surrounding style.
+Do not rank these into one universally correct answer simply because a conversation is polite.
+
+| Predicate | Example with が | Corresponding けど／けれども |
+| --- | --- | --- |
+| Verb, past | 読んだが | 読んだけど／読んだけれども |
+| Verb, negative | 食べないが | 食べないけど／食べないけれども |
+| い-adjective, past | 遠かったが | 遠かったけど／遠かったけれども |
+| な-adjective, affirmative nonpast | 便利だが | 便利だけど／便利だけれども |
+| Noun, affirmative nonpast | 祝日だが | 祝日だけど／祝日だけれども |
+| Noun, past | 祝日だったが | 祝日だったけど／祝日だったけれども |
+| Negative な-adjective predicate | 元気ではないが | 元気ではないけど／元気ではないけれども |
+| Polite nominal predicate | 便利ですが | 便利ですけど／便利ですけれども |
+
+**食べる（たべる）** means eat; **遠い（とおい）** means far away; **祝日（しゅくじつ）** means public holiday.
+The nonpast **だ** is not inserted after **読んだ**, **遠かった** or **ではない**.
+Polite verbs work too, as in **読みましたが**, "I read it, but ...".
+These patterns do not require surprise, criticism or dissatisfaction in every use.
+
+For the more specific framing "against the expectation associated with A," continue to
+[のに and concessive contrasts](noni-and-concessive-contrasts.md#のに-versus-ので-against-an-expectation-or-because-of-a-reason).
+That is onward N4-and-higher comparison practice, not an additional required answer in this N5 set.
+のに is not an unrestricted replacement for every background-introducing が or けど.
+
+## Two が occurrences, two jobs
+
+> 雨が降っていますが、出かけます。  
+> （あめがふっていますが、でかけます。）  
+> It is raining, but I will go out.
+
+The first **が**, after **雨**, marks the subject inside **雨が降っています**.
+The second **が**, after the completed predicate **降っています**, connects that clause to **出かけます**.
+It does not make the rain the person going out.
+
+Likewise, in **駅が遠いですが、家賃は安いです**,
+"the station is far away, but the rent is low" (**えきがとおいですが、やちんはやすいです**),
+the station is what is far away; the second が links that description with the rent comparison.
+This bounded distinction does not mean every が in Japanese marks an actor.
+
+## A preface is not necessarily a contradiction
+
+> すみませんが、駅はどこですか。  
+> （すみませんが、えきはどこですか。）  
+> Excuse me, where is the station?
+
+The location question does not contradict **すみません**. The opening prepares the listener for the question.
+Other uses can introduce a topic or relevant background before the main point.
+A connector alone does not guarantee that a request is polite or suitable for every social situation.
+
+Compare a genuine comparison of facts:
+
+> 東京は雨ですが、京都は晴れです。  
+> （とうきょうはあめですが、きょうとははれです。）  
+> It is rainy in Tokyo, but clear in Kyoto.
+
+There is no question waiting to be introduced here. The speaker contrasts the weather in two places.
+The interpretation questions provide the whole utterance and situation, rather than treating the English word
+"but" as a mechanical definition of every connective が.
+
+A speaker may also leave a continuation unspoken:
+
+> A: 明日、一緒に行きませんか。  
+> （あした、いっしょにいきませんか。）  
+> Would you like to go together tomorrow?
+>
+> B: 明日は仕事ですが……。  
+> （あしたはしごとですが……。）  
+> I have work tomorrow, though ...
+
+In this exchange the work schedule raises an obstacle. It may invite discussion or allow a refusal to be inferred;
+the fragment alone does not logically guarantee "I definitely will not go."
+This open-ended use is supporting reading, not a scored reconstruction of an unspecified missing sentence.
+The explanatory **んですが／んだけど** family is a separate N4 onward pattern in our primary curriculum,
+not a required hidden ingredient of these preface tasks.
+
+## Whole-sentence connections: しかし, でも, そして and それから
+
+| Linker | Typical role in the uses shown here |
+| --- | --- |
+| [しかし](../words/しかし.md) | Starts a contrasting statement; useful in explanations and writing too |
+| [でも](../words/でも.md) | A conversational contrasting statement |
+| [そして](../words/そして.md) | Adds another fact or continues a sequence |
+| [それから](../words/それから.md) | Continues after an established point; can also add another item |
+
+> 図書館に行きました。でも、休みでした。  
+> （としょかんにいきました。でも、やすみでした。）  
+> I went to the library, but it was closed.
+>
+> 昼ご飯を食べました。それから、図書館に行きました。  
+> （ひるごはんをたべました。それから、としょかんにいきました。）  
+> I ate lunch. After that, I went to the library.
+>
+> この部屋は明るいです。そして、机も広いです。  
+> （このへやはあかるいです。そして、つくえもひろいです。）  
+> This room is bright. And the desk is spacious too.
+
+The added desk description is not necessarily a later event. **そして** and **それから** can overlap in sequences;
+neither automatically means "because." **それから** can also mean "since then" when it refers back to a time point.
+**しかし** and **でも** can both fit the library contrast; stylistic preferences are not a unique grammar key.
+These are support words here, not separately scored synonym-definition questions.
+
+This conjunction **でも** is different from example-giving **お茶でも**, "tea or something," and concessive
+**ても／でも**, "even if/when." For example-giving, see the
+[listing article](japanese-listing-and-examples.md#でも-one-possible-suggestion); its broader contrasts are onward material.
+
+## Continue without conflating the constructions
+
+The [し and reason-giving comparison](japanese-listing-and-examples.md#し-versus-から-and-ので)
+shows how to add considerations without a rigid one-reason/multiple-reason rule.
+The same article discusses **て／くて／で** connections, which can express reasons but are not invariably causal or chronological.
+
+For later study, [ため／おかげ／せい](koto-wake-and-formal-nouns.md#ため-おかげ-and-せい-a-goal-a-cause-or-an-evaluation)
+add different causal or evaluative framings. [わけだ](koto-wake-and-formal-nouns.md#the-explanatory-construction-わけだ)
+can present an understandable consequence or conclusion; it is not just another spelling of "because."
+These are optional higher-level comparisons, not required choices or learner locks in this installment.
+
+## What this practice assesses
+
+The 34 exercises have six groups:
+
+- Eight verb/い-adjective and eight noun/な-adjective reason-formation tasks, including selected past and negative forms.
+- Six whole-predicate formation tasks naming **が**, **けど** or **けれども** explicitly.
+- Four contextual reason/contrast tasks accepting the fitting taught connectors together.
+- Four first-versus-second **が** recognition tasks and four preface/contrast interpretations.
+
+Formation is not unrestricted conversational choice. The reason/contrast tasks state the intended relationship and the
+connector family being practised; they do not reject every other Japanese way to express that message.
+The 22 formation, four contextual-selection and eight interpretation tasks do not assess every combination in the article's tables.
+
+Interpretation labels are supplied with readings and definitions before answering:
+**主語（しゅご）／接続（せつぞく）** identify subject-marking versus clause-linking use;
+**前置き（まえおき）／対比（たいひ）** identify a preface to the question versus contrasting facts.
+Their display order does not reveal which answer is correct.
+Paired connectors and paired が questions share their scenario keys, rather than claiming independent context breadth.
+Optional word tips support the supplied vocabulary while protecting the tested grammar.
+
+## Sources and scope
+
+- Bunpro's N5 lessons for [から](https://bunpro.jp/grammar_points/から-because),
+  [ので](https://bunpro.jp/grammar_points/ので), [けど／だけど](https://bunpro.jp/grammar_points/けど-だけど),
+  [connective が](https://bunpro.jp/grammar_points/が-but) and [けれども](https://bunpro.jp/grammar_points/けれども)
+  supply the primary curriculum anchors. Its separate [subject が](https://bunpro.jp/grammar_points/が) lesson
+  supports the bounded role distinction, not an "all が means exclusive focus" rule.
+- Tokyo University of Foreign Studies:
+  [reasons](https://www.coelang.tufs.ac.jp/mt/ja/gmod/contents/explanation/081.html) and
+  [contrasts and prefaces](https://www.coelang.tufs.ac.jp/mt/ja/gmod/contents/explanation/082.html)
+  explicitly cover whole-predicate attachment, plain/polite forms, alternative connectors and non-contrast prefaces.
+  Their teaching tendencies are not converted into universal prohibitions here.
+- [Tae Kim: compound sentences](https://guidetojapanese.org/learn/grammar/compound) discusses reason connectors
+  and ga/kedo connections that are not literal contradictions.
+- JLPT Sensei's N5 [しかし](https://jlptsensei.com/learn-japanese-grammar/%e3%81%97%e3%81%8b%e3%81%97-shikashi-meaning/),
+  [それから](https://jlptsensei.com/learn-japanese-grammar/%e3%81%9d%e3%82%8c%e3%81%8b%e3%82%89-sore-kara-meaning/)
+  and [conjunction でも](https://jlptsensei.com/learn-japanese-grammar/%e3%81%a7%e3%82%82-demo-meaning/)
+  entries support the exact sentence-linking senses. The linked そして word card records its dictionary sense.
+
+These are sourced study estimates, not an exhaustive official JLPT syllabus. Vocabulary/kanji difficulty does not set the
+grammar level. Broader register choices, sentence-final interaction, explanatory endings and higher-level concession
+remain follow-up material, not claims of mastery from this small set.
