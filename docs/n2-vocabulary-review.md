@@ -634,9 +634,35 @@ on one sample, not a general model ranking.
 
 ### Confirmation and closure
 
-Pending. The eight changed articles and the unchanged official-guide
-attributions in 映す, 写る and 映る require bounded confirmation.
-These twenty rows remain draft; no full-batch re-review is claimed.
+Correction commit `2a93457f855a5e6a92ee3b09287db81a29e53ab3`
+directly follows the authored snapshot. Each original family received its
+own initial report, the identical bounded prompt, actual eight-file diff,
+revised evidence and identical readable official passage, not the other
+report or author adjudication.
+
+The verbatim [GPT confirmation](n2-vocabulary-reviews/batch-06-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-06-claude-confirmation.md)
+are CLEAN on all three facets for the eight changed contexts and the
+exact unchanged guide attributions in 映す, 写る and 映る.
+Each reconciles its original findings and independently interprets the
+readable entry and footnote. Both expressly distinguish shared cached
+extraction from independent PDF retrieval; the precise attribution gap
+is resolved without rewriting the supported teaching. Both processes
+exited without edits and used the original actual models.
+
+Claude additionally proposed optional generic-appearance guards for
+写る/映る against 出る/現れる. Inspection of the actual titles,
+photographic/screen appearance examples and complete entries supports
+these four narrower/broader English-answer overlaps. They are adopted
+as a bounded metadata supplement, not a demand to expand the lexical
+lessons or a defect in the preceding correction. These were unique
+useful optional observations by Claude in the confirmation, not a blind
+initial-review discovery. The suggested "image being played back"
+wording is optional; the existing displayed-image sentence is accurate
+in its recording/playback context.
+
+Supplement confirmation and closure remain pending. These twenty rows
+remain draft; no full-batch re-review is claimed.
 
 ## Final verification
 
