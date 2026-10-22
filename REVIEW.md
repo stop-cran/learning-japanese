@@ -35,6 +35,45 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## N5 noun descriptions: independent review and reconciliation (2026-10-22)
+
+**Snapshot and scope:** `f3695d9601ce3a77e92e380c1a5b3930ef918f18` plus installment 3 under
+[issue #8](https://github.com/stop-cran/learning-japanese/issues/8): the complete 230-line article,
+all 32 complete exercises and selected vocabulary records, metadata, 13 primary anchors and pertinent
+reuse of six existing attachment drills. The [source ledger](docs/grammar-n5-descriptions-sources.json)
+preserves initial/revised hashes, complete reports, adjudication and integration evidence.
+One independent reviewer covered all three facets; its actual runtime model ID was unavailable.
+It read only the specified reusable-lesson range, not historical review reports or author verdicts.
+No model comparison is claimed.
+
+| Initial observation | Reconciled disposition |
+| --- | --- |
+| IND-DESC-001, Minor: a supplied independent-clause control had 焼いました and reading やい | Resolved: 焼きました / やき, with rebound vocabulary/context hashes. The correct plain-past modifier 焼いた / やい is unchanged. |
+| IND-DESC-002, Minor: four wrong-scope rationales affirmatively defined the wrong reading | Resolved: explain the actual head noun, inner object and whole nominalized activity in each sentence. |
+
+**Same-reviewer reconciliation:** the original reviewer read the actual 67-line diff, the complete
+536-line packet and all five changed complete objects/records. The initial review carries forward for
+the unchanged article and 27 unchanged exercises. Article and exercises are **CLEAN in correctness,
+scoped coverage and comprehensibility within that composite scope**. No new actionable defect,
+optional suggestion or consequential unresolved claim remains. The original exercise correctness and
+comprehensibility NEEDS FIX verdicts remain attached to their original snapshot.
+
+**Preservation and integration:** all earlier 900 exercise objects and inventory records are unchanged.
+New exercise IDs, targets, levels, relationships, keys, accepted answers, option IDs/labels and groups
+survive reconciliation. Six groups have 14 facets, five soft recommendations and no hard prerequisites.
+There are 64 accepted renderings, 76 base options and 71 lexical spans. Current practice has **932 exercises
+in 48 sets**, including **381 N5**, with **535/932** vocabulary-reviewed prompts and the same 397 pending
+records at `pilot`. Content/vocabulary checks, deterministic manifest `6a16fcd05f857be8` and the freshly
+executed real Android importer pass; unrelated caches and other runtime assets remain intact.
+These integration checks are separate from the reviewer's linguistic conclusions.
+
+**Reflection:** add one observed supplied-inflection check: a correct plain-past sound change is not a
+reusable polite stem, and matching lexical offsets cannot establish grammatical correctness. Regroup the
+existing contextual-distractor lesson to cover interpretation labels rather than add a duplicate rule.
+The 24 formation, four interpretation and four recognition tasks remain scaffolded; the outer activity が
+is supplied, not independently selected. Broader omission, relative-tense and が／の production remain
+outside the assessed scope. No second full audit, native certification, mastery or app/SRS change is claimed.
+
 ## N5 pointing/questions: independent review and reconciliation (2026-10-22)
 
 **Snapshot and scope:** `c80d4533e613b8010b4d6e8b09f16eceeeea756c` plus installment 2 under
@@ -474,6 +513,9 @@ The [は／が／も review record](docs/grammar-topic-sources.json) grounds the
 - **Read the literal completion of every distractor.** Shared "different framing" feedback can hide a changed grammatical
   role: 魚が食べません makes the fish the eater, not the food. Explain the role change in that exact predicate pattern;
   do not replace the template with an equally broad ban on all object/time が constructions (ASTRA-TOPIC-O01 / WGM-OPUS-F2).
+  For interpretation labels, reject the actual wrong reading rather than affirmatively defining it: the noun-description
+  review found four wrong-scope rationales that sounded like validation of the selected analysis
+  ([record](docs/grammar-n5-descriptions-sources.json), IND-DESC-002; regroup).
 - **Close the opening question with a matched example.** An explanation of identification with a motion verb can be
   correct yet leave a promised occupation-predicate comparison implicit. Show the actual opening pair in contrasting
   contexts, without converting a contextual tendency into an absolute restriction (WGM-OPUS-F1).
@@ -540,6 +582,13 @@ The [N5 foundations review](docs/grammar-n5-foundations-sources.json) adds one r
 The same review's 迄／奇麗 omissions reinforce the existing spelling-recognition lesson (N5FI-F03); no duplicate
 rule is added. Its practice-description and local-gloss refinements apply the existing transfer-accounting and
 context-specific-vocabulary guidance rather than introducing new process.
+
+The [noun-description review](docs/grammar-n5-descriptions-sources.json) adds one supplied-morphology check:
+
+- **Check the supplied inflection, not only the blank.** A sound-changed plain-past base such as 焼い in 焼いた
+  cannot be reused before ました: the polite form is 焼きました. Review the whole supplied predicate and its
+  displayed-form reading when adapting a paired example. Exact span/hash checks can faithfully match a malformed
+  verb; they do not establish its grammatical correctness (IND-DESC-001; add).
 
 ## のに article and initial exercises (2026-10-21)
 
