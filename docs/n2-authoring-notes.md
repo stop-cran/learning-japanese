@@ -311,7 +311,7 @@ equivalent observations across findings, optional suggestions, limits and per-ca
 
 Source records and structural checks are not native-speaker certification or exhaustive historical analysis.
 Dual-model usefulness is an observation about the reviewed sample, not proof that model bias has been eliminated.
-The first fifteen batches' GPT/Claude reports are preserved in the review ledger, including changed-passage confirmations
+The first sixteen batches' GPT/Claude reports are preserved in the review ledger, including changed-passage confirmations
 where teaching text was corrected. They found
 complementary issues, but also supplied unsupported frequency inferences and optional expansions. Neither family caught
 every issue established across the reviewed sample. Both confirmed the final corrected passages without an actionable
@@ -334,14 +334,18 @@ The shared 玉/王 quiz finding and Claude's three linking findings are correcte
 both original reviewers confirmed all five revised teaching pages without a remaining
 actionable defect. Claude's final pronoun-polish suggestion remains nonblocking and
 unadopted; the shogi sentence supplies the 玉/王 context.
-Batch 16 has independent initial reviews: fifteen more kanji and
+Batch 16 is review-closed: fifteen more kanji and
 one supporting 竹 article bring the authored total to 240 additions and
 733 exact reading rows. The deck now has 860 kanji, 3,252 words and 242
 selected N2 characters, with 125 additions unauthored. Its 32 reading rows
 contain 30 lexical examples and two explicitly qualified lookup-only rows;
 29 older word edits are links only. GPT's 祭 quiz-label finding is corrected,
 and Claude's optional 筆 reading qualification is adopted. Both original
-reviewers' changed-passage confirmations remain pending; this is not review closure.
+reviewers confirmed both revised pages CLEAN on all three facets.
+Claude accepted the previously missed English-label ambiguity; its additional
+際/occasion observation did not establish a direct synonym or actionable defect.
+The remaining counter and history suggestions are optional expansions, not
+unresolved findings.
 
 Reviewer file permissions are separate from tool permissions: `--allow-all-tools` alone did not authorize a diff in the
 parent session's artifact directory. The event record showed a noninteractive path-approval failure, not content exclusion.

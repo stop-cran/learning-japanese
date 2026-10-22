@@ -1526,7 +1526,7 @@ Exhaustive drawing-path review, native-fluency certification and runtime quiz
 execution remain outside these verdicts; changed or larger quizzes can still
 require new semantic curation.
 
-## Batch 16: 祝祭禁秒移税章童競竹符筆筒算管 - corrections awaiting confirmation
+## Batch 16: 祝祭禁秒移税章童競竹符筆筒算管 - review-closed
 
 **Scope:** fifteen new kanji cards and matching pinned KanjiVG stroke files;
 one supporting word article, 竹; 29 older word articles gaining links only.
@@ -1559,7 +1559,7 @@ and teaching text apart from links; no old kanji or stroke file changed.
 The author inspected all sixteen rendered teaching pages. The validator reports
 zero errors; the accumulated audit covers 240 additions and 733 exact reading rows.
 Counts are 860 kanji, 3,252 word articles and 242 selected N2 characters;
-125 additions remain unauthored. The first fifteen batches remain review-closed.
+125 additions remain unauthored. The first sixteen batches are now review-closed.
 The draft was committed as `71dd9a70dcda63c2a0619f79eae8fbfcfcfb897a`,
 with author and committer both `stop-cran`. Its exact 65-file scope and
 deterministic manifest `76a3800f11921930` were verified before review.
@@ -1594,6 +1594,40 @@ qualification as optional polish. Both accepted the lookup-row qualifications
 and the related links. These are complementary contributions in this sample,
 not a general model ranking or proof that model bias has been eliminated.
 
-The author correction changes only two teaching pages, 祭 and 筆. Both original
-reviewers' confirmations on the committed correction and actual diff remain
-pending. No independent confirmation or batch-16 review closure is claimed yet.
+### Original-reviewer confirmations and closure
+
+The correction changes only two teaching pages, 祭 and 筆, and was committed
+as `1b89f7a33464626af211a75bf51529df8ae45edc`, with author and committer
+both `stop-cran`. The author verified its exact eight-file scope, zero validator
+errors, unchanged reading audit and deterministic manifest `37863624e7d74dfb`.
+
+Both original sessions resumed sequentially on that committed correction and
+the actual two-page diff. Each process exited without file edits:
+
+- [GPT confirmation](n2-reviews/batch-16-gpt-followup.md): both pages CLEAN
+  on correctness, scoped coverage and comprehensibility; F01 resolved and the
+  adopted optional reading qualification source-supported. GPT did not
+  retroactively claim that optional observation as its own.
+- [Claude confirmation](n2-reviews/batch-16-claude-followup.md): both pages
+  CLEAN on all three facets. Claude independently fetched Oxford's actual
+  observe entry, accepted the ambiguity missed in its initial review, and
+  confirmed O1 resolved. O2 and O3 remain optional, unadopted expansions.
+
+Claude additionally examined the unchanged 際/occasion choice. Its fetched
+occasion sense denotes an event or celebration, but no pinned 祭 gloss is its
+direct synonym; the report did not establish a defect. This later optional
+observation does not alter the blind initial-report contribution comparison
+above or require another polish round.
+
+All sixteen new teaching pages have independent initial GPT/Claude review,
+and both revised pages have clean original-reviewer confirmations. No
+actionable finding or consequential unresolved claim remains in the assigned
+scope. The first sixteen batches' 240 additions are review-closed; totals
+remain 860 kanji, 3,252 word articles and 242 selected N2 characters, with
+733 exact reading rows audited and 125 additions unauthored. All 29 older
+word edits remain links only; no older kanji or stroke file changed.
+
+Snapshot identity, exact scope, preservation, validation and manifest checks
+are author-run, not reviewer-executed. These bounded reviews do not certify
+native fluency, exhaustive stroke drawing paths or runtime quiz behavior;
+larger or changed quizzes may still require new semantic curation.
