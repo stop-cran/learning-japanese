@@ -5,7 +5,7 @@
 **Batches 01-02 review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 40 rows are review-closed; 1,772 remain pending.
+The first 40 rows are review-closed; batch 03 has 20 draft rows and 1,752 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -199,6 +199,30 @@ The mechanical audit preserves all 3,273 baseline identities/readings/titles/exc
 established levels, separately recording the four source-backed formerly absent levels.
 Validation reports zero errors; manifest generation is deterministic at `275a7b984b18b4c8`.
 Coverage is **40 closed, 0 draft, 1,772 pending, 0 unresolved**: 31 new and nine reused articles.
+
+## Batch 03: N2:42-N2:61
+
+**Status:** authored draft; independent review and reconciliation pending.
+
+Scope: 荒い, 粗い, あらすじ, 争う, 改めて, 改める, 著す, 有難い, 在る,
+あれこれ, あわただしい, あわてる, 安易, 案外, アンテナ, 言い出す, 言い付ける,
+意義, 生き生き, いきなり.
+
+The batch adds **19 articles** and reuses unchanged ある (N5), which already teaches the
+source spelling 在る and the relevant existence/location meaning. It is not merged with
+the separate lexical item 或. Original source wording and dictionary restrictions are retained
+in the [batch evidence](n2-vocabulary-batch-sources/batch-03.json); neither a shared reading
+nor the source's English "live" establishes an unrestricted human-residence definition.
+
+Twelve existing kanji cards gain useful linked examples. Required reciprocal N2 links cover
+荒/荒い, 改/改めて, 改/改める and 著/著す. The existing 戦う comparison gains a link
+to 争う. No kanji metadata or stroke data changes. The actual PDF of the official 2014
+異字同訓 guidance was inspected for entries 014-016; the packet records the hash, location,
+brief extracts and inspection limits.
+
+The collection contains 3,323 word articles. Coverage is **40 closed, 20 draft, 1,752 pending,
+0 unresolved**: 50 new and ten reused articles overall. These draft rows do not yet count as
+independently reviewed.
 
 ## Final verification
 

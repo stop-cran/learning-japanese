@@ -127,3 +127,11 @@ evidence and learning impact; issue creation requires authorization.
 - **Batch 02 reconciliation:** Check direct pairs even when another related pair is already
   guarded: 名/名前 does not protect either from 宛名. A conversational translation such as
   あたりまえでしょう, "of course," can also reveal an answer-label overlap with もちろん.
+- **Batch 03 authoring:** Source 在る can reuse the unchanged N5 ある article: it already
+  teaches existence and explicitly displays 在る through a linked character followed by る.
+  Coverage checks normalize Markdown link labels before testing that displayed alias;
+  no duplicate article or invented general "live/reside" definition is needed.
+- **Batch 03 authoring:** The official 異字同訓 report's entries 014-016 were inspected in
+  the actual PDF. They ground the 荒い/粗い and 著す/表す/現す comparisons and corroborate
+  recognizing 在る while usually writing ある. Keep reading-restricted senses separate:
+  あれこれ does not inherit the approximate-duration use restricted to かれこれ.
