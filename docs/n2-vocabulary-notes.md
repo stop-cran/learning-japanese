@@ -141,3 +141,13 @@ evidence and learning impact; issue creation requires authorization.
   grammatical roles are different. Compare optional/tentative report notes too: 粗い/かさかさ
   and the 徐々に link were shared observations, not unique findings of the model assigning
   the higher severity.
+- **Batch 04 authoring:** A source row can supply a real word but an incompatible
+  character-like gloss. Preserve both original fields; do not reuse a homophone
+  or teach every character meaning as a word sense. For 佚/いつ, the actual
+  Seisenban noun entry and Koji Seigo expression establish a recognition-focused
+  article without manufacturing modern collocations or inferring frequency.
+  A web-search summary was not sufficient: actual fetched entries were inspected.
+- **Batch 04 authoring:** Existing date cards can already cover a source on-reading
+  while retaining easier native primary readings. Reuse 一昨日 and 一昨年 unchanged
+  after checking their bodies. Qualify normal temporal-boundary inclusion rather
+  than claiming every event-based use of 以後 or 以降 has an absolute inclusive boundary.

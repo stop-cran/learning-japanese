@@ -5,7 +5,7 @@
 **Batches 01-03 review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 60 rows are review-closed; 1,752 remain pending.
+The first 60 rows are review-closed; 20 are drafted in batch 04 and 1,732 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -295,6 +295,34 @@ The author separately verified all 3,273 baseline identities/readings/titles/exc
 established levels, source/index integrity, twelve cumulative reciprocal N2 word pairs and
 `stop-cran` authorship. The validator reports zero errors and repeated manifest generation is
 deterministic at `ebc4e3f59c4d7584`. Source rows and the packet are now marked closed.
+
+## Batch 04: N2:62-N2:81
+
+**Status:** authored draft; independent initial reviews pending.
+
+Scope: 育児, 幾分, 生け花, 以後, 以降, イコール, 勇ましい, 衣食住,
+意地悪, いちいち, 一応, 一段, 一流, 佚, 一昨日, 一昨年, 一斉, 一旦,
+一定, いってらっしゃい.
+
+The draft adds **18 articles** and reuses the unchanged N5 一昨日 and 一昨年.
+Both existing articles already explicitly teach the source on-readings
+いっさくじつ and いっさくねん. Their primary native readings and levels remain
+unchanged. The collection contains 3,341 word articles.
+Three existing N2 kanji pages gain useful reciprocal word links:
+児/育児, 勇/勇ましい, and 衣/衣食住.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-04.json) preserves every
+original field and complete relevant dictionary family. Source row N2:75 is
+the noun 佚/いつ, not the unrelated N5 question word いつ. Its supplied gloss
+resembles character meanings and does not match the supplied lexical entry.
+The article teaches the noun established by pinned JMdict and the inspected
+Seisenban Nihon Kokugo Daijiten entry, with a classical expression actually
+found in Koji Seigo o Shiru Jiten. No modern frequency claim is inferred.
+The blank original gloss for いってらっしゃい also remains blank in provenance.
+
+Selected practical senses, spelling/reading restrictions, qualified temporal
+boundaries, and direct quiz guards remain subject to independent review.
+An authored commit or successful structural check is not review closure.
 
 ## Final verification
 
