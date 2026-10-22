@@ -366,6 +366,13 @@ The canonical [format](content-format.md), [authoring checks](../.github/instruc
   colloquial; that qualifier is now explicit on both new 脂 pages.
   A general next/following label on 次 does not itself establish the
   specific following-day meaning of 翌日.
+- Claude's changed-passage review found another 耕す overlap: 作る has
+  an unrestricted tillage sense in entry 1597890, sense 4. Neither
+  initial reviewer, the author nor GPT's first confirmation caught it.
+  A pinned-dictionary sweep across all existing written word forms and
+  permitted readings found the full direct tillage set: 起す, 打つ,
+  作る and 耕す. Check the defect class after a fix; do not stop at
+  the first named instances or mistake a temporal till for tilling soil.
 
 ## Review and checkpoint protocol
 
@@ -437,15 +444,16 @@ its later wording/comparison suggestions remain optional, not unresolved
 defects. These observations concern this shared sample, not a general
 ranking or proof of eliminated bias.
 
-Batch 18 has independent initial reviews, with original-reviewer
-confirmation of five corrected pages pending. Its fifteen
+Batch 18 has independent initial reviews and first changed-passage
+reports. Final narrow confirmation of the 耕す/作る safeguard and
+its citation-only kanji edit is pending. Its fifteen
 kanji and six supporting words bring the authored total to 270 additions
 and 808 exact source-reading rows. Counts are 890 kanji, 3,261 words and
 272 selected N2 characters, with 95 additions unauthored. All 34 new
-reading rows have lexical examples; the corrected packet retains 78 exact
-pairs and 75 complete entry families, including genuinely kana-only families.
+reading rows have lexical examples; the corrected packet retains 79 exact
+pairs and 76 complete entry families, including genuinely kana-only families.
 Ten older word changes are links only; no older kanji or stroke changes.
-The first seventeen batches remain review-closed. The three new direct
+The first seventeen batches remain review-closed. The four new direct
 quiz safeguards and optional register clarification are recorded in the
 ledger; structural checks do not substitute for changed-passage confirmation.
 

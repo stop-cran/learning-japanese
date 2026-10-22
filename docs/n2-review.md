@@ -1910,3 +1910,56 @@ and every preservation invariant. Repeated manifest builds are
 byte-identical with content version `515d15997b90eba1`.
 Original-reviewer confirmation of the committed five-page diff remains
 pending.
+
+### First confirmation and additional tillage safeguard
+
+The eleven-file correction was committed as
+`093d288e79ecdae3aa14ff6d1f00853c5bef6683`, with author and committer
+`stop-cran`. Both original sessions resumed sequentially on the actual
+five-page diff and complete revised pages. Each exited successfully on
+its original model with zero recorded edits. Unchanged reports are
+[GPT](n2-reviews/batch-18-gpt-followup.md) and
+[Claude](n2-reviews/batch-18-claude-followup.md).
+
+GPT marks all five pages CLEAN on all three facets and confirms F001
+and F002 resolved. Claude confirms the three added direct safeguards,
+the adopted O-3 qualifier and the other four pages CLEAN, but finds one
+more omission in 耕す. Claude explicitly acknowledges its initial
+misses and withdraws the earlier 翌日/次 limit: 次 has no day sense.
+
+**Claude R-1, minor coverage, resolved in the additional correction:**
+作る's beginner make/prepare label does not remove its tillage sense.
+Independent inspection of pinned entry 1597890 confirms sense 4,
+"to till", without spelling or reading restrictions blocking 作る/つくる.
+Added the direct 作る exclusion and exact record, updating both 耕
+citations. The pinned evidence raises the source confidence to high.
+This is an incompletely repaired defect class, not a regression.
+
+The author also swept the entire pinned JMdict download for till/
+plough/plow/cultivate glosses against every existing written word form,
+including permitted nonprimary readings and applicable-sense
+restrictions. The direct soil-tillage set is 起す, 打つ, 作る and
+耕す. Other matches concern education, cultivating character, or till
+as a temporal preposition; they do not justify extra exclusions.
+This is a bounded English-gloss sweep, not exhaustive synonymy proof.
+
+Both initial reviewers and the author missed 作る; GPT's first
+changed-passage confirmation also missed it. Claude's R-1 is a useful
+complementary later-stage finding, not an independent initial-review
+win. The initial GPT findings and optional Claude qualifier remain
+separately credited as above.
+
+The extra correction changes only 耕す's direct exclusion/citation
+and the 耕 kanji citation. The packet now has 79 exact records and
+76 complete families; there are twenty-four direct new-word safeguards.
+No reading row, count, old kanji, old stroke or older word text changes.
+Author-run validation reports zero errors, the cumulative audit retains
+808 exact rows, and the strict cumulative scope is 55 files including
+four reports. Manifest builds are byte-identical with version
+`857d926be5ae70dc`. Final confirmation of the actual committed two-page
+diff by both original reviewers remains pending.
+
+Claude's suggestion to add school-of-fish prose to 群れ remains
+optional and unadopted; the direct exclusion and existing broad group
+definition resolve the demonstrated ambiguity without another teaching
+change.
