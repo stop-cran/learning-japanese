@@ -523,7 +523,7 @@ and one supporting word, 蒸す, bring the authored total to 300 additions
 and 907 exact reading rows. Counts are 920 kanji, 3,266 words and 302
 selected N2 characters; 65 additions remain unauthored. The 59 new rows
 contain 54 lexical examples and five qualified source-only/index rows.
-The packet retains 77 exact pairs from 73 complete entry families.
+The corrected packet retains 85 exact pairs from 81 complete entry families.
 Twenty-one old word changes are links only; no old kanji or stroke
 changes are needed.
 
@@ -534,7 +534,20 @@ inside 触り with its actual written kana boundary; 薄's bound forms
 likewise have complete examples. A pinned spelling-family scan found
 no 袋 spelling with a reading containing だい, but that bounded absence
 does not prove a historical or compound reading impossible. 蒸す has
-three direct humid-heat quiz safeguards. A bounded steam/sultry/humidity
+three direct humid-heat quiz safeguards and six English-label safeguards.
+A bounded steam/sultry/humidity
 sense sweep against existing card identities distinguishes these
 overlaps from nouns for vapour, steam trains, and steaming-hot food
 states; it is not exhaustive synonymy certification.
+
+Both initial reviewers completed on the same blind snapshot, one
+process at a time. GPT identified English weather senses of "sticky"
+and "close"; Claude identified the omitted 布袋 ほてい homograph.
+The corrections explicitly separate English-label ambiguity from
+Japanese synonyms, and lexical recognition from comparative frequency.
+Context-bound phrases such as "close friend" do not automatically
+inherit every dictionary meaning of bare "close." Claude's optional
+裏面 うらめん clarification and cleaner 補 distractor were also adopted.
+These complementary observations are useful sample-specific evidence,
+not a model ranking or a guarantee of completeness. Original-reviewer
+confirmation of the corrected passages remains pending.

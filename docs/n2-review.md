@@ -2286,3 +2286,67 @@ and a bounded noninteractive probe. Both attempts were stopped without
 changing Git configuration. The local draft therefore uses a per-command
 unsigned commit, retaining the requested `stop-cran` author and committer;
 it is not represented as signed. Nothing is pushed.
+
+### Independent initial review and reconciliation
+
+The identical clean draft, `adaf3b4c7349e9d7ecb1360b91e9cd85d1ae20ac`,
+was reviewed by GPT `gpt-6.1-sol`, session
+`9eced8f8-8890-408e-aef2-7f603c074e68`, then Claude
+`claude-opus-5.5`, session `66257c64-8b18-4281-b15a-650e26a591a8`.
+The first process exited before the second started. Both completed
+successfully with zero recorded edits; their unchanged final reports
+were archived only after both exited:
+[GPT](n2-reviews/batch-20-gpt-initial.md) and
+[Claude](n2-reviews/batch-20-claude-initial.md).
+Both covered all sixteen new pages and twenty-one related passages.
+Neither executed Git, the validator or the app.
+
+- **GPT-20-01, minor correctness: corrected, confirmation pending.**
+  American Heritage's *sticky*, adjective sense 3, and *close*,
+  adjective sense 14, explicitly permit humid weather. Six existing
+  labels retain those unqualified English words, including closing
+  verbs with a different pronunciation. Six direct pairs on 蒸す
+  protect べたべた, 密, 近い, 親しい, 閉じる and 閉まる without editing
+  those older articles. The explanation distinguishes English-label
+  ambiguity from Japanese synonymy. The dictionary overlap is
+  established; practical ambiguity of the complete multi-gloss labels
+  remains medium-confidence, not an observed runtime failure.
+- **Claude F-01, minor comprehensibility: corrected, confirmation
+  pending.** The pinned dictionary independently confirms 布袋 ほてい,
+  entry 1690880, separate from cloth-bag ふたい/ぬのぶくろ, entry
+  1690870. The 袋 note now identifies that homograph. No unsupported
+  "best-known" reading or comparative-frequency claim was adopted.
+- **Claude O-01 and O-03: optional improvements adopted.** 裏 now
+  mentions the independently checked 裏面 うらめん entry 1550670
+  alongside valid りめん, without ranking their frequency. 補 uses
+  複 instead of 被 as a cleaner wrong answer; the weak English
+  "cover" overlap is not promoted to an established original defect.
+- **Claude O-02, O-04 and O-05: optional, not adopted.** 家訓 already
+  discloses かくん alongside the verified かきん; headword order does
+  not prove a frequency ranking. 蒸す already distinguishes ほかほか's
+  comfortably warm state from cooking and sultry weather; a shared
+  English stem does not by itself require another pair. Unchanged
+  hiragana reading notation in 訓練 remains outside this batch's scope.
+
+The author inspected all eight added exact records, their complete
+spelling/reading families and applicable senses. The corrected packet
+has 85 exact records from 81 complete families; the 59 reading rows and
+54 lexical/five lookup split are unchanged. The nine direct 蒸す pairs
+are not expanded into a transitive clique. A title sweep distinguished
+bare English labels from context-bound phrases such as "close friend,"
+"close by" and "draw to a close"; no blanket substring rule was applied.
+
+GPT's English-label finding and Claude's homograph finding were
+distinct useful contributions on the matched blind snapshot; each
+marked the other's affected page CLEAN. Claude also supplied the two
+adopted optional changes. This shows complementary observations on
+this sample, not a ranking of model families or eliminated model bias.
+
+The author reran the exact baseline/source/preservation checks,
+zero-error validator and deterministic manifest builds, now content
+version `f07655f54123151e`. All twenty-one older-word changes remain
+links only, and no older kanji or stroke asset changed. Counts remain
+920 kanji, 3,266 words and 302 selected N2 characters. The current
+59-file batch scope includes the two initial reports. Changed-passage
+confirmation by the original reviewers is still pending; batch 20 is
+not yet review-closed.
