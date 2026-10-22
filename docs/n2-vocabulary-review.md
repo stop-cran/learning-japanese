@@ -2,10 +2,10 @@
 
 ## Status
 
-**Pilot reviewed; corrections awaiting confirmation.** The target is all 1,812 source rows,
+**Pilot review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 20 rows are drafted; 1,792 remain pending. No row is review-closed yet.
+The first 20 rows are review-closed; 1,792 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -27,7 +27,7 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 01: N2:2-N2:21
 
-**Status:** initial independent reviews complete; corrected draft awaiting confirmation.
+**Status:** closed after independent initial reviews, corrections and bounded confirmation.
 
 Scope: あいかわらず, アイデア, アイディア, 曖昧, 遭う, 扇ぐ, 青白い,
 あかんぼう, 明き, あきれる, アクセント, 欠伸, 飽くまで, 明け方, 揚げる,
@@ -61,7 +61,7 @@ disclose that limit. The author checked the clean committed snapshot and exact c
 
 ### Reconciliation
 
-The following changes are implemented but not yet review-closed:
+The following changes are implemented and confirmed on the corrected snapshot:
 
 | Initial finding | Decision and evidence |
 | --- | --- |
@@ -81,6 +81,32 @@ Optional expansions were not required for closure: more spellings/homophones for
 そくせき lesson, a set phrase for あきれる, alternative 味わう examples, and dash style.
 The suggested アイディア spelling-note polish is also optional. Counts of priority tags are not
 used as a measured ranking of spelling frequency.
+
+### Confirmation and closure
+
+Both original model families independently checked correction commit
+`2ca51500880851eae1d5cd3e6eef9ff7165d1329`, parent
+`fe744d204feaeb554fce6df934cfafed81419be5`, against the actual six-article correction diff.
+Each received only its own initial report, with the same bounded scope and source access:
+eight direct exclusions, two navigation links and two clarified warnings. Neither received
+the other review or the author's adjudication. GPT exited before Claude started; usage
+receipts confirmed the requested models and no file edits.
+
+- [GPT confirmation](n2-vocabulary-reviews/batch-01-gpt-confirmation.md):
+  `gpt-6.1-sol`; initial F01-F05 resolved, all six changed-passage verdicts CLEAN.
+- [Claude confirmation](n2-vocabulary-reviews/batch-01-claude-confirmation.md):
+  `claude-opus-5.5`; initial F1-F3 resolved, all six changed-passage verdicts CLEAN.
+
+Both found no actionable regression or consequential unresolved claim in the assigned changes.
+The original whole-article verdicts and these bounded confirmations together support closure;
+confirmation is not represented as a new full-pilot review. Their file-only Git/hash and
+unexecuted-runtime limits remain explicit in the reports. The author verified the committed
+snapshot, source/index integrity, baseline preservation and reciprocal links separately.
+
+Claude's remaining wording polish for 飽くまで and optional 相 reading, comparison candidates
+たいてい/普通, set phrase and alternative example are nonblocking suggestions. They do not
+establish a defect in the reviewed snapshot and were not added merely to prolong review.
+The first 20 source rows and batch evidence are now marked closed.
 
 ### Usefulness of two model families
 
