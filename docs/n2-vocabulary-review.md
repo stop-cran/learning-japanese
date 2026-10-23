@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-12 review-closed; batch 13 drafted.** The target is all 1,812 source rows,
+**Batches 01-13 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 240 rows are review-closed; twenty are draft and 1,552 remain pending.
+The first 260 rows are review-closed; none are draft and 1,552 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -1565,7 +1565,7 @@ not the full vocabulary expansion or native-speaker certification.
 
 ## Batch 13: N2:242-N2:261
 
-**Status:** initial reviews reconciled; bounded confirmations pending.
+**Status:** closed after independent initial reviews, corrections and bounded confirmation.
 
 Scope: 回転, 解答, 回答, 外部, 解放, 開放, 海洋, 概論,
 帰す, 却って, 代える, 反る, 家屋, 係わる, 書留, 書取,
@@ -1663,6 +1663,54 @@ wording. Some initial severity/correctness framing was stronger than
 the evidence required, and the stagk suggestion was unsupported.
 This batch shows complementary useful coverage and review noise,
 not a general model ranking or proof of native-speaker correctness.
+
+### Confirmation and closure
+
+Both original reviewers checked correction commit
+`2a0eaee7685c42e869db924831dbb4bb71050e20`, parent
+`033d125b6c4aa4438587e603296d582f2750195d`, against the actual
+nine-card and provenance diff. They received the same bounded
+scope, their own initial reports and the same source access,
+without the other family's report or the author's reconciliation:
+
+- [GPT confirmation](n2-vocabulary-reviews/batch-13-gpt-confirmation.md):
+  `gpt-6.1-sol`; all eight original findings resolved.
+- [Claude confirmation](n2-vocabulary-reviews/batch-13-claude-confirmation.md):
+  `claude-opus-5.5`; all five original findings resolved.
+
+Both found no actionable regression or consequential unresolved
+claim in the changed scope. Actual-model usage receipts record
+zero file edits; the processes ran sequentially and exited.
+The first GPT confirmation attempt was interrupted without a
+completed report; it exited before the same original session
+was retried successfully. It supplies no additional verdict.
+
+Both independently retrieved the Weblio turn-over construction.
+GPT also checked the life-or-death phrase and the official
+JMdict DTD. Claude withdrew its guest-example, alternative-release,
+mandatory-send/escort and stagk-defect interpretations. The
+remaining suggestions are nonblocking: explicitly repeating that
+both 返る and 反る can express turning over, another 根 reading-row
+example, and deduplicating identical families across the initial
+and correction evidence. The present card already introduces the
+turn-over sense under 返る and recognizes 反る; the separate
+correction-family set is intentionally self-contained. A
+cross-reference to 帰する alone does not establish a literary
+register for 帰す/きす, so that suggested label is not added.
+
+File-only reviewers did not independently execute Git, extraction,
+hash or app checks. Before closing, the author verified both
+frozen snapshots against their commits and checked the confirmed
+cards, packet, manifest, prompt and actual patch hashes unchanged.
+The generated manifest remains identical to the confirmed correction.
+
+Cumulative coverage is **260 closed, 0 draft, 1,552 pending and
+0 unresolved** rows, mapped to 255 distinct articles: 231 new and
+24 reused. There are 3,504 word articles and 51 reciprocal N2
+kanji-word pairs. All 3,273 baseline identities, primary readings,
+titles and original exclusion lists remain preserved. This closes
+batch 13, not the full vocabulary expansion or native-speaker
+certification.
 
 ## Final verification
 
