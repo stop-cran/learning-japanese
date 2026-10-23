@@ -95,6 +95,11 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 27 closure:** Distinguish compact rendering lines from lexical
+  records when reporting inspection counts: ENTRY headings and array
+  lines are not additional senses. Preserve the authentic reviewer
+  disagreement and clarify the counting unit rather than rewriting
+  historical evidence to make reports appear to agree.
 - **Batch 27 confirmation:** Follow a missed duty-label pair through
   other actual duty/responsibility answers, not through an exclusion
   clique. 公務/役・役割・係・責任 each has positive task/duty evidence;

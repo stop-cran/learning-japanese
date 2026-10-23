@@ -4021,8 +4021,8 @@ This closes batch 26, not the full vocabulary expansion.
 
 ## Batch 27: N2:522-N2:541
 
-**Status:** drafted; initial reviews and author adjudication complete;
-original-session confirmations pending.
+**Status:** review-closed after sequential independent initial reviews,
+evidence-based corrections and two original-session confirmation rounds.
 
 Scope: 高度, 高等, 合同, 後輩, 公表, 鉱物, 公務, 項目,
 紅葉, 合理, 交流, 合流, 効力, 超える, コース, コーラス,
@@ -4183,11 +4183,64 @@ This additional pass was useful: Claude exposed a first-review miss,
 its tentative role/duties observation gained positive support, and
 the author's bounded class-level sweep found two more task-label
 overlaps. Neither report's original CLEAN verdict is treated as
-exhaustive certification. Reconfirmation and authentication are pending.
+exhaustive certification.
 
-Current index: **520 closed, 20 draft, 1,272 pending and 0 unresolved**
+### Final bounded confirmations and closure
+
+Both original reviewers resumed sequentially on
+`c98832d1bc9f30ea040829e23a1fe79d8db85f7e`, after the six-card
+correction at `ac74524ac2d47d12c0b2caf8bd430f47f9ab580b`.
+The [GPT follow-through](n2-vocabulary-reviews/batch-27-gpt-followup.md)
+and [Claude follow-through](n2-vocabulary-reviews/batch-27-claude-followup.md)
+report CLEAN correctness, scoped coverage and comprehensibility for
+the single changed 公務 passage and appended evidence. B27-03 and
+the four direct duty-label pairs are resolved; no actionable defect
+or consequential unresolved claim remains in scope. These are bounded
+confirmations, not renewed whole-batch reviews.
+
+GPT read all six appended families and four comparison cards. Claude
+read the patch and cards, spot-checked bounded derivative sections,
+performed its own title sweep and retrieved selected Jisho entries.
+Its suggested closing scope sentence remains optional: 公務's Meaning
+section already defines the public/official boundary, and each comparison
+is qualified. No content change is needed. Claude could not reconcile
+the author's "thirty readable records" count. That count is thirty
+nonempty lines in the private rendering: six ENTRY headings, six spelling
+arrays, six reading arrays and twelve sense lines, not thirty lexical
+senses. This reporting-unit clarification does not change source data;
+the genuine report and historical evidence remain unchanged.
+
+Author-executed authentication checked the authored
+`84a79c01fe6b2b669652802823ca0fc09c25fe98` and both correction
+commits, their parent chain, stop-cran identities, trailers, committed
+file hashes, actual patches, common prompts and all three derivatives.
+It verified append-only preservation of original and first-correction
+evidence, both six-family additions against complete extraction outputs,
+nine direct additions, four removals and the final 111 declarations.
+Each original native session contains exactly the three expected common
+requests with the actual model and start time, zero edits, and final
+assistant text matching its genuine archive after disclosed preamble/
+Markdown normalization. These checks were executed by the author, not
+by the file-only reviewers.
+
+Dual-family review was complementary on this batch, including Claude's
+late duty-label catch and independent follow-through. GPT acknowledged
+its earlier missed gaps. Neither convergence nor the author's provenance
+checks establish exhaustive dictionary coverage or native-speaker/
+corpus certification. 紅葉's unrecovered historical compiler intent
+remains explicitly qualified and nonblocking, rather than silently
+asserted resolved.
+
+Closure checks preserve all 3,273 baseline identities, readings, titles,
+kanji arrays and easier levels, with only previously documented earlier
+batch exclusion exceptions. The 3,773-word collection retains all
+tracked reciprocal N2 links, including 126 distinct primary-form pairs
+on new articles. Structural validation, coverage/preservation audit,
+deterministic manifest regeneration and whitespace checks passed.
+
+Current index: **540 closed, 0 draft, 1,272 pending and 0 unresolved**
 rows, mapped to 534 distinct articles: 500 new and 34 reused.
-No draft row is claimed review-closed.
+This closes batch 27, not the full vocabulary expansion.
 
 ## Final verification
 
