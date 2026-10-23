@@ -2049,7 +2049,7 @@ full vocabulary expansion.
 
 ## Batch 16: N2:302-N2:321
 
-**Status:** initial reviews reconciled; bounded confirmations pending.
+**Status:** initial correction confirmed; narrow follow-through pending.
 
 Scope: 学科, 学会, 楽器, 学級, 担ぐ, 括弧, 活字, 活躍,
 活力, 仮定, 過程, 課程, 仮名, 仮名遣い, 鐘, 加熱,
@@ -2184,6 +2184,63 @@ count establishes correctness or a general model ranking.
 Both reviewers disclose file-only Git/hash limits, selective
 comparison coverage, unexecuted app behavior and lack of
 native-speaker/corpus certification.
+
+### Bounded confirmation and follow-through
+
+The original reviewer sessions independently confirmed
+`d93bc31ff036cc2588f162183abd9ab10182e32f`, directly after
+the authored snapshot. Each received its own initial report,
+the same seven-article assignment, the actual content/source
+diff and source access, without the other model's report or
+the author's review ledger.
+
+The [GPT confirmation](n2-vocabulary-reviews/batch-16-gpt-confirmation.md)
+resolves all four original findings. The
+[Claude confirmation](n2-vocabulary-reviews/batch-16-claude-confirmation.md)
+resolves all four of its original findings, explicitly rejects
+its earlier frequency implication, and withdraws the optional
+仮名遣い/送り仮名 guard. Both read every changed article,
+all twelve comparison cards, both orthography cards, all
+thirteen complete correction families and relevant principal
+records. Both find the seven changed contexts and evidence
+additions CLEAN in all three facets, with no actionable
+regression. Their actual-model receipts record zero file
+edits; the processes ran sequentially and exited.
+
+GPT independently re-fetched the actual Kotobank and Bunpro
+pages. Claude relied on its original Kotobank inspection and
+the supplied new records, without a fresh Bunpro fetch.
+The original extra-example suggestions remain optional.
+
+Claude also raises 困難 and 無理 as nonblocking further
+guards. Reading their complete existing cards and re-extracting
+both complete families establishes the same difficulty/inability
+label class: 困難 1289620:1-2 includes euphemistic inability
+to carry out, and 無理 1530970:2 covers impossibility under
+the circumstances. Their different word classes do not by
+themselves disambiguate an English answer. The author therefore
+adds both direct guards on 兼ねる, without changing its
+teaching or the baseline comparison cards.
+
+This bounded follow-through appends two complete families
+and two pair records, bringing correction totals to fifteen
+families and fourteen pairs. Both pinned source hashes were
+verified again. The first thirteen families, first twelve
+pair records, both new inspection receipts and all authored
+evidence remain unchanged. These are confirmation-stage
+leads, not additional blind-initial discoveries in the model
+comparison above.
+
+Before the follow-through, the author authenticated both frozen
+commits and parentage, every frozen file, prompt and patch
+hash, the confirmed tree/manifest hashes and all four actual
+model/zero-edit receipts. The initial linguistic patch omitted
+the generated manifest deliberately; the regenerated manifest
+was committed and separately hash-pinned. Claude's inability
+to establish that from the linguistic patch is a disclosed
+review limit, not an uncommitted-manifest finding. Neither
+reviewer executed Git, extraction, hashing, the app or its
+manifest generator.
 
 ## Final verification
 
