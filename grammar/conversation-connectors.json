@@ -1,0 +1,2491 @@
+{
+  "schemaVersion": 1,
+  "id": "conversation-connectors",
+  "title": "Conversation endings and discourse links",
+  "article": "articles/explanations-quotations-and-endings.md",
+  "constructions": [
+    {
+      "id": "kana",
+      "label": "Short kana ending"
+    },
+    {
+      "id": "nodarouka",
+      "label": "Explicit no-darou-ka frame"
+    },
+    {
+      "id": "kashira",
+      "label": "Short kashira ending"
+    },
+    {
+      "id": "janai-ka",
+      "label": "Short ja-nai-ka frame"
+    },
+    {
+      "id": "kai",
+      "label": "Short kai question"
+    },
+    {
+      "id": "background-preface",
+      "label": "Background introducing or inviting the next move"
+    },
+    {
+      "id": "contrasted-facts",
+      "label": "An explicit contrast between stated facts"
+    },
+    {
+      "id": "added-point",
+      "label": "An added consideration"
+    },
+    {
+      "id": "consequence",
+      "label": "A stated consequence"
+    },
+    {
+      "id": "maintained-despite",
+      "label": "An outcome or choice maintained despite an obstacle"
+    },
+    {
+      "id": "counterpoint",
+      "label": "Contrasting properties"
+    },
+    {
+      "id": "continuation-request",
+      "label": "A request to continue the account"
+    },
+    {
+      "id": "plain-style",
+      "label": "Plain ending in the selected voice"
+    },
+    {
+      "id": "polite-style",
+      "label": "Polite ending in the selected voice"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "wondering",
+      "label": "Build a named wondering ending without losing the predicate",
+      "constructions": [
+        "kana",
+        "nodarouka",
+        "kashira"
+      ]
+    },
+    {
+      "id": "questions",
+      "label": "Build a named confirmation or familiar-question frame",
+      "constructions": [
+        "janai-ka",
+        "kai"
+      ]
+    },
+    {
+      "id": "prefaces",
+      "label": "Read explanatory background versus an explicit comparison",
+      "constructions": [
+        "background-preface",
+        "contrasted-facts"
+      ]
+    },
+    {
+      "id": "discourse",
+      "label": "Identify the selected link between whole messages",
+      "constructions": [
+        "added-point",
+        "consequence",
+        "maintained-despite",
+        "counterpoint",
+        "continuation-request"
+      ]
+    },
+    {
+      "id": "register",
+      "label": "Separate the selected ending's form from formality and quotation",
+      "constructions": [
+        "plain-style",
+        "polite-style"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "conversation-connectors-breakfast-kana",
+      "jlpt": 4,
+      "target": "kana",
+      "relationship": "wondering",
+      "prompt": "もう朝ご飯を____。",
+      "translation": "Base: 食べました（たべました）, ate. Convert the whole predicate into the named かな wondering frame, preserving the supplied time and polarity. Use the short plain pattern without explanatory の／なの or an extra copula. This is a written-base conversion: retain the supplied base's kanji or write that base in hiragana. Use the ending's displayed hiragana exactly, with no elongation, added particle or paraphrase.",
+      "evidence": "Each ending varies the actual conversion: past verb versus bare nominal; negative irregular verb versus past nominal; godan recovery versus na-adjective copula removal.",
+      "explanation": "Recover the ichidan plain past 食べた, then attach かな. The speaker wonders whether breakfast has already been eaten; the ending does not certify the answer.",
+      "answer": "kana",
+      "acceptedAnswers": [
+        "食べたかな",
+        "たべたかな"
+      ],
+      "options": [
+        {
+          "id": "kana",
+          "label": "食べたかな",
+          "rationale": "Recover the ichidan plain past 食べた, then attach かな. The speaker wonders whether breakfast has already been eaten; the ending does not certify the answer."
+        },
+        {
+          "id": "nodarouka",
+          "label": "食べたのだろうか",
+          "rationale": "This uses the のだろうか frame rather than the named かな frame. It can be natural in another request; this is not a universal meaning or gender prohibition."
+        },
+        {
+          "id": "kashira",
+          "label": "食べたかしら",
+          "rationale": "This uses the かしら frame rather than the named かな frame. It can be natural in another request; this is not a universal meaning or gender prohibition."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "934ef552b9b7447c4d73ce814ae8db302597b48b6b36c2d574f119003cf0b024",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "もう",
+            "reading": "もう",
+            "headword": "もう",
+            "gloss": "already"
+          },
+          {
+            "start": 2,
+            "end": 5,
+            "text": "朝ご飯",
+            "reading": "あさごはん",
+            "headword": "朝ご飯",
+            "gloss": "breakfast"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-student-kana",
+      "jlpt": 4,
+      "target": "kana",
+      "relationship": "wondering",
+      "prompt": "あの人は____。",
+      "translation": "Base: 学生です（がくせいです）, is a student. Convert the whole predicate into the named かな wondering frame, preserving the supplied time and polarity. Use the short plain pattern without explanatory の／なの or an extra copula. This is a written-base conversion: retain the supplied base's kanji or write that base in hiragana. Use the ending's displayed hiragana exactly, with no elongation, added particle or paraphrase.",
+      "evidence": "Each ending varies the actual conversion: past verb versus bare nominal; negative irregular verb versus past nominal; godan recovery versus na-adjective copula removal.",
+      "explanation": "Remove the polite nominal copula for this short frame: 学生かな, not 学生だかな. The question concerns whether the person is a student.",
+      "answer": "kana",
+      "acceptedAnswers": [
+        "学生かな",
+        "がくせいかな"
+      ],
+      "options": [
+        {
+          "id": "kana",
+          "label": "学生かな",
+          "rationale": "Remove the polite nominal copula for this short frame: 学生かな, not 学生だかな. The question concerns whether the person is a student."
+        },
+        {
+          "id": "nodarouka",
+          "label": "学生なのだろうか",
+          "rationale": "This uses the なのだろうか frame rather than the named かな frame. It can be natural in another request; this is not a universal meaning or gender prohibition."
+        },
+        {
+          "id": "kashira",
+          "label": "学生かしら",
+          "rationale": "This uses the かしら frame rather than the named かな frame. It can be natural in another request; this is not a universal meaning or gender prohibition."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "05a444d2368c43034cf062723d739ea47fecddc7eb4eeed46fe9213ee18e1619",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "あの",
+            "reading": "あの",
+            "headword": "あの",
+            "gloss": "that; modifying the following noun"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "person"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-bus-negative-wonder",
+      "jlpt": 4,
+      "target": "nodarouka",
+      "relationship": "wondering",
+      "prompt": "バスは本当に____。",
+      "translation": "Base: 来ません（きません）, does not/will not come. Convert the whole predicate into the named のだろうか wondering frame, preserving the supplied time and polarity. For this explicit frame retain uncontracted の and short plain だろうか; do not omit の or substitute ん/でしょうか. This is a written-base conversion: retain the supplied base's kanji or write that base in hiragana. Use the ending's displayed hiragana exactly, with no elongation, added particle or paraphrase.",
+      "evidence": "Each ending varies the actual conversion: past verb versus bare nominal; negative irregular verb versus past nominal; godan recovery versus na-adjective copula removal.",
+      "explanation": "来ません becomes 来ない. Keep that negative proposition before のだろうか; the speaker is wondering whether the bus really will not come, not asserting its arrival.",
+      "answer": "nodarouka",
+      "acceptedAnswers": [
+        "来ないのだろうか",
+        "こないのだろうか"
+      ],
+      "options": [
+        {
+          "id": "kana",
+          "label": "来ないかな",
+          "rationale": "This uses the かな frame rather than the named のだろうか frame. It can be natural in another request; this is not a universal meaning or gender prohibition."
+        },
+        {
+          "id": "nodarouka",
+          "label": "来ないのだろうか",
+          "rationale": "来ません becomes 来ない. Keep that negative proposition before のだろうか; the speaker is wondering whether the bus really will not come, not asserting its arrival."
+        },
+        {
+          "id": "kashira",
+          "label": "来ないかしら",
+          "rationale": "This uses the かしら frame rather than the named のだろうか frame. It can be natural in another request; this is not a universal meaning or gender prohibition."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "06d8662fb1df701a85afe78e97566bd03a7944f53f9137e974396cfd38d6d899",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "バス",
+            "reading": "ばす",
+            "headword": "バス",
+            "gloss": "bus"
+          },
+          {
+            "start": 3,
+            "end": 6,
+            "text": "本当に",
+            "reading": "ほんとうに",
+            "headword": "本当に",
+            "gloss": "really"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-shop-past-wonder",
+      "jlpt": 4,
+      "target": "nodarouka",
+      "relationship": "wondering",
+      "prompt": "昨日、店は____。",
+      "translation": "Base: 休みでした（やすみでした）, was closed. Convert the whole predicate into the named のだろうか wondering frame, preserving the supplied time and polarity. For this explicit frame retain uncontracted の and short plain だろうか; do not omit の or substitute ん/でしょうか. This is a written-base conversion: retain the supplied base's kanji or write that base in hiragana. Use the ending's displayed hiragana exactly, with no elongation, added particle or paraphrase.",
+      "evidence": "Each ending varies the actual conversion: past verb versus bare nominal; negative irregular verb versus past nominal; godan recovery versus na-adjective copula removal.",
+      "explanation": "The past nominal predicate is 休みだった. Retain だった before のだろうか; do not insert the affirmative-nonpast な after an already past predicate.",
+      "answer": "nodarouka",
+      "acceptedAnswers": [
+        "休みだったのだろうか",
+        "やすみだったのだろうか"
+      ],
+      "options": [
+        {
+          "id": "kana",
+          "label": "休みだったかな",
+          "rationale": "This uses the かな frame rather than the named のだろうか frame. It can be natural in another request; this is not a universal meaning or gender prohibition."
+        },
+        {
+          "id": "nodarouka",
+          "label": "休みだったのだろうか",
+          "rationale": "The past nominal predicate is 休みだった. Retain だった before のだろうか; do not insert the affirmative-nonpast な after an already past predicate."
+        },
+        {
+          "id": "kashira",
+          "label": "休みだったかしら",
+          "rationale": "This uses the かしら frame rather than the named のだろうか frame. It can be natural in another request; this is not a universal meaning or gender prohibition."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d270942d3e6f3a7b37ebae8f34cbc00fa51a3f93d39402053bb558cd1f08c128",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "昨日",
+            "reading": "きのう",
+            "headword": "昨日",
+            "gloss": "yesterday"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-teacher-reading-wonder",
+      "jlpt": 4,
+      "target": "kashira",
+      "relationship": "wondering",
+      "prompt": "先生は____。",
+      "translation": "Base: 読みます（よみます）, reads/will read. Convert the whole predicate into the named かしら wondering frame, preserving the supplied time and polarity. Use the short plain pattern without explanatory の／なの or an extra copula. This is a written-base conversion: retain the supplied base's kanji or write that base in hiragana. Use the ending's displayed hiragana exactly, with no elongation, added particle or paraphrase.",
+      "evidence": "Each ending varies the actual conversion: past verb versus bare nominal; negative irregular verb versus past nominal; godan recovery versus na-adjective copula removal.",
+      "explanation": "Recover godan 読む from 読みます, then attach かしら. Its stylistic association does not identify the speaker's gender.",
+      "answer": "kashira",
+      "acceptedAnswers": [
+        "読むかしら",
+        "よむかしら"
+      ],
+      "options": [
+        {
+          "id": "kana",
+          "label": "読むかな",
+          "rationale": "This uses the かな frame rather than the named かしら frame. It can be natural in another request; this is not a universal meaning or gender prohibition."
+        },
+        {
+          "id": "nodarouka",
+          "label": "読むのだろうか",
+          "rationale": "This uses the のだろうか frame rather than the named かしら frame. It can be natural in another request; this is not a universal meaning or gender prohibition."
+        },
+        {
+          "id": "kashira",
+          "label": "読むかしら",
+          "rationale": "Recover godan 読む from 読みます, then attach かしら. Its stylistic association does not identify the speaker's gender."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "0d9f411e0c7149e961393ed8e22b491b9a9484fdff79e39b2eb779e4c02f340a",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-library-quiet-wonder",
+      "jlpt": 4,
+      "target": "kashira",
+      "relationship": "wondering",
+      "prompt": "図書館は夜も____。",
+      "translation": "Base: 静かです（しずかです）, is quiet. Convert the whole predicate into the named かしら wondering frame, preserving the supplied time and polarity. Use the short plain pattern without explanatory の／なの or an extra copula. This is a written-base conversion: retain the supplied base's kanji or write that base in hiragana. Use the ending's displayed hiragana exactly, with no elongation, added particle or paraphrase.",
+      "evidence": "Each ending varies the actual conversion: past verb versus bare nominal; negative irregular verb versus past nominal; godan recovery versus na-adjective copula removal.",
+      "explanation": "Use the na-adjective base 静か before short かしら. Do not retain an extra だ or です in this requested plain frame.",
+      "answer": "kashira",
+      "acceptedAnswers": [
+        "静かかしら",
+        "しずかかしら"
+      ],
+      "options": [
+        {
+          "id": "kana",
+          "label": "静かかな",
+          "rationale": "This uses the かな frame rather than the named かしら frame. It can be natural in another request; this is not a universal meaning or gender prohibition."
+        },
+        {
+          "id": "nodarouka",
+          "label": "静かなのだろうか",
+          "rationale": "This uses the なのだろうか frame rather than the named かしら frame. It can be natural in another request; this is not a universal meaning or gender prohibition."
+        },
+        {
+          "id": "kashira",
+          "label": "静かかしら",
+          "rationale": "Use the na-adjective base 静か before short かしら. Do not retain an extra だ or です in this requested plain frame."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "230f8d8f92fadef2fbc704db4b8a0949c7b6e625d6f404770a7ea0bc2c3962f1",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "図書館",
+            "reading": "としょかん",
+            "headword": "図書館",
+            "gloss": "library"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "夜",
+            "reading": "よる",
+            "headword": "夜",
+            "gloss": "night"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-completed-task-confirm",
+      "jlpt": 4,
+      "target": "janai-ka",
+      "relationship": "questions",
+      "prompt": "仕事はもう____。",
+      "translation": "Base: 終わりました（おわりました）, finished. Preserve its time and polarity, converting it to the short plain じゃないか frame. Use the final confirmation construction, putting the supplied proposition forward for agreement; keep the whole base predicate before it. This is a written-base conversion: retain the supplied base's kanji or write that base in hiragana. Use the ending's displayed hiragana exactly, with no elongation, added particle or paraphrase.",
+      "evidence": "Confirmation preserves a positive verbal proposition versus an internally negative adjective; familiar questions require sound-changed past recovery versus nominal copula removal.",
+      "explanation": "Recover the godan plain past 終わった and attach じゃないか. In the stated confirmation use, completion is put forward for agreement, not negated by the final じゃないか.",
+      "answer": "janai-ka",
+      "acceptedAnswers": [
+        "終わったじゃないか",
+        "おわったじゃないか"
+      ],
+      "options": [
+        {
+          "id": "janai-ka",
+          "label": "終わったじゃないか",
+          "rationale": "Recover the godan plain past 終わった and attach じゃないか. In the stated confirmation use, completion is put forward for agreement, not negated by the final じゃないか."
+        },
+        {
+          "id": "kai",
+          "label": "終わったかい",
+          "rationale": "This supplies かい, not the requested じゃないか construction. Both endings can participate in questions; the task is a named conversion, not an exclusive social-context rule."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "02e2b37b2f1907c1b60d84a30d8707436a3e80d1fbba0d0d558f4d28ccb2fb46",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "仕事",
+            "reading": "しごと",
+            "headword": "仕事",
+            "gloss": "work; task"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "もう",
+            "reading": "もう",
+            "headword": "もう",
+            "gloss": "already"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-price-negative-confirm",
+      "jlpt": 4,
+      "target": "janai-ka",
+      "relationship": "questions",
+      "prompt": "このかばんは____。",
+      "translation": "Base: 高くありません（たかくありません）, is not expensive. Preserve its time and polarity, converting it to the short plain じゃないか frame. Use the final confirmation construction, putting the supplied proposition forward for agreement; keep the whole base predicate before it. This is a written-base conversion: retain the supplied base's kanji or write that base in hiragana. Use the ending's displayed hiragana exactly, with no elongation, added particle or paraphrase.",
+      "evidence": "Confirmation preserves a positive verbal proposition versus an internally negative adjective; familiar questions require sound-changed past recovery versus nominal copula removal.",
+      "explanation": "Keep the adjective's negative 高くない before the final じゃないか. The proposition put forward here is that the bag is not expensive; the inner negative does not disappear.",
+      "answer": "janai-ka",
+      "acceptedAnswers": [
+        "高くないじゃないか",
+        "たかくないじゃないか"
+      ],
+      "options": [
+        {
+          "id": "janai-ka",
+          "label": "高くないじゃないか",
+          "rationale": "Keep the adjective's negative 高くない before the final じゃないか. The proposition put forward here is that the bag is not expensive; the inner negative does not disappear."
+        },
+        {
+          "id": "kai",
+          "label": "高くないかい",
+          "rationale": "This supplies かい, not the requested じゃないか construction. Both endings can participate in questions; the task is a named conversion, not an exclusive social-context rule."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "a870d5ebcf0d9bcf6e198bbdedb3fdae7d188a2e0dcd11270f08144a904d6b4a",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 2,
+            "end": 5,
+            "text": "かばん",
+            "reading": "かばん",
+            "headword": "かばん",
+            "gloss": "bag"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-tea-past-question",
+      "jlpt": 4,
+      "target": "kai",
+      "relationship": "questions",
+      "prompt": "お茶はもう____。",
+      "translation": "Base: 飲みました（のみました）, drank. Preserve its time and polarity, converting it to the short plain かい frame. Use the familiar-question pattern without explanatory の／なの or an extra copula. This is a written-base conversion: retain the supplied base's kanji or write that base in hiragana. Use the ending's displayed hiragana exactly, with no elongation, added particle or paraphrase.",
+      "evidence": "Confirmation preserves a positive verbal proposition versus an internally negative adjective; familiar questions require sound-changed past recovery versus nominal copula removal.",
+      "explanation": "Godan 飲む has the plain past 飲んだ. Attach かい to make the requested familiar question; the ending does not prove accusation or identify the speaker's gender.",
+      "answer": "kai",
+      "acceptedAnswers": [
+        "飲んだかい",
+        "のんだかい"
+      ],
+      "options": [
+        {
+          "id": "janai-ka",
+          "label": "飲んだじゃないか",
+          "rationale": "This supplies じゃないか, not the requested かい construction. Both endings can participate in questions; the task is a named conversion, not an exclusive social-context rule."
+        },
+        {
+          "id": "kai",
+          "label": "飲んだかい",
+          "rationale": "Godan 飲む has the plain past 飲んだ. Attach かい to make the requested familiar question; the ending does not prove accusation or identify the speaker's gender."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "8584e0b7a27dc9452ad5d7e98cbbda812cdd9f442ec6cbbbc9966a30eb20b406",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "お茶",
+            "reading": "おちゃ",
+            "headword": "お茶",
+            "gloss": "tea"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "もう",
+            "reading": "もう",
+            "headword": "もう",
+            "gloss": "already"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-mother-well-question",
+      "jlpt": 4,
+      "target": "kai",
+      "relationship": "questions",
+      "prompt": "お母さんは____。",
+      "translation": "Base: 元気です（げんきです）, is well. Preserve its time and polarity, converting it to the short plain かい frame. Use the familiar-question pattern without explanatory の／なの or an extra copula. This is a written-base conversion: retain the supplied base's kanji or write that base in hiragana. Use the ending's displayed hiragana exactly, with no elongation, added particle or paraphrase.",
+      "evidence": "Confirmation preserves a positive verbal proposition versus an internally negative adjective; familiar questions require sound-changed past recovery versus nominal copula removal.",
+      "explanation": "Remove the nominal polite copula for short 元気かい. Explanatory 元気なのかい is another useful frame, but the present task explicitly requests the version without なの.",
+      "answer": "kai",
+      "acceptedAnswers": [
+        "元気かい",
+        "げんきかい"
+      ],
+      "options": [
+        {
+          "id": "janai-ka",
+          "label": "元気じゃないか",
+          "rationale": "This supplies じゃないか, not the requested かい construction. Both endings can participate in questions; the task is a named conversion, not an exclusive social-context rule."
+        },
+        {
+          "id": "kai",
+          "label": "元気かい",
+          "rationale": "Remove the nominal polite copula for short 元気かい. Explanatory 元気なのかい is another useful frame, but the present task explicitly requests the version without なの."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "1f800b6a063b63d66178b2c5abf51c88cc50923ee690d22f65e56a2ef3592039",
+        "spans": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "お母さん",
+            "reading": "おかあさん",
+            "headword": "お母さん",
+            "gloss": "mother"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-entrance-preface",
+      "jlpt": 4,
+      "target": "background-preface",
+      "relationship": "prefaces",
+      "prompt": "「初めて来たんですが、入口はどこですか。」→____",
+      "translation": "Read the link before the location question. Interpret the selected explanatory connection in the complete exchange. Use the external labels 前置き（まえおき）, background introducing or inviting the next conversational move, without an explicit comparison between two reported facts; 対比（たいひ）, an explicit contrast between stated facts. Kana is accepted. These are analysis labels, not missing Japanese dialogue.",
+      "evidence": "Explicit question versus open-ended background interpreted with a reply; counterexpectational capacity versus coexisting roles contrasted across participants.",
+      "explanation": "Being a first-time visitor supplies background for asking where the entrance is. The location question is not a contrary fact about the visit.",
+      "answer": "background-preface",
+      "acceptedAnswers": [
+        "前置き",
+        "まえおき"
+      ],
+      "options": [
+        {
+          "id": "background-preface",
+          "label": "前置き",
+          "rationale": "Being a first-time visitor supplies background for asking where the entrance is. The location question is not a contrary fact about the visit."
+        },
+        {
+          "id": "contrasted-facts",
+          "label": "対比",
+          "rationale": "No contrasting pair of stated facts is supplied: the first clause prepares the location question."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "b055e8701cb67c32df4d2ca02ef9f99c5dff5c59298e7ecf0bf23fb28ccd4c9b",
+        "spans": [
+          {
+            "start": 1,
+            "end": 4,
+            "text": "初めて",
+            "reading": "はじめて",
+            "headword": "初めて",
+            "gloss": "for the first time"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "来た",
+            "reading": "きた",
+            "headword": "来る",
+            "gloss": "came"
+          },
+          {
+            "start": 11,
+            "end": 13,
+            "text": "入口",
+            "reading": "いりぐち",
+            "headword": "入口",
+            "gloss": "entrance"
+          },
+          {
+            "start": 14,
+            "end": 16,
+            "text": "どこ",
+            "reading": "どこ",
+            "headword": "どこ",
+            "gloss": "where"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-computer-open-preface",
+      "jlpt": 4,
+      "target": "background-preface",
+      "relationship": "prefaces",
+      "prompt": "「このパソコンが動かないんだけど……」「見てみようか。」→____",
+      "translation": "Read the FIRST speaker's ending with the reply as context. Interpret the selected explanatory connection in the complete exchange. Use the external labels 前置き（まえおき）, background introducing or inviting the next conversational move, without an explicit comparison between two reported facts; 対比（たいひ）, an explicit contrast between stated facts. Kana is accepted. These are analysis labels, not missing Japanese dialogue.",
+      "evidence": "Explicit question versus open-ended background interpreted with a reply; counterexpectational capacity versus coexisting roles contrasted across participants.",
+      "explanation": "The first speaker leaves the next move unspoken after presenting the computer problem. The reply offers to try looking at it. This supports a background/preface reading, not a guaranteed refusal or one uniquely recoverable missing sentence.",
+      "answer": "background-preface",
+      "acceptedAnswers": [
+        "前置き",
+        "まえおき"
+      ],
+      "options": [
+        {
+          "id": "background-preface",
+          "label": "前置き",
+          "rationale": "The first speaker leaves the next move unspoken after presenting the computer problem. The reply offers to try looking at it. This supports a background/preface reading, not a guaranteed refusal or one uniquely recoverable missing sentence."
+        },
+        {
+          "id": "contrasted-facts",
+          "label": "対比",
+          "rationale": "The second speaker's offer responds to the reported problem; it is not presented as a contrasting fact about the computer."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "dc57c5559de0dbc304f2529e8f0e79855ba4ed3a91706b911d1ba77ace9d30a5",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 3,
+            "end": 7,
+            "text": "パソコン",
+            "reading": "ぱそこん",
+            "headword": "パソコン",
+            "gloss": "personal computer"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "text": "動か",
+            "reading": "うごか",
+            "headword": "動く",
+            "gloss": "work; function (stem before nai)"
+          },
+          {
+            "start": 20,
+            "end": 22,
+            "text": "見て",
+            "reading": "みて",
+            "headword": "見る",
+            "gloss": "look at (te-form)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-small-bag-contrast",
+      "jlpt": 4,
+      "target": "contrasted-facts",
+      "relationship": "prefaces",
+      "prompt": "「このかばんは小さいんですが、荷物がたくさん入ります。」→____",
+      "translation": "Read the connection between the size statement and the capacity statement. Interpret the selected explanatory connection in the complete exchange. Use the external labels 前置き（まえおき）, background introducing or inviting the next conversational move, without an explicit comparison between two reported facts; 対比（たいひ）, an explicit contrast between stated facts. Kana is accepted. These are analysis labels, not missing Japanese dialogue.",
+      "evidence": "Explicit question versus open-ended background interpreted with a reply; counterexpectational capacity versus coexisting roles contrasted across participants.",
+      "explanation": "The small exterior is contrasted with the large amount that fits. Both propositions are actually supplied; this is not merely a lead-in to an unanswered question.",
+      "answer": "contrasted-facts",
+      "acceptedAnswers": [
+        "対比",
+        "たいひ"
+      ],
+      "options": [
+        {
+          "id": "background-preface",
+          "label": "前置き",
+          "rationale": "The utterance explicitly sets small size against substantial capacity rather than leaving the next conversational move open."
+        },
+        {
+          "id": "contrasted-facts",
+          "label": "対比",
+          "rationale": "The small exterior is contrasted with the large amount that fits. Both propositions are actually supplied; this is not merely a lead-in to an unanswered question."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "55ef22a1842d8db870a92a051c72f9ce48929567b3002962fdc8f2d1814b7454",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 3,
+            "end": 6,
+            "text": "かばん",
+            "reading": "かばん",
+            "headword": "かばん",
+            "gloss": "bag"
+          },
+          {
+            "start": 7,
+            "end": 10,
+            "text": "小さい",
+            "reading": "ちいさい",
+            "headword": "小さい",
+            "gloss": "small"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "荷物",
+            "reading": "にもつ",
+            "headword": "荷物",
+            "gloss": "luggage; baggage"
+          },
+          {
+            "start": 18,
+            "end": 22,
+            "text": "たくさん",
+            "reading": "たくさん",
+            "headword": "たくさん",
+            "gloss": "a lot"
+          },
+          {
+            "start": 22,
+            "end": 26,
+            "text": "入ります",
+            "reading": "はいります",
+            "headword": "入る",
+            "gloss": "fit inside; go in"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-siblings-role-contrast",
+      "jlpt": 4,
+      "target": "contrasted-facts",
+      "relationship": "prefaces",
+      "prompt": "「田中さんは学生なんだけど、お姉さんは先生なんです。」→____",
+      "translation": "Read the connection between the two people's roles. Interpret the selected explanatory connection in the complete exchange. Use the external labels 前置き（まえおき）, background introducing or inviting the next conversational move, without an explicit comparison between two reported facts; 対比（たいひ）, an explicit contrast between stated facts. Kana is accepted. These are analysis labels, not missing Japanese dialogue.",
+      "evidence": "Explicit question versus open-ended background interpreted with a reply; counterexpectational capacity versus coexisting roles contrasted across participants.",
+      "explanation": "The speaker compares the stated roles of two people. These facts can coexist; contrast need not be a logical contradiction or a frustrated expectation.",
+      "answer": "contrasted-facts",
+      "acceptedAnswers": [
+        "対比",
+        "たいひ"
+      ],
+      "options": [
+        {
+          "id": "background-preface",
+          "label": "前置き",
+          "rationale": "Two roles are explicitly compared here. The message is not just background awaiting a question or request."
+        },
+        {
+          "id": "contrasted-facts",
+          "label": "対比",
+          "rationale": "The speaker compares the stated roles of two people. These facts can coexist; contrast need not be a logical contradiction or a frustrated expectation."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "aa297aa86171a1844b39fc2ab42e85842b63071e836bc848d537265a3977b5fd",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "田中",
+            "reading": "たなか",
+            "headword": "田中",
+            "gloss": "Tanaka (surname)"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "学生",
+            "reading": "がくせい",
+            "headword": "学生",
+            "gloss": "student"
+          },
+          {
+            "start": 14,
+            "end": 18,
+            "text": "お姉さん",
+            "reading": "おねえさん",
+            "headword": "お姉さん",
+            "gloss": "older sister"
+          },
+          {
+            "start": 19,
+            "end": 21,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-shop-added-hours",
+      "jlpt": 4,
+      "target": "added-point",
+      "relationship": "discourse",
+      "prompt": "「この店は駅に近いです。それに、夜も開いています。」→____",
+      "translation": "Selected expression: それに. Classify only the selected link in this message, using the most specific applicable category here. Use 追加（ついか）, adding another consideration; 結果（けっか）, presenting a following statement as a result; 譲歩（じょうほ）, maintaining a following outcome or choice despite an obstacle; 対比（たいひ）, contrasting properties without that maintained-outcome framing; 続き（つづき）, asking for the account to continue. Kana is accepted. These local analysis categories do not claim that every real utterance has exactly one discourse function.",
+      "evidence": "Direct links versus selection among two coexisting discourse relations; an elliptical listener continuation versus a full follow-up question inside a report. Paired selected links share a scene key.",
+      "explanation": "The opening hours are an additional favorable feature beside station access. They are not stated to be caused by station access.",
+      "answer": "added-point",
+      "acceptedAnswers": [
+        "追加",
+        "ついか"
+      ],
+      "options": [
+        {
+          "id": "added-point",
+          "label": "追加",
+          "rationale": "The opening hours are an additional favorable feature beside station access. They are not stated to be caused by station access."
+        },
+        {
+          "id": "consequence",
+          "label": "結果",
+          "rationale": "That category does not describe the selected link here. The opening hours are an additional favorable feature beside station access. They are not stated to be caused by station access."
+        },
+        {
+          "id": "maintained-despite",
+          "label": "譲歩",
+          "rationale": "That category does not describe the selected link here. The opening hours are an additional favorable feature beside station access. They are not stated to be caused by station access."
+        },
+        {
+          "id": "counterpoint",
+          "label": "対比",
+          "rationale": "That category does not describe the selected link here. The opening hours are an additional favorable feature beside station access. They are not stated to be caused by station access."
+        },
+        {
+          "id": "continuation-request",
+          "label": "続き",
+          "rationale": "That category does not describe the selected link here. The opening hours are an additional favorable feature beside station access. They are not stated to be caused by station access."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "5362384d9c386a1810402b60afbb7aa197d4918e8fa052c3917ac22daf602f1d",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          },
+          {
+            "start": 5,
+            "end": 6,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "近い",
+            "reading": "ちかい",
+            "headword": "近い",
+            "gloss": "near"
+          },
+          {
+            "start": 16,
+            "end": 17,
+            "text": "夜",
+            "reading": "よる",
+            "headword": "夜",
+            "gloss": "night"
+          },
+          {
+            "start": 18,
+            "end": 24,
+            "text": "開いています",
+            "reading": "あいています",
+            "headword": "開く",
+            "gloss": "is open"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-shop-added-recommendation",
+      "jlpt": 4,
+      "target": "added-point",
+      "relationship": "discourse",
+      "prompt": "「この店は高いです。それでも、また行きます。それに、友達にも紹介します。」→____",
+      "translation": "Selected expression: それに, not それでも. Classify only the selected link in this message, using the most specific applicable category here. Use 追加（ついか）, adding another consideration; 結果（けっか）, presenting a following statement as a result; 譲歩（じょうほ）, maintaining a following outcome or choice despite an obstacle; 対比（たいひ）, contrasting properties without that maintained-outcome framing; 続き（つづき）, asking for the account to continue. Kana is accepted. These local analysis categories do not claim that every real utterance has exactly one discourse function.",
+      "evidence": "Direct links versus selection among two coexisting discourse relations; an elliptical listener continuation versus a full follow-up question inside a report. Paired selected links share a scene key.",
+      "explanation": "The selected それに adds recommending the shop to the intention to visit again. The earlier それでも frames that return despite price; do not assign its role to the later link.",
+      "answer": "added-point",
+      "acceptedAnswers": [
+        "追加",
+        "ついか"
+      ],
+      "options": [
+        {
+          "id": "added-point",
+          "label": "追加",
+          "rationale": "The selected それに adds recommending the shop to the intention to visit again. The earlier それでも frames that return despite price; do not assign its role to the later link."
+        },
+        {
+          "id": "consequence",
+          "label": "結果",
+          "rationale": "That category does not describe the selected link here. The selected それに adds recommending the shop to the intention to visit again. The earlier それでも frames that return despite price; do not assign its role to the later link."
+        },
+        {
+          "id": "maintained-despite",
+          "label": "譲歩",
+          "rationale": "That category does not describe the selected link here. The selected それに adds recommending the shop to the intention to visit again. The earlier それでも frames that return despite price; do not assign its role to the later link."
+        },
+        {
+          "id": "counterpoint",
+          "label": "対比",
+          "rationale": "That category does not describe the selected link here. The selected それに adds recommending the shop to the intention to visit again. The earlier それでも frames that return despite price; do not assign its role to the later link."
+        },
+        {
+          "id": "continuation-request",
+          "label": "続き",
+          "rationale": "That category does not describe the selected link here. The selected それに adds recommending the shop to the intention to visit again. The earlier それでも frames that return despite price; do not assign its role to the later link."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "990d2263931d50ba6fc004dc2f621b5d201b9616029eea9ce94075ebe0751281",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "高い",
+            "reading": "たかい",
+            "headword": "高い",
+            "gloss": "expensive"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "また",
+            "reading": "また",
+            "headword": "また",
+            "gloss": "again"
+          },
+          {
+            "start": 17,
+            "end": 21,
+            "text": "行きます",
+            "reading": "いきます",
+            "headword": "行く",
+            "gloss": "go"
+          },
+          {
+            "start": 26,
+            "end": 28,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 30,
+            "end": 35,
+            "text": "紹介します",
+            "reading": "しょうかいします",
+            "headword": "紹介する",
+            "gloss": "recommend this shop to someone"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-snow-delay-result",
+      "jlpt": 4,
+      "target": "consequence",
+      "relationship": "discourse",
+      "prompt": "「雪で電車が止まりました。それで、学校に遅れました。」→____",
+      "translation": "Selected expression: それで. Classify only the selected link in this message, using the most specific applicable category here. Use 追加（ついか）, adding another consideration; 結果（けっか）, presenting a following statement as a result; 譲歩（じょうほ）, maintaining a following outcome or choice despite an obstacle; 対比（たいひ）, contrasting properties without that maintained-outcome framing; 続き（つづき）, asking for the account to continue. Kana is accepted. These local analysis categories do not claim that every real utterance has exactly one discourse function.",
+      "evidence": "Direct links versus selection among two coexisting discourse relations; an elliptical listener continuation versus a full follow-up question inside a report. Paired selected links share a scene key.",
+      "explanation": "The speaker presents lateness as a result of the train stopping. This is a stated consequence, not a listener asking for the next part.",
+      "answer": "consequence",
+      "acceptedAnswers": [
+        "結果",
+        "けっか"
+      ],
+      "options": [
+        {
+          "id": "added-point",
+          "label": "追加",
+          "rationale": "That category does not describe the selected link here. The speaker presents lateness as a result of the train stopping. This is a stated consequence, not a listener asking for the next part."
+        },
+        {
+          "id": "consequence",
+          "label": "結果",
+          "rationale": "The speaker presents lateness as a result of the train stopping. This is a stated consequence, not a listener asking for the next part."
+        },
+        {
+          "id": "maintained-despite",
+          "label": "譲歩",
+          "rationale": "That category does not describe the selected link here. The speaker presents lateness as a result of the train stopping. This is a stated consequence, not a listener asking for the next part."
+        },
+        {
+          "id": "counterpoint",
+          "label": "対比",
+          "rationale": "That category does not describe the selected link here. The speaker presents lateness as a result of the train stopping. This is a stated consequence, not a listener asking for the next part."
+        },
+        {
+          "id": "continuation-request",
+          "label": "続き",
+          "rationale": "That category does not describe the selected link here. The speaker presents lateness as a result of the train stopping. This is a stated consequence, not a listener asking for the next part."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "9e8c47a6b10cafaad32cf2a32cf524c061abe0367cdcc929b418c189e6d57b72",
+        "spans": [
+          {
+            "start": 1,
+            "end": 2,
+            "text": "雪",
+            "reading": "ゆき",
+            "headword": "雪",
+            "gloss": "snow"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "電車",
+            "reading": "でんしゃ",
+            "headword": "電車",
+            "gloss": "train"
+          },
+          {
+            "start": 6,
+            "end": 12,
+            "text": "止まりました",
+            "reading": "とまりました",
+            "headword": "止まる",
+            "gloss": "stopped"
+          },
+          {
+            "start": 17,
+            "end": 19,
+            "text": "学校",
+            "reading": "がっこう",
+            "headword": "学校",
+            "gloss": "school"
+          },
+          {
+            "start": 20,
+            "end": 25,
+            "text": "遅れました",
+            "reading": "おくれました",
+            "headword": "遅れる",
+            "gloss": "was late"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-room-rental-result",
+      "jlpt": 4,
+      "target": "consequence",
+      "relationship": "discourse",
+      "prompt": "「部屋は狭い。だが、駅に近い。それで、この部屋を借りた。」→____",
+      "translation": "Selected expression: それで, not だが. Classify only the selected link in this message, using the most specific applicable category here. Use 追加（ついか）, adding another consideration; 結果（けっか）, presenting a following statement as a result; 譲歩（じょうほ）, maintaining a following outcome or choice despite an obstacle; 対比（たいひ）, contrasting properties without that maintained-outcome framing; 続き（つづき）, asking for the account to continue. Kana is accepted. These local analysis categories do not claim that every real utterance has exactly one discourse function.",
+      "evidence": "Direct links versus selection among two coexisting discourse relations; an elliptical listener continuation versus a full follow-up question inside a report. Paired selected links share a scene key.",
+      "explanation": "The selected それで presents renting the room as a consequence of the preceding account, including convenient station access. The earlier だが contrasts properties; the later link does a different job.",
+      "answer": "consequence",
+      "acceptedAnswers": [
+        "結果",
+        "けっか"
+      ],
+      "options": [
+        {
+          "id": "added-point",
+          "label": "追加",
+          "rationale": "That category does not describe the selected link here. The selected それで presents renting the room as a consequence of the preceding account, including convenient station access. The earlier だが contrasts properties; the later link does a different job."
+        },
+        {
+          "id": "consequence",
+          "label": "結果",
+          "rationale": "The selected それで presents renting the room as a consequence of the preceding account, including convenient station access. The earlier だが contrasts properties; the later link does a different job."
+        },
+        {
+          "id": "maintained-despite",
+          "label": "譲歩",
+          "rationale": "That category does not describe the selected link here. The selected それで presents renting the room as a consequence of the preceding account, including convenient station access. The earlier だが contrasts properties; the later link does a different job."
+        },
+        {
+          "id": "counterpoint",
+          "label": "対比",
+          "rationale": "That category does not describe the selected link here. The selected それで presents renting the room as a consequence of the preceding account, including convenient station access. The earlier だが contrasts properties; the later link does a different job."
+        },
+        {
+          "id": "continuation-request",
+          "label": "続き",
+          "rationale": "That category does not describe the selected link here. The selected それで presents renting the room as a consequence of the preceding account, including convenient station access. The earlier だが contrasts properties; the later link does a different job."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "26904c9b50501a71bd8d213c7ce65c46ac36fa7dba9dc2edb88aeeb938ed18c4",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "部屋",
+            "reading": "へや",
+            "headword": "部屋",
+            "gloss": "room"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "狭い",
+            "reading": "せまい",
+            "headword": "狭い",
+            "gloss": "small; cramped"
+          },
+          {
+            "start": 10,
+            "end": 11,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "近い",
+            "reading": "ちかい",
+            "headword": "近い",
+            "gloss": "near"
+          },
+          {
+            "start": 19,
+            "end": 21,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 21,
+            "end": 23,
+            "text": "部屋",
+            "reading": "へや",
+            "headword": "部屋",
+            "gloss": "room"
+          },
+          {
+            "start": 24,
+            "end": 27,
+            "text": "借りた",
+            "reading": "かりた",
+            "headword": "借りる",
+            "gloss": "rented"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-route-despite-warning",
+      "jlpt": 4,
+      "target": "maintained-despite",
+      "relationship": "discourse",
+      "prompt": "「道は危ないと聞きました。それでも、この道を通るつもりです。」→____",
+      "translation": "Selected expression: それでも. Classify only the selected link in this message, using the most specific applicable category here. Use 追加（ついか）, adding another consideration; 結果（けっか）, presenting a following statement as a result; 譲歩（じょうほ）, maintaining a following outcome or choice despite an obstacle; 対比（たいひ）, contrasting properties without that maintained-outcome framing; 続き（つづき）, asking for the account to continue. Kana is accepted. These local analysis categories do not claim that every real utterance has exactly one discourse function.",
+      "evidence": "Direct links versus selection among two coexisting discourse relations; an elliptical listener continuation versus a full follow-up question inside a report. Paired selected links share a scene key.",
+      "explanation": "The plan to take the route is maintained despite the reported danger. This does not assert that the journey has happened or that the warning is necessarily true.",
+      "answer": "maintained-despite",
+      "acceptedAnswers": [
+        "譲歩",
+        "じょうほ"
+      ],
+      "options": [
+        {
+          "id": "added-point",
+          "label": "追加",
+          "rationale": "That category does not describe the selected link here. The plan to take the route is maintained despite the reported danger. This does not assert that the journey has happened or that the warning is necessarily true."
+        },
+        {
+          "id": "consequence",
+          "label": "結果",
+          "rationale": "That category does not describe the selected link here. The plan to take the route is maintained despite the reported danger. This does not assert that the journey has happened or that the warning is necessarily true."
+        },
+        {
+          "id": "maintained-despite",
+          "label": "譲歩",
+          "rationale": "The plan to take the route is maintained despite the reported danger. This does not assert that the journey has happened or that the warning is necessarily true."
+        },
+        {
+          "id": "counterpoint",
+          "label": "対比",
+          "rationale": "That category does not describe the selected link here. The plan to take the route is maintained despite the reported danger. This does not assert that the journey has happened or that the warning is necessarily true."
+        },
+        {
+          "id": "continuation-request",
+          "label": "続き",
+          "rationale": "That category does not describe the selected link here. The plan to take the route is maintained despite the reported danger. This does not assert that the journey has happened or that the warning is necessarily true."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "8a1ce5b2b5a6a4c96478c17c47d62cd48118df2b64e6a13d00de3f1c7c9cd055",
+        "spans": [
+          {
+            "start": 1,
+            "end": 2,
+            "text": "道",
+            "reading": "みち",
+            "headword": "道",
+            "gloss": "road; route"
+          },
+          {
+            "start": 3,
+            "end": 6,
+            "text": "危ない",
+            "reading": "あぶない",
+            "headword": "危ない",
+            "gloss": "dangerous"
+          },
+          {
+            "start": 7,
+            "end": 12,
+            "text": "聞きました",
+            "reading": "ききました",
+            "headword": "聞く",
+            "gloss": "heard"
+          },
+          {
+            "start": 18,
+            "end": 20,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 20,
+            "end": 21,
+            "text": "道",
+            "reading": "みち",
+            "headword": "道",
+            "gloss": "road; route"
+          },
+          {
+            "start": 22,
+            "end": 24,
+            "text": "通る",
+            "reading": "とおる",
+            "headword": "通る",
+            "gloss": "pass along; take this route"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-shop-return-despite-price",
+      "jlpt": 4,
+      "target": "maintained-despite",
+      "relationship": "discourse",
+      "prompt": "「この店は高いです。それでも、また行きます。それに、友達にも紹介します。」→____",
+      "translation": "Selected expression: それでも, not それに. Classify only the selected link in this message, using the most specific applicable category here. Use 追加（ついか）, adding another consideration; 結果（けっか）, presenting a following statement as a result; 譲歩（じょうほ）, maintaining a following outcome or choice despite an obstacle; 対比（たいひ）, contrasting properties without that maintained-outcome framing; 続き（つづき）, asking for the account to continue. Kana is accepted. These local analysis categories do not claim that every real utterance has exactly one discourse function.",
+      "evidence": "Direct links versus selection among two coexisting discourse relations; an elliptical listener continuation versus a full follow-up question inside a report. Paired selected links share a scene key.",
+      "explanation": "The return is maintained despite the high price. The later それに adds another intended action; that addition is not the selected link.",
+      "answer": "maintained-despite",
+      "acceptedAnswers": [
+        "譲歩",
+        "じょうほ"
+      ],
+      "options": [
+        {
+          "id": "added-point",
+          "label": "追加",
+          "rationale": "That category does not describe the selected link here. The return is maintained despite the high price. The later それに adds another intended action; that addition is not the selected link."
+        },
+        {
+          "id": "consequence",
+          "label": "結果",
+          "rationale": "That category does not describe the selected link here. The return is maintained despite the high price. The later それに adds another intended action; that addition is not the selected link."
+        },
+        {
+          "id": "maintained-despite",
+          "label": "譲歩",
+          "rationale": "The return is maintained despite the high price. The later それに adds another intended action; that addition is not the selected link."
+        },
+        {
+          "id": "counterpoint",
+          "label": "対比",
+          "rationale": "That category does not describe the selected link here. The return is maintained despite the high price. The later それに adds another intended action; that addition is not the selected link."
+        },
+        {
+          "id": "continuation-request",
+          "label": "続き",
+          "rationale": "That category does not describe the selected link here. The return is maintained despite the high price. The later それに adds another intended action; that addition is not the selected link."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "990d2263931d50ba6fc004dc2f621b5d201b9616029eea9ce94075ebe0751281",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "高い",
+            "reading": "たかい",
+            "headword": "高い",
+            "gloss": "expensive"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "また",
+            "reading": "また",
+            "headword": "また",
+            "gloss": "again"
+          },
+          {
+            "start": 17,
+            "end": 21,
+            "text": "行きます",
+            "reading": "いきます",
+            "headword": "行く",
+            "gloss": "go"
+          },
+          {
+            "start": 26,
+            "end": 28,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 30,
+            "end": 35,
+            "text": "紹介します",
+            "reading": "しょうかいします",
+            "headword": "紹介する",
+            "gloss": "recommend this shop to someone"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-room-price-distance",
+      "jlpt": 4,
+      "target": "counterpoint",
+      "relationship": "discourse",
+      "prompt": "「この部屋は安いです。ですが、駅から遠いです。」→____",
+      "translation": "Selected expression: the sentence-initial ですが. Classify only the selected link in this message, using the most specific applicable category here. Use 追加（ついか）, adding another consideration; 結果（けっか）, presenting a following statement as a result; 譲歩（じょうほ）, maintaining a following outcome or choice despite an obstacle; 対比（たいひ）, contrasting properties without that maintained-outcome framing; 続き（つづき）, asking for the account to continue. Kana is accepted. These local analysis categories do not claim that every real utterance has exactly one discourse function.",
+      "evidence": "Direct links versus selection among two coexisting discourse relations; an elliptical listener continuation versus a full follow-up question inside a report. Paired selected links share a scene key.",
+      "explanation": "The speaker sets low price against distance from the station. There is no stated choice or outcome maintained despite an obstacle in this two-property comparison.",
+      "answer": "counterpoint",
+      "acceptedAnswers": [
+        "対比",
+        "たいひ"
+      ],
+      "options": [
+        {
+          "id": "added-point",
+          "label": "追加",
+          "rationale": "That category does not describe the selected link here. The speaker sets low price against distance from the station. There is no stated choice or outcome maintained despite an obstacle in this two-property comparison."
+        },
+        {
+          "id": "consequence",
+          "label": "結果",
+          "rationale": "That category does not describe the selected link here. The speaker sets low price against distance from the station. There is no stated choice or outcome maintained despite an obstacle in this two-property comparison."
+        },
+        {
+          "id": "maintained-despite",
+          "label": "譲歩",
+          "rationale": "That category does not describe the selected link here. The speaker sets low price against distance from the station. There is no stated choice or outcome maintained despite an obstacle in this two-property comparison."
+        },
+        {
+          "id": "counterpoint",
+          "label": "対比",
+          "rationale": "The speaker sets low price against distance from the station. There is no stated choice or outcome maintained despite an obstacle in this two-property comparison."
+        },
+        {
+          "id": "continuation-request",
+          "label": "続き",
+          "rationale": "That category does not describe the selected link here. The speaker sets low price against distance from the station. There is no stated choice or outcome maintained despite an obstacle in this two-property comparison."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f40b64a55dccab4bcaf498fee821c4eb6b846878d5dac7734c490ee85d2ae9c9",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "部屋",
+            "reading": "へや",
+            "headword": "部屋",
+            "gloss": "room"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "安い",
+            "reading": "やすい",
+            "headword": "安い",
+            "gloss": "inexpensive"
+          },
+          {
+            "start": 15,
+            "end": 16,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 18,
+            "end": 20,
+            "text": "遠い",
+            "reading": "とおい",
+            "headword": "遠い",
+            "gloss": "far away"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-room-size-access",
+      "jlpt": 4,
+      "target": "counterpoint",
+      "relationship": "discourse",
+      "prompt": "「部屋は狭い。だが、駅に近い。それで、この部屋を借りた。」→____",
+      "translation": "Selected expression: だが, not それで. Classify only the selected link in this message, using the most specific applicable category here. Use 追加（ついか）, adding another consideration; 結果（けっか）, presenting a following statement as a result; 譲歩（じょうほ）, maintaining a following outcome or choice despite an obstacle; 対比（たいひ）, contrasting properties without that maintained-outcome framing; 続き（つづき）, asking for the account to continue. Kana is accepted. These local analysis categories do not claim that every real utterance has exactly one discourse function.",
+      "evidence": "Direct links versus selection among two coexisting discourse relations; an elliptical listener continuation versus a full follow-up question inside a report. Paired selected links share a scene key.",
+      "explanation": "The selected だが contrasts small size with station access. The final それで introduces the rental consequence, but the question selects the earlier property contrast.",
+      "answer": "counterpoint",
+      "acceptedAnswers": [
+        "対比",
+        "たいひ"
+      ],
+      "options": [
+        {
+          "id": "added-point",
+          "label": "追加",
+          "rationale": "That category does not describe the selected link here. The selected だが contrasts small size with station access. The final それで introduces the rental consequence, but the question selects the earlier property contrast."
+        },
+        {
+          "id": "consequence",
+          "label": "結果",
+          "rationale": "That category does not describe the selected link here. The selected だが contrasts small size with station access. The final それで introduces the rental consequence, but the question selects the earlier property contrast."
+        },
+        {
+          "id": "maintained-despite",
+          "label": "譲歩",
+          "rationale": "That category does not describe the selected link here. The selected だが contrasts small size with station access. The final それで introduces the rental consequence, but the question selects the earlier property contrast."
+        },
+        {
+          "id": "counterpoint",
+          "label": "対比",
+          "rationale": "The selected だが contrasts small size with station access. The final それで introduces the rental consequence, but the question selects the earlier property contrast."
+        },
+        {
+          "id": "continuation-request",
+          "label": "続き",
+          "rationale": "That category does not describe the selected link here. The selected だが contrasts small size with station access. The final それで introduces the rental consequence, but the question selects the earlier property contrast."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "26904c9b50501a71bd8d213c7ce65c46ac36fa7dba9dc2edb88aeeb938ed18c4",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "部屋",
+            "reading": "へや",
+            "headword": "部屋",
+            "gloss": "room"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "狭い",
+            "reading": "せまい",
+            "headword": "狭い",
+            "gloss": "small; cramped"
+          },
+          {
+            "start": 10,
+            "end": 11,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "近い",
+            "reading": "ちかい",
+            "headword": "近い",
+            "gloss": "near"
+          },
+          {
+            "start": 19,
+            "end": 21,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 21,
+            "end": 23,
+            "text": "部屋",
+            "reading": "へや",
+            "headword": "部屋",
+            "gloss": "room"
+          },
+          {
+            "start": 24,
+            "end": 27,
+            "text": "借りた",
+            "reading": "かりた",
+            "headword": "借りる",
+            "gloss": "rented"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-wallet-continuation",
+      "jlpt": 4,
+      "target": "continuation-request",
+      "relationship": "discourse",
+      "prompt": "「昨日、駅で財布を拾ったよ。」「それで？」→____",
+      "translation": "Selected expression: the second speaker's それで. Classify only the selected link in this message, using the most specific applicable category here. Use 追加（ついか）, adding another consideration; 結果（けっか）, presenting a following statement as a result; 譲歩（じょうほ）, maintaining a following outcome or choice despite an obstacle; 対比（たいひ）, contrasting properties without that maintained-outcome framing; 続き（つづき）, asking for the account to continue. Kana is accepted. These local analysis categories do not claim that every real utterance has exactly one discourse function.",
+      "evidence": "Direct links versus selection among two coexisting discourse relations; an elliptical listener continuation versus a full follow-up question inside a report. Paired selected links share a scene key.",
+      "explanation": "The listener asks the storyteller to continue. The short question does not itself assert what happened as a result of finding the wallet.",
+      "answer": "continuation-request",
+      "acceptedAnswers": [
+        "続き",
+        "つづき"
+      ],
+      "options": [
+        {
+          "id": "added-point",
+          "label": "追加",
+          "rationale": "That category does not describe the selected link here. The listener asks the storyteller to continue. The short question does not itself assert what happened as a result of finding the wallet."
+        },
+        {
+          "id": "consequence",
+          "label": "結果",
+          "rationale": "That category does not describe the selected link here. The listener asks the storyteller to continue. The short question does not itself assert what happened as a result of finding the wallet."
+        },
+        {
+          "id": "maintained-despite",
+          "label": "譲歩",
+          "rationale": "That category does not describe the selected link here. The listener asks the storyteller to continue. The short question does not itself assert what happened as a result of finding the wallet."
+        },
+        {
+          "id": "counterpoint",
+          "label": "対比",
+          "rationale": "That category does not describe the selected link here. The listener asks the storyteller to continue. The short question does not itself assert what happened as a result of finding the wallet."
+        },
+        {
+          "id": "continuation-request",
+          "label": "続き",
+          "rationale": "The listener asks the storyteller to continue. The short question does not itself assert what happened as a result of finding the wallet."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "93a8defd9e85b3da3f62004c1de80f0652c588e6e752b94103b8720f191b0050",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "昨日",
+            "reading": "きのう",
+            "headword": "昨日",
+            "gloss": "yesterday"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "財布",
+            "reading": "さいふ",
+            "headword": "財布",
+            "gloss": "wallet"
+          },
+          {
+            "start": 9,
+            "end": 12,
+            "text": "拾った",
+            "reading": "ひろった",
+            "headword": "拾う",
+            "gloss": "picked up"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-match-quoted-continuation",
+      "jlpt": 4,
+      "target": "continuation-request",
+      "relationship": "discourse",
+      "prompt": "友達から試合の話を聞きました。「それで、どちらが勝ったの？」と尋ねました。→____",
+      "translation": "Selected expression: それで inside the quotation, not the outer reporting predicate. Classify only the selected link in this message, using the most specific applicable category here. Use 追加（ついか）, adding another consideration; 結果（けっか）, presenting a following statement as a result; 譲歩（じょうほ）, maintaining a following outcome or choice despite an obstacle; 対比（たいひ）, contrasting properties without that maintained-outcome framing; 続き（つづき）, asking for the account to continue. Kana is accepted. These local analysis categories do not claim that every real utterance has exactly one discourse function.",
+      "evidence": "Direct links versus selection among two coexisting discourse relations; an elliptical listener continuation versus a full follow-up question inside a report. Paired selected links share a scene key.",
+      "explanation": "The quoted question asks for the match's outcome as the continuation of the account. The outer sentence reports that question; it does not turn the quoted それで into an asserted causal result.",
+      "answer": "continuation-request",
+      "acceptedAnswers": [
+        "続き",
+        "つづき"
+      ],
+      "options": [
+        {
+          "id": "added-point",
+          "label": "追加",
+          "rationale": "That category does not describe the selected link here. The quoted question asks for the match's outcome as the continuation of the account. The outer sentence reports that question; it does not turn the quoted それで into an asserted causal result."
+        },
+        {
+          "id": "consequence",
+          "label": "結果",
+          "rationale": "That category does not describe the selected link here. The quoted question asks for the match's outcome as the continuation of the account. The outer sentence reports that question; it does not turn the quoted それで into an asserted causal result."
+        },
+        {
+          "id": "maintained-despite",
+          "label": "譲歩",
+          "rationale": "That category does not describe the selected link here. The quoted question asks for the match's outcome as the continuation of the account. The outer sentence reports that question; it does not turn the quoted それで into an asserted causal result."
+        },
+        {
+          "id": "counterpoint",
+          "label": "対比",
+          "rationale": "That category does not describe the selected link here. The quoted question asks for the match's outcome as the continuation of the account. The outer sentence reports that question; it does not turn the quoted それで into an asserted causal result."
+        },
+        {
+          "id": "continuation-request",
+          "label": "続き",
+          "rationale": "The quoted question asks for the match's outcome as the continuation of the account. The outer sentence reports that question; it does not turn the quoted それで into an asserted causal result."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "413fa8e1501eb2dcf94dcaeececcbd98b41983f1e9a2ecebacfaac436494ae10",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "試合",
+            "reading": "しあい",
+            "headword": "試合",
+            "gloss": "match; game"
+          },
+          {
+            "start": 7,
+            "end": 8,
+            "text": "話",
+            "reading": "はなし",
+            "headword": "話",
+            "gloss": "account; story"
+          },
+          {
+            "start": 9,
+            "end": 14,
+            "text": "聞きました",
+            "reading": "ききました",
+            "headword": "聞く",
+            "gloss": "heard"
+          },
+          {
+            "start": 20,
+            "end": 23,
+            "text": "どちら",
+            "reading": "どちら",
+            "headword": "どちら",
+            "gloss": "which of the two"
+          },
+          {
+            "start": 24,
+            "end": 27,
+            "text": "勝った",
+            "reading": "かった",
+            "headword": "勝つ",
+            "gloss": "won"
+          },
+          {
+            "start": 31,
+            "end": 36,
+            "text": "尋ねました",
+            "reading": "たずねました",
+            "headword": "尋ねる",
+            "gloss": "asked"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-formal-plain-wonder",
+      "jlpt": 5,
+      "target": "plain-style",
+      "relationship": "register",
+      "prompt": "「この説明は正しいのだろうか。」→____",
+      "translation": "Selected: the final のだろうか. Classify the grammatical ending of the SELECTED voice, not every word in the passage. Use the external labels 普通（ふつう）, a plain ending without the listener-directed desu/masu family in that selected ending; 丁寧（ていねい）, a polite ending in that family, including its explanatory or conjectural combinations. Kana is accepted. Formal/stiff wording, conversational contraction, social suitability and speaker gender are separate questions.",
+      "evidence": "Direct final endings versus selected quoted voices surrounded by the opposite narration style; formality and contraction do not substitute for grammatical-ending analysis.",
+      "explanation": "のだろうか uses plain だろう, not polite でしょう. Its potentially formal or reflective presentation does not make it a desu/masu-family ending.",
+      "answer": "plain-style",
+      "acceptedAnswers": [
+        "普通",
+        "ふつう"
+      ],
+      "options": [
+        {
+          "id": "plain-style",
+          "label": "普通",
+          "rationale": "のだろうか uses plain だろう, not polite でしょう. Its potentially formal or reflective presentation does not make it a desu/masu-family ending."
+        },
+        {
+          "id": "polite-style",
+          "label": "丁寧",
+          "rationale": "That form category does not fit the selected ending. のだろうか uses plain だろう, not polite でしょう. Its potentially formal or reflective presentation does not make it a desu/masu-family ending."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "7bd21edeb6b63a9eaa1684e7651ebd0cf86fc59839f2d6f2f853ef2370a9d511",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "説明",
+            "reading": "せつめい",
+            "headword": "説明",
+            "gloss": "explanation"
+          },
+          {
+            "start": 6,
+            "end": 9,
+            "text": "正しい",
+            "reading": "ただしい",
+            "headword": "正しい",
+            "gloss": "correct"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-quoted-plain-kashira",
+      "jlpt": 5,
+      "target": "plain-style",
+      "relationship": "register",
+      "prompt": "店員は「予約はこちらです」と言いました。私は「ここでいいかしら」と尋ねました。→____",
+      "translation": "Selected: the speaker's quoted question ここでいいかしら, not the clerk's quote or the narration. Classify the grammatical ending of the SELECTED voice, not every word in the passage. Use the external labels 普通（ふつう）, a plain ending without the listener-directed desu/masu family in that selected ending; 丁寧（ていねい）, a polite ending in that family, including its explanatory or conjectural combinations. Kana is accepted. Formal/stiff wording, conversational contraction, social suitability and speaker gender are separate questions.",
+      "evidence": "Direct final endings versus selected quoted voices surrounded by the opposite narration style; formality and contraction do not substitute for grammatical-ending analysis.",
+      "explanation": "The selected quoted question has plain かしら. Polite です in the clerk's different quote and ました in the narration do not change this quoted ending. Plain here does not mean necessarily rude.",
+      "answer": "plain-style",
+      "acceptedAnswers": [
+        "普通",
+        "ふつう"
+      ],
+      "options": [
+        {
+          "id": "plain-style",
+          "label": "普通",
+          "rationale": "The selected quoted question has plain かしら. Polite です in the clerk's different quote and ました in the narration do not change this quoted ending. Plain here does not mean necessarily rude."
+        },
+        {
+          "id": "polite-style",
+          "label": "丁寧",
+          "rationale": "That form category does not fit the selected ending. The selected quoted question has plain かしら. Polite です in the clerk's different quote and ました in the narration do not change this quoted ending. Plain here does not mean necessarily rude."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "0498710ea1252ba4097b3eecef8a0f351efbda4e908993c2f4744732e40ba3bc",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "店員",
+            "reading": "てんいん",
+            "headword": "店員",
+            "gloss": "shop clerk"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "予約",
+            "reading": "よやく",
+            "headword": "予約",
+            "gloss": "reservation"
+          },
+          {
+            "start": 7,
+            "end": 10,
+            "text": "こちら",
+            "reading": "こちら",
+            "headword": "こちら",
+            "gloss": "here; this direction"
+          },
+          {
+            "start": 14,
+            "end": 19,
+            "text": "言いました",
+            "reading": "いいました",
+            "headword": "言う",
+            "gloss": "said"
+          },
+          {
+            "start": 20,
+            "end": 21,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 23,
+            "end": 25,
+            "text": "ここ",
+            "reading": "ここ",
+            "headword": "ここ",
+            "gloss": "here"
+          },
+          {
+            "start": 26,
+            "end": 28,
+            "text": "いい",
+            "reading": "いい",
+            "headword": "いい",
+            "gloss": "acceptable; all right"
+          },
+          {
+            "start": 33,
+            "end": 38,
+            "text": "尋ねました",
+            "reading": "たずねました",
+            "headword": "尋ねる",
+            "gloss": "asked"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-polite-train-wonder",
+      "jlpt": 5,
+      "target": "polite-style",
+      "relationship": "register",
+      "prompt": "「この電車は東京まで行くのでしょうか。」→____",
+      "translation": "Selected: the final のでしょうか. Classify the grammatical ending of the SELECTED voice, not every word in the passage. Use the external labels 普通（ふつう）, a plain ending without the listener-directed desu/masu family in that selected ending; 丁寧（ていねい）, a polite ending in that family, including its explanatory or conjectural combinations. Kana is accepted. Formal/stiff wording, conversational contraction, social suitability and speaker gender are separate questions.",
+      "evidence": "Direct final endings versus selected quoted voices surrounded by the opposite narration style; formality and contraction do not substitute for grammatical-ending analysis.",
+      "explanation": "のでしょうか includes polite でしょう. The preceding plain 行く is inside the explanatory construction and does not make the selected final ending plain.",
+      "answer": "polite-style",
+      "acceptedAnswers": [
+        "丁寧",
+        "ていねい",
+        "叮嚀"
+      ],
+      "options": [
+        {
+          "id": "plain-style",
+          "label": "普通",
+          "rationale": "That form category does not fit the selected ending. のでしょうか includes polite でしょう. The preceding plain 行く is inside the explanatory construction and does not make the selected final ending plain."
+        },
+        {
+          "id": "polite-style",
+          "label": "丁寧",
+          "rationale": "のでしょうか includes polite でしょう. The preceding plain 行く is inside the explanatory construction and does not make the selected final ending plain."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "b8112470c495f3e248461f6cd0ec5ce3ee52652162ad4d861c0b629e27ab989e",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "電車",
+            "reading": "でんしゃ",
+            "headword": "電車",
+            "gloss": "train"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "東京",
+            "reading": "とうきょう",
+            "headword": "東京",
+            "gloss": "Tokyo"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "行く",
+            "reading": "いく",
+            "headword": "行く",
+            "gloss": "go"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conversation-connectors-quoted-polite-preface",
+      "jlpt": 5,
+      "target": "polite-style",
+      "relationship": "register",
+      "prompt": "私は「このかばんなんですが、別の色もありますか」と店員に聞いた。→____",
+      "translation": "Selected: なんですが in the quoted opening, not the outer 聞いた. Classify the grammatical ending of the SELECTED voice, not every word in the passage. Use the external labels 普通（ふつう）, a plain ending without the listener-directed desu/masu family in that selected ending; 丁寧（ていねい）, a polite ending in that family, including its explanatory or conjectural combinations. Kana is accepted. Formal/stiff wording, conversational contraction, social suitability and speaker gender are separate questions.",
+      "evidence": "Direct final endings versus selected quoted voices surrounded by the opposite narration style; formality and contraction do not substitute for grammatical-ending analysis.",
+      "explanation": "Quoted なんですが retains polite です despite the explanatory contraction. The outer narration ends in plain 聞いた, but it is a different voice. 叮嚀 is accepted as a spelling of the same response label.",
+      "answer": "polite-style",
+      "acceptedAnswers": [
+        "丁寧",
+        "ていねい",
+        "叮嚀"
+      ],
+      "options": [
+        {
+          "id": "plain-style",
+          "label": "普通",
+          "rationale": "That form category does not fit the selected ending. Quoted なんですが retains polite です despite the explanatory contraction. The outer narration ends in plain 聞いた, but it is a different voice. 叮嚀 is accepted as a spelling of the same response label."
+        },
+        {
+          "id": "polite-style",
+          "label": "丁寧",
+          "rationale": "Quoted なんですが retains polite です despite the explanatory contraction. The outer narration ends in plain 聞いた, but it is a different voice. 叮嚀 is accepted as a spelling of the same response label."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "7b4e193fb724b8693f46c4c39e08f3c44d63473a8732e59eacb959fe9da460ab",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 5,
+            "end": 8,
+            "text": "かばん",
+            "reading": "かばん",
+            "headword": "かばん",
+            "gloss": "bag"
+          },
+          {
+            "start": 14,
+            "end": 15,
+            "text": "別",
+            "reading": "べつ",
+            "headword": "別",
+            "gloss": "different; another"
+          },
+          {
+            "start": 16,
+            "end": 17,
+            "text": "色",
+            "reading": "いろ",
+            "headword": "色",
+            "gloss": "color"
+          },
+          {
+            "start": 18,
+            "end": 22,
+            "text": "あります",
+            "reading": "あります",
+            "headword": "ある",
+            "gloss": "there is; is available"
+          },
+          {
+            "start": 25,
+            "end": 27,
+            "text": "店員",
+            "reading": "てんいん",
+            "headword": "店員",
+            "gloss": "shop clerk"
+          },
+          {
+            "start": 28,
+            "end": 31,
+            "text": "聞いた",
+            "reading": "きいた",
+            "headword": "聞く",
+            "gloss": "asked"
+          }
+        ]
+      }
+    }
+  ],
+  "introductionGroups": [
+    {
+      "id": "conversation-connectors-wondering",
+      "label": "Build a named wondering ending without losing the predicate",
+      "facets": [
+        {
+          "id": "kana",
+          "label": "Short kana ending"
+        },
+        {
+          "id": "nodarouka",
+          "label": "Explicit no-darou-ka frame"
+        },
+        {
+          "id": "kashira",
+          "label": "Short kashira ending"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "conversation-connectors-breakfast-kana",
+          "facetId": "kana",
+          "exampleKey": "breakfast-recollection"
+        },
+        {
+          "exerciseId": "conversation-connectors-student-kana",
+          "facetId": "kana",
+          "exampleKey": "unknown-student"
+        },
+        {
+          "exerciseId": "conversation-connectors-bus-negative-wonder",
+          "facetId": "nodarouka",
+          "exampleKey": "bus-negative-possibility"
+        },
+        {
+          "exerciseId": "conversation-connectors-shop-past-wonder",
+          "facetId": "nodarouka",
+          "exampleKey": "shop-past-status"
+        },
+        {
+          "exerciseId": "conversation-connectors-teacher-reading-wonder",
+          "facetId": "kashira",
+          "exampleKey": "teacher-reading"
+        },
+        {
+          "exerciseId": "conversation-connectors-library-quiet-wonder",
+          "facetId": "kashira",
+          "exampleKey": "library-evening-quiet"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "n5-explanations-endings-conjectural-formation",
+          "importance": 2,
+          "reason": "Reuse plain/polite conjectural attachment before adding the questioning frame."
+        },
+        {
+          "groupId": "conversation-connectors-register",
+          "importance": 2,
+          "reason": "Separate grammatical politeness from a reflective or formal impression."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "conversation-connectors-questions",
+      "label": "Build a named confirmation or familiar-question frame",
+      "facets": [
+        {
+          "id": "janai-ka",
+          "label": "Short ja-nai-ka frame"
+        },
+        {
+          "id": "kai",
+          "label": "Short kai question"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "conversation-connectors-completed-task-confirm",
+          "facetId": "janai-ka",
+          "exampleKey": "completed-task"
+        },
+        {
+          "exerciseId": "conversation-connectors-price-negative-confirm",
+          "facetId": "janai-ka",
+          "exampleKey": "bag-negative-price"
+        },
+        {
+          "exerciseId": "conversation-connectors-tea-past-question",
+          "facetId": "kai",
+          "exampleKey": "tea-drinking"
+        },
+        {
+          "exerciseId": "conversation-connectors-mother-well-question",
+          "facetId": "kai",
+          "exampleKey": "mother-wellbeing"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "n5-explanations-endings-listener-endings",
+          "importance": 2,
+          "reason": "Compare listener orientation with the already-owned yo/ne tasks."
+        },
+        {
+          "groupId": "topic-comparison",
+          "importance": 2,
+          "reason": "Read the stated proposition and its negation rather than guessing a hidden opposite."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "conversation-connectors-prefaces",
+      "label": "Read explanatory background versus an explicit comparison",
+      "facets": [
+        {
+          "id": "background-preface",
+          "label": "Background introducing or inviting the next move"
+        },
+        {
+          "id": "contrasted-facts",
+          "label": "An explicit contrast between stated facts"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "conversation-connectors-entrance-preface",
+          "facetId": "background-preface",
+          "exampleKey": "first-visit-entrance"
+        },
+        {
+          "exerciseId": "conversation-connectors-computer-open-preface",
+          "facetId": "background-preface",
+          "exampleKey": "computer-help"
+        },
+        {
+          "exerciseId": "conversation-connectors-small-bag-contrast",
+          "facetId": "contrasted-facts",
+          "exampleKey": "small-bag-capacity"
+        },
+        {
+          "exerciseId": "conversation-connectors-siblings-role-contrast",
+          "facetId": "contrasted-facts",
+          "exampleKey": "siblings-roles"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "n5-explanations-endings-explanatory-formation",
+          "importance": 2,
+          "reason": "Reuse explanatory nominal na and inflected predicate attachment."
+        },
+        {
+          "groupId": "n5-reasons-contrasts-preface-or-contrast",
+          "importance": 2,
+          "reason": "Keep ordinary N5 ga prefaces in their existing owner."
+        },
+        {
+          "groupId": "conversation-connectors-discourse",
+          "importance": 2,
+          "reason": "Contrast an attached explanatory connection with links between whole messages."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "conversation-connectors-discourse",
+      "label": "Identify the selected link between whole messages",
+      "facets": [
+        {
+          "id": "added-point",
+          "label": "An added consideration"
+        },
+        {
+          "id": "consequence",
+          "label": "A stated consequence"
+        },
+        {
+          "id": "maintained-despite",
+          "label": "An outcome or choice maintained despite an obstacle"
+        },
+        {
+          "id": "counterpoint",
+          "label": "Contrasting properties"
+        },
+        {
+          "id": "continuation-request",
+          "label": "A request to continue the account"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "conversation-connectors-shop-added-hours",
+          "facetId": "added-point",
+          "exampleKey": "shop-access-hours"
+        },
+        {
+          "exerciseId": "conversation-connectors-shop-added-recommendation",
+          "facetId": "added-point",
+          "exampleKey": "shop-return-and-recommendation"
+        },
+        {
+          "exerciseId": "conversation-connectors-snow-delay-result",
+          "facetId": "consequence",
+          "exampleKey": "snow-train-delay"
+        },
+        {
+          "exerciseId": "conversation-connectors-room-rental-result",
+          "facetId": "consequence",
+          "exampleKey": "room-tradeoff-and-rental"
+        },
+        {
+          "exerciseId": "conversation-connectors-route-despite-warning",
+          "facetId": "maintained-despite",
+          "exampleKey": "route-warning"
+        },
+        {
+          "exerciseId": "conversation-connectors-shop-return-despite-price",
+          "facetId": "maintained-despite",
+          "exampleKey": "shop-return-and-recommendation"
+        },
+        {
+          "exerciseId": "conversation-connectors-room-price-distance",
+          "facetId": "counterpoint",
+          "exampleKey": "room-price-distance"
+        },
+        {
+          "exerciseId": "conversation-connectors-room-size-access",
+          "facetId": "counterpoint",
+          "exampleKey": "room-tradeoff-and-rental"
+        },
+        {
+          "exerciseId": "conversation-connectors-wallet-continuation",
+          "facetId": "continuation-request",
+          "exampleKey": "found-wallet-account"
+        },
+        {
+          "exerciseId": "conversation-connectors-match-quoted-continuation",
+          "facetId": "continuation-request",
+          "exampleKey": "match-followup"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "n5-reasons-contrasts-contrast-forms",
+          "importance": 2,
+          "reason": "Reuse the attached ga/kedo foundations rather than relabel them."
+        },
+        {
+          "groupId": "topic-comparison",
+          "importance": 2,
+          "reason": "Distinguish discourse contrast from contrastive-topic inference."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "conversation-connectors-register",
+      "label": "Separate the selected ending's form from formality and quotation",
+      "facets": [
+        {
+          "id": "plain-style",
+          "label": "Plain ending in the selected voice"
+        },
+        {
+          "id": "polite-style",
+          "label": "Polite ending in the selected voice"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "conversation-connectors-formal-plain-wonder",
+          "facetId": "plain-style",
+          "exampleKey": "explanation-doubt"
+        },
+        {
+          "exerciseId": "conversation-connectors-quoted-plain-kashira",
+          "facetId": "plain-style",
+          "exampleKey": "reservation-quoted-question"
+        },
+        {
+          "exerciseId": "conversation-connectors-polite-train-wonder",
+          "facetId": "polite-style",
+          "exampleKey": "train-destination-question"
+        },
+        {
+          "exerciseId": "conversation-connectors-quoted-polite-preface",
+          "facetId": "polite-style",
+          "exampleKey": "bag-color-request"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "n5-explanations-endings-quotation-markers",
+          "importance": 2,
+          "reason": "Read the boundary of a quoted voice before assigning the narrator's style."
+        },
+        {
+          "groupId": "conversation-connectors-prefaces",
+          "importance": 2,
+          "reason": "Recognize polite explanatory contractions in their full sentence."
+        },
+        {
+          "groupId": "conversation-connectors-wondering",
+          "importance": 2,
+          "reason": "Compare plain darou-ka with polite deshou-ka without a gender rule."
+        }
+      ],
+      "requires": []
+    }
+  ]
+}

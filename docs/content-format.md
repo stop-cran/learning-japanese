@@ -255,7 +255,8 @@ The [time/linking ledger](grammar-time-linking-sources.json) adds 38 N4 tasks in
 The [respectful/humble ledger](grammar-honorific-humble-sources.json) adds 37 N4 tasks in one set.
 The [productive-descriptions ledger](grammar-productive-descriptions-sources.json) adds 30 N4 tasks in one set.
 The [quantity/scope ledger](grammar-quantity-scope-sources.json) adds 26 N4 tasks and two N5 controls in one set.
-Current practice is 1710 exercises: 592 N5 and 777 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [conversation/discourse ledger](grammar-conversation-connectors-sources.json) adds 24 N4 tasks and four N5 controls in one set.
+Current practice is 1738 exercises: 596 N5 and 801 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -483,6 +484,16 @@ Two isolated ordinary-action duration controls stay N5; the other twenty-six tas
 Existing restriction, listing, comparison and estimate/limit objects retain their owners and levels.
 Prefixes, nearly-every-period wording, membership/rank and higher-grade interval/resource links are bounded
 recognition support; minimal-means だけで and detailed interval/collocation practice remain explicit future goals.
+The [conversation/discourse installment](grammar-conversation-connectors-sources.json) adds 28 annotated prompts,
+reaching **1738 exercises in 71 files** and **1429/1738** reviewed, with 309 still pending.
+Five groups contain fourteen facets, twelve soft recommendations and no prerequisites: ten full-predicate
+conversions in typed mode (named-frame recognition in choice mode) and eighteen interpretations of prefaces,
+selected discourse links and grammatical register/quoted voice.
+The four isolated plain/polite form and quotation-scope controls stay N5; supplied N4 context does not raise their level.
+Explicit/open-ended prefaces and coexisting/expectation-related contrasts remain distinct operations.
+Continuation-question それで is not automatically causal, and paired selected links share their context key.
+Existing N5 explanation, quotation, yo/ne, conjecture, attached contrast and topic objects retain their owners;
+clausal ても remains in time/linking. Register recognition does not infer gender, hostility or a universal social ranking.
 The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the

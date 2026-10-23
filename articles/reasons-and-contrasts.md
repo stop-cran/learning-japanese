@@ -196,8 +196,10 @@ A speaker may also leave a continuation unspoken:
 In this exchange the work schedule raises an obstacle. It may invite discussion or allow a refusal to be inferred;
 the fragment alone does not logically guarantee "I definitely will not go."
 This open-ended use is supporting reading, not a scored reconstruction of an unspecified missing sentence.
-The explanatory **んですが／んだけど** family is a separate N4 onward pattern in our primary curriculum,
-not a required hidden ingredient of these preface tasks.
+The explanatory **んですが／んだけど** family is a separate N4 pattern in our primary curriculum,
+not a required hidden ingredient of these N5 preface tasks. The
+[conversation supplement](explanations-quotations-and-endings.md#n4-conversation-endings-and-prefaces)
+adds its own contextual interpretations without replacing those existing tasks.
 
 ## て links for reasons, means and parallel facts
 
@@ -314,6 +316,104 @@ This conjunction **でも** is different from example-giving **お茶でも**, "
 **ても／でも**, "even if/when." For example-giving, see the
 [listing article](japanese-listing-and-examples.md#でも-one-possible-suggestion); its broader contrasts are onward material.
 
+## N4 links between whole messages
+
+The [conversation supplement](explanations-quotations-and-endings.md#n4-conversation-endings-and-prefaces)
+adds selected discourse interpretations to the earlier clause-linking work.
+These words connect complete messages. They do not all replace an attached が／けど, and an English
+"and", "but" or "so" does not by itself make one Japanese option uniquely correct.
+
+| Link in the examples below | Local role |
+| --- | --- |
+| それに | Add another consideration |
+| それで | Present a consequence, or ask for a story to continue |
+| それでも | Maintain an outcome or choice despite preceding circumstances |
+| Sentence-initial だが／ですが | Introduce a contrasting statement |
+
+### それに: another point, not necessarily another event
+
+> この店は駅に近いです。それに、夜も開いています。  
+> このみせは えきに ちかいです。それに、よるも あいています。  
+> This shop is near the station. Besides, it is open at night too.
+
+The hours are an additional feature. Station access is not presented as their cause.
+**開いています（あいています）** means is open here; **夜（よる）** is night.
+Do not infer an event sequence or a universal rule that every surrounding judgment must have the same
+positive/negative evaluation.
+
+### それで: a result, or an invitation to continue
+
+> 雪で電車が止まりました。それで、学校に遅れました。  
+> ゆきで でんしゃが とまりました。それで、がっこうに おくれました。  
+> The train stopped because of snow. As a result, I was late for school.
+
+The second statement is presented as a consequence. **止まりました（とまりました）** means stopped;
+**遅れました（おくれました）** means was late. That is different from this listener's turn:
+
+> A: 昨日、駅で財布を拾ったよ。  
+> きのう、えきで さいふを ひろったよ。  
+> Yesterday I found a wallet at the station.
+>
+> B: それで？  
+> And then?
+
+B asks for the continuation, without asserting a particular result.
+**財布（さいふ）** is wallet and **拾った（ひろった）** means picked up.
+A fuller follow-up can be **それで、どちらが勝ったの？**
+(**それで、どちらが かったの**), "So, which side won?", after hearing about a match.
+A quoted version of that question remains a request for further information even inside an outer report.
+**それでは／それじゃ** belongs to a related but different "well then/in that case" use;
+it is not merely a spelling variant accepted in place of every それで.
+
+### それでも: retain the following stance despite the background
+
+> 道は危ないと聞きました。それでも、この道を通るつもりです。  
+> みちは あぶないと ききました。それでも、このみちを とおるつもりです。  
+> I heard that the route is dangerous. Even so, I intend to take it.
+
+The plan is maintained despite the warning. The trip need not have happened, and a report does not
+guarantee the warning's truth. **危ない（あぶない）** means dangerous and **通る（とおる）** pass along/take a route.
+The existing [plans lesson](volition-plans-and-goals.md) owns the intention construction.
+This discourse **それでも** is distinct from attaching concessive **ても／でも** to a clause.
+The latter retains its [existing practice](#ても-and-paired-alternatives).
+
+### だが／ですが: distinguish a separate linker from an attached が
+
+> この部屋は安いです。ですが、駅から遠いです。  
+> このへやは やすいです。ですが、えきから とおいです。  
+> This room is inexpensive. However, it is far from the station.
+
+Here **ですが** begins a new contrasting statement.
+Compare attached **この部屋は安いですが、駅から遠いです**, with が after the first predicate:
+the same broad message can have a different grammatical arrangement.
+The attached N5 が／けど exercises keep their original owners and levels.
+Standalone だが can sound formal or stiff; that is not the same thing as a polite grammatical ending.
+
+### Keep two links in one account separate
+
+> この店は高いです。それでも、また行きます。それに、友達にも紹介します。  
+> このみせは たかいです。それでも、また いきます。それに、ともだちにも しょうかいします。  
+> This shop is expensive. Even so, I will go again. Besides, I will recommend it to friends too.
+
+**それでも** maintains the return despite price; **それに** adds the recommendation.
+**紹介します（しょうかいします）** means introduce/recommend the shop to someone here.
+The second link does not acquire the first link's job just because they share one passage.
+
+> 部屋は狭い。だが、駅に近い。それで、この部屋を借りた。  
+> へやは せまい。だが、えきに ちかい。それで、このへやを かりた。  
+> The room is small. However, it is near the station. So I rented it.
+
+**だが** contrasts the properties; **それで** presents the rental choice as a consequence of the account.
+**狭い（せまい）** means small/cramped; **借りた（かりた）** means rented here.
+Selecting a link's role is not a test that every other Japanese formulation would be impossible.
+
+The questions use fixed-order, defined labels: **追加（ついか）**, an added point;
+**結果（けっか）**, a stated consequence; **譲歩（じょうほ）**, a maintained outcome/choice despite an obstacle;
+**対比（たいひ）**, a comparison of properties without that maintained-outcome framing; and
+**続き（つづき）**, a request for continuation. These are the local distinctions in these examples,
+not a claim that concession can never be called contrast in a broader grammatical description.
+Questions selecting different links in the same shop or room account share their context key.
+
 ## Continue without conflating the constructions
 
 The [し and reason-giving comparison](japanese-listing-and-examples.md#し-versus-から-and-ので)
@@ -370,7 +470,13 @@ Optional word tips support the supplied vocabulary while protecting the tested g
   [それから](https://jlptsensei.com/learn-japanese-grammar/%e3%81%9d%e3%82%8c%e3%81%8b%e3%82%89-sore-kara-meaning/)
   and [conjunction でも](https://jlptsensei.com/learn-japanese-grammar/%e3%81%a7%e3%82%82-demo-meaning/)
   entries support the exact sentence-linking senses. The linked そして word card records its dictionary sense.
+- The N4 conversation supplement uses Bunpro's actual [それに](https://bunpro.jp/grammar_points/それに),
+  [それで](https://bunpro.jp/grammar_points/それで), [それでも](https://bunpro.jp/grammar_points/それでも)
+  and [だが／ですが](https://bunpro.jp/grammar_points/だが・ですが) lessons and public examples.
+  The それで lesson includes the listener-continuation use; [JMdict](https://jisho.org/search/それで) also
+  lists causal and continuation glosses. No universal same-evaluation, nonvolition or mandatory-surprise
+  rule is adopted from illustrative source shortcuts.
 
 These are sourced study estimates, not an exhaustive official JLPT syllabus. Vocabulary/kanji difficulty does not set the
-grammar level. Broader register choices, sentence-final interaction, explanatory endings and higher-level concession
-remain follow-up material, not claims of mastery from this small set.
+grammar level. The bounded N4 supplement does not establish unrestricted register choice, prosody,
+sentence-final interaction or higher-level concession mastery.

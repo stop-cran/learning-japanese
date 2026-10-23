@@ -243,7 +243,7 @@ from ruling something out, without replacing these N5 exercises or assigning num
 
 ## Response labels and practice boundaries
 
-Interpretation questions give these readings and operational meanings **before** answering, in fixed order:
+The original N5 interpretation questions give these readings and operational meanings **before** answering, in fixed order:
 
 | Labels | What they distinguish in these tasks |
 | --- | --- |
@@ -265,6 +265,163 @@ and **ご家族（ごかぞく）**, family. Learn the actual expression and its
 The native/Sino-Japanese preference is a tendency with exceptions, not permission to prefix any noun automatically.
 This note does not teach the full honorific system or claim that every bare 茶 is rude.
 
+## N4 conversation endings and prefaces
+
+The following supplement builds on the N5 explanations and conjectures above. A question can express
+uncertainty, seek agreement, or invite another person's response. Do not derive its whole conversational
+purpose, the speaker's gender or the truth of its content from one written ending.
+
+### かな, かしら and のだろうか: wondering
+
+**かな** and **かしら** can present something the speaker is wondering about.
+The content can be a yes/no matter or an open question such as **どこにあるかな**, "I wonder where it is."
+Someone can say this aloud in a conversation; it is not a guarantee that no listener will respond.
+かしら is often associated with feminine speech, but that association is not an identity test or a rule
+that other speakers are grammatically forbidden to use it.
+
+**のだろうか／のでしょうか** combines an explanatory connection with questioning/conjecture.
+The latter uses polite **でしょう**. The shorter **だろうか／でしょうか** also occurs without の:
+**雨が降るだろうか（あめがふるだろうか）**, "I wonder whether it will rain."
+Our explicit のだろうか conversions require の; that is a named practice frame, not a universal obligation.
+
+Keep the predicate's time and polarity while changing the requested ending:
+
+| Supplied predicate | One requested wondering form | Reading and meaning |
+| --- | --- | --- |
+| 食べました | 食べたかな | たべたかな; I wonder whether [someone] ate it |
+| 学生です | 学生かな | がくせいかな; I wonder whether [the person] is a student |
+| 来ません | 来ないのだろうか | こないのだろうか; I wonder whether [it/they] will not come |
+| 休みでした | 休みだったのだろうか | やすみだったのだろうか; I wonder whether [the shop] was closed |
+| 読みます | 読むかしら | よむかしら; I wonder whether [someone] will read it |
+| 静かです | 静かかしら | しずかかしら; I wonder whether it is quiet |
+
+In these short plain かな／かしら examples, a nonpast noun or な-adjective uses its base without an extra
+だ or です. An explicit explanatory frame instead has **学生なのだろうか／静かなのだろうか**.
+Past **だった** and negative predicates do not acquire another affirmative-nonpast な.
+The [verb](japanese-verb-foundations.md) and [adjective](japanese-adjective-foundations.md) foundations
+explain the actual conversions, rather than treating a polite stem as an unchanged plain predicate.
+
+There are other useful contextual uses. A negative wondering expression can convey a wish or invite help:
+**雨がやまないかしら（あめがやまないかしら）**, "I wish the rain would stop."
+The negative question does not mean the speaker wants continued rain. This recognition note is not a
+scored demand to infer a wish or request from every negative かな／かしら.
+
+### じゃないか and かい: different question resources
+
+In a confirmation or pointing-out use:
+
+> 仕事はもう終わったじゃないか。  
+> しごとは もう おわったじゃないか。  
+> The work is already finished, isn't it!
+>
+> このかばんは高くないじゃないか。  
+> このかばんは たかくないじゃないか。  
+> Look, this bag isn't expensive!
+
+The first puts forward completion. The second puts forward **not being expensive**:
+its inner **高くない** remains negative. Do not mechanically cancel all visible negative-looking pieces.
+じゃないか can follow a verb or い-adjective predicate, not only a noun.
+For a nonpast nominal confirmation, **学生じゃないか** does not retain an extra bare だ.
+
+Depending on the whole exchange, similar wording can instead be a genuine negative question, an exclamation
+or a rhetorical question. The named formation tasks request the confirmation use; they do not claim that
+every じゃないか asserts a true positive fact. **ではないか** is a fuller, often stiffer counterpart,
+not automatically a polite **です／ます** ending.
+The separate **volitional + じゃないか** invitation use needs its own later treatment.
+
+**かい** is a familiar question ending:
+
+> お茶はもう飲んだかい。  
+> おちゃは もう のんだかい。  
+> Have you already had your tea?
+>
+> お母さんは元気かい。  
+> おかあさんは げんきかい。  
+> Is your mother well?
+
+The short patterns use **飲んだ + かい** and **元気 + かい**, without an extra nominal だ.
+Explanatory **飲んだのかい／元気なのかい**, and contracted の／なの forms, also occur.
+Yes/no questions are common, but neither yes/no form, hostility nor the speaker's gender follows as an
+absolute rule. This familiar ending is not a universal default for every service or workplace interaction.
+
+### んだけど and んですが: background before the next move
+
+> 初めて来たんですが、入口はどこですか。  
+> はじめて きたんですが、いりぐちは どこですか。  
+> This is my first visit; where is the entrance?
+
+The visit supplies background for a question, not a contradiction.
+**初めて（はじめて）** means for the first time; **入口（いりぐち）** is an entrance.
+The same explanatory connection can precede a request, an explicit contrast, or an unspoken continuation:
+
+> A: このパソコンが動かないんだけど……。  
+> このぱそこんが うごかないんだけど……。  
+> This computer isn't working ...
+>
+> B: 見てみようか。  
+> みてみようか。  
+> Shall I try taking a look?
+
+B treats the problem as relevant background for help. A has not stated a guaranteed refusal or a uniquely
+recoverable missing request. Read the response and situation rather than filling every unfinished けど
+with "so I definitely won't."
+
+The explanatory attachment follows the earlier rules: **学生なんですが**, but
+**学生だったんですが／学生じゃないんですが**. The **ん** can be **の**, and the connecting family includes
+けど, けれど, けれども, けども and が. A contraction can retain a polite ending.
+Conversely, **読んだけど** is normally **読んだ + けど**, "read it, but ...", not automatically explanatory んだ.
+
+Compare two explicit facts:
+
+> このかばんは小さいんですが、荷物がたくさん入ります。  
+> このかばんは ちいさいんですが、にもつが たくさん はいります。  
+> This bag is small, but it holds a lot of luggage.
+
+Here small size is contrasted with capacity. **荷物（にもつ）** means luggage.
+A contrast can also compare coexisting roles: **田中さんは学生なんだけど、お姉さんは先生なんです**,
+**たなかさんは がくせいなんだけど、おねえさんは せんせいなんです**,
+"Tanaka is a student, whereas their older sister is a teacher." Neither fact has to invalidate the other.
+See [reasons and prefaces](reasons-and-contrasts.md#a-preface-is-not-necessarily-a-contradiction)
+for the existing N5 が／けど foundation.
+
+### Register: identify the selected voice
+
+Plain versus polite grammatical endings are not the same axis as formal versus conversational wording.
+**のだろうか** can sound reflective or formal while remaining plain; **のでしょうか** is polite.
+**なんですが** is contracted but retains polite です.
+
+Quoting someone does not make their ending match the narrator's:
+
+> 私は「このかばんなんですが、別の色もありますか」と店員に聞いた。  
+> わたしは「このかばんなんですが、べつの いろも ありますか」と てんいんに きいた。  
+> I asked the clerk, "About this bag, do you have another color?"
+
+The quoted preface is polite; the outer **聞いた（きいた）**, asked, is plain.
+**別（べつ）** means different/another, **色（いろ）** color, and **店員（てんいん）** shop clerk.
+Conversely, polite narration can quote plain **ここでいいかしら**, "I wonder whether here is all right."
+Neither arrangement proves rudeness, a fixed social hierarchy, or a speaker's gender.
+See [honorific, humble and polite language](honorifics-humble-and-polite-language.md)
+for the separate actor/listener mechanisms; it is optional here.
+
+### What this N4 practice assesses
+
+The conversation set adds ten named full-predicate conversions and eighteen supplied-message interpretations.
+The conversions require forming the predicate in typed mode. In choice mode, the converted predicate is already
+supplied by the buttons: selecting the named frame is recognition, not evidence of productive conversion.
+Five groups cover wondering, confirmation/familiar questions, explanatory prefaces, discourse links and
+register/quoted voice. The [whole-message link examples](reasons-and-contrasts.md#n4-links-between-whole-messages)
+are part of the same set. Existing N5 exercises and their owners are unchanged.
+Twenty-four new tasks are N4. The four isolated register/quotation controls stay N5: they ask about
+grammatical ending form and the selected voice, not the extra meaning of the supplied N4 surroundings.
+
+The formation tasks visibly request a short ending and a written-base conversion, preserving time and polarity.
+Their limits do not ban fuller copulas, explanatory variants or other natural wondering expressions outside the drill.
+Interpretation tasks provide readings and fixed-order definitions before answering.
+**前置き（まえおき）／対比（たいひ）** distinguish contextual prefaces from the explicit comparisons shown.
+**普通（ふつう）／丁寧（ていねい）** label the selected plain/polite ending, not all aspects of social appropriateness.
+The written variant **叮嚀** is accepted for the same 丁寧 response, not made into another choice button.
+These tasks are scaffolded practice, not unrestricted conversational mastery or a test of an imagined voice.
+
 ## Sources and scope
 
 The primary curriculum anchors are Bunpro's
@@ -283,6 +440,19 @@ Tae Kim's [explanations](https://guidetojapanese.org/learn/complete/explanation)
 provide cross-checks. The optional recognition notes use JLPT Sensei's separate
 [なあ](https://jlptsensei.com/learn-japanese-grammar/なあ-naa-sentence-ending-particle-meaning/) and
 [お／ご](https://jlptsensei.com/learn-japanese-grammar/御-お-ご-o-go-polite-marker-particle-meaning/) lessons.
+
+The N4 supplement uses the actual Bunpro lessons for [かな](https://bunpro.jp/grammar_points/かな),
+[かしら](https://bunpro.jp/grammar_points/かしら),
+[のだろうか](https://bunpro.jp/grammar_points/のだろうか),
+[じゃないか](https://bunpro.jp/grammar_points/じゃないか),
+[かい](https://bunpro.jp/grammar_points/かい) and
+[んだけど／んですが](https://bunpro.jp/grammar_points/んだけど-んですが).
+Its attachment charts and public examples matter alongside the prose; optional の is not universally compulsory.
+[TUFS's contrasts and prefaces](https://www.coelang.tufs.ac.jp/mt/ja/gmod/contents/explanation/082.html),
+especially its open-ended and explicit help-request examples, support the contextual comparison.
+Exact JMdict entries through Jisho support [かしら](https://jisho.org/search/かしら),
+[じゃないか](https://jisho.org/search/じゃないか) and [丁寧](https://jisho.org/search/丁寧).
+Historical gender narratives, fixed hierarchy/hostility rules and equal spelling-frequency claims are not adopted.
 
 These are editorial learning-level estimates, not an exhaustive official JLPT syllabus.
 Vocabulary difficulty, optional spellings and optional linked advanced reading do not determine the exercise level.

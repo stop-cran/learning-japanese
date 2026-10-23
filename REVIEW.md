@@ -35,6 +35,37 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Conversation endings and discourse links: independent review and refinement (2026-10-23 UTC)
+
+**Snapshot and scope:** `4c06f9941108bc22900bb0d91f0149ec97a8903d` plus
+[issue #34](https://github.com/stop-cran/learning-japanese/issues/34). A fresh independent reviewer read
+all 28 tasks, 58 accepted renderings, 92 option/feedback branches, 120 lexical spans, 208 exclusions and
+the three article deltas, with targeted neighboring content and actual public source passages.
+Correctness, scoped coverage and comprehensibility were **CLEAN/CLEAN/CLEAN**, with no actionable findings.
+Actual model identity was unavailable and was not inferred. The
+[ledger](docs/grammar-conversation-connectors-sources.json) preserves original evidence and limitations.
+
+**Optional refinements:** **CC-IR-O01** distinguishes real typed predicate conversion from choice-mode
+recognition when all buttons already supply the converted predicate. **CC-IR-O02** describes JMdict's
+causal/continuation gloss list without implying separate numbered senses or listener-turn analysis.
+The two article qualifications and corresponding contributor notes were checked by the original reviewer.
+Both observations are **resolved**; final verdicts remain **CLEAN/CLEAN/CLEAN**, with no new findings or
+optional observations. This was an informed delta reconciliation, not another blind full-content review.
+All exercise objects, groups and complete lexical records were unchanged by the refinements.
+
+**Coverage and reflection:** 24 N4 tasks and four isolated N5 register/quotation controls comprise ten
+typed formation tasks and eighteen interpretations in five groups, with fourteen facets, twelve soft
+recommendations and no hard prerequisites. Two paired passages share keys; the 26 key strings are not
+independent-conversation or mastery counts. All 70 prior complete sets and 1710 prior lexical records
+remain unchanged; 48 reused members retain their seven original owners.
+The corpus reaches **1738 tasks in 71 sets, including 801 N4**. Vocabulary coverage is **1429/1738**;
+309 unchanged baseline records remain pending, so the strict global completeness gate is not claimed to pass.
+Extend the existing scaffolded-operation lesson with mode-specific evidence, and add qualified source
+navigation and the concrete Jisho extraction/sense-description pitfall. No extra review layer is introduced.
+Content/vocabulary checks, the 151 focused grammar regressions and a fresh non-skipped real Android
+importer support integration, not linguistic or learning-outcome certification. No app/SRS or APK change,
+physical-device check, native-speaker judgment or audio/prosody certification is claimed.
+
 ## Quantity, ranges, frequency and scope: independent review and reconciliation (2026-10-23 UTC)
 
 **Snapshot and scope:** `f60705b67484f21874f69d078ba2796e4a24b588` plus
@@ -1411,6 +1442,10 @@ The [compound-relation review](docs/grammar-compound-relations-sources.json) add
 - **Name the operation in a scaffolded drill.** A named pattern can support a useful attachment or form conversion;
   printing its exact missing fragment mostly supports copying. Preserve fair visible restrictions while requiring
   a small operation, and do not describe the result as unrestricted mastery (CR-O02).
+  Distinguish the evidence from each answer mode: the [conversation review](docs/grammar-conversation-connectors-sources.json),
+  CC-IR-O01, found real typed predicate conversion but choice buttons that already supplied that conversion.
+  Those buttons test recognition of the named frame, not productive inflection. Describe that bounded skill
+  accurately rather than counting the two presentations as equivalent formation evidence.
   The [N5 foundations review](docs/grammar-n5-foundations-sources.json) extends this to prerequisite explanations:
   defining a ます-stem from an already-inflected example does not teach the productive godan u-row to i-row
   operation needed to form it from a dictionary verb (N5FI-F01; regroup).

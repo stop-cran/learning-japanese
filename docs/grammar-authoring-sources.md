@@ -67,6 +67,7 @@ The batch records contain the exact sections and qualifications used.
 
 | Sources and inspected seed pages | Useful starting point for | Existing batch records |
 | --- | --- | --- |
+| [Bunpro: wondering](https://bunpro.jp/grammar_points/のだろうか) / [それで](https://bunpro.jp/grammar_points/それで), [TUFS: contrasts and prefaces](https://www.coelang.tufs.ac.jp/mt/ja/gmod/contents/explanation/082.html) | Predicate attachment, open prefaces and selected links between whole messages. Read actual charts and listener-turn examples; do not impose compulsory explanatory の, fixed gender/hierarchy rules, or equate formal wording with polite endings. | [Conversation endings and discourse links](grammar-conversation-connectors-sources.json) |
 | [Bunpro: numerical bounds](https://bunpro.jp/grammar_points/以上1) / [frequency に](https://bunpro.jp/grammar_points/に-frequency) / [price する](https://bunpro.jp/grammar_points/する-cost) | Inclusive endpoints, period/count distribution and item-price predicates. Keep negative domains and selected clause scope explicit; do not import equal-spacing guarantees, a universal に／で ban or mutually exclusive money verbs. Source-supported attachment changes must still vary the actual assessed operation. | [Quantity, ranges and frequency](grammar-quantity-scope-sources.json) |
 | [Tofugu: やすい](https://www.tofugu.com/japanese-grammar/yasui/) / [にくい](https://www.tofugu.com/japanese-grammar/nikui/), [Tae Kim: method nouns](https://guidetojapanese.org/learn/grammar/comparison) / [adverbs](https://guidetojapanese.org/learn/grammar/adverbs) | Productive suffixes, nonvolitional tendencies, method-phrase argument changes and action modifiers. Read intact Japanese; do not import an exclusive physical/psychological split, universal case-marker conversion, numerical-only quality nouns or compulsory verb adjacency. | [Ease, methods and descriptive forms](grammar-productive-descriptions-sources.json) |
 | [Agency for Cultural Affairs: 敬語の指針](https://www.bunka.go.jp/seisaku/bunkashingikai/kokugo/hokoku/pdf/keigo_tosin.pdf), [Bunpro: いらっしゃる](https://bunpro.jp/grammar_points/いらっしゃる) / [ていただけませんか](https://bunpro.jp/grammar_points/ていただけませんか) | Actor, action-related party and listener; productive and special forms; combined mechanisms and requests. Read the exact official sections rather than importing a person-only shortcut, one politeness ladder, universal double-keigo ban or unrestricted prefix recipe. "Special respectful" does not itself select one synonymous verb or polite ending family. | [Honorific, humble and polite language](grammar-honorific-humble-sources.json) |
@@ -113,6 +114,10 @@ on a listed site, or reject a relevant source merely because it is absent here.
 - **Kotobank:** extraction can omit the modern Daijisen entry and expose another dictionary or reading. Check the actual
   entry heading and sense, not merely a matching character. The [outcome record](grammar-expectations-sources.json)
   documents the 末 and 癖に cases.
+- **Jisho/JMdict:** simplified extraction can expose only kanji details while omitting the lexical entry.
+  Inspect the actual spelling, reading and senses. Several English glosses within one sense are not separate numbered
+  senses or a contextual dialogue analysis; the [conversation review](grammar-conversation-connectors-sources.json),
+  CC-IR-O02, distinguishes the それで gloss list from Bunpro's actual listener-question example.
 - **Weblio:** isolate the named dictionary from adjacent expression dictionaries and automatically generated examples.
   The [あげく record](grammar-expectations-sources.json) uses Daijisen's spelling heading; it does not establish equal
   frequency for the accepted spellings.

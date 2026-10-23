@@ -175,6 +175,11 @@ both, only this one, or be answering only about this one.
 Likewise, 今日は休みです does not prove that yesterday was a workday. Topic framing makes a contrast
 available; the context determines how strongly it matters and what, if anything, is implied.
 
+For links **between whole messages**, compare the
+[N4 discourse supplement](reasons-and-contrasts.md#n4-links-between-whole-messages).
+Contrasting a topic with は and introducing a contrasting statement with だが／ですが are different
+arrangements; neither alone supplies an unstated opposite. These N5 topic tasks retain their owners.
+
 ## も: add the right thing to the comparison
 
 ### Another person, item, or time
