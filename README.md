@@ -29,6 +29,7 @@ This repository starts as a collection of standalone articles prompted by specif
 | Grammar | [Looks, likeness and informed impressions](articles/appearance-resemblance-and-impressions.md) | How do appearance, resemblance, inferred information, typicality and outward feelings differ without a fixed certainty ladder? |
 | Grammar | [Thinking, possibility and expectation](articles/thinking-possibility-and-expectation.md) | How do thoughts, possibilities and reason-based expectations attach, and how do event time, thinking time and negative scope differ? |
 | Grammar | [Embedded questions, reports and noticing](articles/embedded-questions-and-reports.md) | What is the inner question or content, what does the outer message do, and who issues or receives a reported instruction? |
+| Grammar | [Volition, plans and goals](articles/volition-plans-and-goals.md) | How do intended actions, planned activities, desired outcomes, observed changes and maintained effort differ? |
 | Grammar | [Koto, wake, and Japanese noun-based grammar](articles/koto-wake-and-formal-nouns.md) | How do こと and わけ differ, which common formal nouns and noun-based expressions are useful to know, and where do の/ん and ほど fit? |
 | Grammar | [Japanese verb extensions: direction and aspect](articles/verb-extensions-direction-and-aspect.md) | How do direction, temporal viewpoint, beginning, continuation, redoing and recent completion differ? Includes focused N4 practice and links to the existing action-stage exercises. |
 | Grammar | [Japanese conditionals: たら, ば, なら, と, and 場合](articles/japanese-conditionals.md) | How do conditions, premises, event order, discoveries, and procedural cases differ, and when can several patterns fit? |
@@ -127,6 +128,11 @@ embedded information questions, whether-or-not, reports, nominalized content/not
 Its [ledger](docs/grammar-reports-questions-sources.json) records exact reused owners and preserves fitting
 bare-か／かどうか and の／こと alternatives in both answer modes, without making reported information proof.
 
+The [volition/plans installment](articles/volition-plans-and-goals.md) adds 25 N4 tasks in three groups:
+plain volitional formation, volitional thought and planned activities with 予定.
+Its [ledger](docs/grammar-plans-goals-sources.json) records exact reuse of intentions, invitations,
+goals, changes, maintained practice and desire; wish/advice and manner/purpose-plus-desire remain recognition bridges.
+
 ## Confusable vocabulary
 
 The [candidate inventory](docs/confusable-words.md) collects overlapping meanings, misleading English glosses,
@@ -182,9 +188,9 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   52 on explanations, quotations and endings, 34 on desire, actors and outcomes,
   34 on ability and perception, 28 on actions/events/results, 24 on trying/preparing/completing,
   36 on benefactives/requests, 34 on direction/development/stages, 30 on passive participants,
-  40 on causative perspective, 38 on appearance/impressions, 36 on judgment/expectation
-  and 40 on embedded questions/reports (1508 in total).
-  All 1508 exercises have grammar-only study labels: **587 N5, 580 N4, 235 N3, 102 N2 and four N1**.
+  40 on causative perspective, 38 on appearance/impressions, 36 on judgment/expectation,
+  40 on embedded questions/reports and 25 on volition/plans (1533 in total).
+  All 1533 exercises have grammar-only study labels: **587 N5, 605 N4, 235 N3, 102 N2 and four N1**.
   These are editorial estimates using Bunpro as the primary reference, with documented JLPT Sensei comparisons,
   not an official syllabus. Vocabulary and kanji difficulty do not determine them; natural examples remain unchanged.
   See the [policy and per-article distribution](docs/jlpt-levels.md#grammar-baseline) and

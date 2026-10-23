@@ -100,6 +100,10 @@ For negative and past intentions, and the separate harder "thought I had done it
 [the existing つもり discussion](koto-wake-and-formal-nouns.md#つもり-a-plan-or-a-belief-about-what-has-been-done).
 The completion-belief contrast is optional and keeps its existing study level.
 
+For the N4 continuation, see [volition, plans and goals](volition-plans-and-goals.md):
+plain 行こう, intention with 行こうと思う, and planned activities with 予定.
+It reuses these intention and polite-invitation foundations rather than creating new copies.
+
 ## 3. Propose, invite or offer: ましょう, ませんか, ましょうか
 
 All three use the ます-stem:

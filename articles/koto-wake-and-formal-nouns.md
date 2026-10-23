@@ -924,6 +924,10 @@ The next six supply **ようにしています** and request a dictionary or な
 They practice the meaning and attachment of these supplied patterns, not unrestricted selection of **なる** versus **する**.
 Other appropriate formulations of change, intention or effort remain possible outside those visible form restrictions.
 
+For a focused map connecting these existing goals, changes and practices with plain volition,
+intention and 予定, see [volition, plans and goals](volition-plans-and-goals.md).
+The original exercises here retain their owners; wishes and manner/purpose-plus-desire are supporting recognition there.
+
 ### まま: a state remains unchanged
 
 The preceding expression identifies the state that continues:

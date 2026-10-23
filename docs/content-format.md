@@ -249,7 +249,8 @@ The [causative/perspective ledger](grammar-causative-perspective-sources.json) a
 The [appearance/impressions ledger](grammar-appearance-impressions-sources.json) adds 38 N4 tasks in one set.
 The [judgment/expectation ledger](grammar-judgment-expectation-sources.json) adds 36 N4 tasks in one set.
 The [reports/questions ledger](grammar-reports-questions-sources.json) adds 40 N4 tasks in one set.
-Current practice is 1508 exercises: 587 N5 and 580 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [volition/plans ledger](grammar-plans-goals-sources.json) adds 25 N4 tasks in one set.
+Current practice is 1533 exercises: 587 N5 and 605 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -429,6 +430,13 @@ sixteen bounded interpretations. Eight additional correct options retain fitting
 Eleven context-key strings join paired tense, polarity, roles and messages rather than representing independent conversations.
 Existing activity/perception, goal, request, quotation and thought groups keep their complete objects and owners.
 Formal reporting, observable evidence and qualified assertion are explicitly unscored recognition bridges.
+The [volition/plans installment](grammar-plans-goals-sources.json) adds 25 annotated N4 prompts,
+reaching **1533 exercises in 65 files** and **1224/1533** reviewed, with 309 still pending.
+Three groups contain ten facets, eleven soft recommendations and no prerequisites: seventeen form conversions
+and eight interpretations. Thirteen shared context keys include paired thought and plan frames, not independent
+conversations. Existing intentions, invitations, goals, changed abilities/habits, maintained practice and desires
+keep their complete objects and owners. Wishes/advice, final wishes and manner/purpose-plus-desire are explicitly
+unscored recognition; harder decision and purpose follow-ups retain their existing levels.
 The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the

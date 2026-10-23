@@ -35,6 +35,39 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Volition, plans and goals: independent review and reconciliation (2026-10-23 UTC)
+
+**Snapshot and scope:** `fe9dcac90c867dc1a72bd22bf9c77dadece0f7fa` plus
+[issue #28](https://github.com/stop-cran/learning-japanese/issues/28). A fresh independent reviewer read
+the complete new article, three bridge deltas with necessary context, and all 25 complete exercises:
+67 accepted strings, 50 options, initially 51 lexical spans and 103 exclusions. It checked complete-task
+levels, actual sources, grouping, exact reuse and preservation. Actual model identity was unavailable,
+not inferred. The reviewer disclosed incidental exposure to historical summary fragments while locating
+reusable guidance; no old report, generator or historical review conclusion supplied its assessment.
+The [ledger](docs/grammar-plans-goals-sources.json) preserves original and revised evidence.
+
+**Finding and reconciliation:** initial correctness and comprehensibility were **CLEAN**; scoped coverage
+was **NEEDS FIX**. Minor **PG-IR-001** found two repeated affirmative intention readings counted as separate
+contexts; the neighboring planned-activity facet's verb/noun variation could not satisfy personal-intention.
+Revise both paired meeting interpretations to select the sister's quotation amid the narrator's opposite
+presentation, with both constructions in each prompt and the same neutral scope instruction. Align every
+feedback branch, rebind two lexical records, and add a short quotation-support link. The original reviewer
+independently inspected the complete changed objects/records and actual dependent diffs: **resolved**,
+original Minor severity retained. Final bounded verdicts are **CLEAN/CLEAN/CLEAN**, with no new findings or
+optional suggestions. The other 23 objects/records, group metadata, answers and option labels remain unchanged;
+unchanged article text and bridges retain their original bounded review.
+
+**Coverage and reflection:** 17 formation tasks and eight interpretations in three groups, ten facets and
+eleven soft recommendations, without prerequisites. Thirteen shared context-key strings include paired
+material, not 25 independent conversations. All 64 preceding complete sets and 1508 inventory records
+remain unchanged, including fourteen reused groups with 86 ordered members in their original owners.
+The new set has 60 final lexical spans and 119 exclusions. Corpus coverage reaches 1533 exercises in
+65 sets, including 605 N4; vocabulary coverage is 1224/1533, with 309 pending. Extend the existing
+operation-dependent diversity lesson with the within-facet distinction and add qualified source navigation,
+without a new review layer or task quota. Content/vocabulary checks, 151 focused regressions and a fresh
+non-skipped Android importer pass. No native-speaker, physical-device, exhaustive discourse or unrestricted
+mastery certification is claimed.
+
 ## Embedded questions and reports: independent review and reconciliation (2026-10-23 UTC)
 
 **Snapshot and scope:** `910512ae8fbdacebeff2e9c9f3b772ed64b8abe2` plus
@@ -1161,6 +1194,10 @@ The [restriction/inclusion review](docs/grammar-restriction-sources.json) adds t
   leaving a supplied-predicate role question unchanged. The [causative review](docs/grammar-causative-perspective-sources.json),
   CP-IR-001, replaces a repeated role frame with object topicalization, changing the case cues and role-to-position
   mapping rather than merely renaming its key.
+  Audit that variation **within each facet**: the [plans review](docs/grammar-plans-goals-sources.json),
+  PG-IR-001, found that a noun/verb change on the planned-activity side did not vary the neighboring pair
+  of supplied affirmative intention readings. A contrast's varied side cannot satisfy the other facet's
+  context requirement; use an actual interpretation variable, not another activity noun or a renamed key.
 
 The [compound-relation review](docs/grammar-compound-relations-sources.json) adds three observed checks:
 

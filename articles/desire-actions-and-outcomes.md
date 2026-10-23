@@ -156,6 +156,10 @@ The sentence can function as a request in an appropriate conversation, but **ほ
 is not an automatic politeness formula**. The wish, the social appropriateness of saying it,
 the addressee's agreement and the actual outcome are separate matters.
 
+For wishes with といい／ように祈る and the separate **manner or purpose plus desire**
+pattern ように〜てほしい, see [volition, plans and goals](volition-plans-and-goals.md).
+Those recognition bridges reuse this article's desired-event and participant distinctions.
+
 ## Optional bridges: observation and receiving an action
 
 ### What someone shows versus what they said
