@@ -1874,7 +1874,8 @@ native-speaker certification.
 
 ## Batch 15: N2:282-N2:301
 
-**Status:** authored; independent review and reconciliation pending.
+**Status:** independently reviewed; corrections prepared;
+bounded confirmation pending.
 
 Scope: 貸し出し, 過失, 果実, 貸間, 貸家, 個所, 過剰,
 かじる, 課税, 下線, カセット, 加速, 加速度, 片仮名,
@@ -1917,6 +1918,81 @@ Coverage is **280 closed, 20 draft, 1,512 pending and 0 unresolved**
 rows, mapped to 295 distinct articles: 269 new and 26 reused.
 There are 64 primary-form reciprocal N2 kanji-word pairs. These
 draft and mechanical audit counts are not review closure.
+
+### Initial reviews
+
+The authored snapshot is
+`88300af9b018b8735962595c837167bcad9e03bf`, directly after
+`e85977a13ce629196d3e2b922e376a26056a3473`.
+The same frozen snapshot, twenty complete articles, twenty
+principal mappings, fifteen-file related patch and public evidence
+were independently assigned to **GPT-6.1 Sol (`gpt-6.1-sol`)**
+and **Claude Opus 5.5 (`claude-opus-5.5`)**. They ran as
+isolated read-only processes, sequentially, with no delegation or
+other-model report access; each exited without file edits.
+
+The [GPT initial report](n2-vocabulary-reviews/batch-15-gpt-initial.md)
+finds five direct quiz pairs and two missing substantive links.
+The [Claude initial report](n2-vocabulary-reviews/batch-15-claude-initial.md)
+finds two learner-wording problems, three direct quiz leads
+(one shared with GPT), and a proposed spelling-frequency claim.
+Both read all twenty principal articles and the actual related
+patch, and judged every mapping and related change clean in all
+three facets. Comparison families were selectively inspected;
+neither reviewer claims exhaustive comparison/corpus coverage.
+
+### Evidence-based reconciliation
+
+Finding IDs below are qualified by model because both reports
+number independently.
+
+| Initial observation | Adjudication and correction |
+| --- | --- |
+| GPT B15-01: 固まる settlement labels | Accepted: add direct 済む and 落ち着く guards. The plan-becoming-firm sense 1266550:2 overlaps their actual settled/settle labels; indirect paths do not protect the pair. |
+| GPT B15-02; Claude B15-05: 片付く | Accepted: add 落ち着く and 済ませる. Both models find the settled-arrangement pair; GPT additionally finds the unmarked English finish label. The Japanese transitivity distinction remains explicit. |
+| GPT B15-03: 塊/具体 | Accepted: add the direct embodiment guard. Principal 1590410:3 expressly teaches the figurative sense and 1245020:1 supplies the existing comparison label. |
+| GPT B15-04: navigation | Accepted: link 出す at its constituent introduction in 貸し出し and 不足 at its contrast introduction in 過剰. |
+| Claude B15-01: 貸家 readings | Accepted: explain 家 as や in かしや and いえ in かしいえ. Replace dictionary-storage jargon with the actual restricted-spelling consequence. |
+| Claude B15-02: 偏る frequency | Frequency claim not established by the supplied evidence: headword order and priority tags do not measure frequency or sense-specific spelling use. Treat the example suggestion as optional recognition improvement: show 偏った見方, retain both spellings and their shared meanings, and add no frequency claim. |
+| Claude B15-03: 片仮名 | Accepted: state the usual カタカナ spelling and shared かたかな pronunciation directly; remove the confusing dictionary-record explanation. |
+| Claude B15-04: 個所/位置 | Accepted: add 位置 for place/location answer-label overlap, using complete 1587310:1. |
+| Claude B15-06: 貸家/家屋; optional 住宅 | Accepted: add 家屋 and 住宅. A bounded author follow-through adds 宅 and 建物 for the same broad house/building/residence labels, not every building subtype. |
+| Claude optional wording | Tighten 傾く's agreement example and translation without an unstated proposal; make 課税's subject/item explanation positive; specify right-side luggage distribution and make 片寄る's shared-spelling guidance positive. |
+| Claude optional 箇所 and 塊 wording | No preference claim inferred from dictionary order. The supported group-of-people example remains; ひとかたまり is optional polish, not an established lexical correction. |
+
+Ten complete correction families for ten forms were re-extracted
+after verification of both pinned JMdict hashes, read completely,
+and attached to the packet: 1191780, 1245020, 1257540, 1295040,
+1334150, 1338180, 1415750, 1493700, 1587310 and 1589220.
+The initial 済む family 1295070 is retained. All twenty original
+rows/mappings, selected senses, principal families, 181 initial
+comparison families, component records and eleven qualified
+inspection receipts remain unchanged. No new independent N2
+classification is inferred from a comparison or secondary sense.
+
+The correction changes eleven new article contexts, adds ten
+direct quiz pairs and two substantive links, and preserves every
+baseline identity, title, primary reading, easier level and original
+exclusion. Its wording changes do not alter source coverage.
+
+### Multi-model usefulness
+
+Across the complete reports, the 片付く/落ち着く guard is a
+shared useful discovery. GPT uniquely contributes four further
+supported direct pairs (two 固まる guards, 片付く/済ませる
+and 塊/具体) and the two substantive links. Claude uniquely
+contributes the 貸家/家屋 and 個所/位置 guards, the optional
+住宅 guard, and the 貸家/片仮名 comprehensibility corrections.
+Claude's optional wording suggestions also improve the displayed
+examples and remove author-defensive language. 宅 and 建物
+are author follow-through, not unique reviewer discoveries.
+
+The frequency recommendation is not accepted as an established
+fact. Diversity is useful on this shared sample, but agreement is
+not evidence by itself and these observations are not a general
+model ranking. Both reviewers disclose file-only Git/hash limits,
+unexecuted app behavior, selective comparisons and lack of
+native-speaker/corpus certification.
 
 ## Final verification
 

@@ -95,6 +95,20 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 15 reconciliation:** Keep source-storage qualifications
+  in the evidence packet, but express their learner consequence
+  plainly. 貸家 needs や versus いえ explained for the two whole
+  readings; 片仮名 and カタカナ need a shared pronunciation,
+  not a discussion of a kana-only dictionary record.
+- **Batch 15 reconciliation:** Recheck ordinary secondary senses
+  against actual answer labels: settled plans, completed work and
+  figurative embodiment can collide even when primary titles differ.
+  A rental-property label can also overlap broader house/building
+  labels. Add the direct pairs, not a transitive or whole-topic guard.
+- **Batch 15 reconciliation:** A useful spelling-recognition example
+  need not claim frequency. 偏る can be demonstrated alongside
+  片寄る without inferring a corpus tendency from headword order
+  or dictionary priority tags.
 - **Batch 15 authoring:** Preserve grammatical viewpoint when a
   supplied English gloss is misleading. 片付く is intransitive
   despite the raw "to put in order" wording; a separate historical
