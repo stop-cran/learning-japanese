@@ -2047,6 +2047,60 @@ primary readings, titles, easier sourced levels and original
 exclusion lists remain preserved. This closes batch 15, not the
 full vocabulary expansion.
 
+## Batch 16: N2:302-N2:321
+
+**Status:** authored; independent reviews pending.
+
+Scope: 学科, 学会, 楽器, 学級, 担ぐ, 括弧, 活字, 活躍,
+活力, 仮定, 過程, 課程, 仮名, 仮名遣い, 鐘, 加熱,
+兼ねる, カバー, 過半数 and 被せる.
+
+This batch adds **20 articles**, with no reused principal articles.
+The [source packet](n2-vocabulary-batch-sources/batch-16.json)
+preserves twenty exact source rows, twenty complete principal
+families, 146 complete comparison families, verified component
+records and eleven qualified author-inspection receipts.
+
+Two source-gloss problems require explicit qualification. 学級
+teaches an organized school class, not the entire year implied by
+"grade in school." For 仮名, the reading かな and entry 1590540
+agree on kana scripts; the raw alias/pseudonym gloss belongs to
+separate かめい entry 1577090. The raw rows are preserved
+verbatim rather than silently repaired, and no independent N2
+classification is assigned to that alias word.
+
+仮名 explains its contraction without inventing freely reusable
+individual readings. 仮名遣い retains づ and recognizes the
+dictionary variants. Its official scope and particle-spelling
+sources were decoded using the declared Shift-JIS charset after
+an initial garbled extraction; a guessed missing page and
+heading-only dictionary sections are not lexical verification.
+The packet records the actual source sections and retrieval limits.
+
+兼ねる separates concurrent functions/posts from the verb-stem
+difficulty suffix and the possibility construction ～かねない.
+被せる teaches かぶせる and distinguishes the separate きせる
+homograph. 活字 distinguishes printing type from printed text
+and preserves かつじ without a small っ. 過半数 explicitly
+excludes equality with half and a merely largest plurality; its
+denominator still depends on context.
+
+Three primary-form reciprocal N2 pairs are added:
+`担`/`担ぐ`, `課`/`課程` and `被`/`被せる`.
+Nine existing word pages gain narrow navigation/comparison
+updates: 学部, クラス, ベル, 片仮名, 送り仮名, 漢字,
+ピアノ, バイオリン and 被る. Missing component cards do not
+remove written characters from metadata or prompt speculative
+kanji/stroke additions.
+
+At the authored snapshot, coverage is **300 closed, 20 draft,
+1,492 pending and 0 unresolved** rows, mapped to 315 distinct
+articles: 289 new and 26 reused. There are 3,562 word articles
+and 67 primary-form reciprocal N2 kanji-word pairs. Baseline
+identities, primary readings, titles, easier sourced levels and
+original exclusions are preserved. These are draft/mechanical
+counts, not linguistic certification or review closure.
+
 ## Final verification
 
 Not started. Final closure requires all original rows accounted for, no consequential unresolved
