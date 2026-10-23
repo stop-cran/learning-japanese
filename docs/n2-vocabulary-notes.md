@@ -95,6 +95,23 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 19 authoring:** A raw gloss can bundle meanings
+  restricted to different readings: 冠's first/best sense
+  belongs to かん, not primary かんむり. Record the
+  supplementary reading explicitly rather than transferring
+  its meaning to the source reading.
+- **Batch 19 authoring:** Shared entries need not create
+  duplicate cards or erase spelling preferences. Reuse
+  existing N3 機械 for explicitly taught 器械, and teach
+  基準/規準 together with their qualified dictionary
+  emphases. Separate 被せる/かぶせる and 着せる/きせる
+  identities despite the latter's recognized 被せる spelling.
+- **Batch 19 authoring:** Count distinct mapped articles
+  and reciprocal pairs, not source rows. The two 基準/規準
+  rows share one article and one primary 準 backlink.
+  An existing baseline article first reused in this batch
+  still increases the cumulative reused-article count.
+
 - **Batch 18 reconciliation:** A replacement family with
   several selected senses needs demonstrations of the role
   change and place exchange promised by alias backlinks,

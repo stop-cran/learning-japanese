@@ -2603,6 +2603,63 @@ identities, primary readings, titles, easier sourced
 levels and original exclusions remain preserved. This
 closes batch 18, not the full vocabulary expansion.
 
+## Batch 19: N2:362-N2:381
+
+**Status:** drafted; independent review not yet completed.
+
+Scope: 看病, 冠, 漢和, 気圧, 器械 mapped to 機械,
+着替え, 機関車, 飢饉, 器具, 期限, 記号, 刻む,
+儀式, 基準, 規準 mapped to 基準, 起床, 着せる,
+基礎, 気体 and 基地.
+
+This batch adds **18 articles** and makes a narrowly scoped
+addition to existing N3 機械 for the 器械 apparatus sense.
+The [packet](n2-vocabulary-batch-sources/batch-19.json)
+retains twenty exact source rows, nineteen complete
+principal families, 127 complete comparison families,
+verified component records and seven qualified
+author-inspection receipts. These receipts are not
+independent reviewer retrieval.
+
+冠 keeps primary かんむり distinct from supplementary
+かんたる. 漢和 explains a Japanese-language kanji
+dictionary rather than silently equating it with modern
+Chinese-to-Japanese translation. 基準 and 規準 share
+one article with explicit usage and a qualified spelling
+contrast. 着せる/きせる remains distinct from existing
+被せる/かぶせる despite its recognized shared spelling.
+Original examples are teaching sentences, not corpus
+quotations or measured-frequency evidence.
+
+Four new primary-form N2 pairs accompany the new articles:
+圧/気圧, 替/着替え, 準/基準 and 床/起床.
+Existing 械/機械 remains reciprocal and gains explicit
+器械 navigation. 規/規準 and 被/被せる at きせる
+are useful alias backlinks, not additional primary-form
+counts. 着 gains useful clothing links. Missing 儀,
+冠, 器, 基, 看, 礎, 飢, 饉 and 饑 cards are not
+manufactured; written primary-form characters remain
+in word metadata.
+
+The ten-file related scope comprises eight kanji cards
+(圧, 床, 替, 械, 準, 着, 被 and 規) and two existing
+word articles (機械 and 被せる). Edits are limited to
+the new apparatus example, qualified comparisons,
+navigation and applicable source attribution.
+Existing identities, primary readings, titles, easier
+levels and original exclusions remain unchanged.
+
+Draft coverage is **360 closed, 20 draft, 1,432 pending
+and 0 unresolved** rows, mapped to 374 distinct articles:
+345 new and 29 reused. There are 3,618 word articles
+and 86 distinct tracked primary-form reciprocal N2
+pairs on new articles, plus previously checked pairs
+on reused articles. All 3,273 baseline identities,
+primary readings, titles, easier sourced levels and
+original exclusions remain preserved. These are
+mechanical counts, not independent linguistic
+certification or review closure.
+
 ## Final verification
 
 Not started. Final closure requires all original rows accounted for, no consequential unresolved
