@@ -1714,7 +1714,7 @@ certification.
 
 ## Batch 14: N2:262-N2:281
 
-**Status:** drafted; independent reviews and reconciliation pending.
+**Status:** drafted; initial reviews reconciled; bounded confirmations pending.
 
 Scope: 各自, 拡充, 学術, 各地, 拡張, 角度, 学年, 学部,
 格別, 確率, 学力, 掛け算, 可決, 火口, 下降, 重なる,
@@ -1755,6 +1755,80 @@ remain in word metadata without speculative new kanji cards.
 The original source and all baseline word identities, primary
 readings, titles, easier levels and exclusion declarations remain
 preserved. Draft coverage is not review closure.
+
+### Initial review
+
+Both reviewers examined committed snapshot
+`11d1b0ae8caf19e6aac628e1774a9f21d8ab503e`, parent
+`8df57903f716932690acdff28f84b6e285924d94`, with the same
+scope, rubric and source access. Separate read-only processes
+ran sequentially and exited. Actual-model, zero-edit receipts
+identify:
+
+- [GPT initial report](n2-vocabulary-reviews/batch-14-gpt-initial.md):
+  `gpt-6.1-sol`.
+- [Claude initial report](n2-vocabulary-reviews/batch-14-claude-initial.md):
+  `claude-opus-5.5`.
+
+Both read all eighteen new articles, the nine-file related patch
+and all twenty mappings. The reuse claims were not whole-card
+recertification. File-only access could not authenticate Git or
+hashes; the author subsequently checked all 33 frozen files
+against the authored commit and current worktree, plus the
+original prompt and related patch hashes.
+
+GPT independently fetched nine article-cited Kotobank entries
+and the additional dictionaries cited in its findings. Claude
+fetched seven Kotobank entries and disclosed selective comparison
+entry reading and an inference about easier-level absence, not an
+independent lower-level source audit. Neither report certifies
+every example's naturalness or exhaustive quiz safety.
+
+### Reconciliation
+
+| Observation | Adjudication and correction |
+| --- | --- |
+| GPT B14-GPT-01 / Claude B14-R01: 角度 / 立場 | Resolved: add the direct guard for viewpoint/standpoint overlap. Complete 1551710:2 at たちば supports the comparison, not the separate たてば identity. |
+| GPT B14-GPT-02: 下降 / 下りる | Resolved: add the direct guard for ordinary descent. Complete 1589500:1 permits both spellings; the existing 降りる guard does not protect the separate 下りる card ID. |
+| GPT B14-GPT-02 / Claude B14-R02: 下降 / 断る | Resolved: add the direct guard for English decline's downward-change/refusal polysemy. Complete 1419570:1 supports refusal; the Japanese verbs are not declared synonymous. |
+| GPT B14-GPT-03 / Claude B14-R03: 学年 / 位 | Resolved: add the direct guard for school-grade versus quality-grade English polysemy. Complete 1155400:4 at くらい supports the latter, not the approximating particle or counter identities. |
+| Claude optional: かしこまりました / 分かる | Adopt a direct guard and a linked acknowledgment comparison. Complete 1606560:1 and the existing 分かりました teaching support understanding overlap with 1002790:1. The respectful acceptance formula is not reduced to a general understanding verb. |
+| Claude optional: 可決 / 可 | Adopt a direct guard. Complete 1190710:2 explicitly supplies approval/a vote in favor, beyond the existing card's foregrounded permission and grading senses. Shared written 可 alone would not justify it. |
+| Claude optional: 飾り English article | Correct "an 飾り" to "a 飾り"; a small English-language polish, not a Japanese lexical defect. |
+| Claude optional: a decoration compound example | Remains nonblocking expansion. Two translated examples already illustrate the decoration noun; no extra compound or unsupported frequency claim is required for the mapped sense. |
+| Claude optional: 火口 title weighting | No title change. Both senses belong to the selected pinned family; the body explicitly separates the JMdict boiler-burner sense from the crater lesson and distinguishes the other readings. Listing senses does not assert equal frequency, and the inspected Japanese crater definition does not invalidate the separate pinned sense. |
+| Claude optional: かしこまりました / 確か | Not established as an additional defect. Complete 1596930 distinguishes certain/reliable adjective senses and a tentative-recollection adverb; those are not themselves the respectful acknowledgment. Related English certainty wording alone is insufficient to assert another pair. |
+
+The correction retains the initial twenty principal and 144
+comparison families, original mappings and selected/additional
+senses. Seven complete correction families for four forms were
+re-extracted after both pinned dictionary hashes were verified;
+all homographs and sense-local qualifications are retained.
+Six new direct quiz pairs are added across five new articles;
+飾り receives only the English article correction. No baseline
+card, title, reading or original exclusion declaration changes.
+
+The quiz safeguards are localized minor editorial defects or
+supported optional improvements, not proof of a generally broken
+quiz. The initial severity labels remain verbatim in the reports.
+The rationale concerns displayed answers and applicable meanings,
+not unrestricted Japanese substitution or measured candidate draws.
+
+### Multi-model usefulness
+
+The viewpoint, decline and grade findings are shared. GPT uniquely
+identified the separate 下りる card-ID gap. Claude uniquely supplied
+the useful optional 分かる and 可 leads and the adopted English
+article polish. The compound example and title weighting remain
+nonblocking preferences, and the certainty-adjective lead did not
+establish a defect. Comparing the entire reports, rather than just
+their Findings sections, shows modest complementary value here,
+not a general model ranking or native-speaker certification.
+
+### Confirmation
+
+Pending sequential bounded confirmation by the original reviewers.
+No row is closed by the initial reviews or these corrections alone.
 
 ## Final verification
 

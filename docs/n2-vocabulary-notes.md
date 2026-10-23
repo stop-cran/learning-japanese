@@ -95,6 +95,12 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 14 reconciliation:** Test tentative quiz leads against
+  complete applicable senses, not shared components or related
+  English words alone. 可 has an actual approval/vote sense,
+  supporting a 可決 guard even though the existing title
+  foregrounds permission and a passing grade. A certainty
+  adjective alone does not establish a polite acknowledgment.
 - **Batch 14 authoring:** An English university label can cross
   levels of reference. 学部 names a faculty/division, including
   the undergraduate division contrasted with graduate school;
