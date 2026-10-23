@@ -71,6 +71,12 @@ failures rather than adding a new review layer or quota. Content/vocabulary chec
 and a fresh non-skipped Android importer pass. No native-speaker, device, official-JLPT or learning-outcome
 certification is claimed.
 
+**Publication integration:** remote word-only commit `29d287f1985ae1ed8f35e00e8958a68f5e1ab2ac`
+arrived before the push. Preserve it and signed grammar commit `a6a499061fa57ccb6d8f3e256d69ef4f85ba9b47`
+through a history-preserving merge, regenerating the sole overlapping generated manifest.
+Fresh combined-content validation/import is required; the independently reviewed grammar runtime is unchanged.
+The concurrent word edits are preserved, not linguistically re-certified by this grammar review.
+
 ## Volition, plans and goals: independent review and reconciliation (2026-10-23 UTC)
 
 **Snapshot and scope:** `fe9dcac90c867dc1a72bd22bf9c77dadece0f7fa` plus
