@@ -35,6 +35,33 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Direction, development and stages: independent review and optional refinements (2026-10-23 UTC)
+
+**Snapshot and scope:** `acfa458bc187fe385b366cd1807fc095729de40a` plus
+[issue #22](https://github.com/stop-cran/learning-japanese/issues/22). A fresh independent reviewer read
+all 34 complete exercises, 72 accepted strings, 106 options, 71 lexical spans, 180 exclusions and all
+group/source/level records. It reviewed every addition to the existing verb-extensions article and both
+reciprocal bridges with necessary context. Actual model IDs were unavailable, not inferred.
+The [ledger](docs/grammar-motion-stages-sources.json) preserves both snapshots and review stages.
+
+**Verdicts and optional dispositions:** the initial correctness, scoped-coverage and comprehensibility
+verdicts were **CLEAN**, without actionable findings. Adopted MS-IR-O01 makes one crying-child explanation
+scene-specific; MS-IR-O02 explicitly records that subjective recency versus immediate ところ selection
+is explained, not independently assessed as a new contextual-choice facet. The first changes only one
+explanation and its bound inventory context/note; all answers, prompts, options and lexical payloads stay
+unchanged. The original synchronous reviewer could not resume, so a new independent delta reviewer
+checked the actual changes and preservation, not the whole unchanged batch again. Both suggestions are
+**resolved and still optional**; combined bounded verdicts remain **CLEAN**, with no new finding.
+
+**Coverage and reflection:** 12 formation and 22 interpretation tasks in four groups, 16 facets and five
+soft recommendations, without prerequisites. Thirteen context-key strings include paired forms and stages,
+not 34 independent conversations. All 1290 earlier exercises and inventory records, including the nine
+original stage tasks and older N3 comparisons, retain their identities and owners. Corpus coverage reaches
+1324 exercises in 59 sets, including 396 N4; vocabulary coverage is 1015/1324, with 309 pending.
+Retain the existing scenario-specific feedback and explanation-versus-assessment rules; add inspected
+source navigation, not another mandatory review layer or an exercise quota. Focused regressions and the
+fresh non-skipped Android importer pass. This is not device, native-speaker or unrestricted-mastery certification.
+
 ## Benefactive actions and requests: independent content review (2026-10-23 UTC)
 
 **Snapshot and scope:** `5c7acc370b4b243c73cfabf97a19404f62952b58` plus

@@ -112,6 +112,10 @@ an intentional arrangement using ～てある and preparation using ～ておく
 These are useful onward references, not required alternatives in this introductory ～ている practice.
 For trying an action, arranging it in advance and getting it completed, continue to
 [trying, preparing and finishing](trying-preparing-and-finishing.md); てしまう is not automatically regret.
+For beginnings, continuation, redoing and the difference between temporal viewpoint and tense, use
+[verb extensions](verb-extensions-direction-and-aspect.md). Its
+[stage/recency section](verb-extensions-direction-and-aspect.md#7-an-actions-stage-is-not-a-stopwatch)
+connects the existing ところ practice with たばかり, without a fixed recency cutoff.
 
 - [Bunpro: ongoing ～ている](https://bunpro.jp/grammar_points/ている1), [resulting states](https://bunpro.jp/grammar_points/ている2), and [repeated activity](https://bunpro.jp/grammar_points/ている3).
 - [Tofugu: ～ている](https://www.tofugu.com/japanese-grammar/verb-continuous-form-teiru/).

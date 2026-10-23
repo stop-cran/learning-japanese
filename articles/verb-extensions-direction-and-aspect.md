@@ -42,7 +42,22 @@ Thus:
 
 Do not remove the final kana of every dictionary form: 読む becomes 読み, not 読. Nor does the continuative form automatically turn the verb into a noun.
 
+To build that stem from a dictionary form, change a godan verb's final u-row sound to its i-row counterpart
+(書く → 書き, 読む → 読み); remove る from an ichidan verb (食べる → 食べ).
+The irregular stems are し from する and き from 来る. Use the
+[verb foundations](japanese-verb-foundations.md) to identify the class first: not every verb ending in る is ichidan.
+
 Conjugate the final verb according to its class. **読んでおく → 読んでおいた／読んでおかない**, "I read it beforehand / I won't read it beforehand"; **読み続ける → 読み続けた／読み続けない**, "I kept reading / I won't keep reading." Polite forms likewise appear at the end: **読んでおきます**, **読み続けます**.
+
+| Final member | Plain past | Plain negative |
+| --- | --- | --- |
+| 始める／続ける | 始めた／続けた | 始めない／続けない |
+| 出す／直す | 出した／直した | 出さない／直さない |
+| 終わる | 終わった | 終わらない |
+
+Read **直す（なおす）**, "redo/correct" in the compound use below. Named attachment drills sometimes keep the
+added member in kana so attention stays on stem formation and final inflection. That is a visible practice
+convention, not a claim that ordinary kanji spellings are ungrammatical.
 
 ## 2. Coming and going: movement becomes viewpoint
 
@@ -128,6 +143,23 @@ Continuation may also span repeated occasions: **毎日日記を書き続ける*
 For the limited comparison needed here, **読んでいる** can describe someone reading, while **読み続けている** explicitly presents them as continuing to read. ～ている has a broader aspectual system; it is not simply another way to say "keep doing."
 
 The spelling is **つづく／つづける**, not つずく／つずける. **続く（つづく）** is the intransitive verb "continue," and occurs in established compounds such as **降り続く（ふりつづく）**, "continue raining or snowing." But the broadly useful pattern here is **V-stem + 続ける**: do not replace it freely with 続く.
+
+### Doing it again: ～直す
+
+Attach **直す（なおす）** to the same stem, not to the て-form:
+
+> 名前を間違えたので、手紙を書き直した。  
+> なまえをまちがえたので、てがみをかきなおした。  
+> I got the name wrong, so I rewrote the letter.
+>
+> 結末を確かめたくて、小説を読み直した。  
+> けつまつをたしかめたくて、しょうせつをよみなおした。  
+> I reread the novel because I wanted to check the ending.
+
+**書き続けた** continues writing; **書き直した** returns to the writing and does it over.
+Rereading does not repair the printed book, and rewriting does not guarantee that every error is now fixed.
+The second member often contributes correction or reconsideration, but the whole compound and context matter:
+do not attach 直す to arbitrary verbs just because English permits "again."
 
 ### Ending and completion: ～終わる, ～切る, ～てしまう
 
@@ -320,6 +352,46 @@ Here, "て-form" includes the appropriate **で-form**, as in 読んで. This is
 
 **Answers:** 1. 読んでおく; 読み始める merely marks beginning the reading. 2. No: change can unfold forward from a reference point in the past. 3. No: it means taking a book out. 4. No: pursuing someone does not guarantee reaching them.
 
+## 7. An action's stage is not a stopwatch
+
+Compare the [three basic ところ stages](koto-wake-and-formal-nouns.md#ところ-locating-an-actions-stage):
+
+| Form | Example | What it presents |
+| --- | --- | --- |
+| Dictionary form + ところです | 手紙を書くところです。 | I am just about to write a letter. |
+| ている + ところです | 手紙を書いているところです。 | I am in the middle of writing a letter. |
+| た-form + ところです | 手紙を書いたところです。 | I have just written a letter. |
+| た-form + ばかりです | 手紙を書いたばかりです。 | I have only recently written a letter. |
+
+The nine existing stage exercises remain in that earlier lesson. The additional practice here introduces
+**たばかり**, rather than replacing those exercises or their progress.
+
+**ばかり** presents the event as still recent from the speaker's perspective, not as necessarily occurring
+within a fixed number of minutes:
+
+> この小説は先週読んだばかりです。内容をよく覚えています。  
+> このしょうせつはせんしゅうよんだばかりです。ないようをよくおぼえています。  
+> I only read this novel last week. I remember its contents well.
+>
+> 大学を先月卒業したばかりです。仕事にはまだ慣れていません。  
+> だいがくをせんげつそつぎょうしたばかりです。しごとにはまだなれていません。  
+> I only graduated from university last month. I am not used to working yet.
+
+What counts as recent depends on the event and the conversation. This does not make any elapsed interval
+equally natural in any situation. Nor does ばかり itself guarantee good memory, inexperience or an unchanged result;
+those details come from these particular examples.
+
+An immediately completed letter can be described with **書いたところです** or **書いたばかりです**.
+The first locates the action at its just-completed stage; the second presents its recency.
+Do not invent a seconds-versus-minutes cutoff or assume one must always be wrong.
+In **読んだばかりの本**, "a book I only recently read," use **の** before the following noun.
+Conversational **ばっか／ばっかり** and written **許り** also occur; the regular kana spelling is our model.
+
+The new practice separates stem formation, interpretation of a supplied compound, physical direction,
+temporal viewpoint and recent completion. Its ところ interpretation controls do not retest every existing stage.
+Broader **てばかり** concentration, **まま** unchanged states and **～切る** are optional onward comparisons,
+not required choices in this N4 set. A vocabulary or kanji level does not determine these grammar tasks' levels.
+
 ## References
 
 - [Kotobank: 補助動詞](https://kotobank.jp/word/補助動詞-630074) and [形式動詞](https://kotobank.jp/word/形式動詞-2033591) - dictionary definitions and the limits of the terminology.
@@ -332,5 +404,13 @@ Here, "て-form" includes the appropriate **で-form**, as in 読んで. This is
 - Jisho's JMdict entries for [追いつく](https://jisho.org/word/追いつく) and [思い付く](https://jisho.org/word/思い付く) - catch-up, idea, and recall senses, with recorded spellings.
 - [Japan Foundation: ～てある, ～ている, and ～ておく (PDF)](https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/pdf/NK51_16-17.pdf) - preparation and state comparisons.
 - [Tofugu: ～ておく](https://www.tofugu.com/japanese-grammar/teoku/) - preparation, leaving a state, and casual contractions.
+- [Bunpro: ～始める](https://bunpro.jp/grammar_points/はじめる), [～出す](https://bunpro.jp/grammar_points/だす),
+  [～続ける](https://bunpro.jp/grammar_points/つづける), [～終わる](https://bunpro.jp/grammar_points/おわる) and
+  [～直す](https://bunpro.jp/grammar_points/なおす) - basic stem connections and final-member inflection.
+  The examples do not support an absolute intention/involuntariness split between 始める and 出す.
+- [Bunpro: たばかり](https://bunpro.jp/grammar_points/たばかり),
+  [Maggie Sensei: ばかり](https://maggiesensei.com/2013/07/02/%E3%81%B0%E3%81%8B%E3%82%8A-bakari/) and
+  [Tae Kim: time-specific actions](https://guidetojapanese.org/learn/grammar/timeactions) - recent completion,
+  attachment, noun modification and conversational forms. Other same-spelled constructions need their own lessons.
 
 [Article index on GitHub](https://github.com/stop-cran/learning-japanese#articles)

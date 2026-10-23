@@ -517,6 +517,10 @@ This table covers the three basic activity patterns, not every use of ところ.
 it can also describe a resulting state. A past reference point can appear on the final copula, as in
 **電話が鳴ったとき、手紙を書いているところでした**, "When the phone rang, I was in the middle of writing a letter."
 
+For productive beginning/continuation/redo forms, reference-time viewpoint and additional N4 recency practice, see
+[verb extensions](verb-extensions-direction-and-aspect.md#7-an-actions-stage-is-not-a-stopwatch).
+These nine stage exercises remain here; the linked practice does not create a second owner.
+
 ### Time, recurrence, and occasions
 
 | Word | Central idea in these uses | Example |

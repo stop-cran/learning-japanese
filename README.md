@@ -25,7 +25,7 @@ This repository starts as a collection of standalone articles prompted by specif
 | Grammar | [Trying, preparing and getting things done](articles/trying-preparing-and-finishing.md) | What do てみる, ておく and てしまう contribute, and how do their conversational contractions work? |
 | Grammar | [Doing things for others and asking favors](articles/benefactive-actions.md) | Who acts and benefits, and how do benefactive frames, thanks, apologies and negative favor questions differ? |
 | Grammar | [Koto, wake, and Japanese noun-based grammar](articles/koto-wake-and-formal-nouns.md) | How do こと and わけ differ, which common formal nouns and noun-based expressions are useful to know, and where do の/ん and ほど fit? |
-| Grammar | [Japanese verb extensions: direction and aspect](articles/verb-extensions-direction-and-aspect.md) | How do ～ていく, ～てくる, ～ておく, ～込む, and related constructions express direction, continuation, and completion? |
+| Grammar | [Japanese verb extensions: direction and aspect](articles/verb-extensions-direction-and-aspect.md) | How do direction, temporal viewpoint, beginning, continuation, redoing and recent completion differ? Includes focused N4 practice and links to the existing action-stage exercises. |
 | Grammar | [Japanese conditionals: たら, ば, なら, と, and 場合](articles/japanese-conditionals.md) | How do conditions, premises, event order, discoveries, and procedural cases differ, and when can several patterns fit? |
 | Grammar | [のに: unexpected outcomes, comparisons, and the other のに](articles/noni-and-concessive-contrasts.md) | How do concessive のに, わりに and くせに overlap, and how is nominalizing の plus に different? |
 | Grammar | [Japanese listing and examples: と, や, とか, など, たり, and し](articles/japanese-listing-and-examples.md) | How do named lists, representative examples, added reasons, and alternatives differ, and when is one stated item enough? |
@@ -97,6 +97,10 @@ The [benefactive/request installment](articles/benefactive-actions.md) adds 36 N
 roles/viewpoint, auxiliary polarity, thanks/apologies and casual/indirect requests.
 Its [ledger](docs/grammar-benefactive-requests-sources.json) preserves older giving, desire and request owners,
 with the genuine てやる curriculum disagreement recorded as optional recognition rather than a scored N4 claim.
+The [direction/development installment](articles/verb-extensions-direction-and-aspect.md) adds 34 N4 tasks:
+12 formation and 22 interpretation items in four groups, covering stem compounds, quoted-observer motion,
+reference-time development and recency. Its [ledger](docs/grammar-motion-stages-sources.json) preserves the
+nine existing action-stage tasks and keeps harder concentration/unchanged-state comparisons separate.
 
 ## Confusable vocabulary
 
@@ -150,8 +154,10 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   54 on pointing and asking questions, 32 on noun descriptions and activities,
   38 on wants, plans, invitations and offers, 34 on reasons, contrasts and prefaces,
   42 on comparisons, changes and degree, 36 on giving, receiving and viewpoint,
-  52 on explanations, quotations and endings, and 34 on desire, actors and outcomes (1168 in total).
-  All 1168 exercises have grammar-only study labels: **587 N5, 240 N4, 235 N3, 102 N2 and four N1**.
+  52 on explanations, quotations and endings, 34 on desire, actors and outcomes,
+  34 on ability and perception, 28 on actions/events/results, 24 on trying/preparing/completing,
+  36 on benefactives/requests and 34 on direction/development/stages (1324 in total).
+  All 1324 exercises have grammar-only study labels: **587 N5, 396 N4, 235 N3, 102 N2 and four N1**.
   These are editorial estimates using Bunpro as the primary reference, with documented JLPT Sensei comparisons,
   not an official syllabus. Vocabulary and kanji difficulty do not determine them; natural examples remain unchanged.
   See the [policy and per-article distribution](docs/jlpt-levels.md#grammar-baseline) and

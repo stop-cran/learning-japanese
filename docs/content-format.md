@@ -243,7 +243,8 @@ The [ability/perception ledger](grammar-ability-perception-sources.json) adds 34
 The [transitivity/results ledger](grammar-transitivity-results-sources.json) adds 28 N4 tasks in one set.
 The [trying/preparing/finishing ledger](grammar-try-prepare-complete-sources.json) adds 24 N4 tasks in one set.
 The [benefactive/request ledger](grammar-benefactive-requests-sources.json) adds 36 N4 tasks in one set.
-Current practice is 1290 exercises: 587 N5 and 362 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [direction/development ledger](grammar-motion-stages-sources.json) adds 34 N4 tasks in one set.
+Current practice is 1324 exercises: 587 N5 and 396 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -384,6 +385,11 @@ reaching **1290 exercises in 58 files** and **981/1290** reviewed, with 309 stil
 Four groups contain 14 facets, five soft recommendations and no prerequisites: 20 formation/connection tasks,
 eight role interpretations and eight request interpretations. Repeated lending/reading forms share two
 context-key strings throughout; this deliberately does not claim 36 independently varied conversations.
+The [direction/development installment](grammar-motion-stages-sources.json) adds 34 annotated N4 prompts,
+reaching **1324 exercises in 59 files** and **1015/1324** reviewed, with 309 still pending.
+Four groups contain 16 facets, five soft recommendations and no prerequisites: 12 formation and
+22 interpretation tasks. The 13 context-key strings include paired forms and stages, not 34 independent
+conversations. The nine original temporal-stage tasks keep their identities and owning group.
 Existing N5 state/aspect and なる groups retain their exact members and exercise objects.
 The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
