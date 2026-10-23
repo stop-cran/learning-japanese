@@ -2929,8 +2929,8 @@ batch 20, not the full vocabulary expansion.
 
 ## Batch 21: N2:402-N2:421
 
-**Status:** blind initial reviews reconciled; independent
-confirmation pending.
+**Status:** closed after independent original-session
+confirmation and author-executed provenance checks.
 
 Scope: 曲線, 規律, 斬る, 気を付ける, existing 金魚,
 区域, 偶数, 空想, 空中, クーラー, 釘, 区切る, 櫛,
@@ -3053,6 +3053,70 @@ lookups are recorded without verification credit.
 The quiz fixes address possible ambiguous choices,
 not observed generated questions or native-speaker
 certification.
+
+### Original-session confirmation and closure
+
+Both original sessions resumed strictly sequentially
+against corrected commit
+`3ab605d7a0dadd2480ec891948c72b0a04abd218`,
+directly following the authored snapshot. The
+[GPT confirmation](n2-vocabulary-reviews/batch-21-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-21-claude-confirmation.md)
+both report **CLEAN** for correctness, scoped coverage
+and comprehensibility of all four changed articles and
+the inspected packet additions. No actionable regression
+or consequential unresolved claim remains in that scope.
+Actual models remain `gpt-6.1-sol` and `claude-opus-5.5`;
+both processes exited with zero edits.
+
+GPT confirmed all three original direct-pair findings
+resolved, accepted the two conservative optional guards
+and established no need for the declined guards.
+Claude confirmed B21-R01 resolved, accepted both adopted
+optional guards and the 警告 disposition, and withdrew
+the そろそろ suggestion. Claude regards 崩す/笑い as a
+conservative safeguard rather than a necessary addition
+to the selected lesson. That difference in calibration
+is retained; neither reviewer requests its removal.
+Figurative 斬る and the intentional distractor remain
+nonblocking, not deferred defects.
+
+The author authenticated both commits and parentage,
+`stop-cran` author/committer identities, normalized
+committed and current file hashes, original and correction
+patches, both common prompts and both evidence derivatives.
+Each derivative matches its snapshot's canonical packet
+except for removal of the original author quiz rationale.
+The original packet is preserved except for the six
+complete appended comparison families and the separate
+correction record. Unchanged new articles and all six
+original related edits match their authored hashes.
+All four reports match raw stdout after removing progress
+preambles and normalizing Markdown two-space hard breaks
+to blank lines; substantive text is unchanged. Usage
+receipts match the original session timestamps, contain
+only the stated models and record zero edits.
+
+These are author-executed provenance checks, not
+independent reviewer Git execution. GPT read the six new
+families and relevant complete principal/comparison
+families; Claude read the six appended families in the
+patch, rechecked three relevant complete entries and
+spot-checked the derivative's appended section. Neither
+performed new successful public retrieval, app draws,
+frequency measurement or a fresh whole-batch audit.
+The initial review limits remain applicable.
+
+Closed coverage is **420 closed, 0 draft, 1,392 pending
+and 0 unresolved** rows, mapped to 414 distinct articles:
+383 new and 31 reused. There are 3,656 word articles
+and 94 distinct tracked primary-form reciprocal N2 pairs
+on new articles, plus checked reused pairs. All 3,273
+baseline identities, primary readings, titles,
+written-kanji arrays and easier levels remain preserved.
+All original exclusions remain with only the established
+batch-19 機械/道具 addition. This closes batch 21,
+not the full vocabulary expansion.
 
 ## Final verification
 
