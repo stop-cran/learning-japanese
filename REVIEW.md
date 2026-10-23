@@ -35,6 +35,33 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Benefactive actions and requests: independent content review (2026-10-23 UTC)
+
+**Snapshot and scope:** `5c7acc370b4b243c73cfabf97a19404f62952b58` plus
+[issue #21](https://github.com/stop-cran/learning-japanese/issues/21). One fresh independent reviewer
+inspected the entire 183-line article, every field of 36 exercises, 74 accepted strings, 72 options,
+78 lexical spans, 188 exclusions, all grouping/source/level metadata and three reciprocal-link passages.
+Actual model ID was unavailable and is recorded as `null`, not inferred.
+The [ledger](docs/grammar-benefactive-requests-sources.json) preserves the snapshot and report hash.
+
+**Verdicts:** correctness, scoped coverage and comprehensibility **CLEAN**, with no actionable findings,
+optional suggestions or consequential unresolved claims. No reconciliation or manufactured finding was
+needed. Direct source checks covered participant/viewpoint frames, auxiliary polarity, thanks/apology
+connections, bare requests, negative-question discourse and the genuine benefactive てやる curriculum
+overlap. The latter remains optional recognition; honorific request production remains with #31.
+
+**Coverage and reflection:** 20 formation/connection tasks, eight role and eight request interpretations
+in four groups, 14 facets and five soft recommendations, without prerequisites. The recurring lending
+and reading scenes conservatively share two context keys across forms, roles and polarity; they are not
+36 independent conversations. All 1254 prior exercise objects and lexical records, including the earlier
+30 N4 desire tasks, are preserved. Corpus coverage is 1290 exercises in 58 sets, including 362 N4;
+lexical coverage is 981/1290, with 309 pending.
+
+Retain the existing role, exact-sense, visible-operation and context-count rules: they handled this batch
+without a demonstrated new process gap. Add the inspected benefactive/request source row rather than
+another mandatory review layer. Focused regressions and the fresh non-skipped Android importer pass;
+these checks do not certify device UX, all historical content or unrestricted conversational mastery.
+
 ## Trying, preparing and completing: independent review and reconciliation (2026-10-23 UTC)
 
 **Snapshot and scope:** `4a4304cb132d2361ae15147d0614b7b360a0be87` plus

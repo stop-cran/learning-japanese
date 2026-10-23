@@ -26,6 +26,9 @@ For the ordinary negative request, use **ない-form + でください**:
 Do not mechanically turn the negative request into 読まなくてください.
 The [verb tables](japanese-verb-foundations.md) supply 読んで and 読まない.
 The separate **ないで**, "without doing," is a later construction, not a reason to confuse the request's form.
+For bare て／ないで requests and questions such as 読んでくれない？ versus 読まないでくれない？,
+continue to [doing things for others and asking favors](benefactive-actions.md).
+The negative on a favor-question auxiliary does not by itself negate the requested action.
 
 ## Permission: it is acceptable, not compulsory
 

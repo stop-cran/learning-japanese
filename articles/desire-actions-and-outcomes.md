@@ -193,6 +193,8 @@ perspective. The full てもらう construction is a separate N4 bridge; it is n
 gift with another verb inserted. Do not mechanically substitute てもらいたい into every
 weather wish or assume that every desired outcome is a received favor.
 Benefactive auxiliaries, causatives and honorific request systems are not assessed in this batch.
+The [benefactive-actions companion](benefactive-actions.md) now develops ordinary action-based giving/receiving
+and favor questions. It preserves the wish/action distinction rather than duplicating these desire exercises.
 
 ## What the practice asks you to do
 

@@ -1,0 +1,2226 @@
+{
+  "schemaVersion": 1,
+  "id": "benefactive-requests",
+  "title": "Doing things for others and asking favors",
+  "article": "articles/benefactive-actions.md",
+  "constructions": [
+    {
+      "id": "first-mentioned",
+      "label": "First-mentioned person"
+    },
+    {
+      "id": "second-mentioned",
+      "label": "Second-mentioned person"
+    },
+    {
+      "id": "ageru-past",
+      "label": "Giving-side affirmative past"
+    },
+    {
+      "id": "ageru-negative",
+      "label": "Giving-side negative past"
+    },
+    {
+      "id": "kureru-past",
+      "label": "Incoming affirmative past"
+    },
+    {
+      "id": "kureru-negative",
+      "label": "Incoming negative past"
+    },
+    {
+      "id": "morau-past",
+      "label": "Receiving-side affirmative past"
+    },
+    {
+      "id": "morau-negative",
+      "label": "Receiving-side negative past"
+    },
+    {
+      "id": "thanks-connection",
+      "label": "Connect the other person's favor to thanks"
+    },
+    {
+      "id": "apology-connection",
+      "label": "Connect one's own action directly to an apology"
+    },
+    {
+      "id": "bare-do",
+      "label": "Build a bare affirmative request"
+    },
+    {
+      "id": "bare-refrain",
+      "label": "Build a bare negative request"
+    },
+    {
+      "id": "request-do",
+      "label": "The listener is asked to perform the action"
+    },
+    {
+      "id": "request-refrain",
+      "label": "The listener is asked not to perform the action"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "roles",
+      "label": "Track actor, beneficiary and receiving viewpoint",
+      "constructions": [
+        "first-mentioned",
+        "second-mentioned"
+      ]
+    },
+    {
+      "id": "forms",
+      "label": "Build affirmative and negative benefactive past forms",
+      "constructions": [
+        "ageru-past",
+        "ageru-negative",
+        "kureru-past",
+        "kureru-negative",
+        "morau-past",
+        "morau-negative"
+      ]
+    },
+    {
+      "id": "thanks-apologies",
+      "label": "Connect the right person's action to thanks or apology",
+      "constructions": [
+        "thanks-connection",
+        "apology-connection"
+      ]
+    },
+    {
+      "id": "requests",
+      "label": "Build bare requests and locate negation in favor questions",
+      "constructions": [
+        "bare-do",
+        "bare-refrain",
+        "request-do",
+        "request-refrain"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "benefactive-requests-umbrella-incoming-actor",
+      "jlpt": 4,
+      "target": "first-mentioned",
+      "relationship": "roles",
+      "prompt": "母が私に傘を貸してくれました。→____",
+      "translation": "Labels: 前者（ぜんしゃ） = the first person mentioned in the Japanese sentence; 後者（こうしゃ） = the second. Kana labels are also accepted. Lexical verb: 貸す（かす）, lend. Who performs the lexical action?",
+      "evidence": "Fixed-order person labels disclose no role. The predicate, not family membership alone, establishes the role.",
+      "explanation": "In both paired accounts, the mother performs the action. くれる keeps that actor in the main subject frame while presenting the action toward the adopted receiving side. Thus the requested person is 前者. Viewpoint does not reverse the actual action.",
+      "answer": "first-mentioned",
+      "acceptedAnswers": [
+        "前者",
+        "ぜんしゃ"
+      ],
+      "options": [
+        {
+          "id": "first-mentioned",
+          "label": "前者",
+          "rationale": "In both paired accounts, the mother performs the action. くれる keeps that actor in the main subject frame while presenting the action toward the adopted receiving side. Thus the requested person is 前者. Viewpoint does not reverse the actual action."
+        },
+        {
+          "id": "second-mentioned",
+          "label": "後者",
+          "rationale": "This is the other participant. Keep the action performer separate from the benefiting person and the main grammatical frame."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "5de57c942ef673f26ec40a11cf27df5c25d0682789a9a7cef4f273d891e33d64",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "母",
+            "reading": "はは",
+            "headword": "母",
+            "gloss": "my mother"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-incoming-beneficiary",
+      "jlpt": 4,
+      "target": "second-mentioned",
+      "relationship": "roles",
+      "prompt": "母が私に傘を貸してくれました。→____",
+      "translation": "Labels: 前者（ぜんしゃ） = the first person mentioned in the Japanese sentence; 後者（こうしゃ） = the second. Kana labels are also accepted. Lexical verb: 貸す（かす）, lend. Who receives the benefit of that action?",
+      "evidence": "Fixed-order person labels disclose no role. The predicate, not family membership alone, establishes the role.",
+      "explanation": "In both paired accounts, the mother performs the action. くれる keeps that actor in the main subject frame while presenting the action toward the adopted receiving side. Thus the requested person is 後者. Viewpoint does not reverse the actual action.",
+      "answer": "second-mentioned",
+      "acceptedAnswers": [
+        "後者",
+        "こうしゃ"
+      ],
+      "options": [
+        {
+          "id": "first-mentioned",
+          "label": "前者",
+          "rationale": "This is the other participant. Keep the action performer separate from the benefiting person and the main grammatical frame."
+        },
+        {
+          "id": "second-mentioned",
+          "label": "後者",
+          "rationale": "In both paired accounts, the mother performs the action. くれる keeps that actor in the main subject frame while presenting the action toward the adopted receiving side. Thus the requested person is 後者. Viewpoint does not reverse the actual action."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "5de57c942ef673f26ec40a11cf27df5c25d0682789a9a7cef4f273d891e33d64",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "母",
+            "reading": "はは",
+            "headword": "母",
+            "gloss": "my mother"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-receiving-actor",
+      "jlpt": 4,
+      "target": "second-mentioned",
+      "relationship": "roles",
+      "prompt": "私は母に傘を貸してもらいました。→____",
+      "translation": "Labels: 前者（ぜんしゃ） = the first person mentioned in the Japanese sentence; 後者（こうしゃ） = the second. Kana labels are also accepted. Lexical verb: 貸す（かす）, lend. Who performs the lexical action?",
+      "evidence": "Fixed-order person labels disclose no role. The predicate, not family membership alone, establishes the role.",
+      "explanation": "In both paired accounts, the mother performs the action. もらう puts the receiving person in the main subject/topic frame; the に-marked person still performs the lexical action. Thus the requested person is 後者. Viewpoint does not reverse the actual action.",
+      "answer": "second-mentioned",
+      "acceptedAnswers": [
+        "後者",
+        "こうしゃ"
+      ],
+      "options": [
+        {
+          "id": "first-mentioned",
+          "label": "前者",
+          "rationale": "This is the other participant. Keep the action performer separate from the benefiting person and the main grammatical frame."
+        },
+        {
+          "id": "second-mentioned",
+          "label": "後者",
+          "rationale": "In both paired accounts, the mother performs the action. もらう puts the receiving person in the main subject/topic frame; the に-marked person still performs the lexical action. Thus the requested person is 後者. Viewpoint does not reverse the actual action."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f03a563f4b45e4e2141afeaf5f0853172ca3f479d91a9b18f598f2054c33181d",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "母",
+            "reading": "はは",
+            "headword": "母",
+            "gloss": "my mother"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-receiving-beneficiary",
+      "jlpt": 4,
+      "target": "first-mentioned",
+      "relationship": "roles",
+      "prompt": "私は母に傘を貸してもらいました。→____",
+      "translation": "Labels: 前者（ぜんしゃ） = the first person mentioned in the Japanese sentence; 後者（こうしゃ） = the second. Kana labels are also accepted. Lexical verb: 貸す（かす）, lend. Who receives the benefit of that action?",
+      "evidence": "Fixed-order person labels disclose no role. The predicate, not family membership alone, establishes the role.",
+      "explanation": "In both paired accounts, the mother performs the action. もらう puts the receiving person in the main subject/topic frame; the に-marked person still performs the lexical action. Thus the requested person is 前者. Viewpoint does not reverse the actual action.",
+      "answer": "first-mentioned",
+      "acceptedAnswers": [
+        "前者",
+        "ぜんしゃ"
+      ],
+      "options": [
+        {
+          "id": "first-mentioned",
+          "label": "前者",
+          "rationale": "In both paired accounts, the mother performs the action. もらう puts the receiving person in the main subject/topic frame; the に-marked person still performs the lexical action. Thus the requested person is 前者. Viewpoint does not reverse the actual action."
+        },
+        {
+          "id": "second-mentioned",
+          "label": "後者",
+          "rationale": "This is the other participant. Keep the action performer separate from the benefiting person and the main grammatical frame."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f03a563f4b45e4e2141afeaf5f0853172ca3f479d91a9b18f598f2054c33181d",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "母",
+            "reading": "はは",
+            "headword": "母",
+            "gloss": "my mother"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-incoming-actor",
+      "jlpt": 4,
+      "target": "first-mentioned",
+      "relationship": "roles",
+      "prompt": "友達が妹に手紙を読んでくれました。→____",
+      "translation": "Labels: 前者（ぜんしゃ） = the first person mentioned in the Japanese sentence; 後者（こうしゃ） = the second. Kana labels are also accepted. Lexical verb: 読む（よむ）, read. Who performs the lexical action?",
+      "evidence": "Fixed-order person labels disclose no role. The predicate, not family membership alone, establishes the role.",
+      "explanation": "In both paired accounts, the friend performs the action. くれる keeps that actor in the main subject frame while presenting the action toward the adopted receiving side. Thus the requested person is 前者. Viewpoint does not reverse the actual action.",
+      "answer": "first-mentioned",
+      "acceptedAnswers": [
+        "前者",
+        "ぜんしゃ"
+      ],
+      "options": [
+        {
+          "id": "first-mentioned",
+          "label": "前者",
+          "rationale": "In both paired accounts, the friend performs the action. くれる keeps that actor in the main subject frame while presenting the action toward the adopted receiving side. Thus the requested person is 前者. Viewpoint does not reverse the actual action."
+        },
+        {
+          "id": "second-mentioned",
+          "label": "後者",
+          "rationale": "This is the other participant. Keep the action performer separate from the benefiting person and the main grammatical frame."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "fdab5f71e02379dd4e6c3d04114abef12b9040195bec8fdeb89954edf1917882",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "my younger sister"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-incoming-beneficiary",
+      "jlpt": 4,
+      "target": "second-mentioned",
+      "relationship": "roles",
+      "prompt": "友達が妹に手紙を読んでくれました。→____",
+      "translation": "Labels: 前者（ぜんしゃ） = the first person mentioned in the Japanese sentence; 後者（こうしゃ） = the second. Kana labels are also accepted. Lexical verb: 読む（よむ）, read. Who receives the benefit of that action?",
+      "evidence": "Fixed-order person labels disclose no role. The predicate, not family membership alone, establishes the role.",
+      "explanation": "In both paired accounts, the friend performs the action. くれる keeps that actor in the main subject frame while presenting the action toward the adopted receiving side. Thus the requested person is 後者. Viewpoint does not reverse the actual action.",
+      "answer": "second-mentioned",
+      "acceptedAnswers": [
+        "後者",
+        "こうしゃ"
+      ],
+      "options": [
+        {
+          "id": "first-mentioned",
+          "label": "前者",
+          "rationale": "This is the other participant. Keep the action performer separate from the benefiting person and the main grammatical frame."
+        },
+        {
+          "id": "second-mentioned",
+          "label": "後者",
+          "rationale": "In both paired accounts, the friend performs the action. くれる keeps that actor in the main subject frame while presenting the action toward the adopted receiving side. Thus the requested person is 後者. Viewpoint does not reverse the actual action."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "fdab5f71e02379dd4e6c3d04114abef12b9040195bec8fdeb89954edf1917882",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "my younger sister"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-receiving-actor",
+      "jlpt": 4,
+      "target": "second-mentioned",
+      "relationship": "roles",
+      "prompt": "妹は友達に手紙を読んでもらいました。→____",
+      "translation": "Labels: 前者（ぜんしゃ） = the first person mentioned in the Japanese sentence; 後者（こうしゃ） = the second. Kana labels are also accepted. Lexical verb: 読む（よむ）, read. Who performs the lexical action?",
+      "evidence": "Fixed-order person labels disclose no role. The predicate, not family membership alone, establishes the role.",
+      "explanation": "In both paired accounts, the friend performs the action. もらう puts the receiving person in the main subject/topic frame; the に-marked person still performs the lexical action. Thus the requested person is 後者. Viewpoint does not reverse the actual action.",
+      "answer": "second-mentioned",
+      "acceptedAnswers": [
+        "後者",
+        "こうしゃ"
+      ],
+      "options": [
+        {
+          "id": "first-mentioned",
+          "label": "前者",
+          "rationale": "This is the other participant. Keep the action performer separate from the benefiting person and the main grammatical frame."
+        },
+        {
+          "id": "second-mentioned",
+          "label": "後者",
+          "rationale": "In both paired accounts, the friend performs the action. もらう puts the receiving person in the main subject/topic frame; the に-marked person still performs the lexical action. Thus the requested person is 後者. Viewpoint does not reverse the actual action."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "9ea036ef169bbfb948e59d32a42d6918bb7adbd173154a8980e8799841fe8e3b",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "my younger sister"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-receiving-beneficiary",
+      "jlpt": 4,
+      "target": "first-mentioned",
+      "relationship": "roles",
+      "prompt": "妹は友達に手紙を読んでもらいました。→____",
+      "translation": "Labels: 前者（ぜんしゃ） = the first person mentioned in the Japanese sentence; 後者（こうしゃ） = the second. Kana labels are also accepted. Lexical verb: 読む（よむ）, read. Who receives the benefit of that action?",
+      "evidence": "Fixed-order person labels disclose no role. The predicate, not family membership alone, establishes the role.",
+      "explanation": "In both paired accounts, the friend performs the action. もらう puts the receiving person in the main subject/topic frame; the に-marked person still performs the lexical action. Thus the requested person is 前者. Viewpoint does not reverse the actual action.",
+      "answer": "first-mentioned",
+      "acceptedAnswers": [
+        "前者",
+        "ぜんしゃ"
+      ],
+      "options": [
+        {
+          "id": "first-mentioned",
+          "label": "前者",
+          "rationale": "In both paired accounts, the friend performs the action. もらう puts the receiving person in the main subject/topic frame; the に-marked person still performs the lexical action. Thus the requested person is 前者. Viewpoint does not reverse the actual action."
+        },
+        {
+          "id": "second-mentioned",
+          "label": "後者",
+          "rationale": "This is the other participant. Keep the action performer separate from the benefiting person and the main grammatical frame."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "9ea036ef169bbfb948e59d32a42d6918bb7adbd173154a8980e8799841fe8e3b",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "my younger sister"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-ageru-past",
+      "jlpt": 4,
+      "target": "ageru-past",
+      "relationship": "forms",
+      "prompt": "私は妹に傘を____。",
+      "translation": "Combine 貸す（かす）, lend with the benefactive auxiliary あげる. Form its ordinary plain affirmative past. Keep the printed participant frame; write the added auxiliary in kana. Add no other clause or ending.",
+      "evidence": "A named attachment/inflection operation, not an unrestricted translation or pragmatic politeness contest.",
+      "explanation": "Keep the lexical verb's て/で form, then inflect the final auxiliary: 貸してあげた. あげる/くれる are ichidan; もらう has もらった and もらわなかった. A negative report alone does not prove deliberate refusal.",
+      "answer": "ageru-past",
+      "acceptedAnswers": [
+        "貸してあげた",
+        "かしてあげた",
+        "藉してあげた"
+      ],
+      "options": [
+        {
+          "id": "ageru-past",
+          "label": "貸してあげた",
+          "rationale": "Preserves the named auxiliary and requested past polarity."
+        },
+        {
+          "id": "ageru-negative",
+          "label": "貸してあげなかった",
+          "rationale": "Changes the requested polarity of the benefactive report."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "20c15d974e5fdfb25d31a636abcaa1d9027c2cd1f39eaf70a29aeb52cb08fd92",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "my younger sister"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-ageru-negative",
+      "jlpt": 4,
+      "target": "ageru-negative",
+      "relationship": "forms",
+      "prompt": "私は妹に傘を____。",
+      "translation": "Combine 貸す（かす）, lend with the benefactive auxiliary あげる. Form its ordinary plain negative past, using the standard なかった ending on the auxiliary. Keep the printed participant frame; write the added auxiliary in kana. Add no other clause or ending.",
+      "evidence": "A named attachment/inflection operation, not an unrestricted translation or pragmatic politeness contest.",
+      "explanation": "Keep the lexical verb's て/で form, then inflect the final auxiliary: 貸してあげなかった. あげる/くれる are ichidan; もらう has もらった and もらわなかった. A negative report alone does not prove deliberate refusal.",
+      "answer": "ageru-negative",
+      "acceptedAnswers": [
+        "貸してあげなかった",
+        "かしてあげなかった",
+        "藉してあげなかった"
+      ],
+      "options": [
+        {
+          "id": "ageru-negative",
+          "label": "貸してあげなかった",
+          "rationale": "Preserves the named auxiliary and requested past polarity."
+        },
+        {
+          "id": "ageru-past",
+          "label": "貸してあげた",
+          "rationale": "Changes the requested polarity of the benefactive report."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "20c15d974e5fdfb25d31a636abcaa1d9027c2cd1f39eaf70a29aeb52cb08fd92",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "my younger sister"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-kureru-past",
+      "jlpt": 4,
+      "target": "kureru-past",
+      "relationship": "forms",
+      "prompt": "妹は私に傘を____。",
+      "translation": "Combine 貸す（かす）, lend with the benefactive auxiliary くれる. Form its ordinary plain affirmative past. Keep the printed participant frame; write the added auxiliary in kana. Add no other clause or ending.",
+      "evidence": "A named attachment/inflection operation, not an unrestricted translation or pragmatic politeness contest.",
+      "explanation": "Keep the lexical verb's て/で form, then inflect the final auxiliary: 貸してくれた. あげる/くれる are ichidan; もらう has もらった and もらわなかった. A negative report alone does not prove deliberate refusal.",
+      "answer": "kureru-past",
+      "acceptedAnswers": [
+        "貸してくれた",
+        "かしてくれた",
+        "藉してくれた"
+      ],
+      "options": [
+        {
+          "id": "kureru-past",
+          "label": "貸してくれた",
+          "rationale": "Preserves the named auxiliary and requested past polarity."
+        },
+        {
+          "id": "kureru-negative",
+          "label": "貸してくれなかった",
+          "rationale": "Changes the requested polarity of the benefactive report."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "69f32bf5e875132d4d5bf36019027e2957f00eb9d819c5c1dd2ad5547a2704b1",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "my younger sister"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-kureru-negative",
+      "jlpt": 4,
+      "target": "kureru-negative",
+      "relationship": "forms",
+      "prompt": "妹は私に傘を____。",
+      "translation": "Combine 貸す（かす）, lend with the benefactive auxiliary くれる. Form its ordinary plain negative past, using the standard なかった ending on the auxiliary. Keep the printed participant frame; write the added auxiliary in kana. Add no other clause or ending.",
+      "evidence": "A named attachment/inflection operation, not an unrestricted translation or pragmatic politeness contest.",
+      "explanation": "Keep the lexical verb's て/で form, then inflect the final auxiliary: 貸してくれなかった. あげる/くれる are ichidan; もらう has もらった and もらわなかった. A negative report alone does not prove deliberate refusal.",
+      "answer": "kureru-negative",
+      "acceptedAnswers": [
+        "貸してくれなかった",
+        "かしてくれなかった",
+        "藉してくれなかった"
+      ],
+      "options": [
+        {
+          "id": "kureru-negative",
+          "label": "貸してくれなかった",
+          "rationale": "Preserves the named auxiliary and requested past polarity."
+        },
+        {
+          "id": "kureru-past",
+          "label": "貸してくれた",
+          "rationale": "Changes the requested polarity of the benefactive report."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "69f32bf5e875132d4d5bf36019027e2957f00eb9d819c5c1dd2ad5547a2704b1",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "my younger sister"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-morau-past",
+      "jlpt": 4,
+      "target": "morau-past",
+      "relationship": "forms",
+      "prompt": "私は妹に傘を____。",
+      "translation": "Combine 貸す（かす）, lend with the benefactive auxiliary もらう. Form its ordinary plain affirmative past. Keep the printed participant frame; write the added auxiliary in kana. Add no other clause or ending.",
+      "evidence": "A named attachment/inflection operation, not an unrestricted translation or pragmatic politeness contest.",
+      "explanation": "Keep the lexical verb's て/で form, then inflect the final auxiliary: 貸してもらった. あげる/くれる are ichidan; もらう has もらった and もらわなかった. A negative report alone does not prove deliberate refusal.",
+      "answer": "morau-past",
+      "acceptedAnswers": [
+        "貸してもらった",
+        "かしてもらった",
+        "藉してもらった"
+      ],
+      "options": [
+        {
+          "id": "morau-past",
+          "label": "貸してもらった",
+          "rationale": "Preserves the named auxiliary and requested past polarity."
+        },
+        {
+          "id": "morau-negative",
+          "label": "貸してもらわなかった",
+          "rationale": "Changes the requested polarity of the benefactive report."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "20c15d974e5fdfb25d31a636abcaa1d9027c2cd1f39eaf70a29aeb52cb08fd92",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "my younger sister"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-morau-negative",
+      "jlpt": 4,
+      "target": "morau-negative",
+      "relationship": "forms",
+      "prompt": "私は妹に傘を____。",
+      "translation": "Combine 貸す（かす）, lend with the benefactive auxiliary もらう. Form its ordinary plain negative past, using the standard なかった ending on the auxiliary. Keep the printed participant frame; write the added auxiliary in kana. Add no other clause or ending.",
+      "evidence": "A named attachment/inflection operation, not an unrestricted translation or pragmatic politeness contest.",
+      "explanation": "Keep the lexical verb's て/で form, then inflect the final auxiliary: 貸してもらわなかった. あげる/くれる are ichidan; もらう has もらった and もらわなかった. A negative report alone does not prove deliberate refusal.",
+      "answer": "morau-negative",
+      "acceptedAnswers": [
+        "貸してもらわなかった",
+        "かしてもらわなかった",
+        "藉してもらわなかった"
+      ],
+      "options": [
+        {
+          "id": "morau-negative",
+          "label": "貸してもらわなかった",
+          "rationale": "Preserves the named auxiliary and requested past polarity."
+        },
+        {
+          "id": "morau-past",
+          "label": "貸してもらった",
+          "rationale": "Changes the requested polarity of the benefactive report."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "20c15d974e5fdfb25d31a636abcaa1d9027c2cd1f39eaf70a29aeb52cb08fd92",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "my younger sister"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-ageru-past",
+      "jlpt": 4,
+      "target": "ageru-past",
+      "relationship": "forms",
+      "prompt": "私は妹に手紙を____。",
+      "translation": "Combine 読む（よむ）, read with the benefactive auxiliary あげる. Form its ordinary plain affirmative past. Keep the printed participant frame; write the added auxiliary in kana. Add no other clause or ending.",
+      "evidence": "A named attachment/inflection operation, not an unrestricted translation or pragmatic politeness contest.",
+      "explanation": "Keep the lexical verb's て/で form, then inflect the final auxiliary: 読んであげた. あげる/くれる are ichidan; もらう has もらった and もらわなかった. A negative report alone does not prove deliberate refusal.",
+      "answer": "ageru-past",
+      "acceptedAnswers": [
+        "読んであげた",
+        "よんであげた"
+      ],
+      "options": [
+        {
+          "id": "ageru-past",
+          "label": "読んであげた",
+          "rationale": "Preserves the named auxiliary and requested past polarity."
+        },
+        {
+          "id": "ageru-negative",
+          "label": "読んであげなかった",
+          "rationale": "Changes the requested polarity of the benefactive report."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f27585176edd03520bb1f529480c23ee5bc2d9fe71beefd9ad3d7c80c3825f83",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "my younger sister"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-ageru-negative",
+      "jlpt": 4,
+      "target": "ageru-negative",
+      "relationship": "forms",
+      "prompt": "私は妹に手紙を____。",
+      "translation": "Combine 読む（よむ）, read with the benefactive auxiliary あげる. Form its ordinary plain negative past, using the standard なかった ending on the auxiliary. Keep the printed participant frame; write the added auxiliary in kana. Add no other clause or ending.",
+      "evidence": "A named attachment/inflection operation, not an unrestricted translation or pragmatic politeness contest.",
+      "explanation": "Keep the lexical verb's て/で form, then inflect the final auxiliary: 読んであげなかった. あげる/くれる are ichidan; もらう has もらった and もらわなかった. A negative report alone does not prove deliberate refusal.",
+      "answer": "ageru-negative",
+      "acceptedAnswers": [
+        "読んであげなかった",
+        "よんであげなかった"
+      ],
+      "options": [
+        {
+          "id": "ageru-negative",
+          "label": "読んであげなかった",
+          "rationale": "Preserves the named auxiliary and requested past polarity."
+        },
+        {
+          "id": "ageru-past",
+          "label": "読んであげた",
+          "rationale": "Changes the requested polarity of the benefactive report."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f27585176edd03520bb1f529480c23ee5bc2d9fe71beefd9ad3d7c80c3825f83",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "my younger sister"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-kureru-past",
+      "jlpt": 4,
+      "target": "kureru-past",
+      "relationship": "forms",
+      "prompt": "妹は私に手紙を____。",
+      "translation": "Combine 読む（よむ）, read with the benefactive auxiliary くれる. Form its ordinary plain affirmative past. Keep the printed participant frame; write the added auxiliary in kana. Add no other clause or ending.",
+      "evidence": "A named attachment/inflection operation, not an unrestricted translation or pragmatic politeness contest.",
+      "explanation": "Keep the lexical verb's て/で form, then inflect the final auxiliary: 読んでくれた. あげる/くれる are ichidan; もらう has もらった and もらわなかった. A negative report alone does not prove deliberate refusal.",
+      "answer": "kureru-past",
+      "acceptedAnswers": [
+        "読んでくれた",
+        "よんでくれた"
+      ],
+      "options": [
+        {
+          "id": "kureru-past",
+          "label": "読んでくれた",
+          "rationale": "Preserves the named auxiliary and requested past polarity."
+        },
+        {
+          "id": "kureru-negative",
+          "label": "読んでくれなかった",
+          "rationale": "Changes the requested polarity of the benefactive report."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "8757e1e942059c54f851eb9b3a86db8716b8527e26fe901c4c64e42f72c220d5",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "my younger sister"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-kureru-negative",
+      "jlpt": 4,
+      "target": "kureru-negative",
+      "relationship": "forms",
+      "prompt": "妹は私に手紙を____。",
+      "translation": "Combine 読む（よむ）, read with the benefactive auxiliary くれる. Form its ordinary plain negative past, using the standard なかった ending on the auxiliary. Keep the printed participant frame; write the added auxiliary in kana. Add no other clause or ending.",
+      "evidence": "A named attachment/inflection operation, not an unrestricted translation or pragmatic politeness contest.",
+      "explanation": "Keep the lexical verb's て/で form, then inflect the final auxiliary: 読んでくれなかった. あげる/くれる are ichidan; もらう has もらった and もらわなかった. A negative report alone does not prove deliberate refusal.",
+      "answer": "kureru-negative",
+      "acceptedAnswers": [
+        "読んでくれなかった",
+        "よんでくれなかった"
+      ],
+      "options": [
+        {
+          "id": "kureru-negative",
+          "label": "読んでくれなかった",
+          "rationale": "Preserves the named auxiliary and requested past polarity."
+        },
+        {
+          "id": "kureru-past",
+          "label": "読んでくれた",
+          "rationale": "Changes the requested polarity of the benefactive report."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "8757e1e942059c54f851eb9b3a86db8716b8527e26fe901c4c64e42f72c220d5",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "my younger sister"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-morau-past",
+      "jlpt": 4,
+      "target": "morau-past",
+      "relationship": "forms",
+      "prompt": "私は妹に手紙を____。",
+      "translation": "Combine 読む（よむ）, read with the benefactive auxiliary もらう. Form its ordinary plain affirmative past. Keep the printed participant frame; write the added auxiliary in kana. Add no other clause or ending.",
+      "evidence": "A named attachment/inflection operation, not an unrestricted translation or pragmatic politeness contest.",
+      "explanation": "Keep the lexical verb's て/で form, then inflect the final auxiliary: 読んでもらった. あげる/くれる are ichidan; もらう has もらった and もらわなかった. A negative report alone does not prove deliberate refusal.",
+      "answer": "morau-past",
+      "acceptedAnswers": [
+        "読んでもらった",
+        "よんでもらった"
+      ],
+      "options": [
+        {
+          "id": "morau-past",
+          "label": "読んでもらった",
+          "rationale": "Preserves the named auxiliary and requested past polarity."
+        },
+        {
+          "id": "morau-negative",
+          "label": "読んでもらわなかった",
+          "rationale": "Changes the requested polarity of the benefactive report."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f27585176edd03520bb1f529480c23ee5bc2d9fe71beefd9ad3d7c80c3825f83",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "my younger sister"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-morau-negative",
+      "jlpt": 4,
+      "target": "morau-negative",
+      "relationship": "forms",
+      "prompt": "私は妹に手紙を____。",
+      "translation": "Combine 読む（よむ）, read with the benefactive auxiliary もらう. Form its ordinary plain negative past, using the standard なかった ending on the auxiliary. Keep the printed participant frame; write the added auxiliary in kana. Add no other clause or ending.",
+      "evidence": "A named attachment/inflection operation, not an unrestricted translation or pragmatic politeness contest.",
+      "explanation": "Keep the lexical verb's て/で form, then inflect the final auxiliary: 読んでもらわなかった. あげる/くれる are ichidan; もらう has もらった and もらわなかった. A negative report alone does not prove deliberate refusal.",
+      "answer": "morau-negative",
+      "acceptedAnswers": [
+        "読んでもらわなかった",
+        "よんでもらわなかった"
+      ],
+      "options": [
+        {
+          "id": "morau-negative",
+          "label": "読んでもらわなかった",
+          "rationale": "Preserves the named auxiliary and requested past polarity."
+        },
+        {
+          "id": "morau-past",
+          "label": "読んでもらった",
+          "rationale": "Changes the requested polarity of the benefactive report."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f27585176edd03520bb1f529480c23ee5bc2d9fe71beefd9ad3d7c80c3825f83",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "my younger sister"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-thanks-connection",
+      "jlpt": 4,
+      "target": "thanks-connection",
+      "relationship": "thanks-apologies",
+      "prompt": "この傘を____、ありがとう。",
+      "translation": "A friend performed this action for you, and you are directly thanking that friend. From 貸す（かす）, lend, form the benefactive connection: use the ordinary giving auxiliary toward you in its て-form to join the printed ありがとう. Write that auxiliary in kana; add no other aspect or clause.",
+      "evidence": "The visible assembly operation supplies the ending but requires a complete lexical/benefactive connection.",
+      "explanation": "The friend's helpful action connects through くれて to ありがとう. It is the friend who acted, not you receiving a thing. This does not ban other natural thanks/apology expressions in less constrained tasks.",
+      "answer": "thanks-connection",
+      "acceptedAnswers": [
+        "貸してくれて",
+        "かしてくれて",
+        "藉してくれて"
+      ],
+      "options": [
+        {
+          "id": "thanks-connection",
+          "label": "貸してくれて",
+          "rationale": "The friend's helpful action connects through くれて to ありがとう. It is the friend who acted, not you receiving a thing."
+        },
+        {
+          "id": "apology-connection",
+          "label": "貸して",
+          "rationale": "This omits the explicitly requested benefactive connection; the task is not unrestricted wording for gratitude."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "5843067241fc6e10ff48359344d9946ed78a178b76ea6e70fa7e07e6045c89b4",
+        "spans": [
+          {
+            "start": 2,
+            "end": 3,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-apology-connection",
+      "jlpt": 4,
+      "target": "apology-connection",
+      "relationship": "thanks-apologies",
+      "prompt": "この傘を勝手に____、すみません。",
+      "translation": "You performed this action without the owner's permission and are apologizing for it. From 貸す（かす）, lend, connect your action directly to the printed すみません with the lexical verb's て/で form. Do not insert another auxiliary, change the action's polarity or add a clause.",
+      "evidence": "The visible assembly operation supplies the ending but requires a complete lexical/benefactive connection.",
+      "explanation": "Your own action connects directly through て/で to すみません. The stated apology is for what you did without permission. This does not ban other natural thanks/apology expressions in less constrained tasks.",
+      "answer": "apology-connection",
+      "acceptedAnswers": [
+        "貸して",
+        "かして",
+        "藉して"
+      ],
+      "options": [
+        {
+          "id": "thanks-connection",
+          "label": "貸してくれて",
+          "rationale": "This introduces someone else's favor toward you, not the requested direct connection of your own action."
+        },
+        {
+          "id": "apology-connection",
+          "label": "貸して",
+          "rationale": "Your own action connects directly through て/で to すみません. The stated apology is for what you did without permission."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f56678a79ba2cc0c96f467a9ac2c1c1c2f64f6fcc90e47b74c1d5dd3ff3afd0e",
+        "spans": [
+          {
+            "start": 2,
+            "end": 3,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          },
+          {
+            "start": 4,
+            "end": 7,
+            "text": "勝手に",
+            "reading": "かってに",
+            "headword": "勝手",
+            "gloss": "without permission in this context"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-thanks-connection",
+      "jlpt": 4,
+      "target": "thanks-connection",
+      "relationship": "thanks-apologies",
+      "prompt": "この手紙を____、ありがとう。",
+      "translation": "A friend performed this action for you, and you are directly thanking that friend. From 読む（よむ）, read, form the benefactive connection: use the ordinary giving auxiliary toward you in its て-form to join the printed ありがとう. Write that auxiliary in kana; add no other aspect or clause.",
+      "evidence": "The visible assembly operation supplies the ending but requires a complete lexical/benefactive connection.",
+      "explanation": "The friend's helpful action connects through くれて to ありがとう. It is the friend who acted, not you receiving a thing. This does not ban other natural thanks/apology expressions in less constrained tasks.",
+      "answer": "thanks-connection",
+      "acceptedAnswers": [
+        "読んでくれて",
+        "よんでくれて"
+      ],
+      "options": [
+        {
+          "id": "thanks-connection",
+          "label": "読んでくれて",
+          "rationale": "The friend's helpful action connects through くれて to ありがとう. It is the friend who acted, not you receiving a thing."
+        },
+        {
+          "id": "apology-connection",
+          "label": "読んで",
+          "rationale": "This omits the explicitly requested benefactive connection; the task is not unrestricted wording for gratitude."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "6f5059bd7b6f6cb87caa32bee0c7e5e3c9d64118e726c3a0dae0476762174bab",
+        "spans": [
+          {
+            "start": 2,
+            "end": 4,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-apology-connection",
+      "jlpt": 4,
+      "target": "apology-connection",
+      "relationship": "thanks-apologies",
+      "prompt": "この手紙を勝手に____、すみません。",
+      "translation": "You performed this action without the owner's permission and are apologizing for it. From 読む（よむ）, read, connect your action directly to the printed すみません with the lexical verb's て/で form. Do not insert another auxiliary, change the action's polarity or add a clause.",
+      "evidence": "The visible assembly operation supplies the ending but requires a complete lexical/benefactive connection.",
+      "explanation": "Your own action connects directly through て/で to すみません. The stated apology is for what you did without permission. This does not ban other natural thanks/apology expressions in less constrained tasks.",
+      "answer": "apology-connection",
+      "acceptedAnswers": [
+        "読んで",
+        "よんで"
+      ],
+      "options": [
+        {
+          "id": "thanks-connection",
+          "label": "読んでくれて",
+          "rationale": "This introduces someone else's favor toward you, not the requested direct connection of your own action."
+        },
+        {
+          "id": "apology-connection",
+          "label": "読んで",
+          "rationale": "Your own action connects directly through て/で to すみません. The stated apology is for what you did without permission."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "efcb1286e67cd63f087ebb68c0099ec9fd841cd580313bdc8d19f9fbd3cf9e62",
+        "spans": [
+          {
+            "start": 2,
+            "end": 4,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          },
+          {
+            "start": 5,
+            "end": 8,
+            "text": "勝手に",
+            "reading": "かってに",
+            "headword": "勝手",
+            "gloss": "without permission in this context"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-bare-do",
+      "jlpt": 4,
+      "target": "bare-do",
+      "relationship": "requests",
+      "prompt": "この傘を____。",
+      "translation": "In a familiar request context, build the bare affirmative request from 貸す（かす）, lend. End with the request's て/で connection; add no ください, benefactive auxiliary, final particle or extra clause.",
+      "evidence": "A bare-request form operation, not a claim that a longer request would be unnatural in the same conversation.",
+      "explanation": "Use 貸して. The negative request uses the ordinary ない-form plus で, not なくて. The request context is given; other unfinished て fragments need not be requests.",
+      "answer": "bare-do",
+      "acceptedAnswers": [
+        "貸して",
+        "かして",
+        "藉して"
+      ],
+      "options": [
+        {
+          "id": "bare-do",
+          "label": "貸して",
+          "rationale": "Preserves the requested lexical-action polarity."
+        },
+        {
+          "id": "bare-refrain",
+          "label": "貸さないで",
+          "rationale": "Asks for the opposite action polarity."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "bf9e02dbe4775577badf2545d1e964d0fbd5472292ff7c51c17024f760561488",
+        "spans": [
+          {
+            "start": 2,
+            "end": 3,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-bare-refrain",
+      "jlpt": 4,
+      "target": "bare-refrain",
+      "relationship": "requests",
+      "prompt": "この傘を____。",
+      "translation": "In a familiar request context, build the bare request not to do the action from 貸す（かす）, lend. End with the request's て/で connection; add no ください, benefactive auxiliary, final particle or extra clause.",
+      "evidence": "A bare-request form operation, not a claim that a longer request would be unnatural in the same conversation.",
+      "explanation": "Use 貸さないで. The negative request uses the ordinary ない-form plus で, not なくて. The request context is given; other unfinished て fragments need not be requests.",
+      "answer": "bare-refrain",
+      "acceptedAnswers": [
+        "貸さないで",
+        "かさないで",
+        "藉さないで"
+      ],
+      "options": [
+        {
+          "id": "bare-refrain",
+          "label": "貸さないで",
+          "rationale": "Preserves the requested lexical-action polarity."
+        },
+        {
+          "id": "bare-do",
+          "label": "貸して",
+          "rationale": "Asks for the opposite action polarity."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "bf9e02dbe4775577badf2545d1e964d0fbd5472292ff7c51c17024f760561488",
+        "spans": [
+          {
+            "start": 2,
+            "end": 3,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-kureru-do",
+      "jlpt": 4,
+      "target": "request-do",
+      "relationship": "requests",
+      "prompt": "この傘を貸してくれない？→____",
+      "translation": "This utterance is a favor request addressed to the listener, not a factual report or complaint. Labels: する = the listener is asked to perform the lexical action; しない = the listener is asked not to perform it. Use one of these labels. Lexical verb: 貸す（かす）, lend. What is being requested?",
+      "evidence": "The question establishes discourse function without supplying the requested action's polarity. Labels stay in fixed order.",
+      "explanation": "The lexical action is affirmative. Negative くれない in this stated favor-question context asks for the action, not for its avoidance. The question does not assert agreement or actual performance.",
+      "answer": "request-do",
+      "acceptedAnswers": [
+        "する"
+      ],
+      "options": [
+        {
+          "id": "request-do",
+          "label": "する",
+          "rationale": "The lexical action is affirmative. Negative くれない in this stated favor-question context asks for the action, not for its avoidance."
+        },
+        {
+          "id": "request-refrain",
+          "label": "しない",
+          "rationale": "A negative auxiliary question can request the affirmative action; do not treat it as lexical-action negation."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "a9ce1a7ecf494b99afa244e58c2ae58968173cddc6f8b9e2c17116719294e9e0",
+        "spans": [
+          {
+            "start": 2,
+            "end": 3,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-kureru-refrain",
+      "jlpt": 4,
+      "target": "request-refrain",
+      "relationship": "requests",
+      "prompt": "この傘を貸さないでくれない？→____",
+      "translation": "This utterance is a favor request addressed to the listener, not a factual report or complaint. Labels: する = the listener is asked to perform the lexical action; しない = the listener is asked not to perform it. Use one of these labels. Lexical verb: 貸す（かす）, lend. What is being requested?",
+      "evidence": "The question establishes discourse function without supplying the requested action's polarity. Labels stay in fixed order.",
+      "explanation": "The ないで inside the lexical action asks the listener to refrain; the auxiliary's negative question does not reverse that. The question does not assert agreement or actual performance.",
+      "answer": "request-refrain",
+      "acceptedAnswers": [
+        "しない"
+      ],
+      "options": [
+        {
+          "id": "request-do",
+          "label": "する",
+          "rationale": "This overlooks the negative lexical-action connection ないで."
+        },
+        {
+          "id": "request-refrain",
+          "label": "しない",
+          "rationale": "The ないで inside the lexical action asks the listener to refrain; the auxiliary's negative question does not reverse that."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "31aaaac43f66eda6b58b98b9c18d7ea51c76830fcae9865af05e0e27cd1a92a0",
+        "spans": [
+          {
+            "start": 2,
+            "end": 3,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-moraeru-do",
+      "jlpt": 4,
+      "target": "request-do",
+      "relationship": "requests",
+      "prompt": "この傘を貸してもらえない？→____",
+      "translation": "This utterance is a favor request addressed to the listener, not a factual report or complaint. Labels: する = the listener is asked to perform the lexical action; しない = the listener is asked not to perform it. Use one of these labels. Lexical verb: 貸す（かす）, lend. What is being requested?",
+      "evidence": "The question establishes discourse function without supplying the requested action's polarity. Labels stay in fixed order.",
+      "explanation": "The lexical action is affirmative. Negative もらえない in this stated favor-question context asks for the action, not for its avoidance. The question does not assert agreement or actual performance.",
+      "answer": "request-do",
+      "acceptedAnswers": [
+        "する"
+      ],
+      "options": [
+        {
+          "id": "request-do",
+          "label": "する",
+          "rationale": "The lexical action is affirmative. Negative もらえない in this stated favor-question context asks for the action, not for its avoidance."
+        },
+        {
+          "id": "request-refrain",
+          "label": "しない",
+          "rationale": "A negative auxiliary question can request the affirmative action; do not treat it as lexical-action negation."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "0aa23ae7b760ca25a12b23253d249fb6dfdd7b7d6eb6341c5361e4896405bdd9",
+        "spans": [
+          {
+            "start": 2,
+            "end": 3,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-umbrella-moraeru-refrain",
+      "jlpt": 4,
+      "target": "request-refrain",
+      "relationship": "requests",
+      "prompt": "この傘を貸さないでもらえない？→____",
+      "translation": "This utterance is a favor request addressed to the listener, not a factual report or complaint. Labels: する = the listener is asked to perform the lexical action; しない = the listener is asked not to perform it. Use one of these labels. Lexical verb: 貸す（かす）, lend. What is being requested?",
+      "evidence": "The question establishes discourse function without supplying the requested action's polarity. Labels stay in fixed order.",
+      "explanation": "The ないで inside the lexical action asks the listener to refrain; the auxiliary's negative question does not reverse that. The question does not assert agreement or actual performance.",
+      "answer": "request-refrain",
+      "acceptedAnswers": [
+        "しない"
+      ],
+      "options": [
+        {
+          "id": "request-do",
+          "label": "する",
+          "rationale": "This overlooks the negative lexical-action connection ないで."
+        },
+        {
+          "id": "request-refrain",
+          "label": "しない",
+          "rationale": "The ないで inside the lexical action asks the listener to refrain; the auxiliary's negative question does not reverse that."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "daf1dc73d9b786a86fe89bc57250a5172d1452af0cef2a19a02b83a95eef9823",
+        "spans": [
+          {
+            "start": 2,
+            "end": 3,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-bare-do",
+      "jlpt": 4,
+      "target": "bare-do",
+      "relationship": "requests",
+      "prompt": "この手紙を____。",
+      "translation": "In a familiar request context, build the bare affirmative request from 読む（よむ）, read. End with the request's て/で connection; add no ください, benefactive auxiliary, final particle or extra clause.",
+      "evidence": "A bare-request form operation, not a claim that a longer request would be unnatural in the same conversation.",
+      "explanation": "Use 読んで. The negative request uses the ordinary ない-form plus で, not なくて. The request context is given; other unfinished て fragments need not be requests.",
+      "answer": "bare-do",
+      "acceptedAnswers": [
+        "読んで",
+        "よんで"
+      ],
+      "options": [
+        {
+          "id": "bare-do",
+          "label": "読んで",
+          "rationale": "Preserves the requested lexical-action polarity."
+        },
+        {
+          "id": "bare-refrain",
+          "label": "読まないで",
+          "rationale": "Asks for the opposite action polarity."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "6e0f75d0ae048d168165ca578f7f8db74f9f1c2ccf97905ab56de4d4551bd007",
+        "spans": [
+          {
+            "start": 2,
+            "end": 4,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-bare-refrain",
+      "jlpt": 4,
+      "target": "bare-refrain",
+      "relationship": "requests",
+      "prompt": "この手紙を____。",
+      "translation": "In a familiar request context, build the bare request not to do the action from 読む（よむ）, read. End with the request's て/で connection; add no ください, benefactive auxiliary, final particle or extra clause.",
+      "evidence": "A bare-request form operation, not a claim that a longer request would be unnatural in the same conversation.",
+      "explanation": "Use 読まないで. The negative request uses the ordinary ない-form plus で, not なくて. The request context is given; other unfinished て fragments need not be requests.",
+      "answer": "bare-refrain",
+      "acceptedAnswers": [
+        "読まないで",
+        "よまないで"
+      ],
+      "options": [
+        {
+          "id": "bare-refrain",
+          "label": "読まないで",
+          "rationale": "Preserves the requested lexical-action polarity."
+        },
+        {
+          "id": "bare-do",
+          "label": "読んで",
+          "rationale": "Asks for the opposite action polarity."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "6e0f75d0ae048d168165ca578f7f8db74f9f1c2ccf97905ab56de4d4551bd007",
+        "spans": [
+          {
+            "start": 2,
+            "end": 4,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-kureru-do",
+      "jlpt": 4,
+      "target": "request-do",
+      "relationship": "requests",
+      "prompt": "この手紙を読んでくれない？→____",
+      "translation": "This utterance is a favor request addressed to the listener, not a factual report or complaint. Labels: する = the listener is asked to perform the lexical action; しない = the listener is asked not to perform it. Use one of these labels. Lexical verb: 読む（よむ）, read. What is being requested?",
+      "evidence": "The question establishes discourse function without supplying the requested action's polarity. Labels stay in fixed order.",
+      "explanation": "The lexical action is affirmative. Negative くれない in this stated favor-question context asks for the action, not for its avoidance. The question does not assert agreement or actual performance.",
+      "answer": "request-do",
+      "acceptedAnswers": [
+        "する"
+      ],
+      "options": [
+        {
+          "id": "request-do",
+          "label": "する",
+          "rationale": "The lexical action is affirmative. Negative くれない in this stated favor-question context asks for the action, not for its avoidance."
+        },
+        {
+          "id": "request-refrain",
+          "label": "しない",
+          "rationale": "A negative auxiliary question can request the affirmative action; do not treat it as lexical-action negation."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "43c1fd01545a59c720332664e5959ee39d021ac63ccfda34ca72aa171d95a5bb",
+        "spans": [
+          {
+            "start": 2,
+            "end": 4,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-kureru-refrain",
+      "jlpt": 4,
+      "target": "request-refrain",
+      "relationship": "requests",
+      "prompt": "この手紙を読まないでくれない？→____",
+      "translation": "This utterance is a favor request addressed to the listener, not a factual report or complaint. Labels: する = the listener is asked to perform the lexical action; しない = the listener is asked not to perform it. Use one of these labels. Lexical verb: 読む（よむ）, read. What is being requested?",
+      "evidence": "The question establishes discourse function without supplying the requested action's polarity. Labels stay in fixed order.",
+      "explanation": "The ないで inside the lexical action asks the listener to refrain; the auxiliary's negative question does not reverse that. The question does not assert agreement or actual performance.",
+      "answer": "request-refrain",
+      "acceptedAnswers": [
+        "しない"
+      ],
+      "options": [
+        {
+          "id": "request-do",
+          "label": "する",
+          "rationale": "This overlooks the negative lexical-action connection ないで."
+        },
+        {
+          "id": "request-refrain",
+          "label": "しない",
+          "rationale": "The ないで inside the lexical action asks the listener to refrain; the auxiliary's negative question does not reverse that."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "7ea82a763affce5f0cc9a4e9c6c10a30f2dde4331f23f0021554d1d3a843b0ef",
+        "spans": [
+          {
+            "start": 2,
+            "end": 4,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-moraeru-do",
+      "jlpt": 4,
+      "target": "request-do",
+      "relationship": "requests",
+      "prompt": "この手紙を読んでもらえない？→____",
+      "translation": "This utterance is a favor request addressed to the listener, not a factual report or complaint. Labels: する = the listener is asked to perform the lexical action; しない = the listener is asked not to perform it. Use one of these labels. Lexical verb: 読む（よむ）, read. What is being requested?",
+      "evidence": "The question establishes discourse function without supplying the requested action's polarity. Labels stay in fixed order.",
+      "explanation": "The lexical action is affirmative. Negative もらえない in this stated favor-question context asks for the action, not for its avoidance. The question does not assert agreement or actual performance.",
+      "answer": "request-do",
+      "acceptedAnswers": [
+        "する"
+      ],
+      "options": [
+        {
+          "id": "request-do",
+          "label": "する",
+          "rationale": "The lexical action is affirmative. Negative もらえない in this stated favor-question context asks for the action, not for its avoidance."
+        },
+        {
+          "id": "request-refrain",
+          "label": "しない",
+          "rationale": "A negative auxiliary question can request the affirmative action; do not treat it as lexical-action negation."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "ea78cd5668be7e2b030e0bc1d82eb79eac0df1cdf660f894f4413286268ca92c",
+        "spans": [
+          {
+            "start": 2,
+            "end": 4,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    },
+    {
+      "id": "benefactive-requests-letter-moraeru-refrain",
+      "jlpt": 4,
+      "target": "request-refrain",
+      "relationship": "requests",
+      "prompt": "この手紙を読まないでもらえない？→____",
+      "translation": "This utterance is a favor request addressed to the listener, not a factual report or complaint. Labels: する = the listener is asked to perform the lexical action; しない = the listener is asked not to perform it. Use one of these labels. Lexical verb: 読む（よむ）, read. What is being requested?",
+      "evidence": "The question establishes discourse function without supplying the requested action's polarity. Labels stay in fixed order.",
+      "explanation": "The ないで inside the lexical action asks the listener to refrain; the auxiliary's negative question does not reverse that. The question does not assert agreement or actual performance.",
+      "answer": "request-refrain",
+      "acceptedAnswers": [
+        "しない"
+      ],
+      "options": [
+        {
+          "id": "request-do",
+          "label": "する",
+          "rationale": "This overlooks the negative lexical-action connection ないで."
+        },
+        {
+          "id": "request-refrain",
+          "label": "しない",
+          "rationale": "The ないで inside the lexical action asks the listener to refrain; the auxiliary's negative question does not reverse that."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "89a87619d2f192fc5b5d392d4e0120d113d5fc328ab94e8741d43b1d5990360c",
+        "spans": [
+          {
+            "start": 2,
+            "end": 4,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          }
+        ]
+      }
+    }
+  ],
+  "introductionGroups": [
+    {
+      "id": "benefactive-requests-roles",
+      "label": "Track actor, beneficiary and receiving viewpoint",
+      "facets": [
+        {
+          "id": "first-mentioned",
+          "label": "First-mentioned person"
+        },
+        {
+          "id": "second-mentioned",
+          "label": "Second-mentioned person"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "benefactive-requests-umbrella-incoming-actor",
+          "facetId": "first-mentioned",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-umbrella-incoming-beneficiary",
+          "facetId": "second-mentioned",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-umbrella-receiving-actor",
+          "facetId": "second-mentioned",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-umbrella-receiving-beneficiary",
+          "facetId": "first-mentioned",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-incoming-actor",
+          "facetId": "first-mentioned",
+          "exampleKey": "letter"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-incoming-beneficiary",
+          "facetId": "second-mentioned",
+          "exampleKey": "letter"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-receiving-actor",
+          "facetId": "second-mentioned",
+          "exampleKey": "letter"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-receiving-beneficiary",
+          "facetId": "first-mentioned",
+          "exampleKey": "letter"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "benefactive-requests-forms",
+          "importance": 2,
+          "reason": "Build the auxiliaries without losing the actual participants."
+        },
+        {
+          "groupId": "n5-giving-receiving-role-interpretation",
+          "importance": 2,
+          "reason": "Revisit the original thing-transfer roles without assigning duplicate ownership."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "benefactive-requests-forms",
+      "label": "Build affirmative and negative benefactive past forms",
+      "facets": [
+        {
+          "id": "ageru-past",
+          "label": "Giving-side affirmative past"
+        },
+        {
+          "id": "ageru-negative",
+          "label": "Giving-side negative past"
+        },
+        {
+          "id": "kureru-past",
+          "label": "Incoming affirmative past"
+        },
+        {
+          "id": "kureru-negative",
+          "label": "Incoming negative past"
+        },
+        {
+          "id": "morau-past",
+          "label": "Receiving-side affirmative past"
+        },
+        {
+          "id": "morau-negative",
+          "label": "Receiving-side negative past"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "benefactive-requests-umbrella-ageru-past",
+          "facetId": "ageru-past",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-umbrella-ageru-negative",
+          "facetId": "ageru-negative",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-umbrella-kureru-past",
+          "facetId": "kureru-past",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-umbrella-kureru-negative",
+          "facetId": "kureru-negative",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-umbrella-morau-past",
+          "facetId": "morau-past",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-umbrella-morau-negative",
+          "facetId": "morau-negative",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-ageru-past",
+          "facetId": "ageru-past",
+          "exampleKey": "letter"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-ageru-negative",
+          "facetId": "ageru-negative",
+          "exampleKey": "letter"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-kureru-past",
+          "facetId": "kureru-past",
+          "exampleKey": "letter"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-kureru-negative",
+          "facetId": "kureru-negative",
+          "exampleKey": "letter"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-morau-past",
+          "facetId": "morau-past",
+          "exampleKey": "letter"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-morau-negative",
+          "facetId": "morau-negative",
+          "exampleKey": "letter"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "benefactive-requests-thanks-apologies",
+          "importance": 2,
+          "reason": "Connect the relevant person's action to thanks or apology."
+        },
+        {
+          "groupId": "benefactive-requests-requests",
+          "importance": 2,
+          "reason": "Carry the action/auxiliary distinction into requests."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "benefactive-requests-thanks-apologies",
+      "label": "Connect the right person's action to thanks or apology",
+      "facets": [
+        {
+          "id": "thanks-connection",
+          "label": "Connect the other person's favor to thanks"
+        },
+        {
+          "id": "apology-connection",
+          "label": "Connect one's own action directly to an apology"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "benefactive-requests-umbrella-thanks-connection",
+          "facetId": "thanks-connection",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-umbrella-apology-connection",
+          "facetId": "apology-connection",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-thanks-connection",
+          "facetId": "thanks-connection",
+          "exampleKey": "letter"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-apology-connection",
+          "facetId": "apology-connection",
+          "exampleKey": "letter"
+        }
+      ],
+      "next": [],
+      "requires": []
+    },
+    {
+      "id": "benefactive-requests-requests",
+      "label": "Build bare requests and locate negation in favor questions",
+      "facets": [
+        {
+          "id": "bare-do",
+          "label": "Build a bare affirmative request"
+        },
+        {
+          "id": "bare-refrain",
+          "label": "Build a bare negative request"
+        },
+        {
+          "id": "request-do",
+          "label": "The listener is asked to perform the action"
+        },
+        {
+          "id": "request-refrain",
+          "label": "The listener is asked not to perform the action"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "benefactive-requests-umbrella-bare-do",
+          "facetId": "bare-do",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-umbrella-bare-refrain",
+          "facetId": "bare-refrain",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-umbrella-kureru-do",
+          "facetId": "request-do",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-umbrella-kureru-refrain",
+          "facetId": "request-refrain",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-umbrella-moraeru-do",
+          "facetId": "request-do",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-umbrella-moraeru-refrain",
+          "facetId": "request-refrain",
+          "exampleKey": "umbrella"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-bare-do",
+          "facetId": "bare-do",
+          "exampleKey": "letter"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-bare-refrain",
+          "facetId": "bare-refrain",
+          "exampleKey": "letter"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-kureru-do",
+          "facetId": "request-do",
+          "exampleKey": "letter"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-kureru-refrain",
+          "facetId": "request-refrain",
+          "exampleKey": "letter"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-moraeru-do",
+          "facetId": "request-do",
+          "exampleKey": "letter"
+        },
+        {
+          "exerciseId": "benefactive-requests-letter-moraeru-refrain",
+          "facetId": "request-refrain",
+          "exampleKey": "letter"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "desire-comparisons-negative-position",
+          "importance": 2,
+          "reason": "Compare action negation with a negative outer wish."
+        }
+      ],
+      "requires": []
+    }
+  ]
+}

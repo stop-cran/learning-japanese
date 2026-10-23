@@ -214,6 +214,8 @@ also distinguishes purpose from cause. These are optional later comparisons, not
 **てあげる／てくれる／てもらう** describe doing an action for someone and deserve their own
 construction and context checks. They are not assessed here, nor are a full honorific system or
 the interpretation of every English phrase containing "give."
+Continue to [doing things for others and asking favors](benefactive-actions.md) for those action-based
+frames, affirmative/negative forms, thanks/apologies and ordinary requests.
 
 The [desire comparison](desire-actions-and-outcomes.md#wanting-to-receive-someones-action) briefly contrasts
 wanting an action with wanting to receive it through てもらいたい. This is optional later reading,
