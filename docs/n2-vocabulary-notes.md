@@ -95,6 +95,33 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 24 authoring:** Readings and source IDs can
+  agree while an English gloss belongs to another
+  reading: 削る's percentage-taking is はつる,
+  not selected けずる. Preserve the raw gloss and
+  record the exact separate entry instead of
+  manufacturing a commission sense.
+- **Batch 24 authoring:** Qualify raw English at the
+  construction level. 桁's column is structural
+  or numerical, not every pillar or spreadsheet
+  column; 険しい's sharp eyes describe a stern
+  look, not visual acuity. 気配's market tone is
+  positively taught, but raw worry remains
+  unestablished.
+- **Batch 24 authoring:** Do not infer constituent
+  irregularity solely from a public heading mark:
+  KANJIDIC2 explicitly gives 駄 the on reading タ,
+  supporting 下駄 ゲ + タ. Conversely, 気配's
+  ateji and older けわい require an actual
+  spelling/history source, not an invented
+  distribute-spirit compound explanation.
+- **Batch 24 authoring:** Recheck exact supporting
+  entry IDs against the extraction before freezing.
+  Source-local sense numbering can reverse:
+  下水 is infrastructure then wastewater in
+  JMdict, but wastewater then infrastructure in
+  the inspected Daijisen body.
+
 - **Batch 23 reconciliation:** Baseline exclusions
   may need a narrowly documented extension when a
   reused article's answer-label neighborhood is

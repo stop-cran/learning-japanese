@@ -5,7 +5,7 @@
 **Batches 01-23 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 460 rows are review-closed; none are draft and 1,352 remain pending.
+The first 460 rows are review-closed; batch 24 has 20 draft rows and 1,332 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -3510,6 +3510,37 @@ remain preserved. Baseline exclusion additions
 are exactly batch-19 機械/道具 and this batch's
 形式, 形 and 型 extensions described above.
 This closes batch 23, not the full expansion.
+
+## Batch 24: N2:462-N2:481
+
+**Status:** authored draft; independent reviews and reconciliation are not yet complete.
+
+Scope: 激増, 下車, 下旬, 下水, 削る, 桁, 下駄, 血圧, 血液, 月給,
+傑作, 月末, 気配, 下品, 煙い, 蹴る, 険しい, 見学, 謙虚, 原稿.
+
+Twenty new articles cover the twenty original rows. No existing word
+identity, primary reading, title, easier level or exclusion list is changed.
+The collection has 3,715 word articles. Four primary reciprocal N2 pairs
+are added on 圧, 血 and 液, with exact whole-word readings and source footers.
+Existing 増 is also linked substantively from 激増; missing component cards
+are not manufactured.
+
+The [source packet](n2-vocabulary-batch-sources/batch-24.json) retains
+raw source rows, complete principal and comparison families, verified
+component records, actual comparison labels and seven qualified author
+public-entry receipts. The original 削る percentage gloss is resolved to
+separate はつる/1298100, not taught at selected けずる/1298090.
+桁's column and 険しい's sharp eyes receive context-sensitive teaching.
+気配 positively includes market tone while raw worry remains unestablished.
+下水's two senses, 傑作's qualified humorous use and 険しい's stern expression
+are positively covered. Additional senses are explicitly separated from
+independent N2 assignments.
+
+The upcoming initial reviews will use the same frozen snapshot and
+bounded scope, GPT then Claude, in independent sequential processes.
+Their source derivative removes only `quizGuardRationale`; no prior
+findings, author adjudication or other-family report is supplied.
+Drafting and structural validation do not close the rows.
 
 ## Final verification
 
