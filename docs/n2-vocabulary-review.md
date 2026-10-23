@@ -3513,7 +3513,7 @@ This closes batch 23, not the full expansion.
 
 ## Batch 24: N2:462-N2:481
 
-**Status:** authored draft; independent reviews and reconciliation are not yet complete.
+**Status:** independently reviewed draft; corrections await original-reviewer confirmation.
 
 Scope: 激増, 下車, 下旬, 下水, 削る, 桁, 下駄, 血圧, 血液, 月給,
 傑作, 月末, 気配, 下品, 煙い, 蹴る, 険しい, 見学, 謙虚, 原稿.
@@ -3536,11 +3536,27 @@ separate はつる/1298100, not taught at selected けずる/1298090.
 are positively covered. Additional senses are explicitly separated from
 independent N2 assignments.
 
-The upcoming initial reviews will use the same frozen snapshot and
-bounded scope, GPT then Claude, in independent sequential processes.
-Their source derivative removes only `quizGuardRationale`; no prior
-findings, author adjudication or other-family report is supplied.
-Drafting and structural validation do not close the rows.
+Both blind initial reviews inspected authored commit
+`15d8c88a4e49aef85600feb3a6cb1886f7425b14`, GPT-6.1 Sol then
+Claude Opus 5.5, in independent sequential processes with no file edits.
+The source derivative removed only `quizGuardRationale`; no prior
+findings, author adjudication or other-family report was supplied.
+The [GPT report](n2-vocabulary-reviews/batch-24-gpt-initial.md) established
+three direct quiz gaps: 傑作/愉快, 気配/調子 and 原稿/テキスト.
+The [Claude report](n2-vocabulary-reviews/batch-24-claude-initial.md)
+established 見学/訪問・訪ねる and raised an unverified market example.
+
+Reconciliation adds the five direct guards after inspecting all five
+comparison cards and complete pinned families. The uncertain 気配
+sentence is replaced by Daijisen's actually inspected 買い気配 compound.
+The financial きはい cross-reference is now explicit, without claiming
+that けはい is incorrect in finance or that the removed sentence was
+demonstrably wrong. Two exact public-entry inspection receipts and
+qualified correction evidence are appended without changing original
+rows or mappings. Optional examples, disclaimer polish and extra
+lower-level backlinks are not required for closure and are not added.
+Original-session bounded confirmations and provenance authentication
+remain pending; drafting and structural validation do not close rows.
 
 ## Final verification
 

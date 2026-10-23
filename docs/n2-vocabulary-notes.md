@@ -95,6 +95,17 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 24 reconciliation:** General English answer labels can overlap a
+  qualified sense even when the Japanese words are not unrestricted substitutes.
+  The actual amusing, tone, text and visit labels justify direct guards for
+  傑作/愉快, 気配/調子, 原稿/テキスト and 見学/訪問・訪ねる.
+  Existing guards through 面白い or 文章 do not protect a third pair.
+- **Batch 24 reconciliation:** An unlocated example is not disproved by a
+  failed search. Replace an uncertain specialist collocation with an actually
+  inspected dictionary compound when that preserves the lesson.
+  気配 now uses Daijisen's 買い気配 and notes the financial きはい
+  cross-reference without incorrectly excluding けはい from that sense.
+
 - **Batch 24 authoring:** Readings and source IDs can
   agree while an English gloss belongs to another
   reading: 削る's percentage-taking is はつる,
