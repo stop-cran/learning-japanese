@@ -95,6 +95,23 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 27 authoring:** A publisher's lexical container may contain
+  several reading headings. 紅葉/こうよう supplies autumn coloring;
+  the source's maple gloss is positively supported under separate
+  紅葉/もみじ entry 2857870, not by moving that sense to 1578780.
+  Preserve raw spelling, reading, entry and gloss, teach the separate
+  reading explicitly, and leave the historical compiler's intent unknown.
+- **Batch 27 authoring:** A loanword's broad English gloss is not an
+  exhaustive sense assignment. コース selects route/study senses and
+  separately indexes additional meal and offered-plan uses. Recognize
+  individual course versus a complete meal; 皿's positive serving/course
+  sense matters when assessing answer-label ambiguity.
+- **Batch 27 authoring:** Word-family derivatives and aliases need actual
+  construction coverage. 合理's noun does not license 合理な; 合理的
+  supplies the adjective. Reusing 越える for source 超える requires
+  its already taught spelling, reading and exceeding use, plus a useful
+  超 component link, without changing its stable identity or easier N3.
+
 - **Batch 26 reconciliation:** An absent English gloss is not proof of an
   absent ordinary sense. 公衆/一般 is supported by the existing 一般
   article and positive Daijisen public-noun sense even though JMdict's

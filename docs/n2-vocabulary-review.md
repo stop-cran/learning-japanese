@@ -4019,6 +4019,72 @@ No executed app draw, selection-frequency measurement, full-corpus
 rereview or native-speaker certification is claimed.
 This closes batch 26, not the full vocabulary expansion.
 
+## Batch 27: N2:522-N2:541
+
+**Status:** drafted; independent review and reconciliation pending.
+
+Scope: 高度, 高等, 合同, 後輩, 公表, 鉱物, 公務, 項目,
+紅葉, 合理, 交流, 合流, 効力, 超える, コース, コーラス,
+焦がす, 国王, 国籍, 国立.
+
+Nineteen new articles bring the filesystem collection to 3,773 word
+articles. Source 超える reuses the existing 越える article, which
+already teaches the spelling, こえる reading, exceeding construction
+and both selected senses. A narrow addition links its alternative
+超 component; the primary identity, title, reading, [越] array,
+exclusions, full existing teaching and easier N3 level are preserved.
+Four new primary-form reciprocal N2 pairs are 鉱/鉱物, 紅/紅葉,
+効/効力 and 籍/国籍. The separate 超/越える alias-reading pair
+uses a 超える link label and actual こえる reading. Missing 輩,
+項 and 焦 remain included in primary written-kanji metadata.
+
+The [source packet](n2-vocabulary-batch-sources/batch-27.json)
+preserves all twenty raw rows and complete principal families,
+267 distinct complete comparison families, 113 actual existing
+labels/exclusions, 29 complete component records and twenty-one
+public-entry inspection receipts. All extracted complete comparison
+families, components and labels were inspected; captured existing
+full bodies were read selectively, not as a 113-card rereview.
+Three extractions' overlapping family/label records compare exactly.
+Public observations are original concise paraphrases; copyrighted
+lexical bodies remain private.
+
+紅葉's raw entry 1578780 and こうよう reading concern autumn
+coloring/leaves, but its raw gloss is "(1) (Japanese) maple."
+The separately inspected complete family 2857870 supports maple
+and foliage under もみじ; that reading is explicitly taught and
+mapped as additional senses. The single Daijisen container's several
+reading headings are not treated as one unrestricted lexical identity.
+Historical compiler intent is not recovered or silently replaced.
+
+Other qualifications preserve raw scope: 合理 is a noun, with
+separately sourced 合理的 supplying adjective uses; 合同's joint
+and congruence senses are additional to union/combination. コース
+explicitly selects route/study senses 1-2 and additionally teaches
+individual meal course, full-course meal and offered plan senses
+5-7, not every sports/policy/baseball meaning. 国籍's ship/aircraft
+national affiliation is additional to personal nationality.
+Secondary senses do not receive independent N2 assignments.
+
+Fifteen new articles currently declare 106 directional quiz guards.
+They account for actual broad English labels and ordinary secondary
+senses, including 皿's serving/course, 焼く's burn, 公立's
+broader public category and 国王's positively recorded queen gloss.
+These are author hypotheses pending independent assessment, not
+reviewer findings or an assertion of unrestricted synonymy. No
+baseline exclusion is changed.
+
+The blind derivative removes only the author's quiz rationale.
+Both model families will receive the same authored snapshot,
+nineteen new articles, reused-source claim, six related content
+changes, twenty mappings, rubric and equivalent source access.
+Initial reports, adjudication, model-diversity observations,
+confirmation and authentication are pending.
+
+Current index: **520 closed, 20 draft, 1,272 pending and 0 unresolved**
+rows, mapped to 534 distinct articles: 500 new and 34 reused.
+No draft row is claimed review-closed.
+
 ## Final verification
 
 Not started. Final closure requires all original rows accounted for, no consequential unresolved
