@@ -2289,7 +2289,7 @@ batch 16, not the full vocabulary expansion.
 
 ## Batch 17: N2:322-N2:341
 
-**Status:** drafted; independent reviews pending.
+**Status:** initial reviews reconciled; independent confirmation pending.
 
 Scope: 釜, 紙屑, 神様, 剃刀, ガム, 貨物, かゆい, 歌謡,
 殻, カラー, からかう, 空っぽ, かるた, 枯れる, カロリー,
@@ -2340,6 +2340,57 @@ reciprocal N2 kanji-word pairs. All 3,273 baseline identities,
 primary readings, titles, easier sourced levels and original
 exclusions remain preserved. These are draft/mechanical
 counts, not linguistic certification or review closure.
+
+### Initial independent reviews and reconciliation
+
+Both initial reviewers assessed authored commit
+`4fa37301b6863b299555ce1e9bc3e4855e0167d9`
+against the same blind prompt, scope and source access.
+They ran sequentially in isolated read-only processes;
+actual-model receipts record `gpt-6.1-sol` and
+`claude-opus-5.5`, each with zero file edits.
+
+- [GPT initial](n2-vocabulary-reviews/batch-17-gpt-initial.md):
+  nineteen complete new articles, eight related changes,
+  the scoped reuse claim and all twenty mappings.
+- [Claude initial](n2-vocabulary-reviews/batch-17-claude-initial.md):
+  the same assigned content; it explicitly disclosed reading
+  fewer complete comparison families and a partly unverified
+  collar-usage hypothesis.
+
+Five articles receive narrowly supported corrections:
+
+| Finding | Reconciliation pending confirmation |
+|---|---|
+| B17-GPT-01 | Add the direct 剃刀/鋭い guard: the ordinary mental-sharpness sense can fit the unmarked sharp/keen answer even though the practical lesson teaches the razor tool only. |
+| B17-GPT-02; B17-02 | Add direct 渇く/飢える and 渇く/憧れる guards for figurative craving and actual hunger-for/yearn-for labels. Both reports identified both leads, with different confidence; these are shared observations, not model-unique discoveries. Literal hunger, thirst and aspirational admiration remain distinct. |
+| B17-01 | Replace the collar-only interpretation of シャツのカラー with explicit context dependence; add 襟 (えり) as another collar noun. No unverified shopping-frequency rule or failed lookup becomes evidence. |
+| B17-03 | Demonstrate a person taking を with からかう and explicitly acknowledge the existing feature-object example. Do not imply two simultaneous を objects. |
+| B17-04 | State usually-kana spelling directly and show 痒い (かゆい); remove the unclear speaking/kanji-reading instruction. The original mapping note is now demonstrated rather than weakened. |
+
+Four complete correction families support 鋭い, 飢える,
+憧れる and 襟, with both pinned dictionary hashes verified.
+The packet appends those records, three direct-pair rationales
+and three teaching clarifications without rewriting the
+original mappings, principal families, initial comparisons,
+component records or inspection receipts.
+
+Optional additions for 殻, passive からかわれる and a
+written 剃刀 example remain nonblocking expansion. The
+為替/案 guard stays: the financial-draft/document-draft
+ambiguity does not disappear merely because the main title
+omits the word draft.
+
+**Model-diversity note:** GPT uniquely established the
+剃刀/鋭い issue; Claude uniquely identified the collar
+interpretation, missing person-object demonstration and
+unclear かゆい spelling instruction. The craving guards
+were shared, including the weaker 憧れる lead. This is
+useful complementary evidence on this sample, not a general
+model ranking, exhaustive quiz audit or native-speaker
+certification. The author-stage narrowing of named-color
+and 物 guards preceded review and is not credited to either
+reviewer.
 
 ## Final verification
 

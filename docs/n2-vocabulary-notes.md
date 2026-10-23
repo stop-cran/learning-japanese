@@ -95,6 +95,21 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 17 reconciliation:** A tool-only lesson does not
+  sense-restrict its quiz prompt: 剃刀's ordinary figurative
+  mental-sharpness use still matters against 鋭い's actual
+  answer label. Protect direct overlap without expanding
+  every article into all dictionary senses.
+- **Batch 17 reconciliation:** Merely explaining two
+  homographs does not make an unmarked example unambiguous.
+  シャツのカラー needs context; do not command one reading
+  of its meaning when both color and collar are documented.
+- **Batch 17 reconciliation:** Match particle explanations
+  to demonstrated argument roles, and replace opaque
+  kana-versus-kanji speaking advice with the actual spelling
+  and reading. These localized clarity fixes are distinct
+  from optional expansion.
+
 - **Batch 17 authoring:** Preserve distinct homograph identities
   when a source gloss bundles them. カラー's color and collar
   uses share Japanese spelling but belong to separate entries;
