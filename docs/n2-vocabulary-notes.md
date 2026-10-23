@@ -95,6 +95,22 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 28 reconciliation:** Source-spelling coverage must select the
+  sense actually taught with that spelling, even if JMdict has no
+  explicit restriction. 超す's quantity example supports selected
+  sense 4; 越す crossing, hardship, time and moving are additional
+  teaching, not silently transferred source uses. Preserve the raw
+  gloss mismatch and original mapping alongside the correction.
+- **Batch 28 reconciliation:** A narrower baseline title does not erase
+  an ordinary secondary meaning. 掛ける's seating use needs direct
+  protection against 腰掛ける. Conversely, a heat description
+  (じりじり's scorching sun), an occupation (コック), and an activity
+  (料理) are not automatically synonymous with related actions.
+- **Batch 28 reconciliation:** A promised additional building sense
+  needs an actual construction, not only "build" in a prose inventory.
+  家をこしらえる supplies the missing teaching without expanding
+  the selected dictionary scope.
+
 - **Batch 28 authoring:** A legacy vocabulary row can mix readings or
   current lexical identities. 擦る's こする rubbing entry is not
   silently given the match-striking sense of する; コック's Dutch

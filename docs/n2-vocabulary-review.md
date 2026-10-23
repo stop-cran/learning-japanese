@@ -4300,3 +4300,63 @@ hypotheses for assessment. The blind initial derivative removes only
 the author's quiz rationale. Both families will receive the same
 snapshot, seventeen new articles, three reuse claims, seven related
 content edits, twenty mappings, rubric and equivalent source access.
+
+### Initial review and reconciliation
+
+The authored commit is `1347683020fb124c01d8279169a855e60b33ab10`.
+[GPT-6.1 Sol](n2-vocabulary-reviews/batch-28-gpt-initial.md)
+(`gpt-6.1-sol`) and
+[Claude Opus 5.5](n2-vocabulary-reviews/batch-28-claude-initial.md)
+(`claude-opus-5.5`) reviewed it in separate sequential read-only
+processes. Each exited before the next began and recorded zero edits.
+Initial prompts, scope and source access were equivalent and blind;
+neither family received the other report or initial author quiz rationale.
+Git identity and hashes were author-attested rather than independently
+executed by either file-only reviewer.
+
+GPT established two supported defects: missing direct
+腰掛ける/掛ける protection despite 掛ける's ordinary seating sense,
+and missing navigation from both explained 様 suffixes to its card.
+Both are corrected without changing baseline exclusions or kana-primary
+metadata.
+
+Claude established that the claimed building selection of こしらえる
+lacked a concrete building construction. 家をこしらえる now supplies
+one, with kana and English, grounded in the previously inspected
+Daijisen entry. Its related spelling observations exposed a more useful
+source mapping: source 超す now selects quantity sense 1175300:4,
+the actual 超しました example, rather than attributing 越す crossing,
+hardship or time uses to that spelling. Those and moving remain indexed
+as additional 1,2,3,5 under 越す. Raw source fields, stable identity
+and easier N3 level are preserved. Standard spelling guidance replaces
+ambiguous preference language without claiming that JMdict explicitly
+restricts these senses or that every nonstandard spelling is impossible.
+
+Claude's optional observations also prompted six supported direct pairs:
+こしらえる/備える, 心得る/マスター, 心得る/詳しい,
+心当たり/勘, 個体/生物, and independently 個体/生き物.
+Actual labels and complete positive families, not an exclusion clique,
+support them. Qualified comparisons preserve provision versus making,
+knowledge versus guaranteed mastery, leads versus intuition, and
+individual entities versus living things. Fourteen new cards now
+declare **67 directional exclusions**, up from sixty; none is added
+to a baseline article.
+
+No 焦げる/じりじり guard is established merely by "scorching":
+the latter's complete relevant sense describes the sun's manner, not
+becoming charred. コック/料理 remains a person/activity distinction;
+擦る/掻く is not inferred from shared surface contact. The existing
+formal qualification of 心得ました and the practical selected scope
+remain; no optional regard-as expansion is needed. "Tap valve" is
+retained as readable equipment terminology, and the cited こしらえる
+senses already agree with its mapping. Preexisting unlinked mentions
+on unchanged 越 are outside this edit.
+
+The correction appends follow-up evidence and preserves the original
+N2:552 mapping explicitly alongside its correction. Eleven complete
+comparison families for ten forms and all ten actual comparison bodies
+were inspected. Existing family overlaps compare exactly; only genuinely
+new families are appended. The original authored packet and sanitized
+derivative remain frozen. Both original reviewer sessions will receive
+the same eight-article correction scope, actual diff and common evidence
+for bounded confirmation, not a second full-batch review.
