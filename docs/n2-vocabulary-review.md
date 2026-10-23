@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-09 review-closed; batch 10 drafted; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-10 review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 180 rows are review-closed; twenty are draft and 1,612 remain pending.
+The first 200 rows are review-closed; none are draft and 1,612 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -1075,8 +1075,7 @@ whole-corpus or native-speaker certification.
 
 ## Batch 10: N2:182-N2:201
 
-**Status:** draft; initial reviews reconciled and corrections implemented;
-bounded confirmation pending.
+**Status:** closed after independent initial reviews, corrections and bounded confirmation.
 
 Scope: 納める, 治める, 惜しい, 御辞儀, 伯父さん, 小父さん,
 叔父さん, おしゃれ, おじゃまします, 教わる, おだいじに,
@@ -1144,7 +1143,7 @@ retrieval and its limits are distinguished from author receipts.
 
 ### Reconciliation and implemented correction
 
-The following decisions are implemented, not yet independently
+The following decisions are implemented and independently
 confirmed. Quiz findings are localized ambiguity defects rather
 than evidence that the teaching prose or Japanese words are interchangeable.
 
@@ -1203,6 +1202,46 @@ its greeting wording suggestion also improves clarity. The payment
 noun guard is author follow-up, not credited as a unique model finding.
 Both families add useful different signal in this sample, not proof
 of a general model ranking or measured bias reduction.
+
+### Bounded confirmation and closure
+
+Both families examined corrected commit
+`7132eedd62f20b68eb13b08be9d61fb0b1803483`, directly following the
+authored snapshot, with the actual correction diff, their own initial
+report and the same bounded assignment. GPT exited before Claude
+started. Usage receipts verified the actual models and no edits:
+
+- [GPT confirmation](n2-vocabulary-reviews/batch-10-gpt-confirmation.md):
+  `gpt-6.1-sol`.
+- [Claude confirmation](n2-vocabulary-reviews/batch-10-claude-confirmation.md):
+  `claude-opus-5.5`.
+
+Each read the nine changed new articles, seventeen existing comparison
+articles, complete correction patch and twenty-two additional dictionary
+families. Both marked all nine articles and the packet additions CLEAN
+on correctness, scoped coverage and comprehensibility; no actionable
+regression or consequential unresolved claim remained in that scope.
+Each independently retrieved the usable Weblio settlement definition,
+without asserting an absent named-dictionary heading. File-only reviews
+do not independently establish the pinned hashes, clean Git state or
+validator result; the author verified those separately.
+
+Claude withdrew the three weaker surprise, get-well and attention-getting
+hypotheses after checking the distinct functions. Its additional remarks
+about completion teaching, a settlement example on the existing 収める
+page and smoother wording remain optional expansion or polish, not
+unresolved defects in the mapped source senses. Claims about unreported
+working-note candidates do not retroactively change the initial-model
+contribution comparison above.
+
+The corrected deterministic manifest has 6,075 files, including
+396 images and 201 scene catalogs; content version `00fc913af0ab1037`.
+All 3,273 baseline identities, readings, titles and exclusion lists
+remain preserved. Cumulative coverage is **200 closed, 0 draft,
+1,612 pending and 0 unresolved** rows, mapped to 195 articles:
+174 new and 21 reused. There are 3,447 word articles and 36 reciprocal
+N2 kanji-word pairs. This closes the bounded batch, not the whole
+expansion or a native-speaker certification.
 
 ## Final verification
 
