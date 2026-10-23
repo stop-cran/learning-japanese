@@ -35,6 +35,30 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Actions, events and results: independent review and reconciliation (2026-10-23 UTC)
+
+**Snapshot and scope:** `a45b9ccd5c996147179cbc977556591e8b69921c` plus
+[issue #19](https://github.com/stop-cran/learning-japanese/issues/19). One fresh independent reviewer
+inspected the whole new article, 28 exercises, all answers/options, 34 lexical spans, 84 exclusions,
+source mappings, exact reuse and three reciprocal-link changes. The actual runtime model was unavailable.
+The [ledger](docs/grammar-transitivity-results-sources.json) preserves both snapshots and original findings.
+
+**Findings and reconciliation:** TR-01 (moderate) omitted fitting topical は answers; TR-02/03 (minor)
+omitted polite contractions and noun-result となりました alternatives. TR-04 (minor) copied not-yet
+feedback into already-done or cause-unknown scenes; TR-05 (minor) omitted a heading number in a fragment.
+All were confirmed and repaired without narrowing contextual questions. The same reviewer independently
+checked all 44 added realizations, ten changed contexts and the article/link repairs: all five **resolved**,
+original severities retained, no introduced defect established. Final correctness, scoped coverage and
+comprehensibility are **CLEAN** within the combined original/reconciliation scope.
+
+**Coverage and reflection:** four groups, nine facets, six soft recommendations and no prerequisites;
+18 formation and ten contextual-selection tasks share ten context-key strings. All 1202 prior exercise
+objects and lexical records are preserved; lexical coverage is 921/1230, with 309 pending. Regroup the
+observed contraction/register and stage-feedback examples under existing checks, rather than adding a new
+review layer. Add useful source navigation and the demonstrated PDF-rendering retrieval lesson.
+The final 110 accepted strings, unchanged 62 base/two additional options, focused regressions and fresh
+Android importer pass. These are not physical-device or unrestricted-conversation certifications.
+
 ## Ability and perception: independent content review (2026-10-23 UTC)
 
 **Snapshot and scope:** `3ebaf6d580a1930edeca46d5f0ad3b6d9bc727d6` plus the installment for
@@ -851,6 +875,9 @@ The [basic-particle exercise review](docs/grammar-basic-particles-sources.json) 
   Apply a short/expanded copula restriction to the requested tense: an expressly nonpast-only exclusion
   did not rule out the plain past であった in two reason drills
   ([record](docs/grammar-n5-reasons-sources.json), N5RC-F01; regroup).
+  Conversational contractions can retain polite endings: the result-state review accepted 開いてます and
+  開けときます without creating new targets. Its noun-result となりました alternatives likewise retain ordinary
+  polite grammar despite a more formal presentation ([record](docs/grammar-transitivity-results-sources.json), TR-02/03).
 - **Normalization is not recognition of every spelling.** NFKC folds ３時 to 3時 but does not convert it to 三時 or
   迄 to まで. Grammar tasks should accept appropriate recognized spellings without promoting them to separate
   semantic choice buttons or claiming equal frequency (BPI-F02).
@@ -877,6 +904,8 @@ The [restriction/inclusion review](docs/grammar-restriction-sources.json) adds t
   Check every branch of a shared formation template too: a correct statement answer must not receive an explanation
   of “the requested question.” Tie person-question distractors to the printed case role, and interpretation feedback
   to its own example rather than a paired scenario (N5PQ-F01/O02; regroup).
+  Recheck every stage branch too: four result-state distractors incorrectly said an action was explicitly not yet
+  performed in already-done or cause-unknown scenes (TR-04). A shared auxiliary label does not share a scenario's facts.
 - **An explanation is not an assessed distinction.** Conditional feedback already separated sufficiency from necessity,
   but the options only contrasted a condition with an occurred surprise. Offering the exclusive-route alternative
   makes that inference part of the actual recognition task (RII-O03).

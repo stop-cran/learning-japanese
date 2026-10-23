@@ -197,6 +197,10 @@ One compact comparison is enough:
 
 **開ける（あける）** is transitive, "open something"; **開く（あく）** is intransitive, "open/become open." The last sentence describes the state without itself specifying an intentional arrangement. These are supporting contrasts, not a full lesson on ～てある or ～ている.
 
+The focused [actions, events and results](actions-events-and-results.md) lesson develops these roles,
+both が and を frames for てある, and contextual result/preparation choices. Preparation and an already
+prepared result can have compatible descriptions; the particle alone is not a universal answer key.
+
 **そのままにしておく**, "leave it as it is," connects this construction to [まま and unchanged states](koto-wake-and-formal-nouns.md#まま-a-state-remains-unchanged).
 
 For recognition in casual conversation, **～ておく → ～とく** and **～でおく → ～どく**: **見ておく → 見とく**, "look beforehand"; **読んでおく → 読んどく**, "read beforehand."

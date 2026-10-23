@@ -21,6 +21,7 @@ This repository starts as a collection of standalone articles prompted by specif
 | Grammar | [Explanations, quotations and sentence endings](articles/explanations-quotations-and-endings.md) | How do explanatory context, reported words, listener alignment and conjecture differ without relying on imagined intonation? |
 | Grammar | [Wanting to act, wanting a thing and wanting an outcome](articles/desire-actions-and-outcomes.md) | Whose wish is expressed, who would act, and how do たい, がほしい and てほしい differ? |
 | Grammar | [Ability, availability and perception](articles/ability-and-perception.md) | How do potential forms, available actions, visibility, audibility and sensory がする differ? |
+| Grammar | [Actions, events and resulting states](articles/actions-events-and-results.md) | Who acts on what, what changes, and how do ている, てある and ておく frame states and preparation? |
 | Grammar | [Koto, wake, and Japanese noun-based grammar](articles/koto-wake-and-formal-nouns.md) | How do こと and わけ differ, which common formal nouns and noun-based expressions are useful to know, and where do の/ん and ほど fit? |
 | Grammar | [Japanese verb extensions: direction and aspect](articles/verb-extensions-direction-and-aspect.md) | How do ～ていく, ～てくる, ～ておく, ～込む, and related constructions express direction, continuation, and completion? |
 | Grammar | [Japanese conditionals: たら, ば, なら, と, and 場合](articles/japanese-conditionals.md) | How do conditions, premises, event order, discoveries, and procedural cases differ, and when can several patterns fit? |
@@ -83,6 +84,10 @@ independent scenarios or the completeness of an official syllabus.
 The [ability/perception installment](articles/ability-and-perception.md) adds 34 N4 exercises in five groups:
 potential formation and polarity, skill/circumstance interpretation, perception versus access, and sensory frames.
 Its [ledger](docs/grammar-ability-perception-sources.json) records exact reuse of existing ability/change/goal tasks.
+The [actions/events/results installment](articles/actions-events-and-results.md) adds 28 N4 exercises in
+four groups, connecting supplied transitivity pairs, quality changes, purposeful results and preparation.
+Its [ledger](docs/grammar-transitivity-results-sources.json) preserves the older state/change owners and
+records fitting alternative てある frames rather than making が versus を a universal answer key.
 
 ## Confusable vocabulary
 

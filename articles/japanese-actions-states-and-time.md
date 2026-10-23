@@ -104,6 +104,8 @@ but that mixed contrast belongs to later practice.
 
 ## Related states and sources
 
+[Actions, events and results](actions-events-and-results.md) supplies the transitivity pairs and
+contrasts an observed state with a purposeful result or a preparatory action, including both てある particle frames.
 [Verb extensions](verb-extensions-direction-and-aspect.md#leaving-a-state-in-place) compares a state with
 an intentional arrangement using ～てある and preparation using ～ておく.
 [まま](koto-wake-and-formal-nouns.md#まま-a-state-remains-unchanged) highlights unchangedness.

@@ -1,0 +1,1626 @@
+{
+  "schemaVersion": 1,
+  "id": "transitivity-results",
+  "title": "Actions, events and resulting states",
+  "article": "articles/actions-events-and-results.md",
+  "constructions": [
+    {
+      "id": "transitive-action",
+      "label": "An actor acts on the object"
+    },
+    {
+      "id": "intransitive-event",
+      "label": "The stated thing changes"
+    },
+    {
+      "id": "make-change",
+      "label": "Someone makes the stated change"
+    },
+    {
+      "id": "become-change",
+      "label": "The thing becomes different"
+    },
+    {
+      "id": "iru-frame",
+      "label": "The requested te-iru frame"
+    },
+    {
+      "id": "aru-frame",
+      "label": "The requested te-aru frame"
+    },
+    {
+      "id": "plain-state",
+      "label": "Report the present state without encoding a purposeful arrangement"
+    },
+    {
+      "id": "arranged-state",
+      "label": "Present the purposeful result as already in place"
+    },
+    {
+      "id": "future-preparation",
+      "label": "Present the stated not-yet-performed preparatory action"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "roles",
+      "label": "Preserve the actor/object or changed thing",
+      "constructions": [
+        "transitive-action",
+        "intransitive-event"
+      ]
+    },
+    {
+      "id": "quality",
+      "label": "Make a quality/role change or present the thing becoming different",
+      "constructions": [
+        "make-change",
+        "become-change"
+      ]
+    },
+    {
+      "id": "frames",
+      "label": "Build the requested state or prepared-result frame",
+      "constructions": [
+        "iru-frame",
+        "aru-frame"
+      ]
+    },
+    {
+      "id": "context",
+      "label": "Choose the stated reporting purpose or preparation stage",
+      "constructions": [
+        "plain-state",
+        "arranged-state",
+        "future-preparation"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "transitivity-results-window-arrangement-transitive-action",
+      "jlpt": 4,
+      "target": "transitive-action",
+      "relationship": "roles",
+      "prompt": "妹が窓を____。",
+      "translation": "Report that your younger sister opened the window. Choose the matching verb from this supplied pair: 開ける（あける）, open something; 開く（あく）, something opens. Use the ordinary polite past ending and keep added grammatical endings in kana; do not add an explanatory ending. Retain all displayed noun phrases and particles.",
+      "evidence": "The displayed participant frame and stated event must be preserved; the pair's meanings/readings are supplied.",
+      "explanation": "The actor acts on the を-marked object, so use the transitive partner. The other partner cannot keep this same participant frame and stated meaning.",
+      "answer": "transitive-action",
+      "acceptedAnswers": [
+        "開けました",
+        "あけました"
+      ],
+      "options": [
+        {
+          "id": "transitive-action",
+          "label": "開けました",
+          "rationale": "Preserves the stated event and the supplied noun roles."
+        },
+        {
+          "id": "intransitive-event",
+          "label": "開きました",
+          "rationale": "Requires a different participant frame for the stated event; it is not rejected as an impossible verb elsewhere."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d62a876f18c0ba1e892132b718acdf087436f3aa582cd9d37b40aa771d4c707e",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "妹",
+            "reading": "いもうと",
+            "headword": "妹",
+            "gloss": "younger sister"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "窓",
+            "reading": "まど",
+            "headword": "窓",
+            "gloss": "window"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-window-arrangement-intransitive-event",
+      "jlpt": 4,
+      "target": "intransitive-event",
+      "relationship": "roles",
+      "prompt": "窓が____。",
+      "translation": "Report that the window opened. Choose the matching verb from this supplied pair: 開ける（あける）, open something; 開く（あく）, something opens. Use the ordinary polite past ending and keep added grammatical endings in kana; do not add an explanatory ending. Retain all displayed noun phrases and particles.",
+      "evidence": "The displayed participant frame and stated event must be preserved; the pair's meanings/readings are supplied.",
+      "explanation": "The が-marked thing undergoes the change, so use the intransitive partner. This does not deny a person or other cause. The other partner cannot keep this same participant frame and stated meaning.",
+      "answer": "intransitive-event",
+      "acceptedAnswers": [
+        "開きました",
+        "あきました",
+        "空きました",
+        "明きました"
+      ],
+      "options": [
+        {
+          "id": "intransitive-event",
+          "label": "開きました",
+          "rationale": "Preserves the stated event and the supplied noun roles."
+        },
+        {
+          "id": "transitive-action",
+          "label": "開けました",
+          "rationale": "Requires a different participant frame for the stated event; it is not rejected as an impossible verb elsewhere."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "59dc1a238b630564dea443f133f48e17e62b24a8bde04d57b92d84c41207c062",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "窓",
+            "reading": "まど",
+            "headword": "窓",
+            "gloss": "window"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-light-arrangement-transitive-action",
+      "jlpt": 4,
+      "target": "transitive-action",
+      "relationship": "roles",
+      "prompt": "父が電気を____。",
+      "translation": "Report that your father turned off the light. Choose the matching verb from this supplied pair: 消す（けす）, turn something off; 消える（きえる）, a light goes out. Use the ordinary polite past ending and keep added grammatical endings in kana; do not add an explanatory ending. Retain all displayed noun phrases and particles.",
+      "evidence": "The displayed participant frame and stated event must be preserved; the pair's meanings/readings are supplied.",
+      "explanation": "The actor acts on the を-marked object, so use the transitive partner. The other partner cannot keep this same participant frame and stated meaning.",
+      "answer": "transitive-action",
+      "acceptedAnswers": [
+        "消しました",
+        "けしました"
+      ],
+      "options": [
+        {
+          "id": "transitive-action",
+          "label": "消しました",
+          "rationale": "Preserves the stated event and the supplied noun roles."
+        },
+        {
+          "id": "intransitive-event",
+          "label": "消えました",
+          "rationale": "Requires a different participant frame for the stated event; it is not rejected as an impossible verb elsewhere."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "11b4b3d68228c7f01bbc5b3824461d80383e805359759639a7533bc2eb706ccb",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "父",
+            "reading": "ちち",
+            "headword": "父",
+            "gloss": "my father"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "電気",
+            "reading": "でんき",
+            "headword": "電気",
+            "gloss": "light; electric lighting in this context"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-light-arrangement-intransitive-event",
+      "jlpt": 4,
+      "target": "intransitive-event",
+      "relationship": "roles",
+      "prompt": "電気が____。",
+      "translation": "Report that the light went out. Choose the matching verb from this supplied pair: 消す（けす）, turn something off; 消える（きえる）, a light goes out. Use the ordinary polite past ending and keep added grammatical endings in kana; do not add an explanatory ending. Retain all displayed noun phrases and particles.",
+      "evidence": "The displayed participant frame and stated event must be preserved; the pair's meanings/readings are supplied.",
+      "explanation": "The が-marked thing undergoes the change, so use the intransitive partner. This does not deny a person or other cause. The other partner cannot keep this same participant frame and stated meaning.",
+      "answer": "intransitive-event",
+      "acceptedAnswers": [
+        "消えました",
+        "きえました"
+      ],
+      "options": [
+        {
+          "id": "intransitive-event",
+          "label": "消えました",
+          "rationale": "Preserves the stated event and the supplied noun roles."
+        },
+        {
+          "id": "transitive-action",
+          "label": "消しました",
+          "rationale": "Requires a different participant frame for the stated event; it is not rejected as an impossible verb elsewhere."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "97b50c1e7d12e2d277a4d54f637aa9cc0a6c2c07ab96f2e42a19123961e63d7f",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "電気",
+            "reading": "でんき",
+            "headword": "電気",
+            "gloss": "light; electric lighting in this context"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-short-explanation-make-change",
+      "jlpt": 4,
+      "target": "make-change",
+      "relationship": "quality",
+      "prompt": "説明を____。",
+      "translation": "Say that you made the stated thing shorter. Build the quality/role-change predicate from 短い（みじかい）, short. Use the ordinary polite past ending and keep added grammatical endings in kana; do not add an explanatory ending. Keep the given noun roles, rather than rewriting the sentence with a different predicate.",
+      "evidence": "The complete task includes making-versus-becoming, even when the ordinary naru form is the key.",
+      "explanation": "Connect the supplied predicate with く for this regular i-adjective, or に for a na-adjective/noun; then use the ending that preserves the frame: 短くしました. A なる report can still result from deliberate human action.",
+      "answer": "make-change",
+      "acceptedAnswers": [
+        "短くしました",
+        "みじかくしました"
+      ],
+      "options": [
+        {
+          "id": "make-change",
+          "label": "短くしました",
+          "rationale": "Preserves the stated quality/role change and participant frame."
+        },
+        {
+          "id": "become-change",
+          "label": "短くなりました",
+          "rationale": "Changes making into becoming or vice versa without repairing the given noun roles."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "6a63e2692a16efc97e82ef2ce4118fc4d4773016253d6673ed3d090e7d720915",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "説明",
+            "reading": "せつめい",
+            "headword": "説明",
+            "gloss": "explanation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-short-explanation-become-change",
+      "jlpt": 4,
+      "target": "become-change",
+      "relationship": "quality",
+      "prompt": "説明が____。",
+      "translation": "Say that the stated thing became shorter. Build the quality/role-change predicate from 短い（みじかい）, short. Use the ordinary polite past ending and keep added grammatical endings in kana; do not add an explanatory ending. Keep the given noun roles, rather than rewriting the sentence with a different predicate.",
+      "evidence": "The complete task includes making-versus-becoming, even when the ordinary naru form is the key.",
+      "explanation": "Connect the supplied predicate with く for this regular i-adjective, or に for a na-adjective/noun; then use the ending that preserves the frame: 短くなりました. A なる report can still result from deliberate human action.",
+      "answer": "become-change",
+      "acceptedAnswers": [
+        "短くなりました",
+        "みじかくなりました"
+      ],
+      "options": [
+        {
+          "id": "become-change",
+          "label": "短くなりました",
+          "rationale": "Preserves the stated quality/role change and participant frame."
+        },
+        {
+          "id": "make-change",
+          "label": "短くしました",
+          "rationale": "Changes making into becoming or vice versa without repairing the given noun roles."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "1c220446671b3e709c75acbbae902aa7ab2bb7b3bb333f3155e25fca53fbf897",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "説明",
+            "reading": "せつめい",
+            "headword": "説明",
+            "gloss": "explanation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-large-lettering-make-change",
+      "jlpt": 4,
+      "target": "make-change",
+      "relationship": "quality",
+      "prompt": "文字を____。",
+      "translation": "Say that you made the stated thing larger. Build the quality/role-change predicate from 大きい（おおきい）, large. Use the ordinary polite past ending and keep added grammatical endings in kana; do not add an explanatory ending. Keep the given noun roles, rather than rewriting the sentence with a different predicate.",
+      "evidence": "The complete task includes making-versus-becoming, even when the ordinary naru form is the key.",
+      "explanation": "Connect the supplied predicate with く for this regular i-adjective, or に for a na-adjective/noun; then use the ending that preserves the frame: 大きくしました. A なる report can still result from deliberate human action.",
+      "answer": "make-change",
+      "acceptedAnswers": [
+        "大きくしました",
+        "おおきくしました"
+      ],
+      "options": [
+        {
+          "id": "make-change",
+          "label": "大きくしました",
+          "rationale": "Preserves the stated quality/role change and participant frame."
+        },
+        {
+          "id": "become-change",
+          "label": "大きくなりました",
+          "rationale": "Changes making into becoming or vice versa without repairing the given noun roles."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "993cd97e5f1ea8591e86419f1c8b8e201f485ed73e8300566aeba58c730aaca4",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "文字",
+            "reading": "もじ",
+            "headword": "文字",
+            "gloss": "written character; lettering"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-large-lettering-become-change",
+      "jlpt": 4,
+      "target": "become-change",
+      "relationship": "quality",
+      "prompt": "文字が____。",
+      "translation": "Say that the stated thing became larger. Build the quality/role-change predicate from 大きい（おおきい）, large. Use the ordinary polite past ending and keep added grammatical endings in kana; do not add an explanatory ending. Keep the given noun roles, rather than rewriting the sentence with a different predicate.",
+      "evidence": "The complete task includes making-versus-becoming, even when the ordinary naru form is the key.",
+      "explanation": "Connect the supplied predicate with く for this regular i-adjective, or に for a na-adjective/noun; then use the ending that preserves the frame: 大きくなりました. A なる report can still result from deliberate human action.",
+      "answer": "become-change",
+      "acceptedAnswers": [
+        "大きくなりました",
+        "おおきくなりました"
+      ],
+      "options": [
+        {
+          "id": "become-change",
+          "label": "大きくなりました",
+          "rationale": "Preserves the stated quality/role change and participant frame."
+        },
+        {
+          "id": "make-change",
+          "label": "大きくしました",
+          "rationale": "Changes making into becoming or vice versa without repairing the given noun roles."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "9990e80dafdd7a002a94011aed5bb77fd21a374e3972ef6bbd8b99c81948e529",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "文字",
+            "reading": "もじ",
+            "headword": "文字",
+            "gloss": "written character; lettering"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-safe-passage-make-change",
+      "jlpt": 4,
+      "target": "make-change",
+      "relationship": "quality",
+      "prompt": "通路を____。",
+      "translation": "Say that you made the stated thing safer. Build the quality/role-change predicate from 安全（あんぜん）, safe (na-adjective). Use the ordinary polite past ending and keep added grammatical endings in kana; do not add an explanatory ending. Keep the given noun roles, rather than rewriting the sentence with a different predicate.",
+      "evidence": "The complete task includes making-versus-becoming, even when the ordinary naru form is the key.",
+      "explanation": "Connect the supplied predicate with く for this regular i-adjective, or に for a na-adjective/noun; then use the ending that preserves the frame: 安全にしました. A なる report can still result from deliberate human action.",
+      "answer": "make-change",
+      "acceptedAnswers": [
+        "安全にしました",
+        "あんぜんにしました"
+      ],
+      "options": [
+        {
+          "id": "make-change",
+          "label": "安全にしました",
+          "rationale": "Preserves the stated quality/role change and participant frame."
+        },
+        {
+          "id": "become-change",
+          "label": "安全になりました",
+          "rationale": "Changes making into becoming or vice versa without repairing the given noun roles."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "31af4b6e019b32dbaf43baa24fd83bd5c89d19b8a8e9e719cb9e13acafc4c24d",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "通路",
+            "reading": "つうろ",
+            "headword": "通路",
+            "gloss": "passageway"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-safe-passage-become-change",
+      "jlpt": 4,
+      "target": "become-change",
+      "relationship": "quality",
+      "prompt": "通路が____。",
+      "translation": "Say that the stated thing became safer. Build the quality/role-change predicate from 安全（あんぜん）, safe (na-adjective). Use the ordinary polite past ending and keep added grammatical endings in kana; do not add an explanatory ending. Keep the given noun roles, rather than rewriting the sentence with a different predicate.",
+      "evidence": "The complete task includes making-versus-becoming, even when the ordinary naru form is the key.",
+      "explanation": "Connect the supplied predicate with く for this regular i-adjective, or に for a na-adjective/noun; then use the ending that preserves the frame: 安全になりました. A なる report can still result from deliberate human action.",
+      "answer": "become-change",
+      "acceptedAnswers": [
+        "安全になりました",
+        "あんぜんになりました"
+      ],
+      "options": [
+        {
+          "id": "become-change",
+          "label": "安全になりました",
+          "rationale": "Preserves the stated quality/role change and participant frame."
+        },
+        {
+          "id": "make-change",
+          "label": "安全にしました",
+          "rationale": "Changes making into becoming or vice versa without repairing the given noun roles."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "af861fb4d46db94a9829af8f2090cfe238ba022e89f177471d955ff91779dd49",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "通路",
+            "reading": "つうろ",
+            "headword": "通路",
+            "gloss": "passageway"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-quiet-room-make-change",
+      "jlpt": 4,
+      "target": "make-change",
+      "relationship": "quality",
+      "prompt": "部屋を____。",
+      "translation": "Say that you made the stated thing quieter. Build the quality/role-change predicate from 静か（しずか）, quiet (na-adjective). Use the ordinary polite past ending and keep added grammatical endings in kana; do not add an explanatory ending. Keep the given noun roles, rather than rewriting the sentence with a different predicate.",
+      "evidence": "The complete task includes making-versus-becoming, even when the ordinary naru form is the key.",
+      "explanation": "Connect the supplied predicate with く for this regular i-adjective, or に for a na-adjective/noun; then use the ending that preserves the frame: 静かにしました. A なる report can still result from deliberate human action.",
+      "answer": "make-change",
+      "acceptedAnswers": [
+        "静かにしました",
+        "しずかにしました",
+        "閑かにしました"
+      ],
+      "options": [
+        {
+          "id": "make-change",
+          "label": "静かにしました",
+          "rationale": "Preserves the stated quality/role change and participant frame."
+        },
+        {
+          "id": "become-change",
+          "label": "静かになりました",
+          "rationale": "Changes making into becoming or vice versa without repairing the given noun roles."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d3c9c8de83fd845b4706af995a537a4f066fa21396fd4624fab0a7be7985ce33",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "部屋",
+            "reading": "へや",
+            "headword": "部屋",
+            "gloss": "room"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-quiet-room-become-change",
+      "jlpt": 4,
+      "target": "become-change",
+      "relationship": "quality",
+      "prompt": "部屋が____。",
+      "translation": "Say that the stated thing became quieter. Build the quality/role-change predicate from 静か（しずか）, quiet (na-adjective). Use the ordinary polite past ending and keep added grammatical endings in kana; do not add an explanatory ending. Keep the given noun roles, rather than rewriting the sentence with a different predicate.",
+      "evidence": "The complete task includes making-versus-becoming, even when the ordinary naru form is the key.",
+      "explanation": "Connect the supplied predicate with く for this regular i-adjective, or に for a na-adjective/noun; then use the ending that preserves the frame: 静かになりました. A なる report can still result from deliberate human action.",
+      "answer": "become-change",
+      "acceptedAnswers": [
+        "静かになりました",
+        "しずかになりました",
+        "閑かになりました"
+      ],
+      "options": [
+        {
+          "id": "become-change",
+          "label": "静かになりました",
+          "rationale": "Preserves the stated quality/role change and participant frame."
+        },
+        {
+          "id": "make-change",
+          "label": "静かにしました",
+          "rationale": "Changes making into becoming or vice versa without repairing the given noun roles."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "31734ba3417b382f1c52542ab3011b01d275a59e2f89577d5e74a654718810d5",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "部屋",
+            "reading": "へや",
+            "headword": "部屋",
+            "gloss": "room"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-store-meeting-room-make-change",
+      "jlpt": 4,
+      "target": "make-change",
+      "relationship": "quality",
+      "prompt": "倉庫を____。",
+      "translation": "Say that you made the stated thing a meeting room. Build the quality/role-change predicate from 会議室（かいぎしつ）, meeting room (noun). Use the ordinary polite past ending and keep added grammatical endings in kana; do not add an explanatory ending. Keep the given noun roles, rather than rewriting the sentence with a different predicate.",
+      "evidence": "The complete task includes making-versus-becoming, even when the ordinary naru form is the key.",
+      "explanation": "Connect the supplied predicate with く for this regular i-adjective, or に for a na-adjective/noun; then use the ending that preserves the frame: 会議室にしました. A なる report can still result from deliberate human action.",
+      "answer": "make-change",
+      "acceptedAnswers": [
+        "会議室にしました",
+        "かいぎしつにしました"
+      ],
+      "options": [
+        {
+          "id": "make-change",
+          "label": "会議室にしました",
+          "rationale": "Preserves the stated quality/role change and participant frame."
+        },
+        {
+          "id": "become-change",
+          "label": "会議室になりました",
+          "rationale": "Changes making into becoming or vice versa without repairing the given noun roles."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "09ffdb9654a4385091c3e5d7b167bdc659dc38348084995983ca7a3079f8341b",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "倉庫",
+            "reading": "そうこ",
+            "headword": "倉庫",
+            "gloss": "storage building; storeroom"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-store-meeting-room-become-change",
+      "jlpt": 4,
+      "target": "become-change",
+      "relationship": "quality",
+      "prompt": "倉庫が____。",
+      "translation": "Say that the stated thing became a meeting room. Build the quality/role-change predicate from 会議室（かいぎしつ）, meeting room (noun). Use the ordinary polite past ending and keep added grammatical endings in kana; do not add an explanatory ending. Keep the given noun roles, rather than rewriting the sentence with a different predicate.",
+      "evidence": "The complete task includes making-versus-becoming, even when the ordinary naru form is the key.",
+      "explanation": "Connect the supplied predicate with く for this regular i-adjective, or に for a na-adjective/noun; then use the ending that preserves the frame: 会議室になりました. A なる report can still result from deliberate human action. For this completed noun-role change, となりました also fits as a more formal/result-focused presentation; this is not a general adjective substitution rule.",
+      "answer": "become-change",
+      "acceptedAnswers": [
+        "会議室になりました",
+        "かいぎしつになりました",
+        "会議室となりました",
+        "かいぎしつとなりました"
+      ],
+      "options": [
+        {
+          "id": "become-change",
+          "label": "会議室になりました",
+          "rationale": "Preserves the stated quality/role change and participant frame."
+        },
+        {
+          "id": "make-change",
+          "label": "会議室にしました",
+          "rationale": "Changes making into becoming or vice versa without repairing the given noun roles."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "0fd6719629a1383bd8b5b44264c7d2b22761ac00075b2425012b8d7e6c72ae60",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "倉庫",
+            "reading": "そうこ",
+            "headword": "倉庫",
+            "gloss": "storage building; storeroom"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-parking-park-make-change",
+      "jlpt": 4,
+      "target": "make-change",
+      "relationship": "quality",
+      "prompt": "駐車場を____。",
+      "translation": "Say that you made the stated thing a park. Build the quality/role-change predicate from 公園（こうえん）, park (noun). Use the ordinary polite past ending and keep added grammatical endings in kana; do not add an explanatory ending. Keep the given noun roles, rather than rewriting the sentence with a different predicate.",
+      "evidence": "The complete task includes making-versus-becoming, even when the ordinary naru form is the key.",
+      "explanation": "Connect the supplied predicate with く for this regular i-adjective, or に for a na-adjective/noun; then use the ending that preserves the frame: 公園にしました. A なる report can still result from deliberate human action.",
+      "answer": "make-change",
+      "acceptedAnswers": [
+        "公園にしました",
+        "こうえんにしました"
+      ],
+      "options": [
+        {
+          "id": "make-change",
+          "label": "公園にしました",
+          "rationale": "Preserves the stated quality/role change and participant frame."
+        },
+        {
+          "id": "become-change",
+          "label": "公園になりました",
+          "rationale": "Changes making into becoming or vice versa without repairing the given noun roles."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f7666bf9067930747168fb6444ac77fec82665ea5a2d9a5df485959d7ce234f5",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "駐車場",
+            "reading": "ちゅうしゃじょう",
+            "headword": "駐車場",
+            "gloss": "car park"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-parking-park-become-change",
+      "jlpt": 4,
+      "target": "become-change",
+      "relationship": "quality",
+      "prompt": "駐車場が____。",
+      "translation": "Say that the stated thing became a park. Build the quality/role-change predicate from 公園（こうえん）, park (noun). Use the ordinary polite past ending and keep added grammatical endings in kana; do not add an explanatory ending. Keep the given noun roles, rather than rewriting the sentence with a different predicate.",
+      "evidence": "The complete task includes making-versus-becoming, even when the ordinary naru form is the key.",
+      "explanation": "Connect the supplied predicate with く for this regular i-adjective, or に for a na-adjective/noun; then use the ending that preserves the frame: 公園になりました. A なる report can still result from deliberate human action. For this completed noun-role change, となりました also fits as a more formal/result-focused presentation; this is not a general adjective substitution rule.",
+      "answer": "become-change",
+      "acceptedAnswers": [
+        "公園になりました",
+        "こうえんになりました",
+        "公園となりました",
+        "こうえんとなりました"
+      ],
+      "options": [
+        {
+          "id": "become-change",
+          "label": "公園になりました",
+          "rationale": "Preserves the stated quality/role change and participant frame."
+        },
+        {
+          "id": "make-change",
+          "label": "公園にしました",
+          "rationale": "Changes making into becoming or vice versa without repairing the given noun roles."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "be7692dbc5d9413db3a6157ded06faa2ef7b3fd5c240c1fdffd086de8dc89499",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "駐車場",
+            "reading": "ちゅうしゃじょう",
+            "headword": "駐車場",
+            "gloss": "car park"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-window-arrangement-iru",
+      "jlpt": 4,
+      "target": "iru-frame",
+      "relationship": "frames",
+      "prompt": "窓が____。",
+      "translation": "Form an affirmative nonpast polite ている state report from 開く（あく）, the window opens. Keep the auxiliary ending in kana and do not add an explanation.",
+      "evidence": "The operation requires choosing the supplied intransitive stem and constructing its state form; the base contrast includes N4 te-aru.",
+      "explanation": "The resulting state is 開いています. It neither supplies nor denies a prior deliberate cause. The corresponding conversational contraction retains the polite ending and is accepted; it is not a separate target.",
+      "answer": "iru-frame",
+      "acceptedAnswers": [
+        "開いています",
+        "あいています",
+        "空いています",
+        "明いています",
+        "開いてます",
+        "あいてます",
+        "空いてます",
+        "明いてます"
+      ],
+      "options": [
+        {
+          "id": "iru-frame",
+          "label": "開いています",
+          "rationale": "Builds the requested state form."
+        },
+        {
+          "id": "aru-frame",
+          "label": "開けてあります",
+          "rationale": "Can present a purposeful arranged result elsewhere, but changes the verb/construction requested here."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "59dc1a238b630564dea443f133f48e17e62b24a8bde04d57b92d84c41207c062",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "窓",
+            "reading": "まど",
+            "headword": "窓",
+            "gloss": "window"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-light-arrangement-iru",
+      "jlpt": 4,
+      "target": "iru-frame",
+      "relationship": "frames",
+      "prompt": "電気が____。",
+      "translation": "Form an affirmative nonpast polite ている state report from 消える（きえる）, the light goes out. Keep the auxiliary ending in kana and do not add an explanation.",
+      "evidence": "The operation requires choosing the supplied intransitive stem and constructing its state form; the base contrast includes N4 te-aru.",
+      "explanation": "The resulting state is 消えています. It neither supplies nor denies a prior deliberate cause. The corresponding conversational contraction retains the polite ending and is accepted; it is not a separate target.",
+      "answer": "iru-frame",
+      "acceptedAnswers": [
+        "消えています",
+        "きえています",
+        "消えてます",
+        "きえてます"
+      ],
+      "options": [
+        {
+          "id": "iru-frame",
+          "label": "消えています",
+          "rationale": "Builds the requested state form."
+        },
+        {
+          "id": "aru-frame",
+          "label": "消してあります",
+          "rationale": "Can present a purposeful arranged result elsewhere, but changes the verb/construction requested here."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "97b50c1e7d12e2d277a4d54f637aa9cc0a6c2c07ab96f2e42a19123961e63d7f",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "電気",
+            "reading": "でんき",
+            "headword": "電気",
+            "gloss": "light; electric lighting in this context"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-ticket-ready-ga",
+      "jlpt": 4,
+      "target": "aru-frame",
+      "relationship": "frames",
+      "prompt": "明日の切符が____。",
+      "translation": "Form the affirmative nonpast polite てある construction from 買う（かう）, buy to present the preparation as already in place. Preserve the supplied particle. Keep the auxiliary ending in kana.",
+      "evidence": "Both ga and wo frames are practised; the task does not reject either as a universal wrong particle.",
+      "explanation": "Use 買ってあります. The が frame foregrounds the prepared result. The related frame with the other particle can also describe this preparation.",
+      "answer": "aru-frame",
+      "acceptedAnswers": [
+        "買ってあります",
+        "かってあります"
+      ],
+      "options": [
+        {
+          "id": "aru-frame",
+          "label": "買ってあります",
+          "rationale": "Forms the requested already-prepared result."
+        },
+        {
+          "id": "iru-frame",
+          "label": "買っています",
+          "rationale": "Uses ている, not the requested てある. It can have other readings in a suitable different task."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "c3997990ed368c21de2462c01ece13cf492526646dec5e0000b4fe79a617cfc8",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "明日",
+            "reading": "あした",
+            "headword": "明日",
+            "gloss": "tomorrow"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "切符",
+            "reading": "きっぷ",
+            "headword": "切符",
+            "gloss": "ticket"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-ticket-ready-wo",
+      "jlpt": 4,
+      "target": "aru-frame",
+      "relationship": "frames",
+      "prompt": "明日の切符を____。",
+      "translation": "Form the affirmative nonpast polite てある construction from 買う（かう）, buy to present the preparation as already in place. Preserve the supplied particle. Keep the auxiliary ending in kana.",
+      "evidence": "Both ga and wo frames are practised; the task does not reject either as a universal wrong particle.",
+      "explanation": "Use 買ってあります. The を frame keeps the object of the preparatory action. The related frame with the other particle can also describe this preparation.",
+      "answer": "aru-frame",
+      "acceptedAnswers": [
+        "買ってあります",
+        "かってあります"
+      ],
+      "options": [
+        {
+          "id": "aru-frame",
+          "label": "買ってあります",
+          "rationale": "Forms the requested already-prepared result."
+        },
+        {
+          "id": "iru-frame",
+          "label": "買っています",
+          "rationale": "Uses ている, not the requested てある. It can have other readings in a suitable different task."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "a0cb5bf49d7a6bc151cd78b6b78da0a233a3be0b56e647e60a4f1d0a4d1d510b",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "明日",
+            "reading": "あした",
+            "headword": "明日",
+            "gloss": "tomorrow"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "切符",
+            "reading": "きっぷ",
+            "headword": "切符",
+            "gloss": "ticket"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-lecture-recording-ga",
+      "jlpt": 4,
+      "target": "aru-frame",
+      "relationship": "frames",
+      "prompt": "講演の録音が____。",
+      "translation": "Form the affirmative nonpast polite てある construction from する, do to present the preparation as already in place. Preserve the supplied particle. Keep the auxiliary ending in kana.",
+      "evidence": "Both ga and wo frames are practised; the task does not reject either as a universal wrong particle.",
+      "explanation": "Use してあります. The が frame foregrounds the prepared result. The related frame with the other particle can also describe this preparation.",
+      "answer": "aru-frame",
+      "acceptedAnswers": [
+        "してあります"
+      ],
+      "options": [
+        {
+          "id": "aru-frame",
+          "label": "してあります",
+          "rationale": "Forms the requested already-prepared result."
+        },
+        {
+          "id": "iru-frame",
+          "label": "しています",
+          "rationale": "Uses ている, not the requested てある. It can have other readings in a suitable different task."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "44115655bdfc4283ebce6f1fd4986984375a9cf9418aaabbf3837ae295018373",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "講演",
+            "reading": "こうえん",
+            "headword": "講演",
+            "gloss": "lecture; public talk"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "録音",
+            "reading": "ろくおん",
+            "headword": "録音",
+            "gloss": "audio recording"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-lecture-recording-wo",
+      "jlpt": 4,
+      "target": "aru-frame",
+      "relationship": "frames",
+      "prompt": "講演の録音を____。",
+      "translation": "Form the affirmative nonpast polite てある construction from する, do to present the preparation as already in place. Preserve the supplied particle. Keep the auxiliary ending in kana.",
+      "evidence": "Both ga and wo frames are practised; the task does not reject either as a universal wrong particle.",
+      "explanation": "Use してあります. The を frame keeps the object of the preparatory action. The related frame with the other particle can also describe this preparation.",
+      "answer": "aru-frame",
+      "acceptedAnswers": [
+        "してあります"
+      ],
+      "options": [
+        {
+          "id": "aru-frame",
+          "label": "してあります",
+          "rationale": "Forms the requested already-prepared result."
+        },
+        {
+          "id": "iru-frame",
+          "label": "しています",
+          "rationale": "Uses ている, not the requested てある. It can have other readings in a suitable different task."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "eae174be8ae839f900e6e684882dfcca59c5ddae778a5b23702ea679af82002c",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "講演",
+            "reading": "こうえん",
+            "headword": "講演",
+            "gloss": "lecture; public talk"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "録音",
+            "reading": "ろくおん",
+            "headword": "録音",
+            "gloss": "audio recording"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-window-arrangement-plain-state",
+      "jlpt": 4,
+      "target": "plain-state",
+      "relationship": "context",
+      "prompt": "窓____。",
+      "translation": "Report only that the thing is currently open, without using a construction that presents a purposeful arrangement. You do not know its cause; do not claim it was uncaused. Use this supplied pair: 開く（あく）, become open; 開ける（あける）, open the window. Fill the blank with the particle and affirmative nonpast polite predicate; keep the auxiliary ending in kana and add no explanatory clause.",
+      "evidence": "The communicative goal and stage are explicit, not an invented ban on compatible descriptions of a wider scene.",
+      "explanation": "This wording reports the current state without encoding a purposeful arrangement. In a wider account, an intentional result can also be described as a state, and past ておく can report preparation already performed. Topical は also fits here; the question does not restrict the noun to a が/を frame. The corresponding conversational contraction retains the polite ending and is accepted; it is not a separate target.",
+      "answer": "plain-state",
+      "acceptedAnswers": [
+        "が開いています",
+        "があいています",
+        "が空いています",
+        "が明いています",
+        "は開いています",
+        "はあいています",
+        "は空いています",
+        "は明いています",
+        "が開いてます",
+        "があいてます",
+        "が空いてます",
+        "が明いてます",
+        "は開いてます",
+        "はあいてます",
+        "は空いてます",
+        "は明いてます"
+      ],
+      "options": [
+        {
+          "id": "plain-state",
+          "label": "が開いています",
+          "rationale": "This wording reports the current state without encoding a purposeful arrangement."
+        },
+        {
+          "id": "arranged-state",
+          "label": "が開けてあります",
+          "rationale": "This is a possible construction, but it changes the explicitly requested reporting purpose or not-yet/already stage. てある presents the purposeful result as in place. Both が and を frames fit; neither claims that the object itself acted."
+        },
+        {
+          "id": "future-preparation",
+          "label": "を開けておきます",
+          "rationale": "This supplies a preparatory-action perspective, not the requested plain report of an observed state. The scene does not establish an unperformed action."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "06090babb82075b676a03dce34b64ca346fb2afad76101b3c8b4951c30fc1983",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "窓",
+            "reading": "まど",
+            "headword": "窓",
+            "gloss": "window"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-window-arrangement-arranged-state",
+      "jlpt": 4,
+      "target": "arranged-state",
+      "relationship": "context",
+      "prompt": "窓____。",
+      "translation": "The action has already been done for ventilation, and the result is still in place. Present it grammatically as that already-arranged result, not merely as an observed condition. Use this supplied pair: 開く（あく）, become open; 開ける（あける）, open the window. Fill the blank with the particle and affirmative nonpast polite predicate; keep the auxiliary ending in kana and add no explanatory clause.",
+      "evidence": "The communicative goal and stage are explicit, not an invented ban on compatible descriptions of a wider scene.",
+      "explanation": "てある presents the purposeful result as in place. Both が and を frames fit; neither claims that the object itself acted. In a wider account, an intentional result can also be described as a state, and past ておく can report preparation already performed. Topical は also fits here; the question does not restrict the noun to a が/を frame.",
+      "answer": "arranged-state",
+      "acceptedAnswers": [
+        "が開けてあります",
+        "があけてあります",
+        "を開けてあります",
+        "をあけてあります",
+        "は開けてあります",
+        "はあけてあります"
+      ],
+      "options": [
+        {
+          "id": "plain-state",
+          "label": "が開いています",
+          "rationale": "This is a possible construction, but it changes the explicitly requested reporting purpose or not-yet/already stage. This wording reports the current state without encoding a purposeful arrangement."
+        },
+        {
+          "id": "arranged-state",
+          "label": "が開けてあります",
+          "rationale": "てある presents the purposeful result as in place. Both が and を frames fit; neither claims that the object itself acted."
+        },
+        {
+          "id": "future-preparation",
+          "label": "を開けておきます",
+          "rationale": "This presents a preparatory action instead of the requested already-arranged result. The scene says the action has already been performed; past ておく could report that preparation, but this task requests a nonpast result-state report."
+        }
+      ],
+      "additionalCorrectOptions": [
+        {
+          "id": "arranged-wo",
+          "label": "を開けてあります",
+          "rationale": "The object-retaining preparation frame also presents the already-arranged result."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "06090babb82075b676a03dce34b64ca346fb2afad76101b3c8b4951c30fc1983",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "窓",
+            "reading": "まど",
+            "headword": "窓",
+            "gloss": "window"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-window-arrangement-future-preparation",
+      "jlpt": 4,
+      "target": "future-preparation",
+      "relationship": "context",
+      "prompt": "窓____。",
+      "translation": "The thing is not yet open. You are now announcing that you will open the window as an arrangement for ventilation. Do not report an action or result as already completed. Use this supplied pair: 開く（あく）, become open; 開ける（あける）, open the window. Fill the blank with the particle and affirmative nonpast polite predicate; keep the auxiliary ending in kana and add no explanatory clause.",
+      "evidence": "The communicative goal and stage are explicit, not an invented ban on compatible descriptions of a wider scene.",
+      "explanation": "Nonpast ておく presents the stated preparatory action; the scene explicitly says it has not happened yet. In a wider account, an intentional result can also be described as a state, and past ておく can report preparation already performed. Topical は also fits here; the question does not restrict the noun to a が/を frame. The corresponding conversational contraction retains the polite ending and is accepted; it is not a separate target.",
+      "answer": "future-preparation",
+      "acceptedAnswers": [
+        "を開けておきます",
+        "をあけておきます",
+        "は開けておきます",
+        "はあけておきます",
+        "を開けときます",
+        "をあけときます",
+        "は開けときます",
+        "はあけときます"
+      ],
+      "options": [
+        {
+          "id": "plain-state",
+          "label": "が開いています",
+          "rationale": "This is a possible construction, but it changes the explicitly requested reporting purpose or not-yet/already stage. This wording reports the current state without encoding a purposeful arrangement."
+        },
+        {
+          "id": "arranged-state",
+          "label": "が開けてあります",
+          "rationale": "This is a possible construction, but it changes the explicitly requested reporting purpose or not-yet/already stage. てある presents the purposeful result as in place. Both が and を frames fit; neither claims that the object itself acted."
+        },
+        {
+          "id": "future-preparation",
+          "label": "を開けておきます",
+          "rationale": "Nonpast ておく presents the stated preparatory action; the scene explicitly says it has not happened yet."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "06090babb82075b676a03dce34b64ca346fb2afad76101b3c8b4951c30fc1983",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "窓",
+            "reading": "まど",
+            "headword": "窓",
+            "gloss": "window"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-light-arrangement-plain-state",
+      "jlpt": 4,
+      "target": "plain-state",
+      "relationship": "context",
+      "prompt": "電気____。",
+      "translation": "Report only that the thing is currently off, without using a construction that presents a purposeful arrangement. You do not know its cause; do not claim it was uncaused. Use this supplied pair: 消える（きえる）, become off; 消す（けす）, turn off the light. Fill the blank with the particle and affirmative nonpast polite predicate; keep the auxiliary ending in kana and add no explanatory clause.",
+      "evidence": "The communicative goal and stage are explicit, not an invented ban on compatible descriptions of a wider scene.",
+      "explanation": "This wording reports the current state without encoding a purposeful arrangement. In a wider account, an intentional result can also be described as a state, and past ておく can report preparation already performed. Topical は also fits here; the question does not restrict the noun to a が/を frame. The corresponding conversational contraction retains the polite ending and is accepted; it is not a separate target.",
+      "answer": "plain-state",
+      "acceptedAnswers": [
+        "が消えています",
+        "がきえています",
+        "は消えています",
+        "はきえています",
+        "が消えてます",
+        "がきえてます",
+        "は消えてます",
+        "はきえてます"
+      ],
+      "options": [
+        {
+          "id": "plain-state",
+          "label": "が消えています",
+          "rationale": "This wording reports the current state without encoding a purposeful arrangement."
+        },
+        {
+          "id": "arranged-state",
+          "label": "が消してあります",
+          "rationale": "This is a possible construction, but it changes the explicitly requested reporting purpose or not-yet/already stage. てある presents the purposeful result as in place. Both が and を frames fit; neither claims that the object itself acted."
+        },
+        {
+          "id": "future-preparation",
+          "label": "を消しておきます",
+          "rationale": "This supplies a preparatory-action perspective, not the requested plain report of an observed state. The scene does not establish an unperformed action."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "875ba3f7aad9fd489437e3655cbf49aea38b499e980b264211bb1262d1527618",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "電気",
+            "reading": "でんき",
+            "headword": "電気",
+            "gloss": "light; electric lighting in this context"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-light-arrangement-arranged-state",
+      "jlpt": 4,
+      "target": "arranged-state",
+      "relationship": "context",
+      "prompt": "電気____。",
+      "translation": "The action has already been done for projecting a film, and the result is still in place. Present it grammatically as that already-arranged result, not merely as an observed condition. Use this supplied pair: 消える（きえる）, become off; 消す（けす）, turn off the light. Fill the blank with the particle and affirmative nonpast polite predicate; keep the auxiliary ending in kana and add no explanatory clause.",
+      "evidence": "The communicative goal and stage are explicit, not an invented ban on compatible descriptions of a wider scene.",
+      "explanation": "てある presents the purposeful result as in place. Both が and を frames fit; neither claims that the object itself acted. In a wider account, an intentional result can also be described as a state, and past ておく can report preparation already performed. Topical は also fits here; the question does not restrict the noun to a が/を frame.",
+      "answer": "arranged-state",
+      "acceptedAnswers": [
+        "が消してあります",
+        "がけしてあります",
+        "を消してあります",
+        "をけしてあります",
+        "は消してあります",
+        "はけしてあります"
+      ],
+      "options": [
+        {
+          "id": "plain-state",
+          "label": "が消えています",
+          "rationale": "This is a possible construction, but it changes the explicitly requested reporting purpose or not-yet/already stage. This wording reports the current state without encoding a purposeful arrangement."
+        },
+        {
+          "id": "arranged-state",
+          "label": "が消してあります",
+          "rationale": "てある presents the purposeful result as in place. Both が and を frames fit; neither claims that the object itself acted."
+        },
+        {
+          "id": "future-preparation",
+          "label": "を消しておきます",
+          "rationale": "This presents a preparatory action instead of the requested already-arranged result. The scene says the action has already been performed; past ておく could report that preparation, but this task requests a nonpast result-state report."
+        }
+      ],
+      "additionalCorrectOptions": [
+        {
+          "id": "arranged-wo",
+          "label": "を消してあります",
+          "rationale": "The object-retaining preparation frame also presents the already-arranged result."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "875ba3f7aad9fd489437e3655cbf49aea38b499e980b264211bb1262d1527618",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "電気",
+            "reading": "でんき",
+            "headword": "電気",
+            "gloss": "light; electric lighting in this context"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transitivity-results-light-arrangement-future-preparation",
+      "jlpt": 4,
+      "target": "future-preparation",
+      "relationship": "context",
+      "prompt": "電気____。",
+      "translation": "The thing is not yet off. You are now announcing that you will turn off the light as an arrangement for projecting a film. Do not report an action or result as already completed. Use this supplied pair: 消える（きえる）, become off; 消す（けす）, turn off the light. Fill the blank with the particle and affirmative nonpast polite predicate; keep the auxiliary ending in kana and add no explanatory clause.",
+      "evidence": "The communicative goal and stage are explicit, not an invented ban on compatible descriptions of a wider scene.",
+      "explanation": "Nonpast ておく presents the stated preparatory action; the scene explicitly says it has not happened yet. In a wider account, an intentional result can also be described as a state, and past ておく can report preparation already performed. Topical は also fits here; the question does not restrict the noun to a が/を frame. The corresponding conversational contraction retains the polite ending and is accepted; it is not a separate target.",
+      "answer": "future-preparation",
+      "acceptedAnswers": [
+        "を消しておきます",
+        "をけしておきます",
+        "は消しておきます",
+        "はけしておきます",
+        "を消しときます",
+        "をけしときます",
+        "は消しときます",
+        "はけしときます"
+      ],
+      "options": [
+        {
+          "id": "plain-state",
+          "label": "が消えています",
+          "rationale": "This is a possible construction, but it changes the explicitly requested reporting purpose or not-yet/already stage. This wording reports the current state without encoding a purposeful arrangement."
+        },
+        {
+          "id": "arranged-state",
+          "label": "が消してあります",
+          "rationale": "This is a possible construction, but it changes the explicitly requested reporting purpose or not-yet/already stage. てある presents the purposeful result as in place. Both が and を frames fit; neither claims that the object itself acted."
+        },
+        {
+          "id": "future-preparation",
+          "label": "を消しておきます",
+          "rationale": "Nonpast ておく presents the stated preparatory action; the scene explicitly says it has not happened yet."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "875ba3f7aad9fd489437e3655cbf49aea38b499e980b264211bb1262d1527618",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "電気",
+            "reading": "でんき",
+            "headword": "電気",
+            "gloss": "light; electric lighting in this context"
+          }
+        ]
+      }
+    }
+  ],
+  "introductionGroups": [
+    {
+      "id": "transitivity-results-roles",
+      "label": "Preserve the actor/object or changed thing",
+      "facets": [
+        {
+          "id": "transitive-action",
+          "label": "An actor acts on the object"
+        },
+        {
+          "id": "intransitive-event",
+          "label": "The stated thing changes"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "transitivity-results-window-arrangement-transitive-action",
+          "facetId": "transitive-action",
+          "exampleKey": "window-arrangement"
+        },
+        {
+          "exerciseId": "transitivity-results-window-arrangement-intransitive-event",
+          "facetId": "intransitive-event",
+          "exampleKey": "window-arrangement"
+        },
+        {
+          "exerciseId": "transitivity-results-light-arrangement-transitive-action",
+          "facetId": "transitive-action",
+          "exampleKey": "light-arrangement"
+        },
+        {
+          "exerciseId": "transitivity-results-light-arrangement-intransitive-event",
+          "facetId": "intransitive-event",
+          "exampleKey": "light-arrangement"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "transitivity-results-quality",
+          "importance": 2,
+          "reason": "Extend the participant distinction to making versus becoming."
+        },
+        {
+          "groupId": "transitivity-results-frames",
+          "importance": 2,
+          "reason": "Keep the lexical partner and noun roles while building result frames."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "transitivity-results-quality",
+      "label": "Make a quality/role change or present the thing becoming different",
+      "facets": [
+        {
+          "id": "make-change",
+          "label": "Someone makes the stated change"
+        },
+        {
+          "id": "become-change",
+          "label": "The thing becomes different"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "transitivity-results-short-explanation-make-change",
+          "facetId": "make-change",
+          "exampleKey": "short-explanation"
+        },
+        {
+          "exerciseId": "transitivity-results-short-explanation-become-change",
+          "facetId": "become-change",
+          "exampleKey": "short-explanation"
+        },
+        {
+          "exerciseId": "transitivity-results-large-lettering-make-change",
+          "facetId": "make-change",
+          "exampleKey": "large-lettering"
+        },
+        {
+          "exerciseId": "transitivity-results-large-lettering-become-change",
+          "facetId": "become-change",
+          "exampleKey": "large-lettering"
+        },
+        {
+          "exerciseId": "transitivity-results-safe-passage-make-change",
+          "facetId": "make-change",
+          "exampleKey": "safe-passage"
+        },
+        {
+          "exerciseId": "transitivity-results-safe-passage-become-change",
+          "facetId": "become-change",
+          "exampleKey": "safe-passage"
+        },
+        {
+          "exerciseId": "transitivity-results-quiet-room-make-change",
+          "facetId": "make-change",
+          "exampleKey": "quiet-room"
+        },
+        {
+          "exerciseId": "transitivity-results-quiet-room-become-change",
+          "facetId": "become-change",
+          "exampleKey": "quiet-room"
+        },
+        {
+          "exerciseId": "transitivity-results-store-meeting-room-make-change",
+          "facetId": "make-change",
+          "exampleKey": "store-meeting-room"
+        },
+        {
+          "exerciseId": "transitivity-results-store-meeting-room-become-change",
+          "facetId": "become-change",
+          "exampleKey": "store-meeting-room"
+        },
+        {
+          "exerciseId": "transitivity-results-parking-park-make-change",
+          "facetId": "make-change",
+          "exampleKey": "parking-park"
+        },
+        {
+          "exerciseId": "transitivity-results-parking-park-become-change",
+          "facetId": "become-change",
+          "exampleKey": "parking-park"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "n5-comparisons-change-change-formation",
+          "importance": 2,
+          "reason": "Review existing naru attachment rather than duplicating its owner."
+        },
+        {
+          "groupId": "n5-comparisons-change-change-meaning",
+          "importance": 2,
+          "reason": "Retain the earlier transition-versus-current-state comparison."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "transitivity-results-frames",
+      "label": "Build the requested state or prepared-result frame",
+      "facets": [
+        {
+          "id": "iru-frame",
+          "label": "The requested te-iru frame"
+        },
+        {
+          "id": "aru-frame",
+          "label": "The requested te-aru frame"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "transitivity-results-window-arrangement-iru",
+          "facetId": "iru-frame",
+          "exampleKey": "window-arrangement"
+        },
+        {
+          "exerciseId": "transitivity-results-light-arrangement-iru",
+          "facetId": "iru-frame",
+          "exampleKey": "light-arrangement"
+        },
+        {
+          "exerciseId": "transitivity-results-ticket-ready-ga",
+          "facetId": "aru-frame",
+          "exampleKey": "ticket-ready"
+        },
+        {
+          "exerciseId": "transitivity-results-ticket-ready-wo",
+          "facetId": "aru-frame",
+          "exampleKey": "ticket-ready"
+        },
+        {
+          "exerciseId": "transitivity-results-lecture-recording-ga",
+          "facetId": "aru-frame",
+          "exampleKey": "lecture-recording"
+        },
+        {
+          "exerciseId": "transitivity-results-lecture-recording-wo",
+          "facetId": "aru-frame",
+          "exampleKey": "lecture-recording"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "transitivity-results-context",
+          "importance": 2,
+          "reason": "Choose the stated reporting purpose and stage after building the frames."
+        },
+        {
+          "groupId": "n5-actions-time-aspect",
+          "importance": 2,
+          "reason": "Reuse the existing ongoing/state/routine interpretations in their original group."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "transitivity-results-context",
+      "label": "Choose the stated reporting purpose or preparation stage",
+      "facets": [
+        {
+          "id": "plain-state",
+          "label": "Report the present state without encoding a purposeful arrangement"
+        },
+        {
+          "id": "arranged-state",
+          "label": "Present the purposeful result as already in place"
+        },
+        {
+          "id": "future-preparation",
+          "label": "Present the stated not-yet-performed preparatory action"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "transitivity-results-window-arrangement-plain-state",
+          "facetId": "plain-state",
+          "exampleKey": "window-arrangement"
+        },
+        {
+          "exerciseId": "transitivity-results-window-arrangement-arranged-state",
+          "facetId": "arranged-state",
+          "exampleKey": "window-arrangement"
+        },
+        {
+          "exerciseId": "transitivity-results-window-arrangement-future-preparation",
+          "facetId": "future-preparation",
+          "exampleKey": "window-arrangement"
+        },
+        {
+          "exerciseId": "transitivity-results-light-arrangement-plain-state",
+          "facetId": "plain-state",
+          "exampleKey": "light-arrangement"
+        },
+        {
+          "exerciseId": "transitivity-results-light-arrangement-arranged-state",
+          "facetId": "arranged-state",
+          "exampleKey": "light-arrangement"
+        },
+        {
+          "exerciseId": "transitivity-results-light-arrangement-future-preparation",
+          "facetId": "future-preparation",
+          "exampleKey": "light-arrangement"
+        }
+      ],
+      "next": [],
+      "requires": []
+    }
+  ]
+}

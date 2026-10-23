@@ -132,6 +132,10 @@ The [retained-state comparison](koto-wake-and-formal-nouns.md#まま-with-nouns-
 contrasts なる with まま. That is optional later reading, not an N5 distractor here.
 An earlier change and a later retained state need not contradict each other.
 
+For making a quality/role change with くする／にする versus describing its becoming different,
+see [actions, events and results](actions-events-and-results.md#2-make-something-different-or-describe-its-becoming-different).
+The N5 なる exercises remain here; the new comparison does not make human agency incompatible with なる.
+
 ## すぎる: too much for a relevant standard
 
 **すぎる** adds an excess judgment. The standard can be a budget, comfortable quantity, intended use
