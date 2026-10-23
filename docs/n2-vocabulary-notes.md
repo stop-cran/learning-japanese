@@ -95,6 +95,20 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 12 authoring:** A dictionary aggregation page's headline
+  reading need not identify the relevant entry inside it. The 御中
+  page headline gives オナカ, but its actual おんちゅう sections
+  define the organizational address suffix. Record the inspected
+  reading and section instead of transferring the headline's identity.
+- **Batch 12 authoring:** Broad source glosses such as "good weather"
+  and "and Company" require the actual lexical function. Teach 快晴's
+  low-cloud condition and 御中's organizational addressee use without
+  turning a loose English label into an unrestricted Japanese rule.
+- **Batch 12 authoring:** A reused card with a previously absent
+  `jlpt` field can gain source-backed N2 without altering its teaching.
+  Call that a level-only update, not an unchanged reuse, and retain
+  the baseline identity, reading, title and exclusions.
+
 - **Batch 11 reconciliation:** A dictionary's recall gloss and a
   teaching source's idea-versus-memory contrast answer different
   questions. Retain the supported recognition sense while giving a

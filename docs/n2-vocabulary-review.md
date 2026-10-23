@@ -5,7 +5,7 @@
 **Batches 01-11 review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 200 rows are review-closed; twenty are draft and 1,592 remain pending.
+The first 220 rows are review-closed; twenty are draft and 1,572 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -1408,6 +1408,38 @@ kanji-word pairs. All 3,273 baseline identities, readings, titles and
 exclusion lists remain preserved. The manifest is unchanged from the
 confirmed correction. This closes batch 11, not the full expansion or
 a native-speaker certification.
+
+## Batch 12: N2:222-N2:241
+
+**Status:** authored draft; independent reviews pending.
+
+Scope: 温室, 温泉, 温帯, 御中, 女の人, 蚊, カーブ, 貝,
+開会, 会館, 改札, 解散, 海水浴, 回数, 回数券, 改正, 快晴,
+解説, 改造 and 開通.
+
+Nineteen new articles and the existing 貝 cover the twenty rows. 貝
+already teaches both source senses at かい; only its previously absent
+level becomes source-backed N2. Its body, identity, title, reading and
+original exclusions remain unchanged. This is a level-only reuse,
+not an unchanged-metadata reuse.
+
+Nine N2 kanji cards gain thirteen reciprocal word pairs. Eight existing
+word articles gain links on already-taught comparisons. The imported
+content changes do not add kanji/stroke files or rename existing IDs.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-12.json) retains
+all twenty raw rows and complete principal families, the component
+records, complete comparison families and qualified actual-page
+inspection receipts. The original 御中 correspondence gloss is
+interpreted as an organizational address suffix, not an unrestricted
+translation of English "and company." The 快晴 explanation follows
+the observed low-cloud meaning rather than an absolute zero-cloud rule.
+
+Coverage is **220 closed, twenty draft, 1,572 pending and zero
+unresolved** rows. Cumulative mappings cover 235 distinct articles:
+212 new and 23 reused. There are 3,485 word articles and fifty
+reciprocal N2 kanji-word pairs. These are authored counts, not review
+closure or linguistic certification.
 
 ## Final verification
 
