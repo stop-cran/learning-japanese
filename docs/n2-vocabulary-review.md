@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-23 review-closed.** The target is all 1,812 source rows,
+**Batches 01-24 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 460 rows are review-closed; batch 24 has 20 draft rows and 1,332 remain pending.
+The first 480 rows are review-closed; no rows are draft and 1,332 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -3513,7 +3513,8 @@ This closes batch 23, not the full expansion.
 
 ## Batch 24: N2:462-N2:481
 
-**Status:** independently reviewed draft; corrections await original-reviewer confirmation.
+**Status:** closed after independent initial reviews,
+evidence-based reconciliation and bounded confirmation.
 
 Scope: 激増, 下車, 下旬, 下水, 削る, 桁, 下駄, 血圧, 血液, 月給,
 傑作, 月末, 気配, 下品, 煙い, 蹴る, 険しい, 見学, 謙虚, 原稿.
@@ -3536,6 +3537,8 @@ separate はつる/1298100, not taught at selected けずる/1298090.
 are positively covered. Additional senses are explicitly separated from
 independent N2 assignments.
 
+### Initial independent reviews and reconciliation
+
 Both blind initial reviews inspected authored commit
 `15d8c88a4e49aef85600feb3a6cb1886f7425b14`, GPT-6.1 Sol then
 Claude Opus 5.5, in independent sequential processes with no file edits.
@@ -3545,6 +3548,19 @@ The [GPT report](n2-vocabulary-reviews/batch-24-gpt-initial.md) established
 three direct quiz gaps: 傑作/愉快, 気配/調子 and 原稿/テキスト.
 The [Claude report](n2-vocabulary-reviews/batch-24-claude-initial.md)
 established 見学/訪問・訪ねる and raised an unverified market example.
+Both read all twenty new articles, the twenty mappings and all three
+related kanji changes. Neither independently executed Git/hash checks
+or inspected every complete comparison family. Claude disclosed an
+accidental read of neighboring TSV rows; those rows were not assessed
+and do not enlarge the review scope.
+
+| Item | Reconciliation |
+| --- | --- |
+| N2B24-GPT-01: 傑作/愉快 | Resolved with a direct 愉快 guard for the actual amusing answer and selected humorous sense; jocular/dated qualifications remain. |
+| N2B24-GPT-02: 気配/調子 | Resolved with a direct 調子 guard for the actual tone/condition label and financial market tone. This does not assert unrestricted Japanese financial substitution. |
+| N2B24-GPT-03: 原稿/テキスト | Resolved with a direct テキスト guard for prepared manuscript/speech text; the comparison's ordinary text sense is not restricted to textbooks. |
+| B24-Q-01: 見学/訪問・訪ねる | Resolved with both direct guards. The comparison titles are identical to each other, not to 見学; exact-title deduplication does not protect these two new pairs. |
+| B24-C-02: 気配 market example | Resolved by replacing the uncertain sentence with the actually inspected 買い気配 compound and making the financial きはい cross-reference explicit. The removed sentence is not proven incorrect, and けはい is not excluded from finance. |
 
 Reconciliation adds the five direct guards after inspecting all five
 comparison cards and complete pinned families. The uncertain 気配
@@ -3555,8 +3571,89 @@ demonstrably wrong. Two exact public-entry inspection receipts and
 qualified correction evidence are appended without changing original
 rows or mappings. Optional examples, disclaimer polish and extra
 lower-level backlinks are not required for closure and are not added.
-Original-session bounded confirmations and provenance authentication
-remain pending; drafting and structural validation do not close rows.
+
+The reconciliation extracted five complete comparison families for
+five exact forms and inspected all 25 derivative records, plus the
+actual five comparison cards and labels. Both pinned JMdict hashes
+were checked. The five families are new to the packet; original rows,
+mappings, selected/additional senses, comparison records and initial
+quiz declarations remain historical rather than silently rewritten.
+There are now 86 directional declarations on seventeen new articles.
+No existing word exclusion list or other baseline field changes.
+
+The actual complete Daijisen bodies positively license financial
+けはい and cross-reference きはい; the separate latter entry points
+back to both けはい senses. A finance-only-きはい rule is not adopted.
+The compound 買い気配 is supported by its own inspected Daijisen
+entry, not a fabricated pinned-JMdict record. Failed attestation
+searches justify removing uncertainty, not declaring an expression
+impossible or making comparative frequency claims.
+
+Model diversity was useful on this sample. GPT uniquely established
+the three first-listed direct quiz gaps. Claude uniquely supplied
+the two visit guards and the uncertain market-example concern,
+which led to a prudent replacement and clearer reading qualification.
+There was no shared actionable initial finding. Findings, Optional,
+Limits and per-card observations were compared together; later
+confirmation of a correction is not a second independent discovery.
+This is not a general model ranking.
+
+### Confirmation, authentication and closure
+
+Both original sessions independently confirmed correction commit
+`423cdee6300551714862d84d66f31bde3bb01a05`, directly following the
+authored commit above. The common bounded assignment covered all
+four changed articles, five necessary unchanged comparison cards
+and appended evidence. Each received its own initial report, the
+actual patch and equivalent sanitized evidence, not the other
+family's report. GPT exited fully before Claude resumed; both
+processes exited without file edits.
+
+- [GPT confirmation](n2-vocabulary-reviews/batch-24-gpt-confirmation.md):
+  actual `gpt-6.1-sol`; all three original findings resolved.
+  All four changed articles and both packet additions received
+  CLEAN correctness, scoped-coverage and comprehensibility verdicts.
+- [Claude confirmation](n2-vocabulary-reviews/batch-24-claude-confirmation.md):
+  actual `claude-opus-5.5`; B24-Q-01 and B24-C-02 resolved.
+  All four changed articles and packet additions were CLEAN on
+  all three facets. Optional expansions remain optional.
+
+Neither found an actionable regression or consequential unresolved
+claim within the changed passages. Both independently inspected the
+relevant 気配 and 買い気配 public lexical bodies; Claude additionally
+closed its original 桁 and 下駄 source-access limits. Its qualified
+伺う comparison did not establish a new defect and caused no
+unrelated baseline expansion.
+
+Author-executed authentication checked both commits' parents,
+stop-cran author/committer identities and required trailers;
+committed and current file hashes; unchanged authored content;
+both exact patches and prompt hashes; and both sanitized evidence
+derivatives. Removing only the two appended evidence sections
+reproduces the original canonical packet exactly. All five new
+complete comparison families match the pinned extraction, and
+the exact five direct additions match the current article headers.
+No primary title, reading, level, kanji array or source mapping changed.
+
+All four archived reports match original output after progress
+preambles are removed and Markdown hard breaks are normalized.
+Original session IDs and start times, actual model metrics,
+zero-edit receipts and cumulative one/two-request counts agree.
+Both exact common prompts match the original sessions' recorded
+user messages. These are author-executed provenance checks,
+not reviewer-executed Git or linguistic certification.
+
+Closed coverage is **480 closed, 0 draft, 1,332 pending and
+0 unresolved** rows, mapped to 474 distinct articles: 442 new
+and 32 reused. There are 3,715 word articles and 110 distinct
+tracked primary-form reciprocal N2 pairs on new articles, plus
+checked reused pairs and the prior 包/くるむ alias-reading pair.
+All 3,273 baseline identities, readings, titles, written-kanji
+arrays and easier sourced levels remain preserved. Prior
+baseline exclusion exceptions are unchanged; this batch adds none.
+No executed app draw, selection-frequency measurement, full-corpus
+rereview or native-speaker certification is claimed.
+This closes batch 24, not the full vocabulary expansion.
 
 ## Final verification
 
