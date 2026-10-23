@@ -411,6 +411,10 @@ But resemblance and giving an actual category member as an example are not alway
 These are related ways of organizing information, not isolated competitors that must each win a different sentence.
 For the fuller attachment patterns and qualifications, follow the linked article.
 
+An unspecified quantity such as **何冊かの本（なんさつかのほん）**, some books, is not the same job as
+listing representative members. See [quantity, ranges and frequency](quantity-ranges-and-frequency.md)
+for counter quantities, distribution and short set-membership bridges; the listing exercises keep their owners.
+
 ## Further forms to recognize, not master all at once
 
 The following is a recognition map, not a complete formation or substitution chart:

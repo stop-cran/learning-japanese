@@ -1189,6 +1189,10 @@ They are a controlled contrast, not a claim that ばかり can never mean "only,
 The spelling **丈（だけ）** is accepted, although kana is usual.
 Do not transfer the quantity overlap to every degree, comparison or proportional-change pattern.
 
+For inclusive bounds, unspecified counter quantities, frequency and negative quantity scope, use the
+focused [quantity, ranges and frequency supplement](quantity-ranges-and-frequency.md).
+It reuses these existing estimate/limit and outside/within-set exercises without expanding their answer pools.
+
 Before **ばかり**, the verb form changes the construction:
 
 | Example | Meaning |

@@ -219,6 +219,10 @@ Five already-N5 exercises are grouped in their existing set: three estimates and
 They keep their original IDs, levels and wording. Other, harder exercises in that set are not relabeled
 to make the group look larger. Reuse does not imply a new vocabulary review of those older prompts.
 
+For inclusive **以上／以下** versus strict comparisons, and quantities per period, see
+[quantity, ranges and frequency](quantity-ranges-and-frequency.md). That supplement preserves these
+existing comparison and estimate/limit owners rather than raising their levels or copying their cards.
+
 For optional extensions, see [restriction and its scope](only-and-unexpected-inclusion.md#だけ-identify-the-limit-and-its-scope),
 [advanced degree and extent](koto-wake-and-formal-nouns.md#degree-comparison-and-desired-extent), and
 [representative or alternating states](japanese-listing-and-examples.md#たり-representative-activities-and-variable-states).

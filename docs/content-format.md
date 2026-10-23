@@ -254,7 +254,8 @@ The [necessity/instructions ledger](grammar-necessity-instructions-sources.json)
 The [time/linking ledger](grammar-time-linking-sources.json) adds 38 N4 tasks in one set.
 The [respectful/humble ledger](grammar-honorific-humble-sources.json) adds 37 N4 tasks in one set.
 The [productive-descriptions ledger](grammar-productive-descriptions-sources.json) adds 30 N4 tasks in one set.
-Current practice is 1682 exercises: 590 N5 and 751 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [quantity/scope ledger](grammar-quantity-scope-sources.json) adds 26 N4 tasks and two N5 controls in one set.
+Current practice is 1710 exercises: 592 N5 and 777 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -473,6 +474,15 @@ fitting にくい and づらい responses share the difficulty class. Method phr
 while action modifiers and さ nouns keep their different roles. Prior adjective, excess, change and demonstrative
 groups retain their complete objects and owners. Kinds, materials, descriptive をしている, contrastive くは and
 lexical 化する are bounded recognition support, not new scored groups or vocabulary-recall tests.
+The [quantity/range/frequency installment](grammar-quantity-scope-sources.json) adds 28 annotated prompts,
+reaching **1710 exercises in 70 files** and **1401/1710** reviewed, with 309 still pending.
+Five groups contain twelve facets, twelve soft recommendations and no prerequisites: four complete frequency
+assemblies and twenty-four supplied-message interpretations. Inclusive/strict range probes, minimum versus
+unspecified quantities, negative scope and required-resource/item-price frames have distinct operations.
+Two isolated ordinary-action duration controls stay N5; the other twenty-six tasks are N4.
+Existing restriction, listing, comparison and estimate/limit objects retain their owners and levels.
+Prefixes, nearly-every-period wording, membership/rank and higher-grade interval/resource links are bounded
+recognition support; minimal-means だけで and detailed interval/collocation practice remain explicit future goals.
 The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the

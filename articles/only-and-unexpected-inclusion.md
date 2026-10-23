@@ -293,6 +293,10 @@ Here the negative reaches the minimum counted case, so the visitor count is **ze
 Compare **一人しか来ませんでした**: **one** person came.
 The negative endings match, but the whole constructions do not.
 
+For minimum benchmarks, unspecified quantities, **少しも～ない／少なくない** and negative exception scope,
+see [quantity, ranges and frequency](quantity-ranges-and-frequency.md). It reuses the existing
+restriction and minimum-unit zero-count tasks instead of assigning them new identities.
+
 ## One boundary worth recognizing: さえ in a condition
 
 With the other arrangements already settled, consider entry through a station ticket gate:

@@ -1,0 +1,2131 @@
+{
+  "schemaVersion": 1,
+  "id": "quantity-scope",
+  "title": "Quantity, ranges, frequency and scope",
+  "article": "articles/quantity-ranges-and-frequency.md",
+  "constructions": [
+    {
+      "id": "in-range",
+      "label": "The test value belongs to the described numerical range"
+    },
+    {
+      "id": "out-of-range",
+      "label": "The test value is outside the described numerical range"
+    },
+    {
+      "id": "minimum",
+      "label": "An at-least quantity benchmark"
+    },
+    {
+      "id": "unspecified",
+      "label": "Some unspecified number"
+    },
+    {
+      "id": "per-period",
+      "label": "Time period plus ni plus occurrence count"
+    },
+    {
+      "id": "per-occasion",
+      "label": "Each occurrence or event unit with goto-ni"
+    },
+    {
+      "id": "absence",
+      "label": "No amount or degree of the named action or property"
+    },
+    {
+      "id": "not-small",
+      "label": "The quantity is explicitly described as not small"
+    },
+    {
+      "id": "no-exception",
+      "label": "No member of the stated domain fails the underlying positive condition"
+    },
+    {
+      "id": "required-resource",
+      "label": "Time or money required for the named process"
+    },
+    {
+      "id": "item-price",
+      "label": "A price attributed to an item"
+    },
+    {
+      "id": "activity-duration",
+      "label": "Time spent performing an activity"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "boundaries",
+      "label": "Check a value against an inclusive or strict numerical bound",
+      "constructions": [
+        "in-range",
+        "out-of-range"
+      ]
+    },
+    {
+      "id": "quantity-framing",
+      "label": "Read a minimum benchmark versus an unspecified quantity",
+      "constructions": [
+        "minimum",
+        "unspecified"
+      ]
+    },
+    {
+      "id": "frequency",
+      "label": "Build a per-period rate or a per-occasion expression",
+      "constructions": [
+        "per-period",
+        "per-occasion"
+      ]
+    },
+    {
+      "id": "negative-scope",
+      "label": "Determine what the negative quantity statement actually denies",
+      "constructions": [
+        "absence",
+        "not-small",
+        "no-exception"
+      ]
+    },
+    {
+      "id": "cost-frames",
+      "label": "Read a required resource, an item price or activity duration",
+      "constructions": [
+        "required-resource",
+        "item-price",
+        "activity-duration"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "quantity-scope-age-minimum-boundary",
+      "jlpt": 4,
+      "target": "in-range",
+      "relationship": "boundaries",
+      "prompt": "「六歳以上の子供がこのクラスに参加できます。」→____",
+      "translation": "Read the Japanese statement and test the specified value against its numerical bound. Use the external label 範囲内（はんいない）, inside the described range, or 範囲外（はんいがい）, outside it; kana is accepted. This is range membership, not a claim that the actual unknown quantity equals the test value, or that every other eligibility condition is satisfied. Test an age of exactly six.",
+      "evidence": "Inclusive versus strict bounds, lower versus upper direction, equality probes and non-boundary probes; paired comparison statements share scene keys.",
+      "explanation": "六歳以上 includes age six as well as greater ages; six meets this age bound.",
+      "answer": "in-range",
+      "acceptedAnswers": [
+        "範囲内",
+        "はんいない"
+      ],
+      "options": [
+        {
+          "id": "in-range",
+          "label": "範囲内",
+          "rationale": "六歳以上 includes age six as well as greater ages; six meets this age bound."
+        },
+        {
+          "id": "out-of-range",
+          "label": "範囲外",
+          "rationale": "This would exclude the stated boundary, but numeric 以上 includes it."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "03b173598dd310d8964addc5e05cb5cb2c785f2c792002ff512811e8849d9ed2",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "六歳",
+            "reading": "ろくさい",
+            "headword": "六歳",
+            "gloss": "six years old"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "子供",
+            "reading": "こども",
+            "headword": "子供",
+            "gloss": "child; children"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 11,
+            "end": 14,
+            "text": "クラス",
+            "reading": "くらす",
+            "headword": "クラス",
+            "gloss": "class"
+          },
+          {
+            "start": 15,
+            "end": 21,
+            "text": "参加できます",
+            "reading": "さんかできます",
+            "headword": "参加する",
+            "gloss": "can participate"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-participants-minimum-outside",
+      "jlpt": 4,
+      "target": "out-of-range",
+      "relationship": "boundaries",
+      "prompt": "「参加者は四人以上です。」→____",
+      "translation": "Read the Japanese statement and test the specified value against its numerical bound. Use the external label 範囲内（はんいない）, inside the described range, or 範囲外（はんいがい）, outside it; kana is accepted. This is range membership, not a claim that the actual unknown quantity equals the test value, or that every other eligibility condition is satisfied. Test a count of three people.",
+      "evidence": "Inclusive versus strict bounds, lower versus upper direction, equality probes and non-boundary probes; paired comparison statements share scene keys.",
+      "explanation": "四人以上 is four or more, so three is outside the reported numerical range.",
+      "answer": "out-of-range",
+      "acceptedAnswers": [
+        "範囲外",
+        "はんいがい"
+      ],
+      "options": [
+        {
+          "id": "in-range",
+          "label": "範囲内",
+          "rationale": "Three is below four. Inclusion of the boundary does not extend the range below it."
+        },
+        {
+          "id": "out-of-range",
+          "label": "範囲外",
+          "rationale": "四人以上 is four or more, so three is outside the reported numerical range."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "b6e2edcf91b89609713dfb42e030ed3cb152e50cbca3754db7a95cce5db23d4b",
+        "spans": [
+          {
+            "start": 1,
+            "end": 4,
+            "text": "参加者",
+            "reading": "さんかしゃ",
+            "headword": "参加者",
+            "gloss": "participant; participants"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "四人",
+            "reading": "よにん",
+            "headword": "四人",
+            "gloss": "four people"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-apples-maximum-boundary",
+      "jlpt": 4,
+      "target": "in-range",
+      "relationship": "boundaries",
+      "prompt": "「この箱に入れるりんごは五個以下です。」→____",
+      "translation": "Read the Japanese statement and test the specified value against its numerical bound. Use the external label 範囲内（はんいない）, inside the described range, or 範囲外（はんいがい）, outside it; kana is accepted. This is range membership, not a claim that the actual unknown quantity equals the test value, or that every other eligibility condition is satisfied. Test exactly five apples.",
+      "evidence": "Inclusive versus strict bounds, lower versus upper direction, equality probes and non-boundary probes; paired comparison statements share scene keys.",
+      "explanation": "五個以下 includes five; it does not mean strictly fewer than five.",
+      "answer": "in-range",
+      "acceptedAnswers": [
+        "範囲内",
+        "はんいない"
+      ],
+      "options": [
+        {
+          "id": "in-range",
+          "label": "範囲内",
+          "rationale": "五個以下 includes five; it does not mean strictly fewer than five."
+        },
+        {
+          "id": "out-of-range",
+          "label": "範囲外",
+          "rationale": "This would incorrectly exclude five, the included upper boundary."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "6ee7b28056f0d831fe3d8447c4696c2c82672340fdf5c882e94d75f01bf77125",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "箱",
+            "reading": "はこ",
+            "headword": "箱",
+            "gloss": "box"
+          },
+          {
+            "start": 5,
+            "end": 8,
+            "text": "入れる",
+            "reading": "いれる",
+            "headword": "入れる",
+            "gloss": "put in"
+          },
+          {
+            "start": 8,
+            "end": 11,
+            "text": "りんご",
+            "reading": "りんご",
+            "headword": "りんご",
+            "gloss": "apple"
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "五個",
+            "reading": "ごこ",
+            "headword": "五個",
+            "gloss": "five items"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-budget-maximum-outside",
+      "jlpt": 4,
+      "target": "out-of-range",
+      "relationship": "boundaries",
+      "prompt": "「千円以下の品物を選んでください。」→____",
+      "translation": "Read the Japanese statement and test the specified value against its numerical bound. Use the external label 範囲内（はんいない）, inside the described range, or 範囲外（はんいがい）, outside it; kana is accepted. This is range membership, not a claim that the actual unknown quantity equals the test value, or that every other eligibility condition is satisfied. Test an item priced at 1,200 yen.",
+      "evidence": "Inclusive versus strict bounds, lower versus upper direction, equality probes and non-boundary probes; paired comparison statements share scene keys.",
+      "explanation": "千円以下 allows prices up to and including 1,000 yen. A 1,200-yen item exceeds that maximum.",
+      "answer": "out-of-range",
+      "acceptedAnswers": [
+        "範囲外",
+        "はんいがい"
+      ],
+      "options": [
+        {
+          "id": "in-range",
+          "label": "範囲内",
+          "rationale": "An included maximum is not permission to go above it."
+        },
+        {
+          "id": "out-of-range",
+          "label": "範囲外",
+          "rationale": "千円以下 allows prices up to and including 1,000 yen. A 1,200-yen item exceeds that maximum."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "ba1389b6c7a1191e89554ee49c7dbcdaadb95c45c6f7c0c6d995994b6201762c",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "千円",
+            "reading": "せんえん",
+            "headword": "千円",
+            "gloss": "one thousand yen"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "品物",
+            "reading": "しなもの",
+            "headword": "品物",
+            "gloss": "goods; item"
+          },
+          {
+            "start": 9,
+            "end": 12,
+            "text": "選んで",
+            "reading": "えらんで",
+            "headword": "選ぶ",
+            "gloss": "choose (te-form)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-participants-strict-more-inside",
+      "jlpt": 4,
+      "target": "in-range",
+      "relationship": "boundaries",
+      "prompt": "「参加者は十人より多いです。」→____",
+      "translation": "Read the Japanese statement and test the specified value against its numerical bound. Use the external label 範囲内（はんいない）, inside the described range, or 範囲外（はんいがい）, outside it; kana is accepted. This is range membership, not a claim that the actual unknown quantity equals the test value, or that every other eligibility condition is satisfied. Test a count of eleven people.",
+      "evidence": "Inclusive versus strict bounds, lower versus upper direction, equality probes and non-boundary probes; paired comparison statements share scene keys.",
+      "explanation": "十人より多い is strictly more than ten. Eleven is inside that range; this does not establish the actual count as eleven.",
+      "answer": "in-range",
+      "acceptedAnswers": [
+        "範囲内",
+        "はんいない"
+      ],
+      "options": [
+        {
+          "id": "in-range",
+          "label": "範囲内",
+          "rationale": "十人より多い is strictly more than ten. Eleven is inside that range; this does not establish the actual count as eleven."
+        },
+        {
+          "id": "out-of-range",
+          "label": "範囲外",
+          "rationale": "Eleven is greater than ten, so it satisfies this strict lower comparison."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "c38b9828cfb88bbe12437d98e6a88b7a9b8c287684d087dde9b7661cde50f55d",
+        "spans": [
+          {
+            "start": 1,
+            "end": 4,
+            "text": "参加者",
+            "reading": "さんかしゃ",
+            "headword": "参加者",
+            "gloss": "participant; participants"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "十人",
+            "reading": "じゅうにん",
+            "headword": "十人",
+            "gloss": "ten people"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "多い",
+            "reading": "おおい",
+            "headword": "多い",
+            "gloss": "many; numerous"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-umbrella-strict-more-boundary",
+      "jlpt": 4,
+      "target": "out-of-range",
+      "relationship": "boundaries",
+      "prompt": "「この傘は千円より高いです。」→____",
+      "translation": "Read the Japanese statement and test the specified value against its numerical bound. Use the external label 範囲内（はんいない）, inside the described range, or 範囲外（はんいがい）, outside it; kana is accepted. This is range membership, not a claim that the actual unknown quantity equals the test value, or that every other eligibility condition is satisfied. Test a price of exactly 1,000 yen.",
+      "evidence": "Inclusive versus strict bounds, lower versus upper direction, equality probes and non-boundary probes; paired comparison statements share scene keys.",
+      "explanation": "千円より高い means priced higher than 1,000 yen. Equality does not satisfy this comparison.",
+      "answer": "out-of-range",
+      "acceptedAnswers": [
+        "範囲外",
+        "はんいがい"
+      ],
+      "options": [
+        {
+          "id": "in-range",
+          "label": "範囲内",
+          "rationale": "A price of exactly 1,000 yen is not higher than 1,000 yen; do not read this as inclusive 以上."
+        },
+        {
+          "id": "out-of-range",
+          "label": "範囲外",
+          "rationale": "千円より高い means priced higher than 1,000 yen. Equality does not satisfy this comparison."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "7c333cefdaeca36551465c54cc3d30dc4f943f338eb694ff5e2fcf25f4147b5d",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "千円",
+            "reading": "せんえん",
+            "headword": "千円",
+            "gloss": "one thousand yen"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "高い",
+            "reading": "たかい",
+            "headword": "高い",
+            "gloss": "high-priced; expensive"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-participants-strict-less-boundary",
+      "jlpt": 4,
+      "target": "out-of-range",
+      "relationship": "boundaries",
+      "prompt": "「参加者は十人より少ないです。」→____",
+      "translation": "Read the Japanese statement and test the specified value against its numerical bound. Use the external label 範囲内（はんいない）, inside the described range, or 範囲外（はんいがい）, outside it; kana is accepted. This is range membership, not a claim that the actual unknown quantity equals the test value, or that every other eligibility condition is satisfied. Test exactly ten people.",
+      "evidence": "Inclusive versus strict bounds, lower versus upper direction, equality probes and non-boundary probes; paired comparison statements share scene keys.",
+      "explanation": "十人より少ない means fewer than ten. Exactly ten is outside the range.",
+      "answer": "out-of-range",
+      "acceptedAnswers": [
+        "範囲外",
+        "はんいがい"
+      ],
+      "options": [
+        {
+          "id": "in-range",
+          "label": "範囲内",
+          "rationale": "Equality does not satisfy 'fewer than'; this is not inclusive 以下."
+        },
+        {
+          "id": "out-of-range",
+          "label": "範囲外",
+          "rationale": "十人より少ない means fewer than ten. Exactly ten is outside the range."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "cd2dd079cd26d09d8d7dd8c977f704efed65f327aabddad619724c7cb87cf3c0",
+        "spans": [
+          {
+            "start": 1,
+            "end": 4,
+            "text": "参加者",
+            "reading": "さんかしゃ",
+            "headword": "参加者",
+            "gloss": "participant; participants"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "十人",
+            "reading": "じゅうにん",
+            "headword": "十人",
+            "gloss": "ten people"
+          },
+          {
+            "start": 9,
+            "end": 12,
+            "text": "少ない",
+            "reading": "すくない",
+            "headword": "少ない",
+            "gloss": "few; small in number"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-umbrella-strict-less-inside",
+      "jlpt": 4,
+      "target": "in-range",
+      "relationship": "boundaries",
+      "prompt": "「この傘は千円より安いです。」→____",
+      "translation": "Read the Japanese statement and test the specified value against its numerical bound. Use the external label 範囲内（はんいない）, inside the described range, or 範囲外（はんいがい）, outside it; kana is accepted. This is range membership, not a claim that the actual unknown quantity equals the test value, or that every other eligibility condition is satisfied. Test a price of 900 yen.",
+      "evidence": "Inclusive versus strict bounds, lower versus upper direction, equality probes and non-boundary probes; paired comparison statements share scene keys.",
+      "explanation": "千円より安い describes a price below 1,000 yen. A price of 900 yen fits, without identifying the actual price.",
+      "answer": "in-range",
+      "acceptedAnswers": [
+        "範囲内",
+        "はんいない"
+      ],
+      "options": [
+        {
+          "id": "in-range",
+          "label": "範囲内",
+          "rationale": "千円より安い describes a price below 1,000 yen. A price of 900 yen fits, without identifying the actual price."
+        },
+        {
+          "id": "out-of-range",
+          "label": "範囲外",
+          "rationale": "Nine hundred yen is lower than 1,000 yen and therefore satisfies this comparison."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "a81f45100e00b3394a5a5cf0d510213051aefeb59f0bf687f150cfa7e89a318a",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "千円",
+            "reading": "せんえん",
+            "headword": "千円",
+            "gloss": "one thousand yen"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "安い",
+            "reading": "やすい",
+            "headword": "安い",
+            "gloss": "low-priced; inexpensive"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-walking-time-benchmark",
+      "jlpt": 4,
+      "target": "minimum",
+      "relationship": "quantity-framing",
+      "prompt": "「ここから駅まで三十分はかかります。」→____",
+      "translation": "Classify the quantity framing, not the general topic or the speaker's certainty. Use the external labels 最低限（さいていげん）, an at-least benchmark, or 不定量（ふていりょう）, some unspecified number. Kana is accepted. ",
+      "evidence": "Minimum-time assertion versus cash request; floating book quantity versus quantity-modified vehicle noun.",
+      "explanation": "三十分はかかります presents thirty minutes as an at-least time benchmark. It is not an indefinite-counter expression for some unknown number of minutes.",
+      "answer": "minimum",
+      "acceptedAnswers": [
+        "最低限",
+        "さいていげん"
+      ],
+      "options": [
+        {
+          "id": "minimum",
+          "label": "最低限",
+          "rationale": "三十分はかかります presents thirty minutes as an at-least time benchmark. It is not an indefinite-counter expression for some unknown number of minutes."
+        },
+        {
+          "id": "unspecified",
+          "label": "不定量",
+          "rationale": "The statement supplies a benchmark of thirty minutes, not just an unspecified quantity."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "4502b5f4fbcd5ab0162eeb8bee4af91231361649b5af9e344558087c0e1b96fc",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "ここ",
+            "reading": "ここ",
+            "headword": "ここ",
+            "gloss": "here; this place"
+          },
+          {
+            "start": 5,
+            "end": 6,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 8,
+            "end": 11,
+            "text": "三十分",
+            "reading": "さんじゅっぷん",
+            "headword": "三十分",
+            "gloss": "thirty minutes"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-cash-request-benchmark",
+      "jlpt": 4,
+      "target": "minimum",
+      "relationship": "quantity-framing",
+      "prompt": "「五千円は持って来てください。」→____",
+      "translation": "Classify the quantity framing, not the general topic or the speaker's certainty. Use the external labels 最低限（さいていげん）, an at-least benchmark, or 不定量（ふていりょう）, some unspecified number. Kana is accepted. ",
+      "evidence": "Minimum-time assertion versus cash request; floating book quantity versus quantity-modified vehicle noun.",
+      "explanation": "五千円は asks for at least the stated cash benchmark. The request does not mean that every use of topic は establishes a mathematical lower limit.",
+      "answer": "minimum",
+      "acceptedAnswers": [
+        "最低限",
+        "さいていげん"
+      ],
+      "options": [
+        {
+          "id": "minimum",
+          "label": "最低限",
+          "rationale": "五千円は asks for at least the stated cash benchmark. The request does not mean that every use of topic は establishes a mathematical lower limit."
+        },
+        {
+          "id": "unspecified",
+          "label": "不定量",
+          "rationale": "The request highlights a stated minimum benchmark rather than leaving the number of yen unspecified."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "e178016b98b44a109a2e8ada3c19ca19a043883b8d9ec9037912c8f0c45a78e5",
+        "spans": [
+          {
+            "start": 1,
+            "end": 4,
+            "text": "五千円",
+            "reading": "ごせんえん",
+            "headword": "五千円",
+            "gloss": "five thousand yen"
+          },
+          {
+            "start": 5,
+            "end": 10,
+            "text": "持って来て",
+            "reading": "もってきて",
+            "headword": "持って来る",
+            "gloss": "bring (te-form)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-books-unspecified-count",
+      "jlpt": 4,
+      "target": "unspecified",
+      "relationship": "quantity-framing",
+      "prompt": "「本を何冊か借りました。」→____",
+      "translation": "Classify the quantity framing, not the general topic or the speaker's certainty. Use the external labels 最低限（さいていげん）, an at-least benchmark, or 不定量（ふていりょう）, some unspecified number. Kana is accepted. Counter help: 冊（さつ） counts books.",
+      "evidence": "Minimum-time assertion versus cash request; floating book quantity versus quantity-modified vehicle noun.",
+      "explanation": "何冊か says some books, without specifying their number. It does not give a particular numerical minimum comparable to 三冊は.",
+      "answer": "unspecified",
+      "acceptedAnswers": [
+        "不定量",
+        "ふていりょう"
+      ],
+      "options": [
+        {
+          "id": "minimum",
+          "label": "最低限",
+          "rationale": "There is no specified numerical benchmark here; 何冊か leaves the count unspecified."
+        },
+        {
+          "id": "unspecified",
+          "label": "不定量",
+          "rationale": "何冊か says some books, without specifying their number. It does not give a particular numerical minimum comparable to 三冊は."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "1d703f7533a21f35f2f45f933fb7a2746e7c5d0ec9d400a63dfc95d6747b3a25",
+        "spans": [
+          {
+            "start": 1,
+            "end": 2,
+            "text": "本",
+            "reading": "ほん",
+            "headword": "本",
+            "gloss": "book"
+          },
+          {
+            "start": 6,
+            "end": 11,
+            "text": "借りました",
+            "reading": "かりました",
+            "headword": "借りる",
+            "gloss": "borrowed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-cars-unspecified-modifier",
+      "jlpt": 4,
+      "target": "unspecified",
+      "relationship": "quantity-framing",
+      "prompt": "「何台かの車が並んでいます。」→____",
+      "translation": "Classify the quantity framing, not the general topic or the speaker's certainty. Use the external labels 最低限（さいていげん）, an at-least benchmark, or 不定量（ふていりょう）, some unspecified number. Kana is accepted. Counter help: 台（だい） counts vehicles.",
+      "evidence": "Minimum-time assertion versus cash request; floating book quantity versus quantity-modified vehicle noun.",
+      "explanation": "何台かの車 is a noun phrase for some unspecified number of cars. の links the quantity phrase to 車; the message does not supply a particular lower-bound number.",
+      "answer": "unspecified",
+      "acceptedAnswers": [
+        "不定量",
+        "ふていりょう"
+      ],
+      "options": [
+        {
+          "id": "minimum",
+          "label": "最低限",
+          "rationale": "The number is unspecified, not a stated numerical benchmark."
+        },
+        {
+          "id": "unspecified",
+          "label": "不定量",
+          "rationale": "何台かの車 is a noun phrase for some unspecified number of cars. の links the quantity phrase to 車; the message does not supply a particular lower-bound number."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "031c14e3bf0e276acdd7bdfea9b09ffb65b763c3b377477beab2f47b30ce34ad",
+        "spans": [
+          {
+            "start": 5,
+            "end": 6,
+            "text": "車",
+            "reading": "くるま",
+            "headword": "車",
+            "gloss": "car; vehicle"
+          },
+          {
+            "start": 7,
+            "end": 13,
+            "text": "並んでいます",
+            "reading": "ならんでいます",
+            "headword": "並ぶ",
+            "gloss": "are lined up"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-weekly-library-rate",
+      "jlpt": 4,
+      "target": "per-period",
+      "relationship": "frequency",
+      "prompt": "図書館に____行きます。",
+      "translation": "Pieces, not in answer order: 二回（にかい）, the occurrence count, and 一週間（いっしゅうかん）, the period. Express this schedule using the に frequency construction; fill the whole phrase and retain both quantities. Keep the supplied lexical expressions, in their shown spelling or kana, and use the named frame. Do not substitute another recurrence expression or add a focus/approximation particle.",
+      "evidence": "Adverbial period/count assembly versus a rate whose count must be linked to the following noun; the second operation must supply noun attachment, not merely substitute an hour or a train counter.",
+      "explanation": "一週間に二回 distributes two visits within each week. 一週間ごとに alone says every week but loses the supplied count of two visits.",
+      "answer": "per-period",
+      "acceptedAnswers": [
+        "一週間に二回",
+        "一週間ににかい",
+        "いっしゅうかんに二回",
+        "いっしゅうかんににかい"
+      ],
+      "options": [
+        {
+          "id": "per-period",
+          "label": "一週間に二回",
+          "rationale": "一週間に二回 distributes two visits within each week. 一週間ごとに alone says every week but loses the supplied count of two visits."
+        },
+        {
+          "id": "per-occasion",
+          "label": "一週間ごとに",
+          "rationale": "一週間に二回 distributes two visits within each week. 一週間ごとに alone says every week but loses the supplied count of two visits."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "b2c8eb89b5e159a4bfb95645bf8bbcef5d3186100b5bb93e1aae4c356f84a467",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "図書館",
+            "reading": "としょかん",
+            "headword": "図書館",
+            "gloss": "library"
+          },
+          {
+            "start": 8,
+            "end": 12,
+            "text": "行きます",
+            "reading": "いきます",
+            "headword": "行く",
+            "gloss": "go"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-hourly-train-rate",
+      "jlpt": 4,
+      "target": "per-period",
+      "relationship": "frequency",
+      "prompt": "____電車がこの駅に来ます。",
+      "translation": "Pieces, not in answer order: 四本（よんほん）, the count, and 一時間（いちじかん）, the period. Use the に frequency construction and fill the whole missing expression. The count must modify 電車 as part of its noun phrase, rather than remain an adverbial count; supply the needed noun-linking particle. Retain both quantities in their supplied spelling or kana. Do not substitute another recurrence expression or add a focus/approximation particle.",
+      "evidence": "Adverbial period/count assembly versus a rate whose count must be linked to the following noun; the second operation must supply noun attachment, not merely substitute an hour or a train counter.",
+      "explanation": "一時間に gives the period and 四本の modifies 電車. The noun-linking の makes the count part of the noun phrase; the earlier library task instead leaves its occurrence count adverbial. 一時間ごとに alone loses the four-train count and does not supply the requested count-to-noun link. This rate does not promise equally spaced arrivals.",
+      "answer": "per-period",
+      "acceptedAnswers": [
+        "一時間に四本の",
+        "一時間によんほんの",
+        "いちじかんに四本の",
+        "いちじかんによんほんの"
+      ],
+      "options": [
+        {
+          "id": "per-period",
+          "label": "一時間に四本の",
+          "rationale": "一時間に gives the period and 四本の modifies 電車. The noun-linking の makes the count part of the noun phrase; the earlier library task instead leaves its occurrence count adverbial. 一時間ごとに alone loses the four-train count and does not supply the requested count-to-noun link. This rate does not promise equally spaced arrivals."
+        },
+        {
+          "id": "per-occasion",
+          "label": "一時間ごとに",
+          "rationale": "一時間に gives the period and 四本の modifies 電車. The noun-linking の makes the count part of the noun phrase; the earlier library task instead leaves its occurrence count adverbial. 一時間ごとに alone loses the four-train count and does not supply the requested count-to-noun link. This rate does not promise equally spaced arrivals."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d0f391941fd54b6f6ec72fd3113ff5dfc3d1116f0c5e699a83e610dfdbfb8e79",
+        "spans": [
+          {
+            "start": 4,
+            "end": 6,
+            "text": "電車",
+            "reading": "でんしゃ",
+            "headword": "電車",
+            "gloss": "train"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 9,
+            "end": 10,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 11,
+            "end": 14,
+            "text": "来ます",
+            "reading": "きます",
+            "headword": "来る",
+            "gloss": "come; arrive"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-grandmother-each-meeting",
+      "jlpt": 4,
+      "target": "per-occasion",
+      "relationship": "frequency",
+      "prompt": "祖母に____写真を撮ります。",
+      "translation": "Base: 会いました（あいました）, met. Recover its dictionary form and attach ごとに to mean on each meeting occasion. For this written-base conversion, retain 会 or write the verb in hiragana; ごと／毎 spellings are accepted. Keep the supplied lexical expressions, in their shown spelling or kana, and use the named frame. Do not substitute another recurrence expression or add a focus/approximation particle.",
+      "evidence": "Recover a godan dictionary form versus recover an event noun without its past copula; meeting recurrence and order-based distribution.",
+      "explanation": "会いました comes from godan 会う. 会うごとに associates a photo with each meeting; 会うに alone does not make that recurrence construction. This does not state how many meetings occur in a week.",
+      "answer": "per-occasion",
+      "acceptedAnswers": [
+        "会うごとに",
+        "会う毎に",
+        "あうごとに",
+        "あう毎に"
+      ],
+      "options": [
+        {
+          "id": "per-occasion",
+          "label": "会うごとに",
+          "rationale": "会いました comes from godan 会う. 会うごとに associates a photo with each meeting; 会うに alone does not make that recurrence construction. This does not state how many meetings occur in a week."
+        },
+        {
+          "id": "per-period",
+          "label": "会うに",
+          "rationale": "会いました comes from godan 会う. 会うごとに associates a photo with each meeting; 会うに alone does not make that recurrence construction. This does not state how many meetings occur in a week."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "373505ed096febd0f4ad7d772e7d345b2e1ce201ff8f610c9a021787413f1d1a",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "祖母",
+            "reading": "そぼ",
+            "headword": "祖母",
+            "gloss": "my grandmother"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "写真",
+            "reading": "しゃしん",
+            "headword": "写真",
+            "gloss": "photograph"
+          },
+          {
+            "start": 10,
+            "end": 14,
+            "text": "撮ります",
+            "reading": "とります",
+            "headword": "撮る",
+            "gloss": "take a photograph"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-card-each-order",
+      "jlpt": 4,
+      "target": "per-occasion",
+      "relationship": "frequency",
+      "prompt": "____カードを入れます。",
+      "translation": "Base: 注文でした（ちゅうもんでした）, it was an order. Recover the noun and use ごとに to distribute card-inclusion over each order. Retain 注文 or its kana; ごと／毎 spellings are accepted. Keep the supplied lexical expressions, in their shown spelling or kana, and use the named frame. Do not substitute another recurrence expression or add a focus/approximation particle.",
+      "evidence": "Recover a godan dictionary form versus recover an event noun without its past copula; meeting recurrence and order-based distribution.",
+      "explanation": "Recover 注文 without the past copula, then form 注文ごとに, for each order. 注文に can identify an order as a target, but does not itself explicitly distribute the action over every order. This is not a per-hour or per-week rate.",
+      "answer": "per-occasion",
+      "acceptedAnswers": [
+        "注文ごとに",
+        "注文毎に",
+        "ちゅうもんごとに",
+        "ちゅうもん毎に"
+      ],
+      "options": [
+        {
+          "id": "per-occasion",
+          "label": "注文ごとに",
+          "rationale": "Recover 注文 without the past copula, then form 注文ごとに, for each order. 注文に can identify an order as a target, but does not itself explicitly distribute the action over every order. This is not a per-hour or per-week rate."
+        },
+        {
+          "id": "per-period",
+          "label": "注文に",
+          "rationale": "Recover 注文 without the past copula, then form 注文ごとに, for each order. 注文に can identify an order as a target, but does not itself explicitly distribute the action over every order. This is not a per-hour or per-week rate."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d69f3aaff418f5c331db4c4cb881f3899c64bc3bc350666cc41f60aec9513277",
+        "spans": [
+          {
+            "start": 4,
+            "end": 7,
+            "text": "カード",
+            "reading": "かーど",
+            "headword": "カード",
+            "gloss": "card"
+          },
+          {
+            "start": 8,
+            "end": 12,
+            "text": "入れます",
+            "reading": "いれます",
+            "headword": "入れる",
+            "gloss": "put in"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-no-water-drinking",
+      "jlpt": 4,
+      "target": "absence",
+      "relationship": "negative-scope",
+      "prompt": "「今朝は水を少しも飲みませんでした。」→____",
+      "translation": "Interpret the complete quoted message, not just the presence of a negative ending. Use these defined external labels: 皆無（かいむ）, no amount/degree of the named action or property; 少量否定（しょうりょうひてい）, the amount is explicitly described as not small; 例外なし（れいがいなし）, no member of the stated group fails the underlying positive condition. Kana is accepted. These are analysis labels, not text to insert into the quotation.",
+      "evidence": "Action amount versus property degree; count versus expense; unused inanimate tools versus inability of animate class members.",
+      "explanation": "少しも飲みませんでした denies even a small amount of water-drinking that morning. It does not say that the amount drunk was substantial or discuss exceptions among people.",
+      "answer": "absence",
+      "acceptedAnswers": [
+        "皆無",
+        "かいむ"
+      ],
+      "options": [
+        {
+          "id": "absence",
+          "label": "皆無",
+          "rationale": "少しも飲みませんでした denies even a small amount of water-drinking that morning. It does not say that the amount drunk was substantial or discuss exceptions among people."
+        },
+        {
+          "id": "not-small",
+          "label": "少量否定",
+          "rationale": "This is denial of any amount of the named action, not denial that an amount is small or a claim about every member of a group."
+        },
+        {
+          "id": "no-exception",
+          "label": "例外なし",
+          "rationale": "This is denial of any amount of the named action, not denial that an amount is small or a claim about every member of a group."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "ae57d563ede677c54628b8c9cd228de9a1158bd678c22a30d457c947b550e581",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "今朝",
+            "reading": "けさ",
+            "headword": "今朝",
+            "gloss": "this morning"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "水",
+            "reading": "みず",
+            "headword": "水",
+            "gloss": "water"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "飲み",
+            "reading": "のみ",
+            "headword": "飲む",
+            "gloss": "drink (stem)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-not-cold-at-all",
+      "jlpt": 4,
+      "target": "absence",
+      "relationship": "negative-scope",
+      "prompt": "「この部屋は少しも寒くありません。」→____",
+      "translation": "Interpret the complete quoted message, not just the presence of a negative ending. Use these defined external labels: 皆無（かいむ）, no amount/degree of the named action or property; 少量否定（しょうりょうひてい）, the amount is explicitly described as not small; 例外なし（れいがいなし）, no member of the stated group fails the underlying positive condition. Kana is accepted. These are analysis labels, not text to insert into the quotation.",
+      "evidence": "Action amount versus property degree; count versus expense; unused inanimate tools versus inability of animate class members.",
+      "explanation": "少しも寒くありません denies even a small degree of coldness here. This is not a claim that the thermometer reads zero degrees.",
+      "answer": "absence",
+      "acceptedAnswers": [
+        "皆無",
+        "かいむ"
+      ],
+      "options": [
+        {
+          "id": "absence",
+          "label": "皆無",
+          "rationale": "少しも寒くありません denies even a small degree of coldness here. This is not a claim that the thermometer reads zero degrees."
+        },
+        {
+          "id": "not-small",
+          "label": "少量否定",
+          "rationale": "The predicate denies coldness altogether; it does not state a substantial quantity or quantify all members of a group."
+        },
+        {
+          "id": "no-exception",
+          "label": "例外なし",
+          "rationale": "The predicate denies coldness altogether; it does not state a substantial quantity or quantify all members of a group."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "e638b6e9e6ed6646b31c3d7186c49ea05dbd78a0ac246e590c11d45d1ab8806a",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "部屋",
+            "reading": "へや",
+            "headword": "部屋",
+            "gloss": "room"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "寒く",
+            "reading": "さむく",
+            "headword": "寒い",
+            "gloss": "cold (ku form)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-not-few-cyclists",
+      "jlpt": 4,
+      "target": "not-small",
+      "relationship": "negative-scope",
+      "prompt": "「この町には自転車を使う人が少なくありません。」→____",
+      "translation": "Interpret the complete quoted message, not just the presence of a negative ending. Use these defined external labels: 皆無（かいむ）, no amount/degree of the named action or property; 少量否定（しょうりょうひてい）, the amount is explicitly described as not small; 例外なし（れいがいなし）, no member of the stated group fails the underlying positive condition. Kana is accepted. These are analysis labels, not text to insert into the quotation.",
+      "evidence": "Action amount versus property degree; count versus expense; unused inanimate tools versus inability of animate class members.",
+      "explanation": "少なくありません negates 少ない, few. There are not just a few bicycle users; it does not mean no users, and does not assert that every resident uses a bicycle.",
+      "answer": "not-small",
+      "acceptedAnswers": [
+        "少量否定",
+        "しょうりょうひてい"
+      ],
+      "options": [
+        {
+          "id": "absence",
+          "label": "皆無",
+          "rationale": "Denying that the number is small is neither zero people nor a statement about all residents."
+        },
+        {
+          "id": "not-small",
+          "label": "少量否定",
+          "rationale": "少なくありません negates 少ない, few. There are not just a few bicycle users; it does not mean no users, and does not assert that every resident uses a bicycle."
+        },
+        {
+          "id": "no-exception",
+          "label": "例外なし",
+          "rationale": "Denying that the number is small is neither zero people nor a statement about all residents."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "7ec96c137338196341056c41668e38b1df80a74a0ecd41b4e6c387079d0cbe31",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "町",
+            "reading": "まち",
+            "headword": "町",
+            "gloss": "town"
+          },
+          {
+            "start": 6,
+            "end": 9,
+            "text": "自転車",
+            "reading": "じてんしゃ",
+            "headword": "自転車",
+            "gloss": "bicycle"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "使う",
+            "reading": "つかう",
+            "headword": "使う",
+            "gloss": "use"
+          },
+          {
+            "start": 12,
+            "end": 13,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "person; people"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-not-small-travel-expense",
+      "jlpt": 4,
+      "target": "not-small",
+      "relationship": "negative-scope",
+      "prompt": "「旅行の費用は少なくない。」→____",
+      "translation": "Interpret the complete quoted message, not just the presence of a negative ending. Use these defined external labels: 皆無（かいむ）, no amount/degree of the named action or property; 少量否定（しょうりょうひてい）, the amount is explicitly described as not small; 例外なし（れいがいなし）, no member of the stated group fails the underlying positive condition. Kana is accepted. These are analysis labels, not text to insert into the quotation.",
+      "evidence": "Action amount versus property degree; count versus expense; unused inanimate tools versus inability of animate class members.",
+      "explanation": "少なくない describes the travel expense as not small. No exact price follows, and the negative does not remove the expense.",
+      "answer": "not-small",
+      "acceptedAnswers": [
+        "少量否定",
+        "しょうりょうひてい"
+      ],
+      "options": [
+        {
+          "id": "absence",
+          "label": "皆無",
+          "rationale": "The statement denies a small amount, rather than denying all expense or stating a no-exception rule."
+        },
+        {
+          "id": "not-small",
+          "label": "少量否定",
+          "rationale": "少なくない describes the travel expense as not small. No exact price follows, and the negative does not remove the expense."
+        },
+        {
+          "id": "no-exception",
+          "label": "例外なし",
+          "rationale": "The statement denies a small amount, rather than denying all expense or stating a no-exception rule."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "38f1e13fda103ec434c4882167e16a0c76dd6b485c243b2b0597c8b3daceeed9",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "旅行",
+            "reading": "りょこう",
+            "headword": "旅行",
+            "gloss": "travel; trip"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "費用",
+            "reading": "ひよう",
+            "headword": "費用",
+            "gloss": "expense; cost"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-no-unused-box-tools",
+      "jlpt": 4,
+      "target": "no-exception",
+      "relationship": "negative-scope",
+      "prompt": "「この箱には、使わない道具はありません。」→____",
+      "translation": "Interpret the complete quoted message, not just the presence of a negative ending. Use these defined external labels: 皆無（かいむ）, no amount/degree of the named action or property; 少量否定（しょうりょうひてい）, the amount is explicitly described as not small; 例外なし（れいがいなし）, no member of the stated group fails the underlying positive condition. Kana is accepted. These are analysis labels, not text to insert into the quotation.",
+      "evidence": "Action amount versus property degree; count versus expense; unused inanimate tools versus inability of animate class members.",
+      "explanation": "The box contains no tool that the speaker does not use. The inner negative describes a possible unused tool; the outer negative denies such a counterexample within this box. This does not certify use of every tool in the world. 例外無し is an accepted spelling of the same response label, not a different interpretation.",
+      "answer": "no-exception",
+      "acceptedAnswers": [
+        "例外なし",
+        "れいがいなし",
+        "例外無し",
+        "れいがい無し"
+      ],
+      "options": [
+        {
+          "id": "absence",
+          "label": "皆無",
+          "rationale": "The outer negative removes the unused-tool counterexample; it does not say there are no tools or merely that the quantity is not small."
+        },
+        {
+          "id": "not-small",
+          "label": "少量否定",
+          "rationale": "The outer negative removes the unused-tool counterexample; it does not say there are no tools or merely that the quantity is not small."
+        },
+        {
+          "id": "no-exception",
+          "label": "例外なし",
+          "rationale": "The box contains no tool that the speaker does not use. The inner negative describes a possible unused tool; the outer negative denies such a counterexample within this box. This does not certify use of every tool in the world."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "55cbb46f23f406f9582577cefa11719e47e0d6a4b2ff34bff79401e2f0cd513b",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "箱",
+            "reading": "はこ",
+            "headword": "箱",
+            "gloss": "box"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "使わ",
+            "reading": "つかわ",
+            "headword": "使う",
+            "gloss": "use (stem before nai)"
+          },
+          {
+            "start": 11,
+            "end": 13,
+            "text": "道具",
+            "reading": "どうぐ",
+            "headword": "道具",
+            "gloss": "tool; implement"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-no-nonswimmers-class",
+      "jlpt": 4,
+      "target": "no-exception",
+      "relationship": "negative-scope",
+      "prompt": "「このクラスには、泳げない人はいません。」→____",
+      "translation": "Interpret the complete quoted message, not just the presence of a negative ending. Use these defined external labels: 皆無（かいむ）, no amount/degree of the named action or property; 少量否定（しょうりょうひてい）, the amount is explicitly described as not small; 例外なし（れいがいなし）, no member of the stated group fails the underlying positive condition. Kana is accepted. These are analysis labels, not text to insert into the quotation.",
+      "evidence": "Action amount versus property degree; count versus expense; unused inanimate tools versus inability of animate class members.",
+      "explanation": "There is no person in this class who cannot swim. The inner inability is inside the description of a counterexample, whose existence is denied. The domain is this class, not every person. 例外無し is an accepted spelling of the same response label, not a different interpretation.",
+      "answer": "no-exception",
+      "acceptedAnswers": [
+        "例外なし",
+        "れいがいなし",
+        "例外無し",
+        "れいがい無し"
+      ],
+      "options": [
+        {
+          "id": "absence",
+          "label": "皆無",
+          "rationale": "This denies the existence of a nonswimmer in the class, not the existence of all people or the smallness of their number."
+        },
+        {
+          "id": "not-small",
+          "label": "少量否定",
+          "rationale": "This denies the existence of a nonswimmer in the class, not the existence of all people or the smallness of their number."
+        },
+        {
+          "id": "no-exception",
+          "label": "例外なし",
+          "rationale": "There is no person in this class who cannot swim. The inner inability is inside the description of a counterexample, whose existence is denied. The domain is this class, not every person."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "5fb3d0130d8d68deea78b0508af3a3856685fdf84df8670c28ab55114b388994",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 3,
+            "end": 6,
+            "text": "クラス",
+            "reading": "くらす",
+            "headword": "クラス",
+            "gloss": "class"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "泳げ",
+            "reading": "およげ",
+            "headword": "泳ぐ",
+            "gloss": "swim (potential stem)"
+          },
+          {
+            "start": 13,
+            "end": 14,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "person; people"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-walking-required-time",
+      "jlpt": 4,
+      "target": "required-resource",
+      "relationship": "cost-frames",
+      "prompt": "「駅から学校まで歩いて十五分かかります。」→____",
+      "translation": "Classify the main predicate's use in this particular frame, not every compatible paraphrase or every fact implied by the message. Use the external labels 必要量（ひつようりょう）, time or money required for a process; 価格（かかく）, an item's price; 活動時間（かつどうじかん）, time devoted to doing an activity without itself asserting a required completion time. Kana is accepted.",
+      "evidence": "Required time versus money; a main-clause price versus a noun-modifying price with a separate outer resource predicate; adverbial activity duration versus time identified by a past activity clause. Defined labels do not import absent higher-level constructions.",
+      "explanation": "十五分かかります states the time the walking journey takes. It does not price an item or merely say that someone will do an activity for a chosen fifteen minutes.",
+      "answer": "required-resource",
+      "acceptedAnswers": [
+        "必要量",
+        "ひつようりょう"
+      ],
+      "options": [
+        {
+          "id": "required-resource",
+          "label": "必要量",
+          "rationale": "十五分かかります states the time the walking journey takes. It does not price an item or merely say that someone will do an activity for a chosen fifteen minutes."
+        },
+        {
+          "id": "item-price",
+          "label": "価格",
+          "rationale": "The quoted predicate presents the journey's required time, not an item price or a separately chosen activity duration."
+        },
+        {
+          "id": "activity-duration",
+          "label": "活動時間",
+          "rationale": "The quoted predicate presents the journey's required time, not an item price or a separately chosen activity duration."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "efdb88bf89b0e6cb9f566a104cd63a8ad42cbf15253496c4626dccdc8bdf5fae",
+        "spans": [
+          {
+            "start": 1,
+            "end": 2,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "学校",
+            "reading": "がっこう",
+            "headword": "学校",
+            "gloss": "school"
+          },
+          {
+            "start": 8,
+            "end": 11,
+            "text": "歩いて",
+            "reading": "あるいて",
+            "headword": "歩く",
+            "gloss": "walk (te-form)"
+          },
+          {
+            "start": 11,
+            "end": 14,
+            "text": "十五分",
+            "reading": "じゅうごふん",
+            "headword": "十五分",
+            "gloss": "fifteen minutes"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-repair-required-money",
+      "jlpt": 4,
+      "target": "required-resource",
+      "relationship": "cost-frames",
+      "prompt": "「かばんの修理には三千円かかりました。」→____",
+      "translation": "Classify the main predicate's use in this particular frame, not every compatible paraphrase or every fact implied by the message. Use the external labels 必要量（ひつようりょう）, time or money required for a process; 価格（かかく）, an item's price; 活動時間（かつどうじかん）, time devoted to doing an activity without itself asserting a required completion time. Kana is accepted.",
+      "evidence": "Required time versus money; a main-clause price versus a noun-modifying price with a separate outer resource predicate; adverbial activity duration versus time identified by a past activity clause. Defined labels do not import absent higher-level constructions.",
+      "explanation": "三千円かかりました frames the money as an expense required for the repair. The unit is money, not minutes. This does not imply that every financial amount must use this verb or exclude price paraphrases.",
+      "answer": "required-resource",
+      "acceptedAnswers": [
+        "必要量",
+        "ひつようりょう"
+      ],
+      "options": [
+        {
+          "id": "required-resource",
+          "label": "必要量",
+          "rationale": "三千円かかりました frames the money as an expense required for the repair. The unit is money, not minutes. This does not imply that every financial amount must use this verb or exclude price paraphrases."
+        },
+        {
+          "id": "item-price",
+          "label": "価格",
+          "rationale": "This particular clause uses a required-expense frame for a process; classify that frame rather than every possible financial paraphrase."
+        },
+        {
+          "id": "activity-duration",
+          "label": "活動時間",
+          "rationale": "This particular clause uses a required-expense frame for a process; classify that frame rather than every possible financial paraphrase."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "fd2530565adc4689307b28b3e971ac9bb1c2cf828dff3428cea7ff32fc0663c5",
+        "spans": [
+          {
+            "start": 1,
+            "end": 4,
+            "text": "かばん",
+            "reading": "かばん",
+            "headword": "かばん",
+            "gloss": "bag"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "修理",
+            "reading": "しゅうり",
+            "headword": "修理",
+            "gloss": "repair"
+          },
+          {
+            "start": 9,
+            "end": 12,
+            "text": "三千円",
+            "reading": "さんぜんえん",
+            "headword": "三千円",
+            "gloss": "three thousand yen"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-cup-price-present",
+      "jlpt": 4,
+      "target": "item-price",
+      "relationship": "cost-frames",
+      "prompt": "「このカップは八百円します。」→____",
+      "translation": "Classify the main predicate's use in this particular frame, not every compatible paraphrase or every fact implied by the message. Use the external labels 必要量（ひつようりょう）, time or money required for a process; 価格（かかく）, an item's price; 活動時間（かつどうじかん）, time devoted to doing an activity without itself asserting a required completion time. Kana is accepted.",
+      "evidence": "Required time versus money; a main-clause price versus a noun-modifying price with a separate outer resource predicate; adverbial activity duration versus time identified by a past activity clause. Defined labels do not import absent higher-level constructions.",
+      "explanation": "Here します attributes an 800-yen price to the cup. It is not ordinary 'do an activity' and does not assert that a purchase already happened. The verb itself does not mean 'approximately'.",
+      "answer": "item-price",
+      "acceptedAnswers": [
+        "価格",
+        "かかく"
+      ],
+      "options": [
+        {
+          "id": "required-resource",
+          "label": "必要量",
+          "rationale": "The item and monetary amount form a price statement here, not activity duration or a separately named process's resource requirement."
+        },
+        {
+          "id": "item-price",
+          "label": "価格",
+          "rationale": "Here します attributes an 800-yen price to the cup. It is not ordinary 'do an activity' and does not assert that a purchase already happened. The verb itself does not mean 'approximately'."
+        },
+        {
+          "id": "activity-duration",
+          "label": "活動時間",
+          "rationale": "The item and monetary amount form a price statement here, not activity duration or a separately named process's resource requirement."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "bab3bd405c8fe0798c81ce9c32cae1b39529e218cad9a599c3fdde1b5b6c7d83",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 3,
+            "end": 6,
+            "text": "カップ",
+            "reading": "かっぷ",
+            "headword": "カップ",
+            "gloss": "cup"
+          },
+          {
+            "start": 7,
+            "end": 10,
+            "text": "八百円",
+            "reading": "はっぴゃくえん",
+            "headword": "八百円",
+            "gloss": "eight hundred yen"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-watch-price-past",
+      "jlpt": 4,
+      "target": "item-price",
+      "relationship": "cost-frames",
+      "prompt": "「二千円した時計の修理に三十分かかりました。」→____",
+      "translation": "Classify した in the phrase modifying 時計, not the final predicate かかりました. Read which noun the selected predicate describes rather than assigning every amount in the sentence one category. Use the external labels 必要量（ひつようりょう）, time or money required for a process; 価格（かかく）, an item's price; 活動時間（かつどうじかん）, time devoted to doing an activity without itself asserting a required completion time. Kana is accepted.",
+      "evidence": "Required time versus money; a main-clause price versus a noun-modifying price with a separate outer resource predicate; adverbial activity duration versus time identified by a past activity clause. Defined labels do not import absent higher-level constructions.",
+      "explanation": "二千円した modifies 時計 and attributes a 2,000-yen price to that watch. The outer かかりました instead gives the time required for its repair. The selected inner predicate is the item-price use of する; it does not identify who paid.",
+      "answer": "item-price",
+      "acceptedAnswers": [
+        "価格",
+        "かかく"
+      ],
+      "options": [
+        {
+          "id": "required-resource",
+          "label": "必要量",
+          "rationale": "The outer かかりました does give required repair time, but that is not the selected predicate. 二千円した modifies 時計 and gives its price."
+        },
+        {
+          "id": "item-price",
+          "label": "価格",
+          "rationale": "二千円した modifies 時計 and attributes a 2,000-yen price to that watch. The outer かかりました instead gives the time required for its repair. The selected inner predicate is the item-price use of する; it does not identify who paid."
+        },
+        {
+          "id": "activity-duration",
+          "label": "活動時間",
+          "rationale": "The selected した attributes a monetary price to 時計, not time devoted to an ordinary activity. The repair time belongs to the separate outer かかりました."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "fb3e6c3dcafb009d11453c4e171cbe070fdb96bfa547f5eb62cccf7a92ada90c",
+        "spans": [
+          {
+            "start": 1,
+            "end": 4,
+            "text": "二千円",
+            "reading": "にせんえん",
+            "headword": "二千円",
+            "gloss": "two thousand yen"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "時計",
+            "reading": "とけい",
+            "headword": "時計",
+            "gloss": "watch; clock"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "修理",
+            "reading": "しゅうり",
+            "headword": "修理",
+            "gloss": "repair"
+          },
+          {
+            "start": 12,
+            "end": 15,
+            "text": "三十分",
+            "reading": "さんじゅっぷん",
+            "headword": "三十分",
+            "gloss": "thirty minutes"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-planned-cleaning-duration",
+      "jlpt": 5,
+      "target": "activity-duration",
+      "relationship": "cost-frames",
+      "prompt": "「今日は掃除を三十分します。」→____",
+      "translation": "Classify the main predicate's use in this particular frame, not every compatible paraphrase or every fact implied by the message. Use the external labels 必要量（ひつようりょう）, time or money required for a process; 価格（かかく）, an item's price; 活動時間（かつどうじかん）, time devoted to doing an activity without itself asserting a required completion time. Kana is accepted.",
+      "evidence": "Required time versus money; a main-clause price versus a noun-modifying price with a separate outer resource predicate; adverbial activity duration versus time identified by a past activity clause. Defined labels do not import absent higher-level constructions.",
+      "explanation": "This is ordinary 掃除をします with a duration: the speaker plans to clean for thirty minutes today. That alone does not state the minimum time needed to finish all cleaning.",
+      "answer": "activity-duration",
+      "acceptedAnswers": [
+        "活動時間",
+        "かつどうじかん"
+      ],
+      "options": [
+        {
+          "id": "required-resource",
+          "label": "必要量",
+          "rationale": "An activity is the object of ordinary する here. A duration can accompany that action without making する the 'take time' predicate."
+        },
+        {
+          "id": "item-price",
+          "label": "価格",
+          "rationale": "An activity is the object of ordinary する here. A duration can accompany that action without making する the 'take time' predicate."
+        },
+        {
+          "id": "activity-duration",
+          "label": "活動時間",
+          "rationale": "This is ordinary 掃除をします with a duration: the speaker plans to clean for thirty minutes today. That alone does not state the minimum time needed to finish all cleaning."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "5a921625fdef8eae9fca34f6867bcdf1ed4c7e392069cee4794baab57b4abc80",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "今日",
+            "reading": "きょう",
+            "headword": "今日",
+            "gloss": "today"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "掃除",
+            "reading": "そうじ",
+            "headword": "掃除",
+            "gloss": "cleaning"
+          },
+          {
+            "start": 7,
+            "end": 10,
+            "text": "三十分",
+            "reading": "さんじゅっぷん",
+            "headword": "三十分",
+            "gloss": "thirty minutes"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-habitual-exercise-duration",
+      "jlpt": 5,
+      "target": "activity-duration",
+      "relationship": "cost-frames",
+      "prompt": "「今朝、運動をした時間は五分でした。」→____",
+      "translation": "Classify what the quoted amount measures. Read the whole phrase ending in 時間, rather than classifying only the final copula でした. Use the external labels 必要量（ひつようりょう）, time or money required for a process; 価格（かかく）, an item's price; 活動時間（かつどうじかん）, time devoted to doing an activity without itself asserting a required completion time. Kana is accepted.",
+      "evidence": "Required time versus money; a main-clause price versus a noun-modifying price with a separate outer resource predicate; adverbial activity duration versus time identified by a past activity clause. Defined labels do not import absent higher-level constructions.",
+      "explanation": "運動をした modifies 時間, identifying time spent exercising. 五分でした states the length of that activity this morning. This is a past activity-time report, not an item price or a statement of the time required to complete a separate process.",
+      "answer": "activity-duration",
+      "acceptedAnswers": [
+        "活動時間",
+        "かつどうじかん"
+      ],
+      "options": [
+        {
+          "id": "required-resource",
+          "label": "必要量",
+          "rationale": "運動をした時間 identifies time spent performing the activity. The statement equates that duration with five minutes; it does not assert a required completion-time minimum."
+        },
+        {
+          "id": "item-price",
+          "label": "価格",
+          "rationale": "五分 is a duration, and the preceding activity clause identifies what that time was spent doing. The copula does not turn it into a monetary price."
+        },
+        {
+          "id": "activity-duration",
+          "label": "活動時間",
+          "rationale": "運動をした modifies 時間, identifying time spent exercising. 五分でした states the length of that activity this morning. This is a past activity-time report, not an item price or a statement of the time required to complete a separate process."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "193588b9b6714a49e5500666b0647e3251422610a3c0a5546b40809df081097a",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "今朝",
+            "reading": "けさ",
+            "headword": "今朝",
+            "gloss": "this morning"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "運動",
+            "reading": "うんどう",
+            "headword": "運動",
+            "gloss": "physical exercise"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "時間",
+            "reading": "じかん",
+            "headword": "時間",
+            "gloss": "time"
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "五分",
+            "reading": "ごふん",
+            "headword": "五分",
+            "gloss": "five minutes"
+          }
+        ]
+      }
+    }
+  ],
+  "introductionGroups": [
+    {
+      "id": "quantity-scope-boundaries",
+      "label": "Check a value against an inclusive or strict numerical bound",
+      "facets": [
+        {
+          "id": "in-range",
+          "label": "The test value belongs to the described numerical range"
+        },
+        {
+          "id": "out-of-range",
+          "label": "The test value is outside the described numerical range"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "quantity-scope-age-minimum-boundary",
+          "facetId": "in-range",
+          "exampleKey": "class-age-boundary"
+        },
+        {
+          "exerciseId": "quantity-scope-participants-minimum-outside",
+          "facetId": "out-of-range",
+          "exampleKey": "participants-four-minimum"
+        },
+        {
+          "exerciseId": "quantity-scope-apples-maximum-boundary",
+          "facetId": "in-range",
+          "exampleKey": "box-apple-maximum"
+        },
+        {
+          "exerciseId": "quantity-scope-budget-maximum-outside",
+          "facetId": "out-of-range",
+          "exampleKey": "item-budget-maximum"
+        },
+        {
+          "exerciseId": "quantity-scope-participants-strict-more-inside",
+          "facetId": "in-range",
+          "exampleKey": "participants-ten-comparison"
+        },
+        {
+          "exerciseId": "quantity-scope-umbrella-strict-more-boundary",
+          "facetId": "out-of-range",
+          "exampleKey": "umbrella-price-comparison"
+        },
+        {
+          "exerciseId": "quantity-scope-participants-strict-less-boundary",
+          "facetId": "out-of-range",
+          "exampleKey": "participants-ten-comparison"
+        },
+        {
+          "exerciseId": "quantity-scope-umbrella-strict-less-inside",
+          "facetId": "in-range",
+          "exampleKey": "umbrella-price-comparison"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "n5-comparisons-change-comparison-direction",
+          "importance": 2,
+          "reason": "Reuse ordinary comparison direction without changing its N5 owner."
+        },
+        {
+          "groupId": "quantity-scope-quantity-framing",
+          "importance": 2,
+          "reason": "Distinguish precise numeric bounds from quantity framing."
+        },
+        {
+          "groupId": "n4-existing-comparison-addition",
+          "importance": 2,
+          "reason": "Reuse the established comparison/addition contrast rather than duplicate its answer pools."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "quantity-scope-quantity-framing",
+      "label": "Read a minimum benchmark versus an unspecified quantity",
+      "facets": [
+        {
+          "id": "minimum",
+          "label": "An at-least quantity benchmark"
+        },
+        {
+          "id": "unspecified",
+          "label": "Some unspecified number"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "quantity-scope-walking-time-benchmark",
+          "facetId": "minimum",
+          "exampleKey": "station-time-benchmark"
+        },
+        {
+          "exerciseId": "quantity-scope-cash-request-benchmark",
+          "facetId": "minimum",
+          "exampleKey": "cash-request-benchmark"
+        },
+        {
+          "exerciseId": "quantity-scope-books-unspecified-count",
+          "facetId": "unspecified",
+          "exampleKey": "borrowed-book-quantity"
+        },
+        {
+          "exerciseId": "quantity-scope-cars-unspecified-modifier",
+          "facetId": "unspecified",
+          "exampleKey": "parked-car-quantity"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "n5-existing-quantity-limits",
+          "importance": 2,
+          "reason": "Reuse estimates and exclusive limits rather than duplicate them."
+        },
+        {
+          "groupId": "restrict-restriction",
+          "importance": 2,
+          "reason": "Read the existing positive quantity retained by shika plus negation."
+        },
+        {
+          "groupId": "restrict-context",
+          "importance": 2,
+          "reason": "Reuse quantity emphasis and contextual inclusion."
+        },
+        {
+          "groupId": "quantity-scope-negative-scope",
+          "importance": 2,
+          "reason": "Decide what a negative statement denies."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "quantity-scope-frequency",
+      "label": "Build a per-period rate or a per-occasion expression",
+      "facets": [
+        {
+          "id": "per-period",
+          "label": "Time period plus ni plus occurrence count"
+        },
+        {
+          "id": "per-occasion",
+          "label": "Each occurrence or event unit with goto-ni"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "quantity-scope-weekly-library-rate",
+          "facetId": "per-period",
+          "exampleKey": "weekly-library-rate"
+        },
+        {
+          "exerciseId": "quantity-scope-hourly-train-rate",
+          "facetId": "per-period",
+          "exampleKey": "hourly-train-rate"
+        },
+        {
+          "exerciseId": "quantity-scope-grandmother-each-meeting",
+          "facetId": "per-occasion",
+          "exampleKey": "grandmother-meetings"
+        },
+        {
+          "exerciseId": "quantity-scope-card-each-order",
+          "facetId": "per-occasion",
+          "exampleKey": "order-cards"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "quantity-scope-cost-frames",
+          "importance": 2,
+          "reason": "Separate a rate per period from the time a process requires."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "quantity-scope-negative-scope",
+      "label": "Determine what the negative quantity statement actually denies",
+      "facets": [
+        {
+          "id": "absence",
+          "label": "No amount or degree of the named action or property"
+        },
+        {
+          "id": "not-small",
+          "label": "The quantity is explicitly described as not small"
+        },
+        {
+          "id": "no-exception",
+          "label": "No member of the stated domain fails the underlying positive condition"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "quantity-scope-no-water-drinking",
+          "facetId": "absence",
+          "exampleKey": "morning-water"
+        },
+        {
+          "exerciseId": "quantity-scope-not-cold-at-all",
+          "facetId": "absence",
+          "exampleKey": "room-coldness"
+        },
+        {
+          "exerciseId": "quantity-scope-not-few-cyclists",
+          "facetId": "not-small",
+          "exampleKey": "town-cyclists"
+        },
+        {
+          "exerciseId": "quantity-scope-not-small-travel-expense",
+          "facetId": "not-small",
+          "exampleKey": "travel-expense"
+        },
+        {
+          "exerciseId": "quantity-scope-no-unused-box-tools",
+          "facetId": "no-exception",
+          "exampleKey": "box-tool-use"
+        },
+        {
+          "exerciseId": "quantity-scope-no-nonswimmers-class",
+          "facetId": "no-exception",
+          "exampleKey": "class-swimming"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "restrict-negative",
+          "importance": 2,
+          "reason": "Retain the existing minimum-unit zero-count tasks."
+        },
+        {
+          "groupId": "n4-existing-outside-within",
+          "importance": 2,
+          "reason": "Reuse the domain distinction between outside and inside a named set."
+        },
+        {
+          "groupId": "listing-relations",
+          "importance": 2,
+          "reason": "Keep addition, reasons and contrasts in their original owner."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "quantity-scope-cost-frames",
+      "label": "Read a required resource, an item price or activity duration",
+      "facets": [
+        {
+          "id": "required-resource",
+          "label": "Time or money required for the named process"
+        },
+        {
+          "id": "item-price",
+          "label": "A price attributed to an item"
+        },
+        {
+          "id": "activity-duration",
+          "label": "Time spent performing an activity"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "quantity-scope-walking-required-time",
+          "facetId": "required-resource",
+          "exampleKey": "school-walking-time"
+        },
+        {
+          "exerciseId": "quantity-scope-repair-required-money",
+          "facetId": "required-resource",
+          "exampleKey": "bag-repair-cost"
+        },
+        {
+          "exerciseId": "quantity-scope-cup-price-present",
+          "facetId": "item-price",
+          "exampleKey": "cup-price"
+        },
+        {
+          "exerciseId": "quantity-scope-watch-price-past",
+          "facetId": "item-price",
+          "exampleKey": "watch-price"
+        },
+        {
+          "exerciseId": "quantity-scope-planned-cleaning-duration",
+          "facetId": "activity-duration",
+          "exampleKey": "planned-cleaning"
+        },
+        {
+          "exerciseId": "quantity-scope-habitual-exercise-duration",
+          "facetId": "activity-duration",
+          "exampleKey": "morning-exercise"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "quantity-scope-frequency",
+          "importance": 2,
+          "reason": "Revisit per-period quantities without confusing them with elapsed or required time."
+        }
+      ],
+      "requires": []
+    }
+  ]
+}

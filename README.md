@@ -155,6 +155,11 @@ in six groups: ease/difficulty and proneness, method nouns with argument changes
 and degree/quality nouns. Its [ledger](docs/grammar-productive-descriptions-sources.json) preserves existing
 predicate, excess, change and demonstrative owners; kinds, materials and descriptive compounds remain short recognition bridges.
 
+The [quantity/range/frequency installment](articles/quantity-ranges-and-frequency.md) adds 26 N4 tasks
+and two N5 ordinary-action controls in five groups. It covers inclusive versus strict bounds, quantity framing,
+frequency, negative scope and time/price frames. Its [ledger](docs/grammar-quantity-scope-sources.json)
+records unchanged restriction, listing, comparison and estimate/limit owners and the bounded recognition bridges.
+
 ## Confusable vocabulary
 
 The [candidate inventory](docs/confusable-words.md) collects overlapping meanings, misleading English glosses,
@@ -212,8 +217,8 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   36 on benefactives/requests, 34 on direction/development/stages, 30 on passive participants,
   40 on causative perspective, 38 on appearance/impressions, 36 on judgment/expectation,
   40 on embedded questions/reports, 25 on volition/plans, 44 on necessity/instructions, 38 on time/linking,
-  37 on respectful/humble language and 30 on ease, methods and descriptions (1682 in total).
-  All 1682 exercises have grammar-only study labels: **590 N5, 751 N4, 235 N3, 102 N2 and four N1**.
+  37 on respectful/humble language, 30 on ease, methods and descriptions, and 28 on quantity/scope (1710 in total).
+  All 1710 exercises have grammar-only study labels: **592 N5, 777 N4, 235 N3, 102 N2 and four N1**.
   These are editorial estimates using Bunpro as the primary reference, with documented JLPT Sensei comparisons,
   not an official syllabus. Vocabulary and kanji difficulty do not determine them; natural examples remain unchanged.
   See the [policy and per-article distribution](docs/jlpt-levels.md#grammar-baseline) and

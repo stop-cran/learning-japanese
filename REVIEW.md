@@ -35,6 +35,38 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Quantity, ranges, frequency and scope: independent review and reconciliation (2026-10-23 UTC)
+
+**Snapshot and scope:** `f60705b67484f21874f69d078ba2796e4a24b588` plus
+[issue #33](https://github.com/stop-cran/learning-japanese/issues/33). The fresh independent reviewer read
+the new article, all 28 complete tasks, original 64 accepted renderings and 68 option/feedback branches,
+all complete lexical records and four bridge deltas. Actual model identity was unavailable and was not
+inferred. Initial correctness and scoped coverage were **NEEDS FIX**; comprehensibility was **CLEAN**.
+The [ledger](docs/grammar-quantity-scope-sources.json) preserves the initial evidence and informed
+same-reviewer reconciliation separately, including permitted historical guidance/lexical-note exposure.
+
+**Findings and reconciliation:** Minor **QS-IR-001** adds supported 例外無し／れいがい無し renderings to
+two no-exception labels without adding quiz buttons. Moderate **QS-IR-002** repairs repeated operations
+within three facets: count-to-noun attachment versus an adverbial count; an inner price predicate versus
+the main predicate; and duration expressed through a past-clause time noun versus an adverbial duration.
+Different supplied units, tense or plan/habit backgrounds had not themselves changed the assessed operation.
+Both frequency and all six cost evidence fields were updated; ten complete lexical contexts were rebound.
+The original reviewer read the complete revised article, all ten changed objects and all 28 revised lexical
+records, with neighboring-task regression checks and independently retrieved source passages.
+Both findings are **resolved**; final correctness, scoped coverage and comprehensibility are **CLEAN/CLEAN/CLEAN**.
+There are no new findings or optional observations.
+
+**Coverage and reflection:** 26 N4 tasks and two N5 ordinary-action controls comprise 24 interpretations and
+four named formation tasks, in five groups with twelve facets, twelve soft recommendations and no prerequisites.
+The final set has 68 accepted renderings, 68 option/feedback branches, 91 lexical spans and 167 exclusions.
+Its 26 authored context-key strings are not independent-conversation or mastery counts. All 69 prior complete
+sets and 1682 prior lexical records remain unchanged, as do eighteen of the new objects and lexical records.
+The corpus reaches 1710 tasks in 70 sets, including 777 N4; vocabulary coverage is 1401/1710, with 309 pending.
+Extend the existing within-facet lesson with this concrete failure mode and add qualified source navigation;
+the existing spelling lesson already covers response labels. No extra review layer is introduced.
+Content/vocabulary checks, 151 focused regressions and a separate fresh non-skipped real Android importer pass.
+No exhaustive-curriculum, native-speaker, physical-device or learning-outcome certification is claimed.
+
 ## Ease, methods and descriptive forms: independent content review (2026-10-23 UTC)
 
 **Snapshot and scope:** `2bd8f6740fcf42a6f56dfd6efcb5f924ff20d259` plus
@@ -1360,6 +1392,10 @@ The [restriction/inclusion review](docs/grammar-restriction-sources.json) adds t
   PG-IR-001, found that a noun/verb change on the planned-activity side did not vary the neighboring pair
   of supplied affirmative intention readings. A contrast's varied side cannot satisfy the other facet's
   context requirement; use an actual interpretation variable, not another activity noun or a renamed key.
+  The [quantity review](docs/grammar-quantity-scope-sources.json), QS-IR-002, likewise found that changed
+  units, supplied past endings and plan/habit backgrounds left the requested assembly or classification
+  unchanged. Vary an assessed attachment or scope decision; rewriting the evidence field or assigning
+  another key does not itself supply the missing context.
 
 The [compound-relation review](docs/grammar-compound-relations-sources.json) adds three observed checks:
 
