@@ -95,6 +95,30 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 23 reconciliation:** Baseline exclusions
+  may need a narrowly documented extension when a
+  reused article's answer-label neighborhood is
+  genuinely ambiguous. The form quartet needs all
+  six direct pairs, including comparison-to-comparison
+  pairs; exclusions are not transitive. Preserve
+  original lists and record exact additions rather
+  than claiming unchanged baseline exclusions.
+- **Batch 23 reconciliation:** Inspect ordinary
+  secondary meanings beyond a card's selected
+  teaching: 筋 includes lineage. Compare all report
+  sections before crediting model diversity. The
+  shared 形式/形 finding is one catch; optional
+  honorific and cultivated-accomplishment guards
+  also count as observations.
+- **Batch 23 reconciliation:** Resolve uncertainty
+  without inventing a rule. Replace disputed 何郡
+  with どの郡 rather than infer a categorical reading
+  rule from analogy. Use Daijisen's actual
+  青系統の色 example and remove an unverified
+  芸能 collocation while retaining its supported
+  cultivated-ability meaning. Update source IDs
+  when adding linked kanji examples.
+
 - **Batch 23 authoring:** Shared spelling does not
   authorize changing a baseline card's reading.
   包む つつむ remains its existing N4 identity;

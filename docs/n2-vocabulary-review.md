@@ -3322,7 +3322,8 @@ This closes batch 22, not the full expansion.
 
 ## Batch 23: N2:442-N2:461
 
-**Status:** drafted; independent reviews and reconciliation pending.
+**Status:** draft; initial reviews reconciled,
+correction confirmations pending.
 
 Scope: クリーニング, くるむ, くれぐれも, 咥える,
 郡, 稽古, 敬語, 蛍光灯, 形式, 継続, 毛糸, 経度,
@@ -3355,7 +3356,7 @@ Missing component cards are not invented.
 All other existing written components are linked
 substantively; rare alias 毛革 does not create a
 primary-form 革 pair. Baseline quiz exclusions
-are unchanged.
+were unchanged at the authored snapshot.
 
 Reviewers will receive one common frozen snapshot,
 equivalent source access and the same three-facet
@@ -3364,6 +3365,81 @@ removed from the initial evidence derivative.
 They will run strictly sequentially and exit
 before the next reviewer starts. No review-closed
 coverage is claimed for this draft.
+
+### Initial independent reviews and reconciliation
+
+Authored commit:
+`5319eaaa54325198f3ac7a4d0b92a61373495a17`.
+Fresh sequential processes used **gpt-6.1-sol**
+and **claude-opus-5.5** with the same frozen
+snapshot, common prompt, scope and sanitized
+evidence. Both exited without edits before
+reconciliation. Reports:
+[GPT](n2-vocabulary-reviews/batch-23-gpt-initial.md)
+and [Claude](n2-vocabulary-reviews/batch-23-claude-initial.md).
+Both read all nineteen new articles, twenty mappings
+and the ten related changes in context. Neither
+independently executed Git/hash checks or read every
+complete comparison family. Their differing source
+inspection limits remain in the reports.
+
+| Item | Reconciliation |
+| --- | --- |
+| B23-GPT-01: 系統/筋 | Resolved by a direct 筋 guard. Complete 筋/すじ sense 7 supports lineage even though the existing card selects other senses. |
+| B23-GPT-02 / B23-OPUS-02: form labels | Resolved with all six direct pairs among 形式, 形, 型 and 式. This protects comparison-to-comparison choices too, without asserting unrestricted Japanese substitution. |
+| B23-GPT-03: substantive navigation | Resolved by 位置 and 嫌い links in 経度 and 形容詞. |
+| B23-OPUS-01: 芸能/能 | Resolved by a direct 能 guard for the broad talent/accomplishments overlap; not merely because noh belongs to performing arts. |
+| B23-OPUS-03: 何郡 reading | Resolved locally by どの郡/どのぐん. The proposed categorical なん/なに rule remains unestablished because no direct 何郡 entry was found. |
+| B23-OPUS-04: kanji source footers | Resolved by adding the applicable principal IDs to 毛, 灯, 皮, 芸 and 詞. This is provenance consistency, not a learner-facing reading defect. |
+| Claude optional: 青/赤 color-family wording | Adopt the exact Daijisen 青系統の色 pattern with kana/English; do not claim a measured naturalness ranking. |
+| Claude optional: 敬語/御中/氏 and 芸能/教養 | Adopt conservative direct guards based on the actual respectful-expression and cultivated-accomplishment senses, not related topics alone. |
+| Claude optional: 形式を整える translation | Adopt putting something into proper form without implying that every occurrence processes formalities. |
+| Claude limit: 芸能を身につける | Remove the unverified illustrative collocation. Both principal senses remain positively taught; dictionary recognition alone does not certify an invented example's naturalness. |
+
+The optional classical-origin expansion for 稽古 is
+not adopted. Its current mnemonic is expressly
+labelled; it does not deny a historical account.
+No new etymological conclusion is asserted.
+
+Reconciliation inspected fifteen complete extracted
+families for nine forms, all 106 derivative records
+and the actual comparison cards. Both pinned
+JMdict hashes were rechecked, and already available
+families compare exactly. Only new families and a
+separate correction record are appended. Original
+rows, mappings, selected/additional senses, labels,
+inspection receipts and quiz declarations remain
+historical rather than silently rewritten.
+
+The form-quartet fix deliberately extends three
+baseline lists: 形式 gains [形, 型, 式], 形 gains
+[型, 式], and 型 retains [タイプ, 種類] and adds
+式. These exact exceptions supplement batch-19's
+機械/道具 addition. No baseline identity, reading,
+title, written-kanji array or easier sourced level
+changes. All other new guards are declared on new
+articles. There are eleven direct new pairs total.
+
+Model diversity was useful on this sample. The
+形式/形 observation is shared and counted once.
+GPT uniquely supplied the additional five
+form-quartet pairs, 系統/筋 and the two missing
+substantive links. Claude uniquely supplied the
+adopted 芸能/能 guard, disputed-reading rephrase,
+source-footer consistency fix and optional
+honorific/cultivation guards and wording refinements.
+Its unverified 芸能 example concern also led to a
+prudent removal. Findings, Optional and Limits were
+compared together; severity labels do not create
+new discoveries. This is not a general model ranking.
+
+The two new author public inspections read complete
+Daijisen 芸能 and 系統 bodies. They support the
+cultivated-ability teaching and adopted color pattern,
+not corpus frequency or proof that removed wording
+was impossible. Reviewer access and author retrieval
+remain distinct. No executed app draw or
+native-speaker certification is claimed.
 
 ## Final verification
 
