@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 13 reconciliation:** Distinguish a useful homograph
+  clarification from proof that a scoped reading statement denied
+  every other word. 帰す/かえす remains the send-home verb while
+  separate 帰す/きす supplies a contrast, not another primary
+  reading or an independently sourced N2 assignment.
+- **Batch 13 reconciliation:** A selected sense can be explicitly
+  recognized yet still benefit from a concrete example. Use the
+  attested 裾が返る construction for an original garment-hem
+  sentence; distinguish construction attestation from attestation
+  of the exact new sentence.
+- **Batch 13 reconciliation:** Technical source fields such as
+  JMdict's stagk are not automatically typos. Check the actual
+  data model before taking a reviewer's spelling suggestion.
 - **Batch 13 authoring:** A source's spelling, reading and supplied
   entry can agree while its gloss belongs to another reading. The
   反る/かえる row retains that identity, explicitly teaches 返る/反る,

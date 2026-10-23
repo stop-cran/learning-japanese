@@ -1565,7 +1565,7 @@ not the full vocabulary expansion or native-speaker certification.
 
 ## Batch 13: N2:242-N2:261
 
-**Status:** authored; independent reviews pending.
+**Status:** initial reviews reconciled; bounded confirmations pending.
 
 Scope: 回転, 解答, 回答, 外部, 解放, 開放, 海洋, 概論,
 帰す, 却って, 代える, 反る, 家屋, 係わる, 書留, 書取,
@@ -1604,6 +1604,65 @@ Coverage is **240 closed, twenty draft, 1,552 pending and zero
 unresolved** rows, mapped to 255 distinct articles: 231 new and
 24 reused. There are 3,504 word articles and 51 reciprocal N2
 kanji-word pairs. These are authored counts, not review closure.
+
+### Initial review
+
+Both reviewers examined committed snapshot
+`033d125b6c4aa4438587e603296d582f2750195d`, parent
+`6f9f96981807319a347cd3c202d2d94cfb48c92e`, with the same
+scope, rubric and source access. Separate read-only processes ran
+sequentially; GPT exited before Claude started. Actual-model,
+zero-edit usage receipts identify:
+
+- [GPT initial report](n2-vocabulary-reviews/batch-13-gpt-initial.md):
+  `gpt-6.1-sol`.
+- [Claude initial report](n2-vocabulary-reviews/batch-13-claude-initial.md):
+  `claude-opus-5.5`.
+
+Both read all nineteen new cards and assessed the twenty mappings,
+five related edits and unchanged reuse. Their file-only access did
+not independently authenticate Git or frozen hashes. GPT revisited
+the five initial actual-page sources; Claude independently consulted
+Jisho and Weblio and disclosed unsuccessful additional retrievals.
+Neither claimed an exhaustive comparison-family or corpus audit.
+
+### Reconciliation
+
+| Observation | Adjudication and correction |
+| --- | --- |
+| GPT G13-01: 回転 / ぐるぐる | Resolved: add the direct guard for rotation/round-and-round English overlap. Complete family 1004140:1 supports the turning sense; noun and adverb constructions remain distinct. |
+| GPT G13-02: 外部 / 表面 and 表 | Resolved: add both direct guards. Outside/exterior belongs to 1489880:2 at ひょうめん and 1489340:4 at おもて, not their other homographs. |
+| GPT G13-03: 開放 / 口 | Resolved: add a direct guard for English opening's aperture/beginning ambiguity, supported by 1275640:2,11. This does not make the Japanese nouns synonyms. |
+| GPT G13-04: 概論 / 大体 | Resolved: add a direct guard for 1414470:3's outline/main-points noun sense, not just 大体's primary adverbial title. |
+| GPT G13-05: 返る / 戻す | Resolved: add a direct guard for unmarked English return. Complete family 1535850:1 supports it; Japanese transitivity is unchanged. |
+| GPT G13-06 / Claude B13-03: 家屋 / 住宅; GPT also 宅 | Resolved: add both direct guards for ordinary house/residential-building overlap, supported by 1334150:1 and 1415750:1. The 住宅 observation is shared. |
+| GPT G13-07: 垣根 / 壁 | Resolved: add a direct guard for figurative barrier, 1509290:2 at かべ. Existing guards through 塀 do not propagate. |
+| GPT G13-08 / Claude B13-05: 参加 link | Resolved: link the existing 参加 article at the substantive 参加する comparison. Shared finding, not two discoveries. |
+| Claude B13-01: separate 帰す / きす | Useful clarification implemented, with complete family 2410530:1,2. The original "this reading" already scoped itself to the send-home verb; it was not an explicit universal denial of every homograph. No unsupported literary-frequency or N2 claim is added. |
+| Claude B13-02: turn-over illustration | Resolved as a practical illustration gap: add an original, translated, kana-supported coat-hem example using the independently inspected 裾が返る construction. The prior explicit sense/alias teaching was not an absent source mapping, and the original sentence is not claimed corpus-attested. |
+| Claude B13-04: 命に関わる translation | Clarified to life-or-death and survival stakes. The original broad "affecting someone's life" was less precise, not proof of a false general lexical definition. Complete family 1589880:3 supplies the serious-bearing sense. |
+| Claude optional: 開放's opening-up paraphrase | Adopt as nonblocking clarity: describe the two actions directly and reject interchangeability from pronunciation, without the loose English paraphrase. |
+| Claude optional: guest example and 送る | Remain optional, not established defects. 客を帰す teaches sending someone home; rewriting it as 客が帰る would change the target construction. Complete 送る family 1402730 retains send/escort senses but does not by itself establish unrestricted equivalence with the specifically homeward label. |
+| Claude optional: cage-release 解放 and 根 reading-row example | Remain optional. An alternative release verb does not invalidate the stated captivity context; a useful reciprocal 垣根 example already exists in Common words. No extra unchanged-card review is claimed. |
+| Claude optional: stagk typo | Declined: stagk is JMdict's actual sense-spelling restriction element, already explained in the authoring notes; it is not a spelling error. |
+
+The packet adds sixteen complete correction families for twelve
+forms, retaining all homographs, and one qualified actual-entry
+inspection receipt. The nine new direct quiz pairs concern actual
+labels and applicable meanings, not transitive inference or general
+Japanese substitutability. No original source field, mapping,
+selected/additional sense or principal family changes.
+
+### Multi-model usefulness
+
+The 住宅 guard and 参加 navigation finding are shared. GPT uniquely
+identified the other eight direct pairs; Claude uniquely contributed
+the homograph clarification, concrete turn-over illustration and
+more precise survival translation, plus adopted optional comparison
+wording. Some initial severity/correctness framing was stronger than
+the evidence required, and the stagk suggestion was unsupported.
+This batch shows complementary useful coverage and review noise,
+not a general model ranking or proof of native-speaker correctness.
 
 ## Final verification
 
