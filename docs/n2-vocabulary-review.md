@@ -2771,7 +2771,7 @@ addition. This closes batch 19, not the full expansion.
 
 ## Batch 20: N2:382-N2:401
 
-**Status:** initial reviews complete; corrections awaiting bounded confirmation.
+**Status:** closed; both original reviewers confirmed the corrections.
 
 Scope: きっかけ, ぎっしり, 基盤, 客席, 客間,
 ギャング, キャンパス, 休業, 休講, 休息, 給与,
@@ -2877,6 +2877,55 @@ list, not an official exhaustive modern JLPT syllabus.
 Dictionary meanings support the original praise
 example's use, not an independent corpus occurrence
 of the full sentence or native-speaker certification.
+
+### Independent confirmation and closure
+
+The original reviewers confirmed corrected commit
+`635730f7ae45b71057a903a3878adf5e66464aff`,
+strictly sequentially in their original sessions:
+
+- [GPT confirmation](n2-vocabulary-reviews/batch-20-gpt-confirmation.md):
+  all six changed articles and appended evidence CLEAN
+  on all three facets. It confirmed the correction
+  without retrospectively claiming the initial findings.
+- [Claude confirmation](n2-vocabulary-reviews/batch-20-claude-confirmation.md):
+  B20-01, B20-02 and B20-03 resolved; all six articles
+  and additions CLEAN. It withdrew the optional
+  客間/応接 guard and its unsupported general
+  inference from absent cards to universal N2 status.
+
+The other example expansions remain optional, including
+Claude's additional error-shame example for 恐縮.
+No actionable defect, consequential unresolved teaching
+claim or regression remains in the bounded scope.
+GPT independently re-fetched the actual 恐縮 Seisenban
+and キャンパス Daijisen bodies in confirmation.
+Claude performed no new public retrieval in this pass
+and relied on its original reading for three comparison
+card bodies; its report states that limitation.
+
+The author authenticated both commits and parentage,
+normalized file hashes, actual patches, prompt hashes,
+all four unchanged final report bodies and usage
+receipts. Only report progress preambles were removed.
+The original packet is preserved except for the appended
+six complete comparison families and correction record.
+All usage receipts identify the requested actual models
+and zero edits. Original sessions were retained and
+every reviewer process exited. These author-executed
+checks are not reviewer Git verification, executed
+app draws or linguistic certification.
+
+Closure coverage is **400 closed, 0 draft, 1,412 pending
+and 0 unresolved** rows, mapped to 394 distinct
+articles: 364 new and 30 reused. There are 3,637 word
+articles and 89 distinct tracked primary-form reciprocal
+N2 pairs on new articles, plus checked reused pairs.
+All 3,273 baseline identities, primary readings, titles,
+written-kanji arrays and easier levels remain preserved.
+All original exclusions remain with only the already
+recorded batch-19 機械/道具 addition. This closes
+batch 20, not the full vocabulary expansion.
 
 ## Final verification
 
