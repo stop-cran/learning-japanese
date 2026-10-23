@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-08 review-closed; batch 09 drafted; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-09 review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 160 rows are review-closed; twenty are drafted and 1,632 remain pending.
+The first 180 rows are review-closed; 1,632 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -935,7 +935,7 @@ certify the whole corpus or native-speaker naturalness.
 
 ## Batch 09: N2:162-N2:181
 
-**Status:** independently reviewed and corrected; bounded confirmations pending.
+**Status:** review-closed after independent initial reviews and bounded confirmations.
 
 Scope: おおざっぱ, 大通り, オートメーション, オーバーコート,
 おおよそ, お帰り, おかけください, おかげさまで, おかず, 拝む,
@@ -985,8 +985,8 @@ was reviewed by GPT-6.1 Sol (`gpt-6.1-sol`) and Claude Opus 5.5
 (`claude-opus-5.5`) in fresh, strictly sequential processes. Both
 received the same frozen nineteen-article scope, eight related
 passages, narrow reuse claim, rubric and source access. Usage
-receipts confirm the actual models and no edits. The author checked
-the unchanged HEAD and clean worktree between runs.
+receipts confirm the actual models and no edits. The author verified
+the unchanged HEAD and clean worktree after both initial reviews.
 
 The verbatim [GPT initial report](n2-vocabulary-reviews/batch-09-gpt-initial.md)
 and [Claude initial report](n2-vocabulary-reviews/batch-09-claude-initial.md)
@@ -1036,6 +1036,42 @@ Claude's already-present 菜-link suggestion and speculative source
 sort-key explanation add no verified discovery. The original Waller
 item behind 元気でね remains unverified; no reconstruction is taught.
 Neither reviewer executed the app or independently hashed downloads.
+
+### Bounded confirmation and closure
+
+Correction commit `c23eb2ff4638c41dac20a187c43d81bfeeb1dfaf`
+directly follows the authored snapshot. The frozen correction includes
+the complete six-card diff and packet additions. Both model families
+ran again in fresh, strictly sequential processes, each receiving only
+its own initial report, the same correction scope and actual evidence.
+Usage receipts verify their actual models and zero edits; the author
+verified the unchanged clean worktree and HEAD after both confirmations.
+
+The verbatim [GPT confirmation](n2-vocabulary-reviews/batch-09-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-09-claude-confirmation.md)
+are CLEAN on all three facets for every changed card and the packet
+additions. Both read all ten comparison cards and the 替 target,
+assessed every correction, and reconciled their initial findings as
+resolved. Claude independently fetched the two new Jisho receipts;
+GPT assessed them as supplied assertions. Neither established
+independent hash or Git verification. No actionable regression or
+consequential unresolved claim remains in the assigned scope.
+
+Claude withdrew the redundant kana suggestion. Its carried-over 菜
+suggestion still concerns an already-present link, not a defect.
+The additional low-confidence およそ/ばかり and /ころ suggestions
+concern an unchanged baseline card and are outside this correction.
+They do not invalidate the new direct guards; no unrelated baseline
+exclusions are changed.
+
+The corrected deterministic manifest has 6,060 files, including
+396 images and 201 scene catalogs; content version `f699c433ea7ac26c`.
+All 3,273 baseline identities, readings, titles and exclusion lists
+remain preserved. Cumulative coverage is **180 closed, 0 draft,
+1,632 pending and 0 unresolved** rows, mapped to 179 articles:
+159 new and twenty reused. There are 3,432 word articles and 36
+reciprocal N2 kanji-word pairs. This is bounded batch closure, not
+whole-corpus or native-speaker certification.
 
 ## Final verification
 
