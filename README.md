@@ -429,8 +429,8 @@ The app has an Onomatopoeia stack with the normal word quizzes. Eligible named s
 support both picture-to-word and word-to-picture quizzes; article-only scenes remain visible in the article.
 The Onomatopoeia stack includes
 tagged words independently of JLPT level; unlevelled words also remain in All rather than a numbered JLPT stack.
-All 201 tagged words have scene catalogs, with 396 illustrations in total. The original 120 image files
-are preserved; the latest addition is an oversized-coat scene for ぶかぶか.
+All 201 tagged words have scene catalogs, with 397 illustrations in total. The ぷにぷに scenes pair
+a duck-shaped squishy toy with a cat's soft paw pad, showing the texture in inanimate material and living tissue.
 See the [collection and source notes](docs/onomatopoeia.md).
 
 ### Generated images
