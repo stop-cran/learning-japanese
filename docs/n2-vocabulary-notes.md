@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 29 authoring:** A legacy gloss can have positive support in
+  a different dictionary without becoming a sense in the pinned
+  principal family. コレクション's separate Daijisen *correction*
+  heading is recognized explicitly; JMdict1051540 remains collection
+  and fashion. Record the external heading, URL and response hash
+  without inventing a JMdict ID or rewriting the raw source.
+- **Batch 29 authoring:** Separate construction and register from a
+  respectful origin. 御覧's noun, short looking direction and
+  て-form invitation need their actual constructions; bare ごめん
+  does not become formally respectful from 御 alone. A tipped cup
+  also distinguishes contents spilling with こぼれる from exceeding
+  capacity with あふれる, despite overlapping English glosses.
+
 - **Batch 28 confirmation:** Describe the exact frozen source field,
   not nearby baseline prose or remembered glosses. Both reviewers
   caught an audience-related gloss incorrectly attributed to N2:552;

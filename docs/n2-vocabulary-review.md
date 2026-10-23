@@ -4445,3 +4445,60 @@ examples.
 Current index: **560 closed, 0 draft, 1,252 pending and 0 unresolved**
 rows, mapped to 554 distinct articles: 517 new and 37 reused.
 This closes batch 28, not the full vocabulary expansion.
+
+## Batch 29: N2:562-N2:581
+
+**Status:** drafted; independent GPT and Claude review pending.
+
+Scope: 琴, 言付ける, 言葉遣い, こないだ, 御無沙汰, こぼす,
+零れる, ゴム, ごめん, ごめんください, 小指, こらえる, 娯楽,
+御覧, コレクション, 転がす, 転がる, 紺, コンクール,
+コンクリート.
+
+Twenty standalone additions bring the filesystem collection to 3,810
+word articles. No reused principal articles are claimed. Source 御免
+is explicitly taught in kana-primary ごめん; its metadata remains
+empty while the recognized spelling substantively links 御.
+All written primary characters remain metadata even without cards.
+One new primary reciprocal N2 pair, 零/零れる at こぼれる, is added.
+The separate alias 零す/こぼす links the kana-primary article without
+being counted as another primary pair.
+
+The source packet preserves all twenty exact raw rows and complete
+principal families, complete comparison families from 77-form and
+ten-form extractions, 66 actual existing labels/exclusions, 36 complete
+component records and 23 successful actual public lexical containers.
+Complete family renderings, all captured comparison bodies and
+supplemental bodies, component records, labels and public containers
+were inspected. This is not a renewed full linguistic review of every
+baseline comparison article. Public observations are concise original
+paraphrases; full lexical bodies remain private.
+
+Source qualifications are explicit. 琴/こと is taught as a zither
+rather than an upright Western harp; そう and the Chinese zheng sense
+are not transferred from 箏/筝 to 琴. コレクション's raw correction
+gloss has positive support under Daijisen's separate English-derived
+homograph, not as another current JMdict1051540 sense. That external
+recognition has its own heading/URL/hash receipt without a fabricated
+JMdict identity or independent level. Only fashion is mapped to
+additional 1051540:2.
+
+Practical contrasts retain づ in ことづける and ことばづかい,
+intermediary message delivery, the contact-specific 御無沙汰 greeting,
+transitive/intransitive spilling, and the tipped-cup versus overflowing
+distinction. ゴム's material/eraser uses do not import every English
+gum meaning. 小指 includes the little toe; こらえる distinguishes
+enduring, restraining and forgiving. 御覧's actual constructions and
+social direction are separated, not made universally formal by its
+origin. 転がる is godan, and its resulting-position use need not
+describe continued movement. 紺 takes の rather than an invented
+い-adjective; コンクリート is the material, not abstract 具体.
+
+Seventeen new cards declare 72 directional quiz exclusions, based on
+direct ordinary-meaning and actual-label checks rather than topic
+cliques or transitivity alone. No baseline exclusion is changed.
+These declarations are author hypotheses for independent assessment.
+The blind initial evidence derivative removes only the author's quiz
+rationale. Both families receive the same frozen snapshot, twenty
+new articles and mappings, narrow 零 diff, rubric and equivalent
+source access, in separate sequential processes.
