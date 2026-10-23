@@ -139,6 +139,12 @@ in ten small groups, separating formation from interpretation and suggestions fr
 Its [ledger](docs/grammar-necessity-instructions-sources.json) records exact reuse of requests/rules,
 advice and favors, while preserving the harder mixed no-need contrasts at their existing levels.
 
+The [time/linking supplement](articles/japanese-actions-states-and-time.md#とき-and-relative-event-order) adds 38 N4 tasks
+in eleven groups for relative event viewpoints, simultaneous activity, negative links, causal/means/parallel connections,
+deadline transfer and selective concession. It extends the existing time and
+[reasons articles](articles/reasons-and-contrasts.md#て-links-for-reasons-means-and-parallel-facts), rather than creating another overview.
+Its [ledger](docs/grammar-time-linking-sources.json) records exact reuse of temporal, foundation, conditional and のに owners.
+
 ## Confusable vocabulary
 
 The [candidate inventory](docs/confusable-words.md) collects overlapping meanings, misleading English glosses,
@@ -195,8 +201,8 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   34 on ability and perception, 28 on actions/events/results, 24 on trying/preparing/completing,
   36 on benefactives/requests, 34 on direction/development/stages, 30 on passive participants,
   40 on causative perspective, 38 on appearance/impressions, 36 on judgment/expectation,
-  40 on embedded questions/reports, 25 on volition/plans and 44 on necessity/instructions (1577 in total).
-  All 1577 exercises have grammar-only study labels: **590 N5, 646 N4, 235 N3, 102 N2 and four N1**.
+  40 on embedded questions/reports, 25 on volition/plans, 44 on necessity/instructions and 38 on time/linking (1615 in total).
+  All 1615 exercises have grammar-only study labels: **590 N5, 684 N4, 235 N3, 102 N2 and four N1**.
   These are editorial estimates using Bunpro as the primary reference, with documented JLPT Sensei comparisons,
   not an official syllabus. Vocabulary and kanji difficulty do not determine them; natural examples remain unchanged.
   See the [policy and per-article distribution](docs/jlpt-levels.md#grammar-baseline) and

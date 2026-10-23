@@ -251,7 +251,8 @@ The [judgment/expectation ledger](grammar-judgment-expectation-sources.json) add
 The [reports/questions ledger](grammar-reports-questions-sources.json) adds 40 N4 tasks in one set.
 The [volition/plans ledger](grammar-plans-goals-sources.json) adds 25 N4 tasks in one set.
 The [necessity/instructions ledger](grammar-necessity-instructions-sources.json) adds 41 N4 tasks and three N5 controls in one set.
-Current practice is 1577 exercises: 590 N5 and 646 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [time/linking ledger](grammar-time-linking-sources.json) adds 38 N4 tasks in one set.
+Current practice is 1615 exercises: 590 N5 and 684 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -445,6 +446,14 @@ tasks and twelve interpretations. Distinct tasks include direct versus question/
 origins, command/request framing and positive/negative retrospective courses. Existing requests/rules, advice and
 favor groups retain their complete objects and owners. Noun/adjective gladness, shortened directions and suggestions
 are explanation/recognition support; instruction-seeking questions and harder no-need comparisons are not new targets.
+The [time/linking supplement](grammar-time-linking-sources.json) adds 38 annotated N4 prompts,
+reaching **1615 exercises in 67 files** and **1306/1615** reviewed, with 309 still pending.
+Eleven groups contain nineteen facets, fifteen soft recommendations and no prerequisites: twenty formation tasks,
+fourteen interpretations and four deadline transfers. Causal, means and parallel て have separate groups.
+Relative completion viewpoints, whole ongoing intervals, named negative connections and positive/negative paired
+concessions require actual assembly; direct/quoted scope and possible/actual event framing vary interpretation.
+The original temporal, N5 foundation, conditional, のに and evaluative groups keep their complete objects.
+Focused sections extend the existing time and reason articles, with short reciprocal bridges.
 The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the

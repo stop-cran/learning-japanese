@@ -35,6 +35,43 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Time and clause linking: independent review and reconciliation (2026-10-23 UTC)
+
+**Snapshot and scope:** `4cd7331510ed01ef90185c73455f41a737559b4e` plus
+[issue #30](https://github.com/stop-cran/learning-japanese/issues/30). A fresh independent reviewer read
+the scoped time/reasons article additions and three reciprocal bridges, all 38 complete tasks,
+138 accepted completions, 82 option/feedback branches, 145 lexical spans and 250 exclusions.
+It checked exact source senses, complete-task levels, per-facet diversity, reused owners and preservation.
+Actual model identity was unavailable and was not inferred. A broad work-item read incidentally exposed
+its planning-review paragraph, which was excluded as actual-content evidence; no author verdict,
+generator or other actual-content review supplied the assessment. The
+[ledger](docs/grammar-time-linking-sources.json) preserves the original evidence and informed reconciliation.
+
+**Findings and reconciliation:** initial correctness was **NEEDS FIX**; scoped coverage and comprehensibility
+were **CLEAN**. Minor **TL-IR-001** identified two Saturday-task evidence fields still describing an adjective
+condition although their partners had become actual verbal opening events. Correct those descriptions,
+not the already-valid Japanese or answer keys. Optional **TL-IR-O01** removes the same instructions'
+unused hot-weather glossary entry without promoting that cleanup to a required defect. Only those two
+tasks' `translation` and `evidence` fields change, with two complete lexical context records rebound
+from unchanged segmentation. The original reviewer read both complete changed tasks and their two
+window dependencies, checked every dependent completion/feedback branch, independently recomputed all
+38 lexical fingerprints and verified the exact repair and guidance hunks. Both observations are
+**resolved** with their original classifications retained. Final bounded verdicts are
+**CLEAN/CLEAN/CLEAN**, with no new actionable issue or consequential unresolved claim.
+
+**Coverage and reflection:** 38 N4 tasks comprise 20 formation tasks, 14 interpretations and four contextual
+transfers, in eleven groups with nineteen facets, fifteen soft recommendations and no prerequisites.
+The 25 distinct context-key strings are not independent conversations or mastery measures.
+All 66 preceding complete sets and 1577 preceding lexical records remain unchanged; ten reused groups
+retain their 56 members in the original owners. All five runtime articles, Japanese prompts, answers,
+options, vocabulary payloads and groups are unchanged by reconciliation. Corpus coverage reaches
+1615 tasks in 67 sets, including 684 N4; vocabulary coverage is 1306/1615, with 309 pending.
+Extend the existing propagation lesson to every dependent field: a changed partner scenario can leave
+stale comparison evidence in an otherwise unchanged task. Keep its optional glossary cleanup distinct,
+and add qualified source navigation rather than another review layer. Content/vocabulary checks,
+151 focused regressions and a fresh non-skipped actual Android importer pass. No native-speaker,
+physical-device, exhaustive-JLPT or learning-outcome certification is claimed.
+
 ## Necessity, advice and instructions: independent review and reconciliation (2026-10-23 UTC)
 
 **Snapshot and scope:** `d1500e67968e2bec43e6c72b28c1a2484a70cf51` plus
@@ -1214,13 +1251,16 @@ preserves original severities, adjudication and reconciliation separately; agree
 
 The [restriction/inclusion review](docs/grammar-restriction-sources.json) adds three concrete lessons:
 
-- **Propagate a scenario change through every feedback path.** Changing a factual arrival to ability requires checking
+- **Propagate a scenario change through every dependent field.** Changing a factual arrival to ability requires checking
   distractor rationales and shared explanations, not just the prompt and correct-answer explanation (RII-F01/O02).
   Check every branch of a shared formation template too: a correct statement answer must not receive an explanation
   of “the requested question.” Tie person-question distractors to the printed case role, and interpretation feedback
   to its own example rather than a paired scenario (N5PQ-F01/O02; regroup).
   Recheck every stage branch too: four result-state distractors incorrectly said an action was explicitly not yet
   performed in already-done or cause-unknown scenes (TR-04). A shared auxiliary label does not share a scenario's facts.
+  Include comparisons stored in a partner task: the [time/linking review](docs/grammar-time-linking-sources.json),
+  TL-IR-001, found two unchanged evidence fields still describing an adjective after the paired example became
+  a verbal event. Its optional glossary cleanup removes the same stale dependency from question-side support.
 - **An explanation is not an assessed distinction.** Conditional feedback already separated sufficiency from necessity,
   but the options only contrasted a condition with an occurred surprise. Offering the exclusive-route alternative
   makes that inference part of the actual recognition task (RII-O03).

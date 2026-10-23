@@ -1,0 +1,3130 @@
+{
+  "schemaVersion": 1,
+  "id": "time-linking",
+  "title": "Time relations and clause linking",
+  "article": "articles/japanese-actions-states-and-time.md",
+  "constructions": [
+    {
+      "id": "event-ahead",
+      "label": "Event not presented as completed at the reference moment"
+    },
+    {
+      "id": "event-completed",
+      "label": "Event presented as completed at the reference moment"
+    },
+    {
+      "id": "same-agent-nagara",
+      "label": "Same-agent simultaneous activity"
+    },
+    {
+      "id": "ongoing-interval",
+      "label": "Event within an ongoing interval"
+    },
+    {
+      "id": "naide-form",
+      "label": "Without-doing connection"
+    },
+    {
+      "id": "nakute-form",
+      "label": "Negative te connection"
+    },
+    {
+      "id": "without-message",
+      "label": "Doing B without A"
+    },
+    {
+      "id": "negative-reason",
+      "label": "Negative circumstance presented as a reason"
+    },
+    {
+      "id": "te-cause",
+      "label": "Reason for the following result"
+    },
+    {
+      "id": "te-means",
+      "label": "Means or manner of the following action"
+    },
+    {
+      "id": "te-parallel",
+      "label": "Side-by-side activities or facts"
+    },
+    {
+      "id": "deadline-met",
+      "label": "Completion meets the stated deadline"
+    },
+    {
+      "id": "deadline-missed",
+      "label": "Completion misses the stated deadline"
+    },
+    {
+      "id": "positive-temo",
+      "label": "Even if or though A holds"
+    },
+    {
+      "id": "negative-temo",
+      "label": "Even if or though A does not hold"
+    },
+    {
+      "id": "condition-message",
+      "label": "Condition or trigger for the result"
+    },
+    {
+      "id": "concession-message",
+      "label": "Result holds despite the stated condition"
+    },
+    {
+      "id": "nominal-pair",
+      "label": "Nominal alternatives"
+    },
+    {
+      "id": "adjective-pair",
+      "label": "I-adjective alternatives"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "relative-time",
+      "label": "Build an event viewpoint before toki",
+      "constructions": [
+        "event-ahead",
+        "event-completed"
+      ]
+    },
+    {
+      "id": "overlap",
+      "label": "Build simultaneous actions and ongoing intervals",
+      "constructions": [
+        "same-agent-nagara",
+        "ongoing-interval"
+      ]
+    },
+    {
+      "id": "negative-forms",
+      "label": "Build two negative clause connections",
+      "constructions": [
+        "naide-form",
+        "nakute-form"
+      ]
+    },
+    {
+      "id": "negative-messages",
+      "label": "Read negative circumstances and reasons",
+      "constructions": [
+        "without-message",
+        "negative-reason"
+      ]
+    },
+    {
+      "id": "te-functions",
+      "label": "Interpret complete te-linked messages",
+      "constructions": [
+        "te-cause",
+        "te-means",
+        "te-parallel"
+      ]
+    },
+    {
+      "id": "deadlines",
+      "label": "Apply a stated deadline to a completion",
+      "constructions": [
+        "deadline-met",
+        "deadline-missed"
+      ]
+    },
+    {
+      "id": "concession-forms",
+      "label": "Form positive and negative concessions",
+      "constructions": [
+        "positive-temo",
+        "negative-temo"
+      ]
+    },
+    {
+      "id": "concession-messages",
+      "label": "Separate condition and concession framing",
+      "constructions": [
+        "condition-message",
+        "concession-message"
+      ]
+    },
+    {
+      "id": "alternative-pairs",
+      "label": "Keep the outcome across paired alternatives",
+      "constructions": [
+        "nominal-pair",
+        "adjective-pair"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "time-linking-station-call-event-ahead",
+      "jlpt": 4,
+      "target": "event-ahead",
+      "relationship": "relative-time",
+      "prompt": "明日は駅に____、家族に電話します。",
+      "translation": "Base predicate: 着きます（つきます）, arrive. Assemble the whole verb + とき time expression. At the reference moment of the main event, present the arrival/departure as not presented as already completed. Convert the polite base to the appropriate plain modifier; do not mechanically copy the main clause's calendar tense. Optional に and fitting kana/kanji spellings are accepted.",
+      "evidence": "Future arrival versus past departure changes both the supplied polite base and calendar viewpoint within each facet.",
+      "explanation": "Use the plain nonpast event modifier before とき. The main event's yesterday/tomorrow setting is not itself the tense selector. This task selects a viewpoint, not a universal exclusive timeline for every とき sentence.",
+      "answer": "event-ahead",
+      "acceptedAnswers": [
+        "着くとき",
+        "着くときに",
+        "着く時",
+        "着く時に",
+        "つくとき",
+        "つくときに",
+        "つく時",
+        "つく時に"
+      ],
+      "options": [
+        {
+          "id": "event-ahead",
+          "label": "着くとき",
+          "rationale": "Use the plain nonpast event modifier before とき."
+        },
+        {
+          "id": "event-completed",
+          "label": "着いたとき",
+          "rationale": "This chooses the other completion viewpoint rather than the requested one. It is not generally ungrammatical with a past or future main clause."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "ec5178fcc6c6ebfdfd1e6c5c27bf9fab3a88a00b224c68da368cc5941861ed6e",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "明日",
+            "reading": "あした",
+            "headword": "明日",
+            "gloss": "tomorrow"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "家族",
+            "reading": "かぞく",
+            "headword": "家族",
+            "gloss": "family"
+          },
+          {
+            "start": 13,
+            "end": 18,
+            "text": "電話します",
+            "reading": "でんわします",
+            "headword": "電話する",
+            "gloss": "will call by phone"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-station-call-event-completed",
+      "jlpt": 4,
+      "target": "event-completed",
+      "relationship": "relative-time",
+      "prompt": "明日は駅に____、家族に電話します。",
+      "translation": "Base predicate: 着きます（つきます）, arrive. Assemble the whole verb + とき time expression. At the reference moment of the main event, present the arrival/departure as presented as already completed. Convert the polite base to the appropriate plain modifier; do not mechanically copy the main clause's calendar tense. Optional に and fitting kana/kanji spellings are accepted.",
+      "evidence": "Future arrival versus past departure changes both the supplied polite base and calendar viewpoint within each facet.",
+      "explanation": "Use the plain た-form event modifier before とき. The main event's yesterday/tomorrow setting is not itself the tense selector. This task selects a viewpoint, not a universal exclusive timeline for every とき sentence.",
+      "answer": "event-completed",
+      "acceptedAnswers": [
+        "着いたとき",
+        "着いたときに",
+        "着いた時",
+        "着いた時に",
+        "ついたとき",
+        "ついたときに",
+        "ついた時",
+        "ついた時に"
+      ],
+      "options": [
+        {
+          "id": "event-completed",
+          "label": "着いたとき",
+          "rationale": "Use the plain た-form event modifier before とき."
+        },
+        {
+          "id": "event-ahead",
+          "label": "着くとき",
+          "rationale": "This chooses the other completion viewpoint rather than the requested one. It is not generally ungrammatical with a past or future main clause."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "ec5178fcc6c6ebfdfd1e6c5c27bf9fab3a88a00b224c68da368cc5941861ed6e",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "明日",
+            "reading": "あした",
+            "headword": "明日",
+            "gloss": "tomorrow"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "家族",
+            "reading": "かぞく",
+            "headword": "家族",
+            "gloss": "family"
+          },
+          {
+            "start": 13,
+            "end": 18,
+            "text": "電話します",
+            "reading": "でんわします",
+            "headword": "電話する",
+            "gloss": "will call by phone"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-departure-phone-event-ahead",
+      "jlpt": 4,
+      "target": "event-ahead",
+      "relationship": "relative-time",
+      "prompt": "昨日は家を____、電話が鳴りました。",
+      "translation": "Base predicate: 出ました（でました）, left. Assemble the whole verb + とき time expression. At the reference moment of the main event, present the arrival/departure as not presented as already completed. Convert the polite base to the appropriate plain modifier; do not mechanically copy the main clause's calendar tense. Optional に and fitting kana/kanji spellings are accepted.",
+      "evidence": "Future arrival versus past departure changes both the supplied polite base and calendar viewpoint within each facet.",
+      "explanation": "Use the plain nonpast event modifier before とき. The main event's yesterday/tomorrow setting is not itself the tense selector. This task selects a viewpoint, not a universal exclusive timeline for every とき sentence.",
+      "answer": "event-ahead",
+      "acceptedAnswers": [
+        "出るとき",
+        "出るときに",
+        "出る時",
+        "出る時に",
+        "でるとき",
+        "でるときに",
+        "でる時",
+        "でる時に"
+      ],
+      "options": [
+        {
+          "id": "event-ahead",
+          "label": "出るとき",
+          "rationale": "Use the plain nonpast event modifier before とき."
+        },
+        {
+          "id": "event-completed",
+          "label": "出たとき",
+          "rationale": "This chooses the other completion viewpoint rather than the requested one. It is not generally ungrammatical with a past or future main clause."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "5c3a289d1fe13babc671d55c7906d0214a177dcd22961e48dc990b857bafef82",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "昨日",
+            "reading": "きのう",
+            "headword": "昨日",
+            "gloss": "yesterday"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "家",
+            "reading": "いえ",
+            "headword": "家",
+            "gloss": "home"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "電話",
+            "reading": "でんわ",
+            "headword": "電話",
+            "gloss": "phone"
+          },
+          {
+            "start": 13,
+            "end": 18,
+            "text": "鳴りました",
+            "reading": "なりました",
+            "headword": "鳴る",
+            "gloss": "rang"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-departure-phone-event-completed",
+      "jlpt": 4,
+      "target": "event-completed",
+      "relationship": "relative-time",
+      "prompt": "昨日は家を____、電話が鳴りました。",
+      "translation": "Base predicate: 出ました（でました）, left. Assemble the whole verb + とき time expression. At the reference moment of the main event, present the arrival/departure as presented as already completed. Convert the polite base to the appropriate plain modifier; do not mechanically copy the main clause's calendar tense. Optional に and fitting kana/kanji spellings are accepted.",
+      "evidence": "Future arrival versus past departure changes both the supplied polite base and calendar viewpoint within each facet.",
+      "explanation": "Use the plain た-form event modifier before とき. The main event's yesterday/tomorrow setting is not itself the tense selector. This task selects a viewpoint, not a universal exclusive timeline for every とき sentence.",
+      "answer": "event-completed",
+      "acceptedAnswers": [
+        "出たとき",
+        "出たときに",
+        "出た時",
+        "出た時に",
+        "でたとき",
+        "でたときに",
+        "でた時",
+        "でた時に"
+      ],
+      "options": [
+        {
+          "id": "event-completed",
+          "label": "出たとき",
+          "rationale": "Use the plain た-form event modifier before とき."
+        },
+        {
+          "id": "event-ahead",
+          "label": "出るとき",
+          "rationale": "This chooses the other completion viewpoint rather than the requested one. It is not generally ungrammatical with a past or future main clause."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "5c3a289d1fe13babc671d55c7906d0214a177dcd22961e48dc990b857bafef82",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "昨日",
+            "reading": "きのう",
+            "headword": "昨日",
+            "gloss": "yesterday"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "家",
+            "reading": "いえ",
+            "headword": "家",
+            "gloss": "home"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "電話",
+            "reading": "でんわ",
+            "headword": "電話",
+            "gloss": "phone"
+          },
+          {
+            "start": 13,
+            "end": 18,
+            "text": "鳴りました",
+            "reading": "なりました",
+            "headword": "鳴る",
+            "gloss": "rang"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-letter-music-nagara",
+      "jlpt": 4,
+      "target": "same-agent-nagara",
+      "relationship": "overlap",
+      "prompt": "私は手紙を____、音楽を聞きます。",
+      "translation": "Base verb: 書く（かく）, write. Form the full ながら expression for the speaker's simultaneous activity. Convert the dictionary verb to the ます-stem and attach ながら; enter the whole converted phrase.",
+      "evidence": "Godan ku-to-ki stem conversion versus ichidan ru removal; writing with listening versus eating with reading.",
+      "explanation": "The ながら action accompanies the same person's main action. Use the ます-stem, not the dictionary or て form. This same-subject requirement is scoped to simultaneous ながら.",
+      "answer": "same-agent-nagara",
+      "acceptedAnswers": [
+        "書きながら",
+        "かきながら"
+      ],
+      "options": [
+        {
+          "id": "same-agent-nagara",
+          "label": "書きながら",
+          "rationale": "This uses the converted ます-stem and the requested simultaneous connector."
+        },
+        {
+          "id": "ongoing-interval",
+          "label": "書いている間に",
+          "rationale": "An ongoing interval can also describe this situation, but is not the requested ます-stem + ながら assembly."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "e172b8b68e950315b99285891b88ffeb46cbc4e4c14f4a52464932eab69cbbde",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "音楽",
+            "reading": "おんがく",
+            "headword": "音楽",
+            "gloss": "music"
+          },
+          {
+            "start": 13,
+            "end": 17,
+            "text": "聞きます",
+            "reading": "ききます",
+            "headword": "聞く",
+            "gloss": "listen"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-bread-reading-nagara",
+      "jlpt": 4,
+      "target": "same-agent-nagara",
+      "relationship": "overlap",
+      "prompt": "私はパンを____、本を読みます。",
+      "translation": "Base verb: 食べる（たべる）, eat. Form the full ながら expression for the speaker's simultaneous activity. Convert the dictionary verb to the ます-stem and attach ながら; enter the whole converted phrase.",
+      "evidence": "Godan ku-to-ki stem conversion versus ichidan ru removal; writing with listening versus eating with reading.",
+      "explanation": "The ながら action accompanies the same person's main action. Use the ます-stem, not the dictionary or て form. This same-subject requirement is scoped to simultaneous ながら.",
+      "answer": "same-agent-nagara",
+      "acceptedAnswers": [
+        "食べながら",
+        "たべながら"
+      ],
+      "options": [
+        {
+          "id": "same-agent-nagara",
+          "label": "食べながら",
+          "rationale": "This uses the converted ます-stem and the requested simultaneous connector."
+        },
+        {
+          "id": "ongoing-interval",
+          "label": "食べている間に",
+          "rationale": "An ongoing interval can also describe this situation, but is not the requested ます-stem + ながら assembly."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "4f0c174b458d68a9bd6ab42da5fcf6c4c267e2576f1410e5b90345106e82aaa7",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "パン",
+            "reading": "ぱん",
+            "headword": "パン",
+            "gloss": "bread"
+          },
+          {
+            "start": 10,
+            "end": 11,
+            "text": "本",
+            "reading": "ほん",
+            "headword": "本",
+            "gloss": "book"
+          },
+          {
+            "start": 12,
+            "end": 16,
+            "text": "読みます",
+            "reading": "よみます",
+            "headword": "読む",
+            "gloss": "read"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-reading-arrival-interval",
+      "jlpt": 4,
+      "target": "ongoing-interval",
+      "relationship": "overlap",
+      "prompt": "私が本を____、姉が帰ってきました。",
+      "translation": "Base verb: 読む（よむ）, read. Form the complete ongoing verb + 間に expression. Use affirmative nonpast ている inside the time modifier, even though the main event is past. Retain に; the ordinary contracted ongoing form is also accepted. Do not use a topic-marked interval.",
+      "evidence": "Godan mu-to-nde conversion versus ichidan te formation; another person's arrival versus a non-agentive phone event.",
+      "explanation": "Build the verb's て form, add いる and 間に. The main event occurs within the activity's interval; it need not have the same subject or be uncontrolled. Past ていた may fit other framings but is not the requested form.",
+      "answer": "ongoing-interval",
+      "acceptedAnswers": [
+        "読んでいる間に",
+        "読んでいるあいだに",
+        "読んでる間に",
+        "読んでるあいだに",
+        "よんでいる間に",
+        "よんでいるあいだに",
+        "よんでる間に",
+        "よんでるあいだに"
+      ],
+      "options": [
+        {
+          "id": "ongoing-interval",
+          "label": "読んでいる間に",
+          "rationale": "The whole ongoing interval is assembled with the requested nonpast modifier and に."
+        },
+        {
+          "id": "same-agent-nagara",
+          "label": "読みながら",
+          "rationale": "Simultaneous ながら would attach the background activity to the main action's subject. These clauses have different subjects, and the task requests an ongoing interval."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "40c660853ce51b2e563e2e72c0cfcaa82843693d28265fdc25f3b7fdb13c4807",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "本",
+            "reading": "ほん",
+            "headword": "本",
+            "gloss": "book"
+          },
+          {
+            "start": 9,
+            "end": 10,
+            "text": "姉",
+            "reading": "あね",
+            "headword": "姉",
+            "gloss": "older sister"
+          },
+          {
+            "start": 11,
+            "end": 18,
+            "text": "帰ってきました",
+            "reading": "かえってきました",
+            "headword": "帰ってくる",
+            "gloss": "came home"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-meal-phone-interval",
+      "jlpt": 4,
+      "target": "ongoing-interval",
+      "relationship": "overlap",
+      "prompt": "私がパンを____、電話が鳴りました。",
+      "translation": "Base verb: 食べる（たべる）, eat. Form the complete ongoing verb + 間に expression. Use affirmative nonpast ている inside the time modifier, even though the main event is past. Retain に; the ordinary contracted ongoing form is also accepted. Do not use a topic-marked interval.",
+      "evidence": "Godan mu-to-nde conversion versus ichidan te formation; another person's arrival versus a non-agentive phone event.",
+      "explanation": "Build the verb's て form, add いる and 間に. The main event occurs within the activity's interval; it need not have the same subject or be uncontrolled. Past ていた may fit other framings but is not the requested form.",
+      "answer": "ongoing-interval",
+      "acceptedAnswers": [
+        "食べている間に",
+        "食べているあいだに",
+        "食べてる間に",
+        "食べてるあいだに",
+        "たべている間に",
+        "たべているあいだに",
+        "たべてる間に",
+        "たべてるあいだに"
+      ],
+      "options": [
+        {
+          "id": "ongoing-interval",
+          "label": "食べている間に",
+          "rationale": "The whole ongoing interval is assembled with the requested nonpast modifier and に."
+        },
+        {
+          "id": "same-agent-nagara",
+          "label": "食べながら",
+          "rationale": "Simultaneous ながら would attach the background activity to the main action's subject. These clauses have different subjects, and the task requests an ongoing interval."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "17eea7a7ad97330bc19284e2ce35fff3c09fd6aaeec2b643ae08603f3f808640",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "パン",
+            "reading": "ぱん",
+            "headword": "パン",
+            "gloss": "bread"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "電話",
+            "reading": "でんわ",
+            "headword": "電話",
+            "gloss": "phone"
+          },
+          {
+            "start": 13,
+            "end": 18,
+            "text": "鳴りました",
+            "reading": "なりました",
+            "headword": "鳴る",
+            "gloss": "rang"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-unsigned-paper-naide-form",
+      "jlpt": 4,
+      "target": "naide-form",
+      "relationship": "negative-forms",
+      "prompt": "名前を____、紙を出しました。",
+      "translation": "Base verb: 書く（かく）, write. Form the whole converted verb with the named ないで without-doing connection. Enter the converted verb and connector, not a positive form or a synonym.",
+      "evidence": "Godan negative-stem conversion versus ichidan stem formation; paired connectors retain the underlying scene key.",
+      "explanation": "The dictionary base must first be converted to its negative stem, then connected with ないで. This named form task is not a claim that the other connector is impossible in every evaluation or context.",
+      "answer": "naide-form",
+      "acceptedAnswers": [
+        "書かないで",
+        "かかないで"
+      ],
+      "options": [
+        {
+          "id": "naide-form",
+          "label": "書かないで",
+          "rationale": "This supplies the requested converted negative connection."
+        },
+        {
+          "id": "nakute-form",
+          "label": "書かなくて",
+          "rationale": "This uses the other negative connector, not the one requested. The distinction here is the named operation, not a universal grammatical prohibition."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "80107b0a0892f9720d6472143a83e85b7bf6a2bc0f5dafc9f83c2e6951c0707a",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "名前",
+            "reading": "なまえ",
+            "headword": "名前",
+            "gloss": "name"
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": "紙",
+            "reading": "かみ",
+            "headword": "紙",
+            "gloss": "paper"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "text": "出しました",
+            "reading": "だしました",
+            "headword": "出す",
+            "gloss": "handed in"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-unsigned-paper-nakute-form",
+      "jlpt": 4,
+      "target": "nakute-form",
+      "relationship": "negative-forms",
+      "prompt": "名前を____、困りました。",
+      "translation": "Base verb: 書く（かく）, write. Form the whole converted verb with the named なくて negative て connection, here supplying a reason. Enter the converted verb and connector, not a positive form or a synonym.",
+      "evidence": "Godan negative-stem conversion versus ichidan stem formation; paired connectors retain the underlying scene key.",
+      "explanation": "The dictionary base must first be converted to its negative stem, then connected with なくて. This named form task is not a claim that the other connector is impossible in every evaluation or context.",
+      "answer": "nakute-form",
+      "acceptedAnswers": [
+        "書かなくて",
+        "かかなくて"
+      ],
+      "options": [
+        {
+          "id": "nakute-form",
+          "label": "書かなくて",
+          "rationale": "This supplies the requested converted negative connection."
+        },
+        {
+          "id": "naide-form",
+          "label": "書かないで",
+          "rationale": "This uses the other negative connector, not the one requested. The distinction here is the named operation, not a universal grammatical prohibition."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d950b35eb9114c2eeefc99f7a0aba46c0602423a8bd09a79ddbecc7fd43fe40a",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "名前",
+            "reading": "なまえ",
+            "headword": "名前",
+            "gloss": "name"
+          },
+          {
+            "start": 8,
+            "end": 13,
+            "text": "困りました",
+            "reading": "こまりました",
+            "headword": "困る",
+            "gloss": "was in difficulty"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-missed-breakfast-naide-form",
+      "jlpt": 4,
+      "target": "naide-form",
+      "relationship": "negative-forms",
+      "prompt": "朝ご飯を____、学校に行きました。",
+      "translation": "Base verb: 食べる（たべる）, eat. Form the whole converted verb with the named ないで without-doing connection. Enter the converted verb and connector, not a positive form or a synonym.",
+      "evidence": "Godan negative-stem conversion versus ichidan stem formation; paired connectors retain the underlying scene key.",
+      "explanation": "The dictionary base must first be converted to its negative stem, then connected with ないで. This named form task is not a claim that the other connector is impossible in every evaluation or context.",
+      "answer": "naide-form",
+      "acceptedAnswers": [
+        "食べないで",
+        "たべないで"
+      ],
+      "options": [
+        {
+          "id": "naide-form",
+          "label": "食べないで",
+          "rationale": "This supplies the requested converted negative connection."
+        },
+        {
+          "id": "nakute-form",
+          "label": "食べなくて",
+          "rationale": "This uses the other negative connector, not the one requested. The distinction here is the named operation, not a universal grammatical prohibition."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "0d6ee8e2091deff877c5a9aa7d257799f9c00cd57bc2b61f4cd640351dabe40e",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "朝ご飯",
+            "reading": "あさごはん",
+            "headword": "朝ご飯",
+            "gloss": "breakfast"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "学校",
+            "reading": "がっこう",
+            "headword": "学校",
+            "gloss": "school"
+          },
+          {
+            "start": 12,
+            "end": 17,
+            "text": "行きました",
+            "reading": "いきました",
+            "headword": "行く",
+            "gloss": "went"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-missed-breakfast-nakute-form",
+      "jlpt": 4,
+      "target": "nakute-form",
+      "relationship": "negative-forms",
+      "prompt": "朝ご飯を____、おなかがすきました。",
+      "translation": "Base verb: 食べる（たべる）, eat. Form the whole converted verb with the named なくて negative て connection, here supplying a reason. Enter the converted verb and connector, not a positive form or a synonym.",
+      "evidence": "Godan negative-stem conversion versus ichidan stem formation; paired connectors retain the underlying scene key.",
+      "explanation": "The dictionary base must first be converted to its negative stem, then connected with なくて. This named form task is not a claim that the other connector is impossible in every evaluation or context.",
+      "answer": "nakute-form",
+      "acceptedAnswers": [
+        "食べなくて",
+        "たべなくて"
+      ],
+      "options": [
+        {
+          "id": "nakute-form",
+          "label": "食べなくて",
+          "rationale": "This supplies the requested converted negative connection."
+        },
+        {
+          "id": "naide-form",
+          "label": "食べないで",
+          "rationale": "This uses the other negative connector, not the one requested. The distinction here is the named operation, not a universal grammatical prohibition."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "e178ed479f8505c784eff7fcfa244d6edde7a4acff8096b57b033f81b11e9235",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "朝ご飯",
+            "reading": "あさごはん",
+            "headword": "朝ご飯",
+            "gloss": "breakfast"
+          },
+          {
+            "start": 9,
+            "end": 12,
+            "text": "おなか",
+            "reading": "おなか",
+            "headword": "おなか",
+            "gloss": "stomach"
+          },
+          {
+            "start": 13,
+            "end": 18,
+            "text": "すきました",
+            "reading": "すきました",
+            "headword": "すく",
+            "gloss": "became empty; became hungry with おなか"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-unsigned-paper-without-message",
+      "jlpt": 4,
+      "target": "without-message",
+      "relationship": "negative-messages",
+      "prompt": "名前を書かないで、紙を出しました。→____",
+      "translation": "Classify the connection in the statement. Labels: 付帯（ふたい） = accompanying circumstances, here B done without A; 原因（げんいん） = a reason for the following result. These definitions do not assign all uses of one spelling to one class. 書く（かく） = write; 来る（くる） = come; 持ってくる（もってくる） = bring; 食べる（たべる） = eat; ない = absent/not have. Kana labels are accepted.",
+      "evidence": "Direct statement versus a selected quotation amid the other connection; cause also varies negative coming versus absent time.",
+      "explanation": "The paper was handed in without the name being written. The negative action describes the circumstances of handing it in. Read the selected complete message rather than a connector elsewhere in the prompt.",
+      "answer": "without-message",
+      "acceptedAnswers": [
+        "付帯",
+        "附帯",
+        "ふたい"
+      ],
+      "options": [
+        {
+          "id": "without-message",
+          "label": "付帯",
+          "rationale": "The paper was handed in without the name being written. The negative action describes the circumstances of handing it in."
+        },
+        {
+          "id": "negative-reason",
+          "label": "原因",
+          "rationale": "That does not identify the selected connection. The paper was handed in without the name being written. The negative action describes the circumstances of handing it in."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "552f7304766ca6c60a2dede8b7745e795818d8102a8006a40f123fb94c49993f",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "名前",
+            "reading": "なまえ",
+            "headword": "名前",
+            "gloss": "name"
+          },
+          {
+            "start": 9,
+            "end": 10,
+            "text": "紙",
+            "reading": "かみ",
+            "headword": "紙",
+            "gloss": "paper"
+          },
+          {
+            "start": 11,
+            "end": 16,
+            "text": "出しました",
+            "reading": "だしました",
+            "headword": "出す",
+            "gloss": "handed in"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-train-no-arrival-negative-reason",
+      "jlpt": 4,
+      "target": "negative-reason",
+      "relationship": "negative-messages",
+      "prompt": "電車が来なくて、困りました。→____",
+      "translation": "Classify the connection in the statement. Labels: 付帯（ふたい） = accompanying circumstances, here B done without A; 原因（げんいん） = a reason for the following result. These definitions do not assign all uses of one spelling to one class. 書く（かく） = write; 来る（くる） = come; 持ってくる（もってくる） = bring; 食べる（たべる） = eat; ない = absent/not have. Kana labels are accepted.",
+      "evidence": "Direct statement versus a selected quotation amid the other connection; cause also varies negative coming versus absent time.",
+      "explanation": "The train's not coming is presented as the reason for the speaker's difficulty. Read the selected complete message rather than a connector elsewhere in the prompt.",
+      "answer": "negative-reason",
+      "acceptedAnswers": [
+        "原因",
+        "げんいん",
+        "げいいん"
+      ],
+      "options": [
+        {
+          "id": "without-message",
+          "label": "付帯",
+          "rationale": "That does not identify the selected connection. The train's not coming is presented as the reason for the speaker's difficulty."
+        },
+        {
+          "id": "negative-reason",
+          "label": "原因",
+          "rationale": "The train's not coming is presented as the reason for the speaker's difficulty."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "45d026c67acc66f5cb563aed1b786d56b0fd0a9fafb5e129657dd870d37bf6b9",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "電車",
+            "reading": "でんしゃ",
+            "headword": "電車",
+            "gloss": "train"
+          },
+          {
+            "start": 8,
+            "end": 13,
+            "text": "困りました",
+            "reading": "こまりました",
+            "headword": "困る",
+            "gloss": "was in difficulty"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-quoted-commute-accounts-without-message",
+      "jlpt": 4,
+      "target": "without-message",
+      "relationship": "negative-messages",
+      "prompt": "私は傘を持ってこなくて、困りました。友達は「朝ご飯を食べないで、学校に行きました」と言いました。→____",
+      "translation": "Classify the connection inside the friend's quotation, not the narrator's earlier account. Labels: 付帯（ふたい） = accompanying circumstances, here B done without A; 原因（げんいん） = a reason for the following result. These definitions do not assign all uses of one spelling to one class. 書く（かく） = write; 来る（くる） = come; 持ってくる（もってくる） = bring; 食べる（たべる） = eat; ない = absent/not have. Kana labels are accepted.",
+      "evidence": "Direct statement versus a selected quotation amid the other connection; cause also varies negative coming versus absent time.",
+      "explanation": "Inside the quotation the friend went to school without eating breakfast. The narrator's missing-umbrella problem is a separate account. Read the selected complete message rather than a connector elsewhere in the prompt.",
+      "answer": "without-message",
+      "acceptedAnswers": [
+        "付帯",
+        "附帯",
+        "ふたい"
+      ],
+      "options": [
+        {
+          "id": "without-message",
+          "label": "付帯",
+          "rationale": "Inside the quotation the friend went to school without eating breakfast. The narrator's missing-umbrella problem is a separate account."
+        },
+        {
+          "id": "negative-reason",
+          "label": "原因",
+          "rationale": "That does not identify the selected connection. Inside the quotation the friend went to school without eating breakfast. The narrator's missing-umbrella problem is a separate account."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "e011fcd206aba866f958dfff7bf8989a61e56a2f00cea1220b61354c8660bc2d",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "傘",
+            "reading": "かさ",
+            "headword": "傘",
+            "gloss": "umbrella"
+          },
+          {
+            "start": 12,
+            "end": 17,
+            "text": "困りました",
+            "reading": "こまりました",
+            "headword": "困る",
+            "gloss": "was in difficulty"
+          },
+          {
+            "start": 18,
+            "end": 20,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 22,
+            "end": 25,
+            "text": "朝ご飯",
+            "reading": "あさごはん",
+            "headword": "朝ご飯",
+            "gloss": "breakfast"
+          },
+          {
+            "start": 32,
+            "end": 34,
+            "text": "学校",
+            "reading": "がっこう",
+            "headword": "学校",
+            "gloss": "school"
+          },
+          {
+            "start": 35,
+            "end": 40,
+            "text": "行きました",
+            "reading": "いきました",
+            "headword": "行く",
+            "gloss": "went"
+          },
+          {
+            "start": 42,
+            "end": 47,
+            "text": "言いました",
+            "reading": "いいました",
+            "headword": "言う",
+            "gloss": "said"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-quoted-commute-accounts-negative-reason",
+      "jlpt": 4,
+      "target": "negative-reason",
+      "relationship": "negative-messages",
+      "prompt": "私は名前を書かないで、紙を出しました。友達は「時間がなくて、困りました」と言いました。→____",
+      "translation": "Classify the connection inside the friend's quotation, not the narrator's earlier account. Labels: 付帯（ふたい） = accompanying circumstances, here B done without A; 原因（げんいん） = a reason for the following result. These definitions do not assign all uses of one spelling to one class. 書く（かく） = write; 来る（くる） = come; 持ってくる（もってくる） = bring; 食べる（たべる） = eat; ない = absent/not have. Kana labels are accepted.",
+      "evidence": "Direct statement versus a selected quotation amid the other connection; cause also varies negative coming versus absent time.",
+      "explanation": "The friend gives lack of time as the reason for difficulty. The narrator's earlier unsigned-paper account is outside that quotation. Read the selected complete message rather than a connector elsewhere in the prompt.",
+      "answer": "negative-reason",
+      "acceptedAnswers": [
+        "原因",
+        "げんいん",
+        "げいいん"
+      ],
+      "options": [
+        {
+          "id": "without-message",
+          "label": "付帯",
+          "rationale": "That does not identify the selected connection. The friend gives lack of time as the reason for difficulty. The narrator's earlier unsigned-paper account is outside that quotation."
+        },
+        {
+          "id": "negative-reason",
+          "label": "原因",
+          "rationale": "The friend gives lack of time as the reason for difficulty. The narrator's earlier unsigned-paper account is outside that quotation."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "2770736624082430f5f788b97f85ffba035051f9fe6a22a83d2799158bdde5d7",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "名前",
+            "reading": "なまえ",
+            "headword": "名前",
+            "gloss": "name"
+          },
+          {
+            "start": 11,
+            "end": 12,
+            "text": "紙",
+            "reading": "かみ",
+            "headword": "紙",
+            "gloss": "paper"
+          },
+          {
+            "start": 13,
+            "end": 18,
+            "text": "出しました",
+            "reading": "だしました",
+            "headword": "出す",
+            "gloss": "handed in"
+          },
+          {
+            "start": 19,
+            "end": 21,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 23,
+            "end": 25,
+            "text": "時間",
+            "reading": "じかん",
+            "headword": "時間",
+            "gloss": "time"
+          },
+          {
+            "start": 30,
+            "end": 35,
+            "text": "困りました",
+            "reading": "こまりました",
+            "headword": "困る",
+            "gloss": "was in difficulty"
+          },
+          {
+            "start": 37,
+            "end": 42,
+            "text": "言いました",
+            "reading": "いいました",
+            "headword": "言う",
+            "gloss": "said"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-rain-stopped-train",
+      "jlpt": 4,
+      "target": "te-cause",
+      "relationship": "te-functions",
+      "prompt": "雨で電車が止まりました。→____",
+      "translation": "Identify the relation expressed by the connected clauses in this complete message. Labels: 原因（げんいん） = cause of the result; 手段（しゅだん） = means/manner of the action; 並列（へいれつ） = side-by-side reporting of facts or activities. Do not invent a hidden story or assume that every て sequence is chronological. 暗い（くらい） = dark; 歩く（あるく） = walk; 使う（つかう） = use; 歌う（うたう） = sing; 働く（はたらく） = work. Kana labels are accepted.",
+      "evidence": "Cause varies nominal/adjective connection; means varies direct locomotion/use of an instrument; parallel varies simultaneous different subjects/distinct work schedules.",
+      "explanation": "Rain is presented as the cause of the train stopping, not a tool for deliberately stopping it. This is the expressed relation in this message, not a universal automatic inference from て or で.",
+      "answer": "te-cause",
+      "acceptedAnswers": [
+        "原因",
+        "げんいん",
+        "げいいん"
+      ],
+      "options": [
+        {
+          "id": "te-cause",
+          "label": "原因",
+          "rationale": "Rain is presented as the cause of the train stopping, not a tool for deliberately stopping it."
+        },
+        {
+          "id": "te-means",
+          "label": "手段",
+          "rationale": "That would assign a relation the message does not express. Rain is presented as the cause of the train stopping, not a tool for deliberately stopping it."
+        },
+        {
+          "id": "te-parallel",
+          "label": "並列",
+          "rationale": "That would assign a relation the message does not express. Rain is presented as the cause of the train stopping, not a tool for deliberately stopping it."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "18d583539d739345dc40e18c38506d524b8c823939db926ab705ce914a23dba8",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "雨",
+            "reading": "あめ",
+            "headword": "雨",
+            "gloss": "rain"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "電車",
+            "reading": "でんしゃ",
+            "headword": "電車",
+            "gloss": "train"
+          },
+          {
+            "start": 5,
+            "end": 11,
+            "text": "止まりました",
+            "reading": "とまりました",
+            "headword": "止まる",
+            "gloss": "stopped"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-dark-road",
+      "jlpt": 4,
+      "target": "te-cause",
+      "relationship": "te-functions",
+      "prompt": "道が暗くて、よく見えません。→____",
+      "translation": "Identify the relation expressed by the connected clauses in this complete message. Labels: 原因（げんいん） = cause of the result; 手段（しゅだん） = means/manner of the action; 並列（へいれつ） = side-by-side reporting of facts or activities. Do not invent a hidden story or assume that every て sequence is chronological. 暗い（くらい） = dark; 歩く（あるく） = walk; 使う（つかう） = use; 歌う（うたう） = sing; 働く（はたらく） = work. Kana labels are accepted.",
+      "evidence": "Cause varies nominal/adjective connection; means varies direct locomotion/use of an instrument; parallel varies simultaneous different subjects/distinct work schedules.",
+      "explanation": "The road's darkness is presented as why the speaker cannot see well. This is the expressed relation in this message, not a universal automatic inference from て or で.",
+      "answer": "te-cause",
+      "acceptedAnswers": [
+        "原因",
+        "げんいん",
+        "げいいん"
+      ],
+      "options": [
+        {
+          "id": "te-cause",
+          "label": "原因",
+          "rationale": "The road's darkness is presented as why the speaker cannot see well."
+        },
+        {
+          "id": "te-means",
+          "label": "手段",
+          "rationale": "That would assign a relation the message does not express. The road's darkness is presented as why the speaker cannot see well."
+        },
+        {
+          "id": "te-parallel",
+          "label": "並列",
+          "rationale": "That would assign a relation the message does not express. The road's darkness is presented as why the speaker cannot see well."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "658d12dbfdd51940eda79508b3a58f61f37522566c7da7bc12a7c43dd26a81be",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "道",
+            "reading": "みち",
+            "headword": "道",
+            "gloss": "road"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "よく",
+            "reading": "よく",
+            "headword": "よく",
+            "gloss": "well"
+          },
+          {
+            "start": 8,
+            "end": 13,
+            "text": "見えません",
+            "reading": "みえません",
+            "headword": "見える",
+            "gloss": "cannot see"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-walk-to-station",
+      "jlpt": 4,
+      "target": "te-means",
+      "relationship": "te-functions",
+      "prompt": "歩いて駅に行きます。→____",
+      "translation": "Identify the relation expressed by the connected clauses in this complete message. Labels: 原因（げんいん） = cause of the result; 手段（しゅだん） = means/manner of the action; 並列（へいれつ） = side-by-side reporting of facts or activities. Do not invent a hidden story or assume that every て sequence is chronological. 暗い（くらい） = dark; 歩く（あるく） = walk; 使う（つかう） = use; 歌う（うたう） = sing; 働く（はたらく） = work. Kana labels are accepted.",
+      "evidence": "Cause varies nominal/adjective connection; means varies direct locomotion/use of an instrument; parallel varies simultaneous different subjects/distinct work schedules.",
+      "explanation": "Walking is the manner of going to the station, not a separate finished event before all the going. This is the expressed relation in this message, not a universal automatic inference from て or で.",
+      "answer": "te-means",
+      "acceptedAnswers": [
+        "手段",
+        "しゅだん"
+      ],
+      "options": [
+        {
+          "id": "te-cause",
+          "label": "原因",
+          "rationale": "That would assign a relation the message does not express. Walking is the manner of going to the station, not a separate finished event before all the going."
+        },
+        {
+          "id": "te-means",
+          "label": "手段",
+          "rationale": "Walking is the manner of going to the station, not a separate finished event before all the going."
+        },
+        {
+          "id": "te-parallel",
+          "label": "並列",
+          "rationale": "That would assign a relation the message does not express. Walking is the manner of going to the station, not a separate finished event before all the going."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "a7cffb6c83e1309bc46ed9af8a2f568d7ca1d5107a2957e37b3eff2e95e203fd",
+        "spans": [
+          {
+            "start": 3,
+            "end": 4,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 5,
+            "end": 9,
+            "text": "行きます",
+            "reading": "いきます",
+            "headword": "行く",
+            "gloss": "go"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-map-search",
+      "jlpt": 4,
+      "target": "te-means",
+      "relationship": "te-functions",
+      "prompt": "地図を使って、駅を探します。→____",
+      "translation": "Identify the relation expressed by the connected clauses in this complete message. Labels: 原因（げんいん） = cause of the result; 手段（しゅだん） = means/manner of the action; 並列（へいれつ） = side-by-side reporting of facts or activities. Do not invent a hidden story or assume that every て sequence is chronological. 暗い（くらい） = dark; 歩く（あるく） = walk; 使う（つかう） = use; 歌う（うたう） = sing; 働く（はたらく） = work. Kana labels are accepted.",
+      "evidence": "Cause varies nominal/adjective connection; means varies direct locomotion/use of an instrument; parallel varies simultaneous different subjects/distinct work schedules.",
+      "explanation": "Using the map is the means of looking for the station, not a reported accidental cause. This is the expressed relation in this message, not a universal automatic inference from て or で.",
+      "answer": "te-means",
+      "acceptedAnswers": [
+        "手段",
+        "しゅだん"
+      ],
+      "options": [
+        {
+          "id": "te-cause",
+          "label": "原因",
+          "rationale": "That would assign a relation the message does not express. Using the map is the means of looking for the station, not a reported accidental cause."
+        },
+        {
+          "id": "te-means",
+          "label": "手段",
+          "rationale": "Using the map is the means of looking for the station, not a reported accidental cause."
+        },
+        {
+          "id": "te-parallel",
+          "label": "並列",
+          "rationale": "That would assign a relation the message does not express. Using the map is the means of looking for the station, not a reported accidental cause."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "3da543c1c7738f1602357d469d50f0e84013233245810dd883361f805f4f3acf",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "地図",
+            "reading": "ちず",
+            "headword": "地図",
+            "gloss": "map"
+          },
+          {
+            "start": 7,
+            "end": 8,
+            "text": "駅",
+            "reading": "えき",
+            "headword": "駅",
+            "gloss": "station"
+          },
+          {
+            "start": 9,
+            "end": 13,
+            "text": "探します",
+            "reading": "さがします",
+            "headword": "探す",
+            "gloss": "look for"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-siblings-performance",
+      "jlpt": 4,
+      "target": "te-parallel",
+      "relationship": "te-functions",
+      "prompt": "姉は歌っていて、弟は踊っています。→____",
+      "translation": "Identify the relation expressed by the connected clauses in this complete message. Labels: 原因（げんいん） = cause of the result; 手段（しゅだん） = means/manner of the action; 並列（へいれつ） = side-by-side reporting of facts or activities. Do not invent a hidden story or assume that every て sequence is chronological. 暗い（くらい） = dark; 歩く（あるく） = walk; 使う（つかう） = use; 歌う（うたう） = sing; 働く（はたらく） = work. Kana labels are accepted.",
+      "evidence": "Cause varies nominal/adjective connection; means varies direct locomotion/use of an instrument; parallel varies simultaneous different subjects/distinct work schedules.",
+      "explanation": "The speaker reports the sister's singing alongside the brother's dancing, without asserting that either causes the other. This is the expressed relation in this message, not a universal automatic inference from て or で.",
+      "answer": "te-parallel",
+      "acceptedAnswers": [
+        "並列",
+        "へいれつ"
+      ],
+      "options": [
+        {
+          "id": "te-cause",
+          "label": "原因",
+          "rationale": "That would assign a relation the message does not express. The speaker reports the sister's singing alongside the brother's dancing, without asserting that either causes the other."
+        },
+        {
+          "id": "te-means",
+          "label": "手段",
+          "rationale": "That would assign a relation the message does not express. The speaker reports the sister's singing alongside the brother's dancing, without asserting that either causes the other."
+        },
+        {
+          "id": "te-parallel",
+          "label": "並列",
+          "rationale": "The speaker reports the sister's singing alongside the brother's dancing, without asserting that either causes the other."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "fba6099c9a5a3210c8746df8cad349567340565eac6777c5dae18c3c414660b1",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "姉",
+            "reading": "あね",
+            "headword": "姉",
+            "gloss": "older sister"
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": "弟",
+            "reading": "おとうと",
+            "headword": "弟",
+            "gloss": "younger brother"
+          },
+          {
+            "start": 10,
+            "end": 16,
+            "text": "踊っています",
+            "reading": "おどっています",
+            "headword": "踊る",
+            "gloss": "is dancing"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-family-work-times",
+      "jlpt": 4,
+      "target": "te-parallel",
+      "relationship": "te-functions",
+      "prompt": "兄は昼に働いて、姉は夜に働きます。→____",
+      "translation": "Identify the relation expressed by the connected clauses in this complete message. Labels: 原因（げんいん） = cause of the result; 手段（しゅだん） = means/manner of the action; 並列（へいれつ） = side-by-side reporting of facts or activities. Do not invent a hidden story or assume that every て sequence is chronological. 暗い（くらい） = dark; 歩く（あるく） = walk; 使う（つかう） = use; 歌う（うたう） = sing; 働く（はたらく） = work. Kana labels are accepted.",
+      "evidence": "Cause varies nominal/adjective connection; means varies direct locomotion/use of an instrument; parallel varies simultaneous different subjects/distinct work schedules.",
+      "explanation": "The two work schedules are reported side by side. Parallel reporting does not require the activities to occur at the same hour. This is the expressed relation in this message, not a universal automatic inference from て or で.",
+      "answer": "te-parallel",
+      "acceptedAnswers": [
+        "並列",
+        "へいれつ"
+      ],
+      "options": [
+        {
+          "id": "te-cause",
+          "label": "原因",
+          "rationale": "That would assign a relation the message does not express. The two work schedules are reported side by side. Parallel reporting does not require the activities to occur at the same hour."
+        },
+        {
+          "id": "te-means",
+          "label": "手段",
+          "rationale": "That would assign a relation the message does not express. The two work schedules are reported side by side. Parallel reporting does not require the activities to occur at the same hour."
+        },
+        {
+          "id": "te-parallel",
+          "label": "並列",
+          "rationale": "The two work schedules are reported side by side. Parallel reporting does not require the activities to occur at the same hour."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "bacdb3f4441e1deb2ccc23dffdfe92a667091f63a8adcf926dbab18f4653831f",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "兄",
+            "reading": "あに",
+            "headword": "兄",
+            "gloss": "older brother"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "昼",
+            "reading": "ひる",
+            "headword": "昼",
+            "gloss": "daytime"
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": "姉",
+            "reading": "あね",
+            "headword": "姉",
+            "gloss": "older sister"
+          },
+          {
+            "start": 10,
+            "end": 11,
+            "text": "夜",
+            "reading": "よる",
+            "headword": "夜",
+            "gloss": "night"
+          },
+          {
+            "start": 12,
+            "end": 16,
+            "text": "働きます",
+            "reading": "はたらきます",
+            "headword": "働く",
+            "gloss": "works"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-book-return-limit-deadline-met",
+      "jlpt": 4,
+      "target": "deadline-met",
+      "relationship": "deadlines",
+      "prompt": "「十時までに本を返してください。」私は九時五十分に本を返しました。→____",
+      "translation": "All stated times are on the same day. Judge the reported completion against the quoted deadline, not the person's intention. Labels: 間に合う（まにあう） = meets that deadline; 間に合わない（まにあわない） = misses that deadline. 来る（くる） = come. Use the defined nonpast label, not a report-tense conjugation; kana labels are accepted.",
+      "evidence": "Clock-noun deadline versus a nonpast event boundary whose actual time must be recovered from another statement.",
+      "explanation": "The return deadline is 10:00; compare the actual return time with that limit. This completion was before the boundary and meets the limit.",
+      "answer": "deadline-met",
+      "acceptedAnswers": [
+        "間に合う",
+        "間にあう",
+        "まにあう"
+      ],
+      "options": [
+        {
+          "id": "deadline-met",
+          "label": "間に合う",
+          "rationale": "The return deadline is 10:00; compare the actual return time with that limit. This completion was before the boundary and meets the limit."
+        },
+        {
+          "id": "deadline-missed",
+          "label": "間に合わない",
+          "rationale": "That reverses the stated ordering. The return deadline is 10:00; compare the actual return time with that limit. This completion was before the boundary and meets the limit."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "0a4ffd288d487298cc4bebf5bbda6b818f988eb7e7f5140e005ed66cfd8824b4",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "十時",
+            "reading": "じゅうじ",
+            "headword": "十時",
+            "gloss": "ten o'clock"
+          },
+          {
+            "start": 6,
+            "end": 7,
+            "text": "本",
+            "reading": "ほん",
+            "headword": "本",
+            "gloss": "book"
+          },
+          {
+            "start": 8,
+            "end": 15,
+            "text": "返してください",
+            "reading": "かえしてください",
+            "headword": "返す",
+            "gloss": "please return it"
+          },
+          {
+            "start": 17,
+            "end": 18,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 19,
+            "end": 24,
+            "text": "九時五十分",
+            "reading": "くじごじゅっぷん",
+            "headword": "九時五十分",
+            "gloss": "9:50"
+          },
+          {
+            "start": 25,
+            "end": 26,
+            "text": "本",
+            "reading": "ほん",
+            "headword": "本",
+            "gloss": "book"
+          },
+          {
+            "start": 27,
+            "end": 32,
+            "text": "返しました",
+            "reading": "かえしました",
+            "headword": "返す",
+            "gloss": "returned it"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-book-return-limit-deadline-missed",
+      "jlpt": 4,
+      "target": "deadline-missed",
+      "relationship": "deadlines",
+      "prompt": "「十時までに本を返してください。」私は十時十分に本を返しました。→____",
+      "translation": "All stated times are on the same day. Judge the reported completion against the quoted deadline, not the person's intention. Labels: 間に合う（まにあう） = meets that deadline; 間に合わない（まにあわない） = misses that deadline. 来る（くる） = come. Use the defined nonpast label, not a report-tense conjugation; kana labels are accepted.",
+      "evidence": "Clock-noun deadline versus a nonpast event boundary whose actual time must be recovered from another statement.",
+      "explanation": "The return deadline is 10:00; compare the actual return time with that limit. This completion was after the boundary and misses the limit; it still happened.",
+      "answer": "deadline-missed",
+      "acceptedAnswers": [
+        "間に合わない",
+        "間にあわない",
+        "まにあわない"
+      ],
+      "options": [
+        {
+          "id": "deadline-met",
+          "label": "間に合う",
+          "rationale": "That reverses the stated ordering. The return deadline is 10:00; compare the actual return time with that limit. This completion was after the boundary and misses the limit; it still happened."
+        },
+        {
+          "id": "deadline-missed",
+          "label": "間に合わない",
+          "rationale": "The return deadline is 10:00; compare the actual return time with that limit. This completion was after the boundary and misses the limit; it still happened."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "5f2176cd76b8ad9df8f71dcf2517ec721afb6947bbfad2478350a2a36c68e424",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "十時",
+            "reading": "じゅうじ",
+            "headword": "十時",
+            "gloss": "ten o'clock"
+          },
+          {
+            "start": 6,
+            "end": 7,
+            "text": "本",
+            "reading": "ほん",
+            "headword": "本",
+            "gloss": "book"
+          },
+          {
+            "start": 8,
+            "end": 15,
+            "text": "返してください",
+            "reading": "かえしてください",
+            "headword": "返す",
+            "gloss": "please return it"
+          },
+          {
+            "start": 17,
+            "end": 18,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 19,
+            "end": 23,
+            "text": "十時十分",
+            "reading": "じゅうじじゅっぷん",
+            "headword": "十時十分",
+            "gloss": "10:10"
+          },
+          {
+            "start": 24,
+            "end": 25,
+            "text": "本",
+            "reading": "ほん",
+            "headword": "本",
+            "gloss": "book"
+          },
+          {
+            "start": 26,
+            "end": 31,
+            "text": "返しました",
+            "reading": "かえしました",
+            "headword": "返す",
+            "gloss": "returned it"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-teacher-arrival-limit-deadline-met",
+      "jlpt": 4,
+      "target": "deadline-met",
+      "relationship": "deadlines",
+      "prompt": "「先生が来るまでに、紙を出してください。」先生は九時に来ました。私は八時五十分に紙を出しました。→____",
+      "translation": "All stated times are on the same day. Judge the reported completion against the quoted deadline, not the person's intention. Labels: 間に合う（まにあう） = meets that deadline; 間に合わない（まにあわない） = misses that deadline. 来る（くる） = come. Use the defined nonpast label, not a report-tense conjugation; kana labels are accepted.",
+      "evidence": "Clock-noun deadline versus a nonpast event boundary whose actual time must be recovered from another statement.",
+      "explanation": "The teacher's arrival is the deadline event. The stated arrival was 9:00; compare the hand-in time with it. This completion was before the boundary and meets the limit.",
+      "answer": "deadline-met",
+      "acceptedAnswers": [
+        "間に合う",
+        "間にあう",
+        "まにあう"
+      ],
+      "options": [
+        {
+          "id": "deadline-met",
+          "label": "間に合う",
+          "rationale": "The teacher's arrival is the deadline event. The stated arrival was 9:00; compare the hand-in time with it. This completion was before the boundary and meets the limit."
+        },
+        {
+          "id": "deadline-missed",
+          "label": "間に合わない",
+          "rationale": "That reverses the stated ordering. The teacher's arrival is the deadline event. The stated arrival was 9:00; compare the hand-in time with it. This completion was before the boundary and meets the limit."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "2657ad4b84cff4ee02b91103c32c8a098bd2bc88d12f20b17d7f09ad484f8865",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 10,
+            "end": 11,
+            "text": "紙",
+            "reading": "かみ",
+            "headword": "紙",
+            "gloss": "paper"
+          },
+          {
+            "start": 12,
+            "end": 19,
+            "text": "出してください",
+            "reading": "だしてください",
+            "headword": "出す",
+            "gloss": "please hand it in"
+          },
+          {
+            "start": 21,
+            "end": 23,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 24,
+            "end": 26,
+            "text": "九時",
+            "reading": "くじ",
+            "headword": "九時",
+            "gloss": "nine o'clock"
+          },
+          {
+            "start": 27,
+            "end": 31,
+            "text": "来ました",
+            "reading": "きました",
+            "headword": "来る",
+            "gloss": "came"
+          },
+          {
+            "start": 32,
+            "end": 33,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 34,
+            "end": 39,
+            "text": "八時五十分",
+            "reading": "はちじごじゅっぷん",
+            "headword": "八時五十分",
+            "gloss": "8:50"
+          },
+          {
+            "start": 40,
+            "end": 41,
+            "text": "紙",
+            "reading": "かみ",
+            "headword": "紙",
+            "gloss": "paper"
+          },
+          {
+            "start": 42,
+            "end": 47,
+            "text": "出しました",
+            "reading": "だしました",
+            "headword": "出す",
+            "gloss": "handed in"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-teacher-arrival-limit-deadline-missed",
+      "jlpt": 4,
+      "target": "deadline-missed",
+      "relationship": "deadlines",
+      "prompt": "「先生が来るまでに、紙を出してください。」先生は九時に来ました。私は九時十分に紙を出しました。→____",
+      "translation": "All stated times are on the same day. Judge the reported completion against the quoted deadline, not the person's intention. Labels: 間に合う（まにあう） = meets that deadline; 間に合わない（まにあわない） = misses that deadline. 来る（くる） = come. Use the defined nonpast label, not a report-tense conjugation; kana labels are accepted.",
+      "evidence": "Clock-noun deadline versus a nonpast event boundary whose actual time must be recovered from another statement.",
+      "explanation": "The teacher's arrival is the deadline event. The stated arrival was 9:00; compare the hand-in time with it. This completion was after the boundary and misses the limit; it still happened.",
+      "answer": "deadline-missed",
+      "acceptedAnswers": [
+        "間に合わない",
+        "間にあわない",
+        "まにあわない"
+      ],
+      "options": [
+        {
+          "id": "deadline-met",
+          "label": "間に合う",
+          "rationale": "That reverses the stated ordering. The teacher's arrival is the deadline event. The stated arrival was 9:00; compare the hand-in time with it. This completion was after the boundary and misses the limit; it still happened."
+        },
+        {
+          "id": "deadline-missed",
+          "label": "間に合わない",
+          "rationale": "The teacher's arrival is the deadline event. The stated arrival was 9:00; compare the hand-in time with it. This completion was after the boundary and misses the limit; it still happened."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f6fbcdcb69be4c3da09d140dfe6f055898f8dc3050b145b23bc1164e262ea6db",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 10,
+            "end": 11,
+            "text": "紙",
+            "reading": "かみ",
+            "headword": "紙",
+            "gloss": "paper"
+          },
+          {
+            "start": 12,
+            "end": 19,
+            "text": "出してください",
+            "reading": "だしてください",
+            "headword": "出す",
+            "gloss": "please hand it in"
+          },
+          {
+            "start": 21,
+            "end": 23,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 24,
+            "end": 26,
+            "text": "九時",
+            "reading": "くじ",
+            "headword": "九時",
+            "gloss": "nine o'clock"
+          },
+          {
+            "start": 27,
+            "end": 31,
+            "text": "来ました",
+            "reading": "きました",
+            "headword": "来る",
+            "gloss": "came"
+          },
+          {
+            "start": 32,
+            "end": 33,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 34,
+            "end": 38,
+            "text": "九時十分",
+            "reading": "くじじゅっぷん",
+            "headword": "九時十分",
+            "gloss": "9:10"
+          },
+          {
+            "start": 39,
+            "end": 40,
+            "text": "紙",
+            "reading": "かみ",
+            "headword": "紙",
+            "gloss": "paper"
+          },
+          {
+            "start": 41,
+            "end": 46,
+            "text": "出しました",
+            "reading": "だしました",
+            "headword": "出す",
+            "gloss": "handed in"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-explanation-understanding-positive-temo",
+      "jlpt": 4,
+      "target": "positive-temo",
+      "relationship": "concession-forms",
+      "prompt": "この説明は____、分かりません。",
+      "translation": "Base predicate: 読む（よむ）, read. Form the whole ordinary affirmative ても concession, meaning even if/though the specified predicate holds. Convert the base and retain も. Do not change the printed main predicate or substitute a different connector.",
+      "evidence": "Godan verbal conversion versus i-adjective attachment within each polarity facet.",
+      "explanation": "Use 読んでも for the requested predicate polarity. The following result holds despite that condition; the negative belongs to the subordinate predicate when requested. This does not by itself assert that the subordinate situation actually occurred.",
+      "answer": "positive-temo",
+      "acceptedAnswers": [
+        "読んでも",
+        "よんでも"
+      ],
+      "options": [
+        {
+          "id": "positive-temo",
+          "label": "読んでも",
+          "rationale": "This is the requested whole concessive form with the specified polarity."
+        },
+        {
+          "id": "negative-temo",
+          "label": "読まなくても",
+          "rationale": "This changes the subordinate predicate's polarity instead of supplying the one requested."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "01212a5da8d042ddf5e4b710194f200c87b8b7217028e269fd8697934bd6399a",
+        "spans": [
+          {
+            "start": 2,
+            "end": 4,
+            "text": "説明",
+            "reading": "せつめい",
+            "headword": "説明",
+            "gloss": "explanation"
+          },
+          {
+            "start": 10,
+            "end": 16,
+            "text": "分かりません",
+            "reading": "わかりません",
+            "headword": "分かる",
+            "gloss": "do not understand"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-explanation-understanding-negative-temo",
+      "jlpt": 4,
+      "target": "negative-temo",
+      "relationship": "concession-forms",
+      "prompt": "この説明は____、分かります。",
+      "translation": "Base predicate: 読む（よむ）, read. Form the whole ordinary negative ても concession, meaning even if/though the specified predicate does not hold. Convert the base and retain も. Do not change the printed main predicate or substitute a different connector.",
+      "evidence": "Godan verbal conversion versus i-adjective attachment within each polarity facet.",
+      "explanation": "Use 読まなくても for the requested predicate polarity. The following result holds despite that condition; the negative belongs to the subordinate predicate when requested. This does not by itself assert that the subordinate situation actually occurred.",
+      "answer": "negative-temo",
+      "acceptedAnswers": [
+        "読まなくても",
+        "よまなくても"
+      ],
+      "options": [
+        {
+          "id": "negative-temo",
+          "label": "読まなくても",
+          "rationale": "This is the requested whole concessive form with the specified polarity."
+        },
+        {
+          "id": "positive-temo",
+          "label": "読んでも",
+          "rationale": "This changes the subordinate predicate's polarity instead of supplying the one requested."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "8638b2c6349f2bc8ea96da4979a7167a3d86905522636fd908233b58ac0579ca",
+        "spans": [
+          {
+            "start": 2,
+            "end": 4,
+            "text": "説明",
+            "reading": "せつめい",
+            "headword": "説明",
+            "gloss": "explanation"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "text": "分かります",
+            "reading": "わかります",
+            "headword": "分かる",
+            "gloss": "understand"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-bag-purchase-positive-temo",
+      "jlpt": 4,
+      "target": "positive-temo",
+      "relationship": "concession-forms",
+      "prompt": "このかばんは____、買います。",
+      "translation": "Base predicate: 高い（たかい）, expensive. Form the whole ordinary affirmative ても concession, meaning even if/though the specified predicate holds. Convert the base and retain も. Do not change the printed main predicate or substitute a different connector.",
+      "evidence": "Godan verbal conversion versus i-adjective attachment within each polarity facet.",
+      "explanation": "Use 高くても for the requested predicate polarity. The following result holds despite that condition; the negative belongs to the subordinate predicate when requested. This does not by itself assert that the subordinate situation actually occurred.",
+      "answer": "positive-temo",
+      "acceptedAnswers": [
+        "高くても",
+        "たかくても"
+      ],
+      "options": [
+        {
+          "id": "positive-temo",
+          "label": "高くても",
+          "rationale": "This is the requested whole concessive form with the specified polarity."
+        },
+        {
+          "id": "negative-temo",
+          "label": "高くなくても",
+          "rationale": "This changes the subordinate predicate's polarity instead of supplying the one requested."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "177cae73d2e47ebf152c2c9cf50603372e5d4c185f277f1938c84cb4137d6cbe",
+        "spans": [
+          {
+            "start": 2,
+            "end": 5,
+            "text": "かばん",
+            "reading": "かばん",
+            "headword": "かばん",
+            "gloss": "bag"
+          },
+          {
+            "start": 11,
+            "end": 15,
+            "text": "買います",
+            "reading": "かいます",
+            "headword": "買う",
+            "gloss": "will buy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-bag-purchase-negative-temo",
+      "jlpt": 4,
+      "target": "negative-temo",
+      "relationship": "concession-forms",
+      "prompt": "このかばんは____、買いません。",
+      "translation": "Base predicate: 高い（たかい）, expensive. Form the whole ordinary negative ても concession, meaning even if/though the specified predicate does not hold. Convert the base and retain も. Do not change the printed main predicate or substitute a different connector.",
+      "evidence": "Godan verbal conversion versus i-adjective attachment within each polarity facet.",
+      "explanation": "Use 高くなくても for the requested predicate polarity. The following result holds despite that condition; the negative belongs to the subordinate predicate when requested. This does not by itself assert that the subordinate situation actually occurred.",
+      "answer": "negative-temo",
+      "acceptedAnswers": [
+        "高くなくても",
+        "たかくなくても"
+      ],
+      "options": [
+        {
+          "id": "negative-temo",
+          "label": "高くなくても",
+          "rationale": "This is the requested whole concessive form with the specified polarity."
+        },
+        {
+          "id": "positive-temo",
+          "label": "高くても",
+          "rationale": "This changes the subordinate predicate's polarity instead of supplying the one requested."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "a1d6215b46f5d5e070efa00c603c253a2697c7a34aefcc3e3f9d8ece4b975a0d",
+        "spans": [
+          {
+            "start": 2,
+            "end": 5,
+            "text": "かばん",
+            "reading": "かばん",
+            "headword": "かばん",
+            "gloss": "bag"
+          },
+          {
+            "start": 11,
+            "end": 16,
+            "text": "買いません",
+            "reading": "かいません",
+            "headword": "買う",
+            "gloss": "will not buy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-saturday-opening-condition-message",
+      "jlpt": 4,
+      "target": "condition-message",
+      "relationship": "concession-messages",
+      "prompt": "土曜日だったら、この店は開いています。→____",
+      "translation": "Identify how the first clause frames the following result. Labels: 条件（じょうけん） = a condition/trigger for the result; 譲歩（じょうほ） = the result holds even if/though the stated condition applies. Classify the expressed framing, not an imagined policy. 土曜日（どようび） = Saturday. Kana labels are accepted.",
+      "evidence": "Possible/routine nominal case versus an actual completed opening-event report within each interpretation facet; concession appears with both affirmative and negative main predicates.",
+      "explanation": "Saturday is offered as the condition under which the shop is open; the sentence is not asserting that today is Saturday. The classification does not make たら and ても universally interchangeable.",
+      "answer": "condition-message",
+      "acceptedAnswers": [
+        "条件",
+        "じょうけん"
+      ],
+      "options": [
+        {
+          "id": "condition-message",
+          "label": "条件",
+          "rationale": "Saturday is offered as the condition under which the shop is open; the sentence is not asserting that today is Saturday."
+        },
+        {
+          "id": "concession-message",
+          "label": "譲歩",
+          "rationale": "That changes the relation actually expressed. Saturday is offered as the condition under which the shop is open; the sentence is not asserting that today is Saturday."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d685aeb82f001454793a5b786f0880468b5b562d844f8a754057c8de685fda2c",
+        "spans": [
+          {
+            "start": 10,
+            "end": 11,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          },
+          {
+            "start": 12,
+            "end": 18,
+            "text": "開いています",
+            "reading": "あいています",
+            "headword": "開く",
+            "gloss": "is open"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-saturday-opening-concession-message",
+      "jlpt": 4,
+      "target": "concession-message",
+      "relationship": "concession-messages",
+      "prompt": "土曜日でも、この店は開いています。→____",
+      "translation": "Identify how the first clause frames the following result. Labels: 条件（じょうけん） = a condition/trigger for the result; 譲歩（じょうほ） = the result holds even if/though the stated condition applies. Classify the expressed framing, not an imagined policy. 土曜日（どようび） = Saturday. Kana labels are accepted.",
+      "evidence": "Possible/routine nominal case versus an actual completed opening-event report within each interpretation facet; concession appears with both affirmative and negative main predicates.",
+      "explanation": "The shop is open even if/even when it is Saturday. This alone does not say that it is open on every other day. The classification does not make たら and ても universally interchangeable.",
+      "answer": "concession-message",
+      "acceptedAnswers": [
+        "譲歩",
+        "じょうほ"
+      ],
+      "options": [
+        {
+          "id": "condition-message",
+          "label": "条件",
+          "rationale": "That changes the relation actually expressed. The shop is open even if/even when it is Saturday. This alone does not say that it is open on every other day."
+        },
+        {
+          "id": "concession-message",
+          "label": "譲歩",
+          "rationale": "The shop is open even if/even when it is Saturday. This alone does not say that it is open on every other day."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "1f11ac05e42b554beeacb3ebdda4972bf2a5356697b297bfdce1abba966e34d1",
+        "spans": [
+          {
+            "start": 8,
+            "end": 9,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          },
+          {
+            "start": 10,
+            "end": 16,
+            "text": "開いています",
+            "reading": "あいています",
+            "headword": "開く",
+            "gloss": "is open"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-hot-room-window-condition-message",
+      "jlpt": 4,
+      "target": "condition-message",
+      "relationship": "concession-messages",
+      "prompt": "窓を開けたら、外で鳥が鳴いていました。→____",
+      "translation": "It was a hot day and the window was actually opened. Identify how the first clause frames the following result in the report. Labels: 条件（じょうけん） = a condition/trigger for the result; 譲歩（じょうほ） = the result holds even if/though the stated condition applies. Classify the expressed framing, not an imagined policy. 開ける（あける） = open. Kana labels are accepted.",
+      "evidence": "Hypothetical/routine nominal case versus an actual completed-event report within each interpretation facet, not merely another predicate noun.",
+      "explanation": "The speaker reports what was encountered on opening the window. The completed opening supplies the event boundary for this discovery; it does not cause the birds to sing. The classification does not make たら and ても universally interchangeable.",
+      "answer": "condition-message",
+      "acceptedAnswers": [
+        "条件",
+        "じょうけん"
+      ],
+      "options": [
+        {
+          "id": "condition-message",
+          "label": "条件",
+          "rationale": "The speaker reports what was encountered on opening the window. The completed opening supplies the event boundary for this discovery; it does not cause the birds to sing."
+        },
+        {
+          "id": "concession-message",
+          "label": "譲歩",
+          "rationale": "That changes the relation actually expressed. The speaker reports what was encountered on opening the window. The completed opening supplies the event boundary for this discovery; it does not cause the birds to sing."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "af895f5857f14172119f7c044720db57c4449f5bb1e4fb483459cf39291253c1",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "窓",
+            "reading": "まど",
+            "headword": "窓",
+            "gloss": "window"
+          },
+          {
+            "start": 7,
+            "end": 8,
+            "text": "外",
+            "reading": "そと",
+            "headword": "外",
+            "gloss": "outside"
+          },
+          {
+            "start": 9,
+            "end": 10,
+            "text": "鳥",
+            "reading": "とり",
+            "headword": "鳥",
+            "gloss": "bird"
+          },
+          {
+            "start": 11,
+            "end": 18,
+            "text": "鳴いていました",
+            "reading": "ないていました",
+            "headword": "鳴く",
+            "gloss": "was singing; was chirping"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-hot-room-window-concession-message",
+      "jlpt": 4,
+      "target": "concession-message",
+      "relationship": "concession-messages",
+      "prompt": "窓を開けても、部屋は涼しくなりませんでした。→____",
+      "translation": "It was a hot day and the window was actually opened. Identify how the first clause frames the following result in the report. Labels: 条件（じょうけん） = a condition/trigger for the result; 譲歩（じょうほ） = the result holds even if/though the stated condition applies. Classify the expressed framing, not an imagined policy. 開ける（あける） = open. Kana labels are accepted.",
+      "evidence": "Hypothetical/routine nominal case versus an actual completed-event report within each interpretation facet, not merely another predicate noun.",
+      "explanation": "The room did not become cool despite the actual window opening. The attempted measure did not produce the expected cooling. The classification does not make たら and ても universally interchangeable.",
+      "answer": "concession-message",
+      "acceptedAnswers": [
+        "譲歩",
+        "じょうほ"
+      ],
+      "options": [
+        {
+          "id": "condition-message",
+          "label": "条件",
+          "rationale": "That changes the relation actually expressed. The room did not become cool despite the actual window opening. The attempted measure did not produce the expected cooling."
+        },
+        {
+          "id": "concession-message",
+          "label": "譲歩",
+          "rationale": "The room did not become cool despite the actual window opening. The attempted measure did not produce the expected cooling."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "8fabe379da5ff9cb6c2848afcd0bbf5316b3ef036f2512b2c5b34ccc8a58e68f",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "窓",
+            "reading": "まど",
+            "headword": "窓",
+            "gloss": "window"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "部屋",
+            "reading": "へや",
+            "headword": "部屋",
+            "gloss": "room"
+          },
+          {
+            "start": 10,
+            "end": 21,
+            "text": "涼しくなりませんでした",
+            "reading": "すずしくなりませんでした",
+            "headword": "涼しくなる",
+            "gloss": "did not become cool"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-weather-bus-alternatives",
+      "jlpt": 4,
+      "target": "nominal-pair",
+      "relationship": "alternative-pairs",
+      "prompt": "____、バスは走ります。",
+      "translation": "Bases: 雨（あめ）, rain; 雪（ゆき）, snow. Build the whole paired even-if/whether expression: two affirmative noun cases in the given order. The printed outcome is unchanged across the two cases. Use the standard でも／ても attachment for each predicate, explicitly repeat both supplied bases, and do not add extra は／に or an omitted-case paraphrase.",
+      "evidence": "Within each predicate-class facet, two affirmative cases versus an affirmative and negative case require different assembly.",
+      "explanation": "Nouns attach to でも rather than the adjective's くても. Preserve the main predicate: the outcome holds across the stated alternatives, which need not both be true.",
+      "answer": "nominal-pair",
+      "acceptedAnswers": [
+        "雨でも雪でも",
+        "雨でもゆきでも",
+        "あめでも雪でも",
+        "あめでもゆきでも"
+      ],
+      "options": [
+        {
+          "id": "nominal-pair",
+          "label": "雨でも雪でも",
+          "rationale": "Nouns attach to でも rather than the adjective's くても. Both alternatives are fully assembled."
+        },
+        {
+          "id": "adjective-pair",
+          "label": "雨くても雪くても",
+          "rationale": "This uses an invalid ordinary attachment for the supplied predicate. Nouns attach to でも rather than the adjective's くても."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "aee2e2c942d03e55ade5c0c7d11a2b8312a63e8a449942b3c10c8d852971e5c8",
+        "spans": [
+          {
+            "start": 5,
+            "end": 7,
+            "text": "バス",
+            "reading": "ばす",
+            "headword": "バス",
+            "gloss": "bus"
+          },
+          {
+            "start": 8,
+            "end": 12,
+            "text": "走ります",
+            "reading": "はしります",
+            "headword": "走る",
+            "gloss": "runs; operates a service"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-student-fee-alternatives",
+      "jlpt": 4,
+      "target": "nominal-pair",
+      "relationship": "alternative-pairs",
+      "prompt": "____、料金は同じです。",
+      "translation": "Bases: 学生（がくせい）, student; the negative of the same noun predicate. Build the whole paired even-if/whether expression: the affirmative case followed by its negative. The printed outcome is unchanged across the two cases. Use the standard でも／ても attachment for each predicate, explicitly repeat both supplied bases, and do not add extra は／に or an omitted-case paraphrase.",
+      "evidence": "Within each predicate-class facet, two affirmative cases versus an affirmative and negative case require different assembly.",
+      "explanation": "The negative noun predicate needs では／じゃ／で + なくても, not noun + ないでも. Preserve the main predicate: the outcome holds across the stated alternatives, which need not both be true.",
+      "answer": "nominal-pair",
+      "acceptedAnswers": [
+        "学生でも学生ではなくても",
+        "学生でも学生じゃなくても",
+        "学生でも学生でなくても",
+        "学生でもがくせいではなくても",
+        "学生でもがくせいじゃなくても",
+        "学生でもがくせいでなくても",
+        "がくせいでも学生ではなくても",
+        "がくせいでも学生じゃなくても",
+        "がくせいでも学生でなくても",
+        "がくせいでもがくせいではなくても",
+        "がくせいでもがくせいじゃなくても",
+        "がくせいでもがくせいでなくても"
+      ],
+      "options": [
+        {
+          "id": "nominal-pair",
+          "label": "学生でも学生ではなくても",
+          "rationale": "The negative noun predicate needs では／じゃ／で + なくても, not noun + ないでも. Both alternatives are fully assembled."
+        },
+        {
+          "id": "adjective-pair",
+          "label": "学生でも学生ないでも",
+          "rationale": "This uses an invalid ordinary attachment for the supplied predicate. The negative noun predicate needs では／じゃ／で + なくても, not noun + ないでも."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "1a082f41167ca521e203dac7cc0ff28c6b4f897e7bb2b800dd1a1f95af2ff143",
+        "spans": [
+          {
+            "start": 5,
+            "end": 7,
+            "text": "料金",
+            "reading": "りょうきん",
+            "headword": "料金",
+            "gloss": "fee"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "text": "同じ",
+            "reading": "おなじ",
+            "headword": "同じ",
+            "gloss": "the same"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-temperature-walking-alternatives",
+      "jlpt": 4,
+      "target": "adjective-pair",
+      "relationship": "alternative-pairs",
+      "prompt": "気温が____、毎朝歩きます。",
+      "translation": "Bases: 高い（たかい）, high; 低い（ひくい）, low. Build the whole paired even-if/whether expression: two affirmative adjective cases in the given order. The printed outcome is unchanged across the two cases. Use the standard でも／ても attachment for each predicate, explicitly repeat both supplied bases, and do not add extra は／に or an omitted-case paraphrase.",
+      "evidence": "Within each predicate-class facet, two affirmative cases versus an affirmative and negative case require different assembly.",
+      "explanation": "Each i-adjective loses final い and connects through くても. Preserve the main predicate: the outcome holds across the stated alternatives, which need not both be true.",
+      "answer": "adjective-pair",
+      "acceptedAnswers": [
+        "高くても低くても",
+        "高くてもひくくても",
+        "たかくても低くても",
+        "たかくてもひくくても"
+      ],
+      "options": [
+        {
+          "id": "adjective-pair",
+          "label": "高くても低くても",
+          "rationale": "Each i-adjective loses final い and connects through くても. Both alternatives are fully assembled."
+        },
+        {
+          "id": "nominal-pair",
+          "label": "高いでも低いでも",
+          "rationale": "This uses an invalid ordinary attachment for the supplied predicate. Each i-adjective loses final い and connects through くても."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "7cda1dc5b4bbef92abe0599fc628a966d3f9ae7705d0184466ee30637c6164de",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "気温",
+            "reading": "きおん",
+            "headword": "気温",
+            "gloss": "air temperature"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "text": "毎朝",
+            "reading": "まいあさ",
+            "headword": "毎朝",
+            "gloss": "every morning"
+          },
+          {
+            "start": 10,
+            "end": 14,
+            "text": "歩きます",
+            "reading": "あるきます",
+            "headword": "歩く",
+            "gloss": "walk"
+          }
+        ]
+      }
+    },
+    {
+      "id": "time-linking-bag-purchase-alternatives",
+      "jlpt": 4,
+      "target": "adjective-pair",
+      "relationship": "alternative-pairs",
+      "prompt": "このかばんは____、買いません。",
+      "translation": "Bases: 高い（たかい）, expensive; the negative of the same adjective predicate. Build the whole paired even-if/whether expression: the affirmative case followed by its negative. The printed outcome is unchanged across the two cases. Use the standard でも／ても attachment for each predicate, explicitly repeat both supplied bases, and do not add extra は／に or an omitted-case paraphrase.",
+      "evidence": "Within each predicate-class facet, two affirmative cases versus an affirmative and negative case require different assembly.",
+      "explanation": "The negative i-adjective connects through くなくても, not くないでも. Preserve the main predicate: the outcome holds across the stated alternatives, which need not both be true.",
+      "answer": "adjective-pair",
+      "acceptedAnswers": [
+        "高くても高くなくても",
+        "高くてもたかくなくても",
+        "たかくても高くなくても",
+        "たかくてもたかくなくても"
+      ],
+      "options": [
+        {
+          "id": "adjective-pair",
+          "label": "高くても高くなくても",
+          "rationale": "The negative i-adjective connects through くなくても, not くないでも. Both alternatives are fully assembled."
+        },
+        {
+          "id": "nominal-pair",
+          "label": "高くても高くないでも",
+          "rationale": "This uses an invalid ordinary attachment for the supplied predicate. The negative i-adjective connects through くなくても, not くないでも."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "a1d6215b46f5d5e070efa00c603c253a2697c7a34aefcc3e3f9d8ece4b975a0d",
+        "spans": [
+          {
+            "start": 2,
+            "end": 5,
+            "text": "かばん",
+            "reading": "かばん",
+            "headword": "かばん",
+            "gloss": "bag"
+          },
+          {
+            "start": 11,
+            "end": 16,
+            "text": "買いません",
+            "reading": "かいません",
+            "headword": "買う",
+            "gloss": "will not buy"
+          }
+        ]
+      }
+    }
+  ],
+  "introductionGroups": [
+    {
+      "id": "time-linking-relative-time",
+      "label": "Build an event viewpoint before toki",
+      "facets": [
+        {
+          "id": "event-ahead",
+          "label": "Event not presented as completed at the reference moment"
+        },
+        {
+          "id": "event-completed",
+          "label": "Event presented as completed at the reference moment"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "time-linking-station-call-event-ahead",
+          "facetId": "event-ahead",
+          "exampleKey": "station-call"
+        },
+        {
+          "exerciseId": "time-linking-station-call-event-completed",
+          "facetId": "event-completed",
+          "exampleKey": "station-call"
+        },
+        {
+          "exerciseId": "time-linking-departure-phone-event-ahead",
+          "facetId": "event-ahead",
+          "exampleKey": "departure-phone"
+        },
+        {
+          "exerciseId": "time-linking-departure-phone-event-completed",
+          "facetId": "event-completed",
+          "exampleKey": "departure-phone"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "temporal-sequence",
+          "importance": 2,
+          "reason": "Reuse the original before/after objects and attachment practice."
+        },
+        {
+          "groupId": "n4-existing-time-references",
+          "importance": 2,
+          "reason": "Keep relative completion viewpoint separate from time approximation."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "time-linking-overlap",
+      "label": "Build simultaneous actions and ongoing intervals",
+      "facets": [
+        {
+          "id": "same-agent-nagara",
+          "label": "Same-agent simultaneous activity"
+        },
+        {
+          "id": "ongoing-interval",
+          "label": "Event within an ongoing interval"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "time-linking-letter-music-nagara",
+          "facetId": "same-agent-nagara",
+          "exampleKey": "letter-music"
+        },
+        {
+          "exerciseId": "time-linking-bread-reading-nagara",
+          "facetId": "same-agent-nagara",
+          "exampleKey": "bread-reading"
+        },
+        {
+          "exerciseId": "time-linking-reading-arrival-interval",
+          "facetId": "ongoing-interval",
+          "exampleKey": "reading-arrival"
+        },
+        {
+          "exerciseId": "time-linking-meal-phone-interval",
+          "facetId": "ongoing-interval",
+          "exampleKey": "meal-phone"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "n5-actions-time-aspect",
+          "importance": 2,
+          "reason": "Reuse ongoing-action readings before assembling complete interval modifiers."
+        },
+        {
+          "groupId": "n4-existing-intervals",
+          "importance": 2,
+          "reason": "Reuse interval-topic versus event-within framing in its existing owner."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "time-linking-negative-forms",
+      "label": "Build two negative clause connections",
+      "facets": [
+        {
+          "id": "naide-form",
+          "label": "Without-doing connection"
+        },
+        {
+          "id": "nakute-form",
+          "label": "Negative te connection"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "time-linking-unsigned-paper-naide-form",
+          "facetId": "naide-form",
+          "exampleKey": "unsigned-paper"
+        },
+        {
+          "exerciseId": "time-linking-unsigned-paper-nakute-form",
+          "facetId": "nakute-form",
+          "exampleKey": "unsigned-paper"
+        },
+        {
+          "exerciseId": "time-linking-missed-breakfast-naide-form",
+          "facetId": "naide-form",
+          "exampleKey": "missed-breakfast"
+        },
+        {
+          "exerciseId": "time-linking-missed-breakfast-nakute-form",
+          "facetId": "nakute-form",
+          "exampleKey": "missed-breakfast"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "time-linking-negative-messages",
+          "importance": 2,
+          "reason": "Interpret the connection in a complete selected message."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "time-linking-negative-messages",
+      "label": "Read negative circumstances and reasons",
+      "facets": [
+        {
+          "id": "without-message",
+          "label": "Doing B without A"
+        },
+        {
+          "id": "negative-reason",
+          "label": "Negative circumstance presented as a reason"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "time-linking-unsigned-paper-without-message",
+          "facetId": "without-message",
+          "exampleKey": "unsigned-paper"
+        },
+        {
+          "exerciseId": "time-linking-train-no-arrival-negative-reason",
+          "facetId": "negative-reason",
+          "exampleKey": "train-no-arrival"
+        },
+        {
+          "exerciseId": "time-linking-quoted-commute-accounts-without-message",
+          "facetId": "without-message",
+          "exampleKey": "quoted-commute-accounts"
+        },
+        {
+          "exerciseId": "time-linking-quoted-commute-accounts-negative-reason",
+          "facetId": "negative-reason",
+          "exampleKey": "quoted-commute-accounts"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "necessity-instructions-gladness-forms",
+          "importance": 2,
+          "reason": "See the already-owned negative evaluative overlap rather than imposing exclusivity."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "time-linking-te-cause",
+      "label": "Read a causal te/de connection",
+      "facets": [
+        {
+          "id": "te-cause",
+          "label": "Reason for the following result"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "time-linking-rain-stopped-train",
+          "facetId": "te-cause",
+          "exampleKey": "rain-stopped-train"
+        },
+        {
+          "exerciseId": "time-linking-dark-road",
+          "facetId": "te-cause",
+          "exampleKey": "dark-road"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "n5-foundation-connections-linking",
+          "importance": 2,
+          "reason": "Keep basic te/de conversion in its original foundation owner."
+        },
+        {
+          "groupId": "time-linking-te-means",
+          "importance": 2,
+          "reason": "Distinguish reasons from the manner of carrying out an action."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "time-linking-te-means",
+      "label": "Read te as means or manner",
+      "facets": [
+        {
+          "id": "te-means",
+          "label": "Means or manner of the following action"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "time-linking-walk-to-station",
+          "facetId": "te-means",
+          "exampleKey": "walk-to-station"
+        },
+        {
+          "exerciseId": "time-linking-map-search",
+          "facetId": "te-means",
+          "exampleKey": "map-search"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "time-linking-te-parallel",
+          "importance": 2,
+          "reason": "Separate instrumental activity from side-by-side reporting."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "time-linking-te-parallel",
+      "label": "Read te as parallel reporting",
+      "facets": [
+        {
+          "id": "te-parallel",
+          "label": "Side-by-side activities or facts"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "time-linking-siblings-performance",
+          "facetId": "te-parallel",
+          "exampleKey": "siblings-performance"
+        },
+        {
+          "exerciseId": "time-linking-family-work-times",
+          "facetId": "te-parallel",
+          "exampleKey": "family-work-times"
+        }
+      ],
+      "next": [],
+      "requires": []
+    },
+    {
+      "id": "time-linking-deadlines",
+      "label": "Apply a stated deadline to a completion",
+      "facets": [
+        {
+          "id": "deadline-met",
+          "label": "Completion meets the stated deadline"
+        },
+        {
+          "id": "deadline-missed",
+          "label": "Completion misses the stated deadline"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "time-linking-book-return-limit-deadline-met",
+          "facetId": "deadline-met",
+          "exampleKey": "book-return-limit"
+        },
+        {
+          "exerciseId": "time-linking-book-return-limit-deadline-missed",
+          "facetId": "deadline-missed",
+          "exampleKey": "book-return-limit"
+        },
+        {
+          "exerciseId": "time-linking-teacher-arrival-limit-deadline-met",
+          "facetId": "deadline-met",
+          "exampleKey": "teacher-arrival-limit"
+        },
+        {
+          "exerciseId": "time-linking-teacher-arrival-limit-deadline-missed",
+          "facetId": "deadline-missed",
+          "exampleKey": "teacher-arrival-limit"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "basic-ranges",
+          "importance": 2,
+          "reason": "Reuse until/by form selection before applying a limit to a completion."
+        },
+        {
+          "groupId": "n5-actions-time-sequence",
+          "importance": 2,
+          "reason": "Reuse the continuing-until-boundary foundation."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "time-linking-concession-forms",
+      "label": "Form positive and negative concessions",
+      "facets": [
+        {
+          "id": "positive-temo",
+          "label": "Even if or though A holds"
+        },
+        {
+          "id": "negative-temo",
+          "label": "Even if or though A does not hold"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "time-linking-explanation-understanding-positive-temo",
+          "facetId": "positive-temo",
+          "exampleKey": "explanation-understanding"
+        },
+        {
+          "exerciseId": "time-linking-explanation-understanding-negative-temo",
+          "facetId": "negative-temo",
+          "exampleKey": "explanation-understanding"
+        },
+        {
+          "exerciseId": "time-linking-bag-purchase-positive-temo",
+          "facetId": "positive-temo",
+          "exampleKey": "bag-purchase"
+        },
+        {
+          "exerciseId": "time-linking-bag-purchase-negative-temo",
+          "facetId": "negative-temo",
+          "exampleKey": "bag-purchase"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "time-linking-concession-messages",
+          "importance": 2,
+          "reason": "Interpret concession instead of inferring actuality from form alone."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "time-linking-concession-messages",
+      "label": "Separate condition and concession framing",
+      "facets": [
+        {
+          "id": "condition-message",
+          "label": "Condition or trigger for the result"
+        },
+        {
+          "id": "concession-message",
+          "label": "Result holds despite the stated condition"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "time-linking-saturday-opening-condition-message",
+          "facetId": "condition-message",
+          "exampleKey": "saturday-opening"
+        },
+        {
+          "exerciseId": "time-linking-saturday-opening-concession-message",
+          "facetId": "concession-message",
+          "exampleKey": "saturday-opening"
+        },
+        {
+          "exerciseId": "time-linking-hot-room-window-condition-message",
+          "facetId": "condition-message",
+          "exampleKey": "hot-room-window"
+        },
+        {
+          "exerciseId": "time-linking-hot-room-window-concession-message",
+          "facetId": "concession-message",
+          "exampleKey": "hot-room-window"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "conditionals-contexts-timing",
+          "importance": 2,
+          "reason": "Reuse the original preparation, trigger and ongoing-event comparisons."
+        },
+        {
+          "groupId": "noni-contrasts-forms",
+          "importance": 2,
+          "reason": "Compare the existing no-ni contrasts without declaring universal interchangeability."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "time-linking-alternative-pairs",
+      "label": "Keep the outcome across paired alternatives",
+      "facets": [
+        {
+          "id": "nominal-pair",
+          "label": "Nominal alternatives"
+        },
+        {
+          "id": "adjective-pair",
+          "label": "I-adjective alternatives"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "time-linking-weather-bus-alternatives",
+          "facetId": "nominal-pair",
+          "exampleKey": "weather-bus"
+        },
+        {
+          "exerciseId": "time-linking-student-fee-alternatives",
+          "facetId": "nominal-pair",
+          "exampleKey": "student-fee"
+        },
+        {
+          "exerciseId": "time-linking-temperature-walking-alternatives",
+          "facetId": "adjective-pair",
+          "exampleKey": "temperature-walking"
+        },
+        {
+          "exerciseId": "time-linking-bag-purchase-alternatives",
+          "facetId": "adjective-pair",
+          "exampleKey": "bag-purchase"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "time-linking-concession-forms",
+          "importance": 2,
+          "reason": "Build each predicate's concession before combining the stated alternatives."
+        }
+      ],
+      "requires": []
+    }
+  ]
+}

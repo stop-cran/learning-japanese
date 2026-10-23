@@ -1073,6 +1073,10 @@ The distinction is **not simply "short time versus long time."** Both 学生の�
 
 **ごろ** is the voiced suffix form used after time expressions, as in **三時ごろ** ("around three o'clock"). In **子供のころ**, ころ is a noun. Related meaning does not guarantee identical grammatical classification.
 
+For the event viewpoint in **着くとき／着いたとき**, including future main clauses with a completed-event
+modifier, continue to [relative event order](japanese-actions-states-and-time.md#とき-and-relative-event-order).
+That article also connects the existing interval practice with simultaneous ながら and deadline transfer.
+
 ### A particularly important neighbor: の
 
 の is another major nominalizer:

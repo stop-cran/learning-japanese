@@ -188,6 +188,10 @@ But **ても is not hypothetical-only**:
 のに often foregrounds an expectation being disappointed or overturned; ても can present a result holding despite a condition.
 Actual uses overlap. Do not turn this teaching contrast into a categorical factual/hypothetical split.
 
+The focused [ても and paired-alternative supplement](reasons-and-contrasts.md#ても-and-paired-alternatives)
+adds formation and interpretation practice without moving these existing のに exercises or making the
+two connectors universally interchangeable.
+
 Sentence-final のに can leave the contrasting situation understood and express disappointment or an unfulfilled wish:
 
 > 時間が足りなかった。もう少し時間があれば、最後まで読めたのに。  

@@ -199,6 +199,91 @@ This open-ended use is supporting reading, not a scored reconstruction of an uns
 The explanatory **んですが／んだけど** family is a separate N4 onward pattern in our primary curriculum,
 not a required hidden ingredient of these preface tasks.
 
+## て links for reasons, means and parallel facts
+
+Connecting two clauses with **て／で** does not invariably mean "first A, then B":
+
+| Function in context | Example | Reading |
+| --- | --- | --- |
+| Reason | 道が暗くて、よく見えません。 | The road is dark, so I cannot see well. |
+| Means/manner | 地図を使って、駅を探します。 | I look for the station using a map. |
+| Parallel activities | 姉は歌っていて、弟は踊っています。 | My older sister is singing, and my younger brother is dancing. |
+
+Read **道（みち）**, road; **暗い（くらい）**, dark; **見える（みえる）**, be visible/can see;
+**地図（ちず）**, map; **使う（つかう）**, use; **探す（さがす）**, look for;
+**姉（あね）**, older sister; **弟（おとうと）**, younger brother;
+**歌う（うたう）**, sing; **踊る（おどる）**, dance.
+
+Causal examples often lead to a feeling, inability or another result, but such a word is not a logical proof
+that every preceding clause caused it. Read the whole message.
+Both **雨で電車が止まりました**（あめででんしゃがとまりました）, "The train stopped because of rain,"
+and **歩いて駅に行きます**（あるいてえきにいきます）, "I go to the station on foot," connect circumstances
+to a following event, but the first presents a cause and the second a way of travelling.
+
+Parallel reporting need not mean that two events occur at exactly the same time:
+**兄は昼に働いて、姉は夜に働きます**（あにはひるにはたらいて、あねはよるにはたらきます）,
+"My older brother works in the daytime, and my older sister works at night."
+Do not infer a mandatory chronology or an equal-importance rule from て alone.
+
+The form still depends on the predicate: verb **て／で**, adjective **くて**, nominal **で**.
+The [basic linking lesson](japanese-listing-and-examples.md#て-くて-and-で-connecting-is-not-always-listing-examples)
+supplies formation; the N4 supplement interprets selected functions in complete messages.
+Its response labels are **原因（げんいん）**, cause; **手段（しゅだん）**, means/manner;
+and **並列（へいれつ）**, side-by-side reporting of facts or activities.
+These local labels do not assert that every sentence has only one possible discourse analysis.
+For negative links and simultaneous actions, see
+[ないで／なくて](japanese-actions-states-and-time.md#ないで-and-なくて) and
+[ながら／intervals](japanese-actions-states-and-time.md#simultaneous-actions-and-intervals).
+
+## ても and paired alternatives
+
+**AてもB** presents B as holding even if or even though A.
+It can concern a possibility or something that actually happened:
+
+> 明日雨が降っても、バスは走ります。  
+> （あしたあめがふっても、ばすははしります。）  
+> Even if it rains tomorrow, the bus will run.
+>
+> 昨日は雨が降っても、バスは走りました。  
+> （きのうはあめがふっても、ばすははしりました。）  
+> Yesterday, even though it rained, the bus ran.
+
+The second sentence is presented here as an actual rainy-day report; **ても** alone does not assert A's actuality.
+Nor is it an unrestricted replacement for [のに](noni-and-concessive-contrasts.md#a-short-bridge-to-ても-and-sentence-final-のに).
+Compare **雨が降ったら、バスを使います**, "If it rains, I will take the bus":
+that presents rain as the condition for the following choice, rather than as an obstacle that fails to prevent it.
+The [conditional comparison](japanese-conditionals.md) retains the wider たら／ば／なら／と practice.
+Here **条件（じょうけん）** labels condition/trigger framing and **譲歩（じょうほ）** labels
+the "even if/though" framing; these definitions do not tell you which Japanese connector a task contains.
+
+| Predicate | Affirmative concession | Negative concession |
+| --- | --- | --- |
+| 読む | 読んでも | 読まなくても |
+| 高い | 高くても | 高くなくても |
+| 静かだ | 静かでも | 静かではなくても／じゃなくても／でなくても |
+| 学生だ | 学生でも | 学生ではなくても／じゃなくても／でなくても |
+
+Read **高い（たかい）**, expensive/high, and **静か（しずか）**, quiet.
+For **いい／よい**, use **よくても／よくなくても**.
+The negative link here is **なくても**, not a mechanical **ないでも** in this ordinary pattern.
+Specific [permission and no-obligation predicates](necessity-advice-and-instructions.md) remain separate tasks.
+
+Repeated alternatives keep the following outcome constant across the stated cases:
+
+> 雨でも雪でも、バスは走ります。  
+> （あめでもゆきでも、ばすははしります。）  
+> Whether it rains or snows, the bus runs.
+>
+> このかばんは高くても高くなくても、買いません。  
+> （このかばんはたかくてもたかくなくても、かいません。）  
+> Whether this bag is expensive or not, I will not buy it.
+
+Nouns take **でも**; い-adjectives use **くても**. Both positive and negative main predicates are possible.
+The pair does not mean that both alternatives simultaneously hold, nor does every negative sentence become
+English "neither ... nor." Keep the actual main predicate.
+The new formation tasks cover noun/adjective alternatives and an affirmative-versus-negative second case.
+They are not unrestricted synonym-selection tasks or a replacement for the existing のに contrasts.
+
 ## Whole-sentence connections: しかし, でも, そして and それから
 
 | Linker | Typical role in the uses shown here |
@@ -240,9 +325,9 @@ add different causal or evaluative framings. [わけだ](koto-wake-and-formal-no
 can present an understandable consequence or conclusion; it is not just another spelling of "because."
 These are optional higher-level comparisons, not required choices or learner locks in this installment.
 
-## What this practice assesses
+## What the N5 practice assesses
 
-The 34 exercises have six groups:
+The original N5 reason/contrast set has 34 exercises in six groups:
 
 - Eight verb/い-adjective and eight noun/な-adjective reason-formation tasks, including selected past and negative forms.
 - Six whole-predicate formation tasks naming **が**, **けど** or **けれども** explicitly.
@@ -274,6 +359,13 @@ Optional word tips support the supplied vocabulary while protecting the tested g
   Their teaching tendencies are not converted into universal prohibitions here.
 - [Tae Kim: compound sentences](https://guidetojapanese.org/learn/grammar/compound) discusses reason connectors
   and ga/kedo connections that are not literal contradictions.
+- The N4 supplement uses Bunpro's separate **て** lessons for
+  [reasons](https://bunpro.jp/grammar_points/verbて-b2),
+  [means/manner](https://bunpro.jp/grammar_points/verb-て-noun-で-b) and
+  [parallel facts](https://bunpro.jp/grammar_points/verbて-b), plus
+  [ても](https://bunpro.jp/grammar_points/ても), [paired alternatives](https://bunpro.jp/grammar_points/でも-でも)
+  and [たら](https://bunpro.jp/grammar_points/たら).
+  Fixed control, importance and conditional-certainty shortcuts are not adopted as universal rules.
 - JLPT Sensei's N5 [しかし](https://jlptsensei.com/learn-japanese-grammar/%e3%81%97%e3%81%8b%e3%81%97-shikashi-meaning/),
   [それから](https://jlptsensei.com/learn-japanese-grammar/%e3%81%9d%e3%82%8c%e3%81%8b%e3%82%89-sore-kara-meaning/)
   and [conjunction でも](https://jlptsensei.com/learn-japanese-grammar/%e3%81%a7%e3%82%82-demo-meaning/)

@@ -229,6 +229,10 @@ For focused **なければ／ないと obligations, たらどう suggestions and
 continue to [necessity, advice and instructions](necessity-advice-and-instructions.md).
 That companion also contrasts a preferred past alternative with being glad about the actual course.
 
+For the focused distinction between a condition and a result holding **even if/though** that condition applies,
+see [ても and paired alternatives](reasons-and-contrasts.md#ても-and-paired-alternatives).
+For the viewpoint of an event before とき, use [relative event order](japanese-actions-states-and-time.md#とき-and-relative-event-order).
+
 ## Sources and scope
 
 The explanations and examples here are original teaching material, not quotations or a complete account of every dialect and register.
