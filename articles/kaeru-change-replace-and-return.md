@@ -128,7 +128,7 @@ Here, **帰り（かえり）** is the **ます-stem** of godan **帰る**, as i
 
 ## 返る: something comes back or a state returns
 
-**返る** describes something returning to its owner, a response coming back, or a return to an earlier state.
+**[返る](../words/返る.md)** describes something returning to its owner, a response coming back, or a return to an earlier state.
 
 > 貸した本が返ってきました。（かしたほんがかえってきました。）  
 > The book I lent out came back.

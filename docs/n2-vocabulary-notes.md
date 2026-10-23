@@ -95,6 +95,18 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 13 authoring:** A source's spelling, reading and supplied
+  entry can agree while its gloss belongs to another reading. The
+  反る/かえる row retains that identity, explicitly teaches 返る/反る,
+  and distinguishes separate 反る/そる. Record the mismatch and
+  additional recognition senses without claiming to recover the
+  historical compiler's intent or silently changing the reading.
+- **Batch 13 authoring:** Respect spelling-restricted senses even
+  inside a shared entry. 関わる/係わる does not acquire 拘る's
+  restricted "stick to" sense. A source's bundled gloss is not
+  permission to transfer it, just as an alternate reading does not
+  acquire 架空/かくう's restricted imaginary sense.
+
 - **Batch 12 reconciliation:** A link can resolve structurally yet
   target the wrong lexical identity. A warning that よう is not
   さま does not make the よう word article a useful さま lesson.

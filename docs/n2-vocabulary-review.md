@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-12 review-closed; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-12 review-closed; batch 13 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 240 rows are review-closed; none are draft and 1,572 remain pending.
+The first 240 rows are review-closed; twenty are draft and 1,552 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -1562,6 +1562,48 @@ Cumulative coverage is **240 closed, 0 draft, 1,572 pending and
 kanji-word pairs. All 3,273 baseline identities, primary readings,
 titles and exclusion lists remain preserved. This closes batch 12,
 not the full vocabulary expansion or native-speaker certification.
+
+## Batch 13: N2:242-N2:261
+
+**Status:** authored; independent reviews pending.
+
+Scope: 回転, 解答, 回答, 外部, 解放, 開放, 海洋, 概論,
+帰す, 却って, 代える, 反る, 家屋, 係わる, 書留, 書取,
+垣根, 掻く, 嗅ぐ and 架空.
+
+Nineteen new articles and unchanged N3 替える cover the twenty
+source rows. 替える already explicitly teaches 代える (かえる)
+for person/player substitution, the selected third sense of their
+shared family. Its identity, reading, level, teaching, title and
+exclusions are unchanged.
+
+The new teaching spellings かえって, 返る, 関わる and 書き取り
+explicitly recognize source 却って, 反る, 係わる and 書取 at
+their supplied readings. The 反る row's raw warping gloss conflicts
+with its verified かえる reading and supplied entry 1512150.
+The card teaches that return/reversal identity and separately
+distinguishes 反る/そる, entry 1480170. The original row is preserved;
+the historical compiler's intent is not claimed to be recovered.
+Additional contrast senses do not establish a separate N2 assignment.
+
+根 gains the reciprocal 垣根 example. 書く, におい, the existing
+kaeru comparison and confusable-word row CW011 gain links on
+already-taught comparisons. No existing word IDs, primary readings,
+titles, original exclusion lists or easier levels change.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-13.json)
+retains all twenty original rows and complete principal families,
+126 complete comparison families, component records and five
+qualified actual-entry inspection receipts. 関わる/係わる
+excludes the sticking-to sense restricted to 拘る. 架空 preserves
+the fictitious sense's かくう reading restriction. Neither missing
+kanji cards nor dictionary flags become unsupported level,
+frequency or etymological claims.
+
+Coverage is **240 closed, twenty draft, 1,552 pending and zero
+unresolved** rows, mapped to 255 distinct articles: 231 new and
+24 reused. There are 3,504 word articles and 51 reciprocal N2
+kanji-word pairs. These are authored counts, not review closure.
 
 ## Final verification
 
