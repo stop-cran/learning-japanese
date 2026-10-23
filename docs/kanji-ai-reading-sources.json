@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "batch": "kanji-interval-ai-reading-example",
+  "inspection_date": "2026-10-23",
+  "exact_kanji_set": ["間"],
+  "scope": "Correct the examples for the existing ま and あい readings of 間; explain the character-by-character split.",
+  "metadata": {
+    "kanji": "間",
+    "onyomi": ["カン", "ケン"],
+    "kunyomi": ["あいだ", "ま", "あい"],
+    "status": "All existing front matter retained; no reading removed or added."
+  },
+  "correction": {
+    "before": "合間 あいま was used to illustrate 間 read あい.",
+    "after": "Move 合間 to ま, explain 合 (あい) + 間 (ま), and illustrate あい with 間狂言 (あいきょうげん), explicitly marked as specialist theatre vocabulary."
+  },
+  "sources": [
+    {
+      "url": "https://kanjiapi.dev/v1/kanji/%E9%96%93",
+      "entry": "間",
+      "inspected_evidence": "Kun readings あいだ, ま and あい; on readings カン and ケン.",
+      "supports": "Retaining the existing reading metadata despite replacing the incorrect example."
+    },
+    {
+      "url": "https://kanjiapi.dev/v1/kanji/%E5%90%88",
+      "entry": "合",
+      "inspected_evidence": "Kun readings include あ.い and あい-.",
+      "supports": "The あい component of 合間 belongs to 合, not 間."
+    },
+    {
+      "url": "https://jisho.org/api/v1/search/words?keyword=%E5%90%88%E9%96%93",
+      "entry": "合間 / あいま, JMdict via Jisho",
+      "inspected_evidence": "Noun: interval, break, pause, spare moment; also a gap or opening.",
+      "supports": "The word-reading pair and spare-moment gloss in the ま row."
+    },
+    {
+      "url": "https://kotobank.jp/word/%E5%90%88%E9%96%93-421885",
+      "entry": "合間, Seisenban Nihon Kokugo Daijiten",
+      "inspected_evidence": "Headword segmented あい‐ま; an interval or gap, often temporal.",
+      "supports": "Segmentation of the whole word and its interval meaning."
+    },
+    {
+      "url": "https://jisho.org/api/v1/search/words?keyword=%E9%96%93%E7%8B%82%E8%A8%80",
+      "entry": "間狂言 / あいきょうげん, JMdict via Jisho",
+      "inspected_evidence": "Noh-tagged noun: kyogen interlude; short scene during a Noh play performed by a kyogen actor, usually explaining the play.",
+      "supports": "A genuine example of 間 read あい, with an explicit specialist-theatre qualification."
+    },
+    {
+      "url": "https://kotobank.jp/word/%E9%96%93-60237",
+      "entry": "間 / あい, Digital Daijisen",
+      "inspected_evidence": "A separate あい headword includes intervals and an abbreviation of 間狂言, with the reading あいきょうげん supplied.",
+      "supports": "Independent dictionary confirmation of the あい reading and its theatre use."
+    },
+    {
+      "url": "https://kotobank.jp/word/%E9%96%93%E7%8B%82%E8%A8%80-23650",
+      "entry": "間狂言 / あいきょうげん, Seisenban Nihon Kokugo Daijiten and Nipponica",
+      "inspected_evidence": "The Noh sense is the part performed by a kyogen actor. Other senses and historical performance contexts are also listed.",
+      "supports": "The scoped Noh gloss, without reducing every instance to a comic scene or claiming the word has only one sense."
+    }
+  ],
+  "editorial_limits": [
+    "The specialist label applies to the chosen 間狂言 example; it does not deny the other documented uses of あい.",
+    "No JLPT level is assigned to either example word.",
+    "The rest of the kanji card, including its origin paragraph, is outside this correction.",
+    "No independent reviewer was used for this bounded correction."
+  ]
+}
