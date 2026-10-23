@@ -99,6 +99,12 @@ evidence and learning impact; issue creation requires authorization.
   records, not from memory or similar-looking numbers. A correct
   comparison in prose does not verify its numeric citation. Check
   the cited family's actual headword and applicable reading/sense.
+- **Batch 08 reconciliation:** Check provenance statements about omitted
+  senses against the complete family too. 延長's selected teaching was
+  correct while its omitted-sense note named unrelated meanings.
+  Correct the mapping and packet together, refresh the index hash,
+  and include the actual provenance diff in bounded confirmation,
+  not only the app-facing card diff.
 
 - **Planning:** `揚げる` and `挙げる` have separate modern JMdict entries from the giving
   article `あげる`; matching kana is not adequate reuse evidence. The original source gloss

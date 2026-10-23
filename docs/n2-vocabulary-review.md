@@ -800,7 +800,8 @@ whole-corpus or native-speaker certification.
 
 ## Batch 08: N2:142-N2:161
 
-**Status:** drafted; independent review and reconciliation pending.
+**Status:** initial reviews archived and supported corrections authored;
+bounded confirmation pending.
 
 Scope: 偉い, 宴会, 園芸, 演劇, 円周, 遠足, 延長, 煙突,
 追い掛ける, 追い越す, オイル, 応援, 王女, 応ずる, 応接,
@@ -834,6 +835,69 @@ catalogs; content version `a8cbab29dc491588`. There are now 3,413 word
 articles. Cumulative drafted/closed mappings cover 159 articles:
 140 new and nineteen reused, with 33 reciprocal N2 kanji-word pairs.
 These authored counts do not claim review closure.
+
+### Initial reviews and evidence-based corrections
+
+The [GPT report](n2-vocabulary-reviews/batch-08-gpt-initial.md)
+(`gpt-6.1-sol`) and
+[Claude report](n2-vocabulary-reviews/batch-08-claude-initial.md)
+(`claude-opus-5.5`) independently assessed authored commit
+`c3e705025de8ed252789968a9a37ab0535ddf3a3`. They received the same
+snapshot, assignment and source access without the other report or
+author adjudication. The isolated read-only processes ran strictly
+sequentially; GPT exited before Claude started. Usage receipts verify
+the actual models and no edits. The author verified the unchanged
+clean worktree and HEAD between runs.
+
+All six initial findings are accepted as minor, localized defects:
+
+| Report ID | Supported issue | Correction authored |
+|---|---|---|
+| GPT-B08-01 | 延長's continuation sense overlaps 続き's answer label. | Add the direct 延長/続き guard. |
+| GPT-B08-02 | 応ずる's acceptance label overlaps ordinary 受ける acceptance. | Add 応ずる/受ける; do not generalize the separate Go sense. |
+| GPT-B08-03 | 応接 and 応対 overlap 扱う's person-handling/treatment sense and label. | Add both direct pairs, not a transitive exclusion chain. |
+| GPT-B08-04 | 往復's correspondence sense overlaps 便り's label. | Add 往復/便り without equating an exchange and an individual letter. |
+| Claude F1 | N2:148's omitted-sense note names human life and classical music incorrectly. | Correct both provenance records to mathematics, philosophy and the Encho era, senses 4-6; refresh the index hash. |
+| Claude F2 | 追い越す's surpass label overlaps 越える's applicable sense. | Add 追い越す/越える; "especially 超える" is not a spelling restriction. |
+
+The author inspected the complete correction families and all five
+comparison articles. Three new families (扱う, 便り and 続き) are
+preserved in the packet; re-extracted 受ける and 越える exactly match
+the existing complete evidence. Both pinned JMdict hashes were checked
+again. The actual main 延長 family confirms the provenance correction;
+selected senses 1, 2, 3 and 7 and the learner-facing lesson are unchanged.
+The private mapping record is synchronized as well.
+
+Four additional actual-entry inspections independently corroborate
+continuation, acceptance, attending to people and correspondence.
+The receipts distinguish Daijisen definitions from the Seisenban
+sections that actually rendered for 受ける and 扱う. These dictionary
+uses support the context-free English quiz guards, not unrestricted
+Japanese substitution. No existing baseline identity, reading, title,
+easier level or exclusion list changes.
+
+Claude's Optional O1 is accepted as precision polish: 応対 now says
+"In the second example, を" rather than implying a second occurrence
+of the particle. Optional O2 does not request a 往復/帰り guard:
+the existing travel distinction remains sufficient in the reviewed
+scope. It is not equivalent to GPT's different 便り finding.
+
+Comparing the entire initial reports, GPT uniquely supplied five
+supported direct pairs; Claude uniquely supplied the provenance
+correction and the 越える pair. No equivalent observation was found
+elsewhere in the other report. Both families therefore added useful,
+different signal in this sample, not evidence for a general ranking
+or a quantified reduction in model bias. GPT independently fetched
+all nine original external-receipt headwords plus additional evidence;
+Claude re-fetched 応接 but left eight receipts as author assertions
+and inspected only selected comparison families. Claude's failed
+GitHub-raw lookups did not supply evidence. Neither file-only reviewer
+executed Git, hash verification or app checks. Unequal retrieval and
+comparison depth limit the comparison despite identical access.
+
+These are author adjudications and corrections, not confirmation
+closure. Both reviewers must still assess all six changed card
+contexts and the actual provenance diff against their own reports.
 
 ## Final verification
 
