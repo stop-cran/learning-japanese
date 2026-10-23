@@ -2605,7 +2605,7 @@ closes batch 18, not the full vocabulary expansion.
 
 ## Batch 19: N2:362-N2:381
 
-**Status:** independently reviewed and corrected; bounded confirmation pending.
+**Status:** closed after independent review, correction and bounded confirmation.
 
 Scope: 看病, 冠, 漢和, 気圧, 器械 mapped to 機械,
 着替え, 機関車, 飢饉, 器具, 期限, 記号, 刻む,
@@ -2723,6 +2723,51 @@ the remaining stated claims. Irrelevant Kotobank
 fetches and empty search pages are not verification.
 No executed app draw, measured frequency or
 native-speaker certification is claimed.
+
+### Independent confirmation and closure
+
+The original reviewers confirmed corrected commit
+`976c03d8607af5db578c9ea79ba25650df59f42e`
+in strictly sequential, bounded sessions:
+
+- [GPT confirmation](n2-vocabulary-reviews/batch-19-gpt-confirmation.md):
+  original GPT-01 resolved; both changed articles and
+  appended packet evidence CLEAN on all three facets.
+- [Claude confirmation](n2-vocabulary-reviews/batch-19-claude-confirmation.md):
+  both changed articles and appended evidence CLEAN;
+  it acknowledged the missed direct pair in its original
+  reuse assessment and confirmed the guard's resolution.
+  Its adopted O-01 is resolved; remaining suggestions
+  stay optional.
+
+The additional optional pronoun clarification is not
+required to close the already clear separate-word
+explanation. No actionable defect, consequential
+unresolved teaching claim or regression remains in
+the bounded scope. Neither confirmation performed
+new public-source retrieval or an executed app draw.
+
+The author authenticated both commits, their parentage,
+normalized file hashes, actual patches, prompt hashes
+and all four archived reports. All usage receipts
+identify the requested actual models and zero edits.
+The original reviewer sessions were retained and
+all processes exited. A two-space Markdown line break
+in one archived finding heading was normalized for
+the whitespace check; report wording is unchanged.
+Author-executed provenance checks are not reviewer
+Git verification or linguistic certification.
+
+Closure coverage is **380 closed, 0 draft, 1,432 pending
+and 0 unresolved** source rows, mapped to 374 distinct
+articles: 345 new and 29 reused. There are 3,618 word
+articles and 86 distinct tracked primary-form reciprocal
+N2 pairs on new articles, plus checked reused-article
+pairs. All 3,273 baseline identities, primary readings,
+titles, written-kanji metadata and easier sourced levels
+remain preserved. All original exclusion declarations
+remain, with only the explicitly recorded 機械/道具
+addition. This closes batch 19, not the full expansion.
 
 ## Final verification
 
