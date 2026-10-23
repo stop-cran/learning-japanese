@@ -2929,7 +2929,8 @@ batch 20, not the full vocabulary expansion.
 
 ## Batch 21: N2:402-N2:421
 
-**Status:** authored; independent reviews not yet run.
+**Status:** blind initial reviews reconciled; independent
+confirmation pending.
 
 Scope: 曲線, 規律, 斬る, 気を付ける, existing 金魚,
 区域, 偶数, 空想, 空中, クーラー, 釘, 区切る, 櫛,
@@ -2987,6 +2988,71 @@ canonical packet's author quiz rationale removed.
 The derivative's equivalence and hash are recorded
 by the author process; this does not give file-only
 reviewers independent Git or hash execution.
+
+### Blind initial reviews and reconciliation
+
+Both reviewers assessed the common authored commit
+`b0dcca6434845e2b41b0161a8f0249502b182e46`,
+nineteen complete new articles, twenty mappings,
+the scoped 金魚 reuse and the same six-file related
+patch, strictly one native process at a time.
+The [GPT report](n2-vocabulary-reviews/batch-21-gpt-initial.md)
+records `gpt-6.1-sol`; the
+[Claude report](n2-vocabulary-reviews/batch-21-claude-initial.md)
+records `claude-opus-5.5`. Both processes exited with
+zero edits. The evidence derivative was equivalent
+to the original packet except for removal of the
+author's quiz rationale.
+
+| Observation | Evidence-based disposition |
+|---|---|
+| GPT21-01: 崩れる/下降 | Resolved: add the direct guard. Principal 1516270 sense 4 includes financial decline/slump; complete 1184940 and the actual 下降 title include decline. Shared 下がる exclusions are not transitive. This does not promote the financial sense into the N2 lesson. |
+| GPT21-02: 崩す/笑い | Resolved: add the direct guard. Principal 1516260 sense 6 is qualified by 顔を崩す; complete 1351280 sense 2 and the actual 笑い article teach a smile. Existing 笑う/笑顔/微笑む guards do not cover this noun. No unrestricted smiling/laughing substitution is asserted. |
+| GPT21-03: 空中/架空 | Resolved: add the direct physical-sense guard, not an imaginary-sense or shared-kanji guard. Complete 1193130 sense 2 permits aerial/overhead at かくう; the imaginary sense's reading restriction does not apply to that physical sense. |
+| Claude B21-R01: 崩す wording | Resolved: replace the opaque "license every same-object use" sentence with plain English about learning usual expressions separately. Definitions, transitivity, examples and the qualified substance are unchanged. |
+| Claude optional 崩す/故障 | Adopted conservatively for English "break down"/"breakdown" ambiguity. Complete 1267180 supports equipment failure. The teaching continues to distinguish structural/disorder uses from a machine simply ceasing to function; the Japanese words are not declared general synonyms. |
+| Claude optional 気を付ける/かまう | Adopted conservatively for the actual "mind; be concerned" title and ordinary care/attention senses in complete 1279680. Permission and childcare uses are not transferred to 気を付ける. |
+| Claude optional 気を付ける/警告 | Not adopted: complete 1252360 and the actual title concern a communicated warning/admonition, not being careful. A shared 注意 comparison or exclusion is not direct evidence. |
+| Claude optional 気を付ける/そろそろ | Not adopted: complete 1345605 and the actual title concern approaching time or a manner of slow movement. Shared carefulness does not establish interchangeable answers. |
+| Claude optional figurative 斬る and 薬指/指輪 distractor | Remain nonblocking expansion, not defects in the declared physical-blade lesson or required link/ambiguity work. No invented collocation or new quiz configuration is needed. |
+
+The correction extraction inspected seven complete
+comparison families and appended six newly needed
+families to the packet; 架空 was already present.
+The original rows, families, component records,
+selected/additional senses, seven inspection receipts,
+quiz declarations and author rationale remain
+historical authored-snapshot evidence, not backdated.
+Five direct pairs and the wording clarification are
+recorded separately. All four changed content files
+are new articles; the six original related edits and
+baseline metadata/exclusions remain untouched.
+
+**Model-diversity note:** Comparing the complete
+reports, including optional observations and limits,
+GPT uniquely identified the three supported direct
+quiz gaps. Claude uniquely identified the minor
+comprehensibility defect and both adopted optional
+guard clarifications. Neither report independently
+contained the other's observations. This is useful
+complementarity in this sample, not a general ranking.
+
+**Limits:** Both initial reviewers were file-only and
+could not execute Git, hashes or app draws. Neither
+read all 217 comparison families. GPT independently
+retrieved relevant Daijisen bodies; Claude's attempted
+Weblio/Kotobank extractions yielded no usable bodies
+and are not verification. Claude did not read component
+evidence or author inspection receipts, checking kanji
+against repository files instead. Its easier-level
+check for 金魚 inspected the expected sorted sections
+of the pinned N3/N4/N5 lists, not every source ID.
+The author correction pass rechecked complete pinned
+families and actual cards; two failed English-dictionary
+lookups are recorded without verification credit.
+The quiz fixes address possible ambiguous choices,
+not observed generated questions or native-speaker
+certification.
 
 ## Final verification
 

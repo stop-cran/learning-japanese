@@ -95,6 +95,15 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 21 reconciliation:** A comparison sweep can
+  cover 笑う/笑顔 yet miss the separately titled 笑い,
+  or cover 下がる yet miss 下降. Check direct pairs,
+  including derived nouns and ordinary secondary
+  meanings. 架空's physical overhead sense matters
+  when 空中 is added even though its earlier main
+  teaching concerned imaginary things. Preserve the
+  actual spelling/reading restrictions.
+
 - **Batch 21 authoring:** Treat raw English glosses
   as claims to resolve, not instructions to flatten
   Japanese meanings. 苦心's "pain" is painstaking
