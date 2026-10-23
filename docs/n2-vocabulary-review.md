@@ -4021,7 +4021,8 @@ This closes batch 26, not the full vocabulary expansion.
 
 ## Batch 27: N2:522-N2:541
 
-**Status:** drafted; independent review and reconciliation pending.
+**Status:** drafted; initial reviews and author adjudication complete;
+original-session confirmations pending.
 
 Scope: 高度, 高等, 合同, 後輩, 公表, 鉱物, 公務, 項目,
 紅葉, 合理, 交流, 合流, 効力, 超える, コース, コーラス,
@@ -4066,20 +4067,85 @@ individual meal course, full-course meal and offered plan senses
 national affiliation is additional to personal nationality.
 Secondary senses do not receive independent N2 assignments.
 
-Fifteen new articles currently declare 106 directional quiz guards.
+At the authored snapshot, fifteen new articles declared 106 directional quiz guards.
 They account for actual broad English labels and ordinary secondary
 senses, including 皿's serving/course, 焼く's burn, 公立's
 broader public category and 国王's positively recorded queen gloss.
-These are author hypotheses pending independent assessment, not
-reviewer findings or an assertion of unrestricted synonymy. No
-baseline exclusion is changed.
+Those were author hypotheses, not reviewer findings or an assertion
+of unrestricted synonymy. No baseline exclusion is changed.
 
 The blind derivative removes only the author's quiz rationale.
-Both model families will receive the same authored snapshot,
+Both model families received the same authored snapshot,
 nineteen new articles, reused-source claim, six related content
 changes, twenty mappings, rubric and equivalent source access.
-Initial reports, adjudication, model-diversity observations,
-confirmation and authentication are pending.
+The actual models were **gpt-6.1-sol**, then **claude-opus-5.5**.
+The GPT process fully exited before Claude started; both were read-only,
+undelegated, and recorded zero edits. Their genuine initial reports are
+[GPT](n2-vocabulary-reviews/batch-27-gpt-initial.md) and
+[Claude](n2-vocabulary-reviews/batch-27-claude-initial.md).
+Snapshot/hash assertions were author receipts, not reviewer-executed Git.
+GPT checked the 113 labels against files and selected comparison families;
+Claude searched, rather than completely reading, the comparison families.
+Neither performed a corpus or native-speaker review.
+
+### Initial findings and adjudication
+
+GPT's B27-GPT-01 is **resolved** by a direct 高等/松 guard.
+The actual 松 title and teaching, complete JMdict 1349860:2, and
+the actual 精選版日本国語大辞典 松/まつ [1]11 support the
+highest-of-three ranking. The Daijisen receipt's historical rank
+material is not substituted for that modern tier evidence.
+
+Claude's B27-01 is **resolved** by directly explaining 合同 as
+merging into one body, replacing the source-facing double negative,
+and adding a political-party merger example with kana and English.
+The meaning is positively evidenced; the whole sentence is original,
+not represented as a corpus quotation.
+Claude's B27-02 is **resolved** by direct 公務/務め・勤め guards.
+Its tentative 義務 observation is also adopted: the actual broad
+duty label and positive position-based duty sense support that pair
+independently, not by transitivity. Substantive comparisons are linked.
+
+All optional observations are explicitly disposed in the appended
+correction evidence. Four 高度/高等 guards against 立派 and 偉い
+are removed: admiration, importance, or prestige alone is insufficient.
+Good/excellent/superior labels remain protected on the positive
+high-grade/high-class quality sense, not on every advanced use.
+コース/選択・予定 remain protected by its explicit option/plan/program
+senses and the actual broad choice/plans labels, not unrestricted
+Japanese substitution. The two "An 項目" articles are editorially
+changed to "A 項目". 合理/訳 gains a direct guard and qualified
+comparison, positively supported by 訳 1538330:3 good sense/reason.
+国籍/市民 is not guarded: a nationality is not a citizen-person.
+
+Not expanded: 国立's noun-compatible short title, an extra もみじ
+foliage example, or the preexisting unlinked 越す mention. The two
+expressly unverified modern-collocation preferences for 合理 and
+効力 are not adopted without positive evidence of an error or a
+necessary replacement. Actual lexical entries recognize the nouns;
+the historical 合理 example does not establish a modern adjective.
+No comparative frequency or whole-sentence certification is claimed.
+
+Follow-up evidence contains 24 complete families for seventeen forms,
+sixteen actual labels, and eight qualified public-entry receipts.
+Eighteen family overlaps compare exactly; only six genuinely new
+families are appended. Original rows, families, labels, receipts and
+rationale remain unchanged. The correction derivative again removes
+only initial quiz rationale. Sixteen new articles now declare
+**107 directional guards**: five additions and four removals.
+Six new articles change; no baseline word, kanji, primary title,
+reading, level, source mapping or reciprocal pair changes.
+
+### Model-diversity observation
+
+Across the entire reports, including Optional and Limits, GPT uniquely
+identified 高等/松; Claude uniquely identified merger clarity and
+the public-duty guards, and supplied the useful tentative 合理/訳,
+guard-pruning and English-article observations. No duplicated actionable
+finding was identified. Other preferences remain optional or unsupported
+as defects. This is useful complementary evidence on this batch, not a
+model ranking or a claim that either model reviewed every comparison.
+Confirmation and session/report authentication remain pending.
 
 Current index: **520 closed, 20 draft, 1,272 pending and 0 unresolved**
 rows, mapped to 534 distinct articles: 500 new and 34 reused.

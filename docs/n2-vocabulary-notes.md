@@ -95,6 +95,20 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 27 reconciliation:** Check broad duty and reason labels against
+  positive secondary senses, not a synonym clique. 公務 needs direct
+  務め/勤め/義務 guards; 合理/訳 is supported by 訳's good-sense/reason
+  sense, not merely its causal-reason use. 高等/松 needs its own guard
+  despite an indirect path through 一流.
+- **Batch 27 reconciliation:** Keep publisher and register boundaries
+  explicit. Daijisen's historical 松 rank uses do not establish the
+  modern 松竹梅 tier; the actual 日国 sense does. A historical 合理なり
+  example does not license modern 合理な, and noun recognition does
+  not settle an unverified modern collocation preference.
+- **Batch 27 reconciliation:** Teach a selected merger sense plainly,
+  with a contrastive example, rather than a source-facing double negative.
+  This improves 合同's coverage without claiming the original joint
+  examples were wrong or the new whole sentence was corpus-attested.
 - **Batch 27 authoring:** A publisher's lexical container may contain
   several reading headings. 紅葉/こうよう supplies autumn coloring;
   the source's maple gloss is positively supported under separate
