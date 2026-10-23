@@ -95,6 +95,23 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 15 authoring:** Preserve grammatical viewpoint when a
+  supplied English gloss is misleading. 片付く is intransitive
+  despite the raw "to put in order" wording; a separate historical
+  transitive entry does not change modern かたづく. Conversely,
+  課税's POS label alone does not license a universal particle
+  rule: the actual Japanese entry attests 輸入品に課税する.
+- **Batch 15 authoring:** Distinguish whole-entry variants from
+  sense-restricted spellings. 個所/箇所 support the noun, while
+  additional カ所/ヶ所/か所 forms are counter variants. A shared
+  entry does not establish a rigid physical/mental spelling split
+  between 片寄る and 偏る.
+- **Batch 15 authoring:** Related English technical labels can
+  obscure distinct quantities. 加速度 concerns velocity change,
+  including direction; it is not current speed. The everyday
+  加速/減速 speeding-up/slowing-down contrast is not a universal
+  restriction on physical acceleration.
+
 - **Batch 14 reconciliation:** Test tentative quiz leads against
   complete applicable senses, not shared components or related
   English words alone. 可 has an actual approval/vote sense,

@@ -5,7 +5,7 @@
 **Batches 01-14 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 280 rows are review-closed; none are draft and 1,532 remain pending.
+The first 280 rows are review-closed; twenty are draft and 1,512 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -1871,6 +1871,52 @@ kanji-word pairs. All 3,273 baseline identities, primary readings,
 titles and original exclusion lists remain preserved. This
 closes batch 14, not the full vocabulary expansion or
 native-speaker certification.
+
+## Batch 15: N2:282-N2:301
+
+**Status:** authored; independent review and reconciliation pending.
+
+Scope: 貸し出し, 過失, 果実, 貸間, 貸家, 個所, 過剰,
+かじる, 課税, 下線, カセット, 加速, 加速度, 片仮名,
+片付く, 塊, 固まる, 片道, 傾く, 片寄る.
+
+The draft adds **20 articles**, with no reused principal articles.
+There are now 3,542 word articles. The
+[source packet](n2-vocabulary-batch-sources/batch-15.json) retains
+twenty raw rows, twenty complete principal families, 181 complete
+comparison families, verified component records and eleven
+qualified author-inspection receipts. The heading-only 箇所
+lookup is explicitly not independent lexical verification.
+
+The raw transitive-sounding 片付く gloss is preserved but not
+taught as modern transitive usage. The lesson selects intransitive
+tidying, resolution and completion, leaving the marriage use
+outside scope. 個所 distinguishes noun spelling restrictions
+from counter variants. 片仮名 recognizes カタカナ without
+transferring a kana-only reading record unrestrictedly to kanji.
+片寄る recognizes 偏る without a rigid physical/mental partition.
+加速度 includes directional velocity change; the everyday 加速
+speeding-up lesson is not presented as the full physics definition.
+
+Seven N2 kanji pages receive ten primary-form reciprocal pairs:
+`個`/`個所`, `課`/`課税`, `税`/`課税`, `線`/`下線`,
+`片`/`片仮名`, `片`/`片付く`, `固`/`固まる`,
+`片`/`片道`, `傾`/`傾く` and `片`/`片寄る`.
+固 also links its existing 固まり example to the 塊 article,
+which explicitly recognizes that spelling. This additional alias
+link is not counted as a primary-written-component reciprocal pair.
+
+Existing mentions in 貸す, 片付ける, 噛む, 食べる, 往復,
+テープ, ラジオカセット and ラジカセ gain narrow navigation links.
+No speculative character or stroke cards are added for missing
+components. All original source fields and baseline word identities,
+primary readings, titles, easier levels and exclusion declarations
+remain preserved.
+
+Coverage is **280 closed, 20 draft, 1,512 pending and 0 unresolved**
+rows, mapped to 295 distinct articles: 269 new and 26 reused.
+There are 64 primary-form reciprocal N2 kanji-word pairs. These
+draft and mechanical audit counts are not review closure.
 
 ## Final verification
 
