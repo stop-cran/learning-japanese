@@ -95,6 +95,20 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 12 reconciliation:** A link can resolve structurally yet
+  target the wrong lexical identity. A warning that よう is not
+  さま does not make the よう word article a useful さま lesson.
+  Prefer the existing kanji card that actually teaches the suffix
+  when no dedicated word article exists.
+- **Batch 12 reconciliation:** Check English polysemy independently
+  of Japanese synonymy: water-source/season "spring" and physical/
+  institutional "dissolve" can make context-free answer labels
+  ambiguous. Direct guards do not redefine the Japanese words or
+  propagate through an intermediate excluded card.
+- **Batch 12 reconciliation:** Compare reviewer observations across
+  their whole recorded output. An examined lead later dismissed as
+  nonactionable is not a unique discovery by the reviewer who
+  promoted it to a finding.
 - **Batch 12 authoring:** A dictionary aggregation page's headline
   reading need not identify the relevant entry inside it. The 御中
   page headline gives オナカ, but its actual おんちゅう sections

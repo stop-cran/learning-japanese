@@ -1411,7 +1411,8 @@ a native-speaker certification.
 
 ## Batch 12: N2:222-N2:241
 
-**Status:** authored draft; independent reviews pending.
+**Status:** initial independent reviews reconciled; correction
+confirmation pending.
 
 Scope: 温室, 温泉, 温帯, 御中, 女の人, 蚊, カーブ, 貝,
 開会, 会館, 改札, 解散, 海水浴, 回数, 回数券, 改正, 快晴,
@@ -1440,6 +1441,82 @@ unresolved** rows. Cumulative mappings cover 235 distinct articles:
 212 new and 23 reused. There are 3,485 word articles and fifty
 reciprocal N2 kanji-word pairs. These are authored counts, not review
 closure or linguistic certification.
+
+### Initial independent reviews
+
+Authored commit: `6aa54a72f1f89170d85ef3f0b42af79427018d66`.
+The [GPT initial report](n2-vocabulary-reviews/batch-12-gpt-initial.md)
+and [Claude initial report](n2-vocabulary-reviews/batch-12-claude-initial.md)
+are archived verbatim. GPT `gpt-6.1-sol` exited before Claude
+`claude-opus-5.5` started. Both received the same nineteen new
+articles, eighteen related changes, twenty mappings, rubric and source
+access, without author adjudication or the other report. Actual-model
+usage receipts record zero edits.
+
+GPT reported four quiz findings affecting five cards. Claude reported
+one quiz finding and one link-target comprehensibility defect, both
+on 御中. Both found the source mappings and lesson bodies within scope
+clean apart from that navigation issue. Their original verdicts and
+severity labels remain in the reports; localized quiz-label safeguards
+do not imply incorrect Japanese definitions.
+
+### Evidence-based reconciliation
+
+Six direct quiz pairs across six new articles and one link target are
+corrected. No baseline titles, readings, levels or exclusion lists
+change. This is author adjudication; bounded confirmations are pending.
+
+| Observation | Adjudication and prepared correction |
+| --- | --- |
+| GPT-01: 温泉 / 春 | Supported English-label ambiguity: the displayed bare "spring" can name a water source. The existing 泉/春 guard is not transitive. Add the direct guard without making seasonal 春 a water-source word. |
+| GPT-02: 開会 and 開通 / 最初 | Supported broad beginning-label overlap. The complete 最初 family and actual Seisenban さいしょ definition recognize beginning/outset. Add both direct guards without equating their constructions. |
+| GPT-03: 解散 / 溶ける | Supported English polysemy: Oxford's actual dissolve entry distinguishes physical dissolving from ending a parliament and dispersing a crowd. Add the direct guard, retaining the Japanese distinction. |
+| GPT-04: 解説 / 注 | Supported written-explanation overlap: 注's complete family and actual definitions recognize explanatory commentary attached to a text. Add the direct guard; not every 解説 is an annotation. |
+| Claude F1: 御中 / 氏 | Supported generic respectful-name-suffix label ambiguity. Add the direct guard, preserving the organization/person distinction. Shared tags do not establish actual candidate frequency. |
+| Claude F2: 御中's さま link | Supported navigation defect. The word target teaches よう and only warns against confusing it with さま. Point to the existing 様 kanji card, which actually teaches the suffix and a personal-name example; remove the distracting parenthetical. |
+
+Six complete correction families for five forms retain both 氏
+homographs: 2101130 at し is the suffix card, not 1311010 at うじ.
+The original rows, mappings, selected senses, components, principal
+families and 133 original comparison families are unchanged. Three
+qualified actual-page inspection receipts support the added English
+polysemy and Japanese comparison evidence.
+
+The missing original `jlpt` on 貝 establishes only its undeclared
+baseline level, not a search of all easier-level sources. Likewise,
+the missing 蚊 kanji card alone does not establish its kanji level.
+Neither stronger inference is required by the content: the mapped
+N2 word level is sourced, and the full written-kanji metadata is kept.
+
+Claude's 寒帯 gloss consistency and 会館/会議室 suggestions remain
+optional. "Cold" and "frigid" both describe the climate-zone contrast;
+hall versus meeting-room labels do not establish an additional
+defensible quiz answer. No literal zero-cloud rule, all-native 御中
+claim, or unrestricted synonym partition is introduced.
+
+### Model-contribution comparison
+
+GPT supplied the accepted 最初 and 注 guards. Claude supplied the
+accepted 氏 guard and wrong-word link catch. Claude also explicitly
+considered the 春 and 溶ける label leads in its recorded output but
+did not promote them to findings. Those are shared examined leads
+with different actionability judgments, not uniquely discovered
+GPT observations. The author accepted the guards from their actual
+displayed-label ambiguity and evidence, not model vote.
+
+The two families therefore contributed complementary accepted
+corrections on this common sample. This does not establish a general
+model ranking, measured candidate probability or proof of reduced bias.
+Both file-only reviewers relied on the authored snapshot receipt rather
+than independently executing Git. Claude independently fetched the JMA,
+御中 and Japan Post pages; GPT reports independent retrieval of all six
+original usage pages. Neither rehashed the full source archives.
+
+The prepared correction passed structural and cumulative preservation,
+mapping, reciprocal-link and authorship checks. Two manifest builds
+were byte-identical: 6,113 files, 396 images and 201 scene catalogs,
+content version `cb342dac9eccaa25`. The counts remain 220 closed
+and twenty draft rows until both bounded confirmations are reconciled.
 
 ## Final verification
 
