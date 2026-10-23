@@ -95,6 +95,18 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 19 reconciliation:** A reused baseline article
+  can expose a direct quiz ambiguity: 機械's instrument/
+  apparatus use overlaps 道具 even though the primary
+  title foregrounds machinery. Preserve original guards
+  and record an exact, evidenced addition rather than
+  pretending a corrected baseline list is unchanged.
+  Keep the audit exception as narrow as the actual pair.
+- **Batch 19 reconciliation:** A plain separate-word
+  explanation is clearer than internal "identity" jargon:
+  ベース's musical bass belongs to its own dictionary
+  family, not a new sense of the operating-base entry.
+
 - **Batch 19 authoring:** A raw gloss can bundle meanings
   restricted to different readings: 冠's first/best sense
   belongs to かん, not primary かんむり. Record the

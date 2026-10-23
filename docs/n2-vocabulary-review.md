@@ -2605,7 +2605,7 @@ closes batch 18, not the full vocabulary expansion.
 
 ## Batch 19: N2:362-N2:381
 
-**Status:** drafted; independent review not yet completed.
+**Status:** independently reviewed and corrected; bounded confirmation pending.
 
 Scope: 看病, 冠, 漢和, 気圧, 器械 mapped to 機械,
 着替え, 機関車, 飢饉, 器具, 期限, 記号, 刻む,
@@ -2649,7 +2649,7 @@ navigation and applicable source attribution.
 Existing identities, primary readings, titles, easier
 levels and original exclusions remain unchanged.
 
-Draft coverage is **360 closed, 20 draft, 1,432 pending
+Authored-snapshot coverage is **360 closed, 20 draft, 1,432 pending
 and 0 unresolved** rows, mapped to 374 distinct articles:
 345 new and 29 reused. There are 3,618 word articles
 and 86 distinct tracked primary-form reciprocal N2
@@ -2659,6 +2659,70 @@ primary readings, titles, easier sourced levels and
 original exclusions remain preserved. These are
 mechanical counts, not independent linguistic
 certification or review closure.
+
+### Initial reviews and evidence-based reconciliation
+
+The blind initial reviews examined authored commit
+`bec5240238e832cc953cbb1f04dbaaf3609a830c`.
+[GPT](n2-vocabulary-reviews/batch-19-gpt-initial.md)
+actually used **gpt-6.1-sol**; [Claude](n2-vocabulary-reviews/batch-19-claude-initial.md)
+actually used **claude-opus-5.5**. They ran strictly
+sequentially and exited without edits. Each read all
+eighteen new articles, the ten-file related diff and
+twenty mappings, with targeted comparison inspection.
+Both rated all eighteen new articles CLEAN on each
+facet. Their snapshot/hash identities are receipt-based,
+not independently executed Git verification.
+
+| Finding | Adjudication and bounded correction |
+| --- | --- |
+| GPT-01: 機械/道具 | Resolved in the correction: append the direct guard to 機械. Complete 1220810 sense 2 and 1454180 sense 1 share instrument/apparatus meanings. Existing 器具 declarations are not transitive. This is a pre-existing ambiguity exposed by the assigned 器械 reuse assessment, not a defect in the new example. |
+| Claude O-01: 基地 wording | Optional, adopted: replace internal "musical bass identity" wording with an explicit separate-word explanation and cite already retained complete 2845313. This is a clarity improvement, not an actionable initial defect or new level assignment. |
+
+The correction appends evidence without changing the
+twenty rows, mappings, nineteen principal families,
+component records, 127 comparison families or seven
+initial inspection receipts. Initial declarations and
+rationale remain evidence of the authored snapshot.
+No additional extraction was needed.
+
+All original baseline exclusion declarations remain in
+their original order. **One baseline list gains an
+evidenced addition:** 機械 changes from `[装置]` to
+`[装置, 道具]`. The preservation audit explicitly
+allows only that recorded addition; it still rejects
+other list changes. This is not a claim that the
+corrected list is byte-for-byte unchanged. Stable
+IDs, readings, titles, written-kanji metadata and
+easier levels remain unchanged.
+
+### Model-diversity usefulness
+
+Compared across the full reports, GPT uniquely
+identified the supported direct 機械/道具 ambiguity.
+Claude explicitly rated the reuse CLEAN and did not
+raise that pair in findings, optional remarks or limits.
+Claude uniquely suggested the adopted nonblocking
+基地 clarity improvement. There is no shared actionable
+finding in this sample. This is complementary use,
+not a model ranking or proof that two clean verdicts
+would certify exhaustive correctness.
+
+Claude's extra term/abbreviation/naming examples,
+気圧 wording, dash consistency and non-N2 backlinks
+remain optional expansion or polish. Dictionary
+recognition alone does not make a suggested new rare
+collocation independently attested.
+
+GPT independently inspected the relevant dictionary
+bodies. Claude independently confirmed the Daijisen
+基準, 規準 and 恩に着せる bodies; it explicitly read
+only eight comparison families and relied on author
+receipts, pinned families and editorial judgment for
+the remaining stated claims. Irrelevant Kotobank
+fetches and empty search pages are not verification.
+No executed app draw, measured frequency or
+native-speaker certification is claimed.
 
 ## Final verification
 
