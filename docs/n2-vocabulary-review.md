@@ -2438,7 +2438,7 @@ vocabulary expansion.
 
 ## Batch 18: N2:342-N2:361
 
-**Status:** independently reviewed and corrected; bounded confirmations pending.
+**Status:** closed after independent review, correction and bounded confirmation.
 
 Scope: 代る mapped to 代わる, 間隔, 換気, 感激, 関西,
 鑑賞, 感ずる, 間接, 乾燥, 感想, 観測, 寒帯, 官庁,
@@ -2550,8 +2550,58 @@ register teaching, 関西学院 and a poster comparison remain
 nonblocking expansion. Failed or irrelevant dictionary
 fetches and search pages were not counted as verification.
 No measured frequency, executed app draw or native-speaker
-certification is claimed. Bounded confirmations remain
-pending, so the twenty source rows are still draft.
+certification is claimed.
+
+### Independent confirmation and closure
+
+The same original reviewers confirmed corrected commit
+`f88b0591e38656b386b9a08d4a0f1a3a240751df`
+in strictly sequential, bounded sessions:
+
+- [GPT confirmation](n2-vocabulary-reviews/batch-18-gpt-confirmation.md):
+  all four original findings resolved; all seven changed
+  articles and packet additions CLEAN on each facet.
+- [Claude confirmation](n2-vocabulary-reviews/batch-18-claude-confirmation.md):
+  all six original findings resolved; all seven changed
+  articles, packet additions, alias demonstration and
+  narrow reuse clarification CLEAN on each facet.
+
+Both independently inspected Weblio's actual raw-HTML
+Daijisen entry and verified the driving construction.
+Neither independently inspected the Culture Council PDF;
+its main-entry/appendix qualification remains supported by
+the author's recorded inspection. The full seat-switch
+sentence remains editorially assessed against the pinned
+change-places sense, not independently corpus-attested.
+Claude's optional alternative-spelling remark is not
+treated as measured frequency evidence.
+
+No actionable defect, consequential unresolved teaching
+claim or regression remains in the assigned scope. Extra
+navigation, register teaching and other optional expansions
+were not required merely to force agreement.
+
+The author authenticated both committed snapshots, their
+parentage, normalized file hashes, actual patches, prompt
+hashes and all four archived reports. Four usage receipts
+confirm the requested actual models and zero edits; the
+original session identities were retained and all reviewer
+processes exited. Original source claims and mappings are
+unchanged; the correction evidence was appended rather
+than backdated. File-only reviewers explicitly did not
+claim independent Git, hash or raw-source authentication.
+These checks do not constitute an executed app draw,
+frequency measurement or native-speaker certification.
+
+Closure coverage is **360 closed, 0 draft, 1,452 pending
+and 0 unresolved** source rows, mapped to 355 distinct
+articles: 327 new and 28 reused. There are 3,600 word
+articles and 82 tracked primary-form reciprocal N2
+kanji-word pairs on new articles, plus the two checked
+乾燥 pairs on the reused article. All 3,273 baseline
+identities, primary readings, titles, easier sourced
+levels and original exclusions remain preserved. This
+closes batch 18, not the full vocabulary expansion.
 
 ## Final verification
 
