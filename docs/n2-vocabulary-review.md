@@ -3828,7 +3828,7 @@ This closes batch 25, not the full vocabulary expansion.
 
 ## Batch 26: N2:502-N2:521
 
-**Status:** drafted; independent reviews pending.
+**Status:** drafted; initial reviews reconciled; corrected-snapshot confirmations pending.
 
 Scope: 孝行, 交差, 講師, 工事, 公式, 口実, こうして, 校舎,
 公衆, 香水, 公正, 功績, 光線, 高層, 構造, 交替, 耕地,
@@ -3873,11 +3873,95 @@ senses 3-4. None of these extra meanings receives a separate N2
 assignment.
 
 The initial review derivative removes only the author's quiz
-rationale. GPT and Claude will receive the same committed snapshot,
-nineteen new articles, reused-source coverage claim, eight related
-kanji changes, twenty mappings, rubric and evidence access.
-The processes will run strictly sequentially and blind to one
-another's reports. Draft coverage is 500 closed, 20 draft,
+rationale. GPT-6.1 Sol (`gpt-6.1-sol`) and Claude Opus 5.5
+(`claude-opus-5.5`) reviewed authored commit
+`54389ef6c76d3ca5f14c89bc8ad04ee59fe1f9dd`, with the same nineteen
+new articles, reused-source coverage claim, eight related kanji changes,
+twenty mappings, rubric and evidence access. GPT exited before Claude
+started; both processes were blind, read-only and used only the requested
+model. Native session records identify the original sessions as
+`21aed4b7-e161-408f-918a-46cd26220f79` and
+`3b741d6f-54d7-4ed3-9a47-8fc1a6278630`.
+
+Initial reports:
+[GPT](n2-vocabulary-reviews/batch-26-gpt-initial.md) and
+[Claude](n2-vocabulary-reviews/batch-26-claude-initial.md).
+Archives remove progress preambles and normalize Markdown hard breaks,
+without rewriting substantive reports. GPT's explicitly rejected
+abbreviated-hash typo and immediately stated correct full hash remain
+verbatim. Claude's paired-row table covers all nineteen new articles;
+its mention of missing 斯 does not make that rare mentioned spelling
+part of こうして's kana-only primary metadata.
+
+**Evidence adjudication and content changes**
+
+- **GPT-01, 公衆/一般: resolved in content.** 一般's actual body
+  explicitly teaches the general public. The complete Daijisen noun sense
+  2(b) positively supports that ordinary public use. Add the direct guard.
+  Claude considered and rejected the pair because JMdict/Jisho lacked the
+  exact English gloss; that omission does not refute the positive evidence.
+- **GPT-02 and Claude F1, こうして/こちら・こっち: resolved in content.**
+  Add both direct guards for the unqualified this-way English labels.
+  The Japanese manner/direction distinction was already correct.
+- **GPT-03, 功績/働き: resolved in content.** The actual card and pinned
+  JMdict 1451040:2 teach achievement/performance; inspected Daijisen sense
+  2 independently supports work results. Add the direct guard, without
+  equating all functioning or effort with meritorious accomplishment.
+- **Claude F2, 高層/ビル: resolved in content.** The actual high-rise and
+  multistory-building answers overlap the ordinary building meanings.
+  Add the direct guard; the bill homograph is not transferred to ビル.
+- **Claude Optional, 交差/越える・越す: accepted.** Add two actual
+  crossing/cross-over English-label guards. The reason is the exposed
+  labels' ambiguity, not mere consistency with the existing 渡る guard,
+  spelling or membership in a crossing-related topic.
+- **Claude Optional and naturalness limit, 高層: addressed.** Use
+  dictionary-attested 高層気流 with kana and an air-current example,
+  instead of the unverified 高層の大気 construction. The complete
+  Daijisen body positively records the compound; the whole new sentence
+  is authored, not a corpus quotation. Do not call the removed construction
+  wrong or claim that 高層大気 is common without evidence.
+- **Claude Optional, 孝行: editorial polish accepted.** Group noun,
+  する and な-modifier uses explicitly and say not merely obedience.
+  All three uses were already demonstrated; no missing sense is claimed.
+- **Other optionals: not required.** Do not expand 交替 with a transitive
+  sports example, 耕地 with another English plantation gloss, or 公式
+  with an adverbial example merely to increase coverage. Their selected
+  senses remain taught. JMdict's vt/vi status is acknowledged, but its
+  spelling-priority tags do not establish measured comparative frequency.
+
+The follow-up extraction contains fifteen complete families for fourteen
+exact forms. All 81 compact records and seven actual comparison labels
+and bodies were inspected. Nine already-known families compare exactly;
+six genuinely new complete families are appended. Three public inspection
+receipts cover 一般, 働き and a 高層 reinspection. Original authored
+evidence and rationale remain unchanged; additions are separate.
+
+The first private follow-up collector incorrectly retained SGKDJ across
+the later NHGKT section on the 働き page. Its extra machine-generated
+conjugation container is not lexical evidence. Resetting publisher at
+explicit named dictionary-section anchors fixes that attribution.
+All fifteen original pages plus the two new pages were retrieved again:
+seventeen actual SGKDJ bodies were confirmed, with every original first
+lexical body unchanged. The actual Daijisen 働き sense 2, not the
+machine-generated container, supports the accepted guard.
+
+**Model-diversity observation:** shared manner/direction catch; GPT-only
+accepted 公衆/一般 and 功績/働き hypotheses; Claude-only accepted
+高層/ビル, optional crossing-label guards and the attested-compound
+improvement. Compare Findings, Optional and Limits together. 孝行 polish
+is not a correctness save. This sample supports complementary coverage,
+not a general model ranking or a majority-vote method.
+
+Only six newly authored cards change. Seven direct guards bring the
+eighteen guarded articles to 96 directional declarations. No baseline
+article, kanji, identity, title, reading, level or mapping changes.
+Confirmations will resume the original sessions strictly sequentially
+with each reviewer's own report, the actual correction diff and the same
+sanitized appended evidence. Author hash checks are not reviewer-executed
+Git verification; no running-app draw, corpus-frequency study or native
+certification is claimed.
+
+Draft coverage is 500 closed, 20 draft,
 1,292 pending and 0 unresolved, mapped to 514 distinct articles:
 481 new and 33 reused. This is not review closure.
 

@@ -95,6 +95,24 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 26 reconciliation:** An absent English gloss is not proof of an
+  absent ordinary sense. 公衆/一般 is supported by the existing 一般
+  article and positive Daijisen public-noun sense even though JMdict's
+  glosses differ. 功績/働き similarly requires inspecting the ordinary
+  achievement sense, not only the work/functioning title. Resolve
+  disagreement with positive evidence rather than counting model votes.
+- **Batch 26 reconciliation:** Track the actual dictionary section, not
+  just its last redirect link. The follow-up 働き extraction initially
+  carried SGKDJ into a later NHGKT machine-generated section. Resetting
+  publisher at named section anchors and checking all seventeen actual
+  bodies preserved the fifteen original receipts and excluded the false
+  extra container.
+- **Batch 26 reconciliation:** An optional observation can close a real
+  label ambiguity or source limit. 交差/越える・越す need guards for
+  the actual English crossing labels, not merely consistency with 渡る.
+  高層気流 supplies positive compound evidence for the atmospheric
+  example without proving the removed construction wrong or certifying
+  the whole authored sentence as corpus-attested.
 - **Batch 26 authoring:** A successful page fetch is not a dictionary-entry
   check. Simplified Weblio output for 高層/公式/校庭 and 交替 yielded
   unrelated material or footers. Inspect the complete lexical container
