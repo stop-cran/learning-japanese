@@ -103,6 +103,10 @@ That article's comparison with まま is more advanced; it is not needed to lear
 
 ## Practice and sources
 
+For adjective **く／に** forms that describe an action and **さ** nouns that name a degree or quality,
+see [ease, methods and descriptive forms](ease-methods-and-descriptive-forms.md#3-く-and-に-describe-an-action).
+That next step also shows why きれい keeps its い and いい uses よ-; the basic predicate drills stay here.
+
 The practice distinguishes requested endings from interpreting time and polarity. A sentence about yesterday
 does not automatically require a denial, and a negative does not automatically describe the past.
 The later noun-description installment will develop modifiers and relative clauses more fully.

@@ -47,6 +47,8 @@ Read **電車（でんしゃ）**, train; **早い（はやい）**, quick/early
 The exercises give particular journey times rather than assume that one transport mode is always quicker.
 
 **方** is read **ほう** here. It is not the **かた** in **書き方（かきかた）**, "how to write."
+For the actual verb-stem conversion and object-to-の restructuring, see
+[かた method nouns](ease-methods-and-descriptive-forms.md#2-かた-turn-an-action-into-a-method-noun).
 The formation drills request the basic noun or dictionary-verb attachment, without adding a nominalizing の
 to the verb or expanding a noun into a clause. That is a bounded formation goal, not a claim that
 nominalized activities can never be compared.

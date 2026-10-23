@@ -35,6 +35,38 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Ease, methods and descriptive forms: independent content review (2026-10-23 UTC)
+
+**Snapshot and scope:** `2bd8f6740fcf42a6f56dfd6efcb5f924ff20d259` plus
+[issue #32](https://github.com/stop-cran/learning-japanese/issues/32). A fresh independent reviewer read
+the complete new article, all 30 complete tasks, 118 accepted completions, 68 option/feedback branches,
+61 lexical spans and 116 exclusions, plus four reciprocal bridge deltas and navigation/count changes.
+It checked actual source passages, complete-task levels, within-facet variation, exact reuse and complete
+prior-object preservation. Correctness, scoped coverage and comprehensibility are **CLEAN/CLEAN/CLEAN**,
+with no actionable findings or optional observations; no linguistic repair or reconciliation was needed.
+Actual model identity was unavailable and was not inferred.
+
+The [ledger](docs/grammar-productive-descriptions-sources.json) preserves the original snapshot,
+source scope, report hash and independence disclosure. The reviewer did not read other actual-content
+reports, the planning review or the author source-ledger body. Permitted generic guidance contains
+historical examples, and complete lexical records contain author notes; those were not independent
+linguistic evidence. Bounded guidance ranges avoided an open-ended read into historical delivery records.
+
+**Coverage and reflection:** 22 formation tasks, four guided contextual selections and four supplied-message
+interpretations cover ease/difficulty, nonvolitional proneness, method nouns with argument changes,
+adjective action modifiers and quality nouns. Six groups have thirteen facets, eleven soft recommendations
+and no prerequisites. The 21 distinct context-key strings include paired/reused scenes, not independent
+conversations or mastery measurements. All 68 preceding complete sets and 1652 preceding lexical records
+remain unchanged; four reuse groups retain their 54 members and owners. Corpus coverage reaches
+1682 tasks in 69 sets, including 751 N4; vocabulary coverage is 1373/1682, with 309 pending.
+
+Existing visible-operation, contextual-alternative, exact-sense and within-facet checks worked here.
+Retain those rules rather than manufacture another review layer; add qualified source navigation.
+Content/vocabulary checks, 151 focused regressions and the preserved fresh non-skipped real Android
+importer passed for the reviewed runtime. Concurrent image work is excluded from this installment's
+manifest and commit, with its working files untouched. No native-speaker, physical-device,
+all-spelling-frequency or exhaustive-curriculum certification is claimed.
+
 ## Honorific, humble and polite language: independent review and reconciliation (2026-10-23 UTC)
 
 **Snapshot and scope:** `378b459294c76c8c6dd4aff253cf569ec8b211ca` plus

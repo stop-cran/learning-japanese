@@ -61,6 +61,9 @@ make the number of objects a universal test for every possible conversation.
 どんな asks “what kind of,” rather than merely selecting an item. The
 [どんな family](https://bunpro.jp/grammar_points/そんな-こんな-あんな-どんな) is an optional N4 next step
 under this repository's grammar-level policy, not a required contrast in these N5 exercises.
+For a short local bridge to kinds and discourse descriptions, see
+[こんな／どんな and こういう](ease-methods-and-descriptive-forms.md#kinds-こんな-どんな-and-こういう).
+It introduces recognition without adding those forms as hidden prerequisites to the pointing drills here.
 
 Place words keep the particle appropriate to their role:
 

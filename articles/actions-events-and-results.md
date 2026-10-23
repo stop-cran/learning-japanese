@@ -74,6 +74,9 @@ This is not a rule to replace every adjective's に with と.
 This is change-of-quality or change-of-role する. Choosing a drink with コーヒーにする is a neighboring
 use already introduced in [wants, plans and choices](wants-plans-and-invitations.md), not the same task.
 The [comparison/change guide](comparisons-change-and-degree.md) retains the earlier なる exercises.
+For **く／に** forms that describe an action rather than building a make/become predicate, see
+[adjective action modifiers](ease-methods-and-descriptive-forms.md#3-く-and-に-describe-an-action).
+That installment also introduces さ quality nouns; the resultative change tasks keep their owner here.
 
 ## 3. ている: a state need not be an action in progress
 

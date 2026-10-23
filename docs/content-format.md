@@ -253,7 +253,8 @@ The [volition/plans ledger](grammar-plans-goals-sources.json) adds 25 N4 tasks i
 The [necessity/instructions ledger](grammar-necessity-instructions-sources.json) adds 41 N4 tasks and three N5 controls in one set.
 The [time/linking ledger](grammar-time-linking-sources.json) adds 38 N4 tasks in one set.
 The [respectful/humble ledger](grammar-honorific-humble-sources.json) adds 37 N4 tasks in one set.
-Current practice is 1652 exercises: 590 N5 and 721 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [productive-descriptions ledger](grammar-productive-descriptions-sources.json) adds 30 N4 tasks in one set.
+Current practice is 1682 exercises: 590 N5 and 751 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -464,6 +465,14 @@ Formal existence/copula and compact/receiving-viewpoint requests have their own 
 request and benefactive groups retain all 42 members in their original owners. Additional special verbs,
 beautifying prefixes and detailed organizational/double-keigo judgments are recognition support, not new mastery claims.
 Typed form/spelling bounds remain visible and require conversion or assembly rather than copying a supplied whole answer.
+The [ease/methods/descriptions installment](grammar-productive-descriptions-sources.json) adds 30 annotated N4 prompts,
+reaching **1682 exercises in 69 files** and **1373/1682** reviewed, with 309 still pending.
+Six groups contain thirteen facets, eleven soft recommendations and no prerequisites: twenty-two formation tasks,
+four complete-message interpretations and four guided ease/difficulty selections. Nonvolitional やすい is included;
+fitting にくい and づらい responses share the difficulty class. Method phrases require stem and argument changes,
+while action modifiers and さ nouns keep their different roles. Prior adjective, excess, change and demonstrative
+groups retain their complete objects and owners. Kinds, materials, descriptive をしている, contrastive くは and
+lexical 化する are bounded recognition support, not new scored groups or vocabulary-recall tests.
 The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the
