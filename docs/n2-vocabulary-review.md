@@ -2,7 +2,7 @@
 
 ## Status
 
-**Batches 01-10 review-closed; batch 11 in reconciliation; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-11 review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
 The first 200 rows are review-closed; twenty are draft and 1,592 remain pending.
@@ -1245,8 +1245,8 @@ expansion or a native-speaker certification.
 
 ## Batch 11: N2:202-N2:221
 
-**Status:** initial independent reviews complete; corrections prepared,
-bounded confirmations pending.
+**Status:** closed after sequential independent reviews, evidence-based
+corrections and bounded confirmations.
 
 Scope: 驚かす, おねがいします, 各々, 叔母さん, おはよう,
 お参り, おまたせしました, おまちどおさま, おめでたい,
@@ -1361,11 +1361,53 @@ complementary observations on this common sample, not a general model
 ranking or proof of reduced bias. Candidate-frequency inferences and
 unattested suggested examples still require author adjudication.
 
-The correction passes structural validation and the cumulative
+The correction passed structural validation and the cumulative
 baseline, mapping, reciprocal-link and authorship audit. Its deterministic
-manifest remains 6,094 files, with content version `1a0448d48a8be1c3`.
-The counts remain 200 closed and twenty draft rows; none is promoted to
-review-closed before the bounded confirmations.
+manifest has 6,094 files, with content version `1a0448d48a8be1c3`.
+At that prepared snapshot the counts were 200 closed and twenty draft
+rows; none was promoted before the bounded confirmations.
+
+### Bounded confirmations and closure
+
+Corrected commit: `b9f336419a555cd151f5f05eee4a1a395bfd3817`.
+The [GPT confirmation](n2-vocabulary-reviews/batch-11-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-11-claude-confirmation.md)
+are archived verbatim. The same actual models ran sequentially, each
+receiving its own original report, the actual ten-card correction diff
+and packet additions, not the other model's findings. Both usage
+receipts record zero edits; each process exited before the next began.
+
+Both marked all ten changed contexts and packet additions CLEAN on
+correctness, scoped coverage and comprehensibility. GPT resolved its
+five original findings. Claude resolved R1-R3 and explicitly withdrew
+the unsupported parts of its literal recall remedy: no modern errand
+example was established, and deliberate-versus-spontaneous recall is
+not the supported distinction. The practical memory-production guidance
+addresses the learning concern without manufacturing that evidence.
+
+The adopted optional guards and attachment clarification are covered by
+the clean changed-context verdicts. Claude's suggested inline naming of
+Seisenban remains optional attribution polish: the source line already
+identifies it, and the packet separates its grouping from JMdict's
+separate recall sense. The remaining derivatives, history and broader
+重たい/重い lesson remain nonblocking expansion. No actionable defect
+or consequential unresolved claim remained in this bounded scope.
+
+GPT independently retrieved all five added pages; Claude independently
+retrieved Seisenban, the two Japanese-teaching comparisons and Oxford's
+good-morning entry. The separate Oxford morning noun page was not
+independently fetched by Claude. Neither file-only reviewer independently
+verified Git ancestry, dictionary hashes, manifest generation or app
+execution. The author separately verified the frozen content/provenance
+hashes unchanged after both processes and the clean corrected commit.
+
+Cumulative coverage is **220 closed, 0 draft, 1,592 pending and
+0 unresolved** rows, mapped to 215 distinct articles: 193 new and
+22 reused. There are 3,466 word articles and 37 reciprocal N2
+kanji-word pairs. All 3,273 baseline identities, readings, titles and
+exclusion lists remain preserved. The manifest is unchanged from the
+confirmed correction. This closes batch 11, not the full expansion or
+a native-speaker certification.
 
 ## Final verification
 
