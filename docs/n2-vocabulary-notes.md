@@ -95,6 +95,24 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 20 authoring:** Keep a source-selected sense
+  even when another use is more familiar. 給与's raw
+  allowance/grant/supply row selects provision; salary
+  is explicitly additional teaching. 行列's raw row
+  requires both a queue and a mathematical matrix.
+- **Batch 20 authoring:** Attribute the actual dictionary
+  body, not the hosting page or a simplified extraction.
+  The 給与, キャンパス and 行列 Daijisen bodies were
+  inspected separately; an English "gang" article is
+  not evidence for neutral Japanese ギャング usage.
+  A successful encyclopedia fetch is not automatically
+  a lexical dictionary check.
+- **Batch 20 authoring:** Rest words can differ in
+  perspective without a fixed duration rule. 休憩
+  frames a break in activity; 休養 emphasizes restoring
+  energy. 客間 foregrounds receiving visitors, without
+  an absolute ban on overnight use.
+
 - **Batch 19 reconciliation:** A reused baseline article
   can expose a direct quiz ambiguity: 機械's instrument/
   apparatus use overlaps 道具 even though the primary

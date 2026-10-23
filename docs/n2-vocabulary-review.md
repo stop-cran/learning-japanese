@@ -2769,6 +2769,54 @@ remain preserved. All original exclusion declarations
 remain, with only the explicitly recorded 機械/道具
 addition. This closes batch 19, not the full expansion.
 
+## Batch 20: N2:382-N2:401
+
+**Status:** authored; independent reviews pending.
+
+Scope: きっかけ, ぎっしり, 基盤, 客席, 客間,
+ギャング, キャンパス, 休業, 休講, 休息, 給与,
+休養, 清い, 強化, 境界, 行事, 恐縮, 教養,
+行列 and existing 漁業.
+
+This batch adds **19 articles** and only the sourced
+N2 level on the existing unclassified 漁業 article.
+The [packet](n2-vocabulary-batch-sources/batch-20.json)
+retains twenty exact source rows and complete principal
+families, 178 complete comparison families, component
+records and ten qualified author-inspection receipts.
+These are not independent reviewer retrieval.
+
+給与 preserves the raw provision sense and adds the
+pay sense explicitly; its uniform-provision collocation
+is supported by the actual Daijisen definition.
+行列 teaches both queue/procession and matrix, with an
+original three-row/two-column example. 客間 retains its
+on-first mixed reading. 休息/休憩/休養 differ in
+perspective without an invented duration rule.
+恐縮 covers gratitude and the apologetic request preface.
+
+The three newly reciprocal primary N2 pairs are
+講/休講, 清/清い and 境/境界. Existing 漁/漁業
+remains reciprocal. Missing 基, 盤, 養 and 縮 cards
+are not manufactured, and their primary written
+characters remain in metadata.
+
+The related content scope is the three kanji cards
+講, 清 and 境 plus the one-line 漁業 level addition.
+Stable baseline identities, primary readings, titles,
+written-kanji arrays and easier levels remain unchanged.
+All original exclusions remain, with only the already
+recorded batch-19 機械/道具 addition; this batch makes
+no new baseline exclusion change.
+
+Authored-snapshot coverage is **380 closed, 20 draft,
+1,412 pending and 0 unresolved** rows, mapped to
+394 distinct articles: 364 new and 30 reused.
+There are 3,637 word articles and 89 distinct tracked
+primary-form reciprocal N2 pairs on new articles,
+plus checked reused pairs. These are mechanical
+counts, not review closure or linguistic certification.
+
 ## Final verification
 
 Not started. Final closure requires all original rows accounted for, no consequential unresolved
