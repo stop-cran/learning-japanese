@@ -95,6 +95,18 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 10 reconciliation:** Spelling-specific examples are not
+  exhaustive meaning compartments. Contrast taxes under 納める and
+  achievement under 収める while acknowledging 収める's shared
+  dispute-settlement use with 治める. Check unrestricted senses and
+  their cross-references before presenting a spelling contrast.
+- **Batch 10 reconciliation:** A subtype can accept a broad displayed
+  label: a school excursion or date can be an outing, and a domestic
+  worker can be a helper. Inspect both actual titles and complete
+  senses before guarding a pair; shared topic alone is insufficient.
+  Conversely, a startle reaction is not the same viewpoint as
+  transitively startling someone merely because both concern surprise.
+
 - **Batch 10 authoring:** A source row's gloss can bundle senses that
   the complete dictionary restricts to different spellings. Preserve
   納める's original achievement/payment gloss as provenance, but teach

@@ -1075,7 +1075,8 @@ whole-corpus or native-speaker certification.
 
 ## Batch 10: N2:182-N2:201
 
-**Status:** draft; independent review and reconciliation pending.
+**Status:** draft; initial reviews reconciled and corrections implemented;
+bounded confirmation pending.
 
 Scope: 納める, 治める, 惜しい, 御辞儀, 伯父さん, 小父さん,
 叔父さん, おしゃれ, おじゃまします, 教わる, おだいじに,
@@ -1118,6 +1119,90 @@ including 396 images and 201 scene catalogs; content version
 cover 195 distinct articles: 174 new and 21 reused, with 36 reciprocal
 N2 kanji-word pairs. Coverage is 180 closed, twenty draft, 1,612 pending
 and zero unresolved rows. These are authored counts, not review closure.
+
+### Initial independent review
+
+Both families reviewed authored commit
+`c53e61946e7229fafbf9401901cfbebe48c2c19e`, parent
+`a5be09f25b54da66e35037028d4e171b726ec5fb`, with identical frozen scope,
+rubric and source access. The short-lived GPT process exited before
+the Claude process began; neither delegated or edited files. Usage
+receipts verified the actual models:
+
+- [GPT initial report](n2-vocabulary-reviews/batch-10-gpt-initial.md):
+  `gpt-6.1-sol`.
+- [Claude initial report](n2-vocabulary-reviews/batch-10-claude-initial.md):
+  `claude-opus-5.5`.
+
+Both supplied three-facet assessments of all fifteen new articles,
+the eight related content edits, CW005, the five reuse claims and
+the twenty mappings. All mapping/reuse claims and the related edits
+were clean in that bounded scope. Neither reviewer could execute
+Git or independently hash the frozen files; the author checked
+committed identity, clean state and unchanged HEAD. Public-entry
+retrieval and its limits are distinguished from author receipts.
+
+### Reconciliation and implemented correction
+
+The following decisions are implemented, not yet independently
+confirmed. Quiz findings are localized ambiguity defects rather
+than evidence that the teaching prose or Japanese words are interchangeable.
+
+| Initial finding | Decision and evidence |
+| --- | --- |
+| GPT B10-GPT-01: 納める delivery/completion | Add direct guards with 配達, 終える and 済ませる. Entry 1589090 restricts payment/delivery sense 4 and completion sense 9 to 納める; the actual comparison labels overlap. Weblio's actual 収める/納める definition also corroborates finishing a year's work. |
+| GPT B10-GPT-01 / Claude B10-01: settlement spellings | Add 治める/収める and 治める/納める guards. Clarify in 治める that 収める also writes dispute settlement, and link it in 落ち着く's dispute comparison. Entry 1589090 sense 8 has no spelling restriction and cross-references 治める sense 2; Weblio's actual definition corroborates calming conflict/anger. Neither spelling examples nor dictionary recognition establish frequency or unrestricted substitution. |
+| GPT B10-GPT-02: bowing | Add お辞儀/ぺこぺこ: entry 1011540 sense 2 and the actual card explicitly teach repeated bowing. A repetition/fawning nuance does not invalidate the generic bowing label. |
+| GPT B10-GPT-03: learning | Add 教わる/学習: 1206820 sense 1 and the broad learning/study label overlap instruction-based learning. |
+| GPT B10-GPT-04 / Claude B10-02: composure | Add 落ち着く/冷静. Both actual cards teach composure; 1557050 sense 1 corroborates it. |
+| GPT B10-GPT-04: matching and quiet composure | Add 落ち着く/合う and /しっとり. Entries 1284430 sense 2 and 2121280 sense 2 overlap the already-recognized fitting and calm/quiet senses. Moisture is not the evidence for しっとり. |
+| GPT B10-GPT-05 / Claude B10-03: well-behaved | Add おとなしい/利口. Both titles explicitly say well-behaved, and 1549550 sense 2 supports the child/pet use with its usual お- qualification. |
+| GPT B10-GPT-05: gentle/quiet manner | Add おとなしい/しっとり, supported by the latter's sense 2 and actual softly-composed label. |
+| GPT B10-GPT-06 and -07: lost property | Add 落とし物/落す for the accidental-dropping action sense, and link the explicitly introduced 落とす to stable 落す, whose article explicitly teaches that fuller spelling. Complete entry 1589260 sense 1 supports the construction. |
+| Claude B10-03: そっと candidate | Add おとなしい/そっと after inspecting the actual gently/quietly label and complete adverb family 1006810 sense 1. The new card already teaches おとなしく待つ, wait quietly. This is not evidence that all gentle handling means docility; literary noun 率土 is not the relevant homograph. |
+| Claude B10-04: outing candidates | Add お出かけ/遠足 and /デート. Entries 1178260 sense 1 and 1081430 sense 1, and both actual cards, teach outing uses. A broad outing label can fit these subtypes without making every outing a school trip or date. |
+| Claude B10-05: helper candidate | Add お手伝いさん/助手. The actual generic helper label and entry 1344650 at じょしゅ support the ambiguity; the different たすけて/すけて family is retained but not the target card. This does not make every assistant a domestic worker. |
+| Claude Optional: 教わる/就く | Add the direct pair. The actual 就く title explicitly includes study under, and entry 1331530 sense 4 restricts that teacher/apprentice sense to 就く. |
+| Author follow-up: payment noun | Add 納める/支払 after checking the actual payment label and complete family 1594480. The existing 支払う exclusion is not transitive. |
+| Claude Optional: お出かけ wording | Replace the awkward negative about already being outside with a scoped contrast between the greeting's going-out use and merely locating someone outdoors. No new register or historical claim is added. |
+
+This is **nineteen new direct pairs across nine new cards**, a
+spelling-overlap clarification with related navigation, one base-verb
+link and greeting polish. Twenty-three complete families were
+re-extracted for twenty forms after checking both pinned JMdict
+hashes: the original 落とす family matches exactly, and twenty-two
+families are added. One qualified actual-entry receipt records the
+usable Weblio 収める definition without claiming a named dictionary
+heading that was absent from the extraction. The unusable 治める
+lookup is recorded as a limit, not verification. Raw rows, mappings,
+selected senses and baseline metadata remain unchanged.
+
+The weaker おどかす/ぎょっと or /びっくり suggestions are not adopted:
+their actual labels and records describe experiencing surprise, not
+the transitive act of startling another person. Nor does お見舞い's
+get-well visit/sympathy label establish the recovery-wish formula
+おだいじに as its answer. あの's tentative attention-getting use
+does not establish おじゃまします's intrusion-specific title as an
+answer. These decisions concern the actual labels, not a claim that
+the words can never co-occur in discourse.
+
+御手洗 expansions (手水舎, sweets, a different type grouping),
+additional kanji backlinks and an おさめる confusable row remain
+optional. The native-word grouping does not assert constituent
+readings. The 納める guard on 落ち着く is retained: the complete
+settlement sense exists even though the payment-focused title differs.
+No frequency or exhaustive semantic-uniqueness claim is made.
+
+Comparing equivalent observations anywhere in both reports, the
+冷静, 利口 and shared-settlement observations overlap. GPT supplies
+additional supported delivery/completion, bowing, learning, matching,
+quiet-manner and dropping guards plus the missing base-verb link.
+Claude adds useful spelling-contrast wording and supported そっと,
+outing, helper and study-under candidates, several in Optional;
+its greeting wording suggestion also improves clarity. The payment
+noun guard is author follow-up, not credited as a unique model finding.
+Both families add useful different signal in this sample, not proof
+of a general model ranking or measured bias reduction.
 
 ## Final verification
 
