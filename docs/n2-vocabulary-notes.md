@@ -95,6 +95,13 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 11 authoring:** A bundled source gloss can cross lexical
+  categories or separate families, not merely spellings. Distinguish
+  adjective おめでたい from happy-event/pregnancy noun おめでた,
+  and aunt 叔母さん from unrelated-woman 小母さん. Preserve the raw
+  source wording while recording the actual selected lexical identity;
+  do not transfer every bundled gloss to the mapped article.
+
 - **Batch 10 reconciliation:** Spelling-specific examples are not
   exhaustive meaning compartments. Contrast taxes under 納める and
   achievement under 収める while acknowledging 収める's shared

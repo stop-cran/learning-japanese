@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-10 review-closed; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-10 review-closed; batch 11 drafted; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 200 rows are review-closed; none are draft and 1,612 remain pending.
+The first 200 rows are review-closed; twenty are draft and 1,592 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -1242,6 +1242,50 @@ remain preserved. Cumulative coverage is **200 closed, 0 draft,
 174 new and 21 reused. There are 3,447 word articles and 36 reciprocal
 N2 kanji-word pairs. This closes the bounded batch, not the whole
 expansion or a native-speaker certification.
+
+## Batch 11: N2:202-N2:221
+
+**Status:** drafted; independent review and reconciliation pending.
+
+Scope: 驚かす, おねがいします, 各々, 叔母さん, おはよう,
+お参り, おまたせしました, おまちどおさま, おめでたい,
+思い掛けない, 思い込む, 思いっ切り, 思い付く, 重たい,
+おやすみ, おやつ, 親指, オルガン, 卸す and 恩恵.
+
+Nineteen new articles and the unchanged N5 伯母さん cover the twenty
+rows. The existing aunt article already explicitly teaches younger-aunt
+叔母さん at おばさん. Its identity, primary reading and easier level
+remain unchanged. The raw source's unrelated-woman gloss belongs to
+separate 小母さん evidence, not an extra meaning silently assigned to
+the aunt spelling.
+
+Written teaching IDs お願いします, お待たせしました and
+お待ちどおさま retain their source readings. 思いがけない explicitly
+recognizes 思い掛けない; 思いっきり recognizes rare 思いっ切り
+without manufacturing the source's blank gloss. おめでたい distinguishes
+the adjective from happy-event/pregnancy noun おめでた. 卸す covers
+wholesale selling and cooking uses while acknowledging the cooking
+overlap in the complete 下ろす/降ろす family.
+
+Seven existing word articles gain comparison navigation. 各 gains
+linked 各々 examples at the actual おのおの reading, adding one useful
+reciprocal N2 pair. Alias spellings do not add primary-headword kanji
+metadata or manufacture additional N2 reciprocal pairs.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-11.json) preserves
+every raw row, twenty complete principal families, component records,
+117 complete comparison families and four qualified actual-entry
+inspection receipts. Failed or irrelevant fetches are recorded as
+limits, not verification. Numeric article citations have been checked
+against the extracted families and actual headwords.
+
+All 3,273 baseline identities, primary readings, titles and exclusion
+lists remain preserved. There are 3,466 word articles. The deterministic
+manifest has 6,094 files, including 396 images and 201 scene catalogs;
+content version `2251640eb85b0d7e`. Cumulative mappings cover 215
+distinct articles: 193 new and 22 reused, with 37 reciprocal N2
+kanji-word pairs. Coverage is **200 closed, twenty draft, 1,592 pending
+and zero unresolved** rows. These are authored counts, not review closure.
 
 ## Final verification
 
