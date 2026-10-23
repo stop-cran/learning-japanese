@@ -2771,7 +2771,7 @@ addition. This closes batch 19, not the full expansion.
 
 ## Batch 20: N2:382-N2:401
 
-**Status:** authored; independent reviews pending.
+**Status:** initial reviews complete; corrections awaiting bounded confirmation.
 
 Scope: きっかけ, ぎっしり, 基盤, 客席, 客間,
 ギャング, キャンパス, 休業, 休講, 休息, 給与,
@@ -2816,6 +2816,67 @@ There are 3,637 word articles and 89 distinct tracked
 primary-form reciprocal N2 pairs on new articles,
 plus checked reused pairs. These are mechanical
 counts, not review closure or linguistic certification.
+
+### Blind initial reviews and reconciliation
+
+Both reviewers assessed the common authored snapshot
+`bc40a3a045024123d13d384bc98ee982d085da28`,
+all nineteen new articles, twenty mappings and the
+same four-file related patch, one process at a time.
+The [GPT report](n2-vocabulary-reviews/batch-20-gpt-initial.md)
+records actual model `gpt-6.1-sol`; the
+[Claude report](n2-vocabulary-reviews/batch-20-claude-initial.md)
+records `claude-opus-5.5`. Both processes exited and
+reported zero file edits.
+
+| Observation | Evidence-based disposition |
+|---|---|
+| Claude B20-01: positive embarrassed/abashed use of 恐縮 missing | Resolved in the correction: JMdict 1236740 sense 2 expressly includes embarrassment from compliments or hospitality and shame about an error. Add the modest praise example with kana and translation, without treating ordinary stage embarrassment as equivalent. |
+| Claude B20-02: 恐縮/恩 and 恐縮/申し訳 direct guards | Resolved: complete 1183090 and 1363050 support obligation/gratitude and apology/excuse overlaps. Add both direct pairs; do not infer them transitively. |
+| Claude B20-03: 給与/納める direct guard | Resolved: complete 1589090 sense 4 supports pay/delivery/supply for 納める itself, without transferring the 収める-only achievement sense. Add the direct pair. |
+| Claude optional 行事/機能 | Adopted: add a direct English-"function" guard and explain social event versus capability/operation. |
+| Claude optional 休講/おやすみ | Adopted conservatively: the polite noun's day-off/absence use can describe time off, not just the good-night greeting. Add the direct guard; retain the class-status versus student-nonattendance distinction. |
+| Claude optional きっかけ cue/合図 | Partly adopted as nonblocking clarification: principal 1591290 already includes "cue"; add a general starting-cue comparison and direct 合図 guard from complete 1284930. Specialist kabuki history or theater examples are not required. |
+| Claude optional キャンパス wording | Adopted: remove "university life"; retain the independently inspected Daijisen extended "university" use. |
+| Claude optional 客間/応接 | Not adopted: the inspected entries distinguish reception room from receiving visitors. The shared substring "reception" alone does not establish interchangeable actual titles. 応接間/応接室 are room compounds, not the bare activity noun. |
+| Claude optional 境 reading example and psychology 強化 example | Remain optional: the existing 国境 reading example is valid, 境界 is already linked under common words, and the additional psychology sense is explicitly identified without claiming a conditioning lesson. |
+
+The correction extraction inspected seven complete
+comparison families; six newly needed families are
+appended to the packet with exact direct pairs and
+source qualifications. おやすみ was already present.
+Initial rows, principal families, mappings, inspection
+receipts, quiz declarations and author rationale remain
+historical authored-snapshot evidence, not backdated.
+All six changed content files are new batch-20 articles;
+no baseline metadata or related kanji content is altered.
+
+**Model-diversity note:** Comparing both complete initial
+reports, including optional observations and limits,
+GPT established no actionable finding or optional
+suggestion. Claude uniquely identified the three
+supported minor findings and the adopted optional
+clarifications above. This is complementary value in
+this sample, not a general model ranking or proof that
+the GPT review covered every comparison.
+
+**Limits:** Both initial reviews were file-only and did
+not execute Git, hashes or app draws. Neither read all
+178 comparison families completely. GPT independently
+retrieved the three Daijisen bodies and seven Seisenban
+bodies. Claude independently retrieved 恐縮, used
+community Wiktionary pages for three words, and honestly
+identified the footer-only きっかけ fetch as failed.
+Claude also disclosed one accidental grep hit in the
+excluded 行列 rationale after assessing that article;
+no finding relied on it. Its peripheral inference that
+absent component cards are necessarily not N2 is not
+adopted: absence is not independent level evidence.
+The completed kanji cohort is the selected community
+list, not an official exhaustive modern JLPT syllabus.
+Dictionary meanings support the original praise
+example's use, not an independent corpus occurrence
+of the full sentence or native-speaker certification.
 
 ## Final verification
 

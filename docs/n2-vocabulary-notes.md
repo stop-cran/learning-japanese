@@ -95,6 +95,27 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 20 reconciliation:** A selected embarrassment
+  sense needs positive teaching, not only a contrast:
+  恐縮 can describe being humbled by praise or ashamed
+  of an error. Keep this self-effacing use distinct from
+  an unrestricted replacement for 恥ずかしい.
+- **Batch 20 reconciliation:** Direct quiz guards cannot
+  be inherited through other gratitude, apology or pay
+  words. Check 恩/申し訳 against 恐縮 and 納める
+  against 給与 themselves. English "function" also
+  needs attention across 行事/機能 despite their
+  different Japanese meanings. A shared word inside
+  a compound title does not by itself prove ambiguity:
+  客間's room and 応接's receiving activity remain
+  distinct in the inspected entries.
+- **Batch 20 reconciliation:** A general cue
+  clarification can be grounded in JMdict without
+  promoting a community theater gloss to compulsory
+  specialist teaching. Trim キャンパス's unsupported
+  "university life" expansion while retaining the
+  dictionary-supported extended university use.
+
 - **Batch 20 authoring:** Keep a source-selected sense
   even when another use is more familiar. 給与's raw
   allowance/grant/supply row selects provision; salary
