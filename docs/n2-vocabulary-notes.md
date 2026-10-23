@@ -95,6 +95,11 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 27 confirmation:** Follow a missed duty-label pair through
+  other actual duty/responsibility answers, not through an exclusion
+  clique. 公務/役・役割・係・責任 each has positive task/duty evidence;
+  係's person sense alone would be insufficient. A confirmation can
+  expose a first-review miss without implying the correction caused it.
 - **Batch 27 reconciliation:** Check broad duty and reason labels against
   positive secondary senses, not a synonym clique. 公務 needs direct
   務め/勤め/義務 guards; 合理/訳 is supported by 訳's good-sense/reason

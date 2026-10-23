@@ -4131,7 +4131,7 @@ sixteen actual labels, and eight qualified public-entry receipts.
 Eighteen family overlaps compare exactly; only six genuinely new
 families are appended. Original rows, families, labels, receipts and
 rationale remain unchanged. The correction derivative again removes
-only initial quiz rationale. Sixteen new articles now declare
+only initial quiz rationale. At the first correction, sixteen new articles declared
 **107 directional guards**: five additions and four removals.
 Six new articles change; no baseline word, kanji, primary title,
 reading, level, source mapping or reciprocal pair changes.
@@ -4145,7 +4145,45 @@ guard-pruning and English-article observations. No duplicated actionable
 finding was identified. Other preferences remain optional or unsupported
 as defects. This is useful complementary evidence on this batch, not a
 model ranking or a claim that either model reviewed every comparison.
-Confirmation and session/report authentication remain pending.
+### First confirmations and bounded follow-through
+
+Both original sessions were resumed sequentially on correction
+`ac74524ac2d47d12c0b2caf8bd430f47f9ab580b`, with their own reports,
+the same actual six-card/provenance diff, rubric and sanitized evidence.
+The [GPT confirmation](n2-vocabulary-reviews/batch-27-gpt-confirmation.md)
+resolved its original finding and found no actionable regression.
+The [Claude confirmation](n2-vocabulary-reviews/batch-27-claude-confirmation.md)
+resolved both original findings but identified **B27-03**, a missed
+公務/役 duty-label pair. This predates the correction, not a regression.
+Claude also raised 役割 tentatively. Both processes fully exited with
+zero edits.
+
+Positive complete-family and actual-card inspection supports those two
+pairs independently: 役 1537970:1 explicitly records duty/assignment,
+and 役割 1538000:1 records duties. A bounded duty/responsibility-title
+sweep also established 係/公務 and 責任/公務: 係's actual answer
+includes assigned duty and 1589840:1 explicitly supports that task
+sense, while 責任 1383180:1 and its body positively teach duty/
+responsibility, not only blame. The person-in-charge sense alone
+would not justify a task-word guard. All four receive direct guards
+and qualified links in 公務, not transitive protection through other
+duty words.
+
+The follow-through appends six complete families for four forms,
+four actual labels and explicit dispositions; all thirty compact
+family records and all four full card bodies were read. Historical
+えき/えだち and suffix がかり identities are not transferred to
+primary やく/かかり cards. Initial correction evidence remains intact.
+There are now **111 directional declarations** on sixteen new cards.
+Only 公務 and appended provenance change in this follow-through.
+No baseline word, primary mapping, easier level, kanji or reciprocal
+pair changes.
+
+This additional pass was useful: Claude exposed a first-review miss,
+its tentative role/duties observation gained positive support, and
+the author's bounded class-level sweep found two more task-label
+overlaps. Neither report's original CLEAN verdict is treated as
+exhaustive certification. Reconfirmation and authentication are pending.
 
 Current index: **520 closed, 20 draft, 1,272 pending and 0 unresolved**
 rows, mapped to 534 distinct articles: 500 new and 34 reused.
