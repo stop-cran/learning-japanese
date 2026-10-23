@@ -145,6 +145,11 @@ deadline transfer and selective concession. It extends the existing time and
 [reasons articles](articles/reasons-and-contrasts.md#て-links-for-reasons-means-and-parallel-facts), rather than creating another overview.
 Its [ledger](docs/grammar-time-linking-sources.json) records exact reuse of temporal, foundation, conditional and のに owners.
 
+The [respectful/humble introduction](articles/honorifics-humble-and-polite-language.md) adds 37 N4 tasks
+in eight groups, distinguishing actor respect, a humble action's respected party and listener-directed formality.
+It covers productive and common special forms, formal existence/copula, courteous requests and scoped service scenes.
+Its [ledger](docs/grammar-honorific-humble-sources.json) records exact reuse of ordinary politeness, requests and benefactive viewpoints.
+
 ## Confusable vocabulary
 
 The [candidate inventory](docs/confusable-words.md) collects overlapping meanings, misleading English glosses,
@@ -201,8 +206,9 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   34 on ability and perception, 28 on actions/events/results, 24 on trying/preparing/completing,
   36 on benefactives/requests, 34 on direction/development/stages, 30 on passive participants,
   40 on causative perspective, 38 on appearance/impressions, 36 on judgment/expectation,
-  40 on embedded questions/reports, 25 on volition/plans, 44 on necessity/instructions and 38 on time/linking (1615 in total).
-  All 1615 exercises have grammar-only study labels: **590 N5, 684 N4, 235 N3, 102 N2 and four N1**.
+  40 on embedded questions/reports, 25 on volition/plans, 44 on necessity/instructions, 38 on time/linking
+  and 37 on respectful/humble language (1652 in total).
+  All 1652 exercises have grammar-only study labels: **590 N5, 721 N4, 235 N3, 102 N2 and four N1**.
   These are editorial estimates using Bunpro as the primary reference, with documented JLPT Sensei comparisons,
   not an official syllabus. Vocabulary and kanji difficulty do not determine them; natural examples remain unchanged.
   See the [policy and per-article distribution](docs/jlpt-levels.md#grammar-baseline) and

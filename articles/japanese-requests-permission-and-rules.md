@@ -15,6 +15,9 @@ Learn the whole ending rather than treating every negative-looking piece as a pr
 Read **名前（なまえ）** and **書く（かく）**.
 A polite request can still sound direct or carry authority in context. ください is not a guarantee that
 any demand becomes socially appropriate; more indirect requests can be useful later.
+The [respectful/humble introduction](honorifics-humble-and-polite-language.md#courteous-requests-who-will-do-the-action)
+adds compact お／ご requests and ていただけませんか, separating the listener's action from the speaker's
+receiving viewpoint. Those are a later, separately owned practice scope, not extra answers required here.
 
 ## Requests: affirmative て, negative ないで
 

@@ -158,7 +158,10 @@ The repeated lending/reading scenes share context keys across forms and roles, n
 
 [Desire and outcomes](desire-actions-and-outcomes.md) retains てほしい and the optional てもらいたい
 bridge: wanting an action or wanting to receive it is not proof that it happened.
-More formal **ていただけませんか** is left to the honorific/humble installment, not a hidden distractor.
+The [respectful/humble introduction](honorifics-humble-and-polite-language.md#courteous-requests-who-will-do-the-action)
+now owns **ていただけませんか**: the listener still performs the lexical action, while the speaker adopts
+the receiving viewpoint. Its negative-potential question is a separately practised courteous request,
+not a hidden distractor or a reason to change these existing tasks.
 
 You may also meet **てやる**, a rougher/register-sensitive alternative in some benefactive uses, as well
 as an expression of strong determination. It is optional recognition here, not an N4 scored target.

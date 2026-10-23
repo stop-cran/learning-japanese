@@ -35,6 +35,43 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Honorific, humble and polite language: independent review and reconciliation (2026-10-23 UTC)
+
+**Snapshot and scope:** `378b459294c76c8c6dd4aff253cf569ec8b211ca` plus
+[issue #31](https://github.com/stop-cran/learning-japanese/issues/31). A fresh independent reviewer read
+the complete new keigo article, all 37 complete tasks, 167 accepted completions, 80 option/feedback
+branches, 93 lexical spans and 168 exclusions, plus three reciprocal bridge deltas and navigation/count
+changes. It checked complete-task levels, actual source passages, per-facet variation, exact reuse and
+preservation. Actual model identity was unavailable and was not inferred. Over-broad initial guidance
+reads incidentally exposed historical review summaries and family descriptions; these were excluded
+as evidence. The [ledger](docs/grammar-honorific-humble-sources.json) retains that limitation,
+the original finding and the informed same-reviewer reconciliation.
+
+**Finding and reconciliation:** initial correctness was **NEEDS FIX**; scoped coverage and comprehensibility
+were **CLEAN**. Minor **HH-IR-001** found that three special-verb conversion instructions were broader than
+their accepted answers: "shared special respectful counterpart" also allowed おいでになる, and "polite
+negative" allowed いらっしゃらないです. Make the bounded conversion visible rather than call those alternatives
+ungrammatical. The three reported tasks and two parallel doing tasks now name the same dictionary-form
+candidates, なさる and いらっしゃる, and explicitly request the ます family in the stated tense/polarity.
+Only those five instructions and their complete lexical context records change; no whole missing answer
+is supplied. The original reviewer inspected all five revised objects, all seven accepted completions
+and ten feedback branches, independently recomputed all 37 record fingerprints and checked the exact
+repair and guidance hunks. The finding is **resolved**, with its original Minor severity and initial
+evidence preserved. Final bounded verdicts are **CLEAN/CLEAN/CLEAN**, with no optional observation
+or new actionable issue.
+
+**Coverage and reflection:** 37 N4 tasks comprise 27 formation tasks, six interpretations and four guided
+service-viewpoint transfers, in eight groups with eighteen facets, twelve soft recommendations and no
+prerequisites. The 24 distinct context-key strings include paired scenes; they are not independent
+conversations or mastery measures. All 67 preceding complete sets and 1615 preceding lexical records
+remain unchanged; four reused groups retain their 42 members and owners. Corpus coverage reaches
+1652 tasks in 68 sets, including 721 N4; vocabulary coverage is 1343/1652, with 309 pending.
+Extend the existing register-axis/visible-operation lesson: a semantic or politeness label need not
+select one lexical counterpart or inflection family. Retain selection and inflection in a bounded drill.
+Add qualified official/teaching-source navigation, not another review layer. Content/vocabulary checks,
+151 focused regressions and a fresh non-skipped actual Android importer pass. No native-speaker,
+physical-device, exhaustive-keigo or learning-outcome certification is claimed.
+
 ## Time and clause linking: independent review and reconciliation (2026-10-23 UTC)
 
 **Snapshot and scope:** `4cd7331510ed01ef90185c73455f41a737559b4e` plus
@@ -1235,6 +1272,10 @@ The [basic-particle exercise review](docs/grammar-basic-particles-sources.json) 
   Conversational contractions can retain polite endings: the result-state review accepted 開いてます and
   開けときます without creating new targets. Its noun-result となりました alternatives likewise retain ordinary
   polite grammar despite a more formal presentation ([record](docs/grammar-transitivity-results-sources.json), TR-02/03).
+  The [keigo review](docs/grammar-honorific-humble-sources.json), HH-IR-001, found that "special respectful"
+  did not select いらっしゃる over おいでになる, while "polite negative" also allowed ないです.
+  For a bounded paradigm drill, name the candidate dictionary forms and ending family before answering;
+  leave the actual selection and inflection to the learner.
 - **Normalization is not recognition of every spelling.** NFKC folds ３時 to 3時 but does not convert it to 三時 or
   迄 to まで. Grammar tasks should accept appropriate recognized spellings without promoting them to separate
   semantic choice buttons or claiming equal frequency (BPI-F02).

@@ -187,6 +187,9 @@ gift sentence.
 This is not a complete honorific lesson. Ordinary あげた versus あげました and the choice of an
 honorific verb are different questions; a person's status alone is not a license to invent a blanket
 ban on every sentence mentioning them.
+The [respectful/humble introduction](honorifics-humble-and-polite-language.md#keep-the-people-and-the-axes-separate)
+distinguishes actor respect, humble action toward a respected party and listener-directed formality.
+It also explains why that action-related party need not be the physical destination of an object.
 
 ## What the practice separates
 

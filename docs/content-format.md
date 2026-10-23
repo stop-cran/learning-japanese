@@ -252,7 +252,8 @@ The [reports/questions ledger](grammar-reports-questions-sources.json) adds 40 N
 The [volition/plans ledger](grammar-plans-goals-sources.json) adds 25 N4 tasks in one set.
 The [necessity/instructions ledger](grammar-necessity-instructions-sources.json) adds 41 N4 tasks and three N5 controls in one set.
 The [time/linking ledger](grammar-time-linking-sources.json) adds 38 N4 tasks in one set.
-Current practice is 1615 exercises: 590 N5 and 684 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [respectful/humble ledger](grammar-honorific-humble-sources.json) adds 37 N4 tasks in one set.
+Current practice is 1652 exercises: 590 N5 and 721 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -454,6 +455,15 @@ Relative completion viewpoints, whole ongoing intervals, named negative connecti
 concessions require actual assembly; direct/quoted scope and possible/actual event framing vary interpretation.
 The original temporal, N5 foundation, conditional, のに and evaluative groups keep their complete objects.
 Focused sections extend the existing time and reason articles, with short reciprocal bridges.
+The [respectful/humble introduction](grammar-honorific-humble-sources.json) adds 37 annotated N4 prompts,
+reaching **1652 exercises in 68 files** and **1343/1652** reviewed, with 309 still pending.
+Eight groups contain eighteen facets, twelve soft recommendations and no prerequisites: twenty-seven formation
+tasks, six complete-message interpretations and four guided service transfers. Actor respect, humble-I target
+respect and listener-directed formality remain distinct; productive and special verbs have actual conversion tasks.
+Formal existence/copula and compact/receiving-viewpoint requests have their own groups. Four existing politeness,
+request and benefactive groups retain all 42 members in their original owners. Additional special verbs,
+beautifying prefixes and detailed organizational/double-keigo judgments are recognition support, not new mastery claims.
+Typed form/spelling bounds remain visible and require conversion or assembly rather than copying a supplied whole answer.
 The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the
