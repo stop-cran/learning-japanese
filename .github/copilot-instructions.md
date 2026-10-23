@@ -41,6 +41,24 @@ searching afresh. Use the guide for navigation; keep exact evidence and qualific
 - Treat reviewer findings as hypotheses. Resolve disagreements using the precise claim and evidence, not majority vote, model reputation, or whichever criticism sounds strongest. Preserve unresolved disagreements explicitly.
 - Separate defects from optional expansion and editorial preference. Severity reflects demonstrated impact on learning; confidence reflects the strength of evidence. A localized omission can be minor even when the reviewer is highly confident.
 
+## Grammar exercises and companion articles
+
+Use the [exercise/group/vocabulary contract](../docs/content-format.md#grammar-exercises), the
+[source guide](../docs/grammar-authoring-sources.md), and the
+[reusable review lessons](../REVIEW.md#reusable-grammar-review-lessons) together. Review the complete learner-visible
+task, not just the Japanese sentence or intended key:
+
+- Check typed alternatives and fixed choices against the visible operation and register. Conversational contractions
+  can retain polite endings; a fitting alternative is not wrong merely because it is not the teaching model.
+- Read every completed option and feedback branch against that scenario's actual roles, polarity and event stage.
+  Shared templates must not import another example's facts.
+- Check lexical boundaries and senses by occurrence. Correct offsets and hashes do not prove that a matched substring
+  is a word, or that its gloss fits this prompt.
+- Count genuinely different contexts, not item IDs or noun substitutions. Paired forms and interpretations share keys;
+  useful repetition is not independent transfer evidence or demonstrated mastery.
+
+These regroup existing checks, not a new review layer. A clean bounded review needs no manufactured finding or rule.
+
 ## Independent review and reconciliation
 
 - When multi-model review is requested, use different model families on the same identified snapshot. Keep initial reviewers independent of one another's findings and the author's prior review rationale. Record the models actually used rather than pinning versions in this guide.
@@ -114,3 +132,9 @@ For each revision of the review rules, add a rule grounded in an observed failur
   [outcome](../docs/grammar-expectations-sources.json) records document misleading page extraction and mixed dictionary content.
   The [source guide](../docs/grammar-authoring-sources.md) consolidates search starting points and those observed pitfalls;
   detailed evidence remains in the per-batch records, rather than being replaced by a site-level endorsement.
+- **2026-10-23 - Grammar task entry point (regroup):** The
+  [consolidation](../docs/grammar-n4-consolidation-sources.json),
+  [result-state](../docs/grammar-transitivity-results-sources.json) and
+  [auxiliary](../docs/grammar-try-prepare-complete-sources.json) reviews exposed lexical-boundary, accepted-answer,
+  feedback-stage and context-count defects. Surface their existing checks here so an article-oriented review does not
+  overlook the exercise's other learner-visible fields. Detailed evidence and original severities remain in those ledgers.
