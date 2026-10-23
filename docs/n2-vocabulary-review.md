@@ -2049,7 +2049,7 @@ full vocabulary expansion.
 
 ## Batch 16: N2:302-N2:321
 
-**Status:** authored; independent reviews pending.
+**Status:** initial reviews reconciled; bounded confirmations pending.
 
 Scope: 学科, 学会, 楽器, 学級, 担ぐ, 括弧, 活字, 活躍,
 活力, 仮定, 過程, 課程, 仮名, 仮名遣い, 鐘, 加熱,
@@ -2100,6 +2100,90 @@ and 67 primary-form reciprocal N2 kanji-word pairs. Baseline
 identities, primary readings, titles, easier sourced levels and
 original exclusions are preserved. These are draft/mechanical
 counts, not linguistic certification or review closure.
+
+### Initial reviews
+
+The authored snapshot is
+`a3f5bd39d72e1dfc5361a8d2c213ef0f7cb79cc5`, directly after
+`f0c4257b1097bb0cde57718096f0a1ecbb0e0d14`.
+The same frozen twenty articles, twenty principal mappings,
+twelve-file related patch and source access were independently
+assigned to **GPT-6.1 Sol (`gpt-6.1-sol`)** and
+**Claude Opus 5.5 (`claude-opus-5.5`)**. Their isolated,
+read-only processes ran sequentially, delegated nothing and
+exited without file edits.
+
+The [GPT initial report](n2-vocabulary-reviews/batch-16-gpt-initial.md)
+finds four direct quiz ambiguities. The
+[Claude initial report](n2-vocabulary-reviews/batch-16-claude-initial.md)
+finds two of the same pairs, another difficulty-label pair, and
+overrestrictive attachment wording in 仮定. Both read all twenty
+principal articles and the actual related patch; both judge all
+twenty mappings and twelve related changes clean in the three
+facets. Their comparison-family inspection is selective, not
+exhaustive.
+
+### Evidence-based reconciliation
+
+| Initial observation | Adjudication and correction |
+| --- | --- |
+| GPT B16-GPT-01; Claude F2: 被せる/浴びせる | Accepted: add the direct guard. Principal 1484320:3 explicitly teaches pouring over, and 1547440:1 supports the actual pour-over answer label. |
+| GPT B16-GPT-02: 学会/大会 | Accepted: 大会 1413180:1 includes convention/conference, not only tournament. Add the direct guard. |
+| GPT B16-GPT-03; Claude F4: 学級/授業 | Accepted: the existing class/lesson label is ambiguous in the quiz. Add 授業 while preserving the explicit class-group versus lesson distinction. |
+| GPT B16-GPT-04: 活躍/参加 | Accepted: active participation is explicit in 1208450:1 and overlaps the existing participation label. Add 参加 without equating mere attendance with an active contribution. |
+| Claude F1: 仮定 attachment | Accept the overstatement concern, not the proposed frequency remedy. Present plain clause + と仮定する as one useful pattern and explain the actual 一万円だ example. Both original examples remain correct and unchanged. |
+| Claude F3 and optional どうしても | Add 難しい for difficult/hard-to-do overlap and どうしても for its actual simply-cannot label. The latter needs a negative predicate; the guard does not erase that grammatical condition. |
+| Claude optional カバー/皮 | Accepted: the broad covering label overlaps the actual outer-covering label and wrapping/sheath sense 1483800:3, not just the topic of skin. |
+| Claude optional 仮定/もし and もしも | Accepted as conservative supposition/supposing answer-label guards, not Japanese noun/adverb interchangeability. Add both direct pairs; their shared exact title does not protect either from 仮定. |
+| Claude optional 被せる/着る and 乗せる | Accepted for the actual unmarked put-on labels. The Japanese wearer, clothing/headwear and placement constructions remain distinct. |
+| Claude optional 学会/組合 | Accepted: 1397620:1 expressly includes association, not only labor union. Add the direct association-label guard. |
+| Claude optional 仮名遣い/送り仮名 | No overlapping answer established: kana orthography and kana endings after kanji describe a system and one spelling device. Keep their explanation, without making a whole-topic exclusion clique. |
+| Claude optional 括弧 and 担ぐ examples | Remain optional expansion. The する possibility and fooling sense are already explained; no incorrect existing example or necessary construction gap was established. |
+
+Thirteen complete correction families for eleven forms were
+re-extracted after verification of both pinned JMdict hashes,
+read completely and attached to the packet. This preserves the
+additional mock-exam and calling-out homographs matched by
+もし without importing their senses into the lesson. Initial
+授業 family 1330290 remains available. All twenty original
+rows/mappings, selected senses, principal families, 146 initial
+comparison families, component records and eleven original
+inspection receipts remain unchanged.
+
+The author re-fetched the actual 仮定 entries. The historical
+Seisenban nominal-complement example qualifies an overbroad
+instruction but does not establish modern omission frequency.
+The visible Bunpro entry supplies ordinary clause examples
+and a mathematical-notation example, not the optional
+XをYと仮定する construction. A search-generated university
+PDF lead failed to fetch and is not verified evidence. No
+new frequency or unrestricted copula-omission rule is added.
+
+The correction changes seven new articles, adding twelve
+direct quiz pairs and narrowing one explanatory passage.
+It preserves baseline identities, titles, primary readings,
+easier levels and original exclusion lists. Source coverage
+and all reciprocal N2 links are unchanged.
+
+### Multi-model usefulness
+
+Across the complete reports, 被せる/浴びせる and 学級/授業
+are shared useful discoveries. GPT uniquely contributes the
+学会/大会 and 活躍/参加 pairs. Claude uniquely contributes
+the 難しい guard and 仮定 wording concern, plus seven
+accepted direct pairs from its optional leads: どうしても,
+皮, both conditional adverbs, both put-on labels and 組合.
+These optional observations count as Claude contributions,
+not new author discoveries or findings unique to a later pass.
+
+The suggested often-keeps-だ remedy is not adopted as an
+established usage fact. The orthography-device guard and two
+extra examples remain nonblocking. Diversity is useful on this
+matched sample, but neither agreement nor a larger finding
+count establishes correctness or a general model ranking.
+Both reviewers disclose file-only Git/hash limits, selective
+comparison coverage, unexecuted app behavior and lack of
+native-speaker/corpus certification.
 
 ## Final verification
 
