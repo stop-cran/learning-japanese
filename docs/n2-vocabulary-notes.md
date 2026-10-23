@@ -95,6 +95,27 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 22 authoring:** A source can give a reading
+  and entry ID that agree while its English gloss
+  belongs to another homograph. Preserve 工夫's raw
+  "labourer,worker", but explicitly map the agreeing
+  くふう/1278220 to devising and practical ideas.
+  Worker belongs to dated/sensitive こうふ/1278230,
+  not a new meaning or N2 assignment for くふう.
+- **Batch 22 authoring:** Preserve genuine spelling
+  overlap rather than manufacturing tidy compartments.
+  汲む and 酌む both support pouring/drinking and
+  considering feelings; the sake-serving spelling note
+  favors 酌む without creating an absolute partition.
+  悔やむ must positively teach the selected mourning
+  sense, not only the additional regret use.
+- **Batch 22 authoring:** Dictionary numbering is
+  source-local. Daijisen reverses JMdict's 悔やむ
+  order and combines taste/color under one くどい
+  definition. Identify the actual hosted dictionary:
+  the partial 句読点 body was 新語時事用語辞典,
+  not Daijisen.
+
 - **Batch 21 reconciliation:** A comparison sweep can
   cover 笑う/笑顔 yet miss the separately titled 笑い,
   or cover 下がる yet miss 下降. Check direct pairs,

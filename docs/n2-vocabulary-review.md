@@ -3118,6 +3118,72 @@ All original exclusions remain with only the established
 batch-19 機械/道具 addition. This closes batch 21,
 not the full vocabulary expansion.
 
+## Batch 22: N2:422-N2:441
+
+**Status:** authored; independent reviews pending.
+
+Scope: 砕く, 砕ける, くたびれる, くだらない, 下る,
+唇, 口紅, くっつく, くっつける, くどい, 句読点,
+配る, 工夫, 区分, 組み合わせ, 組み立てる, 汲む,
+酌む, 悔しい and 悔やむ.
+
+This batch adds **20 articles**, with no reused
+principal article. The
+[packet](n2-vocabulary-batch-sources/batch-22.json)
+retains twenty exact rows and complete principal
+families, 269 complete comparison families, component
+records, 146 existing comparison labels/exclusions
+and seven qualified public-inspection receipts.
+All families and component records were inspected;
+these author-access receipts do not imply independent
+reviewer retrieval.
+
+工夫 preserves the raw "labourer,worker" gloss but
+explicitly corrects that homograph mismatch. Both
+the source reading くふう and supplied entry 1278220
+identify devising a method or its resulting idea.
+Worker belongs to separate dated/sensitive
+こうふ/1278230 and does not thereby gain N2.
+組合せ maps to the explicitly taught 組み合わせ
+alias, with all four unrestricted spellings retained.
+
+悔やむ positively teaches the source-selected
+mourning sense, with regret separately additional.
+汲む and 酌む preserve genuine pouring/drinking
+and feelings-consideration overlap without an
+absolute water/sake or literal/figurative partition.
+くどい retains both insistent expression and heavy
+taste. Source-local dictionary numbering and the
+partial 句読点 public inspection are qualified.
+Additional senses do not independently gain N2.
+
+Two new primary-form reciprocal N2 pairs are
+紅/口紅 and 区/区分. The related three-file scope
+is 紅 and 区 reading/common-word examples and a
+link around 読's existing 句読点 example at トウ.
+Missing 砕, 唇, 句, 汲, 酌 and 悔 cards are not
+manufactured; written characters remain in metadata.
+Missing comparison articles remain plain text.
+
+All 3,273 baseline identities, primary readings,
+titles, written-kanji arrays and easier levels are
+preserved. No new baseline exclusion change is
+made beyond the established batch-19 機械/道具 pair.
+
+Authored-snapshot coverage is **420 closed, 20 draft,
+1,372 pending and 0 unresolved** rows, mapped to
+434 distinct articles: 403 new and 31 reused.
+There are 3,676 word articles and 96 distinct tracked
+primary-form reciprocal N2 pairs on new articles,
+plus checked reused pairs. These mechanical counts
+are not review closure or linguistic certification.
+
+Both blind reviewers will receive the same frozen
+snapshot, twenty whole articles, three-file related
+patch, mappings and equivalent evidence derivative
+with only the canonical author's quiz rationale
+removed. Reviews run strictly one process at a time.
+
 ## Final verification
 
 Not started. Final closure requires all original rows accounted for, no consequential unresolved
