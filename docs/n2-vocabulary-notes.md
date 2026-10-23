@@ -95,6 +95,11 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 08 authoring:** Copy comparison entry IDs from the extracted
+  records, not from memory or similar-looking numbers. A correct
+  comparison in prose does not verify its numeric citation. Check
+  the cited family's actual headword and applicable reading/sense.
+
 - **Planning:** `揚げる` and `挙げる` have separate modern JMdict entries from the giving
   article `あげる`; matching kana is not adequate reuse evidence. The original source gloss
   remains in provenance even when its broad English wording needs correction.

@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-07 review-closed; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-07 review-closed; batch 08 drafted; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 140 rows are review-closed; 1,672 remain pending.
+The first 140 rows are review-closed; 20 are drafted and 1,652 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -797,6 +797,43 @@ pending and 0 unresolved** rows, mapped to 139 articles (121 new and
 eighteen reused). The collection has 3,394 word articles and 26 new
 reciprocal N2 kanji-word pairs across these seven batches. This is not
 whole-corpus or native-speaker certification.
+
+## Batch 08: N2:142-N2:161
+
+**Status:** drafted; independent review and reconciliation pending.
+
+Scope: 偉い, 宴会, 園芸, 演劇, 円周, 遠足, 延長, 煙突,
+追い掛ける, 追い越す, オイル, 応援, 王女, 応ずる, 応接,
+応対, 往復, 欧米, 応用, オーケストラ.
+
+Nineteen new articles and the existing 偉い article cover the twenty
+rows. 偉い gains only its sourced N2 level; its identity and teaching
+are unchanged. 追い掛ける explicitly teaches 追いかける as well.
+応ずる has its own source identity and article, linked to existing 応じる;
+the 応じ- forms are not treated as evidence of an unrelated action.
+
+Seven N2 kanji pages gain reciprocal examples:
+芸/園芸, 劇/演劇, 周/円周, 延/延長, 接/応接, 復/往復 and 欧/欧米.
+Existing パーティー, 芝居, 女王, 追う, 延期 and 西洋 gain links
+at their existing substantive comparisons. 応じる gains a narrow
+related-form note and link. No existing stable ID, primary reading,
+title, easier level or exclusion list changes.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-08.json)
+preserves the original rows, complete principal families, component
+records, 142 complete comparison families and nine actual-entry
+inspection receipts. Homographs, sense restrictions and qualifications
+are retained: 女王's law-specific princess use does not redefine queen,
+and 回り does not inherit 周り's circumference sense merely by reference.
+The receipts distinguish the dictionary sections that actually rendered;
+they are author observations, not independent reviewer retrieval.
+
+Structural, baseline, mapping and reciprocal-link checks pass. Two
+manifest builds agree: 6,041 files, including 396 images and 201 scene
+catalogs; content version `a8cbab29dc491588`. There are now 3,413 word
+articles. Cumulative drafted/closed mappings cover 159 articles:
+140 new and nineteen reused, with 33 reciprocal N2 kanji-word pairs.
+These authored counts do not claim review closure.
 
 ## Final verification
 
