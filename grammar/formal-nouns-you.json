@@ -4,21 +4,39 @@
   "title": "よう: comparisons, examples and desired outcomes",
   "article": "articles/koto-wake-and-formal-nouns.md",
   "constructions": [
-    { "id": "you-adverbial-comparison", "label": "ように: describe how an action or property compares" },
-    { "id": "you-noun-modifier", "label": "ような: directly describe a noun by comparison or example" },
-    { "id": "you-enabled-goal", "label": "ように: act so that someone can do something" },
-    { "id": "you-prevented-goal", "label": "ように: act so that someone cannot do something" }
+    {
+      "id": "you-adverbial-comparison",
+      "label": "ように: describe how an action or property compares"
+    },
+    {
+      "id": "you-noun-modifier",
+      "label": "ような: directly describe a noun by comparison or example"
+    },
+    {
+      "id": "you-enabled-goal",
+      "label": "ように: act so that someone can do something"
+    },
+    {
+      "id": "you-prevented-goal",
+      "label": "ように: act so that someone cannot do something"
+    }
   ],
   "relationships": [
     {
       "id": "you-predicate-vs-noun-modification",
       "label": "comparison applied to an action or property / comparison directly modifying a noun",
-      "constructions": ["you-adverbial-comparison", "you-noun-modifier"]
+      "constructions": [
+        "you-adverbial-comparison",
+        "you-noun-modifier"
+      ]
     },
     {
       "id": "you-enable-vs-prevent-ability",
       "label": "making an action possible / making an action unavailable",
-      "constructions": ["you-enabled-goal", "you-prevented-goal"]
+      "constructions": [
+        "you-enabled-goal",
+        "you-prevented-goal"
+      ]
     }
   ],
   "exercises": [
@@ -32,11 +50,51 @@
       "evidence": "The model specifies how to perform 折る, and the next word is the verb form 折って.",
       "explanation": "見本のように modifies the folding action. の already connects the noun 見本 to よう. な would need a noun to modify rather than directly connecting this comparison to 折ってください. Other formulations, including 見本のとおりに, can also describe following a model; they are outside this ending-only blank.",
       "answer": "you-adverbial-comparison",
-      "acceptedAnswers": ["に"],
+      "acceptedAnswers": [
+        "に"
+      ],
       "options": [
-        { "id": "you-adverbial-comparison", "label": "に", "rationale": "Connects the model comparison to the folding action." },
-        { "id": "you-noun-modifier", "label": "な", "rationale": "Would directly modify a noun, but the following 折って is a verb form." }
-      ]
+        {
+          "id": "you-adverbial-comparison",
+          "label": "に",
+          "rationale": "Connects the model comparison to the folding action."
+        },
+        {
+          "id": "you-noun-modifier",
+          "label": "な",
+          "rationale": "Would directly modify a noun, but the following 折って is a verb form."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "a73885f35830c03276c4ba7412ab1c42475317e9122572ff1bb0aef50251e2eb",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "紙",
+            "reading": "かみ",
+            "headword": "紙",
+            "gloss": "paper"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "見本",
+            "reading": "みほん",
+            "headword": "見本",
+            "gloss": "model; sample"
+          },
+          {
+            "start": 17,
+            "end": 20,
+            "text": "折って",
+            "reading": "おって",
+            "headword": "折る",
+            "gloss": "fold"
+          }
+        ]
+      }
     },
     {
       "id": "you-comparison-february-warmth",
@@ -48,11 +106,83 @@
       "evidence": "The comparison characterizes how warm today is; it does not directly introduce a noun such as 日 or 天気.",
       "explanation": "春のように暖かい compares today's warmth with spring. ように is not limited to modifying an action verb: here it relates to an adjective predicate. ような would directly modify a noun, which this sentence does not supply after the comparison.",
       "answer": "you-adverbial-comparison",
-      "acceptedAnswers": ["に"],
+      "acceptedAnswers": [
+        "に"
+      ],
       "options": [
-        { "id": "you-adverbial-comparison", "label": "に", "rationale": "Applies the spring comparison to 暖かい." },
-        { "id": "you-noun-modifier", "label": "な", "rationale": "Does not connect directly to the adjective predicate 暖かいです in this sentence." }
-      ]
+        {
+          "id": "you-adverbial-comparison",
+          "label": "に",
+          "rationale": "Applies the spring comparison to 暖かい."
+        },
+        {
+          "id": "you-noun-modifier",
+          "label": "な",
+          "rationale": "Does not connect directly to the adjective predicate 暖かいです in this sentence."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "68709af57dd2e1645b909cbd69528a6272564fbf407f830cd5d891bd2e35a76b",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "今日",
+            "reading": "きょう",
+            "headword": "今日",
+            "gloss": "today"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "春",
+            "reading": "はる",
+            "headword": "春",
+            "gloss": "spring"
+          },
+          {
+            "start": 11,
+            "end": 14,
+            "text": "暖かい",
+            "reading": "あたたかい",
+            "headword": "暖かい",
+            "gloss": "warm"
+          },
+          {
+            "start": 17,
+            "end": 19,
+            "text": "まだ",
+            "reading": "まだ",
+            "headword": "まだ",
+            "gloss": "still; not yet"
+          },
+          {
+            "start": 19,
+            "end": 21,
+            "text": "二月",
+            "reading": "にがつ",
+            "headword": "二月",
+            "gloss": "February"
+          },
+          {
+            "start": 25,
+            "end": 27,
+            "text": "上着",
+            "reading": "うわぎ",
+            "headword": "上着",
+            "gloss": "jacket"
+          },
+          {
+            "start": 28,
+            "end": 33,
+            "text": "いりません",
+            "reading": "いりません",
+            "headword": "いる",
+            "gloss": "do not need"
+          }
+        ]
+      }
     },
     {
       "id": "you-manner-teacher-writing",
@@ -64,11 +194,83 @@
       "evidence": "The teacher's writing supplies a model for the requested writing action.",
       "explanation": "先生が書いたように connects the teacher's demonstration to 書いてください. A plain verb clause attaches directly before よう: no の is needed after 書いた. This is a manner/model comparison, not a claim that every ように after a past verb expresses a purpose.",
       "answer": "you-adverbial-comparison",
-      "acceptedAnswers": ["に"],
+      "acceptedAnswers": [
+        "に"
+      ],
       "options": [
-        { "id": "you-adverbial-comparison", "label": "に", "rationale": "Relates the requested writing to the teacher's model." },
-        { "id": "you-noun-modifier", "label": "な", "rationale": "Would need a following noun, rather than directly modifying 書いてください." }
-      ]
+        {
+          "id": "you-adverbial-comparison",
+          "label": "に",
+          "rationale": "Relates the requested writing to the teacher's model."
+        },
+        {
+          "id": "you-noun-modifier",
+          "label": "な",
+          "rationale": "Would need a following noun, rather than directly modifying 書いてください."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "c35446a1c724bd58baaa3f754c2c0c994045c3ac15407d3962f88dc7d0648b98",
+        "spans": [
+          {
+            "start": 2,
+            "end": 4,
+            "text": "文字",
+            "reading": "もじ",
+            "headword": "文字",
+            "gloss": "written character"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 9,
+            "end": 12,
+            "text": "書いた",
+            "reading": "かいた",
+            "headword": "書く",
+            "gloss": "wrote"
+          },
+          {
+            "start": 18,
+            "end": 21,
+            "text": "書いて",
+            "reading": "かいて",
+            "headword": "書く",
+            "gloss": "write"
+          },
+          {
+            "start": 26,
+            "end": 27,
+            "text": "筆",
+            "reading": "ふで",
+            "headword": "筆",
+            "gloss": "writing brush"
+          },
+          {
+            "start": 28,
+            "end": 32,
+            "text": "動かし方",
+            "reading": "うごかしかた",
+            "headword": "動かし方",
+            "gloss": "way of moving"
+          },
+          {
+            "start": 33,
+            "end": 35,
+            "text": "まね",
+            "reading": "まね",
+            "headword": "まね",
+            "gloss": "imitation"
+          }
+        ]
+      }
     },
     {
       "id": "you-example-fruit-jam",
@@ -80,11 +282,91 @@
       "evidence": "Apples are presented as an example within the fruit category, and the second sentence actually selects that example.",
       "explanation": "りんごのような果物 directly describes the fruit by giving apples as an example. This is not a claim that the fruit must merely resemble an apple while not being one. ような can introduce an actual member of a category, as well as figurative resemblances in other sentences.",
       "answer": "you-noun-modifier",
-      "acceptedAnswers": ["な"],
+      "acceptedAnswers": [
+        "な"
+      ],
       "options": [
-        { "id": "you-adverbial-comparison", "label": "に", "rationale": "Would not make the example directly modify 果物 as requested." },
-        { "id": "you-noun-modifier", "label": "な", "rationale": "Forms the noun phrase meaning fruit such as apples." }
-      ]
+        {
+          "id": "you-adverbial-comparison",
+          "label": "に",
+          "rationale": "Would not make the example directly modify 果物 as requested."
+        },
+        {
+          "id": "you-noun-modifier",
+          "label": "な",
+          "rationale": "Forms the noun phrase meaning fruit such as apples."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "10452923beb6e3a5a598a0eef88a57c11b5d37edf4b249f442e068184fbaa346",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "りんご",
+            "reading": "りんご",
+            "headword": "りんご",
+            "gloss": "apple"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "果物",
+            "reading": "くだもの",
+            "headword": "果物",
+            "gloss": "fruit"
+          },
+          {
+            "start": 13,
+            "end": 16,
+            "text": "使って",
+            "reading": "つかって",
+            "headword": "使う",
+            "gloss": "use"
+          },
+          {
+            "start": 16,
+            "end": 19,
+            "text": "ジャム",
+            "reading": "じゃむ",
+            "headword": "ジャム",
+            "gloss": "jam"
+          },
+          {
+            "start": 20,
+            "end": 24,
+            "text": "作ります",
+            "reading": "つくります",
+            "headword": "作る",
+            "gloss": "make"
+          },
+          {
+            "start": 25,
+            "end": 27,
+            "text": "今日",
+            "reading": "きょう",
+            "headword": "今日",
+            "gloss": "today"
+          },
+          {
+            "start": 29,
+            "end": 32,
+            "text": "りんご",
+            "reading": "りんご",
+            "headword": "りんご",
+            "gloss": "apple"
+          },
+          {
+            "start": 33,
+            "end": 37,
+            "text": "使います",
+            "reading": "つかいます",
+            "headword": "使う",
+            "gloss": "use"
+          }
+        ]
+      }
     },
     {
       "id": "you-resemblance-cloud-cushion",
@@ -96,11 +378,107 @@
       "evidence": "The cloud comparison describes the desired shape, rather than a manner of searching.",
       "explanation": "雲のような形 makes the shape cloud-like. The cushion need not literally be a cloud; this is resemblance rather than the actual-category-example use in りんごのような果物. Both uses can have the same ような attachment.",
       "answer": "you-noun-modifier",
-      "acceptedAnswers": ["な"],
+      "acceptedAnswers": [
+        "な"
+      ],
       "options": [
-        { "id": "you-adverbial-comparison", "label": "に", "rationale": "Would not directly attach the comparison to 形 as required." },
-        { "id": "you-noun-modifier", "label": "な", "rationale": "Directly describes the shape of the cushion sought." }
-      ]
+        {
+          "id": "you-adverbial-comparison",
+          "label": "に",
+          "rationale": "Would not directly attach the comparison to 形 as required."
+        },
+        {
+          "id": "you-noun-modifier",
+          "label": "な",
+          "rationale": "Directly describes the shape of the cushion sought."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "2cbcb06baec963f449d9f12eccbafe2f4f4cc2cf33c37d76ec0e735025ea6040",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "雲",
+            "reading": "くも",
+            "headword": "雲",
+            "gloss": "cloud"
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": "形",
+            "reading": "かたち",
+            "headword": "形",
+            "gloss": "shape"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "text": "クッション",
+            "reading": "くっしょん",
+            "headword": "クッション",
+            "gloss": "cushion"
+          },
+          {
+            "start": 16,
+            "end": 22,
+            "text": "探しています",
+            "reading": "さがしています",
+            "headword": "探す",
+            "gloss": "be looking for"
+          },
+          {
+            "start": 23,
+            "end": 25,
+            "text": "丸い",
+            "reading": "まるい",
+            "headword": "丸い",
+            "gloss": "round"
+          },
+          {
+            "start": 25,
+            "end": 27,
+            "text": "部分",
+            "reading": "ぶぶん",
+            "headword": "部分",
+            "gloss": "part"
+          },
+          {
+            "start": 28,
+            "end": 32,
+            "text": "いくつか",
+            "reading": "いくつか",
+            "headword": "いくつか",
+            "gloss": "several"
+          },
+          {
+            "start": 32,
+            "end": 37,
+            "text": "つながった",
+            "reading": "つながった",
+            "headword": "つながる",
+            "gloss": "joined together"
+          },
+          {
+            "start": 37,
+            "end": 38,
+            "text": "形",
+            "reading": "かたち",
+            "headword": "形",
+            "gloss": "shape"
+          },
+          {
+            "start": 39,
+            "end": 41,
+            "text": "希望",
+            "reading": "きぼう",
+            "headword": "希望",
+            "gloss": "what one hopes for"
+          }
+        ]
+      }
     },
     {
       "id": "you-example-cooking-work",
@@ -112,11 +490,83 @@
       "evidence": "Teaching cooking identifies an example of the work being considered, not an analogy for how to do an unspecified job.",
       "explanation": "料理を教えるような仕事 uses a whole verb clause to describe the kind of work. 教える attaches directly before よう, without の. A different reading involving how to perform a job is not the noun-modifying relationship explicitly requested here.",
       "answer": "you-noun-modifier",
-      "acceptedAnswers": ["な"],
+      "acceptedAnswers": [
+        "な"
+      ],
       "options": [
-        { "id": "you-adverbial-comparison", "label": "に", "rationale": "Would connect the comparison adverbially rather than directly describe 仕事 as requested." },
-        { "id": "you-noun-modifier", "label": "な", "rationale": "Makes teaching cooking an example of the kind of work the speaker wants to try." }
-      ]
+        {
+          "id": "you-adverbial-comparison",
+          "label": "に",
+          "rationale": "Would connect the comparison adverbially rather than directly describe 仕事 as requested."
+        },
+        {
+          "id": "you-noun-modifier",
+          "label": "な",
+          "rationale": "Makes teaching cooking an example of the kind of work the speaker wants to try."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "73ba47c63ab3140dc84a6468b454321d92fc42a4287af675cb554f98cb2060f0",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "people"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "料理",
+            "reading": "りょうり",
+            "headword": "料理",
+            "gloss": "cooking"
+          },
+          {
+            "start": 5,
+            "end": 8,
+            "text": "教える",
+            "reading": "おしえる",
+            "headword": "教える",
+            "gloss": "teach"
+          },
+          {
+            "start": 14,
+            "end": 16,
+            "text": "仕事",
+            "reading": "しごと",
+            "headword": "仕事",
+            "gloss": "work"
+          },
+          {
+            "start": 25,
+            "end": 29,
+            "text": "料理教室",
+            "reading": "りょうりきょうしつ",
+            "headword": "料理教室",
+            "gloss": "cooking class"
+          },
+          {
+            "start": 30,
+            "end": 32,
+            "text": "講師",
+            "reading": "こうし",
+            "headword": "講師",
+            "gloss": "instructor"
+          },
+          {
+            "start": 35,
+            "end": 41,
+            "text": "考えています",
+            "reading": "かんがえています",
+            "headword": "考える",
+            "gloss": "be considering"
+          }
+        ]
+      }
     },
     {
       "id": "you-enabled-goal-readable-notice",
@@ -128,11 +578,76 @@
       "evidence": "The furigana is intended to make reading possible, not prevent it.",
       "explanation": "読めるように identifies being able to read as the desired result of adding furigana. The main action is past, but the goal uses nonpast 読める, not 読めた. The sentence states a purpose rather than independently proving that every child successfully read the notice.",
       "answer": "you-enabled-goal",
-      "acceptedAnswers": ["読める", "よめる"],
+      "acceptedAnswers": [
+        "読める",
+        "よめる"
+      ],
       "options": [
-        { "id": "you-enabled-goal", "label": "読める", "rationale": "Makes the goal being able to read the notice." },
-        { "id": "you-prevented-goal", "label": "読めない", "rationale": "Would make inability to read the goal, contrary to the stated purpose of adding furigana." }
-      ]
+        {
+          "id": "you-enabled-goal",
+          "label": "読める",
+          "rationale": "Makes the goal being able to read the notice."
+        },
+        {
+          "id": "you-prevented-goal",
+          "label": "読めない",
+          "rationale": "Would make inability to read the goal, contrary to the stated purpose of adding furigana."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d39b25aff815eb7c01ac66df7bff31c00c97d5a31ae382ebddc7f2074a12b7bd",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "子供",
+            "reading": "こども",
+            "headword": "子供",
+            "gloss": "child"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "案内",
+            "reading": "あんない",
+            "headword": "案内",
+            "gloss": "notice; information"
+          },
+          {
+            "start": 17,
+            "end": 20,
+            "text": "難しい",
+            "reading": "むずかしい",
+            "headword": "難しい",
+            "gloss": "difficult"
+          },
+          {
+            "start": 20,
+            "end": 22,
+            "text": "漢字",
+            "reading": "かんじ",
+            "headword": "漢字",
+            "gloss": "kanji"
+          },
+          {
+            "start": 23,
+            "end": 27,
+            "text": "ふりがな",
+            "reading": "ふりがな",
+            "headword": "ふりがな",
+            "gloss": "kana reading aid"
+          },
+          {
+            "start": 28,
+            "end": 33,
+            "text": "付けました",
+            "reading": "つけました",
+            "headword": "付ける",
+            "gloss": "added"
+          }
+        ]
+      }
     },
     {
       "id": "you-enabled-goal-tool-instructions",
@@ -144,11 +659,84 @@
       "evidence": "The pictured instructions aim to enable new visitors to use the tool.",
       "explanation": "使えるように gives the desired ability as the purpose of the instructions. The person preparing the explanation and the visitors meant to benefit need not be the same people. 使えない would reverse the intended result.",
       "answer": "you-enabled-goal",
-      "acceptedAnswers": ["使える", "つかえる"],
+      "acceptedAnswers": [
+        "使える",
+        "つかえる"
+      ],
       "options": [
-        { "id": "you-enabled-goal", "label": "使える", "rationale": "Expresses the ability the instructions are intended to support." },
-        { "id": "you-prevented-goal", "label": "使えない", "rationale": "Would make preventing use the purpose rather than enabling it." }
-      ]
+        {
+          "id": "you-enabled-goal",
+          "label": "使える",
+          "rationale": "Expresses the ability the instructions are intended to support."
+        },
+        {
+          "id": "you-prevented-goal",
+          "label": "使えない",
+          "rationale": "Would make preventing use the purpose rather than enabling it."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f64077c87abd1ed0087a8c03ea5e72e04f1f55f3c08e5d5d8002bda45a7f8501",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "初めて",
+            "reading": "はじめて",
+            "headword": "初めて",
+            "gloss": "for the first time"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "来る",
+            "reading": "くる",
+            "headword": "来る",
+            "gloss": "come"
+          },
+          {
+            "start": 5,
+            "end": 6,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "people"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "道具",
+            "reading": "どうぐ",
+            "headword": "道具",
+            "gloss": "tools"
+          },
+          {
+            "start": 20,
+            "end": 23,
+            "text": "使い方",
+            "reading": "つかいかた",
+            "headword": "使い方",
+            "gloss": "how to use it"
+          },
+          {
+            "start": 24,
+            "end": 25,
+            "text": "絵",
+            "reading": "え",
+            "headword": "絵",
+            "gloss": "picture; drawing"
+          },
+          {
+            "start": 26,
+            "end": 28,
+            "text": "説明",
+            "reading": "せつめい",
+            "headword": "説明",
+            "gloss": "explanation"
+          }
+        ]
+      }
     },
     {
       "id": "you-enabled-goal-venue-ramp",
@@ -160,11 +748,92 @@
       "evidence": "The planned ramp is meant to make entry possible for wheelchair users.",
       "explanation": "入れるように states the intended ability to enter. Here 入れる is はいれる, the potential of 入る（はいる）, not the separate verb 入れる（いれる）, meaning put in. Both the preparation and the intended result can still be in the future.",
       "answer": "you-enabled-goal",
-      "acceptedAnswers": ["入れる", "はいれる"],
+      "acceptedAnswers": [
+        "入れる",
+        "はいれる"
+      ],
       "options": [
-        { "id": "you-enabled-goal", "label": "入れる", "rationale": "Expresses the entry the ramp is intended to enable." },
-        { "id": "you-prevented-goal", "label": "入れない", "rationale": "Would make inability to enter the goal, reversing the stated purpose." }
-      ]
+        {
+          "id": "you-enabled-goal",
+          "label": "入れる",
+          "rationale": "Expresses the entry the ramp is intended to enable."
+        },
+        {
+          "id": "you-prevented-goal",
+          "label": "入れない",
+          "rationale": "Would make inability to enter the goal, reversing the stated purpose."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "c3bc0d8ad1de41014e09a84c44a466829fb5b74faa05f8957bd19eb0dc28840b",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "車いす",
+            "reading": "くるまいす",
+            "headword": "車いす",
+            "gloss": "wheelchair"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "people"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "会場",
+            "reading": "かいじょう",
+            "headword": "会場",
+            "gloss": "venue"
+          },
+          {
+            "start": 17,
+            "end": 19,
+            "text": "明日",
+            "reading": "あした",
+            "headword": "明日",
+            "gloss": "tomorrow"
+          },
+          {
+            "start": 20,
+            "end": 21,
+            "text": "朝",
+            "reading": "あさ",
+            "headword": "朝",
+            "gloss": "morning"
+          },
+          {
+            "start": 24,
+            "end": 26,
+            "text": "入口",
+            "reading": "いりぐち",
+            "headword": "入口",
+            "gloss": "entrance"
+          },
+          {
+            "start": 27,
+            "end": 31,
+            "text": "スロープ",
+            "reading": "すろーぷ",
+            "headword": "スロープ",
+            "gloss": "ramp"
+          },
+          {
+            "start": 32,
+            "end": 36,
+            "text": "付けます",
+            "reading": "つけます",
+            "headword": "付ける",
+            "gloss": "install"
+          }
+        ]
+      }
     },
     {
       "id": "you-prevented-goal-private-letter",
@@ -176,11 +845,84 @@
       "evidence": "The intended result is keeping the letter's contents unavailable to other readers.",
       "explanation": "読めないように makes inability to read the desired state. The negative is inside the goal, not a denial that the speaker sealed the envelope. 読まれないように can be a natural passive alternative in a differently structured sentence, but this question explicitly requests the given verb's potential form.",
       "answer": "you-prevented-goal",
-      "acceptedAnswers": ["読めない", "よめない"],
+      "acceptedAnswers": [
+        "読めない",
+        "よめない"
+      ],
       "options": [
-        { "id": "you-enabled-goal", "label": "読める", "rationale": "Would make enabling other people to read the letter the goal." },
-        { "id": "you-prevented-goal", "label": "読めない", "rationale": "Expresses the intended restriction on other people's access to the contents." }
-      ]
+        {
+          "id": "you-enabled-goal",
+          "label": "読める",
+          "rationale": "Would make enabling other people to read the letter the goal."
+        },
+        {
+          "id": "you-prevented-goal",
+          "label": "読めない",
+          "rationale": "Expresses the intended restriction on other people's access to the contents."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "2e70819220b4b2e8c0eb8995376fc37b6fa6b9fe0ea09b943f5dda6847602b3c",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "手紙",
+            "reading": "てがみ",
+            "headword": "手紙",
+            "gloss": "letter"
+          },
+          {
+            "start": 5,
+            "end": 6,
+            "text": "他",
+            "reading": "ほか",
+            "headword": "他",
+            "gloss": "other"
+          },
+          {
+            "start": 7,
+            "end": 8,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "people"
+          },
+          {
+            "start": 17,
+            "end": 19,
+            "text": "封筒",
+            "reading": "ふうとう",
+            "headword": "封筒",
+            "gloss": "envelope"
+          },
+          {
+            "start": 20,
+            "end": 23,
+            "text": "入れて",
+            "reading": "いれて",
+            "headword": "入れる",
+            "gloss": "put inside"
+          },
+          {
+            "start": 23,
+            "end": 24,
+            "text": "封",
+            "reading": "ふう",
+            "headword": "封",
+            "gloss": "seal; sealing"
+          }
+        ]
+      }
     },
     {
       "id": "you-prevented-goal-phone-lock",
@@ -192,11 +934,76 @@
       "evidence": "The lock is intended to restrict other people's use, not make it easier for them.",
       "explanation": "使えないように names the prevented ability as the intended result. A negative goal can be wanted by the person taking the precaution; negative grammatical form is not the same as an unwanted outcome. The sentence states the purpose, not a guarantee that all access is impossible.",
       "answer": "you-prevented-goal",
-      "acceptedAnswers": ["使えない", "つかえない"],
+      "acceptedAnswers": [
+        "使えない",
+        "つかえない"
+      ],
       "options": [
-        { "id": "you-enabled-goal", "label": "使える", "rationale": "Would express enabling the other people's use, contrary to the intended restriction." },
-        { "id": "you-prevented-goal", "label": "使えない", "rationale": "States the intended non-availability of phone use to other people." }
-      ]
+        {
+          "id": "you-enabled-goal",
+          "label": "使える",
+          "rationale": "Would express enabling the other people's use, contrary to the intended restriction."
+        },
+        {
+          "id": "you-prevented-goal",
+          "label": "使えない",
+          "rationale": "States the intended non-availability of phone use to other people."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "8fd1903eb3deeec8dda1b77bb0a4eaf086f1380ca912a29f46f393e5c8ed9808",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "他",
+            "reading": "ほか",
+            "headword": "他",
+            "gloss": "other"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "people"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; me"
+          },
+          {
+            "start": 6,
+            "end": 13,
+            "text": "スマートフォン",
+            "reading": "すまーとふぉん",
+            "headword": "スマートフォン",
+            "gloss": "smartphone"
+          },
+          {
+            "start": 22,
+            "end": 27,
+            "text": "画面ロック",
+            "reading": "がめんろっく",
+            "headword": "画面ロック",
+            "gloss": "screen lock"
+          },
+          {
+            "start": 28,
+            "end": 30,
+            "text": "設定",
+            "reading": "せってい",
+            "headword": "設定",
+            "gloss": "setting"
+          }
+        ]
+      }
     },
     {
       "id": "you-prevented-goal-meeting-access",
@@ -208,11 +1015,194 @@
       "evidence": "The intended restriction applies to people unrelated to the meeting, not to every participant.",
       "explanation": "入れないように makes inability to enter the goal for the specified people. 入れない is read はいれない here, the negative potential of 入る. It does not say that the organizer intends to prevent everyone from participating, or that a negative clause before ように is always a purpose in every sentence.",
       "answer": "you-prevented-goal",
-      "acceptedAnswers": ["入れない", "はいれない"],
+      "acceptedAnswers": [
+        "入れない",
+        "はいれない"
+      ],
       "options": [
-        { "id": "you-enabled-goal", "label": "入れる", "rationale": "Would express making entry possible for the people the organizer intends to exclude." },
-        { "id": "you-prevented-goal", "label": "入れない", "rationale": "Expresses the intended restriction for the people identified in the subject." }
-      ]
+        {
+          "id": "you-enabled-goal",
+          "label": "入れる",
+          "rationale": "Would express making entry possible for the people the organizer intends to exclude."
+        },
+        {
+          "id": "you-prevented-goal",
+          "label": "入れない",
+          "rationale": "Expresses the intended restriction for the people identified in the subject."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "ec8371f89e607504ce8365ffaec674c7f8e3d15bfe5effb0a867ff10fd1c26c3",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "関係",
+            "reading": "かんけい",
+            "headword": "関係",
+            "gloss": "connection; involvement"
+          },
+          {
+            "start": 5,
+            "end": 6,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "people"
+          },
+          {
+            "start": 7,
+            "end": 12,
+            "text": "オンライン",
+            "reading": "おんらいん",
+            "headword": "オンライン",
+            "gloss": "online"
+          },
+          {
+            "start": 13,
+            "end": 16,
+            "text": "会議室",
+            "reading": "かいぎしつ",
+            "headword": "会議室",
+            "gloss": "meeting room"
+          },
+          {
+            "start": 25,
+            "end": 28,
+            "text": "参加用",
+            "reading": "さんかよう",
+            "headword": "参加用",
+            "gloss": "for participation"
+          },
+          {
+            "start": 29,
+            "end": 34,
+            "text": "パスワード",
+            "reading": "ぱすわーど",
+            "headword": "パスワード",
+            "gloss": "password"
+          },
+          {
+            "start": 35,
+            "end": 37,
+            "text": "設定",
+            "reading": "せってい",
+            "headword": "設定",
+            "gloss": "setting"
+          }
+        ]
+      }
+    }
+  ],
+  "introductionGroups": [
+    {
+      "id": "n4-existing-you-modification",
+      "label": "Describing a manner or modifying a noun",
+      "facets": [
+        {
+          "id": "you-adverbial-comparison",
+          "label": "ように: describe how an action or property compares"
+        },
+        {
+          "id": "you-noun-modifier",
+          "label": "ような: directly describe a noun by comparison or example"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "you-manner-folding-model",
+          "facetId": "you-adverbial-comparison",
+          "exampleKey": "you-manner-folding-model"
+        },
+        {
+          "exerciseId": "you-comparison-february-warmth",
+          "facetId": "you-adverbial-comparison",
+          "exampleKey": "you-comparison-february-warmth"
+        },
+        {
+          "exerciseId": "you-manner-teacher-writing",
+          "facetId": "you-adverbial-comparison",
+          "exampleKey": "you-manner-teacher-writing"
+        },
+        {
+          "exerciseId": "you-example-fruit-jam",
+          "facetId": "you-noun-modifier",
+          "exampleKey": "you-example-fruit-jam"
+        },
+        {
+          "exerciseId": "you-resemblance-cloud-cushion",
+          "facetId": "you-noun-modifier",
+          "exampleKey": "you-resemblance-cloud-cushion"
+        },
+        {
+          "exerciseId": "you-example-cooking-work",
+          "facetId": "you-noun-modifier",
+          "exampleKey": "you-example-cooking-work"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "n4-existing-you-goals",
+          "importance": 2,
+          "reason": "Move from modifying with you to an intended result expressed with you ni."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "n4-existing-you-goals",
+      "label": "Enabling versus preventing an action",
+      "facets": [
+        {
+          "id": "you-enabled-goal",
+          "label": "ように: act so that someone can do something"
+        },
+        {
+          "id": "you-prevented-goal",
+          "label": "ように: act so that someone cannot do something"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "you-enabled-goal-readable-notice",
+          "facetId": "you-enabled-goal",
+          "exampleKey": "you-enabled-goal-readable-notice"
+        },
+        {
+          "exerciseId": "you-enabled-goal-tool-instructions",
+          "facetId": "you-enabled-goal",
+          "exampleKey": "you-enabled-goal-tool-instructions"
+        },
+        {
+          "exerciseId": "you-enabled-goal-venue-ramp",
+          "facetId": "you-enabled-goal",
+          "exampleKey": "you-enabled-goal-venue-ramp"
+        },
+        {
+          "exerciseId": "you-prevented-goal-private-letter",
+          "facetId": "you-prevented-goal",
+          "exampleKey": "you-prevented-goal-private-letter"
+        },
+        {
+          "exerciseId": "you-prevented-goal-phone-lock",
+          "facetId": "you-prevented-goal",
+          "exampleKey": "you-prevented-goal-phone-lock"
+        },
+        {
+          "exerciseId": "you-prevented-goal-meeting-access",
+          "facetId": "you-prevented-goal",
+          "exampleKey": "you-prevented-goal-meeting-access"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "n4-existing-ability-habit-change",
+          "importance": 2,
+          "reason": "Compare making an action possible with reporting that it has become possible."
+        }
+      ],
+      "requires": []
     }
   ]
 }

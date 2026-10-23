@@ -23,6 +23,15 @@ Follow the [grammar exercise contract](content-format.md#grammar-exercises) and
 For observed predicate-role, register, typed-spelling, matched-context and response-label pitfalls, see the
 [reusable grammar-review lessons](../REVIEW.md#reusable-grammar-review-lessons).
 
+## Reusing lexical annotations
+
+A matching surface is a candidate, not proof of its word boundary or sense in a new sentence. Recheck affected
+occurrences after extending a shared lexicon: the [N4 consolidation review](grammar-n4-consolidation-sources.json)
+found that adding legitimate affirmative はい also produced false "yes" hints across **は + いない** in
+職員はいない. Preserve the real dialogue response and repair the negative clauses by occurrence, not by banning
+the spelling globally. Exact offsets, prompt hashes and complete character coverage can all pass for a false boundary.
+Likewise, reused glosses must fit the current referent and sense, not just the same written word.
+
 ## Assigning exercise study levels
 
 For JLPT metadata, follow the [grammar-level policy](jlpt-levels.md#grammar-baseline) and

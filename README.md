@@ -70,6 +70,15 @@ The [desire follow-up](articles/desire-actions-and-outcomes.md) adds 34 exercise
 its [ledger](docs/grammar-desire-sources.json) separates 30 N4 tasks from four N5-only role interpretations,
 with sourced observation/benefactive bridges kept optional.
 
+## N4 grammar series
+
+The [N4 series index](https://github.com/stop-cran/learning-japanese/issues/17) separates new grammar families
+from consolidation of existing practice. The [consolidation ledger](docs/grammar-n4-consolidation-sources.json)
+records 13 small introduction groups for 73 existing exercises and vocabulary support for 88 existing prompts.
+All 240 current N4 exercises now have groups and reviewed lexical annotations; their questions, answers, levels,
+identities and progress keys are unchanged. This improves entry points and reading support, not the number of
+independent scenarios or the completeness of an official syllabus.
+
 ## Confusable vocabulary
 
 The [candidate inventory](docs/confusable-words.md) collects overlapping meanings, misleading English glosses,

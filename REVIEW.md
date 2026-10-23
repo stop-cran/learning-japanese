@@ -35,6 +35,38 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## N4 consolidation: independent review and reconciliation (2026-10-23 UTC)
+
+**Snapshot and scope:** `d6b0b69809eed30898c46ff59bfefcb6331c86f8` plus the additions for
+[issue #17](https://github.com/stop-cran/learning-japanese/issues/17). One fresh independent reviewer
+inspected all 88 prompt annotations, initially 969 lexical spans and 1434 exclusions, plus all 13 new
+groups, 27 facets, 73 memberships and eight soft recommendations. Its actual model ID was unavailable.
+The [ledger](docs/grammar-n4-consolidation-sources.json) preserves separate initial and revised snapshots,
+original verdicts, the finding and its reconciliation.
+
+**Finding and resolution:** the review found one **minor** segmentation defect, F1: two hints treated
+the はい substring of 職員はいない as affirmative "yes", crossing the boundary between topic は and
+negative existential いない. We confirmed the actual clause boundary and removed only those two lexical
+spans, replacing them with function exclusions. The genuine affirmative はい in the braille dialogue
+remains unchanged. The original reviewer verified the repair and preservation, marked F1 **resolved** at
+its original severity, and found no changed-passage regression. Final correctness, scoped coverage and
+comprehensibility are **CLEAN** within the combined original-review/reconciliation scope.
+
+**Preservation and integration:** the resulting 967 spans and 1436 exclusions cover the 88 prompts.
+All 1168 existing question/answer/level objects, original groups and 1080 unaffected vocabulary records
+remain unchanged. All 240 N4 tasks now have a group and reviewed lexical support; global vocabulary
+coverage is **859/1168**, with 309 pending and the inventory still `pilot`. The 59 new context-key strings
+include paired scenarios, not 73 independent conversations. Content/vocabulary checks, 151 focused
+regressions and the freshly rerun, non-skipped real Android importer pass. These checks are not
+linguistic proof. No app, SRS, new exercise, article-content or phone UI change is claimed.
+
+**Reflection (add):** matching a known spelling is not enough to identify a word at a particular
+occurrence. A useful lexicon addition can introduce a false match in another already-scanned prompt.
+Recheck affected boundaries and senses; valid offsets and complete coverage do not detect this error.
+The [authoring source guide](docs/grammar-authoring-sources.md#reusing-lexical-annotations) records the
+concrete check without globally banning the legitimate word. Unchanged articles and inherited answer
+alternatives were preserved, not newly certified by this consolidation.
+
 ## Desire comparison: independent review and reconciliation (2026-10-22 UTC)
 
 **Snapshot and scope:** `0a7e9eb414ca018352888fed31774d6aa1335039` plus installment 9 under

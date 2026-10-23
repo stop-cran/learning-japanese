@@ -353,8 +353,14 @@ vocabulary coverage of **771/1168**. Six groups have 17 facets, five soft recomm
 16 formation, 12 interpretation and six contextual-selection tasks. Thirty tasks require N4 grammar;
 four interpret only N5 たい inside supplied quotations/questions. Sixteen context-key strings include paired roles/forms,
 not 34 independent conversations. Observation and てもらいたい remain recognition bridges.
-All 397 original pending records remain pending,
-the baseline revision stays unchanged, and the inventory remains at `stage: "pilot"`. The first 30 subsequently received
+At the end of that expansion, all 397 original pending records were still pending.
+The [N4 consolidation ledger](grammar-n4-consolidation-sources.json) now records lexical completion of 88 of those
+existing prompts, reaching **859/1168** reviewed and **309 pending**, still at `stage: "pilot"` with the original
+baseline revision. It adds 13 local groups, 27 facets and eight soft recommendations for 73 existing N4 tasks;
+the six before/after and nine stage tasks retain their existing groups. All 240 current N4 tasks are now grouped
+and lexically reviewed. The 59 new context-key strings include paired situations, not 73 independent conversations.
+No exercise wording, answers, level, identity, existing group or unrelated vocabulary record changes.
+The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the
 [initial conditionals record](grammar-conditionals-sources.json) and
