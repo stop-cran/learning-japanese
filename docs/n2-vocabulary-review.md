@@ -2,7 +2,7 @@
 
 ## Status
 
-**Batches 01-10 review-closed; batch 11 drafted; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-10 review-closed; batch 11 in reconciliation; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
 The first 200 rows are review-closed; twenty are draft and 1,592 remain pending.
@@ -1245,7 +1245,8 @@ expansion or a native-speaker certification.
 
 ## Batch 11: N2:202-N2:221
 
-**Status:** drafted; independent review and reconciliation pending.
+**Status:** initial independent reviews complete; corrections prepared,
+bounded confirmations pending.
 
 Scope: 驚かす, おねがいします, 各々, 叔母さん, おはよう,
 お参り, おまたせしました, おまちどおさま, おめでたい,
@@ -1286,6 +1287,85 @@ content version `2251640eb85b0d7e`. Cumulative mappings cover 215
 distinct articles: 193 new and 22 reused, with 37 reciprocal N2
 kanji-word pairs. Coverage is **200 closed, twenty draft, 1,592 pending
 and zero unresolved** rows. These are authored counts, not review closure.
+
+### Initial independent reviews
+
+Authored commit: `2eccc7af442aeb9cbcb7c064650a2e6b63b11e1e`.
+The [GPT initial report](n2-vocabulary-reviews/batch-11-gpt-initial.md)
+and [Claude initial report](n2-vocabulary-reviews/batch-11-claude-initial.md)
+are archived verbatim. GPT `gpt-6.1-sol` exited before Claude
+`claude-opus-5.5` started. Both read the same frozen nineteen-article,
+eight-related-change and twenty-mapping assignment, with no other
+reviewer's findings or author adjudication. Actual-model usage receipts
+record zero edits. Reviewers could not independently execute Git or
+verify the receipt hashes.
+
+GPT reported five minor quiz findings affecting five articles and six
+direct pairs. Claude reported two minor quiz findings and a recall
+comprehensibility gap, plus optional guard and wording hypotheses.
+Their reports categorize quiz fairness under different facets; the
+archives preserve those original verdicts rather than rewriting them.
+
+### Evidence-based reconciliation
+
+The prepared correction addresses eleven direct pairs across eight new
+articles. It also clarifies memory production on 思い付く and links the
+already-taught request formula from the existing 願う article.
+Confirmations are still pending; the following is author adjudication,
+not a claim that either reviewer has accepted the revised snapshot.
+
+| Observation | Adjudication and prepared correction |
+| --- | --- |
+| GPT-01: お待たせしました / どうも | Supported: the generic English thanks label overlaps the taught wait acknowledgment. Add the direct guard. |
+| GPT-02: 思い込む / 決める | Supported: complete 決める sense 5 includes assumption; its decision sense also overlaps determination. Add the direct guard. |
+| GPT-03: 思いっきり and 思い込む / 覚悟 | Supported: the recorded resolution/determination senses overlap resolve. Add both direct guards without equating all Japanese constructions. |
+| GPT-04: 重たい / 大変 | Supported: both complete families contain the ordinary serious sense. Add the direct guard. |
+| GPT-05 and Claude optional: 恩恵 / おかげ | Supported: the complete おかげ record includes blessing, not merely the displayed help/thanks label. Add the direct guard. |
+| Claude R1: お願いします / 願う and 願い | Supported as context-free request-label guards, consistent with the existing 頼む guard. Shared kanji do not establish measured candidate probability. |
+| Claude R2: 思い付く recall guidance | Address the learning concern with an explicit, translated known-name example using 思い出す and qualified practical guidance. Retain the dictionary recall sense; do not invent the proposed modern errand-recall collocation or an only-spontaneous/never-deliberate rule. |
+| Claude R3 and optional: おはよう / 朝 and 午前 | Supported English-label ambiguity: the actual Oxford good-morning entry records informal morning as a greeting. Guard both time-period cards without claiming they are Japanese greetings. |
+| Claude optional: お願いします attachment wording | Adopt: explicitly acknowledge noun + を with both expressions, then identify the verb て-form contrast already taught below. |
+| Claude optional: 卸す / 売れる | Adopt a direct generic English sell-label guard. This does not make the transitive wholesale verb and intransitive 売れる unrestricted substitutes. |
+
+Nine complete correction families, including all three 朝 homographs,
+are added separately from the original comparison evidence. Only
+1428280 at あさ is the existing morning card; dynasty ちょう and
+poetical あした are not conflated. The twenty raw rows, selected senses,
+principal families, components and original 117 comparison families are
+unchanged.
+
+Five qualified actual-page receipts support the memory-production
+contrast and English greeting ambiguity. The usable Kotobank material
+is Seisenban's transitive thought-coming-to-mind sense, including recall;
+its historical examples do not establish a modern errand collocation.
+The teaching comparisons support ordinary name/past-event recollection
+with 思い出す. An AI search synopsis claiming no reputable recall sense
+contradicted the actually inspected dictionary evidence and was rejected.
+Definition-less headings and unusable fetches do not become verification.
+
+Claude's additional derivatives, historical explanations and a broader
+重たい/重い tendency note remain optional expansion. No supported
+consequential claim requires them for this bounded lesson. The minimal
+memory correction differs from the literal suggestion because a suitable
+attested modern positive recall example was not established.
+
+### Model-contribution comparison
+
+Both reports identified 思いっきり / 覚悟 and 恩恵 / おかげ,
+although Claude placed them under Optional. They are shared observations,
+not unique GPT discoveries. GPT additionally identified どうも,
+決める, 覚悟 against 思い込む, and 大変. Claude additionally supplied
+the request and greeting guards, the optional 売れる guard, the recall
+teaching gap and the attachment-wording clarification. These are useful
+complementary observations on this common sample, not a general model
+ranking or proof of reduced bias. Candidate-frequency inferences and
+unattested suggested examples still require author adjudication.
+
+The correction passes structural validation and the cumulative
+baseline, mapping, reciprocal-link and authorship audit. Its deterministic
+manifest remains 6,094 files, with content version `1a0448d48a8be1c3`.
+The counts remain 200 closed and twenty draft rows; none is promoted to
+review-closed before the bounded confirmations.
 
 ## Final verification
 

@@ -95,6 +95,20 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 11 reconciliation:** A dictionary's recall gloss and a
+  teaching source's idea-versus-memory contrast answer different
+  questions. Retain the supported recognition sense while giving a
+  practical 思い出す pattern for ordinary name/past-event recollection.
+  Do not invent an unattested 思い付く errand example or a universal
+  spontaneous-versus-deliberate rule to satisfy a literal suggestion.
+  An AI search synopsis contradicting the inspected dictionary is not
+  evidence that the dictionary sense does not exist.
+- **Batch 11 reconciliation:** English "morning" can itself be a
+  shortened greeting. A greeting/time-period answer-label guard can
+  therefore be justified without claiming Japanese 朝 or 午前 is a
+  greeting. Check the actual English entry and Japanese target cards,
+  not shared tags or an unmeasured candidate-frequency inference.
+
 - **Batch 11 authoring:** A bundled source gloss can cross lexical
   categories or separate families, not merely spellings. Distinguish
   adjective おめでたい from happy-event/pregnancy noun おめでた,
