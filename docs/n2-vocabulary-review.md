@@ -3828,7 +3828,7 @@ This closes batch 25, not the full vocabulary expansion.
 
 ## Batch 26: N2:502-N2:521
 
-**Status:** drafted; initial reviews reconciled; corrected-snapshot confirmations pending.
+**Status:** closed; both original reviewers confirmed the corrected snapshot.
 
 Scope: 孝行, 交差, 講師, 工事, 公式, 口実, こうして, 校舎,
 公衆, 香水, 公正, 功績, 光線, 高層, 構造, 交替, 耕地,
@@ -3955,15 +3955,69 @@ not a general model ranking or a majority-vote method.
 Only six newly authored cards change. Seven direct guards bring the
 eighteen guarded articles to 96 directional declarations. No baseline
 article, kanji, identity, title, reading, level or mapping changes.
-Confirmations will resume the original sessions strictly sequentially
-with each reviewer's own report, the actual correction diff and the same
-sanitized appended evidence. Author hash checks are not reviewer-executed
-Git verification; no running-app draw, corpus-frequency study or native
-certification is claimed.
+### Confirmation, authentication and closure
 
-Draft coverage is 500 closed, 20 draft,
-1,292 pending and 0 unresolved, mapped to 514 distinct articles:
-481 new and 33 reused. This is not review closure.
+Both original sessions confirmed correction commit
+`9d270cbd0596af1c3259ba13ec23e46dedeef9db`, directly following
+the authored commit above. Each received its own report, the actual
+six-word-plus-provenance diff and the same sanitized appended evidence.
+GPT exited fully before Claude resumed; both processes exited without
+file edits. This was a bounded changed-passage confirmation, not another
+full-batch or whole-corpus review.
+
+- [GPT confirmation](n2-vocabulary-reviews/batch-26-gpt-confirmation.md):
+  actual `gpt-6.1-sol`; all three original findings resolved. All six
+  changed articles and inspected packet additions were CLEAN on all
+  three facets. It independently retrieved and inspected the actual
+  complete Daijisen bodies for 一般, 働き and 高層, including publisher
+  boundaries.
+- [Claude confirmation](n2-vocabulary-reviews/batch-26-claude-confirmation.md):
+  actual `claude-opus-5.5`; F1/F2 resolved, the 公衆/一般 rejection and
+  斯 metadata observation withdrawn. All six changed articles were
+  CLEAN on all three facets. Its own Daijisen retrieval remained
+  unsuccessful, so it expressly leaves those three inspection receipts
+  independently UNVERIFIED by itself. Author inspection and GPT's
+  actual independent retrieval supply that evidence; agreement is not
+  manufactured by relabelling failed source access.
+
+Neither found an actionable regression or consequential unresolved
+claim within the retained teaching. 高層's sourced の-modifier status
+does not require another example to complete this scope; the additional
+construction suggestion remains optional. The newly noted
+こちら/こっち pair concerns unchanged baseline cards outside this
+correction and is not silently added to either card or counted as an
+accepted batch finding. Extra 高層大気, transitive sports usage,
+plantation wording and 公式に remain optional. No comparative spelling
+frequency assertion is adopted from dictionary priorities alone.
+
+Author-executed authentication checked both commits' parents,
+stop-cran author/committer identities and required trailers;
+committed/current file hashes and unchanged authored passages;
+both exact patches and prompt hashes; and both sanitized evidence
+derivatives. Removing only the two appended evidence sections
+reproduces the authored packet exactly. The six new complete families
+match the pinned extraction and all seven guard additions match the
+current headers.
+
+All four archived reports match the original output after progress
+preambles are removed and Markdown hard breaks are normalized.
+Original session IDs/start times, actual model metrics, zero-edit
+receipts and cumulative one/two-request counts agree. Both exact
+common prompts match the native sessions' recorded user messages.
+These are author-executed provenance checks, not reviewer-executed
+Git or linguistic certification.
+
+Closed coverage is **520 closed, 0 draft, 1,292 pending and
+0 unresolved** rows, mapped to 514 distinct articles: 481 new
+and 33 reused. There are 3,754 word articles and 122 distinct
+tracked primary-form reciprocal N2 pairs on new articles, plus
+checked reused pairs and the prior 包/くるむ alias-reading pair.
+All 3,273 baseline identities, readings, titles, written-kanji
+arrays and easier sourced levels remain preserved. Prior baseline
+exclusion exceptions are unchanged; this batch adds none.
+No executed app draw, selection-frequency measurement, full-corpus
+rereview or native-speaker certification is claimed.
+This closes batch 26, not the full vocabulary expansion.
 
 ## Final verification
 
