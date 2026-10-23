@@ -4360,3 +4360,23 @@ new families are appended. The original authored packet and sanitized
 derivative remain frozen. Both original reviewer sessions will receive
 the same eight-article correction scope, actual diff and common evidence
 for bounded confirmation, not a second full-batch review.
+
+### Confirmation and provenance follow-through
+
+Both original sessions reviewed correction
+`f97be4e9b16d7aba1282551c4afe9610a21806f7` sequentially with zero
+edits. The [GPT confirmation](n2-vocabulary-reviews/batch-28-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-28-claude-confirmation.md)
+accepted all eight article corrections, the revised sense selection
+and all seven added direct pairs. Both independently caught the same
+new minor provenance error: the N2:552 note claimed an audience-related
+raw gloss, while the exact frozen field is `to cross,to pass,to tide over`.
+
+The current note and corrected-record copy now name that exact field.
+The original record remains intact; the previous corrected note is
+retained in appended follow-through evidence and the frozen correction
+snapshot. No article, source field, sense selection, exclusion or
+reciprocal link changes in this follow-through. The snapshot's coverage
+index hash follows the corrected TSV. Both original sessions will
+receive the same provenance-only diff and evidence for a final bounded
+check; unrelated baseline prose and optional polish remain outside scope.

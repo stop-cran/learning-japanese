@@ -95,6 +95,12 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 28 confirmation:** Describe the exact frozen source field,
+  not nearby baseline prose or remembered glosses. Both reviewers
+  caught an audience-related gloss incorrectly attributed to N2:552;
+  its raw field is only `to cross,to pass,to tide over`. Preserve the
+  previous note in correction history rather than silently rewriting
+  the evidence trail.
 - **Batch 28 reconciliation:** Source-spelling coverage must select the
   sense actually taught with that spelling, even if JMdict has no
   explicit restriction. 超す's quantity example supports selected
