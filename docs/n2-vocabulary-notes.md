@@ -95,6 +95,24 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 25 reconciliation:** An unexplained change of particle roles is
+  real even when the dictionary recognizes the verb's meaning. 請う's
+  request frame did not explain the invited-person/role frame of its
+  second example. Replace the unverified collocation with the inspected
+  許しを請う expression; retain JMdict's positive invite sense without
+  treating its absence from Daijisen as disproof. The authored receipt
+  over-attributed inviting to Daijisen and is explicitly superseded by
+  the correction evidence rather than silently rewritten.
+- **Batch 25 reconciliation:** Check a linked card's full body before
+  calling its alternate reading wrong. 故郷 explicitly recognizes
+  ふるさと while teaching こきょう as primary; aligning the incoming
+  label improves navigation, not lexical correctness. For 顕微鏡's
+  science example, use the positively sourced 生物/せいぶつ reading
+  rather than infer an unlimited prohibition from missing dictionary forms.
+- **Batch 25 reconciliation:** Review observations under Optional as well
+  as Findings. 厳重/押さえる's exposed "secure" labels warrant a direct
+  safeguard despite different Japanese constructions; no unmeasured
+  assumption that the app rarely draws the pair can replace that check.
 - **Batch 25 authoring:** Broad source glosses need construction-level
   qualifications, not deletion: 原産's habitat concerns native origin,
   恋しい's dear/beloved retains longing, 原理's theory concerns an

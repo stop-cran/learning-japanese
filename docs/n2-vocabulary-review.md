@@ -3657,7 +3657,7 @@ This closes batch 24, not the full vocabulary expansion.
 
 ## Batch 25: N2:482-N2:501
 
-**Status:** authored draft; independent review and reconciliation pending.
+**Status:** independently reviewed; corrections await original-session confirmation.
 
 Scope: 原産, 原始, 研修, 厳重, 謙遜, 県庁, 限度, 現に,
 顕微鏡, 原理, 原料, 碁, 恋しい, 請う, 工員, 強引, 公害,
@@ -3691,11 +3691,78 @@ Its praying/wishing sense and 高級's high-rank sense are additional,
 not separately assigned N2. The latter's quality sense is the
 explicit selected source mapping.
 
-Seventeen articles declare 102 direct quiz exclusions. The blind
-review derivative removes only the author's quiz rationale; both
-reviewers will receive the same snapshot, scope, rubric and evidence
+The authored snapshot is `c6d44ce4b6dd2e8fceb2fa8ffae7c632ed87e801`.
+Its seventeen guarded articles declared 102 direct exclusions.
+The blind review derivative removed only the author's quiz rationale.
+Both models received the same snapshot, scope, rubric and evidence
 access, sequentially and without either initial report.
-No independent verdict or model-contribution claim is made yet.
+
+### Independent initial review and reconciliation
+
+The [GPT initial report](n2-vocabulary-reviews/batch-25-gpt-initial.md)
+used `gpt-6.1-sol`; the
+[Claude initial report](n2-vocabulary-reviews/batch-25-claude-initial.md)
+used `claude-opus-5.5`. Both read all twenty articles, principal
+families, mappings, 136 comparison labels and four related kanji changes.
+Comparison-family and existing-body review beyond that was selective,
+not a complete reread of all 307 families. The isolated GPT process
+exited before Claude started; both reported zero edits.
+
+- **GPT25-01 / F1, resolved:** add the shared 請う/拝む begging guard.
+- **GPT25-02, resolved:** add 公共/世の中 for the applicable society
+  meaning, not merely a shared social topic.
+- **F2, resolved by replacement:** scope 請う's particle explanation to
+  the request construction and replace the unexplained, unverified
+  invited-person/role example with the inspected 許しを請う expression.
+  Inviting remains positively taught from JMdict 1592920:1. Daijisen's
+  omission does not disprove it or establish that the removed example
+  was wrong. Reinspection also caught an over-attribution of inviting
+  in the author's first Daijisen receipt; appended correction evidence
+  explicitly supersedes that clause without rewriting history.
+- **F3, resolved with qualified reasoning:** add 原始/原産 and
+  原始/天然. The exposed broad origin answer omits the distinction
+  between beginning and native provenance; the inspected primeval,
+  unmodified-natural-state use also overlaps the nature answer.
+  Shared 原, tags or a substring alone are not the justification,
+  nor are these claims of unrestricted Japanese substitution.
+- **F4, resolved:** add 高級/一流 for the source-backed quality overlap.
+- **F5, resolved:** use positively sourced 生物/せいぶつ in
+  顕微鏡's science-example kana. Missing dictionary forms do not prove
+  an unlimited ban on every historical or nonstandard reading.
+- **F6, lexical-contradiction claim withdrawn; polish applied:**
+  the full 故郷 card explicitly recognizes valid ふるさと while teaching
+  こきょう as primary. Align the incoming label with that primary
+  reading; do not count the original as a lexical error.
+- **Claude Optional secure observation, resolved:** add 厳重/押さえる
+  for the actual context-free "secure" answer ambiguity. Their Japanese
+  constructions differ; the report's unmeasured low-draw-probability
+  suggestion is not a reason to leave this direct pair unguarded.
+
+The remaining suggestions stay **optional**: another 原始 beginning
+example / 原始的, a 原料/材料 shape-retention tendency, a
+恋しい/寂しい comparison and a 公共/個人 contrast link. The existing
+meaning coverage and overlap qualifications do not require those
+expansions. 工員 datedness is unverified and is not claimed in teaching.
+No native-speaker check, executed quiz or selection-frequency study is
+claimed.
+
+The correction packet appends nineteen complete family inspections for
+seventeen exact forms, preserving ten genuinely new complete families,
+fifteen inspected actual labels/full card bodies, and two qualified
+public-entry receipts. Original evidence remains unchanged except those
+explicit additions. Six direct guards bring the seventeen guarded
+articles to 108 declarations. Three prose corrections and the guards
+affect seven new word articles; no baseline article, kanji passage,
+title, reading, level, mapping or selected/additional sense changes.
+
+**Model-diversity note:** both models independently found the begging
+guard. GPT uniquely supplied the society guard. Claude additionally
+supplied the particle/example mismatch, two broad-origin guards,
+quality guard, science-example reading, and the secure-label observation
+under Optional. Its alleged 故郷 contradiction did not survive full-card
+inspection. Contributions are compared across every report section,
+not by severity labels or counts alone. This sample shows complementary
+useful findings and the need for adjudication, not a model ranking.
 
 ## Final verification
 
