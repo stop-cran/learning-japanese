@@ -35,6 +35,37 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Causative perspective: independent review and reconciliation (2026-10-23 UTC)
+
+**Snapshot and scope:** `01f755659b6e7bca76fbc8102a96eacd685f54ce` plus
+[issue #24](https://github.com/stop-cran/learning-japanese/issues/24). A fresh independent reviewer read
+the complete companion article, four changed bridges and all 40 exercises: 86 accepted strings,
+92 options, 136 lexical spans and initially 258 exclusions. Groups, complete-task levels, sources and
+preservation were also checked. Actual model identity was unavailable, not inferred. The
+[ledger](docs/grammar-causative-perspective-sources.json) preserves original and revised evidence.
+
+**Finding and reconciliation:** initial correctness and comprehensibility were **CLEAN**; coverage
+was **NEEDS FIX** for minor **CP-IR-001**. Reading and cleaning differed in verb class but repeated
+the supplied-predicate role frame and positional answers. Revise six cleaning role tasks to topicalize
+the object, changing case cues and role-to-ordinal mappings; rebind all answers, feedback, facets and
+lexical records, and teach both frames. The original reviewer independently checked the actual delta:
+**resolved**, original minor severity retained; combined bounded verdicts **CLEAN/CLEAN/CLEAN**.
+There were no new findings or optional suggestions. The other 34 new exercises and records are unchanged.
+
+**Measurement correction:** the reviewer withdrew an initial cache-discrepancy conclusion after discovering
+a raw-versus-normalized hash comparison. All five normalized fingerprints match the saved baseline, and
+raw hashes match the initial review observations. No historical raw-binary baseline was saved, so that
+earlier raw-byte identity is not claimed. The original reports remain intact alongside the correction.
+
+**Coverage and reflection:** six groups, 14 facets, eight soft recommendations, no prerequisites;
+20 formation, 16 interpretation and four explicit conversion tasks. Six shared context-key strings are
+not 40 independent conversations. All 60 prior complete sets and 1354 inventory records remain unchanged.
+Corpus coverage reaches 1394 exercises in 61 sets, including 466 N4; vocabulary coverage is 1085/1394,
+with 309 pending and 264 exclusions in the revised batch. Regroup operation-specific variation into the
+existing transfer lesson and add inspected source navigation, without a new review layer or quota.
+Content/vocabulary checks, 151 focused regressions and a fresh non-skipped Android importer pass.
+No device, native-speaker, exhaustive discourse or unrestricted-mastery certification is claimed.
+
 ## Passive voice and participants: independent review and reconciliation (2026-10-23 UTC)
 
 **Snapshot and scope:** `bc00fcb9221ed216871ab46dee7524c9003343dd` plus
@@ -1022,6 +1053,10 @@ The [restriction/inclusion review](docs/grammar-restriction-sources.json) adds t
   Changing the interrupted activity and visitor can still repeat the same affected-visit operation:
   the [passive review](docs/grammar-passive-participants-sources.json), PP-IR-001, merges those keys while
   preserving both useful drills and their IDs. A different setting noun is not by itself transfer evidence.
+  Judge variation against the actual operation: different verb classes can vary a formation task while
+  leaving a supplied-predicate role question unchanged. The [causative review](docs/grammar-causative-perspective-sources.json),
+  CP-IR-001, replaces a repeated role frame with object topicalization, changing the case cues and role-to-position
+  mapping rather than merely renaming its key.
 
 The [compound-relation review](docs/grammar-compound-relations-sources.json) adds three observed checks:
 

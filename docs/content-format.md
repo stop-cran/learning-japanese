@@ -245,7 +245,8 @@ The [trying/preparing/finishing ledger](grammar-try-prepare-complete-sources.jso
 The [benefactive/request ledger](grammar-benefactive-requests-sources.json) adds 36 N4 tasks in one set.
 The [direction/development ledger](grammar-motion-stages-sources.json) adds 34 N4 tasks in one set.
 The [passive/participants ledger](grammar-passive-participants-sources.json) adds 30 N4 tasks in one set.
-Current practice is 1354 exercises: 587 N5 and 426 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [causative/perspective ledger](grammar-causative-perspective-sources.json) adds 40 N4 tasks in one set.
+Current practice is 1394 exercises: 587 N5 and 466 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -399,6 +400,12 @@ Four groups contain nine facets, five soft recommendations and no prerequisites:
 frame codes rather than a universal passive-emotion test. Prior finite-form, noun-role and potential groups
 retain their exact members and objects. The 16 context-key strings merge the two interrupted-visit drills;
 paired forms and repeated scenes are not independent conversations.
+The [causative/perspective installment](grammar-causative-perspective-sources.json) adds 40 annotated N4 prompts,
+reaching **1394 exercises in 61 files** and **1085/1394** reviewed, with 309 still pending.
+Six groups contain 14 facets, eight soft recommendations and no prerequisites: 20 full-form formations,
+16 interpretations and four shortening/expansion tasks. Six context-key strings deliberately join paired
+forms, roles and repeated scenes. Existing finite-form, desire-role and passive groups retain their owners
+and complete objects; the permission-request and short-causative notes are supporting reading only.
 The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the

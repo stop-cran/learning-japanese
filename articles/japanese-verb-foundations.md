@@ -113,6 +113,8 @@ then distinguishes an available action from something visible or audible.
 [Passive voice](passive-and-affected-participants.md) applies the same classes to れる／られる,
 then separates the actor from the target or affected person. Learn the new passive form before
 inflecting its final る; it behaves as ichidan even when the original verb was godan.
+[Making, letting and being made to act](making-letting-and-being-made-to-act.md) then builds
+causative before causative-passive, keeping the person causing an action separate from its actual performer.
 [Verb extensions](verb-extensions-direction-and-aspect.md) then shows why 読んでおく and 読み続ける
 attach differently; those advanced constructions are not prerequisites here.
 

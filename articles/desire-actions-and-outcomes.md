@@ -195,6 +195,9 @@ weather wish or assume that every desired outcome is a received favor.
 Benefactive auxiliaries, causatives and honorific request systems are not assessed in this batch.
 The [benefactive-actions companion](benefactive-actions.md) now develops ordinary action-based giving/receiving
 and favor questions. It preserves the wish/action distinction rather than duplicating these desire exercises.
+[Making, letting and being made to act](making-letting-and-being-made-to-act.md) separately tracks
+the causer, actual actor and object. Wanting someone to act does not establish that the action was caused,
+permitted or performed; the causative exercises keep their own identities and scope.
 
 ## What the practice asks you to do
 

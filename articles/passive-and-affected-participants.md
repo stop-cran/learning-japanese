@@ -195,7 +195,9 @@ are equally common.
 
 For a different distinction, see [actions, events and resulting states](actions-events-and-results.md):
 an intransitive event such as 開く is not automatically a passive form of 開ける.
-The causative and respectful roles of related verb endings are later topics, not prerequisites here.
+[Making, letting and being made to act](making-letting-and-being-made-to-act.md) combines causative
+then passive in separate stages, with its own role and shortening practice. Respectful uses remain
+a separate topic; neither is a prerequisite for these passive exercises.
 
 ## Sources and scope
 

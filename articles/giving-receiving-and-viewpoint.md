@@ -217,6 +217,10 @@ the interpretation of every English phrase containing "give."
 Continue to [doing things for others and asking favors](benefactive-actions.md) for those action-based
 frames, affirmative/negative forms, thanks/apologies and ordinary requests.
 
+[Causative viewpoint](making-letting-and-being-made-to-act.md) asks a different question:
+who causes or permits another person's action? That is not automatically a gift or a received favor.
+Its full causative-passive and shortening groups are optional later study, not basic-transfer prerequisites.
+
 The [desire comparison](desire-actions-and-outcomes.md#wanting-to-receive-someones-action) briefly contrasts
 wanting an action with wanting to receive it through てもらいたい. This is optional later reading,
 not a new requirement of the basic-transfer exercises.
