@@ -57,7 +57,7 @@ The point is that another item takes its place, not simply that the original ite
 
 **[取り替える](../words/取り替える.md)（とりかえる）** also describes replacement or swapping. It can describe replacing batteries or exchanging seats with a friend; the context tells us which.
 
-The related **替わる（かわる）** describes something being replaced or another item taking its place. Do not use the transitive 替える pattern automatically when there is no direct object.
+The related **[替わる](../words/代わる.md)（かわる）** describes something being replaced or another item taking its place. Do not use the transitive 替える pattern automatically when there is no direct object.
 
 ## 換える: exchange, convert, or renew
 
@@ -85,7 +85,7 @@ The air example is not a trade between two people. Likewise, exchanging yen for 
 
 The second is a formal expression: **書面をもって** means "by means of a written statement," and that statement serves in place of the greeting. It is not simply a request to rewrite the greeting.
 
-The kanji **[代](../kanji/代.md)** also appears in **代わる（かわる）**, "take someone's place," and **代わり（かわり）**, "substitute; replacement." Compare **父に代わって（ちちにかわって）**, "on behalf of my father," with changing the father himself.
+The kanji **[代](../kanji/代.md)** also appears in **[代わる](../words/代わる.md)（かわる）**, "take someone's place," and **代わり（かわり）**, "substitute; replacement." Compare **父に代わって（ちちにかわって）**, "on behalf of my father," with changing the father himself.
 
 ## These spelling preferences overlap
 

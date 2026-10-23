@@ -2436,6 +2436,58 @@ titles, easier sourced levels and original exclusions
 remain preserved. This closes batch 17, not the full
 vocabulary expansion.
 
+## Batch 18: N2:342-N2:361
+
+**Status:** drafted; independent reviews not yet run.
+
+Scope: 代る mapped to 代わる, 間隔, 換気, 感激, 関西,
+鑑賞, 感ずる, 間接, 乾燥, 感想, 観測, 寒帯, 官庁,
+勘違い, 缶詰, 乾電池, 関東, 観念, 乾杯 and 看板.
+
+This batch adds **19 articles** and reuses 乾燥 for its
+explicit drying/dryness senses, adding only the sourced N2
+level. The [packet](n2-vocabulary-batch-sources/batch-18.json)
+retains twenty exact source rows, twenty complete principal
+families, 109 complete comparison families, verified component
+evidence and ten qualified author-inspection receipts.
+
+代る is explicitly taught as an alias, with useful 替わる
+and 換わる backlinks. 感ずる distinguishes JMdict's
+ずる/じる framework from the Japanese サ変 analysis
+without inventing godan forms. 勘違い and 缶詰 follow
+the format's on-first `kango` convention while explaining
+their mixed formations; 缶's loan origins remain qualified.
+
+Regional entries separate modern 関西/関東 from variable
+historical extents. Technical and social notes avoid literal
+overreach: dry cells retain electrolyte, and 乾杯 does not
+require drinking a whole glass at once. The 缶詰 food-science
+lookup does not independently verify figurative confinement;
+the complete pinned family supports that sense.
+
+Twelve primary-form N2 pairs accompany new articles.
+乾/乾燥 is additionally linked for the reused article;
+燥/乾燥 was already linked. Alias backlinks do not increase
+primary-form counts. Missing 隔, 激, 鑑, 勘 and 看 cards
+remain represented in word metadata without speculative
+character additions.
+
+Existing 感覚, 缶, 意見, 感じる and the kaeru comparison
+receive narrow navigation changes. Baseline identities,
+readings, titles, easier levels and original exclusions
+remain preserved.
+
+Draft coverage is **340 closed, 20 draft, 1,452 pending
+and 0 unresolved** rows, mapped to 355 distinct articles:
+327 new and 28 reused. There are 3,600 word articles
+and 82 tracked primary-form reciprocal N2 pairs on new
+articles, plus the two checked 乾燥 pairs on the reused
+article. All 3,273 baseline identities, primary readings,
+titles and original exclusions are preserved; fifteen
+previously unclassified baseline words now have explicit
+source-backed N2 assignments. These are mechanical counts,
+not independent linguistic certification or review closure.
+
 ## Final verification
 
 Not started. Final closure requires all original rows accounted for, no consequential unresolved

@@ -95,6 +95,17 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 18 authoring:** Distinguish dictionary frameworks
+  from invented conjugation. Seisenban analyzes 感ずる as
+  サ変 and 感じる as its ichidan development; JMdict's
+  ずる/じる classification is not a godan paradigm.
+- **Batch 18 authoring:** Inspect actual regional and technical
+  explanations rather than literalizing compact glosses.
+  Modern 関東/関西 need not have historical extents; a dry
+  cell still has electrolyte, and a toast does not require
+  emptying the glass at once. Match each qualification to
+  the source passage that actually supports it.
+
 - **Batch 17 reconciliation:** A tool-only lesson does not
   sense-restrict its quiz prompt: 剃刀's ordinary figurative
   mental-sharpness use still matters against 鋭い's actual
