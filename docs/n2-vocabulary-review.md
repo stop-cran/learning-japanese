@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-09 review-closed; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-09 review-closed; batch 10 drafted; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 180 rows are review-closed; 1,632 remain pending.
+The first 180 rows are review-closed; twenty are draft and 1,612 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -1072,6 +1072,52 @@ remain preserved. Cumulative coverage is **180 closed, 0 draft,
 159 new and twenty reused. There are 3,432 word articles and 36
 reciprocal N2 kanji-word pairs. This is bounded batch closure, not
 whole-corpus or native-speaker certification.
+
+## Batch 10: N2:182-N2:201
+
+**Status:** draft; independent review and reconciliation pending.
+
+Scope: 納める, 治める, 惜しい, 御辞儀, 伯父さん, 小父さん,
+叔父さん, おしゃれ, おじゃまします, 教わる, おだいじに,
+落着く, 御手洗, お出掛け, お手伝いさん, おどかす,
+落し物, おととい, おととし and おとなしい.
+
+Fifteen new articles and five reused rows cover this batch. The three
+uncle/man spellings share the unchanged N5 おじさん article, with the
+applicable uncle or unrelated-man sense selected per row. The kana
+date rows reuse unchanged N5 一昨日 and 一昨年, also mapped in batch 04.
+The twenty rows therefore map to eighteen distinct articles; cumulative
+mapping totals do not count the date articles twice.
+
+New teaching IDs お辞儀, 落ち着く, お出かけ and 落とし物 explicitly
+recognize source 御辞儀, 落着く, お出掛け and 落し物. 納める receives
+a separate spelling-specific article rather than inheriting the
+achievement sense restricted to 収める. The raw source gloss remains
+unchanged. 御手洗 is taught at the source's actual みたらし reading for
+the shrine purification place, not silently remapped to おてあらい.
+
+Seven existing word articles gain comparison navigation; 習う also
+gains one brief 教わる comparison, and 手伝い a domestic-worker contrast.
+The existing 治 page links its two already-present 治める examples.
+CW005 gains links to 教わる and 学ぶ. No existing identity, primary
+reading, title, easier level or exclusion list changes. No new primary
+word contains an N2 character card, so this batch adds no N2 reciprocal
+pairs; it does not manufacture pairs from kana-headword aliases.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-10.json) preserves
+all raw rows, complete principal families and component records,
+118 complete comparison families and four qualified actual-entry
+inspection receipts. The receipts identify the rendered dictionary
+or encyclopedia section and do not treat failed requests or a
+definition-less heading as verification.
+
+The authored checks preserve all 3,273 baseline identities, readings,
+titles and exclusion lists. The deterministic manifest has 6,075 files,
+including 396 images and 201 scene catalogs; content version
+`21e74fb574f138f9`. There are 3,447 word articles. Cumulative mappings
+cover 195 distinct articles: 174 new and 21 reused, with 36 reciprocal
+N2 kanji-word pairs. Coverage is 180 closed, twenty draft, 1,612 pending
+and zero unresolved rows. These are authored counts, not review closure.
 
 ## Final verification
 

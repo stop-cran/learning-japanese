@@ -95,6 +95,16 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 10 authoring:** A source row's gloss can bundle senses that
+  the complete dictionary restricts to different spellings. Preserve
+  納める's original achievement/payment gloss as provenance, but teach
+  achievement under 収める and payment/delivery under 納める. A shared
+  entry ID is not permission to copy every gloss into both cards.
+- **Batch 10 authoring:** Do not normalize a surprising source reading
+  to a familiar homograph. 御手洗 at みたらし is the shrine purification
+  place; おてあらい is a separate restroom entry. Inspect the actual
+  row and definition, and avoid invented constituent readings.
+
 - **Batch 09 reconciliation:** English "I am sorry" can collide between
   sympathy and apology answers without making the Japanese expressions
   interchangeable. Guard the actual labels and preserve the speech-act
