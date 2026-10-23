@@ -1313,5 +1313,47 @@
     "reportSha256": "36771ec0420170ce3e51edb12a9ad34a74c5b14b000ff741926a91334c9fc3a4",
     "report": "# Installment 6 — formatting verification\n\nDate: 2026-10-22. **PASS: prior composite verdicts carry forward unchanged.**\n\nRead all **12 lines** of `n5-comparisons-formatting.diff` and the complete `n5-comparisons-formatting-packet.json`. Independently compared the frozen `n5-comparisons-initial-content\\particle-neighbors.json` with live `grammar\\particle-neighbors.json`.\n\nVerified:\n\n- Exactly one byte was removed: **CR (`0x0D`) at zero-based byte offset 21509**, between the exercise-array closing `]` and the new comma.\n- Size changed **22,795 → 22,794 bytes**. Removing that byte from the frozen file reproduces the live file exactly; **all other bytes are identical**.\n- Parsed JSON objects are equal. No exercise, answer, vocabulary, introduction-group, level or wording change occurs in this file.\n- LF-normalized SHA-256 changed from `d0f3f76f90b734f8357a8272619fddb121cb8f0f0d1058d73cec007a7db040f4` to `299f397ec3d86a20154f36555e52b22e8a025e05a6a4a81d98b2ff87cf2b121a`, matching the packet.\n- The diff’s declared hash matches. Article and new-set hashes still match the reconciled snapshot.\n- Both earlier review reports retain their previously recorded raw-byte hashes.\n\n| Composite component | Correctness | Scoped coverage | Comprehensibility |\n| --- | --- | --- | --- |\n| Article | CLEAN | CLEAN | CLEAN |\n| New exercises | CLEAN | CLEAN | CLEAN |\n| Reused group and its five owned tasks | CLEAN | CLEAN | CLEAN |\n\nThis is **formatting verification, not another full linguistic audit**. Existing scope limits and optional suggestions remain unchanged. No repository or old-report edits were made. Parent-reported manifest/check passes and the separately rerun importer are outside this check; no importer or UI result is claimed.\n",
     "compositeVerdictsCarriedForward": true
+  },
+  "learnerFeedbackAmendment": {
+    "date": "2026-10-23",
+    "baselineCommit": "ed3b990",
+    "reviewer": "gpt-6.1-sol",
+    "independent": false,
+    "scope": "The two complete eating formation tasks, including their instructions, literal accepted and rejected completions, feedback and occurrence-specific vocabulary. This is a bounded author amendment, not a new independent review of the article or batch.",
+    "exerciseIds": [
+      "n5-comparison-eating-excess",
+      "n5-comparison-eating-ordinary"
+    ],
+    "feedback": "The learner reasonably followed the English excess scenario, then found the ordinary completion 昨日は食べました underinformative without an understood meal or conversational contrast.",
+    "qualification": "昨日は食べました can be natural when context supplies the omitted object and relevance of yesterday. The change does not label that sentence ungrammatical or impose a universal requirement to state objects.",
+    "remedy": "Both tasks now use 昨夜、ケーキを____。 The ordinary task simply reports eating cake last night; only the excess task supplies a comfortable-quantity standard. Each instruction and explanation describes its own verb-form operation rather than a shared adjective/verb template.",
+    "completedModels": {
+      "ordinary": "昨夜、ケーキを食べました。",
+      "excess": "昨夜、ケーキを食べすぎました。"
+    },
+    "preserved": "Stable exercise IDs, levels, targets, relationships, accepted answer arrays, fixed option labels/rationales, introduction groups and paired example keys. Both tasks remain one paired context, not two independent transfer examples. All other 40 exercise objects and all other inventory records are unchanged.",
+    "sourceBasis": "Existing inspected Bunpro すぎる and polite-verb-ending entries in this record support the unchanged stem/ending distinction. Original English/Japanese scenarios; no new grammatical restriction or fresh external source retrieval.",
+    "canonicalVocabulary": [
+      {
+        "path": "words/昨夜.md",
+        "readLines": [1, 34],
+        "rawSha256": "fe54bb721942e98d760ea4599cd2e7604d1f0721b003adb89442234b606f2ba0",
+        "reading": "ゆうべ",
+        "sense": "last night; relative-time noun/adverb modifying the eating event"
+      },
+      {
+        "path": "words/ケーキ.md",
+        "readLines": [1, 34],
+        "rawSha256": "72b6cb74ba617c7b344f744a5760839aa57a1a6e4dda180881ed184d381c9854",
+        "reading": "ケーキ",
+        "sense": "cake; the object eaten, without asserting a whole cake or slice count"
+      }
+    ],
+    "vocabularyApplication": "Maintained grammar_vocabulary.py apply pipeline with explicitly reviewed segments; both records rebound to the revised prompt, complete task and hint payload. を and punctuation are protected separately from the tested predicate blank.",
+    "exerciseSha256LfNormalized": "65ff4bef07858936e6354827dd54a0e8de78180b4701cfa1aed8f0af710db59b",
+    "promptSha256": "bf43781c0b5836abf9664deabd048068b027344dd89cb3c8ac5699004b814ed7",
+    "currentBatchLexicalSpans": 95,
+    "currentBatchProtectedExclusions": 201,
+    "reviewLimit": "Historical independent reports and their original snapshots remain unchanged. This amendment does not claim a fresh Android importer run, UI/device check or measured improvement in learning."
   }
 }
