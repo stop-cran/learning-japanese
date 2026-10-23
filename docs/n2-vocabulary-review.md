@@ -2289,7 +2289,7 @@ batch 16, not the full vocabulary expansion.
 
 ## Batch 17: N2:322-N2:341
 
-**Status:** initial reviews reconciled; independent confirmation pending.
+**Status:** closed after independent GPT/Claude review and confirmation.
 
 Scope: 釜, 紙屑, 神様, 剃刀, ガム, 貨物, かゆい, 歌謡,
 殻, カラー, からかう, 空っぽ, かるた, 枯れる, カロリー,
@@ -2360,7 +2360,7 @@ actual-model receipts record `gpt-6.1-sol` and
 
 Five articles receive narrowly supported corrections:
 
-| Finding | Reconciliation pending confirmation |
+| Finding | Reconciliation confirmed at f4d119b |
 |---|---|
 | B17-GPT-01 | Add the direct 剃刀/鋭い guard: the ordinary mental-sharpness sense can fit the unmarked sharp/keen answer even though the practical lesson teaches the razor tool only. |
 | B17-GPT-02; B17-02 | Add direct 渇く/飢える and 渇く/憧れる guards for figurative craving and actual hunger-for/yearn-for labels. Both reports identified both leads, with different confidence; these are shared observations, not model-unique discoveries. Literal hunger, thirst and aspirational admiration remain distinct. |
@@ -2391,6 +2391,50 @@ model ranking, exhaustive quiz audit or native-speaker
 certification. The author-stage narrowing of named-color
 and 物 guards preceded review and is not credited to either
 reviewer.
+
+### Independent confirmation and closure
+
+The same original reviewers confirmed corrected commit
+`f4d119b03e77fd032334cb737ea83cffc21c9445`
+in bounded sequential sessions, each reviewing all five
+changed articles, the actual diff and appended evidence:
+
+- [GPT confirmation](n2-vocabulary-reviews/batch-17-gpt-confirmation.md):
+  both original findings resolved; all five articles and
+  packet additions CLEAN on each facet.
+- [Claude confirmation](n2-vocabulary-reviews/batch-17-claude-confirmation.md):
+  all four original findings resolved; all five articles
+  and packet additions CLEAN on each facet. It withdrew
+  its unsupported shopping-frequency assertion and the
+  為替/案 redundancy suggestion. Reading the complete
+  憧れる record increased its confidence in that guard.
+
+No actionable defect, consequential unresolved teaching
+claim or regression remains in the assigned scope.
+Additional compounds, passive forms, spelling examples and
+longer comparisons remain optional; no further expansion
+was required merely to force agreement.
+
+The author authenticated both committed snapshots, their
+parentage, normalized file hashes, actual patches, prompt
+hashes and four archived-report hashes against Git. Four
+usage receipts confirm the requested actual models and
+zero edits; all reviewer processes exited. The original
+source packet is exactly preserved except for the appended
+correction evidence. File-only reviewers explicitly did
+not claim independent Git/hash or raw-source verification.
+Structural checks, source records and lexical review are
+not an executed app draw, frequency measurement or
+native-speaker certification.
+
+Closure coverage is **340 closed, 0 draft, 1,472 pending
+and 0 unresolved** source rows, mapped to 335 distinct
+articles: 308 new and 27 reused. There are 3,581 word
+articles and 70 primary-form reciprocal N2 kanji-word
+pairs. All 3,273 baseline identities, primary readings,
+titles, easier sourced levels and original exclusions
+remain preserved. This closes batch 17, not the full
+vocabulary expansion.
 
 ## Final verification
 
