@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-14 review-closed.** The target is all 1,812 source rows,
+**Batches 01-15 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 280 rows are review-closed; twenty are draft and 1,512 remain pending.
+The first 300 rows are review-closed; none are draft and 1,512 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -1874,8 +1874,8 @@ native-speaker certification.
 
 ## Batch 15: N2:282-N2:301
 
-**Status:** independently reviewed; corrections prepared;
-bounded confirmation pending.
+**Status:** closed after independent review, evidence-based
+reconciliation and bounded confirmation.
 
 Scope: 貸し出し, 過失, 果実, 貸間, 貸家, 個所, 過剰,
 かじる, 課税, 下線, カセット, 加速, 加速度, 片仮名,
@@ -1914,7 +1914,8 @@ components. All original source fields and baseline word identities,
 primary readings, titles, easier levels and exclusion declarations
 remain preserved.
 
-Coverage is **280 closed, 20 draft, 1,512 pending and 0 unresolved**
+At the authored snapshot, coverage was **280 closed, 20 draft,
+1,512 pending and 0 unresolved**
 rows, mapped to 295 distinct articles: 269 new and 26 reused.
 There are 64 primary-form reciprocal N2 kanji-word pairs. These
 draft and mechanical audit counts are not review closure.
@@ -1993,6 +1994,58 @@ not evidence by itself and these observations are not a general
 model ranking. Both reviewers disclose file-only Git/hash limits,
 unexecuted app behavior, selective comparisons and lack of
 native-speaker/corpus certification.
+
+### Bounded confirmation and closure
+
+Both original models reviewed correction commit
+`3491d8cb71d19115fcbfe8450b10097cac434110`, directly after
+the authored snapshot. Each received its own original report,
+the same bounded eleven-article assignment, the actual content
+and provenance diff, and the same source access, without the
+other model's report or the author's review ledger:
+
+- [GPT confirmation](n2-vocabulary-reviews/batch-15-gpt-confirmation.md):
+  `gpt-6.1-sol`; all four original findings resolved.
+- [Claude confirmation](n2-vocabulary-reviews/batch-15-claude-confirmation.md):
+  `claude-opus-5.5`; all six original findings reconciled, with
+  the unsupported frequency remedy withdrawn.
+
+Both read every changed article and all eleven assigned comparison
+cards. They found all eleven changed contexts and packet additions
+CLEAN for correctness, scoped coverage and comprehensibility,
+without actionable regression or consequential unresolved claim.
+Actual-model receipts record zero file edits; the reviewer
+processes ran sequentially and exited.
+
+Claude explicitly withdraws the frequency inference from dictionary
+order/priority, while accepting the spelling-recognition improvement.
+Its follow-up suggestion to show 片寄った見方 as another
+possible form remains optional: the article already explicitly
+allows both spellings for biased judgment. Removing the negative
+カ + カ reading warning in 貸家 is also optional; neither
+allowed reading is described as using those on readings. The
+箇所 preference and ひとかたまり wording remain nonblocking.
+No such optional lead establishes a remaining lexical defect.
+
+GPT independently revisited the cited 片寄る and 片仮名 pages;
+Claude used the supplied complete records without refetching them.
+Neither provides corpus or native-speaker certification. The
+linguistic patch intentionally excludes the generated manifest:
+the manifest is separately hash-pinned and committed. Before
+closure, the author authenticated both frozen commits and
+parentage, every frozen file hash, both prompts, the actual
+patches, the confirmed worktree/manifest hashes and all four
+model/zero-edit receipts. The manifest was rebuilt twice
+deterministically; file-only reviewers did not independently
+execute Git, extraction, hashing or app behavior.
+
+Cumulative coverage is **300 closed, 0 draft, 1,512 pending and
+0 unresolved** rows, mapped to 295 distinct articles: 269 new
+and 26 reused. There are 3,542 word articles and 64 primary-form
+reciprocal N2 kanji-word pairs. All 3,273 baseline identities,
+primary readings, titles, easier sourced levels and original
+exclusion lists remain preserved. This closes batch 15, not the
+full vocabulary expansion.
 
 ## Final verification
 
