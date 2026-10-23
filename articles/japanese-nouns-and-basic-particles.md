@@ -126,6 +126,10 @@ Also learn the whole predicate pattern: 猫が好きです（ねこがすきで�
 The English object in "like cats" does not justify replacing が with を in the basic Japanese 好き pattern.
 The [topic-particle lesson](wa-ga-mo-topic-and-inclusion.md) explains this boundary.
 
+Later, [passive frames](passive-and-affected-participants.md) show why a topic need not be the actor:
+私は弟にケーキを食べられた presents me as affected while ケーキを still names what my brother eats.
+This is not a mechanical rule replacing every を with が.
+
 を has other uses too: 道を歩きます（みちをあるきます）, "I walk along the road," marks a route,
 and 家を出ます（いえをでます）, "I leave the house," marks a place left behind.
 Those are not ordinary objects being acted on. Learn them with their movement verbs rather than making

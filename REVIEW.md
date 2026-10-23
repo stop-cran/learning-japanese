@@ -35,6 +35,32 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Passive voice and participants: independent review and reconciliation (2026-10-23 UTC)
+
+**Snapshot and scope:** `bc00fcb9221ed216871ab46dee7524c9003343dd` plus
+[issue #23](https://github.com/stop-cran/learning-japanese/issues/23). A fresh independent reviewer read
+the complete new article, all three changed bridges with context, and all 30 exercises: 75 accepted strings,
+68 options, 90 lexical spans and 158 exclusions. Group, level, source and ownership records were also
+reviewed. Actual model identity was unavailable, not inferred. The
+[ledger](docs/grammar-passive-participants-sources.json) retains the original and revised evidence.
+
+**Finding and reconciliation:** initial correctness and comprehensibility were **CLEAN**; scoped coverage
+was **NEEDS FIX** for minor **PP-IR-001**. Two interrupted-visit formation drills had separate keys despite
+repeating the same operation with different setting/participant nouns. Merge their context key, retaining
+both useful tasks and the already-matching interpretation. All 30 complete exercises and lexical records
+remain unchanged. The original reviewer independently checked the actual metadata/documentation delta:
+**resolved**, original minor severity preserved; combined bounded verdicts **CLEAN/CLEAN/CLEAN**.
+There were no additional findings or optional recommendations.
+
+**Coverage and reflection:** four groups, nine facets, five soft recommendations and no prerequisites;
+12 formation and 18 interpretation tasks. Sixteen context-key strings include paired and repeated scenes,
+not measured independent conversations. All 59 preceding complete sets and 1324 inventory records remain
+unchanged. Corpus coverage reaches 1354 exercises in 60 sets, including 426 N4; vocabulary coverage is
+1045/1354, with 309 pending. Regroup the observed setting-substitution case into the existing
+transfer-accounting lesson and add inspected source navigation, without another review layer or quota.
+Content/vocabulary checks, 151 focused regressions and a fresh non-skipped Android importer pass.
+No device, native-speaker, exhaustive orthographic or unrestricted-mastery certification is claimed.
+
 ## Direction, development and stages: independent review and optional refinements (2026-10-23 UTC)
 
 **Snapshot and scope:** `acfa458bc187fe385b366cd1807fc095729de40a` plus
@@ -993,6 +1019,9 @@ The [restriction/inclusion review](docs/grammar-restriction-sources.json) adds t
   Merely swapping パン/ケーキ or 説明書/手紙 while keeping the same supplied contraction, operation and
   answer does not create another context key. The auxiliary review consolidated those repeat drills without
   adding exercises ([record](docs/grammar-try-prepare-complete-sources.json), TPC-IR-001; regroup).
+  Changing the interrupted activity and visitor can still repeat the same affected-visit operation:
+  the [passive review](docs/grammar-passive-participants-sources.json), PP-IR-001, merges those keys while
+  preserving both useful drills and their IDs. A different setting noun is not by itself transfer evidence.
 
 The [compound-relation review](docs/grammar-compound-relations-sources.json) adds three observed checks:
 

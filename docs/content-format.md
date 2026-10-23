@@ -244,7 +244,8 @@ The [transitivity/results ledger](grammar-transitivity-results-sources.json) add
 The [trying/preparing/finishing ledger](grammar-try-prepare-complete-sources.json) adds 24 N4 tasks in one set.
 The [benefactive/request ledger](grammar-benefactive-requests-sources.json) adds 36 N4 tasks in one set.
 The [direction/development ledger](grammar-motion-stages-sources.json) adds 34 N4 tasks in one set.
-Current practice is 1324 exercises: 587 N5 and 396 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [passive/participants ledger](grammar-passive-participants-sources.json) adds 30 N4 tasks in one set.
+Current practice is 1354 exercises: 587 N5 and 426 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -391,6 +392,13 @@ Four groups contain 16 facets, five soft recommendations and no prerequisites: 1
 22 interpretation tasks. The 13 context-key strings include paired forms and stages, not 34 independent
 conversations. The nine original temporal-stage tasks keep their identities and owning group.
 Existing N5 state/aspect and なる groups retain their exact members and exercise objects.
+The [passive/participants installment](grammar-passive-participants-sources.json) adds 30 annotated N4 prompts,
+reaching **1354 exercises in 60 files** and **1045/1354** reviewed, with 309 still pending.
+Four groups contain nine facets, five soft recommendations and no prerequisites: 12 formation and
+18 interpretation tasks. Direct targets, retained objects and intransitive affected events have explicit
+frame codes rather than a universal passive-emotion test. Prior finite-form, noun-role and potential groups
+retain their exact members and objects. The 16 context-key strings merge the two interrupted-visit drills;
+paired forms and repeated scenes are not independent conversations.
 The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the

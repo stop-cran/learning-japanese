@@ -110,6 +110,9 @@ Next, use these forms in [actions and states](japanese-actions-states-and-time.m
 [requests and rules](japanese-requests-permission-and-rules.md).
 [Ability and perception](ability-and-perception.md) applies the verb classes to potential forms,
 then distinguishes an available action from something visible or audible.
+[Passive voice](passive-and-affected-participants.md) applies the same classes to れる／られる,
+then separates the actor from the target or affected person. Learn the new passive form before
+inflecting its final る; it behaves as ichidan even when the original verb was godan.
 [Verb extensions](verb-extensions-direction-and-aspect.md) then shows why 読んでおく and 読み続ける
 attach differently; those advanced constructions are not prerequisites here.
 

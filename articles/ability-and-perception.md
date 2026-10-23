@@ -42,8 +42,10 @@ Learn the potential first, then inflect it, rather than attaching ない to the 
 You will encounter these in conversation; standard written-conjugation drills here ask for the unshortened forms.
 This is a visible practice boundary, not a claim that every colloquial
 potential is incomprehensible. Do not transfer that shortening to passive uses of られる.
-The same-looking standard 食べられる can also be passive in a different sentence; passive interpretation
-belongs to its own lesson, not a new requirement for these formation drills.
+The same-looking standard 食べられる can also be passive in a different sentence;
+[passive voice and affected participants](passive-and-affected-participants.md#shared-られる-passive-or-potential)
+compares the roles and context, including shared 来られる versus distinct 読める／読まれる.
+That interpretation is not a new requirement for these potential-formation drills.
 
 ## Skill and circumstances both matter
 
