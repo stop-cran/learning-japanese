@@ -95,6 +95,21 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 25 authoring:** Broad source glosses need construction-level
+  qualifications, not deletion: 原産's habitat concerns native origin,
+  恋しい's dear/beloved retains longing, 原理's theory concerns an
+  explanatory foundation, and 公共's society/community concerns public
+  affairs. A shared sense does not make every English rendering unrestricted.
+- **Batch 25 authoring:** Verify exceptional conjugation against an actual
+  table rather than a recognized headword or an unsourced adjacent
+  correction. 請う uses こうて/こうた, with こわない and こいます;
+  contradictory Japanese Wiktionary material is not affirmative evidence.
+- **Batch 25 authoring:** Separate source sense selection from useful extra
+  teaching when the English list is broad. 高級 selects quality here;
+  high rank remains explicitly additional and retains its separate
+  noun/の-modifier classification. 請う's praying/wishing is likewise
+  additional, not another independently established N2 assignment.
+
 - **Batch 24 reconciliation:** General English answer labels can overlap a
   qualified sense even when the Japanese words are not unrestricted substitutes.
   The actual amusing, tone, text and visit labels justify direct guards for

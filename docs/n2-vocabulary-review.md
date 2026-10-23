@@ -5,7 +5,7 @@
 **Batches 01-24 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 480 rows are review-closed; no rows are draft and 1,332 remain pending.
+The first 480 rows are review-closed; 20 rows are draft and 1,312 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -3654,6 +3654,48 @@ baseline exclusion exceptions are unchanged; this batch adds none.
 No executed app draw, selection-frequency measurement, full-corpus
 rereview or native-speaker certification is claimed.
 This closes batch 24, not the full vocabulary expansion.
+
+## Batch 25: N2:482-N2:501
+
+**Status:** authored draft; independent review and reconciliation pending.
+
+Scope: 原産, 原始, 研修, 厳重, 謙遜, 県庁, 限度, 現に,
+顕微鏡, 原理, 原料, 碁, 恋しい, 請う, 工員, 強引, 公害,
+高級, 公共, 工芸.
+
+Twenty new articles bring the collection to 3,735 word articles.
+No existing principal article is reused. Four useful reciprocal N2
+pairs are added: 県/県庁, 庁/県庁, 恋/恋しい and 芸/工芸.
+Every written component remains in metadata, including the ten
+primary components without existing kanji cards.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-25.json)
+preserves the twenty raw rows and complete principal families,
+307 complete comparison families, 136 actual existing labels and
+exclusions, and 35 complete component records. All complete
+comparison families and labels were inspected; full existing-card
+bodies were captured but only selected bodies were read.
+Thirteen qualified public-inspection receipts cover twelve
+Daijisen headwords and the actual English Wiktionary 請う tables.
+These are author observations, not independent reviewer retrieval.
+
+Source qualifications are explicit: 原産's habitat concerns native
+provenance; 原始 selects both origin and primeval senses; 厳重's
+firm/strong concerns serious handling or protest; 恋しい's
+dear/beloved retains longing. 現に emphasizes actuality,
+原理's theory concerns an explanatory foundation, 公共's
+society/community concerns public or shared affairs, and 工芸's
+industrial arts is not all manufacturing industry.
+請う's special こうて/こうた conjugation is positively taught.
+Its praying/wishing sense and 高級's high-rank sense are additional,
+not separately assigned N2. The latter's quality sense is the
+explicit selected source mapping.
+
+Seventeen articles declare 102 direct quiz exclusions. The blind
+review derivative removes only the author's quiz rationale; both
+reviewers will receive the same snapshot, scope, rubric and evidence
+access, sequentially and without either initial report.
+No independent verdict or model-contribution claim is made yet.
 
 ## Final verification
 
