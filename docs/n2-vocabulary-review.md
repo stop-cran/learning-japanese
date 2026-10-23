@@ -3826,6 +3826,61 @@ No executed app draw, selection-frequency measurement, full-corpus
 rereview or native-speaker certification is claimed.
 This closes batch 25, not the full vocabulary expansion.
 
+## Batch 26: N2:502-N2:521
+
+**Status:** drafted; independent reviews pending.
+
+Scope: 孝行, 交差, 講師, 工事, 公式, 口実, こうして, 校舎,
+公衆, 香水, 公正, 功績, 光線, 高層, 構造, 交替, 耕地,
+交通機関, 校庭, 肯定.
+
+Nineteen new articles bring the collection to 3,754 word articles.
+The existing 肯定 article already teaches affirmation and logical
+affirmative; only its sourced N2 level is added. Its identity,
+primary reading, title, written-kanji array, exclusions and full body
+remain unchanged. Eight new reciprocal N2 pairs are added:
+講/講師, 香/香水, 績/功績, 線/光線, 層/高層, 造/構造,
+替/交替 and 耕/耕地. The existing 肯/肯定 pair remains linked.
+Missing 孝, 舎, 衆 and 功 cards do not remove those characters
+from the words' metadata.
+
+The [batch packet](n2-vocabulary-batch-sources/batch-26.json)
+preserves all twenty raw source rows and complete principal families,
+379 complete comparison families, 143 actual existing labels/exclusions,
+38 complete component records and fifteen public-entry inspection
+receipts. All extracted comparison families, component records and
+labels were inspected. Existing full bodies were captured, but only
+selected main bodies and all four supplemental bodies were read.
+No 143-card or whole-corpus rereview is claimed.
+
+All fifteen Daijisen receipts refer to complete relevant lexical
+containers identified by publisher code, not simplified Wikipedia
+content, navigation or copyright footers returned on some initial
+lookups. A standard-library parser avoided a new dependency.
+Public observations are concise original paraphrases; the full
+copyrighted bodies remain private evidence. These receipts describe
+author access, not independent reviewer retrieval.
+
+Mappings explicitly qualify broad source glosses: 公式's formality
+concerns official/publicly established forms; 構造's construction
+concerns how parts are put together; 交替's relief concerns taking
+over a role and its rotation can concern duties. 校庭's campus
+means outdoor school grounds. 高層's bare upper selects pinned
+JMdict sense 2, with building sense 1 additionally taught;
+Daijisen's opposite sense order is not transferred to those indices.
+講師's school part-time and cram-school uses are additional
+senses 3-4. None of these extra meanings receives a separate N2
+assignment.
+
+The initial review derivative removes only the author's quiz
+rationale. GPT and Claude will receive the same committed snapshot,
+nineteen new articles, reused-source coverage claim, eight related
+kanji changes, twenty mappings, rubric and evidence access.
+The processes will run strictly sequentially and blind to one
+another's reports. Draft coverage is 500 closed, 20 draft,
+1,292 pending and 0 unresolved, mapped to 514 distinct articles:
+481 new and 33 reused. This is not review closure.
+
 ## Final verification
 
 Not started. Final closure requires all original rows accounted for, no consequential unresolved

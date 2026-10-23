@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 26 authoring:** A successful page fetch is not a dictionary-entry
+  check. Simplified Weblio output for 高層/公式/校庭 and 交替 yielded
+  unrelated material or footers. Inspect the complete lexical container
+  associated with the actual publisher; do not promote the failed
+  extraction to a positive receipt. Keep complete copyrighted evidence
+  private and publish concise original observations and source links.
+- **Batch 26 authoring:** Preserve source-gloss qualifications and dictionary
+  sense numbering separately. 高層's upper maps explicitly to pinned
+  JMdict sense 2 while building sense 1 is additional; Daijisen reverses
+  their order. 校庭's campus concerns outdoor school grounds, not all
+  campus buildings. A broad gloss needs positive qualified coverage,
+  not silent replacement.
+
 - **Batch 25 reconciliation:** An unexplained change of particle roles is
   real even when the dictionary recognizes the verb's meaning. 請う's
   request frame did not explain the invited-person/role frame of its
