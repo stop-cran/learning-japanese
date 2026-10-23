@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-06 review-closed; batch 07 drafted; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-07 review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 120 rows are review-closed; twenty are drafted and 1,672 remain pending.
+The first 140 rows are review-closed; 1,672 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -687,7 +687,7 @@ mapped to 119 articles (103 new and sixteen reused).
 
 ## Batch 07: N2:122-N2:141
 
-**Status:** corrected after blind initial reviews; bounded confirmations pending.
+**Status:** closed after independent initial reviews, corrections and bounded confirmation.
 
 Scope: 裏口, 占う, 恨み, 恨む, 羨ましい, 羨む, 売上, 売り切れ,
 売り切れる, 売行き, うろうろ, 運河, うんと, 英文, 英和, ええと,
@@ -715,9 +715,8 @@ links: ペンキ to 絵の具, and あの/さあ/まあ to the explicitly taught
 ええと variant under えっと. Together with the two metadata changes,
 the related content scope is nine existing files.
 
-No review closure is claimed by the authored commit. Current coverage:
-**120 closed, twenty draft, 1,672 pending and 0 unresolved** rows;
-139 mapped articles (121 new and eighteen reused).
+The authored commit did not claim review closure. All twenty source
+rows are now closed after the confirmations below.
 
 ### Initial review
 
@@ -764,7 +763,40 @@ sales-performance pair in Optional, as well as the four small wording
 improvements. Attribution compares the complete reports, including
 Optional and Limits; it is not a general model ranking. Both accepted
 the source mappings, aliases, written-kanji metadata, reciprocal links
-and scoped reuse claims. Bounded confirmation remains pending.
+and scoped reuse claims.
+
+### Confirmation and closure
+
+Correction commit `db3b5da1cc064a8d9e58742643378e13b3850bea`
+directly follows the authored snapshot. Each original model family
+received its own initial report, the same bounded confirmation prompt,
+the exact nine-file content diff and the same revised evidence.
+Neither received the other report or author adjudication. Separate
+short-lived read-only processes again ran strictly sequentially;
+GPT exited before Claude started. Usage receipts verify the actual
+models and no file edits.
+
+The verbatim [GPT confirmation](n2-vocabulary-reviews/batch-07-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-07-claude-confirmation.md)
+are CLEAN on all three facets for all nine changed contexts. Each
+independently assesses all eight new direct pairs and four prose edits,
+reconciles its original findings and identifies no regression. Both
+distinguish the actual 実に/じつに family from the other readings and
+English-answer ambiguity from unrestricted Japanese substitution.
+Their file-only provenance and unexecuted-app limits remain explicit.
+
+Claude's additional past-tense wording suggestion is optional: English
+"read" is a valid past tense in the translated 占いました example,
+although its spelling also permits a present-tense reading in isolation.
+No further correction is necessary; this observation is not counted as
+a newly discovered defect.
+
+No actionable defect or consequential unresolved claim remains in the
+assigned scope. Cumulative coverage is **140 closed, 0 draft, 1,672
+pending and 0 unresolved** rows, mapped to 139 articles (121 new and
+eighteen reused). The collection has 3,394 word articles and 26 new
+reciprocal N2 kanji-word pairs across these seven batches. This is not
+whole-corpus or native-speaker certification.
 
 ## Final verification
 
