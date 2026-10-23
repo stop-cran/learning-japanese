@@ -54,8 +54,8 @@ not the already-valid Japanese or answer keys. Optional **TL-IR-O01** removes th
 unused hot-weather glossary entry without promoting that cleanup to a required defect. Only those two
 tasks' `translation` and `evidence` fields change, with two complete lexical context records rebound
 from unchanged segmentation. The original reviewer read both complete changed tasks and their two
-window dependencies, checked every dependent completion/feedback branch, independently recomputed all
-38 lexical fingerprints and verified the exact repair and guidance hunks. Both observations are
+window dependencies, checked every dependent completion/feedback branch, independently recomputed
+fingerprints for all 38 lexical records and verified the exact repair and guidance hunks. Both observations are
 **resolved** with their original classifications retained. Final bounded verdicts are
 **CLEAN/CLEAN/CLEAN**, with no new actionable issue or consequential unresolved claim.
 
@@ -71,6 +71,13 @@ stale comparison evidence in an otherwise unchanged task. Keep its optional glos
 and add qualified source navigation rather than another review layer. Content/vocabulary checks,
 151 focused regressions and a fresh non-skipped actual Android importer pass. No native-speaker,
 physical-device, exhaustive-JLPT or learning-outcome certification is claimed.
+
+**Publication integration:** remote kanji correction `8f32f3af80eee61a44be6d7c32cbf7ca072b0187`
+arrived before publication. Preserve it and signed grammar commit `a8f0d1e4f8e94313be60ee65e026042bafd908f4`
+through a history-preserving merge, regenerating the sole overlapping generated manifest.
+Fresh combined-content validation/import is required; all independently reviewed grammar runtime and
+lexical records remain unchanged. The concurrent 間 correction and its source record are preserved exactly,
+not linguistically re-certified by this grammar review.
 
 ## Necessity, advice and instructions: independent review and reconciliation (2026-10-23 UTC)
 
