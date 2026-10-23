@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-25 review-closed.** The target is all 1,812 source rows,
+**Batches 01-27 review-closed; batch 28 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 500 rows are review-closed; no rows are draft and 1,312 remain pending.
+The first 540 rows are review-closed; twenty rows are draft and 1,252 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -4247,3 +4247,56 @@ This closes batch 27, not the full vocabulary expansion.
 Not started. Final closure requires all original rows accounted for, no consequential unresolved
 claims, independent review coverage of every addition and changed passage, baseline preservation,
 source/reading/sense and cross-reference audits, a deterministic manifest, and `stop-cran` authorship.
+## Batch 28: N2:542-N2:561
+
+**Status:** authored; independent sequential GPT and Claude reviews pending.
+
+Scope: ごくろうさま, 焦げる, 凍える, 心当たり, 心得る,
+腰掛け, 腰掛ける, 五十音, 胡椒, こしらえる, 超す, 擦る,
+個体, 御馳走, ごちそうさま, こちらこそ, 小遣い, コック,
+こっそり, 古典.
+
+Seventeen new articles bring the filesystem collection to 3,790 word
+articles. Three source rows reuse stable articles: 超す is actually
+taught at 越す with a quantity example and difficult-obstacle account;
+御馳走 is already taught at ごちそう; こっそり gains only its sourced
+N2 level. The first two retain easier N3/N4 levels, primary identity,
+title, reading and written-kanji arrays. Existing exclusions, images
+and scene bytes remain unchanged. Four new primary reciprocal N2 pairs
+are 凍/凍える, 腰/腰掛け, 腰/腰掛ける and 個/個体.
+The separate 超/越す alias pair uses the actual 超す/こす label.
+
+The [source packet](n2-vocabulary-batch-sources/batch-28.json) preserves
+all twenty raw rows, complete principal families, 102 distinct complete
+comparison families, 64 actual existing labels/exclusions, 27 complete
+component records and twenty public-entry receipts. Nineteen receipts
+are actual positive lexical containers; the こちらこそ lookup failed
+to yield a lexical body. Complete JMdict evidence positively establishes
+that expression. All complete family renderings, component records and
+labels were inspected; existing full bodies were read selectively,
+not as a 64-card rereview. Public observations are concise original
+paraphrases, not copied lexical bodies.
+
+Source mismatches remain explicit. The 擦る row keeps こする and
+1298910, but match-striking/chafing/filing/frosting is additionally
+taught at する under 1595910:1. コック retains primary cook entry
+1050310 and adds valve entry 2862559:1; Dutch and English origins do
+not become one identity. ごちそうさま's raw "feast" remains intact
+but is not assigned as an interjection's grammatical function.
+Search-only forms are not promoted, こづかい preserves づ, and
+missing primary characters remain in metadata.
+
+Practical qualifications distinguish intense bodily 凍える from
+literal freezing, lead-based 心当たり from creative proposals,
+knowing skills from a guarantee of expert mastery, and classics from
+any physically old book. The traditional 五十音 arrangement is not
+an exact fifty-character modern inventory. Additional senses are
+indexed without independent N2 assignments.
+
+At the authored snapshot, fourteen new cards declare sixty directional
+quiz exclusions, based on actual labels and ordinary meanings, not
+topic cliques, homophones or transitivity alone. Those are author
+hypotheses for assessment. The blind initial derivative removes only
+the author's quiz rationale. Both families will receive the same
+snapshot, seventeen new articles, three reuse claims, seven related
+content edits, twenty mappings, rubric and equivalent source access.

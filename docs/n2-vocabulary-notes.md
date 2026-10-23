@@ -95,6 +95,22 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 28 authoring:** A legacy vocabulary row can mix readings or
+  current lexical identities. 擦る's こする rubbing entry is not
+  silently given the match-striking sense of する; コック's Dutch
+  cook and English valve entries remain separate, with actual
+  reading-specific examples and additional-sense mappings. Preserve
+  the raw fields instead of reconstructing compiler intent.
+- **Batch 28 authoring:** Record a failed lexical lookup as a failure,
+  not a successful page inspection. こちらこそ has positive complete
+  JMdict evidence but no lexical body from the attempted public
+  lookup. The other nineteen containers do not make it a twentieth
+  positive verification.
+- **Batch 28 authoring:** Register-sensitive formulas need their actual
+  social function. ごくろうさま normally points downward despite
+  polite endings; ごちそうさま thanks for a meal rather than naming
+  a feast. Traditional 五十音 is not an exact modern kana count.
+
 - **Batch 27 closure:** Distinguish compact rendering lines from lexical
   records when reporting inspection counts: ENTRY headings and array
   lines are not additional senses. Preserve the authentic reviewer
