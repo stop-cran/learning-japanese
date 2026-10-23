@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-13 review-closed; batch 14 drafted.** The target is all 1,812 source rows,
+**Batches 01-14 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 260 rows are review-closed; 20 are draft and 1,532 remain pending.
+The first 280 rows are review-closed; none are draft and 1,532 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -1714,7 +1714,7 @@ certification.
 
 ## Batch 14: N2:262-N2:281
 
-**Status:** drafted; initial reviews reconciled; bounded confirmations pending.
+**Status:** closed after independent initial reviews, corrections and bounded confirmation.
 
 Scope: 各自, 拡充, 学術, 各地, 拡張, 角度, 学年, 学部,
 格別, 確率, 学力, 掛け算, 可決, 火口, 下降, 重なる,
@@ -1825,10 +1825,52 @@ establish a defect. Comparing the entire reports, rather than just
 their Findings sections, shows modest complementary value here,
 not a general model ranking or native-speaker certification.
 
-### Confirmation
+### Confirmation and closure
 
-Pending sequential bounded confirmation by the original reviewers.
-No row is closed by the initial reviews or these corrections alone.
+Both original reviewers checked correction commit
+`b25fe7bb94f433d618174553c1f5c13f46d8c0b1`, parent
+`11d1b0ae8caf19e6aac628e1774a9f21d8ab503e`, against the
+actual six-card and provenance diff. They received the same
+bounded assignment, their own original reports and the same
+source access, without the other family's report or the author's
+reconciliation:
+
+- [GPT confirmation](n2-vocabulary-reviews/batch-14-gpt-confirmation.md):
+  `gpt-6.1-sol`; all three original findings resolved.
+- [Claude confirmation](n2-vocabulary-reviews/batch-14-claude-confirmation.md):
+  `claude-opus-5.5`; all three original findings resolved.
+
+Both found the six changed contexts and packet additions CLEAN
+for correctness, scoped coverage and comprehensibility, with no
+actionable regression or consequential unresolved claim. Actual
+model receipts record zero file edits; both processes ran
+sequentially and exited.
+
+Both independently retrieved the approval/vote sense of 可;
+GPT also revisited the exact acknowledgment expression. Claude's
+位 lookup returned unrelated material and supplied no evidence.
+The pinned complete noun family, not that failed retrieval,
+supports the grade guard. Claude withdrew its 確か guard lead.
+Its further suggestions to link 下りる in the descent comparison,
+expand 分かりました's agreement function and add a decoration
+compound remain nonblocking, not additional closure conditions.
+
+The manifest's absence from the linguistic patch is intentional:
+the patch contains the assigned articles and source evidence,
+while the generated manifest is separately hash-pinned and
+included in the correction commit. Before closure, the author
+authenticated both frozen commits and parentage, all confirmed
+file and manifest hashes, both prompts, the actual patches and
+all four model/zero-edit receipts. File-only reviewers did not
+independently execute Git, extraction, hash or app checks.
+
+Cumulative coverage is **280 closed, 0 draft, 1,532 pending and
+0 unresolved** rows, mapped to 275 distinct articles: 249 new and
+26 reused. There are 3,522 word articles and 54 reciprocal N2
+kanji-word pairs. All 3,273 baseline identities, primary readings,
+titles and original exclusion lists remain preserved. This
+closes batch 14, not the full vocabulary expansion or
+native-speaker certification.
 
 ## Final verification
 
