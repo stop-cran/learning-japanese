@@ -110,6 +110,8 @@ contrasts an observed state with a purposeful result or a preparatory action, in
 an intentional arrangement using ～てある and preparation using ～ておく.
 [まま](koto-wake-and-formal-nouns.md#まま-a-state-remains-unchanged) highlights unchangedness.
 These are useful onward references, not required alternatives in this introductory ～ている practice.
+For trying an action, arranging it in advance and getting it completed, continue to
+[trying, preparing and finishing](trying-preparing-and-finishing.md); てしまう is not automatically regret.
 
 - [Bunpro: ongoing ～ている](https://bunpro.jp/grammar_points/ている1), [resulting states](https://bunpro.jp/grammar_points/ている2), and [repeated activity](https://bunpro.jp/grammar_points/ている3).
 - [Tofugu: ～ている](https://www.tofugu.com/japanese-grammar/verb-continuous-form-teiru/).

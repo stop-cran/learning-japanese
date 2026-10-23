@@ -241,7 +241,8 @@ the [explanations/endings ledger](grammar-n5-endings-sources.json) adds 52 in on
 the [desire-comparison ledger](grammar-desire-sources.json) adds 34 in one set.
 The [ability/perception ledger](grammar-ability-perception-sources.json) adds 34 N4 tasks in one set.
 The [transitivity/results ledger](grammar-transitivity-results-sources.json) adds 28 N4 tasks in one set.
-Current practice is 1230 exercises: 587 N5 and 302 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [trying/preparing/finishing ledger](grammar-try-prepare-complete-sources.json) adds 24 N4 tasks in one set.
+Current practice is 1254 exercises: 587 N5 and 326 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -372,6 +373,11 @@ reaching **1230 exercises in 56 files** and **921/1230** reviewed, with 309 stil
 Four groups contain nine facets, six soft recommendations and no prerequisites: 18 formation tasks and
 10 contextual-selection tasks. Two additional correct options retain fitting が／を てある frames in both modes.
 The ten context-key strings include paired roles, results and stages, not 28 independent conversations.
+The [trying/preparing/finishing installment](grammar-try-prepare-complete-sources.json) adds 24 annotated N4 prompts,
+reaching **1254 exercises in 57 files** and **945/1254** reviewed, with 309 still pending.
+Four groups cover trial, preparation/retention, completion/outcome and common contractions, with ten facets,
+five soft recommendations and no prerequisites. Six formation, ten interpretation and eight expansion tasks
+share 12 context-key strings, not 24 independent conversations.
 Existing N5 state/aspect and なる groups retain their exact members and exercise objects.
 The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue

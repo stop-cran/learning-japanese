@@ -22,6 +22,7 @@ This repository starts as a collection of standalone articles prompted by specif
 | Grammar | [Wanting to act, wanting a thing and wanting an outcome](articles/desire-actions-and-outcomes.md) | Whose wish is expressed, who would act, and how do たい, がほしい and てほしい differ? |
 | Grammar | [Ability, availability and perception](articles/ability-and-perception.md) | How do potential forms, available actions, visibility, audibility and sensory がする differ? |
 | Grammar | [Actions, events and resulting states](articles/actions-events-and-results.md) | Who acts on what, what changes, and how do ている, てある and ておく frame states and preparation? |
+| Grammar | [Trying, preparing and getting things done](articles/trying-preparing-and-finishing.md) | What do てみる, ておく and てしまう contribute, and how do their conversational contractions work? |
 | Grammar | [Koto, wake, and Japanese noun-based grammar](articles/koto-wake-and-formal-nouns.md) | How do こと and わけ differ, which common formal nouns and noun-based expressions are useful to know, and where do の/ん and ほど fit? |
 | Grammar | [Japanese verb extensions: direction and aspect](articles/verb-extensions-direction-and-aspect.md) | How do ～ていく, ～てくる, ～ておく, ～込む, and related constructions express direction, continuation, and completion? |
 | Grammar | [Japanese conditionals: たら, ば, なら, と, and 場合](articles/japanese-conditionals.md) | How do conditions, premises, event order, discoveries, and procedural cases differ, and when can several patterns fit? |
@@ -88,6 +89,9 @@ The [actions/events/results installment](articles/actions-events-and-results.md)
 four groups, connecting supplied transitivity pairs, quality changes, purposeful results and preparation.
 Its [ledger](docs/grammar-transitivity-results-sources.json) preserves the older state/change owners and
 records fitting alternative てある frames rather than making が versus を a universal answer key.
+The [trying/preparing/finishing installment](articles/trying-preparing-and-finishing.md) adds 24 N4 tasks:
+six formation, ten contextual interpretations and eight contraction expansions in four focused groups.
+Its [ledger](docs/grammar-try-prepare-complete-sources.json) keeps existing state/result and maintained-practice owners.
 
 ## Confusable vocabulary
 

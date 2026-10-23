@@ -35,6 +35,31 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Trying, preparing and completing: independent review and reconciliation (2026-10-23 UTC)
+
+**Snapshot and scope:** `4a4304cb132d2361ae15147d0614b7b360a0be87` plus
+[issue #20](https://github.com/stop-cran/learning-japanese/issues/20). One fresh independent reviewer
+read the whole 141-line initial article, all 24 tasks, 48 accepted strings, 54 options, 46 lexical spans,
+127 exclusions, group/level/source mappings and three changed article passages. Actual model ID was
+unavailable. The [ledger](docs/grammar-try-prepare-complete-sources.json) preserves both review stages.
+
+**Finding and reconciliation:** TPC-IR-001 (minor coverage) identified noun-substitution repeats with
+different context keys despite identical contraction operations and answers. Four memberships and their
+provenance contexts now share the existing bread/manual keys, reducing the global count from 14 to 12
+while retaining two genuinely distinct contexts per facet. All exercise objects and lexical records
+remain unchanged. The optional direct backlink to basic state/aspect practice was also adopted.
+The same reviewer verified both changes, preservation and no introduced regression: the finding is
+**resolved**, the suggestion remains optional rather than an original defect, and final correctness,
+scoped coverage and comprehensibility are **CLEAN**.
+
+**Coverage and reflection:** six formation, ten interpretation and eight contraction-expansion tasks
+in four groups, ten facets and five soft recommendations, with no prerequisites. All 1230 older
+exercise objects and lexical records are preserved. Corpus coverage reaches 1254 exercises in 57 sets,
+including 326 N4; 945 prompts have lexical support and 309 remain pending. Regroup the concrete
+near-duplicate example under the existing context-count lesson and add inspected source navigation;
+do not invent an exercise quota. Focused regressions and the fresh non-skipped Android importer pass.
+Counts do not establish independent conversations, device UX or unrestricted mastery.
+
 ## Actions, events and results: independent review and reconciliation (2026-10-23 UTC)
 
 **Snapshot and scope:** `a45b9ccd5c996147179cbc977556591e8b69921c` plus
@@ -911,6 +936,9 @@ The [restriction/inclusion review](docs/grammar-restriction-sources.json) adds t
   makes that inference part of the actual recognition task (RII-O03).
 - **Count transfer opportunities separately from templates.** Two new bounded existence/cash situations add useful
   practice without claiming that 50 items measure 50 independent decisions or demonstrated mastery (RII-O01).
+  Merely swapping パン/ケーキ or 説明書/手紙 while keeping the same supplied contraction, operation and
+  answer does not create another context key. The auxiliary review consolidated those repeat drills without
+  adding exercises ([record](docs/grammar-try-prepare-complete-sources.json), TPC-IR-001; regroup).
 
 The [compound-relation review](docs/grammar-compound-relations-sources.json) adds three observed checks:
 

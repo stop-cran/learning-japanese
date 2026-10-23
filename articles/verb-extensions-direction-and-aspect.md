@@ -205,6 +205,10 @@ prepared result can have compatible descriptions; the particle alone is not a un
 
 For recognition in casual conversation, **～ておく → ～とく** and **～でおく → ～どく**: **見ておく → 見とく**, "look beforehand"; **読んでおく → 読んどく**, "read beforehand."
 
+The focused [trying/preparing/finishing companion](trying-preparing-and-finishing.md) adds てみる,
+basic auxiliary formation and contextual use, plus とく／どく and ちゃう／じゃう recognition.
+It separates completion from regret without replacing the direction/compound discussion here.
+
 ## 5. Inside, outside, and deeper: learn the whole compound
 
 ### ～込む: inward movement and more

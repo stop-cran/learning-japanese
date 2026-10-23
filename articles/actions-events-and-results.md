@@ -149,6 +149,8 @@ The [verb-extensions article](verb-extensions-direction-and-aspect.md#4-doing-it
 also explains preparation, leaving a state in place and conversational とく／どく.
 This installment owns the contextual result/preparation comparison; the neighboring auxiliary installment
 owns additional basic ておく formation and uses.
+That [trying/preparing/finishing companion](trying-preparing-and-finishing.md) now supplies trial,
+preparation/retention, completion/outcome and conversational contraction practice.
 
 ## What the practice separates
 
