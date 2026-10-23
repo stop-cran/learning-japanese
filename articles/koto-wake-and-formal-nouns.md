@@ -306,6 +306,11 @@ The focused [looks, likeness and impressions companion](appearance-resemblance-a
 appearance-そう, みたい, inferential ようだ and the two らしい uses. Its new tasks complement, rather than
 replace or duplicate the identities of, this article's existing よう modifier practice.
 
+For a focused N4 introduction, see [thinking, possibility and expectation](thinking-possibility-and-expectation.md).
+It adds とおもう and かもしれない attachment, basic はず connections and the contrast
+between ないはずだ and はずがない, while reusing the twelve expectation-time/polarity tasks below
+and retaining the original mixed-routine group.
+
 **べき** can sound forceful; it is not the default for every friendly suggestion. **行くべきではない** says one ought not to go,
 whereas **行くべきだった** says one ought to have gone. In the latter, the verb remains 行く and the past appears on だった.
 For する, both **するべき** and **すべき** are possible.

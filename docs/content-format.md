@@ -247,7 +247,8 @@ The [direction/development ledger](grammar-motion-stages-sources.json) adds 34 N
 The [passive/participants ledger](grammar-passive-participants-sources.json) adds 30 N4 tasks in one set.
 The [causative/perspective ledger](grammar-causative-perspective-sources.json) adds 40 N4 tasks in one set.
 The [appearance/impressions ledger](grammar-appearance-impressions-sources.json) adds 38 N4 tasks in one set.
-Current practice is 1432 exercises: 587 N5 and 504 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [judgment/expectation ledger](grammar-judgment-expectation-sources.json) adds 36 N4 tasks in one set.
+Current practice is 1468 exercises: 587 N5 and 540 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -413,6 +414,13 @@ Five groups contain ten facets, eight soft recommendations and no prerequisites:
 tasks and eight interpretations. Nineteen context-key strings share paired tense, modifier and book-desire
 scenes rather than counting each question as independent transfer. Existing よう and desire groups keep
 their original ownership; hearsay-そう is an explicit unscored N3 follow-up, not an N4 distractor.
+The [judgment/expectation installment](grammar-judgment-expectation-sources.json) adds 36 annotated N4 prompts,
+reaching **1468 exercises in 63 files** and **1159/1468** reviewed, with 309 still pending.
+Four groups contain twelve facets, eight soft recommendations and no prerequisites: 24 predicate-attachment
+conversions and twelve interpretations of thinking time, proposition polarity and negative scope.
+Six conservative context-key strings join paired tense, modality and scope tasks, not independent conversations.
+The twelve original expectation tasks, the mixed-routine group and the linked N5 quotation/conjecture groups
+retain their complete objects and owners; broader reports/questions and harder normative comparisons are not new targets.
 The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the

@@ -27,6 +27,7 @@ This repository starts as a collection of standalone articles prompted by specif
 | Grammar | [Passive voice and affected participants](articles/passive-and-affected-participants.md) | Who acts and who is affected, why can を remain, and how does passive られる differ from potential? |
 | Grammar | [Making, letting and being made to act](articles/making-letting-and-being-made-to-act.md) | Who causes an action and who performs it, and how do causative, causative-passive and common shortened forms differ? |
 | Grammar | [Looks, likeness and informed impressions](articles/appearance-resemblance-and-impressions.md) | How do appearance, resemblance, inferred information, typicality and outward feelings differ without a fixed certainty ladder? |
+| Grammar | [Thinking, possibility and expectation](articles/thinking-possibility-and-expectation.md) | How do thoughts, possibilities and reason-based expectations attach, and how do event time, thinking time and negative scope differ? |
 | Grammar | [Koto, wake, and Japanese noun-based grammar](articles/koto-wake-and-formal-nouns.md) | How do こと and わけ differ, which common formal nouns and noun-based expressions are useful to know, and where do の/ん and ほど fit? |
 | Grammar | [Japanese verb extensions: direction and aspect](articles/verb-extensions-direction-and-aspect.md) | How do direction, temporal viewpoint, beginning, continuation, redoing and recent completion differ? Includes focused N4 practice and links to the existing action-stage exercises. |
 | Grammar | [Japanese conditionals: たら, ば, なら, と, and 場合](articles/japanese-conditionals.md) | How do conditions, premises, event order, discoveries, and procedural cases differ, and when can several patterns fit? |
@@ -116,6 +117,10 @@ The [appearance/impressions installment](articles/appearance-resemblance-and-imp
 in five groups covering そう, みたい, contextual よう, the two らしい uses and selected がる／たがる forms.
 Its [ledger](docs/grammar-appearance-impressions-sources.json) preserves existing よう/desire owners and
 keeps hearsay-そう an explicitly unscored N3 follow-up.
+The [judgment/expectation installment](articles/thinking-possibility-and-expectation.md) adds 36 N4 tasks
+in four groups for thought, possibility, expectation attachment and negative scope.
+Its [ledger](docs/grammar-judgment-expectation-sources.json) preserves the twelve existing expectation
+time/polarity tasks and the mixed-routine group; no fixed confidence ladder or new hard prerequisite is introduced.
 
 ## Confusable vocabulary
 
@@ -172,8 +177,8 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   52 on explanations, quotations and endings, 34 on desire, actors and outcomes,
   34 on ability and perception, 28 on actions/events/results, 24 on trying/preparing/completing,
   36 on benefactives/requests, 34 on direction/development/stages, 30 on passive participants,
-  40 on causative perspective and 38 on appearance/impressions (1432 in total).
-  All 1432 exercises have grammar-only study labels: **587 N5, 504 N4, 235 N3, 102 N2 and four N1**.
+  40 on causative perspective, 38 on appearance/impressions and 36 on judgment/expectation (1468 in total).
+  All 1468 exercises have grammar-only study labels: **587 N5, 540 N4, 235 N3, 102 N2 and four N1**.
   These are editorial estimates using Bunpro as the primary reference, with documented JLPT Sensei comparisons,
   not an official syllabus. Vocabulary and kanji difficulty do not determine them; natural examples remain unchanged.
   See the [policy and per-article distribution](docs/jlpt-levels.md#grammar-baseline) and

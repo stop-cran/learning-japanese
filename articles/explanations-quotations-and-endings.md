@@ -232,6 +232,11 @@ An ordinary assertion such as **明日は休みです** is not automatically a p
 The interpretation drills distinguish how the message is presented in the stated scene:
 conjecture versus an unqualified assertion, not "possibly false" versus "guaranteed true."
 
+The N4 [thinking, possibility and expectation companion](thinking-possibility-and-expectation.md)
+builds on quotation and conjecture with とおもう, かもしれない and はず.
+It separates the time of thinking from the content's time and distinguishes negative expectation
+from ruling something out, without replacing these N5 exercises or assigning numerical confidence.
+
 ## Response labels and practice boundaries
 
 Interpretation questions give these readings and operational meanings **before** answering, in fixed order:

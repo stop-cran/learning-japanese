@@ -35,6 +35,36 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Thinking, possibility and expectation: independent review and reconciliation (2026-10-23 UTC)
+
+**Snapshot and scope:** `f14e4a849ecab25a35cb0fad7da191fc78497cee` plus
+[issue #26](https://github.com/stop-cran/learning-japanese/issues/26). A fresh independent reviewer read
+the complete new article, both bridge deltas with necessary context, and all 36 complete exercises:
+90 accepted strings, 72 options, 40 lexical spans and 136 exclusions. It checked grouping, complete-task
+levels, sources, exact reuse and preservation. Actual model identity was unavailable, not inferred.
+The [ledger](docs/grammar-judgment-expectation-sources.json) preserves both review stages.
+
+**Finding and reconciliation:** initial correctness and comprehensibility were **CLEAN**; coverage was
+**NEEDS FIX** for minor **JE-IR-001**. Four negative-scope definitions supplied an identifying
+Japanese-form-to-label lookup, bypassing the promised interpretation. Remove that cue while retaining
+fixed-order semantic definitions and readings; identify the proposition in neutral English.
+Only four instructions and their inventory context records change. Every prompt, answer, option,
+feedback field, lexical payload, exclusion and group remains unchanged, as do the other 32 new objects
+and records. The original reviewer independently checked the four complete revised tasks and actual delta:
+**resolved**, original minor severity retained; combined bounded verdicts **CLEAN/CLEAN/CLEAN**.
+No new findings or optional suggestions were established. Unchanged articles and content carry forward
+the original bounded review rather than a claimed fresh full reread.
+
+**Coverage and reflection:** 24 predicate-attachment conversions and twelve interpretations in four
+groups, twelve facets and eight soft recommendations, with no prerequisites. Six shared context-key
+strings are not 36 independent conversations. All 62 preceding complete sets and 1432 inventory records
+remain unchanged, including the twelve original expectation-time/polarity tasks and mixed-routine owners.
+Corpus coverage reaches 1468 exercises in 63 sets, including 540 N4; vocabulary coverage is 1159/1468,
+with 309 pending. Regroup the observed form-to-label cue under the existing question-side instruction
+lesson and add inspected source navigation, without banning named formation tasks or creating a quota.
+Content/vocabulary checks, 151 focused regressions and a fresh non-skipped Android importer pass.
+No device, native-speaker, exhaustive discourse or unrestricted-mastery certification is claimed.
+
 ## Appearance and impressions: independent review and reconciliation (2026-10-23 UTC)
 
 **Snapshot and scope:** `3ae9338695d2b3e427e261aa136f1f4745a223f8` plus
@@ -1096,9 +1126,12 @@ The [restriction/inclusion review](docs/grammar-restriction-sources.json) adds t
 
 The [compound-relation review](docs/grammar-compound-relations-sources.json) adds three observed checks:
 
-- **Audit instruction ordering as well as answer buttons.** A shuffled quiz still leaks its answer when every
+- **Audit question-side cues as well as answer buttons.** A shuffled quiz still leaks its answer when every
   learner-facing definition list places the correct label first. Check the whole comparable task family, including
   unchanged instructions, and keep ordering independent of the answer (CR-F01).
+  Even fixed-order definitions can supply a form-to-label lookup: four [judgment/expectation tasks](docs/grammar-judgment-expectation-sources.json)
+  named はずがない in the definition of the correct scope label (JE-IR-001). Retain readings and semantic definitions,
+  but remove the identifying form cue when interpreting its meaning is the skill being assessed.
 - **Distinguish a new exercise from a new scenario.** Different target families or answer spans can reuse the same
   underlying conversation or event. Align genuinely paired context keys without equating their grammar or counting
   keys as independent discourse breadth (CR-O01).
