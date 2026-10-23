@@ -95,6 +95,14 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 29 confirmation:** An earlier CLEAN review can still miss a
+  direct ordinary-secondary-meaning pair. ごめん/恐縮 is supported by
+  the pinned feeling-sorry sense and the actual courteous-request
+  teaching, not by transitivity through older apology guards. Keep
+  the familiar apology distinct from formal request-softening and
+  gratitude; do not turn a shared apology situation into a clique
+  including the bare noun 申し訳.
+
 - **Batch 29 reconciliation:** A character variant is not an older
   form merely because a dictionary lists it. Both reviewers caught
   the unsupported 筝 chronology; remove that qualification without

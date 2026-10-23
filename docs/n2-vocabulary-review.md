@@ -4448,7 +4448,7 @@ This closes batch 28, not the full vocabulary expansion.
 
 ## Batch 29: N2:562-N2:581
 
-**Status:** independent initial reviews reconciled; corrected-passage confirmation pending.
+**Status:** initial corrections confirmed; one supported confirmation follow-through awaiting bounded recheck.
 
 Scope: 琴, 言付ける, 言葉遣い, こないだ, 御無沙汰, こぼす,
 零れる, ゴム, ごめん, ごめんください, 小指, こらえる, 娯楽,
@@ -4574,3 +4574,47 @@ Contributions are compared across Findings, Optional and Limits,
 not only headline findings or severity. This sample shows
 complementarity and the continuing need for evidence-based
 adjudication, not a model ranking.
+
+### Corrected-passage confirmation and narrow follow-through
+
+The corrected snapshot is
+`790d3d1cd94e28f1a06c2aa55ec7d5eea8c8693b`.
+The [GPT confirmation](n2-vocabulary-reviews/batch-29-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-29-claude-confirmation.md)
+resumed their own original sessions, sequentially, on the same actual
+six-article correction diff and equivalent evidence. Both resolved
+their original findings and found no correction-induced regression.
+GPT independently retrieved the actual Daijisen greeting body.
+Claude relied on its earlier actual retrieval and the original-body
+reinspection receipt. Both reported zero edits and bounded file-only
+Git/hash limits.
+
+**B29-CL-06, resolved with follow-through confirmation pending:**
+Claude identified the missing direct ごめん/恐縮 exclusion as an
+initial-review miss, not a regression. The author read both actual
+full cards and the complete pinned 1236740 family. Sense 2 explicitly
+records feeling sorry for troubling someone, often before a request
+with ～ですが; the existing body teaches that construction. This
+supports protection against the actual sorry/apologetic labels, not
+unrestricted substitution. Add one direct guard and a qualified
+linked comparison separating courteous requests and gratitude from
+the familiar apology and ～はごめんだ refusal.
+
+The complete 申し訳 family and actual body were also inspected.
+Its noun title, apology/excuse, is explicitly distinguished from the
+complete negative apology formulas. Shared context and inconsistent
+older third-card guards do not establish a necessary bare-noun pair
+with ごめん; that candidate remains optional. Cross-transitivity
+reversal pairs, 届ける/言付ける and inside-out wording polish likewise
+established no further defect.
+
+Two exact complete pinned comparison families were extracted with
+both source hashes checked. New evidence and current declarations
+are appended under confirmation follow-through without overwriting
+the original packet or the first correction. Eighteen cards now
+declare 82 directional exclusions, one more than the first correction.
+Only ごめん changes in this follow-through; no baseline exclusion,
+identity, title, reading, level, mapping, kanji or reciprocal example
+changes. The new finding is another useful Claude contribution in
+this sample, while also demonstrating that an initial CLEAN report
+does not imply exhaustive semantic or quiz coverage.
