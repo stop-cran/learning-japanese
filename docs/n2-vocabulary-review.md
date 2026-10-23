@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-22 review-closed; batch 23 drafted.** The target is all 1,812 source rows,
+**Batches 01-23 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 440 rows are review-closed; 20 are draft and 1,352 remain pending.
+The first 460 rows are review-closed; none are draft and 1,352 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -3322,14 +3322,14 @@ This closes batch 22, not the full expansion.
 
 ## Batch 23: N2:442-N2:461
 
-**Status:** draft; initial reviews reconciled,
-correction confirmations pending.
+**Status:** closed after independent initial reviews,
+evidence-based reconciliation and bounded confirmation.
 
 Scope: クリーニング, くるむ, くれぐれも, 咥える,
 郡, 稽古, 敬語, 蛍光灯, 形式, 継続, 毛糸, 経度,
 系統, 芸能, 競馬, 警備, 形容詞, 形容動詞, 外科, 毛皮.
 
-The draft adds **19 articles** and reuses 形式.
+This batch adds **19 articles** and reuses 形式.
 That baseline article retains its identity, title,
 primary reading, kanji array, tags and previous
 teaching; it gains the sourced N2 level and bounded
@@ -3358,13 +3358,12 @@ substantively; rare alias 毛革 does not create a
 primary-form 革 pair. Baseline quiz exclusions
 were unchanged at the authored snapshot.
 
-Reviewers will receive one common frozen snapshot,
+Initial reviewers received one common frozen snapshot,
 equivalent source access and the same three-facet
 rubric, with only the author's quiz-guard rationale
 removed from the initial evidence derivative.
-They will run strictly sequentially and exit
-before the next reviewer starts. No review-closed
-coverage is claimed for this draft.
+They ran strictly sequentially and exited
+before the next reviewer started.
 
 ### Initial independent reviews and reconciliation
 
@@ -3440,6 +3439,77 @@ not corpus frequency or proof that removed wording
 was impossible. Reviewer access and author retrieval
 remain distinct. No executed app draw or
 native-speaker certification is claimed.
+
+### Confirmation, authentication and closure
+
+Both original sessions independently confirmed
+correction commit
+`9f8d7d12e2704a7265cd5d2be9e03ee6d397b98b`,
+whose parent is the authored commit above.
+The shared bounded assignment covered nine word
+articles, five kanji source footers, necessary
+unchanged comparisons and appended evidence.
+Each reviewer received its own original report,
+the actual correction patch and the same sanitized
+confirmation packet, not the other family's report.
+GPT exited fully before Claude resumed; both
+confirmation processes exited without edits.
+
+- [GPT confirmation](n2-vocabulary-reviews/batch-23-gpt-confirmation.md):
+  actual `gpt-6.1-sol`; B23-GPT-01 through 03 resolved.
+  All fourteen changed content items and both packet
+  additions received CLEAN three-facet verdicts.
+- [Claude confirmation](n2-vocabulary-reviews/batch-23-claude-confirmation.md):
+  actual `claude-opus-5.5`; B23-OPUS-01 through 04
+  resolved, along with the adopted optional and
+  uncertain-example corrections. All fourteen
+  content items and packet additions were CLEAN.
+
+Neither found an actionable regression or a
+consequential unresolved linguistic claim within
+the changed passages. Claude's additional example
+for formality is optional polish; the current
+positive explanation is adequate. Its tentative
+式/方法 and 筋/才能 comparisons concern unchanged
+baseline material, remain unverified and are not
+newly approved or asserted as established defects.
+No unrelated baseline expansion was made.
+
+Author-executed authentication checked both commits'
+parents, stop-cran identities and required trailers;
+committed file hashes; unchanged authored content;
+both exact patches and prompt hashes; and both
+sanitized evidence derivatives. Removing only the
+two appended evidence sections reproduces the
+original canonical packet exactly. The eight new
+complete families match extraction; all seven
+previously available families compare exactly.
+The eleven direct pairs, three exact baseline
+exclusion extensions, two substantive links and
+five footer corrections agree with their record.
+
+All four archived reports match their original
+output after removing progress preambles and
+normalizing Markdown hard breaks. Original session
+IDs and start times, actual model metrics, zero-edit
+receipts and cumulative one/two-request counts agree.
+Both exact common prompts were also checked against
+the original sessions' recorded user messages.
+These are author-executed provenance checks, not
+reviewer-executed Git or linguistic certification.
+
+Closed coverage is **460 closed, 0 draft, 1,352 pending
+and 0 unresolved** rows, mapped to 454 distinct
+articles: 422 new and 32 reused. There are 3,695 word
+articles and 106 distinct tracked primary-form
+reciprocal N2 pairs on new articles, plus checked
+reused pairs and the 包/くるむ alias-reading pair.
+All 3,273 baseline identities, primary readings,
+titles, written-kanji arrays and easier levels
+remain preserved. Baseline exclusion additions
+are exactly batch-19 機械/道具 and this batch's
+形式, 形 and 型 extensions described above.
+This closes batch 23, not the full expansion.
 
 ## Final verification
 
