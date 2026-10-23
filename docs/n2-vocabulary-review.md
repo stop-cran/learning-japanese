@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-11 review-closed; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-12 review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 220 rows are review-closed; twenty are draft and 1,572 remain pending.
+The first 240 rows are review-closed; none are draft and 1,572 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -1411,8 +1411,8 @@ a native-speaker certification.
 
 ## Batch 12: N2:222-N2:241
 
-**Status:** initial independent reviews reconciled; correction
-confirmation pending.
+**Status:** closed after sequential independent reviews, evidence-based
+corrections and bounded confirmations.
 
 Scope: 温室, 温泉, 温帯, 御中, 女の人, 蚊, カーブ, 貝,
 開会, 会館, 改札, 解散, 海水浴, 回数, 回数券, 改正, 快晴,
@@ -1464,7 +1464,8 @@ do not imply incorrect Japanese definitions.
 
 Six direct quiz pairs across six new articles and one link target are
 corrected. No baseline titles, readings, levels or exclusion lists
-change. This is author adjudication; bounded confirmations are pending.
+change in the correction. The following records the pre-confirmation
+author adjudication.
 
 | Observation | Adjudication and prepared correction |
 | --- | --- |
@@ -1515,8 +1516,52 @@ original usage pages. Neither rehashed the full source archives.
 The prepared correction passed structural and cumulative preservation,
 mapping, reciprocal-link and authorship checks. Two manifest builds
 were byte-identical: 6,113 files, 396 images and 201 scene catalogs,
-content version `cb342dac9eccaa25`. The counts remain 220 closed
-and twenty draft rows until both bounded confirmations are reconciled.
+content version `cb342dac9eccaa25`. At that snapshot the counts remained
+220 closed and twenty draft rows, pending confirmation.
+
+### Bounded confirmations and closure
+
+Corrected commit: `6e9cb41ad714a647f88d1464e41d9d2872e77c96`.
+The [GPT confirmation](n2-vocabulary-reviews/batch-12-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-12-claude-confirmation.md)
+are archived verbatim. Each original reviewer session was resumed
+sequentially in a short-lived process, with its own initial report,
+the same actual six-card-plus-provenance diff, and no other-family
+report or author adjudication. Actual-model receipts again show
+`gpt-6.1-sol` and `claude-opus-5.5`, with zero edits. GPT exited before
+Claude began.
+
+Both marked every changed card and the packet additions CLEAN on
+correctness, scoped coverage and comprehensibility. GPT resolved
+B12-GPT-01 through B12-GPT-04 and confirmed the additional 御中
+guard and link. It explicitly withdrew its initial acceptance of the
+old target's warning as sufficient destination teaching. Claude
+resolved F1 and F2, confirmed all six guards, and corrected the
+shared-tag rationale: actual label overlap, not measured selection
+probability, supports the exclusion.
+
+Claude also narrowed its 貝 assertion to preservation of the declared
+baseline level and withdrew the unnecessary 蚊 classification
+inference. Its 寒帯 wording and hall/meeting-room suggestions remain
+optional. The newly noticed unchanged 説明/注 pair was not assessed
+as a defect in this correction and is outside its new-card scope;
+no baseline exclusion list was changed. No actionable defect or
+consequential unresolved claim remains in the assigned batch scope.
+
+Both independently retrieved all three new cited pages and retained
+the reading-specific Seisenban qualification for 最初. Neither
+reviewer independently executed Git, rehashed the dictionary
+archives or ran the app. The author separately checked both frozen
+snapshots against their commits, and verified the confirmed content,
+packet, prompt and patch hashes unchanged after the two processes.
+The generated manifest remains identical to the confirmed correction.
+
+Cumulative coverage is **240 closed, 0 draft, 1,572 pending and
+0 unresolved** rows, mapped to 235 distinct articles: 212 new and
+23 reused. There are 3,485 word articles and fifty reciprocal N2
+kanji-word pairs. All 3,273 baseline identities, primary readings,
+titles and exclusion lists remain preserved. This closes batch 12,
+not the full vocabulary expansion or native-speaker certification.
 
 ## Final verification
 
