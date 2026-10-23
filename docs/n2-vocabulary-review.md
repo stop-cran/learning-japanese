@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-08 review-closed; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-08 review-closed; batch 09 drafted; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 160 rows are review-closed; none are drafted and 1,652 remain pending.
+The first 160 rows are review-closed; twenty are drafted and 1,632 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -932,6 +932,51 @@ and 0 unresolved** rows, mapped to 159 articles (140 new and nineteen
 reused). There are 3,413 word articles and 33 new reciprocal N2
 kanji-word pairs across these eight batches. This closure does not
 certify the whole corpus or native-speaker naturalness.
+
+## Batch 09: N2:162-N2:181
+
+**Status:** drafted; independent reviews and reconciliation pending.
+
+Scope: おおざっぱ, 大通り, オートメーション, オーバーコート,
+おおよそ, お帰り, おかけください, おかげさまで, おかず, 拝む,
+お代わり, 補う, お気の毒に, 屋外, 奥さん, 送り仮名, 元気でね,
+怠る, 押さえる and お先に.
+
+Nineteen new articles and the unchanged N5 奥さん article cover the
+twenty rows. The source spellings 大凡 and 押える are explicitly taught
+in おおよそ and 押さえる; the original source fields and ordering remain
+unchanged, including 元気でね's position among お-readings.
+Kana-only おおざっぱ recognizes 大雑把 and 大ざっぱ without assigning
+their kanji to its kana headword metadata.
+
+Three N2 kanji pages gain reciprocal examples: 拝/拝む, 補/補う and
+毒/お気の毒に. Five existing word pages gain only navigation links at
+substantive comparisons: オーバー, コート, おかげ, 気の毒 and 外.
+No existing identity, primary reading, title, easier level or exclusion
+list changes. The absent 仮 and 怠 character cards do not remove those
+characters from the new words' complete metadata.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-09.json) preserves
+the exact rows, complete principal families, component records,
+121 complete comparison families and four qualified actual-entry
+inspection receipts. The receipts distinguish rendered Daijisen
+definitions from the Seisenban or encyclopedia sections that actually
+provided evidence. Failed, irrelevant and heading-only retrievals are
+recorded as limits, not dictionary confirmation.
+
+The teaching qualifies 怠る's dated illness sense, keeps おかげさまで's
+social use distinct from any necessary religious interpretation, and
+does not reduce 送り仮名 to changing inflections. The 押さえる/抑える
+comparison is not an absolute physical/mental partition. English
+borrowing histories are not inferred from empty dictionary loan-source
+fields or unrendered etymology headings.
+
+Structural, baseline, mapping and reciprocal-link checks pass.
+The authored manifest has 6,060 files, including 396 images and
+201 scene catalogs; content version `14bca6a4211fe1e3`. There are
+3,432 word articles. Cumulative drafted/closed mappings cover
+179 articles: 159 new and twenty reused, with 36 reciprocal N2
+kanji-word pairs. These authored counts do not claim review closure.
 
 ## Final verification
 

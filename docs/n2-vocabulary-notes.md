@@ -95,6 +95,15 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 09 authoring:** Exact-word searches must account for CRLF:
+  an end-of-line pattern without optional carriage return missed most
+  existing comparison cards. An empty or partial search is not evidence
+  of absence until the query is checked against a known existing card.
+- **Batch 09 authoring:** A rendered table-of-contents heading such as
+  "etymology" is not the etymology text. If the actual entry is unavailable,
+  omit an unnecessary borrowing-history claim rather than infer it from
+  the katakana spelling or an empty JMdict loan-source list.
+
 - **Batch 08 authoring:** Copy comparison entry IDs from the extracted
   records, not from memory or similar-looking numbers. A correct
   comparison in prose does not verify its numeric citation. Check
