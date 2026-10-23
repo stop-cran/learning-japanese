@@ -95,6 +95,23 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 14 authoring:** An English university label can cross
+  levels of reference. 学部 names a faculty/division, including
+  the undergraduate division contrasted with graduate school;
+  it is not by itself an individual undergraduate or a teaching
+  staff member. Inspect the actual definition, not the raw
+  "undergraduate" gloss alone.
+- **Batch 14 authoring:** An acknowledgment formula's tense and
+  speech act differ from a literal past-event report. In
+  かしこまりました, polite past form accepts a request rather
+  than asserting the work is already finished. English
+  "certainly" does not license truth-asserting uses.
+- **Batch 14 authoring:** The available word types lack a mixed
+  category. Native-first 掛け算 uses `wago` and `mixed-reading`,
+  with native かけ plus voiced on-reading ざん explicitly
+  explained; the existing on-first `kango` convention is not a
+  reason to call both parts on readings.
+
 - **Batch 13 reconciliation:** Distinguish a useful homograph
   clarification from proof that a scoped reading statement denied
   every other word. 帰す/かえす remains the send-home verb while

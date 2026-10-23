@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-13 review-closed.** The target is all 1,812 source rows,
+**Batches 01-13 review-closed; batch 14 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 260 rows are review-closed; none are draft and 1,552 remain pending.
+The first 260 rows are review-closed; 20 are draft and 1,532 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -1711,6 +1711,50 @@ kanji-word pairs. All 3,273 baseline identities, primary readings,
 titles and original exclusion lists remain preserved. This closes
 batch 13, not the full vocabulary expansion or native-speaker
 certification.
+
+## Batch 14: N2:262-N2:281
+
+**Status:** drafted; independent reviews and reconciliation pending.
+
+Scope: 各自, 拡充, 学術, 各地, 拡張, 角度, 学年, 学部,
+格別, 確率, 学力, 掛け算, 可決, 火口, 下降, 重なる,
+重ねる, 飾り, 火山, かしこまりました.
+
+The draft adds **18 articles**. Existing `各地` receives only a
+source-backed N2 field; existing `火山` receives that field and
+a link on its existing 火口 comparison. Their stable identities,
+readings, titles, prior teaching and original exclusions remain
+unchanged. There are now 3,522 word articles.
+
+The [source packet](n2-vocabulary-batch-sources/batch-14.json)
+retains twenty raw rows, twenty complete principal families,
+144 complete comparison families, verified component records and
+ten qualified actual-entry inspection receipts. These receipts
+describe author inspection, not independent reviewer retrieval.
+
+The supplied 火口/かこう entry supports crater and boiler burner;
+the raw source's origin-of-a-fire gloss belongs to separate
+火口/ひぐち. The article retains かこう, recognizes the other
+readings explicitly and does not claim to recover compiler intent.
+The complete 拡張 technical escape/ESC sense remains in provenance
+outside the selected practical enlargement lesson.
+
+学部's undergraduate-division use is supported by the actual
+Seisenban definition, not interpreted as an individual student.
+The exact かしこまりました expression entry supports respectful
+acceptance of requests, not universal truth-asserting "certainly."
+掛け算 explicitly teaches a native-first mixed reading and voiced
+ざん rather than misclassifying both components as on readings.
+
+Three N2 kanji receive reciprocal examples and citations:
+`各`/`各自`, `角`/`角度`, and `算`/`掛け算`. Existing plain-text
+comparisons in `積む`, `級`, `アクセサリー`, and `能力` gain
+links without changing their teaching. Missing written components
+remain in word metadata without speculative new kanji cards.
+
+The original source and all baseline word identities, primary
+readings, titles, easier levels and exclusion declarations remain
+preserved. Draft coverage is not review closure.
 
 ## Final verification
 
