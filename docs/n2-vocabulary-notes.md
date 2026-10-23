@@ -95,6 +95,17 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 22 reconciliation:** Search actual English
+  labels beyond the initially selected Japanese
+  comparison neighborhood. 工夫/知恵 share practical
+  ingenuity; くっつく/べたべた share sticking/clinging;
+  組み立てる/セット share the broad setting-up answer.
+  These direct quiz guards do not assert unrestricted
+  Japanese substitution. Replace 悔しい's ambiguous
+  English "mortified" with frustrated/disappointed;
+  do not turn that clarity fix into an unsupported
+  claim that JMdict's "mortifying" gloss is obsolete.
+
 - **Batch 22 authoring:** A source can give a reading
   and entry ID that agree while its English gloss
   belongs to another homograph. Preserve 工夫's raw

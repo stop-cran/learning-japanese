@@ -2982,7 +2982,7 @@ reciprocal N2 pairs on new articles, plus checked reused
 pairs. These are mechanical counts, not review closure
 or linguistic certification.
 
-Both blind reviewers will receive the same frozen
+Both blind initial reviewers received the same frozen
 snapshot and evidence derivative, with only the
 canonical packet's author quiz rationale removed.
 The derivative's equivalence and hash are recorded
@@ -3120,7 +3120,8 @@ not the full vocabulary expansion.
 
 ## Batch 22: N2:422-N2:441
 
-**Status:** authored; independent reviews pending.
+**Status:** initial reviews reconciled; correction
+confirmations pending.
 
 Scope: 砕く, 砕ける, くたびれる, くだらない, 下る,
 唇, 口紅, くっつく, くっつける, くどい, 句読点,
@@ -3183,6 +3184,72 @@ snapshot, twenty whole articles, three-file related
 patch, mappings and equivalent evidence derivative
 with only the canonical author's quiz rationale
 removed. Reviews run strictly one process at a time.
+
+### Initial independent reviews and reconciliation
+
+Authored commit:
+`c84fdd3ce4b8467016517e5a21219a0dc54ea5da`.
+Fresh sequential native processes used **gpt-6.1-sol**
+and **claude-opus-5.5** on that same snapshot and
+common prompt/evidence. Both exited without edits
+before author reconciliation. Reports:
+[GPT](n2-vocabulary-reviews/batch-22-gpt-initial.md)
+and [Claude](n2-vocabulary-reviews/batch-22-claude-initial.md).
+Both read all twenty new articles, all twenty mappings
+and the scoped three-file patch with changed passages
+in context. Neither read all 269 comparison families.
+Neither had executable Git/hash access.
+
+| Item | Reconciliation |
+| --- | --- |
+| GPT22-F01 / B22-01: 工夫/知恵 ingenuity overlap | Resolved by a direct 知恵 guard on 工夫; the actual titles and complete families support the overlap. |
+| GPT22-F02 / Claude optional: くっつく/べたべた | Resolved by a direct べたべた guard. Physical adherence and interpersonal clinging overlap; no unrestricted substitution rule is inferred. |
+| GPT22-F03: 組み立てる/セット | Resolved by a conservative direct セット guard for the broad setting-up English answer, not by equating furniture assembly with configuring every alarm. |
+| B22-02: 悔しい's "mortified" label | Resolved by frustrated/disappointed in title and heading. A retrieved English adjective entry supports an embarrassment reading; this is a learner-facing ambiguity fix, not proof that JMdict's "mortifying" gloss is obsolete or an absolute division between frustration and humiliation. |
+| Claude optional: くっ付く pronunciation sentence | Resolved by the plain statement that this spelling is still read くっつく. |
+
+The first three corrections add guards only to new
+articles. No baseline metadata/exclusions change.
+The title revision keeps the existing disappointment
+guards and does not add 恥ずかしい merely because
+the removed English label was ambiguous. No source
+mapping, selected/additional sense, level or identity
+changes. The original source packet remains historical,
+with three complete new comparison families and a
+separate correction record appended, not backdated.
+
+Nonblocking expansions not adopted: 汲む's tradition
+inheritance lesson and a separate literary 口惜しい
+discussion. The former complete family was already
+available; the latter distinct-word/register proposal
+was not separately verified and is not promoted into
+teaching or a correctness conclusion. Claude
+found no need for a punctuation/dividing or
+water-drawing/picture-drawing guard based only on
+English substrings or related concepts.
+
+Model-diversity signal is useful but bounded. Shared
+工夫/知恵 is one defect, not two. The clinging guard
+appears in both reports, including Claude's Optional
+section, so it is not GPT-unique. GPT uniquely supplied
+the adopted 組み立てる/セット guard; Claude uniquely
+supplied the adopted 悔しい title-ambiguity fix and
+pronunciation-sentence simplification. This sample is
+not a general model ranking. Claude's inference that
+omission from selected evidence proves the author
+"never considered" a pair is not independently
+established and receives no additional discovery credit.
+
+GPT independently inspected the cited Japanese public
+bodies for its findings. Claude did not independently
+retrieve those Japanese entries; its English-dictionary
+access was mixed. Author reconciliation read five
+complete extracted families and the actual four
+comparison cards. A first simplified Wiktionary fetch
+and a first raw footer range were not lexical
+verification; the subsequent actual English adjective
+body was inspected. No executed app draw, measured
+frequency or native-speaker certification is claimed.
 
 ## Final verification
 
