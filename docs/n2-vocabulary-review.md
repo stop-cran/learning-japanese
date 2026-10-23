@@ -2049,7 +2049,7 @@ full vocabulary expansion.
 
 ## Batch 16: N2:302-N2:321
 
-**Status:** initial correction confirmed; narrow follow-through pending.
+**Status:** closed after initial, correction and follow-through review.
 
 Scope: 学科, 学会, 楽器, 学級, 担ぐ, 括弧, 活字, 活躍,
 活力, 仮定, 過程, 課程, 仮名, 仮名遣い, 鐘, 加熱,
@@ -2241,6 +2241,51 @@ to establish that from the linguistic patch is a disclosed
 review limit, not an uncommitted-manifest finding. Neither
 reviewer executed Git, extraction, hashing, the app or its
 manifest generator.
+
+The same sessions then independently reviewed the bounded
+follow-through at `2ccbec538c3ee9d5aa99192fc34a4642cd60a60e`,
+directly after the first correction. The
+[GPT follow-through](n2-vocabulary-reviews/batch-16-gpt-followthrough.md)
+and [Claude follow-through](n2-vocabulary-reviews/batch-16-claude-followthrough.md)
+read all three full cards, both complete new families, the
+relevant principal sense, both appended rationales and the
+actual patch including its generated manifest change. Both
+find the changed card and packet additions CLEAN in all three
+facets, without an actionable defect or consequential
+unresolved claim. Claude also checks the current public
+Jisho display, explicitly not a replacement for the pinned
+dictionary extraction.
+
+Claude withdraws its earlier grammatical-class hedge: the
+English difficulty labels do not identify grammatical class,
+and the adopted two guards resolve its confirmation-stage
+lead. Its optional count-wording polish is not adopted:
+the earlier thirteen-family/twelve-pair descriptions identify
+the first correction, while the appended follow-through
+explicitly records the fifteen-family/fourteen-pair totals.
+These are stage-specific provenance, not conflicting final
+counts or a new linguistic issue.
+
+The author authenticates all three frozen commits and direct
+parents, historical and current file hashes, all three prompt
+hashes and actual patches, and six actual-model/zero-edit
+receipts. Removing only the two appended families, two pair
+records and follow-through note reconstructs the first
+correction packet exactly. All twenty authored contexts and
+twelve related content files match their appropriate
+reviewed snapshots. Both final processes ran sequentially,
+delegated nothing and exited without file edits. Their
+file-only Git/hash and unexecuted-app limits remain explicit;
+Claude marks manifest hash recomputation UNVERIFIED rather
+than treating textual agreement as independent regeneration.
+
+Cumulative coverage is **320 closed, 0 draft, 1,492 pending
+and 0 unresolved** rows, mapped to 315 distinct articles:
+289 new and 26 reused. There are 3,562 word articles and
+67 primary-form reciprocal N2 kanji-word pairs. All 3,273
+baseline identities, readings, titles, easier sourced levels
+and original exclusions remain preserved. This closes
+batch 16, not the full vocabulary expansion.
 
 ## Final verification
 
