@@ -51,6 +51,8 @@ The 2026-10-22 classification pass established these reusable authoring checks:
 - **Separate the elicited skill from its surroundings.** A supplied compound relation need not raise an explicit
   object-marker or noun-linking drill. Glossed interpretation labels are not vocabulary prerequisites. Keep natural
   examples and support unfamiliar words rather than rewriting the language to fit a level.
+  Defined response labels also do not import an absent neighboring construction: the
+  [necessity review](grammar-necessity-instructions-sources.json) retained three isolated N5 controls inside its N4 family.
 - **Record the strength of the mapping.** Distinguish an exact entry from an editorial semantic-family extension.
   Document primary/secondary disagreements and overlapping entries within one reference. When the primary lacks the
   relevant sense, cite an applicable secondary entry or leave the level absent; do not borrow a neighboring sense's label.
@@ -65,6 +67,7 @@ The batch records contain the exact sections and qualifications used.
 
 | Sources and inspected seed pages | Useful starting point for | Existing batch records |
 | --- | --- | --- |
+| [Bunpro: imperative forms](https://bunpro.jp/grammar_points/命令形), [Tofugu: commands](https://www.tofugu.com/japanese-grammar/verb-command-form-ro/), [Daijisen: よい](https://www.weblio.jp/content/良い) | Direction morphology, contextual force and evaluative predicates. Check exact-use spelling support rather than multiplying every merged dictionary spelling across every sense; do not import a universal command-tone or obligation-strength ladder. | [Necessity, advice and instructions](grammar-necessity-instructions-sources.json) |
 | [TUFS: intentions](https://www.coelang.tufs.ac.jp/mt/ja/gmod/contents/explanation/066.html), [Bunpro: 予定](https://bunpro.jp/grammar_points/よていだ), [Japan Foundation: changed abilities and habits](https://www.kyozai.jpf.go.jp/kyozai/material/BTS00086/ja/render.do) | Volitional thought, verb/noun planning frames and changed routines. Inspect actual charts and examples; do not import fixed person/duration bans, a booking requirement, or potential-only attachment for habitual changes. | [Volition, plans and goals](grammar-plans-goals-sources.json) |
 | [Tae Kim: embedded questions](https://guidetojapanese.org/learn/grammar/question), [IMABI: indirect questions](https://imabi.org/the-particle-ka-%e3%81%8b-iii-indirect-question/), [Bunpro: reported instructions](https://bunpro.jp/grammar_points/ようにいう) | Inner question versus outer message, bare-か polar questions, and participant roles within a stated clause scope. Inspect intact Japanese and alternative groupings; do not impose a universal だか ban, compulsory どうか, or a rule that every visible が identifies the outer requester. | [Embedded questions, reports and noticing](grammar-reports-questions-sources.json) |
 | [Bunpro: とおもう](https://bunpro.jp/grammar_points/とおもう), [Tae Kim: possibility](https://guidetojapanese.org/learn/grammar/certainty), [IMABI: はず](https://imabi.org/planning-obligation/) | Thought time versus content time, nominal attachment, possible negative propositions, and negative expectation versus ruling out. Inspect intact Japanese examples and qualify conflicting shortcuts; do not import permanence/person bans, numerical certainty or a rule that all negative expectations require はずがない. | [Thinking, possibility and expectation](grammar-judgment-expectation-sources.json) |
@@ -109,6 +112,9 @@ on a listed site, or reject a relevant source merely because it is absent here.
 - **Weblio:** isolate the named dictionary from adjacent expression dictionaries and automatically generated examples.
   The [あげく record](grammar-expectations-sources.json) uses Daijisen's spelling heading; it does not establish equal
   frequency for the accepted spellings.
+  A merged headword is not a spelling-by-sense cross-product: the
+  [necessity review](grammar-necessity-instructions-sources.json) left particular marked evaluative spellings
+  unverified. Narrow the supported answer claim or obtain same-use evidence; do not invent a general spelling ban.
 - **Tae Kim:** inline Japanese can disappear in simplified extraction. Inspect the actual HTML/body text before evaluating
   an incomplete example; see the [degree/extent record](grammar-degree-extent-sources.json).
 - **Grammar indexes:** follow pagination before claiming list coverage. An index entry supports its stated curriculum

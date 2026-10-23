@@ -35,6 +35,42 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Necessity, advice and instructions: independent review and reconciliation (2026-10-23 UTC)
+
+**Snapshot and scope:** `d1500e67968e2bec43e6c72b28c1a2484a70cf51` plus
+[issue #29](https://github.com/stop-cran/learning-japanese/issues/29). A fresh independent reviewer read
+the complete new article, four bridge insertions with necessary context, all 44 complete exercise objects,
+271 initial accepted renderings, 88 option/feedback branches, 61 lexical spans and 197 exclusions.
+It checked levels, per-facet variation, actual sources, exact reuse and complete-object preservation.
+Actual model identity was unavailable and was not inferred. A source-URL lookup incidentally exposed an
+older foundations review; that report was not used as evidence. The
+[ledger](docs/grammar-necessity-instructions-sources.json) preserves this limitation and both review stages.
+
+**Findings and reconciliation:** initial correctness was **NEEDS FIX**; scoped coverage and comprehensibility
+were **CLEAN**. Minor **NI-IR-001** identified three isolated N5 prohibition/request interpretations labeled N4.
+Defined response labels did not import the absent neighboring N4 construction. Relabel only those tasks,
+split exact source mappings and align counts; their complete lexical records remain unchanged.
+Minor **NI-IR-002** left exact-use support for marked evaluation spellings unverified. Remove only the 54
+unestablished 佳/吉/宜 renderings from six answer arrays, state the checked spelling scope, and rebind their
+six lexical records. Retain ordinary models, supported alternatives and both negative gladness links.
+This narrows the current claim rather than proving the excluded spellings universally wrong.
+The original reviewer inspected all nine complete changed objects, six records and dependent diffs:
+both findings are **resolved**, retaining their original Minor severity. Final bounded verdicts are
+**CLEAN/CLEAN/CLEAN**, with no new findings or optional suggestions. The historical exact-use uncertainty
+remains explicit; no newly discovered contextual evidence or general spelling ban is claimed.
+
+**Coverage and reflection:** 41 N4 tasks and three N5 controls comprise 32 formation/assembly tasks and
+twelve interpretations, in ten groups with nineteen facets, fifteen soft recommendations and no prerequisites.
+There are 217 final accepted renderings and fifteen shared context-key strings, not independent conversations
+or mastery measures. All 65 preceding complete sets and 1533 preceding lexical records remain unchanged;
+six reused groups retain forty members in their original owners. All new Japanese prompts, option objects,
+vocabulary payloads and group metadata are unchanged by the repairs. Corpus coverage reaches 1577 exercises
+in 66 sets, including 646 N4 and 590 N5; vocabulary coverage is 1268/1577, with 309 pending.
+Regroup the existing complete-task and contextual-spelling checks in the source guide, using these observed
+failures rather than adding a new review layer or quota. Content/vocabulary checks, 151 focused regressions
+and a fresh non-skipped Android importer pass. No native-speaker, device, official-JLPT or learning-outcome
+certification is claimed.
+
 ## Volition, plans and goals: independent review and reconciliation (2026-10-23 UTC)
 
 **Snapshot and scope:** `fe9dcac90c867dc1a72bd22bf9c77dadece0f7fa` plus

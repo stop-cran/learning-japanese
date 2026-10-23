@@ -286,6 +286,10 @@ every dictionary-form example is wrong.
 Advice with **べき**, **ことだ** and other expressions has overlapping territory, with context-dependent differences;
 learn the whole sentence rather than equating every English "should" with one construction.
 
+For the N4 continuation, [necessity, advice and instructions](necessity-advice-and-instructions.md)
+adds たらどう suggestions and separates advice, obligations, commands and retrospective evaluations.
+The existing positive/negative ほうがいい exercises retain their original owner.
+
 ### Intention, expectation, and what ought to happen
 
 English "supposed to" can hide different meanings. **つもり** can state what someone intends an action or object to mean;
@@ -1478,6 +1482,10 @@ A personal plan and a practical requirement answer different questions. The next
 among **つもりだ**, **ことはない**, **必要ない／必要はない／必要がない**, and **ほかない／しかない**,
 with the complete ending missing after a dictionary-form verb.
 **必要（ひつよう）** means need or necessity.
+
+For the basic **noun + が必要** and **verb + 必要がある** attachment frames, start with
+[necessity, advice and instructions](necessity-advice-and-instructions.md#2-something-is-necessary-doing-something-is-necessary).
+The harder mixed contrast below remains a separate follow-up, not newly relabeled N4 practice.
 
 | Account | Example | Meaning |
 | --- | --- | --- |

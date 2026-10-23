@@ -93,6 +93,9 @@ The existing [positive and negative advice lesson](koto-wake-and-formal-nouns.md
 already practises ～たほうがいい／～ないほうがいい; use that material rather than memorize a second set of identical cards.
 
 The later **～なくてもいい** means an action is not required; that is not a prohibition.
+Continue with [necessity, advice and instructions](necessity-advice-and-instructions.md) for focused
+N4 practice of that distinction, necessity and obligation forms, commands, suggestions, regrets and relief.
+It reuses the introductory requests/rules here rather than replacing their exercises.
 The advanced [no-need comparison](koto-wake-and-formal-nouns.md#ほか-exclusion-and-no-other-option)
 also distinguishes unnecessary from impossible or unavailable.
 These are onward links, not hidden requirements of the introductory scored exercises here.

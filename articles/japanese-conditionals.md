@@ -225,6 +225,10 @@ For context exercises, several completions may be accepted. For example, an obse
 
 This article covers the basic conditional comparison. Set expressions such as **〜ばよかった**, **〜たらどう**, **〜といい**, **〜なければならない**, and **〜ば〜ほど** have additional functions; recognizing a familiar ending does not make their full meanings interchangeable.
 
+For focused **なければ／ないと obligations, たらどう suggestions and ばよかった regrets**,
+continue to [necessity, advice and instructions](necessity-advice-and-instructions.md).
+That companion also contrasts a preferred past alternative with being glad about the actual course.
+
 ## Sources and scope
 
 The explanations and examples here are original teaching material, not quotations or a complete account of every dialect and register.

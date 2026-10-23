@@ -250,7 +250,8 @@ The [appearance/impressions ledger](grammar-appearance-impressions-sources.json)
 The [judgment/expectation ledger](grammar-judgment-expectation-sources.json) adds 36 N4 tasks in one set.
 The [reports/questions ledger](grammar-reports-questions-sources.json) adds 40 N4 tasks in one set.
 The [volition/plans ledger](grammar-plans-goals-sources.json) adds 25 N4 tasks in one set.
-Current practice is 1533 exercises: 587 N5 and 605 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [necessity/instructions ledger](grammar-necessity-instructions-sources.json) adds 41 N4 tasks and three N5 controls in one set.
+Current practice is 1577 exercises: 590 N5 and 646 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -437,6 +438,13 @@ and eight interpretations. Thirteen shared context keys include paired thought a
 conversations. Existing intentions, invitations, goals, changed abilities/habits, maintained practice and desires
 keep their complete objects and owners. Wishes/advice, final wishes and manner/purpose-plus-desire are explicitly
 unscored recognition; harder decision and purpose follow-ups retain their existing levels.
+The [necessity/instructions installment](grammar-necessity-instructions-sources.json) adds 44 annotated prompts (41 N4 and three N5),
+reaching **1577 exercises in 66 files** and **1268/1577** reviewed, with 309 still pending.
+Ten groups contain nineteen facets, fifteen soft recommendations and no prerequisites: 32 form/assembly/expansion
+tasks and twelve interpretations. Distinct tasks include direct versus question/reply policies, actual contraction
+origins, command/request framing and positive/negative retrospective courses. Existing requests/rules, advice and
+favor groups retain their complete objects and owners. Noun/adjective gladness, shortened directions and suggestions
+are explanation/recognition support; instruction-seeking questions and harder no-need comparisons are not new targets.
 The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the
