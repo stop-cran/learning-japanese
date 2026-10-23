@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-07 review-closed; batch 08 drafted; expansion in progress.** The target is all 1,812 source rows,
+**Batches 01-08 review-closed; expansion in progress.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 140 rows are review-closed; 20 are drafted and 1,652 remain pending.
+The first 160 rows are review-closed; none are drafted and 1,652 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -800,8 +800,7 @@ whole-corpus or native-speaker certification.
 
 ## Batch 08: N2:142-N2:161
 
-**Status:** initial reviews archived and supported corrections authored;
-bounded confirmation pending.
+**Status:** closed after independent initial reviews, corrections and bounded confirmation.
 
 Scope: 偉い, 宴会, 園芸, 演劇, 円周, 遠足, 延長, 煙突,
 追い掛ける, 追い越す, オイル, 応援, 王女, 応ずる, 応接,
@@ -895,9 +894,44 @@ GitHub-raw lookups did not supply evidence. Neither file-only reviewer
 executed Git, hash verification or app checks. Unequal retrieval and
 comparison depth limit the comparison despite identical access.
 
-These are author adjudications and corrections, not confirmation
-closure. Both reviewers must still assess all six changed card
-contexts and the actual provenance diff against their own reports.
+### Bounded confirmation and closure
+
+Correction commit `5cabdf7ea6ee50bf59bc1a743c76f7797dfcbd6f`
+directly follows the authored snapshot. The frozen confirmation
+included the actual six-card diff and all three changed provenance
+files, not only the app-facing changes. The correction packet retains
+the original evidence and adds the three complete comparison families
+and four actual-entry receipts described above.
+
+The verbatim [GPT confirmation](n2-vocabulary-reviews/batch-08-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-08-claude-confirmation.md)
+are CLEAN on all three facets for every changed card and the
+provenance correction. Both read all five comparison cards, assess
+all six pairs and the particle clarification, and reconcile their
+own initial findings as resolved. Both independently retrieved the
+four new external entries and distinguished the dictionary sections
+that actually rendered. No regression or consequential unresolved
+claim was identified in the assigned scope.
+
+Fresh processes of the original model families again ran strictly
+sequentially, each with only its own initial report and the same
+correction scope/evidence. Usage receipts verify the actual models
+and no edits. The author checked the unchanged clean worktree and
+HEAD between runs. The reviewers' commit/hash and unexecuted-app
+limits remain explicit; reading a supplied hash is not recomputing it.
+
+Claude's possible additional body contrasts for 延長/続き or 往復/便り
+are optional expansion, not a remaining defect. The existing scoped
+teaching and supported quiz guards require no further change.
+
+The deterministic corrected manifest contains 6,041 files, including
+396 images and 201 scene catalogs; content version `d8c20b214da8a2ac`.
+All 3,273 baseline identities, readings, titles and exclusions are
+preserved. Cumulative coverage is **160 closed, 0 draft, 1,652 pending
+and 0 unresolved** rows, mapped to 159 articles (140 new and nineteen
+reused). There are 3,413 word articles and 33 new reciprocal N2
+kanji-word pairs across these eight batches. This closure does not
+certify the whole corpus or native-speaker naturalness.
 
 ## Final verification
 
