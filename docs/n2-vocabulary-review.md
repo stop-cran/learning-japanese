@@ -2438,15 +2438,16 @@ vocabulary expansion.
 
 ## Batch 18: N2:342-N2:361
 
-**Status:** drafted; independent reviews not yet run.
+**Status:** independently reviewed and corrected; bounded confirmations pending.
 
 Scope: 代る mapped to 代わる, 間隔, 換気, 感激, 関西,
 鑑賞, 感ずる, 間接, 乾燥, 感想, 観測, 寒帯, 官庁,
 勘違い, 缶詰, 乾電池, 関東, 観念, 乾杯 and 看板.
 
 This batch adds **19 articles** and reuses 乾燥 for its
-explicit drying/dryness senses, adding only the sourced N2
-level. The [packet](n2-vocabulary-batch-sources/batch-18.json)
+explicit physical drying/dryness and figurative insipidity
+senses, adding only the sourced N2 level.
+The [packet](n2-vocabulary-batch-sources/batch-18.json)
 retains twenty exact source rows, twenty complete principal
 families, 109 complete comparison families, verified component
 evidence and ten qualified author-inspection receipts.
@@ -2487,6 +2488,70 @@ titles and original exclusions are preserved; fifteen
 previously unclassified baseline words now have explicit
 source-backed N2 assignments. These are mechanical counts,
 not independent linguistic certification or review closure.
+
+### Initial reviews and evidence-based reconciliation
+
+The blind initial reviews examined authored commit
+`b002896e6b26b58dd7bd5b73194d73ec834c8997`.
+[GPT](n2-vocabulary-reviews/batch-18-gpt-initial.md)
+actually used **gpt-6.1-sol**; [Claude](n2-vocabulary-reviews/batch-18-claude-initial.md)
+actually used **claude-opus-5.5**. They ran strictly
+sequentially and exited without file edits. Each reviewed
+all nineteen new articles, the twenty mappings and the
+eighteen-file related diff; comparison-family inspection
+was selective, and Claude did not fully read the component
+records. Their commit/hash claims are receipt-supported,
+not independently executed Git checks.
+
+| Finding | Adjudication and bounded correction |
+| --- | --- |
+| GPT-01: 感激/感じる | Resolved: add the direct guard. Complete 1212260 sense 2 includes being moved, touched or impressed; the feel/sense title does not restrict the quiz to physical sensing. |
+| GPT-02 / Claude F3: 観測/予報 and 占う | Resolved: add both direct guards. Complete 1543630 and 1389430 include prediction/forecasting, including 占う's nonsupernatural sense 2. Existing 予想/予測 guards are not transitive. |
+| GPT-03 / Claude F2: 換気/干す | Resolved: add the direct guard for the unqualified English air-out label. This is not unrestricted Japanese interchangeability. |
+| GPT-04: 看板/模様 | Resolved: add the direct appearance-label guard. A situation's appearance and an outward show remain distinct Japanese uses. |
+| Claude F1: 代わる demonstrations | Resolved in the correction: add original role-replacement, driving-takeover and seat-switch examples for the selected senses and alias backlinks. Digital Daijisen's actual raw-HTML entry verifies the driving を construction; the full examples remain original, not corpus quotations. |
+| Claude F4: opaque 換気 classification sentence | Resolved: delete the sentence rather than introducing an unnecessary new transitivity rule. |
+| Claude F5: 感ずる and 感想/気味 | Resolved: add both direct guards. Complete 1222640 sense 1 is the noun きみ, sensation/feeling; neither suffix ぎみ nor market-reading きあじ supplies this evidence. 感想's principal family genuinely includes feelings. |
+| Claude F6: 看板/兆候 | Resolved: add the direct sign/indication-label guard. Low shared-tag probability does not remove fallback ambiguity; a signboard is not thereby a symptom or omen. |
+
+The packet appends **seven complete comparison families**
+for five forms after both pinned source hashes were checked.
+It retains the original rows, mappings, principal families,
+component evidence, 109 initial comparison families, ten
+initial inspections and initial quiz declarations/rationale
+without silently backdating the corrections.
+Two additional qualified inspection records distinguish the
+actual Daijisen entry from Weblio's incomplete simplified
+extraction, and the Culture Council's 2014 main entry from
+its older reference appendix. Neither supports a universal
+particle rule or proves the full original seat sentence
+corpus-attested.
+
+The reused 乾燥 article already explicitly covers insipidity
+as well as physical drying. Pinned sense 2 is **insipidity**,
+not another dryness sense: Claude's detailed reuse verdict
+is correct. Shorthand in the initial reports' scope/reuse
+summaries does not alter that identity or justify changing
+the baseline teaching.
+
+### Model-diversity usefulness
+
+Compared across the whole reports, both models identified
+換気/干す and 観測/予報/占う. GPT uniquely supplied the
+supported 感激/感じる and 看板/模様 leads. Claude uniquely
+supplied the missing 代わる demonstrations, the opaque
+換気 sentence, and the 気味 and 兆候 guard leads. All were
+adjudicated against exact meanings and labels, not accepted
+by vote. This is complementary usefulness on this sample,
+not a general model ranking.
+
+Optional extra links from non-N2 components, more 感ずる
+register teaching, 関西学院 and a poster comparison remain
+nonblocking expansion. Failed or irrelevant dictionary
+fetches and search pages were not counted as verification.
+No measured frequency, executed app draw or native-speaker
+certification is claimed. Bounded confirmations remain
+pending, so the twenty source rows are still draft.
 
 ## Final verification
 

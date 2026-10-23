@@ -95,6 +95,24 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 18 reconciliation:** A replacement family with
+  several selected senses needs demonstrations of the role
+  change and place exchange promised by alias backlinks,
+  not only representation. Match a particle explanation
+  to an actual construction: Daijisen attests 運転を代わる,
+  not a universal rule for every intransitive verb.
+- **Batch 18 reconciliation:** An apparently empty simplified
+  dictionary fetch can omit a real entry. Inspect the actual
+  lexical section when available; a footer, search page or
+  challenge is not verification. Keep the receipt's scope
+  narrower than the full original examples.
+- **Batch 18 reconciliation:** Check feeling, prediction,
+  appearance and sign labels against ordinary secondary
+  senses and fallback choices. 気味's noun きみ is distinct
+  from suffix ぎみ and market-reading きあじ. Preserve the
+  initial evidence and append corrections rather than
+  silently rewriting the reviewed snapshot's rationale.
+
 - **Batch 18 authoring:** Distinguish dictionary frameworks
   from invented conjugation. Seisenban analyzes 感ずる as
   サ変 and 感じる as its ichidan development; JMdict's
