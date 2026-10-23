@@ -35,6 +35,40 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Embedded questions and reports: independent review and reconciliation (2026-10-23 UTC)
+
+**Snapshot and scope:** `910512ae8fbdacebeff2e9c9f3b772ed64b8abe2` plus
+[issue #27](https://github.com/stop-cran/learning-japanese/issues/27). A fresh independent reviewer read
+the complete new article, four bridge deltas with necessary context, and all 40 complete exercises:
+initially 118 accepted strings, 88 displayed options, 75 lexical spans and 176 exclusions. It also checked
+grouping, complete-task levels, sources, exact reuse and preservation. Actual model identity was unavailable,
+not inferred. The reviewer disclosed incidental exposure to historical REVIEW headings and short summary
+fragments during a locating search; no old report or generation script was opened. The
+[ledger](docs/grammar-reports-questions-sources.json) preserves the original findings, sources and reconciliation.
+
+**Findings and reconciliation:** initial scoped coverage was **CLEAN**; correctness and comprehensibility
+were **NEEDS FIX**. Minor **RQ-IR-001** identified four omitted adjective-negative spelling renderings in
+one task; add them without changing its model, options or grammatical operation. Minor **RQ-IR-002**
+identified an alternative clause grouping in two participant questions. Give all four paired role tasks
+the same visible two-person/addressee-own-action scope without assigning either name a role in English;
+align all feedback and explain the alternative grouping in the article. Five context records are rebound.
+Prompts, lexical payloads, exclusions, option labels, groups and the other 35 complete objects remain unchanged.
+The original reviewer reread the full revised article and five changed tasks, checked both actual diffs
+and preservation evidence, and resolved both findings at their original Minor severities.
+Final bounded verdicts are **CLEAN/CLEAN/CLEAN**, with no new findings or optional suggestions.
+The four unchanged bridges and remaining tasks retain the original bounded assessment.
+
+**Coverage and reflection:** 24 formation tasks and 16 interpretations in five groups, twenty facets and
+ten soft recommendations, with no prerequisites; 122 final accepted strings. Eleven shared context-key
+strings include paired material, not forty independent conversations. All 63 preceding complete sets and
+1468 inventory records remain unchanged, including six reused groups with fifty members in their original
+owners. Corpus coverage reaches 1508 exercises in 64 sets, including 580 N4; vocabulary coverage is
+1199/1508, with 309 pending. Extend the existing literal-completion lesson with the observed clause-scope
+failure and add qualified source navigation; the spelling finding reinforces the existing recognition
+check without a duplicate rule. Content/vocabulary checks, 151 focused regressions and a fresh non-skipped
+Android importer pass. No native-speaker, device, exhaustive discourse or unrestricted-mastery certification
+is claimed.
+
 ## Thinking, possibility and expectation: independent review and reconciliation (2026-10-23 UTC)
 
 **Snapshot and scope:** `f14e4a849ecab25a35cb0fad7da191fc78497cee` plus
@@ -1047,6 +1081,10 @@ The [は／が／も review record](docs/grammar-topic-sources.json) grounds the
   A following noun does not by itself force attributive modification: two [appearance tasks](docs/grammar-appearance-impressions-sources.json)
   allowed そうに to reach a later predicate across the subject (AP-IR-001). Make the intended noun scope visible
   when that is the actual operation; do not reject the adverbial completion as generally ungrammatical.
+  Case markers also need clause scope: the [reported-instruction review](docs/grammar-reports-questions-sources.json)
+  found that 学生が could belong inside the requested clause instead of identifying the requester (RQ-IR-002).
+  Supply an answer-independent scope premise or separate the clauses; do not infer every outer role from a particle
+  while silently rejecting another grammatical grouping.
   For interpretation labels, reject the actual wrong reading rather than affirmatively defining it: the noun-description
   review found four wrong-scope rationales that sounded like validation of the selected analysis
   ([record](docs/grammar-n5-descriptions-sources.json), IND-DESC-002; regroup).

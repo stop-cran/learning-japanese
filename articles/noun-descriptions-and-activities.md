@@ -175,6 +175,10 @@ The broader の／こと choice, perception contrasts and explanatory の／ん 
 [noun-based grammar](koto-wake-and-formal-nouns.md#a-particularly-important-neighbor-の).
 Those harder selection tasks keep their existing levels and are not part of this N5 contrast.
 
+The N4 [embedded questions and reports companion](embedded-questions-and-reports.md#4-package-content-then-say-what-happens-to-it)
+extends the noun-like-clause idea to content and noticing. It does not reclassify these N5 preference/skill tasks
+or make every nominalized clause a report of someone else's words.
+
 ## 6. Recognize a limited subject が／の alternation
 
 Inside some noun-modifying clauses, subject が can be replaced by の:

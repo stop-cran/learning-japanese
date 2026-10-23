@@ -43,6 +43,10 @@ In the second example, the object of knowledge is the **fact itself**, not neces
 
 Thinking of こと as "the fact that" can help with factual clauses, but that translation does not fit every use. In 本を読むこと, "reading books" or "the activity of reading books" is more appropriate. Nominalization does not by itself assert that an event actually happened.
 
+For a focused N4 sequence, see [embedded questions, reports and noticing](embedded-questions-and-reports.md).
+It distinguishes nominalizing ということ from automatic hearsay, and accepts both fitting の and こと complements
+before に気が付く. The existing activity/perception exercises remain here in their original group.
+
 ## わけ: a reason, or a situation understood through reasoning
 
 ### The ordinary noun meaning

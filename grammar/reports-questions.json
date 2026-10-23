@@ -1,0 +1,2547 @@
+{
+  "schemaVersion": 1,
+  "id": "reports-questions",
+  "title": "Embedded questions, reports and noticing",
+  "article": "articles/embedded-questions-and-reports.md",
+  "constructions": [
+    {
+      "id": "wh-nonpast",
+      "label": "Nonpast predicate in an embedded information question"
+    },
+    {
+      "id": "wh-past",
+      "label": "Past predicate in an embedded information question"
+    },
+    {
+      "id": "outer-statement",
+      "label": "Statement about the speaker's knowledge"
+    },
+    {
+      "id": "outer-request",
+      "label": "Request for the information"
+    },
+    {
+      "id": "whether-positive",
+      "label": "Positive proposition left open"
+    },
+    {
+      "id": "whether-negative",
+      "label": "Negative proposition left open"
+    },
+    {
+      "id": "question-content",
+      "label": "Question seeking a missing detail"
+    },
+    {
+      "id": "question-polar",
+      "label": "Question whether a proposition holds"
+    },
+    {
+      "id": "report-nonpast",
+      "label": "Nonpast content in a report"
+    },
+    {
+      "id": "report-past",
+      "label": "Past content in a report"
+    },
+    {
+      "id": "report-received",
+      "label": "Speaker presents information they received"
+    },
+    {
+      "id": "report-general",
+      "label": "Impersonal report of what people say"
+    },
+    {
+      "id": "content-nonpast",
+      "label": "Nonpast proposition before to-iu-koto"
+    },
+    {
+      "id": "content-past",
+      "label": "Past proposition before to-iu-koto"
+    },
+    {
+      "id": "notice-positive",
+      "label": "Notice a positive state"
+    },
+    {
+      "id": "notice-negative",
+      "label": "Notice a negative state"
+    },
+    {
+      "id": "instruction-do",
+      "label": "Report a request to do something"
+    },
+    {
+      "id": "instruction-refrain",
+      "label": "Report a request not to do something"
+    },
+    {
+      "id": "instruction-issuer",
+      "label": "Person issuing the reported instruction"
+    },
+    {
+      "id": "instruction-actor",
+      "label": "Person asked to act or refrain"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "wh-questions",
+      "label": "Embed an information question and read the outer message",
+      "constructions": [
+        "wh-nonpast",
+        "wh-past",
+        "outer-statement",
+        "outer-request"
+      ]
+    },
+    {
+      "id": "whether",
+      "label": "Embed a polar question and distinguish what is being asked",
+      "constructions": [
+        "whether-positive",
+        "whether-negative",
+        "question-content",
+        "question-polar"
+      ]
+    },
+    {
+      "id": "reports",
+      "label": "Attach reported content and distinguish reporting perspectives",
+      "constructions": [
+        "report-nonpast",
+        "report-past",
+        "report-received",
+        "report-general"
+      ]
+    },
+    {
+      "id": "content-noticing",
+      "label": "Package content and notice a positive or negative situation",
+      "constructions": [
+        "content-nonpast",
+        "content-past",
+        "notice-positive",
+        "notice-negative"
+      ]
+    },
+    {
+      "id": "instructions",
+      "label": "Report requested actions and track the participants",
+      "constructions": [
+        "instruction-do",
+        "instruction-refrain",
+        "instruction-issuer",
+        "instruction-actor"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "reports-questions-book-purchase-embed-nonpast",
+      "jlpt": 4,
+      "target": "wh-nonpast",
+      "relationship": "wh-questions",
+      "prompt": "友達が何を____知っています。",
+      "translation": "Base predicate: 買います (買う（かう）, buy). Convert it to the ordinary short plain form, preserve its tense and polarity, and add the single particle か to embed the information question. Enter the converted predicate plus か, without explanatory の, an added case particle or extra words.",
+      "evidence": "A polite-to-plain conversion plus question embedding; the unknown object and unknown actor use different inner case frames.",
+      "explanation": "買います becomes 買う; 買いました becomes 買った, including the godan past sound change. か closes the inner question. The outer 知っています says the speaker knows its answer; the whole sentence is not itself a request just because it contains か.",
+      "answer": "wh-nonpast",
+      "acceptedAnswers": [
+        "買うか",
+        "かうか"
+      ],
+      "options": [
+        {
+          "id": "wh-nonpast",
+          "label": "買うか",
+          "rationale": "Preserves the supplied tense and embeds the question. 買います becomes 買う; 買いました becomes 買った, including the godan past sound change."
+        },
+        {
+          "id": "wh-past",
+          "label": "買ったか",
+          "rationale": "Changes the supplied predicate's tense. That could express a different question, not this conversion."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "73e99a5213a9dc73e55f641ce29f1143dd2836d04ddb47e21c46960dd31928a1",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-book-purchase-embed-past",
+      "jlpt": 4,
+      "target": "wh-past",
+      "relationship": "wh-questions",
+      "prompt": "友達が何を____知っています。",
+      "translation": "Base predicate: 買いました (買う（かう）, buy). Convert it to the ordinary short plain form, preserve its tense and polarity, and add the single particle か to embed the information question. Enter the converted predicate plus か, without explanatory の, an added case particle or extra words.",
+      "evidence": "A polite-to-plain conversion plus question embedding; the unknown object and unknown actor use different inner case frames.",
+      "explanation": "買います becomes 買う; 買いました becomes 買った, including the godan past sound change. か closes the inner question. The outer 知っています says the speaker knows its answer; the whole sentence is not itself a request just because it contains か.",
+      "answer": "wh-past",
+      "acceptedAnswers": [
+        "買ったか",
+        "かったか"
+      ],
+      "options": [
+        {
+          "id": "wh-past",
+          "label": "買ったか",
+          "rationale": "Preserves the supplied tense and embeds the question. 買います becomes 買う; 買いました becomes 買った, including the godan past sound change."
+        },
+        {
+          "id": "wh-nonpast",
+          "label": "買うか",
+          "rationale": "Changes the supplied predicate's tense. That could express a different question, not this conversion."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "73e99a5213a9dc73e55f641ce29f1143dd2836d04ddb47e21c46960dd31928a1",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-bread-eater-embed-nonpast",
+      "jlpt": 4,
+      "target": "wh-nonpast",
+      "relationship": "wh-questions",
+      "prompt": "だれがパンを____知っています。",
+      "translation": "Base predicate: 食べます (食べる（たべる）, eat). Convert it to the ordinary short plain form, preserve its tense and polarity, and add the single particle か to embed the information question. Enter the converted predicate plus か, without explanatory の, an added case particle or extra words.",
+      "evidence": "A polite-to-plain conversion plus question embedding; the unknown object and unknown actor use different inner case frames.",
+      "explanation": "食べます becomes 食べる; 食べました becomes 食べた, without the godan った change. か closes the inner question. The outer 知っています says the speaker knows its answer; the whole sentence is not itself a request just because it contains か.",
+      "answer": "wh-nonpast",
+      "acceptedAnswers": [
+        "食べるか",
+        "たべるか"
+      ],
+      "options": [
+        {
+          "id": "wh-nonpast",
+          "label": "食べるか",
+          "rationale": "Preserves the supplied tense and embeds the question. 食べます becomes 食べる; 食べました becomes 食べた, without the godan った change."
+        },
+        {
+          "id": "wh-past",
+          "label": "食べたか",
+          "rationale": "Changes the supplied predicate's tense. That could express a different question, not this conversion."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "26922a68bcbb3e808644e1f899e5647c8794ffb5af6f09755fb063fd3a5184b0",
+        "spans": [
+          {
+            "start": 3,
+            "end": 5,
+            "text": "パン",
+            "reading": "ぱん",
+            "headword": "パン",
+            "gloss": "bread"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-bread-eater-embed-past",
+      "jlpt": 4,
+      "target": "wh-past",
+      "relationship": "wh-questions",
+      "prompt": "だれがパンを____知っています。",
+      "translation": "Base predicate: 食べました (食べる（たべる）, eat). Convert it to the ordinary short plain form, preserve its tense and polarity, and add the single particle か to embed the information question. Enter the converted predicate plus か, without explanatory の, an added case particle or extra words.",
+      "evidence": "A polite-to-plain conversion plus question embedding; the unknown object and unknown actor use different inner case frames.",
+      "explanation": "食べます becomes 食べる; 食べました becomes 食べた, without the godan った change. か closes the inner question. The outer 知っています says the speaker knows its answer; the whole sentence is not itself a request just because it contains か.",
+      "answer": "wh-past",
+      "acceptedAnswers": [
+        "食べたか",
+        "たべたか"
+      ],
+      "options": [
+        {
+          "id": "wh-past",
+          "label": "食べたか",
+          "rationale": "Preserves the supplied tense and embeds the question. 食べます becomes 食べる; 食べました becomes 食べた, without the godan った change."
+        },
+        {
+          "id": "wh-nonpast",
+          "label": "食べるか",
+          "rationale": "Changes the supplied predicate's tense. That could express a different question, not this conversion."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "26922a68bcbb3e808644e1f899e5647c8794ffb5af6f09755fb063fd3a5184b0",
+        "spans": [
+          {
+            "start": 3,
+            "end": 5,
+            "text": "パン",
+            "reading": "ぱん",
+            "headword": "パン",
+            "gloss": "bread"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-book-purchase-outer-statement",
+      "jlpt": 4,
+      "target": "outer-statement",
+      "relationship": "wh-questions",
+      "prompt": "友達が何を買うか知っています。→____",
+      "translation": "What does the OUTER message do in this ordinary standalone exchange? Labels: 陳述（ちんじゅつ） = states what the speaker knows or has forgotten; 依頼（いらい） = asks the listener to provide the information. These are response labels for this task. Kana answers are accepted.",
+      "evidence": "Separate the embedded information gap from the outer speech act; the pairs vary known versus forgotten information and direct versus favor-question requests.",
+      "explanation": "The speaker states their own knowledge or loss of knowledge. The missing information is what the friend buys. 知っています states knowledge; 教えてください asks the listener to tell it.",
+      "answer": "outer-statement",
+      "acceptedAnswers": [
+        "陳述",
+        "ちんじゅつ"
+      ],
+      "options": [
+        {
+          "id": "outer-statement",
+          "label": "陳述",
+          "rationale": "The speaker states their own knowledge or loss of knowledge. The missing information is what the friend buys. 知っています states knowledge; 教えてください asks the listener to tell it."
+        },
+        {
+          "id": "outer-request",
+          "label": "依頼",
+          "rationale": "That assigns the other outer purpose, not the one presented here. The speaker states their own knowledge or loss of knowledge. The missing information is what the friend buys. 知っています states knowledge; 教えてください asks the listener to tell it."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "e5207ee8ee26e2bc79d147c573670d6c0bcc40dc12fd795b1b4df0e5cc36c1e6",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-book-purchase-outer-request",
+      "jlpt": 4,
+      "target": "outer-request",
+      "relationship": "wh-questions",
+      "prompt": "友達が何を買うか教えてください。→____",
+      "translation": "What does the OUTER message do in this ordinary standalone exchange? Labels: 陳述（ちんじゅつ） = states what the speaker knows or has forgotten; 依頼（いらい） = asks the listener to provide the information. These are response labels for this task. Kana answers are accepted.",
+      "evidence": "Separate the embedded information gap from the outer speech act; the pairs vary known versus forgotten information and direct versus favor-question requests.",
+      "explanation": "The speaker asks the listener to supply the information. The missing information is what the friend buys. 知っています states knowledge; 教えてください asks the listener to tell it.",
+      "answer": "outer-request",
+      "acceptedAnswers": [
+        "依頼",
+        "いらい"
+      ],
+      "options": [
+        {
+          "id": "outer-statement",
+          "label": "陳述",
+          "rationale": "That assigns the other outer purpose, not the one presented here. The speaker asks the listener to supply the information. The missing information is what the friend buys. 知っています states knowledge; 教えてください asks the listener to tell it."
+        },
+        {
+          "id": "outer-request",
+          "label": "依頼",
+          "rationale": "The speaker asks the listener to supply the information. The missing information is what the friend buys. 知っています states knowledge; 教えてください asks the listener to tell it."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "4e8ab6af32c8950e302dccb12f5bf2cd5aecbb4fc532a80d739c9bda2781dee6",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-bread-eater-outer-statement",
+      "jlpt": 4,
+      "target": "outer-statement",
+      "relationship": "wh-questions",
+      "prompt": "だれがパンを食べたか忘れました。→____",
+      "translation": "What does the OUTER message do in this ordinary standalone exchange? Labels: 陳述（ちんじゅつ） = states what the speaker knows or has forgotten; 依頼（いらい） = asks the listener to provide the information. These are response labels for this task. Kana answers are accepted.",
+      "evidence": "Separate the embedded information gap from the outer speech act; the pairs vary known versus forgotten information and direct versus favor-question requests.",
+      "explanation": "The speaker states their own knowledge or loss of knowledge. The missing information is who ate the bread. 忘れました states that the speaker has forgotten; 教えてもらえませんか is an ordinary polite favor request, not an assertion that the listener refuses to tell.",
+      "answer": "outer-statement",
+      "acceptedAnswers": [
+        "陳述",
+        "ちんじゅつ"
+      ],
+      "options": [
+        {
+          "id": "outer-statement",
+          "label": "陳述",
+          "rationale": "The speaker states their own knowledge or loss of knowledge. The missing information is who ate the bread. 忘れました states that the speaker has forgotten; 教えてもらえませんか is an ordinary polite favor request, not an assertion that the listener refuses to tell."
+        },
+        {
+          "id": "outer-request",
+          "label": "依頼",
+          "rationale": "That assigns the other outer purpose, not the one presented here. The speaker states their own knowledge or loss of knowledge. The missing information is who ate the bread. 忘れました states that the speaker has forgotten; 教えてもらえませんか is an ordinary polite favor request, not an assertion that the listener refuses to tell."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "1c5cd0adf096fb31ac14d816b01385d380e5f4c29156b7a315e2868f028f1228",
+        "spans": [
+          {
+            "start": 3,
+            "end": 5,
+            "text": "パン",
+            "reading": "ぱん",
+            "headword": "パン",
+            "gloss": "bread"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-bread-eater-outer-request",
+      "jlpt": 4,
+      "target": "outer-request",
+      "relationship": "wh-questions",
+      "prompt": "だれがパンを食べたか教えてもらえませんか。→____",
+      "translation": "What does the OUTER message do in this ordinary standalone exchange? Labels: 陳述（ちんじゅつ） = states what the speaker knows or has forgotten; 依頼（いらい） = asks the listener to provide the information. These are response labels for this task. Kana answers are accepted.",
+      "evidence": "Separate the embedded information gap from the outer speech act; the pairs vary known versus forgotten information and direct versus favor-question requests.",
+      "explanation": "The speaker asks the listener to supply the information. The missing information is who ate the bread. 忘れました states that the speaker has forgotten; 教えてもらえませんか is an ordinary polite favor request, not an assertion that the listener refuses to tell.",
+      "answer": "outer-request",
+      "acceptedAnswers": [
+        "依頼",
+        "いらい"
+      ],
+      "options": [
+        {
+          "id": "outer-statement",
+          "label": "陳述",
+          "rationale": "That assigns the other outer purpose, not the one presented here. The speaker asks the listener to supply the information. The missing information is who ate the bread. 忘れました states that the speaker has forgotten; 教えてもらえませんか is an ordinary polite favor request, not an assertion that the listener refuses to tell."
+        },
+        {
+          "id": "outer-request",
+          "label": "依頼",
+          "rationale": "The speaker asks the listener to supply the information. The missing information is who ate the bread. 忘れました states that the speaker has forgotten; 教えてもらえませんか is an ordinary polite favor request, not an assertion that the listener refuses to tell."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "482422bbd85e33781faf982527ec0879be0a4e2c58967ac943ac3b85b338257f",
+        "spans": [
+          {
+            "start": 3,
+            "end": 5,
+            "text": "パン",
+            "reading": "ぱん",
+            "headword": "パン",
+            "gloss": "bread"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-bus-arrival-whether-positive",
+      "jlpt": 4,
+      "target": "whether-positive",
+      "relationship": "whether",
+      "prompt": "バスが____まだ分かりません。",
+      "translation": "Base predicate: 来ます (来る（くる）, come). Convert it to an ordinary short plain predicate, preserving its nonpast time and polarity, and embed a whether-or-not question with かどうか or bare か. Enter predicate plus connector; no explanatory の, repeated positive/negative alternatives or added case particle.",
+      "evidence": "Both fitting question connectors are accepted in typed and choose-any modes; the assessed difference is the supplied proposition's polarity.",
+      "explanation": "Preserve 来る versus negative 来ない（こない）; 来る is irregular. Both かどうか and bare か can leave this polar question open. まだ分かりません says the answer is not yet known; a negative proposition inside the question is not a negative answer to it.",
+      "answer": "whether-positive",
+      "acceptedAnswers": [
+        "来るかどうか",
+        "来るか",
+        "くるかどうか",
+        "くるか"
+      ],
+      "options": [
+        {
+          "id": "whether-positive",
+          "label": "来るかどうか",
+          "rationale": "Preserves the supplied polarity and embeds the question. Preserve 来る versus negative 来ない（こない）; 来る is irregular."
+        },
+        {
+          "id": "whether-negative",
+          "label": "来ないかどうか",
+          "rationale": "Reverses the supplied proposition's polarity. Even where the possible outcomes overlap, this is not the requested polarity-preserving conversion."
+        }
+      ],
+      "additionalCorrectOptions": [
+        {
+          "id": "bare-ka",
+          "label": "来るか",
+          "rationale": "Bare か also embeds this polar question; どうか is not universally compulsory."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "3288959e2e345756dca715dc694cfcbd6ef66d056a4faa547dc72a560ca9460f",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "バス",
+            "reading": "ばす",
+            "headword": "バス",
+            "gloss": "bus"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-bus-arrival-whether-negative",
+      "jlpt": 4,
+      "target": "whether-negative",
+      "relationship": "whether",
+      "prompt": "バスが____まだ分かりません。",
+      "translation": "Base predicate: 来ません (来る（くる）, come). Convert it to an ordinary short plain predicate, preserving its nonpast time and polarity, and embed a whether-or-not question with かどうか or bare か. Enter predicate plus connector; no explanatory の, repeated positive/negative alternatives or added case particle.",
+      "evidence": "Both fitting question connectors are accepted in typed and choose-any modes; the assessed difference is the supplied proposition's polarity.",
+      "explanation": "Preserve 来る versus negative 来ない（こない）; 来る is irregular. Both かどうか and bare か can leave this polar question open. まだ分かりません says the answer is not yet known; a negative proposition inside the question is not a negative answer to it.",
+      "answer": "whether-negative",
+      "acceptedAnswers": [
+        "来ないかどうか",
+        "来ないか",
+        "こないかどうか",
+        "こないか"
+      ],
+      "options": [
+        {
+          "id": "whether-negative",
+          "label": "来ないかどうか",
+          "rationale": "Preserves the supplied polarity and embeds the question. Preserve 来る versus negative 来ない（こない）; 来る is irregular."
+        },
+        {
+          "id": "whether-positive",
+          "label": "来るかどうか",
+          "rationale": "Reverses the supplied proposition's polarity. Even where the possible outcomes overlap, this is not the requested polarity-preserving conversion."
+        }
+      ],
+      "additionalCorrectOptions": [
+        {
+          "id": "bare-ka",
+          "label": "来ないか",
+          "rationale": "Bare か also embeds this polar question; どうか is not universally compulsory."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "3288959e2e345756dca715dc694cfcbd6ef66d056a4faa547dc72a560ca9460f",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "バス",
+            "reading": "ばす",
+            "headword": "バス",
+            "gloss": "bus"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-box-weight-whether-positive",
+      "jlpt": 4,
+      "target": "whether-positive",
+      "relationship": "whether",
+      "prompt": "この箱が____まだ分かりません。",
+      "translation": "Base predicate: 重いです (重い（おもい）, heavy). Convert it to an ordinary short plain predicate, preserving its nonpast time and polarity, and embed a whether-or-not question with かどうか or bare か. Enter predicate plus connector; no explanatory の, repeated positive/negative alternatives or added case particle.",
+      "evidence": "Both fitting question connectors are accepted in typed and choose-any modes; the assessed difference is the supplied proposition's polarity.",
+      "explanation": "Preserve the i-adjective 重い versus negative 重くない; do not add だ. Both かどうか and bare か can leave this polar question open. まだ分かりません says the answer is not yet known; a negative proposition inside the question is not a negative answer to it.",
+      "answer": "whether-positive",
+      "acceptedAnswers": [
+        "重いかどうか",
+        "重いか",
+        "おもいかどうか",
+        "おもいか"
+      ],
+      "options": [
+        {
+          "id": "whether-positive",
+          "label": "重いかどうか",
+          "rationale": "Preserves the supplied polarity and embeds the question. Preserve the i-adjective 重い versus negative 重くない; do not add だ."
+        },
+        {
+          "id": "whether-negative",
+          "label": "重くないかどうか",
+          "rationale": "Reverses the supplied proposition's polarity. Even where the possible outcomes overlap, this is not the requested polarity-preserving conversion."
+        }
+      ],
+      "additionalCorrectOptions": [
+        {
+          "id": "bare-ka",
+          "label": "重いか",
+          "rationale": "Bare か also embeds this polar question; どうか is not universally compulsory."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "807a081e74ffd1fef91f76d52e5af0fb8a45082d0966c2015b2625df2aa34625",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "箱",
+            "reading": "はこ",
+            "headword": "箱",
+            "gloss": "box"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-box-weight-whether-negative",
+      "jlpt": 4,
+      "target": "whether-negative",
+      "relationship": "whether",
+      "prompt": "この箱が____まだ分かりません。",
+      "translation": "Base predicate: 重くありません (重い（おもい）, heavy). Convert it to an ordinary short plain predicate, preserving its nonpast time and polarity, and embed a whether-or-not question with かどうか or bare か. Enter predicate plus connector; no explanatory の, repeated positive/negative alternatives or added case particle.",
+      "evidence": "Both fitting question connectors are accepted in typed and choose-any modes; the assessed difference is the supplied proposition's polarity.",
+      "explanation": "Preserve the i-adjective 重い versus negative 重くない; do not add だ. Both かどうか and bare か can leave this polar question open. まだ分かりません says the answer is not yet known; a negative proposition inside the question is not a negative answer to it.",
+      "answer": "whether-negative",
+      "acceptedAnswers": [
+        "重くないかどうか",
+        "重くないか",
+        "おもくないかどうか",
+        "おもくないか",
+        "重く無いかどうか",
+        "重く無いか",
+        "おもく無いかどうか",
+        "おもく無いか"
+      ],
+      "options": [
+        {
+          "id": "whether-negative",
+          "label": "重くないかどうか",
+          "rationale": "Preserves the supplied polarity and embeds the question. Preserve the i-adjective 重い versus negative 重くない; do not add だ."
+        },
+        {
+          "id": "whether-positive",
+          "label": "重いかどうか",
+          "rationale": "Reverses the supplied proposition's polarity. Even where the possible outcomes overlap, this is not the requested polarity-preserving conversion."
+        }
+      ],
+      "additionalCorrectOptions": [
+        {
+          "id": "bare-ka",
+          "label": "重くないか",
+          "rationale": "Bare か also embeds this polar question; どうか is not universally compulsory."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "807a081e74ffd1fef91f76d52e5af0fb8a45082d0966c2015b2625df2aa34625",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "箱",
+            "reading": "はこ",
+            "headword": "箱",
+            "gloss": "box"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-bus-arrival-question-content",
+      "jlpt": 4,
+      "target": "question-content",
+      "relationship": "whether",
+      "prompt": "バスがいつ来るか調べます。→____",
+      "translation": "What kind of information is being investigated? Labels: 内容疑問（ないようぎもん） = seeks a missing detail such as time or degree; 真偽疑問（しんぎぎもん） = asks whether a proposition holds. Classify the inner question, not whether the speaker already knows the answer. Kana labels are accepted.",
+      "evidence": "Timing versus occurrence and degree versus threshold supply two different information contrasts; one polar example deliberately uses bare か.",
+      "explanation": "The question seeks a missing time or degree detail. いつ来るか asks when the bus comes; 来るか asks whether it comes at all. The latter is polar even without どうか.",
+      "answer": "question-content",
+      "acceptedAnswers": [
+        "内容疑問",
+        "ないようぎもん"
+      ],
+      "options": [
+        {
+          "id": "question-content",
+          "label": "内容疑問",
+          "rationale": "The question seeks a missing time or degree detail. いつ来るか asks when the bus comes; 来るか asks whether it comes at all. The latter is polar even without どうか."
+        },
+        {
+          "id": "question-polar",
+          "label": "真偽疑問",
+          "rationale": "That gives the other kind of information gap, not this one. The question seeks a missing time or degree detail. いつ来るか asks when the bus comes; 来るか asks whether it comes at all. The latter is polar even without どうか."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "5f6f2dd49908e4f30d1eb9bb57781eabfd642abaf7af63eb967065e99dd66485",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "バス",
+            "reading": "ばす",
+            "headword": "バス",
+            "gloss": "bus"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-bus-arrival-question-polar",
+      "jlpt": 4,
+      "target": "question-polar",
+      "relationship": "whether",
+      "prompt": "バスが来るか調べます。→____",
+      "translation": "What kind of information is being investigated? Labels: 内容疑問（ないようぎもん） = seeks a missing detail such as time or degree; 真偽疑問（しんぎぎもん） = asks whether a proposition holds. Classify the inner question, not whether the speaker already knows the answer. Kana labels are accepted.",
+      "evidence": "Timing versus occurrence and degree versus threshold supply two different information contrasts; one polar example deliberately uses bare か.",
+      "explanation": "The question asks whether the stated proposition holds. いつ来るか asks when the bus comes; 来るか asks whether it comes at all. The latter is polar even without どうか.",
+      "answer": "question-polar",
+      "acceptedAnswers": [
+        "真偽疑問",
+        "しんぎぎもん"
+      ],
+      "options": [
+        {
+          "id": "question-content",
+          "label": "内容疑問",
+          "rationale": "That gives the other kind of information gap, not this one. The question asks whether the stated proposition holds. いつ来るか asks when the bus comes; 来るか asks whether it comes at all. The latter is polar even without どうか."
+        },
+        {
+          "id": "question-polar",
+          "label": "真偽疑問",
+          "rationale": "The question asks whether the stated proposition holds. いつ来るか asks when the bus comes; 来るか asks whether it comes at all. The latter is polar even without どうか."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "6dd94bb0886959a501e5ade4c0741f84a16448eec9cb5d29a7475377e6e3f584",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "バス",
+            "reading": "ばす",
+            "headword": "バス",
+            "gloss": "bus"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-box-weight-question-content",
+      "jlpt": 4,
+      "target": "question-content",
+      "relationship": "whether",
+      "prompt": "この箱がどのくらい重いか調べます。→____",
+      "translation": "What kind of information is being investigated? Labels: 内容疑問（ないようぎもん） = seeks a missing detail such as time or degree; 真偽疑問（しんぎぎもん） = asks whether a proposition holds. Classify the inner question, not whether the speaker already knows the answer. Kana labels are accepted.",
+      "evidence": "Timing versus occurrence and degree versus threshold supply two different information contrasts; one polar example deliberately uses bare か.",
+      "explanation": "The question seeks a missing time or degree detail. どのくらい重いか asks how heavy the box is; 重いかどうか asks whether it counts as heavy. Neither sentence supplies the answer.",
+      "answer": "question-content",
+      "acceptedAnswers": [
+        "内容疑問",
+        "ないようぎもん"
+      ],
+      "options": [
+        {
+          "id": "question-content",
+          "label": "内容疑問",
+          "rationale": "The question seeks a missing time or degree detail. どのくらい重いか asks how heavy the box is; 重いかどうか asks whether it counts as heavy. Neither sentence supplies the answer."
+        },
+        {
+          "id": "question-polar",
+          "label": "真偽疑問",
+          "rationale": "That gives the other kind of information gap, not this one. The question seeks a missing time or degree detail. どのくらい重いか asks how heavy the box is; 重いかどうか asks whether it counts as heavy. Neither sentence supplies the answer."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "3b2eb0fd80dac8aba799c2a24e8a799e2162bec31746475d1975bc0b23d8c400",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "箱",
+            "reading": "はこ",
+            "headword": "箱",
+            "gloss": "box"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-box-weight-question-polar",
+      "jlpt": 4,
+      "target": "question-polar",
+      "relationship": "whether",
+      "prompt": "この箱が重いかどうか調べます。→____",
+      "translation": "What kind of information is being investigated? Labels: 内容疑問（ないようぎもん） = seeks a missing detail such as time or degree; 真偽疑問（しんぎぎもん） = asks whether a proposition holds. Classify the inner question, not whether the speaker already knows the answer. Kana labels are accepted.",
+      "evidence": "Timing versus occurrence and degree versus threshold supply two different information contrasts; one polar example deliberately uses bare か.",
+      "explanation": "The question asks whether the stated proposition holds. どのくらい重いか asks how heavy the box is; 重いかどうか asks whether it counts as heavy. Neither sentence supplies the answer.",
+      "answer": "question-polar",
+      "acceptedAnswers": [
+        "真偽疑問",
+        "しんぎぎもん"
+      ],
+      "options": [
+        {
+          "id": "question-content",
+          "label": "内容疑問",
+          "rationale": "That gives the other kind of information gap, not this one. The question asks whether the stated proposition holds. どのくらい重いか asks how heavy the box is; 重いかどうか asks whether it counts as heavy. Neither sentence supplies the answer."
+        },
+        {
+          "id": "question-polar",
+          "label": "真偽疑問",
+          "rationale": "The question asks whether the stated proposition holds. どのくらい重いか asks how heavy the box is; 重いかどうか asks whether it counts as heavy. Neither sentence supplies the answer."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f2f4413b86b35ad39ecad78fc953f965d8eb7c17a0cc73cf221445ee8a050d9d",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "箱",
+            "reading": "はこ",
+            "headword": "箱",
+            "gloss": "box"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-town-quiet-reported-nonpast",
+      "jlpt": 4,
+      "target": "report-nonpast",
+      "relationship": "reports",
+      "prompt": "この町は____と聞いた。",
+      "translation": "Reported base predicate: 静かです (静か（しずか）, quiet). Convert it to an ordinary short plain predicate before the printed reporting frame, preserving its tense and polarity. Retain the full required copula; no omission, expanded copula or extra words. This converts the report's CONTENT, not the reporting event.",
+      "evidence": "Na-adjective and verbal report content require different attachments; reported content time is separate from hearing/reporting time.",
+      "explanation": "The full short na-adjective predicate uses 静かだ or past 静かだった before と. Reported information is not independently confirmed just because it has been heard or is commonly said. Ordinary casual nominal だ omission can be possible outside this expressly full-form operation.",
+      "answer": "report-nonpast",
+      "acceptedAnswers": [
+        "静かだ",
+        "しずかだ",
+        "閑かだ"
+      ],
+      "options": [
+        {
+          "id": "report-nonpast",
+          "label": "静かだ",
+          "rationale": "Preserves the reported predicate's time and attaches correctly. The full short na-adjective predicate uses 静かだ or past 静かだった before と."
+        },
+        {
+          "id": "report-past",
+          "label": "静かだった",
+          "rationale": "Changes the content's time; changing when it is reported does not justify changing that supplied predicate."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f27ca092b979c6f47a888df4c29529b19ca924ed0091f7b0d3332b1da222a693",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "町",
+            "reading": "まち",
+            "headword": "町",
+            "gloss": "town"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-town-quiet-reported-past",
+      "jlpt": 4,
+      "target": "report-past",
+      "relationship": "reports",
+      "prompt": "この町は____と聞いた。",
+      "translation": "Reported base predicate: 静かでした (静か（しずか）, quiet). Convert it to an ordinary short plain predicate before the printed reporting frame, preserving its tense and polarity. Retain the full required copula; no omission, expanded copula or extra words. This converts the report's CONTENT, not the reporting event.",
+      "evidence": "Na-adjective and verbal report content require different attachments; reported content time is separate from hearing/reporting time.",
+      "explanation": "The full short na-adjective predicate uses 静かだ or past 静かだった before と. Reported information is not independently confirmed just because it has been heard or is commonly said. Ordinary casual nominal だ omission can be possible outside this expressly full-form operation.",
+      "answer": "report-past",
+      "acceptedAnswers": [
+        "静かだった",
+        "しずかだった",
+        "閑かだった"
+      ],
+      "options": [
+        {
+          "id": "report-past",
+          "label": "静かだった",
+          "rationale": "Preserves the reported predicate's time and attaches correctly. The full short na-adjective predicate uses 静かだ or past 静かだった before と."
+        },
+        {
+          "id": "report-nonpast",
+          "label": "静かだ",
+          "rationale": "Changes the content's time; changing when it is reported does not justify changing that supplied predicate."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f27ca092b979c6f47a888df4c29529b19ca924ed0091f7b0d3332b1da222a693",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "町",
+            "reading": "まち",
+            "headword": "町",
+            "gloss": "town"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-mountain-view-reported-nonpast",
+      "jlpt": 4,
+      "target": "report-nonpast",
+      "relationship": "reports",
+      "prompt": "ここから富士山が____と言われている。",
+      "translation": "Reported base predicate: 見えます (見える（みえる）, be visible). Convert it to an ordinary short plain predicate before the printed reporting frame, preserving its tense and polarity. Retain the full required copula; no omission, expanded copula or extra words. This converts the report's CONTENT, not the reporting event.",
+      "evidence": "Na-adjective and verbal report content require different attachments; reported content time is separate from hearing/reporting time.",
+      "explanation": "The plain verb connects directly to と: 見える or past 見えた, without an added copula. Reported information is not independently confirmed just because it has been heard or is commonly said. Ordinary casual nominal だ omission can be possible outside this expressly full-form operation.",
+      "answer": "report-nonpast",
+      "acceptedAnswers": [
+        "見える",
+        "みえる"
+      ],
+      "options": [
+        {
+          "id": "report-nonpast",
+          "label": "見える",
+          "rationale": "Preserves the reported predicate's time and attaches correctly. The plain verb connects directly to と: 見える or past 見えた, without an added copula."
+        },
+        {
+          "id": "report-past",
+          "label": "見えた",
+          "rationale": "Changes the content's time; changing when it is reported does not justify changing that supplied predicate."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "20da7b0a5c225018ea45e828270c6753ce7ca6d822109adad45cc91ae7f9b420",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "ここ",
+            "reading": "ここ",
+            "headword": "ここ",
+            "gloss": "here; this place"
+          },
+          {
+            "start": 4,
+            "end": 7,
+            "text": "富士山",
+            "reading": "ふじさん",
+            "headword": "富士山",
+            "gloss": "Mount Fuji"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-mountain-view-reported-past",
+      "jlpt": 4,
+      "target": "report-past",
+      "relationship": "reports",
+      "prompt": "ここから富士山が____と言われている。",
+      "translation": "Reported base predicate: 見えました (見える（みえる）, be visible). Convert it to an ordinary short plain predicate before the printed reporting frame, preserving its tense and polarity. Retain the full required copula; no omission, expanded copula or extra words. This converts the report's CONTENT, not the reporting event.",
+      "evidence": "Na-adjective and verbal report content require different attachments; reported content time is separate from hearing/reporting time.",
+      "explanation": "The plain verb connects directly to と: 見える or past 見えた, without an added copula. Reported information is not independently confirmed just because it has been heard or is commonly said. Ordinary casual nominal だ omission can be possible outside this expressly full-form operation.",
+      "answer": "report-past",
+      "acceptedAnswers": [
+        "見えた",
+        "みえた"
+      ],
+      "options": [
+        {
+          "id": "report-past",
+          "label": "見えた",
+          "rationale": "Preserves the reported predicate's time and attaches correctly. The plain verb connects directly to と: 見える or past 見えた, without an added copula."
+        },
+        {
+          "id": "report-nonpast",
+          "label": "見える",
+          "rationale": "Changes the content's time; changing when it is reported does not justify changing that supplied predicate."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "20da7b0a5c225018ea45e828270c6753ce7ca6d822109adad45cc91ae7f9b420",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "ここ",
+            "reading": "ここ",
+            "headword": "ここ",
+            "gloss": "here; this place"
+          },
+          {
+            "start": 4,
+            "end": 7,
+            "text": "富士山",
+            "reading": "ふじさん",
+            "headword": "富士山",
+            "gloss": "Mount Fuji"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-town-quiet-perspective-received",
+      "jlpt": 4,
+      "target": "report-received",
+      "relationship": "reports",
+      "prompt": "私は友達から、この町は静かだと聞いた。→____",
+      "translation": "Read these as ordinary information reports; the impersonal versions summarize a place's reputation. Which presentation is highlighted? Local labels: 自分（じぶん） = the speaker presents information they received; 世間（せけん） = an impersonal account of what people say or said. Neither label means the claim is proven. Kana answers are accepted.",
+      "evidence": "Past hearing versus current received information, and current versus former impersonal reporting, vary the outer frames rather than only replacing place names.",
+      "explanation": "This presents information the speaker received from a named source. The first-person hearing report names the friend as the source. The impersonal alternative presents the town's reported reputation, not the speaker's hearing event. Neither presentation guarantees truth, agreement by everybody or direct observation.",
+      "answer": "report-received",
+      "acceptedAnswers": [
+        "自分",
+        "じぶん"
+      ],
+      "options": [
+        {
+          "id": "report-received",
+          "label": "自分",
+          "rationale": "This presents information the speaker received from a named source. The first-person hearing report names the friend as the source. The impersonal alternative presents the town's reported reputation, not the speaker's hearing event."
+        },
+        {
+          "id": "report-general",
+          "label": "世間",
+          "rationale": "That assigns the other reporting perspective, not this presented frame. This presents information the speaker received from a named source. The first-person hearing report names the friend as the source. The impersonal alternative presents the town's reported reputation, not the speaker's hearing event."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "15f0889446340a1ce04649f89f741e21cdfc92ce3b34098a4e62880677e53953",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; the speaker"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 9,
+            "end": 10,
+            "text": "町",
+            "reading": "まち",
+            "headword": "町",
+            "gloss": "town"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-town-quiet-perspective-general",
+      "jlpt": 4,
+      "target": "report-general",
+      "relationship": "reports",
+      "prompt": "この町は静かだと言われている。→____",
+      "translation": "Read these as ordinary information reports; the impersonal versions summarize a place's reputation. Which presentation is highlighted? Local labels: 自分（じぶん） = the speaker presents information they received; 世間（せけん） = an impersonal account of what people say or said. Neither label means the claim is proven. Kana answers are accepted.",
+      "evidence": "Past hearing versus current received information, and current versus former impersonal reporting, vary the outer frames rather than only replacing place names.",
+      "explanation": "This presents what is or was generally said. The first-person hearing report names the friend as the source. The impersonal alternative presents the town's reported reputation, not the speaker's hearing event. Neither presentation guarantees truth, agreement by everybody or direct observation.",
+      "answer": "report-general",
+      "acceptedAnswers": [
+        "世間",
+        "せけん"
+      ],
+      "options": [
+        {
+          "id": "report-received",
+          "label": "自分",
+          "rationale": "That assigns the other reporting perspective, not this presented frame. This presents what is or was generally said. The first-person hearing report names the friend as the source. The impersonal alternative presents the town's reported reputation, not the speaker's hearing event."
+        },
+        {
+          "id": "report-general",
+          "label": "世間",
+          "rationale": "This presents what is or was generally said. The first-person hearing report names the friend as the source. The impersonal alternative presents the town's reported reputation, not the speaker's hearing event."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "11eaf3132bf93d1871c8fe51d69108636e115bf5b8f7d54260cceb5c3eb7f6a9",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "町",
+            "reading": "まち",
+            "headword": "町",
+            "gloss": "town"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-mountain-view-perspective-received",
+      "jlpt": 4,
+      "target": "report-received",
+      "relationship": "reports",
+      "prompt": "私は案内係から、ここから富士山が見えると聞いている。→____",
+      "translation": "Read these as ordinary information reports; the impersonal versions summarize a place's reputation. Which presentation is highlighted? Local labels: 自分（じぶん） = the speaker presents information they received; 世間（せけん） = an impersonal account of what people say or said. Neither label means the claim is proven. Kana answers are accepted.",
+      "evidence": "Past hearing versus current received information, and current versus former impersonal reporting, vary the outer frames rather than only replacing place names.",
+      "explanation": "This presents information the speaker received from a named source. 聞いている presents information the speaker has heard; the impersonal 言われていた locates a generally reported claim in the past. The report's former circulation does not prove whether the view exists now. Neither presentation guarantees truth, agreement by everybody or direct observation.",
+      "answer": "report-received",
+      "acceptedAnswers": [
+        "自分",
+        "じぶん"
+      ],
+      "options": [
+        {
+          "id": "report-received",
+          "label": "自分",
+          "rationale": "This presents information the speaker received from a named source. 聞いている presents information the speaker has heard; the impersonal 言われていた locates a generally reported claim in the past. The report's former circulation does not prove whether the view exists now."
+        },
+        {
+          "id": "report-general",
+          "label": "世間",
+          "rationale": "That assigns the other reporting perspective, not this presented frame. This presents information the speaker received from a named source. 聞いている presents information the speaker has heard; the impersonal 言われていた locates a generally reported claim in the past. The report's former circulation does not prove whether the view exists now."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "926c0442db9894521e60457a772ea2ca6e66aa1315f07dc5a8d975ab2a971f9e",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I; the speaker"
+          },
+          {
+            "start": 2,
+            "end": 5,
+            "text": "案内係",
+            "reading": "あんないがかり",
+            "headword": "案内係",
+            "gloss": "guide; person providing information"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "text": "ここ",
+            "reading": "ここ",
+            "headword": "ここ",
+            "gloss": "here; this place"
+          },
+          {
+            "start": 12,
+            "end": 15,
+            "text": "富士山",
+            "reading": "ふじさん",
+            "headword": "富士山",
+            "gloss": "Mount Fuji"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-mountain-view-perspective-general",
+      "jlpt": 4,
+      "target": "report-general",
+      "relationship": "reports",
+      "prompt": "以前は、ここから富士山が見えると言われていた。→____",
+      "translation": "Read these as ordinary information reports; the impersonal versions summarize a place's reputation. Which presentation is highlighted? Local labels: 自分（じぶん） = the speaker presents information they received; 世間（せけん） = an impersonal account of what people say or said. Neither label means the claim is proven. Kana answers are accepted.",
+      "evidence": "Past hearing versus current received information, and current versus former impersonal reporting, vary the outer frames rather than only replacing place names.",
+      "explanation": "This presents what is or was generally said. 聞いている presents information the speaker has heard; the impersonal 言われていた locates a generally reported claim in the past. The report's former circulation does not prove whether the view exists now. Neither presentation guarantees truth, agreement by everybody or direct observation.",
+      "answer": "report-general",
+      "acceptedAnswers": [
+        "世間",
+        "せけん"
+      ],
+      "options": [
+        {
+          "id": "report-received",
+          "label": "自分",
+          "rationale": "That assigns the other reporting perspective, not this presented frame. This presents what is or was generally said. 聞いている presents information the speaker has heard; the impersonal 言われていた locates a generally reported claim in the past. The report's former circulation does not prove whether the view exists now."
+        },
+        {
+          "id": "report-general",
+          "label": "世間",
+          "rationale": "This presents what is or was generally said. 聞いている presents information the speaker has heard; the impersonal 言われていた locates a generally reported claim in the past. The report's former circulation does not prove whether the view exists now."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "40747ee75567628629a12b5ca0aa68ea0e671056a66faddcd9d8eff459ed5c95",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "以前",
+            "reading": "いぜん",
+            "headword": "以前",
+            "gloss": "previously; earlier"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "ここ",
+            "reading": "ここ",
+            "headword": "ここ",
+            "gloss": "here; this place"
+          },
+          {
+            "start": 8,
+            "end": 11,
+            "text": "富士山",
+            "reading": "ふじさん",
+            "headword": "富士山",
+            "gloss": "Mount Fuji"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-shop-dayoff-content-nonpast",
+      "jlpt": 4,
+      "target": "content-nonpast",
+      "relationship": "content-noticing",
+      "prompt": "店が____ということを知っています。",
+      "translation": "Base predicate: 休みです (休み（やすみ）, closed for a day off). Convert it to an ordinary short plain predicate before the printed ということ, preserving time and polarity. Retain the full required copula; no omission, expanded copula or extra words.",
+      "evidence": "A nominal predicate and an irregular verb become the content of knowledge, not automatically someone else's quoted words.",
+      "explanation": "The full short noun predicate retains だ before ということ; its past is だった. ということ packages the proposition as content; を makes it the object of 知っています. The knowledge predicate presents the content as known, but nominalization by itself is not a hearsay marker.",
+      "answer": "content-nonpast",
+      "acceptedAnswers": [
+        "休みだ",
+        "やすみだ"
+      ],
+      "options": [
+        {
+          "id": "content-nonpast",
+          "label": "休みだ",
+          "rationale": "Preserves the content's time and attaches correctly. The full short noun predicate retains だ before ということ; its past is だった."
+        },
+        {
+          "id": "content-past",
+          "label": "休みだった",
+          "rationale": "Changes the supplied content's time. It can form a grammatical different proposition, not this conversion."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "4e6f30f768cedda08639c14f911ae404ca850925928ff6461953bc2652783e8c",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-shop-dayoff-content-past",
+      "jlpt": 4,
+      "target": "content-past",
+      "relationship": "content-noticing",
+      "prompt": "店が____ということを知っています。",
+      "translation": "Base predicate: 休みでした (休み（やすみ）, closed for a day off). Convert it to an ordinary short plain predicate before the printed ということ, preserving time and polarity. Retain the full required copula; no omission, expanded copula or extra words.",
+      "evidence": "A nominal predicate and an irregular verb become the content of knowledge, not automatically someone else's quoted words.",
+      "explanation": "The full short noun predicate retains だ before ということ; its past is だった. ということ packages the proposition as content; を makes it the object of 知っています. The knowledge predicate presents the content as known, but nominalization by itself is not a hearsay marker.",
+      "answer": "content-past",
+      "acceptedAnswers": [
+        "休みだった",
+        "やすみだった"
+      ],
+      "options": [
+        {
+          "id": "content-past",
+          "label": "休みだった",
+          "rationale": "Preserves the content's time and attaches correctly. The full short noun predicate retains だ before ということ; its past is だった."
+        },
+        {
+          "id": "content-nonpast",
+          "label": "休みだ",
+          "rationale": "Changes the supplied content's time. It can form a grammatical different proposition, not this conversion."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "4e6f30f768cedda08639c14f911ae404ca850925928ff6461953bc2652783e8c",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-friend-arrival-content-nonpast",
+      "jlpt": 4,
+      "target": "content-nonpast",
+      "relationship": "content-noticing",
+      "prompt": "友達が____ということを知っています。",
+      "translation": "Base predicate: 来ます (来る（くる）, come). Convert it to an ordinary short plain predicate before the printed ということ, preserving time and polarity. Retain the full required copula; no omission, expanded copula or extra words.",
+      "evidence": "A nominal predicate and an irregular verb become the content of knowledge, not automatically someone else's quoted words.",
+      "explanation": "Use the plain verb 来る or past 来た directly before ということ; do not add a copula. ということ packages the proposition as content; を makes it the object of 知っています. The knowledge predicate presents the content as known, but nominalization by itself is not a hearsay marker.",
+      "answer": "content-nonpast",
+      "acceptedAnswers": [
+        "来る",
+        "くる"
+      ],
+      "options": [
+        {
+          "id": "content-nonpast",
+          "label": "来る",
+          "rationale": "Preserves the content's time and attaches correctly. Use the plain verb 来る or past 来た directly before ということ; do not add a copula."
+        },
+        {
+          "id": "content-past",
+          "label": "来た",
+          "rationale": "Changes the supplied content's time. It can form a grammatical different proposition, not this conversion."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "6cc49ead225cf3b337c5e3ff5f1b3eb0bbcd5379ab7c6debcae07ceb7e57de12",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-friend-arrival-content-past",
+      "jlpt": 4,
+      "target": "content-past",
+      "relationship": "content-noticing",
+      "prompt": "友達が____ということを知っています。",
+      "translation": "Base predicate: 来ました (来る（くる）, come). Convert it to an ordinary short plain predicate before the printed ということ, preserving time and polarity. Retain the full required copula; no omission, expanded copula or extra words.",
+      "evidence": "A nominal predicate and an irregular verb become the content of knowledge, not automatically someone else's quoted words.",
+      "explanation": "Use the plain verb 来る or past 来た directly before ということ; do not add a copula. ということ packages the proposition as content; を makes it the object of 知っています. The knowledge predicate presents the content as known, but nominalization by itself is not a hearsay marker.",
+      "answer": "content-past",
+      "acceptedAnswers": [
+        "来た",
+        "きた"
+      ],
+      "options": [
+        {
+          "id": "content-past",
+          "label": "来た",
+          "rationale": "Preserves the content's time and attaches correctly. Use the plain verb 来る or past 来た directly before ということ; do not add a copula."
+        },
+        {
+          "id": "content-nonpast",
+          "label": "来る",
+          "rationale": "Changes the supplied content's time. It can form a grammatical different proposition, not this conversion."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "6cc49ead225cf3b337c5e3ff5f1b3eb0bbcd5379ab7c6debcae07ceb7e57de12",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-friend-arrival-notice-positive",
+      "jlpt": 4,
+      "target": "notice-positive",
+      "relationship": "content-noticing",
+      "prompt": "友達が____気が付いた。",
+      "translation": "Noticed base predicate: 来ています (来る（くる）, come; here an arrived friend's presence). Convert it to the full ordinary plain form, preserving its state and polarity; retain い in the ている series. Nominalize directly with の or こと and add に before 気が付いた. Enter predicate plus nominalizer plus に; do not add という or other words.",
+      "evidence": "Both no and koto fit these noticing complements; the positive/negative state must still be transformed rather than copied.",
+      "explanation": "Keep the full ている series: 来ている or negative 来ていない, then nominalize the whole state. Both のに and ことに connect the nominalized situation to 気が付いた. Here の + に is not the concessive connector 'although'. The noticed absence or nonarrival does not entail a deliberate refusal.",
+      "answer": "notice-positive",
+      "acceptedAnswers": [
+        "来ているのに",
+        "来ていることに",
+        "来ている事に",
+        "来ている縡に",
+        "きているのに",
+        "きていることに",
+        "きている事に",
+        "きている縡に"
+      ],
+      "options": [
+        {
+          "id": "notice-positive",
+          "label": "来ているのに",
+          "rationale": "Preserves the supplied state and polarity, then connects it to noticing. Keep the full ている series: 来ている or negative 来ていない, then nominalize the whole state."
+        },
+        {
+          "id": "notice-negative",
+          "label": "来ていないのに",
+          "rationale": "Reverses the state being noticed. It describes a different realization, not the requested conversion."
+        }
+      ],
+      "additionalCorrectOptions": [
+        {
+          "id": "koto-ni",
+          "label": "来ていることに",
+          "rationale": "こと also nominalizes this situation before に気が付いた; の is not the only fitting choice."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "fa145179e1c38a0686d0667267805d272963c11471c97e92814df296ac20d156",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-friend-arrival-notice-negative",
+      "jlpt": 4,
+      "target": "notice-negative",
+      "relationship": "content-noticing",
+      "prompt": "友達が____気が付いた。",
+      "translation": "Noticed base predicate: 来ていません (来る（くる）, come; here an arrived friend's presence). Convert it to the full ordinary plain form, preserving its state and polarity; retain い in the ている series. Nominalize directly with の or こと and add に before 気が付いた. Enter predicate plus nominalizer plus に; do not add という or other words.",
+      "evidence": "Both no and koto fit these noticing complements; the positive/negative state must still be transformed rather than copied.",
+      "explanation": "Keep the full ている series: 来ている or negative 来ていない, then nominalize the whole state. Both のに and ことに connect the nominalized situation to 気が付いた. Here の + に is not the concessive connector 'although'. The noticed absence or nonarrival does not entail a deliberate refusal.",
+      "answer": "notice-negative",
+      "acceptedAnswers": [
+        "来ていないのに",
+        "来ていないことに",
+        "来ていない事に",
+        "来ていない縡に",
+        "きていないのに",
+        "きていないことに",
+        "きていない事に",
+        "きていない縡に"
+      ],
+      "options": [
+        {
+          "id": "notice-negative",
+          "label": "来ていないのに",
+          "rationale": "Preserves the supplied state and polarity, then connects it to noticing. Keep the full ている series: 来ている or negative 来ていない, then nominalize the whole state."
+        },
+        {
+          "id": "notice-positive",
+          "label": "来ているのに",
+          "rationale": "Reverses the state being noticed. It describes a different realization, not the requested conversion."
+        }
+      ],
+      "additionalCorrectOptions": [
+        {
+          "id": "koto-ni",
+          "label": "来ていないことに",
+          "rationale": "こと also nominalizes this situation before に気が付いた; の is not the only fitting choice."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "fa145179e1c38a0686d0667267805d272963c11471c97e92814df296ac20d156",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-wallet-location-notice-positive",
+      "jlpt": 4,
+      "target": "notice-positive",
+      "relationship": "content-noticing",
+      "prompt": "かばんに財布が____気が付いた。",
+      "translation": "Noticed base predicate: あります (ある, exist; here a wallet being in the bag). Convert it to the full ordinary plain form, preserving its state and polarity; retain い in the ている series. Nominalize directly with の or こと and add に before 気が付いた. Enter predicate plus nominalizer plus に; do not add という or other words.",
+      "evidence": "Both no and koto fit these noticing complements; the positive/negative state must still be transformed rather than copied.",
+      "explanation": "Inanimate existence uses plain ある, but its ordinary negative is ない, not あらない. Both のに and ことに connect the nominalized situation to 気が付いた. Here の + に is not the concessive connector 'although'. The noticed absence or nonarrival does not entail a deliberate refusal.",
+      "answer": "notice-positive",
+      "acceptedAnswers": [
+        "あるのに",
+        "あることに",
+        "ある事に",
+        "ある縡に",
+        "有るのに",
+        "有ることに",
+        "有る事に",
+        "有る縡に",
+        "在るのに",
+        "在ることに",
+        "在る事に",
+        "在る縡に"
+      ],
+      "options": [
+        {
+          "id": "notice-positive",
+          "label": "あるのに",
+          "rationale": "Preserves the supplied state and polarity, then connects it to noticing. Inanimate existence uses plain ある, but its ordinary negative is ない, not あらない."
+        },
+        {
+          "id": "notice-negative",
+          "label": "ないのに",
+          "rationale": "Reverses the state being noticed. It describes a different realization, not the requested conversion."
+        }
+      ],
+      "additionalCorrectOptions": [
+        {
+          "id": "koto-ni",
+          "label": "あることに",
+          "rationale": "こと also nominalizes this situation before に気が付いた; の is not the only fitting choice."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "a8bc82af49d94241c842c35910c579ada3a234f6f0a0538229f46f0b2628f8ef",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "かばん",
+            "reading": "かばん",
+            "headword": "かばん",
+            "gloss": "bag"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "財布",
+            "reading": "さいふ",
+            "headword": "財布",
+            "gloss": "wallet"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-wallet-location-notice-negative",
+      "jlpt": 4,
+      "target": "notice-negative",
+      "relationship": "content-noticing",
+      "prompt": "かばんに財布が____気が付いた。",
+      "translation": "Noticed base predicate: ありません (ある, exist; here a wallet being in the bag). Convert it to the full ordinary plain form, preserving its state and polarity; retain い in the ている series. Nominalize directly with の or こと and add に before 気が付いた. Enter predicate plus nominalizer plus に; do not add という or other words.",
+      "evidence": "Both no and koto fit these noticing complements; the positive/negative state must still be transformed rather than copied.",
+      "explanation": "Inanimate existence uses plain ある, but its ordinary negative is ない, not あらない. Both のに and ことに connect the nominalized situation to 気が付いた. Here の + に is not the concessive connector 'although'. The noticed absence or nonarrival does not entail a deliberate refusal.",
+      "answer": "notice-negative",
+      "acceptedAnswers": [
+        "ないのに",
+        "ないことに",
+        "ない事に",
+        "ない縡に",
+        "無いのに",
+        "無いことに",
+        "無い事に",
+        "無い縡に"
+      ],
+      "options": [
+        {
+          "id": "notice-negative",
+          "label": "ないのに",
+          "rationale": "Preserves the supplied state and polarity, then connects it to noticing. Inanimate existence uses plain ある, but its ordinary negative is ない, not あらない."
+        },
+        {
+          "id": "notice-positive",
+          "label": "あるのに",
+          "rationale": "Reverses the state being noticed. It describes a different realization, not the requested conversion."
+        }
+      ],
+      "additionalCorrectOptions": [
+        {
+          "id": "koto-ni",
+          "label": "ないことに",
+          "rationale": "こと also nominalizes this situation before に気が付いた; の is not the only fitting choice."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "a8bc82af49d94241c842c35910c579ada3a234f6f0a0538229f46f0b2628f8ef",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "かばん",
+            "reading": "かばん",
+            "headword": "かばん",
+            "gloss": "bag"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "財布",
+            "reading": "さいふ",
+            "headword": "財布",
+            "gloss": "wallet"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-instruction-reading-do",
+      "jlpt": 4,
+      "target": "instruction-do",
+      "relationship": "instructions",
+      "prompt": "先生は学生に本を____ように言った。",
+      "translation": "Requested action, supplied in polite form: 読みます (読む（よむ）, read). Convert it to its ordinary nonpast plain positive or negative form, preserving the supplied polarity, before the printed ように reporting frame. Enter the converted verb only; do not use an imperative, a direct quoted request or extra words.",
+      "evidence": "Reported instruction formation reuses goal/request support. Godan and suru predicates require different real polite-to-plain transformations.",
+      "explanation": "Convert 読みます to 読む, or 読みません to 読まない, before ように. The negative reports a request to refrain; it does not negate 言った or 頼んだ. Neither report proves the requested action or restraint happened, and 言う alone does not fix how forceful the instruction was.",
+      "answer": "instruction-do",
+      "acceptedAnswers": [
+        "読む",
+        "よむ"
+      ],
+      "options": [
+        {
+          "id": "instruction-do",
+          "label": "読む",
+          "rationale": "Preserves the requested action's polarity in the indirect instruction. Convert 読みます to 読む, or 読みません to 読まない, before ように."
+        },
+        {
+          "id": "instruction-refrain",
+          "label": "読まない",
+          "rationale": "Reverses doing versus refraining. It can report a different instruction, not the supplied one."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "726e36519299aa5994e90ce23ad8228fe57fd4c74bba12556fca59bb1dbf48ad",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "学生",
+            "reading": "がくせい",
+            "headword": "学生",
+            "gloss": "student"
+          },
+          {
+            "start": 6,
+            "end": 7,
+            "text": "本",
+            "reading": "ほん",
+            "headword": "本",
+            "gloss": "book"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-instruction-reading-refrain",
+      "jlpt": 4,
+      "target": "instruction-refrain",
+      "relationship": "instructions",
+      "prompt": "先生は学生に本を____ように言った。",
+      "translation": "Requested action, supplied in polite form: 読みません (読む（よむ）, read). Convert it to its ordinary nonpast plain positive or negative form, preserving the supplied polarity, before the printed ように reporting frame. Enter the converted verb only; do not use an imperative, a direct quoted request or extra words.",
+      "evidence": "Reported instruction formation reuses goal/request support. Godan and suru predicates require different real polite-to-plain transformations.",
+      "explanation": "Convert 読みます to 読む, or 読みません to 読まない, before ように. The negative reports a request to refrain; it does not negate 言った or 頼んだ. Neither report proves the requested action or restraint happened, and 言う alone does not fix how forceful the instruction was.",
+      "answer": "instruction-refrain",
+      "acceptedAnswers": [
+        "読まない",
+        "よまない"
+      ],
+      "options": [
+        {
+          "id": "instruction-refrain",
+          "label": "読まない",
+          "rationale": "Preserves the requested action's polarity in the indirect instruction. Convert 読みます to 読む, or 読みません to 読まない, before ように."
+        },
+        {
+          "id": "instruction-do",
+          "label": "読む",
+          "rationale": "Reverses doing versus refraining. It can report a different instruction, not the supplied one."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "726e36519299aa5994e90ce23ad8228fe57fd4c74bba12556fca59bb1dbf48ad",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "学生",
+            "reading": "がくせい",
+            "headword": "学生",
+            "gloss": "student"
+          },
+          {
+            "start": 6,
+            "end": 7,
+            "text": "本",
+            "reading": "ほん",
+            "headword": "本",
+            "gloss": "book"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-instruction-explanation-do",
+      "jlpt": 4,
+      "target": "instruction-do",
+      "relationship": "instructions",
+      "prompt": "学生が先生に答えを____ように頼んだ。",
+      "translation": "Requested action, supplied in polite form: 説明します (説明する（せつめいする）, explain). Convert it to its ordinary nonpast plain positive or negative form, preserving the supplied polarity, before the printed ように reporting frame. Enter the converted verb only; do not use an imperative, a direct quoted request or extra words.",
+      "evidence": "Reported instruction formation reuses goal/request support. Godan and suru predicates require different real polite-to-plain transformations.",
+      "explanation": "Convert 説明します to 説明する, or 説明しません to 説明しない, before ように. The negative reports a request to refrain; it does not negate 言った or 頼んだ. Neither report proves the requested action or restraint happened, and 言う alone does not fix how forceful the instruction was.",
+      "answer": "instruction-do",
+      "acceptedAnswers": [
+        "説明する",
+        "せつめいする"
+      ],
+      "options": [
+        {
+          "id": "instruction-do",
+          "label": "説明する",
+          "rationale": "Preserves the requested action's polarity in the indirect instruction. Convert 説明します to 説明する, or 説明しません to 説明しない, before ように."
+        },
+        {
+          "id": "instruction-refrain",
+          "label": "説明しない",
+          "rationale": "Reverses doing versus refraining. It can report a different instruction, not the supplied one."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "24fd3886d4547aab305077e4b511b36cd99b0c12b479712d5a41f02cccd5cce0",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "学生",
+            "reading": "がくせい",
+            "headword": "学生",
+            "gloss": "student"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "答え",
+            "reading": "こたえ",
+            "headword": "答え",
+            "gloss": "answer"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-instruction-explanation-refrain",
+      "jlpt": 4,
+      "target": "instruction-refrain",
+      "relationship": "instructions",
+      "prompt": "学生が先生に答えを____ように頼んだ。",
+      "translation": "Requested action, supplied in polite form: 説明しません (説明する（せつめいする）, explain). Convert it to its ordinary nonpast plain positive or negative form, preserving the supplied polarity, before the printed ように reporting frame. Enter the converted verb only; do not use an imperative, a direct quoted request or extra words.",
+      "evidence": "Reported instruction formation reuses goal/request support. Godan and suru predicates require different real polite-to-plain transformations.",
+      "explanation": "Convert 説明します to 説明する, or 説明しません to 説明しない, before ように. The negative reports a request to refrain; it does not negate 言った or 頼んだ. Neither report proves the requested action or restraint happened, and 言う alone does not fix how forceful the instruction was.",
+      "answer": "instruction-refrain",
+      "acceptedAnswers": [
+        "説明しない",
+        "せつめいしない"
+      ],
+      "options": [
+        {
+          "id": "instruction-refrain",
+          "label": "説明しない",
+          "rationale": "Preserves the requested action's polarity in the indirect instruction. Convert 説明します to 説明する, or 説明しません to 説明しない, before ように."
+        },
+        {
+          "id": "instruction-do",
+          "label": "説明する",
+          "rationale": "Reverses doing versus refraining. It can report a different instruction, not the supplied one."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "24fd3886d4547aab305077e4b511b36cd99b0c12b479712d5a41f02cccd5cce0",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "学生",
+            "reading": "がくせい",
+            "headword": "学生",
+            "gloss": "student"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "答え",
+            "reading": "こたえ",
+            "headword": "答え",
+            "gloss": "answer"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-instruction-reading-issuer",
+      "jlpt": 4,
+      "target": "instruction-issuer",
+      "relationship": "instructions",
+      "prompt": "先生は学生に本を読むように言った。→____",
+      "translation": "Who issued the reported telling/request? Scope for this two-person exchange: the two named people are the issuer and addressee of the instruction, and the requested behavior is the addressee's own; no other participant is implied. Candidate labels, in fixed order: 先生（せんせい） = teacher; 学生（がくせい） = student. Read the Japanese case roles within that scope; do not infer roles from who appears first. Kana answers are accepted.",
+      "evidence": "Within the supplied two-person, addressee-action scope, the addressee-first negative request reverses the role-to-position mapping of the topic-first positive telling; these are not merely different verbs in one role template.",
+      "explanation": "Within the stated two-person scope, the instruction's issuer is 先生. 先生は gives the teacher as the speaker; 学生に marks the addressee, who is asked to read the book. The narrator reporting this sentence need not be either participant; the requested behavior is not asserted to have occurred.",
+      "answer": "instruction-issuer",
+      "acceptedAnswers": [
+        "先生",
+        "せんせい"
+      ],
+      "options": [
+        {
+          "id": "instruction-issuer",
+          "label": "先生",
+          "rationale": "Within the stated two-person scope, the instruction's issuer is 先生. 先生は gives the teacher as the speaker; 学生に marks the addressee, who is asked to read the book."
+        },
+        {
+          "id": "instruction-actor",
+          "label": "学生",
+          "rationale": "That is the other participant's role within the stated two-person scope. The instruction's issuer is 先生. 先生は gives the teacher as the speaker; 学生に marks the addressee, who is asked to read the book."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "72d45c352cbe2dbe11c03f85acf7dce6fa12d73e14f5c76b496295c445a5354e",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "学生",
+            "reading": "がくせい",
+            "headword": "学生",
+            "gloss": "student"
+          },
+          {
+            "start": 6,
+            "end": 7,
+            "text": "本",
+            "reading": "ほん",
+            "headword": "本",
+            "gloss": "book"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-instruction-reading-actor",
+      "jlpt": 4,
+      "target": "instruction-actor",
+      "relationship": "instructions",
+      "prompt": "先生は学生に本を読むように言った。→____",
+      "translation": "Who is asked to perform or refrain from the embedded action? Scope for this two-person exchange: the two named people are the issuer and addressee of the instruction, and the requested behavior is the addressee's own; no other participant is implied. Candidate labels, in fixed order: 先生（せんせい） = teacher; 学生（がくせい） = student. Read the Japanese case roles within that scope; do not infer roles from who appears first. Kana answers are accepted.",
+      "evidence": "Within the supplied two-person, addressee-action scope, the addressee-first negative request reverses the role-to-position mapping of the topic-first positive telling; these are not merely different verbs in one role template.",
+      "explanation": "Within the stated two-person scope, the requested actor is 学生. 先生は gives the teacher as the speaker; 学生に marks the addressee, who is asked to read the book. The narrator reporting this sentence need not be either participant; the requested behavior is not asserted to have occurred.",
+      "answer": "instruction-actor",
+      "acceptedAnswers": [
+        "学生",
+        "がくせい"
+      ],
+      "options": [
+        {
+          "id": "instruction-issuer",
+          "label": "先生",
+          "rationale": "That is the other participant's role within the stated two-person scope. The requested actor is 学生. 先生は gives the teacher as the speaker; 学生に marks the addressee, who is asked to read the book."
+        },
+        {
+          "id": "instruction-actor",
+          "label": "学生",
+          "rationale": "Within the stated two-person scope, the requested actor is 学生. 先生は gives the teacher as the speaker; 学生に marks the addressee, who is asked to read the book."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "72d45c352cbe2dbe11c03f85acf7dce6fa12d73e14f5c76b496295c445a5354e",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "学生",
+            "reading": "がくせい",
+            "headword": "学生",
+            "gloss": "student"
+          },
+          {
+            "start": 6,
+            "end": 7,
+            "text": "本",
+            "reading": "ほん",
+            "headword": "本",
+            "gloss": "book"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-instruction-explanation-issuer",
+      "jlpt": 4,
+      "target": "instruction-issuer",
+      "relationship": "instructions",
+      "prompt": "先生に学生が答えを説明しないように頼んだ。→____",
+      "translation": "Who issued the reported telling/request? Scope for this two-person exchange: the two named people are the issuer and addressee of the instruction, and the requested behavior is the addressee's own; no other participant is implied. Candidate labels, in fixed order: 先生（せんせい） = teacher; 学生（がくせい） = student. Read the Japanese case roles within that scope; do not infer roles from who appears first. Kana answers are accepted.",
+      "evidence": "Within the supplied two-person, addressee-action scope, the addressee-first negative request reverses the role-to-position mapping of the topic-first positive telling; these are not merely different verbs in one role template.",
+      "explanation": "Within the stated two-person scope, the instruction's issuer is 学生. The initial 先生に is the addressee, not the requester. 学生が supplies the requesting student; the teacher is asked not to explain the answer. The narrator reporting this sentence need not be either participant; the requested behavior is not asserted to have occurred.",
+      "answer": "instruction-issuer",
+      "acceptedAnswers": [
+        "学生",
+        "がくせい"
+      ],
+      "options": [
+        {
+          "id": "instruction-actor",
+          "label": "先生",
+          "rationale": "That is the other participant's role within the stated two-person scope. The instruction's issuer is 学生. The initial 先生に is the addressee, not the requester. 学生が supplies the requesting student; the teacher is asked not to explain the answer."
+        },
+        {
+          "id": "instruction-issuer",
+          "label": "学生",
+          "rationale": "Within the stated two-person scope, the instruction's issuer is 学生. The initial 先生に is the addressee, not the requester. 学生が supplies the requesting student; the teacher is asked not to explain the answer."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "ef7940c1f43e052b6b7700a9bbb8b5025ccab01e40ed836a3dc3fefa9c16fb6b",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "学生",
+            "reading": "がくせい",
+            "headword": "学生",
+            "gloss": "student"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "答え",
+            "reading": "こたえ",
+            "headword": "答え",
+            "gloss": "answer"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reports-questions-instruction-explanation-actor",
+      "jlpt": 4,
+      "target": "instruction-actor",
+      "relationship": "instructions",
+      "prompt": "先生に学生が答えを説明しないように頼んだ。→____",
+      "translation": "Who is asked to perform or refrain from the embedded action? Scope for this two-person exchange: the two named people are the issuer and addressee of the instruction, and the requested behavior is the addressee's own; no other participant is implied. Candidate labels, in fixed order: 先生（せんせい） = teacher; 学生（がくせい） = student. Read the Japanese case roles within that scope; do not infer roles from who appears first. Kana answers are accepted.",
+      "evidence": "Within the supplied two-person, addressee-action scope, the addressee-first negative request reverses the role-to-position mapping of the topic-first positive telling; these are not merely different verbs in one role template.",
+      "explanation": "Within the stated two-person scope, the requested actor is 先生. The initial 先生に is the addressee, not the requester. 学生が supplies the requesting student; the teacher is asked not to explain the answer. The narrator reporting this sentence need not be either participant; the requested behavior is not asserted to have occurred.",
+      "answer": "instruction-actor",
+      "acceptedAnswers": [
+        "先生",
+        "せんせい"
+      ],
+      "options": [
+        {
+          "id": "instruction-actor",
+          "label": "先生",
+          "rationale": "Within the stated two-person scope, the requested actor is 先生. The initial 先生に is the addressee, not the requester. 学生が supplies the requesting student; the teacher is asked not to explain the answer."
+        },
+        {
+          "id": "instruction-issuer",
+          "label": "学生",
+          "rationale": "That is the other participant's role within the stated two-person scope. The requested actor is 先生. The initial 先生に is the addressee, not the requester. 学生が supplies the requesting student; the teacher is asked not to explain the answer."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "ef7940c1f43e052b6b7700a9bbb8b5025ccab01e40ed836a3dc3fefa9c16fb6b",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "学生",
+            "reading": "がくせい",
+            "headword": "学生",
+            "gloss": "student"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "答え",
+            "reading": "こたえ",
+            "headword": "答え",
+            "gloss": "answer"
+          }
+        ]
+      }
+    }
+  ],
+  "introductionGroups": [
+    {
+      "id": "reports-questions-wh-questions",
+      "label": "Embed an information question and read the outer message",
+      "facets": [
+        {
+          "id": "wh-nonpast",
+          "label": "Nonpast predicate in an embedded information question"
+        },
+        {
+          "id": "wh-past",
+          "label": "Past predicate in an embedded information question"
+        },
+        {
+          "id": "outer-statement",
+          "label": "Statement about the speaker's knowledge"
+        },
+        {
+          "id": "outer-request",
+          "label": "Request for the information"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "reports-questions-book-purchase-embed-nonpast",
+          "facetId": "wh-nonpast",
+          "exampleKey": "book-purchase"
+        },
+        {
+          "exerciseId": "reports-questions-book-purchase-embed-past",
+          "facetId": "wh-past",
+          "exampleKey": "book-purchase"
+        },
+        {
+          "exerciseId": "reports-questions-bread-eater-embed-nonpast",
+          "facetId": "wh-nonpast",
+          "exampleKey": "bread-eater"
+        },
+        {
+          "exerciseId": "reports-questions-bread-eater-embed-past",
+          "facetId": "wh-past",
+          "exampleKey": "bread-eater"
+        },
+        {
+          "exerciseId": "reports-questions-book-purchase-outer-statement",
+          "facetId": "outer-statement",
+          "exampleKey": "book-purchase"
+        },
+        {
+          "exerciseId": "reports-questions-book-purchase-outer-request",
+          "facetId": "outer-request",
+          "exampleKey": "book-purchase"
+        },
+        {
+          "exerciseId": "reports-questions-bread-eater-outer-statement",
+          "facetId": "outer-statement",
+          "exampleKey": "bread-eater"
+        },
+        {
+          "exerciseId": "reports-questions-bread-eater-outer-request",
+          "facetId": "outer-request",
+          "exampleKey": "bread-eater"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "reports-questions-whether",
+          "importance": 2,
+          "reason": "Compare an unknown detail with whether a proposition holds."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "reports-questions-whether",
+      "label": "Embed a polar question and distinguish what is being asked",
+      "facets": [
+        {
+          "id": "whether-positive",
+          "label": "Positive proposition left open"
+        },
+        {
+          "id": "whether-negative",
+          "label": "Negative proposition left open"
+        },
+        {
+          "id": "question-content",
+          "label": "Question seeking a missing detail"
+        },
+        {
+          "id": "question-polar",
+          "label": "Question whether a proposition holds"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "reports-questions-bus-arrival-whether-positive",
+          "facetId": "whether-positive",
+          "exampleKey": "bus-arrival"
+        },
+        {
+          "exerciseId": "reports-questions-bus-arrival-whether-negative",
+          "facetId": "whether-negative",
+          "exampleKey": "bus-arrival"
+        },
+        {
+          "exerciseId": "reports-questions-box-weight-whether-positive",
+          "facetId": "whether-positive",
+          "exampleKey": "box-weight"
+        },
+        {
+          "exerciseId": "reports-questions-box-weight-whether-negative",
+          "facetId": "whether-negative",
+          "exampleKey": "box-weight"
+        },
+        {
+          "exerciseId": "reports-questions-bus-arrival-question-content",
+          "facetId": "question-content",
+          "exampleKey": "bus-arrival"
+        },
+        {
+          "exerciseId": "reports-questions-bus-arrival-question-polar",
+          "facetId": "question-polar",
+          "exampleKey": "bus-arrival"
+        },
+        {
+          "exerciseId": "reports-questions-box-weight-question-content",
+          "facetId": "question-content",
+          "exampleKey": "box-weight"
+        },
+        {
+          "exerciseId": "reports-questions-box-weight-question-polar",
+          "facetId": "question-polar",
+          "exampleKey": "box-weight"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "reports-questions-reports",
+          "importance": 2,
+          "reason": "Contrast an embedded question with content presented as a report."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "reports-questions-reports",
+      "label": "Attach reported content and distinguish reporting perspectives",
+      "facets": [
+        {
+          "id": "report-nonpast",
+          "label": "Nonpast content in a report"
+        },
+        {
+          "id": "report-past",
+          "label": "Past content in a report"
+        },
+        {
+          "id": "report-received",
+          "label": "Speaker presents information they received"
+        },
+        {
+          "id": "report-general",
+          "label": "Impersonal report of what people say"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "reports-questions-town-quiet-reported-nonpast",
+          "facetId": "report-nonpast",
+          "exampleKey": "town-quiet"
+        },
+        {
+          "exerciseId": "reports-questions-town-quiet-reported-past",
+          "facetId": "report-past",
+          "exampleKey": "town-quiet"
+        },
+        {
+          "exerciseId": "reports-questions-mountain-view-reported-nonpast",
+          "facetId": "report-nonpast",
+          "exampleKey": "mountain-view"
+        },
+        {
+          "exerciseId": "reports-questions-mountain-view-reported-past",
+          "facetId": "report-past",
+          "exampleKey": "mountain-view"
+        },
+        {
+          "exerciseId": "reports-questions-town-quiet-perspective-received",
+          "facetId": "report-received",
+          "exampleKey": "town-quiet"
+        },
+        {
+          "exerciseId": "reports-questions-town-quiet-perspective-general",
+          "facetId": "report-general",
+          "exampleKey": "town-quiet"
+        },
+        {
+          "exerciseId": "reports-questions-mountain-view-perspective-received",
+          "facetId": "report-received",
+          "exampleKey": "mountain-view"
+        },
+        {
+          "exerciseId": "reports-questions-mountain-view-perspective-general",
+          "facetId": "report-general",
+          "exampleKey": "mountain-view"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "reports-questions-content-noticing",
+          "importance": 2,
+          "reason": "Package a proposition without treating every nominalized clause as hearsay."
+        },
+        {
+          "groupId": "n5-explanations-endings-quotation-markers",
+          "importance": 2,
+          "reason": "Optionally revisit ordinary and conversational quotation markers in their original group."
+        },
+        {
+          "groupId": "judgment-expectation-quoted-thought",
+          "importance": 2,
+          "reason": "Compare heard/general reports with the existing quoted-thought attachment and time tasks."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "reports-questions-content-noticing",
+      "label": "Package content and notice a positive or negative situation",
+      "facets": [
+        {
+          "id": "content-nonpast",
+          "label": "Nonpast proposition before to-iu-koto"
+        },
+        {
+          "id": "content-past",
+          "label": "Past proposition before to-iu-koto"
+        },
+        {
+          "id": "notice-positive",
+          "label": "Notice a positive state"
+        },
+        {
+          "id": "notice-negative",
+          "label": "Notice a negative state"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "reports-questions-shop-dayoff-content-nonpast",
+          "facetId": "content-nonpast",
+          "exampleKey": "shop-dayoff"
+        },
+        {
+          "exerciseId": "reports-questions-shop-dayoff-content-past",
+          "facetId": "content-past",
+          "exampleKey": "shop-dayoff"
+        },
+        {
+          "exerciseId": "reports-questions-friend-arrival-content-nonpast",
+          "facetId": "content-nonpast",
+          "exampleKey": "friend-arrival"
+        },
+        {
+          "exerciseId": "reports-questions-friend-arrival-content-past",
+          "facetId": "content-past",
+          "exampleKey": "friend-arrival"
+        },
+        {
+          "exerciseId": "reports-questions-friend-arrival-notice-positive",
+          "facetId": "notice-positive",
+          "exampleKey": "friend-arrival"
+        },
+        {
+          "exerciseId": "reports-questions-friend-arrival-notice-negative",
+          "facetId": "notice-negative",
+          "exampleKey": "friend-arrival"
+        },
+        {
+          "exerciseId": "reports-questions-wallet-location-notice-positive",
+          "facetId": "notice-positive",
+          "exampleKey": "wallet-location"
+        },
+        {
+          "exerciseId": "reports-questions-wallet-location-notice-negative",
+          "facetId": "notice-negative",
+          "exampleKey": "wallet-location"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "reports-questions-instructions",
+          "importance": 2,
+          "reason": "Move from noticed content to a reported requested action, revisiting the linked goal/request support first."
+        },
+        {
+          "groupId": "n4-existing-activities-perception",
+          "importance": 2,
+          "reason": "Reuse the original activity and direct-perception nominalizations rather than duplicate them."
+        }
+      ],
+      "requires": []
+    },
+    {
+      "id": "reports-questions-instructions",
+      "label": "Report requested actions and track the participants",
+      "facets": [
+        {
+          "id": "instruction-do",
+          "label": "Report a request to do something"
+        },
+        {
+          "id": "instruction-refrain",
+          "label": "Report a request not to do something"
+        },
+        {
+          "id": "instruction-issuer",
+          "label": "Person issuing the reported instruction"
+        },
+        {
+          "id": "instruction-actor",
+          "label": "Person asked to act or refrain"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "reports-questions-instruction-reading-do",
+          "facetId": "instruction-do",
+          "exampleKey": "instruction-reading"
+        },
+        {
+          "exerciseId": "reports-questions-instruction-reading-refrain",
+          "facetId": "instruction-refrain",
+          "exampleKey": "instruction-reading"
+        },
+        {
+          "exerciseId": "reports-questions-instruction-explanation-do",
+          "facetId": "instruction-do",
+          "exampleKey": "instruction-explanation"
+        },
+        {
+          "exerciseId": "reports-questions-instruction-explanation-refrain",
+          "facetId": "instruction-refrain",
+          "exampleKey": "instruction-explanation"
+        },
+        {
+          "exerciseId": "reports-questions-instruction-reading-issuer",
+          "facetId": "instruction-issuer",
+          "exampleKey": "instruction-reading"
+        },
+        {
+          "exerciseId": "reports-questions-instruction-reading-actor",
+          "facetId": "instruction-actor",
+          "exampleKey": "instruction-reading"
+        },
+        {
+          "exerciseId": "reports-questions-instruction-explanation-issuer",
+          "facetId": "instruction-issuer",
+          "exampleKey": "instruction-explanation"
+        },
+        {
+          "exerciseId": "reports-questions-instruction-explanation-actor",
+          "facetId": "instruction-actor",
+          "exampleKey": "instruction-explanation"
+        }
+      ],
+      "next": [
+        {
+          "groupId": "n4-existing-you-goals",
+          "importance": 2,
+          "reason": "Revisit the existing enabled/prevented goal support before treating ように as a reporting frame."
+        },
+        {
+          "groupId": "n5-requests-rules-messages",
+          "importance": 2,
+          "reason": "Reuse direct positive/negative request foundations; the mixed group's other message types retain their owner."
+        },
+        {
+          "groupId": "benefactive-requests-requests",
+          "importance": 2,
+          "reason": "Reuse the existing positive/refraining favor requests, including negative-question request endings."
+        }
+      ],
+      "requires": []
+    }
+  ]
+}

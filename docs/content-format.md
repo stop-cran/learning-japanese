@@ -248,7 +248,8 @@ The [passive/participants ledger](grammar-passive-participants-sources.json) add
 The [causative/perspective ledger](grammar-causative-perspective-sources.json) adds 40 N4 tasks in one set.
 The [appearance/impressions ledger](grammar-appearance-impressions-sources.json) adds 38 N4 tasks in one set.
 The [judgment/expectation ledger](grammar-judgment-expectation-sources.json) adds 36 N4 tasks in one set.
-Current practice is 1468 exercises: 587 N5 and 540 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [reports/questions ledger](grammar-reports-questions-sources.json) adds 40 N4 tasks in one set.
+Current practice is 1508 exercises: 587 N5 and 580 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -421,6 +422,13 @@ conversions and twelve interpretations of thinking time, proposition polarity an
 Six conservative context-key strings join paired tense, modality and scope tasks, not independent conversations.
 The twelve original expectation tasks, the mixed-routine group and the linked N5 quotation/conjecture groups
 retain their complete objects and owners; broader reports/questions and harder normative comparisons are not new targets.
+The [reports/questions installment](grammar-reports-questions-sources.json) adds 40 annotated N4 prompts,
+reaching **1508 exercises in 64 files** and **1199/1508** reviewed, with 309 still pending.
+Five groups contain twenty facets, ten soft recommendations and no prerequisites: 24 formation tasks and
+sixteen bounded interpretations. Eight additional correct options retain fitting bare-か and ことに answers.
+Eleven context-key strings join paired tense, polarity, roles and messages rather than representing independent conversations.
+Existing activity/perception, goal, request, quotation and thought groups keep their complete objects and owners.
+Formal reporting, observable evidence and qualified assertion are explicitly unscored recognition bridges.
 The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the

@@ -201,8 +201,8 @@ For overlapping evidence-based impressions, see [looks, likeness and informed im
 The existing [formal-noun comparison](koto-wake-and-formal-nouns.md#intention-expectation-and-what-ought-to-happen)
 also discusses normative べき and intended-role つもり. Those harder comparisons are optional,
 not required N4 distractors here.
-Broader reported speech and embedded questions belong to the separate reports/questions installment;
-the existing quotation article is the current foundation, not a claim that this batch covers that whole family.
+For the separate reporting family, see [embedded questions, reports and noticing](embedded-questions-and-reports.md).
+It distinguishes outer messages and reporting perspectives, reusing this thought group without expanding its assessed scope.
 
 ## Sources and limits
 

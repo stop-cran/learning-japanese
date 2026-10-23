@@ -148,6 +148,10 @@ Those drills explicitly request either the ordinary one-kana marker or the conve
 The other can be grammatical yet outside that requested form; the scene alone does not always distinguish them.
 Topic-introducing って and larger reported-speech constructions are separate uses, not extra targets in this set.
 
+The N4 [embedded questions and reports companion](embedded-questions-and-reports.md) contrasts an inner question
+with the outer message, heard information with impersonal reporting, and nominalized content with reported instructions.
+It reuses this quotation foundation rather than changing the N5 marker tasks.
+
 ### Which と is doing the work?
 
 | Sentence | Role of と |
