@@ -95,6 +95,29 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 23 authoring:** Shared spelling does not
+  authorize changing a baseline card's reading.
+  包む つつむ remains its existing N4 identity;
+  source くるむ gets a separate usual-kana article
+  and a dictionary-backed 包 backlink. Likewise,
+  毛糸 is native け + いと, not evidence that 毛
+  has an on reading ケイ.
+- **Batch 23 authoring:** Preserve raw mismatches,
+  but teach qualified identities: 郡 is county,
+  not nation; 形式's mathematical use is a form,
+  not every expression; 系統's raw geology gloss
+  is not established by the inspected definitions.
+  芸能's accomplishments are cultivated abilities,
+  not completed results. 蛍光灯's person label
+  must remain explicitly dated.
+- **Batch 23 authoring:** Identify missing exact
+  headwords and the actual supplementary source.
+  二次形式 and きれいだ were absent from the pinned
+  exact-form extraction. The separately inspected
+  二次形式 introduction was hosted Wikipedia,
+  not JMdict or Daijisen. The partial 形容詞
+  introduction was 実用日本語表現辞典.
+
 - **Batch 22 reconciliation:** Search actual English
   labels beyond the initially selected Japanese
   comparison neighborhood. 工夫/知恵 share practical

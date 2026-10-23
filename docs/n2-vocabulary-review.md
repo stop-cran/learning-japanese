@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-15 review-closed.** The target is all 1,812 source rows,
+**Batches 01-22 review-closed; batch 23 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 300 rows are review-closed; none are draft and 1,512 remain pending.
+The first 440 rows are review-closed; 20 are draft and 1,352 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -3319,6 +3319,51 @@ readings, titles, written-kanji arrays and easier
 levels remain preserved. The only established baseline
 exclusion addition remains batch-19 機械/道具.
 This closes batch 22, not the full expansion.
+
+## Batch 23: N2:442-N2:461
+
+**Status:** drafted; independent reviews and reconciliation pending.
+
+Scope: クリーニング, くるむ, くれぐれも, 咥える,
+郡, 稽古, 敬語, 蛍光灯, 形式, 継続, 毛糸, 経度,
+系統, 芸能, 競馬, 警備, 形容詞, 形容動詞, 外科, 毛皮.
+
+The draft adds **19 articles** and reuses 形式.
+That baseline article retains its identity, title,
+primary reading, kanji array, tags and previous
+teaching; it gains the sourced N2 level and bounded
+formality/mathematical-form coverage. Existing
+包む remains N4 つつむ: separate usual-kana くるむ
+is not a replacement for that identity.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-23.json)
+preserves original source rows, selected/additional
+senses, complete principal/comparison families,
+component readings and qualified public-inspection
+receipts. Corrections/qualifications address
+くるむ's transitivity, 郡's raw "country",
+形式's broad "math expression", 系統's unestablished
+geology gloss and 芸能's cultivated accomplishments.
+The source-selected 蛍光灯 person label is positively
+taught with its dated qualification.
+
+Nine existing N2 kanji cards receive useful links:
+包, 敬, 灯, 毛, 糸, 芸, 競, 詞 and 皮.
+There are ten new primary-form reciprocal pairs,
+plus 包/くるむ through the recognized 包む spelling.
+Missing component cards are not invented.
+All other existing written components are linked
+substantively; rare alias 毛革 does not create a
+primary-form 革 pair. Baseline quiz exclusions
+are unchanged.
+
+Reviewers will receive one common frozen snapshot,
+equivalent source access and the same three-facet
+rubric, with only the author's quiz-guard rationale
+removed from the initial evidence derivative.
+They will run strictly sequentially and exit
+before the next reviewer starts. No review-closed
+coverage is claimed for this draft.
 
 ## Final verification
 
