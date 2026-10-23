@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-27 review-closed; batch 28 drafted.** The target is all 1,812 source rows,
+**Batches 01-28 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 540 rows are review-closed; twenty rows are draft and 1,252 remain pending.
+The first 560 rows are review-closed; none are draft and 1,252 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -4249,7 +4249,7 @@ claims, independent review coverage of every addition and changed passage, basel
 source/reading/sense and cross-reference audits, a deterministic manifest, and `stop-cran` authorship.
 ## Batch 28: N2:542-N2:561
 
-**Status:** authored; independent sequential GPT and Claude reviews pending.
+**Status:** closed after independent initial reviews, corrections and bounded confirmation.
 
 Scope: ごくろうさま, 焦げる, 凍える, 心当たり, 心得る,
 腰掛け, 腰掛ける, 五十音, 胡椒, こしらえる, 超す, 擦る,
@@ -4380,3 +4380,68 @@ reciprocal link changes in this follow-through. The snapshot's coverage
 index hash follows the corrected TSV. Both original sessions will
 receive the same provenance-only diff and evidence for a final bounded
 check; unrelated baseline prose and optional polish remain outside scope.
+
+### Closure
+
+The [GPT follow-through](n2-vocabulary-reviews/batch-28-gpt-followup.md)
+and [Claude follow-through](n2-vocabulary-reviews/batch-28-claude-followup.md)
+examined `77294a7957b94d1102e421fb5cfca231431abb0a` in the original
+sessions, sequentially and with zero edits. Both resolve the provenance
+finding and report CLEAN correctness, scoped coverage and comprehensibility
+for the changed note, preserved records and appended evidence. Previously
+accepted article verdicts carry over; these are not renewed whole-batch
+reviews. No actionable defect or consequential unresolved claim remains
+in the assigned scope.
+
+Claude's suggestion that "does not explicitly name" would be more
+precise than "does not describe" remains optional: English "pass" can
+extend to exceeding, but the exact raw gloss and selected Japanese
+quantity use are separately stated. No source field or mapping is
+misrepresented by the conservative qualification. The unchanged baseline
+article's other source-list reference and tap/valve polish remain outside
+this correction.
+
+Author-executed authentication checked all three commits and their
+parent chain, stop-cran author/committer identities, required trailers,
+committed file hashes, exact actual patches, common prompts and all
+three sanitized evidence derivatives. It verified the explicit N2:552
+mapping and provenance-note transformations against their preserved
+records, unchanged remaining evidence, eleven newly extracted complete
+families, seven direct guard additions and the final 67 declarations.
+Each original native session contains exactly the three expected
+requests with the actual model/start time, zero edits and final
+assistant text matching the genuine archives after disclosed
+preamble/Markdown normalization. These are author-executed checks,
+not Git or hash execution by the file-only reviewers.
+
+Dual-family review was useful on this batch. Comparing observations
+throughout both initial reports, GPT uniquely established the ordinary
+secondary seating collision and missing 様 navigation. Claude uniquely
+established the concrete building-teaching gap and source-spelling
+mapping/boundary problem. Its optional hypotheses prompted additional
+supported guards after inspection; 個体/生き物 was independently
+added by the author's bounded comparison follow-through, not inferred
+transitively from 生物. Both confirmations independently caught the
+same inaccurate provenance sentence. Some initial CLEAN judgments were
+therefore incomplete; GPT explicitly withdrew the former source-sense
+approval. These complementary observations concern this shared sample,
+not a model ranking or proof against model bias.
+
+Both initial reviewers read all assigned articles and twenty mappings,
+but their dictionary/component reading and independent retrieval were
+not exhaustive or identical. The original failed public こちらこそ
+lookup remains disclosed, with positive pinned JMdict evidence.
+Convergence does not establish native-speaker, corpus or app-draw
+certification, nor an official modern JLPT syllabus.
+
+Closure preserves the 3,273 baseline identities, readings, titles,
+kanji arrays and easier sourced levels, with previously documented
+earlier-batch exclusion exceptions unchanged. The collection has
+3,790 word articles, including 517 new mapped articles, and retains
+130 distinct tracked primary reciprocal N2 pairs. The four new
+primary pairs and separate 超 alias link remain useful actual-reading
+examples.
+
+Current index: **560 closed, 0 draft, 1,252 pending and 0 unresolved**
+rows, mapped to 554 distinct articles: 517 new and 37 reused.
+This closes batch 28, not the full vocabulary expansion.
