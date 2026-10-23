@@ -4448,7 +4448,7 @@ This closes batch 28, not the full vocabulary expansion.
 
 ## Batch 29: N2:562-N2:581
 
-**Status:** drafted; independent GPT and Claude review pending.
+**Status:** independent initial reviews reconciled; corrected-passage confirmation pending.
 
 Scope: 琴, 言付ける, 言葉遣い, こないだ, 御無沙汰, こぼす,
 零れる, ゴム, ごめん, ごめんください, 小指, こらえる, 娯楽,
@@ -4502,3 +4502,75 @@ The blind initial evidence derivative removes only the author's quiz
 rationale. Both families receive the same frozen snapshot, twenty
 new articles and mappings, narrow 零 diff, rubric and equivalent
 source access, in separate sequential processes.
+
+### Independent initial reviews and reconciliation
+
+The authored snapshot is
+`abb39bbd85d529380cb2506b9ca7f3c2df59c8b3`.
+The [GPT initial report](n2-vocabulary-reviews/batch-29-gpt-initial.md)
+used `gpt-6.1-sol`; the
+[Claude initial report](n2-vocabulary-reviews/batch-29-claude-initial.md)
+used `claude-opus-5.5`. Both read all twenty articles, all mappings and
+the narrow 零 edit. GPT reports reading all 66 existing comparison
+bodies; Claude inspected actual neighbouring cards and spot-checked
+the complete comparison families. Each disclosed public-source and
+file-only Git/hash limits. GPT exited before Claude began; both
+processes reported zero edits.
+
+- **B29-GPT-03 / B29-CL-01, resolved:** replace the unsupported
+  older-character claim about 筝 with variant. The missing JMdict
+  age flag does not disprove chronology, and the Chinese
+  simplified/traditional relation does not prove Japanese ordering.
+- **B29-GPT-01, resolved:** add 転がす/裏返す for positive
+  tipping/turn-over meaning and the actual broad English label.
+- **B29-GPT-02, resolved:** add 転がる/返る for roll-over/turn-over
+  label ambiguity, not through a chain of other guards.
+- **B29-CL-02, resolved:** add 琴/楽器 for a real instrument and
+  the broad musical-instrument answer.
+- **B29-CL-03, resolved:** independently guard こないだ against
+  近頃 and このごろ; preserve occasion versus current-tendency use.
+- **B29-CL-04, resolved:** add 言付ける/任せる for positive
+  entrusting senses and actual labels, without equating general
+  responsibility with onward delivery.
+- **B29-CL-05, resolved:** independently guard ごめん against both
+  waiting-apology formulas. Its optional あいにく candidate is also
+  accepted for the underqualified sorry/refusal versus sorry-but
+  fragments; the added comparison preserves circumstance framing
+  versus general apology and direct rejection.
+- **Claude Optional / Limits, resolved by replacement:** use the
+  short familiar visiting formula actually attested in Daijisen's
+  御免 heading instead of the invented mixed-register greeting.
+  This removes the need to establish that sentence's naturalness,
+  not proof that it is impossible. Link existing 弾く substantively
+  at its actual ひく reading in 琴.
+
+The optional 御無沙汰/久しぶり guard is not established from
+shared greeting context alone: their actual labels retain
+not-having-been-in-touch versus first-time-in-a-long-while meanings.
+The body already explains the contact-specific difference.
+此間 spelling recognition and technical 琴/箏 taxonomy remain
+optional expansions. N2:573 already names the same principal entry
+and correctly limits distinct こたえる to 堪える; distinct reading
+does not assert a separate entry.
+
+The correction appends twelve complete follow-up family inspections
+for eleven forms, only genuinely new families, and all eleven actual
+labels/full-body inspections. Original source mappings, evidence and
+initial guard declarations remain historical records; the current
+eighteen guarded cards / 81 declarations are recorded separately.
+Nine direct additions and narrow teaching/link changes affect six
+new articles. No baseline card/exclusion, title, level, reading,
+selected/additional sense, primary metadata or kanji passage changes.
+Source 御免 is an explicitly taught alias at kana-primary ごめん;
+its primary array remains empty, not an invented primary 免.
+
+**Model-diversity note:** both families independently identified
+the unsupported variant chronology. GPT uniquely supplied the two
+rolling/reversal guards. Claude supplied the instrument, recent-time,
+entrusting and waiting-apology guards, the optional sorry-but
+candidate, and the greeting-naturalness/link observations. The
+optional greeting-context guard did not establish a defect.
+Contributions are compared across Findings, Optional and Limits,
+not only headline findings or severity. This sample shows
+complementarity and the continuing need for evidence-based
+adjudication, not a model ranking.

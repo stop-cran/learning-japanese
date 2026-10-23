@@ -95,6 +95,20 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 29 reconciliation:** A character variant is not an older
+  form merely because a dictionary lists it. Both reviewers caught
+  the unsupported 筝 chronology; remove that qualification without
+  replacing it with an equally unverified historical ordering.
+  A Chinese simplified/traditional relation does not by itself
+  establish Japanese spelling chronology.
+- **Batch 29 reconciliation:** Inspect direct broad-label candidates
+  beyond the initial evidence list: musical instrument, entrust,
+  recently/lately, waiting apologies and turn over each exposed
+  independently supported pairs. Preserve differences in Japanese
+  constructions. Replace an unverified mixed-register visiting
+  example with a positively attested short formula rather than
+  claiming the old sentence has been proved impossible.
+
 - **Batch 29 authoring:** A legacy gloss can have positive support in
   a different dictionary without becoming a sense in the pinned
   principal family. コレクション's separate Daijisen *correction*
