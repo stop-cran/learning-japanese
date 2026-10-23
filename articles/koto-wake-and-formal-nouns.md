@@ -302,6 +302,10 @@ with, the future-plan use **行くつもりだ**. With はず, match the connect
 "It seems to be water," not just "It resembles water." Whether you have directly inspected a property does not by itself settle
 the choice between はず and よう. Their uses can overlap without having identical nuance or a fixed difference in confidence.
 
+The focused [looks, likeness and impressions companion](appearance-resemblance-and-impressions.md) compares
+appearance-そう, みたい, inferential ようだ and the two らしい uses. Its new tasks complement, rather than
+replace or duplicate the identities of, this article's existing よう modifier practice.
+
 **べき** can sound forceful; it is not the default for every friendly suggestion. **行くべきではない** says one ought not to go,
 whereas **行くべきだった** says one ought to have gone. In the latter, the verb remains 行く and the past appears on だった.
 For する, both **するべき** and **すべき** are possible.

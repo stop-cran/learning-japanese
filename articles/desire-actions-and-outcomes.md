@@ -176,6 +176,10 @@ Do not mechanically replace every third-person たい／ほしい with がる, o
 have direct access to someone's feelings merely because they are named in a sentence.
 The observation forms are a recognition bridge here, not additional scored targets.
 
+The [looks, likeness and impressions companion](appearance-resemblance-and-impressions.md) now practises
+がる／たがる formation in its own groups and explains the observation perspective. These desire exercises
+keep their original scope and identities; neither series teaches a blanket first-/third-person ban.
+
 ### Wanting to receive someone's action
 
 > 友達に手伝ってもらいたいです。  

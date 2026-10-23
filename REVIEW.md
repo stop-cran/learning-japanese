@@ -35,6 +35,37 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Appearance and impressions: independent review and reconciliation (2026-10-23 UTC)
+
+**Snapshot and scope:** `3ae9338695d2b3e427e261aa136f1f4745a223f8` plus
+[issue #25](https://github.com/stop-cran/learning-japanese/issues/25). A fresh independent reviewer read
+the complete new article, both changed bridges and all 38 exercises: initially 88 accepted strings,
+76 options, 92 lexical spans and 170 exclusions. Groups, complete-task levels, sources and preservation
+were also checked. Actual model identity was unavailable, not inferred. The
+[ledger](docs/grammar-appearance-impressions-sources.json) preserves original and revised evidence.
+
+**Findings and reconciliation:** initial correctness and comprehensibility were **NEEDS FIX**;
+scoped coverage was **CLEAN**. Moderate **AP-IR-001** identified grammatical nonadjacent adverbial
+completions incorrectly rejected in two noun-modification tasks. Make the direct-noun operation visible
+and explicitly acknowledge the alternative adverbial scope throughout the feedback; learners still
+derive the appearance form and choose its connection. Minor **AP-IR-002** identified missing supported
+spellings of two comparison labels; accept `例え`, `喩え` and `譬え` alongside `たとえ`.
+Rebind four lexical context records without changing prompts, lexical payloads, exclusions or groups.
+The original reviewer checked all four complete revised tasks and the actual associated delta:
+both findings **resolved**, original severities retained; combined bounded verdicts **CLEAN/CLEAN/CLEAN**.
+There were no new findings or optional items. The other 34 new exercises and records are unchanged;
+the unchanged article and bridges carry forward their original review, not a claimed fresh full reread.
+
+**Coverage and reflection:** 30 formation/connection and eight interpretation tasks in five groups,
+ten facets and eight soft recommendations, without prerequisites. Nineteen shared context-key strings
+are not 38 independent conversations. All 61 previous complete sets and 1394 inventory records remain
+unchanged. Corpus coverage reaches 1432 exercises in 62 sets, including 504 N4; vocabulary coverage is
+1123/1432, with 309 pending. Revised accepted renderings total 94. Hearsay-そう remains an explicitly
+unscored primary-N3 follow-up. Regroup the observed cases into the existing literal-completion and
+spelling-recognition lessons and add inspected source navigation, without another rule or exercise quota.
+Content/vocabulary checks, 151 focused regressions and a fresh non-skipped Android importer pass.
+No device, native-speaker, exhaustive discourse or unrestricted-mastery certification is claimed.
+
 ## Causative perspective: independent review and reconciliation (2026-10-23 UTC)
 
 **Snapshot and scope:** `01f755659b6e7bca76fbc8102a96eacd685f54ce` plus
@@ -983,6 +1014,9 @@ The [は／が／も review record](docs/grammar-topic-sources.json) grounds the
 - **Read the literal completion of every distractor.** Shared "different framing" feedback can hide a changed grammatical
   role: 魚が食べません makes the fish the eater, not the food. Explain the role change in that exact predicate pattern;
   do not replace the template with an equally broad ban on all object/time が constructions (ASTRA-TOPIC-O01 / WGM-OPUS-F2).
+  A following noun does not by itself force attributive modification: two [appearance tasks](docs/grammar-appearance-impressions-sources.json)
+  allowed そうに to reach a later predicate across the subject (AP-IR-001). Make the intended noun scope visible
+  when that is the actual operation; do not reject the adverbial completion as generally ungrammatical.
   For interpretation labels, reject the actual wrong reading rather than affirmatively defining it: the noun-description
   review found four wrong-scope rationales that sounded like validation of the selected analysis
   ([record](docs/grammar-n5-descriptions-sources.json), IND-DESC-002; regroup).
@@ -1029,6 +1063,8 @@ The [basic-particle exercise review](docs/grammar-basic-particles-sources.json) 
   Check mixed-script spellings too, not just the model kanji and an all-kana rendering:
   the desire review found six missing 手つだって... realizations across three help tasks
   ([record](docs/grammar-desire-sources.json), IND-DESIRE-001; regroup).
+  Response labels count too: the [appearance review](docs/grammar-appearance-impressions-sources.json), AP-IR-002,
+  adds 例え／喩え／譬え for the defined comparison label たとえ without creating separate choice buttons.
 
 These are checks for observed failure modes, not a requirement to invent a finding in every review. The batch record
 preserves original severities, adjudication and reconciliation separately; agreement is not a substitute for evidence.

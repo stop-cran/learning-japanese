@@ -246,7 +246,8 @@ The [benefactive/request ledger](grammar-benefactive-requests-sources.json) adds
 The [direction/development ledger](grammar-motion-stages-sources.json) adds 34 N4 tasks in one set.
 The [passive/participants ledger](grammar-passive-participants-sources.json) adds 30 N4 tasks in one set.
 The [causative/perspective ledger](grammar-causative-perspective-sources.json) adds 40 N4 tasks in one set.
-Current practice is 1394 exercises: 587 N5 and 466 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [appearance/impressions ledger](grammar-appearance-impressions-sources.json) adds 38 N4 tasks in one set.
+Current practice is 1432 exercises: 587 N5 and 504 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -406,6 +407,12 @@ Six groups contain 14 facets, eight soft recommendations and no prerequisites: 2
 16 interpretations and four shortening/expansion tasks. Six context-key strings deliberately join paired
 forms, roles and repeated scenes. Existing finite-form, desire-role and passive groups retain their owners
 and complete objects; the permission-request and short-causative notes are supporting reading only.
+The [appearance/impressions installment](grammar-appearance-impressions-sources.json) adds 38 annotated N4 prompts,
+reaching **1432 exercises in 62 files** and **1123/1432** reviewed, with 309 still pending.
+Five groups contain ten facets, eight soft recommendations and no prerequisites: 30 formation/connection
+tasks and eight interpretations. Nineteen context-key strings share paired tense, modifier and book-desire
+scenes rather than counting each question as independent transfer. Existing よう and desire groups keep
+their original ownership; hearsay-そう is an explicit unscored N3 follow-up, not an N4 distractor.
 The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the
