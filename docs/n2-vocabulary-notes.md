@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 17 authoring:** Preserve distinct homograph identities
+  when a source gloss bundles them. カラー's color and collar
+  uses share Japanese spelling but belong to separate entries;
+  additional teaching is not an independently inferred N2 level.
+- **Batch 17 authoring:** A useful conventional spelling contrast
+  is not always an absolute prohibition. The complete phrase
+  family for thirst recognizes 喉が乾く alongside 喉が渇く;
+  qualify the older drying-card advice rather than denying it.
+- **Batch 17 authoring:** Keep unit claims tied to the actual
+  inspected source. Food energy, a calorie definition, and the
+  decimal kilo prefix establish different facts; none alone
+  verifies every nutritional-label convention or diet claim.
+
 - **Batch 15 reconciliation:** Keep source-storage qualifications
   in the evidence packet, but express their learner consequence
   plainly. 貸家 needs や versus いえ explained for the two whole

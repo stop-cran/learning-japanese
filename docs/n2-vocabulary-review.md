@@ -2287,6 +2287,60 @@ baseline identities, readings, titles, easier sourced levels
 and original exclusions remain preserved. This closes
 batch 16, not the full vocabulary expansion.
 
+## Batch 17: N2:322-N2:341
+
+**Status:** drafted; independent reviews pending.
+
+Scope: 釜, 紙屑, 神様, 剃刀, ガム, 貨物, かゆい, 歌謡,
+殻, カラー, からかう, 空っぽ, かるた, 枯れる, カロリー,
+かわいがる, 乾かす, 渇く, 為替 and 瓦.
+
+This batch adds **19 articles** and reuses 枯れる for its
+already explicit plant-withering sense, adding only the
+sourced N2 level. The [source packet](n2-vocabulary-batch-sources/batch-17.json)
+preserves twenty exact rows, twenty complete principal
+families, 141 complete comparison families, verified
+component evidence and ten qualified author-inspection
+receipts. Comparison extraction includes candidates inspected
+and declined, not only adopted quiz guards.
+
+The raw カラー gloss bundles color and collar. Principal
+1038500 supplies color, characteristic/atmosphere and hair
+coloring; separate 2853151 supplies explicitly recorded
+additional collar teaching. No independent N2 assignment is
+inferred for the second family. Botanical homograph 2853152
+remains comparison evidence, not an extra lesson.
+
+剃刀 and 為替 use whole-word readings without invented
+constituent readings. かるた explains its Portuguese origin
+despite the hiragana spelling, while qualifying the generic
+playing-cards gloss. かわいがる distinguishes affectionate
+treatment from mere cuteness and flags its ironic harsh-use
+sense as recognition guidance.
+
+乾く's earlier absolute throat-spelling prohibition is
+narrowly corrected: complete phrase family 1277350 records
+喉が乾く as well as 喉が渇く. The useful ordinary-drying
+versus-thirst distinction remains, including on 乾.
+FDA food-energy evidence and NIST calorie/prefix evidence
+support separate claims; they do not silently establish a
+capital-C nutritional-Calorie convention.
+
+Three new primary-form reciprocal N2 pairs are added:
+`貨`/`貨物`, `乾`/`乾かす` and `替`/`為替`.
+`枯`/`枯れる` was already linked. Existing 干す, 色 and
+いじめる gain narrow navigation links; missing component
+cards do not remove written kanji from metadata.
+
+At the authored snapshot, coverage is **320 closed,
+20 draft, 1,472 pending and 0 unresolved** rows, mapped
+to 335 distinct articles: 308 new and 27 reused.
+There are 3,581 word articles and 70 primary-form
+reciprocal N2 kanji-word pairs. All 3,273 baseline identities,
+primary readings, titles, easier sourced levels and original
+exclusions remain preserved. These are draft/mechanical
+counts, not linguistic certification or review closure.
+
 ## Final verification
 
 Not started. Final closure requires all original rows accounted for, no consequential unresolved
