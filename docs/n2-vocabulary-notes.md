@@ -95,6 +95,26 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 21 authoring:** Treat raw English glosses
+  as claims to resolve, not instructions to flatten
+  Japanese meanings. 苦心's "pain" is painstaking
+  effort, 斬る's "murder" requires blade context,
+  and 区切る's "stop" needs a section or stopping
+  point. Preserve both banknote-changing and
+  demolition uses selected by the 崩す row.
+- **Batch 21 authoring:** A complete family can contain
+  a sense that belongs to another reading: the
+  くさめ charm expression is not a くしゃみ meaning.
+  Dictionary order and a historical quotation do not
+  independently establish modern rarity or obsolescence.
+- **Batch 21 review setup:** The batch-20 report
+  disclosed an accidental grep hit in the forbidden
+  author rationale. For batch 21, give both reviewers
+  an equivalent, hash-recorded evidence derivative
+  with only `quizGuardRationale` removed, and forbid
+  the full packet. This reduces accidental exposure;
+  the canonical source packet retains the rationale.
+
 - **Batch 20 reconciliation:** A selected embarrassment
   sense needs positive teaching, not only a contrast:
   恐縮 can describe being humbled by praise or ashamed

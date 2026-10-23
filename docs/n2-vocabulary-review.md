@@ -2927,6 +2927,67 @@ All original exclusions remain with only the already
 recorded batch-19 機械/道具 addition. This closes
 batch 20, not the full vocabulary expansion.
 
+## Batch 21: N2:402-N2:421
+
+**Status:** authored; independent reviews not yet run.
+
+Scope: 曲線, 規律, 斬る, 気を付ける, existing 金魚,
+区域, 偶数, 空想, 空中, クーラー, 釘, 区切る, 櫛,
+くしゃみ, 苦情, 苦心, 屑, 崩す, 薬指 and 崩れる.
+
+This batch adds **19 articles** and only the sourced
+N2 level on existing 金魚. The
+[packet](n2-vocabulary-batch-sources/batch-21.json)
+retains twenty exact rows and complete principal
+families, 217 complete comparison families, component
+records and seven qualified author-inspection receipts.
+All families were inspected, including restrictions
+and ordinary secondary senses. These are author
+access receipts, not independent reviewer retrieval.
+
+規律 teaches both orderly discipline and governing
+rules; クーラー teaches room air conditioning and a
+portable cooler. 区切る covers spatial boundaries and
+linguistic pauses, with raw stopping glosses qualified.
+崩す explicitly preserves demolition and breaking a
+banknote into equal-value smaller denominations.
+苦心 is painstaking effort, not bodily pain; 苦情
+acknowledges the dictionary's difficult-circumstances
+coverage without turning it into every personal worry.
+くしゃみ does not inherit the くさめ-restricted charm
+sense. Additional senses are separately recorded,
+not independently assigned an N2 level.
+
+Five newly reciprocal primary-form N2 pairs are
+線/曲線, 律/規律, 区/区域, 域/区域 and 区/区切る.
+The related scope is four kanji cards, the one-line
+金魚 level addition and a link around the existing
+曲線 comparison in カーブ. Missing 斬, 釘, 櫛, 屑
+and 崩 component cards are not manufactured; their
+written characters remain in metadata. Missing
+comparison articles remain plain text.
+
+Stable baseline identities, primary readings, titles,
+written-kanji arrays and easier levels are preserved.
+All original exclusions remain with only the established
+batch-19 機械/道具 addition; no new baseline exclusion
+change is made.
+
+Authored-snapshot coverage is **400 closed, 20 draft,
+1,392 pending and 0 unresolved** rows, mapped to 414
+distinct articles: 383 new and 31 reused. There are
+3,656 word articles and 94 distinct tracked primary-form
+reciprocal N2 pairs on new articles, plus checked reused
+pairs. These are mechanical counts, not review closure
+or linguistic certification.
+
+Both blind reviewers will receive the same frozen
+snapshot and evidence derivative, with only the
+canonical packet's author quiz rationale removed.
+The derivative's equivalence and hash are recorded
+by the author process; this does not give file-only
+reviewers independent Git or hash execution.
+
 ## Final verification
 
 Not started. Final closure requires all original rows accounted for, no consequential unresolved
