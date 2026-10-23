@@ -95,6 +95,15 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 09 reconciliation:** English "I am sorry" can collide between
+  sympathy and apology answers without making the Japanese expressions
+  interchangeable. Guard the actual labels and preserve the speech-act
+  distinction. Shared tags alone do not establish candidate frequency.
+- **Batch 09 reconciliation:** A warning using "historical" can wrongly
+  suggest an archaic register when it merely contrasts past-time and
+  interactional translations. State the construction-dependent contrast
+  directly and check the dictionary's actual register tags.
+
 - **Batch 09 authoring:** Exact-word searches must account for CRLF:
   an end-of-line pattern without optional carriage return missed most
   existing comparison cards. An empty or partial search is not evidence

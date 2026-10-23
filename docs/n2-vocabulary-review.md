@@ -935,7 +935,7 @@ certify the whole corpus or native-speaker naturalness.
 
 ## Batch 09: N2:162-N2:181
 
-**Status:** drafted; independent reviews and reconciliation pending.
+**Status:** independently reviewed and corrected; bounded confirmations pending.
 
 Scope: おおざっぱ, 大通り, オートメーション, オーバーコート,
 おおよそ, お帰り, おかけください, おかげさまで, おかず, 拝む,
@@ -977,6 +977,65 @@ The authored manifest has 6,060 files, including 396 images and
 3,432 word articles. Cumulative drafted/closed mappings cover
 179 articles: 159 new and twenty reused, with 36 reciprocal N2
 kanji-word pairs. These authored counts do not claim review closure.
+
+### Independent initial reviews and reconciliation
+
+Authored snapshot `ac708ffd2a4153211b420e63c2b0b8766319342d`
+was reviewed by GPT-6.1 Sol (`gpt-6.1-sol`) and Claude Opus 5.5
+(`claude-opus-5.5`) in fresh, strictly sequential processes. Both
+received the same frozen nineteen-article scope, eight related
+passages, narrow reuse claim, rubric and source access. Usage
+receipts confirm the actual models and no edits. The author checked
+the unchanged HEAD and clean worktree between runs.
+
+The verbatim [GPT initial report](n2-vocabulary-reviews/batch-09-gpt-initial.md)
+and [Claude initial report](n2-vocabulary-reviews/batch-09-claude-initial.md)
+support all twenty mappings, including the aliases and anomalous
+source order. Both independently retrieved the four external
+entries. Their file-only access did not independently establish Git
+history, hashes or worktree cleanliness.
+
+All four GPT findings are accepted as localized quiz safeguards:
+おおざっぱ/およそ and /一応, おおよそ/ばかり and /程度,
+お代わり/代わり, and お先に/どうぞ. Claude's optional どうぞ
+observation identifies the same last pair; it is shared, not uniquely
+GPT's because of different report placement.
+
+Claude's three findings are also accepted: direct お気の毒に guards
+against すみません and ごめんなさい address ambiguous English apology
+labels without treating the Japanese expressions as synonyms;
+オートメーション/自動 protects automation versus automatic operation;
+and お先に's unexplained word "historical" is replaced by a precise
+dictionary-gloss versus interaction explanation. The source does
+not mark "previously" as archaic or dated.
+
+Claude's optional おおよそ/ころ pair is accepted after inspecting the
+complete time-related family and actual "approximate time; around"
+label. Its unrelated calabash, roller and whale-blubber homographs
+are not evidence. The optional 替 link in お替わり is also added.
+The 菜 link already existed in the authored おかず article, so that
+suggestion identifies no missing link. Additional 把 discussion,
+farewell expansion and redundant kana for entirely kana-written
+examples remain optional, not coverage defects.
+
+The correction adds **ten direct pairs across six new cards**, one
+prose clarification and one alternate-spelling navigation link.
+Thirteen complete families were re-extracted after checking both
+pinned JMdict hashes: six match the original evidence exactly and
+seven are new. Two qualified Jisho actual-entry receipts corroborate
+ばかり and 程度, without pretending that a JMdict-backed service is
+independent lexicography. No raw row, mapping, selected sense,
+baseline identity, title, reading or easier level changes.
+
+Across equivalent observations anywhere in both reports, GPT uniquely
+supplied five supported direct pairs. Claude uniquely supplied four
+pairs, the prose clarification and the useful 替 link; one pair was
+shared. Both families added useful different signal in this sample,
+not evidence of a general ranking or quantified bias reduction.
+Claude's already-present 菜-link suggestion and speculative source
+sort-key explanation add no verified discovery. The original Waller
+item behind 元気でね remains unverified; no reconstruction is taught.
+Neither reviewer executed the app or independently hashed downloads.
 
 ## Final verification
 
