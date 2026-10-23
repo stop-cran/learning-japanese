@@ -239,7 +239,8 @@ the [comparisons/change ledger](grammar-n5-comparisons-sources.json) adds 42 in 
 the [giving/receiving ledger](grammar-n5-giving-sources.json) adds 36 in one set;
 the [explanations/endings ledger](grammar-n5-endings-sources.json) adds 52 in one set;
 the [desire-comparison ledger](grammar-desire-sources.json) adds 34 in one set.
-Current practice is 1168 exercises: 587 N5 and 240 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [ability/perception ledger](grammar-ability-perception-sources.json) adds 34 N4 tasks in one set.
+Current practice is 1202 exercises: 587 N5 and 274 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -357,9 +358,14 @@ At the end of that expansion, all 397 original pending records were still pendin
 The [N4 consolidation ledger](grammar-n4-consolidation-sources.json) now records lexical completion of 88 of those
 existing prompts, reaching **859/1168** reviewed and **309 pending**, still at `stage: "pilot"` with the original
 baseline revision. It adds 13 local groups, 27 facets and eight soft recommendations for 73 existing N4 tasks;
-the six before/after and nine stage tasks retain their existing groups. All 240 current N4 tasks are now grouped
+the six before/after and nine stage tasks retain their existing groups. All 240 N4 tasks in that snapshot are grouped
 and lexically reviewed. The 59 new context-key strings include paired situations, not 73 independent conversations.
 No exercise wording, answers, level, identity, existing group or unrelated vocabulary record changes.
+The [ability/perception installment](grammar-ability-perception-sources.json) adds 34 annotated N4 prompts,
+reaching **1202 exercises in 55 files** and **893/1202** reviewed, with the same 309 records pending.
+Five groups have 11 facets, seven soft recommendations and no prerequisites: 22 formation and 12 bounded
+interpretation tasks. The 24 context-key strings include paired forms, not 34 independent conversations.
+Three existing ability/experience, change and goal groups remain in their original owning files.
 The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the

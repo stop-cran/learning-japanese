@@ -108,6 +108,8 @@ A requested form is a visible exercise boundary, not a claim that other complete
 
 Next, use these forms in [actions and states](japanese-actions-states-and-time.md) and
 [requests and rules](japanese-requests-permission-and-rules.md).
+[Ability and perception](ability-and-perception.md) applies the verb classes to potential forms,
+then distinguishes an available action from something visible or audible.
 [Verb extensions](verb-extensions-direction-and-aspect.md) then shows why 読んでおく and 読み続ける
 attach differently; those advanced constructions are not prerequisites here.
 

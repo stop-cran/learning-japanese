@@ -20,6 +20,7 @@ This repository starts as a collection of standalone articles prompted by specif
 | Grammar | [Giving, receiving and viewpoint](articles/giving-receiving-and-viewpoint.md) | Who gives to whom, and how do あげる, くれる and もらう frame the same event? |
 | Grammar | [Explanations, quotations and sentence endings](articles/explanations-quotations-and-endings.md) | How do explanatory context, reported words, listener alignment and conjecture differ without relying on imagined intonation? |
 | Grammar | [Wanting to act, wanting a thing and wanting an outcome](articles/desire-actions-and-outcomes.md) | Whose wish is expressed, who would act, and how do たい, がほしい and てほしい differ? |
+| Grammar | [Ability, availability and perception](articles/ability-and-perception.md) | How do potential forms, available actions, visibility, audibility and sensory がする differ? |
 | Grammar | [Koto, wake, and Japanese noun-based grammar](articles/koto-wake-and-formal-nouns.md) | How do こと and わけ differ, which common formal nouns and noun-based expressions are useful to know, and where do の/ん and ほど fit? |
 | Grammar | [Japanese verb extensions: direction and aspect](articles/verb-extensions-direction-and-aspect.md) | How do ～ていく, ～てくる, ～ておく, ～込む, and related constructions express direction, continuation, and completion? |
 | Grammar | [Japanese conditionals: たら, ば, なら, と, and 場合](articles/japanese-conditionals.md) | How do conditions, premises, event order, discoveries, and procedural cases differ, and when can several patterns fit? |
@@ -75,9 +76,13 @@ with sourced observation/benefactive bridges kept optional.
 The [N4 series index](https://github.com/stop-cran/learning-japanese/issues/17) separates new grammar families
 from consolidation of existing practice. The [consolidation ledger](docs/grammar-n4-consolidation-sources.json)
 records 13 small introduction groups for 73 existing exercises and vocabulary support for 88 existing prompts.
-All 240 current N4 exercises now have groups and reviewed lexical annotations; their questions, answers, levels,
+All 240 N4 exercises present at consolidation gained complete grouping and lexical coverage; their questions, answers, levels,
 identities and progress keys are unchanged. This improves entry points and reading support, not the number of
 independent scenarios or the completeness of an official syllabus.
+
+The [ability/perception installment](articles/ability-and-perception.md) adds 34 N4 exercises in five groups:
+potential formation and polarity, skill/circumstance interpretation, perception versus access, and sensory frames.
+Its [ledger](docs/grammar-ability-perception-sources.json) records exact reuse of existing ability/change/goal tasks.
 
 ## Confusable vocabulary
 
@@ -244,10 +249,11 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   are identical. The Nのこと／Nであること contrast tests explicit nominalization, not disjoint possible conversation topics.
   All 60 conditional, 26 のに, 36 listing, 36 topic, 64 basic-particle, 50 restriction/inclusion and 48 compound-relation
   prompts have reviewed vocabulary coverage; pure grammar prompts deliberately have no lexical hints.
-  Total author-reviewed coverage is **771/1168** after the 125 N5 foundations, 54 pointing/questions,
+  Author-reviewed coverage was **771/1168** after the 125 N5 foundations, 54 pointing/questions,
   32 noun-description, 38 wants/plans, 34 reasons/contrasts, 42 comparisons/change,
   36 giving/receiving, 52 explanations/endings and 34 desire-comparison prompts,
-  with the original 397 still pending. The のに source record keeps author and independent review snapshots separate;
+  with the original 397 then pending. The N4 series above records subsequent additions and backlog completion.
+  The のに source record keeps author and independent review snapshots separate;
   the unsettled causal-past expectation card was retired in favor of a current timetable-based preparation example.
   The topic article and exercise set have independent `gpt-6-astra` and `claude-opus-5.5` reviews, followed by
   original-reviewer reconciliation; historical verdicts and corrected snapshots are recorded separately.

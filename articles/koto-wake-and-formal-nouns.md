@@ -122,6 +122,8 @@ elsewhere, but can also announce a personal decision indirectly. It can express 
 **一袋に六個なら、三袋で十八個あることになる**, "If there are six in one bag, three bags amount to eighteen."
 
 **ことができる** covers ability and possibility provided by circumstances or rules, not only physical skill.
+For productive potential forms, their participants, and visibility versus access, see
+[ability and perception](ability-and-perception.md). The existing ability and ように practice stays here.
 With **ことがある**, the preceding verb matters: **行ったことがある** presents past experience, whereas **行くことがある**
 describes occasions when one goes. These are not interchangeable tense forms.
 

@@ -35,6 +35,36 @@ entries and preserve spelling/reading restrictions. See the [authoring checks](.
 and [JLPT policy](docs/jlpt-levels.md). These additions address the observed YAML/parser gap, incomplete word metadata, and the requested
 N4 cross-model review (2026-10-08); the older review records below remain historical rather than guarantees for new content.
 
+## Ability and perception: independent content review (2026-10-23 UTC)
+
+**Snapshot and scope:** `3ebaf6d580a1930edeca46d5f0ad3b6d9bc727d6` plus the installment for
+[issue #18](https://github.com/stop-cran/learning-japanese/issues/18). One fresh independent reviewer
+inspected the whole 170-line article, all 34 new exercises, 71 accepted renderings, 68 base options,
+79 lexical spans, 164 exclusions, source/coverage mappings and the three reciprocal-link changes.
+Its actual runtime model identity was unavailable, recorded as `null` rather than inferred.
+The [ledger](docs/grammar-ability-perception-sources.json) preserves the initial snapshot and report hash.
+
+**Verdicts:** correctness, scoped coverage and comprehensibility **CLEAN**. No actionable findings or
+consequential unresolved claims were established; no reconciliation or manufactured finding was needed.
+The review inspected actual primary lessons, supplementary passages and exact dictionary senses.
+It checked standard potential formation and polarity, reverse conversions, skill/access interpretation,
+perception/access overlap, sensory frames and non-agent noun roles rather than relying on planning approval.
+
+**Coverage and preservation:** five groups, 11 facets and seven soft recommendations, with no prerequisites.
+The 22 formation and 12 interpretation tasks share 24 context-key strings; paired scenes are not counted as
+independent conversations. All 1168 preceding exercise objects and vocabulary records are preserved.
+Exact reuse identifies three ability tasks plus two experience controls, three ability changes plus three
+habit controls, and six potential-goal tasks, each in its original owning group. Corpus coverage reaches
+1202 exercises in 55 sets, including 274 N4; lexical coverage is 893/1202 with 309 still pending.
+
+**Reflection (navigation add, existing rules retained):** the existing complete-task, sense-specific source,
+bounded-operation and nonleaking-hint rules handled this installment without a demonstrated new process gap.
+The source guide adds the inspected potential/perception starting points and their concrete qualifications.
+In particular, a source's introductory shortcut must not override its own accomplished-event or particle
+examples. No extra mandatory review rule is invented from a clean result.
+The content/vocabulary checks, 151 focused regressions and fresh non-skipped Android importer pass.
+Unchanged article sections, physical-device UI and unrestricted conversational mastery are not certified.
+
 ## N4 consolidation: independent review and reconciliation (2026-10-23 UTC)
 
 **Snapshot and scope:** `d6b0b69809eed30898c46ff59bfefcb6331c86f8` plus the additions for

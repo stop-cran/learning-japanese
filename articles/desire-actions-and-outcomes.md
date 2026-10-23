@@ -211,6 +211,7 @@ Paired forms and roles deliberately reuse some scenes. A successful conversion i
 unrestricted conversational mastery, and examples do not imply that a desire was fulfilled.
 For desire versus intention, return to [wants and plans](wants-plans-and-invitations.md#2-wanting-is-not-the-same-as-intending-たい-and-つもり).
 For obligations and advice, see [noun-based grammar](koto-wake-and-formal-nouns.md).
+For what someone can do rather than wants to do, see [ability and perception](ability-and-perception.md).
 Those are useful neighboring questions, not reasons to add every normative expression here.
 
 ## Sources and scope
