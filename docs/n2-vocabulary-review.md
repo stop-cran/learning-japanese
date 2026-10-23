@@ -3120,8 +3120,8 @@ not the full vocabulary expansion.
 
 ## Batch 22: N2:422-N2:441
 
-**Status:** initial reviews reconciled; correction
-confirmations pending.
+**Status:** closed after sequential independent review
+and original-session correction confirmations.
 
 Scope: 砕く, 砕ける, くたびれる, くだらない, 下る,
 唇, 口紅, くっつく, くっつける, くどい, 句読点,
@@ -3250,6 +3250,75 @@ and a first raw footer range were not lexical
 verification; the subsequent actual English adjective
 body was inspected. No executed app draw, measured
 frequency or native-speaker certification is claimed.
+
+### Correction confirmations and closure
+
+Corrected commit:
+`fe0722835c3bb39ad8caf90433c2936658141bdb`.
+The original sessions resumed sequentially, without
+edits or access to one another's reports:
+[GPT confirmation](n2-vocabulary-reviews/batch-22-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-22-claude-confirmation.md).
+Both assessed all four changed articles, necessary
+comparison cards and the appended evidence as
+**CLEAN / CLEAN / CLEAN** within the bounded scope.
+GPT resolved all three original findings. Claude
+resolved both findings and withdrew the alternative
+恥ずかしい guard after the ambiguous English label
+was removed. Both accepted the adopted
+clinging guard and pronunciation simplification.
+
+GPT read four complete relevant principals and four
+complete comparisons and independently inspected the
+English adjective body. Claude read three complete
+principals and four complete comparisons, checked
+nearby emotion labels and compared manifest/receipt
+hash strings without computing them. Neither
+performed a fresh whole-batch audit or executable
+Git/hash verification.
+
+Claude's new optional しょんぼり guard remains
+nonblocking. The actual card teaches a subdued,
+downcast manner, not necessarily bitter frustration;
+the words can occur after the same defeat without
+being an unrestricted semantic match. No absolute
+non-overlap rule or additional N2 teaching is inferred.
+The unchanged card was inspected during author
+reconciliation. No further content change was made.
+
+Author-executed authentication verifies both commit
+identities/parents and `stop-cran` author/committer
+trailers, committed file hashes, common prompts,
+actual scoped patches and both sanitized evidence
+derivatives. The correction's four files match the
+confirmed tree, including the tracked manifest
+omitted deliberately from the narrow reviewer patch.
+All sixteen untouched new articles and the three
+original related edits retain authored hashes.
+Through confirmation, the original packet is preserved
+except for three appended complete comparison families
+and its separate correction record.
+
+All four archived reports match raw stdout after
+removing progress preambles and normalizing Markdown
+two-space hard breaks to blank lines. Substantive
+report text is unchanged. Usage receipts show only
+the stated actual model, the original session start
+timestamp, one initial request and two cumulative
+requests at confirmation, and zero file edits. These
+checks authenticate provenance; they do not certify
+linguistic correctness.
+
+Closed coverage is **440 closed, 0 draft, 1,372 pending
+and 0 unresolved** rows, mapped to 434 distinct
+articles: 403 new and 31 reused. There are 3,676 word
+articles and 96 distinct tracked primary-form
+reciprocal N2 pairs on new articles, plus checked
+reused pairs. All 3,273 baseline identities, primary
+readings, titles, written-kanji arrays and easier
+levels remain preserved. The only established baseline
+exclusion addition remains batch-19 機械/道具.
+This closes batch 22, not the full expansion.
 
 ## Final verification
 
