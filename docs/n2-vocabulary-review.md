@@ -8114,3 +8114,48 @@ These are complementary observations on this batch,
 not a controlled benchmark, model ranking or proof
 that using two families removes bias. Shared correction
 confirmation will not be a second blind comparison.
+
+### First correction confirmations and bounded follow-up
+
+The original reviewers resumed sequentially against
+**`5911eeab48dd93455a75ee54cab7b86113ac1266`**:
+[GPT confirmation](n2-vocabulary-reviews/batch-45-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-45-claude-confirmation.md).
+Their complete native finals, original-session continuity,
+models, exact prompts/private reads, committed snapshots,
+patches, derivatives and zero edits were authenticated.
+Both processes exited.
+
+Both accepted the initial corrections. GPT marked all
+twenty article rows CLEAN in all three facets. Claude
+resolved F1-F5, expressly withdrawing the proposed 世紀
+expansion after reassessing the full qualified 西暦
+label, but marked 成立's correctness NEEDS FIX for a
+new **Low** issue: missing direct **効力** exclusion.
+Therefore this first confirmation did **not** close
+the batch. Its combined three-facet cells are retained
+as the native report, not silently reformatted.
+
+The new 成立/効力 issue predates the correction; both
+initial reviewers missed it. Actual 効力's complete
+body and JMdict **1275250:1** support its displayed
+**efficacy; validity; potency** label. 成立's title
+contains unqualified **validity**, while its source
+**1375880:3** concerns valid arguments. The meanings
+and constructions remain differentiated; protecting
+the ambiguous English labels does not equate legal
+force with logical validity. Add **効力** directly to
+成立's exclusions; the existing 有効 safeguard does
+not propagate. No other teaching edits follow.
+
+Claude also suggested aligning 接's still-accurate
+deal-with gloss to the new word title. This remains
+optional: there is no requirement that kanji example
+glosses duplicate quiz titles, and the contact/people
+context is accurate. No optional scope expansion is
+required. Both reviewers now receive the same bounded
+one-card follow-up; unchanged judgments must be
+identified as inherited rather than newly reviewed.
+This discovery is useful additional review signal,
+not credit for a blind-initial finding or proof that
+either model alone would catch every label collision.

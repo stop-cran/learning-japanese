@@ -113,6 +113,10 @@ evidence and learning impact; issue creation requires authorization.
   Both model families found effort/opportunity gaps;
   their competing era-guard remedies required source
   adjudication, not majority vote.
+  Claude's confirmation then found the missed direct
+  成立/効力 validity-label pair; the existing 有効
+  guard did not cover it. Record this as a follow-up
+  discovery, not retrospective initial-review credit.
 
 - **Batch 45 authoring:** A useful plant-growth focus does
   not make 生長 historically plant-only or prohibit 成長
