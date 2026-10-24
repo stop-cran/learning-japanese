@@ -6686,7 +6686,7 @@ not reviewer-executed Git, production quiz draws,
 exhaustive linguistic validation or native-speaker
 certification. Overall N2 vocabulary expansion remains open.
 
-## Batch 39 - authored; independent reviews pending
+## Batch 39 - initial reviews reconciled; confirmations pending
 
 Twenty consecutive community-list rows **N2:762-N2:781**
 are drafted on parent
@@ -6782,6 +6782,95 @@ The deterministic manifest is **`bf8090b9833357dd`**:
 **6,626 assets = 6,029 files + 396 images + 201 scenes**.
 
 Independent GPT and Claude reviews and evidence-based
-reconciliation remain pending. A valid draft or authored
+reconciliation were pending at the authored snapshot. A valid draft or authored
 commit is not review closure; no model-diversity conclusion
-is claimed yet for this batch. Overall expansion remains open.
+was claimed at that stage. Overall expansion remains open.
+
+### Initial independent reviews and bounded corrections
+
+Authored commit **`d04bcfce3419f3bea7158281ff32ba65f32ffdad`**
+was frozen before review. The complete native reports are
+[GPT initial](n2-vocabulary-reviews/batch-39-gpt-initial.md)
+and [Claude initial](n2-vocabulary-reviews/batch-39-claude-initial.md).
+The isolated **`gpt-6.1-sol`** process completed before
+**`claude-opus-5.5`** began; neither overlapped author work
+or the other reviewer. Both made zero edits. Native prompts,
+actual models, complete final messages, tool restrictions,
+named forbidden-read absence, usage and the common committed
+snapshot were authenticated by the author.
+
+Both reviewed all eighteen new articles, both narrow reuses,
+the six kanji edits and twenty mappings. Their evidence
+depth differed: GPT reported reading the complete supplied
+241-family comparison union and label inventory, whereas
+Claude explicitly used selected comparison bodies and
+thirteen supplied public lexical bodies, not most evidence
+JSON or the complete captured inventory. Claude also
+independently retrieved the relevant MHLW and Kotobank
+definitions; its unsuccessful or unrelated lookups remain
+disclosed limits. This is not a controlled model ranking.
+
+The author inspected all **19 complete correction families /
+62 senses** and thirteen complete existing target bodies.
+Nine duplicate families were checked equal; **10 additional
+families / 35 senses** bring the inspected union to **251
+families / 591 senses**, not 260 / 618. The current distinct
+label and fully inspected existing-body totals are **239**
+and **84**. Original reviewed evidence, mappings, initial
+declarations and author rationale remain unchanged; the
+packet appends the correction supplement. The confirmation
+derivative again removes only the original quiz rationale.
+
+Accepted corrections are:
+
+- **Shared:** add direct 障子 / 戸 and 上旬 / 始まり quiz
+  safeguards. Their protection cannot be inherited through
+  ドア or 始め. Link 商社's substantive 輸入 introduction;
+  this was a GPT finding and a Claude optional observation.
+- **GPT-specific initial signal:** correct 賞品's 商品
+  comparison ID from 1347190 to **1347310**; add substantive
+  links to 開ける, 閉める, 生きる, the word article 便 and
+  除く. Linking 便 preserves its stated びん contrast.
+- **Claude-specific initial signal:** add 蒸発 / 無くなる
+  and 生ずる / 原因 guards; replace 焦点's unsupported
+  negative historical claim with its cited dictionary's
+  naming explanation; display 起こす while preserving the
+  stable `起す.md` target. Also adopt Claude's optional
+  生ずる / 及ぼす guard after complete-family inspection.
+
+These are direct English-label/ordinary-sense safeguards,
+not claims of unrestricted Japanese substitution. 原因 is
+a noun, 及ぼす has its own effect collocations, and the
+無くなる pair does not make every use appropriate for a
+person's unexplained disappearance. The retained beginning
+guards do not redefine 上旬 as any unspecified beginning.
+The current total is **15 guarded new cards / 47
+directional declarations**; no baseline exclusions changed.
+
+Claude's optional replacement of 小便's grammatical medical
+test example was declined as a register optimization, not
+a demonstrated factual defect: the article already names
+尿 as common in medical/formal use. Suggested baseline
+生じる / 戸 body expansions remain outside this batch.
+Harmless conservative トイレ / 面 guards were not removed.
+
+Model diversity was useful here: the source-grounded 焦点
+correction and additional disappearance/cause overlaps were
+not in GPT's initial report, while the incorrect 商品 ID
+and several navigation targets were not in Claude's report.
+The 輸入 link is shared signal even though its report
+classification differs. Evidence depth and optionality
+remain part of that observation; no superiority or measured
+bias-reduction claim follows from this batch.
+
+Nine new-card bodies changed; all identities, readings,
+titles, selected sense indices and twenty row mappings
+remain unchanged. The two level-only reuses and all six
+kanji edits are untouched. Author checks retain **760
+closed / 20 draft / 1,032 pending / 0 unresolved**, **3,998
+word articles**, **184** tracked reciprocal pairs and the
+**3,273** baseline identities under recorded exceptions.
+The corrected deterministic manifest is **`38bd03a182b321be`**,
+with unchanged asset counts. Bounded confirmations in the
+original reviewer sessions remain pending; these rows are
+not closed yet.

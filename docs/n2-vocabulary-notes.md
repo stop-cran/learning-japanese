@@ -95,6 +95,15 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 39 review:** A caution against invented etymology
+  must not itself invent a negative historical claim.
+  焦点's cited dictionary explicitly explains its name
+  through black paper scorching at focused sunlight.
+  Attribute that explanation rather than calling it
+  merely a mnemonic or denying its derivational basis.
+  Keep the compound's naming separate from the historical
+  origins of its individual characters.
+
 - **Batch 39 authoring:** A raw English gloss is not a
   technical guarantee: 消毒's "sterilization" gloss needs
   the bounded public definition distinguishing making
