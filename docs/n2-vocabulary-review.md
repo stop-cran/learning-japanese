@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-42 review-closed; batch 43 drafted, not reviewed.** The target is all 1,812 source rows,
+**Batches 01-43 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 840 rows are review-closed; 20 are draft,
+The first 860 rows are review-closed; none are draft,
 952 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -7759,3 +7759,52 @@ evidence-reading depth and confidence prevent a controlled
 model ranking. Original-session bounded confirmation is
 still pending; these author adjudications are not reviewer
 acceptance.
+
+### Batch 43 - confirmed and closed
+
+Both original native sessions resumed sequentially at
+corrected commit
+**`10d6abce1d35dab3b4dd84852b4f4ebaf85272a9`**,
+parent **`8f03c81ff667930c81be8b0990ff6425b3b8c1d9`**:
+[GPT confirmation](n2-vocabulary-reviews/batch-43-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-43-claude-confirmation.md).
+Both read all six changed cards completely and gave
+twenty individual all-CLEAN article verdicts across
+correctness, scoped coverage and comprehensibility.
+Four assigned articles were reassessed; sixteen
+unchanged assigned judgments were inherited, including
+the two reuses, not sixteen additional new-card reviews.
+Both separately accepted the baseline backlinks,
+unchanged N2 kanji links, bounded reuses and all twenty
+mappings.
+
+GPT reread complete comparison, kanji and reuse cards.
+Claude reread complete 頭/立ち上がる, other comparison
+front matter and the scoped kanji/reuse lines. Both
+inspected complete correction-family evidence; neither
+represented the full original evidence set as freshly
+reread. Claude acknowledged missing 立ち上がる in its
+initial title sweep, accepted 頭 as a conservative
+safeguard and retained the distinction between its
+optional 冷める observation and GPT's finding. Both
+accepted 開会/開通 and 差 as supported English-label
+precautions, not unrestricted Japanese synonym claims.
+No actionable regression remained.
+
+Exact native final messages, original-session continuity,
+actual models, prompts, private-file access, zero edits,
+committed snapshots, patches and blind derivatives were
+author-authenticated. The correction round received the
+shared author hypotheses; only the initial rounds were
+blind. Neither reviewer independently ran Git, hashes,
+the app or quiz draws. No post-confirmation teaching
+changes were made.
+
+Exactly **N2:842-N2:861** are closed, yielding **860
+closed / 0 draft / 952 pending / 0 unresolved**. The
+**853 mapped articles (796 new / 57 reused)**, **4,069
+word articles**, **198 tracked reciprocal N2 pairs**,
+**3,273 preserved baseline identities/readings/titles/
+exclusions**, and deterministic manifest
+**`7183aceabc0869b0`** remain unchanged by closure.
+This closes batch 43, not the full 1,812-row expansion.
