@@ -95,6 +95,21 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 34 reconciliation:** Temporal extent or habitual
+  frequency is not the same lexical answer as continuation or
+  performing an action again. Remove those five 始終 edges,
+  but independently retain its all-times overlap with いつでも.
+  Actual English labels can also blur item-taking 持参 and
+  person-taking 連れる; a guard does not erase that Japanese
+  distinction. Check missing comparisons outside the first capture.
+- **Batch 34 review:** Distinguish a correct alternate spelling
+  from an example that introduces it before explaining it.
+  Illustrating 静まる's subsiding use with 静 keeps the learner
+  oriented without making 静/鎮 preferences absolute.
+  Clarify current noun 始終 without an unevidenced frequency
+  ranking, and connect シュウ to voiced ジュウ explicitly.
+  Shared voicing observations and three shared tentative
+  overguard observations are not model-unique discoveries.
 - **Batch 34 authoring:** Distinguish duplicate source readings
   from duplicate article identities: 湿気 しっけ and しっき
   share one complete dictionary family and one new article,

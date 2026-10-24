@@ -5497,7 +5497,7 @@ batch 33, not the remaining vocabulary expansion.
 
 ## Batch 34: N2:662-N2:681
 
-**Status:** authored draft; independent review and reconciliation pending.
+**Status:** initial reviews reconciled; bounded correction confirmation pending.
 
 Scope: 持参, 磁石, 四捨五入, 始終, 自習, 静まる, 姿勢,
 自然科学, 時速, 子孫, 死体, 下書き, 下町, 自治, 実感,
@@ -5555,3 +5555,96 @@ delegation or edits. The evidence derivative removes only
 Authored-stage coverage: **660 closed / 20 draft / 1,132 pending /
 0 unresolved**, mapped to **673 distinct articles: 630 new and
 43 reused**. This is not review closure.
+
+### Batch 34 initial review and reconciliation
+
+Both independent models reviewed authored commit
+`7c8c93f153dd5909bc467106d1c6f2ecdb386f89`, parent
+`e99ab822cef8fb4819f24dc0f688d7ac3326da49`, sequentially in
+separate read-only native processes, without delegation:
+
+- [GPT initial](n2-vocabulary-reviews/batch-34-gpt-initial.md):
+  `gpt-6.1-sol`.
+- [Claude initial](n2-vocabulary-reviews/batch-34-claude-initial.md):
+  `claude-opus-5.5`.
+
+Both assessed all nineteen new articles, twenty mappings and five
+narrow kanji edits. Both found the mappings and kanji edits CLEAN
+on all three facets. GPT inspected the complete supplied principal,
+comparison and component records, actual comparison metadata and
+consequential bodies; it independently inspected eight assigned
+public headwords and the 遺体 comparison. Claude selectively
+inspected consequential comparison/component records and actual
+additional labels. Its public retrieval yielded only truncated
+Kotobank summaries for 静まる/始終 and no Weblio entry text.
+Neither file-only reviewer independently executed Git or hashes.
+Author-side authentication matched the complete native final
+messages, prompts, models, zero-edit usage and authored evidence;
+substantive text before Snapshot is preserved.
+
+GPT F1 is **resolved** by removing five unsupported 始終 edges:
+継続, 続く, 続ける, 繰り返す and 重ねる. Continuation or
+doing something again is not itself the temporal-extent/frequency
+answer. This is a semantic distinction, not a parts-of-speech
+shortcut. Claude independently questioned three of those edges
+in Optional; those three observations are shared, while GPT
+additionally identified 継続 and 繰り返す.
+
+Claude R01-R03 are **resolved** by adding direct 静まる/止む,
+持参/連れる and 始終/いつでも guards. Three additional complete
+families and actual articles were captured and inspected:
+1310640:1, 1559290:1 and 1577130:1-2. Their cessation, bringing
+along and all-times senses support the actual English-label
+ambiguities independently of existing guards or shared tags.
+持参 explicitly contrasts an item with accompanying a person;
+the English-label guard does not make the Japanese constructions
+interchangeable.
+
+Claude R04 is **resolved as learner-facing spelling clarity**:
+the subsiding example now uses 静まる before 鎮まる is introduced.
+The original alternate-spelling sentence was not linguistically
+wrong and did not invalidate the mapping; neither spelling is
+made a strict sense restriction. R05 is **resolved** by recognizing
+current noun 始終 for the full course of events, alongside
+一部始終. The suggestion that 一部始終 is more common is not
+adopted without frequency evidence. R06 and GPT's corresponding
+Optional are **resolved** by showing シュウ voiced to ジュウ.
+R07 is **resolved** with katakana ケ for the on reading.
+
+The optional 孫 and member-science guards are not added merely
+for a general/specific relationship; this is not an unrestricted
+single-best-answer exemption. The tentative 実習/学・学問 and
+姿勢/形・様子 removals remain **optional, not established
+defects**: their broader learning and outward-form/appearance
+labels remain reasonable answers at the quiz's coarse gloss
+granularity. This does not equate every Japanese use or endorse
+transitive exclusions. The existing 収める guard retains its
+independently captured settle/subdue sense.
+
+Additional 自治 abbreviation and 持参 register examples remain
+**optional**; neither is needed for the accepted source mappings.
+The priority-tag-only proposal to rank 湿気 readings is not adopted:
+dictionary recognition/priority does not measure their relative
+frequency. No baseline article or kanji reading is changed.
+
+The correction changes four articles. Seventeen cards now declare
+**102 directional exclusions**, net -2 from historical 104:
+three direct additions and five removals. Original evidence,
+declarations and rationale are preserved, with correction evidence
+appended. Deduplicated comparison totals become **258 complete
+families / 567 indexed senses / 133 actual comparison labels**;
+the repeated component capture is verified equal, not recounted.
+The updated review derivative still removes only
+`quizGuardRationale`. All twenty mappings, other fifteen articles,
+five kanji edits and baseline declarations remain unchanged.
+
+Comparing equivalent observations across all report sections,
+both models contributed voicing clarification and three tentative
+overguard observations. GPT uniquely identified two further
+unsupported 始終 edges; Claude uniquely identified three
+supported missing guards, current-noun clarity and the early
+alternate-spelling presentation, plus on-reading typography.
+Their different useful catches support retaining sequential
+multi-model review on this sample, not a general model ranking
+or a measurement that bias has been eliminated. These are
+author adjudications awaiting the bounded confirmations.
