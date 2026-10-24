@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-43 review-closed.** The target is all 1,812 source rows,
+**Batches 01-44 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 860 rows are review-closed; none are draft,
-952 remain pending, and none are unresolved.
+The first 880 rows are review-closed; none are draft,
+932 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -7925,3 +7925,62 @@ The supported corrections await the original reviewers'
 sequential bounded confirmations. Source rows remain
 draft; neither mechanical checks nor author adjudication
 alone closes them.
+
+### Batch 44 - confirmed and closed
+
+Both original native sessions resumed sequentially at
+corrected commit
+**`1ae25de5c02566e0926ecd865142175430c25de8`**,
+parent **`519d183f9494ce149cab8317d46d7e3a7c6e41bf`**:
+[GPT confirmation](n2-vocabulary-reviews/batch-44-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-44-claude-confirmation.md).
+Both read the complete correction patch, all six changed
+cards and all fifteen corrective comparison families.
+Each gives twenty individual all-CLEAN article verdicts
+across correctness, scoped coverage and comprehensibility.
+Seven source-row judgments are reassessed because
+清む shares 澄む; thirteen unchanged article judgments
+are inherited, not thirteen fresh reviews.
+
+GPT reread nine actual comparison bodies, all three
+complete kanji cards, 姓 and the six backlink-bearing
+old articles. Claude read the author-captured comparison
+bodies and checked actual comparison front matter,
+kanji/reuse/backlink lines and all twenty source rows.
+Claude explicitly did not read the corrected evidence
+derivative. Both separately accept the three unchanged
+kanji edits, the bounded 姓 reuse, the six old-word
+backlinks and all twenty mappings. Neither represents
+the entire original evidence union as freshly reread.
+
+Both accept all ten direct guard additions and the
+explicit 性格/性質 wording. The nature and print pairs
+remain conservative English-label precautions, not
+unrestricted Japanese synonym claims. GPT's scheduling
+justification uses スライド sense 4, ずらす sense 2
+and the actual 変える meeting-time example; Claude
+additionally cites スライド's sliding-scale sense 5.
+That extra citation is not treated as the scheduling
+sense or as independent proof of a runtime defect.
+The further 住まい, 寸法, 税関 and repetition-trimming
+suggestions remain optional. No consequential unresolved
+linguistic claim or actionable regression remains in scope.
+
+The complete native final messages, original-session
+continuity, actual models, exact prompts, private-file
+access, zero edits, committed snapshots, patches and
+blind derivatives were author-authenticated. Confirmation
+received shared correction hypotheses; only initial
+reviews were blind. Neither reviewer independently
+ran Git, hashes, the app or quiz draws. There are no
+post-confirmation teaching changes or retained reviewer
+processes.
+
+Exactly **N2:862-N2:881** are closed, yielding **880
+closed / 0 draft / 932 pending / 0 unresolved**. The
+**872 mapped articles (814 new / 58 reused)**, **4,087
+word articles**, **201 tracked reciprocal N2 pairs**,
+**3,273 preserved baseline identities/readings/titles/
+exclusions**, and deterministic manifest
+**`9aad8d823f69032d`** remain unchanged by closure.
+This closes batch 44, not the full 1,812-row expansion.
