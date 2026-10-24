@@ -95,6 +95,18 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 36 authoring:** Keep public-dictionary headings
+  separate even inside one captured lexical container:
+  氏名/うじな, 蛇口/へびくち and 集会's historical Buddhist
+  readings do not license pooling their definitions.
+  Public sense order also differs from JMdict for 締め切り.
+  Record the exact teaching identity and one-based JMdict index.
+- **Batch 36 authoring:** Interpret coarse source glosses
+  in their actual construction. 締め切る's “shut up” concerns
+  closing an opening, not silencing a person; しゃぶる's
+  raw “chew” must be qualified against the suck/lick entry.
+  Attested 打線が湿る supports a figurative slump example,
+  not an inference that every reflective mood is depressed.
 - **Batch 35 confirmation:** Do not narrow a recorded behavioral
   sense to outward appearance when adjudicating coarse quiz
   labels. 地味's reserved/modest behavior can leave 謙虚 a

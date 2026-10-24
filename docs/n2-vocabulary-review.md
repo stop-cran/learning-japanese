@@ -5971,3 +5971,71 @@ tracked reciprocal primary N2 kanji-word pairs**. This closes
 batch 35, not the remaining vocabulary expansion. Neither model
 executed Git/hashes or quiz draws; CLEAN is scoped review, not
 exhaustive linguistic or native-speaker certification.
+
+## Batch 36 - N2:702-N2:721
+
+**Status:** authored; independent review pending.
+
+Scope: 氏名, 締め切り, 締め切る, 湿る, ジャーナリスト,
+社会科学, しゃがむ, 蛇口, 弱点, 車庫, 車掌, 写生, 社説,
+しゃっくり, シャッター, しゃぶる, 車輪, 洒落, じゃんけん
+and 集会.
+
+Twenty new articles cover twenty source rows with no principal
+reuse. Source 締切 is normalized to 締め切り, explicitly
+teaching both 締切 and 締切り at しめきり. The collection now
+has **3,941 word articles**. Four narrow kanji edits link
+湿/湿る, 弱/弱点, 庫/車庫 and 輪/車輪 at the actual readings;
+the distinct tracked primary reciprocal N2 total becomes **164**.
+
+The [source packet](n2-vocabulary-batch-sources/batch-36.json)
+preserves twenty raw rows, twenty complete principal families
+with 26 indexed senses, 213 deduplicated complete comparison
+families with 435 indexed senses, 110 actual comparison labels
+and 29 complete component records. All those records and twenty
+actual public Digital Daijisen lexical containers were inspected.
+Of the original 102 captured comparison bodies plus ten
+supplementary captures, **75 distinct full bodies** are counted
+as inspected, explicitly listed in the packet. Two supplementary
+labels repeat original labels and were checked equal; complete
+repeated families were also checked before deduplication.
+Partial-body reads are not counted as full-body inspections,
+including a truncated source-URL continuation. Captures, hashes
+and computed volumes do not substitute for independent review.
+
+氏名 separates the practical しめい full name from the public
+うじな surname heading. 蛇口 is mixed ジャ + くち, voiced to
+ぐち, with the repository's on-first `kango` category explained.
+洒落 is ateji, not an ordinary シャ + ラク on compound.
+The joke sense is selected; style recognition is additional.
+Separate public しゃら/しゃらく and 集会's historical Buddhist
+headings are not pooled with the practical readings.
+
+締め切る's raw “shut up” is physical closing, not silencing a
+person; closing applications is separately mapped. 湿る teaches
+godan 湿って and an additional figurative slump, with attested
+打線が湿る and the exact しめる restriction. 写生 is not forced
+into outdoor, pencil-only or rough-draft use; direct observed
+depiction includes a qualified literary extension. 社説 concerns
+institutional opinion. 車庫/駐車場 is not falsely divided into
+indoor/outdoor facilities. しゃっくり permits recorded する.
+しゃぶる qualifies the raw “chew” against suck/lick use.
+
+All primary written characters remain in metadata, including
+missing 氏/締/蛇/掌/洒. Kana-primary articles keep empty arrays
+despite recognized rare kanji spellings. Additional senses do
+not receive independent N2 assignments. No existing word ID,
+primary reading, title, level, body or exclusion is changed.
+
+Seventeen new cards declare **57 directional quiz exclusions**.
+These direct ordinary-meaning and actual-label judgments await
+independent assessment; they are not transitive synonym groups.
+Both reviewers receive the same frozen committed snapshot,
+twenty complete new articles, four narrow kanji edits, twenty
+mappings, rubric and source access. The blind derivative
+removes only `quizGuardRationale`. Processes run sequentially
+without nested agents, author edits or concurrent reviewers.
+
+Authored coverage: **700 closed / 20 draft / 1,092 pending /
+0 unresolved**, mapped to **713 distinct articles: 668 new and
+45 reused**. This is not batch or overall review closure.
