@@ -4961,3 +4961,82 @@ The evidence derivative removes only `quizGuardRationale`.
 Coverage is **600 closed / 20 draft / 1,192 pending / 0 unresolved**,
 mapped to 614 distinct articles: 575 new and 39 reused. This batch
 and the remaining list are not yet claimed review-closed.
+
+### Independent initial reviews and reconciliation
+
+The common authored snapshot is
+`e0c3e67907cd8aa09f1c610f70c840e6f64aee74`.
+Fresh, isolated **gpt-6.1-sol** and **claude-opus-5.5** processes
+reviewed it strictly sequentially, with no edits or delegation.
+Both read all nineteen new articles and twenty principal families;
+comparison-family coverage was selective, not exhaustive.
+Their [GPT](n2-vocabulary-reviews/batch-31-gpt-initial.md) and
+[Claude](n2-vocabulary-reviews/batch-31-claude-initial.md) reports
+are preserved without rewriting their findings or limitations.
+
+GPT31-01 and B31-R-04 are the same resolved direct 削除/削る
+quiz omission. GPT31-02 additionally establishes 作成/書く.
+GPT31-03 and B31-R-06 share the 箸 and 足す navigation omissions;
+GPT also identified 生, whose なま qualification is retained.
+The same link-only follow-through covers the substantive 先
+comparison in 先程.
+
+B31-R-01 is resolved with 刺す's target-を/instrument-で pattern,
+a needle/finger example and explicit stab recognition. The
+pointed-object/destination example and insect-passive explanation
+remain distinct. B31-R-02 is resolved by classifying kana-primary
+さすが as native-origin `wago`, supported by the actual Nikkoku
+entry, without losing 流石's irregular whole-word reading or
+inventing a universal kana-type rule. B31-R-03 is resolved by
+giving the antecedent for English "still." B31-R-05 is resolved
+with attested 杯をさす and no rice distraction; the former
+酒をさす was not established to be impossible.
+
+Claude's Optional party/gathering lead receives bounded
+follow-through. Twenty-five complete families for sixteen forms
+were extracted and read; thirteen families are new to this packet,
+with exact equality checked for overlaps. Six complete actual
+Daijisen containers were inspected. The separately fetched Nikkoku
+origin observation is attributed separately, not passed off as a
+hashed Daijisen capture.
+
+座敷 receives direct guards with 宴会, パーティー, 会/かい,
+会合 and 集まり from its taught party sense and their actual
+party/gathering labels, not a transitive room/festival clique.
+差し支え receives direct 迷惑 and 面倒 guards for the applicable
+inconvenience/trouble labels; 不自由's affected-state label was
+not established as a collision. ささやく/ざわざわ guards the
+actual shared murmur labels without equating quiet speech and
+collective commotion.
+
+挿す/生け花 remains optional: generic inserting/planting-cutting
+labels versus the specifically Japanese art/arrangement are not
+established as mutually defensible answers merely by a related
+flower activity. Likewise, acknowledging an expectation with
+さすが is not the modal expected/should-be use of はず.
+The inspected 先程 body does not itself establish GPT's optional
+formality claim; no stronger register claim is added. 差引's
+irregular-okurigana note and figurative 刺す are nonblocking
+expansion, not forced additional scope. 作者/著者 and the existing
+書く article's mismatched dictionary citation are pre-existing
+outside this batch and are not silently repaired.
+
+Twelve new articles change; no baseline article, kanji passage,
+title, spelling, reading, level or sense mapping changes.
+Seventeen new cards now declare 95 directional exclusions.
+Original source records and initial declarations remain historical;
+the packet appends correction evidence, adjudications and current
+declarations.
+
+**Model-diversity note:** Both models found 削除/削る and the
+箸/足す omissions. GPT uniquely supplied the actionable 作成/書く
+pair and 生 link. Claude uniquely supplied the argument-pattern,
+native-origin metadata, dangling-English and distracting-example
+observations, plus the optional party-label lead and borderline
+comparisons. Credit compares every report section, including
+Optional. These are useful complementary findings in this sample,
+not a model ranking or proof of exhaustive review. Severity for
+localized navigation and presentation fixes remains minor.
+
+The corrections still require original-session confirmations;
+the twenty rows remain draft and this batch is not closed.

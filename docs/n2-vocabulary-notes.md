@@ -95,6 +95,25 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 31 reconciliation:** Pierce/prick teaching needs both
+  argument patterns: pointed thing を plus destination に, and
+  pierced target を plus instrument で. A natural needle/finger
+  example can demonstrate the second without a violent example.
+  Keep the insect-passive actor に distinct from a destination.
+- **Batch 31 reconciliation:** Recheck actual trailing labels and
+  ordinary secondary senses directly. Text-deletion 削る and
+  document-writing 書く need their own pairs, not inference through
+  消す or 作る. 座敷's positively supported party sense requires
+  separate checks against actual party/gathering labels. A shared
+  English murmur can warrant a quiz guard without making quiet
+  whispering and collective commotion interchangeable Japanese.
+- **Batch 31 reconciliation:** For kana-primary さすが, native
+  origin supports `wago` while 流石 retains its whole-word irregular
+  reading explanation. This is not a universal ban on a type for
+  kana spellings. Prefer the positively attested 杯をさす to a
+  distracting invented contrast; replacement does not prove the
+  former 酒をさす impossible.
+
 - **Batch 31 authoring:** A word's origin and a character-reading
   category are different descriptive layers. Daijisen explicitly
   traces さじ to the Sino-Japanese reading of 茶匙; KANJIDIC's
