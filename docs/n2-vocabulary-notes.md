@@ -95,6 +95,21 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 48 authoring:** Check flags on each spelling, not just
+  membership in a family: 其の他/其の外/其他 are search-only;
+  其の頃 is not in the selected pinned family and is not taught.
+  Normalize rare 卒直 to 率直 while explicitly preserving recognition
+  of the source form; its 卒 link is alias navigation, not a primary
+  reciprocal pair. Keep 続々 separate from shivering ぞくぞく and
+  蕎麦 separate from spatial 側. The whole-word reading そば does not
+  assign ば to 麦. Preserve N3 備える while adding rare 具える
+  recognition and possession, not a since-birth-only restriction.
+  剃る's alternate する remains godan, not irregular "do."
+  A simplified rate-only extraction did not verify 率's ソツ
+  meaning; the separately captured actual Daijisen character entry
+  does. Distinguish the 26 original public attempts from that
+  supplemental character inspection.
+
 - **Batch 47 reconciliation:** An adjective ending does not establish
   native lexical origin. For 騒々しい, distinguish the collection's
   on-first mixed study classification from disputed historical formation;

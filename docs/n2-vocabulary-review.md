@@ -5,8 +5,8 @@
 **Batches 01-47 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 940 rows are review-closed; none are draft,
-872 remain pending, and none are unresolved.
+The first 940 rows are review-closed; 20 are draft,
+852 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -8670,3 +8670,95 @@ native-speaker certification or controlled model
 benchmark is claimed. Both sequential reviewer
 processes have exited. This closes batch 47, not
 the full 1,812-row expansion.
+
+## Batch 48 - authored; independent review pending
+
+Twenty consecutive rows **N2:942-N2:961** are drafted on parent
+**`2cd95674fa935003357fbd11e0f2ddf2121d9a11`**.
+Nineteen articles are new. Existing **N3 備える** gains only explicit
+rare 具える recognition, possession/endowment teaching and an updated
+dictionary citation; its original teaching and metadata are preserved.
+
+| Source ID | Article | Selected pinned senses | Additional senses |
+|---|---|---|---|
+| N2:942 | 総理大臣 | 1401820:1 | - |
+| N2:943 | 送料 | 1402870:1 | - |
+| N2:944 | 属する | 1405710:1 | - |
+| N2:945 | 続々 | 1596730:1 | - |
+| N2:946 | 速達 | 1405030:1 | - |
+| N2:947 | 測定 | 1404570:1 | - |
+| N2:948 | 測量 | 1404590:1 | - |
+| N2:949 | 速力 | 1405080:1 | - |
+| N2:950 | 素質 | 1397240:1,2 | - |
+| N2:951 | 祖先 | 1396820:1 | - |
+| N2:952 | そそっかしい | 1006740:1 | - |
+| N2:953 | 率直 | 1596570:1 | - |
+| N2:954 | 備える | 1244960:1,2,3 | - |
+| N2:955 | そのうえ | 1006880:1,2 | - |
+| N2:956 | そのころ | 2547920:1 | - |
+| N2:957 | そのため | 1006850:1 | - |
+| N2:958 | そのほか | 1006900:1,2,3 | - |
+| N2:959 | 蕎麦 | 1238460:2 | 1238460:1,3 |
+| N2:960 | 剃る | 1581900:1 | - |
+| N2:961 | それなのに | 2055520:1 | - |
+
+The [source packet](n2-vocabulary-batch-sources/batch-48.json)
+preserves raw source fields, including the blank glosses for
+N2:956 and N2:961. Rare source 卒直 maps to 率直 with explicit
+recognition of the original spelling. 続々 and 蕎麦 are separate
+identities, not reuse of shivering ぞくぞく or spatial 側.
+The 其の頃 spelling is not in the selected pinned family and is
+not taught. Search-only 其の他/其の外/其他 are distinguished from
+recommended spellings. Additional 蕎麦 senses do not independently
+acquire an N2 assignment.
+
+Completed author inspection covers **231 complete families /
+487 senses**, including the **20 principals / 29 senses**,
+**207 actual labels**, **118 complete old article bodies** and
+**32 complete components**. The eleven supplemental families
+add ten distinct identities and eighteen senses to the original
+221-family selection. Unselected captures are not reported
+as inspected. The historical prepared/not-inspected plan remains
+unchanged; a separate receipt records completed reads.
+
+The **26 original public endpoint attempts** include **21 positive
+lexical captures** and five missing extractions. Repeated alias
+endpoints are not distinct lexical families. その他 returned
+そのた rather than a direct そのほか heading; a separate
+其の頃 HTTP404 is not positive alias evidence. The subsequent
+actual Daijisen **率** character capture is counted separately:
+its ソツ sense 3 explicitly exemplifies 率直. Simplified
+rate-only extractions and a search summary did not establish
+that character sense. These are author inspections, not
+independent findings or frequency measurements.
+
+Six primary reciprocal pairs are added at reading rows and
+Common words: **総/総理大臣** at ソウ, **臣/総理大臣** at ジン,
+**測/測定** and **測/測量** at ソク, **量/測量** at リョウ,
+and **麦/蕎麦** at a separately labelled whole-word そば row.
+No invented 麦=ば reading is introduced. **卒** gains qualified
+rare-alias navigation only, not a primary pair or Common words
+example. Six old articles change links only: 首相, ぞくぞく,
+側, 先祖, 子孫 and うどん. No kanji metadata or stroke files change.
+
+Initial quiz declarations comprise **17 guarded new articles /
+87 declarations**. They are author hypotheses requiring
+independent assessment, not certified quiz behavior. Actual
+complete labels and ordinary senses govern direct symmetric,
+nontransitive pairs; the blind derivative removes only
+`reviewEvidence.quizGuardRationale`.
+
+Author-executed structural and preservation checks establish
+**940 closed / 20 draft / 852 pending / 0 unresolved**, mapped
+to **952 distinct articles: 891 new / 61 reused**.
+There are **4,164 word articles** and **221 distinct tracked
+primary reciprocal N2 pairs**. The 3,273 baseline identities,
+readings, titles and exclusions remain preserved under the
+recorded narrow level/reuse rules. The deterministic manifest
+is **`c4d36677ae5240cf`**: **6,792 entries =
+6,195 files + 396 images + 201 scene catalogs**.
+
+Independent GPT and Claude review, reconciliation and
+confirmation are pending. An authored commit or successful
+validator does not close these twenty rows. No model-diversity
+conclusion is claimed yet; the overall expansion remains open.
