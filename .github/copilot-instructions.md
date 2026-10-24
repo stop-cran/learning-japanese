@@ -148,3 +148,7 @@ For each revision of the review rules, add a rule grounded in an observed failur
   Route contributors through one shared contract for the new envelope, both graph checks and explicit partial-mapping dispositions.
   The content pilot's independent review also reproduced a Windows-only path mismatch: `Path` equality accepted `Grammar.json`
   although the app rejects that manifest key. Validate published path casing as exact strings, not host filesystem equality.
+- **2026-10-24 - Mixed-group curriculum rollout (regroup):** The
+  [curriculum audit](../docs/grammar-curriculum-sources.json) found coherent groups mixing full-form production and supplied-form
+  interpretation. Clarify the shared contract with the exact production facets motivating a gate, without claiming every member
+  or choice presentation needs that operation. Independent review established no actionable defect; no additional review layer is added.

@@ -314,6 +314,9 @@ producing an unsupplied compound form differs from interpreting a supplied one. 
 spelling, a JLPT label, or an existing recommendation is not by itself a gate. Prefer immediate foundations, leaving comparisons and
 helpful background as recommendations. Record the exact operations, supporting sources, editorial sequencing judgment and limitations
 in the [curriculum ledger](grammar-curriculum-sources.json). Do not rewrite or regroup exercises merely to create a pleasing diagram.
+For mixed production/interpretation groups, identify the actual production facets that motivate a gate and explain why the existing
+group remains a coherent introduction unit. Do not claim that every member or answer mode needs that operation. A root group means
+no authored hard gate, not that its language needs no background.
 
 The optional `curriculum/grammar.json` catalog contains exactly `schemaVersion: 1` and `chapters`. Each chapter contains exactly
 `id`, `label`, and a nonempty `groups` array of authored group IDs. Chapter IDs use the group-ID slug syntax; labels are nonblank.
@@ -333,6 +336,12 @@ Validate both the full leaf graph and the collapsed chapter graph: an acyclic le
 Repair chapter boundaries/staging rather than deleting genuine gates for layout convenience. When changing a group, check incoming as
 well as outgoing edges, partial availability, external/unmapped foundations, ownership, compatibility and stable identities.
 Run `python tools/validate.py`, focused grammar tests, vocabulary checks, manifest regeneration and the real Android importer.
+
+The current catalog places all **236 authored groups in 20 chapters**, with **23 immediate leaf prerequisites** and **9 derived
+chapter arrows**. All 247 recommendations remain unchanged. The 292 unowned exercises remain compatibility practice, not fabricated
+chapter/readiness credentials. The ledger distinguishes the earlier partial-mapping pilot from current ownership and records each
+edge's precise scope. The installment summaries below describe their original delivery snapshots; their original zero-prerequisite
+counts do not override the current `foundationRequirements` declarations.
 
 ### Vocabulary support
 
