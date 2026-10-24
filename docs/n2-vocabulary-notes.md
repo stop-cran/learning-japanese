@@ -95,6 +95,14 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 31 confirmation:** Compute provenance volumes from the
+  actual parsed families and rendering, not an unmeasured number
+  carried in working notes. GPT caught a false 137-sense claim:
+  twenty-five complete families contain 62 senses. Claude repeated
+  the incoming count. Preserve both reports and correct the
+  evidence with a machine-counted receipt; model agreement alone
+  cannot establish a numerical inspection claim.
+
 - **Batch 31 reconciliation:** Pierce/prick teaching needs both
   argument patterns: pointed thing を plus destination に, and
   pierced target を plus instrument で. A natural needle/finger

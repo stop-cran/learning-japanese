@@ -21772,7 +21772,7 @@
     },
     "correctionEvidence": {
       "authoredCommit": "e0c3e67907cd8aa09f1c610f70c840e6f64aee74",
-      "provenance": "Twenty-five complete families for sixteen forms were extracted with both pinned JMdict hashes verified. All 137 sense records in the complete compact rendering, the sixteen actual comparison articles and six complete public lexical containers were read. Thirteen families are new; overlaps agree exactly. Homographs and reading-restricted senses remain separate. All authored records are unchanged.",
+      "provenance": "Twenty-five complete families for sixteen forms were extracted with both pinned JMdict hashes verified. All 62 sense records in the complete compact rendering, the sixteen actual comparison articles and six complete public lexical containers were read. Thirteen families are new; overlaps agree exactly. Homographs and reading-restricted senses remain separate. All authored records are unchanged.",
       "extractionForms": [
         "削る",
         "書く",
@@ -22237,7 +22237,31 @@
           "reason": "This is a pre-existing baseline pair outside the exact unchanged reuse claim. No fresh audit or unrequested unrelated baseline repair is claimed."
         }
       ],
-      "limits": "Twelve new articles change. No primary identity, title, spelling, reading, level, selected/additional sense, mapping, baseline article or kanji passage changes. Public bodies were author-inspected, not thereby independently checked by both reviewers. No app execution, measured frequency or native certification."
+      "limits": "Twelve new articles change. No primary identity, title, spelling, reading, level, selected/additional sense, mapping, baseline article or kanji passage changes. Public bodies were author-inspected, not thereby independently checked by both reviewers. No app execution, measured frequency or native certification.",
+      "confirmationFollowThrough": {
+        "correctedCommit": "51c96bc0b0f9ce230db86a55971efe258c17d61e",
+        "scope": "Evidence provenance count only; no dictionary records or learner content change.",
+        "finding": "GPT31-04",
+        "status": "resolved",
+        "previousFalseProvenanceStatement": "Twenty-five complete families for sixteen forms were extracted with both pinned JMdict hashes verified. All 137 sense records in the complete compact rendering, the sixteen actual comparison articles and six complete public lexical containers were read. Thirteen families are new; overlaps agree exactly. Homographs and reading-restricted senses remain separate. All authored records are unchanged.",
+        "correctCount": {
+          "completeFamilies": 25,
+          "indexedSenseRecords": 62,
+          "newFamilies": 13,
+          "newFamilySenses": 27,
+          "previouslyCapturedFamilies": 12,
+          "previouslyCapturedFamilySenses": 35,
+          "renderingEntryHeaders": 25,
+          "renderingIndexedJsonLines": 62,
+          "renderingPhysicalLines": 162
+        },
+        "inputSha256": {
+          "batch-31-correction-comparisons.json": "0444049e168e71dcc6c443cfcbd8132bd3089448d6b02033ee8b7b450d03a902",
+          "batch-31-correction-comparison-reading.txt": "e23287e81eac6d983b4ea2daa556ce97d71908ca840c5c3f3721e711cdbbed97"
+        },
+        "method": "Parse complete extraction JSON and sum len(entry.senses); independently parse every one-line indexed sense object in the compact rendering and count ENTRY headers, checking their IDs against the extraction. Physical lines are not senses.",
+        "limits": "Author-executed mechanical counting, not proof of linguistic correctness or independent reviewer execution. Original frozen artifacts, prompts and reports, including the false prior count, remain historical and unchanged."
+      }
     }
   }
 }

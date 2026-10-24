@@ -5040,3 +5040,35 @@ localized navigation and presentation fixes remains minor.
 
 The corrections still require original-session confirmations;
 the twenty rows remain draft and this batch is not closed.
+
+### Original-session confirmations and provenance correction
+
+At corrected snapshot
+`51c96bc0b0f9ce230db86a55971efe258c17d61e`,
+the original GPT and Claude sessions both found all twelve changed
+articles CLEAN on all three facets, accepted the ten new direct
+guards and resolved their original findings. Their complete
+[GPT](n2-vocabulary-reviews/batch-31-gpt-confirmation.md) and
+[Claude](n2-vocabulary-reviews/batch-31-claude-confirmation.md)
+confirmations are archived. Work remained strictly sequential;
+neither process edited files or independently executed Git.
+
+GPT31-04 establishes a low-severity provenance error, not a missing
+lexical sense or learner-card defect: the source appendix claimed
+137 sense records in the compact follow-up rendering, but its
+twenty-five complete families contain **62**. Independent parsing
+of the extraction and rendering agrees: thirteen new families
+contain 27 senses, and twelve previously captured families contain
+35. The 162 physical lines are not 162 sense objects.
+
+The current provenance statement is corrected to 62. An appended
+counting receipt preserves the former false statement explicitly,
+records input hashes and explains the counted units. Every
+dictionary family, card, guard, mapping and manifest byte remains
+unchanged. Historical prompts, frozen snapshots and both reports
+are preserved, including Claude's repetition of the incoming
+137-sense claim. This is additional useful GPT signal and a
+concrete limit on model agreement, not a general model ranking.
+
+The bounded evidence-only correction still requires confirmation;
+no whole-batch closure is claimed yet.
