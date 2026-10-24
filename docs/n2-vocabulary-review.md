@@ -7413,3 +7413,87 @@ word articles**, **192 tracked reciprocal N2 pairs**,
 exclusions**, and deterministic manifest
 **`67cdc8372132f347`** remain unchanged by closure.
 This closes batch 41, not the full 1,812-row expansion.
+
+## Batch 42 - authored; independent reviews pending
+
+Source rows **N2:822-N2:841** cover 水蒸気, 水素, 垂直,
+推定, 水滴, 水筒, 随筆, 水分, 水平, 水平線, 水曜,
+ずうずうしい, ずうっと, 末っ子, スカーフ, 図鑑, 杉,
+好き嫌い, 好き好き and 透き通る. There are **seventeen
+new articles and three reuses**. The
+[source packet](n2-vocabulary-batch-sources/batch-42.json)
+preserves the exact community-list rows independently of
+the teaching selections; this is not an official syllabus.
+
+水滴 gains only its previously absent sourced N2 level.
+水曜日 remains unchanged at N5 and already teaches the
+shortened 水曜 (すいよう). These are **distinct valid
+entries**, source 1372180 and article 1372190, not a
+source-ID error. The explicit additional selection
+`1372180:1` validates the source alias against its own
+family, while the primary article is checked against
+`1372190:1`. The original dictionary cache is not changed.
+ずっと remains N3 with unchanged metadata and gains only
+a paragraph explicitly recognizing search-only ずうっと.
+The source's blank gloss remains blank; the continuity,
+degree and distance anchor is editorial, not inferred
+compiler intent.
+
+Consequential qualifications include invisible water
+vapor versus visible droplets; hydrogen versus water;
+perpendicularity relative to a reference rather than
+necessarily upright lines; evidence-based but not
+numbers-only or future-only 推定; non-insulated and
+non-water-only 水筒; reflective 随筆 without a rigid
+エッセイ partition; contextual moisture/fluid translations;
+horizontal 水平 rather than unqualified water height or
+horizon; and separately attributed public instrument and
+geometric-line uses. 図鑑 is an illustrated reference book,
+not every illustrated story. 末っ子 is birth order, not
+present youth. 好き好き is the noun すきずき. The clear
+voice in 透き通った声 need not narrate a change of state.
+
+The inspected comparison union contains **191 complete
+families / 402 sense records**: the original **188 / 373**
+plus **three / 29** from complete 線 and 本 lookups,
+including the separate 本/もと family. The **twenty source
+principals / 27 senses** are included, not added twice.
+The packet's **21 source-plus-teaching families / 28
+senses** additionally include 水曜日. Evidence includes
+**104 actual existing labels**, **60 complete existing
+article bodies** (58 selected plus 線/本), **29 complete
+component records** (28 original plus 日 for the reused
+article), and **31 actual Digital Daijisen retrievals**.
+The original pending-inspection plan is preserved; a
+separate receipt records completion. Broader unselected
+body captures are not claimed as inspected.
+
+Four N2 cards gain reciprocal reading-row and Common words
+links: 蒸 / 水蒸気 at ジョウ, 筒 / 水筒 at トウ,
+筆 / 随筆 at ヒツ, and 線 / 水平線 at セン.
+Existing 滴 / 水滴 links and all kanji metadata remain.
+Absent components stay in word metadata; no kanji or
+stroke cards are added.
+
+Initial quiz metadata has **15 guarded new articles / 42
+directional declarations**. These are author hypotheses
+about direct meanings and actual English labels, not
+reviewer findings or reproduced runtime failures. Exact
+titles deduplicate; exclusions are symmetric,
+nontransitive, and protect both quiz directions and
+co-choices. No baseline title or exclusion is changed.
+The blind derivative omits only the author's quiz rationale.
+
+Author checks establish **820 closed / 20 draft / 972
+pending / 0 unresolved**, mapped to **833 distinct articles:
+778 new / 55 reused**. There are **4,051 word articles**
+and **196 tracked new-article reciprocal N2 pairs**.
+The **3,273 baseline** identities, readings, titles and
+exclusions remain preserved under the documented reuse
+and source-level rules. The deterministic manifest is
+**`d6a169274503a630`**: **6,679 assets = 6,082 files + 396
+images + 201 scenes**.
+
+Both independent reviews are pending. These are authored
+counts, not review closure or native-speaker certification;
+the full vocabulary expansion remains open.

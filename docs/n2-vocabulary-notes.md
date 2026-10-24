@@ -95,6 +95,24 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 42 authoring:** A valid shortened form and its
+  expanded reusable article can have different dictionary
+  identities. Preserve source 水曜/すいよう (1372180),
+  validate the unchanged 水曜日/すいようび article against
+  1372190, and explicitly select the source alias sense.
+  This is neither a source-ID correction nor a reason to
+  create a redundant card or change its N5 level. Count
+  twenty source principals separately from the twenty-one
+  source-plus-teaching families in this packet.
+- **Batch 42 source interpretation:** A blank raw gloss
+  stays blank; a dictionary-backed editorial anchor does
+  not recover the compiler's intent. A search-only alias
+  such as ずうっと needs explicit recognition teaching.
+  Preserve 水平's raw water-level/horizon gloss while
+  teaching its actual horizontal sense; attribute the
+  instrument use and 水平線's geometric use to the public
+  dictionary, not invented extra JMdict sense indices.
+
 - **Batch 41 review/reconciliation:** Name excluded subtypes
   precisely: excluding pistil/stamen does not exclude the
   plant-pith use of 芯 already taught. Keep source-note
