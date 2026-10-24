@@ -5718,7 +5718,7 @@ batch 34, not the remaining vocabulary expansion.
 
 ## Batch 35: N2:682-N2:701
 
-**Status:** first confirmations complete; two-article follow-through prepared; final confirmations pending.
+**Status:** closed after sequential initial reviews and two bounded confirmation rounds.
 
 Scope: 湿度, 執筆, 実物, しっぽ, 実用, 実力, 実例,
 失恋, 指定, 私鉄, 児童, 縛る, 地盤, しびれる, 紙幣,
@@ -5904,5 +5904,70 @@ extra electric-shock examples and tail idioms remain optional.
 Only 地味 and しびれる receive this follow-through; no TSV,
 source identity/index, primary title/reading, level, reused-card
 or kanji change. The source packet appends this round separately.
-Both original sessions will assess the actual two-article diff.
-All twenty rows remain draft until that confirmation completes.
+This snapshot remained draft pending the final checks below.
+
+### Batch 35 final confirmations, authentication and closure
+
+The original sessions resumed sequentially on
+`5b7172746841f986ab642c5acfeed0bbc53314a1`, parent
+`5d8e436a121ad5007143f771f76c3fcdff0a981e`.
+GPT exited before Claude started; both actual requested models
+remained read-only, without delegation:
+
+- [GPT follow-through](n2-vocabulary-reviews/batch-35-gpt-followup.md):
+  `gpt-6.1-sol`.
+- [Claude follow-through](n2-vocabulary-reviews/batch-35-claude-followup.md):
+  `claude-opus-5.5`.
+
+Both read the complete actual follow-through patch, both changed
+articles, both comparison articles and complete relevant families
+1421490, 1569620, 1260190 and 1212360. Each rated 地味 and
+しびれる CLEAN on correctness, scoped coverage and
+comprehensibility, accepted both direct guards and found no new
+regression or consequential unresolved claim. GPT explicitly
+revises its prior judgment on Q3; Claude closes its maintained
+finding. This is evidence-based reconciliation, not an erased
+first-round disagreement or a forced initial consensus.
+
+Both explicitly carry forward the sixteen other new articles,
+five related changes and twenty mappings, not renewed whole-batch
+inspection. Both recounted the supplied declarations as 92 across
+eighteen cards. Claude's suggested 感激 mention in the comparison
+prose remains nonblocking; no teaching change was made after
+these final confirmations.
+
+Author-side authentication matched all six complete final reports
+to exact native-session turns, common prompts, actual models and
+zero-edit usage receipts. Native message boundaries retain the
+entire final messages, including substantive text before Snapshot,
+while excluding CLI progress. All three snapshots, stop-cran
+author/committer details and trailers, normalized hashes, actual
+patches, exact content scopes and three sanitized derivatives
+were authenticated. Authored records remain unchanged with only
+appended corrections; the first correction's 90 declarations and
+earlier adjudications remain unchanged with only the appended
+follow-through.
+
+The sole TSV correction before closure is N2:701's source-note
+clarification, explicitly preserving its authored/current values.
+Raw source fields, mapping identities and selected/additional
+sense indices are unchanged. All eighteen new and five related
+content hashes match each snapshot's corresponding manifest.
+The follow-through changes no reused card, kanji, TSV or snapshot.
+
+Mechanical closure changes only the twenty row statuses and
+tracking hash/counts, packet status, reports and closure notes.
+Teaching content remains identical to the confirmed snapshot.
+The deterministic manifest remains **6,549 files**, including
+396 images and 201 scene catalogs; version `911a538362fa5977`.
+The complete coverage/identity/restriction/link audit preserves
+the 3,273 baseline identities/readings/titles and documented
+metadata/quiz exceptions.
+
+Final coverage: **700 closed / 0 draft / 1,112 pending /
+0 unresolved**, mapped to **693 distinct articles: 648 new and
+45 reused**. There are **3,921 word articles** and **160 distinct
+tracked reciprocal primary N2 kanji-word pairs**. This closes
+batch 35, not the remaining vocabulary expansion. Neither model
+executed Git/hashes or quiz draws; CLEAN is scoped review, not
+exhaustive linguistic or native-speaker certification.

@@ -118,8 +118,12 @@ evidence and learning impact; issue creation requires authorization.
   a drawn-line/dash use, not only a physical rod.
 - **Batch 35 model comparison:** 実例/ケース appears as a GPT
   finding and a Claude optional observation, so it is shared.
-  Across all sections the accepted missing pairs divide into
+  Across all sections the first thirteen accepted pairs divide into
   five shared, four GPT-only and four Claude-only observations.
+  Final confirmations accept two more Claude-origin pairs,
+  giving fifteen cumulative additions: five shared, four
+  GPT-origin and six Claude-origin. Both models accept the final
+  correction; that does not change initial-discovery attribution.
   Keep the non-animal example and explicit scope improvements
   separate from claims that the original selected senses were wrong.
 - **Batch 35 authoring:** A raw English gloss can span multiple
