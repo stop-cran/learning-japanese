@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 44 authoring:** A dictionary spelling can
+  need navigation without changing character metadata:
+  清む belongs to 澄む/すむ, but pinned KANJIDIC2 does
+  not list す.む for 清. Recognize the alias in the word
+  and kanji notes rather than inventing a source reading.
+  Keep 相撲's whole-word reading separate from component
+  readings, and 刷る's regular conjugation separate from
+  general-purpose する. Ordinary secondary uses matter:
+  寸法 includes an arrangement, スライド includes shifts,
+  and 製作 includes films. The source's work/slide/nature
+  glosses do not establish unrestricted English
+  equivalence. A redirect for ずらり was insufficient
+  for the array description; inspect ずらっと itself.
 - **Batch 43 review/reconciliation:** A comparison belongs
   at its substantive introduction, including 甘い/苦い in
   酸っぱい and ゴール in スタート; complete the directly

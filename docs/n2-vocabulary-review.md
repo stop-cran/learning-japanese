@@ -7808,3 +7808,52 @@ word articles**, **198 tracked reciprocal N2 pairs**,
 exclusions**, and deterministic manifest
 **`7183aceabc0869b0`** remain unchanged by closure.
 This closes batch 43, not the full 1,812-row expansion.
+
+## Batch 44 - drafted, independent review pending
+
+Source rows **N2:862-N2:881** map to eighteen new
+articles: 住まい, すまない, 墨, 澄む, 相撲, スライド,
+ずらす, ずらり, 刷る, ずるい, すれ違う, ずれる, 寸法,
+税関, 製作, 制作, 性質 and 清書. The source spelling
+清む shares the explicitly alias-aware 澄む article.
+Reuse 姓 with only its newly sourced N2 level.
+The three blank raw glosses remain blank; the selected
+clarity/array/misalignment meanings are editorial anchors,
+not recovered compiler intent.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-44.json)
+retains original fields, complete principal families,
+restrictions and one-based selections. Actual author
+reads covered **260 complete families/633 senses**,
+including **nineteen distinct principal families/
+42 senses**, **161 existing labels**, **104 complete
+existing articles**, **26 component records**, and
+**26 actual public captures**. The twenty source rows
+include one duplicate alias family. The original
+prepared/not-inspected plan remains separate from the
+completed-read receipt. Other unselected broad captures
+remain capture-only; the missing proper-name 田中
+dictionary lookup is explicitly omitted. These are
+author assertions, not independent reviewer findings.
+
+Three new primary-spelling N2 pairs receive reciprocal
+reading-row and Common words links: 刷/刷る at す.る,
+税/税関 at ゼイ, and 清/清書 at セイ. Additional
+清む navigation goes in 清's Common words and notes,
+without adding a source-unsupported す.む reading or
+inflating the primary-spelling pair count. Six old word
+articles gain only substantive links: インク, インキ,
+透き通る, 性格, 性 and 下書き. No kanji metadata,
+new kanji cards or strokes change.
+
+The new articles have direct pairwise quiz safeguards,
+including ordinary secondary uses and broad English-label
+precautions. Identical 住まい/住居 and 製作/作製
+titles already deduplicate. No production quiz failure
+or exhaustive semantic certification is claimed.
+
+Coverage is **860 closed / 20 draft / 932 pending /
+0 unresolved**, mapped to **872 distinct articles:
+814 new / 58 reused**. There are **4,087 word articles**
+and **201 tracked reciprocal N2 pairs**. This draft has
+not yet passed independent GPT and Claude review.
