@@ -6191,3 +6191,91 @@ later agreement does not convert them into shared discoveries.
 The inaccurate absence premise is withdrawn, not silently
 credited as useful new evidence. This batch supports the
 value of different inspection strategies, not a model ranking.
+
+## Batch 37 - N2:722-N2:741
+
+**Status:** authored; independent reviews pending.
+
+Scope: 住居, 集金, 集合, 習字, 修繕, 重体, 絨毯, 終点,
+重点, 就任, 周辺, 重役, 終了, 重量, 重力, 熟語, 祝日,
+縮小, 受験 and 主語.
+
+Twenty new articles cover twenty source rows without reuse,
+bringing the collection to **3,961 word articles**. Five narrow
+kanji edits add reciprocal examples for 周/周辺, 辺/周辺,
+了/終了, 量/重量 and 祝/祝日 at their actual readings.
+No new kanji or stroke card is introduced.
+
+The [source packet](n2-vocabulary-batch-sources/batch-37.json)
+preserves twenty raw source rows and twenty complete principal
+families with 26 indexed senses. The captured comparison union
+contains **325 distinct complete families / 663 sense records**,
+including those twenty principal families, checked equal.
+There are therefore **305 nonprincipal families / 637 sense
+records**, not 325 additional families. The original capture
+has 298 families / 600 senses, and the extra capture adds
+27 families / 63 senses with no overlapping entry IDs.
+All captured families were inspected.
+
+All 194 original actual labels, the selected デモ label and
+supplemental おやすみ/学会 labels were inspected: **197 labels**.
+Six selected bundles contain 118 distinct fully inspected
+articles, including デモ outside the original label inventory.
+With おやすみ and 学会, **120 distinct complete bodies** are
+counted as inspected. The complete 194-body aggregate was
+captured but not entirely read. All 36 complete component
+records and twenty actual public Digital Daijisen containers
+were inspected. Machine-computed counts and capture hashes
+are author receipts, not independent linguistic certification.
+
+住居 retains residential-address recognition without implying
+ownership. 集合 separates meeting up from a mathematical set.
+習字 includes pen and brush practice. 修繕 uses attested roof
+repair rather than an invented clothes-only boundary.
+重体 includes illness or injury and distinguishes 渋滞.
+絨毯 separates rare from search-only spellings. 終点 is not
+the last train of the day.
+
+重点 selects important-point sense 1 and source-covered colon
+sense 3; iteration-mark sense 2 is additional. Its different
+public inventory does not establish absence or frequency.
+重役 selects company-executive sense 1 at じゅうやく, with
+important-role sense 2 additional; obsolete おもやく does not
+inherit sense 1. Additional senses receive no independent
+N2 assignment.
+
+終了 teaches transitive/intransitive patterns without claiming
+successful completion. 重量 preserves the community's raw
+“heavyweight boxer” gloss but does not teach it as a licensed
+bare-noun meaning: the complete family records only weight.
+Separate heavyweight-class terms do not supply a person sense.
+重力 is distinguished from weight, mass and broader attraction.
+熟語 need not be nonliteral or four characters. 祝日 is not
+every personal day off, 縮小 is not automatically data
+compression, and 受験 does not guarantee passing.
+
+主語 uses a non-agent property predicate, contextual omission
+and an object-topic contrast. Public grammar-source inspection
+is bounded: the returned が page was inspected, but only the
+first 12,000 returned characters of the は/が comparison were
+read. No claim is made about the unread remainder or every
+grammatical framework; no archived response hash is available
+for those two grammar fetches.
+
+Missing primary 修/繕/絨/毯/就/熟/縮 remain in metadata without
+links. Alternate 態 is also unlinked. No baseline word ID,
+primary reading, title, level, body or exclusion is changed.
+Sixteen new cards declare **81 directional quiz exclusions**,
+subject to independent assessment of actual ordinary meanings,
+not a transitive synonym grouping.
+
+Both reviewers will receive the same frozen committed
+snapshot, twenty complete new articles, five narrow kanji
+changes, twenty mappings, rubric and source access. The blind
+derivative removes only `quizGuardRationale`. Reviews run
+sequentially without nesting, concurrent reviewers or author
+edits during the initial reviews.
+
+Authored coverage: **720 closed / 20 draft / 1,072 pending /
+0 unresolved**, mapped to **733 distinct articles: 688 new /
+45 reused**. This is not review closure or overall completion.

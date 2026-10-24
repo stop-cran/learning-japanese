@@ -95,6 +95,29 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 37 authoring:** Deduplicate evidence by entry ID and
+  check repeated records before counting. The 325-family
+  capture includes twenty principal families, leaving 305
+  nonprincipal families; it is not 345 distinct families.
+  The selected full-body inventory also includes デモ outside
+  the original 194 labels. With おやすみ and 学会, this gives
+  197 actual labels and 120 inspected bodies, not 194 full
+  inspections. Record those different scopes explicitly.
+- **Batch 37 authoring:** Keep raw source glosses separate
+  from licensed teaching. 重量's community “heavyweight boxer”
+  is not a bare-noun sense in the pinned family; heavyweight
+  class entries do not establish a boxer-person meaning.
+  Conversely, the absence of 重点's colon sense from the
+  inspected public entry does not invalidate its explicit
+  JMdict sense. Neither disagreement establishes frequency.
+- **Batch 37 authoring:** Inspect ordinary secondary senses
+  when assessing quiz answers: 字 includes handwriting,
+  おやすみ includes a day off, 学会 includes an academic
+  conference, and 閉じる can end a meeting. A limited primary
+  title is not proof that these meanings are absent.
+  Keep grammar examples bounded: a 主語 need not be an agent,
+  a は-topic need not be the subject, and omitted subjects
+  depend on context and the grammatical framework.
 - **Batch 36 confirmation:** Partial source inspection cannot
   establish that a family is absent. Both confirmations found
   洒落る1568670 already in the original packet; the repeated
