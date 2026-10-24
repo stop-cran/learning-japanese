@@ -95,6 +95,29 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 38 authoring:** A blank source gloss does not
+  establish which dictionary sense the compiler intended.
+  For しょうがない, preserve the empty raw fields and state
+  an explicit dictionary-backed editorial anchor, with
+  additional senses recorded separately. Likewise, the
+  raw 純情 devotion gloss is not an independent teaching
+  sense when the inspected entries establish innocence
+  and pure-heartedness instead.
+- **Batch 38 authoring:** Character and spelling variants
+  do not supply missing grammatical attachment rules.
+  The actual てしょうがない page supports verb て,
+  い-adjective くて and な-adjective で; a CAPTCHA wrapper
+  and a 404 supply no evidence for a different construction.
+  Keep the unverified productive ようがない contrast out
+  of this card rather than inventing an explanation.
+- **Batch 38 authoring:** A full-body capture is not an
+  inspection receipt. Of 89 bodies in twelve selected
+  bundles, only 53 were read completely. Reused 定規 and
+  seven additional nuisance/commute/processing/gas cards
+  bring the actual inspected total to 61. Complete 通う
+  also supplies circulation, beyond its commuting title;
+  警察 includes an officer and 清潔/きれい moral purity.
+  Preserve these ordinary meanings in quiz assessment.
 - **Batch 37 confirmation:** Both original reviewers accepted
   the evidence for retaining 終了/切る・切れる; Claude withdrew
   its removal proposal. Preserve that as a withdrawal, not

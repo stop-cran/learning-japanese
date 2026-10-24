@@ -6421,3 +6421,105 @@ This batch supports different inspection strategies, not a
 general ranking of model families. Neither confirmation
 executes quiz draws or certifies exhaustive linguistic
 correctness or native-speaker naturalness.
+
+## Batch 38 - N2:742-N2:761
+
+**Status:** authored; independent reviews pending.
+
+Scope: 出勤, 述語, 出張, 寿命, 主役, 受話器, 循環, 巡査,
+順々, 順序, 純情, 純粋, 消化, 小学生, しょうがない, 将棋,
+蒸気, 定規, 上級 and 商業.
+
+Nineteen new articles and reuse of 定規 cover twenty source
+rows, bringing the collection to **3,980 word articles**.
+The reused article receives only the sourced explicit
+`jlpt: 2` assignment; its identity, primary reading, title,
+body and other metadata are preserved. Six narrow kanji
+edits add eight reciprocal pairs: 述/述語 at ジュツ,
+査/巡査 at サ, 順/順々 and 順/順序 at ジュン,
+純/純情 and 純/純粋 at ジュン, 将/将棋 at ショウ,
+and 蒸/蒸気 at ジョウ. Existing plain examples for 純粋,
+将棋 and 蒸気 become links rather than duplicates.
+No new kanji or stroke card is introduced.
+
+The [source packet](n2-vocabulary-batch-sources/batch-38.json)
+preserves twenty raw rows and twenty complete principal
+families with **31 indexed senses**. The comparison union
+contains **308 distinct complete families / 694 senses**,
+including those twenty principals checked equal, leaving
+**288 nonprincipal families / 663 senses**. The original
+capture has 247 families / 540 senses; the supplemental
+58-family capture has 140 senses and repeats two families,
+checked equal. Four nuisance/commute families add 13 senses;
+one gas family adds eight. The requested-form union is 261.
+All complete captured families were inspected.
+
+All 143 original and 33 supplementary labels, plus seven
+additional labels, were inspected: **183 labels**.
+The twelve selected bundles capture 89 bodies, but only the
+explicitly inventoried 53 bodies were fully read. With 定規
+and seven additional nuisance/commute/processing/gas articles,
+**61 distinct complete existing bodies** were inspected.
+The original 143-body aggregate was not all read. All 47
+complete component records and 21 actual public lexical
+retrievals were inspected. Hashes and counts are author
+receipts, not native-speaker certification.
+
+出勤 separates reporting/attendance from generic employment.
+述語 uses verb, adjective and noun-plus-copula predicates,
+with explicit school-grammar limits; grammar sense 1 is the
+editorial anchor and logic sense 2 additional recognition,
+not a claim that the raw predicate gloss disambiguates them.
+出張 is work travel without an overnight minimum.
+寿命 selects lifespan sense 1 and adds service-life sense 2.
+主役 covers role and performer; its public figurative
+extension is not assigned an invented pinned sense index.
+受話器 is a receiving device, not the entire phone call.
+
+循環 explains route-marker を with an intransitive verb.
+巡査 retains both the lowest-rank and broader officer uses.
+順々 teaches に and the iteration mark; 順序 covers sequence
+and procedure, not commands or purchases. 純情 preserves but
+does not adopt the unsupported raw devotion gloss. 純粋
+covers material and mental purity rather than hygiene alone.
+消化 anchors food sense 1, adds information/workload senses
+2-3 and explicitly qualifies archaic sense 4.
+小学生 names a pupil, not a building or a universal age.
+
+しょうがない preserves the blank raw kanji and English fields.
+Sense 2 is an explicit dictionary-backed editorial anchor,
+not recovered compiler intent; senses 1 and 3-5 are additional.
+The actual Bunpro page supports verb て, い-adjective くて
+and な-adjective で attachment. The failed CAPTCHA and 404
+retrievals provide no grammar evidence. No unverified
+productive ようがない comparison is taught. That positive
+grammar inspection has no archived response hash.
+
+将棋 keeps its whole reading and the attested 将棋を指す
+expression without inventing ギ as a standalone 棋 reading.
+蒸気 is not water-only; transport sense 2 is an additional
+abbreviation, not labeled archaic without evidence.
+定規 does not import the separate public ていき heading.
+上級 teaches a noun/の-modifier, not an automatic な form.
+商業 is commercial activity, not a company by default.
+Additional senses do not independently acquire N2 status.
+
+Missing primary 張/寿/器/循/環/巡/序/粋/棋/級 remain in metadata
+and plain text. Sixteen new cards declare **82 directional
+quiz exclusions**, pending independent assessment. Guards
+consider actual ordinary meanings, including 通う's circulation,
+警察's officer and 清潔/きれい's moral-purity senses; they are
+not transitive topic groupings.
+
+Both reviewers will receive the same frozen committed
+snapshot, nineteen new articles, the narrow 定規 change,
+six kanji changes, twenty mappings, rubric and source access.
+The blind derivative removes only `quizGuardRationale`.
+Reviews run strictly sequentially without nesting,
+concurrent reviewers or substantive author edits.
+
+Authored coverage: **740 closed / 20 draft / 1,052 pending /
+0 unresolved**, mapped to **753 distinct articles: 707 new /
+46 reused**. There are **177 tracked primary reciprocal
+N2 kanji-word pairs**. This is not review closure or overall
+completion.
