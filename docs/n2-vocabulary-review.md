@@ -8508,3 +8508,100 @@ The deterministic manifest is **`784f3b025dccd098`**.
 Sequential blind GPT and Claude reviews must assess
 the same frozen snapshot and all three facets before
 any of these twenty rows is review-closed.
+
+### Batch 47 - initial reviews reconciled; confirmation pending
+
+Authored commit **`7f42dbaf6ee9651095fe53f7b0efaf32b346c068`**
+was independently reviewed by **gpt-6.1-sol** and then
+**claude-opus-5.5**, each in an isolated process that
+exited before the next began. Exact native prompts,
+actual models, complete final reports, zero edits,
+permitted private-file reads and absence of named
+forbidden reads were authenticated. Reports are
+[GPT initial](n2-vocabulary-reviews/batch-47-gpt-initial.md)
+and [Claude initial](n2-vocabulary-reviews/batch-47-claude-initial.md).
+Claude additionally read the Git HEAD and branch-ref
+files; those reads do not establish clean content,
+blob hashes or equivalence. The provenance check
+does not purport to enforce every repository-path
+boundary merely by checking the private allowlist.
+
+Both complete reports, including optional notes and
+limits, were compared. **増大/激増** and **草履/下駄**
+were shared guard findings. GPT additionally identified
+**全般/丸**, **騒々しい/ざわざわ** and **創作/架空**.
+Claude additionally proposed **先頭/表**. All six
+receive direct safeguards after inspection of actual
+titles, ordinary senses and complete comparison bodies.
+Some are conservative broader-label precautions:
+they do not merge footwear identities, front-of-object
+and queue-head uses, or fabrication and every kind
+of imaginary content. Older guards are not transitive.
+Seventeen new cards now declare **82 direct exclusions**,
+six more than the authored snapshot; original guards
+are retained.
+
+Both reports questioned 騒々しい's definite native
+classification. GPT left origin unverified; Claude
+proposed kango from the on-based form. The correction
+uses **kango as the collection's on-first mixed study
+category**, explains Japanese adjective formation,
+and contrasts native さわ in 騒がしい. It does not
+present modern spelling as a settled etymology.
+A fresh actual read of **精選版日本国語大辞典,
+騒騒しい** discusses competing origins and possible
+ateji. This limits the literal proposed derivation
+rather than deciding by model vote. Original source
+records and the unsuccessful そういえば extraction
+remain unchanged.
+
+Claude's optional そっと wording change from
+"not separate verbs" to "not separate words" is
+adopted only within the new alias paragraph, not
+recast as a demonstrated initial coverage defect.
+Its original identity, primary reading, title, N3,
+exclusions and teaching remain preserved. Optional
+宣伝/相違 expansion is not required for closure.
+葬式/サービス remains a conservative displayed-label
+precaution, not a claim that Japanese サービス
+has a religious-service sense.
+
+Corrective inspection covers **nine complete families/
+31 senses**, of which three families duplicate the
+original union and six add 25 senses. The deduplicated
+author total is **200 families/460 senses**, **197 actual
+labels** and **114 complete old bodies**; six corrective
+bodies add four distinct articles. Thirty-six component
+records are unchanged. The separate fresh public
+inspection supports a qualified formation discussion,
+not a completed historical proof.
+
+GPT reports all 194 initial comparison families and
+90 additional complete old bodies read; Claude
+discloses principal/label/component/public and
+targeted old-label reads, without reading the complete
+comparison-family renderings. The findings were
+complementary within those different actual scopes.
+They are useful sample observations, not a controlled
+model ranking or proof of bias elimination.
+
+Six new articles and the new alias sentence of
+reused そっと change. Thirteen new articles, five
+reciprocal kanji edits, four old-word link passages,
+all titles/readings/levels and all twenty source
+mappings are unchanged. Both original sessions
+must assess the same corrected snapshot, actual
+patch, new complete evidence and author adjudications.
+Confirmation is resumed and shared, not another
+blind initial review. Coverage remains **920 closed /
+20 draft / 872 pending / 0 unresolved** until all
+consequential findings are resolved.
+
+The validator reports zero errors; deterministic
+manifest regeneration gives **`642adf6cdb83fcb3`**.
+The draft coverage/preservation audit retains all
+**3,273 baseline identities/readings/titles/exclusions**,
+**4,145 word articles** and **215 distinct tracked
+primary reciprocal N2 pairs**. These are bounded
+mechanical checks, not linguistic certification or
+an executed runtime-quiz test.

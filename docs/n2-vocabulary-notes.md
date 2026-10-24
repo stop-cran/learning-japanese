@@ -95,6 +95,18 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 47 reconciliation:** An adjective ending does not establish
+  native lexical origin. For 騒々しい, distinguish the collection's
+  on-first mixed study classification from disputed historical formation;
+  the inspected dictionary discusses competing origins and possible ateji.
+  Do not replace an unsupported native-origin claim with an equally
+  unqualified on-reading etymology. Actual ordinary senses and displayed
+  labels support six additional direct safeguards, including 丸's
+  whole-amount sense, ざわざわ's noisy-commotion sense and 表's front
+  label. Neither footwear topic overlap nor an older indirect guard
+  suffices by itself. Both reviewers found useful gaps, but GPT's complete
+  comparison-family scope and Claude's targeted-label scope differ;
+  complementary findings are not proof that model bias was eliminated.
 - **Batch 47 authoring:** Reuse an established kana-primary
   article only after explicitly teaching the source alias:
   そうっと is an emphatic form of existing N3 そっと,
