@@ -6194,8 +6194,8 @@ value of different inspection strategies, not a model ranking.
 
 ## Batch 37 - N2:722-N2:741
 
-**Status:** initial reviews complete; corrections authored;
-changed-passage confirmations pending.
+**Status:** closed after independent initial reviews,
+evidence-based corrections and changed-passage confirmations.
 
 Scope: 住居, 集金, 集合, 習字, 修繕, 重体, 絨毯, 終点,
 重点, 就任, 周辺, 重役, 終了, 重量, 重力, 熟語, 祝日,
@@ -6347,3 +6347,77 @@ precautions. Its proposed cut/expiry removals are not credited
 as useful corrections. This compares all report sections,
 including tentative extras, and supports complementary
 inspection strategies on this sample, not a model ranking.
+
+### Corrected-snapshot confirmation and closure
+
+The complete native confirmation messages are archived:
+[GPT](n2-vocabulary-reviews/batch-37-gpt-confirmation.md) and
+[Claude](n2-vocabulary-reviews/batch-37-claude-confirmation.md).
+The original reviewer sessions resumed strictly sequentially
+on corrected commit
+`916247bf6bbf7ffca6ba1cddc2ff2608f6b610b0`, using actual
+models **gpt-6.1-sol** and **claude-opus-5.5**. Both exited
+with zero edits. All five changed articles are **CLEAN** for
+correctness, scoped coverage and comprehensibility. Both
+carry forward the unchanged fifteen articles and five kanji
+edits, rather than claiming a fresh complete rereview.
+All twenty mapping verdicts are CLEAN; N2:722 was reassessed
+against the narrower address qualification.
+
+All four original GPT findings are **resolved**. Claude's
+B37-01 through B37-04 are **resolved**, including its
+lower-confidence endpoint extras. For B37-05, the 結論
+omission is **resolved** and the proposed removal of
+切る/切れる is **withdrawn**: both actual articles teach the
+relevant termination/expiry meanings. GPT also accepts that
+evidence-based retention. This closes the earlier partial
+adjudication without rewriting either original report.
+No new actionable defect or consequential unresolved claim
+remains in the reviewed scope.
+
+GPT reread all five changed articles, the complete 21-family
+correction rendering, relevant principal records and thirteen
+existing comparison articles. Claude read the five changed
+articles, complete correction rendering and five existing
+comparison articles; six other comparison checks used titles
+and exclusion lines. These are different inspection scopes,
+not identical complete dictionary audits.
+
+住居 now demonstrates the attested 住居を定める pattern and
+keeps JMdict's address gloss only as qualified dictionary
+recognition, not free substitution for 住所 on forms or in
+address questions. GPT reused its initially inspected
+Daijisen evidence. Claude's new public lookups failed or
+returned encyclopedia text, so its attestation assessment
+relies on the author's earlier receipt and its own language
+judgment. Claude's suggestion to reword the original mapping
+note remains **optional**; both accept the unchanged note
+only in the explicitly qualified sense. No source field,
+mapping identity or sense index is changed at closure.
+
+Author-executed authentication verifies all four complete
+native final messages, exact common prompts, actual models,
+zero edits, permitted tools and absence of named forbidden
+reads. Both frozen snapshots, patches, sanitized derivatives,
+append-only correction evidence and 25 manifest content
+entries per snapshot were checked. These executable provenance
+checks do not convert the file-only reviewers' receipt
+assertions into independent Git/hash checks.
+
+Closed coverage is **740 closed / 0 draft / 1,072 pending /
+0 unresolved**, mapped to **733 distinct articles: 688 new /
+45 reused**. There are **3,961 word articles** and **169 tracked
+primary reciprocal N2 kanji-word pairs**. Closure leaves the
+confirmed teaching content, five kanji edits and manifest
+unchanged. The expansion as a whole is still incomplete.
+
+**Final model-diversity conclusion:** the shared and unique
+verified contributions above remain complementary. Later
+agreement on corrections does not make an original discovery
+shared; the withdrawn removal proposal is not credited as a
+useful correction. Comparing all report sections prevents
+misclassifying Claude's tentative extras as GPT-only catches.
+This batch supports different inspection strategies, not a
+general ranking of model families. Neither confirmation
+executes quiz draws or certifies exhaustive linguistic
+correctness or native-speaker naturalness.

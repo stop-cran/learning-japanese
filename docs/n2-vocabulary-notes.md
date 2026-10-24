@@ -95,6 +95,11 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 37 confirmation:** Both original reviewers accepted
+  the evidence for retaining 終了/切る・切れる; Claude withdrew
+  its removal proposal. Preserve that as a withdrawal, not
+  a useful correction or a newly shared initial discovery.
+  Later agreement does not change who first found a defect.
 - **Batch 37 reconciliation:** An example containing both a
   dwelling and its address does not demonstrate that the
   dwelling noun itself means a written address. Qualify
