@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-45 review-closed.** The target is all 1,812 source rows,
+**Batches 01-46 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 900 rows are review-closed; none are draft,
-912 remain pending, and none are unresolved.
+The first 920 rows are review-closed; none are draft,
+892 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -8233,7 +8233,7 @@ the thirty-four assigned teaching files and manifest
 are unchanged by the documentation-only closure.
 This closes batch 45, not the full 1,812-row expansion.
 
-## Batch 46 - authored; independent review pending
+## Batch 46 - authored and subsequently review-closed
 
 Source rows **N2:902-N2:921** map to nineteen new articles:
 接続, 瀬戸物, ぜひとも, 迫る, ゼミ, せめて, 攻める,
@@ -8275,13 +8275,13 @@ cards change. Seven old word articles gain links only:
 先週 and 再来月. All baseline exclusions and easier
 established levels are preserved.
 
-Coverage is **900 closed / 20 draft / 892 pending /
+Authored coverage was **900 closed / 20 draft / 892 pending /
 0 unresolved**, mapping **912 distinct articles:
 853 new / 59 reused**. There are **4,126 word articles**
 and **210 tracked primary reciprocal N2 pairs**.
-Sequential blind GPT and Claude reviews will assess
+Sequential blind GPT and Claude reviews assessed
 the same frozen snapshot and all three facets before
-any source row is closed.
+any source row was closed.
 
 ### Blind initial reviews and author reconciliation
 
@@ -8333,9 +8333,10 @@ There are **six added direct precautions**, giving
 The twelve other new articles, reused teaching and
 level, three kanji edits, seven old links, raw source
 fields, twenty selected mappings and reciprocal-pair
-count remain unchanged. Bounded confirmation by both
-original reviewers is still pending; all twenty
-source rows remain draft.
+count remained unchanged. At this reconciliation
+checkpoint, bounded confirmation by both original
+reviewers was still pending and all twenty source
+rows remained draft.
 
 ### Model-diversity observation
 
@@ -8361,3 +8362,81 @@ establishes live quiz behavior, native-speaker
 certification or exhaustive linguistic correctness.
 Correction confirmations share author hypotheses
 and are not a second blind comparison.
+
+### Batch 46 - confirmed and closed
+
+Both original reviewers resumed their own sessions
+sequentially on correction commit
+**`069fddd9213233078034643051e18ba9749cf354`**,
+parent **`97436ec4589201838df1b398046729a2c43d57fe`**:
+[GPT confirmation](n2-vocabulary-reviews/batch-46-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-46-claude-confirmation.md).
+Each process exited before the next substantive step;
+no reviewer process remains. Both complete native
+reports, actual models, exact prompts, original-session
+continuity, permitted private reads and zero edits were
+authenticated alongside the frozen snapshots, patches,
+blind derivatives and assigned manifest entries.
+
+Each reviewer supplies **twenty individual all-CLEAN
+three-facet article rows**, distinguishing seven
+completely reread corrected cards from thirteen
+inherited unchanged rows: twelve new cards and reused
+せっせと. Both read all seventeen complete corrective
+families and six complete comparison bodies. They
+spot-checked the three reciprocal kanji edits, seven
+old links and reused level. GPT reread all twenty TSV
+and compact mappings; Claude inspected the twenty
+mapping rows, fully read N2:908/N2:912 and inherited
+the remaining detailed mapping judgments. Neither
+claims a new complete read of all unchanged teaching
+or the entire corrected evidence derivative.
+
+GPT's **F01/F02** and Claude's **F1-F5** are resolved.
+Both accept all six added direct precautions and the
+two prose corrections without establishing a new
+consequential regression. Initial severity and
+confidence differences are preserved. In particular,
+the adopted 攻める/戦う suggestion remains an optional
+conservative precaution, not a retrospectively proven
+initial defect. Removing the negative throughout
+warning is a comprehensibility improvement, not proof
+that the original explicitly defined that sense.
+Claude expressly withdraws both the unrestricted
+always-ぜんご proposal and the unsupported
+uncommon-する qualifier. Other wording expansions,
+non-N2 backlinks and the pre-existing 再来月/先月
+link gap remain optional.
+
+The corrective union totals **436 complete families/
+1,080 senses**, including the original twenty principal
+families/36 senses. Six corrective old-body reads
+include one previously inspected body, yielding
+**118 distinct complete existing bodies**. Four new
+actual labels bring that inventory to **272**; a
+new full-body read need not imply a new label.
+These remain author inspection counts, not reviewer
+scope or freshly retrieved public evidence.
+
+The model-diversity observation above remains bounded:
+the blind initial reports supplied complementary
+observations, with no shared actionable defect and
+different comparison depths. Confirmations assess
+shared hypotheses rather than independently measure
+bias reduction. No live quiz draw, native-speaker
+certification or controlled model benchmark is
+claimed. File-only reviewers cannot independently
+verify Git, hashes or committed-file equivalence;
+those checks were author-executed. Initial public
+retrieval failures remain explicit limitations.
+
+Exactly **N2:902-N2:921** are closed. Coverage is now
+**920 closed / 0 draft / 892 pending / 0 unresolved**,
+mapping **912 distinct articles: 853 new / 59 reused**.
+There are **4,126 word articles**, **210 distinct
+tracked primary reciprocal N2 pairs**, and **3,273
+preserved baseline identities/readings/titles/exclusions**.
+The deterministic manifest is **`3593322108dafa4d`**.
+The thirty assigned teaching files and manifest are
+unchanged by this documentation-only closure.
+This closes batch 46, not the full 1,812-row expansion.
