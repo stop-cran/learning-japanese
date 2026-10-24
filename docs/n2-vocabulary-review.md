@@ -6686,7 +6686,7 @@ not reviewer-executed Git, production quiz draws,
 exhaustive linguistic validation or native-speaker
 certification. Overall N2 vocabulary expansion remains open.
 
-## Batch 39 - initial reviews reconciled; confirmations pending
+## Batch 39 - closed
 
 Twenty consecutive community-list rows **N2:762-N2:781**
 are drafted on parent
@@ -6874,3 +6874,65 @@ The corrected deterministic manifest is **`38bd03a182b321be`**,
 with unchanged asset counts. Bounded confirmations in the
 original reviewer sessions remain pending; these rows are
 not closed yet.
+
+### Confirmation and closure
+
+Correction commit **`bf21b1059519c5bf65df5fc051acba0cfa6ae761`**
+was frozen with the nine-card patch and identical bounded
+confirmation prompt. The original GPT session completed
+before the original Claude session resumed; neither
+overlapped author work or another reviewer. Their complete
+native reports are [GPT confirmation](n2-vocabulary-reviews/batch-39-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-39-claude-confirmation.md).
+
+Both re-read all nine corrected articles and the complete
+nineteen-family correction rendering, accepted the fixes
+and found no consequential remaining issue. Their unchanged
+content assessments inherit the initial reviews. GPT
+re-read all thirteen actual destination bodies; Claude
+read six in full and selected front matter/citations for
+others, retaining earlier full-body context where stated.
+Neither re-read the whole 251-family/591-sense inventory
+or 239-label inventory, nor executed Git, hashes, validators
+or live quiz draws. Public corroboration in confirmation
+used retained captures/initial fetches, not fresh retrievals.
+
+Claude's scope list names 原因 as both a full-body re-read
+and carried-over-only. The actual successful native
+unbounded view returned its complete body
+in confirmation. The archive is preserved unchanged; the
+source packet appends this author-verified scope
+clarification. It does not change learner content.
+Both reviewers accepted the retained 小便 example; other
+baseline improvements remain optional and out of scope.
+
+All **four complete reports** were authenticated against
+native final events, exact prompts, actual models and
+usage, restricted tools, named forbidden-read absence,
+zero edits and both committed content/evidence snapshots.
+Original blind derivatives still differ from their
+respective packets only by the original quiz rationale.
+These are author-executed provenance checks, not
+reviewer-executed Git verification.
+
+Normalized SHA256 values of the complete archived reports:
+
+| Report | SHA256 |
+| --- | --- |
+| GPT initial | `99296348c0da50b474b111c5dc273059a6338de59278f460a9e4a84e763d43a1` |
+| Claude initial | `21fa2bdc0c129e6aafd951b23362671356b172588bccbf561906b8bc2d32c2c7` |
+| GPT confirmation | `22be79a9fa1adef9373b5f80a6651e1c6d4ee78b6dff64b523c35944e143a5c9` |
+| Claude confirmation | `248be50c200bb96bc2628b288d454aa36abe85b4c2b5ccc81534c9c9f1ee5126` |
+
+Exactly twenty rows **N2:762-N2:781** close without changing
+their raw fields, mappings or sense indices. Closure
+changes only documentation, statuses, snapshot/index
+metadata and confirmation evidence/archives. All confirmed
+teaching, both narrow reuses, six kanji edits and manifest
+**`38bd03a182b321be`** remain unchanged.
+Coverage becomes **780 closed / 0 draft / 1,032 pending /
+0 unresolved**, still mapped to **773 distinct articles:
+725 new / 48 reused**. There remain **3,998 word articles**,
+**184** tracked reciprocal N2 pairs and **3,273** preserved
+baseline identities under the recorded exceptions.
+This closes batch 39, not the overall vocabulary expansion.

@@ -95,6 +95,13 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 39 confirmation:** Review scope prose can itself
+  be inconsistent. Claude listed 原因 as both re-read and
+  carried-over-only; the successful native view returned
+  its complete body in confirmation. Preserve the report,
+  verify the actual event and append a narrow scope
+  clarification instead of silently repairing the archive.
+
 - **Batch 39 review:** A caution against invented etymology
   must not itself invent a negative historical claim.
   焦点's cited dictionary explicitly explains its name
