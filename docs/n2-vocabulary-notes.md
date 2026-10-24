@@ -95,6 +95,24 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 46 review/reconciliation:** Separate the kanji's
+  reading/okurigana boundary from the inflectional stem:
+  攻 is read せ, but 攻める's ichidan stem is せめ.
+  A particle's ordinary secondary sense can need a
+  direct guard even when its card focuses on approximation:
+  くらい also supports minimum requests overlapping
+  せめて. Broader class, rule and series labels warrant
+  direct precautions against the actual seminar,
+  autocracy and collected-edition labels; this does
+  not make the Japanese words unrestricted substitutes.
+  Existing 頂上 protection does not propagate to
+  先端/トップ. Remove a warning's unsupported source
+  gloss rather than leaving learners to infer a use
+  that the selected records do not establish.
+  GPT and Claude supplied complementary observations
+  at different comparison depths; confirmations assess
+  shared hypotheses, not a second blind experiment.
+
 - **Batch 46 authoring:** A mixed dictionary extraction
   can contain both the minimum-wish adverb せめて and
   the attack-method noun 攻め手. Preserve the raw gloss

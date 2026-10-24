@@ -8282,3 +8282,82 @@ and **210 tracked primary reciprocal N2 pairs**.
 Sequential blind GPT and Claude reviews will assess
 the same frozen snapshot and all three facets before
 any source row is closed.
+
+### Blind initial reviews and author reconciliation
+
+Both models reviewed committed snapshot
+**`97436ec4589201838df1b398046729a2c43d57fe`**,
+sequentially and independently:
+[GPT / gpt-6.1-sol](n2-vocabulary-reviews/batch-46-gpt-initial.md),
+then [Claude / claude-opus-5.5](n2-vocabulary-reviews/batch-46-claude-initial.md).
+They received the same scope, rubric, permitted evidence
+and blind derivative omitting only the initial guard
+rationale. The complete native final reports, actual
+models, exact prompts, private-file access, snapshot
+hashes and zero edits were authenticated. Both
+processes exited before subsequent substantive work.
+
+GPT reported two findings; Claude reported five and
+optional suggestions. Both accepted the twenty
+mappings, three reciprocal kanji edits, seven old
+links and level-only reuse within their actual scope.
+The following are author adjudications, not reviewer
+confirmation or proof of a reproduced quiz failure.
+
+| Initial observation | Author disposition and evidence-supported change |
+|---|---|
+| GPT F01: せめて/くらい | Add the direct guard. Complete particle entry 1154340:2 has an ordinary at-least sense, distinct from the rank noun and dark adjective; minimum requests overlap the qualified minimum-wish label of 1006570. Existing shared guards do not propagate. |
+| GPT F02: 攻める's stem terminology | Replace native stem せ with the kanji's reading せ and explicitly identify the ichidan stem せめ. The written okurigana boundary differs from the inflectional boundary; existing correct conjugations remain. |
+| Claude F1: 先端/トップ | Add direct protection for actual leading-edge/leading-position labels, supported by 1388110:2 and 1085030:2. The existing 頂上 guard does not cover this pair. No universal equivalence between tips, rankings and leadership is claimed. |
+| Claude F2: ゼミ/授業 | Add a conservative direct English-label safeguard. The seminar class of 1075160 and the broader class/lesson of 1330290 can overlap; this does not mean every 授業 is a ゼミ. |
+| Claude F3: 専制/支配 | Add a conservative direct safeguard for autocratic rule and the actual broad rule/control label, supported by 1389810:1 and 1310270:1. Arbitrary concentrated rule remains narrower than control in general. |
+| Claude F4: 全集/シリーズ | Add direct protection for complete/collected-series and series labels, supported by 1395340:1 and 1062910:1. Not every series is a complete collected edition. |
+| Claude F5: 前後 warning | Remove the warning's throughout wording; retain the contextual reversed-order warning. This is a comprehensibility improvement, not a conclusion that the original sentence explicitly defined 前後 as throughout. Raw source fields and selected senses remain unchanged. |
+| Claude optional 攻める/戦う | Adopt a conservative direct precaution for the actual attack/take-on and fight/compete labels, using complete 1279130 and 1596960. The warfare/contest overlap does not erase attack versus defense, transitivity or resistance distinctions. This was an optional hypothesis, not an initial established defect. |
+| Other optional suggestions | Leave non-N2 backlinks, extra wording/register expansion and the pre-existing 再来月/先月 link gap optional. Do not change 前後 to an unrestricted always-ぜんご claim: separate archaic まえしりえ is recorded. Existing German-origin wording remains accurate. |
+
+Corrective research inspected **seventeen complete
+families**. Thirteen duplicate records match the
+initial evidence exactly; only **four additional
+families/twelve senses** are appended. The resulting
+union is **436 families/1,080 senses**, not 436
+new records. Six actual old comparison bodies were
+read: くらい, トップ, 授業, 支配, シリーズ and 戦う.
+Their exact hashes, labels and relationship to the
+original full-read inventory are recorded separately.
+No new public retrieval is claimed.
+
+Corrections affect **seven new articles only**.
+There are **six added direct precautions**, giving
+**fifteen guarded new articles/85 declarations**.
+The twelve other new articles, reused teaching and
+level, three kanji edits, seven old links, raw source
+fields, twenty selected mappings and reciprocal-pair
+count remain unchanged. Bounded confirmation by both
+original reviewers is still pending; all twenty
+source rows remain draft.
+
+### Model-diversity observation
+
+Both complete reports were compared, including
+Optional, Limits and per-file notes. Their initial
+actionable findings do not identify a shared defect.
+GPT uniquely identified the minimum-request particle
+gap and stem terminology; Claude uniquely identified
+four broader-label gaps and the warning's possible
+implication, plus the adopted optional fight-label
+precaution. These are contributions on this batch,
+not a ranking of models or proof of bias elimination.
+
+Source access was equal, but evidence depth differed:
+GPT reported reading all selected-family renderings
+and 94 old comparison bodies, including all declared
+guard targets. Claude disclosed targeted family
+reading and a narrower old-body scope rather than
+the full comparison union. Fresh GPT retrievals were
+supplementary and included failed or mixed results;
+Claude used author captures. Neither review
+establishes live quiz behavior, native-speaker
+certification or exhaustive linguistic correctness.
+Correction confirmations share author hypotheses
+and are not a second blind comparison.
