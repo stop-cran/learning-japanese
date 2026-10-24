@@ -95,6 +95,20 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 34 authoring:** Distinguish duplicate source readings
+  from duplicate article identities: 湿気 しっけ and しっき
+  share one complete dictionary family and one new article,
+  but retain two independently mapped source rows.
+  Compare the raw gloss before classifying secondary teaching:
+  下町's source explicitly names Shitamachi as well as lower
+  parts of town; しつこい's rich-taste use is additional to
+  the source's persistence gloss.
+- **Batch 34 authoring:** A useful character mnemonic cannot
+  overrule an actual adverbial sense: 始終 includes frequent
+  habitual occurrence, not only an uninterrupted finite event.
+  Likewise, 四捨五入's raw "rounding up" must not become
+  ceiling, and 静/鎮 spelling preferences are not strict
+  reading/sense restrictions.
 - **Batch 33 reconciliation:** Check actual manner versus timing,
   not a loose shared English gloss: はきはき's clear/brisk
   speaking does not make it 至急's urgent/as-soon-as-possible

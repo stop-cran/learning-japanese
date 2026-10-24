@@ -5,7 +5,8 @@
 **Batches 01-33 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 660 rows are review-closed; 1,152 remain pending and none are draft or unresolved.
+The first 660 rows are review-closed; batch 34 has 20 draft rows,
+1,132 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -5493,3 +5494,64 @@ Final coverage: **660 closed / 0 draft / 1,152 pending /
 43 reused**. There are **3,884 word articles** and **152 distinct
 tracked reciprocal primary N2 kanji-word pairs**. This closes
 batch 33, not the remaining vocabulary expansion.
+
+## Batch 34: N2:662-N2:681
+
+**Status:** authored draft; independent review and reconciliation pending.
+
+Scope: 持参, 磁石, 四捨五入, 始終, 自習, 静まる, 姿勢,
+自然科学, 時速, 子孫, 死体, 下書き, 下町, 自治, 実感,
+湿気 (しっけ and しっき), しつこい, 実習, 実績.
+
+Nineteen new articles cover twenty separately preserved source rows.
+Both 湿気 readings belong to one article, with primary しっけ and
+explicit alternate しっき; no second same-ID card or frequency
+ranking is manufactured. The collection now has 3,903 word articles.
+Five reciprocal primary N2 pairs are 捨/四捨五入, 勢/姿勢,
+孫/子孫, 湿/湿気 and 績/実績, bringing the tracked distinct
+pair count to 157. Existing kanji reading rows and source-only
+qualifications remain; missing 磁 and 姿 stay metadata/plain text.
+
+The [source packet](n2-vocabulary-batch-sources/batch-34.json)
+preserves twenty raw rows, nineteen complete principal families
+with 28 indexed senses, 255 complete comparison families with
+563 indexed senses, 130 actual existing labels/full articles and
+38 complete component records. Original and supplemental families
+and comparison articles were inspected through their boundaries.
+Identity-deduplicated volumes, exact capture hashes and physical
+line counts are machine-computed. The identical supplemental
+component capture is verified rather than counted twice.
+Nineteen positive Digital Daijisen lexical-container receipts
+retain original concise observations, not copied full entries.
+
+四捨五入 teaches place value and half-away-from-zero ties, not
+always rounding upward. 始終 covers habitual frequency as well
+as continuity. 自習's classroom sense has its actual spelling
+restriction, while 静まる/鎮まる preferences are not absolute
+semantic compartments. 姿勢 covers physical and figurative
+stances. 自然科学 is not all scholarship; 時速 is a rate
+with an independently specified distance unit.
+
+子孫 is broader than grandchildren. 死体 includes humans and
+animals, with respectful-wording tendencies qualified.
+下書き's drawing extension is separately attributed to Daijisen,
+not assigned an invented JMdict index. Both general 下町 and
+Tokyo Shitamachi senses are selected by the actual source gloss.
+自治 need not mean national independence; 実感 does not verify
+objective truth. Kana-primary しつこい retains empty component
+metadata and the alternate reading's kana-only restriction.
+実習 and 自習 describe different learning axes, and 実績
+does not guarantee uniformly excellent results.
+
+Seventeen new cards declare 104 directional quiz exclusions.
+These direct ordinary-meaning/actual-label judgments remain
+subject to independent assessment; no baseline declarations change.
+Both families will receive the same frozen snapshot, nineteen
+complete new articles, five-file narrow kanji diff, twenty
+mappings, rubric and source access, sequentially without
+delegation or edits. The evidence derivative removes only
+`quizGuardRationale`.
+
+Authored-stage coverage: **660 closed / 20 draft / 1,132 pending /
+0 unresolved**, mapped to **673 distinct articles: 630 new and
+43 reused**. This is not review closure.
