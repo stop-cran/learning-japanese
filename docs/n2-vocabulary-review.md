@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-48 review-closed; batch 49 drafted.** The target is all 1,812 source rows,
+**Batches 01-49 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 960 rows are review-closed; 20 are draft,
+The first 980 rows are review-closed; none are draft,
 832 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -8900,7 +8900,7 @@ The entire 1,812-row vocabulary expansion remains open.
 
 ## Batch 49: N2:962-N2:981
 
-**Status:** drafted; initial reviews reconciled, bounded confirmations pending.
+**Status:** closed after independent initial reviews, corrections and bounded confirmation.
 
 Scope: 逸れる, 揃う, 揃える, 算盤, 存じる, 存ずる, 損得,
 田んぼ, 第一, 大学院, 大工, 体系, 太鼓, 対策, 大して,
@@ -8931,7 +8931,7 @@ Four primary reciprocal N2 pairs are added: 算/算盤, 損/損得,
 source-only そろ caveat rather than assigning a productive reading.
 No old word has a link-only edit in this batch.
 
-Draft coverage is **960 closed / 20 draft / 832 pending /
+At the authored snapshot, draft coverage was **960 closed / 20 draft / 832 pending /
 0 unresolved**, mapped to **972 distinct articles:
 910 new / 62 reused**. There are **4,183 word articles**
 and **225 tracked primary reciprocal N2 pairs**.
@@ -8984,5 +8984,59 @@ Both read assigned articles and related edits, but their actual
 comparison depth differs. This demonstrates usefulness on this
 sample, not a controlled model-bias experiment or general ranking.
 
-Original-session confirmation of the actual corrections remains
-pending; no row is closed on the strength of these initial reports.
+### Batch 49 - confirmed and closed
+
+Both original reviewers independently confirmed corrected commit
+`4917e82133f4f6e88fd8f4e5409a1109689411ae`, parent
+`88560e5b110c4e8b78922c8e3efedecbd1c99559`.
+Their complete final messages are archived:
+[GPT confirmation](n2-vocabulary-reviews/batch-49-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-49-claude-confirmation.md).
+All twenty source rows have individual **CLEAN / CLEAN / CLEAN**
+judgments. All four kanji edits, narrow 大小 reuse and mappings are
+also accepted. No post-confirmation teaching change is made.
+
+Both completely reread the nine changed articles, actual correction
+patch, **fifteen complete corrective families / 42 senses**, and
+**seven complete old bodies**. They rechecked the original 逸れる
+example, original 対策 heading and new author ずっと capture.
+Both independently counted **141 declarations** and accepted all
+seven additions and the one removal. The corrective union adds five
+family identities / eighteen senses, yielding **251 families /
+561 senses** overall, not fifteen wholly new families.
+
+GPT also rechecked all current headers, twenty TSV/derivative
+mappings, consequential principal records, full 大小, the original
+related patch and four kanji passages. Claude spot-checked assigned
+TSV rows, unchanged exclusions, the four kanji edit lines and 大小
+additions. Ten unchanged new bodies and broader related judgments
+are explicitly inherited, not silently reported as complete rereads.
+
+Claude expressly withdrew the copying allegation and the optional
+demand for another を example. Its 対策 uncertainty is resolved by
+the actual supplied Daijisen heading with 名(スル). That does not
+turn its earlier failed extraction into a successful independent
+fetch. Both accept the optional 体制/政府 and 対策/予防 safeguards
+without retrospectively making them shared initial findings.
+
+All four complete native reports, exact prompts/models/private
+file allowlists, original-session continuity, snapshots/patches,
+blind derivatives and zero edits are authenticated. Both reviewer
+processes exited sequentially. File-only reviewers did not execute
+Git/hash checks; those remain author-executed. No confirmation
+web fetch, live quiz, exhaustive semantic-uniqueness check or
+native-speaker certification is claimed. The new author ずっと
+capture is separate from 21 original lexical endpoint captures and
+two Kanjipedia pages. Equal initial access did not imply equal
+actual reading depth or establish a controlled model-bias benchmark.
+
+Coverage is **980 closed / 0 draft / 832 pending /
+0 unresolved**, mapped to **972 distinct articles:
+910 new / 62 reused**. There are **4,183 word articles**
+and **225 tracked primary reciprocal N2 pairs**.
+All 3,273 baseline identities/readings/titles and exclusions
+remain preserved under the established narrow exceptions; this
+batch adds no baseline guard exception. The deterministic manifest
+is **`16a455642382ebbb`**: **6,811 entries =
+6,214 files + 396 images + 201 scene catalogs**.
+The entire 1,812-row vocabulary expansion remains open.
