@@ -95,6 +95,14 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 30 confirmation:** Different leading glosses are not
+  protection when the same displayed title also contains an
+  applicable ordinary meaning. Follow through on trailing
+  planning/arrangements and signal labels with complete families.
+  Guard 献立's supported broader use without equating designing,
+  discussion and physical preparation; keep サイン's signal sense
+  distinct from its signature and separate mathematical identities.
+
 - **Batch 30 reconciliation:** A broader selected sense needs enough
   context to recognize it. Both reviewers noticed 献立's nonmeal
   planning use, although one classified the missing example as

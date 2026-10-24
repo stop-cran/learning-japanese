@@ -4799,3 +4799,37 @@ independent verification of the consent or other external headings.
 Both disclosed that file tools cannot independently authenticate
 Git or hashes. Confirmation of the changed passages is pending;
 the twenty source rows remain draft.
+
+### First confirmation and bounded follow-through
+
+Both original sessions resumed separately on corrected
+`6f731b2640fa2752c6bbbf9f11e62515727eb9d3`, with their own
+original report, the same actual three-article/evidence diff and
+the same equivalent derivative. Both returned CLEAN for the three
+changed articles and appended evidence and reported zero edits:
+[GPT confirmation](n2-vocabulary-reviews/batch-30-gpt-confirmation.md),
+[Claude confirmation](n2-vocabulary-reviews/batch-30-claude-confirmation.md).
+The first findings are resolved; Claude explicitly accepted that
+the air-example criticism was naturalness preference rather than
+established ungrammaticality. Its greeting/time and festival/day
+collision hypotheses were withdrawn.
+
+Claude's confirmation also disclosed additional optional
+planning/preparation and signal labels. Different leading glosses
+do not establish uniqueness when a displayed trailing meaning is
+applicable. Bounded inspection of all six actual comparison cards
+and seven complete families supported five direct 献立 pairs:
+打ち合わせ, 設計, 準備, 用意 and 支度; and one independent
+サイレン/サイン pair for its ordinary secondary signal use.
+The unrelated mathematical サイン family is not signal evidence.
+Original and first-correction evidence remains exact; follow-through
+is appended separately.
+
+Two articles receive those six guards and substantive linked
+comparisons preserving design/discussion/getting-ready and
+signature/signal distinctions. 献立's Daijisen link label now
+acknowledges both meal and broader planning uses. Seventeen new
+cards now declare 81 directional exclusions. No baseline card,
+primary identity, title, reading, level, mapping, selected/additional
+sense or kanji passage changes. Confirmation of this bounded
+follow-through remains pending; rows are still draft.
