@@ -1,9 +1,12 @@
-# Japanese listening task packages: proposed schema 1
+# Japanese listening task packages: schema 1 contract
 
 Companion to [app contract 1](https://github.com/stop-cran/kanji-cards-android/blob/main/docs/LISTENING-TASKS.md)
-for app #66 and content #38. **Independently reviewed proposal, awaiting owner acceptance; not supported
+for app #66 and content #38. **Independently reviewed contract, adopted under delegated autonomous decision-making; not supported
 by the current app or validator.** Do not add runtime files until B's compatible tooling exists.
 The [existing English-question schema](listening-n5.md) and its 36 approved passages are unchanged.
+These reviewed conservative defaults are adopted under delegated autonomous implementation
+authority, not recorded as separate personal confirmation. Paid-media authorization
+and actual listener/device approval remain separate requirements, not inferred consent.
 
 ## Publication envelope
 
@@ -158,7 +161,7 @@ pool requires **fresh** explicit authorization. This document does not grant eit
 ## Full-tree budget and rollout
 
 The pulled `73bde0f` tree's local ZIP is 22,665,639 bytes, already close to the current 24-MiB
-conservative publishing guard. Proposed contract 1 raises only that conservative guard to 28 MiB
+conservative publishing guard. Adopted contract 1 raises only that conservative guard to 28 MiB
 in B, **not** the app's 30-MiB download / 50-MiB retained / 100-MiB inflated / 8,000-entry limits.
 Retain the 40-MiB / 80-MiB / 7,000-entry publication guards. All new unique audio/images together
 must fit 6 MiB; test the complete archive, including ignored documentation and existing media.
