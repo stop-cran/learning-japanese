@@ -95,6 +95,24 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 41 review/reconciliation:** Name excluded subtypes
+  precisely: excluding pistil/stamen does not exclude the
+  plant-pith use of 芯 already taught. Keep source-note
+  descriptions of actual example sentences distinct from
+  uses merely listed in Meaning. For English "arts" and
+  "application," evaluate actual quiz labels and qualifiers;
+  conservative direct safeguards do not assert Japanese
+  synonymy, transitive protection or a reproduced quiz
+  failure. Preserve original authored notes and append exact
+  correction counterparts rather than rewriting history.
+- **Batch 41 evidence access:** A wildcard grep can expose
+  unassigned derivatives even without opening their files.
+  Claude disclosed this; the complete native result contained
+  data-only lines, not another report or author quiz rationale.
+  Record the deviation rather than claiming strict allowlist
+  compliance. Give searches exact evidence paths instead of
+  a private-directory wildcard; distinguish three derivative
+  groups from the five actual files returned here.
 - **Batch 41 authoring:** Raw glosses need scoped lexical
   interpretation, not literal expansion. 寝台's "couch"
   does not make every living-room sofa a sleeping platform;

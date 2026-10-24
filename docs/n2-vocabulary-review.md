@@ -7170,7 +7170,7 @@ Git, hashes, validators or production quiz draws; no fresh
 confirmation web retrieval, corpus-frequency measurement or
 native-speaker certification is claimed. The full vocabulary
 expansion remains incomplete.
-## Batch 41 - authored; independent reviews pending
+## Batch 41 - reviewed; corrections awaiting confirmation
 
 Source rows **N2:802-N2:821** cover 芯, 新幹線, 真空,
 信ずる, 心身, 申請, 人造, 寝台, 診断, 侵入,
@@ -7246,6 +7246,111 @@ level/reuse rules. The deterministic manifest is
 **`9f27e8afbebda035`**: **6,662 assets = 6,065 files + 396
 images + 201 scenes**.
 
-These are authored-state counts, not review closure. Both
-independent reviews remain pending; the overall expansion
-remains open.
+These are authored-state counts, not review closure. At
+that checkpoint, both independent reviews were pending;
+the overall expansion remains open.
+
+### Independent initial reviews and bounded reconciliation
+
+The common authored snapshot is
+**`f36e1e751aee9d9853bf113bc8d7f11f4734bf8f`**.
+[GPT initial](n2-vocabulary-reviews/batch-41-gpt-initial.md)
+used **gpt-6.1-sol**, exited, and was followed by
+[Claude initial](n2-vocabulary-reviews/batch-41-claude-initial.md)
+using **claude-opus-5.5**. No substantive authoring ran
+concurrently. Native session events authenticate the exact
+common prompt, actual models, frozen snapshot and complete
+final reports; usage receipts show zero reviewer edits.
+The reports are archived without replacing their differing
+scope disclosures with a uniform claim of coverage.
+
+Both read all twenty new articles and the five-file patch.
+GPT also reports reading all five resulting kanji cards,
+all compact family renderings, all forty component records,
+149 labels, thirty captured public bodies and 34 complete
+existing comparison articles. Claude read all principal
+families and captured principal bodies, but only targeted
+comparison evidence, two resulting kanji excerpts and
+selected existing articles. Claude freshly retrieved
+信ずる material; GPT made no fresh retrieval. Neither
+reviewer executed Git, hashes, validators or quiz draws.
+
+Claude disclosed a private-directory wildcard grep that
+exceeded the assigned evidence paths. Author inspection
+of the complete native result found **51 data-only matching
+lines**, including three unassigned derivative groups:
+the broad comparison rendering, the existing-body capture,
+and selected-existing bundles 08/13/14 (**five physical
+files**). No other-reviewer report or author quiz rationale
+was returned. The reviewer claims no reliance on the extra
+lines. Blind-report separation is supported by that
+inspection, but **strict file-allowlist compliance is not
+claimed**; the report's "none opened" is not treated as
+meaning no unassigned text was exposed.
+
+Reconciliation, pending original-session confirmations:
+
+- **GPT41-03 / B41-Q-02:** add 人文科学/芸術 for the
+  documented academic-arts/artistic-arts English-label
+  overlap and clarify the academic use. This is not
+  unrestricted Japanese synonymy.
+- **GPT41-01:** link existing 天然 in 人造's substantive
+  manufacturing contrast.
+- **GPT41-02:** link existing 嘘 in 神話's substantive
+  comparison. A navigation defect does not establish a
+  myth/lie exclusion.
+- **B41-Q-01:** adopt direct 申請/応用 and 申請/適用
+  safeguards for bare English "application." The qualifiers
+  partly disambiguate, so this is a conservative static
+  label precaution, not a reproduced runtime defect or a
+  claim that the Japanese meanings are interchangeable.
+  The actual contract includes both quiz directions;
+  precedent alone does not establish a pair. Do not infer
+  further あてはめる/塗る exclusions transitively.
+- **Claude optional 芯 precision:** name the excluded
+  pistil/stamen senses instead of seemingly excluding the
+  already included plant pith. Clarify N2:802's source note:
+  pencil lead and candle wick are translated example
+  sentences; plant pith is listed in Meaning. Preserve the
+  original packet note and append its exact current
+  counterpart; spelling, reading, senses and level do not
+  change.
+
+Unchecked register suggestions for 信ずる/寝台 are not
+promoted to facts. Additional conjugation, undercooked-core
+and 親類 comparisons remain optional expansion. The
+reviewer did not establish an excessive 芯/身 safeguard
+or an obligatory 針路/科目 safeguard; no further exclusion
+changes are inferred from shared English words or topics.
+
+The two complete correction families (天然 and 応用,
+**four senses / ten rendered records**) add **two families /
+four senses**, yielding **197 complete families / 473
+senses**. Four existing articles were read completely;
+two were already in the inspected union, leaving **94
+distinct bodies** and **150 labels**. The original authored
+evidence and guard hypotheses remain unchanged; a separate
+correction supplement records these additions, exact note
+clarification, exposure audit and adjudications.
+
+Corrected quiz metadata is **17 guarded articles / 59
+directional declarations**, with exactly three new direct
+pairs and no baseline-title/exclusion changes. Five new
+teaching cards change; all other new cards and all five
+kanji edits remain unchanged. Source identities, readings,
+levels, selected senses and raw list fields remain intact.
+Coverage is still **800 closed / 20 draft / 992 pending**.
+The regenerated manifest is **`67cdc8372132f347`**, with
+the same **6,662 assets**.
+
+Model-diversity value on this sample: **one shared arts-label
+concern**; GPT supplied **two useful missing-link findings**
+not identified by Claude. Claude supplied the adopted
+conservative application safeguards and **two optional
+precision suggestions** for 芯. GPT had already recognized
+the application/request-versus-rule distinction, so Claude
+is credited for the additional guard recommendation, not
+for uniquely discovering that polysemy. Compare all report
+sections, not labels or severity alone. Unequal evidence
+depth and the disclosed data-only search deviation prevent
+treating this as a controlled model benchmark.
