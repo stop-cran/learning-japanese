@@ -4899,7 +4899,7 @@ This is a case record, not a general model ranking.
 
 ## Batch 31: N2:602-N2:621
 
-**Status:** authored; independent reviews pending.
+**Status:** closed after independent review and reconciliation.
 
 Scope: 先程, 裂く, 索引, 作者, 削除, 作成, 作製, 探る,
 囁く, 刺さる, 匙, 座敷, 差し支え, 差し引き, 刺身, 刺す,
@@ -5072,3 +5072,45 @@ concrete limit on model agreement, not a general model ranking.
 
 The bounded evidence-only correction still requires confirmation;
 no whole-batch closure is claimed yet.
+
+### Final confirmation and closure
+
+At evidence-only follow-through
+`fd0bfd6ca17d51c7500eb72b5602f6af65dafb42`,
+the original sessions confirmed the corrected count sequentially:
+[GPT](n2-vocabulary-reviews/batch-31-gpt-followup.md) and
+[Claude](n2-vocabulary-reviews/batch-31-claude-followup.md).
+Both found the bounded evidence CLEAN on all three facets and no
+regression. GPT31-04 is resolved. Claude explicitly withdrew its
+earlier 137-sense statement and acknowledged the missed count
+error; its prior lexical conclusions are unaffected.
+
+The optional suggestion to add a nonblank-line count is not
+required: the receipt already distinguishes families, indexed
+records and physical lines. Other stated nonblocking expansions
+remain optional, with no consequential unresolved claim in scope.
+No article changes followed the jointly confirmed `51c96bc`
+content snapshot.
+
+All six archived final reports were authenticated against their
+actual native sessions, common prompts, usage models, request
+counts and zero-edit records. All three commits, file hashes,
+actual patches and evidence derivatives were authenticated. The
+authored source evidence remains unchanged; the later provenance
+count correction preserves its former false statement explicitly.
+These are author-executed mechanical provenance checks, not
+independent reviewer Git execution or linguistic certification.
+All commits use stop-cran as author and committer.
+
+Structural validation, deterministic manifest bytes and the
+comprehensive source/identity/level/sense/reciprocal-link audit
+remain clean. No app draws or native certification are claimed.
+Initial comparison coverage was selective; closure means no
+actionable defect or consequential unresolved claim remains within
+this assigned scope, not exhaustive corpus correctness.
+
+Final coverage: **620 closed / 0 draft / 1,192 pending /
+0 unresolved**, mapped to 614 distinct articles: 575 new and
+39 reused. The repository has 3,848 word articles and 141 distinct
+tracked primary reciprocal N2 pairs. Overall N2 vocabulary coverage
+is still incomplete.
