@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-46 review-closed; batch 47 drafted.** The target is all 1,812 source rows,
+**Batches 01-47 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 920 rows are review-closed; twenty are draft,
+The first 940 rows are review-closed; none are draft,
 872 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -8441,7 +8441,7 @@ The thirty assigned teaching files and manifest are
 unchanged by this documentation-only closure.
 This closes batch 46, not the full 1,812-row expansion.
 
-## Batch 47 - authored; independent review pending
+## Batch 47 - authored and subsequently review-closed
 
 Source rows **N2:922-N2:941** map to nineteen new articles:
 センチ, 宣伝, 先頭, 全般, 扇風機, 線路, 相違,
@@ -8605,3 +8605,68 @@ The draft coverage/preservation audit retains all
 primary reciprocal N2 pairs**. These are bounded
 mechanical checks, not linguistic certification or
 an executed runtime-quiz test.
+
+### Batch 47 - confirmed and closed
+
+Both original reviewers accepted corrected commit
+**`ac0cd0dad60a22949c65d11e9f1c016e6d6c8a4d`**,
+parent **`7f42dbaf6ee9651095fe53f7b0efaf32b346c068`**,
+and reported no new actionable findings or
+consequential unresolved claim in scope.
+[GPT confirmation](n2-vocabulary-reviews/batch-47-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-47-claude-confirmation.md)
+each supply exactly twenty individual all-CLEAN
+correctness/coverage/comprehensibility rows.
+All four complete native reports, exact actual models,
+prompts, original-session continuity, permitted private
+reads, zero edits and snapshot/patch/equivalence hashes
+were authenticated by the author. Neither confirmation
+used Git metadata; their commit/hash/cleanliness
+statements remain receipt-based, not independent
+Git execution.
+
+Both completely reread the seven changed articles,
+the actual correction patch, all nine complete
+corrective families/31 senses and all six complete
+old comparison bodies. Thirteen unchanged new-card
+judgments are explicitly inherited. Both spot-checked
+the five reciprocal kanji and four old links. GPT
+additionally reread the actual six comparison cards
+and 騒がしい, all twenty mappings/TSV rows and the
+complete alias family. Claude spot-checked
+N2:922/936/939/941 and inherited the remaining
+detailed mapping judgments. Neither claims the
+entire original evidence packet was reread.
+
+All six new safeguards were accepted, preserving
+the ordinary-sense/label qualifications recorded
+above. Both independently fetched the actual
+精選版日本国語大辞典 entry and accepted
+騒々しい's explicit distinction between study
+classification and uncertain historical derivation.
+The separate-words alias polish is confirmed;
+remaining optional expansions are nonblocking.
+No teaching changes follow confirmation.
+
+Exactly **N2:922-N2:941** transition from draft
+to closed. Coverage is **940 closed / 0 draft /
+872 pending / 0 unresolved**, mapping **932 distinct
+articles: 872 new / 60 reused**. All source fields,
+selected senses, baseline identities/readings/titles/
+exclusions and easier levels remain preserved.
+There are **4,145 word articles**, **215 distinct
+tracked primary reciprocal N2 pairs**, and **6,773
+manifest entries**, including 396 images and 201
+scene catalogs. Deterministic manifest
+**`642adf6cdb83fcb3`** and the **29 assigned teaching
+files** are unchanged by documentation-only closure.
+
+Review judgments remain bounded. The original
+そういえば public extraction failure and separately
+reported 造船 POS evidence remain explicit;
+tool-rendered public reads are not byte-authenticated
+historical proofs. No live quiz test, exhaustive
+native-speaker certification or controlled model
+benchmark is claimed. Both sequential reviewer
+processes have exited. This closes batch 47, not
+the full 1,812-row expansion.
