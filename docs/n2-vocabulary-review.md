@@ -7680,3 +7680,82 @@ Coverage is **840 closed / 20 draft / 952 pending /
 and **198 tracked reciprocal N2 pairs**. Source spellings
 and existing easier levels remain preserved. This draft
 has not yet passed independent GPT and Claude review.
+
+### Batch 43 - independent initial reviews
+
+Both reviewers assessed committed snapshot
+**`8f03c81ff667930c81be8b0990ff6425b3b8c1d9`**,
+sequentially in fresh native CLI sessions: actual
+**`gpt-6.1-sol`**, then **`claude-opus-5.5`**. No reviewer
+process overlapped another or the author's corrections.
+Their exact common prompt, complete native final messages,
+actual models, permitted private-file accesses, zero edits,
+snapshot hashes, patches and blind derivative equivalence
+were author-authenticated. Each initial process exited.
+The archived reports are the complete final messages,
+not stdout progress preambles:
+[GPT](n2-vocabulary-reviews/batch-43-gpt-initial.md) and
+[Claude](n2-vocabulary-reviews/batch-43-claude-initial.md).
+
+Both read all eighteen new articles, both bounded reuses
+and both narrow kanji edits. GPT's actual access includes
+all thirteen complete-family renderings and the supplemental
+ダイヤ rendering; Claude read only family bundle 01 and
+the supplement, explicitly disclosing the other twelve
+omissions. Both inspected the twenty-five supplied public
+captures, mappings, components and labels, with different
+targeted existing-body checks. GPT attempted fresh public
+lookups; failed or unusable ones do not establish absence.
+Neither reviewer executed Git, hashes or the app.
+
+Definitions, conjugations, translations, source identities
+and the two kanji edits had no established correctness
+defect. GPT reported coverage gaps on 涼む, スタート and
+酸っぱい; Claude on 隙間, スタート and 酸っぱい. Their
+mapping verdict presentation differed: GPT separated
+all-CLEAN mappings from article defects; Claude's mapping
+summary carried the affected article-level coverage gaps.
+Neither independently certified exhaustive correctness.
+
+### Batch 43 - reconciliation
+
+The author inspected the actual targeted articles and
+twenty-seven complete correction-capture families. Of
+these, twenty-four duplicate already inspected evidence;
+only **three families/eight senses** extend the union,
+to **252 families/589 senses**. Distinct author-inspected
+existing full bodies increase to **89**, actual labels to
+**162**; eighteen component records and twenty-five
+public captures are unchanged. Separate supplemental
+records retain original source fields, complete families,
+authored hypotheses and the initial inspection history.
+
+| Observation | Disposition and evidence |
+| --- | --- |
+| GPT F01; Claude optional 冷める | Resolved with direct 涼む/冷める protection. Complete 1554380:1 and 1556750:1 and actual titles support cooling-label ambiguity, not unrestricted Japanese substitution. |
+| GPT F02 | Resolved with スタート/立ち上がる and スタート/頭. Computing start-up 1551370:5 and beginning/start 1582310:6 apply to the primary readings without rare flags. Preserve 頭's anatomy-focused lesson. |
+| Claude F1 and optional 開通 | Add スタート/開会 and スタート/開通. Complete 1202560:1 supports meeting commencement; 1202850:1 explicitly includes beginning services. Shared tags or older guards alone would not justify either pair. |
+| Claude F2 | Add 隙間/差 for the actual bare "gap" labels. Keep physical opening versus difference distinct; 1291070:1 does not claim that 差 means crevice. |
+| GPT F03; Claude F3 | Link existing 甘い/苦い in 酸っぱい and ゴール in スタート without changing their comparisons. |
+| Claude optional 埋める; dependent backlinks | Link 埋める in 隙間, 酸っぱい in existing 甘い and スタート in existing ゴール. Preserve baseline wording, metadata and levels. |
+| Remaining Claude optional notes | Extra constituent-reading polish remains optional; complete すっぱい, small っ and the non-サン distinction are already taught. No unsupported ストップ/終点 or スケジュール/定期 safeguard is added. |
+
+The correction changes four new cards and two directly
+dependent baseline backlinks, adding six direct quiz
+pairs: sixteen new guarded cards now declare **70**
+exclusions. The two bounded reuses, two N2 kanji edits,
+original mappings, raw glosses and easier levels are
+unchanged. No production quiz draw or failure is claimed.
+English-label safeguards do not erase lexical distinctions.
+
+**Model-diversity note:** The three missing comparison
+links and 涼む/冷める observation are shared, even though
+Claude placed the latter under Optional at low confidence.
+GPT uniquely found the two secondary-sense スタート
+pairs. Claude uniquely found 開会 and 差 and proposed the
+adopted 開通 and 埋める additions. Both families contributed
+useful complementary observations on this batch. Different
+evidence-reading depth and confidence prevent a controlled
+model ranking. Original-session bounded confirmation is
+still pending; these author adjudications are not reviewer
+acceptance.

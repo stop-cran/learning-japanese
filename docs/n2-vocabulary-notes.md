@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 43 review/reconciliation:** A comparison belongs
+  at its substantive introduction, including 甘い/苦い in
+  酸っぱい and ゴール in スタート; complete the directly
+  dependent backlinks without rewriting old lessons.
+  Bare cooling, starting and gap labels also need direct
+  safeguards. Keep 涼む/冷める and 隙間/差 distinctions:
+  an English-label precaution does not make the Japanese
+  words freely interchangeable. Inspect ordinary secondary
+  senses, such as 頭's beginning and 立ち上がる's computer
+  start-up. Compare optional notes too: both reviewers
+  noticed 冷める, despite different severities. Equal source
+  access did not produce equal reading depth, so their
+  complementary findings are not a model benchmark.
 - **Batch 43 authoring:** A source's rare spelling can be
   recognized on an easier existing article: 棄てる belongs
   to the unrestricted 捨てる family, not a new conjugation
