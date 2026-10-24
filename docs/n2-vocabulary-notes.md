@@ -95,6 +95,15 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 40 confirmation:** Distinguish complementary
+  blind initial discoveries from agreement after sharing
+  the fixes. Both original models accepted all three
+  corrected cards, but that agreement is not a new
+  independent discovery. Record the three complete rereads
+  separately from thirteen inherited verdicts; preserve
+  different source-reading depths and withdrawn optional
+  hypotheses without turning them into verified facts.
+
 - **Batch 40 review:** Check complete acquaintance senses,
   not only grammatical labels. ご存じ's second JMdict
   sense explicitly includes an acquaintance, supporting

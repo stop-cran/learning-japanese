@@ -6937,7 +6937,7 @@ Coverage becomes **780 closed / 0 draft / 1,032 pending /
 baseline identities under the recorded exceptions.
 This closes batch 39, not the overall vocabulary expansion.
 
-## Batch 40 - initial reviews reconciled; confirmation pending
+## Batch 40 - closed after independent reviews
 
 Source rows **N2:782-N2:801** cover 消耗, 醤油, 省略, 初級,
 助教授, 食塩, 職人, 初旬, 書籍, 食器, ショップ, 書店,
@@ -7062,8 +7062,7 @@ giving sixteen separate rows. The archive is unchanged;
 confirmation requests individual rows and explicit
 inherited-versus-newly-read scope.
 
-All three formal findings have bounded corrections pending
-confirmation:
+The correction commit addresses all three formal findings:
 
 | Observation | Adjudication |
 |---|---|
@@ -7112,7 +7111,62 @@ optional utensil safeguard. The other model did not identify
 those same issues elsewhere in its report. This is useful
 complementary signal on one shared batch, not evidence of a
 general model ranking or equal source-inspection depth.
-Bounded sequential confirmations remain pending.
+Bounded sequential confirmations and final closure are
+recorded below.
 
 The corrected deterministic manifest is
 **`200bdecf86266b25`**, with the asset count unchanged.
+
+### Confirmation and closure
+
+Both original reviewers resumed **sequentially** against
+corrected commit `be09163bbaac80c0e58d21f91c5dddea0eb6fcce`,
+accepted the three-card delta and reported no consequential
+remaining defect or regression. Their complete native final
+messages are archived as [GPT confirmation](n2-vocabulary-reviews/batch-40-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-40-claude-confirmation.md).
+Exact resumed prompts, actual models, original sessions,
+zero edits and all four complete reports were authenticated
+against native events. Each process exited before further
+substantive work.
+
+Both completely reread 食器, 知り合い and 素人, the complete
+twelve-family correction rendering and four comparison
+bodies. GPT additionally read the correction JSON and 職人
+as a dependency. Both inspected the appended correction
+section, not the whole evidence inventory. GPT specifically
+rechecked N2:801; Claude rechecked N2:791, N2:796 and N2:801.
+Both now give sixteen individual article verdict rows,
+explicitly carrying forward thirteen unchanged assessments
+rather than pretending to reread them. Narrow kanji/reuse
+verdicts and unchanged mappings remain scoped and inherited.
+Claude acknowledges its initial grouped-table limitation.
+
+**B40-GPT-01, B40-F1 and B40-F2 are resolved**, including
+N2:801 coverage. The adopted optional 食器 / 器具 safeguard
+is accepted. Nonadoption of 職人 / 名人 and the nonessential
+construction/reading-history expansions is accepted.
+Claude withdraws its earlier 白髪 consistency objection;
+the appendix recollection itself remains unverified and is
+not published as fact. An optional N2:801 source-note
+expansion is unnecessary because unchanged selected sense 1
+already includes novice and the article now teaches it.
+No learner content changes after confirmation.
+
+Closure advances **exactly twenty draft rows** to closed:
+**800 closed / 0 draft / 1,012 pending / 0 unresolved**,
+still mapped to **793 distinct articles: 741 new / 52 reused**.
+The **4,014 word articles**, **187 tracked new-article N2
+reciprocal pairs**, two explicitly checked reused pairs,
+baseline preservation and **`200bdecf86266b25`** manifest
+remain unchanged. Four changed kanji cards retain their
+original metadata; existing 籍 needs no change.
+
+The complementary initial-review contributions remain useful
+on this batch, with unequal source-inspection depth disclosed.
+Confirmation agreement is not another independent discovery
+or a general model benchmark. No reviewer independently ran
+Git, hashes, validators or production quiz draws; no fresh
+confirmation web retrieval, corpus-frequency measurement or
+native-speaker certification is claimed. The full vocabulary
+expansion remains incomplete.
