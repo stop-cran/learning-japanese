@@ -95,6 +95,17 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 49 authoring:** A family can include a source spelling without
+  allowing the source reading for it: search-only 田ぼ does not remove
+  the restriction of たんぼ to 田んぼ/田圃. Preserve that conflict
+  explicitly while teaching the normalized form. Kanjipedia groups
+  熟字訓 and 当て字 under one bracket marker; it supports whole-word
+  learning for 算盤, not a historical classification or productive
+  算=そろ rule. Distinguish JMdict's -zuru grouping from Japanese
+  サ変 labels for 存ずる. Neither taxonomy licenses 存ずります.
+  Existing 大小 receives a sourced N2 level and coverage citation,
+  not a rewritten identity or silent claim to teach specialized senses.
+
 - **Batch 48 reconciliation:** Check ordinary secondary senses even when
   an older title highlights another use: 入る includes belonging in a
   category, ばたばた includes successive falling, and そして/そうして

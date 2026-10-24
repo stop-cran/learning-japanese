@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-48 review-closed.** The target is all 1,812 source rows,
+**Batches 01-48 review-closed; batch 49 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 960 rows are review-closed; none are draft,
-852 remain pending, and none are unresolved.
+The first 960 rows are review-closed; 20 are draft,
+832 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -8897,3 +8897,43 @@ addition. The deterministic manifest is
 **`796f7676ea4727ee`**: **6,792 entries =
 6,195 files + 396 images + 201 scene catalogs**.
 The entire 1,812-row vocabulary expansion remains open.
+
+## Batch 49: N2:962-N2:981
+
+**Status:** drafted; independent reviews and reconciliation pending.
+
+Scope: 逸れる, 揃う, 揃える, 算盤, 存じる, 存ずる, 損得,
+田んぼ, 第一, 大学院, 大工, 体系, 太鼓, 対策, 大して,
+対照, 大小, 体制, 体積 and 大層.
+
+Nineteen new articles and narrow reuse of 大小 map twenty rows.
+The original 大小 identity, primary reading/title, kanji, exclusions
+and body remain unchanged; its previously absent level gains sourced
+N2 and its selected size senses receive a dictionary citation.
+Search-only source 田ぼ is explicitly normalized to 田んぼ,
+with the pinned reading restriction explained rather than hidden.
+存ずる's blank raw gloss is preserved. 算盤's figurative reckoning
+and 存じる's thought/feeling use are separately additional coverage.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-49.json)
+contains twenty complete principal families / 41 senses and
+the selected source mappings. The author actually inspected a
+deduplicated union of **246 complete families / 543 senses**,
+**246 actual old labels**, **145 complete old article bodies**,
+**30 component records** and all four related kanji cards.
+Twenty-one Weblio endpoint captures and two separately counted
+Kanjipedia pages were inspected. The original inventory's unselected
+captures are not silently promoted to actual reads.
+These author receipts do not constitute independent review.
+
+Four primary reciprocal N2 pairs are added: 算/算盤, 損/損得,
+照/対照 and 層/大層. The whole-word 算盤 row preserves 算's
+source-only そろ caveat rather than assigning a productive reading.
+No old word has a link-only edit in this batch.
+
+Draft coverage is **960 closed / 20 draft / 832 pending /
+0 unresolved**, mapped to **972 distinct articles:
+910 new / 62 reused**. There are **4,183 word articles**
+and **225 tracked primary reciprocal N2 pairs**.
+Structural and preservation checks do not establish linguistic
+correctness or actual runtime-quiz uniqueness.
