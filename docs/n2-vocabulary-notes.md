@@ -95,6 +95,16 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 33 authoring:** An already taught same-entry variant can
+  need only sourced level metadata: しいん maps to existing しーん,
+  adding N2 without changing its ID, primary reading, title, image
+  or exclusions. Call this metadata-enriched reuse, not unchanged
+  reuse. Likewise, use the linked 故郷 article's actual こきょう
+  reading rather than silently attaching a different valid reading.
+- **Batch 33 authoring:** Inclusive calendar counting and elapsed
+  days are different quantities. Daijisen's fourth day counting
+  today supports standard しあさって at day +3, not day +4.
+  The separately evidenced regional +4 use stays explicitly regional.
 - **Batch 32 review:** Both independent models found the missing
   すっと comparison; GPT additionally caught its ordinary refreshed-
   feeling sense against さわやか. A movement-focused title does not

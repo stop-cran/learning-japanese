@@ -5,7 +5,7 @@
 **Batches 01-32 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 640 rows are review-closed; none are draft and 1,172 remain pending.
+The first 640 rows are review-closed; batch 33 has 20 draft rows and 1,152 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -5290,3 +5290,75 @@ Final coverage: **640 closed / 0 draft / 1,172 pending /
 primary reciprocal N2 pairs for new articles. Existing 再 reuse
 examples remain separately verified. Overall N2 vocabulary coverage
 is still incomplete.
+
+## Batch 33: N2:642-N2:661
+
+**Status:** authored; independent review and reconciliation pending.
+
+### Batch 33 authored snapshot
+
+Scope: 産地, サンプル, 山林, 仕上がる, しあさって, シーズン,
+シーツ, 寺院, しいん, 自衛, 塩辛い, 司会, 四角, 四角い,
+時間割, 四季, 敷地, 至急, 敷く, 茂る.
+
+Nineteen standalone additions bring the collection to 3,884 word
+articles. Source しいん maps to existing しーん, whose body already
+explicitly teaches that variant and the complete-silence meaning.
+Only sourced `jlpt: 2` is added: identity, primary reading, title,
+image and baseline exclusions remain. This is metadata-enriched
+reuse, not wholly unchanged reuse.
+
+Seven useful new reciprocal pairs are 林/山林, 寺/寺院,
+塩/塩辛い, 辛/塩辛い, 角/四角, 角/四角い and 季/四季.
+They bring the distinct tracked primary N2-pair count to 152 across
+the expansion. All existing reading rows remain. Missing primary
+衛, 司, 敷, 至 and 茂 remain metadata/plain text; no kanji or
+stroke cards are fabricated.
+
+The [source packet](n2-vocabulary-batch-sources/batch-33.json)
+preserves twenty raw rows, twenty complete principal families with
+36 indexed senses, 153 complete comparison families with 467
+indexed senses, 100 actual existing labels/full articles and 32
+complete component records. Original, supplementary and follow-through
+comparison captures were read through their boundaries. Volumes
+are calculated from parsed records and `CARD` markers, deduplicated
+by identity; repeated component captures are not double-counted.
+Capture hashes and physical-line counts preserve the inspected
+boundaries. Nineteen positive public lexical-container receipts use
+original concise paraphrases, not copied full dictionary bodies.
+
+Teaching keeps product-origin and personal-origin uses qualified;
+samples need not be free or edible, and woodland has no universal
+altitude/tree-count threshold. 仕上がる is explicitly intransitive,
+contrasted with 仕上げる. Standard しあさって is day +3; inclusive
+fourth-day counting and regional day +4 remain distinct. シーズン
+is not sport-only and シーツ is specifically bedding.
+
+寺院's Buddhist default does not erase the broader religious-building
+sense. 自衛 is not only military or a legal certification.
+塩辛い's rare-spelling reading restrictions remain explicit.
+司会 covers proceedings and the role-holder. 四角/四角い include
+rectangles, with noun/adjective attachment and mixed formation
+explained. 時間割's on-first and 敷地's kun-first mixed readings
+are explicitly qualified rather than represented as homogeneous.
+
+至急 takes direct adverbial use or の, not な. 敷く keeps its core
+transitive pattern distinct from bounded extensions and the formal
+intransitive sense. Search-only spellings are not recommended.
+茂る concerns luxuriant vegetation, not an expensive lifestyle;
+current alternatives and obsolete spelling are distinguished.
+Additional meanings remain separate from the selected source senses
+and do not acquire independent N2 assignments.
+
+Sixteen new cards declare 64 directional quiz exclusions based on
+direct ordinary-meaning and actual-label judgments; no baseline
+declaration changes. These remain author judgments for independent
+assessment, not exhaustive synonym certification. Both model families
+will receive the same frozen snapshot, nineteen new articles, one
+metadata-enriched reuse claim, seven-file related diff, twenty
+mappings, rubric and source access in sequential short-lived processes.
+The initial evidence derivative removes only `quizGuardRationale`.
+
+Authored-stage coverage: **640 closed / 20 draft / 1,152 pending /
+0 unresolved**, mapped to 654 distinct articles: 611 new and 43 reused.
+No review closure is claimed at this stage.
