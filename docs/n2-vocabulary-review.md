@@ -6424,7 +6424,8 @@ correctness or native-speaker naturalness.
 
 ## Batch 38 - N2:742-N2:761
 
-**Status:** authored; independent reviews pending.
+**Status:** initial reviews reconciled; original-reviewer
+confirmations pending.
 
 Scope: 出勤, 述語, 出張, 寿命, 主役, 受話器, 循環, 巡査,
 順々, 順序, 純情, 純粋, 消化, 小学生, しょうがない, 将棋,
@@ -6523,3 +6524,74 @@ Authored coverage: **740 closed / 20 draft / 1,052 pending /
 46 reused**. There are **177 tracked primary reciprocal
 N2 kanji-word pairs**. This is not review closure or overall
 completion.
+
+### Initial reviews and prepared corrections
+
+Authored snapshot:
+`4ec7f6f7dabbe669a42d686fbd9ada6da362326a`
+(parent `368da250ef323ddef1609a7e0789a59c093fb6a7`).
+Native **gpt-6.1-sol**, then **claude-opus-5.5**, reviewed
+strictly sequentially with the same frozen prompt, scope,
+source access and blind derivative. Both processes exited
+before author corrections began. The complete native final
+messages are archived, without replacing them with this
+summary:
+[GPT initial](n2-vocabulary-reviews/batch-38-gpt-initial.md)
+and [Claude initial](n2-vocabulary-reviews/batch-38-claude-initial.md).
+
+Both read all nineteen new articles, all twenty mappings,
+the narrow 定規 reuse and six related kanji cards/patch.
+Their actual evidence inspection differed. GPT reports
+reading the complete comparison renderings and exclusion
+targets; Claude reports targeted comparison records,
+about 120 existing labels/exclusions and a keyword title
+scan. Neither report is a claim that both independently
+read every captured existing body or executed Git/hashes.
+
+| Initial observation | Evidence-based reconciliation prepared for confirmation |
+| --- | --- |
+| GPT F01: 消化/詰める quiz ambiguity | Accept a direct safeguard. 詰める 1226510:5 and its existing details-resolution example support the broad "working through" label. This is not unrestricted substitution in Japanese. |
+| Claude B38-QZ-01: 順々/どんどん | Accept a direct safeguard. Actual titles and 1009320:3 express succession; do not infer protection transitively through 次々. |
+| GPT F02; Claude B38-LNK-01/02/03 | Link 小学校, 先輩 and 指す at substantive introductions/comparisons. |
+| GPT F02; Claude optional 打つ | Link 打つ at the playing-verb comparison. This is shared initial signal, not a GPT-unique discovery merely because Claude labeled it optional. |
+| Claude B38-MAP-01: N2:750 attribution | Clarify the sole pinned glosses as in order/in turn and attribute the additional succession rendering to the inspected Japanese entry. Raw CSV fields, identity, reading, level and selected index do not change. |
+| Claude optional だめ safeguard | Accept after complete-family inspection: 1409110:1 "no good" and :2 "hopeless" overlap the しょうがない family. Its ordinary sense 2 matters even though the existing card selects 1/3/5. This does not equate prohibitions. |
+| Claude optional 仕方, 碁 and 話 links | Add small navigation improvements at existing comparisons; complete target bodies and applicable families were inspected. |
+| Claude optional vapor/vapour unification | Decline: both English spellings are standard; no unrelated existing kanji wording change is needed. |
+| Claude's other-components N3-or-easier statement | Do not adopt this unsupported generalization. The eight actual reciprocal N2 pairs are checked against existing cards; missing primary cards establish no easier vocabulary or kanji level. |
+
+The correction extraction contains **12 complete families /
+55 senses**. Four families were already present and checked
+equal; **eight new families / 41 senses** bring the union
+to **316 complete families / 735 senses**. All twelve
+correction families and ten complete existing bodies were
+actually inspected. Six fresh labels bring the distinct
+label inventory to **189**; eight additional full bodies
+bring the author-inspected body union to **69**.
+These are author inspection counts, not a replacement for
+each reviewer's disclosed scope.
+
+The source packet preserves original capture counts,
+declarations and author rationale and appends the correction
+evidence. It retains the original N2:750 mapping notes in
+that supplement while clarifying the live mapping/TSV notes.
+The three added direct guards are 消化/詰める,
+順々/どんどん and しょうがない/だめ: **16 guarded new
+cards / 85 directional declarations** now, compared with
+the frozen initial **16 / 82**. No title or source-selected
+sense changes. Seven new articles change; the other twelve,
+the six kanji edits and narrow 定規 change remain untouched.
+Coverage remains **740 closed / 20 draft / 1,052 pending /
+0 unresolved** until confirmations and closure.
+
+Model-diversity observation for this sample: GPT uniquely
+raised the verified 消化/詰める collision. Claude uniquely
+raised the verified 順々/どんどん collision, the mapping
+attribution clarification and optional だめ/navigation
+improvements. Four substantive link observations are
+shared across findings and optional sections. The declined
+English spelling preference and unsupported component-level
+generalization are not credited as useful catches.
+This is not a model benchmark; initial scope and source
+inspection differed, and later agreement will not be counted
+as shared initial discovery.

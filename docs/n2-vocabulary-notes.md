@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 38 review:** Keep dictionary-gloss attribution
+  separate from a licensed teaching paraphrase. 順々's
+  pinned English glosses are "in order" and "in turn";
+  the independently inspected Japanese order-following
+  explanation additionally supports a succession rendering.
+  A precise mapping note should distinguish those sources.
+  Direct quiz pairs also need their own evidence: 順々/どんどん
+  is not protected through 次々, and 消化's broad "working
+  through" label overlaps 詰める's ordinary details-resolution
+  use. Compare optional observations as well as findings:
+  both initial reviewers noticed the missing 打つ link,
+  despite placing it in different report sections.
+
 - **Batch 38 authoring:** A blank source gloss does not
   establish which dictionary sense the compiler intended.
   For しょうがない, preserve the empty raw fields and state
