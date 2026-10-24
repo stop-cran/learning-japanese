@@ -95,6 +95,22 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 40 authoring:** Reused kana cards still need
+  cross-references for the kanji spelling they teach.
+  Preserve しょうゆ's kana ID, N5 level and empty kanji
+  array while linking 油 in its existing 醤油 explanation
+  and adding the reciprocal example at ユ. The current
+  new-article-only coverage audit does not check reused
+  pairs; explicitly verify this pair and existing
+  籍 / 書籍 separately.
+
+- **Batch 40 source handling:** Separate a reform proposal
+  from evidence of its implementation. The inspected MEXT
+  proposal explains the 助教授 / 准教授 reform and distinct
+  助教 / 助手 roles; Daijisen supplies the April 2007 date.
+  Do not turn historical Japanese ranks into a universal
+  one-to-one mapping to current US academic titles.
+
 - **Batch 39 confirmation:** Review scope prose can itself
   be inconsistent. Claude listed 原因 as both re-read and
   carried-over-only; the successful native view returned

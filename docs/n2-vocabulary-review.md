@@ -6936,3 +6936,100 @@ Coverage becomes **780 closed / 0 draft / 1,032 pending /
 **184** tracked reciprocal N2 pairs and **3,273** preserved
 baseline identities under the recorded exceptions.
 This closes batch 39, not the overall vocabulary expansion.
+
+## Batch 40 - authored; independent review pending
+
+Source rows **N2:782-N2:801** cover 消耗, 醤油, 省略, 初級,
+助教授, 食塩, 職人, 初旬, 書籍, 食器, ショップ, 書店,
+書道, 白髪, 知合い, シリーズ, 私立, 資料, 汁 and 素人.
+The [source packet](n2-vocabulary-batch-sources/batch-40.json)
+preserves all raw fields separately from teaching identities
+and one-based sense selections. This is the named community
+list, not an official modern JLPT syllabus.
+
+There are **16 new articles and four narrow reuses**.
+しょうゆ retains its stable kana ID, reading, title, N5
+level, empty kanji array and teaching. Its existing 醤油
+explanation gains only the 油 link and the applicable ユ
+reading. 書籍, 書店 and 資料 gain only sourced `jlpt: 2`;
+their bodies and other metadata, including 書籍's seven
+quiz exclusions, remain unchanged.
+
+The canonical 知り合い article explicitly recognizes raw
+知合い without equating its search-only dictionary flag
+with invalidity or comparative frequency. 白髪 teaches the
+documented white/gray-hair meaning; the raw bleaching gloss
+is not promoted to a separate unsupported sense. 素人 uses
+the whole-word irregular reading, not invented constituent
+readings. 汁 selects the applicable しる juice/sap and
+soup/broth senses; the つゆ-only dipping-sauce sense is not
+transferred to しる or to the restricted alternate 液.
+
+助教授 is explicitly historical. The actual inspected
+Daijisen body supplies the April 2007 change to 准教授;
+the separately inspected MEXT proposal explains reform
+and distinct 助教 / 助手 roles, not its implementation date.
+Other scoped distinctions include 初級 as a level rather
+than a beginner person, 食器 including eating implements,
+初旬 as days 1-10 inclusive, and skilled amateurs remaining
+possible under 素人.
+
+The inspected dictionary union is **121 complete families /
+230 sense records**, including **20 principal families /
+25 senses**, checked equal rather than added twice.
+It comprises the original selected **111 / 200** and the
+additional **10 / 30**. All **111 distinct existing labels**
+and **66 complete existing bodies** were inspected:
+59 selected bodies plus seven additional bodies.
+The broader capture contains **209 families / 386 senses**
+and 104 bodies; it was not all read. The original
+capture-stage pending-inspection accounting is preserved,
+with a separate completed-inspection receipt.
+
+All **34 complete component records** and **26 actual
+Digital Daijisen lexical-body retrievals** were inspected,
+distinguishing separate headings and reading restrictions.
+The actual 181-line fetched MEXT representation was read
+separately. These are author inspections and retained
+captures, not fresh independent-reviewer retrievals or
+native-speaker certification.
+
+Four N2 kanji cards change, without metadata changes.
+省 / 省略 at ショウ, 略 / 省略 at リャク and 塩 / 食塩
+at エン add three new-article reciprocal pairs. 油 gains
+reused しょうゆ at ユ. Each is linked in its actual reading
+row and Common words. Existing 籍 already reciprocally
+links reused 書籍 at セキ; it needs no edit. No kanji or
+stroke cards are added. Reused pairs are checked explicitly
+outside the generic new-article-only reciprocal audit.
+
+Initial quiz declarations comprise **11 guarded new
+articles / 34 directional declarations**. These are author
+hypotheses, not reviewer conclusions. Direct ordinary senses
+and actual labels govern symmetric, nontransitive guards.
+Exact equal titles already separate 初旬 / 上旬 and
+ショップ / 店. No baseline exclusions change. The blind
+evidence derivative removes only
+`reviewEvidence.quizGuardRationale`.
+
+Author checks establish **780 closed / 20 draft / 1,012
+pending / 0 unresolved** rows, mapped to **793 distinct
+articles: 741 new / 52 reused**. There are **4,014 word
+articles** and **187 tracked new-article reciprocal N2
+pairs**, with the two reused relationships verified
+separately. The **3,273 baseline** identities, readings,
+titles and exclusions remain preserved under the recorded
+narrow level/reuse rules. The deterministic manifest is
+**`58f07e0cea999d04`**: **6,642 assets = 6,045 files + 396
+images + 201 scenes**.
+
+Independent GPT and Claude reviews and evidence-based
+reconciliation remain pending. A valid draft or authored
+commit is not review closure. No model-diversity conclusion
+is claimed at this stage; the overall expansion remains open.
+
+書店 was already committed entirely with CRLF. Its exact
+byte delta inserts only `jlpt: 2` with the same line ending.
+The whitespace check permits CR-at-EOL for that file only;
+all other whitespace checks remain enabled. No unrelated
+line-ending normalization is included.
