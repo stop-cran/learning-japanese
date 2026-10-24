@@ -268,10 +268,11 @@ but members must belong to the declaring file and have only one authored owner. 
 class and has at least two distinct context keys. Near-duplicate examples share a key; a paired context may share a key across facets.
 Do not merge unrelated same-spelled local constructions or change tested meaning while retaining an identity.
 
-Optional `next` contains `{groupId, importance, reason}` recommendations (integer importance 1-3); `requires` contains group-ID
-strings, not objects. Omitted arrays default empty; explicit null, duplicate/self links, unknown nested fields and malformed references
-are errors. Duplicate source-global groups and missing/cyclic prerequisites reject files and their dependents. Recommendation cycles
-are valid; missing optional targets warn and drop only that link. See the app's
+Optional `next` contains `{groupId, importance, reason}` recommendations (integer importance 1-3).
+Legacy nested `requires` contains group-ID strings, not objects, but **publish new hard gates only through the set-level
+`foundationRequirements` envelope below**. Omitted arrays default empty; explicit null, duplicate/self links, unknown nested fields
+and malformed references are errors. Duplicate source-global groups and missing/cyclic prerequisites reject files and their dependents.
+Recommendation cycles are valid; missing optional targets warn and drop only that link. See the app's
 [complete group contract](https://github.com/stop-cran/kanji-cards-android/blob/main/docs/GRAMMAR-INTRODUCTIONS.md#additive-metadata).
 
 The app's opt-in focused-introduction pilot uses these groups without changing exercises, answers or SRS. Valid unowned exercises remain
@@ -280,6 +281,60 @@ maximum incoming importance from supported familiar groups, not summed links or 
 choices within its unfamiliar-first eligible pool. Recommendations cannot bypass scope/prerequisites or interrupt an active focus.
 The app explains the strongest links and their source evidence locally. Group coverage/familiarity are conservative pilot
 heuristics, not mastery or an official curriculum. Regenerate the manifest after adding/changing runtime metadata.
+
+### Prerequisites and roadmap chapters
+
+The optional set-level envelope has exactly `schemaVersion` (the integer literal `1`) and `requires`. Its keys name authored groups
+in that file; values contain distinct, non-self, source-global foundation IDs:
+
+```json
+"foundationRequirements": {
+  "schemaVersion": 1,
+  "requires": {
+    "causative-perspective-cp-formation": [
+      "causative-perspective-causative-formation",
+      "passive-participants-formation"
+    ]
+  }
+}
+```
+
+Do not combine a declaration here with nonempty legacy `requires` on the same group. Compatible app parser epoch **6** applies these
+gates using earned readiness; older readers ignore the additive envelope instead of acquiring rolling-window locks. Never move new
+gates into legacy fields to make an old client enforce them. Omission retains existing group metadata; no declaration means no new gate.
+
+Hard prerequisites apply to guided new introductions, not to started exercise reviews. Readiness is earned per authored facet from
+two distinct example keys, at least one typed Good/Easy answer, and at least 24 elapsed hours within a 21-day qualifying window after
+the latest reset. Every current facet must qualify. Earned readiness does not expire with that window or an ordinary later lapse;
+recent familiarity, exercise FSRS and recommendations remain separate. Source-wide earned foundations may lie outside the selected
+new-item scope. A chapter is never a collective completion prerequisite.
+
+Use a hard edge only for an operation the dependent group actually needs. Inspect every facet and both typed and choice tasks:
+producing an unsupplied compound form differs from interpreting a supplied one. A form in the prompt, glossed vocabulary, shared
+spelling, a JLPT label, or an existing recommendation is not by itself a gate. Prefer immediate foundations, leaving comparisons and
+helpful background as recommendations. Record the exact operations, supporting sources, editorial sequencing judgment and limitations
+in the [curriculum ledger](grammar-curriculum-sources.json). Do not rewrite or regroup exercises merely to create a pleasing diagram.
+
+The optional `curriculum/grammar.json` catalog contains exactly `schemaVersion: 1` and `chapters`. Each chapter contains exactly
+`id`, `label`, and a nonempty `groups` array of authored group IDs. Chapter IDs use the group-ID slug syntax; labels are nonblank.
+Every mapped group has exactly one primary chapter. Chapters may span files and levels; their JSON ordering is not a prerequisite.
+The catalog is LF-hashed in the separate **`manifest.curriculum`** namespace, never `manifest.files`; changing it changes `contentVersion`.
+Only the exact, case-sensitive path `curriculum/grammar.json` is currently supported, including on Windows.
+Omission means no authored chapter catalog, not an empty or completed course.
+
+Partial mapping is valid. A present-but-unmapped authored foundation retains its identity, real prerequisites, readiness and group/list
+access; it is not a missing reference or a virtual compatibility group. Unowned exercises remain labeled compatibility practice, never
+invented readiness credentials. Record both dispositions explicitly. Adding a chapter or moving a group must not change its members,
+answers, lexical records, IDs or earned progress.
+
+Arrows point from foundation to dependent. Derive a chapter arrow only from a **direct** leaf edge whose endpoints map to different
+chapters, retaining every supporting leaf pair. Do not invent transitive arrows across unmapped nodes or a blocking "Ungrouped" chapter.
+Validate both the full leaf graph and the collapsed chapter graph: an acyclic leaf graph can still collapse into a chapter cycle.
+Repair chapter boundaries/staging rather than deleting genuine gates for layout convenience. When changing a group, check incoming as
+well as outgoing edges, partial availability, external/unmapped foundations, ownership, compatibility and stable identities.
+Run `python tools/validate.py`, focused grammar tests, vocabulary checks, manifest regeneration and the real Android importer.
+
+### Vocabulary support
 
 **Optional vocabulary:** an exercise may have `vocabulary` with exactly `schemaVersion: 1`, `promptSha256` and `spans`.
 The hash is SHA-256 of the exact decoded prompt encoded as UTF-8, without normalization. Omission is valid legacy content;

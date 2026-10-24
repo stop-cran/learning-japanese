@@ -8,8 +8,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from validate_grammar import check_grammar
+from validate_grammar import chapter_edges, check_grammar
 from validate_grammar_vocabulary import prompt_hash
+from build_manifest import build_manifest
 
 
 VALID = {
@@ -180,6 +181,139 @@ class GrammarValidationTests(unittest.TestCase):
                 data["introductionGroups"][0].update(next=[{"groupId": "absent", "importance": weight, "reason": "Compare"}]),
             ))
             self.assertTrue(any("recommendation" in message for message in problems), problems)
+
+    def write_group(self, ident, requires=()):
+        data = copy.deepcopy(VALID)
+        data["id"] = ident
+        for exercise in data["exercises"]:
+            exercise["id"] = ident + "-" + exercise["id"]
+        self.add_groups(data)
+        if requires:
+            data["foundationRequirements"] = {"schemaVersion": 1, "requires": {ident: list(requires)}}
+        (self.root / "grammar" / (ident + ".json")).write_text(json.dumps(data), encoding="utf-8")
+        return data
+
+    def write_catalog(self, chapters):
+        directory = self.root / "curriculum"
+        directory.mkdir(exist_ok=True)
+        path = directory / "grammar.json"
+        path.write_text(json.dumps({"schemaVersion": 1, "chapters": chapters}), encoding="utf-8")
+        return path
+
+    def problems(self):
+        messages = []
+        check_grammar(lambda path, message: messages.append(message), self.root)
+        return messages
+
+    def test_foundation_transport_applies_strict_local_policy_and_global_edges(self):
+        self.write_group("foundation")
+        self.write_group("dependent", ["foundation"])
+        self.assertEqual([], self.problems())
+        invalid = [
+            None, [], {"schemaVersion": True, "requires": {}}, {"schemaVersion": 1.0, "requires": {}},
+            {"schemaVersion": "1", "requires": {}}, {"schemaVersion": 2, "requires": {}},
+            {"schemaVersion": 1, "require": {}}, {"schemaVersion": 1, "requires": None},
+            {"schemaVersion": 1, "requires": {"foundation": []}},
+            {"schemaVersion": 1, "requires": {"sample-set": None}},
+            {"schemaVersion": 1, "requires": {"sample-set": [3]}},
+            {"schemaVersion": 1, "requires": {"sample-set": ["sample-set"]}},
+            {"schemaVersion": 1, "requires": {"sample-set": ["absent"]}},
+            {"schemaVersion": 1, "requires": {"sample-set": ["foundation", "foundation"]}},
+        ]
+        for policy in invalid:
+            with self.subTest(policy=policy):
+                self.assertTrue(self.check(lambda d: (self.add_groups(d), d.update(foundationRequirements=policy)))[1])
+        self.assertTrue(self.check(lambda d: (
+            self.add_groups(d),
+            d["introductionGroups"][0].update(requires=["foundation"]),
+            d.update(foundationRequirements={"schemaVersion": 1, "requires": {"sample-set": ["foundation"]}}),
+        ))[1])
+        (self.root / "grammar" / "sample-set.json").unlink()
+        self.write_group("foundation", ["dependent"])
+        self.assertEqual(2, sum("prerequisite chain" in problem for problem in self.problems()))
+
+    def test_partial_chapters_preserve_unmapped_foundations_and_direct_edge_provenance(self):
+        self.write_group("foundation")
+        self.write_group("dependent", ["foundation"])
+        self.write_group("independent")
+        chapters = [{"id": "later", "label": "Later", "groups": ["dependent", "independent"]}]
+        self.write_catalog(chapters)
+        self.assertEqual([], self.problems())
+        groups = {"foundation": {}, "dependent": {"requires": ["foundation"]}, "independent": {}}
+        self.assertEqual({}, chapter_edges(chapters, groups))
+        chapters.insert(0, {"id": "earlier", "label": "Earlier", "groups": ["foundation"]})
+        self.write_catalog(chapters)
+        self.assertEqual([], self.problems())
+        self.assertEqual({("earlier", "later"): [("foundation", "dependent")]}, chapter_edges(chapters, groups))
+        (self.root / "grammar" / "foundation.json").unlink()
+        self.assertTrue(any("prerequisite chain" in message for message in self.problems()))
+        self.assertTrue(any("missing authored group" in message for message in self.problems()))
+
+    def test_leaf_dag_can_have_a_collapsed_cycle_without_changing_real_edges(self):
+        self.write_group("one")
+        self.write_group("two", ["one"])
+        self.write_group("three", ["two"])
+        self.write_catalog([
+            {"id": "a", "label": "A", "groups": ["one", "three"]},
+            {"id": "b", "label": "B", "groups": ["two"]},
+        ])
+        self.assertTrue(any("cyclic chapter" in problem for problem in self.problems()))
+        self.assertFalse(any("missing/cyclic" in problem for problem in self.problems()))
+        self.write_catalog([
+            {"id": "a", "label": "A", "groups": ["one"]},
+            {"id": "b", "label": "B", "groups": ["two"]},
+            {"id": "c", "label": "C", "groups": ["three"]},
+        ])
+        self.assertEqual([], self.problems())
+
+    def test_catalog_rejects_unsupported_shapes_and_ambiguous_ownership(self):
+        self.write_group("one")
+        self.write_group("two")
+        chapter = {"id": "first", "label": "First", "groups": ["one"]}
+        path = self.write_catalog([])
+        self.assertEqual([], self.problems())
+        invalid = [
+            None, [], {"schemaVersion": True, "chapters": []}, {"schemaVersion": 1.0, "chapters": []},
+            {"schemaVersion": 2, "chapters": []}, {"schemaVersion": 1, "chapters": None},
+            {"schemaVersion": 1, "chapters": [{**chapter, "unknown": []}]},
+            {"schemaVersion": 1, "chapters": [{**chapter, "groups": []}]},
+            {"schemaVersion": 1, "chapters": [{**chapter, "groups": ["one", "one"]}]},
+            {"schemaVersion": 1, "chapters": [{**chapter, "groups": ["absent"]}]},
+            {"schemaVersion": 1, "chapters": [chapter, {**chapter, "id": "second"}]},
+            {"schemaVersion": 1, "chapters": [chapter, {**chapter, "groups": ["two"]}]},
+        ]
+        for value in invalid:
+            with self.subTest(value=value):
+                path.write_text(json.dumps(value), encoding="utf-8")
+                self.assertTrue(self.problems())
+        self.write_catalog([chapter])
+        (path.parent / "unexpected.json").write_text("{}", encoding="utf-8")
+        self.assertTrue(any("unsupported curriculum path" in message for message in self.problems()))
+
+    def test_catalog_manifest_namespace_hash_normalization_and_content_version(self):
+        self.write_group("one")
+        path = self.write_catalog([{"id": "first", "label": "First", "groups": ["one"]}])
+        text = path.read_text(encoding="utf-8") + "\n"
+        path.write_bytes(text.encode())
+        first = build_manifest(self.root)
+        self.assertNotIn("curriculum/grammar.json", first["files"])
+        self.assertIn("curriculum/grammar.json", first["curriculum"])
+        path.write_bytes(text.replace("\n", "\r\n").encode())
+        self.assertEqual(first, build_manifest(self.root))
+        self.write_catalog([{"id": "first", "label": "Renamed", "groups": ["one"]}])
+        changed = build_manifest(self.root)
+        self.assertEqual(first["files"], changed["files"])
+        self.assertNotEqual(first["contentVersion"], changed["contentVersion"])
+
+    def test_curriculum_paths_remain_case_sensitive_on_windows(self):
+        self.write_group("one")
+        path = self.write_catalog([{"id": "first", "label": "First", "groups": ["one"]}])
+        renamed = path.rename(path.with_name("Grammar.json"))
+        self.assertIn("curriculum/Grammar.json", build_manifest(self.root)["curriculum"])
+        self.assertTrue(any("unsupported curriculum path" in problem for problem in self.problems()))
+        renamed.rename(path)
+        path.parent.rename(path.parent.with_name("Curriculum"))
+        self.assertTrue(any("case-sensitive" in problem for problem in self.problems()))
 
     def test_group_context_coverage_ownership_and_target_coherence(self):
         def duplicate(data):

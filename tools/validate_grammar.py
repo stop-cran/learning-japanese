@@ -36,8 +36,8 @@ def check_grammar(err, root: Path = ROOT) -> int:
             err(path, "must be a JSON object")
             continue
         parsed[path] = data
-        if set(data) - {"introductionGroups"} != SET_KEYS:
-            err(path, f"fields must be {sorted(SET_KEYS)}, with optional introductionGroups")
+        if set(data) - {"introductionGroups", "foundationRequirements"} != SET_KEYS:
+            err(path, f"fields must be {sorted(SET_KEYS)}, with optional introductionGroups/foundationRequirements")
         set_id = data.get("id")
         if not isinstance(set_id, str) or not ID.fullmatch(set_id) or set_id != path.stem:
             err(path, "'id' must be a lowercase slug matching the file name")
@@ -166,8 +166,11 @@ def check_grammar(err, root: Path = ROOT) -> int:
     for path, data in parsed.items():
         if path not in failed:
             groups[path] = _check_groups(err, path, data)
+            if path not in failed:
+                groups[path] = _foundation_requirements(err, path, data, groups[path])
     groups = {path: items for path, items in groups.items() if path not in failed}
-    _check_group_references(err, groups)
+    kept = _check_group_references(err, groups)
+    _check_curriculum(err, root, {group["id"]: group for items in kept.values() for group in items})
     return len(files)
 
 
@@ -273,6 +276,49 @@ def _check_groups(err, path, data):
     return groups
 
 
+def _foundation_requirements(err, path, data, groups):
+    if "foundationRequirements" not in data:
+        return groups
+    policy = data["foundationRequirements"]
+    if not _shape(policy, ("schemaVersion", "requires")) or type(policy.get("schemaVersion")) is not int or policy["schemaVersion"] != 1:
+        err(path, "foundationRequirements needs exactly schemaVersion 1 and requires")
+        return groups
+    declarations = policy["requires"]
+    known = {group["id"] for group in groups}
+    if not isinstance(declarations, dict) or not set(declarations) <= known:
+        err(path, "foundationRequirements.requires must map local authored group IDs")
+        return groups
+    effective = []
+    for group in groups:
+        if group["id"] not in declarations:
+            effective.append(group)
+            continue
+        requires = declarations[group["id"]]
+        if group.get("requires", []):
+            err(path, f"{group['id']}: do not mix legacy requires with foundationRequirements")
+        if not _ids(requires) or group["id"] in requires:
+            err(path, f"{group['id']}: foundationRequirements needs distinct non-self group-ID strings")
+        effective.append({**group, "requires": requires})
+    return effective
+
+
+def _unresolved(dependencies):
+    remaining = {ident: len(parents) for ident, parents in dependencies.items()}
+    dependents = {}
+    for ident, parents in dependencies.items():
+        for parent in parents:
+            dependents.setdefault(parent, []).append(ident)
+    ready = [ident for ident, count in remaining.items() if count == 0]
+    while ready:
+        ident = ready.pop()
+        del remaining[ident]
+        for dependent in dependents.get(ident, []):
+            remaining[dependent] -= 1
+            if remaining[dependent] == 0:
+                ready.append(dependent)
+    return set(remaining)
+
+
 def _check_group_references(err, by_file):
     owners = {}
     for path, groups in by_file.items():
@@ -284,19 +330,7 @@ def _check_group_references(err, by_file):
     kept = {path: groups for path, groups in by_file.items() if path not in duplicates}
     while True:
         groups = {group["id"]: group for items in kept.values() for group in items}
-        remaining = {ident: len(group.get("requires", [])) for ident, group in groups.items()}
-        dependents = {}
-        for ident, group in groups.items():
-            for required in group.get("requires", []):
-                dependents.setdefault(required, []).append(ident)
-        ready = [ident for ident, count in remaining.items() if count == 0]
-        while ready:
-            ident = ready.pop()
-            del remaining[ident]
-            for dependent in dependents.get(ident, []):
-                remaining[dependent] -= 1
-                if remaining[dependent] == 0:
-                    ready.append(dependent)
+        remaining = _unresolved({ident: group.get("requires", []) for ident, group in groups.items()})
         rejected = {path for path, items in kept.items() if any(group["id"] in remaining for group in items)}
         if not rejected:
             break
@@ -309,3 +343,67 @@ def _check_group_references(err, by_file):
             for link in group.get("next", []):
                 if link["groupId"] not in known:
                     print(f"warning: {path}: missing optional next target '{link['groupId']}' will be dropped by the app", file=sys.stderr)
+    return kept
+
+
+def chapter_edges(chapters, groups):
+    """Direct cross-chapter edges with their supporting leaf pairs; inputs must already be valid."""
+    owners = {group: chapter["id"] for chapter in chapters for group in chapter["groups"]}
+    edges = {}
+    for dependent, group in groups.items():
+        for foundation in group.get("requires", []):
+            first, second = owners.get(foundation), owners.get(dependent)
+            if first is not None and second is not None and first != second:
+                edges.setdefault((first, second), []).append((foundation, dependent))
+    return {edge: sorted(pairs) for edge, pairs in sorted(edges.items())}
+
+
+def _check_curriculum(err, root, groups):
+    for directory in root.glob("*"):
+        if directory.is_dir() and directory.name.casefold() == "curriculum" and directory.name != "curriculum":
+            err(directory, "curriculum directory name is case-sensitive; use curriculum")
+            return
+    path = root / "curriculum" / "grammar.json"
+    for other in sorted((root / "curriculum").glob("*")):
+        if other.is_file() and other.name != "grammar.json":
+            err(other, "unsupported curriculum path; use curriculum/grammar.json")
+    if not path.exists():
+        return
+    if not path.is_file():
+        err(path, "curriculum/grammar.json must be a file")
+        return
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError, RecursionError) as exc:
+        err(path, f"not valid curriculum JSON: {exc}")
+        return
+    if (not _shape(data, ("schemaVersion", "chapters")) or type(data.get("schemaVersion")) is not int
+            or data["schemaVersion"] != 1 or not isinstance(data["chapters"], list)):
+        err(path, "curriculum needs exactly schemaVersion 1 and a chapters array")
+        return
+    ids, owners, valid = set(), set(), True
+    for chapter in data["chapters"]:
+        if (not _shape(chapter, ("id", "label", "groups")) or not _strings(chapter, ("id", "label"))
+                or not ID.fullmatch(chapter["id"]) or not _ids(chapter["groups"]) or not chapter["groups"]):
+            err(path, "each chapter needs a slug ID, label and nonempty distinct group-ID strings")
+            valid = False
+            continue
+        if chapter["id"] in ids:
+            err(path, f"duplicate chapter ID: {chapter['id']}")
+            valid = False
+        ids.add(chapter["id"])
+        for group in chapter["groups"]:
+            if group not in groups:
+                err(path, f"{chapter['id']}: missing authored group {group}")
+                valid = False
+            if group in owners:
+                err(path, f"conflicting chapter ownership: {group}")
+                valid = False
+            owners.add(group)
+    if valid:
+        dependencies = {ident: set() for ident in ids}
+        for foundation, dependent in chapter_edges(data["chapters"], groups):
+            dependencies[dependent].add(foundation)
+        unresolved = _unresolved(dependencies)
+        if unresolved:
+            err(path, f"cyclic chapter prerequisite chain: {', '.join(sorted(unresolved))}")

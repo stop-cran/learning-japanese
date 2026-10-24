@@ -41,6 +41,10 @@ def build_manifest(root: Path) -> dict:
         path.relative_to(root).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
         for path in sorted((root / "audio").glob("*.ogg")) if path.is_file()
     }
+    curriculum = {
+        path.relative_to(root).as_posix(): sha256(path)
+        for path in sorted((root / "curriculum").glob("*")) if path.is_file()
+    }
     payloads = {"files": files}
     if images:
         payloads["images"] = images
@@ -50,6 +54,8 @@ def build_manifest(root: Path) -> dict:
         payloads["listening"] = listening
     if audio:
         payloads["audio"] = audio
+    if curriculum:
+        payloads["curriculum"] = curriculum
     combined = hashlib.sha256(
         json.dumps(payloads if len(payloads) > 1 else files, sort_keys=True, ensure_ascii=False).encode("utf-8")
     ).hexdigest()
@@ -61,9 +67,10 @@ def main() -> None:
     (ROOT / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n"
     )
-    count = sum(len(manifest.get(key, {})) for key in ("files", "images", "scenes", "listening", "audio"))
+    count = sum(len(manifest.get(key, {})) for key in ("files", "images", "scenes", "listening", "audio", "curriculum"))
     print(f"manifest.json: {count} files incl. {len(manifest.get('images', {}))} images, "
           f"{len(manifest.get('scenes', {}))} scene catalogs, {len(manifest.get('listening', {}))} listening passages, "
+          f"{len(manifest.get('curriculum', {}))} curriculum catalogs, "
           f"version {manifest['contentVersion']}")
 
 

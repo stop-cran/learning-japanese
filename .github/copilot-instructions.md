@@ -56,6 +56,10 @@ task, not just the Japanese sentence or intended key:
   is a word, or that its gloss fits this prompt.
 - Count genuinely different contexts, not item IDs or noun substitutions. Paired forms and interpretations share keys;
   useful repetition is not independent transfer evidence or demonstrated mastery.
+- For group/dependency/chapter changes, follow the [shared curriculum contract](../docs/content-format.md#prerequisites-and-roadmap-chapters).
+  Review the actual prerequisite operation, incoming/outgoing edges, both leaf and collapsed chapter cycles, partial availability,
+  unmapped versus unowned content, stable identities and old-reader compatibility. Keep reasons and exact ownership in the
+  [curriculum ledger](../docs/grammar-curriculum-sources.json); chapter placement must not create a whole-chapter lock.
 
 These regroup existing checks, not a new review layer. A clean bounded review needs no manufactured finding or rule.
 
@@ -138,3 +142,9 @@ For each revision of the review rules, add a rule grounded in an observed failur
   [auxiliary](../docs/grammar-try-prepare-complete-sources.json) reviews exposed lexical-boundary, accepted-answer,
   feedback-stage and context-count defects. Surface their existing checks here so an article-oriented review does not
   overlook the exercise's other learner-visible fields. Detailed evidence and original severities remain in those ledgers.
+- **2026-10-23 - Curriculum compatibility and projection (add/regroup):** App work item
+  [#59](https://github.com/stop-cran/kanji-cards-android/issues/59) established that publishing gates in the old `requires` field
+  would give older clients expiring locks, and that collapsing a valid leaf graph can create a chapter cycle.
+  Route contributors through one shared contract for the new envelope, both graph checks and explicit partial-mapping dispositions.
+  The content pilot's independent review also reproduced a Windows-only path mismatch: `Path` equality accepted `Grammar.json`
+  although the app rejects that manifest key. Validate published path casing as exact strings, not host filesystem equality.

@@ -62,6 +62,12 @@ The 2026-10-22 classification pass established these reusable authoring checks:
 
 ## Starting points by purpose
 
+For prerequisite/chapter work, also consult the [curriculum ledger](grammar-curriculum-sources.json) and
+[shared metadata rules](content-format.md#prerequisites-and-roadmap-chapters). Trace the actual operation across both tasks:
+a source explaining how two forms compose supports that morphological relationship, not a universal textbook order or a lock on
+every interpretation exercise in the same file. Retain supplied-form and supported-vocabulary qualifications, immediate leaf edges,
+explicit unmapped/compatibility dispositions, and the distinction between source evidence and editorial introduction policy.
+
 Links in the first column are previously inspected seed pages, not an exhaustive bibliography or a blanket endorsement.
 The batch records contain the exact sections and qualifications used.
 
