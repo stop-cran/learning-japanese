@@ -95,6 +95,17 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 50 reconciliation:** A source gloss that explicitly includes
+  bamboo and the middle rank calls for both 竹 senses in the selected
+  mapping, not a plant-only anchor with additional rank teaching.
+  Distinguish a modern school subject from exercises: obsolete 体操/PE
+  evidence does not justify suppressing the modern 体育 contrast.
+  Conversely, Digital Daijisen's ダイヤグラム entry includes the
+  operating schedule itself, not only its drawn representation; judge
+  スケジュール and 時間割 directly rather than relying on their
+  existing indirect links through ダイヤ. Independent reviewers found
+  complementary issues, with unequal actual comparison-body reading depth.
+
 - **Batch 50 authoring:** Preserve recognized rare aliases without promoting
   them to preferred spellings: source タイア maps to タイヤ. Keep additional
   public-dictionary uses separate from pinned sense numbering:

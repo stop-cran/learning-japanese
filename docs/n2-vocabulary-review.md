@@ -28,7 +28,7 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 50: N2:982-N2:1001
 
-**Status:** authored draft; independent review and reconciliation remain pending.
+**Status:** initial reviews authenticated; corrections awaiting bounded confirmation.
 
 Scope: 体操, 大分 (reused だいぶ), 大木, 題名, 代名詞, タイア
 (normalized タイヤ), ダイヤグラム, ダイヤモンド, ダイヤル, 対立,
@@ -55,12 +55,46 @@ Rare source タイア is explicitly recognized under タイヤ.
 not a fabricated second JMdict sense. Additional figurative, sports,
 regional, heating, camera-flash, development and beard uses are identified
 separately from their N2 source anchors where applicable.
-Quiz declarations are author hypotheses awaiting direct-pair review,
-including possible excesses; no runtime uniqueness is claimed.
+No runtime quiz uniqueness is claimed.
 
-Both requested model families will receive the same clean committed
-snapshot, scope, rubric and source access sequentially, with blind initial
-findings. No independent verdict or model-diversity benefit is claimed yet.
+### Initial review and reconciliation
+
+Both short-lived processes reviewed clean authored snapshot
+`8c71fae49b615f2d6f0de34c6b00d1b20d17dd7e`, parent
+`89c812eed40575c62f9f24cf97f3f6866473ecd0`, sequentially with the same
+scope, rubric and source access. GPT exited before Claude started.
+Exact native prompts, snapshots, models, permitted private-file access,
+absence of named forbidden reads, complete final reports and zero edits
+were author-authenticated. File-only reviewers could not execute Git.
+
+- [GPT initial report](n2-vocabulary-reviews/batch-50-gpt-initial.md):
+  actual `gpt-6.1-sol`; one low-severity quiz finding.
+- [Claude initial report](n2-vocabulary-reviews/batch-50-claude-initial.md):
+  actual `claude-opus-5.5`; one quiz omission and one mapping defect.
+
+| Initial observation | Evidence-based disposition |
+| --- | --- |
+| GPT B50-GPT-01: excessive 体操/体育 guard | Remove 体育 only. Complete 1409580 marks PE-class sense 3 obsolete; complete 1409200 and the actual 体育 body identify modern education/the subject. Keep the useful comparison and historical qualification. GPT also fetched the precise Kotobank 体育 entry; failed Weblio lexical extractions are not positive verification. |
+| Claude B50-QZ-01: ダイヤグラム schedules | Add direct スケジュール and 時間割 exclusions after full-body and complete-family inspection (1068870/1315960). The original Digital Daijisen passage explicitly includes the operating schedule itself, not only its chart. Make that qualification explicit and link both comparisons; do not infer the pair transitively through ダイヤ or invent JMdict sense 2. |
+| Claude B50-MAP-01: 竹 sense selection | Select 1422230 senses 1,2 and clear additional senses: the raw source gloss explicitly names both bamboo and the middle rank. Correct only the appended coverage note and mapping fields; preserve all original teaching and exclusions. |
+| Claude optional sequence, lifting, increase and quarrel guards | No additional declaration adopted. Sequence versus continuity, physical lifting versus level enhancement, quantity increase versus degree enhancement, and a quarrel versus confrontation retain meaningful distinctions in the actual qualified labels. These suggestions were explicitly nondefects, not unresolved findings or proof of exhaustive nonoverlap. |
+| Claude optional variant navigation and inherited 大木 wording | Nonblocking 貯 navigation is not required for the primary 蓄える mapping. Do not rewrite the preserved 大木 explanation outside this batch's narrow reuse. |
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-50.json) retains
+exact corrective records and decisions. Thirteen new cards now declare
+72 exclusions: two additions and one removal from the initial 71.
+No baseline exclusion is changed. Only 竹's selected/additional sense
+classification changes; all twenty original source rows remain intact.
+
+The full reports, including Optional and Limits, contain no shared initial
+actionable observation. GPT uniquely found the excessive modern PE guard;
+Claude uniquely found the two schedule-label candidates and the explicit
+source-gloss mismatch. Both inspected all assigned teaching files and
+complete selected/supplemental family renderings, but GPT read 113
+additional complete old bodies while Claude read four and mostly labels
+for the rest. This is useful complementary signal on this sample, not
+a controlled model-bias experiment or a general model ranking.
+Confirmation and closure are not claimed yet.
 
 ## Batch 01: N2:2-N2:21
 
