@@ -95,6 +95,16 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 38 confirmation:** Match each overlap to its actual
+  sense index: だめ's no-good sense overlaps しょうがない:3,
+  while its hopeless sense overlaps しょうがない:4. A sound
+  guard does not make a compressed citation precise.
+  Preserve reviewed evidence and append the clarification.
+  Archive the complete native final message, including any
+  introductory paragraph before the Snapshot heading;
+  slicing from that heading can silently drop part of a
+  review. Authenticate against the actual final event.
+
 - **Batch 38 review:** Keep dictionary-gloss attribution
   separate from a licensed teaching paraphrase. 順々's
   pinned English glosses are "in order" and "in turn";

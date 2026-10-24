@@ -6424,8 +6424,8 @@ correctness or native-speaker naturalness.
 
 ## Batch 38 - N2:742-N2:761
 
-**Status:** initial reviews reconciled; original-reviewer
-confirmations pending.
+**Status:** closed after sequential independent review,
+evidence-based corrections and original-reviewer confirmations.
 
 Scope: 出勤, 述語, 出張, 寿命, 主役, 受話器, 循環, 巡査,
 順々, 順序, 純情, 純粋, 消化, 小学生, しょうがない, 将棋,
@@ -6595,3 +6595,93 @@ generalization are not credited as useful catches.
 This is not a model benchmark; initial scope and source
 inspection differed, and later agreement will not be counted
 as shared initial discovery.
+
+### Original-reviewer confirmations and closure
+
+Correction snapshot:
+`f3fb61f8589e4a233a0bdf518eb6198fa20e88f6`
+(parent `4ec7f6f7dabbe669a42d686fbd9ada6da362326a`).
+The original GPT session
+`7bfc40d4-f76f-4b94-80ec-220dbb5ee41c` confirmed first;
+the original Claude session
+`68f242f9-23a6-480e-a6fb-ad30da9267b0` confirmed after
+that process exited. No concurrent reviewer or substantive
+author work occurred. Actual models remained **gpt-6.1-sol**
+and **claude-opus-5.5**. Complete native final messages,
+including introductory paragraphs, are archived:
+[GPT confirmation](n2-vocabulary-reviews/batch-38-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-38-claude-confirmation.md).
+
+Both original reviewers mark all seven corrected cards and
+the N2:750 clarification **CLEAN / CLEAN / CLEAN** for
+correctness, scoped coverage and comprehensibility. The
+twelve unchanged new articles, six unchanged kanji edits,
+narrow 定規 change and nineteen unchanged mappings inherit
+their initial bounded assessments; they were not freshly
+reviewed. Neither confirmation establishes an actionable
+defect or consequential unresolved teaching claim.
+
+| Observation | Final disposition |
+| --- | --- |
+| GPT F01; Claude B38-QZ-01 | Resolved: both reviewers accept the direct 消化/詰める and 順々/どんどん safeguards. Later agreement is not shared initial discovery. |
+| GPT F02; Claude B38-LNK-01/02/03 and optional 打つ | Resolved: all four substantive destination links accepted. |
+| Claude B38-MAP-01 | Resolved: pinned English glosses and the additional source-supported succession paraphrase are distinguished. |
+| Claude optional だめ, 仕方, 碁 and 話 | Adopted and accepted by both original reviewers. |
+| Claude confirmation citation precision | Accepted evidence-only clarification: 1409110:1 overlaps 1305510:3 in no-good/useless meaning; 1409110:2 overlaps 1305510:4 in hopeless meaning. The packet appends this qualification without rewriting the original reviewed correction evidence. No guard or teaching changes. |
+| Claude component-level generalization | Withdrawn explicitly as unsupported; no easier level is inferred from missing cards. |
+| Claude vapor/vapour suggestion | Withdrawn as an unnecessary spelling preference. |
+| Claude confirmation optional prose contrasts | Remain optional: existing wording and direct guards already address the demonstrated ambiguities. No expanded contrast assignment. |
+| Claude optional existing 打つ go sense | Remains outside the narrow reuse scope: 将棋 teaches the expression and 碁 already teaches 碁を打つ; no demonstrated new-card defect requires altering the baseline article. |
+
+GPT reports reading all seven changed cards, twelve complete
+correction families and ten complete destination/comparison
+bodies. Claude reports the seven changed cards, all twelve
+compact complete families and eight complete target bodies;
+it checked 小学校/先輩 titles and existence without rereading
+their bodies. GPT reached the relevant actual Daijisen
+entry through raw HTML. Claude reached only its summary,
+and its Kotobank attempt returned 404; do not count that
+as a second full-entry inspection. The author's original
+actual public lexical capture remains available.
+
+Author-executed provenance checks authenticated exact native
+prompts, actual models, original sessions, complete final
+messages, restricted tools/no named forbidden reads, zero
+edits, snapshot/patch hashes and blind derivative equivalence.
+The initial derivative omits only `quizGuardRationale`;
+the correction derivative preserves initial evidence and
+appends its supplement. Twenty-six manifest content entries
+were checked against each committed review snapshot.
+
+| Complete final-message archive | LF-normalized SHA-256 |
+| --- | --- |
+| GPT initial | `df52ec991add1335bdee2793dc552dbbccb1000423b8820a549b6b9ce596733b` |
+| Claude initial | `4124daf7a3fd02f7c1031b00ae6eb4c348ee5a12f26a607fbe3072b44d62c36b` |
+| GPT confirmation | `6906cb4b69a1848460e4c44ffec6af8c43d2c3ed9fdc42ee5d5ee7c2580868ab` |
+| Claude confirmation | `535b5a1da6d504982c9afcaa90abdb32afee1ebe448dbdf7155cc5dc8757d07a` |
+
+Closure changes only statuses, coverage bookkeeping, this
+reconciliation, the appended evidence-note qualification,
+lessons and complete confirmation archives. No teaching,
+kanji example, title, reading or exclusion changes after
+the confirmed correction. The deterministic manifest stays
+**`37e514b46e275909`**, with **6,608 assets:
+6,011 files / 396 images / 201 scenes**.
+
+Coverage is now **760 closed / 0 draft / 1,052 pending /
+0 unresolved**, mapped to **753 distinct articles:
+707 new / 46 reused**. There are **3,980 word articles**
+and **177 tracked primary reciprocal N2 kanji-word pairs**.
+The 3,273 baseline identities, readings, titles and
+exclusions remain preserved under the recorded narrow
+level/reuse rules.
+
+The models' complementary initial catches remain useful on
+this sample; Claude additionally caught the small author
+citation precision during confirmation. These are
+sample-specific observations with different disclosed
+inspection depths, not a model-family benchmark.
+Provenance and structural checks are author-executed,
+not reviewer-executed Git, production quiz draws,
+exhaustive linguistic validation or native-speaker
+certification. Overall N2 vocabulary expansion remains open.
