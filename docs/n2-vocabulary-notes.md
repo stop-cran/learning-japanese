@@ -95,6 +95,20 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 46 authoring:** A mixed dictionary extraction
+  can contain both the minimum-wish adverb せめて and
+  the attack-method noun 攻め手. Preserve the raw gloss
+  mismatch and supplied identity separately; a successful
+  page fetch does not choose the correct heading.
+  ぜひとも can make a polite invitation rather than
+  require coercion. 前後 needs both attachment patterns
+  and its order/co-occurrence senses, with close succession
+  distinguished from exact simultaneity. 洗剤 can include
+  soap, and 全集 can collect a genre rather than one
+  person's every work. A kana-primary alias does not add
+  unwritten characters to metadata; 瀬戸物's place name
+  does not authorize a literal door-based etymology.
+
 - **Batch 45 review/reconciliation:** Assess the complete
   qualified English label, not an isolated substring:
   Common Era year numbering does not mean any era or

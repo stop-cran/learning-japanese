@@ -8232,3 +8232,53 @@ deterministic manifest is **`967ef25aed11394f`**;
 the thirty-four assigned teaching files and manifest
 are unchanged by the documentation-only closure.
 This closes batch 45, not the full 1,812-row expansion.
+
+## Batch 46 - authored; independent review pending
+
+Source rows **N2:902-N2:921** map to nineteen new articles:
+接続, 瀬戸物, ぜひとも, 迫る, ゼミ, せめて, 攻める,
+セメント, 栓, 前後, 洗剤, 全集, 全身, 扇子, 専制,
+先々月, 先々週, 先祖 and 先端. Existing **せっせと**
+receives only its sourced N2 level; its title, reading,
+teaching, exclusions, scenes and images remain unchanged.
+Kana-primary ぜひとも recognizes 是非とも/是非共.
+
+All raw CSV fields remain unchanged. In particular,
+せめて keeps supplied adverb entry **1006570** despite
+the raw attack-method gloss belonging to the separate
+**攻め手 1675160** identity. The article explains the
+distinction without claiming to recover compiler intent.
+先々週's blank gloss is preserved.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-46.json)
+retains complete families, restrictions and one-based
+selections. Actual author reads cover **432 complete
+families/1,068 senses**, including **twenty principal
+families/36 senses**, **268 existing labels**, **113
+complete existing articles** and **30 component records**.
+All **22 public capture records** were inspected:
+twenty have actual lexical bodies; せっせと and 先々週
+have explicit extraction failures, not positive public
+verification. The mixed せめて/攻め手 headings and
+扇子's short redirect are qualified. The historical
+prepared/not-inspected plan is retained separately
+from the completed-read receipt. Unselected captured
+old bodies remain capture-only. These are author
+assertions, not independent review findings.
+
+Three primary N2 pairs gain reciprocal reading-row
+and Common words links: **接/接続** at セツ,
+**戸/瀬戸物** at と within the place name, and
+**専/専制** at セン. No character metadata or stroke
+cards change. Seven old word articles gain links only:
+繋ぐ, コンクリート, 少なくとも, せっけん, 責める,
+先週 and 再来月. All baseline exclusions and easier
+established levels are preserved.
+
+Coverage is **900 closed / 20 draft / 892 pending /
+0 unresolved**, mapping **912 distinct articles:
+853 new / 59 reused**. There are **4,126 word articles**
+and **210 tracked primary reciprocal N2 pairs**.
+Sequential blind GPT and Claude reviews will assess
+the same frozen snapshot and all three facets before
+any source row is closed.
