@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-47 review-closed.** The target is all 1,812 source rows,
+**Batches 01-48 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 940 rows are review-closed; 20 are draft,
+The first 960 rows are review-closed; none are draft,
 852 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -8841,3 +8841,59 @@ remain unchanged. Optional footer expansion, extra spelling
 variants and unproven over-exclusion claims are not required
 to close the scoped review. Both original-session confirmations
 are still pending; the twenty rows remain **draft**.
+
+### Batch 48 - confirmed and closed
+
+Both original reviewers accepted corrected commit
+**`06ea875040a5484ccd27594c306884a3aa8958a9`**:
+[GPT confirmation](n2-vocabulary-reviews/batch-48-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-48-claude-confirmation.md).
+Each provides twenty individual **CLEAN / CLEAN / CLEAN**
+rows for correctness, scoped coverage and comprehensibility.
+No new actionable defect remains. Exactly **N2:942-N2:961**
+are now closed; no teaching changes follow confirmation.
+
+Both completely reread the nine changed articles, actual
+correction patch, ten complete corrective families / 43 senses
+and eight complete old bodies. Both independently count
+**95 declarations on eighteen new cards**, plus exactly
+two on reused 備える. Eleven unchanged new-card judgments
+are explicitly inherited. GPT additionally checks current
+headers and all twelve related passages; Claude inherits
+the six kanji and six old link-only judgments. GPT rechecks
+all twenty TSV/compact mappings and complete principal
+records; Claude rechecks the twenty assigned TSV rows by grep.
+
+All five initial GPT findings are resolved. Claude accepts
+the direct guards missed in its initial narrower comparison
+scope and confirms the shared 測量/調査 safeguard.
+It accepts the source-backed prose corrections and explicitly
+withdraws unsupported 先祖 register, mostly-entrust/literary
+しょくする and regional/colloquial 剃る prescriptions.
+Both treat the そのころ example as clarity polish and
+the 昔 guard as an optional precaution. Other optional
+expansions remain nonblocking, not unresolved defects.
+
+All four complete native reports are archived and
+author-authenticated for actual models, exact prompts,
+permitted private-file access, zero edits and original-session
+continuity. Initial reviews were blind; confirmations share
+the adjudications. Both sequential reviewer processes exited.
+Git/hash/equivalence checks remain author-executed, not
+independent reviewer execution. Initial public extraction
+gaps and the 其の頃 404 persist; no fresh confirmation
+public fetch, live quiz or native-speaker certification
+is claimed. Complementary catches do not constitute a
+controlled model-bias benchmark.
+
+Coverage is **960 closed / 0 draft / 852 pending /
+0 unresolved**, mapped to **952 distinct articles:
+891 new / 61 reused**. There are **4,164 word articles**
+and **221 tracked primary reciprocal N2 pairs**.
+All 3,273 baseline identities/readings/titles and
+exclusions remain preserved under the documented narrow
+level and guard exceptions, including this exact 備える
+addition. The deterministic manifest is
+**`796f7676ea4727ee`**: **6,792 entries =
+6,195 files + 396 images + 201 scene catalogs**.
+The entire 1,812-row vocabulary expansion remains open.
