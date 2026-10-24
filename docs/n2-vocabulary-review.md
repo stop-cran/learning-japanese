@@ -5718,7 +5718,7 @@ batch 34, not the remaining vocabulary expansion.
 
 ## Batch 35: N2:682-N2:701
 
-**Status:** initial reviews complete; corrections prepared; bounded confirmations pending.
+**Status:** first confirmations complete; two-article follow-through prepared; final confirmations pending.
 
 Scope: 湿度, 執筆, 実物, しっぽ, 実用, 実力, 実例,
 失恋, 指定, 私鉄, 児童, 縛る, 地盤, しびれる, 紙幣,
@@ -5849,5 +5849,60 @@ of bias elimination. A Weblio example count or footer-only page
 does not establish rendered examples, and an inaccurate generated
 search summary is not substituted for actual source bodies.
 
-Bounded confirmation on the corrected committed snapshot is
-still pending; all twenty rows remain draft.
+The first corrected snapshot remained draft pending the
+confirmations below.
+
+### First confirmation and follow-through
+
+The original reviewer sessions resumed sequentially on
+`5d8e436a121ad5007143f771f76c3fcdff0a981e`, parent
+`978aed9979689800a07e505bf370846e4c3cc12c`. Both exited with
+the requested actual models and zero edits. Their complete
+reports, including the disagreement, are preserved:
+
+- [GPT confirmation](n2-vocabulary-reviews/batch-35-gpt-confirmation.md):
+  all eight original findings resolved; no actionable regression
+  established in the bounded correction.
+- [Claude confirmation](n2-vocabulary-reviews/batch-35-claude-confirmation.md):
+  C1-C3, Q1-Q2 and Q4-Q5 resolved; Q3 maintained. The reviewer
+  explicitly withdraws the unsupported “very common” claim.
+
+GPT inspected the complete actual patch and all eleven changed
+articles. Claude read the content/TSV patch and the equivalent
+readable comparison materials, but not the full appended JSON
+patch; this is a disclosed inspection limit, not complete patch
+inspection. Both inspected the nineteen comparison bodies.
+The shared confirmation evidence exposed author adjudications
+and model-origin IDs after the blind initial reviews; neither
+reviewer read the other's reports.
+
+The maintained Q3 was reassessed against the actual behavioral
+sense, not settled by a model vote. The initial rejection gave
+too much weight to unshowy living versus humility and too little
+to **reserved/modest behavior**, explicitly taught by 地味 and
+complete **1421490:2**. Add **地味/謙虚** as a defensible
+coarse-label precaution. A linked contrast preserves that
+unshowy appearance does not itself imply a nonboastful,
+receptive attitude; the Japanese words are not made identical.
+
+Also accept Claude's new optional **しびれる/感激** precaution:
+the actual 感激 article's thrilled/deep-emotion use overlaps
+the taught excited/enthralled **1569620:3**, supported by complete
+**1212360:1**. This is direct evidence, not propagation through
+感動. Sense 2 concerns electric shock, not emotional excitement.
+
+These two new guards bring the final proposed declarations to
+**92 across eighteen new cards**, fifteen cumulative additions
+from authored 77. Five accepted pairs are shared across initial
+reports, four are GPT-origin and six Claude-origin, including
+the maintained Q3 and new confirmation optional pair. The
+earlier thirteen-pair count and the first disagreement remain
+historical rather than being retroactively rewritten.
+
+Standalone-する frequency wording, duplicated TSV scope prose,
+extra electric-shock examples and tail idioms remain optional.
+Only 地味 and しびれる receive this follow-through; no TSV,
+source identity/index, primary title/reading, level, reused-card
+or kanji change. The source packet appends this round separately.
+Both original sessions will assess the actual two-article diff.
+All twenty rows remain draft until that confirmation completes.

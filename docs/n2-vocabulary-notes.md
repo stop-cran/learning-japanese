@@ -95,6 +95,15 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 35 confirmation:** Do not narrow a recorded behavioral
+  sense to outward appearance when adjudicating coarse quiz
+  labels. 地味's reserved/modest behavior can leave 謙虚 a
+  defensible English answer even though plain living does not
+  itself imply humility. Add the precaution and teach the
+  distinction. Preserve the first reviewers' disagreement;
+  a later correction is not retroactive initial agreement.
+  しびれる's emotional sense is index 3, not electric-shock
+  index 2; check exact indices before accepting an added pair.
 - **Batch 35 reconciliation:** An adverb label does not prohibit
   an attested しみじみとした + noun construction. Teach the
   positive pattern without inventing unrestricted standalone
