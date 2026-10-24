@@ -7984,3 +7984,58 @@ word articles**, **201 tracked reciprocal N2 pairs**,
 exclusions**, and deterministic manifest
 **`9aad8d823f69032d`** remain unchanged by closure.
 This closes batch 44, not the full 1,812-row expansion.
+
+## Batch 45 - drafted, independent review pending
+
+Source rows **N2:882-N2:901** map to twenty new articles:
+青少年, 整数, 清掃, 生存, 生長, 政党, 生年月日, 性能,
+整備, 成分, 性別, 正方形, 正門, 成立, 西暦, 背負う,
+赤道, せっかく, 接近 and 接する. The kana-primary
+せっかく article explicitly recognizes source 折角.
+All original CSV fields remain unchanged, including
+政党's misleading parenthetical member wording.
+背負う's restricted しょう/しょってる conceit sense is
+recorded separately from primary せおう selections.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-45.json)
+retains complete principal families, restrictions and
+one-based selections. Author reads covered **346 complete
+families/891 senses**, including **twenty principal
+families/38 senses**, **210 existing labels**, **131
+complete existing articles**, **37 component records**,
+and **27 actual public captures**. The original prepared/
+not-inspected plan stays separate from the completed-read
+receipt. Supplemental 応接 is an inspected complete
+family/body; absent exploratory 接す is explicitly
+recorded rather than replaced with fabricated evidence.
+Unselected broad captured bodies remain capture-only.
+These are author assertions, not independent findings.
+
+Six new primary-spelling N2 pairs receive reading-row
+and Common words links: 清/清掃 at セイ, 掃/清掃 at
+ソウ, 党/政党 at トウ, 門/正門 at モン, and 接 with
+接近 and 接する at セツ, explicitly explaining せっ.
+Additional 角/折角 navigation targets kana-primary
+せっかく and does not inflate that count. No kanji
+metadata or stroke cards change. Seven existing word
+articles gain only substantive backlinks: 青年, 小数,
+誕生日, 性, 四角, 四角い and 門. 成長 additionally
+gains a brief sourced comparison acknowledging plant
+growth and broader/older 生長 uses, not a rigid spelling
+partition.
+
+Definitions distinguish integers from their notation,
+main gates from every indoor doorway, enacted laws from
+their entry into force, the equator from the tropical
+zone, and ordinary effort/opportunity from necessarily
+wasted effort. Quiz precautions use direct pairs,
+ordinary secondary senses and actual English labels;
+政党/党's identical titles already deduplicate.
+No production quiz failure or exhaustive semantic
+certification is claimed.
+
+Coverage is **880 closed / 20 draft / 912 pending /
+0 unresolved**, mapped to **892 distinct articles:
+834 new / 58 reused**. There are **4,107 word articles**
+and **207 tracked primary reciprocal N2 pairs**.
+Independent GPT and Claude review is still pending.

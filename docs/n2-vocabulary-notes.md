@@ -95,6 +95,22 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 45 authoring:** A useful plant-growth focus does
+  not make 生長 historically plant-only or prohibit 成長
+  for plants. Source legal-age ranges for 青少年 need their
+  defining context, not a universal cutoff. 背負う's conceit
+  sense is restricted to しょう/しょってる; select ordinary
+  せおう senses separately and recognize that extra sense
+  explicitly. 接する is a special-class する verb with
+  adjacency, interpersonal, news, encounter, tangency and
+  transitive contact uses, not a free noun 接 plus regular
+  する. A usually-kana 折角/せっかく lesson can link both
+  components without including unwritten characters in its
+  metadata or counting alias navigation as a primary
+  reciprocal pair. Resolve exact existing filenames before
+  adding links or guards; dictionary spellings alone do
+  not prove a target article exists.
+
 - **Batch 44 review/reconciliation:** An apology card's
   thanks sense needs direct safeguards against each
   gratitude label; protecting ありがとう is not transitive.
