@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-31 review-closed; batch 32 drafted.** The target is all 1,812 source rows,
+**Batches 01-32 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 620 rows are review-closed; 20 are draft and 1,172 remain pending.
+The first 640 rows are review-closed; none are draft and 1,172 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -5117,7 +5117,10 @@ is still incomplete.
 
 ## Batch 32: N2:622-N2:641
 
-**Status:** draft; initial reviews reconciled, confirmation pending.
+**Status:** review-closed after sequential independent reviews,
+evidence-based reconciliation and original-session confirmations.
+
+### Batch 32 authored snapshot
 
 Scope: 撮影, 雑音, さっさと, 早速, 錆, 錆びる, 座布団,
 冷ます, 妨げる, 冷める, さようなら, 再来月, 再来週,
@@ -5178,9 +5181,9 @@ articles, three exact reuse claims, four-file related diff, twenty
 mappings, rubric and source access, in sequential processes. The
 initial evidence derivative removes only `quizGuardRationale`.
 
-Coverage is **620 closed / 20 draft / 1,172 pending / 0 unresolved**,
-mapped to 634 distinct articles: 592 new and 42 reused. This batch
-and the remaining list are not yet claimed review-closed.
+Authored-stage coverage was **620 closed / 20 draft / 1,172 pending /
+0 unresolved**, mapped to 634 distinct articles: 592 new and 42
+reused. Review closure had not yet been claimed at that stage.
 
 ### Batch 32 initial reviews and reconciliation
 
@@ -5232,3 +5235,58 @@ observations; GPT supplied citation precision. The register proposal
 needed evidence-based narrowing, not majority voting. These are
 sample observations, not a model benchmark. Confirmation and final
 provenance authentication remain pending.
+
+### Batch 32 confirmations and closure
+
+Corrected snapshot:
+`7c8589f091e37b73a1945e696624e32c1168d8e6`, direct child of
+`f6d1ef9efca4ffa026bcdb0fe4eb4e768ade64c8`.
+The original native sessions resumed sequentially against the same
+corrected snapshot and actual six-file/provenance diff:
+[GPT confirmation](n2-vocabulary-reviews/batch-32-gpt-confirmation.md),
+then [Claude confirmation](n2-vocabulary-reviews/batch-32-claude-confirmation.md).
+Both processes exited with zero edits.
+
+Both confirmed all six changed articles CLEAN on correctness, scoped
+coverage and comprehensibility, found no correction regression, and
+explicitly carried forward the eleven unchanged new articles, three
+reuse claims, four original narrow kanji edits and twenty mappings.
+GPT closed F01 and F02; Claude closed its shared quiz finding and
+the bounded farewell-context concern, explicitly reclassifying its
+broader unverified register proposal as optional.
+
+Claude corrected its initial tracking summary: additional senses
+belong to N2:623, N2:624 and N2:631; both 算数 senses were already
+selected at N2:640. This required no mapping change. The second
+すっと guard is supported specifically by the refreshed-feeling
+sense and actual teaching, not merely English smoothly/fluent
+similarity. Remaining idioms, derived forms and broader register
+surveys are optional; neither reviewer left a consequential
+unresolved claim in its assigned scope.
+
+Author-executed authentication checked both commit identities and
+parents, stop-cran authorship/committer identity and trailers,
+all frozen file hashes, common prompts and actual patches,
+both sanitized evidence derivatives, and preservation of every
+original authored evidence record with only appended corrections.
+The full pinned supplementary family contains three senses;
+current front matter has thirteen guarded cards / 61 declarations.
+Manifest hashes match committed content for all seventeen new
+articles and four related kanji files.
+
+All four archived reports were matched against native session events
+and usage records, including actual models, exact prompts,
+initial commit context, request counts, zero edits and report text:
+GPT session `91216ed4-b7d6-4e68-b6b2-8ed478070164`;
+Claude session `72bd5579-de5d-4830-9718-7ad6c3463816`.
+Only progress/title preambles and Markdown hard-break normalization
+were removed from archives; substantive reports remain unchanged.
+These are author provenance checks, not reviewer-executed Git,
+runtime quiz testing or native-speaker certification.
+
+Final coverage: **640 closed / 0 draft / 1,172 pending /
+0 unresolved**, mapped to 634 distinct articles: 592 new and
+42 reused. There are 3,865 word articles and 145 distinct tracked
+primary reciprocal N2 pairs for new articles. Existing 再 reuse
+examples remain separately verified. Overall N2 vocabulary coverage
+is still incomplete.
