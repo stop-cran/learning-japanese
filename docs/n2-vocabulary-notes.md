@@ -95,6 +95,13 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 36 confirmation:** Partial source inspection cannot
+  establish that a family is absent. Both confirmations found
+  洒落る1568670 already in the original packet; the repeated
+  capture was checked equal, leaving two genuinely new
+  demonstration families, not three. Preserve the useful
+  morphology finding separately from the withdrawn absence
+  premise and do not inflate model-contribution counts.
 - **Batch 36 reconciliation:** A curated comparison inventory
   is not an exhaustive title audit. Claude's wider title search
   found デモ outside the initial capture; actual protest-rally

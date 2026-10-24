@@ -5974,7 +5974,7 @@ exhaustive linguistic or native-speaker certification.
 
 ## Batch 36 - N2:702-N2:721
 
-**Status:** authored; independent review pending.
+**Status:** closed; independent reviews and bounded confirmations reconciled.
 
 Scope: 氏名, 締め切り, 締め切る, 湿る, ジャーナリスト,
 社会科学, しゃがむ, 蛇口, 弱点, 車庫, 車掌, 写生, 社説,
@@ -6116,3 +6116,78 @@ Current guards remain **17 cards / 57 directional declarations**:
 one added 集会/デモ edge and one removed 締め切る/止す edge.
 Original reviewers' bounded confirmations are still pending;
 rows remain draft and this is not closure.
+
+### Confirmation and closure
+
+The original **gpt-6.1-sol** and **claude-opus-5.5** sessions
+resumed sequentially against corrected committed snapshot
+`458105a0a9e6ecb00b0de1a127da4566f49b5bdc`. Both fully
+exited with zero file edits. Their complete final messages
+are preserved as [GPT confirmation](n2-vocabulary-reviews/batch-36-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-36-claude-confirmation.md).
+
+Both read the actual five-file patch and all five revised
+articles, reporting **CLEAN / CLEAN / CLEAN** for correctness,
+scoped coverage and comprehensibility. They carry forward,
+rather than claim a renewed full inspection of, the fifteen
+unchanged articles and four kanji edits. All twenty mappings
+remain CLEAN on all three facets; Claude also rechecked the
+affected mapping notes.
+
+**GPT36-01, B36-01 and B36-02 are resolved.** Both accept
+the direct 集会/デモ safeguard, removal of 締め切る/止す,
+the qualified notice wording and the 洒落た explanation.
+Both independently retrieved the actual public 洒落る verb
+body and distinguished public sense 2 from JMdict1568670:2.
+Claude explicitly withdraws its incorrect absence claim:
+1568670 was already in the original evidence.
+No actionable correction regression or consequential unresolved
+claim remains within the assigned scope.
+
+Claude's remaining suggestions are **optional**, not defects:
+the style sense's recorded adjectival use could be expanded,
+the N2:719 note could additionally name the related verb,
+and the notice explanation could add concrete signs.
+Current text rejects unrestricted joke-noun use, not every
+style-sense construction; it explicitly teaches the verb and
+keeps selected/additional indices consistent. The existing
+qualification and examples suffice for this scope. The
+baseline 水道 backlink remains outside required reciprocal
+primary N2 links. None warrants a new baseline-body edit,
+changed mapping or speculative quiz guard.
+
+The author authenticated all **four complete final reports**
+against the native sessions, exact common prompts, actual
+assistant/usage models and zero-edit metrics. Both frozen
+snapshots, Git parentage, normalized file hashes, actual patches,
+sanitized derivatives and 24 manifest entries per snapshot
+were checked. Original evidence is preserved with only the
+documented appended supplement; the actual exclusion delta is
+exactly +集会/デモ and -締め切る/止す. Named forbidden
+report/ledger/note reads were absent from the recorded
+read/search requests. These are author-executed provenance
+checks, not reviewer-executed Git or linguistic certification.
+
+Closure changes only coverage status and documentation.
+The confirmed teaching content and manifest remain unchanged:
+**6,569 files**, 396 images and 201 scene catalogs; manifest
+version **`c0ea692866bfe14c`**. Structural, baseline-preservation,
+reciprocal-link and coverage checks pass. Exclusions remain
+**17 guarded articles / 57 directional declarations**.
+
+Closed coverage: **720 closed / 0 draft / 1,092 pending /
+0 unresolved**, mapped to **713 articles: 668 new / 45 reused**.
+There are still **3,941 word articles** and **164 tracked
+primary reciprocal N2 kanji-word pairs**.
+
+**Limits and model-diversity conclusion:** confirmations
+inspect the changed scope and carry forward unchanged verdicts.
+Neither executes quiz draws or certifies native-speaker
+naturalness; public-source access outside the successful verb
+retrieval remains limited as described in the reports.
+The initial GPT-only navigation catch and Claude-only quiz
+and morphology catches remain complementary contributions;
+later agreement does not convert them into shared discoveries.
+The inaccurate absence premise is withdrawn, not silently
+credited as useful new evidence. This batch supports the
+value of different inspection strategies, not a model ranking.
