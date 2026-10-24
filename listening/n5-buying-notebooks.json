@@ -1,0 +1,221 @@
+{
+  "audio": {
+    "contentSha256": "003a34a1aeefcf970dd369624fe5fcf42f36740691fa55d6befdfd6ba65c0ab6",
+    "durationMs": 32153,
+    "path": "audio/n5-buying-notebooks.ogg",
+    "sha256": "3e53bc986932bc58c8f01961f230775f2a0764fbbe9c18215f5f99544ba06e0f",
+    "turns": [
+      {
+        "endMs": 3706,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 10833,
+        "id": "t2",
+        "startMs": 4056
+      },
+      {
+        "endMs": 16323,
+        "id": "t3",
+        "startMs": 11183
+      },
+      {
+        "endMs": 20911,
+        "id": "t4",
+        "startMs": 16673
+      },
+      {
+        "endMs": 28734,
+        "id": "t5",
+        "startMs": 21261
+      },
+      {
+        "endMs": 31953,
+        "id": "t6",
+        "startMs": 29084
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "3e53bc986932bc58c8f01961f230775f2a0764fbbe9c18215f5f99544ba06e0f",
+    "contentSha256": "003a34a1aeefcf970dd369624fe5fcf42f36740691fa55d6befdfd6ba65c0ab6",
+    "note": "Owner explicitly confirmed on 2026-10-24 that all six complete preview recordings were listened to against all three questions per passage, including dates/counters, pronunciation, clarity and speaker consistency. No corrections were requested. This records the actual listener declaration, not independent or automated linguistic certification.",
+    "reviewedOn": "2026-10-24",
+    "status": "approved"
+  },
+  "id": "n5-buying-notebooks",
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "A customer changes a color choice because of availability. Price per notebook and a 冊 quantity are directly stated, so the task does not require arithmetic.",
+  "questions": [
+    {
+      "answer": "a",
+      "evidence": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "explanation": "The customer changes from blue to three green notebooks.",
+      "id": "color",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "Green",
+          "rationale": "The customer changes from blue to three green notebooks."
+        },
+        {
+          "id": "b",
+          "label": "Blue",
+          "rationale": "There is only one blue notebook, so that first choice is changed."
+        },
+        {
+          "id": "c",
+          "label": "Red",
+          "rationale": "Red notebooks are not offered."
+        },
+        {
+          "id": "d",
+          "label": "White",
+          "rationale": "White notebooks are not offered."
+        }
+      ],
+      "prompt": "Which color does the customer finally choose?"
+    },
+    {
+      "answer": "b",
+      "evidence": [
+        "t3"
+      ],
+      "explanation": "緑を三冊 explicitly gives the requested quantity.",
+      "id": "quantity",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Four",
+          "rationale": "Four is not requested."
+        },
+        {
+          "id": "b",
+          "label": "Three",
+          "rationale": "緑を三冊 explicitly gives the requested quantity."
+        },
+        {
+          "id": "c",
+          "label": "One",
+          "rationale": "One is the blue stock count, not the green order."
+        },
+        {
+          "id": "d",
+          "label": "Two",
+          "rationale": "Two is not requested."
+        }
+      ],
+      "prompt": "How many green notebooks does the customer request?"
+    },
+    {
+      "answer": "c",
+      "evidence": [
+        "t4"
+      ],
+      "explanation": "一冊百二十円 states the unit price.",
+      "id": "unit-price",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "200 yen",
+          "rationale": "Two hundred is not stated."
+        },
+        {
+          "id": "b",
+          "label": "360 yen",
+          "rationale": "The question asks the stated price of one, not the purchase total."
+        },
+        {
+          "id": "c",
+          "label": "120 yen",
+          "rationale": "一冊百二十円 states the unit price."
+        },
+        {
+          "id": "d",
+          "label": "100 yen",
+          "rationale": "That leaves out 二十, twenty."
+        }
+      ],
+      "prompt": "How much is one green notebook?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "customer",
+      "ratePercent": -10,
+      "voice": "ja-JP-NanamiNeural"
+    },
+    {
+      "id": "staff",
+      "ratePercent": -5,
+      "voice": "ja-JP-KeitaNeural"
+    }
+  ],
+  "title": "Shopping for notebooks",
+  "topic": "Shopping for notebooks.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "customer",
+      "text": "この青いノートを三冊ください。",
+      "translation": "Three of these blue notebooks, please."
+    },
+    {
+      "id": "t2",
+      "speaker": "staff",
+      "text": "すみません、青いノートは一冊だけです。緑のノートはたくさんあります。",
+      "translation": "Sorry, there's only one blue notebook. We have plenty of green ones."
+    },
+    {
+      "id": "t3",
+      "speaker": "customer",
+      "text": "同じ色がいいですから、緑を三冊お願いします。",
+      "translation": "I'd like them all the same color, so three green ones, please."
+    },
+    {
+      "id": "t4",
+      "speaker": "staff",
+      "text": "はい。緑は一冊百二十円です。",
+      "translation": "Certainly. The green ones are one hundred and twenty yen each."
+    },
+    {
+      "id": "t5",
+      "speaker": "customer",
+      "text": "分かりました。袋はありますか。今日はかばんが小さいです。",
+      "translation": "All right. Do you have a bag? My bag is small today."
+    },
+    {
+      "id": "t6",
+      "speaker": "staff",
+      "text": "はい、この袋をどうぞ。",
+      "translation": "Yes, here's a bag."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "three books or notebooks",
+      "reading": "さんさつ",
+      "surface": "三冊"
+    },
+    {
+      "gloss": "one book or notebook",
+      "reading": "いっさつ",
+      "surface": "一冊"
+    },
+    {
+      "gloss": "bag",
+      "reading": "ふくろ",
+      "surface": "袋"
+    }
+  ]
+}

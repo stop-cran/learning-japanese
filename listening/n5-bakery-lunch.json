@@ -1,0 +1,223 @@
+{
+  "audio": {
+    "contentSha256": "c158f2151b5b19d6d8f08ded97acfe82440c83aa0c41b3403ec7c3a7c65aa3ec",
+    "durationMs": 36658,
+    "path": "audio/n5-bakery-lunch.ogg",
+    "sha256": "ec49670e0c1129ac814b5a1ab9604060bb25e4bdf03ac22b88dad3c18bfeccb3",
+    "turns": [
+      {
+        "endMs": 6861,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 13823,
+        "id": "t2",
+        "startMs": 7211
+      },
+      {
+        "endMs": 19899,
+        "id": "t3",
+        "startMs": 14173
+      },
+      {
+        "endMs": 25416,
+        "id": "t4",
+        "startMs": 20249
+      },
+      {
+        "endMs": 31886,
+        "id": "t5",
+        "startMs": 25766
+      },
+      {
+        "endMs": 36458,
+        "id": "t6",
+        "startMs": 32236
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "ec49670e0c1129ac814b5a1ab9604060bb25e4bdf03ac22b88dad3c18bfeccb3",
+    "contentSha256": "c158f2151b5b19d6d8f08ded97acfe82440c83aa0c41b3403ec7c3a7c65aa3ec",
+    "note": "Owner explicitly selected 'Approved all remaining 18 after listening, including the revised bakery' on 2026-10-24, after the complete-package review request including classroom teacher/library borrower role fit. This approves the exact replacement Nanami bakery recording and the other 17 final-batch recordings, not the superseded Aoi bakery audio. It records the listener declaration, not independent or automated linguistic certification.",
+    "reviewedOn": "2026-10-24",
+    "status": "approved"
+  },
+  "id": "n5-bakery-lunch",
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "An ordinary food purchase contrasts the desired item with what is available. A quantity and a preparation reason are explicit; no shopping convention supplies the answer.",
+  "questions": [
+    {
+      "answer": "b",
+      "evidence": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "explanation": "The customer accepts the sandwiches after curry bread is unavailable.",
+      "id": "food",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "Plain bread",
+          "rationale": "The selected item is egg sandwiches, not plain bread."
+        },
+        {
+          "id": "b",
+          "label": "Egg sandwiches",
+          "rationale": "The customer accepts the sandwiches after curry bread is unavailable."
+        },
+        {
+          "id": "c",
+          "label": "Curry bread",
+          "rationale": "That was the first request, but none is left."
+        },
+        {
+          "id": "d",
+          "label": "Rice balls",
+          "rationale": "Rice balls are not offered."
+        }
+      ],
+      "prompt": "What does the customer decide to buy?"
+    },
+    {
+      "answer": "c",
+      "evidence": [
+        "t3",
+        "t4"
+      ],
+      "explanation": "二つ is requested and confirmed.",
+      "id": "quantity",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Three",
+          "rationale": "Three is not the requested quantity."
+        },
+        {
+          "id": "b",
+          "label": "Four",
+          "rationale": "Four is not the requested quantity."
+        },
+        {
+          "id": "c",
+          "label": "Two",
+          "rationale": "二つ is requested and confirmed."
+        },
+        {
+          "id": "d",
+          "label": "One",
+          "rationale": "One is not the requested quantity."
+        }
+      ],
+      "prompt": "How many sandwiches does the customer order?"
+    },
+    {
+      "answer": "d",
+      "evidence": [
+        "t4",
+        "t5"
+      ],
+      "explanation": "お茶は家から持ってきました explains declining a drink.",
+      "id": "drink",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "The shop has no drinks",
+          "rationale": "The staff member offers drinks."
+        },
+        {
+          "id": "b",
+          "label": "Their child does not like tea",
+          "rationale": "No dislike is given as the reason."
+        },
+        {
+          "id": "c",
+          "label": "They plan to make coffee at home",
+          "rationale": "No future coffee plan is stated."
+        },
+        {
+          "id": "d",
+          "label": "They brought tea from home",
+          "rationale": "お茶は家から持ってきました explains declining a drink."
+        }
+      ],
+      "prompt": "Why does the customer not order a drink?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "customer",
+      "ratePercent": -5,
+      "voice": "ja-JP-NanamiNeural"
+    },
+    {
+      "id": "staff",
+      "ratePercent": -10,
+      "voice": "ja-JP-DaichiNeural"
+    }
+  ],
+  "title": "Buying lunch",
+  "topic": "Buying lunch.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "customer",
+      "text": "こんにちは。カレーパンはありますか。お昼に食べたいです。",
+      "translation": "Hello. Do you have curry bread? I'd like some for lunch."
+    },
+    {
+      "id": "t2",
+      "speaker": "staff",
+      "text": "すみません、今日はもうありません。卵のサンドイッチはありますよ。",
+      "translation": "Sorry, we don't have any left today. We have egg sandwiches."
+    },
+    {
+      "id": "t3",
+      "speaker": "customer",
+      "text": "じゃ、それを二つください。子供と一緒に食べます。",
+      "translation": "Then two of those, please. I'll eat with my child."
+    },
+    {
+      "id": "t4",
+      "speaker": "staff",
+      "text": "はい、二つですね。お飲み物もいかがですか。",
+      "translation": "Certainly, two. Would you like something to drink too?"
+    },
+    {
+      "id": "t5",
+      "speaker": "customer",
+      "text": "いいえ、お茶は家から持ってきました。袋に入れてください。",
+      "translation": "No, I brought tea from home. Please put the sandwiches in a bag."
+    },
+    {
+      "id": "t6",
+      "speaker": "staff",
+      "text": "分かりました。少しお待ちください。",
+      "translation": "Of course. Please wait a moment."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "curry-filled bread",
+      "reading": "カレーパン",
+      "surface": "カレーパン"
+    },
+    {
+      "gloss": "sandwich",
+      "reading": "サンドイッチ",
+      "surface": "サンドイッチ"
+    },
+    {
+      "gloss": "brought along",
+      "reading": "もってきました",
+      "surface": "持ってきました"
+    }
+  ]
+}

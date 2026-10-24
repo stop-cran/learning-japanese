@@ -1,0 +1,226 @@
+{
+  "audio": {
+    "contentSha256": "f35a3e75ff0f8715c3372e315770d95205377d5aaebea6acc8c3cc1a9061afe0",
+    "durationMs": 39721,
+    "path": "audio/n5-lost-umbrella.ogg",
+    "sha256": "35b3262bc0cc1358743c2d88bdc5054165cac517391ce53c0d77ea3b63237fb6",
+    "turns": [
+      {
+        "endMs": 8984,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 13992,
+        "id": "t2",
+        "startMs": 9334
+      },
+      {
+        "endMs": 20524,
+        "id": "t3",
+        "startMs": 14342
+      },
+      {
+        "endMs": 25007,
+        "id": "t4",
+        "startMs": 20874
+      },
+      {
+        "endMs": 34538,
+        "id": "t5",
+        "startMs": 25357
+      },
+      {
+        "endMs": 39521,
+        "id": "t6",
+        "startMs": 34888
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "35b3262bc0cc1358743c2d88bdc5054165cac517391ce53c0d77ea3b63237fb6",
+    "contentSha256": "f35a3e75ff0f8715c3372e315770d95205377d5aaebea6acc8c3cc1a9061afe0",
+    "note": "Owner explicitly selected 'Approved all remaining 18 after listening, including the revised bakery' on 2026-10-24, after the complete-package review request including classroom teacher/library borrower role fit. This approves the exact replacement Nanami bakery recording and the other 17 final-batch recordings, not the superseded Aoi bakery audio. It records the listener declaration, not independent or automated linguistic certification.",
+    "reviewedOn": "2026-10-24",
+    "status": "approved"
+  },
+  "id": "n5-lost-umbrella",
+  "image": {
+    "path": "images/listening-n5-lost-umbrella.webp",
+    "sha256": "6357721950591fdacf619a586c25cf8f6cacd6f66080a45b4c2a5e2449d7a351"
+  },
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "A simple lost-item exchange distinguishes two umbrellas by color and size. Past location and a pickup closing time are explicit, with no inference from a picture.",
+  "questions": [
+    {
+      "answer": "a",
+      "evidence": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "explanation": "The visitor describes it as 青くて、大きい and confirms the blue one.",
+      "id": "umbrella",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "A large blue umbrella",
+          "rationale": "The visitor describes it as 青くて、大きい and confirms the blue one."
+        },
+        {
+          "id": "b",
+          "label": "A small black umbrella",
+          "rationale": "That is the other umbrella the staff member mentions."
+        },
+        {
+          "id": "c",
+          "label": "A small blue umbrella",
+          "rationale": "The visitor says the umbrella is large."
+        },
+        {
+          "id": "d",
+          "label": "A large black umbrella",
+          "rationale": "The visitor says blue, not black."
+        }
+      ],
+      "prompt": "Which umbrella belongs to the visitor speaking now?"
+    },
+    {
+      "answer": "b",
+      "evidence": [
+        "t3"
+      ],
+      "explanation": "入口の椅子の下 is the stated past location.",
+      "id": "past-place",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Beside the door outside",
+          "rationale": "The visitor names a chair by the entrance, not an outside spot."
+        },
+        {
+          "id": "b",
+          "label": "Under a chair by the entrance",
+          "rationale": "入口の椅子の下 is the stated past location."
+        },
+        {
+          "id": "c",
+          "label": "On a chair by the window",
+          "rationale": "Neither on the chair nor by a window matches."
+        },
+        {
+          "id": "d",
+          "label": "Behind the counter",
+          "rationale": "No counter is named."
+        }
+      ],
+      "prompt": "Where did the visitor put the umbrella yesterday?"
+    },
+    {
+      "answer": "c",
+      "evidence": [
+        "t5",
+        "t6"
+      ],
+      "explanation": "The staff member gives six as today's closing time and asks her to come by then.",
+      "id": "closing",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "7 p.m.",
+          "rationale": "Seven would be after the stated closing time."
+        },
+        {
+          "id": "b",
+          "label": "8 p.m.",
+          "rationale": "Eight would be after the stated closing time."
+        },
+        {
+          "id": "c",
+          "label": "6 p.m.",
+          "rationale": "The staff member gives six as today's closing time and asks her to come by then."
+        },
+        {
+          "id": "d",
+          "label": "5 p.m.",
+          "rationale": "Five is not the stated limit."
+        }
+      ],
+      "prompt": "By what time should the younger sister come?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "visitor",
+      "ratePercent": -10,
+      "voice": "ja-JP-NanamiNeural"
+    },
+    {
+      "id": "staff",
+      "ratePercent": -5,
+      "voice": "ja-JP-KeitaNeural"
+    }
+  ],
+  "title": "Asking about an umbrella",
+  "topic": "Asking about an umbrella.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "visitor",
+      "text": "すみません。昨日、ここに傘を忘れました。青くて、大きい傘です。",
+      "translation": "Excuse me. I left an umbrella here yesterday. It is blue and large."
+    },
+    {
+      "id": "t2",
+      "speaker": "staff",
+      "text": "黒い小さい傘もありますが、こちらの青い傘ですか。",
+      "translation": "We also have a small black umbrella. Is it this blue one?"
+    },
+    {
+      "id": "t3",
+      "speaker": "visitor",
+      "text": "はい、それです。昨日は入口の椅子の下に置きました。",
+      "translation": "Yes, that's it. Yesterday I put it under the chair by the entrance."
+    },
+    {
+      "id": "t4",
+      "speaker": "staff",
+      "text": "分かりました。今、持ってきます。",
+      "translation": "All right. I'll bring it now."
+    },
+    {
+      "id": "t5",
+      "speaker": "visitor",
+      "text": "妹もここに傘を忘れました。妹は後で来ます。今日は何時までですか。",
+      "translation": "My younger sister also left an umbrella here. She'll come later. Until what time are you open today?"
+    },
+    {
+      "id": "t6",
+      "speaker": "staff",
+      "text": "夕方六時までです。それまでに来てください。",
+      "translation": "Until six in the evening. Please come by then."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "umbrella",
+      "reading": "かさ",
+      "surface": "傘"
+    },
+    {
+      "gloss": "entrance",
+      "reading": "いりぐち",
+      "surface": "入口"
+    },
+    {
+      "gloss": "younger sister",
+      "reading": "いもうと",
+      "surface": "妹"
+    }
+  ]
+}

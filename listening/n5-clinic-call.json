@@ -1,0 +1,223 @@
+{
+  "audio": {
+    "contentSha256": "60319bab2b450e32659e2eec61530a4ee3bd78e5c90878117dd5d0c2c40db8e2",
+    "durationMs": 33200,
+    "path": "audio/n5-clinic-call.ogg",
+    "sha256": "ec45a7aa214399a8bc136f0940a04cc9c8aec90f7c8a3164cb54b972ce07709e",
+    "turns": [
+      {
+        "endMs": 8137,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 13883,
+        "id": "t2",
+        "startMs": 8487
+      },
+      {
+        "endMs": 19942,
+        "id": "t3",
+        "startMs": 14233
+      },
+      {
+        "endMs": 24859,
+        "id": "t4",
+        "startMs": 20292
+      },
+      {
+        "endMs": 29334,
+        "id": "t5",
+        "startMs": 25209
+      },
+      {
+        "endMs": 33000,
+        "id": "t6",
+        "startMs": 29684
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "ec45a7aa214399a8bc136f0940a04cc9c8aec90f7c8a3164cb54b972ce07709e",
+    "contentSha256": "60319bab2b450e32659e2eec61530a4ee3bd78e5c90878117dd5d0c2c40db8e2",
+    "note": "Owner explicitly selected 'Approved all remaining 18 after listening, including the revised bakery' on 2026-10-24, after the complete-package review request including classroom teacher/library borrower role fit. This approves the exact replacement Nanami bakery recording and the other 17 final-batch recordings, not the superseded Aoi bakery audio. It records the listener declaration, not independent or automated linguistic certification.",
+    "reviewedOn": "2026-10-24",
+    "status": "approved"
+  },
+  "id": "n5-clinic-call",
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "An elementary appointment exchange changes a visit day because of closing hours. A clock time, a requested object and the final weekday are explicitly stated without medical terminology.",
+  "questions": [
+    {
+      "answer": "b",
+      "evidence": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "explanation": "Tomorrow is identified as Monday, and the patient chooses tomorrow morning.",
+      "id": "day",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "Monday evening",
+          "rationale": "The patient says 明日の朝, not evening."
+        },
+        {
+          "id": "b",
+          "label": "Monday morning",
+          "rationale": "Tomorrow is identified as Monday, and the patient chooses tomorrow morning."
+        },
+        {
+          "id": "c",
+          "label": "Today",
+          "rationale": "Today's service has already finished."
+        },
+        {
+          "id": "d",
+          "label": "Tuesday morning",
+          "rationale": "Tuesday is not the agreed day."
+        }
+      ],
+      "prompt": "When does the patient decide to visit?"
+    },
+    {
+      "answer": "c",
+      "evidence": [
+        "t3",
+        "t4"
+      ],
+      "explanation": "九時から answers the opening-time question.",
+      "id": "opening",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "10 a.m.",
+          "rationale": "Ten is not the opening time stated."
+        },
+        {
+          "id": "b",
+          "label": "Noon",
+          "rationale": "Noon is not the opening time stated."
+        },
+        {
+          "id": "c",
+          "label": "9 a.m.",
+          "rationale": "九時から answers the opening-time question."
+        },
+        {
+          "id": "d",
+          "label": "8 a.m.",
+          "rationale": "Eight is not the opening time stated."
+        }
+      ],
+      "prompt": "What time does the clinic open tomorrow?"
+    },
+    {
+      "answer": "d",
+      "evidence": [
+        "t5",
+        "t6"
+      ],
+      "explanation": "前に来た時のカード is the requested item.",
+      "id": "bring",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "A new photograph",
+          "rationale": "No photograph is requested."
+        },
+        {
+          "id": "b",
+          "label": "A written letter",
+          "rationale": "No letter is requested."
+        },
+        {
+          "id": "c",
+          "label": "A notebook",
+          "rationale": "No notebook is requested."
+        },
+        {
+          "id": "d",
+          "label": "The card from the previous visit",
+          "rationale": "前に来た時のカード is the requested item."
+        }
+      ],
+      "prompt": "What does the staff member ask the patient to bring?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "patient",
+      "ratePercent": -10,
+      "voice": "ja-JP-NanamiNeural"
+    },
+    {
+      "id": "staff",
+      "ratePercent": -5,
+      "voice": "ja-JP-KeitaNeural"
+    }
+  ],
+  "title": "A call to a clinic",
+  "topic": "A call to a clinic.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "patient",
+      "text": "すみません。今日、先生に会いたいです。今から行ってもいいですか。",
+      "translation": "Excuse me. I'd like to see the doctor today. May I come now?"
+    },
+    {
+      "id": "t2",
+      "speaker": "staff",
+      "text": "今日はもう終わりました。明日の月曜日は開いていますよ。",
+      "translation": "We've finished for today. We're open tomorrow, Monday."
+    },
+    {
+      "id": "t3",
+      "speaker": "patient",
+      "text": "じゃ、明日の朝、行きます。何時からですか。",
+      "translation": "Then I'll come tomorrow morning. What time do you open?"
+    },
+    {
+      "id": "t4",
+      "speaker": "staff",
+      "text": "九時からです。先に電話してから来てください。",
+      "translation": "From nine. Please phone before you come."
+    },
+    {
+      "id": "t5",
+      "speaker": "patient",
+      "text": "はい。何か持っていきますか。",
+      "translation": "Okay. Should I bring anything?"
+    },
+    {
+      "id": "t6",
+      "speaker": "staff",
+      "text": "前に来た時のカードを持ってきてください。",
+      "translation": "Please bring the card from your previous visit."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "is open",
+      "reading": "あいています",
+      "surface": "開いています"
+    },
+    {
+      "gloss": "first; beforehand",
+      "reading": "さきに",
+      "surface": "先に"
+    },
+    {
+      "gloss": "when you came before",
+      "reading": "まえにきたとき",
+      "surface": "前に来た時"
+    }
+  ]
+}

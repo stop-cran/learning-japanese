@@ -1,0 +1,223 @@
+{
+  "audio": {
+    "contentSha256": "a21c33f64218a6678c99358f9de9bc6a74f5e3945ba821ab15708dd3bf6b5f4c",
+    "durationMs": 36416,
+    "path": "audio/n5-swimming-day.ogg",
+    "sha256": "c52ff10edc98bcfc5cfcb4edb7962c46f6eb53c19e0d73e4ff344c56a5c1f1d4",
+    "turns": [
+      {
+        "endMs": 4440,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 10749,
+        "id": "t2",
+        "startMs": 4790
+      },
+      {
+        "endMs": 19232,
+        "id": "t3",
+        "startMs": 11099
+      },
+      {
+        "endMs": 23835,
+        "id": "t4",
+        "startMs": 19582
+      },
+      {
+        "endMs": 30476,
+        "id": "t5",
+        "startMs": 24185
+      },
+      {
+        "endMs": 36216,
+        "id": "t6",
+        "startMs": 30826
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "c52ff10edc98bcfc5cfcb4edb7962c46f6eb53c19e0d73e4ff344c56a5c1f1d4",
+    "contentSha256": "a21c33f64218a6678c99358f9de9bc6a74f5e3945ba821ab15708dd3bf6b5f4c",
+    "note": "Owner explicitly selected 'Approved all remaining 18 after listening, including the revised bakery' on 2026-10-24, after the complete-package review request including classroom teacher/library borrower role fit. This approves the exact replacement Nanami bakery recording and the other 17 final-batch recordings, not the superseded Aoi bakery audio. It records the listener declaration, not independent or automated linguistic certification.",
+    "reviewedOn": "2026-10-24",
+    "status": "approved"
+  },
+  "id": "n5-swimming-day",
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "A pool closure changes a day choice; a before/after sequence and a swimming duration are explicitly agreed. A suggested activity is distinguished from a later one.",
+  "questions": [
+    {
+      "answer": "b",
+      "evidence": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "explanation": "Saturday replaces Sunday because of the closure.",
+      "id": "day",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "Monday",
+          "rationale": "Monday is not proposed."
+        },
+        {
+          "id": "b",
+          "label": "Saturday",
+          "rationale": "Saturday replaces Sunday because of the closure."
+        },
+        {
+          "id": "c",
+          "label": "Sunday",
+          "rationale": "The pool is closed on the first proposed day."
+        },
+        {
+          "id": "d",
+          "label": "Friday",
+          "rationale": "Friday is not proposed."
+        }
+      ],
+      "prompt": "Which day do they finally choose for swimming?"
+    },
+    {
+      "answer": "c",
+      "evidence": [
+        "t3",
+        "t6"
+      ],
+      "explanation": "先に泳いで puts swimming before lunch.",
+      "id": "order",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Shop for swimming clothes",
+          "rationale": "No clothes-shopping plan is made."
+        },
+        {
+          "id": "b",
+          "label": "Visit a friend's home",
+          "rationale": "No home visit is proposed."
+        },
+        {
+          "id": "c",
+          "label": "Swim",
+          "rationale": "先に泳いで puts swimming before lunch."
+        },
+        {
+          "id": "d",
+          "label": "Eat lunch",
+          "rationale": "Lunch is after swimming."
+        }
+      ],
+      "prompt": "What do they plan to do first?"
+    },
+    {
+      "answer": "d",
+      "evidence": [
+        "t4",
+        "t5"
+      ],
+      "explanation": "一時間ぐらい is the proposed swimming duration.",
+      "id": "duration",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Half an hour",
+          "rationale": "Half an hour is not proposed."
+        },
+        {
+          "id": "b",
+          "label": "Two hours",
+          "rationale": "Two hours is not proposed."
+        },
+        {
+          "id": "c",
+          "label": "Three hours",
+          "rationale": "Three hours is not proposed."
+        },
+        {
+          "id": "d",
+          "label": "An hour",
+          "rationale": "一時間ぐらい is the proposed swimming duration."
+        }
+      ],
+      "prompt": "About how long do they plan to swim?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "friend",
+      "ratePercent": -5,
+      "voice": "ja-JP-AoiNeural"
+    },
+    {
+      "id": "partner",
+      "ratePercent": -10,
+      "voice": "ja-JP-DaichiNeural"
+    }
+  ],
+  "title": "Arranging a swim",
+  "topic": "Arranging a swim.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "friend",
+      "text": "日曜日、一緒にプールへ行きませんか。",
+      "translation": "Would you like to go to the pool together on Sunday?"
+    },
+    {
+      "id": "t2",
+      "speaker": "partner",
+      "text": "日曜日はプールが休みですよ。土曜日は開いています。",
+      "translation": "The pool is closed on Sunday. It's open on Saturday."
+    },
+    {
+      "id": "t3",
+      "speaker": "friend",
+      "text": "じゃ、土曜日にしましょう。先に泳いで、それから昼ご飯を食べませんか。",
+      "translation": "Then let's go on Saturday. Shall we swim first and have lunch afterwards?"
+    },
+    {
+      "id": "t4",
+      "speaker": "partner",
+      "text": "いいですね。どのくらい泳ぎますか。",
+      "translation": "Sounds good. How long shall we swim?"
+    },
+    {
+      "id": "t5",
+      "speaker": "friend",
+      "text": "一時間ぐらいにしましょう。あまり長く泳ぎたくないです。",
+      "translation": "Let's make it about an hour. I don't want to swim for too long."
+    },
+    {
+      "id": "t6",
+      "speaker": "partner",
+      "text": "はい。その後、プールの隣の店で食べましょう。",
+      "translation": "Okay. Afterwards, let's eat at the place next to the pool."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "swim; swimming",
+      "reading": "およいで",
+      "surface": "泳いで"
+    },
+    {
+      "gloss": "one hour",
+      "reading": "いちじかん",
+      "surface": "一時間"
+    },
+    {
+      "gloss": "for a long time",
+      "reading": "ながく",
+      "surface": "長く"
+    }
+  ]
+}

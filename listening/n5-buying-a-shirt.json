@@ -1,0 +1,223 @@
+{
+  "audio": {
+    "contentSha256": "cba8248814c6a931c122326e051d3599e8fbbd362db3ab02b75f3bd1dc214a90",
+    "durationMs": 36928,
+    "path": "audio/n5-buying-a-shirt.ogg",
+    "sha256": "432832f17c67c52849b0665d2e07c1619366183d193f483c155fbe4072360ef1",
+    "turns": [
+      {
+        "endMs": 7348,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 13115,
+        "id": "t2",
+        "startMs": 7698
+      },
+      {
+        "endMs": 19849,
+        "id": "t3",
+        "startMs": 13465
+      },
+      {
+        "endMs": 25199,
+        "id": "t4",
+        "startMs": 20199
+      },
+      {
+        "endMs": 31683,
+        "id": "t5",
+        "startMs": 25549
+      },
+      {
+        "endMs": 36728,
+        "id": "t6",
+        "startMs": 32033
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "432832f17c67c52849b0665d2e07c1619366183d193f483c155fbe4072360ef1",
+    "contentSha256": "cba8248814c6a931c122326e051d3599e8fbbd362db3ab02b75f3bd1dc214a90",
+    "note": "Owner explicitly selected 'Approved all remaining 18 after listening, including the revised bakery' on 2026-10-24, after the complete-package review request including classroom teacher/library borrower role fit. This approves the exact replacement Nanami bakery recording and the other 17 final-batch recordings, not the superseded Aoi bakery audio. It records the listener declaration, not independent or automated linguistic certification.",
+    "reviewedOn": "2026-10-24",
+    "status": "approved"
+  },
+  "id": "n5-buying-a-shirt",
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "A customer chooses between simple size/color descriptions and states the recipient. The exact price is spoken, with no calculation or unstated clothing knowledge.",
+  "questions": [
+    {
+      "answer": "d",
+      "evidence": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "explanation": "The offered white shirt is larger, and the customer chooses it.",
+      "id": "shirt",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "The smaller blue shirt",
+          "rationale": "The customer finds that blue shirt too small."
+        },
+        {
+          "id": "b",
+          "label": "A larger blue shirt",
+          "rationale": "No larger blue shirt is offered or selected."
+        },
+        {
+          "id": "c",
+          "label": "A smaller white shirt",
+          "rationale": "The white shirt is described as larger than the blue one."
+        },
+        {
+          "id": "d",
+          "label": "The larger white shirt",
+          "rationale": "The offered white shirt is larger, and the customer chooses it."
+        }
+      ],
+      "prompt": "Which shirt does the customer choose?"
+    },
+    {
+      "answer": "a",
+      "evidence": [
+        "t3",
+        "t4"
+      ],
+      "explanation": "千五百円 gives today's stated price.",
+      "id": "price",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "1,500 yen",
+          "rationale": "千五百円 gives today's stated price."
+        },
+        {
+          "id": "b",
+          "label": "1,000 yen",
+          "rationale": "That omits the five hundred."
+        },
+        {
+          "id": "c",
+          "label": "5,000 yen",
+          "rationale": "Five thousand is not the price."
+        },
+        {
+          "id": "d",
+          "label": "15,000 yen",
+          "rationale": "That adds a zero to the stated price."
+        }
+      ],
+      "prompt": "How much is the chosen shirt today?"
+    },
+    {
+      "answer": "b",
+      "evidence": [
+        "t1",
+        "t5"
+      ],
+      "explanation": "弟 is named both as recipient and in tomorrow's delivery plan.",
+      "id": "recipient",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "The customer's father",
+          "rationale": "The father is not the recipient."
+        },
+        {
+          "id": "b",
+          "label": "The customer's younger brother",
+          "rationale": "弟 is named both as recipient and in tomorrow's delivery plan."
+        },
+        {
+          "id": "c",
+          "label": "The customer",
+          "rationale": "The shirt is a gift for the younger brother."
+        },
+        {
+          "id": "d",
+          "label": "The customer's older brother",
+          "rationale": "弟 means younger, not older, brother."
+        }
+      ],
+      "prompt": "Who is the shirt for?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "customer",
+      "ratePercent": -5,
+      "voice": "ja-JP-AoiNeural"
+    },
+    {
+      "id": "staff",
+      "ratePercent": -10,
+      "voice": "ja-JP-DaichiNeural"
+    }
+  ],
+  "title": "Choosing a shirt",
+  "topic": "Choosing a shirt.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "customer",
+      "text": "弟にシャツを買いたいです。この青いのは少し小さいですね。",
+      "translation": "I'd like to buy a shirt for my younger brother. This blue one is a little small."
+    },
+    {
+      "id": "t2",
+      "speaker": "staff",
+      "text": "白いシャツはどうですか。青いのより大きいですよ。",
+      "translation": "How about the white shirt? It's larger than the blue one."
+    },
+    {
+      "id": "t3",
+      "speaker": "customer",
+      "text": "いいですね。白いのにします。いくらですか。",
+      "translation": "That looks good. I'll take the white one. How much is it?"
+    },
+    {
+      "id": "t4",
+      "speaker": "staff",
+      "text": "千五百円です。今日は安くなっています。",
+      "translation": "One thousand five hundred yen. It's reduced today."
+    },
+    {
+      "id": "t5",
+      "speaker": "customer",
+      "text": "じゃ、お願いします。明日、弟に渡します。",
+      "translation": "Then I'll take it, please. I'll give it to my younger brother tomorrow."
+    },
+    {
+      "id": "t6",
+      "speaker": "staff",
+      "text": "ありがとうございます。袋に入れますね。",
+      "translation": "Thank you. I'll put it in a bag."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "younger brother",
+      "reading": "おとうと",
+      "surface": "弟"
+    },
+    {
+      "gloss": "1,500 yen",
+      "reading": "せんごひゃくえん",
+      "surface": "千五百円"
+    },
+    {
+      "gloss": "hand over; give",
+      "reading": "わたします",
+      "surface": "渡します"
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "audio": {
+    "contentSha256": "133e548e2b45ba2177eedc0de76f340dd36f199b416bf356e8a214d5c9683d3f",
+    "durationMs": 38307,
+    "path": "audio/n5-home-movie.ogg",
+    "sha256": "e16a49b19eb4b898ac585b6932ad221fea3d71a22ec5522948508d8d046682ea",
+    "turns": [
+      {
+        "endMs": 6234,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 11599,
+        "id": "t2",
+        "startMs": 6584
+      },
+      {
+        "endMs": 18255,
+        "id": "t3",
+        "startMs": 11949
+      },
+      {
+        "endMs": 24475,
+        "id": "t4",
+        "startMs": 18605
+      },
+      {
+        "endMs": 31979,
+        "id": "t5",
+        "startMs": 24825
+      },
+      {
+        "endMs": 38107,
+        "id": "t6",
+        "startMs": 32329
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "e16a49b19eb4b898ac585b6932ad221fea3d71a22ec5522948508d8d046682ea",
+    "contentSha256": "133e548e2b45ba2177eedc0de76f340dd36f199b416bf356e8a214d5c9683d3f",
+    "note": "Owner explicitly selected 'Approved all remaining 18 after listening, including the revised bakery' on 2026-10-24, after the complete-package review request including classroom teacher/library borrower role fit. This approves the exact replacement Nanami bakery recording and the other 17 final-batch recordings, not the superseded Aoi bakery audio. It records the listener declaration, not independent or automated linguistic certification.",
+    "reviewedOn": "2026-10-24",
+    "status": "approved"
+  },
+  "id": "n5-home-movie",
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "Friends choose a film from simple preferences and agree on an order of activities. A request for a stated number of drinks tests a person counter without arithmetic.",
+  "questions": [
+    {
+      "answer": "d",
+      "evidence": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "explanation": "The friend accepts the preference for 面白い rather than a scary film.",
+      "id": "film",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "A scary film",
+          "rationale": "The host says scary films are difficult for them."
+        },
+        {
+          "id": "b",
+          "label": "A film about cooking",
+          "rationale": "No cooking-film preference is stated."
+        },
+        {
+          "id": "c",
+          "label": "A film about animals",
+          "rationale": "No animal-film preference is stated."
+        },
+        {
+          "id": "d",
+          "label": "An entertaining film",
+          "rationale": "The friend accepts the preference for 面白い rather than a scary film."
+        }
+      ],
+      "prompt": "What kind of film do they decide to watch?"
+    },
+    {
+      "answer": "a",
+      "evidence": [
+        "t3",
+        "t4"
+      ],
+      "explanation": "先に晩ご飯 puts dinner before watching.",
+      "id": "first",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Eat dinner",
+          "rationale": "先に晩ご飯 puts dinner before watching."
+        },
+        {
+          "id": "b",
+          "label": "Watch another film",
+          "rationale": "No earlier film is planned."
+        },
+        {
+          "id": "c",
+          "label": "Go for a walk",
+          "rationale": "No walk is planned."
+        },
+        {
+          "id": "d",
+          "label": "Visit a restaurant afterwards",
+          "rationale": "Dinner is before the film, and no restaurant is named."
+        }
+      ],
+      "prompt": "What do they agree to do before the film?"
+    },
+    {
+      "answer": "b",
+      "evidence": [
+        "t5",
+        "t6"
+      ],
+      "explanation": "三人分 directly states the number of people to provide for.",
+      "id": "people",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Five",
+          "rationale": "Five is not the stated number."
+        },
+        {
+          "id": "b",
+          "label": "Three",
+          "rationale": "三人分 directly states the number of people to provide for."
+        },
+        {
+          "id": "c",
+          "label": "Two",
+          "rationale": "The younger sister is also included."
+        },
+        {
+          "id": "d",
+          "label": "Four",
+          "rationale": "Four is not the stated number."
+        }
+      ],
+      "prompt": "For how many people should the friend bring drinks?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "friend",
+      "ratePercent": -10,
+      "voice": "ja-JP-NanamiNeural"
+    },
+    {
+      "id": "host",
+      "ratePercent": -5,
+      "voice": "ja-JP-KeitaNeural"
+    }
+  ],
+  "title": "Choosing a film at home",
+  "topic": "Choosing a film at home.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "friend",
+      "text": "今晩、映画を見ませんか。怖い映画を持っています。",
+      "translation": "Shall we watch a film tonight? I have a scary film."
+    },
+    {
+      "id": "t2",
+      "speaker": "host",
+      "text": "怖い映画は苦手です。面白い映画がいいです。",
+      "translation": "I'm not good with scary films. I'd prefer an entertaining one."
+    },
+    {
+      "id": "t3",
+      "speaker": "friend",
+      "text": "じゃ、面白いのを借りてきます。先に映画を見ますか。",
+      "translation": "Then I'll borrow an entertaining one. Shall we watch the film first?"
+    },
+    {
+      "id": "t4",
+      "speaker": "host",
+      "text": "先に晩ご飯を食べましょう。その後で、ゆっくり見たいです。",
+      "translation": "Let's eat dinner first. I'd like to watch it at leisure afterwards."
+    },
+    {
+      "id": "t5",
+      "speaker": "friend",
+      "text": "分かりました。飲み物も買っていきます。何人来ますか。",
+      "translation": "All right. I'll buy drinks and bring them too. How many people are coming?"
+    },
+    {
+      "id": "t6",
+      "speaker": "host",
+      "text": "私と妹とあなたで三人です。三人分お願いします。",
+      "translation": "There will be three of us: my younger sister, you, and me. Enough for three, please."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "scary",
+      "reading": "こわい",
+      "surface": "怖い"
+    },
+    {
+      "gloss": "not good at; uncomfortable with",
+      "reading": "にがて",
+      "surface": "苦手"
+    },
+    {
+      "gloss": "enough for three people",
+      "reading": "さんにんぶん",
+      "surface": "三人分"
+    }
+  ]
+}

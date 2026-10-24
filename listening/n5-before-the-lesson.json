@@ -1,0 +1,181 @@
+{
+  "audio": {
+    "contentSha256": "b1192c9672aa3ba0ca8516efd7fe5112e79bb88ed3a4206e6cf3c2475ab7dfdb",
+    "durationMs": 29774,
+    "path": "audio/n5-before-the-lesson.ogg",
+    "sha256": "1403e08806a93763449299f030a63d1025265badfda6f6a37559c999a31ba063",
+    "turns": [
+      {
+        "endMs": 11026,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 21557,
+        "id": "t2",
+        "startMs": 11376
+      },
+      {
+        "endMs": 29574,
+        "id": "t3",
+        "startMs": 21907
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "1403e08806a93763449299f030a63d1025265badfda6f6a37559c999a31ba063",
+    "contentSha256": "b1192c9672aa3ba0ca8516efd7fe5112e79bb88ed3a4206e6cf3c2475ab7dfdb",
+    "note": "Owner explicitly selected 'Approved all remaining 18 after listening, including the revised bakery' on 2026-10-24, after the complete-package review request including classroom teacher/library borrower role fit. This approves the exact replacement Nanami bakery recording and the other 17 final-batch recordings, not the superseded Aoi bakery audio. It records the listener declaration, not independent or automated linguistic certification.",
+    "reviewedOn": "2026-10-24",
+    "status": "approved"
+  },
+  "id": "n5-before-the-lesson",
+  "jlpt": 5,
+  "kind": "monologue",
+  "levelRationale": "A teacher gives short concrete instructions with てください, てから, a corrected page number and a stated collection place. The sequence is limited to two steps.",
+  "questions": [
+    {
+      "answer": "a",
+      "evidence": [
+        "t1"
+      ],
+      "explanation": "最初に explicitly introduces writing names.",
+      "id": "first-step",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "Write their names on the sheet",
+          "rationale": "最初に explicitly introduces writing names."
+        },
+        {
+          "id": "b",
+          "label": "Read the textbook",
+          "rationale": "Reading comes after writing names."
+        },
+        {
+          "id": "c",
+          "label": "Put the sheet on the teacher's desk",
+          "rationale": "That is for after the lesson."
+        },
+        {
+          "id": "d",
+          "label": "Write about an animal",
+          "rationale": "No written animal description is requested."
+        }
+      ],
+      "prompt": "What should the students do first?"
+    },
+    {
+      "answer": "b",
+      "evidence": [
+        "t2"
+      ],
+      "explanation": "The teacher corrects thirteen to twelve.",
+      "id": "page",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Page 20",
+          "rationale": "Twenty is not given."
+        },
+        {
+          "id": "b",
+          "label": "Page 12",
+          "rationale": "The teacher corrects thirteen to twelve."
+        },
+        {
+          "id": "c",
+          "label": "Page 13",
+          "rationale": "Thirteen is the number the teacher corrects."
+        },
+        {
+          "id": "d",
+          "label": "Page 2",
+          "rationale": "The final instruction says twelve, not two."
+        }
+      ],
+      "prompt": "Which page should the students read?"
+    },
+    {
+      "answer": "c",
+      "evidence": [
+        "t3"
+      ],
+      "explanation": "私の机の上 is the teacher's stated collection place.",
+      "id": "collection-place",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Inside their textbooks",
+          "rationale": "The textbook is for reading, not collecting the sheet."
+        },
+        {
+          "id": "b",
+          "label": "On a chair by the door",
+          "rationale": "No chair is named as a collection place."
+        },
+        {
+          "id": "c",
+          "label": "On the teacher's desk",
+          "rationale": "私の机の上 is the teacher's stated collection place."
+        },
+        {
+          "id": "d",
+          "label": "Under their own desks",
+          "rationale": "No instruction says to put it under a desk."
+        }
+      ],
+      "prompt": "Where should students put the sheet before leaving?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "teacher",
+      "ratePercent": -10,
+      "voice": "ja-JP-DaichiNeural"
+    }
+  ],
+  "title": "Before a lesson",
+  "topic": "Before a lesson.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "teacher",
+      "text": "皆さん、この紙を見てください。最初に、上に名前を書いてください。それから、教科書を読んでください。",
+      "translation": "Everyone, please look at this sheet. First, write your name at the top. Then read the textbook."
+    },
+    {
+      "id": "t2",
+      "speaker": "teacher",
+      "text": "読むのは十三ページです。あ、すみません、十二ページです。今日は動物について勉強します。",
+      "translation": "Read page thirteen. Oh, sorry, page twelve. Today we'll study animals."
+    },
+    {
+      "id": "t3",
+      "speaker": "teacher",
+      "text": "紙は授業の後で集めます。帰る前に、私の机の上に置いてください。",
+      "translation": "I'll collect the sheets after the lesson. Before you leave, please put them on my desk."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "first",
+      "reading": "さいしょに",
+      "surface": "最初に"
+    },
+    {
+      "gloss": "textbook",
+      "reading": "きょうかしょ",
+      "surface": "教科書"
+    },
+    {
+      "gloss": "collect",
+      "reading": "あつめます",
+      "surface": "集めます"
+    }
+  ]
+}

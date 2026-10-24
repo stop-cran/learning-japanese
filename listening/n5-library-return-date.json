@@ -1,0 +1,227 @@
+{
+  "audio": {
+    "contentSha256": "0f48aea7ea5994d562928601cd38280511bd3800efafe508efc70df2400a39f0",
+    "durationMs": 33552,
+    "path": "audio/n5-library-return-date.ogg",
+    "sha256": "f30924f2fea4518f4ce4f97dfabd32dbc03535fd137544c46c63a747d6444b8f",
+    "turns": [
+      {
+        "endMs": 6864,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 14798,
+        "id": "t2",
+        "startMs": 7214
+      },
+      {
+        "endMs": 21465,
+        "id": "t3",
+        "startMs": 15148
+      },
+      {
+        "endMs": 25121,
+        "id": "t4",
+        "startMs": 21815
+      },
+      {
+        "endMs": 28971,
+        "id": "t5",
+        "startMs": 25471
+      },
+      {
+        "endMs": 33352,
+        "id": "t6",
+        "startMs": 29321
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "f30924f2fea4518f4ce4f97dfabd32dbc03535fd137544c46c63a747d6444b8f",
+    "contentSha256": "0f48aea7ea5994d562928601cd38280511bd3800efafe508efc70df2400a39f0",
+    "note": "Owner explicitly selected 'Approved all remaining 18 after listening, including the revised bakery' on 2026-10-24, after the complete-package review request including classroom teacher/library borrower role fit. This approves the exact replacement Nanami bakery recording and the other 17 final-batch recordings, not the superseded Aoi bakery audio. It records the listener declaration, not independent or automated linguistic certification.",
+    "reviewedOn": "2026-10-24",
+    "status": "approved"
+  },
+  "id": "n5-library-return-date",
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "A borrower changes the return date because of a closure. The final date, closing time and location are separate explicit facts; no calendar calculation is required.",
+  "questions": [
+    {
+      "answer": "c",
+      "evidence": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "explanation": "The librarian asks for Thursday the seventh instead of closed Friday.",
+      "id": "return-date",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "Wednesday the 6th",
+          "rationale": "That date is not requested."
+        },
+        {
+          "id": "b",
+          "label": "Saturday the 9th",
+          "rationale": "That date is not requested."
+        },
+        {
+          "id": "c",
+          "label": "Thursday the 7th",
+          "rationale": "The librarian asks for Thursday the seventh instead of closed Friday."
+        },
+        {
+          "id": "d",
+          "label": "Friday the 8th",
+          "rationale": "That is the first plan, but the library is closed."
+        }
+      ],
+      "prompt": "When should the borrower come to return the book?"
+    },
+    {
+      "answer": "d",
+      "evidence": [
+        "t3",
+        "t4"
+      ],
+      "explanation": "七時まで gives the closing time.",
+      "id": "closing",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "6 p.m.",
+          "rationale": "Six is the borrower's expected arrival time."
+        },
+        {
+          "id": "b",
+          "label": "8 p.m.",
+          "rationale": "Eight is the original due-date number, not the closing hour."
+        },
+        {
+          "id": "c",
+          "label": "9 p.m.",
+          "rationale": "Nine is not the closing hour."
+        },
+        {
+          "id": "d",
+          "label": "7 p.m.",
+          "rationale": "七時まで gives the closing time."
+        }
+      ],
+      "prompt": "What time does the library close on Thursday?"
+    },
+    {
+      "answer": "a",
+      "evidence": [
+        "t5",
+        "t6"
+      ],
+      "explanation": "The librarian rejects the entrance box and asks for the desk.",
+      "id": "return-place",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "To the librarian's desk",
+          "rationale": "The librarian rejects the entrance box and asks for the desk."
+        },
+        {
+          "id": "b",
+          "label": "Into the entrance box",
+          "rationale": "いいえ rejects that proposed location."
+        },
+        {
+          "id": "c",
+          "label": "Back onto the shelf",
+          "rationale": "No shelf return is requested."
+        },
+        {
+          "id": "d",
+          "label": "To a desk upstairs",
+          "rationale": "No upstairs location is named."
+        }
+      ],
+      "prompt": "Where should the borrower take the book?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "borrower",
+      "ratePercent": -5,
+      "voice": "ja-JP-AoiNeural"
+    },
+    {
+      "id": "librarian",
+      "ratePercent": -10,
+      "voice": "ja-JP-DaichiNeural"
+    }
+  ],
+  "title": "Checking a return date",
+  "topic": "Checking a return date.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "borrower",
+      "spokenText": "この本はようかまでですね。ようかの金曜日に返しに来ます。",
+      "text": "この本は八日までですね。八日の金曜日に返しに来ます。",
+      "translation": "This book is due on the eighth, right? I'll come to return it on Friday the eighth."
+    },
+    {
+      "id": "t2",
+      "speaker": "librarian",
+      "spokenText": "すみません、金曜日は図書館が休みです。なのかの木曜日に来てください。",
+      "text": "すみません、金曜日は図書館が休みです。七日の木曜日に来てください。",
+      "translation": "Sorry, the library is closed on Friday. Please come on Thursday the seventh."
+    },
+    {
+      "id": "t3",
+      "speaker": "borrower",
+      "text": "木曜日ですね。仕事の後、六時ごろになります。",
+      "translation": "Thursday, right? It'll be around six, after work."
+    },
+    {
+      "id": "t4",
+      "speaker": "librarian",
+      "text": "はい、七時まで開いています。",
+      "translation": "Yes, we're open until seven."
+    },
+    {
+      "id": "t5",
+      "speaker": "borrower",
+      "text": "本は入口の箱に入れますか。",
+      "translation": "Should I put the book in the box at the entrance?"
+    },
+    {
+      "id": "t6",
+      "speaker": "librarian",
+      "text": "いいえ、こちらの机に持ってきてください。",
+      "translation": "No, please bring it to this desk."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "the seventh",
+      "reading": "なのか",
+      "surface": "七日",
+      "word": "七日"
+    },
+    {
+      "gloss": "the eighth",
+      "reading": "ようか",
+      "surface": "八日",
+      "word": "八日"
+    },
+    {
+      "gloss": "in order to return",
+      "reading": "かえしに",
+      "surface": "返しに"
+    }
+  ]
+}

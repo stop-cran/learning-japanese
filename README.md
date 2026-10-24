@@ -417,15 +417,19 @@ field is absent; older versions ignore word-level metadata. N4 study includes N5
 Known ambiguous word pairs are marked with [`quiz_exclusions`](docs/content-format.md#word-article);
 these require an exclusion-aware app version and do not imply that every possible ambiguity has been identified.
 
-## N5 listening pilot
+## N5 listening
 
-`listening/` contains twelve original passages (eight dialogues and four monologues) about introductions, ordering food,
-transport, travel, directions, shopping and everyday plans. Each has three English questions, explanations, transcript,
-translation and vocabulary tips. These are N5-oriented learning materials, not official JLPT exam items.
-The recordings use Microsoft Azure Speech's stock Nanami, Keita, Aoi and Daichi Japanese voices at a mildly slower -10% rate.
+`listening/` contains 36 original passages (26 dialogues and ten monologues), with 108 questions and about 20m35s of audio.
+The original twelve are preserved; the [24-passage expansion and coverage ledger](docs/listening-n5-expansion/coverage.json)
+broaden home, classroom, belongings, appointment, errand and recreation contexts. Each passage has three English questions,
+explanations, transcript, translation and vocabulary tips. These are N5-oriented learning materials, not official JLPT exam items
+or a guarantee of readiness. Two optional contextual illustrations provide unselected classroom/reception settings without supplying scored facts.
+The recordings use Microsoft Azure Speech's stock Nanami, Keita, Aoi and Daichi Japanese voices at mildly slower -10% or -5% rates.
 They are synthetic speech, not recordings of human actors. Each exact final recording has been listened to and approved
 against its questions. See the [authoring and approval contract](docs/listening-n5.md).
 Approved mono Ogg Opus recordings are in `audio/`; PCM caches and Azure configuration do not belong in this repository.
+The [audio](docs/listening-n5-expansion/audio-generation.json) and [image provenance](docs/listening-n5-expansion/images.json)
+record the expansion's exact outputs, owner approval and remaining device-integration limits.
 
 ## Onomatopoeia collection
 
@@ -447,7 +451,7 @@ See the [collection and source notes](docs/onomatopoeia.md).
 
 ### Generated images
 
-The pictures in `images/` are AI-generated with Azure OpenAI from original scenes in
+The word-scene pictures in `images/` are AI-generated with Azure OpenAI from original scenes in
 `tools/image_prompts.json` and `tools/onomatopoeia_scene_plan.json`, then compressed to 512 px WebP. Each illustrates one selected use, not
 every sense or a guarantee of unique quiz choices. The original 20-image pilot has owner approval.
 The new 100 received an assistant visual review and were **accepted by the owner for learning use

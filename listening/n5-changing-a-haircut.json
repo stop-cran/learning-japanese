@@ -1,0 +1,225 @@
+{
+  "audio": {
+    "contentSha256": "3eb6f58e558c7495da033bc833a9cb0a119f076fd1f3bb8c182094bc7476e16f",
+    "durationMs": 37802,
+    "path": "audio/n5-changing-a-haircut.ogg",
+    "sha256": "c5e09d55fcbb3e04f5f8f9c893b87e366e2e64020b5537672bff4f32ee73ac04",
+    "turns": [
+      {
+        "endMs": 8364,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 15131,
+        "id": "t2",
+        "startMs": 8714
+      },
+      {
+        "endMs": 21825,
+        "id": "t3",
+        "startMs": 15481
+      },
+      {
+        "endMs": 24592,
+        "id": "t4",
+        "startMs": 22175
+      },
+      {
+        "endMs": 30654,
+        "id": "t5",
+        "startMs": 24942
+      },
+      {
+        "endMs": 37602,
+        "id": "t6",
+        "startMs": 31004
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "c5e09d55fcbb3e04f5f8f9c893b87e366e2e64020b5537672bff4f32ee73ac04",
+    "contentSha256": "3eb6f58e558c7495da033bc833a9cb0a119f076fd1f3bb8c182094bc7476e16f",
+    "note": "Owner explicitly confirmed on 2026-10-24 that all six complete preview recordings were listened to against all three questions per passage, including dates/counters, pronunciation, clarity and speaker consistency. No corrections were requested. This records the actual listener declaration, not independent or automated linguistic certification.",
+    "reviewedOn": "2026-10-24",
+    "status": "approved"
+  },
+  "id": "n5-changing-a-haircut",
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "A short service exchange changes one appointment date because the shop is closed, while retaining a clearly stated time. A separate duration is not the start time.",
+  "questions": [
+    {
+      "answer": "a",
+      "evidence": [
+        "t1",
+        "t2",
+        "t3",
+        "t6"
+      ],
+      "explanation": "The customer accepts the sixteenth after the shop rules out the fifteenth.",
+      "id": "date",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "The 16th",
+          "rationale": "The customer accepts the sixteenth after the shop rules out the fifteenth."
+        },
+        {
+          "id": "b",
+          "label": "The 15th",
+          "rationale": "The shop is closed on the fifteenth."
+        },
+        {
+          "id": "c",
+          "label": "The 14th",
+          "rationale": "The fourteenth is not offered."
+        },
+        {
+          "id": "d",
+          "label": "The 17th",
+          "rationale": "The seventeenth is not offered."
+        }
+      ],
+      "prompt": "Which date is the appointment finally made for?"
+    },
+    {
+      "answer": "b",
+      "evidence": [
+        "t3",
+        "t4",
+        "t6"
+      ],
+      "explanation": "午後二時 is requested and confirmed.",
+      "id": "start",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "10 a.m.",
+          "rationale": "Ten o'clock is not proposed."
+        },
+        {
+          "id": "b",
+          "label": "2 p.m.",
+          "rationale": "午後二時 is requested and confirmed."
+        },
+        {
+          "id": "c",
+          "label": "2:30 p.m.",
+          "rationale": "Thirty minutes is the expected duration, not the arrival minute."
+        },
+        {
+          "id": "d",
+          "label": "3 p.m.",
+          "rationale": "Three o'clock is not the appointment time."
+        }
+      ],
+      "prompt": "What time should the customer arrive?"
+    },
+    {
+      "answer": "c",
+      "evidence": [
+        "t5",
+        "t6"
+      ],
+      "explanation": "三十分ぐらい answers the duration question.",
+      "id": "duration",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "20 minutes",
+          "rationale": "Twenty minutes is not stated."
+        },
+        {
+          "id": "b",
+          "label": "An hour",
+          "rationale": "An hour is not stated."
+        },
+        {
+          "id": "c",
+          "label": "30 minutes",
+          "rationale": "三十分ぐらい answers the duration question."
+        },
+        {
+          "id": "d",
+          "label": "15 minutes",
+          "rationale": "Fifteen belongs to the unavailable date, not the duration."
+        }
+      ],
+      "prompt": "About how long will the haircut take?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "customer",
+      "ratePercent": -5,
+      "voice": "ja-JP-AoiNeural"
+    },
+    {
+      "id": "staff",
+      "ratePercent": -10,
+      "voice": "ja-JP-DaichiNeural"
+    }
+  ],
+  "title": "Making an appointment",
+  "topic": "Making an appointment.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "customer",
+      "text": "こんにちは。髪を切りたいです。来週の十五日は空いていますか。",
+      "translation": "Hello. I'd like a haircut. Do you have an opening on the fifteenth next week?"
+    },
+    {
+      "id": "t2",
+      "speaker": "staff",
+      "text": "すみません、十五日は休みです。十六日はどうですか。",
+      "translation": "Sorry, we're closed on the fifteenth. How about the sixteenth?"
+    },
+    {
+      "id": "t3",
+      "speaker": "customer",
+      "text": "十六日でお願いします。午後二時は大丈夫ですか。",
+      "translation": "The sixteenth, please. Is two in the afternoon all right?"
+    },
+    {
+      "id": "t4",
+      "speaker": "staff",
+      "text": "はい、二時ですね。",
+      "translation": "Yes, two o'clock."
+    },
+    {
+      "id": "t5",
+      "speaker": "customer",
+      "text": "どのくらいかかりますか。その後で友達と会います。",
+      "translation": "How long will it take? I'm meeting a friend afterwards."
+    },
+    {
+      "id": "t6",
+      "speaker": "staff",
+      "text": "三十分ぐらいです。では、十六日の二時に来てください。",
+      "translation": "About thirty minutes. Then please come at two on the sixteenth."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "want to have one's hair cut",
+      "reading": "かみをきりたい",
+      "surface": "髪を切りたい"
+    },
+    {
+      "gloss": "the fifteenth",
+      "reading": "じゅうごにち",
+      "surface": "十五日"
+    },
+    {
+      "gloss": "the sixteenth",
+      "reading": "じゅうろくにち",
+      "surface": "十六日"
+    }
+  ]
+}

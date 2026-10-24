@@ -1,0 +1,221 @@
+{
+  "audio": {
+    "contentSha256": "c7f8c117553fb73546d3336719253993fabc8e666c83adec4d791c39f3e5bc97",
+    "durationMs": 38438,
+    "path": "audio/n5-picking-up-photos.ogg",
+    "sha256": "1a63ba2a40ad4b293658ef53e01d4c984c0732a1522e7bdfb075b4d417b828fe",
+    "turns": [
+      {
+        "endMs": 9054,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 14299,
+        "id": "t2",
+        "startMs": 9404
+      },
+      {
+        "endMs": 22275,
+        "id": "t3",
+        "startMs": 14649
+      },
+      {
+        "endMs": 27100,
+        "id": "t4",
+        "startMs": 22625
+      },
+      {
+        "endMs": 33439,
+        "id": "t5",
+        "startMs": 27450
+      },
+      {
+        "endMs": 38238,
+        "id": "t6",
+        "startMs": 33789
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "1a63ba2a40ad4b293658ef53e01d4c984c0732a1522e7bdfb075b4d417b828fe",
+    "contentSha256": "c7f8c117553fb73546d3336719253993fabc8e666c83adec4d791c39f3e5bc97",
+    "note": "Owner explicitly selected 'Approved all remaining 18 after listening, including the revised bakery' on 2026-10-24, after the complete-package review request including classroom teacher/library borrower role fit. This approves the exact replacement Nanami bakery recording and the other 17 final-batch recordings, not the superseded Aoi bakery audio. It records the listener declaration, not independent or automated linguistic certification.",
+    "reviewedOn": "2026-10-24",
+    "status": "approved"
+  },
+  "id": "n5-picking-up-photos",
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "A simple shop exchange contrasts an unsuccessful pickup yesterday with availability today. A number of prints and an explicitly requested object complete the practical task.",
+  "questions": [
+    {
+      "answer": "c",
+      "evidence": [
+        "t1",
+        "t2"
+      ],
+      "explanation": "今日はもうできています contrasts with yesterday's not-ready state.",
+      "id": "readiness",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "They were ready yesterday evening",
+          "rationale": "The customer says they were not ready on that visit."
+        },
+        {
+          "id": "b",
+          "label": "They have not been ordered yet",
+          "rationale": "The order was placed yesterday."
+        },
+        {
+          "id": "c",
+          "label": "They are ready today",
+          "rationale": "今日はもうできています contrasts with yesterday's not-ready state."
+        },
+        {
+          "id": "d",
+          "label": "They will be ready tomorrow",
+          "rationale": "The staff member says they are ready now."
+        }
+      ],
+      "prompt": "What does the staff member say about the photos now?"
+    },
+    {
+      "answer": "d",
+      "evidence": [
+        "t2",
+        "t3"
+      ],
+      "explanation": "六枚 is stated and confirmed.",
+      "id": "prints",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Four",
+          "rationale": "Four is the expected pickup hour."
+        },
+        {
+          "id": "b",
+          "label": "Five",
+          "rationale": "Five is not the stated print count."
+        },
+        {
+          "id": "c",
+          "label": "Eight",
+          "rationale": "Eight is not the stated print count."
+        },
+        {
+          "id": "d",
+          "label": "Six",
+          "rationale": "六枚 is stated and confirmed."
+        }
+      ],
+      "prompt": "How many photos are in the order?"
+    },
+    {
+      "answer": "a",
+      "evidence": [
+        "t4"
+      ],
+      "explanation": "The staff member specifically requests 昨日の紙.",
+      "id": "bring",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "The slip received yesterday",
+          "rationale": "The staff member specifically requests 昨日の紙."
+        },
+        {
+          "id": "b",
+          "label": "A new camera",
+          "rationale": "No camera is requested."
+        },
+        {
+          "id": "c",
+          "label": "An empty photo frame",
+          "rationale": "No frame is requested."
+        },
+        {
+          "id": "d",
+          "label": "A notebook with an address",
+          "rationale": "No notebook or written address is requested."
+        }
+      ],
+      "prompt": "What should the customer bring to the shop?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "customer",
+      "ratePercent": -10,
+      "voice": "ja-JP-NanamiNeural"
+    },
+    {
+      "id": "staff",
+      "ratePercent": -5,
+      "voice": "ja-JP-KeitaNeural"
+    }
+  ],
+  "title": "Collecting some photographs",
+  "topic": "Collecting some photographs.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "customer",
+      "text": "昨日お願いした写真は、もうできましたか。昨日の夕方にも来ましたが、まだでした。",
+      "translation": "Are the photos I ordered yesterday ready now? I came yesterday evening too, but they weren't ready yet."
+    },
+    {
+      "id": "t2",
+      "speaker": "staff",
+      "text": "はい、今日はもうできています。六枚ですね。",
+      "translation": "Yes, they're ready now today. Six photos, right?"
+    },
+    {
+      "id": "t3",
+      "speaker": "customer",
+      "text": "はい、六枚です。今、会社にいますから、四時ごろ取りに行きます。",
+      "translation": "Yes, six. I'm at work now, so I'll come to pick them up around four."
+    },
+    {
+      "id": "t4",
+      "speaker": "staff",
+      "text": "分かりました。昨日の紙を持ってきてください。",
+      "translation": "All right. Please bring yesterday's slip."
+    },
+    {
+      "id": "t5",
+      "speaker": "customer",
+      "text": "かばんに入っています。写真を全部見てもいいですか。",
+      "translation": "It's in my bag. May I look at all the photos?"
+    },
+    {
+      "id": "t6",
+      "speaker": "staff",
+      "text": "はい、店でどうぞ。お待ちしています。",
+      "translation": "Yes, please do, here in the shop. We look forward to seeing you."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "six flat items; here, photo prints",
+      "reading": "ろくまい",
+      "surface": "六枚"
+    },
+    {
+      "gloss": "go to collect",
+      "reading": "とりにいきます",
+      "surface": "取りに行きます"
+    },
+    {
+      "gloss": "yesterday's slip",
+      "reading": "きのうのかみ",
+      "surface": "昨日の紙"
+    }
+  ]
+}

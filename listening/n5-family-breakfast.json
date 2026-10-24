@@ -1,0 +1,222 @@
+{
+  "audio": {
+    "contentSha256": "1d1a97d6c1861e6fb50635040951780fb2de9484f5b1b436abed6895e14943d4",
+    "durationMs": 37305,
+    "path": "audio/n5-family-breakfast.ogg",
+    "sha256": "b0eb8889022406dc4e3e3a57ed2b237c941fc7c5e5fd8fba2366366ab7f456c5",
+    "turns": [
+      {
+        "endMs": 6931,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 12071,
+        "id": "t2",
+        "startMs": 7281
+      },
+      {
+        "endMs": 17574,
+        "id": "t3",
+        "startMs": 12421
+      },
+      {
+        "endMs": 24386,
+        "id": "t4",
+        "startMs": 17924
+      },
+      {
+        "endMs": 29833,
+        "id": "t5",
+        "startMs": 24736
+      },
+      {
+        "endMs": 37105,
+        "id": "t6",
+        "startMs": 30183
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "b0eb8889022406dc4e3e3a57ed2b237c941fc7c5e5fd8fba2366366ab7f456c5",
+    "contentSha256": "1d1a97d6c1861e6fb50635040951780fb2de9484f5b1b436abed6895e14943d4",
+    "note": "Owner explicitly selected 'Approved all remaining 18 after listening, including the revised bakery' on 2026-10-24, after the complete-package review request including classroom teacher/library borrower role fit. This approves the exact replacement Nanami bakery recording and the other 17 final-batch recordings, not the superseded Aoi bakery audio. It records the listener declaration, not independent or automated linguistic certification.",
+    "reviewedOn": "2026-10-24",
+    "status": "approved"
+  },
+  "id": "n5-family-breakfast",
+  "jlpt": 5,
+  "kind": "dialogue",
+  "levelRationale": "A breakfast conversation uses a simple availability constraint, a final food choice and an explicit request with a つ counter. No calculation or unstated household custom is needed.",
+  "questions": [
+    {
+      "answer": "c",
+      "evidence": [
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "explanation": "She chooses bread and a banana after learning there are no eggs.",
+      "id": "breakfast",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "Rice and an egg",
+          "rationale": "Rice is the father's choice and no eggs are available."
+        },
+        {
+          "id": "b",
+          "label": "Rice and a banana",
+          "rationale": "She chooses bread, not rice."
+        },
+        {
+          "id": "c",
+          "label": "Bread and a banana",
+          "rationale": "She chooses bread and a banana after learning there are no eggs."
+        },
+        {
+          "id": "d",
+          "label": "Bread and an egg",
+          "rationale": "That was her first wish, but eggs are unavailable."
+        }
+      ],
+      "prompt": "What does the daughter finally choose for breakfast?"
+    },
+    {
+      "answer": "d",
+      "evidence": [
+        "t5"
+      ],
+      "explanation": "私はご飯です is the father's own choice.",
+      "id": "father",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Bread",
+          "rationale": "Bread is the daughter's choice."
+        },
+        {
+          "id": "b",
+          "label": "An egg",
+          "rationale": "There are no eggs."
+        },
+        {
+          "id": "c",
+          "label": "A banana only",
+          "rationale": "The father states rice, not just a banana."
+        },
+        {
+          "id": "d",
+          "label": "Rice",
+          "rationale": "私はご飯です is the father's own choice."
+        }
+      ],
+      "prompt": "What will the father eat?"
+    },
+    {
+      "answer": "a",
+      "evidence": [
+        "t5",
+        "t6"
+      ],
+      "explanation": "二つください directly states the total requested.",
+      "id": "bananas",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Two",
+          "rationale": "二つください directly states the total requested."
+        },
+        {
+          "id": "b",
+          "label": "One",
+          "rationale": "One is for now, but she requests two in total."
+        },
+        {
+          "id": "c",
+          "label": "Three",
+          "rationale": "Three is not requested."
+        },
+        {
+          "id": "d",
+          "label": "Four",
+          "rationale": "Four is not requested."
+        }
+      ],
+      "prompt": "How many bananas does the daughter ask for altogether?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "father",
+      "ratePercent": -10,
+      "voice": "ja-JP-DaichiNeural"
+    },
+    {
+      "id": "daughter",
+      "ratePercent": -5,
+      "voice": "ja-JP-AoiNeural"
+    }
+  ],
+  "title": "Breakfast at home",
+  "topic": "Breakfast at home.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "father",
+      "text": "おはよう。朝ご飯はパンにしますか。ご飯もありますよ。",
+      "translation": "Good morning. Will you have bread for breakfast? We have rice too."
+    },
+    {
+      "id": "t2",
+      "speaker": "daughter",
+      "text": "パンがいいです。卵も食べたいです。",
+      "translation": "I'd like bread. I'd like an egg too."
+    },
+    {
+      "id": "t3",
+      "speaker": "father",
+      "text": "ごめん、卵はありません。バナナはあります。",
+      "translation": "Sorry, we don't have any eggs. We have bananas."
+    },
+    {
+      "id": "t4",
+      "speaker": "daughter",
+      "text": "じゃ、パンとバナナにします。お父さんは何を食べますか。",
+      "translation": "Then I'll have bread and a banana. What will you have, Dad?"
+    },
+    {
+      "id": "t5",
+      "speaker": "father",
+      "text": "私はご飯です。バナナはいくついりますか。",
+      "translation": "I'll have rice. How many bananas would you like?"
+    },
+    {
+      "id": "t6",
+      "speaker": "daughter",
+      "text": "二つください。一つは今食べて、一つは学校で食べます。",
+      "translation": "Two, please. I'll eat one now and one at school."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "egg",
+      "reading": "たまご",
+      "surface": "卵"
+    },
+    {
+      "gloss": "two items",
+      "reading": "ふたつ",
+      "surface": "二つ"
+    },
+    {
+      "gloss": "rice; here, cooked rice",
+      "reading": "ごはん",
+      "surface": "ご飯"
+    }
+  ]
+}

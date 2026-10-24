@@ -1,6 +1,7 @@
 # N5 listening content
 
-This contract implements the bounded [N5 listening pilot](https://github.com/stop-cran/kanji-cards-android/issues/50).
+This contract implements the bounded [N5 listening pilot](https://github.com/stop-cran/kanji-cards-android/issues/50)
+and its [existing-format expansion](https://github.com/stop-cran/learning-japanese/issues/37).
 It is not a JLPT exam or a policy for N4-N1. Write original, natural everyday dialogues and short monologues:
 greetings, simple orders, shopping, appointments, daily routines, transport and directions.
 Airport topics qualify only when the actual language and task are elementary.
@@ -14,6 +15,8 @@ Airport topics qualify only when the actual language and task are elementary.
 - Essential spoken vocabulary, grammar, reductions, speed, length and inference all contribute to an N5-oriented estimate.
   Written kanji lists do not determine listening difficulty. Do not silently reuse grammar-only classification.
 - Keep each character's voice consistent. Use a varied set of Japanese stock voices across the collection.
+  Audition perceived age and delivery against the role, especially a parent, teacher or worker. Different voice IDs do not
+  establish perceptually distinct speakers; do not reject a young-sounding voice merely because a child shops or helps at home.
   Start by auditioning approximately 10% slower speech; preserve phrasing, mora lengths and natural pauses.
 - Preserve written Japanese and translation. Put approved pronunciation expansions in `spokenText`; do not rewrite the displayed
   transcript merely to persuade TTS to pronounce a date, name or counter correctly.
@@ -99,3 +102,35 @@ An open new scored listening encounter reserves one shared allowance unit, witho
 Resume or explicitly discard it before starting another listening encounter in that source. Completing an already allowed
 encounter remains valid across midnight or settings changes; its final debit uses the submission date. Discard releases the
 reservation. Historical submitted responses are immutable even while subsequent unscored replay updates playback/exposure state.
+
+## Existing-format expansion (#37)
+
+The [coverage ledger](listening-n5-expansion/coverage.json) maps 24 new approved passage packages (72 questions)
+for [#37](https://github.com/stop-cran/learning-japanese/issues/37) to their runtime files in `listening/` and `audio/`.
+They add 13m41s of recordings, bringing the collection to 36 passages, 108 questions and approximately 20m35s.
+The twelve original pilot passages and their audio are unchanged; redundant contributor draft copies were removed
+only after the approved runtime packages matched their hashes.
+
+The ledger maps baseline and new questions to actual tested operations and independent situation keys. Its planning minimum
+is three contexts across two topic families for each named core facet, counting the existing pilot where appropriate.
+This is an authoring coverage check, not an official syllabus, a learning-effectiveness result or proof of N5 readiness.
+Candidate transfer pairs compare familiar skills in different scenarios; actual encounter history, not a contributor label,
+determines whether a learner has already seen them.
+
+The additions broaden household, classroom, belongings, appointment, errand and recreation situations. They retain the current
+English fixed-choice flow and cooldown behavior. Japanese-instruction/audio-choice formats belong to
+[the separate app feature](https://github.com/stop-cran/kanji-cards-android/issues/64); exercise-specific cooldown metadata
+is [TBD only](https://github.com/stop-cran/kanji-cards-android/issues/65).
+
+Two owner-accepted contextual images are enabled with the classroom-books and lost-umbrella passages. Both retain
+distinguishable reference areas in a directly inspected 256px preview, without selecting an answer. Actual phone/UI legibility
+remains unverified. A reference scene must not identify the selected object/location, reveal a sequence or supply a missing scored
+fact; essential map-reading tasks are outside this expansion.
+
+The owner listened to and approved six representative previews before the remaining batch was generated. Final review
+identified a parent voiced with a childlike perceived timbre in `n5-bakery-lunch`. At the owner's request, only the customer
+voice was changed from Aoi to Nanami; the script, questions, staff voice and rates were preserved. The owner then explicitly
+approved all remaining 18 after listening, including the replacement and the requested teacher/working-borrower casting checks.
+The [audio record](listening-n5-expansion/audio-generation.json) binds all 24 approvals to exact outputs and retains the
+rejected bakery rendition as superseded, not approved. This records listener declarations, not independent/native certification.
+Physical-device import, offline playback and scoring/resume integration of this expanded collection remain unverified.

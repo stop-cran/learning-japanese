@@ -1,0 +1,186 @@
+{
+  "audio": {
+    "contentSha256": "94956551a5ff621d970077ea2413dc2072fdf25d0120ec94e0cffcde909807b8",
+    "durationMs": 29174,
+    "path": "audio/n5-classroom-books.ogg",
+    "sha256": "a87d16e9c58601074a0f88b9266f0088aa31cf54f1ecc19b537425081c4fce6c",
+    "turns": [
+      {
+        "endMs": 11468,
+        "id": "t1",
+        "startMs": 150
+      },
+      {
+        "endMs": 19293,
+        "id": "t2",
+        "startMs": 11818
+      },
+      {
+        "endMs": 28974,
+        "id": "t3",
+        "startMs": 19643
+      }
+    ]
+  },
+  "audioReview": {
+    "audioSha256": "a87d16e9c58601074a0f88b9266f0088aa31cf54f1ecc19b537425081c4fce6c",
+    "contentSha256": "94956551a5ff621d970077ea2413dc2072fdf25d0120ec94e0cffcde909807b8",
+    "note": "Owner explicitly selected 'Approved all remaining 18 after listening, including the revised bakery' on 2026-10-24, after the complete-package review request including classroom teacher/library borrower role fit. This approves the exact replacement Nanami bakery recording and the other 17 final-batch recordings, not the superseded Aoi bakery audio. It records the listener declaration, not independent or automated linguistic certification.",
+    "reviewedOn": "2026-10-24",
+    "status": "approved"
+  },
+  "id": "n5-classroom-books",
+  "image": {
+    "path": "images/listening-n5-classroom-books.webp",
+    "sha256": "bcaf4df7eb9f0ad512d35e49bf17b2c72a5bce4cd2e5c7ff9b43c082830f10e5"
+  },
+  "jlpt": 5,
+  "kind": "monologue",
+  "levelRationale": "A teacher contrasts items to return with an item to keep and gives a simple before/after order. Location words establish the correct shelf without a required image.",
+  "questions": [
+    {
+      "answer": "d",
+      "evidence": [
+        "t1",
+        "t3"
+      ],
+      "explanation": "本を戻してから places returning books before moving chairs.",
+      "id": "first-action",
+      "mainPoint": true,
+      "options": [
+        {
+          "id": "a",
+          "label": "Read tomorrow's lesson",
+          "rationale": "No reading task is assigned now."
+        },
+        {
+          "id": "b",
+          "label": "Put notebooks on the shelf",
+          "rationale": "The teacher explicitly says not to return notebooks."
+        },
+        {
+          "id": "c",
+          "label": "Move the desks",
+          "rationale": "Only chairs, not desks, are to be moved."
+        },
+        {
+          "id": "d",
+          "label": "Return the classroom books",
+          "rationale": "本を戻してから places returning books before moving chairs."
+        }
+      ],
+      "prompt": "What should students do before putting their chairs away?"
+    },
+    {
+      "answer": "a",
+      "evidence": [
+        "t2"
+      ],
+      "explanation": "Notebooks should go into bags for use at home.",
+      "id": "notebooks",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Put them in their bags",
+          "rationale": "Notebooks should go into bags for use at home."
+        },
+        {
+          "id": "b",
+          "label": "Return them to the shelf",
+          "rationale": "戻さないでください rules that out."
+        },
+        {
+          "id": "c",
+          "label": "Leave them under the chairs",
+          "rationale": "Chairs go under desks, but notebooks go into bags."
+        },
+        {
+          "id": "d",
+          "label": "Give them to the teacher",
+          "rationale": "No notebook hand-in is requested."
+        }
+      ],
+      "prompt": "What should students do with their notebooks?"
+    },
+    {
+      "answer": "b",
+      "evidence": [
+        "t1"
+      ],
+      "explanation": "ドアの右 identifies the shelf's position.",
+      "id": "shelf",
+      "mainPoint": false,
+      "options": [
+        {
+          "id": "a",
+          "label": "Behind the teacher's desk",
+          "rationale": "The teacher's desk is not the reference point."
+        },
+        {
+          "id": "b",
+          "label": "To the right of the door",
+          "rationale": "ドアの右 identifies the shelf's position."
+        },
+        {
+          "id": "c",
+          "label": "To the left of the door",
+          "rationale": "Left reverses the stated relation."
+        },
+        {
+          "id": "d",
+          "label": "Under the window",
+          "rationale": "A window is not the reference point."
+        }
+      ],
+      "prompt": "Where is the book shelf?"
+    }
+  ],
+  "schemaVersion": 1,
+  "speakers": [
+    {
+      "id": "teacher",
+      "ratePercent": -5,
+      "voice": "ja-JP-AoiNeural"
+    }
+  ],
+  "title": "At the end of class",
+  "topic": "At the end of class.",
+  "turns": [
+    {
+      "id": "t1",
+      "speaker": "teacher",
+      "text": "今日の授業はここまでです。帰る前に、教室の本を棚に戻してください。棚はドアの右にあります。",
+      "translation": "That's all for today's lesson. Before going home, please return the classroom books to the shelf. The shelf is to the right of the door."
+    },
+    {
+      "id": "t2",
+      "speaker": "teacher",
+      "text": "ノートは戻さないでください。家で使いますから、かばんに入れてください。",
+      "translation": "Please don't put your notebooks back. You'll use them at home, so put them in your bags."
+    },
+    {
+      "id": "t3",
+      "speaker": "teacher",
+      "text": "本を戻してから、椅子を机の下に入れてください。それで終わりです。また明日。",
+      "translation": "After returning the books, push your chairs under the desks. Then you're finished. See you tomorrow."
+    }
+  ],
+  "vocabulary": [
+    {
+      "gloss": "please put back",
+      "reading": "もどしてください",
+      "surface": "戻してください"
+    },
+    {
+      "gloss": "shelf",
+      "reading": "たな",
+      "surface": "棚"
+    },
+    {
+      "gloss": "chair",
+      "reading": "いす",
+      "surface": "椅子"
+    }
+  ]
+}
