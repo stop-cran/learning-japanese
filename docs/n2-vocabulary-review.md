@@ -4672,7 +4672,7 @@ claims, not a benchmark or a guarantee against further misses.
 
 ## Batch 30: N2:582-N2:601
 
-**Status:** drafted; independent reviews pending.
+**Status:** closed after sequential independent reviews and confirmations.
 
 Scope: 混合, コンセント, 献立, こんばんは, サークル, 在学, 再三,
 祭日, 催促, 採点, 災難, 裁縫, 材木, サイレン, 逆さ, 逆様,
@@ -4833,3 +4833,66 @@ cards now declare 81 directional exclusions. No baseline card,
 primary identity, title, reading, level, mapping, selected/additional
 sense or kanji passage changes. Confirmation of this bounded
 follow-through remains pending; rows are still draft.
+
+### Final confirmation and closure
+
+The final follow-through snapshot is
+`c8eb5d54473f157441bef875774b22b47ae50048`.
+The [GPT follow-through](n2-vocabulary-reviews/batch-30-gpt-followup.md)
+and [Claude follow-through](n2-vocabulary-reviews/batch-30-claude-followup.md)
+resumed the original sessions sequentially. Both read the two
+complete changed articles, six actual comparison bodies, seven
+complete follow-through families and the actual narrow diff.
+Both confirmed all six additional direct guards and linked
+distinctions, retained their earlier resolutions and returned
+CLEAN for correctness, scoped coverage and comprehensibility of
+the changed articles and appended evidence. No actionable defect
+or consequential unresolved claim remains in that bounded scope.
+
+Claude revised its earlier optional planning/preparation judgment
+after considering the article's positively supported nonmeal
+teaching and all displayed meanings. Its suggestions for further
+signal examples and formal-plan phrasing remain optional polish;
+the pre-existing unguarded comparison between two unchanged
+baseline signal cards is outside this batch. Extra mixing/sports
+examples, spelling recognition and duplicate reading-row placement
+likewise remain nonblocking, not unreported closure requirements.
+
+The author authenticated all six reports and exact common prompts
+against the native sessions, actual model usage and zero-edit
+receipts. The three commits' parent chain, stop-cran author and
+committer identities, trailers, normalized file hashes, actual
+patches and equivalent evidence derivatives were checked.
+Original evidence remains exact: five first-correction families
+and seven follow-through families were appended. Current headers
+match the historical 71 declarations plus four and six direct
+additions: seventeen guarded cards and 81 directional declarations.
+
+The narrow reviewer patches omit the generated manifest diff;
+the author separately checked its committed hash and deterministic
+regeneration. These checks are not reviewer-executed Git/hash
+verification or linguistic certification. GPT independently
+retrieved the relevant Daijisen bodies; Claude disclosed its
+Weblio extraction limitation and relied on the inspected evidence
+and previously retrieved alternative nonmeal support. No app
+draws, frequency measurements, native-speaker certification or
+official modern JLPT syllabus coverage is claimed. Both processes
+have exited. The three specifically identified raw-fetch temporary
+paths were already absent; no broad cleanup was performed.
+
+Closure brings the pinned community-list coverage to **600 closed /
+0 draft / 1,212 pending / 0 unresolved**, mapped to 594 distinct
+articles: 556 new and 38 reused. There are 3,829 word articles and
+138 distinct tracked primary reciprocal N2 pairs. The remaining
+list is not claimed complete.
+
+**Final diversity assessment:** GPT uniquely supplied the initial
+plan-label guards; both reports supplied the nonmeal-context
+observation, regardless of its placement or severity. Claude's
+substance-wording suggestion improved the example without proving
+the former sentence impossible. Its tentative signal comparison
+and later optional labels led to supported direct guards after
+bounded investigation; GPT independently confirmed the changes.
+Using both families was useful on this sample, but their initial
+CLEAN judgments did not exhaust secondary-meaning ambiguities.
+This is a case record, not a general model ranking.
