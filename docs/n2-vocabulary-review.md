@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-32 review-closed.** The target is all 1,812 source rows,
+**Batches 01-33 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 640 rows are review-closed; batch 33 has 20 draft rows and 1,152 remain pending.
+The first 660 rows are review-closed; 1,152 remain pending and none are draft or unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -5293,8 +5293,8 @@ is still incomplete.
 
 ## Batch 33: N2:642-N2:661
 
-**Status:** independently reviewed; supported corrections implemented,
-original-session confirmations pending.
+**Status:** review-closed after sequential independent reviews,
+evidence-based corrections and original-session confirmations.
 
 ### Batch 33 authored snapshot
 
@@ -5432,4 +5432,64 @@ not GPT-unique discoveries. Claude supplied useful optional
 baseball-example and source-attribution polish. This batch shows
 reinforcing and differently prioritized observations, not a
 verified model-unique actionable defect, general ranking or
-measurement of eliminated model bias. Confirmation remains pending.
+measurement of eliminated model bias. These author adjudications
+still required the bounded confirmations recorded below.
+
+### Batch 33 confirmations, authentication and closure
+
+Both original sessions confirmed corrected commit
+`897af874e6803c47dc933b7a52f0bb2d55752e79`, directly following
+the authored snapshot. GPT exited before Claude started; both
+remained read-only, without delegation:
+
+- [GPT confirmation](n2-vocabulary-reviews/batch-33-gpt-confirmation.md):
+  `gpt-6.1-sol`.
+- [Claude confirmation](n2-vocabulary-reviews/batch-33-claude-confirmation.md):
+  `claude-opus-5.5`.
+
+Each read its own initial report, the complete correction patch,
+all eight changed articles, the three complete consequential
+comparison families and their actual 出/しまう/はきはき articles.
+Both confirmed all eight articles CLEAN on correctness, scoped
+coverage and comprehensibility, resolved their original findings
+and found no correction regression or consequential unresolved
+claim. The eleven unchanged new articles, metadata-enriched reuse,
+six original kanji edits and twenty mappings explicitly retain
+their earlier verdicts; this is not a renewed whole-article audit.
+
+Claude now classifies the two formerly optional missing guards as
+actionable and explicitly withdraws its speculative copying
+explanation. The additional しいん example and generic 寺院/神社
+category/title concern remain nonblocking. Neither agreement nor
+reclassification retroactively creates a unique initial discovery.
+
+GPT independently inspected actual Daijisen 四角/四角い entries.
+Claude inspected the 四角い body but only a truncated 四角
+sense-3 meta description; its full source-access qualification
+remains explicit. Confirmation does not imply reading the entire
+large evidence derivative, independent Git/hash execution, runtime
+quiz draws, frequency testing or native-speaker certification.
+
+Author-side authentication matched all four complete final reports
+to the corresponding native-session turns, both actual models,
+common prompts and zero-edit usage receipts. It verified the
+two commit identities, stop-cran author/committer details and
+trailers, frozen hashes, actual patches, exact corrected content
+scope, both sanitized derivatives and unchanged original evidence
+with only the appended correction record. All nineteen new and
+seven related content hashes match the corrected manifest.
+
+Mechanical closure changes only the twenty row statuses and
+their tracking hash/counts, packet status and closure records.
+Teaching content is unchanged from the confirmed snapshot.
+The deterministic manifest remains **6,512 files**, including
+396 images and 201 scene catalogs; version `5b9e1edd37000003`.
+The complete coverage/identity/restriction/link audit preserves
+baseline identities/readings/titles and the previously documented
+metadata and quiz exceptions.
+
+Final coverage: **660 closed / 0 draft / 1,152 pending /
+0 unresolved**, mapped to **654 distinct articles: 611 new and
+43 reused**. There are **3,884 word articles** and **152 distinct
+tracked reciprocal primary N2 kanji-word pairs**. This closes
+batch 33, not the remaining vocabulary expansion.
