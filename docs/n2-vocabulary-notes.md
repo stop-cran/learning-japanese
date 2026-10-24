@@ -95,6 +95,22 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 40 review:** Check complete acquaintance senses,
+  not only grammatical labels. ご存じ's second JMdict
+  sense explicitly includes an acquaintance, supporting
+  its direct guard against 知り合い. Also preserve both
+  sides of 素人: an amateur may be skilled, but the word
+  can describe a novice lacking experience or field skills.
+  A valid caution against equating amateurs with beginners
+  must not erase the affirmative inexperienced-person use.
+
+- **Batch 40 review scope:** Preserve an original report
+  even when its verdict table groups articles or its
+  evidence reading is narrower than requested. Record the
+  actual scope and request individual verdicts in bounded
+  confirmation; do not retroactively claim complete source
+  inspection or silently rewrite the archived report.
+
 - **Batch 40 authoring:** Reused kana cards still need
   cross-references for the kanji spelling they teach.
   Preserve しょうゆ's kana ID, N5 level and empty kanji

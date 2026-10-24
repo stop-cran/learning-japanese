@@ -6937,7 +6937,7 @@ Coverage becomes **780 closed / 0 draft / 1,032 pending /
 baseline identities under the recorded exceptions.
 This closes batch 39, not the overall vocabulary expansion.
 
-## Batch 40 - authored; independent review pending
+## Batch 40 - initial reviews reconciled; confirmation pending
 
 Source rows **N2:782-N2:801** cover 消耗, 醤油, 省略, 初級,
 助教授, 食塩, 職人, 初旬, 書籍, 食器, ショップ, 書店,
@@ -7023,13 +7023,96 @@ narrow level/reuse rules. The deterministic manifest is
 **`58f07e0cea999d04`**: **6,642 assets = 6,045 files + 396
 images + 201 scenes**.
 
-Independent GPT and Claude reviews and evidence-based
-reconciliation remain pending. A valid draft or authored
-commit is not review closure. No model-diversity conclusion
-is claimed at this stage; the overall expansion remains open.
+The authored snapshot and its counts above are preserved
+as the initial state. A valid draft or authored commit is
+not review closure; the overall expansion remains open.
 
 書店 was already committed entirely with CRLF. Its exact
 byte delta inserts only `jlpt: 2` with the same line ending.
 The whitespace check permits CR-at-EOL for that file only;
 all other whitespace checks remain enabled. No unrelated
 line-ending normalization is included.
+
+### Initial independent reviews and bounded corrections
+
+The native [GPT initial report](n2-vocabulary-reviews/batch-40-gpt-initial.md)
+and [Claude initial report](n2-vocabulary-reviews/batch-40-claude-initial.md)
+reviewed the same committed snapshot
+`5769c83f86c2c719c8d38a4f6892cfeee848aab5`.
+Actual models were **gpt-6.1-sol** and **claude-opus-5.5**,
+run sequentially with zero edits; each exited before the
+next substantive work. Native events authenticate their
+exact prompts, original commit, actual models, restricted
+tools and complete final-message archives. Initial access
+excluded the author's quiz rationale and other reports.
+These author-executed provenance checks are not
+reviewer-executed Git verification.
+
+Both read all sixteen new articles, the eight-file related
+diff, narrow reuses and unchanged 籍 relationship. Their
+source depths differ: GPT read the complete compact
+121-family/230-sense renderings, all 34 component records,
+labels, 26 public lexical captures, the MEXT representation
+and 59 comparison bodies. Claude used targeted family and
+JSON reads and public renderings; it did not read the
+supplementary family rendering, snapshots, levels/confusable
+guides or audit the 34 component records. Its original
+verdict table groups fourteen CLEAN articles rather than
+giving sixteen separate rows. The archive is unchanged;
+confirmation requests individual rows and explicit
+inherited-versus-newly-read scope.
+
+All three formal findings have bounded corrections pending
+confirmation:
+
+| Observation | Adjudication |
+|---|---|
+| GPT B40-GPT-01: 食器 / 料理 | Add a direct guard for the polysemous English dish/dishes labels. The Japanese utensil/food distinction remains correct; this is a conservative static safeguard, not a reproduced quiz failure. |
+| Claude B40-F1: 知り合い / ご存じ | Add a direct guard. Complete JMdict 1593570:2 explicitly includes acquaintance, and the existing ご存じ body teaches it; the support is stronger than a state/person analogy alone. |
+| Claude B40-F2: 素人 inexperienced use | Add one affirmative Meaning sentence about a novice lacking experience or field skills. Retain the 初心者 distinction and the possibility of skilled amateurs. |
+
+Claude's optional 食器 / 器具 observation is adopted after
+checking the actual utensil label, complete family and
+existing article. Shared 器 alone would not justify it.
+The optional 職人 / 名人 pair is not added: the inspected
+families and 名人 article distinguish a skilled occupational
+role from exceptional mastery; a shared skills topic or 人
+does not establish equivalent answer labels. This does not
+claim those descriptions can never overlap in context.
+
+The optional 知り合いになる construction and 消耗 reading
+history are nonessential expansions, not demonstrated
+defects. Claude's explicitly unchecked 白髪 Joyo-appendix
+recollection is not promoted into a verified classification
+finding. Existing whole-word guidance and metadata remain;
+no new appendix or etymological claim is made.
+
+The correction supplement preserves the original packet,
+hypotheses and **11 / 34** declarations. It appends inspected
+complete correction families with duplicates checked equal,
+four complete existing comparison bodies and exact current
+declarations. The correction capture has **12 complete
+families / 18 senses**: seven duplicate families are checked
+equal, and **five new families / nine senses** yield an
+inspected union of **126 / 239**, including the twenty
+principal families. The four new body inspections produce
+**70 distinct complete existing bodies**; the distinct
+inspected label union is **114**. These are author
+inspection counts, not independent-reviewer reread counts.
+Corrected state has **12 guarded new articles /
+37 directional declarations**: three added pairs, with no
+baseline exclusion deletion or title change. Mappings,
+selected senses, levels and reciprocal relationships remain
+unchanged.
+
+Comparing equivalent observations across both entire reports,
+GPT contributed the English dish ambiguity; Claude contributed
+the acquaintance safeguard, inexperienced-person coverage and
+optional utensil safeguard. The other model did not identify
+those same issues elsewhere in its report. This is useful
+complementary signal on one shared batch, not evidence of a
+general model ranking or equal source-inspection depth.
+Bounded sequential confirmations remain pending.
+
+The corrected deterministic manifest is
+**`200bdecf86266b25`**, with the asset count unchanged.
