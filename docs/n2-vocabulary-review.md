@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-28 review-closed.** The target is all 1,812 source rows,
+**Batches 01-31 review-closed; batch 32 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 560 rows are review-closed; none are draft and 1,252 remain pending.
+The first 620 rows are review-closed; 20 are draft and 1,172 remain pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -5114,3 +5114,70 @@ Final coverage: **620 closed / 0 draft / 1,192 pending /
 39 reused. The repository has 3,848 word articles and 141 distinct
 tracked primary reciprocal N2 pairs. Overall N2 vocabulary coverage
 is still incomplete.
+
+## Batch 32: N2:622-N2:641
+
+**Status:** draft; independent review and reconciliation pending.
+
+Scope: 撮影, 雑音, さっさと, 早速, 錆, 錆びる, 座布団,
+冷ます, 妨げる, 冷める, さようなら, 再来月, 再来週,
+再来年, サラリーマン, 騒がしい, さわやか, 三角, 算数, 酸性.
+
+Seventeen standalone additions bring the collection to 3,865 word
+articles. Exact existing 再来月, 再来週 and 再来年 are reused
+unchanged at their easier N4, N4 and N5 levels. Their calendar-period
+meanings, component links and existing reciprocal 再 examples remain.
+Kana-primary さわやか explicitly teaches 爽やか.
+
+Four useful new reciprocal pairs are 布/座布団, 団/座布団,
+角/三角 and 算/算数. The audit now tracks 145 distinct primary
+N2 pairs for new articles; the three reused 再 examples are verified
+separately, not added to that new-article count. All existing reading
+rows remain. Missing primary 撮, 影, 錆, 妨, 騒 and 酸 remain
+metadata; no kanji/stroke cards are fabricated.
+
+The [source packet](n2-vocabulary-batch-sources/batch-32.json)
+preserves twenty raw rows, twenty complete principal families
+containing 30 indexed senses, 123 complete comparison families
+containing 284 indexed senses, 90 actual existing labels/full
+articles and 35 complete component records. All captured family
+renderings, full comparison bodies and public containers were read
+through their boundaries. Counts come from parsed records and body
+markers, with exact capture hashes and physical-line counts.
+
+Sixteen actual public lexical containers yielded positive receipts.
+The さっさと Weblio extraction failed; a subsequent Kotobank rendering
+showed attribution without a definition. Neither is positive lexical
+verification. That article stays within current JMdict's prompt/brisk
+action and indifferent/cold-manner senses, without an unsupported
+universal command-register rule. Public observations are original
+concise paraphrases, not copied dictionary bodies.
+
+Practical teaching distinguishes photography activity from finished
+media without denying 写真's photography sense. 雑音 includes
+figurative criticism. Prompt timing is not simply vehicle speed.
+錆's raw color gloss is preserved separately from the current rust
+family and the distinct color word 錆色. 座布団 uses the whole
+ateji-marked 布団, with voicing; 布団's meditation-cushion sense
+prevents an absolute bedding/cushion boundary.
+
+冷ます and 冷める have explicit transitivity, conjugation and
+physical/emotional uses. 妨げる need not prevent an activity
+completely. The conventional さようなら classification does not
+claim an exclusively native origin for every older phrase element.
+サラリーマン is explicit wasei-eigo, not every paid occupation.
+騒がしい includes troubled times, さわやか includes voice/speech,
+算数 includes quantities and shapes, and 酸性 uses の before nouns.
+
+Thirteen new cards declare 59 directional quiz exclusions based on
+direct ordinary-meaning and actual-label judgments; no baseline
+declaration changes. These judgments remain for independent
+assessment, not an exhaustive synonym certification.
+Both model families will receive the same frozen snapshot, seventeen
+articles, three exact reuse claims, four-file related diff, twenty
+mappings, rubric and source access, in sequential processes. The
+initial evidence derivative removes only `quizGuardRationale`.
+
+Coverage is **620 closed / 20 draft / 1,172 pending / 0 unresolved**,
+mapped to 634 distinct articles: 592 new and 42 reused. This batch
+and the remaining list are not yet claimed review-closed.

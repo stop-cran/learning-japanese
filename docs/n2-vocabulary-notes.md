@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 32 authoring:** Check the complete lexical family behind
+  a comparison card's introductory focus. 布団 also has a Zen
+  meditation-cushion sense, 写真 includes photography, and 写す
+  includes photographing. Useful teaching contrasts must not become
+  false absolute sense boundaries.
+- **Batch 32 authoring:** A source gloss can differ from the current
+  dictionary family: 錆's raw "rust (colour)" remains in the source
+  index, while current 錆 teaches rust and 錆色 is separately indexed.
+  Do not invent a principal sense to make the old gloss appear exact.
+- **Batch 32 authoring:** Distinguish the audit's new-article
+  reciprocal-pair count from links supporting unchanged reused
+  articles. Four new pairs bring that count to 145; three existing
+  再 examples support reuse but do not increment it.
 - **Batch 31 confirmation:** Compute provenance volumes from the
   actual parsed families and rendering, not an unmeasured number
   carried in working notes. GPT caught a false 137-sense claim:
