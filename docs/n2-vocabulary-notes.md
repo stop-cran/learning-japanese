@@ -105,6 +105,10 @@ evidence and learning impact; issue creation requires authorization.
   スケジュール and 時間割 directly rather than relying on their
   existing indirect links through ダイヤ. Independent reviewers found
   complementary issues, with unequal actual comparison-body reading depth.
+  Claude's confirmation then misassigned four source-ID/article labels despite
+  correct substantive reads. Preserve that report and its same-session corrected
+  addendum; check each final verdict's exact source-ID/article association against
+  the pinned mapping, not merely twenty source IDs and CLEAN cells.
 
 - **Batch 50 authoring:** Preserve recognized rare aliases without promoting
   them to preferred spellings: source タイア maps to タイヤ. Keep additional

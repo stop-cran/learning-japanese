@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-49 review-closed.** The target is all 1,812 source rows,
+**Batches 01-50 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 980 rows are review-closed; batch 50's twenty rows are draft,
+The first 1,000 rows are review-closed; none are draft,
 812 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,7 +28,7 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 50: N2:982-N2:1001
 
-**Status:** initial reviews authenticated; corrections awaiting bounded confirmation.
+**Status:** closed after authenticated independent reviews, reconciliation and bounded confirmation.
 
 Scope: 体操, 大分 (reused だいぶ), 大木, 題名, 代名詞, タイア
 (normalized タイヤ), ダイヤグラム, ダイヤモンド, ダイヤル, 対立,
@@ -94,7 +94,53 @@ complete selected/supplemental family renderings, but GPT read 113
 additional complete old bodies while Claude read four and mostly labels
 for the rest. This is useful complementary signal on this sample, not
 a controlled model-bias experiment or a general model ranking.
-Confirmation and closure are not claimed yet.
+GPT explicitly acknowledges that its initial CLEAN assessments missed the
+schedule guards and bamboo mapping; Claude accepts GPT's excessive PE guard
+finding. These corrections remain complementary initial contributions,
+not new independent discoveries during shared-adjudication confirmation.
+
+### Batch 50 - confirmed and closed
+
+Both original sessions confirmed correction commit
+`bfc6d3d3e00525bc21aac101af8d06d7241b88f4`, parent
+`8c71fae49b615f2d6f0de34c6b00d1b20d17dd7e`, sequentially and without edits.
+Both completely reread the three changed articles, actual correction patch,
+two new complete comparison families, three captured old bodies and precise
+original relevant dictionary passages. Both accept all three corrections,
+count 72 declarations on thirteen new cards and find no new actionable defect.
+Unchanged whole-body judgments are inherited, not claimed as new full reads.
+
+- [GPT confirmation](n2-vocabulary-reviews/batch-50-gpt-confirmation.md):
+  actual `gpt-6.1-sol`; twenty correctly mapped all-CLEAN three-facet rows.
+- [Claude confirmation](n2-vocabulary-reviews/batch-50-claude-confirmation.md):
+  actual `claude-opus-5.5`; substantive corrections accepted, but four
+  source-ID/article labels in its table were misassigned.
+- [Claude corrected addendum](n2-vocabulary-reviews/batch-50-claude-confirmation-addendum.md):
+  the same original session checks the actual TSV associations on the unchanged
+  snapshot and supplies twenty correctly mapped all-CLEAN three-facet rows.
+  N2:983 is だいぶ, 984 大木, 985 題名 and 986 代名詞.
+  The original report remains unmodified. This bookkeeping correction changes
+  no linguistic judgment and claims no new body reads.
+
+All five complete native reports, exact prompts, actual models, session
+continuity, permitted private-file access, absence of named forbidden reads
+and zero edits were author-authenticated. Exact source-ID/article associations,
+not only a set of twenty IDs and CLEAN cells, were checked before closure.
+All short-lived reviewer processes have exited.
+
+The two corrective families and two newly inspected old bodies bring the
+author's deduplicated totals to 242 families/665 senses, 178 labels and
+124 complete old articles. GPT's cumulative additional old-body scope is
+115 beyond the four assigned reuses; Claude's narrower reads remain explicit.
+There were no fresh public retrievals during confirmation.
+
+The author separately checked exact raw-row preservation, selected/additional
+senses, source-index hash, all 3,273 baseline identities/readings/titles and
+established exclusions, reciprocal links and the deterministic manifest.
+No teaching file changed after confirmation. File-only reviewers did not
+independently execute those Git/hash checks; no live-quiz, exhaustive semantic
+uniqueness or native-speaker certification is claimed. The batch's twenty
+rows are now closed, giving 1,000 closed and 812 pending rows overall.
 
 ## Batch 01: N2:2-N2:21
 
