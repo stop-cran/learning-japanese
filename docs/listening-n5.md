@@ -7,7 +7,7 @@ greetings, simple orders, shopping, appointments, daily routines, transport and 
 Airport topics qualify only when the actual language and task are elementary.
 
 The separate [Japanese task-package contract](listening-tasks.md) belongs to app #66/content #38.
-It is adopted under delegated autonomy but not yet supported. Do not place its short clips or task documents in this
+Newer app versions implement its guided formats; exact-output content approval remains a separate gate. Do not place its short clips or task documents in this
 legacy schema's `audio` or `listening` maps; preserve this collection's existing format and approvals.
 
 ## Authoring

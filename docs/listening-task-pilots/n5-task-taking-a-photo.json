@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-taking-a-photo",
+  "exposureId": "n5-story-taking-a-photo",
+  "taskType": "verbal-expression",
+  "kind": "monologue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "In a park",
+  "topic": "Choosing what the indicated person says at the current stage of an activity.",
+  "levelRationale": "Three simple polite requests use 写真, 撮る, 見る and 見せる. The picture identifies the photographer; the spoken situation says that the photograph has not yet been taken. The listener chooses the photographer's direction rather than another participant's request. こちら is a polite direction word. Role-marker legibility, voice and pace remain unapproved.",
+  "speakers": [
+    {"id": "n", "role": "narrator", "voice": "ja-JP-NanamiNeural", "ratePercent": -10},
+    {"id": "a", "role": "character", "voice": "ja-JP-KeitaNeural", "ratePercent": -10}
+  ],
+  "turns": [
+    {"id": "instruction", "speaker": "n", "text": "絵を見て、話を聞いてください。矢印の人は、何と言いますか。答えを一つ選んでください。", "translation": "Look at the picture and listen. What does the person indicated by the arrow say? Choose one answer."},
+    {"id": "situation", "speaker": "n", "text": "三人で公園に来ました。これから写真を撮ります。矢印の人は、何と言いますか。", "translation": "Three people have come to the park together. They are about to take a photograph. What does the person indicated by the arrow say?"},
+    {"id": "choice-one", "speaker": "a", "text": "1。写真を撮ってください。", "spokenText": "いち。写真を撮ってください。", "translation": "One. Please take a photograph."},
+    {"id": "choice-two", "speaker": "a", "text": "2。こちらを見てください。", "spokenText": "に。こちらを見てください。", "translation": "Two. Please look this way."},
+    {"id": "choice-three", "speaker": "a", "text": "3。写真を見せてください。", "spokenText": "さん。写真を見せてください。", "translation": "Three. Please show me the photograph."}
+  ],
+  "stages": [
+    {"id": "instruction", "role": "instruction", "turns": ["instruction"]},
+    {"id": "situation", "role": "situation", "turns": ["situation"]},
+    {"id": "choice-one", "role": "choice", "turns": ["choice-one"], "optionId": "take"},
+    {"id": "choice-two", "role": "choice", "turns": ["choice-two"], "optionId": "look"},
+    {"id": "choice-three", "role": "choice", "turns": ["choice-three"], "optionId": "show"}
+  ],
+  "choiceMode": "audio",
+  "options": [
+    {"id": "take", "number": 1, "label": "写真を撮ってください。", "translation": "Please take a photograph.", "rationale": "This asks someone else to take the photograph. The arrow identifies the person already aiming the camera at the two friends, not a person asking to be photographed."},
+    {"id": "look", "number": 2, "label": "こちらを見てください。", "translation": "Please look this way.", "rationale": "The photographer directs the two people toward the camera just before taking their picture."},
+    {"id": "show", "number": 3, "label": "写真を見せてください。", "translation": "Please show me the photograph.", "rationale": "This asks to view a photograph, but the stated activity is about to begin and the marked person is preparing to take it."}
+  ],
+  "answer": "look",
+  "evidence": ["situation"],
+  "explanation": "The scene supplies the speaker's role: the arrow points to the photographer, who is aiming a camera at two friends. これから写真を撮ります supplies the event stage. Asking the friends to look toward the camera fits both.",
+  "visual": {
+    "role": "required",
+    "description": "Three adults in a park. On the left, one person holds a camera up, with its lens aimed at the other two people standing together on the right. A single arrow points to the camera holder. There is no camera handover, photograph print, speech bubble, answer number or selected response."
+  },
+  "vocabulary": [
+    {"surface": "矢印", "reading": "やじるし", "gloss": "arrow marker; the generic instruction identifies the marked speaker"},
+    {"surface": "こちら", "reading": "こちら", "gloss": "this way; toward the speaker, here"},
+    {"surface": "写真を撮る", "reading": "しゃしんをとる", "gloss": "take a photograph"},
+    {"surface": "見せる", "reading": "みせる", "gloss": "show someone something"}
+  ]
+}

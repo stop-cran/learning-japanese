@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-cups-for-visitors",
+  "exposureId": "n5-story-cups-for-visitors",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "At home",
+  "topic": "Following a request while preparing for a visitor.",
+  "levelRationale": "Basic size/color adjectives, polite requests and a short correction identify one object. The listener must combine the requested size and color with the numbered pictures. 台所 and 持って来る/持って行く are everyday but still part of the spoken difficulty; no claim is made from written kanji levels alone. Voice, pace and actual picture accessibility remain unapproved.",
+  "speakers": [
+    {"id": "n", "role": "narrator", "voice": "ja-JP-NanamiNeural", "ratePercent": -10},
+    {"id": "a", "role": "character", "voice": "ja-JP-KeitaNeural", "ratePercent": -10},
+    {"id": "b", "role": "character", "voice": "ja-JP-MayuNeural", "ratePercent": -10}
+  ],
+  "turns": [
+    {"id": "instruction", "speaker": "n", "text": "話を聞いて、質問の答えを一つ選んでください。", "translation": "Listen and choose one answer to the question."},
+    {"id": "focus", "speaker": "n", "text": "家で二人が話しています。男の人は、どのコップを持って行きますか。", "translation": "Two people are talking at home. Which cup will the man take?"},
+    {"id": "t1", "speaker": "b", "text": "もうすぐ友達が来ます。台所からコップを一つ持って来てください。", "translation": "A friend will be here soon. Please bring one cup from the kitchen."},
+    {"id": "t2", "speaker": "a", "text": "大きいコップと小さいコップがあります。どちらがいいですか。", "translation": "There are large cups and small cups. Which would you like?"},
+    {"id": "t3", "speaker": "b", "text": "大きいコップをお願いします。友達は、お茶をたくさん飲みますから。", "translation": "A large cup, please. My friend drinks a lot of tea."},
+    {"id": "t4", "speaker": "a", "text": "大きいコップは、赤いのと青いのがあります。赤いコップですか。", "translation": "The large cups come in red and blue. A red cup?"},
+    {"id": "t5", "speaker": "b", "text": "いいえ、青いコップをお願いします。赤いのは私が使います。", "translation": "No, a blue cup, please. I'll use the red one."},
+    {"id": "t6", "speaker": "a", "text": "分かりました。今、持って行きます。", "translation": "All right. I'll bring it over now."}
+  ],
+  "stages": [
+    {"id": "instruction", "role": "instruction", "turns": ["instruction"]},
+    {"id": "focus", "role": "focus", "turns": ["focus"]},
+    {"id": "passage", "role": "passage", "turns": ["t1", "t2", "t3", "t4", "t5", "t6"]},
+    {"id": "focus-repeat", "role": "focus-repeat", "turns": ["focus"]}
+  ],
+  "choiceMode": "visual",
+  "options": [
+    {"id": "small-blue", "number": 1, "label": "小さい青いコップ", "translation": "The small blue cup", "rationale": "The color matches the final request, but she asks for a large cup."},
+    {"id": "large-red", "number": 2, "label": "大きい赤いコップ", "translation": "The large red cup", "rationale": "The size matches, but she rejects red for the visitor and says she will use that cup herself."},
+    {"id": "large-blue", "number": 3, "label": "大きい青いコップ", "translation": "The large blue cup", "rationale": "She asks for a large cup in t3 and specifies blue rather than red in t5."},
+    {"id": "small-red", "number": 4, "label": "小さい赤いコップ", "translation": "The small red cup", "rationale": "Neither the small size nor the red color matches the visitor's requested cup."}
+  ],
+  "answer": "large-blue",
+  "evidence": ["t3", "t5"],
+  "explanation": "Combine 大きいコップ with the later 青いコップ request. The man's suggested red cup is explicitly rejected. In the numbered picture, the large blue cup is 3.",
+  "visual": {
+    "role": "required",
+    "description": "Four equally presented numbered cups in a two-by-two grid: 1, small blue; 2, large red; 3, large blue; 4, small red. The cups have the same shape apart from size. No selected item, people, tea, arrows or answer-bearing caption is shown."
+  },
+  "vocabulary": [
+    {"surface": "台所", "reading": "だいどころ", "gloss": "kitchen"},
+    {"surface": "一つ", "reading": "ひとつ", "gloss": "one item"},
+    {"surface": "持って来る", "reading": "もってくる", "gloss": "bring toward the speaker"},
+    {"surface": "持って行く", "reading": "もっていく", "gloss": "take toward another place"}
+  ]
+}

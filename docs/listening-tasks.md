@@ -34,6 +34,10 @@ Unknown schema/policy versions or task types are unsupported. Unknown fields in 
 are errors; new grading/presentation requirements need an explicit version, not silently ignored metadata.
 The four [structural examples](listening-task-examples/) are original **unapproved documentation
 fixtures**, not runtime content, approved pilots or spend authorization.
+The four [E pilot drafts](listening-task-pilots/coverage.json) are separate original learning
+packages, also unapproved and outside the runtime manifest. Their ledger records intended evidence,
+story independence, proposed casting and outstanding media/device gates. Neither collection can
+supply an assessment pool until its actual publication requirements have been met.
 
 | Field | Contract |
 | --- | --- |
