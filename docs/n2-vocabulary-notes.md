@@ -95,6 +95,17 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 36 reconciliation:** A curated comparison inventory
+  is not an exhaustive title audit. Claude's wider title search
+  found デモ outside the initial capture; actual protest-rally
+  uses support 集会/デモ, not a blanket institution/crowd clique.
+  Conversely, generic “stop” language alone does not justify
+  締め切る/止す. Add and remove edges on precise meanings.
+- **Batch 36 reconciliation:** Name the morphology behind a
+  related example: 洒落た店 uses the verb 洒落る's た-form,
+  not the noun 洒落 plus た. The actual public verb sense 2
+  supports the refined shop; JMdict1568670:2 concerns joking.
+  Keep these public and pinned-dictionary indices separate.
 - **Batch 36 authoring:** Keep public-dictionary headings
   separate even inside one captured lexical container:
   氏名/うじな, 蛇口/へびくち and 集会's historical Buddhist

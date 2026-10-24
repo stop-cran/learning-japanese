@@ -6039,3 +6039,80 @@ without nested agents, author edits or concurrent reviewers.
 Authored coverage: **700 closed / 20 draft / 1,092 pending /
 0 unresolved**, mapped to **713 distinct articles: 668 new and
 45 reused**. This is not batch or overall review closure.
+
+### Independent initial review and authored reconciliation
+
+Frozen authored commit:
+`68a03b7c32e03b23a6aad5ff7edfbde37fa6ea03`.
+Fresh isolated **gpt-6.1-sol** and **claude-opus-5.5**
+processes reviewed that identical snapshot sequentially. Both
+processes fully exited with zero file edits before authoring
+resumed. Complete native final messages are archived:
+[GPT initial](n2-vocabulary-reviews/batch-36-gpt-initial.md)
+and [Claude initial](n2-vocabulary-reviews/batch-36-claude-initial.md).
+
+Both read all twenty new articles, four kanji changes in full
+context and twenty mappings, separating all three facets.
+GPT reports reading all compact complete comparison families,
+69 actual comparison articles, including all 57 distinct direct
+targets, and actual public bodies for seven assigned headwords.
+Claude read principal/component records and comparison labels,
+but only part of the comparison families and few extra bodies;
+its public fetches did not yield relevant entries. Claude also
+searched wider actual titles and found an uncaptured candidate.
+Equal access is not equivalent actual verification depth.
+
+| Report item | Author adjudication before confirmation |
+|---|---|
+| GPT36-01: missing 姓 link in 氏名 | Addressed: link existing 姓 at the substantive surname comparison. Meaning was already correct. |
+| B36-01: 集会/デモ quiz ambiguity | Addressed: add the direct guard and explain protest-rally overlap versus other gathering/demo uses. |
+| B36-02: unexplained 洒落た morphology | Addressed: identify the separate ichidan verb, its noun-modifying た-form and おしゃれな. Verify the knowledge-only premise against complete dictionary and actual public entries. |
+| Optional 締め切り notice wording | Adopted: closed acceptance can also concern the deadline. Preserve the raw source glosses and selected senses; no universal entry-prohibition rule. |
+| Optional thin 締め切る/止す edge | Removed: the actual activity/giving-up label alone does not establish the closing/cutoff meanings. |
+| Optional 洒落 English example | Adopted as polish: “This is not a joke.” The previous idiomatic translation was not established as a defect. |
+| Optional 締め切り/締め切る edge | Not adopted: noun deadline/closing and verb close up/applications are meaningfully distinguished; stem/co-draw alone is insufficient. |
+| Optional 水道 link and other 集会 candidates | Outside required reverse-link scope or not established: distinguish chance encounter, legislative institution and crowd/group from an event. No new baseline-body edit or speculative clique. |
+
+Post-review capture includes **three complete families with
+seven senses**. 洒落る1568670 was already in the original
+comparison evidence for 洒落る/しゃれる and was checked equal;
+only **two families / five senses** are new, for **215 distinct
+comparison families / 440 sense records**.
+Three actual articles (デモ, 姓, 止す) were read and recorded;
+only デモ adds a new label and a new complete-body inspection.
+Thus the historical 110 labels/75 complete bodies become
+**111 distinct labels / 76 distinct inspected bodies** when
+the supplement is included. Original records, declarations,
+volumes and rationale remain preserved separately.
+
+Claude's claim that 洒落る was absent from the packet is
+incorrect; its report disclosed partial comparison-family
+inspection. The useful finding is the unexplained article
+construction, not discovery of a missing dictionary family.
+
+Complete 1084000:1 and 1084080:1 support protest/demonstration;
+the actual デモ and 集会 labels and parallel peace-event uses
+establish the coarse rally ambiguity. Complete 1568670 records
+ichidan/intransitive 洒落る. The actual public しゃれる verb
+body identifies 下一 and a refined/stylish shop construction
+at public sense 2; this is not pinned1568670:2 (joking).
+No inferred frequency, new principal verb mapping or N2
+assignment is introduced.
+
+**Model-diversity observation:** no specific actionable defect
+was shared after inspecting findings, optional observations,
+limits and per-file notes in both complete reports. GPT alone
+identified the 姓 navigation omission. Claude alone identified
+the uncaptured デモ ambiguity and the missing verb explanation;
+its optional notice/weak-edge remarks also prompted bounded
+refinements. This sample supports complementary inspection
+strategies, not a general model ranking or proof that one
+family eliminates the other's bias.
+
+Five new articles change. Fifteen new articles, four kanji
+edits, all twenty source identities and selected/additional
+indices, every baseline word and the TSV/snapshot are unchanged.
+Current guards remain **17 cards / 57 directional declarations**:
+one added 集会/デモ edge and one removed 締め切る/止す edge.
+Original reviewers' bounded confirmations are still pending;
+rows remain draft and this is not closure.
