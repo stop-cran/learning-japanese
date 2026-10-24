@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 48 reconciliation:** Check ordinary secondary senses even when
+  an older title highlights another use: 入る includes belonging in a
+  category, ばたばた includes successive falling, and そして/そうして
+  include addition rather than only sequence. Newly taught possession
+  in reused 備える requires direct 持つ/ある safeguards; record this exact
+  baseline-exclusion addition rather than silently weakening preservation.
+  続 already has on ゾク, so 続々 needs no invented voicing explanation.
+  祖先 is not limited to an individual family. Dictionary しょくする has
+  an overlapping belonging sense, not disjoint uses; 剃る's なまって note
+  supports pronunciation qualification, not a guessed region or frequency.
+  GPT's broader comparison reads and Claude's localized explanatory catches
+  were complementary on this batch, not a controlled model-bias experiment.
+
 - **Batch 48 authoring:** Check flags on each spelling, not just
   membership in a family: 其の他/其の外/其他 are search-only;
   其の頃 is not in the selected pinned family and is not taught.

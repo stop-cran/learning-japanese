@@ -8762,3 +8762,82 @@ Independent GPT and Claude review, reconciliation and
 confirmation are pending. An authored commit or successful
 validator does not close these twenty rows. No model-diversity
 conclusion is claimed yet; the overall expansion remains open.
+
+### Batch 48 - initial reviews reconciled; confirmation pending
+
+Both complete initial reports are archived:
+[GPT](n2-vocabulary-reviews/batch-48-gpt-initial.md) and
+[Claude](n2-vocabulary-reviews/batch-48-claude-initial.md).
+They independently reviewed frozen authored commit
+**`614bbb8394118e9e38ebb7b8c6ca2011a62be4bb`**, sequentially,
+using actual models **`gpt-6.1-sol`** and **`claude-opus-5.5`**.
+Exact prompts, native final messages, models, frozen hashes,
+blind derivatives, permitted private-file access and zero edits
+were author-authenticated. Neither report substitutes for an
+independent Git/hash check or a live quiz test.
+
+GPT identified nine direct guard gaps across five findings.
+Claude independently identified the shared **測量/調査**
+English-label overlap and five localized explanatory,
+coverage or naturalness concerns. Complete reports, including
+Optional and Limits, were compared before assigning contributions.
+
+The bounded correction changes **eight new articles** and adds
+only **`quiz_exclusions: [持つ, ある]`** to reused **N3 備える**:
+
+- Add direct 属する/入る and 続々/ばたばた guards using
+  category membership at はいる and successive falling,
+  not merely topic or sound similarity.
+- Protect both そのうえ and そのほか against both
+  そして and そうして: older sequence-oriented titles
+  do not exhaust the words' ordinary additive uses.
+- Protect 測量/調査's English survey labels and the newly
+  taught possession in 備える against 持つ and ある.
+  This exact baseline guard addition is explicitly recorded;
+  it is not a waiver of general preservation.
+- Replace 続々's misleading voicing warning with the
+  already attested on reading ゾク repeated.
+  Add attested 人類の祖先 with kana and translation.
+  Clarify そのころ's antecedent in two sentences.
+- Explain しょくする's overlapping belonging sense
+  without inventing a mostly-entrust frequency rule or
+  deriving literary register from a dictionary symbol.
+  Attribute 剃る's altered-pronunciation note to Daijisen
+  without guessing a region or present-day frequency.
+
+An additional **optional** そのころ/昔 label precaution is
+adopted after reading the complete old article and family.
+It does not equate future-reference そのころ with 昔,
+or retrospectively establish a shared initial defect.
+Together there are **ten additional direct pairs**:
+**18 guarded new articles / 95 declarations**, plus the
+two declarations on reused 備える. No existing guard is removed.
+
+Ten complete corrective families / 43 senses contain four
+duplicates and **six additional identities / 17 senses**.
+The deduplicated author-inspected union is now **237 families /
+504 senses**, with **123 complete old bodies** and **209 actual
+labels**. The eight corrective old-body rereads add five
+previously uninspected bodies. No fresh author public
+retrieval is counted; original 属する, 祖先 and 剃る
+passages and the actual 続 component record were rechecked.
+
+GPT's eight uniquely identified additional guard pairs
+complemented Claude's localized explanation and coverage catches;
+the awkward-example suggestion is optional clarity improvement,
+not a demonstrated grammar violation. Some proposed Claude
+register/frequency remedies exceeded their evidence and were
+narrowed rather than copied. Equal snapshot, scope, rubric
+and source access did not yield equal actual reading depth:
+GPT read the complete comparison union and 108 old bodies
+besides 備える; Claude read assigned content and compact
+records but not that full union or extra old bodies.
+This is useful complementary evidence on this batch,
+not a controlled bias experiment or a model ranking.
+
+Eleven other new articles, all six kanji edits, all six old
+link-only edits and all twenty mappings/raw source fields
+remain unchanged. Optional footer expansion, extra spelling
+variants and unproven over-exclusion claims are not required
+to close the scoped review. Both original-session confirmations
+are still pending; the twenty rows remain **draft**.
