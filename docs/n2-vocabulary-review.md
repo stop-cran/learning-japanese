@@ -5,8 +5,8 @@
 **Batches 01-49 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 980 rows are review-closed; none are draft,
-832 remain pending, and none are unresolved.
+The first 980 rows are review-closed; batch 50's twenty rows are draft,
+812 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,42 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 50: N2:982-N2:1001
+
+**Status:** authored draft; independent review and reconciliation remain pending.
+
+Scope: 体操, 大分 (reused だいぶ), 大木, 題名, 代名詞, タイア
+(normalized タイヤ), ダイヤグラム, ダイヤモンド, ダイヤル, 対立,
+田植え, 絶えず, 楕円, 高める, 耕す, 滝, 炊く, 焚く, 蓄える and 竹.
+
+Sixteen new articles and four reuses bring the collection to 4,199 word
+articles. Existing N4 だいぶ is byte-for-byte unchanged. 大木, 耕す and
+竹 gain only sourced N2 metadata and appended coverage citations/notes;
+their identities, primary readings/titles, original bodies and guards remain.
+Two new reciprocal primary N2 pairs are 詞/代名詞 and 植/田植え.
+Existing 耕/耕す and 竹/竹 reciprocity is preserved without new kanji edits.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-50.json) preserves
+all twenty raw rows, complete principal families and selected/additional
+senses. The author actually inspected 240 complete dictionary families/
+663 senses including twenty principals/33 senses, 176 existing labels,
+122 complete old articles, 27 component records, four related kanji cards
+and 22 public lexical endpoint captures. These are deduplicated inspection
+counts, not independent verification or a claim that all 302 original
+captured families were read. Public captures can include mixed headings.
+
+Rare source タイア is explicitly recognized under タイヤ.
+ダイヤグラム's transport-chart teaching is public-dictionary-backed,
+not a fabricated second JMdict sense. Additional figurative, sports,
+regional, heating, camera-flash, development and beard uses are identified
+separately from their N2 source anchors where applicable.
+Quiz declarations are author hypotheses awaiting direct-pair review,
+including possible excesses; no runtime uniqueness is claimed.
+
+Both requested model families will receive the same clean committed
+snapshot, scope, rubric and source access sequentially, with blind initial
+findings. No independent verdict or model-diversity benefit is claimed yet.
 
 ## Batch 01: N2:2-N2:21
 

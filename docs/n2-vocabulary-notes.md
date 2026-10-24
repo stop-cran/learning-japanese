@@ -95,6 +95,20 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 50 authoring:** Preserve recognized rare aliases without promoting
+  them to preferred spellings: source タイア maps to タイヤ. Keep additional
+  public-dictionary uses separate from pinned sense numbering:
+  ダイヤグラム has one JMdict sense, even though Digital Daijisen separately
+  describes transport operating charts. A successful mixed-heading capture
+  is not evidence for every homograph it contains.
+- **Batch 50 authoring:** Inspect actual additional teaching as well as a
+  primary header: 表 has primary おもて but explicitly distinguishes
+  ひょう/chart in its body. Record that separate identity rather than
+  claiming it is the primary reading. Likewise, assess continuous
+  どんどん and all-times いつでも without indiscriminately excluding
+  every frequency word. Regional 炊く and archaic 滝 senses retain their
+  qualifications; noun evidence for 田植え is not a suru-classification.
+
 - **Batch 49 reconciliation:** Inspect direct new-new transitivity pairs
   as well as old comparison labels. 揃う/揃える share matching/completeness
   answers despite their different argument structures. Broad labels
