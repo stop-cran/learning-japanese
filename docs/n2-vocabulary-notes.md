@@ -105,6 +105,10 @@ evidence and learning impact; issue creation requires authorization.
   synonymy, transitive protection or a reproduced quiz
   failure. Preserve original authored notes and append exact
   correction counterparts rather than rewriting history.
+  GPT accepted the 申請 precautions without independently
+  establishing necessity; preserve that distinction instead
+  of calling acceptance a reproduced defect or unanimous
+  synonymy finding.
 - **Batch 41 evidence access:** A wildcard grep can expose
   unassigned derivatives even without opening their files.
   Claude disclosed this; the complete native result contained

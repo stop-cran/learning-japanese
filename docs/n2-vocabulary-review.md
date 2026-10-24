@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-40 review-closed.** The target is all 1,812 source rows,
+**Batches 01-41 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 800 rows are review-closed; batch 41's 20 rows are draft,
+The first 820 rows are review-closed; none are draft,
 992 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -7170,7 +7170,7 @@ Git, hashes, validators or production quiz draws; no fresh
 confirmation web retrieval, corpus-frequency measurement or
 native-speaker certification is claimed. The full vocabulary
 expansion remains incomplete.
-## Batch 41 - reviewed; corrections awaiting confirmation
+## Batch 41 - closed after original-session confirmations
 
 Source rows **N2:802-N2:821** cover 芯, 新幹線, 真空,
 信ずる, 心身, 申請, 人造, 寝台, 診断, 侵入,
@@ -7182,7 +7182,7 @@ retains the raw rows separately from teaching selections.
 The pinned list is a named community resource, not an
 official modern JLPT syllabus.
 
-芯 selects JMdict senses 1-2, not its botanical senses.
+芯 selects JMdict senses 1-2, not its pistil/stamen senses.
 真空 selects physical sense 1, not Buddhist sense 2.
 The other principal selections are sense 1. Separately
 attributed public senses support figurative 真空/針路/神話,
@@ -7354,3 +7354,62 @@ for uniquely discovering that polysemy. Compare all report
 sections, not labels or severity alone. Unequal evidence
 depth and the disclosed data-only search deviation prevent
 treating this as a controlled model benchmark.
+
+### Original-session confirmations and closure
+
+The corrected committed snapshot is
+**`d10d502fffb32af3a9a74c7ea30404f9bc68b4a4`**.
+[GPT confirmation](n2-vocabulary-reviews/batch-41-gpt-confirmation.md)
+completed and exited before
+[Claude confirmation](n2-vocabulary-reviews/batch-41-claude-confirmation.md)
+started. Both reused their respective original sessions,
+read all five changed articles completely, supplied twenty
+separate article verdict rows, and found no consequential
+correction-related defect or regression.
+
+Both retain all three facets as **CLEAN** for all twenty
+articles, the five unchanged narrow kanji edits and twenty
+teaching mappings. The fifteen unchanged article assessments
+and kanji judgments are explicitly inherited, not silently
+reported as new rereads. GPT reread the complete principal
+rendering, two added families, 適用 and five actual comparison
+articles. Claude reread the two-family correction rendering,
+five actual comparison articles, targeted family/public
+records and the correction supplement. Neither reread the
+entire 197-family, 150-label, 94-body or forty-component
+inventory.
+
+GPT confirms GPT41-01/02/03 resolved. Claude confirms
+B41-Q-01/02 resolved and accepts the two missing-link repairs.
+**The 申請 judgment remains qualified:** GPT accepts the two
+guards as conservative precautions but does not independently
+establish them as necessary repairs; the qualifiers materially
+disambiguate. Claude considers the bare-application safeguard
+resolved. This is no remaining actionable dispute and is not
+recorded as unanimous proof of a production quiz failure or
+Japanese synonymy.
+
+Both accept the adopted 芯 precision and note-only
+clarification. Claude's further "rather than" wording
+preference for 人文科学 remains optional; the reviewer
+explicitly finds the current text defensible. No teaching
+changes were made after confirmation. Claude also corrects
+the initial exposure disclosure to five physical files;
+the original report remains unchanged and its deviation
+remains visible.
+
+All four complete native final messages, exact prompts,
+actual models, original-session continuity, zero edits,
+normalized committed file hashes, both snapshots, both
+patches and the blind evidence derivatives were
+author-authenticated. These checks do not turn author
+Git/hash receipts into reviewer-executed checks.
+
+Exactly **N2:802-N2:821** are now closed, yielding **820
+closed / 0 draft / 992 pending / 0 unresolved**. The
+**813 mapped articles (761 new / 52 reused)**, **4,034
+word articles**, **192 tracked reciprocal N2 pairs**,
+**3,273 preserved baseline identities/readings/titles/
+exclusions**, and deterministic manifest
+**`67cdc8372132f347`** remain unchanged by closure.
+This closes batch 41, not the full 1,812-row expansion.
