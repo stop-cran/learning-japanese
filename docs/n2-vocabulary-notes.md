@@ -95,6 +95,21 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 30 reconciliation:** A broader selected sense needs enough
+  context to recognize it. Both reviewers noticed 献立's nonmeal
+  planning use, although one classified the missing example as
+  optional. Its attested meeting construction makes the sense
+  concrete. Check direct plan-label pairs independently of existing
+  計画 guards; also distinguish the noun 計/けい from the separate
+  はか family and the character heading.
+- **Batch 30 reconciliation:** Replacing a questioned example with
+  a positively supported construction does not prove the former
+  sentence impossible. 混合物 provides a clear substance construction
+  without deleting JMdict's mixture gloss. Likewise, a tentative
+  signal-label hypothesis needs actual sound-use and comparison
+  evidence: サイレン's emitted sound supports direct guards with
+  合図 and 信号, not an inference through their existing guard.
+
 - **Batch 30 authoring:** As with コレクション, a legacy gloss can
   have positive support under a separate homograph. コンセント's
   Daijisen *consent* heading and informed-consent expression are not

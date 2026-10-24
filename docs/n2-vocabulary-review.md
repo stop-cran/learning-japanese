@@ -4734,3 +4734,68 @@ author's quiz-guard rationale.
 Coverage is **580 closed / 20 draft / 1,212 pending / 0 unresolved**,
 mapped to 594 distinct articles: 556 new and 38 reused. The batch
 and remaining list are not yet claimed review-closed.
+
+### Initial independent reviews and reconciliation
+
+Both reviewers assessed authored snapshot
+`787b93e13814f9f2052f641645fad70e6962007d`, parent
+`6c66db7f90abc63b28fa7aa376eb78fe12a189ce`, using the same
+nineteen-article scope, exact reuse claim, related seven-file
+patch, twenty mappings, rubric and blind evidence derivative.
+The derivative removes only `quizGuardRationale`. The processes
+ran sequentially and exited with zero reported edits.
+
+- GPT: **gpt-6.1-sol**, native session
+  `44ae0271-abe5-4d69-a57c-8077da760781`; [initial report](n2-vocabulary-reviews/batch-30-gpt-initial.md).
+- Claude: **claude-opus-5.5**, native session
+  `8129cdc0-cd08-4d6a-9488-dd254f642c4d`; [initial report](n2-vocabulary-reviews/batch-30-claude-initial.md).
+
+GPT established a missing direct 献立/計 and 献立/プラン
+quiz guard. Claude questioned the air-mixture example and
+requested usable context for 献立's nonmeal sense. GPT had already
+made the equivalent nonmeal-example observation under Optional;
+it is shared, not a Claude-unique discovery. Claude's optional
+サイレン/合図 signal hypothesis was followed through against actual
+labels and the emitted-sound use, rather than accepted from a
+shared topic alone.
+
+| Observation | Disposition |
+| --- | --- |
+| G30-01: 献立 planning labels | Resolved: add direct 計 and プラン guards for applicable planning senses and actual broad plan labels. |
+| B30-C2 and GPT Optional: nonmeal 献立 | Resolved: explain planning/preparation/arrangements and give the attested meeting construction, reading and English. |
+| B30-C1: air mixture wording | Replaced with 混合物 and explained the compound. Its positive dictionary support does not prove the former sentence impossible; the original naturalness criticism remains medium-confidence. |
+| Claude Optional: サイレン/合図 | Resolved after bounded follow-through: add 合図 and independently 信号 guards for broad signal labels versus the actual emitted-sound use; retain device/sound and broader-signal distinctions. |
+| Claude Optional: festival/day and greeting/evening labels | No actionable collision established: actual labels preserve event/day and greeting/time distinctions. Shared characters or an older unrelated guard do not prove these pairs. |
+| Claude Optional: another mixing example, sports, 倒 spelling and an extra reading-row placement | Optional expansion; existing selected source coverage, grammar and reciprocal links remain. |
+
+Five complete additional families for four exact comparison forms
+were extracted with both pinned dictionary hashes verified; full
+compact records and seven actual comparison bodies were inspected.
+The unrelated 計/はか family is retained but not used as evidence
+for 計/けい. Four further public lexical containers were retrieved
+and inspected through their relevant bodies: 混合, 献立, 計 and
+プラン. The noun 計 heading is distinguished from its character
+heading. Full public bodies stay private; the public appendix
+records concise observations, URLs and response hashes.
+
+Only 混合, 献立 and サイレン change. Four direct guard additions
+bring seventeen guarded new cards to 75 directional declarations.
+No baseline card, title, primary reading, identity, level, mapping,
+selected/additional sense or kanji passage changes. Initial
+evidence is preserved exactly and corrections are appended;
+current guard declarations are recorded separately from the
+historical initial declarations.
+
+**Preliminary diversity assessment:** GPT uniquely supplied the
+supported plan-label guards; the nonmeal teaching observation is
+shared across report sections. Claude supplied the separately
+useful substance-wording concern and tentative signal comparison,
+which produced a bounded supported improvement after investigation.
+Neither report nor source receipt establishes exhaustive
+naturalness, measured frequency, native certification or executed
+app behavior. GPT independently retrieved relevant public bodies;
+Claude disclosed failed/irrelevant retrievals and did not claim
+independent verification of the consent or other external headings.
+Both disclosed that file tools cannot independently authenticate
+Git or hashes. Confirmation of the changed passages is pending;
+the twenty source rows remain draft.
