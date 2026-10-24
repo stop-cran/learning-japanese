@@ -164,6 +164,104 @@ Keep approved synthesis provenance, not credentials, endpoints, private logs or 
 Paid previews/pilots require explicit bounded authorization; after accepted pilots, the remaining
 pool requires **fresh** explicit authorization. This document does not grant either.
 
+## Private task-stage rendering
+
+`tools/render_listening_tasks.py` adapts the shared `book-skills` synthesis engine;
+it does not alter that engine or the legacy `listening.py` passage bounds. Normal
+Content validation uses PyYAML/Pillow; renderer tests additionally use `requests`
+with a fully mocked transport (also installed by content CI).
+Rendering uses the shared engine's environment (`requests`, `azure-identity` and
+`imageio-ffmpeg`); `--engine` points to its `reference` directory. No keys are saved.
+
+Use a **new private run directory outside this repository**, not a folder that
+could be committed. Supply reviewed draft JSONs without `media`/`approval`, the
+exact WebP for every declared picture, explicit `task-id:turn-id` preview choices,
+and the intended existing resource/subscription. Planning performs no synthesis
+or Azure login. It freezes all learning text, voices/rates, pictures, preview
+selection and renderer/validator versions. The previews must cover every voice/rate;
+the author must also select the counters, numbering and role/pronunciation cases
+that need auditioning.
+
+For example, in PowerShell, with `$engine`, `$run`, `$resource` and `$subscription`
+set to the intended paths/resource:
+
+```powershell
+python -B tools\render_listening_tasks.py --engine $engine --run $run plan `
+  --content-root . --inputs <reviewed-task-json-paths> `
+  --image "<task-id>=<reviewed-picture.webp>" `
+  --preview-turn "<task-id>:<turn-id>" `
+  --resource $resource --subscription $subscription
+```
+
+Repeat `--image` and `--preview-turn` as needed. The resulting `plan.json` and
+all run records are private authoring artifacts, not content publication.
+If a source, image, plan or renderer changes, stop and prepare a newly reviewed
+run; a previous consent/approval receipt cannot silently transfer.
+
+Only **after explicit owner spending authorization**, record that exact scope,
+note and ceilings. `complete` covers the selected plan's previews and complete
+packages, not any other tasks; `preview` prohibits complete rendering. The
+applicable stock-neural USD price must be checked for the actual resource before
+recording it; an example price or a previous run is not a quote or consent.
+
+```powershell
+python -B tools\render_listening_tasks.py --engine $engine --run $run authorize `
+  --owner-authorized --scope complete --max-request-units <authorized-ceiling> `
+  --max-usd <authorized-ceiling> --usd-per-million <verified-price> --note "<actual authorization>"
+python -B tools\render_listening_tasks.py --engine $engine --run $run render `
+  --allow-paid --phase preview --resource $resource --subscription $subscription
+```
+
+Accounting reserves allowance durably **before every HTTP attempt**, including
+failed attempts, retries and split retries. It conservatively counts every SSML
+code point twice, even otherwise exempt markup. This accommodates
+[kanji's double counting and billable SSML](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/text-to-speech#billable-characters).
+Both the cumulative request-unit ceiling and the quoted-price monetary ceiling
+apply across preview/full phases and restarts. Failed requests are not refunded.
+HTTP redirects are disabled and rejected, so they cannot silently replay an
+authenticated POST outside this accounting or change its endpoint.
+Do not reset `spend.json` or rewrite an authorization to regain allowance.
+One writer holds `operation.lock`; after a crash, check that its recorded PID has
+stopped before removing that one lock file. A missing/corrupt ledger is an error,
+not permission to start again at zero.
+
+Listen to `preview-review.html` and inspect the exact source/roles before using
+`approve-preview --listened --reviewed-on YYYY-MM-DD --note "<actual listening>"`.
+Only then may `render --allow-paid --phase complete` run within the same authorized
+scope and ceiling. The renderer reuses verified turn PCM and identical stage
+recordings, including the repeated focus. It retains exact stage-turn timing,
+validates actual Opus decoding and counts every occurrence toward the 150-second
+package cap. Ordinary fixed leading/trailing/inter-turn gaps are not adjusted to
+make an undersized or oversized script fit.
+Private cache receipts are keyed by the synthesis request; public audio filenames
+address the encoded bytes together with their exact duration/turn bindings.
+Freshly encoded reviewed revisions can coexist with old recordings, without
+overwriting assets referenced by another package.
+
+`complete-review.html` plays each full required sequence and exposes all text,
+translations and feedback for **unscored author review**. It is not the Android
+C/D host, physical-phone acceptance, or automatic listening approval. Required
+native/device checks must still exercise the exact packages in an explicitly
+unscored author/test path without manufacturing a production approval.
+The app's [`LISTENING-TASKS.md`](https://github.com/stop-cran/kanji-cards-android/blob/main/docs/LISTENING-TASKS.md#private-native-author-preview)
+documents its isolated, release-signed native author-preview instrumentation.
+
+After actual full-order listening, required-picture inspection, native playback
+and physical-phone acceptance, `approve-task` requires `--task-id`, `--note`,
+`--reviewed-on`, `--listened-all-stages`, `--native-reviewed`, `--phone-reviewed`
+and, for a picture, `--visual-reviewed`. These are explicit human declarations,
+not certification by the tool. They bind the whole current output and cannot
+approve a missing stage, changed choice, changed picture or incomplete capture.
+
+`verify --phase preview|complete` rechecks the private outputs without spending or
+adding approval. `export --task-id <id>` publishes only selected packages with
+matching exact-output and device receipts. It never copies PCM, credentials,
+private plans or unapproved recordings. Existing different documents require
+explicit `--replace`, and exposure identities may never be rebound. Export does
+not rebuild manifests or commit: run normal validation, manifest generation and
+complete-archive budget checks before publication, and retain sanitized provenance
+in the coverage ledger. This tool does not waive E's pilot-to-full-pool gate.
+
 ## Full-tree budget and rollout
 
 The pulled `73bde0f` tree's local ZIP is 22,665,639 bytes, already close to the current 24-MiB

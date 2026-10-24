@@ -98,7 +98,8 @@ def _webp(data: bytes) -> None:
         raise ValueError(f"invalid WebP image: {exc}") from exc
 
 
-def validate_document(document: dict, path: str, root: Path | None = None) -> bool:
+def validate_document(document: dict, path: str, root: Path | None = None,
+                      *, vocabulary_root: Path | None = None) -> bool:
     """Return declared approval readiness; malformed supported drafts raise ValueError."""
     _require(isinstance(document, dict), "listening task must be an object")
     for field in ("schemaVersion", "policyVersion"):
@@ -209,8 +210,9 @@ def validate_document(document: dict, path: str, root: Path | None = None) -> bo
             word = _bounded_text(tip["word"], "vocabulary word", 80)
             _require(not any(char in word for char in '/\\:<>|"*?') and word not in (".", ".."),
                      "unsafe vocabulary word")
-            if root is not None:
-                _require(f"{word}.md" in {file.name for file in (root / "words").glob("*.md") if file.is_file()},
+            word_root = vocabulary_root if vocabulary_root is not None else root
+            if word_root is not None:
+                _require(f"{word}.md" in {file.name for file in (word_root / "words").glob("*.md") if file.is_file()},
                          f"missing word article: {word}")
 
     current_hash = content_hash(document)
