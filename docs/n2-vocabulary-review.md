@@ -5117,7 +5117,7 @@ is still incomplete.
 
 ## Batch 32: N2:622-N2:641
 
-**Status:** draft; independent review and reconciliation pending.
+**Status:** draft; initial reviews reconciled, confirmation pending.
 
 Scope: 撮影, 雑音, さっさと, 早速, 錆, 錆びる, 座布団,
 冷ます, 妨げる, 冷める, さようなら, 再来月, 再来週,
@@ -5181,3 +5181,54 @@ initial evidence derivative removes only `quizGuardRationale`.
 Coverage is **620 closed / 20 draft / 1,172 pending / 0 unresolved**,
 mapped to 634 distinct articles: 592 new and 42 reused. This batch
 and the remaining list are not yet claimed review-closed.
+
+### Batch 32 initial reviews and reconciliation
+
+Common frozen authored snapshot:
+`f6d1ef9efca4ffa026bcdb0fe4eb4e768ade64c8`, parent
+`dd03c892652a0deb17b1261dd10e0fb33d5328b8`.
+Fresh native processes ran sequentially and exited without edits:
+[GPT-6.1 Sol (`gpt-6.1-sol`)](n2-vocabulary-reviews/batch-32-gpt-initial.md),
+then [Claude Opus 5.5 (`claude-opus-5.5`)](n2-vocabulary-reviews/batch-32-claude-initial.md).
+Both received the same prompt, seventeen articles, three reuse
+claims, four-file diff, twenty mappings and sanitized evidence.
+Both disclosed file-only snapshot verification and scoped source
+access; their Git/hash claims remain author-receipt-backed.
+
+All initial report sections were compared, including optional
+observations and limits:
+
+| Observation | Reconciliation |
+| --- | --- |
+| GPT F01 / Claude B32-QZ-01: さっさと/すっと | Resolved: add the direct guard. Actual quick/direct and unhesitating teaching overlaps; both models independently found the previously uncaptured comparison. |
+| GPT F02: さわやか/すっと | Resolved: add the separate direct guard for the ordinary refreshed-feeling sense. Other refreshing-word guards are nontransitive. |
+| Claude B32-RG-01: farewell-context guidance | Optional bounded clarification: contrast the original teacher/pupil example with お先に失礼します when leaving work first. No unsupported universal frequency, adult-use or final-parting rule is added. |
+| GPT optional サラリーマン citation | Resolved citation precision: JMdict's explicit wasei-eigo annotation supports coinage; the Daijisen citation is labelled Definition. |
+| Claude optional 雑音/じゃま label overlap | Resolved with accurate noise; static title, retaining signal-interference and figurative prose. No generic interference clique. |
+| Claude optional 錆 chain wording | Resolved optional polish: use bicycle チェーン consistently with 錆びる, without claiming 鎖 impossible. |
+| Claude other optional additions | Optional, unchanged: extra idioms, command examples, derived noun and a related reading are outside the practical requirements. |
+| Claude mapping summary groups N2:640 with additional senses | Clarified without mapping changes: both 算数 senses are already selected; its additional-senses field is empty. |
+
+The correction appends the complete pinned すっと family 1006140:
+**one family / three indexed senses**, extracted with both dictionary
+hashes checked. The complete rendering and existing article were read.
+Sense 1 supports quick/direct movement; sense 3 explicitly supports
+feeling refreshed. Initial authored records and initial reports are
+preserved; new evidence and adjudications are appended. Thirteen
+guarded cards now declare 61 directional exclusions, two more than
+the original 59; no baseline card declaration changes.
+
+The captured Daijisen さようなら container supports its conditional
+formation and farewell use, not a general register survey. Claude's
+different live rendering did not show that dictionary container.
+Failed/heading-only retrievals remain limits, not lexical proof.
+The farewell clarification uses already evidenced concrete settings
+rather than the unsupported broader register proposal.
+
+Model diversity helped in this sample: one quiz defect was shared,
+and GPT alone identified the distinct refreshed-feeling guard anywhere
+in its report. Claude supplied useful optional title/wording/context
+observations; GPT supplied citation precision. The register proposal
+needed evidence-based narrowing, not majority voting. These are
+sample observations, not a model benchmark. Confirmation and final
+provenance authentication remain pending.

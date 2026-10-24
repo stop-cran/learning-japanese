@@ -95,6 +95,16 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 32 review:** Both independent models found the missing
+  すっと comparison; GPT additionally caught its ordinary refreshed-
+  feeling sense against さわやか. A movement-focused title does not
+  erase an explicitly taught secondary meaning. Complete comparison
+  families still matter after a large initial candidate selection.
+- **Batch 32 reconciliation:** A useful practical farewell contrast
+  does not license an unsupported register rule. Preserve the
+  teacher/pupil example and specify leaving-work-first with
+  お先に失礼します; do not infer universal adult usage or final
+  separation from failed public lookups or general learner lore.
 - **Batch 32 authoring:** Check the complete lexical family behind
   a comparison card's introductory focus. 布団 also has a Zen
   meditation-cushion sense, 写真 includes photography, and 写す
