@@ -2,6 +2,7 @@
 import copy
 import hashlib
 import io
+import itertools
 import json
 import tempfile
 import unittest
@@ -12,6 +13,7 @@ from PIL import Image
 
 import build_manifest
 import check_content_budget as budget
+import check_listening_pool as pool
 import validate
 import validate_listening as legacy
 import validate_listening_tasks as tasks
@@ -559,6 +561,168 @@ class TaskFilesTests(unittest.TestCase):
             self.assertEqual([], self.errors())
         with patch.object(tasks, "MAX_MEDIA_BYTES", total - 1):
             self.assertTrue(any("6 MiB" in error for error in self.errors()))
+
+    def test_pool_gate_checks_actual_assets_even_with_a_regenerated_manifest(self):
+        document = self.media_document()
+        document["blueprint"] = "n5-section-v1"
+        document["media"]["contentSha256"] = tasks.content_hash(document)
+        declared_approval(document)
+        self.write(f"listening-tasks/{document['id']}.json", json.dumps(document))
+        self.write("manifest.json", json.dumps(build_manifest.build_manifest(self.root)))
+        report = pool.check_root(self.root)
+        self.assertEqual([document["id"]], report["groups"][0]["approvedScoredIds"])
+        self.write("task-audio/instruction.ogg", b"corrupt")
+        self.write("manifest.json", json.dumps(build_manifest.build_manifest(self.root)))
+        with self.assertRaisesRegex(ValueError, "media hash mismatch"):
+            pool.check_root(self.root)
+
+
+class ListeningPoolTests(unittest.TestCase):
+    """Repeated structural fixtures are not real independent stories or listener approvals."""
+
+    def document(self, kind, index, *, example_item=False, body_ms=50_000, instruction_ms=1_000):
+        document = example(kind)
+        suffix = "example" if example_item else str(index)
+        document.update(id=f"pool-{kind}-{suffix}", exposureId=f"story-{kind}-{suffix}",
+                        blueprint="n5-section-v1", usage="example" if example_item else "scored")
+        with_media(document)
+        for stage in document["stages"]:
+            clip = document["media"]["audio"][stage["id"]]
+            role = stage["role"]
+            duration = (instruction_ms if role == "instruction" else
+                        body_ms - 20_000 if role == "passage" else
+                        body_ms - 30_000 if role in ("situation", "utterance") else 10_000)
+            clip["durationMs"] = duration
+            count = len(clip["turns"])
+            for i, turn in enumerate(clip["turns"]):
+                turn.update(startMs=i * duration // count, endMs=(i + 1) * duration // count)
+        return declared_approval(document)
+
+    def documents(self, body_ms=50_000):
+        result = []
+        for kind, count in (("task-based", 8), ("key-point", 7), ("verbal-expression", 6), ("quick-response", 7)):
+            result.extend(self.document(kind, i, body_ms=body_ms) for i in range(count))
+            result.append(self.document(kind, 0, example_item=True, body_ms=body_ms))
+        return result
+
+    def test_group_instruction_once_repeated_focus_and_all_fixed_windows(self):
+        documents = self.documents()
+        report = pool.analyze(documents)
+        self.assertTrue(report["checksPassed"], report["errors"])
+        # 28 evidence sequences, four instructions, 21 previews, 28 answers and four example feedback windows.
+        self.assertEqual({"shortest": 1_894_000, "longest": 1_894_000}, report["durationMs"])
+        self.assertEqual([566_000, 496_000, 401_000, 431_000],
+                         [group["durationMs"]["shortest"] for group in report["groups"]])
+        for document in documents:
+            if document["usage"] == "scored":
+                clip = document["media"]["audio"]["instruction"]
+                clip.update(durationMs=50_000, turns=[{"id": "instruction", "startMs": 0, "endMs": 50_000}])
+                declared_approval(document)
+        self.assertEqual(report["durationMs"], pool.analyze(documents)["durationMs"])
+
+    def test_extrema_match_every_permitted_selection_not_an_average_form(self):
+        documents, possible = [], []
+        for kind, selected, minimum in pool.GROUPS:
+            documents.extend(self.document(kind, i, body_ms=50_000 + i * 1_000) for i in range(minimum))
+            documents.append(self.document(kind, 0, example_item=True))
+            possible.append([sum(choice) for choice in itertools.combinations(range(minimum), selected)])
+        expected = [1_894_000 + 1_000 * sum(selection) for selection in itertools.product(*possible)]
+        report = pool.analyze(documents)
+        self.assertEqual({"shortest": min(expected), "longest": max(expected)}, report["durationMs"])
+        self.assertTrue(report["checksPassed"])
+        # One additional independently identified example must also be included in the longest-form bound.
+        extra = self.document("quick-response", 0, example_item=True)
+        extra.update(id="additional-example", exposureId="additional-story")
+        extra["media"]["contentSha256"] = tasks.content_hash(extra)
+        extra["media"]["audio"]["instruction"].update(durationMs=80_000,
+            turns=[{"id": "instruction", "startMs": 0, "endMs": 80_000}])
+        documents.append(declared_approval(extra))
+        changed = pool.analyze(documents)
+        self.assertEqual(min(expected), changed["durationMs"]["shortest"])
+        self.assertEqual(max(expected) + 79_000, changed["durationMs"]["longest"])
+        self.assertLess(sum(expected) / len(expected) + 79_000 / 2, 2_040_000)
+        self.assertFalse(changed["checksPassed"])
+        self.assertTrue(any("Longest" in error for error in changed["errors"]))
+
+    def test_exact_envelope_boundaries_and_one_millisecond_outside(self):
+        for body, instruction, boundary, delta, message in (
+            (38_000, 3_000, 1_560_000, -1, "Shortest"),
+            (55_000, 7_000, 2_040_000, 1, "Longest"),
+        ):
+            with self.subTest(boundary=boundary):
+                documents = self.documents(body)
+                item = next(d for d in documents if d["usage"] == "example")
+                clip = item["media"]["audio"]["instruction"]
+                clip.update(durationMs=instruction, turns=[{"id": "instruction", "startMs": 0, "endMs": instruction}])
+                declared_approval(item)
+                report = pool.analyze(documents)
+                self.assertTrue(report["checksPassed"], report["errors"])
+                self.assertEqual({"shortest": boundary, "longest": boundary}, report["durationMs"])
+                clip["durationMs"] += delta
+                clip["turns"][0]["endMs"] += delta
+                declared_approval(item)
+                report = pool.analyze(documents)
+                self.assertFalse(report["checksPassed"])
+                self.assertTrue(any(message in error for error in report["errors"]))
+
+    def test_drafts_nonmembers_and_examples_cannot_fill_scored_shortages(self):
+        for change in ("draft", "nonmember", "example"):
+            with self.subTest(change=change):
+                documents = self.documents()
+                item = documents[0]
+                if change == "draft":
+                    item.pop("approval")
+                else:
+                    if change == "nonmember":
+                        item.pop("blueprint")
+                    else:
+                        item["usage"] = "example"
+                    item["media"]["contentSha256"] = tasks.content_hash(item)
+                    declared_approval(item)
+                report = pool.analyze(documents)
+                self.assertFalse(report["checksPassed"])
+                self.assertEqual(7, len(report["groups"][0]["approvedScoredIds"]))
+                self.assertTrue(any("at least 8" in error for error in report["errors"]))
+
+    def test_duplicate_pool_and_legacy_exposures_block_independence(self):
+        documents = self.documents()
+        example_item = next(d for d in documents if d["usage"] == "example")
+        example_item["exposureId"] = documents[0]["exposureId"]
+        example_item["media"]["contentSha256"] = tasks.content_hash(example_item)
+        declared_approval(example_item)
+        report = pool.analyze(documents, {documents[-1]["exposureId"]})
+        self.assertFalse(report["checksPassed"])
+        self.assertTrue(any("Shared pool exposure" in error for error in report["errors"]))
+        self.assertTrue(any("reuses legacy story" in error for error in report["errors"]))
+        with self.assertRaisesRegex(ValueError, "Duplicate task ID"):
+            pool.analyze(documents + [copy.deepcopy(documents[0])])
+
+    def test_changed_approval_is_invalid_not_an_ignored_candidate(self):
+        documents = self.documents()
+        documents[0]["approval"]["mediaSha256"] = "b" * 64
+        with self.assertRaisesRegex(ValueError, "stale task approval"):
+            pool.analyze(documents)
+
+    def test_real_tree_requires_current_manifest_and_reports_missing_pool_with_failing_exit(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "manifest.json").write_text(json.dumps(build_manifest.build_manifest(root)), encoding="utf-8")
+            with patch("sys.stdout", new_callable=io.StringIO) as output:
+                self.assertEqual(1, pool.main(["--root", str(root)]))
+            report = json.loads(output.getvalue())
+            self.assertFalse(report["checksPassed"])
+            self.assertIsNone(report["durationMs"])
+            self.assertEqual(4, len(report["groups"]))
+            (root / "listening-tasks").mkdir()
+            document = example()
+            document["blueprint"] = "n5-section-v1"
+            path = root / "listening-tasks" / f"{document['id']}.json"
+            path.write_text(json.dumps(document) + "\r\n", encoding="utf-8", newline="")
+            with self.assertRaisesRegex(ValueError, "Manifest is stale"):
+                pool.check_root(root)
+            (root / "manifest.json").write_text(json.dumps(build_manifest.build_manifest(root)), encoding="utf-8")
+            report = pool.check_root(root)
+            self.assertEqual([document["id"]], [item["id"] for item in report["excluded"]])
 
 
 class SharedOpusTests(unittest.TestCase):

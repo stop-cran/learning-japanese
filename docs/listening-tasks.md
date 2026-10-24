@@ -262,6 +262,45 @@ not rebuild manifests or commit: run normal validation, manifest generation and
 complete-archive budget checks before publication, and retain sanitized provenance
 in the coverage ledger. This tool does not waive E's pilot-to-full-pool gate.
 
+## Static full-pool feasibility
+
+After validation, approved-package export and manifest generation, run:
+
+```powershell
+python -B tools\check_listening_pool.py --root .
+```
+
+This read-only E gate emits JSON and exits **1** for missing/invalid content,
+shortages, reused declared story identities or out-of-envelope timing. It exits
+**0** only when its static checks pass. An empty catalog or the four pilots alone
+must fail; do not add this as an unconditional CI gate while E is still in draft.
+The report is bound to the current manifest content version. Stale manifests,
+broken actual media, invalid approvals and unreferenced new media are errors,
+not candidates silently dropped from a successful pool.
+
+Only approved `n5-section-v1` members supply the minimum 8/7/6/7 scored tasks and
+one independent worked example per type. Drafts, nonmembers and examples cannot
+fill scored slots. Scored/example exposure IDs must be distinct across the pool
+and from legacy stories. Unique IDs alone do not establish semantic independence:
+the original-context/relationship ledger still needs editorial review.
+
+For each type the checker sums its shortest and longest possible scored selections
+(7/6/5/6), then adds the shortest/longest available example. Scored items omit the
+generic instruction; each example includes its instruction once as the group
+introduction. Repeated focus occurrences count twice even when their audio file
+is shared. It includes the 5-second preview except for quick response, 15-second
+focused or 10-second spoken-choice scored answers, and 10-second example answer
+plus 10-second feedback windows. **Every** permissible form must lie within the
+inclusive 26-34-minute envelope, not just an average or one convenient seed.
+
+The report lists instruction wording variants for checking equivalence; different
+wording is not automatically judged equivalent or wrong. Extra candidates in a
+fork are included in the extrema rather than ignored. This does not expand E's
+authorized 28+4 batch or grant spending permission. Actual full-order listening,
+native/physical-phone acceptance, semantic/instruction review and the separate
+complete-archive budget check remain required. F additionally checks current
+learner exposure/cooldown/accessibility and the exact captured selection.
+
 ## Full-tree budget and rollout
 
 The pulled `73bde0f` tree's local ZIP is 22,665,639 bytes, already close to the current 24-MiB
