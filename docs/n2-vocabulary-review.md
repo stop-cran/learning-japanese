@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-41 review-closed.** The target is all 1,812 source rows,
+**Batches 01-42 review-closed; batch 43 drafted, not reviewed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 820 rows are review-closed; none are draft,
-992 remain pending, and none are unresolved.
+The first 840 rows are review-closed; 20 are draft,
+952 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -7640,3 +7640,43 @@ word articles**, **196 tracked reciprocal N2 pairs**,
 exclusions**, and deterministic manifest
 **`36eb8f05991e3591`** remain unchanged by closure.
 This closes batch 42, not the full 1,812-row expansion.
+
+## Batch 43 - drafted, independent review pending
+
+Source rows **N2:842-N2:861** map to eighteen new
+articles: 隙間, スクール, 少なくとも, 図形, スケジュール,
+鈴, 涼む, スタート, スチュワーデス, 酸っぱい, ステージ,
+ストッキング, ストップ, 素直, 頭脳, スピーカー, 図表
+and スマート. Reuse すっきり with only its newly sourced
+N2 level, and N4 捨てる with a narrow rare-spelling
+棄てる recognition paragraph. The raw blank gloss remains
+blank; discarding is an editorial anchor, not recovered
+compiler intent.
+
+The [batch evidence](n2-vocabulary-batch-sources/batch-43.json)
+retains original fields, complete principal families,
+one-based selections and restrictions. The author read
+twenty principal families/forty senses within a
+**249-family/581-sense** comparison union, **160 labels**,
+**81 complete existing bodies**, **eighteen component
+records**, and **twenty-five actual public dictionary
+retrievals**. The original prepared/not-inspected plan
+is preserved; a separate completion receipt records the
+actual reads. Other broad captured bodies remain
+capture-only. These are author assertions, not independent
+review findings.
+
+涼/涼む at すず.む and 脳/頭脳 at ノウ receive reciprocal
+reading-row and Common words links. No kanji metadata,
+new kanji cards or strokes change. Missing component
+cards do not remove written kanji from word metadata.
+The eighteen new articles receive direct, nontransitive
+quiz safeguards where authored; identical school titles
+already deduplicate. No production quiz failure is claimed.
+
+Coverage is **840 closed / 20 draft / 952 pending /
+0 unresolved**, mapped to **853 distinct articles:
+796 new / 57 reused**. There are **4,069 word articles**
+and **198 tracked reciprocal N2 pairs**. Source spellings
+and existing easier levels remain preserved. This draft
+has not yet passed independent GPT and Claude review.

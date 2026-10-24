@@ -95,6 +95,16 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 43 authoring:** A source's rare spelling can be
+  recognized on an easier existing article: 棄てる belongs
+  to the unrestricted 捨てる family, not a new conjugation
+  or a reason to overwrite N4. Preserve its blank source
+  gloss and identify the discard sense as an editorial
+  anchor. Likewise, an audio-led スピーカー title and an
+  appearance-led スマート explanation must not erase their
+  recorded human-speaker and clever/adroit uses. Public
+  extraction can also mix unrelated material, such as disk
+  diagnostics under スマート; verify the intended heading.
 - **Batch 42 review/reconciliation:** Recognition of a
   kana alias must not leave its extra vowel unexplained:
   ずうっと writes lengthening, not the short pronunciation
