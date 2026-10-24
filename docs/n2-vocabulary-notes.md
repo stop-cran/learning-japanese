@@ -95,6 +95,24 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 47 authoring:** Reuse an established kana-primary
+  article only after explicitly teaching the source alias:
+  そうっと is an emphatic form of existing N3 そっと,
+  not a reason to replace its stable ID, reading or level.
+  Preserve the blank raw gloss separately. A shared
+  dictionary family also does not make センチ's
+  sentimental use independently N2 when the source
+  selects measurement/prefix senses. Record conflicting
+  source granularity precisely: JMdict labels 造船する
+  intransitive, while inspected Daijisen gives a direct
+  object. Neither observation warrants a universal ban.
+  全般 needs its noun-suffix and 全般的 attachment
+  patterns; 相互 is not automatically a な-adjective.
+  Typical railway 線路 and traditional 草履 examples
+  do not establish railway-only or grass-only rules.
+  Mixed historical/homophone headings and failed
+  そういえば extraction remain explicit limitations.
+
 - **Batch 46 review/reconciliation:** Separate the kanji's
   reading/okurigana boundary from the inflectional stem:
   攻 is read せ, but 攻める's ichidan stem is せめ.

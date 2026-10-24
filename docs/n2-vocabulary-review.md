@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-46 review-closed.** The target is all 1,812 source rows,
+**Batches 01-46 review-closed; batch 47 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 920 rows are review-closed; none are draft,
-892 remain pending, and none are unresolved.
+The first 920 rows are review-closed; twenty are draft,
+872 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -8440,3 +8440,71 @@ The deterministic manifest is **`3593322108dafa4d`**.
 The thirty assigned teaching files and manifest are
 unchanged by this documentation-only closure.
 This closes batch 46, not the full 1,812-row expansion.
+
+## Batch 47 - authored; independent review pending
+
+Source rows **N2:922-N2:941** map to nineteen new articles:
+センチ, 宣伝, 先頭, 全般, 扇風機, 線路, 相違,
+そういえば, 雑巾, 増減, 倉庫, 相互, 創作, 葬式,
+造船, 騒々しい, 増大, 送別 and 草履.
+Existing **そっと** gains explicit **そうっと**, そおっと
+and そーっと recognition, an emphatic gentle-handling
+example and its actual public definition. Its stable
+ID, primary reading, title, N3, previous teaching and
+baseline exclusions remain unchanged.
+
+All raw source fields are preserved, including the
+blank gloss at N2:939. センチ selects measurement
+and prefix senses **1075060:1-2**, with sentimental
+sense **3** separately recorded as additional teaching,
+not an independent N2 assignment. Kana-primary
+そういえば recognizes そう言えば without adding
+unwritten primary metadata.
+
+The [batch packet](n2-vocabulary-batch-sources/batch-47.json)
+retains twenty principal families/**27 senses**,
+restrictions and one-based selections. The completed
+author inspection covers **194 complete families/
+435 senses**, including those principals, **195 actual
+existing labels**, **110 complete existing articles**,
+and **36 component records**. The original selected
+186-family/388-sense inventory and the eighteen-family
+supplement overlap; only eight supplemental families
+are new to the inspected union. The historical
+prepared/not-inspected plan is retained separately
+from the completed-read receipt. Unselected captured
+families and old bodies are not inspected by implication.
+
+All **21 public retrieval records** were inspected:
+twenty contain actual lexical bodies, while
+**そういえば** has an explicit extraction failure,
+not positive public verification. センチ's mixed
+homophone headings, そっと's historical/unrelated
+headings and 草履's historical じょうり heading are
+qualified. JMdict's intransitive 造船 label and
+Daijisen's explicit direct-object example are preserved
+as separate observations; the teaching does not
+manufacture a universal object prohibition.
+These counts and observations are author assertions,
+not independent reviewer scope.
+
+Five primary N2 pairs gain useful reciprocal
+reading-row and Common words links: **般/全般**
+(ハン appearing as パン), **線/線路** (セン),
+**減/増減** (ゲン), **庫/倉庫** (コ), and
+**造/造船** (ゾウ). No character metadata or stroke
+cards change. Four existing word articles gain links
+only: **広告, 頭, 扇子 and 下駄**.
+The 言 link in そういえば's recognized written alias
+does not inflate primary reciprocal-pair counts.
+
+Draft coverage is **920 closed / 20 draft / 872 pending /
+0 unresolved**, mapping **932 distinct articles:
+872 new / 60 reused**. There are **4,145 word articles**
+and **215 tracked primary reciprocal N2 pairs**.
+All baseline identities/readings/titles/exclusions
+and easier levels remain preserved.
+The deterministic manifest is **`784f3b025dccd098`**.
+Sequential blind GPT and Claude reviews must assess
+the same frozen snapshot and all three facets before
+any of these twenty rows is review-closed.
