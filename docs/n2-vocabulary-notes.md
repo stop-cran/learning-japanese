@@ -95,6 +95,25 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 45 review/reconciliation:** Assess the complete
+  qualified English label, not an isolated substring:
+  Common Era year numbering does not mean any era or
+  century, so remove the unsupported period-word guards
+  rather than expanding them transitively. Conversely,
+  effort/opportunity and formation/conclusion labels
+  need their own direct overlapping-label precautions.
+  Qualifying 接する's interpersonal title avoids implying
+  generic matter-settling; its physical contact still
+  needs the actual 当たる comparison. Prefer the
+  dictionary's attested ひざを接する for the transitive
+  use. A warning against invented etymology should not
+  suppress the source's actual historical account:
+  Daijisen connects older 折角 to breaking a horn.
+  Link existing contrast cards as well as synonyms.
+  Both model families found effort/opportunity gaps;
+  their competing era-guard remedies required source
+  adjudication, not majority vote.
+
 - **Batch 45 authoring:** A useful plant-growth focus does
   not make 生長 historically plant-only or prohibit 成長
   for plants. Source legal-age ranges for 青少年 need their

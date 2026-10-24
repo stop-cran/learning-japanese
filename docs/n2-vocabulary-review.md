@@ -7985,7 +7985,7 @@ exclusions**, and deterministic manifest
 **`9aad8d823f69032d`** remain unchanged by closure.
 This closes batch 44, not the full 1,812-row expansion.
 
-## Batch 45 - drafted, independent review pending
+## Batch 45 - independent reviews reconciled, confirmation pending
 
 Source rows **N2:882-N2:901** map to twenty new articles:
 青少年, 整数, 清掃, 生存, 生長, 政党, 生年月日, 性能,
@@ -8038,4 +8038,79 @@ Coverage is **880 closed / 20 draft / 912 pending /
 0 unresolved**, mapped to **892 distinct articles:
 834 new / 58 reused**. There are **4,107 word articles**
 and **207 tracked primary reciprocal N2 pairs**.
-Independent GPT and Claude review is still pending.
+The initial independent reports and author reconciliation follow;
+bounded confirmation remains pending.
+
+### Blind initial reviews and author reconciliation
+
+Both reviewers assessed committed snapshot
+**`7ffb9fef77051410d247dfde7de6c8315ccb8e6f`**
+sequentially, with the same scope, rubric, source access and
+derivative omitting only the author's original guard rationale:
+[GPT / gpt-6.1-sol](n2-vocabulary-reviews/batch-45-gpt-initial.md),
+then [Claude / claude-opus-5.5](n2-vocabulary-reviews/batch-45-claude-initial.md).
+Their complete native final reports, actual models, separate
+sessions, exact prompts, snapshots, allowed private reads and
+zero edits were authenticated. Both processes exited before
+the next substantive work; no reviewer pool remains.
+
+GPT reported four findings; Claude reported five plus optional
+items. Both accepted the twenty mappings and original related
+edits within their actual reviewed scope. CLEAN is a bounded
+verdict, not exhaustive linguistic or runtime-quiz certification.
+The following are author adjudications, awaiting the original
+reviewers' correction confirmation.
+
+| Initial observation | Author disposition and evidence-supported change |
+|---|---|
+| GPT45-01; Claude F1: せっかく's effort/opportunity labels | Resolved by adding 苦心, 一生懸命, 機会, チャンス and きっかけ directly. Actual labels and complete families support conservative English-label protection, not unrestricted Japanese noun substitution. |
+| GPT45-02: 成立's formation/conclusion labels | Resolved by adding 誕生, 建設, 結論 and 終わり. Formation/establishment overlaps directly; conclusion/closing safeguards preserve the different agreement, reasoning and endpoint uses. |
+| GPT45-03: 接する's contact and generic deal-with labels | Resolved by adding 当たる and 連絡, and qualifying the new title to **touch; border on; treat people**. 片付ける's matter-settling sense is not a reason to guard the now-qualified interpersonal title. |
+| GPT45-04; Claude F3: 西暦's era-word safeguards | Adopt GPT's removal of 時代/年代; do not adopt Claude's suggested 世紀 expansion. The full qualified title identifies year numbering/a calendar, not any era or century. Complete source families and actual comparison bodies outweigh an existing guard clique's unsupported premise. Claude's conflicting recommendation awaits reassessment rather than being represented as agreement. |
+| Claude F2 and optional related 角 note: 折角 history | Resolved with Daijisen's expressly attributed older-noun horn-breaking anecdote: 折 breaking + 角 horn. Align the existing 角 navigation note; do not infer every modern meaning from that history. |
+| Claude F4/F5: existing contrast links | Resolved by linking 緯度/熱帯 in 赤道 and 死亡 in 生存. Actual existing bodies were inspected. |
+| Claude optional transitive 接する example | Adopt the captured dictionary's ひざを接する and explain bringing knees close/sitting close together. This is an attested-example improvement, not proof that the replaced invented phrase is impossible. |
+| Other optional additions | Remain optional: a 正方形 side-length example, 成立させる, more 背負う/しょう collocations and 生存's alternative reading. No need to expand the batch solely to prolong review. |
+
+Corrective research reread **fifteen complete families**;
+**ten duplicates** match the original records exactly.
+Only **five new families/eight senses** are appended, yielding
+**351 complete families/899 senses** in the union, not 351
+additional entries. The eighteen affected comparison/link
+bodies include nine not in the original full-read set:
+**140 distinct existing full bodies** and **216 actual labels**
+in total. The captured historical and transitive-example
+passages were reread, not misrepresented as fresh retrievals.
+Original source selections and author inspection assertions
+remain intact beside the labeled correction evidence.
+The current eighteen guarded new articles have
+**123 declarations**; old baseline exclusions are unchanged.
+
+Corrections affect **six new word articles and 角 only**.
+The fourteen other new articles, five other kanji edits,
+eight old-word edits, twenty source mappings, raw CSV fields
+and primary reciprocal-pair count remain unchanged.
+
+### Model-diversity observation
+
+The complete reports were compared, including Optional,
+Limits and per-file notes. Both found the shared effort/
+opportunity gap; GPT additionally named きっかけ and
+Claude additionally named 一生懸命. GPT also identified
+the 成立 and 接する gaps. Claude identified the
+historical-account mismatch and three missed links, and
+suggested the adopted attested transitive example.
+The era-safeguard disagreement was useful precisely
+because it required evidence-based adjudication:
+removing unsupported guards, not adding a third.
+
+Equal source access did not mean equal evidence depth.
+GPT read more comparison bodies/families and made fresh
+lookups, with failed retrievals disclosed. Claude read
+the principal/compact/public records but not the selected
+comparison-family bundles or all old bodies, used many
+title searches and disclosed its narrower scope.
+These are complementary observations on this batch,
+not a controlled benchmark, model ranking or proof
+that using two families removes bias. Shared correction
+confirmation will not be a second blind comparison.
