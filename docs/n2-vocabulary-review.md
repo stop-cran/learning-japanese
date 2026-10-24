@@ -8900,7 +8900,7 @@ The entire 1,812-row vocabulary expansion remains open.
 
 ## Batch 49: N2:962-N2:981
 
-**Status:** drafted; independent reviews and reconciliation pending.
+**Status:** drafted; initial reviews reconciled, bounded confirmations pending.
 
 Scope: 逸れる, 揃う, 揃える, 算盤, 存じる, 存ずる, 損得,
 田んぼ, 第一, 大学院, 大工, 体系, 太鼓, 対策, 大して,
@@ -8937,3 +8937,52 @@ Draft coverage is **960 closed / 20 draft / 832 pending /
 and **225 tracked primary reciprocal N2 pairs**.
 Structural and preservation checks do not establish linguistic
 correctness or actual runtime-quiz uniqueness.
+
+### Initial reviews and reconciliation
+
+Both independent reviewers received committed snapshot
+`88560e5b110c4e8b78922c8e3efedecbd1c99559`, the same assigned
+scope, rubric and source access, blind to author quiz rationale
+and each other's reports. They ran sequentially in isolated,
+short-lived processes; the first exited before the second began.
+Actual models and complete native final reports are authenticated:
+[GPT](n2-vocabulary-reviews/batch-49-gpt-initial.md),
+`gpt-6.1-sol`, then
+[Claude](n2-vocabulary-reviews/batch-49-claude-initial.md),
+`claude-opus-5.5`. Neither process edited files.
+
+| Initial observation | Adjudication |
+| --- | --- |
+| GPT F49-01: 揃える/作る | Add the direct guard. Actual 作る title includes prepare, and complete 1597890 includes preparation of food and documents; 1406120:2 includes prepare/get ready. This does not equate assembling and manufacturing. |
+| GPT F49-02: 体積/量 | Add the direct guard. Actual 量 teaching and 1554640:1 include physical volume; the three-dimensional qualifier does not separate it from 体積. |
+| GPT F49-03: 大層/グランド | Add the direct guard for actual grand/large modifier 1046840, not sports-ground 1046340. Their shared exclusions through 大 do not protect this pair. |
+| Claude B49-01: 揃う/揃える | Add the direct new-new guard on 揃う. Matching and completeness labels overlap even though the transitive/intransitive constructions remain distinct. |
+| Claude B49-02: 太鼓/楽器 | Add a conservative direct safeguard for the broad musical-instrument label; do not treat it as lexical identity with every instrument. |
+| Claude B49-03: 大層/ずっと | Remove the overly broad guard after checking the complete family, actual old body and newly captured Daijisen comparative sense. The conclusion does not validate the unsupported allegation that the list was copied or derived transitively. |
+| Claude B49-04: 逸れる illustration | Replace awkward それた道 with the actually attested 話が脇道へそれる, kana, translation and an explanation of へ. Do not replace it with an equally unverified collocation. |
+| Claude B49-05: 太鼓 source-list wording | Adopt localized clarity polish: teach the specific タンバリン name directly, without requiring the learner to see the compiler's list. No universal instrument-taxonomy ban is inferred. |
+| Claude optional 体制/政府 and 対策/予防 | Add two conservative direct safeguards after reading both actual bodies and complete 1376070/1543660. Ruling-regime/government and preventive-measure/precaution labels overlap without making all setups governments or all strategies prevention. These remain optional precautions, not retroactive shared findings. |
+| Claude optional 大して wording | Clarify affirmative degree expression and retain 大層's formal/old-fashioned qualification. This is polish, not evidence that the original sentence asserted everyday register. |
+| Other optional observations and limits | Do not rewrite preserved 大小 or demand a new を example merely for completeness. Recheck the supplied actual Daijisen 対策 heading, which explicitly has 名(スル); failed fresh extraction neither verifies nor contradicts it. This is supplied evidence, not a fresh successful reviewer retrieval. |
+
+The correction changes nine new articles. Seven direct declarations
+are added and one removed, leaving **141 declarations on all
+nineteen new articles**. Ten other new articles, all four kanji
+edits, reused 大小 and all twenty mappings/raw fields are unchanged.
+
+The models supplied complementary useful observations, with no
+shared initial actionable finding after comparing the complete
+reports, including Optional and Limits. GPT uniquely identified
+three missing direct guards; Claude uniquely identified the
+new-new pair, broad instrument safeguard, comparative over-guard
+and localized explanatory issues, plus optional precautions/polish.
+Its copying allegation is not supported and is not adopted.
+GPT read all complete-family renderings and reports 134 complete
+old-body reads; Claude read one of ten selected-family renderings,
+the supplemental rendering and mostly old front matter.
+Both read assigned articles and related edits, but their actual
+comparison depth differs. This demonstrates usefulness on this
+sample, not a controlled model-bias experiment or general ranking.
+
+Original-session confirmation of the actual corrections remains
+pending; no row is closed on the strength of these initial reports.

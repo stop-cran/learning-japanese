@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 49 reconciliation:** Inspect direct new-new transitivity pairs
+  as well as old comparison labels. 揃う/揃える share matching/completeness
+  answers despite their different argument structures. Broad labels
+  can also hide concrete overlaps: 作る includes preparation, 量 includes
+  physical volume, and グランド has a grand/large modifier identity
+  separate from the sports ground. Conversely, comparative ずっと is
+  not automatically absolute "very"; its actual Daijisen heading and
+  old article justify removing that overly broad 大層 guard.
+  Do not infer copying or transitive reasoning merely from similar lists.
+  Replace the awkward それた道 illustration with an actually attested
+  construction rather than inventing another contrast. Equal reviewer
+  access did not yield equal actual reading depth in this batch.
+
 - **Batch 49 authoring:** A family can include a source spelling without
   allowing the source reading for it: search-only 田ぼ does not remove
   the restriction of たんぼ to 田んぼ/田圃. Preserve that conflict
