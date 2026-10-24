@@ -95,6 +95,30 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 39 authoring:** A raw English gloss is not a
+  technical guarantee: 消毒's "sterilization" gloss needs
+  the bounded public definition distinguishing making
+  pathogens harmless from eliminating every organism.
+  Preserve the source gloss and qualify the teaching.
+  Likewise 小数's "fraction" does not erase the difference
+  between decimal and numerator-over-denominator notation.
+
+- **Batch 39 source handling:** 生ずる illustrates a real
+  classification difference between JMdict and Daijisen.
+  Name the frameworks, teach the actual particles and
+  inflected forms, and do not invent a regular godan
+  paradigm to reconcile their labels. Keep alternate
+  public headings such as 上下's other readings separate
+  from the narrowly reused article's mapping.
+
+- **Batch 39 inspection accounting:** Preserve a
+  capture-stage plan's original pending status and append
+  the later completed-inspection receipt. The 412-family
+  capture is not a claim to have read all of it. Count the
+  239 selected families, then the two inspected supplements;
+  principals already included in that union are not extra.
+  A failed actual-body extraction remains a failed lookup.
+
 - **Batch 38 confirmation:** Match each overlap to its actual
   sense index: だめ's no-good sense overlaps しょうがない:3,
   while its hopeless sense overlaps しょうがない:4. A sound

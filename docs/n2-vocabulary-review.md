@@ -6685,3 +6685,103 @@ Provenance and structural checks are author-executed,
 not reviewer-executed Git, production quiz draws,
 exhaustive linguistic validation or native-speaker
 certification. Overall N2 vocabulary expansion remains open.
+
+## Batch 39 - authored; independent reviews pending
+
+Twenty consecutive community-list rows **N2:762-N2:781**
+are drafted on parent
+`7b18d016f6228355b174ee61f992abb29c706342`.
+Eighteen original articles are new; existing 上下 and 商店
+gain only a sourced explicit `jlpt: 2` assignment. Their
+identities, primary readings, titles, teaching bodies and
+other metadata are preserved.
+
+| Source ID | Article | Selected pinned senses | Additional senses |
+| --- | --- | --- | --- |
+| N2:762 | 消極的 | 1350220:1 | - |
+| N2:763 | 賞金 | 1351930:1 | - |
+| N2:764 | 上下 | 1352710:1,2 | 1352710:4,6 |
+| N2:765 | 障子 | 1352090:1 | - |
+| N2:766 | 商社 | 1347080:1 | - |
+| N2:767 | 乗車 | 1355270:1 | - |
+| N2:768 | 上旬 | 1353410:1 | - |
+| N2:769 | 生ずる | 1378660:1,2 | - |
+| N2:770 | 小数 | 1348370:2 | 1348370:1 |
+| N2:771 | 商店 | 1347180:1 | - |
+| N2:772 | 焦点 | 1350810:1,2 | 1350810:3 |
+| N2:773 | 消毒 | 1350270:1 | - |
+| N2:774 | 勝敗 | 1346220:1 | - |
+| N2:775 | 蒸発 | 1356960:1,2 | - |
+| N2:776 | 賞品 | 1351960:1 | - |
+| N2:777 | 勝負 | 1346230:1,2 | - |
+| N2:778 | 小便 | 1580280:1 | 1580280:2 |
+| N2:779 | 消防署 | 1350370:1 | - |
+| N2:780 | 正味 | 1377980:2 | 1377980:1,3,4 |
+| N2:781 | 正面 | 1378030:1 | - |
+
+The [source packet](n2-vocabulary-batch-sources/batch-39.json)
+keeps raw source fields separate from these selections.
+Additional senses do not independently acquire N2 status.
+Broad source glosses are qualified rather than silently
+rewritten: 小数 is taught through mathematical decimal
+notation, and 消毒 does not promise complete sterility.
+生ずる acknowledges the two dictionaries' different
+classification frameworks and supplies actual inflected
+forms. Public alternate headings are not transferred into
+the reused 上下 or the new 正面 article.
+
+Author inspection covers **241 complete families / 556
+sense records**, including the **20 principal families /
+35 senses** checked equal, not counted twice. The original
+selection was 239 / 552; the final ドア and 大会 supplement
+adds two complete families / four senses. The broader
+original 412-family / 1,117-sense capture is not all
+inspected; 173 of those families remain capture-only.
+All 230 original comparison labels and the supplemental
+actual ドア label were inspected, giving **231 labels**.
+All 72 selected full existing bodies and the complete
+ドア / 大会 bodies were read: **74 full bodies**, not every
+body in the 230-card capture. All **33 complete component
+records** were inspected.
+
+There were **25 actual Daijisen lexical retrieval
+inspections** from 26 requests. 正面切って had no extracted
+actual lexical body and is not positive verification.
+Unmatched exact JMdict requests for 揚げ下ろし and 正しさ
+are retained without claiming those forms are invalid.
+The separately archived MHLW evidence covers only its
+消毒 / 除菌 definition section, not its full page,
+product instructions or a formal 滅菌 standard.
+The original capture-stage pending-inspection plan remains
+unchanged; a later receipt records completed inspections.
+
+Seven reciprocal pairs are added at the actual reading
+rows and in Common words on six N2 cards:
+極 / 消極的 at キョク; 賞 / 賞金 and 賞品 at ショウ;
+毒 / 消毒 at ドク; 蒸 / 蒸発 at ジョウ;
+署 / 消防署 at ショ and 防 / 消防署 at ボウ.
+Their metadata is unchanged. No kanji or stroke files
+are added.
+
+Initial quiz declarations comprise **15 guarded new
+articles / 42 directional declarations**. These are
+author hypotheses, not review conclusions. Direct ordinary
+meanings and actual labels govern the symmetric,
+nontransitive relation; neither homophony nor an inferred
+transitive clique suffices. The blind evidence derivative
+removes only `reviewEvidence.quizGuardRationale`.
+
+Structural and author-executed checks establish **760
+closed / 20 draft / 1,032 pending / 0 unresolved** rows,
+mapped to **773 distinct articles: 725 new / 48 reused**.
+There are **3,998 word articles** and **184 tracked primary
+reciprocal N2 kanji-word pairs**. The **3,273 baseline**
+identities, readings, titles and exclusions remain preserved
+under the recorded narrow level/reuse rules.
+The deterministic manifest is **`bf8090b9833357dd`**:
+**6,626 assets = 6,029 files + 396 images + 201 scenes**.
+
+Independent GPT and Claude reviews and evidence-based
+reconciliation remain pending. A valid draft or authored
+commit is not review closure; no model-diversity conclusion
+is claimed yet for this batch. Overall expansion remains open.
