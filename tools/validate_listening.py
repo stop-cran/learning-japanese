@@ -13,8 +13,8 @@ AUDIO_PATH = re.compile(r"audio/[a-z0-9]+(?:-[a-z0-9]+)*\.ogg")
 MAX_AUDIO_BYTES = 512 * 1024
 
 
-def content_hash(document: dict) -> str:
-    payload = {key: value for key, value in document.items() if key not in {"audio", "audioReview"}}
+def canonical_hash(payload) -> str:
+    """Hash integer-only listening JSON, preserving arrays and Unicode."""
     def integers_only(value):
         _require(not isinstance(value, float), "listening JSON numbers must be integers")
         for child in value.values() if isinstance(value, dict) else value if isinstance(value, list) else ():
@@ -23,6 +23,10 @@ def content_hash(document: dict) -> str:
     return hashlib.sha256(json.dumps(
         payload, ensure_ascii=False, sort_keys=True, separators=(",", ":"), allow_nan=False,
     ).encode("utf-8")).hexdigest()
+
+
+def content_hash(document: dict) -> str:
+    return canonical_hash({key: value for key, value in document.items() if key not in {"audio", "audioReview"}})
 
 
 def _require(condition: bool, message: str) -> None:
@@ -53,7 +57,7 @@ def _unique_ids(items: list[dict], name: str) -> set[str]:
     return set(ids)
 
 
-def opus_duration_ms(data: bytes) -> int:
+def opus_duration_ms(data: bytes, minimum_ms: int = 15000, maximum_ms: int = 60000) -> int:
     """Check a complete mono Ogg Opus stream; granule positions use the Opus 48 kHz clock."""
     _require(0 < len(data) <= MAX_AUDIO_BYTES, "audio exceeds the 512 KiB envelope")
     offset, sequence, serial, last_granule = 0, 0, None, 0
@@ -109,9 +113,11 @@ def opus_duration_ms(data: bytes) -> int:
     _require(len(head) == 19 and head[:8] == b"OpusHead" and head[8] == 1
              and head[9] == 1 and head[18] == 0, "only standard mono Opus is supported")
     _require(tags.startswith(b"OpusTags"), "missing Opus tags")
-    _require(last_granule <= 3_000_000, "Opus granule position exceeds the media envelope")
-    duration = (last_granule - int.from_bytes(head[10:12], "little")) * 1000 // 48000
-    _require(15000 <= duration <= 60000, "audio must be 15-60 seconds (target 20-45)")
+    preskip = int.from_bytes(head[10:12], "little")
+    _require(last_granule <= maximum_ms * 48 + preskip, "Opus granule position exceeds the media envelope")
+    duration = (last_granule - preskip) * 1000 // 48000
+    _require(minimum_ms <= duration <= maximum_ms,
+             f"audio must be {minimum_ms}-{maximum_ms} milliseconds")
     return duration
 
 

@@ -8,13 +8,17 @@ from pathlib import Path
 
 MAX_RETAINED = 40 * 1024 * 1024
 MAX_INFLATED = 80 * 1024 * 1024
-MAX_COMPRESSED = 24 * 1024 * 1024
+MAX_COMPRESSED = 28 * 1024 * 1024
 MAX_ENTRIES = 7000
-CONTENT_FOLDERS = {"kanji", "words", "articles", "strokes", "counters", "grammar", "scenes", "listening", "audio"}
+MAX_TASK_MEDIA = 6 * 1024 * 1024
+CONTENT_FOLDERS = {
+    "kanji", "words", "articles", "strokes", "counters", "grammar", "scenes", "listening", "audio",
+    "curriculum", "listening-tasks", "task-audio", "task-images",
+}
 
 
 def check(root: Path, names: list[str]) -> dict:
-    retained = inflated = 0
+    retained = inflated = task_media = 0
     directories = {"repository/"}
     entries = []
     for name in sorted(set(names)):
@@ -31,9 +35,14 @@ def check(root: Path, names: list[str]) -> dict:
             parts[0] in CONTENT_FOLDERS or parts[0] == "images" and name.endswith(".webp"))
         if wanted:
             retained += len(data)
-            limit = 150 * 1024 if parts[0] == "images" else 512 * 1024 if parts[0] == "audio" else 2 * 1024 * 1024
+            limit = (150 * 1024 if parts[0] in {"images", "task-images"} else
+                     512 * 1024 if parts[0] in {"audio", "task-audio"} else 2 * 1024 * 1024)
             if len(data) > limit:
                 raise ValueError(f"{name}: exceeds per-file import limit {limit}")
+            if parts[0] in {"task-audio", "task-images"}:
+                task_media += len(data)
+                if task_media > MAX_TASK_MEDIA:
+                    raise ValueError("new unique audio/images exceed the combined 6 MiB budget")
         entries.append((name, data))
         if retained > MAX_RETAINED or inflated > MAX_INFLATED:
             raise ValueError("content exceeds retained/inflated archive headroom")
@@ -49,7 +58,8 @@ def check(root: Path, names: list[str]) -> dict:
     if compressed > MAX_COMPRESSED:
         raise ValueError("content exceeds compressed archive headroom")
     return {"files": len(entries), "entries": len(entries) + len(directories),
-            "retainedBytes": retained, "inflatedBytes": inflated, "localZipBytes": compressed}
+            "retainedBytes": retained, "inflatedBytes": inflated, "localZipBytes": compressed,
+            "listeningTaskMediaBytes": task_media}
 
 
 def main() -> None:

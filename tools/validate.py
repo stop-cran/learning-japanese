@@ -566,6 +566,8 @@ def main() -> int:
     scene_images = check_scenes(err, ROOT, word_metadata, check_image_file)
     from validate_listening import check_listening
     listening_images = check_listening(err, ROOT, check_image_file)
+    from validate_listening_tasks import check_listening_tasks
+    check_listening_tasks(err, ROOT)
     check_images(word_images, scene_images, listening_images)
     from validate_counters import check_counters
     check_counters(err, ROOT)

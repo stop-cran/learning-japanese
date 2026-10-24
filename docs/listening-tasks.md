@@ -1,8 +1,9 @@
 # Japanese listening task packages: schema 1 contract
 
 Companion to [app contract 1](https://github.com/stop-cran/kanji-cards-android/blob/main/docs/LISTENING-TASKS.md)
-for app #66 and content #38. **Independently reviewed contract, adopted under delegated autonomous decision-making; not supported
-by the current app or validator.** Do not add runtime files until B's compatible tooling exists.
+for app #66 and content #38. **Independently reviewed contract, adopted under delegated autonomous decision-making.**
+B adds compatible validation, manifest/budget tooling and the app's shared data/media foundation.
+Runtime publication still waits for C/D's renderers and E's exact-output approval and device gates.
 The [existing English-question schema](listening-n5.md) and its 36 approved passages are unchanged.
 These reviewed conservative defaults are adopted under delegated autonomous implementation
 authority, not recorded as separate personal confirmation. Paid-media authorization
@@ -28,6 +29,7 @@ Only a new app's wanted-file list expands. Old archive size/inflation/entry chec
 All IDs are lowercase ASCII kebab-case; filenames exactly match IDs. All numbers are integers,
 text is nonempty plain text, arrays retain authored order, and references are closed within a package
 except optional existing word articles. Scored IDs are unique across legacy and new catalogs.
+Omit optional fields instead of writing null; numeric strings are not integer fields.
 Unknown schema/policy versions or task types are unsupported. Unknown fields in a supported version
 are errors; new grading/presentation requirements need an explicit version, not silently ignored metadata.
 The four [structural examples](listening-task-examples/) are original **unapproved documentation
@@ -167,6 +169,12 @@ Retain the 40-MiB / 80-MiB / 7,000-entry publication guards. All new unique audi
 must fit 6 MiB; test the complete archive, including ignored documentation and existing media.
 Update budget accounting for curriculum and the new folders in B. If real approved output cannot
 fit, stop for a reviewed adjustment; do not lower quality or raise hard limits automatically.
+
+`python -B tools/validate.py` includes task validation, while `python -B tools/build_manifest.py`
+adds the three separate maps only when populated. `tools/test_listening_tasks.py` pins the same four
+structural content hashes as the Android tests, exercises strict media/approval/reference rules and
+checks namespace/budget compatibility. `validate_listening_tasks.check_listening_tasks` can also compare an
+explicit prior task/exposure binding ledger; never rename or rebind scored identities to reset history.
 
 Use [app contract 1](https://github.com/stop-cran/kanji-cards-android/blob/main/docs/LISTENING-TASKS.md)
 for exact 26-34-minute form calculations, eligibility, guided grades, shared exposure, accounting,

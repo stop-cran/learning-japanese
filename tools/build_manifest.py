@@ -56,6 +56,17 @@ def build_manifest(root: Path) -> dict:
         payloads["audio"] = audio
     if curriculum:
         payloads["curriculum"] = curriculum
+    for key, folder, pattern, binary in (
+        ("listeningTasks", "listening-tasks", "*.json", False),
+        ("listeningTaskAudio", "task-audio", "*.ogg", True),
+        ("listeningTaskImages", "task-images", "*.webp", True),
+    ):
+        entries = {
+            path.relative_to(root).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest() if binary else sha256(path)
+            for path in sorted((root / folder).glob(pattern)) if path.is_file()
+        }
+        if entries:
+            payloads[key] = entries
     combined = hashlib.sha256(
         json.dumps(payloads if len(payloads) > 1 else files, sort_keys=True, ensure_ascii=False).encode("utf-8")
     ).hexdigest()
@@ -67,10 +78,14 @@ def main() -> None:
     (ROOT / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n"
     )
-    count = sum(len(manifest.get(key, {})) for key in ("files", "images", "scenes", "listening", "audio", "curriculum"))
+    count = sum(len(manifest.get(key, {})) for key in (
+        "files", "images", "scenes", "listening", "audio", "curriculum",
+        "listeningTasks", "listeningTaskAudio", "listeningTaskImages",
+    ))
     print(f"manifest.json: {count} files incl. {len(manifest.get('images', {}))} images, "
           f"{len(manifest.get('scenes', {}))} scene catalogs, {len(manifest.get('listening', {}))} listening passages, "
           f"{len(manifest.get('curriculum', {}))} curriculum catalogs, "
+          f"{len(manifest.get('listeningTasks', {}))} listening tasks, "
           f"version {manifest['contentVersion']}")
 
 
