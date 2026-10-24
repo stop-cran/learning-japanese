@@ -5,8 +5,8 @@
 **Batches 01-34 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 680 rows are review-closed; no rows are draft,
-1,132 remain pending, and none are unresolved.
+The first 680 rows are review-closed; batch 35's 20 rows are draft,
+1,112 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -5715,3 +5715,64 @@ Final coverage: **680 closed / 0 draft / 1,132 pending /
 43 reused**. There are **3,903 word articles** and **157 distinct
 tracked reciprocal primary N2 kanji-word pairs**. This closes
 batch 34, not the remaining vocabulary expansion.
+
+## Batch 35: N2:682-N2:701
+
+**Status:** authored; independent initial reviews pending.
+
+Scope: 湿度, 執筆, 実物, しっぽ, 実用, 実力, 実例,
+失恋, 指定, 私鉄, 児童, 縛る, 地盤, しびれる, 紙幣,
+しぼむ, 絞る, 縞, 地味 and しみじみ.
+
+Eighteen new articles and two metadata-enriched reuses cover
+twenty source rows. Existing 湿度 and 児童 gain only sourced
+`jlpt: 2`; their stable IDs, primary readings, titles, teaching
+and exclusions remain unchanged. The collection now has
+**3,921 word articles**. Three narrow kanji edits add or link
+筆/執筆, 恋/失恋 and 鉄/私鉄. These bring the historical
+new-article-only reciprocal audit to **160 distinct pairs**.
+The already reciprocal 湿/湿度, 児/児童 and 童/児童 links
+are preserved but not added to that new-article-only count.
+
+The [source packet](n2-vocabulary-batch-sources/batch-35.json)
+preserves twenty raw rows, twenty complete principal families
+with 44 indexed senses, 302 complete comparison families with
+780 indexed senses, 150 actual comparison labels and 33 complete
+component records. All those records and twenty positive public
+Digital Daijisen containers were inspected. Of 150 captured full
+comparison articles, **seventeen** were read in full, explicitly
+listed in the packet; the other 133 captures are not claimed as
+inspections. The two reused principal articles were read separately.
+Capture hashes, physical line counts and volumes are computed.
+Public observations are original concise paraphrases.
+
+実力 selects both ability and force because the raw source
+explicitly includes both. しぼむ retains one broad principal
+sense rather than borrowing public subdivisions as new indices.
+絞る/搾る preferences are not absolute spelling restrictions;
+practical extensions are separately mapped. 私鉄 includes the
+conventional non-JR distinction without calling today's JR
+companies national railways. Separate public identities under
+みもの, しべい and ちみ are not pooled into the teaching.
+
+地盤 distinguishes supporting ground and additional support-base
+uses; 地味 teaches な/に attachment and the separately indexed
+colloquial degree use. しびれる's sleeping-limb gloss is numbness,
+not literal sleeping. 縞's historical spellings do not reuse 島's
+modern island identity; 柄 is がら in its pattern sense.
+しみじみ permits optional と without inventing a suru entry.
+Missing primary 執/縛/盤/幣/絞/縞 remain metadata/plain text.
+Kana-primary しっぽ/しびれる/しぼむ/しみじみ keep empty arrays.
+
+Eighteen new cards declare **77 directional quiz exclusions**;
+reused declarations are unchanged. These direct ordinary-meaning
+and actual-label judgments are pending independent assessment.
+Both reviewers receive the same frozen snapshot, all eighteen
+new articles, two narrow reuse claims, three kanji edits, twenty
+mappings, rubric and source access. Processes run sequentially
+without delegation or file edits; the evidence derivative removes
+only `quizGuardRationale`.
+
+Authored coverage: **680 closed / 20 draft / 1,112 pending /
+0 unresolved**, mapped to **693 distinct articles: 648 new and
+45 reused**. This is not review closure.

@@ -95,6 +95,21 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 35 authoring:** A raw English gloss can span multiple
+  current senses: 実力 explicitly includes arms/force as well as
+  ability, so both are selected, not mislabeled as additional.
+  Conversely, しぼむ has one broad principal sense despite public
+  subdivisions for flowers, balloons and hopes. Preserve the
+  pinned dictionary's actual indices.
+- **Batch 35 evidence:** Distinguish captured comparison bodies
+  from inspected ones; reading every family and label does not
+  mean every captured article was read. Likewise, the historical
+  reciprocal-pair audit counts new articles only: existing reuse
+  backlinks remain useful but must not inflate that count.
+- **Batch 35 authoring:** Conventional 私鉄/JR usage is not
+  mechanically derivable from present ownership alone. Separate
+  different public headwords (実物/みもの, 紙幣/しべい,
+  地味/ちみ) and historical spellings from the selected identity.
 - **Batch 34 reconciliation:** Temporal extent or habitual
   frequency is not the same lexical answer as continuation or
   performing an action again. Remove those five 始終 edges,
