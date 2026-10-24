@@ -95,6 +95,20 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 30 authoring:** As with コレクション, a legacy gloss can
+  have positive support under a separate homograph. コンセント's
+  Daijisen *consent* heading and informed-consent expression are not
+  senses of current JMdict1052330's electrical outlet entry. The
+  electrical borrowing's `concent(ric plug)` source does not establish
+  an ordinary Japanese adjective meaning "concentric." Keep raw
+  source text, current identity and external recognition distinct.
+- **Batch 30 authoring:** A source's English "make retroactive" does
+  not determine Japanese transitivity. 遡る remains intransitive;
+  route を and a construction with transitive 適用する need their
+  own explanations. Similarly, 裁縫をする marks an activity noun,
+  not proof of an object-taking 裁縫 verb. 採点's separately supported
+  assigned-score recognition receives no fabricated JMdict index.
+
 - **Batch 29 confirmation:** An earlier CLEAN review can still miss a
   direct ordinary-secondary-meaning pair. ごめん/恐縮 is supported by
   the pinned feeling-sorry sense and the actual courteous-request

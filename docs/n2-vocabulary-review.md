@@ -4669,3 +4669,68 @@ the pinned evidence. Optional observations were compared across
 whole reports and not credited as unique solely by section labels.
 This is evidence for using both families and reconciling their
 claims, not a benchmark or a guarantee against further misses.
+
+## Batch 30: N2:582-N2:601
+
+**Status:** drafted; independent reviews pending.
+
+Scope: 混合, コンセント, 献立, こんばんは, サークル, 在学, 再三,
+祭日, 催促, 採点, 災難, 裁縫, 材木, サイレン, 逆さ, 逆様,
+捜す, 遡る, 酒場, さきおととい.
+
+Nineteen standalone additions bring the collection to 3,829 word
+articles. Exact existing 捜す is reused with only sourced `jlpt: 2`
+added; its body, title, reading and guards remain. The separate
+探す article retains N4. Source 逆様 is explicitly taught at
+primary 逆さま, with the rare source spelling and actual whole-word
+reading preserved. Kana-primary こんばんは and さきおととい
+teach their kanji spellings without inventing primary metadata.
+
+Six N2 kanji cards receive useful linked examples and citations:
+混, 再, 祭, 採, 材 and 逆. Seven newly tracked primary reciprocal
+pairs bring the distinct total to 138; 逆 has both 逆さ and 逆さま.
+The existing 捜/捜す backlink needs no change. Missing 献, 催,
+促, 災, 裁, 縫 and 遡 remain written-primary metadata where
+applicable; no new kanji/stroke cards are fabricated.
+
+The [source packet](n2-vocabulary-batch-sources/batch-30.json)
+retains twenty exact raw rows and complete principal families,
+157 distinct complete comparison families from four extractions,
+101 actual existing labels/exclusions, 35 complete component
+records and 22 actual public lexical containers. Complete family
+renderings and captured comparison bodies were inspected through
+their boundaries. Public observations are original concise
+paraphrases, not copied full dictionary bodies. This does not
+claim a renewed full linguistic review of every baseline card.
+
+コンセント's source consent gloss has positive support under a
+separate Daijisen heading and in the informed-consent expression.
+It is not an extra current JMdict1052330 sense. The raw concentric
+gloss is retained and distinguished from that electrical entry's
+loan-source fragment. 採点's assigned-score recognition likewise
+has positive external support without an invented current sense
+number. サイレン does not deny separately attested mythological
+homographs merely because its principal entry is short.
+
+Practical teaching distinguishes on-first mixed 献立 from two
+on readings, greeting は pronounced わ, enrollment state from
+entry/commuting, repeated 再三 from exactly three occurrences,
+festival days from events without inventing a strict 祝日 split,
+pressing for action from every initial request, and sewing from
+its individual tools. 材木/木材 keep their actual reversed readings.
+逆さ/逆さま cover orientation and order. 遡る retains intransitive
+grammar despite route を and retroactive English wording.
+さきおととい explicitly counts three days before today.
+
+Sixteen new cards declare 71 directional quiz exclusions, based
+on direct ordinary-meaning and actual-label checks. Existing
+baseline guards remain unchanged. These are author judgments for
+independent assessment, not reviewer conclusions. Both families
+will receive the same frozen snapshot, nineteen articles, reused
+source claim, seven related diffs, rubric and source access in
+sequential processes. Their evidence derivative removes only the
+author's quiz-guard rationale.
+
+Coverage is **580 closed / 20 draft / 1,212 pending / 0 unresolved**,
+mapped to 594 distinct articles: 556 new and 38 reused. The batch
+and remaining list are not yet claimed review-closed.
