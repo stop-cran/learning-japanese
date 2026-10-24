@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "batch": "42",
-  "status": "draft",
+  "status": "closed",
   "sourceRange": [
     "N2:822",
     "N2:841"
@@ -19737,6 +19737,61 @@
       },
       "modelDiversity": "GPT uniquely identified the adopted estimation and level-label pair gaps; Claude uniquely proposed the adopted vowel-length clarification, four source-list additions and two backlinks. Compare all report sections: Claude did not independently identify GPT's pairs. Different evidence-reading depth prevents a controlled model benchmark.",
       "limits": "Author reconciliation and inspection accounting; no production quiz run, independent monolingual emphasis attestation, or linguistic certification. Initial source rows, family data, author hypotheses and original report texts remain unchanged."
+    },
+    "confirmationEvidence": {
+      "correctionCommit": "416bae390072e79df4dbf7cf8e161ce4fe9500cd",
+      "bothOriginalReviewersAcceptedBoundedCorrections": true,
+      "postConfirmationTeachingChanges": false,
+      "reports": {
+        "batch-42-gpt-initial": {
+          "actualModel": "gpt-6.1-sol",
+          "reviewerSessionId": "1bc90ae9-be1b-48f5-a5fd-3632633344f8",
+          "reportSha256": "c80decf5d1c2765bc1fa8bd9ad9ecf9f0ccc0f5ae1d51cbb50c179c6591ec2a7",
+          "usageSha256": "bedf2bf8b70ed8c7be73d02d54c6d6cbdb07ad12af91850dd11d7ee2f06e3747",
+          "exactPromptAndCompleteNativeFinalMessageAuthenticated": true,
+          "exactPrivateFileAllowlistAndNoNamedForbiddenReads": true,
+          "toolCalls": 157,
+          "zeroEdits": true
+        },
+        "batch-42-gpt-confirmation": {
+          "actualModel": "gpt-6.1-sol",
+          "reviewerSessionId": "1bc90ae9-be1b-48f5-a5fd-3632633344f8",
+          "reportSha256": "9e9e8179ff34e7d1e0e376b988584a3177aa458e0deba501f1086f1335bcee61",
+          "usageSha256": "53dc6349782bb3cfa3e75472c3de800ba807fdc173d50deea42a6fc578b34af8",
+          "exactPromptAndCompleteNativeFinalMessageAuthenticated": true,
+          "exactPrivateFileAllowlistAndNoNamedForbiddenReads": true,
+          "toolCalls": 34,
+          "zeroEdits": true
+        },
+        "batch-42-claude-initial": {
+          "actualModel": "claude-opus-5.5",
+          "reviewerSessionId": "38c5255e-fe5c-49f3-bf26-37bfa7249fd0",
+          "reportSha256": "2045e40f62031e68840e9c6dee319856a7be4f44a94483ba29e6162700665425",
+          "usageSha256": "2572969dba09117aac9eda46948225bb76d4b7b40b7092e3103c9c672ab2f7b2",
+          "exactPromptAndCompleteNativeFinalMessageAuthenticated": true,
+          "exactPrivateFileAllowlistAndNoNamedForbiddenReads": true,
+          "toolCalls": 69,
+          "zeroEdits": true
+        },
+        "batch-42-claude-confirmation": {
+          "actualModel": "claude-opus-5.5",
+          "reviewerSessionId": "38c5255e-fe5c-49f3-bf26-37bfa7249fd0",
+          "reportSha256": "a44ef49ac84c0f061ad4277b936bb853b5122ecf0d05c1791f6949d98eed8787",
+          "usageSha256": "0b56d8d666e0bb1945f85d14ec0edde9b506d00813abaac34d3b45b163879b2c",
+          "exactPromptAndCompleteNativeFinalMessageAuthenticated": true,
+          "exactPrivateFileAllowlistAndNoNamedForbiddenReads": true,
+          "toolCalls": 27,
+          "zeroEdits": true
+        }
+      },
+      "finalDispositions": {
+        "GPT42-01": "Resolved: direct 推定/計算 and 推定/予定 guards; Claude independently accepts 計算 as well supported and 予定 as weaker but defensible. Not unanimous proof of a necessary runtime repair.",
+        "GPT42-02": "Resolved: direct 水平/線 guard; Claude accepts it as defensible and low cost but calls the clash mild because 線's article teaches other selected senses.",
+        "Claude F1": "Resolved: qualified vowel-length/emphasis explanation. Claude partially accepts the author's correction of its initial severity: incomplete explanation, not an explicit false short-pronunciation rule. No fresh monolingual emphasis attestation was established.",
+        "optional": "Both accept the four source-entry additions and two backlinks. Remaining expansion and category/component guards stay optional."
+      },
+      "scope": "Both reread all nine changed cards completely. Seventeen unchanged per-source article judgments are inherited, not represented as new comprehensive reviews. Both provide twenty individual all-CLEAN article rows, four kanji judgments, two backlink judgments and all-twenty mapping judgments.",
+      "limits": "Authenticated native complete messages, exact prompts/models/private paths and original-session continuity are author-executed provenance checks. Not reviewer-executed Git/hash validation, runtime draws or native-speaker certification."
     }
   }
 }

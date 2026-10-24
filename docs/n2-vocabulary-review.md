@@ -7414,7 +7414,7 @@ exclusions**, and deterministic manifest
 **`67cdc8372132f347`** remain unchanged by closure.
 This closes batch 41, not the full 1,812-row expansion.
 
-## Batch 42 - authored; independent reviews pending
+## Batch 42 - closed
 
 Source rows **N2:822-N2:841** cover 水蒸気, 水素, 垂直,
 推定, 水滴, 水筒, 随筆, 水分, 水平, 水平線, 水曜,
@@ -7591,3 +7591,52 @@ evidence, not a controlled model benchmark.
 
 Original-session confirmations are pending; none of the
 twenty rows is closed by this reconciliation.
+
+### Original-session confirmations and closure
+
+The corrected committed snapshot is
+**`416bae390072e79df4dbf7cf8e161ce4fe9500cd`**.
+[GPT confirmation](n2-vocabulary-reviews/batch-42-gpt-confirmation.md)
+completed and exited before
+[Claude confirmation](n2-vocabulary-reviews/batch-42-claude-confirmation.md)
+started. Each resumed its original session, read all nine
+changed cards completely, supplied twenty individual
+all-**CLEAN** article judgments and accepted the four
+kanji citation changes, two backlinks and all twenty
+mappings. Seventeen unchanged article judgments are
+explicitly inherited rather than reported as fresh full
+rereads.
+
+GPT confirms both original findings resolved. Claude
+confirms F1 resolved and partially accepts the author's
+severity qualification: the initial defect was an
+incomplete explanation, not an explicit false short-vowel
+rule. Both accept the qualified vowel-length/emphasis
+wording while retaining the failed/irrelevant monolingual
+lookups as limits. They do not fabricate fresh attestation.
+
+The quiz judgments retain a meaningful difference in
+strength. Claude calls 推定/計算 well supported but
+推定/予定 weaker and 水平/線 a mild clash; it accepts
+the latter two as defensible low-cost guards, not proven
+necessary repairs. GPT retains its stronger label-based
+assessment. This is no remaining actionable dispute, and
+the record does not turn shared acceptance into unanimous
+proof of a production failure.
+
+All four complete native final messages, exact prompts,
+actual models, original-session continuity, zero edits,
+explicit private-file access, both committed snapshots,
+patches, normalized hashes and blind derivatives were
+author-authenticated. Neither reviewer independently ran
+Git, hashes, the app or quiz draws. No teaching change
+followed confirmation.
+
+Exactly **N2:822-N2:841** are closed, yielding **840
+closed / 0 draft / 972 pending / 0 unresolved**. The
+**833 mapped articles (778 new / 55 reused)**, **4,051
+word articles**, **196 tracked reciprocal N2 pairs**,
+**3,273 preserved baseline identities/readings/titles/
+exclusions**, and deterministic manifest
+**`36eb8f05991e3591`** remain unchanged by closure.
+This closes batch 42, not the full 1,812-row expansion.
