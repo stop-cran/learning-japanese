@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-garden-watering",
+  "exposureId": "n5-story-garden-watering",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Looking after a garden",
+  "topic": "Two people are talking in a garden. Which flowers will the woman water?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "庭で二人が話しています。女の人は、どの花に水をやりますか。",
+      "translation": "Two people are talking in a garden. Which flowers will the woman water?"
+    },
+    {
+      "id": "t1",
+      "speaker": "a",
+      "text": "明日から二日間、留守にします。朝、花に水をやってもらえますか。",
+      "translation": "I'll be away for two days starting tomorrow. Could you water the flowers in the morning?"
+    },
+    {
+      "id": "t2",
+      "speaker": "b",
+      "text": "いいですよ。庭に花がたくさんありますね。全部に水をやるんですか。",
+      "translation": "Of course. There are a lot of flowers in the garden. Should I water all of them?"
+    },
+    {
+      "id": "t3",
+      "speaker": "a",
+      "text": "いいえ、今夜は雨です。外にある花は大丈夫です。屋根の下の花だけお願いします。",
+      "translation": "No. It will rain tonight. The flowers out in the open will be fine. Just the ones under the roof, please."
+    },
+    {
+      "id": "t4",
+      "speaker": "b",
+      "text": "屋根の下ですね。白い花と黄色い花がありますが、両方ですか。",
+      "translation": "Under the roof, right. There are white and yellow flowers. Both?"
+    },
+    {
+      "id": "t5",
+      "speaker": "a",
+      "text": "黄色い花には、今、水をやりました。白い花には、まだやっていません。",
+      "translation": "I've just watered the yellow flowers. I haven't watered the white ones yet."
+    },
+    {
+      "id": "t6",
+      "speaker": "b",
+      "text": "じゃ、白い花だけにします。水は台所から持って来ればいいですか。",
+      "translation": "Then I'll water just the white flowers. Should I bring water from the kitchen?"
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "庭の花全部",
+      "translation": "All the flowers in the garden.",
+      "rationale": "He explicitly limits the request rather than asking for all flowers."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "外にある黄色い花",
+      "translation": "Yellow flowers out in the open.",
+      "rationale": "Rain will reach the exposed flowers, and yellow is not the requested color."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "屋根の下の白い花",
+      "translation": "White flowers under the roof.",
+      "rationale": "The roof excludes rain, and these have not been watered yet."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "屋根の下の黄色い花",
+      "translation": "Yellow flowers under the roof.",
+      "rationale": "He has already watered these."
+    }
+  ],
+  "answer": "option-3",
+  "evidence": [
+    "t3",
+    "t5",
+    "t6"
+  ],
+  "explanation": "Combine location with the already/not-yet distinction. Only the sheltered white flowers still need the requested watering.",
+  "vocabulary": [
+    {
+      "surface": "留守",
+      "reading": "るす",
+      "gloss": "being away from home"
+    },
+    {
+      "surface": "屋根",
+      "reading": "やね",
+      "gloss": "roof"
+    },
+    {
+      "surface": "水をやる",
+      "reading": "みずをやる",
+      "gloss": "water a plant"
+    }
+  ]
+}

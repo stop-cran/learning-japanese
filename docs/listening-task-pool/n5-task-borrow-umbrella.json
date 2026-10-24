@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-borrow-umbrella",
+  "exposureId": "n5-story-borrow-umbrella",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Before going outside",
+  "topic": "It has suddenly started raining. May I borrow this umbrella until I go home?",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、返事を一つ選んでください。",
+      "translation": "Listen and choose one reply."
+    },
+    {
+      "id": "utterance",
+      "speaker": "b",
+      "text": "急に雨が降ってきましたね。この傘、帰るまで借りてもいいですか。",
+      "translation": "It has suddenly started raining. May I borrow this umbrella until I go home?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。ええ、どうぞ使ってください。",
+      "spokenText": "いち。ええ、どうぞ使ってください。",
+      "translation": "1. Yes, please use it."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。いいえ、まだ降っていません。",
+      "spokenText": "に。いいえ、まだ降っていません。",
+      "translation": "2. No, it hasn't rained yet."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。はい、昨日返しました。",
+      "spokenText": "さん。はい、昨日返しました。",
+      "translation": "3. Yes, I returned it yesterday."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "ええ、どうぞ使ってください。",
+      "translation": "Yes, please use it.",
+      "rationale": "This grants the requested permission to borrow."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "いいえ、まだ降っていません。",
+      "translation": "No, it hasn't rained yet.",
+      "rationale": "This denies the explicitly observed rain instead of responding to the borrowing request."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "はい、昨日返しました。",
+      "translation": "Yes, I returned it yesterday.",
+      "rationale": "This reports a past return by the respondent rather than granting or refusing the present request."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-1",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "借りてもいいですか asks permission. An appropriate refusal would also be possible, but none is offered among these distractors.",
+  "vocabulary": [
+    {
+      "surface": "急に",
+      "reading": "きゅうに",
+      "gloss": "suddenly"
+    }
+  ]
+}

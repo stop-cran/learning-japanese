@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-broken-cup",
+  "exposureId": "n5-story-broken-cup",
+  "taskType": "verbal-expression",
+  "kind": "monologue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "In an office",
+  "topic": "Someone has dropped a cup at work. The cup belongs to the person on the right. Look at the picture. What does the person indicated by the arrow say?",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "絵を見て、話を聞いてください。矢印の人は、何と言いますか。答えを一つ選んでください。",
+      "translation": "Look at the picture and listen. What does the person indicated by the arrow say? Choose one answer."
+    },
+    {
+      "id": "situation",
+      "speaker": "n",
+      "text": "会社で、コップを落としてしまいました。コップは右の人の物です。絵を見てください。矢印の人は、何と言いますか。",
+      "translation": "Someone has dropped a cup at work. The cup belongs to the person on the right. Look at the picture. What does the person indicated by the arrow say?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。大切に使ってください。",
+      "spokenText": "いち。大切に使ってください。",
+      "translation": "1. Please use it carefully."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。貸してくれて、ありがとうございます。",
+      "spokenText": "に。貸してくれて、ありがとうございます。",
+      "translation": "2. Thank you for lending it to me."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。コップを割ってしまって、すみません。",
+      "spokenText": "さん。コップを割ってしまって、すみません。",
+      "translation": "3. I'm sorry I broke the cup."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "大切に使ってください。",
+      "translation": "Please use it carefully.",
+      "rationale": "This tells the listener to take care of something rather than apologizing for the speaker's damage."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "貸してくれて、ありがとうございます。",
+      "translation": "Thank you for lending it to me.",
+      "rationale": "Thanks for a loan does not acknowledge or apologize for the stated breakage."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "コップを割ってしまって、すみません。",
+      "translation": "I'm sorry I broke the cup.",
+      "rationale": "This acknowledges the accidental damage and apologizes to its owner."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "situation",
+      "role": "situation",
+      "turns": [
+        "situation"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-3",
+  "evidence": [
+    "situation"
+  ],
+  "explanation": "The completed accident requires an apology from the person who caused it, not an instruction to the owner or thanks alone.",
+  "visual": {
+    "role": "required",
+    "description": "Two coworkers stand on opposite sides of an office desk. A broken cup with a few separated pieces is on the floor by person A on the left, who still holds its detached handle. A single arrow points to A. Person B stands on the right. No speech bubbles or option labels."
+  },
+  "vocabulary": [
+    {
+      "surface": "同僚",
+      "reading": "どうりょう",
+      "gloss": "coworker"
+    },
+    {
+      "surface": "割る",
+      "reading": "わる",
+      "gloss": "break something into pieces"
+    }
+  ]
+}

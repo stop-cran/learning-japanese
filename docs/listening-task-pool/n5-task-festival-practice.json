@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-festival-practice",
+  "exposureId": "n5-story-festival-practice",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Preparing for a festival",
+  "topic": "They are talking about festival practice. What will the man bring?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "お祭りの練習について話しています。男の人は、何を持って行きますか。",
+      "translation": "They are talking about festival practice. What will the man bring?"
+    },
+    {
+      "id": "t1",
+      "speaker": "a",
+      "text": "明日のお祭りの練習は、学校の庭ですね。初めてなので、何を持って行くか分かりません。",
+      "translation": "Tomorrow's festival practice is in the schoolyard, right? It's my first time, so I don't know what to bring."
+    },
+    {
+      "id": "t2",
+      "speaker": "b",
+      "text": "太鼓と棒は学校にあります。自分で持って来なくても大丈夫ですよ。",
+      "translation": "The drums and sticks are at school. You don't need to bring your own."
+    },
+    {
+      "id": "t3",
+      "speaker": "a",
+      "text": "そうですか。お昼ご飯はどうしますか。一日中、練習するんですか。",
+      "translation": "I see. What about lunch? Will we practice all day?"
+    },
+    {
+      "id": "t4",
+      "speaker": "b",
+      "text": "いいえ、午前中だけです。十二時には終わりますから、お弁当はいりません。",
+      "translation": "No, just in the morning. We'll finish by twelve, so you don't need a packed lunch."
+    },
+    {
+      "id": "t5",
+      "speaker": "a",
+      "text": "分かりました。暑そうですね。飲み物をたくさん持って行ったほうがいいですか。",
+      "translation": "Understood. It looks as though it will be hot. Should I bring plenty to drink?"
+    },
+    {
+      "id": "t6",
+      "speaker": "b",
+      "text": "冷たい水はこちらで用意します。汗をかきますから、タオルを一枚持って来てください。",
+      "translation": "We'll provide cold water. Please bring a towel, because you'll sweat."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "タオル",
+      "translation": "A towel.",
+      "rationale": "This is the item she expressly asks him to bring in t6."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "太鼓と棒",
+      "translation": "A drum and sticks.",
+      "rationale": "These are already at the school."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "お弁当",
+      "translation": "A packed lunch.",
+      "rationale": "Practice ends by noon, so lunch is unnecessary."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "冷たい水",
+      "translation": "Cold water.",
+      "rationale": "The organizers will supply the water."
+    }
+  ],
+  "answer": "option-1",
+  "evidence": [
+    "t6"
+  ],
+  "explanation": "Distinguish things supplied at the site from the personal towel requested in t6.",
+  "vocabulary": [
+    {
+      "surface": "太鼓",
+      "reading": "たいこ",
+      "gloss": "drum"
+    },
+    {
+      "surface": "棒",
+      "reading": "ぼう",
+      "gloss": "stick"
+    },
+    {
+      "surface": "汗をかく",
+      "reading": "あせをかく",
+      "gloss": "sweat"
+    },
+    {
+      "surface": "練習",
+      "reading": "れんしゅう",
+      "gloss": "practice"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-dog-care",
+  "exposureId": "n5-story-dog-care",
+  "taskType": "key-point",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Looking after a dog",
+  "topic": "Two people are talking about a dog. Why will the woman look after it tomorrow?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "二人が犬の話をしています。女の人が明日、犬の世話をするのは、どうしてですか。",
+      "translation": "Two people are talking about a dog. Why will the woman look after it tomorrow?"
+    },
+    {
+      "id": "t1",
+      "speaker": "a",
+      "text": "明日、うちの犬の世話をお願いできますか。朝と夕方、家に来てほしいんですが。",
+      "translation": "Could you look after our dog tomorrow? I'd like you to come to the house in the morning and evening."
+    },
+    {
+      "id": "t2",
+      "speaker": "b",
+      "text": "いいですよ。この前は、お仕事で帰りが遅くなりましたね。明日も仕事ですか。",
+      "translation": "Of course. Last time you got home late because of work. Is it work tomorrow too?"
+    },
+    {
+      "id": "t3",
+      "speaker": "a",
+      "text": "いいえ、明日は休みです。妹の結婚式があるので、家族みんなで京都へ行きます。朝早い電車で行って、夜遅く帰ります。犬は連れて行けません。",
+      "translation": "No, I have the day off tomorrow. My younger sister is getting married, so the whole family is going to Kyoto. We'll take an early train and return late at night. We can't take the dog."
+    },
+    {
+      "id": "t6",
+      "speaker": "b",
+      "text": "分かりました。散歩もしますね。いつも食べている物は、どこにありますか。",
+      "translation": "Understood. I'll walk it too. Where is its usual food?"
+    },
+    {
+      "id": "t7",
+      "speaker": "a",
+      "text": "台所の棚にあります。犬は元気ですから、病院に行く必要はありません。",
+      "translation": "It's on the kitchen shelf. The dog is healthy, so there's no need to go to the vet."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t6",
+        "t7"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "男の人が仕事で遅くなるからです。",
+      "translation": "Because the man will work late.",
+      "rationale": "That explains the previous request, not tomorrow's."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "男の人の家族が結婚式に行くからです。",
+      "translation": "Because the man's family is going to a wedding.",
+      "rationale": "The whole household will be away for the sister's wedding."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "犬が病気だからです。",
+      "translation": "Because the dog is ill.",
+      "rationale": "He expressly says the dog is healthy."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "女の人が犬を買ったからです。",
+      "translation": "Because the woman bought a dog.",
+      "rationale": "This is the man's existing dog; no purchase occurs."
+    }
+  ],
+  "answer": "option-2",
+  "evidence": [
+    "t3"
+  ],
+  "explanation": "The focus is the reason for tomorrow's care. Contrast the previous work-related absence with the family's wedding trip.",
+  "vocabulary": [
+    {
+      "surface": "世話",
+      "reading": "せわ",
+      "gloss": "care"
+    },
+    {
+      "surface": "結婚式",
+      "reading": "けっこんしき",
+      "gloss": "wedding ceremony"
+    },
+    {
+      "surface": "必要",
+      "reading": "ひつよう",
+      "gloss": "need; necessity"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-example-shop-change",
+  "exposureId": "n5-story-shop-change",
+  "taskType": "verbal-expression",
+  "kind": "monologue",
+  "usage": "example",
+  "blueprint": "n5-section-v1",
+  "title": "At a checkout",
+  "topic": "The purchase cost five hundred yen. The customer gave one thousand yen but received only one hundred yen in change. What does the person indicated by the arrow say?",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "絵を見て、話を聞いてください。矢印の人は、何と言いますか。答えを一つ選んでください。",
+      "translation": "Look at the picture and listen. What does the person indicated by the arrow say? Choose one answer."
+    },
+    {
+      "id": "situation",
+      "speaker": "n",
+      "text": "買った物は五百円です。お客さんは千円を出しましたが、おつりが百円しかありません。矢印の人は、何と言いますか。",
+      "translation": "The purchase cost five hundred yen. The customer gave one thousand yen but received only one hundred yen in change. What does the person indicated by the arrow say?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。もう少し安くしてください。",
+      "spokenText": "いち。もう少し安くしてください。",
+      "translation": "1. Please make it a little cheaper."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。すみません、おつりが少ないです。",
+      "spokenText": "に。すみません、おつりが少ないです。",
+      "translation": "2. Excuse me, the change is short."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。すみません。あと四百円、お返しします。",
+      "spokenText": "さん。すみません。あと四百円、お返しします。",
+      "translation": "3. I'm sorry. I'll return another four hundred yen."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "もう少し安くしてください。",
+      "translation": "Please make it a little cheaper.",
+      "rationale": "This asks for a discount, rather than pointing out incorrect change after payment."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "すみません、おつりが少ないです。",
+      "translation": "Excuse me, the change is short.",
+      "rationale": "This politely identifies the underpayment of change."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "すみません。あと四百円、お返しします。",
+      "translation": "I'm sorry. I'll return another four hundred yen.",
+      "rationale": "This fits the cashier correcting the short change: five hundred yen is due, but only one hundred was returned. The arrow identifies the customer, not the cashier."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "situation",
+      "role": "situation",
+      "turns": [
+        "situation"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-2",
+  "evidence": [
+    "situation"
+  ],
+  "explanation": "Worked example: the amounts reveal short change, but either participant could speak about that problem. First use the picture to identify the marked person as the customer. He points out the short change; the cashier would apologize and return the missing four hundred yen. Asking for a discount addresses a different problem.",
+  "visual": {
+    "role": "required",
+    "description": "A checkout counter separates customer A on the left from employee B on the right. A holds a small coin on an open palm. A bag rests on the counter. A single arrow points to A. No prices, speech bubbles or answer labels are printed."
+  },
+  "vocabulary": [
+    {
+      "surface": "おつり",
+      "reading": "おつり",
+      "gloss": "change returned after a cash purchase"
+    },
+    {
+      "surface": "返す",
+      "reading": "かえす",
+      "gloss": "return; お返しします is a polite way to say I will return it"
+    }
+  ]
+}

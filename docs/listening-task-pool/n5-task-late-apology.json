@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-late-apology",
+  "exposureId": "n5-story-late-apology",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Arriving at a meeting",
+  "topic": "I'm sorry I'm late. I took the wrong road. Have you been waiting long?",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、返事を一つ選んでください。",
+      "translation": "Listen and choose one reply."
+    },
+    {
+      "id": "utterance",
+      "speaker": "b",
+      "text": "遅くなって、すみません。道を間違えてしまいました。長く待ちましたか。",
+      "translation": "I'm sorry I'm late. I took the wrong road. Have you been waiting long?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。いいえ、私も今来たところです。",
+      "spokenText": "いち。いいえ、私も今来たところです。",
+      "translation": "1. No, I've only just arrived too."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。どうぞ、先に帰ってください。",
+      "spokenText": "に。どうぞ、先に帰ってください。",
+      "translation": "2. Please go home first."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。ここで待っていてください。私はまだ家です。",
+      "spokenText": "さん。ここで待っていてください。私はまだ家です。",
+      "translation": "3. Please wait here. I'm still at home."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "いいえ、私も今来たところです。",
+      "translation": "No, I've only just arrived too.",
+      "rationale": "This reassures the apologizing person and answers the waiting question."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "どうぞ、先に帰ってください。",
+      "translation": "Please go home first.",
+      "rationale": "This sends the just-arrived person away rather than responding to the waiting question; no cancellation is established."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "ここで待っていてください。私はまだ家です。",
+      "translation": "Please wait here. I'm still at home.",
+      "rationale": "This is incompatible with a face-to-face arrival and the speaker being asked about waiting there."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-1",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "The reply directly addresses 長く待ちましたか and softens the apology. No extra scenario making the meeting cancelled or remote is supplied.",
+  "vocabulary": [
+    {
+      "surface": "道を間違える",
+      "reading": "みちをまちがえる",
+      "gloss": "take the wrong road"
+    },
+    {
+      "surface": "今来たところ",
+      "reading": "いまきたところ",
+      "gloss": "have just arrived; a useful fixed reply beyond basic verb tense alone"
+    }
+  ]
+}

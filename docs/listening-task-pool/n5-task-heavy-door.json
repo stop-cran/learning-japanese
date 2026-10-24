@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-heavy-door",
+  "exposureId": "n5-story-heavy-door",
+  "taskType": "verbal-expression",
+  "kind": "monologue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "At a building entrance",
+  "topic": "They are taking this box into the building. The door is closed. Look carefully at the two people's hands. What does the person indicated by the arrow say?",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "絵を見て、話を聞いてください。矢印の人は、何と言いますか。答えを一つ選んでください。",
+      "translation": "Look at the picture and listen. What does the person indicated by the arrow say? Choose one answer."
+    },
+    {
+      "id": "situation",
+      "speaker": "n",
+      "text": "この箱を建物の中に運びます。ドアは閉まっています。二人の手をよく見てください。矢印の人は、何と言いますか。",
+      "translation": "They are taking this box into the building. The door is closed. Look carefully at the two people's hands. What does the person indicated by the arrow say?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。ドアを開けましょうか。",
+      "spokenText": "いち。ドアを開けましょうか。",
+      "translation": "1. Shall I open the door?"
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。すみません、ドアを開けてください。",
+      "spokenText": "に。すみません、ドアを開けてください。",
+      "translation": "2. Excuse me, please open the door."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。この箱を開けてもいいですか。",
+      "spokenText": "さん。この箱を開けてもいいですか。",
+      "translation": "3. May I open this box?"
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "ドアを開けましょうか。",
+      "translation": "Shall I open the door?",
+      "rationale": "This fits the free-handed person by the door offering help. The arrow instead identifies the person whose hands are occupied by the box."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "すみません、ドアを開けてください。",
+      "translation": "Excuse me, please open the door.",
+      "rationale": "This requests the help the box carrier needs."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "この箱を開けてもいいですか。",
+      "translation": "May I open this box?",
+      "rationale": "This asks permission to open the box, not for help with the door."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "situation",
+      "role": "situation",
+      "turns": [
+        "situation"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-2",
+  "evidence": [
+    "situation"
+  ],
+  "explanation": "Both opening the door and asking for it to be opened fit the stated situation, but the picture assigns the roles. The arrow identifies the box carrier, so he requests help; the free-handed person would offer to open the door.",
+  "visual": {
+    "role": "required",
+    "description": "At a closed building door on the right, person A on the left carries a large box in both hands. Person B stands by the door with empty hands. One arrow points to A. The door has a visible handle; no written answers."
+  },
+  "vocabulary": [
+    {
+      "surface": "両手",
+      "reading": "りょうて",
+      "gloss": "both hands"
+    }
+  ]
+}

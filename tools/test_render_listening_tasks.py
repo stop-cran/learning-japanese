@@ -50,6 +50,12 @@ class BudgetTests(unittest.TestCase):
             self.session().post(self.endpoint, data="<speak>test</speak>")
         self.raw.post.assert_not_called()
 
+    def test_deferred_audition_requires_complete_authorization(self):
+        with self.assertRaisesRegex(ValueError, "complete private-generation"):
+            budget.authorize(self.root, "fixture-plan", "preview", 10000, "1", "15",
+                             "Synthetic fixture", defer_preview_approval=True)
+        self.assertFalse((self.root / "authorization.json").exists())
+
     def test_missing_or_rewritten_accounting_cannot_reset_a_run(self):
         budget.authorize(self.root, "fixture-plan", "complete", 10000, "1", "15", "Synthetic test only")
         with self.assertRaisesRegex(ValueError, "already exists"):
@@ -224,6 +230,27 @@ class RendererTests(unittest.TestCase):
         self.render("complete")
         self.assertEqual(before, self.raw.post.call_count)
         self.assertIn("not C/D native playback", (self.run / "complete-review.html").read_text(encoding="utf-8"))
+
+    def test_explicit_deferred_audition_generates_private_outputs_but_cannot_approve_or_export(self):
+        plan = renderer.load_plan(self.run, self.engine)
+        budget.authorize(self.run, tasks.canonical_hash(plan), "complete", 100000, "10", "15",
+                         "Synthetic explicit full-generation authorization", defer_preview_approval=True)
+        with self.assertRaises(FileNotFoundError):
+            self.render("complete")
+        self.engine.login.assert_not_called()
+        self.render("preview")
+        self.render("complete")
+        self.assertFalse((self.run / "preview-approval.json").exists())
+        for entry in plan["tasks"]:
+            identifier = entry["document"]["id"]
+            document = renderer.verified_package(self.run, plan, identifier, self.engine)
+            self.assertNotIn("approval", document)
+            with self.assertRaises(FileNotFoundError):
+                renderer.approve_task(self.run, self.engine, identifier, "Not real approval", date.today().isoformat(),
+                                      listened=True, visual=True, native=True, phone=True)
+            with self.assertRaises(FileNotFoundError):
+                renderer.export(self.run, self.engine, [identifier])
+        self.assertFalse((self.content / "listening-tasks").exists())
 
     def test_task_occurrence_limit_counts_repeated_focus(self):
         self.authorize()

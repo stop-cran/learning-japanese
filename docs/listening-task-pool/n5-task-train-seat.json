@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-train-seat",
+  "exposureId": "n5-story-train-seat",
+  "taskType": "verbal-expression",
+  "kind": "monologue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "On a train",
+  "topic": "They are on a train. The standing person seems a little tired. The two people do not know each other. What does the person indicated by the arrow say?",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "絵を見て、話を聞いてください。矢印の人は、何と言いますか。答えを一つ選んでください。",
+      "translation": "Look at the picture and listen. What does the person indicated by the arrow say? Choose one answer."
+    },
+    {
+      "id": "situation",
+      "speaker": "n",
+      "text": "電車の中です。立っている人は、少し疲れているようです。二人は知り合いではありません。矢印の人は、何と言いますか。",
+      "translation": "They are on a train. The standing person seems a little tired. The two people do not know each other. What does the person indicated by the arrow say?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。どうぞ、ここに座ってください。",
+      "spokenText": "いち。どうぞ、ここに座ってください。",
+      "translation": "1. Please, sit here."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。ここに座ってもいいですか。",
+      "spokenText": "に。ここに座ってもいいですか。",
+      "translation": "2. May I sit here?"
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。ここに荷物を置かないでください。",
+      "spokenText": "さん。ここに荷物を置かないでください。",
+      "translation": "3. Please don't put luggage here."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "どうぞ、ここに座ってください。",
+      "translation": "Please, sit here.",
+      "rationale": "This offers the speaker's seat to the other person."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "ここに座ってもいいですか。",
+      "translation": "May I sit here?",
+      "rationale": "This asks permission for the speaker to sit, rather than offering his own seat."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "ここに荷物を置かないでください。",
+      "translation": "Please don't put luggage here.",
+      "rationale": "This prohibits placing luggage and does not offer the seat."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "situation",
+      "role": "situation",
+      "turns": [
+        "situation"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-1",
+  "evidence": [
+    "situation"
+  ],
+  "explanation": "The picture identifies the marked person as the current seat occupant. The audio says the standing stranger seems tired. Offering that person the seat fits; asking permission to sit reverses the roles.",
+  "visual": {
+    "role": "required",
+    "description": "Inside a train, person A is seated on the left and person B stands to the right holding a walking stick. A single arrow points to A. There is no text dialogue or selected answer."
+  },
+  "vocabulary": [
+    {
+      "surface": "席",
+      "reading": "せき",
+      "gloss": "seat"
+    }
+  ]
+}

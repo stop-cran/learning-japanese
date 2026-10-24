@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-temperature-request",
+  "exposureId": "n5-story-temperature-request",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "In a shared room",
+  "topic": "It's a little cold. May I close the window? There is a draft.",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、返事を一つ選んでください。",
+      "translation": "Listen and choose one reply."
+    },
+    {
+      "id": "utterance",
+      "speaker": "b",
+      "text": "少し寒いですね。窓を閉めてもいいですか。風が入ってきます。",
+      "translation": "It's a little cold. May I close the window? There is a draft."
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。昨日は暑かったです。",
+      "spokenText": "いち。昨日は暑かったです。",
+      "translation": "1. It was hot yesterday."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。ええ、お願いします。私も寒いです。",
+      "spokenText": "に。ええ、お願いします。私も寒いです。",
+      "translation": "2. Yes, please do. I'm cold too."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。はい、明日の朝、起こしてください。",
+      "spokenText": "さん。はい、明日の朝、起こしてください。",
+      "translation": "3. Yes, please wake me tomorrow morning."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "昨日は暑かったです。",
+      "translation": "It was hot yesterday.",
+      "rationale": "Past weather does not grant or refuse the current permission request."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "ええ、お願いします。私も寒いです。",
+      "translation": "Yes, please do. I'm cold too.",
+      "rationale": "This grants permission and welcomes the proposed action."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "はい、明日の朝、起こしてください。",
+      "translation": "Yes, please wake me tomorrow morning.",
+      "rationale": "A request to be woken tomorrow does not answer the current request about closing the window."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-2",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "閉めてもいいですか asks permission, and the correct reply both grants it and shares the reason. The task tests that speech act, not a rule that windows must always be closed.",
+  "vocabulary": [
+    {
+      "surface": "風が入る",
+      "reading": "かぜがはいる",
+      "gloss": "wind comes in; there is a draft"
+    }
+  ]
+}

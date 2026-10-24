@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-example-museum-bags",
+  "exposureId": "n5-story-museum-bags",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "example",
+  "blueprint": "n5-section-v1",
+  "title": "A museum entrance",
+  "topic": "Two people are talking at a museum entrance. What will the man take out of his bag?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "博物館の入口で二人が話しています。男の人は、かばんから何を出しますか。",
+      "translation": "Two people are talking at a museum entrance. What will the man take out of his bag?"
+    },
+    {
+      "id": "t1",
+      "speaker": "b",
+      "text": "大きいかばんは、あちらのロッカーに入れてください。小さい物は持って入れます。",
+      "translation": "Please put large bags in those lockers. You may take small items inside."
+    },
+    {
+      "id": "t2",
+      "speaker": "a",
+      "text": "分かりました。ノートを持って行ってもいいですか。学校で今日のことを書きます。",
+      "translation": "All right. May I take my notebook? I have to write about today at school."
+    },
+    {
+      "id": "t3",
+      "speaker": "b",
+      "text": "はい。ノートは大丈夫です。でも、建物の中で食べたり飲んだりしないでください。",
+      "translation": "Yes, a notebook is fine. But please don't eat or drink inside the building."
+    },
+    {
+      "id": "t4",
+      "speaker": "a",
+      "text": "お茶とお菓子はかばんに入れたままにします。写真を撮ってもいいですか。",
+      "translation": "I'll leave my tea and sweets in the bag. May I take photographs?"
+    },
+    {
+      "id": "t5",
+      "speaker": "b",
+      "text": "写真は撮れません。入口の写真は、お帰りの時に撮ってください。",
+      "translation": "You can't take photos inside. Please take any photos of the entrance when you leave."
+    },
+    {
+      "id": "t6",
+      "speaker": "a",
+      "text": "じゃ、カメラもここに置きます。ノートに絵を描くのは大丈夫ですね。",
+      "translation": "Then I'll leave my camera here too. It's okay to draw in the notebook, right?"
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "お茶",
+      "translation": "Tea.",
+      "rationale": "Drinks remain in the bag."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "お菓子",
+      "translation": "Sweets.",
+      "rationale": "Food remains in the bag."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "ノート",
+      "translation": "His notebook.",
+      "rationale": "He gets permission to use his notebook, then plans to draw in it. Food, drink and camera remain behind."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "カメラ",
+      "translation": "His camera.",
+      "rationale": "Because photography inside is prohibited, he leaves this behind too."
+    }
+  ],
+  "answer": "option-3",
+  "evidence": [
+    "t2",
+    "t3",
+    "t4",
+    "t6"
+  ],
+  "explanation": "Worked example: combine the permitted notebook with the later decisions to leave the drinks, food and camera. The notebook is the only listed item to take inside.",
+  "vocabulary": [
+    {
+      "surface": "博物館",
+      "reading": "はくぶつかん",
+      "gloss": "museum"
+    },
+    {
+      "surface": "ロッカー",
+      "reading": "ロッカー",
+      "gloss": "locker"
+    }
+  ]
+}

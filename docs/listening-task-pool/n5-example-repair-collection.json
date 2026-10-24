@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-example-repair-collection",
+  "exposureId": "n5-story-repair-collection",
+  "taskType": "key-point",
+  "kind": "dialogue",
+  "usage": "example",
+  "blueprint": "n5-section-v1",
+  "title": "At a repair counter",
+  "topic": "They are talking about a watch repair. When will the woman come to collect the watch?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "時計の修理について話しています。女の人は、いつ時計を取りに来ますか。",
+      "translation": "They are talking about a watch repair. When will the woman come to collect the watch?"
+    },
+    {
+      "id": "t1",
+      "speaker": "b",
+      "text": "この時計が止まってしまいました。昨日まで動いていたんですが、直せますか。",
+      "translation": "This watch has stopped. It was working until yesterday. Can you fix it?"
+    },
+    {
+      "id": "t2",
+      "speaker": "a",
+      "text": "見てみますね。電池を替えるだけなら、今日の夕方にはお渡しできます。",
+      "translation": "Let me take a look. If it only needs a new battery, I can give it back this evening."
+    },
+    {
+      "id": "t3",
+      "speaker": "b",
+      "text": "今日はこの後、仕事です。夜まで戻れません。お店は何時までですか。",
+      "translation": "I'm going to work after this today. I can't get back until nighttime. How late is the shop open?"
+    },
+    {
+      "id": "t4",
+      "speaker": "a",
+      "text": "六時までです。明日は水曜日で休みですから、木曜日に来てください。",
+      "translation": "Until six. Tomorrow is Wednesday and we're closed, so please come on Thursday."
+    },
+    {
+      "id": "t5",
+      "speaker": "b",
+      "text": "木曜日の午前中は病院に行きます。午後なら来られます。二時ごろでもいいですか。",
+      "translation": "I'll be at the clinic on Thursday morning. I can come in the afternoon. Is around two okay?"
+    },
+    {
+      "id": "t6",
+      "speaker": "a",
+      "text": "はい、大丈夫です。こちらの紙を持って来てください。お名前もお願いします。",
+      "translation": "Yes, that's fine. Please bring this slip with you. Your name too, please."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "今日の夕方",
+      "translation": "This evening.",
+      "rationale": "This is a possible repair-completion time, but she cannot return then."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "木曜日の午後",
+      "translation": "Thursday afternoon.",
+      "rationale": "She proposes Thursday afternoon at around two, and the clerk agrees."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "水曜日の午後",
+      "translation": "Wednesday afternoon.",
+      "rationale": "The shop is closed on Wednesday."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "木曜日の午前",
+      "translation": "Thursday morning.",
+      "rationale": "She will be at the clinic then."
+    }
+  ],
+  "answer": "option-2",
+  "evidence": [
+    "t5",
+    "t6"
+  ],
+  "explanation": "Worked example: distinguish possible completion from the agreed collection time. Today's work, Wednesday closure and Thursday morning appointment leave Thursday afternoon.",
+  "vocabulary": [
+    {
+      "surface": "修理",
+      "reading": "しゅうり",
+      "gloss": "repair"
+    },
+    {
+      "surface": "電池",
+      "reading": "でんち",
+      "gloss": "battery"
+    },
+    {
+      "surface": "替える",
+      "reading": "かえる",
+      "gloss": "replace"
+    }
+  ]
+}

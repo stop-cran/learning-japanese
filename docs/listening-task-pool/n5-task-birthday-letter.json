@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-birthday-letter",
+  "exposureId": "n5-story-birthday-letter",
+  "taskType": "key-point",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Writing to a friend",
+  "topic": "They are talking about a letter to a friend. Why will the woman enclose a photograph?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "友達への手紙について話しています。女の人は、どうして写真を入れますか。",
+      "translation": "They are talking about a letter to a friend. Why will the woman enclose a photograph?"
+    },
+    {
+      "id": "t1",
+      "speaker": "a",
+      "text": "手紙を書いているんですか。今日は誰かの誕生日ですか。",
+      "translation": "Are you writing a letter? Is it someone's birthday today?"
+    },
+    {
+      "id": "t2",
+      "speaker": "b",
+      "text": "いいえ、外国に住んでいる友達に書いています。来月、日本に来るそうです。",
+      "translation": "No, I'm writing to a friend who lives overseas. She says she's coming to Japan next month."
+    },
+    {
+      "id": "t5",
+      "speaker": "a",
+      "text": "その写真を手紙に入れるんですね。新しい家を見せたいんですか。",
+      "translation": "So you're putting that photo in the letter? Do you want to show her your new house?"
+    },
+    {
+      "id": "t6",
+      "speaker": "b",
+      "text": "家の写真ではありません。髪を短くしたので、今の私の写真を送ります。空港ですぐ私が分かるように。",
+      "translation": "It's not a photograph of the house. I've cut my hair short, so I'm sending a current picture of myself, so she can recognize me straight away at the airport."
+    },
+    {
+      "id": "t7",
+      "speaker": "a",
+      "text": "なるほど。空港ではたくさんの人が待っていますからね。一枚で大丈夫ですか。",
+      "translation": "I see. There are lots of people waiting at the airport. Is one photo enough?"
+    },
+    {
+      "id": "t8",
+      "speaker": "b",
+      "text": "はい。住所は前と同じですから、地図はいりません。写真と手紙だけ送ります。",
+      "translation": "Yes. My address is the same as before, so she doesn't need a map. I'll send just the photograph and letter."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t5",
+        "t6",
+        "t7",
+        "t8"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "友達の誕生日を祝うためです。",
+      "translation": "To celebrate her friend's birthday.",
+      "rationale": "The opening birthday guess is rejected."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "新しい家を見せるためです。",
+      "translation": "To show her new house.",
+      "rationale": "She explicitly says it is not a photograph of the house."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "空港で自分だと分かってもらうためです。",
+      "translation": "To help her friend recognize her at the airport.",
+      "rationale": "Her appearance has changed, and she states this recognition purpose."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "新しい住所を知らせるためです。",
+      "translation": "To tell her friend her new address.",
+      "rationale": "Her address has not changed."
+    }
+  ],
+  "answer": "option-3",
+  "evidence": [
+    "t6"
+  ],
+  "explanation": "Listen for the purpose expressed by 分かるように. The letter sends a current appearance cue, not a new address or birthday gift.",
+  "vocabulary": [
+    {
+      "surface": "なるほど",
+      "reading": "なるほど",
+      "gloss": "I see"
+    }
+  ]
+}

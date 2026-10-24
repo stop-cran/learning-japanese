@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-apartment-room",
+  "exposureId": "n5-story-apartment-room",
+  "taskType": "key-point",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Looking for a room",
+  "topic": "Two people are talking while looking for a room. How much is the room the woman likes?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "部屋を探している二人が話しています。女の人が気に入った部屋は、いくらですか。",
+      "translation": "Two people are talking while looking for a room. How much is the room the woman likes?"
+    },
+    {
+      "id": "t1",
+      "speaker": "a",
+      "text": "この建物には、今、三つ空いている部屋があります。一階と二階と三階です。",
+      "translation": "There are three available rooms in this building now: on the first, second and third floors."
+    },
+    {
+      "id": "t2",
+      "speaker": "b",
+      "text": "一階の部屋は月に五万円ですね。安いですが、窓の前が道路なので、少しうるさそうです。",
+      "translation": "The first-floor room is fifty thousand yen a month, right? It's cheap, but the road is in front of the window, so it looks a little noisy."
+    },
+    {
+      "id": "t3",
+      "speaker": "a",
+      "text": "では、二階を見ましょう。こちらは六万円です。朝、日がよく入ります。",
+      "translation": "Then let's look at the second floor. This room is sixty thousand yen. It gets plenty of morning sunlight."
+    },
+    {
+      "id": "t4",
+      "speaker": "b",
+      "text": "明るくていいですね。台所も広いです。三階の部屋も同じ大きさですか。",
+      "translation": "It's nice and bright. The kitchen is spacious too. Is the third-floor room the same size?"
+    },
+    {
+      "id": "t5",
+      "speaker": "a",
+      "text": "三階はもっと広くて、七万円です。でも、エレベーターはありません。階段を使います。",
+      "translation": "The third-floor room is larger and costs seventy thousand yen. But there is no elevator. You use the stairs."
+    },
+    {
+      "id": "t6",
+      "speaker": "b",
+      "text": "一人で住みますから、そんなに広くなくても大丈夫です。二階の部屋がいいです。",
+      "translation": "I'll live alone, so it doesn't need to be that large. I like the second-floor room."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "月に六万円",
+      "translation": "Sixty thousand yen per month.",
+      "rationale": "This is the rent stated for the second-floor room she chooses."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "月に五万円",
+      "translation": "Fifty thousand yen per month.",
+      "rationale": "This is the first-floor room she finds potentially noisy."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "月に七万円",
+      "translation": "Seventy thousand yen per month.",
+      "rationale": "This is the larger third-floor room."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "月に八万円",
+      "translation": "Eighty thousand yen per month.",
+      "rationale": "None of the three rooms is quoted at this rent."
+    }
+  ],
+  "answer": "option-1",
+  "evidence": [
+    "t3",
+    "t6"
+  ],
+  "explanation": "Identify the selected second-floor room, then retain its quoted monthly rent of sixty thousand yen.",
+  "vocabulary": [
+    {
+      "surface": "月に",
+      "reading": "つきに",
+      "gloss": "per month"
+    },
+    {
+      "surface": "道路",
+      "reading": "どうろ",
+      "gloss": "road"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-aquarium-meeting",
+  "exposureId": "n5-story-aquarium-meeting",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "A visit to an aquarium",
+  "topic": "A parent and child are talking at an aquarium. Where will the child wait for his mother?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "水族館で親子が話しています。子供は、お母さんをどこで待ちますか。",
+      "translation": "A parent and child are talking at an aquarium. Where will the child wait for his mother?"
+    },
+    {
+      "id": "t1",
+      "speaker": "b",
+      "text": "楽しかったね。もうすぐ帰る時間です。お母さんはちょっと手を洗ってきます。",
+      "translation": "That was fun. It's nearly time to go home. I'm just going to wash my hands."
+    },
+    {
+      "id": "t2",
+      "speaker": "a",
+      "text": "じゃ、僕は入口で待っているね。外の大きい魚の絵の前にいるよ。",
+      "translation": "Then I'll wait at the entrance. I'll be in front of the large fish picture outside."
+    },
+    {
+      "id": "t3",
+      "speaker": "b",
+      "text": "外には出ないでね。今日は人が多いから、中で待っていてください。",
+      "translation": "Don't go outside. There are a lot of people today, so please wait inside."
+    },
+    {
+      "id": "t4",
+      "speaker": "a",
+      "text": "中の売店はどう。お菓子を見ていてもいい。まだお金は持っているよ。",
+      "translation": "How about the shop inside? Can I look at the sweets? I still have some money."
+    },
+    {
+      "id": "t5",
+      "speaker": "b",
+      "text": "売店は今、閉まっています。階段の下に椅子があるでしょう。そこに座っていて。",
+      "translation": "The shop is closed right now. There are chairs under the stairs, aren't there? Sit there and wait."
+    },
+    {
+      "id": "t8",
+      "speaker": "a",
+      "text": "うん。階段の下の椅子に座って待っているよ。かばんもちゃんと持っていく。",
+      "translation": "Okay. I'll sit on the chair under the stairs and wait. I'll make sure to take my bag too."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t8"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "外の魚の絵の前",
+      "translation": "Outside, in front of the fish picture.",
+      "rationale": "Going outside is expressly prohibited."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "売店の中",
+      "translation": "Inside the shop.",
+      "rationale": "The shop is closed; looking at sweets was only his suggestion."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "階段の下の椅子",
+      "translation": "A chair under the stairs.",
+      "rationale": "His mother selects this location and he repeats it."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "手を洗う所",
+      "translation": "The handwashing area.",
+      "rationale": "His mother goes there; he stays elsewhere."
+    }
+  ],
+  "answer": "option-3",
+  "evidence": [
+    "t5",
+    "t8"
+  ],
+  "explanation": "The mother's final instruction and the child's confirmation agree. Earlier proposed locations do not become the meeting place.",
+  "vocabulary": [
+    {
+      "surface": "水族館",
+      "reading": "すいぞくかん",
+      "gloss": "aquarium"
+    },
+    {
+      "surface": "売店",
+      "reading": "ばいてん",
+      "gloss": "small shop or kiosk"
+    },
+    {
+      "surface": "親子",
+      "reading": "おやこ",
+      "gloss": "parent and child"
+    }
+  ]
+}

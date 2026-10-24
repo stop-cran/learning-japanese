@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-market-delivery",
+  "exposureId": "n5-story-market-delivery",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "A delivery from a market",
+  "topic": "Two people are talking at a shop. To whom will the man hand today's delivery?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "店で二人が話しています。男の人は、今日の荷物を誰に渡しますか。",
+      "translation": "Two people are talking at a shop. To whom will the man hand today's delivery?"
+    },
+    {
+      "id": "t1",
+      "speaker": "b",
+      "text": "この野菜を山田さんの家に届けてください。いつもの家ですが、今日は少し違います。",
+      "translation": "Please deliver these vegetables to Mr. Yamada's home. It's the usual house, but today is a little different."
+    },
+    {
+      "id": "t3",
+      "speaker": "b",
+      "text": "今日は病院に行っています。奥さんも一緒です。二人とも夕方まで帰りません。",
+      "translation": "He's at the hospital today. His wife is with him. Neither will return until evening."
+    },
+    {
+      "id": "t4",
+      "speaker": "a",
+      "text": "では、玄関の前に置きますか。野菜は重いので、袋が二つあります。",
+      "translation": "Then should I leave them in front of the entrance? The vegetables are heavy, so there are two bags."
+    },
+    {
+      "id": "t5",
+      "speaker": "b",
+      "text": "いいえ、おばあさんが家にいますから、その方に渡してください。家の中には入らないでください。",
+      "translation": "No. His grandmother is at home, so please hand them to her. Please don't go inside."
+    },
+    {
+      "id": "t6",
+      "speaker": "a",
+      "text": "分かりました。隣に住んでいるお兄さんには、渡さないんですね。",
+      "translation": "Understood. So I shouldn't hand them to his older brother who lives next door."
+    },
+    {
+      "id": "t7",
+      "speaker": "b",
+      "text": "ええ。お兄さんも今日は仕事です。家にいるおばあさんにお願いします。",
+      "translation": "That's right. His older brother is working today too. Please give them to the grandmother at home."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "山田さん",
+      "translation": "Mr. Yamada.",
+      "rationale": "He is at the hospital rather than waiting at his usual place."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "山田さんの奥さん",
+      "translation": "Mr. Yamada's wife.",
+      "rationale": "She is with him at the hospital."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "隣に住むお兄さん",
+      "translation": "His older brother next door.",
+      "rationale": "The brother is also away at work."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "家にいるおばあさん",
+      "translation": "The grandmother who is at home.",
+      "rationale": "She is the explicitly designated recipient."
+    }
+  ],
+  "answer": "option-4",
+  "evidence": [
+    "t5",
+    "t7"
+  ],
+  "explanation": "The regular recipient, his wife and his brother are all unavailable. The delivery is to be handed directly to the grandmother, not left outside.",
+  "vocabulary": [
+    {
+      "surface": "届ける",
+      "reading": "とどける",
+      "gloss": "deliver"
+    },
+    {
+      "surface": "奥さん",
+      "reading": "おくさん",
+      "gloss": "someone else's wife"
+    },
+    {
+      "surface": "荷物",
+      "reading": "にもつ",
+      "gloss": "parcel, luggage or load; the delivery here"
+    }
+  ]
+}

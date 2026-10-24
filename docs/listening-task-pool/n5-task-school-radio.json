@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-school-radio",
+  "exposureId": "n5-story-school-radio",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "A school radio announcement",
+  "topic": "Two people are talking before a school radio announcement. What will the woman read first?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "学校の放送の前に二人が話しています。女の人は、最初に何を読みますか。",
+      "translation": "Two people are talking before a school radio announcement. What will the woman read first?"
+    },
+    {
+      "id": "t1",
+      "speaker": "a",
+      "text": "もうすぐ昼の放送ですね。今日の紙はここにあります。三枚とも読んでください。",
+      "translation": "It's nearly time for the lunchtime announcement. Today's sheets are here. Please read all three."
+    },
+    {
+      "id": "t2",
+      "speaker": "b",
+      "text": "はい。一枚目が図書室、二枚目が運動会、三枚目が明日の給食ですね。",
+      "translation": "Okay. The first is about the library room, the second about sports day, and the third about tomorrow's school lunch."
+    },
+    {
+      "id": "t3",
+      "speaker": "a",
+      "text": "ええ。でも、今日は読む順番を変えます。運動会の話を先にしてください。",
+      "translation": "Yes. But today we'll change the reading order. Please do the sports-day news first."
+    },
+    {
+      "id": "t4",
+      "speaker": "b",
+      "text": "運動会は来週ですね。今日は雨ですが、来週の天気も分かるんですか。",
+      "translation": "Sports day is next week, isn't it? It's raining today, but do we know next week's weather too?"
+    },
+    {
+      "id": "t5",
+      "speaker": "a",
+      "text": "天気の話ではありません。集まる時間が早くなりました。大事な話なので、先にお願いします。",
+      "translation": "It's not about the weather. The gathering time has been moved earlier. It's important, so please read it first."
+    },
+    {
+      "id": "t6",
+      "speaker": "b",
+      "text": "その後で図書室、最後に給食でいいですか。給食の紙が一番短いですね。",
+      "translation": "Then the library room and finally the lunch news? The lunch sheet is the shortest."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "図書室のお知らせ",
+      "translation": "The library-room announcement.",
+      "rationale": "It is on the first sheet but will be read second."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "運動会のお知らせ",
+      "translation": "The sports-day announcement.",
+      "rationale": "The earlier meeting time makes this the expressly chosen first announcement."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "明日の給食のお知らせ",
+      "translation": "Tomorrow's school-lunch announcement.",
+      "rationale": "It will be read last."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "来週の天気予報",
+      "translation": "Next week's weather forecast.",
+      "rationale": "The man explicitly says the sports-day news is not about weather."
+    }
+  ],
+  "answer": "option-2",
+  "evidence": [
+    "t3",
+    "t5"
+  ],
+  "explanation": "The order of the sheets is not the reading order. The second sheet goes on top because the sports-day meeting time is important.",
+  "vocabulary": [
+    {
+      "surface": "放送",
+      "reading": "ほうそう",
+      "gloss": "broadcast or announcement"
+    },
+    {
+      "surface": "運動会",
+      "reading": "うんどうかい",
+      "gloss": "school sports day"
+    },
+    {
+      "surface": "給食",
+      "reading": "きゅうしょく",
+      "gloss": "school lunch"
+    },
+    {
+      "surface": "順番",
+      "reading": "じゅんばん",
+      "gloss": "order"
+    }
+  ]
+}

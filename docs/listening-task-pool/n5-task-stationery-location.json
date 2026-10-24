@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-stationery-location",
+  "exposureId": "n5-story-stationery-location",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Finding something at work",
+  "topic": "I'd like to use the scissors. Do you know where they are? They weren't on the desk.",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、返事を一つ選んでください。",
+      "translation": "Listen and choose one reply."
+    },
+    {
+      "id": "utterance",
+      "speaker": "b",
+      "text": "はさみを使いたいんですが、どこにあるか知っていますか。机の上にはありませんでした。",
+      "translation": "I'd like to use the scissors. Do you know where they are? They weren't on the desk."
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。紙を切ってはいけません。",
+      "spokenText": "いち。紙を切ってはいけません。",
+      "translation": "1. You mustn't cut paper."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。昨日、一枚使いました。",
+      "spokenText": "に。昨日、一枚使いました。",
+      "translation": "2. I used one sheet yesterday."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。棚の二番目の引き出しにありますよ。",
+      "spokenText": "さん。棚の二番目の引き出しにありますよ。",
+      "translation": "3. They're in the second drawer of the cabinet."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "紙を切ってはいけません。",
+      "translation": "You mustn't cut paper.",
+      "rationale": "This supplies a prohibition, not the requested location, with no context supporting a restriction."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "昨日、一枚使いました。",
+      "translation": "I used one sheet yesterday.",
+      "rationale": "A count of sheets used yesterday does not locate the scissors."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "棚の二番目の引き出しにありますよ。",
+      "translation": "They're in the second drawer of the cabinet.",
+      "rationale": "This directly supplies a place to look."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-3",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "The indirect question asks for location. The shelf/drawer reply answers it; the other statements do not.",
+  "vocabulary": [
+    {
+      "surface": "はさみ",
+      "reading": "はさみ",
+      "gloss": "scissors"
+    },
+    {
+      "surface": "引き出し",
+      "reading": "ひきだし",
+      "gloss": "drawer"
+    }
+  ]
+}

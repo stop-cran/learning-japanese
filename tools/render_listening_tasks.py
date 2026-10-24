@@ -264,7 +264,11 @@ def render(root: Path, engine, resource: str, subscription: str, phase: str, raw
         session = budget.BudgetSession(raw_session, root, endpoint, plan_hash, phase,
                                        lambda: require_same_plan(root, engine, plan_hash))
         if phase == "complete":
-            require_preview_approval(root, plan, engine)
+            if session.authorization.get("deferPreviewApproval") is True:
+                # Explicit private generation is not a declaration that the previews were heard.
+                preview_binding(root, plan, engine)
+            else:
+                require_preview_approval(root, plan, engine)
         engine.ENDPOINT = endpoint
         token = engine.make_token_provider(subscription=subscription)
         if phase == "preview":
@@ -462,6 +466,8 @@ def main() -> None:
     auth.add_argument("--max-usd", required=True)
     auth.add_argument("--usd-per-million", required=True, help="Verified applicable USD stock-neural price")
     auth.add_argument("--note", required=True)
+    auth.add_argument("--defer-preview-approval", action="store_true",
+                      help="Explicitly authorize complete private generation before audition; approval/export gates remain")
     rendering = commands.add_parser("render")
     rendering.add_argument("--allow-paid", action="store_true", required=True)
     rendering.add_argument("--phase", choices=("preview", "complete"), required=True)
@@ -495,7 +501,7 @@ def main() -> None:
         create_plan(root, args.content_root.resolve(), args.inputs, images, args.preview_turn, engine, args.resource, args.subscription)
     elif args.command == "authorize":
         budget.authorize(root, tasks.canonical_hash(load_plan(root, engine)), args.scope, args.max_request_units,
-                         args.max_usd, args.usd_per_million, args.note)
+                         args.max_usd, args.usd_per_million, args.note, defer_preview_approval=args.defer_preview_approval)
     elif args.command == "render":
         import requests
         with requests.Session() as session:

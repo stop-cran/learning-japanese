@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-example-telephone-name",
+  "exposureId": "n5-story-telephone-name",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "example",
+  "blueprint": "n5-section-v1",
+  "title": "On the telephone",
+  "topic": "I'm sorry, I couldn't hear clearly. Please tell me your name once more.",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、返事を一つ選んでください。",
+      "translation": "Listen and choose one reply."
+    },
+    {
+      "id": "utterance",
+      "speaker": "b",
+      "text": "すみません、よく聞こえませんでした。もう一度、お名前をお願いします。",
+      "translation": "I'm sorry, I couldn't hear clearly. Please tell me your name once more."
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。はい、森田です。森田と申します。",
+      "spokenText": "いち。はい、森田です。森田と申します。",
+      "translation": "1. Yes, it's Morita. My name is Morita."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。いいえ、今は三時です。",
+      "spokenText": "に。いいえ、今は三時です。",
+      "translation": "2. No, it's three o'clock now."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。いいえ、電話は昨日買いました。",
+      "spokenText": "さん。いいえ、電話は昨日買いました。",
+      "translation": "3. No, I bought the telephone yesterday."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "はい、森田です。森田と申します。",
+      "translation": "Yes, it's Morita. My name is Morita.",
+      "rationale": "This repeats the requested name."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "いいえ、今は三時です。",
+      "translation": "No, it's three o'clock now.",
+      "rationale": "The time is not the information requested."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "いいえ、電話は昨日買いました。",
+      "translation": "No, I bought the telephone yesterday.",
+      "rationale": "The phone's purchase date does not answer a request to repeat a name."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-1",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "Worked example: identify what information is requested after もう一度. Repeating the name answers it; buying a phone and the current time are unrelated.",
+  "vocabulary": [
+    {
+      "surface": "申します",
+      "reading": "もうします",
+      "gloss": "am called; humble self-introduction used here as a fixed expression"
+    }
+  ]
+}

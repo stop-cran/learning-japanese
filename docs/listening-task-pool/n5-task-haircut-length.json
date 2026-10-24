@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-haircut-length",
+  "exposureId": "n5-story-haircut-length",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "At a hair salon",
+  "topic": "Is your hair all right at about this length? Shall I cut it a little shorter?",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、返事を一つ選んでください。",
+      "translation": "Listen and choose one reply."
+    },
+    {
+      "id": "utterance",
+      "speaker": "b",
+      "text": "髪は、このくらいの長さでいいですか。もう少し短くしましょうか。",
+      "translation": "Is your hair all right at about this length? Shall I cut it a little shorter?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。三時に予約しました。",
+      "spokenText": "いち。三時に予約しました。",
+      "translation": "1. I made an appointment for three o'clock."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。今の長さで大丈夫です。ありがとうございます。",
+      "spokenText": "に。今の長さで大丈夫です。ありがとうございます。",
+      "translation": "2. The current length is fine. Thank you."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。いいえ、名前は田中です。",
+      "spokenText": "さん。いいえ、名前は田中です。",
+      "translation": "3. No, my name is Tanaka."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "三時に予約しました。",
+      "translation": "I made an appointment for three o'clock.",
+      "rationale": "This gives an appointment time, but the question concerns the current hair length."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "今の長さで大丈夫です。ありがとうございます。",
+      "translation": "The current length is fine. Thank you.",
+      "rationale": "This confirms the current length and politely declines further shortening."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "いいえ、名前は田中です。",
+      "translation": "No, my name is Tanaka.",
+      "rationale": "This corrects a name, which the stylist has neither asked nor proposed."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-2",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "The stylist is checking the result and offering further shortening. Confirming the present length answers that question; appointment time and identity do not. No picture or prior measurement is needed to judge the reply's conversational fit.",
+  "vocabulary": [
+    {
+      "surface": "長さ",
+      "reading": "ながさ",
+      "gloss": "length"
+    }
+  ]
+}

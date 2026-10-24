@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-parcel-thanks",
+  "exposureId": "n5-story-parcel-thanks",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Receiving help",
+  "topic": "Thank you for carrying the heavy box upstairs. It would have been hard on my own.",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、返事を一つ選んでください。",
+      "translation": "Listen and choose one reply."
+    },
+    {
+      "id": "utterance",
+      "speaker": "b",
+      "text": "重い箱を上の階まで運んでくれて、ありがとうございました。一人では大変でした。",
+      "translation": "Thank you for carrying the heavy box upstairs. It would have been hard on my own."
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。おめでとうございます。",
+      "spokenText": "いち。おめでとうございます。",
+      "translation": "1. Congratulations."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。すみません、まだ届いていません。",
+      "spokenText": "に。すみません、まだ届いていません。",
+      "translation": "2. I'm sorry, it hasn't arrived yet."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。いいえ、また困った時は言ってください。",
+      "spokenText": "さん。いいえ、また困った時は言ってください。",
+      "translation": "3. Not at all. Let me know if you need help again."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "おめでとうございます。",
+      "translation": "Congratulations.",
+      "rationale": "This celebrates an achievement or event rather than acknowledging thanks."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "すみません、まだ届いていません。",
+      "translation": "I'm sorry, it hasn't arrived yet.",
+      "rationale": "The thanked carrying action is already completed, so claiming the box has not arrived conflicts with it."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "いいえ、また困った時は言ってください。",
+      "translation": "Not at all. Let me know if you need help again.",
+      "rationale": "This acknowledges the thanks and offers future help."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-3",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "The help has already been given. The fitting reply accepts the thanks modestly, rather than congratulating or denying arrival.",
+  "vocabulary": [
+    {
+      "surface": "運ぶ",
+      "reading": "はこぶ",
+      "gloss": "carry or transport"
+    },
+    {
+      "surface": "困る",
+      "reading": "こまる",
+      "gloss": "be in difficulty"
+    }
+  ]
+}

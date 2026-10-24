@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-piano-room",
+  "exposureId": "n5-story-piano-room",
+  "taskType": "key-point",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Practicing music",
+  "topic": "They are talking about piano practice. Where will the woman practice today?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "ピアノの練習について話しています。女の人は、今日はどこで練習しますか。",
+      "translation": "They are talking about piano practice. Where will the woman practice today?"
+    },
+    {
+      "id": "t2",
+      "speaker": "b",
+      "text": "今日は家でピアノを弾けません。弟が試験の勉強をしていて、静かにしてほしいと言われました。",
+      "translation": "I can't play the piano at home today. My younger brother is studying for an exam and asked me to keep quiet."
+    },
+    {
+      "id": "t3",
+      "speaker": "a",
+      "text": "学校の音楽室はどうですか。あそこには、いいピアノがありますよ。",
+      "translation": "How about the music room at school? There's a good piano there."
+    },
+    {
+      "id": "t4",
+      "speaker": "b",
+      "text": "今日は合唱の練習で、五時まで使っています。私は四時までしか時間がありません。",
+      "translation": "It's being used for choir practice until five today. I only have time until four."
+    },
+    {
+      "id": "t6",
+      "speaker": "b",
+      "text": "駅の近くの会館にも電話しましたが、今日は空いている部屋がありませんでした。",
+      "translation": "I called the hall near the station too, but no rooms were available today."
+    },
+    {
+      "id": "t7",
+      "speaker": "a",
+      "text": "それなら、うちに来ませんか。姉のピアノがあります。午後は誰も使いません。",
+      "translation": "In that case, would you like to come to my house? My older sister has a piano. No one uses it in the afternoon."
+    },
+    {
+      "id": "t8",
+      "speaker": "b",
+      "text": "いいんですか。ありがとうございます。では、二時にそちらに行きます。楽譜を持って行きますね。",
+      "translation": "May I? Thank you. Then I'll come to your house at two. I'll bring my sheet music."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t2",
+        "t3",
+        "t4",
+        "t6",
+        "t7",
+        "t8"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "女の人の家",
+      "translation": "The woman's home.",
+      "rationale": "Her brother needs quiet to study there."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "学校の音楽室",
+      "translation": "The school music room.",
+      "rationale": "It remains occupied until after her available time."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "駅の近くの会館",
+      "translation": "The hall near the station.",
+      "rationale": "She has checked, and no rooms are available today."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "男の人の家",
+      "translation": "The man's home.",
+      "rationale": "She accepts his final invitation and says she will come there at two."
+    }
+  ],
+  "answer": "option-4",
+  "evidence": [
+    "t7",
+    "t8"
+  ],
+  "explanation": "The first three places are considered but unavailable for specific reasons. そちら in her reply refers to the man's offered home.",
+  "vocabulary": [
+    {
+      "surface": "合唱",
+      "reading": "がっしょう",
+      "gloss": "choral singing"
+    },
+    {
+      "surface": "会館",
+      "reading": "かいかん",
+      "gloss": "community or public hall"
+    },
+    {
+      "surface": "楽譜",
+      "reading": "がくふ",
+      "gloss": "sheet music"
+    }
+  ]
+}

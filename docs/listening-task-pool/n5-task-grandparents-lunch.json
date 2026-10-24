@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-grandparents-lunch",
+  "exposureId": "n5-story-grandparents-lunch",
+  "taskType": "key-point",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Lunch with family",
+  "topic": "They are talking about tomorrow's lunch. At what time will everyone start eating?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "明日の昼ご飯について話しています。みんなは何時に食べ始めますか。",
+      "translation": "They are talking about tomorrow's lunch. At what time will everyone start eating?"
+    },
+    {
+      "id": "t1",
+      "speaker": "b",
+      "text": "明日はおじいちゃんとおばあちゃんが来ます。お昼をみんなで食べましょう。",
+      "translation": "Grandpa and Grandma are coming tomorrow. Let's all have lunch together."
+    },
+    {
+      "id": "t2",
+      "speaker": "a",
+      "text": "いつもの十二時でいいですか。午前中、庭の木を切るつもりです。",
+      "translation": "Is the usual time of twelve okay? I'm planning to trim the garden trees in the morning."
+    },
+    {
+      "id": "t3",
+      "speaker": "b",
+      "text": "明日は少し早くします。おばあちゃんが一時から友達に会いますから。",
+      "translation": "We'll make it a little earlier tomorrow. Grandma is meeting a friend at one."
+    },
+    {
+      "id": "t4",
+      "speaker": "a",
+      "text": "じゃ、十一時ですか。それなら、庭の仕事は午後にします。",
+      "translation": "Then eleven? If so, I'll do the garden work in the afternoon."
+    },
+    {
+      "id": "t5",
+      "speaker": "b",
+      "text": "十一時はまだ早いです。おじいちゃんたちは十一時に家を出て、三十分後に着きます。",
+      "translation": "Eleven is still too early. Grandpa and Grandma will leave home at eleven and arrive thirty minutes later."
+    },
+    {
+      "id": "t6",
+      "speaker": "a",
+      "text": "着いたらすぐ食べるんですね。では、十一時半にテーブルを用意しておきます。",
+      "translation": "We'll eat as soon as they arrive, then. I'll have the table ready for eleven thirty."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "十一時",
+      "translation": "Eleven o'clock.",
+      "rationale": "This is the grandparents' departure time and the rejected earlier proposal."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "十二時",
+      "translation": "Twelve o'clock.",
+      "rationale": "This is the usual lunch time, which is moved earlier tomorrow."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "十一時半",
+      "translation": "Eleven thirty.",
+      "rationale": "They will eat on arrival, and he confirms preparing the table for eleven thirty."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "一時",
+      "translation": "One o'clock.",
+      "rationale": "Grandma's meeting with her friend begins then."
+    }
+  ],
+  "answer": "option-3",
+  "evidence": [
+    "t5",
+    "t6"
+  ],
+  "explanation": "The dialogue states the final lunch time explicitly, so arithmetic is only supporting context. Do not substitute the usual time or the later meeting.",
+  "vocabulary": [
+    {
+      "surface": "切る",
+      "reading": "きる",
+      "gloss": "cut or trim"
+    }
+  ]
+}

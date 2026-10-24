@@ -238,6 +238,16 @@ address the encoded bytes together with their exact duration/turn bindings.
 Freshly encoded reviewed revisions can coexist with old recordings, without
 overwriting assets referenced by another package.
 
+An owner may explicitly authorize **complete private generation before audition**.
+Record that decision with `authorize --scope complete --defer-preview-approval`
+and an accurate authorization note; the normal default still requires preview approval.
+All selected previews must first be rendered and byte-verified, but this opt-in
+does not create a listening declaration. It permits generation at the owner's
+accepted risk of later rerenders, including a separately authorized full pool.
+`approve-task` and `export` still require actual preview listening approval and
+the complete package's listening/device declarations. Never manufacture those
+receipts to satisfy a generation request.
+
 `complete-review.html` plays each full required sequence and exposes all text,
 translations and feedback for **unscored author review**. It is not the Android
 C/D host, physical-phone acceptance, or automatic listening approval. Required

@@ -59,16 +59,20 @@ def positive_decimal(value: str) -> Decimal:
 
 
 def authorize(root: Path, plan_hash: str, scope: str, max_units: int,
-              max_usd: str, usd_per_million: str, note: str) -> None:
+              max_usd: str, usd_per_million: str, note: str, *, defer_preview_approval: bool = False) -> None:
     if scope not in ("preview", "complete") or type(max_units) is not int or max_units <= 0 or not note.strip():
         raise ValueError("Explicit scope, positive request-unit ceiling and authorization note are required")
     positive_decimal(max_usd)
     positive_decimal(usd_per_million)
+    if type(defer_preview_approval) is not bool or (defer_preview_approval and scope != "complete"):
+        raise ValueError("Deferred preview approval requires explicit complete private-generation authorization")
     with run_lock(root):
         if any((root / name).exists() for name in ("authorization.json", "spend.json")):
             raise ValueError("Authorization/accounting already exists; do not reset a spent run")
         record = {"planSha256": plan_hash, "scope": scope, "maxRequestUnits": max_units,
                   "maxUsd": max_usd, "usdPerMillion": usd_per_million, "note": note}
+        if defer_preview_approval:
+            record["deferPreviewApproval"] = True
         write_json(root / "authorization.json", record)
         write_json(root / "spend.json", {"authorizationSha256": canonical_hash(record), "attempts": []})
 
