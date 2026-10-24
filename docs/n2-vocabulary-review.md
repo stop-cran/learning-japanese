@@ -6194,7 +6194,8 @@ value of different inspection strategies, not a model ranking.
 
 ## Batch 37 - N2:722-N2:741
 
-**Status:** authored; independent reviews pending.
+**Status:** initial reviews complete; corrections authored;
+changed-passage confirmations pending.
 
 Scope: 住居, 集金, 集合, 習字, 修繕, 重体, 絨毯, 終点,
 重点, 就任, 周辺, 重役, 終了, 重量, 重力, 熟語, 祝日,
@@ -6269,7 +6270,7 @@ Sixteen new cards declare **81 directional quiz exclusions**,
 subject to independent assessment of actual ordinary meanings,
 not a transitive synonym grouping.
 
-Both reviewers will receive the same frozen committed
+Both reviewers received the same frozen committed
 snapshot, twenty complete new articles, five narrow kanji
 changes, twenty mappings, rubric and source access. The blind
 derivative removes only `quizGuardRationale`. Reviews run
@@ -6279,3 +6280,70 @@ edits during the initial reviews.
 Authored coverage: **720 closed / 20 draft / 1,072 pending /
 0 unresolved**, mapped to **733 distinct articles: 688 new /
 45 reused**. This is not review closure or overall completion.
+
+### Initial reviews and reconciliation
+
+The complete native final messages are archived:
+[GPT](n2-vocabulary-reviews/batch-37-gpt-initial.md) and
+[Claude](n2-vocabulary-reviews/batch-37-claude-initial.md).
+Actual models were **gpt-6.1-sol** and **claude-opus-5.5**,
+run strictly sequentially on authored commit
+`fa390bf5776402ca8a27fac55cb75990d1f37b1d`. Both processes
+exited with zero edits. Session events authenticate the exact
+common prompt, selected and actual models, permitted tools,
+and absence of named forbidden reads. File-only reviewers
+could not independently execute Git or hash checks.
+
+Both inspected twenty articles, five kanji changes and twenty
+mappings. GPT inspected all 325 captured families, 36 component
+records, 197 labels, seven complete existing articles and nine
+actual public lexical containers. Claude inspected the twenty
+principal families and labels, but not most comparison families
+or component records; its only successful independent lexical
+check was 重点. Its failed 住居 lookups supplied no evidence.
+These unequal actual inspection scopes limit model comparisons.
+
+Author adjudication, pending changed-passage confirmation:
+
+| Finding | Adjudication |
+| --- | --- |
+| GPT-01: 住居/宿 | **Resolved:** add the direct safeguard and a qualified comparison. Complete 宿1337190:2 explicitly includes home/dwelling despite the travel-focused existing title. |
+| GPT-02 / Claude-04: 集金/コレクション | **Resolved:** add the direct safeguard for the unqualified English collection/collecting label; retain the Japanese payment-versus-hobby distinction. |
+| GPT-03 / Claude-02 extra: 終点/仕舞い | **Resolved:** add the direct end/finish-label safeguard. This observation is shared even though Claude placed it in a lower-confidence extra. |
+| GPT-03: 終点/終わる | **Resolved:** add the direct end/finish-label safeguard; do not claim unrestricted noun/verb substitution. |
+| GPT-04 / Claude-05: 終了/結論 | **Resolved:** add the direct conclusion-label safeguard; retain the reasoned-conclusion distinction. |
+| GPT-04: 終了/閉める・閉まる | **Resolved:** add both broad close-label safeguards, without teaching physical shutting as synonymous with ending every activity. |
+| Claude-01: 住居 address demonstration | **Resolved:** remove address from the title and unrestricted-use claim; keep it as explicitly qualified JMdict recognition. Replace the example with the already attested 住居を定める pattern. The original mapping note now denotes that qualified recognition, not verified address-field substitution. |
+| Claude-02: 終点/終了・端 | **Resolved:** add both safeguards and explain point versus activity and broader edge/end. The complete 端1581610:1 explicitly includes the end of a street, strengthening the tentative extra. |
+| Claude-03: 周辺/郊外 | **Resolved:** add the direct outskirts safeguard and distinguish the city's center from an arbitrary reference point. |
+| Claude-05: remove 終了/切る・切れる | **Partially resolved:** the conclusion omission is fixed, but proposed removals are not adopted. Actual 切る teaches hanging up, supported by 1384830:4; 切れる teaches expiry, supported by 1384860:6. Await confirmation of this evidence-based disagreement. |
+| Claude optional remarks | **Optional:** no further 集合, 受験 or 熟語 changes. No actionable defect was established from generous gathering guards, an action/object distinction, or learners blurring idiom and proverb. No 宛名 guard is added after removing address from 住居's title and qualifying its recognition note. |
+
+The correction capture contains 21 complete families: thirteen
+repeats checked equal and **eight genuinely new families /
+twenty senses**, including separate readings of 端 which are
+not pooled into はし. The combined inventory is **333 distinct
+families / 683 senses**, including the unchanged twenty
+principal families / 26 senses. Four additional existing full
+bodies (宛名, 端, 諺, 郊外) and two additional existing labels
+(諺, 郊外) bring the inspected totals to **124 bodies /
+199 labels**. The correction capture also contains the new
+principal 終了 article, not counted as an existing article.
+Original capture counts, declarations and rationale remain
+unchanged; the source packet appends a correction supplement.
+
+Five new cards change. Fifteen other new cards, all five kanji
+edits, all raw source fields and all twenty mapping identities
+and sense indices remain unchanged. Ten direct declarations
+are added and none removed: **16 guarded cards / 91 directional
+declarations**. Baseline word cards remain unchanged.
+
+**Preliminary model-diversity evidence:** verified shared
+observations are 集金/コレクション, 終点/仕舞い and 終了/結論.
+GPT uniquely supplied 宿's dwelling sense, the 終わる endpoint
+label, and both closing labels. Claude uniquely supplied the
+address-demonstration remedy, 郊外, and the 終了/端 endpoint
+precautions. Its proposed cut/expiry removals are not credited
+as useful corrections. This compares all report sections,
+including tentative extras, and supports complementary
+inspection strategies on this sample, not a model ranking.

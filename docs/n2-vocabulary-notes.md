@@ -95,6 +95,22 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 37 reconciliation:** An example containing both a
+  dwelling and its address does not demonstrate that the
+  dwelling noun itself means a written address. Qualify
+  住居's JMdict address gloss as dictionary recognition and
+  use the attested 住居を定める pattern instead of inventing a
+  direct address-field substitution. Keep the raw source
+  gloss separate from that narrower teaching decision.
+- **Batch 37 reconciliation:** Do not remove a quiz safeguard
+  from primary titles alone. The actual 切る article teaches
+  hanging up, supported by complete sense 4; 切れる teaches
+  expiry, supported by sense 6. These support keeping the
+  終了 precautions. Conversely, the complete 端1581610:1
+  explicitly includes the end of a street, strengthening a
+  tentative endpoint-label concern. A lower-confidence
+  observation can become useful without becoming a second
+  model's unique discovery.
 - **Batch 37 authoring:** Deduplicate evidence by entry ID and
   check repeated records before counting. The 325-family
   capture includes twenty principal families, leaving 305
