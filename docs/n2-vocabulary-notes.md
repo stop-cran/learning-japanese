@@ -95,6 +95,16 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 42 review/reconciliation:** Recognition of a
+  kana alias must not leave its extra vowel unexplained:
+  ずうっと writes lengthening, not the short pronunciation
+  of ずっと. Keep the search-only dictionary flag distinct
+  from that orthographic teaching. Bare estimation/level
+  labels also require ordinary secondary-sense checks;
+  推定/計算, 推定/予定 and 水平/線 are direct safeguards,
+  not transitive consequences of existing exclusions.
+  These are documented-label precautions, not reproduced
+  quiz failures or unrestricted Japanese synonym claims.
 - **Batch 42 authoring:** A valid shortened form and its
   expanded reusable article can have different dictionary
   identities. Preserve source 水曜/すいよう (1372180),

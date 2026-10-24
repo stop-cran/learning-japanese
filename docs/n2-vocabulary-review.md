@@ -7497,3 +7497,97 @@ images + 201 scenes**.
 Both independent reviews are pending. These are authored
 counts, not review closure or native-speaker certification;
 the full vocabulary expansion remains open.
+
+### Independent initial reviews and reconciliation
+
+The common committed authored snapshot is
+**`1c55dc75c503046de66d6cf41e73bbe25c96fc62`**.
+[GPT initial](n2-vocabulary-reviews/batch-42-gpt-initial.md)
+used **gpt-6.1-sol** and exited before
+[Claude initial](n2-vocabulary-reviews/batch-42-claude-initial.md)
+used **claude-opus-5.5**. Both were read-only native
+sessions with the same snapshot, scope, rubric and source
+access; neither received the other's findings or the
+author's quiz rationale.
+
+Both read all seventeen new articles, three reuse bodies
+within bounded scope, the six-file related patch and all
+four affected kanji cards. GPT read the principal and all
+ten selected-family renderings, supplemental families,
+twenty mappings, 29 components, 104 labels and 31 captured
+public bodies, plus 57 additional comparison articles.
+Claude read the principal evidence, mappings, components
+and public text captures, selected-family file 05 and part
+of 09; it searched, rather than fully read, the other
+family files and roughly forty comparison headers. It
+did not read the blind packet, labels JSONL or snapshot
+JSONs. Equal access is not equal inspection depth.
+
+Both accepted the source identities, selected senses,
+easier levels, distinct-entry 水曜 reuse and four reciprocal
+kanji edits. Three bounded findings are addressed:
+
+- **GPT42-01:** Add direct 推定/計算 and 推定/予定
+  safeguards. Complete pinned entries corroborate
+  estimation/estimate in ordinary senses; 計算's actual
+  article also teaches the extension. Their primary labels
+  alone had hidden the plausible reverse-direction answer.
+- **GPT42-02:** Add direct 水平/線 protection for bare
+  level-label ambiguity. Entry 1391780 sense 6 was already
+  captured completely. Existing 水平線 guards are not
+  transitive; this is not a claim that 線 means horizontal.
+- **Claude F1:** Explain that ずうっと writes a lengthened
+  う sound, like ずーっと; stretching can add emphasis.
+  Retain ordinary ずっと and the search-only lookup flag.
+  The initial paragraph did not explicitly assert a short
+  pronunciation; the supported gap is incomplete
+  explanation, not a demonstrated false pronunciation
+  rule. JMdict explicitly marks ずーっと emphatic, not
+  ずうっと separately. Claude found no fresh monolingual
+  emphasis entry; the adopted wording stays qualified.
+
+Two Claude optional suggestions are adopted: four exact
+entry IDs are added to the four kanji source lists, and
+existing 図々しい in 厚かましい plus 水平線 in 地平線
+become links to the new articles. These are narrow
+provenance/link changes, not required new teaching.
+No category-only 水筒/container guards or component-only
+好き嫌い/嫌い guard is added. Extra examples, legal/passive
+uses, proverb, の forms and kana polish remain optional.
+
+The complete correction lookups for 計算 and 予定 add
+**two families / three senses**, giving **193 complete
+families / 405 senses**. Four complete existing bodies
+were read; 厚かましい and 地平線 were already counted,
+giving **62 distinct bodies and 106 labels**. A separate
+supplement preserves the original evidence, hypotheses and
+reports while recording added evidence and adjudications.
+The exact private-file allowlist was checked against both
+native tool logs; no directory wildcard or named forbidden
+read was found. Both complete final reports, actual models,
+exact prompts and zero edits were authenticated by the
+author; these are not reviewer-executed Git/hash checks.
+
+Corrected metadata has **15 guarded new articles / 45
+directional declarations**, exactly three direct pair
+additions. Three scoped word passages/headers change;
+two baseline words receive links only and the four kanji
+receive citation IDs only. Source readings, identities,
+levels, sense selections and raw glosses are unchanged.
+Coverage remains **820 closed / 20 draft / 972 pending**,
+with **4,051 words**, **196 tracked reciprocal N2 pairs**
+and **3,273 preserved baseline metadata identities**.
+The manifest is now **`36eb8f05991e3591`**, with unchanged
+asset counts.
+
+Model-diversity value on this sample: GPT uniquely
+identified the two adopted quiz-pair concerns (three
+pairs); Claude uniquely proposed the adopted vowel-length
+clarification, four source-list additions and two backlinks.
+Equivalent observations were compared across Findings,
+Optional and Limits, not severity labels alone. Evidence
+depth differed substantially; this is complementary sample
+evidence, not a controlled model benchmark.
+
+Original-session confirmations are pending; none of the
+twenty rows is closed by this reconciliation.
