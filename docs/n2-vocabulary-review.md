@@ -4448,7 +4448,7 @@ This closes batch 28, not the full vocabulary expansion.
 
 ## Batch 29: N2:562-N2:581
 
-**Status:** initial corrections confirmed; one supported confirmation follow-through awaiting bounded recheck.
+**Status:** closed; both original reviewers confirmed the supported corrections and narrow follow-through.
 
 Scope: 琴, 言付ける, 言葉遣い, こないだ, 御無沙汰, こぼす,
 零れる, ゴム, ごめん, ごめんください, 小指, こらえる, 娯楽,
@@ -4589,7 +4589,7 @@ Claude relied on its earlier actual retrieval and the original-body
 reinspection receipt. Both reported zero edits and bounded file-only
 Git/hash limits.
 
-**B29-CL-06, resolved with follow-through confirmation pending:**
+**B29-CL-06, resolved and confirmed:**
 Claude identified the missing direct ごめん/恐縮 exclusion as an
 initial-review miss, not a regression. The author read both actual
 full cards and the complete pinned 1236740 family. Sense 2 explicitly
@@ -4618,3 +4618,54 @@ identity, title, reading, level, mapping, kanji or reciprocal example
 changes. The new finding is another useful Claude contribution in
 this sample, while also demonstrating that an initial CLEAN report
 does not imply exhaustive semantic or quiz coverage.
+
+### Final confirmation and closure
+
+The follow-through snapshot is
+`a2ce2462ad5b3f10cc9e10710eccbf9ff1a06c80`.
+The [GPT follow-through](n2-vocabulary-reviews/batch-29-gpt-followup.md)
+and [Claude follow-through](n2-vocabulary-reviews/batch-29-claude-followup.md)
+resumed the same original sessions, one process at a time. Both read
+the complete changed ごめん article, actual 恐縮 and 申し訳 bodies,
+three complete relevant families and the actual narrow diff. Both
+confirmed the direct guard and qualified comparison, retained their
+earlier resolutions, accepted 申し訳 as optional and reported no
+new actionable defect or consequential unresolved claim in scope.
+Both returned CLEAN for correctness, scoped coverage and
+comprehensibility of the changed card and appended evidence.
+
+The author authenticated all six final reports and exact common
+prompts against the two native sessions, actual model usage and
+zero-edit receipts. The three commits' parent chain, stop-cran author
+and committer identities, trailers, normalized file hashes, actual
+patches and equivalent evidence derivatives were checked. Original
+evidence is preserved exactly; eleven first-correction and two
+follow-through complete comparison families are appended. The
+current 18-card / 82-declaration headers match the historical 72,
+then nine and one direct additions.
+
+The narrow reviewer patches deliberately contain article and source
+evidence changes, not the generated manifest diff. File-only
+reviewers could not execute Git or hash checks. The author separately
+verified the actual committed manifest hash and regenerated it
+deterministically; this does not become reviewer-executed verification.
+No app draws, corpus-frequency measurement, native-speaker
+certification or official modern JLPT syllabus coverage is claimed.
+The two sessions have exited. No specifically named existing
+reviewer temporary artifacts were found in their tool-result scan;
+no broad temporary-directory cleanup was performed.
+
+Closure brings the pinned community-list coverage to **580 closed /
+0 draft / 1,232 pending / 0 unresolved**, mapped to 574 distinct
+articles: 537 new and 37 reused. There are 3,810 word articles and
+131 distinct tracked primary reciprocal N2 pairs. The remaining
+list is not claimed complete.
+
+**Final diversity assessment:** the shared chronology catch and
+different supported guards remain complementary in this sample.
+Claude's confirmation supplied one additional initially missed
+ordinary-secondary-meaning pair, which GPT also confirmed against
+the pinned evidence. Optional observations were compared across
+whole reports and not credited as unique solely by section labels.
+This is evidence for using both families and reconciling their
+claims, not a benchmark or a guarantee against further misses.
