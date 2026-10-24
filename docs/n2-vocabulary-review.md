@@ -4896,3 +4896,68 @@ bounded investigation; GPT independently confirmed the changes.
 Using both families was useful on this sample, but their initial
 CLEAN judgments did not exhaust secondary-meaning ambiguities.
 This is a case record, not a general model ranking.
+
+## Batch 31: N2:602-N2:621
+
+**Status:** authored; independent reviews pending.
+
+Scope: 先程, 裂く, 索引, 作者, 削除, 作成, 作製, 探る,
+囁く, 刺さる, 匙, 座敷, 差し支え, 差し引き, 刺身, 刺す,
+挿す, 注す, 射す, 流石.
+
+Nineteen standalone additions bring the collection to 3,848 word
+articles. Exact existing 作者 is reused unchanged, including its
+N2 level, reading, creator-of-a-work teaching and 作家 guard.
+Kana-primary ささやく, さじ and さすが explicitly teach their
+source spellings 囁く, 匙 and 流石 at the actual readings.
+
+刺 receives three useful reciprocal links, for 刺さる, 刺身 and
+刺す, bringing distinct tracked primary N2 pairs to 141.
+All its existing reading rows remain. Missing primary 裂, 索,
+削, 製, 敷, 身, 挿 and 射 remain metadata; no kanji/stroke
+articles are fabricated.
+
+The [source packet](n2-vocabulary-batch-sources/batch-31.json)
+preserves twenty raw rows and complete principal families, 154
+distinct complete comparison families merged consistently from
+two extractions, 90 actual existing comparison labels and 37
+complete component records. All 93 captured comparison bodies
+(including repeated captures), complete relevant family renderings
+and public containers were inspected through their boundaries.
+Twenty-one positive public receipts distinguish internal headwords
+and readings. A failed standalone さすがに extraction remains
+explicit, not positive verification; current JMdict2140120 and
+the actual 流石 body provide support instead. Public observations
+are original concise paraphrases, not copied full bodies.
+
+Practical teaching keeps recent 先程 distinct from an arbitrary
+distant past, 裂く tearing separate from 割く-only allocation,
+and content deletion separate from event cancellation. 作成 and
+作製 retain their practical distinction without a rigid
+nonphysical/physical boundary; 作製 includes design drawings.
+探る includes tactile search, inquiry and exploration. 囁く's
+intransitive classification and quoted と remain distinct.
+
+さじ's kango classification follows the positively inspected
+茶匙-origin statement, not an invented sound derivation or an
+inference from KANJIDIC's character-reading category. 座敷 is
+on-first mixed. 差し引き's deduction and fluctuation senses keep
+their separate transitivity. The four new さす verbs keep actual
+constructions, including cuttings, sword-wearing, small liquid
+additions, 点す-preferred color application and intransitive
+sunlight. Emotional 刺さる need not be praise. さすが gives actual
+expectation, さすがに and さすがの...も constructions rather than
+an unrestricted adjective meaning clever.
+
+Seventeen new cards declare 85 directional exclusions from
+direct ordinary-meaning and actual-label checks. Exact spoon
+titles already deduplicate; no baseline guard is changed.
+These remain author judgments for independent assessment.
+Both families will receive the same frozen snapshot, nineteen
+articles, exact reuse claim, one-file related diff, twenty
+mappings, rubric and source access in sequential processes.
+The evidence derivative removes only `quizGuardRationale`.
+
+Coverage is **600 closed / 20 draft / 1,192 pending / 0 unresolved**,
+mapped to 614 distinct articles: 575 new and 39 reused. This batch
+and the remaining list are not yet claimed review-closed.

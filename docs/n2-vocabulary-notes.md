@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 31 authoring:** A word's origin and a character-reading
+  category are different descriptive layers. Daijisen explicitly
+  traces さじ to the Sino-Japanese reading of 茶匙; KANJIDIC's
+  kun-labelled さじ does not independently disprove that origin.
+  Record the actual source rather than classifying from the
+  appearance of a single-character spelling.
+- **Batch 31 authoring:** Similar readings do not pool meanings.
+  裂く's family reserves allocation for 割く, while 注す/点す
+  preferences remain sense-local. Distinguish a dedicated 挿す
+  heading from the surrounding broad 差す/指す material; a cutting
+  planted to root is not necessarily a graft onto another plant.
+  Retain the failed standalone さすがに extraction explicitly.
+
 - **Batch 30 confirmation:** Different leading glosses are not
   protection when the same displayed title also contains an
   applicable ordinary meaning. Follow through on trailing
