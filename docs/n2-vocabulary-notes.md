@@ -95,6 +95,20 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 44 review/reconciliation:** An apology card's
+  thanks sense needs direct safeguards against each
+  gratitude label; protecting ありがとう is not transitive.
+  Likewise, 澄む's selected serenity sense matters beside
+  its physical-clarity title, and rescheduling overlaps
+  変える's actual meeting-time example. Bare English
+  nature/print labels can justify conservative precautions
+  without equating natural origin with inherent properties
+  or printed matter with the printing action. Avoid a
+  negated "X while Y" contrast that appears to affirm the
+  very people/things partition being rejected. Both models
+  found the gratitude gap; their other useful observations
+  were complementary, but actual source-reading depths
+  differed despite equal access.
 - **Batch 44 authoring:** A dictionary spelling can
   need navigation without changing character metadata:
   清む belongs to 澄む/すむ, but pinned KANJIDIC2 does

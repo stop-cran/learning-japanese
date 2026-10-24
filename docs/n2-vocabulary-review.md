@@ -7857,3 +7857,71 @@ Coverage is **860 closed / 20 draft / 932 pending /
 814 new / 58 reused**. There are **4,087 word articles**
 and **201 tracked reciprocal N2 pairs**. This draft has
 not yet passed independent GPT and Claude review.
+
+### Batch 44 blind review and reconciliation
+
+Authored snapshot **`519d183f9494ce149cab8317d46d7e3a7c6e41bf`**
+passed the author-run format, source-preservation, exact
+34-file scope, reciprocal-link and deterministic-manifest
+checks. Its manifest is **`513393900c7de574`**. Those checks
+are not independent linguistic or runtime certification.
+
+The [GPT initial](n2-vocabulary-reviews/batch-44-gpt-initial.md)
+and [Claude initial](n2-vocabulary-reviews/batch-44-claude-initial.md)
+are complete native final messages, not summaries of
+process output. Native event/usage checks authenticated
+**gpt-6.1-sol** and **claude-opus-5.5**, exact expanded
+prompts, the common frozen snapshot, permitted private
+paths, no named forbidden reads, and zero edits. They
+ran sequentially and exited; no reviewer pool remains.
+
+Both read all eighteen new articles, the principal
+families, mapping/label/component records, and actual
+public text captures. GPT additionally read all thirteen
+selected-family renderings, the supplement, the changed
+old articles and many actual comparisons, with useful
+fresh public dictionary retrievals. Claude explicitly
+did not read the selected comparison families; it read
+three complete comparison articles and used title/
+exclusion searches for others, and read the six old
+backlinks through the patch. Its naturalness limits
+are retained. Equal access did not yield equal actual
+evidence depth; this is not a controlled model benchmark.
+
+| Observation | Disposition and evidence |
+| --- | --- |
+| GPT F01; Claude F3 | Resolved: add すまない's direct どうも/感謝/御礼/礼 pairs. JMdict 1610020:3 and the actual gratitude titles/bodies support the overlap. Existing ありがとう/恐縮 guards do not propagate. Preserve the different initial severities and confidence. |
+| GPT F02 | Resolved: add 澄む/落ち着く and 澄む/安心. Selected 1373680:3 explicitly includes serenity and freedom from worry; complete 1589220 and あんしん 1153890 support the comparison. Do not use the separately captured Buddhist あんじん family as evidence for あんしん. |
+| GPT F03 | Resolved: add 変える separately to スライド and ずらす. Actual meeting-time and schedule examples support the broad change label, not merely a shared topic or the existing 変更 guard. |
+| Claude F1 | Resolved: replace 性質's ambiguously scoped negation with explicit statements that 性格 is not people-only and 性質 is not things-only. Preserve both words' qualified teaching rather than inventing a fixed partition. |
+| Claude F2 | Adopted conservative English-label safeguard: 性質/天然 share the actual bare nature label, while 1439580 and both articles distinguish natural origin from inherent properties. Not an unrestricted Japanese synonym claim or proof from the old 自然 guard. |
+| Claude F4 | Adopted conservative English-label safeguard: 刷る/活字. Complete 1208300:2 includes print/printed matter, and 活字's actual example translates small print. Preserve 刷る's verbal printing explanation and title; an old 印刷 guard alone would not establish this pair. |
+| Other Claude suggestions | Optional, not required for closure: additional 住まい phrasing, a 寸法 construction example, and 税関/関税 comparison. No unsupported broad-guard deletion or claim of native-speaker certification is inferred from CLEAN. |
+
+Author reconciliation read **fifteen complete captured
+families** and the nine relevant existing comparison
+articles. **Eight families/28 senses** are new to this
+packet; seven duplicates are checked rather than
+recounted. The resulting union is **268 families/
+661 senses**, with unchanged original source, principal
+and inspection fields plus a labeled correction
+supplement. The ten direct guard additions produce
+**sixteen guarded new articles/129 declarations**.
+Only six new cards change: すまない, 澄む, スライド,
+ずらす, 性質 and 刷る. Seven source-row article judgments
+need reassessment because 清む shares 澄む; thirteen
+are unchanged.
+
+**Model-diversity observation:** the gratitude gap is
+shared even though severity/confidence differ. GPT
+uniquely identified the serenity and scheduling pairs;
+Claude uniquely identified the ambiguous partition
+sentence and proposed the adopted nature/print label
+precautions. All Findings/Optional/Limits were compared,
+not just finding counts. This is useful complementary
+sample evidence, not a general model ranking.
+
+The supported corrections await the original reviewers'
+sequential bounded confirmations. Source rows remain
+draft; neither mechanical checks nor author adjudication
+alone closes them.
