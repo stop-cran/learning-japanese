@@ -5718,7 +5718,7 @@ batch 34, not the remaining vocabulary expansion.
 
 ## Batch 35: N2:682-N2:701
 
-**Status:** authored; independent initial reviews pending.
+**Status:** initial reviews complete; corrections prepared; bounded confirmations pending.
 
 Scope: 湿度, 執筆, 実物, しっぽ, 実用, 実力, 実例,
 失恋, 指定, 私鉄, 児童, 縛る, 地盤, しびれる, 紙幣,
@@ -5776,3 +5776,78 @@ only `quizGuardRationale`.
 Authored coverage: **680 closed / 20 draft / 1,112 pending /
 0 unresolved**, mapped to **693 distinct articles: 648 new and
 45 reused**. This is not review closure.
+
+### Initial review
+
+Both independent reviewers assessed committed snapshot
+`978aed9979689800a07e505bf370846e4c3cc12c`, parent
+`3c899fabf15e967b5f8d815dd0ad6247ad110f04`, with the same assigned
+scope, rubric and source access. The isolated processes ran
+sequentially, exited fully and reported zero edits. Actual models
+and complete native final messages are retained:
+
+- [GPT initial](n2-vocabulary-reviews/batch-35-gpt-initial.md):
+  `gpt-6.1-sol`.
+- [Claude initial](n2-vocabulary-reviews/batch-35-claude-initial.md):
+  `claude-opus-5.5`.
+
+Both read all eighteen new articles, twenty principal families
+and the narrow related changes. GPT additionally read seventeen
+comparison bodies, but not all captured bodies or families.
+Claude read all 150 labels but no captured comparison bodies
+and most comparison families were not inspected. Native tool
+events show no application-code access; neither reviewer ran
+a quiz. Their file-only Git/hash limitations remain explicit.
+
+### Reconciliation
+
+Eleven new articles are changed. Nineteen additional actual
+comparison articles and 27 complete families were captured and
+inspected after initial review. One family and one label duplicate
+original records and were verified equal. The append-only
+correction evidence adds **26 families / 56 indexed senses /
+18 labels**, for **328 comparison families / 836 senses /
+168 labels**. Thirty-six full comparison bodies were actually
+inspected; this does not turn every capture into an inspection.
+All 33 repeated component records equal the authored capture.
+
+| Initial observation | Author decision and evidence |
+| --- | --- |
+| GPT 01: しっぽ/仕舞い | Add the direct tail-end/final-part precaution, supported by actual labels and 1594530:1; do not pool the separate suffix or dance identity. |
+| GPT 02: 実用/用いる | Add the direct practical-use/use label precaution with 1546210:1; differing Japanese grammatical classes do not remove this English-label ambiguity. |
+| GPT 03: 実力/能 | Add the ability/talent edge using 1470120:1 and the actual 能 article, independently of existing 才能/能力 guards. |
+| GPT 04 / Claude Optional: 実例/ケース | Add the actual-case/instance edge using 1047880:2. The computing CASE identity is separate. This observation is shared, not GPT-unique. |
+| GPT 05 / Claude Q2: 地盤/基・基本 | Add both foundation edges using actual labels, 1260670:2 at もと and 1219190:1. Other 基 readings are not pooled. |
+| GPT 06 / Claude Q4: しびれる/凍える | Add the numb-with-cold overlap using 1446180:1 and 1569620:1; a cause-specific numb state remains a numb state. |
+| GPT 07 / Claude Q1: 紙幣/金銭 | Add the broad money-answer precaution using 1243020:1 and the actual article, not merely shared finance tags. |
+| GPT 08: 絞る/ぎゅうぎゅう | Add the squeezing-hard precaution using 1003600:2-3 and the actual article; mimetic manner versus action does not make the coarse label safe. |
+| Claude C1: しみじみ construction | Teach positively attested しみじみとした + noun with 気持ち, reading and gloss. Narrow the moderate allegation to a minor construction/guidance omission. The [actual WURK section](https://eigobu.jp/magazine/simijimi) supports this pattern, not unrestricted standalone する, omission of と, or a “very common” ranking. Clarify only the TSV source note; preserve raw source fields and indices. |
+| Claude C2: non-animal tail end | Replace vague しっぽの部分 with attested 列のしっぽ and its reading/gloss. [Seisen's しっぽ sense 4](https://kotobank.jp/word/尻尾-521708), not the separate しりお heading, supports it. |
+| Claude C3: 絞る scope | Explicitly place extortion/exploitation outside the practical introduction, together with bow/sumo/go uses. Complete 1594520:4 and [Daijisen 2イ](https://kotobank.jp/word/絞る-523544) support the scope statement; no selected/additional index expansion. |
+| Claude Q3: 地味/謙虚 | Not adopted as a required guard. Actual 地味 concerns unshowy appearance/living; actual 謙虚 and 1260190:1 concern a nonboastful, receptive attitude. “Modest” and shared tags alone do not establish equivalent answers; 謙虚 already distinguishes a modest dwelling. Await independent reassessment of this decision. |
+| Claude Q5: しみじみ/感激・感動 | Add both coarse deeply-felt/deep-emotion precautions using complete 1005610:1, 1212360:1 and 1212570:1 and actual articles. This does not equate every reflective use with a strong emotional response. |
+| Claude Optional: 実力/勢い and 実例/場合 | Add both precautions from actual force and case/situation labels and complete 1375040:1-2 and 1355810:1, not transitivity or topic membership. |
+| Claude Optional: other proposed guards | Do not add 執筆/文字, 地味/原・野, 実例/事件 or 縛る/不自由 merely from shared English tokens or topics. Distinguish authoring from written representation, geographical plains from unshowy appearance, incident from illustrative instance, and active binding from an inconvenienced/restricted state. |
+| Claude Optional: remove 縞/棒 | Retain the precaution and explain the actual drawn-line/dash sense already taught on 棒 and recorded in 1519750. The initial reviewer had not read that comparison body. Physical rods are not equated with stripe patterns. |
+| Claude Optional: wording polish | Remove しぼむ's vacuous ichidan warning, 紙幣's unrelated no-money clause and しびれる's opaque diagnosis sentence; identify the sensation mimetics accurately. Extra electric-shock and tail-idiom examples remain optional. |
+
+The corrected cards have **90 directional declarations across
+eighteen new articles**, thirteen additions and no removals.
+Baseline guards, identities, primary readings/titles, levels,
+source identities and selected/additional indices are unchanged.
+The original authored evidence and its 77 declarations remain
+historical; current declarations and per-observation decisions
+are appended rather than silently replacing them.
+
+Across all report sections, **five accepted missing pairs are
+shared**, **four are GPT-only** and **four are Claude-only**.
+Claude also prompted the three teaching/scope clarifications
+and tightly coupled polish. Several tentative suggestions and
+the unsupported frequency claim were not adopted. Diversity
+was useful on this sample, not a general model ranking or proof
+of bias elimination. A Weblio example count or footer-only page
+does not establish rendered examples, and an inaccurate generated
+search summary is not substituted for actual source bodies.
+
+Bounded confirmation on the corrected committed snapshot is
+still pending; all twenty rows remain draft.

@@ -95,6 +95,24 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 35 reconciliation:** An adverb label does not prohibit
+  an attested しみじみとした + noun construction. Teach the
+  positive pattern without inventing unrestricted standalone
+  する usage, an omitted と, or frequency from an example count.
+  Read actual source bodies: footer-only pages and generated
+  search attributions are not corroboration.
+- **Batch 35 quiz review:** Shared English words are hypotheses,
+  not automatic guards. Distinguish unshowy living from humility,
+  geographical plain from plain appearance, and authoring from
+  written representation. Conversely, read complete comparison
+  articles before removing a precaution: 棒 explicitly teaches
+  a drawn-line/dash use, not only a physical rod.
+- **Batch 35 model comparison:** 実例/ケース appears as a GPT
+  finding and a Claude optional observation, so it is shared.
+  Across all sections the accepted missing pairs divide into
+  five shared, four GPT-only and four Claude-only observations.
+  Keep the non-animal example and explicit scope improvements
+  separate from claims that the original selected senses were wrong.
 - **Batch 35 authoring:** A raw English gloss can span multiple
   current senses: 実力 explicitly includes arms/force as well as
   ability, so both are selected, not mislabeled as additional.
