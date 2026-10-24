@@ -95,6 +95,22 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 41 authoring:** Raw glosses need scoped lexical
+  interpretation, not literal expansion. 寝台's "couch"
+  does not make every living-room sofa a sleeping platform;
+  人造's "imitation" does not imply fraud; 炊事's
+  "culinary arts" does not require an artistic discipline.
+  Preserve those raw fields and qualify the teaching with
+  inspected entries rather than silently rewriting the list.
+
+- **Batch 41 source handling:** Separate dictionary
+  frameworks and broader public senses. 信ずる's JMdict
+  `-zuru` classification and Daijisen サ変 label do not
+  license a regular godan paradigm. Public figurative uses
+  of 真空, 針路 and 神話 are not fabricated JMdict indices.
+  人文科学's narrower humanities anchor must not erase its
+  documented broader human/cultural-studies usage.
+
 - **Batch 40 confirmation:** Distinguish complementary
   blind initial discoveries from agreement after sharing
   the fixes. Both original models accepted all three

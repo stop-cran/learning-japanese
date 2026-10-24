@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-34 review-closed.** The target is all 1,812 source rows,
+**Batches 01-40 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 680 rows are review-closed; batch 35's 20 rows are draft,
-1,112 remain pending, and none are unresolved.
+The first 800 rows are review-closed; batch 41's 20 rows are draft,
+992 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -7170,3 +7170,82 @@ Git, hashes, validators or production quiz draws; no fresh
 confirmation web retrieval, corpus-frequency measurement or
 native-speaker certification is claimed. The full vocabulary
 expansion remains incomplete.
+## Batch 41 - authored; independent reviews pending
+
+Source rows **N2:802-N2:821** cover 芯, 新幹線, 真空,
+信ずる, 心身, 申請, 人造, 寝台, 診断, 侵入,
+人文科学, 人命, 深夜, 森林, 親類, 針路, 神話,
+酢, 水産 and 炊事. All **twenty articles are new**;
+there are no narrow reuses. The
+[source packet](n2-vocabulary-batch-sources/batch-41.json)
+retains the raw rows separately from teaching selections.
+The pinned list is a named community resource, not an
+official modern JLPT syllabus.
+
+芯 selects JMdict senses 1-2, not its botanical senses.
+真空 selects physical sense 1, not Buddhist sense 2.
+The other principal selections are sense 1. Separately
+attributed public senses support figurative 真空/針路/神話,
+broader assessment under 診断, extended 親類, and broad
+versus narrow 人文科学. They are not invented extra
+JMdict indices or independent N2 assignments.
+
+Consequential qualifications include actual low-pressure
+vacuum rather than only literal zero matter; 信ずる's
+distinct dictionary classifications and usable inflections;
+administrative but not government-only 申請; nonfraudulent
+人造; 寝台 beyond transport but not every sofa; intransitive
+侵入/炊事; 人命 versus daily living; no universal 深夜 clock
+boundary; no exact forest-size/naturalness taxonomy; and
+freshwater as well as marine 水産.
+
+The inspected union contains **195 complete families / 469
+sense records**, including **20 principal families / 24
+senses** checked equal rather than added twice. The
+original selected **190 / 457** is supplemented by **five
+complete families / twelve senses** for 試験, 晩, 水産業,
+頼む and 適用. There are **149 distinct inspected existing
+labels**, **92 complete existing article bodies** (88 in the
+fifteen selected bundles plus four final bodies), **40
+complete component records** and **30 actual Digital
+Daijisen retrievals**.
+
+The original broad comparison capture has **247 families /
+568 senses**. The authenticated capture union is **258 /
+623**; it is not all author-inspected. The original
+capture-stage pending-inspection plan remains unchanged,
+with a separate completed-inspection receipt. Alternate
+headings, readings and surname lists are distinguished
+from lexical senses. Captures and author receipts are not
+independent-reviewer retrievals or native-speaker certification.
+
+Five N2 kanji cards gain reciprocal teaching links in
+their applicable reading rows and Common words:
+線 / 新幹線 at セン; 造 / 人造 at ゾウ;
+森 / 森林 at シン; 林 / 森林 at リン; and
+針 / 針路 at シン. Existing kanji metadata is preserved.
+No kanji or stroke cards are created; absent written
+components remain in the word metadata.
+
+Initial quiz declarations comprise **16 guarded articles /
+56 directional declarations**. These are author hypotheses,
+not review conclusions. Actual English labels and ordinary
+senses, not a subject/category match alone, govern direct
+symmetric, nontransitive safeguards. Exact titles already
+deduplicate 寝台 / ベッド and 親類 / 親戚. No baseline
+quiz exclusions change. The blind evidence derivative
+omits only `reviewEvidence.quizGuardRationale`.
+
+Author checks establish **800 closed / 20 draft / 992 pending /
+0 unresolved** rows, mapped to **813 distinct articles:
+761 new / 52 reused**. There are **4,034 word articles**
+and **192 tracked new-article reciprocal N2 pairs**.
+The **3,273 baseline** identities, readings, titles and
+exclusions remain preserved under the recorded narrow
+level/reuse rules. The deterministic manifest is
+**`9f27e8afbebda035`**: **6,662 assets = 6,065 files + 396
+images + 201 scenes**.
+
+These are authored-state counts, not review closure. Both
+independent reviews remain pending; the overall expansion
+remains open.
