@@ -6,6 +6,10 @@ It is not a JLPT exam or a policy for N4-N1. Write original, natural everyday di
 greetings, simple orders, shopping, appointments, daily routines, transport and directions.
 Airport topics qualify only when the actual language and task are elementary.
 
+The separate [Japanese task-package proposal](listening-tasks.md) belongs to app #66/content #38.
+It is not yet supported or owner-accepted. Do not place its short clips or task documents in this
+legacy schema's `audio` or `listening` maps; preserve this collection's existing format and approvals.
+
 ## Authoring
 
 - Aim for 20-45 seconds, one situation and a clear main point. Avoid long lists of facts that mainly test working memory.

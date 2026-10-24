@@ -1,0 +1,173 @@
+# Japanese listening task packages: proposed schema 1
+
+Companion to [app contract 1](https://github.com/stop-cran/kanji-cards-android/blob/main/docs/LISTENING-TASKS.md)
+for app #66 and content #38. **Independently reviewed proposal, awaiting owner acceptance; not supported
+by the current app or validator.** Do not add runtime files until B's compatible tooling exists.
+The [existing English-question schema](listening-n5.md) and its 36 approved passages are unchanged.
+
+## Publication envelope
+
+Keep manifest `schemaVersion: 1`. New optional maps contain path-to-SHA-256 strings:
+
+| Map | Flat paths | Hash |
+| --- | --- | --- |
+| `listeningTasks` | `listening-tasks/<id>.json` | LF-normalized UTF-8 JSON bytes |
+| `listeningTaskAudio` | `task-audio/<name>.ogg` | Raw bytes |
+| `listeningTaskImages` | `task-images/<name>.webp` | Raw bytes |
+
+Include the new maps in `contentVersion`. Never put them in `files`, `listening`, `audio` or
+`images`; an older client must ignore both new documents and short recordings. Keep these map
+shapes stable; future unsupported task documents must not force decoding their unreferenced media.
+Only a new app's wanted-file list expands. Old archive size/inflation/entry checks still apply.
+
+## Package shape
+
+All IDs are lowercase ASCII kebab-case; filenames exactly match IDs. All numbers are integers,
+text is nonempty plain text, arrays retain authored order, and references are closed within a package
+except optional existing word articles. Scored IDs are unique across legacy and new catalogs.
+Unknown schema/policy versions or task types are unsupported. Unknown fields in a supported version
+are errors; new grading/presentation requirements need an explicit version, not silently ignored metadata.
+The four [structural examples](listening-task-examples/) are original **unapproved documentation
+fixtures**, not runtime content, approved pilots or spend authorization.
+
+| Field | Contract |
+| --- | --- |
+| `schemaVersion`, `policyVersion`, `jlpt` | Integers `1`, `1`, `5` |
+| `id`, `exposureId` | Scored/example identity and explicit shared-story identity |
+| `taskType` | `task-based`, `key-point`, `verbal-expression`, `quick-response` |
+| `kind` | `dialogue` or `monologue`; two or one speaking character roles, excluding the narrator |
+| `usage` | `scored` or `example`; examples never enter SRS or scored denominators |
+| `blueprint` | Optional `n5-section-v1`; marks scored pool members or the corresponding worked examples |
+| `title`, `topic`, `levelRationale` | Neutral English context and justified N5-oriented difficulty |
+| `speakers` | Unique `{id, role, voice, ratePercent}`; role `narrator`/`character`, Japanese stock voice and -15..0 rate as in legacy authoring |
+| `turns` | Unique `{id, speaker, text, translation, spokenText?}`; Japanese source, English translation, optional approved pronunciation expansion |
+| `stages` | Ordered `{id, role, turns, optionId?}`; turn-ID list in exact recorded order; `optionId` only for a spoken choice |
+| `choiceMode` | `text`, `visual` or `audio`; rules below |
+| `options` | Ordered `{id, number, label, translation, rationale}`; fixed consecutive numbers 1..N, Japanese label and English feedback |
+| `answer`, `evidence`, `explanation` | One option ID, nonempty supporting story-turn IDs, English explanation of that actual task |
+| `visual` | Optional `{role, description}`; role `context`/`required`, neutral English description of all relevant scene evidence, not the answer |
+| `vocabulary` | Optional existing-schema vocabulary tips, maximum 30, with valid optional word references |
+| `media` | Absent while authoring; complete generated output object below |
+| `approval` | Absent until the exact complete output has actually been listened to/reviewed |
+
+Bound packages to 4 speakers (exactly one narrator), 32 turns, 8 stages, text fields of at most
+2,000 characters (turns/labels at most 500), and one composite picture. Every turn and character
+speaker is used; every stage references existing turns. Repeated focus may reuse the same turn.
+Evidence includes a `passage`, `situation` or `utterance` turn, not instructions/choices alone.
+Only task-based/key-point allow `text` or `visual`, with four choices. Visual choices use one
+required numbered map/grid and number-only buttons; labels are feedback/described-study text.
+Expression requires a scene with the target role indicated and three audio choices. Quick response
+requires three audio choices and **no picture**. No task option shuffling in version 1.
+
+| Type | Required stage roles, in order |
+| --- | --- |
+| Task-based / key-point | `instruction`, `focus`, `passage`, `focus-repeat` |
+| Verbal expression | `instruction`, `situation`, `choice`, `choice`, `choice` |
+| Quick response | `instruction`, `utterance`, `choice`, `choice`, `choice` |
+
+Focus-repeat uses exactly the initial focus's turn list. An audio-choice stage has exactly one
+turn, linked to the corresponding option, in number order. Its displayed source text is
+`<number>。<label>`; `spokenText` may expand the numeral/pronunciation without changing the meaning
+or audible number. Exact listening approval checks the **heard** number too, not only JSON equality.
+Required first choice plays are evidence, not replay help.
+
+Japanese instruction/focus/utterance and spoken-choice texts stay hidden during normal scoring,
+except the generic instruction text. Text choices and required pictures are visible; feedback
+includes the captured Japanese, translations, all rationales and evidence. Deliberate guided text
+help is assistance, not an accidental accessible-name disclosure.
+Before exposure, discovery/preflight shows only neutral titles and task types; topic, level
+rationale, IDs and feedback metadata are not additional learner hints.
+
+## Generated output and approval
+
+`media` contains:
+
+```json
+{
+  "contentSha256": "<semantic-package hash>",
+  "audio": {
+    "<stage-id>": {
+      "path": "task-audio/<name>.ogg",
+      "sha256": "<raw audio hash>",
+      "durationMs": 1200,
+      "turns": [{"id": "<turn-id>", "startMs": 0, "endMs": 1100}]
+    }
+  },
+  "image": {"path": "task-images/<name>.webp", "sha256": "<raw image hash>"}
+}
+```
+
+The image member is present iff `visual` is present. Audio keys exactly match all stage IDs.
+The same unchanged focus/instruction recording may be referenced more than once; duration counts
+at every playback occurrence, bytes only once. Timings cover every stage turn in order, with
+nonoverlapping positive intervals inside the exact recording. No arbitrary gap/padding to meet
+a minimum duration. Target mono Ogg Opus at 32 kbps; allow **250-90,000 ms per clip**, at most
+**150,000 ms across all stage occurrences per package**, and at most **512 KiB per audio file**.
+Validate Ogg/Opus framing, sequence/CRC, declared versus measured duration within 100 ms, hashes
+and actual platform playback. Do not weaken the legacy 15-60-second envelope.
+
+WebP remains at most 150 KiB, decoded sides 1-2048 pixels, displayed downsampled to at most 512
+pixels. An optional contextual visual may be omitted in the authored package; a declared but missing
+asset is not permission for a fallback. A required picture's absence cannot become a wrong answer.
+
+Canonical JSON follows the existing integer-only listening convention: recursive sorted object keys,
+preserved arrays, unescaped Unicode, no optional whitespace, UTF-8. `contentSha256` hashes the whole
+package excluding only `media` and `approval`. `mediaSha256` hashes the complete `media` object,
+including paths, all hashes, timings, durations and the content binding. This avoids self-reference
+while binding every output, not just the first clip.
+
+`approval` is `{status:"approved", contentSha256, mediaSha256, reviewedOn, note}` with an ISO date
+and an explicit account of actual listening/visual coverage. It is a listener declaration, not
+cryptographic certification. Both hashes must match. Any changed learning text, option, order,
+picture, pronunciation, timing or audio invalidates approval. Cached byte-identical synthesis can
+be reused after renewed package review; updating metadata alone does not constitute approval.
+No media is a valid pending draft. Partial/mismatched declared media is an error, not an approved
+subset. Complete media without approval remains an explicitly unapproved draft.
+
+## Identity, originals and review
+
+Keep scored identity for cosmetic/equivalent changes. A genuinely different tested skill gets a
+new scored ID, but shares `exposureId` if it reuses the story. Legacy stories default to their
+existing passage ID. Keep a ledger of both IDs, context, objective, evidence and any reuse;
+renaming is not independent transfer or a reset of familiarity. Never silently rebind an existing ID.
+
+The [official source record](listening-task-sources.json) supports format decisions, not borrowed
+content. Write original situations and pictures. Review whole task/role/register/translation,
+every distractor and feedback branch, N5 spoken demands, graphic reference frame and all disclosures.
+See the [shared review instructions](../.github/copilot-instructions.md).
+Render and inspect the real phone-sized picture in both themes. Alternative descriptions must not
+name the key or silently replace a visual listening task with easier textual evidence.
+
+Contract 1 offers described **unscored study** when a learner chooses nonvisual presentation for
+required graphics; it does not claim a scored equivalent. Audio-choice accessibility labels expose
+only numbers until authorized help/feedback. Test actual C/D presentation and all required stages,
+not just a file player or representative voice preview.
+
+E first authors/reviews/listens to one original scored pilot per type. The separately authorized
+full pool has 28 scored tasks (8/7/6/7 by type) including those pilots, plus four separate worked
+examples. All 32 stories are independent. Examples have `usage:"example"` and cannot supply
+scored content or leak the answer-bearing story of another selected item.
+Each group shares equivalent generic Japanese instructions; its example instruction supplies that
+group's assessment introduction. The actual stage order and every spoken option need exact-output
+approval. Decode success, ASR, a text review or a filename is never listening approval.
+
+Keep approved synthesis provenance, not credentials, endpoints, private logs or PCM caches.
+Paid previews/pilots require explicit bounded authorization; after accepted pilots, the remaining
+pool requires **fresh** explicit authorization. This document does not grant either.
+
+## Full-tree budget and rollout
+
+The pulled `73bde0f` tree's local ZIP is 22,665,639 bytes, already close to the current 24-MiB
+conservative publishing guard. Proposed contract 1 raises only that conservative guard to 28 MiB
+in B, **not** the app's 30-MiB download / 50-MiB retained / 100-MiB inflated / 8,000-entry limits.
+Retain the 40-MiB / 80-MiB / 7,000-entry publication guards. All new unique audio/images together
+must fit 6 MiB; test the complete archive, including ignored documentation and existing media.
+Update budget accounting for curriculum and the new folders in B. If real approved output cannot
+fit, stop for a reviewed adjustment; do not lower quality or raise hard limits automatically.
+
+Use [app contract 1](https://github.com/stop-cran/kanji-cards-android/blob/main/docs/LISTENING-TASKS.md)
+for exact 26-34-minute form calculations, eligibility, guided grades, shared exposure, accounting,
+interruption outcomes and B-F verification ownership. E checks the shortest/longest permitted
+24-item forms against that blueprint without waiting for F. The full-form renderer follows later.
+Old/new readers must both import the mixed archive; no runtime publication before B/C/D support,
+actual exact-output approval and E's device gates. A small pilot is not a full assessment pool.

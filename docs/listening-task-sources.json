@@ -1,0 +1,100 @@
+{
+  "contractVersion": 1,
+  "status": "proposed-not-owner-accepted",
+  "designReviewStatus": "ready-for-owner-acceptance; reservation finding resolved",
+  "inspectedOn": "2026-10-24",
+  "baselines": {
+    "app": "740b7da20a0b1c1fccd015ebc8451041faf133d2",
+    "content": "73bde0f3d324591ed4f1eb4416008ca284fca2da"
+  },
+  "sources": [
+    {
+      "url": "https://www.jlpt.jp/e/guideline/pdf/n5_e_revised.pdf",
+      "sha256": "ef3090c77a5d07fcd2dededbb8f981d6830f2935951ee15f5f07cf755e29c5ab",
+      "pagesInspected": [1],
+      "supports": "Four separately named listening objectives and approximately 30 minutes; not an implementation schema or universal item count."
+    },
+    {
+      "url": "https://www.jlpt.jp/samples/sample2018/pdf/N5L.pdf",
+      "sha256": "a30197b749c909dace07ce62f63dfdff93420ec71598557f23f3370e703fb697",
+      "textPagesInspected": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+      "renderedPagesInspected": [4, 9, 13],
+      "supports": [
+        "Task-based and key-point sample instructions both put a spoken question before the passage and offer four printed choices.",
+        "Both focused types have visual as well as textual choice examples; a shared numbered map is not four independent image files.",
+        "Verbal expression uses a required illustration identifying the person, with three spoken expressions.",
+        "Quick response has no task illustration and three spoken choices."
+      ]
+    },
+    {
+      "url": "https://www.jlpt.jp/samples/sample2018/pdf/N5script.pdf",
+      "sha256": "9ebc8831981e254f0bf6f97fe9005a6f9f17ce2fbfeddc7064a77b9dc6a66bb9",
+      "pagesInspected": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "supports": "Spoken focus/passage/repeated focus for the first two types; situation or utterance then numbered spoken choices for the last two. Observed scored counts 7/6/5/6, excluding worked examples."
+    },
+    {
+      "url": "https://www.jlpt.jp/samples/sample2018/mp3/N5Q1.mp3",
+      "sha256": "f880737106448cdb04e596a367e8e8a367a2d6d912b50f9c856712d8230667e9",
+      "bytes": 10141568,
+      "fullyDecoded": true,
+      "decodedSamples": 28016640,
+      "sampleRate": 44100,
+      "machineTranscribedOpeningSeconds": 240
+    },
+    {
+      "url": "https://www.jlpt.jp/samples/sample2018/mp3/N5Q2.mp3",
+      "sha256": "412358a48fc78fa345bf218abdd76aaee421cd99c3059049f8a268edab21ab11",
+      "bytes": 8658716,
+      "fullyDecoded": true,
+      "decodedSamples": 23920128,
+      "sampleRate": 44100,
+      "machineTranscribedOpeningSeconds": 200
+    },
+    {
+      "url": "https://www.jlpt.jp/samples/sample2018/mp3/N5Q3.mp3",
+      "sha256": "c733656178ddc566cb97247cdd653acbc6c76c988638866424c3145187a01db6",
+      "bytes": 4406567,
+      "fullyDecoded": true,
+      "decodedSamples": 12173184,
+      "sampleRate": 44100,
+      "machineTranscribedOpeningSeconds": 140
+    },
+    {
+      "url": "https://www.jlpt.jp/samples/sample2018/mp3/N5Q4.mp3",
+      "sha256": "f588356e4d40543c7e71a9a086c37b2aa3882413cb44762fb39ffe71205f29e9",
+      "bytes": 4419911,
+      "fullyDecoded": true,
+      "decodedSamples": 12210048,
+      "sampleRate": 44100,
+      "machineTranscribedOpeningSeconds": 110
+    },
+    {
+      "url": "https://www.jlpt.jp/e/samples/forlearners.html",
+      "supports": "One entry-point sample per type; official warning that actual booklets may differ."
+    },
+    {
+      "url": "https://www.jlpt.jp/e/samples/sampleindex.html",
+      "supports": "2018 workbook/script/audio links and restrictions on redistribution, including third-party rights in listening recordings."
+    },
+    {
+      "url": "https://www.jlpt.jp/e/guideline/testsections.html",
+      "supports": "N5 Listening approximately 30 minutes; actual time may vary with recording length."
+    }
+  ],
+  "recordingInspection": {
+    "method": "Full PyAV decode; local Whisper base/int8 on bounded opening excerpts, compared with official booklet/script.",
+    "limits": [
+      "No human/perceptual listening approval. ASR made lexical errors and is not authoritative for words or pronunciation.",
+      "Decode-derived duration is about 28m51s; MP3 declared and decoded durations differ slightly. No stopwatch/native full-section timing was performed.",
+      "The sampled protocol and counts are observations from the 2018 workbook, not guaranteed current official specifications.",
+      "No official assets or transcript extracts are published in this repository."
+    ]
+  },
+  "designNotOfficialRules": [
+    "Contract-1 fixed authored option order, staged package/media schema, replay/help rules and shared-story identity.",
+    "Diagnostic-only assessment, explicit familiar-material opt-in and irreversible interruption labeling.",
+    "24 scored items, 28-item pool plus four worked examples, app-chosen preview/answer windows and 26-34-minute projected envelope.",
+    "Unscored described-study alternative for required visuals; no claim of equivalent scored nonvisual assessment.",
+    "Proposed 28-MiB conservative compressed publication guard and 6-MiB new-media allocation; existing hard app limits unchanged."
+  ]
+}
