@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 33 reconciliation:** Check actual manner versus timing,
+  not a loose shared English gloss: はきはき's clear/brisk
+  speaking does not make it 至急's urgent/as-soon-as-possible
+  answer. Remove that unsupported edge, while adding directly
+  supported personal-origin 出 and completion しまう edges.
+  A correct semantic finding does not establish a reviewer's
+  speculative account of how the mistake was introduced.
+- **Batch 33 model comparison:** 出/しまう appeared as GPT
+  findings and Claude optional observations. Comparing only the
+  Findings sections would falsely credit unique discoveries.
+  Preserve complete native final reports, including substantive
+  opening paragraphs, and state actual source-inspection limits;
+  shared CLEAN judgments do not fill a source-access gap.
 - **Batch 33 authoring:** An already taught same-entry variant can
   need only sourced level metadata: しいん maps to existing しーん,
   adding N2 without changing its ID, primary reading, title, image

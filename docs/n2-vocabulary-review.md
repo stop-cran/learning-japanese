@@ -5293,7 +5293,8 @@ is still incomplete.
 
 ## Batch 33: N2:642-N2:661
 
-**Status:** authored; independent review and reconciliation pending.
+**Status:** independently reviewed; supported corrections implemented,
+original-session confirmations pending.
 
 ### Batch 33 authored snapshot
 
@@ -5362,3 +5363,73 @@ The initial evidence derivative removes only `quizGuardRationale`.
 Authored-stage coverage: **640 closed / 20 draft / 1,152 pending /
 0 unresolved**, mapped to 654 distinct articles: 611 new and 43 reused.
 No review closure is claimed at this stage.
+
+### Batch 33 initial reviews and reconciliation
+
+Both families independently reviewed authored commit
+`59bd8cbbcce388fd2c1375a3b0b1577fb9138e77`, parent
+`03b1c83a17bdf00335484d77d818c34b628ffaac`, on the same frozen
+scope, rubric and source access. The isolated GPT process exited
+before Claude started; both were read-only, with no delegation.
+Native session records and usage receipts authenticate the actual
+models, common prompt and zero edits:
+
+- [GPT initial](n2-vocabulary-reviews/batch-33-gpt-initial.md):
+  `gpt-6.1-sol`.
+- [Claude initial](n2-vocabulary-reviews/batch-33-claude-initial.md):
+  `claude-opus-5.5`.
+
+Both read all nineteen new articles, the metadata-enriched reuse
+claim, seven-file related diff, six kanji cards and twenty mappings.
+All mappings, reuse coverage and narrow kanji edits were CLEAN.
+No incorrect taught definition, reading, inflection or example was
+established. Each report retains separate three-facet verdicts.
+The archives preserve complete native final messages, including
+Claude's substantive paragraph before Snapshot; only Markdown
+hard-break spacing is normalized. CLI progress output is not a
+substitute for the native final report.
+
+GPT inspected complete relevant principal/comparison families and
+independently retrieved ten actual lexical bodies. Claude read
+principal records but only partly inspected comparison renderings
+and component evidence; its attempted public retrievals did not
+independently verify the author's Daijisen receipts. These different
+actual inspection limits remain in their reports. Neither could
+execute Git, compute receipt hashes or run the app; the author
+performs those mechanical provenance checks separately.
+
+| Initial observation | Adjudication and correction |
+| --- | --- |
+| GPT B33-G01; Claude Optional: 産地/出 | Add the direct 出 guard. Principal 1303820:3 and comparison 1896380:4, plus actual origin labels and 地方の出 teaching, support ordinary personal-origin overlap. Existing origin edges are not transitive. |
+| GPT B33-G02; Claude Optional: 仕上がる/しまう | Add the direct しまう guard. Actual finish label and complete 1305380:1,4 establish English-answer overlap without making intransitive, transitive and auxiliary constructions interchangeable. |
+| GPT B33-G03; Claude B33-03: 至急/はきはき | Remove the edge. The actual clear/brisk-speaking label is not urgent/as-soon-as-possible timing. A loose promptly gloss is insufficient. Claude's proposed copied-from-other-cards cause is unestablished; accepting the semantic correction does not ratify that causal story. |
+| GPT B33-G04; Claude B33-01 and B33-02: missing navigation | Link existing あさって and 明日 at the day-sequence teaching and 式 at the homophone comparison. Different days and homophones do not themselves require quiz guards. |
+| Claude Optional: シーズン example | Add a professional-baseball league-season example for selected sense 1. Existing sporting-season definition was accurate; this is useful scoped illustration, not a mapping repair. |
+| Claude Optional: 四角 attribution | Name the already inspected Daijisen source in 四角 and the parallel 四角い passage. No new figurative claim or invented JMdict index. |
+
+The extra しいん example remains optional: the existing alias
+already follows the applicable と/する pattern. No baseline body
+edit is required. The tentative 寺院/神社 category/title concern
+does not establish a synonymous answer; the accurate broader sense
+and explicit Shinto-shrine contrast remain. This bounded decision
+does not certify every possible religious-building context.
+
+The correction changes eight new articles, adding two direct quiz
+pairs and removing one. Sixteen cards now declare **65 directional
+exclusions**, rather than the authored 64. All three consequential
+comparison families were already complete in the initial evidence;
+no additional family is claimed. Original evidence/declarations
+remain unchanged, with correction evidence appended. The updated
+review derivative still removes only `quizGuardRationale`.
+All twenty source mappings, reuse metadata, six kanji edits and
+baseline word declarations are unchanged.
+
+Comparing equivalent observations across **all report sections**,
+both models identified the omitted 出/しまう pairs, unsupported
+はきはき pair and missing day/homophone links. GPT classified the
+first two as actionable; Claude listed them as optional. They are
+not GPT-unique discoveries. Claude supplied useful optional
+baseball-example and source-attribution polish. This batch shows
+reinforcing and differently prioritized observations, not a
+verified model-unique actionable defect, general ranking or
+measurement of eliminated model bias. Confirmation remains pending.
