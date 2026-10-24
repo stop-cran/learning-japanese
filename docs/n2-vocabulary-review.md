@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-44 review-closed.** The target is all 1,812 source rows,
+**Batches 01-45 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 880 rows are review-closed; none are draft,
-932 remain pending, and none are unresolved.
+The first 900 rows are review-closed; none are draft,
+912 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -7985,7 +7985,7 @@ exclusions**, and deterministic manifest
 **`9aad8d823f69032d`** remain unchanged by closure.
 This closes batch 44, not the full 1,812-row expansion.
 
-## Batch 45 - independent reviews reconciled, confirmation pending
+## Batch 45 - review-closed
 
 Source rows **N2:882-N2:901** map to twenty new articles:
 青少年, 整数, 清掃, 生存, 生長, 政党, 生年月日, 性能,
@@ -8159,3 +8159,76 @@ identified as inherited rather than newly reviewed.
 This discovery is useful additional review signal,
 not credit for a blind-initial finding or proof that
 either model alone would catch every label collision.
+
+### Batch 45 - confirmed and closed
+
+The final one-card follow-up snapshot is
+**`aa5c94c85e6be5b6a847b302945d24d2d9bf434e`**,
+parent **`5911eeab48dd93455a75ee54cab7b86113ac1266`**.
+The original reviewers resumed sequentially and exited:
+[GPT final follow-up](n2-vocabulary-reviews/batch-45-gpt-followup.md)
+and [Claude final follow-up](n2-vocabulary-reviews/batch-45-claude-followup.md).
+Both accept the direct 成立/効力 safeguard and report
+no actionable regression or consequential unresolved
+claim in their assigned scope. Each provides exactly
+twenty individual all-CLEAN article rows with separate
+correctness, scoped-coverage and comprehensibility
+columns. No teaching changes follow these confirmations.
+
+All six complete native reports were authenticated,
+including actual models, exact prompts, original-session
+continuity, allowed private-file access, zero edits,
+committed snapshots, hashes, patches, manifest entries
+and evidence derivatives. These are author-executed
+provenance checks, not reviewer-executed Git or runtime
+quiz checks. Reviewers ran singly in short-lived
+processes; none remain.
+
+In the first confirmation both reread the six changed
+new cards and 角, with fourteen unchanged new-card
+judgments inherited. Both read the complete fifteen-family
+corrective rendering. GPT read the full eighteen-body
+comparison rendering and reread all twenty current
+mappings; Claude read seventeen complete comparison
+bodies plus the beginning of 片付ける and inherited
+the mappings. Both checked the reciprocal and old-word
+link surfaces with their stated limits. The final
+follow-ups freshly read complete 成立 and 効力,
+the complete 効力 family and 成立's principal record.
+Nineteen unchanged article judgments, six kanji,
+eight old-word edits and twenty mapping judgments
+were inherited, not falsely presented as fresh full
+reviews.
+
+Final dispositions preserve the historical disagreement:
+Claude withdrew the proposed 世紀 expansion after
+reassessment; both accept removal of unsupported
+period guards from 西暦. Both also accept the other
+initial corrections, sourced history, navigation links
+and attested transitive example. Claude's subsequently
+discovered Low validity-label issue is now resolved,
+without erasing the first confirmation's NEEDS FIX.
+Remaining optional expansions are nonblocking and
+unadopted. Only the initial reviews were blind;
+neither shared-hypothesis confirmation is another
+blind comparison.
+
+The final author evidence union is **352 complete
+families/900 senses**, including the twenty principals,
+**141 distinct existing full bodies** and **217 actual
+labels**. These are not the reviewers' inspection
+counts. Eighteen guarded new articles now have
+**124 declarations**. All source selections, raw
+fields, baseline metadata/exclusions and reciprocal
+pair identities remain unchanged through closure.
+
+Exactly **N2:882-N2:901** are closed. Coverage is
+**900 closed / 0 draft / 912 pending / 0 unresolved**,
+with **892 mapped articles (834 new / 58 reused)**,
+**4,107 word articles**, **207 tracked primary
+reciprocal N2 pairs**, and **3,273 preserved baseline
+identities/readings/titles/exclusions**. The final
+deterministic manifest is **`967ef25aed11394f`**;
+the thirty-four assigned teaching files and manifest
+are unchanged by the documentation-only closure.
+This closes batch 45, not the full 1,812-row expansion.
