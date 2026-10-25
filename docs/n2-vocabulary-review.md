@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 66: N2:1302-N2:1321
 
-**Status:** draft; independent sequential GPT and Claude reviews pending.
+**Status:** draft; authenticated initial GPT and Claude reviews
+complete, original-session correction confirmations pending.
 
 Fifteen new articles: のこぎり, 残らず, 覗く, 上り, 糊, 乗り換え,
 載る, のろい, のんき, 灰色, 俳句, 売店, バイバイ, 売買 and 這う.
@@ -71,9 +72,63 @@ succeeded separately.
 
 Draft coverage is **1,300 closed / 20 draft / 492 pending /
 0 unresolved**, mapping **1,308 articles: 1,212 new / 96 reused**.
-The authored scope is 28 files. Review closure, corrections
-and independent model-contribution observations are not yet
-claimed. Inherited batch61 quiz debt remains deferred.
+The authored scope is 28 files. Inherited batch61 quiz debt remains deferred.
+
+### Initial independent reviews and bounded reconciliation
+
+Actual `gpt-6.1-sol` and `claude-opus-5.5` reviewed authored
+`7359a791ab051c71c555a1931bfbaeea7ab07578` sequentially and
+fully exited without edits. Their authenticated native final reports
+are archived as [GPT](n2-vocabulary-reviews/batch-66-gpt-initial.md)
+and [Claude](n2-vocabulary-reviews/batch-66-claude-initial.md).
+Both read all fifteen new articles, five reused articles for
+claimed source coverage, the four complete edited kanji cards
+and unchanged 伸, twenty mappings/principal families, 31 complete
+component records, 165 labels, and the exact TSV header/twenty rows.
+
+GPT additionally read all 27 bounded family/body/supplement
+renderings, covering the supplied 257 families / 739 senses
+and 111 reproduced full older articles. It read eleven further
+current comparison bodies and fetched relevant JMdict lexical
+results through Jisho/Takoboto. Those are presentations of the
+same dictionary, not independent authorities. Claude read eight
+older comparison bodies and two additional complete families,
+but did not read the other chunks or fetch fresh pages.
+Both disclose their actual limits and cannot execute Git.
+
+GPT's three minor findings identify four missing direct guards:
+残らず/いちいち, 残らず/皆さん, 売店/スタンド and
+バイバイ/それでは. Claude's findings identify missing
+乗り換え/接続 and /移す guards, a contextual バイバイ/じゃあ
+safeguard, and the excessive 這う/伸びる guard. These bounded
+changes are accepted against the complete meanings and actual
+older bodies, not model votes. Preserve the distinction between
+transferring an object, changing services and their different
+constructions; no unrestricted substitution is claimed.
+
+Three optional Claude observations are also adopted: remove
+the 覗く/見物 topic-only guard, drop the unsupported "or central
+terminus" wording from 上り, and guard バイバイ's additional
+parting use against 送別. じゃあ's complete family records
+"well then"; its existing body teaches conversational じゃあね.
+Its guard is a conservative closing-context safeguard, not a
+claim of a separately listed dictionary goodbye sense.
+
+Other optional examples/titles are not required for this scope.
+No extra pairs are established for 載る/刷る or /印刷
+(production versus appearance), 残らず/全般 (exhaustive
+distribution versus overall scope), 上り/昇る (physical ascent
+versus the displayed sun/moon/promotion qualification), or
+のんき/ゆっくり or /楽 (temperament versus pace/comfort).
+Claude withdrew its initial excess-guard suspicion concerning
+全然 and さっぱり after reading their complete completeness
+senses; no change is made to those guards.
+
+The comparison shows complementary concrete findings and a
+shared concern about farewell-related choices, not measured
+model-bias reduction. Exact pair proposals and evidence reads
+differed; reading an older body alone is not credited as a
+reported finding. Confirmations and review closure remain pending.
 
 ## Batch 65: N2:1282-N2:1301
 

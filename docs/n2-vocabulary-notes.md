@@ -66,8 +66,30 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   The failed raw 乗換 lookup remains recorded; the canonical
   乗り換え lookup succeeded separately. Captures and author reads
   are not independent reviewer retrieval or frequency evidence.
-  Independent reviews are pending; no linguistic certification,
+  Independent initial reviews are complete; original-session
+  correction confirmations are pending. No linguistic certification,
   global quiz-uniqueness or model-bias improvement is claimed.
+- GPT identified direct missing guards for 残らず/いちいち,
+  残らず/皆さん, 売店/スタンド and バイバイ/それでは.
+  Claude identified 乗り換え/接続 and /移す, the conversational
+  バイバイ/じゃあ safeguard, and the unsupported 這う/伸びる
+  guard. Accept the bounded changes, but keep contextual
+  utterances and noun/verb constructions distinct.
+- Claude's optional observations also prompted removing the
+  覗く/見物 topic-only guard, narrowing 上り to the attested route
+  starting point, and guarding バイバイ's parting use against
+  送別. Printed production is not automatically publication
+  appearance; broad overall scope is not omission-free
+  distribution; comfort and slow leisure are not automatically
+  a carefree temperament. Assess these individual facets rather
+  than accepting every suggested extra pair.
+- The じゃあ safeguard is contextual: its complete family
+  records "well then," not an independent dictionary goodbye
+  sense. The existing complete body teaches じゃあね at closing.
+  A fresh Weblio fetch did not expose the standard Daijisen
+  lexical body; unrelated dialect material is not confirmation.
+  Keep the conservative guard without claiming that じゃあ
+  and バイバイ are unrestricted translations.
 
 ## Batch 65 authoring observations
 
