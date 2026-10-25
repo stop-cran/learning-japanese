@@ -95,6 +95,24 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 54 authoring:** A raw numbered gloss does not determine
+  pinned sense divisions: 長所's strong point/advantage is one sense.
+  Conversely, チョーク's chock is supported by a separate complete
+  homograph family, not by inventing a second chalk sense or treating
+  the mixed raw gloss as wholly unsupported. Public chalk/choke
+  headings do not independently verify chock. Deduplicate supplemental
+  families by identity before reporting inspected evidence counts.
+
+- **Batch 54 authoring:** Keep practical tendencies distinct from
+  universal rules: 調整/調節 overlap, eldest daughter/son need not
+  be the first child overall, through service need not be nonstop,
+  and DC magnitude need not be constant. A vertex survives rotation;
+  everyday elongated-rectangle language must not silently prohibit
+  the inclusive mathematical square case. Public spatial 直後
+  recognition needs its own attribution rather than a fabricated
+  pinned sense. Actual storage and ordinary tip/disorder secondary
+  meanings require direct checks, not topic cliques or indirect guards.
+
 - **Batch 53 closure:** Both original sessions accepted the exact
   corrected snapshot, four direct guard additions and existing 酸性
   link; validate all twenty final source-ID/article associations and

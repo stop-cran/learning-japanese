@@ -5,8 +5,8 @@
 **Batches 01-53 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,060 rows are review-closed; none are draft,
-752 remain pending, and none are unresolved.
+The first 1,060 rows are review-closed; 20 are draft,
+732 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,50 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 54: N2:1062-N2:1081
+
+**Status:** authored draft; independent sequential reviews and reconciliation pending.
+
+Nineteen new articles: 長所, 長女, 調整, 調節, 頂点, 長男,
+長方形, 調味料, チョーク, 直後, 直線, 直前, 直通, 直流,
+貯蔵, 直角, 直径, 散らかす and 散らかる. Existing 長短
+already covers relative length and pros/cons; add only sourced N2
+and dictionary/public provenance, preserving its identity, primary
+reading, title, original teaching and exclusions.
+
+The [batch packet](n2-vocabulary-batch-sources/batch-54.json)
+preserves all raw fields and twenty complete principal families/
+26 senses. Actual author reads cover 238 selected original families/
+563 senses and 30 complete supplemental families; three are duplicates,
+so the inspected union is 265 families/633 senses, including the
+principals. All 91 original and 18 supplemental labels were read,
+as were 82 selected original and 18 supplemental full old bodies,
+25 component records, five complete related N2 kanji cards and
+twenty public lexical endpoint captures. Not all 251 original
+captured families or all 91 original old bodies are asserted read.
+The public captures are one dictionary service, not twenty
+independent dictionaries.
+
+Add reciprocal reading-row and Common-words examples for 線/直線
+with ちょくせん, 貯/貯蔵 and 蔵/貯蔵 with ちょぞう, and
+角/直角 with ちょっかく. Existing 短/長短 with ちょうたん
+is already complete and remains unchanged. Missing 整, 節 and 径
+remain in word metadata without fabricated kanji cards.
+
+The raw チョーク gloss spans chalk entry 1078240 and chock
+entry 2854421, not two senses of the principal entry. Separate
+2854422 supplies chokehold/engine choke. The public capture
+supports chalk/choke headings; pinned evidence establishes chock.
+直後's additional spatial use is publicly attributed, not invented
+as a second pinned sense. Geometry and figurative 頂点, spatial
+直前 and unproductive-hoarding 貯蔵 are separately allocated;
+additional teaching is not independently N2-classified.
+
+Current totals are 1,072 distinct mapped articles: 1,003 new and
+69 reused baseline identities; 4,276 total word articles.
+Drafting and structural checks do not establish independent review
+closure, exhaustive semantic uniqueness or native-speaker certification.
 
 ## Batch 53: N2:1042-N2:1061
 
