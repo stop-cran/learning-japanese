@@ -5,8 +5,8 @@
 **Batches 01-71 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,420 rows are review-closed; 392 remain pending.
-None are draft or unresolved.
+The first 1,420 rows are review-closed; twenty are drafted and
+372 remain pending. None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,48 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 72: N2:1422-N2:1441
+
+**Status:** draft; independent sequential GPT/Claude review and
+evidence-based reconciliation remain pending.
+
+Nineteen new articles: 日の出, 響き, 響く, 冷やす, 百科事典,
+美容, 表紙, 標識, 標準, 標本, 評論, 平仮名, ビルディング,
+昼寝, 広げる, 広さ, 広場, 広々 and 広める.
+Existing 皮膚 gains only its sourced N2 field; its identity, reading,
+title, body and 肌/皮 safeguards remain unchanged.
+Preserved 皮 and 準 kanji headers gain reciprocal reading/common-word
+links; 膚's existing 皮膚 links need no edit.
+
+The [packet](n2-vocabulary-batch-sources/batch-72.json) preserves all
+twenty raw source rows, including blank spellings for ひゃっかじてん
+and ビルディング, twenty complete principal families / 39 senses,
+selected senses and separately qualified additional recognition.
+百科事典/百科辞典 and usual ひらがな are explicit.
+Raw "47 syllables," "at home," front-cover and generic-building glosses
+are not promoted into unsupported teaching restrictions.
+
+Actual pre-draft author reads cover 281 full families / 640 senses,
+103 chunked older bodies plus complete 夜明け, 176 navigation labels,
+32 complete component records and three related kanji bodies.
+All ten family and thirteen older-body renderings were returned through
+EOF. Draft audit adds seven complete families / thirteen senses and
+complete 字/文字 bodies: union **288 families / 653 senses and
+106 distinct older articles**. Principals are included in family totals.
+The completed receipt is persisted during drafting; immutable preparation
+remains `prepared_for_inspection`. Hashes are not comprehension receipts.
+
+Twenty public captures have inspected applicable lexical headings from
+Digital Daijisen via Weblio, one authority, not twenty independent
+dictionaries. Wrong readings, satellite/music headings and unrestricted
+inferences from whole idioms are excluded. Missing 典 has no body to
+inspect or link; its primary metadata character remains.
+
+Author-declared quiz safeguards are pairwise hypotheses for independent
+assessment, not reviewer findings or a global semantic-uniqueness claim.
+No initial report, final acceptance, model-contribution result or
+measured bias reduction is claimed at this draft stage.
 
 ## Batch 71: N2:1402-N2:1421
 

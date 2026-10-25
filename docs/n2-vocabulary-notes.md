@@ -19,6 +19,58 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 72 authoring observations
+
+- N2:1422-N2:1441 add nineteen articles and narrowly reuse 皮膚:
+  only its sourced N2 field changes. Source blanks for ひゃっかじてん
+  and ビルディング remain intact. 百科事典 is the recorded canonical
+  encyclopedia spelling; 百科辞典 is the same word's alternative.
+- Keep 平仮名 as the source-based identity, paralleling 片仮名, while
+  explicitly teaching usual ひらがな. The raw "47 syllables" gloss
+  is not a modern inventory rule. A script's spelling is separate
+  from the origin of words written in it.
+- Read ten complete-family and thirteen complete older-body chunks
+  through EOF before drafting: 281 families / 640 senses and
+  103 older bodies. 夜明け was also read completely before drafting.
+  During drafting, inspect seven additional full families / thirteen
+  senses and complete 字/文字 bodies. The union is 288 families /
+  653 senses and 106 distinct older articles, not 106 navigation labels.
+  Principals are included: twenty complete families / 39 senses.
+- The completion receipt is persisted during drafting, not a
+  contemporaneous pre-authoring gate. The original immutable
+  preparation plan remains `prepared_for_inspection`. All 176 original
+  navigation labels, 32 component records and three related kanji
+  bodies were read; hashes authenticate bytes, not comprehension.
+- All twenty public captures have inspected applicable lexical
+  headings from Digital Daijisen via Weblio, one authority.
+  日の出's satellite/music headings and separate 響き/どよめき and
+  響く/どよめく readings are not substituted for the assigned words.
+  The figurative English "come home" for 響く is not physical homecoming.
+- Whole constructions matter: 頭を冷やす concerns composure;
+  肝を冷やす concerns fright, not unrestricted bare fear synonymy.
+  Cooling verbs overlap; a hot-versus-cold starting-temperature rule
+  would overstate the distinction. Source 昼寝 is not home-only,
+  表紙 is not front-only or paper-only, and ビルディング is not
+  every English use of "building."
+- 標準/基準 genuinely overlap. 標本 includes classic-example and
+  statistical senses, not just preserved animals. 評論 is critical
+  assessment, not inherently insult or an unfavorable verdict.
+  Inspect ordinary secondary senses and actual displayed labels
+  rather than creating synonym cliques from English keywords.
+- 広げる/広める are not divided by an absolute physical/abstract
+  boundary. 開く's older article also teaches ひらく; its primary
+  あく title does not exhaust the comparison. 広さ measures extent
+  rather than naming a region. 広々 needs its actual とした/する
+  constructions, and 々 is not a separate metadata kanji.
+- Primary reciprocal pairs are 皮/皮膚, 膚/皮膚 and 準/標準.
+  Edit only 皮 and 準; 膚 already has useful links. Keep all primary
+  written characters in metadata; absent 典 remains plain text,
+  not a fabricated card or a successfully inspected body.
+- Draft only: independent sequential GPT and Claude reviews,
+  reconciliation and final acceptance have not yet occurred.
+  Author inspection and quiz hypotheses are not model findings,
+  a controlled bias experiment or native-speaker certification.
+
 ## Batch 71 authoring observations
 
 - Both original reviewers accepted the final corrections at
