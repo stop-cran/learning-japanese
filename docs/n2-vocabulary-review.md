@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-56 review-closed; batch 57 drafted.** The target is all 1,812 source rows,
+**Batches 01-57 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,120 rows are review-closed; 20 are draft,
+The first 1,140 rows are review-closed; none are draft,
 672 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 57: N2:1122-N2:1141
 
-**Status:** drafted; authenticated initial reviews and author corrections
-recorded; original-session confirmations pending.
+**Status:** closed after authenticated independent reviews, evidence-based
+corrections and original-session confirmations.
 
 Seventeen new articles: 強気, 釣り合う, 吊る, 吊るす, 手洗い,
 定員, 定価, 低下, 定期券, 定休日, 停止, 停車, 停電,
@@ -74,8 +74,7 @@ Baseline kanji metadata is unchanged; existing written components
 are linked substantively, and missing cards are not fabricated.
 
 Current totals: 1,131 mapped articles = 1,052 new and 79 reused
-baseline identities; 4,325 total word articles. These are drafted
-mapping totals, not a claim of independent review closure.
+baseline identities; 4,325 total word articles.
 
 ### Batch 57 - initial reviews and corrections
 
@@ -134,6 +133,59 @@ source note and the corresponding index hash change. Confirmation
 must assess the actual changed passages, exact twenty associations
 and all five required reciprocal reading-row/Common words pairs.
 Initial reports and author corrections alone do not close the batch.
+
+### Batch 57 - confirmed and closed
+
+Both original sessions confirmed corrected commit
+`e2315ebd92a28ebbea5ccfd9a69218bbf5ea1cce`:
+[GPT](n2-vocabulary-reviews/batch-57-gpt-confirmation.md) and
+[Claude](n2-vocabulary-reviews/batch-57-claude-confirmation.md).
+The processes ran sequentially and exited without edits. All four
+complete native reports, exact prompts, actual models, committed
+snapshots, patches and blind derivatives were authenticated.
+Both final tables contain the exact twenty source-ID/article
+associations with all three facets CLEAN. No consequential
+unresolved teaching claim remains; CLEAN is bounded review,
+not exhaustive correctness.
+
+Both confirmations completely reread the six changed articles,
+all three kanji bodies, the actual correction patch, fourteen
+complete corrective families/89 senses, eight complete older
+bodies and the original captured public lexical headings. Successful
+native returned content was checked against those complete files,
+not merely requested paths. Both received all twenty exact committed
+TSV rows and the header; GPT incidentally saw one adjacent pending
+row without reviewing it. Unchanged judgments were explicitly
+inherited. GPT additionally checked current word-side component
+passages; Claude inherited their complete initial reads.
+
+Both accepted the spelling and washing corrections, all seven
+direct guards and all five reciprocal pairs at their actual readings.
+Claude explicitly agreed the original 出かけるところです
+construction was never wrong and accepted the context-bounded
+departure example with no consequential disagreement. Further
+contrast with a completed-departure context remains optional.
+Priority-based frequency ranking was withdrawn. Bare-English
+balance/decline guard hypotheses remain weak optional suggestions,
+not unresolved defects or proof of zero contextual overlap.
+
+Actual older-body depth remains unequal: GPT initially read 82
+distinct complete bodies and cumulatively 84; Claude initially
+read two and cumulatively nine. Claude's two initial plus eight
+corrective reads include 揃う twice: ten reading occurrences,
+not ten distinct comparisons. The native report is preserved
+unchanged with that count qualification. The deduplicated author
+inspection remains 141 families/371 senses and 89 complete older
+bodies, not either reviewer's independent inventory.
+
+Closure changes only the twenty row statuses, packet closure
+receipt, source-index hash and coverage, ledger/notes and confirmation
+archives. Teaching, mappings, exclusions and the manifest are
+unchanged after confirmation. All 3,273 baseline identities remain
+preserved, and 251 distinct reciprocal N2 pairs are tracked.
+There are 1,140 closed rows, no drafts or unresolved rows and
+672 pending. The full 1,812-row expansion and final audit remain
+incomplete.
 
 ## Batch 56: N2:1102-N2:1121
 

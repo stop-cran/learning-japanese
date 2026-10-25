@@ -95,6 +95,18 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 57 closure:** Both original sessions accepted the same
+  committed corrections after complete bounded rereads. Authenticate
+  actual successful returned content, not just requested file paths,
+  and verify the exact twenty final all-three-CLEAN associations.
+  Count repeated reads separately from distinct older bodies:
+  Claude's ten reading occurrences covered nine distinct articles.
+  Keep optional contextual contrasts and weak English-polysemy
+  hypotheses separate from consequential unresolved defects.
+  Complementary observations were useful on this sample, while
+  unequal comparison depth prevents model rankings or measured
+  bias-reduction claims.
+
 - **Batch 57 reconciliation:** An existing Common words link does
   not prove that a required reading-row example is present; check
   both surfaces explicitly at the actual whole-word reading.
