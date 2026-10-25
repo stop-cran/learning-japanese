@@ -19,6 +19,35 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 63 authoring observations
+
+- Keep raw source evidence separate from adopted teaching. The empty
+  なだらか gloss does not invalidate the word. Source 何分 is なにぶん,
+  not the separate minutes question なんぷん; retain the raw erroneous
+  minutes gloss in the audit packet rather than teaching it.
+- Shared dictionary membership is not proof of existing coverage.
+  N4 慣れる teaches accustomed use, not the specifically selected
+  tame-animal sense. Add bounded 馴れる without rewriting that identity
+  or pretending that tameness and biological domestication are identical.
+- Preserve kana source identities なぐる and なにしろ while explicitly
+  teaching 殴る and 何しろ. Primary metadata follows the primary spelling,
+  not every written variant mentioned in the body.
+- Read matching public headings, not everything returned by an endpoint.
+  Modern 殴る, なす and fruit-bearing なる must be separated from unrelated
+  classical headings. Twenty positive Weblio captures here represent one
+  authority, Digital Daijisen, not twenty independent dictionaries.
+- Original and supplemental captures share one three-sense family:
+  the inspected union is 337 complete families / 815 senses, not 338 / 818.
+  The 151 complete older bodies are disjoint across the two captures.
+  The final 224 labels include 90 recovered from those complete bodies.
+- Use an actual reputation construction, 名投手で鳴らした, instead of
+  inventing 評判で鳴らす from an English gloss. Assess ordinary complaint
+  senses against 訴える and 文句 as well as literal sound labels.
+- Guard declarations are author hypotheses, not review verdicts.
+  Gentle slope, gradual change, smooth surface and gentle tone need
+  individual comparisons; a neighboring exclusion does not prove an edge.
+  Earlier batch61 inherited quiz debt remains outside this batch.
+
 ## Batch 62 authoring observations
 
 - Blind initial reviews caught different gaps: GPT identified

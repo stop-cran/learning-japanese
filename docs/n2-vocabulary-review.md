@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-62 review-closed.** The target is all 1,812 source rows,
+**Batches 01-62 review-closed; batch 63 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,240 rows are review-closed; none are draft,
-572 remain pending, and none are unresolved.
+The first 1,240 rows are review-closed; 20 are draft,
+552 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,48 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 63: N2:1242-N2:1261
+
+**Status:** drafted; independent reviews and reconciliation pending.
+
+Twenty new articles: 仲良し, 慰める, 亡くす, なぐる, 為す, 謎謎,
+なだらか, 懐かしい, 撫でる, 斜め, なにしろ, 何々, 何分, 生意気,
+並木, 倣う, 鳴らす, 生る, 馴れる and 南極. No old word is edited.
+
+The [packet](n2-vocabulary-batch-sources/batch-63.json) preserves
+twenty raw rows, twenty complete principal families / 38 senses,
+selected source senses and separately identified recognition senses.
+Empty なだらか and erroneous minutes gloss for なにぶん are retained
+as raw source fields, not converted into incorrect teaching.
+馴れる teaches the tame-animal sense without rewriting N4 慣れる.
+
+Three new reciprocal N2 pairs are 仲/仲良し, 並/並木 and 極/南極,
+with actual readings, substantive links, reading-row examples,
+Common words links and footer entry IDs. Existing kanji headers
+are preserved. Missing component cards are not fabricated.
+
+Completed author reads are separate from unchanged preparation plans.
+The deduplicated comparison union is **337 complete families /
+815 senses**, including all twenty principals. The author inspected
+**151 complete older articles**, **224 actual labels**, **30 complete
+component records**, all three related kanji bodies and twenty public
+lexical captures. All twenty public captures come from Digital
+Daijisen through Weblio: one authority, not independent retrievals
+by reviewers or measured frequency evidence.
+
+All 33 family/older-body rendering chunks are at most 16,000 UTF-8
+bytes. Equal initial source access will not be reported as equal
+actual reviewer reading depth. Source receipts, draft guard lists
+and structural preservation checks are not linguistic review.
+
+Draft coverage is **1,240 closed / 20 draft / 552 pending /
+0 unresolved**, mapping **1,249 articles: 1,161 new / 88 reused**.
+There are **4,434 word articles** and **274 tracked new-word
+reciprocal N2 pairs**. All 3,273 baseline identities/readings/titles
+and exclusions remain subject to the established preservation audit.
+Earlier batch61 inherited quiz debt remains deferred; this draft
+does not claim global quiz uniqueness or native-speaker certification.
 
 ## Batch 62: N2:1222-N2:1241
 
