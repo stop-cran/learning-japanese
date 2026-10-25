@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-64 review-closed.** The target is all 1,812 source rows,
+**Batches 01-64 review-closed; batch 65 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,280 rows are review-closed; 532 remain pending,
-and none are draft or unresolved.
+The first 1,280 rows are review-closed; twenty are draft and 512 remain pending.
+None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,58 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 65: N2:1282-N2:1301
+
+**Status:** draft; independent GPT and Claude reviews are not yet complete.
+
+Nineteen new articles: 女房, 睨む, 煮る, 俄, 縫う, 濡らす, ねじ,
+捩る, ネックレス, 熱する, 寝間着, 狙い, 狙う, 年度, 農産物, 農村,
+濃度, 農薬 and 能率. No existing word article is changed or reused.
+Twenty source rows map to nineteen articles: 寝間着 and 寝巻 share
+one article explicitly teaching 寝間着 / 寝巻 / 寝巻き, all ねまき
+and the same nightclothes meaning.
+
+The [packet](n2-vocabulary-batch-sources/batch-65.json) preserves
+all twenty raw rows, nineteen complete principal families / forty
+senses, selected source senses and additional recognition senses.
+The empty raw spelling fields for ねじ and ネックレス remain empty.
+濃度's raw "brightness" remains provenance, not unsupported
+luminance teaching.
+
+Five new primary-metadata reciprocal pairs are 農/農産物, 農/農村,
+村/農村, 濃/濃度 and 農/農薬. The alternate 寝巻 spelling adds a
+separately checked 巻/寝間着 pair: the word article links 巻, and
+both 巻's reading examples and Common words link the shared article
+under 寝巻/寝巻き. Primary 寝間着 metadata stays 寝/間/着.
+All four edited kanji headers are preserved.
+
+Actual author reads are recorded separately from unchanged preparation
+plans: **232 complete families / 535 senses**, **106 complete older
+articles**, **116 labels**, **37 complete component records**, four
+complete related kanji bodies and twenty matching public captures.
+The original 206-family / 455-sense capture and 83 selected older
+bodies occupy eighteen bounded chunks. Five supplemental chunks add
+27 families / 81 senses and 23 full bodies, with one overlapping
+family, 興奮. All 23 chunks are at most 16,000 UTF-8 bytes.
+Ten original navigation candidates remain unselected; labels are
+not counted as complete bodies.
+
+All twenty matching public bodies are Digital Daijisen through
+Weblio: one authority, not twenty independent dictionaries,
+independent reviewer retrievals or frequency evidence.
+Correct modern/reading-specific headings were separated from
+unrelated character and historical material.
+
+Draft coverage is **1,280 closed / 20 draft / 512 pending /
+0 unresolved**, mapping **1,288 articles: 1,197 new / 91 reused**.
+There are **4,470 word articles**, **282 tracked primary new-word
+reciprocal N2 pairs**, plus the explicit 巻 alias pair.
+The established audit preserves all 3,273 baseline identities,
+readings, titles and original exclusions. The authored scope is
+29 files. Quiz guards remain author hypotheses; no independent
+linguistic approval, exhaustive ambiguity audit or global quiz
+uniqueness is claimed. Inherited batch61 quiz debt remains deferred.
 
 ## Batch 64: N2:1262-N2:1281
 

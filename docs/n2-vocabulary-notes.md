@@ -19,6 +19,68 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 65 authoring observations
+
+- Twenty source rows need nineteen new articles, not twenty
+  duplicate teaching identities. 寝間着, 寝巻 and 寝巻き share
+  ねまき and the same nightclothes meaning. Explicitly teach the
+  alias and separately verify 巻's two backlink locations;
+  do not add 巻 to primary 寝間着 metadata.
+- Preserve raw empty spelling fields and the 濃度 "brightness"
+  gloss without importing unsupported luminance teaching.
+  Source-selected senses and additional recognition senses
+  remain separate from independent N2 sense assignments.
+- Modern 女房 especially concerns one's wife. The inspected
+  evidence does not justify an unqualified rough/old-fashioned/
+  colloquial label. 睨む has modern examination, estimation,
+  suspicious watching and consideration uses beyond an angry
+  stare; select the actual にらむ heading, not historical ねむ.
+- 煮る is liquid cooking, not every English "cook." Assess the
+  direct boiling/cooking overlaps without inheriting the whole
+  煮える guard list or erasing 炊く's regional qualifications.
+  縫う has ぬって and potential ぬえる; its route-through-gaps
+  sense is additional teaching, not literal sewing of a crowd.
+- にわか has sudden and improvised attachment patterns.
+  A bandwagon-fan use does not establish every recent fan's
+  sincerity. Suddenness, immediacy, brief duration and grouped
+  occurrence require individual meaning checks, not a copied
+  clique of exclusions.
+- 濡らす teaches the transitive make-wet construction and an
+  explicit contrast to getting wet. ねじ's clock mechanism is
+  not necessarily a fastening screw. For 捩る, use the correct
+  ねじる reading; do not invent an injury collocation merely
+  because the full family has a sprain sense.
+- 熱する can be transitive or intransitive and can concern
+  excitement. Do not require an object or boiling temperature.
+  狙い is a noun, 狙う an object-taking verb; overlap with purpose,
+  intention, hope and goal pursuit needs direct judgment rather
+  than either blanket equivalence or a part-of-speech exemption.
+- 年度's institutional year need not be a calendar year.
+  Japan's government fiscal calendar is not every company's
+  rule, and a school term need not be a full school year.
+  農村's agricultural focus is not an administrative definition
+  or a claim that every resident farms.
+- 農産物 includes livestock products as well as plant produce.
+  農薬 includes growth regulators, not only insecticides.
+  Actual secondary senses matter: 針 includes sewing/needlework,
+  薬 includes efficacious chemicals/pesticides, and 性能
+  explicitly includes efficiency. Do not infer corresponding
+  guards for every nearby tool, medicine, ability or effect.
+- Actual completed reads: 232 distinct complete families /
+  535 senses, including nineteen principals / forty senses;
+  106 full older articles, 116 labels, 37 component records,
+  four complete related kanji bodies and twenty matching public
+  bodies. Eight main family chunks, ten main body chunks and
+  five supplemental chunks were actually read through EOF.
+  One supplemental family overlaps, 興奮. Ten original body
+  candidates remain unselected. Prepared plans remain unchanged;
+  a separate receipt records actual inspection.
+- Public bodies represent one authority, Digital Daijisen via
+  Weblio, not twenty independent dictionaries or reviewer reads.
+  Draft guard declarations are author hypotheses pending blind,
+  sequential GPT and Claude review. No measured model-bias
+  improvement or global ambiguity guarantee is claimed.
+
 ## Batch 64 authoring observations
 
 - Blind reviews found different useful gaps: GPT established four
