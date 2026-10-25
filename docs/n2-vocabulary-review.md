@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 65: N2:1282-N2:1301
 
-**Status:** draft; independent GPT and Claude reviews are not yet complete.
+**Status:** corrected draft; independent initial GPT and Claude reviews
+are complete, with original-session confirmations pending.
 
 Nineteen new articles: 女房, 睨む, 煮る, 俄, 縫う, 濡らす, ねじ,
 捩る, ネックレス, 熱する, 寝間着, 狙い, 狙う, 年度, 農産物, 農村,
@@ -74,9 +75,62 @@ There are **4,470 word articles**, **282 tracked primary new-word
 reciprocal N2 pairs**, plus the explicit 巻 alias pair.
 The established audit preserves all 3,273 baseline identities,
 readings, titles and original exclusions. The authored scope is
-29 files. Quiz guards remain author hypotheses; no independent
-linguistic approval, exhaustive ambiguity audit or global quiz
+29 files. Quiz guards are not yet finally confirmed; no exhaustive
+ambiguity audit or global quiz
 uniqueness is claimed. Inherited batch61 quiz debt remains deferred.
+
+### Initial independent reviews and bounded reconciliation
+
+Actual `gpt-6.1-sol` and `claude-opus-5.5` reviewed authored
+`76fedcbf56ba9efaf1ccc6e6c9ca60e478ca22db` sequentially and
+fully exited without edits. Their authenticated native final reports
+are archived as [GPT](n2-vocabulary-reviews/batch-65-gpt-initial.md)
+and [Claude](n2-vocabulary-reviews/batch-65-claude-initial.md).
+Both returned all nineteen new articles, all four full related
+kanji bodies, four compact evidence derivatives, and the exact
+TSV header and twenty assigned rows.
+
+GPT additionally returned all 23 bounded evidence chunks;
+Claude did not read those chunks and disclosed that limitation.
+Claude directly read two complete older articles; roughly sixty
+other title/exclusion scans are not complete-body reads.
+GPT directly read eleven older bodies, not necessarily eleven
+additional bodies beyond the reproduced comparison evidence.
+Access and actual inspection are recorded separately.
+
+| Finding | Bounded disposition pending confirmation |
+|---|---|
+| G65-01 / B65-03: 女房 | Add context-dependent disparaging-tone guidance from actual Nikkoku sense 3; 妻 is the safer neutral starting choice. The existing own-wife tendency was already taught. No always-insulting, obsolete or blanket self-deprecating claim. |
+| G65-02: 睨む/考慮 | Add the direct guard and comparison link from actual take-into-account senses and full bodies. |
+| G65-03: 熱する | Add direct 焼く and 暖まる guards. Complete heating senses support contextual competition, not unrestricted cooking substitution or a rigid temperature boundary. |
+| B65-01: 濡らす/ぬれる | Adopt a conservative direct guard while retaining the explicit make-wet/get-wet distinction. The causative English example does not prove identical full titles or universally interchangeable constructions. Original reviewers must reassess this judgment. |
+| B65-02: 女房/嫁 | Add the direct wife-sense guard, with the actual Kansai qualification preserved in evidence. Remove redundant 女房/妻: both full titles are `wife`. No transitive closure of exclusions. |
+| B65-04: にわか | Add recorded な/の attachment without free-interchangeability claims; replace an unverified collocation with recorded にわか雨. Historical の attestation does not prove modern frequency or the original example wrong. |
+| B65-05: ねじ | Explicitly acknowledge hiragana and katakana, removing a possible frequency implication. Neither order nor priority tags establish a usage ranking. |
+| Substantive links | Add six existing comparison links: 冷ます, 湿る, 編む, 薄める, 諦める and 準備. |
+| Other optional material | No required optical-density expansion, 村 rewrite, rare ねじ variant, morpheme split, 茹でる contrast or にょうぼ variant is established. |
+
+Exactly nine new articles change; five direct guards are added and
+one redundant exact-title guard removed. Titles, readings, levels,
+primary kanji, original raw rows and selected/additional senses stay
+unchanged. 女房's current TSV source note acknowledges new evidence;
+the packet preserves its original authored note and the explicit
+clarification rather than rewriting historical inspection receipts.
+
+All bounded corrective renderings were actually read: twelve complete
+families / 31 senses and five full older bodies. Four recaptured
+families include the already-inspected にわか雨. Deduplicated author
+totals are **235 families / 540 senses / 109 older bodies**.
+The relevant 女房 and 俄 Nikkoku definitions were inspected in actual
+authenticated reviewer returns; they are one added authority, not two
+new author retrievals. Failed English-dictionary fetches add no evidence.
+
+Shared register guidance, GPT's direct consideration/heating guards
+and Claude's wife/attachment/spelling observations are useful
+complementary contributions. Equal access was not equal reading
+depth. Both mentioned optical density, so it is not unique to either
+model. These sample observations do not establish measured bias
+reduction, exhaustive synonym safety or a model ranking.
 
 ## Batch 64: N2:1262-N2:1281
 

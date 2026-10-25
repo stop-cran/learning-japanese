@@ -77,9 +77,45 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   a separate receipt records actual inspection.
 - Public bodies represent one authority, Digital Daijisen via
   Weblio, not twenty independent dictionaries or reviewer reads.
-  Draft guard declarations are author hypotheses pending blind,
-  sequential GPT and Claude review. No measured model-bias
-  improvement or global ambiguity guarantee is claimed.
+  Original draft declarations remain historical. Blind initial
+  GPT and Claude reviews are complete; bounded corrections
+  await their original-session confirmations. No measured
+  model-bias improvement or global ambiguity guarantee is claimed.
+- Shared review finding: qualify modern 女房's register.
+  The added Nikkoku sense supports a context-dependent somewhat
+  disparaging tone, not an invariably insulting, obsolete or
+  technically self-deprecating word. The original own-wife
+  tendency was already taught; do not count it as a new omission.
+- GPT uniquely found direct 考慮 and two heating guards.
+  Claude uniquely found 嫁, raised a conservative wetting-pair
+  guard and attachment question, and identified a possible kana
+  frequency implication plus six missing substantive links.
+  Compare all report sections: optical-density expansion is
+  shared optional material, not a unique discovery.
+- Do not overstate corrections. A direct 濡らす/ぬれる guard
+  does not erase make-wet/get-wet or prove unrestricted
+  interchangeability. Failed English-dictionary fetches supply
+  no evidence. な/の are recorded; a historical の example does
+  not establish modern frequency or prove an invented な
+  collocation wrong. Use the recorded にわか雨 compound
+  instead. Dictionary order and priority tags do not rank
+  hiragana ねじ against katakana ネジ in ordinary usage.
+- Corrective reads contain twelve complete families / 31 senses
+  and five full older bodies. Four recaptured families include
+  an already-inspected にわか雨: the deduplicated author total is
+  **235 families / 540 senses / 109 older bodies**, not 236/541.
+  Keep the original completed-inspection receipt unchanged.
+  The two additionally inspected relevant Nikkoku definitions
+  come from actual authenticated reviewer returns, not new
+  author fetches or two independent dictionaries.
+- Actual initial reading depth differs: both models returned all
+  nineteen new articles, four full related kanji bodies and
+  exact twenty source associations. GPT also returned all
+  23 bounded evidence chunks; Claude did not read those chunks
+  and directly returned only two full older articles. Title/
+  exclusion scans are not full-body inspection. Equal access
+  was not equal evidence depth; both contributed useful,
+  complementary observations, not a measured bias reduction.
 
 ## Batch 64 authoring observations
 
