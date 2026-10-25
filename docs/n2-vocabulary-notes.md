@@ -21,6 +21,17 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 ## Batch 71 authoring observations
 
+- Both original reviewers accepted the final corrections at
+  `dfde68b7992b7151e5fd8ffa1eeaa26135f13a32`, sequentially
+  and read-only. All twenty final rows are CLEAN on three separate
+  facets; two kanji cards, mappings and baseline preservation are
+  assessed separately with independent Git limitations. All six
+  reports, exact prompts/models, 28/37/32 required complete returns
+  per stage, bounded TSV reads and zero edits are authenticated.
+  Actual cumulative complete older-body unions are GPT 180 /
+  Claude 15, not author counts or overlapping reported totals.
+  No teaching edit follows acceptance. Closure is 1,420 closed /
+  392 pending, with no draft or unresolved rows.
 - First confirmations at `73289715` did not close the batch.
   GPT found a new once-over/チェック label collision introduced
   by the first correction; Claude found the older unqualified
@@ -28,7 +39,7 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   direct displayed-label issues, not unrestricted Japanese synonym
   claims. Add both safeguards only on 一通り, preserving its title,
   prose and all prior guards. No inspection or location clique is
-  inherited. Original-session final reconfirmations remain pending.
+  inherited. Both final reconfirmations accept the two remedies.
 - Two complete follow-up families / eight senses and two full older
   bodies raise author totals to 479 families / 1,150 senses and
   174 older identities. Oxford's actual once-over heading supports
@@ -92,7 +103,7 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   shared spelling do not license every ひねる idiom or injury phrase.
   ビニール's vinyl-record sense is restricted to バイナル, and the
   public vinyl heading does not prove an exact borrowing route.
-- Completed author inspection covers 473 full families / 1,115
+- Original completed author inspection covers 473 full families / 1,115
   senses, 167 distinct complete older bodies, 30 component records
   and two related kanji bodies. All eighteen family and twenty
   older-body chunks were read through EOF. The original 467-family /
@@ -113,8 +124,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - 筆 gains reciprocal reading/common-word links for 筆記 and 筆者;
   皮 gains 皮肉. Both kanji headers are preserved, absent component
   cards stay unlinked, and primary metadata retains every written
-  character. Draft coverage remains 1,400 closed / 20 draft /
-  392 pending until both original reviewers accept the corrections.
+  character. Authored draft coverage was 1,400 closed / 20 draft /
+  392 pending; all twenty rows are now review-closed.
 
 ## Batch 70 authoring observations
 

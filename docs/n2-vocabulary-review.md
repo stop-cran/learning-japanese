@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-70 review-closed; batch 71 drafted.** The target is all 1,812 source rows,
+**Batches 01-71 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,400 rows are review-closed; 20 are draft and 392 remain pending.
-None are unresolved.
+The first 1,420 rows are review-closed; 392 remain pending.
+None are draft or unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 71: N2:1402-N2:1421
 
-**Status:** draft; independent initial and first-confirmation reviews
-authenticated; two remaining label guards added, final reconfirmations pending.
+**Status:** closed after authenticated independent initial reviews,
+first-confirmation corrections and final acceptance by both original sessions.
 
 Twenty new articles: 筆記, ひっくり返す, ひっくり返る, 引っ越し,
 引っ込む, 筆者, 必需品, 人差し指, 一通り, 人通り, ひとまず,
@@ -61,7 +61,7 @@ character/satellite headings and book titles are scoped out.
 The label union is 259 metadata records, not 259 inspected bodies;
 92 original navigation candidates remain unselected.
 
-Authored draft coverage is **1,400 closed / 20 draft / 392 pending /
+Authored draft coverage was **1,400 closed / 20 draft / 392 pending /
 0 unresolved**, mapped to **1,406 distinct articles: 1,302 new /
 104 reused**. There are **4,575 word articles** and **297 tracked
 primary reciprocal N2 pairs**. The authored scope is 28 files.
@@ -142,7 +142,37 @@ identities**. The Oxford English heading is a separately inspected
 authority, not another Japanese dictionary, and the stored note is
 not a full capture. The two useful findings are complementary;
 neither prior non-CLEAN report is rewritten as acceptance.
-Final reconfirmations by both original sessions remain pending.
+Both original sessions finally accepted the corrections at
+`dfde68b7992b7151e5fd8ffa1eeaa26135f13a32`; their
+[GPT](n2-vocabulary-reviews/batch-71-gpt-reconfirmation.md) and
+[Claude](n2-vocabulary-reviews/batch-71-claude-reconfirmation.md)
+reports are archived. All six complete native reports, exact
+prompts/models, 28/37/32 required complete returns per reviewer by
+stage, bounded TSV access and zero edits are authenticated.
+Both final reconfirmations freshly returned all twenty current
+articles, both kanji cards, mappings, principals, components,
+the follow-up patch/reconciliation, two complete families / eight
+senses, short English inspection note and both specified older
+bodies. Both independently retrieved Oxford's applicable heading.
+
+Every final source row is **CLEAN / CLEAN / CLEAN** for correctness,
+scoped coverage and comprehensibility. The two kanji cards,
+mappings and baseline preservation are assessed separately; Git,
+hash and manifest checks remain author-executed. Actual cumulative
+complete older-body unions are **GPT 180 / Claude 15**, derived
+from complete chunk identities and direct native returns, not
+author totals or overlapping report claims. First-confirmation
+non-CLEAN reports remain unchanged; no teaching changes follow
+final acceptance.
+
+Closure is **1,420 closed / 392 pending / 0 draft / 0 unresolved**,
+mapped to **1,406 distinct articles: 1,302 new / 104 reused**.
+The seven-file closure changes documentation only. All 3,273
+baseline identities/readings/titles/exclusions and 297 tracked
+primary reciprocal N2 pairs remain preserved. Eight direct guards
+were added on five new cards across both correction commits.
+Source recognition is not frequency, independent N2 assignment,
+native certification or exhaustive semantic quiz safety.
 
 ## Batch 70: N2:1382-N2:1401
 
