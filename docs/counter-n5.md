@@ -6,11 +6,12 @@
 **Live content** now lives in `counters/<id>.json` (one file per counter, validated by
 `tools/validate_counters.py` and listed in `manifest.json`); the YAML is the historical
 draft and is no longer read by anything except `tools/validate_counter_draft.py`.
-The agreed scope is ten counters with twelve forward examples each: **120 forward cards**,
-plus **20 authored reverse questions** using those examples' nouns/contexts.
+The original scope was ten counters with twelve forward examples each: **120 forward cards**,
+plus **20 authored reverse questions** using those examples' nouns/contexts; all original identities remain.
 The choose and typed forward modes share cards, not duplicate content.
-These are author-written editorial drafts, outside `manifest.json`; the current app cannot load them.
-This is the full agreed initial set, not a claim that these are all counters tested at N5.
+The live JSON is published and app-loadable; only the historical YAML drafts stay outside the manifest.
+The Numbers & counters expansion adds four forward gap prompts and 123 complete expressions below.
+This is beginner-oriented coverage, not a claim that these are all counters tested at N5.
 There is no official exhaustive JLPT counter/grammar syllabus.
 
 ## Coverage
@@ -35,8 +36,9 @@ The two 本 examples for films and the 冊 photo-album/枚 photograph contrast c
 台 for beds/pianos and つ for abstract items extend beyond a single noun-to-counter stereotype.
 
 The pilot's N4 `nin-each-1` (ずつ) is deliberately not part of this beginner set.
-数ヶ月, 十数人, ordinal constructions and additional time/unit counters remain later-level extensions.
-Numbers are kanji in the prompts, with Arabic equivalents accepted by the eventual numeric normalizer.
+数ヶ月, 十数人 and further ordinal constructions remain later-level extensions.
+Basic age, floors, time, dates and durations now have dedicated whole-expression practice.
+Numbers are kanji in the original prompts, with Arabic equivalents accepted by the legacy numeric normalizer.
 `noun` is a display/context label, not an assertion that every word is in an official N5 list.
 Less-basic object names are written in kana when useful. The YAML `vocabulary` map supplies
 selective reading/gloss support for both sentence prompts and reverse noun labels.
@@ -101,7 +103,7 @@ It checks reverse compatibility against the authored variants, not every possibl
 The live validator does not yet support this draft schema. Structural checks of the draft are separate
 from language review and do not establish native idiomaticity.
 
-## Independent review and reconciliation
+## Historical #41 independent review and reconciliation
 
 Two independent subagents covered all 120 forward cards and 20 reverse fixtures:
 one for Japanese correctness and grading; one for scoped coverage, comprehension and quiz pedagogy.
@@ -124,3 +126,91 @@ Coverage of the ten agreed counters and object variety was judged sufficient.
 
 Sources used to reconcile postcards and tableware were inspected as references only;
 their dictionary explanations were not copied. Further native/editor review remains useful.
+
+## Numbers & counters expansion (#71)
+
+[App work item and independent plan review](https://github.com/stop-cran/kanji-cards-android/issues/71).
+The section owns expression/unit selection and reading. Grammar retains sentence constructions,
+including time-point に and frequency. The companion is
+[Numbers, counters, time and dates](../articles/numbers-and-counters.md).
+
+The live totals are **124 suffix prompts, 20 reverse questions, 123 complete expressions**.
+Reading practice also uses the suffix prompts' canonical phrases, except already-kana いくつ:
+**246 reading items**. These are modes over shared identities, not 513 unrelated content items.
+All/Everyday/Time filters do not create new stacks or multiply the shared daily allowance.
+
+| V2 file | Expressions | Coverage |
+| --- | --- | --- |
+| `age` | 9 | 1/4/8/10/20/21/28/30 and 何歳; 歳/才 |
+| `floor` | 8 | 1/2/3/4/6/8/10 and 何階, using Japanese floor labels |
+| `clock` | 16 | All 12 hours, 半, 9:15, 12:45 and 何時 |
+| `minutes` | 15 | 1–11, 15/20/30 and 何分 |
+| `months` | 13 | All 12 calendar months and 何月 |
+| `dates` | 20 | 1–10, 11/14/17/19/20/24/29/30/31 and 何日 |
+| `hours` | 8 | 1/2/3/4/8/10 hours, 1.5 hours and 何時間 |
+| `days` | 14 | 1–10/14/20/24 days and 何日, with duration context |
+| `weeks` | 6 | 1/2/3/4/8 weeks and 何週間 |
+| `monthspan` | 7 | 1/2/3/6/8/10 months and 何か月; spelling variants |
+| `years` | 6 | 1/2/3/4/10 years and 何年 |
+| `native` | 1 | Primary 十 / とお, not 十つ |
+
+The four added v1 prompts supply 八本, 十本, 十杯 and 八回 without rewriting old cards.
+The 123 expressions split into 18 Everyday and 105 Time & dates items. Group membership is authored.
+
+### Version-2 transport and future authoring
+
+Create **new files** under `counters/`, in `manifest.files`, rather than changing the schema of a
+published v1 family. Older apps skip v2 files and retain the original practice. New modes require
+a compatible APK; content sync alone cannot install these UI/parser capabilities.
+
+Required root fields: integer `schemaVersion: 2`, filename-matching `id`, `counter`, kana `reading`,
+nonblank `title`, integer `level` 1–5, `group` (`everyday` or `time`), existing
+`article: articles/<slug>.md`, and `expressions`. Optional `sources` is an array of HTTPS URLs.
+Do not mix nonempty legacy `cards`/`reverse` arrays into v2; unknown v2 fields are rejected.
+
+Each of 1–256 expressions has exactly `id`, `cue`, `written`, `writtenAnswers`, `reading`,
+`readingAnswers`, `explanation`. IDs follow `[a-z]+-[a-z]+-[0-9]+` and are globally unique across
+forward, reverse and expression records. Keep IDs stable when improving text.
+The cue must disambiguate the quantity and sense without showing its answer.
+Canonical `written` and `reading` must appear in their accepted lists.
+Text fields are nonblank and at most 1,000 characters; written alternatives are 1–16 nonblank strings,
+readings 1–8 kana strings, each at most 80 characters, with no normalized duplicates.
+
+- Writing requires the **entire** expression. Explicitly list kanji/Arabic and intended unit/spelling
+  alternatives, including mixed numerical spellings for compound times. Never accept a bare suffix.
+- Reading alternatives pronounce **only the displayed canonical expression**. Do not derive them from
+  the legacy `kana` list, which may also describe alternate counters. Do not include かん unless the
+  displayed expression includes 間; do not accept よじさんじゅっぷん as a reading of 四時半.
+- New modes use NFKC and whitespace removal, plus katakana-to-hiragana folding for reading only.
+  They do **not** use the legacy numeral arithmetic: malformed 十十 must not match 二十.
+  Small っ/ゃ/ゅ/ょ and long vowels remain significant. Correct readings earn Good, not legacy Hard.
+- Already-kana canonical forms do not enter reading drills. Explain おいくつ in prose instead of
+  inventing a kanji spelling or a copy-the-answer question.
+- V1 may add `article`, `group` (defaults Everyday), and per-card `readingAnswers`.
+  The optional list uses the same kana/canonical/duplicate rules; omission keeps only `reading`.
+  Never change old IDs or suffix-mode tiers merely to add the reading mode.
+- Check references directly and author original cues/explanations. Search summaries are not evidence:
+  they can invent lesson URLs or misclassify legitimate readings. Keep a source beside each family,
+  explain spelling/pronunciation alternatives, and request independent language/coverage review.
+- Run `python -B -m unittest discover -s tools -p test_counters.py`, `python -B tools/validate.py`,
+  `python -B tools/build_manifest.py` and the content-budget check. Stage new files before the app's
+  full tracked-archive test; force that test to rerun when only the sibling content repo changed.
+  Structural acceptance does not prove natural Japanese.
+
+### #71 independent language review and reconciliation
+
+One independent read-only reviewer checked all 123 expressions, four added suffix prompts,
+124 canonical-reading sets and the entire article, preserving the original 120/20 records.
+The review covered correctness, required coverage and cue comprehension, with direct reference checks.
+It was an automated editorial review, not physical-device acceptance or a native-speaker certificate.
+
+Resolved findings: added documented カ月/ヵ月/ケ月 spellings; accepted the documented alternate
+date, seven-o'clock and July readings; accepted 分間 for minute durations; explicitly constrained
+month-span prompts to か月 without 間 and week prompts to 週間. Alternate written expressions
+still do not leak their pronunciations into the canonical reading drill.
+
+A bounded follow-up could not verify the exact uncontracted age/week readings はちさい,
+にじゅうはちさい and はちしゅうかん. The general counter pattern offers indirect support,
+but this new beginner set conservatively teaches the directly supported contracted defaults instead.
+This is an authoring-scope decision, not proof that every unlisted pronunciation is impossible.
+二十歳's regular readings and 八か月's はちかげつ alternative have direct reference support.
