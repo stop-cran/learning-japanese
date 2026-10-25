@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-temperature-request",
+  "exposureId": "n5-story-temperature-request",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "In a shared room",
+  "topic": "It's a little cold. May I close the window? There is a draft.",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、返事を一つ選んでください。",
+      "translation": "Listen and choose one reply."
+    },
+    {
+      "id": "utterance",
+      "speaker": "b",
+      "text": "少し寒いですね。窓を閉めてもいいですか。風が入ってきます。",
+      "translation": "It's a little cold. May I close the window? There is a draft."
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。昨日は暑かったです。",
+      "spokenText": "いち。昨日は暑かったです。",
+      "translation": "1. It was hot yesterday."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。ええ、お願いします。私も寒いです。",
+      "spokenText": "に。ええ、お願いします。私も寒いです。",
+      "translation": "2. Yes, please do. I'm cold too."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。はい、明日の朝、起こしてください。",
+      "spokenText": "さん。はい、明日の朝、起こしてください。",
+      "translation": "3. Yes, please wake me tomorrow morning."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "昨日は暑かったです。",
+      "translation": "It was hot yesterday.",
+      "rationale": "Past weather does not grant or refuse the current permission request."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "ええ、お願いします。私も寒いです。",
+      "translation": "Yes, please do. I'm cold too.",
+      "rationale": "This grants permission and welcomes the proposed action."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "はい、明日の朝、起こしてください。",
+      "translation": "Yes, please wake me tomorrow morning.",
+      "rationale": "A request to be woken tomorrow does not answer the current request about closing the window."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-2",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "閉めてもいいですか asks permission, and the correct reply both grants it and shares the reason. The task tests that speech act, not a rule that windows must always be closed.",
+  "vocabulary": [
+    {
+      "surface": "風が入る",
+      "reading": "かぜがはいる",
+      "gloss": "wind comes in; there is a draft"
+    }
+  ],
+  "media": {
+    "contentSha256": "685051fedb5e462b1e2d7961aedaffcc22e9ec77b6be37b53d6b3fc261e1e7db",
+    "audio": {
+      "instruction": {
+        "sha256": "dce991001cc89529049444e8be608724ee0b51d7d707e677c7f01059ff9d43a3",
+        "durationMs": 4989,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 4789
+          }
+        ],
+        "path": "task-audio/stage-9d29dc697599be3f6eb1e9f18b95a91259df745296b9f70c467c177c809e8061.ogg"
+      },
+      "utterance": {
+        "sha256": "fbf66bc0f4bdfe2ff9779366be1eedbe7a117ea2ffea851977ff3cfefa208fc0",
+        "durationMs": 8036,
+        "turns": [
+          {
+            "id": "utterance",
+            "startMs": 150,
+            "endMs": 7836
+          }
+        ],
+        "path": "task-audio/stage-64a406c3f83ef366bc3afac5e08cf0ac3b3729670ad15871c1bfe3758ec6d966.ogg"
+      },
+      "choice-1": {
+        "sha256": "6e84dd4a17f1ca6c302cf20f1725215081712a655a9c5682b74da626ee765580",
+        "durationMs": 4142,
+        "turns": [
+          {
+            "id": "choice-1",
+            "startMs": 150,
+            "endMs": 3942
+          }
+        ],
+        "path": "task-audio/stage-b23c044efd0dd70b2b564232b56a301f470aef6cee91ac6d26158d8cb355c2e4.ogg"
+      },
+      "choice-2": {
+        "sha256": "136a795607b55e3a5239584627bc72a6eefdd6355e358edc1cbba0086c8b31cd",
+        "durationMs": 6575,
+        "turns": [
+          {
+            "id": "choice-2",
+            "startMs": 150,
+            "endMs": 6375
+          }
+        ],
+        "path": "task-audio/stage-9fc8cd5c0936810ade16be6a01fd90b859aca691d7afec078545b9a93c2fa36a.ogg"
+      },
+      "choice-3": {
+        "sha256": "27ca9db508a8026c1e6567f2f00c25b97e1a9f919d377c0d67d897184d16fe24",
+        "durationMs": 5642,
+        "turns": [
+          {
+            "id": "choice-3",
+            "startMs": 150,
+            "endMs": 5442
+          }
+        ],
+        "path": "task-audio/stage-3cff47001b35ac95906e2390c9e197fdbfa63eb99bda403e11a21afae2f6b025.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "685051fedb5e462b1e2d7961aedaffcc22e9ec77b6be37b53d6b3fc261e1e7db",
+    "mediaSha256": "24e48d5f7a0e3698f362213ad204d72b137e7fa1e186ef803e2cf0b0263dd732",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

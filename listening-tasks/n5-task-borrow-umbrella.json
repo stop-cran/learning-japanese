@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-borrow-umbrella",
+  "exposureId": "n5-story-borrow-umbrella",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Before going outside",
+  "topic": "It has suddenly started raining. May I borrow this umbrella until I go home?",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、返事を一つ選んでください。",
+      "translation": "Listen and choose one reply."
+    },
+    {
+      "id": "utterance",
+      "speaker": "b",
+      "text": "急に雨が降ってきましたね。この傘、帰るまで借りてもいいですか。",
+      "translation": "It has suddenly started raining. May I borrow this umbrella until I go home?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。ええ、どうぞ使ってください。",
+      "spokenText": "いち。ええ、どうぞ使ってください。",
+      "translation": "1. Yes, please use it."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。いいえ、まだ降っていません。",
+      "spokenText": "に。いいえ、まだ降っていません。",
+      "translation": "2. No, it hasn't rained yet."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。はい、昨日返しました。",
+      "spokenText": "さん。はい、昨日返しました。",
+      "translation": "3. Yes, I returned it yesterday."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "ええ、どうぞ使ってください。",
+      "translation": "Yes, please use it.",
+      "rationale": "This grants the requested permission to borrow."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "いいえ、まだ降っていません。",
+      "translation": "No, it hasn't rained yet.",
+      "rationale": "This denies the explicitly observed rain instead of responding to the borrowing request."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "はい、昨日返しました。",
+      "translation": "Yes, I returned it yesterday.",
+      "rationale": "This reports a past return by the respondent rather than granting or refusing the present request."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-1",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "借りてもいいですか asks permission. An appropriate refusal would also be possible, but none is offered among these distractors.",
+  "vocabulary": [
+    {
+      "surface": "急に",
+      "reading": "きゅうに",
+      "gloss": "suddenly"
+    }
+  ],
+  "media": {
+    "contentSha256": "8fc247f4be50967de88affbc5fc19cab960035863f764e03b1d28a73f1fd4801",
+    "audio": {
+      "instruction": {
+        "sha256": "dce991001cc89529049444e8be608724ee0b51d7d707e677c7f01059ff9d43a3",
+        "durationMs": 4989,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 4789
+          }
+        ],
+        "path": "task-audio/stage-9d29dc697599be3f6eb1e9f18b95a91259df745296b9f70c467c177c809e8061.ogg"
+      },
+      "utterance": {
+        "sha256": "4efd6965afed6f1de8e2ecfe48fa4f574ded074fd69bb88e49ccf9294fd0a7dc",
+        "durationMs": 7406,
+        "turns": [
+          {
+            "id": "utterance",
+            "startMs": 150,
+            "endMs": 7206
+          }
+        ],
+        "path": "task-audio/stage-980da9a89da48205745f7b33f705b618e22a41bd89b3c2929ae41ea278568d3f.ogg"
+      },
+      "choice-1": {
+        "sha256": "2b05b190777e7138153f7d61cf3a04fff41517cdfcc735e5a50146bc93b27571",
+        "durationMs": 4850,
+        "turns": [
+          {
+            "id": "choice-1",
+            "startMs": 150,
+            "endMs": 4650
+          }
+        ],
+        "path": "task-audio/stage-5a8779eb981f068e46103cbf271d001179e92a2c71a18a43cb9573d68b011f7a.ogg"
+      },
+      "choice-2": {
+        "sha256": "e009544486d5665cb39d4359fcb18b9d3678a69f7570ef6cf5786869afd5937b",
+        "durationMs": 4603,
+        "turns": [
+          {
+            "id": "choice-2",
+            "startMs": 150,
+            "endMs": 4403
+          }
+        ],
+        "path": "task-audio/stage-1b0a8a46e3567b8615aa50ed5f6a709f2a989157cd6d079e4c6d8a2ae4883a68.ogg"
+      },
+      "choice-3": {
+        "sha256": "b500694e549c5abd07d693d13ca5f488851bdf10ac8333fd2197649085eae5c2",
+        "durationMs": 4614,
+        "turns": [
+          {
+            "id": "choice-3",
+            "startMs": 150,
+            "endMs": 4414
+          }
+        ],
+        "path": "task-audio/stage-a4109bc3be48a2c43b6fc34a141b465a882d5456c3ae156a0facc59b633743e9.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "8fc247f4be50967de88affbc5fc19cab960035863f764e03b1d28a73f1fd4801",
+    "mediaSha256": "5a18edd3d4eec8f231f772d7078ffe6f6a8cee9defef213c22e43991b7b9eb66",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

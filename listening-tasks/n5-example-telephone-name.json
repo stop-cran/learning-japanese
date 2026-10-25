@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-example-telephone-name",
+  "exposureId": "n5-story-telephone-name",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "example",
+  "blueprint": "n5-section-v1",
+  "title": "On the telephone",
+  "topic": "I'm sorry, I couldn't hear clearly. Please tell me your name once more.",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、返事を一つ選んでください。",
+      "translation": "Listen and choose one reply."
+    },
+    {
+      "id": "utterance",
+      "speaker": "b",
+      "text": "すみません、よく聞こえませんでした。もう一度、お名前をお願いします。",
+      "translation": "I'm sorry, I couldn't hear clearly. Please tell me your name once more."
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。はい、森田です。森田と申します。",
+      "spokenText": "いち。はい、森田です。森田と申します。",
+      "translation": "1. Yes, it's Morita. My name is Morita."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。いいえ、今は三時です。",
+      "spokenText": "に。いいえ、今は三時です。",
+      "translation": "2. No, it's three o'clock now."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。いいえ、電話は昨日買いました。",
+      "spokenText": "さん。いいえ、電話は昨日買いました。",
+      "translation": "3. No, I bought the telephone yesterday."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "はい、森田です。森田と申します。",
+      "translation": "Yes, it's Morita. My name is Morita.",
+      "rationale": "This repeats the requested name."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "いいえ、今は三時です。",
+      "translation": "No, it's three o'clock now.",
+      "rationale": "The time is not the information requested."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "いいえ、電話は昨日買いました。",
+      "translation": "No, I bought the telephone yesterday.",
+      "rationale": "The phone's purchase date does not answer a request to repeat a name."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-1",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "Worked example: identify what information is requested after もう一度. Repeating the name answers it; buying a phone and the current time are unrelated.",
+  "vocabulary": [
+    {
+      "surface": "申します",
+      "reading": "もうします",
+      "gloss": "am called; humble self-introduction used here as a fixed expression"
+    }
+  ],
+  "media": {
+    "contentSha256": "43097c1bd31f1f7d2d8014014c607d3d852a12ba225e0b58eeb6f0d4c9d62e9c",
+    "audio": {
+      "instruction": {
+        "sha256": "dce991001cc89529049444e8be608724ee0b51d7d707e677c7f01059ff9d43a3",
+        "durationMs": 4989,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 4789
+          }
+        ],
+        "path": "task-audio/stage-9d29dc697599be3f6eb1e9f18b95a91259df745296b9f70c467c177c809e8061.ogg"
+      },
+      "utterance": {
+        "sha256": "1c5e85ea32721229e7f829550f21a4d62b915af033c971bb89a166abe915a917",
+        "durationMs": 7631,
+        "turns": [
+          {
+            "id": "utterance",
+            "startMs": 150,
+            "endMs": 7431
+          }
+        ],
+        "path": "task-audio/stage-085c6fba84be197d6b1c07d0e2f036d6bcfe0682109375ec5ce889bd31efa52f.ogg"
+      },
+      "choice-1": {
+        "sha256": "a46677d759448b721b648c37064c91915eea1bf958d3b136936342914d3789b9",
+        "durationMs": 6434,
+        "turns": [
+          {
+            "id": "choice-1",
+            "startMs": 150,
+            "endMs": 6234
+          }
+        ],
+        "path": "task-audio/stage-ff25fcf36c9817a36d0aae744187d6b349e3ea43e0444070b6d68c957380c1e3.ogg"
+      },
+      "choice-2": {
+        "sha256": "816bcdfdcfc5cd52c42e559dbeaad74a195e9fa04bdbbfe65aef63c6794d6dd4",
+        "durationMs": 4630,
+        "turns": [
+          {
+            "id": "choice-2",
+            "startMs": 150,
+            "endMs": 4430
+          }
+        ],
+        "path": "task-audio/stage-fa266b3c9520d0ed20acbb6d813f549100e9f74524488450c1778f6468570135.ogg"
+      },
+      "choice-3": {
+        "sha256": "ef7d17eadf1349c5881876dba4efe21cf89419d02b19b6397523b5e943f699da",
+        "durationMs": 5156,
+        "turns": [
+          {
+            "id": "choice-3",
+            "startMs": 150,
+            "endMs": 4956
+          }
+        ],
+        "path": "task-audio/stage-9da72d86d89daa3b374348f499022beedb3b5acaa2acbfb4486a44a6ac080725.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "43097c1bd31f1f7d2d8014014c607d3d852a12ba225e0b58eeb6f0d4c9d62e9c",
+    "mediaSha256": "8fab7c6b9986afc9e765e45bc8f60d9526c69c7a9dc43a45ca0d7d87c62ff4e6",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

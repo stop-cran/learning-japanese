@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-broken-cup",
+  "exposureId": "n5-story-broken-cup",
+  "taskType": "verbal-expression",
+  "kind": "monologue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "In an office",
+  "topic": "Someone has dropped a cup at work. The cup belongs to the person on the right. Look at the picture. What does the person indicated by the arrow say?",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "絵を見て、話を聞いてください。矢印の人は、何と言いますか。答えを一つ選んでください。",
+      "translation": "Look at the picture and listen. What does the person indicated by the arrow say? Choose one answer."
+    },
+    {
+      "id": "situation",
+      "speaker": "n",
+      "text": "会社で、コップを落としてしまいました。コップは右の人の物です。絵を見てください。矢印の人は、何と言いますか。",
+      "translation": "Someone has dropped a cup at work. The cup belongs to the person on the right. Look at the picture. What does the person indicated by the arrow say?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。大切に使ってください。",
+      "spokenText": "いち。大切に使ってください。",
+      "translation": "1. Please use it carefully."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。貸してくれて、ありがとうございます。",
+      "spokenText": "に。貸してくれて、ありがとうございます。",
+      "translation": "2. Thank you for lending it to me."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。コップを割ってしまって、すみません。",
+      "spokenText": "さん。コップを割ってしまって、すみません。",
+      "translation": "3. I'm sorry I broke the cup."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "大切に使ってください。",
+      "translation": "Please use it carefully.",
+      "rationale": "This tells the listener to take care of something rather than apologizing for the speaker's damage."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "貸してくれて、ありがとうございます。",
+      "translation": "Thank you for lending it to me.",
+      "rationale": "Thanks for a loan does not acknowledge or apologize for the stated breakage."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "コップを割ってしまって、すみません。",
+      "translation": "I'm sorry I broke the cup.",
+      "rationale": "This acknowledges the accidental damage and apologizes to its owner."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "situation",
+      "role": "situation",
+      "turns": [
+        "situation"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-3",
+  "evidence": [
+    "situation"
+  ],
+  "explanation": "The completed accident requires an apology from the person who caused it, not an instruction to the owner or thanks alone.",
+  "visual": {
+    "role": "required",
+    "description": "Two coworkers stand on opposite sides of an office desk. A broken cup with a few separated pieces is on the floor by person A on the left, who still holds its detached handle. A single arrow points to A. Person B stands on the right. No speech bubbles or option labels."
+  },
+  "vocabulary": [
+    {
+      "surface": "同僚",
+      "reading": "どうりょう",
+      "gloss": "coworker"
+    },
+    {
+      "surface": "割る",
+      "reading": "わる",
+      "gloss": "break something into pieces"
+    }
+  ],
+  "media": {
+    "contentSha256": "3b607ab7c1e75271075f24a322de88986f73b18c213315a0538b9130732ae769",
+    "audio": {
+      "instruction": {
+        "sha256": "c8c81934fa62f3f09519fda725693d0a40be70c9b6711a181359fe2ab463cf0a",
+        "durationMs": 11073,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 10873
+          }
+        ],
+        "path": "task-audio/stage-2b02ead24a12f811b925e86ec1bfb5e7e4bba08137cd430058406b27f7c8725a.ogg"
+      },
+      "situation": {
+        "sha256": "a3d12e465244bf33658f125d9003f21f6220ce15f4b4439fe1434e94db747713",
+        "durationMs": 13726,
+        "turns": [
+          {
+            "id": "situation",
+            "startMs": 150,
+            "endMs": 13526
+          }
+        ],
+        "path": "task-audio/stage-a7f7fe0f986199d9374abf991c0122ff6061ad0925fbb22fb9b3317708679360.ogg"
+      },
+      "choice-1": {
+        "sha256": "d410d5c4e3dabd17af4567ad7f350830bb7126c225c80f6679546a499a7c476b",
+        "durationMs": 4295,
+        "turns": [
+          {
+            "id": "choice-1",
+            "startMs": 150,
+            "endMs": 4095
+          }
+        ],
+        "path": "task-audio/stage-830efee48ed02f09fef26ccc4f6c59a62fd15f600432e7420f555f5ad6e1d8df.ogg"
+      },
+      "choice-2": {
+        "sha256": "7b5c3d842282d56987898e23adfef9091181bcd379cb4bbbaa9cae0ebdb17795",
+        "durationMs": 5117,
+        "turns": [
+          {
+            "id": "choice-2",
+            "startMs": 150,
+            "endMs": 4917
+          }
+        ],
+        "path": "task-audio/stage-bd19c92a6a220b441d847a29052c11ccc825079fd117ad1e12caffe34252f29a.ogg"
+      },
+      "choice-3": {
+        "sha256": "7de8c5762ff0f55578e1f83de417d1785e6b905c7036dbf64265fd32380fcfde",
+        "durationMs": 5253,
+        "turns": [
+          {
+            "id": "choice-3",
+            "startMs": 150,
+            "endMs": 5053
+          }
+        ],
+        "path": "task-audio/stage-434d17912fef7531dfc9efbb11ceaf359248eaa310132aad639d14c337de47e7.ogg"
+      }
+    },
+    "image": {
+      "path": "task-images/image-9cfe6b53df6409a1ac9cd7ea140daa320d93875581f023d1f807942d893b1d19.webp",
+      "sha256": "9cfe6b53df6409a1ac9cd7ea140daa320d93875581f023d1f807942d893b1d19"
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "3b607ab7c1e75271075f24a322de88986f73b18c213315a0538b9130732ae769",
+    "mediaSha256": "e4cd549dfb431ff1af36ebca8e957947867411f7cfa43ff464725fb7e8d66276",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

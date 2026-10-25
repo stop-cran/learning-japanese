@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-example-repair-collection",
+  "exposureId": "n5-story-repair-collection",
+  "taskType": "key-point",
+  "kind": "dialogue",
+  "usage": "example",
+  "blueprint": "n5-section-v1",
+  "title": "At a repair counter",
+  "topic": "They are talking about a watch repair. When will the woman come to collect the watch?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "時計の修理について話しています。女の人は、いつ時計を取りに来ますか。",
+      "translation": "They are talking about a watch repair. When will the woman come to collect the watch?"
+    },
+    {
+      "id": "t1",
+      "speaker": "b",
+      "text": "この時計が止まってしまいました。昨日まで動いていたんですが、直せますか。",
+      "translation": "This watch has stopped. It was working until yesterday. Can you fix it?"
+    },
+    {
+      "id": "t2",
+      "speaker": "a",
+      "text": "見てみますね。電池を替えるだけなら、今日の夕方にはお渡しできます。",
+      "translation": "Let me take a look. If it only needs a new battery, I can give it back this evening."
+    },
+    {
+      "id": "t3",
+      "speaker": "b",
+      "text": "今日はこの後、仕事です。夜まで戻れません。お店は何時までですか。",
+      "translation": "I'm going to work after this today. I can't get back until nighttime. How late is the shop open?"
+    },
+    {
+      "id": "t4",
+      "speaker": "a",
+      "text": "六時までです。明日は水曜日で休みですから、木曜日に来てください。",
+      "translation": "Until six. Tomorrow is Wednesday and we're closed, so please come on Thursday."
+    },
+    {
+      "id": "t5",
+      "speaker": "b",
+      "text": "木曜日の午前中は病院に行きます。午後なら来られます。二時ごろでもいいですか。",
+      "translation": "I'll be at the clinic on Thursday morning. I can come in the afternoon. Is around two okay?"
+    },
+    {
+      "id": "t6",
+      "speaker": "a",
+      "text": "はい、大丈夫です。こちらの紙を持って来てください。お名前もお願いします。",
+      "translation": "Yes, that's fine. Please bring this slip with you. Your name too, please."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "今日の夕方",
+      "translation": "This evening.",
+      "rationale": "This is a possible repair-completion time, but she cannot return then."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "木曜日の午後",
+      "translation": "Thursday afternoon.",
+      "rationale": "She proposes Thursday afternoon at around two, and the clerk agrees."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "水曜日の午後",
+      "translation": "Wednesday afternoon.",
+      "rationale": "The shop is closed on Wednesday."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "木曜日の午前",
+      "translation": "Thursday morning.",
+      "rationale": "She will be at the clinic then."
+    }
+  ],
+  "answer": "option-2",
+  "evidence": [
+    "t5",
+    "t6"
+  ],
+  "explanation": "Worked example: distinguish possible completion from the agreed collection time. Today's work, Wednesday closure and Thursday morning appointment leave Thursday afternoon.",
+  "vocabulary": [
+    {
+      "surface": "修理",
+      "reading": "しゅうり",
+      "gloss": "repair"
+    },
+    {
+      "surface": "電池",
+      "reading": "でんち",
+      "gloss": "battery"
+    },
+    {
+      "surface": "替える",
+      "reading": "かえる",
+      "gloss": "replace"
+    }
+  ],
+  "media": {
+    "contentSha256": "507fe526e6b339ac9b4fa94f176e1b3f27266562023ad8f73b7fef1773fd71d3",
+    "audio": {
+      "instruction": {
+        "sha256": "62ae7bf4e7452e96c5dab3090c72f274e55b836c0d6281c6e2e8473f7e9b7387",
+        "durationMs": 5698,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 5498
+          }
+        ],
+        "path": "task-audio/stage-2e45f35ee687c2a9def2c83c1c092a02a67dce72ab3a079c856737ccea633014.ogg"
+      },
+      "focus": {
+        "sha256": "e8b93cf21fa0478b395ebbd0eb3a80a8039dd0cb2b398cbb4b41215fdf470686",
+        "durationMs": 8476,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 8276
+          }
+        ],
+        "path": "task-audio/stage-9b40abf094162145748a713cf031b17d029f1922b2676c835682ecbb66d783a1.ogg"
+      },
+      "passage": {
+        "sha256": "5bcf140988c0308bbfa2824b6ef1272250ccb4374a28d328a63e1ac7660c98ed",
+        "durationMs": 49209,
+        "turns": [
+          {
+            "id": "t1",
+            "startMs": 150,
+            "endMs": 7611
+          },
+          {
+            "id": "t2",
+            "startMs": 7961,
+            "endMs": 14867
+          },
+          {
+            "id": "t3",
+            "startMs": 15217,
+            "endMs": 23648
+          },
+          {
+            "id": "t4",
+            "startMs": 23998,
+            "endMs": 31055
+          },
+          {
+            "id": "t5",
+            "startMs": 31405,
+            "endMs": 40436
+          },
+          {
+            "id": "t6",
+            "startMs": 40786,
+            "endMs": 49009
+          }
+        ],
+        "path": "task-audio/stage-a847ce9b489b8577cbc121b8692bac47fac74ab9a78cc6820ce2496ab0c908ba.ogg"
+      },
+      "focus-repeat": {
+        "sha256": "e8b93cf21fa0478b395ebbd0eb3a80a8039dd0cb2b398cbb4b41215fdf470686",
+        "durationMs": 8476,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 8276
+          }
+        ],
+        "path": "task-audio/stage-9b40abf094162145748a713cf031b17d029f1922b2676c835682ecbb66d783a1.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "507fe526e6b339ac9b4fa94f176e1b3f27266562023ad8f73b7fef1773fd71d3",
+    "mediaSha256": "e059719cd1cf94f9db054dba8a01f0f6ab954827120eb05b78fa84ce49775f01",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-market-delivery",
+  "exposureId": "n5-story-market-delivery",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "A delivery from a market",
+  "topic": "Two people are talking at a shop. To whom will the man hand today's delivery?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "店で二人が話しています。男の人は、今日の荷物を誰に渡しますか。",
+      "translation": "Two people are talking at a shop. To whom will the man hand today's delivery?"
+    },
+    {
+      "id": "t1",
+      "speaker": "b",
+      "text": "この野菜を山田さんの家に届けてください。いつもの家ですが、今日は少し違います。",
+      "translation": "Please deliver these vegetables to Mr. Yamada's home. It's the usual house, but today is a little different."
+    },
+    {
+      "id": "t3",
+      "speaker": "b",
+      "text": "今日は病院に行っています。奥さんも一緒です。二人とも夕方まで帰りません。",
+      "translation": "He's at the hospital today. His wife is with him. Neither will return until evening."
+    },
+    {
+      "id": "t4",
+      "speaker": "a",
+      "text": "では、玄関の前に置きますか。野菜は重いので、袋が二つあります。",
+      "translation": "Then should I leave them in front of the entrance? The vegetables are heavy, so there are two bags."
+    },
+    {
+      "id": "t5",
+      "speaker": "b",
+      "text": "いいえ、おばあさんが家にいますから、その方に渡してください。家の中には入らないでください。",
+      "translation": "No. His grandmother is at home, so please hand them to her. Please don't go inside."
+    },
+    {
+      "id": "t6",
+      "speaker": "a",
+      "text": "分かりました。隣に住んでいるお兄さんには、渡さないんですね。",
+      "translation": "Understood. So I shouldn't hand them to his older brother who lives next door."
+    },
+    {
+      "id": "t7",
+      "speaker": "b",
+      "text": "ええ。お兄さんも今日は仕事です。家にいるおばあさんにお願いします。",
+      "translation": "That's right. His older brother is working today too. Please give them to the grandmother at home."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "山田さん",
+      "translation": "Mr. Yamada.",
+      "rationale": "He is at the hospital rather than waiting at his usual place."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "山田さんの奥さん",
+      "translation": "Mr. Yamada's wife.",
+      "rationale": "She is with him at the hospital."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "隣に住むお兄さん",
+      "translation": "His older brother next door.",
+      "rationale": "The brother is also away at work."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "家にいるおばあさん",
+      "translation": "The grandmother who is at home.",
+      "rationale": "She is the explicitly designated recipient."
+    }
+  ],
+  "answer": "option-4",
+  "evidence": [
+    "t5",
+    "t7"
+  ],
+  "explanation": "The regular recipient, his wife and his brother are all unavailable. The delivery is to be handed directly to the grandmother, not left outside.",
+  "vocabulary": [
+    {
+      "surface": "届ける",
+      "reading": "とどける",
+      "gloss": "deliver"
+    },
+    {
+      "surface": "奥さん",
+      "reading": "おくさん",
+      "gloss": "someone else's wife"
+    },
+    {
+      "surface": "荷物",
+      "reading": "にもつ",
+      "gloss": "parcel, luggage or load; the delivery here"
+    }
+  ],
+  "media": {
+    "contentSha256": "5a68c534ec37ecf8a9799f8d610ebd5f8a83a08306ff60fbb8ca414651e23e38",
+    "audio": {
+      "instruction": {
+        "sha256": "62ae7bf4e7452e96c5dab3090c72f274e55b836c0d6281c6e2e8473f7e9b7387",
+        "durationMs": 5698,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 5498
+          }
+        ],
+        "path": "task-audio/stage-2e45f35ee687c2a9def2c83c1c092a02a67dce72ab3a079c856737ccea633014.ogg"
+      },
+      "focus": {
+        "sha256": "1917a6b069c05115e6aea94b50bdce4eabf5558575d79654140ed6f248fe0618",
+        "durationMs": 8518,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 8318
+          }
+        ],
+        "path": "task-audio/stage-34bed65216ce0019c7fcbafdc02323881d48efb103cea83d6f0523439af303ad.ogg"
+      },
+      "passage": {
+        "sha256": "834bab4414043ea2ce8a6586adcfa452d365c7321a413a04a13eb18e2075ac2a",
+        "durationMs": 50667,
+        "turns": [
+          {
+            "id": "t1",
+            "startMs": 150,
+            "endMs": 8959
+          },
+          {
+            "id": "t3",
+            "startMs": 9309,
+            "endMs": 18074
+          },
+          {
+            "id": "t4",
+            "startMs": 18424,
+            "endMs": 25882
+          },
+          {
+            "id": "t5",
+            "startMs": 26232,
+            "endMs": 35391
+          },
+          {
+            "id": "t6",
+            "startMs": 35741,
+            "endMs": 41977
+          },
+          {
+            "id": "t7",
+            "startMs": 42327,
+            "endMs": 50467
+          }
+        ],
+        "path": "task-audio/stage-33a0e77f2dd79128010f37f7101e59b9df651f358469ba7d5f5b636a69bb5a8a.ogg"
+      },
+      "focus-repeat": {
+        "sha256": "1917a6b069c05115e6aea94b50bdce4eabf5558575d79654140ed6f248fe0618",
+        "durationMs": 8518,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 8318
+          }
+        ],
+        "path": "task-audio/stage-34bed65216ce0019c7fcbafdc02323881d48efb103cea83d6f0523439af303ad.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "5a68c534ec37ecf8a9799f8d610ebd5f8a83a08306ff60fbb8ca414651e23e38",
+    "mediaSha256": "ddd41e3bd5f9c60253709a14b663f8006b7a79b589e1d6a68378250f65a01519",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

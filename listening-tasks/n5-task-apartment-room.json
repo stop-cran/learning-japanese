@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-apartment-room",
+  "exposureId": "n5-story-apartment-room",
+  "taskType": "key-point",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Looking for a room",
+  "topic": "Two people are talking while looking for a room. How much is the room the woman likes?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "部屋を探している二人が話しています。女の人が気に入った部屋は、いくらですか。",
+      "translation": "Two people are talking while looking for a room. How much is the room the woman likes?"
+    },
+    {
+      "id": "t1",
+      "speaker": "a",
+      "text": "この建物には、今、三つ空いている部屋があります。一階と二階と三階です。",
+      "translation": "There are three available rooms in this building now: on the first, second and third floors."
+    },
+    {
+      "id": "t2",
+      "speaker": "b",
+      "text": "一階の部屋は月に五万円ですね。安いですが、窓の前が道路なので、少しうるさそうです。",
+      "translation": "The first-floor room is fifty thousand yen a month, right? It's cheap, but the road is in front of the window, so it looks a little noisy."
+    },
+    {
+      "id": "t3",
+      "speaker": "a",
+      "text": "では、二階を見ましょう。こちらは六万円です。朝、日がよく入ります。",
+      "translation": "Then let's look at the second floor. This room is sixty thousand yen. It gets plenty of morning sunlight."
+    },
+    {
+      "id": "t4",
+      "speaker": "b",
+      "text": "明るくていいですね。台所も広いです。三階の部屋も同じ大きさですか。",
+      "translation": "It's nice and bright. The kitchen is spacious too. Is the third-floor room the same size?"
+    },
+    {
+      "id": "t5",
+      "speaker": "a",
+      "text": "三階はもっと広くて、七万円です。でも、エレベーターはありません。階段を使います。",
+      "translation": "The third-floor room is larger and costs seventy thousand yen. But there is no elevator. You use the stairs."
+    },
+    {
+      "id": "t6",
+      "speaker": "b",
+      "text": "一人で住みますから、そんなに広くなくても大丈夫です。二階の部屋がいいです。",
+      "translation": "I'll live alone, so it doesn't need to be that large. I like the second-floor room."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "月に六万円",
+      "translation": "Sixty thousand yen per month.",
+      "rationale": "This is the rent stated for the second-floor room she chooses."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "月に五万円",
+      "translation": "Fifty thousand yen per month.",
+      "rationale": "This is the first-floor room she finds potentially noisy."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "月に七万円",
+      "translation": "Seventy thousand yen per month.",
+      "rationale": "This is the larger third-floor room."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "月に八万円",
+      "translation": "Eighty thousand yen per month.",
+      "rationale": "None of the three rooms is quoted at this rent."
+    }
+  ],
+  "answer": "option-1",
+  "evidence": [
+    "t3",
+    "t6"
+  ],
+  "explanation": "Identify the selected second-floor room, then retain its quoted monthly rent of sixty thousand yen.",
+  "vocabulary": [
+    {
+      "surface": "月に",
+      "reading": "つきに",
+      "gloss": "per month"
+    },
+    {
+      "surface": "道路",
+      "reading": "どうろ",
+      "gloss": "road"
+    }
+  ],
+  "media": {
+    "contentSha256": "8001a6c9d68e8784635e31d949fc71e164103d377425d151d98379b2c85c2f3f",
+    "audio": {
+      "instruction": {
+        "sha256": "62ae7bf4e7452e96c5dab3090c72f274e55b836c0d6281c6e2e8473f7e9b7387",
+        "durationMs": 5698,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 5498
+          }
+        ],
+        "path": "task-audio/stage-2e45f35ee687c2a9def2c83c1c092a02a67dce72ab3a079c856737ccea633014.ogg"
+      },
+      "focus": {
+        "sha256": "dd1e9e5a0191b4ffb58e962cd17a3068d9b0aad9dc1c1dc27028f8ec4a8d8699",
+        "durationMs": 8698,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 8498
+          }
+        ],
+        "path": "task-audio/stage-90b694b15051c35bda7bceb476d987030f396580787f9c4efaa1e0bb89dbf0f9.ogg"
+      },
+      "passage": {
+        "sha256": "90d519742d4aa5caefe45aa2b75084ba35be564b0d52bfe59f0078321245b706",
+        "durationMs": 54096,
+        "turns": [
+          {
+            "id": "t1",
+            "startMs": 150,
+            "endMs": 8137
+          },
+          {
+            "id": "t2",
+            "startMs": 8487,
+            "endMs": 17654
+          },
+          {
+            "id": "t3",
+            "startMs": 18004,
+            "endMs": 26579
+          },
+          {
+            "id": "t4",
+            "startMs": 26929,
+            "endMs": 35597
+          },
+          {
+            "id": "t5",
+            "startMs": 35947,
+            "endMs": 45670
+          },
+          {
+            "id": "t6",
+            "startMs": 46020,
+            "endMs": 53896
+          }
+        ],
+        "path": "task-audio/stage-6f46ab7e2f2bf82d7f309270fc53507a6a4f8845d595c82ee4b2ea72b3869624.ogg"
+      },
+      "focus-repeat": {
+        "sha256": "dd1e9e5a0191b4ffb58e962cd17a3068d9b0aad9dc1c1dc27028f8ec4a8d8699",
+        "durationMs": 8698,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 8498
+          }
+        ],
+        "path": "task-audio/stage-90b694b15051c35bda7bceb476d987030f396580787f9c4efaa1e0bb89dbf0f9.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "8001a6c9d68e8784635e31d949fc71e164103d377425d151d98379b2c85c2f3f",
+    "mediaSha256": "feb2fd27f5c1c212fe5ccfa00a3db3463032f6e91c55cf9b3beb0af15ea0dcc3",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

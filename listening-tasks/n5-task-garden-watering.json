@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-garden-watering",
+  "exposureId": "n5-story-garden-watering",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Looking after a garden",
+  "topic": "Two people are talking in a garden. Which flowers will the woman water?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "庭で二人が話しています。女の人は、どの花に水をやりますか。",
+      "translation": "Two people are talking in a garden. Which flowers will the woman water?"
+    },
+    {
+      "id": "t1",
+      "speaker": "a",
+      "text": "明日から二日間、留守にします。朝、花に水をやってもらえますか。",
+      "translation": "I'll be away for two days starting tomorrow. Could you water the flowers in the morning?"
+    },
+    {
+      "id": "t2",
+      "speaker": "b",
+      "text": "いいですよ。庭に花がたくさんありますね。全部に水をやるんですか。",
+      "translation": "Of course. There are a lot of flowers in the garden. Should I water all of them?"
+    },
+    {
+      "id": "t3",
+      "speaker": "a",
+      "text": "いいえ、今夜は雨です。外にある花は大丈夫です。屋根の下の花だけお願いします。",
+      "translation": "No. It will rain tonight. The flowers out in the open will be fine. Just the ones under the roof, please."
+    },
+    {
+      "id": "t4",
+      "speaker": "b",
+      "text": "屋根の下ですね。白い花と黄色い花がありますが、両方ですか。",
+      "translation": "Under the roof, right. There are white and yellow flowers. Both?"
+    },
+    {
+      "id": "t5",
+      "speaker": "a",
+      "text": "黄色い花には、今、水をやりました。白い花には、まだやっていません。",
+      "translation": "I've just watered the yellow flowers. I haven't watered the white ones yet."
+    },
+    {
+      "id": "t6",
+      "speaker": "b",
+      "text": "じゃ、白い花だけにします。水は台所から持って来ればいいですか。",
+      "translation": "Then I'll water just the white flowers. Should I bring water from the kitchen?"
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "庭の花全部",
+      "translation": "All the flowers in the garden.",
+      "rationale": "He explicitly limits the request rather than asking for all flowers."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "外にある黄色い花",
+      "translation": "Yellow flowers out in the open.",
+      "rationale": "Rain will reach the exposed flowers, and yellow is not the requested color."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "屋根の下の白い花",
+      "translation": "White flowers under the roof.",
+      "rationale": "The roof excludes rain, and these have not been watered yet."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "屋根の下の黄色い花",
+      "translation": "Yellow flowers under the roof.",
+      "rationale": "He has already watered these."
+    }
+  ],
+  "answer": "option-3",
+  "evidence": [
+    "t3",
+    "t5",
+    "t6"
+  ],
+  "explanation": "Combine location with the already/not-yet distinction. Only the sheltered white flowers still need the requested watering.",
+  "vocabulary": [
+    {
+      "surface": "留守",
+      "reading": "るす",
+      "gloss": "being away from home"
+    },
+    {
+      "surface": "屋根",
+      "reading": "やね",
+      "gloss": "roof"
+    },
+    {
+      "surface": "水をやる",
+      "reading": "みずをやる",
+      "gloss": "water a plant"
+    }
+  ],
+  "media": {
+    "contentSha256": "d6dcf11eb0c3567f20e41a38fb7e6c4215fd4babe171bcb6ec75704d7658eaf4",
+    "audio": {
+      "instruction": {
+        "sha256": "62ae7bf4e7452e96c5dab3090c72f274e55b836c0d6281c6e2e8473f7e9b7387",
+        "durationMs": 5698,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 5498
+          }
+        ],
+        "path": "task-audio/stage-2e45f35ee687c2a9def2c83c1c092a02a67dce72ab3a079c856737ccea633014.ogg"
+      },
+      "focus": {
+        "sha256": "cb69367b0d6cd8ad4a43d6a9ab19f22a4011062eb4ae8a615de087136e7314dd",
+        "durationMs": 7823,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 7623
+          }
+        ],
+        "path": "task-audio/stage-34a1c1ab72859eff92bbeea0143aa7fb24186efd6cdb563092ea4c7454ac6ca8.ogg"
+      },
+      "passage": {
+        "sha256": "6c18151909c55085813a76d98999c7d73c8fa49514703376ad77c8e6cc915ce8",
+        "durationMs": 48732,
+        "turns": [
+          {
+            "id": "t1",
+            "startMs": 150,
+            "endMs": 7484
+          },
+          {
+            "id": "t2",
+            "startMs": 7834,
+            "endMs": 15696
+          },
+          {
+            "id": "t3",
+            "startMs": 16046,
+            "endMs": 25380
+          },
+          {
+            "id": "t4",
+            "startMs": 25730,
+            "endMs": 32900
+          },
+          {
+            "id": "t5",
+            "startMs": 33250,
+            "endMs": 41084
+          },
+          {
+            "id": "t6",
+            "startMs": 41434,
+            "endMs": 48532
+          }
+        ],
+        "path": "task-audio/stage-18004dc33d143f6c929a8651a2a96e1d185d061e06b09f45001bee657c89a2c3.ogg"
+      },
+      "focus-repeat": {
+        "sha256": "cb69367b0d6cd8ad4a43d6a9ab19f22a4011062eb4ae8a615de087136e7314dd",
+        "durationMs": 7823,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 7623
+          }
+        ],
+        "path": "task-audio/stage-34a1c1ab72859eff92bbeea0143aa7fb24186efd6cdb563092ea4c7454ac6ca8.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "d6dcf11eb0c3567f20e41a38fb7e6c4215fd4babe171bcb6ec75704d7658eaf4",
+    "mediaSha256": "50992dcdacab893b2b805278c9624fe10d4a00f72fe5a088fb143545f37944e3",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

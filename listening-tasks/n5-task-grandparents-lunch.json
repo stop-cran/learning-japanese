@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-grandparents-lunch",
+  "exposureId": "n5-story-grandparents-lunch",
+  "taskType": "key-point",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Lunch with family",
+  "topic": "They are talking about tomorrow's lunch. At what time will everyone start eating?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "明日の昼ご飯について話しています。みんなは何時に食べ始めますか。",
+      "translation": "They are talking about tomorrow's lunch. At what time will everyone start eating?"
+    },
+    {
+      "id": "t1",
+      "speaker": "b",
+      "text": "明日はおじいちゃんとおばあちゃんが来ます。お昼をみんなで食べましょう。",
+      "translation": "Grandpa and Grandma are coming tomorrow. Let's all have lunch together."
+    },
+    {
+      "id": "t2",
+      "speaker": "a",
+      "text": "いつもの十二時でいいですか。午前中、庭の木を切るつもりです。",
+      "translation": "Is the usual time of twelve okay? I'm planning to trim the garden trees in the morning."
+    },
+    {
+      "id": "t3",
+      "speaker": "b",
+      "text": "明日は少し早くします。おばあちゃんが一時から友達に会いますから。",
+      "translation": "We'll make it a little earlier tomorrow. Grandma is meeting a friend at one."
+    },
+    {
+      "id": "t4",
+      "speaker": "a",
+      "text": "じゃ、十一時ですか。それなら、庭の仕事は午後にします。",
+      "translation": "Then eleven? If so, I'll do the garden work in the afternoon."
+    },
+    {
+      "id": "t5",
+      "speaker": "b",
+      "text": "十一時はまだ早いです。おじいちゃんたちは十一時に家を出て、三十分後に着きます。",
+      "translation": "Eleven is still too early. Grandpa and Grandma will leave home at eleven and arrive thirty minutes later."
+    },
+    {
+      "id": "t6",
+      "speaker": "a",
+      "text": "着いたらすぐ食べるんですね。では、十一時半にテーブルを用意しておきます。",
+      "translation": "We'll eat as soon as they arrive, then. I'll have the table ready for eleven thirty."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "十一時",
+      "translation": "Eleven o'clock.",
+      "rationale": "This is the grandparents' departure time and the rejected earlier proposal."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "十二時",
+      "translation": "Twelve o'clock.",
+      "rationale": "This is the usual lunch time, which is moved earlier tomorrow."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "十一時半",
+      "translation": "Eleven thirty.",
+      "rationale": "They will eat on arrival, and he confirms preparing the table for eleven thirty."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "一時",
+      "translation": "One o'clock.",
+      "rationale": "Grandma's meeting with her friend begins then."
+    }
+  ],
+  "answer": "option-3",
+  "evidence": [
+    "t5",
+    "t6"
+  ],
+  "explanation": "The dialogue states the final lunch time explicitly, so arithmetic is only supporting context. Do not substitute the usual time or the later meeting.",
+  "vocabulary": [
+    {
+      "surface": "切る",
+      "reading": "きる",
+      "gloss": "cut or trim"
+    }
+  ],
+  "media": {
+    "contentSha256": "08386577fbcc2299a98a9cfe9b91049d433a7aa7d67c8e069b72036bd0290263",
+    "audio": {
+      "instruction": {
+        "sha256": "62ae7bf4e7452e96c5dab3090c72f274e55b836c0d6281c6e2e8473f7e9b7387",
+        "durationMs": 5698,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 5498
+          }
+        ],
+        "path": "task-audio/stage-2e45f35ee687c2a9def2c83c1c092a02a67dce72ab3a079c856737ccea633014.ogg"
+      },
+      "focus": {
+        "sha256": "769186dc84dd0cdef637968fb99bc53d8430c698ed6d91e2e09aa13e89620d63",
+        "durationMs": 7754,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 7554
+          }
+        ],
+        "path": "task-audio/stage-24fa7c97226222565f12106f707a318037ea76df571b796f6700cb38fd06c900.ogg"
+      },
+      "passage": {
+        "sha256": "82e685737760415bfb2119ef1e999fff330c8b75ca5225d0bf35dcbce5f4d9cc",
+        "durationMs": 45317,
+        "turns": [
+          {
+            "id": "t1",
+            "startMs": 150,
+            "endMs": 6794
+          },
+          {
+            "id": "t2",
+            "startMs": 7144,
+            "endMs": 13853
+          },
+          {
+            "id": "t3",
+            "startMs": 14203,
+            "endMs": 21370
+          },
+          {
+            "id": "t4",
+            "startMs": 21720,
+            "endMs": 28429
+          },
+          {
+            "id": "t5",
+            "startMs": 28779,
+            "endMs": 37530
+          },
+          {
+            "id": "t6",
+            "startMs": 37880,
+            "endMs": 45117
+          }
+        ],
+        "path": "task-audio/stage-35170b7684bb6016b6f5ce8e86025a8d3e99a1afc3d5c16470c47a14c95dfdc1.ogg"
+      },
+      "focus-repeat": {
+        "sha256": "769186dc84dd0cdef637968fb99bc53d8430c698ed6d91e2e09aa13e89620d63",
+        "durationMs": 7754,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 7554
+          }
+        ],
+        "path": "task-audio/stage-24fa7c97226222565f12106f707a318037ea76df571b796f6700cb38fd06c900.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "08386577fbcc2299a98a9cfe9b91049d433a7aa7d67c8e069b72036bd0290263",
+    "mediaSha256": "f7daa1ba9b60514f1ad802785dc170626d45424fe64369c63e8b3f855561b97d",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

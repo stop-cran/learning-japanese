@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-aquarium-meeting",
+  "exposureId": "n5-story-aquarium-meeting",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "A visit to an aquarium",
+  "topic": "A parent and child are talking at an aquarium. Where will the child wait for his mother?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "水族館で親子が話しています。子供は、お母さんをどこで待ちますか。",
+      "translation": "A parent and child are talking at an aquarium. Where will the child wait for his mother?"
+    },
+    {
+      "id": "t1",
+      "speaker": "b",
+      "text": "楽しかったね。もうすぐ帰る時間です。お母さんはちょっと手を洗ってきます。",
+      "translation": "That was fun. It's nearly time to go home. I'm just going to wash my hands."
+    },
+    {
+      "id": "t2",
+      "speaker": "a",
+      "text": "じゃ、僕は入口で待っているね。外の大きい魚の絵の前にいるよ。",
+      "translation": "Then I'll wait at the entrance. I'll be in front of the large fish picture outside."
+    },
+    {
+      "id": "t3",
+      "speaker": "b",
+      "text": "外には出ないでね。今日は人が多いから、中で待っていてください。",
+      "translation": "Don't go outside. There are a lot of people today, so please wait inside."
+    },
+    {
+      "id": "t4",
+      "speaker": "a",
+      "text": "中の売店はどう。お菓子を見ていてもいい。まだお金は持っているよ。",
+      "translation": "How about the shop inside? Can I look at the sweets? I still have some money."
+    },
+    {
+      "id": "t5",
+      "speaker": "b",
+      "text": "売店は今、閉まっています。階段の下に椅子があるでしょう。そこに座っていて。",
+      "translation": "The shop is closed right now. There are chairs under the stairs, aren't there? Sit there and wait."
+    },
+    {
+      "id": "t8",
+      "speaker": "a",
+      "text": "うん。階段の下の椅子に座って待っているよ。かばんもちゃんと持っていく。",
+      "translation": "Okay. I'll sit on the chair under the stairs and wait. I'll make sure to take my bag too."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t8"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "外の魚の絵の前",
+      "translation": "Outside, in front of the fish picture.",
+      "rationale": "Going outside is expressly prohibited."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "売店の中",
+      "translation": "Inside the shop.",
+      "rationale": "The shop is closed; looking at sweets was only his suggestion."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "階段の下の椅子",
+      "translation": "A chair under the stairs.",
+      "rationale": "His mother selects this location and he repeats it."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "手を洗う所",
+      "translation": "The handwashing area.",
+      "rationale": "His mother goes there; he stays elsewhere."
+    }
+  ],
+  "answer": "option-3",
+  "evidence": [
+    "t5",
+    "t8"
+  ],
+  "explanation": "The mother's final instruction and the child's confirmation agree. Earlier proposed locations do not become the meeting place.",
+  "vocabulary": [
+    {
+      "surface": "水族館",
+      "reading": "すいぞくかん",
+      "gloss": "aquarium"
+    },
+    {
+      "surface": "売店",
+      "reading": "ばいてん",
+      "gloss": "small shop or kiosk"
+    },
+    {
+      "surface": "親子",
+      "reading": "おやこ",
+      "gloss": "parent and child"
+    }
+  ],
+  "media": {
+    "contentSha256": "4cf31f3d62bc53d346b9d06ccc087f273e74892cdbb0f1fdab04d7090110624b",
+    "audio": {
+      "instruction": {
+        "sha256": "62ae7bf4e7452e96c5dab3090c72f274e55b836c0d6281c6e2e8473f7e9b7387",
+        "durationMs": 5698,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 5498
+          }
+        ],
+        "path": "task-audio/stage-2e45f35ee687c2a9def2c83c1c092a02a67dce72ab3a079c856737ccea633014.ogg"
+      },
+      "focus": {
+        "sha256": "06dfd8af5be80825cf383dd4e7e5367d7dc5df6a924fde114ed48a34b1256dd2",
+        "durationMs": 8420,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 8220
+          }
+        ],
+        "path": "task-audio/stage-760b5a06be3e8d457b2b89df5cb57b0d80f83d29ea693fc9657be100e33bee53.ogg"
+      },
+      "passage": {
+        "sha256": "4aa3dd70a513396f32384b378fa211a0cd7b4ffbf10317be5a9e10146868212f",
+        "durationMs": 47579,
+        "turns": [
+          {
+            "id": "t1",
+            "startMs": 150,
+            "endMs": 8595
+          },
+          {
+            "id": "t2",
+            "startMs": 8945,
+            "endMs": 15668
+          },
+          {
+            "id": "t3",
+            "startMs": 16018,
+            "endMs": 22922
+          },
+          {
+            "id": "t4",
+            "startMs": 23272,
+            "endMs": 30564
+          },
+          {
+            "id": "t5",
+            "startMs": 30914,
+            "endMs": 39695
+          },
+          {
+            "id": "t8",
+            "startMs": 40045,
+            "endMs": 47379
+          }
+        ],
+        "path": "task-audio/stage-d06c84f9c38687cd75b76d0fe8d5990aca13883547b17744e46a881382e71f8b.ogg"
+      },
+      "focus-repeat": {
+        "sha256": "06dfd8af5be80825cf383dd4e7e5367d7dc5df6a924fde114ed48a34b1256dd2",
+        "durationMs": 8420,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 8220
+          }
+        ],
+        "path": "task-audio/stage-760b5a06be3e8d457b2b89df5cb57b0d80f83d29ea693fc9657be100e33bee53.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "4cf31f3d62bc53d346b9d06ccc087f273e74892cdbb0f1fdab04d7090110624b",
+    "mediaSha256": "58ba87fab9b62ae9085a6964fbab3925c7fd6adb8e080bf8e7ba134fa0bc970e",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

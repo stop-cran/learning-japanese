@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-two-tickets",
+  "exposureId": "n5-story-two-tickets",
+  "taskType": "key-point",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Talking about a film",
+  "topic": "Listening for the reason for a purchase.",
+  "levelRationale": "Polite invitations, days, basic family words and the counter 二枚 occur in a short exchange. The focus asks for a reason, not the proposed date. The initially invited woman and the actual companion must be distinguished. Voice, pace and audible counter pronunciation remain unapproved; these are N5-oriented demands, not official word-list certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "男の人と女の人が話しています。男の人は、どうして映画の切符を二枚買いますか。",
+      "translation": "A man and a woman are talking. Why will the man buy two cinema tickets?"
+    },
+    {
+      "id": "t1",
+      "speaker": "a",
+      "text": "日曜日、この映画を見に行きませんか。",
+      "translation": "Would you like to go and see this film on Sunday?"
+    },
+    {
+      "id": "t2",
+      "speaker": "b",
+      "text": "いいですね。でも、日曜日は仕事です。土曜日はどうですか。",
+      "translation": "That sounds nice. But I work on Sunday. How about Saturday?"
+    },
+    {
+      "id": "t3",
+      "speaker": "a",
+      "text": "土曜日は、日本語の教室に行きます。映画は日曜日に見ます。",
+      "translation": "I go to Japanese class on Saturday. I'll see the film on Sunday."
+    },
+    {
+      "id": "t4",
+      "speaker": "b",
+      "text": "そうですか。一人で行きますか。",
+      "translation": "I see. Will you go alone?"
+    },
+    {
+      "id": "t5",
+      "speaker": "a",
+      "text": "いいえ、弟と行きます。弟もこの映画が好きです。切符は、僕が二枚買います。",
+      "translation": "No, I'll go with my younger brother. He likes this film too. I'll buy two tickets."
+    },
+    {
+      "id": "t6",
+      "speaker": "b",
+      "text": "分かりました。じゃあ、また今度一緒に行きましょう。",
+      "translation": "All right. Then let's go together another time."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "twice",
+      "number": 1,
+      "label": "二回見るからです。",
+      "translation": "Because he will see it twice.",
+      "rationale": "Two tickets are for two people, not two visits by the man. He plans one Sunday visit."
+    },
+    {
+      "id": "woman",
+      "number": 2,
+      "label": "女の人と行くからです。",
+      "translation": "Because he will go with the woman.",
+      "rationale": "He invites her, but she cannot go on Sunday because she is working."
+    },
+    {
+      "id": "cheap",
+      "number": 3,
+      "label": "切符が安いからです。",
+      "translation": "Because the tickets are inexpensive.",
+      "rationale": "No ticket price or discount is mentioned. The stated reason for two tickets is his companion."
+    },
+    {
+      "id": "brother",
+      "number": 4,
+      "label": "弟と行くからです。",
+      "translation": "Because he will go with his younger brother.",
+      "rationale": "He says 弟と行きます and then says that he himself will buy two tickets."
+    }
+  ],
+  "answer": "brother",
+  "evidence": [
+    "t5"
+  ],
+  "explanation": "The focus is why he needs two tickets. He will attend with his younger brother and buy both tickets himself. The woman's proposed Saturday plan does not become the final plan.",
+  "vocabulary": [
+    {
+      "surface": "切符",
+      "reading": "きっぷ",
+      "gloss": "ticket"
+    },
+    {
+      "surface": "二枚",
+      "reading": "にまい",
+      "gloss": "two flat items, here tickets"
+    },
+    {
+      "surface": "弟",
+      "reading": "おとうと",
+      "gloss": "younger brother"
+    },
+    {
+      "surface": "今度",
+      "reading": "こんど",
+      "gloss": "another time; next time, here"
+    }
+  ],
+  "media": {
+    "contentSha256": "137b5bffb7e7968193d81a056f1e443083ffbb4dd13e66d81d8150c497e59d56",
+    "audio": {
+      "instruction": {
+        "sha256": "82cf752ad10c26a6bc39a7c0be653aeff8b245eef2d4663f632822d96ec17f08",
+        "durationMs": 5698,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 5498
+          }
+        ],
+        "path": "task-audio/stage-f1da4e45607497ae22a6922a05a908e818c691da7684745c50181d1a75772165.ogg"
+      },
+      "focus": {
+        "sha256": "f329b9cc18ff5a2ecc05ebec0568096b0ea0b011ba7ecdf67ed97f011fd8129d",
+        "durationMs": 9782,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 9582
+          }
+        ],
+        "path": "task-audio/stage-e9c5756270b470e1819bc793b5326079cae770b6575dea3e7c8838ff393a6641.ogg"
+      },
+      "passage": {
+        "sha256": "f24ae8539d9136d668775fccdbe60c40cecb03ef54531b213b2e2651c4e46991",
+        "durationMs": 39287,
+        "turns": [
+          {
+            "id": "t1",
+            "startMs": 150,
+            "endMs": 4081
+          },
+          {
+            "id": "t2",
+            "startMs": 4431,
+            "endMs": 11932
+          },
+          {
+            "id": "t3",
+            "startMs": 12282,
+            "endMs": 18977
+          },
+          {
+            "id": "t4",
+            "startMs": 19327,
+            "endMs": 23480
+          },
+          {
+            "id": "t5",
+            "startMs": 23830,
+            "endMs": 33194
+          },
+          {
+            "id": "t6",
+            "startMs": 33544,
+            "endMs": 39087
+          }
+        ],
+        "path": "task-audio/stage-b503fcaf3b0abaabfdf79359ce3faa6983d8665eed47e02f86a9e8edc947e554.ogg"
+      },
+      "focus-repeat": {
+        "sha256": "f329b9cc18ff5a2ecc05ebec0568096b0ea0b011ba7ecdf67ed97f011fd8129d",
+        "durationMs": 9782,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 9582
+          }
+        ],
+        "path": "task-audio/stage-e9c5756270b470e1819bc793b5326079cae770b6575dea3e7c8838ff393a6641.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "137b5bffb7e7968193d81a056f1e443083ffbb4dd13e66d81d8150c497e59d56",
+    "mediaSha256": "52ec49161947b62f66fdb3de071314c3b5928a253e508b69b100b7eeda87ad98",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

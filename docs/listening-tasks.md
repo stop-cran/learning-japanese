@@ -3,7 +3,9 @@
 Companion to [app contract 1](https://github.com/stop-cran/kanji-cards-android/blob/main/docs/LISTENING-TASKS.md)
 for app #66 and content #38. **Independently reviewed contract, adopted under delegated autonomous decision-making.**
 B adds compatible validation, manifest/budget tooling and the app's shared data/media foundation.
-Runtime publication still waits for C/D's renderers and E's exact-output approval and device gates.
+General-release publication waits for C/D's renderers and E's exact-output approval and device gates.
+The explicitly authorized [owner-testing publication](#owner-authorized-testing-publication)
+allows the selected content to reach the owner's installed app before device acceptance is complete.
 The [existing English-question schema](listening-n5.md) and its 36 approved passages are unchanged.
 These reviewed conservative defaults are adopted under delegated autonomous implementation
 authority, not recorded as separate personal confirmation. Paid-media authorization
@@ -34,12 +36,12 @@ Unknown schema/policy versions or task types are unsupported. Unknown fields in 
 are errors; new grading/presentation requirements need an explicit version, not silently ignored metadata.
 The four [structural examples](listening-task-examples/) are original **unapproved documentation
 fixtures**, not runtime content, approved pilots or spend authorization.
-The four [E pilot drafts](listening-task-pilots/coverage.json) are separate original learning
-packages outside the runtime manifest. The owner has accepted the audio/questions and
-[selected eight final illustrations](listening-task-pool/illustrations.json); complete
-package/device release approval remains separate. Their ledger records intended evidence,
-story independence, proposed casting and outstanding media/device gates. Neither collection can
-supply an assessment pool until its actual publication requirements have been met.
+The four [E pilot sources](listening-task-pilots/coverage.json) are separate original learning
+packages. Their final recordings, along with the full pool and
+[eight selected illustrations](listening-task-pool/illustrations.json), are published under the
+[owner-testing authorization](listening-task-pool/publication.json). Contributor drafts remain
+outside runtime namespaces. Coverage distinguishes authorized runtime use from outstanding
+general-release device/full-section acceptance; structural documentation fixtures never supply the pool.
 
 | Field | Contract |
 | --- | --- |
@@ -59,7 +61,7 @@ supply an assessment pool until its actual publication requirements have been me
 | `visual` | Optional `{role, description}`; role `context`/`required`, neutral English description of all relevant scene evidence, not the answer |
 | `vocabulary` | Optional existing-schema vocabulary tips, maximum 30, with valid optional word references |
 | `media` | Absent while authoring; complete generated output object below |
-| `approval` | Absent until the exact complete output has actually been listened to/reviewed |
+| `approval` | Exact-output publication authorization; normally full listening/device review, or an explicit documented owner-testing exception |
 
 Bound packages to 4 speakers (exactly one narrator), 32 turns, 8 stages, text fields of at most
 2,000 characters (turns/labels at most 500), and one composite picture. Every turn and character
@@ -128,12 +130,42 @@ including paths, all hashes, timings, durations and the content binding. This av
 while binding every output, not just the first clip.
 
 `approval` is `{status:"approved", contentSha256, mediaSha256, reviewedOn, note}` with an ISO date
-and an explicit account of actual listening/visual coverage. It is a listener declaration, not
-cryptographic certification. Both hashes must match. Any changed learning text, option, order,
+and an explicit account of the authorization and actual listening/visual coverage. It is an author
+declaration, not cryptographic certification or proof of device testing. Both hashes must match.
+Any changed learning text, option, order,
 picture, pronunciation, timing or audio invalidates approval. Cached byte-identical synthesis can
 be reused after renewed package review; updating metadata alone does not constitute approval.
 No media is a valid pending draft. Partial/mismatched declared media is an error, not an approved
 subset. Complete media without approval remains an explicitly unapproved draft.
+
+### Owner-authorized testing publication
+
+On 2026-10-25 the owner explicitly requested publishing the 32 selected packages for personal
+testing, rather than blocking normal-app access on unperformed physical-phone/full-section
+acceptance. This supersedes those **publication prerequisites for this bounded trial only**;
+it does not claim the checks passed, change the schema, weaken media integrity or grant paid generation.
+The [publication ledger](listening-task-pool/publication.json) identifies the exact authorized outputs.
+
+Use the existing `approval.status: "approved"` as runtime permission for those exact packages,
+with `approval.note` explicitly identifying **owner-authorized testing** and outstanding checks.
+Schema 1 does not have a separate trial flag: the current app will make these items available for
+ordinary guided practice and eligible diagnostic sessions, including normal exposure/SRS policies.
+The public repository is not access-controlled to the owner; this scope describes the authorization,
+not a claim that other users cannot download it. This is not general-release or proficiency certification.
+
+Verify the frozen source packages, every stage/asset, selected picture, both canonical hashes,
+identities, final manifest and complete-archive budgets before publishing. Retain private runs and
+record a sanitized exact-output publication ledger. Do **not** invoke `approve-task` with fictional
+`--phone-reviewed`, `--native-reviewed` or `--listened-all-stages` flags to satisfy the default exporter.
+A specifically authorized publication may materialize the verified packages/assets directly under
+this policy, without creating false review receipts. The default renderer approval/export commands
+remain strict for ordinary publication; future trials require their own explicit scope.
+
+Compatibility remains a design requirement, not a reason to withhold this authorized trial.
+Keep new short media out of legacy maps and isolate unsupported versions/items with visible notices.
+The current importer isolates unknown task versions/types; malformed supported content can still
+preserve the previous new-task catalog. Further per-item corruption isolation is separate app work,
+not permission to silently accept bad assets or block this valid batch.
 
 ## Identity, originals and review
 
@@ -213,7 +245,8 @@ These are authoring lessons, not additional runtime fields or an official diffic
 8. **Publish only the selected, correctly bound version.** Preserve earlier comparisons,
    source art and frozen runs. Record owner text/audio/artwork acceptance accurately.
    Keep any missing exact-output/device gates explicit rather than repeatedly asking for
-   acceptance already given, silently transferring approval or declaring the pool released.
+   acceptance already given or silently transferring approval. If the owner explicitly authorizes
+   a testing publication, follow the bounded exception above instead of withholding all app access.
 
 ### Image generation and adoption
 
@@ -239,13 +272,15 @@ binding must still match. Verify the rebuilt packages with the normal renderer/v
 the new image path/hash changes the complete `mediaSha256`, not the learning-content hash.
 Do not copy spending authorization, preview/package/device declarations or old release
 approval into the new run. Record the precise scope of any owner acceptance against
-the selected bytes, then satisfy the remaining release gates. No synthesis is necessary
+the selected bytes, then satisfy the applicable release gates or explicit owner-testing authorization.
+No synthesis is necessary
 when all required audio is already verified.
 
 The selected WebPs and their former SVG schematics remain in `docs/` for authoring and
-comparison, not the runtime image map. Include **both** in complete-archive budget checks;
-ignored documentation still occupies download/inflation space. Only guarded export adds
-the selected bytes to `task-images/` and approved packages to `listening-tasks/`.
+comparison, outside the runtime image map. Include **both** in complete-archive budget checks;
+ignored documentation still occupies download/inflation space. Guarded general-release export or
+the explicitly authorized testing publication adds the selected bytes to `task-images/` and
+authorized packages to `listening-tasks/`.
 
 ## Private task-stage rendering
 
@@ -414,5 +449,6 @@ Use [app contract 1](https://github.com/stop-cran/kanji-cards-android/blob/main/
 for exact 26-34-minute form calculations, eligibility, guided grades, shared exposure, accounting,
 interruption outcomes and B-F verification ownership. E checks the shortest/longest permitted
 24-item forms against that blueprint without waiting for F. The full-form renderer follows later.
-Old/new readers must both import the mixed archive; no runtime publication before B/C/D support,
-actual exact-output approval and E's device gates. A small pilot is not a full assessment pool.
+Old/new reader compatibility remains required design. General release requires B/C/D support,
+actual exact-output approval and E's device gates; the scoped owner-testing exception above permits
+earlier testing with truthful pending checks. A small pilot is not a full assessment pool.

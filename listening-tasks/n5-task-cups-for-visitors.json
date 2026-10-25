@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-cups-for-visitors",
+  "exposureId": "n5-story-cups-for-visitors",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "At home",
+  "topic": "Following a request while preparing for a visitor.",
+  "levelRationale": "Basic size/color adjectives, polite requests and a short correction identify one object. The listener must combine the requested size and color with the numbered pictures. 台所 and 持って来る/持って行く are everyday but still part of the spoken difficulty; no claim is made from written kanji levels alone. Voice, pace and actual picture accessibility remain unapproved.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "家で二人が話しています。男の人は、どのコップを持って行きますか。",
+      "translation": "Two people are talking at home. Which cup will the man take?"
+    },
+    {
+      "id": "t1",
+      "speaker": "b",
+      "text": "もうすぐ友達が来ます。台所からコップを一つ持って来てください。",
+      "translation": "A friend will be here soon. Please bring one cup from the kitchen."
+    },
+    {
+      "id": "t2",
+      "speaker": "a",
+      "text": "大きいコップと小さいコップがあります。どちらがいいですか。",
+      "translation": "There are large cups and small cups. Which would you like?"
+    },
+    {
+      "id": "t3",
+      "speaker": "b",
+      "text": "大きいコップをお願いします。友達は、お茶をたくさん飲みますから。",
+      "translation": "A large cup, please. My friend drinks a lot of tea."
+    },
+    {
+      "id": "t4",
+      "speaker": "a",
+      "text": "大きいコップは、赤いのと青いのがあります。赤いコップですか。",
+      "translation": "The large cups come in red and blue. A red cup?"
+    },
+    {
+      "id": "t5",
+      "speaker": "b",
+      "text": "いいえ、青いコップをお願いします。赤いのは私が使います。",
+      "translation": "No, a blue cup, please. I'll use the red one."
+    },
+    {
+      "id": "t6",
+      "speaker": "a",
+      "text": "分かりました。今、持って行きます。",
+      "translation": "All right. I'll bring it over now."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "visual",
+  "options": [
+    {
+      "id": "small-blue",
+      "number": 1,
+      "label": "小さい青いコップ",
+      "translation": "The small blue cup",
+      "rationale": "The color matches the final request, but she asks for a large cup."
+    },
+    {
+      "id": "large-red",
+      "number": 2,
+      "label": "大きい赤いコップ",
+      "translation": "The large red cup",
+      "rationale": "The size matches, but she rejects red for the visitor and says she will use that cup herself."
+    },
+    {
+      "id": "large-blue",
+      "number": 3,
+      "label": "大きい青いコップ",
+      "translation": "The large blue cup",
+      "rationale": "She asks for a large cup in t3 and specifies blue rather than red in t5."
+    },
+    {
+      "id": "small-red",
+      "number": 4,
+      "label": "小さい赤いコップ",
+      "translation": "The small red cup",
+      "rationale": "Neither the small size nor the red color matches the visitor's requested cup."
+    }
+  ],
+  "answer": "large-blue",
+  "evidence": [
+    "t3",
+    "t5"
+  ],
+  "explanation": "Combine 大きいコップ with the later 青いコップ request. The man's suggested red cup is explicitly rejected. In the numbered picture, the large blue cup is 3.",
+  "visual": {
+    "role": "required",
+    "description": "Four equally presented numbered cups in a two-by-two grid: 1, small blue; 2, large red; 3, large blue; 4, small red. The cups have the same shape apart from size. No selected item, people, tea, arrows or answer-bearing caption is shown."
+  },
+  "vocabulary": [
+    {
+      "surface": "台所",
+      "reading": "だいどころ",
+      "gloss": "kitchen"
+    },
+    {
+      "surface": "一つ",
+      "reading": "ひとつ",
+      "gloss": "one item"
+    },
+    {
+      "surface": "持って来る",
+      "reading": "もってくる",
+      "gloss": "bring toward the speaker"
+    },
+    {
+      "surface": "持って行く",
+      "reading": "もっていく",
+      "gloss": "take toward another place"
+    }
+  ],
+  "media": {
+    "contentSha256": "9523b4ef353c763b717f7b2f96efadf0d7f208241a0e77b8633b926660109e01",
+    "audio": {
+      "instruction": {
+        "sha256": "82cf752ad10c26a6bc39a7c0be653aeff8b245eef2d4663f632822d96ec17f08",
+        "durationMs": 5698,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 5498
+          }
+        ],
+        "path": "task-audio/stage-f1da4e45607497ae22a6922a05a908e818c691da7684745c50181d1a75772165.ogg"
+      },
+      "focus": {
+        "sha256": "9681af485d63a2bdd8e92d56852e2ac5e135bdbe054628d4a494b17a9d5afdd1",
+        "durationMs": 7962,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 7762
+          }
+        ],
+        "path": "task-audio/stage-67834c28b59f5ea2731902569c87570a7bae07279e7e16d729365c9b0b443028.ogg"
+      },
+      "passage": {
+        "sha256": "2f25a64ec01ec9250be3c19266e5c78470d84c1dfb568ac5e887c2ee8fb08d0d",
+        "durationMs": 39360,
+        "turns": [
+          {
+            "id": "t1",
+            "startMs": 150,
+            "endMs": 7109
+          },
+          {
+            "id": "t2",
+            "startMs": 7459,
+            "endMs": 13071
+          },
+          {
+            "id": "t3",
+            "startMs": 13421,
+            "endMs": 20546
+          },
+          {
+            "id": "t4",
+            "startMs": 20896,
+            "endMs": 27314
+          },
+          {
+            "id": "t5",
+            "startMs": 27664,
+            "endMs": 34335
+          },
+          {
+            "id": "t6",
+            "startMs": 34685,
+            "endMs": 39160
+          }
+        ],
+        "path": "task-audio/stage-e69905bd5faa0e593eb864f54b5b8b00505e1914f81b2e682f813dee55f875c2.ogg"
+      },
+      "focus-repeat": {
+        "sha256": "9681af485d63a2bdd8e92d56852e2ac5e135bdbe054628d4a494b17a9d5afdd1",
+        "durationMs": 7962,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 7762
+          }
+        ],
+        "path": "task-audio/stage-67834c28b59f5ea2731902569c87570a7bae07279e7e16d729365c9b0b443028.ogg"
+      }
+    },
+    "image": {
+      "path": "task-images/image-f4fa638c2a1dff1fddfaa4d3e1c1d543e791d1db0ec3c45dde7270ca79b577e1.webp",
+      "sha256": "f4fa638c2a1dff1fddfaa4d3e1c1d543e791d1db0ec3c45dde7270ca79b577e1"
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "9523b4ef353c763b717f7b2f96efadf0d7f208241a0e77b8633b926660109e01",
+    "mediaSha256": "ba011ad813f113c9ca9375934a5701a80440872c4bcdda9a61e3d0d39d7375af",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-hotel-key",
+  "exposureId": "n5-story-hotel-key",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "At a hotel desk",
+  "topic": "Two people are talking at a hotel. Where will the man put his key?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "ホテルで二人が話しています。男の人は、鍵をどこに置きますか。",
+      "translation": "Two people are talking at a hotel. Where will the man put his key?"
+    },
+    {
+      "id": "t1",
+      "speaker": "a",
+      "text": "おはようございます。明日は朝早く出ます。六時には駅に行きたいんですが。",
+      "translation": "Good morning. I'm leaving early tomorrow. I'd like to be at the station by six."
+    },
+    {
+      "id": "t2",
+      "speaker": "b",
+      "text": "分かりました。その時間はここに人がいません。お金は今晩、お願いします。",
+      "translation": "Understood. No one will be at the desk at that time. Please pay this evening."
+    },
+    {
+      "id": "t3",
+      "speaker": "a",
+      "text": "はい。鍵は部屋のテーブルに置いて、ドアを閉めればいいですか。",
+      "translation": "Okay. Should I leave the key on the table in the room and close the door?"
+    },
+    {
+      "id": "t4",
+      "speaker": "b",
+      "text": "いいえ、鍵は一階まで持って来てください。入口の横に小さい箱があります。",
+      "translation": "No, please bring the key down to the first floor. There is a small box beside the entrance."
+    },
+    {
+      "id": "t5",
+      "speaker": "a",
+      "text": "あの白い箱ですね。机の上にも箱がありますが、それは違いますか。",
+      "translation": "That white box, right? There is also a box on the desk. Is that a different one?"
+    },
+    {
+      "id": "t6",
+      "speaker": "b",
+      "text": "ええ、机の上は手紙の箱です。鍵は入口の横の白い箱に入れてください。",
+      "translation": "Yes, the box on the desk is for letters. Please put the key in the white box beside the entrance."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "入口の横の白い箱",
+      "translation": "The white box beside the entrance.",
+      "rationale": "The receptionist identifies it twice as the key-return box."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "部屋のテーブル",
+      "translation": "The table in the room.",
+      "rationale": "The guest's suggestion is explicitly rejected."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "一階の机の上の箱",
+      "translation": "The box on the first-floor desk.",
+      "rationale": "That box is for letters, not keys."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "駅の入口",
+      "translation": "The station entrance.",
+      "rationale": "The station is his destination, not a key-return location."
+    }
+  ],
+  "answer": "option-1",
+  "evidence": [
+    "t4",
+    "t6"
+  ],
+  "explanation": "Separate the destination, payment time and return location. 鍵は introduces the requested key location: the white box beside the hotel entrance.",
+  "vocabulary": [
+    {
+      "surface": "鍵",
+      "reading": "かぎ",
+      "gloss": "key"
+    },
+    {
+      "surface": "戻る",
+      "reading": "もどる",
+      "gloss": "return"
+    }
+  ],
+  "media": {
+    "contentSha256": "4b93d9a0d289d056469f22f8ce4507a5ee2182cd123b1e923393e4da74c18fe4",
+    "audio": {
+      "instruction": {
+        "sha256": "62ae7bf4e7452e96c5dab3090c72f274e55b836c0d6281c6e2e8473f7e9b7387",
+        "durationMs": 5698,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 5498
+          }
+        ],
+        "path": "task-audio/stage-2e45f35ee687c2a9def2c83c1c092a02a67dce72ab3a079c856737ccea633014.ogg"
+      },
+      "focus": {
+        "sha256": "4517ed0b9dcc3fd884da64e2502423396411c59df8b25bc72ff9b7f89fc560da",
+        "durationMs": 7728,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 7528
+          }
+        ],
+        "path": "task-audio/stage-30e80021e77547e0d32abd84b6fc45a029121998dd7b32b63087927a099b3ca2.ogg"
+      },
+      "passage": {
+        "sha256": "b0a5f9e0ecb4fd557648abad0b014c0bebe0928e9e127595ec84d2c4b843e4ce",
+        "durationMs": 48313,
+        "turns": [
+          {
+            "id": "t1",
+            "startMs": 150,
+            "endMs": 8151
+          },
+          {
+            "id": "t2",
+            "startMs": 8501,
+            "endMs": 17252
+          },
+          {
+            "id": "t3",
+            "startMs": 17602,
+            "endMs": 23713
+          },
+          {
+            "id": "t4",
+            "startMs": 24063,
+            "endMs": 32078
+          },
+          {
+            "id": "t5",
+            "startMs": 32428,
+            "endMs": 39401
+          },
+          {
+            "id": "t6",
+            "startMs": 39751,
+            "endMs": 48113
+          }
+        ],
+        "path": "task-audio/stage-299ad5f5dfb585d8b5b4f957ab96f11fb23809ffec298710a47ef51f327c2b4c.ogg"
+      },
+      "focus-repeat": {
+        "sha256": "4517ed0b9dcc3fd884da64e2502423396411c59df8b25bc72ff9b7f89fc560da",
+        "durationMs": 7728,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 7528
+          }
+        ],
+        "path": "task-audio/stage-30e80021e77547e0d32abd84b6fc45a029121998dd7b32b63087927a099b3ca2.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "4b93d9a0d289d056469f22f8ce4507a5ee2182cd123b1e923393e4da74c18fe4",
+    "mediaSha256": "2b0693af2aaf6dec7600f723e8e80c53d111590ef6a0fe3dec5705f44c0c0b99",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

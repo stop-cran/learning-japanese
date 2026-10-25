@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-train-seat",
+  "exposureId": "n5-story-train-seat",
+  "taskType": "verbal-expression",
+  "kind": "monologue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "On a train",
+  "topic": "They are on a train. The standing person seems a little tired. The two people do not know each other. What does the person indicated by the arrow say?",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "絵を見て、話を聞いてください。矢印の人は、何と言いますか。答えを一つ選んでください。",
+      "translation": "Look at the picture and listen. What does the person indicated by the arrow say? Choose one answer."
+    },
+    {
+      "id": "situation",
+      "speaker": "n",
+      "text": "電車の中です。立っている人は、少し疲れているようです。二人は知り合いではありません。矢印の人は、何と言いますか。",
+      "translation": "They are on a train. The standing person seems a little tired. The two people do not know each other. What does the person indicated by the arrow say?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。どうぞ、ここに座ってください。",
+      "spokenText": "いち。どうぞ、ここに座ってください。",
+      "translation": "1. Please, sit here."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。ここに座ってもいいですか。",
+      "spokenText": "に。ここに座ってもいいですか。",
+      "translation": "2. May I sit here?"
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。ここに荷物を置かないでください。",
+      "spokenText": "さん。ここに荷物を置かないでください。",
+      "translation": "3. Please don't put luggage here."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "どうぞ、ここに座ってください。",
+      "translation": "Please, sit here.",
+      "rationale": "This offers the speaker's seat to the other person."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "ここに座ってもいいですか。",
+      "translation": "May I sit here?",
+      "rationale": "This asks permission for the speaker to sit, rather than offering his own seat."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "ここに荷物を置かないでください。",
+      "translation": "Please don't put luggage here.",
+      "rationale": "This prohibits placing luggage and does not offer the seat."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "situation",
+      "role": "situation",
+      "turns": [
+        "situation"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-1",
+  "evidence": [
+    "situation"
+  ],
+  "explanation": "The picture identifies the marked person as the current seat occupant. The audio says the standing stranger seems tired. Offering that person the seat fits; asking permission to sit reverses the roles.",
+  "visual": {
+    "role": "required",
+    "description": "Inside a train, person A is seated on the left and person B stands to the right holding a walking stick. A single arrow points to A. There is no text dialogue or selected answer."
+  },
+  "vocabulary": [
+    {
+      "surface": "席",
+      "reading": "せき",
+      "gloss": "seat"
+    }
+  ],
+  "media": {
+    "contentSha256": "ac8b5419474db3902774d89e6eb4ee900ba12c9af6fd0b9659a43b2086a6bcbf",
+    "audio": {
+      "instruction": {
+        "sha256": "c8c81934fa62f3f09519fda725693d0a40be70c9b6711a181359fe2ab463cf0a",
+        "durationMs": 11073,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 10873
+          }
+        ],
+        "path": "task-audio/stage-2b02ead24a12f811b925e86ec1bfb5e7e4bba08137cd430058406b27f7c8725a.ogg"
+      },
+      "situation": {
+        "sha256": "362f440fec8a5b30efa23f410c75bdae475c3f267991757a780d5e47054cb7be",
+        "durationMs": 13838,
+        "turns": [
+          {
+            "id": "situation",
+            "startMs": 150,
+            "endMs": 13638
+          }
+        ],
+        "path": "task-audio/stage-0f441f26ce60abc76800abf830ea90e1267fb5dac52a6d5dd603c8049ce70bfe.ogg"
+      },
+      "choice-1": {
+        "sha256": "bb17a1da7fd1dbf2fc652c6bed3ddb11a90ebe5635b7b673b194e29b95ae8b38",
+        "durationMs": 5017,
+        "turns": [
+          {
+            "id": "choice-1",
+            "startMs": 150,
+            "endMs": 4817
+          }
+        ],
+        "path": "task-audio/stage-3af9edd5be638a1b19e0e7cc84f2fd2ff630ffc1ea8f9a4fbbcf070fb8f9fc4b.ogg"
+      },
+      "choice-2": {
+        "sha256": "d8b86c212980e806e6d37f9009ca4e0165808e97407612c48dd786095b289747",
+        "durationMs": 4103,
+        "turns": [
+          {
+            "id": "choice-2",
+            "startMs": 150,
+            "endMs": 3903
+          }
+        ],
+        "path": "task-audio/stage-19cde3ab26114cccb79a74f965d262cc1333c4723eb2a023ebfd6c00d59515ad.ogg"
+      },
+      "choice-3": {
+        "sha256": "9bed7a37d3f802e2f775f95614888342eca1f51909aebc4cba0ba694abd9c306",
+        "durationMs": 4614,
+        "turns": [
+          {
+            "id": "choice-3",
+            "startMs": 150,
+            "endMs": 4414
+          }
+        ],
+        "path": "task-audio/stage-2c20422c4efe680cc164466f86b468145b43ff8275777d335f7382053dbbea9f.ogg"
+      }
+    },
+    "image": {
+      "path": "task-images/image-848971c2399ab265e6f3d9cebe92cea4e515d357fa3b5be2e8bf504d99751450.webp",
+      "sha256": "848971c2399ab265e6f3d9cebe92cea4e515d357fa3b5be2e8bf504d99751450"
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "ac8b5419474db3902774d89e6eb4ee900ba12c9af6fd0b9659a43b2086a6bcbf",
+    "mediaSha256": "3664c2783c83256893a61cff0d3b13b044903c40bcc7cbd985dcdfdddaab584b",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

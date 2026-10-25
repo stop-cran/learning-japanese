@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-heavy-door",
+  "exposureId": "n5-story-heavy-door",
+  "taskType": "verbal-expression",
+  "kind": "monologue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "At a building entrance",
+  "topic": "They are taking this box into the building. The door is closed. Look carefully at the two people's hands. What does the person indicated by the arrow say?",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "絵を見て、話を聞いてください。矢印の人は、何と言いますか。答えを一つ選んでください。",
+      "translation": "Look at the picture and listen. What does the person indicated by the arrow say? Choose one answer."
+    },
+    {
+      "id": "situation",
+      "speaker": "n",
+      "text": "この箱を建物の中に運びます。ドアは閉まっています。二人の手をよく見てください。矢印の人は、何と言いますか。",
+      "translation": "They are taking this box into the building. The door is closed. Look carefully at the two people's hands. What does the person indicated by the arrow say?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。ドアを開けましょうか。",
+      "spokenText": "いち。ドアを開けましょうか。",
+      "translation": "1. Shall I open the door?"
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。すみません、ドアを開けてください。",
+      "spokenText": "に。すみません、ドアを開けてください。",
+      "translation": "2. Excuse me, please open the door."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。この箱を開けてもいいですか。",
+      "spokenText": "さん。この箱を開けてもいいですか。",
+      "translation": "3. May I open this box?"
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "ドアを開けましょうか。",
+      "translation": "Shall I open the door?",
+      "rationale": "This fits the free-handed person by the door offering help. The arrow instead identifies the person whose hands are occupied by the box."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "すみません、ドアを開けてください。",
+      "translation": "Excuse me, please open the door.",
+      "rationale": "This requests the help the box carrier needs."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "この箱を開けてもいいですか。",
+      "translation": "May I open this box?",
+      "rationale": "This asks permission to open the box, not for help with the door."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "situation",
+      "role": "situation",
+      "turns": [
+        "situation"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-2",
+  "evidence": [
+    "situation"
+  ],
+  "explanation": "Both opening the door and asking for it to be opened fit the stated situation, but the picture assigns the roles. The arrow identifies the box carrier, so he requests help; the free-handed person would offer to open the door.",
+  "visual": {
+    "role": "required",
+    "description": "At a closed building door on the right, person A on the left carries a large box in both hands. Person B stands by the door with empty hands. One arrow points to A. The door has a visible handle; no written answers."
+  },
+  "vocabulary": [
+    {
+      "surface": "両手",
+      "reading": "りょうて",
+      "gloss": "both hands"
+    }
+  ],
+  "media": {
+    "contentSha256": "db0b3d89b233923c3a49e668e1d1710b958f82cdaa37537c24a8dac002c98ead",
+    "audio": {
+      "instruction": {
+        "sha256": "c8c81934fa62f3f09519fda725693d0a40be70c9b6711a181359fe2ab463cf0a",
+        "durationMs": 11073,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 10873
+          }
+        ],
+        "path": "task-audio/stage-2b02ead24a12f811b925e86ec1bfb5e7e4bba08137cd430058406b27f7c8725a.ogg"
+      },
+      "situation": {
+        "sha256": "5f1114a8e08f5b205be8b3dfb023b866b424aae44e7d25d1611393c3ed68478d",
+        "durationMs": 13601,
+        "turns": [
+          {
+            "id": "situation",
+            "startMs": 150,
+            "endMs": 13401
+          }
+        ],
+        "path": "task-audio/stage-245bf964b737ee620414c2f36cefc2d8dfec14d310e8e01e3534ee5a607e0c1a.ogg"
+      },
+      "choice-1": {
+        "sha256": "0d889a2df4662f2bf54268a1479658d33ea0846045b42dde756affddf2cbae65",
+        "durationMs": 3948,
+        "turns": [
+          {
+            "id": "choice-1",
+            "startMs": 150,
+            "endMs": 3748
+          }
+        ],
+        "path": "task-audio/stage-0eaa11f765801d0e126f1bf74d12acff04b3eb72c09ff424de97fdef35d4f1e0.ogg"
+      },
+      "choice-2": {
+        "sha256": "fecc823e60d051404076d2db4ea964fbbb22747257ea3b375e51f855080bad86",
+        "durationMs": 4978,
+        "turns": [
+          {
+            "id": "choice-2",
+            "startMs": 150,
+            "endMs": 4778
+          }
+        ],
+        "path": "task-audio/stage-2d29ff883838218c3dcf3939edfb4d6da1736753aa28f4a04a1e2acde6d05db5.ogg"
+      },
+      "choice-3": {
+        "sha256": "df46d8b1e81f5bdfc31211acd02ae7f7e358ebcd46d1eabc943a3da88ad28e05",
+        "durationMs": 4434,
+        "turns": [
+          {
+            "id": "choice-3",
+            "startMs": 150,
+            "endMs": 4234
+          }
+        ],
+        "path": "task-audio/stage-e4bdb96588b10ebbc95f2fcd366611ef417f54d911dfa95a5a2edb6b5b9582d8.ogg"
+      }
+    },
+    "image": {
+      "path": "task-images/image-5f2474ec02591d9d238ca573207efed670e33c037ba310ee59a88a5460ac0e9f.webp",
+      "sha256": "5f2474ec02591d9d238ca573207efed670e33c037ba310ee59a88a5460ac0e9f"
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "db0b3d89b233923c3a49e668e1d1710b958f82cdaa37537c24a8dac002c98ead",
+    "mediaSha256": "bbc46894b0445ab1acc350b8f888fc5c46c73709c7ee64bcd373258ff366bec5",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-bus-card",
+  "exposureId": "n5-story-bus-card",
+  "taskType": "verbal-expression",
+  "kind": "monologue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "On a bus",
+  "topic": "A card has fallen inside a bus. It seems to have fallen from the pocket of the person on the right. What does the person indicated by the arrow say?",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "絵を見て、話を聞いてください。矢印の人は、何と言いますか。答えを一つ選んでください。",
+      "translation": "Look at the picture and listen. What does the person indicated by the arrow say? Choose one answer."
+    },
+    {
+      "id": "situation",
+      "speaker": "n",
+      "text": "バスの中で、カードが一枚落ちました。右の人のポケットから落ちたようです。矢印の人は、何と言いますか。",
+      "translation": "A card has fallen inside a bus. It seems to have fallen from the pocket of the person on the right. What does the person indicated by the arrow say?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。すみません、これはあなたのですか。",
+      "spokenText": "いち。すみません、これはあなたのですか。",
+      "translation": "1. Excuse me, is this yours?"
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。このカードで払ってもいいですか。",
+      "spokenText": "に。このカードで払ってもいいですか。",
+      "translation": "2. May I pay with this card?"
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。あっ、私のカードです。ありがとうございます。",
+      "spokenText": "さん。あっ、私のカードです。ありがとうございます。",
+      "translation": "3. Oh, that's my card. Thank you."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "すみません、これはあなたのですか。",
+      "translation": "Excuse me, is this yours?",
+      "rationale": "This checks whether the apparent owner recognizes the found card."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "このカードで払ってもいいですか。",
+      "translation": "May I pay with this card?",
+      "rationale": "This asks permission to use the card, not whether the other person owns it."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "あっ、私のカードです。ありがとうございます。",
+      "translation": "Oh, that's my card. Thank you.",
+      "rationale": "This fits the owner recognizing the dropped card. The audio locates its apparent owner on the right, while the picture's arrow marks the finder on the left."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "situation",
+      "role": "situation",
+      "turns": [
+        "situation"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-1",
+  "evidence": [
+    "situation"
+  ],
+  "explanation": "The audio locates the apparent owner on the right. The picture identifies the marked speaker as the other person, bending toward the card. He checks ownership rather than confirming that the card is his.",
+  "visual": {
+    "role": "required",
+    "description": "Inside a bus, person A bends toward a small rectangular card on the floor. Person B stands in front of A facing away, with a visible coat pocket. A single arrow points to A. The card has no readable name or answer-bearing text."
+  },
+  "vocabulary": [
+    {
+      "surface": "足元",
+      "reading": "あしもと",
+      "gloss": "near one's feet"
+    },
+    {
+      "surface": "落ちる",
+      "reading": "おちる",
+      "gloss": "fall"
+    }
+  ],
+  "media": {
+    "contentSha256": "cbe07026b12350adc05a02c1fd5b192de65fe055df521a21ee04a729c89bd042",
+    "audio": {
+      "instruction": {
+        "sha256": "c8c81934fa62f3f09519fda725693d0a40be70c9b6711a181359fe2ab463cf0a",
+        "durationMs": 11073,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 10873
+          }
+        ],
+        "path": "task-audio/stage-2b02ead24a12f811b925e86ec1bfb5e7e4bba08137cd430058406b27f7c8725a.ogg"
+      },
+      "situation": {
+        "sha256": "78d94045caf3635ab26cc31aa185b97106635ebf4e9a8b4caf0862921cc20ca4",
+        "durationMs": 12032,
+        "turns": [
+          {
+            "id": "situation",
+            "startMs": 150,
+            "endMs": 11832
+          }
+        ],
+        "path": "task-audio/stage-b7c5d57787d01aeaf0ac3ed703b8942fa68114a11e442779b8cdaa6cee810bd4.ogg"
+      },
+      "choice-1": {
+        "sha256": "65accab3ec0c6c1e0bb008e9056046dd8182565b4dffc524766c5f88a1041abc",
+        "durationMs": 5114,
+        "turns": [
+          {
+            "id": "choice-1",
+            "startMs": 150,
+            "endMs": 4914
+          }
+        ],
+        "path": "task-audio/stage-68bbe49eb0817b88eac9090b3496d74c83347467221c74c0ce6354376fd7ec4d.ogg"
+      },
+      "choice-2": {
+        "sha256": "0f7e8fdd6849ebec7734afe34c92e23ac6df4d9c88d2b104907fb1aebe8ff950",
+        "durationMs": 4422,
+        "turns": [
+          {
+            "id": "choice-2",
+            "startMs": 150,
+            "endMs": 4222
+          }
+        ],
+        "path": "task-audio/stage-61488c5687be2c4b11f0756a5edb831aa39ec9da84f5d87d301da7c031123bda.ogg"
+      },
+      "choice-3": {
+        "sha256": "a097029075ed2cc7a900b27ab1340ad98a5aefaa7c2b374133ffe1e8208967a1",
+        "durationMs": 7059,
+        "turns": [
+          {
+            "id": "choice-3",
+            "startMs": 150,
+            "endMs": 6859
+          }
+        ],
+        "path": "task-audio/stage-1e737a56af28dac82fa309cd2be72e9e6dc5fe6d9bf873a5516b896b3af6042d.ogg"
+      }
+    },
+    "image": {
+      "path": "task-images/image-4989971688cf62f1ac52fcfc2af9f8cceae24594c7eb0bbaaa1e04771b67ca64.webp",
+      "sha256": "4989971688cf62f1ac52fcfc2af9f8cceae24594c7eb0bbaaa1e04771b67ca64"
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "cbe07026b12350adc05a02c1fd5b192de65fe055df521a21ee04a729c89bd042",
+    "mediaSha256": "b6616d91ce46e75587ec1d22a45907cfabe7dadcb0be7b5753ec3b223ae0ed87",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

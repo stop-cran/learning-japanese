@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-bookshop-shift",
+  "exposureId": "n5-story-bookshop-shift",
+  "taskType": "key-point",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "A part-time job",
+  "topic": "They are talking about work at a bookshop. Why does the man work only on Sundays?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "本屋の仕事について話しています。男の人が日曜日だけ働くのは、どうしてですか。",
+      "translation": "They are talking about work at a bookshop. Why does the man work only on Sundays?"
+    },
+    {
+      "id": "t1",
+      "speaker": "b",
+      "text": "新しいアルバイトはどうですか。本屋で働いていると聞きました。毎日行きますか。",
+      "translation": "How is your new part-time job? I heard you work at a bookshop. Do you go every day?"
+    },
+    {
+      "id": "t2",
+      "speaker": "a",
+      "text": "いいえ、平日は学校があるので、日曜日だけです。店は駅から近くて便利ですよ。",
+      "translation": "No, I have school on weekdays, so only on Sundays. The shop is conveniently close to the station."
+    },
+    {
+      "id": "t3",
+      "speaker": "b",
+      "text": "平日は学校が忙しいんですね。土曜日も授業があるんですか。",
+      "translation": "You're busy with school on weekdays, then. Do you also have classes on Saturdays?"
+    },
+    {
+      "id": "t4",
+      "speaker": "a",
+      "text": "土曜日に授業はありません。でも、一日中、家の店を手伝っています。父と母だけでは大変なので。",
+      "translation": "I don't have Saturday classes. But I help at my family's shop all day. It's too much for just my father and mother."
+    },
+    {
+      "id": "t5",
+      "speaker": "b",
+      "text": "そうなんですか。本屋は土曜日、休みだと思っていました。",
+      "translation": "I see. I thought the bookshop was closed on Saturdays."
+    },
+    {
+      "id": "t6",
+      "speaker": "a",
+      "text": "いいえ、毎日開いています。土曜日も来てほしいと言われましたが、家の手伝いがありますから。",
+      "translation": "No, it's open every day. They asked me to come on Saturdays too, but I have to help at home."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "本屋が日曜日だけ開いているからです。",
+      "translation": "Because the bookshop is only open on Sundays.",
+      "rationale": "He says it opens every day."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "家から本屋まで遠いからです。",
+      "translation": "Because the bookshop is far from his home.",
+      "rationale": "He gives school and family-shop commitments, not distance from home, as his reasons. The shop's proximity to the station does not establish his home commute."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "朝早く働きたいからです。",
+      "translation": "Because he wants to work early in the morning.",
+      "rationale": "He gives school and family-shop commitments as his reasons, not a wish for an early shift."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "ほかの日は学校や家の手伝いがあるからです。",
+      "translation": "Because other days are taken up by school or helping his family.",
+      "rationale": "Weekday school and Saturday help at the family shop prevent work on the other days."
+    }
+  ],
+  "answer": "option-4",
+  "evidence": [
+    "t2",
+    "t4",
+    "t6"
+  ],
+  "explanation": "His own availability, not the bookshop's opening days, controls the schedule. Combine weekday school with Saturday help at his family's shop.",
+  "vocabulary": [
+    {
+      "surface": "アルバイト",
+      "reading": "アルバイト",
+      "gloss": "part-time job"
+    },
+    {
+      "surface": "平日",
+      "reading": "へいじつ",
+      "gloss": "weekday"
+    },
+    {
+      "surface": "手伝う",
+      "reading": "てつだう",
+      "gloss": "help"
+    }
+  ],
+  "media": {
+    "contentSha256": "fa6893b4e9122e7c2e42d22dfac1c76ca28b246cd6ebcc9bfb096d7ecc9baf90",
+    "audio": {
+      "instruction": {
+        "sha256": "62ae7bf4e7452e96c5dab3090c72f274e55b836c0d6281c6e2e8473f7e9b7387",
+        "durationMs": 5698,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 5498
+          }
+        ],
+        "path": "task-audio/stage-2e45f35ee687c2a9def2c83c1c092a02a67dce72ab3a079c856737ccea633014.ogg"
+      },
+      "focus": {
+        "sha256": "e2ee3fb4f0016143fc2812b1a03aa90ff4787d6c934588a454cae33efd9c3c17",
+        "durationMs": 9323,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 9123
+          }
+        ],
+        "path": "task-audio/stage-d18ae58ad64d17b29326c90669bea941891bed4e486218130e1f357be25d41cc.ogg"
+      },
+      "passage": {
+        "sha256": "b0ecb737a8b16c4ea9319bf5da018bcbfc612168de6de7ddc668c299b926be33",
+        "durationMs": 52317,
+        "turns": [
+          {
+            "id": "t1",
+            "startMs": 150,
+            "endMs": 9165
+          },
+          {
+            "id": "t2",
+            "startMs": 9515,
+            "endMs": 18168
+          },
+          {
+            "id": "t3",
+            "startMs": 18518,
+            "endMs": 25257
+          },
+          {
+            "id": "t4",
+            "startMs": 25607,
+            "endMs": 36386
+          },
+          {
+            "id": "t5",
+            "startMs": 36736,
+            "endMs": 42987
+          },
+          {
+            "id": "t6",
+            "startMs": 43337,
+            "endMs": 52117
+          }
+        ],
+        "path": "task-audio/stage-4f13bc62bd28fae0758a352c9be3c6c0d8b60a35e0b8c76a865f8b1bc605dc27.ogg"
+      },
+      "focus-repeat": {
+        "sha256": "e2ee3fb4f0016143fc2812b1a03aa90ff4787d6c934588a454cae33efd9c3c17",
+        "durationMs": 9323,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 9123
+          }
+        ],
+        "path": "task-audio/stage-d18ae58ad64d17b29326c90669bea941891bed4e486218130e1f357be25d41cc.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "fa6893b4e9122e7c2e42d22dfac1c76ca28b246cd6ebcc9bfb096d7ecc9baf90",
+    "mediaSha256": "53a55624d0ce62fc132bade84cc824c8afd9db5fd5cbc15ed2f948445012eda4",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-wet-floor",
+  "exposureId": "n5-story-wet-floor",
+  "taskType": "verbal-expression",
+  "kind": "monologue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "In a corridor",
+  "topic": "The corridor is being cleaned. The floor is still wet and slippery. Someone has walked up. What does the person indicated by the arrow say?",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "絵を見て、話を聞いてください。矢印の人は、何と言いますか。答えを一つ選んでください。",
+      "translation": "Look at the picture and listen. What does the person indicated by the arrow say? Choose one answer."
+    },
+    {
+      "id": "situation",
+      "speaker": "n",
+      "text": "廊下を掃除しています。床はまだ濡れていて、滑りやすいです。人が歩いて来ました。矢印の人は、何と言いますか。",
+      "translation": "The corridor is being cleaned. The floor is still wet and slippery. Someone has walked up. What does the person indicated by the arrow say?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。ここを通ってもいいですか。",
+      "spokenText": "いち。ここを通ってもいいですか。",
+      "translation": "1. May I pass through here?"
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。もう乾きましたから、大丈夫です。",
+      "spokenText": "に。もう乾きましたから、大丈夫です。",
+      "translation": "2. It's dry now, so it's fine."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。滑りますから、気をつけてください。",
+      "spokenText": "さん。滑りますから、気をつけてください。",
+      "translation": "3. It's slippery, so please be careful."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "ここを通ってもいいですか。",
+      "translation": "May I pass through here?",
+      "rationale": "This fits the approaching person asking the cleaner for permission to pass. The picture instead marks the cleaner holding the mop."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "もう乾きましたから、大丈夫です。",
+      "translation": "It's dry now, so it's fine.",
+      "rationale": "This contradicts the statement that the floor is still wet."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "滑りますから、気をつけてください。",
+      "translation": "It's slippery, so please be careful.",
+      "rationale": "This warns the approaching person about the stated hazard."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "situation",
+      "role": "situation",
+      "turns": [
+        "situation"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-3",
+  "evidence": [
+    "situation"
+  ],
+  "explanation": "The picture identifies the speaker as the cleaner, so the warning fits. Asking permission to pass fits the approaching person instead. Reassurance that the floor has dried contradicts the stated wet condition.",
+  "visual": {
+    "role": "required",
+    "description": "A corridor with person A holding a mop beside a blue wet patch on the floor. Person B approaches from the right. A single arrow points to A. There is no written warning, speech bubble or highlighted answer."
+  },
+  "vocabulary": [
+    {
+      "surface": "廊下",
+      "reading": "ろうか",
+      "gloss": "corridor"
+    },
+    {
+      "surface": "濡れる",
+      "reading": "ぬれる",
+      "gloss": "get wet"
+    },
+    {
+      "surface": "滑る",
+      "reading": "すべる",
+      "gloss": "slip"
+    }
+  ],
+  "media": {
+    "contentSha256": "0d7a8c7174fee8e2d22c6750bfd5609ceb9d6436c2dcaa98536541a7d59e8b3b",
+    "audio": {
+      "instruction": {
+        "sha256": "c8c81934fa62f3f09519fda725693d0a40be70c9b6711a181359fe2ab463cf0a",
+        "durationMs": 11073,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 10873
+          }
+        ],
+        "path": "task-audio/stage-2b02ead24a12f811b925e86ec1bfb5e7e4bba08137cd430058406b27f7c8725a.ogg"
+      },
+      "situation": {
+        "sha256": "0344d0809f015ec672a100a01a2a5e8fc02f96ac279ce26ab271bd21d3d2078a",
+        "durationMs": 13824,
+        "turns": [
+          {
+            "id": "situation",
+            "startMs": 150,
+            "endMs": 13624
+          }
+        ],
+        "path": "task-audio/stage-051a6dda721a6e9eff11a07450e6de8965042ffe3e89753bdd047f2e8f5f11c6.ogg"
+      },
+      "choice-1": {
+        "sha256": "6cef5e4f62a552926c309856d09bf2b37beecff0baa5e1c69051877da551f69c",
+        "durationMs": 4295,
+        "turns": [
+          {
+            "id": "choice-1",
+            "startMs": 150,
+            "endMs": 4095
+          }
+        ],
+        "path": "task-audio/stage-46e986656ac840a5cfda1e3640a9629ebb2d6d3deb29ff5513e944e94eee78ef.ogg"
+      },
+      "choice-2": {
+        "sha256": "8a98e357fa6abf77e67751dc5fc48dfa0eb5ac8d0a233f26bce8e91097c8a1b4",
+        "durationMs": 5214,
+        "turns": [
+          {
+            "id": "choice-2",
+            "startMs": 150,
+            "endMs": 5014
+          }
+        ],
+        "path": "task-audio/stage-07d78cfebfbf8a89809f235b9eec71b1672e4eb9420d26b9094a6c3e329ecfd6.ogg"
+      },
+      "choice-3": {
+        "sha256": "41fb74fc3b7d5717ce983529eb6939dcd51758d0cc3eacfe76cadd681d663566",
+        "durationMs": 5225,
+        "turns": [
+          {
+            "id": "choice-3",
+            "startMs": 150,
+            "endMs": 5025
+          }
+        ],
+        "path": "task-audio/stage-ec042f90c9dd866e29f95b6d1448cf57efd78770f8694386510a637f4d9a65a1.ogg"
+      }
+    },
+    "image": {
+      "path": "task-images/image-c85eaa2d8e94c988b66669c4bc5473dee64a5c5beb20a6ef6b54d02fb2272362.webp",
+      "sha256": "c85eaa2d8e94c988b66669c4bc5473dee64a5c5beb20a6ef6b54d02fb2272362"
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "0d7a8c7174fee8e2d22c6750bfd5609ceb9d6436c2dcaa98536541a7d59e8b3b",
+    "mediaSha256": "f99b0e3fe568db6f22d435dd59705f220a548286de833c496bdb808bf5d5818e",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

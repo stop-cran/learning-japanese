@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-example-museum-bags",
+  "exposureId": "n5-story-museum-bags",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "example",
+  "blueprint": "n5-section-v1",
+  "title": "A museum entrance",
+  "topic": "Two people are talking at a museum entrance. What will the man take out of his bag?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "博物館の入口で二人が話しています。男の人は、かばんから何を出しますか。",
+      "translation": "Two people are talking at a museum entrance. What will the man take out of his bag?"
+    },
+    {
+      "id": "t1",
+      "speaker": "b",
+      "text": "大きいかばんは、あちらのロッカーに入れてください。小さい物は持って入れます。",
+      "translation": "Please put large bags in those lockers. You may take small items inside."
+    },
+    {
+      "id": "t2",
+      "speaker": "a",
+      "text": "分かりました。ノートを持って行ってもいいですか。学校で今日のことを書きます。",
+      "translation": "All right. May I take my notebook? I have to write about today at school."
+    },
+    {
+      "id": "t3",
+      "speaker": "b",
+      "text": "はい。ノートは大丈夫です。でも、建物の中で食べたり飲んだりしないでください。",
+      "translation": "Yes, a notebook is fine. But please don't eat or drink inside the building."
+    },
+    {
+      "id": "t4",
+      "speaker": "a",
+      "text": "お茶とお菓子はかばんに入れたままにします。写真を撮ってもいいですか。",
+      "translation": "I'll leave my tea and sweets in the bag. May I take photographs?"
+    },
+    {
+      "id": "t5",
+      "speaker": "b",
+      "text": "写真は撮れません。入口の写真は、お帰りの時に撮ってください。",
+      "translation": "You can't take photos inside. Please take any photos of the entrance when you leave."
+    },
+    {
+      "id": "t6",
+      "speaker": "a",
+      "text": "じゃ、カメラもここに置きます。ノートに絵を描くのは大丈夫ですね。",
+      "translation": "Then I'll leave my camera here too. It's okay to draw in the notebook, right?"
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "お茶",
+      "translation": "Tea.",
+      "rationale": "Drinks remain in the bag."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "お菓子",
+      "translation": "Sweets.",
+      "rationale": "Food remains in the bag."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "ノート",
+      "translation": "His notebook.",
+      "rationale": "He gets permission to use his notebook, then plans to draw in it. Food, drink and camera remain behind."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "カメラ",
+      "translation": "His camera.",
+      "rationale": "Because photography inside is prohibited, he leaves this behind too."
+    }
+  ],
+  "answer": "option-3",
+  "evidence": [
+    "t2",
+    "t3",
+    "t4",
+    "t6"
+  ],
+  "explanation": "Worked example: combine the permitted notebook with the later decisions to leave the drinks, food and camera. The notebook is the only listed item to take inside.",
+  "vocabulary": [
+    {
+      "surface": "博物館",
+      "reading": "はくぶつかん",
+      "gloss": "museum"
+    },
+    {
+      "surface": "ロッカー",
+      "reading": "ロッカー",
+      "gloss": "locker"
+    }
+  ],
+  "media": {
+    "contentSha256": "d4455aa9de42def29eea95bdeadcbb77092932074b538ff70fc482d9db2ae816",
+    "audio": {
+      "instruction": {
+        "sha256": "62ae7bf4e7452e96c5dab3090c72f274e55b836c0d6281c6e2e8473f7e9b7387",
+        "durationMs": 5698,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 5498
+          }
+        ],
+        "path": "task-audio/stage-2e45f35ee687c2a9def2c83c1c092a02a67dce72ab3a079c856737ccea633014.ogg"
+      },
+      "focus": {
+        "sha256": "51a06c837cba7c324ea9b5eb9445922bc8ed96eb6d7401acf2728eec768a67c0",
+        "durationMs": 9309,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 9109
+          }
+        ],
+        "path": "task-audio/stage-9488f63c4ce8210b81e7c9c6f9560c4e1f64cc25743c0f617af69c842f547b42.ogg"
+      },
+      "passage": {
+        "sha256": "778ed7de997cc810e6eb8c4d0b9f8fe9e3237c05cdad5ed9829b91345923279a",
+        "durationMs": 46438,
+        "turns": [
+          {
+            "id": "t1",
+            "startMs": 150,
+            "endMs": 7817
+          },
+          {
+            "id": "t2",
+            "startMs": 8167,
+            "endMs": 15849
+          },
+          {
+            "id": "t3",
+            "startMs": 16199,
+            "endMs": 25172
+          },
+          {
+            "id": "t4",
+            "startMs": 25522,
+            "endMs": 31814
+          },
+          {
+            "id": "t5",
+            "startMs": 32164,
+            "endMs": 39276
+          },
+          {
+            "id": "t6",
+            "startMs": 39626,
+            "endMs": 46238
+          }
+        ],
+        "path": "task-audio/stage-adc82c7c4f74f15096368d86f059b88b86d060b87ca0cc276f054a3099edd372.ogg"
+      },
+      "focus-repeat": {
+        "sha256": "51a06c837cba7c324ea9b5eb9445922bc8ed96eb6d7401acf2728eec768a67c0",
+        "durationMs": 9309,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 9109
+          }
+        ],
+        "path": "task-audio/stage-9488f63c4ce8210b81e7c9c6f9560c4e1f64cc25743c0f617af69c842f547b42.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "d4455aa9de42def29eea95bdeadcbb77092932074b538ff70fc482d9db2ae816",
+    "mediaSha256": "1f5f1dc6aa0944d090878916b30336ecb95adc9a96669bc0b6a7904636419f8d",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

@@ -1,12 +1,12 @@
 {
   "version": 1,
   "issue": "https://github.com/stop-cran/learning-japanese/issues/38",
-  "status": "Owner accepted the pilot audio/questions and selected final artwork; complete package/device release gates remain open",
+  "status": "Published for explicitly authorized owner testing; general-release and physical-device/full-section acceptance remain pending",
   "baseline": "afcb6fa0fdad0985261d07eee096b190033f64cb",
   "scope": {
     "scoredPilots": 4,
-    "approvedPilots": 0,
-    "approvedPool": 0,
+    "approvedPilots": 4,
+    "approvedPool": 28,
     "requiredScoredPoolIncludingPilots": 28,
     "requiredIndependentWorkedExamples": 4,
     "paidGenerationAuthorized": true,
@@ -17,7 +17,11 @@
     "nativeAuthorPilotsCompleted": 4,
     "ownerContentAudioAccepted": true,
     "ownerSelectedIllustrations": 2,
-    "selectedIllustrationsNativeChecked": 2
+    "selectedIllustrationsNativeChecked": 2,
+    "runtimePublishedTasks": 32,
+    "ownerTestingPublicationAuthorized": true,
+    "generalReleaseAccepted": false,
+    "runtimePublishedPilots": 4
   },
   "voices": {
     "status": "Owner accepted the generated audio; explicit exact-preview/full-order declarations are tracked separately from that feedback and device acceptance",
@@ -63,7 +67,10 @@
       "sectionItemMs": 75284,
       "ownerContentAudioAccepted": true,
       "previousSchematicPlan": "cups.svg",
-      "selectedImageSha256": "f4fa638c2a1dff1fddfaa4d3e1c1d543e791d1db0ec3c45dde7270ca79b577e1"
+      "selectedImageSha256": "f4fa638c2a1dff1fddfaa4d3e1c1d543e791d1db0ec3c45dde7270ca79b577e1",
+      "runtimePath": "listening-tasks/n5-task-cups-for-visitors.json",
+      "runtimeApprovedForOwnerTesting": true,
+      "publicationPackageSha256": "f0a51dc5a576bbe4950fd6a9574d36535670d2f8663d626ec21ae61290160233"
     },
     {
       "id": "n5-task-two-tickets",
@@ -86,7 +93,10 @@
         "focus-repeat": 9782
       },
       "sectionItemMs": 78851,
-      "ownerContentAudioAccepted": true
+      "ownerContentAudioAccepted": true,
+      "runtimePath": "listening-tasks/n5-task-two-tickets.json",
+      "runtimeApprovedForOwnerTesting": true,
+      "publicationPackageSha256": "70e09c94d6fced5b69fd092358e86f86be54a76b92a83bf02d97f9d51f202ac9"
     },
     {
       "id": "n5-task-taking-a-photo",
@@ -115,7 +125,10 @@
       "sectionItemMs": 37113,
       "ownerContentAudioAccepted": true,
       "previousSchematicPlan": "photo.svg",
-      "selectedImageSha256": "84385fee0fddf9b9f1064bfbe30fc992046355d712c99241f95b120a450b1e0f"
+      "selectedImageSha256": "84385fee0fddf9b9f1064bfbe30fc992046355d712c99241f95b120a450b1e0f",
+      "runtimePath": "listening-tasks/n5-task-taking-a-photo.json",
+      "runtimeApprovedForOwnerTesting": true,
+      "publicationPackageSha256": "20e36f2b7102b31e8cc8909a32dac88609a8c4a6276c292d52924bcef574dcfd"
     },
     {
       "id": "n5-task-offer-to-carry",
@@ -140,7 +153,10 @@
         "choice-three": 4670
       },
       "sectionItemMs": 31405,
-      "ownerContentAudioAccepted": true
+      "ownerContentAudioAccepted": true,
+      "runtimePath": "listening-tasks/n5-task-offer-to-carry.json",
+      "runtimeApprovedForOwnerTesting": true,
+      "publicationPackageSha256": "e22f7e6c8134ef6605abb17ce87ea26bf1af22ceca7a23c05f8e1db089bdc0a4"
     }
   ],
   "review": {
@@ -148,7 +164,7 @@
     "images": "The owner-selected animated illustrations supersede the original schematics. Both selected pilot images and all nine current stage occurrences were checked in fresh unscored native playback and light/dark screenshots. Physical-phone acceptance remains open.",
     "audio": "Original verified Japanese audio is reused byte-for-byte and accepted by the owner; all 18 pilot stage occurrences have native author-playback evidence, including nine rerun with the selected pilot pictures. No physical-phone or missing full-order human declaration is inferred.",
     "timing": "Measured full-pool permitted-form extrema are recorded in ../listening-task-pool/coverage.json; these four pilots alone do not establish full-pool readiness.",
-    "pool": "The owner accepted the full pool's content/audio and selected all eight final illustrations. Exact package/device receipts, physical-phone acceptance and guarded runtime export remain outstanding."
+    "pool": "All 32 selected packages are published for explicit owner testing. Their default schema-1 approval grants runtime use, not physical-phone or general-release certification."
   },
   "ownerAcceptance": {
     "reviewedOn": "2026-10-25",
@@ -156,5 +172,11 @@
     "selectedArtworkAccepted": true,
     "illustrationCatalog": "../listening-task-pool/illustrations.json",
     "boundary": "Owner accepted the audio/questions and selected the eight final pictures after comparison. This records that acceptance without inferring explicit all-stage/device declarations, physical-phone testing or a completed diagnostic section."
-  }
+  },
+  "publication": "../listening-task-pool/publication.json",
+  "remainingGates": [
+    "Any outstanding explicit full-order preview/package listening declarations; prior owner audio/question/artwork acceptance is retained.",
+    "Physical-phone media, graphics, accessibility and interruption behavior.",
+    "Integrated full real-media diagnostic-section behavior on emulator and physical phone."
+  ]
 }

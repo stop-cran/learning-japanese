@@ -168,3 +168,9 @@ For each revision of the review rules, add a rule grounded in an observed failur
   Add the scoped listening entry point and consolidate those observed checks, exact-image adoption,
   small-screen review and request pacing in the task contract. Retain existing approval gates rather
   than inventing a new review layer or treating general approval as unperformed device testing.
+- **2026-10-25 - Owner-testing delivery (resolve conflict):** The owner installed the new app
+  and synced but saw no new exercises because only authoring assets had been published.
+  The subsequent explicit personal-testing publication authorization permits this bounded
+  batch before general-release device acceptance. Record that scope honestly and publish
+  actual runtime packages/media/manifest; do not claim missing checks passed or repeat
+  the authoring-only delivery. Compatibility remains design work, not a blanket trial blocker.

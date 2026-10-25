@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-post-office-parcel",
+  "exposureId": "n5-story-post-office-parcel",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "At a post office",
+  "topic": "Two people are talking at a post office. What will the woman do next?",
+  "levelRationale": "N5-oriented polite everyday speech with simple requests, time/place expressions and explicit contrasts. Follow the announced focus rather than remembering every detail. Vocabulary tips identify potentially unfamiliar spoken words; this is not an official JLPT vocabulary or difficulty certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、質問の答えを一つ選んでください。",
+      "translation": "Listen and choose one answer to the question."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "郵便局で二人が話しています。女の人は、次に何をしますか。",
+      "translation": "Two people are talking at a post office. What will the woman do next?"
+    },
+    {
+      "id": "t1",
+      "speaker": "b",
+      "text": "この箱を大阪の姉に送りたいです。中には服が入っています。今日送れますか。",
+      "translation": "I'd like to send this box to my older sister in Osaka. There are clothes inside. Can I send it today?"
+    },
+    {
+      "id": "t2",
+      "speaker": "a",
+      "text": "はい。箱はこのままで大丈夫です。でも、ここに住所を書いてください。",
+      "translation": "Yes. The box is fine as it is. But please write the address here."
+    },
+    {
+      "id": "t3",
+      "speaker": "b",
+      "text": "住所はもう箱の横に書きました。この紙にも同じ住所を書くんですか。",
+      "translation": "I've already written the address on the side of the box. Should I write the same address on this form too?"
+    },
+    {
+      "id": "t4",
+      "speaker": "a",
+      "text": "はい。上にお姉さんの住所と名前、下にご自分の住所と名前をお願いします。",
+      "translation": "Yes. Your sister's address and name at the top, and your own address and name at the bottom, please."
+    },
+    {
+      "id": "t5",
+      "speaker": "b",
+      "text": "分かりました。お金は今、払いますか。財布をかばんから出しますね。",
+      "translation": "I see. Do I pay now? I'll get my wallet out of my bag."
+    },
+    {
+      "id": "t6",
+      "speaker": "a",
+      "text": "お金は後で結構です。まず、その紙を書いてください。ペンはこちらにあります。",
+      "translation": "You can pay later. First, please fill out that form. There is a pen here."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+      ]
+    },
+    {
+      "id": "focus-repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "お金を払います。",
+      "translation": "Pay.",
+      "rationale": "She proposes paying now, but the clerk says to pay later."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "新しい箱を買います。",
+      "translation": "Buy a new box.",
+      "rationale": "The clerk says the existing box is fine."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "姉に電話します。",
+      "translation": "Call her older sister.",
+      "rationale": "Her sister is the recipient; no phone call is requested."
+    },
+    {
+      "id": "option-4",
+      "number": 4,
+      "label": "紙に住所と名前を書きます。",
+      "translation": "Write addresses and names on the form.",
+      "rationale": "The clerk repeats this as the action to do first."
+    }
+  ],
+  "answer": "option-4",
+  "evidence": [
+    "t4",
+    "t6"
+  ],
+  "explanation": "The address already on the box does not replace the form. The immediate task is filling out the recipient and sender information; payment follows.",
+  "vocabulary": [
+    {
+      "surface": "住所",
+      "reading": "じゅうしょ",
+      "gloss": "address"
+    },
+    {
+      "surface": "送る",
+      "reading": "おくる",
+      "gloss": "send"
+    }
+  ],
+  "media": {
+    "contentSha256": "7859d2fca91b0cf4909e4b6903b872990808962f7a7426dc859069cb9797a409",
+    "audio": {
+      "instruction": {
+        "sha256": "62ae7bf4e7452e96c5dab3090c72f274e55b836c0d6281c6e2e8473f7e9b7387",
+        "durationMs": 5698,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 5498
+          }
+        ],
+        "path": "task-audio/stage-2e45f35ee687c2a9def2c83c1c092a02a67dce72ab3a079c856737ccea633014.ogg"
+      },
+      "focus": {
+        "sha256": "975c7492b83e7249e93576cc289c983550cf128faf7401473de8cf479dbe7a78",
+        "durationMs": 8004,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 7804
+          }
+        ],
+        "path": "task-audio/stage-bd68598f26c64a39cb71393b2765918d35aa6ac65a5c4e2d7dc4e04a0bb71712.ogg"
+      },
+      "passage": {
+        "sha256": "513a3efbc7f4094bfff4df2cedcc98ef47c717d24ba04c7333a4b593a089a3d2",
+        "durationMs": 50845,
+        "turns": [
+          {
+            "id": "t1",
+            "startMs": 150,
+            "endMs": 9332
+          },
+          {
+            "id": "t2",
+            "startMs": 9682,
+            "endMs": 17557
+          },
+          {
+            "id": "t3",
+            "startMs": 17907,
+            "endMs": 25299
+          },
+          {
+            "id": "t4",
+            "startMs": 25649,
+            "endMs": 33360
+          },
+          {
+            "id": "t5",
+            "startMs": 33710,
+            "endMs": 41711
+          },
+          {
+            "id": "t6",
+            "startMs": 42061,
+            "endMs": 50645
+          }
+        ],
+        "path": "task-audio/stage-5afdc02e43669d9d9d7d89a7c276007b8aca4aa16ad6cf7f69df70e16c8db5eb.ogg"
+      },
+      "focus-repeat": {
+        "sha256": "975c7492b83e7249e93576cc289c983550cf128faf7401473de8cf479dbe7a78",
+        "durationMs": 8004,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 7804
+          }
+        ],
+        "path": "task-audio/stage-bd68598f26c64a39cb71393b2765918d35aa6ac65a5c4e2d7dc4e04a0bb71712.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "7859d2fca91b0cf4909e4b6903b872990808962f7a7426dc859069cb9797a409",
+    "mediaSha256": "03186d91636d22792a3e1a411a5593f7018eee5a8d4673e04843c58ec917e65e",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

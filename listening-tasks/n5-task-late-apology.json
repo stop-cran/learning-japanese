@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-late-apology",
+  "exposureId": "n5-story-late-apology",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Arriving at a meeting",
+  "topic": "I'm sorry I'm late. I took the wrong road. Have you been waiting long?",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、返事を一つ選んでください。",
+      "translation": "Listen and choose one reply."
+    },
+    {
+      "id": "utterance",
+      "speaker": "b",
+      "text": "遅くなって、すみません。道を間違えてしまいました。長く待ちましたか。",
+      "translation": "I'm sorry I'm late. I took the wrong road. Have you been waiting long?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。いいえ、私も今来たところです。",
+      "spokenText": "いち。いいえ、私も今来たところです。",
+      "translation": "1. No, I've only just arrived too."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。どうぞ、先に帰ってください。",
+      "spokenText": "に。どうぞ、先に帰ってください。",
+      "translation": "2. Please go home first."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。ここで待っていてください。私はまだ家です。",
+      "spokenText": "さん。ここで待っていてください。私はまだ家です。",
+      "translation": "3. Please wait here. I'm still at home."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "いいえ、私も今来たところです。",
+      "translation": "No, I've only just arrived too.",
+      "rationale": "This reassures the apologizing person and answers the waiting question."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "どうぞ、先に帰ってください。",
+      "translation": "Please go home first.",
+      "rationale": "This sends the just-arrived person away rather than responding to the waiting question; no cancellation is established."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "ここで待っていてください。私はまだ家です。",
+      "translation": "Please wait here. I'm still at home.",
+      "rationale": "This is incompatible with a face-to-face arrival and the speaker being asked about waiting there."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-1",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "The reply directly addresses 長く待ちましたか and softens the apology. No extra scenario making the meeting cancelled or remote is supplied.",
+  "vocabulary": [
+    {
+      "surface": "道を間違える",
+      "reading": "みちをまちがえる",
+      "gloss": "take the wrong road"
+    },
+    {
+      "surface": "今来たところ",
+      "reading": "いまきたところ",
+      "gloss": "have just arrived; a useful fixed reply beyond basic verb tense alone"
+    }
+  ],
+  "media": {
+    "contentSha256": "dccb5bccb66bb6edea23d23c8afdc624c3f3975110e9cd42c1dcd86a701f197e",
+    "audio": {
+      "instruction": {
+        "sha256": "dce991001cc89529049444e8be608724ee0b51d7d707e677c7f01059ff9d43a3",
+        "durationMs": 4989,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 4789
+          }
+        ],
+        "path": "task-audio/stage-9d29dc697599be3f6eb1e9f18b95a91259df745296b9f70c467c177c809e8061.ogg"
+      },
+      "utterance": {
+        "sha256": "8fac20ec058c1b01150d900305674a69e2b7b0b5b82a4bb5071bcf1795d40262",
+        "durationMs": 8545,
+        "turns": [
+          {
+            "id": "utterance",
+            "startMs": 150,
+            "endMs": 8345
+          }
+        ],
+        "path": "task-audio/stage-7bd4e716fb7cda77ae0f04b29f80febbeb0acbb121c10be1cc6fc62fd77df6e2.ogg"
+      },
+      "choice-1": {
+        "sha256": "97babac5988697e5fed943a44ea999bf5bb6863f3eef8b24ee28564bb4ce6d53",
+        "durationMs": 5448,
+        "turns": [
+          {
+            "id": "choice-1",
+            "startMs": 150,
+            "endMs": 5248
+          }
+        ],
+        "path": "task-audio/stage-d07e22c0384d818a0d6a2b86b35aa1daf5a3111e89151a53cfbf5796ea383815.ogg"
+      },
+      "choice-2": {
+        "sha256": "253f8db2a58a0f4562554e405e35c806898741be9290571a6333244c473426d3",
+        "durationMs": 4853,
+        "turns": [
+          {
+            "id": "choice-2",
+            "startMs": 150,
+            "endMs": 4653
+          }
+        ],
+        "path": "task-audio/stage-8e98fe4abd09d053768f8ae95c55148a18b28d2ba8cff70f4f68f35359819887.ogg"
+      },
+      "choice-3": {
+        "sha256": "d21e74c1dd64922274ee1c53b14b74bb26c1c701dc3949d9ee3f3efdf0fc1190",
+        "durationMs": 6503,
+        "turns": [
+          {
+            "id": "choice-3",
+            "startMs": 150,
+            "endMs": 6303
+          }
+        ],
+        "path": "task-audio/stage-c7903c39e8f5605ca9f140833e8cf91a61e008d0dfd11e9691e41063715d7a14.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "dccb5bccb66bb6edea23d23c8afdc624c3f3975110e9cd42c1dcd86a701f197e",
+    "mediaSha256": "e3d1481a4c9b6dfdbe5b25ee704bab00f5c0dcac06cf0b26903311f6446fc797",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

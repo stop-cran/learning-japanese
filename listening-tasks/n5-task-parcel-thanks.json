@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-parcel-thanks",
+  "exposureId": "n5-story-parcel-thanks",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Receiving help",
+  "topic": "Thank you for carrying the heavy box upstairs. It would have been hard on my own.",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、返事を一つ選んでください。",
+      "translation": "Listen and choose one reply."
+    },
+    {
+      "id": "utterance",
+      "speaker": "b",
+      "text": "重い箱を上の階まで運んでくれて、ありがとうございました。一人では大変でした。",
+      "translation": "Thank you for carrying the heavy box upstairs. It would have been hard on my own."
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。おめでとうございます。",
+      "spokenText": "いち。おめでとうございます。",
+      "translation": "1. Congratulations."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。すみません、まだ届いていません。",
+      "spokenText": "に。すみません、まだ届いていません。",
+      "translation": "2. I'm sorry, it hasn't arrived yet."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。いいえ、また困った時は言ってください。",
+      "spokenText": "さん。いいえ、また困った時は言ってください。",
+      "translation": "3. Not at all. Let me know if you need help again."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "おめでとうございます。",
+      "translation": "Congratulations.",
+      "rationale": "This celebrates an achievement or event rather than acknowledging thanks."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "すみません、まだ届いていません。",
+      "translation": "I'm sorry, it hasn't arrived yet.",
+      "rationale": "The thanked carrying action is already completed, so claiming the box has not arrived conflicts with it."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "いいえ、また困った時は言ってください。",
+      "translation": "Not at all. Let me know if you need help again.",
+      "rationale": "This acknowledges the thanks and offers future help."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-3",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "The help has already been given. The fitting reply accepts the thanks modestly, rather than congratulating or denying arrival.",
+  "vocabulary": [
+    {
+      "surface": "運ぶ",
+      "reading": "はこぶ",
+      "gloss": "carry or transport"
+    },
+    {
+      "surface": "困る",
+      "reading": "こまる",
+      "gloss": "be in difficulty"
+    }
+  ],
+  "media": {
+    "contentSha256": "99bae5441176f54f0f3ebfa8bfdc6c8b775a83219374948debc24135d7ce79da",
+    "audio": {
+      "instruction": {
+        "sha256": "dce991001cc89529049444e8be608724ee0b51d7d707e677c7f01059ff9d43a3",
+        "durationMs": 4989,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 4789
+          }
+        ],
+        "path": "task-audio/stage-9d29dc697599be3f6eb1e9f18b95a91259df745296b9f70c467c177c809e8061.ogg"
+      },
+      "utterance": {
+        "sha256": "bef8de2a959dbbf34c47d5c5363afaf66ece0195571a3b7e202cebacc2a1e1ec",
+        "durationMs": 8603,
+        "turns": [
+          {
+            "id": "utterance",
+            "startMs": 150,
+            "endMs": 8403
+          }
+        ],
+        "path": "task-audio/stage-f45b4636221ea1356fdd5e45ded7661dbebfc9b4789d6f300464387785b1026d.ogg"
+      },
+      "choice-1": {
+        "sha256": "bc6b5ec8a2f9df34109e4cd8a75d58e8e8421fac095a9e5a1408d6fbf8aec091",
+        "durationMs": 4086,
+        "turns": [
+          {
+            "id": "choice-1",
+            "startMs": 150,
+            "endMs": 3886
+          }
+        ],
+        "path": "task-audio/stage-b21f3ed0c30cf599cbd53af1b9a3ed2493d7c49a4d05026a6f3142e4dc008f18.ogg"
+      },
+      "choice-2": {
+        "sha256": "11e0a00b1f3f3b58bfd035807d255db0048e03e2a7eec6f3e9b998393944bb3d",
+        "durationMs": 4992,
+        "turns": [
+          {
+            "id": "choice-2",
+            "startMs": 150,
+            "endMs": 4792
+          }
+        ],
+        "path": "task-audio/stage-f80043e922f154fd9180e70e9021d524a9134fc79b256f4b7ca40826fb2faa6d.ogg"
+      },
+      "choice-3": {
+        "sha256": "02dfbb4b5c158fc448a55c16466f86c69c943928b15ee1f8a32214b6b7a72c8f",
+        "durationMs": 5517,
+        "turns": [
+          {
+            "id": "choice-3",
+            "startMs": 150,
+            "endMs": 5317
+          }
+        ],
+        "path": "task-audio/stage-771cf7e057712f51da9b00f6dcad392020ad79d9acc5343939fe8918c0bffa61.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "99bae5441176f54f0f3ebfa8bfdc6c8b775a83219374948debc24135d7ce79da",
+    "mediaSha256": "e49e610422fabe4d4744e52ce9c9be3129a802a9229c658c3f9594cacb69b69d",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

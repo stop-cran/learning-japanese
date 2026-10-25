@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-example-shop-change",
+  "exposureId": "n5-story-shop-change",
+  "taskType": "verbal-expression",
+  "kind": "monologue",
+  "usage": "example",
+  "blueprint": "n5-section-v1",
+  "title": "At a checkout",
+  "topic": "The purchase cost five hundred yen. The customer gave one thousand yen but received only one hundred yen in change. What does the person indicated by the arrow say?",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "絵を見て、話を聞いてください。矢印の人は、何と言いますか。答えを一つ選んでください。",
+      "translation": "Look at the picture and listen. What does the person indicated by the arrow say? Choose one answer."
+    },
+    {
+      "id": "situation",
+      "speaker": "n",
+      "text": "買った物は五百円です。お客さんは千円を出しましたが、おつりが百円しかありません。矢印の人は、何と言いますか。",
+      "translation": "The purchase cost five hundred yen. The customer gave one thousand yen but received only one hundred yen in change. What does the person indicated by the arrow say?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。もう少し安くしてください。",
+      "spokenText": "いち。もう少し安くしてください。",
+      "translation": "1. Please make it a little cheaper."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。すみません、おつりが少ないです。",
+      "spokenText": "に。すみません、おつりが少ないです。",
+      "translation": "2. Excuse me, the change is short."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。すみません。あと四百円、お返しします。",
+      "spokenText": "さん。すみません。あと四百円、お返しします。",
+      "translation": "3. I'm sorry. I'll return another four hundred yen."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "もう少し安くしてください。",
+      "translation": "Please make it a little cheaper.",
+      "rationale": "This asks for a discount, rather than pointing out incorrect change after payment."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "すみません、おつりが少ないです。",
+      "translation": "Excuse me, the change is short.",
+      "rationale": "This politely identifies the underpayment of change."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "すみません。あと四百円、お返しします。",
+      "translation": "I'm sorry. I'll return another four hundred yen.",
+      "rationale": "This fits the cashier correcting the short change: five hundred yen is due, but only one hundred was returned. The arrow identifies the customer, not the cashier."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "situation",
+      "role": "situation",
+      "turns": [
+        "situation"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-2",
+  "evidence": [
+    "situation"
+  ],
+  "explanation": "Worked example: the amounts reveal short change, but either participant could speak about that problem. First use the picture to identify the marked person as the customer. He points out the short change; the cashier would apologize and return the missing four hundred yen. Asking for a discount addresses a different problem.",
+  "visual": {
+    "role": "required",
+    "description": "A checkout counter separates customer A on the left from employee B on the right. A holds a small coin on an open palm. A bag rests on the counter. A single arrow points to A. No prices, speech bubbles or answer labels are printed."
+  },
+  "vocabulary": [
+    {
+      "surface": "おつり",
+      "reading": "おつり",
+      "gloss": "change returned after a cash purchase"
+    },
+    {
+      "surface": "返す",
+      "reading": "かえす",
+      "gloss": "return; お返しします is a polite way to say I will return it"
+    }
+  ],
+  "media": {
+    "contentSha256": "ccb5435e66cf440b28838f35ed2996da1653b783e202597afaa4e456c10796d7",
+    "audio": {
+      "instruction": {
+        "sha256": "c8c81934fa62f3f09519fda725693d0a40be70c9b6711a181359fe2ab463cf0a",
+        "durationMs": 11073,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 10873
+          }
+        ],
+        "path": "task-audio/stage-2b02ead24a12f811b925e86ec1bfb5e7e4bba08137cd430058406b27f7c8725a.ogg"
+      },
+      "situation": {
+        "sha256": "561fa0b42f23528b020b3d628708bb6d693f8b3b472aa8f26ab2085717bfd508",
+        "durationMs": 12893,
+        "turns": [
+          {
+            "id": "situation",
+            "startMs": 150,
+            "endMs": 12693
+          }
+        ],
+        "path": "task-audio/stage-ddd9b8529fc06347d88977f6177e67e89b0df08ede4f7d585d810054063d3f88.ogg"
+      },
+      "choice-1": {
+        "sha256": "588b73bf222734ec9c60c7997e234b64ba21c09f1ed73a298e8e4c7c76fbef8b",
+        "durationMs": 4448,
+        "turns": [
+          {
+            "id": "choice-1",
+            "startMs": 150,
+            "endMs": 4248
+          }
+        ],
+        "path": "task-audio/stage-b278ef19cde917d5fb6e3e8e5f0c1636a0a6db6e49749468e0f1e1b93d7e4b30.ogg"
+      },
+      "choice-2": {
+        "sha256": "c4c73df26362fa3b32f0526ebba2e353d1740364786678e97e9e32090ab53d27",
+        "durationMs": 4964,
+        "turns": [
+          {
+            "id": "choice-2",
+            "startMs": 150,
+            "endMs": 4764
+          }
+        ],
+        "path": "task-audio/stage-b436c13665b87a8d319d386b80145e1c4cf5ff4bbb1eace958c45ff95ad4e4e3.ogg"
+      },
+      "choice-3": {
+        "sha256": "625d98e427a1d136958c113e805840398809f889373540f08e220c534f718ba5",
+        "durationMs": 6908,
+        "turns": [
+          {
+            "id": "choice-3",
+            "startMs": 150,
+            "endMs": 6708
+          }
+        ],
+        "path": "task-audio/stage-202c07d23bae31df8127b725e25f1aa1347c40bb3e374777bdbff0709ae0551f.ogg"
+      }
+    },
+    "image": {
+      "path": "task-images/image-819ad4efa369abebb95b22291ee872d4a675ee1630288720d7b684a9ac40f823.webp",
+      "sha256": "819ad4efa369abebb95b22291ee872d4a675ee1630288720d7b684a9ac40f823"
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "ccb5435e66cf440b28838f35ed2996da1653b783e202597afaa4e456c10796d7",
+    "mediaSha256": "696c185e7c3a751235ff1d9bf1418f8c4dff1d1cc4aa38cf9f947fe52eb29a77",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

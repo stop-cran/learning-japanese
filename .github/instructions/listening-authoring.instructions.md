@@ -48,6 +48,12 @@ and the shared [language/task review rules](../copilot-instructions.md).
   for genuinely missing approval evidence; do not repeatedly request already-given
   content/artwork acceptance. Do not infer physical-phone or full-section testing from
   general approval, nor enable drafts by manufacturing those declarations.
+- An explicit request to publish for owner testing can waive outstanding general-release
+  prerequisites for the named batch. Follow the [bounded testing-publication policy](../../docs/listening-tasks.md#owner-authorized-testing-publication):
+  bind the actual outputs, label the authorization in the approval note, keep unperformed
+  checks pending, and publish the runtime JSON/assets plus regenerated manifest. Pushing
+  only drafts or artwork does not deliver exercises to the installed app. Do not make
+  ordinary sync depend on a new APK when only compatible content changed.
 
 These checks consolidate observed lessons from content #38: dialogue-shortening,
 role-dependent choices, translation/feedback corrections, the owner-selected illustration

@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-stationery-location",
+  "exposureId": "n5-story-stationery-location",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "Finding something at work",
+  "topic": "I'd like to use the scissors. Do you know where they are? They weren't on the desk.",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、返事を一つ選んでください。",
+      "translation": "Listen and choose one reply."
+    },
+    {
+      "id": "utterance",
+      "speaker": "b",
+      "text": "はさみを使いたいんですが、どこにあるか知っていますか。机の上にはありませんでした。",
+      "translation": "I'd like to use the scissors. Do you know where they are? They weren't on the desk."
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。紙を切ってはいけません。",
+      "spokenText": "いち。紙を切ってはいけません。",
+      "translation": "1. You mustn't cut paper."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。昨日、一枚使いました。",
+      "spokenText": "に。昨日、一枚使いました。",
+      "translation": "2. I used one sheet yesterday."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。棚の二番目の引き出しにありますよ。",
+      "spokenText": "さん。棚の二番目の引き出しにありますよ。",
+      "translation": "3. They're in the second drawer of the cabinet."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "紙を切ってはいけません。",
+      "translation": "You mustn't cut paper.",
+      "rationale": "This supplies a prohibition, not the requested location, with no context supporting a restriction."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "昨日、一枚使いました。",
+      "translation": "I used one sheet yesterday.",
+      "rationale": "A count of sheets used yesterday does not locate the scissors."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "棚の二番目の引き出しにありますよ。",
+      "translation": "They're in the second drawer of the cabinet.",
+      "rationale": "This directly supplies a place to look."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-3",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "The indirect question asks for location. The shelf/drawer reply answers it; the other statements do not.",
+  "vocabulary": [
+    {
+      "surface": "はさみ",
+      "reading": "はさみ",
+      "gloss": "scissors"
+    },
+    {
+      "surface": "引き出し",
+      "reading": "ひきだし",
+      "gloss": "drawer"
+    }
+  ],
+  "media": {
+    "contentSha256": "1912466968f1bd63e1665f5c81458e5c103ac07b9f8e4c726b32b9857b9d6b3b",
+    "audio": {
+      "instruction": {
+        "sha256": "dce991001cc89529049444e8be608724ee0b51d7d707e677c7f01059ff9d43a3",
+        "durationMs": 4989,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 4789
+          }
+        ],
+        "path": "task-audio/stage-9d29dc697599be3f6eb1e9f18b95a91259df745296b9f70c467c177c809e8061.ogg"
+      },
+      "utterance": {
+        "sha256": "e2f0ca433e75c2bfea28df097901385b58c326177add827a6f986b234be66637",
+        "durationMs": 8323,
+        "turns": [
+          {
+            "id": "utterance",
+            "startMs": 150,
+            "endMs": 8123
+          }
+        ],
+        "path": "task-audio/stage-9cb272e67feeddf9152007eb967fd088c2873a7be8bcc39373486ff34c09a1a9.ogg"
+      },
+      "choice-1": {
+        "sha256": "265d09fb93110a5ed4ad2f710ff22b9d35951ed1556d938af721b4cf7c14c935",
+        "durationMs": 4267,
+        "turns": [
+          {
+            "id": "choice-1",
+            "startMs": 150,
+            "endMs": 4067
+          }
+        ],
+        "path": "task-audio/stage-74132ce15c4d3ec252c1245b1bb2f6292a728d0a716b008b6b31edfd14b5905a.ogg"
+      },
+      "choice-2": {
+        "sha256": "15def7889344bebd83cc66cbf5141ad7e8a5efa5cc55e77d70a1372e1e4a26a5",
+        "durationMs": 4700,
+        "turns": [
+          {
+            "id": "choice-2",
+            "startMs": 150,
+            "endMs": 4500
+          }
+        ],
+        "path": "task-audio/stage-c09b6093588001fbc9ed8238adbd00cf03ecd06efacc9580db83fdb10d456e04.ogg"
+      },
+      "choice-3": {
+        "sha256": "a81f6e7de90903d9e8dcd57d06270526225fb00c0b6bff6401cfe22d100cff2c",
+        "durationMs": 4934,
+        "turns": [
+          {
+            "id": "choice-3",
+            "startMs": 150,
+            "endMs": 4734
+          }
+        ],
+        "path": "task-audio/stage-762f34742937e1008dce87a83016d58b3efc82ba3a9c4a46d70dada6b175ee07.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "1912466968f1bd63e1665f5c81458e5c103ac07b9f8e4c726b32b9857b9d6b3b",
+    "mediaSha256": "17e5ccb782e795f51d489d10b3425f3819f0e23acf3ad8816da383527924c746",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

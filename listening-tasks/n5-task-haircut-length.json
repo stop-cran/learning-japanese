@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-haircut-length",
+  "exposureId": "n5-story-haircut-length",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "At a hair salon",
+  "topic": "Is your hair all right at about this length? Shall I cut it a little shorter?",
+  "levelRationale": "N5-oriented expression matching, not English-translation recognition. Numbered choices differ in communicative purpose; tips explain less familiar scene vocabulary. Stock voices and exact output still require listening approval.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、返事を一つ選んでください。",
+      "translation": "Listen and choose one reply."
+    },
+    {
+      "id": "utterance",
+      "speaker": "b",
+      "text": "髪は、このくらいの長さでいいですか。もう少し短くしましょうか。",
+      "translation": "Is your hair all right at about this length? Shall I cut it a little shorter?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。三時に予約しました。",
+      "spokenText": "いち。三時に予約しました。",
+      "translation": "1. I made an appointment for three o'clock."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。今の長さで大丈夫です。ありがとうございます。",
+      "spokenText": "に。今の長さで大丈夫です。ありがとうございます。",
+      "translation": "2. The current length is fine. Thank you."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。いいえ、名前は田中です。",
+      "spokenText": "さん。いいえ、名前は田中です。",
+      "translation": "3. No, my name is Tanaka."
+    }
+  ],
+  "options": [
+    {
+      "id": "option-1",
+      "number": 1,
+      "label": "三時に予約しました。",
+      "translation": "I made an appointment for three o'clock.",
+      "rationale": "This gives an appointment time, but the question concerns the current hair length."
+    },
+    {
+      "id": "option-2",
+      "number": 2,
+      "label": "今の長さで大丈夫です。ありがとうございます。",
+      "translation": "The current length is fine. Thank you.",
+      "rationale": "This confirms the current length and politely declines further shortening."
+    },
+    {
+      "id": "option-3",
+      "number": 3,
+      "label": "いいえ、名前は田中です。",
+      "translation": "No, my name is Tanaka.",
+      "rationale": "This corrects a name, which the stylist has neither asked nor proposed."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "option-1"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "option-2"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "option-3"
+    }
+  ],
+  "choiceMode": "audio",
+  "answer": "option-2",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "The stylist is checking the result and offering further shortening. Confirming the present length answers that question; appointment time and identity do not. No picture or prior measurement is needed to judge the reply's conversational fit.",
+  "vocabulary": [
+    {
+      "surface": "長さ",
+      "reading": "ながさ",
+      "gloss": "length"
+    }
+  ],
+  "media": {
+    "contentSha256": "6adeb5cbe6afaa17e205a0e0db95e080e2dc73378f8c7905030d70f21c33c507",
+    "audio": {
+      "instruction": {
+        "sha256": "dce991001cc89529049444e8be608724ee0b51d7d707e677c7f01059ff9d43a3",
+        "durationMs": 4989,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 4789
+          }
+        ],
+        "path": "task-audio/stage-9d29dc697599be3f6eb1e9f18b95a91259df745296b9f70c467c177c809e8061.ogg"
+      },
+      "utterance": {
+        "sha256": "ac4f238e72c8e04ae77d403f53f58ca08b5a2b0302c3519b67a6cc75e04526f9",
+        "durationMs": 7395,
+        "turns": [
+          {
+            "id": "utterance",
+            "startMs": 150,
+            "endMs": 7195
+          }
+        ],
+        "path": "task-audio/stage-4615cacc9e9edf9b06a2f0278521aa342d45fc14de92f7cc7c6f988e97b2002a.ogg"
+      },
+      "choice-1": {
+        "sha256": "f1fe996977e541e8b2a6b3bf54a83536c1259cf49217b0e1b8cd051df9725f8e",
+        "durationMs": 4130,
+        "turns": [
+          {
+            "id": "choice-1",
+            "startMs": 150,
+            "endMs": 3930
+          }
+        ],
+        "path": "task-audio/stage-5c15fdca19d9c953556d0d81e00b03897342eb7a6dfe59005d562ecfcc5b0598.ogg"
+      },
+      "choice-2": {
+        "sha256": "e760c99c1ee06ca7329ab68a38bdd4f0a29bc0ae708b5de3373384a539e435e7",
+        "durationMs": 6714,
+        "turns": [
+          {
+            "id": "choice-2",
+            "startMs": 150,
+            "endMs": 6514
+          }
+        ],
+        "path": "task-audio/stage-2b01220cf8c9f521e264ebaae84407bdf9abb1e864e9b76e841201bc8ec2c856.ogg"
+      },
+      "choice-3": {
+        "sha256": "d2b03b1dc8f8032deb34abc034d033f9bf0aaf7c93e7cd34374ffebb28ab0cad",
+        "durationMs": 4906,
+        "turns": [
+          {
+            "id": "choice-3",
+            "startMs": 150,
+            "endMs": 4706
+          }
+        ],
+        "path": "task-audio/stage-9183473e6e0d36159cba78a84ebeaa348f2b2e9941a923f9346b13a75d839862.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "6adeb5cbe6afaa17e205a0e0db95e080e2dc73378f8c7905030d70f21c33c507",
+    "mediaSha256": "fe021847985bc63d7e8520c305e8cefc08036af95d41b23faf07a3ea40ad3bf4",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "jlpt": 5,
+  "id": "n5-task-offer-to-carry",
+  "exposureId": "n5-story-offer-to-carry",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "scored",
+  "blueprint": "n5-section-v1",
+  "title": "A short exchange",
+  "topic": "Responding to an offer of help.",
+  "levelRationale": "The polite ましょうか offer is contrasted with reporting a completed action and giving permission to use something. The three spoken replies contain ordinary polite expressions rather than written translation clues. 荷物 and 一つ add everyday lexical/counter demands. Actual voice, pace, numbering and conversational fit remain subject to review.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-MayuNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "話を聞いて、返事を一つ選んでください。",
+      "translation": "Listen and choose one reply."
+    },
+    {
+      "id": "utterance",
+      "speaker": "a",
+      "text": "荷物がたくさんありますね。一つ、持ちましょうか。",
+      "translation": "You have a lot of bags. Shall I carry one?"
+    },
+    {
+      "id": "choice-one",
+      "speaker": "b",
+      "text": "1。ありがとうございます。お願いします。",
+      "spokenText": "いち。ありがとうございます。お願いします。",
+      "translation": "One. Thank you. Yes, please."
+    },
+    {
+      "id": "choice-two",
+      "speaker": "b",
+      "text": "2。はい、もう持ってきました。",
+      "spokenText": "に。はい、もう持ってきました。",
+      "translation": "Two. Yes, I've already brought it."
+    },
+    {
+      "id": "choice-three",
+      "speaker": "b",
+      "text": "3。どうぞ、使ってください。",
+      "spokenText": "さん。どうぞ、使ってください。",
+      "translation": "Three. Go ahead and use it."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-one",
+      "role": "choice",
+      "turns": [
+        "choice-one"
+      ],
+      "optionId": "accept"
+    },
+    {
+      "id": "choice-two",
+      "role": "choice",
+      "turns": [
+        "choice-two"
+      ],
+      "optionId": "brought"
+    },
+    {
+      "id": "choice-three",
+      "role": "choice",
+      "turns": [
+        "choice-three"
+      ],
+      "optionId": "use"
+    }
+  ],
+  "choiceMode": "audio",
+  "options": [
+    {
+      "id": "accept",
+      "number": 1,
+      "label": "ありがとうございます。お願いします。",
+      "translation": "Thank you. Yes, please.",
+      "rationale": "This thanks the person and accepts the offer to carry a bag."
+    },
+    {
+      "id": "brought",
+      "number": 2,
+      "label": "はい、もう持ってきました。",
+      "translation": "Yes, I've already brought it.",
+      "rationale": "This reports having brought something already. The speaker offers future help with carrying, rather than asking whether the bags have been brought."
+    },
+    {
+      "id": "use",
+      "number": 3,
+      "label": "どうぞ、使ってください。",
+      "translation": "Go ahead and use it.",
+      "rationale": "This gives permission to use something. The speaker offers to carry a bag, not to borrow or use it."
+    }
+  ],
+  "answer": "accept",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "持ちましょうか offers the speaker's help. ありがとうございます。お願いします accepts that offer. A natural polite refusal could also fit in ordinary conversation, but none is included as a supposedly wrong choice here.",
+  "vocabulary": [
+    {
+      "surface": "荷物",
+      "reading": "にもつ",
+      "gloss": "bags; luggage; things being carried"
+    },
+    {
+      "surface": "一つ",
+      "reading": "ひとつ",
+      "gloss": "one item"
+    },
+    {
+      "surface": "持ちましょうか",
+      "reading": "もちましょうか",
+      "gloss": "shall I carry it?; an offer, here"
+    }
+  ],
+  "media": {
+    "contentSha256": "bc0140165c3ae03844dcbc82f1f0272039d4800ffd9140b468a2ea5a9536a44d",
+    "audio": {
+      "instruction": {
+        "sha256": "9ef9a4c9712ebffbe3bf772f5a031929f80e88f442f52dc0e150216a594f3e03",
+        "durationMs": 4989,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 4789
+          }
+        ],
+        "path": "task-audio/stage-840a1dfb59601bc18d0a5587c1fb39cbc243055df0e8ba8001eccd9f66cf0f85.ogg"
+      },
+      "utterance": {
+        "sha256": "733bf5405ddf9b38ca0b812dc824397d4a6498936d3a8d43eef6d5e146737bcf",
+        "durationMs": 5811,
+        "turns": [
+          {
+            "id": "utterance",
+            "startMs": 150,
+            "endMs": 5611
+          }
+        ],
+        "path": "task-audio/stage-dce33c626119b7b1ff958b3703bf7f74d8fe6bb612a3322b4a08aa1729015a8c.ogg"
+      },
+      "choice-one": {
+        "sha256": "cf6dcd63d04eacd2f30e0b827b2644428e74f3c4dde8e0c9a7ad192bdbd912a8",
+        "durationMs": 6476,
+        "turns": [
+          {
+            "id": "choice-one",
+            "startMs": 150,
+            "endMs": 6276
+          }
+        ],
+        "path": "task-audio/stage-dc9c0fe1697d4dd173116dc2643e6f94d10d8193ae3fe5afdad32e52a2a11b9b.ogg"
+      },
+      "choice-two": {
+        "sha256": "4af645a62abfcf5539fc610c6e6b6f0f03c9fd58bab536cff60ff6319851ec14",
+        "durationMs": 4448,
+        "turns": [
+          {
+            "id": "choice-two",
+            "startMs": 150,
+            "endMs": 4248
+          }
+        ],
+        "path": "task-audio/stage-4451f992f00a53484373e38fd3c34f0ac51c09bd16f9b3ed29e0a7eea7a84428.ogg"
+      },
+      "choice-three": {
+        "sha256": "fcb9e0b848771eaf73034c9f3255cf0d80c917542674b23c29e770bc54c00421",
+        "durationMs": 4670,
+        "turns": [
+          {
+            "id": "choice-three",
+            "startMs": 150,
+            "endMs": 4470
+          }
+        ],
+        "path": "task-audio/stage-dab2836a620e8c0e611dd81658e23523d559a786d13d0a0bee7075b27f50d73e.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "bc0140165c3ae03844dcbc82f1f0272039d4800ffd9140b468a2ea5a9536a44d",
+    "mediaSha256": "a08ab6fe378a4a6a9f3516446098c5498d8ccbdd4bc0408e098c1f7625fe454b",
+    "reviewedOn": "2026-10-25",
+    "note": "Owner-authorized personal-testing publication, 2026-10-25. The owner accepted the audio/questions and selected illustrations, then explicitly requested runtime publication before remaining general-release checks. All source, stage/media hashes and timing bindings are verified. Physical-phone and integrated full-section acceptance, and any outstanding explicit full-order listening declarations, remain pending; they are not claimed passed. This exact-output approval authorizes testing, not general-release or proficiency certification."
+  }
+}
