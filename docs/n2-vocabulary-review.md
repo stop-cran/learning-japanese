@@ -2,7 +2,7 @@
 
 ## Status
 
-**Batches 01-66 review-closed; batch 67 drafted.** The target is all 1,812 source rows,
+**Batches 01-66 review-closed; batch 67 corrected, confirmations pending.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
 The first 1,320 rows are review-closed; 20 are draft and 472 remain pending.
@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 67: N2:1322-N2:1341
 
-**Status:** draft; independent GPT and Claude reviews have not yet run.
+**Status:** draft; independent initial reviews reconciled and corrected;
+both original-session confirmations remain pending.
 
 Fifteen new articles: 生える, はがす, ばからしい, 秤, 吐き気,
 掃く, 歯車, バケツ, 挟まる, はしご, はじめに, はじめまして,
@@ -69,6 +70,67 @@ responses had no selected lexical body and are not positive verification.
 Draft coverage is **1,320 closed / 20 draft / 472 pending /
 0 unresolved**, mapping **1,326 articles: 1,227 new / 99 reused**.
 The authored scope is 28 files. Inherited batch61 quiz debt remains deferred.
+
+### Initial independent reviews and bounded reconciliation
+
+Actual `gpt-6.1-sol` and `claude-opus-5.5` reviewed authored
+`82e2764231c6146414d806551d1db63670d9191a` sequentially and
+fully exited without edits. Their authenticated native final reports
+are archived as [GPT](n2-vocabulary-reviews/batch-67-gpt-initial.md)
+and [Claude](n2-vocabulary-reviews/batch-67-claude-initial.md).
+Both read all eighteen article identities, four complete edited
+kanji cards, twenty mappings, eighteen principal families,
+27 component records and the exact TSV header/twenty rows.
+
+GPT actually returned all 24 bounded family/body chunks,
+177 labels and both public renderings. Claude did not read those
+chunks or the full label/public-JSON captures; it read five complete
+comparison words and searched further titles/exclusions. Both
+made some successful fresh dictionary lookups and disclosed
+failed or irrelevant returns. Equal access is not equal actual depth.
+Neither could execute Git; author-side checks authenticate the
+committed snapshot, prompts, models and complete native outputs.
+
+Author reconciliation adds nine direct guards on seven new cards:
+はがす/千切る, ばからしい/傑作, 吐き気/むかむか,
+はしご/回る, はじめに/概論, パターン/タイプ,
+パターン/種類, パターン/一種 and 挟まる/挟む.
+These are bounded facet/context judgments, not synonym cliques
+or unrestricted grammatical substitutions. Existing exclusions
+on older articles remain untouched.
+
+吐き気 now explicitly mixes native 吐き with on-reading け.
+Its `wago` classification is retained under the existing
+native-first mixed-word convention, checked in complete 場所.
+The unsupported 挾まる sentence is deleted without claiming that
+the spelling is impossible. はじめに and 斜 lose author-facing
+source-row prose, はがす gets direct spelling guidance, and
+はしごする now acknowledges both transitive and intransitive uses.
+
+Two additional chunks were actually read through EOF: eleven
+complete families / 35 senses and eight complete comparison bodies.
+Nine families / 31 senses and seven body identities are additional
+to the original inspection: the dictionary union is 277 / 734.
+Complete 場所 and 磨く were separately read, and 気 was an
+additional complete unchanged kanji read. The separate completion
+receipt preserves the original prepared plans and historical counts.
+An extra truncated 気 page return is not positive lexical verification.
+
+GPT uniquely reported five of the six quiz-guard groups and the
+一種 extension within the shared classification group.
+Claude uniquely reported the mixed-reading explanation, direct
+挟む safeguard, author-facing prose and optional はしご POS
+qualification. タイプ, tentative 種類 and the older-character
+observation occur in both reports across findings and optional
+sections. This is useful complementarity on this sample, not
+measured bias reduction or a model ranking.
+
+Optional extra links, collocations and recognition senses are
+deferred. The tentative 掃く/磨く guard was not established by
+the complete 磨く title/body: polishing or brushing teeth is not
+ordinary sweeping away debris. Shared "brush" wording alone
+does not establish a competing full answer. No exhaustive
+cleaning or container comparison is claimed.
 
 ## Batch 66: N2:1302-N2:1321
 

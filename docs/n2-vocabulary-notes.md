@@ -61,9 +61,38 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   are not silently imported. These are author inspections,
   not independent reviewer retrievals or frequency evidence.
 - Quiz guards are direct symmetric, nontransitive hypotheses,
-  not an inherited synonym clique. Their necessity and excesses
-  still require the independent reviews. No global ambiguity,
+  not an inherited synonym clique. Independent initial reviews
+  are reconciled; original-session confirmations remain pending. No global ambiguity,
   native certification or measured model-bias claim is made.
+- Review corrections add nine direct safeguards, including the
+  secondary rounds sense of 回る and humorous absurd-blunder
+  sense of 傑作. Neither a narrow title nor a noun/verb distinction
+  automatically removes competition from an actually taught facet.
+  Conversely, shared "brush" wording does not make polishing or
+  brushing teeth equivalent to sweeping away debris.
+- Correct 吐き気's explanation to native 吐き plus on-reading け.
+  Retain the app's existing native-first mixed-word `wago` grouping,
+  checked in complete 場所, and add `mixed-reading`; do not
+  relabel all mixed words as all-on compounds.
+- Delete the unsupported exact-form 挾まる claim instead of
+  turning incomplete evidence into a claim of nonexistence.
+  Keep source-row provenance in contributor records, not the
+  learner's explanation. A complete POS record marking both
+  transitive and intransitive does not justify calling はしごする
+  exclusively transitive.
+- Corrective actual reads add eleven complete families / 35
+  senses, nine / 31 of them new to the original union of 268 / 703:
+  the union is 277 / 734. Eight full older comparison bodies
+  contain seven additional identities. Complete 場所 and 磨く
+  and unchanged kanji 気 were also directly read. Prepared
+  plans and actual-read receipts remain separate.
+- Compare observations anywhere in each report before calling
+  them unique. Both models noticed タイプ, 種類 (tentative in
+  Claude) and the old-character issue (optional in GPT).
+  GPT contributed other quiz pairs; Claude contributed the
+  mixed-reading correction, direct 挟む pair, learner prose and
+  optional POS qualification. Actual comparison-read depth
+  differed substantially; this is not measured bias reduction.
 
 ## Batch 66 authoring observations
 
