@@ -35,7 +35,9 @@ are errors; new grading/presentation requirements need an explicit version, not 
 The four [structural examples](listening-task-examples/) are original **unapproved documentation
 fixtures**, not runtime content, approved pilots or spend authorization.
 The four [E pilot drafts](listening-task-pilots/coverage.json) are separate original learning
-packages, also unapproved and outside the runtime manifest. Their ledger records intended evidence,
+packages outside the runtime manifest. The owner has accepted the audio/questions and
+[selected eight final illustrations](listening-task-pool/illustrations.json); complete
+package/device release approval remains separate. Their ledger records intended evidence,
 story independence, proposed casting and outstanding media/device gates. Neither collection can
 supply an assessment pool until its actual publication requirements have been met.
 
@@ -163,6 +165,87 @@ approval. Decode success, ASR, a text review or a filename is never listening ap
 Keep approved synthesis provenance, not credentials, endpoints, private logs or PCM caches.
 Paid previews/pilots require explicit bounded authorization; after accepted pilots, the remaining
 pool requires **fresh** explicit authorization. This document does not grant either.
+
+## Practical authoring sequence
+
+Use the [scoped contributor instructions](../.github/instructions/listening-authoring.instructions.md).
+The first 32-package pool and its illustration revision established the following working sequence.
+These are authoring lessons, not additional runtime fields or an official difficulty calibration.
+
+1. **Design the task before the media.** Record the independent event/story, tested operation,
+   roles/register, answer evidence and the division between heard and visual information.
+   Keep discovery titles neutral. Compare against existing stories as well as IDs; the first
+   pool replaced an invitation-refusal draft that was too close to a legacy episode.
+2. **Write and review the complete exchange.** Read every possible response in the speaker's
+   role, including translations and all feedback. Distinguish request, offer, permission,
+   ownership and event stage. Plausible other-role alternatives made the door, card, floor
+   and checkout illustrations genuinely necessary; removing redundant role narration alone
+   was not enough. Do not turn a fitting refusal into an incorrect answer.
+3. **Calibrate natural length from actual pilots.** Measure the intended voices/rates, then
+   shorten or expand the meaningful dialogue, not silence. Reread the entire revised task:
+   shortening previously left a denial replying to a deleted question. Check modality in
+   translations and avoid feedback deductions unsupported by the conversation. After recording,
+   calculate the shortest and longest permitted forms, counting repeated stage occurrences
+   but deduplicating stored bytes.
+4. **Agree on representative artwork before a whole image batch.** Default to the soft,
+   natural animated/editorial still style used by the onomatopoeia cards, with
+   `tools/image_prompts.json`'s shared `style`. Show a people scene and, when applicable,
+   a numbered grid. The first schematic pictures were legible but did not meet the owner's
+   visual preference. Style review and answer-evidence review are separate checks.
+5. **Generate to explicit visual invariants.** The
+   [selected illustration catalog](listening-task-pool/illustrations.json) preserves prompts,
+   generation settings, final hashes and marker coordinates. Specify role positions,
+   object count, size/color mapping, action state and crucial props. Check the *output*:
+   both hands must hold the box; the door must be closed; the camera must face its subjects;
+   a finder must be distinguishable from an owner; a mop must connect to the cleaner's hands.
+   Do not rewrite accepted audio/options to excuse a contradictory picture.
+6. **Add only necessary controlled marks.** Generate text-free scenes, then place a single
+   high-contrast, outlined role arrow using the actual person's position. Add grid numbers
+   in fixed order with equal treatment of all choices; never an arrow to the correct cup.
+   Keep marks clear of faces, hands and diagnostic props. Ordinary natural scenes should
+   not become diagrams, but natural shading must not obscure the task's distinguishing features.
+7. **Review the final learner-visible form.** Inspect marked 512px output and 256px previews,
+   then native light/dark rendering and required accessibility behavior. Keep text, alt
+   descriptions, labels and feedback from leaking answers before the permitted stage.
+   Listen to complete audio order, every audible option number and difficult counters,
+   not just a representative voice. Browser playback and native instrumentation are useful
+   evidence, not substitutes for a listener or physical-phone acceptance.
+8. **Publish only the selected, correctly bound version.** Preserve earlier comparisons,
+   source art and frozen runs. Record owner text/audio/artwork acceptance accurately.
+   Keep any missing exact-output/device gates explicit rather than repeatedly asking for
+   acceptance already given, silently transferring approval or declaring the pool released.
+
+### Image generation and adoption
+
+Reuse the existing image generator's generation/conversion helpers; its word-card `--apply`
+workflow and article-bound scene receipts are **not** a task-image exporter. New task art
+belongs in the task authoring catalog until guarded runtime export selects it. Keep raw
+service responses, account bindings and billing records private.
+
+Before sending a batch, inspect the actual deployment's quota and applicable token prices.
+Pace consecutive requests; the illustration run encountered a 429 between successive
+requests until start-to-start spacing was added. Honor `Retry-After` as well as the deployment's
+request interval. Reserve for every actual HTTP attempt, distinguish provider-reported token
+cost estimates from conservative retained reservations, and reconcile any attempt-ceiling
+amendment without erasing prior charges or increasing the owner's monetary allocation.
+Do not estimate one model's token consumption using another model's image-price calculator.
+An uncertain response is not permission for an automatic second potentially billed request.
+
+For an **image-only revision**, keep the original plan, packages and media immutable.
+Create a new plan with the unchanged draft documents and the selected WebP files.
+Reuse only request-matching verified stage/preview receipts and byte-identical encoded
+audio: text, `spokenText`, voice/rate, renderer identity, stage order and every timing
+binding must still match. Verify the rebuilt packages with the normal renderer/validator;
+the new image path/hash changes the complete `mediaSha256`, not the learning-content hash.
+Do not copy spending authorization, preview/package/device declarations or old release
+approval into the new run. Record the precise scope of any owner acceptance against
+the selected bytes, then satisfy the remaining release gates. No synthesis is necessary
+when all required audio is already verified.
+
+The selected WebPs and their former SVG schematics remain in `docs/` for authoring and
+comparison, not the runtime image map. Include **both** in complete-archive budget checks;
+ignored documentation still occupies download/inflation space. Only guarded export adds
+the selected bytes to `task-images/` and approved packages to `listening-tasks/`.
 
 ## Private task-stage rendering
 

@@ -63,6 +63,15 @@ task, not just the Japanese sentence or intended key:
 
 These regroup existing checks, not a new review layer. A clean bounded review needs no manufactured finding or rule.
 
+## Listening exercises
+
+Follow the [listening authoring instructions](instructions/listening-authoring.instructions.md)
+and the [practical authoring sequence](../docs/listening-tasks.md#practical-authoring-sequence).
+Review the complete heard/seen task, including every spoken alternative and feedback branch,
+not only the transcript. Keep owner acceptance, exact media bindings, spending authorization
+and actual native/phone evidence distinct. The selected illustration style and role markers
+are part of the exercise, not interchangeable decoration.
+
 ## Independent review and reconciliation
 
 - When multi-model review is requested, use different model families on the same identified snapshot. Keep initial reviewers independent of one another's findings and the author's prior review rationale. Record the models actually used rather than pinning versions in this guide.
@@ -152,3 +161,10 @@ For each revision of the review rules, add a rule grounded in an observed failur
   [curriculum audit](../docs/grammar-curriculum-sources.json) found coherent groups mixing full-form production and supplied-form
   interpretation. Clarify the shared contract with the exact production facets motivating a gate, without claiming every member
   or choice presentation needs that operation. Independent review established no actionable defect; no additional review layer is added.
+- **2026-10-25 - Listening authoring (add/regroup):** Content
+  [#38](https://github.com/stop-cran/learning-japanese/issues/38) exposed orphaned dialogue replies after shortening,
+  illustrations made unnecessary by role-revealing narration/options, and translation/feedback overclaims.
+  The owner preferred the onomatopoeia-style animated illustrations to the first schematic scenes.
+  Add the scoped listening entry point and consolidate those observed checks, exact-image adoption,
+  small-screen review and request pacing in the task contract. Retain existing approval gates rather
+  than inventing a new review layer or treating general approval as unperformed device testing.
