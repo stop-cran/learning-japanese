@@ -21,6 +21,37 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 ## Batch 70 authoring observations
 
+- Authenticated blind initial reviews used GPT-6.1 Sol and Claude
+  Opus 5.5 sequentially on the same committed draft. Both found the
+  missing 引き出す/引き出し cash-withdrawal safeguard. Claude uniquely
+  found 引き受ける/受け持つ and suggested aligning ハンドル's footer
+  with selected senses 1-2 versus additional recognition 3-4.
+  GPT uniquely identified the unsupported English borrowing route
+  for ピストル and positively verified 引分 in a second authority.
+- The correction adds both direct safeguards, cites the explicit
+  Dutch pistool attribution, and sources 引分 without claiming
+  present-day frequency. Claude's source-gap observation prompts
+  a citation, but absence from its two inspected spelling lists
+  does not disprove the separately verified heading. Complete
+  1329640 adds one family/one sense: author totals are now
+  388 families / 946 senses. Full 受け持つ and 引き出し add two
+  older identities, bringing that union to 144; だます was a reread.
+  Original prepared/completed receipts remain immutable.
+- Native complete-return authentication found broader initial
+  access than Claude's final scope statement recalls: fourteen
+  whole family chunks (333 families) and seven older-body chunks
+  (60 identities), not just targeted family searches/four chunks.
+  Preserve the raw report and disclose the discrepancy; returned
+  bytes prove access, not remembered comprehension. GPT returned
+  all sixteen family/seventeen older-body chunks and the supplement.
+  Equal access is not equal coverage or measured bias reduction.
+- The optional 引っ掛かる/だます guard is not established by the
+  actual titles and complete families: falling for a trick and
+  actively deceiving someone describe opposite participants.
+  This is a claim-specific judgment, not a blanket voice exemption.
+  Keep the explicit contrast; no inherited exclusion clique.
+  Other optional grammar/process/variant/link polish stays deferred.
+  Both original-session confirmations are still pending.
 - Seventeen new articles and three reused identities cover
   N2:1382-N2:1401. Previously unlevelled ぴかぴか gains
   sourced N2; 引き出す keeps N4 and ぴったり keeps N3.

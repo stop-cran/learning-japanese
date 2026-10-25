@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 70: N2:1382-N2:1401
 
-**Status:** drafted; independent review and reconciliation pending.
+**Status:** independently reviewed and corrected; original-session
+confirmations pending.
 
 Seventeen new articles: 半島, ハンドル, 日当たり, 日帰り,
 比較的, 日陰, 引き受ける, 引き返す, 引き算, 引き止める,
@@ -64,6 +65,40 @@ Draft coverage: **1,380 closed / 20 draft / 412 pending /
 **1,386: 1,282 new / 104 reused**. The authored scope is 29 files.
 Author inspection is not an independent reviewer finding or a
 claim of measured model-bias reduction.
+
+Initial reports: [GPT-6.1 Sol](n2-vocabulary-reviews/batch-70-gpt-initial.md)
+and [Claude Opus 5.5](n2-vocabulary-reviews/batch-70-claude-initial.md).
+Both ran read-only, independently and sequentially on `c30ca893`.
+Exact prompts, actual models, complete native final messages,
+twenty assigned bodies, three kanji bodies, mappings, principals,
+components and bounded TSV returns are authenticated.
+
+| Observation | Reconciliation |
+| --- | --- |
+| GPT B70-01: ピストル English origin | Correct to the explicitly sourced Dutch pistool attribution. |
+| GPT B70-02 / Claude F3: withdrawal overlap | Add the direct 引き出す/引き出し guard, preserving N4 and all earlier guards. |
+| Claude F1: responsibility overlap | Add 引き受ける/受け持つ after complete 1329640/body inspection. |
+| Claude F2: 引分 source gap | Add the exact Japanese-dictionary heading and citation; withdraw the implication that absence from two spelling lists disproves it. |
+| Claude O2: ハンドル sense footer | Align with selected 1-2 and additional recognition 3-4; mapping unchanged. |
+| Other optional observations | Defer grammar/process/variant/navigation polish; the proposed だます edge remains unestablished by the actual titles and participant roles. |
+
+The corrective author union is **388 families / 946 senses and
+144 complete older identities**. One new family/one sense and two
+new older identities are separate from the immutable original
+inspection receipts. Two additional successful Kotobank inspections
+cover 精選版 日本国語大辞典's Dutch attribution and 引分 heading;
+the short corrective excerpts are not raw or full-page archives.
+
+Actual reviewer access differs. GPT returned all 33 family/body
+chunks and the supplement. Claude returned fourteen complete family
+chunks (333 families) and seven older-body chunks (60 identities),
+despite recalling narrower reads in its final report; the native
+receipt and unaltered report preserve that discrepancy. Complete
+return authenticates access, not comprehension. Shared withdrawal
+and complementary responsibility/borrowing-route findings were
+useful in this sample. Positive spelling verification is also a GPT
+contribution, even though it was not a defect. This is not a model
+ranking or measured bias reduction. No closure is claimed yet.
 
 ## Batch 69: N2:1362-N2:1381
 
