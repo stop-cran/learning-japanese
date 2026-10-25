@@ -5,8 +5,8 @@
 **Batches 01-54 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,080 rows are review-closed; none are draft,
-732 remain pending, and none are unresolved.
+The first 1,080 rows are review-closed; 20 are draft,
+712 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,55 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 55: N2:1082-N2:1101
+
+**Status:** draft; independent reviews and reconciliation pending.
+
+Eighteen new articles: 散らす, ちり紙, 散る, 追加, ついで,
+通貨, 通勤, 通知, 通帳, 通訳, 通用, 通路, 付き合う,
+突き当たり, 突き当たる, 点く, 突く and 次ぐ.
+Reuse 通じる for narrow visible 通ずる recognition, preserving its
+primary つうじる, N3, title and original teaching. Reuse 月日,
+adding sourced N2 and provenance for つきひ while preserving its
+identity and separately attributed がっぴ date reading.
+
+The [batch packet](n2-vocabulary-batch-sources/batch-55.json)
+preserves all raw fields and twenty source principal families/
+56 senses. Including the retained 通じる teaching family gives
+21 source/teaching families and 70 sense records. Author inspection
+covered 221 selected original families/669 senses plus six distinct
+supplemental families/16 senses: a deduplicated union of 227/685,
+including the principals. All 127 original and four supplemental
+labels, 116 selected original and four supplemental full old bodies,
+26 component records, the complete 貨 kanji card and twenty public
+lexical endpoint bodies were read. The other captured families and
+eleven irrelevant original label matches are not claimed as complete
+reads. Public endpoints are one dictionary service, not twenty
+independent dictionaries.
+
+Raw 通ずる has an empty source gloss. Entry 1983740 explicitly
+crossreferences corresponding 通じる senses, supporting reuse;
+selected connection/communication/expertise recognition is
+nonexhaustive author scope, not recovered compiler intent.
+Teaching entry 1432880 matches the preserved primary つうじる;
+1983740 is separately recorded as a validated source alias.
+Do not regularize the public サ変 通ずる form as ichidan.
+
+Normalize source 塵紙 to ちり紙, 序で to kana-primary ついで,
+and search-only 付合う to 付き合う, visibly retaining each raw
+spelling and reading. Distinguish incidental 序で from subsequent
+次いで, broad public 付く/着く from the lighting use of 点く,
+and つく from a separately headed つつく. Public credit-account
+通帳 recognition is not a fabricated second pinned sense.
+Additional senses do not independently acquire an N2 label.
+
+Add 貨/通貨 with つうか in the カ reading row and Common words,
+preserving baseline kanji metadata. Other existing primary components
+are substantively linked word-side; missing cards are not invented.
+Current draft totals: 1,092 mapped articles = 1,021 new and 71 reused
+baseline identities; 4,294 total word articles. A draft is not
+review-closed merely because it is committed or structurally valid.
 
 ## Batch 54: N2:1062-N2:1081
 

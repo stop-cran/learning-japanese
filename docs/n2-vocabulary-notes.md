@@ -95,6 +95,30 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 55 authoring:** A blank raw gloss does not authorize
+  reconstruction of compiler intent. Explicit 通ずる/通じる
+  crossreferences support bounded recognition in the existing
+  primary-reading article; keep source and teaching identities
+  separate and validate each. JMdict's alternative-ずる label does
+  not by itself settle the public サ変 conjugation description.
+  Preserve the easier N3 article level.
+
+- **Batch 55 authoring:** Count twenty source principal families
+  separately from the extra reused teaching family; both belong
+  inside, not on top of, the inspected union. Complete supplementary
+  金銭, 銅貨, デート and 先 evidence adds six distinct families
+  and four old bodies. Verify manually entered cross-entry citations:
+  点く overlaps the lighting sense of 1495740付く:9.
+  Mixed public headings do not supply every homograph's meaning.
+
+- **Batch 55 authoring:** Retain source aliases visibly without
+  duplicating articles. Hygienic ちり紙 is not arbitrary decorative
+  tissue; 通貨 need not be cash; 通勤 is not every kind of work;
+  付き合う need not be romantic. A directional 突き当たり may
+  allow a turn. Godan 散る has 散って and 次ぐ has 次いで.
+  Incidental ついで attachment differs from sequential 次いで;
+  attribute the latter's separate lexical identity.
+
 - **Batch 54 closure:** Authenticate all four complete native reports
   and exact twenty-row all-three-CLEAN associations before closing.
   Both original sessions accepted the corrections; Claude withdrew
