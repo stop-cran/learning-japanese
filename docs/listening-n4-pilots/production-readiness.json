@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "checkedOn": "2026-10-25",
+  "status": "UNAUTHORIZED preparation only; no N4 paid request or media output",
+  "speech": {
+    "serviceRegion": "swedencentral",
+    "serviceTier": "S0",
+    "verifiedStockVoices": ["ja-JP-NanamiNeural", "ja-JP-KeitaNeural"],
+    "voiceVerification": "Both returned as GA Japanese Neural voices by a read-only list-voices request",
+    "retail": {
+      "currency": "USD",
+      "usdPerMillionUnits": "15",
+      "serviceName": "Foundry Tools",
+      "productName": "Azure Speech",
+      "skuName": "S1",
+      "meterName": "S1 Neural Text To Speech Characters",
+      "effectiveStartDate": "2026-02-01T00:00:00Z",
+      "source": "https://prices.azure.com/api/retail/prices"
+    },
+    "accounting": "Conservative reservation is twice the Unicode length of each entire actual SSML request, including markup; not an invoice or an audio-duration measurement",
+    "baselineEightPilotsAtMinus10": {
+      "uniqueRequestBodies": 47,
+      "conservativeUnits": 21812,
+      "conservativeUsd": "0.32718",
+      "excludes": "Rate auditions, retries, changed scripts, images and taxes",
+      "scope": "Estimate only; the complete eight-package media plan cannot be frozen before its actual three input pictures exist"
+    },
+    "frozenPrivateAuditions": {
+      "scope": "Nine selected turns from five nonvisual pilots at each of three rates; no full-package generation",
+      "ratePercentCandidates": [-10, -5, 0],
+      "clips": 27,
+      "conservativeUnitsWithoutRetries": 13080,
+      "conservativeUsdWithoutRetries": "0.19620",
+      "proposedAuthorization": "Preview only: at most 10000 conservative request units / USD0.15 for each of the three frozen plans, USD0.45 aggregate including any retries within those ceilings",
+      "authorizationGranted": false,
+      "selectedTurns": [
+        "n4-task-lunch-location:focus",
+        "n4-task-lunch-location:announcement",
+        "n4-task-lunch-location:reason",
+        "n4-task-moving-help:receiving",
+        "n4-task-camping-preparation:condition",
+        "n4-task-paper-delivery:utterance",
+        "n4-task-paper-delivery:choice-2",
+        "n4-task-deadline-repair:utterance",
+        "n4-task-deadline-repair:choice-3"
+      ],
+      "binding": "Private renderer/source/endpoint/subscription hashes retained outside the repository; source or renderer changes require a new plan",
+      "limitations": "Not all pilot-specific pronunciations or choices are covered by these samples. All actual full-order packages need later listener acceptance."
+    },
+    "pacing": {
+      "documentedStandardDefaultTps": 30,
+      "proposedClientMaximumTps": 1,
+      "concurrency": 1,
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-services-quotas-and-limits",
+      "caveat": "Voice/backend capacity may still produce throttling. Record and pace each actual retry before sending; do not treat the service ceiling as available shared capacity."
+    }
+  },
+  "images": {
+    "verifiedModel": "gpt-image-2.5-sunburst",
+    "version": "2026-09-08",
+    "deploymentKind": "GlobalStandard",
+    "serviceRegion": "swedencentral",
+    "verifiedDeploymentQuota": {"requests": 1, "periodSeconds": 60},
+    "proposedMinimumRequestSpacingSeconds": 65,
+    "concurrency": 1,
+    "plannedOriginalPictures": 3,
+    "size": "1024x1024",
+    "quality": "medium",
+    "imagesPerInitialRequest": 1,
+    "inputImageCount": 0,
+    "retail": {
+      "currency": "USD",
+      "serviceName": "Foundry Models",
+      "productName": "Azure OpenAI Media",
+      "textInputUsdPerMillionTokens": "5",
+      "imageOutputUsdPerMillionTokens": "30",
+      "textMeter": "Image-2.5-sunburst txt inp Gl 1M Tokens",
+      "outputMeter": "Image-2.5-sunburst img opt Gl 1M Tokens",
+      "effectiveStartDate": "2026-09-01T00:00:00Z",
+      "source": "https://prices.azure.com/api/retail/prices"
+    },
+    "costQualification": "No fixed per-image total is asserted. Output-token usage for this model is not established by GPT Image 2's calculator, and no N4 usage has been measured.",
+    "modelCostSource": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst.md",
+    "authorizationGranted": false,
+    "beforeAnyPost": "Freeze the actual request bodies and model binding, obtain a separate bounded image authorization that reflects token-metered uncertainty, and register/pause every attempt durably. Do not call a generic retrying image helper without per-attempt pacing/accounting.",
+    "uncertainOutcome": "Stop and retain the request reservation; never silently retry or assume a failed response was free"
+  },
+  "remainingGates": [
+    "Fresh bounded voice-audition authorization",
+    "Actual sample listening and rate/voice decisions",
+    "Frozen separately authorized image requests and inspected local markers",
+    "New complete pilot plan binding actual pictures and chosen speech profiles",
+    "Fresh complete-generation authorization; no implicit complete-before-audition opt-in",
+    "Exact complete-order listener/picture acceptance and unscored guided-native evidence",
+    "Measured duration/media projections and original-reviewer reconciliation before E"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "status": "Unpaid visual specifications only; no image or image acceptance exists",
+  "styleSource": "../../tools/image_prompts.json#style",
+  "styleExtensionSource": "../listening-task-pool/illustrations.json#provenance",
+  "style": "Clean modern editorial illustration with soft natural colours, gentle shading and clear shapes, like a picture in a Japanese children's magazine or recipe book. Uncluttered square composition. Original artwork, not imitating any specific artist or work. No text, letters, kana, kanji, numbers, speech bubbles, sound-effect lettering, watermark or signature.",
+  "styleExtension": "Natural softly painted anime-like editorial still illustration, with believable adult faces, hands and proportions where people are present, subtle warm lighting, gentle contact shadows and a plausible environment. Not schematic people, stick figures, geometric icons, an infographic, a 3D render or a photograph. Do not draw arrows or labels; these are added locally after inspecting the actual output.",
+  "requestedOutput": {
+    "sourceSize": "1024x1024",
+    "quality": "medium",
+    "countPerInitialRequest": 1,
+    "delivery": "512x512 WebP, quality80/method6, subject to the unchanged 150KiB cap",
+    "inspectionSizes": [512, 256],
+    "modelDeploymentAndPrice": "Must be verified before any bounded generation authorization",
+    "retryPolicy": "No unrecorded or unlimited retries; stop on uncertain service outcomes",
+    "nativeAcceptance": "Required later in actual light/dark guided author views; not supplied by these specifications"
+  },
+  "images": [
+    {
+      "id": "n4-task-discussion-room",
+      "prompt": "A balanced square four-panel editorial still illustration, with four equal independent views of exactly the same simple room in a two-by-two arrangement. Every panel uses the same slightly elevated camera looking from the near wall toward the far wall. A broad window is centered on the FAR wall, and the single entrance is on the NEAR wall at the right. Each panel contains exactly one small rectangular desk and two identical blue chairs. No people or other furniture. UPPER LEFT: desk near the far window, with a chair on each opposite side of the desk so their seats face one another across it. UPPER RIGHT: desk nearer the entrance in the near half of the room, with one chair on each opposite side facing the other across the desk. LOWER LEFT: desk near the far window, with both chairs side by side on the NEAR side of the desk so both seats face toward the window. LOWER RIGHT: desk in the near half near the entrance, with both chairs side by side on the NEAR side facing toward the window. Chair backs and seats must make their facing directions unmistakable. Keep the entrance and a walking strip unobstructed in all four views. Identical room geometry, desk size, chair size, colours, lighting and camera angle across panels; only desk position and chair arrangement differ. Generous equal pale margins and clear empty space at each panel's upper left for a later number. No arrows, numbers, letters, panel titles or highlighting of any arrangement.",
+      "invariants": [
+        "Exactly four equally sized/equally treated panels and identical room topology",
+        "Exactly one desk and two chairs per panel; far window and near-right entrance visible",
+        "Panels 1/2 have chairs on opposite sides facing each other; panels 3/4 have side-by-side chairs facing the window",
+        "Panels 1/3 are window-side; panels 2/4 are entrance-side without blocking the entrance",
+        "All distinctions remain observable at 256px, without adding answer-bearing captions"
+      ],
+      "markers": {
+        "type": "numbers",
+        "order": ["upper-left: 1", "upper-right: 2", "lower-left: 3", "lower-right: 4"],
+        "method": "Add equally styled crisp black numbers with light backing locally, only after the unmarked room geometry passes inspection",
+        "coordinates": "Determine from the actual accepted panel margins, not from a fabricated image receipt"
+      }
+    },
+    {
+      "id": "n4-task-form-counter",
+      "prompt": "Exactly two adults at one ordinary public-service counter in a softly painted editorial scene. On the LEFT, a male staff member is clearly BEHIND the counter, with a small unlabelled computer and a simple work shelf behind him. On the RIGHT, a female visitor is clearly IN FRONT of the counter, holding one blank application form and one pen. The form has only a few empty boxes and lines, absolutely no writing or symbols. Both people are looking at the form and each other in a calm helpful interaction, but neither is writing and no completed form is present. Keep their bodies, connected hands, the pen and the single form easy to distinguish. Leave uncluttered background space above and to the left of the staff member's head for a later role arrow. Ordinary original adult faces and anatomically coherent hands. No third person, badges with text, books of instructions, speech bubbles, arrows or written answer clues.",
+      "invariants": [
+        "Male staff member left/behind counter; female visitor right/in front",
+        "Visitor holds the only blank form and pen; neither person is writing",
+        "No filled-in form, printed words or other implied completed help",
+        "The locally marked staff role is recognizable at 512px and 256px"
+      ],
+      "markers": {
+        "type": "arrow",
+        "target": "Left staff member's head or shoulder",
+        "method": "Inspect the actual geometry, then add a crisp role arrow without covering a face, hand, pen or form",
+        "coordinates": "Pending actual output inspection"
+      }
+    },
+    {
+      "id": "n4-task-camera-return",
+      "prompt": "Exactly two adult friends in a quiet uncluttered home-entry setting, shown from head to at least knees. On the LEFT, a female traveler with a small closed travel bag at her feet is handing back ONE compact camera to the male owner on the RIGHT. The camera is between the traveler's extended hands and the owner's clearly receiving hands, and its single strap hangs down without confusing the hands. The owner is not holding another camera. Neither person is taking a photograph or posing for one. Use relaxed friendly expressions, believable hand anatomy and a clear left-to-right handover. Keep plain background space above and to the right of the owner's head for a later role arrow. No third person, phone, calendar, visible photograph, second loan, speech bubble, text, numbers or generated arrows.",
+      "invariants": [
+        "Female returner left; male owner right; exactly one camera",
+        "Clear left-to-right return/receiving gesture and coherent connected hands",
+        "No photo-taking pose and no visual invention of a second trip or loan",
+        "The right-hand owner can be marked unambiguously without covering the handover"
+      ],
+      "markers": {
+        "type": "arrow",
+        "target": "Right owner's head or shoulder",
+        "method": "Add a crisp local role arrow after inspecting the actual handover and body positions",
+        "coordinates": "Pending actual output inspection"
+      }
+    }
+  ]
+}

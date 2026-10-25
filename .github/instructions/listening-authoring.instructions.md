@@ -1,5 +1,5 @@
 ---
-applyTo: "listening/**,listening-tasks/**,audio/**,task-audio/**,task-images/**,docs/listening*.md,docs/listening-task-*/**,tools/*listening*.py"
+applyTo: "listening/**,listening-tasks/**,audio/**,task-audio/**,task-images/**,docs/listening*.md,docs/listening-task-*/**,docs/listening-n4-*/**,tools/*listening*.py"
 ---
 
 # Authoring listening exercises

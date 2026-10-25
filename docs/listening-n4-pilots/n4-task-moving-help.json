@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 2,
+  "policyVersion": 1,
+  "jlpt": 4,
+  "id": "n4-task-moving-help",
+  "exposureId": "n4-story-moving-help",
+  "taskType": "key-point",
+  "kind": "dialogue",
+  "usage": "scored",
+  "title": "Help with a move",
+  "topic": "Two friends discuss who carried different items and who received them at the new room.",
+  "levelRationale": "Resolve その二人 across two earlier helpers and distinguish receiving help or receiving delivered belongings from physically carrying the desk. The benefit-receiving viewpoint in てもらった does not make the woman the carrier. Familiar 受け取ってた is a controlled spoken reduction.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "質問と会話を聞いて、答えを一つ選んでください。",
+      "translation": "Listen to the question and conversation, then choose one answer."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "机を運んだのは、誰と誰ですか。",
+      "translation": "Which two people carried the desk?"
+    },
+    {
+      "id": "ask",
+      "speaker": "a",
+      "text": "引っ越しの荷物、もう運べた？",
+      "translation": "Have you managed to move your belongings?"
+    },
+    {
+      "id": "brother",
+      "speaker": "b",
+      "text": "うん。弟に車で来てもらって、本の箱を運んでもらったよ。",
+      "translation": "Yes. I had my younger brother come by car and carry the boxes of books for me."
+    },
+    {
+      "id": "desk-question",
+      "speaker": "a",
+      "text": "机も、弟さん一人で？",
+      "translation": "Did your younger brother carry the desk on his own too?"
+    },
+    {
+      "id": "tanaka",
+      "speaker": "b",
+      "text": "机は重くて、一人では無理だったから、田中さんにも来てもらったの。",
+      "translation": "The desk was heavy and couldn't be moved by one person, so I had Tanaka come as well."
+    },
+    {
+      "id": "woman-question",
+      "speaker": "a",
+      "text": "あなたも一緒に運んだの？",
+      "translation": "Did you carry it with them too?"
+    },
+    {
+      "id": "receiving",
+      "speaker": "b",
+      "text": "私は、新しい部屋で荷物を受け取ってたよ。机は、その二人に運んでもらったんだ。",
+      "translation": "I was receiving the belongings at the new room. I had those two carry the desk for me."
+    },
+    {
+      "id": "reply",
+      "speaker": "a",
+      "text": "そうだったんだ。助かったね。",
+      "translation": "I see. That was a big help."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "ask",
+        "brother",
+        "desk-question",
+        "tanaka",
+        "woman-question",
+        "receiving",
+        "reply"
+      ]
+    },
+    {
+      "id": "repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "woman-brother",
+      "number": 1,
+      "label": "女の人と弟です。",
+      "translation": "The woman and her younger brother.",
+      "rationale": "She was receiving the belongings at the new room, not carrying the desk with her brother."
+    },
+    {
+      "id": "brother-tanaka",
+      "number": 2,
+      "label": "弟と田中さんです。",
+      "translation": "Her younger brother and Tanaka.",
+      "rationale": "Her brother is the first helper; Tanaka joins him for the heavy desk. その二人 refers back to these two."
+    },
+    {
+      "id": "woman-tanaka",
+      "number": 3,
+      "label": "女の人と田中さんです。",
+      "translation": "The woman and Tanaka.",
+      "rationale": "Tanaka helped, but the other carrier was her younger brother, not the woman receiving the belongings."
+    },
+    {
+      "id": "brother-alone",
+      "number": 4,
+      "label": "弟一人です。",
+      "translation": "Her younger brother alone.",
+      "rationale": "The desk could not be moved by one person, which is why Tanaka also came."
+    }
+  ],
+  "answer": "brother-tanaka",
+  "evidence": [
+    "brother",
+    "tanaka",
+    "receiving"
+  ],
+  "explanation": "The woman receives the favor; 弟に…運んでもらった does not say that she carried the items herself. Tanaka is brought in because the desk is too heavy for one person. その二人 then refers to the younger brother and Tanaka. She was at the new room receiving the belongings. 受け取ってた is the familiar spoken form of 受け取っていた.",
+  "blueprint": "n4-section-v1",
+  "vocabulary": [
+    {
+      "surface": "引っ越し",
+      "reading": "ひっこし",
+      "gloss": "moving to a new home"
+    },
+    {
+      "surface": "荷物",
+      "reading": "にもつ",
+      "gloss": "belongings; items being carried"
+    },
+    {
+      "surface": "運んで",
+      "reading": "はこんで",
+      "gloss": "carry; transport"
+    },
+    {
+      "surface": "無理",
+      "reading": "むり",
+      "gloss": "not feasible; too much to manage"
+    },
+    {
+      "surface": "受け取ってた",
+      "reading": "うけとってた",
+      "gloss": "was receiving; casual form of 受け取っていた"
+    }
+  ]
+}

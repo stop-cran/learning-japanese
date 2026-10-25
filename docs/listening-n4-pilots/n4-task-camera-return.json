@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 2,
+  "policyVersion": 1,
+  "jlpt": 4,
+  "id": "n4-task-camera-return",
+  "exposureId": "n4-story-camera-return",
+  "taskType": "verbal-expression",
+  "kind": "monologue",
+  "usage": "scored",
+  "title": "Returning a borrowed camera",
+  "topic": "Two friends are at the return stage of a loan after a trip.",
+  "levelRationale": "Combine the returning-after-travel relative clause and continuing past loan with the pictured owner/borrower roles. Distinguish an owner's future conditional offer from the borrower's thanks and a mistaken assumption that the trip has not happened yet. The scene is a return, not taking a photograph or asking for an initial loan.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "絵と音声で、話す人を確かめてください。答えを一つ選んでください。",
+      "translation": "Use the picture and audio to identify the speaker. Choose one answer."
+    },
+    {
+      "id": "situation",
+      "speaker": "n",
+      "text": "旅行から帰ってきた人が、借りていたカメラを返しています。矢印の人は、何と言いますか。",
+      "translation": "A person who has returned from a trip is returning a camera they had borrowed. What does the person indicated by the arrow say?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。また使いたくなったら、いつでも言ってね。",
+      "translation": "One. If you want to use it again, just let me know any time."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。貸してくれて、本当に助かったよ。",
+      "translation": "Two. It was a real help that you lent it to me."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。まだ旅行に行ってないんだね。じゃあ、このカメラを使っていいよ。",
+      "translation": "Three. I see you haven't gone on your trip yet. In that case, you can use this camera."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "situation",
+      "role": "situation",
+      "turns": [
+        "situation"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "future-offer"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "borrower-thanks"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "before-trip"
+    }
+  ],
+  "choiceMode": "audio",
+  "options": [
+    {
+      "id": "future-offer",
+      "number": 1,
+      "label": "また使いたくなったら、いつでも言ってね。",
+      "translation": "If you want to use it again, just let me know any time.",
+      "rationale": "The indicated owner can offer another loan in the future while receiving the returned camera."
+    },
+    {
+      "id": "borrower-thanks",
+      "number": 2,
+      "label": "貸してくれて、本当に助かったよ。",
+      "translation": "It was a real help that you lent it to me.",
+      "rationale": "These are suitable thanks from the borrower on the left, not the indicated owner on the right."
+    },
+    {
+      "id": "before-trip",
+      "number": 3,
+      "label": "まだ旅行に行ってないんだね。じゃあ、このカメラを使っていいよ。",
+      "translation": "I see you haven't gone on your trip yet. In that case, you can use this camera.",
+      "rationale": "This assumes the trip has not happened yet. The narration says the traveler has returned and is returning the borrowed camera."
+    }
+  ],
+  "answer": "future-offer",
+  "evidence": [
+    "situation"
+  ],
+  "explanation": "The picture's arrow identifies the person receiving the returned camera, not the borrower handing it back. The borrower has already returned from the trip and is returning the camera. The owner's future conditional offer fits; the other choices belong to the borrower or mistakenly assume the trip has not happened yet. 使いたくなったら means if you come to want to use it again, not that another trip has already been arranged.",
+  "blueprint": "n4-section-v1",
+  "vocabulary": [
+    {
+      "surface": "借りていた",
+      "reading": "かりていた",
+      "gloss": "had borrowed; was using on loan"
+    },
+    {
+      "surface": "返しています",
+      "reading": "かえしています",
+      "gloss": "is returning"
+    },
+    {
+      "surface": "矢印",
+      "reading": "やじるし",
+      "gloss": "arrow"
+    },
+    {
+      "surface": "貸して",
+      "reading": "かして",
+      "gloss": "lend"
+    },
+    {
+      "surface": "いつでも",
+      "reading": "いつでも",
+      "gloss": "any time"
+    }
+  ],
+  "visual": {
+    "role": "required",
+    "description": "Exactly two adult friends in one scene. On the left, a female traveler with a small travel bag is handing one camera to the male owner on the right. The camera is clearly between the returning person's extended hands and the owner's receiving hands; no one is taking a photograph. A locally added arrow identifies the owner on the right. There is exactly one camera, no second loan, no calendar, no text and no speech bubbles."
+  }
+}

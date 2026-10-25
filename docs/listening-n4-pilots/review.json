@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-10-25",
+  "baseContentCommit": "cc5dc7b96db39c8feff58ad7dfd14f250cc706f9",
+  "reviewer": "Independent read-only subagent",
+  "actualModel": "not exposed by the runtime",
+  "scope": "All eight complete branches and 60-row plan. Corpus comparison: 210 Japanese turns across all 32 N5 Japanese packages with choices/scenario/visual metadata; 186 Japanese turns across all 36 legacy passages with question/key summaries. Not merely neighbour titles.",
+  "sourceHashes": {
+    "n4-task-camera-return": "93d81738e5b2ac18cf9e547ed4004a45afc5b60321b618004e110f0936302ef7",
+    "n4-task-camping-preparation": "1c6c25ec65e8d20dfe212dd9522f6760667e8922d71288c08f7c7234c96ff287",
+    "n4-task-deadline-repair": "e85026f88b4065410175c6002221792121e38ca5dd4a3f3c5fb521f0a4d96f4e",
+    "n4-task-discussion-room": "cbcd58f8664da1160db9fa93f6d406817e89c3da7027ce4d669d36f572419318",
+    "n4-task-form-counter": "e85cbcb3392084877d9229b2d668e7b14042fc0188b95afcd0cb1e194091b0b5",
+    "n4-task-lunch-location": "f3c7ea10a175b112d7de12653da13930faf1ea32c0f58553fe8a79320a8d1ff8",
+    "n4-task-moving-help": "bf97f38896c02483a7bc64e96282784b91d7a880b142f0d259cc50c584d35a96",
+    "n4-task-paper-delivery": "fb79f58bf7a634accfe0f3c2472692af8cb7ced0ad7b9ba868f3bd85c63f0c34"
+  },
+  "specificationFileSha256": {
+    "coverage-plan.json": "10d573e4318dc252170f790ec467b883d0a995685a31165745980242857006dd",
+    "authoring-ledger.json": "b678f483042daf141ec2d3dbcff02e6d02057b2805aa6c02947d651032c4402d",
+    "image-prompts.json": "9ca2e2b4e601b12a9f9d2a5b8591eefd92dd7d61baabcb1642f7320a77c9d484"
+  },
+  "findings": [
+    {
+      "id": "N4L-D1",
+      "severity": "Moderate",
+      "facet": "scoped coverage",
+      "file": "docs/listening-n4-pilots/n4-task-paper-delivery.json",
+      "lines": "12,43-61,108-126; corresponding coverage-plan.json:665",
+      "claim": "The negative timing constraint does not discriminate between answers. Remove the entire second sentence and answer 2 remains uniquely best: option 1 already reverses direction; option 3 already mistakes a request for completed delivery.",
+      "impact": "A correct answer does not establish comprehension of the claimed negative-timing demand.",
+      "remedy": "Include an otherwise fitting response proposing delivery to reception immediately; synchronize numbered speech, option and feedback.",
+      "confidence": "high",
+      "status": "resolved",
+      "reconciliation": "Resolved, high confidence: option 1 now violates only waiting, option 3 reverses direction while waiting, and option 2 remains uniquely best. All dependent branches agree; obsolete completed-report claims removed."
+    },
+    {
+      "id": "N4L-D2",
+      "severity": "Minor",
+      "facet": "story-plan completeness",
+      "file": "docs/listening-n4-pilots/coverage-plan.json",
+      "lines": "445,830,845-852; compared with339-347",
+      "claim": "Some reservations name only an operation: one preparation/another, a plan not started, and an unspecified revised exhibition-preparation instruction. The last does not distinguish its decision from the scored exhibit-position story.",
+      "impact": "These rows cannot substantiate a frozen fully independent story plan. This is missing differentiation, not demonstrated duplication.",
+      "remedy": "Supply concrete activity/participant/constraint seeds and distinguish the exhibition example's decision.",
+      "confidence": "high",
+      "status": "resolved",
+      "reconciliation": "Resolved, high confidence: concrete piano progression, intended grandmother interview and early-visitor escort seeds distinguish decisions; bicycle, hotel and printer examples now have concrete conditions/roles/contrasts. No consequential duplication found against retained N5 comparison."
+    }
+  ],
+  "optional": {
+    "claim": "n4-task-lunch-location.json:31 uses conversation for a monologue; 話 would fit more accurately.",
+    "status": "resolved",
+    "resolution": "Lunch instruction now uses 話 / talk."
+  },
+  "finalVerdicts": {
+    "eachOfEightPilots": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "scopePlan": "CLEAN as a prospective story plan; 56+4 arithmetic and all operation mappings reconciled",
+    "unresolvedConsequentialFindings": 0
+  },
+  "limits": [
+    "No audio/generated-picture/listener/native/phone acceptance. External official sources not independently reinspected. Existing N5 translations/feedback not comprehensively audited. No spending authorization.",
+    "Future complete E/F tasks remain unauthored and unreviewed. Planned coverage is not achieved coverage.",
+    "Azure discovery, production pricing and the added structural test were outside the independent linguistic reconciliation.",
+    "Status-only receipts were finalized after reconciliation. A changed package/specification invalidates these snapshot bindings.",
+    "This is a textual/specification review, not runtime/media approval or completion of D."
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 2,
+  "policyVersion": 1,
+  "jlpt": 4,
+  "id": "n4-task-camping-preparation",
+  "exposureId": "n4-story-camping-preparation",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "scored",
+  "title": "Preparing for a camping trip",
+  "topic": "Two friends separate completed preparation from an unresolved condition before shopping.",
+  "levelRationale": "Track completed borrowing/preparation, an offer that removes one outstanding need, and a remaining attendance condition before shopping. The embedded 来られるかどうか request and its reference to two people matter more than recognizing a camping noun. Familiar speech is controlled; actual pace and intelligibility remain to be calibrated.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "質問と会話を聞いて、答えを一つ選んでください。",
+      "translation": "Listen to the question and conversation, then choose one answer."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "女の人は、このあとまず何をしますか。",
+      "translation": "What will the woman do first after this conversation?"
+    },
+    {
+      "id": "ask",
+      "speaker": "a",
+      "text": "キャンプの準備、もうできた？",
+      "translation": "Are the preparations for the camping trip done?"
+    },
+    {
+      "id": "prepared",
+      "speaker": "b",
+      "text": "テントは兄に借りたし、毛布も用意してあるよ。あとは、料理に使う小さい鍋だけ。",
+      "translation": "I've borrowed a tent from my older brother, and the blankets are ready too. The only thing left is a small pot for cooking."
+    },
+    {
+      "id": "offer-pot",
+      "speaker": "a",
+      "text": "鍋なら、うちのを持っていくよ。",
+      "translation": "If it's a pot you need, I'll bring the one from my home."
+    },
+    {
+      "id": "shopping-plan",
+      "speaker": "b",
+      "text": "助かる。じゃあ、今日は食べ物を買いに行こうかな。",
+      "translation": "That helps. Then maybe I'll go and buy the food today."
+    },
+    {
+      "id": "condition",
+      "speaker": "a",
+      "text": "その前に、まだ返事をしていない二人に、来られるかどうか聞いてもらえる？人数が分かってから買ったほうがいいと思うんだ。",
+      "translation": "Before that, could you ask the two people who haven't replied yet whether they can come? I think it would be better to buy the food once we know how many people are coming."
+    },
+    {
+      "id": "agree",
+      "speaker": "b",
+      "text": "そうだね。先に連絡してみる。",
+      "translation": "You're right. I'll try contacting them first."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "ask",
+        "prepared",
+        "offer-pot",
+        "shopping-plan",
+        "condition",
+        "agree"
+      ]
+    },
+    {
+      "id": "repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "buy-food",
+      "number": 1,
+      "label": "食べ物を買いに行きます。",
+      "translation": "Go and buy the food.",
+      "rationale": "This was her proposed next step, but attendance must be checked before shopping."
+    },
+    {
+      "id": "borrow-tent",
+      "number": 2,
+      "label": "兄にテントを借ります。",
+      "translation": "Borrow a tent from her older brother.",
+      "rationale": "She has already borrowed the tent; this is not an outstanding action."
+    },
+    {
+      "id": "check-attendance",
+      "number": 3,
+      "label": "返事をしていない二人に、来られるかどうか聞きます。",
+      "translation": "Ask the two people who have not replied whether they can come.",
+      "rationale": "The man's request makes this the action before shopping, and she agrees to contact them first."
+    },
+    {
+      "id": "buy-pot",
+      "number": 4,
+      "label": "料理に使う鍋を買います。",
+      "translation": "Buy a pot for cooking.",
+      "rationale": "The man offers to bring his pot, so buying one is not the agreed next action."
+    }
+  ],
+  "answer": "check-attendance",
+  "evidence": [
+    "prepared",
+    "offer-pot",
+    "shopping-plan",
+    "condition",
+    "agree"
+  ],
+  "explanation": "その前に refers to buying food. The unresolved number of participants changes the next step: she will first contact the two people who have not replied. Borrowing the tent is completed, the blankets are prepared, and the man's offer covers the pot. 用意してある says the blankets have been prepared, not necessarily bought. 来られるかどうか asks whether someone can come.",
+  "blueprint": "n4-section-v1",
+  "vocabulary": [
+    {
+      "surface": "毛布",
+      "reading": "もうふ",
+      "gloss": "blanket"
+    },
+    {
+      "surface": "用意してある",
+      "reading": "よういしてある",
+      "gloss": "has been prepared and is ready"
+    },
+    {
+      "surface": "鍋",
+      "reading": "なべ",
+      "gloss": "cooking pot"
+    },
+    {
+      "surface": "返事",
+      "reading": "へんじ",
+      "gloss": "reply"
+    },
+    {
+      "surface": "人数",
+      "reading": "にんずう",
+      "gloss": "number of people"
+    }
+  ]
+}

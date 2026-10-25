@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 2,
+  "policyVersion": 1,
+  "jlpt": 4,
+  "id": "n4-task-discussion-room",
+  "exposureId": "n4-story-discussion-room",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "scored",
+  "title": "Preparing a discussion room",
+  "topic": "Two volunteers decide how to arrange a desk and two chairs for today's discussion.",
+  "levelRationale": "Combine the purpose of facing one another with a changed location, rejecting an initially plausible brighter location. The potential-purpose clause, conditional location and reference across turns add N4 listening demands; numbered pictures are essential. These are original draft demands, not an official word-list or acoustic-level certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "質問と会話を聞いて、答えを一つ選んでください。",
+      "translation": "Listen to the question and conversation, then choose one answer."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "男の人は、机と椅子をどのように並べますか。",
+      "translation": "How will the man arrange the desk and chairs?"
+    },
+    {
+      "id": "usual",
+      "speaker": "a",
+      "text": "今日の集まりも、二人とも窓のほうを向いて座るんですよね。",
+      "translation": "At today's gathering, both people will sit facing the window again, right?"
+    },
+    {
+      "id": "purpose",
+      "speaker": "b",
+      "text": "今日は話し合いをするので、向かい合って座れるようにしてください。",
+      "translation": "Today they will have a discussion, so please arrange things so they can sit facing each other."
+    },
+    {
+      "id": "proposal",
+      "speaker": "a",
+      "text": "じゃあ、机は窓の近くに置きますか。そこのほうが明るいですし。",
+      "translation": "Then shall I put the desk near the window? It's brighter there, too."
+    },
+    {
+      "id": "location",
+      "speaker": "b",
+      "text": "窓の近くだと、外の工事の音が聞こえるんです。今日は入口に近いほうへ動かしてもらえますか。",
+      "translation": "Near the window, you can hear the construction work outside. Could you move it closer to the entrance today?"
+    },
+    {
+      "id": "confirm",
+      "speaker": "a",
+      "text": "分かりました。椅子は、机をはさんで、一つずつですね。",
+      "translation": "Understood. One chair on each side, with the desk between them, right?"
+    },
+    {
+      "id": "agree",
+      "speaker": "b",
+      "text": "はい、それでお願いします。",
+      "translation": "Yes, please arrange it that way."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "usual",
+        "purpose",
+        "proposal",
+        "location",
+        "confirm",
+        "agree"
+      ]
+    },
+    {
+      "id": "repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "layout-one",
+      "number": 1,
+      "label": "1の並べ方",
+      "translation": "Arrangement 1.",
+      "rationale": "The chairs face one another, but the desk remains near the window, where the construction noise is a problem."
+    },
+    {
+      "id": "layout-two",
+      "number": 2,
+      "label": "2の並べ方",
+      "translation": "Arrangement 2.",
+      "rationale": "The desk is near the entrance and the chairs face one another across it, satisfying both parts of the revised arrangement."
+    },
+    {
+      "id": "layout-three",
+      "number": 3,
+      "label": "3の並べ方",
+      "translation": "Arrangement 3.",
+      "rationale": "This keeps both the window-side location and the old side-by-side, window-facing seating."
+    },
+    {
+      "id": "layout-four",
+      "number": 4,
+      "label": "4の並べ方",
+      "translation": "Arrangement 4.",
+      "rationale": "The location is near the entrance, but both chairs still face the window from the same side of the desk."
+    }
+  ],
+  "answer": "layout-two",
+  "evidence": [
+    "purpose",
+    "location",
+    "confirm"
+  ],
+  "explanation": "The arrangement must satisfy two connected instructions: people need to sit facing each other for the discussion, and the desk must move toward the entrance because of noise near the window. The man's brighter-location proposal is not adopted. 机をはさんで、一つずつ confirms one chair on each side of the desk; it does not restore the old window-facing seating.",
+  "blueprint": "n4-section-v1",
+  "vocabulary": [
+    {
+      "surface": "話し合い",
+      "reading": "はなしあい",
+      "gloss": "discussion"
+    },
+    {
+      "surface": "向かい合って",
+      "reading": "むかいあって",
+      "gloss": "facing each other"
+    },
+    {
+      "surface": "工事",
+      "reading": "こうじ",
+      "gloss": "construction work"
+    },
+    {
+      "surface": "入口",
+      "reading": "いりぐち",
+      "gloss": "entrance"
+    },
+    {
+      "surface": "はさんで",
+      "reading": "はさんで",
+      "gloss": "with something between"
+    }
+  ],
+  "visual": {
+    "role": "required",
+    "description": "Four equally presented numbered views of the same room, with a window on the far wall and an entrance on the near wall. Each view contains exactly one rectangular desk and two chairs. View 1: desk near the window, chairs facing each other across it. View 2: desk near the entrance, chairs facing each other across it. View 3: desk near the window, both chairs side by side on its near side, facing the window. View 4: desk near the entrance, both chairs side by side on its near side, facing the window. The entrance remains unobstructed in every view. No people, speech bubbles or highlighted arrangement."
+  }
+}

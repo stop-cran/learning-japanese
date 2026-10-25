@@ -101,6 +101,22 @@ def image_bytes(width=2, height=2):
 
 
 class TaskSchemaTests(unittest.TestCase):
+    def test_n4_pilot_sources_remain_valid_unapproved_drafts(self):
+        directory = REPO / "docs" / "listening-n4-pilots"
+        plan = json.loads((directory / "coverage-plan.json").read_text(encoding="utf-8"))
+        pilots = [item for item in plan["items"] if item["installment"] == "D"]
+        self.assertTrue(pilots)
+        self.assertEqual({item["id"] for item in pilots}, {path.stem for path in directory.glob("n4-task-*.json")})
+        for item in pilots:
+            with self.subTest(pilot=item["id"]):
+                document = json.loads((directory / item["source"]).read_text(encoding="utf-8"))
+                self.assertEqual(item["id"], document["id"])
+                self.assertEqual(item["exposureId"], document["exposureId"])
+                self.assertEqual(item["taskType"], document["taskType"])
+                self.assertFalse(check(document, REPO))
+                self.assertNotIn("media", document)
+                self.assertNotIn("approval", document)
+
     def test_all_adopted_examples_and_cross_language_hashes(self):
         for kind, (_, digest) in FIXTURES.items():
             with self.subTest(kind=kind):

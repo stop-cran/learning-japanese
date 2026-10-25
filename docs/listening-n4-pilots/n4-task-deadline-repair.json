@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 2,
+  "policyVersion": 1,
+  "jlpt": 4,
+  "id": "n4-task-deadline-repair",
+  "exposureId": "n4-story-deadline-repair",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "scored",
+  "title": "Clarifying a hand-in deadline",
+  "topic": "A speaker corrects an earlier explanation and gives the latest acceptable hand-in time.",
+  "levelRationale": "Understand a self-correction plus the sufficiency condition 出してくれればいい, keeping a deadline distinct from a start date. The polite confirmation responds to a familiar or senior speaker without converting relaxed urgency into a new obligation for today.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -10
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -10
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "最初のことばを聞いて、返事を一つ選んでください。",
+      "translation": "Listen to the opening utterance and choose one response."
+    },
+    {
+      "id": "utterance",
+      "speaker": "a",
+      "text": "あ、さっきの説明、間違えてた。今日中じゃなくて、来週の月曜日までに出してくれればいいよ。",
+      "translation": "Oh, I got my explanation wrong earlier. It doesn't have to be in by the end of today; handing it in by next Monday is fine."
+    },
+    {
+      "id": "choice-1",
+      "speaker": "b",
+      "text": "1。今日中に必ず出すんですね。分かりました。",
+      "translation": "One. I must hand it in by the end of today, then. Understood."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "b",
+      "text": "2。月曜日から始めればいいんですね。分かりました。",
+      "translation": "Two. It's all right to start on Monday, then. Understood."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "b",
+      "text": "3。月曜日まででいいんですね。分かりました。",
+      "translation": "Three. By Monday is fine, then. Understood."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "today"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "start-monday"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "by-monday"
+    }
+  ],
+  "choiceMode": "audio",
+  "options": [
+    {
+      "id": "today",
+      "number": 1,
+      "label": "今日中に必ず出すんですね。分かりました。",
+      "translation": "I must hand it in by the end of today, then. Understood.",
+      "rationale": "This repeats the requirement that the speaker has just corrected."
+    },
+    {
+      "id": "start-monday",
+      "number": 2,
+      "label": "月曜日から始めればいいんですね。分かりました。",
+      "translation": "It's all right to start on Monday, then. Understood.",
+      "rationale": "Monday is the deadline for handing it in, not the day on which to start the work."
+    },
+    {
+      "id": "by-monday",
+      "number": 3,
+      "label": "月曜日まででいいんですね。分かりました。",
+      "translation": "By Monday is fine, then. Understood.",
+      "rationale": "This confirms the corrected latest acceptable hand-in time without adding a new condition."
+    }
+  ],
+  "answer": "by-monday",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "今日中じゃなくて explicitly repairs the earlier deadline. 月曜日までに is the time by which the hand-in must happen; it does not postpone the start of the work until Monday. 出してくれればいい says that handing it in by then is sufficient. 間違えてた is the familiar spoken form of 間違えていた.",
+  "blueprint": "n4-section-v1",
+  "vocabulary": [
+    {
+      "surface": "さっき",
+      "reading": "さっき",
+      "gloss": "a short time ago"
+    },
+    {
+      "surface": "今日中",
+      "reading": "きょうじゅう",
+      "gloss": "by the end of today"
+    },
+    {
+      "surface": "間違えてた",
+      "reading": "まちがえてた",
+      "gloss": "had got it wrong; casual form of 間違えていた"
+    },
+    {
+      "surface": "必ず",
+      "reading": "かならず",
+      "gloss": "without fail; must"
+    }
+  ]
+}
