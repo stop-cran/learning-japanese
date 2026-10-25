@@ -81,6 +81,63 @@ reading depth. Earlier batch61 inherited quiz debt remains deferred.
 This draft does not claim global quiz uniqueness or native-speaker
 certification.
 
+### Batch 64 - initial reviews and bounded corrections
+
+Authored snapshot: `9eb5a046068bdf31aed69a6bdb6f505bc81a39b6`.
+The complete [GPT](n2-vocabulary-reviews/batch-64-gpt-initial.md)
+and [Claude](n2-vocabulary-reviews/batch-64-claude-initial.md)
+reports are authenticated against exact native prompts, actual
+`gpt-6.1-sol` / `claude-opus-5.5` models, frozen hashes, patches,
+blind derivatives, allowed private access and zero edits.
+The isolated processes ran sequentially and fully exited.
+
+Both actually returned all 23 assigned/related bodies, all four
+compact renderings, the patch and the exact TSV header/twenty
+assigned rows. GPT also accidentally exposed N2:1282; this is
+disclosed rather than claimed as exact-only access or credited
+as reviewed evidence. Claude returned no neighboring source row.
+GPT returned all 22 inspection chunks plus the scheduling derivative,
+covering all 250 comparison families. Claude returned one complete
+20-family chunk, the twenty principals and a targeted American
+family record. Complete older baseline-body unions are **GPT 130 /
+Claude 8**, including the three reused assigned bodies in both;
+the comparison-only counts are **127 / 5**.
+
+| Observation | Evidence-based disposition |
+| --- | --- |
+| GPT N2-64-01: なんとも guards | Add separate まさに, 実際 and 本当 guards. Complete 1376640:1 and 1321110:3 explicitly include really/truly. 本当's actual body teaches 本当に and conversational "Really?"; keep that conservative guard distinct from merging 1523060 with the separate 1611580 identity. No transitive argument through 実に is used. |
+| GPT N2-64-02: 煮える/焼ける | Add the direct guard: complete 1350610:2 and actual older teaching establish the thoroughly cooked result competing with the displayed label. This does not erase the difference between boiling and baking/grilling. |
+| Claude B64-CL-01: 憎らしい title | Align title and H1 with the existing translated admiring example: "hateful; annoyingly good." Retain the raw ironic dictionary gloss without inventing an affectionate example. |
+| Claude B64-CL-02: remove なかなか guards | Do not adopt removal. Complete 1599420:4 explicitly includes excellent/wonderful/very good without rare/obsolete flags; the successful matching Kotobank Nikkoku 中中 body also records favorable evaluation. Retain the two direct guards conservatively, not from a collocation or copied clique. |
+| Claude 匂う limitations | Remove the unverified literary-register assertion and use kana におう in the figurative-suspicion statement. Nikkoku supports the brightness and unfavorable-hint senses, not the exact stronger register/spelling claims. |
+| Claude optional expansion and weak guards | No mandatory expansion is established for a 濁る moral example, kana styling, missed-chance frequency, or 臭い's separate noun reading. Preserve qualified confidence for 良い/いい, 非常 and the glow/suspicion guards; do not turn optional observations into proven synonymy. |
+
+Four new articles change: two direct guard lists, one title/H1 and
+one narrowed source-sensitive paragraph. There are **108 new-card
+guard declarations**, four more than the authored snapshot.
+No baseline identity/body/title/reading/original exclusion, level,
+mapping, selected/additional sense or kanji body is changed.
+Original packet declarations remain historical; correction evidence
+records the revised lists.
+
+The five additional pinned complete families / 13 senses are disjoint
+from the original union. Three additional complete older articles
+were inspected. Corrective scope is twelve complete families /
+31 senses and five complete older bodies, each rendering below
+16,000 UTF-8 bytes. Cumulative author evidence is **255 families /
+569 senses and 104 complete older bodies**. Two new matching
+Kotobank bodies represent one additional authority, Nikkoku;
+empty Daijisen headings are not credited as returned bodies.
+
+Comparing all report sections, there is no shared initial actionable
+finding. The missing guards are useful GPT-only catches; the
+title/body mismatch and named source limitations are useful
+Claude-only contributions. The removal suggestion is not adopted
+without considering the complete secondary sense. This demonstrates
+complementary value here, not equal-depth review, a model ranking
+or measured bias reduction. Both original sessions must still
+assess the actual correction and remaining dispositions before closure.
+
 ## Batch 63: N2:1242-N2:1261
 
 **Status:** closed after authenticated independent reviews and

@@ -21,6 +21,44 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 ## Batch 64 authoring observations
 
+- Blind reviews found different useful gaps: GPT established four
+  missing direct guards in two findings; Claude identified a
+  title/body mismatch and source limitations worth narrowing.
+  No initial actionable finding is shared. Both families are useful
+  on this sample, not a controlled model-bias experiment.
+- Match the quiz label to the actual secondary sense. "Really"
+  competes with まさに and 実際; 本当's complete body also teaches
+  本当に and conversational "Really?" The 本当 guard is less direct
+  and conservative, not a claim that its noun identity is merged
+  with the separate 本当に family. "Be cooked through" also fits
+  焼ける's cooking-result sense despite different cooking methods.
+- Narrow 憎らしい's title to "hateful; annoyingly good," matching
+  its existing admiring example. Do not invent an affectionate
+  collocation merely to make an English dictionary gloss concrete.
+  Remove 匂う's unverified literary-register assertion and use kana
+  におう for the figurative suspicion statement; retain the supported
+  brightness/hint senses and literal-odor spelling preferences.
+- Do not accept removal of both なかなか guards from the older
+  article's narrow opening alone. Complete 1599420:4 has excellent/
+  wonderful/very good, without rare/obsolete marks; an actually
+  returned Kotobank Nikkoku 中中 body also records favorable
+  evaluation. Retain conservative direct guards without claiming
+  unrestricted substitution or measured modern frequency.
+- Authenticated initial returns show unequal evidence depth:
+  GPT read all 250 family records and 130 complete older baseline
+  bodies; Claude returned one complete 20-family chunk, the twenty
+  principals, a targeted アメリカ record and eight complete older
+  baseline bodies. Both body unions include the three reused
+  assigned articles; comparison-only counts are 127 and five.
+  Both returned all 23 assigned/related bodies. GPT exposed one
+  additional TSV row, N2:1282, without using it as review evidence.
+  Equal access is not equal actual reading depth.
+- Corrective evidence adds five complete families / 13 senses and
+  three full older bodies, yielding 255 families / 569 senses and
+  104 author-inspected older bodies. Two successful matching
+  Kotobank bodies are the same Nikkoku authority; their empty
+  Daijisen headings do not count as additional inspected entries.
+  Original-session confirmations remain pending at this stage.
 - Preserve the existing unlevelled 憎む, にこにこ and 鈍い articles;
   only add `jlpt: 2`. Exact checks found no matching form/reading
   in the four lower-level source TSVs. The fifth vocabulary TSV
