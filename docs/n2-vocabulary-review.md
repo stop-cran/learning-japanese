@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-52 review-closed; batch 53 drafted.** The target is all 1,812 source rows,
+**Batches 01-53 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,040 rows are review-closed; 20 are draft,
+The first 1,060 rows are review-closed; none are draft,
 752 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 53: N2:1042-N2:1061
 
-**Status:** drafted; initial independent reviews authenticated and supported
-corrections applied; original-session confirmation pending.
+**Status:** closed after authenticated independent reviews, evidence-based
+corrections and original-session confirmations.
 
 Eighteen new articles: 知人, 地帯, 縮む, 縮める, 縮れる,
 チップ, 地点, 地名, 茶色い, 着々, 中間, 中旬, 抽象,
@@ -70,8 +70,8 @@ automatically acquire an independent N2 assignment.
 
 Current totals: 1,052 distinct mapped articles, comprising 984 new
 and 68 reused baseline identities; 4,257 total word articles.
-Draft coverage is not review closure or a semantic-uniqueness
-guarantee.
+Review closure is a bounded evidence-based judgment, not a
+semantic-uniqueness guarantee.
 
 ### Batch 53 - initial reviews and reconciliation
 
@@ -136,6 +136,54 @@ captures; Claude did not and checked mappings via blind JSONL
 rather than the TSV. Complementary suggestions were useful, but
 unequal inspection and the corrected archaic-entry rationale do
 not demonstrate controlled bias reduction or a general model ranking.
+
+### Batch 53 - confirmed and closed
+
+Both original sessions assessed corrected commit
+`2be7616abc9dcef1ec5d2ab8219736e0ebca4d80`, parent
+`d67609747e671278f9a6a4e973ea0a0832a8cad8`, sequentially without
+edits. The complete [GPT confirmation](n2-vocabulary-reviews/batch-53-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-53-claude-confirmation.md)
+are archived. Both final tables contain the exact twenty source-ID/article
+associations and three CLEAN facets per row; these were checked against
+the committed TSV rather than inferred from a CLEAN count.
+
+Both completely reread the four changed cards, correction patch,
+eleven complete corrective families/29 senses and five full old bodies.
+They explicitly inherited the fourteen unchanged new cards, two reuses
+and three primary kanji cards, with fresh reciprocal/mapping spot-checks.
+Both inspected the exact twenty TSV rows. GPT reread all twenty
+principals and relevant additional families; Claude additionally read
+all twenty original public captures, resolving its earlier public-evidence
+and brown-adjective qualifications. Neither made a fresh public
+retrieval in confirmation. Author totals deduplicate to 257 complete
+families/647 senses and 121 full old articles; reviewer scope is
+reported separately, not equated to those totals.
+
+Both accept four direct guard additions and the 酸性 link. GPT
+acknowledges the additional geographical-belt and modern 徐々に
+pairs missed in its initial pass. Claude explicitly corrects the
+archaic 徐々 citation and accepts the independent modern family;
+it also accepts the previously missed 末/すえ pair. Its provenance
+style concern is withdrawn after inspecting an existing 大木 precedent.
+Remaining optional register/example/contrast suggestions do not
+establish required defects. The confirmation prompt's relative
+"other reviewer" wording is ambiguous for a common two-model prompt;
+the reports and dispositions correctly identify the contributions
+above, and the historical prompt is preserved unchanged.
+
+No teaching changed after confirmation. Closure preserves all
+3,273 baseline identities/readings/titles/exclusions and easier
+levels, exact raw source fields, selected/additional mappings and
+the deterministic content manifest. The shared audit tracks 240
+new-article primary reciprocal N2 pairs; existing 超/超過 is checked
+separately, not incorrectly included as a 241st new-article pair.
+The four complete native reports, actual models, exact prompts,
+session continuity, allowlists, frozen inputs and zero edits are
+authenticated by the author, not reviewer-executed Git checks.
+Confirmations share adjudications and are not blind discoveries.
+No live quiz draws, exhaustive ambiguity audit, controlled model
+benchmark or native-speaker certification is claimed.
 
 ## Batch 52: N2:1022-N2:1041
 

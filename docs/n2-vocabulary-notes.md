@@ -95,6 +95,17 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 53 closure:** Both original sessions accepted the exact
+  corrected snapshot, four direct guard additions and existing 酸性
+  link; validate all twenty final source-ID/article associations and
+  all three verdict facets. Resolve an initial UNVERIFIED public-backed
+  qualification by reading the actual complete heading, not by silently
+  inheriting CLEAN. Both models revised bounded initial judgments;
+  Claude explicitly corrected its archaic-entry rationale. For an
+  identical two-model confirmation prompt, use absolute attribution
+  or neutral "one reviewer" wording throughout, rather than a relative
+  "the other reviewer" that points differently for each reader.
+
 - **Batch 53 reconciliation:** A modern expression and a bare
   dictionary form are not interchangeable evidence: archaic 徐々
   1345600 does not establish modern 徐々に, whose own complete
