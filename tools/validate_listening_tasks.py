@@ -1,4 +1,4 @@
-"""Validate contract-1 task drafts and exact-output approval declarations.
+"""Validate schema-1/N5 and schema-2/N4 tasks and exact-output approvals.
 
 Validation is not listening approval or proof of platform playback. Prior source-scoped
 id/exposureId bindings may be supplied to check_listening_tasks as identity_ledger;
@@ -19,7 +19,7 @@ from validate_listening import (
 )
 
 MAX_IMAGE_BYTES = 150 * 1024
-MAX_MEDIA_BYTES = 6 * 1024 * 1024
+MAX_MEDIA_BYTES = 20 * 1024 * 1024
 STAGE_ROLES = {
     "task-based": ["instruction", "focus", "passage", "focus-repeat"],
     "key-point": ["instruction", "focus", "passage", "focus-repeat"],
@@ -102,8 +102,8 @@ def validate_document(document: dict, path: str, root: Path | None = None,
                       *, vocabulary_root: Path | None = None) -> bool:
     """Return declared approval readiness; malformed supported drafts raise ValueError."""
     _require(isinstance(document, dict), "listening task must be an object")
-    for field in ("schemaVersion", "policyVersion"):
-        if type(document.get(field)) is not int or document[field] != 1:
+    for field, supported in (("schemaVersion", (1, 2)), ("policyVersion", (1,))):
+        if type(document.get(field)) is not int or document[field] not in supported:
             raise UnsupportedTaskError(f"unsupported listening task {field}: {document.get(field)!r}")
     task_type = document.get("taskType")
     if not isinstance(task_type, str) or task_type not in STAGE_ROLES:
@@ -116,11 +116,13 @@ def validate_document(document: dict, path: str, root: Path | None = None,
     identity = _id(document["id"], "task ID")
     _id(document["exposureId"], "exposure ID")
     _require(path == f"listening-tasks/{identity}.json", "task ID must match its filename")
-    _require(type(document["jlpt"]) is int and document["jlpt"] == 5, "jlpt must be integer 5")
+    expected_level = 5 if document["schemaVersion"] == 1 else 4
+    _require(type(document["jlpt"]) is int and document["jlpt"] == expected_level,
+             "tasks require schema 1/integer jlpt 5 or schema 2/integer jlpt 4")
     _require(document["kind"] in ("dialogue", "monologue"), "invalid task kind")
     _require(document["usage"] in ("scored", "example"), "invalid task usage")
     if "blueprint" in document:
-        _require(document["blueprint"] == "n5-section-v1", "unsupported task blueprint")
+        _require(document["blueprint"] == f"n{expected_level}-section-v1", "unsupported task blueprint")
     for field in ("title", "topic", "levelRationale", "explanation"):
         _bounded_text(document[field], field)
 
@@ -333,4 +335,4 @@ def check_listening_tasks(err, root: Path, identity_ledger: dict[str, str] | Non
             except (ValueError, OSError) as exc:
                 err(path, str(exc))
     if total_bytes > MAX_MEDIA_BYTES:
-        err(root / "task-audio", "new unique audio/images exceed the combined 6 MiB budget")
+        err(root / "task-audio", "unique task audio/images exceed the combined 20 MiB budget")

@@ -231,6 +231,35 @@ class RendererTests(unittest.TestCase):
         self.assertEqual(before, self.raw.post.call_count)
         self.assertIn("not C/D native playback", (self.run / "complete-review.html").read_text(encoding="utf-8"))
 
+    def test_n4_schema_survives_frozen_render_and_explicitly_approved_export(self):
+        self.run = self.base / "n4-private-run"
+        sources = []
+        for source in self.sources:
+            document = budget.read_json(source)
+            identifier = document["id"].replace("n5-", "n4-", 1)
+            document.update(id=identifier, exposureId=identifier, schemaVersion=2, jlpt=4,
+                            blueprint="n4-section-v1")
+            target = self.content / f"{identifier}.json"
+            budget.write_json(target, document)
+            sources.append(target)
+        self.sources = sources
+        self.images = {key.replace("n5-", "n4-", 1): value for key, value in self.images.items()}
+        self.previews = [value.replace("n5-", "n4-", 1) for value in self.previews]
+        self.create_plan()
+        self.complete()
+        for source in self.sources:
+            identifier = source.stem
+            with self.assertRaises(FileNotFoundError):
+                renderer.export(self.run, self.engine, [identifier])
+            renderer.approve_task(self.run, self.engine, identifier, "Synthetic N4 schema fixture; no actual media acceptance",
+                                  date.today().isoformat(), listened=True, visual=True, native=True, phone=True)
+        renderer.export(self.run, self.engine, [source.stem for source in self.sources])
+        for source in self.sources:
+            published = budget.read_json(self.content / "listening-tasks" / source.name)
+            self.assertEqual((2, 4, "n4-section-v1"),
+                             (published["schemaVersion"], published["jlpt"], published["blueprint"]))
+            self.assertTrue(tasks.validate_document(published, renderer.logical_path(published), self.content))
+
     def test_explicit_deferred_audition_generates_private_outputs_but_cannot_approve_or_export(self):
         plan = renderer.load_plan(self.run, self.engine)
         budget.authorize(self.run, tasks.canonical_hash(plan), "complete", 100000, "10", "15",

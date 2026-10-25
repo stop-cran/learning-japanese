@@ -25,6 +25,12 @@ Listening difficulty includes essential spoken vocabulary and speech demands, no
 Draft JSON without audio is valid but unavailable for scoring. Never treat automated validation as actual listening approval.
 Run `tools/check_content_budget.py` as well as validation and manifest regeneration before publishing media.
 
+Japanese [task packages](listening-tasks.md) use separate `listeningTasks`, `listeningTaskAudio`
+and `listeningTaskImages` maps. Schema 1/policy 1 requires integer JLPT 5; the [N4 extension](listening-n4.md)
+requires schema 2/policy 1/integer JLPT 4 without changing the four stage/choice shapes.
+Legacy English-question packages remain N5-only. Versioned support does not approve a recording
+or enable an unfinished diagnostic profile; exact package/media approval and publication gates remain mandatory.
+
 ## Numbers & counters
 
 [Counter schema, coverage and authoring](counter-n5.md#version-2-transport-and-future-authoring)

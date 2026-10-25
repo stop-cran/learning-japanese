@@ -6,11 +6,11 @@ import subprocess
 import zipfile
 from pathlib import Path
 
-MAX_RETAINED = 40 * 1024 * 1024
+MAX_RETAINED = 56 * 1024 * 1024
 MAX_INFLATED = 80 * 1024 * 1024
-MAX_COMPRESSED = 28 * 1024 * 1024
+MAX_COMPRESSED = 42 * 1024 * 1024
 MAX_ENTRIES = 7000
-MAX_TASK_MEDIA = 6 * 1024 * 1024
+MAX_TASK_MEDIA = 20 * 1024 * 1024
 CONTENT_FOLDERS = {
     "kanji", "words", "articles", "strokes", "counters", "grammar", "scenes", "listening", "audio",
     "curriculum", "listening-tasks", "task-audio", "task-images",
@@ -42,7 +42,7 @@ def check(root: Path, names: list[str]) -> dict:
             if parts[0] in {"task-audio", "task-images"}:
                 task_media += len(data)
                 if task_media > MAX_TASK_MEDIA:
-                    raise ValueError("new unique audio/images exceed the combined 6 MiB budget")
+                    raise ValueError("unique task audio/images exceed the combined 20 MiB budget")
         entries.append((name, data))
         if retained > MAX_RETAINED or inflated > MAX_INFLATED:
             raise ValueError("content exceeds retained/inflated archive headroom")

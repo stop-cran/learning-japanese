@@ -132,7 +132,7 @@ class TaskSchemaTests(unittest.TestCase):
 
     def test_explicit_unsupported_versions_and_types(self):
         for field, values in (
-            ("schemaVersion", (0, 2, "1", True, 1.0, None)),
+            ("schemaVersion", (0, 3, "1", "2", True, 1.0, 2.0, None)),
             ("policyVersion", (0, 2, "1", True, 1.0, None)),
             ("taskType", ("future", "dialogue", 1, [], None)),
         ):
@@ -141,6 +141,26 @@ class TaskSchemaTests(unittest.TestCase):
                 document[field] = value
                 with self.subTest(field=field, value=value), self.assertRaisesRegex(tasks.UnsupportedTaskError, "unsupported"):
                     check(document)
+
+    def test_schema_two_is_exactly_n4_and_requires_new_media_bindings(self):
+        for kind in FIXTURES:
+            document = example(kind)
+            old_hash = tasks.content_hash(document)
+            document.update(schemaVersion=2, jlpt=4, blueprint="n4-section-v1")
+            self.assertFalse(check(document))
+            self.assertNotEqual(old_hash, tasks.content_hash(document))
+            for mutation in ({"schemaVersion": 1}, {"jlpt": 5}, {"jlpt": 3},
+                             {"jlpt": "4"}, {"jlpt": True}, {"jlpt": 4.0},
+                             {"blueprint": "n5-section-v1"}):
+                changed = copy.deepcopy(document)
+                changed.update(mutation)
+                with self.subTest(kind=kind, mutation=mutation), self.assertRaises(ValueError):
+                    check(changed)
+            self.assertTrue(check(declared_approval(with_media(document))))
+        stale = declared_approval(with_media(example()))
+        stale.update(schemaVersion=2, jlpt=4)
+        with self.assertRaisesRegex(ValueError, "different content package"):
+            check(stale)
 
     def test_unknown_fields_at_every_supported_object_boundary(self):
         document = example("verbal-expression")
@@ -547,7 +567,7 @@ class TaskFilesTests(unittest.TestCase):
                                          ("MAX_INFLATED", 24, "retained/inflated"),
                                          ("MAX_ENTRIES", 10, "entry"),
                                          ("MAX_COMPRESSED", result["localZipBytes"] - 1, "compressed"),
-                                         ("MAX_TASK_MEDIA", 9, "6 MiB")):
+                                         ("MAX_TASK_MEDIA", 9, "20 MiB")):
             with self.subTest(guard=constant), patch.object(budget, constant, limit), self.assertRaisesRegex(ValueError, message):
                 budget.check(self.root, names)
 
@@ -560,7 +580,7 @@ class TaskFilesTests(unittest.TestCase):
         with patch.object(tasks, "MAX_MEDIA_BYTES", total):
             self.assertEqual([], self.errors())
         with patch.object(tasks, "MAX_MEDIA_BYTES", total - 1):
-            self.assertTrue(any("6 MiB" in error for error in self.errors()))
+            self.assertTrue(any("20 MiB" in error for error in self.errors()))
 
     def test_pool_gate_checks_actual_assets_even_with_a_regenerated_manifest(self):
         document = self.media_document()

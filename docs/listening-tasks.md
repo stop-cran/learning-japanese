@@ -435,6 +435,12 @@ learner exposure/cooldown/accessibility and the exact captured selection.
 
 ## Full-tree budget and rollout
 
+The following records the historical contract-1 adjustment. [N4 B](listening-n4.md#media-budgets-and-publication-gates)
+supersedes its capacities: app download/retained caps 48/64 MiB; publishing compressed/retained/
+combined-task-media guards 42/56/20 MiB. Inflation, entry and per-file limits are unchanged.
+An older 30-MiB app cannot fetch an oversized new archive and keeps its last accepted offline
+content; deliver the upgraded APK before that publication. Capacity does not authorize spending.
+
 The pulled `73bde0f` tree's local ZIP is 22,665,639 bytes, already close to the current 24-MiB
 conservative publishing guard. Adopted contract 1 raises only that conservative guard to 28 MiB
 in B, **not** the app's 30-MiB download / 50-MiB retained / 100-MiB inflated / 8,000-entry limits.
