@@ -95,6 +95,31 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 55 reconciliation:** Bare English labels can remain
+  ambiguous across Japanese lexical distinctions: interpretation,
+  work, spread out, passage and currency need direct pair checks.
+  Existing guards are not transitive. Inspect whole older bodies
+  and ordinary secondary senses before adding or rejecting a pair;
+  explicit untidy-state wording is not automatically an active
+  scattering answer, and a valuable occasion is not necessarily
+  an incidental opportunity.
+
+- **Batch 55 reconciliation:** Explain same-spelling つく/つつく
+  with the actual readings and light/repeated-poke tendency,
+  without claiming that つく excludes a light poke. Attribute
+  1456895:1-2 separately as recognition, not another N2 source row.
+  Gloss サ変 in plain English and connect the classification
+  warning to practical 通じ- forms. Attested に and で constructions
+  do not establish unrestricted particle substitution.
+
+- **Batch 55 review limits:** Compare all report sections, including
+  tentative optional hypotheses, before crediting unique discoveries.
+  GPT read 96 complete older comparison bodies; Claude read four,
+  not the author's 120. Claude's disclosed broad `.github` search
+  also surfaced two unassigned agent files; do not describe that
+  as perfect scope compliance. The unchanged 月日/日月 explanation
+  remains a separately recorded baseline limitation.
+
 - **Batch 55 authoring:** A blank raw gloss does not authorize
   reconstruction of compiler intent. Explicit 通ずる/通じる
   crossreferences support bounded recognition in the existing

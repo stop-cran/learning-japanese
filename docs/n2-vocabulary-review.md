@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 55: N2:1082-N2:1101
 
-**Status:** draft; independent reviews and reconciliation pending.
+**Status:** draft; initial reviews authenticated and corrections applied;
+original-session confirmations pending.
 
 Eighteen new articles: 散らす, ちり紙, 散る, 追加, ついで,
 通貨, 通勤, 通知, 通帳, 通訳, 通用, 通路, 付き合う,
@@ -74,6 +75,95 @@ are substantively linked word-side; missing cards are not invented.
 Current draft totals: 1,092 mapped articles = 1,021 new and 71 reused
 baseline identities; 4,294 total word articles. A draft is not
 review-closed merely because it is committed or structurally valid.
+
+### Batch 55 - initial reviews and reconciliation
+
+Common authored snapshot: `f467750c0645c7d3f0f07d24068f418a84887b0e`,
+parent `b005473a6a1dda6e0b52dd1f43c94bf7d7b22d75`. Actual
+`gpt-6.1-sol` and `claude-opus-5.5` reviewed sequentially with
+identical blind prompts apart from model/family substitutions.
+Both processes exited without edits. Complete
+[GPT](n2-vocabulary-reviews/batch-55-gpt-initial.md) and
+[Claude](n2-vocabulary-reviews/batch-55-claude-initial.md) native
+final reports are archived; public formatting only replaces
+two-space hard line breaks with blank lines. Author checks
+authenticate actual models, native sessions, exact prompts,
+frozen file hashes, patches, blind derivatives, private-file
+allowlists and zero edits.
+
+Dispositions below are subject to original-session confirmation:
+
+- **F001 / B55-02: resolved.** Add 通知/届ける. The complete
+  older article actually teaches notifying an authority, supported
+  by 1457210:2, not merely the delivery topic.
+- **F002 / B55-01: resolved.** Add 通訳/解釈 and /読み.
+  Unqualified English interpretation is a valid oral-translation
+  gloss in 1433560:1. The Japanese distinction remains useful;
+  body explanations and 解釈/読み protection do not resolve these
+  direct quiz ambiguities. Claude mentioned 読み too.
+- **F003: resolved.** Add 通用/働く. Actual 1433570:2 and
+  ordinary functioning/effectiveness in 1451150:2 support English
+  work, despite the older article's employment emphasis.
+- **F004: resolved.** Add 散らす/広がる. Actual spread meanings
+  in 1303460:2 and 1602360:1 support the bare English spread-out
+  ambiguity; Japanese transitivity remains explicitly taught.
+- **B55-03: resolved as comprehension improvement.** Explain
+  separate つつく, also written 突く, with light/repeated poking
+  and pecking recognition from 1456895:1-2. Do not infer that the
+  original light single-poke つく example is wrong or that
+  repetition is an absolute requirement. Record the extra identity
+  separately without assigning it another N2 level.
+- **B55-04: resolved.** Add the に construction and the actual
+  captured 世界に通用する新技術, with kana and English.
+  Retain the で setting construction, not a substitution rule.
+- **B55-05: resolved.** Gloss サ変 as an irregular conjugation
+  class and direct practical conjugation to the already taught
+  通じ- forms. Preserve the primary つうじる and easier N3.
+- **B55-06: optional, outside this batch's changed teaching.**
+  The unchanged 月日 claim about reversing 日月 is overbroad:
+  the two complete entries also overlap in celestial/time uses.
+  Record a future baseline correction rather than silently
+  expanding this narrow reuse into a whole-card rewrite.
+- **Claude optional guards, author-adjudicated:** Add 突く/当たる
+  on ordinary hit/contact meanings (1448810:1-2), 通路/通行 on
+  the underspecified English passage label (1433180:1),
+  突き当たる/届く on actual reach/arrive meanings (1457200:1-2),
+  and 通用/通貨 on English currency (1433570:1/1433050:1).
+  These are direct label ambiguities, not unrestricted Japanese
+  synonymy or automatic propagation through existing guards.
+  No required ついで/せっかく or 散らす/散らかる pair is
+  established: the actual valuable/effort uses and explicit
+  untidy/scattered-state wording do not establish the proposed
+  incidental-occasion or active-distribution equivalences.
+- **Other optional:** Clarify 散らす's ます-stem wording.
+  Further spellings, accompaniment constructions, terminology
+  and baseline expansions remain optional; no demonstrated
+  selected-sense mismatch requires changing the ついで mapping.
+
+Seventeen guarded new articles now declare 88 pairs, versus 79:
+nine direct additions and no removals. Seven new word articles
+and reused 通じる change. Only N2:1100 gains additional
+1456895:1-2 recognition, with a corresponding source-note
+clarification and index hash update. Other raw fields, selected
+source senses, article identities and levels remain unchanged;
+no new kanji teaching edits.
+
+**Usefulness and limits:** Both models independently identify
+notification/interpretation gaps, including Claude's tentative
+読み suggestion. GPT uniquely establishes work/spread gaps;
+Claude uniquely surfaces the three explanatory omissions and
+the additional optional guard hypotheses adjudicated above.
+This is complementary evidence on one sample, not a controlled
+bias-reduction result or general model ranking. GPT completely
+read 96 older bodies; Claude read four and parts of two more,
+using labels for most other comparisons. Both read all assigned
+content and family renderings, but their partial packet/snapshot
+reads differ. Claude's broad `.github` search surfaced two
+unassigned agent files; it claimed no reliance, and the
+deviation is retained rather than certified away. Neither
+review supplies native-speaker certification or runtime quiz
+draws. Author corrective rereads do not increase the deduplicated
+227-family/685-sense or 120-old-body inspection totals.
 
 ## Batch 54: N2:1062-N2:1081
 
