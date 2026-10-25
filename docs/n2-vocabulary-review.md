@@ -71,6 +71,54 @@ Current drafted totals: 1,111 mapped articles = 1,035 new and 76 reused
 baseline identities; 4,308 total word articles. No draft association
 is review-closed merely because it is committed or structurally valid.
 
+### Batch 56 - initial reviews and corrections
+
+The initially blind [GPT](n2-vocabulary-reviews/batch-56-gpt-initial.md)
+and [Claude](n2-vocabulary-reviews/batch-56-claude-initial.md) reports
+reviewed authored commit `3e67155e0a83c666b61719eca7eb3377fd649ce9`.
+Actual models were `gpt-6.1-sol` and `claude-opus-5.5`; isolated
+processes ran sequentially and exited without edits. Complete native
+reports, exact prompts, sessions, models, frozen source derivatives,
+patches and hashes were authenticated. Initial defects remain in the
+archived reports, not relabelled as clean.
+
+Both found the missing 努める/苦心 and 潰れる/ぺちゃんこ guards.
+Both also mentioned the unlinked 勉/力 variant components, although
+Claude labelled that optional; it is not a unique GPT discovery.
+Add those two guards and links. Claude uniquely proposed 作る/生産;
+the complete actual 生産 article and 1378990 production/manufacture
+sense support that direct guard, independently of neighboring edges.
+Also accept its optional 潰す/ぺちゃんこ and 詰まる/渋滞 hypotheses
+after inspecting physical crushing/flattening and congested-state
+meanings respectively. These five direct additions do not claim
+unrestricted Japanese interchangeability or transitive exclusions.
+Adopt its optional 艶 performance-charm wording, grounded in the
+captured つや heading, not as a newly discovered correctness defect.
+
+Do not add 繋がり's three proposed verb guards merely because 関係
+and 接続 have noun-and-する uses. Actual 繋がり is the connection
+itself, not connecting/being connected; its noun-only family has no
+secondary connecting-verb use. Likewise 役, 役割 and 務め identify
+a role or duty, not the predicate "serve as; play a role" of 務める.
+Existing 勤め/勤める protection concerns overlapping work/service
+meanings; it is not a universal same-root or noun/verb rule.
+通信's channel activity versus 伝わる's conveyed thing remains a
+weaker optional hypothesis, not an established missing guard.
+
+All 21 corrective families/58 senses and fourteen complete older
+bodies were actually read. Deduplicated family totals are now
+144/565, including the twenty-one source/teaching principals.
+The old-body union is 106: 苦心, ぺちゃんこ, 生産 and 渋滞 add
+four new reads to the previous 102; the other ten are rereads.
+Initial GPT fully read 76 additional older comparison bodies;
+Claude fully read one and used targeted title/guard searches.
+Those are their actual scopes, not the author's counts. Claude
+did not read the family-inspection renderings or fetch fresh pages.
+The allowed but absent redundant `principal-reading.txt` was a
+prompt limitation; the complete principals JSONL was available and
+read. These unequal depths and optional/unsupported hypotheses
+limit any model-bias conclusion. Confirmation is still pending.
+
 ## Batch 55: N2:1082-N2:1101
 
 **Status:** closed after authenticated independent reviews, evidence-based

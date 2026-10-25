@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 56 reconciliation:** A same-root noun/verb precedent is not
+  a rule that every related noun and predicate need an exclusion.
+  Inspect actual senses: a connection or assigned role is not
+  automatically connecting or performing the role. Conversely,
+  生産's actual manufacture use, 苦心's taking pains, physical
+  squashing and a congested state support direct guards even when
+  labels or word classes differ. Neighboring edges prove neither
+  inclusion nor exclusion. Check optional hypotheses as well as
+  formal findings; both models noticed the rare-spelling link gap,
+  so its different severity labels do not make it unique to GPT.
+  A full blind source derivative is not a substitute for reading
+  old bodies, and reviewers must retain unequal actual scopes.
+
 - **Batch 56 authoring:** Distinguish a wrong supplied identity from a
   genuine separate-entry alias. The 務める row points to 勤める-only
   1240825; teach inspected 2872052 while preserving the raw source.
