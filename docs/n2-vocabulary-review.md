@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-60 review-closed; batch 61 drafted.** The target is all 1,812 source rows,
+**Batches 01-61 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,200 rows are review-closed; twenty are draft,
+The first 1,220 rows are review-closed; none are draft,
 592 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 61: N2:1202-N2:1221
 
-**Status:** drafted; initial reviews and original-session confirmations
-authenticated; a narrow evidence-label correction awaits confirmation.
+**Status:** closed after authenticated independent reviews,
+original-session confirmations and a bounded evidence-label follow-up.
 
 Sixteen new articles: 特色, 特長, 特定, 特売, 溶け込む, 退ける,
 床の間, 所々, 都心, 戸棚, とっくに, どっと, 整う, 留まる,
@@ -105,6 +105,66 @@ are empty. This is an evidence-record correction, not a newly discovered
 identity error. The follow-up removes "usually" from 退ける rather than
 inferring frequency from a non-jōyō reading or heading mark.
 The original reports and frozen evidence remain historical.
+
+### Batch 61 - confirmed and closed
+
+The same original sessions confirm the one-sentence follow-up at
+`46233abe6b58dcaad2df25e26b8a6ed297dd0b2b`:
+[GPT](n2-vocabulary-reviews/batch-61-gpt-followup.md) and
+[Claude](n2-vocabulary-reviews/batch-61-claude-followup.md).
+Both read the complete 退ける article, actual patch and complete
+pinned 2850084 record. The author verifies their successful returned
+contents, exact prompts, actual models and zero edits, not just
+requested paths. All six native reports remain unchanged.
+Both models withdraw the unsupported label claim; Claude also
+withdraws its heading-mark/non-jōyō frequency justification.
+The remaining internal "usual kana" mapping-note phrase is historical
+and superseded explicitly, not a current learner-facing assertion.
+
+The preceding confirmations returned all ten changed bodies,
+the entire patch, both complete selected-family chunks (29 families/
+90 senses), the two fresh comparison renderings, all three complete
+older-body chunks (twenty articles), and the TSV header/twenty rows.
+The final one-word follow-ups explicitly inherit the other supported
+judgments; no fresh twenty-row or whole-batch reread is claimed.
+All three edited kanji cards and five reciprocal pairs retain the
+actual complete-body initial judgments. Mechanical commit, hash,
+manifest and baseline-preservation checks remain author-executed.
+
+The author union is 367 complete families/979 senses and 193
+distinct older bodies. Nine fresh corrective families/fourteen senses
+extend the original 358/965; twenty corrective bodies add four
+distinct identities to 189. Native reviewer unions are separately
+computed: GPT 121 and Claude twenty complete older bodies,
+including their overlapping corrective reads. These are not access
+counts or a claim of equal initial evidence depth.
+
+GPT's F01-F04 and Claude's supported findings are resolved.
+Claude withdraws the preparation-clique suggestion after reading
+the actual result-state constructions, and largely withdraws the
+title-only excess-guard objections after complete sense inspection.
+都心/中 remains a nonblocking weak guard, not established synonymy;
+Claude also qualifies the beverage-specific 整う/入る guard.
+Neither reviewer requires a further change. GPT's F05/F06 remain
+valid but deferred inherited 飛ぶ/飛行 and 止まる/止む quiz debt.
+The twenty rows' final CLEAN-valued facets are explicitly bounded
+to source coverage and batch additions, not whole-card or whole-corpus
+quiz clearance. No consequential unresolved in-scope claim remains.
+
+The resumed evidence-label correction is an additional useful
+Claude contribution, not a blind-initial discovery or a measured
+bias-reduction result. Author adjudications are assessed against
+actual records rather than automatically endorsed by both models.
+The failed とっくに endpoint, single-service public evidence,
+unparsed spelling-guide PDF and unmeasured frequency remain limits.
+
+Cumulative coverage is **1,220 closed, 0 draft, 592 pending and
+0 unresolved** rows, mapped to 1,210 distinct articles: 1,124 new
+and 86 reused. There are 4,397 word articles and 268 tracked
+new-word reciprocal N2 pairs. All 3,273 baseline identities,
+readings, titles, easier levels and original exclusions are preserved.
+The twenty-row closure changes no teaching or manifest bytes.
+This closes batch 61, not the full vocabulary expansion.
 
 ## Batch 60: N2:1182-N2:1201
 

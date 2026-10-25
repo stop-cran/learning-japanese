@@ -62,6 +62,11 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   The kanji heading's mark and an unlisted jōyō reading do not
   themselves measure spelling frequency. Retire the unsupported
   "usually" claim instead of defending it with a different proxy.
+- Confirmation findings are not blind-initial discoveries. The same
+  sessions can validate a small retirement of an unsupported claim
+  without rerunning twenty unchanged judgments. Preserve the
+  historical assertion and reports, append its explicit supersession,
+  and verify the actual returned revised body, patch and source.
 
 ## Batch sequence
 
