@@ -61,6 +61,70 @@ After this item the aggregate is 42 files and 367 authored records:
 identities from v1 and v2; already-kana prompts remain excluded. N5-only membership
 and its 246 Read identities are unchanged.
 
+## Practical-family matrix: content #40
+
+Twelve additional files provide **24 v1 suffix cards, 12 reverse questions and
+49 v2 expressions: 85 records**. The six families each have four suffix contexts,
+two reverse fixtures and eight full expressions; 足 adds a single-sock contrast.
+泊 belongs to Time; the other five belong to Everyday.
+
+| Files | Scope and exact reading checks |
+| --- | --- |
+| `soku`, `sokuexpressions` | Complete footwear pairs versus one loose sock; 三足/何足 voiced and unvoiced variants; 六足 ろくそく; ten's ジュッ/ジッ; matched-set 組 alternatives |
+| `chaku`, `chakuexpressions` | Garment counts, appropriate 枚 alternatives, not race places; 六着 ろくちゃく, 八着 はっちゃく, 十着 じゅっちゃく/じっちゃく |
+| `ken`, `kenexpressions` | Detached homes versus shop establishments, not rooms/floors; fitting 戸/棟 or 店/店舗 alternatives; 三軒/何軒 voiced/unvoiced, 八軒 はちけん/はっけん |
+| `mei`, `meiexpressions` | Formal headcounts with natural 人 alternatives; 七名 ななめい/しちめい; one's own party versus guest-address 何名様, including its full reading |
+| `do`, `doexpressions` | Past occurrences, not temperature or scheduled rates; 回 and 遍 alternatives; 七度 ななど/しちど and 九度 きゅうど/くど; small-number numeric prompts exclude literary native-number readings |
+| `haku`, `hakuexpressions` | Overnight stays and compact nights/calendar-days itineraries; 二泊 にはく; four/six/eight variants; no fixed 48/72-hour claim |
+
+The canonical numbers for suffix prompts are 4/5/7/9; full expressions use
+1/2/3/6/8/10/11 and a question. Overnight 1/2 are composed itineraries. These are
+sound-class and scenario drills, not independent transfer contexts for every
+number. The single-sock 一枚 deliberately repeats an existing reading to teach
+the paired-versus-single distinction. Occurrence 何度 also repeats a spelling
+already used in the temperature sense.
+
+There are **73 additional projected Read identities**, not just 49. Each
+reverse-owning file has four qualifying forward cards. Reverse review must read
+the actual Japanese noun labels without their absent sentences: footwear labels
+specify matching left/right items, occurrence labels name events, and overnight
+labels describe nights spent sleeping at lodging, not merely a hotel building.
+Wrong references are unchanged notebook/cat/pen cards and remain incompatible
+with the tested counter across their authored tiers.
+
+After this item: 54 files, **452 authored records = 148 suffix + 32 reverse +
+272 expressions**, and 419 projected Read identities. Home's forward/expression
+prompt count is 420 for N4+N5 (139 Time, 281 Everyday); these are not independent
+mastery totals. The N5 inventory remains unchanged.
+
+### Practical sources and boundaries
+
+Exact entries inspected on 2026-10-25:
+
+- [IMABI I](https://imabi.org/counters-with-sino-japanese-numbers-i/): 足 table.
+- [IMABI II](https://imabi.org/counters-vi/): 名, 軒 and 泊 tables.
+- [IMABI VIII](https://imabi.org/counters-viii/): 着 table, especially unchanged
+  ろく and the ten variants. This inspected table lists 八着 はっちゃく; an AI
+  search summary's claim that it also explicitly lists はちちゃく was false.
+- [IMABI occurrences](https://imabi.org/counters-for-frequency-%EF%BD%9E%E5%BA%A6%E3%83%BB%E5%9B%9E%E3%83%BB%E9%81%8D/):
+  exact 度/遍 readings and overlapping occurrence uses. Do not promote every
+  broad prose generalization on future recurrence into an absolute rule.
+- [UT Austin JOSHU](https://laits.utexas.edu/japanese/joshu/counters/counters_category.php):
+  independent model-reading cross-checks for 着, 足, 軒, 度 and 泊. Individual
+  examples elsewhere on that page contain errors; this is not an endorsement
+  of the entire page or evidence that its shorter tables list every variant.
+- 数え方単位辞典: [靴下](https://www.sanabo.com/kazoekata/ct_ka/ku/kutsushita/)
+  explicitly distinguishes paired 足/組 from single 枚;
+  [家](https://www.sanabo.com/kazoekata/ct_a/i/ie/) and
+  [店](https://www.sanabo.com/kazoekata/ct_ma/mi/mise/) support the contextual
+  alternate-unit choices.
+- The previously inspected Tofugu list establishes the garment/race and
+  occurrence/temperature distinctions; Irodori's Elementary 2 list supplies
+  practical overnight-stay context.
+
+No additional long-tail family is introduced merely because its unit is accepted
+as an alternative. These schemas still do not assess pitch accent or listening.
+
 ## Evidence and answer policy
 
 Inspect exact entries, not search summaries or generic sound rules. These sources
@@ -130,3 +194,21 @@ remove reference data to manufacture a pass. App test companion
 `1dd903dc533139561b74f043c46441858e56b432` covers N5 and N4 Write/Read, article Back
 and production session continuation, with explicit light/dark palettes. The final
 publication and exact validation evidence are recorded on content #39.
+
+### Practical-family review reconciliation
+
+One independent reviewer examined all 85 new records, their vocabulary support,
+all 12 rendered reverse fixtures and the article/documentation additions at
+candidate manifest `b48d45659a9a68d7`. Scoped coverage and comprehensibility were
+CLEAN. One minor correctness finding was resolved: the accepted 九人 alternative
+in the formal-applicant suffix card now also accepts くにん. This belongs in
+legacy `kana`, not in the reading answers for displayed 九名. The original
+reviewer reconciled the exact one-line change; final verdicts were CLEAN in all
+three facets, with no remaining finding.
+
+The native companion `d6f5c603e12013197cc7fb13b0eea7a7efa4d217` additionally
+asserts that practical Reading questions come from the new suffix families and
+overnight Write questions from `hakuexpressions`, including continuation. Earlier
+N4 records stay in the source and receive future-due states only in the isolated
+test database; source filtering is not replaced by a pruned or relabeled fixture.
+Exact publication and validation evidence are recorded on content #40.

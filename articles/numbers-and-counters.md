@@ -167,6 +167,72 @@ person. Compare 三回, “three times,” with 三回目, “the third time.”
 context, so “番 is always just a label” would be too strong. The drills state
 whether they request a label, a particular ordinal construction or a quantity.
 
+## More everyday counters: pairs, clothes, houses and people
+
+The N4-oriented extension adds these practical families. The level is a learning
+allocation, not proof that every use belongs to an official N4 list.
+
+| Counter | What is being counted here | Useful model |
+| --- | --- | --- |
+| 足（そく） | Complete pairs of footwear | 三足（さんぞく／さんそく）— three pairs |
+| 着（ちゃく） | Garments | 六着（ろくちゃく）— six garments |
+| 軒（けん） | Houses and shop establishments | 三軒（さんげん／さんけん）— three houses/shops |
+| 名（めい） | People, especially in formal headcounts | 七名（ななめい／しちめい）— seven people |
+| 度（ど） | Occurrences or experiences | 二度（にど）— twice |
+| 泊（はく） | Nights spent at lodging | 二泊（にはく）— two nights |
+
+**A pair is not one loose piece.** 左右そろったくつした一足 means “one
+complete left-right pair of socks.” A single sock without its partner can be
+くつした一枚（いちまい）, “one individual sock.” 組（くみ）can also describe
+the matched set. Do not use 足 for every kind of pair: a pair of earrings is
+not footwear. Keep 六足 as ろくそく, not a guessed contraction.
+
+**Clothing counters overlap.** シャツ三着（さんちゃく） and シャツ三枚
+（さんまい）can both count three shirts. 着 is useful for coats, dresses,
+jackets and other garments; 枚 also counts many individual clothing items.
+A matched multi-piece outfit and its separate pieces need not have the same
+count. In a race, 一着 means “first place,” not one garment: context decides.
+Six garments are 六着（ろくちゃく）; eight are 八着（はっちゃく）.
+
+**Count the house or shop, not its rooms or floors.** 軒 is useful for homes,
+cafes and small shops. Other units can also fit: 戸（こ） counts housing units,
+棟（とう） buildings, and 店（てん）／店舗（てんぽ） shops. A building can
+contain several housing units or shops, so these counts are not always
+interchangeable. The drills state what is being counted and accept the fitting
+alternatives. 八軒 can be はちけん or はっけん; 何軒 can be なんげん or
+なんけん.
+
+**名 changes the register, not the number of people.** 参加者六名
+（さんかしゃろくめい）, “six participants,” is a formal headcount; 六人 is
+also natural. A restaurant host may ask 何名様（なんめいさま）でしょうか,
+“How many people are in your party?” When giving your own party's count, say
+二名です or 二人です without adding 様 to yourselves. Read every displayed
+part: 何名様 includes さま.
+
+**Occurrences are not temperatures.** 三度（さんど） can mean “three
+times” or “three degrees”; the surrounding situation supplies the sense.
+回 is a neutral occurrence counter and overlaps with 度 in the past-experience
+examples. 遍（へん） is another possible occurrence counter, especially with
+small numbers. These are not blanket substitutions inside fixed expressions.
+The numeric drills use Sino-Japanese readings such as 一度（いちど） and
+二度（にど）; native expressions such as 二度（ふたたび）, “again,” have
+their own usage and are not the target of those prompts.
+
+## Overnight stays and itinerary days
+
+泊 counts nights at lodging, not buildings and not exact 24-hour blocks.
+For example, arriving Saturday afternoon and leaving Sunday morning is
+一泊二日（いっぱくふつか）, “one night over two calendar days.”
+Arriving Friday afternoon and leaving Sunday morning is
+二泊三日（にはくみっか）, “two nights over three calendar days.”
+Neither expression promises 48 or 72 elapsed hours.
+
+Keep **二泊 as にはく**, not にぱく. Other useful forms are 三泊（さんぱく）,
+四泊（よんぱく／よんはく）, 六泊（ろっぱく／ろくはく）,
+八泊（はっぱく／はちはく） and 何泊（なんぱく）.
+The itinerary drills explicitly ask for the compact nights-then-days notation;
+the other overnight drills ask only for the number of stays.
+
 ## Where Grammar takes over
 
 This section owns quantities and their readings, not every sentence pattern
@@ -189,6 +255,14 @@ beginner coverage and readings, not an official JLPT level assignment:
 - [IMABI numbers](https://imabi.org/sino-japanese-numbers-2/) and
   [counter tables](https://imabi.org/counters-with-sino-japanese-numbers-i/):
   number composition and exact counter readings; pitch is not graded here.
+- IMABI [名・軒・泊 tables](https://imabi.org/counters-vi/),
+  [着 table](https://imabi.org/counters-viii/) and
+  [occurrence counters](https://imabi.org/counters-for-frequency-%EF%BD%9E%E5%BA%A6%E3%83%BB%E5%9B%9E%E3%83%BB%E9%81%8D/).
+- 数え方単位辞典 entries for
+  [socks](https://www.sanabo.com/kazoekata/ct_ka/ku/kutsushita/),
+  [houses](https://www.sanabo.com/kazoekata/ct_a/i/ie/) and
+  [shops](https://www.sanabo.com/kazoekata/ct_ma/mi/mise/):
+  paired versus single socks and context-dependent alternative units.
 - Japan Foundation [Irodori Elementary 1 vocabulary](https://www.irodori.jpf.go.jp/assets/data/wordlist_Y.pdf)
   and [Elementary 2 vocabulary](https://www.irodori.jpf.go.jp/assets/data/wordlist_Z.pdf):
   practical temperatures, numbering, percentages and timetable expressions.
