@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-69 review-closed.** The target is all 1,812 source rows,
+**Batches 01-70 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,380 rows are review-closed; 20 are draft and 412 remain pending.
+The first 1,400 rows are review-closed; none are draft and 412 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 70: N2:1382-N2:1401
 
-**Status:** independently reviewed and corrected; original-session
-confirmations pending.
+**Status:** closed after authenticated independent initial reviews
+and correction acceptance by both original reviewer sessions.
 
 Seventeen new articles: 半島, ハンドル, 日当たり, 日帰り,
 比較的, 日陰, 引き受ける, 引き返す, 引き算, 引き止める,
@@ -60,7 +60,7 @@ headings from one authority. Raw 陽射's empty extraction and
 Spelling restrictions, modern versus older senses and assigned
 readings within mixed public headings remain independently scoped.
 
-Draft coverage: **1,380 closed / 20 draft / 412 pending /
+Authored draft coverage was **1,380 closed / 20 draft / 412 pending /
 0 unresolved**. Twenty newly mapped rows bring mapped articles to
 **1,386: 1,282 new / 104 reused**. The authored scope is 29 files.
 Author inspection is not an independent reviewer finding or a
@@ -98,7 +98,41 @@ return authenticates access, not comprehension. Shared withdrawal
 and complementary responsibility/borrowing-route findings were
 useful in this sample. Positive spelling verification is also a GPT
 contribution, even though it was not a defect. This is not a model
-ranking or measured bias reduction. No closure is claimed yet.
+ranking or measured bias reduction.
+
+Both original sessions confirmed the corrections sequentially at
+`cced07e72cb5bc76192a2118fb47d8785a033d2e`; their
+[GPT](n2-vocabulary-reviews/batch-70-gpt-confirmation.md) and
+[Claude](n2-vocabulary-reviews/batch-70-claude-confirmation.md)
+reports are archived. All four native final messages, exact prompts,
+actual models, required complete returns and zero edits are
+authenticated. Each confirmation freshly returned all twenty
+articles, three kanji bodies, mappings, principals, components,
+the correction diff/reconciliation, nine corrective families /
+28 senses, short public excerpts and three specified older bodies.
+Both independently fetched the two exact Kotobank entries.
+TSV access in all four stages was limited to the header and the
+twenty assigned physical rows.
+
+Every final row is **CLEAN / CLEAN / CLEAN** for correctness,
+scoped coverage and comprehensibility; the three kanji edits,
+mappings and baseline preservation are assessed separately.
+Both accept the direct safeguards, Dutch attribution, separate
+引分 authority and aligned footer. No actionable defect remains
+established in scope. The concrete だます hypothesis is withdrawn,
+not converted into a universal voice/POS exemption.
+
+Actual cumulative complete older-body unions are **GPT 146 /
+Claude 66**, computed from native full chunks and direct complete
+returns, not overlapping self-reported totals or the author's
+144 comparison identities. This does not erase the initial
+Claude scope-statement discrepancy or prove comprehension.
+No teaching content changed after acceptance. Optional
+grammar/process/variant/navigation polish remains deferred.
+Closure is **1,400 closed / 0 draft / 412 pending /
+0 unresolved**. Git, hash, manifest and coverage checks are
+author-side; no exhaustive quiz safety, frequency measurement,
+native-speaker certification or measured bias reduction is claimed.
 
 ## Batch 69: N2:1362-N2:1381
 

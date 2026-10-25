@@ -21,6 +21,16 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 ## Batch 70 authoring observations
 
+- Both original reviewers accepted the corrections at
+  `cced07e72cb5bc76192a2118fb47d8785a033d2e`, sequentially and
+  read-only. All twenty final rows have three separate CLEAN
+  facets; three kanji edits, mappings and baselines are separately
+  accepted. Exact native prompts, models, four complete reports,
+  assigned returns and bounded TSV access are authenticated.
+  Actual cumulative complete older-body unions are GPT 146 /
+  Claude 66, not author counts or overlapping report totals.
+  No teaching edits follow acceptance; closure is 1,400 closed /
+  412 pending, with no draft or unresolved rows.
 - Authenticated blind initial reviews used GPT-6.1 Sol and Claude
   Opus 5.5 sequentially on the same committed draft. Both found the
   missing 引き出す/引き出し cash-withdrawal safeguard. Claude uniquely
@@ -51,7 +61,7 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   This is a claim-specific judgment, not a blanket voice exemption.
   Keep the explicit contrast; no inherited exclusion clique.
   Other optional grammar/process/variant/link polish stays deferred.
-  Both original-session confirmations are still pending.
+  Both original-session confirmations accept these dispositions.
 - Seventeen new articles and three reused identities cover
   N2:1382-N2:1401. Previously unlevelled ぴかぴか gains
   sourced N2; 引き出す keeps N4 and ぴったり keeps N3.
