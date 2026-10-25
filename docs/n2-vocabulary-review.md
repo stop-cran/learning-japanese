@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 69: N2:1362-N2:1381
 
-**Status:** draft; independent review and reconciliation are pending.
+**Status:** draft; authenticated independent initial reviews reconciled;
+original-session confirmations pending.
 
 Twenty new articles: 跳ねる, 破片, 歯磨き, はめる, 早口,
 流行る, 払い込む, 払い戻す, バランス, 針金, 張り切る,
@@ -64,6 +65,39 @@ Draft coverage is **1,360 closed / 20 draft / 432 pending /
 The authored scope is 30 files. Direct quiz safeguards are
 author hypotheses pending independent judgment, not a global
 quiz-uniqueness claim.
+
+Independent initial reviews of `d5066fa715158c8b92eed02438e2c7bb23bf81d5`
+ran sequentially as actual `gpt-6.1-sol` and `claude-opus-5.5`.
+Their [GPT](n2-vocabulary-reviews/batch-69-gpt-initial.md) and
+[Claude](n2-vocabulary-reviews/batch-69-claude-initial.md) native final
+reports are archived. Exact prompts, models, complete assigned returns,
+twenty TSV rows and zero edits were authenticated. Common evidence
+access was not equal actual read depth: GPT returned all family/older
+chunks and 102 older identities; Claude returned none of those chunks
+and 15 direct word paths, one being the new 番地 card.
+
+Corrections add fourteen direct guards, remove 判事/審判, narrow
+反映's title to "reflection," explicitly contrast its computing use
+with 効く, correct 張り切る's spelling attribution and tighten
+optional バランス financial wording. The source rows, identities,
+readings, levels, types and four kanji additions are unchanged.
+Core corrective reads cover 38 complete families / 94 senses and
+22 complete older bodies. A two-family / six-sense vigor supplement
+and direct older reads bring author totals to 267 families / 715
+senses and 105 distinct older bodies. Prepared receipts are not
+relabeled as completed reads.
+
+Shared useful observations concern fit, flourishing, eagerness,
+生き生き and spelling attribution. GPT uniquely supplied hopping,
+もりもり, giving-up and excess 審判 findings. Claude uniquely
+supplied update-title and deposit observations, optional 支払 and
+financial wording, and the 切れ candidate in its limits. Additional
+author vigor guards are not credited as reviewer discoveries.
+Retained representation/address guards have positive scoped evidence,
+not a "harmlessness" exemption. Homograph 印, cord, generic cheering
+and causation suggestions do not establish extra pairs. This is useful
+complementarity in this sample, not measured bias reduction or a
+general model ranking. All dispositions remain subject to confirmation.
 
 ## Batch 68: N2:1342-N2:1361
 

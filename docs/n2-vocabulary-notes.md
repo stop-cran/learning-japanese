@@ -21,6 +21,31 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 ## Batch 69 authoring observations
 
+- Initial GPT and Claude reviews ran independently and sequentially
+  on the same committed draft, with authenticated actual model and
+  complete-return evidence. Their access was common, but actual read
+  depth differed; do not claim matched coverage or bias reduction.
+  生き生き occurs in GPT findings and Claude's tentative note,
+  while 切れ occurs in Claude's limits: contribution accounting
+  includes all report sections.
+- Reconciliation adds fourteen direct safeguards and removes the
+  excessive judicial-person/sporting-official 判事/審判 edge.
+  Complete family/body evidence supports actual fit, thriving,
+  vigor, deposit/payment, giving-up and broken-piece competitors.
+  Additional 張り切る vigor guards are author-derived, not
+  invented reviewer findings or inherited exclusion cliques.
+- Shorten 反映's title to "reflection"; keep computing application
+  explicitly scoped and contrast 効く rather than presenting a
+  general efficacy meaning. 張切る is attributed to Daijisen's
+  actual heading, and unsupported はり切る attribution is dropped.
+  Retain positively supported representation/address guards, not
+  because excessive guards are harmless. Stable 印しるし does
+  not acquire separate 印いん's seal sense.
+- Six complete corrective chunks plus the two-family vigor
+  supplement establish 267 families / 715 senses cumulatively.
+  Full older-body reads establish 105 distinct identities;
+  活躍 was a reread, not a new identity. Original prepared and
+  completed receipts stay separate. Confirmation is still pending.
 - Twenty rows map to twenty new identities. Blank raw spellings
   for はめる, バランス, パンツ and バンド remain provenance.
   The kana-primary articles do not acquire alternative-spelling
