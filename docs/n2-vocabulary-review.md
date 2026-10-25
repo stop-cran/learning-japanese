@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-59 review-closed; batch 60 drafted.** The target is all 1,812 source rows,
+**Batches 01-60 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,180 rows are review-closed; twenty are draft,
+The first 1,200 rows are review-closed; none are draft,
 612 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 60: N2:1182-N2:1201
 
-**Status:** drafted; authenticated independent reviews reconciled;
-bounded corrections await original-session confirmations.
+**Status:** closed after authenticated independent reviews, bounded
+corrections and original-session confirmations.
 
 Nineteen new articles: 当日, 投書, 登場, どうせ,
 どうぞよろしく, 灯台, 盗難, 当番, 等分, 透明, 灯油,
@@ -118,6 +118,43 @@ guard and the modern lamp-oil qualifier; Claude additionally found
 the ストーブ link. This compares equivalent observations across
 the full reports, not just finding headings. Unequal actual
 evidence depth prevents model ranking or measured bias claims.
+
+### Batch 60 - confirmed and closed
+
+Both original sessions accepted the corrected snapshot
+`1a6ce2c0d34933b13655bad293db5fad6db6b07e`:
+[GPT confirmation](n2-vocabulary-reviews/batch-60-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-60-claude-confirmation.md).
+Every exact source-ID/article association has three final CLEAN
+facets. All four native reports, exact prompts, actual models,
+frozen snapshots and zero edits are authenticated. Both returned
+the seven complete corrected articles, full correction patch,
+thirteen complete corrective families/24 senses, twelve complete
+older bodies and the exact TSV header/twenty rows. Thirteen
+unchanged words, including reused どきどき, and four kanji inherit
+the actual initial complete-body judgments rather than purported
+fresh whole rereads.
+
+Corrective rereads add one distinct older body to GPT's 102,
+giving 103. They add nine to Claude's four; its additional complete
+訴える read gives fourteen. Neither count is initial depth plus
+twelve. Claude withdrew its optional 義務 suggestion after the
+complete evidence. Splitting the physical よける comparison into
+sidestepping versus transitive moving-aside, どうせ wording and
+further lexical expansions remain nonblocking. No further guard
+was established for 投書/訴える or 特殊/特に.
+
+No teaching changes follow confirmation. Author-executed checks
+preserve all 3,273 baseline identities/readings/titles/exclusions,
+the scoped reused article, all exact mappings, six batch links
+and 265 tracked new-word reciprocal N2 pairs. The deterministic
+manifest remains `4502879299c5e7e6`. File-only reviewers did not
+execute Git/hash/manifest checks; their baseline verdicts are
+bounded accordingly. The public general lighting-oil definition
+is not itself dated historical by that source. CLEAN denotes
+bounded no-established-defect, not native-speaker certification,
+exhaustive synonym coverage, frequency measurement, live-quiz
+verification or measured bias reduction.
 
 ## Batch 59: N2:1162-N2:1181
 

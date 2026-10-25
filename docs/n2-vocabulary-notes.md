@@ -109,7 +109,14 @@ evidence and learning impact; issue creation requires authorization.
   complete older-body counts of GPT 102 and Claude four;
   partial reads are not complete reads, and unequal depth does
   not measure model bias or establish a model ranking.
-  Bounded corrections await original-session confirmation.
+  Both original sessions accepted the bounded corrections.
+  Corrective rereads give cumulative distinct older-body counts
+  of GPT 103 and Claude fourteen, including Claude's additional
+  訴える read; do not simply add twelve to each initial count.
+  Claude withdrew the optional 義務 guard after full evidence.
+  Further physical/transitive よける polish remains nonblocking.
+  Preserve the public lighting-oil definition without inventing
+  a historical date or frequency claim that its source lacks.
 
 - **Batch 60 authoring:** A shared written 退く does not
   merge どく, のく, しりぞく and ひく; respect the
