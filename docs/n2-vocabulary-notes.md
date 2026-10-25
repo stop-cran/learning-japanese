@@ -21,6 +21,22 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 ## Batch 63 authoring observations
 
+- Both blind reviews identified なせる業's false potential analysis.
+  A successful direct Kotobank 為せる lookup explicitly confirms
+  the older perfect/resultative construction in two named dictionaries.
+  A modern potential listed on a verb page does not analyze every
+  homographic expression.
+- GPT uniquely found two direct explanatory guards with なぜなら;
+  Claude uniquely found 生意気's mixed-reading misdescription and
+  馴れる's inaccurate description of the preserved older body.
+  Both read all 337 family records, but complete older-body returns
+  differ: GPT 153, Claude three. This supports complementary value
+  on this sample, not a model ranking or measured bias reduction.
+- Do not remove guards merely because an older article foregrounds
+  another sense. Complete 打つ1408810:11 and 作る1597890:14 have
+  doing/carrying-out and committing senses without obsolete/rare
+  marks. Retain the guards with 為す pending the original reviewers'
+  confirmation of that explicit evidence-based disposition.
 - Keep raw source evidence separate from adopted teaching. The empty
   なだらか gloss does not invalidate the word. Source 何分 is なにぶん,
   not the separate minutes question なんぷん; retain the raw erroneous

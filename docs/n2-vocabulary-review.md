@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 63: N2:1242-N2:1261
 
-**Status:** drafted; independent reviews and reconciliation pending.
+**Status:** author-corrected after authenticated initial reviews;
+original-session confirmations pending.
 
 Twenty new articles: 仲良し, 慰める, 亡くす, なぐる, 為す, 謎謎,
 なだらか, 懐かしい, 撫でる, 斜め, なにしろ, 何々, 何分, 生意気,
@@ -67,6 +68,49 @@ reciprocal N2 pairs**. All 3,273 baseline identities/readings/titles
 and exclusions remain subject to the established preservation audit.
 Earlier batch61 inherited quiz debt remains deferred; this draft
 does not claim global quiz uniqueness or native-speaker certification.
+
+### Batch 63 - initial reviews and bounded corrections
+
+Authored snapshot: `0cc62d83b0e932b0d0c45e332f9f070a37d2b19c`.
+The [GPT](n2-vocabulary-reviews/batch-63-gpt-initial.md) and
+[Claude](n2-vocabulary-reviews/batch-63-claude-initial.md)
+native reports are authenticated against exact prompts, actual
+`gpt-6.1-sol` / `claude-opus-5.5` models, frozen hashes, patches,
+blind derivatives, private-file allowlists and zero edits.
+The two isolated processes ran sequentially and fully exited.
+
+Both returned all 23 assigned complete word/kanji bodies, all four
+compact renderings, the related patch, and the exact TSV header/
+twenty assigned rows. Both returned all fifteen complete-family
+chunks (337 identities). GPT additionally returned all eighteen
+older-body chunks and two other complete older articles: **153**
+distinct complete older bodies versus Claude's **three**.
+Supplying equal evidence did not yield equal actual body depth.
+
+| Observation | Evidence-based disposition |
+| --- | --- |
+| GPT N2-63-01 / Claude B63-C-01: なせる業 | Correct the shared false potential analysis. A successful author Kotobank 為せる lookup explicitly gives the older なす + perfect/resultative り construction in Digital Daijisen and Seisenban Nihon Kokugo Daijiten. Keep the real modern potential distinct. |
+| GPT N2-63-02 and N2-63-03: explanatory quiz pairs | Add separate なにしろ/なぜなら and 何分/なぜなら guards. Complete families 1188330, 1189310 and 1009410, actual older teaching and the matching なにぶん public heading support the direct judgments. No transitive clique is inferred. |
+| Claude B63-C-02: 生意気 reading | Explain native なま plus on readings イ/キ as mixed; preserve native-first `type: wago`. |
+| Claude B63-C-03: 慣れる attribution | Narrow the description of the actual older article to becoming accustomed. Do not remove the dictionary's separately recognized experienced sense or alter the old N4 body. |
+| Claude B63-C-04: remove 為す/打つ and 為す/作る | Do not adopt removal. Complete 1408810:11 explicitly includes do/carry out, and 1597890:14 includes commit a sin; neither is marked obsolete or rare. Narrow older openings do not establish absence or justify automatically exempting ordinary secondary senses. This does not claim unrestricted Japanese substitution. |
+| Claude optional 何々/いろいろ and 鳴らす/演奏 | Retain conservative guards. Complete 1587850:3 includes various things/this and that alongside 1599580's unspecified-listing use; making an instrument sound can describe playing it. Preserve the weaker confidence and do not infer guards transitively or equate all sound with performance. |
+| Claude optional 何々 example polish | Not required: the explicitly labelled placeholder intentionally illustrates the pronoun; punctuation change is optional and no false translation or construction is established. |
+
+Five new articles change: three localized explanations and two
+direct guard additions, yielding **94 declarations**. No identity,
+reading, title, level, mapping, source sense, old word, kanji body
+or original guard is changed. Initial packet declarations remain
+historical; the correction record identifies the new lists.
+
+Comparing all report sections, the false potential analysis is shared;
+the two explanatory guards are useful GPT-only catches, while mixed
+reading and older-body attribution are useful Claude-only catches.
+The removal proposal is not adopted; optional weak-guard observations
+remain qualifications rather than mandatory fixes. This demonstrates
+usefulness of both families here, not a controlled model-bias test.
+Both original sessions must assess the actual correction and remaining
+dispositions before any of these twenty rows is closed.
 
 ## Batch 62: N2:1222-N2:1241
 
