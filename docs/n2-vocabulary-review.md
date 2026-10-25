@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 60: N2:1182-N2:1201
 
-**Status:** drafted; independent reviews and reconciliation pending.
+**Status:** drafted; authenticated independent reviews reconciled;
+bounded corrections await original-session confirmations.
 
 Nineteen new articles: 当日, 投書, 登場, どうせ,
 どうぞよろしく, 灯台, 盗難, 当番, 等分, 透明, 灯油,
@@ -73,6 +74,50 @@ and unequal depth remain explicit. A separate completion receipt
 verifies capture bytes without changing the original preparation
 receipt's status. Author checks and provisional guards are not
 independent findings or a linguistic-correctness guarantee.
+
+The blind [GPT initial report](n2-vocabulary-reviews/batch-60-gpt-initial.md)
+and [Claude initial report](n2-vocabulary-reviews/batch-60-claude-initial.md)
+used actual `gpt-6.1-sol` and `claude-opus-5.5` sequentially.
+Both exact prompts, complete native final reports, actual models,
+zero edits, frozen snapshot and all 24 distinct assigned complete
+word/kanji bodies were authenticated. Both also returned all four
+compact evidence renderings and the exact twenty TSV rows/header.
+Successful complete older-body returns establish GPT 102 and
+Claude four; Claude's other partial/header reads remain partial.
+Equal permitted access does not imply equal actual source depth.
+
+Seven new articles receive bounded corrections: seven direct
+quiz-guard additions on 投書/苦情, 文句, 不平; 当番/役,
+役割; 溶かす/損害; and 特殊/格別. Their actual complaint,
+assigned-duty, financial-loss and special-adjective senses support
+the pairs, not transitive closure through existing guards.
+退く now distinguishes linked さける from physical よける
+and drops its excess 避ける guard. Existing identities remain.
+尖る links 丸い and 酸っぱい; 灯油 links ストーブ and
+qualifies the cooking-oil contrast as its modern fuel sense.
+The public とうゆ heading itself includes general lighting oil;
+that definition is not dismissed as only another reading's entry.
+
+Twelve complete corrective older bodies and thirteen complete
+families/24 senses were actually inspected. These give author
+unions of 135 distinct complete older bodies and 249 complete
+families/626 senses, not the naive sums. No title, reading, level,
+mapping, raw field, selected/additional sense, baseline teaching
+or kanji changes in reconciliation. Original blind evidence and
+quiz declarations remain historical; correction evidence records
+current declarations and exact initial native read receipts.
+
+The optional 義務 suggestion is not established by the full
+obligation article or neighboring 務め guards; scheduled role
+and required conduct are not merged by the English duty alone.
+Stage-appearance 登場 is not a doorway simply because English
+uses entrance for both. Other optional expansions remain optional.
+Both models supplied useful shared observations. GPT additionally
+identified 文句, 不平, 役割, 損害, 格別, the excess 避ける
+guard and the modern lamp-oil qualifier; Claude additionally found
+the ストーブ link. This compares equivalent observations across
+the full reports, not just finding headings. Unequal actual
+evidence depth prevents model ranking or measured bias claims.
 
 ## Batch 59: N2:1162-N2:1181
 

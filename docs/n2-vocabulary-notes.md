@@ -95,6 +95,22 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 60 reconciliation:** Reading restrictions apply to
+  comparisons too: physical よける cannot be attributed to the
+  existing さける card merely because both use 避ける.
+  Actual complaint, assigned-role, financial-loss and special
+  adjective senses establish seven direct guards; neighboring
+  exclusions do not establish the optional 義務 pair. Modern
+  kerosene teaching can retain its scope while qualifying the
+  oil contrast: the public とうゆ heading itself includes a
+  broader lighting-oil sense. Link existing comparison articles
+  at their substantive use, including a fuel/appliance contrast.
+  Both models contributed useful findings, with authenticated
+  complete older-body counts of GPT 102 and Claude four;
+  partial reads are not complete reads, and unequal depth does
+  not measure model bias or establish a model ranking.
+  Bounded corrections await original-session confirmation.
+
 - **Batch 60 authoring:** A shared written 退く does not
   merge どく, のく, しりぞく and ひく; respect the
   のく-only restriction on resigning/retiring. Keep actual
