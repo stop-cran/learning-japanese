@@ -5,7 +5,8 @@ A number alone cannot answer these questions. Read its attached expression and t
 
 The core practice covers numerical ranges, minimum benchmarks, unspecified quantities, frequency,
 negative scope, and time/price frames. Existing restriction, listing and comparison exercises keep
-their original owners. The short recognition bridges remain unscored.
+their original owners. A separate N4 follow-up adds sufficient means, exclusions, category membership
+and relative rank. The remaining prefix and higher-grade recognition bridges are not new N4 targets.
 The separate [ずつ distribution and increments](#7-distribution-and-increments) section adds
 focused **N3** interpretation practice; it is not an extra N4 coverage claim.
 
@@ -254,24 +255,75 @@ import an absent N4 cost predicate. Four required-resource/item-price readings a
 More elaborate activity + のに resource descriptions keep their existing **N3** owner in the
 [のに article](noni-and-concessive-contrasts.md); they are optional here.
 
-## 6. Short recognition bridges
+## 6. Sufficient means and additional scope expressions
+
+### だけで: enough by that means, not necessarily the only possible means
+
+Attach **だけで** to a noun or a plain verb clause:
+
+> このボタンを押すだけで、予約を確認できます。  
+> このぼたんを おすだけで、よやくを かくにんできます。  
+> You can check the reservation just by pressing this button.
+
+Here **押すだけで** limits the required operation: pressing is enough for the stated result.
+It does not mean that checking reservations is the button's only possible function.
+Likewise, **会員カードだけで入場できます**（かいいんかーどだけで にゅうじょうできます）
+says that a membership card is sufficient for entry, not that every person without one must be refused.
+Neither sentence proves that an alternative method actually exists.
+
+Read the result and event stage too. **名前を書くだけで提出できます**
+（なまえを かくだけで ていしゅつできます）, "It can be submitted just by writing your name,"
+states a sufficient condition; it does not report that someone has already written or submitted it.
+This minimal-means use is distinct from an activity taking place only at the library or a five-minute limit.
+
+### の一つ: a member of the described category
+
+**A は B の一つです** identifies A as one member of category B:
+
+- **この町は行きたい町の一つです。**  
+  **このまちは いきたいまちの ひとつです。**
+  This town is one of the towns I want to visit: category membership, not uniqueness or first place.
+
+Read the **whole category description**, including negation:
+**私がまだ解けない問題の一つ**（わたしが まだ とけない もんだいの ひとつ）
+belongs among the problems I cannot solve yet, not among those I can already solve.
+The expression supplies no exact total for the category. Other classifiers can be appropriate
+for other members; this practice is not a new counter-choice lesson.
+
+### 以外: outside a named member or set
+
+**以外（いがい）** points outside the named member or set.
+**水以外は飲みません（みずいがいは のみません）** excludes other drinks from drinking;
+it does not force an actual water-drinking event. Someone who drinks nothing can still meet that restriction.
+By contrast, **水以外にお茶もあります（みずいがいに おちゃも あります）**
+adds tea besides water. The additive **に～も** does not claim that water is absent.
+
+**以外の + noun** modifies a selected set: in an explicitly named three-person group,
+**田中さん以外の二人**（たなかさんいがいの ふたり）means the two people other than Tanaka.
+Read the domain, predicate and particles rather than assuming that the excluded person's every property is known.
+Do not confuse 以外 with its homophone **意外（いがい）**, "unexpected."
+
+### の次に: relative rank in a stated set
+
+**の次に（のつぎに）** can describe rank as well as sequence.
+If Tanaka is explicitly the tallest in the class, **田中さんの次に背が高い**
+（たなかさんのつぎに せがたかい）describes the next position by height.
+Without establishing the reference's rank, "next after X" is not automatically second overall:
+if X is second, the next rank is third in an explicitly untied ordering.
+Do not extend a class ranking to the whole school or silently break ties.
+Reuse the existing [comparison-set lesson](comparisons-change-and-degree.md#一番-identify-the-set-before-choosing-its-maximum).
+
+With **好き（すき）**, the ordering is a preference:
+**みかんの次にりんごが好きです** means "I like apples next after mandarins."
+It does not locate the apples beside the mandarins or specify which fruit is eaten first.
+Physical adjacency is ordinarily expressed with **隣（となり）**, not this preference construction.
+
+### Remaining recognition bridges
 
 - **毎日のように（まいにちのように）** often means almost/nearly every day.
   It is not a numerical promise about how many days were missed.
 - **各ページ（かくぺーじ）**, each page, uses the prefix 各.
   Learn actual combinations rather than attach it indiscriminately to every word or time unit.
-- **この町は行きたい町の一つです。**
-  **このまちは いきたいまちの ひとつです。**
-  This town is one of the towns I want to visit: category membership, not uniqueness or first place.
-- **以外（いがい）** points outside a named member/set.
-  **水以外は飲みません（みずいがいは のみません）** excludes other drinks;
-  **水以外にお茶もあります（みずいがいに おちゃも あります）** adds tea besides water.
-  Read the predicate and particles. Do not confuse 以外 with **意外（いがい）**, unexpected.
-- **の次に（のつぎに）** can describe rank as well as sequence.
-  If Tanaka is explicitly the tallest in the class, **田中さんの次に背が高い**
-  (**たなかさんのつぎに せがたかい**) describes the next position by height.
-  Without establishing the reference's rank, "next after X" is not automatically second overall.
-  Reuse the existing [comparison-set lesson](comparisons-change-and-degree.md#一番-identify-the-set-before-choosing-its-maximum).
 
 **おきに**, concentration **ばかり**, and **たびに** are primary **N3** neighbors.
 They are not required answers here. Interval expressions can need contextual clarification;
@@ -364,10 +416,21 @@ All external answer labels have readings and definitions. Related strict-compari
 their scene keys; task counts are not independent conversations or mastery measurements.
 
 The existing N4 restriction/listing and ほう／ほか／なか tasks, N5 comparisons, and five N5 estimate/limit
-tasks are reused, not duplicated or relabeled. Supporting prefixes, rank/membership phrases and
-higher-grade links do not receive a new exercise pack merely because they appear in an index.
-Minimal-means **だけで** sufficiency and detailed interval/collocation practice remain separate future
-goals; they are not silently counted as covered by ordinary restriction or frequency drills.
+tasks are reused, not duplicated or relabeled. Supporting prefixes and detailed higher-grade
+interval/collocation practice remain outside the new N4 scope.
+
+The separate **means-and-scope set adds 24 N4 interpretations in four groups**: sufficient means,
+exclusion, membership and rank. Each group has supported/not-established inference facets, with
+**three genuinely different context keys per facet**. Each pair of claims shares its scenario key:
+there are **12 contexts**, not 24 independent situations. These are supplied-text interpretations,
+not free production or counter-reading questions, and context counts do not demonstrate mastery.
+
+The response is **言える（いえる）**, "supported by this text," or **言えない（いえない）**,
+"not established by this text." A claim can be unestablished without being false.
+The complete Japanese remains visible; English instructions do not give the answer, and full
+translations appear after answering. No new hard prerequisite or whole-chapter lock is introduced.
+Exact ownership, source qualifications and review outcomes are in the
+[follow-up record](https://github.com/stop-cran/learning-japanese/blob/main/docs/grammar-means-and-scope-sources.json).
 
 The separate **ずつ set has 16 N3 tasks in two groups**. Eight ask for a per-unit or whole-scenario
 quantity using Arabic digits, without a unit; eight test a stated claim using **言える（いえる）**,
@@ -405,10 +468,13 @@ These are study references, not an official examination syllabus. The examples a
   [past nominal predicates](https://bunpro.jp/grammar_points/だった-でした)
   distinguish these attachments and scoped readings. These N5 patterns do not inflate the
   isolated ordinary-action controls to N4; the price predicate itself remains N4.
+- For the N4 follow-up: [minimal means だけで](https://bunpro.jp/grammar_points/だけで),
+  [one of many](https://bunpro.jp/grammar_points/は-の一つだ),
+  [以外](https://bunpro.jp/grammar_points/いがい), and [rank の次に](https://bunpro.jp/grammar_points/の次に).
+  Inspect the actual structure and predicate, not a universal sufficiency/necessity shortcut.
+  以外 and 意外 remain different words, and a relative rank needs its domain.
 - Recognition: [毎～のように](https://bunpro.jp/grammar_points/まい-のように),
-  [各](https://bunpro.jp/grammar_points/各), [one of many](https://bunpro.jp/grammar_points/は-の一つだ),
-  [以外](https://bunpro.jp/grammar_points/いがい), [rank の次に](https://bunpro.jp/grammar_points/の次に),
-  and the higher-grade [おきに](https://bunpro.jp/grammar_points/おきに) /
+  [各](https://bunpro.jp/grammar_points/各), and the higher-grade [おきに](https://bunpro.jp/grammar_points/おきに) /
   [concentration ばかり](https://bunpro.jp/grammar_points/ばかり) lessons.
   Their tendencies are not unrestricted word-building, spelling or interval rules.
 - JMdict through Jisho: [以上](https://jisho.org/search/以上), [以下](https://jisho.org/search/以下),
