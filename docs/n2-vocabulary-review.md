@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-50 review-closed.** The target is all 1,812 source rows,
+**Batches 01-51 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,000 rows are review-closed; 20 are draft,
+The first 1,020 rows are review-closed; none are draft,
 792 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 51: N2:1002-N2:1021
 
-**Status:** corrected draft after independent initial reviews; original-session
-confirmation and closure pending.
+**Status:** closed after authenticated independent reviews, two correction
+rounds and final original-session confirmations.
 
 Twenty new articles: 助かる, 但し, 畳む, 立ち止まる, たちまち,
 建つ, 発つ, 脱線, 妥当, 例える, 頼もしい, 足袋, ダブル,
@@ -51,7 +51,7 @@ individual reading of 袋. Preserve all baseline kanji metadata.
 Raw source errors remain auditable while the cards teach intransitive
 建つ and ダム "dam." Source 溜息 is explicitly recognized in ため息.
 At initial authoring, no independent review or model-comparison outcome
-was claimed. Runtime quiz certification and closure are still not claimed.
+was claimed. Runtime quiz certification is not claimed.
 
 ### Batch 51 - initial reviews and reconciliation
 
@@ -136,7 +136,53 @@ no practical teaching prose or primary mapping changes.
 The two new required pairs were not present anywhere in GPT's initial or
 confirmation reports. They are useful additional Claude coverage, not
 proof of depth-equivalent review or model superiority. Original-session
-confirmation of this follow-up is still pending.
+confirmation of this follow-up was required before closure.
+
+### Batch 51 - confirmed and closed
+
+Both original sessions confirmed final teaching snapshot
+`0a2b27a7c7a86ac430f1ef367f5a0928607b8aba`, parent
+`0e73b4e0028a0bb74940f2dbdc10e7890bb24ef9`, sequentially and without edits:
+[GPT final confirmation](n2-vocabulary-reviews/batch-51-gpt-confirmation2.md)
+and [Claude final confirmation](n2-vocabulary-reviews/batch-51-claude-confirmation2.md).
+Each supplies twenty correctly associated all-CLEAN three-facet rows,
+accepts both new required guards, the author-adopted promptness guard
+and the refreshed note, and finds no new actionable defect.
+GPT explicitly acknowledges its preceding CLEAN assessment missed the
+two later omissions. Both keep original contribution attribution rather
+than claiming shared-evidence confirmations as new blind discoveries.
+
+Both completely reread the two changed cards, actual follow-up patch,
+five complete families/six senses and five old bodies. GPT additionally
+read all twenty principals and current mapping rows; Claude read selected
+principal passages, the changed mapping row and broader targeted comparisons.
+Unchanged whole-body judgments remain explicitly inherited.
+Claude's fresh 急速 API retrieval was not the pinned snapshot; the author
+separately read complete pinned 急速/どんどん families and actual old bodies.
+Their final optional rate-of-progress/momentum candidates remain unadopted
+within the qualified labels: neither established a required direct guard
+or a reason to rewrite otherwise correct rapid-result teaching. This
+is a bounded disposition, not a universal nonoverlap claim.
+Optional efficacy/legal-force 効力 remains unadopted for the same
+previously recorded evidence-based distinction.
+
+All six complete native reports, exact prompts, requested/actual models,
+same-session continuity, permitted private-file access, frozen snapshots,
+patches, equivalent derivatives and zero edits were author-authenticated.
+The twenty exact source-ID/article associations and three CLEAN cells per
+row in both final reports were checked against the committed TSV, not
+merely counted. Every reviewer process exited before the next began.
+
+The author separately verified source preservation and note-only change,
+all 3,273 baseline identities/readings/titles/exclusions, exact selected/
+additional mappings, 230 tracked reciprocal N2 pairs, 4,219 word articles,
+zero structural errors and deterministic manifest `5292fc0539eb3378`.
+No confirmed teaching or manifest changes during closure. The batch
+packet records precise deduplicated inspection totals, final optional
+reads and all six authenticated report receipts. These are author-executed
+checks, not reviewer Git execution, live quiz or native-speaker certification.
+The project now has 1,020 closed rows and 792 pending; none are draft or
+unresolved. The 1,012 mapped articles comprise 946 new and 66 reused articles.
 
 ## Batch 50: N2:982-N2:1001
 

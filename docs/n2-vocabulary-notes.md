@@ -95,6 +95,17 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 51 closure:** Both original sessions accepted the second
+  correction on the same committed teaching snapshot; both final tables'
+  exact source-ID/article associations and three CLEAN facets were
+  checked, not just row counts. Preserve the first confirmation's
+  NEEDS FIX rows as history alongside final resolutions. Further
+  optional rapid-progress/momentum candidates did not establish a
+  mandatory guard or justify editing correct teaching merely to
+  accommodate an ever-growing neighbor inventory. Native reports
+  remain unmodified; author counts come from deduplicated actual
+  inspections, not a reviewer's retrospective scope shorthand.
+
 - **Batch 51 confirmation follow-up:** Confirmation is not a formality:
   Claude caught two original omissions after accepting the first fixes.
   一度に's unqualified "all at once" label can collide even though its
