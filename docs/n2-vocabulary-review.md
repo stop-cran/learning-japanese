@@ -28,8 +28,9 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 55: N2:1082-N2:1101
 
-**Status:** draft; initial reviews authenticated and corrections applied;
-original-session confirmations pending.
+**Status:** draft; initial reviews and first confirmations authenticated.
+A small comparison clarification and four further direct guards await
+original-session follow-up confirmation.
 
 Eighteen new articles: 散らす, ちり紙, 散る, 追加, ついで,
 通貨, 通勤, 通知, 通帳, 通訳, 通用, 通路, 付き合う,
@@ -164,6 +165,59 @@ deviation is retained rather than certified away. Neither
 review supplies native-speaker certification or runtime quiz
 draws. Author corrective rereads do not increase the deduplicated
 227-family/685-sense or 120-old-body inspection totals.
+
+### Batch 55 - first confirmations and follow-up
+
+Corrected snapshot: `cab666775db68a2cf5233ca1f8f4d13a1ff7bb40`,
+parent `f467750c0645c7d3f0f07d24068f418a84887b0e`. The complete
+[GPT confirmation](n2-vocabulary-reviews/batch-55-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-55-claude-confirmation.md)
+are authenticated native reports from their original sessions.
+Both accept all original fixes and the four author-adjudicated guards.
+GPT finds no new actionable defect. Claude establishes low-severity
+B55-07: the added functioning comparison needs a clearer contrast with
+an excuse being accepted. Add that contrast and put the general
+non-substitution warning after all the comparisons. Do not adopt an
+unverified universal claim that a particular invented sentence is
+ungrammatical.
+
+Author inspection of Claude's further optional hypotheses establishes
+four more direct guards: 突き当たる/至る and /達する on actual
+spatial reaching uses (1311870:1-2, 1416230:1), 通用/効く on
+English work/effectiveness (1591100:1-2), and 通訳/受け取る on
+underspecified English interpret (1329650:2). The latter protects the
+direction in which bare interpret can suggest interlanguage interpreting;
+it does not claim that 受け取る means translating between languages.
+Add short linked comparisons and exact dictionary attribution.
+
+No required 通用/働き guard is established by the actual work,
+performance or operation noun senses (1451040:1-2,4); these do not
+establish an accepted-use or validity meaning. Nor does 通過's
+explicit passing-through activity (1433070:1) establish a physical
+passageway answer for 通路. These are individual label-and-meaning
+judgments, not categorical part-of-speech exclusions, transitive guard
+inference or denials of every contextual overlap.
+
+The final draft has 92 declarations across seventeen guarded new articles:
+four more additions after the first correction's 88, with none removed.
+The source mappings, raw fields, article identities and levels are
+unchanged from the first correction. Six follow-up complete families/
+19 senses include two already inspected families; four new families/
+14 senses raise the deduplicated author union to 231/699.
+Six comparison bodies include two rereads; four new complete bodies
+raise the old-body total to 124.
+
+Both confirmation readers completely read the eight changed articles,
+unchanged 通貨 and ついで, all 22 corrective families/97 senses,
+all ten supplied old bodies and the three original public captures.
+Unchanged judgments are explicitly inherited. GPT additionally checks
+all twenty headers and reaches 97 distinct full old-body reads;
+Claude checks nine of the seventeen current guard declarations on disk,
+reads five extra comparison bodies, and makes an unsuccessful fresh
+働く fetch that supplies no dictionary evidence. Their partial
+derivative reads and initial scope limits remain disclosed. This is
+additional sample usefulness, not a blind new discovery or controlled
+bias-reduction measurement.
 
 ## Batch 54: N2:1062-N2:1081
 

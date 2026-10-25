@@ -95,6 +95,17 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 55 confirmation:** Adding a synonym comparison can introduce
+  a comprehension gap even when its dictionary sense is correct.
+  Explain operating/having an effect versus an excuse being accepted,
+  and place a non-substitution warning after the comparisons it qualifies.
+  A reviewer's invented starred sentence is not independent evidence of
+  universal ungrammaticality. Recheck optional guard hypotheses against
+  complete actual meanings: spatial reaching, efficacy and unqualified
+  interpret labels support four more pairs; operation nouns and explicit
+  passing-through activity do not by themselves establish validity or a
+  physical passageway. Additional evidence counts must be deduplicated.
+
 - **Batch 55 reconciliation:** Bare English labels can remain
   ambiguous across Japanese lexical distinctions: interpretation,
   work, spread out, passage and currency need direct pair checks.
