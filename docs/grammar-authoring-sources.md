@@ -39,11 +39,30 @@ visible: use each printed chunk once, preserve spelling/internal order, omit lab
 any meaningful scope constraint. Enumerate all valid constrained orders, including fronted marked phrases and
 embedded questions; v1 checks an accepted string list, not chunk use independently. Keep responses comfortably
 within 80 UTF-16 units and account for trim/NFKC normalization. Test the exact-chunk invariant, not just one model.
+Have linguistic review reconstruct the valid constrained arrangements independently: agreement between generated
+answers and their own generated order ledger proves consistency, not naturalness or completeness. The composition
+review did this separately from its mechanical checks; marked but valid phrase orders were not discarded.
 The existing `translation` field may hold neutral English task instructions when a full translation would reveal
 the answer; put the complete passage translation and reasoning in answer-side feedback. Paired passage questions
 share one context key. Review actual small-screen/keyboard/rotation behavior separately from linguistic correctness.
 The unpublished composition draft also demonstrated why source reuse must include level caveats: ordinary
 decision `ことにする` is primary N3; combining simpler grammar or making a response longer does not establish N4.
+
+For participant-sensitive feedback, **name the participants in the selected sentence**, not merely "the other person."
+The [composition review](grammar-composition-text-sources.json), F1, found that this template became ambiguous when
+the correct receiving participant switched from the speaker to the friend or sister. Explain "the speaker, not the
+friend" where that is the rejected sentence's actual reading. For unsuccessful favors, distinguish the receiving-side
+role from a benefit that actually occurred; do not transfer another participant's reason for failure.
+Its optional O1 clarification likewise prefers "a packed lunch is unnecessary" over the ambiguous
+"no-packed-lunch requirement": absence of obligation is not prohibition. Feedback-only corrections still change the
+reviewed context fingerprint even when the prompt and lexical spans remain unchanged.
+
+For native acceptance, check the installed question wording as well as parser support: Android
+[#74](https://github.com/stop-cran/kanji-cards-android/issues/74) removed a fragment-only instruction before whole-sentence
+publication, without adding a new exercise engine. Record the exact content version, selected pools and actual
+nonzero run results; a successful shell exit alone is not coverage. A selected pool is not automatically every item
+in every answer mode. For rotation claims, exercise actual orientation changes and question/draft retention, not only
+a saved-state simulation. State scrolling/keyboard limitations separately from grading defects or physical-phone acceptance.
 
 ## Reusing lexical annotations
 
