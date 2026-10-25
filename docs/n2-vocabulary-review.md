@@ -99,6 +99,23 @@ and causation suggestions do not establish extra pairs. This is useful
 complementarity in this sample, not measured bias reduction or a
 general model ranking. All dispositions remain subject to confirmation.
 
+Both original-session confirmations accepted the original repairs and
+returned all 24 complete assigned bodies and required corrective evidence.
+Claude identified one further direct 張り切る/活力 omission;
+the complete 1208480 family and full older article support its energy
+facet. GPT caught a contributor citation error: 万歳's giving-up
+sense is 1601350:3, not :4. The teaching and mapping were already correct.
+The bounded followup adds that single guard and corrects the current
+disposition citation, preserving all earlier frozen artifacts and reports.
+Author totals become 268 families / 716 senses / 106 older identities.
+
+GPT's first confirmation accidentally returned unassigned TSV rows
+N2:2-N2:21 before issuing a corrected exact twenty-row query. Its report
+discloses that scope error; native authentication records the extra rows
+instead of claiming exact-only access. The assigned twenty rows were
+fully returned. Neither this deviation nor GPT's clean table overrides
+Claude's actionable remaining finding; final reconfirmations are pending.
+
 ## Batch 68: N2:1342-N2:1361
 
 **Status:** closed after authenticated independent initial reviews,

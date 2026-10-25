@@ -21,6 +21,15 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 ## Batch 69 authoring observations
 
+- First confirmation found a further 張り切る/活力 energy
+  competitor (Claude) and a mistaken 万歳 giving-up sense
+  citation in the contributor disposition (GPT). Add the direct
+  guard after full 1208480/older-body inspection and correct :4
+  to :3 in the current disposition, retaining frozen history.
+  Totals become 268 families / 716 senses / 106 older identities.
+  GPT's accidental unassigned TSV read is disclosed and recorded
+  alongside its successful corrected exact query, not erased or
+  presented as exact-only access. Final confirmations are pending.
 - Initial GPT and Claude reviews ran independently and sequentially
   on the same committed draft, with authenticated actual model and
   complete-return evidence. Their access was common, but actual read
