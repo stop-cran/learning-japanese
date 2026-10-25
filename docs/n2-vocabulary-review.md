@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-58 review-closed.** The target is all 1,812 source rows,
+**Batches 01-59 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,160 rows are review-closed; 20 are draft,
+The first 1,180 rows are review-closed; none are draft,
 632 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 59: N2:1162-N2:1181
 
-**Status:** drafted; independent reviews and reconciliation pending.
+**Status:** closed after authenticated independent reviews, bounded
+corrections and original-session confirmations.
 
 Twenty new articles: 電球, 点数, 伝染, 電池, 点々, 転々,
 電柱, 天皇, 電波, テンポ, 電流, 電力, 問い合わせ, 銅,
@@ -65,7 +66,7 @@ independent reviewer findings or a linguistic-correctness guarantee.
 
 ### Batch 59 - initial reviews and reconciliation
 
-**Status:** corrected; both original-session confirmations pending.
+**Status:** corrected and confirmed by both original reviewer sessions.
 
 Authored snapshot: `54b4f9d77337e80b47f42b9a0b7a9acd6f8eb846`.
 Sequential blind reports from
@@ -116,7 +117,46 @@ GPT additionally supplied the static 転がる sense, 揃う, 様 and
 excessive metal guard; Claude supplied 転がす, 速力, the invisible
 antecedent and optional radio-reception qualification. This is
 useful complementarity on this sample, not a model ranking or
-measured bias reduction. Author dispositions await confirmation.
+measured bias reduction. Both original sessions accepted the dispositions.
+
+### Batch 59 - confirmed and closed
+
+Corrected teaching snapshot:
+`a062373e128fd88fae8c5837dd47ef6e1b02d627`.
+Sequential original-session confirmations from
+[GPT](n2-vocabulary-reviews/batch-59-gpt-confirmation.md) and
+[Claude](n2-vocabulary-reviews/batch-59-claude-confirmation.md)
+accept the bounded corrections. Both provide all twenty exact
+source-ID/article associations with three final CLEAN facets;
+unchanged passages explicitly inherit their initial judgments.
+All four complete native reports were authenticated against exact
+prompts, actual models, snapshots, returned messages and zero-edit
+usage. Successful returned content establishes nine complete
+corrected articles, the full patch, all 28 complete corrective
+families/63 senses, all twelve corrective older bodies and the
+TSV header/twenty exact rows for each confirmation.
+
+Deduplicated cumulative complete older-body reads are GPT 113
+and Claude 16, including Claude's additional complete ラジオ
+read. Reading the twelve-body rendering does not add twelve new
+bodies to either reader's earlier set. Both freshly retrieved
+Kotobank's 採点 definitions; GPT's failed テンポ endpoint and
+irrelevant Weblio extract are not positive lexical verification.
+
+No new consequential defect was established. Mirroring the radio
+qualification on 波, leading with 統計を取る or adding 頂点
+to 峠's comparison remain nonblocking. Claude's observation about
+pre-existing アンテナ wording is outside assigned scope and is
+not silently fixed or claimed as a reviewed whole article.
+
+Closure changes only status, evidence, reports and documentation,
+not teaching or the manifest. Author-executed audits preserve
+3,273 baseline identities, all four batch reciprocal pairs and
+259 tracked new-article reciprocal N2 pairs. Final coverage is
+1,180 closed, zero draft, 632 pending and zero unresolved.
+These operational audits are not reviewer Git execution, runtime
+quiz sampling, exhaustive synonym/frequency coverage, native-speaker
+certification or a measurement of model-bias reduction.
 
 ## Batch 58: N2:1142-N2:1161
 

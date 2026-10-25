@@ -107,7 +107,14 @@ evidence and learning impact; issue creation requires authorization.
   antecedent. Both models found useful shared and complementary
   observations; GPT actually read 112 complete older bodies and
   Claude 11. These unequal depths do not establish a model
-  ranking or measured bias reduction. Confirmation is pending.
+  ranking or measured bias reduction. Both original sessions
+  accepted all bounded corrections. Complete corrective rereads
+  give cumulative distinct older-body counts of GPT 113 and
+  Claude 16, not the initial counts plus twelve each. Fresh
+  Kotobank 採点 retrievals support the result-noun sense;
+  failed or irrelevant public returns do not count as verification.
+  No further consequential defect was established. A pre-existing
+  アンテナ wording observation remains explicitly outside scope.
 
 - **Batch 59 authoring:** Preserve a source error without teaching
   it: 統計's supplied entry means statistics, not the raw
