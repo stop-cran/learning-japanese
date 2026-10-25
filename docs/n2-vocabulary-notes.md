@@ -19,6 +19,59 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 64 authoring observations
+
+- Preserve the existing unlevelled 憎む, にこにこ and 鈍い articles;
+  only add `jlpt: 2`. Exact checks found no matching form/reading
+  in the four lower-level source TSVs. The fifth vocabulary TSV
+  is N2 itself, not a fifth lower-level source. Keep にぶい distinct
+  from the later のろい row and preserve にこにこ's empty raw gloss.
+- Separate unexplained motivation in なんとなく from overcoming
+  obstacles in 何とか, and extreme degree in なんとも from its
+  negative anything/at-all construction. Negative 何とも言えない
+  can genuinely express an inability to judge or say.
+- A matching modern public dictionary entry explicitly includes
+  liquid boiling for 煮える. Food is a useful default example, not
+  an exclusive semantic boundary. Explain the intransitive
+  food-or-liquid が construction rather than teaching object を.
+- 匂う and 臭う have spelling tendencies, not an absolute pleasant/
+  unpleasant partition. Inspect the modern heading separately
+  from historical lower-bigrade material. The whole family also
+  includes brightness and hints; additional recognition teaching
+  does not acquire an independently established N2 label.
+- 憎い and 憎らしい both allow ironic positive evaluation.
+  Do not impose a fixed intensity hierarchy or infer quiz guards
+  from the neighboring hatred clique. Full positive secondary
+  senses of comparison words matter as well.
+- 南米's 米 refers to America, not rice or the southern USA.
+  Verify the actual アメリカ family, 1149830, before attributing
+  historical 亜米利加; do not guess a plausible entry number.
+- Daily necessities can be durable. A 日課 can be personal,
+  customary or assigned, not only a school lesson. Actual
+  lexical overlap, not category membership alone, must decide
+  guards against goods, tools, work and habit labels.
+- 日時 includes appointed date/time and elapsed days/hours.
+  Attribute 日程's selected-date teaching specifically to the
+  matching Digital Daijisen entry. Inspect カレンダー and both
+  ダイヤ families instead of inheriting a scheduling guard clique.
+- Turbidity, contamination and danger are not equivalent:
+  pollution can be invisible and harmless cloudiness is possible.
+  入社 is becoming a company's employee, not daily office arrival.
+  Escaping, releasing and failing to catch also require direct
+  constructions rather than automatic participant-role exemptions.
+- Completed evidence is separate from unchanged preparation plans:
+  **250 complete families / 556 senses**, including twenty principals
+  / 37 senses; **101 complete older bodies**, **158 actual labels**,
+  **23 component records**, three complete related kanji bodies and
+  twenty matching public captures. The original 149 candidate labels
+  do not mean 149 inspected bodies: 92 were read, 57 remain unselected;
+  nine further complete bodies came from supplemental candidates.
+- Twenty captures mean one authority, Digital Daijisen through
+  Weblio, not twenty independent dictionaries. Quiz declarations
+  remain author hypotheses pending blind independent reviews.
+  Structural checks do not prove linguistic correctness or global
+  quiz uniqueness; inherited batch61 quiz debt remains deferred.
+
 ## Batch 63 authoring observations
 
 - Both blind reviews identified なせる業's false potential analysis.

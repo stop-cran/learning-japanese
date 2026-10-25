@@ -5,8 +5,8 @@
 **Batches 01-63 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,260 rows are review-closed; none are draft,
-552 remain pending, and none are unresolved.
+The first 1,260 rows are review-closed; batch 64's 20 rows are draft,
+532 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,61 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 64: N2:1262-N2:1281
+
+**Status:** draft; independent GPT/Claude review and reconciliation
+have not yet been completed.
+
+Seventeen new articles: なんとなく, なんとも, ナンバー, 南米, 南北,
+煮える, 匂う, 逃がす, 憎い, 憎らしい, 濁る, 虹, 日時, 日用品,
+日課, 日程 and 入社. Three existing articles, 憎む, にこにこ and 鈍い,
+receive only `jlpt: 2`; their bodies, stable identities, readings,
+titles and original exclusions remain unchanged.
+
+The [packet](n2-vocabulary-batch-sources/batch-64.json) preserves
+all twenty raw rows, twenty complete principal families / 37 senses,
+selected source senses and separately identified recognition senses.
+The empty にこにこ gloss is retained without inventing compiler intent.
+Four exact lower-level source-index checks found no easier sourced
+level for the three reused identities. 鈍い keeps にぶい, not the later
+のろい source row.
+
+Three new reciprocal pairs are 憎/憎い, 憎/憎らしい and 課/日課.
+Existing 憎/憎む and 鈍/鈍い already have both backlink locations.
+All five use substantive word-side links, actual whole-word readings,
+reading-row examples and Common words links. Edited kanji headers
+remain unchanged; missing component cards are not fabricated.
+
+Completed author reads are separate from unchanged preparation plans.
+The deduplicated union is **250 complete families / 556 senses**,
+including all twenty principals. The author inspected **101 complete
+older articles**, **158 actual labels**, **23 complete component
+records**, complete 憎/課/鈍 bodies and twenty matching public lexical
+captures. Of the original 149 navigation candidates, 92 full bodies
+were inspected and 57 remain unselected; nine additional inspected
+bodies were supplemental candidates. The 22 original/supplemental
+family-and-body chunks are at most 16,000 UTF-8 bytes; separate
+scheduling families and three additional articles were read fully.
+
+All twenty public captures come from Digital Daijisen through Weblio:
+one authority, not independent reviewer retrievals or frequency
+evidence. Correct modern/reading-specific headings are distinguished
+from unrelated or historical material. 日程's selected-date teaching
+is explicitly attributed to that public entry.
+
+Draft coverage is **1,260 closed / 20 draft / 532 pending /
+0 unresolved**, mapping **1,269 articles: 1,178 new / 91 reused**.
+Structural totals are **4,451 word articles** and **277 tracked
+new-word reciprocal N2 pairs**. The established audit verifies all
+3,273 baseline identities/readings/titles and original exclusions.
+Validation reports zero errors, the manifest regenerates identically
+twice, and the authored scope is exactly 28 files.
+Guard declarations are author hypotheses, not independent verdicts;
+equal evidence access must not be presented as equal actual reviewer
+reading depth. Earlier batch61 inherited quiz debt remains deferred.
+This draft does not claim global quiz uniqueness or native-speaker
+certification.
 
 ## Batch 63: N2:1242-N2:1261
 
