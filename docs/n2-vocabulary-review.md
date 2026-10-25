@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 61: N2:1202-N2:1221
 
-**Status:** drafted; both initial reviews authenticated, supported
-corrections applied; original-session confirmations pending.
+**Status:** drafted; initial reviews and original-session confirmations
+authenticated; a narrow evidence-label correction awaits confirmation.
 
 Sixteen new articles: 特色, 特長, 特定, 特売, 溶け込む, 退ける,
 床の間, 所々, 都心, 戸棚, とっくに, どっと, 整う, 留まる,
@@ -95,6 +95,16 @@ optional guards. The two editorial deletions are not equated with
 those semantic findings. Contributions are deduplicated across
 Findings, Optional, Limits and per-file observations; unequal actual
 source depth prevents model ranking or measured bias-reduction claims.
+
+Both [GPT](n2-vocabulary-reviews/batch-61-gpt-confirmation.md)
+and [Claude](n2-vocabulary-reviews/batch-61-claude-confirmation.md)
+accepted the bounded corrections at `b76948a5da23c6267098c80359cf81e836e28a8a`.
+Claude's resumed inspection additionally caught the author's incorrect
+claim that entry 2850084 has a usually-kana label: the actual fields
+are empty. This is an evidence-record correction, not a newly discovered
+identity error. The follow-up removes "usually" from 退ける rather than
+inferring frequency from a non-jōyō reading or heading mark.
+The original reports and frozen evidence remain historical.
 
 ## Batch 60: N2:1182-N2:1201
 

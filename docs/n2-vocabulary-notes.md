@@ -56,6 +56,12 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - Record genuine inherited findings without silently expanding a
   batch into baseline repairs. 飛ぶ/飛行 and 止まる/止む remain
   uncorrected pre-existing quiz debt, not batch regressions.
+- Recheck the actual label field before citing a usually-kana flag.
+  Claude's resumed review caught an author-evidence error: entry
+  2850084 has empty `misc`, spelling-info and reading-info fields.
+  The kanji heading's mark and an unlisted jōyō reading do not
+  themselves measure spelling frequency. Retire the unsupported
+  "usually" claim instead of defending it with a different proxy.
 
 ## Batch sequence
 
