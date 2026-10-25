@@ -1,5 +1,9 @@
 # Japanese listening task packages: schema 1 contract
 
+The [N4 profile and rollout](listening-n4.md) defines a reviewed schema-2/N4 extension
+with the same task shapes and guided policy. Its linked software/media work is still pending;
+this document remains the existing N5 contract, not permission to publish N4 packages early.
+
 Companion to [app contract 1](https://github.com/stop-cran/kanji-cards-android/blob/main/docs/LISTENING-TASKS.md)
 for app #66 and content #38. **Independently reviewed contract, adopted under delegated autonomous decision-making.**
 B adds compatible validation, manifest/budget tooling and the app's shared data/media foundation.

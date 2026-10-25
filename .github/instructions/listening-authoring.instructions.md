@@ -7,6 +7,9 @@ applyTo: "listening/**,listening-tasks/**,audio/**,task-audio/**,task-images/**,
 Use the [legacy English-question contract](../../docs/listening-n5.md) or the
 [Japanese task-package contract](../../docs/listening-tasks.md), as appropriate.
 Their schemas, media namespaces, timing and approvals are not interchangeable.
+For new N4 Japanese packages, also follow the [N4 profile and rollout](../../docs/listening-n4.md).
+Its reviewed schema-2/runtime extension remains gated on the linked app work; do not
+relabel schema-1 tasks or inherit N5 spending/publication approval.
 Follow the [practical authoring sequence](../../docs/listening-tasks.md#practical-authoring-sequence)
 and the shared [language/task review rules](../copilot-instructions.md).
 
