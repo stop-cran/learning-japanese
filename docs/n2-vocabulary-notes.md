@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 59 authoring:** Preserve a source error without teaching
+  it: 統計's supplied entry means statistics, not the raw
+  scattering/dispersion gloss. Keep same-reading 点々 and 転々
+  as distinct identities, and do not generalize scattered or
+  intermittent appearances into unrestricted gradual improvement.
+  Distinguish current in amperes, power in watts and energy over
+  time. A reading sound change in 天皇 or 電波 does not create
+  a new unrestricted constituent reading. Deduplicate comparison
+  evidence: 210 original families/478 senses plus 33 support/86
+  overlap at one family/three senses; one additional AC family/two
+  senses yields 243 distinct families/563 senses, not their naive
+  sum. These are author observations, not independent findings.
+
 - **Batch 58 closure:** Both original reviewers accepted the same
   bounded corrections and exact twenty all-three-CLEAN mappings.
   Preserve native reports while separately clarifying arithmetic

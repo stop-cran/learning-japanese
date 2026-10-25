@@ -5,8 +5,8 @@
 **Batches 01-58 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,160 rows are review-closed; none are draft,
-652 remain pending, and none are unresolved.
+The first 1,160 rows are review-closed; 20 are draft,
+632 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,43 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 59: N2:1162-N2:1181
+
+**Status:** drafted; independent reviews and reconciliation pending.
+
+Twenty new articles: 電球, 点数, 伝染, 電池, 点々, 転々,
+電柱, 天皇, 電波, テンポ, 電流, 電力, 問い合わせ, 銅,
+統一, 同格, 峠, 統計, 動作 and 東西. No baseline word
+article is edited. Four N2 reciprocal pairs are linked on both
+reading-row and Common words surfaces: 池/電池, 柱/電柱,
+波/電波 and 銅/銅; all four kanji headers are preserved.
+
+The [packet](n2-vocabulary-batch-sources/batch-59.json) preserves
+all twenty raw source rows and twenty complete principal families/
+31 senses. 統計's erroneous scattering gloss remains raw while
+the teaching explicitly establishes statistics. 点々/転々 remain
+separate; restricted readings and additional senses are recorded.
+No missing 染, 皇, 統 or 峠 component card is fabricated.
+
+Actual author reading covers nine complete-family chunks and ten
+complete-old-body chunks, plus the full support and electrical
+family renderings and three full support-body chunks. The union
+is 243 distinct complete families/563 senses, including the
+principals. The original 210/478 and support 33/86 overlap at
+one family/three senses; the electrical supplement adds 1/2.
+All 106 distinct complete older bodies, 29 complete component
+records, four complete kanji bodies and twenty public lexical
+captures were read. The 190 original navigation labels and 41
+further labels from inspected front matter give 231 distinct
+labels; labels are not body-inspection claims.
+
+Twenty positive public endpoints come from one dictionary service,
+not twenty independent dictionaries. Mixed headings and unequal
+source depth remain explicit. A separate completed-inspection
+receipt verifies capture hashes without relabelling the original
+preparation receipt as already inspected. Author checks are not
+independent reviewer findings or a linguistic-correctness guarantee.
 
 ## Batch 58: N2:1142-N2:1161
 
