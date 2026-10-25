@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 53: N2:1042-N2:1061
 
-**Status:** drafted; independent review and reconciliation pending.
+**Status:** drafted; initial independent reviews authenticated and supported
+corrections applied; original-session confirmation pending.
 
 Eighteen new articles: 知人, 地帯, 縮む, 縮める, 縮れる,
 チップ, 地点, 地名, 茶色い, 着々, 中間, 中旬, 抽象,
@@ -70,7 +71,71 @@ automatically acquire an independent N2 assignment.
 Current totals: 1,052 distinct mapped articles, comprising 984 new
 and 68 reused baseline identities; 4,257 total word articles.
 Draft coverage is not review closure or a semantic-uniqueness
-guarantee. Neither independent review has been launched.
+guarantee.
+
+### Batch 53 - initial reviews and reconciliation
+
+Common authored snapshot: `d67609747e671278f9a6a4e973ea0a0832a8cad8`,
+parent `6f5e4cdeb1de5be236364fde7ed1b3e6e95453a1`. Actual
+`gpt-6.1-sol` and `claude-opus-5.5` reviewed sequentially with identical
+blind prompts apart from model/family substitutions, scope and source
+access. Both processes exited without edits. The complete native
+[GPT report](n2-vocabulary-reviews/batch-53-gpt-initial.md) and
+[Claude report](n2-vocabulary-reviews/batch-53-claude-initial.md) are
+archived. Author-executed checks authenticate the actual models,
+sessions, exact prompts, frozen hashes, blind derivative, private-file
+allowlists, no named forbidden reads and zero edits. Public archives
+only replace two-space hard line breaks with blank lines; native
+private reports and event text remain unchanged.
+
+Evidence-based dispositions:
+
+- **GPT53-001 and B53-C-01: resolved shared omission.** Add direct
+  チップ/端 protection. The actual articles and complete pinned
+  1077740:3/1581610:1 support the physical-tip overlap. Indirect
+  先 or 先端 paths are not protection.
+- **GPT53-001: resolved additional omission.** Add チップ/末.
+  Actual 末/すえ teaches an end or tip, supported by complete
+  1525250:1 without an archaic flag. This is not 末/うら or
+  an inference from its temporal uses.
+- **B53-C-02: resolved.** Add 地帯/ベルト. Complete 1120070:3
+  supplies the geographical belt/zone/area use, beyond the old
+  card's clothing and machine examples. A shared English word
+  alone would not establish that Japanese overlap.
+- **B53-C-03: resolved with corrected evidence.** Add 着々/徐々に.
+  The review's 1345600 徐々 steady sense is archaic and is not
+  evidence about unrestricted modern 徐々に. Complete modern
+  1595480:1 independently includes steadily and step by step;
+  its actual article teaches a developing process. This supports
+  the direct quiz judgment without deriving it transitively
+  from だんだん or asserting universal interchangeability.
+- **B53-C-04: resolved.** Link substantive 酸性 comparison in 中性
+  to the existing article, retaining correct さんせい and teaching.
+- **Optional suggestions: no required expansion.** Abstract-suru
+  register, a further 中性 example, 集合地点, straight-hair terminology,
+  historical-period contrasts and provenance rewording do not establish
+  defects in the practical scope. Existing natural examples and
+  learner-facing source convention are retained, not certified as
+  the only possible wording.
+
+The author actually read all eleven complete corrective families/
+29 senses, plus full 端, 末, ベルト, 徐々に and 酸性 articles.
+Do not replace the historical initial inspection counts with these
+later reads. The initial reviewer reports remain historical, including
+Claude's unverified public-backed 茶色い qualification.
+
+Model-diversity observation across the complete reports: チップ/端
+was shared; GPT additionally found チップ/末; Claude additionally
+found the geographical-belt and modern gradual-progress pairs and
+the existing 酸性 link. Severity/facet differences do not make the
+shared omission two discoveries. Both read the twelve selected
+family renderings and supplemental rendering, but actual old-body
+depth differed sharply: GPT reports 100 additional complete articles,
+Claude one (ベルト), beyond the assigned reuses. GPT read the public
+captures; Claude did not and checked mappings via blind JSONL
+rather than the TSV. Complementary suggestions were useful, but
+unequal inspection and the corrected archaic-entry rationale do
+not demonstrate controlled bias reduction or a general model ranking.
 
 ## Batch 52: N2:1022-N2:1041
 

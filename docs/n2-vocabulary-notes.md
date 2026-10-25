@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 53 reconciliation:** A modern expression and a bare
+  dictionary form are not interchangeable evidence: archaic 徐々
+  1345600 does not establish modern 徐々に, whose own complete
+  1595480 family independently supports the direct overlap.
+  Physical tip 端/はし and 末/すえ, and geographical ベルト,
+  require actual secondary-meaning inspection, not English-label
+  matching or indirect guards. Link an existing substantive
+  comparison such as 酸性. Compare all report sections and record
+  unequal evidence depth before attributing value to model diversity.
+  The shared audit counts reciprocal pairs for new word articles
+  only: retain 240 tracked pairs and check reused 超/超過 separately,
+  rather than reporting 241 under the wrong counting definition.
+
 - **Batch 53 authoring:** A raw loanword row can span separate
   dictionary identities: チップ's tip and chip meanings require
   1077740 and 2850287, not fabricated senses of one entry.
