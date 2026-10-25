@@ -62,7 +62,7 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   not independent reviewer retrievals or frequency evidence.
 - Quiz guards are direct symmetric, nontransitive hypotheses,
   not an inherited synonym clique. Independent initial reviews
-  are reconciled; original-session confirmations remain pending. No global ambiguity,
+  and original-session confirmations are complete. No global ambiguity,
   native certification or measured model-bias claim is made.
 - Review corrections add nine direct safeguards, including the
   secondary rounds sense of 回る and humorous absurd-blunder
@@ -93,6 +93,25 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   mixed-reading correction, direct 挟む pair, learner prose and
   optional POS qualification. Actual comparison-read depth
   differed substantially; this is not measured bias reduction.
+- Both original sessions accepted corrected `0aed71b4` without
+  further teaching changes. Complete current rereads and both
+  corrective chunks are authenticated for both models.
+  The author older-word union is 109; actual reviewer older-word
+  unions are 115 (GPT) and 13 (Claude), deduplicated across
+  direct and reproduced bodies. Initial Claude read four older
+  word articles plus kanji 計, not five word articles; use native
+  returns rather than narrative counters.
+- Confirmation caught a contributor-evidence citation slip:
+  種類 is 1328890, whereas 1342050 is 巡る. The actual supplied
+  family/body and both reviewers' classification judgments
+  already used the correct record. Fix the contributor
+  disposition without churning accepted learner content.
+- Keep optional polish separate from defects. The remaining
+  はしご source-reading phrase and 斜 repetition are nonblocking.
+  Claude's later タイプ/一種 observation concerns an older
+  pair outside this batch; retain it as a later quiz-audit
+  candidate alongside, not a silent extension of, deferred
+  batch61 debt.
 
 ## Batch 66 authoring observations
 

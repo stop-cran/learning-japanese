@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-66 review-closed; batch 67 corrected, confirmations pending.** The target is all 1,812 source rows,
+**Batches 01-67 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,320 rows are review-closed; 20 are draft and 472 remain pending.
+The first 1,340 rows are review-closed; none are draft and 472 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 67: N2:1322-N2:1341
 
-**Status:** draft; independent initial reviews reconciled and corrected;
-both original-session confirmations remain pending.
+**Status:** closed after authenticated independent reviews,
+bounded corrections and acceptance by both original reviewer sessions.
 
 Fifteen new articles: 生える, はがす, ばからしい, 秤, 吐き気,
 掃く, 歯車, バケツ, 挟まる, はしご, はじめに, はじめまして,
@@ -67,7 +67,7 @@ reviewer retrieval or frequency evidence. Raw 剥す failed, while
 canonical 剥がす succeeded. 始めに, 初めに and はじめに
 responses had no selected lexical body and are not positive verification.
 
-Draft coverage is **1,320 closed / 20 draft / 472 pending /
+Closed coverage is **1,340 closed / 0 draft / 472 pending /
 0 unresolved**, mapping **1,326 articles: 1,227 new / 99 reused**.
 The authored scope is 28 files. Inherited batch61 quiz debt remains deferred.
 
@@ -84,8 +84,8 @@ kanji cards, twenty mappings, eighteen principal families,
 
 GPT actually returned all 24 bounded family/body chunks,
 177 labels and both public renderings. Claude did not read those
-chunks or the full label/public-JSON captures; it read five complete
-comparison words and searched further titles/exclusions. Both
+chunks or the full label/public-JSON captures; it read four complete
+comparison word articles plus kanji 計 and searched further titles/exclusions. Both
 made some successful fresh dictionary lookups and disclosed
 failed or irrelevant returns. Equal access is not equal actual depth.
 Neither could execute Git; author-side checks authenticate the
@@ -131,6 +131,55 @@ the complete 磨く title/body: polishing or brushing teeth is not
 ordinary sweeping away debris. Shared "brush" wording alone
 does not establish a competing full answer. No exhaustive
 cleaning or container comparison is claimed.
+
+### Original-session confirmations and closure
+
+Both original sessions accepted corrected
+`0aed71b4df27a66ad8a0b6fe6c82530e8dba3682`, sequentially
+and without edits. Complete authenticated reports are archived
+as [GPT](n2-vocabulary-reviews/batch-67-gpt-confirmation.md)
+and [Claude](n2-vocabulary-reviews/batch-67-claude-confirmation.md).
+Each has twenty exact six-column rows with separate CLEAN
+correctness, scoped coverage and comprehensibility verdicts.
+No actionable in-scope defect or consequential unresolved
+learner-facing claim remains.
+
+Each confirmation actually returned all 22 complete current
+content files, the three compact mapping/principal/component
+files, complete correction snapshot/patch, both complete
+corrective chunks and the exact TSV header/twenty rows.
+Complete 場所, 磨く and 気 were also returned by both.
+The actual older-word identity unions across initial and
+confirmation reads are 115 for GPT and 13 for Claude,
+deduplicating direct and reproduced articles. These are not
+author-inspection counts or a model-quality ranking.
+
+GPT caught a contributor-evidence citation slip: 種類 is
+1328890, not 1342050 (巡る). The correct complete family/body
+were already supplied and used by both confirmations.
+Closure corrects the disposition, not any teaching content.
+The earlier description of Claude's five comparison words
+also resolves to four word articles plus kanji 計; raw reports
+and frozen prompts remain intact, with native returns governing
+the counted scope.
+
+Both confirmations resolve their own findings. Claude withdraws
+the tentative 掃く/磨く concern and accepts the existing mixed-word
+classification. Remaining はしご source-reading wording and
+斜 repetition are nonblocking polish. The older タイプ/一種
+pair is recorded as a later quiz-audit candidate, not silently
+changed in this batch.
+
+There are no post-confirmation teaching edits. Author totals
+are 277 complete families / 734 senses, 109 distinct complete
+older word bodies and five complete related kanji bodies.
+Both confirmations made no fresh public retrieval. The manifest
+remains `c808d895e870157a`: 7,128 entries, comprising 6,531
+files, 396 images and 201 scene catalogs. All 3,273 baseline
+identities/readings/titles/exclusions, 286 primary reciprocal N2
+pairs and two separately checked measuring aliases are preserved.
+No exhaustive quiz safety, native certification, frequency
+measurement or model-bias reduction is claimed.
 
 ## Batch 66: N2:1302-N2:1321
 
