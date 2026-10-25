@@ -42,6 +42,23 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   Both read all 24 distinct assigned word/kanji bodies. Different
   useful catches support retaining both families here, not a
   model ranking or a measured reduction in bias.
+- Both original sessions accepted the committed corrections with
+  no actionable defect remaining. Preserve their real confidence
+  difference: Claude considers some catching/yield guards and
+  捕る/抜く conservative or weak, while GPT supports them from
+  secondary senses. Acceptance is not equal confidence, and an
+  unmarked dictionary sense alone does not prove unrestricted use.
+- Confirmation receipts verify seven complete changed bodies,
+  nineteen complete families/77 senses and eleven complete older
+  bodies per reviewer. Cumulative actual older-body unions are
+  GPT 94 and Claude 12; unchanged judgments inherit actual initial
+  reads. A truncated or selectively inspected derivative is not
+  counted as a complete read.
+- Check actual returned source IDs, not just requested TSV paths.
+  GPT's first confirmation search returned four following rows
+  outside assignment; an exact reread followed. Record this
+  disclosed exception rather than claiming perfect row-scope
+  compliance or crediting the extras as review coverage.
 - Preserve source 捕える as a stable identity while explicitly
   teaching 捕らえる/捉える and the reading とらえた for 捕えた.
   A joint spelling heading establishes recognition, not exclusive

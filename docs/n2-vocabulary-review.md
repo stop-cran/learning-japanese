@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-61 review-closed.** The target is all 1,812 source rows,
+**Batches 01-62 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,220 rows are review-closed; twenty are draft,
+The first 1,240 rows are review-closed; none are draft,
 572 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 62: N2:1222-N2:1241
 
-**Status:** initial independent reviews authenticated and
-corrections prepared; original-session confirmations pending.
+**Status:** closed after authenticated independent reviews and
+bounded corrections accepted by both original reviewer sessions.
 
 Seventeen new articles: ともかく, 捕える, 取り入れる, 取り消す,
 取り出す, 採る, 捕る, トレーニング, 丼, 内科, 内線, ナイロン,
@@ -93,10 +93,10 @@ or a quantitative model-bias claim.
 All proposed fixes are supported by the actual older bodies and
 complete applicable families. Corrective inspection adds three
 families/eleven senses and three distinct older bodies, yielding
-249/702 and 126 respectively for the author. Both reviewers will
-receive the same nineteen-family/77-sense selection and eleven
-complete older bodies. These author counts do not establish
-reviewer reads or agreement.
+249/702 and 126 respectively for the author. Both reviewers
+received the same nineteen-family/77-sense selection and eleven
+complete older bodies. Actual returned reads are checked below;
+author counts alone do not establish reviewer reads or agreement.
 
 Optional extra 永い examples remain nonblocking and the reused
 N5 body is preserved. English material/medicine/topic similarity
@@ -104,8 +104,65 @@ alone does not establish further 中身/物質 or 内科/薬/医学 pairs.
 The exact-title deduplicated pairs need no redundant declaration.
 No identity, title, level, mapping, selected/additional sense,
 kanji body or older exclusion changes in this correction.
-All twenty rows remain draft until the original sessions assess
-the actual committed changes and any consequential disagreement.
+At the correction freeze, all twenty rows remained draft until
+the original sessions assessed the actual committed changes and
+any consequential disagreement.
+
+### Batch 62 - confirmed and closed
+
+Both original sessions resumed sequentially on
+`8b26a20ba93ffeeaaf10e4f1b9eb55cbf49dd26d`, parent
+`329ee65a6b15e20d59cf3426b50dc51aafecd408`. Their complete native
+[GPT](n2-vocabulary-reviews/batch-62-gpt-confirmation.md) and
+[Claude](n2-vocabulary-reviews/batch-62-claude-confirmation.md)
+confirmation reports are archived without rewriting historical
+findings. All four reports were authenticated against exact
+expanded prompts, actual models, committed snapshots, patches,
+blind derivatives, private-file allowlists and zero edits.
+
+Actual successful returned text from each confirmation contains
+all seven complete changed articles, the complete correction patch,
+both complete family chunks (nineteen families/77 senses), both
+complete older-body chunks (eleven bodies), the correction snapshot,
+and the exact TSV header/twenty assigned rows. Both twenty-row
+six-column verdict tables match the committed source associations
+and independently mark correctness, scoped coverage and
+comprehensibility CLEAN. The other twelve word bodies, five kanji
+bodies and lexical judgments explicitly inherit authenticated full
+initial reads, not fresh rereads.
+
+All initial actionable findings are resolved. GPT supports all
+thirteen guards and the reading correction; Claude accepts the
+changes with a nonblocking confidence difference: G03's catching/
+yield guards are conservative, and the author-identified 捕る/抜く
+guard is weakly motivated by the narrow older opening. Neither
+requests removal or identifies a regression. Retain that difference
+rather than claiming equal confidence or unrestricted Japanese
+substitution. The extra temporal 永い example remains optional.
+
+Native complete older-body unions are GPT **94** and Claude **12**,
+computed from exact complete returned bodies and reproductions,
+not header searches. These differ from the author's 126 bodies
+and do not support model ranking or quantified bias reduction.
+GPT's first confirmation TSV search accidentally returned
+N2:1242-1245, then reread exactly the assigned header/rows.
+Native outputs confirm this disclosed scope exception; the reviewer
+says the extras were unused. Perfect row-scope compliance is not
+claimed. GPT inspected the large corrected derivative selectively
+after a truncated range; Claude did not read it. Neither is credited
+with a complete derivative read.
+
+Closure changes only twenty draft statuses and audit documentation.
+The confirmed teaching and manifest bytes are unchanged:
+**4,414 word articles**, **3,273 preserved baseline identities**,
+**271 tracked new-word reciprocal N2 pairs**, all five explicit
+new/reused pairs, and manifest **6,445 files / 396 images / 201 scenes**,
+version `343f40b11a877570`.
+Coverage is **1,240 closed, 0 draft, 572 pending and 0 unresolved**,
+mapping 1,229 articles (1,141 new and 88 reused). Earlier batch61
+inherited quiz debt remains deferred. CLEAN is bounded editorial
+closure, not a global quiz guarantee, exhaustive synonym audit,
+native-speaker certification or measured frequency claim.
 
 ## Batch 61: N2:1202-N2:1221
 
