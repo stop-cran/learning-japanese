@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 54 reconciliation:** Ordinary 汚い/ぐしゃぐしゃ
+  untidiness needs direct protection with 散らかる; indirect guards
+  are insufficient. Look beyond exact filenames: 醤油 has a
+  kana-primary しょうゆ article. Inspect individual condiment
+  meanings and before/prior-to uses, rather than deriving exclusions
+  from shared tags, category cliques or the matching after-side pair.
+  An unnamed mimetic contrast is clearer when named and linked.
+  Prefer the actual attested spatial 直前 construction over an
+  unverified alternative; this does not prove the old example wrong.
+  Shared English control alone does not establish that 支配 can
+  replace 調節 in level adjustment. Preserve ordinary secondary-sense
+  protection even when an older title foregrounds a different sense.
+
 - **Batch 54 authoring:** A raw numbered gloss does not determine
   pinned sense divisions: 長所's strong point/advantage is one sense.
   Conversely, チョーク's chock is supported by a separate complete

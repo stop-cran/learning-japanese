@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 54: N2:1062-N2:1081
 
-**Status:** authored draft; independent sequential reviews and reconciliation pending.
+**Status:** authored draft; authenticated initial reviews reconciled;
+original-session confirmation pending.
 
 Nineteen new articles: 長所, 長女, 調整, 調節, 頂点, 長男,
 長方形, 調味料, チョーク, 直後, 直線, 直前, 直通, 直流,
@@ -69,6 +70,89 @@ Current totals are 1,072 distinct mapped articles: 1,003 new and
 69 reused baseline identities; 4,276 total word articles.
 Drafting and structural checks do not establish independent review
 closure, exhaustive semantic uniqueness or native-speaker certification.
+
+### Batch 54 - initial reviews and reconciliation
+
+Common authored snapshot: `a01a7787528d7f77f7c415d08747e06d75bb3dde`,
+parent `23d10580d5115175392fe407e21cba9fe94d4fd0`. Actual
+`gpt-6.1-sol` and `claude-opus-5.5` reviewed sequentially with
+identical blind prompts apart from model/family substitutions,
+scope and available evidence. Both exited without edits. The complete
+[GPT report](n2-vocabulary-reviews/batch-54-gpt-initial.md) and
+[Claude report](n2-vocabulary-reviews/batch-54-claude-initial.md)
+are archived. Author-executed checks authenticate models, native
+sessions, exact prompts, frozen hashes, blind evidence derivatives,
+private-file allowlists, no named forbidden reads and zero edits.
+Public archives only replace two-space hard line breaks with blank
+lines; native private outputs and event text remain unchanged.
+
+Evidence-based dispositions, subject to original-session confirmation:
+
+- **N2-54-GPT-01: resolved.** Add direct 散らかる/汚い and
+  散らかる/ぐしゃぐしゃ guards. Actual bodies and complete pinned
+  1178940:2/2097580:3 establish ordinary untidiness, not just dirt,
+  crumpling or wetness. Do not propagate this judgment to the
+  causative 散らかす merely by transitivity.
+- **B54-F01: resolved.** Add 調味料/酢, /食塩 and /しょうゆ.
+  Full actual bodies and 1370270:1/1358410:1/1595020:1 identify
+  the particular condiments. The broad seasoning label can answer
+  these ingredient words; shared tags only affect likelihood.
+  This is not a claim that the ingredient names are interchangeable
+  or a rule to exclude every member of any shared category.
+- **B54-F02: resolved.** Link 醤油 to the existing kana-primary
+  しょうゆ article, preserving the actual spelling and reading.
+- **B54-F03: resolved.** Add direct 直前/以前 protection.
+  Actual before/prior-to uses and complete 1155150:1-2 support
+  the broader overlapping time label. 前 protection is nontransitive;
+  matching the 直後/以後 arrangement alone would not be evidence.
+- **B54-F04: partially resolved, calibrated as editorial improvement.**
+  Replace the insect example with 車の直前を横断しました and
+  its actual reading/translation, closely inflecting the captured
+  Daijisen pattern 車の―を横断する. The initial suggested
+  横切る wording was not the captured attestation. No native
+  judgment or evidence proves the previous sentence ungrammatical.
+- **B54-F05: not adopted; original reviewer reassessment pending.**
+  Complete 1310270 includes rule/domination, direction/management
+  and governing influence. Neither the actual 支配 article nor
+  this broad range establishes a level-adjustment synonym in
+  1429240's sense. Shared English control, related tags and an
+  existing 管理 guard do not establish the proposed direct pair.
+  Retain the qualified control-versus-domination contrast.
+- **B54-F06: resolved as small comprehension polish.** Name and
+  link ぱらぱら in the rain/grain comparison; complete 1102580:1,3-4
+  supports the contrast without treating all scattering as untidiness.
+- **Optional suggestions:** Remove 長方形's potentially misleading
+  "both long vowels" count, retaining the complete チョウ + ホウ + ケイ
+  reading. No further guards are established by 有利's favorable/
+  profitable uses, 次's next-in-sequence relation or 流れ's fluid/
+  gas current. Retain 長所/味噌: ordinary secondary key-point
+  usage matters despite the old miso-paste title and usual ミソ
+  spelling. No baseline rewrites or extra 直角 construction are
+  required for the assigned scope.
+
+Corrective author reads: twenty-two complete families/51 senses,
+twelve complete old articles and the complete original captured
+直前 heading, not a fresh public retrieval. Fifteen corrective
+families were already inspected: the deduplicated author total is
+272 families/649 senses. Four old bodies were rereads, so the
+deduplicated total is 108, not 112. Historical initial counts remain
+unchanged in the packet.
+
+Model-diversity observation across both complete reports: GPT uniquely
+identified the two ordinary messy/untidy gaps; Claude uniquely
+identified the additional condiment/before pairs, kana-primary link
+and unnamed mimetic comparison. Claude also supplied the spatial
+example and vowel-count improvements, but the control-pair proposal
+is not adopted merely on English overlap. These are different
+observations even where both reports discuss 散らかる. Actual
+inspection depth differed: GPT reports 111 complete comparison
+articles beyond the twenty assigned cards, while Claude read twelve.
+GPT read the compact families/public renderings; Claude read the
+entire blind JSON packet and public text, but not the compact
+renderings or source snapshots. Claude disclosed reading that
+packet before the frozen snapshot. Complementary findings were
+useful; unequal depth and unsupported suggestions do not establish
+controlled bias reduction or a general model ranking.
 
 ## Batch 53: N2:1042-N2:1061
 
