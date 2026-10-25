@@ -95,6 +95,21 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 58 authoring:** Resolve actual public cross-references,
+  such as 展開's computing sense pointing to 解凍, before claiming
+  corroboration. Mixed headings can contain unrelated readings
+  (鉄橋/鉄灸, 伝記/しるしぶみ, 手前/てめえ); preserve the
+  selected family and register. A loose source gloss may have a
+  dictionary-related basis without being valid as a general
+  translation: 出来上がる's "by definition" must not become an
+  unrestricted adverb. Native-first mixed 手帳 follows the actual
+  荷物/豚肉 classification precedent; state the kun/on split
+  rather than calling both readings on. Preserve stable kana-only
+  でこぼこ when adding 凸凹 recognition. Captured comparison
+  chunks are not inspected merely because files exist; record
+  actual completed reads separately from preparation status.
+  These are author observations, not independent findings.
+
 - **Batch 57 closure:** Both original sessions accepted the same
   committed corrections after complete bounded rereads. Authenticate
   actual successful returned content, not just requested file paths,

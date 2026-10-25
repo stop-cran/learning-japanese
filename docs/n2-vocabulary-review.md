@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-57 review-closed.** The target is all 1,812 source rows,
+**Batches 01-57 review-closed; batch 58 drafted, awaiting review.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,140 rows are review-closed; none are draft,
-672 remain pending, and none are unresolved.
+The first 1,140 rows are review-closed; 20 are draft,
+652 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,58 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 58: N2:1142-N2:1161
+
+**Status:** drafted; independent reviews and reconciliation pending.
+
+Seventeen new articles: 出来上がる, 的確, 手首, 手頃,
+でたらめ, 手帳, 鉄橋, 手続き, 鉄砲, テニスコート,
+手拭い, 手前, 出迎え, 出迎える, 照る, 展開 and 伝記.
+The 的確 article explicitly teaches source alias 適確; both rows
+retain their own identities and mappings. Two narrow reuses add
+sourced N2: kana-primary でこぼこ recognizes 凸凹, and 照らす
+links its existing 照る comparison. Their primary IDs, readings,
+titles, kanji arrays, tags and original exclusions remain unchanged.
+
+The [batch packet](n2-vocabulary-batch-sources/batch-58.json)
+preserves all twenty raw rows and 19 distinct complete principal
+families/40 senses. Actual author reading covers all 217 originally
+captured complete comparison families/531 senses and all 106
+captured older bodies. Three complete support families/six senses
+cover 武器 and the native-first precedents 荷物/豚肉.
+Together with the two reused candidates, these add five distinct
+full bodies, giving 111 inspected older articles. The 207 original
+navigation labels do not by themselves count as body inspection.
+Another 36 labels from inspected front matter give 243 distinct
+labels overall.
+The principal records are included in the 220-family/537-sense
+union, not added to it.
+
+All 30 complete component records and the complete 鉄/橋/照
+kanji bodies were read. Twenty source endpoints and a separately
+captured 解凍 target yielded 21 positive lexical captures from one
+dictionary service, not 21 independent dictionaries. The actual
+解凍 computing definition resolves 展開's cross-reference.
+Mixed public headings and unequal evidence depth remain explicit.
+
+Do not promote raw "by definition" into an unrestricted
+出来上がる adverb, raw "we" into a neutral 手前 pronoun,
+or "opposite of compression" into every 展開 context.
+手帳's certificate/ID uses, 鉄砲's specialized senses and
+照る's Noh-mask use are bounded recognition, not separately
+assigned N2. The native-first mixed classification follows
+actual repository precedent and states 手て plus 帳チョウ.
+
+Five reciprocal N2 pairs are checked at reading-row and Common
+words surfaces: 鉄/鉄橋, 橋/鉄橋, 鉄/鉄砲,
+照/照らす and 照/照る. Existing written components are linked
+substantively; missing cards are not fabricated. Baseline kanji
+metadata remains unchanged.
+
+Draft totals: 1,150 mapped articles = 1,069 new and 81 reused
+baseline identities; 4,342 total word articles. Drafted and
+structurally valid does not mean review-closed.
 
 ## Batch 57: N2:1122-N2:1141
 
