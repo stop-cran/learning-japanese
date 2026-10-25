@@ -35,8 +35,19 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - Do not remove guards merely because an older article foregrounds
   another sense. Complete 打つ1408810:11 and 作る1597890:14 have
   doing/carrying-out and committing senses without obsolete/rare
-  marks. Retain the guards with 為す pending the original reviewers'
-  confirmation of that explicit evidence-based disposition.
+  marks. Both original reviewers accepted retaining the guards with
+  為す; Claude withdrew the removal finding as actionable and retained
+  weaker confidence for 作る. Acceptance is not equal confidence.
+- Both confirmations accepted the actual five-body correction.
+  They returned six complete older comparison bodies; GPT's split
+  chunk required exact per-line and full interval verification.
+  Cumulative actual older-body depth is GPT 154 / Claude six.
+  Do not convert supplying a file, a requested range or a claimed
+  read into successful complete returned evidence.
+- A neighboring だって exclusion is not proof of either new causal
+  pair, even when a reviewer describes an inconsistency. Keep the
+  direct complete-family/body reasoning for each なぜなら guard.
+  Weak optional guards remain qualified, not mandatory equivalences.
 - Keep raw source evidence separate from adopted teaching. The empty
   なだらか gloss does not invalidate the word. Source 何分 is なにぶん,
   not the separate minutes question なんぷん; retain the raw erroneous

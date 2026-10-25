@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-62 review-closed; batch 63 drafted.** The target is all 1,812 source rows,
+**Batches 01-63 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,240 rows are review-closed; 20 are draft,
+The first 1,260 rows are review-closed; none are draft,
 552 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 63: N2:1242-N2:1261
 
-**Status:** author-corrected after authenticated initial reviews;
-original-session confirmations pending.
+**Status:** closed after authenticated independent reviews and
+bounded corrections accepted by both original reviewer sessions.
 
 Twenty new articles: 仲良し, 慰める, 亡くす, なぐる, 為す, 謎謎,
 なだらか, 懐かしい, 撫でる, 斜め, なにしろ, 何々, 何分, 生意気,
@@ -109,8 +109,61 @@ reading and older-body attribution are useful Claude-only catches.
 The removal proposal is not adopted; optional weak-guard observations
 remain qualifications rather than mandatory fixes. This demonstrates
 usefulness of both families here, not a controlled model-bias test.
-Both original sessions must assess the actual correction and remaining
-dispositions before any of these twenty rows is closed.
+Both original sessions subsequently assessed the actual correction
+and remaining dispositions before these twenty rows were closed.
+
+### Batch 63 - confirmed closure
+
+Both original sessions confirmed
+`0daa3c922e51440b61c38aef03f257affe843f19`:
+[GPT](n2-vocabulary-reviews/batch-63-gpt-confirmation.md) and
+[Claude](n2-vocabulary-reviews/batch-63-claude-confirmation.md).
+All four complete native reports are authenticated against exact
+expanded prompts, actual models, committed snapshots, patches,
+blind derivatives, allowed private access and zero edits.
+Processes ran sequentially and fully exited.
+
+Both confirmations returned all five changed complete bodies,
+the actual correction patch and snapshot, the corrective public
+inspection receipt, twelve complete families / 56 senses, and
+six complete older bodies. GPT read the older-body chunk in
+overlapping ranges 1-240 and 180-end; every returned line and
+complete interval coverage were checked against the capture.
+Both returned the exact TSV header/twenty assigned rows with
+no neighboring source rows. The fifteen unchanged new bodies
+and three kanji bodies inherit authenticated full initial reads.
+Cumulative distinct complete older bodies are **GPT 154 / Claude 6**,
+not the author count and not equal reviewer depth.
+
+Every row has separate **CLEAN correctness / scoped coverage /
+comprehensibility** judgments from both sessions. All three
+explanation corrections and both direct guard additions are
+accepted. Claude withdraws B63-C-04 as actionable: 打つ's doing
+sense supports retention; 作る's committing sense supports weaker
+conservative caution, not a required removal. Both retain the
+optional 何々/いろいろ and 鳴らす/演奏 guards with qualified
+confidence. This is not a claim that the words freely substitute.
+
+Claude's observation about existing だって guards is not used as
+transitive proof. Each new causal pair has independent complete
+family/actual-body support. GPT's successful initial Kotobank
+為せる return actually contains both named dictionary analyses;
+Claude does not claim that fresh retrieval. The author correction
+receipt is a paraphrase, not a raw archive or a reviewer fetch.
+Selective derivative reads, compiler-intent uncertainty, conservative
+preferences and the earlier batch61 debt remain explicit limits.
+
+Only audit records/statuses change after final confirmation.
+Confirmed teaching, kanji bodies and manifest remain byte-for-byte
+unchanged. Closure advances exactly twenty rows to closed:
+**1,260 closed / 0 draft / 552 pending / 0 unresolved**;
+**1,249 mapped articles: 1,161 new / 88 reused**. There remain
+**4,434 word articles / 274 tracked reciprocal N2 pairs**.
+All 3,273 baseline identities/readings/titles/exclusions remain
+preserved. Deterministic manifest totals are 6,465 content files,
+396 images and 201 scenes: 7,062 entries, version
+`22455595c52b1c45`. No global quiz-clean, native-speaker or
+measured model-bias reduction claim is made.
 
 ## Batch 62: N2:1222-N2:1241
 
