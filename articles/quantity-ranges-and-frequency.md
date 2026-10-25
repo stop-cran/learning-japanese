@@ -7,6 +7,8 @@ The core practice covers numerical ranges, minimum benchmarks, unspecified quant
 negative scope, and time/price frames. Existing restriction, listing and comparison exercises keep
 their original owners. A separate N4 follow-up adds sufficient means, exclusions, category membership
 and relative rank. The remaining prefix and higher-grade recognition bridges are not new N4 targets.
+Another N4 follow-up practises [degree and polarity](#8-degree-and-polarity-in-context):
+limited degree, emphatic denial and near-whole versus near-zero readings.
 The separate [ずつ distribution and increments](#7-distribution-and-increments) section adds
 focused **N3** interpretation practice; it is not an extra N4 coverage claim.
 
@@ -407,6 +409,74 @@ The starting duration is unspecified, so six minutes is not necessarily the fina
 An exact repeated numerical amount and the unquantified small amounts in 少しずつ are not
 the same kind of measurement.
 
+## 8. Degree and polarity in context
+
+### A limited assessment is not an explicit complete denial
+
+**あまり + negative** means "not very," "not much" or "not very often," depending on the predicate:
+
+> この店にはあまり行きません。  
+> このみせには あまり いきません。  
+> I do not go to this shop very often.
+
+The assessment is a low frequency, not an exact visit count. It does not establish "never in my life,"
+and it does not guarantee that there were some visits either. **あまり辛くありません**
+（あまり からくありません）, "not very spicy," instead describes a low degree of a property.
+The conversational adverb **あんまり** can also occur with polite endings.
+Recognized **余り／餘り** spellings do not change this adverb into the separate "remainder" noun sense.
+See the [あまり word card](../words/あまり.md).
+
+**全然 + negative** emphasizes "not at all":
+
+> 今朝は全然雨が降りませんでした。  
+> けさは ぜんぜん あめが ふりませんでした。  
+> It did not rain at all this morning.
+
+In this literal reading, the negative is complete **within the morning period**. It does not forecast
+the afternoon. **全然（ぜんぜん）** does not itself conjugate or supply a missing negative ending.
+
+The two descriptions are not universally incompatible. A person with no homework may understate that
+as **宿題があまりありません**, "There is not much homework." When an exercise specifically requests
+an **explicit complete denial**, the weaker assessment does not perform that requested operation;
+it is not therefore ungrammatical or always false. Conversely, if a small nonzero amount is stated,
+a literal complete denial erases that fact. These selections do not ask for deliberate exaggeration.
+
+### 全然 can also emphasize an affirmative colloquial reply
+
+Between friends, **全然いいよ（ぜんぜん いいよ）** can mean "That's totally fine."
+After a request for permission, it can be reassurance, not prohibition.
+This is an attested current colloquial use, not automatically an error because ない is absent.
+Do not infer that every affirmative expression or formal setting uses it equally naturally.
+The [全然 word card](../words/全然.md) separates the senses.
+
+### ほとんど follows the predicate's polarity and the quantity being described
+
+Compare the whole clauses:
+
+- **料理をほとんど食べました。**（りょうりを ほとんど たべました。）
+  I ate almost all the food.
+- **料理をほとんど食べませんでした。**（りょうりを ほとんど たべませんでした。）
+  I ate hardly any of the food.
+
+The first describes a near-whole amount eaten; the second describes a near-zero amount eaten.
+The negative does not mean that almost all the food was eaten, and "hardly any" does not prove exact zero.
+It does not guarantee a nonzero amount either. Read the actual domain: a set of items,
+the amount within one portion, a series of attendances, or progress on a task.
+
+For an **attributive noun modifier**, use **ほとんどの + noun**:
+**ほとんどの学生（ほとんどの がくせい）**, "most/almost all the students."
+This is a large-proportion description, not an exact absolute count or proof of **全員（ぜんいん）**, "everyone."
+The noun construction can itself accompany a negative predicate: **ほとんどの学生が来ませんでした**
+means that most students did not come, not that hardly any students failed to come.
+Read where the quantity expression attaches rather than mechanically reversing an English gloss.
+
+**仕事はほとんど終わりました（しごとは ほとんど おわりました）**
+means that the work is almost finished. It provides no fixed percentage and no guaranteed finishing time.
+An exercise's concrete inventory or event count is context, not a universal numeric threshold for ほとんど.
+The [ほとんど word card](../words/ほとんど.md) gives related nominal and adverbial uses.
+**あまり** and negative **ほとんど** can overlap naturally; an underspecified gap should not reject one
+merely because the author imagined the other.
+
 ## Practice scope
 
 The original quantity/scope set has **28 tasks: 26 N4 and two N5 controls**. Four named formation tasks assemble complete
@@ -431,6 +501,20 @@ The complete Japanese remains visible; English instructions do not give the answ
 translations appear after answering. No new hard prerequisite or whole-chapter lock is introduced.
 Exact ownership, source qualifications and review outcomes are in the
 [follow-up record](https://github.com/stop-cran/learning-japanese/blob/main/docs/grammar-means-and-scope-sources.json).
+
+The separate **degree-and-polarity set adds 24 N4 tasks**: twelve contextual selections and twelve
+supplied-message interpretations. Its three groups organize negative strength, predicate polarity
+and contextual interpretation, rather than creating a separate group for each dictionary headword.
+Nine conservatively shared operation/context keys cover the tasks: three per selection facet and
+five per interpretation facet. Opposite versions and closely related interpretations share keys.
+Counts are not independent learning trials or mastery guarantees.
+
+Negative-strength selections name the candidate adverbs and explicitly distinguish literal complete
+denial from understatement. Predicate-polarity selections supply both complete alternatives; typing
+copies the selected form or its hiragana equivalent, rather than requiring an unsupplied conjugation.
+Interpretations use the same defined 言える／言えない responses. No new hard gate is imposed.
+The [degree/polarity record](https://github.com/stop-cran/learning-japanese/blob/main/docs/grammar-degree-and-polarity-sources.json)
+documents the finite response scopes, source qualifications and independent review.
 
 The separate **ずつ set has 16 N3 tasks in two groups**. Eight ask for a per-unit or whole-scenario
 quantity using Arabic digits, without a unit; eight test a stated claim using **言える（いえる）**,
@@ -473,6 +557,13 @@ These are study references, not an official examination syllabus. The examples a
   [以外](https://bunpro.jp/grammar_points/いがい), and [rank の次に](https://bunpro.jp/grammar_points/の次に).
   Inspect the actual structure and predicate, not a universal sufficiency/necessity shortcut.
   以外 and 意外 remain different words, and a relative rank needs its domain.
+- For degree and polarity: Bunpro's [あまり-negative](https://bunpro.jp/grammar_points/あまり-ない),
+  [全然](https://bunpro.jp/grammar_points/ぜんぜん) and [ほとんど](https://bunpro.jp/grammar_points/ほとんど),
+  alongside the actual JMdict-attributed Jisho entries for [あまり](https://jisho.org/search/あまり),
+  [全然](https://jisho.org/search/全然) and [ほとんど](https://jisho.org/search/ほとんど).
+  The affirmative colloquial sense of 全然 is dictionary-attested; the teaching page's blanket
+  historical/grammatical-error shortcut is not adopted. Word-list levels do not override the
+  primary classification of the full Grammar construction.
 - Recognition: [毎～のように](https://bunpro.jp/grammar_points/まい-のように),
   [各](https://bunpro.jp/grammar_points/各), and the higher-grade [おきに](https://bunpro.jp/grammar_points/おきに) /
   [concentration ばかり](https://bunpro.jp/grammar_points/ばかり) lessons.
