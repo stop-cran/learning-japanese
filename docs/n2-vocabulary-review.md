@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 62: N2:1222-N2:1241
 
-**Status:** authored draft; independent review not yet complete.
+**Status:** initial independent reviews authenticated and
+corrections prepared; original-session confirmations pending.
 
 Seventeen new articles: ともかく, 捕える, 取り入れる, 取り消す,
 取り出す, 採る, 捕る, トレーニング, 丼, 内科, 内線, ナイロン,
@@ -58,10 +59,53 @@ Weblio, not twenty independent dictionaries. Author exclusions,
 inspection counts and structural checks are not independent
 linguistic review findings.
 
-The next gate is blind GPT then Claude review of the same frozen
-committed snapshot and scope, with each process exiting before
-the next starts. No batch62 reviewer agreement or closure is
-claimed by this authored snapshot.
+### Batch 62 - initial reviews and bounded corrections
+
+The authored snapshot is `329ee65a6b15e20d59cf3426b50dc51aafecd408`.
+Sequential native sessions used actual `gpt-6.1-sol` and
+`claude-opus-5.5`. Exact expanded prompts, models, snapshot/patch
+bytes, permitted private access, complete final messages and zero
+edits were authenticated before archiving the
+[GPT](n2-vocabulary-reviews/batch-62-gpt-initial.md) and
+[Claude](n2-vocabulary-reviews/batch-62-claude-initial.md) reports.
+Actual successful returns contain all 24 distinct assigned
+word/kanji bodies, four compact derivatives, the related patch,
+and the TSV header with all twenty exact source rows for each.
+
+Seven new articles receive bounded corrections: thirteen direct
+quiz pairs and the cotton-material reading めん in ナイロン.
+GPT G01-G05 supply ten pairs. Claude B62-01 supplies two drawn-out
+action pairs, and B62-02 supplies the reading correction.
+The author additionally guards 捕る/抜く after inspecting
+1478190:11, whose capture sense is not marked rare or obsolete.
+This last pair is not credited to either reviewer.
+
+G01's 選ぶ/採る selection observation is shared with Claude's
+optional section; only the additional 選択 pair is GPT-only there.
+Across all initial report sections, eight direct pairs are
+GPT-only observations; the two duration-adverb pairs and material
+reading are Claude-only. Their scopes are not equal in actual
+source depth: native complete older-body returns are GPT 92
+(77 direct plus fifteen reproduction-only) and Claude five.
+This sample supports useful complementary catches, not a ranking
+or a quantitative model-bias claim.
+
+All proposed fixes are supported by the actual older bodies and
+complete applicable families. Corrective inspection adds three
+families/eleven senses and three distinct older bodies, yielding
+249/702 and 126 respectively for the author. Both reviewers will
+receive the same nineteen-family/77-sense selection and eleven
+complete older bodies. These author counts do not establish
+reviewer reads or agreement.
+
+Optional extra 永い examples remain nonblocking and the reused
+N5 body is preserved. English material/medicine/topic similarity
+alone does not establish further 中身/物質 or 内科/薬/医学 pairs.
+The exact-title deduplicated pairs need no redundant declaration.
+No identity, title, level, mapping, selected/additional sense,
+kanji body or older exclusion changes in this correction.
+All twenty rows remain draft until the original sessions assess
+the actual committed changes and any consequential disagreement.
 
 ## Batch 61: N2:1202-N2:1221
 

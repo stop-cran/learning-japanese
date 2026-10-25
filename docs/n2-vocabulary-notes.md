@@ -21,6 +21,27 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 ## Batch 62 authoring observations
 
+- Blind initial reviews caught different gaps: GPT identified
+  additional selection, gathering, catching, healing and duration
+  quiz pairs; Claude identified drawn-out-action pairs and the
+  linked material reading 綿 (めん). Claude's optional selection
+  observation overlaps GPT's finding and is not credited as a
+  wholly GPT-unique discovery.
+- Inspect complete comparison families as well as older openings.
+  抜く includes selection/extraction and capture; 収穫 includes
+  fishing catch/haul. コレクション includes collecting as an
+  activity, not only an assembled collection. Direct quiz guards
+  do not teach unrestricted substitution among these words.
+- Usually written as 治す is a preference, not a hard spelling
+  restriction on 直す's medical sense. Keep the practical spelling
+  contrast without dropping the direct guard. Align ナイロン's
+  cotton-material link with めん, without claiming わた cannot name
+  a cotton plant or padding.
+- Authenticated native returns show unequal initial source depth:
+  GPT read 92 distinct complete older bodies, Claude five.
+  Both read all 24 distinct assigned word/kanji bodies. Different
+  useful catches support retaining both families here, not a
+  model ranking or a measured reduction in bias.
 - Preserve source 捕える as a stable identity while explicitly
   teaching 捕らえる/捉える and the reading とらえた for 捕えた.
   A joint spelling heading establishes recognition, not exclusive
