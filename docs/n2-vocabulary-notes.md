@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 52 reconciliation:** Secondary senses can require direct guards
+  despite unlike titles: クラス has rank/category use, 粗 has personal
+  flaws, and 審判 includes judgment beyond sports officials. 一つ does
+  not transitively protect 一, and short-poem teaching needs its own 詩
+  comparison. Inspect excesses too: causative bring-close/let-approach
+  labels distinguish 近付ける from approaching labels here, while
+  がんがん's actual sound/headache title does not answer powerful/
+  reassuring merely because a secondary use describes vigorous work.
+  ギョ is 魚's ordinary on reading, not a voicing change. Link substantive
+  comparisons using actual filenames, including 押入れ to 押し入れ.
+  Record model-unique contributions across all sections and actual read
+  depth; equal evidence access is not equal inspection or bias reduction.
+
 - **Batch 52 authoring:** Allocate source senses by the actual raw
   gloss, not first dictionary sense: 単数's singular-number anchor
   and 力強い's reassurance anchor are both sense 2. Conversely,

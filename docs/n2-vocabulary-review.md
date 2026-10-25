@@ -28,7 +28,7 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 52: N2:1022-N2:1041
 
-**Status:** authored; independent reviews and reconciliation pending.
+**Status:** initial reviews reconciled; corrected-snapshot confirmations pending.
 
 Twenty new articles: 足る, 段階, 短期, 炭鉱, 短所, たんす,
 淡水, 断水, 単数, 団地, 断定, 短編, 誓う, 地下水, 近々,
@@ -63,10 +63,54 @@ sense numbers. 地質 ちしつ remains distinct from fabric-quality
 じしつ. Raw "cut up fine" for 千切る is preserved without teaching
 knife mincing as its ordinary action.
 
-The initial GPT and Claude reviews will receive the same clean committed
-snapshot and blind evidence, sequentially. No independent findings,
-model-diversity outcome, native-speaker certification or runtime quiz
-uniqueness is claimed at this stage.
+### Batch 52 - initial reviews and reconciliation
+
+Common authored snapshot: `3d66845af7cc97508b6a8d4348f0792e2cbdb9c6`,
+parent `ba5b4d4cb75a542fe74572dfb1efff1fe0788693`. Actual
+`gpt-6.1-sol` and `claude-opus-5.5` reviewed sequentially with identical
+blind prompts apart from model/family substitutions, scope and source access.
+Both processes exited without edits before reconciliation. Native reports:
+[GPT](n2-vocabulary-reviews/batch-52-gpt-initial.md) and
+[Claude](n2-vocabulary-reviews/batch-52-claude-initial.md).
+Exact prompts, actual models, frozen hashes/patch/blind derivative, permitted
+private reads, absence of named forbidden reads and zero edits were
+authenticated against native events. Private outputs remain unchanged;
+public Markdown only replaces two-space hard line breaks with blank lines.
+These are author-executed provenance checks, not reviewer-executed Git.
+
+| Finding | Evidence-based disposition |
+|---|---|
+| GPT F01 | Add 段階/クラス: selected 1419950:2 is level/rank/grade; the old クラス body explicitly includes category/rank. Its complete 1044070:1 is not school-only. |
+| GPT F02 | Add 短所/粗: complete 1586730:2 and the actual あら article teach personal/work flaws, not only fish trimmings. Existing 欠点 paths are nontransitive. |
+| GPT F03; Claude B52-01 | Correct the shared 魚 explanation defect: ギョ is its ordinary on reading, not a compound-induced voicing change. Keep the correct whole reading たんすいぎょ. |
+| GPT F04 | Add 単数/一: additional general 1417670:1 includes single/one; old 一's numeral 1160790:1 applies despite the grammatical source anchor. 一つ does not protect this pair. |
+| GPT F05 | Add 断定/審判: complete 1360410:1 and the old body explicitly teach judgment/decision beyond sports officials. Broad judgment labels overlap. |
+| GPT F06 | Add 短編/詩: selected 1597300:1 explicitly includes a short poem. Old 詩 and complete 1929950:1 teach poem/poetry, not merely a related literary topic. |
+| GPT F07 | Remove all four 近付ける exclusions: its displayed bring-close/let-approach label preserves causation against the actual approaching labels. Complete movement families and old bodies do not establish interchangeable answers. Transitivity is not a universal disambiguator. |
+| Claude B52-02 | Remove 力強い/がんがん: complete 1040570:3 does include colloquial vigorous activity, but the actual sound/headache title is not defensible for powerful/reassuring or vice versa. This is not denial of that secondary sense. |
+| Claude B52-03 | Link all three substantive comparisons: 不足する to 不足, 遠く directly, and displayed 押入れ to the actual 押し入れ filename. Complete families and old bodies verify their identities. |
+| Optional 短編 duration | Adopt 10分 for clarity; retain existing correct じゅっぷん and duration meaning. |
+| Optional 足る constructions; 誓う addressee | No expansion: the existing practical constructions are sufficient; noun + に足る is not in the captured public evidence. Additional phrases are not repairs to incorrect current teaching. |
+| Optional 地下水 naturalness | No change: the well-draws-up-water wording is comprehensible. The low-confidence から alternative does not establish a consequential defect or native-speaker judgment. |
+| Optional 千切る split | No change: the article teaches whole ちぎる and explicitly rejects productive 千 = ちぎ. The warning is not a claimed constituent split; isolated 千 = ち does not justify a new allocation. |
+| Optional 短所/下手; 段階/程度; 団地/住宅/アパート | No extra guards or removal of 程度: 下手 describes lack of skill rather than general shortcomings; complete 程度 includes grade/degree; generic housing or an individual apartment/building is not necessarily the grouped estate taught by 団地. These are bounded judgments, not absolute nonoverlap claims. |
+
+The author read all 27 complete corrective families and sixteen complete old
+word bodies, plus the full 魚 kanji card. Exact counts and hashes are recorded
+and deduplicated against prior inspections. The eleven corrected new cards
+add five and remove five direct declarations: fourteen guarded articles and
+72 declarations remain. Raw source rows, mappings, baseline words and the
+six reciprocal kanji edits are unchanged. Confirmation is still pending.
+
+**Model contribution note:** across all report sections, both found the 魚
+reading defect. GPT uniquely supplied five missing direct guards and removal
+of four excessive movement guards. Claude uniquely supplied one different
+excess-guard removal and three existing-card links, plus optional 10分
+clarity. Both completely read twenty new cards and six kanji cards.
+GPT read all nine family renderings and 112 old word bodies; Claude read
+none of those renderings and seven old word bodies plus 魚 kanji.
+Complementary coverage was useful, but unequal actual depth does not
+establish controlled bias reduction or a general model ranking.
 
 ## Batch 51: N2:1002-N2:1021
 
