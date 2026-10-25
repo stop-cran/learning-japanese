@@ -128,7 +128,41 @@ The comparison shows complementary concrete findings and a
 shared concern about farewell-related choices, not measured
 model-bias reduction. Exact pair proposals and evidence reads
 differed; reading an older body alone is not credited as a
-reported finding. Confirmations and review closure remain pending.
+reported finding.
+
+### First correction confirmations and follow-up
+
+Both original sessions sequentially assessed corrected
+`5c9570bb46ccbee8376d7cbfa48eca1ca916b6a2` without edits.
+Authenticated complete reports are archived as
+[GPT confirmation](n2-vocabulary-reviews/batch-66-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-66-claude-confirmation.md).
+Actual successful native outputs reproduce all seven changed
+bodies, both full correction-family chunks (18 families / 54
+senses), both full comparison-body chunks (16 articles), the
+entire correction patch, snapshot and public-attempt receipt,
+plus exactly the TSV header and twenty assigned rows. The
+cumulative author union is separately 268 families / 766 senses /
+121 older article identities; it is not reviewer coverage.
+
+GPT resolves its three findings and accepts the bounded
+corrections, explicitly treating じゃあ as a defensible
+medium-low-confidence conservative safeguard, not mandatory
+goodbye equivalence. Claude resolves its original findings and
+accepts the adopted optional changes, but identifies B66-Q4:
+the separate existing じゃ card also teaches farewell and
+remains unguarded. This is a missed initial candidate, not a
+regression. Its direct body and shared complete family 1005900
+support the same qualified safeguard; add じゃ without
+inventing a standalone dictionary goodbye sense or deriving
+an edge merely from an identical title or さて's declarations.
+
+The additional change affects only バイバイ's guard list.
+No source mapping, learner-facing prose, title, primary
+metadata, baseline card or kanji changes. The remaining
+necessity/confidence qualification is preserved, not forced
+into agreement. Both original-session follow-up confirmations
+and final closure remain pending.
 
 ## Batch 65: N2:1282-N2:1301
 

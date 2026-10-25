@@ -90,6 +90,14 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   lexical body; unrelated dialect material is not confirmation.
   Keep the conservative guard without claiming that じゃあ
   and バイバイ are unrestricted translations.
+- In confirmation Claude identified the separate existing
+  じゃ card, whose complete body also teaches farewell.
+  Add it to the same conservative closing-context safeguard;
+  do not infer the pair merely from its shared title, an
+  inherited さて edge, or dictionary-family membership alone.
+  This was a missed initial candidate, not a regression or
+  another blind model-comparison discovery. Original-session
+  follow-up confirmations remain pending.
 
 ## Batch 65 authoring observations
 
