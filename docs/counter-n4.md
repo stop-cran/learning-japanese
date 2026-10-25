@@ -212,3 +212,9 @@ overnight Write questions from `hakuexpressions`, including continuation. Earlie
 N4 records stay in the source and receive future-due states only in the isolated
 test database; source filtering is not replaced by a pruned or relabeled fixture.
 Exact publication and validation evidence are recorded on content #40.
+
+The final practical payload is manifest `ff5a7ddfbf0c144c`; the full validator and
+forced real Android importer passed after the 九人 reading correction. Content
+commit `9ecd5b6873d0cdd27929e2b74899ca2c769bd25c` introduced this payload. Its
+signature used an unverified email override; the follow-up release-record commit
+uses the repository's established signing identity without rewriting history.
