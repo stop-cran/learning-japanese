@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-57 review-closed; batch 58 corrected, awaiting confirmation.** The target is all 1,812 source rows,
+**Batches 01-58 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,140 rows are review-closed; 20 are draft,
+The first 1,160 rows are review-closed; none are draft,
 652 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 58: N2:1142-N2:1161
 
-**Status:** independently reviewed and corrected; original-session
-confirmations pending.
+**Status:** closed after authenticated independent reviews, bounded
+corrections and original-session confirmations.
 
 Seventeen new articles: 出来上がる, 的確, 手首, 手頃,
 でたらめ, 手帳, 鉄橋, 手続き, 鉄砲, テニスコート,
@@ -75,9 +75,8 @@ words surfaces: 鉄/鉄橋, 橋/鉄橋, 鉄/鉄砲,
 substantively; missing cards are not fabricated. Baseline kanji
 metadata remains unchanged.
 
-Draft totals: 1,150 mapped articles = 1,069 new and 81 reused
-baseline identities; 4,342 total word articles. Drafted and
-structurally valid does not mean review-closed.
+Closed totals: 1,150 mapped articles = 1,069 new and 81 reused
+baseline identities; 4,342 total word articles.
 
 ### Batch 58 - initial reviews and reconciliation
 
@@ -107,7 +106,51 @@ TSV mapping, baseline exclusion or kanji metadata changes.
 Extra examples, origin notes, specialized senses and unestablished
 parity suggestions remain optional rather than forced expansions.
 Different comparison depth prevents model rankings or measured
-bias-reduction claims. Confirmation is still required before closure.
+bias-reduction claims.
+
+### Batch 58 - confirmed and closed
+
+Both original sessions accepted corrected commit
+`b148e3670c00c73701ec5a84c95b2b4b0968ae33`.
+The complete native reports are archived as
+[GPT confirmation](n2-vocabulary-reviews/batch-58-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-58-claude-confirmation.md).
+All twenty exact source-ID/article associations have separate
+correctness, scoped-coverage and comprehensibility CLEAN verdicts.
+No actionable defect or consequential unresolved teaching claim
+remains within the stated scope.
+
+Both actually returned the four complete corrected articles, full
+correction patch, six complete corrective families/18 senses, both
+complete 成長/揃う bodies and the exact TSV header/twenty rows.
+All unchanged teaching and five reciprocal pairs inherit initial
+complete-body judgments; Claude additionally rechecked the links.
+The two older articles were already in each reviewer's initial
+inventory, so distinct older-body counts remain GPT 117 and Claude
+10. Author reconciliation adds two families/five senses and two
+distinct older bodies, giving 222 families/542 senses and 113 bodies.
+
+GPT accepts the additional 揃う guard and revises its initial pair
+assessment. Claude explicitly withdraws neighboring guards as
+sufficient evidence for either new pair; complete direct meanings
+and actual titles/bodies decide. Citation severity differs between
+the initial reports, not the underlying observation. Extra teaching
+and unestablished parity edges remain optional.
+
+The native reports are preserved unchanged. Claude's final limit
+says 16 unchanged bodies, but its detailed scope and returned
+evidence establish 18: 13 new words, two reuses and three kanji.
+This arithmetic slip does not change a teaching judgment.
+Git/hash/equivalence/manifest checks remain author-executed, not
+independent reviewer execution or linguistic certification.
+
+No teaching changes follow confirmation. All 3,273 baseline
+identities/readings/titles/exclusions remain preserved. The global
+audit tracks 255 reciprocal N2 pairs for new articles; reused
+照らす is additionally checked in this batch's five dual-surface
+pairs. Closed totals are 1,160 rows, zero draft or unresolved,
+and 652 pending. No model ranking or measured bias reduction
+is inferred from complementary observations and unequal depth.
 
 ## Batch 57: N2:1122-N2:1141
 

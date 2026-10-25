@@ -95,6 +95,16 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 58 closure:** Both original reviewers accepted the same
+  bounded corrections and exact twenty all-three-CLEAN mappings.
+  Preserve native reports while separately clarifying arithmetic
+  slips: 22 assigned bodies minus four changed leaves 18 unchanged,
+  not 16. Corrective rereads of 成長/揃う do not increase either
+  reviewer's distinct older-body count. The global reciprocal audit
+  counts new articles only; validate a reused article's required
+  reading-row and Common words pair separately instead of
+  inflating that audit's expected count.
+
 - **Batch 58 reconciliation:** Assess direct completeness and
   development guards from actual complete families and older
   bodies, not parity with a neighboring exclusion list alone.
