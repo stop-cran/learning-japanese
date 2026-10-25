@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-66 review-closed.** The target is all 1,812 source rows,
+**Batches 01-66 review-closed; batch 67 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,320 rows are review-closed; none are draft and 492 remain pending.
+The first 1,320 rows are review-closed; 20 are draft and 472 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,50 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 67: N2:1322-N2:1341
+
+**Status:** draft; independent GPT and Claude reviews have not yet run.
+
+Fifteen new articles: 生える, はがす, ばからしい, 秤, 吐き気,
+掃く, 歯車, バケツ, 挟まる, はしご, はじめに, はじめまして,
+斜, 外れる and パターン. Three reused identities are 計る,
+はきはき and 挟む. Two source rows share 計る, preserving N3;
+two share new はじめに. はきはき adds only sourced N2.
+挟む adds sourced N2 and the comparison link to new 挟まる.
+Existing titles, readings, primary metadata and exclusions remain unchanged.
+
+The [packet](n2-vocabulary-batch-sources/batch-67.json) preserves
+all twenty raw source rows and eighteen complete principal families /
+35 senses. Source 剥す is explicitly recognized in はがす;
+梯子 in はしご; 始めに and 初めに in はじめに. Source
+blank fields are retained. Selected source senses and additional
+recognition senses are distinct, not independently leveled.
+Existing 計る already teaches 量る and 測る, and their selected
+sense has no spelling restriction requiring an override.
+
+Four edited kanji cards preserve their headers. New primary
+reciprocal pairs are 掃/掃く and 挟/挟まる. Explicit alias
+checks cover 量/計る under 量る and 測/計る under 測る
+in both Readings and Common words, with substantive word-side links.
+No missing component cards are invented.
+
+The actual-inspection receipt records 268 complete families /
+703 senses, 101 complete older articles, 177 labels, 27 complete
+component records and four complete related kanji bodies.
+All eleven family and thirteen older-body chunks were read
+through EOF. Seventy-six older body candidates remain unselected;
+the original prepared plan is not relabeled as an actual-read receipt.
+
+Twenty-six public requests yielded twenty-two positive captures
+from Digital Daijisen through Weblio: one authority, not independent
+reviewer retrieval or frequency evidence. Raw 剥す failed, while
+canonical 剥がす succeeded. 始めに, 初めに and はじめに
+responses had no selected lexical body and are not positive verification.
+
+Draft coverage is **1,320 closed / 20 draft / 472 pending /
+0 unresolved**, mapping **1,326 articles: 1,227 new / 99 reused**.
+The authored scope is 28 files. Inherited batch61 quiz debt remains deferred.
 
 ## Batch 66: N2:1302-N2:1321
 

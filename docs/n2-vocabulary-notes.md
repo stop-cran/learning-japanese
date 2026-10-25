@@ -19,6 +19,52 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 67 authoring observations
+
+- Twenty source rows map to fifteen new and three reused identities.
+  Both 量る and 測る reuse the existing N3 計る article, which
+  already teaches those spellings. 始めに and 初めに share new
+  はじめに. Preserve the raw blank spelling for ばからしい.
+- Kana-primary はがす, ばからしい, はしご, はじめに and
+  はじめまして explicitly recognize alternate Han spellings
+  without adding those characters to their primary metadata.
+  Source-primary 秤 and 斜 retain their actual characters;
+  吐き気 retains 吐 despite its missing component card.
+- Distinguish surface detachment in はがす from exposing the
+  inside by removing an outer covering in むく, without an
+  absolute split where uses overlap. The public raw 剥す lookup
+  failed; canonical 剥がす succeeded. A failed surface lookup
+  does not invalidate the pinned spelling or count as verification.
+- Read the actual modern headword: 生える's historical おえる,
+  挟む's さしはさむ, 梯子's ていし and 斜's しゃ are not the
+  assigned readings. The rare はす example follows an attested
+  construction, not an invented rare collocation.
+- Keep 秤 as a weighing tool, 歯車's mechanical and figurative
+  senses separate, はしご's venue succession distinct from a
+  ladder, and 外れる's physical, off-target and exclusion facets
+  explicit. A button that 外れる is undone, not necessarily torn off.
+- はじめに recognizes both source spellings while qualifying the
+  official-writing distinction; dictionary identity is not an
+  unrestricted all-context interchangeability rule. The three
+  public はじめに-form requests returned no selected lexical
+  body and are not positive evidence.
+- Actual author reads: 268 complete families / 703 senses,
+  including eighteen principal families / 35 senses; 101
+  complete older bodies, 177 labels, 27 component records and
+  four complete related kanji bodies. All eleven family and
+  thirteen older-body chunks were read through EOF. Seventy-six
+  older candidates remain unselected; preparation and actual
+  inspection receipts remain distinct.
+- Twenty-six public requests produced twenty-two positive
+  captures from one authority, Digital Daijisen via Weblio.
+  Mixed readings, historical senses and unrelated headings
+  are not silently imported. These are author inspections,
+  not independent reviewer retrievals or frequency evidence.
+- Quiz guards are direct symmetric, nontransitive hypotheses,
+  not an inherited synonym clique. Their necessity and excesses
+  still require the independent reviews. No global ambiguity,
+  native certification or measured model-bias claim is made.
+
 ## Batch 66 authoring observations
 
 - Twenty source rows map to fifteen new articles and five reused
