@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-54 review-closed.** The target is all 1,812 source rows,
+**Batches 01-55 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,080 rows are review-closed; 20 are draft,
+The first 1,100 rows are review-closed; none are draft,
 712 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,9 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 55: N2:1082-N2:1101
 
-**Status:** draft; initial reviews and first confirmations authenticated.
-A small comparison clarification and four further direct guards await
-original-session follow-up confirmation.
+**Status:** closed after authenticated independent reviews, evidence-based
+corrections and original-session follow-up confirmations.
 
 Eighteen new articles: 散らす, ちり紙, 散る, 追加, ついで,
 通貨, 通勤, 通知, 通帳, 通訳, 通用, 通路, 付き合う,
@@ -73,7 +72,7 @@ Additional senses do not independently acquire an N2 label.
 Add 貨/通貨 with つうか in the カ reading row and Common words,
 preserving baseline kanji metadata. Other existing primary components
 are substantively linked word-side; missing cards are not invented.
-Current draft totals: 1,092 mapped articles = 1,021 new and 71 reused
+Current totals: 1,092 mapped articles = 1,021 new and 71 reused
 baseline identities; 4,294 total word articles. A draft is not
 review-closed merely because it is committed or structurally valid.
 
@@ -218,6 +217,45 @@ reads five extra comparison bodies, and makes an unsuccessful fresh
 derivative reads and initial scope limits remain disclosed. This is
 additional sample usefulness, not a blind new discovery or controlled
 bias-reduction measurement.
+
+### Batch 55 - confirmed and closed
+
+Final teaching snapshot: `3523c2ed00b37d358f40b54d8ca749f35e0007a9`,
+parent `cab666775db68a2cf5233ca1f8f4d13a1ff7bb40`.
+Both original sessions accepted B55-07's local clarification and all
+four further direct guards. The complete
+[GPT follow-up](n2-vocabulary-reviews/batch-55-gpt-followup.md) and
+[Claude follow-up](n2-vocabulary-reviews/batch-55-claude-followup.md)
+each give the exact twenty source-ID/article associations CLEAN for
+correctness, scoped coverage and comprehensibility. Both completely
+reread the three changed articles, unchanged 通路, the actual patch,
+all eight complete follow-up families/26 senses and seven full old
+bodies. Other judgments are explicitly inherited, not fresh complete
+rereads. No teaching changes follow those confirmations.
+
+Both accept the individual decisions not to require 通用/働き or
+通路/通過; this does not certify zero contextual overlap or make an
+added guard intrinsically wrong. Claude qualifies the passage distinction
+as slim. Optional future 働く functioning coverage and the unchanged
+月日/日月 baseline correction remain outside this batch.
+
+Author authentication verifies all six complete native final reports,
+actual models, exact prompts, original-session continuity, three frozen
+snapshots, patches, equivalent derivatives, private allowlists and zero
+edits. The first Claude confirmation's NEEDS FIX is preserved, not
+rewritten into a clean verdict. Historical evidence and unequal read
+depths remain explicit, including the initial `.github` scope deviation.
+This sample shows complementary findings and a useful follow-up catch,
+not controlled bias reduction or a general model ranking.
+
+Closure preserves all 3,273 baseline identities/readings/titles/exclusions,
+245 tracked reciprocal N2 pairs for newly authored words, the separate
+narrow reused identities, and the confirmed teaching/manifest unchanged.
+The manifest has 6,922 entries: 6,325 content files, 396 images and
+201 scene catalogs, content version `b13b877fb969383b`.
+All 1,100 rows through batch 55 are closed; 712 remain pending.
+There is no native-speaker certification, live-quiz draw or exhaustive
+semantic-uniqueness claim.
 
 ## Batch 54: N2:1062-N2:1081
 

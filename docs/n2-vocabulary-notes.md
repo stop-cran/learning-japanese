@@ -95,6 +95,16 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 55 closure:** A first confirmation can expose a small
+  regression; retain its NEEDS FIX verdict and obtain another bounded
+  confirmation rather than treating it as clean. Authenticate all six
+  native reports and the exact twenty all-three-CLEAN final associations.
+  Both original sessions accepted the functioning-versus-acceptance
+  clarification and four more guards, while qualifying the declined
+  work-noun/passing-through hypotheses. Keep inherited judgments,
+  fresh reads, author checks and optional baseline work separate.
+  Complementary findings are useful sample evidence, not a model ranking.
+
 - **Batch 55 confirmation:** Adding a synonym comparison can introduce
   a comprehension gap even when its dictionary sense is correct.
   Explain operating/having an effect versus an excuse being accepted,
