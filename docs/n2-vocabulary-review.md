@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 51: N2:1002-N2:1021
 
-**Status:** authored draft; independent review and reconciliation pending.
+**Status:** corrected draft after independent initial reviews; original-session
+confirmation and closure pending.
 
 Twenty new articles: 助かる, 但し, 畳む, 立ち止まる, たちまち,
 建つ, 発つ, 脱線, 妥当, 例える, 頼もしい, 足袋, ダブル,
@@ -49,8 +50,53 @@ appears as a qualified whole-word reading たび rather than an invented
 individual reading of 袋. Preserve all baseline kanji metadata.
 Raw source errors remain auditable while the cards teach intransitive
 建つ and ダム "dam." Source 溜息 is explicitly recognized in ため息.
-No independent review, model-comparison outcome, runtime quiz certification
-or closure is claimed at this draft stage.
+At initial authoring, no independent review or model-comparison outcome
+was claimed. Runtime quiz certification and closure are still not claimed.
+
+### Batch 51 - initial reviews and reconciliation
+
+Common authored snapshot: `9de757c1fdaff0d2012091652d43247998307d29`,
+parent `e2edfb235baf79faefae1a7df0785d6f394cf2d4`. Actual
+`gpt-6.1-sol` and `claude-opus-5.5` reviewed sequentially, with identical
+blind prompts apart from model/family substitution, scope and source access.
+Both processes exited without edits before reconciliation. Native reports:
+[GPT](n2-vocabulary-reviews/batch-51-gpt-initial.md) and
+[Claude](n2-vocabulary-reviews/batch-51-claude-initial.md).
+Exact prompts, actual models, frozen hashes/patch/blind derivative,
+permitted private reads, absence of named forbidden reads and zero edits
+were authenticated against native events. These are author-executed checks,
+not reviewer-executed Git or runtime quiz tests.
+
+| Finding | Evidence-based disposition |
+|---|---|
+| GPT F01 | Accepted: add たちまち/すっと. Complete 1006140:1 and actual old body explicitly include "all of a sudden," not just smooth movement. |
+| GPT F02 | Accepted: add 妥当/成立 and 妥当/適する. Complete 1375880:3 concerns valid/holding arguments; 1437340:1 and its old article concern suitability. Different grammatical forms do not settle these broad English labels. |
+| GPT F03 | Accepted: add both 溜まる/重なる and 溜める/重なる directly. Complete 1335800:2 and the old body explicitly teach accumulation; indirect 重ねる/積もる paths do not protect either pair. |
+| GPT F04 | Accepted: add ためらう/ぐずぐず. Complete 1004040:1 and the old body teach hesitation, not merely slow movement. |
+| GPT F05 | Accepted: add だらしない/ぐしゃぐしゃ and だらしない/だらだら. Complete 2097580:3 is non-wet untidiness; 1007510:4 includes slovenly/lazy activity. Do not conflate wetness and untidiness merely through English "sloppy." |
+| Claude B51-F1 | Accepted: add 例える/例え. Complete 1597120:2 and actual old teaching cover figurative comparison/metaphor, directly related to the broad new comparison label; not every shared-kanji noun/verb warrants a guard. |
+| Claude B51-F2 | Accepted: add たちまち/一瞬. Complete 1163340 and old article include adverbial use and rapid-result 一瞬で. Noun-only reasoning does not account for the actual construction. |
+| Claude B51-F3 | Adopted low-impact source-list consistency: append 足袋 entry 1404920 to 袋's final list. The same entry was already cited inline; no missing lexical evidence or changed reading is implied. |
+| Author A51-01 | Add 妥当/立つ after complete follow-up inspection: 1597040:13 explicitly includes valid/logical/reasonable arguments. Not credited to either initial reviewer; distinct from the building-standing optional suggestion. |
+| Optional 建つ/立つ | Not adopted: complete 1597040:2 is standing/situation, not being built or erected. Homophony and the shared building topic alone do not establish the new quiz pair. |
+| Optional たちまち/瞬間 | Not adopted: actual old teaching and complete 1341210 distinguish an instant/point in time or momentary duration; no equivalent rapid-result construction was established here. This is a bounded decision, not a universal nonoverlap claim. |
+| Optional 頼もしい/頼る and 助かる comparisons | No expansion: being reassuring/dependable, relying on help, and attributing help to a cause are different perspectives. Optional cautiousness was not established as a mandatory guard or excessive exclusion. |
+
+The author actually read all fourteen complete corrective families and thirteen
+old bodies, including optional candidates. Counts and hashes are retained in
+the correction evidence, deduplicated against earlier inspections. Failed
+reviewer retrievals are not positive evidence. No source mapping or practical
+teaching prose changes were required.
+
+**Model contribution note:** comparing findings, optional passages and limits,
+GPT supplied eight required direct quiz pairs not reported by Claude; Claude
+supplied two different required pairs not reported by GPT, plus the low-impact
+source-list observation. There was no shared required pair. The additional
+author-found valid-argument pair is not a model contribution. Both completely
+read the twenty new cards and three kanji cards; GPT read all ten family
+renderings and 116 old bodies, while Claude read targeted family records and
+three old bodies. Complementary coverage was useful in this batch, but this
+unequal actual depth does not establish bias reduction or a general model ranking.
 
 ## Batch 50: N2:982-N2:1001
 

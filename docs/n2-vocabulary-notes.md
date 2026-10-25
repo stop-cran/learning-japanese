@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 51 reconciliation:** Actual secondary senses exposed missing
+  direct guards despite distinct titles: すっと includes suddenness,
+  重なる includes accumulation, and ぐずぐず includes hesitation.
+  The precise untidy/slovenly senses, not wet "sloppy" alone, support
+  だらしない comparisons. Inspect noun/adverb constructions rather than
+  dismissing 一瞬 by part of speech; its existing article explicitly
+  teaches rapid-result 一瞬で. The author's follow-up also found
+  reasonable/valid 立つ sense 13 for 妥当, separate from the optional
+  and unadopted building-standing comparison. Model-diverse reviews
+  supplied complementary required pairs, but GPT read 116 old bodies
+  and Claude only three: equal access is not equal actual depth or a
+  controlled measurement of model bias.
+
 - **Batch 51 authoring:** Preserve erroneous raw glosses in the source
   index without teaching them: ダム is a dam, not "dumb"; 建つ is
   intransitive despite the source's "to erect." Normalize 溜息 to
