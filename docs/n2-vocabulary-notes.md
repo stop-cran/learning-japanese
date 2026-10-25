@@ -21,6 +21,42 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 ## Batch 71 authoring observations
 
+- Authenticated blind initial reviews used GPT-6.1 Sol and Claude
+  Opus 5.5 sequentially on `88aea28d`. Both found the missing
+  捻る/工夫 guard. GPT also found 捻る/考える and the inaccurate
+  "native reading" description of 日にち; its optional 日日
+  qualification prompted positive verification of a daily ひにち
+  construction in a second authority.
+- Claude uniquely found four other direct safeguards (転がす,
+  おおよそ, 出入り, 著す), two unsupported spelling assertions,
+  the missing いる component reading and an ambiguous "general pass"
+  title. Adopted translation polish removes unsupported "main".
+  Eight new articles are corrected; six direct guards are added on
+  five of them. 一通り now uses "once-over" in its title. Existing
+  guards remain; no older identity, title or exclusion is changed.
+- Corrective inspection adds four full families / 27 senses and
+  five full older identities: cumulative author scope is 477
+  families / 1,142 senses and 172 older bodies. The complete new
+  rendering contains eight families / 39 senses, including the
+  distinct こうふ homograph of 工夫. Four positive corrective
+  lexical inspections cover two dictionary authorities; two other
+  Kotobank returns provide no usable lexical evidence. Stored
+  corrective text is short inspection excerpts, not full captures.
+  Original preparation, inspection and initial-review receipts
+  remain unchanged.
+- Native returns establish unequal initial depth: GPT returned all
+  eighteen family and twenty older-body chunks plus the supplement;
+  Claude returned none of those chunks but seven direct older bodies.
+  Equivalent observations in findings, options and limits were
+  compared before assigning contributions. Complementary catches
+  were useful here, not measured bias reduction or model ranking.
+  Original-session correction confirmations remain pending.
+- The optional 捻る/絞る edge is not established by their actual
+  labels and complete families: whole idioms sharing "rack one's
+  brains" do not automatically equate the bare verbs, and 捻る's
+  animal-neck wringing sense does not establish cloth/liquid wringing.
+  This is a claim-specific limit, not a proof of global quiz safety.
+  Other optional spelling/recognition expansions stay deferred.
 - Twenty new articles cover N2:1402-N2:1421. The raw source
   fields remain intact, including blank spellings for ひとまず,
   ひとりでに and ビニール. Canonical articles explicitly recognize
@@ -29,8 +65,12 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - Raw 日日 at ひにち belongs to the date/day-count family 1611370.
   Its source gloss, "every day,daily,day after day," instead matches
   separate daily family 1602120 at ひび/にちにち. Preserve the
-  mismatch as evidence; teach 日にち, not an invented daily sense
-  for ひにち. The compiler's intention is not inferred.
+  mismatch as evidence and identify that distinction as pinned
+  JMdict data, not a universal lexical ban. 精選版 日本国語大辞典
+  separately records daily ひにち, especially 毎日ひにち /
+  ひにち毎日. Recognize that construction without a frequency claim
+  or unrestricted daily substitution. The compiler's intention is
+  not inferred.
 - Source 捻る's "puzzle over" gloss is taught through the actually
   attested whole construction 頭をひねる, not a fabricated unrestricted
   cognitive sense in JMdict. The separate ねじる identity and its
@@ -58,8 +98,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - 筆 gains reciprocal reading/common-word links for 筆記 and 筆者;
   皮 gains 皮肉. Both kanji headers are preserved, absent component
   cards stay unlinked, and primary metadata retains every written
-  character. Draft coverage is 1,400 closed / 20 draft / 392 pending;
-  independent sequential GPT and Claude reviews are still pending.
+  character. Draft coverage remains 1,400 closed / 20 draft /
+  392 pending until both original reviewers accept the corrections.
 
 ## Batch 70 authoring observations
 

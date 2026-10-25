@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 71: N2:1402-N2:1421
 
-**Status:** draft; independent sequential GPT and Claude reviews pending.
+**Status:** draft; independent initial reviews authenticated;
+author corrections applied, original-session confirmations pending.
 
 Twenty new articles: 筆記, ひっくり返す, ひっくり返る, 引っ越し,
 引っ込む, 筆者, 必需品, 人差し指, 一通り, 人通り, ひとまず,
@@ -66,6 +67,56 @@ Authored draft coverage is **1,400 closed / 20 draft / 392 pending /
 primary reciprocal N2 pairs**. The authored scope is 28 files.
 Author inspection and quiz hypotheses are not reviewer findings
 or evidence of measured model-bias reduction.
+
+Initial reports: [GPT-6.1 Sol](n2-vocabulary-reviews/batch-71-gpt-initial.md)
+and [Claude Opus 5.5](n2-vocabulary-reviews/batch-71-claude-initial.md).
+Both ran read-only, independently and sequentially on
+`88aea28d8f5e1d4d17088835c03b9c93d19eb6cd`. Exact prompts,
+actual models, complete native reports, all twenty assigned bodies,
+both kanji bodies, mappings, principals, components and the TSV
+header plus exactly twenty assigned physical rows are authenticated.
+
+| Observation | Reconciliation |
+| --- | --- |
+| GPT F01 / Claude B71-02: 捻る/工夫 | Add the shared direct devising safeguard after complete-family/body inspection. |
+| GPT F01: 捻る/考える | Add this distinct edge from the older word's actual devising sense, not just its primary title. |
+| GPT F02: 日にち reading | Replace "native reading"; explain ひ kun plus にち on. Identity and primary reading stay unchanged. |
+| Claude B71-01: ひっくり返す/転がす | Add the direct tipping/knocking-over safeguard; not every rolling motion overlaps. |
+| Claude B71-03: 一通り/おおよそ | Add the general/outline edge from actual senses, not numerical approximation or an inherited clique. |
+| Claude B71-04: 人通り/出入り | Add the direct pedestrian-coming/going safeguard; income/expenditure is not pedestrian traffic. |
+| Claude B71-05: 筆者/著す | Guard the displayed "author" ambiguity without claiming a person and an authoring action are Japanese substitutes. |
+| Claude B71-06 and B71-07: spelling evidence | Remove unsupported 一やすみ and 日入/日の入 assertions. Retain attested ひと休み; failed lexical retrieval does not prove nonexistence. |
+| Claude B71-08: 日の入り component | Specify 入る (いる), citing the actual sun-setting heading. No universal prohibition on はいる. |
+| Claude B71-09: 一通り title | Replace ambiguous "general pass" with "once-over"; retain construction-specific distinctions and existing safeguards. |
+| GPT optional 日日 qualification | Adopt positively verified Seisenban daily ひにち recognition, especially 毎日ひにち / ひにち毎日, separately from the pinned JMdict family mapping. |
+| Claude optional translation | Remove unsupplied "main": "The dishes are all here." |
+| Other optional observations | Defer spelling/recognition expansions. The proposed 絞る edge remains unestablished by the actual labels, whole-idiom distinction and sense restrictions. |
+
+The exact corrective scope is eight assigned articles and six
+new direct guards on five of them, plus evidence/review records and
+the regenerated manifest: fourteen files. One new-card title changes;
+raw source fields, primary identities/readings, levels, types,
+primary kanji, assets/scenes, two kanji cards and all older articles
+remain unchanged.
+
+Corrective author scope is **477 complete families / 1,142 senses
+and 172 complete older identities**. Four new families / 27 senses
+and five new older identities are additional to the immutable
+original receipts. The corrective rendering contains eight complete
+families / 39 senses, including the separate こうふ homograph.
+Four positive corrective lexical inspections use two authorities;
+the 日の入り and 一休み Kotobank returns contain no usable
+lexical spelling evidence. Short stored inspection excerpts are not
+raw or full-page captures, and recognition is not frequency.
+
+Actual initial access differs sharply: GPT returned all eighteen
+family and twenty older-body chunks plus the supplement; Claude
+returned none of those whole chunks but seven direct older bodies.
+Complete bytes establish access, not comprehension. The shared
+工夫 catch and complementary devising, reading, spelling and label
+observations were useful in this batch. Equivalent observations
+throughout both reports were deduplicated; this is not matched-depth
+coverage, a model ranking or measured bias reduction.
 
 ## Batch 70: N2:1382-N2:1401
 
