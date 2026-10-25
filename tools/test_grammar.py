@@ -5,6 +5,7 @@ import io
 from collections import Counter
 import json
 import tempfile
+import unicodedata
 import unittest
 from pathlib import Path
 
@@ -2814,6 +2815,68 @@ class GrammarMixedNormsExpectationsCoverageTests(unittest.TestCase):
         self.assertIn("その部分の録音を____", self.exercises["mixed-norm-redo"]["prompt"])
         self.assertIn("not proof", self.exercises["mixed-prediction-contact"]["explanation"])
         self.assertIn("does not establish", self.exercises["mixed-prediction-redo"]["options"][2]["rationale"])
+
+
+class GrammarCompositionContractTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        root = Path(__file__).resolve().parent.parent
+        cls.source = json.loads((root / "docs" / "grammar-composition-text-sources.json").read_text(encoding="utf-8"))
+        cls.exercises = {}
+        cls.members = {}
+        for filename in ("sentence-composition.json", "connected-text-grammar.json"):
+            data = json.loads((root / "grammar" / filename).read_text(encoding="utf-8"))
+            cls.exercises.update((e["id"], e) for e in data["exercises"])
+            cls.members.update((m["exerciseId"], m) for g in data["introductionGroups"] for m in g["members"])
+
+    def test_complete_accepted_orders_use_exactly_the_displayed_chunks(self):
+        for row in self.source["orderingTasks"]:
+            exercise = self.exercises[row["exerciseId"]]
+            chunks = {c["label"]: c["text"] for c in row["chunks"]}
+            displayed = "".join("〔" + key + "：" + chunks[key] + "〕" for key in row["displayOrder"])
+            self.assertIn(displayed + "\n____。", exercise["prompt"])
+            self.assertCountEqual(chunks, row["displayOrder"])
+            rendered = {}
+            for target, orders in row["validOrdersByTarget"].items():
+                rendered[target] = set()
+                for order in orders:
+                    self.assertCountEqual(chunks, order, (exercise["id"], order))
+                    self.assertEqual(row["chunks"][-1]["label"], order[-1])
+                    rendered[target].add("".join(chunks[key] for key in order))
+            self.assertEqual(rendered[exercise["target"]], set(exercise["acceptedAnswers"]))
+            for option in exercise["options"]:
+                self.assertIn(option["label"], rendered[option["id"]])
+                self.assertEqual(option["id"] == exercise["answer"], option["label"] in exercise["acceptedAnswers"])
+            for target, values in rendered.items():
+                if target != exercise["target"]:
+                    self.assertTrue(values.isdisjoint(exercise["acceptedAnswers"]))
+
+    def test_omitted_repeated_changed_or_separated_chunks_are_not_accepted(self):
+        normalize = lambda value: unicodedata.normalize("NFKC", value.strip())
+        for row in self.source["orderingTasks"]:
+            accepted = {normalize(a) for a in self.exercises[row["exerciseId"]]["acceptedAnswers"]}
+            chunks = {c["label"]: c["text"] for c in row["chunks"]}
+            for order in row["validOrdersByTarget"][row["target"]]:
+                parts = [chunks[key] for key in order]
+                for index in range(len(parts)):
+                    omitted = "".join(parts[:index] + parts[index + 1:])
+                    repeated = "".join(parts[:index] + [parts[index]] + parts[index:])
+                    changed = "".join(parts[:index] + [parts[index] + "別"] + parts[index + 1:])
+                    for candidate in (omitted, repeated, changed):
+                        self.assertNotIn(normalize(candidate), accepted, (row["exerciseId"], candidate))
+                self.assertNotIn(normalize(" ".join(parts)), accepted)
+                self.assertNotIn(normalize("".join(parts) + "。"), accepted)
+            self.assertTrue(all(len(a.encode("utf-16-le")) // 2 < 80 for a in accepted))
+
+    def test_paired_text_questions_retain_the_full_passage_and_shared_identity(self):
+        for passage in self.source["passages"]:
+            members = [self.members[identity] for identity in passage["exerciseIds"]]
+            self.assertEqual({passage["exampleKey"]}, {m["exampleKey"] for m in members})
+            for identity in passage["exerciseIds"]:
+                exercise = self.exercises[identity]
+                self.assertTrue(exercise["prompt"].startswith(passage["passage"] + "\n"))
+                self.assertEqual(1, exercise["prompt"].count("____"))
+                self.assertEqual(1, sum(o["label"] in exercise["acceptedAnswers"] for o in exercise["options"]))
 
 
 if __name__ == "__main__":

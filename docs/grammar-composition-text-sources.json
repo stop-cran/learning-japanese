@@ -1,0 +1,2111 @@
+{
+  "schemaVersion": 1,
+  "issue": 47,
+  "baselineCommit": "d7b5cfee4b3106bac3ee709ece0a43363491f063",
+  "inspectedOnUtc": "2026-10-25",
+  "scope": "16 whole-sentence scrambled-chunk tasks in four N4 structural families; 12 connected-text tasks in six original passages. Existing v1 choose/type model; no drag/drop, starred-position-only shortcut, timing system or exam-equivalence claim.",
+  "formatReferences": [
+    {
+      "url": "https://www.jlpt.jp/e/guideline/testsections.html",
+      "inspected": "Composition of test items: sentential grammar 2 (sentence composition) and text grammar are distinct item types. HTML table extraction loses some image-based level headers; no timing or exact exam-item-count claim is derived."
+    },
+    {
+      "url": "https://www.jlpt.jp/e/samples/forlearners.html",
+      "inspected": "Official page states that samples show item forms, one sample per type, and can differ from actual booklets. Used as a format reference only; no official question text copied."
+    }
+  ],
+  "sourceRecords": [
+    "grammar-reports-questions-sources.json",
+    "grammar-benefactive-requests-sources.json",
+    "grammar-plans-goals-sources.json",
+    "grammar-necessity-instructions-sources.json",
+    "grammar-transitivity-results-sources.json",
+    "grammar-time-linking-sources.json"
+  ],
+  "inspectedPassages": [
+    {
+      "url": "https://bunpro.jp/grammar_points/ようにいう",
+      "use": "Reported positive/negative instructions. Active 言う is not inherently passive; giver/addressee and contextual force remain distinct."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/かどうか",
+      "use": "An embedded whether-question, not an assertion. Do not require douka in all unrestricted polar questions or infer scope from one adverb without context."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/よていだ",
+      "use": "Bunpro #181 JLPT4: nonpast verb phrase modifies the planned-event noun. Past outer copula recalls a plan without implying failure. No mandatory booking or inverted modification claim."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/てもらう",
+      "use": "Receiving viewpoint; the receiver and performer remain distinct under potential negation."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/てある",
+      "use": "An existing purposeful result, including one produced by another person or superseded by a changed plan."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/ておく",
+      "use": "Preparatory action, with contextual timing. Not universally future: past preparation and retained-state uses exist. These tasks compare the printed nonpast future commitment with a stated existing result, not every possible use."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/なくてもいい",
+      "use": "An action is not required; this is not a prohibition. Unrestricted synonyms exist outside the printed response contract."
+    },
+    {
+      "url": "https://bunpro.jp/grammar_points/なければならない",
+      "use": "A required action. The fictional passage states the applicable rule; no fixed external/internal-duty distinction is imposed."
+    }
+  ],
+  "levelPolicy": "Bunpro-first N4 whole-operation mappings are reused from the named ledgers. Ordinary temporal attachment and case markers alone are not claimed to become N4; these tasks assemble complete reported/benefactive/modal/embedded-question structures or interpret N4 obligations and preparatory-result reports across context.",
+  "preflightCorrection": "Discarded unpublished decision/intention prototypes after reading the existing ledger: ordinary ことにする is primary N3, and ordinary つもり alone would not establish this N4 ordering scope. All four plan tasks now assemble #181 予定 with prospective versus recalled-plan contexts; no old published level or task changed.",
+  "finiteOrderContract": "Each accepted response is an exact concatenation of all printed chunks, each once, under the visible role/scope and final-predicate constraints. Nominal-phrase and embedded-question fronting alternatives are enumerated; no blanket single Japanese word-order rule.",
+  "responseClasses": "Classes identify meaningful instruction/receiving participants or the A/B action under the modal/question scope. Both classes are correctly targeted in each family; no always-wrong distractor class or fake class mapping is introduced.",
+  "coverageLimits": "Ordering has four tasks per existing structural family and two keys per role/scope facet. This bounded composition practice is not a new claim of deep mastery of each grammar usage. Each pair of text questions shares one passage key, with three passage keys per text facet.",
+  "nativePrerequisite": "Neutral Android instructions from be7286c44ab598287cd9ce648356a7f320fdff86; final selected-pool instrumentation and real MainActivity rotation were completed separately from editorial review.",
+  "originalText": true,
+  "orderingTasks": [
+    {
+      "exerciseId": "sentence-composition-waiting-brother",
+      "relationship": "instructions",
+      "target": "instructor-self",
+      "chunks": [
+        {
+          "label": "A",
+          "text": "私"
+        },
+        {
+          "label": "B",
+          "text": "弟"
+        },
+        {
+          "label": "C",
+          "text": "は"
+        },
+        {
+          "label": "D",
+          "text": "に"
+        },
+        {
+          "label": "E",
+          "text": "ここで待つように"
+        },
+        {
+          "label": "F",
+          "text": "言いました"
+        }
+      ],
+      "displayOrder": [
+        "F",
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "validOrdersByTarget": {
+        "instructor-self": [
+          [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E",
+            "F"
+          ],
+          [
+            "A",
+            "C",
+            "E",
+            "B",
+            "D",
+            "F"
+          ],
+          [
+            "B",
+            "D",
+            "A",
+            "C",
+            "E",
+            "F"
+          ],
+          [
+            "B",
+            "D",
+            "E",
+            "A",
+            "C",
+            "F"
+          ],
+          [
+            "E",
+            "A",
+            "C",
+            "B",
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "B",
+            "D",
+            "A",
+            "C",
+            "F"
+          ]
+        ],
+        "instructor-other": [
+          [
+            "B",
+            "C",
+            "A",
+            "D",
+            "E",
+            "F"
+          ],
+          [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D",
+            "F"
+          ],
+          [
+            "A",
+            "D",
+            "B",
+            "C",
+            "E",
+            "F"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "B",
+            "C",
+            "F"
+          ],
+          [
+            "E",
+            "B",
+            "C",
+            "A",
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "A",
+            "D",
+            "B",
+            "C",
+            "F"
+          ]
+        ]
+      },
+      "constraint": "Give one person は and the OTHER person に; do not combine both markers on one person. Keep the reported instruction as one clause. Lexical base: 言う（いう）, say.",
+      "alternativeOrderExplanation": "The は-marked person, に-marked person and instruction clause may occur in any of the six orders before the final verb. Their markers and the active/passive ending, not simple first position, keep the roles."
+    },
+    {
+      "exerciseId": "sentence-composition-corridor-request",
+      "relationship": "instructions",
+      "target": "instructor-other",
+      "chunks": [
+        {
+          "label": "A",
+          "text": "私"
+        },
+        {
+          "label": "B",
+          "text": "先生"
+        },
+        {
+          "label": "C",
+          "text": "は"
+        },
+        {
+          "label": "D",
+          "text": "に"
+        },
+        {
+          "label": "E",
+          "text": "廊下を走らないように"
+        },
+        {
+          "label": "F",
+          "text": "言いました"
+        }
+      ],
+      "displayOrder": [
+        "F",
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "validOrdersByTarget": {
+        "instructor-self": [
+          [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E",
+            "F"
+          ],
+          [
+            "A",
+            "C",
+            "E",
+            "B",
+            "D",
+            "F"
+          ],
+          [
+            "B",
+            "D",
+            "A",
+            "C",
+            "E",
+            "F"
+          ],
+          [
+            "B",
+            "D",
+            "E",
+            "A",
+            "C",
+            "F"
+          ],
+          [
+            "E",
+            "A",
+            "C",
+            "B",
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "B",
+            "D",
+            "A",
+            "C",
+            "F"
+          ]
+        ],
+        "instructor-other": [
+          [
+            "B",
+            "C",
+            "A",
+            "D",
+            "E",
+            "F"
+          ],
+          [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D",
+            "F"
+          ],
+          [
+            "A",
+            "D",
+            "B",
+            "C",
+            "E",
+            "F"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "B",
+            "C",
+            "F"
+          ],
+          [
+            "E",
+            "B",
+            "C",
+            "A",
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "A",
+            "D",
+            "B",
+            "C",
+            "F"
+          ]
+        ]
+      },
+      "constraint": "Give one person は and the OTHER person に; do not combine both markers on one person. Keep the reported instruction as one clause. Lexical base: 言う（いう）, say.",
+      "alternativeOrderExplanation": "The は-marked person, に-marked person and instruction clause may occur in any of the six orders before the final verb. Their markers and the active/passive ending, not simple first position, keep the roles."
+    },
+    {
+      "exerciseId": "sentence-composition-notebook-reminder",
+      "relationship": "instructions",
+      "target": "instructor-self",
+      "chunks": [
+        {
+          "label": "A",
+          "text": "私"
+        },
+        {
+          "label": "B",
+          "text": "妹"
+        },
+        {
+          "label": "C",
+          "text": "は"
+        },
+        {
+          "label": "D",
+          "text": "に"
+        },
+        {
+          "label": "E",
+          "text": "ノートを持って来るように"
+        },
+        {
+          "label": "F",
+          "text": "言われました"
+        }
+      ],
+      "displayOrder": [
+        "F",
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "validOrdersByTarget": {
+        "instructor-self": [
+          [
+            "B",
+            "C",
+            "A",
+            "D",
+            "E",
+            "F"
+          ],
+          [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D",
+            "F"
+          ],
+          [
+            "A",
+            "D",
+            "B",
+            "C",
+            "E",
+            "F"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "B",
+            "C",
+            "F"
+          ],
+          [
+            "E",
+            "B",
+            "C",
+            "A",
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "A",
+            "D",
+            "B",
+            "C",
+            "F"
+          ]
+        ],
+        "instructor-other": [
+          [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E",
+            "F"
+          ],
+          [
+            "A",
+            "C",
+            "E",
+            "B",
+            "D",
+            "F"
+          ],
+          [
+            "B",
+            "D",
+            "A",
+            "C",
+            "E",
+            "F"
+          ],
+          [
+            "B",
+            "D",
+            "E",
+            "A",
+            "C",
+            "F"
+          ],
+          [
+            "E",
+            "A",
+            "C",
+            "B",
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "B",
+            "D",
+            "A",
+            "C",
+            "F"
+          ]
+        ]
+      },
+      "constraint": "Give one person は and the OTHER person に; do not combine both markers on one person. Keep the reported instruction as one clause. Lexical base: 言う（いう）, say.",
+      "alternativeOrderExplanation": "The は-marked person, に-marked person and instruction clause may occur in any of the six orders before the final verb. Their markers and the active/passive ending, not simple first position, keep the roles."
+    },
+    {
+      "exerciseId": "sentence-composition-entrance-request",
+      "relationship": "instructions",
+      "target": "instructor-other",
+      "chunks": [
+        {
+          "label": "A",
+          "text": "私"
+        },
+        {
+          "label": "B",
+          "text": "係員"
+        },
+        {
+          "label": "C",
+          "text": "は"
+        },
+        {
+          "label": "D",
+          "text": "に"
+        },
+        {
+          "label": "E",
+          "text": "入り口で待つように"
+        },
+        {
+          "label": "F",
+          "text": "言われました"
+        }
+      ],
+      "displayOrder": [
+        "F",
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "validOrdersByTarget": {
+        "instructor-self": [
+          [
+            "B",
+            "C",
+            "A",
+            "D",
+            "E",
+            "F"
+          ],
+          [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D",
+            "F"
+          ],
+          [
+            "A",
+            "D",
+            "B",
+            "C",
+            "E",
+            "F"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "B",
+            "C",
+            "F"
+          ],
+          [
+            "E",
+            "B",
+            "C",
+            "A",
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "A",
+            "D",
+            "B",
+            "C",
+            "F"
+          ]
+        ],
+        "instructor-other": [
+          [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E",
+            "F"
+          ],
+          [
+            "A",
+            "C",
+            "E",
+            "B",
+            "D",
+            "F"
+          ],
+          [
+            "B",
+            "D",
+            "A",
+            "C",
+            "E",
+            "F"
+          ],
+          [
+            "B",
+            "D",
+            "E",
+            "A",
+            "C",
+            "F"
+          ],
+          [
+            "E",
+            "A",
+            "C",
+            "B",
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "B",
+            "D",
+            "A",
+            "C",
+            "F"
+          ]
+        ]
+      },
+      "constraint": "Give one person は and the OTHER person に; do not combine both markers on one person. Keep the reported instruction as one clause. Lexical base: 言う（いう）, say.",
+      "alternativeOrderExplanation": "The は-marked person, に-marked person and instruction clause may occur in any of the six orders before the final verb. Their markers and the active/passive ending, not simple first position, keep the roles."
+    },
+    {
+      "exerciseId": "sentence-composition-umbrella-help",
+      "relationship": "favors",
+      "target": "benefit-self",
+      "chunks": [
+        {
+          "label": "A",
+          "text": "私"
+        },
+        {
+          "label": "B",
+          "text": "姉"
+        },
+        {
+          "label": "C",
+          "text": "は"
+        },
+        {
+          "label": "D",
+          "text": "に"
+        },
+        {
+          "label": "E",
+          "text": "傘を"
+        },
+        {
+          "label": "F",
+          "text": "貸してもらいました"
+        }
+      ],
+      "displayOrder": [
+        "F",
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "validOrdersByTarget": {
+        "benefit-self": [
+          [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E",
+            "F"
+          ],
+          [
+            "A",
+            "C",
+            "E",
+            "B",
+            "D",
+            "F"
+          ],
+          [
+            "B",
+            "D",
+            "A",
+            "C",
+            "E",
+            "F"
+          ],
+          [
+            "B",
+            "D",
+            "E",
+            "A",
+            "C",
+            "F"
+          ],
+          [
+            "E",
+            "A",
+            "C",
+            "B",
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "B",
+            "D",
+            "A",
+            "C",
+            "F"
+          ]
+        ],
+        "benefit-other": [
+          [
+            "B",
+            "C",
+            "A",
+            "D",
+            "E",
+            "F"
+          ],
+          [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D",
+            "F"
+          ],
+          [
+            "A",
+            "D",
+            "B",
+            "C",
+            "E",
+            "F"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "B",
+            "C",
+            "F"
+          ],
+          [
+            "E",
+            "B",
+            "C",
+            "A",
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "A",
+            "D",
+            "B",
+            "C",
+            "F"
+          ]
+        ]
+      },
+      "constraint": "Give one person は and the OTHER person に. Express one receiving-side favor, not two separate actions.",
+      "alternativeOrderExplanation": "All six orders of the two marked people and the を-marked object are accepted before the intact final predicate. The particles preserve the roles; moving a phrase does not itself exchange giver and receiver."
+    },
+    {
+      "exerciseId": "sentence-composition-directions-help",
+      "relationship": "favors",
+      "target": "benefit-other",
+      "chunks": [
+        {
+          "label": "A",
+          "text": "私"
+        },
+        {
+          "label": "B",
+          "text": "友達"
+        },
+        {
+          "label": "C",
+          "text": "は"
+        },
+        {
+          "label": "D",
+          "text": "に"
+        },
+        {
+          "label": "E",
+          "text": "道を"
+        },
+        {
+          "label": "F",
+          "text": "教えてもらいました"
+        }
+      ],
+      "displayOrder": [
+        "F",
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "validOrdersByTarget": {
+        "benefit-self": [
+          [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E",
+            "F"
+          ],
+          [
+            "A",
+            "C",
+            "E",
+            "B",
+            "D",
+            "F"
+          ],
+          [
+            "B",
+            "D",
+            "A",
+            "C",
+            "E",
+            "F"
+          ],
+          [
+            "B",
+            "D",
+            "E",
+            "A",
+            "C",
+            "F"
+          ],
+          [
+            "E",
+            "A",
+            "C",
+            "B",
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "B",
+            "D",
+            "A",
+            "C",
+            "F"
+          ]
+        ],
+        "benefit-other": [
+          [
+            "B",
+            "C",
+            "A",
+            "D",
+            "E",
+            "F"
+          ],
+          [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D",
+            "F"
+          ],
+          [
+            "A",
+            "D",
+            "B",
+            "C",
+            "E",
+            "F"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "B",
+            "C",
+            "F"
+          ],
+          [
+            "E",
+            "B",
+            "C",
+            "A",
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "A",
+            "D",
+            "B",
+            "C",
+            "F"
+          ]
+        ]
+      },
+      "constraint": "Give one person は and the OTHER person に. Express one receiving-side favor, not two separate actions.",
+      "alternativeOrderExplanation": "All six orders of the two marked people and the を-marked object are accepted before the intact final predicate. The particles preserve the roles; moving a phrase does not itself exchange giver and receiver."
+    },
+    {
+      "exerciseId": "sentence-composition-address-unavailable",
+      "relationship": "favors",
+      "target": "benefit-self",
+      "chunks": [
+        {
+          "label": "A",
+          "text": "私"
+        },
+        {
+          "label": "B",
+          "text": "友達"
+        },
+        {
+          "label": "C",
+          "text": "は"
+        },
+        {
+          "label": "D",
+          "text": "に"
+        },
+        {
+          "label": "E",
+          "text": "住所を"
+        },
+        {
+          "label": "F",
+          "text": "教えてもらえませんでした"
+        }
+      ],
+      "displayOrder": [
+        "F",
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "validOrdersByTarget": {
+        "benefit-self": [
+          [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E",
+            "F"
+          ],
+          [
+            "A",
+            "C",
+            "E",
+            "B",
+            "D",
+            "F"
+          ],
+          [
+            "B",
+            "D",
+            "A",
+            "C",
+            "E",
+            "F"
+          ],
+          [
+            "B",
+            "D",
+            "E",
+            "A",
+            "C",
+            "F"
+          ],
+          [
+            "E",
+            "A",
+            "C",
+            "B",
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "B",
+            "D",
+            "A",
+            "C",
+            "F"
+          ]
+        ],
+        "benefit-other": [
+          [
+            "B",
+            "C",
+            "A",
+            "D",
+            "E",
+            "F"
+          ],
+          [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D",
+            "F"
+          ],
+          [
+            "A",
+            "D",
+            "B",
+            "C",
+            "E",
+            "F"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "B",
+            "C",
+            "F"
+          ],
+          [
+            "E",
+            "B",
+            "C",
+            "A",
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "A",
+            "D",
+            "B",
+            "C",
+            "F"
+          ]
+        ]
+      },
+      "constraint": "Give one person は and the OTHER person に. Express one receiving-side favor, not two separate actions.",
+      "alternativeOrderExplanation": "All six orders of the two marked people and the を-marked object are accepted before the intact final predicate. The particles preserve the roles; moving a phrase does not itself exchange giver and receiver."
+    },
+    {
+      "exerciseId": "sentence-composition-carrying-unavailable",
+      "relationship": "favors",
+      "target": "benefit-other",
+      "chunks": [
+        {
+          "label": "A",
+          "text": "私"
+        },
+        {
+          "label": "B",
+          "text": "妹"
+        },
+        {
+          "label": "C",
+          "text": "は"
+        },
+        {
+          "label": "D",
+          "text": "に"
+        },
+        {
+          "label": "E",
+          "text": "箱を"
+        },
+        {
+          "label": "F",
+          "text": "運んでもらえませんでした"
+        }
+      ],
+      "displayOrder": [
+        "F",
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "validOrdersByTarget": {
+        "benefit-self": [
+          [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E",
+            "F"
+          ],
+          [
+            "A",
+            "C",
+            "E",
+            "B",
+            "D",
+            "F"
+          ],
+          [
+            "B",
+            "D",
+            "A",
+            "C",
+            "E",
+            "F"
+          ],
+          [
+            "B",
+            "D",
+            "E",
+            "A",
+            "C",
+            "F"
+          ],
+          [
+            "E",
+            "A",
+            "C",
+            "B",
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "B",
+            "D",
+            "A",
+            "C",
+            "F"
+          ]
+        ],
+        "benefit-other": [
+          [
+            "B",
+            "C",
+            "A",
+            "D",
+            "E",
+            "F"
+          ],
+          [
+            "B",
+            "C",
+            "E",
+            "A",
+            "D",
+            "F"
+          ],
+          [
+            "A",
+            "D",
+            "B",
+            "C",
+            "E",
+            "F"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "B",
+            "C",
+            "F"
+          ],
+          [
+            "E",
+            "B",
+            "C",
+            "A",
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "A",
+            "D",
+            "B",
+            "C",
+            "F"
+          ]
+        ]
+      },
+      "constraint": "Give one person は and the OTHER person に. Express one receiving-side favor, not two separate actions.",
+      "alternativeOrderExplanation": "All six orders of the two marked people and the を-marked object are accepted before the intact final predicate. The particles preserve the roles; moving a phrase does not itself exchange giver and receiver."
+    },
+    {
+      "exerciseId": "sentence-composition-clean-before-call",
+      "relationship": "plans",
+      "target": "plan-action-a",
+      "chunks": [
+        {
+          "label": "A",
+          "text": "掃除する"
+        },
+        {
+          "label": "B",
+          "text": "電話する"
+        },
+        {
+          "label": "C",
+          "text": "前に"
+        },
+        {
+          "label": "D",
+          "text": "予定"
+        },
+        {
+          "label": "E",
+          "text": "です"
+        }
+      ],
+      "displayOrder": [
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "validOrdersByTarget": {
+        "plan-action-a": [
+          [
+            "B",
+            "C",
+            "A",
+            "D",
+            "E"
+          ]
+        ],
+        "plan-action-b": [
+          [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E"
+          ]
+        ]
+      },
+      "constraint": "前に gives the order of the two ACTIONS inside the stated plan, not when that plan was made. Preserve the printed plan tense.",
+      "alternativeOrderExplanation": "Under the stated scope, the before-clause comes inside the verb phrase modifying 予定. Putting the before-clause between that nominalized phrase and the final predicate changes its scope and is outside this task."
+    },
+    {
+      "exerciseId": "sentence-composition-wash-before-meal",
+      "relationship": "plans",
+      "target": "plan-action-b",
+      "chunks": [
+        {
+          "label": "A",
+          "text": "食事をする"
+        },
+        {
+          "label": "B",
+          "text": "手を洗う"
+        },
+        {
+          "label": "C",
+          "text": "前に"
+        },
+        {
+          "label": "D",
+          "text": "予定"
+        },
+        {
+          "label": "E",
+          "text": "です"
+        }
+      ],
+      "displayOrder": [
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "validOrdersByTarget": {
+        "plan-action-a": [
+          [
+            "B",
+            "C",
+            "A",
+            "D",
+            "E"
+          ]
+        ],
+        "plan-action-b": [
+          [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E"
+          ]
+        ]
+      },
+      "constraint": "前に gives the order of the two ACTIONS inside the stated plan, not when that plan was made. Preserve the printed plan tense.",
+      "alternativeOrderExplanation": "Under the stated scope, the before-clause comes inside the verb phrase modifying 予定. Putting the before-clause between that nominalized phrase and the final predicate changes its scope and is outside this task."
+    },
+    {
+      "exerciseId": "sentence-composition-pack-before-station",
+      "relationship": "plans",
+      "target": "plan-action-a",
+      "chunks": [
+        {
+          "label": "A",
+          "text": "荷物をまとめる"
+        },
+        {
+          "label": "B",
+          "text": "駅へ行く"
+        },
+        {
+          "label": "C",
+          "text": "前に"
+        },
+        {
+          "label": "D",
+          "text": "予定"
+        },
+        {
+          "label": "E",
+          "text": "でした"
+        }
+      ],
+      "displayOrder": [
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "validOrdersByTarget": {
+        "plan-action-a": [
+          [
+            "B",
+            "C",
+            "A",
+            "D",
+            "E"
+          ]
+        ],
+        "plan-action-b": [
+          [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E"
+          ]
+        ]
+      },
+      "constraint": "前に gives the order of the two ACTIONS inside the stated plan, not when that plan was made. Preserve the printed plan tense.",
+      "alternativeOrderExplanation": "Under the stated scope, the before-clause comes inside the verb phrase modifying 予定. Putting the before-clause between that nominalized phrase and the final predicate changes its scope and is outside this task."
+    },
+    {
+      "exerciseId": "sentence-composition-photos-before-email",
+      "relationship": "plans",
+      "target": "plan-action-b",
+      "chunks": [
+        {
+          "label": "A",
+          "text": "メールを書く"
+        },
+        {
+          "label": "B",
+          "text": "写真を選ぶ"
+        },
+        {
+          "label": "C",
+          "text": "前に"
+        },
+        {
+          "label": "D",
+          "text": "予定"
+        },
+        {
+          "label": "E",
+          "text": "でした"
+        }
+      ],
+      "displayOrder": [
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "validOrdersByTarget": {
+        "plan-action-a": [
+          [
+            "B",
+            "C",
+            "A",
+            "D",
+            "E"
+          ]
+        ],
+        "plan-action-b": [
+          [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E"
+          ]
+        ]
+      },
+      "constraint": "前に gives the order of the two ACTIONS inside the stated plan, not when that plan was made. Preserve the printed plan tense.",
+      "alternativeOrderExplanation": "Under the stated scope, the before-clause comes inside the verb phrase modifying 予定. Putting the before-clause between that nominalized phrase and the final predicate changes its scope and is outside this task."
+    },
+    {
+      "exerciseId": "sentence-composition-window-check",
+      "relationship": "questions",
+      "target": "question-action-a",
+      "chunks": [
+        {
+          "label": "A",
+          "text": "窓を閉めた"
+        },
+        {
+          "label": "B",
+          "text": "部屋に戻った"
+        },
+        {
+          "label": "C",
+          "text": "後で"
+        },
+        {
+          "label": "D",
+          "text": "かどうか"
+        },
+        {
+          "label": "E",
+          "text": "確認します"
+        }
+      ],
+      "displayOrder": [
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "validOrdersByTarget": {
+        "question-action-a": [
+          [
+            "B",
+            "C",
+            "A",
+            "D",
+            "E"
+          ],
+          [
+            "A",
+            "D",
+            "B",
+            "C",
+            "E"
+          ]
+        ],
+        "question-action-b": [
+          [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E"
+          ],
+          [
+            "B",
+            "D",
+            "A",
+            "C",
+            "E"
+          ]
+        ]
+      },
+      "constraint": "後で links the established event to the CHECKING; かどうか marks the event being questioned. Keep each clause intact.",
+      "alternativeOrderExplanation": "Both orders of the completed-event time phrase and the embedded question are accepted before the final predicate. Fronting the question does not turn it into an assertion."
+    },
+    {
+      "exerciseId": "sentence-composition-wallet-check",
+      "relationship": "questions",
+      "target": "question-action-b",
+      "chunks": [
+        {
+          "label": "A",
+          "text": "店に着いた"
+        },
+        {
+          "label": "B",
+          "text": "財布を持って来た"
+        },
+        {
+          "label": "C",
+          "text": "後で"
+        },
+        {
+          "label": "D",
+          "text": "かどうか"
+        },
+        {
+          "label": "E",
+          "text": "確認しました"
+        }
+      ],
+      "displayOrder": [
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "validOrdersByTarget": {
+        "question-action-a": [
+          [
+            "B",
+            "C",
+            "A",
+            "D",
+            "E"
+          ],
+          [
+            "A",
+            "D",
+            "B",
+            "C",
+            "E"
+          ]
+        ],
+        "question-action-b": [
+          [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E"
+          ],
+          [
+            "B",
+            "D",
+            "A",
+            "C",
+            "E"
+          ]
+        ]
+      },
+      "constraint": "後で links the established event to the CHECKING; かどうか marks the event being questioned. Keep each clause intact.",
+      "alternativeOrderExplanation": "Both orders of the completed-event time phrase and the embedded question are accepted before the final predicate. Fronting the question does not turn it into an assertion."
+    },
+    {
+      "exerciseId": "sentence-composition-attendance-check",
+      "relationship": "questions",
+      "target": "question-action-a",
+      "chunks": [
+        {
+          "label": "A",
+          "text": "全員が来た"
+        },
+        {
+          "label": "B",
+          "text": "先生が教室に入った"
+        },
+        {
+          "label": "C",
+          "text": "後で"
+        },
+        {
+          "label": "D",
+          "text": "かどうか"
+        },
+        {
+          "label": "E",
+          "text": "確かめました"
+        }
+      ],
+      "displayOrder": [
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "validOrdersByTarget": {
+        "question-action-a": [
+          [
+            "B",
+            "C",
+            "A",
+            "D",
+            "E"
+          ],
+          [
+            "A",
+            "D",
+            "B",
+            "C",
+            "E"
+          ]
+        ],
+        "question-action-b": [
+          [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E"
+          ],
+          [
+            "B",
+            "D",
+            "A",
+            "C",
+            "E"
+          ]
+        ]
+      },
+      "constraint": "後で links the established event to the CHECKING; かどうか marks the event being questioned. Keep each clause intact.",
+      "alternativeOrderExplanation": "Both orders of the completed-event time phrase and the embedded question are accepted before the final predicate. Fronting the question does not turn it into an assertion."
+    },
+    {
+      "exerciseId": "sentence-composition-hotel-luggage-check",
+      "relationship": "questions",
+      "target": "question-action-b",
+      "chunks": [
+        {
+          "label": "A",
+          "text": "空港に着いた"
+        },
+        {
+          "label": "B",
+          "text": "荷物が届いた"
+        },
+        {
+          "label": "C",
+          "text": "後で"
+        },
+        {
+          "label": "D",
+          "text": "かどうか"
+        },
+        {
+          "label": "E",
+          "text": "確認します"
+        }
+      ],
+      "displayOrder": [
+        "E",
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "validOrdersByTarget": {
+        "question-action-a": [
+          [
+            "B",
+            "C",
+            "A",
+            "D",
+            "E"
+          ],
+          [
+            "A",
+            "D",
+            "B",
+            "C",
+            "E"
+          ]
+        ],
+        "question-action-b": [
+          [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E"
+          ],
+          [
+            "B",
+            "D",
+            "A",
+            "C",
+            "E"
+          ]
+        ]
+      },
+      "constraint": "後で links the established event to the CHECKING; かどうか marks the event being questioned. Keep each clause intact.",
+      "alternativeOrderExplanation": "Both orders of the completed-event time phrase and the embedded question are accepted before the final predicate. Fronting the question does not turn it into an assertion."
+    }
+  ],
+  "passages": [
+    {
+      "id": "classroom-membership",
+      "exampleKey": "passage-classroom-membership",
+      "exerciseIds": [
+        "connected-text-grammar-classroom-membership-friend",
+        "connected-text-grammar-classroom-membership-self"
+      ],
+      "passage": "この教室は会員も会員でない人も利用できます。会員は予約なしで来てもかまいません。会員でない人は、来る前に予約が必要です。\n私は会員で、友達は会員ではありません。",
+      "earlierContextNeeded": "Resolve each person's earlier membership status and apply the corresponding rule; the closing subject alone does not determine the answer."
+    },
+    {
+      "id": "already-submitted",
+      "exampleKey": "passage-already-submitted",
+      "exerciseIds": [
+        "connected-text-grammar-already-submitted-friend",
+        "connected-text-grammar-already-submitted-self"
+      ],
+      "passage": "今日は申込書を出す日です。まだ出していない人は、今日出す必要があります。一度出した人は、もう一度出さなくてもかまいません。\n私は昨日出しましたが、友達はまだ出していません。",
+      "earlierContextNeeded": "Distinguish an outstanding action from an already-completed action before applying the submission rule."
+    },
+    {
+      "id": "lunch-opt-out",
+      "exampleKey": "passage-lunch-opt-out",
+      "exerciseIds": [
+        "connected-text-grammar-lunch-opt-out-self",
+        "connected-text-grammar-lunch-opt-out-friend"
+      ],
+      "passage": "遠足の昼ご飯は学校が用意します。弁当はいりません。ただし、学校のご飯を食べない人は自分で弁当を用意しなければなりません。\n私は学校のご飯を食べません。友達は学校のご飯を食べます。",
+      "earlierContextNeeded": "Apply a later explicit exception to the speaker's decision while retaining the general rule for the friend."
+    },
+    {
+      "id": "classroom-preparation",
+      "exampleKey": "passage-classroom-preparation",
+      "exerciseIds": [
+        "connected-text-grammar-classroom-preparation-rules",
+        "connected-text-grammar-classroom-preparation-list"
+      ],
+      "passage": "明日は授業があります。先生が教室のルールを黒板に書きました。文字は今も残っています。\n明日の持ち物のリストはまだ書いていません。私が授業の前にノートに書きます。",
+      "earlierContextNeeded": "Resolve which referenced text already exists and which remains an assigned future preparation; neither closing noun alone supplies its stage."
+    },
+    {
+      "id": "changed-meeting-place",
+      "exampleKey": "passage-changed-meeting-place",
+      "exerciseIds": [
+        "connected-text-grammar-changed-meeting-place-old",
+        "connected-text-grammar-changed-meeting-place-new"
+      ],
+      "passage": "説明会の場所が変わりました。古い案内はもう印刷しましたが、捨てていません。\n新しい案内はまだ印刷していません。明日までに新しい案内を印刷します。",
+      "earlierContextNeeded": "Keep an existing but superseded result separate from the newly required preparation after a change of plan."
+    },
+    {
+      "id": "cooking-handover",
+      "exampleKey": "passage-cooking-handover",
+      "exerciseIds": [
+        "connected-text-grammar-cooking-handover-vegetables",
+        "connected-text-grammar-cooking-handover-meat"
+      ],
+      "passage": "友達と料理をしています。友達が野菜を切りました。切った野菜は皿にあります。\n肉はまだ切っていません。友達は買い物に行きます。私が友達の帰る前に肉を切ります。",
+      "earlierContextNeeded": "Track two participants' contributions and preserve the distinction between an existing result and an assigned outstanding action."
+    }
+  ],
+  "taskMatrix": [
+    {
+      "file": "grammar/sentence-composition.json",
+      "exerciseId": "sentence-composition-waiting-brother",
+      "operation": "Assemble the complete sentence while preserving the supplied roles, event order or clause scope.",
+      "target": "instructor-self",
+      "exampleKey": "composition-waiting-brother"
+    },
+    {
+      "file": "grammar/sentence-composition.json",
+      "exerciseId": "sentence-composition-corridor-request",
+      "operation": "Assemble the complete sentence while preserving the supplied roles, event order or clause scope.",
+      "target": "instructor-other",
+      "exampleKey": "composition-corridor-request"
+    },
+    {
+      "file": "grammar/sentence-composition.json",
+      "exerciseId": "sentence-composition-notebook-reminder",
+      "operation": "Assemble the complete sentence while preserving the supplied roles, event order or clause scope.",
+      "target": "instructor-self",
+      "exampleKey": "composition-notebook-reminder"
+    },
+    {
+      "file": "grammar/sentence-composition.json",
+      "exerciseId": "sentence-composition-entrance-request",
+      "operation": "Assemble the complete sentence while preserving the supplied roles, event order or clause scope.",
+      "target": "instructor-other",
+      "exampleKey": "composition-entrance-request"
+    },
+    {
+      "file": "grammar/sentence-composition.json",
+      "exerciseId": "sentence-composition-umbrella-help",
+      "operation": "Assemble the complete sentence while preserving the supplied roles, event order or clause scope.",
+      "target": "benefit-self",
+      "exampleKey": "composition-umbrella-help"
+    },
+    {
+      "file": "grammar/sentence-composition.json",
+      "exerciseId": "sentence-composition-directions-help",
+      "operation": "Assemble the complete sentence while preserving the supplied roles, event order or clause scope.",
+      "target": "benefit-other",
+      "exampleKey": "composition-directions-help"
+    },
+    {
+      "file": "grammar/sentence-composition.json",
+      "exerciseId": "sentence-composition-address-unavailable",
+      "operation": "Assemble the complete sentence while preserving the supplied roles, event order or clause scope.",
+      "target": "benefit-self",
+      "exampleKey": "composition-address-unavailable"
+    },
+    {
+      "file": "grammar/sentence-composition.json",
+      "exerciseId": "sentence-composition-carrying-unavailable",
+      "operation": "Assemble the complete sentence while preserving the supplied roles, event order or clause scope.",
+      "target": "benefit-other",
+      "exampleKey": "composition-carrying-unavailable"
+    },
+    {
+      "file": "grammar/sentence-composition.json",
+      "exerciseId": "sentence-composition-clean-before-call",
+      "operation": "Assemble the complete sentence while preserving the supplied roles, event order or clause scope.",
+      "target": "plan-action-a",
+      "exampleKey": "composition-clean-before-call"
+    },
+    {
+      "file": "grammar/sentence-composition.json",
+      "exerciseId": "sentence-composition-wash-before-meal",
+      "operation": "Assemble the complete sentence while preserving the supplied roles, event order or clause scope.",
+      "target": "plan-action-b",
+      "exampleKey": "composition-wash-before-meal"
+    },
+    {
+      "file": "grammar/sentence-composition.json",
+      "exerciseId": "sentence-composition-pack-before-station",
+      "operation": "Assemble the complete sentence while preserving the supplied roles, event order or clause scope.",
+      "target": "plan-action-a",
+      "exampleKey": "composition-pack-before-station"
+    },
+    {
+      "file": "grammar/sentence-composition.json",
+      "exerciseId": "sentence-composition-photos-before-email",
+      "operation": "Assemble the complete sentence while preserving the supplied roles, event order or clause scope.",
+      "target": "plan-action-b",
+      "exampleKey": "composition-photos-before-email"
+    },
+    {
+      "file": "grammar/sentence-composition.json",
+      "exerciseId": "sentence-composition-window-check",
+      "operation": "Assemble the complete sentence while preserving the supplied roles, event order or clause scope.",
+      "target": "question-action-a",
+      "exampleKey": "composition-window-check"
+    },
+    {
+      "file": "grammar/sentence-composition.json",
+      "exerciseId": "sentence-composition-wallet-check",
+      "operation": "Assemble the complete sentence while preserving the supplied roles, event order or clause scope.",
+      "target": "question-action-b",
+      "exampleKey": "composition-wallet-check"
+    },
+    {
+      "file": "grammar/sentence-composition.json",
+      "exerciseId": "sentence-composition-attendance-check",
+      "operation": "Assemble the complete sentence while preserving the supplied roles, event order or clause scope.",
+      "target": "question-action-a",
+      "exampleKey": "composition-attendance-check"
+    },
+    {
+      "file": "grammar/sentence-composition.json",
+      "exerciseId": "sentence-composition-hotel-luggage-check",
+      "operation": "Assemble the complete sentence while preserving the supplied roles, event order or clause scope.",
+      "target": "question-action-b",
+      "exampleKey": "composition-hotel-luggage-check"
+    },
+    {
+      "file": "grammar/connected-text-grammar.json",
+      "exerciseId": "connected-text-grammar-classroom-membership-friend",
+      "operation": "Resolve each person's earlier membership status and apply the corresponding rule; the closing subject alone does not determine the answer.",
+      "target": "required",
+      "exampleKey": "passage-classroom-membership"
+    },
+    {
+      "file": "grammar/connected-text-grammar.json",
+      "exerciseId": "connected-text-grammar-classroom-membership-self",
+      "operation": "Resolve each person's earlier membership status and apply the corresponding rule; the closing subject alone does not determine the answer.",
+      "target": "optional",
+      "exampleKey": "passage-classroom-membership"
+    },
+    {
+      "file": "grammar/connected-text-grammar.json",
+      "exerciseId": "connected-text-grammar-already-submitted-friend",
+      "operation": "Distinguish an outstanding action from an already-completed action before applying the submission rule.",
+      "target": "required",
+      "exampleKey": "passage-already-submitted"
+    },
+    {
+      "file": "grammar/connected-text-grammar.json",
+      "exerciseId": "connected-text-grammar-already-submitted-self",
+      "operation": "Distinguish an outstanding action from an already-completed action before applying the submission rule.",
+      "target": "optional",
+      "exampleKey": "passage-already-submitted"
+    },
+    {
+      "file": "grammar/connected-text-grammar.json",
+      "exerciseId": "connected-text-grammar-lunch-opt-out-self",
+      "operation": "Apply a later explicit exception to the speaker's decision while retaining the general rule for the friend.",
+      "target": "required",
+      "exampleKey": "passage-lunch-opt-out"
+    },
+    {
+      "file": "grammar/connected-text-grammar.json",
+      "exerciseId": "connected-text-grammar-lunch-opt-out-friend",
+      "operation": "Apply a later explicit exception to the speaker's decision while retaining the general rule for the friend.",
+      "target": "optional",
+      "exampleKey": "passage-lunch-opt-out"
+    },
+    {
+      "file": "grammar/connected-text-grammar.json",
+      "exerciseId": "connected-text-grammar-classroom-preparation-rules",
+      "operation": "Resolve which referenced text already exists and which remains an assigned future preparation; neither closing noun alone supplies its stage.",
+      "target": "arranged",
+      "exampleKey": "passage-classroom-preparation"
+    },
+    {
+      "file": "grammar/connected-text-grammar.json",
+      "exerciseId": "connected-text-grammar-classroom-preparation-list",
+      "operation": "Resolve which referenced text already exists and which remains an assigned future preparation; neither closing noun alone supplies its stage.",
+      "target": "prepare",
+      "exampleKey": "passage-classroom-preparation"
+    },
+    {
+      "file": "grammar/connected-text-grammar.json",
+      "exerciseId": "connected-text-grammar-changed-meeting-place-old",
+      "operation": "Keep an existing but superseded result separate from the newly required preparation after a change of plan.",
+      "target": "arranged",
+      "exampleKey": "passage-changed-meeting-place"
+    },
+    {
+      "file": "grammar/connected-text-grammar.json",
+      "exerciseId": "connected-text-grammar-changed-meeting-place-new",
+      "operation": "Keep an existing but superseded result separate from the newly required preparation after a change of plan.",
+      "target": "prepare",
+      "exampleKey": "passage-changed-meeting-place"
+    },
+    {
+      "file": "grammar/connected-text-grammar.json",
+      "exerciseId": "connected-text-grammar-cooking-handover-vegetables",
+      "operation": "Track two participants' contributions and preserve the distinction between an existing result and an assigned outstanding action.",
+      "target": "arranged",
+      "exampleKey": "passage-cooking-handover"
+    },
+    {
+      "file": "grammar/connected-text-grammar.json",
+      "exerciseId": "connected-text-grammar-cooking-handover-meat",
+      "operation": "Track two participants' contributions and preserve the distinction between an existing result and an assigned outstanding action.",
+      "target": "prepare",
+      "exampleKey": "passage-cooking-handover"
+    }
+  ],
+  "placements": {
+    "sentence-composition-instructions": "reports-and-conversation",
+    "sentence-composition-favors": "giving-and-favors",
+    "sentence-composition-plans": "plans-proposals-and-routines",
+    "sentence-composition-questions": "reports-and-conversation",
+    "connected-text-grammar-rules": "requests-rules-and-advice",
+    "connected-text-grammar-stages": "actions-results-and-stages"
+  },
+  "foundationReason": "The complete chunks or finite response forms are supplied. These are composition/context operations, not unsupplied conjugation; no new hard formation prerequisite or whole-chapter lock.",
+  "currentCounts": {
+    "sets": 78,
+    "exercises": 1912,
+    "levels": {
+      "1": 4,
+      "2": 102,
+      "3": 251,
+      "4": 959,
+      "5": 596
+    },
+    "authoredGroups": 260,
+    "chapters": 20,
+    "vocabularyReviewed": 1603,
+    "vocabularyPending": 309
+  },
+  "independentReview": {
+    "status": "CLEAN",
+    "reviewer": "Independent Copilot subagent; original reviewer retained for reconciliation",
+    "modelId": "Not exposed by the runtime; not inferred",
+    "initialContentVersion": "488ff4bff41d1406",
+    "reconciledContentVersion": "eb61885c794c5668",
+    "scope": {
+      "tasks": 28,
+      "optionBranches": 56,
+      "acceptedCompletions": 84,
+      "lexicalSpans": 457,
+      "exclusions": 737
+    },
+    "facets": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "minor",
+        "status": "resolved",
+        "issue": "Ambiguous receiving-participant referent in two rejected favor branches",
+        "correction": "Name the speaker explicitly; preserve would-be receiving status without inventing a success or reason for failure."
+      },
+      {
+        "id": "O1",
+        "severity": "optional",
+        "status": "resolved",
+        "issue": "Compressed no-packed-lunch wording",
+        "correction": "State explicitly that the general provision makes a packed lunch unnecessary."
+      }
+    ],
+    "reportSha256": {
+      "composition-initial-independent-review.md": "6368c8bfd6a65a39b6c5c8a65445d0d7085bcee3300781c58acce2f502eb303e",
+      "composition-independent-reconciliation.md": "d8e06f4e2d5dff924984f12308df355b5e18eee63817101fb22a0c43e23d6415"
+    },
+    "limits": "Bounded editorial/source-backed review, not native-speaker certification, official-JLPT equivalence, exhaustive corpus attestation or physical-device acceptance."
+  },
+  "validation": {
+    "status": "passed-before-publication",
+    "contentVersion": "eb61885c794c5668",
+    "validatorErrors": 0,
+    "focusedGrammarTests": 160,
+    "vocabularyReviewed": 1603,
+    "vocabularyPending": 309,
+    "realImporter": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "forced": true
+    },
+    "native": {
+      "finalRuns": 4,
+      "initialRuns": 4,
+      "selectedPoolSizes": {
+        "sentence-composition": 16,
+        "connected-text-grammar": 12
+      },
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "fontScale": 1.5,
+      "screenPixels": [
+        720,
+        1280
+      ],
+      "densityDpi": 320,
+      "logicalDp": [
+        360,
+        640
+      ],
+      "androidCommit": "be7286c44ab598287cd9ce648356a7f320fdff86",
+      "scope": "Each set's selected pool in both themes, including wrong/correct choose/type, normalized responses, scroll to Check, full answer flow and article Back. Not every item in every mode.",
+      "actualRotation": {
+        "roundTrips": 4,
+        "mainActivity": true,
+        "lifecycleDestroyCreateObserved": true,
+        "sameProcess": true,
+        "questionAndDraftRetained": true,
+        "themesBySet": {
+          "sentence-composition": "light",
+          "connected-text-grammar": "dark"
+        },
+        "articleBackAnswerRetained": true
+      },
+      "presentationLimit": "At large font, long tasks require scrolling. Landscape keyboard shows the input, not the whole passage or Check simultaneously; portrait restoration and keyboard dismissal retain the draft.",
+      "ownerPhysicalDeviceAcceptance": false
+    },
+    "invariants": {
+      "baselineCommit": "d7b5cfee4b3106bac3ee709ece0a43363491f063",
+      "oldFiles": 76,
+      "oldFilesLfByteIdentical": 76,
+      "oldExercisesPreserved": 1884,
+      "oldVocabularyRecordsPreserved": 1884,
+      "oldGroupsPreserved": 254,
+      "oldChapterMappingsPreserved": true,
+      "oldConstructionAndRelationshipPrefixesPreserved": true,
+      "explicitlyRecordedNeutralLabelAmendments": [],
+      "newExercises": 28,
+      "newLevels": {
+        "4": 28
+      },
+      "newAcceptedForms": 84,
+      "maximumAcceptedUtf16Units": 26,
+      "baseOptionsAgreeWithAcceptedMembership": 56
+    }
+  }
+}

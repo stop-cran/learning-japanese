@@ -34,6 +34,17 @@ participant or motivating sentence does not establish new operational breadth. I
 exchange and a specifically bounded permission replaced two repetitions; changing their key strings alone would not
 have resolved the review finding.
 
+For [whole-sentence composition and text grammar](grammar-composition-text-sources.json), make the response contract
+visible: use each printed chunk once, preserve spelling/internal order, omit labels/spaces/punctuation, and state
+any meaningful scope constraint. Enumerate all valid constrained orders, including fronted marked phrases and
+embedded questions; v1 checks an accepted string list, not chunk use independently. Keep responses comfortably
+within 80 UTF-16 units and account for trim/NFKC normalization. Test the exact-chunk invariant, not just one model.
+The existing `translation` field may hold neutral English task instructions when a full translation would reveal
+the answer; put the complete passage translation and reasoning in answer-side feedback. Paired passage questions
+share one context key. Review actual small-screen/keyboard/rotation behavior separately from linguistic correctness.
+The unpublished composition draft also demonstrated why source reuse must include level caveats: ordinary
+decision `ことにする` is primary N3; combining simpler grammar or making a response longer does not establish N4.
+
 ## Reusing lexical annotations
 
 A matching surface is a candidate, not proof of its word boundary or sense in a new sentence. Recheck affected

@@ -1,0 +1,2538 @@
+{
+  "schemaVersion": 1,
+  "id": "connected-text-grammar",
+  "title": "Grammar across connected passages",
+  "article": "articles/sentence-composition-and-text-grammar.md",
+  "constructions": [
+    {
+      "id": "required",
+      "label": "The stated action is required"
+    },
+    {
+      "id": "optional",
+      "label": "The stated action is not required"
+    },
+    {
+      "id": "arranged",
+      "label": "The stated arrangement is already in place"
+    },
+    {
+      "id": "prepare",
+      "label": "The stated preparation is still to be performed"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "rules",
+      "label": "Keeping obligations and optional actions in their proper scope",
+      "constructions": [
+        "required",
+        "optional"
+      ]
+    },
+    {
+      "id": "stages",
+      "label": "Tracking existing arrangements and outstanding preparation",
+      "constructions": [
+        "arranged",
+        "prepare"
+      ]
+    }
+  ],
+  "introductionGroups": [
+    {
+      "id": "connected-text-grammar-rules",
+      "label": "Keeping obligations and optional actions in their proper scope",
+      "facets": [
+        {
+          "id": "required",
+          "label": "The stated action is required"
+        },
+        {
+          "id": "optional",
+          "label": "The stated action is not required"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "connected-text-grammar-classroom-membership-friend",
+          "facetId": "required",
+          "exampleKey": "passage-classroom-membership"
+        },
+        {
+          "exerciseId": "connected-text-grammar-classroom-membership-self",
+          "facetId": "optional",
+          "exampleKey": "passage-classroom-membership"
+        },
+        {
+          "exerciseId": "connected-text-grammar-already-submitted-friend",
+          "facetId": "required",
+          "exampleKey": "passage-already-submitted"
+        },
+        {
+          "exerciseId": "connected-text-grammar-already-submitted-self",
+          "facetId": "optional",
+          "exampleKey": "passage-already-submitted"
+        },
+        {
+          "exerciseId": "connected-text-grammar-lunch-opt-out-self",
+          "facetId": "required",
+          "exampleKey": "passage-lunch-opt-out"
+        },
+        {
+          "exerciseId": "connected-text-grammar-lunch-opt-out-friend",
+          "facetId": "optional",
+          "exampleKey": "passage-lunch-opt-out"
+        }
+      ],
+      "next": [],
+      "requires": []
+    },
+    {
+      "id": "connected-text-grammar-stages",
+      "label": "Tracking existing arrangements and outstanding preparation",
+      "facets": [
+        {
+          "id": "arranged",
+          "label": "The stated arrangement is already in place"
+        },
+        {
+          "id": "prepare",
+          "label": "The stated preparation is still to be performed"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "connected-text-grammar-classroom-preparation-rules",
+          "facetId": "arranged",
+          "exampleKey": "passage-classroom-preparation"
+        },
+        {
+          "exerciseId": "connected-text-grammar-classroom-preparation-list",
+          "facetId": "prepare",
+          "exampleKey": "passage-classroom-preparation"
+        },
+        {
+          "exerciseId": "connected-text-grammar-changed-meeting-place-old",
+          "facetId": "arranged",
+          "exampleKey": "passage-changed-meeting-place"
+        },
+        {
+          "exerciseId": "connected-text-grammar-changed-meeting-place-new",
+          "facetId": "prepare",
+          "exampleKey": "passage-changed-meeting-place"
+        },
+        {
+          "exerciseId": "connected-text-grammar-cooking-handover-vegetables",
+          "facetId": "arranged",
+          "exampleKey": "passage-cooking-handover"
+        },
+        {
+          "exerciseId": "connected-text-grammar-cooking-handover-meat",
+          "facetId": "prepare",
+          "exampleKey": "passage-cooking-handover"
+        }
+      ],
+      "next": [],
+      "requires": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "connected-text-grammar-classroom-membership-friend",
+      "jlpt": 4,
+      "target": "required",
+      "relationship": "rules",
+      "prompt": "この教室は会員も会員でない人も利用できます。会員は予約なしで来てもかまいません。会員でない人は、来る前に予約が必要です。\n私は会員で、友達は会員ではありません。\n友達は____。",
+      "translation": "Complete the closing report using the earlier passage, without inventing another rule or event. Choose one printed completion: 予約しなければなりません / 予約しなくてもいいです. Type the printed completion or its all-hiragana spelling, without punctuation.",
+      "evidence": "Use the complete supplied context and the requested operation, not an unstated fact.",
+      "explanation": "Passage: Members and nonmembers may use this classroom. Members may come without a reservation; nonmembers need a reservation before coming. I am a member and my friend is not. Closing report: My friend must make a reservation. The friend is a nonmember, so the stated nonmember rule applies.",
+      "answer": "required",
+      "acceptedAnswers": [
+        "予約しなければなりません",
+        "よやくしなければなりません"
+      ],
+      "options": [
+        {
+          "id": "required",
+          "label": "予約しなければなりません",
+          "rationale": "Passage: Members and nonmembers may use this classroom. Members may come without a reservation; nonmembers need a reservation before coming. I am a member and my friend is not. Closing report: My friend must make a reservation. The friend is a nonmember, so the stated nonmember rule applies."
+        },
+        {
+          "id": "optional",
+          "label": "予約しなくてもいいです",
+          "rationale": "Passage: Members and nonmembers may use this classroom. Members may come without a reservation; nonmembers need a reservation before coming. I am a member and my friend is not. The no-reservation permission applies to members; transferring it to the nonmember friend loses the earlier condition."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "c0444d6cb3e7da5d259bf6e83f1814ae31e0c1e61971747eba9a676128925e2d",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "教室",
+            "reading": "きょうしつ",
+            "headword": "教室",
+            "gloss": "classroom"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "会員",
+            "reading": "かいいん",
+            "headword": "会員",
+            "gloss": "member"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "text": "会員",
+            "reading": "かいいん",
+            "headword": "会員",
+            "gloss": "member"
+          },
+          {
+            "start": 13,
+            "end": 14,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "person"
+          },
+          {
+            "start": 22,
+            "end": 24,
+            "text": "会員",
+            "reading": "かいいん",
+            "headword": "会員",
+            "gloss": "member"
+          },
+          {
+            "start": 25,
+            "end": 27,
+            "text": "予約",
+            "reading": "よやく",
+            "headword": "予約",
+            "gloss": "reservation"
+          },
+          {
+            "start": 40,
+            "end": 42,
+            "text": "会員",
+            "reading": "かいいん",
+            "headword": "会員",
+            "gloss": "member"
+          },
+          {
+            "start": 45,
+            "end": 46,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "person"
+          },
+          {
+            "start": 48,
+            "end": 50,
+            "text": "来る",
+            "reading": "くる",
+            "headword": "来る",
+            "gloss": "come"
+          },
+          {
+            "start": 50,
+            "end": 51,
+            "text": "前",
+            "reading": "まえ",
+            "headword": "前",
+            "gloss": "before"
+          },
+          {
+            "start": 52,
+            "end": 54,
+            "text": "予約",
+            "reading": "よやく",
+            "headword": "予約",
+            "gloss": "reservation"
+          },
+          {
+            "start": 55,
+            "end": 57,
+            "text": "必要",
+            "reading": "ひつよう",
+            "headword": "必要",
+            "gloss": "necessary"
+          },
+          {
+            "start": 61,
+            "end": 62,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 63,
+            "end": 65,
+            "text": "会員",
+            "reading": "かいいん",
+            "headword": "会員",
+            "gloss": "member"
+          },
+          {
+            "start": 67,
+            "end": 69,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 70,
+            "end": 72,
+            "text": "会員",
+            "reading": "かいいん",
+            "headword": "会員",
+            "gloss": "member"
+          },
+          {
+            "start": 81,
+            "end": 83,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          }
+        ]
+      }
+    },
+    {
+      "id": "connected-text-grammar-classroom-membership-self",
+      "jlpt": 4,
+      "target": "optional",
+      "relationship": "rules",
+      "prompt": "この教室は会員も会員でない人も利用できます。会員は予約なしで来てもかまいません。会員でない人は、来る前に予約が必要です。\n私は会員で、友達は会員ではありません。\n私は____。",
+      "translation": "Complete the closing report using the earlier passage, without inventing another rule or event. Choose one printed completion: 予約しなければなりません / 予約しなくてもいいです. Type the printed completion or its all-hiragana spelling, without punctuation.",
+      "evidence": "Use the complete supplied context and the requested operation, not an unstated fact.",
+      "explanation": "Passage: Members and nonmembers may use this classroom. Members may come without a reservation; nonmembers need a reservation before coming. I am a member and my friend is not. Closing report: I do not have to reserve. I am a member; optionality is not a ban on reserving.",
+      "answer": "optional",
+      "acceptedAnswers": [
+        "予約しなくてもいいです",
+        "よやくしなくてもいいです"
+      ],
+      "options": [
+        {
+          "id": "required",
+          "label": "予約しなければなりません",
+          "rationale": "Passage: Members and nonmembers may use this classroom. Members may come without a reservation; nonmembers need a reservation before coming. I am a member and my friend is not. That imposes the nonmember reservation requirement on the member speaker."
+        },
+        {
+          "id": "optional",
+          "label": "予約しなくてもいいです",
+          "rationale": "Passage: Members and nonmembers may use this classroom. Members may come without a reservation; nonmembers need a reservation before coming. I am a member and my friend is not. Closing report: I do not have to reserve. I am a member; optionality is not a ban on reserving."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "9ae2f99b46e4a3d6677ba2a659bd74d8b4f6a06347ccbd15a615ff25dd7b7cfd",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "text": "教室",
+            "reading": "きょうしつ",
+            "headword": "教室",
+            "gloss": "classroom"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "会員",
+            "reading": "かいいん",
+            "headword": "会員",
+            "gloss": "member"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "text": "会員",
+            "reading": "かいいん",
+            "headword": "会員",
+            "gloss": "member"
+          },
+          {
+            "start": 13,
+            "end": 14,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "person"
+          },
+          {
+            "start": 22,
+            "end": 24,
+            "text": "会員",
+            "reading": "かいいん",
+            "headword": "会員",
+            "gloss": "member"
+          },
+          {
+            "start": 25,
+            "end": 27,
+            "text": "予約",
+            "reading": "よやく",
+            "headword": "予約",
+            "gloss": "reservation"
+          },
+          {
+            "start": 40,
+            "end": 42,
+            "text": "会員",
+            "reading": "かいいん",
+            "headword": "会員",
+            "gloss": "member"
+          },
+          {
+            "start": 45,
+            "end": 46,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "person"
+          },
+          {
+            "start": 48,
+            "end": 50,
+            "text": "来る",
+            "reading": "くる",
+            "headword": "来る",
+            "gloss": "come"
+          },
+          {
+            "start": 50,
+            "end": 51,
+            "text": "前",
+            "reading": "まえ",
+            "headword": "前",
+            "gloss": "before"
+          },
+          {
+            "start": 52,
+            "end": 54,
+            "text": "予約",
+            "reading": "よやく",
+            "headword": "予約",
+            "gloss": "reservation"
+          },
+          {
+            "start": 55,
+            "end": 57,
+            "text": "必要",
+            "reading": "ひつよう",
+            "headword": "必要",
+            "gloss": "necessary"
+          },
+          {
+            "start": 61,
+            "end": 62,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 63,
+            "end": 65,
+            "text": "会員",
+            "reading": "かいいん",
+            "headword": "会員",
+            "gloss": "member"
+          },
+          {
+            "start": 67,
+            "end": 69,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 70,
+            "end": 72,
+            "text": "会員",
+            "reading": "かいいん",
+            "headword": "会員",
+            "gloss": "member"
+          },
+          {
+            "start": 81,
+            "end": 82,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          }
+        ]
+      }
+    },
+    {
+      "id": "connected-text-grammar-already-submitted-friend",
+      "jlpt": 4,
+      "target": "required",
+      "relationship": "rules",
+      "prompt": "今日は申込書を出す日です。まだ出していない人は、今日出す必要があります。一度出した人は、もう一度出さなくてもかまいません。\n私は昨日出しましたが、友達はまだ出していません。\n友達は申込書を____。",
+      "translation": "Complete the closing report using the earlier passage, without inventing another rule or event. Choose one printed completion: 出さなければなりません / 出さなくてもいいです. Type the printed completion or its all-hiragana spelling, without punctuation.",
+      "evidence": "Use the complete supplied context and the requested operation, not an unstated fact.",
+      "explanation": "Passage: Today is the application-form submission day. People who have not submitted must do so today. People who already submitted need not do it again. I submitted yesterday, but my friend has not yet. Closing report: My friend must submit the application form. The friend is in the not-yet-submitted group.",
+      "answer": "required",
+      "acceptedAnswers": [
+        "出さなければなりません",
+        "ださなければなりません"
+      ],
+      "options": [
+        {
+          "id": "required",
+          "label": "出さなければなりません",
+          "rationale": "Passage: Today is the application-form submission day. People who have not submitted must do so today. People who already submitted need not do it again. I submitted yesterday, but my friend has not yet. Closing report: My friend must submit the application form. The friend is in the not-yet-submitted group."
+        },
+        {
+          "id": "optional",
+          "label": "出さなくてもいいです",
+          "rationale": "Passage: Today is the application-form submission day. People who have not submitted must do so today. People who already submitted need not do it again. I submitted yesterday, but my friend has not yet. That incorrectly applies the already-submitted exception to the friend."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "8dba9f8e1dc43827614e7934d3b668f5e9d862eb0a2a51778b17579a6af29e74",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "今日",
+            "reading": "きょう",
+            "headword": "今日",
+            "gloss": "today"
+          },
+          {
+            "start": 3,
+            "end": 6,
+            "text": "申込書",
+            "reading": "もうしこみしょ",
+            "headword": "申込書",
+            "gloss": "application form"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "出す",
+            "reading": "だす",
+            "headword": "出す",
+            "gloss": "submit"
+          },
+          {
+            "start": 9,
+            "end": 10,
+            "text": "日",
+            "reading": "ひ",
+            "headword": "日",
+            "gloss": "day"
+          },
+          {
+            "start": 13,
+            "end": 15,
+            "text": "まだ",
+            "reading": "まだ",
+            "headword": "まだ",
+            "gloss": "not yet"
+          },
+          {
+            "start": 15,
+            "end": 21,
+            "text": "出していない",
+            "reading": "だしていない",
+            "headword": "出す",
+            "gloss": "have not submitted"
+          },
+          {
+            "start": 21,
+            "end": 22,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "person"
+          },
+          {
+            "start": 24,
+            "end": 26,
+            "text": "今日",
+            "reading": "きょう",
+            "headword": "今日",
+            "gloss": "today"
+          },
+          {
+            "start": 26,
+            "end": 28,
+            "text": "出す",
+            "reading": "だす",
+            "headword": "出す",
+            "gloss": "submit"
+          },
+          {
+            "start": 28,
+            "end": 30,
+            "text": "必要",
+            "reading": "ひつよう",
+            "headword": "必要",
+            "gloss": "necessity"
+          },
+          {
+            "start": 36,
+            "end": 38,
+            "text": "一度",
+            "reading": "いちど",
+            "headword": "一度",
+            "gloss": "once"
+          },
+          {
+            "start": 38,
+            "end": 41,
+            "text": "出した",
+            "reading": "だした",
+            "headword": "出す",
+            "gloss": "submitted"
+          },
+          {
+            "start": 41,
+            "end": 42,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "person"
+          },
+          {
+            "start": 44,
+            "end": 48,
+            "text": "もう一度",
+            "reading": "もういちど",
+            "headword": "一度",
+            "gloss": "again"
+          },
+          {
+            "start": 62,
+            "end": 63,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 64,
+            "end": 66,
+            "text": "昨日",
+            "reading": "きのう",
+            "headword": "昨日",
+            "gloss": "yesterday"
+          },
+          {
+            "start": 66,
+            "end": 71,
+            "text": "出しました",
+            "reading": "だしました",
+            "headword": "出す",
+            "gloss": "submitted"
+          },
+          {
+            "start": 73,
+            "end": 75,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 76,
+            "end": 78,
+            "text": "まだ",
+            "reading": "まだ",
+            "headword": "まだ",
+            "gloss": "not yet"
+          },
+          {
+            "start": 78,
+            "end": 85,
+            "text": "出していません",
+            "reading": "だしていません",
+            "headword": "出す",
+            "gloss": "has not submitted"
+          },
+          {
+            "start": 87,
+            "end": 89,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 90,
+            "end": 93,
+            "text": "申込書",
+            "reading": "もうしこみしょ",
+            "headword": "申込書",
+            "gloss": "application form"
+          }
+        ]
+      }
+    },
+    {
+      "id": "connected-text-grammar-already-submitted-self",
+      "jlpt": 4,
+      "target": "optional",
+      "relationship": "rules",
+      "prompt": "今日は申込書を出す日です。まだ出していない人は、今日出す必要があります。一度出した人は、もう一度出さなくてもかまいません。\n私は昨日出しましたが、友達はまだ出していません。\n私は申込書を____。",
+      "translation": "Complete the closing report using the earlier passage, without inventing another rule or event. Choose one printed completion: 出さなければなりません / 出さなくてもいいです. Type the printed completion or its all-hiragana spelling, without punctuation.",
+      "evidence": "Use the complete supplied context and the requested operation, not an unstated fact.",
+      "explanation": "Passage: Today is the application-form submission day. People who have not submitted must do so today. People who already submitted need not do it again. I submitted yesterday, but my friend has not yet. Closing report: I do not have to submit the form again. My completed submission is the earlier fact that activates the exception.",
+      "answer": "optional",
+      "acceptedAnswers": [
+        "出さなくてもいいです",
+        "ださなくてもいいです"
+      ],
+      "options": [
+        {
+          "id": "required",
+          "label": "出さなければなりません",
+          "rationale": "Passage: Today is the application-form submission day. People who have not submitted must do so today. People who already submitted need not do it again. I submitted yesterday, but my friend has not yet. The general submission day does not require the speaker to repeat a completed submission."
+        },
+        {
+          "id": "optional",
+          "label": "出さなくてもいいです",
+          "rationale": "Passage: Today is the application-form submission day. People who have not submitted must do so today. People who already submitted need not do it again. I submitted yesterday, but my friend has not yet. Closing report: I do not have to submit the form again. My completed submission is the earlier fact that activates the exception."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "b57ebb2d5b5cefeaac638ec811a1ca4234d29f4c0a81bd91627febbe4f6136ee",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "今日",
+            "reading": "きょう",
+            "headword": "今日",
+            "gloss": "today"
+          },
+          {
+            "start": 3,
+            "end": 6,
+            "text": "申込書",
+            "reading": "もうしこみしょ",
+            "headword": "申込書",
+            "gloss": "application form"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "出す",
+            "reading": "だす",
+            "headword": "出す",
+            "gloss": "submit"
+          },
+          {
+            "start": 9,
+            "end": 10,
+            "text": "日",
+            "reading": "ひ",
+            "headword": "日",
+            "gloss": "day"
+          },
+          {
+            "start": 13,
+            "end": 15,
+            "text": "まだ",
+            "reading": "まだ",
+            "headword": "まだ",
+            "gloss": "not yet"
+          },
+          {
+            "start": 15,
+            "end": 21,
+            "text": "出していない",
+            "reading": "だしていない",
+            "headword": "出す",
+            "gloss": "have not submitted"
+          },
+          {
+            "start": 21,
+            "end": 22,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "person"
+          },
+          {
+            "start": 24,
+            "end": 26,
+            "text": "今日",
+            "reading": "きょう",
+            "headword": "今日",
+            "gloss": "today"
+          },
+          {
+            "start": 26,
+            "end": 28,
+            "text": "出す",
+            "reading": "だす",
+            "headword": "出す",
+            "gloss": "submit"
+          },
+          {
+            "start": 28,
+            "end": 30,
+            "text": "必要",
+            "reading": "ひつよう",
+            "headword": "必要",
+            "gloss": "necessity"
+          },
+          {
+            "start": 36,
+            "end": 38,
+            "text": "一度",
+            "reading": "いちど",
+            "headword": "一度",
+            "gloss": "once"
+          },
+          {
+            "start": 38,
+            "end": 41,
+            "text": "出した",
+            "reading": "だした",
+            "headword": "出す",
+            "gloss": "submitted"
+          },
+          {
+            "start": 41,
+            "end": 42,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "person"
+          },
+          {
+            "start": 44,
+            "end": 48,
+            "text": "もう一度",
+            "reading": "もういちど",
+            "headword": "一度",
+            "gloss": "again"
+          },
+          {
+            "start": 62,
+            "end": 63,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 64,
+            "end": 66,
+            "text": "昨日",
+            "reading": "きのう",
+            "headword": "昨日",
+            "gloss": "yesterday"
+          },
+          {
+            "start": 66,
+            "end": 71,
+            "text": "出しました",
+            "reading": "だしました",
+            "headword": "出す",
+            "gloss": "submitted"
+          },
+          {
+            "start": 73,
+            "end": 75,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 76,
+            "end": 78,
+            "text": "まだ",
+            "reading": "まだ",
+            "headword": "まだ",
+            "gloss": "not yet"
+          },
+          {
+            "start": 78,
+            "end": 85,
+            "text": "出していません",
+            "reading": "だしていません",
+            "headword": "出す",
+            "gloss": "has not submitted"
+          },
+          {
+            "start": 87,
+            "end": 88,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 89,
+            "end": 92,
+            "text": "申込書",
+            "reading": "もうしこみしょ",
+            "headword": "申込書",
+            "gloss": "application form"
+          }
+        ]
+      }
+    },
+    {
+      "id": "connected-text-grammar-lunch-opt-out-self",
+      "jlpt": 4,
+      "target": "required",
+      "relationship": "rules",
+      "prompt": "遠足の昼ご飯は学校が用意します。弁当はいりません。ただし、学校のご飯を食べない人は自分で弁当を用意しなければなりません。\n私は学校のご飯を食べません。友達は学校のご飯を食べます。\n私は弁当を____。",
+      "translation": "Complete the closing report using the earlier passage, without inventing another rule or event. Choose one printed completion: 用意しなければなりません / 用意しなくてもいいです. Type the printed completion or its all-hiragana spelling, without punctuation.",
+      "evidence": "Use the complete supplied context and the requested operation, not an unstated fact.",
+      "explanation": "Passage: The school will provide lunch for the excursion, so a packed lunch is not needed. However, people who will not eat the school meal must prepare their own. I will not eat the school meal; my friend will eat it. Closing report: I must prepare a packed lunch. My decision not to eat the school meal puts me in the expressly stated exception.",
+      "answer": "required",
+      "acceptedAnswers": [
+        "用意しなければなりません",
+        "よういしなければなりません"
+      ],
+      "options": [
+        {
+          "id": "required",
+          "label": "用意しなければなりません",
+          "rationale": "Passage: The school will provide lunch for the excursion, so a packed lunch is not needed. However, people who will not eat the school meal must prepare their own. I will not eat the school meal; my friend will eat it. Closing report: I must prepare a packed lunch. My decision not to eat the school meal puts me in the expressly stated exception."
+        },
+        {
+          "id": "optional",
+          "label": "用意しなくてもいいです",
+          "rationale": "Passage: The school will provide lunch for the excursion, so a packed lunch is not needed. However, people who will not eat the school meal must prepare their own. I will not eat the school meal; my friend will eat it. That transfers the general statement that a packed lunch is unnecessary past the exception which applies to the speaker."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "b9a548081f65fec04f824c0caececc1db29cf6ac29cd00888283716d4bddb93f",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "遠足",
+            "reading": "えんそく",
+            "headword": "遠足",
+            "gloss": "excursion"
+          },
+          {
+            "start": 3,
+            "end": 6,
+            "text": "昼ご飯",
+            "reading": "ひるごはん",
+            "headword": "昼ご飯",
+            "gloss": "lunch"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "学校",
+            "reading": "がっこう",
+            "headword": "学校",
+            "gloss": "school"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "text": "用意します",
+            "reading": "よういします",
+            "headword": "用意する",
+            "gloss": "will prepare"
+          },
+          {
+            "start": 16,
+            "end": 18,
+            "text": "弁当",
+            "reading": "べんとう",
+            "headword": "弁当",
+            "gloss": "packed lunch"
+          },
+          {
+            "start": 19,
+            "end": 24,
+            "text": "いりません",
+            "reading": "いりません",
+            "headword": "いる",
+            "gloss": "is not needed"
+          },
+          {
+            "start": 25,
+            "end": 28,
+            "text": "ただし",
+            "reading": "ただし",
+            "headword": "ただし",
+            "gloss": "with this exception"
+          },
+          {
+            "start": 29,
+            "end": 31,
+            "text": "学校",
+            "reading": "がっこう",
+            "headword": "学校",
+            "gloss": "school"
+          },
+          {
+            "start": 32,
+            "end": 34,
+            "text": "ご飯",
+            "reading": "ごはん",
+            "headword": "ご飯",
+            "gloss": "meal"
+          },
+          {
+            "start": 35,
+            "end": 39,
+            "text": "食べない",
+            "reading": "たべない",
+            "headword": "食べる",
+            "gloss": "not eat"
+          },
+          {
+            "start": 39,
+            "end": 40,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "person"
+          },
+          {
+            "start": 41,
+            "end": 43,
+            "text": "自分",
+            "reading": "じぶん",
+            "headword": "自分",
+            "gloss": "oneself"
+          },
+          {
+            "start": 44,
+            "end": 46,
+            "text": "弁当",
+            "reading": "べんとう",
+            "headword": "弁当",
+            "gloss": "packed lunch"
+          },
+          {
+            "start": 61,
+            "end": 62,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 63,
+            "end": 65,
+            "text": "学校",
+            "reading": "がっこう",
+            "headword": "学校",
+            "gloss": "school"
+          },
+          {
+            "start": 66,
+            "end": 68,
+            "text": "ご飯",
+            "reading": "ごはん",
+            "headword": "ご飯",
+            "gloss": "meal"
+          },
+          {
+            "start": 69,
+            "end": 74,
+            "text": "食べません",
+            "reading": "たべません",
+            "headword": "食べる",
+            "gloss": "will not eat"
+          },
+          {
+            "start": 75,
+            "end": 77,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 78,
+            "end": 80,
+            "text": "学校",
+            "reading": "がっこう",
+            "headword": "学校",
+            "gloss": "school"
+          },
+          {
+            "start": 81,
+            "end": 83,
+            "text": "ご飯",
+            "reading": "ごはん",
+            "headword": "ご飯",
+            "gloss": "meal"
+          },
+          {
+            "start": 84,
+            "end": 88,
+            "text": "食べます",
+            "reading": "たべます",
+            "headword": "食べる",
+            "gloss": "will eat"
+          },
+          {
+            "start": 90,
+            "end": 91,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 92,
+            "end": 94,
+            "text": "弁当",
+            "reading": "べんとう",
+            "headword": "弁当",
+            "gloss": "packed lunch"
+          }
+        ]
+      }
+    },
+    {
+      "id": "connected-text-grammar-lunch-opt-out-friend",
+      "jlpt": 4,
+      "target": "optional",
+      "relationship": "rules",
+      "prompt": "遠足の昼ご飯は学校が用意します。弁当はいりません。ただし、学校のご飯を食べない人は自分で弁当を用意しなければなりません。\n私は学校のご飯を食べません。友達は学校のご飯を食べます。\n友達は弁当を____。",
+      "translation": "Complete the closing report using the earlier passage, without inventing another rule or event. Choose one printed completion: 用意しなければなりません / 用意しなくてもいいです. Type the printed completion or its all-hiragana spelling, without punctuation.",
+      "evidence": "Use the complete supplied context and the requested operation, not an unstated fact.",
+      "explanation": "Passage: The school will provide lunch for the excursion, so a packed lunch is not needed. However, people who will not eat the school meal must prepare their own. I will not eat the school meal; my friend will eat it. Closing report: My friend need not prepare a packed lunch. The friend takes the provided school meal, so the opt-out requirement does not apply.",
+      "answer": "optional",
+      "acceptedAnswers": [
+        "用意しなくてもいいです",
+        "よういしなくてもいいです"
+      ],
+      "options": [
+        {
+          "id": "required",
+          "label": "用意しなければなりません",
+          "rationale": "Passage: The school will provide lunch for the excursion, so a packed lunch is not needed. However, people who will not eat the school meal must prepare their own. I will not eat the school meal; my friend will eat it. That applies the opt-out requirement to a friend who is taking the provided meal."
+        },
+        {
+          "id": "optional",
+          "label": "用意しなくてもいいです",
+          "rationale": "Passage: The school will provide lunch for the excursion, so a packed lunch is not needed. However, people who will not eat the school meal must prepare their own. I will not eat the school meal; my friend will eat it. Closing report: My friend need not prepare a packed lunch. The friend takes the provided school meal, so the opt-out requirement does not apply."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d9fdb0a9f736aebb2164248fad14293b5a9bddc042ad62768cdaebdc144fd81f",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "遠足",
+            "reading": "えんそく",
+            "headword": "遠足",
+            "gloss": "excursion"
+          },
+          {
+            "start": 3,
+            "end": 6,
+            "text": "昼ご飯",
+            "reading": "ひるごはん",
+            "headword": "昼ご飯",
+            "gloss": "lunch"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "学校",
+            "reading": "がっこう",
+            "headword": "学校",
+            "gloss": "school"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "text": "用意します",
+            "reading": "よういします",
+            "headword": "用意する",
+            "gloss": "will prepare"
+          },
+          {
+            "start": 16,
+            "end": 18,
+            "text": "弁当",
+            "reading": "べんとう",
+            "headword": "弁当",
+            "gloss": "packed lunch"
+          },
+          {
+            "start": 19,
+            "end": 24,
+            "text": "いりません",
+            "reading": "いりません",
+            "headword": "いる",
+            "gloss": "is not needed"
+          },
+          {
+            "start": 25,
+            "end": 28,
+            "text": "ただし",
+            "reading": "ただし",
+            "headword": "ただし",
+            "gloss": "with this exception"
+          },
+          {
+            "start": 29,
+            "end": 31,
+            "text": "学校",
+            "reading": "がっこう",
+            "headword": "学校",
+            "gloss": "school"
+          },
+          {
+            "start": 32,
+            "end": 34,
+            "text": "ご飯",
+            "reading": "ごはん",
+            "headword": "ご飯",
+            "gloss": "meal"
+          },
+          {
+            "start": 35,
+            "end": 39,
+            "text": "食べない",
+            "reading": "たべない",
+            "headword": "食べる",
+            "gloss": "not eat"
+          },
+          {
+            "start": 39,
+            "end": 40,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "person"
+          },
+          {
+            "start": 41,
+            "end": 43,
+            "text": "自分",
+            "reading": "じぶん",
+            "headword": "自分",
+            "gloss": "oneself"
+          },
+          {
+            "start": 44,
+            "end": 46,
+            "text": "弁当",
+            "reading": "べんとう",
+            "headword": "弁当",
+            "gloss": "packed lunch"
+          },
+          {
+            "start": 61,
+            "end": 62,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 63,
+            "end": 65,
+            "text": "学校",
+            "reading": "がっこう",
+            "headword": "学校",
+            "gloss": "school"
+          },
+          {
+            "start": 66,
+            "end": 68,
+            "text": "ご飯",
+            "reading": "ごはん",
+            "headword": "ご飯",
+            "gloss": "meal"
+          },
+          {
+            "start": 69,
+            "end": 74,
+            "text": "食べません",
+            "reading": "たべません",
+            "headword": "食べる",
+            "gloss": "will not eat"
+          },
+          {
+            "start": 75,
+            "end": 77,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 78,
+            "end": 80,
+            "text": "学校",
+            "reading": "がっこう",
+            "headword": "学校",
+            "gloss": "school"
+          },
+          {
+            "start": 81,
+            "end": 83,
+            "text": "ご飯",
+            "reading": "ごはん",
+            "headword": "ご飯",
+            "gloss": "meal"
+          },
+          {
+            "start": 84,
+            "end": 88,
+            "text": "食べます",
+            "reading": "たべます",
+            "headword": "食べる",
+            "gloss": "will eat"
+          },
+          {
+            "start": 90,
+            "end": 92,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 93,
+            "end": 95,
+            "text": "弁当",
+            "reading": "べんとう",
+            "headword": "弁当",
+            "gloss": "packed lunch"
+          }
+        ]
+      }
+    },
+    {
+      "id": "connected-text-grammar-classroom-preparation-rules",
+      "jlpt": 4,
+      "target": "arranged",
+      "relationship": "stages",
+      "prompt": "明日は授業があります。先生が教室のルールを黒板に書きました。文字は今も残っています。\n明日の持ち物のリストはまだ書いていません。私が授業の前にノートに書きます。\n教室のルールは黒板に____。",
+      "translation": "Complete the closing report using the earlier passage, without inventing another rule or event. Choose one printed completion: 書いてあります / 書いておきます. Type the printed completion or its all-hiragana spelling, without punctuation.",
+      "evidence": "Use the complete supplied context and the requested operation, not an unstated fact.",
+      "explanation": "Passage: There is a class tomorrow. The teacher wrote the classroom rules on the board, and the writing remains. The things-to-bring list has not been written yet; I will write it in my notebook before class. Closing report: The classroom rules are written on the blackboard. The earlier writing remains; this reports an existing purposeful result.",
+      "answer": "arranged",
+      "acceptedAnswers": [
+        "書いてあります",
+        "かいてあります"
+      ],
+      "options": [
+        {
+          "id": "arranged",
+          "label": "書いてあります",
+          "rationale": "Passage: There is a class tomorrow. The teacher wrote the classroom rules on the board, and the writing remains. The things-to-bring list has not been written yet; I will write it in my notebook before class. Closing report: The classroom rules are written on the blackboard. The earlier writing remains; this reports an existing purposeful result."
+        },
+        {
+          "id": "prepare",
+          "label": "書いておきます",
+          "rationale": "Passage: There is a class tomorrow. The teacher wrote the classroom rules on the board, and the writing remains. The things-to-bring list has not been written yet; I will write it in my notebook before class. That replaces the supplied existing-result report with an unprovided future writing commitment."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "e71f7cf922be18256203ed6048e82b3c14adca8b3b6158d07decd5c227684fd1",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "明日",
+            "reading": "あした",
+            "headword": "明日",
+            "gloss": "tomorrow"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "授業",
+            "reading": "じゅぎょう",
+            "headword": "授業",
+            "gloss": "class"
+          },
+          {
+            "start": 11,
+            "end": 13,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 14,
+            "end": 16,
+            "text": "教室",
+            "reading": "きょうしつ",
+            "headword": "教室",
+            "gloss": "classroom"
+          },
+          {
+            "start": 17,
+            "end": 20,
+            "text": "ルール",
+            "reading": "るーる",
+            "headword": "ルール",
+            "gloss": "rules"
+          },
+          {
+            "start": 21,
+            "end": 23,
+            "text": "黒板",
+            "reading": "こくばん",
+            "headword": "黒板",
+            "gloss": "blackboard"
+          },
+          {
+            "start": 24,
+            "end": 29,
+            "text": "書きました",
+            "reading": "かきました",
+            "headword": "書く",
+            "gloss": "wrote"
+          },
+          {
+            "start": 30,
+            "end": 32,
+            "text": "文字",
+            "reading": "もじ",
+            "headword": "文字",
+            "gloss": "writing"
+          },
+          {
+            "start": 33,
+            "end": 34,
+            "text": "今",
+            "reading": "いま",
+            "headword": "今",
+            "gloss": "now"
+          },
+          {
+            "start": 35,
+            "end": 41,
+            "text": "残っています",
+            "reading": "のこっています",
+            "headword": "残る",
+            "gloss": "remains"
+          },
+          {
+            "start": 43,
+            "end": 45,
+            "text": "明日",
+            "reading": "あした",
+            "headword": "明日",
+            "gloss": "tomorrow"
+          },
+          {
+            "start": 46,
+            "end": 49,
+            "text": "持ち物",
+            "reading": "もちもの",
+            "headword": "持ち物",
+            "gloss": "things to bring"
+          },
+          {
+            "start": 50,
+            "end": 53,
+            "text": "リスト",
+            "reading": "りすと",
+            "headword": "リスト",
+            "gloss": "list"
+          },
+          {
+            "start": 54,
+            "end": 56,
+            "text": "まだ",
+            "reading": "まだ",
+            "headword": "まだ",
+            "gloss": "not yet"
+          },
+          {
+            "start": 56,
+            "end": 63,
+            "text": "書いていません",
+            "reading": "かいていません",
+            "headword": "書く",
+            "gloss": "have not written"
+          },
+          {
+            "start": 64,
+            "end": 65,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 66,
+            "end": 68,
+            "text": "授業",
+            "reading": "じゅぎょう",
+            "headword": "授業",
+            "gloss": "class"
+          },
+          {
+            "start": 69,
+            "end": 70,
+            "text": "前",
+            "reading": "まえ",
+            "headword": "前",
+            "gloss": "before"
+          },
+          {
+            "start": 71,
+            "end": 74,
+            "text": "ノート",
+            "reading": "のーと",
+            "headword": "ノート",
+            "gloss": "notebook"
+          },
+          {
+            "start": 75,
+            "end": 79,
+            "text": "書きます",
+            "reading": "かきます",
+            "headword": "書く",
+            "gloss": "will write"
+          },
+          {
+            "start": 81,
+            "end": 83,
+            "text": "教室",
+            "reading": "きょうしつ",
+            "headword": "教室",
+            "gloss": "classroom"
+          },
+          {
+            "start": 84,
+            "end": 87,
+            "text": "ルール",
+            "reading": "るーる",
+            "headword": "ルール",
+            "gloss": "rules"
+          },
+          {
+            "start": 88,
+            "end": 90,
+            "text": "黒板",
+            "reading": "こくばん",
+            "headword": "黒板",
+            "gloss": "blackboard"
+          }
+        ]
+      }
+    },
+    {
+      "id": "connected-text-grammar-classroom-preparation-list",
+      "jlpt": 4,
+      "target": "prepare",
+      "relationship": "stages",
+      "prompt": "明日は授業があります。先生が教室のルールを黒板に書きました。文字は今も残っています。\n明日の持ち物のリストはまだ書いていません。私が授業の前にノートに書きます。\n持ち物のリストはノートに____。",
+      "translation": "Complete the closing report using the earlier passage, without inventing another rule or event. Choose one printed completion: 書いてあります / 書いておきます. Type the printed completion or its all-hiragana spelling, without punctuation.",
+      "evidence": "Use the complete supplied context and the requested operation, not an unstated fact.",
+      "explanation": "Passage: There is a class tomorrow. The teacher wrote the classroom rules on the board, and the writing remains. The things-to-bring list has not been written yet; I will write it in my notebook before class. Closing report: I will write the things-to-bring list in the notebook in preparation. This is the stated unperformed task before class.",
+      "answer": "prepare",
+      "acceptedAnswers": [
+        "書いておきます",
+        "かいておきます"
+      ],
+      "options": [
+        {
+          "id": "arranged",
+          "label": "書いてあります",
+          "rationale": "Passage: There is a class tomorrow. The teacher wrote the classroom rules on the board, and the writing remains. The things-to-bring list has not been written yet; I will write it in my notebook before class. That presents the list as already written, contradicting the passage's explicit not-yet statement."
+        },
+        {
+          "id": "prepare",
+          "label": "書いておきます",
+          "rationale": "Passage: There is a class tomorrow. The teacher wrote the classroom rules on the board, and the writing remains. The things-to-bring list has not been written yet; I will write it in my notebook before class. Closing report: I will write the things-to-bring list in the notebook in preparation. This is the stated unperformed task before class."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "29a7b51794fbbdde8594d793593917d51b0b5fbb4c59da8b03502b30155fd519",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "明日",
+            "reading": "あした",
+            "headword": "明日",
+            "gloss": "tomorrow"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "授業",
+            "reading": "じゅぎょう",
+            "headword": "授業",
+            "gloss": "class"
+          },
+          {
+            "start": 11,
+            "end": 13,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 14,
+            "end": 16,
+            "text": "教室",
+            "reading": "きょうしつ",
+            "headword": "教室",
+            "gloss": "classroom"
+          },
+          {
+            "start": 17,
+            "end": 20,
+            "text": "ルール",
+            "reading": "るーる",
+            "headword": "ルール",
+            "gloss": "rules"
+          },
+          {
+            "start": 21,
+            "end": 23,
+            "text": "黒板",
+            "reading": "こくばん",
+            "headword": "黒板",
+            "gloss": "blackboard"
+          },
+          {
+            "start": 24,
+            "end": 29,
+            "text": "書きました",
+            "reading": "かきました",
+            "headword": "書く",
+            "gloss": "wrote"
+          },
+          {
+            "start": 30,
+            "end": 32,
+            "text": "文字",
+            "reading": "もじ",
+            "headword": "文字",
+            "gloss": "writing"
+          },
+          {
+            "start": 33,
+            "end": 34,
+            "text": "今",
+            "reading": "いま",
+            "headword": "今",
+            "gloss": "now"
+          },
+          {
+            "start": 35,
+            "end": 41,
+            "text": "残っています",
+            "reading": "のこっています",
+            "headword": "残る",
+            "gloss": "remains"
+          },
+          {
+            "start": 43,
+            "end": 45,
+            "text": "明日",
+            "reading": "あした",
+            "headword": "明日",
+            "gloss": "tomorrow"
+          },
+          {
+            "start": 46,
+            "end": 49,
+            "text": "持ち物",
+            "reading": "もちもの",
+            "headword": "持ち物",
+            "gloss": "things to bring"
+          },
+          {
+            "start": 50,
+            "end": 53,
+            "text": "リスト",
+            "reading": "りすと",
+            "headword": "リスト",
+            "gloss": "list"
+          },
+          {
+            "start": 54,
+            "end": 56,
+            "text": "まだ",
+            "reading": "まだ",
+            "headword": "まだ",
+            "gloss": "not yet"
+          },
+          {
+            "start": 56,
+            "end": 63,
+            "text": "書いていません",
+            "reading": "かいていません",
+            "headword": "書く",
+            "gloss": "have not written"
+          },
+          {
+            "start": 64,
+            "end": 65,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 66,
+            "end": 68,
+            "text": "授業",
+            "reading": "じゅぎょう",
+            "headword": "授業",
+            "gloss": "class"
+          },
+          {
+            "start": 69,
+            "end": 70,
+            "text": "前",
+            "reading": "まえ",
+            "headword": "前",
+            "gloss": "before"
+          },
+          {
+            "start": 71,
+            "end": 74,
+            "text": "ノート",
+            "reading": "のーと",
+            "headword": "ノート",
+            "gloss": "notebook"
+          },
+          {
+            "start": 75,
+            "end": 79,
+            "text": "書きます",
+            "reading": "かきます",
+            "headword": "書く",
+            "gloss": "will write"
+          },
+          {
+            "start": 81,
+            "end": 84,
+            "text": "持ち物",
+            "reading": "もちもの",
+            "headword": "持ち物",
+            "gloss": "things to bring"
+          },
+          {
+            "start": 85,
+            "end": 88,
+            "text": "リスト",
+            "reading": "りすと",
+            "headword": "リスト",
+            "gloss": "list"
+          },
+          {
+            "start": 89,
+            "end": 92,
+            "text": "ノート",
+            "reading": "のーと",
+            "headword": "ノート",
+            "gloss": "notebook"
+          }
+        ]
+      }
+    },
+    {
+      "id": "connected-text-grammar-changed-meeting-place-old",
+      "jlpt": 4,
+      "target": "arranged",
+      "relationship": "stages",
+      "prompt": "説明会の場所が変わりました。古い案内はもう印刷しましたが、捨てていません。\n新しい案内はまだ印刷していません。明日までに新しい案内を印刷します。\n古い案内は____。",
+      "translation": "Complete the closing report using the earlier passage, without inventing another rule or event. Choose one printed completion: 印刷してあります / 印刷しておきます. Type the printed completion or its all-hiragana spelling, without punctuation.",
+      "evidence": "Use the complete supplied context and the requested operation, not an unstated fact.",
+      "explanation": "Passage: The information meeting's venue changed. The old notices were already printed and have not been thrown away. The new notices have not been printed yet; I will print them by tomorrow. Closing report: The old notices have been printed and are still there. Their information becoming obsolete does not erase the existing printing result.",
+      "answer": "arranged",
+      "acceptedAnswers": [
+        "印刷してあります",
+        "いんさつしてあります"
+      ],
+      "options": [
+        {
+          "id": "arranged",
+          "label": "印刷してあります",
+          "rationale": "Passage: The information meeting's venue changed. The old notices were already printed and have not been thrown away. The new notices have not been printed yet; I will print them by tomorrow. Closing report: The old notices have been printed and are still there. Their information becoming obsolete does not erase the existing printing result."
+        },
+        {
+          "id": "prepare",
+          "label": "印刷しておきます",
+          "rationale": "Passage: The information meeting's venue changed. The old notices were already printed and have not been thrown away. The new notices have not been printed yet; I will print them by tomorrow. That invents a future preparation to print the old notices; the stated upcoming printing concerns the new notices."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "04cd4162e7689b39a59b3be4f5888ad373d8a2fa4f58feab785ef9b7c3887008",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "説明会",
+            "reading": "せつめいかい",
+            "headword": "説明会",
+            "gloss": "information meeting"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "場所",
+            "reading": "ばしょ",
+            "headword": "場所",
+            "gloss": "place"
+          },
+          {
+            "start": 7,
+            "end": 13,
+            "text": "変わりました",
+            "reading": "かわりました",
+            "headword": "変わる",
+            "gloss": "changed"
+          },
+          {
+            "start": 14,
+            "end": 16,
+            "text": "古い",
+            "reading": "ふるい",
+            "headword": "古い",
+            "gloss": "old"
+          },
+          {
+            "start": 16,
+            "end": 18,
+            "text": "案内",
+            "reading": "あんない",
+            "headword": "案内",
+            "gloss": "notice"
+          },
+          {
+            "start": 19,
+            "end": 21,
+            "text": "もう",
+            "reading": "もう",
+            "headword": "もう",
+            "gloss": "already"
+          },
+          {
+            "start": 21,
+            "end": 27,
+            "text": "印刷しました",
+            "reading": "いんさつしました",
+            "headword": "印刷する",
+            "gloss": "printed"
+          },
+          {
+            "start": 29,
+            "end": 36,
+            "text": "捨てていません",
+            "reading": "すてていません",
+            "headword": "捨てる",
+            "gloss": "have not discarded"
+          },
+          {
+            "start": 38,
+            "end": 41,
+            "text": "新しい",
+            "reading": "あたらしい",
+            "headword": "新しい",
+            "gloss": "new"
+          },
+          {
+            "start": 41,
+            "end": 43,
+            "text": "案内",
+            "reading": "あんない",
+            "headword": "案内",
+            "gloss": "notice"
+          },
+          {
+            "start": 44,
+            "end": 46,
+            "text": "まだ",
+            "reading": "まだ",
+            "headword": "まだ",
+            "gloss": "not yet"
+          },
+          {
+            "start": 46,
+            "end": 54,
+            "text": "印刷していません",
+            "reading": "いんさつしていません",
+            "headword": "印刷する",
+            "gloss": "have not printed"
+          },
+          {
+            "start": 55,
+            "end": 57,
+            "text": "明日",
+            "reading": "あした",
+            "headword": "明日",
+            "gloss": "tomorrow"
+          },
+          {
+            "start": 60,
+            "end": 63,
+            "text": "新しい",
+            "reading": "あたらしい",
+            "headword": "新しい",
+            "gloss": "new"
+          },
+          {
+            "start": 63,
+            "end": 65,
+            "text": "案内",
+            "reading": "あんない",
+            "headword": "案内",
+            "gloss": "notice"
+          },
+          {
+            "start": 66,
+            "end": 71,
+            "text": "印刷します",
+            "reading": "いんさつします",
+            "headword": "印刷する",
+            "gloss": "will print"
+          },
+          {
+            "start": 73,
+            "end": 75,
+            "text": "古い",
+            "reading": "ふるい",
+            "headword": "古い",
+            "gloss": "old"
+          },
+          {
+            "start": 75,
+            "end": 77,
+            "text": "案内",
+            "reading": "あんない",
+            "headword": "案内",
+            "gloss": "notice"
+          }
+        ]
+      }
+    },
+    {
+      "id": "connected-text-grammar-changed-meeting-place-new",
+      "jlpt": 4,
+      "target": "prepare",
+      "relationship": "stages",
+      "prompt": "説明会の場所が変わりました。古い案内はもう印刷しましたが、捨てていません。\n新しい案内はまだ印刷していません。明日までに新しい案内を印刷します。\n新しい案内は____。",
+      "translation": "Complete the closing report using the earlier passage, without inventing another rule or event. Choose one printed completion: 印刷してあります / 印刷しておきます. Type the printed completion or its all-hiragana spelling, without punctuation.",
+      "evidence": "Use the complete supplied context and the requested operation, not an unstated fact.",
+      "explanation": "Passage: The information meeting's venue changed. The old notices were already printed and have not been thrown away. The new notices have not been printed yet; I will print them by tomorrow. Closing report: I will print the new notices in preparation. They are expressly not printed yet.",
+      "answer": "prepare",
+      "acceptedAnswers": [
+        "印刷しておきます",
+        "いんさつしておきます"
+      ],
+      "options": [
+        {
+          "id": "arranged",
+          "label": "印刷してあります",
+          "rationale": "Passage: The information meeting's venue changed. The old notices were already printed and have not been thrown away. The new notices have not been printed yet; I will print them by tomorrow. That transfers the old notices' completed state to the new notices."
+        },
+        {
+          "id": "prepare",
+          "label": "印刷しておきます",
+          "rationale": "Passage: The information meeting's venue changed. The old notices were already printed and have not been thrown away. The new notices have not been printed yet; I will print them by tomorrow. Closing report: I will print the new notices in preparation. They are expressly not printed yet."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "4f5b841b1e1998985289dc4bd69d24071c4a3484ac0a2133e8655521649eab69",
+        "spans": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "説明会",
+            "reading": "せつめいかい",
+            "headword": "説明会",
+            "gloss": "information meeting"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "場所",
+            "reading": "ばしょ",
+            "headword": "場所",
+            "gloss": "place"
+          },
+          {
+            "start": 7,
+            "end": 13,
+            "text": "変わりました",
+            "reading": "かわりました",
+            "headword": "変わる",
+            "gloss": "changed"
+          },
+          {
+            "start": 14,
+            "end": 16,
+            "text": "古い",
+            "reading": "ふるい",
+            "headword": "古い",
+            "gloss": "old"
+          },
+          {
+            "start": 16,
+            "end": 18,
+            "text": "案内",
+            "reading": "あんない",
+            "headword": "案内",
+            "gloss": "notice"
+          },
+          {
+            "start": 19,
+            "end": 21,
+            "text": "もう",
+            "reading": "もう",
+            "headword": "もう",
+            "gloss": "already"
+          },
+          {
+            "start": 21,
+            "end": 27,
+            "text": "印刷しました",
+            "reading": "いんさつしました",
+            "headword": "印刷する",
+            "gloss": "printed"
+          },
+          {
+            "start": 29,
+            "end": 36,
+            "text": "捨てていません",
+            "reading": "すてていません",
+            "headword": "捨てる",
+            "gloss": "have not discarded"
+          },
+          {
+            "start": 38,
+            "end": 41,
+            "text": "新しい",
+            "reading": "あたらしい",
+            "headword": "新しい",
+            "gloss": "new"
+          },
+          {
+            "start": 41,
+            "end": 43,
+            "text": "案内",
+            "reading": "あんない",
+            "headword": "案内",
+            "gloss": "notice"
+          },
+          {
+            "start": 44,
+            "end": 46,
+            "text": "まだ",
+            "reading": "まだ",
+            "headword": "まだ",
+            "gloss": "not yet"
+          },
+          {
+            "start": 46,
+            "end": 54,
+            "text": "印刷していません",
+            "reading": "いんさつしていません",
+            "headword": "印刷する",
+            "gloss": "have not printed"
+          },
+          {
+            "start": 55,
+            "end": 57,
+            "text": "明日",
+            "reading": "あした",
+            "headword": "明日",
+            "gloss": "tomorrow"
+          },
+          {
+            "start": 60,
+            "end": 63,
+            "text": "新しい",
+            "reading": "あたらしい",
+            "headword": "新しい",
+            "gloss": "new"
+          },
+          {
+            "start": 63,
+            "end": 65,
+            "text": "案内",
+            "reading": "あんない",
+            "headword": "案内",
+            "gloss": "notice"
+          },
+          {
+            "start": 66,
+            "end": 71,
+            "text": "印刷します",
+            "reading": "いんさつします",
+            "headword": "印刷する",
+            "gloss": "will print"
+          },
+          {
+            "start": 73,
+            "end": 76,
+            "text": "新しい",
+            "reading": "あたらしい",
+            "headword": "新しい",
+            "gloss": "new"
+          },
+          {
+            "start": 76,
+            "end": 78,
+            "text": "案内",
+            "reading": "あんない",
+            "headword": "案内",
+            "gloss": "notice"
+          }
+        ]
+      }
+    },
+    {
+      "id": "connected-text-grammar-cooking-handover-vegetables",
+      "jlpt": 4,
+      "target": "arranged",
+      "relationship": "stages",
+      "prompt": "友達と料理をしています。友達が野菜を切りました。切った野菜は皿にあります。\n肉はまだ切っていません。友達は買い物に行きます。私が友達の帰る前に肉を切ります。\n野菜は____。",
+      "translation": "Complete the closing report using the earlier passage, without inventing another rule or event. Choose one printed completion: 切ってあります / 切っておきます. Type the printed completion or its all-hiragana spelling, without punctuation.",
+      "evidence": "Use the complete supplied context and the requested operation, not an unstated fact.",
+      "explanation": "Passage: I am cooking with a friend. My friend cut the vegetables, which are now on a plate. The meat is not cut yet. My friend is going shopping; I will cut the meat before the friend returns. Closing report: The vegetables have been cut and are ready. The speaker can report the result of the friend's action without claiming to have performed it.",
+      "answer": "arranged",
+      "acceptedAnswers": [
+        "切ってあります",
+        "きってあります"
+      ],
+      "options": [
+        {
+          "id": "arranged",
+          "label": "切ってあります",
+          "rationale": "Passage: I am cooking with a friend. My friend cut the vegetables, which are now on a plate. The meat is not cut yet. My friend is going shopping; I will cut the meat before the friend returns. Closing report: The vegetables have been cut and are ready. The speaker can report the result of the friend's action without claiming to have performed it."
+        },
+        {
+          "id": "prepare",
+          "label": "切っておきます",
+          "rationale": "Passage: I am cooking with a friend. My friend cut the vegetables, which are now on a plate. The meat is not cut yet. My friend is going shopping; I will cut the meat before the friend returns. That adds a future vegetable-cutting plan instead of reporting the friend's existing result."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d20a2c7b8698b394ffd2ad9ebaa1df64addca864b90f2e9944f9017c0f84d052",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "料理",
+            "reading": "りょうり",
+            "headword": "料理",
+            "gloss": "cooking"
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "野菜",
+            "reading": "やさい",
+            "headword": "野菜",
+            "gloss": "vegetables"
+          },
+          {
+            "start": 18,
+            "end": 23,
+            "text": "切りました",
+            "reading": "きりました",
+            "headword": "切る",
+            "gloss": "cut"
+          },
+          {
+            "start": 24,
+            "end": 27,
+            "text": "切った",
+            "reading": "きった",
+            "headword": "切る",
+            "gloss": "cut"
+          },
+          {
+            "start": 27,
+            "end": 29,
+            "text": "野菜",
+            "reading": "やさい",
+            "headword": "野菜",
+            "gloss": "vegetables"
+          },
+          {
+            "start": 30,
+            "end": 31,
+            "text": "皿",
+            "reading": "さら",
+            "headword": "皿",
+            "gloss": "plate"
+          },
+          {
+            "start": 38,
+            "end": 39,
+            "text": "肉",
+            "reading": "にく",
+            "headword": "肉",
+            "gloss": "meat"
+          },
+          {
+            "start": 40,
+            "end": 42,
+            "text": "まだ",
+            "reading": "まだ",
+            "headword": "まだ",
+            "gloss": "not yet"
+          },
+          {
+            "start": 42,
+            "end": 49,
+            "text": "切っていません",
+            "reading": "きっていません",
+            "headword": "切る",
+            "gloss": "have not cut"
+          },
+          {
+            "start": 50,
+            "end": 52,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 53,
+            "end": 56,
+            "text": "買い物",
+            "reading": "かいもの",
+            "headword": "買い物",
+            "gloss": "shopping"
+          },
+          {
+            "start": 57,
+            "end": 61,
+            "text": "行きます",
+            "reading": "いきます",
+            "headword": "行く",
+            "gloss": "will go"
+          },
+          {
+            "start": 62,
+            "end": 63,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 64,
+            "end": 66,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 67,
+            "end": 69,
+            "text": "帰る",
+            "reading": "かえる",
+            "headword": "帰る",
+            "gloss": "return"
+          },
+          {
+            "start": 69,
+            "end": 70,
+            "text": "前",
+            "reading": "まえ",
+            "headword": "前",
+            "gloss": "before"
+          },
+          {
+            "start": 71,
+            "end": 72,
+            "text": "肉",
+            "reading": "にく",
+            "headword": "肉",
+            "gloss": "meat"
+          },
+          {
+            "start": 73,
+            "end": 77,
+            "text": "切ります",
+            "reading": "きります",
+            "headword": "切る",
+            "gloss": "will cut"
+          },
+          {
+            "start": 79,
+            "end": 81,
+            "text": "野菜",
+            "reading": "やさい",
+            "headword": "野菜",
+            "gloss": "vegetables"
+          }
+        ]
+      }
+    },
+    {
+      "id": "connected-text-grammar-cooking-handover-meat",
+      "jlpt": 4,
+      "target": "prepare",
+      "relationship": "stages",
+      "prompt": "友達と料理をしています。友達が野菜を切りました。切った野菜は皿にあります。\n肉はまだ切っていません。友達は買い物に行きます。私が友達の帰る前に肉を切ります。\n肉は____。",
+      "translation": "Complete the closing report using the earlier passage, without inventing another rule or event. Choose one printed completion: 切ってあります / 切っておきます. Type the printed completion or its all-hiragana spelling, without punctuation.",
+      "evidence": "Use the complete supplied context and the requested operation, not an unstated fact.",
+      "explanation": "Passage: I am cooking with a friend. My friend cut the vegetables, which are now on a plate. The meat is not cut yet. My friend is going shopping; I will cut the meat before the friend returns. Closing report: I will cut the meat in preparation. This is the speaker's outstanding task before the friend returns.",
+      "answer": "prepare",
+      "acceptedAnswers": [
+        "切っておきます",
+        "きっておきます"
+      ],
+      "options": [
+        {
+          "id": "arranged",
+          "label": "切ってあります",
+          "rationale": "Passage: I am cooking with a friend. My friend cut the vegetables, which are now on a plate. The meat is not cut yet. My friend is going shopping; I will cut the meat before the friend returns. That reports the meat as already cut, contradicting the stated handover and not-yet status."
+        },
+        {
+          "id": "prepare",
+          "label": "切っておきます",
+          "rationale": "Passage: I am cooking with a friend. My friend cut the vegetables, which are now on a plate. The meat is not cut yet. My friend is going shopping; I will cut the meat before the friend returns. Closing report: I will cut the meat in preparation. This is the speaker's outstanding task before the friend returns."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "b440873f77f5441f7ee9133ab559d27fa294fccc43ee640f97865394c0a891f4",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "料理",
+            "reading": "りょうり",
+            "headword": "料理",
+            "gloss": "cooking"
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "野菜",
+            "reading": "やさい",
+            "headword": "野菜",
+            "gloss": "vegetables"
+          },
+          {
+            "start": 18,
+            "end": 23,
+            "text": "切りました",
+            "reading": "きりました",
+            "headword": "切る",
+            "gloss": "cut"
+          },
+          {
+            "start": 24,
+            "end": 27,
+            "text": "切った",
+            "reading": "きった",
+            "headword": "切る",
+            "gloss": "cut"
+          },
+          {
+            "start": 27,
+            "end": 29,
+            "text": "野菜",
+            "reading": "やさい",
+            "headword": "野菜",
+            "gloss": "vegetables"
+          },
+          {
+            "start": 30,
+            "end": 31,
+            "text": "皿",
+            "reading": "さら",
+            "headword": "皿",
+            "gloss": "plate"
+          },
+          {
+            "start": 38,
+            "end": 39,
+            "text": "肉",
+            "reading": "にく",
+            "headword": "肉",
+            "gloss": "meat"
+          },
+          {
+            "start": 40,
+            "end": 42,
+            "text": "まだ",
+            "reading": "まだ",
+            "headword": "まだ",
+            "gloss": "not yet"
+          },
+          {
+            "start": 42,
+            "end": 49,
+            "text": "切っていません",
+            "reading": "きっていません",
+            "headword": "切る",
+            "gloss": "have not cut"
+          },
+          {
+            "start": 50,
+            "end": 52,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 53,
+            "end": 56,
+            "text": "買い物",
+            "reading": "かいもの",
+            "headword": "買い物",
+            "gloss": "shopping"
+          },
+          {
+            "start": 57,
+            "end": 61,
+            "text": "行きます",
+            "reading": "いきます",
+            "headword": "行く",
+            "gloss": "will go"
+          },
+          {
+            "start": 62,
+            "end": 63,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 64,
+            "end": 66,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 67,
+            "end": 69,
+            "text": "帰る",
+            "reading": "かえる",
+            "headword": "帰る",
+            "gloss": "return"
+          },
+          {
+            "start": 69,
+            "end": 70,
+            "text": "前",
+            "reading": "まえ",
+            "headword": "前",
+            "gloss": "before"
+          },
+          {
+            "start": 71,
+            "end": 72,
+            "text": "肉",
+            "reading": "にく",
+            "headword": "肉",
+            "gloss": "meat"
+          },
+          {
+            "start": 73,
+            "end": 77,
+            "text": "切ります",
+            "reading": "きります",
+            "headword": "切る",
+            "gloss": "will cut"
+          },
+          {
+            "start": 79,
+            "end": 80,
+            "text": "肉",
+            "reading": "にく",
+            "headword": "肉",
+            "gloss": "meat"
+          }
+        ]
+      }
+    }
+  ]
+}

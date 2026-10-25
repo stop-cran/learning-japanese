@@ -280,7 +280,10 @@ The [mixed-context follow-up](grammar-contextual-transfer-sources.json) appends 
 eight domains and 24 shared scene keys, with no new group or gate. It repairs the thin critical-concession facet
 without claiming equivalent depth everywhere. One question-visible group label becomes neutral; old IDs, facets,
 exercise objects, vocabulary records, memberships and chapter mappings are retained.
-Current practice is 1884 exercises: 596 N5, 931 N4 and 251 N3, with N2/N1 unchanged. Mixed-level articles derive their browsing levels from
+The [composition/text follow-up](grammar-composition-text-sources.json) adds 16 whole-sentence ordering tasks and
+12 text-grammar questions across six shared passages, in two sets and six groups. Complete responses use the
+existing v1 slot; there is no drag/drop or exam-simulation mode.
+Current practice is 1912 exercises: 596 N5, 959 N4 and 251 N3, with N2/N1 unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -361,7 +364,7 @@ Repair chapter boundaries/staging rather than deleting genuine gates for layout 
 well as outgoing edges, partial availability, external/unmapped foundations, ownership, compatibility and stable identities.
 Run `python tools/validate.py`, focused grammar tests, vocabulary checks, manifest regeneration and the real Android importer.
 
-The current catalog places all **254 authored groups in 20 chapters**, with **23 immediate leaf prerequisites** and **9 derived
+The current catalog places all **260 authored groups in 20 chapters**, with **23 immediate leaf prerequisites** and **9 derived
 chapter arrows**. All 247 recommendations remain unchanged. The 292 unowned exercises remain compatibility practice, not fabricated
 chapter/readiness credentials. The ledger distinguishes the earlier partial-mapping pilot from current ownership and records each
 edge's precise scope. The installment summaries below describe their original delivery snapshots; their original zero-prerequisite
