@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-59 review-closed.** The target is all 1,812 source rows,
+**Batches 01-59 review-closed; batch 60 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,180 rows are review-closed; none are draft,
-632 remain pending, and none are unresolved.
+The first 1,180 rows are review-closed; twenty are draft,
+612 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,54 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 60: N2:1182-N2:1201
+
+**Status:** drafted; independent reviews and reconciliation pending.
+
+Nineteen new articles: 当日, 投書, 登場, どうせ,
+どうぞよろしく, 灯台, 盗難, 当番, 等分, 透明, 灯油,
+東洋, 童話, 通り掛かる, 溶かす, 尖る, 溶く, 退く
+and 特殊. Existing どきどき receives only the sourced `jlpt: 2`
+label; all prior metadata, exclusions and teaching bytes remain
+unchanged. Exact form/family checks of the pinned N5/N4 and N3
+indexes find no lower-level row; N2:1198 establishes the label.
+
+Six reciprocal pairs are linked on both reading-row and Common
+words surfaces: 灯/灯台, 灯/灯油, 油/灯油, 童/童話,
+溶/溶かす and 溶/溶く. All four kanji headers are preserved,
+and the new word-pair dictionary IDs appear in their footers.
+No missing 透, 尖 or 殊 component card is fabricated.
+
+The [packet](n2-vocabulary-batch-sources/batch-60.json) preserves
+all twenty raw source rows and twenty complete principal families/
+35 senses. Additional recognized senses retain their exact
+one-based lineage; they do not independently acquire N2 labels.
+The raw retreat/withdraw gloss does not merge どく with other
+退く readings: the family's resign/retire sense is restricted
+to のく. Transparency is not hygienic cleanness; kerosene is
+not every oil, and a children's story need not contain fairies.
+
+Actual author reading covers ten complete-family chunks and
+eleven complete-old-body chunks, the full support/extra family
+renderings, three support-body chunks and one extra-body chunk.
+The union is 242 distinct complete families/615 senses, including
+the principals: original 213/530 and support 28/75 overlap at
+one family/four senses; extra 3/16 overlaps their union at one
+family/two senses. All 128 distinct complete older bodies,
+33 complete component records and four complete kanji bodies
+were read. The 259 navigation labels and 53 further inspected
+front-matter labels give 312 labels, not 312 body reads.
+
+Nineteen positive public lexical endpoint captures come from one
+dictionary service, not nineteen independent dictionaries. The
+どうぞよろしく endpoint returned no lexical body; complete
+JMdict and existing 宜しく support are not presented as a
+successful public greeting retrieval. Mixed/unrelated headings
+and unequal depth remain explicit. A separate completion receipt
+verifies capture bytes without changing the original preparation
+receipt's status. Author checks and provisional guards are not
+independent findings or a linguistic-correctness guarantee.
 
 ## Batch 59: N2:1162-N2:1181
 

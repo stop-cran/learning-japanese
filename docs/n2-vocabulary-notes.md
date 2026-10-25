@@ -95,6 +95,22 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 60 authoring:** A shared written 退く does not
+  merge どく, のく, しりぞく and ひく; respect the
+  のく-only restriction on resigning/retiring. Keep actual
+  additional senses visible: 溶かす can concern financial
+  loss, 溶く can mean beating eggs, and 尖る extends
+  beyond a physical point. Mixing flour is not necessarily
+  chemical dissolution; clear/transparent does not mean
+  hygienically clean. 石油 and オイル have explicit
+  kerosene senses, so comparison cannot stop at their lead
+  petroleum/oil labels. Preserve unlevelled どきどき's
+  teaching while adding its exactly sourced N2 label only
+  after checking lower-level indexes. A failed greeting
+  endpoint remains failed; captured counts and complete
+  physical-line reads must not be conflated with rendered
+  logical-record counts or independent verification.
+
 - **Batch 59 reconciliation:** Actual complete families and titles,
   not neighboring guards alone, establish the direct pairs. 採点
   also names the assigned score; 転がる has a static scattered
