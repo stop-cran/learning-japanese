@@ -19,6 +19,28 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 61 authoring observations
+
+- Same-spelling navigation can find a different lexical identity:
+  the pinned N3 解ける1198910 row does not establish melting
+  溶ける1546070 at N3. Record exact form/reading/family adjudication
+  without rewriting the original broad navigation capture.
+- Reusing a kana identity does not require changing its kanji array.
+  床屋 is already taught under とこや; preserve that N4 identity and
+  add the substantive 床 link and backlinks to its actual path.
+  Reuse 跳ぶ only because the unchanged 飛ぶ body actually teaches it.
+- Preserve lexical overlap rather than imposing tidy compartments:
+  特色 can emphasize an outstanding point; 特長 normally highlights
+  merit; 特徴 is not restricted to good features.
+  Public どなる includes loud calling as well as loud scolding.
+- Separate dictionary scope from compiler intent. The exact public
+  とまる heading includes fixed-in-place recognition and historical
+  remaining senses beyond pinned1310620. That does not make its
+  raw fixed/abide/stay source gloss wholly erroneous.
+- Record completed body reads separately from captures. Correcting
+  an overescaped title-navigation regex yielded further candidates,
+  not retroactive proof that the original navigation was complete.
+
 ## Batch sequence
 
 1. Inspect the original rows, complete applicable dictionary entries, existing cards and comparisons.

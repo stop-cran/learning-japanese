@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-60 review-closed.** The target is all 1,812 source rows,
+**Batches 01-60 review-closed; batch 61 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,200 rows are review-closed; none are draft,
-612 remain pending, and none are unresolved.
+The first 1,200 rows are review-closed; twenty are draft,
+592 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,37 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 61: N2:1202-N2:1221
+
+**Status:** drafted; independent review and reconciliation pending.
+
+Sixteen new articles: 特色, 特長, 特定, 特売, 溶け込む, 退ける,
+床の間, 所々, 都心, 戸棚, とっくに, どっと, 整う, 留まる,
+どなる and 飛び込む. Four existing identities are reused:
+溶ける receives only sourced N2 metadata; とこや retains N4 and gains
+a substantive 床 link; unchanged 飛ぶ retains N5 and already teaches
+跳ぶ/hopping; 止まる retains N5 and gains 留まる/perching recognition.
+
+The [packet](n2-vocabulary-batch-sources/batch-61.json) preserves the
+twenty raw source rows, complete principal families and scoped senses.
+Separate 留まる readings retain their own dictionary identities.
+The broad raw とまる gloss has support beyond the pinned three-sense
+family; that is not proof of a wholly erroneous source or recovered
+compiler intent. Exact identity checks separate melting 溶ける1546070
+from the N3 untying/solving 解ける1198910 row.
+
+Five reciprocal pairs are checked explicitly: 溶/溶け込む,
+溶/溶ける, 床/床の間, 床/床屋 via とこや, and 戸/戸棚.
+Relevant reading-row and Common words surfaces are linked at actual
+whole-word readings. All three edited kanji headers are preserved.
+Missing 棚/整/跳 cards are not fabricated.
+
+Actual author inspection, captured-but-unread bodies, exact source
+lineage and public-access limits are distinguished in the packet.
+The とっくに public endpoint returned no lexical body.
+Author quiz declarations remain hypotheses for independent review,
+not a claim of exhaustive semantic uniqueness or a completed review.
 
 ## Batch 60: N2:1182-N2:1201
 
