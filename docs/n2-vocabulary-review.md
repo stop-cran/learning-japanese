@@ -63,6 +63,61 @@ receipt verifies capture hashes without relabelling the original
 preparation receipt as already inspected. Author checks are not
 independent reviewer findings or a linguistic-correctness guarantee.
 
+### Batch 59 - initial reviews and reconciliation
+
+**Status:** corrected; both original-session confirmations pending.
+
+Authored snapshot: `54b4f9d77337e80b47f42b9a0b7a9acd6f8eb846`.
+Sequential blind reports from
+[GPT](n2-vocabulary-reviews/batch-59-gpt-initial.md)
+(`gpt-6.1-sol`) and
+[Claude](n2-vocabulary-reviews/batch-59-claude-initial.md)
+(`claude-opus-5.5`) were authenticated against native session
+events, exact prompts, models, frozen evidence, patches and
+zero-edit usage. Successful returned content independently
+establishes all 24 complete assigned word/kanji bodies, four
+compact evidence renderings and the TSV header/twenty exact rows
+for each reader. These are author provenance checks, not reviewer
+Git execution. Actual full older-body counts are GPT 112 and
+Claude 11; common access did not produce equal reading depth.
+
+Nine new articles receive localized corrections: eleven direct
+guard additions, one removal, a bounded radio-reception title
+qualification and one clarification of the raw "manners" gloss.
+No baseline word, kanji, raw field, reading, level or selected/
+additional sense changes. All four reciprocal pairs remain.
+
+| Initial observation | Author disposition and evidence |
+| --- | --- |
+| GPT F01 / Claude B59-05: 点数/採点 | Add the direct guard: both actual returned Daijisen and Seisenban definitions include the assigned score itself, beyond JMdict 1294850's marking activity. Do not invent JMdict sense 2. |
+| GPT F02 / Claude B59-04: 点々/散らかる | Add from the actual scattered distribution in 1303430:1 and complete older body, not a shared topic. |
+| GPT F02: 点々/転がる | Add from static scattered/lying-around 1441000:4, not its rolling sense or homophony. |
+| GPT F03 / Claude B59-02: 電波/サイン,合図 | Add from actual broad signal labels and 1056230:2/1284930:1; this does not make radio waves and cues freely interchangeable. Also accept Claude's optional qualification of reception as radio reception. |
+| GPT F04: 統一/揃う | Add from actual uniformity 1449670:1 and matching/uniform state 1406110:2, not transitive closure through 揃える. |
+| GPT F05 / Claude B59-06: 峠/頂点 | Add from figurative critical peak 1454420:2 and climax 1430240:4; do not equate a pass with a summit. |
+| GPT F06 / Claude B59-01: 動作/移動 | Add from actual bodily-movement and relocation meanings plus broad movement labels, not shared tags alone. |
+| GPT F06: 動作/様 | Add the broad manner-label guard, keeping the actual よう family 1605840 separate from さま/ざま and preserving constructional differences. |
+| GPT F07: 銅/金属 | Remove the guard: copper and generic metal are a member/category distinction, not an established competing lexical sense. Retain the body comparison. |
+| Claude B59-03: 転々/転がす | Add from actual rolling 1704220:2/1440980:1; no blanket transitivity exemption or parity argument. |
+| Claude B59-07: テンポ/速力 | Add for the unqualified speed label 1405080:1 and actual public musical-speed definition; not permission to substitute 速力 for every abstract pace. |
+| Claude B59-08: 動作 "manners here" | Attribute the gloss to some word lists, removing the invisible antecedent without changing the bearing/etiquette distinction. |
+| Optional qualifications | Keep source-attested 統計する; leading with 統計を取る is optional. No consequential defect established for the tentative 伝染/罹る, 電球/スタンド, 動作/自動 or further scatter-family pairs. No assertion of zero contextual overlap. |
+
+Author corrective reads cover 28 complete families/63 senses
+and twelve complete older bodies. Deduplicated with the original
+inspection, that is 256 families/594 senses and 115 older bodies,
+not naive sums. Original quiz declarations remain historical;
+the correction evidence records current changed declarations.
+
+Entire reports, including Optional/Limits, were compared before
+attributing contributions. Shared observations are the score,
+scattered-distribution, signal, peak and movement safeguards.
+GPT additionally supplied the static 転がる sense, 揃う, 様 and
+excessive metal guard; Claude supplied 転がす, 速力, the invisible
+antecedent and optional radio-reception qualification. This is
+useful complementarity on this sample, not a model ranking or
+measured bias reduction. Author dispositions await confirmation.
+
 ## Batch 58: N2:1142-N2:1161
 
 **Status:** closed after authenticated independent reviews, bounded

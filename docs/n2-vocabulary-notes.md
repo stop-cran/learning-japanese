@@ -95,6 +95,20 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 59 reconciliation:** Actual complete families and titles,
+  not neighboring guards alone, establish the direct pairs. 採点
+  also names the assigned score; 転がる has a static scattered
+  sense beyond rolling; 揃う has a uniform-state sense. Broad
+  signal, speed and manner labels can need guards without making
+  their Japanese constructions interchangeable. Conversely,
+  copper's membership in the metal category does not by itself
+  justify an exclusion. Attribute 動作's raw "manners" gloss to
+  word lists instead of pointing to an invisible learner-facing
+  antecedent. Both models found useful shared and complementary
+  observations; GPT actually read 112 complete older bodies and
+  Claude 11. These unequal depths do not establish a model
+  ranking or measured bias reduction. Confirmation is pending.
+
 - **Batch 59 authoring:** Preserve a source error without teaching
   it: 統計's supplied entry means statistics, not the raw
   scattering/dispersion gloss. Keep same-reading 点々 and 転々
