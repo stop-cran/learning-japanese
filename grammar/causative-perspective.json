@@ -2587,6 +2587,402 @@
           }
         ]
       }
+    },
+    {
+      "id": "transfer-running-causer",
+      "jlpt": 4,
+      "target": "cause-first",
+      "relationship": "causative-roles",
+      "prompt": "監督は選手を走らせました。選手は走りたくないと言っていました。\n____",
+      "translation": "Who causes or arranges the running? Lexical base: 走る（はしる）, run. Labels: 第一（だいいち） = first named participant; 第二（だいに） = second named participant. Use only a printed label or its given kana reading.",
+      "evidence": "Track the を-marked actor of a caused intransitive action.",
+      "explanation": "Text: The coach made the athlete run. The athlete had been saying they did not want to run. The coach causes the athlete to run. The を-marked athlete performs the intransitive running; を does not make the coach the runner.",
+      "answer": "cause-first",
+      "acceptedAnswers": [
+        "第一",
+        "だいいち"
+      ],
+      "options": [
+        {
+          "id": "cause-first",
+          "label": "第一",
+          "rationale": "Text: The coach made the athlete run. The athlete had been saying they did not want to run. The coach causes the athlete to run. The を-marked athlete performs the intransitive running; を does not make the coach the runner."
+        },
+        {
+          "id": "cause-second",
+          "label": "第二",
+          "rationale": "Text: The coach made the athlete run. The athlete had been saying they did not want to run. That reverses causer and runner. The coach causes the athlete to run. The を-marked athlete performs the intransitive running; を does not make the coach the runner."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "8d0629e702af62653f1dfda8d5e0d49bfc411d31352ba117da0fb1a993b69983",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "監督",
+            "reading": "かんとく",
+            "headword": "監督",
+            "gloss": "coach"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "選手",
+            "reading": "せんしゅ",
+            "headword": "選手",
+            "gloss": "athlete"
+          },
+          {
+            "start": 13,
+            "end": 15,
+            "text": "選手",
+            "reading": "せんしゅ",
+            "headword": "選手",
+            "gloss": "athlete"
+          },
+          {
+            "start": 16,
+            "end": 22,
+            "text": "走りたくない",
+            "reading": "はしりたくない",
+            "headword": "走る",
+            "gloss": "does not want to run"
+          },
+          {
+            "start": 23,
+            "end": 30,
+            "text": "言っていました",
+            "reading": "いっていました",
+            "headword": "言う",
+            "gloss": "had been saying"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transfer-running-runner",
+      "jlpt": 4,
+      "target": "cause-second",
+      "relationship": "causative-roles",
+      "prompt": "監督は選手を走らせました。選手は走りたくないと言っていました。\n____",
+      "translation": "Who performs the running? Lexical base: 走る（はしる）, run. Labels: 第一（だいいち） = first named participant; 第二（だいに） = second named participant. Use only a printed label or its given kana reading.",
+      "evidence": "Track the を-marked actor of a caused intransitive action.",
+      "explanation": "Text: The coach made the athlete run. The athlete had been saying they did not want to run. The athlete runs; the coach is the causer. Here を marks the actor of an intransitive caused action, not a separate object being run.",
+      "answer": "cause-second",
+      "acceptedAnswers": [
+        "第二",
+        "だいに"
+      ],
+      "options": [
+        {
+          "id": "cause-first",
+          "label": "第一",
+          "rationale": "Text: The coach made the athlete run. The athlete had been saying they did not want to run. That reverses causer and runner. The athlete runs; the coach is the causer. Here を marks the actor of an intransitive caused action, not a separate object being run."
+        },
+        {
+          "id": "cause-second",
+          "label": "第二",
+          "rationale": "Text: The coach made the athlete run. The athlete had been saying they did not want to run. The athlete runs; the coach is the causer. Here を marks the actor of an intransitive caused action, not a separate object being run."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "8d0629e702af62653f1dfda8d5e0d49bfc411d31352ba117da0fb1a993b69983",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "監督",
+            "reading": "かんとく",
+            "headword": "監督",
+            "gloss": "coach"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "選手",
+            "reading": "せんしゅ",
+            "headword": "選手",
+            "gloss": "athlete"
+          },
+          {
+            "start": 13,
+            "end": 15,
+            "text": "選手",
+            "reading": "せんしゅ",
+            "headword": "選手",
+            "gloss": "athlete"
+          },
+          {
+            "start": 16,
+            "end": 22,
+            "text": "走りたくない",
+            "reading": "はしりたくない",
+            "headword": "走る",
+            "gloss": "does not want to run"
+          },
+          {
+            "start": 23,
+            "end": 30,
+            "text": "言っていました",
+            "reading": "いっていました",
+            "headword": "言う",
+            "gloss": "had been saying"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transfer-made-to-sing",
+      "jlpt": 4,
+      "target": "cp-second",
+      "relationship": "cp-roles",
+      "prompt": "先生と生徒が来ました。その後、生徒は先生に歌を歌わせられました。\n____",
+      "translation": "Who performs the singing, rather than causing it? Count the people from their FIRST introduction, not from the final clause. Lexical base: 歌う（うたう）, sing. Labels: 第一（だいいち） = the first named person, 先生; 第二（だいに） = the second named person, 生徒. Use only a printed label or its given kana reading.",
+      "evidence": "Track first-introduction order across clauses whose subject order changes, then read the made-to-act actor.",
+      "explanation": "Text: The teacher and the pupil arrived. After that, the pupil was made to sing a song by the teacher. The pupil is made to sing and therefore performs the singing. The teacher is introduced first but is the causer, not the singer. The report does not establish a particular emotion or physical force.",
+      "answer": "cp-second",
+      "acceptedAnswers": [
+        "第二",
+        "だいに"
+      ],
+      "options": [
+        {
+          "id": "cp-first",
+          "label": "第一",
+          "rationale": "Text: The teacher and the pupil arrived. After that, the pupil was made to sing a song by the teacher. The teacher causes the action here, rather than being the singer."
+        },
+        {
+          "id": "cp-second",
+          "label": "第二",
+          "rationale": "Text: The teacher and the pupil arrived. After that, the pupil was made to sing a song by the teacher. The pupil is made to sing and therefore performs the singing. The teacher is introduced first but is the causer, not the singer. The report does not establish a particular emotion or physical force."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "52ebd571525e9f60e5877d551b8cd6d44ba40ac9d4dc8af53df7aea969aba952",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "生徒",
+            "reading": "せいと",
+            "headword": "生徒",
+            "gloss": "pupil"
+          },
+          {
+            "start": 6,
+            "end": 10,
+            "text": "来ました",
+            "reading": "きました",
+            "headword": "来る",
+            "gloss": "came"
+          },
+          {
+            "start": 11,
+            "end": 14,
+            "text": "その後",
+            "reading": "そのあと",
+            "headword": "後",
+            "gloss": "after that"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "生徒",
+            "reading": "せいと",
+            "headword": "生徒",
+            "gloss": "pupil"
+          },
+          {
+            "start": 18,
+            "end": 20,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 21,
+            "end": 22,
+            "text": "歌",
+            "reading": "うた",
+            "headword": "歌",
+            "gloss": "song"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transfer-photo-permission",
+      "jlpt": 4,
+      "target": "permitted-action",
+      "relationship": "make-let",
+      "prompt": "店では普段、写真を撮ってはいけません。今日、スタッフが商品の写真を撮りたいと言いました。店長は「今日は商品だけならいいですよ」と答えて、商品の写真を撮らせました。\n____",
+      "translation": "Classify TODAY'S product-photograph action under the stated exception, not the shop's general rule. Lexical base: 撮る（とる）, take a photograph. Labels: 強制（きょうせい） = requiring action despite the expressed wish; 許可（きょか） = permitting the requested action. Use only a printed label or its given kana reading.",
+      "evidence": "Apply a specific time-and-subject permission exception without transferring the general prohibition to that action.",
+      "explanation": "Text: Photography is normally not allowed in the shop. Today, a staff member said they wanted to photograph the products. The manager replied, 'Today, it's fine if it is only the products,' and let them take photographs of the products. This particular action is the granted exception: today's product photographs. The general prohibition does not cancel the manager's express, limited approval. Nothing here grants permission for other subjects or other days.",
+      "answer": "permitted-action",
+      "acceptedAnswers": [
+        "許可",
+        "きょか"
+      ],
+      "options": [
+        {
+          "id": "required-action",
+          "label": "強制",
+          "rationale": "Text: Photography is normally not allowed in the shop. Today, a staff member said they wanted to photograph the products. The manager replied, 'Today, it's fine if it is only the products,' and let them take photographs of the products. A general prohibition is not evidence that the staff member was required to act against their wish. The manager explicitly allows the requested product photographs within today's exception."
+        },
+        {
+          "id": "permitted-action",
+          "label": "許可",
+          "rationale": "Text: Photography is normally not allowed in the shop. Today, a staff member said they wanted to photograph the products. The manager replied, 'Today, it's fine if it is only the products,' and let them take photographs of the products. This particular action is the granted exception: today's product photographs. The general prohibition does not cancel the manager's express, limited approval. Nothing here grants permission for other subjects or other days."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "3cef6624937935fdbe8db460446e2c6d0f6207bdcb6232a81bdaed8cfb96ba48",
+        "spans": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "普段",
+            "reading": "ふだん",
+            "headword": "普段",
+            "gloss": "usually"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "写真",
+            "reading": "しゃしん",
+            "headword": "写真",
+            "gloss": "photograph"
+          },
+          {
+            "start": 19,
+            "end": 21,
+            "text": "今日",
+            "reading": "きょう",
+            "headword": "今日",
+            "gloss": "today"
+          },
+          {
+            "start": 22,
+            "end": 26,
+            "text": "スタッフ",
+            "reading": "すたっふ",
+            "headword": "スタッフ",
+            "gloss": "staff member"
+          },
+          {
+            "start": 27,
+            "end": 29,
+            "text": "商品",
+            "reading": "しょうひん",
+            "headword": "商品",
+            "gloss": "products"
+          },
+          {
+            "start": 30,
+            "end": 32,
+            "text": "写真",
+            "reading": "しゃしん",
+            "headword": "写真",
+            "gloss": "photograph"
+          },
+          {
+            "start": 33,
+            "end": 37,
+            "text": "撮りたい",
+            "reading": "とりたい",
+            "headword": "撮る",
+            "gloss": "want to take"
+          },
+          {
+            "start": 38,
+            "end": 43,
+            "text": "言いました",
+            "reading": "いいました",
+            "headword": "言う",
+            "gloss": "said"
+          },
+          {
+            "start": 44,
+            "end": 46,
+            "text": "店長",
+            "reading": "てんちょう",
+            "headword": "店長",
+            "gloss": "store manager"
+          },
+          {
+            "start": 48,
+            "end": 50,
+            "text": "今日",
+            "reading": "きょう",
+            "headword": "今日",
+            "gloss": "today"
+          },
+          {
+            "start": 51,
+            "end": 53,
+            "text": "商品",
+            "reading": "しょうひん",
+            "headword": "商品",
+            "gloss": "products"
+          },
+          {
+            "start": 57,
+            "end": 59,
+            "text": "いい",
+            "reading": "いい",
+            "headword": "いい",
+            "gloss": "fine"
+          },
+          {
+            "start": 64,
+            "end": 67,
+            "text": "答えて",
+            "reading": "こたえて",
+            "headword": "答える",
+            "gloss": "answered; connecting form"
+          },
+          {
+            "start": 68,
+            "end": 70,
+            "text": "商品",
+            "reading": "しょうひん",
+            "headword": "商品",
+            "gloss": "products"
+          },
+          {
+            "start": 71,
+            "end": 73,
+            "text": "写真",
+            "reading": "しゃしん",
+            "headword": "写真",
+            "gloss": "photograph"
+          }
+        ]
+      }
     }
   ],
   "introductionGroups": [
@@ -2716,6 +3112,16 @@
           "exerciseId": "causative-perspective-class-cleaning-cause-object",
           "facetId": "cause-first",
           "exampleKey": "class-cleaning"
+        },
+        {
+          "exerciseId": "transfer-running-causer",
+          "facetId": "cause-first",
+          "exampleKey": "transfer-intransitive-caused-running"
+        },
+        {
+          "exerciseId": "transfer-running-runner",
+          "facetId": "cause-second",
+          "exampleKey": "transfer-intransitive-caused-running"
         }
       ],
       "next": [
@@ -2765,6 +3171,11 @@
           "exerciseId": "causative-perspective-play-permitted",
           "facetId": "permitted-action",
           "exampleKey": "play-time"
+        },
+        {
+          "exerciseId": "transfer-photo-permission",
+          "facetId": "permitted-action",
+          "exampleKey": "transfer-limited-photo-exception"
         }
       ],
       "next": [
@@ -2902,6 +3313,11 @@
           "exerciseId": "causative-perspective-class-cleaning-cp-object",
           "facetId": "cp-first",
           "exampleKey": "class-cleaning"
+        },
+        {
+          "exerciseId": "transfer-made-to-sing",
+          "facetId": "cp-second",
+          "exampleKey": "transfer-made-to-sing-viewpoint"
         }
       ],
       "next": [

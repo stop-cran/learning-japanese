@@ -1370,6 +1370,450 @@
           }
         ]
       }
+    },
+    {
+      "id": "transfer-open-fridge",
+      "jlpt": 4,
+      "target": "plain-state",
+      "relationship": "context",
+      "prompt": "台所に来ると、冷蔵庫のドアが開いていました。姉は「わざと開けた？」と聞きました。理由は分かりません。\n____",
+      "translation": "Which presentation does the door statement itself encode? Lexical bases: 開く（あく）, become open; 開ける（あける）, open something. Labels: 現状（げんじょう） = current state, without encoding purposeful arrangement; 配置済み（はいちずみ） = purposefully arranged result is in place. Use only a printed label or its given kana reading.",
+      "evidence": "Separate a state report from a different speaker's unconfirmed suggestion about purposeful action.",
+      "explanation": "Text: When I came to the kitchen, the refrigerator door was open. My older sister asked, 'Did you open it deliberately?' I do not know why it is open. The door's open state is reported without a purposeful-arrangement construction. The sister asks about deliberate opening; her question does not establish it, and an unknown cause does not establish its absence.",
+      "answer": "plain-state",
+      "acceptedAnswers": [
+        "現状",
+        "げんじょう"
+      ],
+      "options": [
+        {
+          "id": "plain-state",
+          "label": "現状",
+          "rationale": "Text: When I came to the kitchen, the refrigerator door was open. My older sister asked, 'Did you open it deliberately?' I do not know why it is open. The door's open state is reported without a purposeful-arrangement construction. The sister asks about deliberate opening; her question does not establish it, and an unknown cause does not establish its absence."
+        },
+        {
+          "id": "arranged-state",
+          "label": "配置済み",
+          "rationale": "Text: When I came to the kitchen, the refrigerator door was open. My older sister asked, 'Did you open it deliberately?' I do not know why it is open. The sister's question is not an assertion of intentional arrangement. The door statement itself reports the state."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f12cb1daa6224c9be4341702f46778d21d124edd7521a4de4b2a167b55b0588a",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "台所",
+            "reading": "だいどころ",
+            "headword": "台所",
+            "gloss": "kitchen"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "来る",
+            "reading": "くる",
+            "headword": "来る",
+            "gloss": "come"
+          },
+          {
+            "start": 7,
+            "end": 10,
+            "text": "冷蔵庫",
+            "reading": "れいぞうこ",
+            "headword": "冷蔵庫",
+            "gloss": "refrigerator"
+          },
+          {
+            "start": 11,
+            "end": 13,
+            "text": "ドア",
+            "reading": "どあ",
+            "headword": "ドア",
+            "gloss": "door"
+          },
+          {
+            "start": 22,
+            "end": 23,
+            "text": "姉",
+            "reading": "あね",
+            "headword": "姉",
+            "gloss": "older sister"
+          },
+          {
+            "start": 25,
+            "end": 28,
+            "text": "わざと",
+            "reading": "わざと",
+            "headword": "わざと",
+            "gloss": "deliberately"
+          },
+          {
+            "start": 28,
+            "end": 31,
+            "text": "開けた",
+            "reading": "あけた",
+            "headword": "開ける",
+            "gloss": "opened"
+          },
+          {
+            "start": 34,
+            "end": 39,
+            "text": "聞きました",
+            "reading": "ききました",
+            "headword": "聞く",
+            "gloss": "asked"
+          },
+          {
+            "start": 40,
+            "end": 42,
+            "text": "理由",
+            "reading": "りゆう",
+            "headword": "理由",
+            "gloss": "reason"
+          },
+          {
+            "start": 43,
+            "end": 49,
+            "text": "分かりません",
+            "reading": "わかりません",
+            "headword": "分かる",
+            "gloss": "do not know"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transfer-meeting-chairs",
+      "jlpt": 4,
+      "target": "arranged-state",
+      "relationship": "context",
+      "prompt": "明日の会議の準備をしています。椅子はもう並べてあります。予備の資料はまだです。今夜、印刷しておきます。\n椅子の説明：____",
+      "translation": "Classify the referenced item's stage. Lexical bases: 並べる（ならべる）, arrange; 印刷する（いんさつする）, print. Labels: 配置済み（はいちずみ） = purposefully arranged result is in place; 今後の準備（こんごのじゅんび） = preparatory action still to be done. Use only a printed label or its given kana reading.",
+      "evidence": "Keep already-arranged and not-yet-performed preparation separate within one plan.",
+      "explanation": "Text: We are preparing for tomorrow's meeting. The chairs have already been arranged. The spare documents are not ready yet. I will print them tonight in preparation. The chairs have already been arranged and that result is in place. The spare documents belong to the separate future preparation, not to this chair report.",
+      "answer": "arranged-state",
+      "acceptedAnswers": [
+        "配置済み",
+        "はいちずみ"
+      ],
+      "options": [
+        {
+          "id": "arranged-state",
+          "label": "配置済み",
+          "rationale": "Text: We are preparing for tomorrow's meeting. The chairs have already been arranged. The spare documents are not ready yet. I will print them tonight in preparation. The chairs have already been arranged and that result is in place. The spare documents belong to the separate future preparation, not to this chair report."
+        },
+        {
+          "id": "future-preparation",
+          "label": "今後の準備",
+          "rationale": "Text: We are preparing for tomorrow's meeting. The chairs have already been arranged. The spare documents are not ready yet. I will print them tonight in preparation. That transfers the other item's stage to this one. The chairs have already been arranged and that result is in place. The spare documents belong to the separate future preparation, not to this chair report."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "6b942de3dd92cafdd033834fcb0376dc4679b61d54a6492164efa88c1a1f4eb0",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "明日",
+            "reading": "あした",
+            "headword": "明日",
+            "gloss": "tomorrow"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "会議",
+            "reading": "かいぎ",
+            "headword": "会議",
+            "gloss": "meeting"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "準備",
+            "reading": "じゅんび",
+            "headword": "準備",
+            "gloss": "preparation"
+          },
+          {
+            "start": 9,
+            "end": 14,
+            "text": "しています",
+            "reading": "しています",
+            "headword": "する",
+            "gloss": "are doing"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "椅子",
+            "reading": "いす",
+            "headword": "椅子",
+            "gloss": "chairs"
+          },
+          {
+            "start": 18,
+            "end": 20,
+            "text": "もう",
+            "reading": "もう",
+            "headword": "もう",
+            "gloss": "already"
+          },
+          {
+            "start": 28,
+            "end": 30,
+            "text": "予備",
+            "reading": "よび",
+            "headword": "予備",
+            "gloss": "spare"
+          },
+          {
+            "start": 31,
+            "end": 33,
+            "text": "資料",
+            "reading": "しりょう",
+            "headword": "資料",
+            "gloss": "documents"
+          },
+          {
+            "start": 34,
+            "end": 36,
+            "text": "まだ",
+            "reading": "まだ",
+            "headword": "まだ",
+            "gloss": "not yet"
+          },
+          {
+            "start": 39,
+            "end": 41,
+            "text": "今夜",
+            "reading": "こんや",
+            "headword": "今夜",
+            "gloss": "tonight"
+          },
+          {
+            "start": 52,
+            "end": 54,
+            "text": "椅子",
+            "reading": "いす",
+            "headword": "椅子",
+            "gloss": "chairs"
+          },
+          {
+            "start": 55,
+            "end": 57,
+            "text": "説明",
+            "reading": "せつめい",
+            "headword": "説明",
+            "gloss": "description"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transfer-meeting-spares",
+      "jlpt": 4,
+      "target": "future-preparation",
+      "relationship": "context",
+      "prompt": "明日の会議の準備をしています。椅子はもう並べてあります。予備の資料はまだです。今夜、印刷しておきます。\n予備の資料の説明：____",
+      "translation": "Classify the referenced item's stage. Lexical bases: 並べる（ならべる）, arrange; 印刷する（いんさつする）, print. Labels: 配置済み（はいちずみ） = purposefully arranged result is in place; 今後の準備（こんごのじゅんび） = preparatory action still to be done. Use only a printed label or its given kana reading.",
+      "evidence": "Keep already-arranged and not-yet-performed preparation separate within one plan.",
+      "explanation": "Text: We are preparing for tomorrow's meeting. The chairs have already been arranged. The spare documents are not ready yet. I will print them tonight in preparation. The spare documents are explicitly not ready. Printing them tonight is the unperformed preparation; the completed chair arrangement does not make the documents ready.",
+      "answer": "future-preparation",
+      "acceptedAnswers": [
+        "今後の準備",
+        "こんごのじゅんび"
+      ],
+      "options": [
+        {
+          "id": "arranged-state",
+          "label": "配置済み",
+          "rationale": "Text: We are preparing for tomorrow's meeting. The chairs have already been arranged. The spare documents are not ready yet. I will print them tonight in preparation. That transfers the other item's stage to this one. The spare documents are explicitly not ready. Printing them tonight is the unperformed preparation; the completed chair arrangement does not make the documents ready."
+        },
+        {
+          "id": "future-preparation",
+          "label": "今後の準備",
+          "rationale": "Text: We are preparing for tomorrow's meeting. The chairs have already been arranged. The spare documents are not ready yet. I will print them tonight in preparation. The spare documents are explicitly not ready. Printing them tonight is the unperformed preparation; the completed chair arrangement does not make the documents ready."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "ef162b4d9e763f79dc9c4df6b2d83175b0be5d27a6e004c739f16e7efa32e729",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "明日",
+            "reading": "あした",
+            "headword": "明日",
+            "gloss": "tomorrow"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "会議",
+            "reading": "かいぎ",
+            "headword": "会議",
+            "gloss": "meeting"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "準備",
+            "reading": "じゅんび",
+            "headword": "準備",
+            "gloss": "preparation"
+          },
+          {
+            "start": 9,
+            "end": 14,
+            "text": "しています",
+            "reading": "しています",
+            "headword": "する",
+            "gloss": "are doing"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "椅子",
+            "reading": "いす",
+            "headword": "椅子",
+            "gloss": "chairs"
+          },
+          {
+            "start": 18,
+            "end": 20,
+            "text": "もう",
+            "reading": "もう",
+            "headword": "もう",
+            "gloss": "already"
+          },
+          {
+            "start": 28,
+            "end": 30,
+            "text": "予備",
+            "reading": "よび",
+            "headword": "予備",
+            "gloss": "spare"
+          },
+          {
+            "start": 31,
+            "end": 33,
+            "text": "資料",
+            "reading": "しりょう",
+            "headword": "資料",
+            "gloss": "documents"
+          },
+          {
+            "start": 34,
+            "end": 36,
+            "text": "まだ",
+            "reading": "まだ",
+            "headword": "まだ",
+            "gloss": "not yet"
+          },
+          {
+            "start": 39,
+            "end": 41,
+            "text": "今夜",
+            "reading": "こんや",
+            "headword": "今夜",
+            "gloss": "tonight"
+          },
+          {
+            "start": 52,
+            "end": 54,
+            "text": "予備",
+            "reading": "よび",
+            "headword": "予備",
+            "gloss": "spare"
+          },
+          {
+            "start": 55,
+            "end": 57,
+            "text": "資料",
+            "reading": "しりょう",
+            "headword": "資料",
+            "gloss": "documents"
+          },
+          {
+            "start": 58,
+            "end": 60,
+            "text": "説明",
+            "reading": "せつめい",
+            "headword": "説明",
+            "gloss": "description"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transfer-cancelled-meeting-namecards",
+      "jlpt": 4,
+      "target": "arranged-state",
+      "relationship": "context",
+      "prompt": "会議は中止になりましたが、机には名札が置いてあります。\n____",
+      "translation": "Classify what the name-card statement presents. Lexical base: 置く（おく）, place. Labels: 配置済み（はいちずみ） = purposefully arranged result is in place; 今後の準備（こんごのじゅんび） = preparatory action still to be done. Use only a printed label or its given kana reading.",
+      "evidence": "Read a surviving prepared result without inventing an active future plan.",
+      "explanation": "Text: The meeting was cancelled, but the name cards have been placed on the desks and remain there. The purposeful placement result remains in place even though the meeting was cancelled. The sentence does not promise a future placement or require the original plan still to be active.",
+      "answer": "arranged-state",
+      "acceptedAnswers": [
+        "配置済み",
+        "はいちずみ"
+      ],
+      "options": [
+        {
+          "id": "arranged-state",
+          "label": "配置済み",
+          "rationale": "Text: The meeting was cancelled, but the name cards have been placed on the desks and remain there. The purposeful placement result remains in place even though the meeting was cancelled. The sentence does not promise a future placement or require the original plan still to be active."
+        },
+        {
+          "id": "future-preparation",
+          "label": "今後の準備",
+          "rationale": "Text: The meeting was cancelled, but the name cards have been placed on the desks and remain there. The cancelled meeting does not convert the already-existing arrangement into a future action."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "66999c329245add7564baf7d25c760e6d199b36c0e6e75574686be7e6d116a48",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "会議",
+            "reading": "かいぎ",
+            "headword": "会議",
+            "gloss": "meeting"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "中止",
+            "reading": "ちゅうし",
+            "headword": "中止",
+            "gloss": "cancellation"
+          },
+          {
+            "start": 13,
+            "end": 14,
+            "text": "机",
+            "reading": "つくえ",
+            "headword": "机",
+            "gloss": "desk"
+          },
+          {
+            "start": 16,
+            "end": 18,
+            "text": "名札",
+            "reading": "なふだ",
+            "headword": "名札",
+            "gloss": "name cards"
+          }
+        ]
+      }
     }
   ],
   "introductionGroups": [
@@ -1617,6 +2061,26 @@
           "exerciseId": "transitivity-results-light-arrangement-future-preparation",
           "facetId": "future-preparation",
           "exampleKey": "light-arrangement"
+        },
+        {
+          "exerciseId": "transfer-open-fridge",
+          "facetId": "plain-state",
+          "exampleKey": "transfer-unexplained-fridge-state"
+        },
+        {
+          "exerciseId": "transfer-meeting-chairs",
+          "facetId": "arranged-state",
+          "exampleKey": "transfer-meeting-two-preparation-stages"
+        },
+        {
+          "exerciseId": "transfer-meeting-spares",
+          "facetId": "future-preparation",
+          "exampleKey": "transfer-meeting-two-preparation-stages"
+        },
+        {
+          "exerciseId": "transfer-cancelled-meeting-namecards",
+          "facetId": "arranged-state",
+          "exampleKey": "transfer-result-after-cancellation"
         }
       ],
       "next": [],

@@ -23,6 +23,17 @@ Follow the [grammar exercise contract](content-format.md#grammar-exercises) and
 For observed predicate-role, register, typed-spelling, matched-context and response-label pitfalls, see the
 [reusable grammar-review lessons](../REVIEW.md#reusable-grammar-review-lessons).
 
+For contextual transfer, inspect **question-visible topic and focus labels**, not just the prompt and translation.
+A group named only after the correct family can reveal a mixed-family answer. Keep each existing facet's single
+answer class; do not attach differently targeted members just to hide a cue. A narrowly reviewed neutral group-label
+amendment can preserve identities and established operations without inventing new classes, gates or app behavior.
+The [mixed-context follow-up](grammar-contextual-transfer-sources.json) records one such amendment and its exact
+domain/context/owner matrix. Its paired scenarios count once; its depth claim is deliberately bounded.
+Compare new decisions with the owner's existing tasks, not just with the other new prompts. A changed noun,
+participant or motivating sentence does not establish new operational breadth. In that follow-up, a reciprocal
+exchange and a specifically bounded permission replaced two repetitions; changing their key strings alone would not
+have resolved the review finding.
+
 ## Reusing lexical annotations
 
 A matching surface is a candidate, not proof of its word boundary or sense in a new sentence. Recheck affected

@@ -162,6 +162,21 @@
           "exerciseId": "cond2-ongoing-reading",
           "facetId": "ongoing",
           "exampleKey": "reading-interruption"
+        },
+        {
+          "exerciseId": "transfer-excursion-preparation",
+          "facetId": "preparation",
+          "exampleKey": "transfer-excursion-before-and-after"
+        },
+        {
+          "exerciseId": "transfer-excursion-arrival-call",
+          "facetId": "trigger",
+          "exampleKey": "transfer-excursion-before-and-after"
+        },
+        {
+          "exerciseId": "transfer-reading-interruption",
+          "facetId": "ongoing",
+          "exampleKey": "transfer-ongoing-reading-encounter"
         }
       ],
       "next": [
@@ -216,6 +231,11 @@
           "exerciseId": "cond2-request-not-cold",
           "facetId": "negative",
           "exampleKey": "window-comfort"
+        },
+        {
+          "exerciseId": "transfer-empty-room-switch",
+          "facetId": "negative",
+          "exampleKey": "transfer-empty-room-state-request"
         }
       ],
       "next": [
@@ -3340,6 +3360,457 @@
             "headword": "働く",
             "gloss": "could work",
             "word": "働く"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transfer-excursion-preparation",
+      "jlpt": 4,
+      "target": "condition-positive",
+      "relationship": "condition-polarity",
+      "prompt": "明日の遠足には参加することにしました。準備は今日します。\n先生：「明日____、今日、お弁当を作ってください。」",
+      "translation": "Complete the teacher's response to the participation plan, preserving its premise and the given preparation time. Choose one printed fragment: 参加するなら / 参加しないなら. When typing, copy the printed fragment or use its all-hiragana spelling.",
+      "evidence": "Use a prospective plan as the premise of preparation that happens earlier.",
+      "explanation": "Text: I have decided to join tomorrow's excursion. Preparation is today. Teacher: 'If you are participating tomorrow, please make a packed lunch today.' The response takes the stated plan to participate as its premise. Lunch preparation is today, before tomorrow's participation. The question does not require rejecting other natural conditional families.",
+      "answer": "condition-positive",
+      "acceptedAnswers": [
+        "参加するなら",
+        "さんかするなら"
+      ],
+      "options": [
+        {
+          "id": "condition-positive",
+          "label": "参加するなら",
+          "rationale": "Text: I have decided to join tomorrow's excursion. Preparation is today. Teacher: 'If you are participating tomorrow, please make a packed lunch today.' The response takes the stated plan to participate as its premise. Lunch preparation is today, before tomorrow's participation. The question does not require rejecting other natural conditional families."
+        },
+        {
+          "id": "condition-negative",
+          "label": "参加しないなら",
+          "rationale": "Text: I have decided to join tomorrow's excursion. Preparation is today. Teacher: 'If you are participating tomorrow, please make a packed lunch today.' That makes nonparticipation the premise instead of the given participation plan."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "b92dea0de020be00206c50b9cf2f2dd5e9c05d3a1c58ff4bea4719b98eb6cbbf",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "明日",
+            "reading": "あした",
+            "headword": "明日",
+            "gloss": "tomorrow"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "遠足",
+            "reading": "えんそく",
+            "headword": "遠足",
+            "gloss": "excursion"
+          },
+          {
+            "start": 7,
+            "end": 11,
+            "text": "参加する",
+            "reading": "さんかする",
+            "headword": "参加する",
+            "gloss": "participate"
+          },
+          {
+            "start": 19,
+            "end": 21,
+            "text": "準備",
+            "reading": "じゅんび",
+            "headword": "準備",
+            "gloss": "preparation"
+          },
+          {
+            "start": 22,
+            "end": 24,
+            "text": "今日",
+            "reading": "きょう",
+            "headword": "今日",
+            "gloss": "today"
+          },
+          {
+            "start": 29,
+            "end": 31,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 33,
+            "end": 35,
+            "text": "明日",
+            "reading": "あした",
+            "headword": "明日",
+            "gloss": "tomorrow"
+          },
+          {
+            "start": 40,
+            "end": 42,
+            "text": "今日",
+            "reading": "きょう",
+            "headword": "今日",
+            "gloss": "today"
+          },
+          {
+            "start": 43,
+            "end": 46,
+            "text": "お弁当",
+            "reading": "おべんとう",
+            "headword": "弁当",
+            "gloss": "packed lunch"
+          },
+          {
+            "start": 47,
+            "end": 50,
+            "text": "作って",
+            "reading": "つくって",
+            "headword": "作る",
+            "gloss": "make; connecting form"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transfer-excursion-arrival-call",
+      "jlpt": 4,
+      "target": "condition-positive",
+      "relationship": "condition-polarity",
+      "prompt": "遠足の先生と約束しました。電話は集合場所への到着の後です。\n先生：「集合場所に____、電話してください。」",
+      "translation": "Restate the agreed call timing, not a different contingency. Choose one printed fragment: 着いたら / 着かなかったら. When typing, copy the printed fragment or use its all-hiragana spelling.",
+      "evidence": "Use reaching the destination as a completed trigger, contrasting with the earlier preparation in the paired scene.",
+      "explanation": "Text: I made an agreement with the excursion's teacher. The call is after arrival at the meeting point. Teacher: 'Once you reach the meeting point, please call.' Arrival triggers the requested call. The agreement places the call after reaching the meeting point, not in a failure-to-arrive case.",
+      "answer": "condition-positive",
+      "acceptedAnswers": [
+        "着いたら",
+        "ついたら"
+      ],
+      "options": [
+        {
+          "id": "condition-positive",
+          "label": "着いたら",
+          "rationale": "Text: I made an agreement with the excursion's teacher. The call is after arrival at the meeting point. Teacher: 'Once you reach the meeting point, please call.' Arrival triggers the requested call. The agreement places the call after reaching the meeting point, not in a failure-to-arrive case."
+        },
+        {
+          "id": "condition-negative",
+          "label": "着かなかったら",
+          "rationale": "Text: I made an agreement with the excursion's teacher. The call is after arrival at the meeting point. Teacher: 'Once you reach the meeting point, please call.' That substitutes failure to arrive for the agreed arrival trigger."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "5381b96f2cffc96d20c5b85f8b9359b1f29848d82dada27077ff6cd130f224c2",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "遠足",
+            "reading": "えんそく",
+            "headword": "遠足",
+            "gloss": "excursion"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 6,
+            "end": 12,
+            "text": "約束しました",
+            "reading": "やくそくしました",
+            "headword": "約束する",
+            "gloss": "agreed"
+          },
+          {
+            "start": 13,
+            "end": 15,
+            "text": "電話",
+            "reading": "でんわ",
+            "headword": "電話",
+            "gloss": "phone call"
+          },
+          {
+            "start": 16,
+            "end": 20,
+            "text": "集合場所",
+            "reading": "しゅうごうばしょ",
+            "headword": "集合場所",
+            "gloss": "meeting point"
+          },
+          {
+            "start": 22,
+            "end": 24,
+            "text": "到着",
+            "reading": "とうちゃく",
+            "headword": "到着",
+            "gloss": "arrival"
+          },
+          {
+            "start": 25,
+            "end": 26,
+            "text": "後",
+            "reading": "あと",
+            "headword": "後",
+            "gloss": "after"
+          },
+          {
+            "start": 30,
+            "end": 32,
+            "text": "先生",
+            "reading": "せんせい",
+            "headword": "先生",
+            "gloss": "teacher"
+          },
+          {
+            "start": 34,
+            "end": 38,
+            "text": "集合場所",
+            "reading": "しゅうごうばしょ",
+            "headword": "集合場所",
+            "gloss": "meeting point"
+          },
+          {
+            "start": 44,
+            "end": 48,
+            "text": "電話して",
+            "reading": "でんわして",
+            "headword": "電話する",
+            "gloss": "phone; connecting form"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transfer-reading-interruption",
+      "jlpt": 4,
+      "target": "condition-positive",
+      "relationship": "condition-polarity",
+      "prompt": "教室で本を読んでいる途中で、友達が来ました。\n本を____、友達が来ました。",
+      "translation": "Retell the encounter while preserving the supplied activity and its stage. Choose one printed fragment: 読んでいたら / 読んでいなかったら. When typing, copy the printed fragment or use its all-hiragana spelling.",
+      "evidence": "Preserve an ongoing-event encounter instead of interpreting every たら as completion of the underlying activity.",
+      "explanation": "Text: A friend came while I was in the middle of reading a book in the classroom. While I was reading, the friend came. The encounter happens during reading. 読んでいたら reports an ongoing setting, not necessarily completion of the book before the arrival.",
+      "answer": "condition-positive",
+      "acceptedAnswers": [
+        "読んでいたら",
+        "よんでいたら"
+      ],
+      "options": [
+        {
+          "id": "condition-positive",
+          "label": "読んでいたら",
+          "rationale": "Text: A friend came while I was in the middle of reading a book in the classroom. While I was reading, the friend came. The encounter happens during reading. 読んでいたら reports an ongoing setting, not necessarily completion of the book before the arrival."
+        },
+        {
+          "id": "condition-negative",
+          "label": "読んでいなかったら",
+          "rationale": "Text: A friend came while I was in the middle of reading a book in the classroom. While I was reading, the friend came. That denies the ongoing reading which the first sentence explicitly supplies."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "bde3ecd6fc52c07203fb95491e938921a813a197d261f5725a2a4217be12011a",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "教室",
+            "reading": "きょうしつ",
+            "headword": "教室",
+            "gloss": "classroom"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "本",
+            "reading": "ほん",
+            "headword": "本",
+            "gloss": "book"
+          },
+          {
+            "start": 5,
+            "end": 10,
+            "text": "読んでいる",
+            "reading": "よんでいる",
+            "headword": "読む",
+            "gloss": "be reading"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "途中",
+            "reading": "とちゅう",
+            "headword": "途中",
+            "gloss": "in the middle"
+          },
+          {
+            "start": 14,
+            "end": 16,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 17,
+            "end": 21,
+            "text": "来ました",
+            "reading": "きました",
+            "headword": "来る",
+            "gloss": "came"
+          },
+          {
+            "start": 23,
+            "end": 24,
+            "text": "本",
+            "reading": "ほん",
+            "headword": "本",
+            "gloss": "book"
+          },
+          {
+            "start": 30,
+            "end": 32,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 33,
+            "end": 37,
+            "text": "来ました",
+            "reading": "きました",
+            "headword": "来る",
+            "gloss": "came"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transfer-empty-room-switch",
+      "jlpt": 4,
+      "target": "condition-negative",
+      "relationship": "condition-polarity",
+      "prompt": "最後に部屋を出る人へのお願い：誰も残っていないことを確認してください。誰も____、電気を消してください。",
+      "translation": "Complete the stated empty-room rule, retaining the required condition. Choose one printed fragment: いれば / いなければ. When typing, copy the printed fragment or use its all-hiragana spelling.",
+      "evidence": "Select a negative existence condition for a state-based request.",
+      "explanation": "Text: A request for the last person leaving the room: please check that nobody remains. If nobody is there, please switch off the light. The request applies when nobody is there. The negative state condition fits 誰も and the explicit empty-room check. A request after a state condition is not universally prohibited with ば.",
+      "answer": "condition-negative",
+      "acceptedAnswers": [
+        "いなければ"
+      ],
+      "options": [
+        {
+          "id": "condition-positive",
+          "label": "いれば",
+          "rationale": "Text: A request for the last person leaving the room: please check that nobody remains. If nobody is there, please switch off the light. That loses the required negative state and does not express 'if nobody is there' with 誰も."
+        },
+        {
+          "id": "condition-negative",
+          "label": "いなければ",
+          "rationale": "Text: A request for the last person leaving the room: please check that nobody remains. If nobody is there, please switch off the light. The request applies when nobody is there. The negative state condition fits 誰も and the explicit empty-room check. A request after a state condition is not universally prohibited with ば."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "80207b0a43cb9da53405bc16cdbf28e0c57670ade657aa30645b240f7e9df042",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "最後",
+            "reading": "さいご",
+            "headword": "最後",
+            "gloss": "last"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "部屋",
+            "reading": "へや",
+            "headword": "部屋",
+            "gloss": "room"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "出る",
+            "reading": "でる",
+            "headword": "出る",
+            "gloss": "leave"
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": "人",
+            "reading": "ひと",
+            "headword": "人",
+            "gloss": "person"
+          },
+          {
+            "start": 11,
+            "end": 14,
+            "text": "お願い",
+            "reading": "おねがい",
+            "headword": "願い",
+            "gloss": "request"
+          },
+          {
+            "start": 15,
+            "end": 16,
+            "text": "誰",
+            "reading": "だれ",
+            "headword": "誰",
+            "gloss": "who; anybody"
+          },
+          {
+            "start": 17,
+            "end": 23,
+            "text": "残っていない",
+            "reading": "のこっていない",
+            "headword": "残る",
+            "gloss": "is not remaining"
+          },
+          {
+            "start": 26,
+            "end": 30,
+            "text": "確認して",
+            "reading": "かくにんして",
+            "headword": "確認する",
+            "gloss": "confirm; connecting form"
+          },
+          {
+            "start": 35,
+            "end": 36,
+            "text": "誰",
+            "reading": "だれ",
+            "headword": "誰",
+            "gloss": "who; anybody"
+          },
+          {
+            "start": 42,
+            "end": 44,
+            "text": "電気",
+            "reading": "でんき",
+            "headword": "電気",
+            "gloss": "light"
+          },
+          {
+            "start": 45,
+            "end": 48,
+            "text": "消して",
+            "reading": "けして",
+            "headword": "消す",
+            "gloss": "turn off; connecting form"
           }
         ]
       }

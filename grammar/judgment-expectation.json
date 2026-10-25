@@ -1617,6 +1617,514 @@
           }
         ]
       }
+    },
+    {
+      "id": "transfer-uncertain-absence",
+      "jlpt": 4,
+      "target": "possible-negative",
+      "relationship": "possibility",
+      "prompt": "友達から返事がありません。今日は来ないかもしれません。\n____",
+      "translation": "Classify the proposition left possible by the FINAL sentence, not its confidence or truth. Lexical bases: 来る（くる）, come; 食べる（たべる）, eat. Labels: 肯定（こうてい） = the possible event/proposition is affirmative; 否定（ひてい） = the possible event/proposition is negative. Use only a printed label or its given kana reading.",
+      "evidence": "Read the proposition's polarity under uncertainty; distinguish event tense from the possibility ending.",
+      "explanation": "Text: There is no reply from my friend. They may not come today. The possible proposition is that the friend does not come today. The speaker leaves that negative event open; this is not certainty that the friend will be absent.",
+      "answer": "possible-negative",
+      "acceptedAnswers": [
+        "否定",
+        "ひてい"
+      ],
+      "options": [
+        {
+          "id": "possible-positive",
+          "label": "肯定",
+          "rationale": "Text: There is no reply from my friend. They may not come today. That confuses the proposition's polarity with the uncertainty ending. The possible proposition is that the friend does not come today. The speaker leaves that negative event open; this is not certainty that the friend will be absent."
+        },
+        {
+          "id": "possible-negative",
+          "label": "否定",
+          "rationale": "Text: There is no reply from my friend. They may not come today. The possible proposition is that the friend does not come today. The speaker leaves that negative event open; this is not certainty that the friend will be absent."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "73851da7be6f5842b234b3510317c0853bca5bd7aad82bc8810ded542f35ee55",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "友達",
+            "reading": "ともだち",
+            "headword": "友達",
+            "gloss": "friend"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "返事",
+            "reading": "へんじ",
+            "headword": "返事",
+            "gloss": "reply"
+          },
+          {
+            "start": 7,
+            "end": 12,
+            "text": "ありません",
+            "reading": "ありません",
+            "headword": "ある",
+            "gloss": "there is none"
+          },
+          {
+            "start": 13,
+            "end": 15,
+            "text": "今日",
+            "reading": "きょう",
+            "headword": "今日",
+            "gloss": "today"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transfer-uncertain-memory",
+      "jlpt": 4,
+      "target": "possible-positive",
+      "relationship": "possibility",
+      "prompt": "この店の写真を見て、昔を思い出しました。子供のころ、ここで食べたかもしれません。\n____",
+      "translation": "Classify the proposition left possible by the FINAL sentence, not its confidence or truth. Lexical bases: 来る（くる）, come; 食べる（たべる）, eat. Labels: 肯定（こうてい） = the possible event/proposition is affirmative; 否定（ひてい） = the possible event/proposition is negative. Use only a printed label or its given kana reading.",
+      "evidence": "Read the proposition's polarity under uncertainty; distinguish event tense from the possibility ending.",
+      "explanation": "Text: Looking at a photograph of this shop reminded me of the past. I may have eaten here as a child. The possible proposition is affirmative and past: the speaker may have eaten here as a child. The negative-looking ending inside かもしれません does not turn 食べた into a negative event.",
+      "answer": "possible-positive",
+      "acceptedAnswers": [
+        "肯定",
+        "こうてい"
+      ],
+      "options": [
+        {
+          "id": "possible-positive",
+          "label": "肯定",
+          "rationale": "Text: Looking at a photograph of this shop reminded me of the past. I may have eaten here as a child. The possible proposition is affirmative and past: the speaker may have eaten here as a child. The negative-looking ending inside かもしれません does not turn 食べた into a negative event."
+        },
+        {
+          "id": "possible-negative",
+          "label": "否定",
+          "rationale": "Text: Looking at a photograph of this shop reminded me of the past. I may have eaten here as a child. That confuses the proposition's polarity with the uncertainty ending. The possible proposition is affirmative and past: the speaker may have eaten here as a child. The negative-looking ending inside かもしれません does not turn 食べた into a negative event."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "32ecb69fa54b4f860bbad0f9b4e65860ec56dfb53a248af962d820a9323614a6",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 2,
+            "end": 3,
+            "text": "店",
+            "reading": "みせ",
+            "headword": "店",
+            "gloss": "shop"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "写真",
+            "reading": "しゃしん",
+            "headword": "写真",
+            "gloss": "photograph"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "見て",
+            "reading": "みて",
+            "headword": "見る",
+            "gloss": "look at; connecting form"
+          },
+          {
+            "start": 10,
+            "end": 11,
+            "text": "昔",
+            "reading": "むかし",
+            "headword": "昔",
+            "gloss": "long ago"
+          },
+          {
+            "start": 12,
+            "end": 19,
+            "text": "思い出しました",
+            "reading": "おもいだしました",
+            "headword": "思い出す",
+            "gloss": "remembered"
+          },
+          {
+            "start": 20,
+            "end": 22,
+            "text": "子供",
+            "reading": "こども",
+            "headword": "子供",
+            "gloss": "child"
+          },
+          {
+            "start": 23,
+            "end": 25,
+            "text": "ころ",
+            "reading": "ころ",
+            "headword": "ころ",
+            "gloss": "time; period"
+          },
+          {
+            "start": 26,
+            "end": 28,
+            "text": "ここ",
+            "reading": "ここ",
+            "headword": "ここ",
+            "gloss": "here"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transfer-last-bus-sister",
+      "jlpt": 4,
+      "target": "negation-inside",
+      "relationship": "negative-scope",
+      "prompt": "最終のバスはもう出ました。今夜の時刻表を見て、二人が話しています。姉：「今夜はもう来ないはずです。」兄：「今夜はもう来るはずがありません。」\n姉の発言：____",
+      "translation": "Classify the referenced speaker's negative scope. Both can concern the same outcome; neither is an objective guarantee. Lexical base: 来る（くる）, come. Labels: 内側（うちがわ） = an expected negative proposition; 外側（そとがわ） = a positive proposition ruled out by the speaker. Use only a printed label or its given kana reading.",
+      "evidence": "Distinguish expected nonoccurrence from ruling out occurrence within one shared timetable judgment.",
+      "explanation": "Text: The last bus has already departed. Two people are looking at tonight's timetable and talking. Older sister: 'No more buses should come tonight.' Older brother: 'There is no way another bus is coming tonight.' The sister expects the negative proposition 'no bus comes again tonight.' Negation belongs to 来ない before はず.",
+      "answer": "negation-inside",
+      "acceptedAnswers": [
+        "内側",
+        "うちがわ"
+      ],
+      "options": [
+        {
+          "id": "negation-inside",
+          "label": "内側",
+          "rationale": "Text: The last bus has already departed. Two people are looking at tonight's timetable and talking. Older sister: 'No more buses should come tonight.' Older brother: 'There is no way another bus is coming tonight.' The sister expects the negative proposition 'no bus comes again tonight.' Negation belongs to 来ない before はず."
+        },
+        {
+          "id": "negation-outside",
+          "label": "外側",
+          "rationale": "Text: The last bus has already departed. Two people are looking at tonight's timetable and talking. Older sister: 'No more buses should come tonight.' Older brother: 'There is no way another bus is coming tonight.' That assigns the other speaker's construction. The sister expects the negative proposition 'no bus comes again tonight.' Negation belongs to 来ない before はず."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "593ba850d7d6e6b9bb062a223d8d098866cd1f1fd3a0d3f700c7775328d2eab8",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "最終",
+            "reading": "さいしゅう",
+            "headword": "最終",
+            "gloss": "last"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "バス",
+            "reading": "ばす",
+            "headword": "バス",
+            "gloss": "bus"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "もう",
+            "reading": "もう",
+            "headword": "もう",
+            "gloss": "already"
+          },
+          {
+            "start": 8,
+            "end": 12,
+            "text": "出ました",
+            "reading": "でました",
+            "headword": "出る",
+            "gloss": "departed"
+          },
+          {
+            "start": 13,
+            "end": 15,
+            "text": "今夜",
+            "reading": "こんや",
+            "headword": "今夜",
+            "gloss": "tonight"
+          },
+          {
+            "start": 16,
+            "end": 19,
+            "text": "時刻表",
+            "reading": "じこくひょう",
+            "headword": "時刻表",
+            "gloss": "timetable"
+          },
+          {
+            "start": 20,
+            "end": 22,
+            "text": "見て",
+            "reading": "みて",
+            "headword": "見る",
+            "gloss": "look at; connecting form"
+          },
+          {
+            "start": 23,
+            "end": 25,
+            "text": "二人",
+            "reading": "ふたり",
+            "headword": "二人",
+            "gloss": "two people"
+          },
+          {
+            "start": 26,
+            "end": 32,
+            "text": "話しています",
+            "reading": "はなしています",
+            "headword": "話す",
+            "gloss": "are talking"
+          },
+          {
+            "start": 33,
+            "end": 34,
+            "text": "姉",
+            "reading": "あね",
+            "headword": "姉",
+            "gloss": "older sister"
+          },
+          {
+            "start": 36,
+            "end": 38,
+            "text": "今夜",
+            "reading": "こんや",
+            "headword": "今夜",
+            "gloss": "tonight"
+          },
+          {
+            "start": 39,
+            "end": 41,
+            "text": "もう",
+            "reading": "もう",
+            "headword": "もう",
+            "gloss": "any more"
+          },
+          {
+            "start": 50,
+            "end": 51,
+            "text": "兄",
+            "reading": "あに",
+            "headword": "兄",
+            "gloss": "older brother"
+          },
+          {
+            "start": 53,
+            "end": 55,
+            "text": "今夜",
+            "reading": "こんや",
+            "headword": "今夜",
+            "gloss": "tonight"
+          },
+          {
+            "start": 56,
+            "end": 58,
+            "text": "もう",
+            "reading": "もう",
+            "headword": "もう",
+            "gloss": "any more"
+          },
+          {
+            "start": 71,
+            "end": 72,
+            "text": "姉",
+            "reading": "あね",
+            "headword": "姉",
+            "gloss": "older sister"
+          },
+          {
+            "start": 73,
+            "end": 75,
+            "text": "発言",
+            "reading": "はつげん",
+            "headword": "発言",
+            "gloss": "statement"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transfer-last-bus-brother",
+      "jlpt": 4,
+      "target": "negation-outside",
+      "relationship": "negative-scope",
+      "prompt": "最終のバスはもう出ました。今夜の時刻表を見て、二人が話しています。姉：「今夜はもう来ないはずです。」兄：「今夜はもう来るはずがありません。」\n兄の発言：____",
+      "translation": "Classify the referenced speaker's negative scope. Both can concern the same outcome; neither is an objective guarantee. Lexical base: 来る（くる）, come. Labels: 内側（うちがわ） = an expected negative proposition; 外側（そとがわ） = a positive proposition ruled out by the speaker. Use only a printed label or its given kana reading.",
+      "evidence": "Distinguish expected nonoccurrence from ruling out occurrence within one shared timetable judgment.",
+      "explanation": "Text: The last bus has already departed. Two people are looking at tonight's timetable and talking. Older sister: 'No more buses should come tonight.' Older brother: 'There is no way another bus is coming tonight.' The brother rules out the positive proposition 'a bus comes again tonight.' The negative predicate applies to the はず judgment.",
+      "answer": "negation-outside",
+      "acceptedAnswers": [
+        "外側",
+        "そとがわ"
+      ],
+      "options": [
+        {
+          "id": "negation-inside",
+          "label": "内側",
+          "rationale": "Text: The last bus has already departed. Two people are looking at tonight's timetable and talking. Older sister: 'No more buses should come tonight.' Older brother: 'There is no way another bus is coming tonight.' That assigns the other speaker's construction. The brother rules out the positive proposition 'a bus comes again tonight.' The negative predicate applies to the はず judgment."
+        },
+        {
+          "id": "negation-outside",
+          "label": "外側",
+          "rationale": "Text: The last bus has already departed. Two people are looking at tonight's timetable and talking. Older sister: 'No more buses should come tonight.' Older brother: 'There is no way another bus is coming tonight.' The brother rules out the positive proposition 'a bus comes again tonight.' The negative predicate applies to the はず judgment."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "11637715d54150f2219fd6e370ef582154a69f3af6b80ff78e50d32b4399fc99",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "最終",
+            "reading": "さいしゅう",
+            "headword": "最終",
+            "gloss": "last"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "バス",
+            "reading": "ばす",
+            "headword": "バス",
+            "gloss": "bus"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "もう",
+            "reading": "もう",
+            "headword": "もう",
+            "gloss": "already"
+          },
+          {
+            "start": 8,
+            "end": 12,
+            "text": "出ました",
+            "reading": "でました",
+            "headword": "出る",
+            "gloss": "departed"
+          },
+          {
+            "start": 13,
+            "end": 15,
+            "text": "今夜",
+            "reading": "こんや",
+            "headword": "今夜",
+            "gloss": "tonight"
+          },
+          {
+            "start": 16,
+            "end": 19,
+            "text": "時刻表",
+            "reading": "じこくひょう",
+            "headword": "時刻表",
+            "gloss": "timetable"
+          },
+          {
+            "start": 20,
+            "end": 22,
+            "text": "見て",
+            "reading": "みて",
+            "headword": "見る",
+            "gloss": "look at; connecting form"
+          },
+          {
+            "start": 23,
+            "end": 25,
+            "text": "二人",
+            "reading": "ふたり",
+            "headword": "二人",
+            "gloss": "two people"
+          },
+          {
+            "start": 26,
+            "end": 32,
+            "text": "話しています",
+            "reading": "はなしています",
+            "headword": "話す",
+            "gloss": "are talking"
+          },
+          {
+            "start": 33,
+            "end": 34,
+            "text": "姉",
+            "reading": "あね",
+            "headword": "姉",
+            "gloss": "older sister"
+          },
+          {
+            "start": 36,
+            "end": 38,
+            "text": "今夜",
+            "reading": "こんや",
+            "headword": "今夜",
+            "gloss": "tonight"
+          },
+          {
+            "start": 39,
+            "end": 41,
+            "text": "もう",
+            "reading": "もう",
+            "headword": "もう",
+            "gloss": "any more"
+          },
+          {
+            "start": 50,
+            "end": 51,
+            "text": "兄",
+            "reading": "あに",
+            "headword": "兄",
+            "gloss": "older brother"
+          },
+          {
+            "start": 53,
+            "end": 55,
+            "text": "今夜",
+            "reading": "こんや",
+            "headword": "今夜",
+            "gloss": "tonight"
+          },
+          {
+            "start": 56,
+            "end": 58,
+            "text": "もう",
+            "reading": "もう",
+            "headword": "もう",
+            "gloss": "any more"
+          },
+          {
+            "start": 71,
+            "end": 72,
+            "text": "兄",
+            "reading": "あに",
+            "headword": "兄",
+            "gloss": "older brother"
+          },
+          {
+            "start": 73,
+            "end": 75,
+            "text": "発言",
+            "reading": "はつげん",
+            "headword": "発言",
+            "gloss": "statement"
+          }
+        ]
+      }
     }
   ],
   "introductionGroups": [
@@ -1798,6 +2306,16 @@
           "exerciseId": "judgment-expectation-friend-visit-possibility-negative-meaning",
           "facetId": "possible-negative",
           "exampleKey": "friend-visit"
+        },
+        {
+          "exerciseId": "transfer-uncertain-absence",
+          "facetId": "possible-negative",
+          "exampleKey": "transfer-uncertain-absence"
+        },
+        {
+          "exerciseId": "transfer-uncertain-memory",
+          "facetId": "possible-positive",
+          "exampleKey": "transfer-uncertain-memory"
         }
       ],
       "next": [
@@ -1921,6 +2439,16 @@
           "exerciseId": "judgment-expectation-water-identity-ruling-out",
           "facetId": "negation-outside",
           "exampleKey": "water-identity"
+        },
+        {
+          "exerciseId": "transfer-last-bus-sister",
+          "facetId": "negation-inside",
+          "exampleKey": "transfer-last-bus-two-negative-judgments"
+        },
+        {
+          "exerciseId": "transfer-last-bus-brother",
+          "facetId": "negation-outside",
+          "exampleKey": "transfer-last-bus-two-negative-judgments"
         }
       ],
       "next": [

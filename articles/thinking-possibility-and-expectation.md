@@ -181,7 +181,7 @@ its discourse use requires context. It is not the keyed はずがない operatio
 
 ## Practice, reuse and follow-ups
 
-The new set has **36 N4 exercises in four small groups**:
+The original set has **36 N4 exercises in four small groups**:
 24 predicate-attachment conversions and 12 supplied-statement interpretations.
 The interpretation labels are shown before answering in a fixed order:
 **今／前** for the time of thinking, **肯定（こうてい）／否定（ひてい）** for the proposition's polarity,
@@ -196,6 +196,10 @@ The original expectation-time, expectation-polarity and mixed-routine groups rem
 only two of the mixed group's six tasks are expectation inferences.
 Optional recommendations also reuse N5 quoted-predicate and conjectural-interpretation groups.
 There is no new hard prerequisite or forced confidence-ranking exercise.
+
+The contextual follow-up adds four N4 interpretations in the
+same owners, bringing this set to **40 exercises**. It distinguishes uncertain absence from a possible past event,
+then compares two negative judgments about one last-bus scene. That pair is one context, not two conversations.
 
 For overlapping evidence-based impressions, see [looks, likeness and informed impressions](appearance-resemblance-and-impressions.md).
 The existing [formal-noun comparison](koto-wake-and-formal-nouns.md#intention-expectation-and-what-ought-to-happen)

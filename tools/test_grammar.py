@@ -1883,13 +1883,14 @@ class GrammarYouChangeEffortCoverageTests(unittest.TestCase):
         self.data = json.loads((root / "grammar" / "formal-nouns-you-change-effort.json").read_text(encoding="utf-8"))
         self.exercises = {exercise["id"]: exercise for exercise in self.data["exercises"]}
 
-    def test_three_contexts_per_target_and_both_directions(self):
-        self.assertEqual({
-            "you-new-ability": 3,
-            "you-new-habit": 3,
-            "you-effort-do": 3,
-            "you-effort-avoid": 3,
-        }, Counter(exercise["target"] for exercise in self.exercises.values()))
+    def test_at_least_three_contexts_per_target_and_both_directions(self):
+        contexts = {construction["id"]: set() for construction in self.data["constructions"]}
+        for group in self.data["introductionGroups"]:
+            for member in group["members"]:
+                target = self.exercises[member["exerciseId"]]["target"]
+                contexts[target].add(member["exampleKey"])
+        for target, keys in contexts.items():
+            self.assertGreaterEqual(len(keys), 3, target)
         for relationship in self.data["relationships"]:
             exercises = [exercise for exercise in self.exercises.values() if exercise["relationship"] == relationship["id"]]
             self.assertEqual(set(relationship["constructions"]), {exercise["target"] for exercise in exercises})

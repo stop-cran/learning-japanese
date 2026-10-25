@@ -276,7 +276,11 @@ The [hopes/wishes follow-up](grammar-hopes-wishes-sources.json) adds 20 N4 tasks
 The [descriptive-context follow-up](grammar-descriptive-contexts-sources.json) adds 30 N4 tasks in one set.
 The [means/scope follow-up](grammar-means-and-scope-sources.json) adds 24 N4 interpretations in one set.
 The [degree/polarity follow-up](grammar-degree-and-polarity-sources.json) adds 24 N4 tasks in one set.
-Current practice is 1852 exercises: 596 N5, 899 N4 and 251 N3, with N2/N1 unchanged. Mixed-level articles derive their browsing levels from
+The [mixed-context follow-up](grammar-contextual-transfer-sources.json) appends 32 N4 tasks to nine existing sets:
+eight domains and 24 shared scene keys, with no new group or gate. It repairs the thin critical-concession facet
+without claiming equivalent depth everywhere. One question-visible group label becomes neutral; old IDs, facets,
+exercise objects, vocabulary records, memberships and chapter mappings are retained.
+Current practice is 1884 exercises: 596 N5, 931 N4 and 251 N3, with N2/N1 unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to

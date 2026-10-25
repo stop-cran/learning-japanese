@@ -205,7 +205,7 @@ targets in this initial exercise set.
 
 ## What the initial practice covers
 
-The 26 exercises have four introduction groups:
+The original 26 exercises have four introduction groups:
 
 - Eight controlled **のに／ので** relationship-and-attachment questions.
 - Six **meaning-label questions**: two unexpected outcomes, two required-time descriptions and two tool-use descriptions.
@@ -218,6 +218,12 @@ There is one correct displayed option per question; typing accepts the authored 
 The shared answers do not independently test every difference between those alternatives.
 The fixed-option format does not yet ask the learner to select several correct buttons.
 All new prompts have optional vocabulary support, with the tested grammar protected from hints.
+
+The contextual follow-up adds four N4 tasks in these existing
+owners, bringing this set to **30 exercises**. Two broken-promise complaints share one new critical context;
+a pleasant advertising surprise and a reason for microphone preparation supply two others.
+The overlap group's question-visible label is now **Premises, outcomes and speaker stance**, so its name does not
+select the answer. Its stable ID, facets, old members and required skills are unchanged.
 
 ## Sources and scope
 

@@ -1397,6 +1397,176 @@
           }
         ]
       }
+    },
+    {
+      "id": "transfer-cancelled-tour-intention",
+      "jlpt": 4,
+      "target": "personal-intention",
+      "relationship": "arrangements",
+      "prompt": "学校の旅行は中止になりました。それでも、私は自分でその町へ行くつもりです。\n____",
+      "translation": "Classify what the FINAL sentence foregrounds, not the cancelled school's arrangement. Do not infer a booking, certainty or actual completion. Lexical base: 行く（いく）, go. Labels: 意図（いと） = the person's own intention is foregrounded; 計画（けいかく） = an activity is presented as planned. Use only a printed label or its given kana reading.",
+      "evidence": "Separate a surviving personal intention from a cancelled collective plan.",
+      "explanation": "Text: The school trip was cancelled. Even so, I intend to go to that town independently. The speaker still intends to go independently. The cancelled school trip and that surviving personal intention are distinct; a personal intention may also have practical arrangements.",
+      "answer": "personal-intention",
+      "acceptedAnswers": [
+        "意図",
+        "いと"
+      ],
+      "options": [
+        {
+          "id": "personal-intention",
+          "label": "意図",
+          "rationale": "Text: The school trip was cancelled. Even so, I intend to go to that town independently. The speaker still intends to go independently. The cancelled school trip and that surviving personal intention are distinct; a personal intention may also have practical arrangements."
+        },
+        {
+          "id": "planned-activity",
+          "label": "計画",
+          "rationale": "Text: The school trip was cancelled. Even so, I intend to go to that town independently. That assigns the cancelled organized trip's framing to the speaker's surviving intention."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "e1af9612b6c431582b606efb068c8f0a4287935ca26f5e891cbf7f247defa948",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "学校",
+            "reading": "がっこう",
+            "headword": "学校",
+            "gloss": "school"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "旅行",
+            "reading": "りょこう",
+            "headword": "旅行",
+            "gloss": "trip"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "中止",
+            "reading": "ちゅうし",
+            "headword": "中止",
+            "gloss": "cancellation"
+          },
+          {
+            "start": 15,
+            "end": 19,
+            "text": "それでも",
+            "reading": "それでも",
+            "headword": "それでも",
+            "gloss": "even so"
+          },
+          {
+            "start": 20,
+            "end": 21,
+            "text": "私",
+            "reading": "わたし",
+            "headword": "私",
+            "gloss": "I"
+          },
+          {
+            "start": 22,
+            "end": 24,
+            "text": "自分",
+            "reading": "じぶん",
+            "headword": "自分",
+            "gloss": "oneself"
+          },
+          {
+            "start": 25,
+            "end": 27,
+            "text": "その",
+            "reading": "その",
+            "headword": "その",
+            "gloss": "that"
+          },
+          {
+            "start": 27,
+            "end": 28,
+            "text": "町",
+            "reading": "まち",
+            "headword": "町",
+            "gloss": "town"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transfer-weather-dependent-festival",
+      "jlpt": 4,
+      "target": "planned-activity",
+      "relationship": "arrangements",
+      "prompt": "来週は町で祭りがある予定です。雨の場合は中止になります。\n____",
+      "translation": "Classify how the FIRST sentence presents the event. The second sentence supplies a contingency, not evidence that nothing is planned. Labels: 意図（いと） = the person's own intention is foregrounded; 計画（けいかく） = an activity is presented as planned. Use only a printed label or its given kana reading.",
+      "evidence": "Retain a planned-event interpretation in the presence of an explicit cancellation condition.",
+      "explanation": "Text: A festival is planned in the town next week. It will be cancelled if it rains. The festival is presented as planned, with cancellation if it rains. 予定 does not guarantee realization or require the speaker to describe a personal intention or a reservation.",
+      "answer": "planned-activity",
+      "acceptedAnswers": [
+        "計画",
+        "けいかく"
+      ],
+      "options": [
+        {
+          "id": "personal-intention",
+          "label": "意図",
+          "rationale": "Text: A festival is planned in the town next week. It will be cancelled if it rains. A weather contingency does not turn the event schedule into the speaker's personal-intention framing."
+        },
+        {
+          "id": "planned-activity",
+          "label": "計画",
+          "rationale": "Text: A festival is planned in the town next week. It will be cancelled if it rains. The festival is presented as planned, with cancellation if it rains. 予定 does not guarantee realization or require the speaker to describe a personal intention or a reservation."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "e1ad0a3f5b281bfdd3c030a97ece82eb3a479da9f6a0df664a1c4da546a49017",
+        "spans": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "来週",
+            "reading": "らいしゅう",
+            "headword": "来週",
+            "gloss": "next week"
+          },
+          {
+            "start": 3,
+            "end": 4,
+            "text": "町",
+            "reading": "まち",
+            "headword": "町",
+            "gloss": "town"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "祭り",
+            "reading": "まつり",
+            "headword": "祭り",
+            "gloss": "festival"
+          },
+          {
+            "start": 15,
+            "end": 16,
+            "text": "雨",
+            "reading": "あめ",
+            "headword": "雨",
+            "gloss": "rain"
+          },
+          {
+            "start": 20,
+            "end": 22,
+            "text": "中止",
+            "reading": "ちゅうし",
+            "headword": "中止",
+            "gloss": "cancellation"
+          }
+        ]
+      }
     }
   ],
   "introductionGroups": [
@@ -1612,6 +1782,16 @@
           "exerciseId": "plans-goals-work-meeting-presentation-plan",
           "facetId": "planned-activity",
           "exampleKey": "work-meeting"
+        },
+        {
+          "exerciseId": "transfer-cancelled-tour-intention",
+          "facetId": "personal-intention",
+          "exampleKey": "transfer-intention-after-group-cancellation"
+        },
+        {
+          "exerciseId": "transfer-weather-dependent-festival",
+          "facetId": "planned-activity",
+          "exampleKey": "transfer-contingent-public-plan"
         }
       ],
       "next": [
