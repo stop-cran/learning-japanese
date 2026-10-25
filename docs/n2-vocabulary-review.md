@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-68 review-closed; batch 69 drafted.** The target is all 1,812 source rows,
+**Batches 01-69 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,360 rows are review-closed; 20 are draft and 432 remain pending.
+The first 1,380 rows are review-closed; none are draft and 432 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,9 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 69: N2:1362-N2:1381
 
-**Status:** draft; authenticated independent initial reviews reconciled;
-original-session confirmations pending.
+**Status:** closed after authenticated independent initial reviews,
+correction confirmations and bounded followup acceptance by both
+original reviewer sessions.
 
 Twenty new articles: 跳ねる, 破片, 歯磨き, はめる, 早口,
 流行る, 払い込む, 払い戻す, バランス, 針金, 張り切る,
@@ -60,10 +61,10 @@ Weblio, not 25 dictionaries or independent reviewer retrievals.
 Mixed unrelated entries are excluded; a positive capture does
 not verify every captured entry or every teaching claim.
 
-Draft coverage is **1,360 closed / 20 draft / 432 pending /
+Authored draft coverage was **1,360 closed / 20 draft / 432 pending /
 0 unresolved**, mapping **1,366 articles: 1,265 new / 101 reused**.
 The authored scope is 30 files. Direct quiz safeguards are
-author hypotheses pending independent judgment, not a global
+author hypotheses subsequently adjudicated below, not a global
 quiz-uniqueness claim.
 
 Independent initial reviews of `d5066fa715158c8b92eed02438e2c7bb23bf81d5`
@@ -97,7 +98,7 @@ Retained representation/address guards have positive scoped evidence,
 not a "harmlessness" exemption. Homograph 印, cord, generic cheering
 and causation suggestions do not establish extra pairs. This is useful
 complementarity in this sample, not measured bias reduction or a
-general model ranking. All dispositions remain subject to confirmation.
+general model ranking. Both reviewers subsequently accepted the original repairs.
 
 Both original-session confirmations accepted the original repairs and
 returned all 24 complete assigned bodies and required corrective evidence.
@@ -114,7 +115,49 @@ N2:2-N2:21 before issuing a corrected exact twenty-row query. Its report
 discloses that scope error; native authentication records the extra rows
 instead of claiming exact-only access. The assigned twenty rows were
 fully returned. Neither this deviation nor GPT's clean table overrides
-Claude's actionable remaining finding; final reconfirmations are pending.
+Claude's actionable remaining finding.
+
+Both original sessions then independently accepted the bounded followup
+at `b0a8b14dee88c067e9ea59e00cd349326c118d47`. Their first
+[GPT](n2-vocabulary-reviews/batch-69-gpt-confirmation.md) /
+[Claude](n2-vocabulary-reviews/batch-69-claude-confirmation.md) confirmations
+and final [GPT](n2-vocabulary-reviews/batch-69-gpt-reconfirmation.md) /
+[Claude](n2-vocabulary-reviews/batch-69-claude-reconfirmation.md) reports
+are archived without rewriting the native findings. All six native
+final reports, exact prompts, actual models and zero edits were
+authenticated. Final tables have twenty exact source/article rows
+with three separate CLEAN facets and no remaining actionable finding.
+
+Actual required complete returns were initial GPT 55 / Claude 31,
+first confirmation 39 each, and final 6 each. Each first confirmation
+returned all 24 complete assigned bodies and six corrective chunks.
+Final fresh assigned content was only 張り切る; nineteen unchanged
+words and four unchanged kanji inherit preceding judgments after
+author-executed byte checks. Both final turns returned the full
+snapshot, actual patch, inspection record, one-family rendering,
+張り切る and 活力. The record includes complete 1208480,
+1427870 and 1601350 families. No fresh final TSV read is claimed.
+Native complete-return unions cover 110 older identities for GPT
+and 29 for Claude, not equal inspection or author-volume totals.
+
+Claude's final context had compacted its preceding report; authenticated
+event history preserves that earlier review. Its "only changed file"
+describes the teaching patch, not all seven followup documentation/
+manifest paths. Both final reviewers verify the supplied corrected
+sense; the author separately verifies the actual current public
+disposition. These limits do not require rewriting the unchanged
+万歳 article. Optional 活力 noun-counterpart expansion and
+intransitive optical 反映 recast remain deferred.
+
+Closure changes only twenty statuses and audit documentation.
+Teaching and manifest remain unchanged after acceptance:
+**4,538 word articles**, 3,273 baseline identities/readings/titles/
+exclusions preserved, and **291 distinct primary reciprocal N2 pairs**.
+Closed coverage is **1,380 closed / 0 draft / 432 pending /
+0 unresolved**, mapping **1,366 articles: 1,265 new / 101 reused**.
+Manifest content version is `16d7354b7529215e`.
+No exhaustive quiz-safety, native-speaker, historical-origin, pitch,
+frequency or measured model-bias certification is implied.
 
 ## Batch 68: N2:1342-N2:1361
 

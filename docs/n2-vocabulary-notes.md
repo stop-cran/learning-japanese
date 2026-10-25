@@ -29,7 +29,16 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   Totals become 268 families / 716 senses / 106 older identities.
   GPT's accidental unassigned TSV read is disclosed and recorded
   alongside its successful corrected exact query, not erased or
-  presented as exact-only access. Final confirmations are pending.
+  presented as exact-only access. Both original reviewers accepted
+  the bounded followup at b0a8b14; all six native reports are
+  authenticated. The final fresh assigned body is 張り切る,
+  with nineteen words/four kanji explicitly inherited after
+  author byte checks. Actual native older-body unions are GPT
+  110 / Claude 29; these are not the author's comparison totals.
+  Claude's final context had compacted its preceding report;
+  native event history preserves its earlier complete judgments.
+  Reviewer sense identification and author verification of the
+  actual published disposition remain separately scoped.
 - Initial GPT and Claude reviews ran independently and sequentially
   on the same committed draft, with authenticated actual model and
   complete-return evidence. Their access was common, but actual read
@@ -54,7 +63,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   supplement establish 267 families / 715 senses cumulatively.
   Full older-body reads establish 105 distinct identities;
   活躍 was a reread, not a new identity. Original prepared and
-  completed receipts stay separate. Confirmation is still pending.
+  completed receipts stay separate. The additional 活力 read
+  raises final totals as above; both reviewers accepted the repairs.
 - Twenty rows map to twenty new identities. Blank raw spellings
   for はめる, バランス, パンツ and バンド remain provenance.
   The kana-primary articles do not acquire alternative-spelling
@@ -73,7 +83,7 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   はんこ/ハンコ. The inspected public entry connects it with
   はんこう（版行）; its `kango` label follows that lineage,
   not an invented all-on reading or a literal judgment-child
-  compound. This classification remains subject to review.
+  compound. Both reviewers accepted this scoped classification.
   万歳 does not add an unsupported ザイ reading to 歳.
 - 払い込む is not restricted to personal savings or bank
   transfers. 払い戻す is not unrestricted debt repayment.
