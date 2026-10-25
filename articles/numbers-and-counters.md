@@ -241,6 +241,9 @@ containing a number. For time-point に, particles and sentence structure, see
 For constructions such as 一週間に三回, ranges and frequency, see
 [quantity, ranges and frequency](quantity-ranges-and-frequency.md).
 Learning 三回 and learning how a frequency phrase fits a sentence are distinct.
+For 二枚ずつ, amounts for each recipient, and 少しずつ increments, continue to
+[distribution and increments](quantity-ranges-and-frequency.md#7-distribution-and-increments).
+That focused Grammar bridge is classified **N3**, not counted as N4 counter coverage.
 
 ## References
 

@@ -5,7 +5,9 @@ A number alone cannot answer these questions. Read its attached expression and t
 
 The core practice covers numerical ranges, minimum benchmarks, unspecified quantities, frequency,
 negative scope, and time/price frames. Existing restriction, listing and comparison exercises keep
-their original owners. The final short bridges are for recognition, not extra scored groups.
+their original owners. The short recognition bridges remain unscored.
+The separate [ずつ distribution and increments](#7-distribution-and-increments) section adds
+focused **N3** interpretation practice; it is not an extra N4 coverage claim.
 
 ## 1. Inclusive bounds versus strict comparisons
 
@@ -278,9 +280,84 @@ Concentration ばかり is also distinct from N4 recent-completion **たばか�
 approximate-quantity wording. See the existing
 [action/quantity patterns](koto-wake-and-formal-nouns.md#practicing-quantities-and-action-patterns).
 
+## 7. Distribution and increments
+
+**ずつ** follows an amount to describe allocation or repeated amounts:
+**number + counter + ずつ**, **少しずつ（すこしずつ）**, or **ちょっとずつ**.
+Do not attach it freely to any noun or verb. Learn the complete quantity phrase.
+This is a useful bridge from [Numbers & counters](numbers-and-counters.md), but our
+Bunpro-aligned Grammar classification places the tested construction at **N3**.
+
+### An amount for each recipient or unit
+
+> 三人の子供に、シールを二枚ずつ配りました。  
+> さんにんの こどもに、しーるを にまいずつ くばりました。  
+> I gave each of the three children two stickers.
+
+The **per-child amount is two**; the **total is six**. 配る（くばる） means distribute.
+Equal amounts do not tell us whether the children received their stickers simultaneously
+or one after another. **ずつ alone does not establish simultaneous delivery.**
+
+> 二つの器に、スープを百ミリリットルずつ入れました。  
+> ふたつの うつわに、すーぷを ひゃくみりりっとるずつ いれました。  
+> I put 100 milliliters of soup into each of two containers.
+
+**器（うつわ）** is a container or bowl. Each receives 100 milliliters, so the combined amount
+is 200 milliliters. The unit named in the question matters: one container or both together.
+
+### Repeated amounts and groups
+
+> 四日間、毎日新しいページを三ページずつ読みました。  
+> よっかかん、まいにち あたらしいぺーじを さんぺーじずつ よみました。  
+> For four days, I read three new pages each day.
+
+The daily amount is three pages; the four-day total is twelve. **新しい（あたらしい）**
+makes these new pages, not four readings of the same three pages.
+The period is supplied by 毎日; ずつ does not independently specify "per day."
+
+> 十人の学生が、二人ずつ部屋に入りました。  
+> じゅうにんの がくせいが、ふたりずつ へやに はいりました。  
+> Ten students entered the room in groups of two.
+
+If each student enters exactly once, there are two students per group and five groups.
+Count the requested unit, not whichever numeral appears first. This does not specify an
+exact interval between groups.
+
+### Small increments need not mean a small final total
+
+> 春になって、この町も少しずつ暖かくなりました。  
+> はるに なって、このまちも すこしずつ あたたかく なりました。  
+> With spring, this town too became warmer little by little.
+
+**少しずつ** describes small increments. Many small increments may accumulate into a large
+change; the sentence does not quantify the overall increase in warmth.
+It does not require an intentional human action.
+
+> ちょっとずつ写真を整理して、昨日全部終えました。  
+> ちょっとずつ しゃしんを せいりして、きのう ぜんぶ おえました。  
+> I organized the photographs a little at a time and finished everything yesterday.
+
+**整理する（せいりする）** means organize; **終える（おえる）** means finish.
+**ちょっとずつ** also allows small amounts at a time.
+Repeated or incremental activity **can already be completed**: ずつ does not impose an
+unfinished present state. Read the final predicate and the supplied time.
+
+### A cumulative total is not an all-at-once event
+
+> タイマーの設定時間を三回、二分ずつ延ばしました。  
+> たいまーの せっていじかんを さんかい、にふんずつ のばしました。  
+> I extended the timer's set duration three times, by two minutes each time.
+
+**設定時間（せっていじかん）** is the set duration; **延ばす（のばす）** means extend.
+The cumulative increase is six minutes, produced here by three two-minute adjustments.
+Calling that a six-minute total does not turn it into one all-at-once adjustment.
+The starting duration is unspecified, so six minutes is not necessarily the final timer setting.
+An exact repeated numerical amount and the unquantified small amounts in 少しずつ are not
+the same kind of measurement.
+
 ## Practice scope
 
-The new set has **28 tasks: 26 N4 and two N5 controls**. Four named formation tasks assemble complete
+The original quantity/scope set has **28 tasks: 26 N4 and two N5 controls**. Four named formation tasks assemble complete
 frequency expressions; 24 interpretations read supplied messages, ranges and predicate roles.
 Five groups separate boundaries, quantity framing, frequency, negative scope and time/cost frames.
 All external answer labels have readings and definitions. Related strict-comparison examples share
@@ -291,6 +368,20 @@ tasks are reused, not duplicated or relabeled. Supporting prefixes, rank/members
 higher-grade links do not receive a new exercise pack merely because they appear in an index.
 Minimal-means **だけで** sufficiency and detailed interval/collocation practice remain separate future
 goals; they are not silently counted as covered by ordinary restriction or frequency drills.
+
+The separate **ずつ set has 16 N3 tasks in two groups**. Eight ask for a per-unit or whole-scenario
+quantity using Arabic digits, without a unit; eight test a stated claim using **言える（いえる）**,
+"follows," or **言えない（いえない）**, "not established." The blank is an external response slot,
+not a missing part of the Japanese sentence. "Not established" does not always mean "false":
+the handover timing, for example, is simply unspecified.
+
+These are supplied-message interpretations, with elementary arithmetic where needed, not
+free Japanese sentence production. Six qualifying scenario keys cover the sixteen operations.
+Paired questions share their keys; sticker and container allocations also share one key because
+changing the recipient and unit does not introduce a different scope operation. The sticker timing
+questions retain that same allocation key.
+No new prerequisite is imposed on the whole quantity chapter. Existing frequency, approximation,
+restriction and range tasks retain their original owners and progress.
 
 ## Sources and qualifications
 
@@ -324,3 +415,7 @@ These are study references, not an official examination syllabus. The examples a
   [も](https://jisho.org/search/も), [会う](https://jisho.org/search/会う),
   [冊](https://jisho.org/search/冊), [台](https://jisho.org/search/台), and [無し](https://jisho.org/search/無し).
   Distinguish actual senses and readings from homographs; dictionary recognition is not a frequency claim.
+- For ずつ: [Bunpro's N3 lesson](https://bunpro.jp/grammar_points/ずつ) and the named
+  [Digital Daijisen entry on Kotobank](https://kotobank.jp/word/ずつ-542236).
+  These support quantity attachment, equal allocation and repeated limited amounts.
+  Rare spellings and advanced interval contrasts are not production targets here.

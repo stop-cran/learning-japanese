@@ -1,0 +1,1322 @@
+{
+  "schemaVersion": 1,
+  "id": "quantity-zutsu",
+  "title": "ずつ: each amount, increments and totals",
+  "article": "articles/quantity-ranges-and-frequency.md",
+  "constructions": [
+    {
+      "id": "unit-amount",
+      "label": "Quantity for one recipient, unit or group"
+    },
+    {
+      "id": "whole-total",
+      "label": "Whole-scenario total in the requested unit"
+    },
+    {
+      "id": "entailed",
+      "label": "The claim follows from the supplied statement"
+    },
+    {
+      "id": "not-entailed",
+      "label": "The claim is not established by the supplied statement"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "amounts",
+      "label": "Read per-unit quantities and whole-scenario totals",
+      "constructions": [
+        "unit-amount",
+        "whole-total"
+      ]
+    },
+    {
+      "id": "implications",
+      "label": "Read increments without inventing timing or completion rules",
+      "constructions": [
+        "entailed",
+        "not-entailed"
+      ]
+    }
+  ],
+  "introductionGroups": [
+    {
+      "id": "quantity-zutsu-amounts",
+      "label": "Read per-unit quantities and whole-scenario totals",
+      "facets": [
+        {
+          "id": "unit-amount",
+          "label": "Quantity for one recipient, unit or group"
+        },
+        {
+          "id": "whole-total",
+          "label": "Whole-scenario total in the requested unit"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "quantity-zutsu-stickers-unit",
+          "facetId": "unit-amount",
+          "exampleKey": "zutsu-equal-allocation"
+        },
+        {
+          "exerciseId": "quantity-zutsu-stickers-total",
+          "facetId": "whole-total",
+          "exampleKey": "zutsu-equal-allocation"
+        },
+        {
+          "exerciseId": "quantity-zutsu-containers-unit",
+          "facetId": "unit-amount",
+          "exampleKey": "zutsu-equal-allocation"
+        },
+        {
+          "exerciseId": "quantity-zutsu-containers-total",
+          "facetId": "whole-total",
+          "exampleKey": "zutsu-equal-allocation"
+        },
+        {
+          "exerciseId": "quantity-zutsu-reading-days-unit",
+          "facetId": "unit-amount",
+          "exampleKey": "zutsu-reading-days"
+        },
+        {
+          "exerciseId": "quantity-zutsu-reading-days-total",
+          "facetId": "whole-total",
+          "exampleKey": "zutsu-reading-days"
+        },
+        {
+          "exerciseId": "quantity-zutsu-entry-groups-unit",
+          "facetId": "unit-amount",
+          "exampleKey": "zutsu-entry-groups"
+        },
+        {
+          "exerciseId": "quantity-zutsu-entry-groups-total",
+          "facetId": "whole-total",
+          "exampleKey": "zutsu-entry-groups"
+        }
+      ],
+      "next": [],
+      "requires": []
+    },
+    {
+      "id": "quantity-zutsu-implications",
+      "label": "Read increments without inventing timing or completion rules",
+      "facets": [
+        {
+          "id": "entailed",
+          "label": "The claim follows from the supplied statement"
+        },
+        {
+          "id": "not-entailed",
+          "label": "The claim is not established by the supplied statement"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "quantity-zutsu-stickers-follows",
+          "facetId": "entailed",
+          "exampleKey": "zutsu-equal-allocation"
+        },
+        {
+          "exerciseId": "quantity-zutsu-stickers-not-established",
+          "facetId": "not-entailed",
+          "exampleKey": "zutsu-equal-allocation"
+        },
+        {
+          "exerciseId": "quantity-zutsu-spring-warming-follows",
+          "facetId": "entailed",
+          "exampleKey": "zutsu-spring-warming"
+        },
+        {
+          "exerciseId": "quantity-zutsu-spring-warming-not-established",
+          "facetId": "not-entailed",
+          "exampleKey": "zutsu-spring-warming"
+        },
+        {
+          "exerciseId": "quantity-zutsu-finished-photos-follows",
+          "facetId": "entailed",
+          "exampleKey": "zutsu-finished-photos"
+        },
+        {
+          "exerciseId": "quantity-zutsu-finished-photos-not-established",
+          "facetId": "not-entailed",
+          "exampleKey": "zutsu-finished-photos"
+        },
+        {
+          "exerciseId": "quantity-zutsu-timer-increments-follows",
+          "facetId": "entailed",
+          "exampleKey": "zutsu-timer-increments"
+        },
+        {
+          "exerciseId": "quantity-zutsu-timer-increments-not-established",
+          "facetId": "not-entailed",
+          "exampleKey": "zutsu-timer-increments"
+        }
+      ],
+      "next": [],
+      "requires": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "quantity-zutsu-stickers-unit",
+      "jlpt": 3,
+      "target": "unit-amount",
+      "relationship": "amounts",
+      "prompt": "「三人の子供に、シールを二枚ずつ配りました。」→____",
+      "translation": "Interpret the Japanese report; count only the activity it describes. Type the requested number in Arabic digits only, without a unit. How many stickers did one child receive?",
+      "evidence": "Interpret the complete supplied ずつ statement under the explicit response operation. Paired operations on this scenario share one example key; this is not a sentence-completion blank.",
+      "explanation": "二枚ずつ assigns two stickers to each child; the requested per-child quantity is 2.",
+      "answer": "unit-amount",
+      "acceptedAnswers": [
+        "2"
+      ],
+      "options": [
+        {
+          "id": "unit-amount",
+          "label": "2",
+          "rationale": "二枚ずつ assigns two stickers to each child; the requested per-child quantity is 2."
+        },
+        {
+          "id": "whole-total",
+          "label": "6",
+          "rationale": "6 is the total for all three children, not the quantity received by one child."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "3dd8e77977dc96e32f0e66e4d46e4c78dffe377a2c20bcdb9e084090b2632010",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "三人",
+            "reading": "さんにん",
+            "headword": "三人",
+            "gloss": "three people"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "子供",
+            "reading": "こども",
+            "headword": "子供",
+            "gloss": "children"
+          },
+          {
+            "start": 8,
+            "end": 11,
+            "text": "シール",
+            "reading": "しーる",
+            "headword": "シール",
+            "gloss": "stickers"
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "二枚",
+            "reading": "にまい",
+            "headword": "二枚",
+            "gloss": "two flat items"
+          },
+          {
+            "start": 16,
+            "end": 21,
+            "text": "配りました",
+            "reading": "くばりました",
+            "headword": "配る",
+            "gloss": "distributed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-zutsu-stickers-total",
+      "jlpt": 3,
+      "target": "whole-total",
+      "relationship": "amounts",
+      "prompt": "「三人の子供に、シールを二枚ずつ配りました。」→____",
+      "translation": "Interpret the Japanese report; count only the activity it describes. Type the requested number in Arabic digits only, without a unit. How many stickers were distributed to all three children in total?",
+      "evidence": "Interpret the complete supplied ずつ statement under the explicit response operation. Paired operations on this scenario share one example key; this is not a sentence-completion blank.",
+      "explanation": "Three children receive two stickers each, so the total is 3 × 2 = 6.",
+      "answer": "whole-total",
+      "acceptedAnswers": [
+        "6"
+      ],
+      "options": [
+        {
+          "id": "unit-amount",
+          "label": "2",
+          "rationale": "2 is the amount for one child; the question asks for all three children together."
+        },
+        {
+          "id": "whole-total",
+          "label": "6",
+          "rationale": "Three children receive two stickers each, so the total is 3 × 2 = 6."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "3dd8e77977dc96e32f0e66e4d46e4c78dffe377a2c20bcdb9e084090b2632010",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "三人",
+            "reading": "さんにん",
+            "headword": "三人",
+            "gloss": "three people"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "子供",
+            "reading": "こども",
+            "headword": "子供",
+            "gloss": "children"
+          },
+          {
+            "start": 8,
+            "end": 11,
+            "text": "シール",
+            "reading": "しーる",
+            "headword": "シール",
+            "gloss": "stickers"
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "二枚",
+            "reading": "にまい",
+            "headword": "二枚",
+            "gloss": "two flat items"
+          },
+          {
+            "start": 16,
+            "end": 21,
+            "text": "配りました",
+            "reading": "くばりました",
+            "headword": "配る",
+            "gloss": "distributed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-zutsu-containers-unit",
+      "jlpt": 3,
+      "target": "unit-amount",
+      "relationship": "amounts",
+      "prompt": "「二つの器に、スープを百ミリリットルずつ入れました。」→____",
+      "translation": "Interpret the Japanese report; count only the activity it describes. Type the requested number in Arabic digits only, without a unit. How many milliliters went into one container?",
+      "evidence": "Interpret the complete supplied ずつ statement under the explicit response operation. Paired operations on this scenario share one example key; this is not a sentence-completion blank.",
+      "explanation": "百ミリリットルずつ distributes 100 milliliters to each container.",
+      "answer": "unit-amount",
+      "acceptedAnswers": [
+        "100"
+      ],
+      "options": [
+        {
+          "id": "unit-amount",
+          "label": "100",
+          "rationale": "百ミリリットルずつ distributes 100 milliliters to each container."
+        },
+        {
+          "id": "whole-total",
+          "label": "200",
+          "rationale": "200 is the combined amount for both containers, not the amount placed in one."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "fac60cdd6bc9981796af1d54fcc4d34239deffdb365169b374a7577d5c3a61cf",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "二つ",
+            "reading": "ふたつ",
+            "headword": "二つ",
+            "gloss": "two items"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "器",
+            "reading": "うつわ",
+            "headword": "器",
+            "gloss": "containers; bowls"
+          },
+          {
+            "start": 7,
+            "end": 10,
+            "text": "スープ",
+            "reading": "すーぷ",
+            "headword": "スープ",
+            "gloss": "soup"
+          },
+          {
+            "start": 11,
+            "end": 18,
+            "text": "百ミリリットル",
+            "reading": "ひゃくみりりっとる",
+            "headword": "百ミリリットル",
+            "gloss": "one hundred milliliters"
+          },
+          {
+            "start": 20,
+            "end": 25,
+            "text": "入れました",
+            "reading": "いれました",
+            "headword": "入れる",
+            "gloss": "put in"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-zutsu-containers-total",
+      "jlpt": 3,
+      "target": "whole-total",
+      "relationship": "amounts",
+      "prompt": "「二つの器に、スープを百ミリリットルずつ入れました。」→____",
+      "translation": "Interpret the Japanese report; count only the activity it describes. Type the requested number in Arabic digits only, without a unit. How many milliliters went into the two containers altogether?",
+      "evidence": "Interpret the complete supplied ずつ statement under the explicit response operation. Paired operations on this scenario share one example key; this is not a sentence-completion blank.",
+      "explanation": "Two containers each receive 100 milliliters: 2 × 100 = 200 milliliters altogether.",
+      "answer": "whole-total",
+      "acceptedAnswers": [
+        "200"
+      ],
+      "options": [
+        {
+          "id": "unit-amount",
+          "label": "100",
+          "rationale": "100 is the amount placed in each container, not their combined amount."
+        },
+        {
+          "id": "whole-total",
+          "label": "200",
+          "rationale": "Two containers each receive 100 milliliters: 2 × 100 = 200 milliliters altogether."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "fac60cdd6bc9981796af1d54fcc4d34239deffdb365169b374a7577d5c3a61cf",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "二つ",
+            "reading": "ふたつ",
+            "headword": "二つ",
+            "gloss": "two items"
+          },
+          {
+            "start": 4,
+            "end": 5,
+            "text": "器",
+            "reading": "うつわ",
+            "headword": "器",
+            "gloss": "containers; bowls"
+          },
+          {
+            "start": 7,
+            "end": 10,
+            "text": "スープ",
+            "reading": "すーぷ",
+            "headword": "スープ",
+            "gloss": "soup"
+          },
+          {
+            "start": 11,
+            "end": 18,
+            "text": "百ミリリットル",
+            "reading": "ひゃくみりりっとる",
+            "headword": "百ミリリットル",
+            "gloss": "one hundred milliliters"
+          },
+          {
+            "start": 20,
+            "end": 25,
+            "text": "入れました",
+            "reading": "いれました",
+            "headword": "入れる",
+            "gloss": "put in"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-zutsu-reading-days-unit",
+      "jlpt": 3,
+      "target": "unit-amount",
+      "relationship": "amounts",
+      "prompt": "「四日間、毎日新しいページを三ページずつ読みました。」→____",
+      "translation": "Interpret the Japanese report; count only the activity it describes. Type the requested number in Arabic digits only, without a unit. How many new pages were read in one day?",
+      "evidence": "Interpret the complete supplied ずつ statement under the explicit response operation. Paired operations on this scenario share one example key; this is not a sentence-completion blank.",
+      "explanation": "毎日三ページずつ gives three new pages on each day.",
+      "answer": "unit-amount",
+      "acceptedAnswers": [
+        "3"
+      ],
+      "options": [
+        {
+          "id": "unit-amount",
+          "label": "3",
+          "rationale": "毎日三ページずつ gives three new pages on each day."
+        },
+        {
+          "id": "whole-total",
+          "label": "12",
+          "rationale": "12 is the four-day total, not the number of new pages for one day."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "b1c9aae5f4184fca6603c4c80bf35e71ee447eccd142978ea911f857330c40a8",
+        "spans": [
+          {
+            "start": 1,
+            "end": 4,
+            "text": "四日間",
+            "reading": "よっかかん",
+            "headword": "四日間",
+            "gloss": "four days"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "毎日",
+            "reading": "まいにち",
+            "headword": "毎日",
+            "gloss": "every day"
+          },
+          {
+            "start": 7,
+            "end": 10,
+            "text": "新しい",
+            "reading": "あたらしい",
+            "headword": "新しい",
+            "gloss": "new"
+          },
+          {
+            "start": 10,
+            "end": 13,
+            "text": "ページ",
+            "reading": "ぺーじ",
+            "headword": "ページ",
+            "gloss": "pages"
+          },
+          {
+            "start": 14,
+            "end": 18,
+            "text": "三ページ",
+            "reading": "さんぺーじ",
+            "headword": "三ページ",
+            "gloss": "three pages"
+          },
+          {
+            "start": 20,
+            "end": 25,
+            "text": "読みました",
+            "reading": "よみました",
+            "headword": "読む",
+            "gloss": "read; past tense"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-zutsu-reading-days-total",
+      "jlpt": 3,
+      "target": "whole-total",
+      "relationship": "amounts",
+      "prompt": "「四日間、毎日新しいページを三ページずつ読みました。」→____",
+      "translation": "Interpret the Japanese report; count only the activity it describes. Type the requested number in Arabic digits only, without a unit. How many new pages were read over the whole four days?",
+      "evidence": "Interpret the complete supplied ずつ statement under the explicit response operation. Paired operations on this scenario share one example key; this is not a sentence-completion blank.",
+      "explanation": "Four days with three new pages each gives 4 × 3 = 12 new pages. 新しい makes these new pages, not repeated readings of the same three.",
+      "answer": "whole-total",
+      "acceptedAnswers": [
+        "12"
+      ],
+      "options": [
+        {
+          "id": "unit-amount",
+          "label": "3",
+          "rationale": "3 is the daily quantity, not the four-day total."
+        },
+        {
+          "id": "whole-total",
+          "label": "12",
+          "rationale": "Four days with three new pages each gives 4 × 3 = 12 new pages. 新しい makes these new pages, not repeated readings of the same three."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "b1c9aae5f4184fca6603c4c80bf35e71ee447eccd142978ea911f857330c40a8",
+        "spans": [
+          {
+            "start": 1,
+            "end": 4,
+            "text": "四日間",
+            "reading": "よっかかん",
+            "headword": "四日間",
+            "gloss": "four days"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "毎日",
+            "reading": "まいにち",
+            "headword": "毎日",
+            "gloss": "every day"
+          },
+          {
+            "start": 7,
+            "end": 10,
+            "text": "新しい",
+            "reading": "あたらしい",
+            "headword": "新しい",
+            "gloss": "new"
+          },
+          {
+            "start": 10,
+            "end": 13,
+            "text": "ページ",
+            "reading": "ぺーじ",
+            "headword": "ページ",
+            "gloss": "pages"
+          },
+          {
+            "start": 14,
+            "end": 18,
+            "text": "三ページ",
+            "reading": "さんぺーじ",
+            "headword": "三ページ",
+            "gloss": "three pages"
+          },
+          {
+            "start": 20,
+            "end": 25,
+            "text": "読みました",
+            "reading": "よみました",
+            "headword": "読む",
+            "gloss": "read; past tense"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-zutsu-entry-groups-unit",
+      "jlpt": 3,
+      "target": "unit-amount",
+      "relationship": "amounts",
+      "prompt": "「十人の学生が、二人ずつ部屋に入りました。」→____",
+      "translation": "Interpret the Japanese report; count only the activity it describes. Type the requested number in Arabic digits only, without a unit. Each student enters exactly once. How many students are in each entering group?",
+      "evidence": "Interpret the complete supplied ずつ statement under the explicit response operation. Paired operations on this scenario share one example key; this is not a sentence-completion blank.",
+      "explanation": "二人ずつ specifies groups of two students. The question asks for students in one group.",
+      "answer": "unit-amount",
+      "acceptedAnswers": [
+        "2"
+      ],
+      "options": [
+        {
+          "id": "unit-amount",
+          "label": "2",
+          "rationale": "二人ずつ specifies groups of two students. The question asks for students in one group."
+        },
+        {
+          "id": "whole-total",
+          "label": "5",
+          "rationale": "5 is the number of groups, not the number of students in each group."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "196ea1177faec662492eaf9363ddb65a466d265b6e46990cd07d2d8695ab099e",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "十人",
+            "reading": "じゅうにん",
+            "headword": "十人",
+            "gloss": "ten people"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "学生",
+            "reading": "がくせい",
+            "headword": "学生",
+            "gloss": "students"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "text": "二人",
+            "reading": "ふたり",
+            "headword": "二人",
+            "gloss": "two people"
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "部屋",
+            "reading": "へや",
+            "headword": "部屋",
+            "gloss": "room"
+          },
+          {
+            "start": 15,
+            "end": 20,
+            "text": "入りました",
+            "reading": "はいりました",
+            "headword": "入る",
+            "gloss": "entered"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-zutsu-entry-groups-total",
+      "jlpt": 3,
+      "target": "whole-total",
+      "relationship": "amounts",
+      "prompt": "「十人の学生が、二人ずつ部屋に入りました。」→____",
+      "translation": "Interpret the Japanese report; count only the activity it describes. Type the requested number in Arabic digits only, without a unit. Each student enters exactly once. How many entering groups make up all ten students?",
+      "evidence": "Interpret the complete supplied ずつ statement under the explicit response operation. Paired operations on this scenario share one example key; this is not a sentence-completion blank.",
+      "explanation": "Ten students partitioned into groups of two make 10 ÷ 2 = 5 groups. This counts groups, not individual students.",
+      "answer": "whole-total",
+      "acceptedAnswers": [
+        "5"
+      ],
+      "options": [
+        {
+          "id": "unit-amount",
+          "label": "2",
+          "rationale": "2 is the number of students in one group, not the number of groups needed for all ten."
+        },
+        {
+          "id": "whole-total",
+          "label": "5",
+          "rationale": "Ten students partitioned into groups of two make 10 ÷ 2 = 5 groups. This counts groups, not individual students."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "196ea1177faec662492eaf9363ddb65a466d265b6e46990cd07d2d8695ab099e",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "十人",
+            "reading": "じゅうにん",
+            "headword": "十人",
+            "gloss": "ten people"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "学生",
+            "reading": "がくせい",
+            "headword": "学生",
+            "gloss": "students"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "text": "二人",
+            "reading": "ふたり",
+            "headword": "二人",
+            "gloss": "two people"
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "部屋",
+            "reading": "へや",
+            "headword": "部屋",
+            "gloss": "room"
+          },
+          {
+            "start": 15,
+            "end": 20,
+            "text": "入りました",
+            "reading": "はいりました",
+            "headword": "入る",
+            "gloss": "entered"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-zutsu-stickers-follows",
+      "jlpt": 3,
+      "target": "entailed",
+      "relationship": "implications",
+      "prompt": "「三人の子供に、シールを二枚ずつ配りました。」→____",
+      "translation": "Does the stated claim necessarily follow from the Japanese report? Use the external label 言える（いえる）, follows, or 言えない（いえない）, not established; kana is accepted. 'Not established' does not automatically mean the opposite is true. Claim: Each child received two stickers.",
+      "evidence": "Interpret the complete supplied ずつ statement under the explicit response operation. Paired operations on this scenario share one example key; this is not a sentence-completion blank.",
+      "explanation": "二枚ずつ distributes the two-sticker quantity to each of the three children.",
+      "answer": "entailed",
+      "acceptedAnswers": [
+        "言える",
+        "いえる"
+      ],
+      "options": [
+        {
+          "id": "entailed",
+          "label": "言える",
+          "rationale": "二枚ずつ distributes the two-sticker quantity to each of the three children."
+        },
+        {
+          "id": "not-entailed",
+          "label": "言えない",
+          "rationale": "The equal per-child quantity is established by 二枚ずつ; it is not merely a possible total."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "3dd8e77977dc96e32f0e66e4d46e4c78dffe377a2c20bcdb9e084090b2632010",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "三人",
+            "reading": "さんにん",
+            "headword": "三人",
+            "gloss": "three people"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "子供",
+            "reading": "こども",
+            "headword": "子供",
+            "gloss": "children"
+          },
+          {
+            "start": 8,
+            "end": 11,
+            "text": "シール",
+            "reading": "しーる",
+            "headword": "シール",
+            "gloss": "stickers"
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "二枚",
+            "reading": "にまい",
+            "headword": "二枚",
+            "gloss": "two flat items"
+          },
+          {
+            "start": 16,
+            "end": 21,
+            "text": "配りました",
+            "reading": "くばりました",
+            "headword": "配る",
+            "gloss": "distributed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-zutsu-stickers-not-established",
+      "jlpt": 3,
+      "target": "not-entailed",
+      "relationship": "implications",
+      "prompt": "「三人の子供に、シールを二枚ずつ配りました。」→____",
+      "translation": "Does the stated claim necessarily follow from the Japanese report? Use the external label 言える（いえる）, follows, or 言えない（いえない）, not established; kana is accepted. 'Not established' does not automatically mean the opposite is true. Claim: ずつ proves that all three children received their stickers at the same instant.",
+      "evidence": "Interpret the complete supplied ずつ statement under the explicit response operation. Paired operations on this scenario share one example key; this is not a sentence-completion blank.",
+      "explanation": "ずつ specifies the amount for each child, not whether the handovers were simultaneous. Their timing is unspecified.",
+      "answer": "not-entailed",
+      "acceptedAnswers": [
+        "言えない",
+        "いえない"
+      ],
+      "options": [
+        {
+          "id": "entailed",
+          "label": "言える",
+          "rationale": "The report does not specify a common instant. Equal distribution alone cannot establish simultaneity."
+        },
+        {
+          "id": "not-entailed",
+          "label": "言えない",
+          "rationale": "ずつ specifies the amount for each child, not whether the handovers were simultaneous. Their timing is unspecified."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "3dd8e77977dc96e32f0e66e4d46e4c78dffe377a2c20bcdb9e084090b2632010",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "三人",
+            "reading": "さんにん",
+            "headword": "三人",
+            "gloss": "three people"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "子供",
+            "reading": "こども",
+            "headword": "子供",
+            "gloss": "children"
+          },
+          {
+            "start": 8,
+            "end": 11,
+            "text": "シール",
+            "reading": "しーる",
+            "headword": "シール",
+            "gloss": "stickers"
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "text": "二枚",
+            "reading": "にまい",
+            "headword": "二枚",
+            "gloss": "two flat items"
+          },
+          {
+            "start": 16,
+            "end": 21,
+            "text": "配りました",
+            "reading": "くばりました",
+            "headword": "配る",
+            "gloss": "distributed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-zutsu-spring-warming-follows",
+      "jlpt": 3,
+      "target": "entailed",
+      "relationship": "implications",
+      "prompt": "「春になって、この町も少しずつ暖かくなりました。」→____",
+      "translation": "Does the stated claim necessarily follow from the Japanese report? Use the external label 言える（いえる）, follows, or 言えない（いえない）, not established; kana is accepted. 'Not established' does not automatically mean the opposite is true. Claim: The town became warmer through small increments.",
+      "evidence": "Interpret the complete supplied ずつ statement under the explicit response operation. Paired operations on this scenario share one example key; this is not a sentence-completion blank.",
+      "explanation": "少しずつ（すこしずつ） describes the small increments of becoming warmer, not just the final overall difference.",
+      "answer": "entailed",
+      "acceptedAnswers": [
+        "言える",
+        "いえる"
+      ],
+      "options": [
+        {
+          "id": "entailed",
+          "label": "言える",
+          "rationale": "少しずつ（すこしずつ） describes the small increments of becoming warmer, not just the final overall difference."
+        },
+        {
+          "id": "not-entailed",
+          "label": "言えない",
+          "rationale": "The gradual reading is supplied by 少しずつ, even though the total increase is not quantified."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d4d9736cad73f5347e08c55f8ab72355b436aa3bc39a7d81a7845cabd019d397",
+        "spans": [
+          {
+            "start": 1,
+            "end": 2,
+            "text": "春",
+            "reading": "はる",
+            "headword": "春",
+            "gloss": "spring"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 9,
+            "end": 10,
+            "text": "町",
+            "reading": "まち",
+            "headword": "町",
+            "gloss": "town"
+          },
+          {
+            "start": 15,
+            "end": 23,
+            "text": "暖かくなりました",
+            "reading": "あたたかくなりました",
+            "headword": "暖かくなる",
+            "gloss": "became warmer"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-zutsu-spring-warming-not-established",
+      "jlpt": 3,
+      "target": "not-entailed",
+      "relationship": "implications",
+      "prompt": "「春になって、この町も少しずつ暖かくなりました。」→____",
+      "translation": "Does the stated claim necessarily follow from the Japanese report? Use the external label 言える（いえる）, follows, or 言えない（いえない）, not established; kana is accepted. 'Not established' does not automatically mean the opposite is true. Claim: The town's overall increase in warmth must have been small.",
+      "evidence": "Interpret the complete supplied ずつ statement under the explicit response operation. Paired operations on this scenario share one example key; this is not a sentence-completion blank.",
+      "explanation": "Small increments can accumulate into a large overall change. 少しずつ does not give the size of the final total increase.",
+      "answer": "not-entailed",
+      "acceptedAnswers": [
+        "言えない",
+        "いえない"
+      ],
+      "options": [
+        {
+          "id": "entailed",
+          "label": "言える",
+          "rationale": "This confuses each small increment with the cumulative change, whose size is not stated."
+        },
+        {
+          "id": "not-entailed",
+          "label": "言えない",
+          "rationale": "Small increments can accumulate into a large overall change. 少しずつ does not give the size of the final total increase."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d4d9736cad73f5347e08c55f8ab72355b436aa3bc39a7d81a7845cabd019d397",
+        "spans": [
+          {
+            "start": 1,
+            "end": 2,
+            "text": "春",
+            "reading": "はる",
+            "headword": "春",
+            "gloss": "spring"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this; modifying the following noun"
+          },
+          {
+            "start": 9,
+            "end": 10,
+            "text": "町",
+            "reading": "まち",
+            "headword": "町",
+            "gloss": "town"
+          },
+          {
+            "start": 15,
+            "end": 23,
+            "text": "暖かくなりました",
+            "reading": "あたたかくなりました",
+            "headword": "暖かくなる",
+            "gloss": "became warmer"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-zutsu-finished-photos-follows",
+      "jlpt": 3,
+      "target": "entailed",
+      "relationship": "implications",
+      "prompt": "「ちょっとずつ写真を整理して、昨日全部終えました。」→____",
+      "translation": "Does the stated claim necessarily follow from the Japanese report? Use the external label 言える（いえる）, follows, or 言えない（いえない）, not established; kana is accepted. 'Not established' does not automatically mean the opposite is true. Claim: The photographs were organized in small amounts, and the whole job was finished yesterday.",
+      "evidence": "Interpret the complete supplied ずつ statement under the explicit response operation. Paired operations on this scenario share one example key; this is not a sentence-completion blank.",
+      "explanation": "ちょっとずつ gives small amounts at a time; 昨日全部終えました（きのうぜんぶおえました） explicitly says the whole job was finished yesterday.",
+      "answer": "entailed",
+      "acceptedAnswers": [
+        "言える",
+        "いえる"
+      ],
+      "options": [
+        {
+          "id": "entailed",
+          "label": "言える",
+          "rationale": "ちょっとずつ gives small amounts at a time; 昨日全部終えました（きのうぜんぶおえました） explicitly says the whole job was finished yesterday."
+        },
+        {
+          "id": "not-entailed",
+          "label": "言えない",
+          "rationale": "Small-amount progress and later completion are compatible; the final clause expressly reports completion."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "78dda2b10feae3205a6483232b2f69d676649ca5e0bf023f18a79c32b4344e2c",
+        "spans": [
+          {
+            "start": 7,
+            "end": 9,
+            "text": "写真",
+            "reading": "しゃしん",
+            "headword": "写真",
+            "gloss": "photographs"
+          },
+          {
+            "start": 10,
+            "end": 14,
+            "text": "整理して",
+            "reading": "せいりして",
+            "headword": "整理する",
+            "gloss": "organized; connecting form"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "昨日",
+            "reading": "きのう",
+            "headword": "昨日",
+            "gloss": "yesterday"
+          },
+          {
+            "start": 17,
+            "end": 19,
+            "text": "全部",
+            "reading": "ぜんぶ",
+            "headword": "全部",
+            "gloss": "all of it"
+          },
+          {
+            "start": 19,
+            "end": 24,
+            "text": "終えました",
+            "reading": "おえました",
+            "headword": "終える",
+            "gloss": "finished"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-zutsu-finished-photos-not-established",
+      "jlpt": 3,
+      "target": "not-entailed",
+      "relationship": "implications",
+      "prompt": "「ちょっとずつ写真を整理して、昨日全部終えました。」→____",
+      "translation": "Does the stated claim necessarily follow from the Japanese report? Use the external label 言える（いえる）, follows, or 言えない（いえない）, not established; kana is accepted. 'Not established' does not automatically mean the opposite is true. Claim: The job must still be unfinished because the report uses ずつ.",
+      "evidence": "Interpret the complete supplied ずつ statement under the explicit response operation. Paired operations on this scenario share one example key; this is not a sentence-completion blank.",
+      "explanation": "ずつ does not force an unfinished present state. The final clause explicitly reports that the job was completed yesterday.",
+      "answer": "not-entailed",
+      "acceptedAnswers": [
+        "言えない",
+        "いえない"
+      ],
+      "options": [
+        {
+          "id": "entailed",
+          "label": "言える",
+          "rationale": "An always-unfinished rule would contradict 全部終えました; repeated or incremental activity can already have ended."
+        },
+        {
+          "id": "not-entailed",
+          "label": "言えない",
+          "rationale": "ずつ does not force an unfinished present state. The final clause explicitly reports that the job was completed yesterday."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "78dda2b10feae3205a6483232b2f69d676649ca5e0bf023f18a79c32b4344e2c",
+        "spans": [
+          {
+            "start": 7,
+            "end": 9,
+            "text": "写真",
+            "reading": "しゃしん",
+            "headword": "写真",
+            "gloss": "photographs"
+          },
+          {
+            "start": 10,
+            "end": 14,
+            "text": "整理して",
+            "reading": "せいりして",
+            "headword": "整理する",
+            "gloss": "organized; connecting form"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "昨日",
+            "reading": "きのう",
+            "headword": "昨日",
+            "gloss": "yesterday"
+          },
+          {
+            "start": 17,
+            "end": 19,
+            "text": "全部",
+            "reading": "ぜんぶ",
+            "headword": "全部",
+            "gloss": "all of it"
+          },
+          {
+            "start": 19,
+            "end": 24,
+            "text": "終えました",
+            "reading": "おえました",
+            "headword": "終える",
+            "gloss": "finished"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-zutsu-timer-increments-follows",
+      "jlpt": 3,
+      "target": "entailed",
+      "relationship": "implications",
+      "prompt": "「タイマーの設定時間を三回、二分ずつ延ばしました。」→____",
+      "translation": "Does the stated claim necessarily follow from the Japanese report? Use the external label 言える（いえる）, follows, or 言えない（いえない）, not established; kana is accepted. 'Not established' does not automatically mean the opposite is true. Claim: The timer's set duration increased by six minutes in total.",
+      "evidence": "Interpret the complete supplied ずつ statement under the explicit response operation. Paired operations on this scenario share one example key; this is not a sentence-completion blank.",
+      "explanation": "三回 gives three adjustments, each adding 二分ずつ: 3 × 2 = 6 minutes of total increase. The starting and final absolute durations are not given.",
+      "answer": "entailed",
+      "acceptedAnswers": [
+        "言える",
+        "いえる"
+      ],
+      "options": [
+        {
+          "id": "entailed",
+          "label": "言える",
+          "rationale": "三回 gives three adjustments, each adding 二分ずつ: 3 × 2 = 6 minutes of total increase. The starting and final absolute durations are not given."
+        },
+        {
+          "id": "not-entailed",
+          "label": "言えない",
+          "rationale": "The number of adjustments and amount added each time determine the total increase, although not the final timer setting."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "51fca89e90b9714dae38caaeeb707e32dced0731b4d39ace3233ecdfd679f66d",
+        "spans": [
+          {
+            "start": 1,
+            "end": 5,
+            "text": "タイマー",
+            "reading": "たいまー",
+            "headword": "タイマー",
+            "gloss": "timer"
+          },
+          {
+            "start": 6,
+            "end": 10,
+            "text": "設定時間",
+            "reading": "せっていじかん",
+            "headword": "設定時間",
+            "gloss": "set duration"
+          },
+          {
+            "start": 11,
+            "end": 13,
+            "text": "三回",
+            "reading": "さんかい",
+            "headword": "三回",
+            "gloss": "three times"
+          },
+          {
+            "start": 14,
+            "end": 16,
+            "text": "二分",
+            "reading": "にふん",
+            "headword": "二分",
+            "gloss": "two minutes"
+          },
+          {
+            "start": 18,
+            "end": 24,
+            "text": "延ばしました",
+            "reading": "のばしました",
+            "headword": "延ばす",
+            "gloss": "extended"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-zutsu-timer-increments-not-established",
+      "jlpt": 3,
+      "target": "not-entailed",
+      "relationship": "implications",
+      "prompt": "「タイマーの設定時間を三回、二分ずつ延ばしました。」→____",
+      "translation": "Does the stated claim necessarily follow from the Japanese report? Use the external label 言える（いえる）, follows, or 言えない（いえない）, not established; kana is accepted. 'Not established' does not automatically mean the opposite is true. Claim: A total increase of six minutes means the change happened in one adjustment.",
+      "evidence": "Interpret the complete supplied ずつ statement under the explicit response operation. Paired operations on this scenario share one example key; this is not a sentence-completion blank.",
+      "explanation": "The same six-minute total here results from three two-minute adjustments, not one all-at-once adjustment.",
+      "answer": "not-entailed",
+      "acceptedAnswers": [
+        "言えない",
+        "いえない"
+      ],
+      "options": [
+        {
+          "id": "entailed",
+          "label": "言える",
+          "rationale": "A cumulative amount is not an event count. 三回 explicitly supplies three adjustments in this report."
+        },
+        {
+          "id": "not-entailed",
+          "label": "言えない",
+          "rationale": "The same six-minute total here results from three two-minute adjustments, not one all-at-once adjustment."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "51fca89e90b9714dae38caaeeb707e32dced0731b4d39ace3233ecdfd679f66d",
+        "spans": [
+          {
+            "start": 1,
+            "end": 5,
+            "text": "タイマー",
+            "reading": "たいまー",
+            "headword": "タイマー",
+            "gloss": "timer"
+          },
+          {
+            "start": 6,
+            "end": 10,
+            "text": "設定時間",
+            "reading": "せっていじかん",
+            "headword": "設定時間",
+            "gloss": "set duration"
+          },
+          {
+            "start": 11,
+            "end": 13,
+            "text": "三回",
+            "reading": "さんかい",
+            "headword": "三回",
+            "gloss": "three times"
+          },
+          {
+            "start": 14,
+            "end": 16,
+            "text": "二分",
+            "reading": "にふん",
+            "headword": "二分",
+            "gloss": "two minutes"
+          },
+          {
+            "start": 18,
+            "end": 24,
+            "text": "延ばしました",
+            "reading": "のばしました",
+            "headword": "延ばす",
+            "gloss": "extended"
+          }
+        ]
+      }
+    }
+  ]
+}

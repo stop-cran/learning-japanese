@@ -265,7 +265,8 @@ The [respectful/humble ledger](grammar-honorific-humble-sources.json) adds 37 N4
 The [productive-descriptions ledger](grammar-productive-descriptions-sources.json) adds 30 N4 tasks in one set.
 The [quantity/scope ledger](grammar-quantity-scope-sources.json) adds 26 N4 tasks and two N5 controls in one set.
 The [conversation/discourse ledger](grammar-conversation-connectors-sources.json) adds 24 N4 tasks and four N5 controls in one set.
-Current practice is 1738 exercises: 596 N5 and 801 N4, with the other levels unchanged. Mixed-level articles derive their browsing levels from
+The [ずつ bridge](grammar-quantity-zutsu-sources.json) adds 16 N3 interpretations without duplicating existing quantity owners.
+Current practice is 1754 exercises: 596 N5, 801 N4 and 251 N3, with N2/N1 unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -346,7 +347,7 @@ Repair chapter boundaries/staging rather than deleting genuine gates for layout 
 well as outgoing edges, partial availability, external/unmapped foundations, ownership, compatibility and stable identities.
 Run `python tools/validate.py`, focused grammar tests, vocabulary checks, manifest regeneration and the real Android importer.
 
-The current catalog places all **236 authored groups in 20 chapters**, with **23 immediate leaf prerequisites** and **9 derived
+The current catalog places all **238 authored groups in 20 chapters**, with **23 immediate leaf prerequisites** and **9 derived
 chapter arrows**. All 247 recommendations remain unchanged. The 292 unowned exercises remain compatibility practice, not fabricated
 chapter/readiness credentials. The ledger distinguishes the earlier partial-mapping pilot from current ownership and records each
 edge's precise scope. The installment summaries below describe their original delivery snapshots; their original zero-prerequisite
@@ -567,6 +568,12 @@ Explicit/open-ended prefaces and coexisting/expectation-related contrasts remain
 Continuation-question それで is not automatically causal, and paired selected links share their context key.
 Existing N5 explanation, quotation, yo/ne, conjecture, attached contrast and topic objects retain their owners;
 clausal ても remains in time/linking. Register recognition does not infer gender, hostility or a universal social ranking.
+The [ずつ installment](grammar-quantity-zutsu-sources.json) adds 16 annotated N3 interpretations,
+reaching **1754 exercises in 72 files** and **1445/1754** reviewed, with the same 309 pending.
+Two groups contain four facets and six qualifying scenario keys. Per-unit/whole-total operations
+and claims about increments, timing and completion use explicit external responses, not ambiguous
+sentence gaps. The two groups reuse `focus-and-quantity`; no recommendation or hard gate is added.
+The curriculum ledger preserves its historical rollout inventory and records this additive delivery separately.
 The first 30 conditional additions subsequently received
 independent review and reconciliation. Independent review of the second 30 found a minor omitted-contraction issue
 in six answer lists; bounded reconciliation resolved it without further actionable findings. See the
