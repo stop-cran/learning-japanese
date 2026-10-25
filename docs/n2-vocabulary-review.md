@@ -5,7 +5,7 @@
 **Batches 01-67 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,340 rows are review-closed; none are draft and 472 remain pending.
+The first 1,340 rows are review-closed; twenty are draft and 452 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,58 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 68: N2:1342-N2:1361
+
+**Status:** committed draft prepared for independent sequential reviews.
+No independent acceptance or batch closure is claimed yet.
+
+Eighteen new articles: 肌着, 果たして, 鉢, ばつ, 発揮,
+バック, 発射, 発想, 発電, 発売, 派手, 話し合い,
+話しかける, 話し中, 甚だしい, 花嫁, 放れる and ばね.
+花火 is reused with only sourced N2 added. 羽 is reused at N3
+with explicit 羽根 はね shuttlecock teaching; its existing
+title, reading, primary characters, tags and exclusions are preserved.
+放れる remains separate from unchanged 離れる.
+
+The [packet](n2-vocabulary-batch-sources/batch-68.json) retains
+twenty raw source rows and twenty complete principal families /
+46 senses. Canonical articles explicitly recognize raw 果して,
+話合い, 話し掛ける and 話中. Blank source fields are preserved.
+Selected source teaching and additional recognition senses remain
+distinct; neither establishes an independent level for every sense.
+The explicit `teachingSpelling: 羽根` override respects the
+hanetsuki sense's spelling restriction within the stable 羽 article.
+
+Four edited kanji cards preserve their headers. 肌/肌着 is a new
+primary reciprocal N2 pair. 羽's established primary pair remains;
+根 links explicitly to the 羽根 alias without inventing its meaning
+or a character reading. 放 gains the release-focused verb at its
+documented はな.れる reading. No missing component cards are invented.
+
+The separate completed-inspection receipt records 398 complete
+families / 914 senses, 132 distinct complete older comparison articles,
+228 navigation labels, 31 complete component records and four
+complete related kanji bodies. All fifteen family and sixteen
+older-body chunks were read through EOF, covering 131 older
+identities. A supplemental direct full read of 示す brings the
+union to 132; 96 candidates remain unselected. The original
+preparation plan and initial completed receipt remain unchanged.
+
+Twenty-six frozen public requests produced 24 nonempty extractions,
+but the raw ｘ response concerns エックス rather than ばつ.
+Thus 23 are target-positive and two are empty. All are from one
+authority, Digital Daijisen via Weblio, not independent reviewer
+retrievals or frequency evidence. A separately read Kotobank/Seisenban
+entry supports the uncertainty of ばつ's proposed derivation;
+it has no saved response hash and is not part of the frozen capture.
+The card's practical word-type grouping requires independent scrutiny.
+
+Draft coverage is **1,340 closed / 20 draft / 452 pending /
+0 unresolved**, mapping **1,346 articles: 1,245 new / 101 reused**.
+The authored scope is 30 files. Initial blind GPT and Claude reviews,
+native-output authentication and evidence-based reconciliation remain
+pending; author inspections are not independent reviewer judgments.
 
 ## Batch 67: N2:1322-N2:1341
 

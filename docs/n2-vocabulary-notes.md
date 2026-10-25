@@ -19,6 +19,71 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 68 authoring observations
+
+- Twenty source rows map to eighteen new articles and two reused
+  identities. 花火 gains only sourced N2. 羽 keeps its N3 level,
+  title, primary spelling/reading/characters and exclusions while
+  explicitly adding 羽根 はね shuttlecock teaching. 放れる gets
+  a distinct release-focused article; existing 離れる is untouched.
+  Record `teachingSpelling: 羽根` for the spelling-restricted
+  hanetsuki sense rather than falsely claiming it under primary 羽.
+- Recognize raw 果して, 話合い, 話し掛ける and 話中 under
+  their canonical spellings. The blank spellings for バック and
+  ばね and the blank gloss for fullwidth ｘ remain provenance.
+  The latter maps to the cross-mark name ばつ, not the Latin
+  letter name エックス.
+- 鉢's noun heading traces the vessel word to Sanskrit through
+  鉢多羅. Its Sino-Japanese reading does not establish an
+  ultimately Chinese origin or a metal-only vessel meaning.
+  ばつ's proposed derivation from 罰点 is tentative in both
+  inspected dictionary authorities. Its required `wago` field is
+  explicitly qualified as an editorial grouping, not a verified
+  historical classification, and remains subject to review.
+- 派手 is on-first mixed ハ plus て voiced で, following the
+  existing 毎朝/台所 `kango` convention. 話し中 is native-first
+  mixed はなし plus チュウ. Both carry `mixed-reading`;
+  neither is described as a uniform all-on/all-kun formation.
+- Preserve every primary written character even without a
+  component card. The validator caught a nonexistent 派 link;
+  leave that character plain rather than inventing a card.
+  肌/肌着 gets both reciprocal table and common-word links.
+  羽 retains its primary links; explicit 根/羽根 alias links
+  do not invent a plant-root meaning or a component reading.
+- Selected source 発想 teaching includes music expression as
+  well as conceptualization. バック's ten-sense family does
+  not assign a single transitivity to reverse movement and
+  refunding. 発電's telegram sense is a contrast, not email.
+  発売 establishes availability, not necessarily a discount.
+- Actual existing comparisons matter: ボール includes bowl,
+  バッグ recognizes irregular バック, ねじ includes a clock
+  spring, シャツ can be outerwear, and 下着 is not restricted
+  to the lower body. Do not erase these facets to simplify
+  new titles or quiz decisions.
+- Completed author reads comprise 398 complete families /
+  914 senses, including twenty principal families / 46 senses;
+  132 distinct complete older comparison articles, 228 labels, 31 complete
+  component records and four complete related kanji bodies.
+  All fifteen family and sixteen older-body chunks were read
+  through EOF, accounting for 131 older identities. 示す was
+  then read directly in full for a declared guard, bringing the
+  union to 132 and leaving 96 candidates unselected. The initial
+  completed receipt and original prepared plan are unchanged.
+  Complete 毎朝 and 台所 were additionally read for the mixed
+  classification convention, outside that comparison-body union.
+- All 26 frozen public records and captured lexical text were
+  inspected. Twenty-four nonempty extractions include one
+  wrong-target raw ｘ response: only 23 requests are
+  target-positive, while 話合い and 話中 are empty.
+  Digital Daijisen via Weblio is one authority, not 26.
+  A separately fetched Kotobank/Seisenban entry corroborates
+  the tentative wording about ばつ; no saved response hash
+  or inclusion in the frozen 26-request capture is claimed.
+- These are author reads and direct symmetric, nontransitive
+  quiz hypotheses. Independent reviews have not yet run.
+  Preparation, inspection and review receipts remain distinct;
+  inherited batch61 quiz debt is not silently expanded here.
+
 ## Batch 67 authoring observations
 
 - Twenty source rows map to fifteen new and three reused identities.
