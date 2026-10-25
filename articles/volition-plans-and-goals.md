@@ -185,6 +185,23 @@ The ordinary nonpast attachment is **verb / i-adjective + といい**,
 but **noun / na-adjective + だといい**. Here **静かだ** retains だ.
 The wished condition is not guaranteed to happen.
 
+Keep the desired situation's polarity **before といい**:
+
+| Supplied polite predicate | Affirmative hope | Negative hope |
+|---|---|---|
+| 晴れます（はれます, be sunny） | 晴れるといい | 晴れないといい |
+| 暖かいです（あたたかいです, be warm） | 暖かいといい | 暖かくないといい |
+| 静かです（しずかです, be quiet） | 静かだといい | 静かではないといい |
+| 休みです（やすみです, be a day off） | 休みだといい | 休みではないといい |
+
+The negative column means hoping that the predicate **does not hold**: the last example
+hopes it is **not** a day off. Negating the hoped-for situation is not the same operation
+as saying that the situation would **not be good**.
+The copular negatives **でない／ではない／じゃない／じゃあない** can all precede といい;
+the contractions are conversational. **とよい** is another realization of the same pattern.
+The formation practice requests short plain predicates, not the more formal copula **である**,
+and fixes the lexical predicate rather than asking for every synonymous wish.
+
 といい also appears in advice: **分からない言葉は辞書で調べるといいですよ**
 （わからないことばはじしょでしらべるといいですよ） means "For words you don't understand,
 it's a good idea to look them up in a dictionary." Do not call every occurrence a wish.
@@ -203,9 +220,39 @@ Final **な** and **ね** can shape how a wish is expressed, but do not mechanic
 
 In these wish uses, a desired nonpast positive or negative situation precedes ように.
 祈る（いのる） can express praying or hoping; an explicit religious setting is not required.
-The final wish can also use a polite predicate, as in **合格しますように**.
+**願う（ねがう, wish/hope）** can also introduce the wish content:
+
+> 台風が来ないように願っています。  
+> たいふうがこないようにねがっています。  
+> I am hoping that the typhoon does not come.
+
+The final wish commonly uses a polite predicate, as in **合格しますように**.
+A negative polite wish can use **ませんように**:
+
+> 会議に遅れませんように。  
+> かいぎにおくれませんように。  
+> May I not be late for the meeting.
+
+Plain content before a prayer verb and polite sentence-final wishes are useful patterns,
+not a ban on polite embedded wishes or plain final ones.
+The drills explicitly request one form. They retain **に**; **よう** without に is also found
+before verbs such as 願う, with a somewhat more formal feel, rather than being simply an error.
+An optional quotative **と** can follow ように before a prayer/wish verb:
+**成功するようにと祈っています**（せいこうするようにといのっています, "I am hoping/praying
+for success"） is accepted alongside **成功するように祈っています**.
+Wish content can contain different verb types: do not import the purpose pattern's
+restrictions as a universal rule about what people can wish for.
 This is not the same attachment task as the plain-verb purpose exercises.
 Neither a wish nor a prayer establishes the result.
+
+Keep the person wishing separate from the person in the desired event:
+
+> 祖母は「孫が無事に帰れますように」と祈りました。  
+> そぼは「まごがぶじにかえれますように」といのりました。  
+> Grandmother prayed, "May my grandchild be able to return safely."
+
+Grandmother is the person who prayed; the grandchild is the person returning in the wish.
+This sentence alone does not report the grandchild's eventual return.
 
 Read the full exchange: a sentence ending in ように can also leave an instruction or purpose
 implicit. It is not automatically a prayer, and this is not the only Japanese construction
@@ -231,10 +278,15 @@ Do not replace に and が mechanically to avoid repeating a particle; their rol
 
 ## Practice boundaries and further steps
 
-The new exercises contain seventeen form conversions and eight interpretations in three groups.
+The original plans/goals exercises contain seventeen form conversions and eight interpretations in three groups.
 The other required areas use the original goals, changes, maintained practices and desire groups.
-The wish/advice, final-wish and manner/purpose-plus-desire examples above are supporting recognition,
-not separately assessed productive skills. Shortened casual volition and negative volition are not new targets.
+The separate hopes/wishes set now adds fourteen bounded formation tasks and six interpretations
+in three groups: positive/negative hopes, embedded/final wish forms, and desired content,
+certainty and participants. Choices recognize the requested form; typing requires its formation,
+so those modes do not provide identical production evidence. Interpretation pairs share their
+scenario keys and are not independent conversations.
+Advice with といい and manner/purpose-plus-desire remain supporting recognition, not newly
+scored targets. Shortened casual volition and negative volition are not new targets.
 
 Optional **ことにする／ことになる**, purpose **ために**, and occasional nonpast **ことがある**
 remain N3 follow-ups in the [formal-noun article](koto-wake-and-formal-nouns.md).
@@ -251,3 +303,8 @@ and the Japan Foundation's [change](https://www.kyozai.jpf.go.jp/kyozai/material
 [purpose/instruction/wish](https://www.kyozai.jpf.go.jp/kyozai/material/BMA00057/ja/render.do) lessons.
 The [source and coverage record](https://github.com/stop-cran/learning-japanese/blob/main/docs/grammar-plans-goals-sources.json)
 records exact reused owners, source qualifications and the limits of this installment.
+The [hopes/wishes follow-up record](https://github.com/stop-cran/learning-japanese/blob/main/docs/grammar-hopes-wishes-sources.json)
+documents the separate scored set, including the actual
+[Bunpro wish lesson](https://bunpro.jp/grammar_points/ようにいのる) and the Japan Foundation
+lesson's **wish** development section. The latter's historical JLPT heading is not a current
+N4 level assignment.
