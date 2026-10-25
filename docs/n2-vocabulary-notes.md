@@ -95,6 +95,21 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 57 reconciliation:** An existing Common words link does
+  not prove that a required reading-row example is present; check
+  both surfaces explicitly at the actual whole-word reading.
+  Dictionary spelling restrictions apply to the listed family, not
+  every Japanese source, and missing spellings must not be invented.
+  Distinguish noun + をする from a direct する construction in the
+  explanation even when both examples are correct. Use actual
+  ordinary secondary meanings, not neighboring exclusions or
+  English polysemy, to adjudicate lowering, stopping and matching
+  guards. A useful clarity improvement need not mean that the
+  original qualified construction was false. Count overlapping
+  evidence by deduplicated families, senses and actual complete
+  bodies; retain unequal reviewer read depths and pending
+  confirmation rather than claiming review closure.
+
 - **Batch 57 authoring:** A failed raw-alias endpoint is not
   dictionary verification; preserve its failure and separately
   inspect the canonical entry. A thin cross-reference such as

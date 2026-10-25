@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 57: N2:1122-N2:1141
 
-**Status:** drafted; independent review and reconciliation pending.
+**Status:** drafted; authenticated initial reviews and author corrections
+recorded; original-session confirmations pending.
 
 Seventeen new articles: 強気, 釣り合う, 吊る, 吊るす, 手洗い,
 定員, 定価, 低下, 定期券, 定休日, 停止, 停車, 停電,
@@ -75,6 +76,64 @@ are linked substantively, and missing cards are not fabricated.
 Current totals: 1,131 mapped articles = 1,052 new and 79 reused
 baseline identities; 4,325 total word articles. These are drafted
 mapping totals, not a claim of independent review closure.
+
+### Batch 57 - initial reviews and corrections
+
+The initially blind [GPT](n2-vocabulary-reviews/batch-57-gpt-initial.md)
+and [Claude](n2-vocabulary-reviews/batch-57-claude-initial.md) reports
+reviewed authored commit `2a1d30f2abe197b94ac8a92730fd8e69086ae30a`.
+Actual models were `gpt-6.1-sol` and `claude-opus-5.5`; isolated
+processes ran sequentially and exited without edits. Complete native
+messages, exact common prompts, actual models, committed hashes,
+patch and blind evidence equivalence were authenticated. Their file
+tools could not execute Git, hash or worktree checks; those checks
+were author-executed, not independent reviewer claims.
+
+Both read all twenty assigned articles, three complete kanji cards
+and complete principal/comparison family renderings. GPT additionally
+read 82 complete older word bodies; Claude read complete older bodies
+only for 揃う and 下降, using title/guard checks for about 150 others.
+Both read compact components/labels and public capture text. Partial
+reads of the large evidence JSON and Claude's unread permitted source
+documents remain explicit in the complete reports.
+
+Shared findings correct 出入り's nonexistent 出入 attribution in
+pinned family 1339910, add three required reading-row examples and
+guard 低下 against 落ちる. Correct the current source note and its
+packet mirrors without erasing the immutable initial evidence or
+asserting that other Japanese sources prohibit 出入. Do not adopt a
+"less common reading" claim from dictionary ordering alone.
+
+Accept Claude's 手洗いをする versus 手洗いする precision and
+低下/下げる guard, and GPT's direct 停止/上がる, 壊れる,
+落ちる and 釣り合う/揃う, 適当 guards. Seven direct guards are
+added, with no baseline exclusion edits or transitive propagation.
+The 出かける construction was already explicitly qualified; treat
+Claude's concern as a partial clarity improvement, not proof that
+the original example is wrong. Explain the general ところ pattern
+and add a tense-adjusted form of the actual departure-starting
+dictionary example.
+
+Reconciliation actually read fourteen complete families/89 senses
+and eight complete older bodies. Deduplicating against the original
+inspection gives 141 families/371 senses and 89 complete older
+bodies, not the sum of overlapping captures. Their actual meanings
+do not establish required 釣り合う/差し引き or 低下/断る guards
+merely because English "balance" and "decline" are polysemous.
+Those remain low-confidence optional hypotheses, not proof of zero
+contextual overlap. Spelling-frequency claims, extra unselected
+senses, parking comparisons and unrelated baseline guard redesign
+are not required corrections.
+
+The reports supplied shared and complementary useful observations,
+but unequal actual comparison depth and interpretive suggestions
+prevent model rankings or controlled bias-reduction claims.
+Mappings, raw fields, selected/additional senses, easier levels and
+primary identities remain unchanged; only N2:1136's explanatory
+source note and the corresponding index hash change. Confirmation
+must assess the actual changed passages, exact twenty associations
+and all five required reciprocal reading-row/Common words pairs.
+Initial reports and author corrections alone do not close the batch.
 
 ## Batch 56: N2:1102-N2:1121
 
