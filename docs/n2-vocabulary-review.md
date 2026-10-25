@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 68: N2:1342-N2:1361
 
-**Status:** both independent initial reviews authenticated;
-bounded corrections prepared for original-session confirmations.
+**Status:** initial reviews and first correction confirmations
+authenticated; bounded followup reconfirmations pending.
 No final independent acceptance or batch closure is claimed yet.
 
 Eighteen new articles: 肌着, 果たして, 鉢, ばつ, 発揮,
@@ -74,8 +74,8 @@ it has no saved response hash and is not part of the frozen capture.
 The arbitrary kana-to-`wago` grouping is withdrawn. The corrected
 card explicitly makes `kango` provisional, following the tentative
 罰点 connection, and adds `etymology-uncertain`. This does not
-prove a settled historical type; final reviewers must reassess
-whether the qualification resolves the actual teaching claim.
+prove a settled historical type. Both original reviewers accept
+the qualified teaching, not historical certainty.
 
 Draft coverage is **1,340 closed / 20 draft / 452 pending /
 0 unresolved**, mapping **1,346 articles: 1,245 new / 101 reused**.
@@ -111,8 +111,33 @@ all 31 family/body chunks and 23 additional direct older word bodies;
 Claude returns none of those chunks and six complete older word
 bodies, three for classification conventions. Common access is not
 equal inspection. This is practical complementarity, not measured
-bias reduction or a model ranking. Both original-session confirmations
-remain pending; author reads are not independent reviewer judgments.
+bias reduction or a model ranking. Author reads are not independent
+reviewer judgments.
+
+First confirmations are also archived:
+[GPT](n2-vocabulary-reviews/batch-68-gpt-confirmation.md) and
+[Claude](n2-vocabulary-reviews/batch-68-claude-confirmation.md).
+Both resolve the original findings. Claude's two new observations
+keep the batch open despite GPT's CLEAN table: the current ばつ
+mapping note still described withdrawn `wago`, and two further
+intensifier safeguards were missing.
+
+The 11-file followup changes three new articles, adds five direct
+guards, precisely attributes ｘ to JMdict and synchronizes only
+N2:1345's current source note and index checksum. Lexical mappings
+and raw fields stay unchanged; original frozen evidence is preserved.
+Specific additional pairs are 甚だしい with 非常に, 極, ド and
+超過, plus バック/逆. Complete families and full bodies support
+the bounded degree, excess and reversed-direction English facets,
+not unrestricted interchangeability.
+
+Actual followup author reads cover twelve complete families /
+27 senses and five older bodies, reaching 416 / 955 and 146
+distinct older identities. Both compact chunks were read through EOF.
+Native prior confirmation outputs contain all 24 assigned bodies
+and all six corrective chunks for each reviewer. The older-body
+partition is 7 + 8 + 6, not Claude's prose count of 7 + 7 + 7.
+Both original-session reconfirmations remain pending.
 
 ## Batch 67: N2:1322-N2:1341
 

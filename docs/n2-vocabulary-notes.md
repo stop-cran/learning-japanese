@@ -41,7 +41,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   kana-to-`wago` grouping. The correction explicitly makes `kango`
   provisional, following that possible connection, with an
   `etymology-uncertain` tag. This is not positive proof of settled
-  historical type; both original reviewers must reassess it.
+  historical type. Both original reviewers accept the qualified
+  teaching, not a proven historical classification.
 - 派手 is on-first mixed ハ plus て voiced で, following the
   existing 毎朝/台所 `kango` convention. 話し中 is native-first
   mixed はなし plus チュウ. Both carry `mixed-reading`;
@@ -83,7 +84,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   or inclusion in the frozen 26-request capture is claimed.
 - These are author reads and direct symmetric, nontransitive
   quiz hypotheses. Both blind initial reviews are authenticated;
-  original-session correction confirmations remain pending.
+  both first confirmations resolve the original findings, but
+  followup reconfirmations remain pending.
   Preparation, inspection and review receipts remain distinct;
   inherited batch61 quiz debt is not silently expanded here.
 - Corrections add nineteen direct safeguards and remove the
@@ -113,6 +115,24 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   Claude supplied 春 and 忙しい guards and useful optional
   wording/link improvements. This supports complementary catches,
   not measured model-bias reduction or a general model ranking.
+- First confirmation kept the batch open: Claude identified a
+  stale current `wago` source note and two further intensifier
+  safeguards after GPT's CLEAN table. Update the current note and
+  index checksum without rewriting frozen mappings or reports.
+  Separate current contributor metadata from historical snapshots.
+- Followup inspection adds specific 甚だしい safeguards for
+  非常に, 極, ド and 超過, and バック/逆. Complete families and
+  bodies establish the degree, excess and reversed-direction
+  English-answer facets; these are not unrestricted Japanese
+  synonyms, a shared-tag clique or transitive inference.
+  Attribute fullwidth ｘ specifically to JMdict.
+- Twelve complete followup families / 27 senses add seven / eleven
+  to reach 416 / 955. Five full older bodies add four identities
+  (ド was already read), reaching 146. Both compact renderings
+  were read through EOF. The prior older-body chunks contain
+  7 + 8 + 6 articles, not Claude's prose count of 7 + 7 + 7;
+  exact native outputs govern accounting. Both original reviewers
+  must reassess these bounded changes before closure.
 
 ## Batch 67 authoring observations
 
