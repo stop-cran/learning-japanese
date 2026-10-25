@@ -5,7 +5,7 @@
 **Batches 01-69 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,380 rows are review-closed; none are draft and 432 remain pending.
+The first 1,380 rows are review-closed; 20 are draft and 412 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,45 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 70: N2:1382-N2:1401
+
+**Status:** drafted; independent review and reconciliation pending.
+
+Seventeen new articles: 半島, ハンドル, 日当たり, 日帰り,
+比較的, 日陰, 引き受ける, 引き返す, 引き算, 引き止める,
+卑怯, 引き分け, 日差し, 肘, ピストル, ビタミン and 引っ掛かる.
+Reuse stable ぴかぴか with newly sourced N2, 引き出す at N4,
+and ぴったり at N3 for source ぴたり. Titles, primary readings,
+identities and assets are retained; direct quiz additions are explicit.
+
+The [packet](n2-vocabulary-batch-sources/batch-70.json) preserves
+twenty raw rows and twenty complete principal families / 45 senses,
+including blank source spellings and ぴたり's blank gloss.
+Raw aliases remain visible without multiplying identities.
+Three preserved kanji headers gain matching reading/common-word
+links: 島/半島, 比/比較的 and 算/引き算.
+
+Completed author reads cover 387 full families / 945 senses,
+142 complete older word bodies, 213 original navigation labels,
+28 complete component records and three related kanji bodies.
+Sixteen family and seventeen older-body chunks were read through
+EOF; two supplemental families and three direct older-body reads
+are accounted separately. The public label union is 216 records,
+not 216 fully inspected articles. Of the original 75 unselected
+navigation candidates, 74 remain unselected.
+
+All 23 public captures were inspected; 21 have applicable lexical
+headings from one authority. Raw 陽射's empty extraction and
+引受る's HTTP 404 are explicit failures, not positive evidence.
+Spelling restrictions, modern versus older senses and assigned
+readings within mixed public headings remain independently scoped.
+
+Draft coverage: **1,380 closed / 20 draft / 412 pending /
+0 unresolved**. Twenty newly mapped rows bring mapped articles to
+**1,386: 1,282 new / 104 reused**. The authored scope is 29 files.
+Author inspection is not an independent reviewer finding or a
+claim of measured model-bias reduction.
 
 ## Batch 69: N2:1362-N2:1381
 

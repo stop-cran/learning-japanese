@@ -19,6 +19,67 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 70 authoring observations
+
+- Seventeen new articles and three reused identities cover
+  N2:1382-N2:1401. Previously unlevelled ぴかぴか gains
+  sourced N2; 引き出す keeps N4 and ぴったり keeps N3.
+  Existing titles, primary readings, identity, assets and
+  scene eligibility are preserved. Direct quiz additions to
+  the latter two are explicitly enumerated in the packet.
+- The source's ぴたり and teaching ぴったり share one family.
+  Neither the blank source spelling nor blank gloss is filled
+  with invented provenance. 引受る, 引返す, 引算, 引出す,
+  引分け and 陽射 remain visible aliases, not new identities.
+  Search-only forms are not promoted to preferred spellings.
+- Completed author inspection comprises 387 complete
+  families / 945 senses: 385 / 937 in sixteen full-family
+  chunks and two additional families / eight senses. All
+  seventeen older-body chunks were actually read through
+  EOF, covering 139 identities; direct 合う, しっかり and
+  降ろす reads bring the distinct full-body union to 142.
+  Metadata-only navigation is not full-body inspection.
+- All twenty principal records / 45 senses, 213 original
+  navigation labels, 28 complete component records and three
+  complete related kanji bodies were inspected. Three
+  additional metadata records make the packet's label union
+  216. Of 75 originally unselected navigation candidates,
+  only 降ろす was subsequently selected; 74 remain unselected.
+  The other direct supplements were outside that initial set.
+- All 23 public captures were inspected: 21 applicable
+  lexical headings from one authority, Digital Daijisen via
+  Weblio. Raw 陽射 yields no lexical body and raw 引受る
+  returns HTTP 404; neither failure verifies an alias.
+  Canonical 日差し/陽射し and 引き受ける are separate
+  positive captures. The collector now records a 404 as an
+  explicit failed request without treating other HTTP errors
+  as successful evidence.
+- 日陰's sunlight sense belongs only to 日影/日かげ.
+  日当たり's additional per-day sense is restricted to
+  日当たり/日当り. Full-family membership does not remove
+  spelling restrictions. 日差し metadata retains 日/差,
+  not the characters of its alternative 陽射 form.
+- 引き返す teaches modern intransitive turning back, not
+  unrestricted modern transitive repetition or sending back.
+  Public older literary senses genuinely include repetition,
+  reversal and return: qualify them rather than calling the
+  source gloss fictitious or asserting compiler intent.
+- 引き算 follows 掛け算's native-first mixed-reading
+  convention: ひき + サン, voiced ざん. Its `wago`
+  field does not say both readings are native. The three
+  reciprocal N2 pairs are 島/半島, 比/比較的 and 算/引き算.
+  Missing 較/的/陰/卑/怯/肘 cards are not invented.
+- ぴかぴか's finished-food use is children's language,
+  distinct from ordinary shine or a polished clean plate.
+  ぴたり/ぴったり additionally illustrates abrupt complete
+  stopping. 引き出す adds bounded talent/information eliciting;
+  public sense numbering differs from pinned JMdict.
+- 引っ掛かる's splash recognition keeps the liquid as
+  grammatical subject. ピストル and ビタミン are lexical
+  teaching, not operational weapon or medical advice.
+  Guard choices are direct author hypotheses for review,
+  not cliques, universal substitutions or global uniqueness.
+
 ## Batch 69 authoring observations
 
 - First confirmation found a further 張り切る/活力 energy
