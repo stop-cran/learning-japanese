@@ -84,8 +84,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   or inclusion in the frozen 26-request capture is claimed.
 - These are author reads and direct symmetric, nontransitive
   quiz hypotheses. Both blind initial reviews are authenticated;
-  both first confirmations resolve the original findings, but
-  followup reconfirmations remain pending.
+  both first confirmations resolve the original findings, and
+  both bounded followup reconfirmations are accepted.
   Preparation, inspection and review receipts remain distinct;
   inherited batch61 quiz debt is not silently expanded here.
 - Corrections add nineteen direct safeguards and remove the
@@ -132,7 +132,38 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   were read through EOF. The prior older-body chunks contain
   7 + 8 + 6 articles, not Claude's prose count of 7 + 7 + 7;
   exact native outputs govern accounting. Both original reviewers
-  must reassess these bounded changes before closure.
+  independently accept the five new safeguards and precise
+  source attribution at `bb580c4`.
+- Final reconfirmations freshly read three changed assigned
+  articles, the current twenty mappings, complete principals and
+  components, full patch, both followup chunks and exact TSV
+  header/twenty rows. The other seventeen words and four kanji
+  inherit the preceding complete-body judgments; author Git
+  checks establish that those bodies are unchanged. Do not
+  describe this as twenty-four fresh final article reads.
+- All six native reports are authenticated. Required complete
+  returns are initially 63 for GPT / 30 for Claude, then 35
+  each and finally ten each. Native complete older-body unions
+  across all turns are 152 / 30, including direct convention
+  checks and without summing overlaps. These reviewer totals
+  differ in scope from the author's 146 comparison identities.
+- Both accept the direct 極 safeguard, but explain its basis
+  differently: GPT emphasizes degree overlap; Claude emphasizes
+  the displayed "very; extremely" title and qualifies JMdict's
+  narrower "quite; very" gloss. Preserve that distinction rather
+  than manufacturing unanimity about semantic equivalence.
+  CLEAN accepts qualified provisional ばつ teaching, not a
+  verified historical origin. No teaching changes follow final
+  acceptance; optional expansion and unestablished guards remain
+  deferred. The combined corrections add 24 direct safeguards
+  and remove one unsupported edge across thirteen new articles.
+- Final GPT prose overstates the 根/羽根 link location. It is
+  a substantive Notes alias at `kanji/根.md:43`, with footer
+  1171680 and a word-side 根 link, not a Readings/Common words
+  pair. The preceding full-body report identified it correctly.
+  Preserve both reports and verify the actual alias separately
+  from the three primary table/common-word pairs; do not invent
+  a new character reading or change accepted teaching.
 
 ## Batch 67 authoring observations
 

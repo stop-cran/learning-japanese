@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-67 review-closed.** The target is all 1,812 source rows,
+**Batches 01-68 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,340 rows are review-closed; twenty are draft and 452 remain pending.
+The first 1,360 rows are review-closed; none are draft and 452 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,9 +28,9 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 68: N2:1342-N2:1361
 
-**Status:** initial reviews and first correction confirmations
-authenticated; bounded followup reconfirmations pending.
-No final independent acceptance or batch closure is claimed yet.
+**Status:** closed after authenticated independent initial reviews,
+correction confirmations and bounded followup acceptance by both
+original reviewer sessions.
 
 Eighteen new articles: 肌着, 果たして, 鉢, ばつ, 発揮,
 バック, 発射, 発想, 発電, 発売, 派手, 話し合い,
@@ -77,7 +77,7 @@ card explicitly makes `kango` provisional, following the tentative
 prove a settled historical type. Both original reviewers accept
 the qualified teaching, not historical certainty.
 
-Draft coverage is **1,340 closed / 20 draft / 452 pending /
+Closed coverage is **1,360 closed / 0 draft / 452 pending /
 0 unresolved**, mapping **1,346 articles: 1,245 new / 101 reused**.
 The authored scope is 30 files. Both blind initial reports are archived:
 [GPT](n2-vocabulary-reviews/batch-68-gpt-initial.md) and
@@ -137,7 +137,54 @@ distinct older identities. Both compact chunks were read through EOF.
 Native prior confirmation outputs contain all 24 assigned bodies
 and all six corrective chunks for each reviewer. The older-body
 partition is 7 + 8 + 6, not Claude's prose count of 7 + 7 + 7.
-Both original-session reconfirmations remain pending.
+
+Final reconfirmations are archived:
+[GPT](n2-vocabulary-reviews/batch-68-gpt-reconfirmation.md) and
+[Claude](n2-vocabulary-reviews/batch-68-claude-reconfirmation.md).
+Both accept the bounded followup at
+`bb580c4a64a2cf52149e524b1d6e8674a4230591`, with twenty exact
+source/article rows and CLEAN correctness, scoped coverage and
+comprehensibility facets. All original and subsequent actionable
+findings are resolved within the qualified teaching scope.
+ばつ's historical origin/type remains unverified, not certified
+by accepting the explicitly provisional explanation.
+
+Three sequential turns per original session yield six authenticated
+native reports. Required complete returns are 63 / 30 initially,
+35 each in first confirmation and ten each in reconfirmation.
+Final fresh assigned bodies are only ばつ, 甚だしい and バック.
+The other seventeen words and four kanji inherit the preceding
+complete-body judgments; author Git checks verify unchanged bytes.
+Both final turns freshly return the current mappings, complete
+principals/components, full patch, followup chunks and exact TSV
+header/twenty rows. Exact cumulative complete older-identity unions
+are 152 for GPT / 30 for Claude, including direct convention checks,
+not sums of overlapping counters or the author's comparison union.
+Final GPT prose incorrectly places 根/羽根 in both reciprocal
+tables. Its preceding complete-body report correctly identifies
+the substantive Notes alias at `kanji/根.md:43`, with footer
+1171680 and the word-side 根 link. Closure checks that actual
+alias separately from the three primary table/common-word pairs.
+Raw reports remain unchanged; this corrects contributor reporting,
+not accepted teaching or character readings.
+
+Both accept the 極 guard while qualifying its rationale differently:
+GPT emphasizes degree overlap; Claude emphasizes the displayed
+"very; extremely" title and notes that JMdict glosses "quite; very".
+Both independently accept the three optional guard hypotheses after
+complete evidence reads; this does not establish all-sense synonymy.
+Claude's live dictionary fetches have no saved response hashes and
+do not enlarge the frozen public-capture counts.
+
+The combined corrections add 24 direct safeguards and remove one
+unsupported edge across thirteen new articles. No teaching edits
+follow final acceptance. Optional Xも甚だしい, hanetsuki wording
+and related expansion remain deferred; 話し中/会話 and バック/逆さ
+are not established, and ばね/泉 is not required. No exhaustive
+quiz audit, native-speaker certification, frequency result, general
+model ranking or measured bias reduction is claimed. The seven-file
+closure changes contributor evidence/status and archives the two
+final reports; the accepted content and manifest remain unchanged.
 
 ## Batch 67: N2:1322-N2:1341
 
