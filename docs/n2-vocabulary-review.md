@@ -2,7 +2,7 @@
 
 ## Status
 
-**Batches 01-57 review-closed; batch 58 drafted, awaiting review.** The target is all 1,812 source rows,
+**Batches 01-57 review-closed; batch 58 corrected, awaiting confirmation.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
 The first 1,140 rows are review-closed; 20 are draft,
@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 58: N2:1142-N2:1161
 
-**Status:** drafted; independent reviews and reconciliation pending.
+**Status:** independently reviewed and corrected; original-session
+confirmations pending.
 
 Seventeen new articles: 出来上がる, 的確, 手首, 手頃,
 でたらめ, 手帳, 鉄橋, 手続き, 鉄砲, テニスコート,
@@ -77,6 +78,36 @@ metadata remains unchanged.
 Draft totals: 1,150 mapped articles = 1,069 new and 81 reused
 baseline identities; 4,342 total word articles. Drafted and
 structurally valid does not mean review-closed.
+
+### Batch 58 - initial reviews and reconciliation
+
+Sequential, initially blind reviews of `65c98d9` used GPT-6.1 Sol
+(`gpt-6.1-sol`) and Claude Opus 5.5 (`claude-opus-5.5`).
+Both complete native final reports, exact prompts, models, snapshot
+hashes, allowed reads and zero edits were authenticated.
+Both actually read all 22 assigned word/kanji bodies; GPT additionally
+read 117 complete older word bodies and Claude 10. These are actual
+successful returned reads, not counts inferred from requested paths.
+Their complete reports are archived as
+[GPT initial](n2-vocabulary-reviews/batch-58-gpt-initial.md) and
+[Claude initial](n2-vocabulary-reviews/batch-58-claude-initial.md).
+
+Both identified the direct 展開/成長 guard, missing rarity
+qualification for 鉄炮 and incomplete 手頃 sense citation, although
+GPT classified the citation as optional. Claude additionally supplied
+出来上がる/揃う and the pronunciation/character-meaning clarity
+improvement in 展開. Six complete corrective families/18 senses
+and the full 成長/揃う articles ground the two direct guards;
+neighboring guards alone would not establish either pair.
+
+Four articles receive bounded corrections: two direct exclusions,
+the rarity label, the citation and the character/reading separation.
+No primary identity, reading, title, level, selected/additional sense,
+TSV mapping, baseline exclusion or kanji metadata changes.
+Extra examples, origin notes, specialized senses and unestablished
+parity suggestions remain optional rather than forced expansions.
+Different comparison depth prevents model rankings or measured
+bias-reduction claims. Confirmation is still required before closure.
 
 ## Batch 57: N2:1122-N2:1141
 

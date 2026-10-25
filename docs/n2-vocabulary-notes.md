@@ -95,6 +95,18 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 58 reconciliation:** Assess direct completeness and
+  development guards from actual complete families and older
+  bodies, not parity with a neighboring exclusion list alone.
+  Both reviews identified 展開/成長, the rare 鉄炮 qualification,
+  and 手頃's incomplete sense citation; their different severity
+  labels do not make those unique discoveries. Claude additionally
+  supplied 出来上がる/揃う and a useful separation of character
+  meanings from pronunciation. Actual complete older-body reads
+  differed substantially: GPT 117, Claude 10. Complementary
+  observations helped this sample, but do not measure model bias
+  or establish a general ranking.
+
 - **Batch 58 authoring:** Resolve actual public cross-references,
   such as 展開's computing sense pointing to 解凍, before claiming
   corroboration. Mixed headings can contain unrelated readings
