@@ -95,6 +95,16 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 53 authoring:** A raw loanword row can span separate
+  dictionary identities: チップ's tip and chip meanings require
+  1077740 and 2850287, not fabricated senses of one entry.
+  Blank raw glosses and misleading English "sterility" stay preserved
+  separately from supported teaching. Exact calendar 中旬 is the
+  11th-20th, not arithmetic thirds. Do not turn a useful 縮む/
+  縮れる contrast into absolute nonoverlap when the inspected public
+  entry also records curled hair. Deduplicate supplementary full-family
+  and old-body rereads before reporting inspection totals.
+
 - **Batch 52 closure:** Both original sessions accepted the same committed
   correction with twenty exact all-CLEAN three-facet associations. Keep
   revised initial judgments visible: GPT accepted the sound/headache guard

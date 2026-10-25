@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-52 review-closed.** The target is all 1,812 source rows,
+**Batches 01-52 review-closed; batch 53 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,040 rows are review-closed; none are draft,
-772 remain pending, and none are unresolved.
+The first 1,040 rows are review-closed; 20 are draft,
+752 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,52 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 53: N2:1042-N2:1061
+
+**Status:** drafted; independent review and reconciliation pending.
+
+Eighteen new articles: 知人, 地帯, 縮む, 縮める, 縮れる,
+チップ, 地点, 地名, 茶色い, 着々, 中間, 中旬, 抽象,
+中世, 中性, 中途, 中年 and 彫刻. Reuse unchanged N5 ちゃわん
+for 茶碗 and add sourced N2 provenance to existing 超過 without
+changing its identity, reading, title, original teaching or exclusions.
+
+The [batch packet](n2-vocabulary-batch-sources/batch-53.json) keeps
+all original fields and twenty complete principal families/28 senses.
+Actual author reads cover 244 selected complete original families/
+614 senses plus two distinct supplementary families/four senses:
+246 families/618 senses in all. The separately reread 御礼 family
+was already selected and is not counted twice. All 173 original
+labels and three supplementary labels were inspected, as were
+113 selected original full old articles and three supplementary full
+articles, 24 component records, three complete primary N2 kanji
+cards and twenty public lexical captures. This does not claim that
+all 359 original captured families or all 173 original captured old
+bodies were read. The public captures are one dictionary service,
+not twenty independent dictionaries. Failed exact requests 賭け札
+and 雕刻 were explicitly removed; they verify nothing positively.
+
+New reciprocal reading-row/Common-words pairs are 帯/地帯 with
+ちたい and 象/抽象 with ちゅうしょう. Existing 超/超過 with
+ちょうか is already complete and needs no kanji-card change.
+Missing 縮, 旬, 抽, 彫 and 碗 cards are not fabricated.
+All written components remain in the new words' metadata;
+the unchanged kana-primary ちゃわん retains its original metadata.
+
+Raw source fields are not repaired in place. 茶色い retains a blank
+raw gloss, with ordinary brown supported by the inspected public
+adjective entry alongside pinned light-brown/tawny wording.
+中性's raw "sterility" is not taught as medical infertility.
+チップ explicitly separates tip entry 1077740 from chip entry
+2850287. Selected primary senses and separately attributed additional
+or derived teaching remain distinct; extra teaching does not
+automatically acquire an independent N2 assignment.
+
+Current totals: 1,052 distinct mapped articles, comprising 984 new
+and 68 reused baseline identities; 4,257 total word articles.
+Draft coverage is not review closure or a semantic-uniqueness
+guarantee. Neither independent review has been launched.
 
 ## Batch 52: N2:1022-N2:1041
 
