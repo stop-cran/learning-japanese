@@ -78,8 +78,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - Public bodies represent one authority, Digital Daijisen via
   Weblio, not twenty independent dictionaries or reviewer reads.
   Original draft declarations remain historical. Blind initial
-  GPT and Claude reviews are complete; bounded corrections
-  await their original-session confirmations. No measured
+  reviews and both original-session confirmations are complete.
+  No measured
   model-bias improvement or global ambiguity guarantee is claimed.
 - Shared review finding: qualify modern 女房's register.
   The added Nikkoku sense supports a context-dependent somewhat
@@ -116,6 +116,30 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   exclusion scans are not full-body inspection. Equal access
   was not equal evidence depth; both contributed useful,
   complementary observations, not a measured bias reduction.
+- Both original sessions accept the corrected teaching and all
+  twenty mappings. The wetting guard remains conservative:
+  Claude lowers confidence to medium and accepts borderline/
+  optional classification. GPT independently retrieves American
+  Heritage's explicitly transitive/intransitive "moisten"; the
+  successful native return was checked, not merely its report.
+  Three other GPT English fetches fail and add no evidence.
+  Do not convert this resolution into a universal guard rule.
+- Verify complete-body unions, not just path lists or counters.
+  Initial GPT direct full reads have ten distinct bodies beyond
+  the 106 reproduced ones: 116 total, not 106 plus eleven.
+  After confirmation the actual older-body unions are GPT 120 /
+  Claude 5. Both return the same twelve complete corrective
+  families and five complete older bodies; inherited and fresh
+  reads remain separate. Claude checks link destinations'
+  existence/metadata, while GPT reads their six full bodies.
+- 焼く's full dictionary family explicitly teaches heating,
+  while its existing article foregrounds baking/grilling and
+  burning/firing. Do not credit an old article with every
+  secondary dictionary sense. Both reviewers accept the
+  direct guard; expanding that older body remains optional.
+- Batch closure changes only audit files and row statuses.
+  There are no teaching or manifest edits after the final
+  confirmed snapshot; optional preferences remain recorded.
 
 ## Batch 64 authoring observations
 

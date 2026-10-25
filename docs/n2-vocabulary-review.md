@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-64 review-closed; batch 65 drafted.** The target is all 1,812 source rows,
+**Batches 01-65 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,280 rows are review-closed; twenty are draft and 512 remain pending.
+The first 1,300 rows are review-closed; none are draft and 512 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 65: N2:1282-N2:1301
 
-**Status:** corrected draft; independent initial GPT and Claude reviews
-are complete, with original-session confirmations pending.
+**Status:** closed after authenticated independent reviews and
+bounded corrections accepted by both original reviewer sessions.
 
 Nineteen new articles: 女房, 睨む, 煮る, 俄, 縫う, 濡らす, ねじ,
 捩る, ネックレス, 熱する, 寝間着, 狙い, 狙う, 年度, 農産物, 農村,
@@ -69,15 +69,15 @@ independent reviewer retrievals or frequency evidence.
 Correct modern/reading-specific headings were separated from
 unrelated character and historical material.
 
-Draft coverage is **1,280 closed / 20 draft / 512 pending /
+Closed coverage is **1,300 closed / 0 draft / 512 pending /
 0 unresolved**, mapping **1,288 articles: 1,197 new / 91 reused**.
 There are **4,470 word articles**, **282 tracked primary new-word
 reciprocal N2 pairs**, plus the explicit 巻 alias pair.
 The established audit preserves all 3,273 baseline identities,
 readings, titles and original exclusions. The authored scope is
-29 files. Quiz guards are not yet finally confirmed; no exhaustive
-ambiguity audit or global quiz
-uniqueness is claimed. Inherited batch61 quiz debt remains deferred.
+29 files. Confirmed guards do not establish exhaustive ambiguity
+coverage or global quiz uniqueness. Inherited batch61 quiz debt
+remains deferred.
 
 ### Initial independent reviews and bounded reconciliation
 
@@ -98,12 +98,12 @@ GPT directly read eleven older bodies, not necessarily eleven
 additional bodies beyond the reproduced comparison evidence.
 Access and actual inspection are recorded separately.
 
-| Finding | Bounded disposition pending confirmation |
+| Finding | Bounded author reconciliation, confirmed below |
 |---|---|
 | G65-01 / B65-03: 女房 | Add context-dependent disparaging-tone guidance from actual Nikkoku sense 3; 妻 is the safer neutral starting choice. The existing own-wife tendency was already taught. No always-insulting, obsolete or blanket self-deprecating claim. |
 | G65-02: 睨む/考慮 | Add the direct guard and comparison link from actual take-into-account senses and full bodies. |
 | G65-03: 熱する | Add direct 焼く and 暖まる guards. Complete heating senses support contextual competition, not unrestricted cooking substitution or a rigid temperature boundary. |
-| B65-01: 濡らす/ぬれる | Adopt a conservative direct guard while retaining the explicit make-wet/get-wet distinction. The causative English example does not prove identical full titles or universally interchangeable constructions. Original reviewers must reassess this judgment. |
+| B65-01: 濡らす/ぬれる | Adopt a conservative direct guard while retaining the explicit make-wet/get-wet distinction. The causative English example does not prove identical full titles or universally interchangeable constructions. Both original reviewers independently reassessed this judgment. |
 | B65-02: 女房/嫁 | Add the direct wife-sense guard, with the actual Kansai qualification preserved in evidence. Remove redundant 女房/妻: both full titles are `wife`. No transitive closure of exclusions. |
 | B65-04: にわか | Add recorded な/の attachment without free-interchangeability claims; replace an unverified collocation with recorded にわか雨. Historical の attestation does not prove modern frequency or the original example wrong. |
 | B65-05: ねじ | Explicitly acknowledge hiragana and katakana, removing a possible frequency implication. Neither order nor priority tags establish a usage ranking. |
@@ -131,6 +131,60 @@ complementary contributions. Equal access was not equal reading
 depth. Both mentioned optical density, so it is not unique to either
 model. These sample observations do not establish measured bias
 reduction, exhaustive synonym safety or a model ranking.
+
+### Original-session confirmations and closure
+
+Both original sessions resumed sequentially on corrected
+`d3d03f731f67767185c435ba7bcad0087b74bc5c`, fully exited and
+made no edits. The authenticated complete native reports are
+archived as [GPT confirmation](n2-vocabulary-reviews/batch-65-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-65-claude-confirmation.md).
+Each gives all twenty exact source/article associations separate
+**CLEAN** correctness, scoped-coverage and comprehensibility cells.
+No actionable in-scope defect or consequential unresolved
+learner-facing claim remains.
+
+Actual native-output checks establish that both return all nine
+changed bodies, the complete correction snapshot/patch/public receipt,
+twelve complete corrective families / 31 senses, five full older
+bodies, and the exact TSV header/twenty rows. Direct TSV reads contain
+no neighboring rows; the required full patch exposes adjacent
+unchanged TSV context, not additional review assignments.
+Ten unchanged word bodies and four kanji bodies inherit actual
+complete initial reads. GPT additionally reads all six complete
+newly linked comparison destinations; Claude checks existence and
+metadata rather than reading those six bodies.
+
+GPT's verified older-body union is 116 initially and 120 cumulatively;
+Claude's is two initially and five cumulatively. Reproduced and direct
+reads overlap and are counted once. These are reviewer counts, not
+the separate author's 235 families / 540 senses / 109 older bodies.
+Claude does not read the corrected derivative's correction-evidence
+block; the actual bodies, patch, records and TSV support its judgments.
+That block contains report metadata, not the other model's report.
+
+Both accept the conservative wetting guard without treating it as
+mandatory proof of unrestricted substitution. Claude reduces its
+confidence from high to medium and accepts borderline/optional
+classification. GPT independently retrieves
+[American Heritage: moisten](https://www.ahdictionary.com/word/search.html?q=moisten),
+explicitly marked transitive and intransitive; the actual successful
+return was checked. Three other GPT English fetches fail and supply
+no lexical evidence. Claude performs no new public retrieval.
+
+Claude withdraws its unsupported "also common" kana-frequency
+suggestion. Both accept the scoped register and attachment changes.
+The precise heating sense comes from 焼く's dictionary record;
+its older body foregrounds cooking and burning/firing, not that
+exact secondary sense. Expanding that older card, optical density
+and other optional suggestions remain nonblocking.
+
+Closure is audit-only, with no teaching or manifest edits after
+the final confirmed snapshot. The deterministic content manifest,
+all 3,273 baseline identities and original exclusions, 282 primary
+reciprocal pairs and the separate 巻 alias pair are preserved.
+Technical execution limits, nonblocking preferences and the earlier
+batch61 quiz debt remain explicit.
 
 ## Batch 64: N2:1262-N2:1281
 
