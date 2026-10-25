@@ -66,8 +66,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   The failed raw 乗換 lookup remains recorded; the canonical
   乗り換え lookup succeeded separately. Captures and author reads
   are not independent reviewer retrieval or frequency evidence.
-  Independent initial reviews are complete; original-session
-  correction confirmations are pending. No linguistic certification,
+  Independent initial reviews and original-session correction
+  confirmations are complete. No linguistic certification,
   global quiz-uniqueness or model-bias improvement is claimed.
 - GPT identified direct missing guards for 残らず/いちいち,
   残らず/皆さん, 売店/スタンド and バイバイ/それでは.
@@ -96,8 +96,21 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   do not infer the pair merely from its shared title, an
   inherited さて edge, or dictionary-family membership alone.
   This was a missed initial candidate, not a regression or
-  another blind model-comparison discovery. Original-session
-  follow-up confirmations remain pending.
+  another blind model-comparison discovery. Both original
+  sessions accept the final guard while retaining medium-low
+  confidence that it is necessary. Distinguish じゃ's connector
+  introducing farewell from the taught じゃあね closing.
+- The cumulative author union is 268 complete families /
+  766 senses / 122 older article identities, not reviewer
+  coverage. Count actual full returned bodies and deduplicate
+  direct reads and reproductions across turns. In particular,
+  Claude's three complete extra first-confirmation returns
+  remain complete evidence even though its report calls them
+  partial. Both final twenty-row verdicts explicitly inherit
+  unchanged judgments; neither confirmation adds fresh public
+  retrieval. Preserve all six historical reports and the real
+  nonblocking qualifications rather than rewriting earlier
+  NEEDS FIX cells after resolution.
 
 ## Batch 65 authoring observations
 

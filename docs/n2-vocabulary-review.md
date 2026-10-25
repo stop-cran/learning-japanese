@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-65 review-closed.** The target is all 1,812 source rows,
+**Batches 01-66 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,300 rows are review-closed; twenty are draft and 492 remain pending.
+The first 1,320 rows are review-closed; none are draft and 492 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,9 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 66: N2:1302-N2:1321
 
-**Status:** draft; authenticated initial GPT and Claude reviews
-complete, original-session correction confirmations pending.
+**Status:** closed after authenticated independent reviews,
+original-session corrections and a bounded follow-up accepted
+by both original reviewer sessions.
 
 Fifteen new articles: のこぎり, 残らず, 覗く, 上り, 糊, 乗り換え,
 載る, のろい, のんき, 灰色, 俳句, 売店, バイバイ, 売買 and 這う.
@@ -70,7 +71,7 @@ not independent reviewer retrievals or frequency evidence.
 The raw 乗換 request failed; the canonical 乗り換え request
 succeeded separately.
 
-Draft coverage is **1,300 closed / 20 draft / 492 pending /
+Closed coverage is **1,320 closed / 0 draft / 492 pending /
 0 unresolved**, mapping **1,308 articles: 1,212 new / 96 reused**.
 The authored scope is 28 files. Inherited batch61 quiz debt remains deferred.
 
@@ -161,8 +162,56 @@ The additional change affects only バイバイ's guard list.
 No source mapping, learner-facing prose, title, primary
 metadata, baseline card or kanji changes. The remaining
 necessity/confidence qualification is preserved, not forced
-into agreement. Both original-session follow-up confirmations
-and final closure remain pending.
+into agreement.
+
+### Final follow-up and closure
+
+Both original sessions sequentially reviewed
+`84ba65fcfaaa5784daca1841f35aabe26e917a8a`, fully exited
+without edits, and resolved the remaining guard. The complete
+authenticated reports are archived as
+[GPT follow-up](n2-vocabulary-reviews/batch-66-gpt-followup.md)
+and [Claude follow-up](n2-vocabulary-reviews/batch-66-claude-followup.md).
+Each final report supplies twenty exact six-column verdict rows
+with separate CLEAN correctness, scoped coverage and
+comprehensibility cells. Unchanged lexical and reciprocal
+judgments explicitly inherit prior complete reads.
+
+Both final native outputs return the whole current バイバイ
+body, full follow-up snapshot and patch, the combined complete
+family 1005900 / unchanged じゃ reproduction, and exactly the
+TSV header and twenty assigned rows. Both use the complete
+reproduced じゃ body. GPT's report also claims a fresh direct
+じゃ reread, but no successful direct follow-up return supports
+that claim; its direct read is inherited from the initial turn.
+Neither
+confirmation stage retrieves fresh public evidence. Actual
+returns, not requested paths, establish the read receipts.
+Claude's first confirmation also returned complete さて, じゃ
+and 売り場 bodies, despite grouping them under partial reads
+in its prose report. Reproductions and direct reads are
+deduplicated by article identity across turns. The verified
+cumulative older-article unions are 125 for GPT and 22 for
+Claude; these are actual evidence-depth counts, not quality
+scores or rankings.
+
+Both accept バイバイ/じゃ and /じゃあ as defensible conservative
+closing-context safeguards, not mandatory standalone synonymy.
+Necessity remains medium-low confidence; Claude distinguishes
+じゃ's connector introducing farewell from じゃあね's closing.
+The moderate-strength 乗り換え/移す qualification also remains.
+There is no forced model agreement or measured bias-reduction
+claim. All six historical reports remain intact, including the
+first Claude confirmation's NEEDS FIX judgment.
+
+The cumulative actual author union is 268 complete families /
+766 senses / 122 older article identities, separate from each
+reviewer's actual depth. Closure changes only audit records and
+twenty draft statuses; confirmed teaching and manifest remain
+unchanged. No actionable in-scope defect or consequential
+unresolved learner-facing claim remains. Inherited batch61 debt,
+no live-quiz audit, no native-speaker certification and the
+reviewers' inability to execute Git/hash checks remain explicit.
 
 ## Batch 65: N2:1282-N2:1301
 
