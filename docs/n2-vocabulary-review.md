@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-63 review-closed.** The target is all 1,812 source rows,
+**Batches 01-64 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,260 rows are review-closed; batch 64's 20 rows are draft,
-532 remain pending, and none are unresolved.
+The first 1,280 rows are review-closed; 532 remain pending,
+and none are draft or unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 64: N2:1262-N2:1281
 
-**Status:** draft; independent GPT/Claude review and reconciliation
-have not yet been completed.
+**Status:** closed after authenticated independent reviews and
+bounded corrections accepted by both original reviewer sessions.
 
 Seventeen new articles: なんとなく, なんとも, ナンバー, 南米, 南北,
 煮える, 匂う, 逃がす, 憎い, 憎らしい, 濁る, 虹, 日時, 日用品,
@@ -52,7 +52,7 @@ reading-row examples and Common words links. Edited kanji headers
 remain unchanged; missing component cards are not fabricated.
 
 Completed author reads are separate from unchanged preparation plans.
-The deduplicated union is **250 complete families / 556 senses**,
+The initial deduplicated union is **250 complete families / 556 senses**,
 including all twenty principals. The author inspected **101 complete
 older articles**, **158 actual labels**, **23 complete component
 records**, complete 憎/課/鈍 bodies and twenty matching public lexical
@@ -68,7 +68,7 @@ evidence. Correct modern/reading-specific headings are distinguished
 from unrelated or historical material. 日程's selected-date teaching
 is explicitly attributed to that public entry.
 
-Draft coverage is **1,260 closed / 20 draft / 532 pending /
+Authored draft coverage was **1,260 closed / 20 draft / 532 pending /
 0 unresolved**, mapping **1,269 articles: 1,178 new / 91 reused**.
 Structural totals are **4,451 word articles** and **277 tracked
 new-word reciprocal N2 pairs**. The established audit verifies all
@@ -135,8 +135,70 @@ title/body mismatch and named source limitations are useful
 Claude-only contributions. The removal suggestion is not adopted
 without considering the complete secondary sense. This demonstrates
 complementary value here, not equal-depth review, a model ranking
-or measured bias reduction. Both original sessions must still
-assess the actual correction and remaining dispositions before closure.
+or measured bias reduction. At the correction commit, both original
+sessions still needed to assess the actual changes and dispositions;
+the confirmation results follow.
+
+### Batch 64 - confirmed closure
+
+Corrected teaching snapshot:
+`451529a65ebc8a063e13c716bab1254d0a31afa1`.
+The original GPT session fully exited before the original Claude
+session resumed. Both returned complete self-contained confirmations:
+[GPT](n2-vocabulary-reviews/batch-64-gpt-confirmation.md) and
+[Claude](n2-vocabulary-reviews/batch-64-claude-confirmation.md).
+All four native reports are authenticated against exact prompts,
+actual models, snapshots, patches, derivatives and zero edits.
+Each confirmation has twenty exact source/article rows and separate
+**CLEAN correctness / scoped coverage / comprehensibility** cells.
+
+Actual native returns, not requested paths or scope claims, establish
+ten complete required outputs per reviewer: all four changed articles,
+unchanged 憎い, the correction snapshot, patch, public receipt,
+twelve complete families / 31 senses and five complete older bodies.
+Both returned the exact TSV header and twenty assigned rows without
+exposing a neighboring row. Fifteen unchanged word bodies and three
+related kanji bodies inherit complete authenticated initial reads;
+Claude also reread 憎. The five older bodies were not all new reads.
+GPT additionally read 上手, and Claude additionally read 実は.
+Cumulative complete older-body unions are **GPT 131 / Claude 13**,
+including the three reused assigned articles once in each union;
+comparison-only counts are **128 / 10**.
+
+Both reviewers independently fetched the matching Nikkoku 中中
+body and accepted complete 1599420:4 as evidence for the conservative
+positive-evaluation guards. Claude **withdrew B64-CL-02 as actionable**,
+while retaining a nonblocking preference for less caution.
+GPT additionally retrieved matching 匂う and 憎らしい Nikkoku bodies.
+These pages are one authority, not one dictionary per page; empty
+Daijisen headings are not credited as returned lexical entries.
+
+Both accepted the four added direct guards, aligned 憎らしい title
+and narrowed 匂う paragraph without establishing regressions.
+本当 remains the less-direct conservative guard, not a merger of
+1523060 and 1611580. Kanji 憎's dictionary-backed "ironically darling"
+wording and the word's attributed recognition gloss remain optional
+alignment, not an obligation to invent an affectionate example.
+The unchanged source note's "literary brightness" annotation is
+historical/unverified register wording, not retained learner teaching.
+The 上手い/上手 asymmetry is nonblocking here; distinct complete
+titles are not adopted as a general proof of quiz safety.
+
+No teaching changed after either final confirmation. The audit-only
+seven-file closure advances exactly twenty rows to `closed`, leaving
+**1,280 closed / 0 draft / 532 pending / 0 unresolved** and
+**1,269 mapped articles: 1,178 new / 91 reused**.
+All 3,273 baseline identities/readings/titles/original exclusions
+and 277 tracked new-word reciprocal N2 pairs remain intact.
+The validator reports zero errors and double regeneration preserves
+the confirmed manifest byte-for-byte: 6,482 content files,
+396 images, 201 scene catalogs, 7,079 total entries,
+content version `958d38ca69f738fe`.
+Technical execution checks remain author-run, not reviewer-executed
+Git verification. No global quiz uniqueness, exhaustive synonym audit,
+modern-frequency measurement, native-speaker certification or
+quantified bias-reduction claim is made; inherited batch61 debt
+remains deferred.
 
 ## Batch 63: N2:1242-N2:1261
 

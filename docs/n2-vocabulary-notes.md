@@ -58,7 +58,27 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   104 author-inspected older bodies. Two successful matching
   Kotobank bodies are the same Nikkoku authority; their empty
   Daijisen headings do not count as additional inspected entries.
-  Original-session confirmations remain pending at this stage.
+  Both original sessions subsequently accepted the actual corrections.
+- Authenticate actual complete returns, not just requested paths.
+  Each confirmation returned all four changed bodies, unchanged 憎い,
+  twelve complete families / 31 senses, five full older bodies,
+  the patch, snapshot and public receipt. Both also returned the exact
+  header/twenty TSV rows without a neighbor. Cumulative distinct
+  complete older bodies are GPT 131 / Claude 13, including three reused
+  assigned articles; comparison-only counts are 128 / 10.
+- Claude withdrew the なかなか removal finding as actionable after
+  reading the full secondary sense and independently fetching the
+  matching Nikkoku body. Keep its residual conservative-guard
+  preference rather than forcing identical confidence. Both models
+  actually fetched 中中; GPT also fetched 匂う and 憎らしい.
+  These are one Nikkoku authority, and historical examples do not
+  establish contemporary frequency.
+- Preserve optional alignment separately from defects: 憎's ironic
+  "darling" wording is dictionary-backed, and an affectionate example
+  must not be invented to make it concrete. The unchanged source
+  note's literary-brightness annotation is not verified register
+  evidence for the corrected article. Distinct full titles alone
+  are not a general quiz-safety rule for 上手い/上手 or other pairs.
 - Preserve the existing unlevelled 憎む, にこにこ and 鈍い articles;
   only add `jlpt: 2`. Exact checks found no matching form/reading
   in the four lower-level source TSVs. The fifth vocabulary TSV
@@ -105,8 +125,9 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   do not mean 149 inspected bodies: 92 were read, 57 remain unselected;
   nine further complete bodies came from supplemental candidates.
 - Twenty captures mean one authority, Digital Daijisen through
-  Weblio, not twenty independent dictionaries. Quiz declarations
-  remain author hypotheses pending blind independent reviews.
+  Weblio, not twenty independent dictionaries. Initial quiz
+  declarations were author hypotheses; final dispositions are
+  independently reviewed bounded judgments, not proven equivalences.
   Structural checks do not prove linguistic correctness or global
   quiz uniqueness; inherited batch61 quiz debt remains deferred.
 
