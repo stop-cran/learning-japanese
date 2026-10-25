@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 71: N2:1402-N2:1421
 
-**Status:** draft; independent initial reviews authenticated;
-author corrections applied, original-session confirmations pending.
+**Status:** draft; independent initial and first-confirmation reviews
+authenticated; two remaining label guards added, final reconfirmations pending.
 
 Twenty new articles: 筆記, ひっくり返す, ひっくり返る, 引っ越し,
 引っ込む, 筆者, 必需品, 人差し指, 一通り, 人通り, ひとまず,
@@ -92,7 +92,7 @@ header plus exactly twenty assigned physical rows are authenticated.
 | Claude optional translation | Remove unsupplied "main": "The dishes are all here." |
 | Other optional observations | Defer spelling/recognition expansions. The proposed 絞る edge remains unestablished by the actual labels, whole-idiom distinction and sense restrictions. |
 
-The exact corrective scope is eight assigned articles and six
+The first corrective scope was eight assigned articles and six
 new direct guards on five of them, plus evidence/review records and
 the regenerated manifest: fourteen files. One new-card title changes;
 raw source fields, primary identities/readings, levels, types,
@@ -117,6 +117,32 @@ Complete bytes establish access, not comprehension. The shared
 observations were useful in this batch. Equivalent observations
 throughout both reports were deduplicated; this is not matched-depth
 coverage, a model ranking or measured bias reduction.
+
+First confirmations at `73289715182d44fddb23829348ab9bba32ab5f20`
+are archived as [GPT](n2-vocabulary-reviews/batch-71-gpt-confirmation.md)
+and [Claude](n2-vocabulary-reviews/batch-71-claude-confirmation.md).
+Both accepted the original substantive fixes, but neither marked
+一通り clean overall. Both freshly returned all twenty articles,
+two kanji bodies, mappings, principals, components, the patch and
+reconciliation, eight complete corrective families / 39 senses,
+short public notes and all seven specified older bodies. Exact
+prompts/models, all 37 required complete returns, bounded TSV access
+and zero edits are authenticated; this was not final acceptance.
+
+| First-confirmation finding | Follow-up reconciliation |
+| --- | --- |
+| GPT F03: once-over/チェック | Add the direct quick-looking-over label safeguard. This is a regression from the first title correction, supported by complete 1077550:2, the actual older article and Oxford's applicable heading. |
+| Claude B71-10: all parts/各地 | Add the direct unqualified-label safeguard. This predates the correction and was missed blind. Complete 1205100 and the spatial older body distinguish Japanese meanings without resolving the displayed English collision. |
+
+Only two exclusions are added to 一通り in this seven-file
+follow-up; its title/prose and all other teaching stay unchanged.
+Author inspection adds two families / eight senses and two complete
+older bodies, giving **479 families / 1,150 senses and 174 older
+identities**. The Oxford English heading is a separately inspected
+authority, not another Japanese dictionary, and the stored note is
+not a full capture. The two useful findings are complementary;
+neither prior non-CLEAN report is rewritten as acceptance.
+Final reconfirmations by both original sessions remain pending.
 
 ## Batch 70: N2:1382-N2:1401
 

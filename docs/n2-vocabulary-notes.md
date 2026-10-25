@@ -21,6 +21,21 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 ## Batch 71 authoring observations
 
+- First confirmations at `73289715` did not close the batch.
+  GPT found a new once-over/チェック label collision introduced
+  by the first correction; Claude found the older unqualified
+  all-parts/各地 collision missed in its blind review. Both are
+  direct displayed-label issues, not unrestricted Japanese synonym
+  claims. Add both safeguards only on 一通り, preserving its title,
+  prose and all prior guards. No inspection or location clique is
+  inherited. Original-session final reconfirmations remain pending.
+- Two complete follow-up families / eight senses and two full older
+  bodies raise author totals to 479 families / 1,150 senses and
+  174 older identities. Oxford's actual once-over heading supports
+  the quick-looking-over label; its separate cleaning use is not
+  evidence for チェック. This English authority is not a third
+  Japanese dictionary authority. First confirmations and their
+  non-CLEAN verdicts remain archived unchanged.
 - Authenticated blind initial reviews used GPT-6.1 Sol and Claude
   Opus 5.5 sequentially on `88aea28d`. Both found the missing
   捻る/工夫 guard. GPT also found 捻る/考える and the inaccurate
@@ -50,7 +65,7 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   Equivalent observations in findings, options and limits were
   compared before assigning contributions. Complementary catches
   were useful here, not measured bias reduction or model ranking.
-  Original-session correction confirmations remain pending.
+  The first correction required a further pass, documented above.
 - The optional 捻る/絞る edge is not established by their actual
   labels and complete families: whole idioms sharing "rack one's
   brains" do not automatically equate the bare verbs, and 捻る's
