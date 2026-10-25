@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-51 review-closed; batch 52 drafted.** The target is all 1,812 source rows,
+**Batches 01-52 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,020 rows are review-closed; twenty are draft,
+The first 1,040 rows are review-closed; none are draft,
 772 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 52: N2:1022-N2:1041
 
-**Status:** initial reviews reconciled; corrected-snapshot confirmations pending.
+**Status:** closed after authenticated independent reviews, evidence-based
+corrections and original-session confirmations.
 
 Twenty new articles: 足る, 段階, 短期, 炭鉱, 短所, たんす,
 淡水, 断水, 単数, 団地, 断定, 短編, 誓う, 地下水, 近々,
@@ -100,7 +101,8 @@ word bodies, plus the full 魚 kanji card. Exact counts and hashes are recorded
 and deduplicated against prior inspections. The eleven corrected new cards
 add five and remove five direct declarations: fourteen guarded articles and
 72 declarations remain. Raw source rows, mappings, baseline words and the
-six reciprocal kanji edits are unchanged. Confirmation is still pending.
+six reciprocal kanji edits are unchanged. At that point confirmation
+remained pending; its outcome follows.
 
 **Model contribution note:** across all report sections, both found the 魚
 reading defect. GPT uniquely supplied five missing direct guards and removal
@@ -111,6 +113,40 @@ GPT read all nine family renderings and 112 old word bodies; Claude read
 none of those renderings and seven old word bodies plus 魚 kanji.
 Complementary coverage was useful, but unequal actual depth does not
 establish controlled bias reduction or a general model ranking.
+
+### Batch 52 - confirmed and closed
+
+Both original sessions assessed corrected commit
+`960be0a8245a50449de9d40f98a6706c933e966e`, parent
+`3d66845af7cc97508b6a8d4348f0792e2cbdb9c6`, sequentially without edits.
+[GPT confirmation](n2-vocabulary-reviews/batch-52-gpt-confirmation.md) and
+[Claude confirmation](n2-vocabulary-reviews/batch-52-claude-confirmation.md)
+each have twenty exact source-ID/article associations with all three
+facets CLEAN. Both fully reread eleven changed articles, the actual patch,
+27 complete corrective families/71 senses and sixteen complete old word
+bodies plus 魚 kanji. Nine unchanged articles and six full kanji cards
+are explicitly inherited, with fresh reciprocal/mapping spot-checks.
+GPT also reread twenty complete principals/33 senses and all mappings;
+Claude inherited principal evidence and rechecked the twenty TSV rows.
+Tool requests and native usage support these read distinctions.
+
+Both accept the corrections. GPT revises its initial acceptance of
+力強い/がんがん. Claude accepts the 近付ける removals with medium
+confidence after explicitly comparing the shared-English-verb
+開く/開ける precedent; it considers short-poem protection borderline
+but establishes no defect. Its remaining 足る/誓う/地下水 suggestions
+are optional expansions, not required repairs. No actionable defect or
+consequential unresolved claim remains in the assigned scope.
+
+All four complete reports, exact prompts, actual models, original-session
+continuity, private allowlists, absence of named forbidden reads and zero
+edits are authenticated. Shared-adjudication confirmations are not blind
+discoveries. No teaching change follows confirmation. Deduplicated author
+totals are 220 complete families/559 senses, 156 labels and 101 complete
+old word bodies, plus the additional 魚 card; these are not reviewer totals.
+Closure changes only twenty draft statuses and audit documentation.
+No live quiz, exhaustive ambiguity audit or native-speaker certification
+is claimed.
 
 ## Batch 51: N2:1002-N2:1021
 

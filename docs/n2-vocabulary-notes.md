@@ -95,6 +95,16 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 52 closure:** Both original sessions accepted the same committed
+  correction with twenty exact all-CLEAN three-facet associations. Keep
+  revised initial judgments visible: GPT accepted the sound/headache guard
+  removal, and Claude accepted the qualified causative-label distinction
+  after comparing the same-English-verb 開く/開ける precedent. A borderline
+  editorial judgment is not automatically a consequential unresolved
+  defect. Preserve optional expansions without changing confirmed teaching.
+  Counts distinguish sixteen old word bodies from the additional 魚 kanji
+  card and deduplicate against earlier actual reads.
+
 - **Batch 52 reconciliation:** Secondary senses can require direct guards
   despite unlike titles: クラス has rank/category use, 粗 has personal
   flaws, and 審判 includes judgment beyond sports officials. 一つ does

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "batch": "52",
-  "status": "draft",
+  "status": "closed",
   "sourceRange": [
     "N2:1022",
     "N2:1041"
@@ -25827,6 +25827,92 @@
       ],
       "modelDiversity": "Across all report sections, shared reading defect; GPT uniquely supplies five required direct guards and removal of four causative/intransitive guards; Claude uniquely supplies one excess-guard removal and three substantive links, plus optional 10分 clarity. GPT read all nine family renderings and 112 old word bodies; Claude none of those renderings and seven old word bodies plus 魚 kanji. Complementary coverage useful; unequal actual depth is not controlled bias reduction or model ranking.",
       "limits": "Author reconciliation, not confirmation. Eleven new word articles change; five added and five removed declarations leave fourteen guarded articles/72 declarations. No raw rows, mappings, baseline words or six reciprocal kanji edits change. Corrective reads are deduplicated; no fresh author public retrieval, runtime quiz draws or native-speaker certification."
+    },
+    "confirmationEvidence": {
+      "correctionCommit": "960be0a8245a50449de9d40f98a6706c933e966e",
+      "bothOriginalReviewersAcceptedBoundedCorrections": true,
+      "postConfirmationTeachingChanges": false,
+      "reports": {
+        "batch-52-claude-initial": {
+          "actualModel": "claude-opus-5.5",
+          "reviewerSessionId": "27e06740-9021-455d-9057-0691e3993684",
+          "reportSha256": "24fca5d4626f890f6d8761180c4d7f4f5e21b550da1d385232b73e4d887ee537",
+          "usageSha256": "86e85fcc9dd07d34d92a8ac7774ce9f41ab1bd28d83065a5c6acab889f595860",
+          "exactPromptAndCompleteNativeFinalMessageAuthenticated": true,
+          "exactPrivateFileAllowlistAndNoNamedForbiddenReads": true,
+          "toolCalls": 71,
+          "zeroEdits": true
+        },
+        "batch-52-claude-confirmation": {
+          "actualModel": "claude-opus-5.5",
+          "reviewerSessionId": "27e06740-9021-455d-9057-0691e3993684",
+          "reportSha256": "1cc75eee713115cfc5d3086f36e9d6ec9e1971e7557d03c8f0a4a348b30f7c5f",
+          "usageSha256": "44cde3c7f854be21c8601c74c791707f1ac826c6136eb5b80c1b3c734bf26811",
+          "exactPromptAndCompleteNativeFinalMessageAuthenticated": true,
+          "exactPrivateFileAllowlistAndNoNamedForbiddenReads": true,
+          "toolCalls": 27,
+          "zeroEdits": true
+        },
+        "batch-52-gpt-initial": {
+          "actualModel": "gpt-6.1-sol",
+          "reviewerSessionId": "75ef938e-5765-4d7e-b781-d9c5b347ab69",
+          "reportSha256": "88d4231bf61b7334740e191985ec97f32d3dc4d4eec90ddaa8679338f14b139e",
+          "usageSha256": "0cbb9a3f2ee52443efc8a88ce3e49f145aee7f19c1dab08e32dc65385a16c04a",
+          "exactPromptAndCompleteNativeFinalMessageAuthenticated": true,
+          "exactPrivateFileAllowlistAndNoNamedForbiddenReads": true,
+          "toolCalls": 213,
+          "zeroEdits": true
+        },
+        "batch-52-gpt-confirmation": {
+          "actualModel": "gpt-6.1-sol",
+          "reviewerSessionId": "75ef938e-5765-4d7e-b781-d9c5b347ab69",
+          "reportSha256": "aa002637bac41ae814b5ccedfd8c074110fb7e4ec0663ef8a4332d7313afb026",
+          "usageSha256": "3514f47d6ce2fa57c64eb94e246c5ce15dd0eefb0a0ffdb526b421ef7ef999a1",
+          "exactPromptAndCompleteNativeFinalMessageAuthenticated": true,
+          "exactPrivateFileAllowlistAndNoNamedForbiddenReads": true,
+          "toolCalls": 32,
+          "zeroEdits": true
+        }
+      },
+      "effectiveRowVerdictReports": [
+        "batch-52-gpt-confirmation",
+        "batch-52-claude-confirmation"
+      ],
+      "exactSourceIdArticleAssociationsCheckedAgainstCommittedTsv": {
+        "N2:1022": "words/足る.md",
+        "N2:1023": "words/段階.md",
+        "N2:1024": "words/短期.md",
+        "N2:1025": "words/炭鉱.md",
+        "N2:1026": "words/短所.md",
+        "N2:1027": "words/たんす.md",
+        "N2:1028": "words/淡水.md",
+        "N2:1029": "words/断水.md",
+        "N2:1030": "words/単数.md",
+        "N2:1031": "words/団地.md",
+        "N2:1032": "words/断定.md",
+        "N2:1033": "words/短編.md",
+        "N2:1034": "words/誓う.md",
+        "N2:1035": "words/地下水.md",
+        "N2:1036": "words/近々.md",
+        "N2:1037": "words/近付ける.md",
+        "N2:1038": "words/近寄る.md",
+        "N2:1039": "words/力強い.md",
+        "N2:1040": "words/千切る.md",
+        "N2:1041": "words/地質.md"
+      },
+      "finalDispositions": {
+        "GPT F01-F02,F04-F06": "Resolved: five direct guards 段階/クラス, 短所/粗, 単数/一, 断定/審判 and 短編/詩. Both original sessions accept complete pinned evidence and actual old meanings; Claude qualifies short-poem protection as borderline but establishes no defect.",
+        "GPT F03; Claude B52-01": "Resolved shared reading defect: ordinary 魚 on reading ギョ, no invented voicing change; correct たんすいぎょ retained.",
+        "GPT F07": "Resolved: remove four 近付ける guards. Both accept the qualified causative labels against actual approaching labels. Claude explicitly compares the 開く/開ける precedent and accepts with medium confidence; no universal transitivity exemption.",
+        "Claude B52-02": "Resolved: remove 力強い/がんがん. Both acknowledge the genuine vigorous secondary sense but reject the actual sound/headache label as a defensible powerful/reassuring answer; GPT revises its initial acceptance.",
+        "Claude B52-03": "Resolved: all three substantive links target existing 不足, 遠く and 押し入れ cards with correct identity/alias evidence.",
+        "Optional 10分": "Adopted and accepted without changing correct じゅっぷん, duration meaning or translation.",
+        "Optional 千切る/下手/程度/住宅/アパート": "No extra changes. Both accept the documented whole-reading and actual-meaning judgments; Claude withdraws its earlier optional suggestions. Not absolute nonoverlap claims.",
+        "Remaining optional 足る/誓う/地下水 expansion": "No mandatory defect established. Existing practical constructions/examples remain adequate; optional idiom/addressee/から alternatives do not require teaching edits after confirmation."
+      },
+      "scope": "Both original sessions fully reread eleven changed cards, the actual correction patch, all27 complete corrective families/71 senses, sixteen complete old word bodies and 魚 kanji. Both explicitly inherit nine unchanged new cards and six full kanji cards, with fresh reciprocal/mapping spot-checks. GPT also rereads all twenty complete principals/33 senses and mappings; Claude inherits principal records and rechecks all twenty TSV rows. Exact all-CLEAN three-facet row/article tables checked against committed TSV. Both processes exited sequentially without edits; no new actionable defect.",
+      "modelDiversity": "Initial shared 魚 reading defect; GPT uniquely supplies five added guards/four excessive movement-guard removals; Claude uniquely supplies one other excessive-guard removal/three existing-card links and optional duration clarity. Both accept corrections, including revisions to their initial clean judgments. Confirmations share adjudications, so they are not blind discoveries. Useful complementary coverage, not controlled bias reduction or a general model ranking; actual initial evidence depth was unequal.",
+      "limits": "Four complete native reports/prompts/models/session continuity/private allowlists/no named forbidden reads/zero edits authenticated by author, not reviewer-executed Git. Actual models gpt-6.1-sol and claude-opus-5.5. Public archives normalize hard line breaks only; original native output retained privately. No fresh confirmation public retrieval, live quiz draws, exhaustive ambiguity audit or native-speaker certification. Borderline guard judgments remain bounded editorial assessments, not consequential unresolved claims."
     }
   }
 }
