@@ -95,6 +95,19 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 52 authoring:** Allocate source senses by the actual raw
+  gloss, not first dictionary sense: 単数's singular-number anchor
+  and 力強い's reassurance anchor are both sense 2. Conversely,
+  近々's raw nearness/before-long gloss supports both senses, while
+  its spatial sense excludes alternate きんきん. A 炭坑-only shaft
+  sense must remain spelling-restricted rather than becoming an
+  unrestricted 炭鉱 definition. Distinguish geological 地質 ちしつ
+  from the separate fabric-quality じしつ identity in mixed public
+  headings. Missing 淡/誓 cards do not justify dropping written
+  characters from metadata. Explicitly record failed exact-family
+  extraction such as 近日中; removing a request is not verification.
+  These are authoring observations, not independent reviewer findings.
+
 - **Batch 51 closure:** Both original sessions accepted the second
   correction on the same committed teaching snapshot; both final tables'
   exact source-ID/article associations and three CLEAN facets were

@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-51 review-closed.** The target is all 1,812 source rows,
+**Batches 01-51 review-closed; batch 52 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,020 rows are review-closed; none are draft,
-792 remain pending, and none are unresolved.
+The first 1,020 rows are review-closed; twenty are draft,
+772 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,48 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 52: N2:1022-N2:1041
+
+**Status:** authored; independent reviews and reconciliation pending.
+
+Twenty new articles: 足る, 段階, 短期, 炭鉱, 短所, たんす,
+淡水, 断水, 単数, 団地, 断定, 短編, 誓う, 地下水, 近々,
+近付ける, 近寄る, 力強い, 千切る and 地質. No existing
+identity is reused or renamed.
+
+The [batch packet](n2-vocabulary-batch-sources/batch-52.json) preserves
+all raw fields and complete principal families. Actual author inspection
+covered 203 selected complete families/517 senses, including twenty
+principals/33 senses; all 150 comparison labels; 92 complete existing
+articles; 34 component records; six complete kanji cards; and twenty
+public lexical endpoint captures. Not all 295 captured families or all
+150 captured old bodies are claimed read. Exact extraction failed for
+近日中; its explicit removal reduced 258 requests to 257 and supplies
+no positive lexical verification.
+
+Eight primary reciprocal pairs appear in reading rows and Common words:
+階/段階, 短/短期, 炭/炭鉱, 鉱/炭鉱, 短/短所, 団/団地,
+短/短編 and 編/短編. Existing plain-text 短所/短期 examples are
+linked rather than duplicated. Actual 短編 たんぺん is qualified
+under 編's dictionary ヘン. All baseline kanji metadata is preserved.
+Missing 淡 and 誓 cards remain plain text in teaching and present in
+written-kanji metadata.
+
+Selected source senses are separated from additional teaching:
+単数 anchors grammatical sense 2; 力強い anchors reassuring sense 2.
+Both near-future and spatial 近々 senses match the raw gloss, but
+spatial sense 2 permits only ちかぢか, not きんきん. 炭坑-only
+shaft sense 2 is not generalized to source 炭鉱. Public-backed estate,
+target-state and social-association extensions do not invent pinned
+sense numbers. 地質 ちしつ remains distinct from fabric-quality
+じしつ. Raw "cut up fine" for 千切る is preserved without teaching
+knife mincing as its ordinary action.
+
+The initial GPT and Claude reviews will receive the same clean committed
+snapshot and blind evidence, sequentially. No independent findings,
+model-diversity outcome, native-speaker certification or runtime quiz
+uniqueness is claimed at this stage.
 
 ## Batch 51: N2:1002-N2:1021
 
