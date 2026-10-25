@@ -19,6 +19,69 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 69 authoring observations
+
+- Twenty rows map to twenty new identities. Blank raw spellings
+  for はめる, バランス, パンツ and バンド remain provenance.
+  The kana-primary articles do not acquire alternative-spelling
+  Han metadata. Existing cards and easier levels are unchanged.
+- 歯磨き's source sense is toothpaste; brushing is additional
+  recognition with its own construction. 歯磨き粉 is not
+  necessarily dry powder. はめる teaches everyday fitting and
+  wearing separately from its vulgar colloquial sexual use;
+  the source's "make love" is not a neutral register guide.
+- 跳ねる does not inherit hit/reject/behead senses from separate
+  撥ねる/刎ねる identities. 早口 recognizes はやくち and
+  はやぐち without mandatory rendaku. 流行る is godan,
+  despite its final る, and its special whole-word reading is
+  not an ordinary component-reading decomposition.
+- 判子 preserves the source identity while teaching usual kana
+  はんこ/ハンコ. The inspected public entry connects it with
+  はんこう（版行）; its `kango` label follows that lineage,
+  not an invented all-on reading or a literal judgment-child
+  compound. This classification remains subject to review.
+  万歳 does not add an unsupported ザイ reading to 歳.
+- 払い込む is not restricted to personal savings or bank
+  transfers. 払い戻す is not unrestricted debt repayment.
+  バランス includes equilibrium and account balance without
+  making every arithmetic 差し引き interchangeable.
+- 張り切る's pinned family does not justify a blanket
+  transitivity label. 反映 has both transitive and intransitive
+  evidence; its representation/update constructions differ from
+  反省's self-review and remorse. Shared English "reflection"
+  is not a single Japanese sense.
+- 判事 is a judicial rank/title, not every court worker.
+  番地 is not universally sequential street numbering.
+  パンツ recognizes both underwear and trousers without a
+  rigid pronunciation rule. Bare source バンド does not prove
+  which band sense the compiler intended.
+- All primary written characters remain in metadata; missing
+  component cards are not invented. Four reciprocal N2 pairs
+  use matching reading-table and common-word links, preserving
+  kanji headers and existing examples. Validation caught
+  nonexistent guard ID 当てはめる: use actual stable
+  あてはめる, whose complete older body was inspected.
+- Completed author reads cover 249 complete families / 675
+  senses, including twenty principals / 45 senses; 111 labels,
+  91 complete older bodies, 35 complete component records and
+  four related kanji bodies. Eleven family and twelve older-body
+  chunks were read through EOF, covering 89 older identities.
+  Supplemental full reads of 所 and 早い bring the union
+  to 91, leaving 20 candidates unselected. Original preparation,
+  completed inspection and supplemental receipts remain separate.
+- All 25 public captures have applicable selected headings
+  from one authority, Digital Daijisen via Weblio. Exclude
+  unrelated Valence, Hanko, 班固, まんざい, はんす,
+  bund, 礬土 and 晩材. Public everyday はめる evidence
+  does not establish the sexual register; pinned JMdict does.
+  Captured headings do not establish frequency, compiler intent
+  or independent examination levels for all recognition senses.
+- Quiz declarations are direct symmetric, nontransitive
+  hypotheses based on actual older bodies and complete families,
+  not inherited cliques or a proof of global uniqueness.
+  Independent sequential GPT and Claude reviews are pending;
+  inherited batch61 quiz debt is not silently expanded here.
+
 ## Batch 68 authoring observations
 
 - Twenty source rows map to eighteen new articles and two reused

@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-68 review-closed.** The target is all 1,812 source rows,
+**Batches 01-68 review-closed; batch 69 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,360 rows are review-closed; none are draft and 452 remain pending.
+The first 1,360 rows are review-closed; 20 are draft and 432 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,45 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 69: N2:1362-N2:1381
+
+**Status:** draft; independent review and reconciliation are pending.
+
+Twenty new articles: 跳ねる, 破片, 歯磨き, はめる, 早口,
+流行る, 払い込む, 払い戻す, バランス, 針金, 張り切る,
+反映, 半径, 判子, 万歳, 判事, 反省, 番地, パンツ and バンド.
+No existing article is reused or relabeled. The
+[packet](n2-vocabulary-batch-sources/batch-69.json) preserves twenty
+raw rows and twenty complete principal families / 45 senses.
+Selected source senses and additional recognition senses remain
+distinct; a bare source gloss does not prove compiler intent.
+
+Four kanji cards preserve their headers and existing examples while
+adding matching table/common-word links: 片/破片, 磨/歯磨き,
+針/針金 and 省/反省. Primary written characters are retained
+even when a component card does not exist.
+
+The completed author-inspection receipt covers 249 complete
+families / 675 senses, 111 navigation labels, 91 complete older
+comparison articles, 35 complete component records and all four
+related kanji bodies. All eleven family and twelve older-body
+chunks were read through EOF, covering 89 older identities.
+Supplemental direct full reads of 所 and 早い bring the union
+to 91; 20 older candidates remain unselected. Original prepared
+and completed receipts are preserved separately.
+
+All 25 frozen public requests have nonempty applicable lexical
+headings. They are from one authority, Digital Daijisen via
+Weblio, not 25 dictionaries or independent reviewer retrievals.
+Mixed unrelated entries are excluded; a positive capture does
+not verify every captured entry or every teaching claim.
+
+Draft coverage is **1,360 closed / 20 draft / 432 pending /
+0 unresolved**, mapping **1,366 articles: 1,265 new / 101 reused**.
+The authored scope is 30 files. Direct quiz safeguards are
+author hypotheses pending independent judgment, not a global
+quiz-uniqueness claim.
 
 ## Batch 68: N2:1342-N2:1361
 
