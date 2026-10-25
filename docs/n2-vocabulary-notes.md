@@ -95,6 +95,20 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 56 authoring:** Distinguish a wrong supplied identity from a
+  genuine separate-entry alias. The 務める row points to 勤める-only
+  1240825; teach inspected 2872052 while preserving the raw source.
+  By contrast, 点ける 1610400 explicitly crossreferences 付ける's
+  lighting sense and can be recorded as a validated source alias.
+  努める's copied employment gloss does not override its effort meaning.
+  Test transitivity per sense for 突っ込む, and do not generalize
+  浸ける soaking to 漬ける-only pickling. Existing coverage can require
+  no article edit: 漬ける already teaches the complete selected source
+  association. Level-only reuses are not whole-article reauthorings.
+  The source's "glaze" for 艶 must not become a claim about glazing
+  material. These are author findings; batch 56 model contributions
+  remain pending independent reviews.
+
 - **Batch 55 closure:** A first confirmation can expose a small
   regression; retain its NEEDS FIX verdict and obtain another bounded
   confirmation rather than treating it as clean. Authenticate all six

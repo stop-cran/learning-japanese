@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-55 review-closed.** The target is all 1,812 source rows,
+**Batches 01-55 review-closed; batch 56 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,100 rows are review-closed; none are draft,
-712 remain pending, and none are unresolved.
+The first 1,100 rows are review-closed; 20 are draft,
+692 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,51 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 56: N2:1102-N2:1121
+
+**Status:** authored draft; independent review and reconciliation pending.
+
+Fourteen new articles: 伝わる, 突っ込む, 務める, 努める, 綱,
+繋がり, 繋がる, 繋げる, 潰す, 潰れる, つまずく, 詰まる,
+爪 and 艶. Five reused articles cover six source rows: 作る recognizes
+造る; 付ける explicitly recognizes 着ける and 点ける; unchanged
+漬ける already teaches 浸ける soaking. Preserve their N5/N5/N4
+levels and primary identities. 粒 and 積む receive sourced N2 only;
+their original teaching and exclusions are retained, not newly authored.
+
+The [batch packet](n2-vocabulary-batch-sources/batch-56.json)
+retains all raw fields. Twenty source principal families have 99 senses;
+the corrected 務める teaching family gives 21 source/teaching families
+and 100 sense records. Author inspection covered all 131 original
+families/524 senses plus eight supplemental families/33 senses:
+139 distinct complete families/557 senses, including the principals.
+All 263 original labels and 26 further labels in inspected article
+front matter were read, giving 289 distinct labels. All 95 selected
+original and seven supplemental complete older bodies, 29 component
+records, three complete related kanji bodies and twenty public lexical
+captures were actually read. The public captures come from one
+dictionary service, not twenty independent dictionaries.
+
+The raw 務める row supplies 1240825, whose pinned spelling is only
+勤める. Correct teaching to separately inspected 2872052, retaining
+the erroneous supplied identity rather than treating it as an alias.
+努める's repeated employment gloss is retained as source data but
+corrected to effort in teaching. 点ける 1610400:1 is a real separate
+entry cross-referenced to 付ける 1495770:13, not an erroneous identity.
+Preserve the 浸ける soaking versus 漬ける-only pickling restriction.
+
+Add substantive 詰/詰まる reciprocity at つまる and link the 造る
+examples on 造 to the stable 作る article. Baseline kanji metadata is
+unchanged. Other existing written components are linked word-side;
+missing cards are not fabricated. Explicit baseline guard additions
+on 作る and 付ける are recorded separately; original exclusions
+are preserved. The unchanged 粒 guards are not claimed as newly
+researched comparisons.
+
+Current drafted totals: 1,111 mapped articles = 1,035 new and 76 reused
+baseline identities; 4,308 total word articles. No draft association
+is review-closed merely because it is committed or structurally valid.
 
 ## Batch 55: N2:1082-N2:1101
 
