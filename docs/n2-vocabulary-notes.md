@@ -19,6 +19,48 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 71 authoring observations
+
+- Twenty new articles cover N2:1402-N2:1421. The raw source
+  fields remain intact, including blank spellings for ひとまず,
+  ひとりでに and ビニール. Canonical articles explicitly recognize
+  引っ繰り返す, 引っ繰り返る, 引越し and 人差指 without
+  copying a spelling restriction from one family to another.
+- Raw 日日 at ひにち belongs to the date/day-count family 1611370.
+  Its source gloss, "every day,daily,day after day," instead matches
+  separate daily family 1602120 at ひび/にちにち. Preserve the
+  mismatch as evidence; teach 日にち, not an invented daily sense
+  for ひにち. The compiler's intention is not inferred.
+- Source 捻る's "puzzle over" gloss is taught through the actually
+  attested whole construction 頭をひねる, not a fabricated unrestricted
+  cognitive sense in JMdict. The separate ねじる identity and its
+  shared spelling do not license every ひねる idiom or injury phrase.
+  ビニール's vinyl-record sense is restricted to バイナル, and the
+  public vinyl heading does not prove an exact borrowing route.
+- Completed author inspection covers 473 full families / 1,115
+  senses, 167 distinct complete older bodies, 30 component records
+  and two related kanji bodies. All eighteen family and twenty
+  older-body chunks were read through EOF. The original 467-family /
+  1,102-sense and 155-body preparation plan stays immutable.
+  Two direct older-body reads preceded drafting; ten further bodies
+  and six full families / thirteen senses were read during drafting.
+  The completed receipt was persisted during drafting, not before it.
+- All 22 public captures have inspected applicable lexical headings,
+  from one dictionary authority. Mixed 瞳 character/satellite,
+  独り言 book-title and 捻る reading headings are excluded where
+  irrelevant. The 259-label union is navigation metadata, not
+  259 fully read bodies; 92 original candidates remain unselected.
+- Ordinary secondary meanings matter beyond older primary titles:
+  通り has traffic, まず and しばらく have for-now uses, たいてい
+  has an ordinary/negative use, and 暮れ includes sunset.
+  These are direct-pair quiz hypotheses, not transitive cliques,
+  global uniqueness proof or independent reviewer conclusions.
+- 筆 gains reciprocal reading/common-word links for 筆記 and 筆者;
+  皮 gains 皮肉. Both kanji headers are preserved, absent component
+  cards stay unlinked, and primary metadata retains every written
+  character. Draft coverage is 1,400 closed / 20 draft / 392 pending;
+  independent sequential GPT and Claude reviews are still pending.
+
 ## Batch 70 authoring observations
 
 - Both original reviewers accepted the corrections at

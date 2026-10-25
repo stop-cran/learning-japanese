@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-70 review-closed.** The target is all 1,812 source rows,
+**Batches 01-70 review-closed; batch 71 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,400 rows are review-closed; none are draft and 412 remain pending.
+The first 1,400 rows are review-closed; 20 are draft and 392 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,47 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 71: N2:1402-N2:1421
+
+**Status:** draft; independent sequential GPT and Claude reviews pending.
+
+Twenty new articles: 筆記, ひっくり返す, ひっくり返る, 引っ越し,
+引っ込む, 筆者, 必需品, 人差し指, 一通り, 人通り, ひとまず,
+瞳, 一休み, 独り言, ひとりでに, ビニール, 皮肉, 日にち,
+捻る and 日の入り. No baseline article is reused or renamed.
+Two preserved kanji headers gain three primary reciprocal pairs:
+筆/筆記, 筆/筆者 and 皮/皮肉.
+
+The [packet](n2-vocabulary-batch-sources/batch-71.json) preserves
+twenty raw rows, twenty complete principal families / 44 senses,
+source aliases and blank written-form fields. 日にち explicitly
+corrects the raw 日日/ひにち daily-gloss mismatch without changing
+any raw source column. Additional recognition is separate from
+selected source senses, not an independent N2 assignment.
+
+Actual author reads cover 473 full families / 1,115 senses,
+167 distinct full older bodies, 248 original navigation labels,
+30 complete component records and two related kanji bodies.
+All eighteen family and twenty older-body chunks were read through
+EOF. Six full supplemental families and twelve direct older-body
+reads are accounted separately: two bodies preceded drafting;
+ten bodies and the six families were read during drafting.
+The completion receipt was persisted during drafting, not a
+contemporaneous pre-authoring gate. Preparation remains unchanged.
+
+All 22 public captures have inspected applicable lexical headings
+from Digital Daijisen via Weblio, one authority. Mixed readings,
+character/satellite headings and book titles are scoped out.
+The label union is 259 metadata records, not 259 inspected bodies;
+92 original navigation candidates remain unselected.
+
+Authored draft coverage is **1,400 closed / 20 draft / 392 pending /
+0 unresolved**, mapped to **1,406 distinct articles: 1,302 new /
+104 reused**. There are **4,575 word articles** and **297 tracked
+primary reciprocal N2 pairs**. The authored scope is 28 files.
+Author inspection and quiz hypotheses are not reviewer findings
+or evidence of measured model-bias reduction.
 
 ## Batch 70: N2:1382-N2:1401
 
