@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-56 review-closed.** The target is all 1,812 source rows,
+**Batches 01-56 review-closed; batch 57 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,120 rows are review-closed; none are draft,
-692 remain pending, and none are unresolved.
+The first 1,120 rows are review-closed; 20 are draft,
+672 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,56 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 57: N2:1122-N2:1141
+
+**Status:** drafted; independent review and reconciliation pending.
+
+Seventeen new articles: 強気, 釣り合う, 吊る, 吊るす, 手洗い,
+定員, 定価, 低下, 定期券, 定休日, 停止, 停車, 停電,
+出入り, 手入れ, テーマ and 出来上がり. Three narrow reuses:
+出会い explicitly recognizes raw 出合い while retaining N3;
+出かける recognizes 出掛ける and imminent departure while retaining
+N5; 出入口 receives sourced N2, translated examples and a bounded
+correction to its unsupported single-shared-door claim. All three
+retain their primary identities, readings, titles and kanji arrays.
+Original baseline exclusions remain unchanged.
+
+The [batch packet](n2-vocabulary-batch-sources/batch-57.json)
+preserves all twenty raw rows and complete principal families:
+20 families/42 senses. Author inspection covered 123 original
+complete families/297 senses and 13 support families/61 senses,
+giving 136 distinct complete families/358 senses including the
+principals. All 223 original labels plus eleven further labels in
+inspected front matter were read: 234 distinct labels. All 74
+original and ten support complete older bodies, 30 complete
+component records and the three complete related kanji bodies
+were actually read.
+
+Twenty-three public endpoint attempts yielded 22 positive lexical
+captures from one dictionary service, not 22 independent dictionaries.
+The raw 吊す endpoint yielded no Digital Daijisen body; a separately
+captured canonical 吊るす body supplies the definition. The thin
+定休日 cross-reference is supplemented by the complete 定休
+body, and 定期乗車券 supplies the period/section conditions and
+abbreviation. Mixed headings, spelling/reading restrictions and
+unequal evidence depth remain explicit.
+
+Teach 出来上がり as a noun, not a general predicate inferred from
+the loose raw gloss. Keep 停止's mourning sense restricted to
+ちょうじ; do not transfer it to ていし. Source-specific POS labels
+do not override directly attested broader usage, notably 手洗いする
+and transitive 停車. 手入れ's police-raid sense is an explicitly
+additional sense, not independently assigned N2.
+
+Add five reciprocal pairs: 低/低下, 券/定期券, 停/停止,
+停/停車 and 停/停電, at their actual whole-word readings.
+Baseline kanji metadata is unchanged; existing written components
+are linked substantively, and missing cards are not fabricated.
+
+Current totals: 1,131 mapped articles = 1,052 new and 79 reused
+baseline identities; 4,325 total word articles. These are drafted
+mapping totals, not a claim of independent review closure.
 
 ## Batch 56: N2:1102-N2:1121
 

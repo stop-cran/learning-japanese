@@ -95,6 +95,18 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 57 authoring:** A failed raw-alias endpoint is not
+  dictionary verification; preserve its failure and separately
+  inspect the canonical entry. A thin cross-reference such as
+  定休日 needs its referenced 定休 body for the relevant claim.
+  Keep unrelated readings/headings apart, including 強気's
+  つよき and 停止's restricted ちょうじ sense. Loose predicative
+  source glosses do not change 出来上がり's noun status.
+  Direct public usage can supplement a source-specific POS label
+  without licensing unrestricted substitution. Preserve stable
+  easier-level identities when adding explicit source variants.
+  These are authoring observations, not independent review findings.
+
 - **Batch 56 closure:** Both original sessions confirmed the same
   corrected snapshot after full bounded rereads; authenticate all
   four native reports, required complete reads and twenty exact
