@@ -159,6 +159,10 @@ The 123 expressions split into 18 Everyday and 105 Time & dates items. Group mem
 
 ### Version-2 transport and future authoring
 
+The additive [N4-oriented extension](counter-n4.md) keeps this N5 inventory and its
+identities intact. It records the expanded matrix, sources, scoped grading and
+independent-review boundaries.
+
 Create **new files** under `counters/`, in `manifest.files`, rather than changing the schema of a
 published v1 family. Older apps skip v2 files and retain the original practice. New modes require
 a compatible APK; content sync alone cannot install these UI/parser capabilities.
