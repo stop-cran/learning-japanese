@@ -95,6 +95,18 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 56 closure:** Both original sessions confirmed the same
+  corrected snapshot after full bounded rereads; authenticate all
+  four native reports, required complete reads and twenty exact
+  all-three-CLEAN associations before closing. Claude withdrew two
+  neighbor/same-root-based hypotheses after reading complete actual
+  comparisons. Shared findings include the variant-component gap
+  even though one report called it optional. Other Claude proposals
+  supplied useful direct guards and precision, not evidence for a
+  model ranking. Keep one-service public captures distinct from
+  pinned JMdict, and do not generalize a noun/predicate shorthand
+  into an exemption for a word with actual する uses.
+
 - **Batch 56 reconciliation:** A same-root noun/verb precedent is not
   a rule that every related noun and predicate need an exclusion.
   Inspect actual senses: a connection or assigned role is not
@@ -119,8 +131,8 @@ evidence and learning impact; issue creation requires authorization.
   no article edit: 漬ける already teaches the complete selected source
   association. Level-only reuses are not whole-article reauthorings.
   The source's "glaze" for 艶 must not become a claim about glazing
-  material. These are author findings; batch 56 model contributions
-  remain pending independent reviews.
+  material. These are author findings; shared and complementary
+  model contributions are recorded separately in the review ledger.
 
 - **Batch 55 closure:** A first confirmation can expose a small
   regression; retain its NEEDS FIX verdict and obtain another bounded

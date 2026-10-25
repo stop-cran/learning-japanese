@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-55 review-closed; batch 56 drafted.** The target is all 1,812 source rows,
+**Batches 01-56 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,100 rows are review-closed; 20 are draft,
+The first 1,120 rows are review-closed; none are draft,
 692 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 56: N2:1102-N2:1121
 
-**Status:** authored draft; independent review and reconciliation pending.
+**Status:** closed after authenticated independent reviews, evidence-based
+corrections and original-session confirmations.
 
 Fourteen new articles: 伝わる, 突っ込む, 務める, 努める, 綱,
 繋がり, 繋がる, 繋げる, 潰す, 潰れる, つまずく, 詰まる,
@@ -67,9 +68,8 @@ on 作る and 付ける are recorded separately; original exclusions
 are preserved. The unchanged 粒 guards are not claimed as newly
 researched comparisons.
 
-Current drafted totals: 1,111 mapped articles = 1,035 new and 76 reused
-baseline identities; 4,308 total word articles. No draft association
-is review-closed merely because it is committed or structurally valid.
+Current totals: 1,111 mapped articles = 1,035 new and 76 reused
+baseline identities; 4,308 total word articles.
 
 ### Batch 56 - initial reviews and corrections
 
@@ -117,7 +117,45 @@ did not read the family-inspection renderings or fetch fresh pages.
 The allowed but absent redundant `principal-reading.txt` was a
 prompt limitation; the complete principals JSONL was available and
 read. These unequal depths and optional/unsupported hypotheses
-limit any model-bias conclusion. Confirmation is still pending.
+limit any model-bias conclusion.
+
+### Batch 56 - confirmed and closed
+
+The original [GPT](n2-vocabulary-reviews/batch-56-gpt-confirmation.md)
+and [Claude](n2-vocabulary-reviews/batch-56-claude-confirmation.md)
+sessions confirmed `bee40f02c2313d736a8c8f1f726b417056466260`,
+parent authored commit `3e67155e0a83c666b61719eca7eb3377fd649ce9`.
+Actual models remained `gpt-6.1-sol` and `claude-opus-5.5`.
+Both native processes exited sequentially with no edits; exact
+prompts, models, reports, frozen hashes, derivatives, patches and
+allowlisted access were authenticated for all four reports.
+
+Both fully reread six changed articles, five unchanged hypothesis
+articles, the actual patch, all 21 complete corrective families/
+58 senses, all fourteen older bodies and the captured 艶 headings.
+Complete required reads and exact twenty source-ID/article
+associations were checked against authenticated access records and
+the committed TSV. Both final tables mark all three facets CLEAN
+for every association; unchanged initial judgments are explicitly
+inherited, not misreported as fresh complete rereads.
+
+All three GPT findings are resolved. Claude resolved B56-Q1,
+B56-Q3 and B56-Q5, and explicitly withdrew B56-Q2 and B56-Q4
+after reading complete comparisons. Both accept the five direct
+guards and rare-component links, the optional performance wording,
+and no required connection/role-family guard on the actual meanings.
+通信 remains a weaker optional hypothesis; extra 突/込 backlinks
+remain optional. No teaching changes follow these confirmations.
+
+Claude's final reference to noun/predicate reasoning is not a
+blanket exemption: 通信 itself has a する use, and the actual
+activity/conveyed-thing distinction remains the bounded basis.
+Its closing one-service shorthand applies to public captures,
+not the separately read pinned JMdict families. Preserve the
+complete native report rather than silently rewriting that scope.
+Git/hash/manifest checks are author-executed; no runtime quiz draws,
+exhaustive synonym certification, native-speaker approval or
+controlled model-bias reduction is claimed.
 
 ## Batch 55: N2:1082-N2:1101
 
