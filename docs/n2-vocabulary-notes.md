@@ -95,6 +95,16 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 51 authoring:** Preserve erroneous raw glosses in the source
+  index without teaching them: ダム is a dam, not "dumb"; 建つ is
+  intransitive despite the source's "to erect." Normalize 溜息 to
+  ため息 while explicitly recognizing the source spelling. 足袋 is
+  learned as the complete word たび; do not invent individual
+  足=た or 袋=び readings to manufacture reciprocity. Failed or
+  irrelevant Kanjipedia retrievals do not verify that classification.
+  A separate 貯 spelling for financial saving does not establish
+  an absolute money/nonmoney spelling boundary for 溜まる/溜める.
+
 - **Batch 50 reconciliation:** A source gloss that explicitly includes
   bamboo and the middle rank calls for both 竹 senses in the selected
   mapping, not a plant-only anchor with additional rank teaching.

@@ -5,8 +5,8 @@
 **Batches 01-50 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,000 rows are review-closed; none are draft,
-812 remain pending, and none are unresolved.
+The first 1,000 rows are review-closed; 20 are draft,
+792 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,32 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 51: N2:1002-N2:1021
+
+**Status:** authored draft; independent review and reconciliation pending.
+
+Twenty new articles: 助かる, 但し, 畳む, 立ち止まる, たちまち,
+建つ, 発つ, 脱線, 妥当, 例える, 頼もしい, 足袋, ダブル,
+だます, 溜まる, ダム, ため息 (source 溜息), ためらう,
+溜める, だらしない. No existing identity is reused or renamed.
+
+The [batch packet](n2-vocabulary-batch-sources/batch-51.json) preserves
+the original source fields and complete principal families. The author
+actually inspected 218 selected complete families/482 senses, including
+twenty principals/36 senses; 178 existing labels; 108 complete existing
+articles; 30 component records; three complete kanji cards; and twenty
+public lexical endpoint captures. Not all 321 captured families or all
+178 captured old bodies are claimed read. Public captures are author
+retrievals, not fresh independent reviewer retrievals or frequency evidence.
+
+Add primary reciprocal pairs 畳/畳む, 線/脱線 and 袋/足袋. 足袋
+appears as a qualified whole-word reading たび rather than an invented
+individual reading of 袋. Preserve all baseline kanji metadata.
+Raw source errors remain auditable while the cards teach intransitive
+建つ and ダム "dam." Source 溜息 is explicitly recognized in ため息.
+No independent review, model-comparison outcome, runtime quiz certification
+or closure is claimed at this draft stage.
 
 ## Batch 50: N2:982-N2:1001
 
