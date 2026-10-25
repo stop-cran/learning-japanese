@@ -37,9 +37,11 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   鉢多羅. Its Sino-Japanese reading does not establish an
   ultimately Chinese origin or a metal-only vessel meaning.
   ばつ's proposed derivation from 罰点 is tentative in both
-  inspected dictionary authorities. Its required `wago` field is
-  explicitly qualified as an editorial grouping, not a verified
-  historical classification, and remains subject to review.
+  inspected dictionary authorities. Review rejected the arbitrary
+  kana-to-`wago` grouping. The correction explicitly makes `kango`
+  provisional, following that possible connection, with an
+  `etymology-uncertain` tag. This is not positive proof of settled
+  historical type; both original reviewers must reassess it.
 - 派手 is on-first mixed ハ plus て voiced で, following the
   existing 毎朝/台所 `kango` convention. 話し中 is native-first
   mixed はなし plus チュウ. Both carry `mixed-reading`;
@@ -80,9 +82,37 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   the tentative wording about ばつ; no saved response hash
   or inclusion in the frozen 26-request capture is claimed.
 - These are author reads and direct symmetric, nontransitive
-  quiz hypotheses. Independent reviews have not yet run.
+  quiz hypotheses. Both blind initial reviews are authenticated;
+  original-session correction confirmations remain pending.
   Preparation, inspection and review receipts remain distinct;
   inherited batch61 quiz debt is not silently expanded here.
+- Corrections add nineteen direct safeguards and remove the
+  unsupported 発射/打つ edge. Modern 撃つ/射つ supplies the
+  shooting identity; full 打つ teaches hitting/striking and other
+  separate senses. Do not transfer meanings from a homophone.
+  Add explicit departure/source を guidance for 放れる without
+  changing its attested example or intransitive classification.
+- Compare actual secondary facets as well as titles: 背 includes
+  back/rear despite its height title; 案 includes an idea; 話 and
+  話す include discussion; あまり independently recognizes
+  affirmative excessive degree. Spring and busy guards protect
+  context-free English answers without claiming Japanese synonymy.
+- Corrective reads comprise 37 complete families / 108 senses,
+  adding eleven / 30 to the original union: 409 / 944. Twenty-one
+  full older comparison bodies add nine identities; separate full
+  着る adds one, bringing the author union from 132 to 142.
+  All six bounded corrective chunks were read through EOF.
+  Original prepared and completed receipts remain unchanged.
+- Authenticated initial GPT returns include all 31 family/body
+  chunks and 23 additional direct older word bodies; Claude
+  returns no such chunks and six complete older word bodies,
+  three for classification conventions. Equal availability is not
+  equal depth. Shared observations concern ｘ, the arbitrary
+  type grouping and 甚だしい/過剰. GPT supplied other verified
+  guard groups, the shooting-identity correction and departure を;
+  Claude supplied 春 and 忙しい guards and useful optional
+  wording/link improvements. This supports complementary catches,
+  not measured model-bias reduction or a general model ranking.
 
 ## Batch 67 authoring observations
 

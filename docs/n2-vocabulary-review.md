@@ -28,8 +28,9 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 68: N2:1342-N2:1361
 
-**Status:** committed draft prepared for independent sequential reviews.
-No independent acceptance or batch closure is claimed yet.
+**Status:** both independent initial reviews authenticated;
+bounded corrections prepared for original-session confirmations.
+No final independent acceptance or batch closure is claimed yet.
 
 Eighteen new articles: 肌着, 果たして, 鉢, ばつ, 発揮,
 バック, 発射, 発想, 発電, 発売, 派手, 話し合い,
@@ -70,13 +71,48 @@ authority, Digital Daijisen via Weblio, not independent reviewer
 retrievals or frequency evidence. A separately read Kotobank/Seisenban
 entry supports the uncertainty of ばつ's proposed derivation;
 it has no saved response hash and is not part of the frozen capture.
-The card's practical word-type grouping requires independent scrutiny.
+The arbitrary kana-to-`wago` grouping is withdrawn. The corrected
+card explicitly makes `kango` provisional, following the tentative
+罰点 connection, and adds `etymology-uncertain`. This does not
+prove a settled historical type; final reviewers must reassess
+whether the qualification resolves the actual teaching claim.
 
 Draft coverage is **1,340 closed / 20 draft / 452 pending /
 0 unresolved**, mapping **1,346 articles: 1,245 new / 101 reused**.
-The authored scope is 30 files. Initial blind GPT and Claude reviews,
-native-output authentication and evidence-based reconciliation remain
-pending; author inspections are not independent reviewer judgments.
+The authored scope is 30 files. Both blind initial reports are archived:
+[GPT](n2-vocabulary-reviews/batch-68-gpt-initial.md) and
+[Claude](n2-vocabulary-reviews/batch-68-claude-initial.md), actual
+models `gpt-6.1-sol` and `claude-opus-5.5`, run sequentially.
+Their exact prompts, native final outputs, actual models, zero edits,
+private-file boundaries, complete assigned bodies and exact TSV
+header/twenty rows are authenticated separately from linguistic review.
+
+Thirteen new articles change across the 19-file correction scope.
+Nineteen direct quiz safeguards are added and the unsupported
+発射/打つ edge is removed: complete modern 撃つ/射つ evidence,
+not shared pronunciation, establishes shooting. 放れる explains
+departure/source を; ｘ is positively recognized as the cross-mark
+spelling read ばつ. Three bounded optional wording/link improvements
+are adopted. Reused words, four kanji edits and source mappings
+remain unchanged.
+
+Actual corrective author reads add 37 complete families / 108 senses,
+eleven / 30 new to the original union, reaching 409 / 944.
+Twenty-one older bodies plus separate 着る bring the distinct
+author comparison union to 142. All six corrective chunks were
+read completely; original receipts remain historical.
+
+The models share the raw-form/type observations and the 過剰
+safeguard. GPT supplies the other evidenced guard groups, modern
+shooting-identity correction and departure を explanation.
+Claude supplies the 春 and 忙しい guards and useful optional
+link/wording improvements. Actual initial depth differs: GPT returns
+all 31 family/body chunks and 23 additional direct older word bodies;
+Claude returns none of those chunks and six complete older word
+bodies, three for classification conventions. Common access is not
+equal inspection. This is practical complementarity, not measured
+bias reduction or a model ranking. Both original-session confirmations
+remain pending; author reads are not independent reviewer judgments.
 
 ## Batch 67: N2:1322-N2:1341
 
