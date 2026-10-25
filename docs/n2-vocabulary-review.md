@@ -5,7 +5,7 @@
 **Batches 01-65 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,300 rows are review-closed; none are draft and 512 remain pending.
+The first 1,300 rows are review-closed; twenty are draft and 492 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,55 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 66: N2:1302-N2:1321
+
+**Status:** draft; independent sequential GPT and Claude reviews pending.
+
+Fifteen new articles: のこぎり, 残らず, 覗く, 上り, 糊, 乗り換え,
+載る, のろい, のんき, 灰色, 俳句, 売店, バイバイ, 売買 and 這う.
+Five reused articles are 乗せる, 伸ばす, 伸びる, 登る and のろのろ.
+The first four retain their existing easier levels. のろのろ adds
+only sourced `jlpt: 2`, preserving its complete original body.
+
+The [packet](n2-vocabulary-batch-sources/batch-66.json) preserves
+twenty raw source rows and twenty complete principal families /
+72 senses. 載せる, 延ばす, 延びる and 上る are actually taught
+under their stable existing identities. The source-selected
+延びる extension sense is checked against explicit
+`teachingSpelling: 延びる`, not the primary 伸びる spelling.
+Source 乗換 is explicitly recognized in 乗り換え. Source 鈍い
+のろい does not overwrite the にぶい identity or import its
+knife-dull sense. Blank fields and broad or misleading raw
+glosses remain unchanged provenance.
+
+Four edited kanji cards preserve their headers. New primary
+reciprocal pairs are 換/乗り換え and 灰/灰色. Separate alias checks
+cover 延/伸ばす, 延/伸びる and 鈍/のろい; the latter has Common
+words/Notes links without an invented character-reading row.
+Existing 伸 already links both reused 伸 articles in Readings
+and Common words. Primary metadata does not accumulate aliases.
+
+The separate actual-inspection receipt records 257 complete
+families / 739 senses, 111 complete older articles, 165 labels,
+31 complete component records and five complete related kanji
+bodies. Twelve original family and thirteen older-body chunks
+were read completely. Three supplemental bodies were read
+directly; 完全's complete one-sense family was separately read.
+Fifty-four original body candidates remain unselected.
+Unchanged preparation plans remain `prepared_for_inspection`.
+
+Twenty-three public requests yielded twenty-two positive
+captures from Digital Daijisen through Weblio: one authority,
+not independent reviewer retrievals or frequency evidence.
+The raw 乗換 request failed; the canonical 乗り換え request
+succeeded separately.
+
+Draft coverage is **1,300 closed / 20 draft / 492 pending /
+0 unresolved**, mapping **1,308 articles: 1,212 new / 96 reused**.
+The authored scope is 28 files. Review closure, corrections
+and independent model-contribution observations are not yet
+claimed. Inherited batch61 quiz debt remains deferred.
 
 ## Batch 65: N2:1282-N2:1301
 

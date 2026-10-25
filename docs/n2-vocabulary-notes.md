@@ -19,6 +19,56 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 66 authoring observations
+
+- Twenty source rows map to fifteen new articles and five reused
+  identities. Preserve 乗せる, 伸ばす, 伸びる and 登る at their
+  existing easier levels. のろのろ gains only the sourced N2
+  field; its body, image and exclusions are unchanged.
+- Shared dictionary identity is not enough for alias coverage.
+  載せる must actually be taught under 乗せる, 延ばす under
+  伸ばす, 延びる under 伸びる, and 上る under 登る. In particular,
+  延びる's selected extension sense is restricted to that spelling,
+  not primary 伸びる. The packet's explicit `teachingSpelling`
+  records the taught alias used to check that restriction.
+- Source 乗換 maps to the article explicitly teaching 乗り換え,
+  乗換 and 乗換え at のりかえ. The source 鈍い のろい is distinct
+  from existing にぶい; its raw knife-dull gloss is not imported.
+  のこぎり, のろい and のんき stay kana-primary with empty
+  character arrays. Recognizing an alias does not change that
+  metadata or justify inventing a のろ character-reading row.
+- 覗く has deliberate looking and intransitive partial appearance.
+  載る's separate family covers publication and physical placement,
+  not all of 乗る's riding senses. Preserve constructions and
+  spelling restrictions rather than forcing one English gloss
+  across every subject or grammatical role.
+- 上り's train direction is relative to the designated route
+  origin, not invariably Tokyo or uphill. Traditional 俳句 counts
+  morae, not English syllables; its conventions have exceptions.
+  糊's clothing starch is not every dietary starch. 這う includes
+  snakes and trailing plants without a mandatory stealth meaning.
+- 呑気 and 暢気 are ateji. The captured Daijisen origin note,
+  not literal modern "swallow + spirit," grounds the type choice.
+  The same carefree attitude can be favorable or irresponsible
+  in context. Direct quiz guards remain review hypotheses;
+  neither shared English labels nor different parts of speech
+  settle every pair.
+- Actual author reads: 257 complete families / 739 senses,
+  including twenty principals / 72 senses; 111 complete older
+  bodies, 165 labels, 31 component records and five complete
+  related kanji bodies. Twelve original family and thirteen
+  older-body chunks were read completely. Three supplemental
+  bodies were read directly and 完全's one complete family
+  separately; the prepared plans are not relabeled as receipts.
+  Fifty-four original body candidates remain unselected.
+- Twenty-three public requests produced twenty-two positive
+  captures from one authority, Digital Daijisen via Weblio.
+  The failed raw 乗換 lookup remains recorded; the canonical
+  乗り換え lookup succeeded separately. Captures and author reads
+  are not independent reviewer retrieval or frequency evidence.
+  Independent reviews are pending; no linguistic certification,
+  global quiz-uniqueness or model-bias improvement is claimed.
+
 ## Batch 65 authoring observations
 
 - Twenty source rows need nineteen new articles, not twenty
