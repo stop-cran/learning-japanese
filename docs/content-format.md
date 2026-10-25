@@ -273,7 +273,8 @@ The [quantity/scope ledger](grammar-quantity-scope-sources.json) adds 26 N4 task
 The [conversation/discourse ledger](grammar-conversation-connectors-sources.json) adds 24 N4 tasks and four N5 controls in one set.
 The [ずつ bridge](grammar-quantity-zutsu-sources.json) adds 16 N3 interpretations without duplicating existing quantity owners.
 The [hopes/wishes follow-up](grammar-hopes-wishes-sources.json) adds 20 N4 tasks in one set.
-Current practice is 1774 exercises: 596 N5, 821 N4 and 251 N3, with N2/N1 unchanged. Mixed-level articles derive their browsing levels from
+The [descriptive-context follow-up](grammar-descriptive-contexts-sources.json) adds 30 N4 tasks in one set.
+Current practice is 1804 exercises: 596 N5, 851 N4 and 251 N3, with N2/N1 unchanged. Mixed-level articles derive their browsing levels from
 their matching exercises rather than a single article label. The [reviewed introduction pilot](grammar-introductions-pilot.json)
 supplied the initial 19 labels, all preserved: six before/after and nine action-stage exercises at N4, and four
 expectation/obligation exercises at N3. Its three optional `introductionGroups`, recommendation from temporal sequence to
@@ -354,7 +355,7 @@ Repair chapter boundaries/staging rather than deleting genuine gates for layout 
 well as outgoing edges, partial availability, external/unmapped foundations, ownership, compatibility and stable identities.
 Run `python tools/validate.py`, focused grammar tests, vocabulary checks, manifest regeneration and the real Android importer.
 
-The current catalog places all **241 authored groups in 20 chapters**, with **23 immediate leaf prerequisites** and **9 derived
+The current catalog places all **247 authored groups in 20 chapters**, with **23 immediate leaf prerequisites** and **9 derived
 chapter arrows**. All 247 recommendations remain unchanged. The 292 unowned exercises remain compatibility practice, not fabricated
 chapter/readiness credentials. The ledger distinguishes the earlier partial-mapping pilot from current ownership and records each
 edge's precise scope. The installment summaries below describe their original delivery snapshots; their original zero-prerequisite

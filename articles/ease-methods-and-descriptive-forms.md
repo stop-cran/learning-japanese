@@ -197,9 +197,10 @@ Compare the opening **長く話す**: it describes how long the talking lasts.
 [すぎる and degree](comparisons-change-and-degree.md#すぎる-too-much-for-a-relevant-standard)
 add a different judgment.
 
-## 5. Small recognition bridges
+## 5. Kinds, materials, features and accessories
 
-These are useful neighboring expressions, not extra production targets or a claim of full coverage.
+These neighboring expressions now have a separate, bounded practice set. They are not
+additional suffix rules or a claim of complete descriptive-language coverage.
 
 ### Kinds: こんな, どんな and こういう
 
@@ -211,6 +212,23 @@ do not turn them into a permanent distance-only code or assume that longer wordi
 Ordinary この／その and selecting **どの本**, "which book," remain in
 [pointing and asking questions](pointing-and-asking-questions.md#asking-which-one-which-noun-or-where).
 The そう in そういう is not by itself the appearance/hearsay auxiliary そう.
+
+Attach the modifier directly: **こういう箱／こんな箱／このような箱**
+（こういうはこ／こんなはこ／このようなはこ） all mean "a box of this kind" in an appropriate
+context; an extra の is not inserted. A demonstrated sample can illustrate a **type** without
+being the one physical object you want.
+**そういう働き方**（そういうはたらきかた, "that kind of working arrangement"） can pick up
+an arrangement the other person has described. It does not say you already work that way.
+
+**どんな道具／どういう道具／どのような道具**（どんなどうぐ／どういうどうぐ／どのようなどうぐ）
+asks about kinds or characteristics of tools.
+**どういう意味ですか**（どういういみですか, "What do you mean?"） can request an explanation;
+it is not necessarily a request for a numbered choice.
+The two reference-phrase drills expressly request a こ- or そ-family presentation.
+That is the task's framing, not a general rule that a shared object or idea always takes one family.
+The same-family modifiers **こういった／こうした** and **そういった／そうした** are also
+accepted in those reference tasks. Here they mean "this/that sort of"; their past-looking
+shape does not make the main statement past tense. They are alternatives, not extra scored targets.
 
 ### Materials, features and accessories
 
@@ -226,10 +244,50 @@ Material **で** and source **から** overlap. Transformation and how a materia
 the choice, but visible versus invisible material is not a reliable exclusive grammar test.
 These examples do not claim that only one of those particles could ever fit each product.
 
+Both **できる** and **できている** occur in material descriptions. A general production/material
+relation often uses できる and an existing object's composition often uses できている,
+but neither is exclusively restricted to generic or individual objects.
+The new formation tasks specifically request a **できている** state description in ordinary
+polite nonpast: **紙でできています／紙からできています**, or their requested negatives
+**紙でできていません／紙からできていません**.
+Contractions such as **できてます** and polite negatives such as **できてないです** also occur;
+they are accepted when they fit that operation. **出来** is an accepted spelling of でき.
+
+Keep the material phrase's internal scope and the described object clear:
+
+> この布は綿と麻でできています。  
+> このぬのは めんとあさでできています。  
+> This cloth is made of cotton and linen.
+
+Both materials are named; their proportions are not.
+If only a box's **ふた** ("lid") is described as wooden, do not extend that claim to its
+**本体**（ほんたい, "main body"）.
+In **カードが古い紙からできています**（カードがふるいかみからできています,
+"the card is made from old paper"）, paper is the source material and the card is the product,
+not the reverse. Negating one material relation does not identify the actual alternative material.
+
 **赤いネクタイをしています（あかいねくたいをしています）** describes wearing a red tie.
 **父は丸い顔をしています（ちちはまるいかおをしています）** describes a father as having a round face.
 This descriptive **をしている** has lexical preferences; do not mechanically replace every "wear" or "have"
 verb with する, or infer that all body-part/property statements using がある are forbidden.
+
+The follow-up uses these attested combinations:
+
+| Phrase before をしている | Reading | Description |
+|---|---|---|
+| 青い時計 | あおいとけい | Wearing a blue watch, not assembling it |
+| ピアス | ピアス | Wearing piercing jewelry, not necessarily putting it on at that moment |
+| きれいな声 | きれいなこえ | Having a beautiful voice, even while silent |
+| 困った顔 | こまったかお | Showing a troubled expression, without proving the inner feeling |
+
+**をしています／をしてます** are ordinary polite affirmative state forms.
+**をしていません／をしてません／をしていないです／をしてないです** can negate
+the supplied description. Not wearing an accessory does not mean not owning it;
+not showing a troubled face does not prove that someone feels no trouble.
+An expression may be genuine or acted. Use the surrounding context rather than treating every
+ている as an ongoing activity or every visible expression as a guaranteed inner state.
+
+## 6. Remaining recognition bridges
 
 ### Contrastive くは and lexical 化する
 
@@ -245,10 +303,22 @@ Compound recall is not scored as grammar in this installment.
 
 ## Practice scope and sources
 
-The six groups distinguish named formation, interpreting complete messages and guided ease/difficulty selection.
+The original six groups distinguish named formation, interpreting complete messages and guided ease/difficulty selection.
 Named frames still require stem recovery, inflection or argument restructuring; they are not unrestricted
 synonym tests. Repeated reading, eating, name-entry and quality scenes share context keys, so thirty exercises
 do not mean thirty independent conversations or demonstrated mastery.
+
+The separate **Kinds, materials, features and accessories** set adds thirty N4 tasks:
+twelve bounded phrase/frame formations and eighteen interpretations in six groups.
+Each formation facet has two distinct operation-relevant keys; each interpretation facet has three.
+In one negative-material task, the learner must select a component from a complete material list
+and assemble its topic and negative predicate; the other supplies the product subject and asks for
+the negative predicate. The former's extra scope assembly is a typed demand, not a claim that
+its choice presentation requires the same production.
+Paired judgments and related formation/interpretation scenarios share keys, including different nouns
+that illustrate the same scope operation. This deliberately limited formation coverage is not
+deep productive mastery. Choices, typed formations and interpretation labels provide different evidence.
+Contrastive くは and lexical 化する remain recognition-only.
 
 - [Bunpro: やすい](https://bunpro.jp/grammar_points/やすい),
   [にくい](https://bunpro.jp/grammar_points/にくい) and [づらい](https://bunpro.jp/grammar_points/づらい):
@@ -264,10 +334,12 @@ do not mean thirty independent conversations or demonstrated mastery.
 - [Bunpro: kinds](https://bunpro.jp/grammar_points/そんな-こんな-あんな-どんな),
   [そういう](https://bunpro.jp/grammar_points/そういう),
   [materials](https://bunpro.jp/grammar_points/でできる-からできる),
-  [descriptive する](https://bunpro.jp/grammar_points/する-wear),
-  [くは](https://bunpro.jp/grammar_points/くは) and
-  [化する](https://bunpro.jp/grammar_points/化する): the bounded recognition bridges.
+  [descriptive する](https://bunpro.jp/grammar_points/する-wear): the separate descriptive-context set.
+- [Bunpro: くは](https://bunpro.jp/grammar_points/くは) and
+  [化する](https://bunpro.jp/grammar_points/化する): the remaining recognition bridges.
 
 The patterns are curriculum-based learning targets, not an official JLPT syllabus.
 Source shortcuts about exclusive difficulty types, mandatory adjacency or unrestricted compound formation
 are not adopted here.
+The [descriptive-context follow-up record](https://github.com/stop-cran/learning-japanese/blob/main/docs/grammar-descriptive-contexts-sources.json)
+identifies the actual source senses, collocations, accepted overlaps, bounded context counts and review.
