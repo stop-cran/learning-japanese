@@ -98,6 +98,46 @@ renderings and 116 old bodies, while Claude read targeted family records and
 three old bodies. Complementary coverage was useful in this batch, but this
 unequal actual depth does not establish bias reduction or a general model ranking.
 
+### Batch 51 - first confirmation and follow-up
+
+Both original sessions assessed corrected commit
+`0e73b4e0028a0bb74940f2dbdc10e7890bb24ef9`, parent
+`9de757c1fdaff0d2012091652d43247998307d29`, sequentially and without edits.
+[GPT confirmation](n2-vocabulary-reviews/batch-51-gpt-confirmation.md)
+accepted all corrections with twenty correctly associated all-CLEAN rows.
+[Claude confirmation](n2-vocabulary-reviews/batch-51-claude-confirmation.md)
+also accepted all corrections without regressions but found two original
+quiz omissions. Its NEEDS FIX verdicts remain preserved, not rewritten.
+Both fully reread the seven changed cards, 袋, fourteen complete corrective
+families and thirteen old bodies; unchanged whole-body judgments were inherited.
+GPT reread all twenty principals; Claude inspected targeted original passages,
+five more old bodies and narrower mapping/evidence sections. Its fresh おどおど
+fetch yielded navigation only, not positive lexical verification.
+The four native reports, exact prompts, actual models, session continuity,
+permitted private reads and zero edits were author-authenticated.
+
+The first author reconciliation union was 227 complete families/507 senses,
+185 labels and 116 complete old bodies. The author then read all five
+complete follow-up families and five old bodies, including optional candidates;
+the appended evidence records deduplicated totals and exact hashes.
+
+| Follow-up observation | Disposition |
+|---|---|
+| Claude B51-C1, たちまち/一度に | Accepted: add the direct guard. Exact old title "all at once" collides with pinned 1288480:2 and the new card's acknowledged English rendering, despite meaningful Japanese grouping/suddenness distinctions. 1609210:1 confirms the unqualified label. |
+| Claude B51-C2, ためらう/おどおど | Accepted: add the direct guard. The old title/body explicitly teach hesitant behavior, now also checked against complete 1001400:1. Not all nervousness is indecision, but the actual broad hesitation labels overlap. |
+| Claude optional たちまち/さっさと | Adopted after author inspection as A51-02: 1005190:1 explicitly includes quickly, promptly, immediately and without delay. Actual prompt-action teaching directly overlaps immediate/rapid development; the absence of a surprise sense is not sufficient to reject all overlap. This began as an optional candidate, not an independent mandatory reviewer finding. |
+| Claude optional 妥当/効力 and たちまち/一斉 | Not adopted: actual efficacy/legal-force and qualified simultaneous/group-action labels retain meaningful distinctions. Complete 1275250/1164040 and old bodies were inspected. No transitive inference from existing 有効/成立 or 一度に guards. |
+| Claude optional stale N2:1006 source note | Refresh the current note to acknowledge 一瞬で, the unqualified 一度に label and prompt さっさと. Selected/additional senses and immutable source fields do not change; frozen earlier evidence remains historical. |
+
+Current declarations become 105 on eighteen new cards: fourteen additions
+from the authored snapshot, no removals or baseline-word guard changes.
+Only two guard lists and one appended mapping note change in this follow-up;
+no practical teaching prose or primary mapping changes.
+The two new required pairs were not present anywhere in GPT's initial or
+confirmation reports. They are useful additional Claude coverage, not
+proof of depth-equivalent review or model superiority. Original-session
+confirmation of this follow-up is still pending.
+
 ## Batch 50: N2:982-N2:1001
 
 **Status:** closed after authenticated independent reviews, reconciliation and bounded confirmation.

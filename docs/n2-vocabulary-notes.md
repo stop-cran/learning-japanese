@@ -95,6 +95,20 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 51 confirmation follow-up:** Confirmation is not a formality:
+  Claude caught two original omissions after accepting the first fixes.
+  一度に's unqualified "all at once" label can collide even though its
+  full teaching distinguishes grouping from suddenness. おどおど's
+  actual hesitant-behavior title/body and complete dictionary sense
+  support a direct ためらう guard. On the same candidate sweep, the
+  author adopted optional さっさと for prompt/immediate action, rather
+  than dismissing it because it lacks a sudden-surprise sense.
+  Distinguish this exact-label/practical-use judgment from automatic
+  cliques: qualified simultaneous 一斉 and efficacy/legal-force 効力
+  remain unadopted. Refresh stale current source-note assertions while
+  preserving frozen historical evidence. First all-CLEAN confirmation
+  from one model does not close another model's new NEEDS FIX findings.
+
 - **Batch 51 reconciliation:** Actual secondary senses exposed missing
   direct guards despite distinct titles: すっと includes suddenness,
   重なる includes accumulation, and ぐずぐず includes hesitation.
