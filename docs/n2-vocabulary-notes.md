@@ -40,6 +40,22 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - Record completed body reads separately from captures. Correcting
   an overescaped title-navigation regex yielded further candidates,
   not retroactive proof that the original navigation was complete.
+- Full comparison records can overturn title-only guard removals:
+  利益 has advantage, 味噌 has a good-point use, and 入る/良い/いい
+  have readiness senses. Check the exact kana identity too.
+  Preparing something and the preparations being ready are not
+  automatically the same meaning; neighboring guards are nontransitive.
+- A joint spelling heading supports recognition, not per-sense
+  frequency. Clarify possible 留まる/perching spelling without
+  claiming that 止まる is common in that use. Teach the attested
+  fixed-in-place example separately from とどまる.
+- Authenticate returned bodies, not scope lists: initial native
+  complete older-body returns establish GPT 116 and Claude four,
+  despite many more search/header accesses. This limits comparisons
+  of model contributions and does not measure bias reduction.
+- Record genuine inherited findings without silently expanding a
+  batch into baseline repairs. 飛ぶ/飛行 and 止まる/止む remain
+  uncorrected pre-existing quiz debt, not batch regressions.
 
 ## Batch sequence
 

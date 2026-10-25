@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 61: N2:1202-N2:1221
 
-**Status:** drafted; independent review and reconciliation pending.
+**Status:** drafted; both initial reviews authenticated, supported
+corrections applied; original-session confirmations pending.
 
 Sixteen new articles: 特色, 特長, 特定, 特売, 溶け込む, 退ける,
 床の間, 所々, 都心, 戸棚, とっくに, どっと, 整う, 留まる,
@@ -56,6 +57,44 @@ lineage and public-access limits are distinguished in the packet.
 The とっくに public endpoint returned no lexical body.
 Author quiz declarations remain hypotheses for independent review,
 not a claim of exhaustive semantic uniqueness or a completed review.
+
+The blind [GPT initial report](n2-vocabulary-reviews/batch-61-gpt-initial.md)
+and [Claude initial report](n2-vocabulary-reviews/batch-61-claude-initial.md)
+used actual `gpt-6.1-sol` and `claude-opus-5.5` sequentially.
+Exact prompts, full native final messages, actual models, frozen
+snapshots, zero edits and all 23 distinct assigned complete word/kanji
+bodies were authenticated. Both returned all four compact renderings
+and the exact TSV header/twenty rows. Successful complete older-body
+returns establish GPT 116 and Claude four, not the larger number
+of search/header accesses or the author's inspection count.
+
+Ten words receive bounded corrections: twelve direct guard additions
+for actual staying/stopping, readiness, favorable features, specific/
+special, urban-center and human-yelling overlap; three substantive
+component links; and cautious perching/fixed-in-place teaching.
+The latter uses the public dictionary's attested thumbtack example
+and recognizes 目に留まる without inferring per-sense spelling
+frequency from a joint heading. Two nonce pronunciation contrasts
+are removed as optional editorial polish.
+
+Full comparison evidence supports retaining 利益/味噌 and completion
+guards despite narrower older titles or opening paragraphs.
+Preparation/provision and the resulting readiness of preparations
+are not merged merely through neighboring 整備 exclusions.
+Two genuine inherited omissions, 飛ぶ/飛行 and 止まる/止む,
+remain uncorrected outside this batch's hopping/perching additions.
+They are recorded debt, not falsely withdrawn or represented as fixed.
+No identity, reading, title, easier level, source mapping, selected
+sense, kanji card or baseline exclusion is changed in reconciliation.
+
+Both models found the 屋 link omission. GPT uniquely supplied
+staying/stopping, readiness and 機能 guards plus 調/止 navigation.
+Claude uniquely supplied urban-center and overnight candidates,
+bounded spelling/example clarification, and supported 特殊/吠える
+optional guards. The two editorial deletions are not equated with
+those semantic findings. Contributions are deduplicated across
+Findings, Optional, Limits and per-file observations; unequal actual
+source depth prevents model ranking or measured bias-reduction claims.
 
 ## Batch 60: N2:1182-N2:1201
 
