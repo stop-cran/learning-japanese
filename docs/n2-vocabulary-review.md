@@ -5,8 +5,8 @@
 **Batches 01-61 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,220 rows are review-closed; none are draft,
-592 remain pending, and none are unresolved.
+The first 1,220 rows are review-closed; twenty are draft,
+572 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,43 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 62: N2:1222-N2:1241
+
+**Status:** authored draft; independent review not yet complete.
+
+Seventeen new articles: ともかく, 捕える, 取り入れる, 取り消す,
+取り出す, 採る, 捕る, トレーニング, 丼, 内科, 内線, ナイロン,
+治す, 仲直り, 長引く, 中身 and 中指.
+Reuse 泊める with only sourced N2 metadata, and 長い with its
+N5 identity and existing temporal 永い teaching preserved.
+The two source spellings 中身/中味 share one new article.
+
+The [packet](n2-vocabulary-batch-sources/batch-62.json) preserves
+all twenty raw rows, complete principal families, selected source
+senses and separately identified additional recognition senses.
+Raw 治す repair glosses are recorded, not imported into the
+medical family. Source 捕える remains the new stable identity,
+with explicit 捕らえる/捉える teaching and no invented spelling
+frequency or exclusive semantic boundary.
+
+Five reciprocal pairs are checked explicitly: unchanged 泊/泊める,
+採/採る, 線/内線, 永/永い through 長い, and 仲/仲直り.
+The four edited kanji headers are preserved. Missing character
+cards are not fabricated, and alternate-spelling links do not
+silently enlarge primary-word metadata.
+
+Original and supplemental completed author reads are recorded
+separately from unchanged preparation plans and navigation labels.
+All twenty positive public lookups are Digital Daijisen through
+Weblio, not twenty independent dictionaries. Author exclusions,
+inspection counts and structural checks are not independent
+linguistic review findings.
+
+The next gate is blind GPT then Claude review of the same frozen
+committed snapshot and scope, with each process exiting before
+the next starts. No batch62 reviewer agreement or closure is
+claimed by this authored snapshot.
 
 ## Batch 61: N2:1202-N2:1221
 

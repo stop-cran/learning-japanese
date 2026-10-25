@@ -19,6 +19,36 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 62 authoring observations
+
+- Preserve source 捕える as a stable identity while explicitly
+  teaching 捕らえる/捉える and the reading とらえた for 捕えた.
+  A joint spelling heading establishes recognition, not exclusive
+  physical/mental spelling compartments or measured frequency.
+- Keep raw source glosses and selected teaching separate:
+  治す2856318 teaches medical cure/heal, not the repair/correction
+  senses of 直す1599390. Reuse 永い through the actual temporal
+  teaching in N5 長い, not spatial sense1 or a new duplicate card.
+- Two spellings need not make two articles: 中身/中味 share
+  なかみ1599430; 中味 is ateji. Preserve all primary written
+  components in metadata, including 身 despite its missing card.
+- A dictionary's search-only spelling flag is not a complete
+  usage rule. Sense-local notes and the public heading explicitly
+  recognize 採り入れる for adoption and 穫り入れる for harvest.
+- Catching is not confined to living targets: 捕る's complete
+  sense includes baseballs. 採る also covers collecting insects.
+  Training is not sport-only, and prolonged duration is not
+  obligatorily negative or deliberately caused.
+- The twenty positive public lookups are all Digital Daijisen
+  via Weblio, not twenty independent authorities. Preserve the
+  actual completed reads separately from unchanged preparation
+  plans; byte-bounded supplemental renderings avoid confusing
+  character limits with tool-output byte limits.
+- Quiz declarations remain author hypotheses until independent
+  review. Reassess full secondary meanings and both answer
+  directions; neighboring training, learning, duration and
+  interior exclusions do not establish transitive cliques.
+
 ## Batch 61 authoring observations
 
 - Same-spelling navigation can find a different lexical identity:
