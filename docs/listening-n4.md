@@ -162,6 +162,10 @@ example eligibility is unchanged. Thus the pool can supply two nonoverlapping sc
 forms before scored exposure, not two immediately available or perpetually fresh forms.
 Study/pilot exposure consumes that capacity. Familiar-scored opt-in, shortage, interruption,
 nonvisual study and raw-result limitations remain explicit; there is no official scaled score.
+The shared [pool checker](listening-tasks.md#static-full-pool-feasibility) now supports
+`--profile n4-section-v1`. Its explicit `--unpublished-candidate` path checks complete
+private media and every permitted form without creating approval or claiming scoring/
+publication readiness. Normal runtime/app checks remain exact-approval gated.
 
 ## Media budgets and publication gates
 

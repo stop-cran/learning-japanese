@@ -443,6 +443,37 @@ class TaskFilesTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "missing"):
             check(document, self.root)
 
+    def test_candidate_pool_checks_actual_files_without_writing_or_granting_approval(self):
+        documents = ListeningPoolTests().documents(profile="n4-section-v1")
+        audio_bytes = {}
+        for document in documents:
+            document.pop("approval")
+            document["vocabulary"] = []
+            document["media"]["contentSha256"] = tasks.content_hash(document)
+            for clip in document["media"]["audio"].values():
+                duration = clip["durationMs"]
+                if duration not in audio_bytes:
+                    audio_bytes[duration] = opus(duration)
+                data = audio_bytes[duration]
+                clip["sha256"] = hashlib.sha256(data).hexdigest()
+                self.write(clip["path"], data)
+            if "image" in document["media"]:
+                picture = image_bytes()
+                document["media"]["image"]["sha256"] = hashlib.sha256(picture).hexdigest()
+                self.write(document["media"]["image"]["path"], picture)
+            self.write(f"listening-tasks/{document['id']}.json", json.dumps(document))
+        self.write("manifest.json", json.dumps(build_manifest.build_manifest(self.root)))
+        before = {path: path.read_bytes() for path in self.root.rglob("*") if path.is_file()}
+        report = pool.check_root(self.root, profile="n4-section-v1", unpublished_candidate=True)
+        self.assertTrue(report["checksPassed"], report["errors"])
+        self.assertFalse(report["publicationReady"])
+        self.assertFalse(report["scoringReady"])
+        self.assertFalse(pool.check_root(self.root, profile="n4-section-v1")["checksPassed"])
+        self.assertEqual(before, {path: path.read_bytes() for path in self.root.rglob("*") if path.is_file()})
+        self.write(documents[0]["media"]["audio"]["instruction"]["path"], b"corrupt")
+        with self.assertRaisesRegex(ValueError, "hash mismatch"):
+            pool.check_root(self.root, profile="n4-section-v1", unpublished_candidate=True)
+
     def test_webp_decode_size_hash_and_required_file(self):
         document = self.media_document("verbal-expression")
         for picture, message in ((b"RIFF\x04\x00\x00\x00WEBP", None),
@@ -600,11 +631,14 @@ class TaskFilesTests(unittest.TestCase):
 class ListeningPoolTests(unittest.TestCase):
     """Repeated structural fixtures are not real independent stories or listener approvals."""
 
-    def document(self, kind, index, *, example_item=False, body_ms=50_000, instruction_ms=1_000):
+    def document(self, kind, index, *, example_item=False, body_ms=50_000, instruction_ms=1_000, profile="n5-section-v1"):
         document = example(kind)
         suffix = "example" if example_item else str(index)
-        document.update(id=f"pool-{kind}-{suffix}", exposureId=f"story-{kind}-{suffix}",
-                        blueprint="n5-section-v1", usage="example" if example_item else "scored")
+        prefix = "n4-" if profile == "n4-section-v1" else ""
+        document.update(id=f"{prefix}pool-{kind}-{suffix}", exposureId=f"{prefix}story-{kind}-{suffix}",
+                        blueprint=profile, usage="example" if example_item else "scored")
+        if profile == "n4-section-v1":
+            document.update(schemaVersion=2, jlpt=4)
         with_media(document)
         for stage in document["stages"]:
             clip = document["media"]["audio"][stage["id"]]
@@ -618,12 +652,89 @@ class ListeningPoolTests(unittest.TestCase):
                 turn.update(startMs=i * duration // count, endMs=(i + 1) * duration // count)
         return declared_approval(document)
 
-    def documents(self, body_ms=50_000):
+    def documents(self, body_ms=50_000, profile="n5-section-v1"):
         result = []
-        for kind, count in (("task-based", 8), ("key-point", 7), ("verbal-expression", 6), ("quick-response", 7)):
-            result.extend(self.document(kind, i, body_ms=body_ms) for i in range(count))
-            result.append(self.document(kind, 0, example_item=True, body_ms=body_ms))
+        for kind, _, count in pool.PROFILES[profile][0]:
+            result.extend(self.document(kind, i, body_ms=body_ms, profile=profile) for i in range(count))
+            result.append(self.document(kind, 0, example_item=True, body_ms=body_ms, profile=profile))
         return result
+
+    def test_n4_has_exact_membership_and_candidate_mode_never_counts_n5_or_claims_approval(self):
+        profile = "n4-section-v1"
+        n4 = self.documents(profile=profile)
+        report = pool.analyze(self.documents() + n4, profile=profile)
+        self.assertTrue(report["checksPassed"], report["errors"])
+        self.assertEqual([8, 7, 5, 8], [g["selectedScoredCount"] for g in report["groups"]])
+        self.assertEqual([16, 14, 10, 16], [len(g["approvedScoredIds"]) for g in report["groups"]])
+        self.assertEqual({"shortest": 2_154_000, "longest": 2_154_000}, report["durationMs"])
+        self.assertFalse(pool.analyze(self.documents() + n4[1:], profile=profile)["checksPassed"])
+        for document in n4:
+            document.pop("approval")
+        self.assertFalse(pool.analyze(n4, profile=profile)["checksPassed"])
+        candidate = pool.analyze(n4, profile=profile, unpublished_candidate=True)
+        self.assertTrue(candidate["checksPassed"], candidate["errors"])
+        self.assertFalse(candidate["publicationReady"])
+        self.assertFalse(candidate["scoringReady"])
+        self.assertEqual([16, 14, 10, 16], [len(g["candidateScoredIds"]) for g in candidate["groups"]])
+        self.assertTrue(all("approvedScoredIds" not in g for g in candidate["groups"]))
+        n4[0].pop("media")
+        self.assertFalse(pool.analyze(n4, profile=profile, unpublished_candidate=True)["checksPassed"])
+        with self.assertRaisesRegex(ValueError, "Unsupported diagnostic profile"):
+            pool.analyze(n4, profile="n4-section-v2", unpublished_candidate=True)
+
+    def test_n4_extrema_cover_every_selection_and_inclusive_boundaries(self):
+        profile = "n4-section-v1"
+        varied = []
+        for kind, _, count in pool.PROFILES[profile][0]:
+            varied.extend(self.document(kind, i, profile=profile, body_ms=50_000 + i * 1_000) for i in range(count))
+            varied.append(self.document(kind, 0, profile=profile, example_item=True))
+        report = pool.analyze(varied, profile=profile)
+        self.assertEqual({"shortest": 2_241_000, "longest": 2_443_000}, report["durationMs"])
+        self.assertFalse(report["checksPassed"])
+        self.assertTrue(any("Longest" in error for error in report["errors"]))
+        for body, boundary, delta in ((40_000, 1_860_000, -1), (55_000, 2_340_000, 1)):
+            documents = self.documents(body, profile)
+            item = next(d for d in documents if d["usage"] == "example")
+            clip = item["media"]["audio"]["instruction"]
+            clip.update(durationMs=27_000, turns=[{"id": "instruction", "startMs": 0, "endMs": 27_000}])
+            declared_approval(item)
+            report = pool.analyze(documents, profile=profile)
+            self.assertTrue(report["checksPassed"], report["errors"])
+            self.assertEqual({"shortest": boundary, "longest": boundary}, report["durationMs"])
+            clip["durationMs"] += delta
+            clip["turns"][0]["endMs"] += delta
+            declared_approval(item)
+            self.assertFalse(pool.analyze(documents, profile=profile)["checksPassed"])
+
+    def test_occurrence_timings_match_kotlin_profile_golden_vectors(self):
+        for profile, expected in (("n5-section-v1", 1_739_750), ("n4-section-v1", 1_961_250)):
+            documents = self.documents(profile=profile)
+            for document in documents:
+                for stage in document["stages"]:
+                    clip = document["media"]["audio"][stage["id"]]
+                    duration = 250 if stage["role"] == "choice" else 20_000
+                    clip["durationMs"] = duration
+                    count = len(clip["turns"])
+                    for index, turn in enumerate(clip["turns"]):
+                        turn.update(startMs=index * duration // count, endMs=(index + 1) * duration // count)
+                declared_approval(document)
+            report = pool.analyze(documents, profile=profile)
+            self.assertTrue(report["checksPassed"], report["errors"])
+            self.assertEqual({"shortest": expected, "longest": expected}, report["durationMs"])
+
+    def test_candidate_mode_rejects_stale_approval_and_cross_level_story_reuse(self):
+        documents = self.documents(profile="n4-section-v1")
+        documents[0]["approval"]["mediaSha256"] = "b" * 64
+        with self.assertRaisesRegex(ValueError, "stale task approval"):
+            pool.analyze(documents, profile="n4-section-v1", unpublished_candidate=True)
+        declared_approval(documents[0])
+        n5 = self.documents()
+        documents[0]["exposureId"] = n5[0]["exposureId"]
+        documents[0]["media"]["contentSha256"] = tasks.content_hash(documents[0])
+        declared_approval(documents[0])
+        report = pool.analyze(n5 + documents, profile="n4-section-v1", unpublished_candidate=True)
+        self.assertFalse(report["checksPassed"])
+        self.assertTrue(any("another level's story" in error for error in report["errors"]))
 
     def test_group_instruction_once_repeated_focus_and_all_fixed_windows(self):
         documents = self.documents()

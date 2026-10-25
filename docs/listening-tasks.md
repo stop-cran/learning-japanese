@@ -425,6 +425,26 @@ focused or 10-second spoken-choice scored answers, and 10-second example answer
 plus 10-second feedback windows. **Every** permissible form must lie within the
 inclusive 26-34-minute envelope, not just an average or one convenient seed.
 
+The default above remains N5-compatible. For N4, pass `--profile n4-section-v1`: only
+schema-2/level-4 members contribute to the 16/14/10/16 minimum scored pool, the 8/7/5/8
+selection and four independent examples. All forms must fit 31-39 minutes; fixed windows
+total 550 seconds. N4 members cannot reuse another level's declared story identity.
+
+For N4 F's **private, unpublished** complete candidate tree, use:
+
+```powershell
+python -B tools\check_listening_pool.py --root <candidate-tree> --profile n4-section-v1 --unpublished-candidate
+```
+
+Keep existing source packages/identities and a current generated manifest in that tree.
+This explicit read-only mode validates actual media files and the same shape/hash/identity/
+timing rules without requiring or creating approval. Missing media cannot fill the pool;
+a malformed approval declaration is still an error, not silently ignored.
+The report uses `candidateScoredIds`/`candidateExampleIds` and explicitly sets
+`publicationReady` and `scoringReady` to false, even when `checksPassed` is true.
+Normal checker/app entry still requires exact-output approval. Passing candidate feasibility
+is not listener acceptance, spending authorization or permission to publish runtime content.
+
 The report lists instruction wording variants for checking equivalence; different
 wording is not automatically judged equivalent or wrong. Extra candidates in a
 fork are included in the extrema rather than ignored. This does not expand E's
