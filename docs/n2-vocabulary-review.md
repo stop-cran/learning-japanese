@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-53 review-closed.** The target is all 1,812 source rows,
+**Batches 01-54 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,060 rows are review-closed; 20 are draft,
+The first 1,080 rows are review-closed; none are draft,
 732 remain pending, and none are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 54: N2:1062-N2:1081
 
-**Status:** authored draft; authenticated initial reviews reconciled;
-original-session confirmation pending.
+**Status:** closed after authenticated independent reviews, evidence-based
+corrections and original-session confirmations.
 
 Nineteen new articles: 長所, 長女, 調整, 調節, 頂点, 長男,
 長方形, 調味料, チョーク, 直後, 直線, 直前, 直通, 直流,
@@ -68,8 +68,8 @@ additional teaching is not independently N2-classified.
 
 Current totals are 1,072 distinct mapped articles: 1,003 new and
 69 reused baseline identities; 4,276 total word articles.
-Drafting and structural checks do not establish independent review
-closure, exhaustive semantic uniqueness or native-speaker certification.
+Review closure is a bounded evidence-based judgment, not an exhaustive
+semantic-uniqueness guarantee or native-speaker certification.
 
 ### Batch 54 - initial reviews and reconciliation
 
@@ -153,6 +153,62 @@ renderings or source snapshots. Claude disclosed reading that
 packet before the frozen snapshot. Complementary findings were
 useful; unequal depth and unsupported suggestions do not establish
 controlled bias reduction or a general model ranking.
+
+### Batch 54 - confirmed and closed
+
+Both original sessions assessed corrected commit
+`1fcf2decfeb120c621058a587d18178f31c1f3ef`, parent
+`a01a7787528d7f77f7c415d08747e06d75bb3dde`, sequentially without
+edits. The complete [GPT confirmation](n2-vocabulary-reviews/batch-54-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-54-claude-confirmation.md)
+are archived. Both return the exact twenty source-ID/article
+associations with all three facets CLEAN. Author-executed checks
+authenticate complete native final messages, actual models, exact
+common prompts, original-session continuity, snapshots, private
+allowlists, no named forbidden reads and zero edits.
+
+Both completely reread the four changed new articles, unchanged
+調節, the actual correction patch, twenty-two complete corrective
+families/51 senses, twelve complete old bodies and the complete
+original captured 直前 heading. Both reread all twenty exact TSV
+rows and spot-check all five reciprocal kanji pairs. Other full
+teaching judgments are inherited from initial reads, not silently
+reported as fresh rereads. GPT additionally fully rereads 長所,
+直後 and 直流 and the complete 味噌 family; Claude only reads
+snapshot headers, not entire previously uninspected snapshot files.
+Neither reads the entire corrected derivative. These differences
+remain explicit; author deduplicated counts are not reviewer counts.
+
+Both accept the six direct guard additions, existing alias link,
+named mimetic contrast, sourced spatial replacement and vowel-count
+polish. GPT revises its initial bounded no-defect judgments for the
+additional seasoning/before omissions. Claude explicitly withdraws
+B54-F05's English-control rationale and revises the optional
+長所/味噌-removal rationale after actual secondary-sense inspection.
+B54-F04 is closed as an accepted source-aligned improvement, not
+proof that the old insect sentence was ungrammatical; Claude also
+withdraws the unattested 横切る replacement suggestion.
+
+Do not promote ancillary confirmation reasoning into general rules:
+Claude's starred 温度を支配する illustration was not independently
+verified and is not a claim that every such string is ungrammatical.
+Its seasoning-tag search does not establish exhaustive category
+coverage. A part-of-speech difference alone neither requires nor
+forbids an exclusion; the unextended 散らかす title explicitly
+expresses causing a mess, unlike the untidy-state alternatives.
+The unchanged qualified 調節 lesson does not depend on these
+stronger reviewer generalizations.
+
+Remaining construction, wording, usual ミソ spelling and baseline
+link suggestions are optional; no additional required defect or
+consequential unresolved teaching claim remains. There are no
+post-confirmation teaching or manifest changes. The shared audit
+retains 244 primary reciprocal pairs for new word articles; reused
+短/長短 is checked separately, not counted as a 245th new pair.
+The independently useful initial contributions and explicit
+withdrawals support a bounded usefulness observation, not a model
+ranking or controlled bias-reduction experiment. Confirmations
+share adjudications and are not blind discoveries.
 
 ## Batch 53: N2:1042-N2:1061
 

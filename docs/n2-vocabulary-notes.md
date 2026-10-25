@@ -95,6 +95,18 @@ evidence and learning impact; issue creation requires authorization.
 
 ## Recorded lessons
 
+- **Batch 54 closure:** Authenticate all four complete native reports
+  and exact twenty-row all-three-CLEAN associations before closing.
+  Both original sessions accepted the corrections; Claude withdrew
+  the English-control guard and revised the primary-title-only
+  argument against secondary-sense protection. Preserve those
+  revisions rather than treating initial findings as authority.
+  Do not turn an unverified starred counterexample, a category-tag
+  search or a part-of-speech difference into a universal lexical
+  rule. Close the sourced example improvement without claiming
+  that its predecessor was proved ungrammatical. Author counts,
+  actual reviewer reads and inherited judgments stay distinct.
+
 - **Batch 54 reconciliation:** Ordinary 汚い/ぐしゃぐしゃ
   untidiness needs direct protection with 散らかる; indirect guards
   are insufficient. Look beyond exact filenames: 醤油 has a
