@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 72: N2:1422-N2:1441
 
-**Status:** draft; independent sequential GPT/Claude review and
-evidence-based reconciliation remain pending.
+**Status:** draft; authenticated independent initial reviews are
+complete. Corrections await both original-session confirmations.
 
 Nineteen new articles: 日の出, 響き, 響く, 冷やす, 百科事典,
 美容, 表紙, 標識, 標準, 標本, 評論, 平仮名, ビルディング,
@@ -63,10 +63,47 @@ dictionaries. Wrong readings, satellite/music headings and unrestricted
 inferences from whole idioms are excluded. Missing 典 has no body to
 inspect or link; its primary metadata character remains.
 
-Author-declared quiz safeguards are pairwise hypotheses for independent
-assessment, not reviewer findings or a global semantic-uniqueness claim.
-No initial report, final acceptance, model-contribution result or
-measured bias reduction is claimed at this draft stage.
+Initial reports: [GPT-6.1 Sol](n2-vocabulary-reviews/batch-72-gpt-initial.md)
+and [Claude Opus 5.5](n2-vocabulary-reviews/batch-72-claude-initial.md).
+Both ran read-only, independently and sequentially on
+`ded07a6f4969b3f63f2e62ae73511fade363ead1`. Exact native prompts,
+models, complete final messages, 29 required complete returns per
+reviewer, bounded TSV reads and zero edits are authenticated.
+
+| Observation | Author reconciliation awaiting confirmation |
+| --- | --- |
+| GPT F72-01: expansion guards | Add both direct 拡張/拡充 pairs on both 広げる and 広める. |
+| GPT F72-02: 響き effects | Add 影響/効果 from applicable ひびき sense 5, not the different どよめき reading. |
+| GPT F72-03: 響く vibration | Add 揺れる for supported shaking/vibration, not unrestricted swaying. |
+| GPT F72-04: 美容 beauty descriptions | Remove 美しい/きれい; actual beauty-care labels differ from beautiful/clean. |
+| Claude F-01: proposed dawn pairs | Decline: actual sunrise event/time differs from dawn/daybreak; 暮れ has explicit sunset/sundown evidence, so the evening precedent is not automatically symmetric. |
+| Claude F-02: 標本/標準 | Remove the pair: a descriptive specimen/example is not a reference norm or average. Shared model language does not establish the actual-label overlap. |
+| Claude F-03: 広げる communication pairs | Remove 伝わる/宣伝; retain 伝える for explicit confirmation using Daijisen ひろげる sense 6 and complete 1441870's propagation/conveying sense. |
+| Claude optional precision | Clarify selected/additional footers on 響き/標準 and optional と on 広々. Other optional guard/link work stays deferred. |
+
+Sixteen complete corrective families / 31 senses contain only four
+new families / eight senses. Actual author union is **292 families /
+661 senses and 110 distinct full older bodies**. Two additional
+applicable Seisenban inspections add one Japanese authority, for two
+in total; a failed Cambridge request supplies no lexical evidence.
+Stored corrective public notes are short summaries, not raw page archives.
+
+Eight assigned cards change: seven direct guards added and five removed,
+leaving 95 declarations across nineteen new cards. Primary identities,
+readings, titles, levels, types, metadata, mappings, baseline exclusions
+and required reciprocal links remain unchanged. Initial non-CLEAN
+reports are historical and stay unchanged; final acceptance is not claimed.
+
+No shared actionable initial finding group was established after
+comparing findings, optional observations, limits and per-row notes.
+GPT uniquely supplied seven safeguards and removal of two beauty pairs.
+Claude uniquely supplied three adopted pair removals and the adopted
+footer/attachment options; its dawn proposal and one propagation-pair
+removal remain explicit confirmation questions, not forced agreement.
+Equal scope/access did not produce equal actual depth: GPT returned
+all ten family/thirteen older-body chunks and the supplement; Claude
+returned none of those chunks but five complete direct older bodies.
+Complementarity here is not model ranking or measured bias reduction.
 
 ## Batch 71: N2:1402-N2:1421
 

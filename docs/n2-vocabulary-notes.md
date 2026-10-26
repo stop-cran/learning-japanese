@@ -66,10 +66,36 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   Edit only 皮 and 準; 膚 already has useful links. Keep all primary
   written characters in metadata; absent 典 remains plain text,
   not a fabricated card or a successfully inspected body.
-- Draft only: independent sequential GPT and Claude reviews,
-  reconciliation and final acceptance have not yet occurred.
-  Author inspection and quiz hypotheses are not model findings,
-  a controlled bias experiment or native-speaker certification.
+- Both blind initial reviews are now authenticated and archived,
+  with 29 complete required native returns each and zero edits.
+  GPT returned all ten family/thirteen older-body chunks; Claude
+  returned none of them but five direct complete older bodies.
+  Equal access is not equal depth or a controlled model comparison.
+- Actual secondary senses matter in both directions: 響き's applicable
+  influence/effect heading and 響く's vibration justify direct guards;
+  both expansion verbs need their own 拡張/拡充 pairs.
+  Conversely, beautiful/clean does not label beauty care, and a
+  classic specimen/example is not automatically a standard or average.
+- Do not copy an evening analogy to morning: 暮れ explicitly includes
+  sunset/sundown; the inspected dawn families do not establish the
+  same solar-event meaning. A failed English dictionary request is
+  not evidence. The declined dawn guards remain for confirmation.
+- 広げる's actual Daijisen dissemination sense and 伝える's complete
+  propagation sense support retaining that independently judged pair
+  for confirmation, not inheriting a whole communication clique.
+  Remove its 伝わる/宣伝 pairs; no generic POS exemption is used.
+- Read sixteen corrective families / 31 senses completely; only four
+  families / eight senses are new. Four further older identities
+  yield author unions of 292 families / 661 senses and 110 older
+  bodies. Two positive Seisenban inspections add one authority;
+  short inspection notes are not full-page archives.
+- Seven guards added and five removed, plus two precise footers and
+  optional と guidance, change eight assigned cards only. Both
+  original-session confirmations remain pending; historical initial
+  findings are not rewritten into CLEAN acceptance. Other optional
+  older-card link and 平仮名 guard work stays deferred.
+- Comparing every report section shows complementary useful
+  observations, not measured bias reduction or native certification.
 
 ## Batch 71 authoring observations
 
