@@ -69,8 +69,9 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   aim/target and sign/mark labels from complete existing bodies.
   Neither different titles nor thematic similarity decides safety.
   The confusable inventory has no matching named row for these forms.
-- This is drafted, not independently certified. GPT and Claude initial
-  reviews, reconciliation, provenance checks and closure remain pending.
+- Blind initial reviews are authenticated; author reconciliation is
+  implemented, but both original-session confirmations and closure
+  remain pending. This is not independent linguistic certification.
   No empirical quiz draws, native-speaker verification or measured
   model-bias reduction is claimed.
 - The first packaging assertion exposed twelve inherited 群れ guard
@@ -78,6 +79,45 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   were then read completely, bringing the actual older-body union to
   158. Their complete families were already among the 309 inspected;
   do not add them again or rewrite the historical pre-card receipt.
+- Corrective inspection actually read 31 complete families / 75 senses
+  and sixteen unchanged older bodies. Set unions, not sums, give
+  310 distinct inspected families / 665 senses and 161 older bodies.
+  Keep the original pre-card receipt and failed requests unchanged.
+- Add five direct safeguards: 目下 with 現在/今, 恵まれる with
+  恩恵/利益, and 巡る with 観光; the twenty assigned cards now
+  declare 105 edges. Pinned Android prompt code initially renders
+  the written word without kana; a separate interaction reveals
+  reading help. Thus the separate もっか identity matters to quiz
+  ambiguity without changing the correct めした source mapping.
+- Check actual whole English labels and secondary senses in both
+  directions. 恩恵/利益 contain bare "benefit," which also has an
+  intransitive English sense; this is not Japanese noun/verb identity.
+  Retain 丸/円/輪 safeguards on actual bare "circle" labels and
+  movement/enclosure meanings, and 望む on its complete command-a-view
+  sense versus 命ずる's bare "command." Shared kanji, topic proximity,
+  and automatic exclusion-clique inheritance are not evidence.
+- Qualifiers matter: "social superior" does not become bare "superior,"
+  nor "a quick turn around" bare repeated/circuit movement. Do not add
+  優れる or くるり mechanically. Retain 名物/特徴 on the sourced
+  local-character/distinguishing-feature use, not on harmlessness.
+- Adopt optional 姪 caution placement and clearer めいめい luggage
+  explanation without altering examples or translations. Command
+  production expansion and a distinctive 命ずる-form example remain
+  optional; a new failed Weblio extraction is not corroboration.
+- Measured native complete-return depth is GPT 105 families / 232
+  senses and 127 existing bodies including 群れ, versus Claude
+  20 / 33 and five bodies. GPT's reported 104 families undercounts
+  the measured total by one; it is not an inflated-read claim.
+  Claude uniquely supplied the adopted quiz/clarity hypotheses;
+  利益 is author follow-through, not another Claude discovery.
+  Its two proposed removals are unsupported by the fuller evidence.
+  This demonstrates bounded complementarity, not general model rank
+  or measured bias reduction.
+- Reviewer processes were sequential and exited. Native events show
+  GPT maximum one outstanding tool call, Claude maximum four;
+  Claude's original claim of one call at a time is contradicted.
+  Preserve that report verbatim and require serial tool calls again
+  during confirmation rather than treating instructions as execution.
 
 ## Batch 82 authoring observations
 

@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 83: N2:1642-N2:1661
 
-**Status:** draft; independent reviews and reconciliation pending.
+**Status:** draft; authenticated initial reviews and author corrections
+complete; original-session confirmations pending.
 
 Nineteen physical additions and baseline reuse 群れ cover twenty rows.
 群れ gains sourced N2 only, preserving all prior teaching and twelve
@@ -60,10 +61,42 @@ One dictionary authority is not twenty independent authorities.
 Exact raw rows, complete principal families, selected teaching,
 inspection receipts, limits and provisional pairwise quiz assertions
 are in the [source packet](n2-vocabulary-batch-sources/batch-83.json).
-The blind derivative omits author quiz rationale for both requested
-reviewers. Initial GPT/Claude review, provenance authentication and
-evidence-based reconciliation have not yet occurred. No model
-contribution or accepted linguistic correctness is claimed at draft.
+The blind derivative omitted author quiz rationale for both initial
+reviewers. Authenticated reports are preserved verbatim:
+[GPT initial](n2-vocabulary-reviews/batch-83-gpt-initial.md) and
+[Claude initial](n2-vocabulary-reviews/batch-83-claude-initial.md).
+The actual models were `gpt-6.1-sol` and `claude-opus-5.5`.
+
+GPT established no actionable defect. Claude's 目下 ambiguity and
+恩恵 safeguard are adopted with actual runtime/English-label evidence;
+its proposed removal of 巡る's circle guards and 命ずる/望む is
+withdrawn by the author on complete families, actual older bodies and
+English secondary meanings. The original reviewers must still confirm
+or challenge these dispositions. Do not count author disagreement as
+reviewer withdrawal or a closed review.
+
+Claude's optional 観光 hypothesis becomes one additional direct guard;
+author follow-through adds 利益 on its own actual "benefit" label.
+Optional 姪 caution placement and めいめい wording are improved.
+No example, translation, title, source mapping, reuse teaching or kanji
+edit changes. Five added direct guards bring assigned declarations
+to 105. Other optional/tentative observations receive explicit
+evidence-based dispositions in the source packet.
+
+Corrective inspection read 31 complete families / 75 senses and sixteen
+older bodies; actual cumulative set unions are 310 / 665 and 161,
+not the sum of overlapping inspections. Native initial evidence
+establishes GPT 105 complete families / 232 senses and 127 existing
+bodies including reuse; Claude 20 / 33 and five. GPT's self-reported
+104 families is an undercount of one. These are complete returned
+records, not proof of comprehension.
+
+Processes were sequential, but native internal maxima were one
+outstanding tool call for GPT and four for Claude, contrary to the
+latter report's serial-execution claim. Preserve the report unchanged
+and disclose the discrepancy. No native-speaker certification,
+empirical quiz draws, general model ranking or measured bias reduction
+is claimed; both original-session confirmations remain pending.
 
 ## Batch 82: N2:1622-N2:1641
 
