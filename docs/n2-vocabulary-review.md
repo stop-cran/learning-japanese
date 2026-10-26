@@ -5,8 +5,8 @@
 **Batches 01-75 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,500 rows are review-closed, and 312 remain pending.
-None are drafted or unresolved.
+The first 1,500 rows are review-closed; batch76 has twenty drafted rows,
+and 292 remain pending. None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,22 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 76: N2:1502-N2:1521
+
+**Status:** drafted; independent sequential GPT and Claude reviews and
+evidence-based reconciliation are pending. Drafts are not reviewed coverage.
+
+Twenty new articles teach twenty source rows. Five reciprocal N2 kanji pairs
+link 文芸/芸, 分布/布, 分量/量, 並行/並 and 兵隊/兵; their kanji metadata
+is unchanged. No older word article is modified.
+
+Actual pre-card inspection: twenty complete principal families / 36 senses,
+201 distinct complete principal/comparison families / 494 senses, 123 complete
+older word bodies, 31 component records and five related kanji bodies.
+The 429 prepared families / 976 senses are available, not all inspected.
+Twenty applicable public lexical captures come from one dictionary authority.
+See [batch sources](n2-vocabulary-batch-sources/batch-76.json).
 
 ## Batch 75: N2:1482-N2:1501
 

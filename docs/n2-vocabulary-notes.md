@@ -19,6 +19,53 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 76 authoring observations
+
+- N2:1502-N2:1521 add twenty new articles. No older word identity, reading,
+  title, body, exclusion or other metadata is changed. Five primary reciprocal
+  N2 pairs are 文芸/芸, 分布/布, 分量/量, 並行/並 and 兵隊/兵.
+  Each kanji gains one useful word link and its dictionary footer entry;
+  complete previous kanji metadata and other body text are preserved.
+- Before drafting, actually read twenty complete principal records / 36 senses,
+  193 selected complete comparison families / 476 senses, 117 complete older
+  articles in fifteen chunks, 242 navigation labels, 31 component records,
+  five complete related kanji bodies and twenty public lexical captures.
+  All selected chunks were read through their declared EOF, not just prepared.
+- A bounded supplement adds six complete older-body reads: がっかり, 失望,
+  しんみり, 良い, 軍 and 武士. Eight complete supplemental families / 18
+  senses were read; one family was already prepared. The actual family union
+  is 201 / 494 and older-body union 123. The larger 429 / 976 prepared union
+  remains availability, not a claim that every family was read.
+- The public captures are one Digital Daijisen authority via Weblio.
+  Keep neighboring 文芸 magazine, 平野 names, historical 平気 calendar method
+  and separate 凹む readings apart. Public numbering is not pinned JMdict numbering.
+  The confusable inventory was read through line157 plus targeted relevant
+  matches, not in its entirety.
+- Preserve the raw source's misleading broad glosses. 兵隊's sailor does not
+  mean any civilian seafarer; 隔てる's passive-looking shut-out gloss does not
+  change its transitive ichidan grammar. No dictionary sense is independently
+  assigned N2 merely by appearing beside a sourced row.
+- 分量's measuring/weighing sense is qualified additional recognition, not an
+  invented ordinary 分量する example. 分布's practical intransitive pattern
+  does not establish an absolute ban on all transitive uses. 平日's radical
+  sense belongs to ひらび, not source へいじつ; Saturday status is contextual.
+- 文献 concerns reference sources rather than simply creative literature.
+  Do not invent 献=document. 文房具 uses the 文房 writing-room association,
+  not 房's tassel sense. These associations are not historical derivations.
+- 並行 and separate 平行 can both concern concurrency. 臍 usually appears
+  as へそ; the central-bump/depression sense has a reading restriction.
+  Separate くぼむ does not inherit colloquial emotional へこむ meanings.
+- Draft exclusions are independently reviewable pairwise hypotheses from actual
+  labels and ordinary senses, not a transitive clique or a blanket POS rule.
+  文章 style, 前後 context, 分ける sorting, 湿る dejection, 引っ込む recession
+  and center/main-point meanings matter beyond primary titles.
+  Supplemental しんみり is reflective/sentimental, not automatically dejected;
+  武士 is not automatically equivalent to a modern soldier.
+- Missing 隊/房/献 and other component cards are not fabricated.
+  Component extraction covers BMP Han, not rare supplementary-plane 𦜝.
+  Author reads and structural audits are not independent model review,
+  native certification, exhaustive quiz uniqueness or measured bias reduction.
+
 ## Batch 75 authoring observations
 
 - N2:1482-N2:1501 add eighteen new articles and reuse ふわふわ,
