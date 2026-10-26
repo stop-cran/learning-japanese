@@ -1,7 +1,7 @@
 {
   "version": 1,
   "checkedOn": "2026-10-26",
-  "status": "Authorized voice auditions generated; listening acceptance and complete-production gates remain pending",
+  "status": "Owner audition feedback and content-length pacing selected; complete production remains gated",
   "speech": {
     "serviceRegion": "swedencentral",
     "serviceTier": "S0",
@@ -39,7 +39,9 @@
       "generatedClips": 27,
       "paidRequests": 27,
       "conservativeReservedUsd": "0.19620",
-      "actualListenerAcceptance": false,
+      "ownerReportedCheckingSamples": true,
+      "deliveryPolicySelected": true,
+      "ownerFeedback": "speech-selection.json",
       "result": "audition-results.json",
       "selectedTurns": [
         "n4-task-lunch-location:focus",
@@ -62,6 +64,15 @@
       "source": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-services-quotas-and-limits",
       "caveat": "Voice/backend capacity may still produce throttling. Record and pace each actual retry before sending; do not treat the service ceiling as available shared capacity."
     }
+  },
+  "selectedSpeechDelivery": {
+    "record": "speech-selection.json",
+    "longerInformationDenseRatePercent": -5,
+    "shortSpeechRatePercent": 0,
+    "appliesTo": "Current N4 cohort, both Nanami and Keita, classified by coherent passage/utterance rather than voice",
+    "draftsUpdated": 8,
+    "newMediaGenerated": false,
+    "completeGenerationAuthorized": false
   },
   "images": {
     "deploymentVerifiedOn": "2026-10-25",
@@ -95,7 +106,6 @@
     "uncertainOutcome": "Stop and retain the request reservation; never silently retry or assume a failed response was free"
   },
   "remainingGates": [
-    "Actual sample listening and rate/voice decisions",
     "Frozen separately authorized image requests and inspected local markers",
     "New complete pilot plan binding actual pictures and chosen speech profiles",
     "Fresh complete-generation authorization; no implicit complete-before-audition opt-in",

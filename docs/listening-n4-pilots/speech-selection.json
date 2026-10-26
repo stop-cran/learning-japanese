@@ -1,0 +1,243 @@
+{
+  "version": 1,
+  "selectedOn": "2026-10-26",
+  "baseDraftCommit": "c5cf811bd0b3d768e7988319349864cd7ad16d04",
+  "ownerDecision": "I've checked the N4 samples, let's use -5% for longer text with more information to grasp and 0% for short ones",
+  "ownerReportedCheckingSamples": true,
+  "scope": "Delivery policy for the initial N4 cohort using Nanami and Keita; not a fixed speed per voice or an official N4 requirement",
+  "policy": {
+    "longerInformationDenseRatePercent": -5,
+    "shortSpeechRatePercent": 0,
+    "unit": "Coherent passage or utterance; no automatic character-count/duration threshold",
+    "wholeDialogueConsistency": "Keep both speakers and short backchannels at the passage's rate",
+    "answerChoiceConsistency": "All spoken alternatives within each pilot use 0%; never vary pace with correctness",
+    "denseQuickResponsePrompts": "Both pilot openings contain multiple timing, direction or correction constraints and use -5%, despite the quick-response format",
+    "sharedNarratorException": "The two illustrated tasks use their single narrator at -5% for both the dense situation and the brief instruction; choices remain 0%. No schema extension or duplicate narrator."
+  },
+  "currentPilotAssignments": [
+    {
+      "id": "n4-task-camera-return",
+      "reviewedSourceSha256": "93d81738e5b2ac18cf9e547ed4004a45afc5b60321b618004e110f0936302ef7",
+      "selectedSourceSha256": "3c0c1089b4675831a3579152882a862ae813660bc9d00f3122f357eba496ab4b",
+      "unchangedExceptSpeakerRates": true,
+      "speakerRatesPercent": {
+        "n": -5,
+        "a": 0
+      },
+      "stageRatesPercent": {
+        "instruction": -5,
+        "situation": -5,
+        "choice-1": 0,
+        "choice-2": 0,
+        "choice-3": 0
+      }
+    },
+    {
+      "id": "n4-task-camping-preparation",
+      "reviewedSourceSha256": "1c6c25ec65e8d20dfe212dd9522f6760667e8922d71288c08f7c7234c96ff287",
+      "selectedSourceSha256": "0dad85422b49c12a803fdf50d291bd9ac28d508af5b83a6ed0dfc1e461011dcc",
+      "unchangedExceptSpeakerRates": true,
+      "speakerRatesPercent": {
+        "n": 0,
+        "a": -5,
+        "b": -5
+      },
+      "stageRatesPercent": {
+        "instruction": 0,
+        "focus": 0,
+        "passage": -5,
+        "repeat": 0
+      }
+    },
+    {
+      "id": "n4-task-deadline-repair",
+      "reviewedSourceSha256": "e85026f88b4065410175c6002221792121e38ca5dd4a3f3c5fb521f0a4d96f4e",
+      "selectedSourceSha256": "96c82c1949b866e6e9a756d97bd9729beb34139625b489008f7d4deead929b15",
+      "unchangedExceptSpeakerRates": true,
+      "speakerRatesPercent": {
+        "n": 0,
+        "a": -5,
+        "b": 0
+      },
+      "stageRatesPercent": {
+        "instruction": 0,
+        "utterance": -5,
+        "choice-1": 0,
+        "choice-2": 0,
+        "choice-3": 0
+      }
+    },
+    {
+      "id": "n4-task-discussion-room",
+      "reviewedSourceSha256": "cbcd58f8664da1160db9fa93f6d406817e89c3da7027ce4d669d36f572419318",
+      "selectedSourceSha256": "d50072376f9ab54dfecf4ff50a121319638cc6bd5fea0c374cc86373589bac05",
+      "unchangedExceptSpeakerRates": true,
+      "speakerRatesPercent": {
+        "n": 0,
+        "a": -5,
+        "b": -5
+      },
+      "stageRatesPercent": {
+        "instruction": 0,
+        "focus": 0,
+        "passage": -5,
+        "repeat": 0
+      }
+    },
+    {
+      "id": "n4-task-form-counter",
+      "reviewedSourceSha256": "e85cbcb3392084877d9229b2d668e7b14042fc0188b95afcd0cb1e194091b0b5",
+      "selectedSourceSha256": "f8ae90ea28df9773957b07bb4837b8320c7ec44af61e8be8bb7ac81cf07b4e89",
+      "unchangedExceptSpeakerRates": true,
+      "speakerRatesPercent": {
+        "n": -5,
+        "a": 0
+      },
+      "stageRatesPercent": {
+        "instruction": -5,
+        "situation": -5,
+        "choice-1": 0,
+        "choice-2": 0,
+        "choice-3": 0
+      }
+    },
+    {
+      "id": "n4-task-lunch-location",
+      "reviewedSourceSha256": "f3c7ea10a175b112d7de12653da13930faf1ea32c0f58553fe8a79320a8d1ff8",
+      "selectedSourceSha256": "fbd239d03ecb4ffc4bb07eb7478ec44a8d4527b37de9514a78a5b731a2c0106f",
+      "unchangedExceptSpeakerRates": true,
+      "speakerRatesPercent": {
+        "n": 0,
+        "a": -5
+      },
+      "stageRatesPercent": {
+        "instruction": 0,
+        "focus": 0,
+        "passage": -5,
+        "repeat": 0
+      }
+    },
+    {
+      "id": "n4-task-moving-help",
+      "reviewedSourceSha256": "bf97f38896c02483a7bc64e96282784b91d7a880b142f0d259cc50c584d35a96",
+      "selectedSourceSha256": "f12194921ab251a846348267506291877f224b8afb0520f8a55f0e045a4aff79",
+      "unchangedExceptSpeakerRates": true,
+      "speakerRatesPercent": {
+        "n": 0,
+        "a": -5,
+        "b": -5
+      },
+      "stageRatesPercent": {
+        "instruction": 0,
+        "focus": 0,
+        "passage": -5,
+        "repeat": 0
+      }
+    },
+    {
+      "id": "n4-task-paper-delivery",
+      "reviewedSourceSha256": "fb79f58bf7a634accfe0f3c2472692af8cb7ced0ad7b9ba868f3bd85c63f0c34",
+      "selectedSourceSha256": "6c541f6e865e73576a3e2eeedba164efd627eedadd320432536f89652899a767",
+      "unchangedExceptSpeakerRates": true,
+      "speakerRatesPercent": {
+        "n": 0,
+        "a": -5,
+        "b": 0
+      },
+      "stageRatesPercent": {
+        "instruction": 0,
+        "utterance": -5,
+        "choice-1": 0,
+        "choice-2": 0,
+        "choice-3": 0
+      }
+    }
+  ],
+  "selectedExistingAuditionClips": [
+    {
+      "selector": "n4-task-lunch-location:focus",
+      "ratePercent": 0,
+      "voice": "ja-JP-NanamiNeural",
+      "sha256": "ba96ab70633b2778b5f02c3e932d28513cf62c60c19fabf6f12fa79ee1248f02",
+      "durationMs": 5612
+    },
+    {
+      "selector": "n4-task-lunch-location:announcement",
+      "ratePercent": -5,
+      "voice": "ja-JP-KeitaNeural",
+      "sha256": "0bd32caa26412fd85374f9b1f35cf99b4658124e8af6f84d4ab62cc2546fa5ae",
+      "durationMs": 10694
+    },
+    {
+      "selector": "n4-task-lunch-location:reason",
+      "ratePercent": -5,
+      "voice": "ja-JP-KeitaNeural",
+      "sha256": "d9736b6c30adafe5df6a4a85a1e54eef7f902d909f57cf4f99b506fc9501e6df",
+      "durationMs": 7061
+    },
+    {
+      "selector": "n4-task-moving-help:receiving",
+      "ratePercent": -5,
+      "voice": "ja-JP-NanamiNeural",
+      "sha256": "d32b5a1ac307ffa4d021068097f3894fcb083778509baa68bb26d199174ba42e",
+      "durationMs": 9101
+    },
+    {
+      "selector": "n4-task-camping-preparation:condition",
+      "ratePercent": -5,
+      "voice": "ja-JP-KeitaNeural",
+      "sha256": "1a7727b648263b9174f6f18574d26a6e20afb7b25fc75a9bfe406cc904ed9f6a",
+      "durationMs": 9944
+    },
+    {
+      "selector": "n4-task-paper-delivery:utterance",
+      "ratePercent": -5,
+      "voice": "ja-JP-KeitaNeural",
+      "sha256": "ba42110a3e785c9efb97311d9bf6ef3bc9eb4e993c2efda8b38d90f28633b119",
+      "durationMs": 9852
+    },
+    {
+      "selector": "n4-task-paper-delivery:choice-2",
+      "ratePercent": 0,
+      "voice": "ja-JP-NanamiNeural",
+      "sha256": "6563bdaac5e33b1fe146b9c8c9efcde27ce5a8195295769e324d368dbb40d49a",
+      "durationMs": 5650
+    },
+    {
+      "selector": "n4-task-deadline-repair:utterance",
+      "ratePercent": -5,
+      "voice": "ja-JP-KeitaNeural",
+      "sha256": "aa26f0fa214a3217877b67f695cdd613ac630b4fbff8d873c3a4854e6a59b052",
+      "durationMs": 9233
+    },
+    {
+      "selector": "n4-task-deadline-repair:choice-3",
+      "ratePercent": 0,
+      "voice": "ja-JP-NanamiNeural",
+      "sha256": "5dda08f1809292ff62fdce62770df50d98a8d9e81223137cfcbbac174d5a2196",
+      "durationMs": 6250
+    }
+  ],
+  "clipSelectionAttribution": "Owner chose the length/information-load policy; the author mapped individual clips to that policy. This is not a claim of item-by-item owner sign-off.",
+  "auditionPageSha256": "ed85937e7815e3b3d366bc5ebfa96a7cfb898d7a027d98440f943856d95a857d",
+  "original27Auditions": "All original plans, source copies, encoded clips and spending ledgers remain unchanged",
+  "speechRequestEstimate": {
+    "uniqueBodies": 47,
+    "conservativeUnits": 21680,
+    "usdPerMillionUnits": "15",
+    "conservativeUsd": "0.3252",
+    "scope": "Fresh eight-pilot speech bodies at selected rates, excluding retries/images/taxes and before any verified-cache reuse. Estimate only, not authorization or an invoice."
+  },
+  "reviewContinuity": "All fields except speakers[].ratePercent exactly match the independently reviewed drafts. Original review hashes remain historical, with these new source hashes binding the rate-only revision; no independent acoustic approval is inferred.",
+  "gates": {
+    "auditionFeedbackAndPacingSelection": "received",
+    "newPaidRequests": 0,
+    "newMediaGenerated": false,
+    "completeGenerationAuthorized": false,
+    "imagesAuthorized": false,
+    "completeOrderListenerAcceptance": false,
+    "guidedNativeAcceptance": false,
+    "phoneAcceptance": false,
+    "runtimePublication": false
+  }
+}

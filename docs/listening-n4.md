@@ -117,6 +117,15 @@ A percentage is relative to a particular voice/model; it is not an absolute spee
 The inspected official specifications provide no WPM target. Japanese orthographic word
 counts also require a stated segmentation convention before they can support comparisons.
 
+After the initial N4 auditions, the owner selected **-5% for longer, information-dense
+speech and 0% for short speech**, rather than a fixed rate per voice. Apply this by
+coherent passage or utterance, not a mechanical character-count cutoff. Keep a dialogue
+at one pace, including its short backchannels, and keep all spoken alternatives within
+an item at the same pace so speed does not hint at the answer. The
+[pilot assignments](listening-n4-pilots/speech-selection.json) record the exact choices
+and the shared-narrator exception for illustrated tasks. This is the cohort's delivery
+choice, not an official N4 standard or a change to existing N5 recordings.
+
 Preserve mora lengths, pitch/intonational phrasing and natural turn pauses while keeping
 delivery accessible. Check difficult dates, counters, names, reductions and speaker
 separability by actual listening. Retain displayed Japanese; use approved `spokenText`

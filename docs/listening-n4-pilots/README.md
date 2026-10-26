@@ -27,14 +27,20 @@ added only after inspecting actual output; prompts and filenames are not accepta
 The staff/visitor descriptions remain available only as explicit visual help/study
 under the existing app contract, not as question-side answer clues.
 
-All current source speakers use the existing Nanami/Keita stock voices at -10% as a
-**provisional audition baseline**, not a prescribed N4 speed. The owner-authorized
-comparison now contains 27 clips at -10%, -5% and 0%; a portable offline page was
-delivered for actual listening. The [audition receipt](audition-results.json) records
-exact media hashes, measured durations and conservative request accounting, not
-perceptual acceptance. Subsequent complete-package review must include both voice
-profiles, polite/familiar phrasing, spoken choice numbers, scope of negatives,
-一階/一人/二人 and the receiving-side constructions. A selected rate is not a
+After checking the 27-clip comparison, the owner selected **-5% for longer,
+information-dense speech and 0% for short speech**. The [speech-selection record](speech-selection.json)
+binds that decision to all eight updated drafts. Main passages, the two dense
+quick-response openings and illustrated situations use -5%; brief focus questions
+and spoken alternatives use 0%. Whole dialogues and all alternatives within an item
+keep a consistent pace. The two illustrated tasks' brief instructions share their
+situation narrator's -5% rate under the unchanged per-speaker schema.
+
+The original 27 clips and their frozen plans remain unchanged. The
+[audition receipt](audition-results.json) records their exact media hashes, measured
+durations and conservative request accounting. Subsequent complete-package review
+must include both voices at the selected rates, polite/familiar phrasing, spoken
+choice numbers, scope of negatives, 一階/一人/二人 and the receiving-side constructions.
+A selected rate is not a
 complete-order listener approval.
 
 Follow the [N4 profile](../listening-n4.md) and [task authoring sequence](../listening-tasks.md#practical-authoring-sequence).
@@ -42,13 +48,15 @@ The [independent review](review.json) is reconciled, including full-script compa
 with all 68 existing N5 records. It corrected a distractor that failed to test its
 claimed negative constraint and made several story reservations concrete.
 The authoring ledger and independent review retain the pre-generation language-review
-snapshot. The [production readiness record](production-readiness.json) and audition
-receipt track subsequent media work separately. Only the voice auditions were
+snapshot. The [production readiness record](production-readiness.json), audition
+receipt and speech-selection receipt track subsequent work separately. The selection receipt
+verifies that only speaker rates changed from the independently reviewed task bodies;
+it is not a new full-media approval. Only the voice auditions were
 authorized, within US$0.45 aggregate; their conservative reservation was US$0.19620,
 not an invoiced charge. No images, complete pilot generation or runtime publication
 were authorized by that approval.
 
-Actual audition acceptance and voice-rate choices are pending. Complete-package
+Audition feedback and the delivery policy are now recorded. Complete-package
 generation, complete-order listening/picture acceptance and guided native checks are
 also absent. D remains incomplete until its own gates pass; G owns later integrated/
 phone acceptance and actual runtime publication. No N4 exercises have been added to
