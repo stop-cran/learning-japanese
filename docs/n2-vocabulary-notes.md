@@ -19,6 +19,51 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 73 authoring observations
+
+- N2:1442-N2:1461 draft nineteen new articles and reuse 増える
+  unchanged for source 殖える, preserving its N4 level, identity,
+  reading, title, body and metadata. Review has not yet started;
+  author checks are not independent acceptance.
+- Preserve blank source spellings for ピンク and ファスナー and
+  the source headword 瓶詰. Its alternative 瓶詰め is explicit;
+  ビン plus voiced native づめ is mixed, not an all-on compound.
+- Before drafting, read all nine family and eleven older-body
+  renderings completely: 232 families / 512 senses and 86 older
+  articles. Supplement with two complete ぷくぷく-request families /
+  three senses and sixteen direct older bodies. The pre-card
+  completion receipt records 234 families / 515 senses and 102
+  distinct older articles. The unrelated Puku Puku character-name
+  family is inspected but is not lexical evidence.
+- Complete 町/清掃 reads occur after that receipt but before
+  drafting; an additive receipt is persisted during drafting.
+  Current author union is 104 older bodies, not a rewritten
+  historical count. Twenty principals / 29 senses are included
+  in the family totals. Read 127 original navigation labels,
+  31 complete component records and all eight edited N2 kanji bodies.
+  Labels, hashes and available files do not prove comprehension.
+- Twenty inspected public captures come from one Digital Daijisen
+  authority via Weblio. 含める uses the ふくめる heading, not the
+  separate くくめる historical quotations. Explain the whole
+  かんで含めるように construction; both 含む/含める are transitive.
+- Distinguish color ピンク from additional erotic recognition,
+  toy 風船 from its explicitly dated gas/hot-air sense, and public
+  seasonal 更ける from an invented JMdict sense. ファスナー is
+  not every English fastener; 便箋 is not every stationery item.
+- 普及 has both transitive and intransitive する patterns.
+  膨らます is an established transitive godan headword, not a
+  misspelling to replace with 膨らませる. 膨らむ is intransitive;
+  膨れる comparison tendencies are not absolute subject bans.
+- 複数 is more than one, not necessarily many; 副詞 is not
+  limited to modifying verbs. 不規則 does not automatically mean
+  unethical rule-breaking, and 不潔 is not a neutral erotic label.
+- Add nine primary reciprocal pairs across 瓶/詰/則/普/副/詞/複/含,
+  preserving every kanji header. Missing 箋/殖/及/拭/膨/潔 remain
+  metadata/plain text, not fabricated cards or successful body reads.
+- Quiz declarations are direct, reviewable author hypotheses from
+  actual titles and inspected senses, not synonym cliques.
+  No agent comparison or bias-reduction conclusion is yet available.
+
 ## Batch 72 authoring observations
 
 - Both original reviewers accept the final teaching snapshot

@@ -5,8 +5,8 @@
 **Batches 01-72 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,440 rows are review-closed; none are drafted and
-372 remain pending. None are unresolved.
+The first 1,440 rows are review-closed; batch 73 has 20 drafted rows and
+352 remain pending. None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,46 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 73: N2:1442-N2:1461
+
+**Status:** drafted; independent GPT and Claude reviews pending.
+
+Nineteen new articles: ピンク, 便箋, 瓶詰, ファスナー, 風船, 不運,
+深まる, 不規則, 普及, 付近, 拭く, 副詞, 複写, 複数, 含める,
+膨らます, 膨らむ, 不潔 and 更ける.
+Source 殖える maps to the unchanged existing 増える article, which
+already teaches that spelling; preserve its sourced N4 classification.
+
+The [packet](n2-vocabulary-batch-sources/batch-73.json) preserves twenty
+raw rows, twenty complete principal families / 29 senses, selected
+senses and separately qualified additional recognition. Blank source
+spellings for ピンク/ファスナー and source 瓶詰 remain intact.
+Seasonal 更ける has public dictionary evidence, not an invented
+pinned JMdict sense.
+
+Actual pre-draft author reads cover 234 full families / 515 senses,
+104 distinct complete older articles, 127 original navigation labels,
+31 complete component records and eight related kanji bodies.
+Nine original family and eleven older-body renderings are complete;
+principals are included in family totals. Two supplemental families
+include one unrelated character-name family, not lexical evidence.
+The historical pre-card completion receipt records 102 older bodies;
+町/清掃 were read afterward but before drafting, and their additive
+receipt is persisted during drafting. The immutable prepared plan
+is not silently relabeled as completion.
+
+All twenty public captures have applicable inspected Digital Daijisen
+headings via Weblio, one authority. The separate くくめる heading
+under 含める is excluded from evidence for ふくめる.
+Eight kanji bodies gain nine reciprocal reading/common-word pairs
+without header changes: 瓶/瓶詰, 詰/瓶詰, 則/不規則, 普/普及,
+副/副詞, 詞/副詞, 複/複写, 複/複数 and 含/含める.
+Missing component cards remain unlinked, not invented.
+
+Quiz pairs and examples await independent assessment.
+No reviewer model contribution, all-CLEAN verdict, or measured
+bias-reduction claim is made at this draft stage.
 
 ## Batch 72: N2:1422-N2:1441
 
