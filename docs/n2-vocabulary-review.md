@@ -98,6 +98,24 @@ and disclose the discrepancy. No native-speaker certification,
 empirical quiz draws, general model ranking or measured bias reduction
 is claimed; both original-session confirmations remain pending.
 
+The authenticated [GPT first confirmation](n2-vocabulary-reviews/batch-83-gpt-confirmation.md)
+accepts the corrections but identifies two further direct 巡る gaps:
+見物 for sightseeing and サークル for bare "circle." Both complete
+families and actual unchanged articles support adding the safeguards.
+The final proposed snapshot declares 107 edges; actual cumulative
+author inspection is 311 families / 667 senses and 162 older bodies.
+Credit these two follow-through findings to GPT, not its initial review.
+
+Claude's first confirmation was interrupted after a repeated six-file
+read loop and produced no final report or acceptance. Final native
+counts are 381 calls, maximum two outstanding; the earlier 330-call
+audit was partial. The attached-shell stop left exact Node/Python
+children alive; explicit PID-based stops and a process query established
+exit before further review. No OOM is claimed. Bounded final dossiers
+replace the large-packet reread, with fresh current-card inspection
+and explicit unchanged-evidence carry-forward in the original sessions.
+Final acceptance remains pending.
+
 ## Batch 82: N2:1622-N2:1641
 
 **Status:** closed after authenticated blind initial reviews,

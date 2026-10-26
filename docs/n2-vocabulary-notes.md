@@ -84,8 +84,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   310 distinct inspected families / 665 senses and 161 older bodies.
   Keep the original pre-card receipt and failed requests unchanged.
 - Add five direct safeguards: 目下 with 現在/今, 恵まれる with
-  恩恵/利益, and 巡る with 観光; the twenty assigned cards now
-  declare 105 edges. Pinned Android prompt code initially renders
+  恩恵/利益, and 巡る with 観光; the first correction snapshot
+  declares 105 edges. Pinned Android prompt code initially renders
   the written word without kana; a separate interaction reveals
   reading help. Thus the separate もっか identity matters to quiz
   ambiguity without changing the correct めした source mapping.
@@ -118,6 +118,26 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   Claude's original claim of one call at a time is contradicted.
   Preserve that report verbatim and require serial tool calls again
   during confirmation rather than treating instructions as execution.
+- GPT's first confirmation independently found two further 巡る
+  omissions: 見物's actual sightseeing use and サークル's actual
+  bare circle label. Both full families and unchanged bodies were
+  checked; add both direct guards, making 107 declarations.
+  A bounded circle/sightseeing/tour title sweep checks the same
+  rationale without mechanically importing detour/tournament matches.
+  The final actual author union is 311 families / 667 senses and
+  162 older bodies; the new family is サークル, not both comparisons.
+  These are useful GPT follow-through findings, not initial-review
+  findings or proof that its initial all-CLEAN conclusion was complete.
+- Claude's first confirmation entered a repeated six-file read loop,
+  including the large blind packet, and was stopped without a final
+  report. It made 381 calls with maximum two outstanding; four older
+  chunks were each requested 58 times. No OOM or acceptance is inferred.
+  Stopping the attached shell left its exact Node/Python children alive;
+  they were explicitly stopped by verified PIDs and absence rechecked
+  before proceeding. Preserve the partial 330-call audit as historical,
+  not final process-exit proof. Final review uses small bounded dossiers,
+  unchanged prior-evidence lineage and fresh current cards in the same
+  original sessions; no full large-packet reread is permitted.
 
 ## Batch 82 authoring observations
 
