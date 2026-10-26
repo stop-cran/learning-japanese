@@ -19,6 +19,47 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 88 authoring observations
+
+- N2:1742-N2:1761 draft seventeen new articles and reuse 汚す,
+  喜び and 喜ぶ. 汚す receives its sourced N2 field only. The
+  two joy articles recognize rare 慶び/慶ぶ while retaining their
+  primary identities, N3/N4 levels and original teaching. The source
+  gloss for 慶ぶ is empty and remains empty.
+- The completed pre-card inspection seal records 426 complete
+  families / 1,026 senses, 165 complete older bodies, 42 component
+  records and four related kanji bodies. The 211 navigation labels
+  are not full-body coverage. Eighteen family chunks and twenty-one
+  original body chunks were read completely before drafting.
+- The original 406 requested forms retain eight exact misses.
+  A final five-family / nineteen-sense / five-body extension adds
+  actual 内容/大体/およそ gist and ずっと/オーバー degree comparisons.
+  Preparation receipts remain distinct from the completed-read seal.
+- Twenty principal positive public wrappers and a supplemental
+  洋品 wrapper represent one dictionary authority, not twenty-one
+  independent authorities. 洋品店's Western-style scope does not
+  require foreign origin. All 336 rendered public lines were read.
+- Kana-primary ようやく, よこす and よそ retain source spellings
+  and relevant dictionary restrictions. Gradual ようやく is not
+  labeled obsolete; よこす is speakerward and often, not always,
+  unwelcome; よそ is not merged with separate 外そと/ほか.
+- 要領 separates gist from knack, not rigidly good from dishonest
+  efficiency. 余計 includes nonnegative extra provision and degree.
+  寄せる teaches constructions rather than one universal transitivity
+  rule: the public wave use is intransitive despite the pinned
+  family's inherited transitive labels.
+- 四つ角 is よつかど, without a small っ. 酔っ払い does not require
+  habitual dependence. 予備 includes nonphysical preliminaries;
+  呼び掛ける appeals without entailing compliance; 呼び出す
+  includes stored-data use. 蘇る is intransitive godan, not ichidan.
+- Useful new reciprocal examples are 毛/羊毛, 領/要領 and
+  角/四つ角. The existing 汚/汚す pair is preserved. Absent
+  component cards are not invented or linked as if present.
+- Quiz declarations remain provisional direct, symmetric,
+  nontransitive hypotheses for independent review. Author reads and
+  structural checks do not certify naturalness or simulate the app.
+  Independent GPT/Claude review and reconciliation are still pending.
+
 ## Batch 87 authoring observations
 
 - N2:1722-N2:1741 map to twenty physical additions, not reuses of

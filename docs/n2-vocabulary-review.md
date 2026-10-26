@@ -5,7 +5,7 @@
 **Batches 01-87 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,740 rows are review-closed; none are drafted and 72 remain pending.
+The first 1,740 rows are review-closed; twenty are drafted and 52 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,38 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 88: N2:1742-N2:1761
+
+**Status:** draft; independent review and reconciliation pending.
+
+Seventeen physical additions and three baseline reuses cover the
+twenty rows. 汚す receives its sourced N2 field only. 喜び/喜ぶ retain
+their identities, readings, titles and easier N3/N4 levels, with
+recognition of source rare spellings 慶び/慶ぶ. 慶ぶ's raw community
+gloss stays empty.
+
+The completed author inspection comprises 426 complete families /
+1,026 senses, 165 complete older bodies, 42 component records,
+four related kanji bodies and twenty-one positive public lexical
+captures from one authority. The 211 original labels are navigation,
+not 211 full bodies. Preparation and completed-read receipts remain
+separate; available evidence is not actual reviewer inspection.
+
+The [source packet](n2-vocabulary-batch-sources/batch-88.json)
+preserves raw source rows, compatible selected spelling/reading/sense
+mappings, full families, components and capture hashes. Initial blind
+derivatives omit sourceNote/mappingNote/identityNote and author quiz
+rationale. No model review, native retrieval depth or bias reduction
+is claimed yet.
+
+Practical teaching includes kana-primary ようやく/よこす/よそ,
+gist/knack, nonnegative extra provision, construction-specific 寄せる,
+よつかど, preliminary 予備, communication/computing uses and
+godan 蘇る. Three useful reciprocal examples are added for 毛, 領
+and 角; the existing 汚 pair and all kanji metadata are preserved.
+Quiz safeguards are provisional direct symmetric/nontransitive pairs,
+not unrestricted synonym equivalence or an empirical quiz result.
 
 ## Batch 87: N2:1722-N2:1741
 
