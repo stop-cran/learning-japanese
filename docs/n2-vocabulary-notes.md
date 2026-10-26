@@ -21,9 +21,12 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 ## Batch 74 authoring observations
 
-- N2:1462-N2:1481 draft nineteen new articles and reuse 武士
+- N2:1462-N2:1481 add nineteen new articles and reuse 武士
   unchanged, retaining its sourced N2 level and all baseline metadata
-  and body. No independent acceptance is claimed yet.
+  and body. Both original reviewers accept corrected snapshot
+  `c14e72eb3c6ef596210363054f2b7d637b54b67e`: all twenty rows
+  CLEAN on correctness, scoped coverage and comprehensibility;
+  both kanji edits, mappings and preservation assessed separately.
 - Preserve the four blank source spellings, source 附属 and its
   same-family alternative 付属. 不通 is not the homophone 普通.
 - Actual pre-card reads cover twenty complete principal families,
@@ -63,8 +66,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   remain metadata/plain text, never invented cards or broken links.
 - Compare each actual title and ordinary secondary sense, including
   complaints, low speech and simmering. Existing exclusions on a
-  neighboring word do not protect a new pair. These declarations
-  remain author hypotheses, not independent reviewer findings.
+  neighboring word do not protect a new pair. Treat draft declarations
+  as hypotheses rather than pre-established reviewer findings.
 - Initial independent reviews share two useful direct pairs:
   塞ぐ/覆う and 部品/アクセサリー. GPT additionally identifies
   five useful pairs involving fullness, covering, dejection and
@@ -88,7 +91,9 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - Compare both complete reports, including optional suggestions,
   limits and per-row notes. Complementary observations are useful
   on this shared snapshot, not measured bias reduction or a model
-  ranking. Original-session confirmations remain pending.
+  ranking. Both original sessions accept all consequential
+  dispositions and adopted optional guards after fresh complete
+  article/evidence reads. Confidence qualifications remain intact.
 
 ## Batch 73 authoring observations
 

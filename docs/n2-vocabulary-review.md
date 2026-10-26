@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-73 review-closed.** The target is all 1,812 source rows,
+**Batches 01-74 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,460 rows are review-closed; batch 74's twenty rows are
-drafted and 332 remain pending. None are unresolved.
+The first 1,480 rows are review-closed and 332 remain pending.
+None are drafted or unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -28,8 +28,9 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 74: N2:1462-N2:1481
 
-**Status:** independently reviewed and author-corrected; original
-GPT and Claude session confirmations are not yet complete.
+**Status:** closed after authenticated independent initial reviews,
+evidence-based corrections and all-CLEAN confirmations by both
+original sessions.
 
 Nineteen new articles: 符号, 夫妻, 塞がる, 塞ぐ, ふざける,
 無沙汰, 部首, 襖, 附属, 蓋, 不通, ぶつかる, ぶつける,
@@ -70,7 +71,7 @@ Exact native prompts/models/final messages, 32 required complete
 returns each, TSV header and only assigned rows, the required
 content-format range and zero edits are authenticated.
 
-| Initial observation | Author reconciliation; confirmation pending |
+| Initial observation | Final reconciliation, accepted by both original reviewers |
 | --- | --- |
 | GPT G01 | Add 塞がる/一杯 from the occupied/full sense, the actual hands-full example and applicable modern Daijisen heading. |
 | GPT G02 / shared B74-01 | Add 塞ぐ/覆う, 被せる and しょんぼり from actual covering and low-mood senses; 覆う is shared, not two discoveries. |
@@ -102,7 +103,27 @@ bodies / 38 total word bodies. Both read the small supplement.
 Equal available evidence is not equal comprehension, and this
 does not measure bias reduction, native certification or ranking.
 
-Coverage is **1,460 closed / 20 draft / 332 pending /
+Both original sessions accept corrected teaching commit
+`c14e72eb3c6ef596210363054f2b7d637b54b67e`:
+[GPT confirmation](n2-vocabulary-reviews/batch-74-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-74-claude-confirmation.md).
+Each returns all twenty rows CLEAN on all three facets and separately
+assesses both kanji bodies, mappings and preservation. Each has 44
+authenticated complete required returns, including fresh assigned
+bodies, both kanji, all mappings/principals/components/labels,
+both corrective family renderings, the supplement, all public
+captures and all nine corrective older bodies. Original sessions,
+exact prompts/models/native final reports, bounded TSV access,
+format range and zero edits are authenticated.
+
+No remaining actionable defect or consequential linguistic
+uncertainty is established. Optional styling/expansion remains
+deferred, and medium/low-to-medium guard confidence is retained.
+Author Git/hash/manifest/baseline checks are not reviewer-executed
+Git, runtime quiz testing or native-speaker certification. Closure
+changes no accepted teaching body or manifest entry.
+
+Coverage is **1,480 closed / 0 draft / 332 pending /
 0 unresolved**, mapped to **1,466 distinct articles:
 1,359 new / 107 reused**. The entire expansion remains open.
 
