@@ -100,7 +100,27 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   one GPT call and two Claude calls. Claude honestly reported its
   single parallel pair. Complementary findings are useful for this
   sample, not measured bias reduction or a general ranking.
-  Original-session confirmations remain pending.
+  Original-session confirmations were then authenticated: all 52
+  mandatory complete files each, with no edits. GPT found no remaining
+  defect; Claude found two additional direct plain-label edges for
+  無地/原 and 無地/野, and a face-label edge for 向かう/顔.
+  The latter predates this batch but is tightly coupled to the assigned
+  reuse. All three are adopted after eight complete pinned families /
+  nineteen senses, five older bodies and live plain/face entries were
+  actually inspected. Titles and bodies stay unchanged; declarations
+  become 133. This is a useful Claude-unique confirmation contribution,
+  not a reason to relabel its initial findings or the first GPT verdict.
+- The steam follow-up does not establish a missing edge: 蒸す's
+  full title says "steam food; be hot and humid," unlike the bare
+  noun steam on 蒸気/水蒸気. Actual bodies, pinned entries and
+  American Heritage distinguish the action from the substance.
+  No automatic steam-topic clique or noun/verb exemption is used.
+  Original optional expansions remain nonblocking.
+- First confirmations were sequential processes. GPT was internally
+  serial; Claude reached three outstanding calls twice and disclosed
+  both triples. Preserve those native reports unchanged. A bounded
+  original-session follow-up must confirm the three new edges before
+  closure; first-confirmation history remains historical.
 
 ## Batch 81 authoring observations
 

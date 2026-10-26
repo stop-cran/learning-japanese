@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 82: N2:1622-N2:1641
 
-**Status:** corrected after authenticated blind initial reviews;
-original-session GPT and Claude confirmations pending.
+**Status:** corrected after authenticated blind initial reviews and
+first confirmations; bounded original-session follow-up pending.
 
 Eighteen physical additions and baseline reuses 向かう and 蒸す cover
 twenty source rows. Source 向う/むかう is explicitly recognized without
@@ -98,7 +98,33 @@ are authenticated against exact returned packet ranges, including
 adjacent ranges covering entire records. Labels are not body reads.
 This sample demonstrates useful complementarity, not measured bias
 reduction or general model superiority. Full finding-by-finding
-dispositions are in the source packet; closure remains pending.
+dispositions are in the source packet.
+
+The first full original-session confirmations are archived:
+[GPT](n2-vocabulary-reviews/batch-82-gpt-confirmation.md) and
+[Claude](n2-vocabulary-reviews/batch-82-claude-confirmation.md).
+Both exact prompts, actual models, all 52 mandatory complete returns,
+twenty-row facet tables and zero edits are authenticated. GPT found
+no remaining actionable defect. Claude's fresh check found three
+additional direct English-label ambiguities: 無地/原, 無地/野
+and 向かう/顔. The first two are batch omissions; the last predates
+the batch but is tightly coupled to its assigned reuse. Adopt all
+three after actual complete eight-family / nineteen-sense inspection,
+five older bodies and live plain/face evidence. Declarations rise
+from 130 to 133 without changing any title, reading, level or body.
+These are Claude-unique confirmation observations, not initial catches.
+
+Claude's unverified steam follow-up does not establish an actionable
+defect: the complete 蒸す title says "steam food; be hot and humid,"
+not bare noun steam. Complete 蒸気/水蒸気 bodies, precise pinned
+families and live English steam evidence distinguish those meanings;
+no category clique or automatic POS exemption is inferred.
+
+First-confirmation reviewer processes were sequential; internal
+maxima were GPT one and Claude three. Claude accurately disclosed
+two parallel triples. Preserve both original reports and their
+different verdicts. A bounded follow-up by both original sessions
+must accept the new three-edge correction before closure.
 
 ## Batch 81: N2:1602-N2:1621
 
