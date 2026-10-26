@@ -109,9 +109,34 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   and three authored pairs removed. There are now 137 assigned
   declarations and fourteen exact approved baseline additions on
   nine files; the three 喜ぶ declarations are not double-counted.
-  Final confirmations are pending. Equal supplied evidence is not
-  equal inspection or measured bias reduction; no empirical app
-  quiz run or review closure is claimed.
+  Final confirmations accept the committed teaching snapshot
+  `10d79e53a3f7916b2740002cb72df4d178d8827b`; the batch is closed.
+  Equal supplied evidence is not equal inspection or measured bias
+  reduction; no empirical app quiz run is claimed.
+- GPT's whole final report is native-authenticated. Claude's original
+  complete CLI capture contains a duplicated N2:1760 fragment, while
+  native persistence after compaction contains only its final suffix.
+  Both are disclosed, not silently repaired. The original Claude
+  session re-emitted the whole report natively with exactly that
+  fragment removed and no other line changed. This zero-tool,
+  no-edit formatting repair is not another linguistic review.
+- The final author receipt corrects "90 lines" to 90 nonblank
+  rendering records / 104 physical lines. The earlier capture receipt
+  already records 104; the completed full read, frozen history and
+  cumulative inspection totals are unchanged.
+- Claude did not re-check the full 別 family. The author re-read
+  the already inspected べつ family and current body, retaining
+  the conservative direct another-place guard without claiming
+  equivalence with 別々 or retroactive reviewer verification.
+  The residual generic-open doubt is explicitly low-impact and does
+  not establish the removed 開ける guard. Formal-spelling frequency,
+  paper-corner idiomaticity and official legal terminology remain
+  unverified extensions, not claims made by these articles.
+- All final optional expansions remain deferred. In particular,
+  the new links are in 喜ぶ, not 楽しみ. Metadata-only closure
+  preserves every accepted word, kanji and manifest byte; source
+  fields, lexical mappings and all 3,273 baseline identities remain
+  intact. Coverage is 1,760 closed / 52 pending / zero unresolved.
 
 ## Batch 87 authoring observations
 

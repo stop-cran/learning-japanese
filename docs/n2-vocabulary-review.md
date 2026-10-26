@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-87 review-closed.** The target is all 1,812 source rows,
+**Batches 01-88 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,740 rows are review-closed; twenty are drafted and 52 remain pending.
+The first 1,760 rows are review-closed; none are drafted and 52 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,9 +28,9 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 88: N2:1742-N2:1761
 
-**Status:** draft; initial reports and first confirmations authenticated.
-GPT requests further corrections; those are applied, with final
-original-session confirmation pending. No review closure is claimed.
+**Status:** closed after independent initial reviews, evidence-based
+corrections and acceptance by the original GPT and Claude sessions.
+The first-confirmation disagreement remains preserved below.
 
 Seventeen physical additions and three baseline reuses cover the
 twenty rows. 汚す initially received its sourced N2 field only;
@@ -123,7 +123,64 @@ including the three assigned 喜ぶ declarations counted once.
 The earlier fourteen additions plus three new pairs and three removed
 authored pairs are recorded separately. 汚す's source note now describes
 its actual approved figurative illustration. Raw source and lexical
-mappings remain unchanged. Final confirmation remains pending.
+mappings remain unchanged.
+
+Final accepted teaching snapshot:
+`10d79e53a3f7916b2740002cb72df4d178d8827b`.
+[GPT final](n2-vocabulary-reviews/batch-88-gpt-final.md) accepts all
+twenty rows in all three facets, with its complete native message
+authenticated. [Claude final capture](n2-vocabulary-reviews/batch-88-claude-final.md)
+also says ACCEPT, but contains a duplicated partial N2:1760 row.
+After compaction, its native assistant message preserves only the
+final suffix, not the whole CLI capture. That limitation and the
+unmodified malformed capture are retained explicitly.
+
+The original Claude session supplied a separate
+[format-only re-render](n2-vocabulary-reviews/batch-88-claude-final-format.md).
+Its complete native message is authenticated: exactly the duplicated
+six-cell fragment is removed, with every other line unchanged;
+all twenty six-column verdict rows are CLEAN in all three facets.
+This is not another independent linguistic review. GPT exited before
+Claude's final prompt; Claude exited before the formatting prompt.
+All three stages used zero tools, made no edits and exited successfully.
+
+Both reviewers accept retaining no 喜ぶ/楽しい guard after full
+evidence inspection: the current enjoyable/fun and be-delighted labels
+do not establish the required overlap. This is not a POS-only exemption
+or an assertion that the feelings cannot coexist. Their preserved
+limitations do not certify every possible contextual translation.
+
+Claude did not re-check the full 別 family. The author re-read the
+already inspected 1509430 family and current 別 body, retaining the
+conservative another/different-place guard against よそ1605940:1.
+This does not make 別々 interchangeable, add new inspection counts,
+or retrospectively give Claude evidence it did not inspect.
+Claude's generic-open doubt remains preserved as low-impact; the
+exact 開ける families do not establish the removed computing guard.
+Formal-spelling frequency, paper-corner idiomaticity and statutory
+drunk-driving terminology are not asserted by the current teaching.
+Other-only happiness pairs remain outside scope.
+
+The historical "All90lines" author receipt means 90 nonblank rendering
+records, not physical lines: there are 104 physical lines, including
+fourteen blank lines. Its original capture receipt already says 104;
+the full fourteen-family / 48-sense read and cumulative counts are
+unchanged. Historical receipts and frozen prompts remain immutable.
+All remaining optional illustrations, wording and links are deferred;
+the proposed links from 楽しみ were not implemented.
+
+GPT's exact-identity challenges usefully corrected permissively
+accepted guards. 汚い/けち is a shared observation across Findings/
+Optional, not a GPT-unique discovery. Claude's construction, figurative
+use, linking and joy-limit observations supplied complementary checks.
+This remains a sample-specific comparison, not measured bias reduction
+or a model ranking.
+
+The metadata-only closure preserves the accepted words, kanji and
+manifest byte-for-byte, all raw source fields and lexical mappings,
+all 3,273 baseline identities/readings/titles/easier levels/original
+exclusions and the explicit fourteen approved baseline additions.
+Coverage is now 1,760 closed / zero draft / 52 pending / zero unresolved.
 
 Practical teaching includes kana-primary ようやく/よこす/よそ,
 gist/knack, nonnegative extra provision, construction-specific 寄せる,
