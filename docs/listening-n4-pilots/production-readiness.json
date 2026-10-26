@@ -1,13 +1,15 @@
 {
   "version": 1,
-  "checkedOn": "2026-10-25",
-  "status": "UNAUTHORIZED preparation only; no N4 paid request or media output",
+  "checkedOn": "2026-10-26",
+  "status": "Authorized voice auditions generated; listening acceptance and complete-production gates remain pending",
   "speech": {
     "serviceRegion": "swedencentral",
     "serviceTier": "S0",
     "verifiedStockVoices": ["ja-JP-NanamiNeural", "ja-JP-KeitaNeural"],
+    "voiceListVerifiedOn": "2026-10-25",
     "voiceVerification": "Both returned as GA Japanese Neural voices by a read-only list-voices request",
     "retail": {
+      "verifiedOn": "2026-10-26",
       "currency": "USD",
       "usdPerMillionUnits": "15",
       "serviceName": "Foundry Tools",
@@ -31,8 +33,14 @@
       "clips": 27,
       "conservativeUnitsWithoutRetries": 13080,
       "conservativeUsdWithoutRetries": "0.19620",
-      "proposedAuthorization": "Preview only: at most 10000 conservative request units / USD0.15 for each of the three frozen plans, USD0.45 aggregate including any retries within those ceilings",
-      "authorizationGranted": false,
+      "authorization": "Preview only: at most 10000 conservative request units / USD0.15 for each of the three frozen plans, USD0.45 aggregate including any retries within those ceilings",
+      "authorizationGranted": true,
+      "authorizedOn": "2026-10-26",
+      "generatedClips": 27,
+      "paidRequests": 27,
+      "conservativeReservedUsd": "0.19620",
+      "actualListenerAcceptance": false,
+      "result": "audition-results.json",
       "selectedTurns": [
         "n4-task-lunch-location:focus",
         "n4-task-lunch-location:announcement",
@@ -49,13 +57,14 @@
     },
     "pacing": {
       "documentedStandardDefaultTps": 30,
-      "proposedClientMaximumTps": 1,
+      "clientTargetIntervalSeconds": 1,
       "concurrency": 1,
       "source": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-services-quotas-and-limits",
       "caveat": "Voice/backend capacity may still produce throttling. Record and pace each actual retry before sending; do not treat the service ceiling as available shared capacity."
     }
   },
   "images": {
+    "deploymentVerifiedOn": "2026-10-25",
     "verifiedModel": "gpt-image-2.5-sunburst",
     "version": "2026-09-08",
     "deploymentKind": "GlobalStandard",
@@ -86,7 +95,6 @@
     "uncertainOutcome": "Stop and retain the request reservation; never silently retry or assume a failed response was free"
   },
   "remainingGates": [
-    "Fresh bounded voice-audition authorization",
     "Actual sample listening and rate/voice decisions",
     "Frozen separately authorized image requests and inspected local markers",
     "New complete pilot plan binding actual pictures and chosen speech profiles",

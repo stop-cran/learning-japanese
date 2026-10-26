@@ -1,4 +1,4 @@
-# N4 listening pilots: unpaid authoring
+# N4 listening pilots: authoring and voice auditions
 
 These eight original schema-2/policy-1/N4 **scored drafts** implement the unpaid part
 of [D / #49](https://github.com/stop-cran/learning-japanese/issues/49). They are not
@@ -28,8 +28,11 @@ The staff/visitor descriptions remain available only as explicit visual help/stu
 under the existing app contract, not as question-side answer clues.
 
 All current source speakers use the existing Nanami/Keita stock voices at -10% as a
-**provisional audition baseline**, not a prescribed N4 speed. Compare representative
-utterances at -10%, -5% and 0% after fresh bounded authorization. Include both voice
+**provisional audition baseline**, not a prescribed N4 speed. The owner-authorized
+comparison now contains 27 clips at -10%, -5% and 0%; a portable offline page was
+delivered for actual listening. The [audition receipt](audition-results.json) records
+exact media hashes, measured durations and conservative request accounting, not
+perceptual acceptance. Subsequent complete-package review must include both voice
 profiles, polite/familiar phrasing, spoken choice numbers, scope of negatives,
 一階/一人/二人 and the receiving-side constructions. A selected rate is not a
 complete-order listener approval.
@@ -38,8 +41,15 @@ Follow the [N4 profile](../listening-n4.md) and [task authoring sequence](../lis
 The [independent review](review.json) is reconciled, including full-script comparison
 with all 68 existing N5 records. It corrected a distractor that failed to test its
 claimed negative constraint and made several story reservations concrete.
-The [production readiness record](production-readiness.json) separates verified
-service pricing and frozen unpaid voice auditions from actual output and approval.
-Fresh spending authorization, actual media, complete-order listening/picture acceptance and guided
-native checks are all absent. D remains incomplete until its own gates pass; G owns
-later integrated/phone acceptance and actual runtime publication.
+The authoring ledger and independent review retain the pre-generation language-review
+snapshot. The [production readiness record](production-readiness.json) and audition
+receipt track subsequent media work separately. Only the voice auditions were
+authorized, within US$0.45 aggregate; their conservative reservation was US$0.19620,
+not an invoiced charge. No images, complete pilot generation or runtime publication
+were authorized by that approval.
+
+Actual audition acceptance and voice-rate choices are pending. Complete-package
+generation, complete-order listening/picture acceptance and guided native checks are
+also absent. D remains incomplete until its own gates pass; G owns later integrated/
+phone acceptance and actual runtime publication. No N4 exercises have been added to
+the installed app by this authoring/preview work.
