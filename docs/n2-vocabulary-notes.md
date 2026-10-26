@@ -91,7 +91,32 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   report's findings, optional suggestions, limits or row notes.
   Complementary contributions and very different evidence depths
   do not measure bias reduction or rank the models generally.
-  Original-session confirmations remain pending; the batch is not closed.
+- Both authenticated original-session confirmations accept teaching
+  snapshot `332aa136`: all twenty rows CLEAN on all three facets,
+  all findings resolved and no actionable regression or consequential
+  unresolved claim. Each returns all 51 mandatory complete files,
+  including 54 distinct fresh families / 124 senses and all fifteen
+  required older bodies. Cumulative family unions are GPT 337 / 881
+  and Claude 54 / 124; complete existing-body unions, including the
+  two assigned reuses, are 173 and eighteen. GPT freshly reread
+  打ち合わせ, already present in its initial union; do not count it
+  twice. Native successful returns establish access, not comprehension.
+- Native scheduling contradicts both Claude reports' serial-read
+  claims: initially six overlapping groups, with up to twelve
+  outstanding calls; confirmation has one two-call mapping-read pair.
+  Both GPT turns are internally serial. Reviewer processes themselves
+  never overlap; retain the native reports unchanged and disclose the
+  internal deviation rather than infer compliance from their claims.
+- Claude partly withdraws its categorical straddle criticism. Its
+  optional request for further title explanation and reconsideration
+  of 真っ青/白 does not establish a remaining defect. 白's own body
+  teaches white color, not a separate pallor sense; related 白い
+  teaching is contextual evidence, not an inherited exclusion edge.
+  Its fresh またがる fetch is weak Wiktionary/machine-example
+  corroboration, not a new Daijisen body or fresh Kotobank verification.
+- Closure changes only reports, evidence and coverage records.
+  Accepted teaching and manifest remain unchanged. Batch 80 is
+  review-closed: 1,600 rows closed, 212 pending, none drafted or unresolved.
 
 ## Batch 79 authoring observations
 

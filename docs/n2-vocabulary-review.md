@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-79 review-closed.** The target is all 1,812 source rows,
+**Batches 01-80 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,580 rows are review-closed; 212 remain pending and twenty are drafted.
+The first 1,600 rows are review-closed; 212 remain pending and none are drafted.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 80: N2:1582-N2:1601
 
-**Status:** drafted; independent initial reviews reconciled, with both
-original-session confirmations pending.
+**Status:** closed after authenticated independent initial reviews and
+full confirmations by both original sessions.
 
 Eighteen new articles and two unchanged reuses cover twenty source rows.
 交ぜる maps to batch 79's 混ぜる, and 又は maps to the existing N4 または.
@@ -89,7 +89,45 @@ all report sections and row notes. GPT's eight pairs and Claude's
 bounded wording/example clarifications are complementary contributions;
 the five author-found pairs are not credited to either reviewer.
 This sample does not measure bias reduction or establish a model ranking.
-No quality-closure claim is made before original-session confirmations.
+
+Accepted teaching snapshot: `332aa13666c2a831e21038359680179730fdb1c6`.
+The [GPT confirmation](n2-vocabulary-reviews/batch-80-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-80-claude-confirmation.md)
+return all twenty rows CLEAN on correctness, scoped coverage and
+comprehensibility. All original findings are resolved, with no actionable
+regression or consequential unresolved claim. Claude partly withdraws
+its categorical no-straddle framing; both accept the bounded correction.
+
+Both freshly return all 51 mandatory complete files, the exact TSV
+header/twenty rows and the full required format range. Common fresh
+dictionary scope is 54 distinct families / 124 senses, with all twenty
+assigned articles, three kanji and fifteen required older bodies.
+Cumulative family unions are GPT 337/881 and Claude 54/124; complete
+existing-body unions including the two assigned reuses are 173 and
+eighteen. GPT also freshly returns 打ち合わせ, already in its initial
+union. These totals describe authenticated complete outputs, not equal
+comprehension or exhaustive rereading of prepared evidence.
+
+Both Claude native reports claim serial reading, but event auditing
+finds six overlapping initial tool groups (maximum twelve outstanding
+calls) and one two-call mapping-read pair in confirmation. Both GPT
+turns are internally serial. The isolated reviewer processes themselves
+never overlap and make zero edits; strict internal serial compliance is
+not claimed for Claude, and its native reports remain unchanged.
+
+Claude's fresh またがる fetch supplies only weak Wiktionary/machine-example
+corroboration, not a Daijisen body or new Kotobank verification. The
+twenty frozen captures remain one dictionary authority. Further straddle
+explication and reconsideration of 真っ青/白 remain optional: 白's own
+body teaches white color, not a separate pallor sense; 白い's explicit
+complexion teaching is contextual evidence, not an imported sense or
+transitive exclusion.
+
+Closure changes only reports, evidence, ledgers and coverage status.
+Accepted teaching and manifest remain unchanged: 1,600 closed rows,
+212 pending, no drafts or unresolved rows; 333 generic new-article
+primary reciprocal N2 pairs and six explicitly scoped historical/reuse
+pairs give 339 scoped pairs, not every historical reuse relationship.
 
 ## Batch 79: N2:1562-N2:1581
 
