@@ -19,6 +19,53 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 87 authoring observations
+
+- N2:1722-N2:1741 map to twenty physical additions, not reuses of
+  the unrelated homophones 容器/陽気 or 幼児/用事.
+- The actual pre-card inspection seal records 384 complete families /
+  792 senses, 164 complete older word bodies, 36 component records,
+  ten complete related N2 kanji bodies, and twenty complete positive
+  public lexical captures (282 rendered lines, one dictionary authority).
+  The 177 original navigation labels are not 177 full-body reads.
+- The original 342 comparison requests retain unmatched exact forms
+  受血 and 日入り. The 340 matched requests gave 370 families /
+  729 senses; fourteen extra families / 63 senses and thirteen older
+  bodies were actually read before drafting. Prepared chunk receipts
+  remain separate from the later completed-inspection seal.
+- 夕立 is not evening-only. 夕日 names sun or sunlight, not just a
+  time of day. 悠々 uses adverbial と and attributive たる, not an
+  ordinary な-adjective; its literary extent sense is recognition scope.
+- 有料 describes a charging arrangement, not completed payment.
+  浴衣 has a whole-word ゆかた reading, not invented component readings.
+  湯気 is native 湯ゆ plus on 気ケ, voiced げ; do not call ケ a kun
+  reading or derive ゆげ from キ. Visible droplets and gaseous water
+  are distinguished without denying ordinary steam/vapor overlap.
+- 輸血 includes blood components and differs from donation/drawing.
+  輸送 covers people and goods, not only trade or mail. 油断's disputed
+  history is not resolved by a literal oil mnemonic.
+- ゆでる is kana-primary, transitive and ichidan. Its separate medicinal
+  steam sense treats a swelling, not medicinal material preparation.
+  湯飲み茶碗 is ゆのみぢゃわん; cup distinctions are not universal
+  handle/material rules.
+- 緩い's six sense records require separation: the regional negative
+  ゆるくない is difficult/hard, while separate ぬるい supplies lukewarm.
+  溶岩 includes cooled rock. 容器 includes packaging; 包装 is not
+  action-only. 用語 is not technical-jargon-only.
+- 要旨 comparisons include actual noun senses of 大体 and およそ,
+  not just their approximate-number uses. 幼児's specified Japanese
+  legal range is not a universal ordinary/international definition.
+  容積 genuinely overlaps 体積 and is not interior-only.
+  幼稚's critical adjective tone does not automatically transfer to
+  the institutional name 幼稚園.
+- Fourteen useful primary reciprocal N2 pairs are added, with old
+  kanji metadata and unrelated teaching preserved. Quiz declarations
+  are direct symmetric/nontransitive hypotheses for review, not a
+  live-quiz result or unrestricted synonym equivalence.
+- Initial reviewer inputs will use raw source rows and identity/sense
+  mappings without author mapping/source notes. Equal source access
+  will not be reported as equal actual reading depth.
+
 ## Batch 86 authoring observations
 
 - N2:1702-N2:1721 map to eighteen physical additions and exact

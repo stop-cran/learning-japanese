@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-86 review-closed.** The target is all 1,812 source rows,
+**Batches 01-86 review-closed; batch 87 drafted.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,720 rows are review-closed; none are drafted and 92 remain pending.
+The first 1,720 rows are review-closed; 20 are drafted and 72 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,36 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 87: N2:1722-N2:1741
+
+**Status:** draft; independent sequential GPT and Claude reviews pending.
+
+Twenty physical word additions and fourteen useful reciprocal N2 pairs
+are supported by actual inspection of 384 complete families / 792 senses,
+164 older word bodies, 36 component records, ten related N2 kanji bodies
+and twenty positive public lexical captures from one authority.
+The 177 original navigation labels are not full-body coverage.
+
+The original 342 comparison requests and two exact unmatched forms
+remain preserved. A final fourteen-family/thirteen-body extension
+was read before drafting, including secondary inattention, cooking,
+outline/gist, loose, slow and lenient uses.
+Preparation and completed-inspection receipts are distinct.
+
+Practical teaching distinguishes mixed-reading 湯気 from whole-word
+浴衣, 悠々と/たる from ordinary な-adjectives, culinary ゆでる from
+medicinal-steam treatment, ゆるい from ぬるい, ordinary/legal 幼児,
+cooled lava and 容積/体積 overlap. Baseline word teaching and
+metadata are unchanged.
+
+The [source packet](n2-vocabulary-batch-sources/batch-87.json)
+records raw rows, exact mappings, full principal/comparison families,
+component evidence, capture hashes and provisional quiz declarations.
+Both initial reviewers must receive the same frozen teaching snapshot,
+rubric and source access, with identity-only mapping derivatives rather
+than author mapping/source notes. Actual models, tool depth and
+complementary contributions remain to be established.
 
 ## Batch 86: N2:1702-N2:1721
 
