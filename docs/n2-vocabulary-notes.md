@@ -19,6 +19,52 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 75 authoring observations
+
+- N2:1482-N2:1501 draft eighteen new articles and reuse ふわふわ,
+  adding only `jlpt: 2` to its previously unclassified header.
+  Preserve its identity, reading, title, body, exclusions and image metadata.
+  The twenty rows map to nineteen articles because 増やす and 殖やす
+  share family 1602880 and one teaching page. Independent reviews are pending.
+- Actual pre-card inspection covers twenty principal-row records,
+  nineteen distinct families / 35 senses, 124 complete older articles,
+  eighteen component records and twenty public lexical captures from
+  one Digital Daijisen authority via Weblio.
+  The older-body union is 123 articles in fifteen complete renderings
+  plus a direct complete read of 次第, including its non-title program sense.
+- The 315 comparison families / 780 senses are prepared, not all
+  author-inspected. None of their thirteen renderings has been read.
+  Principal families are included in those totals, not additional.
+  The 187 original navigation labels are not 187 body inspections.
+- After drafting, read complete supplemental 次第 family 1316680 /
+  six senses, including order/program separately from its suffix uses.
+  Actual principal/supplement union is twenty families / 41 senses;
+  the expanded 316 families / 786 senses remain a preparation total.
+- Preserve blank source spellings. Use kana ぶらさげる as the stable
+  article and teach ぶら下げる explicitly. Preserve source 振舞う
+  while recognizing full-okurigana 振る舞う. Treat 殖やす as a
+  same-family rare spelling and asset/living-thing spelling tendency,
+  not an exceptionlessly separate verb.
+- Public sense numbering is not pinned JMdict numbering. 踏切's
+  public athletic takeoff explanation supplements the pinned
+  starting-line/scratch gloss; unrelated ブローチ cutting-tool,
+  麓 character, and historical 風呂敷 readings are not imported.
+- Distinguish freedom, price, freelance work and contextual abbreviations
+  in フリー; its no-charge use does not grant every license permission.
+  プリント distinguishes printing, a copy and a classroom handout;
+  プログラム distinguishes an event plan, booklet and computer program.
+  Actual ソフト software and 次第 program senses matter beyond titles.
+- 仮名/かな is a contracted unit in 振り仮名. 風呂/ふろ is a
+  lexical unit in 風呂敷, whose wago label does not establish the disputed
+  historical origin of 風呂. Component associations are not etymological proof.
+- No primary source character has an existing N2 kanji card, so this
+  batch requires no new reciprocal N2 pair or kanji edit. Link existing
+  lower-level components substantively; do not invent missing cards.
+- Draft quiz guards are symmetric pairwise hypotheses grounded in actual
+  labels and ordinary secondary senses, not transitive category cliques.
+  Neither author inspection nor future model agreement establishes
+  exhaustive uniqueness, native certification or measured bias reduction.
+
 ## Batch 74 authoring observations
 
 - N2:1462-N2:1481 add nineteen new articles and reuse 武士

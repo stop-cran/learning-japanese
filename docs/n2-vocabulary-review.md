@@ -5,8 +5,8 @@
 **Batches 01-74 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,480 rows are review-closed and 332 remain pending.
-None are drafted or unresolved.
+The first 1,480 rows are review-closed, batch 75's twenty rows are drafted,
+and 312 remain pending. None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,26 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 75: N2:1482-N2:1501
+
+**Status:** draft; independent GPT and Claude reviews, reconciliation
+and acceptance are pending.
+
+Eighteen new articles and reused ふわふわ teach twenty source rows.
+The two increase spellings share one article and family; no source row
+is dropped. Only `jlpt: 2` is added to ふわふわ, preserving its complete
+previous body and other metadata. No kanji edit or new reciprocal N2
+pair is required for this batch's source characters.
+
+Evidence: nineteen complete principal families / 35 senses, 124 actual
+older-body inspections, eighteen component records and twenty applicable
+public captures from one authority. The 315 prepared comparison families
+/ 780 senses are available, not a claim that all were inspected.
+See [batch sources](n2-vocabulary-batch-sources/batch-75.json).
+
+No reviewer findings, clean verdicts or model-complementarity results
+are claimed before the independent sessions finish.
 
 ## Batch 74: N2:1462-N2:1481
 
