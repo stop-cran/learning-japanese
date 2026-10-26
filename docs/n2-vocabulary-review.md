@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-82 review-closed.** The target is all 1,812 source rows,
+**Batches 01-83 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,640 rows are review-closed; twenty are drafted and 152 remain pending.
+The first 1,660 rows are review-closed; none are drafted and 152 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,9 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 83: N2:1642-N2:1661
 
-**Status:** draft; authenticated initial reviews and author corrections
-complete; original-session confirmations pending.
+**Status:** closed after authenticated blind initial reviews,
+author reconciliation, GPT first confirmation and bounded final
+acceptance by both original reviewer sessions.
 
 Nineteen physical additions and baseline reuse 群れ cover twenty rows.
 群れ gains sourced N2 only, preserving all prior teaching and twelve
@@ -67,13 +68,13 @@ reviewers. Authenticated reports are preserved verbatim:
 [Claude initial](n2-vocabulary-reviews/batch-83-claude-initial.md).
 The actual models were `gpt-6.1-sol` and `claude-opus-5.5`.
 
-GPT established no actionable defect. Claude's 目下 ambiguity and
+GPT initially established no actionable defect. Claude's 目下 ambiguity and
 恩恵 safeguard are adopted with actual runtime/English-label evidence;
 its proposed removal of 巡る's circle guards and 命ずる/望む is
-withdrawn by the author on complete families, actual older bodies and
-English secondary meanings. The original reviewers must still confirm
-or challenge these dispositions. Do not count author disagreement as
-reviewer withdrawal or a closed review.
+rejected by the author on complete families, actual older bodies and
+English secondary meanings. The original Claude final review explicitly
+withdraws both recommendations; that later reviewer withdrawal is
+distinct from the earlier author disagreement.
 
 Claude's optional 観光 hypothesis becomes one additional direct guard;
 author follow-through adds 利益 on its own actual "benefit" label.
@@ -96,13 +97,14 @@ outstanding tool call for GPT and four for Claude, contrary to the
 latter report's serial-execution claim. Preserve the report unchanged
 and disclose the discrepancy. No native-speaker certification,
 empirical quiz draws, general model ranking or measured bias reduction
-is claimed; both original-session confirmations remain pending.
+is claimed. The final stage below supersedes the earlier pending
+confirmation state without fabricating an interrupted Claude report.
 
 The authenticated [GPT first confirmation](n2-vocabulary-reviews/batch-83-gpt-confirmation.md)
 accepts the corrections but identifies two further direct 巡る gaps:
 見物 for sightseeing and サークル for bare "circle." Both complete
 families and actual unchanged articles support adding the safeguards.
-The final proposed snapshot declares 107 edges; actual cumulative
+The final accepted snapshot declares 107 edges; actual cumulative
 author inspection is 311 families / 667 senses and 162 older bodies.
 Credit these two follow-through findings to GPT, not its initial review.
 
@@ -114,7 +116,33 @@ children alive; explicit PID-based stops and a process query established
 exit before further review. No OOM is claimed. Bounded final dossiers
 replace the large-packet reread, with fresh current-card inspection
 and explicit unchanged-evidence carry-forward in the original sessions.
-Final acceptance remains pending.
+Both final reports accept the same committed teaching snapshot
+`72ca9f6dd4674f48e01af3912161a1972d890efe`:
+[GPT final](n2-vocabulary-reviews/batch-83-gpt-final.md) and
+[Claude final](n2-vocabulary-reviews/batch-83-claude-final.md).
+All twenty verdict rows are CLEAN in all three facets, with no
+remaining actionable defect or consequential unresolved claim.
+Both returned 39 required complete files and content-format lines
+18-103, including all current cards and four kanji; unchanged prior
+evidence is explicitly carried forward, not relabeled fresh reading.
+GPT made forty calls, Claude forty-one including one bounded title
+search. Each had maximum one outstanding and no repeated request;
+native shutdown ordering proves sequential processes. Both bounded
+execution receipts verify successful exit and zero edits.
+
+Claude accepts both new guards but rates their impact low, versus
+GPT's moderate 見物 and minor サークル findings. Its tentative
+ひとまず/さて/現状 title matches establish no further required guard.
+The author retains 利益 on actual benefit-label/full-family evidence,
+not the final optional observation's harmlessness rationale.
+
+Claude uniquely contributed the adopted initial 目下/恩恵 quiz signals,
+optional 観光 follow-through and two clarity improvements; 利益 is
+author follow-through. GPT uniquely supplied the later 見物/サークル
+findings. These are useful complementary observations in this sample,
+not measured model-bias reduction or a general ranking. Initial
+review depth differed, and complete returned records prove access,
+not comprehension or exhaustive correctness.
 
 ## Batch 82: N2:1622-N2:1641
 

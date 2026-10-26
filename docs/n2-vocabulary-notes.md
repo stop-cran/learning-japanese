@@ -69,9 +69,9 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   aim/target and sign/mark labels from complete existing bodies.
   Neither different titles nor thematic similarity decides safety.
   The confusable inventory has no matching named row for these forms.
-- Blind initial reviews are authenticated; author reconciliation is
-  implemented, but both original-session confirmations and closure
-  remain pending. This is not independent linguistic certification.
+- Blind initial reviews and both bounded original-session final
+  acceptances are authenticated; batch 83 is review-closed at
+  teaching snapshot `72ca9f6d`. This is not linguistic certification.
   No empirical quiz draws, native-speaker verification or measured
   model-bias reduction is claimed.
 - The first packaging assertion exposed twelve inherited 群れ guard
@@ -108,9 +108,10 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   senses and 127 existing bodies including 群れ, versus Claude
   20 / 33 and five bodies. GPT's reported 104 families undercounts
   the measured total by one; it is not an inflated-read claim.
-  Claude uniquely supplied the adopted quiz/clarity hypotheses;
+  Claude uniquely supplied the adopted initial quiz/clarity hypotheses;
   利益 is author follow-through, not another Claude discovery.
-  Its two proposed removals are unsupported by the fuller evidence.
+  Its two proposed removals are unsupported by the fuller evidence
+  and are explicitly withdrawn by the original Claude final review.
   This demonstrates bounded complementarity, not general model rank
   or measured bias reduction.
 - Reviewer processes were sequential and exited. Native events show
@@ -138,6 +139,27 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   not final process-exit proof. Final review uses small bounded dossiers,
   unchanged prior-evidence lineage and fresh current cards in the same
   original sessions; no full large-packet reread is permitted.
+- Both final reviews accept all twenty rows in all three facets.
+  Each returned 39 required complete files plus content-format lines
+  18-103, including every current card and four kanji. GPT made
+  forty calls; Claude made forty-one including one bounded title search.
+  Native maximum outstanding calls is one for each, with no repeated
+  request. Verified native shutdown ordering establishes sequential
+  processes; both bounded execution receipts show exit zero and no edits.
+  The parent monitor checks observed call/repetition/private-path bounds,
+  not comprehension or pre-read prevention.
+- Do not force severity agreement: GPT's 見物 issue is moderate and
+  サークル minor; Claude rates both low. Claude's final optional
+  ひとまず/さて/現状 title matches establish no additional required
+  目下 safeguard. Its description of 利益 as borderline/harmless
+  does not replace the author's actual English-label/full-family
+  justification. No actionable defect or consequential unresolved
+  claim remains in the bounded assignment.
+- Preserve the authenticated initial reports, GPT first confirmation,
+  interrupted Claude receipt and both final reports as distinct stages.
+  The two GPT-unique follow-through findings and earlier Claude-unique
+  signals show useful complementarity in this sample; they do not
+  measure bias reduction or certify exhaustive correctness.
 
 ## Batch 82 authoring observations
 
