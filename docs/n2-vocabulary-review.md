@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 78: N2:1542-N2:1561
 
-**Status:** author-corrected after authenticated independent initial reviews;
-original-session confirmations remain pending.
+**Status:** full original-session confirmations authenticated; one additional
+direct guard is author-adjudicated and awaits bounded reconfirmation.
 
 Seventeen new articles and three reuses cover twenty source rows.
 Source 堀 maps to stable 濠 with the same entry1522060 and readingほり;
@@ -63,8 +63,8 @@ Exact prompts, models, twenty TSV associations, format guidance and all
 
 Six articles receive localized changes: six direct quiz pairs, a
 source-qualified spelling clarification and an explicit particle contrast.
-There are 104 quiz declarations across the twenty articles; no prior
-guard is removed. Titles, readings, identities, levels, written-Han
+That correction has 104 quiz declarations across the twenty articles; no
+prior guard is removed. Titles, readings, identities, levels, written-Han
 metadata, raw rows, selected senses and all four kanji changes remain
 unchanged from the authored snapshot. The source index remains draft.
 Corrective rereads cover twenty-one complete families / 77 senses and
@@ -97,8 +97,36 @@ Limits are compared together: GPT also discusses the opening guard,
 so that supporting observation is not uniquely Claude's. Common access
 is not equal depth, equal comprehension, a model ranking or measured
 bias reduction. Hash/baseline checks are author-executed, not linguistic
-certification or runtime quiz enumeration. The batch does not yet count
-as review-closed coverage.
+certification or runtime quiz enumeration.
+
+Full confirmation snapshot: `f7271f70f15e702deaa369ae152a6fc2ba430635`.
+The [GPT confirmation](n2-vocabulary-reviews/batch-78-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-78-claude-confirmation.md)
+return all twenty rows CLEAN on all three facets. Both original sessions
+freshly return all twenty articles, six kanji, original and corrected
+patches, compact records, exact assigned TSV rows, five evidence renderings
+and twelve older bodies. Each has 53 authenticated complete required file
+returns, with a fresh mandatory union of 35 complete families / 105 senses
+and zero edits. GPT's twelve older bodies are returned as numbered
+all-line searches: every line, its order and its exact committed contents
+are checked, not merely the requested path. Claude discloses requesting
+the TSV header and rows together; the two reviewer processes themselves
+remain strictly sequential and have exited.
+
+Both accept the six guards and two teaching clarifications. Claude
+withdraws the tentative opening/angle removals and safety/festival/loss
+additions after complete evidence; GPT also supports those dispositions.
+GPT acknowledges its initial clean assessment missed the localized
+material/surface explanation. Both keep optional title, history, example
+and extra-backlink expansion nonblocking.
+
+Claude's confirmation Optional raises a further 干す/放る pair. Direct
+reinspection supports it: applicable Daijisen 干す explicitly includes
+ほうっておく and 無視する, while actual 放る teaches neglect and
+leaving someone alone. Add this seventh pair on 干す, giving 105
+declarations. It is not inherited through 無視, nor does it equate
+every drying, throwing or loss use. Both original sessions must inspect
+this bounded follow-up before acceptance; the batch is not yet closed.
 
 ## Batch 77: N2:1522-N2:1541
 

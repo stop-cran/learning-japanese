@@ -70,8 +70,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   All primary written Han remain in word metadata.
 - Author inspection and structural checks are not independent review,
   native-speaker certification, exhaustive quiz uniqueness or measured
-  model-bias reduction. Initial GPT and Claude reviews are authenticated;
-  original-session confirmations of the corrections remain pending.
+  model-bias reduction. Initial and full original-session confirmations
+  are authenticated; bounded reconfirmation of one further guard is pending.
 - Initial review adds six direct pairs: 放る/止める and /中止,
   朗らか/愉快, 干す/無視, and ぼろ/穴 and /失敗. The applicable
   Daijisen headings explicitly recognize ignoring and failure; do not
@@ -94,6 +94,15 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   those reuses. GPT supplied the six adopted quiz pairs; Claude supplied
   spelling and participant-marking clarifications. Compare all report
   sections before assigning unique credit, without ranking the models.
+- A low-confidence Optional observation can become an adopted correction
+  after direct evidence inspection. Claude's confirmation raises
+  干す/放る: the public 干す entry explicitly gives ほうっておく,
+  and the actual 放る title/body teach neglect and leaving someone alone.
+  Add that seventh pair directly, not by inheriting the shared 無視 guard.
+  The work/role qualification remains; it does not imply every loss,
+  throwing or drying use is shared. Reconfirm the bounded change with
+  both original sessions rather than treating prior clean verdicts as
+  acceptance of an edit they had not seen.
 
 ## Batch 77 authoring observations
 
