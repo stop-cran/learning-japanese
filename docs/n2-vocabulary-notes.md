@@ -19,6 +19,53 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 74 authoring observations
+
+- N2:1462-N2:1481 draft nineteen new articles and reuse 武士
+  unchanged, retaining its sourced N2 level and all baseline metadata
+  and body. No independent acceptance is claimed yet.
+- Preserve the four blank source spellings, source 附属 and its
+  same-family alternative 付属. 不通 is not the homophone 普通.
+- Actual pre-card reads cover twenty complete principal families,
+  115 complete older articles, all 33 component records, two related
+  N2 kanji bodies and twenty public lexical captures. The older-body
+  union is 112 articles in fifteen complete renderings plus three
+  direct reads: もぐもぐ, ぽつぽつ and 苦情.
+- The 415 comparison families / 1,030 senses are prepared evidence,
+  not a completed inspection claim. None of their seventeen complete
+  renderings has been read by the author. Principal families are
+  included in that preparation total. Original navigation labels
+  cover 210 candidates, not 210 inspected bodies.
+- After drafting, inspect complete supplemental もぐもぐ family
+  2009920 / three senses, including mumbling, chewing and wriggling,
+  with search-only katakana flags preserved. The actual principal/
+  supplemental union is 21 families / 45 senses, not the expanded
+  prepared union of 416 / 1,033. Keep the pre-card receipt unchanged.
+- All twenty public captures come from one Digital Daijisen
+  authority. Separate applicable modern lexical headings from
+  historical readings, garment homographs, character entries and
+  Buddhist terminology. Public numbering is not JMdict numbering.
+- 夫妻 is formal reference to someone else's couple, not a polite
+  self-reference. 塞がる is intransitive godan; 塞ぐ combines
+  physical transitive uses with intransitive 気がふさぐ.
+  ぶつかる is intransitive godan; ぶつける is transitive ichidan
+  and can describe accidental impact, not only intentional attacks.
+- Keep ordinary kana for ふざける/ぶつける. Rare ateji and
+  search-only spellings do not become preferred production forms.
+  ご無沙汰 acknowledges one's own silence; it is not necessarily
+  an accusation or a general word for neglecting any task.
+- 船便's primary ふなびん is kun-first mixed reading, stored
+  as wago with the limitation explicit. Alternate せんびん is
+  on+on. 吹雪 teaches whole-word ふぶき, not productive 雪=ぶき.
+  部首 is an indexing radical, not every glyph component.
+- Add primary reciprocal 符/符号 and reused 武/武士 links,
+  preserving kanji headers. Missing 塞/無/沙/汰/襖/附/属/蓋/騒
+  remain metadata/plain text, never invented cards or broken links.
+- Compare each actual title and ordinary secondary sense, including
+  complaints, low speech and simmering. Existing exclusions on a
+  neighboring word do not protect a new pair. These declarations
+  remain author hypotheses, not independent reviewer findings.
+
 ## Batch 73 authoring observations
 
 - N2:1442-N2:1461 draft nineteen new articles and reuse 増える

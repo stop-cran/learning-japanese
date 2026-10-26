@@ -5,8 +5,8 @@
 **Batches 01-73 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,460 rows are review-closed; 352 remain pending.
-None are drafted or unresolved.
+The first 1,460 rows are review-closed; batch 74's twenty rows are
+drafted and 332 remain pending. None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,46 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 74: N2:1462-N2:1481
+
+**Status:** drafted; independent sequential GPT and Claude review,
+reconciliation and confirmation are not yet complete.
+
+Nineteen new articles: 符号, 夫妻, 塞がる, 塞ぐ, ふざける,
+無沙汰, 部首, 襖, 附属, 蓋, 不通, ぶつかる, ぶつける,
+物騒, ぶつぶつ, 船便, 部品, 吹雪 and 父母.
+Reuse the existing 武士 article unchanged, preserving its N2
+classification, identity, reading, title, body and exclusions.
+
+The [packet](n2-vocabulary-batch-sources/batch-74.json) preserves
+twenty raw source rows, complete principal families, selected
+senses and separately qualified additional recognition. Blank
+source spellings and 附属 are retained; 付属 is the same lexical
+family, whereas same-reading 普通 is not a mapping for 不通.
+
+Actual pre-card author reads cover twenty complete principal
+families, 115 complete older articles, all 33 component records,
+two related N2 kanji bodies and twenty inspected public captures
+from one Digital Daijisen authority. Fifteen older-body renderings
+contain 112 complete articles; three further direct bodies are
+もぐもぐ, ぽつぽつ and 苦情. The 415 comparison families /
+1,030 senses are prepared, not all inspected: zero of their
+seventeen complete renderings have been read. Preparation,
+navigation labels and content hashes do not prove comprehension.
+After drafting, the complete supplemental もぐもぐ family
+2009920 / three senses is inspected. The actual principal/
+supplemental family union is 21 / 45, not the expanded prepared
+union 416 / 1,033. The pre-card completion receipt is unchanged.
+
+Add reciprocal 符/符号 and reused 武/武士 links, without changing
+either kanji header. No missing kanji cards or fabricated links
+are introduced. Quiz guards are pairwise author hypotheses;
+independent reviewers have not yet adjudicated them.
+
+Coverage is **1,460 closed / 20 draft / 332 pending /
+0 unresolved**, mapped to **1,466 distinct articles:
+1,359 new / 107 reused**. The entire expansion remains open.
 
 ## Batch 73: N2:1442-N2:1461
 
