@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-81 review-closed.** The target is all 1,812 source rows,
+**Batches 01-82 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,620 rows are review-closed; twenty are drafted and 172 remain pending.
+The first 1,640 rows are review-closed; none are drafted and 172 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,9 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 82: N2:1622-N2:1641
 
-**Status:** corrected after authenticated blind initial reviews,
-first confirmations and follow-ups; final bounded acceptance pending.
+**Status:** closed after authenticated blind initial reviews,
+full first confirmations, bounded follow-ups and final acceptance
+by both original reviewer sessions.
 
 Eighteen physical additions and baseline reuses 向かう and 蒸す cover
 twenty source rows. Source 向う/むかう is explicitly recognized without
@@ -114,6 +115,7 @@ five older bodies and live plain/face evidence. Declarations rise
 from 130 to 133 without changing any title, reading, level or body.
 These are Claude-unique confirmation observations, not initial catches.
 
+Historical first-confirmation adjudication, superseded for steam below:
 Claude's unverified steam follow-up does not establish an actionable
 defect: the complete 蒸す title says "steam food; be hot and humid,"
 not bare noun steam. Complete 蒸気/水蒸気 bodies, precise pinned
@@ -145,7 +147,46 @@ identity, level, title, reading or body. Assigned declarations stay
 this scope. No automatic steam-topic clique is asserted.
 Follow-up processes were sequential; internal maxima were GPT one
 and Claude four, with the overlap honestly disclosed. Final bounded
-acceptance by both original sessions remains pending.
+acceptance was then pending.
+
+The final acceptances of `4b0f6c4648924c6c73b0e4070787a26593546e4b`
+are archived: [GPT](n2-vocabulary-reviews/batch-82-gpt-acceptance.md)
+and [Claude](n2-vocabulary-reviews/batch-82-claude-acceptance.md).
+Native records authenticate the exact common prompt, actual original
+models/sessions, all fourteen mandatory complete files, twenty-row
+facet tables, successful plain/face/steam fetches and zero edits.
+Both explicitly resolve the shared steam finding and find no
+actionable defect or consequential unresolved claim in scope.
+Both final rounds are internally serial, with nineteen GPT calls
+and eighteen Claude calls; GPT shuts down before Claude's prompt.
+
+This last acceptance freshly checks the three assigned cards
+無地, 向かう and 蒸す, five related bodies, eight complete pinned
+families / nineteen senses and the new two-line patch. Seventeen
+unchanged assigned rows and mapping/component/reciprocity assessments
+are inherited from the full first confirmations, not freshly reread.
+Cumulative authenticated complete pinned-family unions are GPT
+378 / 964 senses and Claude 49 / 116, not the sum of overlapping
+rounds. Distinct existing bodies including both reuses are 172 and
+27 respectively. Actual author unions remain 378 / 964 and 172
+older bodies; no historical pre-card receipt is retroactively enlarged.
+
+All adopted findings are resolved and the weather-removal suggestion
+withdrawn; optional predicate 見慣れる, 未満/以内 and 無数 examples
+remain nonblocking. Other historical plain/face pairs are deferred,
+not certified. The differing first verdicts and incomplete steam
+disposition remain part of the record. Multi-model review provided
+complementary useful findings in this sample, not measured bias
+reduction or a model ranking.
+
+Closure changes documentation and status only, preserving the
+accepted teaching and manifest. Coverage is **1,640 closed / 0 draft /
+172 pending / 0 unresolved**, with 4,778 physical word articles,
+3,273 preserved baseline identities/readings/titles/exclusions,
+335 generic reciprocal N2 pairs and 341 in the explicitly scoped
+union including six historical pairs. All 1,812 source rows and raw
+fields remain retained. No empirical quiz, frequency or native-speaker
+naturalness guarantee is claimed.
 
 ## Batch 81: N2:1602-N2:1621
 

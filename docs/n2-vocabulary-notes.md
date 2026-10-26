@@ -110,7 +110,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   actually inspected. Titles and bodies stay unchanged; declarations
   become 133. This is a useful Claude-unique confirmation contribution,
   not a reason to relabel its initial findings or the first GPT verdict.
-- The steam follow-up does not establish a missing edge: 蒸す's
+- Historical first-confirmation disposition, superseded below:
+  the steam follow-up does not establish a missing edge: 蒸す's
   full title says "steam food; be hot and humid," unlike the bare
   noun steam on 蒸気/水蒸気. Actual bodies, pinned entries and
   American Heritage distinguish the action from the substance.
@@ -133,7 +134,28 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   Both follow-ups are authenticated with fourteen complete mandatory
   files each and no edits. GPT was internally serial; Claude disclosed
   one four-view overlap, matching native events. Final original-session
-  acceptance of the two steam edges remains pending.
+  acceptance of the two steam edges was then pending.
+- Both final original-session acceptances of `4b0f6c4` are authenticated:
+  fourteen mandatory complete files each, successful plain/face/steam
+  returns, exact twenty-row facet tables and no edits. Both resolve
+  the steam finding without regression; neither retains an actionable
+  defect or consequential unresolved claim in scope. This last round
+  freshly checks three assigned cards and five related bodies while
+  inheriting seventeen unchanged assigned rows and mapping/component
+  checks from the full first confirmations. Do not describe that as
+  a fresh full-batch read or another blind review.
+- Final reviewers are serial both within and between processes:
+  GPT nineteen calls, Claude eighteen, maximum one each. Across all
+  four rounds the distinct pinned-family unions are GPT 378 / 964
+  senses and Claude 49 / 116; existing-body unions including both
+  reuses are 172 and 27. These measured unions are not sums of the
+  stage counts. Author unions remain 378 / 964 and 172 older bodies.
+  Keep all differing verdicts, exact native reports and the explicit
+  supersession of the earlier steam dismissal.
+- Batch 82 is review-closed: 1,640 rows closed, 172 pending, none
+  drafted or unresolved. Closure changes no accepted content or
+  manifest. The original three optional expansions and unrelated
+  historical plain/face pairs stay outside the closure requirement.
 
 ## Batch 81 authoring observations
 
