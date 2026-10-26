@@ -22,10 +22,12 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 ## Batch 75 authoring observations
 
 - N2:1482-N2:1501 draft eighteen new articles and reuse ふわふわ,
-  adding only `jlpt: 2` to its previously unclassified header.
-  Preserve its identity, reading, title, body, exclusions and image metadata.
+  initially adding only `jlpt: 2` to its previously unclassified header.
+  That authored snapshot preserves its identity, reading, title, body,
+  exclusions and image metadata; the correction below supersedes only exclusions.
   The twenty rows map to nineteen articles because 増やす and 殖やす
-  share family 1602880 and one teaching page. Independent reviews are pending.
+  share family 1602880 and one teaching page. Both independent initial
+  reviews are complete; original-session confirmations are pending.
 - Actual pre-card inspection covers twenty principal-row records,
   nineteen distinct families / 35 senses, 124 complete older articles,
   eighteen component records and twenty public lexical captures from
@@ -48,7 +50,7 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - Public sense numbering is not pinned JMdict numbering. 踏切's
   public athletic takeoff explanation supplements the pinned
   starting-line/scratch gloss; unrelated ブローチ cutting-tool,
-  麓 character, and historical 風呂敷 readings are not imported.
+  麓 character, and separate 風呂敷 readings are not imported.
 - Distinguish freedom, price, freelance work and contextual abbreviations
   in フリー; its no-charge use does not grant every license permission.
   プリント distinguishes printing, a copy and a classroom handout;
@@ -64,6 +66,34 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   labels and ordinary secondary senses, not transitive category cliques.
   Neither author inspection nor future model agreement establishes
   exhaustive uniqueness, native certification or measured bias reduction.
+- Initial GPT and Claude independently identify the same pre-existing
+  ふわふわ/ソフト softness gap. Add that direct pair and, after actual
+  full-family/body inspection, ふわふわ/浮く and /浮かぶ floating pairs.
+  This is an explicit baseline exclusion correction, not a regression
+  from the level addition. Preserve the entire reused body and other metadata.
+- GPT alone identifies excessive 風呂敷/包み and /包む exclusions.
+  Complete applicable families distinguish the cloth, parcel and action;
+  remove those two guards, retaining the substantive comparisons.
+- Claude's quantity-coverage finding adds a contrastive 従業員を十人に
+  増やす example beside 二人増やす: resulting total versus added amount.
+  Its tentative 振舞う/接する suggestion is adopted for bare-title
+  "treat people" ambiguity, without claiming unrestricted Japanese substitution.
+- Adopt five bounded wording suggestions: dictionary spelling ぶら下げる,
+  separate ブローチ homograph, unqualified ふろしき pronunciation,
+  着る for ブラウス, and railway ホーム versus the home-related loanword.
+  The public ふるしき heading says 音変化, not chronological primacy;
+  correct the source note without rewriting the original frozen row record.
+- Corrective reads cover ten complete families / 32 senses and six
+  unchanged older bodies. All ten families were already prepared;
+  actual principal/supplement/corrective union is 28 families / 70 senses.
+  接する is one additional body identity, bringing the author union to 125.
+- Native initial returns authenticate all nineteen articles, twenty
+  mappings and assigned TSV rows, complete required evidence and zero edits.
+  GPT reads 126 distinct unassigned older bodies / 145 total word bodies;
+  Claude reads four / 23. Their actual depths differ despite equal access.
+  Compare findings, optional notes, limits and row notes before crediting
+  complementarity; the floating follow-through to 浮かぶ is the author's,
+  not a new independent reviewer discovery or measured bias reduction.
 
 ## Batch 74 authoring observations
 

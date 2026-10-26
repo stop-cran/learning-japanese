@@ -28,13 +28,14 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 75: N2:1482-N2:1501
 
-**Status:** draft; independent GPT and Claude reviews, reconciliation
-and acceptance are pending.
+**Status:** author-corrected draft; both independent initial reviews are
+complete. Original-session confirmations and acceptance are pending.
 
 Eighteen new articles and reused ふわふわ teach twenty source rows.
 The two increase spellings share one article and family; no source row
-is dropped. Only `jlpt: 2` is added to ふわふわ, preserving its complete
-previous body and other metadata. No kanji edit or new reciprocal N2
+is dropped. The initial snapshot adds only `jlpt: 2` to ふわふわ;
+the correction additionally declares three reviewed direct quiz pairs,
+preserving its complete previous body and other metadata. No kanji edit or new reciprocal N2
 pair is required for this batch's source characters.
 
 Evidence: nineteen complete principal families / 35 senses, 124 actual
@@ -43,8 +44,36 @@ public captures from one authority. The 315 prepared comparison families
 / 780 senses are available, not a claim that all were inspected.
 See [batch sources](n2-vocabulary-batch-sources/batch-75.json).
 
-No reviewer findings, clean verdicts or model-complementarity results
-are claimed before the independent sessions finish.
+Initial snapshot: `77ffbe55d56c925eba2343f9be59b9dcb2daf843`.
+Models: GPT-6.1 Sol and Claude Opus 5.5, sequential isolated sessions.
+Read the [GPT report](n2-vocabulary-reviews/batch-75-gpt-initial.md) and
+[Claude report](n2-vocabulary-reviews/batch-75-claude-initial.md).
+Native prompts, actual models, final messages, exact twenty TSV rows,
+29 complete required file returns per reviewer and zero edits are authenticated.
+These are author-executed provenance checks, not reviewer Git execution.
+
+| Observation | Adjudication before confirmation |
+| --- | --- |
+| Shared ふわふわ/ソフト gap: GPT-01 and Claude F2 | Add the direct pair. It predates the level change; the pinned ソフト gloss is exactly "soft", with gentle/mild elaboration in the existing body. |
+| GPT-02: excessive 風呂敷/包み and /包む guards | Remove both. Complete families distinguish cloth, parcel and action, not merely their POS. |
+| Claude F1: 増やす quantity coverage | Add a resulting-total に example beside the added-amount example, fulfilling the mapping note. |
+| Claude tentative floating and 接する guards | Add ふわふわ/浮く and 振舞う/接する after complete actual records/bodies. Author follow-through also adds the direct ふわふわ/浮かぶ pair; no transitive inference. |
+| Claude five wording suggestions | Clarify dictionary spelling, ブローチ homograph, ふろしき reading, 着る and railway ホーム. Do not infer chronological primacy from 音変化. |
+| Other optional expansions | Defer extra spellings, compounds, idioms, program-verb and manner examples; no demonstrated prerequisite gap requires them. |
+
+Corrective evidence: ten complete families / 32 senses, all already prepared,
+and six full unchanged older bodies. Actual author family union is 28 / 70;
+the older-body union is 125. Prepared availability remains 316 families /
+786 senses, not a completed read of all families.
+
+Useful contributions are sample-specific: one shared softness gap,
+GPT-only excess-exclusion finding, Claude-only quantity coverage and
+adopted wording/tentative guard observations. Compare every report section.
+GPT has 126 authenticated unassigned older-body identities / 145 total word
+bodies; Claude has four / 23. Equal access is not equal inspection or
+comprehension, measured model-bias reduction, ranking or native certification.
+
+No all-CLEAN confirmation is claimed yet.
 
 ## Batch 74: N2:1462-N2:1481
 
