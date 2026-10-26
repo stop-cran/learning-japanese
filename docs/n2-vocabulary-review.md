@@ -5,7 +5,7 @@
 **Batches 01-83 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,660 rows are review-closed; none are drafted and 152 remain pending.
+The first 1,660 rows are review-closed; 20 are drafted and 132 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,39 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 84: N2:1662-N2:1681
+
+**Status:** drafted; blind sequential GPT and Claude reviews pending.
+
+Twenty new articles cover twenty rows. Source 面倒臭い maps to
+面倒くさい with explicit spelling and reading recognition. 潜る
+retains the supplied もぐる/1609715 identity and malformed raw gloss
+separately from dictionary-backed diving/hiding teaching and the
+distinct くぐる family. Selected and additional senses remain distinct.
+
+Three primary reciprocal N2 pairs connect 免税/税, 面接/接 and 木材/材.
+No baseline word is changed; all prior kanji teaching is preserved
+apart from exact reciprocal examples and source references.
+
+Actual pre-card inspection totals 354 complete principal/comparison
+families / 784 senses, 194 older word bodies, 30 components and three
+complete kanji bodies. The original selected 350/773/184 corpus,
+five additional bodies, and final four-family/five-body extension
+are separately recorded. Extraction is not inspection: not all 465
+initially prepared families are claimed read. The 270 original labels
+and 112 supplemental title hits are navigation rather than full bodies.
+
+Twenty applicable public captures use one Digital Daijisen authority
+through Weblio. Relevant readings and lexical headings are separated
+from unrelated works and homographs. Missing standalone comparison
+お品書き remains explicitly excluded without modifying the original request.
+
+The [source packet](n2-vocabulary-batch-sources/batch-84.json) preserves
+raw rows, complete families, selected teaching, actual-read receipts,
+limitations and provisional pairwise quiz declarations. A blind
+reviewer derivative omits author guard rationale. No completed review,
+model contribution, empirical quiz exercise or bias reduction is claimed.
 
 ## Batch 83: N2:1642-N2:1661
 

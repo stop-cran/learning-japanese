@@ -19,6 +19,66 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 84 authoring observations
+
+- N2:1662-N2:1681 map to twenty new articles, with no baseline
+  reuse. Source 面倒臭い is explicitly recognized in 面倒くさい,
+  retaining めんどうくさい and recognizing めんどくさい.
+- The initial selected inspection was 350 complete families /
+  773 senses, 184 full older bodies, 30 component records and three
+  complete kanji bodies. Five more older bodies were actually read
+  before the first inspection seal, giving 189. Final direct degree/
+  absurdity comparisons then added four complete families / eleven
+  senses and five complete bodies before drafting. The actual
+  pre-card union is 354 families / 784 senses and 194 older bodies.
+  Do not relabel all 465 initially extracted families as inspected.
+- All 270 initial navigation labels and 112 supplementary title
+  hits were read as navigation, not as 382 complete bodies.
+  The original 422-form request is retained; only missing standalone
+  お品書き was explicitly omitted from extraction. No source row
+  depends on that comparison-only form.
+- All twenty public wrappers were read. They supply applicable
+  Digital Daijisen entries through Weblio, one authority rather
+  than twenty independent authorities. Distinguish めまい's lexical
+  heading from works, 木材's もくざい from きざい, and the separate
+  くぐる / むぐる / もぐる headings under 潜る.
+- Preserve raw source fields, including 潜る's malformed "drive"
+  and truncated "go undergroun." Supplied もぐる/1609715 selects
+  diving and hiding; getting underneath is separately recognized.
+  Do not merge 1609710/くぐる's full sense list into that identity.
+  Written-only initial quiz prompts can still expose another-reading
+  ambiguity without changing the correct source mapping.
+- めちゃくちゃ's intensifier can be favorable. めっきり often
+  marks perceptible change but is not categorically restricted to
+  change. めでたい's celebration and naive uses need separate
+  contexts. Do not make every personal glad feeling a celebration.
+- Recognize the planned-activity and computing uses of メニュー,
+  rough-estimate 目安, child/luck 儲ける and apologetic-gratitude
+  申し訳ない without independently labelling each additional sense N2.
+  Public unexpected-advantage 儲かる and dependent もたれる uses
+  remain separately attributed, not invented pinned sense numbers.
+- モーター is not exclusively electric; 面接 is not categorically
+  barred from all non-job questioning. Ordinary 申し訳ありません /
+  ございません are not ruled ungrammatical by fiat. Keep modern
+  儲ける / 設ける distinct without denying their sourced origin link.
+- Add three primary reciprocal N2 pairs: 免税/税, 面接/接 and
+  木材/材. Keep all primary written Han in metadata, and preserve
+  unrelated kanji teaching and readings. Missing 免/臭/儲/潜 cards
+  are not fabricated; kana-primary spellings do not acquire alternate
+  spelling Han metadata.
+- Draft exclusions are direct, symmetric and nontransitive.
+  Assess complete actual meanings and both quiz directions; no
+  inherited clique or blanket POS/transitivity exemption is used.
+  Measured 面積 is not generic region or volume; 目次 is not every
+  index or listed item; motors are not every machine. Qualified
+  ritual thanks and mere stomach/digestion topics are not copied
+  into broad apology or leaning guard lists. These are provisional
+  author judgments, not independent reviewer certification.
+- The confusable inventory has no matching named row for these
+  forms. No native-speaker certification, empirical quiz draws,
+  exhaustive correctness, or measured model-bias reduction is claimed.
+  Blind sequential GPT and Claude review remains pending.
+
 ## Batch 83 authoring observations
 
 - N2:1642-N2:1661 map to nineteen physical additions and one
