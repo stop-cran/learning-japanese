@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-74 review-closed.** The target is all 1,812 source rows,
+**Batches 01-75 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,480 rows are review-closed, batch 75's twenty rows are drafted,
-and 312 remain pending. None are unresolved.
+The first 1,500 rows are review-closed, and 312 remain pending.
+None are drafted or unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -28,15 +28,15 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 75: N2:1482-N2:1501
 
-**Status:** author-corrected draft; both independent initial reviews are
-complete. Original-session confirmations and acceptance are pending.
+**Status:** closed after authenticated independent initial reviews,
+evidence-based corrections and all-CLEAN confirmations by both original sessions.
 
 Eighteen new articles and reused ふわふわ teach twenty source rows.
 The two increase spellings share one article and family; no source row
 is dropped. The initial snapshot adds only `jlpt: 2` to ふわふわ;
 the correction additionally declares three reviewed direct quiz pairs,
-preserving its complete previous body and other metadata. No kanji edit or new reciprocal N2
-pair is required for this batch's source characters.
+preserving its complete previous body and other metadata. No kanji edit or
+new reciprocal N2 pair is required for this batch's source characters.
 
 Evidence: nineteen complete principal families / 35 senses, 124 actual
 older-body inspections, eighteen component records and twenty applicable
@@ -52,7 +52,7 @@ Native prompts, actual models, final messages, exact twenty TSV rows,
 29 complete required file returns per reviewer and zero edits are authenticated.
 These are author-executed provenance checks, not reviewer Git execution.
 
-| Observation | Adjudication before confirmation |
+| Observation | Final adjudication accepted by both original reviewers |
 | --- | --- |
 | Shared ふわふわ/ソフト gap: GPT-01 and Claude F2 | Add the direct pair. It predates the level change; the pinned ソフト gloss is exactly "soft", with gentle/mild elaboration in the existing body. |
 | GPT-02: excessive 風呂敷/包み and /包む guards | Remove both. Complete families distinguish cloth, parcel and action, not merely their POS. |
@@ -73,7 +73,27 @@ GPT has 126 authenticated unassigned older-body identities / 145 total word
 bodies; Claude has four / 23. Equal access is not equal inspection or
 comprehension, measured model-bias reduction, ranking or native certification.
 
-No all-CLEAN confirmation is claimed yet.
+Accepted teaching snapshot: `dd61b410bb42ab827708111fcf9fd0a347f927ce`.
+Read the [GPT confirmation](n2-vocabulary-reviews/batch-75-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-75-claude-confirmation.md).
+Both freshly reread all nineteen articles, complete compact records,
+all twenty assigned TSV rows, three full evidence renderings and six
+required older bodies. Each has 37 authenticated complete required
+native file returns and zero edits. All twenty rows are CLEAN on all
+three facets; mappings, components, no-new-N2-pairs and the exact permitted
+baseline change are separately accepted.
+
+GPT withdraws the inaccurate expansion of pinned 1075500:1 beyond "soft"
+and the stronger historical-reading shorthand. Claude accepts the cloth
+guard removals with medium confidence, preserving a low-risk, nonactionable
+bare-verb English-label concern; it also reads 軽い completely and declines
+a lightweight-versus-floating-lightly guard. No actionable defect or
+consequential unresolved teaching claim remains within the agreed scope.
+
+Cumulative authenticated complete unassigned older-body identities are
+127 for GPT and nine for Claude. Neither access nor these counts establishes
+comprehension or comparative model quality. Closure changes only status,
+reports and evidence, not accepted teaching or its manifest.
 
 ## Batch 74: N2:1462-N2:1481
 

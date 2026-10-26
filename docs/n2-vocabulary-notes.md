@@ -21,13 +21,15 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 ## Batch 75 authoring observations
 
-- N2:1482-N2:1501 draft eighteen new articles and reuse ふわふわ,
+- N2:1482-N2:1501 add eighteen new articles and reuse ふわふわ,
   initially adding only `jlpt: 2` to its previously unclassified header.
   That authored snapshot preserves its identity, reading, title, body,
   exclusions and image metadata; the correction below supersedes only exclusions.
   The twenty rows map to nineteen articles because 増やす and 殖やす
-  share family 1602880 and one teaching page. Both independent initial
-  reviews are complete; original-session confirmations are pending.
+  share family 1602880 and one teaching page. Both original sessions accept
+  `dd61b410bb42ab827708111fcf9fd0a347f927ce`: all twenty rows CLEAN on
+  correctness, scoped coverage and comprehensibility; mappings, components
+  and the exact permitted baseline correction assessed separately.
 - Actual pre-card inspection covers twenty principal-row records,
   nineteen distinct families / 35 senses, 124 complete older articles,
   eighteen component records and twenty public lexical captures from
@@ -94,6 +96,16 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   Compare findings, optional notes, limits and row notes before crediting
   complementarity; the floating follow-through to 浮かぶ is the author's,
   not a new independent reviewer discovery or measured bias reduction.
+- Both confirmations freshly reread the nineteen articles, complete
+  compact records, assigned TSV rows, three full evidence renderings
+  and six required older bodies: 37 authenticated complete required
+  native returns each, zero edits. Cumulative unassigned older-body
+  identities are 127 for GPT and nine for Claude, not equal-depth inspection.
+- GPT withdraws inaccurate pinned-gloss and historical-reading shorthand.
+  Claude retains medium confidence on cloth-guard removal and a
+  low-risk, nonactionable English bare-verb-label qualification; its
+  complete 軽い read does not justify equating weight with floating lightly.
+  Preserve these limits rather than presenting agreement as certification.
 
 ## Batch 74 authoring observations
 
