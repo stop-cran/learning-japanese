@@ -66,6 +66,26 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   Author reads and structural audits are not independent model review,
   native certification, exhaustive quiz uniqueness or measured bias reduction.
 
+### Batch 76 initial-review reconciliation
+
+- Both initial sessions are authenticated against `c1563f9c47fa9af139ef149893b4c5e4e9be3317`,
+  with 35 complete required native file returns each and zero edits.
+  Corrections are authored; original-session confirmations are still pending.
+- Adopt six direct guards and remove the two stationery/tool-category guards.
+  Clarify the noun-modifying による pattern, 隔てる participant roles, fountain
+  title, 文芸 contrast and three small learner-facing prose points.
+- Actually read eighteen complete corrective families / 36 senses and ten
+  unchanged older bodies. Cumulative actual scope is 208 families / 514 senses
+  and 129 older bodies; prepared availability is 431 / 981, not all read.
+  Applicable Bunpro attachment guidance supplements the one frozen Japanese
+  dictionary authority. Different-reading じまい remains distinct from しまい.
+- Claude's comment that "be shut out" is absent from the source is contradicted
+  by the preserved raw CSV gloss. It is not presented as a pinned JMdict gloss.
+  Complete 平行 and くぼむ families resolve the reported ID-access limitation.
+- Both reports identify 閉会/仕舞い. Their other useful observations differ,
+  but scope and reading depth differ too; compare every report section and do
+  not infer measured bias reduction or a model ranking.
+
 ## Batch 75 authoring observations
 
 - N2:1482-N2:1501 add eighteen new articles and reuse ふわふわ,

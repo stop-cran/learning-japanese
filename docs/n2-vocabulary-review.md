@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 76: N2:1502-N2:1521
 
-**Status:** drafted; independent sequential GPT and Claude reviews and
-evidence-based reconciliation are pending. Drafts are not reviewed coverage.
+**Status:** drafted; independent sequential initial reviews are complete.
+Corrections await both original-session confirmations. Drafts are not closed coverage.
 
 Twenty new articles teach twenty source rows. Five reciprocal N2 kanji pairs
 link 文芸/芸, 分布/布, 分量/量, 並行/並 and 兵隊/兵; their kanji metadata
@@ -41,6 +41,22 @@ older word bodies, 31 component records and five related kanji bodies.
 The 429 prepared families / 976 senses are available, not all inspected.
 Twenty applicable public lexical captures come from one dictionary authority.
 See [batch sources](n2-vocabulary-batch-sources/batch-76.json).
+
+Initial snapshot: `c1563f9c47fa9af139ef149893b4c5e4e9be3317`.
+Models: GPT-6.1 Sol and Claude Opus 5.5, sequential isolated sessions.
+Read the [GPT report](n2-vocabulary-reviews/batch-76-gpt-initial.md) and
+[Claude report](n2-vocabulary-reviews/batch-76-claude-initial.md).
+Exact prompts, models, complete twenty TSV rows, 35 complete required native
+file returns each and zero edits are authenticated by author-executed checks.
+
+Eleven new cards receive localized corrections: six direct guard additions,
+two category-only guard removals, explicit attachment/participant patterns,
+a more precise fountain title and clearer comparison prose. No older word,
+kanji, raw source or selected-sense mapping changes. Both reports identify
+the missing 閉会/仕舞い pair; other useful contributions differ.
+Complete corrective evidence brings actual author scope to 208 families /
+514 senses and 129 older bodies; 431 prepared families / 981 senses are availability.
+Original-session confirmations and final reconciliation are pending.
 
 ## Batch 75: N2:1482-N2:1501
 
