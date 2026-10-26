@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 77: N2:1522-N2:1541
 
-**Status:** draft; independent sequential GPT and Claude review is pending.
+**Status:** corrected draft; authenticated independent initial reviews are
+complete, and sequential original-session confirmations are pending.
 
 Twenty new articles teach twenty source rows. Raw 庖丁 maps to the common
 same-entry headword [包丁](../words/包丁.md), with explicit alternate-spelling
@@ -44,10 +45,44 @@ and twenty-two public lexical captures from one dictionary authority.
 The larger 497 families / 1,083 senses are prepared availability, not completed
 inspection. See [batch sources](n2-vocabulary-batch-sources/batch-77.json).
 
-All source mappings, examples, constructions, direct quiz guards, component
-associations and reciprocal links remain independently reviewable.
-Author inspection and structural checks do not close the batch or constitute
-independent linguistic review.
+Initial snapshot: `d30143529a24516ba47ea82f15c0c3d66a1a98ad`.
+Models: GPT-6.1 Sol and Claude Opus 5.5, sequential isolated sessions.
+Read the [GPT report](n2-vocabulary-reviews/batch-77-gpt-initial.md) and
+[Claude report](n2-vocabulary-reviews/batch-77-claude-initial.md).
+Both have authenticated exact prompts, model identity, twenty TSV rows,
+39 complete required native file returns and zero edits.
+GPT reports all twenty rows CLEAN; Claude flags 包帯 and the mapping note.
+
+Six new cards receive localized corrections. Two direct guards are added;
+no older word, kanji, title, raw source field or selected-sense mapping changes.
+Thirteen complete corrective families / nineteen senses and six older bodies
+were reread, without enlarging the existing actual inspection unions.
+Two frozen 英辞郎/EDP returns support the bandage noun constructions; they
+are one additional authority, not two independent dictionaries.
+
+| Observation | Author reconciliation; confirmation pending |
+| --- | --- |
+| Claude B77-01: 包帯 | Teach attested に包帯をする and に包帯を巻く, with a wearing example. Remove the unsupported ordinary-production emphasis on 腕を包帯する; retain dictionary-listed transitive recognition. Do not infer invalidity or rarity from missing スル markers. |
+| Claude B77-02: mapping note | Clarify "share entry 1515530 and reading ほうちょう" in the authoritative TSV and packet. Frozen initial evidence remains unchanged. |
+| Claude Limits: 方針/対策 | Add a direct guard for defensible strategy/course-of-action labels, preserving the problem-directed nuance of 対策. |
+| Claude Limits: 膨大/広々 | Add a direct extent-label guard, retaining sheer scale versus open spaciousness; do not misreport the older title as "extensive." |
+| Claude Limits: 包装/小包 and 法則/支配 | No pair added: wrapping/outer wrapper differs from the parcel itself; rule/law differs from domination/governance. Neither category association nor an English homograph establishes a shared meaning. |
+| Claude Limits: 防止/ストップ and /ブレーキ | Retain the limited stopping/checking guards, not a vehicle or action-category clique. The latter has an actual figurative restraint sense; these are not claims of unrestricted substitution. |
+| Optional prose | Adopt clearer 別々 attachment, event-noun wording in 防止 and scissors comparison in ペンチ. Defer wasei classification, stronger toilet-default claims and compact source-note spacing; no demonstrated prerequisite defect requires them. |
+| Report/source qualifications | `teachingSpelling` is committed source-alias recognition, not the canonical headword. The new Kotobank return exposes no Daijisen definition. Recognized transitive POS does not establish frequency or the draft collocation's naturalness. |
+
+Initial actual depths differ: GPT reads 310 complete families / 669 senses
+and 136 older bodies; Claude reads 23 / 34 and three older bodies.
+Prepared comparison chunks returned completely are thirty versus none.
+GPT supplies the broad clean assessment; Claude supplies useful construction,
+mapping, prose and guard observations, including those in Optional and Limits.
+This is not equal-depth review, a model ranking or measured bias reduction.
+Preserve GPT's report typo 编む: the article correctly uses 編む.
+Claude's "links only" summary is imprecise because some reading-row examples
+were added; the actual patch remains authoritative.
+
+Author inspection and structural checks do not close the batch. All findings,
+new guards and source qualifications await the original reviewers' assessment.
 
 ## Batch 76: N2:1502-N2:1521
 

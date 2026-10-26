@@ -71,6 +71,28 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - Missing component and comparison cards are not fabricated. Keep all primary
   written Han characters in metadata, including 箒, 荘, 鏡, 坊, 膨 and 丁,
   without creating broken links. Character associations are not etymology.
+- Initial GPT review is clean; Claude identifies 包帯 construction coverage
+  and an unclear spelling-mapping note. Positive 英辞郎/EDP entries support
+  包帯をする and 腕に包帯をする. Lead with these noun constructions and
+  包帯を巻く; retain JMdict's transitive verb as recognition, without claiming
+  that it is invalid or less common. Missing スル markers do not prove either.
+- Reconciliation rereads thirteen complete families / nineteen senses and six
+  complete older bodies, all already within the actual 310/669 and 136-body
+  unions. Add direct 方針/対策 and 膨大/広々 guards for broad strategy/course
+  and extent labels, with the Japanese distinctions preserved. These originate
+  in Claude's Limits, not its formal findings. Do not infer 包装/小包 or
+  法則/支配 from package-related categories or English "rule" polysemy.
+- Adopt three small prose clarifications and clarify the common-entry mapping.
+  Defer unsupported wasei classification and stronger toilet-frequency claims.
+  The compact `sense4`/`Sense2` source-note notation is not a mapping defect.
+  `teachingSpelling` is present in the committed packet and records the source
+  alias to recognize, not the canonical production headword.
+- Two corrective frozen public returns are one additional 英辞郎/EDP authority,
+  not two dictionaries. A separately inspected 精選版 日本国語大辞典 noun entry
+  supplies no frequency evidence; the fresh Kotobank return did not expose
+  the Daijisen definition. GPT's broader initial inspection and Claude's useful
+  narrower observations show complementarity, not measured bias reduction or
+  equal review depth. Original-session confirmations remain pending.
 
 ## Batch 76 authoring observations
 
