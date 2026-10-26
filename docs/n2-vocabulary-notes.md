@@ -98,7 +98,26 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   穏やか and redundant 容器/入れ物 declarations appear in both reports
   across Findings/Optional. These sample-specific complements do not
   measure bias reduction or rank models, especially with unequal depth.
-  Original-session nonblind confirmations remain pending.
+- Both original sessions accepted teaching commit
+  `7080756acc019615140874a2287df8990268d7ab`, all twenty rows CLEAN
+  in all three facets. Complete native confirmation reports are archived
+  unchanged. Each confirmation used zero new tools and made no edits;
+  GPT exited before Claude's confirmation prompt. Both received the
+  same full-evidence template through UTF-8 stdin. Supplied evidence
+  is not fresh native-tool retrieval, and confirmation does not repair
+  Claude's partial initial report or unequal initial comparison depth.
+- GPT caught an author attribution error: pinned 1545160:1 says
+  "young child; toddler"; "infant, baby, child" is the raw source gloss.
+  The public entry independently supports the qualified ordinary/legal
+  distinction. Preserve the frozen adjudication with an explicit closure
+  erratum rather than silently rewriting its historical attribution.
+  Claude's initial claim that the article teaches 夕立ち also needs
+  clarification: it is in the dictionary family, not the article.
+- Final suggestions for another soft-consistency example, smoother
+  輸送/幼児 wording and an extra 陽 common-word entry are optional,
+  not reasons to change accepted teaching. No new 瓶/袋 guard follows
+  from container-category membership alone. Batch 87 closes without
+  further word, kanji or manifest edits.
 
 ## Batch 86 authoring observations
 

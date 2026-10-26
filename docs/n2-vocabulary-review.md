@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-86 review-closed; batch 87 drafted.** The target is all 1,812 source rows,
+**Batches 01-87 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,720 rows are review-closed; 20 are drafted and 72 remain pending.
+The first 1,740 rows are review-closed; none are drafted and 72 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 87: N2:1722-N2:1741
 
-**Status:** draft; independent initial reports authenticated and corrections
-prepared; confirmation by both original sessions pending.
+**Status:** closed after authenticated initial reports, evidence-based
+corrections and acceptance by both original sessions.
 
 Frozen initial snapshot:
 `22995e5a8a9801bcb4d4797cd8add1b0fe959022`.
@@ -102,8 +102,36 @@ gap. 穏やか and redundant identical-title exclusions overlap across
 report sections. This is sample-specific useful complementarity,
 not measured model-bias reduction or a general ranking. Unequal
 initial depth and Claude's partial report are material limitations.
-Full nonblind confirmations, with verbatim evidence supplied in the
-prompt and no fresh tool calls, are still required before closure.
+
+The [GPT confirmation](n2-vocabulary-reviews/batch-87-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-87-claude-confirmation.md)
+both accept `7080756acc019615140874a2287df8990268d7ab`,
+with all twenty rows CLEAN in correctness, scoped coverage and
+comprehensibility. Both original sessions received the same full-evidence
+template through UTF-8 stdin, used zero new native tools, made no edits
+and exited successfully. GPT's shutdown preceded Claude's prompt.
+The entire native messages and supplied evidence were authenticated;
+this author-run audit is not an independent reviewer Git/hash check.
+The confirmations are nonblind and do not retroactively repair the
+partial initial report or unequal initial depth.
+
+**Evidence errata:** GPT correctly distinguished pinned 1545160:1
+("young child; toddler") from the raw source gloss ("infant, baby,
+child"). The historical author adjudication misattributed the latter
+to the pinned sense; the closure records the correction explicitly.
+The applicable public entry, not that attribution, supports the article's
+qualified ordinary/legal distinction. Claude's initial assertion that
+夕立ち is covered in the article is also clarified: it is a dictionary
+variant, optional and unassigned, not article teaching. Original reports
+and frozen evidence remain unchanged.
+
+Remaining soft-consistency examples, wording polish and alternative
+夕陽 navigation expansion are optional. No further word, kanji or
+manifest edits follow acceptance. The metadata-only closure preserves
+all 3,273 baseline identities/readings/titles/exclusions, fourteen batch
+reciprocal pairs and the accepted manifest; 1,740 rows are closed,
+72 pending and none unresolved. No live-quiz, exhaustive synonym-graph,
+native-speaker or measured-bias claim is made.
 
 ## Batch 86: N2:1702-N2:1721
 
