@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-77 review-closed.** The target is all 1,812 source rows,
+**Batches 01-78 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,540 rows are review-closed; twenty are drafted,
-and 252 remain pending. None are unresolved.
+The first 1,560 rows are review-closed; 252 remain pending.
+None are drafted or unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 78: N2:1542-N2:1561
 
-**Status:** full original-session confirmations authenticated; one additional
-direct guard is author-adjudicated and awaits bounded reconfirmation.
+**Status:** closed after authenticated independent initial reviews, full
+confirmations and bounded follow-up reconfirmations by both original sessions.
 
 Seventeen new articles and three reuses cover twenty source rows.
 Source 堀 maps to stable 濠 with the same entry1522060 and readingほり;
@@ -66,7 +66,7 @@ source-qualified spelling clarification and an explicit particle contrast.
 That correction has 104 quiz declarations across the twenty articles; no
 prior guard is removed. Titles, readings, identities, levels, written-Han
 metadata, raw rows, selected senses and all four kanji changes remain
-unchanged from the authored snapshot. The source index remains draft.
+unchanged from the authored snapshot. The index remained draft at that stage.
 Corrective rereads cover twenty-one complete families / 77 senses and
 twelve unchanged older bodies, already in the actual author unions.
 No new authority or frequency evidence is claimed.
@@ -125,8 +125,42 @@ reinspection supports it: applicable Daijisen 干す explicitly includes
 ほうっておく and 無視する, while actual 放る teaches neglect and
 leaving someone alone. Add this seventh pair on 干す, giving 105
 declarations. It is not inherited through 無視, nor does it equate
-every drying, throwing or loss use. Both original sessions must inspect
-this bounded follow-up before acceptance; the batch is not yet closed.
+every drying, throwing or loss use.
+
+Final accepted teaching snapshot: `d925ea0a1c2814369415031ad85cd0b0b9386624`.
+The [GPT reconfirmation](n2-vocabulary-reviews/batch-78-gpt-reconfirmation.md)
+and [Claude reconfirmation](n2-vocabulary-reviews/batch-78-claude-reconfirmation.md)
+both accept the seventh pair and report no regression or remaining
+actionable defect. Each has ten authenticated mandatory complete file
+returns plus the exact TSV and format ranges. Fresh scope is only the two
+endpoint articles, two complete families / six senses, applicable public
+entries, one-line patch, instructions and mappings; the other eighteen
+article and six kanji judgments explicitly inherit the full confirmations.
+All twenty rows remain CLEAN on all three facets within that stated scope.
+Neither reviewer adds an optional proposal in the bounded pass.
+
+Cumulative existing-body identities are GPT174 and Claude16, including
+the three assigned reuses; unassigned counts are171 and13. Total word
+bodies are191 and33. The final bounded pass adds no new identity.
+The later Optional pair is a further useful Claude contribution, not a
+retroactive change to the initial six-pair/two-clarification comparison.
+
+Report qualifications are preserved rather than silently rewritten:
+Claude's "no metadata" assertion means the unchanged identity/title/
+reading/type/level/written-Han fields, not the changed exclusions.
+GPT's "withdrawn" for another reviewer's hypotheses is its own judgment;
+Claude separately withdraws them. Claude again discloses a paired TSV
+header/range request: exact row scope is verified, strict call ordering
+is not claimed. Reviewer processes remain sequential and have exited.
+The direct Japanese neglect evidence, not an English idiom alone,
+supports the last guard.
+
+Final closure preserves the accepted teaching and manifest unchanged,
+all 3,273 baseline identities/readings/titles and prior exclusions, and
+the four new plus two rechecked primary pairs. Coverage is now 1,560
+closed rows / 252 pending / zero draft or unresolved. Structural,
+provenance and return checks are not native-speaker certification,
+runtime quiz enumeration or a quantitative model-bias measurement.
 
 ## Batch 77: N2:1522-N2:1541
 

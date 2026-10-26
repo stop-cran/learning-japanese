@@ -70,8 +70,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   All primary written Han remain in word metadata.
 - Author inspection and structural checks are not independent review,
   native-speaker certification, exhaustive quiz uniqueness or measured
-  model-bias reduction. Initial and full original-session confirmations
-  are authenticated; bounded reconfirmation of one further guard is pending.
+  model-bias reduction. Initial reviews, full confirmations and the
+  bounded two-endpoint reconfirmations are authenticated and complete.
 - Initial review adds six direct pairs: 放る/止める and /中止,
   朗らか/愉快, 干す/無視, and ぼろ/穴 and /失敗. The applicable
   Daijisen headings explicitly recognize ignoring and failure; do not
@@ -102,7 +102,15 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   The work/role qualification remains; it does not imply every loss,
   throwing or drying use is shared. Reconfirm the bounded change with
   both original sessions rather than treating prior clean verdicts as
-  acceptance of an edit they had not seen.
+  acceptance of an edit they had not seen. Both accepted it at the
+  follow-up snapshot; final total: 105 declarations / seven added pairs.
+- Full confirmations freshly returned 35 mandatory complete families /
+  105 senses and twelve older bodies per reviewer. Cumulative existing-body
+  identities are GPT174 and Claude16, including the three assigned reuses;
+  unassigned counts are171 and13. The final bounded pass freshly reads
+  two articles / two families / six senses, adding no identity, and
+  explicitly inherits the other eighteen article and six kanji judgments.
+  Exact returned-line authentication is not proof of comprehension.
 
 ## Batch 77 authoring observations
 
