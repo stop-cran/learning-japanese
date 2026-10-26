@@ -69,9 +69,43 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   category cliques, infer pairs through a third word, or automatically
   exempt differing parts of speech or transitivity. CW004/CW022 and
   false-friend CW095 were considered; draft judgments await review.
-- Independent GPT and Claude reviews and contribution reconciliation
-  remain pending. Author checks and evidence access are not independent
-  linguistic certification or measured model-bias reduction.
+- Initial GPT (`gpt-6.1-sol`) and Claude (`claude-opus-5.5`) reviews
+  are independently authenticated against the same blind snapshot.
+  Their processes ran sequentially, but native events show maximum
+  outstanding tool calls of one and six respectively. Do not repeat
+  Claude's serial-call claim as fact or rewrite its archived report.
+- Add eight independently adjudicated direct pairs: five GPT-unique,
+  two Claude-unique and shared 見直す/復習. Both 付-link observations
+  are shared even though Claude placed them under Optional. Keep
+  both N4 identities, titles, levels and old teaching unchanged.
+  Generic route, crowd, sold-out admissions, expressive appearance
+  and turn-up/finding comparisons need direct evidence, not shared
+  guard neighbors, part of speech or a harmlessness argument.
+- Remove the invented recovery production example in 見直す and
+  retain the dictionary-recognition sense, with a literary-example
+  qualification and a clearer English better-opinion title. The
+  fresh applicable Daijisen and Nikkoku bodies explicitly cover
+  recovery of illness/economy/markets; old quotation dates do not
+  establish an archaic label. Nikkoku's 1900-01 example is in its
+  transitive section, not its intransitive recovery section.
+- Retain the directly sourced improvement, housing, quality and
+  caption guards after reading full entries and actual bodies:
+  説明 expressly includes caption, 部屋 includes apartment, and
+  満点/結構 share excellent/satisfactory senses. Do not erase
+  secondary senses because a card's principal title is narrower.
+  Do not add an unsupported modern-frequency label to 見つける.
+- Post-review complete author inspection adds two families / 23 senses
+  and four older bodies: actual unions 350 / 852 and 191 bodies.
+  Twenty-two corrective families / 67 senses and thirteen complete
+  older bodies were rechecked, plus the full existing 付 card.
+  The extra Kotobank page is a live observation, not a frozen capture;
+  preserve the original pre-card receipt's historical counts.
+- Initial actual complete depths differ substantially: GPT 348
+  families / 829 senses and 193 existing word bodies including both
+  reuses; Claude 29 / 53 and three. Complementary findings are useful
+  sample evidence, not proof of reduced model bias or general rankings.
+  Both original-session confirmations remain pending; author checks
+  and evidence access are not independent linguistic certification.
 
 ## Batch 80 authoring observations
 

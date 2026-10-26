@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 81: N2:1602-N2:1621
 
-**Status:** draft; independent review and reconciliation pending.
+**Status:** draft; both blind initial reviews authenticated, corrections
+applied, original-session confirmations pending.
 
 Eighteen new articles and two baseline N4 reuses cover twenty source
 rows. Source 稀 maps to まれ and 見掛け to 見かけ, with both
@@ -50,11 +51,42 @@ A separate pre-draft advance adds five complete families / eleven
 senses and three older bodies: actual unions 348 / 829 and 187 bodies.
 Prepared availability is not actual inspection.
 
-See [batch sources](n2-vocabulary-batch-sources/batch-81.json).
-The initial reviews will use the same frozen snapshot, scope, rubric
-and source access, sequentially and without access to one another's
-findings or the author's quiz rationale. No closure or review-model
-contribution is claimed at this stage.
+The blind initial reviews of `1e39beb7` are archived:
+[GPT](n2-vocabulary-reviews/batch-81-gpt-initial.md)
+(`gpt-6.1-sol`) and
+[Claude](n2-vocabulary-reviews/batch-81-claude-initial.md)
+(`claude-opus-5.5`). Both actual models, common prompt, complete native
+returns and zero edits were authenticated. Reviewer processes ran
+sequentially. GPT was internally serial; Claude reached six outstanding
+tool calls despite its report's serial-call claim. The native reports
+remain unchanged; process scheduling is not internal tool scheduling.
+
+Eight direct quiz pairs are added, raising authored declarations from
+135 to 143. GPT uniquely proposes five; Claude uniquely proposes
+満員/人込み and 回り道/道順; 見直す/復習 is shared.
+Both reviewers also observe the missing 付 links, now added without
+changing either reuse's N4 metadata or removing old teaching.
+Claude's bounded recovery-example concern leads to recognition-only
+wording, removal of the invented economy example and a clearer
+見直す title. Its categorical datedness implication is not adopted:
+the actual dictionaries explicitly retain recovery, and old quotations
+alone do not establish modern frequency or obsolescence.
+
+Post-review complete reads cover twenty-two corrective families /
+67 senses, thirteen older bodies and the existing 付 card. Actual
+author unions rise to 350 families / 852 senses and 191 older bodies;
+the original pre-card receipt remains unchanged. One additional live
+Kotobank page supplied applicable Daijisen and Nikkoku bodies, not a
+new frozen capture. Nikkoku's 1900-01 quotation belongs to its
+transitive section, contrary to Claude's initial classification.
+
+Initial complete pinned-family depths are GPT 348 / 829 and
+Claude 29 / 53; complete existing word bodies including the two
+assigned reuses are 193 and three. Labels are not full-body reads.
+These complementary sample findings are useful, not measured bias
+reduction or a general model ranking. See the full dispositions in
+[batch sources](n2-vocabulary-batch-sources/batch-81.json).
+Both original-session confirmations remain pending; no closure yet.
 
 ## Batch 80: N2:1582-N2:1601
 
