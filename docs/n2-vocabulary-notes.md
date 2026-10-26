@@ -19,6 +19,56 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 85 authoring observations
+
+- N2:1682-N2:1701 map to nineteen physical additions and the existing
+  紅葉 article. Preserve its primary こうよう metadata and earlier
+  1578780 mapping while assigning this row's 2857870/もみじ maple
+  teaching explicitly. Only its stale source-scope sentence changes.
+  The packet's twenty `newArticles` are nonbaseline relative to the
+  original 3,273-card baseline, not twenty physical additions in85.
+  The teaching-entry field follows primary1578780; explicit
+  `additional_senses`2857870:1,2 carries the supplied source maple
+  identity. The first coverage audit caught the incorrectly assigned
+  primary field; use the existing alternate-source mapping mechanism,
+  not an exception to the primary-reading check.
+- The original actual-inspection receipt is 330 complete families /
+  689 senses and 140 complete older bodies. Before the first card
+  patch, a final extension added eight complete families / 26 senses,
+  eight chunked bodies and a separate complete 機能 read. The cumulative
+  pre-card union is 338 / 715 / 149. The cumulative seal was created
+  after drafting began; it does not retroactively change the read
+  stage or overwrite the original receipt and preparation plans.
+- All 34 component records, three complete 紅/燃/缶 bodies and twenty
+  public lexical wrappers were actually read. The public material
+  is Digital Daijisen through Weblio, one authority, not twenty
+  independent sources. The 158 initial navigation labels and 179
+  final labels are not claims of that many complete body reads.
+- Direct comparisons use whole dictionary families, older bodies,
+  ordinary secondary senses and actual titles. No inherited thematic
+  clique or blanket part-of-speech/transitivity exemption is intended.
+  The 122 initial exclusion declarations remain reviewable judgments.
+- Retain モデル's different physical/person/product/theoretical/
+  fictional uses; specialist model theory is outside practical scope.
+  元々's no-worse-off construction is separate from ordinary originally.
+  物凄い permits positive intensification as well as frightful uses.
+- Preserve もんで for 揉む, もって for 盛る and source1582900's
+  restriction of もす to 燃す. 盛る's raw "prescribe" must not become
+  an unrestricted medical-prescription lesson; public dosing/poison
+  evidence supports the narrower use. An older sake quotation does
+  not license an unrestricted modern serving-drinks lesson.
+- 問答's public discussion sense is distinguished from its individual
+  question/answer parts. やかましい's particularity, strictness and
+  bothersome uses cannot be reduced to acoustic loudness.
+  薬缶/やかん is retained without inventing a precise sound-change
+  derivation; the medicine-vessel origin does not restrict current use.
+- Two new reciprocal N2 pairs connect 燃/燃やす and 缶/薬缶.
+  The existing 紅/紅葉 pair is rechecked, not re-added ceremonially.
+  No original-baseline word metadata or exclusions are changed.
+- Independent initial reviews and evidence-based reconciliation are
+  pending. No measured model-bias reduction or native-speaker
+  certification is claimed by these author inspections.
+
 ## Batch 84 authoring observations
 
 - N2:1662-N2:1681 map to twenty new articles, with no baseline

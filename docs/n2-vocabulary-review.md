@@ -5,7 +5,7 @@
 **Batches 01-84 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,680 rows are review-closed; none are drafted and 132 remain pending.
+The first 1,680 rows are review-closed; 20 are drafted and 112 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,41 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 85: N2:1682-N2:1701
+
+**Status:** draft; independent reviews and reconciliation pending.
+
+Twenty rows map to nineteen new articles and existing 紅葉.
+The latter preserves its primary こうよう identity, earlier source
+mapping and existing maple example, with only the stale source-scope
+sentence updated for the separate もみじ row. Packet `newArticles`
+counts twenty paths outside the original baseline, not twenty new
+files in this batch.
+The teaching-entry field remains primary1578780; explicit
+additional2857870:1,2 carries source maple1 and recognized foliage2.
+The pre-review primary-field correction preserves the original blind
+derivative separately and does not merge dictionary identities.
+
+Source mappings distinguish selected senses from additional recognition
+and keep specialist or historical meanings outside practical scope.
+Two new primary reciprocal N2 pairs are 燃/燃やす and 缶/薬缶;
+the already-existing 紅/紅葉 pair is preserved and rechecked.
+
+The author actually read 338 complete families / 715 senses,
+149 older word bodies, 34 components, three complete kanji bodies
+and twenty public lexical wrappers from one authority.
+The original330/689/140 seal and later pre-card extension remain
+separate immutable artifacts; the cumulative seal was written
+after drafting began. Navigation labels are not complete bodies.
+
+The [source packet](n2-vocabulary-batch-sources/batch-85.json) preserves
+raw data, complete evidence, author inspection receipts and provisional
+quiz rationale. Initial reviewers receive an equivalent blind derivative
+without that rationale and the same frozen content, rubric and access.
+GPT then Claude will run sequentially with at most one outstanding
+native tool call, a sixty-call bound and explicit private-file allowlists.
+Author Git/hash/manifest checks are not independent reviewer checks.
 
 ## Batch 84: N2:1662-N2:1681
 
