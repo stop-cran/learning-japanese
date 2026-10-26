@@ -96,10 +96,23 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   役者 tail at confirmation; do not silently rewrite the reports.
 - Processes were sequential, but Claude twice issued concurrent reads
   and was stopped before completion. The same original session supplied
-  its report without more tools. Confirmations will use verbatim evidence
-  in one bounded no-tools prompt to avoid another scheduling loop.
-  Original-session acceptance is pending. Complementary useful findings
-  do not measure model-bias reduction or establish native-speaker quality.
+  its report without more tools. Both original sessions accepted the
+  corrected snapshot using the same verbatim evidence template, with zero
+  new tool calls and sequential verified exits. Prompt-supplied evidence
+  is not a fresh native-tool read. No teaching changes follow acceptance.
+  Complementary useful findings do not measure model-bias reduction or
+  establish native-speaker quality.
+- Preserve minor accounting corrections explicitly rather than rewriting
+  reports: the actual older ずっと example is ずっと軽い, not the
+  author's summary's ずっと難しい. Its comparative meaning still
+  supports the removed guard. 物凄い is nonbaseline, so GPT's final
+  preservation wording must not imply any original-baseline exception.
+  薬缶's N2:1700 is physical TSV line 1700, not Claude's line 1701.
+- Claude's final full-sentence モデル example, extra stylish comparisons
+  and selected-only 盛る title remain optional and are deferred.
+  The complete construction, current comparisons and taught additional
+  slang already meet practical scope; do not reopen accepted teaching
+  merely to incorporate every nonblocking suggestion.
 
 ## Batch 84 authoring observations
 

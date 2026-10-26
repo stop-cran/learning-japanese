@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-84 review-closed.** The target is all 1,812 source rows,
+**Batches 01-85 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,680 rows are review-closed; 20 are drafted and 112 remain pending.
+The first 1,700 rows are review-closed; none are drafted and 112 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 85: N2:1682-N2:1701
 
-**Status:** draft; blind initial reviews authenticated, corrections prepared,
-original-session confirmations pending.
+**Status:** closed after authenticated blind initial reviews,
+evidence-based corrections and acceptance by both original sessions.
 
 Twenty rows map to nineteen new articles and existing 紅葉.
 The latter preserves its primary こうよう identity, earlier source
@@ -89,10 +89,27 @@ Both initial public reads covered only 408 of the capture's 411 lines;
 the omitted tail is historical 役者 material outside selected senses.
 Reports remain unchanged and the complete capture is supplied at confirmation.
 
-Confirmations reuse the two original sessions sequentially, with the
+Confirmations reused the two original sessions sequentially, with the
 actual diff, all twenty revised word bodies, three kanji bodies, source
 families, corrective older bodies and the entire public capture supplied
-verbatim in a bounded no-tools prompt. No acceptance is claimed yet.
+verbatim in the same bounded no-tools prompt template. Both sessions
+accepted all twenty articles CLEAN in all three facets at
+`b1a28f8a42d8b45be7452d65242454bbe63c8ee3`, with zero new tool calls,
+zero edits and authenticated sequential exits. These are post-fix,
+nonblind confirmations, not fresh independent initial reviews:
+[GPT confirmation](n2-vocabulary-reviews/batch-85-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-85-claude-confirmation.md).
+Prompt-supplied evidence is distinguished from earlier native file access.
+No teaching or manifest changes follow acceptance.
+
+Minor accounting discrepancies remain visible in the unchanged reports
+and frozen adjudication, with explicit corrections in the closure record:
+the older ずっと example actually uses 軽い, not the author's misnamed
+難しい; 物凄い is not an original-baseline article; and N2:1700 is
+TSV line 1700, not 1701. None changes the evidence-backed comparative
+guard decision, selected senses or preserved baseline invariants.
+Claude's final extra example/comparison and selected-only title proposals
+are deferred nonblocking polish; no consequential unresolved claim remains.
 Author Git/hash/manifest checks are not independent reviewer checks.
 Complementary findings are useful here, not a controlled model ranking,
 measured bias reduction or native-speaker certification.
