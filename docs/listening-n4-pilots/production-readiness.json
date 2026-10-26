@@ -1,12 +1,13 @@
 {
   "version": 1,
   "checkedOn": "2026-10-26",
-  "status": "Owner audition feedback and content-length pacing selected; complete production remains gated",
+  "status": "Eight complete private candidates generated under fresh owner authorization; full-media acceptance and runtime publication remain gated",
+  "completeGenerationResult": "generation-results.json",
   "speech": {
     "serviceRegion": "swedencentral",
     "serviceTier": "S0",
     "verifiedStockVoices": ["ja-JP-NanamiNeural", "ja-JP-KeitaNeural"],
-    "voiceListVerifiedOn": "2026-10-25",
+    "voiceListVerifiedOn": "2026-10-26",
     "voiceVerification": "Both returned as GA Japanese Neural voices by a read-only list-voices request",
     "retail": {
       "verifiedOn": "2026-10-26",
@@ -71,11 +72,11 @@
     "shortSpeechRatePercent": 0,
     "appliesTo": "Current N4 cohort, both Nanami and Keita, classified by coherent passage/utterance rather than voice",
     "draftsUpdated": 8,
-    "newMediaGenerated": false,
-    "completeGenerationAuthorized": false
+    "newMediaGenerated": true,
+    "completeGenerationAuthorized": true
   },
   "images": {
-    "deploymentVerifiedOn": "2026-10-25",
+    "deploymentVerifiedOn": "2026-10-26",
     "verifiedModel": "gpt-image-2.5-sunburst",
     "version": "2026-09-08",
     "deploymentKind": "GlobalStandard",
@@ -99,17 +100,18 @@
       "effectiveStartDate": "2026-09-01T00:00:00Z",
       "source": "https://prices.azure.com/api/retail/prices"
     },
-    "costQualification": "No fixed per-image total is asserted. Output-token usage for this model is not established by GPT Image 2's calculator, and no N4 usage has been measured.",
+    "costQualification": "No universal per-image price is asserted. Three N4 requests returned 1085 text-input and 1317 image-output tokens, corresponding to USD0.044935 at the verified retail rates; not an invoice.",
     "modelCostSource": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst.md",
-    "authorizationGranted": false,
+    "authorizationGranted": true,
+    "authorizedOn": "2026-10-26",
+    "generatedOriginalPictures": 3,
+    "generationResult": "generation-results.json",
     "beforeAnyPost": "Freeze the actual request bodies and model binding, obtain a separate bounded image authorization that reflects token-metered uncertainty, and register/pause every attempt durably. Do not call a generic retrying image helper without per-attempt pacing/accounting.",
     "uncertainOutcome": "Stop and retain the request reservation; never silently retry or assume a failed response was free"
   },
   "remainingGates": [
-    "Frozen separately authorized image requests and inspected local markers",
-    "New complete pilot plan binding actual pictures and chosen speech profiles",
-    "Fresh complete-generation authorization; no implicit complete-before-audition opt-in",
     "Exact complete-order listener/picture acceptance and unscored guided-native evidence",
-    "Measured duration/media projections and original-reviewer reconciliation before E"
+    "Recheck the conditional timing envelope against independently reviewed remaining content and actual recordings",
+    "Actual 56+4 full-pool duration/media checks after the remaining independent content is authored"
   ]
 }

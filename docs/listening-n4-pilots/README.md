@@ -1,14 +1,18 @@
-# N4 listening pilots: authoring and voice auditions
+# N4 listening pilots: complete private candidates
 
-These eight original schema-2/policy-1/N4 **scored drafts** implement the unpaid part
-of [D / #49](https://github.com/stop-cran/learning-japanese/issues/49). They are not
-runtime cards, worked examples, recordings or approved learning packages. There is
-no `media` or `approval` field, and nothing here is added to the runtime manifest.
+These eight original schema-2/policy-1/N4 **scored drafts** are the public sources
+for [D / #49](https://github.com/stop-cran/learning-japanese/issues/49). Complete
+private audio and illustrations have now been generated; the
+[generation receipt](generation-results.json) binds their exact outputs and costs.
+These source files are not runtime cards, worked examples or approved learning
+packages. They retain no `media` or `approval` field, and nothing here is added to
+the runtime manifest.
 
 The [coverage plan](coverage-plan.json) reserves the complete 56-scored/four-example
 scope: D contributes eight scored stories, E adds 26 plus two examples, and F adds
 22 plus two examples. Its operation counts describe **planned** decisions, not
-achieved coverage. The remaining 48 scored stories are not yet authored.
+achieved coverage. The remaining 48 scored stories and four independent examples
+are not yet authored.
 
 | Pilot | Family | Main design risk |
 | --- | --- | --- |
@@ -22,8 +26,9 @@ achieved coverage. The remaining 48 scored stories are not yet authored.
 | [Deadline repair](n4-task-deadline-repair.json) | Quick response | Self-correction, sufficiency and deadline versus start time |
 
 The [visual specifications](image-prompts.json) preserve the selected animated/
-editorial still style. They describe three not-yet-generated pictures. Markers are
-added only after inspecting actual output; prompts and filenames are not acceptance.
+editorial still style. Their original pre-generation snapshot is retained. All three
+pictures now exist, with local markers added after inspecting actual output and
+checked at 512px and 256px. This author inspection is not owner/native acceptance.
 The staff/visitor descriptions remain available only as explicit visual help/study
 under the existing app contract, not as question-side answer clues.
 
@@ -40,24 +45,52 @@ The original 27 clips and their frozen plans remain unchanged. The
 durations and conservative request accounting. Subsequent complete-package review
 must include both voices at the selected rates, polite/familiar phrasing, spoken
 choice numbers, scope of negatives, 一階/一人/二人 and the receiving-side constructions.
-A selected rate is not a
-complete-order listener approval.
+A selected rate is not a complete-order listener approval.
 
 Follow the [N4 profile](../listening-n4.md) and [task authoring sequence](../listening-tasks.md#practical-authoring-sequence).
 The [independent review](review.json) is reconciled, including full-script comparison
 with all 68 existing N5 records. It corrected a distractor that failed to test its
 claimed negative constraint and made several story reservations concrete.
 The authoring ledger and independent review retain the pre-generation language-review
-snapshot. The [production readiness record](production-readiness.json), audition
-receipt and speech-selection receipt track subsequent work separately. The selection receipt
+snapshot. The [production readiness record](production-readiness.json), audition,
+speech-selection and complete-generation receipts track subsequent work separately.
+The selection receipt
 verifies that only speaker rates changed from the independently reviewed task bodies;
-it is not a new full-media approval. Only the voice auditions were
+it is not a new full-media approval. The earlier voice auditions were
 authorized, within US$0.45 aggregate; their conservative reservation was US$0.19620,
 not an invoiced charge. No images, complete pilot generation or runtime publication
-were authorized by that approval.
+were authorized by that earlier approval. The owner's subsequent explicit request
+for full generation separately authorized these eight pilots and their three pictures.
 
-Audition feedback and the delivery policy are now recorded. Complete-package
-generation, complete-order listening/picture acceptance and guided native checks are
-also absent. D remains incomplete until its own gates pass; G owns later integrated/
-phone acceptance and actual runtime publication. No N4 exercises have been added to
-the installed app by this authoring/preview work.
+Complete generation made 38 fresh speech requests, reused nine exact audition
+clips and their PCM, and made three image requests without retries. Speech reserved
+US$0.25989 conservatively; returned image usage corresponds to US$0.044935 at the
+verified retail rates. Neither figure is an invoice. Earlier audition accounting
+and all original recordings remain unchanged.
+
+The delivered offline `N4-complete-pilots-2026-10-26.html` contains all eight ordered
+sequences, 36 stage players and three pictures, with transcripts/feedback hidden
+until expanded. It is an unscored author view, not a native diagnostic section.
+Browser decoding and accelerated sequence checks do not establish perceptual listening.
+
+**Timing calibration:** extrapolating these two pilots per family gives roughly
+28.69-29.78 minutes, below the 31-39 minute target. This is not an actual eligible
+section or a complete pool. Remaining tasks need genuinely substantive contexts
+and actual all-form timing checks, not padding, duplicated stories or a speed change
+merely to hit the clock.
+
+The generation receipt also gives a **conditional** remaining-pool timing example:
+retaining all eight measured pilots, richer future focused items and independent
+examples could produce 31:22.704-37:49 across the stated hypothetical bounds.
+Those whole-item intervals include existing fixed windows. They are one planning
+example, not mandatory item lengths or evidence that the missing content exists.
+Actual linguistic quality, independence and all-form feasibility still need review.
+
+The original independent reviewer found no consequential picture/task mismatch or
+linguistic regression in the complete candidates; the earlier two findings remain
+resolved. Perceptual audio quality and native/phone acceptance were not reviewed.
+
+Full-generation authorization is received, not pending. Exact complete-order
+listening/picture acceptance and guided native checks remain outstanding. D remains
+incomplete until its own gates pass; G owns later integrated/phone acceptance and
+actual runtime publication. No N4 exercises have been added to the installed app.
