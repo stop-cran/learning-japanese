@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 86: N2:1702-N2:1721
 
-**Status:** drafted; independent review and reconciliation pending.
+**Status:** initial reviews authenticated and corrections reconciled;
+confirmation by both original sessions pending.
 
 Twenty rows map to eighteen physical additions and baseline reuses
 薬局/軟らかい. Reuses receive explicit sourced N2 metadata only.
@@ -56,10 +57,57 @@ Existing 軟/軟らかい is rechecked without a ceremonial duplicate edit.
 Quiz guards are provisional direct judgments; retained reuse guards
 are preservation scope, not a claim all were newly researched.
 
-Initial reviewers must use the same frozen content, rubric and source
-access without the author's quiz-guard rationale or one another's
-findings. Review remains strictly sequential. No independent verdict,
-model-contribution comparison or measured bias reduction is claimed.
+The unchanged [GPT initial](n2-vocabulary-reviews/batch-86-gpt-initial.md)
+and [Claude initial](n2-vocabulary-reviews/batch-86-claude-initial.md)
+reports reviewed `2c2ed2623f04773c93bc97c6820e3ef7131b8fea` using
+actual models `gpt-6.1-sol` and `claude-opus-5.5`. Snapshot, rubric and
+source access matched. Neither read the other report, author ledgers
+or unblinded packet; both saw author prose in permitted TSV `source_note`
+cells, so complete author-comment blindness cannot be claimed.
+
+Both identified the direct 役目/公務 quiz omission. GPT uniquely
+established the figurative 火傷/失敗 omission. Claude contributed
+やたら/めちゃくちゃ, やっつける/勝つ and 訳す/訳 guards,
+a short 夜行する construction note and clearer native いえぬし
+wording. The latter is ambiguity-preventing polish, not an incorrect
+reading. 訳's explicitly taught separate やく translation identity,
+not primary わけ or shared guard neighbors, grounds the conservative
+translation-process/output pair. Five added declarations total 134.
+No primary identity, title, selected sense, mapping, baseline exclusion,
+reuse body or kanji edit changed during reconciliation.
+
+Claude's tentative 火傷/かしょう concern is unsupported by the exact
+already-qualified sentence. Separate dictionary identities recognize
+both readings. Complete burn-family/body reassessment establishes no
+missing 燃える/燃やす guard; injury and combustion remain distinct.
+Optional nocturnal behavior, emphatic eating/drinking and unsupported
+most-common spelling wording are deferred.
+
+The post-review author union is 413 complete families / 925 senses /
+175 older semantic-comparison bodies, plus the separate 夕飯 prior-art
+body; the original pre-author 411/920/173 seal remains unchanged.
+Only めちゃくちゃ and 勝つ extend those distinct unions.
+Final navigation labels total 235, not 235 full-body reads.
+
+Actual initial access was GPT 60 calls / maximum one outstanding,
+177 complete families / 429 senses and 19 older bodies (17 semantic
+comparisons plus 夕飯 and 柔らかい); Claude 61 calls / 58 successful
+returns / maximum three outstanding across interrupted attempts,
+20 principal families / 32 senses, no complete comparison families
+and six older bodies. Both read all 351 public lines from one authority.
+Reviewer processes were sequential, but Claude breached the intended
+call and concurrency limits. Its original lower prefix counters remain
+unchanged and are supplemented from the complete event history.
+
+Claude's malformed table-header fragment remains visible. Its full
+13,593-character report is preserved from CLI stdout; the final native
+assistant message contains only the last 10,662 characters, not its
+2,931-character opening. Do not claim whole-report native-message
+authentication or infer the exact cause. These limitations, unequal
+inspection depth and compacted notes constrain model comparisons.
+Complementary useful observations in this sample are not a controlled
+benchmark or measured bias reduction. Corrected original-session
+confirmations remain pending.
 
 ## Batch 85: N2:1682-N2:1701
 

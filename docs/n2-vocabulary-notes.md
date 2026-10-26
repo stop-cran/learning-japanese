@@ -83,10 +83,47 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   gives 353. The first draft check wrongly expected this baseline reuse
   inside the nonbaseline set; correct the accounting, not the checker or
   card identity. No pair was missing and no unrelated backlink is added.
-- Independent GPT and Claude review has not yet occurred. Keep the
-  common snapshot/scope/source access and blind initial reports;
-  compare equivalent observations across all report sections, not labels
-  or severity alone. No model-usefulness or bias-reduction claim yet.
+- Initial GPT and Claude reviews of `2c2ed262` used the same snapshot,
+  rubric and source access and did not read one another's reports or
+  prohibited author ledgers/packet. Both nevertheless saw permitted TSV
+  `source_note` prose; do not claim complete author-comment blindness.
+- The shared finding adds the direct 役目/公務 guard. GPT alone
+  established the figurative 火傷/失敗 omission. Claude supplied
+  やたら/めちゃくちゃ, やっつける/勝つ and 訳す/訳 guards,
+  plus the 夜行する construction note and clearer native いえぬし
+  wording. The last is ambiguity-preventing polish, not a wrong reading.
+  訳's separate taught やく translation identity supports its bounded
+  guard; primary わけ does not mean translate. Shared neighboring
+  exclusions are not evidence. There are now 134 assigned declarations.
+- The exact 火傷 warning was already limited to the ordinary やけど
+  expressions taught here, not a blanket prohibition of separate
+  かしょう. Corrective complete-family/body inspection resolves that
+  tentative concern without rewriting a correct sentence. Combustion,
+  burning something and a burn injury remain distinct; no missing
+  燃える/燃やす edge was established. Optional nocturnal behavior and
+  emphatic eating/drinking expansions are deferred; dictionary spelling
+  recognition does not establish a most-common spelling.
+- Corrective inspection adds only めちゃくちゃ and 勝つ to the
+  distinct family/body unions: 413 families / 925 senses / 175 older
+  semantic bodies, plus the separate 夕飯 prior-art body. All five
+  corrective chunks were read completely; their seven assigned-batch
+  bodies are not counted as older comparisons. The immutable pre-author
+  411/920/173 seal remains unchanged; final navigation labels total 235.
+- Native access authenticates GPT's 60 calls / maximum one outstanding,
+  177 complete families / 429 senses and 19 older bodies, including
+  17 semantic comparisons plus 夕飯 and 柔らかい. Claude had 61 calls,
+  58 successful returns, maximum three outstanding in the interrupted
+  initial attempt, 20 principal families / 32 senses, no complete
+  comparison families and six older bodies. Processes did not overlap.
+  Preserve the interrupted prefix receipt's lower counters rather than
+  mistaking them for whole-attempt counts.
+- Preserve Claude's malformed header and full CLI stdout report.
+  The final native assistant message contains its last 10,662 characters,
+  not the 2,931-character opening; do not claim whole-report native-message
+  authentication or infer an exact cause. Compacted reviewer notes and
+  unequal depth further limit model comparisons. Verified complementary
+  contributions are useful in this sample, not measured bias reduction.
+  Both original-session confirmations remain pending.
 
 ## Batch 85 authoring observations
 
