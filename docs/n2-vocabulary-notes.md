@@ -82,9 +82,31 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   本来's revision makes an expectation explicit, not a universal claim
   that the earlier sentence was ungrammatical. 混/交 guidance remains a
   tendency rather than a categorical material/spelling law.
-- Original-session confirmations remain pending; the twenty source
-  rows are still draft. Optional idiom expansion, redundant-but-usable
-  count wording and unsupported weak guard hypotheses are not defects.
+- Both original sessions confirm the accepted correction commit
+  `fea8bc2e4234557b3ed0ccca4bb7f5af263c1985`: all twenty rows are CLEAN
+  on all three facets, with no remaining actionable finding. Each
+  freshly returns all 47 required complete files and the exact TSV
+  scope; mandatory fresh dictionary union is 42 families / 123 senses.
+  Cumulative reviewer family unions are GPT 317/826 and Claude 42/123;
+  existing-body unions including 巻く are 160 and thirteen.
+- Claude's confirmation discloses one parallel two-call read pair and
+  one out-of-scope `.github` grep returning two agent-file snippets.
+  Preserve these deviations, not a strict serial/scope-compliance
+  claim; reviewer processes never overlap. File-return authentication
+  establishes evidence access, not comprehension or semantic truth.
+- Retain native reports unchanged. Claude's F02 shorthand refers to
+  association in 1603920 sense 1 and 1603930 sense 2, not a nonexistent
+  second sense of 1603920. Do not adopt its preliminary suggestion that
+  a distinct thanks sense alone makes a frequency title safe: bare 度
+  names an occasion/count; the repeated relationship needs its taught
+  度に construction. Different constructions, not POS alone, support
+  the final decision.
+- Optional idiom/backlink expansion, a more explicitly named dictionary,
+  a distinguishable-stones example revision and redundant-but-usable
+  count wording are deferred. The 混/交 guidance is expressly a tendency;
+  the current example is not established as an actionable defect.
+  These twenty rows close without changing accepted teaching or the
+  manifest after confirmation.
 
 ## Batch 78 authoring observations
 

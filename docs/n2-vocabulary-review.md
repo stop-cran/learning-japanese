@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-78 review-closed.** The target is all 1,812 source rows,
+**Batches 01-79 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,560 rows are review-closed; 20 are drafted and 232 remain pending.
+The first 1,580 rows are review-closed; 232 remain pending and none are drafted.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 79: N2:1562-N2:1581
 
-**Status:** drafted; independent sequential initial reviews authenticated,
-corrections authored, original-session confirmations pending.
+**Status:** closed after authenticated independent initial reviews and
+full confirmations by both original sessions.
 
 Seventeen new articles and reused 巻く cover twenty source rows in eighteen
 distinct articles. Source 交ざる maps to 混ざる, and 交じる maps to 混じる:
@@ -49,7 +49,7 @@ related kanji bodies. Twenty full public captures are one dictionary
 authority, with unrelated headings separated. Navigation labels and
 larger prepared dictionary availability are not complete-body reads.
 Four additional complete matching families / seventeen senses were
-actually read after drafting: the final author union is 313 / 816,
+actually read after drafting: that stage's author union is 313 / 816,
 without retroactively changing the pre-card inspection claim.
 See [batch sources](n2-vocabulary-batch-sources/batch-79.json).
 
@@ -80,8 +80,44 @@ complete corrective families / 66 senses and twelve full older bodies
 support adjudication. Four new direct guards give 110 declarations;
 identities, titles, raw source fields, selected senses and kanji remain
 unchanged. Optional expansion and weak omission hypotheses were not
-upgraded into defects. Original-session confirmations are still required
-before these twenty rows close.
+upgraded into defects.
+
+Accepted teaching snapshot: `fea8bc2e4234557b3ed0ccca4bb7f5af263c1985`.
+The [GPT confirmation](n2-vocabulary-reviews/batch-79-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-79-claude-confirmation.md)
+return all twenty source rows CLEAN on correctness, scoped coverage and
+comprehensibility, with all original findings resolved and no actionable
+regression or consequential unresolved claim.
+
+Both freshly return all 47 mandatory complete files, the exact TSV
+header/twenty rows and the full required format range. Common fresh
+dictionary scope is 42 distinct families / 123 senses, with all eighteen
+assigned articles, three kanji and twelve older bodies. Cumulative family
+unions are GPT 317/826 and Claude 42/123; existing-body unions including
+reused 巻く are 160 and thirteen. These actual returns are not claims
+that the original prepared union was fully reread or equally understood.
+
+Claude discloses one two-call parallel file-read pair and one out-of-scope
+`.github` grep returning snippets from two agent files in confirmation.
+The two reviewer processes never overlap and make zero edits; those
+internal deviations are not represented as strict serial/scope compliance.
+Its fresh public fetches return only a footer/head, not new lexical
+verification. Frozen Daijisen remains one public dictionary authority.
+
+| Confirmation observation | Final disposition |
+| --- | --- |
+| 混じる's distinguishable stones | Optional/deferred. The article explicitly teaches a tendency, not an absolute ban; JMdict sense 1 has its own usual-spelling note. A different example may illustrate the tendency more neatly, but no actionable defect is established. |
+| Naming the dictionary | Optional/deferred. Directly naming Digital Daijisen would sharpen generic wording; the explicit note is grounded in its captured 補説, not a claim of a second independently verified public authority. |
+| Smoke idiom, reverse word link, sheet-count wording | Optional/deferred. The physical/passive recognition and substantive existing link are sufficient; redundancy alone is not a defect. |
+| Claude F02 sense shorthand | Association is 1603920 sense 1 and 1603930 sense 2. Do not infer a second sense of the former; complete records control and native reports are preserved. |
+| Claude's preliminary 度 rationale | A distinct thanks sense alone does not exempt a frequency overlap. The final no-guard decision rests on bare 度's occasion/count meaning versus the explicitly taught 度に construction, not a blanket POS exception. |
+
+Closure changes only reports, evidence, ledgers and coverage status;
+accepted teaching and manifest remain unchanged. All 3,273 baseline
+identities/readings/titles/prior exclusions remain preserved. The audit
+has 331 generic new-article primary reciprocal N2 pairs, or 337 when
+including the three historical 皮膚/武士 pairs and the scoped
+募集/干す/巻く reuses; this is not every possible historical reuse pair.
 
 ## Batch 78: N2:1542-N2:1561
 
