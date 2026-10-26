@@ -5,8 +5,8 @@
 **Batches 01-76 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,520 rows are review-closed; none are drafted,
-and 292 remain pending. None are unresolved.
+The first 1,520 rows are review-closed; twenty batch77 rows are drafted,
+and 272 remain pending. None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,29 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 77: N2:1522-N2:1541
+
+**Status:** draft; independent sequential GPT and Claude review is pending.
+
+Twenty new articles teach twenty source rows. Raw 庖丁 maps to the common
+same-entry headword [包丁](../words/包丁.md), with explicit alternate-spelling
+recognition and unchanged raw source fields.
+Ten primary reciprocal N2 pairs span eight kanji: 編集/編, 方角/角,
+防止/防, 方針/針, 包装/包 and 装, 法則/則, 包帯/包 and 帯, 包丁/包.
+The kanji metadata is unchanged; no older word article is modified.
+
+Actual pre-card inspection covers twenty complete principal families / 28
+senses, 310 distinct complete principal/comparison families / 669 senses,
+136 complete older articles, 34 component records, eight complete kanji bodies
+and twenty-two public lexical captures from one dictionary authority.
+The larger 497 families / 1,083 senses are prepared availability, not completed
+inspection. See [batch sources](n2-vocabulary-batch-sources/batch-77.json).
+
+All source mappings, examples, constructions, direct quiz guards, component
+associations and reciprocal links remain independently reviewable.
+Author inspection and structural checks do not close the batch or constitute
+independent linguistic review.
 
 ## Batch 76: N2:1502-N2:1521
 

@@ -19,6 +19,59 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 77 authoring observations
+
+- N2:1522-N2:1541 add twenty new articles. All older word articles, including
+  their identities, readings, titles, bodies and exclusions, remain unchanged.
+  Ten primary reciprocal N2 pairs span eight kanji: 編集/編, 方角/角,
+  防止/防, 方針/針, 包装/包 and 装, 法則/則, 包帯/包 and 帯, 包丁/包.
+  Existing kanji metadata and teaching are preserved apart from these useful
+  navigation additions and supporting dictionary entry IDs.
+- Before drafting, actually read twenty principal families / 28 senses,
+  eleven selected complete-family chunks / 307 families / 663 senses,
+  seventeen complete older-body chunks / 133 articles, 267 navigation labels,
+  34 component records and eight complete related kanji bodies.
+  A narrow supplement adds three complete families / six senses and complete
+  大きな, 別れ and 別れる bodies. The actual union is 310 families / 669 senses
+  and 136 older articles, not all 497 prepared families / 1,083 senses.
+- Twenty principal and two supplemental complete public lexical wrappers were
+  inspected. They are one Digital Daijisen authority via Weblio, not twenty-two
+  independent dictionaries. Keep historical びんしょ beside 便所 and ははき
+  beside 箒 distinct from the target べんじょ and ほうき readings.
+  The confusable inventory was read through line157 plus targeted relevant
+  searches, not in its entirety.
+- Normalize raw 庖丁 to prioritized common 包丁, keeping the same ほうちょう
+  reading and entry1515530. Display 庖丁 explicitly as an alias, preserve every
+  raw TSV field, and record the transformation rather than creating a duplicate.
+  Primary reciprocal accounting uses written 包 in the chosen headword;
+  recognizing an alternate spelling is not another new primary pair.
+- 別々 needs explicit 別々に, 別々の and 別々な constructions. ベテラン concerns
+  experience in a field, not necessarily military service. Search-only
+  ヴェテラン/ヘリコプタ are not promoted to production alternatives.
+  編集's editorial-committee use is not the opinion article 社説.
+- 方角 includes a method/means sense as well as compass orientation.
+  方針 concerns a guiding course, not simply a numerical goal.
+  コース actually has a policy sense despite its route/course title.
+  方言 includes grammar and vocabulary, not accent alone; 言葉 actually has
+  a dialect sense. 坊さん's familiar boy sense is not erased by the monk title.
+- Supplemental チェック sense4 explicitly includes investigating to prevent
+  unsuitable entry. Therefore 防止 and チェック must not be declared
+  categorically disjoint merely because the pinned English family foregrounds
+  inspection. Preventing accidents still differs from merely inspecting them.
+- 膨大 retains its swelling/expansion noun and intransitive する sense.
+  Rare 厖大/尨大 belong to its adjective sense, directly corroborated by the
+  supplemental public 厖大 entry. 広々's actual title is spacious/expansive,
+  not an imagined extensive label. 法則 is not restricted to natural laws;
+  方程式 includes the established figurative formula-for-success use.
+- Draft guards are direct, symmetric, nontransitive hypotheses, not claims
+  that all tool, dwelling, language, direction or mathematical categories
+  are synonyms. 型's formula, 編む's compilation and ordinary secondary
+  meanings require individual checks against the actual displayed labels.
+  No native-speaker certification or exhaustive quiz-uniqueness claim is made.
+- Missing component and comparison cards are not fabricated. Keep all primary
+  written Han characters in metadata, including 箒, 荘, 鏡, 坊, 膨 and 丁,
+  without creating broken links. Character associations are not etymology.
+
 ## Batch 76 authoring observations
 
 - N2:1502-N2:1521 add twenty new articles. No older word identity, reading,
