@@ -19,6 +19,60 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 81 authoring observations
+
+- N2:1602-N2:1621 map to twenty articles: eighteen physical additions
+  and baseline N4 reuses 見つかる and 見つける. Preserve both
+  identities, readings, titles, easier levels and existing teaching.
+  Add explicit rare 見付かる recognition and bounded visual-familiarity
+  teaching for 見つける; the latter was not already in its old body.
+- The sealed pre-card receipt records twenty principal families / 34
+  senses, 343 distinct complete principal/comparison families / 818
+  senses, 184 complete older word bodies, 312 navigation labels,
+  28 complete components and the complete 順 body. All thirteen
+  selected family chunks and twenty-three older-body chunks were
+  actually read through their recorded ends. Prepared availability
+  is not actual inspection; direct reuse reads do not add duplicates.
+- A separate pre-draft advance, after that sealed receipt, adds five
+  complete families / eleven senses and three complete older bodies:
+  ビル, ホーム and ぎゅうぎゅう. Actual author unions are now
+  348 families / 829 senses and 187 older bodies. Keep unrelated
+  bill/platform/baseball identities separate from the housing question.
+- Twenty complete public wrappers are one Digital Daijisen authority
+  via Weblio, not twenty independent dictionaries or frequency checks.
+  Separate みせや from てんや, sports マラソン from unrelated
+  homographs, and geographic 岬 from titles and other readings.
+- Source 稀 maps to usually-kana まれ; 見掛け maps to 見かけ.
+  Both exact source spellings remain explicit. Do not turn a raw
+  source gloss into a factual restriction: 三日月 is a visible young
+  crescent, not the invisible conjunction, and the inspected みじめ
+  entry does not justify the raw archaic label.
+- 満員 concerns fullness with people, not sold-out merchandise.
+  マンション does not imply a grand detached house, ownership or
+  guaranteed construction. 満点 is the maximum on the actual scale,
+  not necessarily one hundred points; its excellence sense also
+  matters for direct quiz comparisons.
+- Teach 見下ろす contempt as well as physical looking down, all six
+  practical 見送る senses, and the different transitivity of 見直す
+  reviewing versus recovery. A selected practical scope is not a
+  warrant to erase ordinary secondary senses from quiz comparisons.
+- The exact public phrase いつも見つけている景色 grounds visual
+  familiarity. It does not license substituting 見つける for knowing
+  any fact or familiarity with any subject. Retain the prior finding
+  examples and explicitly identify the added sense and its source.
+- Add 道順/順 as the sole new primary reciprocal N2 pair. Explain
+  native-first みち + ジュン rather than forcing an all-on reading.
+  Preserve all prior 順 metadata and teaching; no 岬 or 稀 character
+  card is invented to satisfy links.
+- Quiz exclusions are direct symmetric, nontransitive judgments from
+  actual titles, complete entries and inspected bodies. Do not create
+  category cliques, infer pairs through a third word, or automatically
+  exempt differing parts of speech or transitivity. CW004/CW022 and
+  false-friend CW095 were considered; draft judgments await review.
+- Independent GPT and Claude reviews and contribution reconciliation
+  remain pending. Author checks and evidence access are not independent
+  linguistic certification or measured model-bias reduction.
+
 ## Batch 80 authoring observations
 
 - N2:1582-N2:1601 map to twenty articles: eighteen physical additions,

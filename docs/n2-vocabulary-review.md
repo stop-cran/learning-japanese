@@ -5,7 +5,7 @@
 **Batches 01-80 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,600 rows are review-closed; 212 remain pending and none are drafted.
+The first 1,600 rows are review-closed; twenty are drafted and 192 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,36 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 81: N2:1602-N2:1621
+
+**Status:** draft; independent review and reconciliation pending.
+
+Eighteen new articles and two baseline N4 reuses cover twenty source
+rows. Source 稀 maps to まれ and 見掛け to 見かけ, with both
+source spellings explicitly recognized. Reused 見つかる now recognizes
+rare 見付かる; 見つける adds the separately sourced visual-familiarity
+sense without replacing the prior finding teaching. Both retain their
+stable identities, readings, titles, easier levels and old content.
+
+道順/順 is one new primary reciprocal N2 pair. The mixed reading
+みち + ジュン is explained, and edited 順 retains metadata and all
+unrelated teaching. No missing 岬 character card or link is invented.
+
+The sealed pre-card inspection covers twenty principal families / 34
+senses; 343 distinct complete families / 818 senses; 184 older bodies;
+312 navigation labels; 28 components; and one complete related kanji
+body. All twenty public wrappers were actually read and are one
+Digital Daijisen authority, not twenty independent dictionaries.
+A separate pre-draft advance adds five complete families / eleven
+senses and three older bodies: actual unions 348 / 829 and 187 bodies.
+Prepared availability is not actual inspection.
+
+See [batch sources](n2-vocabulary-batch-sources/batch-81.json).
+The initial reviews will use the same frozen snapshot, scope, rubric
+and source access, sequentially and without access to one another's
+findings or the author's quiz rationale. No closure or review-model
+contribution is claimed at this stage.
 
 ## Batch 80: N2:1582-N2:1601
 
