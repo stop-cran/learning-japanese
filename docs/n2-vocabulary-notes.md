@@ -23,8 +23,10 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 - N2:1442-N2:1461 draft nineteen new articles and reuse 増える
   unchanged for source 殖える, preserving its N4 level, identity,
-  reading, title, body and metadata. Independent initial reviews
-  are complete; corrections await both original-session confirmations.
+  reading, title, body and metadata. Both original reviewers accept
+  the corrected snapshot `125bbe21d9696d59a99ee978efe01de8146ec6e3`;
+  all twenty rows are CLEAN on correctness, scoped coverage and
+  comprehensibility. Kanji edits and mappings are assessed separately.
 - Preserve blank source spellings for ピンク and ファスナー and
   the source headword 瓶詰. Its alternative 瓶詰め is explicit;
   ビン plus voiced native づめ is mixed, not an all-on compound.
@@ -86,8 +88,19 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   sample do not measure bias reduction or rank models.
 - Other optional recognition/register expansion stays deferred.
   普及 already teaches 普及させる. No new mandatory claim follows
-  from an unverified usage tendency. Initial reports remain unchanged;
-  no all-CLEAN confirmation or review closure is claimed yet.
+  from an unverified usage tendency. Initial reports remain unchanged.
+- Both original-session confirmations run sequentially and read-only.
+  Exact prompts/models/final messages, 51 fresh complete required
+  native returns each, bounded TSV rows and the content-format range
+  are authenticated. Each freshly returns all twenty assigned bodies,
+  eight kanji, twelve older bodies and 21 corrective families.
+  Actual cumulative complete older-body unions are GPT 109 / Claude 16,
+  not author totals or evidence of equal comprehension.
+- Both accept all original dispositions and the adopted drying guard;
+  no new actionable defect is established. Confidence in marginal
+  label guards remains qualified, not a guarantee of unrestricted
+  Japanese synonymy. No teaching or manifest edit follows acceptance.
+  Closure leaves 1,460 closed / 352 pending, no draft or unresolved rows.
 
 ## Batch 72 authoring observations
 

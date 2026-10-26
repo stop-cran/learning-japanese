@@ -2,11 +2,11 @@
 
 ## Status
 
-**Batches 01-72 review-closed.** The target is all 1,812 source rows,
+**Batches 01-73 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,440 rows are review-closed; batch 73 has 20 drafted rows and
-352 remain pending. None are unresolved.
+The first 1,460 rows are review-closed; 352 remain pending.
+None are drafted or unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -28,8 +28,9 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 73: N2:1442-N2:1461
 
-**Status:** drafted; authenticated independent initial reviews
-reconciled, with original-session confirmations pending.
+**Status:** closed after authenticated independent initial reviews,
+evidence-based corrections and all-CLEAN confirmations by both
+original sessions.
 
 Nineteen new articles: ピンク, 便箋, 瓶詰, ファスナー, 風船, 不運,
 深まる, 不規則, 普及, 付近, 拭く, 副詞, 複写, 複数, 含める,
@@ -71,7 +72,7 @@ Exact native prompts/models/final messages, 37 required complete
 returns each, TSV header and only assigned rows, the required
 content-format range and zero edits are authenticated.
 
-| Initial observation | Author reconciliation, pending confirmation |
+| Initial observation | Final reconciliation, accepted by both original reviewers |
 | --- | --- |
 | Shared N273-01 / B73-01 | Remove false long-vowel instruction from びんづめ; voiced-ending guidance remains. |
 | GPT N273-02 | Add 深まる/進む, 強化 and 加わる from actual intensifying/deepening senses and older teaching. |
@@ -101,7 +102,36 @@ GPT 106 / Claude 8: GPT returns all nine family and eleven older-body
 chunks plus the supplement; Claude returns no full chunks.
 Complementarity in this sample is useful but does not establish
 equal comprehension, a model ranking or measured bias reduction.
-No all-CLEAN confirmation or closure is claimed yet.
+
+Final confirmations: [GPT](n2-vocabulary-reviews/batch-73-gpt-confirmation.md)
+and [Claude](n2-vocabulary-reviews/batch-73-claude-confirmation.md),
+sequentially and read-only on
+`125bbe21d9696d59a99ee978efe01de8146ec6e3`.
+Both accept all original dispositions and the optional drying guard.
+All twenty rows are CLEAN on correctness, scoped coverage and
+comprehensibility; eight kanji, mappings and baseline preservation
+are separately assessed. No remaining actionable defect or consequential
+unresolved claim is established. Lower-confidence judgments about
+some English-label guards remain explicit, not free-substitution rules.
+
+Exact native prompts, actual models, complete final messages and all
+51 required fresh complete returns per confirmation are authenticated,
+including twenty assigned word bodies, eight kanji, twelve older bodies,
+complete principals/components/labels/mappings, 21 corrective families,
+public captures, reconciliation and the actual correction patch.
+Both return only the TSV header and assigned rows and the required
+content-format range. Both native sessions have two turns and zero
+edits. All four full reports remain unchanged. Actual cumulative
+complete older-body unions are **GPT 109 / Claude 16**, not author
+inspection totals or proof of equal comprehension. Neither confirmation
+adds a new public authority; Claude makes no fresh public fetch.
+
+No teaching or manifest edit follows acceptance. Closure leaves
+**1,460 closed / 352 pending**, no draft or unresolved rows,
+4,613 word articles, all 3,273 baseline invariants preserved,
+and manifest `3e160f2870e47dc8`. All nine batch reciprocal pairs remain.
+The 307 generic new-article pairs plus two scoped 皮膚 reuse pairs
+are not a census of all historical reuse links.
 
 ## Batch 72: N2:1422-N2:1441
 
