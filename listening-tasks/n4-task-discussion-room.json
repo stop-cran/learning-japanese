@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 2,
+  "policyVersion": 1,
+  "jlpt": 4,
+  "id": "n4-task-discussion-room",
+  "exposureId": "n4-story-discussion-room",
+  "taskType": "task-based",
+  "kind": "dialogue",
+  "usage": "scored",
+  "title": "Preparing a discussion room",
+  "topic": "Two volunteers decide how to arrange a desk and two chairs for today's discussion.",
+  "levelRationale": "Combine the purpose of facing one another with a changed location, rejecting an initially plausible brighter location. The potential-purpose clause, conditional location and reference across turns add N4 listening demands; numbered pictures are essential. These are original draft demands, not an official word-list or acoustic-level certification.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": 0
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -5
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -5
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "質問と会話を聞いて、答えを一つ選んでください。",
+      "translation": "Listen to the question and conversation, then choose one answer."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "男の人は、机と椅子をどのように並べますか。",
+      "translation": "How will the man arrange the desk and chairs?"
+    },
+    {
+      "id": "usual",
+      "speaker": "a",
+      "text": "今日の集まりも、二人とも窓のほうを向いて座るんですよね。",
+      "translation": "At today's gathering, both people will sit facing the window again, right?"
+    },
+    {
+      "id": "purpose",
+      "speaker": "b",
+      "text": "今日は話し合いをするので、向かい合って座れるようにしてください。",
+      "translation": "Today they will have a discussion, so please arrange things so they can sit facing each other."
+    },
+    {
+      "id": "proposal",
+      "speaker": "a",
+      "text": "じゃあ、机は窓の近くに置きますか。そこのほうが明るいですし。",
+      "translation": "Then shall I put the desk near the window? It's brighter there, too."
+    },
+    {
+      "id": "location",
+      "speaker": "b",
+      "text": "窓の近くだと、外の工事の音が聞こえるんです。今日は入口に近いほうへ動かしてもらえますか。",
+      "translation": "Near the window, you can hear the construction work outside. Could you move it closer to the entrance today?"
+    },
+    {
+      "id": "confirm",
+      "speaker": "a",
+      "text": "分かりました。椅子は、机をはさんで、一つずつですね。",
+      "translation": "Understood. One chair on each side, with the desk between them, right?"
+    },
+    {
+      "id": "agree",
+      "speaker": "b",
+      "text": "はい、それでお願いします。",
+      "translation": "Yes, please arrange it that way."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "usual",
+        "purpose",
+        "proposal",
+        "location",
+        "confirm",
+        "agree"
+      ]
+    },
+    {
+      "id": "repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "layout-one",
+      "number": 1,
+      "label": "1の並べ方",
+      "translation": "Arrangement 1.",
+      "rationale": "The chairs face one another, but the desk remains near the window, where the construction noise is a problem."
+    },
+    {
+      "id": "layout-two",
+      "number": 2,
+      "label": "2の並べ方",
+      "translation": "Arrangement 2.",
+      "rationale": "The desk is near the entrance and the chairs face one another across it, satisfying both parts of the revised arrangement."
+    },
+    {
+      "id": "layout-three",
+      "number": 3,
+      "label": "3の並べ方",
+      "translation": "Arrangement 3.",
+      "rationale": "This keeps both the window-side location and the old side-by-side, window-facing seating."
+    },
+    {
+      "id": "layout-four",
+      "number": 4,
+      "label": "4の並べ方",
+      "translation": "Arrangement 4.",
+      "rationale": "The location is near the entrance, but both chairs still face the window from the same side of the desk."
+    }
+  ],
+  "answer": "layout-two",
+  "evidence": [
+    "purpose",
+    "location",
+    "confirm"
+  ],
+  "explanation": "The arrangement must satisfy two connected instructions: people need to sit facing each other for the discussion, and the desk must move toward the entrance because of noise near the window. The man's brighter-location proposal is not adopted. 机をはさんで、一つずつ confirms one chair on each side of the desk; it does not restore the old window-facing seating.",
+  "blueprint": "n4-section-v1",
+  "vocabulary": [
+    {
+      "surface": "話し合い",
+      "reading": "はなしあい",
+      "gloss": "discussion"
+    },
+    {
+      "surface": "向かい合って",
+      "reading": "むかいあって",
+      "gloss": "facing each other"
+    },
+    {
+      "surface": "工事",
+      "reading": "こうじ",
+      "gloss": "construction work"
+    },
+    {
+      "surface": "入口",
+      "reading": "いりぐち",
+      "gloss": "entrance"
+    },
+    {
+      "surface": "はさんで",
+      "reading": "はさんで",
+      "gloss": "with something between"
+    }
+  ],
+  "visual": {
+    "role": "required",
+    "description": "Four equally presented numbered views of the same room, with a window on the far wall and an entrance on the near wall. Each view contains exactly one rectangular desk and two chairs. View 1: desk near the window, chairs facing each other across it. View 2: desk near the entrance, chairs facing each other across it. View 3: desk near the window, both chairs side by side on its near side, facing the window. View 4: desk near the entrance, both chairs side by side on its near side, facing the window. The entrance remains unobstructed in every view. No people, speech bubbles or highlighted arrangement."
+  },
+  "media": {
+    "contentSha256": "d50072376f9ab54dfecf4ff50a121319638cc6bd5fea0c374cc86373589bac05",
+    "audio": {
+      "instruction": {
+        "sha256": "57ce04ed247061ef3ed03fda23388cd0bfd91e3d760e6a6a5f5d79f4bb2d523a",
+        "durationMs": 5162,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 4962
+          }
+        ],
+        "path": "task-audio/stage-745265562f5e36cf181cb52d1c77c1366434ff3c1f06a331a42e5c844d9f0cc5.ogg"
+      },
+      "focus": {
+        "sha256": "58379ebb710ae91293eb8023acfc2da3d5a781008fe3c21a58983247c21ec409",
+        "durationMs": 5000,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 4800
+          }
+        ],
+        "path": "task-audio/stage-9a1f065b3087e83bd90bf4754abba0d03ee1a5f36dfe3d7dfee46f4fbe87ec8d.ogg"
+      },
+      "passage": {
+        "sha256": "91ee875005a01acbe511bd7d39fd35f94374417ab4325eff8f67ba7245074666",
+        "durationMs": 37184,
+        "turns": [
+          {
+            "id": "usual",
+            "startMs": 150,
+            "endMs": 5085
+          },
+          {
+            "id": "purpose",
+            "startMs": 5435,
+            "endMs": 10962
+          },
+          {
+            "id": "proposal",
+            "startMs": 11312,
+            "endMs": 17668
+          },
+          {
+            "id": "location",
+            "startMs": 18018,
+            "endMs": 27322
+          },
+          {
+            "id": "confirm",
+            "startMs": 27672,
+            "endMs": 33581
+          },
+          {
+            "id": "agree",
+            "startMs": 33931,
+            "endMs": 36984
+          }
+        ],
+        "path": "task-audio/stage-7d939d84dd34d81d9813d6c7f6ee89b90f401863d3d6b04e10266182ed1500ee.ogg"
+      },
+      "repeat": {
+        "sha256": "58379ebb710ae91293eb8023acfc2da3d5a781008fe3c21a58983247c21ec409",
+        "durationMs": 5000,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 4800
+          }
+        ],
+        "path": "task-audio/stage-9a1f065b3087e83bd90bf4754abba0d03ee1a5f36dfe3d7dfee46f4fbe87ec8d.ogg"
+      }
+    },
+    "image": {
+      "path": "task-images/image-d4ab5d0410e436df86960377b0a8880586acf497a398887e9d81e56b2ce9bd2b.webp",
+      "sha256": "d4ab5d0410e436df86960377b0a8880586acf497a398887e9d81e56b2ce9bd2b"
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "d50072376f9ab54dfecf4ff50a121319638cc6bd5fea0c374cc86373589bac05",
+    "mediaSha256": "74ce60e987780270cf2446070a254340373c73617952282b1429ce7bcaf82d2a",
+    "reviewedOn": "2026-10-26",
+    "note": "Owner-authorized personal-testing publication, 2026-10-26. After receiving the complete eight-pilot review page, the owner explicitly requested publishing these exercises in the app. The earlier audition feedback and selected -5%/0% pacing are retained. Exact source, every stage/media hash, timing binding and selected picture are verified; the independent reviewer found no consequential language/picture discrepancy. This authorizes ordinary app testing of these eight pilots only. Exact complete-order listener/picture acceptance, guided-native and physical-phone acceptance remain pending and are not claimed passed. No general-release, full-pool, diagnostic-section or proficiency certification is implied."
+  }
+}

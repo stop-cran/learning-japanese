@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 2,
+  "policyVersion": 1,
+  "jlpt": 4,
+  "id": "n4-task-moving-help",
+  "exposureId": "n4-story-moving-help",
+  "taskType": "key-point",
+  "kind": "dialogue",
+  "usage": "scored",
+  "title": "Help with a move",
+  "topic": "Two friends discuss who carried different items and who received them at the new room.",
+  "levelRationale": "Resolve その二人 across two earlier helpers and distinguish receiving help or receiving delivered belongings from physically carrying the desk. The benefit-receiving viewpoint in てもらった does not make the woman the carrier. Familiar 受け取ってた is a controlled spoken reduction.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": 0
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -5
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -5
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "質問と会話を聞いて、答えを一つ選んでください。",
+      "translation": "Listen to the question and conversation, then choose one answer."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "机を運んだのは、誰と誰ですか。",
+      "translation": "Which two people carried the desk?"
+    },
+    {
+      "id": "ask",
+      "speaker": "a",
+      "text": "引っ越しの荷物、もう運べた？",
+      "translation": "Have you managed to move your belongings?"
+    },
+    {
+      "id": "brother",
+      "speaker": "b",
+      "text": "うん。弟に車で来てもらって、本の箱を運んでもらったよ。",
+      "translation": "Yes. I had my younger brother come by car and carry the boxes of books for me."
+    },
+    {
+      "id": "desk-question",
+      "speaker": "a",
+      "text": "机も、弟さん一人で？",
+      "translation": "Did your younger brother carry the desk on his own too?"
+    },
+    {
+      "id": "tanaka",
+      "speaker": "b",
+      "text": "机は重くて、一人では無理だったから、田中さんにも来てもらったの。",
+      "translation": "The desk was heavy and couldn't be moved by one person, so I had Tanaka come as well."
+    },
+    {
+      "id": "woman-question",
+      "speaker": "a",
+      "text": "あなたも一緒に運んだの？",
+      "translation": "Did you carry it with them too?"
+    },
+    {
+      "id": "receiving",
+      "speaker": "b",
+      "text": "私は、新しい部屋で荷物を受け取ってたよ。机は、その二人に運んでもらったんだ。",
+      "translation": "I was receiving the belongings at the new room. I had those two carry the desk for me."
+    },
+    {
+      "id": "reply",
+      "speaker": "a",
+      "text": "そうだったんだ。助かったね。",
+      "translation": "I see. That was a big help."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "ask",
+        "brother",
+        "desk-question",
+        "tanaka",
+        "woman-question",
+        "receiving",
+        "reply"
+      ]
+    },
+    {
+      "id": "repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "woman-brother",
+      "number": 1,
+      "label": "女の人と弟です。",
+      "translation": "The woman and her younger brother.",
+      "rationale": "She was receiving the belongings at the new room, not carrying the desk with her brother."
+    },
+    {
+      "id": "brother-tanaka",
+      "number": 2,
+      "label": "弟と田中さんです。",
+      "translation": "Her younger brother and Tanaka.",
+      "rationale": "Her brother is the first helper; Tanaka joins him for the heavy desk. その二人 refers back to these two."
+    },
+    {
+      "id": "woman-tanaka",
+      "number": 3,
+      "label": "女の人と田中さんです。",
+      "translation": "The woman and Tanaka.",
+      "rationale": "Tanaka helped, but the other carrier was her younger brother, not the woman receiving the belongings."
+    },
+    {
+      "id": "brother-alone",
+      "number": 4,
+      "label": "弟一人です。",
+      "translation": "Her younger brother alone.",
+      "rationale": "The desk could not be moved by one person, which is why Tanaka also came."
+    }
+  ],
+  "answer": "brother-tanaka",
+  "evidence": [
+    "brother",
+    "tanaka",
+    "receiving"
+  ],
+  "explanation": "The woman receives the favor; 弟に…運んでもらった does not say that she carried the items herself. Tanaka is brought in because the desk is too heavy for one person. その二人 then refers to the younger brother and Tanaka. She was at the new room receiving the belongings. 受け取ってた is the familiar spoken form of 受け取っていた.",
+  "blueprint": "n4-section-v1",
+  "vocabulary": [
+    {
+      "surface": "引っ越し",
+      "reading": "ひっこし",
+      "gloss": "moving to a new home"
+    },
+    {
+      "surface": "荷物",
+      "reading": "にもつ",
+      "gloss": "belongings; items being carried"
+    },
+    {
+      "surface": "運んで",
+      "reading": "はこんで",
+      "gloss": "carry; transport"
+    },
+    {
+      "surface": "無理",
+      "reading": "むり",
+      "gloss": "not feasible; too much to manage"
+    },
+    {
+      "surface": "受け取ってた",
+      "reading": "うけとってた",
+      "gloss": "was receiving; casual form of 受け取っていた"
+    }
+  ],
+  "media": {
+    "contentSha256": "f12194921ab251a846348267506291877f224b8afb0520f8a55f0e045a4aff79",
+    "audio": {
+      "instruction": {
+        "sha256": "57ce04ed247061ef3ed03fda23388cd0bfd91e3d760e6a6a5f5d79f4bb2d523a",
+        "durationMs": 5162,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 4962
+          }
+        ],
+        "path": "task-audio/stage-745265562f5e36cf181cb52d1c77c1366434ff3c1f06a331a42e5c844d9f0cc5.ogg"
+      },
+      "focus": {
+        "sha256": "61bac7204b7877057915844d3165441bc32611a8b7278ba61e4a41ba59ba3fdd",
+        "durationMs": 4088,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 3888
+          }
+        ],
+        "path": "task-audio/stage-a765d7b56cb8aae448538a53190121580a4146d3ffab3f43046d582c02b6d88c.ogg"
+      },
+      "passage": {
+        "sha256": "f77b222e811d1d6501aa9ef5601399dcb87f218c00f05387558eb6eb880d3f1d",
+        "durationMs": 36576,
+        "turns": [
+          {
+            "id": "ask",
+            "startMs": 150,
+            "endMs": 3480
+          },
+          {
+            "id": "brother",
+            "startMs": 3830,
+            "endMs": 10529
+          },
+          {
+            "id": "desk-question",
+            "startMs": 10879,
+            "endMs": 13906
+          },
+          {
+            "id": "tanaka",
+            "startMs": 14256,
+            "endMs": 20533
+          },
+          {
+            "id": "woman-question",
+            "startMs": 20883,
+            "endMs": 23436
+          },
+          {
+            "id": "receiving",
+            "startMs": 23786,
+            "endMs": 32537
+          },
+          {
+            "id": "reply",
+            "startMs": 32887,
+            "endMs": 36376
+          }
+        ],
+        "path": "task-audio/stage-3794292b941a904d12ebb6e8c31b56f67b74dafcb55ce1daf21f70331fbbea25.ogg"
+      },
+      "repeat": {
+        "sha256": "61bac7204b7877057915844d3165441bc32611a8b7278ba61e4a41ba59ba3fdd",
+        "durationMs": 4088,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 3888
+          }
+        ],
+        "path": "task-audio/stage-a765d7b56cb8aae448538a53190121580a4146d3ffab3f43046d582c02b6d88c.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "f12194921ab251a846348267506291877f224b8afb0520f8a55f0e045a4aff79",
+    "mediaSha256": "62665038f5b8a4b28e62655d6c150710a03d480378a3d4e6e3bebc2501ede5aa",
+    "reviewedOn": "2026-10-26",
+    "note": "Owner-authorized personal-testing publication, 2026-10-26. After receiving the complete eight-pilot review page, the owner explicitly requested publishing these exercises in the app. The earlier audition feedback and selected -5%/0% pacing are retained. Exact source, every stage/media hash, timing binding and selected picture are verified; the independent reviewer found no consequential language/picture discrepancy. This authorizes ordinary app testing of these eight pilots only. Exact complete-order listener/picture acceptance, guided-native and physical-phone acceptance remain pending and are not claimed passed. No general-release, full-pool, diagnostic-section or proficiency certification is implied."
+  }
+}

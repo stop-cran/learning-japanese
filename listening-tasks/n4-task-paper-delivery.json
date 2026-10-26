@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 2,
+  "policyVersion": 1,
+  "jlpt": 4,
+  "id": "n4-task-paper-delivery",
+  "exposureId": "n4-story-paper-delivery",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "scored",
+  "title": "Before leaving an activity",
+  "topic": "A request to deliver a paper includes a reason not to take it immediately.",
+  "levelRationale": "Respond to a familiar request while retaining the negative timing constraint and the direction of delivery. The reply must confirm delivery to reception at departure, rather than proposing immediate delivery or reversing the direction at departure. No plausible refusal is treated as wrong merely for refusing.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": 0
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -5
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": 0
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "最初のことばを聞いて、返事を一つ選んでください。",
+      "translation": "Listen to the opening utterance and choose one response."
+    },
+    {
+      "id": "utterance",
+      "speaker": "a",
+      "text": "帰る前に、この紙を受付に持っていってくれる？あと一人、名前を書くから、今はまだ持っていかないでね。",
+      "translation": "Could you take this paper to reception before you leave? One more person still needs to write their name, so please don't take it yet."
+    },
+    {
+      "id": "choice-1",
+      "speaker": "b",
+      "text": "1。うん、今すぐ受付に持っていくよ。",
+      "translation": "One. Yes, I'll take it to reception right now."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "b",
+      "text": "2。分かった。帰るときに持っていくね。",
+      "translation": "Two. Understood. I'll take it when I leave."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "b",
+      "text": "3。分かった。帰るときに受付から持ってくるね。",
+      "translation": "Three. Understood. I'll bring it from reception when I leave."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "take-now"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "confirm-later"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "bring-from-reception"
+    }
+  ],
+  "choiceMode": "audio",
+  "options": [
+    {
+      "id": "take-now",
+      "number": 1,
+      "label": "うん、今すぐ受付に持っていくよ。",
+      "translation": "Yes, I'll take it to reception right now.",
+      "rationale": "The destination is correct, but immediate delivery violates the instruction to wait until the remaining name has been added."
+    },
+    {
+      "id": "confirm-later",
+      "number": 2,
+      "label": "分かった。帰るときに持っていくね。",
+      "translation": "Understood. I'll take it when I leave.",
+      "rationale": "This accepts the requested delivery and keeps it for departure rather than taking the paper immediately."
+    },
+    {
+      "id": "bring-from-reception",
+      "number": 3,
+      "label": "分かった。帰るときに受付から持ってくるね。",
+      "translation": "Understood. I'll bring it from reception when I leave.",
+      "rationale": "This keeps the later timing but reverses the requested movement: the paper must go to reception, not be brought from there."
+    }
+  ],
+  "answer": "confirm-later",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "The opening requests movement to reception, but explicitly says not to do it yet because another name must be added. The fitting reply accepts delivery at departure. 持っていく and 受付から持ってくる have opposite directions here. The immediate-delivery alternative has the correct destination but violates the waiting instruction; the final alternative waits until departure but reverses the requested direction.",
+  "blueprint": "n4-section-v1",
+  "vocabulary": [
+    {
+      "surface": "受付",
+      "reading": "うけつけ",
+      "gloss": "reception; reception desk"
+    },
+    {
+      "surface": "あと一人",
+      "reading": "あとひとり",
+      "gloss": "one more person"
+    },
+    {
+      "surface": "持っていかないで",
+      "reading": "もっていかないで",
+      "gloss": "please do not take it away"
+    },
+    {
+      "surface": "今すぐ",
+      "reading": "いますぐ",
+      "gloss": "right now; immediately"
+    }
+  ],
+  "media": {
+    "contentSha256": "6c541f6e865e73576a3e2eeedba164efd627eedadd320432536f89652899a767",
+    "audio": {
+      "instruction": {
+        "sha256": "e6965f5af4801680136589aa8d0a325730d5a6f13703f0ee7116b39a7d804737",
+        "durationMs": 5125,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 4925
+          }
+        ],
+        "path": "task-audio/stage-4bbc884705ff12b010c17b8d14a02f41eef30201c98f77782ae7cc13a4902274.ogg"
+      },
+      "utterance": {
+        "sha256": "ba42110a3e785c9efb97311d9bf6ef3bc9eb4e993c2efda8b38d90f28633b119",
+        "durationMs": 9852,
+        "turns": [
+          {
+            "id": "utterance",
+            "startMs": 150,
+            "endMs": 9652
+          }
+        ],
+        "path": "task-audio/stage-8ae96c6ff22695c40c8555fbc2cab43b54231faa29cedfc36eada4c23c111dbb.ogg"
+      },
+      "choice-1": {
+        "sha256": "41ea9ee9797b4548743eea502b69381ed494e56751fd34e3433df9398de58e25",
+        "durationMs": 5188,
+        "turns": [
+          {
+            "id": "choice-1",
+            "startMs": 150,
+            "endMs": 4988
+          }
+        ],
+        "path": "task-audio/stage-cb5255f7910dae34192e10f83fbce504996afe1a5442272289beedbf306f0679.ogg"
+      },
+      "choice-2": {
+        "sha256": "6563bdaac5e33b1fe146b9c8c9efcde27ce5a8195295769e324d368dbb40d49a",
+        "durationMs": 5650,
+        "turns": [
+          {
+            "id": "choice-2",
+            "startMs": 150,
+            "endMs": 5450
+          }
+        ],
+        "path": "task-audio/stage-05292fbd63810ad46fd4ed7bb9ec641b716dca24fbd2a411f9d97b4a2c1482b8.ogg"
+      },
+      "choice-3": {
+        "sha256": "e1a4ac66477059376c11edb19c729aaf2138c28efc257b84ee64971b3b9b05f6",
+        "durationMs": 6512,
+        "turns": [
+          {
+            "id": "choice-3",
+            "startMs": 150,
+            "endMs": 6312
+          }
+        ],
+        "path": "task-audio/stage-a87ca1f7e3afa7b40ec904f23b3a30b6fcd31f5fa9559e344dd0861e4db4cd8e.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "6c541f6e865e73576a3e2eeedba164efd627eedadd320432536f89652899a767",
+    "mediaSha256": "52ddaddeb92e07a1e0fe656b0b82d7b148c07f47302d3087bde1f72f3b71cd2e",
+    "reviewedOn": "2026-10-26",
+    "note": "Owner-authorized personal-testing publication, 2026-10-26. After receiving the complete eight-pilot review page, the owner explicitly requested publishing these exercises in the app. The earlier audition feedback and selected -5%/0% pacing are retained. Exact source, every stage/media hash, timing binding and selected picture are verified; the independent reviewer found no consequential language/picture discrepancy. This authorizes ordinary app testing of these eight pilots only. Exact complete-order listener/picture acceptance, guided-native and physical-phone acceptance remain pending and are not claimed passed. No general-release, full-pool, diagnostic-section or proficiency certification is implied."
+  }
+}

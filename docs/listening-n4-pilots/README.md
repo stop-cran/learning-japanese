@@ -1,12 +1,18 @@
-# N4 listening pilots: complete private candidates
+# N4 listening pilots: owner-testing publication
 
 These eight original schema-2/policy-1/N4 **scored drafts** are the public sources
 for [D / #49](https://github.com/stop-cran/learning-japanese/issues/49). Complete
-private audio and illustrations have now been generated; the
+audio and illustrations have been generated; the
 [generation receipt](generation-results.json) binds their exact outputs and costs.
-These source files are not runtime cards, worked examples or approved learning
-packages. They retain no `media` or `approval` field, and nothing here is added to
-the runtime manifest.
+The owner subsequently explicitly authorized [publication in the app](publication.json).
+Runtime copies of all eight pilots, 28 distinct audio files and three pictures are now
+included in the manifest. These authoring copies remain drafts without `media` or
+`approval`; the private generation runs are unchanged.
+
+Install the N4-capable `enso-nihongo-v0.1.0-5044d58.apk` if still using the previously
+delivered `be7286c` release, then **Settings > Save & sync** and **Listening > N4 + N5**.
+Ordinary guided practice and study are enabled. The full N4 diagnostic remains
+unavailable: two scored tasks per family and no N4 examples are not a complete pool.
 
 The [coverage plan](coverage-plan.json) reserves the complete 56-scored/four-example
 scope: D contributes eight scored stories, E adds 26 plus two examples, and F adds
@@ -90,7 +96,9 @@ The original independent reviewer found no consequential picture/task mismatch o
 linguistic regression in the complete candidates; the earlier two findings remain
 resolved. Perceptual audio quality and native/phone acceptance were not reviewed.
 
-Full-generation authorization is received, not pending. Exact complete-order
-listening/picture acceptance and guided native checks remain outstanding. D remains
-incomplete until its own gates pass; G owns later integrated/phone acceptance and
-actual runtime publication. No N4 exercises have been added to the installed app.
+Generation and this bounded runtime-publication authorization are received, not pending.
+No additional media generation was needed for publication. Exact complete-order
+listening/picture acceptance and guided native checks remain outstanding; the explicit
+owner-testing exception permits app access without pretending those checks passed.
+D's broader acceptance remains open, and G still owns later full-pool integrated/phone
+acceptance and general-release delivery. The publication ledger records the precise scope.

@@ -225,3 +225,19 @@ remaining pool after pilot reconciliation. Preserve per-attempt accounting and e
 media bindings; image-only revisions reuse verified unchanged audio. The N5 allocation,
 owner acceptance and testing-publication exception do not apply to N4. Missing approval
 stops the dependent work without invented receipts or an assertion of completion.
+
+### Owner-testing pilots, 2026-10-26
+
+The owner separately authorized publishing the eight completed D pilots in the app.
+The [publication ledger](listening-n4-pilots/publication.json) binds their exact runtime
+packages, audio and pictures; the original private candidates remain unchanged.
+Their approval notes grant ordinary app testing without claiming complete-order
+listener/picture, guided-native or physical-phone acceptance.
+
+The N4-capable release `5044d58` has been copied for installation; the previously
+delivered `be7286c` predates schema-2 support. After upgrading, use **Settings > Save & sync**
+and select **Listening > N4 + N5**. The scope defaults to N5 and persists per source.
+This is eight scored tasks, two per family, with no N4 worked examples. Guided practice
+and study are available; the full N4 diagnostic remains unavailable until its existing
+pool/example/timing requirements are met. The remaining 48 scored stories and four
+examples are not published or authorized for generation by this bounded trial.

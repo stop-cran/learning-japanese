@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 2,
+  "policyVersion": 1,
+  "jlpt": 4,
+  "id": "n4-task-deadline-repair",
+  "exposureId": "n4-story-deadline-repair",
+  "taskType": "quick-response",
+  "kind": "dialogue",
+  "usage": "scored",
+  "title": "Clarifying a hand-in deadline",
+  "topic": "A speaker corrects an earlier explanation and gives the latest acceptable hand-in time.",
+  "levelRationale": "Understand a self-correction plus the sufficiency condition 出してくれればいい, keeping a deadline distinct from a start date. The polite confirmation responds to a familiar or senior speaker without converting relaxed urgency into a new obligation for today.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": 0
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -5
+    },
+    {
+      "id": "b",
+      "role": "character",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": 0
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "最初のことばを聞いて、返事を一つ選んでください。",
+      "translation": "Listen to the opening utterance and choose one response."
+    },
+    {
+      "id": "utterance",
+      "speaker": "a",
+      "text": "あ、さっきの説明、間違えてた。今日中じゃなくて、来週の月曜日までに出してくれればいいよ。",
+      "translation": "Oh, I got my explanation wrong earlier. It doesn't have to be in by the end of today; handing it in by next Monday is fine."
+    },
+    {
+      "id": "choice-1",
+      "speaker": "b",
+      "text": "1。今日中に必ず出すんですね。分かりました。",
+      "translation": "One. I must hand it in by the end of today, then. Understood."
+    },
+    {
+      "id": "choice-2",
+      "speaker": "b",
+      "text": "2。月曜日から始めればいいんですね。分かりました。",
+      "translation": "Two. It's all right to start on Monday, then. Understood."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "b",
+      "text": "3。月曜日まででいいんですね。分かりました。",
+      "translation": "Three. By Monday is fine, then. Understood."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "utterance",
+      "role": "utterance",
+      "turns": [
+        "utterance"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "today"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "start-monday"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "by-monday"
+    }
+  ],
+  "choiceMode": "audio",
+  "options": [
+    {
+      "id": "today",
+      "number": 1,
+      "label": "今日中に必ず出すんですね。分かりました。",
+      "translation": "I must hand it in by the end of today, then. Understood.",
+      "rationale": "This repeats the requirement that the speaker has just corrected."
+    },
+    {
+      "id": "start-monday",
+      "number": 2,
+      "label": "月曜日から始めればいいんですね。分かりました。",
+      "translation": "It's all right to start on Monday, then. Understood.",
+      "rationale": "Monday is the deadline for handing it in, not the day on which to start the work."
+    },
+    {
+      "id": "by-monday",
+      "number": 3,
+      "label": "月曜日まででいいんですね。分かりました。",
+      "translation": "By Monday is fine, then. Understood.",
+      "rationale": "This confirms the corrected latest acceptable hand-in time without adding a new condition."
+    }
+  ],
+  "answer": "by-monday",
+  "evidence": [
+    "utterance"
+  ],
+  "explanation": "今日中じゃなくて explicitly repairs the earlier deadline. 月曜日までに is the time by which the hand-in must happen; it does not postpone the start of the work until Monday. 出してくれればいい says that handing it in by then is sufficient. 間違えてた is the familiar spoken form of 間違えていた.",
+  "blueprint": "n4-section-v1",
+  "vocabulary": [
+    {
+      "surface": "さっき",
+      "reading": "さっき",
+      "gloss": "a short time ago"
+    },
+    {
+      "surface": "今日中",
+      "reading": "きょうじゅう",
+      "gloss": "by the end of today"
+    },
+    {
+      "surface": "間違えてた",
+      "reading": "まちがえてた",
+      "gloss": "had got it wrong; casual form of 間違えていた"
+    },
+    {
+      "surface": "必ず",
+      "reading": "かならず",
+      "gloss": "without fail; must"
+    }
+  ],
+  "media": {
+    "contentSha256": "96c82c1949b866e6e9a756d97bd9729beb34139625b489008f7d4deead929b15",
+    "audio": {
+      "instruction": {
+        "sha256": "e6965f5af4801680136589aa8d0a325730d5a6f13703f0ee7116b39a7d804737",
+        "durationMs": 5125,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 4925
+          }
+        ],
+        "path": "task-audio/stage-4bbc884705ff12b010c17b8d14a02f41eef30201c98f77782ae7cc13a4902274.ogg"
+      },
+      "utterance": {
+        "sha256": "aa26f0fa214a3217877b67f695cdd613ac630b4fbff8d873c3a4854e6a59b052",
+        "durationMs": 9233,
+        "turns": [
+          {
+            "id": "utterance",
+            "startMs": 150,
+            "endMs": 9033
+          }
+        ],
+        "path": "task-audio/stage-03cec6d874b37d966f95123ef42c395fca05285e3b3312a3768889f3f70cb7b1.ogg"
+      },
+      "choice-1": {
+        "sha256": "e20da6b9383f01f9901f19649e3e4f237bbaccf820e16eeb0579e9c0a23165cb",
+        "durationMs": 6462,
+        "turns": [
+          {
+            "id": "choice-1",
+            "startMs": 150,
+            "endMs": 6262
+          }
+        ],
+        "path": "task-audio/stage-cc9bcc5e6fd71c429aff7afbed7ae046bd69fbe1bdd4a4b6045b41dee0d2f339.ogg"
+      },
+      "choice-2": {
+        "sha256": "50b4d46274396897cb65b1f6b83e2723385e5496eeafa475f88561bc2e8f7e4c",
+        "durationMs": 6488,
+        "turns": [
+          {
+            "id": "choice-2",
+            "startMs": 150,
+            "endMs": 6288
+          }
+        ],
+        "path": "task-audio/stage-988fb4c54e82653b28ccf206da27a4800b65f200daa2adf812ad753b773772da.ogg"
+      },
+      "choice-3": {
+        "sha256": "5dda08f1809292ff62fdce62770df50d98a8d9e81223137cfcbbac174d5a2196",
+        "durationMs": 6250,
+        "turns": [
+          {
+            "id": "choice-3",
+            "startMs": 150,
+            "endMs": 6050
+          }
+        ],
+        "path": "task-audio/stage-5d422ab313f468f5ebec150b86ced0fa03fb68a927a32c6bdd660595b81faaa8.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "96c82c1949b866e6e9a756d97bd9729beb34139625b489008f7d4deead929b15",
+    "mediaSha256": "51d37445c5cd62944e8149a653229b496dae191abc7defff72fe13841eb9011f",
+    "reviewedOn": "2026-10-26",
+    "note": "Owner-authorized personal-testing publication, 2026-10-26. After receiving the complete eight-pilot review page, the owner explicitly requested publishing these exercises in the app. The earlier audition feedback and selected -5%/0% pacing are retained. Exact source, every stage/media hash, timing binding and selected picture are verified; the independent reviewer found no consequential language/picture discrepancy. This authorizes ordinary app testing of these eight pilots only. Exact complete-order listener/picture acceptance, guided-native and physical-phone acceptance remain pending and are not claimed passed. No general-release, full-pool, diagnostic-section or proficiency certification is implied."
+  }
+}

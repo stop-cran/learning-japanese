@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 2,
+  "policyVersion": 1,
+  "jlpt": 4,
+  "id": "n4-task-lunch-location",
+  "exposureId": "n4-story-lunch-location",
+  "taskType": "key-point",
+  "kind": "monologue",
+  "usage": "scored",
+  "title": "An announcement about lunch",
+  "topic": "A school get-together changes the eating location while keeping food preparation arrangements.",
+  "levelRationale": "Follow a slowly delivered operational announcement and separate the reason for a changed location from unchanged food service and later plate-return instructions. Planned versus actual attendance and 座れなくなった express a connected change of capacity, not simply an isolated time or price. Actual recording length and clarity are still unverified.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": 0
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": -5
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "質問と話を聞いて、答えを一つ選んでください。",
+      "translation": "Listen to the question and talk, then choose one answer."
+    },
+    {
+      "id": "focus",
+      "speaker": "n",
+      "text": "交流会では、どうして一階の部屋で昼ご飯を食べますか。",
+      "translation": "Why will people at the get-together eat lunch in the room on the first floor?"
+    },
+    {
+      "id": "announcement",
+      "speaker": "a",
+      "text": "土曜日の交流会に来る皆さんに、お知らせです。お昼は、食堂ではなく、一階の大きな部屋で食べることになりました。",
+      "translation": "This is an announcement for everyone coming to Saturday's get-together. It has been decided that lunch will be eaten in the large room on the first floor, rather than in the cafeteria."
+    },
+    {
+      "id": "reason",
+      "speaker": "a",
+      "text": "参加する人が予定より多くなって、食堂ではみんなが一緒に座れなくなったからです。",
+      "translation": "This is because more people are taking part than planned, so they can no longer all sit together in the cafeteria."
+    },
+    {
+      "id": "unchanged",
+      "speaker": "a",
+      "text": "食堂はいつもどおり開いていて、料理もそこで作ってもらいます。お弁当を持って来る必要はありません。",
+      "translation": "The cafeteria will be open as usual, and the food will still be prepared there for us. There is no need to bring a packed lunch."
+    },
+    {
+      "id": "after",
+      "speaker": "a",
+      "text": "食べ終わったら、お皿だけ食堂に返してください。",
+      "translation": "When you have finished eating, please return just the plates to the cafeteria."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "focus",
+      "role": "focus",
+      "turns": [
+        "focus"
+      ]
+    },
+    {
+      "id": "passage",
+      "role": "passage",
+      "turns": [
+        "announcement",
+        "reason",
+        "unchanged",
+        "after"
+      ]
+    },
+    {
+      "id": "repeat",
+      "role": "focus-repeat",
+      "turns": [
+        "focus"
+      ]
+    }
+  ],
+  "choiceMode": "text",
+  "options": [
+    {
+      "id": "too-many",
+      "number": 1,
+      "label": "参加する人が増えて、食堂では一緒に座れないからです。",
+      "translation": "Because there are more participants, and they cannot all sit together in the cafeteria.",
+      "rationale": "The announced reason is increased attendance and insufficient seating together in the cafeteria."
+    },
+    {
+      "id": "closed",
+      "number": 2,
+      "label": "その日は、食堂が休みだからです。",
+      "translation": "Because the cafeteria is closed that day.",
+      "rationale": "The announcement explicitly says the cafeteria will be open as usual."
+    },
+    {
+      "id": "price",
+      "number": 3,
+      "label": "食堂の料理が高いからです。",
+      "translation": "Because the cafeteria's food is expensive.",
+      "rationale": "No price reason is given. The food will still be prepared in the cafeteria."
+    },
+    {
+      "id": "packed-lunch",
+      "number": 4,
+      "label": "お弁当を持って来る人が多いからです。",
+      "translation": "Because many people will bring packed lunches.",
+      "rationale": "The announcement says bringing a packed lunch is unnecessary; this is not the stated reason for the move."
+    }
+  ],
+  "answer": "too-many",
+  "evidence": [
+    "announcement",
+    "reason",
+    "unchanged"
+  ],
+  "explanation": "The changed arrangement concerns where everyone eats, not where the food is prepared. Increased attendance means the group cannot sit together in the cafeteria, so a larger room is used. The cafeteria remains open and supplies the food. The later instruction to return plates is not the reason for the move. 座れなくなった means that sitting together has become impossible here.",
+  "blueprint": "n4-section-v1",
+  "vocabulary": [
+    {
+      "surface": "交流会",
+      "reading": "こうりゅうかい",
+      "gloss": "get-together for meeting and talking with others"
+    },
+    {
+      "surface": "食堂",
+      "reading": "しょくどう",
+      "gloss": "cafeteria"
+    },
+    {
+      "surface": "参加",
+      "reading": "さんか",
+      "gloss": "participation; taking part"
+    },
+    {
+      "surface": "予定",
+      "reading": "よてい",
+      "gloss": "plan; what was expected"
+    },
+    {
+      "surface": "いつもどおり",
+      "reading": "いつもどおり",
+      "gloss": "as usual"
+    }
+  ],
+  "media": {
+    "contentSha256": "fbd239d03ecb4ffc4bb07eb7478ec44a8d4527b37de9514a78a5b731a2c0106f",
+    "audio": {
+      "instruction": {
+        "sha256": "18043998a958a90225964773b9436de189025ad18d8b2bcf7f71d351d446b2be",
+        "durationMs": 5212,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 5012
+          }
+        ],
+        "path": "task-audio/stage-4798fe6d5aaf7b38947c6d0818982b179387dad21e0854e77f13b35df08fea75.ogg"
+      },
+      "focus": {
+        "sha256": "ba96ab70633b2778b5f02c3e932d28513cf62c60c19fabf6f12fa79ee1248f02",
+        "durationMs": 5612,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 5412
+          }
+        ],
+        "path": "task-audio/stage-3fa5f529722b620669afe4fa2a35748b4ead84fc9ff7732ae0fb964a3924a57e.ogg"
+      },
+      "passage": {
+        "sha256": "c010c1364bd65cb8d02f8c93468f7914f089c180b89e21c6d94f74229faa5364",
+        "durationMs": 31443,
+        "turns": [
+          {
+            "id": "announcement",
+            "startMs": 150,
+            "endMs": 10494
+          },
+          {
+            "id": "reason",
+            "startMs": 10844,
+            "endMs": 17554
+          },
+          {
+            "id": "unchanged",
+            "startMs": 17904,
+            "endMs": 26682
+          },
+          {
+            "id": "after",
+            "startMs": 27032,
+            "endMs": 31243
+          }
+        ],
+        "path": "task-audio/stage-4af859c9604e943ff2a178755bd8f5c92210604e13c061f80f6f42fe6339ca4b.ogg"
+      },
+      "repeat": {
+        "sha256": "ba96ab70633b2778b5f02c3e932d28513cf62c60c19fabf6f12fa79ee1248f02",
+        "durationMs": 5612,
+        "turns": [
+          {
+            "id": "focus",
+            "startMs": 150,
+            "endMs": 5412
+          }
+        ],
+        "path": "task-audio/stage-3fa5f529722b620669afe4fa2a35748b4ead84fc9ff7732ae0fb964a3924a57e.ogg"
+      }
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "fbd239d03ecb4ffc4bb07eb7478ec44a8d4527b37de9514a78a5b731a2c0106f",
+    "mediaSha256": "256e287a99f5a2088ef96aae0433e90d93f61e38d472efdac63af32ee633d928",
+    "reviewedOn": "2026-10-26",
+    "note": "Owner-authorized personal-testing publication, 2026-10-26. After receiving the complete eight-pilot review page, the owner explicitly requested publishing these exercises in the app. The earlier audition feedback and selected -5%/0% pacing are retained. Exact source, every stage/media hash, timing binding and selected picture are verified; the independent reviewer found no consequential language/picture discrepancy. This authorizes ordinary app testing of these eight pilots only. Exact complete-order listener/picture acceptance, guided-native and physical-phone acceptance remain pending and are not claimed passed. No general-release, full-pool, diagnostic-section or proficiency certification is implied."
+  }
+}

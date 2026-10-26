@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 2,
+  "policyVersion": 1,
+  "jlpt": 4,
+  "id": "n4-task-form-counter",
+  "exposureId": "n4-story-form-counter",
+  "taskType": "verbal-expression",
+  "kind": "monologue",
+  "usage": "scored",
+  "title": "Before filling in a form",
+  "topic": "A staff member and a visitor are about to deal with a blank application form.",
+  "levelRationale": "Use the picture to identify the speaking side of the counter and the heard situation to establish that writing has not happened yet. Contrast a conditional offer of explanation, an embedded-question request for help, and thanks for completed assistance. Neither role nor the correct response should be recoverable from narration alone.",
+  "speakers": [
+    {
+      "id": "n",
+      "role": "narrator",
+      "voice": "ja-JP-NanamiNeural",
+      "ratePercent": -5
+    },
+    {
+      "id": "a",
+      "role": "character",
+      "voice": "ja-JP-KeitaNeural",
+      "ratePercent": 0
+    }
+  ],
+  "turns": [
+    {
+      "id": "instruction",
+      "speaker": "n",
+      "text": "絵と音声で、話す人を確かめてください。答えを一つ選んでください。",
+      "translation": "Use the picture and audio to identify the speaker. Choose one answer."
+    },
+    {
+      "id": "situation",
+      "speaker": "n",
+      "text": "窓口で、二人が申込書を見ています。紙には、まだ何も書いてありません。矢印の人は、何と言いますか。",
+      "translation": "Two people are looking at an application form at a service counter. Nothing has been written on the paper yet. What does the person indicated by the arrow say?"
+    },
+    {
+      "id": "choice-1",
+      "speaker": "a",
+      "text": "1。どこに名前を書けばいいか、教えてもらえませんか。",
+      "translation": "One. Could you tell me where I should write my name?"
+    },
+    {
+      "id": "choice-2",
+      "speaker": "a",
+      "text": "2。全部書いてもらって、本当に助かりました。",
+      "translation": "Two. Having you fill it all in for me was a real help."
+    },
+    {
+      "id": "choice-3",
+      "speaker": "a",
+      "text": "3。分からないところがあったら、説明しますから、聞いてください。",
+      "translation": "Three. If there is anything you do not understand, please ask and I will explain."
+    }
+  ],
+  "stages": [
+    {
+      "id": "instruction",
+      "role": "instruction",
+      "turns": [
+        "instruction"
+      ]
+    },
+    {
+      "id": "situation",
+      "role": "situation",
+      "turns": [
+        "situation"
+      ]
+    },
+    {
+      "id": "choice-1",
+      "role": "choice",
+      "turns": [
+        "choice-1"
+      ],
+      "optionId": "request-help"
+    },
+    {
+      "id": "choice-2",
+      "role": "choice",
+      "turns": [
+        "choice-2"
+      ],
+      "optionId": "completed-thanks"
+    },
+    {
+      "id": "choice-3",
+      "role": "choice",
+      "turns": [
+        "choice-3"
+      ],
+      "optionId": "offer-explanation"
+    }
+  ],
+  "choiceMode": "audio",
+  "options": [
+    {
+      "id": "request-help",
+      "number": 1,
+      "label": "どこに名前を書けばいいか、教えてもらえませんか。",
+      "translation": "Could you tell me where I should write my name?",
+      "rationale": "This is a fitting request from the visitor filling in the form, not the indicated staff member offering assistance."
+    },
+    {
+      "id": "completed-thanks",
+      "number": 2,
+      "label": "全部書いてもらって、本当に助かりました。",
+      "translation": "Having you fill it all in for me was a real help.",
+      "rationale": "This thanks someone for already completing the writing, but the heard situation says the form is still blank."
+    },
+    {
+      "id": "offer-explanation",
+      "number": 3,
+      "label": "分からないところがあったら、説明しますから、聞いてください。",
+      "translation": "If there is anything you do not understand, please ask and I will explain.",
+      "rationale": "The indicated staff member offers to explain any unclear part before the visitor fills in the form."
+    }
+  ],
+  "answer": "offer-explanation",
+  "evidence": [
+    "situation"
+  ],
+  "explanation": "The arrow identifies the staff member behind the counter, not the visitor with the form. The situation says the form is still blank. A conditional offer of explanation fits that role and stage. The request about where to write a name belongs to the other participant; thanks for having the entire form filled in assumes help that has not yet occurred. あったら here introduces a possible unclear part, not a past event.",
+  "blueprint": "n4-section-v1",
+  "vocabulary": [
+    {
+      "surface": "申込書",
+      "reading": "もうしこみしょ",
+      "gloss": "application form"
+    },
+    {
+      "surface": "矢印",
+      "reading": "やじるし",
+      "gloss": "arrow"
+    },
+    {
+      "surface": "説明",
+      "reading": "せつめい",
+      "gloss": "explanation"
+    },
+    {
+      "surface": "書いてありません",
+      "reading": "かいてありません",
+      "gloss": "has not been written; nothing is entered here"
+    }
+  ],
+  "visual": {
+    "role": "required",
+    "description": "Exactly two adults at a service counter. A male staff member is on the left, behind the counter, with a simple work area behind him. A female visitor is on the right, in front of the counter, holding a blank form and a pen. The form has only empty boxes/lines, no writing. A locally added arrow identifies the left staff member. No one is currently writing, and no completed form, speech bubble or response text is visible."
+  },
+  "media": {
+    "contentSha256": "f8ae90ea28df9773957b07bb4837b8320c7ec44af61e8be8bb7ac81cf07b4e89",
+    "audio": {
+      "instruction": {
+        "sha256": "46a13b1b22ea01dc7227fd3f8e895b41a21d12a422a832ae3459e5b60ec6e6c7",
+        "durationMs": 7825,
+        "turns": [
+          {
+            "id": "instruction",
+            "startMs": 150,
+            "endMs": 7625
+          }
+        ],
+        "path": "task-audio/stage-e560f867eb192f6e8ea9617937efb313ff07446df7f1735c1efe2be07aa5c7ca.ogg"
+      },
+      "situation": {
+        "sha256": "aeaecc933e8fd04a065ccd2dd0707ed96a7d6d8c4f8c5e7b12ef2c16c81e81e5",
+        "durationMs": 11813,
+        "turns": [
+          {
+            "id": "situation",
+            "startMs": 150,
+            "endMs": 11613
+          }
+        ],
+        "path": "task-audio/stage-8f3e442a944e40e35d92c78e85a7c3498209614e0126eb06c9081ef6e0a1c366.ogg"
+      },
+      "choice-1": {
+        "sha256": "4b878a23544213bd39c03cb538b3c00d105fdae76ba606965045208aec27216a",
+        "durationMs": 5638,
+        "turns": [
+          {
+            "id": "choice-1",
+            "startMs": 150,
+            "endMs": 5438
+          }
+        ],
+        "path": "task-audio/stage-c143c4e155d82afd92b082d1dfd4f189e8b1cac5701d7ed80dd661103d9501ca.ogg"
+      },
+      "choice-2": {
+        "sha256": "ae7997ea38bb19397f39c04653837a63f147819d7b3c745ae9093aba8e27da1f",
+        "durationMs": 5200,
+        "turns": [
+          {
+            "id": "choice-2",
+            "startMs": 150,
+            "endMs": 5000
+          }
+        ],
+        "path": "task-audio/stage-98cbf5528282e86a3d56d0966b7ccfc98868f058c231524e308805c10158481e.ogg"
+      },
+      "choice-3": {
+        "sha256": "7097183ab1183ec5d143d93749c55c1bab5547fcf5510182ba9e0b657efde083",
+        "durationMs": 6500,
+        "turns": [
+          {
+            "id": "choice-3",
+            "startMs": 150,
+            "endMs": 6300
+          }
+        ],
+        "path": "task-audio/stage-5d12db438fcbf3f7ea053ed0a8a46e267751d97c6117cb4ef302529e5f059af1.ogg"
+      }
+    },
+    "image": {
+      "path": "task-images/image-20dd91585526b76caedbff25730ff4b762b4ca3be08f858bdf57ba51f1365571.webp",
+      "sha256": "20dd91585526b76caedbff25730ff4b762b4ca3be08f858bdf57ba51f1365571"
+    }
+  },
+  "approval": {
+    "status": "approved",
+    "contentSha256": "f8ae90ea28df9773957b07bb4837b8320c7ec44af61e8be8bb7ac81cf07b4e89",
+    "mediaSha256": "792651e3bbc9ef3d2320b824c9e0a5ec0547f08c811261692f524291be591ab7",
+    "reviewedOn": "2026-10-26",
+    "note": "Owner-authorized personal-testing publication, 2026-10-26. After receiving the complete eight-pilot review page, the owner explicitly requested publishing these exercises in the app. The earlier audition feedback and selected -5%/0% pacing are retained. Exact source, every stage/media hash, timing binding and selected picture are verified; the independent reviewer found no consequential language/picture discrepancy. This authorizes ordinary app testing of these eight pilots only. Exact complete-order listener/picture acceptance, guided-native and physical-phone acceptance remain pending and are not claimed passed. No general-release, full-pool, diagnostic-section or proficiency certification is implied."
+  }
+}

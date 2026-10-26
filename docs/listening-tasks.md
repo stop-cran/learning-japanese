@@ -1,8 +1,9 @@
 # Japanese listening task packages: schema 1 contract
 
-The [N4 profile and rollout](listening-n4.md) defines a reviewed schema-2/N4 extension
-with the same task shapes and guided policy. Its linked software/media work is still pending;
-this document remains the existing N5 contract, not permission to publish N4 packages early.
+The [N4 profile and rollout](listening-n4.md) defines the implemented schema-2/N4 extension
+with the same task shapes and guided policy. Eight N4 pilots have separate
+[owner-testing publication authorization](listening-n4-pilots/publication.json);
+the complete N4 pool and general-release media acceptance remain pending.
 
 Companion to [app contract 1](https://github.com/stop-cran/kanji-cards-android/blob/main/docs/LISTENING-TASKS.md)
 for app #66 and content #38. **Independently reviewed contract, adopted under delegated autonomous decision-making.**
@@ -149,13 +150,18 @@ testing, rather than blocking normal-app access on unperformed physical-phone/fu
 acceptance. This supersedes those **publication prerequisites for this bounded trial only**;
 it does not claim the checks passed, change the schema, weaken media integrity or grant paid generation.
 The [publication ledger](listening-task-pool/publication.json) identifies the exact authorized outputs.
+On 2026-10-26 a separate explicit request authorized publishing the eight completed N4 pilots
+in the app. Their [own ledger](listening-n4-pilots/publication.json) binds this new exception;
+it does not inherit the N5 authorization or authorize the remaining N4 pool.
 
 Use the existing `approval.status: "approved"` as runtime permission for those exact packages,
 with `approval.note` explicitly identifying **owner-authorized testing** and outstanding checks.
-Schema 1 does not have a separate trial flag: the current app will make these items available for
+Schemas 1 and 2 do not have a separate trial flag: the supporting app makes these items available for
 ordinary guided practice and eligible diagnostic sessions, including normal exposure/SRS policies.
 The public repository is not access-controlled to the owner; this scope describes the authorization,
 not a claim that other users cannot download it. This is not general-release or proficiency certification.
+The eight N4 pilots permit guided practice/study, not a shortened N4 diagnostic: its full-pool
+minimums, independent examples and all-form timing checks are unchanged.
 
 Verify the frozen source packages, every stage/asset, selected picture, both canonical hashes,
 identities, final manifest and complete-archive budgets before publishing. Retain private runs and
