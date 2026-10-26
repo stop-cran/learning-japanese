@@ -5,7 +5,7 @@
 **Batches 01-81 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,620 rows are review-closed; none are drafted and 192 remain pending.
+The first 1,620 rows are review-closed; twenty are drafted and 172 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,40 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 82: N2:1622-N2:1641
+
+**Status:** drafted; independent GPT and Claude reviews pending.
+
+Eighteen physical additions and baseline reuses 向かう and 蒸す cover
+twenty source rows. Source 向う/むかう is explicitly recognized without
+changing 向かう's N4, identity, title or prior teaching. Source 剥く
+maps to usually-kana むく, not homophonous 向く. 蒸す receives sourced
+N2 with all existing teaching and exclusions preserved.
+
+蒸し暑い/蒸 is one new primary reciprocal N2 pair; the existing
+蒸す/蒸 pair is rechecked. All written primary Han remain in metadata;
+no missing character article is invented. CW091 now links 診る.
+
+The sealed pre-card inspection records twenty principal families,
+370 selected complete families / 941 senses, 160 complete older word
+bodies including the separately read 知る, 290 navigation labels,
+33 components and the complete 蒸 card. All fifteen selected family
+chunks and twenty older-body chunks were read through their ends.
+The 515 prepared families and unselected navigation labels are not
+claimed as complete inspection.
+
+Nineteen public requests yielded applicable Digital Daijisen bodies;
+the 向う lookup failed. These are one Japanese dictionary authority,
+not nineteen independent dictionaries. Two separate live American
+Heritage reads support English sticky/close weather-label safeguards;
+failed Cambridge requests are not positive evidence.
+
+Draft mappings, exact source fields, complete principal families,
+inspection limits and pairwise author assertions are in the
+[source packet](n2-vocabulary-batch-sources/batch-82.json).
+No independent correctness, closure or model-contribution claim is
+made before actual reviews and reconciliation.
 
 ## Batch 81: N2:1602-N2:1621
 

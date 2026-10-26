@@ -19,6 +19,55 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 82 authoring observations
+
+- N2:1622-N2:1641 map to eighteen physical additions and two
+  baseline reuses. 向う maps to 向かう/むかう with explicit spelling
+  recognition, not 向こう/むこう. Preserve its N4 and all old teaching.
+  蒸す gains sourced N2 under the unchanged baseline policy, with its
+  title, reading, body and existing exclusions retained exactly.
+- Seal actual pre-card inspection separately from preparation:
+  twenty principal families; 370 complete selected families / 941
+  senses out of 515 prepared families; 159 chunked older bodies
+  plus the separately read 知る; 290 labels; 33 full component records;
+  and the complete 蒸 card. All fifteen selected family chunks and
+  twenty older-body chunks were actually read through their ends.
+  Labels and unselected prepared families are not complete-body reads.
+- Nineteen of twenty public requests yielded applicable Digital
+  Daijisen bodies. The 向う request failed and is not corroboration;
+  the complete pinned family supports its source spelling. Separate
+  metric ミリ from a city, 診る's marked medical sense from broader
+  みる, and 剥く/むく from a different すく heading.
+- Source 剥く maps to usually-kana むく, not homophonous 向く.
+  Recognize both 剥く and 剝く, peeling and baring teeth/opening eyes.
+  Keep 診る separate from ordinary 見る, and 実る godan rather than
+  treating every verb ending in る as ichidan.
+- Do not turn raw glosses into false rules: 未満 excludes the
+  numerical boundary but does not always mean an undesirable shortage;
+  民謡 is not every pop hit; 無数 does not guarantee mathematical
+  infinity and does not require finiteness. 無地 uses の, without
+  automatically substituting な or assuming white/unshowy fabric.
+- The pinned 名前 family has general-name and given-name senses,
+  not a separately enumerated surname sense. A contrast with 名字
+  can select the given-name interpretation; it does not restrict
+  every use of 名前. The existing 氏/し suffix and the proper name
+  田中 are not generic surname nouns.
+- Add 蒸し暑い/蒸 as the sole new primary reciprocal N2 pair;
+  recheck existing 蒸す/蒸. Preserve every written primary Han in
+  metadata without inventing missing character cards or broken links.
+  Link the new 診る card from CW091.
+- Draft quiz judgments are direct, symmetric and nontransitive.
+  Complete ordinary secondary senses matter, but no shared-topic
+  clique or POS/transitivity exemption is inferred. Keep numerical
+  inclusion rules, medical versus generic examination, folk versus
+  official/public senses, and different English meanings of "plain"
+  visible for independent adjudication.
+- Two additional live American Heritage entry reads support English
+  sticky/close weather-label safeguards for 蒸し暑い. They are separate
+  from the nineteen frozen Japanese captures, not raw-response-hashed
+  captures or Japanese synonym evidence. The Cambridge attempts failed
+  and are not verification. Independent reviews remain pending.
+
 ## Batch 81 authoring observations
 
 - N2:1602-N2:1621 map to twenty articles: eighteen physical additions
