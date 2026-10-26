@@ -116,11 +116,24 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   American Heritage distinguish the action from the substance.
   No automatic steam-topic clique or noun/verb exemption is used.
   Original optional expansions remain nonblocking.
+  **Superseded after both bounded follow-ups:** the qualification on
+  蒸す's own label does not remove bare steam from the alternative
+  titles. This one-directional dismissal was incomplete. Both models
+  independently establish the same two direct English-label edges.
+  Add 蒸す on 蒸気 and 水蒸気, leaving 蒸す byte-unchanged.
+  Assigned declarations remain 133; the two related-card additions
+  bring this scoped declaration total to 135. Do not credit GPT's
+  newly established finding as unique: Claude raised the same concern
+  earlier as unverified and now supports it with actual evidence.
 - First confirmations were sequential processes. GPT was internally
   serial; Claude reached three outstanding calls twice and disclosed
   both triples. Preserve those native reports unchanged. A bounded
   original-session follow-up must confirm the three new edges before
   closure; first-confirmation history remains historical.
+  Both follow-ups are authenticated with fourteen complete mandatory
+  files each and no edits. GPT was internally serial; Claude disclosed
+  one four-view overlap, matching native events. Final original-session
+  acceptance of the two steam edges remains pending.
 
 ## Batch 81 authoring observations
 

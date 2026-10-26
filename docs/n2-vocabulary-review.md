@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 82: N2:1622-N2:1641
 
-**Status:** corrected after authenticated blind initial reviews and
-first confirmations; bounded original-session follow-up pending.
+**Status:** corrected after authenticated blind initial reviews,
+first confirmations and follow-ups; final bounded acceptance pending.
 
 Eighteen physical additions and baseline reuses 向かう and 蒸す cover
 twenty source rows. Source 向う/むかう is explicitly recognized without
@@ -125,6 +125,27 @@ maxima were GPT one and Claude three. Claude accurately disclosed
 two parallel triples. Preserve both original reports and their
 different verdicts. A bounded follow-up by both original sessions
 must accept the new three-edge correction before closure.
+
+The bounded follow-ups of `76a5a850` are archived:
+[GPT](n2-vocabulary-reviews/batch-82-gpt-followup.md) and
+[Claude](n2-vocabulary-reviews/batch-82-claude-followup.md).
+Both authenticate all fourteen mandatory complete files, the exact
+common prompt, their original sessions and zero edits. Both accept
+the three new plain/face edges, but independently establish the
+previous steam dismissal as incomplete: qualification on 蒸す's
+own title does not remove bare steam from either alternative title.
+The preceding no-defect disposition is superseded, not rewritten.
+This is a shared underlying observation, including Claude's earlier
+unverified limit, not a GPT-unique catch.
+
+Add direct 蒸す exclusions on 蒸気 and 水蒸気 only. The reused
+蒸す remains byte-unchanged; neither older counterpart changes its
+identity, level, title, reading or body. Assigned declarations stay
+133; including these two related-card additions gives 135 within
+this scope. No automatic steam-topic clique is asserted.
+Follow-up processes were sequential; internal maxima were GPT one
+and Claude four, with the overlap honestly disclosed. Final bounded
+acceptance by both original sessions remains pending.
 
 ## Batch 81: N2:1602-N2:1621
 

@@ -58148,6 +58148,102 @@
         ]
       },
       "limits": "First native reports remain unchanged. Three proposed fixes still require both original-session follow-ups."
+    },
+    "steamConfirmationFollowThrough": {
+      "previousCorrectionCommit": "76a5a8505c135eb33e550fef10f805c2cd7d57a7",
+      "acceptanceStatus": "pending",
+      "followupAuthentication": {
+        "reviewedCommit": "76a5a8505c135eb33e550fef10f805c2cd7d57a7",
+        "reports": {
+          "batch-82-gpt-followup": {
+            "actualModel": "gpt-6.1-sol",
+            "reviewerSessionId": "5e58f983-58d1-490e-afdf-b95953307065",
+            "reportSha256": "2a019f3996f2d6e2933b195901fba09073cede6cb0f10c8bd8e73319a0a8e091",
+            "zeroEdits": true,
+            "completeExactRequiredNativeReturns": 14,
+            "exactPromptAndCompleteNativeFinalMessageAuthenticated": true
+          },
+          "batch-82-claude-followup": {
+            "actualModel": "claude-opus-5.5",
+            "reviewerSessionId": "14d3db95-d913-4a54-97af-7316373ca1ca",
+            "reportSha256": "81d08f18cf431bdb9f5430733dfe659439e33bc40038a85ea6019c485a7c17c3",
+            "zeroEdits": true,
+            "completeExactRequiredNativeReturns": 14,
+            "exactPromptAndCompleteNativeFinalMessageAuthenticated": true
+          }
+        }
+      },
+      "followupNativeScheduling": {
+        "gpt": {
+          "stage": "followup",
+          "actualModel": "gpt-6.1-sol",
+          "toolCalls": 19,
+          "maximumOutstandingCalls": 1,
+          "internallySerial": true,
+          "overlappingStarts": []
+        },
+        "claude": {
+          "stage": "followup",
+          "actualModel": "claude-opus-5.5",
+          "toolCalls": 20,
+          "maximumOutstandingCalls": 4,
+          "internallySerial": false,
+          "overlappingStarts": [
+            {
+              "newCall": "toolu_0158tfH9SpSniDwbnTyERuc9",
+              "alreadyOutstanding": [
+                "toolu_01PVVFbewLwQaQU9Rqp9HRkG"
+              ]
+            },
+            {
+              "newCall": "toolu_01538JPm76QZT8sTFyfBgE31",
+              "alreadyOutstanding": [
+                "toolu_0158tfH9SpSniDwbnTyERuc9",
+                "toolu_01PVVFbewLwQaQU9Rqp9HRkG"
+              ]
+            },
+            {
+              "newCall": "toolu_01YRAJv6awZX8Y2YhJB97Gxa",
+              "alreadyOutstanding": [
+                "toolu_01538JPm76QZT8sTFyfBgE31",
+                "toolu_0158tfH9SpSniDwbnTyERuc9",
+                "toolu_01PVVFbewLwQaQU9Rqp9HRkG"
+              ]
+            }
+          ]
+        }
+      },
+      "followupProcessOrdering": {
+        "stage": "followup",
+        "gptShutdownBeforeClaudePrompt": true,
+        "nativeTimelines": {
+          "gpt": {
+            "userPromptTimestamp": "2026-10-26T12:43:58.549Z",
+            "nativeShutdownTimestamp": "2026-10-26T12:46:45.403Z"
+          },
+          "claude": {
+            "userPromptTimestamp": "2026-10-26T12:46:57.480Z",
+            "nativeShutdownTimestamp": "2026-10-26T12:50:59.458Z"
+          }
+        }
+      },
+      "directQuizPairs": {
+        "蒸気": [
+          "蒸す"
+        ],
+        "水蒸気": [
+          "蒸す"
+        ]
+      },
+      "supersededDisposition": "The earlier no-actionable-steam-defect conclusion was incomplete: qualification of蒸す's own label does not qualify bare steam in either alternative title.",
+      "evidence": "Fresh complete1356900/1356930/1371660 and actual蒸す/蒸気/水蒸気 bodies; both original reviewers' successful native American Heritage steam returns establish noun1 versus transitive1. No new linguistic evidence fabricated or unrelated topic clique inferred.",
+      "sharedObservation": "Both full follow-ups independently establish the same pairwise defect. Claude's earlier unverified limit is the same underlying observation, not a different discovery or GPT-unique catch.",
+      "preservation": "Only two related-card exclusion lines change.蒸す remains byte-unchanged relative to76a5a850 and still differs from the original pre-batch parent only by sourcedjlpt2. All titles/readings/levels/bodies/source mappings and reciprocal links remain.",
+      "assignedDeclarations": 133,
+      "additionalRelatedCardDeclarations": 2,
+      "scopedAssignedAndRelatedDeclarations": 135,
+      "optionalOutsideAssignment": "Other unrelated old-card plain/face pairs are deferred; this bounded task does not certify the whole historical quiz pool.",
+      "limits": "Final original-session acceptance is pending. Historical reports and earlier dispositions remain unchanged and explicitly superseded."
     }
   }
 }
