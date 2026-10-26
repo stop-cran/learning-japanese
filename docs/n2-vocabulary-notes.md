@@ -123,7 +123,28 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   authentication or infer an exact cause. Compacted reviewer notes and
   unequal depth further limit model comparisons. Verified complementary
   contributions are useful in this sample, not measured bias reduction.
-  Both original-session confirmations remain pending.
+- Both original sessions accept corrected teaching `376b4ef`, with all
+  twenty three-facet verdicts CLEAN. The common nonblind prompt supplies
+  the actual diff, all twenty current bodies, four kanji bodies,
+  35 component records, 34 complete principal/corrective families /
+  65 senses, all eighteen pre-fix corrective bodies (eleven older
+  comparisons), and all 351 public lines. Both full confirmation reports
+  match native messages. Zero new calls/edits; GPT shutdown precedes
+  Claude's prompt; both processes exited. Prompt access is not a fresh
+  native-tool read or independent Git/hash execution.
+- Preserve confirmation reports unchanged. Claude's "58 returned" means
+  58 successful initial calls; all 61 starts have completion events,
+  including three unsuccessful interruptions. The seven-file assertion
+  concerns the teaching diff, not the thirteen-file correction commit.
+  Its exact earlier comparison of thirteen unchanged assigned bodies
+  was limited by compacted notes, although all current bodies were
+  supplied completely in confirmation.
+- Claude withdrew the tentative かしょう concern and unsupported
+  formal-register suggestion. Extra かしょう recognition, 訳やく/
+  訳する, nocturnal behavior and emphatic eat/drink examples remain
+  optional deferred expansions, not unresolved prerequisites.
+  Close with 1,720 reviewed source rows / 92 pending and no draft or
+  unresolved rows; preserve accepted teaching and manifest during closure.
 
 ## Batch 85 authoring observations
 

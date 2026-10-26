@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-85 review-closed.** The target is all 1,812 source rows,
+**Batches 01-86 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,700 rows are review-closed; 20 are drafted and 92 remain pending.
+The first 1,720 rows are review-closed; none are drafted and 92 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 86: N2:1702-N2:1721
 
-**Status:** initial reviews authenticated and corrections reconciled;
-confirmation by both original sessions pending.
+**Status:** closed after authenticated initial reviews,
+evidence-based corrections and acceptance by both original sessions.
 
 Twenty rows map to eighteen physical additions and baseline reuses
 薬局/軟らかい. Reuses receive explicit sourced N2 metadata only.
@@ -54,7 +54,7 @@ spellings do not silently acquire written kanji metadata.
 
 New N2 reciprocal pairs are 印/矢印, 刊/夕刊 and 郵/郵送.
 Existing 軟/軟らかい is rechecked without a ceremonial duplicate edit.
-Quiz guards are provisional direct judgments; retained reuse guards
+Quiz guards are scoped direct judgments; retained reuse guards
 are preservation scope, not a claim all were newly researched.
 
 The unchanged [GPT initial](n2-vocabulary-reviews/batch-86-gpt-initial.md)
@@ -106,8 +106,33 @@ assistant message contains only the last 10,662 characters, not its
 authentication or infer the exact cause. These limitations, unequal
 inspection depth and compacted notes constrain model comparisons.
 Complementary useful observations in this sample are not a controlled
-benchmark or measured bias reduction. Corrected original-session
-confirmations remain pending.
+benchmark or measured bias reduction.
+
+Both [GPT confirmation](n2-vocabulary-reviews/batch-86-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-86-claude-confirmation.md)
+accept corrected teaching commit
+`376b4ef640bb1df32337f538c4f3277c1ccb091e`, with all twenty
+three-facet verdicts CLEAN and no remaining actionable defect or
+consequential unresolved claim. Both original sessions received the
+same verbatim evidence template: actual seven-card diff, all twenty
+current bodies, four kanji bodies, 35 component records, 34 complete
+principal/corrective families / 65 senses, eighteen pre-fix corrective
+bodies (eleven older comparisons) and the complete 351-line public
+capture. These nonblind confirmations made zero tool calls or edits.
+Both full confirmation reports match native assistant messages;
+GPT shutdown preceded Claude's prompt, and both processes exited.
+This does not retroactively deepen initial inspection.
+
+Claude withdrew its tentative かしょう concern and unsupported
+formal-register wording. Its confirmation's "58 returned" means
+58 successful returns: all 61 initial starts have completion events,
+including three unsuccessful interrupted calls. "Only seven files"
+describes the supplied teaching diff, not the thirteen-file correction
+commit. Preserve the reports unchanged and qualify those distinctions.
+Optional かしょう, 訳やく/訳する, nocturnal and eating/drinking
+expansions remain deferred; the existing practical lessons are complete
+within scope. Closure changes only review records and coverage metadata,
+not accepted teaching or the manifest.
 
 ## Batch 85: N2:1682-N2:1701
 
