@@ -28,8 +28,9 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 88: N2:1742-N2:1761
 
-**Status:** draft; both initial reports authenticated, corrections
-applied, original-session confirmations pending.
+**Status:** draft; initial reports and first confirmations authenticated.
+GPT requests further corrections; those are applied, with final
+original-session confirmation pending. No review closure is claimed.
 
 Seventeen physical additions and three baseline reuses cover the
 twenty rows. 汚す initially received its sourced N2 field only;
@@ -94,8 +95,35 @@ linking and 喜び/喜ぶ observations, useful additional guard
 hypotheses and the uncertain collocation. Two directly coupled
 additional guards are author follow-through, not reviewer discoveries.
 These are sample-specific observations, not measured bias reduction
-or evidence of equal actual retrieval depth. Original-session
-confirmation remains pending, so no final acceptance is claimed.
+or evidence of equal actual retrieval depth.
+
+First confirmation snapshot:
+`bbff0f16980c22e5474113dcad2476215051c259`.
+[GPT confirmation](n2-vocabulary-reviews/batch-88-gpt-confirmation.md)
+returns NEEDS FIX; [Claude confirmation](n2-vocabulary-reviews/batch-88-claude-confirmation.md)
+returns ACCEPT. Both whole native reports and rendered prompts are
+authenticated, in the original sessions with the original actual
+models, zero tool calls, no edits and GPT shutdown before Claude's
+prompt. These reports remain verbatim despite their disagreement.
+
+Follow-through removes the unsupported ようやく/次第,
+呼び出す/開ける and よそ/別々 guards after full-family/body
+inspection. 汚い/けち is added from its direct stingy sense; both
+reviewers noticed it across Findings and Optional, not GPT alone.
+喜ぶ/幸せ and 喜ぶ/幸福 are direct positive-affect protections,
+not inferred from a semantic clique or a strict duration distinction.
+The full new 楽しい family and body are supplied for reassessment
+of Claude's remaining limit. Its enjoyable/fun title and the
+be-delighted reaction are not automatically interchangeable.
+
+The cumulative actual inspection is now 430 families / 1,036 senses /
+170 older bodies, not an altered pre-card seal. There are 137 assigned
+declarations, with fourteen approved baseline additions on nine files,
+including the three assigned 喜ぶ declarations counted once.
+The earlier fourteen additions plus three new pairs and three removed
+authored pairs are recorded separately. 汚す's source note now describes
+its actual approved figurative illustration. Raw source and lexical
+mappings remain unchanged. Final confirmation remains pending.
 
 Practical teaching includes kana-primary ようやく/よこす/よそ,
 gist/knack, nonnegative extra provision, construction-specific 寄せる,

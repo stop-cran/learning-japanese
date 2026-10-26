@@ -84,13 +84,34 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   contributed bare-adverb, construction, figurative-use and linking
   observations plus useful limit hypotheses. Two further direct
   pairs are author follow-through, not model-unique discoveries.
-- Quiz protections remain direct, symmetric and nontransitive,
-  not unrestricted synonyms. Some older conservative guards remain
-  explicitly borderline, including 次第's separate 次第に mention;
-  次第's own family does not contain a gradual sense. Equal supplied
-  evidence is not equal inspection or measured bias reduction.
-  Original-session confirmations are still pending; neither review
-  closure nor an empirical app quiz run is claimed.
+- First confirmations at `bbff0f16980c22e5474113dcad2476215051c259`
+  are preserved verbatim: GPT NEEDS FIX, Claude ACCEPT. Both original
+  sessions used zero tools and made no edits, sequentially. Both
+  noticed 汚い/けち, though Claude placed it in Optional. GPT's
+  stricter exact-identity standard usefully challenged unsupported
+  guards; permissive acceptance is not evidence that they are sound.
+- Follow-through removes ようやく/次第, 呼び出す/開ける and
+  よそ/別々 after reading every applicable family and counterpart
+  body. 次第に is another expression; opening a file does not establish
+  開ける applicability; "separate/respective" does not establish
+  elsewhere or another group. These are evidence-bounded curation
+  decisions, not universal bans on related translations.
+- 汚い/けち receives the direct stingy-sense guard. Two additional
+  喜ぶ/幸せ and 喜ぶ/幸福 protections use positive-affect overlap,
+  not a fabricated happiness-duration rule or 喜ぶ's separate
+  willingness construction. 喜ぶ also links existing 喜び/うれしい.
+- A new full 楽しい family and complete older body bring actual
+  distinct inspection to 430 families / 1,036 senses / 170 older
+  bodies. The earlier seals remain historical. 楽しい's enjoyable/
+  happy/delightful range is supplied for final reassessment;
+  its fun/enjoyable title is not simply a synonym for be delighted.
+- Seventeen direct pairs have been added across both corrections
+  and three authored pairs removed. There are now 137 assigned
+  declarations and fourteen exact approved baseline additions on
+  nine files; the three 喜ぶ declarations are not double-counted.
+  Final confirmations are pending. Equal supplied evidence is not
+  equal inspection or measured bias reduction; no empirical app
+  quiz run or review closure is claimed.
 
 ## Batch 87 authoring observations
 
