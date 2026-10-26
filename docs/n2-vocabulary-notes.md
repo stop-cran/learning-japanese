@@ -19,6 +19,75 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 86 authoring observations
+
+- N2:1702-N2:1721 map to eighteen physical additions and exact
+  baseline reuses 薬局 and 軟らかい. The reuses receive sourced
+  `jlpt: 2` only; all other old metadata, bodies and exclusions remain
+  unchanged. 柔らかい remains explicitly N4.
+- The pre-author actual-inspection seal records 411 complete families /
+  920 senses, 173 complete older comparison bodies, 35 complete component
+  records, four complete related N2 kanji bodies, and twenty public
+  lexical captures. All sixteen prepared family chunks and twenty-two
+  older-body chunks were actually read. Hashes preserve identity, not
+  comprehension. The 230 navigation labels are not 230 complete bodies.
+- The original 390 comparison requests remain preserved. Four lacked
+  standalone matches: やたらと, やたらに, 必要以上, 避けられない.
+  That does not invalidate constructions supported by lexical bodies.
+  The 386 matched requests gave 408 families / 915 senses; a final
+  five-family rendering duplicated two exactly and added the three train
+  families / five senses. Five extra older bodies complete the 173 union.
+- After that immutable seal and before the first card patch, the complete
+  夕飯 body was also read as classification/format prior art: 174 actual
+  older bodies overall, but 173 semantic-comparison bodies in the seal.
+  No complete new dictionary family is claimed for that extra format read.
+  夕刊 is native夕ゆう + on刊カン, stored wago like 夕飯; 役目 is
+  on役ヤク + native目め, stored kango under the on-first convention.
+  Do not label either compound as two on readings.
+- Public captures are Digital Daijisen through Weblio, one authority,
+  not twenty independent dictionaries. Applicable readings and headings
+  are distinguished from historical material. Public and JMdict sense
+  ordinals do not align automatically, notably for 矢印.
+- Keep 訳す a transitive godan verb despite its on-derived root;
+  language interpretation is not every generic interpretation.
+  役人 is governmental, not every executive. 薬品 has medicinal and
+  nonmedicinal chemical-agent senses. 役目 needs no invented literal
+  eye meaning or unsupported productive suffix rule.
+- 火傷 uses whole-word やけど and usually kana, not a fabricated
+  character-by-character sound derivation. 夜行's train sense is
+  restricted to やこう; monster-procession やぎょう stays contrast-only.
+  Night travel neither requires wakefulness nor always lasts all night.
+- やたら supports adverbial に/と and attributive な. Rare 矢鱈 is
+  ateji, not literal arrow/codfish composition. Compare ordinary degree
+  uses directly rather than equating every comparative, frequency or
+  excess word. やっつける's public task sense may imply rough work,
+  not inevitable carelessness or killing.
+- 家主's landlord reading restrictions and homeowner/household-head
+  sense are explicit. 大家おおや must not inherit great-expertたいか
+  meanings. Preserve 破く's raw empty source gloss; the inspected
+  dictionary supplies tear/rip. Do not transfer every 破る sense.
+- 破れる is a lexical intransitive verb, distinct from 敗れる and
+  potentially homographic with 破る's potential. やむをえない modifies
+  nouns without な; its cannot-be-helped overlap does not license
+  ～てしょうがない intensity. The unrestricted soft-word family does
+  not impose a physical-versus-figurative spelling split.
+- 遊園地 is not every public park. 夕刊 names an edition, not the
+  time a paper is read. 友好 is a relationship, not a friend or the
+  homophone 有効. 郵送 is postal dispatch, not guaranteed arrival.
+- New reciprocal N2 pairs are 印/矢印, 刊/夕刊 and 郵/郵送;
+  the existing 軟/軟らかい pair is preserved and rechecked. Direct quiz
+  declarations are provisional judgments for independent review, not
+  proof of synonym equivalence, full graph closure or a live-quiz result.
+- The audit reports 346 nonbaseline primary pairs. Including the six
+  historical scoped baseline-reuse pairs and newly checked 軟/軟らかい
+  gives 353. The first draft check wrongly expected this baseline reuse
+  inside the nonbaseline set; correct the accounting, not the checker or
+  card identity. No pair was missing and no unrelated backlink is added.
+- Independent GPT and Claude review has not yet occurred. Keep the
+  common snapshot/scope/source access and blind initial reports;
+  compare equivalent observations across all report sections, not labels
+  or severity alone. No model-usefulness or bias-reduction claim yet.
+
 ## Batch 85 authoring observations
 
 - N2:1682-N2:1701 map to nineteen physical additions and the existing

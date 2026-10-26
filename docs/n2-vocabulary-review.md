@@ -5,7 +5,7 @@
 **Batches 01-85 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,700 rows are review-closed; none are drafted and 112 remain pending.
+The first 1,700 rows are review-closed; 20 are drafted and 92 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,41 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 86: N2:1702-N2:1721
+
+**Status:** drafted; independent review and reconciliation pending.
+
+Twenty rows map to eighteen physical additions and baseline reuses
+薬局/軟らかい. Reuses receive explicit sourced N2 metadata only.
+Primary identities, readings, titles, bodies and exclusions remain
+unchanged; 柔らかい remains N4.
+
+The pre-author seal records actual reads of 411 complete families /
+920 senses, 173 complete older semantic-comparison bodies, 35 component
+records, four related N2 kanji bodies, and twenty complete public
+lexical captures from one dictionary authority. A separate complete
+夕飯 read before drafting supports native-first mixed-reading prior
+art, not another complete dictionary-family inspection.
+All 230 navigation labels are labels, not a full-body count.
+The original prepared plans, unmatched requests and empty supplemental
+captures remain unchanged.
+
+The [source packet](n2-vocabulary-batch-sources/batch-86.json) preserves
+raw source rows, exact identities/readings and selected versus
+additional senses. In particular, 破く's empty raw gloss stays empty,
+夜行's やぎょう monster sense is contrast-only, and the normal kana
+spellings do not silently acquire written kanji metadata.
+
+New N2 reciprocal pairs are 印/矢印, 刊/夕刊 and 郵/郵送.
+Existing 軟/軟らかい is rechecked without a ceremonial duplicate edit.
+Quiz guards are provisional direct judgments; retained reuse guards
+are preservation scope, not a claim all were newly researched.
+
+Initial reviewers must use the same frozen content, rubric and source
+access without the author's quiz-guard rationale or one another's
+findings. Review remains strictly sequential. No independent verdict,
+model-contribution comparison or measured bias reduction is claimed.
 
 ## Batch 85: N2:1682-N2:1701
 
