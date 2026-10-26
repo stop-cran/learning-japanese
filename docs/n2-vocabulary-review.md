@@ -5,7 +5,7 @@
 **Batches 01-79 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,580 rows are review-closed; 232 remain pending and none are drafted.
+The first 1,580 rows are review-closed; 212 remain pending and twenty are drafted.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,34 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 80: N2:1582-N2:1601
+
+**Status:** drafted; independent sequential GPT and Claude review pending.
+
+Eighteen new articles and two unchanged reuses cover twenty source rows.
+交ぜる maps to batch 79's 混ぜる, and 又は maps to the existing N4 または.
+Both source spellings are explicitly recognized; the easier level,
+identities, readings, titles, teaching and previous exclusions remain
+unchanged. Baseline-relative packet counts must not be mistaken for
+physical additions in this batch.
+
+Two new primary reciprocal N2 pairs are 街角/角 and 祭る/祭; existing
+混ぜる/混 is rechecked. The two edited kanji retain metadata and
+unrelated teaching; 混 remains unchanged.
+
+Actual pre-card reads cover twenty complete principal families / 35
+senses, 326 distinct complete principal/comparison families / 861
+senses, 164 complete older word bodies, thirty component records and
+three complete related kanji bodies. All 260 navigation labels and
+twenty public captures from one dictionary authority were read.
+Post-draft full reads add five families / nine senses and four older
+bodies: actual unions 331 / 870 and 168 bodies. Prepared availability
+of 479 families / 1,231 senses is not actual inspection.
+See [batch sources](n2-vocabulary-batch-sources/batch-80.json).
+
+No independent quality-closure claim is made before both reviews,
+evidence-based reconciliation and confirmations.
 
 ## Batch 79: N2:1562-N2:1581
 

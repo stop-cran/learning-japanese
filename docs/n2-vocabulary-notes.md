@@ -19,6 +19,45 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 80 authoring observations
+
+- N2:1582-N2:1601 map to twenty articles: eighteen physical additions,
+  unchanged cross-batch reuse 混ぜる and unchanged baseline N4 または.
+  Source 交ぜる and 又は share those canonical entries and readings.
+  Packet new/reused counts are relative to the original baseline:
+  nineteen nonbaseline paths include batch 79's 混ぜる, not nineteen
+  physical additions in batch 80.
+- Actual pre-card inspection covers twenty principal families / 35
+  senses, fourteen family chunks with a distinct union of 326 complete
+  families / 861 senses, 164 complete older word bodies, all 260
+  navigation labels, thirty components and three complete related
+  kanji bodies. Larger prepared availability is not actual inspection.
+- Five additional complete families / nine senses and four complete
+  older bodies were read after drafting. The actual author unions are
+  now 331 / 870 and 168 older bodies. Keep the sealed pre-card receipt
+  unchanged. Upper/lower eyelid spellings and readings have their own
+  complete entry evidence, not just inferred character readings.
+- Twenty complete public captures are one Digital Daijisen authority
+  via Weblio. Separate the unrelated classical またぐ heading from
+  跨ぐ. The captured shortly definition does not establish the separate
+  dictionary-form-verb + 間もなく attachment; the pinned full entry does.
+- Author self-review replaced an example accidentally using separate
+  またがる with an actual またぐ spanning example. It also removed
+  wording that could misrepresent 真っ暗い as a nonexistent word.
+  Neither correction is an independent reviewer contribution.
+- Preserve the distinction between transitive まとめる and
+  intransitive まとまる, without imposing a quiz transitivity exemption.
+  Color, tanning, pallor, blankness, hopelessness, organization,
+  collection and settlement comparisons require actual secondary
+  senses, not category cliques or rigid English partitions.
+- Kana-primary source mappings still explicitly recognize 纏まる,
+  纏める and 間も無く. まぶしい has literal and figurative radiance;
+  its spelling list alone does not prove a usual-kana frequency claim.
+- Add 街角/角 and 祭る/祭 as two new primary reciprocal N2 pairs.
+  Recheck existing 混ぜる/混. Keep both reused cards, kanji 混, and the
+  batch 79 packet unchanged; edited 角/祭 retain all prior metadata and
+  unrelated teaching. Independent review is still pending.
+
 ## Batch 79 authoring observations
 
 - N2:1562-N2:1581 map to eighteen articles: seventeen new articles and
