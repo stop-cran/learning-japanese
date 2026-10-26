@@ -83,7 +83,7 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   in Claude's Limits, not its formal findings. Do not infer 包装/小包 or
   法則/支配 from package-related categories or English "rule" polysemy.
 - Adopt three small prose clarifications and clarify the common-entry mapping.
-  Defer unsupported wasei classification and stronger toilet-frequency claims.
+  Defer an optional wasei note and stronger toilet-frequency claims.
   The compact `sense4`/`Sense2` source-note notation is not a mapping defect.
   `teachingSpelling` is present in the committed packet and records the source
   alias to recognize, not the canonical production headword.
@@ -92,7 +92,26 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   supplies no frequency evidence; the fresh Kotobank return did not expose
   the Daijisen definition. GPT's broader initial inspection and Claude's useful
   narrower observations show complementarity, not measured bias reduction or
-  equal review depth. Original-session confirmations remain pending.
+  equal review depth.
+- Both original sessions accept corrected teaching snapshot
+  `a6e1243882b1393de5fabdf9bab9dff65449e4d5`, with all twenty rows CLEAN
+  on correctness, scoped coverage and comprehensibility. Each returns all
+  49 required native files completely, the exact header/twenty TSV rows,
+  five evidence renderings and six older bodies, with zero edits.
+  Fresh family union is 30 / 45 senses; no teaching or manifest edit follows
+  acceptance. Cumulative older-body identities are 136 for GPT and six
+  for Claude, not equal actual inspection depth.
+- Correct the historical author's "unsupported" wasei characterization:
+  the frozen JMdict 1121520 record explicitly carries `ls_wasei: y`.
+  That supports a classification note from one authority; the note remains
+  optional rather than a prerequisite defect. GPT also retracts its original
+  overly strong endorsement of the removed bandaging collocation.
+  Preserve original reports and supersede these claims explicitly.
+- Claude discloses batching the twenty article reads and two older-body reads
+  despite the serial-read prompt. The reviewer processes remained strictly
+  sequential and exited; no required content is omitted. Keep the deviation
+  visible rather than claiming perfect procedural compliance. An applicable
+  dynamic ALC link is not replaced with an invented stable URL.
 
 ## Batch 76 authoring observations
 

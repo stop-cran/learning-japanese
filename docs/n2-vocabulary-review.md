@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-76 review-closed.** The target is all 1,812 source rows,
+**Batches 01-77 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,520 rows are review-closed; twenty batch77 rows are drafted,
+The first 1,540 rows are review-closed; none are drafted,
 and 272 remain pending. None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 77: N2:1522-N2:1541
 
-**Status:** corrected draft; authenticated independent initial reviews are
-complete, and sequential original-session confirmations are pending.
+**Status:** closed after authenticated independent initial reviews,
+evidence-based corrections and all-CLEAN confirmations by both original sessions.
 
 Twenty new articles teach twenty source rows. Raw 庖丁 maps to the common
 same-entry headword [包丁](../words/包丁.md), with explicit alternate-spelling
@@ -60,7 +60,7 @@ were reread, without enlarging the existing actual inspection unions.
 Two frozen 英辞郎/EDP returns support the bandage noun constructions; they
 are one additional authority, not two independent dictionaries.
 
-| Observation | Author reconciliation; confirmation pending |
+| Observation | Final adjudication |
 | --- | --- |
 | Claude B77-01: 包帯 | Teach attested に包帯をする and に包帯を巻く, with a wearing example. Remove the unsupported ordinary-production emphasis on 腕を包帯する; retain dictionary-listed transitive recognition. Do not infer invalidity or rarity from missing スル markers. |
 | Claude B77-02: mapping note | Clarify "share entry 1515530 and reading ほうちょう" in the authoritative TSV and packet. Frozen initial evidence remains unchanged. |
@@ -68,7 +68,7 @@ are one additional authority, not two independent dictionaries.
 | Claude Limits: 膨大/広々 | Add a direct extent-label guard, retaining sheer scale versus open spaciousness; do not misreport the older title as "extensive." |
 | Claude Limits: 包装/小包 and 法則/支配 | No pair added: wrapping/outer wrapper differs from the parcel itself; rule/law differs from domination/governance. Neither category association nor an English homograph establishes a shared meaning. |
 | Claude Limits: 防止/ストップ and /ブレーキ | Retain the limited stopping/checking guards, not a vehicle or action-category clique. The latter has an actual figurative restraint sense; these are not claims of unrestricted substitution. |
-| Optional prose | Adopt clearer 別々 attachment, event-noun wording in 防止 and scissors comparison in ペンチ. Defer wasei classification, stronger toilet-default claims and compact source-note spacing; no demonstrated prerequisite defect requires them. |
+| Optional prose | Adopt clearer 別々 attachment, event-noun wording in 防止 and scissors comparison in ペンチ. Defer the source-supported wasei note, stronger toilet-default claims and compact source-note spacing; no demonstrated prerequisite defect requires them. |
 | Report/source qualifications | `teachingSpelling` is committed source-alias recognition, not the canonical headword. The new Kotobank return exposes no Daijisen definition. Recognized transitive POS does not establish frequency or the draft collocation's naturalness. |
 
 Initial actual depths differ: GPT reads 310 complete families / 669 senses
@@ -81,8 +81,37 @@ Preserve GPT's report typo 编む: the article correctly uses 編む.
 Claude's "links only" summary is imprecise because some reading-row examples
 were added; the actual patch remains authoritative.
 
-Author inspection and structural checks do not close the batch. All findings,
-new guards and source qualifications await the original reviewers' assessment.
+Accepted teaching snapshot: `a6e1243882b1393de5fabdf9bab9dff65449e4d5`.
+Read the [GPT confirmation](n2-vocabulary-reviews/batch-77-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-77-claude-confirmation.md).
+Both original sessions freshly read all twenty articles, eight kanji bodies,
+original and corrected compact mappings, complete principal/component/label
+records, exact assigned TSV rows, five full evidence renderings and six older
+bodies. Each has 49 authenticated complete required native file returns and
+zero edits; the fresh family union is 30 / 45 senses, with no mandatory omission.
+All twenty rows are CLEAN on all three facets; mappings, component links,
+ten reciprocal N2 pairs and baseline preservation are separately assessed.
+No teaching or manifest change follows this acceptance.
+
+Both accept the construction and mapping corrections, two new guards,
+declined parcel/control pairs and qualified stopping/checking guards.
+GPT acknowledges that its initial endorsement of the removed bandaging
+collocation was stronger than its evidence. Claude corrects an author
+source characterization: JMdict 1121520 explicitly carries `ls_wasei: y`.
+A wasei note is supported by that authority, not unsupported; it remains
+optional and deferred. The frozen historical reconciliation/prompt wording
+is superseded explicitly, not silently rewritten. The dynamic ALC usage
+link remains applicable; no demonstrated stable replacement was supplied.
+
+Cumulative authenticated older-body identities after confirmation are 136
+for GPT and six for Claude. Claude discloses batching its twenty article
+reads and a pair of older-body reads despite the serial-read prompt.
+The two reviewer processes themselves ran strictly sequentially and exited;
+all required returned content and zero edits are authenticated.
+These process and scope limitations do not establish equal comprehension,
+a model ranking or measured bias reduction. Exact hashes, Git preservation
+and coverage-index checks remain author-executed, not file-only reviewer
+execution, native certification, frequency evidence or runtime quiz testing.
 
 ## Batch 76: N2:1502-N2:1521
 
