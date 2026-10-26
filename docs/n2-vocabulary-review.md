@@ -28,8 +28,9 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 72: N2:1422-N2:1441
 
-**Status:** draft; authenticated independent initial reviews are
-complete. Corrections await both original-session confirmations.
+**Status:** draft; initial reviews, first confirmations and a bounded
+Claude evidence addendum are authenticated. Two follow-up metadata
+changes await both original-session reconfirmations.
 
 Nineteen new articles: 日の出, 響き, 響く, 冷やす, 百科事典,
 美容, 表紙, 標識, 標準, 標本, 評論, 平仮名, ビルディング,
@@ -104,6 +105,40 @@ Equal scope/access did not produce equal actual depth: GPT returned
 all ten family/thirteen older-body chunks and the supplement; Claude
 returned none of those chunks but five complete direct older bodies.
 Complementarity here is not model ranking or measured bias reduction.
+
+First confirmations at `5398d39999695042b16b4af3c4c42fcad307c889`:
+[GPT](n2-vocabulary-reviews/batch-72-gpt-confirmation.md) accepts all
+original fixes but finds a previously missed 響く/伝わる safeguard.
+[Claude](n2-vocabulary-reviews/batch-72-claude-confirmation.md) accepts
+the other dispositions but retains the 広げる/伝える objection.
+Neither report is final acceptance.
+
+Native output checks also expose Claude's incomplete fresh principal
+read: fifteen families / 27 senses, not the claimed twenty / 39.
+The separate [bounded addendum](n2-vocabulary-reviews/batch-72-claude-confirmation-addendum.md)
+freshly returns all twenty / 39 and corrects that claim without
+rewriting the historical report. GPT returned 46 complete required
+files; Claude returned 45 of 46, with the missing complete principal
+rendering supplied only in the addendum.
+
+Follow-up adds 伝わる only on 響く: the actual "be transmitted"
+label directly fits the independently corroborated vibration sense.
+It removes 伝える only from 広げる after narrower actual-label
+analysis: "spread out; widen; unfold" is not bare "spread" or
+"convey; tell." This reverses both author retention and GPT acceptance,
+not the positive Japanese propagation evidence. Seisenban independently
+recognizes that overlap; its literary first citation does not establish
+rarity. Claude withdraws those overbroad supporting arguments in the
+addendum. The independently supported 広める/伝える pair remains.
+
+Four complete follow-up families / fifteen senses and two full older
+bodies add no new identities: author totals remain 292 / 661 / 110.
+Three applicable follow-up Seisenban inspections add no third Japanese
+authority; another Cambridge HTTP 520 supplies no evidence. Only two
+exclusion lines change, one addition and one removal, leaving 95
+declarations. Titles, prose, mappings, baseline exclusions and all
+required reciprocal links stay unchanged. Both original reviewers must
+reassess the exact changes; agreement is not presumed.
 
 ## Batch 71: N2:1402-N2:1421
 

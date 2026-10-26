@@ -96,6 +96,28 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   older-card link and 平仮名 guard work stays deferred.
 - Comparing every report section shows complementary useful
   observations, not measured bias reduction or native certification.
+- First confirmations are not acceptance. GPT discovers the older
+  響く/伝わる omission; add that direct sound-transmission safeguard.
+  Claude retains the 広げる/伝える objection on narrower displayed
+  labels. Remove that pair while acknowledging genuine Japanese
+  propagation overlap; "spread out" is not bare "spread." This reverses
+  author retention and GPT acceptance, not either dictionary.
+- Do not use a literary first citation as frequency evidence. Fresh
+  Seisenban headings recognize both dissemination senses; Claude's
+  bounded addendum withdraws rarity and no-overlap arguments but
+  retains the lower-confidence actual-label objection. 広める/伝える
+  stays independently supported. Original reviewers must reconfirm.
+- Authentication catches a fresh-read overclaim: Claude's first
+  confirmation returned only fifteen principal families / 27 senses.
+  Its separate original-session addendum returns all twenty / 39 and
+  corrects the record; historical reports stay unchanged. Count
+  45 of 46 complete required files in that confirmation, not 46;
+  the missing rendering is supplied only by the bounded addendum.
+- Four follow-up families / fifteen senses and two complete older
+  bodies add no new identities: author union remains 292 / 661 / 110.
+  Three positive Seisenban inspections add no third authority; another
+  Cambridge HTTP 520 adds no evidence. Only two exclusion lines
+  change, one added and one removed; 95 declarations remain.
 
 ## Batch 71 authoring observations
 
