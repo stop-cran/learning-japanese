@@ -65,9 +65,41 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - Two new reciprocal N2 pairs connect 燃/燃やす and 缶/薬缶.
   The existing 紅/紅葉 pair is rechecked, not re-added ceremonially.
   No original-baseline word metadata or exclusions are changed.
-- Independent initial reviews and evidence-based reconciliation are
-  pending. No measured model-bias reduction or native-speaker
-  certification is claimed by these author inspections.
+- Both blind initial reports are authenticated and preserved unchanged.
+  GPT found the direct 物凄い/きつい and 揉む/訓練・指導 guards.
+  Claude found the モデル particle-role defect, unsupported fixed
+  component meaning in 物凄い, stylish/outset guards, 薬缶 metadata
+  inconsistency in Limits, and an excessive 物凄い/ずっと edge in Optional.
+  Compare all report sections before counting unique contributions.
+- Corrective checks read 23 complete families and twelve complete older
+  bodies. Only おしゃれ/スマート's two families and six senses, and
+  訓練/指導/おしゃれ/スマート's four bodies, extend the pre-card union:
+  340 families / 721 senses / 153 bodies cumulatively after review.
+  The pre-card 338/715/149 receipt remains unchanged.
+- Add seven direct guards and remove only 物凄い/ずっと, giving 128
+  declarations. Retain なかなか's positive degree overlap, public
+  問答's discussion overlap, and direct English-label ambiguities for
+  催し/機能 and モデル/種類・標本. 最初 is the author's corroborated
+  extension of Claude's outset concern, not another reviewer discovery.
+- 盛る already taught the selected dosing sense and 一服盛る. The
+  missing-coverage claim is overstated; direct wording, earlier placement
+  and explicit additional-slang labeling improve clarity without changing
+  the title. Adopt two nonblocking English translation improvements.
+  薬缶's already distinguished sense 2 belongs in `additional_senses`
+  under the index's explicit semantics, not in selected kettle sense 1.
+- Actual initial depth differs: GPT 104 complete families / 244 senses /
+  20 older bodies; Claude 21 / 52 / 2. An initial detector counted only
+  twelve GPT bodies because it missed eight complete `CARD` headings.
+  Preserve that receipt and add a supplemental authenticated correction.
+  Both prompts requested public lines 1-408 of 411; both reports'
+  complete-capture claims are inaccurate. Supply the historical
+  役者 tail at confirmation; do not silently rewrite the reports.
+- Processes were sequential, but Claude twice issued concurrent reads
+  and was stopped before completion. The same original session supplied
+  its report without more tools. Confirmations will use verbatim evidence
+  in one bounded no-tools prompt to avoid another scheduling loop.
+  Original-session acceptance is pending. Complementary useful findings
+  do not measure model-bias reduction or establish native-speaker quality.
 
 ## Batch 84 authoring observations
 

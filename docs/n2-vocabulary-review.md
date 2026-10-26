@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 85: N2:1682-N2:1701
 
-**Status:** draft; independent reviews and reconciliation pending.
+**Status:** draft; blind initial reviews authenticated, corrections prepared,
+original-session confirmations pending.
 
 Twenty rows map to nineteen new articles and existing 紅葉.
 The latter preserves its primary こうよう identity, earlier source
@@ -57,9 +58,44 @@ The [source packet](n2-vocabulary-batch-sources/batch-85.json) preserves
 raw data, complete evidence, author inspection receipts and provisional
 quiz rationale. Initial reviewers receive an equivalent blind derivative
 without that rationale and the same frozen content, rubric and access.
-GPT then Claude will run sequentially with at most one outstanding
-native tool call, a sixty-call bound and explicit private-file allowlists.
+The unchanged [GPT initial](n2-vocabulary-reviews/batch-85-gpt-initial.md)
+and [Claude initial](n2-vocabulary-reviews/batch-85-claude-initial.md)
+reports use actual models `gpt-6.1-sol` and `claude-opus-5.5`.
+Their common snapshot, rubric and source access were blind to one
+another's findings and author guard rationale. GPT made 57 sequential
+requests; Claude's original session required two interruptions after
+concurrent requests, then a no-tools report. Processes did not overlap;
+the intended one-outstanding-call bound did not hold in those attempts.
+
+GPT uniquely established two underlying missing-guard findings:
+物凄い/きつい and 揉む/訓練・指導. Claude uniquely established the
+モデル particle-role error, unsupported 物凄い component explanation,
+モダン stylish and 元々 outset guards, 薬缶 additional-sense metadata
+inconsistency in Limits, and 物凄い/ずっと over-guard in Optional.
+The author's direct 最初 check extends the outset concern rather than
+constituting a separate reviewer discovery. Seven added guards and one
+removed guard produce 128 declarations. Other proposed removals are
+unsupported by complete family/body evidence; those edges remain.
+盛る already taught dosing and 一服盛る, so missing selected-sense
+coverage is not established. Clearer ordering and explicit additional
+slang labeling, plus two English translations, are nonblocking improvements.
+
+Post-review author inspection totals 340 complete families / 721 senses /
+153 older bodies; the original pre-card 338/715/149 remains unchanged.
+Actual initial reviewer access is GPT 104 families / 244 senses / 20 bodies
+and Claude 21 / 52 / 2. A supplemental authentication corrects an
+eight-body detector undercount without overwriting its original receipt.
+Both initial public reads covered only 408 of the capture's 411 lines;
+the omitted tail is historical 役者 material outside selected senses.
+Reports remain unchanged and the complete capture is supplied at confirmation.
+
+Confirmations reuse the two original sessions sequentially, with the
+actual diff, all twenty revised word bodies, three kanji bodies, source
+families, corrective older bodies and the entire public capture supplied
+verbatim in a bounded no-tools prompt. No acceptance is claimed yet.
 Author Git/hash/manifest checks are not independent reviewer checks.
+Complementary findings are useful here, not a controlled model ranking,
+measured bias reduction or native-speaker certification.
 
 ## Batch 84: N2:1662-N2:1681
 
