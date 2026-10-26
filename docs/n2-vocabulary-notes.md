@@ -62,9 +62,43 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   kanji metadata and unrelated teaching preserved. Quiz declarations
   are direct symmetric/nontransitive hypotheses for review, not a
   live-quiz result or unrestricted synonym equivalence.
-- Initial reviewer inputs will use raw source rows and identity/sense
-  mappings without author mapping/source notes. Equal source access
-  will not be reported as equal actual reading depth.
+- Initial reviewers received raw source rows and identity/sense
+  mappings without sourceNote, mappingNote or identityNote prose.
+  Native event-path inspection observed no forbidden TSV, author-note
+  or other-review access. Equal source access was not equal actual depth.
+- GPT (`gpt-6.1-sol`) returned 48 successful native calls, one at a time.
+  Claude (`claude-opus-5.5`) had two concurrency stops: 31 native starts,
+  26 successful and five interrupted returns, maximum three outstanding.
+  Claude read the main evidence but no complete older comparison body.
+  Its zero-tool reporting resumption produced a native report beginning
+  mid-sentence without Snapshot/Scope. Preserve that partial report
+  verbatim; do not repair its provenance or call it a full initial review.
+- Corrective actual reads add four distinct families / fourteen senses
+  and the complete 日 body: cumulative 388 families / 806 senses /
+  165 older bodies. The original pre-card seal is unchanged. Thirty-one
+  corrective older bodies and 43 families were reread in full; these
+  are not additive to the distinct-union counts.
+- Corrections add seven direct quiz edges: 夕日/日, 緩い with
+  のんびり/穏やか/悠々/おおざっぱ, and 輸送 with 交通機関/便.
+  Existing questions about steam, kimono, negligence, wording, gist,
+  infants, rain and boxes concern guards already present, not new defects.
+  Keep title overlap distinct from a mere shared topic or grammatical role.
+- Use 10分 for the intended ten-minute boiling example. Teach 緩い's
+  slow-current use directly; relaxed/rough public uses get brief recognition,
+  without changing the selected N2 senses or importing ぬるい's meaning.
+  Link existing 陽 in the alternative-spelling explanation, without adding
+  it to primary metadata or inventing another primary reciprocal pair.
+- Retain supported cooking/preparing and extent/relaxation guards after
+  complete-body checks; do not infer a kindness guard through calmness.
+  Do not simplify 幼児 into a universal under-one exclusion: ordinary
+  wording and the specified Japanese legal range are different scopes.
+- GPT uniquely supplied the 日 edge, three of the relaxed/rough edges,
+  and 陽 navigation. Claude uniquely supplied transport-guard concerns,
+  explicit ten-minute notation and the slow-current teaching improvement.
+  穏やか and redundant 容器/入れ物 declarations appear in both reports
+  across Findings/Optional. These sample-specific complements do not
+  measure bias reduction or rank models, especially with unequal depth.
+  Original-session nonblind confirmations remain pending.
 
 ## Batch 86 authoring observations
 

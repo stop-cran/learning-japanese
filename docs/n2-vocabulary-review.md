@@ -28,7 +28,21 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 87: N2:1722-N2:1741
 
-**Status:** draft; independent sequential GPT and Claude reviews pending.
+**Status:** draft; independent initial reports authenticated and corrections
+prepared; confirmation by both original sessions pending.
+
+Frozen initial snapshot:
+`22995e5a8a9801bcb4d4797cd8add1b0fe959022`.
+[GPT initial](n2-vocabulary-reviews/batch-87-gpt-initial.md) used
+`gpt-6.1-sol`: 48 successful native calls, maximum one outstanding.
+[Claude initial](n2-vocabulary-reviews/batch-87-claude-initial.md) used
+`claude-opus-5.5`: 31 native starts, 26 successful returns and five
+interrupted returns across two concurrency stops, maximum three
+outstanding. GPT exited before Claude started; neither edited.
+Claude's reporting-only resumption used zero tools. Its native report
+itself begins mid-sentence and lacks Snapshot/Scope; it is preserved
+verbatim as partial, not reconstructed or credited as a full-format
+initial review. All twenty verdict rows are present.
 
 Twenty physical word additions and fourteen useful reciprocal N2 pairs
 are supported by actual inspection of 384 complete families / 792 senses,
@@ -51,10 +65,45 @@ metadata are unchanged.
 The [source packet](n2-vocabulary-batch-sources/batch-87.json)
 records raw rows, exact mappings, full principal/comparison families,
 component evidence, capture hashes and provisional quiz declarations.
-Both initial reviewers must receive the same frozen teaching snapshot,
-rubric and source access, with identity-only mapping derivatives rather
-than author mapping/source notes. Actual models, tool depth and
-complementary contributions remain to be established.
+Both initial reviewers received the same snapshot, rubric and source
+access with sourceNote/mappingNote/identityNote omitted from mapping
+derivatives and no TSV access observed. Both read the main evidence;
+GPT additionally inspected selective comparisons and 35 complete
+packet older bodies plus local 日/陽. Claude read no complete older
+comparison body. Post-start monitoring is not structural serialization
+or pre-call prevention.
+
+**Author reconciliation:** GPT's 日 guard and 陽 link are resolved.
+Its four 緩い pairs are accepted from applicable relaxed/rough senses;
+Claude independently raised 穏やか under Optional. Claude's
+輸送/交通機関 and tentative 便 concern are accepted after complete
+body/family inspection, with the operation-versus-system explanation
+clarified rather than relying on grammatical role as quiz protection.
+The ten-minute example uses 10分; 緩い teaches its slow-current use
+with a concrete example. Seven added direct declarations give 111 total.
+No primary identity, reading, title, selected sense or kanji metadata changes.
+
+The later actual author inspection reaches 388 families / 806 senses /
+165 older bodies, distinct unions rather than summed rereads.
+The immutable pre-card seal remains 384 / 792 / 164. All 31 corrective
+older bodies and 43 corrective families were actually read.
+Existing steam, gist, kimono, infant, negligence, wording/term, rain
+and box declarations resolve the unretained-list questions. The
+湯飲み茶碗 entry 2810060 confirms ゆのみぢゃわん.
+Cooking/preparation, extent and relaxation guards are retained after
+full-body inspection; no kindness edge is inferred through calmness.
+The optional rigid 幼児 age simplification is declined because it
+would conflate ordinary and specified legal scopes.
+
+**Complementarity:** GPT uniquely identified the 日 quiz overlap,
+three relaxed/rough pairs and 陽 navigation; Claude uniquely identified
+transport concerns, ten-minute notation and the slow-current teaching
+gap. 穏やか and redundant identical-title exclusions overlap across
+report sections. This is sample-specific useful complementarity,
+not measured model-bias reduction or a general ranking. Unequal
+initial depth and Claude's partial report are material limitations.
+Full nonblind confirmations, with verbatim evidence supplied in the
+prompt and no fresh tool calls, are still required before closure.
 
 ## Batch 86: N2:1702-N2:1721
 
