@@ -21,6 +21,17 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 ## Batch 72 authoring observations
 
+- Both original reviewers accept the final teaching snapshot
+  `754578b2ffff7294b32a51fd11f3550421d4f140`, sequentially and
+  read-only. All twenty rows are CLEAN on three facets; three kanji
+  cards, mappings and baseline preservation are assessed separately.
+  All 34 required fresh complete native returns per reconfirmation
+  are authenticated. Six full reports and the bounded Claude addendum
+  remain unchanged; GPT has three turns and Claude four.
+  Actual cumulative complete older-body unions are GPT 122 / Claude 16,
+  not author totals or evidence of equal comprehension.
+  No teaching edit follows acceptance. Closure is 1,440 closed /
+  372 pending, with no draft or unresolved rows.
 - N2:1422-N2:1441 add nineteen articles and narrowly reuse 皮膚:
   only its sourced N2 field changes. Source blanks for ひゃっかじてん
   and ビルディング remain intact. 百科事典 is the recorded canonical
@@ -79,10 +90,12 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - Do not copy an evening analogy to morning: 暮れ explicitly includes
   sunset/sundown; the inspected dawn families do not establish the
   same solar-event meaning. A failed English dictionary request is
-  not evidence. The declined dawn guards remain for confirmation.
-- 広げる's actual Daijisen dissemination sense and 伝える's complete
-  propagation sense support retaining that independently judged pair
-  for confirmation, not inheriting a whole communication clique.
+  not evidence. Both final reviewers accept declining the dawn guards.
+- At the first correction, 広げる's actual Daijisen dissemination
+  sense and 伝える's complete propagation sense supported retaining
+  that independently judged pair for confirmation, not inheriting a
+  whole communication clique. The final actual-label judgment below
+  reverses that retention without denying the Japanese overlap.
   Remove its 伝わる/宣伝 pairs; no generic POS exemption is used.
 - Read sixteen corrective families / 31 senses completely; only four
   families / eight senses are new. Four further older identities
@@ -91,7 +104,7 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   short inspection notes are not full-page archives.
 - Seven guards added and five removed, plus two precise footers and
   optional と guidance, change eight assigned cards only. Both
-  original-session confirmations remain pending; historical initial
+  original-session confirmations were then pending; historical initial
   findings are not rewritten into CLEAN acceptance. Other optional
   older-card link and 平仮名 guard work stays deferred.
 - Comparing every report section shows complementary useful
@@ -106,7 +119,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   Seisenban headings recognize both dissemination senses; Claude's
   bounded addendum withdraws rarity and no-overlap arguments but
   retains the lower-confidence actual-label objection. 広める/伝える
-  stays independently supported. Original reviewers must reconfirm.
+  stays independently supported. Both original reviewers now accept
+  this precise distinction in their final reconfirmations.
 - Authentication catches a fresh-read overclaim: Claude's first
   confirmation returned only fifteen principal families / 27 senses.
   Its separate original-session addendum returns all twenty / 39 and

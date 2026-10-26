@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-71 review-closed.** The target is all 1,812 source rows,
+**Batches 01-72 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,420 rows are review-closed; twenty are drafted and
+The first 1,440 rows are review-closed; none are drafted and
 372 remain pending. None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,9 +28,9 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 72: N2:1422-N2:1441
 
-**Status:** draft; initial reviews, first confirmations and a bounded
-Claude evidence addendum are authenticated. Two follow-up metadata
-changes await both original-session reconfirmations.
+**Status:** closed after authenticated independent initial reviews,
+first-confirmation corrections, a bounded Claude evidence-repair
+addendum and all-CLEAN reconfirmations by both original sessions.
 
 Nineteen new articles: 日の出, 響き, 響く, 冷やす, 百科事典,
 美容, 表紙, 標識, 標準, 標本, 評論, 平仮名, ビルディング,
@@ -71,7 +71,7 @@ Both ran read-only, independently and sequentially on
 models, complete final messages, 29 required complete returns per
 reviewer, bounded TSV reads and zero edits are authenticated.
 
-| Observation | Author reconciliation awaiting confirmation |
+| Initial observation | First-correction reconciliation, before the follow-up below |
 | --- | --- |
 | GPT F72-01: expansion guards | Add both direct 拡張/拡充 pairs on both 広げる and 広める. |
 | GPT F72-02: 響き effects | Add 影響/効果 from applicable ひびき sense 5, not the different どよめき reading. |
@@ -89,18 +89,18 @@ applicable Seisenban inspections add one Japanese authority, for two
 in total; a failed Cambridge request supplies no lexical evidence.
 Stored corrective public notes are short summaries, not raw page archives.
 
-Eight assigned cards change: seven direct guards added and five removed,
+At the first correction, eight assigned cards change: seven direct guards added and five removed,
 leaving 95 declarations across nineteen new cards. Primary identities,
 readings, titles, levels, types, metadata, mappings, baseline exclusions
 and required reciprocal links remain unchanged. Initial non-CLEAN
-reports are historical and stay unchanged; final acceptance is not claimed.
+reports are historical and stay unchanged; that stage is not final acceptance.
 
 No shared actionable initial finding group was established after
 comparing findings, optional observations, limits and per-row notes.
 GPT uniquely supplied seven safeguards and removal of two beauty pairs.
 Claude uniquely supplied three adopted pair removals and the adopted
 footer/attachment options; its dawn proposal and one propagation-pair
-removal remain explicit confirmation questions, not forced agreement.
+removal remain explicit first-confirmation questions, not forced agreement.
 Equal scope/access did not produce equal actual depth: GPT returned
 all ten family/thirteen older-body chunks and the supplement; Claude
 returned none of those chunks but five complete direct older bodies.
@@ -137,8 +137,42 @@ Three applicable follow-up Seisenban inspections add no third Japanese
 authority; another Cambridge HTTP 520 supplies no evidence. Only two
 exclusion lines change, one addition and one removal, leaving 95
 declarations. Titles, prose, mappings, baseline exclusions and all
-required reciprocal links stay unchanged. Both original reviewers must
-reassess the exact changes; agreement is not presumed.
+required reciprocal links stay unchanged.
+
+Final reconfirmations: [GPT](n2-vocabulary-reviews/batch-72-gpt-reconfirmation.md)
+and [Claude](n2-vocabulary-reviews/batch-72-claude-reconfirmation.md),
+sequentially and read-only at
+`754578b2ffff7294b32a51fd11f3550421d4f140`. Both explicitly accept
+the two follow-up changes and all earlier dispositions. All twenty rows
+are CLEAN on correctness, scoped coverage and comprehensibility;
+three kanji cards, mappings and baseline preservation are separately
+assessed. No remaining actionable defect or consequential uncertainty
+is established. Claude's "read-only review, not final acceptance"
+wording remains unchanged: publication is the author's decision, not
+the reviewer's side effect.
+
+Exact native prompts, actual models, complete final messages and all
+34 required fresh complete returns per reconfirmation are authenticated,
+including both principal ranges and the two older articles. GPT has
+three native turns; Claude has four because of the bounded addendum.
+All six full reports and that addendum are retained. Actual cumulative
+complete older-body unions are **GPT 122 / Claude 16**, derived from
+complete native chunks and direct returns, not author inspection counts.
+Byte access does not establish comprehension or equal review depth.
+GPT freshly fetches all three applicable Seisenban pages; Claude freshly
+fetches 響く and inherits the two dissemination pages from its addendum.
+
+In total, eight guards are added and six removed; 95 declarations
+remain across nineteen new cards. GPT contributes the previously missed
+transmission safeguard; Claude's residual actual-label objection
+changes the final judgment after independent evidence-based adjudication.
+This is useful complementarity, not a model ranking or measured bias
+reduction. No teaching or manifest edit follows final acceptance.
+Closure leaves **1,440 closed / 372 pending**, no draft or unresolved
+rows, 4,594 word articles, all 3,273 baseline identities preserved,
+and manifest `627ea3d21f0bfaf1`. Required primary reciprocal links
+remain intact; the 298 generic new-article pairs plus two scoped
+皮膚 reuse pairs are not a census of all historical reuse links.
 
 ## Batch 71: N2:1402-N2:1421
 
