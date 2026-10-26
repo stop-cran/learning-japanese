@@ -19,6 +19,46 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 79 authoring observations
+
+- N2:1562-N2:1581 map to eighteen articles: seventeen new articles and
+  reused 巻く. The source aliases 交ざる/混ざる and 交じる/混じる
+  share their respective pinned entry and reading, and are explicitly
+  recognized in one canonical article for each pair.
+- Actual pre-card inspection covers eighteen principal families / 50
+  senses; thirteen selected family chunks / 306 families / 787 senses;
+  three supplemental families / twelve senses; nineteen older-body
+  chunks / 151 articles and five complete direct older articles.
+  Distinct actual unions are 309 families / 799 senses and 156 older
+  bodies. All 200 navigation labels, 22 complete components and three
+  related kanji bodies were read; larger prepared availability is not
+  actual inspection.
+- A post-draft dictionary completeness check added four complete
+  悪い/礼 matching families / seventeen senses. The final author union is
+  313 / 816, while the original pre-card receipt remains unchanged.
+  Separate にくい entries are not imported into 悪い/わるい.
+- Twenty complete public captures come from one Digital Daijisen
+  authority via Weblio. Applicable readings are separated from 枕's
+  unrelated character heading, 混じる's こんじる entry and マスク's
+  place-name/fragrance homographs. A returned wrapper is not frequency
+  evidence or corroboration of every claim.
+- Keep 蒔く, 撒く and 巻く as distinct まく identities. Usually-kana
+  sowing/scattering, lacquer sprinkling, flyer distribution and losing
+  a pursuer require sense-aware teaching, not a one-kanji-one-meaning
+  partition. Preserve the reused 巻く title and existing exclusions.
+- 本来 includes inherent and proper/rightful expectations, not merely
+  past-time "originally." 毎度's familiar customer abbreviation and
+  Hokuriku visiting formula are qualified separately. マイナス is not
+  restricted to arithmetic, and a negative test is not necessarily bad.
+- 曲げる is transitive ichidan; its physical senses are not freely
+  written with rare 枉げる. Link the intransitive 曲がる to the existing
+  stable 曲る article. まじる remains godan despite じる; dictionary
+  混/交 tendencies do not create a strict liquids/solids distinction.
+- Add four new primary reciprocal N2 pairs: 枚数/枚, 混ざる/混,
+  混じる/混 and 混ぜる/混; recheck existing 巻く/巻. Missing character
+  cards do not remove Han from word metadata. Independent reviews and
+  final quiz reconciliation remain pending.
+
 ## Batch 78 authoring observations
 
 - N2:1542-N2:1561 add seventeen articles and reuse 募集, 干す and 濠.

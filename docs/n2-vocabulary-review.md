@@ -5,8 +5,8 @@
 **Batches 01-78 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,560 rows are review-closed; 252 remain pending.
-None are drafted or unresolved.
+The first 1,560 rows are review-closed; 20 are drafted and 232 remain pending.
+None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,35 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 79: N2:1562-N2:1581
+
+**Status:** drafted; independent sequential GPT and Claude reviews pending.
+
+Seventeen new articles and reused 巻く cover twenty source rows in eighteen
+distinct articles. Source 交ざる maps to 混ざる, and 交じる maps to 混じる:
+each pair shares its pinned dictionary entry and reading, and each source
+spelling is explicitly taught. 巻く gains a sourced N2 level, narrowly
+recorded recognition and quiz additions; its identity, title and existing
+exclusions remain intact.
+
+Four new primary reciprocal N2 pairs are 枚数/枚, 混ざる/混, 混じる/混
+and 混ぜる/混. Existing 巻く/巻 is rechecked. The two edited kanji retain
+their metadata and unrelated teaching.
+
+Actual pre-card reads cover eighteen complete principal families / 50
+senses, 309 distinct complete principal/comparison families / 799 senses,
+156 complete older word bodies, 22 component records and three complete
+related kanji bodies. Twenty full public captures are one dictionary
+authority, with unrelated headings separated. Navigation labels and
+larger prepared dictionary availability are not complete-body reads.
+Four additional complete matching families / seventeen senses were
+actually read after drafting: the final author union is 313 / 816,
+without retroactively changing the pre-card inspection claim.
+See [batch sources](n2-vocabulary-batch-sources/batch-79.json).
+
+Review results, adjudication, original-session confirmations and
+complementary-contribution notes will be recorded before these rows close.
 
 ## Batch 78: N2:1542-N2:1561
 
