@@ -19,6 +19,59 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 78 authoring observations
+
+- N2:1542-N2:1561 add seventeen articles and reuse 募集, 干す and 濠.
+  Source 堀 maps to the same-entry, same-reading stable 濠 article; its
+  existing N3 level, filename, primary spelling and title are retained.
+  募集 and 干す gain sourced N2 levels. All existing exclusions remain;
+  narrow additions and recognition passages are explicitly recorded.
+- Before drafting, actually read twenty principal families / 45 senses,
+  fourteen selected family chunks / 386 families / 903 senses,
+  twenty-two complete older-body chunks / 173 articles, 267 navigation
+  labels, 31 component records and six complete related kanji bodies.
+  The complete 採掘 supplement adds one family / one sense and one older
+  article: actual unions are 387 / 904 and 174 bodies. Larger prepared
+  dictionary availability is not completed inspection.
+- Twenty initial and two supplemental public captures come from one
+  Digital Daijisen authority via Weblio. The initial 坊っちゃん return
+  contains only the novel; 坊ちゃん and ぼっちゃん supply the lexical
+  heading, yielding twenty-one positive lexical captures, not twenty-two
+  independent confirmations. Historical headings and readings are not
+  imported into the target senses.
+- Create separate ほどく, entry1198900, rather than silently reusing
+  解く/とく1198890. The shared spelling does not make all solving,
+  dispelling or canceling constructions interchangeable. Recognize the
+  separate intransitive ほどける without changing ほどく's transitivity.
+- Respect 彫る's explicit ほる-to-彫る restriction and obsolete える;
+  rare 雕る/鐫る are not generalized as ほる spellings. Likewise, 放る's
+  search-only 投る is not an ordinary-production recommendation.
+  北極 explicitly teaches the small っ in ほっきょく.
+- Retain practical household 干す teaching while adding drinking-up,
+  draining and usually passive work-exclusion recognition. Recruitment,
+  contributions and financial subscriptions belong to 募集, but a call
+  for applicants does not itself guarantee acceptance.
+- 盆's household sense is unmarked in the complete family. Historical
+  public examples do not establish modern rarity or obsolescence.
+  Preserve that uncertainty without erasing household quiz neighbors;
+  the practical tray/Obon focus does not mean the Chinese Lantern Festival.
+- Four new primary reciprocal N2 pairs are 防犯/防, 牧畜/畜, 北極/極
+  and 掘る/掘. Recheck existing 募集/募 and 干す/干 pairs. Preserve
+  kanji metadata and unrelated teaching while adding useful reading-row,
+  common-word links and applicable dictionary IDs.
+- Quiz safeguards are direct, symmetric and nontransitive hypotheses,
+  not category cliques. Consider ordinary secondary fields/aspects in
+  方面, boy senses in 坊さん, canal in 濠, mining in 掘る and hidden
+  faults in ぼろ. A related animal, building, festival, health measure
+  or action is not automatically an equivalent answer.
+- Exact-path checks, not unreliable negative glob results, establish
+  missing cards. Do not create broken links to absent 坊, 朗, 牧, 保,
+  健, 彫 or 盆 components, or absent お盆/トレー comparison articles.
+  All primary written Han remain in word metadata.
+- Author inspection and structural checks are not independent review,
+  native-speaker certification, exhaustive quiz uniqueness or measured
+  model-bias reduction. Initial GPT and Claude reviews remain pending.
+
 ## Batch 77 authoring observations
 
 - N2:1522-N2:1541 add twenty new articles. All older word articles, including

@@ -5,8 +5,8 @@
 **Batches 01-77 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,540 rows are review-closed; none are drafted,
-and 272 remain pending. None are unresolved.
+The first 1,540 rows are review-closed; twenty are drafted,
+and 252 remain pending. None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -25,6 +25,35 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 78: N2:1542-N2:1561
+
+**Status:** drafted; independent sequential GPT and Claude reviews pending.
+
+Seventeen new articles and three reuses cover twenty source rows.
+Source 堀 maps to stable 濠 with the same entry1522060 and readingほり;
+the existing N3 level is retained. 募集 and 干す gain sourced N2 levels,
+with narrow recognition and quiz-guard additions. Existing identities,
+readings, titles and exclusions are preserved.
+
+Four new primary reciprocal N2 pairs are 防犯/防, 牧畜/畜, 北極/極 and
+掘る/掘; the existing 募集/募 and 干す/干 pairs are rechecked.
+Four kanji receive precise link/example additions with unchanged metadata.
+All other older word bodies remain unchanged.
+
+Actual pre-card inspection covers twenty principal families / 45 senses,
+387 distinct complete principal/comparison families / 904 senses,
+174 complete older articles, 31 component records and six complete kanji
+bodies. Twenty initial and two supplemental public captures are one
+dictionary authority. The original 坊っちゃん capture is novel-only;
+the 坊ちゃん/ぼっちゃん supplements supply the lexical entry.
+Prepared availability is larger than actual inspection.
+See [batch sources](n2-vocabulary-batch-sources/batch-78.json).
+
+The draft does not yet count as review-closed coverage. Both initial
+reviewers will receive the same frozen committed snapshot, assigned rows,
+rubric and source access, without the author's quiz adjudication rationale
+or the other model's report. Processes run one at a time and exit.
 
 ## Batch 77: N2:1522-N2:1541
 
