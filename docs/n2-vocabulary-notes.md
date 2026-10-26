@@ -70,7 +70,9 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 - Both initial sessions are authenticated against `c1563f9c47fa9af139ef149893b4c5e4e9be3317`,
   with 35 complete required native file returns each and zero edits.
-  Corrections are authored; original-session confirmations are still pending.
+  Both original sessions accept corrected snapshot
+  `228808f262a9503b525a4eac2fbe449611f4e58c`: all twenty rows CLEAN on
+  correctness, scoped coverage and comprehensibility.
 - Adopt six direct guards and remove the two stationery/tool-category guards.
   Clarify the noun-modifying による pattern, 隔てる participant roles, fountain
   title, 文芸 contrast and three small learner-facing prose points.
@@ -85,6 +87,20 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - Both reports identify 閉会/仕舞い. Their other useful observations differ,
   but scope and reading depth differ too; compare every report section and do
   not infer measured bias reduction or a model ranking.
+- Both confirmations freshly read all twenty articles, five kanji, complete
+  compact records and assigned TSV rows, four complete evidence renderings
+  and ten older bodies: 48 authenticated required native file returns each,
+  zero edits. The fresh family union is 41 / 84 senses. Cumulative older-body
+  identities are 130 for GPT and eleven for Claude, not equal-depth inspection.
+- Both accept the direct additions/removals and defer physical-closing guards:
+  generic closing of openings/shop is not itself meeting/event completion.
+  Other cards' guards do not create transitive obligations. Extra examples
+  and wording polish remain nonblocking; no teaching/manifest edit follows acceptance.
+- Preserve report-only errata explicitly: GPT misattributes Claude's raw-gloss
+  claim to itself; Claude transcribes によるの分類 in its table although the
+  actual article says 種類による分類. Do not rewrite native reports or teach
+  the extra の. Claude withdraws its moving/proceeding mismatch and discloses
+  simultaneous TSV header/row reads; reviewer processes remain sequential.
 
 ## Batch 75 authoring observations
 

@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-75 review-closed.** The target is all 1,812 source rows,
+**Batches 01-76 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,500 rows are review-closed; batch76 has twenty drafted rows,
+The first 1,520 rows are review-closed; none are drafted,
 and 292 remain pending. None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 76: N2:1502-N2:1521
 
-**Status:** drafted; independent sequential initial reviews are complete.
-Corrections await both original-session confirmations. Drafts are not closed coverage.
+**Status:** closed after authenticated independent initial reviews,
+evidence-based corrections and all-CLEAN confirmations by both original sessions.
 
 Twenty new articles teach twenty source rows. Five reciprocal N2 kanji pairs
 link 文芸/芸, 分布/布, 分量/量, 並行/並 and 兵隊/兵; their kanji metadata
@@ -56,7 +56,48 @@ kanji, raw source or selected-sense mapping changes. Both reports identify
 the missing 閉会/仕舞い pair; other useful contributions differ.
 Complete corrective evidence brings actual author scope to 208 families /
 514 senses and 129 older bodies; 431 prepared families / 981 senses are availability.
-Original-session confirmations and final reconciliation are pending.
+Both original reviewers accept the final dispositions:
+
+| Observation | Final adjudication |
+| --- | --- |
+| GPT F01: 文房具/tool categories | Remove the 道具 and 器具 guards; complete actual bodies establish broader categories, not a stationery meaning. Retain comparisons. |
+| GPT F02: 分類 attachment | Contrast 種類によって分類する with noun-modifying 種類による分類; no direct による分類する. |
+| GPT F03 and Claude F5: event endings | Shared 仕舞い gap; additionally add 終える and しまう from actual ordinary finishing senses. Keep しまい and suffix じまい distinct. |
+| GPT F04: 並行 simultaneity | Add direct 一度に guard while retaining one-batch versus concurrent-use distinctions. |
+| GPT F05: 凹む loss | Add 損害 from expressly taught loss and actual financial-loss body, not generic physical damage or POS. |
+| Claude F1: 噴水 label | Use "fountain; water jet"; do not overstate frequency evidence or count failed English dictionary fetches. |
+| Claude F2: 隔てる participants | Explain barrier/cause が plus separated things を, versus intervening thing/distance/time を隔てて. |
+| Claude F3: 文芸 performance contrast | Make the contrast direct without denying broader arts recognition. |
+| Claude F4: 文献/literature label | Add 文学 guard for actual English-label ambiguity; preserve Japanese reference/art distinction and nontransitivity. |
+| Optional prose and source qualifications | Adopt three small prose clarifications. Claude withdraws the absent-source-gloss assertion and moving/proceeding mismatch. Defer extra examples, pronunciation note and physical-closing guards; no demonstrated prerequisite defect requires them. |
+
+Accepted teaching snapshot: `228808f262a9503b525a4eac2fbe449611f4e58c`.
+Read the [GPT confirmation](n2-vocabulary-reviews/batch-76-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-76-claude-confirmation.md).
+Both freshly reread all twenty articles, five kanji bodies, complete compact
+records, exact assigned TSV rows, four full evidence renderings and ten older
+bodies. Each has 48 authenticated complete required native file returns and
+zero edits. Fresh family union is 41 / 84 senses; no mandatory read is omitted.
+All twenty rows are CLEAN on all three facets, with mappings, component links,
+five reciprocal N2 pairs and baseline preservation assessed separately.
+No teaching or manifest change follows this acceptance.
+
+Initial authenticated older-body depths are 129 unassigned / 149 total word
+bodies for GPT and three / 23 for Claude; 24 prepared chunks versus none.
+After confirmations the cumulative older-body identities are 130 and eleven.
+Both models contribute useful observations, with one shared closing pair;
+different actual depths prevent treating this as measured bias reduction,
+equal comprehension or a model ranking.
+
+Preserved report errata: GPT confirmation calls the raw-gloss assertion its
+own, but it originated in Claude's Optional section; GPT's initial Optional
+was None. Claude's confirmation table transcribes によるの分類, whereas the
+actual accepted article correctly says 種類による分類 with no の.
+Neither report is silently rewritten. Claude discloses issuing its TSV header
+and assigned-row reads together in both passes; the complete rows are
+authenticated, and the reviewer processes themselves were sequential.
+Deferred optional wording and physical-closure pair suggestions remain
+nonblocking, not transitive obligations inherited from other guards.
 
 ## Batch 75: N2:1482-N2:1501
 
