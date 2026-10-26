@@ -56,7 +56,42 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - Add 街角/角 and 祭る/祭 as two new primary reciprocal N2 pairs.
   Recheck existing 混ぜる/混. Keep both reused cards, kanji 混, and the
   batch 79 packet unchanged; edited 角/祭 retain all prior metadata and
-  unrelated teaching. Independent review is still pending.
+  unrelated teaching.
+- Independent initial reviews are authenticated against `6102eb03`,
+  using GPT-6.1 Sol and Claude Opus 5.5 sequentially. Both returned all
+  33 mandatory complete file reads without edits. GPT additionally
+  returned all 36 comparison chunks: actual depth 331 families / 870
+  senses and 173 older/reuse bodies. Claude read 25 families / 44
+  senses and three older/reuse bodies, including the two assigned
+  reuses; snippets and prepared availability are not complete reads.
+- GPT uniquely proposed eight adopted direct quiz pairs: hopeless
+  真っ暗/終わる, worship 祭る/敬う, both organization verbs/完了 and
+  /合同, まとまる/合流, and まもなく/直に through the separately
+  recognized じきに reading. An older article's primary title or
+  reading does not erase its ordinary secondary senses.
+- Claude uniquely motivated bounded またぐ wording, explicit 日焼け
+  in the tanning example and optional お金 in the gathered-funds
+  example. Do not adopt its no-astride implication categorically:
+  the pinned entry explicitly includes straddle, while またがる is
+  the separate mounting/sitting lexeme. Retain the source-backed
+  title and improve the teaching's specificity instead.
+- Post-review author inspection adds 36 complete families / 98
+  senses and fifteen full older bodies as a separately recorded
+  stage. Six families / eleven senses and five bodies are new to the
+  actual union: 337 / 881 and 173 bodies. Three additional live
+  Kotobank pages were read, with applicable headings separated from
+  empty sections and distinct ワンラ entries; these are not added to
+  the twenty frozen captures or represented as byte-hashed captures.
+- The author separately added five direct pairs after that inspection:
+  both organization verbs/合う and /終了, and まもなく/たちまち.
+  The complete entries and actual older bodies, not inherited
+  exclusion chains, establish the merging, concluding and short-time
+  overlaps. Thirteen additions bring declarations from 151 to 164.
+- No shared actionable initial finding was established across either
+  report's findings, optional suggestions, limits or row notes.
+  Complementary contributions and very different evidence depths
+  do not measure bias reduction or rank the models generally.
+  Original-session confirmations remain pending; the batch is not closed.
 
 ## Batch 79 authoring observations
 

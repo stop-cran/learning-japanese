@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 80: N2:1582-N2:1601
 
-**Status:** drafted; independent sequential GPT and Claude review pending.
+**Status:** drafted; independent initial reviews reconciled, with both
+original-session confirmations pending.
 
 Eighteen new articles and two unchanged reuses cover twenty source rows.
 交ぜる maps to batch 79's 混ぜる, and 又は maps to the existing N4 または.
@@ -51,8 +52,44 @@ bodies: actual unions 331 / 870 and 168 bodies. Prepared availability
 of 479 families / 1,231 senses is not actual inspection.
 See [batch sources](n2-vocabulary-batch-sources/batch-80.json).
 
-No independent quality-closure claim is made before both reviews,
-evidence-based reconciliation and confirmations.
+The blind initial reviews of `6102eb03` are archived:
+[GPT](n2-vocabulary-reviews/batch-80-gpt-initial.md) and
+[Claude](n2-vocabulary-reviews/batch-80-claude-initial.md).
+Actual models are GPT-6.1 Sol and Claude Opus 5.5, run sequentially
+without overlapping reviewer processes. Both returned all 33 mandatory
+complete reads and made no edits. Actual complete depths differ:
+GPT 331 families / 870 senses and 173 older/reuse bodies; Claude
+25 / 44 and three older/reuse bodies, including both assigned reuses.
+All 36 optional comparison chunks were returned by GPT, none by Claude.
+Access authentication does not establish equal comprehension.
+
+GPT's five finding groups supply eight adopted direct exclusions:
+真っ暗/終わる, 祭る/敬う, both organization verbs/完了 and /合同,
+まとまる/合流, and まもなく/直に. Claude supplies bounded またぐ
+wording and explicit 日焼け; its optional お金 clarification is adopted.
+The categorical implication that またぐ has no straddle sense is not
+accepted: the complete pinned entry explicitly includes it. Keep that
+source-backed title and distinguish the separate またがる verb.
+The old tanning translation was not proved false, nor the old funds
+example ungrammatical. Optional expanded uses and unrelated reuse
+tag normalization are deferred.
+
+Independent post-review author inspection covers 36 families / 98
+senses and fifteen full older bodies. Actual cumulative unions become
+337 / 881 and 173 bodies, without rewriting the pre-card receipt.
+Three live Kotobank pages are separately recorded, not counted as new
+frozen captures. The author adds five further direct pairs: both
+organization verbs/合う and /終了, and まもなく/たちまち.
+Thirteen additions yield 164 declarations. No title, identity, reading,
+level, source mapping, selected sense, reuse body or kanji changes in
+this correction.
+
+No shared actionable initial finding was established after comparing
+all report sections and row notes. GPT's eight pairs and Claude's
+bounded wording/example clarifications are complementary contributions;
+the five author-found pairs are not credited to either reviewer.
+This sample does not measure bias reduction or establish a model ranking.
+No quality-closure claim is made before original-session confirmations.
 
 ## Batch 79: N2:1562-N2:1581
 
