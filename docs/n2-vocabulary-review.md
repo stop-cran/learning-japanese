@@ -5,7 +5,7 @@
 **Batches 01-82 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,640 rows are review-closed; none are drafted and 172 remain pending.
+The first 1,640 rows are review-closed; twenty are drafted and 152 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,45 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 83: N2:1642-N2:1661
+
+**Status:** draft; independent reviews and reconciliation pending.
+
+Nineteen physical additions and baseline reuse 群れ cover twenty rows.
+群れ gains sourced N2 only, preserving all prior teaching and twelve
+exclusions. Source 銘々 maps to めいめい and 目覚し to 目覚まし,
+with explicit same-entry spelling recognition. The incompatible raw
+目下 gloss is retained as source data: the supplied めした reading
+and entry1535320 select junior/subordinate, separately from もっか.
+
+Three new primary reciprocal N2 pairs connect 名刺/刺, 名詞/詞 and
+目印/印. Existing 群れ/群 is rechecked. Every written primary Han
+remains in word metadata without inventing absent kanji articles.
+
+The sealed pre-card inspection contains twenty principal families,
+309 complete selected families / 662 senses, 146 older word bodies,
+258 original navigation labels, 28 complete components and four
+complete kanji bodies. All selected chunks and supplemental renderings
+were actually read. The 415 originally prepared families are not all
+claimed inspected; labels are not complete article-body evidence.
+Packaging then exposed twelve inherited 群れ guard targets absent from
+that body set. All twelve unchanged bodies were read completely after
+drafting; the cumulative union is 158 bodies. Their complete families
+were already included in 309, so the family count does not increase.
+
+Twenty-one public attempts produced twenty applicable Digital Daijisen
+captures through Weblio, including the separate canonical 目覚まし
+capture. The original failed 目覚し extraction remains recorded.
+One dictionary authority is not twenty independent authorities.
+
+Exact raw rows, complete principal families, selected teaching,
+inspection receipts, limits and provisional pairwise quiz assertions
+are in the [source packet](n2-vocabulary-batch-sources/batch-83.json).
+The blind derivative omits author quiz rationale for both requested
+reviewers. Initial GPT/Claude review, provenance authentication and
+evidence-based reconciliation have not yet occurred. No model
+contribution or accepted linguistic correctness is claimed at draft.
 
 ## Batch 82: N2:1622-N2:1641
 

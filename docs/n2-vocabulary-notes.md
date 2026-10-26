@@ -19,6 +19,66 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 83 authoring observations
+
+- N2:1642-N2:1661 map to nineteen physical additions and one
+  baseline reuse. 群れ receives sourced N2 only; preserve its complete
+  old teaching, identity, title, reading and twelve exclusions.
+- Pre-card inspection is sealed separately from packet preparation:
+  twenty principal families; 309 actually read complete families /
+  662 senses, comprising the original 298 and eleven supplemental
+  families; 146 complete older word bodies; 258 original navigation
+  labels; 28 component records; and four complete kanji bodies.
+  The 415 originally prepared families are not all claimed inspected.
+- Twenty-one public requests yielded twenty applicable Digital
+  Daijisen captures. The original 目覚し extraction failed and remains
+  recorded; the separate canonical 目覚まし capture succeeded.
+  These are one dictionary authority, not twenty independent sources.
+- Preserve raw source fields. Source 目下 has めした and entry1535320
+  but the incompatible gloss "at present, now." Teach the supplied
+  junior/subordinate identity and explicitly distinguish もっか,
+  entry1535330, rather than pooling the readings or silently repairing
+  the source. Source 銘々 maps to usually-kana めいめい; source
+  目覚し maps to 目覚まし, with both aliases explicitly recognized.
+- 巡る/めぐる, entry1342050, is not 回る/まわる, entry1604300.
+  Teach the selected circuit, surrounding, recurrence, touring and
+  concerning senses separately. The usual-kana flag is scoped to the
+  concerning sense, not every use. Explain godan forms and path を
+  without deriving a universal transitivity rule from an English gloss.
+- 目印 recognizes same-entry 目標/めじるし without merging it with
+  目標/もくひょう. The existing latter card really includes landmark;
+  do not manufacture a goal-versus-navigation absolute. Mark the
+  historical trademark sense rather than recommending modern reuse.
+- Keep 名詞's modern めいし separate from obsolete なことば and
+  qualify pronoun classification by framework. 命ずる's shared
+  命じます/命じた forms and appointment construction need explanation;
+  Japanese サ変 and dictionary zuru classifications are not universal
+  competing conjugation rules. 名物's wider local-character use is
+  attributed to Daijisen, not invented as another pinned JMdict sense.
+- 紫 includes bounded gromwell and soy-sauce recognition; メーター
+  includes instrument and length-unit senses without a categorical
+  メートル ban. めいめい explicitly recognizes 銘々/銘銘 while its
+  kana article has no primary written Han. Preserve every actual
+  primary written Han elsewhere, even when no kanji card exists.
+- Add three primary reciprocal pairs: 名刺/刺, 名詞/詞 and 目印/印.
+  Recheck existing 群れ/群. Preserve all unrelated kanji teaching and
+  metadata; no missing character card is fabricated.
+- Draft safeguards are provisional direct pairwise judgments, not
+  category cliques or blanket POS exemptions. In particular, reassess
+  the broad 巡る list and actual English order/command, every/each,
+  aim/target and sign/mark labels from complete existing bodies.
+  Neither different titles nor thematic similarity decides safety.
+  The confusable inventory has no matching named row for these forms.
+- This is drafted, not independently certified. GPT and Claude initial
+  reviews, reconciliation, provenance checks and closure remain pending.
+  No empirical quiz draws, native-speaker verification or measured
+  model-bias reduction is claimed.
+- The first packaging assertion exposed twelve inherited 群れ guard
+  targets missing from the full-body set. All twelve unchanged bodies
+  were then read completely, bringing the actual older-body union to
+  158. Their complete families were already among the 309 inspected;
+  do not add them again or rewrite the historical pre-card receipt.
+
 ## Batch 82 authoring observations
 
 - N2:1622-N2:1641 map to eighteen physical additions and two
