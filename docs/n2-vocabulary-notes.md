@@ -77,7 +77,32 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - The confusable inventory has no matching named row for these
   forms. No native-speaker certification, empirical quiz draws,
   exhaustive correctness, or measured model-bias reduction is claimed.
-  Blind sequential GPT and Claude review remains pending.
+  Blind initial GPT and Claude reviews are now authenticated; original
+  sessions have not yet confirmed the corrections.
+- Corrective complete reads add only 迷惑/1532800 and its two senses
+  to the actual pre-card sets: cumulative 355 families / 786 senses
+  and 195 older bodies, not sums of repeated reads. Keep the earlier
+  354/784/194 receipt unchanged. Failed English dictionary fetches
+  for "distinctly" are not corroboration.
+- Adopt six direct guards: めちゃくちゃ/つまらない,
+  面倒くさい/つまらない・迷惑, めでたい/馬鹿,
+  目安/予算 and めっきり/はっきり. Each has its own complete-family
+  and actual-body rationale. Qualified measured-area and scattering
+  labels do not establish additional 面積/地域 or めちゃくちゃ/散らかす
+  edges by themselves. Retain sourced secondary-sense comparisons
+  for もたれる/寝る・頼む and by-(some)-chance comparisons.
+- Add a ruined-plans example and clearer interview-role guidance;
+  remove learner-facing malformed-source commentary, introduce
+  "by some chance" locally, improve the marriage translation and
+  link 地下/接近. An executive-subject example supports a possible
+  construction, not an unsupported "usually" frequency assertion.
+- Native initial complete-return depths differ: GPT 354 families /
+  784 senses / 54 older bodies; Claude 20 / 33 / 5, in addition to
+  the twenty assigned cards. Access is not comprehension. Processes
+  ran sequentially, but Claude's native maximum was twenty outstanding
+  calls versus GPT's one, contradicting Claude's serial-work claim.
+  Preserve its report unchanged and enforce a one-outstanding-call
+  bound for confirmation. Do not describe the initial internals as serial.
 
 ## Batch 83 authoring observations
 

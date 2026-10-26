@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 84: N2:1662-N2:1681
 
-**Status:** drafted; blind sequential GPT and Claude reviews pending.
+**Status:** drafted; authenticated blind initial reviews reconciled,
+corrections awaiting confirmation by both original sessions.
 
 Twenty new articles cover twenty rows. Source 面倒臭い maps to
 面倒くさい with explicit spelling and reading recognition. 潜る
@@ -56,8 +57,52 @@ from unrelated works and homographs. Missing standalone comparison
 The [source packet](n2-vocabulary-batch-sources/batch-84.json) preserves
 raw rows, complete families, selected teaching, actual-read receipts,
 limitations and provisional pairwise quiz declarations. A blind
-reviewer derivative omits author guard rationale. No completed review,
-model contribution, empirical quiz exercise or bias reduction is claimed.
+reviewer derivative omitted author guard rationale. Authenticated reports
+are preserved unchanged: [GPT initial](n2-vocabulary-reviews/batch-84-gpt-initial.md)
+and [Claude initial](n2-vocabulary-reviews/batch-84-claude-initial.md).
+Actual models are `gpt-6.1-sol` and `claude-opus-5.5`.
+
+GPT's three missing-guard findings are adopted:
+めちゃくちゃ/つまらない, 面倒くさい/つまらない and めでたい/馬鹿.
+Claude's 目安/予算 and 面倒くさい/迷惑 findings and optional
+めっきり/はっきり comparison are adopted after complete family/body checks.
+Declarations rise from 147 to 153, without transitive or thematic cliques.
+Other initial guards remain, including sourced secondary-sense
+もたれる/寝る・頼む and by-(some)-chance ambiguity. No additional
+面積/地域 or めちゃくちゃ/散らかす edge is established by the actual
+qualified labels and constructions.
+
+Claude also supplies useful clarity signals: positive interview-role
+guidance, removal of learner-facing raw-source errors, and a locally
+introduced "by some chance" gloss. Its ruined-result suggestion is
+adopted as optional teaching expansion, not a proven necessary-coverage
+defect in the original state/に explanation. Improve the marriage
+translation and link 地下/接近. Do not infer "usually" from one executive
+subject example; optional question-style and casual-frequency expansion
+are not required. The separate medical げんうん family is verified;
+the card does not teach the unverified applicant を面接する construction.
+
+The corrective 21-family rendering was read completely. Only new
+迷惑/1532800 and two senses extend the family set, and only 迷惑 extends
+the older-body set: cumulative 355 families / 786 senses / 195 bodies.
+The pre-card receipt remains unchanged. Cambridge/Collins fetch failures
+are not English corroboration.
+
+Initial native complete-return depths are 354 families / 784 senses /
+54 older bodies for GPT and 20 / 33 / 5 for Claude, plus all twenty
+assigned cards for both. Both received the same snapshot and source
+access; access is not comprehension. Their processes ran sequentially,
+but native maximum outstanding calls were one and twenty respectively.
+Claude's serial-work assertion contradicts its log; preserve it, disclose
+the discrepancy, and enforce one outstanding call during confirmation.
+
+Contribution comparison includes Findings, Optional, Limits and per-file
+notes: the adopted direct pairs are distinct contributions, not duplicates
+merely because two concerns affect the same card. Claude adds useful prose
+and optional improvements; several literal suggestions are declined or
+narrowed on evidence. Different actual evidence depths preclude a general
+model ranking or measured bias-reduction claim. No final acceptance or
+review closure is claimed yet.
 
 ## Batch 83: N2:1642-N2:1661
 
