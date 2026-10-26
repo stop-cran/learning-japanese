@@ -56,8 +56,35 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   混/交 tendencies do not create a strict liquids/solids distinction.
 - Add four new primary reciprocal N2 pairs: 枚数/枚, 混ざる/混,
   混じる/混 and 混ぜる/混; recheck existing 巻く/巻. Missing character
-  cards do not remove Han from word metadata. Independent reviews and
-  final quiz reconciliation remain pending.
+  cards do not remove Han from word metadata.
+- Independent initial GPT-6.1 Sol and Claude Opus 5.5 reviews are
+  authenticated on the same authored commit. GPT supplies three adopted
+  direct quiz pairs: 撒く/ぱらぱら and the two mixing verbs/付き合い.
+  Claude supplies まごまご/ためらう, explicit expectation wording for
+  本来, qualified 混ざる spelling guidance, and the missing プラス link.
+  Its optional "interpretation" wording is adopted separately. There is
+  no shared actionable initial finding across the complete reports;
+  complementarity on this sample is not measured model-bias reduction.
+- Initial actual frozen-family depths differ: GPT 313/816 and Claude
+  25/79. Complete older bodies, including reused 巻く, are 159 versus
+  two; navigation labels and front matter do not count as full bodies.
+  Claude disclosed two parallel file-read batches inside its sole
+  reviewer process. Reviewer processes themselves never overlapped.
+- Post-review adjudication reads 25 complete families / 66 senses and
+  twelve complete older bodies. Four newly inspected families / ten
+  senses and two newly inspected older bodies bring the author's
+  cumulative unions to 317/826 and 158 bodies, without changing earlier
+  stage receipts. Separate readings and dance homographs are not
+  imported into the assigned words.
+- Four direct guards raise the assigned articles' declarations from
+  106 to 110. Retain the directly justified scatter, combination and
+  negative-aspect comparisons; do not infer other guards transitively.
+  本来's revision makes an expectation explicit, not a universal claim
+  that the earlier sentence was ungrammatical. 混/交 guidance remains a
+  tendency rather than a categorical material/spelling law.
+- Original-session confirmations remain pending; the twenty source
+  rows are still draft. Optional idiom expansion, redundant-but-usable
+  count wording and unsupported weak guard hypotheses are not defects.
 
 ## Batch 78 authoring observations
 

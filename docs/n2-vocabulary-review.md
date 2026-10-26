@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 79: N2:1562-N2:1581
 
-**Status:** drafted; independent sequential GPT and Claude reviews pending.
+**Status:** drafted; independent sequential initial reviews authenticated,
+corrections authored, original-session confirmations pending.
 
 Seventeen new articles and reused 巻く cover twenty source rows in eighteen
 distinct articles. Source 交ざる maps to 混ざる, and 交じる maps to 混じる:
@@ -52,8 +53,35 @@ actually read after drafting: the final author union is 313 / 816,
 without retroactively changing the pre-card inspection claim.
 See [batch sources](n2-vocabulary-batch-sources/batch-79.json).
 
-Review results, adjudication, original-session confirmations and
-complementary-contribution notes will be recorded before these rows close.
+Initial reviews on `193c2cd87a3d78c1b2ea4e3fb680216cbdfaef46`:
+[GPT-6.1 Sol](n2-vocabulary-reviews/batch-79-gpt-initial.md) and
+[Claude Opus 5.5](n2-vocabulary-reviews/batch-79-claude-initial.md).
+Exact models, prompts, required successful native returns, zero edits and
+snapshot hashes are authenticated; these checks do not certify semantics.
+
+GPT contributes three adopted direct quiz pairs: 撒く/ぱらぱら,
+混ざる/付き合い and 混じる/付き合い. Claude contributes
+まごまご/ためらう, clearer expectation wording in 本来, source-qualified
+混/交 guidance in 混ざる, and the missing マイナス-to-プラス link.
+Its optional "interpretation" wording is separately adopted. All findings,
+optional observations and limits were compared before assigning these
+sample-specific contributions; no shared actionable initial finding or
+measured bias-reduction claim is made.
+
+Initial actual frozen-family depths are 313/816 versus 25/79. Complete
+existing word bodies, including reused 巻く, number 159 versus two;
+equal source access does not establish equal depth or comprehension.
+Claude disclosed two parallel file-read batches within its isolated
+reviewer process; the two reviewer processes never overlapped.
+
+Post-review author reads add four complete families / ten senses and two
+older bodies: cumulative unions are 317/826 and 158 bodies. Twenty-five
+complete corrective families / 66 senses and twelve full older bodies
+support adjudication. Four new direct guards give 110 declarations;
+identities, titles, raw source fields, selected senses and kanji remain
+unchanged. Optional expansion and weak omission hypotheses were not
+upgraded into defects. Original-session confirmations are still required
+before these twenty rows close.
 
 ## Batch 78: N2:1542-N2:1561
 
