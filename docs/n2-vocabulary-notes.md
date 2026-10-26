@@ -22,7 +22,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 ## Batch 88 authoring observations
 
 - N2:1742-N2:1761 draft seventeen new articles and reuse 汚す,
-  喜び and 喜ぶ. 汚す receives its sourced N2 field only. The
+  喜び and 喜ぶ. 汚す initially received its sourced N2 field only;
+  review adds a qualified figurative よごす illustration. The
   two joy articles recognize rare 慶び/慶ぶ while retaining their
   primary identities, N3/N4 levels and original teaching. The source
   gloss for 慶ぶ is empty and remains empty.
@@ -55,10 +56,41 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - Useful new reciprocal examples are 毛/羊毛, 領/要領 and
   角/四つ角. The existing 汚/汚す pair is preserved. Absent
   component cards are not invented or linked as if present.
-- Quiz declarations remain provisional direct, symmetric,
-  nontransitive hypotheses for independent review. Author reads and
-  structural checks do not certify naturalness or simulate the app.
-  Independent GPT/Claude review and reconciliation are still pending.
+- Both authentic initial reports are archived. GPT used
+  `gpt-6.1-sol`: 32 starts, 31 successful returns and one 404, maximum
+  one outstanding. Claude used `claude-opus-5.5`: 24 starts,
+  21 successful returns, one 404 and two interrupted starts, maximum
+  two outstanding. Claude was stopped on overlap and supplied its
+  complete initial report in a zero-tool same-session resumption.
+  Synthetic interrupted completions are not successful retrievals.
+- Corrective inspection actually read 41 complete families / 149
+  senses and 36 full word bodies (26 older, ten new assigned).
+  Three new families and four new older bodies produce a distinct
+  cumulative union of 429 / 1,035 / 169. The original pre-card seal
+  remains unchanged; prepared derivatives are not completed reads.
+- Corrections add fourteen direct quiz pairs, including inherited
+  汚す/汚染 and joy overlaps; nine baseline files receive eleven
+  exact approved additions. 喜ぶ/喜び appears among both assigned
+  and baseline declarations and is counted once. No original
+  exclusions, identities, readings, titles or easier levels are lost.
+- Bare 余計 adverbial use, putting-aside 寄せる and three comparison
+  links are made explicit. The uncertain 酔っ払い state collocation
+  is replaced by attested 酔っ払い運転, not declared ungrammatical.
+  ようやく's gradual sense remains explicitly taught and recorded
+  as additional sense 3; that field does not mean omitted or obsolete.
+- Shared observations include 汚す/汚染, 喜ぶ/うれしい,
+  喜び/楽しみ and the optional gradual example. GPT distinctly
+  contributed 余計/いよいよ and secondary 喜ぶ guards; Claude
+  contributed bare-adverb, construction, figurative-use and linking
+  observations plus useful limit hypotheses. Two further direct
+  pairs are author follow-through, not model-unique discoveries.
+- Quiz protections remain direct, symmetric and nontransitive,
+  not unrestricted synonyms. Some older conservative guards remain
+  explicitly borderline, including 次第's separate 次第に mention;
+  次第's own family does not contain a gradual sense. Equal supplied
+  evidence is not equal inspection or measured bias reduction.
+  Original-session confirmations are still pending; neither review
+  closure nor an empirical app quiz run is claimed.
 
 ## Batch 87 authoring observations
 

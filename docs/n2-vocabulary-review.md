@@ -28,10 +28,13 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 88: N2:1742-N2:1761
 
-**Status:** draft; independent review and reconciliation pending.
+**Status:** draft; both initial reports authenticated, corrections
+applied, original-session confirmations pending.
 
 Seventeen physical additions and three baseline reuses cover the
-twenty rows. 汚す receives its sourced N2 field only. 喜び/喜ぶ retain
+twenty rows. 汚す initially received its sourced N2 field only;
+the correction adds a qualified figurative よごす illustration.
+喜び/喜ぶ retain
 their identities, readings, titles and easier N3/N4 levels, with
 recognition of source rare spellings 慶び/慶ぶ. 慶ぶ's raw community
 gloss stays empty.
@@ -47,8 +50,52 @@ The [source packet](n2-vocabulary-batch-sources/batch-88.json)
 preserves raw source rows, compatible selected spelling/reading/sense
 mappings, full families, components and capture hashes. Initial blind
 derivatives omit sourceNote/mappingNote/identityNote and author quiz
-rationale. No model review, native retrieval depth or bias reduction
-is claimed yet.
+rationale.
+
+Frozen initial snapshot:
+`4693f23da69e63b383e068163a606d6e1e0b94f9`.
+[GPT initial](n2-vocabulary-reviews/batch-88-gpt-initial.md) used
+`gpt-6.1-sol`: 32 starts, 32 actual returns, 31 successful and one
+404, maximum one outstanding.
+[Claude initial](n2-vocabulary-reviews/batch-88-claude-initial.md)
+used `claude-opus-5.5`: 24 starts, 22 actual returns, 21 successful,
+one 404 and two interrupted starts, maximum two outstanding. GPT
+exited before Claude started. Claude was stopped on overlapping
+fetch starts, then completed its authentic native initial report in
+a zero-tool same-session resumption without GPT findings or author
+linguistic adjudication. Neither reviewer edited. The reporting
+prompt's "22 completed" wording did not distinguish the 404;
+synthetic interrupted completions are not new or successful returns.
+
+Actual corrective reads cover 41 complete families / 149 senses and
+36 full word bodies, including 26 older articles. The cumulative
+distinct union is 429 families / 1,035 senses / 169 older bodies;
+the original pre-card 426 / 1,026 / 165 seal remains unchanged.
+Fourteen individually supported direct quiz pairs are added.
+Nine baseline files receive eleven approved additions, including
+the assigned 喜ぶ/喜び guard; it is not double-counted.
+All original exclusions and baseline identities/readings/titles/
+kanji/easier sourced levels are retained.
+
+Corrections also teach bare 余計 adverbial use, figurative
+手を汚す and a putting-aside 寄せる construction, link three
+existing comparisons and replace an unverified 酔っ払い collocation
+with attested 酔っ払い運転. ようやく's gradual sense is already taught
+and mapped as additional sense 3; selected/additional bookkeeping is
+not an omitted sense or obsolescence claim. Raw rows and mappings
+remain unchanged.
+
+汚す/汚染 and 喜ぶ/うれしい are shared catches.
+喜び/楽しみ also appears in Claude's limits, so is not a GPT-unique
+discovery; the optional gradual example is shared. GPT distinctly
+supplied 余計/いよいよ and secondary 喜ぶ/祝う・歓迎 guards.
+Claude distinctly supplied bare-adverb, figurative-use, putting-aside,
+linking and 喜び/喜ぶ observations, useful additional guard
+hypotheses and the uncertain collocation. Two directly coupled
+additional guards are author follow-through, not reviewer discoveries.
+These are sample-specific observations, not measured bias reduction
+or evidence of equal actual retrieval depth. Original-session
+confirmation remains pending, so no final acceptance is claimed.
 
 Practical teaching includes kana-primary ようやく/よこす/よそ,
 gist/knack, nonnegative extra provision, construction-specific 寄せる,
