@@ -70,7 +70,30 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   All primary written Han remain in word metadata.
 - Author inspection and structural checks are not independent review,
   native-speaker certification, exhaustive quiz uniqueness or measured
-  model-bias reduction. Initial GPT and Claude reviews remain pending.
+  model-bias reduction. Initial GPT and Claude reviews are authenticated;
+  original-session confirmations of the corrections remain pending.
+- Initial review adds six direct pairs: 放る/止める and /中止,
+  朗らか/愉快, 干す/無視, and ぼろ/穴 and /失敗. The applicable
+  Daijisen headings explicitly recognize ignoring and failure; do not
+  dismiss them merely because the shorter JMdict gloss differs.
+  Corrective rereads cover twenty-one complete families / 77 senses and
+  twelve unchanged older bodies, all already in the actual author unions.
+- For 濠, distinguish source-alias preservation from production guidance:
+  show 堀 in an example and identify it as the unmarked Daijisen heading
+  spelling. Marked variants and priority tags are not measured frequency.
+  Preserve 濠's stable identity and N3 rather than manufacturing a new card.
+  For 彫る, explain material で separately from receiving surface に;
+  the two existing examples should teach, not obscure, that contrast.
+- Optional guard hypotheses need the same actual-label checks as findings.
+  Retain ほどく/開く for undo/unpack and 方面/角度 for aspect/angle.
+  Do not infer prevention/state, named-festival/category or active
+  deprivation/subject's job-loss equivalence from a shared topic.
+- Equal source access did not yield equal initial depth. GPT returned
+  387 complete families / 904 senses and 174 existing bodies including
+  the three assigned reuses; Claude returned 21 / 46 and four including
+  those reuses. GPT supplied the six adopted quiz pairs; Claude supplied
+  spelling and participant-marking clarifications. Compare all report
+  sections before assigning unique credit, without ranking the models.
 
 ## Batch 77 authoring observations
 

@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 78: N2:1542-N2:1561
 
-**Status:** drafted; independent sequential GPT and Claude reviews pending.
+**Status:** author-corrected after authenticated independent initial reviews;
+original-session confirmations remain pending.
 
 Seventeen new articles and three reuses cover twenty source rows.
 Source 堀 maps to stable 濠 with the same entry1522060 and readingほり;
@@ -50,10 +51,54 @@ the 坊ちゃん/ぼっちゃん supplements supply the lexical entry.
 Prepared availability is larger than actual inspection.
 See [batch sources](n2-vocabulary-batch-sources/batch-78.json).
 
-The draft does not yet count as review-closed coverage. Both initial
-reviewers will receive the same frozen committed snapshot, assigned rows,
-rubric and source access, without the author's quiz adjudication rationale
-or the other model's report. Processes run one at a time and exit.
+Initial snapshot: `da41f6ef4025d64580008f97051637a74522025b`.
+The [GPT initial report](n2-vocabulary-reviews/batch-78-gpt-initial.md)
+used `gpt-6.1-sol`; the
+[Claude initial report](n2-vocabulary-reviews/batch-78-claude-initial.md)
+used `claude-opus-5.5`. The same committed snapshot, scope, rubric and
+source access were supplied without author quiz rationale or the other
+report. GPT exited before Claude started; both processes made zero edits.
+Exact prompts, models, twenty TSV associations, format guidance and all
+37 mandatory complete native file returns per reviewer are authenticated.
+
+Six articles receive localized changes: six direct quiz pairs, a
+source-qualified spelling clarification and an explicit particle contrast.
+There are 104 quiz declarations across the twenty articles; no prior
+guard is removed. Titles, readings, identities, levels, written-Han
+metadata, raw rows, selected senses and all four kanji changes remain
+unchanged from the authored snapshot. The source index remains draft.
+Corrective rereads cover twenty-one complete families / 77 senses and
+twelve unchanged older bodies, already in the actual author unions.
+No new authority or frequency evidence is claimed.
+
+| Observation | Adjudication |
+| --- | --- |
+| GPT B78-GPT-01: 放る | Add /止める and /中止 for ordinary stopping or abandoning work, from actual titles, complete families and applicable Daijisen. No POS exemption or transitive clique. |
+| GPT B78-GPT-02: 朗らか | Add /愉快 for the actual cheerful-character meaning, not by inheriting 陽気's other neighbors. |
+| GPT B78-GPT-03: 干す | Add /無視: the applicable public entry explicitly says 無視する. Do not misidentify its numbering as pinned JMdict sense4. |
+| GPT B78-GPT-04: ぼろ | Add /穴 for an actual figurative flaw and /失敗 for the explicitly recognized failure sense. Retain practical rag/hidden-fault teaching; no wholesale error clique. |
+| Claude B78-F1: 濠 | Show 堀 in an existing example and recommend the unmarked spelling in the cited Daijisen heading. Identify 濠/壕 as marked variants and clarify that the source gives both moat and canal. Preserve stable 濠 and N3; no measured-frequency claim. |
+| Claude B78-F2: 彫る | Separate object を, material で and inscription surface に using the existing paired examples. No additional から construction is needed. |
+| Claude Optional: opening/angle guards | Retain ほどく/開く: complete ひらく1202440 includes undo/unpack. Retain 方面/角度: complete 方面1517100 includes aspect/angle and the actual 角度 body includes viewpoint. Neither is inherited from another guard. |
+| Claude Optional: safety/festivals/loss | No new 防犯/安全, 盆/祭/お祭り or 干す/失う pairs. Prevention differs from a safety state, Obon from the generic festival category, and active deprivation from a subject losing a job. Full actual bodies and families were inspected; these are not blanket POS exemptions. |
+| Other optional proposals | Defer 牧場 title changes, additional native-reading history, unsupported example replacements and extra 北/乾 backlinks. Existing place/activity and native-reading explanations are sufficient; no demonstrated defect requires the expansion. |
+| Report qualifications | Claude's links/entry-numbers summary omits some reading-row examples; the actual patch controls. One public Daijisen authority does not mean the pinned JMdict/KANJIDIC datasets were absent. Do not treat preliminary progress as the final disposition of 盆's unmarked household sense. |
+
+Actual initial depths differ. GPT returned 387 complete families / 904
+senses and 174 distinct existing bodies, including the three assigned
+reuses; Claude returned 21 / 46 and four including those reuses.
+Unassigned older-body counts are 171 and one; complete prepared chunks
+returned are 37 and zero. All twenty assigned articles and six kanji
+bodies are common mandatory scope, not additional older-body identities.
+
+GPT uniquely supplied the six adopted direct quiz pairs; Claude uniquely
+supplied the two adopted teaching clarifications. Findings, Optional and
+Limits are compared together: GPT also discusses the opening guard,
+so that supporting observation is not uniquely Claude's. Common access
+is not equal depth, equal comprehension, a model ranking or measured
+bias reduction. Hash/baseline checks are author-executed, not linguistic
+certification or runtime quiz enumeration. The batch does not yet count
+as review-closed coverage.
 
 ## Batch 77: N2:1522-N2:1541
 
