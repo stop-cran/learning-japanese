@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 82: N2:1622-N2:1641
 
-**Status:** drafted; independent GPT and Claude reviews pending.
+**Status:** corrected after authenticated blind initial reviews;
+original-session GPT and Claude confirmations pending.
 
 Eighteen physical additions and baseline reuses 向かう and 蒸す cover
 twenty source rows. Source 向う/むかう is explicitly recognized without
@@ -57,8 +58,47 @@ failed Cambridge requests are not positive evidence.
 Draft mappings, exact source fields, complete principal families,
 inspection limits and pairwise author assertions are in the
 [source packet](n2-vocabulary-batch-sources/batch-82.json).
-No independent correctness, closure or model-contribution claim is
-made before actual reviews and reconciliation.
+The initial reviews of `c2e4e07a` are archived:
+[GPT](n2-vocabulary-reviews/batch-82-gpt-initial.md)
+(`gpt-6.1-sol`) and
+[Claude](n2-vocabulary-reviews/batch-82-claude-initial.md)
+(`claude-opus-5.5`). Actual models, common blind prompt, complete native
+returns and zero edits were authenticated. Both returned all thirty
+mandatory complete files. Native process shutdown/prompt ordering
+proves sequential reviewers; internal tool maxima were one and two.
+Claude accurately disclosed its single overlapping read pair.
+
+Seven direct quiz edges raise authored declarations from 123 to 130.
+Both reviewers identify むく/皮; GPT uniquely identifies three
+実る/fruit edges, 診る/確かめる and the other two むく/skin edges.
+These are actual English-label alternatives, not a Japanese noun/verb
+synonym rule or transitive closure of other safeguards.
+Claude uniquely improves meta-prose, links 美しい and clarifies that
+歯をむく/目をむく expose teeth/open eyes rather than remove them.
+Bounded optional reading/gloss polish and a 向こう link are adopted;
+all titles and both reuses' original teaching remain.
+
+Claude's requested weather-guard removals are withdrawn on exact
+English evidence. Bare close/sticky labels can express warm humid
+weather, while the alleged omitted counterparts have qualified
+whole phrases such as "close something" and "drawing close."
+Retain the six contested direct pairs without claiming Japanese
+weather synonymy, inferring a proximity clique or using harmlessness
+as justification.
+
+Post-review complete author inspection covers 44 families / 102
+senses and nineteen older bodies: cumulative actual unions are
+377 / 957 and 171 bodies. Five actual American Heritage entry reads
+are recorded as live observations, not frozen response captures.
+The initial pre-card receipt remains unchanged.
+Initial complete reviewer depths are GPT 374 / 949 and 167 existing
+word bodies including both assigned reuses, versus Claude 20 / 32
+and four including both reuses. Four additional complete GPT families
+are authenticated against exact returned packet ranges, including
+adjacent ranges covering entire records. Labels are not body reads.
+This sample demonstrates useful complementarity, not measured bias
+reduction or general model superiority. Full finding-by-finding
+dispositions are in the source packet; closure remains pending.
 
 ## Batch 81: N2:1602-N2:1621
 

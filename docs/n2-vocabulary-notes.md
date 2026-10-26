@@ -66,7 +66,41 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   sticky/close weather-label safeguards for 蒸し暑い. They are separate
   from the nineteen frozen Japanese captures, not raw-response-hashed
   captures or Japanese synonym evidence. The Cambridge attempts failed
-  and are not verification. Independent reviews remain pending.
+  and are not verification. Independent reviews were pending at draft.
+- Blind initial reviews of `c2e4e07a` are now authenticated, including
+  actual models, exact prompts, complete native outputs and zero edits.
+  GPT inspected 374 complete families / 949 senses and 167 existing
+  word bodies including both reuses; Claude inspected 20 / 32 and four
+  including both reuses. GPT's four extra complete families were
+  authenticated from exact returned packet ranges, joining adjacent
+  complete returns where necessary, not inferred from its report.
+- Add seven direct English-label guards: 実る with 実, 果物, 果実;
+  診る with 確かめる; むく with 皮, 皮膚, 肌. Both reviewers
+  identify むく/皮; the other six are GPT-unique observations.
+  English fruit and skin are also verbs. This does not make the
+  corresponding Japanese nouns verb synonyms.
+- Claude uniquely improves learner-facing prose, 美しい navigation
+  and the object explanation in むく: exposed teeth/opened eyes are
+  not removed objects. Adopt bounded reading/gloss polish and a
+  向こう link only within 向かう's new alias paragraph. Preserve
+  every title, both reuses' old teaching and all prior safeguards.
+- Do not adopt Claude's proposed removal of the close/sticky weather
+  guards. Full actual titles and American Heritage's weather senses
+  support those English alternatives, not Japanese synonymy.
+  Alleged missing peers instead display qualified phrases such as
+  "close something," "close up" or "drawing close." Neither a
+  closing/proximity clique nor "broad but harmless" justifies a pair.
+- Post-review inspection covers 44 complete families / 102 senses
+  and nineteen unchanged older bodies. Actual author unions are now
+  377 families / 957 senses and 171 older bodies; the pre-card receipt
+  stays historical. Five actual live American Heritage entries
+  (fruit, skin, check, close, sticky) are observations, not frozen
+  captures. Keep incidental homographs separate.
+- Reviewer processes ran sequentially; native internal maxima were
+  one GPT call and two Claude calls. Claude honestly reported its
+  single parallel pair. Complementary findings are useful for this
+  sample, not measured bias reduction or a general ranking.
+  Original-session confirmations remain pending.
 
 ## Batch 81 authoring observations
 
