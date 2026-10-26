@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-80 review-closed.** The target is all 1,812 source rows,
+**Batches 01-81 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,600 rows are review-closed; twenty are drafted and 192 remain pending.
+The first 1,620 rows are review-closed; none are drafted and 192 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 81: N2:1602-N2:1621
 
-**Status:** draft; both blind initial reviews authenticated, corrections
-applied, original-session confirmations pending.
+**Status:** closed after authenticated independent initial reviews and
+full confirmations by both original sessions.
 
 Eighteen new articles and two baseline N4 reuses cover twenty source
 rows. Source 稀 maps to まれ and 見掛け to 見かけ, with both
@@ -86,7 +86,32 @@ assigned reuses are 193 and three. Labels are not full-body reads.
 These complementary sample findings are useful, not measured bias
 reduction or a general model ranking. See the full dispositions in
 [batch sources](n2-vocabulary-batch-sources/batch-81.json).
-Both original-session confirmations remain pending; no closure yet.
+Both original-session confirmations of corrected `fbbe9bf8` are
+authenticated and archived:
+[GPT](n2-vocabulary-reviews/batch-81-gpt-confirmation.md) and
+[Claude](n2-vocabulary-reviews/batch-81-claude-confirmation.md).
+Each returned all fifty mandatory complete files, all twenty rows
+CLEAN in all three facets, exact TSV scope and zero edits.
+Each freshly read 41 complete pinned families / 102 senses, all
+thirteen required older bodies and the full 順 and 付 cards.
+Cumulative complete pinned-family depths are GPT 350 / 852 and
+Claude 41 / 102; existing word bodies including both assigned
+reuses are 193 and sixteen.
+
+Both reviewers correct an overstatement in the common confirmation
+prompt: the older 説明 body teaches explanation/description, not
+explicit caption/legend. Those ordinary secondary meanings are in
+the complete pinned entry, and both independently retain the
+見出し/説明 guard. Final adjudication explicitly supersedes the
+evidence description without rewriting historical receipts or reports.
+Claude withdraws its datedness remedy and improvement-guard removal
+advice. No actionable defect or consequential unresolved claim remains.
+
+The confirmation processes again ran sequentially. Native maxima are
+one outstanding call for GPT and two for Claude; Claude discloses its
+two overlapping read pairs. Both stages' actual scheduling is retained
+separately from report claims. Closure changes status/documentation
+only, not the accepted teaching or manifest.
 
 ## Batch 80: N2:1582-N2:1601
 

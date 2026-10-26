@@ -68,7 +68,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   actual titles, complete entries and inspected bodies. Do not create
   category cliques, infer pairs through a third word, or automatically
   exempt differing parts of speech or transitivity. CW004/CW022 and
-  false-friend CW095 were considered; draft judgments await review.
+  false-friend CW095 were considered; later review dispositions
+  explicitly supersede the initial draft judgments.
 - Initial GPT (`gpt-6.1-sol`) and Claude (`claude-opus-5.5`) reviews
   are independently authenticated against the same blind snapshot.
   Their processes ran sequentially, but native events show maximum
@@ -104,8 +105,23 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   families / 829 senses and 193 existing word bodies including both
   reuses; Claude 29 / 53 and three. Complementary findings are useful
   sample evidence, not proof of reduced model bias or general rankings.
-  Both original-session confirmations remain pending; author checks
-  and evidence access are not independent linguistic certification.
+  Both original-session confirmations now return all twenty rows CLEAN
+  and all fifty mandatory complete files without edits. Each freshly
+  reads 41 pinned families / 102 senses and thirteen older bodies.
+  Cumulative pinned depths are 350 / 852 versus 41 / 102, and existing
+  word-body counts including both reuses are 193 versus sixteen.
+- Both confirmations identify a shared evidence-description issue:
+  the unchanged 説明 body teaches explanation/description, while the
+  explicit caption/legend senses come from its complete pinned entry.
+  Keep the supported 見出し/説明 guard, correct that characterization
+  in final adjudication and preserve frozen prompts/reports unchanged.
+- Confirmation reviewer processes again run sequentially; native
+  internal maxima are one GPT call and two Claude calls. Claude
+  discloses its two overlapping read pairs and corrects the initial
+  serial-call claim. Do not equate access, internal scheduling,
+  process ordering, comprehension or linguistic certification.
+  No actionable defect or consequential unresolved claim remains;
+  closure changes no accepted teaching or manifest.
 
 ## Batch 80 authoring observations
 
