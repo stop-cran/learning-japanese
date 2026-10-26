@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 73: N2:1442-N2:1461
 
-**Status:** drafted; independent GPT and Claude reviews pending.
+**Status:** drafted; authenticated independent initial reviews
+reconciled, with original-session confirmations pending.
 
 Nineteen new articles: ピンク, 便箋, 瓶詰, ファスナー, 風船, 不運,
 深まる, 不規則, 普及, 付近, 拭く, 副詞, 複写, 複数, 含める,
@@ -62,9 +63,45 @@ without header changes: 瓶/瓶詰, 詰/瓶詰, 則/不規則, 普/普及,
 副/副詞, 詞/副詞, 複/複写, 複/複数 and 含/含める.
 Missing component cards remain unlinked, not invented.
 
-Quiz pairs and examples await independent assessment.
-No reviewer model contribution, all-CLEAN verdict, or measured
-bias-reduction claim is made at this draft stage.
+Initial reports: [GPT-6.1 Sol](n2-vocabulary-reviews/batch-73-gpt-initial.md)
+and [Claude Opus 5.5](n2-vocabulary-reviews/batch-73-claude-initial.md).
+They run sequentially, read-only and independently on
+`4abf8105090403e90d2a950b90a733cd538d1424`.
+Exact native prompts/models/final messages, 37 required complete
+returns each, TSV header and only assigned rows, the required
+content-format range and zero edits are authenticated.
+
+| Initial observation | Author reconciliation, pending confirmation |
+| --- | --- |
+| Shared N273-01 / B73-01 | Remove false long-vowel instruction from びんづめ; voiced-ending guidance remains. |
+| GPT N273-02 | Add 深まる/進む, 強化 and 加わる from actual intensifying/deepening senses and older teaching. |
+| GPT N273-03 | Add each 膨 verb against each of 広がる/広げる/広める: six separate extent/expansion pairs, not a propagated clique. |
+| GPT N273-04 / shared B73-02 | Add 普及/拡大, 展開 and 流行る; the last is shared, not two discoveries. |
+| Claude B73-03 | Add 不規則/でたらめ from actual unsystematic/haphazard meanings. |
+| Claude B73-04 | Add 不運/かわいそう: unfortunate is an actual older title and taught sense, not a claim of unrestricted synonymy. |
+| Claude optional 拭く/乾燥 | Adopt the direct drying guard after inspecting complete 1357240/1209920 and 乾燥's body. |
+| Other Claude options | Defer nonblocking recognition/register expansion and unverified set-phrase frequency. 普及させる is already explained. |
+
+Eight assigned cards change; fifteen direct declarations are added,
+for 89 across nineteen new articles. No title, primary reading,
+identity, level, type, kanji metadata, mapping, older exclusion,
+asset or scene changes. All nine reciprocal pairs remain.
+Twenty-one complete corrective families / 49 senses add four families /
+eight senses; twelve complete older bodies add four identities.
+Author union: 238 families / 523 senses and 108 older bodies.
+The extracted すさむ family is inspected but does not establish
+a meaning of すすむ. No new public authority is claimed.
+
+The underlying shared observations are one pronunciation defect
+and one direct pair. GPT-only useful findings supply eleven direct
+pairs; Claude-only findings supply two, plus its adopted optional
+drying pair. Findings, options, limits and row notes are compared,
+not just severity labels. Actual complete older-body unions are
+GPT 106 / Claude 8: GPT returns all nine family and eleven older-body
+chunks plus the supplement; Claude returns no full chunks.
+Complementarity in this sample is useful but does not establish
+equal comprehension, a model ranking or measured bias reduction.
+No all-CLEAN confirmation or closure is claimed yet.
 
 ## Batch 72: N2:1422-N2:1441
 

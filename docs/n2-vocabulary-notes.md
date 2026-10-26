@@ -23,8 +23,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 - N2:1442-N2:1461 draft nineteen new articles and reuse 増える
   unchanged for source 殖える, preserving its N4 level, identity,
-  reading, title, body and metadata. Review has not yet started;
-  author checks are not independent acceptance.
+  reading, title, body and metadata. Independent initial reviews
+  are complete; corrections await both original-session confirmations.
 - Preserve blank source spellings for ピンク and ファスナー and
   the source headword 瓶詰. Its alternative 瓶詰め is explicit;
   ビン plus voiced native づめ is mixed, not an all-on compound.
@@ -60,9 +60,34 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - Add nine primary reciprocal pairs across 瓶/詰/則/普/副/詞/複/含,
   preserving every kanji header. Missing 箋/殖/及/拭/膨/潔 remain
   metadata/plain text, not fabricated cards or successful body reads.
-- Quiz declarations are direct, reviewable author hypotheses from
-  actual titles and inspected senses, not synonym cliques.
-  No agent comparison or bias-reduction conclusion is yet available.
+- Both reviewers independently catch the false "long vowel" in
+  びんづめ and the missing 普及/流行る pair. Remove the false
+  pronunciation instruction and add fifteen direct guard declarations:
+  GPT-only eleven, Claude-only two, one shared, and one adopted
+  Claude-only optional 拭く/乾燥 observation. The latter has explicit
+  "to dry" in 1357240 and actual drying in complete 1209920.
+- Compare expansion, intensification, unsystematicity and sympathy
+  pairs against actual full titles and ordinary senses, not a
+  synonym clique or a POS exemption. かわいそう's unfortunate
+  title and full teaching matter even though the pinned glosses
+  emphasize pity; the words are not unrestricted Japanese synonyms.
+- Corrective inspection covers 21 full families / 49 senses,
+  including four additional families / eight senses, and twelve
+  complete older bodies. Current author union is 238 families /
+  523 senses and 108 older identities. The separate すさむ reading
+  in the extracted 進む family is not evidence for すすむ.
+- Both initial native prompts, models, complete final messages,
+  37 required full returns per reviewer, bounded TSV rows, required
+  content-format range and zero edits are authenticated.
+  GPT additionally returns all twenty comparison chunks and
+  106 complete older bodies; Claude returns no such chunks and
+  eight direct complete older bodies. Common access is not equal
+  depth or comprehension. Useful complementary findings in this
+  sample do not measure bias reduction or rank models.
+- Other optional recognition/register expansion stays deferred.
+  普及 already teaches 普及させる. No new mandatory claim follows
+  from an unverified usage tendency. Initial reports remain unchanged;
+  no all-CLEAN confirmation or review closure is claimed yet.
 
 ## Batch 72 authoring observations
 
