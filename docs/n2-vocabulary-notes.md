@@ -65,6 +65,30 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   complaints, low speech and simmering. Existing exclusions on a
   neighboring word do not protect a new pair. These declarations
   remain author hypotheses, not independent reviewer findings.
+- Initial independent reviews share two useful direct pairs:
+  塞ぐ/覆う and 部品/アクセサリー. GPT additionally identifies
+  five useful pairs involving fullness, covering, dejection and
+  bubbling. Adopt Claude's optional ぶつぶつ/ささやく and
+  /でこぼこ suggestions after full-body and family inspection,
+  not by propagating speech/texture exclusions. Nine new direct
+  declarations bring the nineteen new cards to 123 declarations.
+- Claude leaves 地図の符号 unresolved. Replace that scene with
+  モールス符号, explicitly attested in the applicable frozen
+  Daijisen heading, rather than asserting the original was wrong.
+  Keep 部品's source-backed accessories gloss but explain its
+  equipment/component scope, not jewelry in general. Specify that
+  misleading "nail on" belongs to the raw list, not JMdict 2742080.
+- Corrective reads cover fifteen complete families / 44 senses and
+  nine full older bodies. Actual family union becomes 32 / 76;
+  prepared union becomes 423 / 1,051, still not all inspected.
+  The unrelated ぷくぷく character family and separate きせる
+  family are inspected but not evidence for the assigned lexical
+  senses. Seven new older identities bring author coverage to 122.
+  Keep historical preparation and pre-card receipts unchanged.
+- Compare both complete reports, including optional suggestions,
+  limits and per-row notes. Complementary observations are useful
+  on this shared snapshot, not measured bias reduction or a model
+  ranking. Original-session confirmations remain pending.
 
 ## Batch 73 authoring observations
 

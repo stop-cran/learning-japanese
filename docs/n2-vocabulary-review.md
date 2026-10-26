@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 74: N2:1462-N2:1481
 
-**Status:** drafted; independent sequential GPT and Claude review,
-reconciliation and confirmation are not yet complete.
+**Status:** independently reviewed and author-corrected; original
+GPT and Claude session confirmations are not yet complete.
 
 Nineteen new articles: 符号, 夫妻, 塞がる, 塞ぐ, ふざける,
 無沙汰, 部首, 襖, 附属, 蓋, 不通, ぶつかる, ぶつける,
@@ -59,8 +59,48 @@ union 416 / 1,033. The pre-card completion receipt is unchanged.
 
 Add reciprocal 符/符号 and reused 武/武士 links, without changing
 either kanji header. No missing kanji cards or fabricated links
-are introduced. Quiz guards are pairwise author hypotheses;
-independent reviewers have not yet adjudicated them.
+are introduced. Preserve every initial report and distinguish
+accepted direct guard hypotheses from optional suggestions.
+
+Initial reports: [GPT-6.1 Sol](n2-vocabulary-reviews/batch-74-gpt-initial.md)
+and [Claude Opus 5.5](n2-vocabulary-reviews/batch-74-claude-initial.md).
+They run sequentially, read-only and independently on
+`66364c849c41507a674454aadb1b6cb018595541`.
+Exact native prompts/models/final messages, 32 required complete
+returns each, TSV header and only assigned rows, the required
+content-format range and zero edits are authenticated.
+
+| Initial observation | Author reconciliation; confirmation pending |
+| --- | --- |
+| GPT G01 | Add 塞がる/一杯 from the occupied/full sense, the actual hands-full example and applicable modern Daijisen heading. |
+| GPT G02 / shared B74-01 | Add 塞ぐ/覆う, 被せる and しょんぼり from actual covering and low-mood senses; 覆う is shared, not two discoveries. |
+| GPT G03 | Add ぶつぶつ/ぶくぶく and ぷくぷく from actual simmering/bubbling recognition and full older bodies. |
+| GPT G04 / shared B74-02 | Add 部品/アクセサリー. Retain the pinned accessories gloss but explicitly constrain it to equipment/components, not jewelry in general. |
+| Claude 符号 limit / option | Replace unresolved 地図の符号 with dictionary-attested モールス符号; no unsupported claim that the original collocation is wrong. |
+| Claude optional speech/texture guards | Adopt ぶつぶつ/ささやく and /でこぼこ after full older bodies and complete pinned families; no POS exemption or propagated clique. |
+| Claude other options | Clarify kana wording and distinguish raw-list "nail on" from JMdict; defer semicolon styling and optional snow-compound/register expansion. No unsupported frequency/register claim added. |
+
+The six-card correction adds nine direct declarations, for 123
+on nineteen new articles, and changes no title, primary identity,
+level, reading, type, kanji metadata or selected/additional sense.
+武士, both kanji bodies and both reciprocal pairs remain unchanged.
+Fifteen complete corrective families / 44 senses and nine older
+bodies are actually inspected: cumulative actual family union
+32 / 76, prepared family union 423 / 1,051 and 122 older bodies.
+An unrelated character-name family and separate きせる are not
+used as evidence for ぷくぷく or かぶせる.
+
+Model complementarity is useful on this sample: two shared direct
+pairs, five GPT-only accepted pairs, plus Claude's two adopted
+optional pairs, collocation-risk reduction and equipment-gloss
+clarification. Compare equivalent observations throughout both
+reports, not only findings. Actual reads differ: GPT has three
+complete original family and fifteen older-body renderings,
+128 unassigned older bodies / 148 total word bodies; Claude
+has no complete original renderings and eighteen comparison
+bodies / 38 total word bodies. Both read the small supplement.
+Equal available evidence is not equal comprehension, and this
+does not measure bias reduction, native certification or ranking.
 
 Coverage is **1,460 closed / 20 draft / 332 pending /
 0 unresolved**, mapped to **1,466 distinct articles:
