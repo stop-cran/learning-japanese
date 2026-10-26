@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-83 review-closed.** The target is all 1,812 source rows,
+**Batches 01-84 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,660 rows are review-closed; 20 are drafted and 132 remain pending.
+The first 1,680 rows are review-closed; none are drafted and 132 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 84: N2:1662-N2:1681
 
-**Status:** drafted; authenticated blind initial reviews reconciled,
-corrections awaiting confirmation by both original sessions.
+**Status:** closed after authenticated blind initial reviews,
+evidence-based corrections and acceptance by both original sessions.
 
 Twenty new articles cover twenty rows. Source 面倒臭い maps to
 面倒くさい with explicit spelling and reading recognition. 潜る
@@ -101,8 +101,40 @@ notes: the adopted direct pairs are distinct contributions, not duplicates
 merely because two concerns affect the same card. Claude adds useful prose
 and optional improvements; several literal suggestions are declined or
 narrowed on evidence. Different actual evidence depths preclude a general
-model ranking or measured bias-reduction claim. No final acceptance or
-review closure is claimed yet.
+model ranking or measured bias-reduction claim.
+
+Both original sessions accept every row CLEAN in correctness, scoped
+coverage and comprehensibility at corrected snapshot
+`1bc794829f221a5d4858a8f34899dc5c5bb408cc`:
+[GPT confirmation](n2-vocabulary-reviews/batch-84-gpt-confirmation.md) and
+[Claude confirmation](n2-vocabulary-reviews/batch-84-claude-confirmation.md).
+All original findings are resolved; Claude withdraws its unsupported
+"usually" interview-subject recommendation. Its F01 expansion remains
+useful without recasting the original state/に teaching as necessarily
+defective. No actionable defect or consequential linguistic claim remains.
+
+Both confirmations freshly returned all twenty complete current word
+bodies, three complete kanji bodies, 38 required complete files and two
+bounded TSV/content-format returns. Principal/corrective family unions
+are 35 / 81 senses, with thirteen fresh older bodies each. Cumulative
+complete-return unions across stages are 355 families / 786 senses /
+58 older bodies for GPT and 35 / 81 / 14 for Claude. These are exact
+access counts, not comprehension or exhaustive coverage.
+
+Confirmation processes exited normally and sequentially, with runtime
+maximum one outstanding call and no repeated request or edit:
+41 GPT / 42 Claude calls. Claude's reported 40 calls and 22 corrective
+families are inaccurate; actual corrective families number 21. Its
+applicant を面接する limit was moot in the draft too, since that
+construction was never taught. Preserve the reports unchanged and
+correct accounting in this reconciliation. Its remaining scattering
+hypothesis is optional; an Edo-period quotation alone does not justify
+an older/literary restriction on dependent もたれる.
+
+Author-executed hash, manifest and preservation checks are distinguished
+from reviewer file inspections. The source packet records the accepted
+snapshot, exact native evidence and limits; there are no post-acceptance
+card or manifest edits.
 
 ## Batch 83: N2:1642-N2:1661
 

@@ -77,8 +77,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - The confusable inventory has no matching named row for these
   forms. No native-speaker certification, empirical quiz draws,
   exhaustive correctness, or measured model-bias reduction is claimed.
-  Blind initial GPT and Claude reviews are now authenticated; original
-  sessions have not yet confirmed the corrections.
+  Blind initial GPT and Claude reviews are authenticated; both original
+  sessions now confirm all twenty corrected cards in all three facets.
 - Corrective complete reads add only 迷惑/1532800 and its two senses
   to the actual pre-card sets: cumulative 355 families / 786 senses
   and 195 older bodies, not sums of repeated reads. Keep the earlier
@@ -101,8 +101,19 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   the twenty assigned cards. Access is not comprehension. Processes
   ran sequentially, but Claude's native maximum was twenty outstanding
   calls versus GPT's one, contradicting Claude's serial-work claim.
-  Preserve its report unchanged and enforce a one-outstanding-call
-  bound for confirmation. Do not describe the initial internals as serial.
+  Preserve its report unchanged. Confirmation enforced a one-outstanding-call
+  bound: 41 GPT / 42 Claude calls, with both processes exiting sequentially.
+  Do not describe the initial internals as serial.
+- Confirmation freshly returned 35 distinct principal/comparison families /
+  81 senses and thirteen older bodies for each reviewer, not the whole
+  initially prepared corpus. Claude reports 22 corrective families and
+  40 calls; native evidence establishes 21 and 42. Its applicant
+  を面接する limit was moot before the correction too. Preserve these
+  report inaccuracies rather than silently editing the archives.
+- Do not label dependent もたれる older/literary merely because the
+  public dictionary cites an Edo-period quotation. That optional
+  suggestion needs current-register evidence; the existing card claims
+  neither commonness nor a contemporary frequency.
 
 ## Batch 83 authoring observations
 
