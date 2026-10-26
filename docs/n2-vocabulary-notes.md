@@ -19,6 +19,69 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 89 authoring observations
+
+- N2:1762-N2:1781 draft twenty new physical articles, from 来日
+  through 臨時. No old article is reused or renamed. Every
+  vocabulary level comes from the pinned source, not a component's
+  kanji level; all written primary kanji remain in metadata.
+- The original pre-card completed-read seal records 427 complete
+  families / 1,043 senses, 158 complete older bodies, 25 component
+  records, six complete related kanji and 241 navigation labels.
+  All eighteen family and twenty older-body chunks were read.
+  Twenty principal families contain 35 senses. Labels are navigation,
+  not full-body inspection.
+- Four further older bodies, 長短/除く/削る/飛ばす, were read before
+  the first draft. Their five complete dictionary families / 21 senses
+  were captured and read after initial drafting and before the
+  authored snapshot. The final union is 432 families / 1,064 senses /
+  162 older bodies; the original pre-card seal is not rewritten.
+  The extra 削る/はつる family is not applied to the old けずる card.
+- Twenty principal and three supplemental positive public wrappers
+  were actually read. These represent one dictionary authority, not
+  twenty-three independent sources of JLPT membership.
+  Unrelated homographs and character entries inside a wrapper are
+  not automatically applicable word evidence.
+- 来日/らいにち is not 来日/らいじつ. 落第 covers examination
+  and advancement failure, not every school withdrawal.
+  欄 selects printed sections and form fields without denying
+  the original handrail sense or ordinary printing uses of 列/段.
+- ランチ retains the supplied lunch/lunch-set anchor and explicitly
+  separates the launch-boat identity as additional recognition.
+  Product launch and ranch are not imported into the lunch family.
+  ランニング teaches both the activity and the abbreviated singlet;
+  ordinary undershirt senses of シャツ/肌着 are considered.
+- 乱暴 selects violence/rowdiness and rough/reckless handling without
+  inventing rarity for the omitted sexual-assault sense. 理科
+  includes broader scientific fields/faculties, not school science only.
+  利害 distinguishes interests at stake from curiosity, and considers
+  actual 長短/損得/利益 overlap without a clique of each isolated half.
+- リズム distinguishes pattern from tempo and considers 調子's
+  ordinary rhythm sense. リットル keeps kana-primary metadata,
+  French-loan provenance and a sourced volume definition. リボン
+  includes printing use without equating every cord or ornament.
+- 略す is on-derived but a modern transitive godan verb:
+  略します/略した/略さない. Separate 略する is not its conjugation.
+  両側 follows the repository's on-first mixed-reading kango rule:
+  リョウ + native がわ; compatible りょうそく is also taught.
+- 流域 distinguishes catchment and along-river area from landform
+  basin or river channel. 寮 selects modern shared accommodation,
+  not unrelated 量 or every hotel. 漁師 distinguishes occupation
+  from industry and the 猟師 homophone.
+- 領事 separates the consul from the consulate. 領収 concerns
+  receiving payment, not a voucher; ordinary receiving-label overlap
+  is still assessed. 臨時 explicitly teaches の attachment and
+  temporary/special/extra arrangements rather than a な-adjective.
+- Seven new reciprocal pairs pass through six N2 kanji:
+  乱/乱暴, 暴/乱暴, 略/略す, 域/流域, 漁/漁師,
+  領/領事 and 領/領収. Existing kanji metadata and unrelated
+  examples are preserved. Missing component cards are not invented.
+- Quiz declarations are provisional author curation, not independent
+  certification. Complete applicable senses and older bodies inform
+  direct pairs; neither shared themes, POS differences nor a transitive
+  synonym chain establish a pair. Initial GPT and Claude reviews,
+  reconciliation and sample-specific complementarity notes are pending.
+
 ## Batch 88 authoring observations
 
 - N2:1742-N2:1761 draft seventeen new articles and reuse 汚す,

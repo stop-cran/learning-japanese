@@ -5,7 +5,7 @@
 **Batches 01-88 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,760 rows are review-closed; none are drafted and 52 remain pending.
+The first 1,760 rows are review-closed; twenty are drafted and 32 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,43 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 89: N2:1762-N2:1781
+
+**Status:** draft; independent initial GPT and Claude reviews and
+evidence-based reconciliation are pending. Draft coverage is not
+review-closed coverage.
+
+Twenty physical additions cover 来日 through 臨時. All original
+baseline word identities, readings, titles, written-kanji arrays,
+easier sourced levels and exclusions are preserved.
+
+The original pre-card completed author inspection comprises 427
+complete families / 1,043 senses, 158 full older articles, 25 component
+records, six complete related kanji and 23 positive public wrappers
+from one dictionary authority. The 241 labels are navigation.
+Four additional exact older bodies were read before drafting;
+their five complete families / 21 senses were read after the first
+draft and before the authored snapshot. The distinct final scope is
+432 families / 1,064 senses / 162 older bodies. Original preparation
+and completed-read receipts remain unchanged.
+
+The [source packet](n2-vocabulary-batch-sources/batch-89.json)
+retains all raw source fields, selected compatible identities/senses,
+complete principal and comparison families, component records and
+capture hashes. ランチ additionally recognizes the distinct launch
+boat identity without assigning every identity an independent N2 level.
+領収 corrects the ambiguous voucher gloss to the receiving-money action.
+
+Seven new reciprocal N2 pairs are 乱/乱暴, 暴/乱暴, 略/略す,
+域/流域, 漁/漁師, 領/領事 and 領/領収. The six kanji edits
+preserve original metadata and unrelated teaching.
+
+Initial blind derivatives omit author source/mapping/identity prose
+and quiz rationale. Reviewers will receive the same frozen committed
+snapshot, rubric, raw source records and source access, sequentially.
+No actual reviewer inspection or model-complementarity result is
+claimed yet.
 
 ## Batch 88: N2:1742-N2:1761
 
