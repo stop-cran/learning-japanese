@@ -93,7 +93,26 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   no GPT findings or author adjudication. GPT exited before Claude
   started. Equal supplied evidence is not equal additional inspection
   or measured bias reduction; this is sample-specific complementarity.
-  Both original-session post-fix confirmations are still pending.
+  Both original-session post-fix confirmations accept the corrected cards.
+- Both entire confirmations at `2b2b957` are native-authenticated,
+  have twenty six-column verdict rows with all three facets CLEAN, and
+  run with zero observed tools and no edits. GPT exits before Claude
+  starts. Required 論ずる clarity is resolved; broader conjugation
+  expansion stays optional. No accepted teaching or manifest changes
+  occur during metadata-only closure.
+- Claude leaves a low-priority レジャー/休み hypothesis unestablished.
+  Author rereads of both full bodies and complete families do not
+  establish direct answer equivalence: leisure/recreational pursuits
+  differ from interruption/rest or a day off normal activity. A day off
+  can provide leisure without equating the two meanings. This is author
+  adjudication, not reviewer withdrawal or new distinct inspection.
+  Optional 上級/目安 guards and extra examples/paradigms are deferred;
+  other curated pairs are not transitive evidence.
+- The supplied comparison labels preserve 分かる's at-draft empty
+  exclusion list; the exact correction diff, complete current body and
+  explicit baseline exception establish the accepted current list.
+  Inline confirmation is not new native retrieval, and structural
+  checks do not certify runtime quizzes or native-speaker naturalness.
 
 ## Batch 89 authoring observations
 

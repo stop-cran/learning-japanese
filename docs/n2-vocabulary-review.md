@@ -2,11 +2,10 @@
 
 ## Status
 
-**Batches 01-89 review-closed.** The target is all 1,812 source rows,
+**Batches 01-90 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,780 rows are review-closed; batch 90 has 20 drafted rows,
-and 12 remain pending.
+The first 1,800 rows are review-closed; 12 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -29,8 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 90: N2:1782-N2:1801
 
-**Status:** drafted; independent blind GPT and Claude reports authenticated,
-corrections applied; both original-session confirmations pending.
+**Status:** closed after independent initial reviews, evidence-based
+corrections and acceptance by the original GPT and Claude sessions.
 
 Nineteen physical additions cover 留守番 through 和英. Source 分る
 reuses the existing N5 分かる with a narrow alternate-spelling note.
@@ -99,8 +98,32 @@ dispute safeguards; Claude uniquely prompts the teaching qualifications
 and optional clarity improvements. Equal initial scope/evidence does not
 establish equal actual inspection or measured bias reduction. Author
 dispositions are not reviewer withdrawals; deliberately nonblind
-original-session confirmation remains pending. No runtime quiz,
+original-session confirmation accepts the corrected cards. No runtime quiz,
 native-speaker, exhaustive-corpus or frequency certification is claimed.
+
+[GPT confirmation](n2-vocabulary-reviews/batch-90-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-90-claude-confirmation.md)
+both accept `2b2b957d2ce4170884b74f23d0242482e0a8c324`.
+Both entire reports match native assistant messages in exact prompt-turn
+bounds, with twenty six-column rows and all sixty facet verdicts CLEAN.
+Both use zero observed tools and no edits; GPT exits before Claude starts.
+Both resolve required 論ずる clarity while treating broader paradigm
+expansion as optional. No teaching or manifest changes follow acceptance.
+
+Claude retains a low-priority, unestablished レジャー/休み hypothesis.
+Author rereads of both complete bodies/families establish leisure/
+recreational pursuits versus interruption/rest or a day off normal
+activity, not direct ordinary answer equivalence. A day off may provide
+leisure without being the same lexical answer. This is explicit author
+adjudication, not reviewer withdrawal; no new distinct inspection count.
+Optional 上級/目安 safeguards, additional conjugations and extra
+examples are deferred without removing previous curation.
+
+The comparison-label snapshot retains 分かる's former empty exclusion
+list. The exact diff, complete current body and public additive exception
+establish the accepted `[理解, 知る]` list; labels are not a second
+current-content assertion. Supplied inline inspection and author-run
+structural checks are not independent native retrieval or runtime proof.
 
 ## Batch 89: N2:1762-N2:1781
 
