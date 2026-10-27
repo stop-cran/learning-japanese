@@ -181,8 +181,8 @@ publication readiness. Normal runtime/app checks remain exact-approval gated.
 B implements finite app limits of **48 MiB downloaded ZIP / 64 MiB retained** and content
 publishing guards of **42 MiB compressed / 56 MiB retained / 20 MiB combined task media**.
 Inflation stays at 80 MiB publishing / 100 MiB app. The
-[N2 archive packaging adjustment](../README.md#app-archive-packaging) excludes contributor-only folders
-and raises the publishing entry guard to 7,980; the app's 8,000-entry hard limit is unchanged.
+[archive packaging and N1 capacity adjustment](../README.md#app-archive-packaging) excludes contributor-only
+folders and sets entry limits to 18,000 publishing / 20,000 app, including directories and skipped files.
 Per-file audio/image limits, codec/path checks and hash/approval bindings are unchanged.
 
 The last baseline public archive was 28,426,795 bytes, with 4,841,326 bytes of task media.
@@ -192,7 +192,7 @@ package/document overhead. Check the complete candidate tree and exact immutable
 archive; retain headroom and stop for reviewed adjustment rather than reducing quality
 or raising caps automatically.
 
-An enlarged archive may exceed older apps' **30-MiB download cap**. Skipping schema 2 does
+An enlarged archive may exceed older apps' **8,000-entry or 30-MiB download cap**. Skipping schema 2 does
 not make such an archive downloadable. Old clients retain their last-known-good offline
 collection and report an update failure; continuing sync requires the new release APK.
 Deliver the upgrade before a runtime publication exceeds that cap. A copied APK is not

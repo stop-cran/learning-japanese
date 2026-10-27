@@ -464,9 +464,9 @@ learner exposure/cooldown/accessibility and the exact captured selection.
 The following records the historical contract-1 adjustment. [N4 B](listening-n4.md#media-budgets-and-publication-gates)
 supersedes its capacities: app download/retained caps 48/64 MiB; publishing compressed/retained/
 combined-task-media guards 42/56/20 MiB. Inflation and per-file limits are unchanged.
-The later [N2 archive packaging adjustment](../README.md#app-archive-packaging) excludes contributor-only
-folders and raises only the publishing entry guard to 7,980, below the unchanged 8,000-entry app cap.
-An older 30-MiB app cannot fetch an oversized new archive and keeps its last accepted offline
+The later [archive packaging and N1 capacity adjustment](../README.md#app-archive-packaging) excludes
+contributor-only folders and sets entry limits to 18,000 publishing / 20,000 app. Byte guards are unchanged.
+An older 8,000-entry or 30-MiB app cannot fetch an oversized new archive and keeps its last accepted offline
 content; deliver the upgraded APK before that publication. Capacity does not authorize spending.
 
 The pulled `73bde0f` tree's local ZIP is 22,665,639 bytes, already close to the current 24-MiB

@@ -141,7 +141,8 @@ class ListeningTests(unittest.TestCase):
                         archive_names(root)
 
     def test_entry_budget_is_inclusive_and_stays_below_android_hard_limit(self):
-        self.assertLess(budget_tool.MAX_ENTRIES, 8000)
+        self.assertEqual(18_000, budget_tool.MAX_ENTRIES)
+        self.assertLess(budget_tool.MAX_ENTRIES, 20_000)
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             (root / "manifest.json").write_bytes(b"{}")
@@ -150,6 +151,17 @@ class ListeningTests(unittest.TestCase):
             with patch.object(budget_tool, "MAX_ENTRIES", 1):
                 with self.assertRaisesRegex(ValueError, "entry"):
                     check(root, ["manifest.json"])
+
+    def test_default_entry_budget_accepts_18000_and_rejects_18001(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            names = [f"ignored-{index}.txt" for index in range(17_999)]
+            for name in names:
+                (root / name).touch()
+            self.assertEqual(18_000, check(root, names)["entries"])
+            (root / "extra.txt").touch()
+            with self.assertRaisesRegex(ValueError, "entry"):
+                check(root, names + ["extra.txt"])
 
 
 if __name__ == "__main__":

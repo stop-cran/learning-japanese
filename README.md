@@ -186,10 +186,23 @@ Use a clone rather than a source ZIP when contributing or inspecting the complet
 
 `python tools/check_content_budget.py` checks exportable working-tree files, including untracked
 runtime additions and any non-runtime files that still ship, and rejects exclusions of the manifest
-or any manifested runtime file. The N2 integration raises only the
-publishing entry guard from 7,000 to **7,980**, below Android's unchanged **8,000-entry** hard limit.
-The compressed, inflated, retained and per-file byte guards are unchanged. Entry headroom is now
-small: further expansion may require a coordinated capacity change, not automatic limit increases.
+or any manifested runtime file. The publishing entry guard is **18,000**, below the updated
+Android **20,000-entry** hard limit. Both count directories and skipped files, not just cards.
+The compressed, inflated, retained and per-file byte guards are unchanged.
+
+The N2 baseline (`7535831`) has 7,964 public ZIP entries. N1 planning uses
+[kanjiapi.dev's 1,232-kanji community set](https://kanjiapi.dev/v1/kanji/jlpt-1), with 1,228 cards
+not already present, and [3,427 vocabulary rows at the pinned source revision](https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n1.csv).
+Allowing one card and one stroke file per missing kanji and one article per vocabulary row,
+without relying on vocabulary reuse, projects **13,847 entries** before supporting content/media.
+The publishing guard leaves 4,153 entries beyond that estimate and 2,000 below the app cap.
+Current N2 mean card/stroke sizes plus a manifest-growth allowance project about **52.4 MiB retained**
+against the unchanged 56-MiB publishing guard. This is an estimate, not guaranteed fit or permission
+to spend media budgets: check actual output incrementally during N1 authoring.
+
+Deliver an upgraded Android APK before publishing an archive above older clients' **8,000-entry**
+limit. Source publication alone does not upgrade installed apps; failed sync keeps their last accepted
+offline collection. No N1 cards are added by this capacity change.
 Before publication, check the exact GitHub ZIP and every manifested file/hash as well as local budgets.
 
 ### Content inventory

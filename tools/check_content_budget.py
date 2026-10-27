@@ -10,7 +10,7 @@ from pathlib import Path
 MAX_RETAINED = 56 * 1024 * 1024
 MAX_INFLATED = 80 * 1024 * 1024
 MAX_COMPRESSED = 42 * 1024 * 1024
-MAX_ENTRIES = 7980
+MAX_ENTRIES = 18_000
 MAX_TASK_MEDIA = 20 * 1024 * 1024
 CONTENT_FOLDERS = {
     "kanji", "words", "articles", "strokes", "counters", "grammar", "scenes", "listening", "audio",
