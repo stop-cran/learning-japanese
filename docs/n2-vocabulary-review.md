@@ -29,12 +29,14 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 90: N2:1782-N2:1801
 
-**Status:** drafted; independent blind GPT and Claude review pending.
+**Status:** drafted; independent blind GPT and Claude reports authenticated,
+corrections applied; both original-session confirmations pending.
 
 Nineteen physical additions cover 留守番 through 和英. Source 分る
 reuses the existing N5 分かる with a narrow alternate-spelling note.
 Baseline identities, readings, titles, written-kanji arrays, easier levels
-and quiz exclusions remain unchanged.
+and original exclusions remain unchanged. Two additive quiz safeguards
+on reused 分かる are an explicit, narrowly audited baseline exception.
 
 The original completed author inspection is 305 complete families /
 621 senses, 124 whole older articles, 32 component records, four
@@ -42,7 +44,7 @@ complete related kanji and twenty complete public wrappers from one
 dictionary authority. All twelve family and sixteen older-body chunks
 were read. The 166 labels are navigation, not whole-body inspection.
 Three additional complete families and articles were read before
-drafting; the final union is 308 families / 624 senses / 127 older
+drafting; the pre-review union is 308 families / 624 senses / 127 older
 bodies. The original sealed inspection record is not rewritten.
 
 The [source packet](n2-vocabulary-batch-sources/batch-90.json)
@@ -54,8 +56,51 @@ baseline vocabulary levels.
 
 Four reciprocal N2 pairs are 零/零点, 凍/冷凍, 島/列島 and
 録/録音. The four kanji cards preserve their metadata and unrelated
-teaching. Quiz declarations and linguistic explanations are author
-assertions awaiting independent review, not review-closed coverage.
+teaching. Neither these kanji edits nor source mappings/selected senses
+change during correction.
+
+Frozen initial snapshot: `18652a68f88bba6e702582e07d823789365b632a`.
+[GPT initial](n2-vocabulary-reviews/batch-90-gpt-initial.md) used
+`gpt-6.1-sol`: 30 successful sequential calls, maximum one outstanding.
+[Claude initial](n2-vocabulary-reviews/batch-90-claude-initial.md) used
+`claude-opus-5.5`: five starts, three successful returns and two
+interrupted older-body reads, maximum two outstanding. GPT exited before
+Claude started. Claude completed its whole report in the original session
+with zero tools and no other findings or author adjudication. Both entire
+reports are native-authenticated and archived verbatim; interrupted reads
+are not successful body inspection.
+
+Corrective author reads comprise 45 complete families / 97 senses,
+45 full word bodies (26 older including reused 分かる) and four kanji.
+The distinct union is 315 families / 641 senses / 133 older bodies;
+174 labels are navigation. Original completed-read receipts remain
+immutable. The packet preserves separate actual corrective-read evidence,
+all initial findings/optional items/limits and individual author decisions.
+
+Eight direct safeguards change assigned declarations from 59 to 67.
+Six cover recreation/rest, union/combination and discussing/talking/
+disputing. Two correct a pre-existing omission on reused 分かる:
+original `[]`, added/result `[理解, 知る]`. The public packet and audit
+allow exactly this addition; no original exclusion, identity, reading,
+title, written-kanji array, easier level or unrelated teaching is removed
+or changed. This does not reattribute an old defect to the new alias note.
+
+Teaching corrections distinguish 和英's general language-pair meaning
+from dictionary direction, clarify shared practical 論ずる forms and
+add the attested formal negative with reading/translation. Function-zero
+terminology and four-mora 録音 segmentation are adopted. Other proposed
+quiz pairs are adjudicated individually from complete counterpart
+families/bodies; thematic relations, transitive guards and shared English
+substrings alone are insufficient.
+
+The understanding gap and 論ずる/語る observation are shared across
+report sections. GPT uniquely substantiates additional rest/combination/
+dispute safeguards; Claude uniquely prompts the teaching qualifications
+and optional clarity improvements. Equal initial scope/evidence does not
+establish equal actual inspection or measured bias reduction. Author
+dispositions are not reviewer withdrawals; deliberately nonblind
+original-session confirmation remains pending. No runtime quiz,
+native-speaker, exhaustive-corpus or frequency certification is claimed.
 
 ## Batch 89: N2:1762-N2:1781
 

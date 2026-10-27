@@ -22,16 +22,18 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 ## Batch 90 authoring observations
 
 - N2:1782-N2:1801 draft nineteen new articles from 留守番 through
-  和英 and reuse the N5 分かる for source 分る. The reuse adds only
-  an explicit spelling-recognition note; original metadata and
-  unrelated teaching remain unchanged.
+  和英 and reuse the N5 分かる for source 分る. The reuse adds
+  an explicit spelling-recognition note. Review additionally corrects
+  two pre-existing quiz omissions through an exact additive exception;
+  original identity, reading, title, written kanji, easier level,
+  original exclusions and unrelated teaching remain unchanged.
 - The original completed pre-card inspection is 305 complete
   families / 621 senses, 124 full older articles, 32 component
   records, four complete related kanji and twenty positive public
   wrappers from one dictionary authority. Twelve family and sixteen
   older-body chunks were actually read; 166 labels are navigation.
   Complete オーバーコート/クラス/字引 families and bodies were
-  additionally read before drafting. The final union is 308 families /
+  additionally read before drafting. The pre-review union is 308 families /
   624 senses / 127 older bodies. Both immutable receipts are preserved.
 - An exact-headword request for 理解する failed rather than silently
   approximating it. Only that conjugated request was removed;
@@ -54,13 +56,44 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   瓦 kanji card.
 - ロッカー locker does not inherit rocker; ロビー does not inherit
   every English political use. 録音 distinguishes audio action/result
-  from devices and media. 和英 preserves lookup direction.
+  from devices and media. 和英 distinguishes the general language-pair
+  meaning from lookup direction specifically in dictionary labels.
 - 論ずる distinguishes modern dictionary and traditional サ変
-  classifications. Related 論じる supplies practical conjugations;
-  no ordinary-godan 論ずった is invented.
+  classifications. Practical じ-forms are shared with 論じる;
+  the exact attested 貴賤を論ぜず has a reading and translation.
+  No ordinary-godan 論ずった is invented.
 - Four reciprocal N2 pairs are 零/零点, 凍/冷凍, 島/列島
-  and 録/録音. Quiz declarations remain provisional author curation,
-  pending independent blind GPT and Claude review.
+  and 録/録音. Their kanji edits remain unchanged during corrections.
+- Corrective author reads after both independent reports cover 45
+  complete families / 97 senses, 45 complete word bodies (26 older,
+  including reused 分かる) and four related kanji. The distinct union
+  is 315 families / 641 senses / 133 older bodies. All 277 family
+  rendering lines and 2,272 whole-body rendering lines were read;
+  174 comparison labels remain navigation, not whole-body inspection.
+- Eight direct quiz safeguards raise assigned declarations from 59
+  to 67: recreation/rest (two), union/combination (one),
+  discussion/talking/disputing (three) and understanding/knowing (two).
+  The last two deliberately correct a pre-existing omission on the
+  reused baseline 分かる: original `[]`, added/result `[理解, 知る]`.
+  This exact metadata-only exception is public and audit-allowlisted;
+  it does not authorize unrelated baseline prose or metadata changes.
+- GPT and Claude share the reused-understanding omission and the
+  論ずる/語る observation, although the latter is a Claude limit.
+  GPT uniquely substantiates the additional rest/combination/dispute
+  safeguards. Claude uniquely prompts the 和英 qualification, shared
+  practical 論ずる forms and formal-negative guidance; its optional
+  function terminology and mora segmentation improvements are adopted.
+  Other quiz hypotheses are individually adjudicated against complete
+  counterpart families and bodies, not rejected on POS alone.
+- Both complete initial reports at `18652a6` are authenticated and
+  archived verbatim. GPT used `gpt-6.1-sol`, with 30 successful serial
+  calls. Claude used `claude-opus-5.5`, with five starts, three successful
+  returns and two interrupted older-body reads, maximum two outstanding.
+  It completed its report in the original session with zero tools and
+  no GPT findings or author adjudication. GPT exited before Claude
+  started. Equal supplied evidence is not equal additional inspection
+  or measured bias reduction; this is sample-specific complementarity.
+  Both original-session post-fix confirmations are still pending.
 
 ## Batch 89 authoring observations
 
