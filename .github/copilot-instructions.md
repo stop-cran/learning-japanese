@@ -57,6 +57,34 @@ searching afresh. Use the guide for navigation; keep exact evidence and qualific
 - Reconcile each finding as **resolved**, **partially resolved**, **unresolved**, **withdrawn**, or **optional**. Reassess severity when the evidence changes, and check changed passages for regressions.
 - Stop when no actionable defect or consequential unresolved claim remains in scope. Do not expand the assignment just to prolong the review or force agreement.
 
+## Large card expansions
+
+These are self-attended author/reviewer checks, not an automated linguistic gate. The
+[N2 project retrospective](../docs/n2-vocabulary-notes.md#n2-project-retrospective) records the cases behind them;
+the [content format](../docs/content-format.md) remains canonical.
+
+- Pin source versions/hashes and the baseline before authoring. Map each source row to the actual article,
+  spelling, reading and selected senses; preserve raw fields separately from justified teaching corrections.
+  An existing filename or shared dictionary ID is a candidate, not verified coverage.
+- Inspect complete applicable dictionary families and actual reused/comparison articles, including restrictions
+  and sense-local flags. Audit every new kanji's metadata readings against its reading table or qualified
+  source-only explanation, even where the validator does not enforce that level.
+- Preserve stable identities, readings, easier sourced levels and original exclusions; document narrow exceptions.
+  Judge quiz ambiguity from actual displayed labels and ordinary secondary senses. Exclusions are direct pairs,
+  not transitive cliques; different titles or shared topics alone do not decide them.
+- When reciprocal links are in scope, enumerate required pairs across **all mapped articles**, including baseline
+  reuses, and check both relative links with the actual word reading. Do not broaden this to every incidental
+  mention or invent a constituent reading for an irregular whole word.
+- Bound batches and evidence packets by review complexity, not just row count. Respect requested concurrency
+  limits for reviewer processes and their tool calls; verify exit before starting the next serial reviewer.
+  Stop repeated-read loops and narrow the confirmation dossier instead of keeping a live reviewer pool.
+- Record actual models, snapshots, complete reports and evidence limitations. Where execution records are available,
+  check actual returned ranges and process behavior before claiming full reads or serial execution.
+  Preserve interrupted runs and original reports; distinguish fresh reads, supplied evidence and later confirmations.
+- Close rows only after evidence-based reconciliation. Audit exact source membership, baseline preservation,
+  required links and report coverage; keep source-row, distinct-article and link-pair counts separate.
+  Archive hashes establish byte consistency, not comprehension or a fresh linguistic review.
+
 ## Worked example: an attachment rule left implicit
 
 This is an illustrative rendering of a resolved issue, not a new review or a verbatim archived report. The [original construction explanation](https://github.com/stop-cran/learning-japanese/blob/3e80a29aaf02434a4b4fffacf6840f05cad7c142/articles/koto-wake-and-formal-nouns.md#L64-L95) used "clause + わけだ" and the correct example 日本語が上手なわけだ without explicitly explaining the connector.
@@ -114,3 +142,8 @@ For each revision of the review rules, add a rule grounded in an observed failur
   [outcome](../docs/grammar-expectations-sources.json) records document misleading page extraction and mixed dictionary content.
   The [source guide](../docs/grammar-authoring-sources.md) consolidates search starting points and those observed pitfalls;
   detailed evidence remains in the per-batch records, rather than being replaced by a site-level endorsement.
+- **2026-10-27 - N2 expansion (add/regroup):** The completed kanji and vocabulary work grounds the large-expansion
+  checks above: candidate identity mismatches, quiz secondary senses, reused-card link accounting, and batch 83's
+  repeated-read run and contradicted serial-execution claim. The
+  [retrospective](../docs/n2-vocabulary-notes.md#n2-project-retrospective) links the preserved evidence.
+  Consolidate reusable lessons here without turning historical inspection receipts into linguistic certification.

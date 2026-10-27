@@ -55,6 +55,71 @@ The final audit changes documentation only; accepted teaching and manifest
 `63c5647b9b8f4336` are unchanged. Coverage remains a claim about the pinned
 community list, not an official JLPT syllabus or exhaustive usage certification.
 
+## N2 project retrospective
+
+The kanji and vocabulary phases both reached their pinned scopes: 25 kanji
+batches covered 367 characters (365 additions and two unchanged existing cards),
+with 63 supporting word additions; 91 vocabulary batches then covered the
+1,812 source rows summarized above. Supporting words already present at the
+vocabulary baseline are not extra vocabulary additions to count again.
+See the [kanji completion](n2-review.md#final-project-verification-and-completion)
+and [vocabulary audit](n2-vocabulary-completion-audit.json).
+
+### What worked
+
+Pinned inputs, explicit baseline invariants and batch commits made the long
+expansion recoverable and auditable. Separating source rows from article
+identities allowed legitimate reuse without silently changing existing
+readings or easier levels. Separate draft and closure commits also kept a
+structurally valid draft from being mistaken for reviewed completion.
+
+Dual-model review earned its cost through concrete complementary catches,
+not through agreement alone. The
+[kanji summary](n2-authoring-notes.md#completion-and-bounded-model-usefulness-summary)
+records GPT's pilot 仲/中 quiz finding and Claude's missing 胡乱 example.
+Vocabulary [batch 83](#batch-83-authoring-observations) records useful initial
+Claude signals and later GPT 巡る safeguards; those later catches are not
+blind initial-review wins. [Batch 91](#batch-91-authoring-observations)
+likewise preserves shared findings, Claude's useful 等分/practical-usage
+concerns, and unsupported stronger naturalness allegations that were withdrawn.
+Evidence-based adjudication was necessary with both model families.
+
+### Friction and lessons for the next expansion
+
+- **Evidence size, not only card count, sets batch size.** Complete comparison
+  families and older articles can dwarf twenty new cards. Use bounded
+  per-row dossiers and current changed passages for confirmation.
+  Batch 83's interrupted repeated-read run shows why a full large-packet
+  reread is not a useful default; keep the interrupted record rather than
+  turning it into an acceptance.
+- **Requested process is not observed process.** Serial reviewer launches
+  did not guarantee serial internal tool calls or complete fresh reads.
+  Check available execution evidence, distinguish returned text from
+  requested paths, and record deviations. Unequal evidence depth prevents
+  a fair general model ranking; hashes do not prove comprehension.
+- **Source errors need explicit teaching dispositions.** Batch 83's
+  目下/めした identity came with a conflicting "at present" gloss;
+  batch 91's 湧く gloss mixed in separate 沸く. Preserve the raw source
+  and explain the selected identity instead of silently repairing the index
+  or teaching every supplied gloss as correct.
+- **Final coverage needs its own scope check.** The all-mapped reciprocal
+  audit found 425 applicable pairs, including 50 baseline-reuse pairs;
+  the earlier 375/383 incremental counts describe different scopes, not
+  missing content. Enumerate required pairs from the complete mapping,
+  not only newly created files or the last batch's counters.
+- **Keep closure bounded.** Resolve demonstrated defects and consequential
+  uncertainty; leave optional expansion labelled as optional. Preserve
+  blind initial reports, corrective stages and withdrawals separately.
+  A metadata-only final audit should not silently reopen accepted teaching.
+
+The reusable rules now live in
+[Large card expansions](../.github/copilot-instructions.md#large-card-expansions);
+the detailed records remain evidence, not a second competing instruction set.
+Overall, the process delivered source-bounded coverage and useful corrections,
+but review orchestration needed tighter bounds than authoring alone.
+Neither the effort nor model agreement establishes an official syllabus,
+measured bias reduction, native-speaker validation or empirical live-quiz safety.
+
 ## Batch 91 authoring observations
 
 - The final twelve source rows, N2:1802-N2:1813, have twelve

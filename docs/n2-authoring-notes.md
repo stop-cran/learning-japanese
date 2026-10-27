@@ -981,3 +981,8 @@ an exhaustive linguistic guarantee or proof that model bias was
 eliminated. Retain the sources, preserved reports and dispositions so
 future corrections can build on concrete evidence rather than treating
 any frozen review as permanent authority.
+
+The later vocabulary phase builds on this completed kanji baseline. The
+[whole-project retrospective](n2-vocabulary-notes.md#n2-project-retrospective)
+combines the lessons from both phases; reusable checks are consolidated in
+the [repository guide](../.github/copilot-instructions.md#large-card-expansions).

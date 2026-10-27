@@ -3293,7 +3293,13 @@ The repository validator and the complete 365-card/1,073-row audit pass.
 All 82 commits through the audited content snapshot have author and
 committer `stop-cran`; the closing record uses the same identity.
 Work was committed batch by batch. Nothing was pushed and no PR was
-opened.
+opened at the time of this kanji closure.
+
+Publication update: the completed `jlpt-n2-kanji` branch is now pushed at
+`f1a93f249b78ae87c8233da1fbb48e92f02d4b44`. The pushed
+`jlpt-n2-vocabulary` branch descends from it and includes the completed
+vocabulary work. The [whole-project retrospective](n2-vocabulary-notes.md#n2-project-retrospective)
+records the subsequent lessons without changing this historical content audit.
 
 All actionable findings are reconciled within their recorded scopes;
 optional suggestions and evidential limits remain visible. The final
