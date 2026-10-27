@@ -2,10 +2,10 @@
 
 ## Status
 
-**Batches 01-88 review-closed.** The target is all 1,812 source rows,
+**Batches 01-89 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,760 rows are review-closed; twenty are drafted and 32 remain pending.
+The first 1,780 rows are review-closed; 32 remain pending, with no drafts.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -28,9 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 89: N2:1762-N2:1781
 
-**Status:** draft; independent initial reviews and author reconciliation
-are recorded; original-session confirmations are pending. Draft coverage
-is not review-closed coverage.
+**Status:** closed after independent initial reviews, evidence-based
+corrections and acceptance by the original GPT and Claude sessions.
 
 Twenty physical additions cover 来日 through 臨時. All original
 baseline word identities, readings, titles, written-kanji arrays,
@@ -42,7 +41,7 @@ records, six complete related kanji and 23 positive public wrappers
 from one dictionary authority. The 241 labels are navigation.
 Four additional exact older bodies were read before drafting;
 their five complete families / 21 senses were read after the first
-draft and before the authored snapshot. The distinct final scope is
+draft and before the authored snapshot. The distinct pre-review scope is
 432 families / 1,064 senses / 162 older bodies. Original preparation
 and completed-read receipts remain unchanged.
 
@@ -101,6 +100,40 @@ is not promoted to defects; no unsupported りょうそく frequency claim
 or unqualified 略す/略する identity assertion is adopted. This is
 sample-specific complementarity, not a model ranking or measured
 bias-reduction result.
+
+Accepted teaching snapshot: `5454ac0d909fda31211029db015c916ead73884e`.
+The original [GPT confirmation](n2-vocabulary-reviews/batch-89-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-89-claude-confirmation.md)
+both accept all twenty cards with CLEAN correctness, scoped coverage and
+comprehensibility. Both entire reports exactly match native assistant
+messages, including complete twenty-row six-column tables. Both run with
+zero observed tools and no edits; GPT's native shutdown precedes Claude's
+confirmation prompt. The supplied corrective evidence is identical except
+model/family rendering. These confirmations are deliberately nonblind,
+not new independent initial reviews or native retrievals.
+
+Claude explicitly corrects the boat/business entry association and
+withdraws the unqualified 略す/略する and りょうそく-frequency
+suggestions. Its residual low-confidence 寮/宿泊 hypothesis is
+author-adjudicated against both complete families and whole bodies:
+the displayed overnight-stay label describes lodging as an event, not
+the dormitory as a residential facility. No additional safeguard is
+established merely because a person can stay overnight in a dormitory.
+This is not retroactive verification by Claude or a universal ban on
+broader accommodation translations. Both families and bodies were
+already inspected, so distinct counts remain 435 / 1,067 / 164.
+
+Optional paragraph layout, extra expressions/examples, a 段 sense-6
+footer and smoother 臨時 English are deferred as nonblocking expansion.
+No teaching or manifest changes follow acceptance. Closure changes only
+source status, reconciliation documentation and confirmation archives.
+Coverage is **1,780 closed / 0 draft / 32 pending / 0 unresolved**,
+with 4,911 physical word articles, 1,761 mapped articles,
+370 primary nonbaseline reciprocal N2 pairs and 378 including the eight
+historical/scoped-reuse pairs. All 3,273 baseline identities, readings,
+titles, written-kanji arrays, easier levels and original exclusions remain
+preserved. Author structural/hash checks do not certify runtime quizzes,
+exhaustive corpus coverage, native-speaker naturalness or frequency.
 
 ## Batch 88: N2:1742-N2:1761
 

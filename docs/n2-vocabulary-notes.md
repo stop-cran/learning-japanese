@@ -34,7 +34,7 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - Four further older bodies, 長短/除く/削る/飛ばす, were read before
   the first draft. Their five complete dictionary families / 21 senses
   were captured and read after initial drafting and before the
-  authored snapshot. The final union is 432 families / 1,064 senses /
+  authored snapshot. The pre-review union is 432 families / 1,064 senses /
   162 older bodies; the original pre-card seal is not rewritten.
   The extra 削る/はつる family is not applied to the old けずる card.
 - Twenty principal and three supplemental positive public wrappers
@@ -94,11 +94,29 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   financial safeguards; Claude prompts qualified 来日/businessランチ/
   person-targeted乱暴 guidance. Compare all report sections before
   crediting unique contributions. Initial reviews are independent;
-  original-session post-fix confirmations are pending.
+  both original-session post-fix confirmations accept the corrected cards.
 - Claude was stopped on two overlapping native calls; its full report
   was completed in the original session with zero tools and no outside
   findings. Equal evidence is not equal inspection or measured bias
   reduction. The original captured reports remain unchanged.
+- Both complete confirmations at `5454ac0` are native-authenticated,
+  have twenty six-column verdict rows with all three facets CLEAN, and
+  run with zero observed tools and no edits. GPT exits before Claude
+  starts. Supplied inline reads are not additional native retrievals;
+  deliberately nonblind confirmation does not replace independent initial
+  review or measure bias reduction.
+- Investigate residual hypotheses without automatically adding another
+  broad-category guard. Claude's low 寮/宿泊 question is author-adjudicated
+  against the already-inspected complete families and whole bodies:
+  宿泊's displayed overnight-stay label denotes a lodging event, not
+  the residential facility itself. Merely staying in a dormitory does
+  not establish another direct answer-label collision. The two rereads
+  add no distinct families or bodies to 435 / 1,067 / 164; Claude did
+  not independently retrieve these counterparts in confirmation.
+- Defer optional layout, extra examples and smoother English rather than
+  changing accepted teaching to prolong review. The metadata-only closure
+  leaves 1,780 source rows closed, 32 pending and none drafted/unresolved;
+  accepted word/kanji content and the manifest remain unchanged.
 
 ## Batch 88 authoring observations
 
