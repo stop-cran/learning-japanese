@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "f1a93f249b78ae87c8233da1fbb48e92f02d4b44",
+  "scope": "All rows of the pinned community N2 vocabulary CSV; not an official JLPT syllabus.",
+  "status": "complete",
+  "completionAudit": "n2-vocabulary-completion-audit.json",
+  "source": {
+    "repository": "stephenmk/yomitan-jlpt-vocab",
+    "commit": "b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+    "attribution": "Stephen Kraus; underlying community lists by Jonathan Waller.",
+    "license": "CC BY-SA 4.0 for the selected Kraus distribution.",
+    "files": [
+      {
+        "level": 2,
+        "url": "https://raw.githubusercontent.com/stephenmk/yomitan-jlpt-vocab/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n2.csv",
+        "sha256": "42a4413326e857d701dc9659b2711637ab612304a339fe0d09f4f0f042d3a214",
+        "rows": 1812,
+        "columns": [
+          "jmdict_seq",
+          "kana",
+          "kanji",
+          "waller_definition"
+        ]
+      }
+    ]
+  },
+  "jmdict": {
+    "snapshotDate": "2026-10-21",
+    "url": "https://www.edrdg.org/pub/Nihongo/JMdict_e.gz",
+    "downloadSha256": "3ef56db3b7459d3a29b0983781a171c8e4aeef0b87d840b4949a042b1a14bc23",
+    "xmlSha256": "e990ec4ef9a044f34c8a9993165260aa64b77156ae0443059100ef697941bd77",
+    "attribution": "Copyright James William Breen and the Electronic Dictionary Research and Development Group; CC BY-SA 4.0."
+  },
+  "coverageIndex": "n2-vocabulary-sources.tsv",
+  "coverageIndexSha256": "d0a3011d2f8a383e7b86bb023ede98bc6dc1a4806b1e4b6c193e671345dc2a80",
+  "sourceRowCounts": {
+    "N2": 1812
+  },
+  "baselineWordArticles": 3273,
+  "planning": {
+    "rowsPerBatch": 20,
+    "plannedBatches": 91,
+    "distinctSourceForms": 1808,
+    "distinctSuppliedEntries": 1794,
+    "exactFilenameCandidateRows": 75,
+    "aliasOnlyCandidateRows": 76,
+    "candidateLimits": "Navigation only; neither candidates nor their absence establish verified coverage or final new/reused article counts."
+  },
+  "coverage": {
+    "pendingRows": 0,
+    "draftRows": 0,
+    "closedRows": 1812,
+    "unresolvedRows": 0,
+    "mappedArticles": 1793,
+    "newArticles": 1669,
+    "reusedArticles": 124
+  },
+  "indexSemantics": {
+    "source_id": "N2:physical CSV line number, including the header at line 1.",
+    "source_kanji": "Original CSV kanji field, including empty values; source form is this or source_reading.",
+    "source_gloss": "Original Waller gloss, retained as evidence rather than endorsed verbatim teaching text.",
+    "source_jmdict_entry": "Original supplied identity; never overwritten by a teaching correction.",
+    "batch": "Planned sequential 20-row batch; not an authoring or review-closure assertion.",
+    "status": "pending, draft, closed, or unresolved, as defined in n2-vocabulary-review.md.",
+    "article": "Stable repository-relative article actually teaching this row's spelling/reading/use; blank while pending.",
+    "article_level": "Actual easiest sourced article-level label; does not replace source_level.",
+    "jmdict_entry": "Selected inspected teaching identity, potentially different from the original supplied ID.",
+    "sense_indices": "Non-exhaustive one-based teaching senses in the recorded snapshot, respecting spelling and reading restrictions.",
+    "additional_senses": "Separately distinguished entry:sense pairs; not extra source rows or automatic N2 assignments.",
+    "mapping_note": "Spelling normalization, explicit alias coverage, or preservation of the original spelling.",
+    "identity_note": "Evidence-backed correction or qualification of a supplied lexical identity.",
+    "source_note": "Qualified source gloss, spelling/sense distinction, or retained uncertainty; not additional level evidence."
+  }
+}

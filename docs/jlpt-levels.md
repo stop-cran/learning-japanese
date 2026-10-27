@@ -11,6 +11,10 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
 - [N5](https://kanjiapi.dev/v1/kanji/jlpt-5): 79 characters in the snapshot inspected on 2026-10-08.
 - [N4](https://kanjiapi.dev/v1/kanji/jlpt-4): 166 characters in that snapshot, excluding the N5 set.
 - [N3](https://kanjiapi.dev/v1/kanji/jlpt-3): 367 characters in the snapshot inspected on 2026-10-09.
+- [N2](https://kanjiapi.dev/v1/kanji/jlpt-2): 367 characters in the
+  [snapshot retrieved on 2026-10-21](n2-source-snapshot.json). All are present after
+  [25 independently reviewed batches](n2-review.md#final-project-verification-and-completion):
+  365 additions and the preserved existing 珍 and 短 cards.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee
@@ -32,7 +36,7 @@ in agreement. Reassess an exception if its cited evidence changes; do not overwr
 
 ## Vocabulary baseline
 
-Vocabulary levels are separate from kanji levels. For N5, N4 and N3, use Stephen Kraus's
+Vocabulary levels are separate from kanji levels. For N5, N4, N3 and N2, use Stephen Kraus's
 [Yomitan JLPT vocabulary data](https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data),
 pinned to commit `b062d4e38c4bdd0950ae1d4ec55f04b176182e03`. It derives from Jonathan Waller's community lists and adds JMdict entry IDs.
 The selected CSVs contain **684 N5 rows and 640 additional N4 rows**: 1,324 source rows for cumulative N4 study.
@@ -41,6 +45,13 @@ the [coverage index](n5-n4-vocabulary-sources.tsv) maps individual source rows t
 The same revision's N3 CSV adds **1,730 rows**, for 3,054 source rows across the three levels.
 Its separate [snapshot](n3-vocabulary-snapshot.json) and [coverage index](n3-vocabulary-sources.tsv) cover 1,698 articles,
 including 208 reused articles. The N5/N4 indexes remain unchanged.
+
+The same revision's N2 CSV contains **1,812 additional rows**. Its
+[snapshot](n2-vocabulary-snapshot.json), [source-row index](n2-vocabulary-sources.tsv), and
+[batch review ledger](n2-vocabulary-review.md) record the completed expansion.
+Pending rows are not verified coverage; source spelling aliases must be explicitly taught before
+their mappings count. The [authoring plan](n2-vocabulary-notes.md) uses sequential 20-row batches
+and independent GPT/Claude reviews without concurrent reviewer processes.
 
 A source row, a dictionary entry, and an article are not the same unit. For example, 明日/あした is listed at N5 and 明日/あす at N4;
 one article can teach both readings. Conversely, shared dictionary IDs do not make every spelling or use interchangeable.

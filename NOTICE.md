@@ -12,6 +12,8 @@ This repository contains original notes plus data derived from open dictionary p
   [EDRDG terms](https://www.edrdg.org/edrdg/licence.html). Explanations and examples are original teaching text.
   The [N4](docs/n4-source-snapshot.json) and [N3](docs/n3-source-snapshot.json) source snapshots record inspected versions,
   hashes and transformations. N3 reuses the 2026-10-08 dictionary snapshot; its community kanji list was retrieved on 2026-10-09.
+  The [N2 source snapshot](docs/n2-source-snapshot.json) identifies dictionaries and a community kanji list retrieved on
+  2026-10-21. Its [per-batch evidence](docs/n2-batch-sources) retains metadata and applicable JMdict spelling/reading senses.
   The [N4 word-pair index](docs/n4-word-sources.tsv) and [N3 primary-word index](docs/n3-word-sources.tsv) identify matching
   JMdict entries for the selected spellings and readings; not every sense of those entries applies to an article.
   The N3 index identifies a non-exhaustive selection of primary teaching senses and distinguishes new articles from two reused ones.
@@ -23,6 +25,9 @@ This repository contains original notes plus data derived from open dictionary p
   The separate [N3 vocabulary snapshot](docs/n3-vocabulary-snapshot.json) and
   [source-row index](docs/n3-vocabulary-sources.tsv) use that same dictionary version for the later vocabulary expansion.
   They preserve original source fields, selected teaching identities, spelling-sensitive coverage and retained source-intent uncertainty.
+  The [N2 vocabulary snapshot](docs/n2-vocabulary-snapshot.json) and
+  [source-row index](docs/n2-vocabulary-sources.tsv) reuse the 2026-10-21 dictionary snapshot for
+  the N2 vocabulary expansion in progress; pending rows do not assert completed coverage.
   The [article-subject snapshot](docs/article-subjects-source-snapshot.json) uses dictionaries retrieved on 2026-10-10
   and records six added kanji, 17 new word articles, and the reused 訳 article. It distinguishes rare character-dictionary
   readings from verified ordinary word spellings. The rare 奇しい/あやしい spelling is supported by the cited
@@ -34,7 +39,7 @@ This repository contains original notes plus data derived from open dictionary p
   dictionary files and preserves entry identities, reading restrictions and the three retained level labels.
   Its explanations and example sentences are original teaching material, not excerpts from manga,
   news stories, or recipes. This thematic selection does not establish new JLPT membership.
-- **Canonical radical glyphs for the N4 and N3 additions** are mapped from the compatibility decompositions in Unicode 17.0
+- **Canonical radical glyphs for the N4, N3 and N2 additions** are mapped from the compatibility decompositions in Unicode 17.0
   [UnicodeData.txt](https://www.unicode.org/Public/17.0.0/ucd/UnicodeData.txt), copyright Unicode, Inc., under the
   [Unicode License V3](docs/UNICODE-LICENSE.txt). Positional component shapes may differ from these canonical glyphs.
 - **Scene illustrations** (`images/*.webp`) are AI-generated with Azure OpenAI from original English scenes in
@@ -46,7 +51,8 @@ This repository contains original notes plus data derived from open dictionary p
   uses rather than complete dictionary definitions.
 - **Kanji JLPT levels** follow the community sets mirrored by [kanjiapi.dev](https://kanjiapi.dev), with explicitly sourced exceptions.
 - **Vocabulary membership** derives from [Stephen Kraus's Yomitan JLPT vocabulary data](https://github.com/stephenmk/yomitan-jlpt-vocab),
-  revision `b062d4e38c4bdd0950ae1d4ec55f04b176182e03`, using `original_data/n5.csv`, `original_data/n4.csv` and `original_data/n3.csv`.
+  revision `b062d4e38c4bdd0950ae1d4ec55f04b176182e03`, using `original_data/n5.csv`, `original_data/n4.csv`,
+  `original_data/n3.csv` and, for the N2 expansion in progress, `original_data/n2.csv`.
   Selected article-subject additions also use `n1.csv`, `n2.csv`, and `n3.csv` at that revision; their source record
   preserves the chosen rows and explains why ambiguous homographs or absent levels were not inferred.
   Credit Stephen Kraus, Jonathan Waller (the underlying [Tanos community lists](https://www.tanos.co.uk/jlpt/)), and EDRDG for
