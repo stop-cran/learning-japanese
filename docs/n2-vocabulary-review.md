@@ -5,7 +5,8 @@
 **Batches 01-89 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,780 rows are review-closed; 32 remain pending, with no drafts.
+The first 1,780 rows are review-closed; batch 90 has 20 drafted rows,
+and 12 remain pending.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +26,36 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 90: N2:1782-N2:1801
+
+**Status:** drafted; independent blind GPT and Claude review pending.
+
+Nineteen physical additions cover 留守番 through 和英. Source 分る
+reuses the existing N5 分かる with a narrow alternate-spelling note.
+Baseline identities, readings, titles, written-kanji arrays, easier levels
+and quiz exclusions remain unchanged.
+
+The original completed author inspection is 305 complete families /
+621 senses, 124 whole older articles, 32 component records, four
+complete related kanji and twenty complete public wrappers from one
+dictionary authority. All twelve family and sixteen older-body chunks
+were read. The 166 labels are navigation, not whole-body inspection.
+Three additional complete families and articles were read before
+drafting; the final union is 308 families / 624 senses / 127 older
+bodies. The original sealed inspection record is not rewritten.
+
+The [source packet](n2-vocabulary-batch-sources/batch-90.json)
+retains raw source fields, selected compatible identities/senses,
+complete principal/comparison families, components and capture hashes.
+Source spellings レクリェーション, ローマじ and 分る are explicitly
+recognized without transferring restricted senses or replacing easier
+baseline vocabulary levels.
+
+Four reciprocal N2 pairs are 零/零点, 凍/冷凍, 島/列島 and
+録/録音. The four kanji cards preserve their metadata and unrelated
+teaching. Quiz declarations and linguistic explanations are author
+assertions awaiting independent review, not review-closed coverage.
 
 ## Batch 89: N2:1762-N2:1781
 

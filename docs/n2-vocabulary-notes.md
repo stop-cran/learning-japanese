@@ -19,6 +19,49 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 90 authoring observations
+
+- N2:1782-N2:1801 draft nineteen new articles from 留守番 through
+  和英 and reuse the N5 分かる for source 分る. The reuse adds only
+  an explicit spelling-recognition note; original metadata and
+  unrelated teaching remain unchanged.
+- The original completed pre-card inspection is 305 complete
+  families / 621 senses, 124 full older articles, 32 component
+  records, four complete related kanji and twenty positive public
+  wrappers from one dictionary authority. Twelve family and sixteen
+  older-body chunks were actually read; 166 labels are navigation.
+  Complete オーバーコート/クラス/字引 families and bodies were
+  additionally read before drafting. The final union is 308 families /
+  624 senses / 127 older bodies. Both immutable receipts are preserved.
+- An exact-headword request for 理解する failed rather than silently
+  approximating it. Only that conjugated request was removed;
+  the complete 理解 family and its suru behavior remained available.
+- Source レクリェーション maps to レクリエーション for recreation,
+  not the re-creation sense restricted to リクリエーション.
+  Source ローマじ maps to ローマ字 with 字 in metadata and an
+  explicit borrowed-base/Japanese-character formation explanation.
+- 零点 distinguishes zero marks, a function's zero and zero Celsius
+  from the decimal sequence in 零点五. 冷凍 teaches frozen
+  preservation and transitive suru, not an unspecified safe-storage
+  temperature. 列島 explains the small っ and chain arrangement.
+- レベル keeps physical/instrument senses separate from abstract
+  levels and from unrelated rebel/Revell identities. 連合 separates
+  organizational union, psychological association and RENGO.
+  レンズ has Dutch provenance, not inferred English provenance.
+- 煉瓦 and 蝋燭 preserve all written kanji despite missing component
+  cards, and distinguish usually-kana alternatives from compatible
+  primary written readings. A 瓦 word card does not establish a
+  瓦 kanji card.
+- ロッカー locker does not inherit rocker; ロビー does not inherit
+  every English political use. 録音 distinguishes audio action/result
+  from devices and media. 和英 preserves lookup direction.
+- 論ずる distinguishes modern dictionary and traditional サ変
+  classifications. Related 論じる supplies practical conjugations;
+  no ordinary-godan 論ずった is invented.
+- Four reciprocal N2 pairs are 零/零点, 凍/冷凍, 島/列島
+  and 録/録音. Quiz declarations remain provisional author curation,
+  pending independent blind GPT and Claude review.
+
 ## Batch 89 authoring observations
 
 - N2:1762-N2:1781 draft twenty new physical articles, from 来日
