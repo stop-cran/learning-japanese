@@ -21,9 +21,9 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 
 ## Batch 91 authoring observations
 
-- The final twelve source rows, N2:1802-N2:1813, now have twelve
-  draft articles. All 1,812 source rows are mapped, but the last
-  twelve are not review-closed. No baseline article is reused or edited.
+- The final twelve source rows, N2:1802-N2:1813, have twelve
+  new articles. All 1,812 source rows are mapped and review-closed.
+  No baseline article is reused or edited in this final batch.
 - The original actual-read seal covers 195 complete families /
   395 senses, 77 full older articles, one full related kanji,
   sixteen component records and twelve positive public wrappers
@@ -73,8 +73,8 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   assess excessive as well as missing pairs; broad categories,
   POS differences and shared sounds do not settle the question.
   The existing confusable inventory was considered when adding titles.
-- Sequential independent GPT and Claude initial reviews are complete;
-  original-session post-fix confirmations are pending. Corrective
+- Sequential independent GPT and Claude initial reviews and
+  original-session post-fix confirmations are complete. Corrective
   inspection adds six distinct families / eleven senses and two
   older bodies, giving 208 families / 426 senses / 85 older bodies.
   The 27 corrective families / 50 senses and sixteen bodies include
@@ -112,6 +112,16 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   sequential and exited before the next reviewer started.
   Complementary useful observations do not establish equal actual
   inspection or measured model-bias reduction.
+- Both original reviewers accept corrected commit
+  `b2c2811a7ee64f9924227376459c0ba00e045fb6`: twelve rows each
+  receive CLEAN/CLEAN/CLEAN scoped judgments. Confirmations use
+  identical supplied evidence, zero tools and zero edits, with
+  sequential verified process exits. Claude expressly withdraws
+  the unproved stronger 碗 naturalness allegation. Historical
+  author partial-resolution labels remain visible.
+  Closure changes metadata only; accepted cards and manifest stay
+  unchanged. Optional expansion and unavailable corpus/native-speaker
+  certification are not treated as remaining actionable defects.
 
 ## Batch 90 authoring observations
 

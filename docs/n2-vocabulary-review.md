@@ -2,11 +2,12 @@
 
 ## Status
 
-**Batches 01-90 review-closed.** The target is all 1,812 source rows,
+**Batches 01-91 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,800 rows are review-closed; the final 12 are drafted and awaiting review.
-None are unresolved.
+All 1,812 rows are review-closed, mapped to 1,793 distinct articles:
+1,669 new and 124 reused. None are pending, drafted or unresolved.
+The final overall completion audit is still pending.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -28,8 +29,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 91: N2:1802-N2:1813
 
-**Status:** draft; independent initial reviews reconciled;
-original-session post-fix confirmations pending.
+**Status:** closed; independent initial reviews reconciled and both
+original-session post-fix confirmations accepted.
 
 Twelve physical additions complete the initial mapping of all 1,812
 pinned source rows. There is no baseline reuse or older-word edit.
@@ -130,6 +131,56 @@ reports; its 大部/大分 distinction usefully sharpened the shared
 degree question. Original-session confirmations must evaluate
 the actual correction diff, complete revised bodies and precise
 supporting evidence before these final twelve rows can close.
+
+### Batch 91 confirmed and closed
+
+Both original sessions accept corrected commit
+`b2c2811a7ee64f9924227376459c0ba00e045fb6`, parent
+`28ac612d4bd09064cc9c102fa6abd0d84c168434`.
+Complete native final messages are archived:
+[GPT confirmation](n2-vocabulary-reviews/batch-91-gpt-confirmation.md)
+and [Claude confirmation](n2-vocabulary-reviews/batch-91-claude-confirmation.md).
+Each contains twelve individual **CLEAN / CLEAN / CLEAN** verdicts.
+Both assess the actual six-word diff, all current assigned bodies,
+all author dispositions and supplied supporting evidence.
+These deliberately nonblind confirmations use zero tools and make
+zero edits; whole native reports, exact models/prompts, session
+continuity and sequential process exits are authenticated.
+
+The shared 別 omission and Claude's 等分/register/practical-coverage
+concerns are resolved. Both accept retaining the conservative
+degree, tea-vessel and lowering safeguards. Claude expressly
+withdraws its unproved stronger 碗 naturalness allegation; the
+earlier author partial-resolution label remains historical.
+No remaining actionable defect or consequential unresolved claim
+is established in the accepted scope.
+
+Defer optional lead-in polish, spelling/counter expansion, additional
+apology nuance and broader related vocabulary. The dictionary's
+一―の吸い物 is expanded using 椀 under its combined heading;
+both cards expressly retain the shared counter, without claiming
+an exclusive spelling or restoring an unchecked いちわん reading.
+An additional whole public 沸く heading was actually read:
+its 場内 subject supports the collective-excitement construction,
+not an exact quotation of 会場が沸く. This is author evidence
+from the same authority, not new independent reviewer retrieval.
+The two older bodies reread at closure were already among the
+85 inspected bodies, so distinct counts do not increase.
+
+Closure changes review/status metadata only. All accepted teaching
+and manifest **`63c5647b9b8f4336`** remain unchanged:
+**7,570 entries = 6,973 files + 396 images + 201 scene catalogs**.
+There are **4,942 word articles** and **375 primary reciprocal N2
+pairs**, or **383 including eight historical/scoped pairs**.
+All 3,273 baseline identities/readings/titles and original exclusions
+remain preserved under the previously documented narrow exceptions;
+this final batch adds no baseline exception.
+
+Coverage is now **1,812 closed / 0 draft / 0 pending /
+0 unresolved**, mapped to **1,793 articles: 1,669 new / 124 reused**.
+All 91 batches are review-closed; the separate overall completion
+audit remains pending. Scoped CLEAN does not mean official JLPT,
+exhaustive corpus, native-speaker, frequency or live-quiz certification.
 
 ## Batch 90: N2:1782-N2:1801
 
