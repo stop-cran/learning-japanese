@@ -28,9 +28,9 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 89: N2:1762-N2:1781
 
-**Status:** draft; independent initial GPT and Claude reviews and
-evidence-based reconciliation are pending. Draft coverage is not
-review-closed coverage.
+**Status:** draft; independent initial reviews and author reconciliation
+are recorded; original-session confirmations are pending. Draft coverage
+is not review-closed coverage.
 
 Twenty physical additions cover 来日 through 臨時. All original
 baseline word identities, readings, titles, written-kanji arrays,
@@ -57,11 +57,50 @@ Seven new reciprocal N2 pairs are 乱/乱暴, 暴/乱暴, 略/略す,
 域/流域, 漁/漁師, 領/領事 and 領/領収. The six kanji edits
 preserve original metadata and unrelated teaching.
 
-Initial blind derivatives omit author source/mapping/identity prose
-and quiz rationale. Reviewers will receive the same frozen committed
-snapshot, rubric, raw source records and source access, sequentially.
-No actual reviewer inspection or model-complementarity result is
-claimed yet.
+Frozen initial snapshot: `af76f9749ff054e09d47489cb9fda30709bef104`.
+[GPT initial](n2-vocabulary-reviews/batch-89-gpt-initial.md) used
+`gpt-6.1-sol`: 31 sequential starts and actual returns, maximum one
+outstanding. [Claude initial](n2-vocabulary-reviews/batch-89-claude-initial.md)
+used `claude-opus-5.5`: twelve starts, ten successful returns and two
+interrupted starts, maximum two outstanding. GPT exited before Claude
+started. Claude was stopped on overlap, then completed its entire native
+report in the original session with zero tools and no author adjudication
+or GPT findings. Both complete reports are native-authenticated and
+preserved verbatim. Initial reviewers received the same blind snapshot,
+rubric, raw records and source access; actual additional inspection differs.
+
+Corrective author reads cover 28 complete families / 74 senses and
+22 full word bodies, including twelve older articles. The distinct union
+is 435 families / 1,067 senses / 164 older bodies. Both earlier completed
+receipts remain unchanged. The pinned financial families have one sense
+each; GPT's live dictionary's separately numbered financial sense is not
+silently imported into the pinned record.
+
+Five direct quiz safeguards are added: 領収 with 集金/集める, and 寮
+with 住居/住まい/住宅. Each has applicable whole-body/family evidence;
+the broad residence/collection judgments remain conservative curation,
+not unrestricted substitution or a thematic clique. Both models identify
+the excessive 流域/範囲 pair, which is removed. Assigned declarations
+change from 78 to 82. No old word card is modified.
+
+Teaching corrections qualify 来日's arrival-from-abroad context without
+an absolute nationality rule; explicitly recognize the public dictionary's
+business ランチ cross-reference without changing pinned identities or N2
+assignments; and add a person-targeted 乱暴する example and assault
+caution. Its previous sexual-assault acknowledgment remains explicit.
+The source mappings, selected senses, six related kanji and all baseline
+invariants are unchanged.
+
+**Model complementarity:** the excessive range guard is shared.
+住まい/住居 housing ambiguity is also shared: Claude raised it in
+Limits, while GPT supplied fuller evidence. GPT uniquely contributes the
+financial safeguards; 住宅 extends the shared housing concern. Claude
+uniquely prompts the three qualified usage improvements, although two
+criticisms overstate omissions in the original wording. Optional expansion
+is not promoted to defects; no unsupported りょうそく frequency claim
+or unqualified 略す/略する identity assertion is adopted. This is
+sample-specific complementarity, not a model ranking or measured
+bias-reduction result.
 
 ## Batch 88: N2:1742-N2:1761
 

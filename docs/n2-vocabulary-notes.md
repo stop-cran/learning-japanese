@@ -49,6 +49,9 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
 - ランチ retains the supplied lunch/lunch-set anchor and explicitly
   separates the launch-boat identity as additional recognition.
   Product launch and ranch are not imported into the lunch family.
+  Review adds the public dictionary's business-use cross-reference
+  as recognition only; it is not a spelling in the pinned ローンチ
+  family or a separately established N2 assignment.
   ランニング teaches both the activity and the abbreviated singlet;
   ordinary undershirt senses of シャツ/肌着 are considered.
 - 乱暴 selects violence/rowdiness and rough/reckless handling without
@@ -76,11 +79,26 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   乱/乱暴, 暴/乱暴, 略/略す, 域/流域, 漁/漁師,
   領/領事 and 領/領収. Existing kanji metadata and unrelated
   examples are preserved. Missing component cards are not invented.
-- Quiz declarations are provisional author curation, not independent
-  certification. Complete applicable senses and older bodies inform
-  direct pairs; neither shared themes, POS differences nor a transitive
-  synonym chain establish a pair. Initial GPT and Claude reviews,
-  reconciliation and sample-specific complementarity notes are pending.
+- Corrective reads after both independent reports cover 28 complete
+  families / 74 senses and 22 whole bodies, including twelve older
+  articles. The distinct union is 435 / 1,067 / 164, not a rewrite
+  of either earlier completed-read receipt. The two collection
+  families and the business ローンチ family add three identities.
+- Review adds five individually assessed financial/residential guards,
+  removes the excessive 流域/範囲 guard and qualifies three usage
+  explanations. Assigned declarations change from 78 to 82.
+  Broad residence/collection-label protection is conservative editorial
+  curation, not unrestricted synonymy. No old word article changes.
+- GPT and Claude share the range-guard finding and housing hypothesis,
+  even though Claude leaves the latter in Limits. GPT uniquely adds
+  financial safeguards; Claude prompts qualified 来日/businessランチ/
+  person-targeted乱暴 guidance. Compare all report sections before
+  crediting unique contributions. Initial reviews are independent;
+  original-session post-fix confirmations are pending.
+- Claude was stopped on two overlapping native calls; its full report
+  was completed in the original session with zero tools and no outside
+  findings. Equal evidence is not equal inspection or measured bias
+  reduction. The original captured reports remain unchanged.
 
 ## Batch 88 authoring observations
 
