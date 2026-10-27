@@ -180,7 +180,9 @@ publication readiness. Normal runtime/app checks remain exact-approval gated.
 
 B implements finite app limits of **48 MiB downloaded ZIP / 64 MiB retained** and content
 publishing guards of **42 MiB compressed / 56 MiB retained / 20 MiB combined task media**.
-Inflation stays at 80 MiB publishing / 100 MiB app; entry limits remain 7,000 / 8,000.
+Inflation stays at 80 MiB publishing / 100 MiB app. The
+[N2 archive packaging adjustment](../README.md#app-archive-packaging) excludes contributor-only folders
+and raises the publishing entry guard to 7,980; the app's 8,000-entry hard limit is unchanged.
 Per-file audio/image limits, codec/path checks and hash/approval bindings are unchanged.
 
 The last baseline public archive was 28,426,795 bytes, with 4,841,326 bytes of task media.

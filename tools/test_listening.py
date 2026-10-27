@@ -1,12 +1,17 @@
 import copy
 import hashlib
+import io
 import json
 from pathlib import Path
+import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
+import zipfile
 
 import build_manifest
-from check_content_budget import check
+import check_content_budget as budget_tool
+from check_content_budget import archive_names, check
 from validate_listening import content_hash, validate_document
 
 
@@ -93,6 +98,58 @@ class ListeningTests(unittest.TestCase):
             (root / "audio" / "a.ogg").write_bytes(b"x" * (512 * 1024 + 1))
             with self.assertRaisesRegex(ValueError, "per-file"):
                 check(root, ["audio/a.ogg"])
+
+    def test_budget_inventory_matches_git_archive_and_keeps_untracked_runtime_files(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            attributes = (Path(__file__).resolve().parent.parent / ".gitattributes").read_bytes()
+            (root / ".gitattributes").write_bytes(attributes + b"\n/words/example.md -export-ignore\n")
+            runtime = ["words/example.md", "audio/example.ogg", "manifest.json", "README.md"]
+            authoring = ["docs/evidence.json", "tools/example.py", ".github/workflows/example.yml"]
+            for name in runtime + authoring + ["skipped.txt"]:
+                path = root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(b"fixture")
+            digest = hashlib.sha256(b"fixture").hexdigest()
+            (root / "manifest.json").write_text(json.dumps({
+                "files": {"words/example.md": digest}, "audio": {"audio/example.ogg": digest},
+            }), encoding="utf-8")
+            subprocess.run(["git", "init", "--quiet"], cwd=root, check=True, capture_output=True)
+            subprocess.run(["git", "add", "--all"], cwd=root, check=True, capture_output=True)
+            tree = subprocess.check_output(["git", "write-tree"], cwd=root).decode().strip()
+            raw = subprocess.check_output(
+                ["git", "archive", "--format=zip", "--prefix=repository/", tree], cwd=root,
+            )
+            with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+                files = {item.filename.removeprefix("repository/") for item in archive.infolist()
+                         if not item.is_dir()}
+                entry_count = len(archive.infolist())
+            names = archive_names(root)
+            self.assertEqual(files, set(names))
+            self.assertEqual(set(runtime + ["skipped.txt", ".gitattributes"]), set(names))
+            self.assertEqual(entry_count, check(root, names)["entries"])
+            self.assertEqual(0, len(set(authoring) & set(names)))
+            (root / "words" / "new.md").write_bytes(b"new")
+            (root / "docs" / "new.json").write_bytes(b"new")
+            self.assertIn("words/new.md", archive_names(root))
+            self.assertNotIn("docs/new.json", archive_names(root))
+            for name in ("manifest.json", "words/example.md", "audio/example.ogg"):
+                with self.subTest(excluded=name):
+                    (root / ".gitattributes").write_bytes(
+                        attributes + f"\n/{name} export-ignore\n".encode("utf-8"))
+                    with self.assertRaisesRegex(ValueError, "manifest/runtime"):
+                        archive_names(root)
+
+    def test_entry_budget_is_inclusive_and_stays_below_android_hard_limit(self):
+        self.assertLess(budget_tool.MAX_ENTRIES, 8000)
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "manifest.json").write_bytes(b"{}")
+            with patch.object(budget_tool, "MAX_ENTRIES", 2):
+                self.assertEqual(2, check(root, ["manifest.json"])["entries"])
+            with patch.object(budget_tool, "MAX_ENTRIES", 1):
+                with self.assertRaisesRegex(ValueError, "entry"):
+                    check(root, ["manifest.json"])
 
 
 if __name__ == "__main__":

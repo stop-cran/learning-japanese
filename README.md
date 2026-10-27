@@ -177,6 +177,23 @@ provisional notation and links to existing material, not yet a complete usage re
 Kanji cards, word articles and stroke data feed the [Ensō Nihongo Android app](https://github.com/stop-cran/kanji-cards-android). The
 format is described in [docs/content-format.md](docs/content-format.md); data sources are in [NOTICE.md](NOTICE.md).
 
+### App archive packaging
+
+GitHub source ZIPs omit `.github/`, `docs/` and `tools/` using `.gitattributes` `export-ignore`.
+These contributor instructions, source ledgers, review evidence and tools remain available in Git,
+the web interface and clones; no runtime content or manifest entry is excluded.
+Use a clone rather than a source ZIP when contributing or inspecting the complete audit trail.
+
+`python tools/check_content_budget.py` checks exportable working-tree files, including untracked
+runtime additions and any non-runtime files that still ship, and rejects exclusions of the manifest
+or any manifested runtime file. The N2 integration raises only the
+publishing entry guard from 7,000 to **7,980**, below Android's unchanged **8,000-entry** hard limit.
+The compressed, inflated, retained and per-file byte guards are unchanged. Entry headroom is now
+small: further expansion may require a coordinated capacity change, not automatic limit increases.
+Before publication, check the exact GitHub ZIP and every manifested file/hash as well as local budgets.
+
+### Content inventory
+
 - `kanji/` – one card per kanji (985): meaning, radical, readings, common words, and origin notes or explicitly labelled modern-shape mnemonics.
   The deck covers all 79 N5, 166 N4, 367 N3 and 367 N2 kanji in the selected [kanjiapi.dev](https://kanjiapi.dev) community sets.
   It also includes 分 as a documented N5 exception and five N1 article-subject additions:

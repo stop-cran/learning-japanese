@@ -115,6 +115,10 @@ the [content format](../docs/content-format.md) remains canonical.
 - Close rows only after evidence-based reconciliation. Audit exact source membership, baseline preservation,
   required links and report coverage; keep source-row, distinct-article and link-pair counts separate.
   Archive hashes establish byte consistency, not comprehension or a fresh linguistic review.
+- Validate the combined current-main tree before publication, not just each expansion branch.
+  The N2 merge passed content checks but exceeded archive limits. Follow the
+  [archive packaging contract](../README.md#app-archive-packaging), run the CI budget check and verify
+  the exact GitHub ZIP preserves every runtime manifest entry/hash; keep authoring evidence in Git.
 
 ## Worked example: an attachment rule left implicit
 
@@ -207,3 +211,8 @@ For each revision of the review rules, add a rule grounded in an observed failur
   repeated-read run and contradicted serial-execution claim. The
   [retrospective](../docs/n2-vocabulary-notes.md#n2-project-retrospective) links the preserved evidence.
   Consolidate reusable lessons here without turning historical inspection receipts into linguistic certification.
+- **2026-10-27 - Integrated archive delivery (add):** Merging the completed N2 deck with newer main
+  produced 8,856 ZIP entries and 127.1 MiB inflated, exceeding the app's 8,000-entry / 100-MiB limits
+  despite clean content checks. Exclude contributor-only folders from downloadable archives, retain
+  their evidence in Git and check the actual combined delivery. The bounded publishing entry adjustment
+  is explicit in the packaging contract; Android hard limits and byte guards remain unchanged.

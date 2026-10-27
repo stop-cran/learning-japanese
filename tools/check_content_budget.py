@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import io
+import json
 import subprocess
 import zipfile
 from pathlib import Path
@@ -9,7 +10,7 @@ from pathlib import Path
 MAX_RETAINED = 56 * 1024 * 1024
 MAX_INFLATED = 80 * 1024 * 1024
 MAX_COMPRESSED = 42 * 1024 * 1024
-MAX_ENTRIES = 7000
+MAX_ENTRIES = 7980
 MAX_TASK_MEDIA = 20 * 1024 * 1024
 CONTENT_FOLDERS = {
     "kanji", "words", "articles", "strokes", "counters", "grammar", "scenes", "listening", "audio",
@@ -62,12 +63,28 @@ def check(root: Path, names: list[str]) -> dict:
             "listeningTaskMediaBytes": task_media}
 
 
+def archive_names(root: Path) -> list[str]:
+    names = subprocess.check_output(
+        ["git", "ls-files", "-c", "-o", "--exclude-standard", "-z", "--",
+         ":(exclude,attr:export-ignore)"], cwd=root,
+    ).decode("utf-8").split("\0")
+    names = [name for name in names if name]
+    manifest_path = root / "manifest.json"
+    if manifest_path.is_file():
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        required = {"manifest.json"} | {
+            name for section in manifest.values() if isinstance(section, dict) for name in section
+        }
+        missing = required - set(names)
+        if missing:
+            raise ValueError(f"export-ignore hides {len(missing)} manifest/runtime file(s): "
+                             f"{', '.join(sorted(missing)[:5])}")
+    return names
+
+
 def main() -> None:
     root = Path(__file__).resolve().parent.parent
-    names = subprocess.check_output(
-        ["git", "ls-files", "-c", "-o", "--exclude-standard", "-z"], cwd=root,
-    ).decode("utf-8").split("\0")
-    print(check(root, [name for name in names if name]))
+    print(check(root, archive_names(root)))
 
 
 if __name__ == "__main__":
