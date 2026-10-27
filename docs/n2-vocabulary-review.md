@@ -28,7 +28,8 @@ Planning batch numbers are scheduling aids, not claims that a batch has been aut
 
 ## Batch 91: N2:1802-N2:1813
 
-**Status:** draft; independent sequential GPT and Claude review pending.
+**Status:** draft; independent initial reviews reconciled;
+original-session post-fix confirmations pending.
 
 Twelve physical additions complete the initial mapping of all 1,812
 pinned source rows. There is no baseline reuse or older-word edit.
@@ -63,6 +64,72 @@ Initial quiz declarations are provisional author curation, not an
 independently accepted result. Both missing and excessive safeguards
 remain in scope. No final acceptance, closed coverage or measured
 bias-reduction claim is made before the independent reviews.
+
+### Batch 91 initial reviews and reconciliation
+
+The frozen draft is `28ac612d4bd09064cc9c102fa6abd0d84c168434`.
+Complete verbatim reports are archived as
+[GPT initial](n2-vocabulary-reviews/batch-91-gpt-initial.md), actual
+`gpt-6.1-sol`, and
+[Claude initial](n2-vocabulary-reviews/batch-91-claude-initial.md),
+actual `claude-opus-5.5`. Both initial sessions received the same
+snapshot, rubric and common evidence, blind to the other's findings
+and author adjudication. Native messages, prompts, models and zero
+edits are authenticated.
+
+Both identify the missing 分かれる/別 direct safeguard.
+Claude separately identifies 割り算/等分, useful 杯 and concrete
+vessel-name guidance, and an initially unverified 詫びる register
+question. The full public 謝る usage note now confirms the qualified
+formal/written tendency and お詫び申し上げます formula.
+Six new cards change; two safeguards are added, **84 to 86
+declarations**. Six other new cards, all source mappings/raw fields,
+all older word bodies and the narrow 算 edit remain unchanged.
+
+The bowl changes address practical coverage without adopting
+unsupported allegations that bare 椀/碗 or their counters are
+categorically unnatural, rare or formally exclusive. 茶碗/お椀 and
+杯/はい with 三杯/さんばい supply useful serving examples; the
+attested 一椀の吸い物 retains わん-counter recognition.
+The stronger naturalness allegation remains unproved, not a
+consequential claim taught by the revised cards.
+
+The degree-adverb uncertainty is shared across GPT Findings and
+Claude Limits, not unique to GPT. Retain the conservative direct
+guards after separately checking applicable 大分, 割に and 割合
+expectation/comparison meanings. Do not import 大部's "fairly" gloss
+or infer pairs transitively through かなり. Actual full senses/bodies
+also support the retained tea-vessel and broad lowering safeguards.
+Defer the plant-object 枝 suggestion and optional vocabulary/counter
+expansion. The attested 拍手が湧く replaces an unchecked collocation;
+this is not evidence that the earlier 歓声 expression was wrong.
+
+Corrective author inspection covers **27 complete families /
+50 senses / sixteen whole older bodies**, nine positive public
+wrappers and a separate complete かなり usage comparison from the
+same dictionary authority. お椀 yielded no lexical body; 一椀 and
+一碗 returned 404. Those three failures are not verification.
+Only six families / eleven senses and two older bodies are new:
+the deduplicated union is **208 families / 426 senses / 85 older
+bodies**. Original seals remain unchanged.
+
+GPT made 35 serial native calls, all completed, maximum one
+outstanding. Claude's overlapping calls caused interruption:
+the complete native stream records **25 starts / 20 completions /
+five interrupted calls / maximum five outstanding**, not the
+verbatim report's self-count of 24/19. A zero-tool resumption of
+that same session produced its complete report without outside
+findings. GPT's process exited before Claude started; neither
+reviewer remained running afterward. Equal access did not mean
+equal actual inspection.
+
+The verified complementary contributions are useful on this
+sample, not a controlled bias-reduction experiment. GPT has no
+unique verified actionable defect after deduplicating the complete
+reports; its 大部/大分 distinction usefully sharpened the shared
+degree question. Original-session confirmations must evaluate
+the actual correction diff, complete revised bodies and precise
+supporting evidence before these final twelve rows can close.
 
 ## Batch 90: N2:1782-N2:1801
 

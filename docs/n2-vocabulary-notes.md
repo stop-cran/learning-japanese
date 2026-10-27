@@ -73,9 +73,45 @@ There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present 
   assess excessive as well as missing pairs; broad categories,
   POS differences and shared sounds do not settle the question.
   The existing confusable inventory was considered when adding titles.
-- Sequential independent GPT and Claude review is still pending.
-  Equal source access will not establish equal actual inspection
-  or quantify model-bias reduction.
+- Sequential independent GPT and Claude initial reviews are complete;
+  original-session post-fix confirmations are pending. Corrective
+  inspection adds six distinct families / eleven senses and two
+  older bodies, giving 208 families / 426 senses / 85 older bodies.
+  The 27 corrective families / 50 senses and sixteen bodies include
+  rereads, not 27 new identities. Ten positive corrective public
+  wrappers come from the same authority; three failed requests do
+  not count as verification.
+- Both reviewers found the missing 分かれる/別 safeguard.
+  Claude additionally identified 割り算/等分 and useful practical
+  serving-counter guidance. Its initially unverified register
+  hypothesis is now confirmed by the full 謝る usage note:
+  詫びる tends to be more formal/written than conversational 謝る.
+  Teach that qualified contrast without guaranteeing forgiveness
+  or specifying the exact words used.
+- Bowl examples now use 茶碗/お椀 and explain 杯/はい,
+  including 三杯/さんばい. The attested 一椀の吸い物 preserves
+  わん-counter recognition. Absent dictionary priority tags do
+  not prove bare nouns/counters unnatural, rare or formally exclusive;
+  those stronger reviewer allegations were not adopted.
+- Both reports raise degree-adverb over-guard uncertainty, even
+  though one places it in Findings and the other in Limits.
+  Retain the conservative direct pairs after inspecting applicable
+  大分, 割に and 割合 expectation/comparison meanings. Do not
+  transfer the homophonous 大部 entry's "fairly" gloss or rely
+  on a transitive かなり chain. Context-dependent overlap does
+  not imply a fixed intensity scale or unrestricted substitution.
+- Replace the unchecked 歓声 collocation with attested 拍手が湧く
+  and call 湧く/沸く separate words sharing a reading, not mere
+  spelling variants. This does not establish that the old collocation
+  was incorrect. Optional vocabulary/counter expansion stays deferred.
+- Initial GPT retrieval was serial: 35 native starts/35 completions,
+  maximum one outstanding call. Claude breached the serial bound:
+  25 starts/20 completions/five interrupted calls, maximum five,
+  followed by a zero-tool report in its original session. Its
+  verbatim 19/24 self-count is not authoritative. Processes were
+  sequential and exited before the next reviewer started.
+  Complementary useful observations do not establish equal actual
+  inspection or measured model-bias reduction.
 
 ## Batch 90 authoring observations
 
