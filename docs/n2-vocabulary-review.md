@@ -5,7 +5,7 @@
 **Batches 01-90 review-closed.** The target is all 1,812 source rows,
 not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-sources.tsv)
 preserves every row; empty teaching columns mean the mapping has not yet been established.
-The first 1,800 rows are review-closed; 12 remain pending.
+The first 1,800 rows are review-closed; the final 12 are drafted and awaiting review.
 None are unresolved.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
@@ -25,6 +25,44 @@ See the [plan and authoring notes](n2-vocabulary-notes.md) and
 Rows may share an article but retain their own status, source identity, selected senses and notes.
 `article_level` is the actual article's easiest sourced level, not a replacement for source N2.
 Planning batch numbers are scheduling aids, not claims that a batch has been authored.
+
+## Batch 91: N2:1802-N2:1813
+
+**Status:** draft; independent sequential GPT and Claude review pending.
+
+Twelve physical additions complete the initial mapping of all 1,812
+pinned source rows. There is no baseline reuse or older-word edit.
+The original completed author inspection is 195 complete families /
+395 senses, 77 complete older bodies, sixteen component records,
+one complete 算 article and twelve complete public wrappers from
+one dictionary authority. Eight family chunks and ten older-body
+chunks were actually read. The 126 initial labels are navigation,
+not full-card inspection.
+
+A separate pre-draft extension adds seven full families and six
+complete older bodies. The final union is 202 families / 415 senses /
+83 older bodies; 135 final labels remain navigation. Original
+prepared plans and sealed counts are preserved rather than rewritten.
+The [source packet](n2-vocabulary-batch-sources/batch-91.json) retains
+raw source fields, compatible selected senses, complete applicable
+families, component evidence and capture hashes.
+
+分かれる is not remapped to interpersonal 別れる; 湧く is not
+remapped to boiling 沸く. The latter source's mixed gloss is explicitly
+corrected. Kana わりあいに maps to 割合に, and 割算 maps to
+割り算 with source-spelling recognition. 椀/碗 retain their separate
+pinned identities and acknowledge real vessel/counter overlap rather
+than imposing universally exclusive material rules.
+
+算/割り算 is the one new reciprocal N2 pair. The kanji's metadata,
+unrelated teaching and careful source-only そろ qualification are
+preserved. All twelve new cards retain their full primary written
+kanji; absent component cards do not produce broken links.
+
+Initial quiz declarations are provisional author curation, not an
+independently accepted result. Both missing and excessive safeguards
+remain in scope. No final acceptance, closed coverage or measured
+bias-reduction claim is made before the independent reviews.
 
 ## Batch 90: N2:1782-N2:1801
 

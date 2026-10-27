@@ -19,6 +19,64 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Batch 91 authoring observations
+
+- The final twelve source rows, N2:1802-N2:1813, now have twelve
+  draft articles. All 1,812 source rows are mapped, but the last
+  twelve are not review-closed. No baseline article is reused or edited.
+- The original actual-read seal covers 195 complete families /
+  395 senses, 77 full older articles, one full related kanji,
+  sixteen component records and twelve positive public wrappers
+  from one Digital Daijisen authority. All eight family and ten
+  older-body chunks were read; 126 labels are navigation only.
+  A separate pre-draft extension adds seven complete families and
+  six older bodies: the final union is 202 families / 415 senses /
+  83 older bodies, with 135 final navigation labels. Neither seal
+  claims independent linguistic certification.
+- 分かれる and 別れる remain distinct identities despite their shared
+  reading. Branching and subject/result division differ from
+  transitive 分ける and interpersonal parting. 若々しい describes
+  youthfulness without requiring a young chronological age;
+  the public literary childlike use is qualified separately.
+- The source 湧く gloss mixes in boiling/heating from separate
+  沸く. Preserve the raw source while correcting the teaching
+  against the applicable pinned families. Emerging water and
+  boiling water differ; related figurative emotional contexts
+  must not be declared absolutely disjoint.
+- 詫びる teaches person に and conduct を, distinguishes an
+  apology act from formulas and regret, and does not turn its
+  historical connection with 侘びる into modern spelling equivalence.
+  和服 concerns traditional style, not manufacturing location.
+- Kana source わりあいに maps to 割合に, with both written kanji
+  retained. The public 割合 wrapper explicitly supports the
+  standalone に adverb; its ratio noun is not assigned to that row.
+  割と is a relative degree assessment, not むしろ alternative selection.
+- Source 割算 maps to 割り算 with explicit alternate-spelling
+  recognition. The native-first mixed わり + サン, voiced to ざん,
+  follows the existing 引き算/掛け算 classification. 算/割り算
+  is the new reciprocal N2 pair; the kanji metadata and source-only
+  そろ qualification remain unchanged.
+- 割引 distinguishes noun/counter POS in the pinned record from
+  independently public-supported する usage. 二割引 means 20 percent
+  off, leaving 80 percent, not a 20-percent final price.
+- 椀 and 碗 retain separate pinned families while acknowledging
+  the public combined わん heading, material tendencies and shared
+  bowlful counter. The direct exclusion is for actual overlap,
+  not mere homophony. Obsolete もい/まり headings and geographic 湾
+  are not imported into the bowl identities.
+- ワンピース teaches a dress and one-piece construction, including
+  の before 水着, not every English "one piece" or the separate
+  manga/media name. 湧, 詫, 椀 and 碗 stay in word metadata even
+  without corresponding kanji cards or invented links.
+- Initial declarations are provisional direct pairs checked against
+  applicable full senses and bodies. Independent reviewers must
+  assess excessive as well as missing pairs; broad categories,
+  POS differences and shared sounds do not settle the question.
+  The existing confusable inventory was considered when adding titles.
+- Sequential independent GPT and Claude review is still pending.
+  Equal source access will not establish equal actual inspection
+  or quantify model-bias reduction.
+
 ## Batch 90 authoring observations
 
 - N2:1782-N2:1801 draft nineteen new articles from 留守番 through
