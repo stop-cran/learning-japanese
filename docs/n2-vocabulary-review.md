@@ -7,7 +7,7 @@ not 1,812 necessarily distinct new articles. The [source index](n2-vocabulary-so
 preserves every row; empty teaching columns mean the mapping has not yet been established.
 All 1,812 rows are review-closed, mapped to 1,793 distinct articles:
 1,669 new and 124 reused. None are pending, drafted or unresolved.
-The final overall completion audit is still pending.
+The [final overall completion audit](n2-vocabulary-completion-audit.json) is complete.
 
 Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 `jlpt-n2-vocabulary` branch. The completed kanji work is separately pushed as
@@ -15,6 +15,50 @@ Baseline: `f1a93f249b78ae87c8233da1fbb48e92f02d4b44` on the local
 
 See the [plan and authoring notes](n2-vocabulary-notes.md) and
 [pinned source snapshot](n2-vocabulary-snapshot.json).
+
+## Completion audit
+
+The accepted content through
+`3b612d0c90777f7e994a0189bf119f98dc6019eb` covers the complete
+pinned community list. All 91 closed packets match their assigned
+physical rows, raw fields, article mappings, selected senses and
+explicit identity/spelling qualifications. Six historical source-note
+clarifications match their documented authored/current versions.
+A fresh pinned-XML extraction matches all **25,015 recorded family
+occurrences / 9,155 distinct families**; this is a mechanical
+comparison, not a new linguistic rereview.
+
+Both model families have an initial and post-review report for every
+batch. All **412 archive files** remain present, including follow-ups,
+addenda and batch 83's final reports; all **328 embedded report-hash
+references** match preserved archives. This final check does not
+repeat every historical native-session authentication or conceal
+the process/inspection limitations recorded below.
+
+All **3,273 baseline metadata records** were independently compared
+with their actual Git archive, then checked against the current
+collection. Original identities, readings, titles, written kanji,
+easier levels and exclusions are preserved with only the documented
+additive quiz and newly sourced level exceptions. All vocabulary
+commits after baseline through content closure have stop-cran as
+both author and committer.
+
+The final collection has **4,942 word articles** and **425 primary
+reciprocal N2 pairs across mapped words: 375 new-article pairs and
+50 baseline-reuse pairs**. Both relative links exist for every pair;
+the earlier incremental 375/383 historical/scoped accounting remains
+separately recorded. The structural validator
+reports zero errors, and two manifest rebuilds reproduce
+**`63c5647b9b8f4336`** without changing accepted content.
+The snapshot now marks the expansion complete; the README reflects
+the actual article and level counts.
+
+Dual-model review supplied useful complementary observations on
+these samples, as detailed per batch, but unequal inspection,
+withdrawn hypotheses and optional suggestions preclude a general
+model ranking or measured bias-reduction claim. Completion means
+all pinned rows are covered and review-closed, not official JLPT,
+native-speaker, corpus-frequency or live-quiz certification.
 
 ## Coverage states
 
@@ -178,8 +222,8 @@ this final batch adds no baseline exception.
 
 Coverage is now **1,812 closed / 0 draft / 0 pending /
 0 unresolved**, mapped to **1,793 articles: 1,669 new / 124 reused**.
-All 91 batches are review-closed; the separate overall completion
-audit remains pending. Scoped CLEAN does not mean official JLPT,
+At this batch's closure, the separate overall completion audit was
+still pending; its final result is recorded above. Scoped CLEAN does not mean official JLPT,
 exhaustive corpus, native-speaker, frequency or live-quiz certification.
 
 ## Batch 90: N2:1782-N2:1801

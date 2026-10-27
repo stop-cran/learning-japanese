@@ -19,6 +19,42 @@ candidates. These **151 candidate rows are not verified coverage**. The other 1,
 have neither candidate; none of these counts establishes the eventual number of new articles.
 There are 1,808 distinct source forms and 1,794 supplied entry IDs, all present in the pinned JMdict.
 
+## Completion
+
+All **1,812 source rows are review-closed**, with no pending, draft or unresolved rows.
+They map to **1,793 distinct articles: 1,669 additions and 124 baseline reuses**.
+All 91 batches retain independent GPT/Claude initial reports, evidence-based
+reconciliation and post-review confirmations or final reports. Historical
+interrupted runs, unequal inspection depth and optional suggestions remain
+documented rather than being rewritten as successful verification.
+
+The [completion audit](n2-vocabulary-completion-audit.json) checks every packet
+against the source index and raw CSV. A fresh extraction of the pinned XML
+matches all 25,015 recorded family occurrences, representing 9,155 distinct
+families. These are mechanical comparisons, not another linguistic inspection.
+All 412 review archives are preserved, and all 328 embedded report-hash
+references match archived reports.
+
+The 3,273 baseline metadata records were checked against their actual Git
+archive. Identities, readings, titles, written kanji, easier levels and original
+exclusions remain preserved, with explicitly audited additive safeguards and
+new level assignments for previously unclassified words. Reviewed body changes
+and spelling-recognition additions remain in their owning batch records.
+All 425 primary N2 pairs across mapped words link both ways: 375 involve
+new articles and 50 involve baseline reuses. The earlier incremental
+375/383 counts, including eight historical/scoped pairs, remain separately
+recorded rather than conflated with that all-mapped scope.
+The collection now contains 4,942 word articles.
+
+Using both model families supplied useful complementary observations on the
+reviewed samples: for example, GPT's later batch-83 巡る safeguards and
+Claude's batch-91 等分 and practical-usage concerns. Suggestions were also
+withdrawn or declined after evidence checks. This is not a controlled
+measurement of bias reduction, equal review depth or general model quality.
+The final audit changes documentation only; accepted teaching and manifest
+`63c5647b9b8f4336` are unchanged. Coverage remains a claim about the pinned
+community list, not an official JLPT syllabus or exhaustive usage certification.
+
 ## Batch 91 authoring observations
 
 - The final twelve source rows, N2:1802-N2:1813, have twelve

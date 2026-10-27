@@ -43,14 +43,17 @@ format is described in [docs/content-format.md](docs/content-format.md); data so
   All 25 batches have independent GPT/Claude review and reconciled reports, including changed-passage confirmations.
   These community level sets are not official JLPT kanji lists.
   The `starter` tag identifies the original 118-card cohort, not the later expansions.
-- `words/` – one article per written word form (3,394): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
+- `words/` – one article per written word form (4,942): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
   Articles explain meaning, spelling or formation, synonyms, antonyms and usage distinctions.
   The selected community vocabulary list's 684 N5 and 640 additional N4 rows are covered by 1,308 articles:
   924 new articles and 384 reused ones. Multiple source readings can share an article.
   Its 1,730 additional N3 rows are covered by 1,698 articles: 1,490 new and 208 reused from the preceding collection.
   The level indexes overlap where an existing article teaches an additional reading or meaning.
-  The [N2 vocabulary expansion](docs/n2-vocabulary-review.md) is in progress against 1,812 further
-  source rows, with separate pending/draft/closed coverage and sequential independent GPT/Claude reviews.
+  The [N2 vocabulary expansion](docs/n2-vocabulary-review.md) covers all 1,812 further
+  source rows with 1,793 articles: 1,669 new and 124 reused. All 91 batches have sequential
+  independent GPT/Claude reviews, reconciled findings and post-review confirmations.
+  Word and applicable existing N2 kanji cards link reciprocally; the
+  [completion audit](docs/n2-vocabulary-completion-audit.json) records the exact coverage and limits.
 - `strokes/` – generated stroke data. Validate with `python tools/validate.py`.
 - `grammar/` – versioned, contrast-focused exercises for the app's Grammar section: the original 8-exercise pilot, an
   18-exercise foundations batch on nominalization and negative meanings, 12 exercises on ability, occurrence, decisions and
@@ -202,12 +205,14 @@ See the [level-source policy](docs/jlpt-levels.md) and the [N4](docs/n4-source-s
 and sense qualifications.
 The separate [N3 vocabulary snapshot](docs/n3-vocabulary-snapshot.json) and
 [source-row index](docs/n3-vocabulary-sources.tsv) extend that same pinned list and dictionary snapshot.
+The [N2 vocabulary snapshot](docs/n2-vocabulary-snapshot.json) and
+[source-row index](docs/n2-vocabulary-sources.tsv) cover its N2 rows using the later 2026-10-21 dictionary snapshot.
 The [article-subject snapshot](docs/article-subjects-source-snapshot.json) records the six additional kanji,
 17 new word cards, and reuse of 訳 for わけ, including dictionary-reading caveats and the 妖 level exception.
 作家 is shared with the N3 vocabulary expansion, so merging these additions adds 16 distinct word cards to that collection.
 
-Source-covered word articles carry their own `jlpt` metadata: 672 N5, 636 N4, 1,625 N3, three N2 and two N1 articles, independently of the kanji they contain.
-This article-level label does not assign every subsidiary sense or reading to that level. The remaining 272 articles have no
+Source-covered word articles carry their own `jlpt` metadata: 672 N5, 636 N4, 1,625 N3, 1,739 N2 and two N1 articles, independently of the kanji they contain.
+This article-level label does not assign every subsidiary sense or reading to that level. The remaining 268 articles have no
 sourced word-level label. In particular, the pinned list's N1 labels for くらい and だけ are not recommendations to postpone these basic particles.
 Vocabulary-aware app versions use explicit levels first and retain kanji-based inference only when the
 field is absent; older versions ignore word-level metadata. N4 study includes N5; N3 study includes both.
