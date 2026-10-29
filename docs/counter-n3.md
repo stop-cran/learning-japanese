@@ -1,6 +1,6 @@
 # N3 Numbers & counters: coverage and calibration contract
 
-Status: **corrective text and importer acceptance complete; full release acceptance incomplete**.
+Status: **corrective content and software/emulator acceptance complete; required physical-phone acceptance incomplete**.
 The initial matrix review and additional Marugoto B1 comparison found seven
 actionable issues, now [independently reconciled](counter-n3-review.json).
 Separate complete-pilot review found localized handout defects, now corrected
@@ -74,12 +74,26 @@ Packet context totals are not summed into a global independent-context count.
 The supported progression is practical intermediate breadth and selected
 finer distinctions, not a uniformly harder task staircase or measured transfer.
 
-The bounded native sample and local archive checks do not complete #55.
-The later signed release `3f8f8e8` completed an in-place upgrade and real public
-sync of content `f4242f2` through MainActivity/Settings. That establishes
-live-sync evidence, not the remaining N3-specific Activity/AppNav, lifecycle
-or physical-phone checks. Current-correction publication and release evidence
-remain separate from the historical local packet acceptance.
+The [current native receipt](counter-n3-native-acceptance.json) records six
+actual MainActivity/AppNav cases, including all counter modes and both new
+Grammar presentations, article Back, captured-scope continuation, real
+rotation, and settled keyboard controls at 200% text. Separate host-driven
+process deaths preserve counter home/N3 scope and restart targeted Grammar
+at its interrupted preview, without changing source review-state/log or
+Grammar-response hashes. Controlled local fixtures are not public transport.
+
+Corrective runtime `33988dec4053bdf7` is published at `3338671`, with compatible
+app `ed7b30f`. The actual immutable GitHub ZIP and all 8,047 payload hashes
+pass. Signed `3f8f8e8` and an in-place upgrade to signed `ed7b30f` both synced
+that public content through MainActivity/Settings; cumulative N5/N4/N3/All
+counts are **247/420/651/651**, with N3 scope retained across the upgrade.
+Exact revisions, CI links, archive/APK hashes and limits are in the
+[finalization receipt](counter-n3-finalization.json). These are later receipts,
+not claims that the historical candidates already passed these checks.
+
+No physical phone was connected. **#55 and #52 remain open for the recorded
+physical-phone acceptance gate.** Owner learning and effectiveness remain
+unverified; emulator and editorial evidence do not replace them.
 
 ## What this claim means
 

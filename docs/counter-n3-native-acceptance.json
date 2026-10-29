@@ -245,8 +245,70 @@
       ]
     }
   ],
-  "processDeath": "Pending separate host-driven true process-death check; rotation is not process death.",
-  "publicSync": "Pending separate signed public-transport receipt.",
+  "processDeath": {
+    "source": "acceptance-fixture/n3-eac5ad50-3229-4ac5-a9df-f83d238b68db",
+    "device": "emulator-5582",
+    "method": "Background, am kill, verify absence, relaunch retained task",
+    "counter": {
+      "oldPid": "8765",
+      "newPid": "9028",
+      "verifiedAbsentBetween": true,
+      "progressBeforeAndAfter": {
+        "review_log": {
+          "count": 2,
+          "sha256": "f1808cc309fc47fd209b2ce4569532dc953d12c75e033d1df881308f17398cfb"
+        },
+        "review_state": {
+          "count": 390,
+          "sha256": "9675c60cd839a98e9cb20d9ac3bffcb8cf95edaf48456607784f59e54ab1bfad"
+        },
+        "grammar_responses": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        }
+      },
+      "result": "Ephemeral counter question discarded; counter home and selected N3 scope retained; no phantom grading"
+    },
+    "grammar": {
+      "oldPid": "9028",
+      "newPid": "9495",
+      "verifiedAbsentBetween": true,
+      "progressBeforeAndAfter": {
+        "review_log": {
+          "count": 2,
+          "sha256": "f1808cc309fc47fd209b2ce4569532dc953d12c75e033d1df881308f17398cfb"
+        },
+        "review_state": {
+          "count": 390,
+          "sha256": "9675c60cd839a98e9cb20d9ac3bffcb8cf95edaf48456607784f59e54ab1bfad"
+        },
+        "grammar_responses": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        }
+      },
+      "result": "Targeted Grammar restored as a fresh preview with interruption notice, not an ephemeral question; no phantom grading"
+    },
+    "passed": true
+  },
+  "publicSync": {
+    "contentCommit": "3338671a46860a10bc4f014a1c7d79f4dbd60663",
+    "contentVersion": "33988dec4053bdf7",
+    "transport": "Actual unauthenticated public GitHub through signed MainActivity/Settings",
+    "device": "emulator-5582, API 35",
+    "physicalPhone": false,
+    "priorSignedAppSync": "Sync complete. Stored content: 985 kanji, 4942 words, 2431 grammar exercises, 76 listening packages.",
+    "publishedSignedAppSync": "Sync complete. Stored content: 985 kanji, 4942 words, 2431 grammar exercises, 76 listening packages.",
+    "counterMembershipCounts": {
+      "N5": 247,
+      "N4": 420,
+      "N3": 651,
+      "All": 651
+    },
+    "scopeSurvivedSignedUpgrade": true,
+    "appCommit": "ed7b30f43c8a6becec537cf2f342be3e6e71121c",
+    "passed": true
+  },
   "physicalPhone": "Not performed; only emulator-5580 and owned emulator-5582 were connected.",
   "learningEffectiveness": "Not evaluated.",
   "fixtureDevelopment": "Retained failed host-GPU, transient navigation, nested-scroll, clipping, duplicate-selector and UUID-selection attempts in the session. These were environment/harness issues, not production fixes. Final six-case batch passed. A one-item wrong queue ends without immediate repetition by existing Relearn policy; Again and later Hard were verified in separate sessions.",
