@@ -7,6 +7,12 @@ The second content batch expands the collection to **200 tagged cards** and seve
 The subsequent ぶかぶか addition brings the current collection to **201 tagged cards**.
 The learner-facing entry point is [Japanese onomatopoeia](../articles/japanese-onomatopoeia.md).
 
+The separate [Onomatopoeia in sentences](../articles/onomatopoeia-in-sentences.md) Grammar pilot
+uses twelve existing cards without changing the 201-word collection or its schedules.
+Its [source and coverage ledger](grammar-onomatopoeia-sources.json) records selected senses,
+construction boundaries and acceptance status; the [owner-trial protocol](grammar-onomatopoeia-trial.md)
+keeps learning effectiveness unverified until actual feedback. No expansion is implied.
+
 ## Selection and identity
 
 The set covers warmth, textures, cooking, weather, movement, voices, feelings, and several

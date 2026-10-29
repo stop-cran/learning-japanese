@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "issue": 58,
+  "inspectedOnUtc": "2026-10-29",
+  "baselineCommit": "d9de763ea207c678762397fc4cda50b86259cdab",
+  "appCommit": "871b0972eb65a0ec19cb693aa4f72fbf24fea96c",
+  "status": "accepted-bounded-pilot",
+  "scope": {
+    "words": 12,
+    "plannedExercises": 44,
+    "authoredExercises": 44,
+    "completionExercises": 40,
+    "explicitFormationExercises": 4,
+    "contextualCompletionExercises": 36,
+    "interpretationExercises": 4,
+    "groups": 4,
+    "facets": 11,
+    "distinctContextKeyStrings": 29,
+    "policy": "A representative word/sense/construction pilot, not all constructions of each word or certification of the 201-card collection. Four supplied-form transformations scaffold contextual use. Mixed practice revisits selected operations; it is not held-out transfer evidence.",
+    "levels": "All new tasks omit jlpt. Dictionary senses and existing word levels do not classify these complete Grammar tasks.",
+    "identityPolicy": "No word card, existing exercise object, existing group membership, level, exclusion or scheduling identity changes. New exercise IDs have independent existing Grammar schedules; accepted variants have no separate schedules."
+  },
+  "placement": {
+    "set": "onomatopoeia-sentences",
+    "article": "articles/onomatopoeia-in-sentences.md",
+    "chapter": "onomatopoeia-in-sentences",
+    "groups": [
+      "onomatopoeia-actions-reactions",
+      "onomatopoeia-people-things",
+      "onomatopoeia-mixed-scenes",
+      "onomatopoeia-description-reading"
+    ],
+    "entry": "Grammar, All or Unclassified for new material, then the Onomatopoeia in sentences chapter/set and targeted practice. The browser has its own scope: Clear search and browse filters, or Filters and next topic followed by All/Unclassified. Accessible list is an alternative to the diagram. Native Unclassified chapter/group and Article sets entry passed through production components.",
+    "newHardGates": 0,
+    "newRecommendations": 0,
+    "reason": "A cross-construction thematic chapter with supplied vocabulary. Prerequisite exposure to basic verbs, noun modification and state/change is helpful, but no new unsupplied compound operation justifies a hard gate. Root groups do not imply beginner language or word mastery.",
+    "compatibility": "Only existing schema-1 exercises, authored groups and the existing curriculum namespace. Older readers can ignore the catalog. Existing partial mappings, unowned compatibility exercises and all old edges remain unchanged."
+  },
+  "sources": [
+    {
+      "id": "jmdict-feelings",
+      "path": "docs/onomatopoeia-feelings-sources.json",
+      "scope": "Complete recorded reading/POS/sense families for the nine selected IDs, re-read on the inspection date. This reuses the pinned lexical snapshot, not a new upstream dictionary download.",
+      "license": "JMdict attribution and license remain in NOTICE.md and the reused ledger.",
+      "limits": "POS tags support candidate functions, not every possible suffix, collocation, frequency claim or exercise level."
+    },
+    {
+      "id": "jmdict-sensory",
+      "path": "docs/onomatopoeia-sensory-sources.json",
+      "scope": "Complete preserved entries/XML: 1003500 (きらきら), 1113060 (ふわふわ), including all senses and spelling arrays.",
+      "limits": "Only glittering light and fluffy texture are selected; floating, lightheadedness and figurative frivolity are not transferred into texture tasks."
+    },
+    {
+      "id": "buka-nikkoku",
+      "url": "https://kotobank.jp/word/ぶかぶか-616788",
+      "publisher": "Shogakukan, Seisenban Nihon Kokugo Daijiten via Kotobank",
+      "section": "ぶかぶか, adverb [1]3 and adjectival noun [2]1",
+      "evidence": "Oversized wearable fit; historical clothing する and an explicit の shoes example. The な road example belongs to the separate yielding-material sense and is not clothing-specific evidence.",
+      "limits": "Daijisen's body was absent from the simplified extraction. Weblio returned its generated-example section, not an independently inspected Daijisen definition. Neither is counted as fresh dictionary verification. Current clothing な/した examples are also reviewed against the existing card, not inferred from the road example."
+    },
+    {
+      "id": "fuwa-nikkoku",
+      "url": "https://kotobank.jp/word/ふわふわ-622898",
+      "publisher": "Shogakukan, Seisenban Nihon Kokugo Daijiten via Kotobank",
+      "section": "ふわふわ [1]1 and [2]",
+      "evidence": "Softly expanded texture; として example; adjectival use with な bedding and の feather-duster examples.",
+      "limits": "Historical examples establish documented use, not equal current frequency of every modifier."
+    },
+    {
+      "id": "shikkari-nikkoku",
+      "url": "https://kotobank.jp/word/確り-521135",
+      "publisher": "Shogakukan, Seisenban Nihon Kokugo Daijiten via Kotobank",
+      "section": "しっかり【確・聢】1, especially イ, ハ and ホ",
+      "evidence": "Optional と; dependable/solid characteristics and secure holding. Includes しっかりとした and しっかりしている descriptions.",
+      "limits": "The rare kanji headword is source navigation, not a new learner spelling requirement. Historical/intensive and market senses remain out of scope."
+    },
+    {
+      "id": "heto-daijisen",
+      "url": "https://kotobank.jp/word/へとへと-625303",
+      "publisher": "Shogakukan, Digital Daijisen via Kotobank",
+      "section": "へとへと, 形動",
+      "evidence": "Thorough exhaustion; explicit へとへとになる and linked-state へとへとで examples.",
+      "limits": "An ordinary state/change model, not a claim about every possible creative or historical verbal use."
+    },
+    {
+      "id": "peko-nikkoku",
+      "url": "https://kotobank.jp/word/ぺこぺこ-624764",
+      "publisher": "Shogakukan, Seisenban Nihon Kokugo Daijiten via Kotobank",
+      "section": "ぺこぺこ [1]1-3 and [2]",
+      "evidence": "Separates bowing, flexing/denting and hunger. Hunger has adjectival-noun use, but [1]3 also records historical 腹がペコペコして.",
+      "limits": "Do not teach an absolute hunger-plus-する ban. The pilot uses ordinary hunger state/change frames and rejects options only in the actual printed frame."
+    },
+    {
+      "id": "waku-daijisen",
+      "url": "https://kotobank.jp/word/わくわく-664916",
+      "publisher": "Shogakukan, Digital Daijisen via Kotobank",
+      "section": "わくわく, 副(スル), definition and first example",
+      "evidence": "Excited expectation; the example explicitly permits と before the causative させる. The historical worry qualification is retained as outside the selected modern eager-anticipation use."
+    },
+    {
+      "id": "doki-daijisen",
+      "url": "https://kotobank.jp/word/どきどき-582277",
+      "publisher": "Shogakukan, Digital Daijisen via Kotobank",
+      "section": "どきどき, 副(スル), definition and examples",
+      "evidence": "Pounding heartbeat from exertion or emotion; both exertion and anticipation/anxiety examples use する. Positive excitement is not compulsory."
+    },
+    {
+      "id": "niko-daijisen",
+      "url": "https://kotobank.jp/word/にこにこ-591473",
+      "publisher": "Shogakukan, Digital Daijisen via Kotobank",
+      "section": "にこにこ, 副(スル), definition and examples",
+      "evidence": "Explicit にこにこ(と)笑う and にこにこして話しかける. A visible friendly smile need not be laughter aloud or proof of sincerity."
+    },
+    {
+      "id": "kira-nikkoku",
+      "url": "https://kotobank.jp/word/きらきら-480077",
+      "publisher": "Shogakukan, Seisenban Nihon Kokugo Daijiten via Kotobank",
+      "section": "First きらきら entry, [1]1 and [2]",
+      "evidence": "Glittering light, often with と; separate historical adjectival and laughter entries exist.",
+      "limits": "Do not turn the preferred adverbial model into a universal に ban. Avoid unrelated song/fish names and historical laughter when reviewing this light sense."
+    },
+    {
+      "id": "review-register-and-state-change",
+      "inspectedBy": "independent initial content review",
+      "urls": [
+        "https://maggiesensei.com/2010/12/10/%E3%81%A8%E3%81%AA%E3%82%8B-vs-%E3%81%AB%E3%81%AA%E3%82%8B%E3%80%80-to-naru-vs-ni-naru/",
+        "https://nlab.itmedia.co.jp/cont/articles/3312456/",
+        "https://tanzawa-oyama.jp/feature/8770/",
+        "https://4travel.jp/travelogue/11628322"
+      ],
+      "evidence": "The teaching discussion supplies an everyday に versus written/formal と register distinction, but its broad na-adjective restriction is not adopted as an exceptionless rule. Contemporary edited event prose attests へとへととなった; hiking and travel accounts attest hunger-sense ペコペコとなった. These corroborate the selected alternatives rather than transfer bowing or denting into hunger.",
+      "limits": "Exact usage attestations are not a frequency survey. The guide retains に as the everyday state-change model; no equal-frequency or unrestricted suffix-product claim."
+    },
+    {
+      "id": "review-fit-texture-reaction",
+      "inspectedBy": "independent initial content review",
+      "urls": [
+        "https://oremasu-fishing.com/gear/ore_article_07/",
+        "https://ameblo.jp/aruch-life/entry-12192447268.html",
+        "https://sentencetonami.hatenablog.com/entry/apple-bread",
+        "https://www.zaitsu-clinic.com/2018/05/08/553/",
+        "https://www.tofugu.com/japanese-grammar/verb-continuous-form-teiru/"
+      ],
+      "evidence": "Footwear-fit とする, fluffy bread/texture する noun descriptions, and exertion-related heartbeat とする were checked separately against actual same-sense passages. The ている explanation supports ordinary てる contraction.",
+      "limits": "Product reviews and private blogs are corroborating usage, not independent grammar authorities or comparative-frequency evidence. The clinical page is used only for language attestation, not medical advice."
+    }
+  ],
+  "wordConstructionMatrix": [
+    {"word": "ぐっすり", "entry": "1004060", "sense": "1: sound sleep", "operations": ["adverbial"], "sources": ["jmdict-feelings"], "restriction": "Retain the supplied sleep verb; no universal する or な model.", "exercises": ["sleep-noise", "sleep-call", "mixed-sleep-wish"]},
+    {"word": "そっと", "entry": "1006810", "sense": "1: gentle/quiet handling", "operations": ["adverbial"], "sources": ["jmdict-feelings"], "restriction": "The final と is part of the supplied word; do not add another と. Emphatic lengthening and the separate しておく idiom are not elicited.", "exercises": ["touch-cat", "handle-photo", "mixed-chair"]},
+    {"word": "きらきら", "entry": "1003500", "sense": "1: glittering light", "operations": ["adverbial"], "sources": ["jmdict-sensory", "kira-nikkoku"], "restriction": "Light reflected by frost or moving costume; retain the supplied light verb, not figurative brilliance or historical laughter.", "exercises": ["light-frost", "light-stage"]},
+    {"word": "にこにこ", "entry": "1091130", "sense": "1: friendly smiling", "operations": ["adverbial"], "sources": ["jmdict-feelings", "niko-daijisen"], "restriction": "The supplied 笑う describes smiling; no required audible laugh.", "exercises": ["smile-baby", "smile-video"]},
+    {"word": "しっかり", "entry": "1594400", "sense": "1: secure holding; 4: dependable character", "operations": ["adverbial", "noun-modifier", "interpret-supported", "interpret-unsupported"], "sources": ["jmdict-feelings", "shikkari-nikkoku"], "restriction": "Keep physical security and dependable character distinct. Descriptive した does not mean the person has ceased to be dependable.", "exercises": ["hold-paper", "tie-bag", "reliable-transform", "reliable-delegate", "manager-supported", "manager-unsupported"]},
+    {"word": "わくわく", "entry": "1013310", "sense": "1: eager anticipation", "operations": ["suru-predicate"], "sources": ["jmdict-feelings", "waku-daijisen"], "restriction": "Suru transformations and supplied ongoing-state frames. Do not infer optional と from the unrelated volitional とする.", "exercises": ["eager-transform", "eager-lab", "mixed-picture-book"]},
+    {"word": "どきどき", "entry": "1009050", "sense": "2: pounding heartbeat", "operations": ["suru-predicate"], "sources": ["jmdict-feelings", "doki-daijisen"], "restriction": "Fear and physical exertion, not invariably excitement; no diagnosis.", "exercises": ["heart-transform", "heart-hill"]},
+    {"word": "いらいら", "entry": "1587700", "sense": "1: irritation/impatience", "operations": ["suru-predicate"], "sources": ["jmdict-feelings"], "restriction": "The subject experiences irritation; this is not deliberately irritating another person.", "exercises": ["irritated-transform", "irritated-noise", "mixed-traffic"]},
+    {"word": "ふわふわ", "entry": "1113060", "sense": "2: fluffy texture", "operations": ["noun-modifier", "interpret-supported", "interpret-unsupported"], "sources": ["jmdict-sensory", "fuwa-nikkoku"], "restriction": "Ordinary present-characteristic modifiers; include fitting の/な and verbal variants, not a single mandatory suffix. Floating/illness senses and headline compounds are not elicited.", "exercises": ["texture-blanket", "texture-bread", "mixed-towel", "blanket-supported", "blanket-unsupported"]},
+    {"word": "ぶかぶか", "entry": "1011130", "sense": "oversized clothing/footwear fit", "operations": ["noun-modifier", "copular-state"], "sources": ["buka-nikkoku"], "restriction": "Wearer-relative fit, not softness, historical floating, horn sound or yielding ground. Do not reject fitting の/な/した alternatives.", "exercises": ["fit-gloves", "fit-shoes", "fit-jacket", "fit-trousers", "mixed-slippers"]},
+    {"word": "へとへと", "entry": "1011330", "sense": "1: complete exhaustion", "operations": ["copular-state", "state-change"], "sources": ["jmdict-feelings", "heto-daijisen"], "restriction": "Current exhaustion versus becoming exhausted; no universal ban inferred from missing source examples.", "exercises": ["tired-shift", "tired-editing", "change-walk", "change-project", "mixed-mountain"]},
+    {"word": "ぺこぺこ", "entry": "1011540", "sense": "1: hunger", "operations": ["copular-state", "state-change"], "sources": ["jmdict-feelings", "peko-nikkoku"], "restriction": "Hunger frames only, not bowing or a flexible surface; historical hunger する is explicitly not declared impossible.", "exercises": ["hungry-lunch", "hungry-swim", "change-class", "change-wait", "mixed-appetite"]}
+  ],
+  "relationships": {
+    "sentence-fit": ["adverbial", "suru-predicate", "noun-modifier", "copular-state", "state-change"],
+    "description-claims": ["interpret-supported", "interpret-unsupported"]
+  },
+  "answerPolicy": {
+    "word": "Keep the supplied kana word, permitting hiragana or katakana but not different emphatic word shapes or added content words.",
+    "blank": "Always include the mimetic word in the blank; optional omission of a connector never requires empty input.",
+    "variants": "Enumerate full accepted strings, including supported short してる forms where ongoing modifiers are permitted. NFKC is not kana folding. An accepted alternative is not automatically a separate construction target.",
+    "options": "Evaluate each whole completion. Wrong attachments in this frame do not prove a word/construction impossible elsewhere. Additional correct choices are choose-any and appear only occasionally.",
+    "nounModifiers": "Sentence modifiers describing the selected present characteristic, not product labels/headlines, added similes, past-only states or arbitrarily extended clauses. A clearly named した transformation is the one narrower noun-modifier drill.",
+    "reviewGate": "The independent initial review read all 44 complete tasks, 262 accepted-string occurrences, 153 option rationales and the full guide. It returned CLEAN on correctness, scoped coverage and comprehensibility, with no actionable findings. Vocabulary/delta reconciliation and native acceptance are recorded separately."
+  },
+  "contextPolicy": "Exercise IDs below use the onoma- prefix. Introduction member exampleKeys are the final context mapping. Paired interpretation claims share one key; related texture/contact, oversized-footwear, exertion-change and hunger-change repetitions share keys even when noun/background wording changes. Counts are not independent mastery or transfer counts.",
+  "effectiveness": {
+    "status": "unverified",
+    "ownerTrial": "not-run",
+    "protocol": "docs/grammar-onomatopoeia-trial.md",
+    "expansion": "deferred"
+  },
+  "review": {
+    "status": "independently-reviewed-and-reconciled",
+    "kind": "Independent AI full initial review, followed by informed vocabulary/delta reconciliation; not a human native-speaker certification.",
+    "actualReviewerModelId": "unavailable",
+    "correctness": "CLEAN",
+    "scopedCoverage": "CLEAN",
+    "comprehensibility": "CLEAN",
+    "vocabulary": "CLEAN",
+    "initialCoverage": "44 complete tasks; 262 accepted-string occurrences; 128 base options plus 25 additional correct choices; all 153 rationales, evidence/explanations, group/facet labels, guide, matrix, catalog and trial protocol.",
+    "vocabularyCoverage": "All 223 lexical occurrences across 44 tasks, including 111 distinct linked word IDs and permitted unlinked local hints. This is not a review of the other 1934 exercises' vocabulary.",
+    "reports": [
+      {"name": "review-initial.json", "sha256": "fe0f144ca928a194c76efc8574809c8955dfdf8faffcbdb6f884012de72bf0f4", "result": "Three facets CLEAN; no actionable initial findings; vocabulary annotations not yet included."},
+      {"name": "review-reconciliation.json", "sha256": "f8f51f9f8d09363392057bec10267b9523bb313ef1a9338bc45bac7b2ae20666", "result": "Core/guide CLEAN; one minor contextual vocabulary finding R01."},
+      {"name": "review-final.json", "sha256": "c6462ffa63d17f883d09e6d5d6e945d06b47ba3df99f789b33a197ecfc88d342", "result": "Exact final delta verified; all three facets and vocabulary CLEAN; no remaining actionable findings."}
+    ],
+    "reportLocation": "Immutable session evidence, identified here by name and hash; not files in the runtime archive.",
+    "adjudication": [
+      {"id": "R01", "status": "resolved", "exercise": "onoma-fit-jacket", "change": "Only the 手 occurrence gloss changed from hand to arm (including the hand here). Its text, offsets, reading, headword and linked card are unchanged.", "evidence": "words/手.md, including its cited JMdict 1327190 sense 1; independently inspected opening broad-upper-limb versus narrow-hand distinction at https://kotobank.jp/word/%E6%89%8B-171189."},
+      {"id": "author-slope-gloss", "status": "reconciled-clean", "change": "Removed an unsupported uphill implication from onoma-heart-hill's English instruction; the Japanese and grading metadata did not change."},
+      {"id": "O-R02", "status": "applied-and-verified", "change": "The guide names the actual Article sets tab and explains that browse scope is independent of new-item scope."},
+      {"id": "O08", "status": "applied-and-verified", "change": "The protocol now matches elicited operations and supplied material, not only family labels, across baseline/delayed forms."}
+    ],
+    "finalRuntimeFiles": {
+      "grammar/onomatopoeia-sentences.json": "643508345ee7fd86a08a4bffea705f99f0cf724b8617904faaab744caeaba494",
+      "articles/onomatopoeia-in-sentences.md": "ec46216ad992607a1b0ad6bbcccdc3008c0984c934ea5fd6359e4b94b02b52f6",
+      "curriculum/grammar.json": "eb9fcce8dee63bed1f3e46fb5ee2f742baa00cdbf044a5c3896256a261e9595a"
+    },
+    "remainingActionableFindings": 0,
+    "limits": "CLEAN is a bounded review outcome, not exhaustive certification, equal frequency of alternatives, coverage of all 201 words, or evidence of owner learning benefit. Native acceptance is recorded separately."
+  },
+  "acceptance": {
+    "status": "accepted-bounded-pilot",
+    "contentVersion": "128cf231b71653a7",
+    "publication": "Published revisions and public-archive receipts are tracked in issue #58. The r3 archive below is the original local acceptance candidate, not the public GitHub ZIP. Publication does not establish owner learning benefit.",
+    "publicationIssue": "https://github.com/stop-cran/learning-japanese/issues/58",
+    "appAcceptanceTestCommit": "3be9e3adca872d75251e15fe080078c1e850ff68",
+    "mechanical": {
+      "contentValidationErrors": 0,
+      "pythonGrammarTestsPassed": 160,
+      "androidGrammarAndImporterTestsPassedOnR2": 119,
+      "finalR3ImporterTestsPassed": 2,
+      "androidTestsSkipped": 0,
+      "nativeFixtureBuild": "assembleDebugAndroidTest, detekt and lintDebug passed after the final test-driver edit.",
+      "vocabulary": "1669/1978 reviewed; stage remains pilot. All 44 new records are reviewed; the 309 older pending records remain pending.",
+      "manifest": "Exact equality with build_manifest(root), including all 8029 payload bindings; no runtime changes during final documentation updates."
+    },
+    "archive": {
+      "name": "grammar-acceptance-r3.zip",
+      "sha256": "50fe2a6ad99a47991ea60db797e0a313aa9ab59e6f12a3113ab747eb7c873e82",
+      "scope": "Export-ignore-aware full working-tree candidate; integrity and unique names checked. The emulator's archive hash matches.",
+      "verifiedManifestPayloads": 8029,
+      "files": 8035,
+      "entriesIncludingDirectories": 8050,
+      "retainedBytes": 42073852,
+      "inflatedBytes": 42339358,
+      "zipBytes": 29507189,
+      "listeningTaskMediaBytes": 5893602,
+      "budgets": "Within existing complete-archive and media limits."
+    },
+    "preservation": {
+      "unchangedOldRuntimePayloads": 8025,
+      "intentionalOldRuntimeChanges": ["articles/japanese-onomatopoeia.md", "curriculum/grammar.json"],
+      "oldVocabularyRecordsUnchanged": 1934,
+      "curriculum": "Removing only the new chapter reproduces the old catalog objects, order and edges.",
+      "app": "No production source, schema, database or scheduler change. Only opt-in native acceptance tests and directly related contributor notes."
+    },
+    "native": {
+      "platform": "Disposable API 35 emulator; 720x1280 pixels, density 320. No physical phone.",
+      "fullRun": {
+        "fontScale": 1.3,
+        "theme": "light",
+        "passingCases": 2,
+        "rawStatus": "Both selected cases have instrumentation status-code 0; none skipped.",
+        "uniqueExerciseIds": 44,
+        "answerEvents": 48,
+        "chooseEvents": 24,
+        "typeEvents": 24,
+        "correctEvents": 46,
+        "intentionalWrongEvents": 2,
+        "settledVisibleImeMeasurements": 24
+      },
+      "discovery": "Production ContentSync imports all 1978 Grammar exercises through a local fake HTTP transport and synthetic HEAD, using a unique disposable source. Real GrammarPage controls independently change new-material and browser scope to Unclassified. Chapter and Article sets previews contain all 44 pilot IDs; group entry and practice work. Vocabulary reading/gloss, linked word article and return are exercised. A deliberately forced additional-choice presentation accepts the noncanonical correct option, fills that actual choice into feedback and visibly marks both valid choices correct.",
+      "largeTextRun": {
+        "fontScale": 2.0,
+        "theme": "dark",
+        "passingCases": 1,
+        "rawStatus": "Instrumentation status-code 0; not skipped.",
+        "uniqueExerciseIds": 12,
+        "answerEvents": 16,
+        "chooseEvents": 8,
+        "typeEvents": 8,
+        "correctEvents": 14,
+        "intentionalWrongEvents": 2,
+        "settledVisibleImeMeasurements": 8,
+        "reconciliation": "An initial fixture scrolled only the shorter Check button, clipping the taller wrapped uncertainty control. Revealing both controls resolves that test-driver assumption. Center alignment, keyboard bounds, settled visible IME and real Check touch assertions remain intact; the full 130% run also passes after this correction."
+      },
+      "fixtureSourceSha256": {
+        "GrammarAnswerFlowTest.kt": "9bccb78e60f27b7f3f3a3e638f2a384b0c7c94e284bed442e647c05b2b09204a",
+        "GrammarPilotAcceptanceTest.kt": "03cc747593e1435969fd5476ab405acd984e2e7dbfab61bc25ea24297e7e5a17"
+      },
+      "limits": "Production-component hosts, not full MainActivity/AppNav or public GitHub downloading. No API 29 or physical-device run. Mixed choice/type coverage of 44 identities is not both modes and every accepted spelling of every exercise. The forced additional-choice branch does not measure its natural presentation frequency. No owner learning trial."
+    },
+    "evidence": [
+      {"name": "native-final.log", "sha256": "3887298d6302b406b31c5e824974fddfcea06312ba1beeb70dfc3a2ce6698412"},
+      {"name": "native-answer-final.jsonl", "sha256": "33b2aa34e2e6a8b24dc8a483500497257829883a9034a84d2bb8165e93b86356"},
+      {"name": "native-discovery-final.json", "sha256": "d55eec9a3763f617f08ef30b3d64ac4d263b801db17c25f52201f30061e64330"},
+      {"name": "native-large-dark-reconciled.log", "sha256": "dbb5855b23475338fe6ed9d4401376413067b27890e7b8a5ae0f726aaeaa7fa5"},
+      {"name": "native-large-dark-reconciled.jsonl", "sha256": "e900b416e4b5fa0ba038e73ce426e6b601283454367221712ec0b45d6c647695"},
+      {"name": "native-large-dark-keyboard.png", "sha256": "9dede69dcb6ab2eaf25db1321de2b5893b8b991f07886bb32461b08fa5db75b7"},
+      {"name": "native-large-controls-build.log", "sha256": "16b6afbd5580cf56ff178635be7bed04ce432aed9dff52b65ad0ce17735348c9"}
+    ],
+    "evidenceLocation": "Durable local session artifacts, not runtime files or published attachments. Earlier failed runs remain separately preserved; they are not the accepted receipts above.",
+    "ownerTrial": "Protocol delivered, including matched-operation baseline/delayed-form requirements and exposure/assistance recording. Actual forms have not been authored/administered/certified, the trial is not run, effectiveness remains unverified and expansion is deferred."
+  }
+}

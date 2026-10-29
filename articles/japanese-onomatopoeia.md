@@ -42,6 +42,10 @@ For a word with several meanings, keep separate scenes: a thunderstorm does not 
 
 ## Grammar: do not attach する or と to everything
 
+For focused sentence practice, continue with [Onomatopoeia in sentences](onomatopoeia-in-sentences.md).
+Its bounded Grammar pilot supplies familiar words and practises their constructions, separately
+from the vocabulary-card schedules.
+
 Common patterns include an adverb before a verb, an adverb with と, and a state expressed
 with する. Some words also work with な or に. These patterns are **word-specific**:
 
