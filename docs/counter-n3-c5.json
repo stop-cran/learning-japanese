@@ -1,0 +1,1627 @@
+{
+  "schemaVersion": 1,
+  "issue": 56,
+  "packet": "C5: portions, items, fruit, plants, tofu and rooms",
+  "status": "review-reconciled-with-live-room-reading-hold",
+  "baselineCommit": "b697a3d65a4edf893b04eea33d2356cd600e87c9",
+  "authoredOnUtc": "2026-10-29",
+  "records": 33,
+  "newRuntimeRecords": 33,
+  "pilotMembers": 0,
+  "unchangedControls": 0,
+  "scope": [
+    "portions-items-kinds",
+    "slices-bunches",
+    "shares-plants",
+    "people-worth",
+    "tofu-chou",
+    "rooms-heya"
+  ],
+  "contextPolicy": "Numbers and paired form drills do not multiply selection contexts. The citrus segment and grape-cluster senses must not be conflated.",
+  "levelPolicy": "Editorial practical level3 under the finite contract, not an official JLPT assignment to every word or counter.",
+  "rubric": {
+    "order": [
+      "lexicalLoad",
+      "decisionLoad",
+      "calculation",
+      "answerAmbiguity",
+      "feedback"
+    ],
+    "kind": "Separate author and independent editorial vectors, not measured learner difficulty."
+  },
+  "sourceInspection": {
+    "inspected": [
+      "IMABI full 切れ/房/株, 人前/丁/点 and 種類 tables",
+      "Actual Sanabo mikan, tofu and room entries",
+      "Exact JMdict 一人分ひとりぶん and 二人分ふたりぶん",
+      "Pinned Marugoto B1 PDF11/12/18 and Tofugu room-counter section",
+      "Existing words/株.md in full, unchanged"
+    ],
+    "limits": [
+      "IMABI's citrus example translates two mandarin segments as 'two bunches'; that English is not adopted. Sanabo explicitly distinguishes the inner segments.",
+      "At the original review, no full 三部屋 table had been found. Tofugu supports native three as an option and Marugoto lists へや/べや; those sources alone do not establish an exact full reading set. The later sourceFollowup below adds direct evidence without rewriting that historical review.",
+      "Jisho returned no exact 三部屋 entry, not evidence of invalidity. Tofugu HTML contains audio but no exact written reading annotation; no listening claim is made.",
+      "The pinned university book's later appendices supplied no exact room-count evidence. Failed, challenged or irrelevant searches are not linguistic proof.",
+      "Dictionary commonness flags and missing JLPT tags do not establish difficulty or a ban on these numerical expressions."
+    ],
+    "sourceFollowup": {
+      "record": "counter-n3-source-followup.json",
+      "positiveEvidence": "Actual にほんごべや and Benricho tables give neighboring room counts and explicit さんへや; Benricho and the JapanesePod101 instructor discussion also recognize みへや.",
+      "remainingLimit": "さんべや and みべや are not settled by these sources. Current runtime answers and independent U1 reconciliation remain unchanged; no new acceptance is asserted."
+    }
+  },
+  "items": [
+    {
+      "id": "foodportions-order-1",
+      "path": "counters/foodportions.json",
+      "row": "portions-items-kinds",
+      "contextKey": "restaurant-portions",
+      "sourceIds": [
+        "imabi-counters-vi",
+        "sanabo-soba"
+      ],
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Choose",
+        "Type",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "a62c52de55fc676a9b4bc38728c301bfb19124fc0720dbf24734eb1553c7209b",
+      "independentScores": [
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "fresh-complete-task"
+    },
+    {
+      "id": "foodportionexpressions-expression-1",
+      "path": "counters/foodportionexpressions.json",
+      "row": "portions-items-kinds",
+      "contextKey": "restaurant-portions",
+      "sourceIds": [
+        "imabi-counters-vi"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "5957fd74f566f239369a55275d52c11b8540866b23204001c92f565e759a8e54",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "foodportionexpressions-expression-2",
+      "path": "counters/foodportionexpressions.json",
+      "row": "portions-items-kinds",
+      "contextKey": "restaurant-portions",
+      "sourceIds": [
+        "imabi-counters-vi"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "9db3ceec22756e3f167c4f43677b9c1c0435fb917fc4e1812eafc4a46b43d207",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "itempoints-goods-1",
+      "path": "counters/itempoints.json",
+      "row": "portions-items-kinds",
+      "contextKey": "merchandise-count",
+      "sourceIds": [
+        "imabi-counters-vi"
+      ],
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Choose",
+        "Type",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "f9b2f9fadf65353c2f445128db6548dec8a4933f7de447987fb25e059aba4866",
+      "independentScores": [
+        1,
+        2,
+        0,
+        1,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "fresh-complete-task"
+    },
+    {
+      "id": "itempoints-score-1",
+      "path": "counters/itempoints.json",
+      "row": "portions-items-kinds",
+      "contextKey": "test-score",
+      "sourceIds": [
+        "imabi-counters-vi"
+      ],
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Choose",
+        "Type",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "991fc60a4c65571552856e4eb23f4f17ad3ff49581ef7364f0b5843cf475d2df",
+      "independentScores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "fresh-complete-task"
+    },
+    {
+      "id": "itempointexpressions-expression-1",
+      "path": "counters/itempointexpressions.json",
+      "row": "portions-items-kinds",
+      "contextKey": "merchandise-count",
+      "sourceIds": [
+        "imabi-counters-vi"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "4ab33d0429b90952f08df848fc7cd5fe6ba7daa5a1f7c7e751208e16b2a27977",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "itempointexpressions-expression-2",
+      "path": "counters/itempointexpressions.json",
+      "row": "portions-items-kinds",
+      "contextKey": "test-score",
+      "sourceIds": [
+        "imabi-counters-vi"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "06c2555f1169cdbc5dd3c0418acbd32b0fed0e87736fcb4fa0080a6b66de110c",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "itempointexpressions-expression-3",
+      "path": "counters/itempointexpressions.json",
+      "row": "portions-items-kinds",
+      "contextKey": "merchandise-count",
+      "sourceIds": [
+        "imabi-counters-vi"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "98d85f39addc81ab8d0c1f86c42c7ebcc105efb83462cad9d5effc7ea1ff968c",
+      "independentScores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "kindcounts-flavors-1",
+      "path": "counters/kindcounts.json",
+      "row": "portions-items-kinds",
+      "contextKey": "assortment-kinds",
+      "sourceIds": [
+        "imabi-counters-viii"
+      ],
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Choose",
+        "Type",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "94f6dbfad358aa34c002a81ff83bac84b8a5e8050adfcfab5f047681cb6b07a8",
+      "independentScores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "kindexpressions-expression-1",
+      "path": "counters/kindexpressions.json",
+      "row": "portions-items-kinds",
+      "contextKey": "assortment-kinds",
+      "sourceIds": [
+        "imabi-counters-viii"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "a39a0410d75eb67970c8bd8f00ebf27dc97568f892ad813d8c05e0cef763eb71",
+      "independentScores": [
+        0,
+        1,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "kindexpressions-expression-2",
+      "path": "counters/kindexpressions.json",
+      "row": "portions-items-kinds",
+      "contextKey": "assortment-kinds",
+      "sourceIds": [
+        "imabi-counters-viii"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "55492a547dd98fcaa5f38788409e767fb9cc20cf9a33ce477d9f584752725ddb",
+      "independentScores": [
+        0,
+        1,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "slices-cake-1",
+      "path": "counters/slices.json",
+      "row": "slices-bunches",
+      "contextKey": "cake-slices",
+      "sourceIds": [
+        "imabi-native",
+        "sanabo-cake",
+        "sanabo-processed-cake",
+        "jmdict-piece"
+      ],
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Choose",
+        "Type",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "2f1a8b07df3f6c3fdc10fe0271a4cb8d0ebcaf84f576cdcc3c50cda451e3f47d",
+      "independentScores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "fresh-complete-task"
+    },
+    {
+      "id": "sliceexpressions-expression-1",
+      "path": "counters/sliceexpressions.json",
+      "row": "slices-bunches",
+      "contextKey": "cake-slices",
+      "sourceIds": [
+        "imabi-native"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "0bb4b12c4096c9e38b045373127a95f6ec0d3433cbc07eea3670583f3143129c",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "sliceexpressions-expression-2",
+      "path": "counters/sliceexpressions.json",
+      "row": "slices-bunches",
+      "contextKey": "cake-slices",
+      "sourceIds": [
+        "imabi-native"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "cf5bcf583e3f04902e5b5466c1903324c9a1f37307549a45f5e65f2c1ea4fe0c",
+      "independentScores": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "sliceexpressions-expression-3",
+      "path": "counters/sliceexpressions.json",
+      "row": "slices-bunches",
+      "contextKey": "cake-slices",
+      "sourceIds": [
+        "imabi-native"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "3a2dcf7e67056c03ba47ddcff83e0538f5251234e172927f04f002b5cd5002a7",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "fruitfusa-grapes-1",
+      "path": "counters/fruitfusa.json",
+      "row": "slices-bunches",
+      "contextKey": "grape-bunches",
+      "sourceIds": [
+        "imabi-native",
+        "sanabo-mikan"
+      ],
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Choose",
+        "Type",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "09c2abb81d55dd888f5384e2ac9662f8e3b50802c8b690e9224462353134c895",
+      "independentScores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "fruitfusa-citrus-1",
+      "path": "counters/fruitfusa.json",
+      "row": "slices-bunches",
+      "contextKey": "citrus-segments",
+      "sourceIds": [
+        "imabi-native",
+        "sanabo-mikan"
+      ],
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Choose",
+        "Type",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "d12e7a4d49428741132413ab7376eb538a9914023550f1c5dec19cad5b1855ef",
+      "independentScores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "fruitfusaexpressions-expression-1",
+      "path": "counters/fruitfusaexpressions.json",
+      "row": "slices-bunches",
+      "contextKey": "grape-bunches",
+      "sourceIds": [
+        "imabi-native",
+        "sanabo-mikan"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "8901b56b8d04750870b91d8da56844ad822e866e65fa1d368348c84836f3cdaf",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "fruitfusaexpressions-expression-2",
+      "path": "counters/fruitfusaexpressions.json",
+      "row": "slices-bunches",
+      "contextKey": "citrus-segments",
+      "sourceIds": [
+        "imabi-native",
+        "sanabo-mikan"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "ff150b27d250a85f21b9c8249c9b7dbea4b53706f40f880010d064938b4ed71e",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "fruitfusaexpressions-expression-3",
+      "path": "counters/fruitfusaexpressions.json",
+      "row": "slices-bunches",
+      "contextKey": "grape-bunches",
+      "sourceIds": [
+        "imabi-native",
+        "sanabo-mikan"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "38b97f5ca074b256ce2621219c94f2125f4a74ca858fec32e268afbd46982dfc",
+      "independentScores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "stockplants-expression-1",
+      "path": "counters/stockplants.json",
+      "row": "shares-plants",
+      "contextKey": "share-quantity-label",
+      "sourceIds": [
+        "imabi-native",
+        "sanabo-mikan"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "868ad7e0ffc72ddc7e74d349aee8fcad1863cca9ca8ff6aad91e65bb63460a0d",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "stockplants-expression-2",
+      "path": "counters/stockplants.json",
+      "row": "shares-plants",
+      "contextKey": "rooted-plants",
+      "sourceIds": [
+        "imabi-native",
+        "sanabo-mikan"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "bbe25a116c8faeb3efdd3c1bcb3db2346e10938af2c86fd3c7c30a36238def1f",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "stockplants-expression-3",
+      "path": "counters/stockplants.json",
+      "row": "shares-plants",
+      "contextKey": "share-quantity-label",
+      "sourceIds": [
+        "imabi-native",
+        "sanabo-mikan"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "e5864f71a5dfce95ae93cbaa5db418a53f66f9a32dbc78c74c9553654348ee59",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "peopleamounts-expression-1",
+      "path": "counters/peopleamounts.json",
+      "row": "people-worth",
+      "contextKey": "recipe-yield",
+      "sourceIds": [
+        "marugoto-b1-independent",
+        "jmdict-hitoribun",
+        "jmdict-futaribun"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "5635c3c0556688f81411f8e383eb1c68a1143b0009a655ea0b02ffcd3453f7c0",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "peopleamounts-expression-2",
+      "path": "counters/peopleamounts.json",
+      "row": "people-worth",
+      "contextKey": "prepared-materials",
+      "sourceIds": [
+        "marugoto-b1-independent",
+        "jmdict-hitoribun",
+        "jmdict-futaribun"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "295b73b73994866e6ecb95673e52397105eb952fad0213f36b287bcaa73ea813",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "peopleamounts-expression-3",
+      "path": "counters/peopleamounts.json",
+      "row": "people-worth",
+      "contextKey": "recipe-yield",
+      "sourceIds": [
+        "marugoto-b1-independent",
+        "jmdict-hitoribun",
+        "jmdict-futaribun"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "07e218370019af7c3b790c491bed4435fd329ad021e11e47931f3528d728ee2e",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "tofublocks-package-1",
+      "path": "counters/tofublocks.json",
+      "row": "tofu-chou",
+      "contextKey": "tofu-block-versus-package",
+      "sourceIds": [
+        "imabi-counters-vi",
+        "sanabo-tofu"
+      ],
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Choose",
+        "Type",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "62331b37e3d2ce9be47e301ae5d08ff6a590a894f97b72b34852c2d2f0ba0493",
+      "independentScores": [
+        1,
+        2,
+        0,
+        1,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "tofupieces-cubes-1",
+      "path": "counters/tofupieces.json",
+      "row": "tofu-chou",
+      "contextKey": "whole-block-versus-cut-pieces",
+      "sourceIds": [
+        "sanabo-tofu",
+        "tofugu-counter-list"
+      ],
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Choose",
+        "Type",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "190b815468ac9bea8c909525350b23bb32f4b7a5005ec150ae650f24d9ebd0c2",
+      "independentScores": [
+        1,
+        2,
+        0,
+        1,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "tofublockexpressions-expression-1",
+      "path": "counters/tofublockexpressions.json",
+      "row": "tofu-chou",
+      "contextKey": "tofu-block-versus-package",
+      "sourceIds": [
+        "imabi-counters-vi",
+        "sanabo-tofu"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "5370eea6ecfcdc77008c1172b1bee0c52308fdbe291f8c18f7df0d4c2af8a8c9",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "tofublockexpressions-expression-2",
+      "path": "counters/tofublockexpressions.json",
+      "row": "tofu-chou",
+      "contextKey": "whole-block-versus-cut-pieces",
+      "sourceIds": [
+        "imabi-counters-vi",
+        "sanabo-tofu"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "110d5644a88438871bef27a9e0e6d21950cbc433275f02bd4b3eb68b77db0654",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "roomcounts-expression-1",
+      "path": "counters/roomcounts.json",
+      "row": "rooms-heya",
+      "contextKey": "hotel-room-allocation",
+      "sourceIds": [
+        "marugoto-b1-independent",
+        "sanabo-room",
+        "tofugu-counter-list"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "e3bbe455e53544f0f66e00d2c01ade8827b7a9cb147c42464f6710d39e987c7c",
+      "independentScores": [
+        0,
+        1,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "roomcounts-expression-2",
+      "path": "counters/roomcounts.json",
+      "row": "rooms-heya",
+      "contextKey": "home-room-count",
+      "sourceIds": [
+        "marugoto-b1-independent",
+        "sanabo-room",
+        "tofugu-counter-list"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "bounded review reconciled; C5 batch acceptance remains held",
+      "runtimeRecordSha256": "4cd83ca6f3093a67b0315d38c9aaa230238a52c589291664e7db9d7686d1c9be",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    },
+    {
+      "id": "roomcounts-expression-3",
+      "path": "counters/roomcounts.json",
+      "row": "rooms-heya",
+      "contextKey": "hotel-room-allocation",
+      "sourceIds": [
+        "marugoto-b1-independent",
+        "sanabo-room",
+        "tofugu-counter-list"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "LIVE U1 hold",
+      "runtimeRecordSha256": "2169f2f06189e0f8bbd2b2b02b2542815aa164d78fed6b1dc3b6036f6f6acfc2",
+      "independentScores": [
+        0,
+        1,
+        0,
+        2,
+        2
+      ],
+      "independentVerdicts": {
+        "correctness": "UNVERIFIED",
+        "scopedCoverage": "UNVERIFIED",
+        "comprehensibility": "CLEAN"
+      },
+      "reviewBasis": "carry-forward-only"
+    }
+  ],
+  "checks": {
+    "contentVersion": "5b9cb17c3df9341f",
+    "counterTests": "4 passed",
+    "fullValidator": "0 errors",
+    "manifest": "regenerated",
+    "baselineRecordsPreserved": 2364,
+    "baselineCounterFilesBytePreserved": 54,
+    "previouslyAcceptedScopedRecordsUnchanged": 175,
+    "articleOutsideNewC5AdditionsUnchanged": true,
+    "acceptedAIndexTreePreserved": "3e77250e3432343d627421278f40eea6912a3076",
+    "sourceWideCounterReadingsConsistent": true,
+    "budget": {
+      "files": 8022,
+      "entries": 8037,
+      "retainedBytes": 41840602,
+      "inflatedBytes": 42106108,
+      "localZipBytes": 29459923,
+      "listeningTaskMediaBytes": 5893602
+    },
+    "realImporter": {
+      "contentVersion": "5b9cb17c3df9341f",
+      "tests": 60,
+      "suites": [
+        {
+          "name": "io.github.stopcran.kanji.core.ContentTest",
+          "tests": 38,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        },
+        {
+          "name": "io.github.stopcran.kanji.core.ImageContentTest",
+          "tests": 12,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        },
+        {
+          "name": "io.github.stopcran.kanji.core.ListeningTaskContentTest",
+          "tests": 8,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        },
+        {
+          "name": "io.github.stopcran.kanji.core.RealContentTest",
+          "tests": 2,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        },
+        {
+          "name": "io.github.stopcran.kanji.data.ContentLoadStateTest",
+          "tests": 0,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        }
+      ],
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "limits": "Corrected C5 importer acceptance only. Linguistic reconciliation is pending and exact three-room readings remain a live hold; not C5 or final release acceptance."
+    },
+    "independentReview": "Complete initial review and actual-diff reconciliation retained; live U1 blocks C5 acceptance.",
+    "limits": "No release, native, phone or publication acceptance. Passing importer does not settle linguistic uncertainty."
+  },
+  "review": {
+    "status": "reconciled-not-accepted",
+    "initialPacket": "c5-review-input",
+    "snapshotSha256": "2fe9b8bdcbaadc8f736aae626252a382b2f177eeddf45b9bc2f368e7edbc814f",
+    "contractSha256": "67591e5c9237d9f442292958a4552338850d74d0bc633d0df57e64c7d03e34b7",
+    "correctedPacket": "c5-corrected-review-input",
+    "correctedSnapshotSha256": "544d4d3b3b480e833caf1e5436ef0d39627a706595313ec24a0bdc51f2d7c64c",
+    "initialReportSha256": "ffb916e8bef05a46943524a010b837a83e648e4dd7e44746182bd04b7661ea10",
+    "report": "counter-n3-c5-review.json",
+    "actualModel": null,
+    "modelLimit": "No exact reviewer model exposed; none inferred.",
+    "reconciliationReportSha256": "59d3e117ca4819703235ec78d999593a0a0f6889b1605c653bf7eb5f5544643e",
+    "overall": {
+      "correctness": "UNVERIFIED",
+      "scopedCoverage": "UNVERIFIED",
+      "comprehensibility": "CLEAN",
+      "summary": "F1 is resolved; P1's optional precision is adopted. U2 is withdrawn as a live unsupported-inclusion issue following removal of the unsubstantiated optional alias, without deciding its historical linguistic validity or establishing an ordinary-answer omission. U1 remains unchanged and consequentially LIVE UNVERIFIED.",
+      "establishedUnresolvedDefects": [],
+      "liveConsequentialUncertainties": [
+        "U1"
+      ],
+      "historicalUnresolvedLinguisticQuestions": [
+        "U2: contextual validity/ordinary status of いっぴーす"
+      ],
+      "acceptance": "C5 is not unconditionally accepted. The exact 三部屋 reading requirement remains in scope and on hold.",
+      "aggregationReason": "The established F1 defect is no longer live, but U1 prevents CLEAN correctness and scoped coverage. The task cues and explanations remain comprehensible. No uncertainty has been closed by fiat or by source omission."
+    },
+    "dispositions": [
+      {
+        "id": "F1",
+        "originalCategory": "Minor correctness/scopedCoverage finding",
+        "disposition": "resolved",
+        "file": "counters/foodportions.json",
+        "currentLines": [
+          [
+            18,
+            25
+          ],
+          [
+            26,
+            69
+          ],
+          [
+            75,
+            75
+          ]
+        ],
+        "record": "foodportions-order-1",
+        "actualChange": "Added good 枚/三枚/3枚 and 丁/三丁/3丁; kana まい/さんまい and ちょう/さんちょう; the note distinguishes zaru/mori serving style and restaurant orders and denies fixed size or equal quantities. Added the precise Sanabo soba URL.",
+        "independentAssessment": "These are the contextual alternatives identified in the initial finding. The unchanged Japanese still leaves serving style open. The new note accurately qualifies the alternatives instead of turning them into universally equal units. Canonical 三人前 and its sole Read answer さんにんまえ are unchanged.",
+        "completedAlternatives": [
+          "二人で店に入り、そばを三枚注文しました。",
+          "二人で店に入り、そばを三丁注文しました。"
+        ],
+        "normalization": "Both bare and full written forms are explicitly authored, with exact kana members. Katakana folding preserves their availability. No reliance on invented numeral conversion or importing alternate-unit kana into canonical Read.",
+        "evidence": [
+          {
+            "source": "S10",
+            "portion": "蕎麦 counting explanation",
+            "detail": "The previously inspected entry explicitly assigns 枚 to zaru/mori soba and 丁 to order counts."
+          },
+          {
+            "source": "S9",
+            "portion": "丁 and 皿 sections",
+            "detail": "Previously inspected soba-order 丁 use and plateful/person-portion non-equivalence support the qualification."
+          },
+          {
+            "source": "corrected file",
+            "portion": "good/kana/note and unchanged readingAnswers",
+            "detail": "All requested new members are present; no distractor or canonical-reading collision."
+          }
+        ],
+        "residualConcern": "No established regression. The original medium-high contextual confidence for industry/order 丁 is not promoted into a universal-register claim.",
+        "confidence": "High that the reported false-negative defect is addressed."
+      },
+      {
+        "id": "P1",
+        "originalCategory": "Optional translation precision",
+        "disposition": "resolved",
+        "optionalStatus": "Adopted optional polish; never an acceptance-blocking defect.",
+        "file": "counters/itempoints.json",
+        "currentLines": [
+          [
+            18,
+            18
+          ],
+          [
+            56,
+            56
+          ]
+        ],
+        "record": "itempoints-goods-1",
+        "actualChange": "Both translation and note now say 'two towels of the same kind' rather than 'two identical towels'.",
+        "independentAssessment": "This is a closer rendering of 同じ種類のタオル. It neither changes the visible Japanese nor undermines the distinction between three items and fewer product kinds. The total and all grading alternatives are unchanged.",
+        "evidence": "Direct comparison of corrected English and note against Japanese 同じ種類のタオル二枚 and the actual field diff.",
+        "confidence": "High."
+      },
+      {
+        "id": "U2",
+        "originalCategory": "Consequential uncertainty about one accepted Type alias",
+        "disposition": "withdrawn",
+        "withdrawalMeaning": "The live unsupported-inclusion hold is withdrawn because only the previously unsubstantiated optional alias was removed. This is not a declaration that the original uncertainty was false or that いっぴーす is linguistically invalid.",
+        "file": "counters/slices.json",
+        "currentLines": [
+          40,
+          50
+        ],
+        "record": "slices-cake-1",
+        "actualChange": "Removed only kana いっぴーす; retained all written answers and いちぴーす/ひとぴーす/わんぴーす. Added the Sanabo cake URL. Japanese, English, noun, note, distractors and canonical Read are unchanged.",
+        "ordinaryAnswerOmissionAssessment": "No established ordinary contextual answer has been shown to be omitted by this withdrawal. The actual previously inspected cake sources explicitly support いちぴーす/ひとぴーす and ワンピース; the initial report did not establish comparable usage for いっぴーす. I accept the bounded finite-answer withdrawal, not a phonological ban.",
+        "gradingConsequence": "The removed geminated kana no longer receives its previously authored Type acceptance. Normalization does not erase small っ or turn it into いちぴーす. This consequence was considered rather than described as a metadata-only change.",
+        "historicalUncertainty": "Whether いっぴーす is a genuine ordinary or more restricted alternative in this cake context remains unadjudicated. Absence from the consulted entries does not prove invalidity. If reliable exact evidence establishes an ordinary fitting variant, the current exclusion should be revisited.",
+        "whyNotAnotherLiveHold": "There is no new claim in the note that the removed form is wrong, and no evidence here establishes an ordinary-answer false negative. A finite authored answer set is not required to preserve every formerly hypothesized alias indefinitely. The initial unsupported-inclusion uncertainty therefore need not remain a live correctness hold solely because the speculative form was removed.",
+        "evidence": [
+          {
+            "source": "S11",
+            "portion": "ケーキ unit list",
+            "detail": "Explicit 一ピース（いちぴーす・ひとぴーす）; these remain."
+          },
+          {
+            "source": "S12",
+            "portion": "Processed-food cake units and explanation",
+            "detail": "Explicit 1ピース（ワンピース）; this remains."
+          },
+          {
+            "source": "S13",
+            "portion": "Exact ピース-1 entry",
+            "detail": "Supports lexical 'piece', not the disputed numeral pronunciation."
+          }
+        ],
+        "currentVerdict": {
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        "confidence": "High about the exact removal and retention; moderate about the bounded no-established-omission assessment. No confidence claim of linguistic invalidity."
+      },
+      {
+        "id": "U1",
+        "originalCategory": "Consequential exact-reading validity/completeness uncertainty",
+        "disposition": "unresolved",
+        "status": "LIVE UNVERIFIED",
+        "potentialSeverity": "Minor",
+        "facets": [
+          "correctness",
+          "scopedCoverage"
+        ],
+        "file": "counters/roomcounts.json",
+        "currentLines": [
+          52,
+          57
+        ],
+        "record": "roomcounts-expression-3",
+        "recordUnchanged": true,
+        "currentRecordSha256": "2169f2f06189e0f8bbd2b2b02b2542815aa164d78fed6b1dc3b6036f6f6acfc2",
+        "reading": "さんべや",
+        "readingAnswers": [
+          "さんべや",
+          "さんへや",
+          "みへや"
+        ],
+        "carriedClaim": "The exact accepted 三部屋 reading set and whether an additional native voiced form needs acceptance remain unsettled by the inspected evidence. No current member is established invalid, no missing みべや is established valid, and completeness is not proved.",
+        "evidenceLimit": "S6 has no exact three-room table; S9 allows native three sometimes without the precise kana paradigm; S14 supplies base へや/べや, not their complete number-specific distribution.",
+        "requiredResolution": "A qualified exact pronunciation/usage judgment for the 三部屋 combinations, with relevant register or variant limits. Do not mechanically generate combinations, reject by source omission, omit this record, or drop its required sound class.",
+        "newEvidence": "None independently inspected during this reconciliation. The proposals' Wiktionary and Stack Exchange navigation receipts were not independently fetched and provide no basis here to close U1.",
+        "currentVerdict": {
+          "correctness": "UNVERIFIED",
+          "scopedCoverage": "UNVERIFIED",
+          "comprehensibility": "CLEAN"
+        },
+        "confidence": "High that the evidence hold remains unresolved; not a claim that any listed reading is wrong."
+      }
+    ]
+  },
+  "initialReviewQuestions": [
+    "Exact 三部屋 set remains an explicit evidence hold: proposed さんべや/さんへや/みへや are not claimed to come from one inspected full dictionary table. Adjudicate the real compound using actual sources and contextual linguistic judgment, not source omission.",
+    "Check each fitting typed alternative in the actual scene, especially serving-style counters, mixed-goods counters, connected fruit clusters and cut tofu pieces.",
+    "Check kind versus item counting and all distractors without treating preferred counters as exclusive.",
+    "Check food portion 人前 versus recipe/material 人分, whole tofu blocks versus packages/cut pieces, and citrus segments versus fruit bunches.",
+    "Check every gloss boundary and the actual prompt operation; no large arithmetic, finance advice, fixed portion mass or medical dosing is intended."
+  ],
+  "contextReconciliation": {
+    "records": {
+      "v1Forward": 9,
+      "v2Expression": 24,
+      "total": 33,
+      "pilot": 0,
+      "control": 0,
+      "reverse": 0
+    },
+    "modeOpportunities": {
+      "Choose": 9,
+      "Type": 9,
+      "Write": 24,
+      "Read": 33,
+      "sum": 75
+    },
+    "modeLimit": "Unchanged modes over shared identities, not 75 unrelated tasks or separate daily allowances.",
+    "currentAnswerMembers": {
+      "good": 96,
+      "kana": 64,
+      "writtenAnswers": 48,
+      "readingAnswers": 40
+    },
+    "freshlyReassessedMembers": {
+      "good": 51,
+      "kana": 38,
+      "readingAnswers": 5,
+      "distractors": 12,
+      "vocabularyOccurrences": 9
+    },
+    "changesDoNotAddContexts": "Aliases and wording edits do not add semantic contexts or new operations.",
+    "conservativeContextFamilies": 15,
+    "contextsCarriedForward": {
+      "portions-items-kinds": [
+        "restaurant portions versus diners",
+        "mixed merchandise aggregation",
+        "test score",
+        "kinds versus repeated objects/flavors"
+      ],
+      "slices-bunches": [
+        "cake slices",
+        "connected grape bunches",
+        "inner citrus segments"
+      ],
+      "shares-plants": [
+        "share quantity",
+        "rooted plants"
+      ],
+      "people-worth": [
+        "recipe yield",
+        "materials allocation"
+      ],
+      "tofu-chou": [
+        "whole blocks versus packaging",
+        "cut cubes versus original block"
+      ],
+      "rooms-heya": [
+        "hotel allocation versus identifiers",
+        "rooms within a home"
+      ]
+    },
+    "selectionLimits": "Nine v1 selection/suffix tasks; many Choose distractors are distant categories. Twenty-four named-unit v2 expressions remain production/reading practice, not independent counter-selection evidence. Repeated numbers, paired forms and noun substitutions do not multiply transfer evidence.",
+    "normalization": "Same actual contract: v1 Good before kana/Hard, applicable kana folding, whole-phrase alternative handling; v2 narrow NFKC/whitespace and reading kana folding without numeral arithmetic. No added writing-only instruction was imposed on Read. The removed いっぴーす is not normalized into a retained form.",
+    "labelsAndRootFields": "All source-wide counter/base-reading pairs remain consistent. Changed roots only add the exact soba/cake source URLs; no title, counter, level, group, article reference, schema, vocabulary or reverse-array regression.",
+    "requiredRoomScope": "The exact three-room sound/variant operation is retained unchanged, remains an explicit requirement, and is not counted as accepted coverage merely because its bytes match."
+  }
+}

@@ -508,6 +508,88 @@ The interpretation questions instead ask for a requested quantity using Arabic
 digits without a unit. Their blank is an external answer slot, not a missing
 Japanese word.
 
+## 10. Ordered comparisons, reference amounts and rates
+
+In an ordered ratio, keep the quantities in their stated order:
+
+> ジュースと水の量の比は一対二です。  
+> ジュースとみずの りょうのひは いちたいにです。  
+> The ratio of juice to water is one to two.
+
+**比（ひ）** means ratio. Juice corresponds to the first term, one;
+water corresponds to the second, two. The statement alone does not give
+the total number of millilitres. Changing the order changes the comparison.
+
+> 青いひもの長さは赤いひもの二倍です。  
+> あおいひもの ながさは あかいひもの にばいです。  
+> The blue cord is twice as long as the red cord.
+
+**ひも** is a cord; **長さ（ながさ）** is length. The blue cord is
+the compared quantity, and the red cord supplies the reference.
+二倍 describes twice that reference amount, not an increase *by*
+twice the reference followed by adding the original again.
+Neither cord's absolute length is supplied here.
+
+A rate is also different from an accumulated total:
+
+> 機械は一分に三個の商品を作ります。  
+> きかいは いっぷんに さんこのしょうひんを つくります。  
+> The machine makes three products per minute.
+
+The per-minute amount is known. Without a run duration or other total
+information, the complete output is not determined.
+Similarly, 時速三十キロメートル（じそくさんじゅっキロメートル）,
+thirty kilometres per hour, states a speed rather than an already
+travelled distance. Do not assume a full hour of travel.
+The interpretation label **不明（ふめい）**, “cannot determine,”
+means the requested quantity is not established by this report;
+it does not mean the report contains no useful information.
+
+## 11. An uncertain count can still convey a magnitude
+
+**十数人（じゅうすうにん）** is a ten-odd headcount: thirteen is a
+possible example, whereas sixty is a different magnitude.
+**数十個（すうじゅっこ／すうじっこ）** instead describes several tens
+of objects; sixty is a possible example, not an exact count supplied
+by the expression.
+
+> 倉庫には部品が何百個もあります。  
+> そうこには ぶひんが なんびゃっこも あります。  
+> There are hundreds of components in the warehouse.
+
+**倉庫（そうこ）** is a warehouse; **部品（ぶひん）** means components.
+Here 何百個も emphasizes the large, unspecified quantity. It is not
+a question asking someone to supply a number. Six hundred is compatible
+with the broad description, but the sentence does not establish exactly
+six hundred.
+
+Distinguish **“this count is possible”** from **“this exact count is known.”**
+Rejecting an unjustified exact total does not erase the magnitude that
+the report actually conveys. These examples avoid disputed edge values;
+they do not turn every vague quantity into a precise closed interval.
+
+## 12. Within a stated limit
+
+[以内](../words/以内.md)（いない）includes the stated upper boundary:
+
+> 答えは二十文字以内で書いてください。  
+> こたえは にじゅうもじいないで かいてください。  
+> Please write the answer in twenty characters or fewer.
+
+An answer counted by the form as twenty characters meets this numerical
+limit; one counted as twenty-one does not. The form may separately define
+how it counts spaces or symbols. This is not a universal character-counting
+algorithm or a claim that meeting the length rule satisfies every other rule.
+
+> 作業は開始から三十分以内に終えてください。  
+> さぎょうは かいしから さんじゅっぷんいないに おえてください。  
+> Please finish the task within thirty minutes from its start.
+
+**開始（かいし）** means the start; **終える（おえる）** means finish.
+開始から explicitly supplies the reference point. Finishing at exactly
+thirty minutes meets the time limit; thirty-one minutes exceeds it.
+This is an elapsed-time condition, not a clock reading or a calendar date.
+
 ## Practice scope
 
 The original quantity/scope set has **28 tasks: 26 N4 and two N5 controls**. Four named formation tasks assemble complete
@@ -522,6 +604,17 @@ numerical meaning has no established exact
 Grammar-level anchor in the inspected primary index, so they are unclassified,
 not automatically N3 because they accompany an N3 Numbers & counters extension.
 They do not change the original 28 tasks or their levels.
+
+Eighteen further numerical interpretations practise ordered comparisons and
+reference quantities, rates versus unstated totals, numeric uncertainty,
+and 以内 limits. They use the same quantity owner: three additive groups
+and four new members in the existing boundary group, with no new gates.
+The new interpretations remain unclassified while exact full-task placement
+is unestablished; neither a vocabulary-card level nor the N3 project title
+supplies that evidence. Paired questions share their context, and the two
+stock-magnitude variants are not separate transfer contexts.
+The four fraction/discount questions above are reused, not counted again
+as newly authored tasks.
 
 The existing N4 restriction/listing and ほう／ほか／なか tasks, N5 comparisons, and five N5 estimate/limit
 tasks are reused, not duplicated or relabeled. Supporting prefixes and detailed higher-grade

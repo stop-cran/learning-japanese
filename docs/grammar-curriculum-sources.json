@@ -6,7 +6,9 @@
     "baselineCommit": "b697a3d65a4edf893b04eea33d2356cd600e87c9",
     "sourceRecord": "docs/counter-n3-sources.json",
     "existingSet": "grammar/quantity-scope.json",
-    "newGroups": ["quantity-scope-parts-and-remainders"],
+    "newGroups": [
+      "quantity-scope-parts-and-remainders"
+    ],
     "chapter": "focus-and-quantity",
     "reason": "The requested part and remaining amount are numerical interpretation operations, distinct from existing price/duration frames. They remain inside the existing quantity owner and chapter, not a new engine or duplicate set.",
     "contextPolicy": "Each paired operation shares its key: shop-discount for a 割引 notice and water-fraction for a 分の reference to an initial liquid amount. Four identities provide two contexts per facet, meeting the existing validator minimum without inventing independent keys for the pair.",
@@ -21580,5 +21582,42 @@
       "derivedChapterEdges": 9,
       "historicalScope": "Earlier inventory/review/validation statements retain their frozen scope; this installment has separate evidence."
     }
-  ]
+  ],
+  "additiveN3Interpretations": {
+    "issue": 57,
+    "status": "accepted-locally",
+    "sourceRecord": "counter-n3-d-interpretations.json",
+    "existingSet": "grammar/quantity-scope.json",
+    "chapter": "focus-and-quantity",
+    "newGroups": [
+      "quantity-scope-relative-quantities",
+      "quantity-scope-rate-information",
+      "quantity-scope-numerical-inference"
+    ],
+    "extendedGroup": "quantity-scope-boundaries",
+    "reason": "Relative quantity roles, available rate information and exact numeric uncertainty are distinct missing interpretations. Within-bound cases reuse the existing boundary classes and group.",
+    "contextPolicy": "Paired questions share scene keys. Tens and hundreds stock variants share one stock context; no extra transfer context is claimed from the changed magnitude.",
+    "preservation": "All32 existing task objects and all previous vocabulary review records unchanged; existing group members are retained in order. Only four members appended to the old boundary group and three new groups appended.",
+    "gates": "Full-source independent reconciliation confirms23 unchanged prerequisites,247 unchanged recommendations and9 unchanged chapter arrows. Both prerequisite and collapsed chapter graphs remain acyclic; the three new groups have no incident edges.",
+    "classification": "All22 scoped numerical tasks, including4pilots, remain unclassified. The separate required interval interpretation remains unfinished: exact primary N2 placement needs owner-approved scope resolution.",
+    "contentVersion": "db4dd194841d0157",
+    "reviewRecord": "counter-n3-d-interpretations-review.json",
+    "globalGraph": {
+      "sourceFiles": 78,
+      "uniqueSets": 78,
+      "uniqueExercises": 1934,
+      "authoredGroups": 264,
+      "ownedExercises": 1642,
+      "unownedExercises": 292,
+      "mappedGroups": 264,
+      "unmappedGroups": [],
+      "chapters": 20,
+      "prerequisiteEdges": 23,
+      "recommendationEdges": 247,
+      "chapterArrows": 9,
+      "leafAcyclic": true,
+      "collapsedChapterAcyclic": true,
+      "structuralErrors": []
+    }
+  }
 }

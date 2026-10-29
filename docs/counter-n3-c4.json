@@ -1,0 +1,1193 @@
+{
+  "schemaVersion": 1,
+  "issue": 56,
+  "packet": "C4: textual labels, rankings, text quantities and flights",
+  "status": "accepted-locally",
+  "baselineCommit": "b697a3d65a4edf893b04eea33d2356cd600e87c9",
+  "authoredOnUtc": "2026-10-29",
+  "records": 29,
+  "newRuntimeRecords": 27,
+  "pilotMembers": 2,
+  "unchangedControls": 0,
+  "scope": [
+    "lessons-chapters",
+    "episodes-volumes",
+    "ranks-grades",
+    "digits-text-units",
+    "flight-labels"
+  ],
+  "contextPolicy": "Distinct identifiers, quantity references and boundary notation are not automatically independent selection contexts. Supplied units, changed numbers and paired volume/copy questions share their semantic frames.",
+  "levelPolicy": "Editorial practical level3 for the contracted counter operations, not a new JLPT assignment to homographic words. Existing word cards and sourced levels remain unchanged; exact-source N1/N2 metadata is retained as a limitation.",
+  "rubric": {
+    "order": [
+      "lexicalLoad",
+      "decisionLoad",
+      "calculation",
+      "answerAmbiguity",
+      "feedback"
+    ],
+    "kind": "Separate author and independent editorial vectors, not measured learner difficulty.",
+    "conventions": "Supplied values and reference resolution do not imply arithmetic. Higher feedback measures explanation, not difficulty."
+  },
+  "sourceInspection": {
+    "inspected": [
+      "IMABI 課/冊 tables and synonym notes; ordinal sections through numbered chapters/episodes",
+      "IMABI 巻 table; 字/文字/桁 tables; 行ぎょう versus こう table",
+      "Exact public JMdict/Jisho 節せつ, 一級, 一段 and 一位 entries",
+      "Pinned Marugoto A2B1 PDFp19 and B1 PDFp6, with exact baseline hashes",
+      "Existing words 課/章/節/位/級/段/便 read in full, preserved without edits",
+      "Sanabo 飛行機 counting explanation"
+    ],
+    "limits": [
+      "Jisho 節 entry carries N1 and 一段 carries N2; these tags do not establish levels of every sense or numerical construction. No N3-tagged new word cards are created.",
+      "Section sense is verified, but the dictionary is not represented as a full numerical pronunciation table.",
+      "The old Marugoto140-character social-media example is not adopted as a current platform limit.",
+      "IMABI/Tofugu's categorical 字/文字 punctuation distinction is not adopted.",
+      "Bare 第 omissions are context-dependent; exercises state the requested written notation.",
+      "No universal examination hierarchy, airline announcement standard, Unicode counting algorithm or aviation operational claim."
+    ]
+  },
+  "items": [
+    {
+      "id": "lessonlabels-expression-1",
+      "path": "counters/lessonlabels.json",
+      "row": "lessons-chapters",
+      "contextKey": "lesson-label-versus-count",
+      "sourceIds": [
+        "imabi-counters-i",
+        "imabi-ordinals",
+        "n3-index"
+      ],
+      "scores": [
+        0,
+        2,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": true,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "bad1bba81258087319f64a50a72c932eaf4b38cf1d6b8b7d6028ac691109a482",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "lessonlabels-expression-2",
+      "path": "counters/lessonlabels.json",
+      "row": "lessons-chapters",
+      "contextKey": "lesson-label-versus-count",
+      "sourceIds": [
+        "imabi-counters-i",
+        "imabi-ordinals",
+        "n3-index"
+      ],
+      "scores": [
+        0,
+        2,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": true,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "048381640fd20a6801af25b7e62d9a7e52f57e9a06d7ace9b82bde11c64c4cd5",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "lessonlabels-expression-3",
+      "path": "counters/lessonlabels.json",
+      "row": "lessons-chapters",
+      "contextKey": "completed-lessons",
+      "sourceIds": [
+        "imabi-counters-i",
+        "imabi-ordinals"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "0cf1b9b39c3fd04a06efe74160641fdbe4f21a086eaffb7a555a4ec88589b1a9",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "lessonlabels-expression-4",
+      "path": "counters/lessonlabels.json",
+      "row": "lessons-chapters",
+      "contextKey": "completed-lessons",
+      "sourceIds": [
+        "imabi-counters-i",
+        "imabi-ordinals"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "6d6f1189ebfed5a2c6c3d7bf32b66603786465ab247dbcacfc29337ac6b40e0b",
+      "independentScores": [
+        0,
+        1,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "chapterexpressions-expression-1",
+      "path": "counters/chapterexpressions.json",
+      "row": "lessons-chapters",
+      "contextKey": "book-chapter-identifier",
+      "sourceIds": [
+        "imabi-counters-i",
+        "imabi-ordinals"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "79da33df4e2f9d34e9d62e4c14bff1a9383d8aa0f0e86a031a2a5b6e2e590c4a",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "chapterexpressions-expression-2",
+      "path": "counters/chapterexpressions.json",
+      "row": "lessons-chapters",
+      "contextKey": "completed-chapters",
+      "sourceIds": [
+        "imabi-counters-i",
+        "imabi-ordinals"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "60fc1ba089c6f886f12e68ab100c7aae9ffb00a66ebe0d15589a9a37c9e60973",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "sectioncounts-report-1",
+      "path": "counters/sectioncounts.json",
+      "row": "lessons-chapters",
+      "contextKey": "document-section-count",
+      "sourceIds": [
+        "jmdict-setsu",
+        "imabi-counters-i",
+        "tofugu-counter-list"
+      ],
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Choose",
+        "Type",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "c63650a3a99539b9b4401f36e0af6089be1c494169c8f34acd89824379d89508",
+      "independentScores": [
+        1,
+        0,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": "sectionexpressions-expression-1",
+      "path": "counters/sectionexpressions.json",
+      "row": "lessons-chapters",
+      "contextKey": "document-section-count",
+      "sourceIds": [
+        "jmdict-setsu",
+        "tofugu-counter-list"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "ada7a122acc2536fe5595e69028ce8e2edeb7820600e714841f7c4b8b0d55d52",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "episodelabels-expression-1",
+      "path": "counters/episodelabels.json",
+      "row": "episodes-volumes",
+      "contextKey": "series-episode",
+      "sourceIds": [
+        "imabi-ordinals"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "c5723b06874503219064615fb53ebb6261dfe1a52e761f73b43625b0ab1b5f67",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "episodelabels-expression-2",
+      "path": "counters/episodelabels.json",
+      "row": "episodes-volumes",
+      "contextKey": "series-episode",
+      "sourceIds": [
+        "imabi-ordinals"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "7c56c8239a589be7411384b058707c8148a26d7d4dc6067f4c9703cfd35ea59f",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "volumeexpressions-expression-1",
+      "path": "counters/volumeexpressions.json",
+      "row": "episodes-volumes",
+      "contextKey": "volume-identifier",
+      "sourceIds": [
+        "imabi-counters-vi",
+        "imabi-ordinals"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "2098df09fc58c03d50dfb29999aae380fb1c24d88630ac8acf2be8e7433e1c8d",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "volumeexpressions-expression-2",
+      "path": "counters/volumeexpressions.json",
+      "row": "episodes-volumes",
+      "contextKey": "volume-identifier",
+      "sourceIds": [
+        "imabi-counters-vi",
+        "imabi-ordinals"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "5a0e2c5b5cbfad10ac0bbd8090cc4302ffb6b0cd003fb8798bbce22f04a11086",
+      "independentScores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": "volumeexpressions-expression-3",
+      "path": "counters/volumeexpressions.json",
+      "row": "episodes-volumes",
+      "contextKey": "volumes-and-physical-copies",
+      "sourceIds": [
+        "imabi-counters-vi",
+        "imabi-ordinals",
+        "imabi-counters-i"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "d9d450c390ac45f6e5387361aff1d4ae38f37c1500318476a1b5fe1358ebf79b",
+      "independentScores": [
+        0,
+        1,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "volumecopies-expression-1",
+      "path": "counters/volumecopies.json",
+      "row": "episodes-volumes",
+      "contextKey": "volumes-and-physical-copies",
+      "sourceIds": [
+        "imabi-counters-i",
+        "imabi-counters-vi"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "bc14e3949a0dada70450b5b2e0fc7519a8e2ba75fb5bc233f6657b9b84a046da",
+      "independentScores": [
+        0,
+        1,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "raceplaces-expression-1",
+      "path": "counters/raceplaces.json",
+      "row": "ranks-grades",
+      "contextKey": "race-rank",
+      "sourceIds": [
+        "jmdict-ichii",
+        "imabi-ordinals"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "091be3fb2e20d70ea9c74b51b50623031f162d961c085c2f63fbd7f7bd4bc6e5",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "raceplaces-expression-2",
+      "path": "counters/raceplaces.json",
+      "row": "ranks-grades",
+      "contextKey": "race-rank",
+      "sourceIds": [
+        "jmdict-ichii",
+        "imabi-ordinals"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "2aba2f3f2fac81e8f83199f128d1e13f09972a8b4297d28c284dce21ab6c7a1a",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "gradeexpressions-expression-1",
+      "path": "counters/gradeexpressions.json",
+      "row": "ranks-grades",
+      "contextKey": "proficiency-grade-label",
+      "sourceIds": [
+        "jmdict-ikkyuu",
+        "jlpt-level-labels"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "ca5cbc3e4360bbdda6a328067332b58bc7b8fae5bbc1d95ab08c647a59b7a48e",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "gradeexpressions-expression-2",
+      "path": "counters/gradeexpressions.json",
+      "row": "ranks-grades",
+      "contextKey": "proficiency-grade-label",
+      "sourceIds": [
+        "jmdict-ikkyuu"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "d29ea3bbf142449f68de50474204062d8a30b3e8a8d8573bc177a3b2c5ab12f9",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "shelftiers-expression-1",
+      "path": "counters/shelftiers.json",
+      "row": "ranks-grades",
+      "contextKey": "shelf-tier",
+      "sourceIds": [
+        "jmdict-ichidan",
+        "imabi-ordinals",
+        "tofugu-counter-list"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "819e2b149341eee50ad1e91c5f994fb5734dd433c22757a082b24c2e7c30222f",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "shelftiers-expression-2",
+      "path": "counters/shelftiers.json",
+      "row": "ranks-grades",
+      "contextKey": "shelf-tier",
+      "sourceIds": [
+        "jmdict-ichidan",
+        "imabi-ordinals",
+        "tofugu-counter-list"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "c3a8462054fc84347f43f71634d98967be334c74215d3eb8e8dd863a8e033495",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "digitcounts-expression-1",
+      "path": "counters/digitcounts.json",
+      "row": "digits-text-units",
+      "contextKey": "digit-count",
+      "sourceIds": [
+        "imabi-native"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "5d9d7d7eebe32f3f7f14f0e07e9dfd26f827550414ea6af4baebe404c9658828",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "digitcounts-expression-2",
+      "path": "counters/digitcounts.json",
+      "row": "digits-text-units",
+      "contextKey": "digit-count",
+      "sourceIds": [
+        "imabi-native"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "8671344a406ab27496c4816a2e4bd93d7d3e616034ef7b70995e4cc02e408259",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "textlinecounts-expression-1",
+      "path": "counters/textlinecounts.json",
+      "row": "digits-text-units",
+      "contextKey": "text-line-count",
+      "sourceIds": [
+        "imabi-counters-viii"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "0e06211631d689fe99c952bba3f9c96f1235b2b37fca39c30f984e3636454ffc",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "textlinecounts-expression-2",
+      "path": "counters/textlinecounts.json",
+      "row": "digits-text-units",
+      "contextKey": "text-line-count",
+      "sourceIds": [
+        "imabi-counters-viii"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "3e8191d290a0f0136688b29ec3174e43e3a781f78673e36e2a725331f39ce569",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "characterexpressions-expression-1",
+      "path": "counters/characterexpressions.json",
+      "row": "digits-text-units",
+      "contextKey": "character-count",
+      "sourceIds": [
+        "imabi-native",
+        "marugoto-b1-independent",
+        "kotobank-futamoji"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "7fa6b022dab363514732494c87389116e29866ef41e6753b0b18b69e9bd6b3b8",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "characterexpressions-expression-2",
+      "path": "counters/characterexpressions.json",
+      "row": "digits-text-units",
+      "contextKey": "character-limit",
+      "sourceIds": [
+        "imabi-native",
+        "marugoto-b1-independent"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "fc287f6ee4758e07d510b84183e2a800d3fb1ff1e8ffeb23238bb161bc276edb",
+      "independentScores": [
+        1,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "jilimits-expression-1",
+      "path": "counters/jilimits.json",
+      "row": "digits-text-units",
+      "contextKey": "character-limit",
+      "sourceIds": [
+        "imabi-native",
+        "marugoto-b1-independent",
+        "tofugu-counter-list"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "05aa5169b5736f3538ec7097befaed1ce08bae260873cf573c91123bd73e66d8",
+      "independentScores": [
+        1,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "flightlabels-expression-1",
+      "path": "counters/flightlabels.json",
+      "row": "flight-labels",
+      "contextKey": "flight-number",
+      "sourceIds": [
+        "marugoto-a2b1",
+        "sanabo-aircraft"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "33e23096e2607062c22e120a1c067e46bdf1373eebc47fc2f9c175a52673ff09",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "flightlabels-expression-2",
+      "path": "counters/flightlabels.json",
+      "row": "flight-labels",
+      "contextKey": "daily-services",
+      "sourceIds": [
+        "marugoto-a2b1",
+        "sanabo-aircraft"
+      ],
+      "scores": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "modes": [
+        "Write",
+        "Read"
+      ],
+      "pilotMember": false,
+      "existingControl": false,
+      "review": "accepted fresh complete-task review and combined importer; no text changes required",
+      "runtimeRecordSha256": "653da0ee1183b3f39c56527b8b3ae59a37846cb534442fd502e9be9265804d6e",
+      "independentScores": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    }
+  ],
+  "checks": {
+    "contentVersion": "05200ead9195b49f",
+    "counterTests": "4 passed",
+    "fullValidator": "0 errors",
+    "manifest": "regenerated",
+    "baselineRecordsPreserved": 2364,
+    "baselineCounterFilesBytePreserved": 54,
+    "previouslyAcceptedScopedRecordsUnchanged": 146,
+    "originalLessonPilotRecordsPreserved": 2,
+    "articleOutsideNewC4AdditionsUnchanged": true,
+    "acceptedAIndexTreePreserved": "3e77250e3432343d627421278f40eea6912a3076",
+    "sourceWideCounterReadingsConsistent": true,
+    "budget": {
+      "files": 8006,
+      "entries": 8021,
+      "retainedBytes": 41802442,
+      "inflatedBytes": 42067948,
+      "localZipBytes": 29443674,
+      "listeningTaskMediaBytes": 5893602
+    },
+    "realImporter": {
+      "contentVersion": "05200ead9195b49f",
+      "tests": 60,
+      "suites": [
+        {
+          "name": "io.github.stopcran.kanji.core.ContentTest",
+          "tests": 38,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        },
+        {
+          "name": "io.github.stopcran.kanji.core.ImageContentTest",
+          "tests": 12,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        },
+        {
+          "name": "io.github.stopcran.kanji.core.ListeningTaskContentTest",
+          "tests": 8,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        },
+        {
+          "name": "io.github.stopcran.kanji.core.RealContentTest",
+          "tests": 2,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        },
+        {
+          "name": "io.github.stopcran.kanji.data.ContentLoadStateTest",
+          "tests": 0,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        }
+      ],
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "limits": "Initial C4 corpus importer result while independent text review remains pending. Not final linguistic, lifecycle or release acceptance. Zero-test discovery suite adds no cases."
+    },
+    "independentReview": "accepted complete initial review",
+    "limits": "Bounded C4 local acceptance only;14 coarse contrast families, not14 independently validated transfer contexts. Scaffolded selection is not unaided counter choice. C/D/E and publication remain unfinished."
+  },
+  "review": {
+    "status": "accepted",
+    "initialPacket": "c4-review-input",
+    "snapshotSha256": "6310d66bb2c4e42ed7f8f89a15c63f5a7a12c0a951cd7024cce0b5938fcb37c3",
+    "contractSha256": "a1deef47a5251a76de8cfdd7c21e3875aa9c8899b1d3434b1f9c1b23192d49c2",
+    "report": "counter-n3-c4-review.json",
+    "actualModel": null,
+    "modelLimit": "No exact reviewer model exposed; no model identity inferred.",
+    "reconciliation": "Not needed: initial review required no changes; frozen runtime bytes remain identical."
+  },
+  "initialReviewQuestions": [
+    "Check every complete operation: label versus number completed, volume versus physical copies, rank versus count, digit string versus numerical value, and service number versus departures.",
+    "Verify the document-section task's vocabulary and all typed alternatives against its actual chapter/section hierarchy; 節せつ is not the existing ふし word card.",
+    "Check explicit writing-only 第/目/kanji/Arabic notation requests without treating them as universal prohibitions or constraints on a kana Read response.",
+    "Verify exact compounds/readings rather than inferring grades or phone/radio digit conventions.",
+    "Reconcile only the actual selection operation and contexts; the mostly supplied-unit packet is not29 independent selection strategies."
+  ],
+  "contextReconciliation": {
+    "recordAccounting": {
+      "v1Forward": 1,
+      "v2Expressions": 28,
+      "completeRecords": 29,
+      "newRecords": 27,
+      "preservedRecords": 2,
+      "reverse": 0
+    },
+    "modeProjectionAccounting": {
+      "Choose": 1,
+      "Type": 1,
+      "Read": 29,
+      "Write": 28,
+      "totalProjections": 59,
+      "qualification": "59 presentations are not 59 records, contexts or independent skills. The same record is counted once in the 29-record review."
+    },
+    "contextAccounting": {
+      "distinctContractItemContextKeys": 17,
+      "conservativeContrastFamilies": 14,
+      "qualification": "The 14 are deliberately coarse editorial grouping families listed below, not an empirically validated independent-context total. Their internally different label/count/ordinal situations are described rather than inflated into transfer evidence. Number, noun, alias and mode changes do not add families."
+    },
+    "rows": [
+      {
+        "row": "lessons-chapters",
+        "records": 8,
+        "newRecords": 6,
+        "preservedPilotRecords": 2,
+        "contractItemContextKeys": [
+          "lesson-label-versus-count",
+          "completed-lessons",
+          "book-chapter-identifier",
+          "completed-chapters",
+          "document-section-count"
+        ],
+        "conservativeFamilies": [
+          "Workbook lesson identifiers versus completed-lesson counts, including only Lesson 6 completed",
+          "Book chapter identifier versus chapters read",
+          "Report chapter divided into three named sections"
+        ],
+        "operationsActuallySupported": "Specified-label/count writing and canonical reading; one v1 Choose/Type scaffolded completion.",
+        "selectionLimit": "The v1 question visibly repeats 節 in all three headings, with vocabulary support. It is recognition/reconstruction in a selection presentation, not independent selection of a counter from an unlabelled real-world situation. None of the v2 supplied-unit cues repairs that limitation.",
+        "contextLimit": "Pilot lesson-label/count members remain one paired family. The section v1/v2 pair shares the same situation.",
+        "coverageConclusion": "The assigned concrete tasks and sound classes are covered; no extra unaided-selection quota was supplied or invented."
+      },
+      {
+        "row": "episodes-volumes",
+        "records": 6,
+        "newRecords": 6,
+        "preservedPilotRecords": 0,
+        "contractItemContextKeys": [
+          "series-episode",
+          "volume-identifier",
+          "volumes-and-physical-copies"
+        ],
+        "conservativeFamilies": [
+          "Series episode label, full and short forms",
+          "Volume label on a cover",
+          "Three physical copies of Volume 1, asking either identifier or copy count"
+        ],
+        "operationsActuallySupported": "Supplied 話/巻/冊 whole-expression writing and canonical reading; identifier-versus-copy number extraction in the shared desk situation.",
+        "selectionLimit": "The explicitly supplied units do not test independent 冊/巻 selection.",
+        "contextLimit": "Volume 1 versus Volume 8 changes sound practice, not the cover situation; two questions about the same three copies are one contrast family.",
+        "coverageConclusion": "Requested label/copy distinction and 八巻 alternatives are adequately covered, without universal unit exclusivity."
+      },
+      {
+        "row": "ranks-grades",
+        "records": 6,
+        "newRecords": 6,
+        "preservedPilotRecords": 0,
+        "contractItemContextKeys": [
+          "race-rank",
+          "proficiency-grade-label",
+          "shelf-tier"
+        ],
+        "conservativeFamilies": [
+          "Race placing",
+          "Named examination/proficiency grade label",
+          "Physical shelf tier count and top-down ordinal position"
+        ],
+        "operationsActuallySupported": "Specified 位/級/段/段目 expression production and canonical readings.",
+        "selectionLimit": "No free selection of a ranking scale or comparison between qualification systems is tested.",
+        "contextLimit": "Certificate versus registration and first versus third placing are not counted as additional independent transfer situations.",
+        "coverageConclusion": "Race, grade and physical-tier senses remain separate; the tier count/ordinal pair states direction where needed."
+      },
+      {
+        "row": "digits-text-units",
+        "records": 7,
+        "newRecords": 7,
+        "preservedPilotRecords": 0,
+        "contractItemContextKeys": [
+          "digit-count",
+          "text-line-count",
+          "character-count",
+          "character-limit"
+        ],
+        "conservativeFamilies": [
+          "Digit positions in explicitly printed labels, including a leading zero",
+          "Lines occupied by a written message",
+          "Kanji character quantity in a displayed word",
+          "Inclusive maximum length in written characters"
+        ],
+        "operationsActuallySupported": "Specified 桁/行/文字/字以内 or 文字以内 writing and canonical reading.",
+        "selectionLimit": "Numbers and units are already stated. The limit tasks teach production/reading and explain inclusion, not independent boundary interpretation or selection.",
+        "contextLimit": "One versus six lines and twenty 文字 versus fifty 字 limits are not additional independent situations solely due to different numbers/units.",
+        "coverageConclusion": "The leading-zero and sound/character distinctions are explicit; no Unicode implementation or current social-media limit is inferred."
+      },
+      {
+        "row": "flight-labels",
+        "records": 2,
+        "newRecords": 2,
+        "preservedPilotRecords": 0,
+        "contractItemContextKeys": [
+          "flight-number",
+          "daily-services"
+        ],
+        "conservativeFamilies": [
+          "Timetable/route service notation, contrasting a flight identifier with daily service quantity"
+        ],
+        "operationsActuallySupported": "Specified 便 label/count writing and canonical reading.",
+        "selectionLimit": "The unit is supplied; aircraft-versus-service selection is explained rather than independently elicited.",
+        "contextLimit": "Identifier and daily-service quantity are genuinely different semantic subcases within this conservative contrast family; they are not multiplied by Write/Read.",
+        "coverageConclusion": "Single-digit unit notation is supported. No completion claim is made for carrier-specific multi-digit labels or radio pronunciation."
+      }
+    ]
+  }
+}

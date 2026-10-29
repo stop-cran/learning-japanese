@@ -1,6 +1,6 @@
 # N3 Numbers & counters: coverage and calibration contract
 
-Status: **contract and pilot accepted for B/C/D authoring** (2026-10-29).
+Status: **bulk authoring partially accepted locally; release acceptance incomplete** (2026-10-29).
 The initial matrix review and additional Marugoto B1 comparison found seven
 actionable issues, now [independently reconciled](counter-n3-review.json).
 Separate complete-pilot review found localized handout defects, now corrected
@@ -15,6 +15,37 @@ Work: [parent #52](https://github.com/stop-cran/learning-japanese/issues/52),
 [time/measures/interpretation #57](https://github.com/stop-cran/learning-japanese/issues/57),
 [release acceptance #55](https://github.com/stop-cran/learning-japanese/issues/55)
 and [Android #109](https://github.com/stop-cran/kanji-cards-android/issues/109).
+
+## Current local implementation
+
+B, C1-C4, the [D counter packet](counter-n3-d-counters.json), and the
+[D interpretation packet](counter-n3-d-interpretations.json) are accepted locally.
+C5 remains held on the exact three-room reading set. A
+[source follow-up](counter-n3-source-followup.json) now documents neighboring
+room counts and directly supports さんへや, with みへや as an alternative;
+the voiced forms remain unsettled. No runtime answer set has changed.
+
+The same follow-up confirms **both N3 and N2 teaching placements** for the
+interval-before-repeat construction. The existing Bunpro-first policy retains
+N2, but this is a source disagreement, not absence of N3 evidence. The user's
+conditional N2 fallback is recorded without treating it as unconditional
+approval of a scope change. The interpretation remains unfinished; its two
+cued counter expressions do not complete that operation. All 22 new numerical
+Grammar tasks remain unclassified, not silently included in cumulative N3.
+
+The [combined candidate accounting and native evidence](counter-n3-preacceptance.json)
+binds content version `db4dd194841d0157` to 255 new runtime identities:
+47 forward cards, two reverse records, 184 expressions and 22 Grammar tasks.
+The 259 scoped identities include four unchanged baseline controls; reused
+pilots are counted once. These totals include the unaccepted C5 packet.
+The two previously reconciled C1 pilot corrections are explicit exceptions
+to pilot-object preservation, not changes to the 2,364-record baseline.
+Record counts and Read projections are not additional semantic contexts or
+evidence of learner mastery.
+
+The bounded native sample and local archive checks do not complete #55.
+Full Activity/AppNav, lifecycle, public sync, physical-phone evidence and
+immutable signed publication remain separate from local packet acceptance.
 
 ## What this claim means
 
@@ -196,7 +227,12 @@ comparisons, **not measurements of learner proficiency**:
 | Decision load | One supplied unit/form | Select the relevant unit or distinguish two meanings | Integrate a short context and an explicit contrast |
 | Calculation | None | One transparent operation with small numbers | Multi-step or large mental arithmetic: redesign unless indispensable |
 | Answer ambiguity | Explicit operation; all fitting alternatives handled | Context needed but resolves the decision | A plausible rejected answer: fix, not a difficulty feature |
-| Feedback | Names the requested quantity/form | Explains why a tempting alternative changes the unit/sense | Missing/inconsistent branch: fix, not an upper-level feature |
+| Feedback | Names the requested quantity/form | Explains why a tempting alternative changes the unit/sense | Explains the result and the competing interpretations/choices |
+
+The feedback axis measures explanatory completeness, not learner difficulty:
+higher is better. Missing or inconsistent feedback is a defect, not an
+upper-level feature. This wording matches the accepted pilot score convention;
+the original author and independent score vectors remain preserved.
 
 Ordinary N3 extension tasks should add a meaningful decision without increasing
 every facet simultaneously. Bigger numbers, rarer counters and unsupported
@@ -225,3 +261,58 @@ and context keys, inspect native genuine-level-3 flows with the easier corpus
 still present, and verify exact published ZIP manifest entries/hashes and
 compatible app publication. A successful synthetic fixture is not actual
 N3-content acceptance. Full release/CI checks remain in #55.
+
+## Accepted authoring batches
+
+The local combined candidate `05200ead9195b49f` has accepted B and C1-C4
+text reviews and 60 passing production importer tests, including both
+real-corpus cases, with no failures or skips. This is not completion of C,
+D or E. Earlier B/C1 acceptance at `da72f49b8721c02c`, C2 acceptance at
+`79d1fc644dc12b31` and C3 acceptance at `0c6215e07ba2317c` remain recorded.
+
+| Batch | Accepted records | Evidence |
+| --- | --- | --- |
+| B: numerical forms | 54, including five pilot members | [Ledger](counter-n3-b.json), [complete review chain](counter-n3-b-review.json) |
+| C1: animals and documents | 28, including seven pilot members | [Ledger](counter-n3-c1.json), [complete review chain](counter-n3-c1-review.json) |
+| C2: packages, collections and membership | 36: 34 new, one pilot and one unchanged Choose-only control | [Ledger](counter-n3-c2.json), [complete review chain](counter-n3-c2-review.json) |
+| C3: grains, tablets, cases, products and buildings | 28 new | [Ledger](counter-n3-c3.json), [complete review chain](counter-n3-c3-review.json) |
+| C4: identifiers, ranks, text quantities and flights | 29: 27 new and two unchanged pilot records | [Ledger](counter-n3-c4.json), [complete initial review](counter-n3-c4-review.json) |
+
+B uses 14 conservative semantic contexts, not its 29 original task frames.
+C1 credits ten selection contexts; supplied-unit expression tasks add no
+independent selection contexts. Author and independent rubric scores remain
+separate. These are editorial assessments, not measured learner difficulty.
+C2 retains conservative per-row semantic/selection counts, not 36 contexts
+or 83 independently authored mode tasks. Its paired-participant membership
+gap was fixed without claiming a new selection strategy.
+C3 records nine conservative unit-selection families and ten semantic
+situations, not 28 independent contexts or 69 independent mode tasks.
+C4 uses 14 coarse contrast families rather than its 17 author context keys.
+These are descriptive groupings, not 14 validated transfer contexts.
+Its section-selection presentation is explicitly scaffolded by visible
+section headings; it does not demonstrate unaided counter selection.
+No C4 text correction or reconciliation report was needed.
+
+All 2,364 original records and 54 original counter files remain unchanged.
+Of the 24 accepted pilot records, 22 are unchanged. Two narrow corrective
+exceptions are recorded, not hidden by rewriting the historical pilot:
+`tou-elephants-1` now accepts the documented typed alternative `ろくひき`;
+`bu-handout-1` explicitly requires all three sheets on the question side.
+Both preserve their IDs and canonical Read answers.
+
+The original uncertain readings in B's discarded 70%/45% tasks remain
+unadjudicated; redesigning them as 60%/35% is not evidence that the old
+readings were wrong. C1's `はちつう` alternative has moderate-confidence
+exact-source support, not claimed NHK-level authority or equal frequency.
+C2's discarded `何箱` reading question likewise remains unadjudicated:
+its replacement counts two empty assembled boxes. The corrected packet
+accepts sourced `じゅうさら` for `十皿` and `把/一把` in the flower-bundle
+Type task without adding `いちわ` to the different canonical `一束` Read
+answer. The unsubstantiated optional `ひとわ` hypothesis is not a ban.
+C3 removes an unsubstantiated optional hotel-booking `本` answer and its
+affirmative note claim, without declaring that usage linguistically
+impossible. The independently supported email `本` answers remain unchanged.
+Its v1 software-fault note now matches the discovery rather than reporting
+stage; the v2 reported-fault context is preserved.
+Remaining C families, D interpretation/measures and integrated release
+acceptance are still required.

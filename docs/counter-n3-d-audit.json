@@ -1,0 +1,1761 @@
+{
+  "schemaVersion": 1,
+  "issue": 57,
+  "status": "author-reuse-audit-and-source-preparation",
+  "inspectedOnUtc": "2026-10-29",
+  "baselineCommit": "b697a3d65a4edf893b04eea33d2356cd600e87c9",
+  "liveRuntimeVersion": "5b9cb17c3df9341f",
+  "scope": {
+    "completeExistingTaskReads": 69,
+    "byOwner": {
+      "quantity-scope": 32,
+      "quantity-zutsu": 16,
+      "means-and-scope": 6,
+      "degree-and-polarity": 6,
+      "particle-neighbors": 9
+    },
+    "pilotMembersIncludedOnce": 4,
+    "baselineMembers": 65,
+    "runtimeChanges": 0,
+    "independentlyReviewed": false
+  },
+  "method": [
+    "Read all learner-visible fields and lexical objects of 32 quantity-scope and 16 quantity-zutsu tasks through lossless compact copies; re-read the truncated apple/budget records in full.",
+    "Read the six complete means-and-scope rank tasks; re-read the truncated final preference task. Read the six selected degree/polarity implication tasks and all nine complete approximation-versus-limit particle-neighbor tasks.",
+    "Read actual group/facet/member/context mappings, the linked quantity article through its relevant comparison, frequency, distribution, degree and part/remainder sections, and the source/classification contracts.",
+    "Searched existing Grammar objects for 倍, ratio/fraction and exact numeric-uncertainty/以内/ぶり forms. Search results identify candidate gaps; the complete-task comparisons establish the operation differences.",
+    "This is an author reuse/gap audit, not another independent linguistic certification of the unchanged baseline or a claim to read every unrelated task in means-and-scope and degree-and-polarity."
+  ],
+  "reuseConclusions": [
+    {
+      "owner": "quantity-scope",
+      "records": 28,
+      "operations": "Inclusive/strict boundaries, lower benchmark versus indefinite quantity, complete frequency formation, negative quantity scope, required resources versus price/activity duration.",
+      "limit": "These do not already assess exact 以内, ratio order/base, 数十/十数, non-interrogative large magnitude or interval-before-repeat."
+    },
+    {
+      "owner": "quantity-scope",
+      "records": 4,
+      "pilot": true,
+      "ids": [
+        "quantity-scope-fraction-used",
+        "quantity-scope-fraction-remaining",
+        "quantity-scope-discount-reduction",
+        "quantity-scope-discount-payable"
+      ],
+      "operations": "Requested part versus remainder, both a fractional container quantity and a reduction from a stated regular price.",
+      "contextFamilies": 2,
+      "decision": "Reuse all four unchanged. A recipe-water noun substitution would not add a third independent operation or justify new tasks just to match a planned key."
+    },
+    {
+      "owner": "quantity-zutsu",
+      "records": 16,
+      "jlpt": 3,
+      "contextFamilies": 6,
+      "operations": "Per-unit versus total for allocation/repeated days/entry groups; timing implications, small increments versus final total, completed incremental work and repeated timer adjustments.",
+      "decision": "Preserve all objects, levels, groups and gates. Do not add numerical noun substitutions or duplicate increase-versus-final/total questions."
+    },
+    {
+      "owner": "means-and-scope",
+      "records": 6,
+      "jlpt": 4,
+      "contextFamilies": 3,
+      "operations": "Comparison-set boundary, non-first rank anchor and preference versus physical position.",
+      "decision": "Reuse rather than introduce another ordinal/rank Grammar set; C4 separately supplies canonical numerical-unit reading/production."
+    },
+    {
+      "owner": "degree-and-polarity",
+      "records": 6,
+      "jlpt": 4,
+      "contextFamilies": 3,
+      "operations": "Near-whole membership does not prove everyone, near-zero sleep does not prove zero, and near-complete work does not prove exactly ninety percent.",
+      "decision": "Do not duplicate general degree/precision implications. Exact 数十/十数/何百 magnitude interpretation is a different missing target."
+    },
+    {
+      "owner": "particle-neighbors",
+      "records": 9,
+      "existingN5GroupedMembers": 5,
+      "operations": "Selecting approximation versus an expressly requested exclusive limit in quantity frames.",
+      "limit": "These are formation/selection operations, not a supplied-report inference test for every vague numeral. Four other N3 items in the same relationship remain unchanged and do not become new N5 coverage."
+    }
+  ],
+  "allocations": [
+    {
+      "id": "seconds-mixed-time",
+      "forms": "秒, 分秒 and manageable sub-minute durations",
+      "status": "new-owner",
+      "owner": "D",
+      "sources": [
+        "imabi-time",
+        "n3-index"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "びょう",
+        "mixed minute sound changes"
+      ],
+      "contextKeys": [
+        "timer-duration",
+        "race-time",
+        "short-recording"
+      ],
+      "misconception": "Seconds are not minutes; a component is not the entire duration.",
+      "support": "Group time; explicit duration notation, no stopwatch locale ambiguity.",
+      "evidenceIds": [],
+      "pilotEvidenceIds": [
+        "seconds-expression-1",
+        "seconds-expression-2"
+      ],
+      "pilotEvidenceLimits": "Accepted pilot members, not completion of every allocated row operation/context. Count once in the owning final batch."
+    },
+    {
+      "id": "bands-centuries",
+      "forms": "Age/year 代/年代, numerical 台 bands and 世紀",
+      "status": "new-owner",
+      "owner": "D",
+      "sources": [
+        "n3-index",
+        "kotobank-bands"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "だい",
+        "ねんだい",
+        "いっせいき"
+      ],
+      "contextKeys": [
+        "age-band",
+        "decade-label",
+        "price-band",
+        "historical-century"
+      ],
+      "misconception": "A band is not an exact value; a numbered century is not an arbitrary hundred-year span.",
+      "support": "Existing words/世紀.md entry 1373990 inspected. State conventional notation, and keep calendar versus everyday group placement explicit.",
+      "evidenceIds": []
+    },
+    {
+      "id": "capacity-mass",
+      "forms": "リットル/ミリリットル and metric トン",
+      "status": "new-owner",
+      "owner": "D",
+      "sources": [
+        "imabi-measures",
+        "n3-index"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "loanword units",
+        "simple decimal notation"
+      ],
+      "contextKeys": [
+        "bottle-capacity",
+        "recipe-liquid",
+        "load-mass"
+      ],
+      "misconception": "Metric ton is 1000 kg, not 1000 tons; rare 屯 is not the default writing.",
+      "support": "Request the unit rather than require mental conversion; preserve easier g/kg drills.",
+      "evidenceIds": []
+    },
+    {
+      "id": "everyday-speed",
+      "forms": "時速/秒速 with ordinary metric units",
+      "status": "new-owner",
+      "owner": "D",
+      "sources": [
+        "imabi-measures",
+        "n3-index"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "じそく",
+        "びょうそく"
+      ],
+      "contextKeys": [
+        "walking-speed",
+        "weather-wind-speed"
+      ],
+      "misconception": "Rate is not total distance; omitted everyday units depend on context.",
+      "support": "State full units; avoid specialist technical reading variants.",
+      "evidenceIds": []
+    },
+    {
+      "id": "fraction-discount-interpretation",
+      "forms": "Part/whole, reduction amount and amount left",
+      "status": "new-owner",
+      "owner": "D:quantity-scope",
+      "sources": [
+        "imabi-fractions",
+        "kotobank-waribiki",
+        "bunpro-cost"
+      ],
+      "operations": [
+        "grammar-interpretation"
+      ],
+      "soundClasses": [
+        "not a disguised spelling test"
+      ],
+      "contextKeys": [
+        "shop-discount",
+        "remaining-recipe-amount",
+        "fraction-of-container"
+      ],
+      "misconception": "The removed part and remaining whole are different quantities.",
+      "support": "Small transparent arithmetic; protect tested amount/construction from vocabulary gloss; per-task source level.",
+      "evidenceIds": [],
+      "pilotEvidenceIds": [
+        "quantity-scope-discount-reduction",
+        "quantity-scope-discount-payable",
+        "quantity-scope-fraction-used",
+        "quantity-scope-fraction-remaining"
+      ],
+      "pilotEvidenceLimits": "Accepted pilot members, not completion of every allocated row operation/context. Count once in the owning final batch."
+    },
+    {
+      "id": "ratio-rate-interpretation",
+      "forms": "Ratio order, base and rate versus total",
+      "status": "new-owner",
+      "owner": "D:quantity-scope",
+      "sources": [
+        "n3-index",
+        "imabi-measures",
+        "existing-quantity",
+        "pinned-tai-sense"
+      ],
+      "operations": [
+        "grammar-interpretation"
+      ],
+      "soundClasses": [
+        "not a new numerical engine"
+      ],
+      "contextKeys": [
+        "mixture-component-order",
+        "double-base",
+        "rate-and-observation-period"
+      ],
+      "misconception": "A ratio needs an ordered comparison and a rate does not supply an unstated total.",
+      "support": "No complex arithmetic; exact whole-task level evidence rather than N3-by-project.",
+      "evidenceIds": []
+    },
+    {
+      "id": "uncertainty-interpretation",
+      "forms": "数十/十数; non-interrogative 何百-type magnitude; approximate versus established amount",
+      "status": "new-owner",
+      "owner": "D:quantity-scope",
+      "sources": [
+        "kotobank-jusuu",
+        "imabi-prefixes",
+        "imabi-approximations",
+        "marugoto-b1-independent"
+      ],
+      "operations": [
+        "grammar-interpretation"
+      ],
+      "soundClasses": [
+        "meaning not pronunciation"
+      ],
+      "contextKeys": [
+        "uncertain-headcount",
+        "indefinite-large-stock"
+      ],
+      "misconception": "A vague report does not establish an exact number; 十数 is not 数十.",
+      "support": "Avoid disputed edge boundaries and answer-leaking glosses; classify actual tested construction.",
+      "evidenceIds": []
+    },
+    {
+      "id": "inclusive-within-interpretation",
+      "forms": "以内 numerical/character/time upper bounds",
+      "status": "new-owner",
+      "owner": "D:quantity-scope",
+      "sources": [
+        "marugoto-b1-independent",
+        "existing-quantity"
+      ],
+      "operations": [
+        "grammar-interpretation"
+      ],
+      "soundClasses": [
+        "以内/いない"
+      ],
+      "contextKeys": [
+        "character-limit",
+        "completion-deadline"
+      ],
+      "misconception": "以内 includes the boundary, unlike a strict below/before reading; the counted unit remains explicit.",
+      "support": "Existing bounds owner with additive facets only if needed; exact whole-task level source must be inspected.",
+      "evidenceIds": []
+    },
+    {
+      "id": "interval-since-event",
+      "forms": "年ぶり and month/year interval before a repeated event",
+      "status": "new-owner",
+      "owner": "D:quantity-scope",
+      "sources": [
+        "marugoto-b1-independent"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading",
+        "grammar-interpretation"
+      ],
+      "soundClasses": [
+        "ねんぶり",
+        "かげつぶり"
+      ],
+      "contextKeys": [
+        "return-after-gap",
+        "repeat-event-after-gap"
+      ],
+      "misconception": "A gap before a repeated event is not the event duration or a calendar year label.",
+      "support": "D authors bounded counter expressions and existing time-frame interpretations, not a new Grammar engine. Verify exact Bunpro placement before assigning a Grammar level.",
+      "evidenceIds": []
+    },
+    {
+      "id": "housing-area",
+      "forms": "平方メートル, 畳/じょう and 坪 in stated housing area",
+      "status": "new-owner",
+      "owner": "D",
+      "sources": [
+        "imabi-measures"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "へいほうメートル",
+        "じょう",
+        "つぼ; verify per-number readings"
+      ],
+      "contextKeys": [
+        "listed-floor-area",
+        "tatami-style-room-area"
+      ],
+      "misconception": "Area, room count and floor/room identifiers differ; do not assert one exact universal physical tatami size.",
+      "support": "Bounded production/reading of stated measurements, not land surveying or exact traditional-to-metric conversions.",
+      "evidenceIds": []
+    },
+    {
+      "id": "rice-volume",
+      "forms": "合 for stated uncooked-rice volume",
+      "status": "new-owner",
+      "owner": "D",
+      "sources": [
+        "imabi-measures"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "いちごう",
+        "にごう"
+      ],
+      "contextKeys": [
+        "rice-measuring-cup",
+        "rice-recipe-quantity"
+      ],
+      "misconception": "Volume is not an invariant mass or cooked yield; a rice measuring cup is not automatically an ordinary cup.",
+      "support": "Ordinary cooking quantities only; independently verify the practical use and any conversion before authoring.",
+      "evidenceIds": []
+    },
+    {
+      "id": "recipe-spoon-measures",
+      "forms": "大さじ/小さじ and simple fractional cooking measures",
+      "status": "new-owner",
+      "owner": "D",
+      "sources": [
+        "imabi-measures",
+        "imabi-fractions"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "おおさじ",
+        "こさじ",
+        "fractional measure"
+      ],
+      "contextKeys": [
+        "large-spoon-measure",
+        "small-spoon-measure"
+      ],
+      "misconception": "Named measuring units are not arbitrary household spoons; retain the requested measure and fraction.",
+      "support": "Practical cooking inclusion, not medicinal dosing. The listed general sources motivate the gap; an exact cooking reference is required before this row can be covered.",
+      "evidenceIds": []
+    }
+  ],
+  "proposedPackets": [
+    {
+      "id": "D-counters",
+      "status": "draft-authored",
+      "rows": [
+        "seconds-mixed-time",
+        "bands-centuries",
+        "capacity-mass",
+        "everyday-speed",
+        "housing-area",
+        "rice-volume",
+        "recipe-spoon-measures",
+        "interval-since-event"
+      ],
+      "constraints": "Existing v2 only; include two seconds pilot records once. Exact new numeral readings still need authoring checks and independent review; do not imply every planned expression is already verified.",
+      "ledger": "counter-n3-d-counters.json"
+    },
+    {
+      "id": "D-interpretations",
+      "status": "draft-authored-except-interval-grammar",
+      "rows": [
+        "fraction-discount-interpretation",
+        "ratio-rate-interpretation",
+        "uncertainty-interpretation",
+        "inclusive-within-interpretation",
+        "interval-since-event"
+      ],
+      "constraints": "Reuse the four fraction/discount pilots. Add only ratio order/base/rate implications, exact numeric uncertainty, within-boundary readings and a policy-resolved interval target. Preserve old Grammar objects and review statuses; existing quantity owner/chapter and no new hard gates.",
+      "ledger": "counter-n3-d-interpretations.json"
+    }
+  ],
+  "sources": [
+    {
+      "id": "bunpro-burini-exact",
+      "publisher": "Bunpro",
+      "url": "https://bunpro.jp/grammar_points/%E3%81%B6%E3%82%8A%E3%81%AB",
+      "inspection": {
+        "url": "https://bunpro.jp/grammar_points/%E3%81%B6%E3%82%8A%E3%81%AB",
+        "sha256": "a74b3c4dd2a1fd48ac07ea921fb0d555165a6fde49f8c8d67fa7e05edece7d0c",
+        "retrievedOnUtc": "2026-10-29T10:15:16.484545+00:00",
+        "title": [],
+        "relevantLinks": [
+          "/grammar_points",
+          "/grammar_points/%E3%81%A6%E3%81%AF",
+          "/grammar_points/%E3%81%A9%E3%81%93%E3%82%8D%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%84",
+          "https://bunpro.jp/grammar_points/%E3%81%B6%E3%82%8A%E3%81%AB"
+        ]
+      },
+      "verifiedHeading": "ぶりに (JLPT N2); N2 Lesson 4: 15/18",
+      "inspected": "Actual heading, level, Structure, About lapse-of-time sense and public examples; not only simplified extraction.",
+      "supported": "Noun+ぶりだ/ぶりに/ぶりの+noun for a repeated event after a lapse. The exact primary placement is N2.",
+      "limit": "Do not relabel scored Grammar interpretation as N3 or unclassified to meet this project's title. The unrelated appearance/style sense is not the target."
+    },
+    {
+      "id": "bunpro-exact-index",
+      "publisher": "Bunpro",
+      "inspection": {
+        "url": "https://bunpro.jp/grammar_points",
+        "sha256": "9403ce39fd0332c2fc29b28f8568db397e9f010847a1211bf16160bc5791d592",
+        "retrievedOnUtc": "2026-10-29T10:20:58.925158+00:00",
+        "distinctLessonLinks": 979,
+        "exactRelevantEntries": {
+          "/grammar_points/ぶりに": "ぶりに ぶりに For the first time in, Haven't done for some time N2"
+        },
+        "quantityCandidates": {
+          "/grammar_points/くらい1": "くらい ① About, Approximately N5",
+          "/grammar_points/number-も": "Number + も Emphasis, As ~ as, Not even N4",
+          "/grammar_points/number-amount-は": "Number/Amount + は (Amount) + は At least, Sort of, Or so N4",
+          "/grammar_points/number-しか-ない": "Number + しか〜ない (Number) + しか〜ない No more than, Not exceeding, As few as・as little as, Only N4",
+          "/grammar_points/せめて": "せめて At least N2",
+          "/grammar_points/おおよそ": "おおよそ Approximately, Roughly, About, Outline, Gist N2",
+          "/grammar_points/だけましだ": "だけましだ At least, It's better than..., One should feel grateful for N2",
+          "/grammar_points/からある": "からある As much as, As many as, At least N1",
+          "/grammar_points/なりとも": "なりとも Even (a little), At least N1"
+        },
+        "limits": "Exact link/entry audit of this returned all-level index, not a substring match in に違いない and not an exhaustive claim about every page on the site. No page/cursor links were found on prior inspection."
+      },
+      "conclusion": "979 distinct linked lessons in the returned all-level index. Exact ぶりに is N2; no exact 以内 or いない lesson link was present. An incidental substring in に違いない is not an 以内 entry.",
+      "limit": "The guessed 以内 lesson URL returned404. No exact secondary Grammar-level anchor for 以内 has yet been established; a vocabulary label would not suffice."
+    },
+    {
+      "id": "bunpro-number-mo",
+      "publisher": "Bunpro",
+      "url": "https://bunpro.jp/grammar_points/number-%E3%82%82",
+      "inspected": "Actual Number+Counter+も Structure/About and public examples, including non-interrogative 何回も; the index gives N4.",
+      "supported": "Quantity emphasis and non-interrogative indefinite count usage.",
+      "limit": "An N4 emphasis anchor does not automatically classify every independent 何百 magnitude contrast or exclude an exact numerical reading."
+    },
+    {
+      "id": "kikkoman-tablespoon",
+      "publisher": "Kikkoman Home Cooking",
+      "url": "https://www.kikkoman.co.jp/homecook/basic/measure/tablespoon.html",
+      "inspected": "大さじ and all four liquid/powder one/half-measure sections.",
+      "supported": "Named cooking measure 大さじ1 is15ml; half-measure notation is used. Volume is distinct from ingredient-dependent mass.",
+      "limit": "Not arbitrary household spoons or medicinal dosing. Do not promote the shape-specific fill-depth guidance into a universal geometry rule."
+    },
+    {
+      "id": "kikkoman-teaspoon",
+      "publisher": "Kikkoman Home Cooking",
+      "url": "https://www.kikkoman.co.jp/homecook/basic/measure/teaspoon.html",
+      "inspected": "小さじ and all four liquid/powder one/half-measure sections.",
+      "supported": "Named cooking measure 小さじ1 is5ml; half measures occur. No universal gram equivalence.",
+      "limit": "The source's spoon-shape guidance does not create a general volume-to-depth conversion."
+    },
+    {
+      "id": "kikkoman-rice-go",
+      "publisher": "Kikkoman Home Cooking",
+      "url": "https://www.kikkoman.co.jp/homecook/basic/measure/go.html",
+      "inspected": "米1合カップ and 米1合の計り方, not only the parent navigation page.",
+      "supported": "Cooking practice uses a180ml rice measure and distinguishes recipe1合 from1カップ.",
+      "limit": "Source's approximate150g is not an invariant mass; no cooked-yield inference or exact statutory-unit conversion is adopted."
+    },
+    {
+      "id": "imabi-measures",
+      "publisher": "IMABI",
+      "url": "https://imabi.org/numbers-x-measurements/",
+      "inspected": "Entire extracted measurement lesson through the final historical example.",
+      "supported": "Everyday metric unit names, speed versus distance, area versus length and traditional volume categories.",
+      "limit": "Mixed specialist survey, not a frequency ranking. Repeated tables, a universal tatami conversion and source typos are not adopted. Exact new compound readings need targeted checks."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "D-LEVEL-1",
+      "row": "interval-since-event",
+      "status": "source-disagreement-confirmed-scope-allocation-pending",
+      "evidence": "Exact primary Bunpro lesson and index classify the intended ぶり lapse-of-time construction as N2. The subsequent actual Nonbiri and Edew teaching entries explicitly place the same temporal sense at N3; this is not confusion with appearance/style ぶり.",
+      "followup": "counter-n3-source-followup.json",
+      "userDirection": "N2 is an allowed fallback if N3 or easier cannot be confirmed; do not rewrite that conditional direction as unconditional approval.",
+      "recommended": "The existing Bunpro-first policy retains N2 while documenting the verified N3 alternatives. Keep Counter expressions separate from interpretation. A scoped N3 exception or an N2 companion outside N3 coverage must be explicit; do not claim no N3 evidence exists, silently change the policy, delete the required row, or call N2 practice N3."
+    },
+    {
+      "id": "D-LEVEL-2",
+      "row": "inclusive-within-interpretation",
+      "status": "unclassified-unless-exact-secondary-anchor-established",
+      "evidence": "No exact primary 以内 entry in the inspected index; no exact secondary construction placement yet inspected."
+    }
+  ],
+  "preservation": "No runtime file, curriculum edge, vocabulary-review record, existing level or SRS identity is changed by this audit. All new packets still need complete authoring, independent review, reconciliation and actual importer acceptance.",
+  "inspectedRecords": [
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-fraction-used",
+      "jlpt": null,
+      "target": "part-amount",
+      "relationship": "part-and-remainder",
+      "runtimeRecordSha256": "756482fd7a314b0545277b6a82fa990bef5e90cc7c39ea5d2d8ea94ea1ffb346",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-parts-and-remainders",
+          "exerciseId": "quantity-scope-fraction-used",
+          "facetId": "part-amount",
+          "exampleKey": "water-fraction"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "4efa860d9f30e88b137e4592b74490eec4f594b103826cb56c32025569136ca8"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-fraction-remaining",
+      "jlpt": null,
+      "target": "remaining-amount",
+      "relationship": "part-and-remainder",
+      "runtimeRecordSha256": "4b7af02e444cafa90cd7bb48aae021f9a38a9c665a0ded1171deae793feb8fc2",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-parts-and-remainders",
+          "exerciseId": "quantity-scope-fraction-remaining",
+          "facetId": "remaining-amount",
+          "exampleKey": "water-fraction"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "1bea00986e7cb55e2de00cdc673c45e681e4ae09b9f0d1de1cecf2402700fa16"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-discount-reduction",
+      "jlpt": null,
+      "target": "part-amount",
+      "relationship": "part-and-remainder",
+      "runtimeRecordSha256": "ce9aa93325017304b13688cd88d78b2aa545705769eea9657ba176a5ac091b90",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-parts-and-remainders",
+          "exerciseId": "quantity-scope-discount-reduction",
+          "facetId": "part-amount",
+          "exampleKey": "shop-discount"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "f4129164ab2e262c29700b901267e8909e6727016619cce3cb356fff4b2b8732"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-discount-payable",
+      "jlpt": null,
+      "target": "remaining-amount",
+      "relationship": "part-and-remainder",
+      "runtimeRecordSha256": "61b5a8092bf63b7e08a3b679f3ce3c87f638e157d6fc7debc8fba41ea8256a05",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-parts-and-remainders",
+          "exerciseId": "quantity-scope-discount-payable",
+          "facetId": "remaining-amount",
+          "exampleKey": "shop-discount"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "f368f9e582e3695d9bf7d2dd6c531655cbfd5d13323212884ed32a67fdf5da32"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-age-minimum-boundary",
+      "jlpt": 4,
+      "target": "in-range",
+      "relationship": "boundaries",
+      "runtimeRecordSha256": "f4ba99a7d98bcdff595f30e8637d52dbbba54407957d8d21512b3c2dbf1b7182",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-boundaries",
+          "exerciseId": "quantity-scope-age-minimum-boundary",
+          "facetId": "in-range",
+          "exampleKey": "class-age-boundary"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "cfdc7197760ced72980b4b8c5289c51f75c75ce2ce282b5e072ae46bb39d9a74"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-participants-minimum-outside",
+      "jlpt": 4,
+      "target": "out-of-range",
+      "relationship": "boundaries",
+      "runtimeRecordSha256": "5ed2637b7e9a265fc732529a78f60b618c9aca1c722dd752e50ac56cbc54a728",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-boundaries",
+          "exerciseId": "quantity-scope-participants-minimum-outside",
+          "facetId": "out-of-range",
+          "exampleKey": "participants-four-minimum"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "1440647f7b4d1295447cb3532009e8b3f8bbecf62f5234c6206cd35b75fb3593"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-apples-maximum-boundary",
+      "jlpt": 4,
+      "target": "in-range",
+      "relationship": "boundaries",
+      "runtimeRecordSha256": "b67cb8b73c4210875e9b52bcafe4726b76ffc5a60051836769b0dee6a2ec74c0",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-boundaries",
+          "exerciseId": "quantity-scope-apples-maximum-boundary",
+          "facetId": "in-range",
+          "exampleKey": "box-apple-maximum"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "fbc325b1967b91ebf1fe30f128e7b3cc28a6abb190d3f46356b908d0dd880b25"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-budget-maximum-outside",
+      "jlpt": 4,
+      "target": "out-of-range",
+      "relationship": "boundaries",
+      "runtimeRecordSha256": "d2fe9f216a83a22daec5ff6050e91bf9d3872b7e21eb8c76f9f822ce0d2db7a3",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-boundaries",
+          "exerciseId": "quantity-scope-budget-maximum-outside",
+          "facetId": "out-of-range",
+          "exampleKey": "item-budget-maximum"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "0b8bebabab69c87787a1860185932a7d34481351532dfac98f25d0edd08395e5"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-participants-strict-more-inside",
+      "jlpt": 4,
+      "target": "in-range",
+      "relationship": "boundaries",
+      "runtimeRecordSha256": "5ffccdd205d5a39faff1d18b63147fd41807e43f76862d92286ec96c547da2d2",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-boundaries",
+          "exerciseId": "quantity-scope-participants-strict-more-inside",
+          "facetId": "in-range",
+          "exampleKey": "participants-ten-comparison"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "3553975658b4f93b27f0fed7b2718880f278c9c6eccbbf06c579a2f4c27ed4e2"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-umbrella-strict-more-boundary",
+      "jlpt": 4,
+      "target": "out-of-range",
+      "relationship": "boundaries",
+      "runtimeRecordSha256": "240aa459ac6633606ffb38d92feb28df3670fc3d15f0deca19fa7a77a8789448",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-boundaries",
+          "exerciseId": "quantity-scope-umbrella-strict-more-boundary",
+          "facetId": "out-of-range",
+          "exampleKey": "umbrella-price-comparison"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "8ff5a8d6c34dea2775de307f3015e19f7daa3836fa04b326db9f4b562bd019b8"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-participants-strict-less-boundary",
+      "jlpt": 4,
+      "target": "out-of-range",
+      "relationship": "boundaries",
+      "runtimeRecordSha256": "2a41d58d9d80e039389b49934f0dd12451fd84ff708342951821eb5671229ab7",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-boundaries",
+          "exerciseId": "quantity-scope-participants-strict-less-boundary",
+          "facetId": "out-of-range",
+          "exampleKey": "participants-ten-comparison"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "29a6acf15fb274828cd3e746bdd4b69770e3876a125cd43ff44c243b51873cbf"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-umbrella-strict-less-inside",
+      "jlpt": 4,
+      "target": "in-range",
+      "relationship": "boundaries",
+      "runtimeRecordSha256": "cead38955194a02aa4164231a6426c19e5a5e9f614ea6ac9a97c711547c41690",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-boundaries",
+          "exerciseId": "quantity-scope-umbrella-strict-less-inside",
+          "facetId": "in-range",
+          "exampleKey": "umbrella-price-comparison"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "33b7a4b7ebfca69b6efd3fe84122110c4d0b5685f10fd9e0b5c3a1ff8f8adf72"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-walking-time-benchmark",
+      "jlpt": 4,
+      "target": "minimum",
+      "relationship": "quantity-framing",
+      "runtimeRecordSha256": "7dfef8134caa55f688907a0881e9a317a9f924b1dd120cb0f6f95299a87fea9f",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-quantity-framing",
+          "exerciseId": "quantity-scope-walking-time-benchmark",
+          "facetId": "minimum",
+          "exampleKey": "station-time-benchmark"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "ab6a11379ff2d9405b06ebf49e866e1028a66bd65417157e004ffd1af5479317"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-cash-request-benchmark",
+      "jlpt": 4,
+      "target": "minimum",
+      "relationship": "quantity-framing",
+      "runtimeRecordSha256": "eeca3a8ec5b81abb8db7570d6e3dfce33257ebf6f4a26b0d41ec934d890e214e",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-quantity-framing",
+          "exerciseId": "quantity-scope-cash-request-benchmark",
+          "facetId": "minimum",
+          "exampleKey": "cash-request-benchmark"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "7330ec838c8410194ee013084dc438b9aa2b4a2d0a62b1e181e9a457ff9074e4"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-books-unspecified-count",
+      "jlpt": 4,
+      "target": "unspecified",
+      "relationship": "quantity-framing",
+      "runtimeRecordSha256": "97ce579549633dad5f2433397e0815b74b27258e7fd9ef62edd67df0189335a2",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-quantity-framing",
+          "exerciseId": "quantity-scope-books-unspecified-count",
+          "facetId": "unspecified",
+          "exampleKey": "borrowed-book-quantity"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "10db2a4e89611ee0e9044226856676c1e2e8f9385d15179ad9b199d4b1db02de"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-cars-unspecified-modifier",
+      "jlpt": 4,
+      "target": "unspecified",
+      "relationship": "quantity-framing",
+      "runtimeRecordSha256": "33659c664565e3e5c547466d57e987e676a2418fc5b1c4c4929507020fdc1271",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-quantity-framing",
+          "exerciseId": "quantity-scope-cars-unspecified-modifier",
+          "facetId": "unspecified",
+          "exampleKey": "parked-car-quantity"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "3c82c875fb6fcb5256c11e8c8edc3a1f84fc07a17ed2a27ec9456110d9f99540"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-weekly-library-rate",
+      "jlpt": 4,
+      "target": "per-period",
+      "relationship": "frequency",
+      "runtimeRecordSha256": "0707d772092442cea948bd0ebae20ad6091679b5d36c0910bf7abc66850c30b8",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-frequency",
+          "exerciseId": "quantity-scope-weekly-library-rate",
+          "facetId": "per-period",
+          "exampleKey": "weekly-library-rate"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "f4529aafdc7030261b1510b832b036848871e7c0d06d77adabd3cbc9cff90a76"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-hourly-train-rate",
+      "jlpt": 4,
+      "target": "per-period",
+      "relationship": "frequency",
+      "runtimeRecordSha256": "b50c76f44ed1c2fe6dc5691effaef7d90d15f0d33e21ab18d789d07d468934d7",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-frequency",
+          "exerciseId": "quantity-scope-hourly-train-rate",
+          "facetId": "per-period",
+          "exampleKey": "hourly-train-rate"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "0d6e186314ddfba199036d0a510a1b21bd147f86956c5f527d6bd987840d24ae"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-grandmother-each-meeting",
+      "jlpt": 4,
+      "target": "per-occasion",
+      "relationship": "frequency",
+      "runtimeRecordSha256": "4d2ce52858c614bbfe54375684085636d2427a26020a5620a4758404739f483c",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-frequency",
+          "exerciseId": "quantity-scope-grandmother-each-meeting",
+          "facetId": "per-occasion",
+          "exampleKey": "grandmother-meetings"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "543c29f4aa8510763a98bb62328f7bb9304b03746bcf1fcfba6a849d3ba31054"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-card-each-order",
+      "jlpt": 4,
+      "target": "per-occasion",
+      "relationship": "frequency",
+      "runtimeRecordSha256": "34ec08216d61116c3e3d60da6110cd902479faf859dd0c334d2d2de34d602978",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-frequency",
+          "exerciseId": "quantity-scope-card-each-order",
+          "facetId": "per-occasion",
+          "exampleKey": "order-cards"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "3bbeff94d3cb17828ec24de52bd632f24c9c62ceb1a1af7bf1800e723681f8ef"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-no-water-drinking",
+      "jlpt": 4,
+      "target": "absence",
+      "relationship": "negative-scope",
+      "runtimeRecordSha256": "852bff7551d0b99d2ab2cfc18aa46a9782fb8801c8da0e4e17bf6aecade011ec",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-negative-scope",
+          "exerciseId": "quantity-scope-no-water-drinking",
+          "facetId": "absence",
+          "exampleKey": "morning-water"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "d4b50c8486ac95ba9ce95d2f2c218190e2f973d84a999e2e487c1f7e0e7676c9"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-not-cold-at-all",
+      "jlpt": 4,
+      "target": "absence",
+      "relationship": "negative-scope",
+      "runtimeRecordSha256": "5c116e216afa72e68badc73a390b25ab8dd9d30055927b2b0579144f3db313ae",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-negative-scope",
+          "exerciseId": "quantity-scope-not-cold-at-all",
+          "facetId": "absence",
+          "exampleKey": "room-coldness"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "f57519f2bddab01ee95d13d753d85ace679896545adb1ca8eb394ee12b406344"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-not-few-cyclists",
+      "jlpt": 4,
+      "target": "not-small",
+      "relationship": "negative-scope",
+      "runtimeRecordSha256": "43139a25a2f0bafd08c74357b1d9d5ea98daf1f0ced9c21fba6dad9d4fa9d94d",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-negative-scope",
+          "exerciseId": "quantity-scope-not-few-cyclists",
+          "facetId": "not-small",
+          "exampleKey": "town-cyclists"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "83bf8eee49978ad5b9a68f004dd8a860f4fa6129c1f7bba4e2b821f9fa74bd94"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-not-small-travel-expense",
+      "jlpt": 4,
+      "target": "not-small",
+      "relationship": "negative-scope",
+      "runtimeRecordSha256": "b28264f02dd15b84046b6d65befe1dab35eb3f022b1e306e6ab1af1162b4c359",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-negative-scope",
+          "exerciseId": "quantity-scope-not-small-travel-expense",
+          "facetId": "not-small",
+          "exampleKey": "travel-expense"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "016d18a3998433d2c2aabbb9fdb9ca5a40afb915e6b95540f96ccf62121c9f36"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-no-unused-box-tools",
+      "jlpt": 4,
+      "target": "no-exception",
+      "relationship": "negative-scope",
+      "runtimeRecordSha256": "5b7997252dcb8be175ae8bf17bfce46facd001ec1894c6f043a2c8e9875260a2",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-negative-scope",
+          "exerciseId": "quantity-scope-no-unused-box-tools",
+          "facetId": "no-exception",
+          "exampleKey": "box-tool-use"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "63df013950b3f03eebf74a12f95e6f493f8ef905bfb89a791e1f981b39276699"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-no-nonswimmers-class",
+      "jlpt": 4,
+      "target": "no-exception",
+      "relationship": "negative-scope",
+      "runtimeRecordSha256": "e801e43777db333f9ce3a2426c2e01bdd370adf9313b459165c020f244fcdeea",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-negative-scope",
+          "exerciseId": "quantity-scope-no-nonswimmers-class",
+          "facetId": "no-exception",
+          "exampleKey": "class-swimming"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "432accbfa49463c0bc57e41b9ed18cdd99e7c38199d7f3c99d23eff497b70990"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-walking-required-time",
+      "jlpt": 4,
+      "target": "required-resource",
+      "relationship": "cost-frames",
+      "runtimeRecordSha256": "48f25c9e3f8877f3ad03e166432f72e7a1316a082458dd4ba55be3ff4a13f664",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-cost-frames",
+          "exerciseId": "quantity-scope-walking-required-time",
+          "facetId": "required-resource",
+          "exampleKey": "school-walking-time"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "5546f74c2e5042a1cf609d578e9c58c798de90445d84365bee541678cca747cd"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-repair-required-money",
+      "jlpt": 4,
+      "target": "required-resource",
+      "relationship": "cost-frames",
+      "runtimeRecordSha256": "726ab2d12669dcc69cc759c9af02fded27c04e905f7c5da9c5544b8e4865dbe7",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-cost-frames",
+          "exerciseId": "quantity-scope-repair-required-money",
+          "facetId": "required-resource",
+          "exampleKey": "bag-repair-cost"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "b5fa67b194f4c345d5f9a129d367be726d6e7a2c3aec76b4409d9269e7090f6c"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-cup-price-present",
+      "jlpt": 4,
+      "target": "item-price",
+      "relationship": "cost-frames",
+      "runtimeRecordSha256": "b3bc85f4f3c4dd1afab24644490b03a5326d50a185187482d35d99814f006439",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-cost-frames",
+          "exerciseId": "quantity-scope-cup-price-present",
+          "facetId": "item-price",
+          "exampleKey": "cup-price"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "368af7fe02cf2bc062254c40fe45cf2baf5c06d85213994aa48ac137543022cb"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-watch-price-past",
+      "jlpt": 4,
+      "target": "item-price",
+      "relationship": "cost-frames",
+      "runtimeRecordSha256": "48af1bec7e686875b7670da3677798b4b811541e8830f8e9d5a56f3eec13356b",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-cost-frames",
+          "exerciseId": "quantity-scope-watch-price-past",
+          "facetId": "item-price",
+          "exampleKey": "watch-price"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "b318d50e391fd34f7b5d64a17fbcdc1cbdab44e4c026a23014d272ce1a069e32"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-planned-cleaning-duration",
+      "jlpt": 5,
+      "target": "activity-duration",
+      "relationship": "cost-frames",
+      "runtimeRecordSha256": "65580713d233276dc17b7f247f37480986af3c0e72857990936410658824a718",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-cost-frames",
+          "exerciseId": "quantity-scope-planned-cleaning-duration",
+          "facetId": "activity-duration",
+          "exampleKey": "planned-cleaning"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "7508c15ca5652e1d676c5fb455734e081756d250ad7738fc63fef9327687027f"
+    },
+    {
+      "path": "grammar/quantity-scope.json",
+      "id": "quantity-scope-habitual-exercise-duration",
+      "jlpt": 5,
+      "target": "activity-duration",
+      "relationship": "cost-frames",
+      "runtimeRecordSha256": "4954fb336ee2079a61dfe5ab8dc7941e32bf9d39703fd7340cbeb80031c53a51",
+      "memberships": [
+        {
+          "groupId": "quantity-scope-cost-frames",
+          "exerciseId": "quantity-scope-habitual-exercise-duration",
+          "facetId": "activity-duration",
+          "exampleKey": "morning-exercise"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "367b3ff345b30c2f09ddc4f97422a699c351df6f8e1cd2a98e6ba1c923f02cef"
+    },
+    {
+      "path": "grammar/quantity-zutsu.json",
+      "id": "quantity-zutsu-stickers-unit",
+      "jlpt": 3,
+      "target": "unit-amount",
+      "relationship": "amounts",
+      "runtimeRecordSha256": "0838a3221fc57997af22d4012c392124bf90c90ed57f7adfaeba3045dc8202b2",
+      "memberships": [
+        {
+          "groupId": "quantity-zutsu-amounts",
+          "exerciseId": "quantity-zutsu-stickers-unit",
+          "facetId": "unit-amount",
+          "exampleKey": "zutsu-equal-allocation"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "be418de1fa180358270c78dce81537c4bfe7212ead7ce77c5f92e98bf122cf95"
+    },
+    {
+      "path": "grammar/quantity-zutsu.json",
+      "id": "quantity-zutsu-stickers-total",
+      "jlpt": 3,
+      "target": "whole-total",
+      "relationship": "amounts",
+      "runtimeRecordSha256": "e3377a00c323af239bd03cced2ad2f6772625b50970071023c40b795c63c337f",
+      "memberships": [
+        {
+          "groupId": "quantity-zutsu-amounts",
+          "exerciseId": "quantity-zutsu-stickers-total",
+          "facetId": "whole-total",
+          "exampleKey": "zutsu-equal-allocation"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "e11ca20371bd15ead2ed4c03bd5e7c6c468ee3486a8e3c63142bf5ec430df64a"
+    },
+    {
+      "path": "grammar/quantity-zutsu.json",
+      "id": "quantity-zutsu-containers-unit",
+      "jlpt": 3,
+      "target": "unit-amount",
+      "relationship": "amounts",
+      "runtimeRecordSha256": "1050c9b69f2418206874d6e782748cb8ebc033916bc5372e3fa4ffd964565981",
+      "memberships": [
+        {
+          "groupId": "quantity-zutsu-amounts",
+          "exerciseId": "quantity-zutsu-containers-unit",
+          "facetId": "unit-amount",
+          "exampleKey": "zutsu-equal-allocation"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "877a92a176d8d0fdcfa93ac2f3b91b97d2480f1564bb067dc8fe68413ba389bb"
+    },
+    {
+      "path": "grammar/quantity-zutsu.json",
+      "id": "quantity-zutsu-containers-total",
+      "jlpt": 3,
+      "target": "whole-total",
+      "relationship": "amounts",
+      "runtimeRecordSha256": "0a9a8c19c8abbf9f4fe8569fe4018654533818da148c32f5f66a7caf4d906354",
+      "memberships": [
+        {
+          "groupId": "quantity-zutsu-amounts",
+          "exerciseId": "quantity-zutsu-containers-total",
+          "facetId": "whole-total",
+          "exampleKey": "zutsu-equal-allocation"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "b56acac0fb788a16df1c1a1a0b0d5f40a3b0435da409ea448da94d08e49690a0"
+    },
+    {
+      "path": "grammar/quantity-zutsu.json",
+      "id": "quantity-zutsu-reading-days-unit",
+      "jlpt": 3,
+      "target": "unit-amount",
+      "relationship": "amounts",
+      "runtimeRecordSha256": "338f1af3af6bc14c48d7e5388dc78797d72defd0052b95934afff419ed106dbf",
+      "memberships": [
+        {
+          "groupId": "quantity-zutsu-amounts",
+          "exerciseId": "quantity-zutsu-reading-days-unit",
+          "facetId": "unit-amount",
+          "exampleKey": "zutsu-reading-days"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "4699572ace8792c214268f5ce3242eda414457274c87d855b795dbd9c5f11506"
+    },
+    {
+      "path": "grammar/quantity-zutsu.json",
+      "id": "quantity-zutsu-reading-days-total",
+      "jlpt": 3,
+      "target": "whole-total",
+      "relationship": "amounts",
+      "runtimeRecordSha256": "6d04f14810fdae50d4c25fc050604520cfe6626faf34b4061dd23c4523a4934f",
+      "memberships": [
+        {
+          "groupId": "quantity-zutsu-amounts",
+          "exerciseId": "quantity-zutsu-reading-days-total",
+          "facetId": "whole-total",
+          "exampleKey": "zutsu-reading-days"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "34bf6d0e51e76c89e8c4340e5edc5da1eb37b89e0ef06fd26fe36930adf9fcbe"
+    },
+    {
+      "path": "grammar/quantity-zutsu.json",
+      "id": "quantity-zutsu-entry-groups-unit",
+      "jlpt": 3,
+      "target": "unit-amount",
+      "relationship": "amounts",
+      "runtimeRecordSha256": "5aab2e1cc4d9027b65472a9c04f66a3fb2e99ddda81aa59fdf6e8c25a4b563bf",
+      "memberships": [
+        {
+          "groupId": "quantity-zutsu-amounts",
+          "exerciseId": "quantity-zutsu-entry-groups-unit",
+          "facetId": "unit-amount",
+          "exampleKey": "zutsu-entry-groups"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "a1956f0c25e87e773eef8ca020c072c08445a5f1de9f1e8caf5dd9561bdd8b61"
+    },
+    {
+      "path": "grammar/quantity-zutsu.json",
+      "id": "quantity-zutsu-entry-groups-total",
+      "jlpt": 3,
+      "target": "whole-total",
+      "relationship": "amounts",
+      "runtimeRecordSha256": "6d432e5234a17fd71765dcce811afcbb5ff3a40c7117ad80f08be3002927ba07",
+      "memberships": [
+        {
+          "groupId": "quantity-zutsu-amounts",
+          "exerciseId": "quantity-zutsu-entry-groups-total",
+          "facetId": "whole-total",
+          "exampleKey": "zutsu-entry-groups"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "844071711ce4e1421cb44c5cacd4caed30885de8262c0c4a1dad3b9f1ad59a54"
+    },
+    {
+      "path": "grammar/quantity-zutsu.json",
+      "id": "quantity-zutsu-stickers-follows",
+      "jlpt": 3,
+      "target": "entailed",
+      "relationship": "implications",
+      "runtimeRecordSha256": "991ab204b73b271a351ccb4f92328b812361e76393f36804954dbeb15fdeb498",
+      "memberships": [
+        {
+          "groupId": "quantity-zutsu-implications",
+          "exerciseId": "quantity-zutsu-stickers-follows",
+          "facetId": "entailed",
+          "exampleKey": "zutsu-equal-allocation"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "a59d952ba2a96b6ec1c710594b2a2dff005ac74e563dea2cfade0640344eed6d"
+    },
+    {
+      "path": "grammar/quantity-zutsu.json",
+      "id": "quantity-zutsu-stickers-not-established",
+      "jlpt": 3,
+      "target": "not-entailed",
+      "relationship": "implications",
+      "runtimeRecordSha256": "444ea06ad4db22beedfb5c9afc7555e7a65c955e7ea5ed65c582fb40a20575f5",
+      "memberships": [
+        {
+          "groupId": "quantity-zutsu-implications",
+          "exerciseId": "quantity-zutsu-stickers-not-established",
+          "facetId": "not-entailed",
+          "exampleKey": "zutsu-equal-allocation"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "8b657467f5a9301a5c44f4cbe4862decadd8ec181efe89b93867f6e1265174f3"
+    },
+    {
+      "path": "grammar/quantity-zutsu.json",
+      "id": "quantity-zutsu-spring-warming-follows",
+      "jlpt": 3,
+      "target": "entailed",
+      "relationship": "implications",
+      "runtimeRecordSha256": "174aad8c2370a54eb7112478bc32edcbad736b1e636f1686380a345e94022968",
+      "memberships": [
+        {
+          "groupId": "quantity-zutsu-implications",
+          "exerciseId": "quantity-zutsu-spring-warming-follows",
+          "facetId": "entailed",
+          "exampleKey": "zutsu-spring-warming"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "de8d0804ee6f1c58b7ed525429fc8bf2514ec599c426a7cce88bccff67422e02"
+    },
+    {
+      "path": "grammar/quantity-zutsu.json",
+      "id": "quantity-zutsu-spring-warming-not-established",
+      "jlpt": 3,
+      "target": "not-entailed",
+      "relationship": "implications",
+      "runtimeRecordSha256": "9187cd15816b0391b5bc1c6e26ba4a649607985d71fdd309b1b9724179cad1e5",
+      "memberships": [
+        {
+          "groupId": "quantity-zutsu-implications",
+          "exerciseId": "quantity-zutsu-spring-warming-not-established",
+          "facetId": "not-entailed",
+          "exampleKey": "zutsu-spring-warming"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "687e3380013dd564744a240218721e748ff3fbe9bf32cb5dec39db98b9e4db00"
+    },
+    {
+      "path": "grammar/quantity-zutsu.json",
+      "id": "quantity-zutsu-finished-photos-follows",
+      "jlpt": 3,
+      "target": "entailed",
+      "relationship": "implications",
+      "runtimeRecordSha256": "78df599aca07f7c501eddd5d4a7e9e0c650e41cdec08a186dadc53d7324feff0",
+      "memberships": [
+        {
+          "groupId": "quantity-zutsu-implications",
+          "exerciseId": "quantity-zutsu-finished-photos-follows",
+          "facetId": "entailed",
+          "exampleKey": "zutsu-finished-photos"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "3e6ee0abc9dd338062cadd3fc2ba228a30078270eedf150d7cff46ae9d34c511"
+    },
+    {
+      "path": "grammar/quantity-zutsu.json",
+      "id": "quantity-zutsu-finished-photos-not-established",
+      "jlpt": 3,
+      "target": "not-entailed",
+      "relationship": "implications",
+      "runtimeRecordSha256": "96a4a052c7b31d633c495b9ae8fc23160c05a6506e538e45557d8e9f5c890373",
+      "memberships": [
+        {
+          "groupId": "quantity-zutsu-implications",
+          "exerciseId": "quantity-zutsu-finished-photos-not-established",
+          "facetId": "not-entailed",
+          "exampleKey": "zutsu-finished-photos"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "41ff45f97b3d8471526249066c1ac5b27730727c346d667af3b66061a0b788e0"
+    },
+    {
+      "path": "grammar/quantity-zutsu.json",
+      "id": "quantity-zutsu-timer-increments-follows",
+      "jlpt": 3,
+      "target": "entailed",
+      "relationship": "implications",
+      "runtimeRecordSha256": "ae8d5051737ea709551ab0837bdd6341449d480be00da1094f4660a4f295967c",
+      "memberships": [
+        {
+          "groupId": "quantity-zutsu-implications",
+          "exerciseId": "quantity-zutsu-timer-increments-follows",
+          "facetId": "entailed",
+          "exampleKey": "zutsu-timer-increments"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "7775ade78e937654ae4fbf1241015c322cfbb38ca905d8b2c64f53af5a93a742"
+    },
+    {
+      "path": "grammar/quantity-zutsu.json",
+      "id": "quantity-zutsu-timer-increments-not-established",
+      "jlpt": 3,
+      "target": "not-entailed",
+      "relationship": "implications",
+      "runtimeRecordSha256": "48baba1e838a14cc3c5036df872ddd5bbee7fbc28dc32979a51a997546659845",
+      "memberships": [
+        {
+          "groupId": "quantity-zutsu-implications",
+          "exerciseId": "quantity-zutsu-timer-increments-not-established",
+          "facetId": "not-entailed",
+          "exampleKey": "zutsu-timer-increments"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "d5dbaf5eae9ed4a8434766b50647021c2a1e8349c2f85ebcda6348a892bdb63f"
+    },
+    {
+      "path": "grammar/means-and-scope.json",
+      "id": "means-and-scope-height-comparison-set-group-second",
+      "jlpt": 4,
+      "target": "rank-supported",
+      "relationship": "rank",
+      "runtimeRecordSha256": "ff4d3c42265a38fed0e5f5cc43cf6d90b04ace39aac55721d072fc7fb2763e3f",
+      "memberships": [
+        {
+          "groupId": "means-and-scope-rank",
+          "exerciseId": "means-and-scope-height-comparison-set-group-second",
+          "facetId": "rank-supported",
+          "exampleKey": "scope-rank-comparison-set"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "3efa466ae23822d7cb96a4dfd4d1628ee7140e9518031d58bdf526a9def2db92"
+    },
+    {
+      "path": "grammar/means-and-scope.json",
+      "id": "means-and-scope-height-comparison-set-school-second",
+      "jlpt": 4,
+      "target": "rank-not-established",
+      "relationship": "rank",
+      "runtimeRecordSha256": "9fd5a3b9f2cb78c1c6f88f48e4423afc4e99534fb2cc86b507b792e9694b140e",
+      "memberships": [
+        {
+          "groupId": "means-and-scope-rank",
+          "exerciseId": "means-and-scope-height-comparison-set-school-second",
+          "facetId": "rank-not-established",
+          "exampleKey": "scope-rank-comparison-set"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "0bc29ac3a003222a36091c7d39cebd4eb866d96fe0d9f1276f2b831985a3fd62"
+    },
+    {
+      "path": "grammar/means-and-scope.json",
+      "id": "means-and-scope-nonfirst-rank-anchor-two-above",
+      "jlpt": 4,
+      "target": "rank-supported",
+      "relationship": "rank",
+      "runtimeRecordSha256": "5113c7e84ef8922c1f07e675b8dffea2f1b1c6e97149324868519d94b6b49ccb",
+      "memberships": [
+        {
+          "groupId": "means-and-scope-rank",
+          "exerciseId": "means-and-scope-nonfirst-rank-anchor-two-above",
+          "facetId": "rank-supported",
+          "exampleKey": "scope-rank-nonfirst-anchor"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "06ca38c020832471232aaf9863d553506fe05164c229101febb66b22e5c223f7"
+    },
+    {
+      "path": "grammar/means-and-scope.json",
+      "id": "means-and-scope-nonfirst-rank-anchor-always-second",
+      "jlpt": 4,
+      "target": "rank-not-established",
+      "relationship": "rank",
+      "runtimeRecordSha256": "7f50180f75e6b9a628b6ddbba039e444cf9a2ad09c86b159352e689ba3d4b802",
+      "memberships": [
+        {
+          "groupId": "means-and-scope-rank",
+          "exerciseId": "means-and-scope-nonfirst-rank-anchor-always-second",
+          "facetId": "rank-not-established",
+          "exampleKey": "scope-rank-nonfirst-anchor"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "98d22c30797e20cf60bbd98f5651f2ffca9853f2e3f34a76641571e9e1b59b9f"
+    },
+    {
+      "path": "grammar/means-and-scope.json",
+      "id": "means-and-scope-preference-not-location-relative-preference",
+      "jlpt": 4,
+      "target": "rank-supported",
+      "relationship": "rank",
+      "runtimeRecordSha256": "6499b1db7e57d14d136d829d34f96d5bb9b7f223f5451772d2b75001d5b6341c",
+      "memberships": [
+        {
+          "groupId": "means-and-scope-rank",
+          "exerciseId": "means-and-scope-preference-not-location-relative-preference",
+          "facetId": "rank-supported",
+          "exampleKey": "scope-rank-preference-not-location"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "b1813444a6c569119b854e4d5a42025e2f5d7934e001774df8ba4320a4016230"
+    },
+    {
+      "path": "grammar/means-and-scope.json",
+      "id": "means-and-scope-preference-not-location-physical-neighbor",
+      "jlpt": 4,
+      "target": "rank-not-established",
+      "relationship": "rank",
+      "runtimeRecordSha256": "362faae0eebf1c33402a08c36aba74817fe2fc1a6375fa8295d099701bdadcb8",
+      "memberships": [
+        {
+          "groupId": "means-and-scope-rank",
+          "exerciseId": "means-and-scope-preference-not-location-physical-neighbor",
+          "facetId": "rank-not-established",
+          "exampleKey": "scope-rank-preference-not-location"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "a9cb571660d14c263832b8785e8aea120ab8cc3713b23fa785a44458df4f4bc4"
+    },
+    {
+      "path": "grammar/degree-and-polarity.json",
+      "id": "degree-and-polarity-noun-majority-large-proportion",
+      "jlpt": 4,
+      "target": "interpret-supported",
+      "relationship": "interpret",
+      "runtimeRecordSha256": "6c2a5a1791bccce47c3d2abfc8851efaa5190a08acc564c9fe2033005a054515",
+      "memberships": [
+        {
+          "groupId": "degree-and-polarity-interpret",
+          "exerciseId": "degree-and-polarity-noun-majority-large-proportion",
+          "facetId": "interpret-supported",
+          "exampleKey": "degree-noun-modifier-not-all"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "63a30a02a3a1ada4300c5da3d83571f54a171cb80be8d807c91ad7f31d0130a2"
+    },
+    {
+      "path": "grammar/degree-and-polarity.json",
+      "id": "degree-and-polarity-noun-majority-all-students",
+      "jlpt": 4,
+      "target": "interpret-not-established",
+      "relationship": "interpret",
+      "runtimeRecordSha256": "918556ee0635239dc07ce7a2c689f7008d2d85546628c77e305107dfd38f3fb0",
+      "memberships": [
+        {
+          "groupId": "degree-and-polarity-interpret",
+          "exerciseId": "degree-and-polarity-noun-majority-all-students",
+          "facetId": "interpret-not-established",
+          "exampleKey": "degree-noun-modifier-not-all"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "344dcf07d3cd1daab8908c1533ef68c463568277fad2558e4a74d706bcb3da8d"
+    },
+    {
+      "path": "grammar/degree-and-polarity.json",
+      "id": "degree-and-polarity-little-sleep-small-sleep-amount",
+      "jlpt": 4,
+      "target": "interpret-supported",
+      "relationship": "interpret",
+      "runtimeRecordSha256": "cd837a34b609d068410f69697e198c1112d46b310bc27231fa86302ffa5e5548",
+      "memberships": [
+        {
+          "groupId": "degree-and-polarity-interpret",
+          "exerciseId": "degree-and-polarity-little-sleep-small-sleep-amount",
+          "facetId": "interpret-supported",
+          "exampleKey": "degree-portion-polarity"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "217b7424656a37e8ede49ce398e352d13ca293baebde8f046b99f617eab562ae"
+    },
+    {
+      "path": "grammar/degree-and-polarity.json",
+      "id": "degree-and-polarity-little-sleep-exact-zero-sleep",
+      "jlpt": 4,
+      "target": "interpret-not-established",
+      "relationship": "interpret",
+      "runtimeRecordSha256": "ea4e2c948f4b5385537f997d6aba66b8f89b853e0144694dd19fa0bc447f4b9b",
+      "memberships": [
+        {
+          "groupId": "degree-and-polarity-interpret",
+          "exerciseId": "degree-and-polarity-little-sleep-exact-zero-sleep",
+          "facetId": "interpret-not-established",
+          "exampleKey": "degree-portion-polarity"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "312e78c69d449c96998a53530d8b6c01dd23a8cc347a4621cdb8412c0e730e65"
+    },
+    {
+      "path": "grammar/degree-and-polarity.json",
+      "id": "degree-and-polarity-progress-not-percentage-mostly-complete",
+      "jlpt": 4,
+      "target": "interpret-supported",
+      "relationship": "interpret",
+      "runtimeRecordSha256": "e848ca4697d2ed85689a0a0fddfaf3e7962809a5b21ad66d7037ec9d574c44e9",
+      "memberships": [
+        {
+          "groupId": "degree-and-polarity-interpret",
+          "exerciseId": "degree-and-polarity-progress-not-percentage-mostly-complete",
+          "facetId": "interpret-supported",
+          "exampleKey": "degree-progress-no-fixed-percentage"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "03065f15756b877e5dfbb6da5e040db4d2ba62be53f2970903b48ca981189fff"
+    },
+    {
+      "path": "grammar/degree-and-polarity.json",
+      "id": "degree-and-polarity-progress-not-percentage-exact-ninety",
+      "jlpt": 4,
+      "target": "interpret-not-established",
+      "relationship": "interpret",
+      "runtimeRecordSha256": "e969e78b9f58d48167be8e92035ade82f7a735f27b9daf28f1728986c0726fd4",
+      "memberships": [
+        {
+          "groupId": "degree-and-polarity-interpret",
+          "exerciseId": "degree-and-polarity-progress-not-percentage-exact-ninety",
+          "facetId": "interpret-not-established",
+          "exampleKey": "degree-progress-no-fixed-percentage"
+        }
+      ],
+      "existingVocabularyReviewStatus": "reviewed",
+      "existingVocabularyReviewRecordSha256": "835b92ff8d424966a7ad9d55b06c9209f957dff480ede94447f7a7fd7db9d98e"
+    },
+    {
+      "path": "grammar/particle-neighbors.json",
+      "id": "approximate-quantity-bus-wait",
+      "jlpt": 3,
+      "target": "approximate-quantity",
+      "relationship": "approximation-vs-limit",
+      "runtimeRecordSha256": "8d590e7711bfe4c875c686bd3198d35be2711a52d2b4ec856f4d898f0d6ca248",
+      "memberships": [],
+      "existingVocabularyReviewStatus": "pending",
+      "existingVocabularyReviewRecordSha256": "63610c4c381baa78177196e25e0009c1729f6cdb65694eff40f75ba5760bc47d"
+    },
+    {
+      "path": "grammar/particle-neighbors.json",
+      "id": "approximate-quantity-meeting-duration",
+      "jlpt": 5,
+      "target": "approximate-quantity",
+      "relationship": "approximation-vs-limit",
+      "runtimeRecordSha256": "30c7fa147b0999386c04ac34dae4378ab83076b4276422183e3bc9e8b87e3c5a",
+      "memberships": [
+        {
+          "groupId": "n5-existing-quantity-limits",
+          "exerciseId": "approximate-quantity-meeting-duration",
+          "facetId": "approximate-quantity",
+          "exampleKey": "meeting-duration-estimate"
+        }
+      ],
+      "existingVocabularyReviewStatus": "pending",
+      "existingVocabularyReviewRecordSha256": "2823801ce664600b348fb5e966eb8d587a1e762824e08737bb6598abba8c70ee"
+    },
+    {
+      "path": "grammar/particle-neighbors.json",
+      "id": "approximate-quantity-station-walk",
+      "jlpt": 3,
+      "target": "approximate-quantity",
+      "relationship": "approximation-vs-limit",
+      "runtimeRecordSha256": "730a8615963fc61f720a589369c0127ccaa7186752194b5d06c6ef903c13fb04",
+      "memberships": [],
+      "existingVocabularyReviewStatus": "pending",
+      "existingVocabularyReviewRecordSha256": "2a512596f7873a6c5ec78bdb0121f04085de8be829b5d4f861e21b88048d20a7"
+    },
+    {
+      "path": "grammar/particle-neighbors.json",
+      "id": "approximate-quantity-audience",
+      "jlpt": 5,
+      "target": "approximate-quantity",
+      "relationship": "approximation-vs-limit",
+      "runtimeRecordSha256": "fb13556c958cef13c2b3116647ed569a85c962a142791f179ff20d9062d74ec4",
+      "memberships": [
+        {
+          "groupId": "n5-existing-quantity-limits",
+          "exerciseId": "approximate-quantity-audience",
+          "facetId": "approximate-quantity",
+          "exampleKey": "audience-estimate"
+        }
+      ],
+      "existingVocabularyReviewStatus": "pending",
+      "existingVocabularyReviewRecordSha256": "e966d11075c8777014c76b86b39fea5c3b73366495cd1ac950cbbf81280dfe1b"
+    },
+    {
+      "path": "grammar/particle-neighbors.json",
+      "id": "approximate-quantity-rice",
+      "jlpt": 3,
+      "target": "approximate-quantity",
+      "relationship": "approximation-vs-limit",
+      "runtimeRecordSha256": "635c0bc6605783b9bd863dfbda037e4975373297cdd024cfcd41b55f2ece7c1e",
+      "memberships": [],
+      "existingVocabularyReviewStatus": "pending",
+      "existingVocabularyReviewRecordSha256": "65b8739ba9a10c1149e2eba9d4a909a8278e9ab0707a33371bc16dff3d215141"
+    },
+    {
+      "path": "grammar/particle-neighbors.json",
+      "id": "approximate-quantity-walking-distance",
+      "jlpt": 5,
+      "target": "approximate-quantity",
+      "relationship": "approximation-vs-limit",
+      "runtimeRecordSha256": "6c3116b923ec46ae8916878fdb7124eb804c7f8ae3c2421f0d04edafec3e40ba",
+      "memberships": [
+        {
+          "groupId": "n5-existing-quantity-limits",
+          "exerciseId": "approximate-quantity-walking-distance",
+          "facetId": "approximate-quantity",
+          "exampleKey": "walking-distance-estimate"
+        }
+      ],
+      "existingVocabularyReviewStatus": "pending",
+      "existingVocabularyReviewRecordSha256": "40b6a096bd1d67df39426f890bf494390f2f530386c3040811672c2ce62acb04"
+    },
+    {
+      "path": "grammar/particle-neighbors.json",
+      "id": "dake-limit-admission-ticket",
+      "jlpt": 3,
+      "target": "dake-limit",
+      "relationship": "approximation-vs-limit",
+      "runtimeRecordSha256": "51b57118adeb759edeeeae362dfdc73f4e95325f99fe9737411ff751a8b291f9",
+      "memberships": [],
+      "existingVocabularyReviewStatus": "pending",
+      "existingVocabularyReviewRecordSha256": "12fcdc8af4d815d986c95c7081007d7db5392c1d8eb2826de4254ccc92064f30"
+    },
+    {
+      "path": "grammar/particle-neighbors.json",
+      "id": "dake-limit-three-balls",
+      "jlpt": 5,
+      "target": "dake-limit",
+      "relationship": "approximation-vs-limit",
+      "runtimeRecordSha256": "af1fb20cff76573a4016a2ba2fec156a3e0b640ad8e1910f1b30dbaad38d21ff",
+      "memberships": [
+        {
+          "groupId": "n5-existing-quantity-limits",
+          "exerciseId": "dake-limit-three-balls",
+          "facetId": "dake-limit",
+          "exampleKey": "three-ball-limit"
+        }
+      ],
+      "existingVocabularyReviewStatus": "pending",
+      "existingVocabularyReviewRecordSha256": "d12f58783629d31ba56ecac324219503ea046dc00e007ce8f24b4648319d19ea"
+    },
+    {
+      "path": "grammar/particle-neighbors.json",
+      "id": "dake-limit-five-minute-break",
+      "jlpt": 5,
+      "target": "dake-limit",
+      "relationship": "approximation-vs-limit",
+      "runtimeRecordSha256": "29d27267b88cdb70e5530e5b7e6ec6bc267a6bf7e147e45a328eaf9cf16aa284",
+      "memberships": [
+        {
+          "groupId": "n5-existing-quantity-limits",
+          "exerciseId": "dake-limit-five-minute-break",
+          "facetId": "dake-limit",
+          "exampleKey": "five-minute-break-limit"
+        }
+      ],
+      "existingVocabularyReviewStatus": "pending",
+      "existingVocabularyReviewRecordSha256": "9e33394945adfca8137da5c99255775252f2970800ba8598b3d41c617b0ae8f6"
+    }
+  ],
+  "implementationState": {
+    "currentRuntimeVersion": "db4dd194841d0157",
+    "counterPacket": "26 records (24new+2pilots) accepted locally at933395b3c421dd15; complete initial review and F1/F2 reconciliation;60-case importer.",
+    "interpretationPacket": "22 records (18new+4pilots) accepted locally atdb4dd194841d0157; complete initial review and U1/U2 reconciliation;160 targeted tests and60-case importer.",
+    "holds": "C5 has new direct さんへや/みへや evidence, but the voiced readings and final acceptance remain unsettled. Required interval interpretation is still unfinished: exact N3 teaching placements are now confirmed alongside the primary N2 placement, with the user's conditional fallback and current N2 source-priority policy preserved in counter-n3-source-followup.json. Neither D/#57 nor integrated release acceptance is complete."
+  }
+}

@@ -59,6 +59,30 @@
     {
       "id": "remaining-amount",
       "label": "The amount left after removing the stated part"
+    },
+    {
+      "id": "relative-target",
+      "label": "Identify the quantity being compared"
+    },
+    {
+      "id": "relative-reference",
+      "label": "Identify the reference quantity"
+    },
+    {
+      "id": "stated-rate",
+      "label": "Find the amount for the stated time unit"
+    },
+    {
+      "id": "undetermined-total",
+      "label": "Check what is known about the whole run"
+    },
+    {
+      "id": "supported-quantity-inference",
+      "label": "A statement supported by the numerical report"
+    },
+    {
+      "id": "unsupported-quantity-inference",
+      "label": "A statement not established by the numerical report"
     }
   ],
   "relationships": [
@@ -110,6 +134,30 @@
       "constructions": [
         "part-amount",
         "remaining-amount"
+      ]
+    },
+    {
+      "id": "relative-quantities",
+      "label": "Identify the compared quantity and its reference",
+      "constructions": [
+        "relative-target",
+        "relative-reference"
+      ]
+    },
+    {
+      "id": "rate-information",
+      "label": "Read quantities in a short rate report",
+      "constructions": [
+        "stated-rate",
+        "undetermined-total"
+      ]
+    },
+    {
+      "id": "numerical-inference",
+      "label": "Check a statement against a numerical report",
+      "constructions": [
+        "supported-quantity-inference",
+        "unsupported-quantity-inference"
       ]
     }
   ],
@@ -2121,6 +2169,982 @@
           }
         ]
       }
+    },
+    {
+      "id": "quantity-scope-mixture-target",
+      "target": "relative-target",
+      "relationship": "relative-quantities",
+      "prompt": "「ジュースと水の量の比は一対二です。」→____",
+      "translation": "Read the Japanese report. Which liquid corresponds to the first term of the ordered ratio? Type exactly one label: ジュース or 水.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The report says the ratio of juice to water is one to two. Juice corresponds to the first term, one; the order follows ジュースと水. Water corresponds to the second term, two; reversing the order changes the ratio.",
+      "answer": "relative-target",
+      "acceptedAnswers": [
+        "ジュース"
+      ],
+      "options": [
+        {
+          "id": "relative-target",
+          "label": "ジュース",
+          "rationale": "Juice corresponds to the first term, one; the order follows ジュースと水. This is the requested quantity."
+        },
+        {
+          "id": "relative-reference",
+          "label": "水",
+          "rationale": "Water corresponds to the second term, two; reversing the order changes the ratio. The question asks for the first/compared quantity, not this reference."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d8b4b901269844df195604c02a12882fd3c8b0e0eb61002c7436d4231ca62ada",
+        "spans": [
+          {
+            "start": 1,
+            "end": 5,
+            "text": "ジュース",
+            "reading": "じゅーす",
+            "headword": "ジュース",
+            "gloss": "juice"
+          },
+          {
+            "start": 6,
+            "end": 7,
+            "text": "水",
+            "reading": "みず",
+            "headword": "水",
+            "gloss": "water"
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": "量",
+            "reading": "りょう",
+            "headword": "量",
+            "gloss": "amount"
+          },
+          {
+            "start": 10,
+            "end": 11,
+            "text": "比",
+            "reading": "ひ",
+            "headword": "比",
+            "gloss": "ratio"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-mixture-reference",
+      "target": "relative-reference",
+      "relationship": "relative-quantities",
+      "prompt": "「ジュースと水の量の比は一対二です。」→____",
+      "translation": "Read the Japanese report. Which liquid corresponds to the second term of the ordered ratio? Type exactly one label: ジュース or 水.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The report says the ratio of juice to water is one to two. Juice corresponds to the first term, one; the order follows ジュースと水. Water corresponds to the second term, two; reversing the order changes the ratio.",
+      "answer": "relative-reference",
+      "acceptedAnswers": [
+        "水"
+      ],
+      "options": [
+        {
+          "id": "relative-target",
+          "label": "ジュース",
+          "rationale": "Juice corresponds to the first term, one; the order follows ジュースと水. The question asks for the other quantity's role."
+        },
+        {
+          "id": "relative-reference",
+          "label": "水",
+          "rationale": "Water corresponds to the second term, two; reversing the order changes the ratio. This is the requested reference."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d8b4b901269844df195604c02a12882fd3c8b0e0eb61002c7436d4231ca62ada",
+        "spans": [
+          {
+            "start": 1,
+            "end": 5,
+            "text": "ジュース",
+            "reading": "じゅーす",
+            "headword": "ジュース",
+            "gloss": "juice"
+          },
+          {
+            "start": 6,
+            "end": 7,
+            "text": "水",
+            "reading": "みず",
+            "headword": "水",
+            "gloss": "water"
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": "量",
+            "reading": "りょう",
+            "headword": "量",
+            "gloss": "amount"
+          },
+          {
+            "start": 10,
+            "end": 11,
+            "text": "比",
+            "reading": "ひ",
+            "headword": "比",
+            "gloss": "ratio"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-cords-target",
+      "target": "relative-target",
+      "relationship": "relative-quantities",
+      "prompt": "「青いひもの長さは赤いひもの二倍です。」→____",
+      "translation": "Read the Japanese report. Which cord's length is described as a multiple of the other? Type exactly one label: 青 or 赤.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The report says the blue cord is twice as long as the red cord. The blue cord is the compared quantity; its length is twice the red cord's. The red cord supplies the reference length. It is not twice the blue cord.",
+      "answer": "relative-target",
+      "acceptedAnswers": [
+        "青"
+      ],
+      "options": [
+        {
+          "id": "relative-target",
+          "label": "青",
+          "rationale": "The blue cord is the compared quantity; its length is twice the red cord's. This is the requested quantity."
+        },
+        {
+          "id": "relative-reference",
+          "label": "赤",
+          "rationale": "The red cord supplies the reference length. It is not twice the blue cord. The question asks for the first/compared quantity, not this reference."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "6a1b57e0587b19152e316f83772d848e56c5faa29782235f336758e02ff166fb",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "青い",
+            "reading": "あおい",
+            "headword": "青い",
+            "gloss": "blue"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "ひも",
+            "reading": "ひも",
+            "headword": "ひも",
+            "gloss": "cord"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "長さ",
+            "reading": "ながさ",
+            "headword": "長さ",
+            "gloss": "length"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "赤い",
+            "reading": "あかい",
+            "headword": "赤い",
+            "gloss": "red"
+          },
+          {
+            "start": 11,
+            "end": 13,
+            "text": "ひも",
+            "reading": "ひも",
+            "headword": "ひも",
+            "gloss": "cord"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-cords-reference",
+      "target": "relative-reference",
+      "relationship": "relative-quantities",
+      "prompt": "「青いひもの長さは赤いひもの二倍です。」→____",
+      "translation": "Read the Japanese report. Which cord supplies the reference length for 二倍? Type exactly one label: 青 or 赤.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The report says the blue cord is twice as long as the red cord. The blue cord is the compared quantity; its length is twice the red cord's. The red cord supplies the reference length. It is not twice the blue cord.",
+      "answer": "relative-reference",
+      "acceptedAnswers": [
+        "赤"
+      ],
+      "options": [
+        {
+          "id": "relative-target",
+          "label": "青",
+          "rationale": "The blue cord is the compared quantity; its length is twice the red cord's. The question asks for the other quantity's role."
+        },
+        {
+          "id": "relative-reference",
+          "label": "赤",
+          "rationale": "The red cord supplies the reference length. It is not twice the blue cord. This is the requested reference."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "6a1b57e0587b19152e316f83772d848e56c5faa29782235f336758e02ff166fb",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "青い",
+            "reading": "あおい",
+            "headword": "青い",
+            "gloss": "blue"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "text": "ひも",
+            "reading": "ひも",
+            "headword": "ひも",
+            "gloss": "cord"
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "text": "長さ",
+            "reading": "ながさ",
+            "headword": "長さ",
+            "gloss": "length"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "text": "赤い",
+            "reading": "あかい",
+            "headword": "赤い",
+            "gloss": "red"
+          },
+          {
+            "start": 11,
+            "end": 13,
+            "text": "ひも",
+            "reading": "ひも",
+            "headword": "ひも",
+            "gloss": "cord"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-production-rate",
+      "target": "stated-rate",
+      "relationship": "rate-information",
+      "prompt": "「機械は一分に三個の商品を作ります。」→____",
+      "translation": "Read the Japanese report. What number of items per minute does the report state? Type the number in Arabic digits without a unit, or 不明 (ふめい, cannot determine). Kana ふめい is also accepted.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The report says the machine makes three products per minute. 一分に三個 supplies three items for each minute; the run time and total output are not stated. The requested answer is 3.",
+      "answer": "stated-rate",
+      "acceptedAnswers": [
+        "3"
+      ],
+      "options": [
+        {
+          "id": "stated-rate",
+          "label": "3",
+          "rationale": "一分に三個 supplies three items for each minute; the run time and total output are not stated. The requested per-unit number is explicitly given."
+        },
+        {
+          "id": "undetermined-total",
+          "label": "不明",
+          "rationale": "The report gives the requested rate number, so 'cannot determine' would overlook it."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "0e08f1e3ea4a4d7a12a3cab5e1a6e1d4f44a4100c5e20c5f5747a36c9d95a1eb",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "機械",
+            "reading": "きかい",
+            "headword": "機械",
+            "gloss": "machine"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "商品",
+            "reading": "しょうひん",
+            "headword": "商品",
+            "gloss": "products"
+          },
+          {
+            "start": 13,
+            "end": 17,
+            "text": "作ります",
+            "reading": "つくります",
+            "headword": "作る",
+            "gloss": "makes"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-production-total",
+      "target": "undetermined-total",
+      "relationship": "rate-information",
+      "prompt": "「機械は一分に三個の商品を作ります。」→____",
+      "translation": "Read the Japanese report. How many products were made during the whole run? Type the number in Arabic digits without a unit, or 不明 (ふめい, cannot determine). Kana ふめい is also accepted.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The report says the machine makes three products per minute. 一分に三個 supplies three items for each minute; the run time and total output are not stated. The whole-run total cannot be determined from this report.",
+      "answer": "undetermined-total",
+      "acceptedAnswers": [
+        "不明",
+        "ふめい"
+      ],
+      "options": [
+        {
+          "id": "stated-rate",
+          "label": "3",
+          "rationale": "一分に三個 supplies three items for each minute; the run time and total output are not stated. That rate number is not an established whole-run total."
+        },
+        {
+          "id": "undetermined-total",
+          "label": "不明",
+          "rationale": "The necessary whole-run information is missing; 不明 is the appropriate answer."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "0e08f1e3ea4a4d7a12a3cab5e1a6e1d4f44a4100c5e20c5f5747a36c9d95a1eb",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "機械",
+            "reading": "きかい",
+            "headword": "機械",
+            "gloss": "machine"
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "text": "商品",
+            "reading": "しょうひん",
+            "headword": "商品",
+            "gloss": "products"
+          },
+          {
+            "start": 13,
+            "end": 17,
+            "text": "作ります",
+            "reading": "つくります",
+            "headword": "作る",
+            "gloss": "makes"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-speed-rate",
+      "target": "stated-rate",
+      "relationship": "rate-information",
+      "prompt": "「この車の速さは時速三十キロメートルです。」→____",
+      "translation": "Read the Japanese report. What number of kilometres per hour does the report state? Type the number in Arabic digits without a unit, or 不明 (ふめい, cannot determine). Kana ふめい is also accepted.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The report says the vehicle's speed is thirty kilometres per hour. 時速三十キロメートル supplies a speed. It does not supply the duration or the distance already travelled. The requested answer is 30.",
+      "answer": "stated-rate",
+      "acceptedAnswers": [
+        "30"
+      ],
+      "options": [
+        {
+          "id": "stated-rate",
+          "label": "30",
+          "rationale": "時速三十キロメートル supplies a speed. It does not supply the duration or the distance already travelled. The requested per-unit number is explicitly given."
+        },
+        {
+          "id": "undetermined-total",
+          "label": "不明",
+          "rationale": "The report gives the requested rate number, so 'cannot determine' would overlook it."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f17928ce1c603ca6d89e96ef3aec5c9830b4672b75ff0a140194c0e758c2f45b",
+        "spans": [
+          {
+            "start": 3,
+            "end": 4,
+            "text": "車",
+            "reading": "くるま",
+            "headword": "車",
+            "gloss": "vehicle"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "速さ",
+            "reading": "はやさ",
+            "headword": "速さ",
+            "gloss": "speed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-speed-total",
+      "target": "undetermined-total",
+      "relationship": "rate-information",
+      "prompt": "「この車の速さは時速三十キロメートルです。」→____",
+      "translation": "Read the Japanese report. How many kilometres has the vehicle travelled in total? Type the number in Arabic digits without a unit, or 不明 (ふめい, cannot determine). Kana ふめい is also accepted.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The report says the vehicle's speed is thirty kilometres per hour. 時速三十キロメートル supplies a speed. It does not supply the duration or the distance already travelled. The whole-run total cannot be determined from this report.",
+      "answer": "undetermined-total",
+      "acceptedAnswers": [
+        "不明",
+        "ふめい"
+      ],
+      "options": [
+        {
+          "id": "stated-rate",
+          "label": "30",
+          "rationale": "時速三十キロメートル supplies a speed. It does not supply the duration or the distance already travelled. That rate number is not an established whole-run total."
+        },
+        {
+          "id": "undetermined-total",
+          "label": "不明",
+          "rationale": "The necessary whole-run information is missing; 不明 is the appropriate answer."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "f17928ce1c603ca6d89e96ef3aec5c9830b4672b75ff0a140194c0e758c2f45b",
+        "spans": [
+          {
+            "start": 3,
+            "end": 4,
+            "text": "車",
+            "reading": "くるま",
+            "headword": "車",
+            "gloss": "vehicle"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "速さ",
+            "reading": "はやさ",
+            "headword": "速さ",
+            "gloss": "speed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-visitors-supported",
+      "target": "supported-quantity-inference",
+      "relationship": "numerical-inference",
+      "prompt": "「見学者は十数人でした。」→____",
+      "translation": "Check this statement against the Japanese report: 'The report is compatible with thirteen visitors.' Type 1 if the statement is supported, or 2 if it is not established. 'Compatible' means possible, not guaranteed to be the exact count.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The report says there were ten-odd visitors. Thirteen is compatible with 十数人, but sixty is a different magnitude. No disputed lower-edge count is needed.",
+      "answer": "supported-quantity-inference",
+      "acceptedAnswers": [
+        "1"
+      ],
+      "options": [
+        {
+          "id": "supported-quantity-inference",
+          "label": "1",
+          "rationale": "Thirteen is compatible with 十数人, but sixty is a different magnitude. No disputed lower-edge count is needed. The proposed possibility is supported."
+        },
+        {
+          "id": "unsupported-quantity-inference",
+          "label": "2",
+          "rationale": "Thirteen is compatible with 十数人, but sixty is a different magnitude. No disputed lower-edge count is needed. The task asks about compatibility, so an exact count is not needed to support this statement."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "a76e180a29ffc25f4611b70a988e0971cc0be866d4abbb928ef4597c5f9b0a9e",
+        "spans": [
+          {
+            "start": 1,
+            "end": 4,
+            "text": "見学者",
+            "reading": "けんがくしゃ",
+            "headword": "見学者",
+            "gloss": "visitors on a tour"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-visitors-unsupported",
+      "target": "unsupported-quantity-inference",
+      "relationship": "numerical-inference",
+      "prompt": "「見学者は十数人でした。」→____",
+      "translation": "Check this statement against the Japanese report: 'The report is compatible with sixty visitors.' Type 1 if the statement is supported, or 2 if it is not established. 'Compatible' means possible, not guaranteed to be the exact count.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The report says there were ten-odd visitors. Thirteen is compatible with 十数人, but sixty is a different magnitude. No disputed lower-edge count is needed.",
+      "answer": "unsupported-quantity-inference",
+      "acceptedAnswers": [
+        "2"
+      ],
+      "options": [
+        {
+          "id": "supported-quantity-inference",
+          "label": "1",
+          "rationale": "Thirteen is compatible with 十数人, but sixty is a different magnitude. No disputed lower-edge count is needed. That does not justify the supplied statement."
+        },
+        {
+          "id": "unsupported-quantity-inference",
+          "label": "2",
+          "rationale": "Thirteen is compatible with 十数人, but sixty is a different magnitude. No disputed lower-edge count is needed. The supplied statement is not established."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "a76e180a29ffc25f4611b70a988e0971cc0be866d4abbb928ef4597c5f9b0a9e",
+        "spans": [
+          {
+            "start": 1,
+            "end": 4,
+            "text": "見学者",
+            "reading": "けんがくしゃ",
+            "headword": "見学者",
+            "gloss": "visitors on a tour"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-stock-tens-supported",
+      "target": "supported-quantity-inference",
+      "relationship": "numerical-inference",
+      "prompt": "「倉庫には部品が数十個あります。」→____",
+      "translation": "Check this statement against the Japanese report: 'A stock of sixty components is compatible with the report.' Type 1 if the statement is supported, or 2 if it is not established. 'Compatible' means possible, not guaranteed to be the exact count.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The report says there are several tens of components in the warehouse. Sixty is a possible example of 数十, not an exact count established by that vague report.",
+      "answer": "supported-quantity-inference",
+      "acceptedAnswers": [
+        "1"
+      ],
+      "options": [
+        {
+          "id": "supported-quantity-inference",
+          "label": "1",
+          "rationale": "Sixty is a possible example of 数十, not an exact count established by that vague report. The proposed possibility is supported."
+        },
+        {
+          "id": "unsupported-quantity-inference",
+          "label": "2",
+          "rationale": "Sixty is a possible example of 数十, not an exact count established by that vague report. The task asks about compatibility, so an exact count is not needed to support this statement."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d786f712e9f4b8d0130c6bd9cc4ecdf09f4eda9d96ad40450d8b74f2be97938c",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "倉庫",
+            "reading": "そうこ",
+            "headword": "倉庫",
+            "gloss": "warehouse"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "部品",
+            "reading": "ぶひん",
+            "headword": "部品",
+            "gloss": "components"
+          },
+          {
+            "start": 11,
+            "end": 15,
+            "text": "あります",
+            "reading": "あります",
+            "headword": "ある",
+            "gloss": "are present"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-stock-tens-unsupported",
+      "target": "unsupported-quantity-inference",
+      "relationship": "numerical-inference",
+      "prompt": "「倉庫には部品が数十個あります。」→____",
+      "translation": "Check this statement against the Japanese report: 'The report establishes a stock of exactly sixty components.' Type 1 if the statement is supported, or 2 if it is not established. 'Compatible' means possible, not guaranteed to be the exact count.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The report says there are several tens of components in the warehouse. Sixty is a possible example of 数十, not an exact count established by that vague report.",
+      "answer": "unsupported-quantity-inference",
+      "acceptedAnswers": [
+        "2"
+      ],
+      "options": [
+        {
+          "id": "supported-quantity-inference",
+          "label": "1",
+          "rationale": "Sixty is a possible example of 数十, not an exact count established by that vague report. That does not justify the supplied statement."
+        },
+        {
+          "id": "unsupported-quantity-inference",
+          "label": "2",
+          "rationale": "Sixty is a possible example of 数十, not an exact count established by that vague report. The supplied statement is not established."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "d786f712e9f4b8d0130c6bd9cc4ecdf09f4eda9d96ad40450d8b74f2be97938c",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "倉庫",
+            "reading": "そうこ",
+            "headword": "倉庫",
+            "gloss": "warehouse"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "部品",
+            "reading": "ぶひん",
+            "headword": "部品",
+            "gloss": "components"
+          },
+          {
+            "start": 11,
+            "end": 15,
+            "text": "あります",
+            "reading": "あります",
+            "headword": "ある",
+            "gloss": "are present"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-stock-hundreds-supported",
+      "target": "supported-quantity-inference",
+      "relationship": "numerical-inference",
+      "prompt": "「倉庫には部品が何百個もあります。」→____",
+      "translation": "Check this statement against the Japanese report: 'A stock of six hundred components is compatible with the report.' Type 1 if the statement is supported, or 2 if it is not established. 'Compatible' means possible, not guaranteed to be the exact count.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The report says the warehouse contains hundreds of components, emphasizing the large number. 何百個も is a non-question description here. Six hundred fits the broad magnitude, but no exact stock count is supplied.",
+      "answer": "supported-quantity-inference",
+      "acceptedAnswers": [
+        "1"
+      ],
+      "options": [
+        {
+          "id": "supported-quantity-inference",
+          "label": "1",
+          "rationale": "何百個も is a non-question description here. Six hundred fits the broad magnitude, but no exact stock count is supplied. The proposed possibility is supported."
+        },
+        {
+          "id": "unsupported-quantity-inference",
+          "label": "2",
+          "rationale": "何百個も is a non-question description here. Six hundred fits the broad magnitude, but no exact stock count is supplied. The task asks about compatibility, so an exact count is not needed to support this statement."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "b255f2839bd675eb8e13cee7b6c322958697acaab3a9c11da8fb336fab3259e6",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "倉庫",
+            "reading": "そうこ",
+            "headword": "倉庫",
+            "gloss": "warehouse"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "部品",
+            "reading": "ぶひん",
+            "headword": "部品",
+            "gloss": "components"
+          },
+          {
+            "start": 12,
+            "end": 16,
+            "text": "あります",
+            "reading": "あります",
+            "headword": "ある",
+            "gloss": "are present"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-stock-hundreds-unsupported",
+      "target": "unsupported-quantity-inference",
+      "relationship": "numerical-inference",
+      "prompt": "「倉庫には部品が何百個もあります。」→____",
+      "translation": "Check this statement against the Japanese report: 'The report establishes a stock of exactly six hundred components.' Type 1 if the statement is supported, or 2 if it is not established. 'Compatible' means possible, not guaranteed to be the exact count.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The report says the warehouse contains hundreds of components, emphasizing the large number. 何百個も is a non-question description here. Six hundred fits the broad magnitude, but no exact stock count is supplied.",
+      "answer": "unsupported-quantity-inference",
+      "acceptedAnswers": [
+        "2"
+      ],
+      "options": [
+        {
+          "id": "supported-quantity-inference",
+          "label": "1",
+          "rationale": "何百個も is a non-question description here. Six hundred fits the broad magnitude, but no exact stock count is supplied. That does not justify the supplied statement."
+        },
+        {
+          "id": "unsupported-quantity-inference",
+          "label": "2",
+          "rationale": "何百個も is a non-question description here. Six hundred fits the broad magnitude, but no exact stock count is supplied. The supplied statement is not established."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "b255f2839bd675eb8e13cee7b6c322958697acaab3a9c11da8fb336fab3259e6",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "倉庫",
+            "reading": "そうこ",
+            "headword": "倉庫",
+            "gloss": "warehouse"
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "text": "部品",
+            "reading": "ぶひん",
+            "headword": "部品",
+            "gloss": "components"
+          },
+          {
+            "start": 12,
+            "end": 16,
+            "text": "あります",
+            "reading": "あります",
+            "headword": "ある",
+            "gloss": "are present"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-characters-boundary",
+      "target": "in-range",
+      "relationship": "boundaries",
+      "prompt": "「答えは二十文字以内で書いてください。」→____",
+      "translation": "Read the Japanese instruction. The answer contains exactly 20 characters according to the form's counter. Considering only its numerical limit, type 1 for within the limit or 2 for outside it.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The instruction says to write the answer in twenty characters or fewer. 以内 includes the upper boundary; the form's character-counting convention is taken as given. The test value 20 equals the allowed upper boundary.",
+      "answer": "in-range",
+      "acceptedAnswers": [
+        "1"
+      ],
+      "options": [
+        {
+          "id": "in-range",
+          "label": "1",
+          "rationale": "The test value 20 equals the allowed upper boundary. Equality is included."
+        },
+        {
+          "id": "out-of-range",
+          "label": "2",
+          "rationale": "The test value 20 equals the allowed upper boundary. Calling it outside would wrongly exclude equality."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "a4cfc79a5e530f83f56f85d0e157186b1e734f69c8bf31f083ed116394123177",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "答え",
+            "reading": "こたえ",
+            "headword": "答え",
+            "gloss": "answer"
+          },
+          {
+            "start": 11,
+            "end": 14,
+            "text": "書いて",
+            "reading": "かいて",
+            "headword": "書く",
+            "gloss": "write"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-characters-outside",
+      "target": "out-of-range",
+      "relationship": "boundaries",
+      "prompt": "「答えは二十文字以内で書いてください。」→____",
+      "translation": "Read the Japanese instruction. The answer contains exactly 21 characters according to the form's counter. Considering only its numerical limit, type 1 for within the limit or 2 for outside it.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The instruction says to write the answer in twenty characters or fewer. 以内 includes the upper boundary; the form's character-counting convention is taken as given. The test value 21 exceeds the stated upper boundary.",
+      "answer": "out-of-range",
+      "acceptedAnswers": [
+        "2"
+      ],
+      "options": [
+        {
+          "id": "in-range",
+          "label": "1",
+          "rationale": "The test value 21 exceeds the stated upper boundary. It therefore does not satisfy this limit."
+        },
+        {
+          "id": "out-of-range",
+          "label": "2",
+          "rationale": "The test value 21 exceeds the stated upper boundary. It is outside the permitted range."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "a4cfc79a5e530f83f56f85d0e157186b1e734f69c8bf31f083ed116394123177",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "答え",
+            "reading": "こたえ",
+            "headword": "答え",
+            "gloss": "answer"
+          },
+          {
+            "start": 11,
+            "end": 14,
+            "text": "書いて",
+            "reading": "かいて",
+            "headword": "書く",
+            "gloss": "write"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-deadline-boundary",
+      "target": "in-range",
+      "relationship": "boundaries",
+      "prompt": "「作業は開始から三十分以内に終えてください。」→____",
+      "translation": "Read the Japanese instruction. The task ends exactly 30 minutes after it started. Considering only its numerical limit, type 1 for within the limit or 2 for outside it.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The instruction says to finish the task within thirty minutes from its start. 以内 includes thirty minutes, and 開始から explicitly anchors the interval to the task's start. The test value 30 equals the allowed upper boundary.",
+      "answer": "in-range",
+      "acceptedAnswers": [
+        "1"
+      ],
+      "options": [
+        {
+          "id": "in-range",
+          "label": "1",
+          "rationale": "The test value 30 equals the allowed upper boundary. Equality is included."
+        },
+        {
+          "id": "out-of-range",
+          "label": "2",
+          "rationale": "The test value 30 equals the allowed upper boundary. Calling it outside would wrongly exclude equality."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "1ec0506cb26f9a710a2f414756194ef2d5dca3b89a233058b279ddf37c0f08a6",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "作業",
+            "reading": "さぎょう",
+            "headword": "作業",
+            "gloss": "task"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "開始",
+            "reading": "かいし",
+            "headword": "開始",
+            "gloss": "start"
+          },
+          {
+            "start": 14,
+            "end": 17,
+            "text": "終えて",
+            "reading": "おえて",
+            "headword": "終える",
+            "gloss": "finish"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-deadline-outside",
+      "target": "out-of-range",
+      "relationship": "boundaries",
+      "prompt": "「作業は開始から三十分以内に終えてください。」→____",
+      "translation": "Read the Japanese instruction. The task ends exactly 31 minutes after it started. Considering only its numerical limit, type 1 for within the limit or 2 for outside it.",
+      "evidence": "Read the supplied numerical expression and the requested operation. No unstated total, exact count or time reference may be invented.",
+      "explanation": "The instruction says to finish the task within thirty minutes from its start. 以内 includes thirty minutes, and 開始から explicitly anchors the interval to the task's start. The test value 31 exceeds the stated upper boundary.",
+      "answer": "out-of-range",
+      "acceptedAnswers": [
+        "2"
+      ],
+      "options": [
+        {
+          "id": "in-range",
+          "label": "1",
+          "rationale": "The test value 31 exceeds the stated upper boundary. It therefore does not satisfy this limit."
+        },
+        {
+          "id": "out-of-range",
+          "label": "2",
+          "rationale": "The test value 31 exceeds the stated upper boundary. It is outside the permitted range."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "1ec0506cb26f9a710a2f414756194ef2d5dca3b89a233058b279ddf37c0f08a6",
+        "spans": [
+          {
+            "start": 1,
+            "end": 3,
+            "text": "作業",
+            "reading": "さぎょう",
+            "headword": "作業",
+            "gloss": "task"
+          },
+          {
+            "start": 4,
+            "end": 6,
+            "text": "開始",
+            "reading": "かいし",
+            "headword": "開始",
+            "gloss": "start"
+          },
+          {
+            "start": 14,
+            "end": 17,
+            "text": "終えて",
+            "reading": "おえて",
+            "headword": "終える",
+            "gloss": "finish"
+          }
+        ]
+      }
     }
   ],
   "introductionGroups": [
@@ -2215,6 +3239,26 @@
           "exerciseId": "quantity-scope-umbrella-strict-less-inside",
           "facetId": "in-range",
           "exampleKey": "umbrella-price-comparison"
+        },
+        {
+          "exerciseId": "quantity-scope-characters-boundary",
+          "facetId": "in-range",
+          "exampleKey": "within-character-limit"
+        },
+        {
+          "exerciseId": "quantity-scope-characters-outside",
+          "facetId": "out-of-range",
+          "exampleKey": "within-character-limit"
+        },
+        {
+          "exerciseId": "quantity-scope-deadline-boundary",
+          "facetId": "in-range",
+          "exampleKey": "within-start-relative-deadline"
+        },
+        {
+          "exerciseId": "quantity-scope-deadline-outside",
+          "facetId": "out-of-range",
+          "exampleKey": "within-start-relative-deadline"
         }
       ],
       "next": [
@@ -2463,6 +3507,130 @@
           "reason": "Revisit per-period quantities without confusing them with elapsed or required time."
         }
       ],
+      "requires": []
+    },
+    {
+      "id": "quantity-scope-relative-quantities",
+      "label": "Identify the compared quantity and its reference",
+      "facets": [
+        {
+          "id": "relative-target",
+          "label": "Identify the quantity being compared"
+        },
+        {
+          "id": "relative-reference",
+          "label": "Identify the reference quantity"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "quantity-scope-mixture-target",
+          "facetId": "relative-target",
+          "exampleKey": "mixture-component-order"
+        },
+        {
+          "exerciseId": "quantity-scope-mixture-reference",
+          "facetId": "relative-reference",
+          "exampleKey": "mixture-component-order"
+        },
+        {
+          "exerciseId": "quantity-scope-cords-target",
+          "facetId": "relative-target",
+          "exampleKey": "double-base"
+        },
+        {
+          "exerciseId": "quantity-scope-cords-reference",
+          "facetId": "relative-reference",
+          "exampleKey": "double-base"
+        }
+      ],
+      "next": [],
+      "requires": []
+    },
+    {
+      "id": "quantity-scope-rate-information",
+      "label": "Read quantities in a short rate report",
+      "facets": [
+        {
+          "id": "stated-rate",
+          "label": "Find the amount for the stated time unit"
+        },
+        {
+          "id": "undetermined-total",
+          "label": "Check what is known about the whole run"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "quantity-scope-production-rate",
+          "facetId": "stated-rate",
+          "exampleKey": "production-rate-without-run-time"
+        },
+        {
+          "exerciseId": "quantity-scope-production-total",
+          "facetId": "undetermined-total",
+          "exampleKey": "production-rate-without-run-time"
+        },
+        {
+          "exerciseId": "quantity-scope-speed-rate",
+          "facetId": "stated-rate",
+          "exampleKey": "speed-without-travel-time"
+        },
+        {
+          "exerciseId": "quantity-scope-speed-total",
+          "facetId": "undetermined-total",
+          "exampleKey": "speed-without-travel-time"
+        }
+      ],
+      "next": [],
+      "requires": []
+    },
+    {
+      "id": "quantity-scope-numerical-inference",
+      "label": "Check a statement against a numerical report",
+      "facets": [
+        {
+          "id": "supported-quantity-inference",
+          "label": "A statement supported by the numerical report"
+        },
+        {
+          "id": "unsupported-quantity-inference",
+          "label": "A statement not established by the numerical report"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "quantity-scope-visitors-supported",
+          "facetId": "supported-quantity-inference",
+          "exampleKey": "uncertain-headcount"
+        },
+        {
+          "exerciseId": "quantity-scope-visitors-unsupported",
+          "facetId": "unsupported-quantity-inference",
+          "exampleKey": "uncertain-headcount"
+        },
+        {
+          "exerciseId": "quantity-scope-stock-tens-supported",
+          "facetId": "supported-quantity-inference",
+          "exampleKey": "uncertain-component-stock"
+        },
+        {
+          "exerciseId": "quantity-scope-stock-tens-unsupported",
+          "facetId": "unsupported-quantity-inference",
+          "exampleKey": "uncertain-component-stock"
+        },
+        {
+          "exerciseId": "quantity-scope-stock-hundreds-supported",
+          "facetId": "supported-quantity-inference",
+          "exampleKey": "uncertain-component-stock"
+        },
+        {
+          "exerciseId": "quantity-scope-stock-hundreds-unsupported",
+          "facetId": "unsupported-quantity-inference",
+          "exampleKey": "uncertain-component-stock"
+        }
+      ],
+      "next": [],
       "requires": []
     }
   ]

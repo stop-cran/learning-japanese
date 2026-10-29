@@ -1,0 +1,2473 @@
+{
+  "status": "accepted-bounded-content-and-combined-importer",
+  "scope": [
+    "lessons-chapters",
+    "episodes-volumes",
+    "ranks-grades",
+    "digits-text-units",
+    "flight-labels"
+  ],
+  "acceptedCombinedContentVersion": "05200ead9195b49f",
+  "embeddedReportPolicy": "The complete independent initial report is preserved without rewriting findings, scores, provenance or limitations. No reconciliation report is invented when no correction was required.",
+  "embeddedReports": {
+    "initial": {
+      "reportKind": "Fresh independent, blind, read-only complete-task Japanese content review",
+      "issue": "stop-cran/learning-japanese#56",
+      "packet": "C4",
+      "status": "COMPLETE",
+      "reviewedOn": "2026-10-29",
+      "reviewer": {
+        "model": null,
+        "identityLimit": "No exact model identity/version was exposed to this reviewer.",
+        "otherAgentsInvoked": false
+      },
+      "provenance": {
+        "repository": "C:\\Users\\stop-\\learning-japanese",
+        "frozenInput": "C:\\Users\\stop-\\.copilot\\session-state\\caa065c6-2560-40f9-a193-db114bb7e740\\files\\n3-implementation\\c4-review-input",
+        "output": "C:\\Users\\stop-\\.copilot\\session-state\\caa065c6-2560-40f9-a193-db114bb7e740\\files\\n3-implementation\\c4-review-output\\initial.json",
+        "contentVersion": "05200ead9195b49f",
+        "baselineCommit": "b697a3d65a4edf893b04eea33d2356cd600e87c9",
+        "snapshotQualification": "Reviewed the supplied frozen bytes, including the two pilot records. The version and baseline match the requested snapshot metadata. This does not independently recompute a repository-wide manifest version or certify the live working tree.",
+        "blindness": [
+          "Did not inspect live counter drafts, author-c4.py, authoring-scope notes, docs\\counter-n3-c4.json, other batch ledgers/reviews, session history, author scores/rationale or other agents.",
+          "Read the public repository instructions and only the relevant Numbers & counters format/answer-policy sections.",
+          "Used contract source metadata as navigation, not as evidence that its conclusions were correct.",
+          "Reused only the expressly permitted four dictionary-entry artifacts and two vocabulary PDFs; accessed the isolated pdf-tools package only to parse those PDFs.",
+          "Did not inspect application source, run product builds/tests, operate a device, publish, commit or change authentication."
+        ],
+        "instructionAndFormatReads": [
+          ".github\\copilot-instructions.md",
+          "docs\\content-format.md:34-40",
+          "docs\\counter-n5.md:46-81",
+          "docs\\counter-n5.md:160-203"
+        ],
+        "packetMetadata": [
+          {
+            "path": "snapshot.json",
+            "bytes": 2816,
+            "sha256": "6310d66bb2c4e42ed7f8f89a15c63f5a7a12c0a951cd7024cce0b5938fcb37c3"
+          },
+          {
+            "path": "review-contract.json",
+            "bytes": 30116,
+            "sha256": "a1deef47a5251a76de8cfdd7c21e3875aa9c8899b1d3434b1f9c1b23192d49c2"
+          },
+          {
+            "path": "counter-labels.json",
+            "bytes": 1515,
+            "sha256": "cc0d8c3de9226e91cc08a4eef7daedde1cc16cc8c6652fbe0d444868d00f09b0"
+          }
+        ]
+      },
+      "integrityVerification": {
+        "status": "PASS",
+        "completedBeforeLinguisticReview": true,
+        "contentFilesVerified": 16,
+        "counterFilesVerified": 15,
+        "completeRecordsVerified": 29,
+        "fileMethod": "SHA-256 and byte length of actual frozen file bytes, compared with every snapshot.json entry. No newline normalization was needed or substituted.",
+        "recordMethod": "SHA-256 of UTF-8 json.dumps(record, ensure_ascii=False, sort_keys=True, separators=(',', ':')), compared with every review-contract.json items[].runtimeRecordSha256; record ID and owning path also checked.",
+        "fileResultsLocation": "files[].integrity",
+        "recordResultsLocation": "records[].integrity",
+        "missingOrExtraContractRecords": [],
+        "mismatches": [],
+        "interpretation": "Hash agreement establishes which bytes were reviewed, not Japanese correctness."
+      },
+      "scope": {
+        "rows": [
+          "lessons-chapters",
+          "episodes-volumes",
+          "ranks-grades",
+          "digits-text-units",
+          "flight-labels"
+        ],
+        "completeRecords": 29,
+        "newRecords": 27,
+        "preservedPilotRecords": [
+          "lessonlabels-expression-1",
+          "lessonlabels-expression-2"
+        ],
+        "schema1ForwardRecords": 1,
+        "schema2Expressions": 28,
+        "reverseRecords": 0,
+        "article": {
+          "path": "articles/numbers-and-counters.md",
+          "reviewedRanges": [
+            [
+              513,
+              564
+            ],
+            [
+              634,
+              642
+            ]
+          ],
+          "description": "Only Identifiers, ranks and text quantities and its new JMdict/Sanabo references received a new article review. The complete article file was hashed; that does not expand the linguistic review to its other sections."
+        },
+        "completeTaskChecklist": [
+          "Question-side operation and conditions in each applicable mode",
+          "Japanese construction, cue/translation and counted noun where present",
+          "Every vocabulary occurrence, reading and gloss",
+          "Canonical expression and reading",
+          "Every good, kana, writtenAnswers and readingAnswers member",
+          "Every authored distractor and complete resulting construction",
+          "Every note and explanation",
+          "File-level unit, base reading, title, group, level qualification and applicable source links"
+        ]
+      },
+      "overall": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN",
+        "meaningOfClean": "No actionable defect or consequential unresolved live linguistic claim was established in the assigned snapshot and scope. This is not exhaustive certification of all possible dialectal, historical, specialist or infrequent variants.",
+        "summary": "All 29 complete records were independently reviewed. The specified readings and accepted alternatives fit the actual constructions. The article appropriately separates labels, quantities, ranks, digit positions and text units. Coverage is of these scaffolded tasks, not independent counter selection, general mastery, empirical difficulty or official JLPT membership.",
+        "establishedDefectCount": 0,
+        "consequentialUncertaintyCount": 0
+      },
+      "runtimeReconciliation": {
+        "basis": "Supplied review-contract.json runtime plus the public counter format contract; no application inspection or device inference.",
+        "schema1ChooseType": "The Japanese sentence and inline vocabulary are the question. Its English translation and note are answer-side. The section task remains answerable without those answer-side fields: the three headings visibly name the sections.",
+        "schema1Read": "The displayed canonical 三節 is read さんせつ. Accepted alternate counting expressions in good/kana are not readings of 三節.",
+        "schema2Write": "Every expression requests a specified notation/unit and a whole expression. The accepted kanji and Arabic numeral spellings preserve the same requested quantity/identifier. Bare units and semantic substitutes are not required answers to these fixed-notation tasks.",
+        "schema2Read": "The displayed canonical expression is the reading target, with its visible cue supplying the sense. A counter named in a Write cue is not evidence of free selection in Read. The new script instructions say 'For writing'; they do not require kanji or Arabic numerals as the reading answer. The two pilot cues have no conflicting numeral-script restriction.",
+        "normalization": "Did not demand full-width/whitespace aliases already handled by NFKC/whitespace normalization, or katakana duplicates handled by reading normalization. Did not assume v2 numeral arithmetic or automatic counter substitution. In v1, normalized good is checked first: bare セクション/せくしょん overlap must not be misreported as a missing answer or guaranteed Hard.",
+        "labelIndex": {
+          "status": "PASS",
+          "scope": "Read the complete supplied source-wide mapping. Compared every scoped file's counter/base reading and the v1 distractor labels with that mapping.",
+          "scopedPairs": {
+            "課": "か",
+            "章": "しょう",
+            "節": "せつ",
+            "話": "わ",
+            "巻": "かん",
+            "冊": "さつ",
+            "位": "い",
+            "級": "きゅう",
+            "段": "だん",
+            "桁": "けた",
+            "行": "ぎょう",
+            "文字": "もじ",
+            "字": "じ",
+            "便": "びん",
+            "棟": "とう",
+            "匹": "ひき"
+          },
+          "sharedLabel": "Both section files use 節/せつ. Base readings do not erase contextual surface changes such as 一巻/いっかん or 一課/いっか. 棟's base label does not make every other documented reading of 棟 wrong."
+        }
+      },
+      "rubric": {
+        "independentlyAssigned": true,
+        "order": [
+          "lexicalLoad",
+          "decisionLoad",
+          "calculation",
+          "answerAmbiguity",
+          "feedback"
+        ],
+        "scale": "Each axis 0-2, using the supplied rubric. Feedback is positive explanatory value, not difficulty.",
+        "interpretation": [
+          "Vectors describe the complete authored task, with mode differences noted. They are not empirical learner measurements.",
+          "An isolated supplied unit/short label normally has lexicalLoad 0. The supported report sentence has modest additional Japanese vocabulary; the explicit 以内 operator receives lexicalLoad 1.",
+          "A specified unit is not independent counter selection. decisionLoad 1 is used only where a competing identifier and quantity require choosing the relevant number; reading the displayed result does not itself make that decision.",
+          "Every calculation score is 0: the tasks provide quantities or require notation/interpretation, not an arithmetic operation. Recognizing that only one lesson was completed is not an arithmetic step.",
+          "Routine kanji/Arabic spellings leave a narrow answer space. answerAmbiguity 1 marks handled substantive alternatives: the v1 alternative units and 八巻's two readings.",
+          "Feedback 2 is justified here by the explicit decisive contrasts, not assigned because the records carry level 3."
+        ]
+      },
+      "files": [
+        {
+          "path": "articles/numbers-and-counters.md",
+          "integrity": {
+            "bytes": 41197,
+            "sha256": "f7179dceb040f3c0d3d2b5862e3728f37ff6a7b8a104bcdb3674a97885ccf4c2",
+            "status": "PASS"
+          },
+          "reviewedLines": [
+            [
+              513,
+              564
+            ],
+            [
+              634,
+              642
+            ]
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN",
+          "evidence": "Count/label contrasts are contextual, not mandatory 第 or exclusive 冊/巻 rules. 課 contractions, 巻 variants, 位/級/段, 桁, 行 and character-limit readings agree with the inspected evidence. Grade systems, leading zero, inclusive maximum and aircraft/service distinctions are sufficiently qualified. The せつ/ふし comparison does not claim that every other sense of せつ is impossible.",
+          "sourceIds": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S7",
+            "S8",
+            "S9",
+            "S10",
+            "S11",
+            "S12",
+            "S13",
+            "S14",
+            "S15"
+          ]
+        },
+        {
+          "path": "counters/lessonlabels.json",
+          "integrity": {
+            "bytes": 2853,
+            "sha256": "aae20dde29a20f7a777b7a29f87f8ba7b10fbd6bf94c5dc8ebf0de46ead52db7",
+            "status": "PASS"
+          },
+          "recordsReviewed": 4,
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN",
+          "evidence": "All four records, including both preserved pilots, reviewed afresh. Specified 第/課 labels and completed-lesson counts are distinguished; いっか and ろっか are supported. No pilot acceptance was used as evidence."
+        },
+        {
+          "path": "counters/chapterexpressions.json",
+          "integrity": {
+            "bytes": 1632,
+            "sha256": "b3a26223d5de0717a239caade7b5cd917acec7d2c9ae4fba18ed3fa1b390fb73",
+            "status": "PASS"
+          },
+          "recordsReviewed": 2,
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN",
+          "evidence": "Third-chapter label and count of three chapters are separate requests; no universal necessity for 第 is asserted."
+        },
+        {
+          "path": "counters/sectioncounts.json",
+          "integrity": {
+            "bytes": 2265,
+            "sha256": "49e583cfcc37e2b46a204636a0b5bf497242607f3663d55d369260cb75048664",
+            "status": "PASS"
+          },
+          "recordsReviewed": 1,
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN",
+          "evidence": "Entire sentence, noun, six vocabulary entries and their occurrences, 8 good members, 7 kana members, canonical reading, three distractors and note inspected. This is strongly cued section recognition/completion, not unaided transfer."
+        },
+        {
+          "path": "counters/sectionexpressions.json",
+          "integrity": {
+            "bytes": 919,
+            "sha256": "f043f393c811611345de1e9974f4803b6982c76a055acd705c0070f71d30b4ae",
+            "status": "PASS"
+          },
+          "recordsReviewed": 1,
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN",
+          "evidence": "Supplied 節 notation with さんせつ matches the report's section-count sense; it shares a context with the v1 task."
+        },
+        {
+          "path": "counters/episodelabels.json",
+          "integrity": {
+            "bytes": 1484,
+            "sha256": "f571cd4ac3a3745a7d22b19c41e306df84aa468212bacb3ff69bd57405109669",
+            "status": "PASS"
+          },
+          "recordsReviewed": 2,
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN",
+          "evidence": "Both full 第 label and contextual short menu label are valid; neither asserts watched-episode totals."
+        },
+        {
+          "path": "counters/volumeexpressions.json",
+          "integrity": {
+            "bytes": 2081,
+            "sha256": "778fe57488895e0b090d78a94fc22f75e4dd1e2d2286bd88cdeb529738b30ac5",
+            "status": "PASS"
+          },
+          "recordsReviewed": 3,
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN",
+          "evidence": "Both 八巻 readings are supported. Repeated physical copies retain the same volume identifier; the paired 冊 task is not an additional independent situation."
+        },
+        {
+          "path": "counters/volumecopies.json",
+          "integrity": {
+            "bytes": 1031,
+            "sha256": "3e605b3f07feb9a90641b8880a1ea3cd75247edbecbcc10dec70a63885a63b96",
+            "status": "PASS"
+          },
+          "recordsReviewed": 1,
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN",
+          "evidence": "三冊 correctly counts three physical books; the explanation explicitly avoids a universal 巻/冊 exclusivity rule."
+        },
+        {
+          "path": "counters/raceplaces.json",
+          "integrity": {
+            "bytes": 1398,
+            "sha256": "4223d8313a85dba4792d989825bdbda4210e40a1d0a89196f21c96ffeb455fbf",
+            "status": "PASS"
+          },
+          "recordsReviewed": 2,
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN",
+          "evidence": "いちい and さんい fit race placings. Tree, court-rank and approximation senses do not dictate readings for this scenario."
+        },
+        {
+          "path": "counters/gradeexpressions.json",
+          "integrity": {
+            "bytes": 1604,
+            "sha256": "73adb9f2a82788aafd304be96432b505f51eb35f5eebcf352195027ba3275c5b",
+            "status": "PASS"
+          },
+          "recordsReviewed": 2,
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN",
+          "evidence": "いっきゅう/にきゅう are appropriate numerical grade labels, with no universal scale or modern JLPT equivalence asserted."
+        },
+        {
+          "path": "counters/shelftiers.json",
+          "integrity": {
+            "bytes": 1715,
+            "sha256": "bcfc0395c37fbbd97c2d7c31af0380df85264172d3ea971f3d15252782b82451",
+            "status": "PASS"
+          },
+          "recordsReviewed": 2,
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN",
+          "evidence": "One physical tier and third tier from the top are clear. The latter explicitly excludes the direction phrase from the submitted expression."
+        },
+        {
+          "path": "counters/digitcounts.json",
+          "integrity": {
+            "bytes": 1555,
+            "sha256": "789fedf4e668513d85d02e7d64aee7b628fdaea27dad2924c18850a1161b68ea",
+            "status": "PASS"
+          },
+          "recordsReviewed": 2,
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN",
+          "evidence": "ひとけた/ふたけた apply to explicitly printed digits. The 07 task forbids first normalizing the label to numerical seven."
+        },
+        {
+          "path": "counters/textlinecounts.json",
+          "integrity": {
+            "bytes": 1403,
+            "sha256": "e674ecda87b455f0dfb452443c3cefa356063a354ce52d8b4a8a8bdd55a3377c",
+            "status": "PASS"
+          },
+          "recordsReviewed": 2,
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN",
+          "evidence": "いちぎょう/ろくぎょう are supported line counts. Separate いっこう and bank-counter こう are not accepted as readings of these text quantities."
+        },
+        {
+          "path": "counters/characterexpressions.json",
+          "integrity": {
+            "bytes": 1774,
+            "sha256": "ae959fd2112f70275a105871b49571165e25a234939955d16cf41bd5939d31a5",
+            "status": "PASS"
+          },
+          "recordsReviewed": 2,
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN",
+          "evidence": "Two written kanji are not morae or words; ふたもじ is directly supported. Twenty-character maximum uses explicitly supplied 文字以内."
+        },
+        {
+          "path": "counters/jilimits.json",
+          "integrity": {
+            "bytes": 1111,
+            "sha256": "5a3352d8c7e488eaaa1f0efe9f0c2c6fe3887c793c33ba7c9cf5c6c07b55b792",
+            "status": "PASS"
+          },
+          "recordsReviewed": 1,
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN",
+          "evidence": "五十字以内 is a correct inclusive character limit. 字 is requested notation, not a ban on 文字 in ordinary character limits."
+        },
+        {
+          "path": "counters/flightlabels.json",
+          "integrity": {
+            "bytes": 1764,
+            "sha256": "464cd5587fb1f4934ef81dd5b0f92b5c13799ecc24d8bb3feb9cd82eabe9f890",
+            "status": "PASS"
+          },
+          "recordsReviewed": 2,
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN",
+          "evidence": "Flight 3 and two scheduled departures are separately specified. Single-digit readings do not claim multi-digit airline or radio-call conventions."
+        }
+      ],
+      "records": [
+        {
+          "id": "lessonlabels-expression-1",
+          "path": "counters/lessonlabels.json",
+          "lines": [
+            15,
+            28
+          ],
+          "integrity": {
+            "sha256": "bad1bba81258087319f64a50a72c932eaf4b38cf1d6b8b7d6028ac691109a482",
+            "status": "PASS"
+          },
+          "pilotMember": true,
+          "row": "lessons-chapters",
+          "contextKey": "lesson-label-versus-count",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Supplied 第/課 notation and label number; no calculation or unaided unit choice. Feedback contrasts the identifier with completion and permits bare labels elsewhere.",
+          "taskEvidence": "Workbook heading identifies Lesson 3, explicitly not three completed lessons. Third-lesson meaning and だいさんか construction agree.",
+          "canonical": {
+            "written": "第三課",
+            "reading": "だいさんか"
+          },
+          "allWrittenAnswersReviewed": [
+            "第三課",
+            "第3課"
+          ],
+          "allReadingAnswersReviewed": [
+            "だいさんか"
+          ],
+          "answerEvidence": "Both written members are the same requested 第 label. 三課 is excluded by this cue, not declared universally invalid. Read targets 第, 三 and 課 together.",
+          "feedbackEvidence": "Explanation accurately separates the identifier from completed quantity and limits the 第 requirement to this prompt.",
+          "otherFields": "No Japanese sentence, noun, vocabulary map, good/kana list or distractor is present in this v2 record.",
+          "sourceIds": [
+            "S1",
+            "S2"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "lessonlabels-expression-2",
+          "path": "counters/lessonlabels.json",
+          "lines": [
+            29,
+            42
+          ],
+          "integrity": {
+            "sha256": "048381640fd20a6801af25b7e62d9a7e52f57e9a06d7ace9b82bde11c64c4cd5",
+            "status": "PASS"
+          },
+          "pilotMember": true,
+          "row": "lessons-chapters",
+          "contextKey": "lesson-label-versus-count",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Three and 課 are supplied and 第/目 excluded. No inference of the final lesson number is needed; feedback explains why it cannot be inferred.",
+          "taskEvidence": "Three different completed lessons today, not the identifier of one lesson. 三課/さんか is a legitimate count under this context.",
+          "canonical": {
+            "written": "三課",
+            "reading": "さんか"
+          },
+          "allWrittenAnswersReviewed": [
+            "三課",
+            "3課"
+          ],
+          "allReadingAnswersReviewed": [
+            "さんか"
+          ],
+          "answerEvidence": "The two whole written forms preserve quantity three. 第三課/三課目 are not required alternatives because the visible request excludes them.",
+          "feedbackEvidence": "Correctly allows the same bare expression to label a lesson elsewhere without changing this count request.",
+          "otherFields": "No v1 sentence, noun, vocabulary, alternatives or distractors; no pilot provenance was used as correctness evidence.",
+          "sourceIds": [
+            "S1",
+            "S2"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "lessonlabels-expression-3",
+          "path": "counters/lessonlabels.json",
+          "lines": [
+            43,
+            56
+          ],
+          "integrity": {
+            "sha256": "0cf1b9b39c3fd04a06efe74160641fdbe4f21a086eaffb7a555a4ec88589b1a9",
+            "status": "PASS"
+          },
+          "row": "lessons-chapters",
+          "contextKey": "completed-lessons",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Supplied count six and unit; contracted reading is production/decoding, not arithmetic. Feedback rejects identifier and first-six inferences.",
+          "taskEvidence": "Six different lessons completed; requested 課 count without 第/目.",
+          "canonical": {
+            "written": "六課",
+            "reading": "ろっか"
+          },
+          "allWrittenAnswersReviewed": [
+            "六課",
+            "6課"
+          ],
+          "allReadingAnswersReviewed": [
+            "ろっか"
+          ],
+          "answerEvidence": "Both written forms encode six. IMABI's exact 課 table supports ロッカ; no contextually supported extra reading was established.",
+          "feedbackEvidence": "Contraction and count-versus-label explanation are accurate; completion of the first six lessons is not asserted.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S1"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "lessonlabels-expression-4",
+          "path": "counters/lessonlabels.json",
+          "lines": [
+            57,
+            70
+          ],
+          "integrity": {
+            "sha256": "6d6f1189ebfed5a2c6c3d7bf32b66603786465ab247dbcacfc29337ac6b40e0b",
+            "status": "PASS"
+          },
+          "row": "lessons-chapters",
+          "contextKey": "completed-lessons",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            1,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Write must distinguish one completed lesson from the visible identifier 6; the unit is still supplied. Read displays 一課 and does not repeat this number-choice demand.",
+          "taskEvidence": "Only Lesson 6 completed today means one lesson. The count request explicitly excludes giving the identifier.",
+          "canonical": {
+            "written": "一課",
+            "reading": "いっか"
+          },
+          "allWrittenAnswersReviewed": [
+            "一課",
+            "1課"
+          ],
+          "allReadingAnswersReviewed": [
+            "いっか"
+          ],
+          "answerEvidence": "Both spellings correctly encode one; イッカ is supported. 六課 or 第六課 would answer the wrong quantity/operation.",
+          "feedbackEvidence": "Names the decisive identifier/count distinction, without treating 第六課 as malformed Japanese.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S1",
+            "S2"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "chapterexpressions-expression-1",
+          "path": "counters/chapterexpressions.json",
+          "lines": [
+            15,
+            28
+          ],
+          "integrity": {
+            "sha256": "79da33df4e2f9d34e9d62e4c14bff1a9383d8aa0f0e86a031a2a5b6e2e590c4a",
+            "status": "PASS"
+          },
+          "row": "lessons-chapters",
+          "contextKey": "book-chapter-identifier",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Supplied chapter number and 第/章 construction. Feedback explains a notation restriction versus general usage.",
+          "taskEvidence": "Book heading Chapter 3, not chapters read; 第三章 is directly paralleled by source 第３章.",
+          "canonical": {
+            "written": "第三章",
+            "reading": "だいさんしょう"
+          },
+          "allWrittenAnswersReviewed": [
+            "第三章",
+            "第3章"
+          ],
+          "allReadingAnswersReviewed": [
+            "だいさんしょう"
+          ],
+          "answerEvidence": "Both spellings include the required 第 and 章; reading is of the full displayed label.",
+          "feedbackEvidence": "Bare 三章 is correctly recognized as a contextual identifier elsewhere.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S1",
+            "S2"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "chapterexpressions-expression-2",
+          "path": "counters/chapterexpressions.json",
+          "lines": [
+            29,
+            42
+          ],
+          "integrity": {
+            "sha256": "60fc1ba089c6f886f12e68ab100c7aae9ffb00a66ebe0d15589a9a37c9e60973",
+            "status": "PASS"
+          },
+          "row": "lessons-chapters",
+          "contextKey": "completed-chapters",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Three and chapter unit supplied; feedback separates chapter quantity, physical books and position.",
+          "taskEvidence": "Three whole chapters read today, using 章 without 第 or 目.",
+          "canonical": {
+            "written": "三章",
+            "reading": "さんしょう"
+          },
+          "allWrittenAnswersReviewed": [
+            "三章",
+            "3章"
+          ],
+          "allReadingAnswersReviewed": [
+            "さんしょう"
+          ],
+          "answerEvidence": "Both whole forms are the requested count; さんしょう is appropriate. Context supplies quantity, not an intrinsic quantity-only meaning of 三章.",
+          "feedbackEvidence": "Correctly acknowledges the short form's alternative label use.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S1",
+            "S2"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "sectioncounts-report-1",
+          "path": "counters/sectioncounts.json",
+          "lines": [
+            15,
+            50
+          ],
+          "supportingVocabularyLines": [
+            54,
+            78
+          ],
+          "integrity": {
+            "sha256": "c63650a3a99539b9b4401f36e0af6089be1c494169c8f34acd89824379d89508",
+            "status": "PASS"
+          },
+          "row": "lessons-chapters",
+          "contextKey": "document-section-count",
+          "modes": [
+            "Choose",
+            "Type",
+            "Read"
+          ],
+          "vector": [
+            1,
+            0,
+            0,
+            1,
+            2
+          ],
+          "vectorReason": "Modest supported report vocabulary. The question itself repeats 節 in three headings, so this is supplied/cued recognition rather than independent unit selection. Several fitting counting alternatives are handled. Feedback contrasts sections with books, tunes and nodes.",
+          "question": "この報告書の第一章は、『第一節』『第二節』『第三節』の三{}に分かれています。",
+          "translationReviewed": "Chapter 1 of this report is divided into three sections headed Section 1, Section 2 and Section 3.",
+          "nounReviewed": "第一章の中の三つの節",
+          "constructionEvidence": "この報告書の第一章 is the topic; the quoted headings identify the three divisions; 三節に分かれています describes the existing division. The translation preserves all three named sections and the first chapter. The noun is correctly the three sections inside that chapter, not three reports or chapters. Its 三つ is みっつ.",
+          "canonical": {
+            "written": "三節",
+            "reading": "さんせつ"
+          },
+          "allReadingAnswersReviewed": [
+            "さんせつ"
+          ],
+          "goodMemberAudit": [
+            {
+              "member": "節",
+              "result": "fits",
+              "reason": "Bare target unit, yielding 三節."
+            },
+            {
+              "member": "三節",
+              "result": "fits",
+              "reason": "Full three-section expression; not inserted as an extra numeral into the blank."
+            },
+            {
+              "member": "つ",
+              "result": "fits",
+              "reason": "Generic unit completes 三つ for the three divisions already identified."
+            },
+            {
+              "member": "三つ",
+              "result": "fits",
+              "reason": "Full generic expression みっつ, referring to the identified divisions."
+            },
+            {
+              "member": "セクション",
+              "result": "fits",
+              "reason": "Section is apt for divisions of a written chapter."
+            },
+            {
+              "member": "三セクション",
+              "result": "fits",
+              "reason": "Full section count; the counted units remain the report's three divisions."
+            },
+            {
+              "member": "項目",
+              "result": "fits",
+              "reason": "Here the enumerated divisions can be described as three items under the chapter; this does not make 項目 a universal synonym for every sense of 節."
+            },
+            {
+              "member": "三項目",
+              "result": "fits",
+              "reason": "Complete three-item expression is coherent for these explicitly enumerated textual divisions."
+            }
+          ],
+          "kanaMemberAudit": [
+            {
+              "member": "せつ",
+              "result": "fits",
+              "reason": "Base reading of the requested structured-text 節."
+            },
+            {
+              "member": "さんせつ",
+              "result": "fits",
+              "reason": "Reading of the full target count."
+            },
+            {
+              "member": "みっつ",
+              "result": "fits",
+              "reason": "Reading of the accepted full generic 三つ."
+            },
+            {
+              "member": "せくしょん",
+              "result": "fits",
+              "reason": "Kana counterpart of セクション; normalized good-first precedence is relevant."
+            },
+            {
+              "member": "さんせくしょん",
+              "result": "fits",
+              "reason": "Pronounces the accepted full 三セクション."
+            },
+            {
+              "member": "こうもく",
+              "result": "fits",
+              "reason": "Correct reading of the contextually accepted 項目."
+            },
+            {
+              "member": "さんこうもく",
+              "result": "fits",
+              "reason": "Correct reading of 三項目."
+            }
+          ],
+          "distractorAudit": [
+            {
+              "member": "冊",
+              "completedPhrase": "三冊",
+              "result": "wrong in this task",
+              "reason": "Counts physical books/compilations, not the named internal divisions."
+            },
+            {
+              "member": "棟",
+              "completedPhrase": "三棟",
+              "result": "wrong in this task",
+              "reason": "Counts buildings, not report sections; alternative building readings do not repair the semantic mismatch."
+            },
+            {
+              "member": "匹",
+              "completedPhrase": "三匹",
+              "result": "wrong in this task",
+              "reason": "Animal counter is not an interpretation of these textual divisions."
+            }
+          ],
+          "vocabularyOccurrenceAudit": [
+            {
+              "word": "報告書",
+              "reading": "ほうこくしょ",
+              "gloss": "report",
+              "occurrences": [
+                "text, once"
+              ],
+              "result": "Reading, lexical boundary and gloss fit this report."
+            },
+            {
+              "word": "第一章",
+              "reading": "だいいっしょう",
+              "gloss": "Chapter 1",
+              "occurrences": [
+                "text, once",
+                "noun, once"
+              ],
+              "result": "Correct whole first-chapter label, including the いっしょう contraction; not a count of one whole book."
+            },
+            {
+              "word": "第一節",
+              "reading": "だいいっせつ",
+              "gloss": "Section 1",
+              "occurrences": [
+                "text, once"
+              ],
+              "result": "Correct label for the first named section, with いっせつ."
+            },
+            {
+              "word": "第二節",
+              "reading": "だいにせつ",
+              "gloss": "Section 2",
+              "occurrences": [
+                "text, once"
+              ],
+              "result": "Correct label and reading."
+            },
+            {
+              "word": "第三節",
+              "reading": "だいさんせつ",
+              "gloss": "Section 3",
+              "occurrences": [
+                "text, once"
+              ],
+              "result": "Correct label and reading."
+            },
+            {
+              "word": "分かれています",
+              "reading": "わかれています",
+              "gloss": "is divided",
+              "occurrences": [
+                "text, once"
+              ],
+              "result": "Correct whole inflected expression and resultant-state gloss; not the transitive act of dividing someone else's report."
+            }
+          ],
+          "feedbackEvidence": "The note's target sense and accepted generic/loanword/item alternatives fit this construction. Tunes/nodes under ふし are correctly not the counted objects here. This does not deny the dictionary's separate botanical せつ sense.",
+          "answerSideLimit": "The note and full English translation were not treated as visible conditions of Choose/Type. Read does not accept みっつ, せくしょん or こうもく as pronunciations of displayed 三節.",
+          "sourceIds": [
+            "S1",
+            "S6",
+            "S7"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "sectionexpressions-expression-1",
+          "path": "counters/sectionexpressions.json",
+          "lines": [
+            14,
+            27
+          ],
+          "integrity": {
+            "sha256": "ada7a122acc2536fe5595e69028ce8e2edeb7820600e714841f7c4b8b0d55d52",
+            "status": "PASS"
+          },
+          "row": "lessons-chapters",
+          "contextKey": "document-section-count",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Three sections and 節 are supplied. The せつ/ふし contrast explains the relevant reading; no extra selection evidence beyond the shared report situation.",
+          "taskEvidence": "First chapter contains three numbered sections; only the section count is requested, without 第.",
+          "canonical": {
+            "written": "三節",
+            "reading": "さんせつ"
+          },
+          "allWrittenAnswersReviewed": [
+            "三節",
+            "3節"
+          ],
+          "allReadingAnswersReviewed": [
+            "さんせつ"
+          ],
+          "answerEvidence": "Both written forms are complete counts in the requested notation. Generic つ or セクション need not be Write answers to this explicitly specified 節 task.",
+          "feedbackEvidence": "Correctly identifies structured-text せつ, not the tune/node ふし word.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S6",
+            "S7"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "episodelabels-expression-1",
+          "path": "counters/episodelabels.json",
+          "lines": [
+            14,
+            27
+          ],
+          "integrity": {
+            "sha256": "c5723b06874503219064615fb53ebb6261dfe1a52e761f73b43625b0ab1b5f67",
+            "status": "PASS"
+          },
+          "row": "episodes-volumes",
+          "contextKey": "series-episode",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Episode number and 第/話 are supplied. Feedback contrasts the identifier with watched quantity.",
+          "taskEvidence": "Series heading identifies Episode 3, not three watched episodes.",
+          "canonical": {
+            "written": "第三話",
+            "reading": "だいさんわ"
+          },
+          "allWrittenAnswersReviewed": [
+            "第三話",
+            "第3話"
+          ],
+          "allReadingAnswersReviewed": [
+            "だいさんわ"
+          ],
+          "answerEvidence": "Both whole labels satisfy the requested 第 notation; 話 is わ here.",
+          "feedbackEvidence": "Correctly does not infer viewing history from the episode identifier.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S2"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "episodelabels-expression-2",
+          "path": "counters/episodelabels.json",
+          "lines": [
+            28,
+            41
+          ],
+          "integrity": {
+            "sha256": "7c56c8239a589be7411384b058707c8148a26d7d4dc6067f4c9703cfd35ea59f",
+            "status": "PASS"
+          },
+          "row": "episodes-volumes",
+          "contextKey": "series-episode",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "The menu context and no-第/no-目 notation are explicit; this is not an independently selected ordinal form.",
+          "taskEvidence": "Episode 5 is a short menu label, with 話 but without 第 or 目.",
+          "canonical": {
+            "written": "五話",
+            "reading": "ごわ"
+          },
+          "allWrittenAnswersReviewed": [
+            "五話",
+            "5話"
+          ],
+          "allReadingAnswersReviewed": [
+            "ごわ"
+          ],
+          "answerEvidence": "Both spellings are valid contextual short labels. 第五話 is legitimate Japanese but outside this visible notation request.",
+          "feedbackEvidence": "Correctly qualifies the short-label use rather than saying every episode label must omit 第.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S2"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "volumeexpressions-expression-1",
+          "path": "counters/volumeexpressions.json",
+          "lines": [
+            15,
+            28
+          ],
+          "integrity": {
+            "sha256": "2098df09fc58c03d50dfb29999aae380fb1c24d88630ac8acf2be8e7433e1c8d",
+            "status": "PASS"
+          },
+          "row": "episodes-volumes",
+          "contextKey": "volume-identifier",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Cover label number and 巻 are provided; explanation separates work-volume identity from owned copies.",
+          "taskEvidence": "Manga cover identifies Volume 1, using 巻 without 第/目.",
+          "canonical": {
+            "written": "一巻",
+            "reading": "いっかん"
+          },
+          "allWrittenAnswersReviewed": [
+            "一巻",
+            "1巻"
+          ],
+          "allReadingAnswersReviewed": [
+            "いっかん"
+          ],
+          "answerEvidence": "Both are complete short volume labels; イッカン is directly supported by the 巻 table.",
+          "feedbackEvidence": "Correct contrast with physical-copy quantity.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S2",
+            "S4"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "volumeexpressions-expression-2",
+          "path": "counters/volumeexpressions.json",
+          "lines": [
+            29,
+            43
+          ],
+          "integrity": {
+            "sha256": "5a0e2c5b5cbfad10ac0bbd8090cc4302ffb6b0cd003fb8798bbce22f04a11086",
+            "status": "PASS"
+          },
+          "row": "episodes-volumes",
+          "contextKey": "volume-identifier",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          "vectorReason": "Supplied Volume 8 notation; two supported readings are handled. Feedback both acknowledges them and rejects the eight-books inference.",
+          "taskEvidence": "Cover identifies Volume 8 with 巻, without 第/目.",
+          "canonical": {
+            "written": "八巻",
+            "reading": "はちかん"
+          },
+          "allWrittenAnswersReviewed": [
+            "八巻",
+            "8巻"
+          ],
+          "allReadingAnswersReviewed": [
+            "はちかん",
+            "はっかん"
+          ],
+          "answerEvidence": "Both written spellings preserve the label. IMABI lists ハチカン and ハッカン for 八巻; neither should be rejected merely by applying a blanket contraction shortcut.",
+          "feedbackEvidence": "Both-reading claim is supported, with no frequency ranking or universal pronunciation protocol inferred.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S4"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "volumeexpressions-expression-3",
+          "path": "counters/volumeexpressions.json",
+          "lines": [
+            44,
+            57
+          ],
+          "integrity": {
+            "sha256": "d9d450c390ac45f6e5387361aff1d4ae38f37c1500318476a1b5fe1358ebf79b",
+            "status": "PASS"
+          },
+          "row": "episodes-volumes",
+          "contextKey": "volumes-and-physical-copies",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            1,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Write selects the shared identifier 1 rather than copy count 3, with 巻 supplied. Read shows 一巻 and only requires its pronunciation.",
+          "taskEvidence": "Three physical copies of Volume 1; request only their shared volume identifier.",
+          "canonical": {
+            "written": "一巻",
+            "reading": "いっかん"
+          },
+          "allWrittenAnswersReviewed": [
+            "一巻",
+            "1巻"
+          ],
+          "allReadingAnswersReviewed": [
+            "いっかん"
+          ],
+          "answerEvidence": "Both whole labels refer to Volume 1. 三巻 is not warranted by three duplicate physical copies.",
+          "feedbackEvidence": "Repeated copies do not create separately numbered volumes. This is the same desk/copies situation as volumecopies-expression-1.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S1",
+            "S4"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "volumecopies-expression-1",
+          "path": "counters/volumecopies.json",
+          "lines": [
+            15,
+            28
+          ],
+          "integrity": {
+            "sha256": "bc14e3949a0dada70450b5b2e0fc7519a8e2ba75fb5bc233f6657b9b84a046da",
+            "status": "PASS"
+          },
+          "row": "episodes-volumes",
+          "contextKey": "volumes-and-physical-copies",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            1,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Write takes quantity 3 rather than identifier 1; 冊 is explicitly supplied. Read has only the displayed 三冊 decoding demand.",
+          "taskEvidence": "Same three physical copies of Volume 1 on a desk, now asking their physical-book count.",
+          "canonical": {
+            "written": "三冊",
+            "reading": "さんさつ"
+          },
+          "allWrittenAnswersReviewed": [
+            "三冊",
+            "3冊"
+          ],
+          "allReadingAnswersReviewed": [
+            "さんさつ"
+          ],
+          "answerEvidence": "Both spellings count three physical books; さんさつ is supported by the 冊 table.",
+          "feedbackEvidence": "Accurately distinguishes identifier from copy count and explicitly allows overlap of 巻/冊 in other contexts.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S1",
+            "S4"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "raceplaces-expression-1",
+          "path": "counters/raceplaces.json",
+          "lines": [
+            15,
+            28
+          ],
+          "integrity": {
+            "sha256": "091be3fb2e20d70ea9c74b51b50623031f162d961c085c2f63fbd7f7bd4bc6e5",
+            "status": "PASS"
+          },
+          "row": "ranks-grades",
+          "contextKey": "race-rank",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "First place and 位 are supplied. Feedback distinguishes the numerical placing from people count and homographic uses.",
+          "taskEvidence": "Race result first place, using 位 without 第 or 目.",
+          "canonical": {
+            "written": "一位",
+            "reading": "いちい"
+          },
+          "allWrittenAnswersReviewed": [
+            "一位",
+            "1位"
+          ],
+          "allReadingAnswersReviewed": [
+            "いちい"
+          ],
+          "answerEvidence": "JMdict's numerical entry explicitly supplies 一位/１位 and いちい with first-place sense. Full-width １ does not need a separately authored NFKC duplicate.",
+          "feedbackEvidence": "くらい/approximation and the unrelated tree sense are not competing readings for this race-result task.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S2",
+            "S10"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "raceplaces-expression-2",
+          "path": "counters/raceplaces.json",
+          "lines": [
+            29,
+            42
+          ],
+          "integrity": {
+            "sha256": "2aba2f3f2fac81e8f83199f128d1e13f09972a8b4297d28c284dce21ab6c7a1a",
+            "status": "PASS"
+          },
+          "row": "ranks-grades",
+          "contextKey": "race-rank",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Third place and unit provided; numerical substitution is not a new independent situation.",
+          "taskEvidence": "Runner's third-place race result, not a quantity of runners/races.",
+          "canonical": {
+            "written": "三位",
+            "reading": "さんい"
+          },
+          "allWrittenAnswersReviewed": [
+            "三位",
+            "3位"
+          ],
+          "allReadingAnswersReviewed": [
+            "さんい"
+          ],
+          "answerEvidence": "Both complete spellings express third place. さんい fits this numerical race placing; other lexicalized/court-rank uses of 三位 do not automatically supply a fitting reading here.",
+          "feedbackEvidence": "Accurately contrasts rank with three runners or three races.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S2",
+            "S10"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "gradeexpressions-expression-1",
+          "path": "counters/gradeexpressions.json",
+          "lines": [
+            14,
+            27
+          ],
+          "integrity": {
+            "sha256": "ca5cbc3e4360bbdda6a328067332b58bc7b8fae5bbc1d95ab08c647a59b7a48e",
+            "status": "PASS"
+          },
+          "row": "ranks-grades",
+          "contextKey": "proficiency-grade-label",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Grade 1 and 級 supplied; no cross-system ranking inference requested. Feedback prevents a false universal scale/JLPT equivalence.",
+          "taskEvidence": "A proficiency certificate is labeled Grade 1; write only the specified 級 label.",
+          "canonical": {
+            "written": "一級",
+            "reading": "いっきゅう"
+          },
+          "allWrittenAnswersReviewed": [
+            "一級",
+            "1級"
+          ],
+          "allReadingAnswersReviewed": [
+            "いっきゅう"
+          ],
+          "answerEvidence": "Both forms denote the named grade; JMdict supports いっきゅう. The clue does not require that every grading system uses the same ordering.",
+          "feedbackEvidence": "Modern JLPT N1-N5 label statement was independently checked against the official site.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S8",
+            "S14"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "gradeexpressions-expression-2",
+          "path": "counters/gradeexpressions.json",
+          "lines": [
+            28,
+            41
+          ],
+          "integrity": {
+            "sha256": "d29ea3bbf142449f68de50474204062d8a30b3e8a8d8573bc177a3b2c5ab12f9",
+            "status": "PASS"
+          },
+          "row": "ranks-grades",
+          "contextKey": "proficiency-grade-label",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Supplied Grade 2 notation; feedback separates grade from attempts/examinations.",
+          "taskEvidence": "An exam registration specifies Grade 2; 級 is requested without 第/目.",
+          "canonical": {
+            "written": "二級",
+            "reading": "にきゅう"
+          },
+          "allWrittenAnswersReviewed": [
+            "二級",
+            "2級"
+          ],
+          "allReadingAnswersReviewed": [
+            "にきゅう"
+          ],
+          "answerEvidence": "Both spellings are the same grade label; regular に + きゅう reading fits. Neither an examination count nor second attempt is being requested.",
+          "feedbackEvidence": "Leaves requirements/hierarchy to the relevant grading system rather than inventing them.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S8"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "shelftiers-expression-1",
+          "path": "counters/shelftiers.json",
+          "lines": [
+            16,
+            29
+          ],
+          "integrity": {
+            "sha256": "819e2b149341eee50ad1e91c5f994fb5734dd433c22757a082b24c2e7c30222f",
+            "status": "PASS"
+          },
+          "row": "ranks-grades",
+          "contextKey": "shelf-tier",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "One physical tier and 段 supplied; feedback distinguishes unrelated senses and warns against automatic contraction.",
+          "taskEvidence": "Small shelf has one horizontal storage tier; count with 段 without 第/目.",
+          "canonical": {
+            "written": "一段",
+            "reading": "いちだん"
+          },
+          "allWrittenAnswersReviewed": [
+            "一段",
+            "1段"
+          ],
+          "allReadingAnswersReviewed": [
+            "いちだん"
+          ],
+          "answerEvidence": "Both spellings give the requested tier count. JMdict's one step/rung/level sense supports いちだん; Tofugu independently places vertically installed shelves in 段's scope.",
+          "feedbackEvidence": "Martial-arts rank and verb-conjugation class are not this physical shelf sense. No automatic いっ contraction is needed.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S6",
+            "S9"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "shelftiers-expression-2",
+          "path": "counters/shelftiers.json",
+          "lines": [
+            30,
+            43
+          ],
+          "integrity": {
+            "sha256": "c3a8462054fc84347f43f71634d98967be334c74215d3eb8e8dd863a8e033495",
+            "status": "PASS"
+          },
+          "row": "ranks-grades",
+          "contextKey": "shelf-tier",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Ordinal third and 段目 supplied; top-down direction is explicit, not a decision left to the learner.",
+          "taskEvidence": "Box belongs on the third tier counted from the top; submit only the 段目 expression, excluding 'from the top'.",
+          "canonical": {
+            "written": "三段目",
+            "reading": "さんだんめ"
+          },
+          "allWrittenAnswersReviewed": [
+            "三段目",
+            "3段目"
+          ],
+          "allReadingAnswersReviewed": [
+            "さんだんめ"
+          ],
+          "answerEvidence": "Both short answers satisfy the explicit exclusion of 上から. Source example 上から3段目の棚 directly corroborates the construction.",
+          "feedbackEvidence": "目 distinguishes the requested position from a three-tier count in this exercise. The explanation's restriction is local, not a claim about all uses of 三段.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S2",
+            "S6",
+            "S9"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "digitcounts-expression-1",
+          "path": "counters/digitcounts.json",
+          "lines": [
+            14,
+            27
+          ],
+          "integrity": {
+            "sha256": "5d9d7d7eebe32f3f7f14f0e07e9dfd26f827550414ea6af4baebe404c9658828",
+            "status": "PASS"
+          },
+          "row": "digits-text-units",
+          "contextKey": "digit-count",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "The cue already says one Arabic numeral character and supplies 桁; no counting calculation or place-value selection is required.",
+          "taskEvidence": "Printed label '7', explicitly one digit, not the digit's value.",
+          "canonical": {
+            "written": "一桁",
+            "reading": "ひとけた"
+          },
+          "allWrittenAnswersReviewed": [
+            "一桁",
+            "1桁"
+          ],
+          "allReadingAnswersReviewed": [
+            "ひとけた"
+          ],
+          "answerEvidence": "Both whole forms count one digit position. IMABI's 桁 table supports ひとけた.",
+          "feedbackEvidence": "Separates digit quantity from value seven and place-value 位/くらい.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S3"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "digitcounts-expression-2",
+          "path": "counters/digitcounts.json",
+          "lines": [
+            28,
+            41
+          ],
+          "integrity": {
+            "sha256": "8671344a406ab27496c4816a2e4bd93d7d3e616034ef7b70995e4cc02e408259",
+            "status": "PASS"
+          },
+          "row": "digits-text-units",
+          "contextKey": "digit-count",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Two printed digits, inclusion of zero and no numerical conversion are all explicit; arithmetic-looking 07 is not a calculation task.",
+          "taskEvidence": "Printed label '07' has two Arabic numeral characters including its leading zero; use 桁.",
+          "canonical": {
+            "written": "二桁",
+            "reading": "ふたけた"
+          },
+          "allWrittenAnswersReviewed": [
+            "二桁",
+            "2桁"
+          ],
+          "allReadingAnswersReviewed": [
+            "ふたけた"
+          ],
+          "answerEvidence": "Both forms correctly count the two printed positions; ふたけた is supported. One-digit numerical value seven does not override the visible label-count condition.",
+          "feedbackEvidence": "Explicitly distinguishes representation length from numerical value.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S3"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "textlinecounts-expression-1",
+          "path": "counters/textlinecounts.json",
+          "lines": [
+            14,
+            27
+          ],
+          "integrity": {
+            "sha256": "0e06211631d689fe99c952bba3f9c96f1235b2b37fca39c30f984e3636454ffc",
+            "status": "PASS"
+          },
+          "row": "digits-text-units",
+          "contextKey": "text-line-count",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "One line and 行 supplied; the feedback explains why homographic group/bank readings do not apply.",
+          "taskEvidence": "Note occupies exactly one line of text; count with 行 without 目.",
+          "canonical": {
+            "written": "一行",
+            "reading": "いちぎょう"
+          },
+          "allWrittenAnswersReviewed": [
+            "一行",
+            "1行"
+          ],
+          "allReadingAnswersReviewed": [
+            "いちぎょう"
+          ],
+          "answerEvidence": "Both spellings are the specified text-line count; the exact source table gives いちぎょう, independently of its separate いっこう entry.",
+          "feedbackEvidence": "Correct distinction between text lines, group/entourage and banks.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S5"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "textlinecounts-expression-2",
+          "path": "counters/textlinecounts.json",
+          "lines": [
+            28,
+            41
+          ],
+          "integrity": {
+            "sha256": "3e8191d290a0f0136688b29ec3174e43e3a781f78673e36e2a725331f39ce569",
+            "status": "PASS"
+          },
+          "row": "digits-text-units",
+          "contextKey": "text-line-count",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Six lines and unit supplied; changing note to printed message does not establish a new independent context.",
+          "taskEvidence": "Printed message occupies six lines; requested 行 count without 目.",
+          "canonical": {
+            "written": "六行",
+            "reading": "ろくぎょう"
+          },
+          "allWrittenAnswersReviewed": [
+            "六行",
+            "6行"
+          ],
+          "allReadingAnswersReviewed": [
+            "ろくぎょう"
+          ],
+          "answerEvidence": "Both complete written forms encode six text lines. Source table explicitly gives ろくぎょう, not a generated contraction.",
+          "feedbackEvidence": "Correctly distinguishes lines from words, characters and banks.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S5"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "characterexpressions-expression-1",
+          "path": "counters/characterexpressions.json",
+          "lines": [
+            15,
+            28
+          ],
+          "integrity": {
+            "sha256": "7fa6b022dab363514732494c87389116e29866ef41e6753b0b18b69e9bd6b3b8",
+            "status": "PASS"
+          },
+          "row": "digits-text-units",
+          "contextKey": "character-count",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Cue supplies two kanji and 文字. 花火 need not be pronounced to answer this explicitly written-character task.",
+          "taskEvidence": "The written word 花火 consists of two kanji characters, not a requested count of spoken sounds.",
+          "canonical": {
+            "written": "二文字",
+            "reading": "ふたもじ"
+          },
+          "allWrittenAnswersReviewed": [
+            "二文字",
+            "2文字"
+          ],
+          "allReadingAnswersReviewed": [
+            "ふたもじ"
+          ],
+          "answerEvidence": "Both spellings correctly count two written characters. IMABI and Daijisen/Seisenban's exact 二文字 entry support ふたもじ. The latter's plant-name and historical ふたつもじ senses are not automatically readings of this count.",
+          "feedbackEvidence": "Accurately excludes syllables, kana-transcription length and word count. 花火/はなび is one lexical word but contains the two displayed kanji.",
+          "otherFields": "The cue contains 花火 once but no vocabulary map or per-word reading/gloss is authored. Its reading is not prerequisite to this operation; no unsupported-vocabulary defect was established.",
+          "sourceIds": [
+            "S3",
+            "S15"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "characterexpressions-expression-2",
+          "path": "counters/characterexpressions.json",
+          "lines": [
+            29,
+            42
+          ],
+          "integrity": {
+            "sha256": "fc287f6ee4758e07d510b84183e2a800d3fb1ff1e8ffeb23238bb161bc276edb",
+            "status": "PASS"
+          },
+          "row": "digits-text-units",
+          "contextKey": "character-limit",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            1,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Modest additional supplied boundary word 以内; its use and number are explicit, with no boundary-comparison or arithmetic problem.",
+          "taskEvidence": "Form allows at most twenty written characters; answer must use 文字以内 and include 以内.",
+          "canonical": {
+            "written": "二十文字以内",
+            "reading": "にじゅうもじいない"
+          },
+          "allWrittenAnswersReviewed": [
+            "二十文字以内",
+            "20文字以内"
+          ],
+          "allReadingAnswersReviewed": [
+            "にじゅうもじいない"
+          ],
+          "answerEvidence": "Both complete limits preserve twenty and inclusion. にじゅう + もじ + いない fits the displayed expression; 二十字以内 is not required by a cue explicitly requesting 文字以内.",
+          "feedbackEvidence": "Twenty is allowed, and this is characters rather than words. Correctly does not turn a historical source's social-media example into a current platform-limit claim.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S3",
+            "S12"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "jilimits-expression-1",
+          "path": "counters/jilimits.json",
+          "lines": [
+            15,
+            28
+          ],
+          "integrity": {
+            "sha256": "05aa5169b5736f3538ec7097befaed1ce08bae260873cf573c91123bd73e66d8",
+            "status": "PASS"
+          },
+          "row": "digits-text-units",
+          "contextKey": "character-limit",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            1,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Supplied 以内 operator adds modest supported lexical load; no arithmetic or independent unit/boundary choice.",
+          "taskEvidence": "Short description no more than fifty written characters; use 字以内 including 以内.",
+          "canonical": {
+            "written": "五十字以内",
+            "reading": "ごじゅうじいない"
+          },
+          "allWrittenAnswersReviewed": [
+            "五十字以内",
+            "50字以内"
+          ],
+          "allReadingAnswersReviewed": [
+            "ごじゅうじいない"
+          ],
+          "answerEvidence": "Both spellings set the same inclusive maximum. ごじゅう + じ + いない pronounces the canonical string; 文字 alternatives are not readings of displayed 字.",
+          "feedbackEvidence": "Correctly permits fifty and treats 字 versus 文字 as requested notation, not a universal punctuation partition.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields. Paired with the twenty-character limit as the same limit-operation family, not independent evidence merely because the unit/number differs.",
+          "sourceIds": [
+            "S3",
+            "S6",
+            "S12"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "flightlabels-expression-1",
+          "path": "counters/flightlabels.json",
+          "lines": [
+            15,
+            28
+          ],
+          "integrity": {
+            "sha256": "33e23096e2607062c22e120a1c067e46bdf1373eebc47fc2f9c175a52673ff09",
+            "status": "PASS"
+          },
+          "row": "flight-labels",
+          "contextKey": "flight-number",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Flight 3 and 便 are supplied. Feedback separates identifier from count and limits pronunciation claims.",
+          "taskEvidence": "Timetable identifies one service as Flight 3; short 便 label without 第, explicitly not a departure count.",
+          "canonical": {
+            "written": "三便",
+            "reading": "さんびん"
+          },
+          "allWrittenAnswersReviewed": [
+            "三便",
+            "3便"
+          ],
+          "allReadingAnswersReviewed": [
+            "さんびん"
+          ],
+          "answerEvidence": "Both forms are the requested short flight identifier. The Japan Foundation's exact ～便/～びん flight-number entry supports the suffix sense; さん is the ordinary supplied single-digit numeral here.",
+          "feedbackEvidence": "Same written shape can count services elsewhere. No universal multi-digit announcement or radio-call reading is claimed.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S11",
+            "S13"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        },
+        {
+          "id": "flightlabels-expression-2",
+          "path": "counters/flightlabels.json",
+          "lines": [
+            29,
+            42
+          ],
+          "integrity": {
+            "sha256": "653da0ee1183b3f39c56527b8b3ae59a37846cb534442fd502e9be9265804d6e",
+            "status": "PASS"
+          },
+          "row": "flight-labels",
+          "contextKey": "daily-services",
+          "modes": [
+            "Write",
+            "Read"
+          ],
+          "vector": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "vectorReason": "Two scheduled services and 便 explicitly provided; aircraft scheduling facts are not a calculation to perform.",
+          "taskEvidence": "Route has two scheduled departures in one day; give only service count, not aircraft count or identifier.",
+          "canonical": {
+            "written": "二便",
+            "reading": "にびん"
+          },
+          "allWrittenAnswersReviewed": [
+            "二便",
+            "2便"
+          ],
+          "allReadingAnswersReviewed": [
+            "にびん"
+          ],
+          "answerEvidence": "Both spellings correctly count two services; にびん fits. Sanabo's 1日1便 corroborates this service-count construction as distinct from aircraft 機/台.",
+          "feedbackEvidence": "Correctly refuses to infer distinct-aircraft count: the same aircraft may serve more than one departure.",
+          "otherFields": "V2 only; no additional vocabulary/distractor fields.",
+          "sourceIds": [
+            "S11",
+            "S13"
+          ],
+          "correctness": "CLEAN",
+          "scopedCoverage": "CLEAN",
+          "comprehensibility": "CLEAN"
+        }
+      ],
+      "coverageReconciliation": {
+        "recordAccounting": {
+          "v1Forward": 1,
+          "v2Expressions": 28,
+          "completeRecords": 29,
+          "newRecords": 27,
+          "preservedRecords": 2,
+          "reverse": 0
+        },
+        "modeProjectionAccounting": {
+          "Choose": 1,
+          "Type": 1,
+          "Read": 29,
+          "Write": 28,
+          "totalProjections": 59,
+          "qualification": "59 presentations are not 59 records, contexts or independent skills. The same record is counted once in the 29-record review."
+        },
+        "contextAccounting": {
+          "distinctContractItemContextKeys": 17,
+          "conservativeContrastFamilies": 14,
+          "qualification": "The 14 are deliberately coarse editorial grouping families listed below, not an empirically validated independent-context total. Their internally different label/count/ordinal situations are described rather than inflated into transfer evidence. Number, noun, alias and mode changes do not add families."
+        },
+        "rows": [
+          {
+            "row": "lessons-chapters",
+            "records": 8,
+            "newRecords": 6,
+            "preservedPilotRecords": 2,
+            "contractItemContextKeys": [
+              "lesson-label-versus-count",
+              "completed-lessons",
+              "book-chapter-identifier",
+              "completed-chapters",
+              "document-section-count"
+            ],
+            "conservativeFamilies": [
+              "Workbook lesson identifiers versus completed-lesson counts, including only Lesson 6 completed",
+              "Book chapter identifier versus chapters read",
+              "Report chapter divided into three named sections"
+            ],
+            "operationsActuallySupported": "Specified-label/count writing and canonical reading; one v1 Choose/Type scaffolded completion.",
+            "selectionLimit": "The v1 question visibly repeats 節 in all three headings, with vocabulary support. It is recognition/reconstruction in a selection presentation, not independent selection of a counter from an unlabelled real-world situation. None of the v2 supplied-unit cues repairs that limitation.",
+            "contextLimit": "Pilot lesson-label/count members remain one paired family. The section v1/v2 pair shares the same situation.",
+            "coverageConclusion": "The assigned concrete tasks and sound classes are covered; no extra unaided-selection quota was supplied or invented."
+          },
+          {
+            "row": "episodes-volumes",
+            "records": 6,
+            "newRecords": 6,
+            "preservedPilotRecords": 0,
+            "contractItemContextKeys": [
+              "series-episode",
+              "volume-identifier",
+              "volumes-and-physical-copies"
+            ],
+            "conservativeFamilies": [
+              "Series episode label, full and short forms",
+              "Volume label on a cover",
+              "Three physical copies of Volume 1, asking either identifier or copy count"
+            ],
+            "operationsActuallySupported": "Supplied 話/巻/冊 whole-expression writing and canonical reading; identifier-versus-copy number extraction in the shared desk situation.",
+            "selectionLimit": "The explicitly supplied units do not test independent 冊/巻 selection.",
+            "contextLimit": "Volume 1 versus Volume 8 changes sound practice, not the cover situation; two questions about the same three copies are one contrast family.",
+            "coverageConclusion": "Requested label/copy distinction and 八巻 alternatives are adequately covered, without universal unit exclusivity."
+          },
+          {
+            "row": "ranks-grades",
+            "records": 6,
+            "newRecords": 6,
+            "preservedPilotRecords": 0,
+            "contractItemContextKeys": [
+              "race-rank",
+              "proficiency-grade-label",
+              "shelf-tier"
+            ],
+            "conservativeFamilies": [
+              "Race placing",
+              "Named examination/proficiency grade label",
+              "Physical shelf tier count and top-down ordinal position"
+            ],
+            "operationsActuallySupported": "Specified 位/級/段/段目 expression production and canonical readings.",
+            "selectionLimit": "No free selection of a ranking scale or comparison between qualification systems is tested.",
+            "contextLimit": "Certificate versus registration and first versus third placing are not counted as additional independent transfer situations.",
+            "coverageConclusion": "Race, grade and physical-tier senses remain separate; the tier count/ordinal pair states direction where needed."
+          },
+          {
+            "row": "digits-text-units",
+            "records": 7,
+            "newRecords": 7,
+            "preservedPilotRecords": 0,
+            "contractItemContextKeys": [
+              "digit-count",
+              "text-line-count",
+              "character-count",
+              "character-limit"
+            ],
+            "conservativeFamilies": [
+              "Digit positions in explicitly printed labels, including a leading zero",
+              "Lines occupied by a written message",
+              "Kanji character quantity in a displayed word",
+              "Inclusive maximum length in written characters"
+            ],
+            "operationsActuallySupported": "Specified 桁/行/文字/字以内 or 文字以内 writing and canonical reading.",
+            "selectionLimit": "Numbers and units are already stated. The limit tasks teach production/reading and explain inclusion, not independent boundary interpretation or selection.",
+            "contextLimit": "One versus six lines and twenty 文字 versus fifty 字 limits are not additional independent situations solely due to different numbers/units.",
+            "coverageConclusion": "The leading-zero and sound/character distinctions are explicit; no Unicode implementation or current social-media limit is inferred."
+          },
+          {
+            "row": "flight-labels",
+            "records": 2,
+            "newRecords": 2,
+            "preservedPilotRecords": 0,
+            "contractItemContextKeys": [
+              "flight-number",
+              "daily-services"
+            ],
+            "conservativeFamilies": [
+              "Timetable/route service notation, contrasting a flight identifier with daily service quantity"
+            ],
+            "operationsActuallySupported": "Specified 便 label/count writing and canonical reading.",
+            "selectionLimit": "The unit is supplied; aircraft-versus-service selection is explained rather than independently elicited.",
+            "contextLimit": "Identifier and daily-service quantity are genuinely different semantic subcases within this conservative contrast family; they are not multiplied by Write/Read.",
+            "coverageConclusion": "Single-digit unit notation is supported. No completion claim is made for carrier-specific multi-digit labels or radio pronunciation."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "S1",
+          "publisher": "IMABI",
+          "url": "https://imabi.org/counters-with-sino-japanese-numbers-i/",
+          "access": "Fresh remote web_fetch, 2026-10-29",
+          "sha256": null,
+          "hashLimit": "web_fetch did not expose response-byte hashing; none invented.",
+          "inspectedPortions": [
+            "The Counter ～冊 table, particularly 3 サンサツ",
+            "The Counter ～課 table, particularly 1 イッカ, 3 サンカ, 6 ロッカ",
+            "Examples 10-18 and 課 & Its Synonyms, including 第/no-第 explanation"
+          ],
+          "evidence": "課 counts lessons; without 第 it can be a lesson label or quantity. Source explicitly treats 章 and セクション as divisions that function as counters. 冊 counts books and printed compilations.",
+          "limits": "Teaching source, not an official JLPT assignment or proof that every possible synonym fits every document. Unrelated animal/object sections returned in the bounded fetch were not adopted as C4 claims."
+        },
+        {
+          "id": "S2",
+          "publisher": "IMABI",
+          "url": "https://imabi.org/numbers-vi-ordinal-numbers/",
+          "access": "Fresh remote web_fetch, 2026-10-29",
+          "sha256": null,
+          "inspectedPortions": [
+            "Bounded returned text 0-8500: opening 一位, 第２４０課, ～目, example 10 一行目, example 11 上から3段目の棚",
+            "Bounded returned text 9400-16200: examples 43 第３章, 44 第３０話 and the 第 + number + counter discussion, examples 72 第５話 and 73 第1章から第10章"
+          ],
+          "evidence": "Supports numerical rank, ordinal 目 and chapter/episode/lesson labels; source explicitly discusses contextual omission of 第.",
+          "limits": "Did not certify all later sections or inherit broad statements such as any-counter generalizations. The first larger response was tool-truncated; the specifically listed smaller returned portions, not unseen text, are the evidence."
+        },
+        {
+          "id": "S3",
+          "publisher": "IMABI",
+          "url": "https://imabi.org/counters-v/",
+          "access": "Fresh direct public HTTP retrieval; exact heading-based HTML extraction",
+          "retrievedAtUtc": "2026-10-29T09:51:12.300116+00:00",
+          "responseBytes": 234809,
+          "sha256": "2982b133b424bf608ffcd617aefd6c67bb5ce2e45b7593119772a7ebcaf9fc1d",
+          "inspectedPortions": [
+            "The Counters ～文字・字, both complete numeral tables and examples 1-4",
+            "The Counter ～桁, complete table and examples 10-12"
+          ],
+          "evidence": "ふたモジ, ジュウモジ and ジュウジ support the authored character forms; 桁 table gives ひとけた/ふたけた. The two counters count written characters, rather than lexical words.",
+          "limits": "Did not adopt its categorical claim that 文字 excludes all nonphonetic symbols. Practical 文字 limits and particular form-counting policies are a separate issue; the packet wisely avoids that universal restriction. Source table recognition is not frequency or JLPT evidence."
+        },
+        {
+          "id": "S4",
+          "publisher": "IMABI",
+          "url": "https://imabi.org/counters-vi/",
+          "access": "Fresh direct public HTTP retrieval; exact heading-based HTML extraction",
+          "retrievedAtUtc": "2026-10-29T09:51:11.922728+00:00",
+          "responseBytes": 216604,
+          "sha256": "4896f1551b993222f935476eebc55cc7d53234b0fdade953c9c7cbdd1e3daa6d",
+          "inspectedPortions": [
+            "The Counter ～巻, complete table and examples 43-44"
+          ],
+          "evidence": "巻 counts volumes/compilations. Table gives イッカン, ハチカン and ハッカン; examples discuss a novel's volumes and manga volume count.",
+          "limits": "The table does not prove every number is equally frequent or prescribe all publisher labeling conventions. Both 八巻 readings are positively present; no shortcut was used to reject one."
+        },
+        {
+          "id": "S5",
+          "publisher": "IMABI",
+          "url": "https://imabi.org/counters-viii/",
+          "access": "Fresh direct public HTTP retrieval followed by bounded web_fetch that exposed the required subsection",
+          "retrievedAtUtc": "2026-10-29T09:51:40.342509+00:00",
+          "responseBytes": 170429,
+          "sha256": "514a172c77902ead9d1bdbeaf5b3187025f26d593fa3de4a40ed381e9a4c18fb",
+          "inspectedPortions": [
+            "～行（ぎょう・こう）: explanatory paragraph, both tables, examples 13-17, within returned first 6000 characters"
+          ],
+          "evidence": "ぎょう counts text lines; こう counts banks; 一行/いっこう also has group/entourage sense. Exact text-line table gives いちぎょう and ろくぎょう.",
+          "limits": "Initial heading extractor printed no matching subsection because this subsection was not an HTML heading; that empty result was not evidence. The later returned text actually exposed the paragraph and tables. Unrelated counter sections were not used."
+        },
+        {
+          "id": "S6",
+          "publisher": "Tofugu",
+          "url": "https://www.tofugu.com/japanese/japanese-counters-list/",
+          "access": "Fresh direct public HTTP retrieval; bounded exact-heading extraction",
+          "retrievedAtUtc": "2026-10-29T09:51:40.816099+00:00",
+          "responseBytes": 409684,
+          "sha256": "51664663c6ccae7744ebf001fd53caf73b597f56322ec2efa01cf15d3889a201",
+          "inspectedPortions": [
+            "段 (だん)",
+            "文字 (もじ)",
+            "字 (じ), including ５０字以内で理由を述べよ",
+            "節 (せつ)",
+            "節 (ふし)"
+          ],
+          "evidence": "段 includes vertically arranged shelves; 節/せつ counts written passages/sections; ふし has different tune/node uses. 字 has an exact fifty-character-limit example. The 文字 discussion itself recognizes practical usage for a general platform character limit.",
+          "limits": "Supplementary explanatory source with oversimplifications. Did not adopt its statement suggesting 字 counts words, its 'technically incorrect' universal judgment on ordinary 文字 limits, a current 140-character platform claim, or a broad wago/kango reading shortcut. These are source limitations, not packet defects."
+        },
+        {
+          "id": "S7",
+          "publisher": "JMdict via Jisho",
+          "url": "https://jisho.org/api/v1/search/words?keyword=%E7%AF%80",
+          "access": "Reused permitted supplied exact-entry artifact; not freshly fetched",
+          "artifact": "n3-implementation\\c4-setsu-source.json",
+          "artifactBytes": 3670,
+          "sha256": "65d263d4087724e46febd69d4ca68b315aab4d1ab911e47c6e4d2024c3cca027",
+          "inspectedOn": "2026-10-29",
+          "upstreamRetrievalDate": "2026-10-29 as supplied in contract; not independently re-established by this reviewer",
+          "inspectedPortions": [
+            "Complete exactEntries entry for 節/せつ, all eight senses and restrictions/tags"
+          ],
+          "evidence": "Sense 2 includes section of a literary work, passage and paragraph; this is the relevant report-division sense.",
+          "limits": "Entry is tagged jlpt-n1; does not assign this task to N3. Other senses include time, grammar clause, botany and knots. The botanical せつ sense remains real; the packet's ふし contrast is contextual, not a denial of that entry."
+        },
+        {
+          "id": "S8",
+          "publisher": "JMdict via Jisho",
+          "url": "https://jisho.org/api/v1/search/words?keyword=%E4%B8%80%E7%B4%9A",
+          "access": "Reused permitted supplied exact-entry artifact; not freshly fetched",
+          "artifact": "n3-implementation\\c4-ikkyuu-source.json",
+          "artifactBytes": 984,
+          "sha256": "5646c8f50ef6a7367eb6c6bb0c0de653b24de2744b17c5874b7c95444572f1d6",
+          "inspectedOn": "2026-10-29",
+          "upstreamRetrievalDate": "2026-10-29 as supplied in contract; not independently re-established",
+          "inspectedPortions": [
+            "Complete exact 一級/いっきゅう entry, parts of speech, sense and restrictions"
+          ],
+          "evidence": "One grade/first-class/primary supports the numerical grade compound and contraction.",
+          "limits": "Not proof of a common universal rank scale, a modern JLPT name, or a per-task JLPT level. 二級/にきゅう is the ordinary compositional grade form, not a separate exact entry in this artifact."
+        },
+        {
+          "id": "S9",
+          "publisher": "JMdict via Jisho",
+          "url": "https://jisho.org/api/v1/search/words?keyword=%E4%B8%80%E6%AE%B5",
+          "access": "Reused permitted supplied exact-entry artifact; not freshly fetched",
+          "artifact": "n3-implementation\\c4-ichidan-source.json",
+          "artifactBytes": 2529,
+          "sha256": "28ae108b7f1c046c0ed3a5c61aea47acd8ab76a825729257e30ec7329e522194",
+          "inspectedOn": "2026-10-29",
+          "upstreamRetrievalDate": "2026-10-29 as supplied in contract; not independently re-established",
+          "inspectedPortions": [
+            "Complete 一段/いちだん entry and all four senses"
+          ],
+          "evidence": "Sense 2: one step/rung/level/grade/rank; combined with S6's shelf-specific counter scope supports the physical-tier task.",
+          "limits": "N2-tagged entry; does not make the practical counter task N3 vocabulary. Adverbial 'even more', paragraph and verb-class senses are not imported into the shelf task. The dictionary by itself is not an attestation of every imagined shelf collocation."
+        },
+        {
+          "id": "S10",
+          "publisher": "JMdict via Jisho",
+          "url": "https://jisho.org/api/v1/search/words?keyword=%E4%B8%80%E4%BD%8D",
+          "access": "Reused permitted supplied exact-entry artifact; not freshly fetched",
+          "artifact": "n3-implementation\\c4-ichii-source.json",
+          "artifactBytes": 3121,
+          "sha256": "8a522d324ae11a3ba983ec1fd5c2f7ee490eb5d45c373c7d849ee1e98624e654",
+          "inspectedOn": "2026-10-29",
+          "upstreamRetrievalDate": "2026-10-29 as supplied in contract; not independently re-established",
+          "inspectedPortions": [
+            "Both exactEntries returned for written 一位, all readings/senses, including the separate yew entry"
+          ],
+          "evidence": "Numerical entry explicitly gives 一位/１位, いちい, first place/first rank.",
+          "limits": "Its units-position sense, appended Wikipedia tree definition and separate yew entry are not race-place evidence. No frequency or level conclusion taken from is_common or unrelated tags."
+        },
+        {
+          "id": "S11",
+          "publisher": "Japan Foundation",
+          "url": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf",
+          "access": "Reused expressly permitted PDF, not freshly fetched",
+          "artifact": "n3-implementation\\marugoto-a2b1-vocabulary.pdf",
+          "artifactBytes": 587641,
+          "sha256": "fc7041cc172ff5939aa71c47032b5e25fc7e31ec321d7e1d3d6fc44386fe5146",
+          "inspectedOn": "2026-10-29",
+          "upstreamRetrievalDate": null,
+          "inspectedPortions": [
+            "PDF page 19, exact びん／～びん ～便 ～びん (airline) flight number ～ entry and surrounding rows"
+          ],
+          "evidence": "Direct flight-number suffix sense and びん reading.",
+          "limits": "Pre-intermediate practical vocabulary, not equivalence to JLPT N3 or an airline pronunciation protocol. Nearby 部 is organizational department and was not repurposed as a copy counter."
+        },
+        {
+          "id": "S12",
+          "publisher": "Japan Foundation",
+          "url": "https://marugoto.jpf.go.jp/assets/docs/download/intermediate1/MarugotoIntermediate1VocabularyList_EN.pdf",
+          "access": "Reused expressly permitted PDF, not freshly fetched",
+          "artifact": "n3-implementation\\matrix-review-output\\marugoto-b1-vocabulary-en.pdf",
+          "artifactBytes": 2689074,
+          "sha256": "4827bc0172f0b42f08b9aa8de6d5bb86706f028037ff797f6f72ae7c8e3bbe9b",
+          "inspectedOn": "2026-10-29",
+          "upstreamRetrievalDate": "2026-10-29 as supplied in contract; not independently re-established",
+          "inspectedPortions": [
+            "PDF page 6: 140文字以内 footnote translated '140 characters or less', and ～以内/いない entry",
+            "PDF page 32: ～文字/もじ and ～以内/いない rows with surrounding form/posting vocabulary",
+            "PDF page 42: ～以内/いない row and surrounding form/posting vocabulary"
+          ],
+          "evidence": "Supports ordinary written-character-limit construction, もじ/いない readings and inclusive 'or less' interpretation.",
+          "limits": "B1 is not JLPT N3. Same publisher as S11, different volume; no independent-publisher or fresh-remote-review claim. Historical platform description is not evidence of current platform limits. No other matrix-review-output files were inspected."
+        },
+        {
+          "id": "S13",
+          "publisher": "数え方単位辞典",
+          "url": "https://www.sanabo.com/kazoekata/ct_ha/hi/hikouki/",
+          "access": "Fresh remote web_fetch, 2026-10-29",
+          "sha256": null,
+          "inspectedPortions": [
+            "飛行機/飛行器 heading; 数え方 and 解説, especially 乗り物としては台、交通手段としては便 and ロンドンへは1日1便"
+          ],
+          "evidence": "Distinguishes physical aircraft 機/台 from scheduled transportation-service 便.",
+          "limits": "Does not prescribe all carrier flight-number announcements or determine how many distinct aircraft operate a schedule."
+        },
+        {
+          "id": "S14",
+          "publisher": "Official JLPT",
+          "url": "https://www.jlpt.jp/e/about/levelsummary.html",
+          "access": "Fresh remote web_fetch, 2026-10-29",
+          "sha256": null,
+          "inspectedPortions": [
+            "Opening heading and paragraph explicitly naming the five levels N1, N2, N3, N4 and N5"
+          ],
+          "evidence": "Verifies modern JLPT label terminology used in the article and grade explanation.",
+          "limits": "Not used to assign any counter, word or task a JLPT level."
+        },
+        {
+          "id": "S15",
+          "publisher": "Daijisen and Seisenban Nihon Kokugo Daijiten via Kotobank",
+          "requestedUrl": "https://kotobank.jp/word/%E4%BA%8C%E6%96%87%E5%AD%97",
+          "url": "https://kotobank.jp/word/%E4%BA%8C%E6%96%87%E5%AD%97-618850",
+          "access": "Fresh remote web_fetch, 2026-10-29",
+          "sha256": null,
+          "inspectedPortions": [
+            "Daijisen ふたもじ, senses 1 and 2",
+            "Seisenban ふたもじ and separate ふたつもじ entries",
+            "Plant-reading entry returned on the same page"
+          ],
+          "evidence": "The relevant sense of ふたもじ is two written characters. Directly corroborates the complete 二文字 reading, not merely constituent readings.",
+          "limits": "Garlic-chive, historical こ-character and historical 二字-spelling evidence is not automatically a fitting alternative for the present count using 文字. No dictionary list was treated as an exhaustive census of current variation."
+        }
+      ],
+      "sourceInspectionLimitsAndDiscardedResults": [
+        {
+          "requestedUrl": "https://kotobank.jp/word/%E6%96%87%E5%AD%97-645713",
+          "returnedUrl": "https://kotobank.jp/word/%E6%8C%81%E6%9D%A5%E3%81%99-645713",
+          "inspectedOn": "2026-10-29",
+          "result": "Successful but irrelevant redirect to 持来す/もちきたす; excluded from all linguistic conclusions. Not evidence against 文字."
+        },
+        {
+          "requestedUrl": "https://kotobank.jp/word/%E6%96%87%E5%AD%97",
+          "returnedUrl": "https://kotobank.jp/word/%E6%96%87%E5%AD%97-9331",
+          "inspectedOn": "2026-10-29",
+          "result": "Returned the long 文字 encyclopedia article. Inspected its opening definition and bounded snippets; this is not a direct counter-pronunciation or punctuation-counting attestation. A subsequent heading extractor printed dictionary headings but not their complete definitions, so those definitions are not claimed as inspected evidence.",
+          "directRetrievalReceipt": {
+            "retrievedAtUtc": "2026-10-29T09:52:49.614581+00:00",
+            "responseBytes": 344007,
+            "sha256": "f6474f50bda8bf1f658661b5bf20f65bef921ae7f5377ca12b090850984ca940"
+          },
+          "disposition": "Not relied on to establish or refute any packet defect. Stopped the broad-definition search instead of extrapolating an absolute counting rule."
+        },
+        {
+          "source": "n3-index",
+          "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+          "result": "Contract metadata read as provenance only; did not inspect its live TSV, source archive or prior sense-audit notes.",
+          "disposition": "No per-word N3 placement conclusion depends on this index. The packet explicitly defines level 3 as editorial counter-task targeting, and the independently inspected dictionary N1/N2 limits are preserved."
+        }
+      ],
+      "levelAndRegisterAssessment": {
+        "editorialLevel": "The file level 3 values identify practical editorial targeting under the supplied contract, not an independently proven JLPT word classification.",
+        "dictionaryLimits": "節/せつ's exact artifact has N1 metadata and 一段/いちだん has N2 metadata. Neither was silently relabeled, dismissed or used to invalidate these supported counting constructions.",
+        "register": "Labels/headings, certificates/registration, report divisions and form limits are appropriate written/administrative settings. Contextual short labels are recognized without claiming that every publisher or institution must use them.",
+        "notInferred": [
+          "Empirical difficulty",
+          "Frequency rankings",
+          "Official JLPT membership",
+          "Mastery",
+          "Independent transfer",
+          "Universal grade hierarchies",
+          "Airline radio/call-sign practice"
+        ]
+      },
+      "findings": [],
+      "consequentialUncertainties": [],
+      "optionalPolish": [],
+      "nonblockingLimits": [
+        "Read-only linguistic/content review of the supplied runtime contract; no claim about rendered device behavior or application implementation was made.",
+        "Public web sources were inspected in the exact returned portions recorded above. Partial or irrelevant retrievals were not treated as source verification.",
+        "Source response hashes are supplied only where actual response/artifact bytes were available; null is intentional elsewhere.",
+        "The punctuation discussion is appropriately nonabsolute and defers counting conventions to the specific form. The task does not ask the learner to implement a Unicode count or choose how punctuation/spaces are counted.",
+        "The review does not certify exhaustive alternate readings. It checked each supplied answer and considered contextual alternatives without importing unrelated homographs, historical senses or bare-unit grading into v2.",
+        "CLEAN scopedCoverage applies to this bounded authored packet, not completion of a broader independent-selection curriculum."
+      ],
+      "completion": {
+        "all15CounterFilesReadCompletely": true,
+        "all29RecordsReviewedIndependently": true,
+        "independentVectorsAssigned": 29,
+        "all16FrozenFileHashesAndLengthsMatched": true,
+        "all29CanonicalRecordHashesMatched": true,
+        "soleAuthoredArtifact": "c4-review-output\\initial.json",
+        "initialReportPreservation": "Preserve this report unchanged for any later actual-diff reconciliation; record any follow-up separately."
+      }
+    }
+  },
+  "originalReportSha256": {
+    "initial": "d4f45ef4c32d4de14221fd60bbbba419f575320e07ff5783387dd3786b7fdd52"
+  },
+  "validation": {
+    "contentVersion": "05200ead9195b49f",
+    "counterTests": "4 passed",
+    "fullValidator": "0 errors",
+    "manifest": "regenerated",
+    "baselineRecordsPreserved": 2364,
+    "baselineCounterFilesBytePreserved": 54,
+    "previouslyAcceptedScopedRecordsUnchanged": 146,
+    "originalLessonPilotRecordsPreserved": 2,
+    "articleOutsideNewC4AdditionsUnchanged": true,
+    "acceptedAIndexTreePreserved": "3e77250e3432343d627421278f40eea6912a3076",
+    "sourceWideCounterReadingsConsistent": true,
+    "budget": {
+      "files": 8006,
+      "entries": 8021,
+      "retainedBytes": 41802442,
+      "inflatedBytes": 42067948,
+      "localZipBytes": 29443674,
+      "listeningTaskMediaBytes": 5893602
+    },
+    "realImporter": {
+      "contentVersion": "05200ead9195b49f",
+      "tests": 60,
+      "suites": [
+        {
+          "name": "io.github.stopcran.kanji.core.ContentTest",
+          "tests": 38,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        },
+        {
+          "name": "io.github.stopcran.kanji.core.ImageContentTest",
+          "tests": 12,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        },
+        {
+          "name": "io.github.stopcran.kanji.core.ListeningTaskContentTest",
+          "tests": 8,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        },
+        {
+          "name": "io.github.stopcran.kanji.core.RealContentTest",
+          "tests": 2,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        },
+        {
+          "name": "io.github.stopcran.kanji.data.ContentLoadStateTest",
+          "tests": 0,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        }
+      ],
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "limits": "Initial C4 corpus importer result while independent text review remains pending. Not final linguistic, lifecycle or release acceptance. Zero-test discovery suite adds no cases."
+    },
+    "independentReview": "accepted complete initial review",
+    "limits": "Bounded C4 local acceptance only;14 coarse contrast families, not14 independently validated transfer contexts. Scaffolded selection is not unaided counter choice. C/D/E and publication remain unfinished."
+  },
+  "importerXmlEvidence": [
+    {
+      "name": "TEST-io.github.stopcran.kanji.core.ContentTest.xml",
+      "sha256": "fe98d4fd369fb417e0d41659bce29faba7454c17192bfc9bb21c933a8bb1ae0c"
+    },
+    {
+      "name": "TEST-io.github.stopcran.kanji.core.ImageContentTest.xml",
+      "sha256": "26bcaf2ae2dcfbd78419660959523ac5ffd207791f1cfa146afc428e98fd80a4"
+    },
+    {
+      "name": "TEST-io.github.stopcran.kanji.core.ListeningTaskContentTest.xml",
+      "sha256": "395b2a16cb9b5f012ba55a29f29def0c79c6809ecfd59ce7b3da54478984ea3d"
+    },
+    {
+      "name": "TEST-io.github.stopcran.kanji.core.RealContentTest.xml",
+      "sha256": "1a7207baa7ffe6b0b013a7529e956efc56a122cd98750424aa5c9fe5212236f4"
+    },
+    {
+      "name": "TEST-io.github.stopcran.kanji.data.ContentLoadStateTest.xml",
+      "sha256": "61c771589316f953f779738edb0c38f02f6e3bdc97d88e31490a61e1f301af58"
+    }
+  ],
+  "evidenceLimit": "Raw XML and frozen packets remain session artifacts; complete report, source limits, accepted record hashes and suite results persist here."
+}
