@@ -477,6 +477,37 @@ The [ほとんど word card](../words/ほとんど.md) gives related nominal and
 **あまり** and negative **ほとんど** can overlap naturally; an underspecified gap should not reject one
 merely because the author imagined the other.
 
+## 9. A part and the amount left
+
+A proportion does not tell you which quantity the question wants.
+**二割引（にわりびき）** means a reduction of two tenths, or 20%, from the
+regular price. It does not mean that only 20% is payable.
+
+> このかばんの定価は千円です。今日は二割引です。ほかの料金はありません。
+>
+> このかばんの ていかは せんえんです。きょうは にわりびきです。
+> ほかの りょうきんは ありません。
+>
+> This bag's regular price is 1,000 yen. Today it is 20% off. There are no other charges.
+
+**定価（ていか）** is the regular or list price; **料金（りょうきん）** means
+charges. The amount **taken off is 200 yen**. The amount **left to pay is
+800 yen**. Both numbers describe the same offer, but answer different questions.
+Use the named regular price as the base, and do not invent extra fees or tax
+rules when the notice explicitly says there are no other charges.
+
+Fractions also need their stated whole. If a bottle originally holds
+三百ミリリットル（さんびゃくミリリットル）, 300 milliliters, and you use
+**その三分の一（そのさんぶんのいち）**, one third of it, you use 100
+milliliters. Immediately afterward, with no other changes, 200 milliliters
+remain. The amount used and the amount left answer different questions.
+
+For writing and reading the fraction or discount expression itself, see
+[intermediate quantities](numbers-and-counters.md#intermediate-quantities-grouping-fractions-and-uncertain-amounts).
+The interpretation questions instead ask for a requested quantity using Arabic
+digits without a unit. Their blank is an external answer slot, not a missing
+Japanese word.
+
 ## Practice scope
 
 The original quantity/scope set has **28 tasks: 26 N4 and two N5 controls**. Four named formation tasks assemble complete
@@ -484,6 +515,13 @@ frequency expressions; 24 interpretations read supplied messages, ranges and pre
 Five groups separate boundaries, quantity framing, frequency, negative scope and time/cost frames.
 All external answer labels have readings and definitions. Related strict-comparison examples share
 their scene keys; task counts are not independent conversations or mastery measurements.
+
+Four additional fraction/discount interpretations share one new part/remainder
+group and two contexts, with each question pair sharing its key. Their target
+numerical meaning has no established exact
+Grammar-level anchor in the inspected primary index, so they are unclassified,
+not automatically N3 because they accompany an N3 Numbers & counters extension.
+They do not change the original 28 tasks or their levels.
 
 The existing N4 restriction/listing and ほう／ほか／なか tasks, N5 comparisons, and five N5 estimate/limit
 tasks are reused, not duplicated or relabeled. Supporting prefixes and detailed higher-grade
@@ -576,3 +614,6 @@ These are study references, not an official examination syllabus. The examples a
   [Digital Daijisen entry on Kotobank](https://kotobank.jp/word/ずつ-542236).
   These support quantity attachment, equal allocation and repeated limited amounts.
   Rare spellings and advanced interval contrasts are not production targets here.
+- For numerical parts and discounts: [IMABI fractions and proportions](https://imabi.org/decimals-fractions/)
+  and [Seisenban Nihon Kokugo Daijiten: 割引](https://kotobank.jp/word/%E5%89%B2%E5%BC%95-665799).
+  They establish the deduction meaning, not a JLPT assignment for the complete task.

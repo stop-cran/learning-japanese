@@ -1,5 +1,19 @@
 {
   "schemaVersion": 1,
+  "additiveN3Numbers": {
+    "issue": 54,
+    "status": "pilot-authoring-pending-independent-review",
+    "baselineCommit": "b697a3d65a4edf893b04eea33d2356cd600e87c9",
+    "sourceRecord": "docs/counter-n3-sources.json",
+    "existingSet": "grammar/quantity-scope.json",
+    "newGroups": ["quantity-scope-parts-and-remainders"],
+    "chapter": "focus-and-quantity",
+    "reason": "The requested part and remaining amount are numerical interpretation operations, distinct from existing price/duration frames. They remain inside the existing quantity owner and chapter, not a new engine or duplicate set.",
+    "contextPolicy": "Each paired operation shares its key: shop-discount for a 割引 notice and water-fraction for a 分の reference to an initial liquid amount. Four identities provide two contexts per facet, meeting the existing validator minimum without inventing independent keys for the pair.",
+    "gates": "No new hard edges or recommendation edges; old groups, memberships, requires and foundationRequirements are unchanged. Existing chapter membership is retained.",
+    "levelPolicy": "The four numerical fraction/discount pilot tasks are unclassified: no exact relevant construction was found in the pinned Bunpro index. Incidental copula/price grammar and project N3 are not substitute anchors.",
+    "historicalScope": "All earlier inventory, review and validation sections retain their original scope; they do not certify this pending pilot."
+  },
   "stage": "authored-group-rollout",
   "inspectedOnUtc": "2026-10-24",
   "compatibleApp": {

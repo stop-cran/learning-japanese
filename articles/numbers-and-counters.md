@@ -245,6 +245,74 @@ For 二枚ずつ, amounts for each recipient, and 少しずつ increments, conti
 [distribution and increments](quantity-ranges-and-frequency.md#7-distribution-and-increments).
 That focused Grammar bridge is classified **N3**, not counted as N4 counter coverage.
 
+## Intermediate quantities: grouping, fractions and uncertain amounts
+
+The N3-oriented extension adds practical forms and distinctions. As with the
+earlier material, this is a study allocation, not an official JLPT inventory.
+
+**億（おく）is 100,000,000; 兆（ちょう）is 1,000,000,000,000.**
+Japanese large-number units group by four digits. For example,
+1億2300万（いちおくにせんさんびゃくまん）is 123,000,000.
+一億三万円（いちおくさんまんえん）is 100,030,000 yen: empty positions
+between the 億 and 万 groups are not pronounced as extra zeros.
+Some writing prompts request Arabic digits with Japanese unit characters,
+while others allow kanji numerals. Follow the visible notation request.
+
+For a fraction, put the **denominator before 分の**, then the numerator:
+三分の二（さんぶんのに）is two thirds. Think “two of three equal parts.”
+分 is **ぶん** here, not the minute reading ふん／ぷん.
+This does not change the reading of a time such as 三分（さんぷん）.
+
+One **割（わり）** is a tenth. 二割引（にわりびき）, also written 二割引き,
+means 20% off the regular price, not “pay 20%.” With no other charges, 80%
+remains to pay. For the distinction between the amount removed and the amount
+left, use [quantity interpretation](quantity-ranges-and-frequency.md#9-a-part-and-the-amount-left).
+The expression drills practise the form; they do not replace that decision.
+
+**数十人（すうじゅうにん）** means an unspecified number of people in the
+tens. **十数人（じゅうすうにん）** instead places the uncertain part after ten.
+Do not swap their order or turn either into a particular exact headcount.
+The prefix **数（すう）** does not have a universal exact “two to ten” limit
+in every context. Compare the noun [数（かず）](../words/数.md).
+
+## Intermediate units: animals, documents and boxes
+
+**頭（とう）** commonly counts large animals and trained working animals:
+一頭（いっとう）, 六頭（ろくとう）, 八頭（はっとう／はちとう）.
+For example, 牛一頭（うしいっとう）is one cow, while
+盲導犬八頭（もうどうけんはっとう／もうどうけんはちとう）is eight guide dogs.
+頭 and 匹 overlap; neither an animal's size nor its job establishes an
+absolute grammatical boundary. Read the actual displayed counter, not a
+different accepted writing alternative.
+
+**部（ぶ）** counts complete copies of documents or publications.
+資料一部（しりょういちぶ）is one complete copy of the handout/materials;
+it can contain several sheets. **一部 is いちぶ**, not いっぷ.
+If a complete form is only one sheet, both 部 and 枚 can fit.
+Copies of the same bound book can also be counted with 部 or 冊; 部 is not
+restricted to loose paper. Count the requested entity, not just its material.
+
+**箱（はこ）** counts boxes or boxfuls. 一箱（ひとはこ）is one box;
+the alternative いっぱこ is also recognized in the expression practice.
+One box containing six cookies is still one box, not six boxes.
+An empty assembled box can also take 個; flattened cardboard boxes may take
+枚. There is no universal package size hidden inside the counter.
+
+## Intermediate labels and short durations
+
+**第三課（だいさんか）** identifies lesson 3. It does not say that someone
+completed three lessons. A count of three completed lessons can instead be
+三課（さんか）. Bare 三課 can also serve as a lesson label, so read the
+context; 第 is not mandatory for every label. The writing prompts explicitly
+state which meaning and notation they request.
+
+**秒（びょう）** counts seconds: 一秒（いちびょう）is one second.
+A minute-second duration such as 一分三十秒
+（いっぷんさんじゅうびょう）has two components: one minute and thirty seconds.
+It is not a clock hour, and 三十秒 does not contract to さんじゅっびょう.
+Adding final 間 can make a duration explicit, but do not pronounce かん
+when the displayed expression does not contain 間.
+
 ## References
 
 The examples and explanations here are original. Reference sources establish
@@ -258,6 +326,21 @@ beginner coverage and readings, not an official JLPT level assignment:
 - [IMABI numbers](https://imabi.org/sino-japanese-numbers-2/) and
   [counter tables](https://imabi.org/counters-with-sino-japanese-numbers-i/):
   number composition and exact counter readings; pitch is not graded here.
+- [IMABI fractions](https://imabi.org/decimals-fractions/),
+  [quantity prefixes](https://imabi.org/prefixes-suffixes-counters/) and
+  [ordinals](https://imabi.org/numbers-vi-ordinal-numbers/): exact forms and
+  count/label distinctions, not JLPT assignments.
+- [Tofugu 頭](https://www.tofugu.com/japanese/japanese-counter-tou/):
+  readings and overlap between animal counters.
+- [IMABI document counters](https://imabi.org/counters-vi/) and
+  [Seisenban Nihon Kokugo Daijiten: 部](https://kotobank.jp/word/%E9%83%A8-128738):
+  complete copies versus sheets and bound books.
+- [数え方単位辞典: 箱](https://www.sanabo.com/kazoekata/ct_ha/ha/hako/)
+  and [IMABI native counters](https://imabi.org/counters-v/):
+  physical state and number-dependent readings.
+- [Daijisen: 十数](https://kotobank.jp/word/%E5%8D%81%E6%95%B0-527026)
+  and [Seisenban Nihon Kokugo Daijiten: 割引](https://kotobank.jp/word/%E5%89%B2%E5%BC%95-665799):
+  uncertain amounts and price deductions.
 - IMABI [名・軒・泊 tables](https://imabi.org/counters-vi/),
   [着 table](https://imabi.org/counters-viii/) and
   [occurrence counters](https://imabi.org/counters-for-frequency-%EF%BD%9E%E5%BA%A6%E3%83%BB%E5%9B%9E%E3%83%BB%E9%81%8D/).

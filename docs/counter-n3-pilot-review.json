@@ -1,0 +1,1471 @@
+{
+  "status": "accepted-corrected-pilot-text",
+  "initialReviewSha256": "364ea680266bf5fe7b1a1971304bcd702d1e4a9a01ce9041026295ae189fceaf",
+  "independence": {
+    "file": "independent-initial.json",
+    "savedUtc": "2026-10-29T07:26:01.060538+00:00",
+    "sha256": "364ea680266bf5fe7b1a1971304bcd702d1e4a9a01ce9041026295ae189fceaf"
+  },
+  "reviewer": "GitHub Copilot; one independent text reviewer, no subagents; runtime model identifier not exposed",
+  "initialSnapshot": {
+    "repositoryHead": "b697a3d65a4edf893b04eea33d2356cd600e87c9",
+    "description": "Frozen working-tree pilot, including 21 new records; HEAD is the baseline, not a claim that the new records are committed.",
+    "inventorySha256": "e0588e9b40285cfbbebc10eeec635808a55daac9e17cb81c14ebfe8e7f2d11b2",
+    "completeRecordsSha256": "30055ca466ddee0ccf3a874989e2103bc402ca294888ac4d26cec5ec46a58745",
+    "originalInventoryFilesVerified": 20,
+    "originalHashMismatches": [],
+    "reverseAddendumInventorySha256": "2463e2b6ca96a6237def8f34c3926c407722613b0d66d7feff51994fda50c113",
+    "reverseResolvedOptionsSha256": "a7e1ccc6d9795cccb990bbe738f663f9c6c605c00b79522c09b06fcaeeef0ec2",
+    "reverseAddendumFilesVerified": 5,
+    "reverseAddendumHashMismatches": []
+  },
+  "initialVerdict": "conditional",
+  "scope": {
+    "statement": "I read all 24 full selected tasks, including source metadata, all authored options, accepted written/kana/readings, explanations and vocabulary. I read the changed article sections with surrounding text and the two diffs. The reverse-dependency addendum is included.",
+    "records": 24,
+    "newRecords": 21,
+    "unchangedControls": 3,
+    "newV1Forward": 6,
+    "newV1Reverse": 1,
+    "newV2Expressions": 10,
+    "newGrammar": 4,
+    "articles": [
+      "articles\\numbers-and-counters.md:248-345, changed intermediate sections and reference additions, with surrounding context",
+      "articles\\quantity-ranges-and-frequency.md:480-525 and 617-619, added part/remainder section, practice scope and references, with surrounding context"
+    ],
+    "supportingReads": [
+      "chapter.json",
+      "source-catalog.json as navigation only, not independent proof",
+      "reverse-dependencies\\resolved-options.json and its hash inventory",
+      "docs\\grammar-authoring-sources.md",
+      "docs\\counter-n5.md:46-80 and 160-198 for response/display contracts, not N3 author judgments",
+      "words\\数.md:1-30 to check the changed learner link",
+      "The three reverse dependency records were initially resolved read-only from the repository and confirmed unchanged at HEAD; the later frozen addendum agrees exactly."
+    ],
+    "excluded": [
+      "author pilot ledger and rubric scores until this initial report is saved",
+      "matrix review reports and other author verdicts",
+      "application implementation review",
+      "whole-corpus linguistic audit",
+      "learner, novice-UX, device, build, audio and publication testing"
+    ]
+  },
+  "responseContracts": {
+    "v1Choose": "Suffix selection. Accepted alternate counters must not be wrong distractors.",
+    "v1Type": "Authored suffix and complete counting-phrase forms under legacy rules; no claim that only complete phrases are accepted. Kana alternatives belong to this answer set, not automatically to Read.",
+    "v1Read": "Only the displayed canonical phrase through readingAnswers. Thus 一部 remains いちぶ even when 組/セット are accepted for Type.",
+    "v1Reverse": "頭 versus the actual displayed nouns 牛, ノート, ペン, 車. No hidden forward sentence supplies context.",
+    "v1EnglishContextCaveat": "The published content contract at docs\\counter-n5.md:79-80 puts full English translations after checking. F1 therefore does not count the en field as a pre-answer restriction. No app implementation was inspected.",
+    "v2": "Write/Read only. Explicit authored written forms; NFKC/whitespace handling is not arithmetic or numeral normalization. Read pronounces the canonical written field, not every allowed writing.",
+    "grammar": "External answer slot. Arabic digits only, no unit/comma, explicitly requested. Do not supply a missing Japanese fragment or silently accept additional numeral representations."
+  },
+  "rubric": {
+    "dimensions": [
+      "lexical",
+      "decision",
+      "calculation",
+      "ambiguity",
+      "feedback"
+    ],
+    "lexical": {
+      "0": "familiar or immediately supported material",
+      "1": "a few glossed supporting words",
+      "2": "unexplained specialized vocabulary"
+    },
+    "decision": {
+      "0": "isolated association or form",
+      "1": "one relevant context/form cue",
+      "2": "contrast or interpretation of the requested entity/quantity"
+    },
+    "calculation": {
+      "0": "none",
+      "1": "transparent one-step or complement",
+      "2": "multi-step story"
+    },
+    "ambiguity": {
+      "0": "one fair answer or visible convention",
+      "1": "ordinary alternatives explicitly accepted",
+      "2": "hidden guessing or unaccepted ordinary alternative"
+    },
+    "feedback": {
+      "0": "no record-specific explanation",
+      "1": "explains a rule",
+      "2": "compares a nearby wrong answer or mistaken interpretation"
+    },
+    "scoringNotes": [
+      "Higher feedback is good; these dimensions are not summed into a difficulty score.",
+      "Ordinary orthographic alternatives can earn ambiguity 1 without indicating a defect.",
+      "Number-to-language/notation transcoding is calculation 0. Computing an amount removed/remaining is calculation 1, including a transparent complement.",
+      "Decision scores describe the actual prompted operation, not the most advanced distinction mentioned only in feedback.",
+      "The reverse record has no own explanation field, so its feedback score is 0. If a presentation reuses the linked cow note, that presentation would offer more feedback; this review does not assert that the UI shows none."
+    ]
+  },
+  "initialFindings": [
+    {
+      "id": "F1",
+      "severity": "medium",
+      "facet": [
+        "correctness",
+        "comprehensibility"
+      ],
+      "status": "unresolved",
+      "recordIds": [
+        "bu-handout-1"
+      ],
+      "locations": [
+        "counters\\bu.json:17-18 text/en",
+        "counters\\bu.json:40-45 distractors/note",
+        "docs\\counter-n5.md:79-80"
+      ],
+      "claim": "The exclusion of a bound booklet is stated only in en and note, although 冊 is a wrong choice. The Japanese 三枚で一組の資料 establishes a three-sheet set, not that it is unbound. Under the documented answer-side English contract, the learner does not receive the physical-state restriction used to justify rejecting 冊.",
+      "impact": "A learner can reasonably picture a short bound/stapled handout and select 冊; the explanation then reveals an unstated fact. This is a question-context defect, not a claim that 冊 counts genuinely loose sheets.",
+      "minimalCorrection": "Put the restriction in the question-side Japanese, for example 三枚一組の、とじていない資料を、一{}コピーしてください。, and gloss とじていない as not bound/stapled. Keep complete-copy versus individual-sheet wording. Alternatively provide an actually visible context field; do not rely on en or feedback.",
+      "evidence": [
+        "S03",
+        "S04",
+        "S16",
+        "local-v1-contract"
+      ],
+      "confidence": "high that the restriction is absent from Japanese; medium-high for the resulting ordinary booklet interpretation",
+      "qualification": "If a separately demonstrated current presentation shows en before answering, the visibility portion must be reassessed. This report follows the documented contract, without a device or implementation check."
+    },
+    {
+      "id": "F2",
+      "severity": "medium",
+      "facet": [
+        "correctness",
+        "scoped coverage"
+      ],
+      "status": "unresolved",
+      "recordIds": [
+        "bu-handout-1"
+      ],
+      "locations": [
+        "counters\\bu.json:25-38 good/kana"
+      ],
+      "claim": "The intended loose complete-set context licenses ordinary Type alternatives beyond the stored list: ワンセット/わんせっと, the spelling 一組み, and 一式/いっしき. None is authored. The task does not visibly restrict the answer to 部 or to the exact spelling 組.",
+      "impact": "Correct complete-set responses can be rejected despite 組 and セット already being accepted. This remains after making the loose-paper context visible.",
+      "minimalCorrection": "Add 組み/一組み and 一式 (plus 式 if following this family's suffix/full-phrase convention) to fitting written forms, ワンセット to fitting written forms, and わんせっと/いっしき to kana or an explicitly explained accepted tier. Preserve canonical phrase 一部 and readingAnswers=[いちぶ]. Do not put an entire ワンセット into an unchanged 一{} display; use the established complete-phrase replacement contract.",
+      "evidence": [
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S17"
+      ],
+      "confidence": "high for ワンセット and 組み; medium-high for contextual 一式",
+      "qualification": "Sources establish set senses, spelling and readings; the applicability to this specifically one-set copying request is the reviewer's contextual judgment. This does not authorize every dictionary synonym or every loan-number reading for every counter."
+    }
+  ],
+  "initialRecordAssessments": [
+    {
+      "id": "tou-cow-1",
+      "path": "counters\\tou.json",
+      "new": true,
+      "rubric": {
+        "lexical": 1,
+        "decision": 1,
+        "calculation": 0,
+        "ambiguity": 1,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "judgment": "Natural 牧場で牛を一頭見ました. 頭 is the model, 匹 is a permissible broader animal count in this ordinary observation. 一頭=いっとう; Type's いっぴき is not a reading of 一頭. 冊/台/杯 are wrong here. 牧場 is supported without leaking the counter.",
+      "sources": [
+        "S01",
+        "S02",
+        "S15"
+      ]
+    },
+    {
+      "id": "tou-elephants-1",
+      "path": "counters\\tou.json",
+      "new": true,
+      "rubric": {
+        "lexical": 0,
+        "decision": 1,
+        "calculation": 0,
+        "ambiguity": 1,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "judgment": "Natural zoo sentence and clear English. 六頭=ろくとう; 六匹=ろっぴき fits the accepted animal-count alternative, without migrating into canonical Read. No selected distractor is a normal counter for these elephants. This is principally the same animal-class operation as the cow, not independently demonstrated transfer.",
+      "sources": [
+        "S01",
+        "S02",
+        "S15"
+      ]
+    },
+    {
+      "id": "tou-guidedogs-1",
+      "path": "counters\\tou.json",
+      "new": true,
+      "rubric": {
+        "lexical": 1,
+        "decision": 1,
+        "calculation": 0,
+        "ambiguity": 1,
+        "feedback": 1
+      },
+      "verdict": "accepted",
+      "judgment": "施設では and 訓練を受けています are natural. 施設/盲導犬/訓練/受けています have appropriate readings and glosses. 頭 for working dogs is supported; 匹 is not categorically wrong. Both はっとう/はちとう and Type-only はっぴき/はちひき are documented. Feedback explains the preference but does not directly diagnose a particular wrong option.",
+      "sources": [
+        "S01",
+        "S02",
+        "S15"
+      ]
+    },
+    {
+      "id": "tou-noun-1",
+      "path": "counters\\tou.json",
+      "new": true,
+      "rubric": {
+        "lexical": 0,
+        "decision": 0,
+        "calculation": 0,
+        "ambiguity": 0,
+        "feedback": 0
+      },
+      "verdict": "accepted",
+      "judgment": "Reviewed actual noun choices from the frozen addendum: 牛, ノート, ペン, 車. Only 牛 normally takes 頭. No farm sentence, notebook purchase, pen location or car-parking context is needed or assumed. The alternate counters on the pen dependency do not make 頭 valid for ペン. No reverse-specific rationale is authored.",
+      "sources": [
+        "S01",
+        "S15"
+      ],
+      "displayedNouns": {
+        "tou-cow-1": "牛",
+        "satsu-notebook-1": "ノート",
+        "hon-pen-1": "ペン",
+        "dai-car-1": "車"
+      }
+    },
+    {
+      "id": "bu-handout-1",
+      "path": "counters\\bu.json",
+      "new": true,
+      "rubric": {
+        "lexical": 1,
+        "decision": 2,
+        "calculation": 0,
+        "ambiguity": 2,
+        "feedback": 2
+      },
+      "verdict": "conditional",
+      "findingIds": [
+        "F1",
+        "F2"
+      ],
+      "judgment": "一部/いちぶ is correct; 部/組/セット preserve the intended complete three-sheet unit, while one 枚 does not. ひとくみ is appropriate for a set, not the class-label reading いちくみ. The stored いっせっと/いちせっと/ひとせっと are supported rather than erroneous. Read must remain いちぶ. Loose status is not in the Japanese question, and ordinary set alternatives remain unlisted.",
+      "sources": [
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S16",
+        "S17"
+      ]
+    },
+    {
+      "id": "bu-application-1",
+      "path": "counters\\bu.json",
+      "new": true,
+      "rubric": {
+        "lexical": 1,
+        "decision": 2,
+        "calculation": 0,
+        "ambiguity": 1,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "judgment": "The Japanese itself states one sheet. Eight complete copies and eight sheets therefore coincide: 部/枚 are both accepted, with はちぶ/はちまい correctly separated from canonical Read. 頭/台/杯 are fair wrong suffixes. 申込書 is glossed accurately. Unlike the loose-handout exclusion, the decisive context is question-side.",
+      "sources": [
+        "S03",
+        "S04",
+        "S15"
+      ]
+    },
+    {
+      "id": "bu-publication-1",
+      "path": "counters\\bu.json",
+      "new": true,
+      "rubric": {
+        "lexical": 1,
+        "decision": 1,
+        "calculation": 0,
+        "ambiguity": 1,
+        "feedback": 1
+      },
+      "verdict": "accepted",
+      "judgment": "同じ本 supplies the same-publication condition required for 部; 冊 counts the bound physical books and is correctly accepted. 六部=ろくぶ, 六冊=ろくさつ. 枚/頭/杯 do not preserve this ordinary request. 注文しました is supported. Feedback explains the overlap, rather than directly comparing one selected wrong answer.",
+      "sources": [
+        "S03",
+        "S04",
+        "S18"
+      ]
+    },
+    {
+      "id": "magnitudes-expression-1",
+      "path": "counters\\magnitudes.json",
+      "new": true,
+      "rubric": {
+        "lexical": 0,
+        "decision": 1,
+        "calculation": 0,
+        "ambiguity": 0,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "judgment": "123,000,000=1億2300万; いちおくにせんさんびゃくまん is correct. The explicitly required digits before both units and prohibition of commas/千/百/人 make the one written answer fair. Not a population inference or arithmetic story; numerical regrouping is the language skill.",
+      "sources": [
+        "S12"
+      ]
+    },
+    {
+      "id": "magnitudes-expression-2",
+      "path": "counters\\magnitudes.json",
+      "new": true,
+      "rubric": {
+        "lexical": 0,
+        "decision": 1,
+        "calculation": 0,
+        "ambiguity": 1,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "judgment": "100,030,000 yen=一億三万円, not 130,000,000. All four ordinary kanji/Arabic choices for the two numeral positions are authored. Zero groups are not pronounced. The plain-digit prohibition is visible. This extends the control's zero-gap grouping, rather than proving a harder semantic decision.",
+      "sources": [
+        "S12"
+      ]
+    },
+    {
+      "id": "fractions-expression-1",
+      "path": "counters\\fractions.json",
+      "new": true,
+      "rubric": {
+        "lexical": 0,
+        "decision": 1,
+        "calculation": 0,
+        "ambiguity": 1,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "judgment": "Two thirds is 三分の二/さんぶんのに; the four ordinary numeral combinations are accepted. Required 分の excludes a percentage/decimal without hidden normalization. Feedback directly corrects the reversed fraction. Source label 分数/ぶんすう avoids a metadata collision with minute 分/ふん.",
+      "sources": [
+        "S09"
+      ]
+    },
+    {
+      "id": "uncertain-expression-1",
+      "path": "counters\\uncertain.json",
+      "new": true,
+      "rubric": {
+        "lexical": 0,
+        "decision": 1,
+        "calculation": 0,
+        "ambiguity": 0,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "judgment": "数十人/すうじゅうにん is correct. The required initial 数, kanji 十 and 人 make the written convention explicit. 十数人 is contrasted without falsely assigning an exact headcount or an exclusive 11-19 boundary. This highly scaffolded form task is not an independent open interpretation test.",
+      "sources": [
+        "S10"
+      ]
+    },
+    {
+      "id": "proportions-expression-1",
+      "path": "counters\\proportions.json",
+      "new": true,
+      "rubric": {
+        "lexical": 0,
+        "decision": 1,
+        "calculation": 0,
+        "ambiguity": 1,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "judgment": "20% off is 二割引/にわりびき, with optional written き and both numeral spellings. The requested reduction rate is not the final price or 80% payable. No charge assumptions are imported. This expresses a form; it does not substitute for the Grammar quantity decision.",
+      "sources": [
+        "S09",
+        "S11"
+      ]
+    },
+    {
+      "id": "hako-expression-1",
+      "path": "counters\\hakoexpressions.json",
+      "new": true,
+      "rubric": {
+        "lexical": 0,
+        "decision": 2,
+        "calculation": 0,
+        "ambiguity": 1,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "judgment": "The counted entity is one packed box, not six cookies. 一箱/1箱/ひと箱 and canonical ひとはこ are fitting. IMABI's actual 箱 table explicitly lists イッぱこ alongside ひとはこ, so accepting いっぱこ is evidence-based. Sanabo confirms ひとはこ only; that omission does not refute the alternate. No equal-frequency or aural-acceptance claim is made.",
+      "sources": [
+        "S05",
+        "S13"
+      ]
+    },
+    {
+      "id": "lessonlabels-expression-1",
+      "path": "counters\\lessonlabels.json",
+      "new": true,
+      "rubric": {
+        "lexical": 0,
+        "decision": 2,
+        "calculation": 0,
+        "ambiguity": 1,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "judgment": "第三課/第3課 and だいさんか correctly identify lesson 3. 第 is expressly requested; not accepting bare 三課 is a visible notation convention, not a universal ban. The answer does not imply three lessons completed.",
+      "sources": [
+        "S14"
+      ]
+    },
+    {
+      "id": "lessonlabels-expression-2",
+      "path": "counters\\lessonlabels.json",
+      "new": true,
+      "rubric": {
+        "lexical": 0,
+        "decision": 2,
+        "calculation": 0,
+        "ambiguity": 1,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "judgment": "Three different lessons completed is a quantity: 三課/3課, さんか. Explicitly excluding 第/目 distinguishes count from label. It does not disclose the final lesson's identifier. The pair contrasts semantic operations, not merely two numbers.",
+      "sources": [
+        "S14"
+      ]
+    },
+    {
+      "id": "seconds-expression-1",
+      "path": "counters\\seconds.json",
+      "new": true,
+      "rubric": {
+        "lexical": 0,
+        "decision": 0,
+        "calculation": 0,
+        "ambiguity": 1,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "judgment": "一秒=いちびょう without a false contraction. Optional written 間 is explicit and all four numeral/unit forms are listed. Canonical Read must not add かん. A useful easy unit item, not evidence that every new level-3 item is harder than the duration control.",
+      "sources": [
+        "S19"
+      ]
+    },
+    {
+      "id": "seconds-expression-2",
+      "path": "counters\\seconds.json",
+      "new": true,
+      "rubric": {
+        "lexical": 0,
+        "decision": 1,
+        "calculation": 0,
+        "ambiguity": 1,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "judgment": "一分三十秒=いっぷんさんじゅうびょう. All 16 combinations of kanji/Arabic components, optional と, and optional final 間 are authored. The visible convention excludes 90秒 and intermediate 間; those are not silently normalized. Accepted writing variants do not add と/かん to canonical Read.",
+      "sources": [
+        "S19"
+      ]
+    },
+    {
+      "id": "quantity-scope-discount-reduction",
+      "path": "grammar\\quantity-scope.json",
+      "new": true,
+      "rubric": {
+        "lexical": 1,
+        "decision": 2,
+        "calculation": 1,
+        "ambiguity": 0,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "jlptDisposition": "UNCLASSIFIED; jlpt correctly omitted",
+      "judgment": "Natural notice, explicitly no other charges. The question asks the reduction: 1000×2/10=200. 800 is the payable amount and has a useful wrong-option explanation. Digits-only response convention is explicit; 千円/二割引 are protected from vocabulary help, while 定価/料金 and other supporting words are correctly glossed.",
+      "sources": [
+        "S09",
+        "S11"
+      ]
+    },
+    {
+      "id": "quantity-scope-discount-payable",
+      "path": "grammar\\quantity-scope.json",
+      "new": true,
+      "rubric": {
+        "lexical": 1,
+        "decision": 2,
+        "calculation": 1,
+        "ambiguity": 0,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "jlptDisposition": "UNCLASSIFIED; jlpt correctly omitted",
+      "judgment": "The same notice asks a different quantity: the complementary 80%, 800 yen. 200 is a fair nearest wrong answer, not an accepted alternate. No hidden tax/fee ambiguity remains. One transparent complement, not a multi-step story. Same shop-discount context as its pair.",
+      "sources": [
+        "S09",
+        "S11"
+      ]
+    },
+    {
+      "id": "quantity-scope-fraction-used",
+      "path": "grammar\\quantity-scope.json",
+      "new": true,
+      "rubric": {
+        "lexical": 0,
+        "decision": 2,
+        "calculation": 1,
+        "ambiguity": 0,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "jlptDisposition": "UNCLASSIFIED; jlpt correctly omitted",
+      "judgment": "Natural report; その refers to the original 300 mL. One third used means 100; 200 instead remains. Supporting ボトル/水/ありました/使いました readings and senses are accurate. 三百ミリリットル and 三分の一 are unglossed target quantities, not accidentally omitted supporting vocabulary.",
+      "sources": [
+        "S09"
+      ]
+    },
+    {
+      "id": "quantity-scope-fraction-remaining",
+      "path": "grammar\\quantity-scope.json",
+      "new": true,
+      "rubric": {
+        "lexical": 0,
+        "decision": 2,
+        "calculation": 1,
+        "ambiguity": 0,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "jlptDisposition": "UNCLASSIFIED; jlpt correctly omitted",
+      "judgment": "The explicit immediately-after/no-other-changes condition makes 200 mL remaining determinate. 100 is the part used, not another valid answer. Digits-only external answer slot and protected numerical vocabulary are correct. Shares water-fraction with the used-amount item, not a third/fourth independent context.",
+      "sources": [
+        "S09"
+      ]
+    },
+    {
+      "id": "prices-expression-15",
+      "path": "counters\\prices.json",
+      "new": false,
+      "rubric": {
+        "lexical": 0,
+        "decision": 1,
+        "calculation": 0,
+        "ambiguity": 1,
+        "feedback": 1
+      },
+      "verdict": "accepted",
+      "judgment": "Verified identical to HEAD. 10,100円=一万百円/いちまんひゃくえん; all six written answers preserve it. 円 rather than a currency symbol is explicit. Feedback explains grouping but its generic sound-change list does not diagnose the particularly relevant zero-gap error. This already tests skipped positions below 万.",
+      "sources": [
+        "S12"
+      ]
+    },
+    {
+      "id": "durations-expression-2",
+      "path": "counters\\durations.json",
+      "new": false,
+      "rubric": {
+        "lexical": 0,
+        "decision": 1,
+        "calculation": 0,
+        "ambiguity": 1,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "judgment": "Verified identical to HEAD. 二時間半/にじかんはん is correct. Authored half-hour, minute and decimal representations are equivalent writing choices under the hours-required cue. The explicit no-と convention is fair. None authorizes reading 三十分 in place of displayed 半. At least as composed as the new minute-second item; no difficulty increase is inferred.",
+      "sources": [
+        "S19"
+      ]
+    },
+    {
+      "id": "quantity-zutsu-stickers-total",
+      "path": "grammar\\quantity-zutsu.json",
+      "new": false,
+      "rubric": {
+        "lexical": 1,
+        "decision": 2,
+        "calculation": 1,
+        "ambiguity": 0,
+        "feedback": 2
+      },
+      "verdict": "accepted",
+      "judgment": "Verified identical to HEAD. Three children get two stickers each: total 6, not per-child 2. The external digits-only response and all rationale branches agree. 三人/二枚 vocabulary supports quantities without giving the total or glossing away the target ずつ relation. Its established jlpt=3 is not transferable evidence for the new fraction/discount construction."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "url": "https://www.tofugu.com/japanese/japanese-counter-tou/",
+      "publisher": "Tofugu, Mami Suzuki",
+      "retrieved": "2026-10-29",
+      "inspected": "Pronunciation table rows 1,6,8; Large-Sized Animals; Professional Dogs; Farm Animals; Animals in Facilities; conclusion on overlap",
+      "supports": "いっとう, ろくとう, はちとう/はっとう; large/working animal uses and nonabsolute overlap"
+    },
+    {
+      "id": "S02",
+      "url": "https://www.tofugu.com/japanese/japanese-counter-hiki/",
+      "publisher": "Tofugu, Mami Suzuki",
+      "retrieved": "2026-10-29",
+      "inspected": "Pronunciation table rows 1,6,8; Small to Medium-Sized Animals including police-dog example",
+      "supports": "いっぴき, ろっぴき, はちひき/はっぴき and ordinary dog overlap",
+      "caution": "The prose says professional dogs take 頭 but itself gives 警察犬が二匹; do not turn that simplification into an absolute ban."
+    },
+    {
+      "id": "S03",
+      "url": "https://imabi.org/counters-vi/",
+      "publisher": "IMABI",
+      "retrieved": "2026-10-29",
+      "inspected": "The Counter ～部, definition, rows 1,6,8, and pamphlet-copy example",
+      "supports": "Printed copies/paper packets; いちぶ, ろくぶ, はちぶ"
+    },
+    {
+      "id": "S04",
+      "url": "https://kotobank.jp/word/%E9%83%A8-128738",
+      "publisher": "Shogakukan, Seisenban Nihon Kokugo Daijiten via Kotobank",
+      "retrieved": "2026-10-29",
+      "inspected": "ぶ【部】 noun [1] sense 1 and suffix [2]",
+      "supports": "Complete work independent of volume count; modern copies of the same publication versus general 冊",
+      "caution": "The preceding Daijisen べ historical entry is not the modern counter evidence."
+    },
+    {
+      "id": "S05",
+      "url": "https://imabi.org/counters-v/",
+      "publisher": "IMABI",
+      "retrieved": "2026-10-29",
+      "inspected": "The Counter ～箱 row 1 and surrounding usage qualification; The Counter ～組み definition, row 1, native-set versus school-class note",
+      "supports": "ひとはこ/イッぱこ; sets with 組み and ひとくみ",
+      "caution": "Did not adopt every listed paradigm variant or infer equal frequency."
+    },
+    {
+      "id": "S06",
+      "url": "https://www.tofugu.com/japanese/japanese-counters-guide/",
+      "publisher": "Tofugu, Mami Suzuki and Koichi",
+      "retrieved": "2026-10-29",
+      "inspected": "Gairaigo Word Counters, explicit 1セット=ワンセット and いちセット; Systematic Reading Changes, 1 before s/sh",
+      "supports": "ワンセット and いちセット; contraction basis for いっせっと"
+    },
+    {
+      "id": "S07",
+      "url": "https://www.tofugu.com/japanese/japanese-counters-list/",
+      "publisher": "Tofugu",
+      "retrieved": "2026-10-29",
+      "inspected": "Only the セット (set) entry, not a 350-counter audit",
+      "supports": "First numbers can use native, Sino-Japanese and loan counting methods; set meaning"
+    },
+    {
+      "id": "S08",
+      "url": "https://www.weblio.jp/content/%E7%B5%84%E3%81%BF",
+      "publisher": "Shogakukan Digital Daijisen via Weblio",
+      "retrieved": "2026-10-29",
+      "inspected": "くみ【組（み）】 noun sense 1 and counter suffix entry; read actual HTML because simplified extraction omitted the entry",
+      "supports": "Set sense, 組/組み spelling and native 一(ひと) counter example",
+      "caution": "Did not use the unrelated automatically generated inflection or game entries."
+    },
+    {
+      "id": "S09",
+      "url": "https://imabi.org/decimals-fractions/",
+      "publisher": "IMABI",
+      "retrieved": "2026-10-29",
+      "inspected": "Fractions and Percentages with 割, including 20%=2割",
+      "supports": "Denominator-first 分の, ぶん, 割 as tenths",
+      "caution": "Opening decimal-only-between-0-and-1 and zero-only-ゼロ claims are faulty and were not used."
+    },
+    {
+      "id": "S10",
+      "url": "https://kotobank.jp/word/%E5%8D%81%E6%95%B0-527026",
+      "publisher": "Shogakukan Digital Daijisen and Seisenban Nihon Kokugo Daijiten via Kotobank",
+      "retrieved": "2026-10-29",
+      "inspected": "じゅうすう lexical word-element entries in both dictionaries",
+      "supports": "Ten-plus uncertain expression; both definitions say 10 or more and fewer than 20, not an exact headcount"
+    },
+    {
+      "id": "S11",
+      "url": "https://kotobank.jp/word/%E5%89%B2%E5%BC%95-665799",
+      "publisher": "Shogakukan Seisenban Nihon Kokugo Daijiten via Kotobank",
+      "retrieved": "2026-10-29",
+      "inspected": "わりびき【割引】 noun sense 1",
+      "supports": "Deduction from an established price",
+      "caution": "Daijisen body was absent; no claim of inspecting that definition or of JLPT level evidence."
+    },
+    {
+      "id": "S12",
+      "url": "https://imabi.org/sino-japanese-numbers-2/",
+      "publisher": "IMABI",
+      "retrieved": "2026-10-29",
+      "inspected": "101-9999 table, large-unit powers/table, four-digit grouping explanation and start of Spelling Numbers",
+      "supports": "にせん/さんびゃく; 万=10^4, 億=10^8, 兆=10^12; mixed notation"
+    },
+    {
+      "id": "S13",
+      "url": "https://www.sanabo.com/kazoekata/ct_ha/ha/hako/",
+      "publisher": "数え方単位辞典",
+      "retrieved": "2026-10-29",
+      "inspected": "箱 entry, counting units and explanation",
+      "supports": "Canonical 一箱ひとはこ; 個/箱; flattened cardboard 枚",
+      "caution": "Does not independently corroborate or refute いっぱこ."
+    },
+    {
+      "id": "S14",
+      "url": "https://imabi.org/counters-with-sino-japanese-numbers-i/",
+      "publisher": "IMABI",
+      "retrieved": "2026-10-29",
+      "inspected": "The Counter ～課, row 3, examples 10-18 and Grammar Note",
+      "supports": "三課さんか; lesson count versus 第 labels; bare 課 can also label"
+    },
+    {
+      "id": "S15",
+      "url": "https://imabi.org/counters-with-sino-japanese-numbers-i/",
+      "publisher": "IMABI",
+      "retrieved": "2026-10-29",
+      "inspected": "～枚 definition/table; ～匹 table; ～頭 definition/table and overlap text",
+      "supports": "Sheet counting, canonical animal-counter readings and considerable overlap",
+      "caution": "The unbolded ロクヒキ variant was observed but no claim of ordinary frequency is made or inferred from table membership alone."
+    },
+    {
+      "id": "S16",
+      "url": "https://www.weblio.jp/content/%E5%86%8A",
+      "publisher": "Shogakukan Digital Daijisen via Weblio",
+      "retrieved": "2026-10-29",
+      "inspected": "さつ【冊】 counter suffix entry, actual HTML",
+      "supports": "Books and similar volumes counted with 冊",
+      "caution": "The broader bound-object wording also appears in a separate Wiktionary section; it is not misattributed to Daijisen."
+    },
+    {
+      "id": "S17",
+      "url": "https://www.weblio.jp/content/%E4%B8%80%E5%BC%8F",
+      "additionalUrl": "https://jisho.org/api/v1/search/words?keyword=%E4%B8%80%E5%BC%8F",
+      "publisher": "Shogakukan Digital Daijisen via Weblio; JMdict via Jisho",
+      "retrieved": "2026-10-29",
+      "inspected": "いっしき【一式】 sense 1 (ひとそろい); JMdict 一式 first sense complete set and reading いっしき",
+      "supports": "One complete set, not an arbitrary number of copies; contextual application is reviewed separately"
+    },
+    {
+      "id": "S18",
+      "url": "https://www.sanabo.com/kazoekata/ct_ha/ho/hon/",
+      "publisher": "数え方単位辞典",
+      "retrieved": "2026-10-29",
+      "inspected": "本 counting units/explanation points 1 and 3",
+      "supports": "冊 for books; 部 for publication/copy totals"
+    },
+    {
+      "id": "S19",
+      "url": "https://imabi.org/counters-iv-time-part-ii-%e6%99%82-%e6%99%82%e9%96%93-%e5%88%86-%e7%a7%92-%e6%99%a9-%e5%a4%9c/",
+      "publisher": "IMABI",
+      "retrieved": "2026-10-29",
+      "inspected": "Hours, Minutes, Seconds tables and optional 間 explanation",
+      "supports": "にじかん, いっぷん, さんぷん, いちびょう, noncontracting 秒 and duration 間"
+    },
+    {
+      "id": "local-v1-contract",
+      "path": "docs/counter-n5.md",
+      "inspected": "Schema and answer policy, lines 46-80; v2 contract 160-198",
+      "retrieved": "2026-10-29",
+      "supports": "Full-phrase replacement, authored alternative tiers, reverse displayed nouns, and English translations after checking"
+    }
+  ],
+  "limits": [
+    "Public search tool failed; some simplified dictionary pages returned only chrome or irrelevant entries. Claims above rely on the actual named sections subsequently inspected, not on search hits.",
+    "The attempted Sanabo elephant URL redirected to 造花 and was excluded as evidence. A guessed set entry was 404 and excluded.",
+    "The supplied source catalog was not treated as verification. Sources were fetched independently.",
+    "No exhaustive pronunciation dictionary or corpus was downloaded. No regional/archaic reading completeness claim is made.",
+    "Exact native frequency of いっぱこ is not established by this bounded check, but its recognition is explicitly supported. Canonical ひとはこ remains the teaching model.",
+    "No independent exhaustive negative search of Bunpro was made. Omission of jlpt is justified by lack of a positive exact construction anchor in this reviewed evidence, not proof that no conceivable index entry exists."
+  ],
+  "authorComparison": {
+    "scoreOrder": [
+      "lexical",
+      "decision",
+      "calculation",
+      "ambiguity",
+      "feedback"
+    ],
+    "policy": "Preserve the independent initial scores for this review, with the qualifications below. Calibration differences alone are not new linguistic findings or empirically measured difficulty.",
+    "dimensionsWithDifferentScores": {
+      "lexical": 3,
+      "decision": 5,
+      "calculation": 3,
+      "ambiguity": 11,
+      "feedback": 21
+    },
+    "recordsWithIdenticalFullScoreVector": [
+      "tou-guidedogs-1"
+    ],
+    "adjudications": [
+      {
+        "dimension": "feedback",
+        "judgment": "The author assigns 1 to all 24 records. Under the requested definition, 20 complete records compare a nearby wrong answer/reading/interpretation and merit 2. Important evidence includes the Grammar wrong-option rationales, not only the top-level explanation. Three records remain 1. The reverse record has no own explanation field and is 0, with the already recorded caveat that a renderer might reuse the linked cow note; no UI absence claim is made.",
+        "impact": "Calibration correction, mostly favorable to the content; not 21 defects."
+      },
+      {
+        "dimension": "ambiguity",
+        "judgment": "Handout 2 versus author 1 is consequential and tied to F1/F2. The other ten differences are a declared scale choice: the independent review uses 1 for explicit ordinary written/read variants, while the author often uses 0 because the intended meaning is determinate. Both can describe fair tasks; use one convention consistently for old and new records. Neither ten spelling differences nor the higher score implies ten flawed tasks.",
+        "impact": "One actual problematic record; otherwise calibration only."
+      },
+      {
+        "dimension": "calculation",
+        "judgment": "The independent review treats writing 123,000,000 in 億/万, retaining zero groups, and expressing 20% using 割 as language/notation transcoding (0), not story calculation. This is consistent with the unchanged price control's grouping score. Actual reduction, complement and ずつ-total computations stay 1. The author's 1 for the two magnitude forms and discount-rate form is a different definition, not evidence that they are empirically harder.",
+        "impact": "Keep transparent calculation separate from lexical/notation conversion."
+      },
+      {
+        "dimension": "decision",
+        "judgment": "The independent review uses 0 for isolated reverse noun association, versus author 1. It uses 2 for the one-sheet/complete-copy overlap, boxes versus contents, and the two lesson label/count contrasts, versus author 1. These count explicit contrast in the requested entity/meaning even when heavily scaffolded; they are not claims of open inference, harder Japanese or independent mastery. The four Grammar interpretations and ずつ control agree at 2.",
+        "impact": "A granularity difference; retain both vectors in the record rather than claiming experimental disagreement."
+      },
+      {
+        "dimension": "lexical",
+        "judgment": "The independent review counts a few glossed supporting words in the cow, publication and sticker-control records as 1, versus author 0 for familiar/supported words. The rubric's 0/1 descriptions overlap at this boundary. Neither review finds specialized unexplained load 2; no content change is required merely to align these scores.",
+        "impact": "Editorial calibration only."
+      }
+    ],
+    "records": [
+      {
+        "id": "tou-cow-1",
+        "author": [
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "independent": [
+          1,
+          1,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "id": "tou-elephants-1",
+        "author": [
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "independent": [
+          0,
+          1,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "id": "tou-guidedogs-1",
+        "author": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "independent": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "id": "tou-noun-1",
+        "author": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "independent": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "bu-handout-1",
+        "author": [
+          1,
+          2,
+          0,
+          1,
+          1
+        ],
+        "independent": [
+          1,
+          2,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "id": "bu-application-1",
+        "author": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "independent": [
+          1,
+          2,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "id": "bu-publication-1",
+        "author": [
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "independent": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "id": "magnitudes-expression-1",
+        "author": [
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        "independent": [
+          0,
+          1,
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "id": "magnitudes-expression-2",
+        "author": [
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        "independent": [
+          0,
+          1,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "id": "fractions-expression-1",
+        "author": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "independent": [
+          0,
+          1,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "id": "uncertain-expression-1",
+        "author": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "independent": [
+          0,
+          1,
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "id": "proportions-expression-1",
+        "author": [
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        "independent": [
+          0,
+          1,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "id": "hako-expression-1",
+        "author": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "independent": [
+          0,
+          2,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "id": "lessonlabels-expression-1",
+        "author": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "independent": [
+          0,
+          2,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "id": "lessonlabels-expression-2",
+        "author": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "independent": [
+          0,
+          2,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "id": "seconds-expression-1",
+        "author": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "independent": [
+          0,
+          0,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "id": "seconds-expression-2",
+        "author": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "independent": [
+          0,
+          1,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "id": "quantity-scope-discount-reduction",
+        "author": [
+          1,
+          2,
+          1,
+          0,
+          1
+        ],
+        "independent": [
+          1,
+          2,
+          1,
+          0,
+          2
+        ]
+      },
+      {
+        "id": "quantity-scope-discount-payable",
+        "author": [
+          1,
+          2,
+          1,
+          0,
+          1
+        ],
+        "independent": [
+          1,
+          2,
+          1,
+          0,
+          2
+        ]
+      },
+      {
+        "id": "quantity-scope-fraction-used",
+        "author": [
+          0,
+          2,
+          1,
+          0,
+          1
+        ],
+        "independent": [
+          0,
+          2,
+          1,
+          0,
+          2
+        ]
+      },
+      {
+        "id": "quantity-scope-fraction-remaining",
+        "author": [
+          0,
+          2,
+          1,
+          0,
+          1
+        ],
+        "independent": [
+          0,
+          2,
+          1,
+          0,
+          2
+        ]
+      },
+      {
+        "id": "prices-expression-15",
+        "author": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "independent": [
+          0,
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "id": "durations-expression-2",
+        "author": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "independent": [
+          0,
+          1,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "id": "quantity-zutsu-stickers-total",
+        "author": [
+          0,
+          2,
+          1,
+          0,
+          1
+        ],
+        "independent": [
+          1,
+          2,
+          1,
+          0,
+          2
+        ]
+      }
+    ]
+  },
+  "authorReconciliation": [
+    {
+      "finding": "F1",
+      "status": "independently-resolved",
+      "action": "Moved とじていない into the Japanese question and added answer-safe vocabulary support. 冊 no longer depends on answer-side English or feedback."
+    },
+    {
+      "finding": "F2",
+      "status": "independently-resolved",
+      "action": "Added 組み/一組み, 式/一式, ワンセット and fitting kana forms. Canonical 一部/いちぶ and readingAnswers remain unchanged."
+    },
+    {
+      "finding": "coordinator-alias-stems",
+      "status": "independently-resolved",
+      "action": "Production CounterGrader accepts only authored kana plus the canonical counterReading. Added kana stems for already-accepted alternate written counters: くみ/しき, まい, さつ and ひき on the six new forward cards. Read metadata is untouched; ordinary kana Type alternatives remain the existing Yellow tier."
+    }
+  ],
+  "localizedReconciliation": {
+    "snapshotHashes": {
+      "bu.json": "4d692f363345a464ab710cec21f906faf2a0d279feb23e55a0690031c69bae57",
+      "tou.json": "f151682fc1c841d7129ac67fcdf77820450b4b00875bf2e36eec0a35c1508717",
+      "counter-n3-pilot-review.json": "bb83fe00d361700db9e1bf8414a9b6c2b5ba76c49fccda97f903316aa4b09b46",
+      "counter-n3-pilot.json": "9bb0fb8c391b46e2788faaae14fe042192d6ebdd4713714f3a970d690f2f6372"
+    },
+    "findingReconciliation": [
+      {
+        "id": "F1",
+        "status": "resolved",
+        "previousSeverity": "medium",
+        "recordId": "bu-handout-1",
+        "fields": [
+          "text",
+          "note",
+          "sourceMetadata.vocabulary.とじていない"
+        ],
+        "observedCorrection": "とじていない三枚一組の資料を、一{}コピーしてください。",
+        "judgment": "Natural Japanese makes the relevant unbound condition question-side. Three sheets form one set, and とじていない rules out the bound-booklet interpretation previously left open. The matching glossary reading とじていない and gloss not bound or stapled together are accurate, context-appropriate support and do not supply the target counter. The revised note explains the same fact already available to the learner.",
+        "distractorAssessment": "一枚 counts one sheet rather than the requested three-sheet copy; 冊 is not the unit for the explicitly unbound set; 台 is wrong here. No answer-side English is now needed to establish the physical-state restriction.",
+        "confidence": "high"
+      },
+      {
+        "id": "F2",
+        "status": "resolved",
+        "previousSeverity": "medium",
+        "recordId": "bu-handout-1",
+        "fields": [
+          "good",
+          "kana",
+          "phrase",
+          "reading",
+          "readingAnswers"
+        ],
+        "observedCorrection": {
+          "addedWrittenForms": [
+            "組み",
+            "一組み",
+            "ワンセット",
+            "式",
+            "一式"
+          ],
+          "addedRelevantCompleteKanaForms": [
+            "わんせっと",
+            "いっしき"
+          ],
+          "preservedCanonicalPhrase": "一部",
+          "preservedCanonicalReading": "いちぶ",
+          "preservedReadingAnswers": [
+            "いちぶ"
+          ]
+        },
+        "judgment": "The specific ordinary complete-set forms identified by F2 are now authored and fit the tightened one-complete-copy scenario. Their inclusion does not require accepting every dictionary synonym. The canonical phrase and canonical-only Read set are correctly unchanged.",
+        "confidence": "high",
+        "qualification": "The original enumerated F2 omissions are closed. The separate remaining bare セット/せっと alias issue is F3 below, arising in the expressly disclosed stem-alias follow-up."
+      },
+      {
+        "id": "coordinator-alias-stems",
+        "status": "partially resolved",
+        "recordIds": [
+          "bu-handout-1",
+          "bu-application-1",
+          "bu-publication-1",
+          "tou-cow-1",
+          "tou-elephants-1",
+          "tou-guidedogs-1"
+        ],
+        "judgment": "Every added stem is a valid bare kana name/form of a written counter already accepted in that same task. Existing Yellow treatment is appropriate under the supplied v1 Type policy; it must not imply that the Japanese is incorrect. These are suffix-mode aliases, not new readings of the displayed canonical counting phrase.",
+        "acceptedAdditions": {
+          "bu-handout-1": [
+            "くみ",
+            "しき"
+          ],
+          "bu-application-1": [
+            "まい"
+          ],
+          "bu-publication-1": [
+            "さつ"
+          ],
+          "tou-cow-1": [
+            "ひき"
+          ],
+          "tou-elephants-1": [
+            "ひき"
+          ],
+          "tou-guidedogs-1": [
+            "ひき"
+          ]
+        },
+        "remainingIssue": "The analogous already-accepted セット stem is not represented by せっと in bu-handout-1.kana; see F3.",
+        "canonicalReadingBoundary": "Bare ひき does not make いちひき a reading of 一匹, and none of these stems is a reading of the displayed 一頭/六頭/八頭 or 一部/八部/六部. No such incorrect full readings were added."
+      }
+    ],
+    "remainingFindingAtThatSnapshot": [
+      {
+        "id": "F3",
+        "status": "unresolved",
+        "severity": "minor",
+        "facet": [
+          "correctness",
+          "accepted-tier completeness"
+        ],
+        "recordId": "bu-handout-1",
+        "field": "bu.json cards[id=bu-handout-1].kana",
+        "claim": "Bare せっと is still absent even though セット is an accepted written suffix. Under the supplied rule that kana Type acceptance uses only authored kana plus the canonical counterReading, the canonical ぶ cannot supply this alternate-counter alias.",
+        "actualData": {
+          "writtenCounterPresentInGood": "セット",
+          "canonicalCounterReading": "ぶ",
+          "bareKanaExpectedForThatCounter": "せっと",
+          "bareKanaPresentInKana": false,
+          "alreadyPresentCompleteSetKana": [
+            "いっせっと",
+            "いちせっと",
+            "ひとせっと",
+            "わんせっと"
+          ]
+        },
+        "impact": "A learner entering the ordinary kana suffix for an already-approved answer can still receive a wrong result instead of the existing accepted Yellow tier. The complete-phrase alternatives do not authorize the bare stem under the stated contract.",
+        "minimalCorrection": "Add the single string せっと to bu-handout-1.kana. Leave good, phrase=一部, reading=いちぶ and readingAnswers=[いちぶ] unchanged.",
+        "scopeQualification": "This is not a request for another synonym, a new counter, numeral normalization or app implementation work. It completes the same disclosed bare-stem alias policy already applied to 組/式/枚/冊/匹.",
+        "evidence": [
+          "Frozen bu.json has good containing セット and kana omitting せっと.",
+          "The user's follow-up and portable authorReconciliation[coordinator-alias-stems] explicitly state the production kana-acceptance contract.",
+          "Daijisen セット【set】 has reading せっと and set sense 1; that exact entry was inspected during the initial review, not inferred from search results."
+        ],
+        "confidence": "high for the missing authored alias and its linguistic appropriateness; rejection consequence follows the supplied production contract rather than a grader execution in this review",
+        "boundedVerificationAfterCorrection": "The already-planned production-grader probe should include bare せっと and confirm its accepted Type tier, while Read of 一部 continues to require いちぶ. If that probe proves bare せっと was already accepted through a separately documented path, reassess the grading-impact premise rather than claiming this reviewer executed the grader."
+      }
+    ],
+    "note": "The subsequent final adjudication withdraws F3; this is retained as review history, not an open defect."
+  },
+  "finalAcceptance": {
+    "reviewDate": "2026-10-29",
+    "scope": "The corrected 24-task pilot and previously reviewed changed article sections, within the established Japanese/data/rubric text-review limits. This is not device, learner, audio, implementation-wide or publication acceptance.",
+    "buSha256": "4d692f363345a464ab710cec21f906faf2a0d279feb23e55a0690031c69bae57",
+    "touSha256": "f151682fc1c841d7129ac67fcdf77820450b4b00875bf2e36eec0a35c1508717",
+    "findingReconciliation": [
+      {
+        "id": "F1",
+        "status": "resolved",
+        "basis": "The corrected Japanese question explicitly says とじていない三枚一組の資料; matching vocabulary and feedback support the unbound condition before answering. The prior focused reconciliation stands."
+      },
+      {
+        "id": "F2",
+        "status": "resolved",
+        "basis": "The specified complete-set forms 組み/一組み, 式/一式, ワンセット and their fitting kana responses are accepted. 一部/いちぶ and readingAnswers remain unchanged. The prior focused linguistic judgment stands."
+      },
+      {
+        "id": "F3",
+        "status": "withdrawn",
+        "previousSeverity": "minor",
+        "previousClaim": "Absence of bare せっと from kana would reject that Type response despite accepted セット.",
+        "correction": "That premise omitted the earlier normalized-good comparison. CounterText.normalize ends with ReadingKey.fold, and CounterGrader returns Good when any normalized good form matches the normalized input, before consulting kana plus counterReading. Therefore セット and せっと already match in the Good branch.",
+        "tierCorrection": "せっと is Good, not Yellow. ワンセット and わんせっと are also Good through that earlier branch, even though わんせっと additionally appears in kana. Kana-script input is not universally assigned Yellow.",
+        "contentAction": "None. Do not add a redundant せっと entry to solve the withdrawn finding; such an entry would not alter the accepted result or its tier.",
+        "reviewerCorrection": "My F3 inference was based on an incomplete acceptance-path premise and is retracted. Missing membership in kana alone is not evidence of rejection when normalized good forms may already match.",
+        "confidence": "high, based on the bounded production path and the explicit supplied probe assertion/results"
+      },
+      {
+        "id": "coordinator-alias-stems",
+        "status": "resolved",
+        "basis": "The authored くみ/しき, まい, さつ and ひき additions remain valid Type aliases. The supplied probe records their expected Yellow results. The purported remaining セット gap does not exist because the earlier Good branch already covers it.",
+        "canonicalReadBoundary": "None of these Type results expands readingAnswers. The six canonical phrase/reading/readingAnswers fields were verified unchanged in the focused review; this Type probe is not presented as a Read-mode test."
+      }
+    ],
+    "rubric": {
+      "scoreOrder": [
+        "lexical",
+        "decision",
+        "calculation",
+        "ambiguity",
+        "feedback"
+      ],
+      "recordId": "bu-handout-1",
+      "initialIndependentVector": [
+        1,
+        2,
+        0,
+        2,
+        2
+      ],
+      "acceptedCorrectedVector": [
+        1,
+        2,
+        0,
+        1,
+        2
+      ],
+      "reason": "The question-side restriction is explicit, the identified ordinary alternatives are accepted, and the supposed bare-set rejection is disproven. Supported lexical load, set-versus-sheet decision, no calculation and contrastive feedback retain their prior scores.",
+      "other23": "All original 23 accepted assessments and independent rubric vectors are retained, including the five newly aliased tasks that passed the focused reconciliation.",
+      "historicalScores": "Preserve the original ambiguity-2 finding and original author/independent vectors as snapshot history; this final vector applies to the corrected frozen candidate.",
+      "difficultyLimit": "Editorial rubric acceptance does not establish empirical difficulty, learner mastery or aural acceptance."
+    },
+    "verdict": {
+      "pilotTextReview": "accepted",
+      "remainingActionableFindings": [],
+      "changedArticleAssessments": "Prior CLEAN correctness, scoped-coverage and comprehensibility judgments retained within their original reviewed sections.",
+      "grammarClassification": "The four new numerical-interpretation Grammar tasks remain UNCLASSIFIED; this adjudication does not add a JLPT anchor.",
+      "matrixVerdict": "Not requested and not issued.",
+      "sourceChangesRequiredByThisAdjudication": [],
+      "priorReports": "Retained unchanged as historical evidence. This report supersedes the unresolved F3 premise and conditional final disposition in localized-final-reconciliation.json, not the underlying frozen content or original independent findings.",
+      "workPerformed": "Read-only bounded source/probe/result inspection, hash verification, and creation of this new durable final report only.",
+      "limits": [
+        "No learner, device, novice UX or aural trial.",
+        "No personally executed probe, importer, tests or build.",
+        "No repository, manifest, frozen-input, issue or git-index writes.",
+        "No bulk authoring, publication or subagents.",
+        "Acceptance is bounded to the requested pilot, identified alternatives and changed article sections, not every dictionary synonym or a whole-corpus audit."
+      ]
+    },
+    "probeSourceSha256": "89ee6a435d5b2adbbb7cf9dd77b6e2cba03143649b1513490af914dc08d7bcf5",
+    "probeXmlSha256": "7c93b2f06f9cb8412ed921e4c3dc2383780353cadc7dde83be3d264f2ccc61b5",
+    "reviewerRanProbe": false
+  }
+}

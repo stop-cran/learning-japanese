@@ -1,0 +1,1431 @@
+{
+  "status": "accepted-matrix-only",
+  "initialReview": {
+    "completedOnUtc": "2026-10-29T07:21:53.105686+00:00",
+    "reviewer": {
+      "role": "independent editorial reviewer",
+      "actualModel": "not exposed",
+      "subagentsInvoked": false
+    },
+    "snapshotFiles": [
+      {
+        "name": "counter-n3.md",
+        "sha256": "fce80c966f6d925c2fb1918dfab4d5a38f42460a249a995b8ba64bf09c651d34"
+      },
+      {
+        "name": "counter-n3-sources.json",
+        "sha256": "d564e087a5b4b40f7e1b37a9ce3ed5093e829f67f8aabae27d0ba1a6d22db760"
+      },
+      {
+        "name": "counter-n3-baseline.json",
+        "sha256": "bd93cbfd7623986c6f2fb075b26e2aad6c6efbd93505a85b719c6b08c46fc7f7"
+      }
+    ],
+    "rowsReviewed": 49,
+    "lexicalCandidatesReviewed": 97,
+    "initialVerdict": {
+      "overall": {
+        "correctness": "NEEDS FIX",
+        "scopedCoverage": "NEEDS FIX",
+        "comprehensibility": "NEEDS FIX"
+      },
+      "counter-n3.md": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "NEEDS FIX",
+        "comprehensibility": "NEEDS FIX",
+        "qualification": "Clear stage/operation/level distinctions overall; traditional-unit exclusion boundary needs precision. No pilot text accepted."
+      },
+      "counter-n3-sources.json": {
+        "correctness": "NEEDS FIX",
+        "scopedCoverage": "NEEDS FIX",
+        "comprehensibility": "CLEAN",
+        "qualification": "Source attribution error, missing dispositions and evidence mapping need reconciliation. New-owner rows were correctly treated as pending work."
+      },
+      "counter-n3-baseline.json": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN",
+        "qualification": "Clean only as a checked immutable preservation inventory; not linguistic certification."
+      },
+      "futureRuntimePilot": {
+        "correctness": "UNVERIFIED",
+        "scopedCoverage": "UNVERIFIED",
+        "comprehensibility": "UNVERIFIED"
+      },
+      "cleanMeaning": "No actionable defect established within the explicitly bounded assessment; not exhaustive correctness or learner validation."
+    },
+    "findings": [
+      {
+        "number": 1,
+        "id": "F1",
+        "severity": "Minor",
+        "facets": [
+          "correctness"
+        ],
+        "locations": [
+          "counter-n3-sources.json:71",
+          "counter-n3-sources.json:199"
+        ],
+        "sourceIds": [
+          "imabi-counters-viii"
+        ],
+        "claim": "The source scope says this page includes the たい ratio versus つい pair distinction.",
+        "impact": "This misattributes verification of the consequential homograph contrast. The contrast itself is correct, but this page is not its evidence.",
+        "evidence": [
+          {
+            "url": "https://imabi.org/counters-viii/",
+            "section": "～対; complete page through the final ～女 section inspected",
+            "observation": "The section is explicitly ～対つい, gives いっつい/につい and anatomical pair examples 41–44. It does not teach ratio 対/たい."
+          },
+          {
+            "baselinePath": "words/対.md",
+            "sourceId": "N3:969",
+            "observation": "The pinned article separately explains score/ratio たい and pair つい, with JMdict identities 1409800 and 1409810. Thus the intended numerical sense has other evidence; it should be attributed there."
+          }
+        ],
+        "minimalRemedy": "Narrow imabi-counters-viii to pair つい. Explicitly attach the pinned 対 article/identified dictionary sense to the ratio claim; inspect an actual ratio usage entry if claiming additional independent usage corroboration.",
+        "confidence": "high",
+        "ownerDecisionNeeded": false,
+        "status": "unresolved",
+        "matrixGateBlocker": true
+      },
+      {
+        "number": 2,
+        "id": "F2",
+        "severity": "Major",
+        "facets": [
+          "scoped coverage"
+        ],
+        "locations": [
+          "counter-n3-sources.json:219",
+          "counter-n3-sources.json:215",
+          "counter-n3-sources.json:209",
+          "counter-n3-sources.json:rows (missing 丁 and 部屋 dispositions)"
+        ],
+        "claim": "The additional independently compiled B1 reference exposes four ordinary counting strands not resolved by the 49-row denominator: 人分, 丁 for tofu, 部屋, and 人組.",
+        "impact": "Human portions/people's worth, food blocks, rooms, and membership size are not interchangeable with 人前, 個, 戸/棟, or the number of 組. Their omission leaves ordinary recipe, booking, and group-description decisions unallocated while more specialized stock-share and trillion expressions are required.",
+        "evidence": [
+          {
+            "url": "https://marugoto.jpf.go.jp/assets/docs/download/intermediate1/MarugotoIntermediate1VocabularyList_EN.pdf",
+            "pdfPage": 11,
+            "printedPage": 10,
+            "section": "Topic 2, Part 4 recipe vocabulary",
+            "entries": [
+              "～人分 / ～にんぶん"
+            ],
+            "observation": "Quantity for a number of people is an explicit course entry."
+          },
+          {
+            "url": "https://marugoto.jpf.go.jp/assets/docs/download/intermediate1/MarugotoIntermediate1VocabularyList_EN.pdf",
+            "pdfPage": 12,
+            "printedPage": 11,
+            "section": "Topic 2, Part 5 cooking vocabulary",
+            "entries": [
+              "～人分",
+              "～丁 / ～ちょう"
+            ],
+            "observation": "The 丁 entry is tied to tofu, not an obscure specialist sense."
+          },
+          {
+            "url": "https://marugoto.jpf.go.jp/assets/docs/download/intermediate1/MarugotoIntermediate1VocabularyList_EN.pdf",
+            "pdfPage": 16,
+            "printedPage": 15,
+            "section": "Topic 3, Part 4 music-group vocabulary",
+            "entries": [
+              "～人組 / ～りぐみ・～にんぐみ"
+            ],
+            "observation": "This describes people in a group rather than how many groups exist."
+          },
+          {
+            "url": "https://marugoto.jpf.go.jp/assets/docs/download/intermediate1/MarugotoIntermediate1VocabularyList_EN.pdf",
+            "pdfPage": 18,
+            "printedPage": 17,
+            "section": "Topic 4, preparation vocabulary for hot-spring travel",
+            "entries": [
+              "～部屋 / ～へや・～べや"
+            ],
+            "observation": "Room counts occur beside 泊 and 名; room labels are not room quantities."
+          },
+          {
+            "baseline": "b697a3d65a4edf893b04eea33d2356cd600e87c9",
+            "observation": "All 54 counter paradigms and the pinned Grammar exercise bodies were screened; no numerical production/selection tasks for these four forms were found. labels-expression-7 explicitly teaches a room identifier, not two rooms. quantity-zutsu-entry-groups-* teach group-size arithmetic, not 人組 production."
+          }
+        ],
+        "minimalRemedy": "Add/extend bounded C rows for these four units and explicit unit-versus-contents/group-size contrasts. They need not each get a separate file or a complete paradigm. If any is intentionally excluded from practice, give a specific reason and obtain owner agreement rather than silently treating a neighboring counter as coverage.",
+        "confidence": "high for absence and distinct senses; editorial, not frequency-measured, for recommended priority",
+        "ownerDecisionNeeded": true,
+        "ownerDecisionCondition": "Required for significant exclusion; routine inclusion fits C's existing ownership.",
+        "status": "unresolved",
+        "matrixGateBlocker": true
+      },
+      {
+        "number": 3,
+        "id": "F3",
+        "severity": "Moderate",
+        "facets": [
+          "scoped coverage"
+        ],
+        "locations": [
+          "counter-n3-sources.json:200",
+          "counter-n3-sources.json:237",
+          "counter-n3-sources.json:221",
+          "counter-n3-sources.json:226"
+        ],
+        "claim": "The additional-reference comparison requires explicit decisions for indefinite magnitude 何百個, numeric limits with 以内, and interval-since-last-event ～年ぶり; none is currently disposed of by operation.",
+        "impact": "数百 is not evidence for every 何-prefixed expression; existing 何冊か tasks are not 何百個. Generic inclusive-boundary practice does not itself teach 以内. A time interval before a repeated event is not the same operation as a duration or calendar date.",
+        "evidence": [
+          {
+            "url": "https://marugoto.jpf.go.jp/assets/docs/download/intermediate1/MarugotoIntermediate1VocabularyList_EN.pdf",
+            "pdfPage": 46,
+            "printedPage": 45,
+            "section": "Topic 9, Part 3 festival-description vocabulary",
+            "entries": [
+              "何百個 / なんびゃっこ"
+            ],
+            "observation": "The English gloss is hundreds: this is an indefinite magnitude, not merely an interrogative how-many entry."
+          },
+          {
+            "url": "https://marugoto.jpf.go.jp/assets/docs/download/intermediate1/MarugotoIntermediate1VocabularyList_EN.pdf",
+            "pdfPages": [
+              6,
+              32,
+              42
+            ],
+            "printedPages": [
+              5,
+              31,
+              41
+            ],
+            "section": "Topic 1 Part 5; Topic 6 Part 5; Topic 8 Part 5",
+            "entries": [
+              "～以内"
+            ],
+            "observation": "The Topic 6 writing vocabulary also lists ～文字, directly relevant to the proposed character-limit context."
+          },
+          {
+            "url": "https://marugoto.jpf.go.jp/assets/docs/download/intermediate1/MarugotoIntermediate1VocabularyList_EN.pdf",
+            "pdfPage": 23,
+            "printedPage": 22,
+            "section": "Topic 5 preparation",
+            "entries": [
+              "～年ぶり / ～ねんぶり"
+            ],
+            "observation": "The entry identifies an event returning after a stated number of years."
+          },
+          {
+            "baselinePath": "grammar/quantity-scope.json",
+            "observation": "All 28 tasks were read. They cover 以上/以下, より多い/少ない, benchmark は, 何counterか, recurrence, negative scope, and resource/price/activity frames, not these three exact operations/forms."
+          }
+        ],
+        "minimalRemedy": "Extend B plus D's uncertainty owner for the 何百-type contrast; allocate or explicitly support 以内 in the character-limit/bounds strand. Give ～ぶり a bounded time/Grammar owner or a reasoned reference-only decision. This is a request to resolve the surfaced candidates, not to import all B1 grammar or invent a new engine.",
+        "confidence": "high for evidence and absence; medium-high for the precise exercise-versus-reference allocation",
+        "ownerDecisionNeeded": true,
+        "ownerDecisionCondition": "Owner adjudication is needed if these practical strands are excluded; exact Grammar placement remains a content decision.",
+        "status": "unresolved",
+        "matrixGateBlocker": true
+      },
+      {
+        "number": 4,
+        "id": "F4",
+        "severity": "Minor",
+        "facets": [
+          "scoped coverage"
+        ],
+        "locations": [
+          "counter-n3-sources.json:260",
+          "counter-n3-sources.json:221"
+        ],
+        "claim": "N3:458 correctly separates rank noun くらい from approximation くらい and ranking suffix い, but omits the mapped noun's numerical place-value sense.",
+        "impact": "This is a numerical sense in the pinned source mapping, not a homograph that can be discarded. A digit's place is also distinct from the number of digits 桁.",
+        "evidence": [
+          {
+            "baselinePath": "docs/n3-vocabulary-sources.tsv",
+            "sourceId": "N3:458",
+            "entry": "1155400",
+            "senseIndices": "3,4,5"
+          },
+          {
+            "baselinePath": "words/位.md",
+            "section": "Meaning",
+            "observation": "The article expressly says that くらい names a digit's place and illustrates identifying the digit in the hundreds place."
+          },
+          {
+            "rowId": "digits-text-units",
+            "observation": "The row names digit count, lines and characters, not place-value terminology; the candidate is instead attached to foundation-approximation."
+          }
+        ],
+        "minimalRemedy": "Give place-value 位/くらい an explicit disposition and correct numerical owner/link. Reference-only language support may be sufficient if clearly justified; no arithmetic course is required.",
+        "confidence": "high",
+        "ownerDecisionNeeded": false,
+        "ownerDecisionCondition": "Only a later substantial exclusion of practical magnitude/place-value work would require a new owner decision.",
+        "status": "unresolved",
+        "matrixGateBlocker": true
+      },
+      {
+        "number": 5,
+        "id": "F5",
+        "severity": "Moderate",
+        "facets": [
+          "scoped coverage"
+        ],
+        "locations": [
+          "counter-n3-sources.json:219",
+          "counter-n3-sources.json:303",
+          "counter-n3-sources.json:rows (no numerical 通り disposition)"
+        ],
+        "claim": "Two practical senses in the already selected usage sources remain unallocated: 点 for scores and 通り for alternative ways.",
+        "impact": "Merchandise-count 点 is not a score, and the justified refusal to inherit a counter sense from N3:1175's street/as-stated identity does not dispose of independently attested numerical 通り. These are bounded everyday alternatives, not a request for the entire counter encyclopedia.",
+        "evidence": [
+          {
+            "url": "https://imabi.org/counters-vi/",
+            "section": "The Counter ～点",
+            "observation": "The source explicitly distinguishes points from merchandise, supplies a pronunciation table, and contrasts score example 28 with merchandise examples 29–30."
+          },
+          {
+            "url": "https://imabi.org/counters-v/",
+            "section": "The Counter ～通り, table and examples 47–49",
+            "observation": "The source treats counts of readings, ways and combinations; this is independent of the selected street/as-stated lexical senses."
+          },
+          {
+            "baselinePath": "words/通り.md",
+            "observation": "The pinned N3 article is correctly limited to street/as-stated and the related どおり comparison. It is not evidence of already practised numerical ways."
+          }
+        ],
+        "minimalRemedy": "Extend the C point row to distinguish scores from merchandise, and explicitly allocate numerical 通り or document a specific reference-only/deferral decision. No combinatorics calculation or exhaustive native-number table is necessary.",
+        "confidence": "high for distinct senses and missing dispositions; medium-high for core priority",
+        "ownerDecisionNeeded": true,
+        "ownerDecisionCondition": "Needed if significant ordinary-use exclusions are retained; no special decision required merely to include bounded C work.",
+        "status": "unresolved",
+        "matrixGateBlocker": true
+      },
+      {
+        "number": 6,
+        "id": "F6",
+        "severity": "Minor",
+        "facets": [
+          "scoped coverage"
+        ],
+        "locations": [
+          "counter-n3-sources.json:192",
+          "counter-n3-sources.json:225",
+          "counter-n3-sources.json:234",
+          "counter-n3-sources.json:245"
+        ],
+        "claim": "Some reuse claims are true in the baseline but not evidenced by the exact row IDs, and some foundation operations are not explicitly assigned a denominator row.",
+        "impact": "A later row-completion check could accept whole-expression IDs as selection/reverse evidence or lose track of already-existing age/floor practice. This is a ledger traceability defect, not an instruction to duplicate or relabel the baseline.",
+        "evidence": [
+          {
+            "rowId": "foundation-compounds",
+            "observation": "Its four cited *compound-expression-1 records prescribe the counter in the cue and prove writing/reading, not contextual counter selection. Existing hon-pen-1, hiki-cat-1 and other v1 records supply selection separately."
+          },
+          {
+            "rowId": "foundation-extended-counters",
+            "observation": "The evidence list contains two 軒 forward cards and six expression IDs, but no reverse IDs. Existing soku-noun-1, chaku-noun-1, ken-noun-1, mei-noun-1, do-noun-1 and haku-noun-1 actually supply the reverse operation."
+          },
+          {
+            "sourceId": "N3:92",
+            "observation": "The candidate mentions N5 comparison-set tasks but points to a row containing only six means-and-scope IDs. n5-comparison-bags-maximum and n5-comparison-routes-maximum are the relevant additional interpretation evidence."
+          },
+          {
+            "baselinePaths": [
+              "counters/age.json",
+              "counters/floor.json"
+            ],
+            "observation": "Age, including 二十歳, and floor identifiers are present in the pinned runtime. No matrix row explicitly names 歳 or 階 as a reused operation; a full inventory hash does not provide that semantic mapping."
+          }
+        ],
+        "minimalRemedy": "Attach a small operation-to-ID map, including the actual v1/reverse and N5 comparison evidence, and explicitly absorb age/floor and the remaining foundation files into named foundation rows. Reuse unchanged records.",
+        "confidence": "high",
+        "ownerDecisionNeeded": false,
+        "status": "unresolved",
+        "matrixGateBlocker": true
+      },
+      {
+        "number": 7,
+        "id": "F7",
+        "severity": "Minor",
+        "facets": [
+          "scoped coverage",
+          "comprehensibility"
+        ],
+        "locations": [
+          "counter-n3.md:104-111",
+          "counter-n3-sources.json:239",
+          "counter-n3-sources.json:gates.ownerAgreedSignificantNewExclusions"
+        ],
+        "claim": "The prose excludes uncommon traditional units, but the ledger's reference-only row covers traditional measure systems without naming the boundary. No owner agreement is recorded.",
+        "impact": "The blanket row can be read as excluding every traditional-unit use, including ordinary-context candidates, without a finite decision. It cannot yet serve as an agreed significant-exclusion contract.",
+        "evidence": [
+          {
+            "url": "https://imabi.org/numbers-x-measurements/",
+            "sections": [
+              "More Units",
+              "Japanese Units: Area / Volume / Mass"
+            ],
+            "observation": "The selected source mixes everyday metric forms with traditional units and specialist tables. Table inclusion establishes units, not rarity or the practical irrelevance of all members."
+          },
+          {
+            "draftObservation": "The human-readable statement says uncommon, while row traditional-long-tail does not list which units that means. The owner-agreement array is empty."
+          }
+        ],
+        "minimalRemedy": "Name the bounded excluded/reference-only subset and separately decide the practical housing/cooking candidates (for example area notation and rice-volume terminology) rather than calling an entire system uncommon. Record explicit owner agreement for significant exclusions. This review does not demand full paradigms for those candidates.",
+        "confidence": "high for the scope ambiguity and absent recorded agreement; practical priority of specific traditional units remains unverified in this bounded review",
+        "ownerDecisionNeeded": true,
+        "status": "unresolved",
+        "matrixGateBlocker": true
+      }
+    ],
+    "additionalReference": {
+      "publisher": "The Japan Foundation",
+      "title": "Marugoto: Japanese Language and Culture, Intermediate 1 (B1), Vocabulary List, English",
+      "indexUrl": "https://marugoto.jpf.go.jp/en/download/intermediate1/",
+      "url": "https://marugoto.jpf.go.jp/assets/docs/download/intermediate1/MarugotoIntermediate1VocabularyList_EN.pdf",
+      "retrievedOn": "2026-10-29",
+      "pdfSha256": "4827bc0172f0b42f08b9aa8de6d5bb86706f028037ff797f6f72ae7c8e3bbe9b",
+      "pages": 48,
+      "printedVersion": "ver. 20200306 on PDF page 1",
+      "pdfMetadataCreation": "2025-11-07T10:43:24+09:00",
+      "pdfMetadataModification": "2025-11-07T17:12:37+09:00",
+      "compilationIndependence": "A separately compiled, topic-linked B1 course vocabulary list, not the community JLPT/Waller vocabulary distribution or an IMABI/Tofugu counter table. The frozen ledger uses Marugoto A2/B1, not this Intermediate 1 volume; the requester also identified this volume as unused in matrix assembly. Same publisher as A2/B1 is disclosed: this is independent course compilation, not a claim of independent publisher triangulation.",
+      "compilationMethod": "Screened all topic-vocabulary PDF pages 3–48 using independent numerical/unit/English-meaning and ～-entry passes; inspected exact matching entries and neighboring topic/Part headings. Did not select only terms already in the matrix. Relevant entries were manually compared by sense and operation.",
+      "japaneseExtraction": {
+        "tool": "existing isolated pypdf",
+        "method": "extract_text and layout extraction; two-column lines inspected",
+        "readable": true,
+        "checkedExamples": [
+          "～人分 / ～にんぶん",
+          "～丁 / ～ちょう",
+          "～部屋 / ～へや・～べや",
+          "～人組 / ～りぐみ・～にんぐみ",
+          "何百個 / なんびゃっこ"
+        ],
+        "limits": "Pitch markers and line breaks occur; column adjacency was checked before interpreting entries. No course activities or exercise solutions were reproduced in the report."
+      },
+      "limits": [
+        "CEFR B1 course inclusion is not a JLPT N3 assignment or an exhaustive counter/quantity inventory.",
+        "It is a vocabulary list, not a graded counter paradigm or evidence of every acceptable variant.",
+        "Topics bias which forms occur; absence is not evidence that a common counter is unimportant.",
+        "Its shorthand English 以上 gloss is not used to redefine inclusive bounds.",
+        "The isolated ～分 gloss on PDF page 44 is underdetermined; no consequential semantic claim is based on it."
+      ],
+      "comparison": [
+        {
+          "entries": [
+            "週に"
+          ],
+          "pdfPages": [
+            4,
+            34
+          ],
+          "printedPages": [
+            3,
+            33
+          ],
+          "section": "Topics 1 and 7",
+          "comparisonResult": "covered-existing-operation",
+          "matrixRows": [
+            "foundation-scope"
+          ],
+          "reviewerAssessment": "Per-week frequency is actually practised by quantity-scope-weekly-library-rate.",
+          "recommendation": "Reuse; no duplicate rate arithmetic.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～歳"
+          ],
+          "pdfPages": [
+            5,
+            23
+          ],
+          "printedPages": [
+            4,
+            22
+          ],
+          "section": "Topics 1 and 5",
+          "comparisonResult": "covered-existing-needs-explicit-row-map",
+          "matrixRows": [],
+          "reviewerAssessment": "Age expressions including 二十歳 exist in age.json; the denominator does not name this foundation.",
+          "recommendation": "Link the unchanged age evidence.",
+          "findingIds": [
+            "F6"
+          ]
+        },
+        {
+          "entries": [
+            "～年目"
+          ],
+          "pdfPages": [
+            5,
+            23
+          ],
+          "printedPages": [
+            4,
+            22
+          ],
+          "section": "Topics 1 and 5",
+          "comparisonResult": "reference-extension-candidate",
+          "matrixRows": [
+            "foundation-labels-ordinals"
+          ],
+          "reviewerAssessment": "Generic ordinal formation exists, but no year-ordinal task is claimed by those exact IDs.",
+          "recommendation": "Reasonable reference-only composition or one bounded temporal contrast; do not claim exact existing practice.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～以内"
+          ],
+          "pdfPages": [
+            6,
+            32,
+            42
+          ],
+          "printedPages": [
+            5,
+            31,
+            41
+          ],
+          "section": "Topic 1 Part 5; Topic 6 Part 5; Topic 8 Part 5",
+          "comparisonResult": "unresolved-practical-gap",
+          "matrixRows": [
+            "digits-text-units",
+            "foundation-scope"
+          ],
+          "reviewerAssessment": "Character-limit vocabulary is directly relevant; existing bound tasks do not contain this form.",
+          "recommendation": "Allocate language support/production and the boundary meaning explicitly.",
+          "findingIds": [
+            "F3"
+          ]
+        },
+        {
+          "entries": [
+            "～人分"
+          ],
+          "pdfPages": [
+            11,
+            12
+          ],
+          "printedPages": [
+            10,
+            11
+          ],
+          "section": "Topic 2 Parts 4 and 5",
+          "comparisonResult": "unresolved-practical-gap",
+          "matrixRows": [
+            "portions-items-kinds"
+          ],
+          "reviewerAssessment": "People's-worth quantity is not automatically 人前 or a count of diners.",
+          "recommendation": "Include bounded C work or obtain an explicit exclusion decision.",
+          "findingIds": [
+            "F2"
+          ]
+        },
+        {
+          "entries": [
+            "～個"
+          ],
+          "pdfPages": [
+            11,
+            12,
+            47
+          ],
+          "printedPages": [
+            10,
+            11,
+            46
+          ],
+          "section": "Topics 2 and 9",
+          "comparisonResult": "covered-existing-operation",
+          "matrixRows": [
+            "foundation-compounds"
+          ],
+          "reviewerAssessment": "Existing ko v1 and compound expressions provide individual-object count formation.",
+          "recommendation": "Reuse exact v1/expression IDs; not every course noun is a new context.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～ふくろ"
+          ],
+          "pdfPages": [
+            12
+          ],
+          "printedPages": [
+            11
+          ],
+          "section": "Topic 2 Part 5",
+          "comparisonResult": "covered-planned-not-runtime",
+          "matrixRows": [
+            "bags-fukuro"
+          ],
+          "reviewerAssessment": "Independent course entry corroborates ordinary bag-count relevance.",
+          "recommendation": "Retain planned row; no completed coverage claim.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～丁"
+          ],
+          "pdfPages": [
+            12
+          ],
+          "printedPages": [
+            11
+          ],
+          "section": "Topic 2 Part 5, tofu entry",
+          "comparisonResult": "unresolved-practical-gap",
+          "matrixRows": [],
+          "reviewerAssessment": "The source explicitly identifies a tofu counter, an ordinary recipe unit.",
+          "recommendation": "Add bounded C row; not all other 丁 senses.",
+          "findingIds": [
+            "F2"
+          ]
+        },
+        {
+          "entries": [
+            "回数",
+            "割合"
+          ],
+          "pdfPages": [
+            13
+          ],
+          "printedPages": [
+            12
+          ],
+          "section": "Topic 3 preparation",
+          "comparisonResult": "covered-support-or-planned",
+          "matrixRows": [
+            "lexical-support",
+            "proportions",
+            "ratio-rate-interpretation"
+          ],
+          "reviewerAssessment": "Frequency/proportion nouns support other operations rather than being new drills.",
+          "recommendation": "Retain lexical-support status and actual meaning-task ownership.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "前半",
+            "後半"
+          ],
+          "pdfPages": [
+            16
+          ],
+          "printedPages": [
+            15
+          ],
+          "section": "Topic 3 music vocabulary",
+          "comparisonResult": "reasonable-reference-only",
+          "matrixRows": [
+            "fractions",
+            "lexical-support"
+          ],
+          "reviewerAssessment": "First/second half can be recognition support; course inclusion does not mandate a separate paradigm.",
+          "recommendation": "Document support disposition, not completed half-interpretation practice.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～人組"
+          ],
+          "pdfPages": [
+            16
+          ],
+          "printedPages": [
+            15
+          ],
+          "section": "Topic 3 Part 4",
+          "comparisonResult": "unresolved-practical-gap",
+          "matrixRows": [
+            "sets-kumi",
+            "foundation-distribution"
+          ],
+          "reviewerAssessment": "Membership size differs from number of groups; zutsu grouping arithmetic is not this expression.",
+          "recommendation": "Add a bounded group-size/count contrast.",
+          "findingIds": [
+            "F2"
+          ]
+        },
+        {
+          "entries": [
+            "～世紀"
+          ],
+          "pdfPages": [
+            17
+          ],
+          "printedPages": [
+            16
+          ],
+          "section": "Topic 3 Part 5",
+          "comparisonResult": "covered-planned-not-runtime",
+          "matrixRows": [
+            "bands-centuries"
+          ],
+          "reviewerAssessment": "Independent intermediate course evidence corroborates century relevance.",
+          "recommendation": "Retain D allocation.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～泊"
+          ],
+          "pdfPages": [
+            18
+          ],
+          "printedPages": [
+            17
+          ],
+          "section": "Topic 4 preparation",
+          "comparisonResult": "covered-existing-operation",
+          "matrixRows": [
+            "foundation-extended-counters"
+          ],
+          "reviewerAssessment": "Existing stay counts and itinerary expressions are real.",
+          "recommendation": "Reuse; do not equate nights with fixed hours.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～部屋"
+          ],
+          "pdfPages": [
+            18
+          ],
+          "printedPages": [
+            17
+          ],
+          "section": "Topic 4 preparation",
+          "comparisonResult": "unresolved-practical-gap",
+          "matrixRows": [
+            "housing-ko-tou",
+            "foundation-labels-ordinals"
+          ],
+          "reviewerAssessment": "Rooms are neither dwelling units nor buildings, and 号室 is an identifier.",
+          "recommendation": "Add C room-count disposition and relevant label/count contrast.",
+          "findingIds": [
+            "F2"
+          ]
+        },
+        {
+          "entries": [
+            "～名",
+            "～名様"
+          ],
+          "pdfPages": [
+            18,
+            20,
+            41
+          ],
+          "printedPages": [
+            17,
+            19,
+            40
+          ],
+          "section": "Topics 4 and 8",
+          "comparisonResult": "covered-existing-operation",
+          "matrixRows": [
+            "foundation-extended-counters"
+          ],
+          "reviewerAssessment": "Existing mei expressions include formal counts and 何名様; existing cues govern address/register.",
+          "recommendation": "Reuse, preserving context qualification.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～以上"
+          ],
+          "pdfPages": [
+            19,
+            46,
+            47
+          ],
+          "printedPages": [
+            18,
+            45,
+            46
+          ],
+          "section": "Topics 4 and 9",
+          "comparisonResult": "covered-existing-operation",
+          "matrixRows": [
+            "foundation-scope"
+          ],
+          "reviewerAssessment": "Existing boundary tasks explicitly include equality. The B1 English shorthand more than must not override that.",
+          "recommendation": "Reuse precise boundary evidence; do not copy the gloss as a strict > rule.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "半年先"
+          ],
+          "pdfPages": [
+            19
+          ],
+          "printedPages": [
+            18
+          ],
+          "section": "Topic 4 vocabulary",
+          "comparisonResult": "reasonable-reference-only",
+          "matrixRows": [
+            "foundation-time"
+          ],
+          "reviewerAssessment": "A future offset can be explained with existing half-year/time support; exact expression is not an existing tested target.",
+          "recommendation": "Reference support is sufficient unless a new offset decision is chosen.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～回目",
+            "～人目"
+          ],
+          "pdfPages": [
+            20,
+            24
+          ],
+          "printedPages": [
+            19,
+            23
+          ],
+          "section": "Topics 4 and 5",
+          "comparisonResult": "covered-existing-operation",
+          "matrixRows": [
+            "foundation-labels-ordinals"
+          ],
+          "reviewerAssessment": "ordinals-expression-3/4 and -5/6 provide occurrence/person ordinal forms.",
+          "recommendation": "Reuse exact IDs.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～年ぶり"
+          ],
+          "pdfPages": [
+            23
+          ],
+          "printedPages": [
+            22
+          ],
+          "section": "Topic 5 preparation",
+          "comparisonResult": "unresolved-practical-disposition",
+          "matrixRows": [
+            "foundation-time"
+          ],
+          "reviewerAssessment": "Elapsed interval before recurrence is not a duration/calendar identity.",
+          "recommendation": "Allocate D/appropriate existing Grammar ownership or make a reasoned reference-only decision.",
+          "findingIds": [
+            "F3"
+          ]
+        },
+        {
+          "entries": [
+            "マイナス～度"
+          ],
+          "pdfPages": [
+            24
+          ],
+          "printedPages": [
+            23
+          ],
+          "section": "Topic 5 Part 2",
+          "comparisonResult": "covered-existing-operation",
+          "matrixRows": [
+            "foundation-decimals"
+          ],
+          "reviewerAssessment": "temperature-expression-2 is directly relevant negative-temperature production/reading.",
+          "recommendation": "Reuse.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～巻",
+            "第～話",
+            "第～巻"
+          ],
+          "pdfPages": [
+            30,
+            32
+          ],
+          "printedPages": [
+            29,
+            31
+          ],
+          "section": "Topic 6 Parts 2 and 5",
+          "comparisonResult": "covered-planned-not-runtime",
+          "matrixRows": [
+            "episodes-volumes"
+          ],
+          "reviewerAssessment": "The independent reference confirms volume/episode labels as practical intermediate vocabulary.",
+          "recommendation": "Retain C work and its label/count distinction.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～文字"
+          ],
+          "pdfPages": [
+            32
+          ],
+          "printedPages": [
+            31
+          ],
+          "section": "Topic 6 Part 5",
+          "comparisonResult": "covered-planned-not-runtime",
+          "matrixRows": [
+            "digits-text-units"
+          ],
+          "reviewerAssessment": "Explicit character-count entry; paired 以内 exposes an additional limit construction.",
+          "recommendation": "Retain C character count; account for the limit construction.",
+          "findingIds": [
+            "F3"
+          ]
+        },
+        {
+          "entries": [
+            "～段",
+            "～級"
+          ],
+          "pdfPages": [
+            33,
+            34
+          ],
+          "printedPages": [
+            32,
+            33
+          ],
+          "section": "Topic 7 preparation and Part 2",
+          "comparisonResult": "covered-planned-not-runtime",
+          "matrixRows": [
+            "ranks-grades"
+          ],
+          "reviewerAssessment": "Martial/proficiency ranks are supported; not all grading systems order labels identically.",
+          "recommendation": "Retain scoped row, without a universal hierarchy.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "約～",
+            "～倍"
+          ],
+          "pdfPages": [
+            35
+          ],
+          "printedPages": [
+            34
+          ],
+          "section": "Topic 7 Part 4",
+          "comparisonResult": "covered-planned-not-runtime",
+          "matrixRows": [
+            "approximation-forms",
+            "ratios-multiples"
+          ],
+          "reviewerAssessment": "Independent everyday intermediate inclusion corroborates approximate/multiplier vocabulary.",
+          "recommendation": "Retain B formation and D meaning ownership.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "ドル"
+          ],
+          "pdfPages": [
+            35
+          ],
+          "printedPages": [
+            34
+          ],
+          "section": "Topic 7 Part 4",
+          "comparisonResult": "reasonable-reference-only",
+          "matrixRows": [
+            "lexical-support",
+            "foundation-prices"
+          ],
+          "reviewerAssessment": "Foreign currency is a unit substitution; no currency conversion curriculum follows.",
+          "recommendation": "Support/reference, unless a specific contrast needs a task.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "画数"
+          ],
+          "pdfPages": [
+            39
+          ],
+          "printedPages": [
+            38
+          ],
+          "section": "Topic 8 Part 2",
+          "comparisonResult": "reasonable-reference-only",
+          "matrixRows": [
+            "lexical-support",
+            "digits-text-units"
+          ],
+          "reviewerAssessment": "Stroke-count vocabulary is not proof of productive ～画 coverage.",
+          "recommendation": "Recognition support is reasonable; no automatic counter paradigm requirement.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "カード番号",
+            "だいたい"
+          ],
+          "pdfPages": [
+            40
+          ],
+          "printedPages": [
+            39
+          ],
+          "section": "Topic 8 Part 3/role-play vocabulary",
+          "comparisonResult": "reference-or-adjacent-support",
+          "matrixRows": [
+            "foundation-labels-ordinals",
+            "approximation-forms"
+          ],
+          "reviewerAssessment": "Identifier and approximate-amount concepts are represented, but card-number digit-by-digit reading is not shown by platform labels.",
+          "recommendation": "Do not claim exact identifier pronunciation coverage; support or separately scope it if selected.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～位",
+            "第～位",
+            "ベスト3"
+          ],
+          "pdfPages": [
+            41
+          ],
+          "printedPages": [
+            40
+          ],
+          "section": "Topic 8 Part 4",
+          "comparisonResult": "covered-planned-or-reference",
+          "matrixRows": [
+            "ranks-grades"
+          ],
+          "reviewerAssessment": "Rank suffix and 第 rank label are planned; best-three English loan phrasing need not become another drill.",
+          "recommendation": "Retain C rank work; reference-only for optional loan phrasing.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～代"
+          ],
+          "pdfPages": [
+            41
+          ],
+          "printedPages": [
+            40
+          ],
+          "section": "Topic 8 Part 4",
+          "comparisonResult": "covered-planned-not-runtime",
+          "matrixRows": [
+            "bands-centuries"
+          ],
+          "reviewerAssessment": "Age-decade grouping independently corroborated.",
+          "recommendation": "Retain D band work.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～年後"
+          ],
+          "pdfPages": [
+            41
+          ],
+          "printedPages": [
+            40
+          ],
+          "section": "Topic 8 Part 4",
+          "comparisonResult": "reference-extension-candidate",
+          "matrixRows": [
+            "foundation-time"
+          ],
+          "reviewerAssessment": "Anchored future offset is not an exact existing duration task; a transparent modifier need not receive a full series.",
+          "recommendation": "Explicit support/reference disposition or one contrast; optional standalone practice.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～人家族"
+          ],
+          "pdfPages": [
+            42
+          ],
+          "printedPages": [
+            41
+          ],
+          "section": "Topic 8 Part 5",
+          "comparisonResult": "reasonable-reference-only",
+          "matrixRows": [
+            "foundation-compounds",
+            "lexical-support"
+          ],
+          "reviewerAssessment": "Household-size expression can be supported after people counts; not a new group-count algorithm.",
+          "recommendation": "Reference support, keeping people count and number of households distinct.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～もの～"
+          ],
+          "pdfPages": [
+            44
+          ],
+          "printedPages": [
+            43
+          ],
+          "section": "Topic 9 Part 1 festival vocabulary",
+          "comparisonResult": "reasonable-reference-only",
+          "matrixRows": [
+            "lexical-support"
+          ],
+          "reviewerAssessment": "Emphatic quantity framing is not another cardinal system.",
+          "recommendation": "Support/reference rather than automatically importing a whole grammar lesson.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "～分 / ～ぶん"
+          ],
+          "pdfPages": [
+            44
+          ],
+          "printedPages": [
+            43
+          ],
+          "section": "Topic 9 Part 1",
+          "comparisonResult": "sense-needs-context-not-adopted",
+          "matrixRows": [
+            "lexical-support"
+          ],
+          "reviewerAssessment": "The English list gloss ~times is insufficient to identify the exact amount-worth construction here. It must not be treated as fraction 分の or time 分/ふん.",
+          "recommendation": "Not used as correctness evidence. Generic amount-worth can be supported with separately verified 人分; cultural specific use is optional.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "何百個"
+          ],
+          "pdfPages": [
+            46
+          ],
+          "printedPages": [
+            45
+          ],
+          "section": "Topic 9 Part 3",
+          "comparisonResult": "unresolved-practical-gap",
+          "matrixRows": [
+            "uncertain-prefixes",
+            "uncertainty-interpretation"
+          ],
+          "reviewerAssessment": "The listed indefinite hundreds expression is distinct from existing 何counterか.",
+          "recommendation": "Extend B/D uncertainty coverage.",
+          "findingIds": [
+            "F3"
+          ]
+        },
+        {
+          "entries": [
+            "半分",
+            "～の分"
+          ],
+          "pdfPages": [
+            47
+          ],
+          "printedPages": [
+            46
+          ],
+          "section": "Topic 9 Part 4",
+          "comparisonResult": "covered-planned-or-support",
+          "matrixRows": [
+            "fractions",
+            "fraction-discount-interpretation",
+            "lexical-support"
+          ],
+          "reviewerAssessment": "Half/allocated share fit the existing planned owners; no completed fraction coverage is implied.",
+          "recommendation": "Retain relevant planned work and lexical support.",
+          "findingIds": []
+        },
+        {
+          "entries": [
+            "その6"
+          ],
+          "pdfPages": [
+            48
+          ],
+          "printedPages": [
+            47
+          ],
+          "section": "Topic 9 Part 5",
+          "comparisonResult": "reasonable-reference-only",
+          "matrixRows": [
+            "foundation-labels-ordinals"
+          ],
+          "reviewerAssessment": "A numbered-part label is not a quantity. Exact phrasing is not already practised merely because 番 exists.",
+          "recommendation": "Recognition/reference is sufficient; do not demand every label style.",
+          "findingIds": []
+        }
+      ],
+      "summary": {
+        "strongRecommendedCoreAdditions": [
+          "people's-worth 人分",
+          "tofu 丁",
+          "room count 部屋",
+          "group-size 人組",
+          "indefinite 何百-type expressions",
+          "以内 in the already planned character-limit/boundary context"
+        ],
+        "explicitDispositionNeeded": [
+          "～年ぶり interval since recurrence"
+        ],
+        "reasonableSupportOrOptionalExtensions": [
+          "～年目",
+          "～年後",
+          "半年先",
+          "～人家族",
+          "ドル",
+          "画数",
+          "その6",
+          "前半/後半",
+          "emphatic ～もの～"
+        ],
+        "notACourseImport": true
+      }
+    },
+    "limits": [
+      "new runtime pilot text",
+      "pilot rubric application",
+      "app code/architecture review",
+      "builds/tests/emulator/device checks",
+      "bulk authoring or rollout"
+    ]
+  },
+  "reconciliation": [
+    {
+      "finding": "F1",
+      "status": "independently-resolved",
+      "action": "Corrected the pair-only IMABI attribution; ratio points to the pinned exact 対/たい identity, not to that page."
+    },
+    {
+      "finding": "F2",
+      "status": "independently-resolved",
+      "action": "Included bounded C rows for 人分, tofu 丁, 部屋 and 人組, with distinct counted-unit contexts; no exclusion proposed."
+    },
+    {
+      "finding": "F3",
+      "status": "independently-resolved",
+      "action": "Included non-interrogative 何百 in B/D; character-limit 以内 in C plus D interpretation; 年ぶり in D expression/time-frame interpretation. No new engine or borrowed Grammar level."
+    },
+    {
+      "finding": "F4",
+      "status": "independently-resolved",
+      "action": "Explicit place-value support row links the mapped 位/くらい numerical noun; lexical candidate corrected without changing the source TSV."
+    },
+    {
+      "finding": "F5",
+      "status": "independently-resolved",
+      "action": "Expanded 点 to scores and merchandise; added independently sourced numerical 通り work, without relabeling N3:1175."
+    },
+    {
+      "finding": "F6",
+      "status": "independently-resolved",
+      "action": "Mapped all54 unchanged counter source files to actual operation-specific IDs; explicit age/floor row, v1/reverse evidence and N5 maximum tasks supplied."
+    },
+    {
+      "finding": "F7",
+      "status": "independently-resolved",
+      "action": "Replaced the blanket traditional-system boundary with a finite reference subset and required housing-area, rice-volume and recipe-spoon rows. No owner approval fabricated; significance of the remaining original reference boundary awaits reviewer reconciliation."
+    }
+  ],
+  "ownerAgreementOnSignificantNewExclusions": [],
+  "noBulkAuthoringYet": true,
+  "focusedFollowUp": {
+    "completedOnUtc": "2026-10-29T07:31:54.653273+00:00",
+    "snapshotHashesVerified": {
+      "counter-n3-baseline.json": "bd93cbfd7623986c6f2fb075b26e2aad6c6efbd93505a85b719c6b08c46fc7f7",
+      "counter-n3-review.json": "bd3ed106da65bf592fa4affe57386b05494afae496e03f6599208cf3196e5d62",
+      "counter-n3-sources.json": "2b4bcaac654bc9178d8cf7ddbc65e7bd79af53f51176ce17a0f3d3271684bf3c",
+      "counter-n3.md": "dd6e259a8f96294e82960f987bdd065367e3ed403cd2382fd5392e70a94b7599"
+    },
+    "findingAdjudications": [
+      {
+        "findingId": "F1",
+        "disposition": "RESOLVED",
+        "verdict": "CLEAN",
+        "locations": [
+          "counter-n3-sources.json:68",
+          "counter-n3-sources.json:198",
+          "counter-n3-sources.json:597",
+          "counter-n3-sources.json:1850"
+        ],
+        "verifiedChange": "The IMABI scope explicitly says the page teaches pair 対/つい, not ratio たい. Both ratio rows now link pinned-tai-sense with the exact baseline article and entries 1409800/1409810.",
+        "adjudication": "This repairs the actual misattribution without claiming that the pinned article is a fresh direct dictionary inspection. The article's contrast was independently inspected in the initial review; no new web crawl was necessary.",
+        "remainingMatrixBlocker": false,
+        "ownerDecisionRequired": false,
+        "runtimeQualification": "Scope/source reconciliation only; required new tasks and their exact answers are not accepted by this report.",
+        "confidence": "high"
+      },
+      {
+        "findingId": "F2",
+        "disposition": "RESOLVED",
+        "verdict": "CLEAN",
+        "locations": [
+          "counter-n3-sources.json:1960",
+          "counter-n3-sources.json:1986",
+          "counter-n3-sources.json:2014",
+          "counter-n3-sources.json:2039",
+          "counter-n3-sources.json:879"
+        ],
+        "verifiedChange": "Four required new-owner C rows cover 人分, tofu 丁, 部屋 and membership 人組. Their entity distinctions and intended operations are explicit; no exclusion is proposed.",
+        "adjudication": "The additional B1 evidence already inspected supports their inclusion. 人前 versus 人分, blocks versus packs/pieces, room quantity versus 号室, and number of groups versus members are not conflated.",
+        "remainingMatrixBlocker": false,
+        "ownerDecisionRequired": false,
+        "runtimeQualification": "Per-number readings and natural alternatives, especially 部屋 and 丁, remain later source-backed task acceptance work, as the rows explicitly state.",
+        "confidence": "high"
+      },
+      {
+        "findingId": "F3",
+        "disposition": "RESOLVED",
+        "verdict": "CLEAN",
+        "locations": [
+          "counter-n3-sources.json:624",
+          "counter-n3-sources.json:1876",
+          "counter-n3-sources.json:1214",
+          "counter-n3-sources.json:2089",
+          "counter-n3-sources.json:2112"
+        ],
+        "verifiedChange": "Noninterrogative 何百 is allocated to B forms and D meaning; C produces 以内 character-limit forms and D interprets their inclusive bounds; D owns ～ぶり expressions and existing time-frame interpretation.",
+        "adjudication": "All three missing dispositions have become required work, rather than being credited to neighboring old tasks. Ownership separates expression formation from meaning. Existing quantity-scope ownership is retained.",
+        "remainingMatrixBlocker": false,
+        "ownerDecisionRequired": false,
+        "runtimeQualification": "Exact contexts, natural readings, two genuinely distinct contexts per applicable Grammar facet, and complete-task level evidence remain pending. A context-key label is not itself proof of independent transfer.",
+        "confidence": "high"
+      },
+      {
+        "findingId": "F4",
+        "disposition": "RESOLVED",
+        "verdict": "CLEAN",
+        "locations": [
+          "counter-n3-sources.json:2137",
+          "counter-n3-sources.json:2379"
+        ],
+        "verifiedChange": "A B learner-reference row now explicitly supports numerical 位/くらい, and N3:458 points there while preserving the exact source identity.",
+        "adjudication": "The initial finding explicitly allowed bounded place-value support rather than a new arithmetic drill. The revised contrast with 桁, approximation くらい and ranking suffix い meets that remedy. The pinned TSV remains unchanged.",
+        "remainingMatrixBlocker": false,
+        "ownerDecisionRequired": false,
+        "runtimeQualification": "This is support, not practised coverage. The promised reference explanation must be delivered with the magnitude work.",
+        "confidence": "high"
+      },
+      {
+        "findingId": "F5",
+        "disposition": "RESOLVED",
+        "verdict": "CLEAN",
+        "locations": [
+          "counter-n3-sources.json:1156",
+          "counter-n3-sources.json:2064",
+          "counter-n3-sources.json:2637"
+        ],
+        "verifiedChange": "点 now explicitly includes score and merchandise meanings, with a test-score context. Numerical 通り has a separate required C row sourced from IMABI rather than inheriting N3:1175's street/as-stated membership.",
+        "adjudication": "Both practical missing senses are included with the source-identity restriction intact. There is no remaining requested exclusion or need for combinatorics exercises.",
+        "remainingMatrixBlocker": false,
+        "ownerDecisionRequired": false,
+        "runtimeQualification": "Scope/source reconciliation only; required new tasks and their exact answers are not accepted by this report.",
+        "confidence": "high"
+      },
+      {
+        "findingId": "F6",
+        "disposition": "PARTIALLY RESOLVED",
+        "verdict": "NEEDS FIX",
+        "locations": [
+          "counter-n3-sources.json:217",
+          "counter-n3-sources.json:1346",
+          "counter-n3-sources.json:1781",
+          "counter-n3-sources.json:2233",
+          "counter-n3-sources.json:2980-3811 (baselineOperationInventory and policy)"
+        ],
+        "verifiedChange": "All 54 pinned counter files have unique foundation owners; 225 selected operation-ID links match the actual source file and record kind. V1 selection, suffix typing, actual reverse records and v2 expressions are distinguished. N5 maximum tasks have been added to the relative-rank evidence. Age/floor now have a named owner.",
+        "adjudication": "The original structural traceability issues are repaired. One newly explicit semantic overclaim remains in that repair: floor identifiers/counts is broader than any inspected floor target. Close F6 after the narrow correction in F6-R1; do not infer a floor-quantity task from the suffix name.",
+        "remainingMatrixBlocker": true,
+        "residualFindingIds": [
+          "F6-R1"
+        ],
+        "ownerDecisionRequired": false,
+        "confidence": "high",
+        "nonblockingEvidencePrecision": "age-expression-5 genuinely targets 二十歳/はたち and was independently confirmed. Adding that ID to the selected age mapping would improve discoverability, but the declared mapping is selected rather than exhaustive and the complete named age file actually contains the task; this is not a second blocker."
+      },
+      {
+        "findingId": "F7",
+        "disposition": "RESOLVED",
+        "verdict": "CLEAN",
+        "locations": [
+          "counter-n3-sources.json:1922",
+          "counter-n3-sources.json:2158",
+          "counter-n3-sources.json:2183",
+          "counter-n3-sources.json:2207"
+        ],
+        "verifiedChange": "The blanket traditional-system reference boundary is replaced by a finite list. Required rows now cover housing area including 平方メートル/畳/坪, rice 合, and 大さじ/小さじ recipe measures. The revised prose explicitly rejects a universal rarity claim and does not fabricate owner agreement.",
+        "adjudication": "No concrete significant new exclusion is established by the remaining finite boundary within the reviewed practical extension. The initial F7 ambiguity is resolved by explicit scope and practical inclusions, not by assuming owner consent. The retained systematic/historical/formal extensions are reasonable reference support rather than mandatory standalone exercise families.",
+        "remainingMatrixBlocker": false,
+        "ownerDecisionRequired": false,
+        "runtimeQualification": "Exact practical cooking references, per-number readings and variants, and any claimed conversions remain pending before these rows can count as covered. No universal physical tatami size or invariant rice mass/yield is accepted.",
+        "confidence": "high"
+      }
+    ],
+    "note": "The sole residual F6-R1 below was subsequently corrected and accepted by the same reviewer."
+  },
+  "finalDisposition": {
+    "reviewedOn": "2026-10-29",
+    "reviewer": {
+      "role": "independent matrix reviewer",
+      "actualModel": "not exposed"
+    },
+    "correctedLedgerSha256": "998cfcb12a86ddafd829cea16f68e3c8a83f738a40bc18e1189b6e9c6f269d48",
+    "soleFinalChange": {
+      "before": "歳 age, 二十歳 and 階 floor identifiers/counts",
+      "after": "歳 age, 二十歳 and 階 floor identifiers"
+    },
+    "entireParsedLedgerCompared": true,
+    "findings": {
+      "F6-R1": {
+        "status": "RESOLVED",
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "comprehensibility": "CLEAN",
+        "reason": "The verified-existing row now claims only the floor-identifier operation actually supported by the pinned floor tasks. The unsupported floor-total/count claim is removed, with no other ledger change.",
+        "newDrillRequired": false,
+        "ownerDecisionRequired": false,
+        "confidence": "high"
+      },
+      "F6": {
+        "status": "RESOLVED",
+        "reason": "The previous focused review verified all 54 baseline file assignments and actual operation-specific evidence. Its sole remaining semantic overclaim is now corrected.",
+        "ageEvidenceNote": "The independently confirmed age-expression-5 remains valid evidence for 二十歳/はたち in the unchanged full age file and inventory. No additional selected-ID change is required, as previously adjudicated."
+      },
+      "F1-F5": {
+        "status": "RESOLVED",
+        "basis": "Carried forward from the prior focused review because the entire remaining ledger is unchanged."
+      },
+      "F7": {
+        "status": "RESOLVED",
+        "basis": "The prior bounded judgment remains unchanged: the finite reference-only boundary does not establish a significant new exclusion requiring owner input.",
+        "ownerAgreementObserved": false,
+        "ownerAgreementInferred": false,
+        "concreteRemainingOwnerDecision": null
+      }
+    },
+    "verdict": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN",
+      "qualification": "Clean within the accumulated independent matrix/reuse/exclusion review, including the additional-reference comparison and this exact correction. Not universal linguistic certification or acceptance of future runtime tasks."
+    },
+    "gate": {
+      "matrixGateItselfClear": true,
+      "canFreezeMatrixWithinReviewedScope": true,
+      "allF1ThroughF7Reconciled": true,
+      "remainingMatrixBlockers": [],
+      "ownerDecisionRequiredForReviewedBoundary": false,
+      "bulkAuthoringUnblockedByThisReportAlone": false,
+      "separateGates": "Pilot-text reconciliation and runtime/importer acceptance remain independent. They were not reassessed or waived.",
+      "pendingNewRows": "New-owner rows remain required pending work. Exact usage, readings, variants, context independence and task-level classifications still require their promised later evidence and acceptance."
+    }
+  }
+}

@@ -51,6 +51,14 @@
     {
       "id": "activity-duration",
       "label": "Time spent performing an activity"
+    },
+    {
+      "id": "part-amount",
+      "label": "The requested part of a stated whole"
+    },
+    {
+      "id": "remaining-amount",
+      "label": "The amount left after removing the stated part"
     }
   ],
   "relationships": [
@@ -95,9 +103,301 @@
         "item-price",
         "activity-duration"
       ]
+    },
+    {
+      "id": "part-and-remainder",
+      "label": "Distinguish a part from the amount remaining",
+      "constructions": [
+        "part-amount",
+        "remaining-amount"
+      ]
     }
   ],
   "exercises": [
+    {
+      "id": "quantity-scope-fraction-used",
+      "target": "part-amount",
+      "relationship": "part-and-remainder",
+      "prompt": "「ボトルには水が三百ミリリットルありました。その三分の一を使いました。」→____",
+      "translation": "Read the Japanese report. Type the requested amount in Arabic digits only, without a unit or comma. How many milliliters of water were used?",
+      "evidence": "Read the fraction and its reference to the stated initial amount. This pair shares one water-fraction context, distinct from a 割引 price notice.",
+      "explanation": "三分の一 is one of three equal parts of the initial 300 milliliters: 100 milliliters were used.",
+      "answer": "part-amount",
+      "acceptedAnswers": [
+        "100"
+      ],
+      "options": [
+        {
+          "id": "part-amount",
+          "label": "100",
+          "rationale": "One third of the original 300 milliliters is 100 milliliters; this is the amount used."
+        },
+        {
+          "id": "remaining-amount",
+          "label": "200",
+          "rationale": "200 milliliters remain after using one third. The question asks for the part used, not what remains."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "5cf75ddd7ae1d4f5aca808afe3aa572e704fe936a452b8a230db169222bd2cba",
+        "spans": [
+          {
+            "start": 1,
+            "end": 4,
+            "text": "ボトル",
+            "reading": "ぼとる",
+            "headword": "ボトル",
+            "gloss": "bottle"
+          },
+          {
+            "start": 6,
+            "end": 7,
+            "text": "水",
+            "reading": "みず",
+            "headword": "水",
+            "gloss": "water"
+          },
+          {
+            "start": 16,
+            "end": 21,
+            "text": "ありました",
+            "reading": "ありました",
+            "headword": "ある",
+            "gloss": "there was"
+          },
+          {
+            "start": 29,
+            "end": 34,
+            "text": "使いました",
+            "reading": "つかいました",
+            "headword": "使う",
+            "gloss": "used"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-fraction-remaining",
+      "target": "remaining-amount",
+      "relationship": "part-and-remainder",
+      "prompt": "「ボトルには水が三百ミリリットルありました。その三分の一を使いました。」→____",
+      "translation": "Read the Japanese report. Type the requested amount in Arabic digits only, without a unit or comma. Immediately after this use, with no other changes, how many milliliters remain in the bottle?",
+      "evidence": "Read the fraction and its reference to the stated initial amount. This pair shares one water-fraction context; the question excludes further changes to the water.",
+      "explanation": "One third, or 100 milliliters, was used from the original 300. The remaining two thirds are 200 milliliters.",
+      "answer": "remaining-amount",
+      "acceptedAnswers": [
+        "200"
+      ],
+      "options": [
+        {
+          "id": "part-amount",
+          "label": "100",
+          "rationale": "100 milliliters is the part used. It is not the amount remaining."
+        },
+        {
+          "id": "remaining-amount",
+          "label": "200",
+          "rationale": "Two of the original three equal parts remain, so 200 milliliters are left."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "5cf75ddd7ae1d4f5aca808afe3aa572e704fe936a452b8a230db169222bd2cba",
+        "spans": [
+          {
+            "start": 1,
+            "end": 4,
+            "text": "ボトル",
+            "reading": "ぼとる",
+            "headword": "ボトル",
+            "gloss": "bottle"
+          },
+          {
+            "start": 6,
+            "end": 7,
+            "text": "水",
+            "reading": "みず",
+            "headword": "水",
+            "gloss": "water"
+          },
+          {
+            "start": 16,
+            "end": 21,
+            "text": "ありました",
+            "reading": "ありました",
+            "headword": "ある",
+            "gloss": "there was"
+          },
+          {
+            "start": 29,
+            "end": 34,
+            "text": "使いました",
+            "reading": "つかいました",
+            "headword": "使う",
+            "gloss": "used"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-discount-reduction",
+      "target": "part-amount",
+      "relationship": "part-and-remainder",
+      "prompt": "「このかばんの定価は千円です。今日は二割引です。ほかの料金はありません。」→____",
+      "translation": "Read the Japanese price notice. Type the requested amount in Arabic digits only, without a unit or comma. How many yen are taken off the regular price?",
+      "evidence": "Interpret the requested quantity, not merely the first number in the notice. This pair shares one shop-discount context; the prompt does not ask for a missing sentence fragment.",
+      "explanation": "二割引 removes two tenths of the 1,000-yen regular price: 200 yen. The 800 yen left to pay is a different requested quantity.",
+      "answer": "part-amount",
+      "acceptedAnswers": [
+        "200"
+      ],
+      "options": [
+        {
+          "id": "part-amount",
+          "label": "200",
+          "rationale": "Two tenths of the 1,000-yen regular price are deducted, so the reduction is 200 yen."
+        },
+        {
+          "id": "remaining-amount",
+          "label": "800",
+          "rationale": "800 yen is the amount left to pay after the deduction, not the amount taken off."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "14349b6260018394de949b5e08c6c3bb455132b19927c5a074b3e53a3d49bcf3",
+        "spans": [
+          {
+            "start": 3,
+            "end": 6,
+            "text": "かばん",
+            "reading": "かばん",
+            "headword": "かばん",
+            "gloss": "bag"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "定価",
+            "reading": "ていか",
+            "headword": "定価",
+            "gloss": "regular (undiscounted) price"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "今日",
+            "reading": "きょう",
+            "headword": "今日",
+            "gloss": "today"
+          },
+          {
+            "start": 24,
+            "end": 26,
+            "text": "ほか",
+            "reading": "ほか",
+            "headword": "ほか",
+            "gloss": "other"
+          },
+          {
+            "start": 27,
+            "end": 29,
+            "text": "料金",
+            "reading": "りょうきん",
+            "headword": "料金",
+            "gloss": "charges"
+          },
+          {
+            "start": 30,
+            "end": 35,
+            "text": "ありません",
+            "reading": "ありません",
+            "headword": "ある",
+            "gloss": "there are none"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-discount-payable",
+      "target": "remaining-amount",
+      "relationship": "part-and-remainder",
+      "prompt": "「このかばんの定価は千円です。今日は二割引です。ほかの料金はありません。」→____",
+      "translation": "Read the Japanese price notice. Type the requested amount in Arabic digits only, without a unit or comma. How many yen do you pay for this bag?",
+      "evidence": "Interpret the requested quantity, not merely the first number in the notice. This pair shares one shop-discount context; the notice explicitly excludes additional charges.",
+      "explanation": "二割引 removes 200 yen from the 1,000-yen regular price. With no other charges, the amount payable is 800 yen, not the amount deducted.",
+      "answer": "remaining-amount",
+      "acceptedAnswers": [
+        "800"
+      ],
+      "options": [
+        {
+          "id": "part-amount",
+          "label": "200",
+          "rationale": "200 yen is the amount taken off. A 20% discount does not mean paying only 20% of the regular price."
+        },
+        {
+          "id": "remaining-amount",
+          "label": "800",
+          "rationale": "The 1,000-yen price minus the 200-yen reduction leaves 800 yen to pay; the notice excludes other charges."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "14349b6260018394de949b5e08c6c3bb455132b19927c5a074b3e53a3d49bcf3",
+        "spans": [
+          {
+            "start": 3,
+            "end": 6,
+            "text": "かばん",
+            "reading": "かばん",
+            "headword": "かばん",
+            "gloss": "bag"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "text": "定価",
+            "reading": "ていか",
+            "headword": "定価",
+            "gloss": "regular (undiscounted) price"
+          },
+          {
+            "start": 15,
+            "end": 17,
+            "text": "今日",
+            "reading": "きょう",
+            "headword": "今日",
+            "gloss": "today"
+          },
+          {
+            "start": 24,
+            "end": 26,
+            "text": "ほか",
+            "reading": "ほか",
+            "headword": "ほか",
+            "gloss": "other"
+          },
+          {
+            "start": 27,
+            "end": 29,
+            "text": "料金",
+            "reading": "りょうきん",
+            "headword": "料金",
+            "gloss": "charges"
+          },
+          {
+            "start": 30,
+            "end": 35,
+            "text": "ありません",
+            "reading": "ありません",
+            "headword": "ある",
+            "gloss": "there are none"
+          }
+        ]
+      }
+    },
     {
       "id": "quantity-scope-age-minimum-boundary",
       "jlpt": 4,
@@ -1824,6 +2124,44 @@
     }
   ],
   "introductionGroups": [
+    {
+      "id": "quantity-scope-parts-and-remainders",
+      "label": "Read a part and the amount left",
+      "facets": [
+        {
+          "id": "part-amount",
+          "label": "Identify the requested part of the stated whole"
+        },
+        {
+          "id": "remaining-amount",
+          "label": "Identify the amount remaining after that part is removed"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "quantity-scope-discount-reduction",
+          "facetId": "part-amount",
+          "exampleKey": "shop-discount"
+        },
+        {
+          "exerciseId": "quantity-scope-discount-payable",
+          "facetId": "remaining-amount",
+          "exampleKey": "shop-discount"
+        },
+        {
+          "exerciseId": "quantity-scope-fraction-used",
+          "facetId": "part-amount",
+          "exampleKey": "water-fraction"
+        },
+        {
+          "exerciseId": "quantity-scope-fraction-remaining",
+          "facetId": "remaining-amount",
+          "exampleKey": "water-fraction"
+        }
+      ],
+      "next": [],
+      "requires": []
+    },
     {
       "id": "quantity-scope-boundaries",
       "label": "Check a value against an inclusive or strict numerical bound",

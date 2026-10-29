@@ -1,0 +1,3873 @@
+{
+  "schemaVersion": 1,
+  "stage": "accepted-contract-and-pilot",
+  "inspectedOnUtc": "2026-10-29",
+  "baseline": "counter-n3-baseline.json",
+  "contract": "counter-n3.md",
+  "rowPolicy": {
+    "new-owner": "Required, not yet covered. Evidence IDs must be added after authoring and complete-task review.",
+    "verified-existing": "Only the named operation and evidence IDs are reused; easier levels and existing objects remain unchanged.",
+    "support-reference-only": "Explained or linked, not claimed as exercise coverage.",
+    "deferred": "Outside the practical extension; a significant new exclusion needs owner agreement.",
+    "contextKeys": "Planned semantic contexts until matched to authored IDs. Paired forms/interpretations and mere numeral/noun substitutions share a key.",
+    "review": "All61 denominator rows and97 lexical dispositions accepted within the independent matrix/reuse/exclusion scope after F1-F7 reconciliation; new runtime content still requires complete-task acceptance.",
+    "completion": "Required new rows need actual source-backed runtime IDs, per-record operation/context/level evidence, reconciled text review and importer acceptance. E checks the combined denominator.",
+    "level": "Counter level 3 is an editorial practical allocation unless an exact source spelling/reading/sense is explicitly identified. Grammar levels follow complete constructions, never this allocation."
+  },
+  "sources": [
+    {
+      "id": "n3-index",
+      "publisher": "stephenmk/yomitan-jlpt-vocab community distribution; repository sense audit",
+      "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/b062d4e38c4bdd0950ae1d4ec55f04b176182e03",
+      "local": "docs/n3-vocabulary-sources.tsv",
+      "sha256": "0727d4da5d83efba733c36bfe625afd60ac1aad4b7b2f9529ee7afd174c9014e",
+      "rawN3CsvSha256": "bd4d68c59cfee861351e1bdf9d99818e434392201eabbed4d3657225fe53a3ac",
+      "rows": 1730,
+      "dictionarySnapshot": "JMdict 2026-10-08",
+      "dictionaryXmlSha256": "2de8f1a662c8ce69d3fa05f86d1dda224fabf21c2d45d07daa9e8da150189e0d",
+      "scope": "Exact source_id, source spelling/reading, original gloss, mapped article/entry/senses and documented corrections. The lexical screening below retains source identity rather than changing the TSV.",
+      "limits": "Community, not official JLPT. A noun sense, homograph or different reading does not assign every numeric counter use to N3."
+    },
+    {
+      "id": "marugoto-a2b1",
+      "publisher": "Japan Foundation",
+      "url": "https://marugoto.jpf.go.jp/assets/docs/download/pre_intermediate/MarugotoPre-IntermediateVocabularyIndex_EN.pdf",
+      "sha256": "fc7041cc172ff5939aa71c47032b5e25fc7e31ec321d7e1d3d6fc44386fe5146",
+      "scope": "PDF pages 5 (課, organizational section), 17 (人数), 18 (半年, 半分, 番目, 半), 19 (便 flight label; 部 department), 21 (万), 22 (約). Original page numbers, not printed topic numbers.",
+      "limits": "Practical pre-intermediate relevance, not N3 equivalence. Organizational 課/部 entries are not evidence for lesson counts or printed copies. This source assembled the matrix and cannot serve as its additional independent-reference check."
+    },
+    {
+      "id": "imabi-numbers",
+      "publisher": "IMABI",
+      "url": "https://imabi.org/sino-japanese-numbers-2/",
+      "scope": "Sino-Japanese number construction, zero, hundreds/thousands sound changes, 万/億/兆, mixed notation and digit-by-digit identifiers.",
+      "limits": "Usage, not JLPT allocation. No need for every large unit or formal/obsolete reading."
+    },
+    {
+      "id": "imabi-counters-i",
+      "publisher": "IMABI",
+      "url": "https://imabi.org/counters-with-sino-japanese-numbers-i/",
+      "scope": "冊/枚/匹/頭 and 課 sections and number tables; lesson counts versus numbered lessons.",
+      "limits": "Do not turn size preferences into an absolute 頭/匹 partition. Bare numbered 課 can be a label or count depending on context."
+    },
+    {
+      "id": "imabi-native",
+      "publisher": "IMABI",
+      "url": "https://imabi.org/counters-v/",
+      "scope": "Native counter sections: 品, 桁, 切れ, 房, 袋, 箱, 棟, 組, 皿, 束, 通り, 駅; primary native-number versus class-label distinctions.",
+      "limits": "Consequential alternate readings need targeted corroboration before grading. No blanket adoption of every listed variant or English gloss. Bundles have no fixed universal contents."
+    },
+    {
+      "id": "imabi-counters-vi",
+      "publisher": "IMABI",
+      "url": "https://imabi.org/counters-vi/",
+      "scope": "名, 羽, 部, 戸, 人前, 丁, 点, 泊, 通, 巻, 錠 sections and tables.",
+      "limits": "錠 counts tablets, not dosage events. 部 copies is distinct from a department or an abstract part. 羽 variants must be checked for each canonical number, not generated from a single rule."
+    },
+    {
+      "id": "imabi-counters-viii",
+      "publisher": "IMABI",
+      "url": "https://imabi.org/counters-viii/",
+      "scope": "件, 行, 種類, 脚, 膳 and pair-counter 対/つい sections. The complete page does not teach ratio 対/たい; do not cite it for that sense.",
+      "limits": "A table's specialist units are not all practical N3 targets. Bank 行/こう is not text-line 行/ぎょう. Broad English explanations are not unrestricted substitution rules."
+    },
+    {
+      "id": "imabi-prefixes",
+      "publisher": "IMABI",
+      "url": "https://imabi.org/prefixes-suffixes-counters/",
+      "scope": "何+counter versus indefinite 何+counter+か; 数 prefixes; counter+数 quantity names; 半 and 余/余り.",
+      "limits": "数 does not impose a universal exact 2-10 range. The English rendering of 数十枚 loses the tens distinction and is not adopted."
+    },
+    {
+      "id": "imabi-fractions",
+      "publisher": "IMABI",
+      "url": "https://imabi.org/decimals-fractions/",
+      "scope": "Denominator+分の+numerator, mixed-number と, decimal reading, 割 and 割引.",
+      "limits": "Reject the opening claim that decimals must lie between 0 and 1 and the exclusive zero=ゼロ claim. Existing れい/ゼロ alternatives remain. Traditional fraction units do not all become core."
+    },
+    {
+      "id": "imabi-approximations",
+      "publisher": "IMABI",
+      "url": "https://imabi.org/counters-w-approximations/",
+      "scope": "Adjacent-number approximations with and without counters; 二、三百; 三、四時間; forms with explicit か.",
+      "limits": "Do not treat approximate expressions as exact closed mathematical intervals. Retain the requested unit's reading and avoid unusual variants without corroboration."
+    },
+    {
+      "id": "imabi-ordinals",
+      "publisher": "IMABI",
+      "url": "https://imabi.org/numbers-vi-ordinal-numbers/",
+      "scope": "Opening through generic ordering, 番/番目 and emphatic 第 sections: numbered lessons/chapters/episodes, rank 位, ordinal suffix 目, labels 号室/番線.",
+      "limits": "The inspected segment does not verify every later section. Context distinguishes labels, rankings and counts; 第 is not mandatory for every label."
+    },
+    {
+      "id": "imabi-time",
+      "publisher": "IMABI",
+      "url": "https://imabi.org/counters-iv-time-part-ii-%e6%99%82-%e6%99%82%e9%96%93-%e5%88%86-%e7%a7%92-%e6%99%a9-%e5%a4%9c/",
+      "scope": "Hours, minutes and seconds tables, optional 間 for minute/second durations, evening/night distinctions.",
+      "limits": "No universal equivalence between a calendar stay and elapsed hours; source's stylistic simplifications are not categorical bans."
+    },
+    {
+      "id": "imabi-measures",
+      "publisher": "IMABI",
+      "url": "https://imabi.org/numbers-x-measurements/",
+      "scope": "Everyday SI length, mass, 秒, capacity L/mL, metric トン, speed distinctions and the separation from traditional units.",
+      "limits": "A mixed technical survey, not a practical frequency ranking. Technical spoken unit variants and obsolete conversions are not adopted wholesale."
+    },
+    {
+      "id": "tofugu-tou",
+      "publisher": "Tofugu, Mami Suzuki, 2018-10-02",
+      "url": "https://www.tofugu.com/japanese/japanese-counter-tou/",
+      "scope": "Pronunciation table, large mammals, professional animals and overlap with 匹; first 12000 extracted characters.",
+      "limits": "Independent usage/readings corroboration, not JLPT evidence. Do not copy the lifting-size mnemonic as a strict grammatical test; remainder of page was not part of this inspection."
+    },
+    {
+      "id": "sanabo-hako",
+      "publisher": "数え方単位辞典",
+      "url": "https://www.sanabo.com/kazoekata/ct_ha/ha/hako/",
+      "scope": "箱 entry: 一箱ひとはこ; 個/箱; flattened cardboard boxes can be 枚; specialized 折/合.",
+      "limits": "Object-count alternatives depend on physical state. This entry corroborates ひとはこ, not every number in a 箱 paradigm."
+    },
+    {
+      "id": "kotobank-jusuu",
+      "publisher": "Shogakukan Daijisen and Seisenban Nihon Kokugo Daijiten, via Kotobank",
+      "url": "https://kotobank.jp/word/%E5%8D%81%E6%95%B0-527026",
+      "scope": "十数/じゅうすう word element; both entries specify 10 or more and fewer than 20.",
+      "limits": "Do not impose a conflicting exclusive lower bound on graded choices. This is not a definition of 数十 or an exact count."
+    },
+    {
+      "id": "kotobank-waribiki",
+      "publisher": "Shogakukan Seisenban Nihon Kokugo Daijiten, via Kotobank",
+      "url": "https://kotobank.jp/word/%E5%89%B2%E5%BC%95-665799",
+      "scope": "割引/わりびき sense 1: a deduction from an established price.",
+      "limits": "The retrieved Daijisen body was absent; the inspected definition is the named Seisenban entry. Financial bill discounting and metaphorical devaluation are different senses."
+    },
+    {
+      "id": "kotobank-tsubu",
+      "publisher": "Shogakukan Seisenban Nihon Kokugo Daijiten, via Kotobank",
+      "url": "https://kotobank.jp/word/%E7%B2%92-572235",
+      "scope": "つぶ suffix sense 1: small rounded seeds/pills; separate りゅう suffix entry.",
+      "limits": "Do not silently conflate ordinary native forms with specialist りゅう readings, historical money or percussion senses."
+    },
+    {
+      "id": "kotobank-bu",
+      "publisher": "Shogakukan Seisenban Nihon Kokugo Daijiten, via Kotobank",
+      "url": "https://kotobank.jp/word/%E9%83%A8-128738",
+      "scope": "ぶ noun sense 1 and suffix: complete works/copies independent of volume count, including magazines/newspapers; copies of the same publication versus unrestricted physical 冊.",
+      "limits": "The retrieved Daijisen body was the unrelated historical べ entry. Do not cite that heading as modern ぶ evidence."
+    },
+    {
+      "id": "kotobank-bai",
+      "publisher": "Shogakukan Daijisen, via Kotobank",
+      "url": "https://kotobank.jp/word/%E5%80%8D-598359",
+      "scope": "ばい lexical noun and suffix entries: double as the bare noun, numerical multipliers such as 三倍.",
+      "limits": "The lexical entry, not just the preceding kanji entry, supports the multiplier sense. Context must establish the base and whether an increase or final amount is requested."
+    },
+    {
+      "id": "kotobank-bands",
+      "publisher": "Shogakukan Seisenban Nihon Kokugo Daijiten, via Kotobank",
+      "urls": [
+        "https://kotobank.jp/word/%E5%8F%B0-90713",
+        "https://kotobank.jp/word/%E4%BB%A3-81136",
+        "https://kotobank.jp/word/%E5%B9%B4%E4%BB%A3-595969"
+      ],
+      "scope": "台 suffix sense 1: approximate price/time/age ranges; 代 suffix sense 2: age/year ranges principally in tens; 年代 sense 2: named time spans grouped in tens/hundreds.",
+      "limits": "Do not state an absolute 台-for-prices/代-for-ages spelling partition; 台 age use is attested. Exact task notation may request the modern conventional form."
+    },
+    {
+      "id": "bunpro-cost",
+      "publisher": "Bunpro",
+      "url": "https://bunpro.jp/grammar_points/%E3%81%99%E3%82%8B-cost",
+      "scope": "Structure and About for item+は/が+price+する; public examples. Existing primary entry in grammar-quantity-scope-sources.json records JLPT4.",
+      "limits": "Supports the price construction, not a universal N4 label for all fractions/discount tasks. Each complete new task needs its own classification evidence."
+    },
+    {
+      "id": "existing-quantity",
+      "publisher": "Repository source-backed baseline",
+      "local": [
+        "docs/grammar-quantity-scope-sources.json",
+        "docs/grammar-quantity-zutsu-sources.json",
+        "docs/grammar-particles-sources.json",
+        "docs/grammar-means-and-scope-sources.json",
+        "docs/grammar-comparisons-sources.json",
+        "docs/counter-n4.md"
+      ],
+      "scope": "Actual quantity-scope/zutsu task bodies, five particle-neighbors quantity items, six means-and-scope rank items and comparison-set items were inspected, not inferred from titles.",
+      "limits": "Earlier source retrieval dates remain in their original records. Reuse does not newly certify all source pages or unrelated tasks."
+    },
+    {
+      "id": "pinned-tai-sense",
+      "publisher": "Pinned repository sense audit of JMdict",
+      "url": "https://github.com/stop-cran/learning-japanese/blob/b697a3d65a4edf893b04eea33d2356cd600e87c9/words/%E5%AF%BE.md",
+      "local": "words/対.md",
+      "scope": "N3:969, 対/たい entry 1409800 ratio/versus; pair つい belongs to entry 1409810. The article explicitly distinguishes the two.",
+      "limits": "Pinned lexical identity evidence, not a new direct inspection of the original dictionary or proof of every acceptable ratio expression."
+    },
+    {
+      "id": "marugoto-b1-independent",
+      "publisher": "The Japan Foundation",
+      "url": "https://marugoto.jpf.go.jp/assets/docs/download/intermediate1/MarugotoIntermediate1VocabularyList_EN.pdf",
+      "sha256": "4827bc0172f0b42f08b9aa8de6d5bb86706f028037ff797f6f72ae7c8e3bbe9b",
+      "retrievedOn": "2026-10-29",
+      "scope": "Independent screening of all topic vocabulary PDF pages 3-48. Human portions pp11-12, tofu 丁 p12, group membership 人組 p16, rooms 部屋 p18, 年ぶり p23, 以内 pp6/32/42, 何百個 p46; page numbers are PDF pages, one above printed pages.",
+      "limits": "B1 vocabulary list, not a JLPT assignment or reading paradigm. Separately compiled volume from the same publisher as the initial A2/B1 reference; no independent-publisher claim. Exact comparisons are in counter-n3-review.json."
+    }
+  ],
+  "rows": [
+    {
+      "id": "foundation-compounds",
+      "forms": "Basic object/person/native counters and compound counts",
+      "status": "verified-existing",
+      "owner": "baseline",
+      "sources": [
+        "imabi-numbers",
+        "imabi-counters-i"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "canonical-reading",
+        "reverse",
+        "whole-expression"
+      ],
+      "soundClasses": [
+        "hundreds/thousands",
+        "final-digit counter alternation"
+      ],
+      "contextKeys": [
+        "basic-object-counts"
+      ],
+      "misconception": "A larger number does not create a new unit or erase the final counter sound.",
+      "support": "Existing N5/N4 prompts and learner article.",
+      "evidenceIds": [
+        "honcompound-expression-1",
+        "hikicompound-expression-1",
+        "nincompound-expression-1",
+        "satsucompound-expression-1",
+        "dai-car-1",
+        "dai-bicycle-1",
+        "hai-tea-1",
+        "hai-coffee-1",
+        "hiki-fish-1",
+        "hiki-dog-1",
+        "hon-pen-1",
+        "hon-umbrella-1",
+        "ko-apple-1",
+        "ko-egg-1",
+        "mai-paper-1",
+        "mai-shirt-1",
+        "nin-one-1",
+        "nin-four-1",
+        "satsu-book-1",
+        "satsu-notebook-1",
+        "tsu-apple-1",
+        "tsu-egg-1",
+        "daicompound-expression-1",
+        "haicompound-expression-1",
+        "kocompound-expression-1",
+        "maicompound-expression-1",
+        "native-expression-1",
+        "dai-noun-1",
+        "hai-reverse-1",
+        "hiki-noun-1",
+        "hon-noun-1",
+        "ko-noun-1",
+        "mai-noun-1",
+        "nin-noun-1",
+        "satsu-noun-1",
+        "tsu-noun-1",
+        "daicompound-expression-3",
+        "haicompound-expression-3",
+        "hikicompound-expression-3",
+        "honcompound-expression-3",
+        "kocompound-expression-3",
+        "maicompound-expression-3",
+        "nincompound-expression-3",
+        "satsucompound-expression-3"
+      ],
+      "operationEvidence": {
+        "selection": [
+          "dai-car-1",
+          "dai-bicycle-1",
+          "hai-tea-1",
+          "hai-coffee-1",
+          "hiki-fish-1",
+          "hiki-dog-1",
+          "hon-pen-1",
+          "hon-umbrella-1",
+          "ko-apple-1",
+          "ko-egg-1",
+          "mai-paper-1",
+          "mai-shirt-1",
+          "nin-one-1",
+          "nin-four-1",
+          "satsu-book-1",
+          "satsu-notebook-1",
+          "tsu-apple-1",
+          "tsu-egg-1"
+        ],
+        "suffix-typing": [
+          "dai-car-1",
+          "dai-bicycle-1",
+          "hai-tea-1",
+          "hai-coffee-1",
+          "hiki-fish-1",
+          "hiki-dog-1",
+          "hon-pen-1",
+          "hon-umbrella-1",
+          "ko-apple-1",
+          "ko-egg-1",
+          "mai-paper-1",
+          "mai-shirt-1",
+          "nin-one-1",
+          "nin-four-1",
+          "satsu-book-1",
+          "satsu-notebook-1",
+          "tsu-apple-1",
+          "tsu-egg-1"
+        ],
+        "canonical-reading": [
+          "dai-car-1",
+          "dai-bicycle-1",
+          "daicompound-expression-1",
+          "hai-tea-1",
+          "hai-coffee-1",
+          "haicompound-expression-1",
+          "hiki-fish-1",
+          "hiki-dog-1",
+          "hikicompound-expression-1",
+          "hon-pen-1",
+          "hon-umbrella-1",
+          "honcompound-expression-1",
+          "ko-apple-1",
+          "ko-egg-1",
+          "kocompound-expression-1",
+          "mai-paper-1",
+          "mai-shirt-1",
+          "maicompound-expression-1",
+          "native-expression-1",
+          "nin-one-1",
+          "nin-four-1",
+          "nincompound-expression-1",
+          "satsu-book-1",
+          "satsu-notebook-1",
+          "satsucompound-expression-1",
+          "tsu-apple-1",
+          "tsu-egg-1"
+        ],
+        "reverse": [
+          "dai-noun-1",
+          "hai-reverse-1",
+          "hiki-noun-1",
+          "hon-noun-1",
+          "ko-noun-1",
+          "mai-noun-1",
+          "nin-noun-1",
+          "satsu-noun-1",
+          "tsu-noun-1"
+        ],
+        "whole-expression": [
+          "daicompound-expression-1",
+          "daicompound-expression-3",
+          "haicompound-expression-1",
+          "haicompound-expression-3",
+          "hikicompound-expression-1",
+          "hikicompound-expression-3",
+          "honcompound-expression-1",
+          "honcompound-expression-3",
+          "kocompound-expression-1",
+          "kocompound-expression-3",
+          "maicompound-expression-1",
+          "maicompound-expression-3",
+          "native-expression-1",
+          "nincompound-expression-1",
+          "nincompound-expression-3",
+          "satsucompound-expression-1",
+          "satsucompound-expression-3"
+        ]
+      }
+    },
+    {
+      "id": "foundation-prices",
+      "forms": "Prices through 百万 and internal zero",
+      "status": "verified-existing",
+      "owner": "baseline",
+      "sources": [
+        "imabi-numbers"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "万 grouping",
+        "silent zero positions"
+      ],
+      "contextKeys": [
+        "existing-price-grouping"
+      ],
+      "misconception": "Omitted zero positions do not change the unit group.",
+      "support": "Original price cues.",
+      "evidenceIds": [
+        "prices-expression-11",
+        "prices-expression-14",
+        "prices-expression-15",
+        "prices-expression-1",
+        "prices-expression-16"
+      ],
+      "operationEvidence": {
+        "whole-expression": [
+          "prices-expression-1",
+          "prices-expression-16"
+        ],
+        "canonical-reading": [
+          "prices-expression-1"
+        ]
+      }
+    },
+    {
+      "id": "magnitudes",
+      "forms": "億, 兆 and mixed large-number notation",
+      "status": "new-owner",
+      "owner": "B",
+      "sources": [
+        "imabi-numbers"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "いちおく",
+        "いっちょう",
+        "internal zeros",
+        "万/億 grouping"
+      ],
+      "contextKeys": [
+        "town-population",
+        "public-project-budget",
+        "quantity-display"
+      ],
+      "misconception": "English thousands grouping is not Japanese four-digit unit grouping.",
+      "support": "Inline population/budget nouns; no financial calculation.",
+      "evidenceIds": [],
+      "pilotEvidenceIds": [
+        "magnitudes-expression-1",
+        "magnitudes-expression-2"
+      ],
+      "pilotEvidenceLimits": "Accepted pilot members, not completion of every allocated row operation/context. Count once in the owning final batch."
+    },
+    {
+      "id": "foundation-decimals",
+      "forms": "Decimal length/weight and signed temperature",
+      "status": "verified-existing",
+      "owner": "baseline",
+      "sources": [
+        "imabi-fractions",
+        "imabi-measures"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "てん",
+        "れい/ゼロ",
+        "マイナス",
+        "temperature 分/ぶ"
+      ],
+      "contextKeys": [
+        "existing-measures"
+      ],
+      "misconception": "Equivalent written units are not readings of the displayed canonical expression.",
+      "support": "Existing decimal cues and explanation.",
+      "evidenceIds": [
+        "length-expression-5",
+        "weight-expression-6",
+        "temperature-expression-2",
+        "temperature-expression-3",
+        "length-expression-1",
+        "length-expression-6",
+        "weight-expression-1",
+        "temperature-expression-1",
+        "temperature-expression-4"
+      ],
+      "operationEvidence": {
+        "whole-expression": [
+          "length-expression-1",
+          "length-expression-6",
+          "weight-expression-1",
+          "weight-expression-6",
+          "temperature-expression-1",
+          "temperature-expression-4"
+        ],
+        "canonical-reading": [
+          "length-expression-1",
+          "weight-expression-1",
+          "temperature-expression-1"
+        ]
+      }
+    },
+    {
+      "id": "fractions",
+      "forms": "分の fractions, half and mixed numbers",
+      "status": "new-owner",
+      "owner": "B",
+      "sources": [
+        "imabi-fractions",
+        "marugoto-a2b1"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "denominator first",
+        "ぶんの",
+        "mixed-number と"
+      ],
+      "contextKeys": [
+        "recipe-fraction",
+        "length-fraction",
+        "remaining-share"
+      ],
+      "misconception": "Numerator-first reading reverses the requested value.",
+      "support": "Simple English amount; interpretation assigned separately to D.",
+      "evidenceIds": [],
+      "pilotEvidenceIds": [
+        "fractions-expression-1"
+      ],
+      "pilotEvidenceLimits": "Accepted pilot members, not completion of every allocated row operation/context. Count once in the owning final batch."
+    },
+    {
+      "id": "foundation-percent",
+      "forms": "Whole-number パーセント",
+      "status": "verified-existing",
+      "owner": "baseline",
+      "sources": [
+        "imabi-fractions"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "パーセント",
+        "% notation"
+      ],
+      "contextKeys": [
+        "existing-percent-form"
+      ],
+      "misconception": "Recognizing 25% does not prove discount comprehension.",
+      "support": "Original explicit rate cues.",
+      "evidenceIds": [
+        "percent-expression-1",
+        "percent-expression-2",
+        "percent-expression-3",
+        "percent-expression-4"
+      ],
+      "operationEvidence": {
+        "whole-expression": [
+          "percent-expression-1",
+          "percent-expression-4"
+        ],
+        "canonical-reading": [
+          "percent-expression-1"
+        ]
+      }
+    },
+    {
+      "id": "proportions",
+      "forms": "割, 割引, 半額 and simple percentage/discount forms",
+      "status": "new-owner",
+      "owner": "B",
+      "sources": [
+        "imabi-fractions",
+        "kotobank-waribiki"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "わり",
+        "わりびき",
+        "はんがく"
+      ],
+      "contextKeys": [
+        "shop-reduction",
+        "participation-share",
+        "half-price-offer"
+      ],
+      "misconception": "The proportion deducted is not the fraction remaining.",
+      "support": "Define the requested notation, not an unstated conversion policy.",
+      "evidenceIds": [],
+      "pilotEvidenceIds": [
+        "proportions-expression-1"
+      ],
+      "pilotEvidenceLimits": "Accepted pilot members, not completion of every allocated row operation/context. Count once in the owning final batch."
+    },
+    {
+      "id": "ratios-multiples",
+      "forms": "対/たい and 倍",
+      "status": "new-owner",
+      "owner": "B",
+      "sources": [
+        "n3-index",
+        "pinned-tai-sense",
+        "kotobank-bai"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "たい not つい",
+        "ばい"
+      ],
+      "contextKeys": [
+        "recipe-mixture-ratio",
+        "score-label",
+        "double-quantity"
+      ],
+      "misconception": "A ratio is not a count of physical pairs; double the base is not an increase by twice the base.",
+      "support": "State order of compared quantities and base.",
+      "evidenceIds": []
+    },
+    {
+      "id": "uncertain-prefixes",
+      "forms": "数, 数十/数百, 十数 and non-interrogative 何百-type magnitude",
+      "status": "new-owner",
+      "owner": "B",
+      "sources": [
+        "n3-index",
+        "imabi-prefixes",
+        "kotobank-jusuu",
+        "marugoto-b1-independent"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "すう",
+        "じゅうすう",
+        "すうじゅう",
+        "すうじつ",
+        "何百個/なんびゃっこ; verify variants in the actual context"
+      ],
+      "contextKeys": [
+        "uncertain-headcount",
+        "indefinite-large-stock"
+      ],
+      "misconception": "数十/十数 differ; non-interrogative 何百 can express hundreds, not an exact unknown count. Make the statement/question context visible.",
+      "support": "Explicit requested form; no answer revealing gloss in interpretation tasks.",
+      "evidenceIds": [],
+      "pilotEvidenceIds": [
+        "uncertain-expression-1"
+      ],
+      "pilotEvidenceLimits": "Accepted pilot members, not completion of every allocated row operation/context. Count once in the owning final batch."
+    },
+    {
+      "id": "approximation-forms",
+      "forms": "約/およそ, adjacent-number estimates and 数量+程度",
+      "status": "new-owner",
+      "owner": "B",
+      "sources": [
+        "n3-index",
+        "marugoto-a2b1",
+        "imabi-approximations"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "やく",
+        "およそ",
+        "counter-conditioned adjacent numerals"
+      ],
+      "contextKeys": [
+        "estimated-trip-duration",
+        "rounded-headcount",
+        "estimated-distance"
+      ],
+      "misconception": "An estimate is not an exact measurement or universally closed interval.",
+      "support": "Constrain notation; reuse existing approximation grammar rather than duplicate it.",
+      "evidenceIds": []
+    },
+    {
+      "id": "animals-tou",
+      "forms": "頭",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-counters-i",
+        "tofugu-tou"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "reverse",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "いっとう",
+        "ろくとう",
+        "はっとう/はちとう",
+        "じゅっとう/じっとう"
+      ],
+      "contextKeys": [
+        "large-animals",
+        "trained-animals"
+      ],
+      "misconception": "Animal size is a preference, not an absolute 頭/匹 boundary.",
+      "support": "Inline unfamiliar animal reading/gloss; no animal reverse distractors.",
+      "evidenceIds": [],
+      "pilotEvidenceIds": [
+        "tou-cow-1",
+        "tou-elephants-1",
+        "tou-guidedogs-1",
+        "tou-noun-1"
+      ],
+      "pilotEvidenceLimits": "Accepted pilot members, not completion of every allocated row operation/context. Count once in the owning final batch."
+    },
+    {
+      "id": "animals-wa",
+      "forms": "羽/わ",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-counters-vi",
+        "n3-index"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "わ/ば number-dependent alternatives"
+      ],
+      "contextKeys": [
+        "birds-in-garden",
+        "poultry-count"
+      ],
+      "misconception": "The N3 羽/はね word is not source membership for counter わ.",
+      "support": "Practical editorial allocation; document exact accepted variants before authoring.",
+      "evidenceIds": []
+    },
+    {
+      "id": "copies-bu",
+      "forms": "Printed copies 部 versus sheets 枚/bound books 冊",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-counters-vi",
+        "imabi-counters-i",
+        "kotobank-bu"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "いちぶ not いっぷ",
+        "ぶ"
+      ],
+      "contextKeys": [
+        "loose-handout-copies",
+        "complete-application-copy",
+        "publication-copies"
+      ],
+      "misconception": "One multi-page copy need not be one sheet; copies and physical books can overlap.",
+      "support": "Make binding/whole-copy facts explicit; accept applicable 冊/組/セット alternatives.",
+      "evidenceIds": [],
+      "pilotEvidenceIds": [
+        "bu-handout-1",
+        "bu-application-1",
+        "bu-publication-1"
+      ],
+      "pilotEvidenceLimits": "Accepted pilot members, not completion of every allocated row operation/context. Count once in the owning final batch."
+    },
+    {
+      "id": "correspondence-tsuu",
+      "forms": "通 versus sheets/copies",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-counters-vi"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "reverse",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "いっつう",
+        "ろくつう",
+        "はっつう",
+        "じゅっつう/じっつう"
+      ],
+      "contextKeys": [
+        "letters",
+        "email-messages",
+        "application-documents"
+      ],
+      "misconception": "A message and its pages/copies are different counting units.",
+      "support": "Simple document glosses; avoid ambiguous generic document reverse nouns.",
+      "evidenceIds": []
+    },
+    {
+      "id": "boxes-hako",
+      "forms": "箱 versus contents/flat cardboard",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-native",
+        "sanabo-hako"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "ひとはこ",
+        "native compounds with checked variants"
+      ],
+      "contextKeys": [
+        "packed-snack-boxes",
+        "empty-box-stock",
+        "flat-cardboard"
+      ],
+      "misconception": "A boxful is not the count of individual items; flattened boxes may take 枚.",
+      "support": "Explicit physical state; no hidden package size.",
+      "evidenceIds": [],
+      "pilotEvidenceIds": [
+        "hako-expression-1"
+      ],
+      "pilotEvidenceLimits": "Accepted pilot members, not completion of every allocated row operation/context. Count once in the owning final batch."
+    },
+    {
+      "id": "bags-fukuro",
+      "forms": "袋",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-native",
+        "n3-index"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "ひとふくろ",
+        "ふたふくろ"
+      ],
+      "contextKeys": [
+        "rice-bags",
+        "gift-bags"
+      ],
+      "misconception": "Bag count does not establish weight or contents without a package label.",
+      "support": "Native ordinary forms; no industrial タイ claim.",
+      "evidenceIds": []
+    },
+    {
+      "id": "plates-sara",
+      "forms": "皿 food servings versus 枚 plates",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-native",
+        "n3-index"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "ひとさら",
+        "ふたさら"
+      ],
+      "contextKeys": [
+        "restaurant-dishes",
+        "empty-plate-stock"
+      ],
+      "misconception": "A plateful of food and a flat empty plate are different units.",
+      "support": "State food/empty-plate sense; retain fitting alternatives.",
+      "evidenceIds": []
+    },
+    {
+      "id": "sets-kumi",
+      "forms": "組 sets/groups versus class labels",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-native",
+        "n3-index"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "ひとくみ/ふたくみ",
+        "label いちくみ"
+      ],
+      "contextKeys": [
+        "matched-sets",
+        "participant-groups",
+        "class-label"
+      ],
+      "misconception": "Number of groups, members per group and a school-class identifier differ; 人組 has its own new row.",
+      "support": "Show membership where relevant; label/count instruction visible.",
+      "evidenceIds": []
+    },
+    {
+      "id": "bundles-taba",
+      "forms": "束/たば",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-native",
+        "n3-index"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "ひとたば",
+        "ふたたば"
+      ],
+      "contextKeys": [
+        "bundled-flowers",
+        "bundled-paper"
+      ],
+      "misconception": "A bundle has no universal fixed number of pieces; archaic つか is not たば.",
+      "support": "Support bundled-item words; keep ソク specialist usage separate.",
+      "evidenceIds": []
+    },
+    {
+      "id": "grains-tsubu",
+      "forms": "粒/つぶ",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "kotobank-tsubu"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "ひとつぶ",
+        "ふたつぶ"
+      ],
+      "contextKeys": [
+        "seeds",
+        "small-candy-pieces"
+      ],
+      "misconception": "Grains and their packages are different units.",
+      "support": "Harmless object counts, not medical dosing; reference りゅう without conflation.",
+      "evidenceIds": []
+    },
+    {
+      "id": "tablets-jou",
+      "forms": "錠",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-counters-vi"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "いちじょう",
+        "じゅうじょう"
+      ],
+      "contextKeys": [
+        "sealed-tablet-inventory",
+        "empty-package-count-label"
+      ],
+      "misconception": "A tablet count is not a number of doses or a dosage recommendation.",
+      "support": "Inventory/label scenarios only; explain 錠.",
+      "evidenceIds": []
+    },
+    {
+      "id": "cases-ken",
+      "forms": "件 versus 軒",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-counters-viii"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "いっけん",
+        "さんけん",
+        "ろっけん",
+        "はちけん/はっけん"
+      ],
+      "contextKeys": [
+        "inquiries",
+        "reservations",
+        "reported-incidents"
+      ],
+      "misconception": "Case 件 is not building 軒 and does not inherit 三軒 voicing.",
+      "support": "Support event/case nouns; avoid noun-only reverse ambiguity.",
+      "evidenceIds": []
+    },
+    {
+      "id": "menu-hin",
+      "forms": "品/ひん and native 品/しな",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-native",
+        "n3-index"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "いっぴん",
+        "さんぴん",
+        "native ひとしな"
+      ],
+      "contextKeys": [
+        "menu-dish-count",
+        "selected-goods"
+      ],
+      "misconception": "The separate noun 品/しな does not automatically supply every counter reading.",
+      "support": "Grade canonical displayed form with checked alternatives, not an absolute sense partition.",
+      "evidenceIds": []
+    },
+    {
+      "id": "housing-ko-tou",
+      "forms": "戸 housing units and 棟 buildings",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-counters-vi",
+        "imabi-native"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "いっこ",
+        "いっとう",
+        "native むね alternatives as applicable"
+      ],
+      "contextKeys": [
+        "apartment-units",
+        "school-buildings"
+      ],
+      "misconception": "One building can contain several homes; 軒 alternatives do not already teach that contrast.",
+      "support": "State what is counted and the building/unit relation; verify native variants before use.",
+      "evidenceIds": []
+    },
+    {
+      "id": "lessons-chapters",
+      "forms": "課/章 counts and 第 labels; section 節",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-counters-i",
+        "imabi-ordinals",
+        "n3-index"
+      ],
+      "operations": [
+        "selection",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "いっか/ろっか",
+        "だい",
+        "しょう",
+        "せつ not ふし"
+      ],
+      "contextKeys": [
+        "completed-lessons",
+        "lesson-identifier",
+        "book-chapter-identifier",
+        "document-section-count"
+      ],
+      "misconception": "Lesson 3 does not establish three completed lessons; source 節/ふし is not counter せつ.",
+      "support": "Explicit count/label request; section usage needs exact supporting entry before authoring.",
+      "evidenceIds": [],
+      "pilotEvidenceIds": [
+        "lessonlabels-expression-1",
+        "lessonlabels-expression-2"
+      ],
+      "pilotEvidenceLimits": "Accepted pilot members, not completion of every allocated row operation/context. Count once in the owning final batch."
+    },
+    {
+      "id": "episodes-volumes",
+      "forms": "話 episode labels and 巻 volumes versus 冊",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-ordinals",
+        "imabi-counters-vi"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "だい...わ",
+        "いっかん",
+        "volume versus copy"
+      ],
+      "contextKeys": [
+        "series-episode",
+        "volume-identifier",
+        "volumes-and-physical-copies"
+      ],
+      "misconception": "Volume number is not the number of books owned; one volume can have several copies.",
+      "support": "Name the requested label/count, not a universal 冊/巻 exclusivity rule.",
+      "evidenceIds": []
+    },
+    {
+      "id": "ranks-grades",
+      "forms": "位/い, 級 and 段",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-ordinals",
+        "n3-index"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "い not くらい",
+        "いっきゅう",
+        "だん"
+      ],
+      "contextKeys": [
+        "race-rank",
+        "proficiency-grade-label",
+        "shelf-tier"
+      ],
+      "misconception": "A rank or grade label is not a count; unlike ranks, grading systems need not have the same ordering.",
+      "support": "Do not infer universal grade hierarchy; exact suffix senses/readings checked during authoring.",
+      "evidenceIds": []
+    },
+    {
+      "id": "portions-items-kinds",
+      "forms": "人前 portions, 点 merchandise and scores, 種類 kinds",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-counters-vi",
+        "imabi-counters-viii",
+        "n3-index"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "いちにんまえ/ににんまえ",
+        "いってん",
+        "しゅるい"
+      ],
+      "contextKeys": [
+        "restaurant-portions",
+        "merchandise-count",
+        "test-score",
+        "assortment-kinds"
+      ],
+      "misconception": "Servings are not diners; merchandise item counts and scores use different meanings of 点. 人分 has a separate row.",
+      "support": "Simple menu/shop scenarios; define item/type aggregation visibly.",
+      "evidenceIds": []
+    },
+    {
+      "id": "slices-bunches",
+      "forms": "切れ and 房",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-native",
+        "n3-index"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "ひときれ/ふたきれ",
+        "ひとふさ/ふたふさ"
+      ],
+      "contextKeys": [
+        "cake-slices",
+        "grape-bunches"
+      ],
+      "misconception": "A slice/bunch is not the entire cake or one grape.",
+      "support": "Physical form shown in words; accept natural piece alternatives.",
+      "evidenceIds": []
+    },
+    {
+      "id": "digits-text-units",
+      "forms": "桁, 行 and 字/文字, including explicitly stated 以内 character limits",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-native",
+        "imabi-counters-viii",
+        "n3-index",
+        "marugoto-b1-independent"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "ひとけた/ふたけた",
+        "ぎょう not こう",
+        "じ/もじ"
+      ],
+      "contextKeys": [
+        "digit-count",
+        "text-line-count",
+        "character-limit"
+      ],
+      "misconception": "Digit count is not digit place; 以内 includes the stated upper limit. C writes/reads the expression, while D owns boundary interpretation.",
+      "support": "Specify Arabic digit strings or Japanese characters; no Unicode implementation trivia.",
+      "evidenceIds": []
+    },
+    {
+      "id": "flight-labels",
+      "forms": "便 labels versus services counted",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "marugoto-a2b1",
+        "n3-index"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "びん",
+        "label numeral reading"
+      ],
+      "contextKeys": [
+        "flight-number",
+        "daily-services"
+      ],
+      "misconception": "Flight 205 is not 205 flights; source 便/びん is not way/means.",
+      "support": "Use a stated Japanese unit notation; avoid pretending every airline reads identifiers identically.",
+      "evidenceIds": []
+    },
+    {
+      "id": "shares-plants",
+      "forms": "株 share/plant counts",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "n3-index",
+        "imabi-native"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "ひとかぶ",
+        "かぶ"
+      ],
+      "contextKeys": [
+        "share-quantity-label",
+        "rooted-plants"
+      ],
+      "misconception": "Share count is not share price; a rooted plant is not a cut stem.",
+      "support": "Existing words/株.md entry 1208920 senses 1-3 inspected; simple counting only, not investment advice or finance calculations.",
+      "evidenceIds": []
+    },
+    {
+      "id": "foundation-labels-ordinals",
+      "forms": "番/号 labels and ～目",
+      "status": "verified-existing",
+      "owner": "baseline",
+      "sources": [
+        "imabi-ordinals"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "ばんせん",
+        "ごうしつ",
+        "ばんめ",
+        "にかいめ"
+      ],
+      "contextKeys": [
+        "existing-labels-positions"
+      ],
+      "misconception": "A label and an ordinal/quantity are different operations.",
+      "support": "Original explicit cues.",
+      "evidenceIds": [
+        "labels-expression-1",
+        "labels-expression-2",
+        "labels-expression-3",
+        "labels-expression-4",
+        "labels-expression-5",
+        "labels-expression-6",
+        "labels-expression-7",
+        "ordinals-expression-1",
+        "ordinals-expression-2",
+        "ordinals-expression-3",
+        "ordinals-expression-4",
+        "ordinals-expression-5",
+        "ordinals-expression-6",
+        "ordinals-expression-7",
+        "ordinals-expression-8"
+      ],
+      "operationEvidence": {
+        "whole-expression": [
+          "labels-expression-1",
+          "labels-expression-7",
+          "ordinals-expression-1",
+          "ordinals-expression-8"
+        ],
+        "canonical-reading": [
+          "labels-expression-1",
+          "ordinals-expression-1"
+        ]
+      }
+    },
+    {
+      "id": "foundation-extended-counters",
+      "forms": "足/着/軒/名/回/度/泊",
+      "status": "verified-existing",
+      "owner": "baseline",
+      "sources": [
+        "existing-quantity"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "canonical-reading",
+        "reverse",
+        "whole-expression"
+      ],
+      "soundClasses": [
+        "existing exact alternations retained"
+      ],
+      "contextKeys": [
+        "existing-pairs-clothes-buildings-headcounts-events-stays"
+      ],
+      "misconception": "An N3 vocabulary-list occurrence does not require duplicating easier drills.",
+      "support": "Existing context-qualified alternatives.",
+      "evidenceIds": [
+        "ken-houses-1",
+        "ken-cafes-1",
+        "ken-expression-1",
+        "soku-expression-1",
+        "chaku-expression-1",
+        "mei-expression-1",
+        "do-expression-1",
+        "haku-expression-1",
+        "chaku-coats-1",
+        "chaku-shirts-1",
+        "do-visits-1",
+        "do-repairs-1",
+        "haku-hotel-1",
+        "haku-inn-1",
+        "kai-read-1",
+        "kai-phone-1",
+        "mei-staff-1",
+        "mei-participants-1",
+        "soku-shoes-1",
+        "soku-slippers-1",
+        "kaicompound-expression-1",
+        "chaku-noun-1",
+        "do-noun-1",
+        "haku-noun-1",
+        "kai-noun-1",
+        "ken-noun-1",
+        "mei-noun-1",
+        "soku-noun-1",
+        "chaku-expression-8",
+        "do-expression-8",
+        "haku-expression-8",
+        "kaicompound-expression-3",
+        "ken-expression-8",
+        "mei-expression-8",
+        "soku-single-1"
+      ],
+      "operationEvidence": {
+        "selection": [
+          "chaku-coats-1",
+          "chaku-shirts-1",
+          "do-visits-1",
+          "do-repairs-1",
+          "haku-hotel-1",
+          "haku-inn-1",
+          "kai-read-1",
+          "kai-phone-1",
+          "ken-houses-1",
+          "ken-cafes-1",
+          "mei-staff-1",
+          "mei-participants-1",
+          "soku-shoes-1",
+          "soku-slippers-1"
+        ],
+        "suffix-typing": [
+          "chaku-coats-1",
+          "chaku-shirts-1",
+          "do-visits-1",
+          "do-repairs-1",
+          "haku-hotel-1",
+          "haku-inn-1",
+          "kai-read-1",
+          "kai-phone-1",
+          "ken-houses-1",
+          "ken-cafes-1",
+          "mei-staff-1",
+          "mei-participants-1",
+          "soku-shoes-1",
+          "soku-slippers-1"
+        ],
+        "canonical-reading": [
+          "chaku-coats-1",
+          "chaku-shirts-1",
+          "chaku-expression-1",
+          "do-visits-1",
+          "do-repairs-1",
+          "do-expression-1",
+          "haku-hotel-1",
+          "haku-inn-1",
+          "haku-expression-1",
+          "kai-read-1",
+          "kai-phone-1",
+          "kaicompound-expression-1",
+          "ken-houses-1",
+          "ken-cafes-1",
+          "ken-expression-1",
+          "mei-staff-1",
+          "mei-participants-1",
+          "mei-expression-1",
+          "soku-shoes-1",
+          "soku-slippers-1",
+          "soku-expression-1"
+        ],
+        "reverse": [
+          "chaku-noun-1",
+          "do-noun-1",
+          "haku-noun-1",
+          "kai-noun-1",
+          "ken-noun-1",
+          "mei-noun-1",
+          "soku-noun-1"
+        ],
+        "whole-expression": [
+          "chaku-expression-1",
+          "chaku-expression-8",
+          "do-expression-1",
+          "do-expression-8",
+          "haku-expression-1",
+          "haku-expression-8",
+          "kaicompound-expression-1",
+          "kaicompound-expression-3",
+          "ken-expression-1",
+          "ken-expression-8",
+          "mei-expression-1",
+          "mei-expression-8",
+          "soku-expression-1",
+          "soku-single-1"
+        ]
+      }
+    },
+    {
+      "id": "foundation-time",
+      "forms": "Dates, 24-hour times, hours/minutes and years/months",
+      "status": "verified-existing",
+      "owner": "baseline",
+      "sources": [
+        "imabi-time"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "clock versus duration",
+        "half units",
+        "calendar irregulars"
+      ],
+      "contextKeys": [
+        "existing-calendar-and-duration"
+      ],
+      "misconception": "Calendar months are not fixed day counts; clock time is not duration.",
+      "support": "Existing full context and constrained notation.",
+      "evidenceIds": [
+        "compounddates-expression-1",
+        "timetable-expression-1",
+        "durations-expression-1",
+        "durations-expression-2",
+        "durations-expression-3",
+        "durations-expression-4",
+        "durations-expression-5",
+        "durations-expression-6",
+        "calendaryears-expression-1",
+        "calendaryears-expression-4",
+        "clock-expression-1",
+        "clock-expression-16",
+        "compounddates-expression-6",
+        "dates-expression-1",
+        "dates-expression-20",
+        "days-expression-1",
+        "days-expression-14",
+        "hours-expression-1",
+        "hours-expression-8",
+        "minutes-expression-1",
+        "minutes-expression-15",
+        "months-expression-1",
+        "months-expression-13",
+        "monthspan-expression-1",
+        "monthspan-expression-7",
+        "timetable-expression-6",
+        "weeks-expression-1",
+        "weeks-expression-6",
+        "years-expression-1",
+        "years-expression-6"
+      ],
+      "operationEvidence": {
+        "whole-expression": [
+          "calendaryears-expression-1",
+          "calendaryears-expression-4",
+          "clock-expression-1",
+          "clock-expression-16",
+          "compounddates-expression-1",
+          "compounddates-expression-6",
+          "dates-expression-1",
+          "dates-expression-20",
+          "days-expression-1",
+          "days-expression-14",
+          "durations-expression-1",
+          "durations-expression-6",
+          "hours-expression-1",
+          "hours-expression-8",
+          "minutes-expression-1",
+          "minutes-expression-15",
+          "months-expression-1",
+          "months-expression-13",
+          "monthspan-expression-1",
+          "monthspan-expression-7",
+          "timetable-expression-1",
+          "timetable-expression-6",
+          "weeks-expression-1",
+          "weeks-expression-6",
+          "years-expression-1",
+          "years-expression-6"
+        ],
+        "canonical-reading": [
+          "calendaryears-expression-1",
+          "clock-expression-1",
+          "compounddates-expression-1",
+          "dates-expression-1",
+          "days-expression-1",
+          "durations-expression-1",
+          "hours-expression-1",
+          "minutes-expression-1",
+          "months-expression-1",
+          "monthspan-expression-1",
+          "timetable-expression-1",
+          "weeks-expression-1",
+          "years-expression-1"
+        ]
+      }
+    },
+    {
+      "id": "seconds-mixed-time",
+      "forms": "秒, 分秒 and manageable sub-minute durations",
+      "status": "new-owner",
+      "owner": "D",
+      "sources": [
+        "imabi-time",
+        "n3-index"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "びょう",
+        "mixed minute sound changes"
+      ],
+      "contextKeys": [
+        "timer-duration",
+        "race-time",
+        "short-recording"
+      ],
+      "misconception": "Seconds are not minutes; a component is not the entire duration.",
+      "support": "Group time; explicit duration notation, no stopwatch locale ambiguity.",
+      "evidenceIds": [],
+      "pilotEvidenceIds": [
+        "seconds-expression-1",
+        "seconds-expression-2"
+      ],
+      "pilotEvidenceLimits": "Accepted pilot members, not completion of every allocated row operation/context. Count once in the owning final batch."
+    },
+    {
+      "id": "bands-centuries",
+      "forms": "Age/year 代/年代, numerical 台 bands and 世紀",
+      "status": "new-owner",
+      "owner": "D",
+      "sources": [
+        "n3-index",
+        "kotobank-bands"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "だい",
+        "ねんだい",
+        "いっせいき"
+      ],
+      "contextKeys": [
+        "age-band",
+        "decade-label",
+        "price-band",
+        "historical-century"
+      ],
+      "misconception": "A band is not an exact value; a numbered century is not an arbitrary hundred-year span.",
+      "support": "Existing words/世紀.md entry 1373990 inspected. State conventional notation, and keep calendar versus everyday group placement explicit.",
+      "evidenceIds": []
+    },
+    {
+      "id": "capacity-mass",
+      "forms": "リットル/ミリリットル and metric トン",
+      "status": "new-owner",
+      "owner": "D",
+      "sources": [
+        "imabi-measures",
+        "n3-index"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "loanword units",
+        "simple decimal notation"
+      ],
+      "contextKeys": [
+        "bottle-capacity",
+        "recipe-liquid",
+        "load-mass"
+      ],
+      "misconception": "Metric ton is 1000 kg, not 1000 tons; rare 屯 is not the default writing.",
+      "support": "Request the unit rather than require mental conversion; preserve easier g/kg drills.",
+      "evidenceIds": []
+    },
+    {
+      "id": "everyday-speed",
+      "forms": "時速/秒速 with ordinary metric units",
+      "status": "new-owner",
+      "owner": "D",
+      "sources": [
+        "imabi-measures",
+        "n3-index"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "じそく",
+        "びょうそく"
+      ],
+      "contextKeys": [
+        "walking-speed",
+        "weather-wind-speed"
+      ],
+      "misconception": "Rate is not total distance; omitted everyday units depend on context.",
+      "support": "State full units; avoid specialist technical reading variants.",
+      "evidenceIds": []
+    },
+    {
+      "id": "foundation-scope",
+      "forms": "Bounds, benchmarks, indefinite counts, frequency and price/time frames",
+      "status": "verified-existing",
+      "owner": "baseline",
+      "sources": [
+        "existing-quantity"
+      ],
+      "operations": [
+        "grammar-interpretation",
+        "grammar-production"
+      ],
+      "soundClasses": [
+        "not a counter-reading claim"
+      ],
+      "contextKeys": [
+        "existing-quantity-scope"
+      ],
+      "misconception": "Boundary, frequency, duration and price scopes cannot be inferred from a number alone.",
+      "support": "All 28 baseline quantity-scope tasks inspected; exact record hashes in baseline inventory.",
+      "evidenceSet": "grammar/quantity-scope.json",
+      "evidenceIds": []
+    },
+    {
+      "id": "foundation-distribution",
+      "forms": "ずつ per-unit, total and incremental implications",
+      "status": "verified-existing",
+      "owner": "baseline",
+      "sources": [
+        "existing-quantity"
+      ],
+      "operations": [
+        "grammar-interpretation"
+      ],
+      "soundClasses": [
+        "not a reading drill"
+      ],
+      "contextKeys": [
+        "equal-allocation",
+        "new-pages-per-day",
+        "entry-groups",
+        "incremental-change",
+        "timer-adjustments"
+      ],
+      "misconception": "The total need not equal each unit's amount; repeated activity need not be simultaneous or unfinished.",
+      "support": "All 16 existing tasks inspected; preserve their N3 levels.",
+      "evidenceSet": "grammar/quantity-zutsu.json",
+      "evidenceIds": [
+        "quantity-zutsu-stickers-unit",
+        "quantity-zutsu-stickers-total",
+        "quantity-zutsu-containers-unit",
+        "quantity-zutsu-containers-total",
+        "quantity-zutsu-entry-groups-unit",
+        "quantity-zutsu-entry-groups-total"
+      ]
+    },
+    {
+      "id": "foundation-approximation",
+      "forms": "Approximate quantity versus exclusive limit",
+      "status": "verified-existing",
+      "owner": "baseline",
+      "sources": [
+        "existing-quantity"
+      ],
+      "operations": [
+        "grammar-production"
+      ],
+      "soundClasses": [
+        "not a new kana-reading claim"
+      ],
+      "contextKeys": [
+        "meeting-duration",
+        "audience-estimate",
+        "walking-distance",
+        "exclusive-count",
+        "limited-break"
+      ],
+      "misconception": "Approximation is not だけ restriction; quantity approximators need not be universally interchangeable.",
+      "support": "Original visible operation and fitting alternatives.",
+      "evidenceIds": [
+        "approximate-quantity-meeting-duration",
+        "approximate-quantity-audience",
+        "approximate-quantity-walking-distance",
+        "dake-limit-three-balls",
+        "dake-limit-five-minute-break"
+      ]
+    },
+    {
+      "id": "foundation-relative-rank",
+      "forms": "Comparison set and の次に relative rank",
+      "status": "verified-existing",
+      "owner": "baseline",
+      "sources": [
+        "existing-quantity"
+      ],
+      "operations": [
+        "grammar-interpretation"
+      ],
+      "soundClasses": [
+        "not a suffix pronunciation claim"
+      ],
+      "contextKeys": [
+        "height-comparison-set",
+        "nonfirst-rank-anchor",
+        "preference-not-location"
+      ],
+      "misconception": "Next after X is not necessarily second overall; the stated comparison domain matters.",
+      "support": "Tie/domain facts explicit in existing tasks.",
+      "evidenceIds": [
+        "means-and-scope-height-comparison-set-group-second",
+        "means-and-scope-height-comparison-set-school-second",
+        "means-and-scope-nonfirst-rank-anchor-two-above",
+        "means-and-scope-nonfirst-rank-anchor-always-second",
+        "means-and-scope-preference-not-location-relative-preference",
+        "means-and-scope-preference-not-location-physical-neighbor",
+        "n5-comparison-bags-maximum",
+        "n5-comparison-routes-maximum"
+      ],
+      "operationEvidence": {
+        "grammar-interpretation": [
+          "means-and-scope-height-comparison-set-group-second",
+          "means-and-scope-height-comparison-set-school-second",
+          "means-and-scope-nonfirst-rank-anchor-two-above",
+          "means-and-scope-nonfirst-rank-anchor-always-second",
+          "means-and-scope-preference-not-location-relative-preference",
+          "means-and-scope-preference-not-location-physical-neighbor",
+          "n5-comparison-bags-maximum",
+          "n5-comparison-routes-maximum"
+        ]
+      }
+    },
+    {
+      "id": "fraction-discount-interpretation",
+      "forms": "Part/whole, reduction amount and amount left",
+      "status": "new-owner",
+      "owner": "D:quantity-scope",
+      "sources": [
+        "imabi-fractions",
+        "kotobank-waribiki",
+        "bunpro-cost"
+      ],
+      "operations": [
+        "grammar-interpretation"
+      ],
+      "soundClasses": [
+        "not a disguised spelling test"
+      ],
+      "contextKeys": [
+        "shop-discount",
+        "remaining-recipe-amount",
+        "fraction-of-container"
+      ],
+      "misconception": "The removed part and remaining whole are different quantities.",
+      "support": "Small transparent arithmetic; protect tested amount/construction from vocabulary gloss; per-task source level.",
+      "evidenceIds": [],
+      "pilotEvidenceIds": [
+        "quantity-scope-discount-reduction",
+        "quantity-scope-discount-payable",
+        "quantity-scope-fraction-used",
+        "quantity-scope-fraction-remaining"
+      ],
+      "pilotEvidenceLimits": "Accepted pilot members, not completion of every allocated row operation/context. Count once in the owning final batch."
+    },
+    {
+      "id": "ratio-rate-interpretation",
+      "forms": "Ratio order, base and rate versus total",
+      "status": "new-owner",
+      "owner": "D:quantity-scope",
+      "sources": [
+        "n3-index",
+        "imabi-measures",
+        "existing-quantity",
+        "pinned-tai-sense"
+      ],
+      "operations": [
+        "grammar-interpretation"
+      ],
+      "soundClasses": [
+        "not a new numerical engine"
+      ],
+      "contextKeys": [
+        "mixture-component-order",
+        "double-base",
+        "rate-and-observation-period"
+      ],
+      "misconception": "A ratio needs an ordered comparison and a rate does not supply an unstated total.",
+      "support": "No complex arithmetic; exact whole-task level evidence rather than N3-by-project.",
+      "evidenceIds": []
+    },
+    {
+      "id": "uncertainty-interpretation",
+      "forms": "数十/十数; non-interrogative 何百-type magnitude; approximate versus established amount",
+      "status": "new-owner",
+      "owner": "D:quantity-scope",
+      "sources": [
+        "kotobank-jusuu",
+        "imabi-prefixes",
+        "imabi-approximations",
+        "marugoto-b1-independent"
+      ],
+      "operations": [
+        "grammar-interpretation"
+      ],
+      "soundClasses": [
+        "meaning not pronunciation"
+      ],
+      "contextKeys": [
+        "uncertain-headcount",
+        "indefinite-large-stock"
+      ],
+      "misconception": "A vague report does not establish an exact number; 十数 is not 数十.",
+      "support": "Avoid disputed edge boundaries and answer-leaking glosses; classify actual tested construction.",
+      "evidenceIds": []
+    },
+    {
+      "id": "lexical-support",
+      "forms": "合計/平均/残り/率/量/金額/単位 and related numerical vocabulary",
+      "status": "support-reference-only",
+      "owner": "existing-words-and-inline-support",
+      "sources": [
+        "n3-index"
+      ],
+      "operations": [
+        "lexical-support"
+      ],
+      "soundClasses": [
+        "sense-specific readings"
+      ],
+      "contextKeys": [
+        "support-not-transfer-count"
+      ],
+      "misconception": "A word article is not numerical interpretation practice; arithmetic algorithms are not language outcomes.",
+      "support": "Use established word links or inline glosses without giving away target operations.",
+      "evidenceIds": []
+    },
+    {
+      "id": "traditional-long-tail",
+      "forms": "Reference boundary: fractional 厘/毛, historical 勺/升/斗/石 and 匁/貫, detailed 尺貫法 conversion tables, formal 壱/弐/参, and 京/垓 or higher magnitudes",
+      "status": "support-reference-only",
+      "owner": "learner-reference",
+      "sources": [
+        "imabi-numbers",
+        "imabi-measures"
+      ],
+      "operations": [
+        "reference"
+      ],
+      "soundClasses": [
+        "do not generate a complete paradigm"
+      ],
+      "contextKeys": [
+        "scope-limit"
+      ],
+      "misconception": "A finite reference-only boundary is not a claim that every traditional unit is rare. Ordinary housing area, rice 合 and recipe measures now have required rows.",
+      "support": "Explain recognition and link sources without claiming exercises or frequency measurements. No blanket exclusion of an entire measurement system.",
+      "evidenceIds": [],
+      "ownerDecision": "No owner agreement is asserted. This narrows the pre-existing technical/historical reference-only boundary and includes the practical candidates. Independent reconciliation must decide whether any remaining boundary is a significant new exclusion; if so obtain actual owner agreement before bulk work."
+    },
+    {
+      "id": "specialist-courses",
+      "forms": "Specialist finance/science calculations and medical dosing",
+      "status": "deferred",
+      "owner": "out-of-scope",
+      "sources": [
+        "imabi-measures"
+      ],
+      "operations": [],
+      "soundClasses": [],
+      "contextKeys": [],
+      "misconception": "Language-unit practice is not specialist professional instruction.",
+      "support": "Original parent scope excludes a full specialist course; ordinary discounts, metric tons and inventory counts remain required.",
+      "evidenceIds": []
+    },
+    {
+      "id": "people-worth",
+      "forms": "人分 quantities for people versus served 人前",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "marugoto-b1-independent",
+        "imabi-counters-vi"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "ひとりぶん",
+        "ふたりぶん",
+        "さんにんぶん"
+      ],
+      "contextKeys": [
+        "recipe-yield",
+        "prepared-materials"
+      ],
+      "misconception": "A quantity intended for people does not count the people themselves or necessarily correspond to restaurant servings.",
+      "support": "Support recipe/material nouns; no scaling arithmetic required.",
+      "evidenceIds": []
+    },
+    {
+      "id": "tofu-chou",
+      "forms": "丁 for tofu blocks",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "marugoto-b1-independent",
+        "imabi-counters-vi"
+      ],
+      "operations": [
+        "selection",
+        "suffix-typing",
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "いっちょう",
+        "にちょう",
+        "はっちょう; verify accepted variants"
+      ],
+      "contextKeys": [
+        "tofu-block-versus-package",
+        "whole-block-versus-cut-pieces"
+      ],
+      "misconception": "A marketed pack, a tofu block and a cut piece need not be the same unit.",
+      "support": "Food context only; no firearm or other specialist 丁 senses.",
+      "evidenceIds": []
+    },
+    {
+      "id": "rooms-heya",
+      "forms": "部屋 room counts versus 号室 identifiers",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "marugoto-b1-independent"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "ひとへや",
+        "ふたへや",
+        "さんべや; verify variants"
+      ],
+      "contextKeys": [
+        "hotel-room-allocation",
+        "home-room-count"
+      ],
+      "misconception": "Rooms, dwelling units, buildings and room labels are different quantities.",
+      "support": "Supply any accommodation vocabulary; exact readings/variants require the batch usage check.",
+      "evidenceIds": []
+    },
+    {
+      "id": "group-membership",
+      "forms": "人組 membership size versus number of 組",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "marugoto-b1-independent",
+        "imabi-native"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "ふたりぐみ",
+        "さんにんぐみ"
+      ],
+      "contextKeys": [
+        "performing-group-members",
+        "paired-participants"
+      ],
+      "misconception": "A three-person group is not three groups; do not conflate membership with class labels.",
+      "support": "Use an explicit request for member count or group count, not inferred hidden context.",
+      "evidenceIds": []
+    },
+    {
+      "id": "alternative-ways",
+      "forms": "Numerical 通り/とおり for ways and readings",
+      "status": "new-owner",
+      "owner": "C",
+      "sources": [
+        "imabi-native"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "ひととおり",
+        "ふたとおり",
+        "さんとおり; verify contextual variants"
+      ],
+      "contextKeys": [
+        "alternative-routes",
+        "word-reading-options"
+      ],
+      "misconception": "Ways are not passages/copies 通 or street/as-stated 通り; no inherited N3 sense claim.",
+      "support": "State the number directly; no combinatorics calculation.",
+      "evidenceIds": []
+    },
+    {
+      "id": "inclusive-within-interpretation",
+      "forms": "以内 numerical/character/time upper bounds",
+      "status": "new-owner",
+      "owner": "D:quantity-scope",
+      "sources": [
+        "marugoto-b1-independent",
+        "existing-quantity"
+      ],
+      "operations": [
+        "grammar-interpretation"
+      ],
+      "soundClasses": [
+        "以内/いない"
+      ],
+      "contextKeys": [
+        "character-limit",
+        "completion-deadline"
+      ],
+      "misconception": "以内 includes the boundary, unlike a strict below/before reading; the counted unit remains explicit.",
+      "support": "Existing bounds owner with additive facets only if needed; exact whole-task level source must be inspected.",
+      "evidenceIds": []
+    },
+    {
+      "id": "interval-since-event",
+      "forms": "年ぶり and month/year interval before a repeated event",
+      "status": "new-owner",
+      "owner": "D:quantity-scope",
+      "sources": [
+        "marugoto-b1-independent"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading",
+        "grammar-interpretation"
+      ],
+      "soundClasses": [
+        "ねんぶり",
+        "かげつぶり"
+      ],
+      "contextKeys": [
+        "return-after-gap",
+        "repeat-event-after-gap"
+      ],
+      "misconception": "A gap before a repeated event is not the event duration or a calendar year label.",
+      "support": "D authors bounded counter expressions and existing time-frame interpretations, not a new Grammar engine. Verify exact Bunpro placement before assigning a Grammar level.",
+      "evidenceIds": []
+    },
+    {
+      "id": "place-value-support",
+      "forms": "位/くらい for digit place, distinct from 桁 digit count",
+      "status": "support-reference-only",
+      "owner": "B:learner-reference",
+      "sources": [
+        "n3-index"
+      ],
+      "operations": [
+        "reference"
+      ],
+      "soundClasses": [
+        "百の位/ひゃくのくらい"
+      ],
+      "contextKeys": [
+        "large-number-grouping"
+      ],
+      "misconception": "Place, number of digits, approximate suffix くらい and ranking suffix 位/い are separate.",
+      "support": "Link the pinned words/位.md sense and explain the terminology with magnitude grouping; no separate arithmetic drill is required.",
+      "evidenceIds": []
+    },
+    {
+      "id": "housing-area",
+      "forms": "平方メートル, 畳/じょう and 坪 in stated housing area",
+      "status": "new-owner",
+      "owner": "D",
+      "sources": [
+        "imabi-measures"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "へいほうメートル",
+        "じょう",
+        "つぼ; verify per-number readings"
+      ],
+      "contextKeys": [
+        "listed-floor-area",
+        "tatami-style-room-area"
+      ],
+      "misconception": "Area, room count and floor/room identifiers differ; do not assert one exact universal physical tatami size.",
+      "support": "Bounded production/reading of stated measurements, not land surveying or exact traditional-to-metric conversions.",
+      "evidenceIds": []
+    },
+    {
+      "id": "rice-volume",
+      "forms": "合 for stated uncooked-rice volume",
+      "status": "new-owner",
+      "owner": "D",
+      "sources": [
+        "imabi-measures"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "いちごう",
+        "にごう"
+      ],
+      "contextKeys": [
+        "rice-measuring-cup",
+        "rice-recipe-quantity"
+      ],
+      "misconception": "Volume is not an invariant mass or cooked yield; a rice measuring cup is not automatically an ordinary cup.",
+      "support": "Ordinary cooking quantities only; independently verify the practical use and any conversion before authoring.",
+      "evidenceIds": []
+    },
+    {
+      "id": "recipe-spoon-measures",
+      "forms": "大さじ/小さじ and simple fractional cooking measures",
+      "status": "new-owner",
+      "owner": "D",
+      "sources": [
+        "imabi-measures",
+        "imabi-fractions"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "おおさじ",
+        "こさじ",
+        "fractional measure"
+      ],
+      "contextKeys": [
+        "large-spoon-measure",
+        "small-spoon-measure"
+      ],
+      "misconception": "Named measuring units are not arbitrary household spoons; retain the requested measure and fraction.",
+      "support": "Practical cooking inclusion, not medicinal dosing. The listed general sources motivate the gap; an exact cooking reference is required before this row can be covered.",
+      "evidenceIds": []
+    },
+    {
+      "id": "foundation-age-floors",
+      "forms": "歳 age, 二十歳 and 階 floor identifiers",
+      "status": "verified-existing",
+      "owner": "baseline",
+      "sources": [
+        "existing-quantity",
+        "marugoto-b1-independent"
+      ],
+      "operations": [
+        "whole-expression",
+        "canonical-reading"
+      ],
+      "soundClasses": [
+        "はたち",
+        "階 counter readings"
+      ],
+      "contextKeys": [
+        "existing-age",
+        "existing-floor"
+      ],
+      "misconception": "Age, age bands and a floor identifier are distinct; existing tasks are not newly level3.",
+      "support": "Reuse original age/floor records without edits.",
+      "evidenceIds": [
+        "age-expression-1",
+        "age-expression-9",
+        "floor-expression-1",
+        "floor-expression-8"
+      ],
+      "operationEvidence": {
+        "whole-expression": [
+          "age-expression-1",
+          "age-expression-9",
+          "floor-expression-1",
+          "floor-expression-8"
+        ],
+        "canonical-reading": [
+          "age-expression-1",
+          "floor-expression-1"
+        ]
+      }
+    }
+  ],
+  "lexicalCandidates": [
+    {
+      "sourceId": "N3:54",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "あんなに degree, not a numerical counter."
+    },
+    {
+      "sourceId": "N3:55",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "あんまり low degree; source remainder/rest gloss belongs to あまり, not this reading."
+    },
+    {
+      "sourceId": "N3:92",
+      "status": "verified-existing",
+      "row": "foundation-relative-rank",
+      "sense": "一番 best/first; existing N5 comparison-set tasks, not newly N3."
+    },
+    {
+      "sourceId": "N3:102",
+      "status": "not-numerical",
+      "row": null,
+      "sense": "一般 means general/ordinary, not an arithmetic average."
+    },
+    {
+      "sourceId": "N3:152",
+      "status": "not-numerical",
+      "row": null,
+      "sense": "裏切る double-cross is an English substring false positive."
+    },
+    {
+      "sourceId": "N3:222",
+      "status": "new-owner",
+      "row": "approximation-forms",
+      "sense": "およそ approximate amount; not every other adverbial sense."
+    },
+    {
+      "sourceId": "N3:233",
+      "status": "new-owner",
+      "row": "lessons-chapters",
+      "sense": "課/か lesson and organizational section distinguished."
+    },
+    {
+      "sourceId": "N3:237",
+      "status": "verified-existing",
+      "row": "foundation-compounds",
+      "sense": "回/かい occurrence counter, already easier practice."
+    },
+    {
+      "sourceId": "N3:258",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "価格 price; lexical support, not another cost engine."
+    },
+    {
+      "sourceId": "N3:290",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "数/かず noun number, separate from prefix すう."
+    },
+    {
+      "sourceId": "N3:292",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "数える count; support verb rather than new numerical operation."
+    },
+    {
+      "sourceId": "N3:310",
+      "status": "new-owner",
+      "row": "shares-plants",
+      "sense": "株 share/plant and corresponding counts; no investment calculation."
+    },
+    {
+      "sourceId": "N3:314",
+      "status": "not-numerical",
+      "row": null,
+      "sense": "上/かみ government-related identity does not establish first-volume じょう."
+    },
+    {
+      "sourceId": "N3:395",
+      "status": "new-owner",
+      "row": "ranks-grades",
+      "sense": "級 grade/rank; exact suffix use checked separately from broad school-class gloss."
+    },
+    {
+      "sourceId": "N3:423",
+      "status": "new-owner",
+      "row": "slices-bunches",
+      "sense": "切れ/きれ piece/slice counter, not knife sharpness."
+    },
+    {
+      "sourceId": "N3:430",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "金額 monetary amount; protect target amounts from glosses."
+    },
+    {
+      "sourceId": "N3:454",
+      "status": "new-owner",
+      "row": "sets-kumi",
+      "sense": "組/くみ set/group and class label; numbers use different native/label constructions."
+    },
+    {
+      "sourceId": "N3:458",
+      "status": "support-reference-only",
+      "row": "place-value-support",
+      "sense": "位/くらい entry1155400 includes digit-place terminology as well as rank. The pinned words/位.md explains hundreds place. Approximation1154340 and ranking suffix 位/い are separate; place support does not inherit either sense."
+    },
+    {
+      "sourceId": "N3:473",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "加える add; no full arithmetic-operation course."
+    },
+    {
+      "sourceId": "N3:475",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "加わる join/increase; not an unrestricted arithmetic synonym."
+    },
+    {
+      "sourceId": "N3:487",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "計算 calculation; calculation burden is deliberately small."
+    },
+    {
+      "sourceId": "N3:511",
+      "status": "verified-existing",
+      "row": "foundation-extended-counters",
+      "sense": "軒/けん is the building counter; source eaves gloss is mismatched."
+    },
+    {
+      "sourceId": "N3:539",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "高価 costly, not a specified numerical price."
+    },
+    {
+      "sourceId": "N3:545",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "合計 total; existing and new total operations retain their actual owners."
+    },
+    {
+      "sourceId": "N3:553",
+      "status": "support-reference-only",
+      "row": "everyday-speed",
+      "sense": "高速 high speed; not a measured rate by itself."
+    },
+    {
+      "sourceId": "N3:614",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "最低 minimum/lowest, also evaluative worst; no universal numeric interpretation."
+    },
+    {
+      "sourceId": "N3:638",
+      "status": "support-reference-only",
+      "row": "approximation-forms",
+      "sense": "ざっと rough estimate; productive core forms already assigned, no numerical precision claim."
+    },
+    {
+      "sourceId": "N3:648",
+      "status": "new-owner",
+      "row": "plates-sara",
+      "sense": "皿 plate/dish; counter use justified independently by IMABI, not just noun membership."
+    },
+    {
+      "sourceId": "N3:703",
+      "status": "support-reference-only",
+      "row": "menu-hin",
+      "sense": "品/しな goods identity; source mixes unrelated ひん dignity and dish-counter entries."
+    },
+    {
+      "sourceId": "N3:757",
+      "status": "new-owner",
+      "row": "portions-items-kinds",
+      "sense": "種類 kinds, not individual objects; actual word example inspected."
+    },
+    {
+      "sourceId": "N3:759",
+      "status": "not-numerical",
+      "row": null,
+      "sense": "瞬間 instant; English second is not the unit 秒."
+    },
+    {
+      "sourceId": "N3:764",
+      "status": "new-owner",
+      "row": "lessons-chapters",
+      "sense": "章 chapter/section, not medal sense."
+    },
+    {
+      "sourceId": "N3:766",
+      "status": "support-reference-only",
+      "row": "episodes-volumes",
+      "sense": "上/じょう first volume of an ordered set; not numeric 巻 pronunciation or government sense."
+    },
+    {
+      "sourceId": "N3:777",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "少々 small quantity; polite wait wording is not an exact minute."
+    },
+    {
+      "sourceId": "N3:849",
+      "status": "new-owner",
+      "row": "uncertain-prefixes",
+      "sense": "数/すう several/numerical prefix, entry 1580825; not noun かず."
+    },
+    {
+      "sourceId": "N3:850",
+      "status": "support-reference-only",
+      "row": "digits-text-units",
+      "sense": "数字 numerical symbols/figures; not only Arabic digits."
+    },
+    {
+      "sourceId": "N3:874",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "全て whole/all; not a computed total by itself."
+    },
+    {
+      "sourceId": "N3:887",
+      "status": "new-owner",
+      "row": "bands-centuries",
+      "sense": "世紀 century and numbered historical century; actual word distinctions inspected."
+    },
+    {
+      "sourceId": "N3:889",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "税金 tax; basic tax-inclusive facts may support prices, no tax-law course."
+    },
+    {
+      "sourceId": "N3:896",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "せいぜい at most/best or to the utmost depends on construction; not a universal exact upper-bound operator."
+    },
+    {
+      "sourceId": "N3:933",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "全体 whole; unit/whole distinction is tested in its actual owners."
+    },
+    {
+      "sourceId": "N3:938",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "増加 increase; baseline, change and result must be distinguished in actual tasks."
+    },
+    {
+      "sourceId": "N3:944",
+      "status": "support-reference-only",
+      "row": "everyday-speed",
+      "sense": "速度 speed/rate; new measured expressions have separate evidence."
+    },
+    {
+      "sourceId": "N3:969",
+      "status": "new-owner",
+      "row": "ratios-multiples",
+      "sense": "対/たい entry 1409800 ratio/versus; pair つい is entry 1409810 and does not inherit membership."
+    },
+    {
+      "sourceId": "N3:971",
+      "status": "support-reference-only",
+      "row": "bands-centuries",
+      "sense": "台/だい stand noun is not source proof for machine counter or range suffix."
+    },
+    {
+      "sourceId": "N3:977",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "代金 payment/cost, distinct from a numerical notation."
+    },
+    {
+      "sourceId": "N3:988",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "大半 majority/mostly; no unprovided exact proportion."
+    },
+    {
+      "sourceId": "N3:990",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "大部分 most part; not a fixed percentage."
+    },
+    {
+      "sourceId": "N3:1025",
+      "status": "new-owner",
+      "row": "bundles-taba",
+      "sense": "束/たば bundle; source handbreadth belongs to archaic つか."
+    },
+    {
+      "sourceId": "N3:1026",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "度/たび occasion/each time, existing word article inspected; do not claim easier ど drills cover it or add たび to source-wide 度 metadata."
+    },
+    {
+      "sourceId": "N3:1032",
+      "status": "not-numerical",
+      "row": null,
+      "sense": "偶/たま occasional; even-number/couple English glosses are mismatched."
+    },
+    {
+      "sourceId": "N3:1041",
+      "status": "new-owner",
+      "row": "ranks-grades",
+      "sense": "段 step/tier/grade; actual use determines counting versus label."
+    },
+    {
+      "sourceId": "N3:1042",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "単位 unit; school-credit sense is separate."
+    },
+    {
+      "sourceId": "N3:1054",
+      "status": "not-numerical",
+      "row": null,
+      "sense": "地域 region; English area is not square-unit measurement."
+    },
+    {
+      "sourceId": "N3:1070",
+      "status": "not-numerical",
+      "row": null,
+      "sense": "地方 region; English area is not surface area."
+    },
+    {
+      "sourceId": "N3:1078",
+      "status": "not-numerical",
+      "row": null,
+      "sense": "中古 second-hand, not a second or ordinal."
+    },
+    {
+      "sourceId": "N3:1108",
+      "status": "support-reference-only",
+      "row": "boxes-hako",
+      "sense": "包み package/wrapped bundle; package vocabulary does not prove a fixed contents count."
+    },
+    {
+      "sourceId": "N3:1129",
+      "status": "new-owner",
+      "row": "approximation-forms",
+      "sense": "程度 after a quantity; not every noun degree/standard sense."
+    },
+    {
+      "sourceId": "N3:1156",
+      "status": "verified-existing",
+      "row": "foundation-extended-counters",
+      "sense": "度/ど occurrences already covered; preserve distinction from たび."
+    },
+    {
+      "sourceId": "N3:1167",
+      "status": "not-numerical",
+      "row": null,
+      "sense": "どうしても at any cost is not a monetary quantity."
+    },
+    {
+      "sourceId": "N3:1175",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "通り/とおり according to/street; number of ways requires its own context and source, not inherited from the gloss. The separate alternative-ways row is sourced from IMABI, without inheriting this lexical membership."
+    },
+    {
+      "sourceId": "N3:1178",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "時/とき time/occasion is not clock-hour ～時/じ."
+    },
+    {
+      "sourceId": "N3:1202",
+      "status": "not-numerical",
+      "row": null,
+      "sense": "とにかく at any rate is an English false positive."
+    },
+    {
+      "sourceId": "N3:1219",
+      "status": "new-owner",
+      "row": "capacity-mass",
+      "sense": "トン metric ton is 1000 kg; source 1000 ton is wrong and 屯 is rare ateji."
+    },
+    {
+      "sourceId": "N3:1230",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "半ば middle/halfway/partly; not an unrestricted replacement for 半分 or exactly 50%."
+    },
+    {
+      "sourceId": "N3:1274",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "値/ね price/value; retain reading, not automatic 数値/すうち."
+    },
+    {
+      "sourceId": "N3:1279",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "値段 price; ordinary lexical support."
+    },
+    {
+      "sourceId": "N3:1286",
+      "status": "new-owner",
+      "row": "bands-centuries",
+      "sense": "年代 era/period/age grouping, with exact dictionary band evidence."
+    },
+    {
+      "sourceId": "N3:1295",
+      "status": "not-numerical",
+      "row": null,
+      "sense": "軒/のき eaves, not building counter けん."
+    },
+    {
+      "sourceId": "N3:1297",
+      "status": "support-reference-only",
+      "row": "fraction-discount-interpretation",
+      "sense": "残り remainder; do not gloss the answer to a remaining-amount question."
+    },
+    {
+      "sourceId": "N3:1311",
+      "status": "verified-existing",
+      "row": "foundation-percent",
+      "sense": "パーセント already has easier expression practice."
+    },
+    {
+      "sourceId": "N3:1323",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "計る/はかる measurement; spelling and object of measurement need contextual review."
+    },
+    {
+      "sourceId": "N3:1357",
+      "status": "not-numerical",
+      "row": null,
+      "sense": "羽/はね wings/feathers entry 1171680; wrong bird-counter gloss does not establish わ membership."
+    },
+    {
+      "sourceId": "N3:1358",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "幅 width; existing length units reused rather than relabelled N3."
+    },
+    {
+      "sourceId": "N3:1395",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "等しい equal; not an arithmetic procedure."
+    },
+    {
+      "sourceId": "N3:1403",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "費用 expense; existing resource/price constructions retain their levels."
+    },
+    {
+      "sourceId": "N3:1405",
+      "status": "new-owner",
+      "row": "seconds-mixed-time",
+      "sense": "秒/びょう time unit; unlike 瞬間."
+    },
+    {
+      "sourceId": "N3:1413",
+      "status": "new-owner",
+      "row": "menu-hin",
+      "sense": "品/ひん item/dish counter entry 2648780 distinguished from goods しな and dignity ひん."
+    },
+    {
+      "sourceId": "N3:1415",
+      "status": "new-owner",
+      "row": "flight-labels",
+      "sense": "便/びん transport services/trips/mail, not source way/means gloss."
+    },
+    {
+      "sourceId": "N3:1429",
+      "status": "new-owner",
+      "row": "bags-fukuro",
+      "sense": "袋/ふくろ bag noun; exact counter practice uses independent usage evidence."
+    },
+    {
+      "sourceId": "N3:1431",
+      "status": "not-numerical",
+      "row": null,
+      "sense": "節/ふし tune/knot/point is not numbered section せつ."
+    },
+    {
+      "sourceId": "N3:1442",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "再び/ふたたび again, not a newly counted second occurrence or free reading of 二度."
+    },
+    {
+      "sourceId": "N3:1470",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "平均 mean/average; no new arithmetic averaging curriculum."
+    },
+    {
+      "sourceId": "N3:1473",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "減らす reduce; support relevant change scenarios only."
+    },
+    {
+      "sourceId": "N3:1474",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "減る decrease; distinguish change and final amount where actually tested."
+    },
+    {
+      "sourceId": "N3:1508",
+      "status": "support-reference-only",
+      "row": "approximation-forms",
+      "sense": "ほぼ almost/approximately; 略 is rare spelling; no exact numerical tolerance supplied."
+    },
+    {
+      "sourceId": "N3:1528",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "増す increase; not a multiplication operator by itself."
+    },
+    {
+      "sourceId": "N3:1605",
+      "status": "new-owner",
+      "row": "digits-text-units",
+      "sense": "文字/もじ ordinary written characters; supports character-count context."
+    },
+    {
+      "sourceId": "N3:1606",
+      "status": "support-reference-only",
+      "row": "digits-text-units",
+      "sense": "文字/もんじ separate reading; do not silently substitute into every ～文字 count."
+    },
+    {
+      "sourceId": "N3:1625",
+      "status": "not-numerical",
+      "row": null,
+      "sense": "やがて at length is an English false positive, not measurement."
+    },
+    {
+      "sourceId": "N3:1627",
+      "status": "new-owner",
+      "row": "approximation-forms",
+      "sense": "約/やく approximation; supported also by Marugoto page 22."
+    },
+    {
+      "sourceId": "N3:1693",
+      "status": "not-numerical",
+      "row": null,
+      "sense": "陸/りく land entry 1550980, not legal numeral six."
+    },
+    {
+      "sourceId": "N3:1697",
+      "status": "support-reference-only",
+      "row": "ratio-rate-interpretation",
+      "sense": "率 rate/proportion; not every occurrence specifies a base or percentage."
+    },
+    {
+      "sourceId": "N3:1700",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "量 quantity/amount/volume; not itself a unit."
+    },
+    {
+      "sourceId": "N3:1717",
+      "status": "not-numerical",
+      "row": null,
+      "sense": "輪/わ ring/circle noun does not establish flower-counter りん membership."
+    },
+    {
+      "sourceId": "N3:1724",
+      "status": "support-reference-only",
+      "row": "lexical-support",
+      "sense": "僅か small amount/only; not a fixed numeric threshold."
+    },
+    {
+      "sourceId": "N3:1728",
+      "status": "support-reference-only",
+      "row": "fractions",
+      "sense": "割る divide/cut/break, with selected numerical sense; not a complete arithmetic instruction course."
+    }
+  ],
+  "pilot": {
+    "status": "accepted-text-and-importer",
+    "record": "docs/counter-n3-pilot.json",
+    "newRecords": 21,
+    "existingControls": [
+      "prices-expression-15",
+      "durations-expression-2",
+      "quantity-zutsu-stickers-total"
+    ],
+    "newIds": [
+      "tou-cow-1",
+      "tou-elephants-1",
+      "tou-guidedogs-1",
+      "tou-noun-1",
+      "bu-handout-1",
+      "bu-application-1",
+      "bu-publication-1",
+      "magnitudes-expression-1",
+      "magnitudes-expression-2",
+      "fractions-expression-1",
+      "uncertain-expression-1",
+      "proportions-expression-1",
+      "hako-expression-1",
+      "lessonlabels-expression-1",
+      "lessonlabels-expression-2",
+      "seconds-expression-1",
+      "seconds-expression-2",
+      "quantity-scope-discount-reduction",
+      "quantity-scope-discount-payable",
+      "quantity-scope-fraction-used",
+      "quantity-scope-fraction-remaining"
+    ],
+    "contextPolicy": "Paired forms/interpretations share conservative semantic keys in counter-n3-pilot.json; the new Grammar facets each have shop-discount and water-fraction. Count identities and contexts separately.",
+    "rubric": "counter-n3.md#pilot-envelope-and-difficulty-rubric",
+    "empiricalLearnerTrial": false,
+    "contentVersion": "4f06ad3693ee5c04"
+  },
+  "reviews": {
+    "matrix": {
+      "status": "accepted",
+      "snapshot": [
+        {
+          "name": "counter-n3.md",
+          "sha256": "fce80c966f6d925c2fb1918dfab4d5a38f42460a249a995b8ba64bf09c651d34"
+        },
+        {
+          "name": "counter-n3-sources.json",
+          "sha256": "d564e087a5b4b40f7e1b37a9ce3ed5093e829f67f8aabae27d0ba1a6d22db760"
+        },
+        {
+          "name": "counter-n3-baseline.json",
+          "sha256": "bd93cbfd7623986c6f2fb075b26e2aad6c6efbd93505a85b719c6b08c46fc7f7"
+        }
+      ],
+      "report": "counter-n3-review.json",
+      "model": "not-exposed",
+      "reconciliation": [
+        {
+          "finding": "F1",
+          "action": "Corrected the pair-only IMABI attribution; ratio points to the pinned exact 対/たい identity, not to that page.",
+          "status": "independently-resolved"
+        },
+        {
+          "finding": "F2",
+          "action": "Included bounded C rows for 人分, tofu 丁, 部屋 and 人組, with distinct counted-unit contexts; no exclusion proposed.",
+          "status": "independently-resolved"
+        },
+        {
+          "finding": "F3",
+          "action": "Included non-interrogative 何百 in B/D; character-limit 以内 in C plus D interpretation; 年ぶり in D expression/time-frame interpretation. No new engine or borrowed Grammar level.",
+          "status": "independently-resolved"
+        },
+        {
+          "finding": "F4",
+          "action": "Explicit place-value support row links the mapped 位/くらい numerical noun; lexical candidate corrected without changing the source TSV.",
+          "status": "independently-resolved"
+        },
+        {
+          "finding": "F5",
+          "action": "Expanded 点 to scores and merchandise; added independently sourced numerical 通り work, without relabeling N3:1175.",
+          "status": "independently-resolved"
+        },
+        {
+          "finding": "F6",
+          "action": "Mapped all54 unchanged counter source files to actual operation-specific IDs; explicit age/floor row, v1/reverse evidence and N5 maximum tasks supplied.",
+          "status": "independently-resolved"
+        },
+        {
+          "finding": "F7",
+          "action": "Replaced the blanket traditional-system boundary with a finite reference subset and required housing-area, rice-volume and recipe-spoon rows. No owner approval fabricated; significance of the remaining original reference boundary awaits reviewer reconciliation.",
+          "status": "independently-resolved"
+        }
+      ],
+      "acceptedLedgerSha256": "998cfcb12a86ddafd829cea16f68e3c8a83f738a40bc18e1189b6e9c6f269d48"
+    },
+    "additionalIntermediateReference": {
+      "status": "completed-and-reconciled",
+      "sources": [
+        "marugoto-b1-independent"
+      ],
+      "inspectedSections": "All topic vocabulary PDF pages3-48; exact matched entries/contexts and dispositions recorded in counter-n3-review.json.",
+      "limits": [
+        "CEFR B1 course inclusion is not a JLPT N3 assignment or an exhaustive counter/quantity inventory.",
+        "It is a vocabulary list, not a graded counter paradigm or evidence of every acceptable variant.",
+        "Topics bias which forms occur; absence is not evidence that a common counter is unimportant.",
+        "Its shorthand English 以上 gloss is not used to redefine inclusive bounds.",
+        "The isolated ～分 gloss on PDF page 44 is underdetermined; no consequential semantic claim is based on it."
+      ]
+    },
+    "pilot": {
+      "status": "accepted",
+      "report": "counter-n3-pilot-review.json",
+      "model": "not-exposed",
+      "snapshot": "Complete24-task initial inventory e0588e9b40285cfbbebc10eeec635808a55daac9e17cb81c14ebfe8e7f2d11b2; corrected bu/tou follow-up is separately pinned.",
+      "reconciliation": [
+        "F1/F2 corrected and independently accepted",
+        "Alternate kana stems accepted without changing canonical Read",
+        "F3 withdrawn: normalized Good already accepts セット/せっと",
+        "Independent rubric adopted; original author/independent snapshots preserved"
+      ]
+    }
+  },
+  "gates": {
+    "bulkAuthoringUnblocked": true,
+    "ownerAgreedSignificantNewExclusions": [],
+    "pilotImporter": "passed:4f06ad3693ee5c04;60 importer-suite tests including both real-corpus cases, plus2 production-grader probes;zero failures/errors/skips",
+    "combinedRelease": "not-run",
+    "acceptedOnUtc": "2026-10-29",
+    "matrixOwnerDecisionRequired": false,
+    "publication": "pending-integrated-release; no N3 changes committed or pushed yet"
+  },
+  "baselineOperationInventory": [
+    {
+      "path": "counters/dai.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "selection": [
+          "dai-car-1",
+          "dai-bicycle-1"
+        ],
+        "suffix-typing": [
+          "dai-car-1",
+          "dai-bicycle-1"
+        ],
+        "canonical-reading": [
+          "dai-car-1",
+          "dai-bicycle-1"
+        ],
+        "reverse": [
+          "dai-noun-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/daicompound.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "whole-expression": [
+          "daicompound-expression-1",
+          "daicompound-expression-3"
+        ],
+        "canonical-reading": [
+          "daicompound-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/hai.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "selection": [
+          "hai-tea-1",
+          "hai-coffee-1"
+        ],
+        "suffix-typing": [
+          "hai-tea-1",
+          "hai-coffee-1"
+        ],
+        "canonical-reading": [
+          "hai-tea-1",
+          "hai-coffee-1"
+        ],
+        "reverse": [
+          "hai-reverse-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/haicompound.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "whole-expression": [
+          "haicompound-expression-1",
+          "haicompound-expression-3"
+        ],
+        "canonical-reading": [
+          "haicompound-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/hiki.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "selection": [
+          "hiki-fish-1",
+          "hiki-dog-1"
+        ],
+        "suffix-typing": [
+          "hiki-fish-1",
+          "hiki-dog-1"
+        ],
+        "canonical-reading": [
+          "hiki-fish-1",
+          "hiki-dog-1"
+        ],
+        "reverse": [
+          "hiki-noun-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/hikicompound.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "whole-expression": [
+          "hikicompound-expression-1",
+          "hikicompound-expression-3"
+        ],
+        "canonical-reading": [
+          "hikicompound-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/hon.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "selection": [
+          "hon-pen-1",
+          "hon-umbrella-1"
+        ],
+        "suffix-typing": [
+          "hon-pen-1",
+          "hon-umbrella-1"
+        ],
+        "canonical-reading": [
+          "hon-pen-1",
+          "hon-umbrella-1"
+        ],
+        "reverse": [
+          "hon-noun-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/honcompound.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "whole-expression": [
+          "honcompound-expression-1",
+          "honcompound-expression-3"
+        ],
+        "canonical-reading": [
+          "honcompound-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/ko.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "selection": [
+          "ko-apple-1",
+          "ko-egg-1"
+        ],
+        "suffix-typing": [
+          "ko-apple-1",
+          "ko-egg-1"
+        ],
+        "canonical-reading": [
+          "ko-apple-1",
+          "ko-egg-1"
+        ],
+        "reverse": [
+          "ko-noun-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/kocompound.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "whole-expression": [
+          "kocompound-expression-1",
+          "kocompound-expression-3"
+        ],
+        "canonical-reading": [
+          "kocompound-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/mai.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "selection": [
+          "mai-paper-1",
+          "mai-shirt-1"
+        ],
+        "suffix-typing": [
+          "mai-paper-1",
+          "mai-shirt-1"
+        ],
+        "canonical-reading": [
+          "mai-paper-1",
+          "mai-shirt-1"
+        ],
+        "reverse": [
+          "mai-noun-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/maicompound.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "whole-expression": [
+          "maicompound-expression-1",
+          "maicompound-expression-3"
+        ],
+        "canonical-reading": [
+          "maicompound-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/native.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "whole-expression": [
+          "native-expression-1"
+        ],
+        "canonical-reading": [
+          "native-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/nin.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "selection": [
+          "nin-one-1",
+          "nin-four-1"
+        ],
+        "suffix-typing": [
+          "nin-one-1",
+          "nin-four-1"
+        ],
+        "canonical-reading": [
+          "nin-one-1",
+          "nin-four-1"
+        ],
+        "reverse": [
+          "nin-noun-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/nincompound.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "whole-expression": [
+          "nincompound-expression-1",
+          "nincompound-expression-3"
+        ],
+        "canonical-reading": [
+          "nincompound-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/satsu.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "selection": [
+          "satsu-book-1",
+          "satsu-notebook-1"
+        ],
+        "suffix-typing": [
+          "satsu-book-1",
+          "satsu-notebook-1"
+        ],
+        "canonical-reading": [
+          "satsu-book-1",
+          "satsu-notebook-1"
+        ],
+        "reverse": [
+          "satsu-noun-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/satsucompound.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "whole-expression": [
+          "satsucompound-expression-1",
+          "satsucompound-expression-3"
+        ],
+        "canonical-reading": [
+          "satsucompound-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/tsu.json",
+      "row": "foundation-compounds",
+      "operationEvidence": {
+        "selection": [
+          "tsu-apple-1",
+          "tsu-egg-1"
+        ],
+        "suffix-typing": [
+          "tsu-apple-1",
+          "tsu-egg-1"
+        ],
+        "canonical-reading": [
+          "tsu-apple-1",
+          "tsu-egg-1"
+        ],
+        "reverse": [
+          "tsu-noun-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/chaku.json",
+      "row": "foundation-extended-counters",
+      "operationEvidence": {
+        "selection": [
+          "chaku-coats-1",
+          "chaku-shirts-1"
+        ],
+        "suffix-typing": [
+          "chaku-coats-1",
+          "chaku-shirts-1"
+        ],
+        "canonical-reading": [
+          "chaku-coats-1",
+          "chaku-shirts-1"
+        ],
+        "reverse": [
+          "chaku-noun-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/chakuexpressions.json",
+      "row": "foundation-extended-counters",
+      "operationEvidence": {
+        "whole-expression": [
+          "chaku-expression-1",
+          "chaku-expression-8"
+        ],
+        "canonical-reading": [
+          "chaku-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/do.json",
+      "row": "foundation-extended-counters",
+      "operationEvidence": {
+        "selection": [
+          "do-visits-1",
+          "do-repairs-1"
+        ],
+        "suffix-typing": [
+          "do-visits-1",
+          "do-repairs-1"
+        ],
+        "canonical-reading": [
+          "do-visits-1",
+          "do-repairs-1"
+        ],
+        "reverse": [
+          "do-noun-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/doexpressions.json",
+      "row": "foundation-extended-counters",
+      "operationEvidence": {
+        "whole-expression": [
+          "do-expression-1",
+          "do-expression-8"
+        ],
+        "canonical-reading": [
+          "do-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/haku.json",
+      "row": "foundation-extended-counters",
+      "operationEvidence": {
+        "selection": [
+          "haku-hotel-1",
+          "haku-inn-1"
+        ],
+        "suffix-typing": [
+          "haku-hotel-1",
+          "haku-inn-1"
+        ],
+        "canonical-reading": [
+          "haku-hotel-1",
+          "haku-inn-1"
+        ],
+        "reverse": [
+          "haku-noun-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/hakuexpressions.json",
+      "row": "foundation-extended-counters",
+      "operationEvidence": {
+        "whole-expression": [
+          "haku-expression-1",
+          "haku-expression-8"
+        ],
+        "canonical-reading": [
+          "haku-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/kai.json",
+      "row": "foundation-extended-counters",
+      "operationEvidence": {
+        "selection": [
+          "kai-read-1",
+          "kai-phone-1"
+        ],
+        "suffix-typing": [
+          "kai-read-1",
+          "kai-phone-1"
+        ],
+        "canonical-reading": [
+          "kai-read-1",
+          "kai-phone-1"
+        ],
+        "reverse": [
+          "kai-noun-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/kaicompound.json",
+      "row": "foundation-extended-counters",
+      "operationEvidence": {
+        "whole-expression": [
+          "kaicompound-expression-1",
+          "kaicompound-expression-3"
+        ],
+        "canonical-reading": [
+          "kaicompound-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/ken.json",
+      "row": "foundation-extended-counters",
+      "operationEvidence": {
+        "selection": [
+          "ken-houses-1",
+          "ken-cafes-1"
+        ],
+        "suffix-typing": [
+          "ken-houses-1",
+          "ken-cafes-1"
+        ],
+        "canonical-reading": [
+          "ken-houses-1",
+          "ken-cafes-1"
+        ],
+        "reverse": [
+          "ken-noun-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/kenexpressions.json",
+      "row": "foundation-extended-counters",
+      "operationEvidence": {
+        "whole-expression": [
+          "ken-expression-1",
+          "ken-expression-8"
+        ],
+        "canonical-reading": [
+          "ken-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/mei.json",
+      "row": "foundation-extended-counters",
+      "operationEvidence": {
+        "selection": [
+          "mei-staff-1",
+          "mei-participants-1"
+        ],
+        "suffix-typing": [
+          "mei-staff-1",
+          "mei-participants-1"
+        ],
+        "canonical-reading": [
+          "mei-staff-1",
+          "mei-participants-1"
+        ],
+        "reverse": [
+          "mei-noun-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/meiexpressions.json",
+      "row": "foundation-extended-counters",
+      "operationEvidence": {
+        "whole-expression": [
+          "mei-expression-1",
+          "mei-expression-8"
+        ],
+        "canonical-reading": [
+          "mei-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/soku.json",
+      "row": "foundation-extended-counters",
+      "operationEvidence": {
+        "selection": [
+          "soku-shoes-1",
+          "soku-slippers-1"
+        ],
+        "suffix-typing": [
+          "soku-shoes-1",
+          "soku-slippers-1"
+        ],
+        "canonical-reading": [
+          "soku-shoes-1",
+          "soku-slippers-1"
+        ],
+        "reverse": [
+          "soku-noun-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/sokuexpressions.json",
+      "row": "foundation-extended-counters",
+      "operationEvidence": {
+        "whole-expression": [
+          "soku-expression-1",
+          "soku-single-1"
+        ],
+        "canonical-reading": [
+          "soku-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/calendaryears.json",
+      "row": "foundation-time",
+      "operationEvidence": {
+        "whole-expression": [
+          "calendaryears-expression-1",
+          "calendaryears-expression-4"
+        ],
+        "canonical-reading": [
+          "calendaryears-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/clock.json",
+      "row": "foundation-time",
+      "operationEvidence": {
+        "whole-expression": [
+          "clock-expression-1",
+          "clock-expression-16"
+        ],
+        "canonical-reading": [
+          "clock-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/compounddates.json",
+      "row": "foundation-time",
+      "operationEvidence": {
+        "whole-expression": [
+          "compounddates-expression-1",
+          "compounddates-expression-6"
+        ],
+        "canonical-reading": [
+          "compounddates-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/dates.json",
+      "row": "foundation-time",
+      "operationEvidence": {
+        "whole-expression": [
+          "dates-expression-1",
+          "dates-expression-20"
+        ],
+        "canonical-reading": [
+          "dates-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/days.json",
+      "row": "foundation-time",
+      "operationEvidence": {
+        "whole-expression": [
+          "days-expression-1",
+          "days-expression-14"
+        ],
+        "canonical-reading": [
+          "days-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/durations.json",
+      "row": "foundation-time",
+      "operationEvidence": {
+        "whole-expression": [
+          "durations-expression-1",
+          "durations-expression-6"
+        ],
+        "canonical-reading": [
+          "durations-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/hours.json",
+      "row": "foundation-time",
+      "operationEvidence": {
+        "whole-expression": [
+          "hours-expression-1",
+          "hours-expression-8"
+        ],
+        "canonical-reading": [
+          "hours-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/minutes.json",
+      "row": "foundation-time",
+      "operationEvidence": {
+        "whole-expression": [
+          "minutes-expression-1",
+          "minutes-expression-15"
+        ],
+        "canonical-reading": [
+          "minutes-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/months.json",
+      "row": "foundation-time",
+      "operationEvidence": {
+        "whole-expression": [
+          "months-expression-1",
+          "months-expression-13"
+        ],
+        "canonical-reading": [
+          "months-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/monthspan.json",
+      "row": "foundation-time",
+      "operationEvidence": {
+        "whole-expression": [
+          "monthspan-expression-1",
+          "monthspan-expression-7"
+        ],
+        "canonical-reading": [
+          "monthspan-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/timetable.json",
+      "row": "foundation-time",
+      "operationEvidence": {
+        "whole-expression": [
+          "timetable-expression-1",
+          "timetable-expression-6"
+        ],
+        "canonical-reading": [
+          "timetable-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/weeks.json",
+      "row": "foundation-time",
+      "operationEvidence": {
+        "whole-expression": [
+          "weeks-expression-1",
+          "weeks-expression-6"
+        ],
+        "canonical-reading": [
+          "weeks-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/years.json",
+      "row": "foundation-time",
+      "operationEvidence": {
+        "whole-expression": [
+          "years-expression-1",
+          "years-expression-6"
+        ],
+        "canonical-reading": [
+          "years-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/age.json",
+      "row": "foundation-age-floors",
+      "operationEvidence": {
+        "whole-expression": [
+          "age-expression-1",
+          "age-expression-9"
+        ],
+        "canonical-reading": [
+          "age-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/floor.json",
+      "row": "foundation-age-floors",
+      "operationEvidence": {
+        "whole-expression": [
+          "floor-expression-1",
+          "floor-expression-8"
+        ],
+        "canonical-reading": [
+          "floor-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/length.json",
+      "row": "foundation-decimals",
+      "operationEvidence": {
+        "whole-expression": [
+          "length-expression-1",
+          "length-expression-6"
+        ],
+        "canonical-reading": [
+          "length-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/weight.json",
+      "row": "foundation-decimals",
+      "operationEvidence": {
+        "whole-expression": [
+          "weight-expression-1",
+          "weight-expression-6"
+        ],
+        "canonical-reading": [
+          "weight-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/temperature.json",
+      "row": "foundation-decimals",
+      "operationEvidence": {
+        "whole-expression": [
+          "temperature-expression-1",
+          "temperature-expression-4"
+        ],
+        "canonical-reading": [
+          "temperature-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/percent.json",
+      "row": "foundation-percent",
+      "operationEvidence": {
+        "whole-expression": [
+          "percent-expression-1",
+          "percent-expression-4"
+        ],
+        "canonical-reading": [
+          "percent-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/prices.json",
+      "row": "foundation-prices",
+      "operationEvidence": {
+        "whole-expression": [
+          "prices-expression-1",
+          "prices-expression-16"
+        ],
+        "canonical-reading": [
+          "prices-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/labels.json",
+      "row": "foundation-labels-ordinals",
+      "operationEvidence": {
+        "whole-expression": [
+          "labels-expression-1",
+          "labels-expression-7"
+        ],
+        "canonical-reading": [
+          "labels-expression-1"
+        ]
+      }
+    },
+    {
+      "path": "counters/ordinals.json",
+      "row": "foundation-labels-ordinals",
+      "operationEvidence": {
+        "whole-expression": [
+          "ordinals-expression-1",
+          "ordinals-expression-8"
+        ],
+        "canonical-reading": [
+          "ordinals-expression-1"
+        ]
+      }
+    }
+  ],
+  "baselineOperationInventoryPolicy": "All54 source files have a named unchanged foundation owner. Selected actual IDs separate v1 selection/typing, noun-only reverse, v2 production and readable canonical forms. This structural map supplements the independent paradigm/reuse review; it is not a fresh linguistic certification of every old record."
+}
