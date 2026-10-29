@@ -3,9 +3,12 @@
 Work item: [#58](https://github.com/stop-cran/learning-japanese/issues/58).
 Content scope and source limitations: [the pilot ledger](grammar-onomatopoeia-sources.json).
 
-**Status: not run. Learning effectiveness: unverified. Expansion: deferred.**
+**Status: not run. Learning effectiveness: unverified. Collection authoring: separately authorized in [#59](https://github.com/stop-cran/learning-japanese/issues/59).**
 This document is a protocol, not invented owner feedback, a completed learner study or a
 claim that the app has automatic holdout management.
+The owner's later expansion request supersedes the earlier content-authoring deferral;
+it supplies no trial results. This protocol still describes the bounded twelve-word pilot,
+not an automatically expanded study of all 203 cards.
 
 ## Participants and materials
 
@@ -49,7 +52,9 @@ The facilitator may keep it outside the synced source. Merely calling a publishe
 
 ## Practice
 
-Use Grammar with All or Unclassified and the **Onomatopoeia in sentences** chapter/set.
+Use Grammar with All or Unclassified and **Article sets → Onomatopoeia in sentences**
+for the original core set. The chapter now also includes the focused expansion sets;
+using that broader chapter is additional exposure, not the same bounded practice selection.
 Record the actual navigation path and any discovery difficulty. Use a manageable session
 of around 10-15 minutes on two separate days rather than requiring completion of every item.
 This duration is a practical trial plan, not a research-backed optimum.
@@ -98,5 +103,6 @@ with potentially different prompts, practice effects and outside study.
 
 Revise content when a supported answer is rejected, a distractor fits, or instructions hide
 the intended response boundary. File an app follow-up only for a reproduced runtime defect.
-Any expansion beyond the bounded pilot is a separate decision after reviewing feedback;
-without results, retain **effectiveness unverified** and **expansion deferred**.
+Collection-wide content authoring was separately authorized in #59. A broader learner trial
+still needs a prespecified word/construction scope and matched, unexposed probes; it is not
+created merely by adding content. Without actual results, retain **effectiveness unverified**.

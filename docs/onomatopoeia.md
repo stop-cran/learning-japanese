@@ -4,14 +4,17 @@ Phase 1 of [app issue #45](https://github.com/stop-cran/kanji-cards-android/issu
 content-only thematic selection of 100 word cards and four linked learner guides.
 The second content batch expands the collection to **200 tagged cards** and seven guides:
 97 new cards plus the enriched existing さっぱり, がっかり, and びっくり cards.
-The subsequent ぶかぶか addition brings the current collection to **201 tagged cards**.
+The subsequent ぶかぶか addition brought the collection to **201 tagged cards**.
+Later N2 additions どっと and ぶつぶつ bring the actual collection to **203 tagged cards**;
+the expansion inventory at `af451575` reconciles both without changing their identities or levels.
 The learner-facing entry point is [Japanese onomatopoeia](../articles/japanese-onomatopoeia.md).
 
-The separate [Onomatopoeia in sentences](../articles/onomatopoeia-in-sentences.md) Grammar pilot
-uses twelve existing cards without changing the 201-word collection or its schedules.
-Its [source and coverage ledger](grammar-onomatopoeia-sources.json) records selected senses,
-construction boundaries and acceptance status; the [owner-trial protocol](grammar-onomatopoeia-trial.md)
-keeps learning effectiveness unverified until actual feedback. No expansion is implied.
+The separate [Onomatopoeia in sentences](../articles/onomatopoeia-in-sentences.md) Grammar core
+reuses the twelve-word pilot. Its [historical ledger](grammar-onomatopoeia-sources.json) retains
+the original bounded acceptance. Owner-authorized [collection expansion #59](grammar-onomatopoeia-expansion-sources.json)
+adds selected sentence operations for the remaining 191 cards through nine focused sets and guides.
+No word identities or schedules change. The [owner-trial protocol](grammar-onomatopoeia-trial.md)
+still requires actual feedback: expansion authorization is not evidence of learning effectiveness.
 
 ## Selection and identity
 
@@ -39,6 +42,9 @@ The source records enumerate the original two cohorts' selected forms and inspec
 Later additions cite evidence on their cards. The [named-scene record](onomatopoeia-scene-images.json)
 also records their dictionary identities, snapshot hashes, inspection dates and original-image provenance.
 ぶかぶか / ブカブカ shares JMdict entry 1011130; its examples and picture focus on oversized fit.
+The later どっと and ぶつぶつ cards use entries 1009210 and 1011200 respectively. Their complete
+families and selected Grammar uses are preserved in the expansion ledger; the unrelated
+loanword ドット is not substituted for the sudden-burst identity.
 
 They identify the inspected local JMdict snapshot by file hashes. Its upstream release date
 has not been established; it is not asserted to be the same snapshot as the earlier
@@ -66,7 +72,8 @@ The prose and original examples do not claim native-speaker certification or mea
 
 ## Quiz and navigation
 
-Each selected card links to the overview, which links back to all 201 cards. The focused
+The overview links to all 203 tagged cards, retaining the two historical 100-word groups
+and listing later additions separately. The focused
 guides compare patterns, warmth/textures, rain/movement/similar-looking words, eating/drinking,
 body sensations/feelings, and motion/voices/everyday sounds.
 Confusable pairs are recorded in [the inventory](confusable-words.md).

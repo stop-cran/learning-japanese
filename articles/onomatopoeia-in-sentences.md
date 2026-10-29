@@ -5,9 +5,10 @@ to put it into a sentence. Compare **ぐっすり眠る**（ねむる）, "sleep
 **[へとへと](../words/へとへと.md)になる**, "become exhausted." Both describe a vivid
 experience, but they do not use the same construction.
 
-This small Grammar pilot practises **a familiar word, one selected sense, and a sentence frame
-together**. It is not a suffix chart that works for every word in the
-[onomatopoeia collection](japanese-onomatopoeia.md).
+The twelve-word core set practises **a familiar word, one selected sense, and a sentence frame
+together**. The focused sets below extend that approach across the existing 203-word
+[onomatopoeia collection](japanese-onomatopoeia.md). Neither the core nor the expansion is a
+suffix chart that works for every word or every dictionary sense.
 
 ## Before a verb: keep the action
 
@@ -68,6 +69,10 @@ A characteristic can be attached to a noun, but the connector depends on the wor
 | Fluffy texture | [ふわふわ](../words/ふわふわ.md)の毛布／ふわふわな毛布／ふわふわした毛布（もうふ） | の and な can both fit; texture is not floating or lightheadedness. |
 | Oversized fit | [ぶかぶか](../words/ぶかぶか.md)の靴／ぶかぶかな靴／ぶかぶかした靴（くつ） | Judge the fit for the wearer, not softness or fashion. |
 
+The な in these texture and fit descriptions is not a template for every mimetic word.
+For an ordinary dependable-person description, use **しっかりした人** or **しっかりしている人**,
+not **しっかりな人**.
+
 **しっかりした人** can describe someone who is dependable **now**. Likewise,
 ふわふわした毛布 can describe a blanket that is fluffy now. Do not read every descriptive
 した as "used to be this way, but no longer is." Read the whole sentence and characteristic.
@@ -113,24 +118,26 @@ the useful modern model お腹がぺこぺこです is **not** proof that every 
 expression is impossible. A wrong option in a quiz is rejected in its **printed sentence**,
 not as a universal ban on the word.
 
-## Using the pilot
+## Finding and using the practice
 
 Open **Grammar**, select **All** or **Unclassified** for new material, and find
-**Onomatopoeia in sentences** in the chapter/set browser. Its groups cover everyday actions
-and reactions, people and things, mixed scenes, and reading descriptions. Targeted practice
+**Onomatopoeia in sentences** in the chapter browser. The core set's groups cover everyday actions
+and reactions, people and things, mixed scenes, and reading descriptions; the focused sets add
+thematic groups to the same chapter. Targeted practice
 uses the existing Grammar controls. These tasks have no new hard prerequisite gates.
 
 The browser has a separate scope filter. If the topic is hidden, use **Clear search and
 browse filters**, or open **Filters and next topic** and choose **All** or **Unclassified**
-there too. **Accessible list** provides a list instead of the diagram; **Chapters** and
-**Article sets** are two routes to the same pilot, not separate progress.
+there too. **Accessible list** provides a list instead of the diagram. **Chapters** collects the
+core and focused groups together; **Article sets** offers their individual sets. Opening the
+same exercise through either route does not create separate progress.
 
 The tasks deliberately have **no JLPT label**: a word card's level does not classify a
 complete Grammar exercise. Newly unseen unclassified tasks will not enter an N5/N4/N3-only
 new-material queue. Already-started Grammar reviews retain the app's normal scope behavior.
 Vocabulary-card progress does not automatically introduce or complete Grammar tasks.
 
-For completion tasks, retain the supplied word in hiragana or katakana and type only the
+For the core completion tasks, retain the supplied word in hiragana or katakana and type only the
 missing fragment, without extra punctuation or content words. If a connector is optional,
 the blank includes the word too, so you never need to submit an empty answer.
 
@@ -146,7 +153,29 @@ Optional vocabulary help supplies the meaning/reading of words around the blank;
 a card or this guide is study support, not an unassisted trial result.
 
 This is supplementary practice. Familiarity with these fixed items is not proof of transfer
-to a new situation, and the pilot's learning effectiveness remains unverified.
+to a new situation. Learning effectiveness remains unverified for both the core and the expansion.
+
+## Focused sentence practice
+
+These companion sets cover the other 191 existing cards through selected senses and constructions.
+They add Grammar exercises, not new vocabulary cards, word-review schedules or JLPT labels.
+Read each task's response instructions: some ask for a particular formation or a fixed
+interpretation label rather than a freely rewritten sentence.
+
+| Focus | Guide |
+| --- | --- |
+| Warmth, shine and tactile surfaces | [Warmth, shine and surfaces](onomatopoeia-sensory-surfaces.md) |
+| Moisture, food textures, cooking, weather and sound | [Sensory scenes](onomatopoeia-sensory-scenes.md) |
+| Movement, reactions and voices | [Movement and voices](onomatopoeia-movement-and-voices.md) |
+| Feelings, manner and everyday sounds | [Feelings and manner](onomatopoeia-feelings-and-manner.md) |
+| Eating, drinking, food and material textures | [Everyday food and texture](onomatopoeia-everyday-1.md) |
+| Body sensations, handling and balance | [Everyday sensations and handling](onomatopoeia-everyday-2.md) |
+| Movement, feelings and attention | [Everyday movement and attention](onomatopoeia-everyday-3.md) |
+| Voices, breathing, sounds and activity | [Everyday voices and activity](onomatopoeia-everyday-4.md) |
+| Water, wind, fire, looking and speaking | [Everyday natural and social scenes](onomatopoeia-everyday-5.md) |
+
+Coverage of every card does not mean coverage of every sense or possible attachment. The word
+cards keep their wider explanations, including recorded uses not separately elicited here.
 
 ## Sources and scope
 

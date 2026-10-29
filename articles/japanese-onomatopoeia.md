@@ -43,8 +43,9 @@ For a word with several meanings, keep separate scenes: a thunderstorm does not 
 ## Grammar: do not attach する or と to everything
 
 For focused sentence practice, continue with [Onomatopoeia in sentences](onomatopoeia-in-sentences.md).
-Its bounded Grammar pilot supplies familiar words and practises their constructions, separately
-from the vocabulary-card schedules.
+Its twelve-word core and focused companion sets supply familiar words and practise selected
+constructions across the 203-card collection, separately from the vocabulary-card schedules.
+This covers representative uses of each card, not every dictionary sense or possible attachment.
 
 Common patterns include an adverb before a verb, an adverb with と, and a state expressed
 with する. Some words also work with な or に. These patterns are **word-specific**:
@@ -132,11 +133,15 @@ The second batch was first published as text-only; illustrations followed separa
 
 ## Further word cards
 
-The collection now contains **201 tagged word cards**. Later discoveries are added here without changing the original two 100-word groups.
+The collection now contains **203 tagged word cards**. The ぶかぶか addition brought it to 201;
+later N2 additions どっと and ぶつぶつ account for the other two. They are listed here without
+changing the original two 100-word groups or their existing card identities.
 
 | Scene | Card |
 | --- | --- |
 | Clothes and shoes that are too large | [ぶかぶか / ブカブカ](../words/ぶかぶか.md) — too big and loose to fit; not the same as soft, cushiony ふかふか |
+| A sudden burst or rush | [どっと](../words/どっと.md) — bursting out, surging in, or happening suddenly |
+| Muttering or small bumps | [ぶつぶつ](../words/ぶつぶつ.md) — different constructions select muttering or bumps/spots; see the card for further uses |
 
 ## Sources and limits
 
