@@ -245,6 +245,17 @@ For 二枚ずつ, amounts for each recipient, and 少しずつ increments, conti
 [distribution and increments](quantity-ranges-and-frequency.md#7-distribution-and-increments).
 That focused Grammar bridge is classified **N3**, not counted as N4 counter coverage.
 
+The 22 supporting numerical interpretations (fractions, discounts, ratios,
+rates, uncertain quantities and limits) are **Unclassified** in Grammar.
+To find them, open **Grammar**, then **Article sets** in the topic browser.
+Under **Filters and next topic**, choose **All** or **Unclassified**, and open
+**Quantity, ranges, frequency and scope**. They also belong to the
+**Focus, inclusion and quantity** chapter. The browse filter only affects
+discovery. For ordinary new practice, separately set **New grammar** to
+**All** or **Unclassified**, or use the topic's explicit scope-exception preview.
+The Numbers & counters **N3** choice does not classify these interpretations;
+previously started Grammar reviews remain eligible outside the new-item scope.
+
 ## Intermediate quantities: grouping, fractions and uncertain amounts
 
 The N3-oriented extension adds practical forms and distinctions. As with the
@@ -559,6 +570,11 @@ Those pieces can be counted with 個, つ or 切れ as appropriate.
 
 **部屋（へや）** counts rooms:
 一部屋（ひとへや）and 二部屋（ふたへや）.
+For 三部屋, the reading practice models **さんへや** and also accepts
+**みへや**. The inspected teaching discussion and counter tables support
+these complete forms; they are not a rule for generating every possible
+voiced or unvoiced combination. Neighboring examples include
+四部屋（よんへや／よへや）and 五部屋（ごへや）.
 Room 307 is an identifier, 307号室, not a
 count of 307 rooms. Several rooms can belong to one dwelling inside one
 building. 室 can also count rooms in fitting contexts; the exercise cues
@@ -708,6 +724,12 @@ For a visit or repeated event, this gap is not the duration of the event
 itself. The expression drills explicitly supply that meaning and request
 年ぶり or か月ぶり; producing the form is not an independent
 Grammar interpretation exercise.
+For the separate **N2** interpretation supplement, see
+[returning after a gap](quantity-ranges-and-frequency.md#13-returning-after-a-gap).
+It asks whether a supplied report gives an interval between events or the
+duration of one event. Use **All** or **N2** in the topic browser to find the
+quantity Article set; ordinary new intake separately uses **New grammar**.
+The supplement is deliberately not N3-filtered new intake.
 
 ## References
 
@@ -734,6 +756,12 @@ usage and readings, not an official JLPT level assignment:
 - [Bunpro ぶりに](https://bunpro.jp/grammar_points/%E3%81%B6%E3%82%8A%E3%81%AB):
   the lapse-before-repeat construction is classified as N2 Grammar.
   The explicitly cued counter forms above do not reclassify that lesson.
+- Room readings: the public [JapanesePod101 teacher discussion](https://www.japanesepod101.com/lesson/lower-intermediate-lesson-s3-14-box-karaoke-for-one-part-3-do-you-mind)
+  explicitly gives さんへや and recognizes みへや; the
+  [にほんごべや table](https://learning-japanese.com/number-count/) and
+  [Benricho 部屋 row](https://www.benricho.org/kazu/kids/hatsuon.html)
+  supply neighboring counts. These are usage references, not an exhaustive
+  dialect inventory or measured frequency study.
 
 - [Japan Foundation Irodori Starter](https://www.irodori.jpf.go.jp/en/starter/pdf.html):
   lessons 4 (age), 9 (time), 12 (months/dates) and 15 (floors).

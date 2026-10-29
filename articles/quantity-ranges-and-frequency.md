@@ -590,6 +590,38 @@ algorithm or a claim that meeting the length rule satisfies every other rule.
 thirty minutes meets the time limit; thirty-one minutes exceeds it.
 This is an elapsed-time condition, not a clock reading or a calendar date.
 
+## 13. Returning after a gap
+
+**Time span + ぶり** measures the interval since an earlier occurrence:
+
+> 三年ぶりにこの町を訪れました。  
+> さんねんぶりに このまちを おとずれました。  
+> I visited this town for the first time in three years.
+
+**訪れる（おとずれる）** means visit. The three years separate this visit
+from the previous visit; they do not say how long this visit lasted.
+Compare **この町に三年間滞在しました**（このまちに さんねんかん
+たいざいしました）, "I stayed in this town for three years."
+**滞在する（たいざいする）** means stay.
+
+Before a noun, use **ぶりの**:
+
+> 二か月ぶりの雨です。  
+> にかげつぶりの あめです。  
+> It is the first rain in two months.
+
+This rain follows a two-month gap since the previous rain. It is not
+continuous rain lasting two months, nor a label for February (二月).
+The expression concerns a repeated occurrence, not necessarily a person's
+intentional action. It need not mark an exact calendar anniversary.
+Even a short interval can be described this way when it feels long in context;
+there is no universal minimum of a week, month or year.
+
+This small interpretation supplement is **N2** under this repository's
+Bunpro-first classification policy. Nonbiri and Edew teach the same temporal
+sense as N3; that disagreement is real, not missing N3 evidence. The N2
+placement does not relabel the simpler, explicitly cued counter-form drills.
+
 ## Practice scope
 
 The original quantity/scope set has **28 tasks: 26 N4 and two N5 controls**. Four named formation tasks assemble complete
@@ -615,6 +647,27 @@ supplies that evidence. Paired questions share their context, and the two
 stock-magnitude variants are not separate transfer contexts.
 The four fraction/discount questions above are reused, not counted again
 as newly authored tasks.
+
+**Finding these 22 unclassified interpretations:** open **Grammar**, then
+**Article sets** in the topic browser. Under **Filters and next topic**, choose
+**All** or **Unclassified**, and open **Quantity, ranges, frequency and scope**.
+The same groups are in the **Focus, inclusion and quantity** chapter.
+This browse filter changes discovery, not practice membership or new intake.
+For ordinary new practice, separately set **New grammar** to **All** or
+**Unclassified**, or use the topic's explicit scope-exception preview.
+Grammar's controls are independent of Numbers & counters. Unclassified
+exercises do not enter an N3-filtered new queue; already-started reviews
+can still be due outside that filter.
+
+The **Interpret the timing of a repeated event** group adds **two N2
+interpretations in two contexts**: a return visit with ぶりに and recurring
+rain with ぶりの. Each asks for the explicitly defined Arabic-digit label
+of a proposed interpretation; it does not ask for free Japanese composition.
+Use **All** or **N2** in the topic browser, then the same quantity Article set
+or chapter; **New grammar** independently controls ordinary new intake.
+The two tasks have no new prerequisite and do not change the 22 unclassified
+tasks or any earlier exercise. They cover the gap-versus-duration distinction,
+not every temporal use or an empirical learning-effectiveness claim.
 
 The existing N4 restriction/listing and ほう／ほか／なか tasks, N5 comparisons, and five N5 estimate/limit
 tasks are reused, not duplicated or relabeled. Supporting prefixes and detailed higher-grade
@@ -664,6 +717,12 @@ restriction and range tasks retain their original owners and progress.
 ## Sources and qualifications
 
 These are study references, not an official examination syllabus. The examples above are original.
+
+- Temporal ぶり: [Bunpro](https://bunpro.jp/grammar_points/%E3%81%B6%E3%82%8A%E3%81%AB)
+  labels the construction N2 and explains the lapse since a previous occurrence,
+  including noun-modifying ぶりの. [Nonbiri](https://mainichi-nonbiri.com/grammar/n3-burida/)
+  and [Edew](https://www.edewakaru.com/archives/13969183.html) place this sense
+  at N3. The primary-source policy retains N2 without hiding that disagreement.
 
 - Bunpro: [以上](https://bunpro.jp/grammar_points/以上1), [以下](https://bunpro.jp/grammar_points/いか),
   [より](https://bunpro.jp/grammar_points/より), [quantity は](https://bunpro.jp/grammar_points/number-amount-は),

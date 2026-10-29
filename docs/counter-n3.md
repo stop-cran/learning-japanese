@@ -1,12 +1,14 @@
 # N3 Numbers & counters: coverage and calibration contract
 
-Status: **bulk authoring partially accepted locally; release acceptance incomplete** (2026-10-29).
+Status: **corrective text and importer acceptance complete; full release acceptance incomplete**.
 The initial matrix review and additional Marugoto B1 comparison found seven
 actionable issues, now [independently reconciled](counter-n3-review.json).
 Separate complete-pilot review found localized handout defects, now corrected
 and independently accepted. The complete candidate `4f06ad3693ee5c04` passed
 the actual importer and focused production-grading probes. Native app/release
-acceptance remains separate; new-owner rows are still required unfinished work.
+acceptance remains separate. Current corrections and their acceptance state
+are recorded in [the finalization receipt](counter-n3-finalization.json);
+the earlier candidate hashes below remain historical, not current releases.
 
 Work: [parent #52](https://github.com/stop-cran/learning-japanese/issues/52),
 [contract/pilot #54](https://github.com/stop-cran/learning-japanese/issues/54),
@@ -19,33 +21,65 @@ and [Android #109](https://github.com/stop-cran/kanji-cards-android/issues/109).
 ## Current local implementation
 
 B, C1-C4, the [D counter packet](counter-n3-d-counters.json), and the
-[D interpretation packet](counter-n3-d-interpretations.json) are accepted locally.
-C5 remains held on the exact three-room reading set. A
-[source follow-up](counter-n3-source-followup.json) now documents neighboring
-room counts and directly supports さんへや, with みへや as an alternative;
-the voiced forms remain unsettled. No runtime answer set has changed.
+[D interpretation packet](counter-n3-d-interpretations.json) have historical
+local acceptance. The current corrective candidate removes contextual
+`いちくみ` from the hotel-booking card while retaining `ひとくみ` and the
+legitimate numbered school-class reading elsewhere.
+
+The C5 room correction now models **さんへや** and accepts **みへや**.
+The [source follow-up](counter-n3-source-followup.json) and fresh inspected
+teacher/table evidence support those full forms. Removing the unverified
+voiced alias from this finite exercise is not a claim that it is impossible
+in Japanese. The [independent corrective review](counter-n3-finalization-review.md)
+accepts the revised finite scope and resolves U1: the contextually applicable
+teacher discussion is positive evidence, not an absence-based prohibition.
+General validity and distribution of the voiced alternatives remain unverified.
+The original U1 report and earlier packet hashes remain intact.
 
 The same follow-up confirms **both N3 and N2 teaching placements** for the
 interval-before-repeat construction. The existing Bunpro-first policy retains
 N2, but this is a source disagreement, not absence of N3 evidence. The user's
 conditional N2 fallback is recorded without treating it as unconditional
-approval of a scope change. The interpretation remains unfinished; its two
-cued counter expressions do not complete that operation. All 22 new numerical
-Grammar tasks remain unclassified, not silently included in cumulative N3.
+approval of a scope change. Two new **N2** supplied-message interpretations
+now cover a return visit with ぶりに and recurring rain with ぶりの,
+contrasting an interval before recurrence with continuous event duration.
+They supplement, rather than duplicate, the two cued counter expressions.
+Independent complete-task review and the forced production importer accepted
+the supplement at `33988dec4053bdf7`; native acceptance remains separate.
+All 22 earlier numerical Grammar tasks remain **Unclassified**.
+Both learner guides now distinguish the topic browse filter from **New
+grammar**, explain the Article sets/chapter route, and identify the N2
+supplement. Neither these unclassified tasks nor the N2 supplement is
+silently relabeled into cumulative N3 new intake.
 
 The [combined candidate accounting and native evidence](counter-n3-preacceptance.json)
-binds content version `db4dd194841d0157` to 255 new runtime identities:
+binds historical content version `db4dd194841d0157` to 255 new runtime identities:
 47 forward cards, two reverse records, 184 expressions and 22 Grammar tasks.
 The 259 scoped identities include four unchanged baseline controls; reused
-pilots are counted once. These totals include the unaccepted C5 packet.
+pilots are counted once. Those historical totals include the then-unaccepted
+C5 packet. The corrective candidate adds two N2 identities: **257 new N3-project
+identities and 261 scoped identities**, not 257 N3-classified Grammar tasks.
 The two previously reconciled C1 pilot corrections are explicit exceptions
 to pilot-object preservation, not changes to the 2,364-record baseline.
 Record counts and Read projections are not additional semantic contexts or
 evidence of learner mastery.
 
+The [independent global reconciliation](counter-n3-global-reconciliation.md)
+confirms all required row ownership and deduplicated identities. Its two
+metadata findings are resolved in the current ledgers: the room sound-class
+entry now matches the supported finite pair, and C2 has **35** identities new
+versus the original baseline (**34** after-pilot additions plus its new pilot),
+with one unchanged control. Historical independent reports remain intact.
+Packet context totals are not summed into a global independent-context count.
+The supported progression is practical intermediate breadth and selected
+finer distinctions, not a uniformly harder task staircase or measured transfer.
+
 The bounded native sample and local archive checks do not complete #55.
-Full Activity/AppNav, lifecycle, public sync, physical-phone evidence and
-immutable signed publication remain separate from local packet acceptance.
+The later signed release `3f8f8e8` completed an in-place upgrade and real public
+sync of content `f4242f2` through MainActivity/Settings. That establishes
+live-sync evidence, not the remaining N3-specific Activity/AppNav, lifecycle
+or physical-phone checks. Current-correction publication and release evidence
+remain separate from the historical local packet acceptance.
 
 ## What this claim means
 

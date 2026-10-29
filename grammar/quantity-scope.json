@@ -3145,6 +3145,102 @@
           }
         ]
       }
+    },
+    {
+      "id": "quantity-scope-return-after-gap",
+      "target": "supported-quantity-inference",
+      "relationship": "numerical-inference",
+      "jlpt": 2,
+      "prompt": "「三年ぶりにこの町を訪れました。」→____",
+      "translation": "Read the Japanese report. Type 1 if the three years separate this visit from the previous one, or 2 if this visit itself lasted three years.",
+      "evidence": "Compare the two proposed timelines with the supplied report. The blank is an answer label, not a missing Japanese word.",
+      "explanation": "The report means: I visited this town for the first time in three years. 三年ぶりに places this visit after a three-year gap since the previous visit. It does not specify the duration of this visit or an exact calendar date.",
+      "answer": "supported-quantity-inference",
+      "acceptedAnswers": [
+        "1"
+      ],
+      "options": [
+        {
+          "id": "supported-quantity-inference",
+          "label": "1",
+          "rationale": "The three years describe the gap between visits. That timeline is supported by 三年ぶりに."
+        },
+        {
+          "id": "unsupported-quantity-inference",
+          "label": "2",
+          "rationale": "A three-year stay is not established. ぶりに describes the interval before a repeated occurrence, not how long that occurrence lasts."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "50ab8fb68d89a24bb2412c0292535f13b2b18c3843ef8db59ee8d421755a592b",
+        "spans": [
+          {
+            "start": 6,
+            "end": 8,
+            "text": "この",
+            "reading": "この",
+            "headword": "この",
+            "gloss": "this"
+          },
+          {
+            "start": 8,
+            "end": 9,
+            "text": "町",
+            "reading": "まち",
+            "headword": "町",
+            "gloss": "town"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "text": "訪れました",
+            "reading": "おとずれました",
+            "headword": "訪れる",
+            "gloss": "visited"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quantity-scope-rain-after-gap",
+      "target": "supported-quantity-inference",
+      "relationship": "numerical-inference",
+      "jlpt": 2,
+      "prompt": "「二か月ぶりの雨です。」→____",
+      "translation": "Read the Japanese report. Type 1 if this rain has continued for two months, or 2 if rain is returning after a two-month gap.",
+      "evidence": "Compare the two proposed timelines with the supplied report. The blank is an answer label, not a missing Japanese word.",
+      "explanation": "The report means: It is the first rain in two months. 二か月ぶりの modifies 雨 and describes its return after a two-month gap since the previous rain. It does not describe continuous rain lasting two months, or tell us how long the present rain will last.",
+      "answer": "supported-quantity-inference",
+      "acceptedAnswers": [
+        "2"
+      ],
+      "options": [
+        {
+          "id": "unsupported-quantity-inference",
+          "label": "1",
+          "rationale": "The two months are not the duration of continuous rain. Reading them that way loses the gap-before-recurrence meaning of ぶり."
+        },
+        {
+          "id": "supported-quantity-inference",
+          "label": "2",
+          "rationale": "This rain follows a two-month gap since the previous rain. ぶりの attaches that temporal information to the noun 雨."
+        }
+      ],
+      "vocabulary": {
+        "schemaVersion": 1,
+        "promptSha256": "c2a94ab4fce30a12184518323a7aca6fac7f578374966e6455ae4aaf295729c7",
+        "spans": [
+          {
+            "start": 7,
+            "end": 8,
+            "text": "雨",
+            "reading": "あめ",
+            "headword": "雨",
+            "gloss": "rain"
+          }
+        ]
+      }
     }
   ],
   "introductionGroups": [
@@ -3628,6 +3724,30 @@
           "exerciseId": "quantity-scope-stock-hundreds-unsupported",
           "facetId": "unsupported-quantity-inference",
           "exampleKey": "uncertain-component-stock"
+        }
+      ],
+      "next": [],
+      "requires": []
+    },
+    {
+      "id": "quantity-scope-event-intervals",
+      "label": "Interpret the timing of a repeated event",
+      "facets": [
+        {
+          "id": "interval-information",
+          "label": "Identify what the time expression establishes"
+        }
+      ],
+      "members": [
+        {
+          "exerciseId": "quantity-scope-return-after-gap",
+          "facetId": "interval-information",
+          "exampleKey": "return-after-gap"
+        },
+        {
+          "exerciseId": "quantity-scope-rain-after-gap",
+          "facetId": "interval-information",
+          "exampleKey": "repeat-event-after-gap"
         }
       ],
       "next": [],
