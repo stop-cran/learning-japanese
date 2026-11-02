@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-02",
+  "status": "source-published-and-local-native-verified-app-ci-pending",
+  "authorization": "Owner explicitly selected authorize the narrow prerequisite and continue N1.",
+  "appIssue": "https://github.com/stop-cran/kanji-cards-android/issues/125",
+  "authorizationRecord": "https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6583672622",
+  "appCommit": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "contentToolingCommit": "a634731df438e5f3fbddb941787dfe41845c23a3",
+  "n1IntegrationCommit": "c980c3815b2e800f881f3c7be46b0c2226c24404",
+  "normalCommitSignatures": "G for all three commits",
+  "publication": "Both prerequisite commits verified at their repository main refs. No N1 teaching pushed.",
+  "independentReview": {
+    "planRecord": "https://github.com/stop-cran/kanji-cards-android/issues/125#issuecomment-6583742399",
+    "reviewer": "curated-reading-plan, read-only rubber-duck, retained same-feature context",
+    "planFinding": "Exact-key lookup alone misses quoted declarations. Implemented raw-entry matching and rejection of quoted, indented and duplicate declarations.",
+    "implementationFinding": "Both Lite KanjiEntity projection queries omitted the new columns, making Home/reminders disagree with quiz sessions.",
+    "disposition": "Fixed both projections; regression checks compare full, suspend-Lite and Flow-Lite reading cards. Bounded follow-up confirmed resolution and lint-driven test relocations/helper simplification, with no remaining high-confidence defect.",
+    "limits": "Independent code review, not a linguistic or physical-phone review."
+  },
+  "validation": {
+    "pythonTests": {"passed": 322, "failed": 0},
+    "coreSelectedTests": {"passed": 98, "skipped": 0, "failed": 0, "includesRealContentCases": 3},
+    "appSelectedTests": {"passed": 60, "skipped": 0, "failed": 0},
+    "checks": ["content validator", "manifest freshness", "Detekt", "lintDebug", "assembleDebug", "assembleDebugAndroidTest", "assembleRelease"],
+    "native": {
+      "class": "io.github.stopcran.kanji.ui.KanjiReadingFlowTest",
+      "passed": 5,
+      "terminalStatusZeroCases": 5,
+      "includes": "Curated kun'yomi with old started on/kun keys excluded; full reference and answer grading preserved; existing correct/wrong/unknown flows, article navigation and Back.",
+      "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+      "api": 35,
+      "runtimeHeapGrowthLimit": "192m",
+      "configuration": "Read-only N3_Acceptance_20261029, no snapshots, host GPU, Vulkan disabled, port 5580, no AVD config change.",
+      "stoppedAfterCheck": true,
+      "phoneEvidence": false,
+      "fullN1PilotRouteEvidence": false
+    },
+    "contentCI": {"run": 41496107717, "head": "a634731df438e5f3fbddb941787dfe41845c23a3", "conclusion": "success"},
+    "appCI": {"run": 41496075431, "head": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c", "conclusion": "pending"},
+    "mergedLocalPilot": {
+      "pythonTestsPassed": 335,
+      "validatorErrors": 0,
+      "manifestUnchanged": true,
+      "contentVersion": "43667631e957461f",
+      "zipEntries": 8097,
+      "retainedBytes": 43383873,
+      "inflatedBytes": 43649907,
+      "estimatedCompressedBytes": 29774269,
+      "curatedPilotFieldsAdded": false
+    },
+    "publishedToolingArchive": {
+      "commit": "a634731df438e5f3fbddb941787dfe41845c23a3",
+      "manifestEqual": true,
+      "contentVersion": "33988dec4053bdf7",
+      "verifiedRuntimeHashes": 8047,
+      "zipEntries": 8068,
+      "compressedBytes": 30653177,
+      "inflatedBytes": 43581468,
+      "retainedBytes": 43278719,
+      "sha256": "4541f4b9a7ad1396d4f699632d05a25edafdc3d9ee488663b1ebddca3e530151"
+    }
+  },
+  "ownerTestingApk": {
+    "file": "enso-nihongo-f9b59a2-curated-readings.apk",
+    "location": "Sibling control/artifacts, not committed runtime content",
+    "sha256": "be4d96165f97b68101ee8eed1463bbd7d208827f7e2db4d09e16a770ff8ed3fc",
+    "bytes": 51084134,
+    "embeddedGitSha": "f9b59a2",
+    "signing": "Existing ordinary owner release configuration, referenced without copying secrets. Android apksigner verification passed on built and retained APK.",
+    "phoneTransfer": "Not performed: zero MTP phones and no adb device after disposable emulator shutdown.",
+    "installation": "Not performed on a phone. Old APKs ignore optional curation; the compatible APK must be installed before relying on curated questions.",
+    "generalReleaseAcceptance": "Outstanding; a signed build is not physical-phone or Play release acceptance."
+  },
+  "pilotState": {
+    "accepted": false,
+    "publishedAdditions": 0,
+    "remainingAdditions": 1228,
+    "next": "After green prerequisite CI, curate this same twelve-card pilot with source-backed linked examples, independently review changed teaching/metadata using two serial model families, validate, and retry full native N1 selection/meaning/reading/drawing/article/Back/offline acceptance.",
+    "phoneGateClarification": "Approved issue #60 explicitly permits phone acceptance recorded as performed or outstanding. Do not invent phone evidence or silently treat missing physical-phone testing as completed. Outstanding phone status alone is not a new veto on all owner-testing content publication."
+  }
+}
