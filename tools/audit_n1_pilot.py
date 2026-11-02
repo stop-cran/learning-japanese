@@ -32,6 +32,15 @@ def offered_keys(readings):
     return result[:3]
 
 
+def quiz_readings(meta, field):
+    readings = meta.get("quiz" + field[0].upper() + field[1:], meta[field])
+    require(isinstance(readings, list) and all(isinstance(r, str) and r for r in readings),
+            f"Invalid curated readings: {field}")
+    require(len(readings) == len(set(readings)) and set(readings) <= set(meta[field]),
+            f"Curated readings are not an exact distinct source subset: {field}")
+    return readings
+
+
 def metadata(root, name):
     return yaml.safe_load((root / name).read_text(encoding="utf-8").split("---", 2)[1])
 
@@ -40,9 +49,13 @@ def audit(root):
     evidence = root / "docs" / "n1-sources"
     baseline = json.loads((evidence / "baseline-inventory.json").read_text(encoding="utf-8"))
     ledger = json.loads((evidence / "pilot-progress.json").read_text(encoding="utf-8"))
+    curation = json.loads((evidence / "pilot-curated-readings.json").read_text(encoding="utf-8"))
     frozen = json.loads((evidence / "pilot-membership.json").read_text(encoding="utf-8"))
     members = [r["kanji"] for r in frozen["members"]]
     require(ledger["membership"] == members, "Pilot membership/order changed")
+    require([r["kanji"] for r in curation["cards"]] == members,
+            "Curated pilot membership/order changed")
+    curated = {r["kanji"]: r for r in curation["cards"]}
     require(set(ledger["drafted"]) == set(members) and not ledger["pendingTeaching"],
             "This audit requires the complete pilot draft")
     rows = json.loads((evidence / "source-index.json").read_text(encoding="utf-8"))
@@ -89,6 +102,7 @@ def audit(root):
         ("pilot-lexical-selection.json", "pilot-jmdict.xml"),
         ("pilot-comparison-selection.json", "pilot-comparisons-jmdict.xml"),
         ("pilot-label-selection.json", "pilot-label-jmdict.xml"),
+        ("pilot-curation-comparison-selection.json", "pilot-curation-comparisons-jmdict.xml"),
     ):
         selection = json.loads((evidence / selection_name).read_text(encoding="utf-8"))
         entries = ET.parse(evidence / packet_name).getroot().findall("entry")
@@ -100,7 +114,8 @@ def audit(root):
     require(len(actual_readings) == len(set(actual_readings)), "Duplicate reading disposition")
     expected_readings = set()
     projections = {r["kanji"]: r for r in ledger["readingCompatibility"]["sourceOrderProjection"]}
-    source_only_offered = set()
+    legacy_source_only_offered, source_only_offered = set(), set()
+    curated_key_count = 0
     for c in members:
         row = source[c]
         meta = metadata(root, row["article"])
@@ -117,9 +132,36 @@ def audit(root):
                 f"Stroke identity/count/revision mismatch: {c}")
         body = (root / row["article"]).read_text(encoding="utf-8")
         reading_table = body.split("## Readings\n", 1)[1].split("## Common words", 1)[0]
+        selected = curated[c]["selected"]
+        excluded = curated[c]["excluded"]
+        decisions = [(r["kind"], r["reading"]) for r in selected + excluded]
+        require(len(decisions) == len(set(decisions))
+                and set(decisions) == {("on", r) for r in meta["onyomi"]}
+                | {("kun", r) for r in meta["kunyomi"]},
+                f"Curated dispositions do not cover every full reading exactly once: {c}")
+        require(all(r["reason"].strip() for r in selected + excluded),
+                f"Missing curation reason: {c}")
+        for r in selected:
+            require((c, r["article"]) in pairs and r["entryIds"]
+                    and set(r["entryIds"]) <= families.keys(),
+                    f"Missing mapped lexical support for selected reading: {c} {r}")
+            table_row = next(line for line in reading_table.splitlines()
+                             if line.startswith(f"| {r['reading']} |"))
+            require(f"(../{r['article']})" in table_row,
+                    f"Selected reading lacks its linked table example: {c} {r['reading']}")
         for kind, field, projection in (("on", "onyomi", "onKeys"), ("kun", "kunyomi", "kunKeys")):
             keys = offered_keys(meta[field])
             require(projections[c][projection] == keys, f"Offered key projection changed: {c} {kind}")
+            quiz_field = "quiz" + field[0].upper() + field[1:]
+            require(quiz_field in meta and meta[quiz_field] == curated[c][quiz_field],
+                    f"Explicit curated subset differs from ledger: {c} {kind}")
+            selected_raw = quiz_readings(meta, field)
+            require([r["reading"] for r in selected if r["kind"] == kind] == selected_raw,
+                    f"Selected evidence differs from quiz subset/order: {c} {kind}")
+            curated_keys = offered_keys(selected_raw)
+            require(curated[c][projection] == curated_keys,
+                    f"Curated offered keys differ from ledger: {c} {kind}")
+            curated_key_count += len(curated_keys)
             for reading in meta[field]:
                 expected_readings.add((c, kind, reading))
                 require(f"| {reading} |" in reading_table, f"Missing reading-table row: {c} {reading}")
@@ -132,12 +174,16 @@ def audit(root):
                                      if line.startswith(f"| {r['reading']} |"))
                     require("source-only" in table_row, f"Unqualified source-only row: {c} {r['reading']}")
                     if reading_key(r["reading"]) in keys:
+                        legacy_source_only_offered.add((c, kind, reading_key(r["reading"])))
+                    if reading_key(r["reading"]) in curated_keys:
                         source_only_offered.add((c, kind, reading_key(r["reading"])))
     require(set(actual_readings) == expected_readings, "Reading dispositions differ from full metadata")
     recorded_source_only = {(r["kanji"], r["kind"], k)
                             for r in ledger["readingCompatibility"]["sourceOnlyOfferedKeys"]
                             for k in r["keys"]}
-    require(source_only_offered == recorded_source_only, "Source-only offered-key ledger mismatch")
+    require(legacy_source_only_offered == recorded_source_only,
+            "Historical source-only offered-key ledger mismatch")
+    require(not source_only_offered, "Source-only reading still offered by pilot curation")
     for r in mappings:
         name, c = r["article"], r["kanji"]
         meta = metadata(root, name)
@@ -157,10 +203,13 @@ def audit(root):
     for r in ledger["newWordQuizAudit"]["directExclusions"]:
         require(metadata(root, f"words/{r['word']}.md")["quiz_exclusions"] == r["exclude"],
                 f"Word exclusion ledger mismatch: {r['word']}")
-    return {**counts, "draftKanji": len(members), "newWords": sum(r["newArticle"] for r in mappings),
+    return {**counts, "draftKanji": len(members),
+            "newWords": len({r["article"] for r in mappings if r["newArticle"]}),
             "requiredReciprocalPairs": len(pairs), "activatedDeclaredPairs": len(activated),
             "readingDispositions": len(actual_readings), "sourceOnlyReadings": sum(
                 bool(r.get("sourceOnly")) for r in dispositions),
+            "legacySourceOnlyOfferedKeys": len(legacy_source_only_offered),
+            "curatedOfferedKeys": curated_key_count,
             "sourceOnlyOfferedKeys": len(source_only_offered), "dictionaryFamilies": len(families),
             "manifestFresh": True, "contentVersion": current["contentVersion"],
             "limits": "Mechanical draft audit; not independent content review, app execution, native/phone acceptance or publication."}

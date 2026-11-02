@@ -4,7 +4,16 @@
   "membership": ["幹", "氏", "扱", "乃", "凹", "凸", "矛", "鷹", "彗", "漱", "栞", "莉"],
   "baselineCommit": "57dcc2aaedd8d6b0f141d5b4c3cb9c13f6f797b2",
   "sourceFreezeCommit": "3e4df69898fbe9eb5a5732f944fd33353b16e33c",
-  "status": "blocked-at-pilot-gate-two-family-reviewed-native-font-inspected",
+  "status": "curation-drafted-pending-two-family-diff-review-and-native-acceptance",
+  "curation": {
+    "record": "pilot-curated-readings.json",
+    "baseCommit": "b43143f",
+    "prerequisite": "../n1-reviews/curated-reading-prerequisite.json",
+    "status": "draft-not-review-closed",
+    "historicalReadingCompatibility": "The readingCompatibility object below preserves the pre-curation source-order audit and original review finding. Its twelve offered source-only keys are historical, not the current curated projection. Current offered keys and individual dispositions are in pilot-curated-readings.json.",
+    "phoneAcceptance": "Explicitly outstanding; not inferred from emulator checks and not a new veto on bounded owner-testing publication.",
+    "next": "Freeze and independently review all new curation/support diffs using two serial model families; then obtain complete-archive native terminal passing cases before pilot acceptance."
+  },
   "drafted": ["幹", "氏", "扱", "乃", "凹", "凸", "矛", "鷹", "彗", "漱", "栞", "莉"],
   "pendingTeaching": [],
   "reviewClosed": [],
@@ -59,6 +68,11 @@
     {"kanji": "莉", "kind": "on", "reading": "レイ", "entryIds": [], "sourceOnly": true, "externalEvidence": "pilot-external-evidence.json#kanjipedia-ri", "qualification": "Character reading independently listed; no lexical example established."}
   ],
   "supportMappings": [
+    {"kanji": "幹", "article": "words/幹.md", "primaryReading": "みき", "entryIds": ["1577640", "2396230"], "status": "curation-drafted-linked", "newArticle": true},
+    {"kanji": "凹", "article": "words/凹凸.md", "primaryReading": "おうとつ", "entryIds": ["1179280", "1582410"], "status": "curation-drafted-linked", "newArticle": true},
+    {"kanji": "凸", "article": "words/凹凸.md", "primaryReading": "おうとつ", "entryIds": ["1179280", "1582410"], "status": "curation-drafted-linked", "newArticle": true},
+    {"kanji": "矛", "article": "words/矛.md", "primaryReading": "ほこ", "entryIds": ["1603450", "1531090"], "status": "curation-drafted-linked", "newArticle": true},
+    {"kanji": "鷹", "article": "words/鷹揚.md", "primaryReading": "おうよう", "entryIds": ["1608970"], "status": "curation-drafted-linked", "newArticle": true},
     {"kanji": "幹", "article": "words/新幹線.md", "primaryReading": "しんかんせん", "entryIds": ["1361590", "1212140"], "status": "drafted-linked", "newArticle": false},
     {"kanji": "氏", "article": "words/氏.md", "primaryReading": "し", "entryIds": ["2101130", "1311010"], "status": "drafted-linked", "newArticle": false},
     {"kanji": "氏", "article": "words/氏名.md", "primaryReading": "しめい", "entryIds": ["1311060"], "status": "drafted-linked", "newArticle": false},
@@ -75,6 +89,11 @@
     {"kanji": "莉", "article": "words/茉莉花.md", "primaryReading": "まつりか", "entryIds": ["1641120", "1909630"], "selectedSenses": [1], "status": "drafted-linked", "newArticle": true, "qualification": "Arabian jasmine, not all jasmine. 茉 declared without creating an out-of-batch card. No word JLPT level guessed."}
   ],
   "requiredReciprocalPairsAtThisDraft": [
+    ["幹", "words/幹.md"],
+    ["凹", "words/凹凸.md"],
+    ["凸", "words/凹凸.md"],
+    ["矛", "words/矛.md"],
+    ["鷹", "words/鷹揚.md"],
     ["幹", "words/新幹線.md"],
     ["氏", "words/氏.md"],
     ["氏", "words/氏名.md"],
@@ -107,8 +126,12 @@
   },
   "newWordQuizAudit": {
     "inventoryConsulted": "docs/confusable-words.md",
-    "exactBaselineTitlesAndBodiesInspected": ["または", "あるいは", "それとも", "案内", "冊子", "箒", "本", "書物", "図書", "鳥", "花"],
+    "exactBaselineTitlesAndBodiesInspected": ["または", "あるいは", "それとも", "案内", "冊子", "箒", "本", "書物", "図書", "鳥", "花", "基", "基本", "基礎", "基盤", "武器", "ごつごつ", "ざらざら", "冷静", "悠々", "穏やか", "しっとり", "余裕", "のんき", "落ち着く", "平気"],
     "directExclusions": [
+      {"word": "幹", "exclude": ["基", "基本", "基礎", "基盤"], "reason": "The ordinary figurative backbone/foundation sense overlaps these displayed foundation labels; no claim that they name a literal tree trunk."},
+      {"word": "凹凸", "exclude": ["でこぼこ", "ごつごつ", "ざらざら"], "reason": "Physical unevenness/roughness overlaps the actual displayed bumpy, knobbly and gritty labels in applicable surface contexts, despite texture-scale differences. Direct pairs, not inherited through でこぼこ."},
+      {"word": "矛", "exclude": ["武器"], "reason": "Both the narrower polearm and the dictionary's broader arms sense are weapons; 武器's physical weapon label is a defensible answer."},
+      {"word": "鷹揚", "exclude": ["冷静", "穏やか", "悠々", "しっとり", "余裕", "のんき", "落ち着く", "平気"], "reason": "The full composed/easygoing senses overlap these actual articles' composure or untroubled-manner uses. Grammar and register still differ."},
       {"word": "乃至", "exclude": ["または", "あるいは", "それとも"], "reason": "Displayed or labels overlap the alternative sense; this does not make the words interchangeable in quantity ranges or questions."},
       {"word": "栞", "exclude": ["本", "書物", "図書", "冊子"], "reason": "The guidebook sense can be a book/booklet; broad existing book labels must not serve as uniquely wrong choices. These are direct pairs, not transitive closure."},
       {"word": "鷹", "exclude": ["鳥"], "reason": "A hawk is a bird, so the existing broad bird answer is not a defensibly wrong label."},
@@ -188,6 +211,7 @@
     "phoneAcceptance": "outstanding",
     "record": "../n1-reviews/pilot-native-acceptance.md"
   },
-  "nextAction": "STOP at pilot gate. Preserve teaching snapshot 6855b42fa2c4e4cae6fd01a2697d10ee42011abb, original two-family reviews and all native artifacts. Resume this same batch only after narrow issue-#1 curated-prompt end-to-end compatibility and a stable supported native environment are available; execute selection/session/article/system-Back and drawing with terminal passing evidence, separately obtain real-phone acceptance, then reconcile and publish the accepted pilot estimate/disposition before any later batch. Do not repeat initial reviews, alter source metadata/order, implement the companion feature here, push the unaccepted branch or launch another runner.",
-  "limits": "Two actual model families completed initial textual review with supplied dictionary access, not native/phone checks. All 26 targeted JVM tests previously passed without skips. Coordinator native font inspection now covers 40 characters/four families on one emulator, not phone or pilot acceptance. Navigation/drawing remain unverified after recorded host/environment failures. Five support articles and twelve cards remain unaccepted drafts. No local commit counts as published. All 1,228 additions remain undelivered."
+  "nextAction": "Continue the same pilot under the delivered curated-reading prerequisite. Independently review the new curation/support diffs on one frozen snapshot using two serial model families, preserving original reviews as historical evidence. Reconcile, then execute complete-archive production-ContentSync-once native selection/meaning/curated-reading/drawing/article/system-Back/offline cases with terminal status 0. Record physical-phone/general-release acceptance explicitly outstanding unless actually obtained; approved issue 60 permits that distinction for owner testing. Publish the accepted pilot estimate/disposition before later batches. Do not push this unreviewed curation draft.",
+  "historicalLimitsAtCheckpoint5": "Two actual model families completed initial textual review with supplied dictionary access, not native/phone checks. All 26 targeted JVM tests previously passed without skips. Coordinator native font inspection now covers 40 characters/four families on one emulator, not phone or pilot acceptance. Navigation/drawing remain unverified after recorded host/environment failures. Five support articles and twelve cards remain unaccepted drafts. No local commit counts as published. All 1,228 additions remain undelivered.",
+  "limits": "Original teaching reviews and native failures remain historical evidence. Delivered prerequisites do not close this pilot. Current curation adds four necessary support articles (nine distinct new support articles total) and a bounded reused 氏 clarification; these diffs are not yet independently reviewed. All 1,228 additions remain undelivered, and complete native pilot acceptance remains unverified. Phone/general-release acceptance is explicitly outstanding."
 }
