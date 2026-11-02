@@ -15,6 +15,12 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   [snapshot retrieved on 2026-10-21](n2-source-snapshot.json). All are present after
   [25 independently reviewed batches](n2-review.md#final-project-verification-and-completion):
   365 additions and the preserved existing 珍 and 短 cards.
+- [N1](https://kanjiapi.dev/v1/kanji/jlpt-1): 1,232 distinct characters in the
+  [2026-11-02 implementation freeze](n1-source-snapshot.json). Existing members
+  士・奇・怪・訳 are preserved; **1,228 additions remain pending** at that freeze.
+  The [N1 kanji notes](n1-authoring-notes.md) distinguish source preparation from
+  authored, independently reviewed and published coverage. The separate 妖
+  exception below remains unchanged. This is not yet a delivered N1 study set.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee

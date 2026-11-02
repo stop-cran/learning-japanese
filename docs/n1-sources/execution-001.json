@@ -1,0 +1,96 @@
+{
+  "date": "2026-11-02",
+  "stage": "source-freeze",
+  "baselineCommit": "57dcc2aaedd8d6b0f141d5b4c3cb9c13f6f797b2",
+  "androidCommit": "2bc0234bffcb3c4a0cbafde80367d24d2638a93a",
+  "coordinatorModel": "gpt-6.1-sol",
+  "isolation": {
+    "contentBranch": "content/n1-kanji",
+    "upstream": "origin/main",
+    "fetchCompleted": true,
+    "upstreamChangesAtStart": [],
+    "initialContentWorktreeClean": true,
+    "initialAndroidWorktreeClean": true,
+    "canonicalWorktreesAccessed": false,
+    "additionalRunnerStarted": false,
+    "reviewerProcessesStarted": 0
+  },
+  "completed": [
+    "Verified approved raw community, compressed KANJIDIC2 and decompressed XML hashes.",
+    "Pinned actual JMdict_e gzip/XML bytes and creation date; downloaded Unicode 17.0.0 bytes and verified the known hash.",
+    "Preserved exact raw community response, baseline metadata/blob hashes/runtime manifest, complete selected character XML and ordered source-row metadata.",
+    "Reproduced 1,232 source members, four existing members, the separate 妖 exception, 1,228 additions, 1,598 on entries, 1,705 kun entries and 247 grade-9 additions.",
+    "Preserved all 810 baseline declared word candidates across 757 articles without counting them as verified mappings.",
+    "Selected the risk-stratified 12-character pilot and reproduced all 40 shared bundled-font omissions."
+  ],
+  "validation": [
+    {
+      "command": "python -X utf8 -B -m unittest discover -s tools -p test_freeze_n1_sources.py",
+      "result": "pass",
+      "tests": 4
+    },
+    {
+      "command": "python -X utf8 -B tools\\freeze_n1_sources.py --inputs <approved-control-inputs> --android <isolated-pinned-android> --check",
+      "result": "pass",
+      "immutableOutputsCompared": 8
+    },
+    {
+      "command": "python -X utf8 -B tools\\validate.py",
+      "result": "pass",
+      "errors": 0
+    },
+    {
+      "command": "python -X utf8 -B tools\\build_manifest.py",
+      "result": "unchanged",
+      "contentVersion": "33988dec4053bdf7",
+      "runtimeManifestEntries": 8047
+    },
+    {
+      "command": "python -X utf8 -B tools\\check_content_budget.py",
+      "result": "pass",
+      "files": 8053,
+      "entries": 8068,
+      "retainedBytes": 43315962,
+      "inflatedBytes": 43581996,
+      "localZipBytes": 29737944,
+      "listeningTaskMediaBytes": 5893602,
+      "scope": "Local source-preparation tree before adding this contributor-only receipt; not an immutable GitHub ZIP publication check."
+    },
+    {
+      "command": "python -X utf8 -B -m unittest discover -s tools -p test_*.py",
+      "result": "pass",
+      "tests": 323,
+      "seconds": 36.486
+    }
+  ],
+  "nativeReadiness": {
+    "adbDevices": [],
+    "runningEmulatorsObserved": [],
+    "existingAvdConfigurationsAvailable": true,
+    "exampleAvdNames": ["Grammar_API29", "N3_Acceptance_20261029", "Pixel_9"],
+    "emulatorBootAttempted": false,
+    "nativeTestsPerformed": [],
+    "phoneAcceptance": "outstanding",
+    "limits": "Read-only adb devices -l, emulator -list-avds and process inspection only. AVD configuration existence is not proof of a bootable or suitable native environment."
+  },
+  "reviewReadiness": {
+    "installedExecutableResolved": true,
+    "catalogAttempt": "copilot --help (read-only capture)",
+    "catalogAttemptResult": "Permission denied because no interactive user response was available.",
+    "catalogProcessExecuted": false,
+    "alternativeDocumentationTool": "Returned interactive help, but no headless model catalog; bundled README could not be loaded.",
+    "actualReviewerModels": [],
+    "contentReviewsPerformed": [],
+    "disposition": "Unresolved headless CLI permission prerequisite. No workaround, model substitution or claim of two-family coverage."
+  },
+  "publication": {
+    "authoredTeachingCommit": null,
+    "reviewedTeachingCommit": null,
+    "integratedCommit": null,
+    "publishedCommit": null,
+    "publishedAdditions": 0,
+    "remainingAdditions": 1228
+  },
+  "nextSafeAction": "Make permitted read-only installed CLI catalog/reviewer execution available, then resume this same pilot with complete lexical-family extraction and inspection, support mapping, reading dispositions and bounded drafting. Full rollout remains gated.",
+  "limits": "This is a source-preparation checkpoint, not a content review, native acceptance, accepted pilot or delivered batch. No teaching cards, strokes or runtime manifest entries changed."
+}

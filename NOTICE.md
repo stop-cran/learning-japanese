@@ -14,6 +14,10 @@ This repository contains original notes plus data derived from open dictionary p
   hashes and transformations. N3 reuses the 2026-10-08 dictionary snapshot; its community kanji list was retrieved on 2026-10-09.
   The [N2 source snapshot](docs/n2-source-snapshot.json) identifies dictionaries and a community kanji list retrieved on
   2026-10-21. Its [per-batch evidence](docs/n2-batch-sources) retains metadata and applicable JMdict spelling/reading senses.
+  The [N1 kanji source freeze](docs/n1-source-snapshot.json) identifies the 2026-11-02 KANJIDIC2 and JMdict downloads,
+  exact community membership and the preserved baseline. Its [selected complete character records](docs/n1-sources/kanjidic2-selected.xml)
+  are reserialized from KANJIDIC2; the [source index](docs/n1-sources/source-index.json) selects Japanese on/kun readings,
+  primary stroke counts and classical radicals. These preparation records do not assert authored or reviewed N1 coverage.
   The [N4 word-pair index](docs/n4-word-sources.tsv) and [N3 primary-word index](docs/n3-word-sources.tsv) identify matching
   JMdict entries for the selected spellings and readings; not every sense of those entries applies to an article.
   The N3 index identifies a non-exhaustive selection of primary teaching senses and distinguishes new articles from two reused ones.
@@ -39,7 +43,7 @@ This repository contains original notes plus data derived from open dictionary p
   dictionary files and preserves entry identities, reading restrictions and the three retained level labels.
   Its explanations and example sentences are original teaching material, not excerpts from manga,
   news stories, or recipes. This thematic selection does not establish new JLPT membership.
-- **Canonical radical glyphs for the N4, N3 and N2 additions** are mapped from the compatibility decompositions in Unicode 17.0
+- **Canonical radical glyphs for the N4, N3 and N2 additions and the N1 source freeze** are mapped from the compatibility decompositions in Unicode 17.0
   [UnicodeData.txt](https://www.unicode.org/Public/17.0.0/ucd/UnicodeData.txt), copyright Unicode, Inc., under the
   [Unicode License V3](docs/UNICODE-LICENSE.txt). Positional component shapes may differ from these canonical glyphs.
 - **Scene illustrations** (`images/*.webp`) are AI-generated with Azure OpenAI from original English scenes in
