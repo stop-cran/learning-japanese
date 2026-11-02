@@ -4,7 +4,7 @@
   "membership": ["幹", "氏", "扱", "乃", "凹", "凸", "矛", "鷹", "彗", "漱", "栞", "莉"],
   "baselineCommit": "57dcc2aaedd8d6b0f141d5b4c3cb9c13f6f797b2",
   "sourceFreezeCommit": "3e4df69898fbe9eb5a5732f944fd33353b16e33c",
-  "status": "fully-drafted-not-review-closed",
+  "status": "two-family-initial-reviewed-pilot-not-accepted",
   "drafted": ["幹", "氏", "扱", "乃", "凹", "凸", "矛", "鷹", "彗", "漱", "栞", "莉"],
   "pendingTeaching": [],
   "reviewClosed": [],
@@ -153,8 +153,29 @@
       {"kanji": "莉", "kind": "on", "keys": ["らい", "れい"]}
     ],
     "remainingRisk": "Twelve source-only keys are actually offered. Article qualification does not filter them. Source-only 乃 アイ and 彗 セイ fall outside the first three on keys; 扱 あつか.る shares the あつか stem and does not become an independent key. Preserve all metadata and source order. The coordinator and reviewers must assess pedagogical acceptability explicitly and, if unacceptable, record the narrow issue-#1 prerequisite instead of implementing a quiz feature here.",
-    "acceptance": "pending-independent-reading-disposition-and-native-check"
+    "acceptance": "not-accepted-companion-issue-1-prerequisite-required-and-native-check-outstanding",
+    "independentDisposition": "Both claude-opus-5.5 and gpt-6.1-sol identify the same source-only prompt suitability gap at teaching snapshot 6855b42fa2c4e4cae6fd01a2697d10ee42011abb. Current prompting is not accepted. Preserve metadata/order; require explicit approved prompt subsets and actual end-to-end app compatibility under issue #1, without implementing that companion feature in this kanji task.",
+    "reconciliation": "../n1-reviews/pilot-reconciliation.json"
   },
-  "nextAction": "Resume the same complete pilot draft, not a later batch. Verify this checkpoint and freeze the exact teaching snapshot for two serial, isolated read-only reviewers from different model families, including all 12 cards, five new support words and changed passages in eight reused articles. Give both the unchanged 40-family packet, 11-family comparisons, five-family label packet and external-evidence record without author adjudication. Persist each actual model/report/process exit before launching the next. Reconcile findings, then complete applicable Android/native/all-40-font checks, explicit reading-key disposition and recalibrated estimates. No full rollout or unreviewed push.",
-  "limits": "No independent initial review, native rendering or phone check has occurred. Five new support articles and 12 cards are drafts, not accepted additions. No local draft is counted as published. All 1,228 additions remain to be accepted and delivered."
+  "independentReview": {
+    "snapshot": "6855b42fa2c4e4cae6fd01a2697d10ee42011abb",
+    "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+    "reports": ["../n1-reviews/pilot-initial-claude.md", "../n1-reviews/pilot-initial-gpt.md"],
+    "originalSessionConfirmation": "../n1-reviews/pilot-confirmation-claude.md",
+    "executionAndReadAudit": "../n1-reviews/pilot-review-and-jvm-audit.json",
+    "allAssignedInitialTextScopeCovered": true,
+    "processesAndObservedToolCallsSerial": true,
+    "nativeOrPhysicalPhoneReview": false,
+    "reviewClosed": false
+  },
+  "androidAutomatedChecks": {
+    "snapshot": "2bc0234bffcb3c4a0cbafde80367d24d2638a93a",
+    "contentRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese",
+    "RealContentTest": {"tests": 3, "skipped": 0, "failures": 0, "errors": 0},
+    "WordsTest": {"tests": 22, "skipped": 0, "failures": 0, "errors": 0},
+    "RareHanTest": {"tests": 1, "skipped": 0, "failures": 0, "errors": 0},
+    "nativeFontAcceptance": false
+  },
+  "nextAction": "Resume the same twelve-card pilot with archived two-family initial review and bounded Claude confirmation; do not rerun or recreate the initial reviews. Complete safe existing-AVD/native selection-session-article-Back/drawing and all-40-fallback inspection, then recalibrate support/footprint/effort and report the exact unresolved gates. No adb device is connected; emulator is not on PATH but ANDROID_HOME\\emulator\\emulator.exe enumerates existing AVDs. No native boot/test has yet occurred. Current source-only prompting is not accepted: a narrow issue-#1 companion prerequisite must preserve metadata and transport approved prompt subsets end-to-end. Do not implement that companion here, begin a later batch or push the unaccepted branch. All cards remain draft/not review-closed pending pilot gates.",
+  "limits": "Two actual model families completed initial textual review, with supplied full dictionary access; neither performed independent upstream retrieval or native/phone checks. All 26 targeted Android JVM tests passed without skips. Five support articles and twelve cards remain unaccepted drafts. No local commit counts as published. All 1,228 additions remain to be accepted and delivered."
 }

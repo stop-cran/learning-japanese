@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-02",
+  "teachingSnapshot": "6855b42fa2c4e4cae6fd01a2697d10ee42011abb",
+  "teachingChangedDuringOrAfterReviews": false,
+  "scope": {
+    "newKanji": 12,
+    "newSupportArticles": 5,
+    "changedReusedArticles": 8,
+    "comparisonArticlesSupplied": 11,
+    "completeFrozenJmdictFamilies": 56,
+    "facets": ["correctness", "scoped coverage", "textual phone comprehensibility"],
+    "reviewers": ["claude-opus-5.5", "gpt-6.1-sol"],
+    "nativeOrPhysicalPhoneReview": false
+  },
+  "reports": [
+    "pilot-initial-claude.md",
+    "pilot-initial-gpt.md",
+    "pilot-confirmation-claude.md"
+  ],
+  "executionAudit": "pilot-review-and-jvm-audit.json",
+  "findings": [
+    {
+      "id": "reading-prompt-prerequisite",
+      "originalReports": ["Claude R1 and its limits", "GPT F1 and all-projected-sets assessment"],
+      "status": "unresolved",
+      "facet": "scoped coverage / actual reading compatibility",
+      "severity": "major pilot publication gate, not a demonstrated false-reading defect",
+      "affectedKanji": ["扱", "乃", "矛", "彗", "漱", "栞", "莉"],
+      "sourceOnlyActuallyOfferedKeys": [
+        ["扱", "on", "そう"], ["扱", "on", "きゅう"],
+        ["乃", "on", "の"], ["矛", "on", "ぼう"],
+        ["彗", "on", "え"], ["彗", "on", "けい"],
+        ["漱", "on", "しゅう"], ["漱", "on", "す"], ["漱", "kun", "くちそそぐ"],
+        ["栞", "on", "かん"], ["莉", "on", "らい"], ["莉", "on", "れい"]
+      ],
+      "additionalRestrictedRecognitionQuestions": ["乃 kun の: historical/search-only spelling", "乃 kun なんじ: character-dictionary recognition"],
+      "specificDisplacement": "漱 retains source-only くちそそぐ within the first three kun stems but omits lexically supported すすぐ.",
+      "evidence": "Actual pinned ReadingData.kt:12 transports full lists; KanjiReadings.kt:47-64 defaults askOn/askKun to all metadata and takes first three distinct stems per kind. Both reviewers read the identical projection and all teaching/disclosures.",
+      "adjudication": "Do not accept current source-only prompting for this pilot merely because recognition metadata is valid. The shared evidence establishes a suitability gap, not nonexistence of these readings. Require a narrow explicit companion prerequisite under content issue #1 before pilot publication or full rollout. Restricted but lexically anchored keys require an explicit contextual disposition too; neither review certifies them as ordinary modern words.",
+      "requiredCompanionBoundary": "Keep complete metadata, order, stable IDs and full reading-based distractor exclusions. Distinguish approved prompt subsets from source recognition data end-to-end through content validation, importer/storage/adapter and actual queue. Absence and an intentionally empty approved kind must not be conflated. The existing core askOn/askKun distinction is present, but the pinned entity adapter does not transport curated fields. This content task does not implement that companion change.",
+      "confidence": "high on offered keys and source-example gap; pedagogical acceptance is a scoped decision, not a universal linguistic rule",
+      "publicationGate": "unmet",
+      "prerequisiteOwnerComment": "https://github.com/stop-cran/learning-japanese/issues/1#issuecomment-6579222017"
+    },
+    {
+      "id": "symmetric-word-exclusions",
+      "originalReports": ["Claude F1, including weaker 栞/冊子 variant"],
+      "status": "withdrawn",
+      "facet": "scoped coverage / quiz ambiguity hypothesis",
+      "originalSeverity": "consequential but unverified",
+      "evidence": "Pinned WordQuizBuilder.select Words.kt:175,178 checks either direction between target/candidate and between choices. WordsTest:177-191 exercises one-sided exclusions in either target/direction; tests at 194-222 cover distractor order and non-transitivity. All 22 WordsTest cases actually passed.",
+      "adjudication": "Existing declarations on 乃至 and 栞 already protect the reverse pairs. No baseline metadata changes or redundant reciprocal declarations are required.",
+      "originalReviewerConfirmation": "pilot-confirmation-claude.md withdraws F1 and changes words/乃至 scoped coverage to CLEAN.",
+      "confidence": "high"
+    },
+    {
+      "id": "duplicate-no-across-reading-kinds",
+      "originalReports": ["Claude R1 duplicate-key subclaim; GPT recognition qualification"],
+      "status": "withdrawn",
+      "facet": "reading compatibility",
+      "evidence": "KanjiReadings.kt keeps separate ReadingKind state identities and explicit question kinds. 同音 across on/kun does not create two correct choices within one question.",
+      "adjudication": "The duplicate-answer assertion is withdrawn, as confirmed by Claude. Suitability of on ノ remains within the unresolved prerequisite; do not confuse that with key identity."
+    },
+    {
+      "id": "rice-stripping-example",
+      "originalReports": ["Claude Limits: exact 稲を扱く not independently verified"],
+      "status": "resolved",
+      "facet": "correctness evidence",
+      "evidence": "Coordinator refetched https://www.kanjipedia.jp/kotoba/0000072100 on 2026-11-02: actual heading 扱く こ-く and short attested example 稲を―く.",
+      "adjudication": "Headword substitution establishes the exact collocation. Original reviewer accepted this in the bounded confirmation. No teaching change.",
+      "sourceAccessLimit": "Both initial reviewers relied on supplied external observations; the follow-up retrieval is coordinator evidence, not their live retrieval."
+    },
+    {
+      "id": "nanji-character-gloss",
+      "originalReports": ["Claude Limits and R1; GPT F1/limits"],
+      "status": "partially resolved",
+      "facet": "correctness evidence / restricted recognition suitability",
+      "evidence": "Coordinator refetched https://www.kanjipedia.jp/kanji/0004473200 on 2026-11-02: actual kun なんじ, sense 2 おまえ and explicit 乃(なんじ) navigation. Dedicated word-page extraction remains unavailable.",
+      "adjudication": "Reading and second-person character gloss are supported. The specific kanbun register label lacks separately retrieved direct wording; Claude's confirmation treats this as nonblocking and not a demonstrated overclaim. No conversational sentence or historical derivation is invented. Suitability as a prompt remains open under the shared prerequisite.",
+      "confidence": "high for character recognition, limited for separately sourced register wording"
+    },
+    {
+      "id": "link-and-missing-kanji-import-limits",
+      "originalReports": ["Claude Limits: 姓, 至 and 茉"],
+      "status": "resolved",
+      "facet": "scoped coverage / import",
+      "evidence": "至 is unlinked plain text at words/乃至.md:24. Existing words/姓.md is linked from words/氏名.md:33; existing kanji/姓.md from kanji/氏.md:43. Structural validation/pilot audit cover actual relative targets. RealContentTest imported this sibling pilot without skips. The content format requires every written kanji in a word header even if its card is not yet available.",
+      "adjudication": "No missing-target/import defect established. Do not invent out-of-batch 至 or 茉 cards.",
+      "receiptCorrection": "The confirmation evidence file incorrectly cited 乃至:23 and 氏名:35; actual lines are 24 and 33. Original served evidence and reviewer reports remain untouched."
+    }
+  ],
+  "optional": {
+    "status": "optional",
+    "sharedAcrossReportsIncludingOptionalAndLimits": ["Link existing 箒 from 彗"],
+    "claudeOnlySuggestionsNotVerifiedUniqueDefects": [
+      "Add 夏目漱石 or ゆすぐ",
+      "Name 水星 homophone explicitly",
+      "Reword しごく comparison",
+      "Reduce author-facing metadata wording or gloss source-only/search-only",
+      "Add 草 contrast",
+      "Borderline 栞/案内 pair"
+    ],
+    "decision": "No optional teaching expansion made. No actionable defect established; avoid reopening accepted baseline content or adding unverified names/readings."
+  },
+  "modelContributionAssessment": {
+    "sharedUsefulObservation": "Both initial reports identify the same source-only key suitability gap and 漱's supported-key displacement. Both discuss restricted 乃 recognition; different labels and per-file severities do not make those separate discoveries.",
+    "claudeOnlyHypothesis": "Symmetric exclusion uncertainty was useful to check but withdrawn against actual pinned app code and executed tests, not accepted as a unique defect.",
+    "verifiedUniqueTeachingDefects": [],
+    "limits": "Common bounded sample and identical full lexical access; source retrieval was supplied, not independently upstream-fetched. Transport completeness is audited, not comprehension. No general model ranking."
+  },
+  "finalState": {
+    "teachingCorrectness": "No actionable text defect established within reviewed scope; explicitly bounded source/register limits retained.",
+    "scopedCoverage": "NEEDS FIX for reading integration of the seven affected kanji; other assigned text scopes CLEAN after Claude F1 withdrawal.",
+    "textualComprehensibility": "CLEAN within assigned text scope; not physical-phone acceptance",
+    "reviewClosedCards": 0,
+    "pilotAccepted": false,
+    "publishedAdditions": 0,
+    "remainingAdditions": 1228,
+    "fullRolloutPermitted": false,
+    "nextSafeWork": "Complete native/emulator/drawing/all-40-fallback inspection and post explicit prerequisite/sizing disposition to #60 before stopping at unresolved pilot gates. Do not begin another batch or push the draft."
+  }
+}

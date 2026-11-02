@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "teachingSnapshot": "6855b42fa2c4e4cae6fd01a2697d10ee42011abb",
+  "baseline": "57dcc2aaedd8d6b0f141d5b4c3cb9c13f6f797b2",
+  "cliVersion": "1.0.105",
+  "modelCatalogEvidence": "Owner-supplied actual copilot config help captured 2026-11-02; both explicitly requested model IDs are listed.",
+  "commonPrompt": "pilot-initial-prompt.txt",
+  "inputIndex": "pilot-initial-input/packet-index.json",
+  "constraints": {
+    "maximumActiveReviewerProcesses": 1,
+    "teachingEditsDuringReview": false,
+    "availableTools": [
+      "view",
+      "glob",
+      "rg",
+      "web_fetch"
+    ],
+    "shellEditingDelegationUnavailable": true,
+    "builtinMcpServersDisabled": true,
+    "customInstructionsDisabled": true,
+    "commonRubricInExplicitPrompt": true,
+    "ownerTokenProvidedToReviewers": false,
+    "requestedToolCallsSerial": true
+  },
+  "runs": [
+    {
+      "sessionId": "8c9a9488-a302-444c-b874-4267a5d40af1",
+      "requestedModel": "claude-opus-5.5",
+      "status": "returned-original-report-not-adjudicated",
+      "actualModel": "claude-opus-5.5",
+      "report": "pilot-initial-claude.md",
+      "executionEvidence": "pilot-initial-claude-execution.json",
+      "exitCode": 0,
+      "completedAt": "2026-11-02T14:57:09.0330498+01:00",
+      "confirmations": [
+        {
+          "status": "returned-original-report-not-adjudicated",
+          "actualModel": "claude-opus-5.5",
+          "report": "pilot-confirmation-claude.md",
+          "executionEvidence": "pilot-confirmation-claude-execution.json",
+          "exitCode": 0,
+          "completedAt": "2026-11-02T15:04:30.2419422+01:00"
+        }
+      ]
+    },
+    {
+      "sessionId": "94a25741-4682-4c36-ab67-fd4dfe3b87db",
+      "requestedModel": "gpt-6.1-sol",
+      "status": "returned-original-report-not-adjudicated",
+      "actualModel": "gpt-6.1-sol",
+      "report": "pilot-initial-gpt.md",
+      "executionEvidence": "pilot-initial-gpt-execution.json",
+      "exitCode": 0,
+      "completedAt": "2026-11-02T14:59:45.1147569+01:00"
+    }
+  ],
+  "limits": "Prepared assignments are not completed reviews. Actual identities, process exits, complete original reports, tool behavior and returned ranges must be recorded before claiming two-family coverage."
+}

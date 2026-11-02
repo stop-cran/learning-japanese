@@ -78,7 +78,7 @@ and lookup limits. Eleven additional complete comparison families and five
 broad-label families are preserved in
 [comparison](n1-sources/pilot-comparisons-jmdict.xml) and
 [label](n1-sources/pilot-label-jmdict.xml) packets. All **56 families** were
-inspected by the author, not independent reviewers. The older suffix -うじ is
+inspected by the author and supplied in full to both initial reviewers. The older suffix -うじ is
 illustrated from an inspected Japanese dictionary and contrasted with modern
 し. Kanjipedia's returned character-page headings independently establish the
 written boundaries of 漱ぐ くちすすぐ and 漱ぐ すすぐ; blank word-page
@@ -90,7 +90,8 @@ All **47 metadata readings** have draft dispositions and explicit table rows.
 Fifteen remain qualified source-only entries, without manufactured compounds
 or personal-name readings. Direct exclusions on new support articles protect
 their overlapping alternative/book/bird/flower labels; baseline exclusions
-remain untouched. These are author-side safeguards awaiting independent review.
+remain untouched. Both initial reviewers found these text safeguards defensible;
+the reading-prompt acceptance gate below remains unmet.
 
 The ledger records the source-order offered-key projection for all twelve
 characters against the actual Android reading adapter and queue implementation.
@@ -98,8 +99,16 @@ characters against the actual Android reading adapter and queue implementation.
 readings elsewhere are **not** filtered by article prose. Twelve source-only
 keys remain within the **41 projected offered keys**, including 扱 ソウ/キュウ,
 彗 エ/ケイ, 栞 カン and 莉 ライ/レイ. The ledger enumerates every one.
-Complete reading acceptance and any narrow issue-#1 prerequisite remain
-unresolved. No metadata was silently dropped or reordered to alter the quiz.
+Both reviewers identify the same prompt-suitability gap: recognition metadata
+does not itself justify asking learners these source-only readings. In 漱,
+the first-three cap retains unestablished くちそそぐ while omitting supported
+すすぐ. The [reconciliation](n1-reviews/pilot-reconciliation.json) therefore
+requires the narrow [issue-#1 prerequisite](https://github.com/stop-cran/learning-japanese/issues/1):
+preserve full dictionary metadata while transporting an explicitly approved
+prompt subset through the importer, storage, adapter and actual queue.
+An intentionally empty approved kind must not silently fall back to all readings.
+No companion feature is implemented here, and current prompting is **not accepted**.
+No metadata was silently dropped or reordered to alter the quiz.
 
 The draft has five new support articles for twelve characters, not a forecast
 of the entire expansion. With a 12-character pilot and later batches capped
@@ -108,16 +117,41 @@ assignments**, before necessary splits or confirmations. Footprint, support
 and effort estimates must be recalibrated after independent corrections and
 pilot acceptance; the present local measurements do not authorize full rollout.
 
-Both future independent reviewers must cover every pilot card, all new support
-articles and changed reused passages on the same frozen teaching snapshot,
-including correctness, scoped coverage and phone comprehensibility. No model
-identity or content review has yet been obtained; planning is not content review.
+Two initial reviewers now cover every pilot card, all five new support articles
+and changed passages in eight reused articles at the same frozen teaching
+snapshot, `6855b42fa2c4e4cae6fd01a2697d10ee42011abb`.
+The original [Claude Opus 5.5](n1-reviews/pilot-initial-claude.md) and
+[GPT-6.1 Sol](n1-reviews/pilot-initial-gpt.md) reports assess correctness,
+scoped coverage and **textual** phone comprehensibility. Actual requested models
+`claude-opus-5.5` and `gpt-6.1-sol` are confirmed by execution events and usage,
+not inferred from Auto. Processes did not overlap; observed tool calls were also
+serial. Every supplied packet/range was returned in full after LF normalization.
+This transport audit is not proof of comprehension or native-speaker review.
+
+Neither initial review established a teaching-text correctness defect.
+Claude's reverse-exclusion hypothesis was withdrawn in a bounded
+[original-session confirmation](n1-reviews/pilot-confirmation-claude.md)
+after inspecting supplied pinned app code and actual passing JVM tests:
+one-sided exclusions already operate symmetrically. No redundant baseline
+exclusions or optional teaching expansions were added. Both reports'
+source-only reading concerns are one shared unresolved prerequisite, not
+unique discoveries credited by differing severity or report section.
+
+The [review/execution audit](n1-reviews/pilot-review-and-jvm-audit.json)
+also retains actual XML results: **RealContentTest 3, WordsTest 22 and
+RareHanTest 1**, all passing with **zero skips**. Both module-relative content
+paths resolve to this dedicated content worktree. These are actual JVM
+import/quiz/rare-code-point checks, not native glyph or phone acceptance.
+
 The first attempt to capture the installed CLI's `--help` was permission-denied
 before execution. That historical receipt is unchanged. The parent subsequently
 supplied successful installed `copilot --help` and `copilot help config`
 captures in the external control inputs. They document `--model`,
 `--session-id`, `--available-tools` and named GPT/Claude models, resolving catalog
-discovery only. No reviewer has run and no actual reviewer identity is claimed.
+discovery; the independent reviews above subsequently executed successfully.
+Claude's first review had one transient transport failure retried by the CLI;
+it did not substitute another model. Original reports and observed read limits
+remain preserved rather than rewritten as author consensus.
 
 ## Reproduction and next work
 
@@ -162,10 +196,10 @@ fonts or approve a source-only quiz key. The
 [draft audit output](n1-sources/pilot-draft-audit.json) and
 [execution receipt](n1-sources/execution-003.json) preserve this checkpoint.
 
-Next: freeze the exact complete teaching snapshot and obtain the two serial
-independent reviews, without supplying the author's prior quiz/review rationale
-or another reviewer's findings. Give both the same actual teaching, full
-dictionary packets and neutral source observations. Native/phone acceptance,
-all-40-font inspection, an explicit reading/prerequisite disposition, updated
-estimates and pilot publication remain separate gates. Do not start full rollout
+Next: resume the same independently reviewed but **unaccepted** pilot.
+Complete safe native/emulator/drawing/all-40-font inspection and the updated
+support/footprint/effort estimate. No adb device was present at this checkpoint;
+the existing emulator executable enumerates AVDs, but no AVD has yet been booted
+for this pilot. Native/phone acceptance and actual reading-prerequisite
+resolution remain separate gates. Do not start full rollout
 or push these unreviewed drafts.

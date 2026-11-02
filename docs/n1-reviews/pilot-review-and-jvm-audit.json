@@ -1,0 +1,142 @@
+{
+  "teachingSnapshot": "6855b42fa2c4e4cae6fd01a2697d10ee42011abb",
+  "androidSnapshot": "2bc0234bffcb3c4a0cbafde80367d24d2638a93a",
+  "independentInitialReviews": [
+    {
+      "reviewer": "claude",
+      "actualModel": "claude-opus-5.5",
+      "sessionId": "8c9a9488-a302-444c-b874-4267a5d40af1",
+      "startedAt": "2026-11-02T14:52:07.8561664+01:00",
+      "completedAt": "2026-11-02T14:57:09.0330498+01:00",
+      "exitCode": 0,
+      "reportSha256": "432cfa954ff1b6f5c5909bda8df4a1efc1d0eceb89a4faed45306984a80b095b",
+      "fullRequiredPacketsTransportVerified": [
+        "comparisons-01.txt",
+        "comparisons-02.txt",
+        "dictionary-01.txt",
+        "dictionary-02.txt",
+        "dictionary-03.txt",
+        "dictionary-04.txt",
+        "external-observations.json",
+        "metadata-and-offered-keys.json",
+        "packet-index.json",
+        "reused-passages.diff",
+        "teaching-01.txt",
+        "teaching-02.txt",
+        "teaching-03.txt",
+        "teaching-04.txt",
+        "teaching-05.txt"
+      ],
+      "maximumObservedConcurrentToolCalls": 1,
+      "toolCallCount": 16,
+      "transportFailuresRetriedByCli": 1
+    },
+    {
+      "reviewer": "gpt",
+      "actualModel": "gpt-6.1-sol",
+      "sessionId": "94a25741-4682-4c36-ab67-fd4dfe3b87db",
+      "startedAt": "2026-11-02T14:57:41.3830775+01:00",
+      "completedAt": "2026-11-02T14:59:45.1147569+01:00",
+      "exitCode": 0,
+      "reportSha256": "215974528fc3a7b54f0bf010f0355dab6d3ccb048763ef6a8fd1e683d7e42f8c",
+      "fullRequiredPacketsTransportVerified": [
+        "comparisons-01.txt",
+        "comparisons-02.txt",
+        "dictionary-01.txt",
+        "dictionary-02.txt",
+        "dictionary-03.txt",
+        "dictionary-04.txt",
+        "external-observations.json",
+        "metadata-and-offered-keys.json",
+        "packet-index.json",
+        "reused-passages.diff",
+        "teaching-01.txt",
+        "teaching-02.txt",
+        "teaching-03.txt",
+        "teaching-04.txt",
+        "teaching-05.txt"
+      ],
+      "maximumObservedConcurrentToolCalls": 1,
+      "toolCallCount": 17,
+      "transportFailuresRetriedByCli": 0
+    }
+  ],
+  "initialReviewerProcessOverlap": false,
+  "jvmTests": [
+    {
+      "class": "io.github.stopcran.kanji.core.RealContentTest",
+      "tests": 3,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "timestamp": "2026-11-02T14:01:30.985Z",
+      "seconds": 6.813,
+      "report": "pilot-jvm/TEST-io.github.stopcran.kanji.core.RealContentTest.xml",
+      "sha256": "a6a5b2c38a2b46e0dc3c99dd8d3a6b93ea87c72889d015d26828b477b9500e43",
+      "resolvedContentRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese",
+      "testcases": [
+        "hotelBookingDoesNotAcceptTheSchoolClassReadingWhenRepoPresent",
+        "completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent",
+        "parsesRealContentRepoWhenPresent"
+      ]
+    },
+    {
+      "class": "io.github.stopcran.kanji.core.WordsTest",
+      "tests": 22,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "timestamp": "2026-11-02T14:01:37.806Z",
+      "seconds": 0.074,
+      "report": "pilot-jvm/TEST-io.github.stopcran.kanji.core.WordsTest.xml",
+      "sha256": "920d3526f3613357e827923d3cf30c0f7fad51d2f2d189f8875386f1a13f6be0",
+      "resolvedContentRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese",
+      "testcases": [
+        "wordLevelMetadataDoesNotChangeQuizOptions",
+        "readingHelpKeepsRepeatedSupplementaryAndCombiningSequencesWhole",
+        "mutationsCoverVoicingSokuonAndLongVowel",
+        "oneSidedQuizExclusionsApplyToEitherTargetInBothDirections",
+        "readingDirectionIsGatedAndKanaOnlyWordsAreSkipped",
+        "readingHelpUsesTheCumulativeDeckAndDistinguishesMissingLevels",
+        "excludedPairsCannotAppearTogetherAmongDistractorsInEitherSelectionOrder",
+        "explicitLevelOverridesKanjiInference",
+        "stacksAreCumulative",
+        "excludedCandidatesDoNotReserveTitlesAndExistingExactDedupRemains",
+        "readingRequiresWrittenKanjiNotJustDifferentScripts",
+        "advancementNeedsBreadthAcrossModes",
+        "otherDirectionOnlyDefersOrderingSlightly",
+        "reverseDirectionNeedsReviewRepetitionsAndStabilityOrOwnHistory",
+        "readingOptionsAreDistinctAndIncludeLookAlikes",
+        "levelIsTheHardestKanjiAndNullWhenUnknown",
+        "meaningExclusionsDoNotChangeDistinctReadingOptions",
+        "readingHelpDoesNotInventAThresholdForAllOrTagDecksOrFlagKana",
+        "quizExclusionsAreNotTransitive",
+        "smallPoolsNeverReintroduceExcludedOptionsEvenWhenOnlyTheTargetRemains",
+        "optionsHaveOneCorrectAnswerAndPreferSameKind",
+        "eligibleCandidatesRetainTheirExistingScorePriority"
+      ]
+    },
+    {
+      "class": "io.github.stopcran.kanji.core.RareHanTest",
+      "tests": 1,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "timestamp": "2026-11-02T14:02:21.807Z",
+      "seconds": 0.571,
+      "report": "pilot-jvm/TEST-io.github.stopcran.kanji.core.RareHanTest.xml",
+      "sha256": "99baf163d1133759a5bd41254e3930f08d39e067503b998a4add88941b84f1b9",
+      "resolvedContentRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese",
+      "testcases": [
+        "contentRareCharactersAreCoveredByBundledFont"
+      ]
+    }
+  ],
+  "testTotals": {
+    "tests": 26,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0
+  },
+  "limits": "Exact returned transport/range checks establish supplied evidence, not comprehension. Two model families performed textual review, not native-speaker or measured phone review. JVM import/RareHan checks are not native drawing/fallback acceptance. All teaching remains unaccepted and unpublished."
+}

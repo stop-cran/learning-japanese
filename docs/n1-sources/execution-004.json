@@ -1,0 +1,115 @@
+{
+  "date": "2026-11-02",
+  "coordinatorModel": "gpt-6.1-sol",
+  "startingCommit": "6855b42fa2c4e4cae6fd01a2697d10ee42011abb",
+  "fetchedMainCommit": "57dcc2aaedd8d6b0f141d5b4c3cb9c13f6f797b2",
+  "stage": "two-family-pilot-review-reconciled-native-gates-pending",
+  "isolation": {
+    "contentBranch": "content/n1-kanji",
+    "startingWorktreeClean": true,
+    "canonicalWorktreesAccessed": false,
+    "additionalRunnerStarted": false,
+    "authorAgentsSpawned": 0,
+    "initialReviewerProcesses": 2,
+    "boundedOriginalSessionConfirmations": 1,
+    "maximumActiveReviewerProcesses": 1,
+    "maximumObservedConcurrentReviewerToolCalls": 1,
+    "teachingEditedDuringOrAfterReview": false,
+    "androidTrackedFilesChanged": false
+  },
+  "completed": [
+    "Reverified all eight immutable source-freeze outputs and fetched unchanged origin/main.",
+    "Generated bounded neutral exports of the exact committed twelve-card teaching snapshot: all twelve cards, all five new support articles, changed passages with complete context in eight reused articles, eleven complete comparison articles and all fifty-six frozen JMdict families.",
+    "Ran two isolated headless read-only initial reviewers serially, with actual model identity confirmed by call events, final-response model and usage: claude-opus-5.5, then gpt-6.1-sol.",
+    "Persisted complete original public reports before adjudication; no private reasoning or raw service logs are committed. Read tools were whitelisted, builtin MCPs/custom instructions disabled, and no shell/edit/delegation tool was available. No owner token was passed to reviewers.",
+    "Audited actual returned packet/range content against requested input after LF normalization, and verified actual process nonoverlap and serial internal read calls. All required supplied packets were returned in full.",
+    "Reconciled the shared reading-prompt suitability gap as an unmet narrow issue-#1 prerequisite, not a false-reading claim or permission to change metadata/algorithms.",
+    "Resolved Claude's symmetric-exclusion hypothesis using pinned app implementation and actually executed tests; original-session bounded confirmation withdrew that hypothesis and its duplicate-no-across-kinds subclaim.",
+    "Refetched exact Kanjipedia 扱く and 乃 headings/definitions for outstanding source limits. Retained the limited direct evidence for the specific kanbun register wording and dedicated word-page extraction.",
+    "Executed RealContentTest, WordsTest and RareHanTest against this actual content sibling, inspected all XML reports, and archived original generated XML: twenty-six tests, zero skips/failures/errors.",
+    "Checked adb/device/process/AVD availability without booting, installing, resetting or interfering with a shared device.",
+    "Posted the precise reading prerequisite as stop-cran on existing issue #1 using a token scoped only to that gh process."
+  ],
+  "reviewEvidence": {
+    "teachingSnapshot": "6855b42fa2c4e4cae6fd01a2697d10ee42011abb",
+    "inputIndex": "../n1-reviews/pilot-initial-input/packet-index.json",
+    "commonInitialPrompt": "../n1-reviews/pilot-initial-prompt.txt",
+    "initialReports": ["../n1-reviews/pilot-initial-claude.md", "../n1-reviews/pilot-initial-gpt.md"],
+    "boundedConfirmation": "../n1-reviews/pilot-confirmation-claude.md",
+    "executionAndReadAudit": "../n1-reviews/pilot-review-and-jvm-audit.json",
+    "reconciliation": "../n1-reviews/pilot-reconciliation.json",
+    "initialActualModels": ["claude-opus-5.5", "gpt-6.1-sol"],
+    "initialElapsedProcessSeconds": {"claude": 301.177, "gpt": 123.732},
+    "boundedConfirmationElapsedProcessSeconds": 39.26,
+    "limits": "Elapsed observed process time is not total authoring effort, future elapsed-time forecast or AI-credit guarantee. Confirmation usage files may include cumulative original-session metrics. Transport hashes/returned content do not establish comprehension. Both reviewers used supplied external dictionary observations; neither performed independent upstream retrieval or native/phone review."
+  },
+  "executionFailuresPreserved": [
+    {
+      "operation": "First Claude initial review",
+      "result": "One transient transport failure retried by the CLI in the same model/session; successful final report and exit code 0.",
+      "evidence": "../n1-reviews/pilot-initial-claude-execution.json"
+    },
+    {
+      "operation": "Compound read-only Java/SDK discovery command",
+      "result": "Permission denied before execution; no escalation or permission change. Subsequent ordinary Gradle execution and simple configured tool-resolution checks succeeded."
+    },
+    {
+      "operation": "First focused Gradle command",
+      "result": "Failed before tests: PowerShell split unquoted -Dorg.gradle.parallel=false into a task argument. Corrected to supported --no-parallel; all selected tests then actually executed successfully."
+    },
+    {
+      "operation": "emulator -list-avds through PATH",
+      "result": "Command not found. The existing ANDROID_HOME\\emulator\\emulator.exe enumerated AVDs successfully; nothing was installed."
+    }
+  ],
+  "validation": [
+    {"command": "python -X utf8 -B tools\\freeze_n1_sources.py --inputs <approved-inputs> --android <isolated-app> --check", "result": "pass", "immutableOutputs": 8},
+    {"command": "gradlew.bat :core:test --tests io.github.stopcran.kanji.core.WordsTest --tests io.github.stopcran.kanji.core.RealContentTest :app:testDebugUnitTest --tests io.github.stopcran.kanji.core.RareHanTest --no-daemon --max-workers=1 --no-parallel", "result": "pass", "tests": 26, "skipped": 0, "failures": 0, "errors": 0, "contentRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese", "limits": "JVM only, not native/device/phone acceptance"},
+    {"command": "python -X utf8 -B tools\\validate.py", "result": "pass", "errors": 0},
+    {"command": "python -X utf8 -B tools\\build_manifest.py", "result": "pass", "contentVersion": "43667631e957461f", "runtimeManifestEntries": 8076, "manifestChanged": false},
+    {"command": "python -X utf8 -B tools\\audit_n1_pilot.py", "result": "pass", "baselineKanjiMetadataPreserved": 985, "baselineWordMetadataPreserved": 4942, "baselineStrokeHashesPreserved": 985, "draftKanji": 12, "newWords": 5, "requiredReciprocalPairs": 14, "sourceOnlyOfferedKeys": 12},
+    {"command": "python -X utf8 -B -m unittest discover -s tools -p test_*.py", "result": "pass", "tests": 332, "seconds": 33.060, "limits": "Media-generation/listening lines are mocked fixtures; no generation or spending occurred."},
+    {"command": "python -X utf8 -B tools\\grammar_vocabulary.py check", "result": "pass", "reviewedPrompts": 2122, "totalPrompts": 2431, "stage": "pilot", "limits": "Unrelated baseline incomplete grammar coverage retained."},
+    {"command": "python -X utf8 -B tools\\check_content_budget.py", "result": "pass", "entries": 8097, "retainedBytes": 43383873, "inflatedBytes": 43649907, "localZipBytes": 29774269, "limits": "Unpublished local tree, not exact immutable GitHub ZIP acceptance."}
+  ],
+  "nativeReadiness": {
+    "adbDevices": [],
+    "runningEmulatorsObserved": [],
+    "sdk": "C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk",
+    "javaHome": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot",
+    "emulatorOnPath": false,
+    "existingAvdConfigurationsEnumerated": true,
+    "exampleAvdNames": ["Grammar_API29", "N3_Acceptance_20261029", "Pixel_9"],
+    "emulatorBootAttempted": false,
+    "nativeTestsPerformed": [],
+    "all40FallbackGlyphInspection": "pending",
+    "phoneAcceptance": "outstanding",
+    "limits": "Read-only availability checks only. An AVD listing is not a booted supported environment or native evidence. Continue safe native work before declaring a final gate blocker."
+  },
+  "prerequisite": {
+    "issue": 1,
+    "ownerComment": "https://github.com/stop-cran/learning-japanese/issues/1#issuecomment-6579222017",
+    "readingPromptAcceptance": "unmet",
+    "companionFeatureImplementedHere": false,
+    "metadataDroppedOrReordered": false
+  },
+  "acceptance": {
+    "independentInitialReview": "completed-two-actual-model-families",
+    "textualCorrectness": "no-actionable-defect-established-in-scope",
+    "textualComprehensibility": "clean-bounded-text-review-not-device-acceptance",
+    "readingIntegrationScopedCoverage": "needs-fix-prerequisite",
+    "pilot": "not-accepted",
+    "reviewClosedCards": 0,
+    "fullRollout": "not-permitted-past-pilot-gate"
+  },
+  "publication": {
+    "authoredTeachingSnapshot": "6855b42fa2c4e4cae6fd01a2697d10ee42011abb",
+    "reviewClosedTeachingCommit": null,
+    "integratedCommit": null,
+    "publishedCommit": null,
+    "pushed": false,
+    "publishedAdditions": 0,
+    "remainingAdditions": 1228
+  },
+  "nextSafeAction": "Fresh coordinator resumes the same pilot and archived reports without repeating initial review. Complete safe existing-AVD/native drawing/selection-session-article-Back/all-40-font inspection and recalibrated estimates, preserving actual environment and phone limits. Pilot publication and later batches remain gated on actual reading-prerequisite compatibility and native acceptance. No unaccepted push or second runner."
+}

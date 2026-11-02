@@ -1,0 +1,58 @@
+Bounded evidence for Claude's own initial F1 and limits; no other review is supplied.
+Teaching snapshot remains 6855b42fa2c4e4cae6fd01a2697d10ee42011abb. No teaching edits were made after either initial review. Actual teaching diff from that snapshot is empty. Android snapshot is 2bc0234bffcb3c4a0cbafde80367d24d2638a93a, unchanged.
+
+1. Symmetric exclusions, precise pinned app evidence.
+core/src/main/kotlin/io/github/stopcran/kanji/core/words/Words.kt:
+L170-L187, WordQuizBuilder.select:
+  fun excluded(a: WordCard, b: WordCard) = b.word in a.quizExclusions || a.word in b.quizExclusions
+  ...
+  if (excluded(target, c) || chosen.any { excluded(it, c) }) return
+The same selection is used by options before direction-specific labels are produced. curatedDistractors also checks both a->b and b->a.
+
+core/src/test/kotlin/io/github/stopcran/kanji/core/WordsTest.kt:
+L177-L191, oneSidedQuizExclusionsApplyToEitherTargetInBothDirections:
+  val a = optionWord("気", listOf("気分"))
+  val b = optionWord("気分")
+  ...
+  for (direction in meaningDirections) {
+    for ((target, excluded) in listOf(a to b, b to a)) {
+      repeat(20) { seed ->
+        ...
+        assertFalse(options.any { it.word == excluded.word })
+      }
+    }
+  }
+L194-L209 tests exclusion between distractors in either selection order.
+L212-L222 tests non-transitivity.
+
+Actual execution 2026-11-02:
+gradlew.bat :core:test --tests io.github.stopcran.kanji.core.WordsTest --tests io.github.stopcran.kanji.core.RealContentTest :app:testDebugUnitTest --tests io.github.stopcran.kanji.core.RareHanTest --no-daemon --max-workers=1 --no-parallel
+BUILD SUCCESSFUL in 1m 17s.
+Inspected actual XML reports:
+WordsTest: 22 tests, 0 skipped, 0 failures, 0 errors; includes oneSidedQuizExclusionsApplyToEitherTargetInBothDirections, excludedPairsCannotAppearTogetherAmongDistractorsInEitherSelectionOrder, quizExclusionsAreNotTransitive.
+RealContentTest: 3 tests, 0 skipped, 0 failures, 0 errors; parsesRealContentRepoWhenPresent, completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent, hotelBookingDoesNotAcceptTheSchoolClassReadingWhenRepoPresent.
+RareHanTest: 1 test, 0 skipped, 0 failures, 0 errors.
+Both module-relative ../../learning-japanese paths resolve to C:\Users\stop-\n1-kanji-workspace\learning-japanese, whose manifest includes this pilot.
+These are JVM tests, NOT native device or phone evidence.
+
+2. Exact public-dictionary follow-up, coordinator retrieval, 2026-11-02.
+URL https://www.kanjipedia.jp/kotoba/0000072100
+Actual returned heading: 扱く, こ-く.
+Definition describes stripping/rubbing off through hand or implement.
+Actual short example: 稲を―く.
+Expanding the headword placeholder establishes 稲を扱く; this is not an invented collocation.
+
+URL https://www.kanjipedia.jp/kanji/0004473200
+Actual returned character: 乃.
+On: ダイ・ナイ; kun: すなわち・なんじ・の.
+Sense 2 glosses なんじ as おまえ; linked navigation explicitly includes 乃(なんじ).
+The entry supports character-dictionary recognition, not ordinary modern conversational address or the naturalness of an invented sentence. The dedicated word page's prior extraction limit remains recorded. The card defines kanbun and explicitly limits this to recognition, not an everyday standalone word. No new historical etymology is adopted from the page.
+
+3. Existing target/link/import limits.
+words/乃至.md L23 links 乃, but 至 is plain text, not a broken link; no 至 card is claimed.
+words/氏名.md L35 links words/姓.md, an unchanged baseline article. tools/validate.py and the pilot audit already checked relative targets at the frozen draft.
+茉 appears in words/茉莉花.md's written-kanji metadata because the written word includes it. The canonical format explicitly requires all written kanji even if a character has no card yet. It does not require inventing an out-of-batch 茉 article. RealContentTest successfully imported the actual pilot without skips.
+
+4. Reading compatibility remains unresolved, not corrected by these facts.
+The app's ReadingData.kt L12 constructs ReadingCard with full onyomi/kunyomi. KanjiReadings.kt retains separate ReadingKind state identities; identical kana across kinds is not by itself a duplicate-answer defect within a question. Twelve projected source-only keys still enter the pilot queue; no metadata was pruned/reordered and no quiz feature was implemented.
+The coordinator retains a narrow issue-#1 prerequisite: distinguish preserved dictionary metadata from readings accepted for learner prompting, including necessary treatment of recognition-only material and actual transport/queue compatibility. This does not claim that a missing example proves a character reading false. Native/device/font acceptance remains outstanding.
