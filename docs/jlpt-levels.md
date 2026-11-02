@@ -55,8 +55,14 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   subsequently passed its exact parent Android recovery and signed
   combined-main/CI/immutable-ZIP publication gates, reaching **27 published
   additions; 1,201 still to deliver** at `7b9f503`.
-  [Batch 007](n1-sources/batch-007-progress.json), 柚・椿, contains only
-  **unreviewed local drafts** and does not increase delivered coverage.
+  [Batch 007](n1-sources/batch-007-progress.json), 柚・椿, is now
+  **textually review-closed but local and unpublished** after two blind
+  model-family reviews and both original-session correction confirmations.
+  Its [reconciliation](n1-reviews/batch-007-reconciliation.json) preserves
+  the qualified garden-tree quiz finding, two conservative direct guards,
+  optional dispositions and actual read/process limits.
+  Fresh Android and publication acceptance remain pending; this does not
+  increase delivered coverage.
   Its supporting words likewise have no vocabulary level inferred from
   their kanji. The compatible-client and outstanding physical-phone/
   general-release qualifications above remain unchanged.

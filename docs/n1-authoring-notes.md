@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 007: bounded local draft, not independently reviewed
+## Batch 007: textually review-closed, local and unpublished
 
 The [frozen packet](n1-sources/batch-007-membership.json) is **柚・椿**.
 Both have useful native plant nouns alongside more specialized source readings;
@@ -56,8 +56,10 @@ The [external evidence](n1-sources/batch-007-external-evidence.json) separates
 actual dictionary headings from two failed culinary lookups and an irrelevant
 successful page extraction. Yuzu is not equated with every English "citron";
 椿's mountain-tea and incident uses are not imported into native つばき.
-Ten direct new-word guards cover fitting generic tree, plant, fruit and
-flower labels, not transitive synonym groups.
+The initial ten direct new-word guards cover fitting generic tree, plant,
+fruit and flower labels, not transitive synonym groups. A supplemental
+complete 植木 family now supports two conservative direct garden-tree
+guards, bringing the totals to **31 families and twelve direct guards**.
 
 The [pre-freeze iteration](n1-sources/batch-007-draft-iteration.json) records
 an initial glyph-audit failure: the optional spelling 海石榴 introduced 榴,
@@ -73,10 +75,28 @@ reading/link integrity, and local budgets. Both new card glyphs are in all
 three unchanged bundled cmaps; existing 椒/氵 omissions are not newly accepted
 fallbacks. These local checks do not replace the remaining acceptance gates.
 
-These are **unreviewed local drafts, not delivered additions**.
-Two independent blind model-family reviews, reconciliation, fresh non-skipped
-Android tests and combined-main/publication/CI/exact immutable ZIP acceptance
-remain pending. Published additions stay **27/1,228; 1,201 remain to deliver**.
+Independent `claude-opus-5.5` and `gpt-6.1-sol` initial reviews covered the
+same signed `33e9c94` snapshot: all four teaching files, thirty complete
+families, eleven actual kanji and thirteen word comparisons. Both original
+sessions confirmed signed correction `267bbbf`: only 植木 was appended to
+each new word's exclusions. All four processes actually exited serially,
+with zero observed internal tool overlaps.
+
+The [reconciliation](n1-reviews/batch-007-reconciliation.json) preserves
+the original reports, actual read/model/process receipts and all optional
+dispositions. Claude's minor, medium-confidence garden-tree ambiguity signal
+motivated the conservative guards. GPT accepted them without regression while
+retaining its narrower judgment that a mandatory omission defect had not been
+established. This is not manufactured initial agreement or unrestricted
+synonymy. Initial oversized reads and GPT's failed administrative-path
+verification remain disclosed; coordinator verification supplies the exact
+snapshot, not a successful canonical-repository read by the reviewer.
+
+All four files are now CLEAN across the three textual facets, with no
+consequential in-scope unresolved claim. These are **review-closed local
+articles, not delivered additions**. Fresh non-skipped Android tests and
+combined-main/publication/CI/exact immutable ZIP acceptance remain pending.
+Published additions stay **27/1,228; 1,201 remain to deliver**.
 No batch 008 has started. Compatible Android `f9b59a2` or later is required;
 physical-phone/general-release acceptance is explicitly outstanding.
 
@@ -128,7 +148,7 @@ hash within unchanged budgets. Terminal receipts were published at
 `7b9f503`; historical permission denial, original review overlap and incorrect
 serial claim remain preserved, not rebranded as compliant.
 Published additions are **27/1,228; 1,201 remain to deliver**.
-Batch 007's unreviewed local drafts above do not change that count.
+Batch 007's unpublished local articles above do not change that count.
 Compatible Android `f9b59a2` or later remains required;
 physical-phone/general-release acceptance is explicitly outstanding.
 
