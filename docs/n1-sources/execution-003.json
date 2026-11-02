@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-02",
+  "stage": "complete-pilot-draft-awaiting-independent-review",
+  "coordinatorModel": "gpt-6.1-sol",
+  "startingCommit": "71bc33be3ea37d7bdf4da612194bfd1df0a93506",
+  "fetchedMainCommit": "57dcc2aaedd8d6b0f141d5b4c3cb9c13f6f797b2",
+  "isolation": {
+    "contentBranch": "content/n1-kanji",
+    "initialWorktreeClean": true,
+    "canonicalWorktreesAccessed": false,
+    "additionalRunnerStarted": false,
+    "reviewerProcessesStarted": 0,
+    "androidWrites": false
+  },
+  "completed": [
+    "Resumed the existing signed local-only four-card draft and reverified all eight immutable source-freeze outputs against approved inputs and baseline Git objects.",
+    "Authored the remaining eight pilot cards: 扱, 乃, 矛, 鷹, 彗, 漱, 栞 and 莉. The same frozen pilot now has twelve drafted cards, not twelve accepted additions.",
+    "Generated eight additional stroke files with the unchanged pinned converter. Counts 6, 2, 5, 24, 11, 14, 10 and 10 match the corresponding source metadata; all twelve pilot files retain the pinned KanjiVG revision.",
+    "Authored five necessary support articles: 乃至, 鷹, 彗星, 栞 and 茉莉花, without inferring vocabulary levels.",
+    "Added component links to the existing 扱う and 矛盾 passages, and a qualified rare-spelling recognition link to the existing kana-headed うがい article. All original metadata, primary readings, easier levels, titles and exclusions are preserved.",
+    "Completed fourteen required reciprocal pairs across all thirteen selected support articles, including nine pairs across eight reused articles and five pairs across five new articles. All six activated declared-baseline candidate pairs are included.",
+    "Inspected sixteen additional complete frozen JMdict families with all aliases, restrictions and senses. The original forty-family packet remains byte-identical; the complete pilot evidence now contains fifty-six distinct families.",
+    "Inspected actual Kanjipedia character entries, word headings and applicable word definitions for qualified reading dispositions. Explicitly retained irrelevant redirects and blank word-page extraction limits rather than counting them as verification.",
+    "Resolved the exact written boundaries of 漱ぐ くちすすぐ and 漱ぐ すすぐ from actual linked character-page headings, with full lexical families for their meanings.",
+    "Removed an unsupported radical-index inference after inspecting the actual displayed radical image. This external dictionary-glyph inspection is not native font acceptance.",
+    "Recorded all forty-seven source metadata readings, including fifteen source-only entries, and all forty-one projected offered keys. Twelve source-only keys remain actually offered; no reading was dropped or reordered.",
+    "Audited new word labels against the confusable-word inventory, complete applicable families and actual comparison articles. Added nine direct exclusions on new articles only, including the three or-label pairs and four book-label pairs; generic bird and flower labels receive their own direct pair.",
+    "Added a reproducible bounded mechanical pilot audit and four regression tests for the pinned reading-key projection. The audit explicitly does not certify linguistic, native, phone or publication acceptance."
+  ],
+  "evidence": {
+    "originalLexicalPacket": {
+      "path": "pilot-jmdict.xml",
+      "completeFamilies": 40,
+      "sha256": "2829a5e09f066ce3693124e28fca3f64465b46daab077400f2675263e2a015f6"
+    },
+    "comparisonPacket": {
+      "path": "pilot-comparisons-jmdict.xml",
+      "selection": "pilot-comparison-selection.json",
+      "completeFamilies": 11,
+      "sha256": "94687a7acdbf088ad59e9c4a6ba7e3d57ee9b3190f48cd97dc38d24c0f6e6c18"
+    },
+    "labelPacket": {
+      "path": "pilot-label-jmdict.xml",
+      "selection": "pilot-label-selection.json",
+      "completeFamilies": 5,
+      "sha256": "937d23590ba7dfc06d044cc39847a57de1bfe5aaad9bf54bfe58441ad83b8d1e"
+    },
+    "mutableLedger": "pilot-progress.json",
+    "externalInspectionAndLimits": "pilot-external-evidence.json",
+    "mechanicalAudit": "pilot-draft-audit.json"
+  },
+  "validation": [
+    {"command": "python -X utf8 -B tools\\freeze_n1_sources.py --inputs <approved-control-inputs> --android <isolated-pinned-android> --check", "result": "pass", "immutableOutputsCompared": 8},
+    {"command": "python -X utf8 -B tools\\generate_strokes.py", "result": "pass", "generatedThisExecution": 8, "existingPilotStrokeFilesPreserved": 4},
+    {"command": "python -X utf8 -B tools\\extract_n1_jmdict.py --input <frozen-JMdict> --selection <each-pilot-selection> --output <corresponding-packet> --check", "result": "pass", "packets": 3, "completeFamilies": 56},
+    {"command": "python -X utf8 -B tools\\validate.py", "result": "pass", "errors": 0},
+    {"command": "python -X utf8 -B tools\\build_manifest.py", "result": "pass", "contentVersion": "43667631e957461f", "runtimeManifestEntries": 8076},
+    {"command": "python -X utf8 -B -m unittest discover -s tools -p test_audit_n1_pilot.py", "result": "pass", "tests": 4},
+    {"command": "python -X utf8 -B -m unittest discover -s tools -p test_*.py", "result": "pass", "tests": 332, "seconds": 32.449, "limits": "Image/listening output comes from fixtures and mocks; no media generation was requested or performed. A subsequent prose-only radical clarification passed validation, manifest regeneration and the full mechanical draft audit."},
+    {"command": "python -X utf8 -B tools\\grammar_vocabulary.py check", "result": "pass", "reviewedPrompts": 2122, "totalPrompts": 2431, "stage": "pilot", "limits": "Unrelated baseline incomplete grammar coverage retained; no grammar changes."},
+    {"command": "python -X utf8 -B tools\\audit_n1_pilot.py", "result": "pass", "baselineKanjiMetadataPreserved": 985, "baselineWordMetadataPreserved": 4942, "baselineStrokeHashesPreserved": 985, "draftKanji": 12, "newWords": 5, "requiredReciprocalPairs": 14, "activatedDeclaredPairs": 6, "readingDispositions": 47, "sourceOnlyReadings": 15, "sourceOnlyOfferedKeys": 12, "manifestFresh": true},
+    {"command": "python -X utf8 -B tools\\check_content_budget.py", "result": "pass", "files": 8082, "entries": 8097, "retainedBytes": 43383873, "inflatedBytes": 43649907, "localZipBytes": 29774269, "listeningTaskMediaBytes": 5893602, "limits": "Local unaccepted pilot draft, not an immutable published GitHub ZIP."},
+    {"command": "git --no-pager diff --check", "result": "pass"}
+  ],
+  "preliminarySizingNotPilotAcceptance": {
+    "draftNewKanji": 12,
+    "draftNewSupportingWords": 5,
+    "runtimeEntryDeltaFromFrozenBaseline": 29,
+    "retainedByteDeltaFromFrozenBaseline": 67911,
+    "inflatedByteDeltaFromFrozenBaseline": 67911,
+    "localZipByteDeltaFromFrozenBaseline": 36325,
+    "totalBatchFloorWithTwelvePilotThenAtMostFifteen": 83,
+    "initialReviewerAssignmentFloor": 166,
+    "reviewerExecutionsSoFar": 0,
+    "limits": "Risk-stratified draft ratio is not a full-set support forecast. Recalibrate footprint/support/effort after independent review and pilot/native/reading acceptance; no elapsed-time or credit estimate is asserted."
+  },
+  "acceptance": {
+    "independentContentReview": "not-started",
+    "actualReviewerModels": [],
+    "androidRealContentAndRareHan": "not-run-this-execution",
+    "nativePilotSmoke": "not-run",
+    "phoneAcceptance": "outstanding",
+    "all40FallbackGlyphInspection": "pending",
+    "readingKeyDisposition": "all-draft-dispositions-recorded-but-acceptability-and-issue-1-prerequisite-unresolved",
+    "pilot": "not-accepted",
+    "fullRollout": "not-authorized-past-pilot-gate"
+  },
+  "publication": {
+    "localDraftSnapshot": "Containing normally signed local checkpoint commit; resulting SHA is persisted in external control progress and the public issue comment.",
+    "reviewedTeachingCommit": null,
+    "integratedCommit": null,
+    "publishedCommit": null,
+    "pushed": false,
+    "publishedAdditions": 0,
+    "remainingAdditions": 1228
+  },
+  "nextSafeAction": "Resume the same complete pilot draft and freeze/identify its exact teaching snapshot. Run two isolated read-only headless CLI reviewers serially, each covering all twelve cards, five new support articles and changed passages in eight reused articles on the same snapshot. Use the actual supplied CLI catalog, verify returned model identity and process exit, retain original reports before fixes, and do not supply the author's quiz adjudication/rationale or another reviewer's findings. Reconcile evidence before the Android/native/font/reading acceptance gate and final pilot sizing/publication. Never push this unreviewed branch or begin a later batch."
+}

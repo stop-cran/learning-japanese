@@ -60,31 +60,53 @@ The [font inventory](n1-sources/font-coverage.json) independently reproduces all
 still pending. Cmap absence is neither a missing-glyph finding nor evidence of
 successful native fallback. No phone or emulator smoke test has run.
 
-The [mutable pilot ledger](n1-sources/pilot-progress.json) now distinguishes four
-drafted cards (**幹・氏・凹・凸**) from the eight still awaiting teaching.
-Four pinned stroke files were generated without geometry edits. Six reciprocal
-pairs across five existing word articles are linked, including the kana-headed
-でこぼこ article; no new support-word article has yet been added. Existing
-primary readings, levels, titles and exclusions are preserved. In particular,
-凹む remains **へこむ**, and the separate くぼむ example is not linked as though
-it shared that identity.
+The [mutable pilot ledger](n1-sources/pilot-progress.json) now records all
+**12 cards as drafted, none review-closed**. Twelve pinned stroke files were
+generated without geometry edits; all counts match the frozen metadata.
+Fourteen reciprocal pairs span eight reused and five new word articles,
+including the kana-headed でこぼこ and うがい articles. Existing primary readings,
+levels, titles and exclusions are preserved. In particular, 凹む remains
+**へこむ**, and the separate くぼむ example is not linked as though it shared
+that identity. New support articles are **乃至・鷹・彗星・栞・茉莉花**; no word
+JLPT level is inferred from a character's N1 membership.
 
 The [40-family lexical packet](n1-sources/pilot-jmdict.xml) preserves complete
 selected JMdict entries, not only chosen glosses. Its
 [selection](n1-sources/pilot-lexical-selection.json) and
-[inspection record](n1-sources/pilot-external-evidence.json) document restrictions,
-lookup limits and pending rare-reading evidence. The older suffix -うじ is
+[inspection record](n1-sources/pilot-external-evidence.json) document restrictions
+and lookup limits. Eleven additional complete comparison families and five
+broad-label families are preserved in
+[comparison](n1-sources/pilot-comparisons-jmdict.xml) and
+[label](n1-sources/pilot-label-jmdict.xml) packets. All **56 families** were
+inspected by the author, not independent reviewers. The older suffix -うじ is
 illustrated from an inspected Japanese dictionary and contrasted with modern
-し. Eleven metadata readings on the four drafts have explicit draft dispositions;
-none is review-closed. Five additional support articles are currently proposed
-for the remaining pilot, not a forecast of the full expansion.
+し. Kanjipedia's returned character-page headings independently establish the
+written boundaries of 漱ぐ くちすすぐ and 漱ぐ すすぐ; blank word-page
+extractions are explicitly not counted as inspected definitions. An attempted
+radical-number inference from an image filename was removed after inspection of
+the actual glyph. Historical analysis is not inferred from that image.
+
+All **47 metadata readings** have draft dispositions and explicit table rows.
+Fifteen remain qualified source-only entries, without manufactured compounds
+or personal-name readings. Direct exclusions on new support articles protect
+their overlapping alternative/book/bird/flower labels; baseline exclusions
+remain untouched. These are author-side safeguards awaiting independent review.
 
 The ledger records the source-order offered-key projection for all twelve
 characters against the actual Android reading adapter and queue implementation.
 氏's うじ/-うじ entries collapse to one offered stem; uncommon/source-only
-readings elsewhere are **not** filtered by article prose. Complete reading
-acceptance and any narrow issue-#1 prerequisite remain unresolved. No metadata
-was silently dropped or reordered to alter the quiz.
+readings elsewhere are **not** filtered by article prose. Twelve source-only
+keys remain within the **41 projected offered keys**, including 扱 ソウ/キュウ,
+彗 エ/ケイ, 栞 カン and 莉 ライ/レイ. The ledger enumerates every one.
+Complete reading acceptance and any narrow issue-#1 prerequisite remain
+unresolved. No metadata was silently dropped or reordered to alter the quiz.
+
+The draft has five new support articles for twelve characters, not a forecast
+of the entire expansion. With a 12-character pilot and later batches capped
+at 15, the planning floor becomes **83 total batches / 166 initial reviewer
+assignments**, before necessary splits or confirmations. Footprint, support
+and effort estimates must be recalibrated after independent corrections and
+pilot acceptance; the present local measurements do not authorize full rollout.
 
 Both future independent reviewers must cover every pilot card, all new support
 articles and changed reused passages on the same frozen teaching snapshot,
@@ -121,8 +143,29 @@ python -X utf8 -B tools\extract_n1_jmdict.py --input C:\Users\stop-\n1-kanji-wor
 
 The extractor verifies the frozen compressed hash, preserves every selected
 family in full with expanded entity descriptions, and refuses different existing
-output. It is not a linguistic review. Next: finish the same pilot's eight
-remaining cards, supporting words and outstanding reading evidence; then freeze
-the complete review snapshot. Native/phone acceptance, all-40-font inspection,
-updated footprint/effort estimates and pilot publication remain separate gates.
-Do not start full rollout or push these unreviewed drafts.
+output. It is not a linguistic review. Repeat with
+`pilot-comparison-selection.json` / `pilot-comparisons-jmdict.xml` and
+`pilot-label-selection.json` / `pilot-label-jmdict.xml` for the additional packets.
+
+The complete draft has a separate reproducible mechanical audit:
+
+```powershell
+python -X utf8 -B tools\audit_n1_pilot.py
+```
+
+It compares every baseline card/word metadata record and original stroke hash,
+all unrelated baseline manifest entries, exact pilot additions, every source
+metadata reading/table row, actual source-order key projections, all activated
+baseline candidate pairs, all selected reciprocal pairs and manifest freshness.
+It does not establish semantic correctness, execute Kotlin, inspect native
+fonts or approve a source-only quiz key. The
+[draft audit output](n1-sources/pilot-draft-audit.json) and
+[execution receipt](n1-sources/execution-003.json) preserve this checkpoint.
+
+Next: freeze the exact complete teaching snapshot and obtain the two serial
+independent reviews, without supplying the author's prior quiz/review rationale
+or another reviewer's findings. Give both the same actual teaching, full
+dictionary packets and neutral source observations. Native/phone acceptance,
+all-40-font inspection, an explicit reading/prerequisite disposition, updated
+estimates and pilot publication remain separate gates. Do not start full rollout
+or push these unreviewed drafts.
