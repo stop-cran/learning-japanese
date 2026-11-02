@@ -1,0 +1,43 @@
+{
+  "batch": "pilot",
+  "retrieved": "2026-11-02",
+  "lookups": [
+    {
+      "id": "uji-suffix",
+      "requestedUrl": "https://kotobank.jp/word/氏-34303",
+      "resolvedUrl": "https://kotobank.jp/word/氏-34455",
+      "inspectedHeadings": [
+        "精選版 日本国語大辞典: うじうぢ【氏】 [2] 接尾語 and 氏の語誌",
+        "日本大百科全書(ニッポニカ): 氏 うじ opening paragraph"
+      ],
+      "evidenceParaphrase": "The Japanese dictionary explicitly distinguishes native うじ as a respectful surname suffix, with an attested 1825 example, and explains that this suffix receded as on-reading し took the same role in modern times. The encyclopedia explicitly illustrates 山田氏 with suffix reading うじ.",
+      "teachingDisposition": "Use 山田氏 やまだうじ solely as a qualified older suffix example for metadata -うじ; contrast modern reporting やまだし. Do not infer this reading from the ordinary clan-name 源氏 げんじ or invent a new surname's pronunciation.",
+      "confidence": "high for the documented suffix and qualification; not a frequency survey",
+      "extractionLimit": "Digital Daijisen heading was present without extracted definition; the claim relies on the actually returned named dictionary/encyclopedia sections, not that empty heading. Other historical/etymological accounts on the aggregate page were not adopted."
+    },
+    {
+      "id": "weblio-uji-navigation",
+      "url": "https://www.weblio.jp/content/氏",
+      "disposition": "Navigation only, not primary dictionary evidence.",
+      "limit": "Returned Wikipedia-derived historical discussion rather than the desired dictionary suffix entry; no dictionary verification is claimed from the successful fetch."
+    }
+  ],
+  "localDictionaryInspection": {
+    "packet": "pilot-jmdict.xml",
+    "selection": "pilot-lexical-selection.json",
+    "completeFamilies": 40,
+    "coordinatorModel": "gpt-6.1-sol",
+    "inspection": "Complete selected families read, including all spelling/reading flags, restrictions and senses. Corrected 幹 1577640 and 矛 1603450 were additionally inspected directly in the frozen upstream XML; 幹/柄 から 2396230 retained as a separate same-spelling family.",
+    "selectionCorrections": "Two tentative numeric IDs resolved to unrelated 俳名 and 無論 entries during inspection and were rejected before the packet was frozen. Final selection uses the actual 幹 and 矛 families; no claim was inferred from a plausible ID.",
+    "pendingEvidence": [
+      "扱 あつか.る and on ソウ/キュウ; do not turn unestablished readings into ordinary words.",
+      "乃 on ノ/アイ and kun なんじ need qualified dispositions. 乃ち すなわち is a rare spelling; JMdict's particle spelling 乃 is search-only. 乃父 だいふ alone does not establish modern neutral usage.",
+      "矛 ボウ: no lexical example established in the inspected selected families.",
+      "彗 エ/ケイ/セイ and ほうき: no lexical examples established; don't truncate 彗星 すいせい into evidence for セイ.",
+      "漱 くちそそ.ぐ and exact くちすす.ぐ/すす.ぐ written boundaries need independent entry evidence. 漱ぐ くちすすぐ and 漱ぐ すすぐ are recognized but not proof that the source's dot boundary is an ordinary spelling.",
+      "栞 カン and 莉 ライ/レイ: no ordinary lexical examples established. Preserve all metadata entries and assess actual offered keys.",
+      "Grade-9 classification is not proof of name-only use or authorization to invent personal-name readings."
+    ],
+    "limits": "Author inspection is not independent review. Recognition and priority flags do not establish frequency or the naturalness of an invented sentence. Pending families may require additional exact public-dictionary lookups."
+  }
+}

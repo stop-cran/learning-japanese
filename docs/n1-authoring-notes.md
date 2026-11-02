@@ -60,13 +60,42 @@ The [font inventory](n1-sources/font-coverage.json) independently reproduces all
 still pending. Cmap absence is neither a missing-glyph finding nor evidence of
 successful native fallback. No phone or emulator smoke test has run.
 
+The [mutable pilot ledger](n1-sources/pilot-progress.json) now distinguishes four
+drafted cards (**幹・氏・凹・凸**) from the eight still awaiting teaching.
+Four pinned stroke files were generated without geometry edits. Six reciprocal
+pairs across five existing word articles are linked, including the kana-headed
+でこぼこ article; no new support-word article has yet been added. Existing
+primary readings, levels, titles and exclusions are preserved. In particular,
+凹む remains **へこむ**, and the separate くぼむ example is not linked as though
+it shared that identity.
+
+The [40-family lexical packet](n1-sources/pilot-jmdict.xml) preserves complete
+selected JMdict entries, not only chosen glosses. Its
+[selection](n1-sources/pilot-lexical-selection.json) and
+[inspection record](n1-sources/pilot-external-evidence.json) document restrictions,
+lookup limits and pending rare-reading evidence. The older suffix -うじ is
+illustrated from an inspected Japanese dictionary and contrasted with modern
+し. Eleven metadata readings on the four drafts have explicit draft dispositions;
+none is review-closed. Five additional support articles are currently proposed
+for the remaining pilot, not a forecast of the full expansion.
+
+The ledger records the source-order offered-key projection for all twelve
+characters against the actual Android reading adapter and queue implementation.
+氏's うじ/-うじ entries collapse to one offered stem; uncommon/source-only
+readings elsewhere are **not** filtered by article prose. Complete reading
+acceptance and any narrow issue-#1 prerequisite remain unresolved. No metadata
+was silently dropped or reordered to alter the quiz.
+
 Both future independent reviewers must cover every pilot card, all new support
 articles and changed reused passages on the same frozen teaching snapshot,
 including correctness, scoped coverage and phone comprehensibility. No model
 identity or content review has yet been obtained; planning is not content review.
 The first attempt to capture the installed CLI's `--help` was permission-denied
-before execution. This is recorded as an unresolved execution prerequisite,
-not silently replaced with inferred model IDs or a one-family review.
+before execution. That historical receipt is unchanged. The parent subsequently
+supplied successful installed `copilot --help` and `copilot help config`
+captures in the external control inputs. They document `--model`,
+`--session-id`, `--available-tools` and named GPT/Claude models, resolving catalog
+discovery only. No reviewer has run and no actual reviewer identity is claimed.
 
 ## Reproduction and next work
 
@@ -84,9 +113,16 @@ freeze outputs and refuses to replace different evidence. It does not download,
 rewrite cards, choose teaching readings or certify linguistic correctness.
 Contributor evidence and tools remain excluded from downloadable runtime ZIPs.
 
-Next: extract and inspect complete pilot lexical families, establish exact
-support mappings and all reading dispositions, author the bounded pilot and
-generate strokes using the unchanged pinned converter. Resolve CLI discovery
-before independent review; check actual offered app reading keys before
-accepting the pilot. Native/phone acceptance, updated footprint/effort estimates
-and pilot publication remain separate gates. Do not start full rollout.
+The lexical packet is reproducible with the frozen dictionary:
+
+```powershell
+python -X utf8 -B tools\extract_n1_jmdict.py --input C:\Users\stop-\n1-kanji-workspace\control\inputs\n1-implementation-JMdict_e.gz --selection docs\n1-sources\pilot-lexical-selection.json --output docs\n1-sources\pilot-jmdict.xml --check
+```
+
+The extractor verifies the frozen compressed hash, preserves every selected
+family in full with expanded entity descriptions, and refuses different existing
+output. It is not a linguistic review. Next: finish the same pilot's eight
+remaining cards, supporting words and outstanding reading evidence; then freeze
+the complete review snapshot. Native/phone acceptance, all-40-font inspection,
+updated footprint/effort estimates and pilot publication remain separate gates.
+Do not start full rollout or push these unreviewed drafts.

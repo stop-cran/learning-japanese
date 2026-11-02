@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-02",
+  "stage": "pilot-partial-draft-and-lexical-evidence",
+  "coordinatorModel": "gpt-6.1-sol",
+  "startingCommit": "3e4df69898fbe9eb5a5732f944fd33353b16e33c",
+  "fetchedMainCommit": "57dcc2aaedd8d6b0f141d5b4c3cb9c13f6f797b2",
+  "isolation": {
+    "contentBranch": "content/n1-kanji",
+    "initialWorktreeClean": true,
+    "canonicalWorktreesAccessed": false,
+    "additionalRunnerStarted": false,
+    "reviewerProcessesStarted": 0,
+    "androidWrites": false
+  },
+  "completed": [
+    "Reverified all eight immutable source-freeze outputs against approved source bytes and baseline Git objects.",
+    "Discovered pilot word families from the frozen JMdict, then extracted and inspected 40 complete applicable selected families.",
+    "Added a hash-guarded complete-family extraction helper with five regression tests; serialized evidence retains spelling/reading/sense restrictions, all senses and expanded entity descriptions.",
+    "Drafted 幹, 氏, 凹 and 凸 with all 11 metadata readings explicitly explained and three curated wrong answers each.",
+    "Generated four matching stroke files through the unchanged converter at the pinned KanjiVG revision: 13, 4, 5 and 5 strokes respectively.",
+    "Linked six reciprocal support pairs across five reused word articles; discovered existing kana-headed でこぼこ and うがい instead of duplicating their lexical identities.",
+    "Inspected a named Japanese dictionary's actual older -うじ suffix evidence and qualified its attached example against contemporary し.",
+    "Recorded ordered offered-reading-key projections for all twelve pilot characters and explicitly retained unresolved rare/source-only key risks.",
+    "Kept eight remaining pilot cards and five proposed support articles pending, not drafted or review-closed."
+  ],
+  "evidence": {
+    "lexicalSelection": "pilot-lexical-selection.json",
+    "lexicalPacket": "pilot-jmdict.xml",
+    "lexicalPacketSha256": "2829a5e09f066ce3693124e28fca3f64465b46daab077400f2675263e2a015f6",
+    "mutableLedger": "pilot-progress.json",
+    "externalInspectionAndLimits": "pilot-external-evidence.json"
+  },
+  "reviewReadiness": {
+    "historicalDeniedProbeReceipt": "execution-001.json#reviewReadiness",
+    "discoveryResolution": "Parent-supplied successful installed CLI help captures inspected; no retry/escalation of the earlier denied compound command.",
+    "catalogCaptures": [
+      {"externalControlInput": "copilot-help-20261102.txt", "sha256": "682b33ed31886fb98d39d40f748719c08d256e692fdcdc769d373107d171881b"},
+      {"externalControlInput": "copilot-config-help-20261102.txt", "sha256": "b19bfbb3d3b1faebef604213a061c3e6008e843c01463ea0be8c0afd9e53d490"}
+    ],
+    "documentedSupportedOptions": ["--model", "--session-id", "--available-tools", "--excluded-tools"],
+    "catalogExamples": ["gpt-6.1-sol", "claude-opus-5.5"],
+    "actualReviewerModels": [],
+    "reviewSnapshot": null,
+    "disposition": "Discovery resolved, not reviewer execution or content review. Complete teaching packet must be finished and frozen before serial independent initial reviews; do not infer actual model identities from these examples."
+  },
+  "validation": [
+    {"command": "python -X utf8 -B tools\\freeze_n1_sources.py --inputs <approved-control-inputs> --android <isolated-pinned-android> --check", "result": "pass", "immutableOutputsCompared": 8},
+    {"command": "python -X utf8 -B -m unittest discover -s tools -p test_extract_n1_jmdict.py", "result": "pass", "tests": 5},
+    {"command": "python -X utf8 -B tools\\extract_n1_jmdict.py --input <frozen-JMdict> --selection docs\\n1-sources\\pilot-lexical-selection.json --output docs\\n1-sources\\pilot-jmdict.xml --check", "result": "pass", "completeFamilies": 40},
+    {"command": "python -X utf8 -B tools\\validate.py", "result": "pass", "errors": 0},
+    {"command": "python -X utf8 -B tools\\build_manifest.py", "result": "pass", "contentVersion": "843d153964f7cf31", "runtimeManifestEntries": 8055},
+    {"command": "python -X utf8 -B -m unittest discover -s tools -p test_*.py", "result": "pass", "tests": 328, "seconds": 32.132, "limits": "Image/listening tests use test fixtures and mocks; no media generation was requested or performed."},
+    {"command": "python -X utf8 -B tools\\grammar_vocabulary.py check", "result": "pass", "reviewedPrompts": 2122, "totalPrompts": 2431, "stage": "pilot", "limits": "Baseline incomplete coverage retained; no grammar changes or claim of complete grammar coverage."},
+    {"command": "python -X utf8 -B tools\\check_content_budget.py", "result": "pass", "files": 8061, "entries": 8076, "retainedBytes": 43332740, "inflatedBytes": 43598774, "localZipBytes": 29747133, "listeningTaskMediaBytes": 5893602, "limits": "Local partial-draft archive only, not a published immutable GitHub ZIP."},
+    {"command": "git --no-pager diff --check", "result": "pass"}
+  ],
+  "boundedDraftAudit": {
+    "method": "Parsed every baseline card/word front matter against baseline-inventory.json; compared original stroke byte hashes. Compared every new metadata field and stroke count/revision to source-index.json, matched exact drafted-reading set, enumerated all six reciprocal pairs and every activated baseline candidate, recalculated all twelve offered-key projections from the inspected queue's rules, and compared the current manifest with build_manifest(ROOT).",
+    "baselineKanjiMetadataPreserved": 985,
+    "baselineWordMetadataPreserved": 4942,
+    "baselineStrokeHashesPreserved": 985,
+    "currentKanji": 989,
+    "draftAdditions": 4,
+    "newWordArticles": 0,
+    "requiredReciprocalPairs": 6,
+    "draftReadingDispositions": 11,
+    "sourceOrderProjectionsChecked": 12,
+    "manifestFresh": true,
+    "limits": "Mechanical preservation and author audit, not independent linguistic review or Kotlin/native execution."
+  },
+  "acceptance": {
+    "independentContentReview": "not-started",
+    "androidRealContentAndRareHan": "not-run-this-execution",
+    "nativePilotSmoke": "not-run",
+    "phoneAcceptance": "outstanding",
+    "all40FallbackGlyphInspection": "pending",
+    "readingKeyDisposition": "pending-complete-pilot-audit",
+    "pilot": "not-accepted",
+    "fullRollout": "not-authorized-past-pilot-gate"
+  },
+  "publication": {
+    "localDraftSnapshot": "Containing signed checkpoint commit; exact resulting SHA is recorded in external control progress and the issue update.",
+    "reviewedTeachingCommit": null,
+    "integratedCommit": null,
+    "publishedCommit": null,
+    "pushed": false,
+    "publishedAdditions": 0,
+    "remainingAdditions": 1228
+  },
+  "nextSafeAction": "Resume the same pilot from this local draft checkpoint. Finish the eight named pending cards, exact rare-reading/okurigana dispositions and five proposed support words; retain existing kana-headed identities and complete all links. Then freeze the whole pilot for two serial, isolated read-only model-family reviews. Do not start a later batch or push the current unreviewed branch."
+}
