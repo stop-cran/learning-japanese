@@ -24,9 +24,11 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   The twelve-card pilot adds 幹・氏・扱・乃・凹・凸・矛・鷹・彗・漱・栞・莉;
   its [acceptance record](n1-reviews/pilot-native-single-import-acceptance.md)
   distinguishes local bounded owner-testing acceptance from publication.
-  The published pilot has 16 source members plus 妖, not complete N1 coverage.
-  The next four-card [batch 002](n1-sources/batch-002-progress.json) is
-  textually review-closed but unpublished and does not increase delivered coverage.
+  The published pilot and four-card [batch 002](n1-sources/batch-002-publication.json)
+  deliver sixteen additions: 20 source members plus 妖, not complete N1 coverage.
+  Three-card [batch 003](n1-sources/batch-003-progress.json), 苗・畔・畝,
+  is an unpublished, independently unreviewed draft and does not increase
+  delivered coverage. There are still 1,212 additions to deliver.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee

@@ -37,7 +37,35 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 002: textual review closed, unpublished
+## Batch 003: unpublished draft
+
+The next [frozen packet](n1-sources/batch-003-membership.json) is
+**苗・畔・畝**: young plants, paddy boundaries and raised planting rows.
+Fourteen full metadata readings remain in source order; seven selected
+question keys have linked, dictionary-backed examples. Three unmatched
+on readings of 畝 remain explicitly source-only and unselected.
+
+Six necessary support articles, **苗・育苗・苗代・畔・湖畔・畝**, and a narrow
+alternate-spelling link/allocation clarification in existing **名字** form
+seven reciprocal pairs. The stable 名字 article already teaches 苗字:
+it is reused without a duplicate article or any metadata, primary-reading,
+easier N2-level or exclusion change.
+
+The [draft ledger](n1-sources/batch-003-progress.json) retains all reading,
+support and quiz dispositions. Two packets preserve **35 complete JMdict
+families**; the [external evidence](n1-sources/batch-003-external-evidence.json)
+separates exact dictionary headings from unsuccessful/misleading extractions.
+The [stroke receipt](n1-sources/batch-003-stroke-audit.json) verifies the
+original pinned SVG blobs, exact reconversion and 8/10/10 stroke counts.
+
+**These are drafts, not reviewed or delivered additions.** Two serial
+different-family independent initial reviews remain to run on the frozen
+snapshot, followed by reconciliation, fresh applicable Android checks and
+the combined-main/publication gates. None of these three characters is in
+the forty-character fallback set; no fresh native or phone check is claimed.
+Published additions remain **16/1,228**, with **1,212 still to deliver**.
+
+## Batch 002: published and verified
 
 The next [frozen packet](n1-sources/batch-002-membership.json) is deliberately
 small: **稲・穂・桑・芋**, an agriculture/plant comparison rather than an
@@ -54,7 +82,7 @@ including spelling/reading restrictions and comparison senses.
 each original SVG Git blob, exact reconversion and the 14/15/10/6 counts.
 No stroke geometry was edited manually.
 
-**These four cards are textually review-closed, not delivered additions.**
+**These four cards are published for bounded owner testing.**
 Original initial reviews by `claude-opus-5.5` and `gpt-6.1-sol` cover the same
 frozen `9fee517` teaching; both original sessions confirmed the bounded
 corrections at `0a5f2e2`. The [reconciliation](n1-reviews/batch-002-reconciliation.json)
@@ -63,10 +91,14 @@ optional safeguard and limitations. Reviewer processes were serial; Claude's
 initial overlapping pair of small card reads was a disclosed process breach,
 not rewritten as compliant execution. Both confirmations used serial reads.
 
-The published count remains twelve additions, with 1,216 still to deliver.
-Fresh applicable Android checks, combined-main integration/revalidation and
-verified publication remain required. Neither textual review nor the mechanical
-audit implies new native or physical-phone acceptance.
+The [publication record](n1-sources/batch-002-publication.json) pins accepted
+`30faea0` and the [execution receipt](n1-sources/execution-011.json) records
+fresh non-skipped RealContentTest 3/3 and RareHanTest 1/1 against this isolated
+content tree, 353 Python tests and combined-main validation. The terminal
+receipt commit `fd75a67` has green CI `41515516468`; its exact immutable GitHub
+ZIP preserves all 8,091 runtime hashes within the unchanged budgets.
+The published count is sixteen additions, with 1,212 still to deliver.
+No new native or physical-phone acceptance is inferred from these checks.
 
 For later bounded packets, run `python -B tools/audit_n1_batch.py --batch 002`
 with that packet's ledger. It compares the whole runtime payload against the
