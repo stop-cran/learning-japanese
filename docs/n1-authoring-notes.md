@@ -56,9 +56,13 @@ Activated links and reciprocal pairs must cover reused articles too.
 
 The [font inventory](n1-sources/font-coverage.json) independently reproduces all
 40 characters absent from all three bundled kanji-font cmaps at Android
-`2bc0234bffcb3c4a0cbafde80367d24d2638a93a`. Every native-inspection disposition is
-still pending. Cmap absence is neither a missing-glyph finding nor evidence of
-successful native fallback. No phone or emulator smoke test has run.
+`2bc0234bffcb3c4a0cbafde80367d24d2638a93a`. Its pending native dispositions
+describe the immutable source freeze, not current progress. The separate
+[native inspection](n1-reviews/pilot-native-acceptance.md) now records all
+40 characters in all four production font-family choices on an API-35 emulator,
+with seven visually inspected screenshots and 160 passing glyph/raster probes.
+No missing or materially misleading glyph was established in that environment.
+This is not phone acceptance or a passing navigation/drawing smoke test.
 
 The [mutable pilot ledger](n1-sources/pilot-progress.json) now records all
 **12 cards as drafted, none review-closed**. Twelve pinned stroke files were
@@ -113,9 +117,14 @@ No metadata was silently dropped or reordered to alter the quiz.
 The draft has five new support articles for twelve characters, not a forecast
 of the entire expansion. With a 12-character pilot and later batches capped
 at 15, the planning floor becomes **83 total batches / 166 initial reviewer
-assignments**, before necessary splits or confirmations. Footprint, support
-and effort estimates must be recalibrated after independent corrections and
-pilot acceptance; the present local measurements do not authorize full rollout.
+assignments**, before necessary splits or confirmations. The [recalibration](n1-sources/pilot-recalibration.json) now records actual
+pilot bytes and conditional capacity sensitivities: 5, 512 or 1,228 total new
+support words give approximately 47.014, 47.908 or 49.171 MiB retained at the
+pilot's mean card/stroke/manifest sizes. These are not lexical forecasts or
+upper bounds; future reuse corrections, larger cards and further support are
+unknown. Smaller review packets increase the 83-batch/166-initial-review floor.
+No defensible elapsed-time or credit promise follows from the observed process
+times. Neither these measurements nor the font inspection authorize full rollout.
 
 Two initial reviewers now cover every pilot card, all five new support articles
 and changed passages in eight reused articles at the same frozen teaching
@@ -196,10 +205,15 @@ fonts or approve a source-only quiz key. The
 [draft audit output](n1-sources/pilot-draft-audit.json) and
 [execution receipt](n1-sources/execution-003.json) preserve this checkpoint.
 
-Next: resume the same independently reviewed but **unaccepted** pilot.
-Complete safe native/emulator/drawing/all-40-font inspection and the updated
-support/footprint/effort estimate. No adb device was present at this checkpoint;
-the existing emulator executable enumerates AVDs, but no AVD has yet been booted
-for this pilot. Native/phone acceptance and actual reading-prerequisite
-resolution remain separate gates. Do not start full rollout
-or push these unreviewed drafts.
+**Blocked at the same independently reviewed but unaccepted pilot.**
+The [native gate record](n1-reviews/pilot-native-acceptance.md) preserves two
+API-35 emulator-host access violations, a corrected test-helper scroll failure,
+and an API-29 alternative's reported 16-MiB runtime-heap OOM before activity
+launch. None is a passing selection/session/article/Back or drawing receipt;
+the emulator failures are not attributed to an unproven app/content defect.
+All-40 font inspection and the conditional estimate are now durable.
+Resume only when the narrow issue-#1 reading compatibility prerequisite and
+a stable supported native acceptance environment are available; real-phone
+acceptance remains separate and outstanding. Preserve the existing review
+reports and teaching snapshot. Do not start later batches or push this
+unaccepted draft branch.

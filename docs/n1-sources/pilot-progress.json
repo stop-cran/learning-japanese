@@ -4,7 +4,7 @@
   "membership": ["幹", "氏", "扱", "乃", "凹", "凸", "矛", "鷹", "彗", "漱", "栞", "莉"],
   "baselineCommit": "57dcc2aaedd8d6b0f141d5b4c3cb9c13f6f797b2",
   "sourceFreezeCommit": "3e4df69898fbe9eb5a5732f944fd33353b16e33c",
-  "status": "two-family-initial-reviewed-pilot-not-accepted",
+  "status": "blocked-at-pilot-gate-two-family-reviewed-native-font-inspected",
   "drafted": ["幹", "氏", "扱", "乃", "凹", "凸", "矛", "鷹", "彗", "漱", "栞", "莉"],
   "pendingTeaching": [],
   "reviewClosed": [],
@@ -174,8 +174,20 @@
     "RealContentTest": {"tests": 3, "skipped": 0, "failures": 0, "errors": 0},
     "WordsTest": {"tests": 22, "skipped": 0, "failures": 0, "errors": 0},
     "RareHanTest": {"tests": 1, "skipped": 0, "failures": 0, "errors": 0},
-    "nativeFontAcceptance": false
+    "nativeFontAcceptance": false,
+    "nativeFontObservation": "All 40 fallback targets visually inspected in all four production font-family choices on API35 emulator; 160 hasGlyph/distinct-raster probes passed. No missing/materially misleading glyph established there. Not phone or whole-pilot acceptance.",
+    "nativeEvidence": "../n1-reviews/pilot-native-acceptance.md"
   },
-  "nextAction": "Resume the same twelve-card pilot with archived two-family initial review and bounded Claude confirmation; do not rerun or recreate the initial reviews. Complete safe existing-AVD/native selection-session-article-Back/drawing and all-40-fallback inspection, then recalibrate support/footprint/effort and report the exact unresolved gates. No adb device is connected; emulator is not on PATH but ANDROID_HOME\\emulator\\emulator.exe enumerates existing AVDs. No native boot/test has yet occurred. Current source-only prompting is not accepted: a narrow issue-#1 companion prerequisite must preserve metadata and transport approved prompt subsets end-to-end. Do not implement that companion here, begin a later batch or push the unaccepted branch. All cards remain draft/not review-closed pending pilot gates.",
-  "limits": "Two actual model families completed initial textual review, with supplied full dictionary access; neither performed independent upstream retrieval or native/phone checks. All 26 targeted Android JVM tests passed without skips. Five support articles and twelve cards remain unaccepted drafts. No local commit counts as published. All 1,228 additions remain to be accepted and delivered."
+  "recalibration": "pilot-recalibration.json",
+  "nativeGate": {
+    "all40Fallbacks": "observed-on-api35-emulator-not-phone-acceptance",
+    "selectionSessionArticleBack": "unverified",
+    "drawing": "unverified",
+    "api35HostFailures": "Two emulator-process exits -1073741819; truncated instrumentation is not a pass.",
+    "api29Alternative": "Actual OutOfMemoryError with reported 16777216-byte growth limit during full archive preflight; no activity launched. No saved AVD configuration or guard changed.",
+    "phoneAcceptance": "outstanding",
+    "record": "../n1-reviews/pilot-native-acceptance.md"
+  },
+  "nextAction": "STOP at pilot gate. Preserve teaching snapshot 6855b42fa2c4e4cae6fd01a2697d10ee42011abb, original two-family reviews and all native artifacts. Resume this same batch only after narrow issue-#1 curated-prompt end-to-end compatibility and a stable supported native environment are available; execute selection/session/article/system-Back and drawing with terminal passing evidence, separately obtain real-phone acceptance, then reconcile and publish the accepted pilot estimate/disposition before any later batch. Do not repeat initial reviews, alter source metadata/order, implement the companion feature here, push the unaccepted branch or launch another runner.",
+  "limits": "Two actual model families completed initial textual review with supplied dictionary access, not native/phone checks. All 26 targeted JVM tests previously passed without skips. Coordinator native font inspection now covers 40 characters/four families on one emulator, not phone or pilot acceptance. Navigation/drawing remain unverified after recorded host/environment failures. Five support articles and twelve cards remain unaccepted drafts. No local commit counts as published. All 1,228 additions remain undelivered."
 }
