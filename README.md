@@ -204,6 +204,10 @@ not support-count forecasts, targets, upper bounds or permission to spend media 
 The deliberately risk-heavy pilot does not establish future compressed/inflated sizes or effort.
 At most 15 kanji per later batch means a floor of **83 batches / 166 initial review assignments**;
 the pilot's separate curation pair already adds two assignments beyond that floor.
+The later owner-main scene retirement (`7f40d40`) leaves **8,100 entries /
+43,365,235 retained bytes** in the integrated tree without changing N1 teaching.
+The [publication ledger](docs/n1-sources/pilot-publication.json) distinguishes
+that integration from the original pilot/native measurement basis above.
 
 The earlier **13,847-entry / approximately 52.4-MiB** projection combined kanji with
 [3,427 N1 vocabulary rows](https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n1.csv).

@@ -92,6 +92,15 @@ initial assignments, plus the already necessary separate pilot curation pair
 and further confirmations. The first publication's CI lacked the documented
 fontTools dependency; its failure and the narrow green correction are preserved.
 The next coordinator starts one bounded later batch after this delivery checkpoint.
+During receipt publication, owner main `7f40d40` retired one unrelated
+ぶらぶら illustration and its scene entry. The original source freeze is not
+rewritten: the pilot ledger pins the exact two before/after manifest changes
+and their source commit. The audit accepts only those recorded image/scene
+differences, never overrides kanji or word metadata, and still rejects mismatched
+hashes. The actual integrated tree passes 343 Python tests and fresh non-skipped
+Android content/glyph checks. N1 teaching, full readings and stroke geometry
+remain byte-identical to the accepted pilot; the native evidence is inherited
+with that boundary, not claimed rerun against the unrelated scene retirement.
 
 ### Earlier pilot preparation and gate history
 

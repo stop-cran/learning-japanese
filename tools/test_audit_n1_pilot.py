@@ -1,6 +1,6 @@
 import unittest
 
-from audit_n1_pilot import offered_keys, quiz_readings, reading_key
+from audit_n1_pilot import offered_keys, quiz_readings, reading_key, reconciled_baseline_manifest
 
 
 class N1PilotReadingProjectionTest(unittest.TestCase):
@@ -39,6 +39,41 @@ class N1PilotReadingProjectionTest(unittest.TestCase):
         for selected in (["カン", "カン"], ["カン", ""], "カン", None, [1]):
             with self.subTest(selected=selected), self.assertRaises(ValueError):
                 quiz_readings({"onyomi": ["カン"], "quizOnyomi": selected}, "onyomi")
+
+
+class N1IntegratedMainManifestTest(unittest.TestCase):
+    def setUp(self):
+        self.before = {"images": {"images/a.webp": "a" * 64},
+                       "scenes": {"scenes/a.json": "b" * 64}}
+        self.after = {"images": {}, "scenes": {"scenes/a.json": "c" * 64}}
+        self.changes = [
+            {"section": "images", "path": "images/a.webp", "before": "a" * 64,
+             "after": None, "sourceCommit": "d" * 40},
+            {"section": "scenes", "path": "scenes/a.json", "before": "b" * 64,
+             "after": "c" * 64, "sourceCommit": "d" * 40},
+        ]
+
+    def test_exact_main_removal_and_scene_change_preserve_frozen_baseline(self):
+        self.assertEqual(reconciled_baseline_manifest(self.before, self.after, self.changes),
+                         self.after)
+        self.assertEqual(self.before["images"]["images/a.webp"], "a" * 64)
+        self.assertEqual(reconciled_baseline_manifest(self.before, self.after, []), self.before)
+
+    def test_rejects_wrong_before_after_duplicate_or_unpinned_provenance(self):
+        for field, value in (("before", "e" * 64), ("after", "e" * 64),
+                             ("sourceCommit", "main")):
+            rows = [{**self.changes[0], field: value}]
+            with self.subTest(field=field), self.assertRaises(ValueError):
+                reconciled_baseline_manifest(self.before, self.after, rows)
+        with self.assertRaisesRegex(ValueError, "Duplicate"):
+            reconciled_baseline_manifest(self.before, self.after,
+                                         [self.changes[0], self.changes[0]])
+
+    def test_cannot_override_kanji_or_word_baseline(self):
+        for section in ("files", "words", "kanji"):
+            row = {**self.changes[0], "section": section, "path": f"{section}/a.md"}
+            with self.subTest(section=section), self.assertRaisesRegex(ValueError, "image or scene"):
+                reconciled_baseline_manifest(self.before, self.after, [row])
 
 
 if __name__ == "__main__":

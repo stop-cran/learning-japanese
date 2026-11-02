@@ -45,6 +45,32 @@ def metadata(root, name):
     return yaml.safe_load((root / name).read_text(encoding="utf-8").split("---", 2)[1])
 
 
+def reconciled_baseline_manifest(baseline, current, changes):
+    result = {key: dict(value) if isinstance(value, dict) else value
+              for key, value in baseline.items()}
+    seen = set()
+    for row in changes:
+        require(set(row) == {"section", "path", "before", "after", "sourceCommit"},
+                "Malformed integrated-main manifest change")
+        section, name = row["section"], row["path"]
+        require(section in {"images", "scenes"} and name.startswith(section + "/"),
+                "Integrated-main exception must be an image or scene")
+        require(len(row["sourceCommit"]) == 40
+                and all(c in "0123456789abcdef" for c in row["sourceCommit"]),
+                "Integrated-main exception needs an exact source commit")
+        require((section, name) not in seen, "Duplicate integrated-main exception")
+        seen.add((section, name))
+        require(row["before"] is not None and row["before"] != row["after"]
+                and baseline.get(section, {}).get(name) == row["before"]
+                and current.get(section, {}).get(name) == row["after"],
+                f"Integrated-main before/after hash mismatch: {name}")
+        if row["after"] is None:
+            result[section].pop(name)
+        else:
+            result[section][name] = row["after"]
+    return result
+
+
 def audit(root):
     evidence = root / "docs" / "n1-sources"
     baseline = json.loads((evidence / "baseline-inventory.json").read_text(encoding="utf-8"))
@@ -82,7 +108,9 @@ def audit(root):
             require(digest((root / name).read_bytes()) == old["sha256"],
                     f"Baseline stroke bytes changed: {name}")
             counts["baselineStrokeHashesPreserved"] += 1
-    old_manifest = baseline["files"]["manifest.json"]["manifest"]
+    main_changes = ledger.get("integratedMainManifestChanges", [])
+    old_manifest = reconciled_baseline_manifest(
+        baseline["files"]["manifest.json"]["manifest"], current, main_changes)
     for category, entries in old_manifest.items():
         if not isinstance(entries, dict):
             continue
@@ -213,6 +241,7 @@ def audit(root):
             "curatedOfferedKeys": curated_key_count,
             "sourceOnlyOfferedKeys": len(source_only_offered), "dictionaryFamilies": len(families),
             "manifestFresh": True, "contentVersion": current["contentVersion"],
+            "accountedMainManifestChanges": len(main_changes),
             "limits": "Mechanical draft audit; not independent content review, app execution, native/phone acceptance or publication."}
 
 
