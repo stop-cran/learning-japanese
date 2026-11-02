@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 005: local draft, not independently reviewed
+## Batch 005: textual review closed, local and unpublished
 
 The [next frozen packet](n1-sources/batch-005-membership.json) is
 **松・桃・梅**. Six full metadata readings remain in source order, with
@@ -62,12 +62,27 @@ they are not transitive synonym groups.
 glyphs are present in the unchanged bundled font cmaps. 氵 is absent but
 already appears in baseline 海; this is not fresh native visual acceptance.
 [Execution 018](n1-sources/execution-018.json) and the
-[draft audit](n1-sources/batch-005-draft-audit.json) record local checks,
-not independent review or publication. All nine teaching files still need
-two serial blind different-family reviews on the same frozen snapshot,
-followed by reconciliation, fresh non-skipped Android checks and combined-main/
-remote CI/exact public ZIP acceptance. **Published additions remain
-22/1,228; 1,206 remain to deliver.** No batch 006 has started.
+[draft audit](n1-sources/batch-005-draft-audit.json) preserve the earlier local
+draft checks. Independent `claude-opus-5.5` and `gpt-6.1-sol` initial reviews
+now cover all nine teaching files, all 26 complete dictionary families and
+actual comparison passages on the same signed `29b2b475` snapshot. Both
+reviewer processes exited before the next launch. One initial Claude pair of
+overlapping small reads is preserved as a process breach; an original-session
+serial supplement confirms those two word guards without rewriting history.
+
+The [reconciliation](n1-reviews/batch-005-reconciliation.json) retains all
+three original reports, optional dispositions and source/read limitations.
+No actionable defect was established and teaching remains unchanged.
+All nine files are CLEAN across the three textual facets, with reused
+松・梅・梅雨 limited to changed-link/new-support integration. This is not
+native-speaker or exhaustive quiz certification.
+[Execution 019](n1-sources/execution-019.json) and the
+[review-closed audit](n1-sources/batch-005-review-closed-audit.json) record
+textual closure and exact local checks, not publication. Fresh non-skipped
+Android checks and combined-main/remote CI/exact public ZIP acceptance still
+follow. **Published additions remain 22/1,228; 1,206 remain to deliver.**
+No batch 006 has started; physical-phone/general-release acceptance remains
+explicitly outstanding.
 
 ## Batch 004: published and verified
 

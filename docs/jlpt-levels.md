@@ -40,7 +40,11 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   later is required; physical-phone/general-release acceptance remains
   explicitly outstanding, not inferred from bounded owner-testing delivery.
   Three-card [batch 005](n1-sources/batch-005-progress.json), 松・桃・梅,
-  is a local **unreviewed draft**, not additional delivered coverage.
+  is **textual-review-closed locally**, not additional delivered coverage.
+  The [reconciliation](n1-reviews/batch-005-reconciliation.json) retains both
+  blind model-family reports, original-session supplement, optional dispositions
+  and the disclosed initial internal read overlap. Teaching is unchanged;
+  fresh Android/integration/publication acceptance is still pending.
   Its supporting words have no level inferred from these N1 kanji; reused
   松・梅・梅雨 retain their independently sourced N3 vocabulary levels.
 

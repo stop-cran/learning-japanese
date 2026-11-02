@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "batch": "005",
+  "status": "textual-review-closed-local-unpublished",
+  "baseCommit": "79051b8b3eff3396505fc567cc3caec31e6f43ae",
+  "initialSnapshot": "29b2b475771f929976570c27e24b9ac16278cdda",
+  "reviewedTeachingSnapshot": "29b2b475771f929976570c27e24b9ac16278cdda",
+  "snapshotSignature": "G",
+  "teachingChangesAfterInitialReviews": 0,
+  "scope": {
+    "newKanji": ["松", "桃", "梅"],
+    "newSupportArticles": ["words/桃.md", "words/白桃.md", "words/松竹梅.md"],
+    "changedReusedPassages": [
+      "words/松.md:24 newly available component backlink only",
+      "words/梅.md:24 newly available component backlink only",
+      "words/梅雨.md:28 newly available component backlink only"
+    ],
+    "reusedLimit": "Complete context read; assess changed-link integration and newly activated reading support, not fresh exhaustive unchanged earlier-deck certification. All reused metadata, primaryまつ/うめ/つゆ, sourcedN3 and other text remain unchanged.",
+    "facets": ["correctness", "scoped coverage", "textual phone comprehensibility"],
+    "dictionaryFamilies": 26,
+    "fullReadingDispositions": 6,
+    "curatedOfferedKeys": 6,
+    "sourceOnlyOfferedKeys": 0,
+    "requiredReciprocalPairs": 7,
+    "activatedBaselineDeclaredPairs": 3,
+    "directNewWordExclusionPairs": 14
+  },
+  "reviewers": [
+    {
+      "model": "claude-opus-5.5",
+      "sessionId": "7247f1a9-62b9-4ae3-9099-b42086e752e9",
+      "initialReport": "batch-005-initial-claude.md",
+      "initialExecution": "batch-005-initial-claude-execution.json",
+      "initialToolCalls": 48,
+      "initialScope": "All nine complete teaching files, three full dictionary packets, raw character records, nine distractor/compound-reading kanji cards, eighteen existing requested comparison word articles and content-format40-157 returned completely. Three requested word paths do not exist; their complete dictionary families were read instead. Three independent live Kotobank fetches returned relevant桃/白桃/松竹梅 headings. Empty Daijisen bodies for白桃/松竹梅 explicitly disclosed.",
+      "processDeviation": "One overlapping pair of complete実/ピンク reads. Actual record and self-disclosure preserved; initial internal execution was not fully serial.",
+      "supplementReport": "batch-005-supplement-claude.md",
+      "supplementExecution": "batch-005-supplement-claude-execution.json",
+      "supplementToolCalls": 5,
+      "supplementScope": "Own initial report, complete実,ピンク,白桃 in separate serial calls. Original public白桃 source inspection inherited, not fetched again. The supplementary task itself was also read. No full-batch reread, new initial review or changed teaching.",
+      "supplementResult": "Original six-key and direct-pair assessments confirmed; no verdict change. Optional白桃 exclusivity inference narrowed to nonblocking omitted secondary sense. Historical overlap remains a breach, not retroactive compliance."
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "sessionId": "251909ef-08ae-43f9-aeeb-0a6fb008c464",
+      "initialReport": "batch-005-initial-gpt.md",
+      "initialExecution": "batch-005-initial-gpt-execution.json",
+      "initialToolCalls": 55,
+      "initialScope": "All nine complete teaching files, three complete dictionary packets in bounded ranges, raw records, all nine actual distractor/compound-reading kanji and eighteen existing requested comparison words returned completely. Same three absent word paths disclosed. Three independent live Kotobank fetches of relevant桃/白桃/松竹梅 headings, plus format40-157 and README approach526-535. No teaching/dictionary truncation or internal tool overlap.",
+      "result": "All nine assigned files CLEAN across the three textual facets; no findings or optional suggestions. Explicitly distinguishes scoped fruit-word teaching from an unrestricted claim thatはくとう never names a white-flowered peach."
+    }
+  ],
+  "process": {
+    "maximumActiveReviewerProcesses": 1,
+    "allThreeProcessExitCodes": [0, 0, 0],
+    "internalToolOverlaps": [1, 0, 0],
+    "unfinishedTools": 0,
+    "actualExitBeforeEachNextLaunch": true,
+    "teachingUnchangedDuringAllReviews": true,
+    "initialPromptsIdentical": true,
+    "initialBlindness": "Both initial sessions received the same snapshot, nine teaching files, dictionary access and rubric. No other reports, progress rationale, external-evidence observations or adjudication returned. First complete report archived before second launch; second archived before supplementary work. Supplement reads only original reviewer's own report.",
+    "modelSelection": "Installed CLI help and config catalog inspected duringexecution019, preserved externally undercontrol/inputs/copilot-help-execution-019.txt andcopilot-config-execution-019.txt. Both explicit IDs advertised; actual assistant/tool model events and usage agree. No Auto substitution.",
+    "availableTools": ["view", "glob", "rg", "web_fetch"],
+    "disabled": "Shell, edits, delegation and builtin MCPs unavailable. Owner GH_TOKEN absent at each launch. No nested agent, parallel reviewer, Android or resource-heavy command overlapped reviewer executions.",
+    "readReceipts": "Per-call requested paths/ranges, returned hashes/counts, failures, model identities and exact requested text checks preserved. Assigned teaching returns match frozen Git. Complete dictionary/comparison scope checked by union of actual returned ranges. Hashes and full returns do not prove comprehension.",
+    "missingComparisonPaths": ["words/最上.md", "words/特上.md", "words/最良.md"],
+    "missingPathDisposition": "Coordinator prompt incorrectly described these supplied-family candidates as actual existing articles. Both reviewers transparently encountered their absence; no runtime title or article exists to inspect. Complete supplied families remain reviewed. No scope supplement or invented article is needed.",
+    "reportPreservation": "Three complete original final reports preserved unchanged as LF UTF-8. Raw execution hashes verified separately; internal reasoning and opaque provider fields are not exported.",
+    "monitoringLimit": "One lightweight live-output probe met an incomplete final JSON line while Claude was writing. No process failed or restarted; full JSONL parsed successfully after actual exit. Later GPT check parsed only complete lines and confirmed growing output. No repeated-read loop.",
+    "usageLimit": "Original-session supplementary usage may be cumulative session totals, not isolated-turn spending."
+  },
+  "findings": [],
+  "optional": [
+    {
+      "origin": "claude-optional-1",
+      "location": "words/白桃.md:31-33",
+      "claim": "Mention thatはくとう also has the white-flowered-peach sense rather than implying that onlyしろもも names it.",
+      "status": "optional",
+      "disposition": "Not adopted. Exact text limitsはくとう to the fruit word here and says dictionaries also recordしろもも uses; it never states an exclusive reading rule. Coordinator inspected actual Seisenbanはくとう1/2 andしろもも1/2 headings. Original-session supplement expressly withdraws the stronger exclusivity implication as a defect and retains only nonblocking omitted-sense expansion. Independent GPT already discusses the same distinction; not a unique actionable discovery."
+    },
+    {
+      "origin": "claude-optional-2",
+      "location": "words/桃.md:28; kanji/梅.md:22; words/梅雨.md:28",
+      "claim": "Clarify overlapping English Japanese-plum/plum labels forすもも andうめ.",
+      "status": "optional",
+      "disposition": "Not adopted. Existing桃 comparison says they name different plants,梅 explicitly explainsPrunus mume and warns against treating all English plums as the same, and梅雨 teaches its exact regular/whole-word reading distinction rather than a botanical naming history. Complete frozen families1549830/1473460 and source metadata support the English glosses. No consequential false substitution established."
+    },
+    {
+      "origin": "claude-optional-3",
+      "location": "words/松.md, unchanged baseline metadata/body",
+      "claim": "Add guards against最高/上等/高級 and link new松竹梅;一流 already excludes松.",
+      "status": "optional",
+      "disposition": "Not adopted within this backlink-only reuse. Those baseline word titles/meanings already coexisted before the new kanji card; no word quiz identity, eligibility or metadata is changed. Complete initial comparison scope is preserved without rebranding it as exhaustive unchanged-word quiz certification. Seven required newly activated reciprocal pairs are present; every incidental word mention is not a new mapped reciprocal obligation."
+    },
+    {
+      "origin": "claude-optional-4",
+      "location": "kanji/桃.md:24",
+      "claim": "Add a sourced phonetic-semantic analysis of兆.",
+      "status": "optional",
+      "disposition": "Not adopted. Explicitly labelled modern-shape mnemonic andstructure-unclassified follow the allowed source-bounded approach. No unsupported denial of a phonetic component is made; historical expansion is not required."
+    },
+    {
+      "origin": "claude-optional-5",
+      "location": "kanji/毎.md and kanji/海.md, unchanged baseline notes",
+      "claim": "Link incidental梅 mentions now that its card exists.",
+      "status": "optional",
+      "disposition": "Not adopted. These are unchanged incidental comparison mentions, not declared baseline word-to-kanji pairs or selected support mappings. All three activated baseline word pairs and seven required reciprocal pairs are complete. No new unrelated earlier-card rewrite is needed."
+    }
+  ],
+  "coordinatorClarifications": [
+    "Do not adopt the initial report's inference of lower frequency fromnews2/nf47 alone; source priority flags are navigation evidence, not an unrestricted frequency conclusion. No learner-facing comparative frequency claim is made, and both reviewers independently accept松竹梅 as useful N1 recognition support.",
+    "Supplement describesはくとう's white-flowered sense as mainly a haiku season word. Actual source marks季語・春, which supports the seasonal designation but not an unmeasured mainly-frequency claim. That stronger wording is not adopted into teaching.",
+    "The supplement's general statement that extra exclusions never make an answer wrong is not exhaustive quiz-safety certification. Only the exact fourteen source-backed direct guards are accepted here.",
+    "Source membership, frozen SHA, raw input hashes and unchanged teaching are coordinator-verified mechanical facts; neither reviewer had shell access to independently verify Git."
+  ],
+  "modelContributions": {
+    "verifiedUniqueActionableInitialFindings": "None from either family; no quota manufactured.",
+    "claudeOnly": "Five nonblocking observations retained; no teaching correction adopted. Initial internal read overlap is an operational deviation, not a linguistic discovery.",
+    "gptOnly": "Explicitly recognizes the sameはくとう secondary-sense question and explains why scoped fruit teaching is not exclusive; no unique actionable defect.",
+    "shared": "All six full readings/questions suitable, regularばいう versus whole-wordつゆ correct, plant/ranking/colour distinctions source-backed, meaningful curated distractors, direct new-word guards and all seven reciprocal pairs.",
+    "limits": "Equivalent observations compared across findings, optional and limits. Both initial sessions cover the same actual teaching/dictionary/comparison set, but different fetch/range/context depth and one overlap remain disclosed; no general family ranking or native-speaker certification."
+  },
+  "finalTextualVerdict": "All nine assigned files CLEAN on correctness, scoped coverage and textual comprehensibility. Reused松/梅/梅雨 limited to changed-link/new-support integration. No consequential in-scope textual claim remains unresolved. Reviewed teaching remains exactly original signed29b2b475, with zero correction diff.",
+  "acceptanceLimits": "Textual closure only, local and unpublished. Fresh non-skipped RealContentTest/RareHanTest, current-main combined-tree validation, normal signed acceptance/integration, owner-scoped fast-forward push, remote green CI and every immutable public ZIP runtime hash/budget check remain pending. Public22/1228 additions and remaining1206 unchanged. No006 started. Accepted pilot native/all40/160 evidence inherited only in documented unchanged production scope; no fresh native/font/physical-phone claim. Compatible Androidf9b59a2+ required; physical-phone/general-release acceptance explicitly outstanding, not a new veto on bounded owner testing."
+}
