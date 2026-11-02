@@ -3,7 +3,7 @@
   "batch": "002",
   "baseCommit": "560c9dd37103852ef8ddf07cd3b740a975243de1",
   "membership": ["稲", "穂", "桑", "芋"],
-  "status": "textual-review-closed-local-unpublished",
+  "status": "accepted-local-awaiting-verified-publication",
   "drafted": ["稲", "穂", "桑", "芋"],
   "reviewClosed": ["稲", "穂", "桑", "芋"],
   "published": [],
@@ -80,9 +80,9 @@
   "acceptance": {
     "initialReviews": "Complete original reports preserved for claude-opus-5.5 and gpt-6.1-sol on 9fee517; reviewer processes exited serially. Claude internally overlapped two small card reads once despite the serial-only prompt; exact deviation retained, not claimed compliant.",
     "textualClosure": "Both original sessions confirmed the exact three-file correction diff at 0a5f2e23862c44df3a79c342fbcd5e5c1d376d29 with serial tool calls. All nine assigned files CLEAN on all three textual facets after reconciliation; no consequential in-scope textual claim unresolved. See docs/n1-reviews/batch-002-reconciliation.json. Local textual closure is not batch publication acceptance.",
-    "android": "Not run for this draft. Pilot native acceptance is preserved, not rebranded as a fresh batch test.",
+    "android": "Execution 11: fresh --rerun-tasks RealContentTest 3/3 and RareHanTest 1/1 against the actual sibling content worktree, zero failures/errors/skips; Android f9b59a2 remains clean. Exact XML receipts preserved under docs/n1-reviews. Pilot native acceptance is inherited only in its unchanged scope, not rebranded as a fresh batch native test.",
     "phone": "Physical-phone/general-release acceptance explicitly outstanding; not a blanket veto on bounded owner testing.",
-    "publication": "None. Do not push this draft or count these four additions as delivered."
+    "publication": "Local acceptance complete; remote SHA, green hosted CI and exact immutable ZIP acceptance remain required before counting these four additions as delivered."
   },
-  "nextAction": "Do not repeat closed initial reviews. Run fresh non-skipped batch Android RealContentTest/RareHanTest; integrate latest origin/main non-rewriting, revalidate the actual combined tree, sign normal accepted commits, publish via owner-scoped fast-forward push, verify CI and exact immutable ZIP, update #60, then checkpoint and yield before another batch. Current four local additions are not delivered."
+  "nextAction": "Closed teaching unchanged and current origin/main integrated; 353 Python tests, validator, vocabulary check, fresh manifest, exact-base audit, budgets and four non-skipped Android cases pass. Sign normal accepted commit, owner-scoped fast-forward push, verify remote/CI/exact immutable ZIP, persist publication receipts and update #60, then checkpoint and yield before another batch. Current four local additions are not delivered until public verification."
 }
