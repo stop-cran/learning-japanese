@@ -27,8 +27,10 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   The published pilot and four-card [batch 002](n1-sources/batch-002-publication.json)
   deliver sixteen additions: 20 source members plus 妖, not complete N1 coverage.
   Three-card [batch 003](n1-sources/batch-003-progress.json), 苗・畔・畝,
-  is an unpublished, independently unreviewed draft and does not increase
-  delivered coverage. There are still 1,212 additions to deliver.
+  is textually review-closed after serial independent two-family reviews and
+  original-session confirmations, but remains unpublished and does not increase
+  delivered coverage. Android/integration/publication gates remain pending;
+  there are still 1,212 additions to deliver.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee

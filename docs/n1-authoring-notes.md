@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 003: unpublished draft
+## Batch 003: textual review closed, unpublished
 
 The next [frozen packet](n1-sources/batch-003-membership.json) is
 **苗・畔・畝**: young plants, paddy boundaries and raised planting rows.
@@ -51,17 +51,28 @@ seven reciprocal pairs. The stable 名字 article already teaches 苗字:
 it is reused without a duplicate article or any metadata, primary-reading,
 easier N2-level or exclusion change.
 
-The [draft ledger](n1-sources/batch-003-progress.json) retains all reading,
-support and quiz dispositions. Two packets preserve **35 complete JMdict
-families**; the [external evidence](n1-sources/batch-003-external-evidence.json)
+The [batch ledger](n1-sources/batch-003-progress.json) retains all reading,
+support and quiz dispositions. Two initial packets preserve **35 complete JMdict
+families**, and a later two-family supplement supports reviewed label safeguards;
+the [external evidence](n1-sources/batch-003-external-evidence.json)
 separates exact dictionary headings from unsuccessful/misleading extractions.
 The [stroke receipt](n1-sources/batch-003-stroke-audit.json) verifies the
 original pinned SVG blobs, exact reconversion and 8/10/10 stroke counts.
 
-**These are drafts, not reviewed or delivered additions.** Two serial
-different-family independent initial reviews remain to run on the frozen
-snapshot, followed by reconciliation, fresh applicable Android checks and
-the combined-main/publication gates. None of these three characters is in
+**These three cards are textually review-closed, not delivered additions.**
+Independent `claude-opus-5.5` and `gpt-6.1-sol` reviews cover the same signed
+`6ce5676` teaching snapshot; both original sessions confirmed the exact
+two-pair correction at signed `b99945c`. All four processes and their internal
+tool calls were serial, with complete original reports and actual read/model
+receipts retained in the [reconciliation](n1-reviews/batch-003-reconciliation.json).
+The minor unqualified "plant" label collision is resolved on new 苗 only;
+the optional-origin rice-plant guard is adopted without changing any reused
+metadata. Other optional polish remains nonblocking, not manufactured defects.
+All ten assigned files are CLEAN across the three textual facets; this is not
+native-speaker or measured-learning certification.
+
+Fresh applicable Android checks and the combined-main/publication gates
+remain pending. None of these three characters is in
 the forty-character fallback set; no fresh native or phone check is claimed.
 Published additions remain **16/1,228**, with **1,212 still to deliver**.
 

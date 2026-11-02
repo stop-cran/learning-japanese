@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "batch": "003",
+  "status": "textual-review-closed-local-unpublished",
+  "baseCommit": "fd75a6730bfd863202df1f4782ace9eb433f0e05",
+  "initialSnapshot": "6ce567650e6663d712bac25bebd5bead0d0af655",
+  "correctedTeachingSnapshot": "b99945c23eb8eb9a3cdd10a8a736a51d6c6cce71",
+  "correctedSnapshotSignature": "G",
+  "scope": {
+    "newKanji": ["苗", "畔", "畝"],
+    "newSupportArticles": ["words/苗.md", "words/育苗.md", "words/苗代.md", "words/畔.md", "words/湖畔.md", "words/畝.md"],
+    "changedReusedPassages": ["words/名字.md:16-17 alternate-spelling component link and ミョウ allocation only; complete context read"],
+    "facets": ["correctness", "scoped coverage", "textual phone comprehensibility"],
+    "initialDictionaryFamilies": 35,
+    "laterSupplementalFamilies": 2,
+    "fullReadingDispositions": 14,
+    "curatedOfferedKeys": 7,
+    "sourceOnlyOfferedKeys": 0,
+    "requiredReciprocalPairs": 7
+  },
+  "reviewers": [
+    {
+      "model": "claude-opus-5.5",
+      "sessionId": "0ea7aec4-e1e2-48a5-b070-0463aeacb6ed",
+      "initialReport": "batch-003-initial-claude.md",
+      "initialExecution": "batch-003-initial-claude-execution.json",
+      "initialToolCalls": 24,
+      "initialScopeLimit": "All ten assigned teaching files, both complete dictionary packets, raw character records and format range returned in full. Additional distractor/comparison investigation was title/reading search rather than full bodies; explicitly narrower than GPT. Six bounded live fetches, including a paginated 苗 request; some responses have truncation markers, not complete-page reads. Exact needed headings/claims were returned, not every dictionary section.",
+      "confirmationReport": "batch-003-confirmation-claude.md",
+      "confirmationExecution": "batch-003-confirmation-claude-execution.json",
+      "confirmationToolCalls": 7,
+      "confirmationResult": "Both direct pairs justified; changed 苗 CLEAN on all three facets. Explicitly qualifies its initial no-overlapping-title claim after accepting the missed 植える label risk. Other original verdicts and optional limitations stand."
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "sessionId": "8965ce5a-b3a0-41fb-8dd1-622b8380394f",
+      "initialReport": "batch-003-initial-gpt.md",
+      "initialExecution": "batch-003-initial-gpt-execution.json",
+      "initialToolCalls": 33,
+      "initialScopeLimit": "All ten teaching files, both complete dictionary packets and raw character records returned. Full-body serial search calls also returned six distractor cards, sixteen existing comparisons and five additional candidates, verified line-for-line against the snapshot. All seven supplied Kotobank URLs fetched; oversized 代 output recovered at actual saved-output lines 1-45, including complete しろ heading/senses. That temporary view's later local exact-containment field is false; the preserved actual returned text, not a byte-equality claim about the temporary file, establishes the inspected heading.",
+      "confirmationReport": "batch-003-confirmation-gpt.md",
+      "confirmationExecution": "batch-003-confirmation-gpt-execution.json",
+      "confirmationToolCalls": 7,
+      "confirmationResult": "F1 resolved and optional-origin 稲 guard accepted independently. Changed 苗 CLEAN on all three facets; original ten-file verdict has no remaining defect qualification."
+    }
+  ],
+  "process": {
+    "maximumActiveReviewerProcesses": 1,
+    "allFourProcessExitCodes": [0, 0, 0, 0],
+    "internalToolOverlaps": [0, 0, 0, 0],
+    "unfinishedTools": 0,
+    "actualExitBeforeEachNextLaunch": true,
+    "teachingUnchangedDuringEachReview": true,
+    "initialPromptsIdentical": true,
+    "confirmationPromptsIdentical": true,
+    "initialBlindness": "Both initial sessions received the same explicit snapshot, assigned files, dictionary access and rubric. No other reports, progress rationale, author external observations or adjudication were returned. Complete initial reports persisted before any correction.",
+    "modelSelection": "Installed CLI 1.0.105 help/config catalog inspected at execution time; both requested IDs present. Actual assistant/tool/model events and provider usage agree with requested families. No Auto substitution.",
+    "availableTools": ["view", "glob", "rg", "web_fetch"],
+    "observedAlias": "Claude's read-only rg calls are named grep in execution events; no shell, editing or delegation call occurred.",
+    "disabled": "Editing, shell, delegation and builtin MCP servers unavailable. Owner GH_TOKEN absent at each launch. No nested agent, parallel reviewer, Android or other resource-heavy work overlapped the reviews.",
+    "readReceipts": "All assigned teaching view returns match their actual frozen Git snapshots. Full GPT comparison/distractor search returns verified line-for-line, not inferred from requested paths or reported counts. Hashes establish bytes, not comprehension. Read depths remain unequal; no general family ranking.",
+    "reportPreservation": "Four complete original final reports retained unchanged as LF UTF-8, report and raw-execution hashes verified. Original GPT F1 line has a Markdown hard-break trailing space; git diff --check reported it at correction signing. Preserved original report bytes rather than rewriting the report to satisfy whitespace cosmetics.",
+    "usageLimit": "Original-session confirmation usage can be cumulative session totals, not isolated-turn spending."
+  },
+  "findings": [
+    {
+      "id": "gpt-F1",
+      "severity": "minor",
+      "facet": "correctness / scoped coverage of displayed word-quiz labels",
+      "status": "resolved",
+      "location": "original words/苗.md:8, title/meaning at lines 4,15; words/植える.md:4",
+      "claim": "Existing exclusions through 植物 do not protect the direct 苗/植える pair. The existing plant label lacks a verb marker and can be accepted as a noun for seedling; young plant.",
+      "evidence": "Actual inspected existing titles/bodies; frozen JMdict 1490470 sense 1 seedling/young plant, 1357250 sense 1 transitive to plant/grow/raise; content-format.md direct-pair contract. Full 1357250 family freshly extracted in later supplement, not pretended part of original blind packet.",
+      "action": "Append 植える only to the new 苗 quiz_exclusions; retain original three exclusions. No existing title/body/metadata edit and no claim of lexical synonymy.",
+      "confirmation": "Both original sessions confirmed the direct safeguard. GPT clears its correctness/coverage finding; Claude explicitly qualifies its initial no-overlap claim.",
+      "confidence": "high"
+    },
+    {
+      "id": "claude-optional-6",
+      "severity": "nonblocking",
+      "facet": "displayed word-quiz labels",
+      "status": "resolved",
+      "optionalOrigin": true,
+      "claim": "苗/稲 may carry a small rice-plant overlap risk; original reviewer did not require a change.",
+      "evidence": "苗 1490470 sense 2 explicitly rice seedling; 稲 1167820 sense 1 rice plant, actual title rice plant and existing cultivation body. Complete 稲 family re-extracted from frozen bytes; also retained in batch 002.",
+      "adjudication": "Adopt narrowly, consistently with the existing young-tree guard and earlier accepted specific-rice/broad-rice safeguard. Not unrestricted synonymy, a blanket taxonomy rule or a retroactive second initial defect.",
+      "action": "Append 稲 only on new 苗; existing 稲 identity, primary いね, N3, body and exclusions unchanged.",
+      "confirmation": "Both original sessions independently support the optional safeguard. GPT expressly says it was not its initial finding.",
+      "confidence": "high for safeguard rationale, not an observed generated quiz"
+    }
+  ],
+  "optional": [
+    {"origin": "claude-1", "claim": "Simplify 畔's neither-is-the-primary-reading sentence.", "status": "optional", "disposition": "Not adopted. The source reading and primary linked あぜ identity are explicitly distinguished; stylistic simplification is not a consequential unresolved claim."},
+    {"origin": "claude-2", "claim": "Simplify the warning against replacing あぜ senses with rice field.", "status": "optional", "disposition": "Not adopted. The preceding definitions distinguish the boundary, groove-divider and abbreviated path meanings; both final reviewers leave this nonblocking."},
+    {"origin": "claude-3", "claim": "Remove price-of-苗 and not-an-i-adjective asides.", "status": "optional", "disposition": "Not adopted. Brief accurate clarifications; no new teaching expansion."},
+    {"origin": "claude-4", "claim": "Add an example phrase spelling 畔 rather than only kana in sentences.", "status": "optional", "disposition": "Not adopted. Heading and component/reading explanations already connect 畔/あぜ; kana examples reflect the dictionary's usual-kana flag."},
+    {"origin": "claude-5", "claim": "Consider displaying なわ with bound-form context or omitting that selected key.", "status": "optional", "disposition": "No algorithm/UI change in content scope. Article explicitly identifies bound なわ-, gives 苗代 and warns against standalone use. Both initial reviewers find this offered key suitable; final confirmations leave no consequential claim unresolved. Actual dash-free key rendering was not freshly app-tested."}
+  ],
+  "modelContributions": {
+    "initialGptOnly": "Verified actionable unqualified plant-label collision with 植える; broader actual full-body distractor/comparison/candidate investigation.",
+    "initialClaudeOnly": "Optional-origin 稲 guard, adopted after precise sense/title comparison; nonblocking wording/bound-key observations retained without manufacturing defects.",
+    "shared": "All fourteen full readings accounted for, seven offered keys judged suitable, source-only kinds disabled, correct planting/boundary/unit distinctions and seven reciprocal support pairs.",
+    "limits": "Equivalent observations compared across findings, optional and limits. Later confirmations are not blind discoveries. This bounded sample is not a general model benchmark or equal-depth review."
+  },
+  "finalTextualVerdict": "All ten assigned files CLEAN on correctness, scoped coverage and textual comprehensibility after original-session confirmations; reused 名字 verdict limited to changed-passage integration. No consequential in-scope textual claim remains unresolved.",
+  "acceptanceLimits": "Textual closure only. Fresh non-skipped RealContentTest/RareHanTest, final current-main integration/revalidation, signed acceptance/publication, remote SHA/green CI/exact immutable public ZIP remain pending. None of these three characters is a frozen fallback target; no fresh native/device/font or physical-phone claim. Compatible Android f9b59a2+ required; physical-phone/general-release acceptance explicitly outstanding, not a new veto on bounded owner testing."
+}
