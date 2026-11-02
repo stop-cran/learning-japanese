@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "batch": "008",
+  "status": "textual-review-closed-local-unpublished",
+  "baseCommit": "ef4b03beee924e114161fca5ff9e4839dfe3cc5a",
+  "initialSnapshot": "2a9ffe40c77c8fb74cd97c422932ddfe868a3248",
+  "reviewedTeachingSnapshot": "dd8cd880fcfe212256e8825b1486c5c7fbc8b8b7",
+  "snapshotSignatures": "Both G; normal signing, no wait/retry/bypass/amendment or push.",
+  "scope": {
+    "newKanji": ["楓", "楠"],
+    "newSupportArticles": ["words/楓.md", "words/楠.md"],
+    "changedReusedPassages": [],
+    "facets": ["correctness", "scoped coverage", "textual phone comprehensibility"],
+    "completeInitialDictionaryFamilies": 52,
+    "completeWordComparisons": ["紅葉", "木", "植物", "植木", "植える", "木材", "材木", "材料", "大木"],
+    "completeKanjiComparisons": ["風", "南", "村", "相", "木", "葉"],
+    "fullReadingDispositions": 8,
+    "curatedOfferedKeys": 3,
+    "sourceOnlyDispositions": 4,
+    "sourceOnlyOfferedKeys": 0,
+    "requiredReciprocalPairs": 2,
+    "activatedBaselineDeclaredPairs": 0,
+    "directNewWordExclusionPairs": 12,
+    "correction": "Only words/楓.md:28 replaces the ambiguous reference to the maple-tree example above with an explicit conditional 紅葉/もみじ reading statement. Manifest regenerated. No Japanese example, full metadata/order, curation, exclusion, stroke, support identity or reused passage changed."
+  },
+  "reviewers": [
+    {
+      "model": "claude-opus-5.5",
+      "sessionId": "4e3bc012-4f69-4b01-a95a-65042bd15d34",
+      "initialReport": "batch-008-initial-claude.md",
+      "initialExecution": "batch-008-initial-claude-execution.json",
+      "initialToolCalls": 31,
+      "initialScope": "All four teaching files, raw metadata, all52completefamilies, all9word/6kanjicomparisons and required guidance returned completely. Two live Kotobank pages inspected. Confusable inventory searched, not read in full; a wider tree-title search is navigation, not exhaustive semantic review.",
+      "initialResult": "Three files all facets CLEAN; words/楓.md comprehensibility NEEDS FIX for one minor unclear cross-reference. Optional observations preserved separately.",
+      "confirmationReport": "batch-008-confirmation-claude.md",
+      "confirmationExecution": "batch-008-confirmation-claude-execution.json",
+      "confirmationToolCalls": 4,
+      "confirmationResult": "Own original report, exact diff and complete revised word freshly read; linked 紅葉 context and dictionary evidence inherited from initial inspection. Own finding resolved; revised word all3facets CLEAN; other three files explicitly inherited. Corrects the garbled optional 2059188 aside in its own original report without changing the preserved report."
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "sessionId": "2e3770d0-bd50-48a2-bf3f-72a60979c3e8",
+      "initialReport": "batch-008-initial-gpt.md",
+      "initialExecution": "batch-008-initial-gpt-execution.json",
+      "initialToolCalls": 32,
+      "initialScope": "All four teaching files, raw metadata, all52completefamilies, all9word/6kanjicomparisons and required guidance returned completely. Full confusable inventory and source snapshot read; both live Kotobank pages inspected. Wider vocabulary inventory not exhaustively searched.",
+      "initialResult": "All four files all3facets CLEAN; no initial finding or optional recommendation. Did not identify the localized reference ambiguity.",
+      "confirmationReport": "batch-008-confirmation-gpt.md",
+      "confirmationExecution": "batch-008-confirmation-gpt-execution.json",
+      "confirmationToolCalls": 5,
+      "confirmationResult": "Own original report, exact diff, complete revised word and linked 紅葉 freshly read. Independently accepts conditional reading statement with no regression, revised word all3facets CLEAN; explicitly does not retroactively claim the initial catch. Unchanged three-file verdicts inherited."
+    }
+  ],
+  "process": {
+    "maximumActiveReviewerProcesses": 1,
+    "allFourProcessExitCodes": [0, 0, 0, 0],
+    "internalOverlappingStarts": [0, 0, 0, 0],
+    "unfinishedTools": 0,
+    "actualExitAndOriginalReportPersistenceBeforeEachNextLaunch": true,
+    "snapshotUnchangedDuringEachReview": true,
+    "initialPromptsIdentical": true,
+    "initialBlindness": "Same frozen snapshot/scope/raw dictionary access; no other report or author progress/rationale/adjudication supplied. First original complete report and receipt preserved before second process launched. Postinitial confirmation task explicitly exposes the one-line correction, not a new blind initial review.",
+    "modelSelection": "Current installed --help and help config captured in siblingcontrol/batch-008-current-help.txt and batch-008-current-config-help.txt. Actual model events/usage agree with advertised explicit IDs; no Auto substitution.",
+    "availableTools": ["view", "glob", "rg", "web_fetch"],
+    "disabled": "Shell, editing, delegation and built-in MCP tools unavailable. No owner GH_TOKEN inherited. No nested agent, parallel author, second runner or concurrent resource-heavy Android work.",
+    "readReceipts": "Requested ranges, returned lengths/hashes, exact returned-text containment checks and model/session/exit/tool timings preserved in each execution receipt. No observed truncated/failed assigned reads. Returned bytes establish evidence availability, not comprehension.",
+    "usageLimit": "Original-session resumed usage can be cumulative, not isolated confirmation-turn cost.",
+    "identityLimit": "Reviewers rely on coordinator-supplied Git identity; coordinator independently verified full normal signatures and runtime diff."
+  },
+  "findings": [
+    {
+      "id": "claude-initial-1",
+      "severity": "Minor",
+      "facet": "comprehensibility",
+      "location": "words/楓.md:28",
+      "confidence": "high",
+      "claim": "The maple-tree example above points to local 楓/かえで examples although the intended 紅葉/もみじ example is in the linked article; a learner could confuse the reference or spelling.",
+      "status": "resolved",
+      "evidence": "Actual original words/楓.md:17-18 and28; complete unchanged words/紅葉.md maple example; pinned JMdict1578780 versus2857870 sense/readings.",
+      "remedy": "State directly: When 紅葉 means a maple tree, read it もみじ, not こうよう.",
+      "reconciliation": "Localized unclear reference, not an incorrect Japanese example or lexical reading. Both original sessions confirm exact correction and no regression; GPT's original CLEAN verdict is preserved rather than recast as an initial discovery."
+    }
+  ],
+  "optional": [
+    {
+      "origin": "claude-initial",
+      "claim": "Add sourced phonetic-history analysis with 風.",
+      "status": "optional",
+      "disposition": "Not adopted. Current labelled modern-shape mnemonic and structure-unclassified meet bounded scope without a new historical claim."
+    },
+    {
+      "origin": "claude-initial",
+      "claim": "Add alternate 槭樹 spelling and archaic かえるで.",
+      "status": "optional",
+      "disposition": "Not adopted. Full families retained; neither is necessary to this native-primary-spelling lesson. Missing-cmap alias needs separate evidence if ever introduced. Garbled 2059188 aside withdrawn by its author in confirmation; original complete report preserved."
+    },
+    {
+      "origin": "claude-initial",
+      "claim": "Add a くす sentence or mixed くすの木 spelling.",
+      "status": "optional",
+      "disposition": "Not adopted. Both whole single-character native readings are already explicitly sourced and taught; extra repetition is not a coverage prerequisite."
+    },
+    {
+      "origin": "claude-initial",
+      "claim": "Add an incidental 紅葉 to new 楓 word backlink.",
+      "status": "optional",
+      "disposition": "Not adopted. No baseline-declared pair activated and both required support pairs already reciprocal. Incidental mention is not a missing mandatory link."
+    }
+  ],
+  "modelContributions": {
+    "verifiedUniqueActionableInitialSignal": "Claude identified the localized reference ambiguity; GPT's initial report did not. Both original sessions confirm its narrow correction.",
+    "gptOnly": "No additional actionable defect; complete confusable inventory coverage was deeper than Claude's search, but is not itself a unique defect or model ranking.",
+    "shared": "All8readings preserved/accounted for, useful native-key allocation, explicit source-only distinctions, maple/sweetgum and camphor/rhododendron identities, direct quiz guards and nonhistorical mnemonics.",
+    "limits": "Equivalent observations across findings/optional/limits compared. Common sample/scope, unequal live-source and inventory depth; no general model-family benchmark, native-speaker or measured learning-effectiveness certification."
+  },
+  "finalTextualVerdict": "All four teaching files CLEAN across correctness, scoped coverage and textual comprehensibility after bounded correction. No consequential in-scope unresolved claim. The four source-only on readings remain explicitly unestablished here, never offered as questions.",
+  "acceptanceLimits": "Local textual closure only, not publication. Fresh non-skipped Android, full combined-current-main/source/baseline/reading/link acceptance, normal accepted signing and owner fast-forward push, CI and every immutable public ZIP hash/budget still pending. Published29/1228 and remaining1199 unchanged. No009. Inherited accepted pilot native/all40/160fonts only for unchanged production scope; no fresh native/visual/physical-phone/general-release evidence. Compatible Androidf9b59a2+ required; outstanding phone acceptance is not a new blanket bounded-owner-testing veto."
+}

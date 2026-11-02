@@ -3,9 +3,9 @@
   "batch": "008",
   "baseCommit": "ef4b03beee924e114161fca5ff9e4839dfe3cc5a",
   "membership": ["楓", "楠"],
-  "status": "draft-not-independently-reviewed",
+  "status": "textual-review-closed-local-unpublished",
   "drafted": ["楓", "楠"],
-  "reviewClosed": [],
+  "reviewClosed": ["楓", "楠"],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
@@ -13,8 +13,8 @@
     {"selection": "batch-008-comparison-selection.json", "xml": "batch-008-comparisons-jmdict.xml"}
   ],
   "supportMappings": [
-    {"kanji": "楓", "article": "words/楓.md", "primaryReading": "かえで", "entryIds": ["2061900"], "selectedSenses": [1], "newArticle": true, "status": "draft-not-independently-reviewed"},
-    {"kanji": "楠", "article": "words/楠.md", "primaryReading": "くすのき", "entryIds": ["1460720"], "selectedSenses": [1], "newArticle": true, "status": "draft-not-independently-reviewed"}
+    {"kanji": "楓", "article": "words/楓.md", "primaryReading": "かえで", "entryIds": ["2061900"], "selectedSenses": [1], "newArticle": true, "status": "textual-review-closed-local-unpublished"},
+    {"kanji": "楠", "article": "words/楠.md", "primaryReading": "くすのき", "entryIds": ["1460720"], "selectedSenses": [1], "newArticle": true, "status": "textual-review-closed-local-unpublished"}
   ],
   "requiredReciprocalPairs": [["楓", "words/楓.md"], ["楠", "words/楠.md"]],
   "changedReusedPassages": [],
@@ -92,6 +92,9 @@
   "phoneAcceptance": "Explicitly outstanding; no new native/visual/device/physical-phone/general-release claim.",
   "publishedAdditions": 29,
   "remainingAdditions": 1199,
-  "nextAction": "Validate full source/baseline/reading/link/font/stroke/budget invariants and freeze a signed local unreviewed snapshot. Obtain two serial blind model-family initial reviews on that same snapshot before reconciliation, freshAndroid/current-main/publication acceptance. No batch009.",
-  "limits": "Draft teaching and author evidence only. No independent reviewer has launched; draft additions do not increase delivered coverage. Historical pilot native/all40/160font evidence applies only to unchanged production scope."
+  "initialSnapshot": "2a9ffe40c77c8fb74cd97c422932ddfe868a3248",
+  "reviewedTeachingSnapshot": "dd8cd880fcfe212256e8825b1486c5c7fbc8b8b7",
+  "reviewRecord": "../n1-reviews/batch-008-reconciliation.json",
+  "nextAction": "Fresh non-skipped Android RealContentTest3/RareHanTest1 against the actual sibling worktree, full source/baseline/link/reading checks and actual combined-current-main acceptance, normal signing and owner fast-forward push, relevant CI and every immutable public ZIP runtime hash under unchanged guards. Preserve the original four reports and historical draft audit. No batch009 before verified publication.",
+  "limits": "Two-family textual review and both original-session clarity confirmations are closed locally, not published. Published29/1228 and remaining1199 unchanged. Fresh Android/current-main/publication acceptance remains pending. Historical pilot native/all40/160font evidence applies only to unchanged production scope; no fresh native/physical-phone/general-release claim."
 }

@@ -69,10 +69,13 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   their kanji. The compatible-client and outstanding physical-phone/
   general-release qualifications above remain unchanged.
   [Batch 008](n1-sources/batch-008-progress.json), 楓・楠, has
-  **local unreviewed drafts** with full reading and source dispositions.
+  **local textual-review-closed teaching** after two blind model-family
+  initial reviews and both original-session clarity confirmations. Its
+  [reconciliation](n1-reviews/batch-008-reconciliation.json) preserves the
+  localized maple cross-reference fix, original reports and actual limits.
   Its two necessary supporting words have no vocabulary level inferred
   from their kanji. These drafts do not increase published coverage;
-  two-family review and subsequent acceptance gates remain pending.
+  fresh Android and combined-main/publication acceptance remain pending.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee

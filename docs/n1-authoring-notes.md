@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 008: local unreviewed draft
+## Batch 008: local textual review closed; publication pending
 
 The [frozen packet](n1-sources/batch-008-membership.json) is **楓・楠**.
 Two necessary new support articles provide two reciprocal pairs; neither
@@ -63,13 +63,21 @@ Both new cards use thirteen pinned generated strokes, without manual
 geometry. New native spellings retain source metadata and dictionary-verified
 allocations; supporting words have no vocabulary level inferred
 from their kanji. This is **local unreviewed teaching, not delivery**.
-Two serial blind different-family initial reviews, reconciliation and fresh
-Android/current-main/publication gates remain pending. Published coverage
+Two serial blind different-family initial reviews and both original-session
+confirmations are [reconciled](n1-reviews/batch-008-reconciliation.json).
+Claude identified a minor unclear reference to a maple-tree example in the
+linked 紅葉 article; the new 楓 word article now states the conditional
+もみじ/こうよう distinction directly. GPT did not identify that initial
+defect and independently confirmed the exact correction without regression.
+Optional expansions remain nonblocking and unadopted. Four actual review
+processes exited successfully with no observed internal tool overlaps;
+unequal inventory/live-source read depth is disclosed, not a model ranking.
+Fresh Android/current-main/publication gates remain pending. Published coverage
 is **29/1,228; 1,199 remain to deliver**.
 The [draft audit](n1-sources/batch-008-draft-audit.json) and
 [execution record](n1-sources/execution-030.json) distinguish 353 passing Python
 tests and exact source/baseline/link/reading/font/stroke/local-budget checks
-from the still-pending independent and publication acceptance gates.
+from textual closure and the still-pending publication acceptance gates.
 
 ## Batch 007: published and verified
 
