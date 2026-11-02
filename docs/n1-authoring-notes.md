@@ -39,7 +39,7 @@ will be retained in each batch before lexical authoring.
 
 ## Pilot
 
-### Current curation checkpoint
+### Current pilot acceptance checkpoint
 
 The same twelve-card pilot now has explicit, source-backed
 [quiz subsets](n1-sources/pilot-curated-readings.json): **19 offered keys**,
@@ -65,14 +65,28 @@ retain actual models, process exits, full returned-packet receipts and the
 limited accidental exposure to unrelated N2 review snippets. All consequential
 in-scope textual findings are resolved; this is not native-speaker certification.
 
-**The pilot is still not accepted or published.** Complete-archive native
-selection/meaning/curated-reading/drawing/article/system-Back/offline acceptance
-must use production ContentSync once, not the older fixture's redundant preflight
-parse. The previous all-40/four-family glyph inspection is inherited honestly.
-Physical-phone/general-release acceptance is explicitly outstanding; approved
-issue #60 permits that distinction for bounded owner testing, not fabricated
-phone evidence. Refresh the accepted-pilot estimate and complete normal
-integration, CI and exact immutable-ZIP gates before later batches.
+**The pilot is locally accepted for bounded owner testing; publication is separate.**
+The [single-import native retry](n1-reviews/pilot-native-single-import-acceptance.md)
+has terminal per-case status 0 for the combined N1 selection, meaning, curated
+reading, drawing, article/system-Back and offline routes. Actual production
+ContentSync accepted the full exact Git archive once, with 997 kanji / 4,951 words,
+zero problems and the expected Room manifest metadata. Four route executions
+retain two passes and two harness-readiness failures; the final pass includes
+eleven exported artifacts and nine visually inspected screenshots. The offline
+drawing check uses the production shape-only fallback, not handwriting-model
+recognition or human drawing.
+
+The previous all-40/four-family glyph inspection is inherited honestly.
+Fresh RealContentTest 3/3 and RareHanTest 1/1 checks passed without skips against
+this sibling content tree; all temporary Android inputs are cleaned.
+Physical-phone/general-release acceptance remains explicitly outstanding;
+approved issue #60 permits that distinction for bounded owner testing.
+The [updated estimate](n1-sources/pilot-accepted-recalibration.json) records
+the nine-support-word pilot and 47.100–49.312-MiB retained capacity sensitivities,
+not forecasts. At the maximum later cap, the floor remains 83 batches / 166
+initial assignments, plus the already necessary separate pilot curation pair
+and further confirmations. Complete normal signed current-main integration,
+CI and exact immutable-ZIP gates before delivery or later batches.
 
 ### Earlier pilot preparation and gate history
 

@@ -190,32 +190,47 @@ or any manifested runtime file. The publishing entry guard is **18,000**, below 
 Android **20,000-entry** hard limit. Both count directories and skipped files, not just cards.
 The compressed, inflated, retained and per-file byte guards are unchanged.
 
-The N2 baseline (`7535831`) has 7,964 public ZIP entries. N1 planning uses
-[kanjiapi.dev's 1,232-kanji community set](https://kanjiapi.dev/v1/kanji/jlpt-1), with 1,228 cards
-not already present, and [3,427 vocabulary rows at the pinned source revision](https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n1.csv).
-Allowing one card and one stroke file per missing kanji and one article per vocabulary row,
-without relying on vocabulary reuse, projects **13,847 entries** before supporting content/media.
-The publishing guard leaves 4,153 entries beyond that estimate and 2,000 below the app cap.
-Current N2 mean card/stroke sizes plus a manifest-growth allowance project about **52.4 MiB retained**
-against the unchanged 56-MiB publishing guard. This is an estimate, not guaranteed fit or permission
-to spend media budgets: check actual output incrementally during N1 authoring.
+The N2 baseline (`7535831`) has 7,964 public ZIP entries. The current
+[N1 kanji-only expansion](docs/n1-authoring-notes.md) uses
+[kanjiapi.dev's 1,232-kanji community set](https://kanjiapi.dev/v1/kanji/jlpt-1):
+1,228 additions to the 985-card implementation baseline. Its twelve-card pilot needs
+nine new support word articles and reuses eight; these are not an N1 vocabulary-list expansion.
+The [accepted-pilot recalibration](docs/n1-sources/pilot-accepted-recalibration.json)
+measures **8,101 entries / 43,393,072 retained bytes** before publication documentation.
+At the pilot's mean card/stroke/manifest sizes, full kanji coverage with 9, 921 or 1,228
+total new support articles would use approximately **10,533 / 11,445 / 11,752 entries**
+and **47.100 / 48.755 / 49.312 MiB retained**. These are capacity sensitivities,
+not support-count forecasts, targets, upper bounds or permission to spend media budgets.
+The deliberately risk-heavy pilot does not establish future compressed/inflated sizes or effort.
+At most 15 kanji per later batch means a floor of **83 batches / 166 initial review assignments**;
+the pilot's separate curation pair already adds two assignments beyond that floor.
+
+The earlier **13,847-entry / approximately 52.4-MiB** projection combined kanji with
+[3,427 N1 vocabulary rows](https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n1.csv).
+That vocabulary project and other N1 sections remain deferred. Check actual combined output
+incrementally against the unchanged 18,000-entry / 42-MiB compressed / 80-MiB inflated /
+56-MiB retained publishing guards.
 
 Deliver an upgraded Android APK before publishing an archive above older clients' **8,000-entry**
 limit. Source publication alone does not upgrade installed apps; failed sync keeps their last accepted
-offline collection. No N1 cards are added by this capacity change.
+offline collection. The pilot also requires curated-reading-compatible Android **`f9b59a2` or later**:
+older APKs ignore its approved quiz subsets. The normally owner-signed prerequisite APK is
+available to the owner; phone transfer/installation and physical-phone/general-release acceptance
+remain explicitly outstanding. [Native acceptance](docs/n1-reviews/pilot-native-single-import-acceptance.md)
+is bounded API35 emulator evidence for owner testing, not phone certification.
 Before publication, check the exact GitHub ZIP and every manifested file/hash as well as local budgets.
 
 ### Content inventory
 
-- `kanji/` – one card per kanji (985): meaning, radical, readings, common words, and origin notes or explicitly labelled modern-shape mnemonics.
+- `kanji/` – one card per kanji (997): meaning, radical, readings, common words, and origin notes or explicitly labelled modern-shape mnemonics.
   The deck covers all 79 N5, 166 N4, 367 N3 and 367 N2 kanji in the selected [kanjiapi.dev](https://kanjiapi.dev) community sets.
-  It also includes 分 as a documented N5 exception and five N1 article-subject additions:
-  80 N5, 166 N4, 367 N3, 367 N2 and five N1. The [N2 expansion](docs/n2-review.md) added 365 cards
+  It also includes 分 as a documented N5 exception, five N1 article-subject additions and the twelve-card N1 pilot:
+  80 N5, 166 N4, 367 N3, 367 N2 and 17 N1. The [N2 expansion](docs/n2-review.md) added 365 cards
   to the two existing N2 cards in twenty-four 15-card batches and a final five-card batch.
   All 25 batches have independent GPT/Claude review and reconciled reports, including changed-passage confirmations.
   These community level sets are not official JLPT kanji lists.
   The `starter` tag identifies the original 118-card cohort, not the later expansions.
-- `words/` – one article per written word form (4,942): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
+- `words/` – one article per written word form (4,951): native words, Sino-Japanese compounds and loanwords, including kana-only spellings.
   Articles explain meaning, spelling or formation, synonyms, antonyms and usage distinctions.
   The selected community vocabulary list's 684 N5 and 640 additional N4 rows are covered by 1,308 articles:
   924 new articles and 384 reused ones. Multiple source readings can share an article.
@@ -226,6 +241,7 @@ Before publication, check the exact GitHub ZIP and every manifested file/hash as
   independent GPT/Claude reviews, reconciled findings and post-review confirmations.
   Word and applicable existing N2 kanji cards link reciprocally; the
   [completion audit](docs/n2-vocabulary-completion-audit.json) records the exact coverage and limits.
+  Nine additional articles support the N1 kanji pilot; their vocabulary levels are not inferred from kanji membership.
 - `strokes/` – generated stroke data. Validate with `python tools/validate.py`.
 - `grammar/` – versioned, contrast-focused exercises for the app's Grammar section: the original 8-exercise pilot, an
   18-exercise foundations batch on nominalization and negative meanings, 12 exercises on ability, occurrence, decisions and
@@ -451,7 +467,7 @@ The [article-subject snapshot](docs/article-subjects-source-snapshot.json) recor
 作家 is shared with the N3 vocabulary expansion, so merging these additions adds 16 distinct word cards to that collection.
 
 Source-covered word articles carry their own `jlpt` metadata: 672 N5, 636 N4, 1,625 N3, 1,739 N2 and two N1 articles, independently of the kanji they contain.
-This article-level label does not assign every subsidiary sense or reading to that level. The remaining 268 articles have no
+This article-level label does not assign every subsidiary sense or reading to that level. The remaining 277 articles have no
 sourced word-level label. In particular, the pinned list's N1 labels for くらい and だけ are not recommendations to postpone these basic particles.
 Vocabulary-aware app versions use explicit levels first and retain kanji-based inference only when the
 field is absent; older versions ignore word-level metadata. N4 study includes N5; N3 study includes both.

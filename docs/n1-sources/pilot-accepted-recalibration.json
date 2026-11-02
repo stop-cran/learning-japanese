@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "execution": 8,
+  "batch": "pilot",
+  "teachingSnapshot": "bb448a25c522e9703d43e87216320c48a9121f1c",
+  "nativeArchiveSnapshot": "79360e975ccf54cb484994ddc2632b2c7dabc6b1",
+  "status": "locally-accepted-for-bounded-owner-testing-publication-gates-separate",
+  "measuredPilot": {
+    "newKanji": 12,
+    "newSupportWords": 9,
+    "reusedSupportArticles": 8,
+    "requiredReciprocalPairs": 19,
+    "fullDistinctJmdictFamilies": 84,
+    "metadataReadings": 47,
+    "sourceOnlyMetadataReadings": 15,
+    "curatedOfferedKeys": 19,
+    "sourceOnlyOfferedKeys": 0,
+    "fullSetMetadataReadings": 3303,
+    "cardBytes": 29945,
+    "strokeBytes": 27105,
+    "newWordBytes": 16331,
+    "kanjiManifestGrowthBytes": 2112,
+    "wordManifestGrowthBytes": 792,
+    "localPreDocumentationEntries": 8101,
+    "retainedBytes": 43393072,
+    "localPreDocumentationInflatedBytes": 43659106,
+    "localPreDocumentationZipBytes": 29779700
+  },
+  "method": "Current measured working tree plus 1216 remaining undrafted characters at pilot mean card/stroke/manifest bytes, plus support articles beyond the nine already authored at observed mean word/manifest bytes. Exact runtime bytes and UTF-8 manifest entry sizes; scenarios rounded only at the final byte. Unknown future reused-passage changes excluded. Contributor evidence is export-ignored. Final published ZIP must be independently measured and hash-checked.",
+  "sensitivityScenarios": [
+    {"totalNewSupportWords": 9, "archiveEntries": 10533, "retainedBytes": 49388155, "retainedMiB": 47.100},
+    {"totalNewSupportWords": 921, "archiveEntries": 11445, "retainedBytes": 51123285, "retainedMiB": 48.755},
+    {"totalNewSupportWords": 1228, "archiveEntries": 11752, "retainedBytes": 51707370, "retainedMiB": 49.312}
+  ],
+  "batchSensitivity": [
+    {"laterBatchCap": 15, "totalBatches": 83, "baselineInitialReviewAssignments": 166},
+    {"laterBatchCap": 10, "totalBatches": 123, "baselineInitialReviewAssignments": 246},
+    {"laterBatchCap": 8, "totalBatches": 153, "baselineInitialReviewAssignments": 306}
+  ],
+  "observedEffort": {
+    "coordinatorExecutionsThroughNativeAcceptance": 8,
+    "pilotInitialReviewAssignments": 4,
+    "pilotBoundedOriginalSessionConfirmations": 3,
+    "explanation": "Original teaching pair plus separate curation/support-diff pair; original Claude confirmation plus both curation confirmations. Native retry required four route executions in this execution: two terminal passes and two harness-readiness failures; one failed exporter discovery and one successful standalone export. No new content review was repeated here.",
+    "assignmentFloorAfterObservedPilotExtraPair": 168,
+    "limits": "166 is the two-initial-reviews-per-batch floor at cap 15; the already necessary extra pilot pair raises observed-plus-minimum-remaining initial assignments to 168. Confirmations, native work, integration and any further splits/reviews are additional. No defensible elapsed-time, AI-credit or exact lexical-support-count forecast."
+  },
+  "limits": [
+    "The 921-word scenario is exactly the current nine-per-twelve ratio applied to 1228 additions: a capacity sensitivity, not a lexical forecast or target.",
+    "Nine total words assumes no further support and is not an editorial plan. One word per character is not an upper bound. Reuse, multiple readings and multi-kanji words can move support requirements either way.",
+    "Pilot risks and 47 readings for twelve characters are deliberately unrepresentative of the full 3303-entry workload. Bound subsequent packets below fifteen when dictionary/reused-passage complexity demands it.",
+    "Future cards, support families, reused passages and corrections may be larger. No compressed/inflated forecast or guard increase follows; measure every actual integrated/public ZIP.",
+    "Native acceptance is bounded API35 offline cached-content evidence with shape-only drawing fallback, not phone or handwriting-model recognition. Phone/general-release acceptance is explicitly outstanding.",
+    "Do not start a later batch until the pilot has passed signed current-main integration, validation, owner fast-forward publication, CI and exact immutable-ZIP verification."
+  ],
+  "historicalEstimate": "pilot-recalibration.json",
+  "nativeAcceptance": "../n1-reviews/pilot-native-single-import-acceptance.md",
+  "compatibleClient": "Android f9b59a2 or later; old APKs ignore curation and old 8000-entry clients reject the archive."
+}

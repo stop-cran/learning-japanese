@@ -18,6 +18,10 @@ This repository contains original notes plus data derived from open dictionary p
   exact community membership and the preserved baseline. Its [selected complete character records](docs/n1-sources/kanjidic2-selected.xml)
   are reserialized from KANJIDIC2; the [source index](docs/n1-sources/source-index.json) selects Japanese on/kun readings,
   primary stroke counts and classical radicals. These preparation records do not assert authored or reviewed N1 coverage.
+  The [twelve-card pilot ledger](docs/n1-sources/pilot-progress.json) separately records actual
+  teaching/review/acceptance progress. Its five bounded JMdict packets retain 84 complete
+  selected families, including comparisons and restrictions; selected teaching uses do not
+  assert that every sense or spelling in a family is ordinary or interchangeable.
   The [N4 word-pair index](docs/n4-word-sources.tsv) and [N3 primary-word index](docs/n3-word-sources.tsv) identify matching
   JMdict entries for the selected spellings and readings; not every sense of those entries applies to an article.
   The N3 index identifies a non-exhaustive selection of primary teaching senses and distinguishes new articles from two reused ones.

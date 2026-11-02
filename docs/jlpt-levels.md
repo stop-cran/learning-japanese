@@ -21,6 +21,10 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   The [N1 kanji notes](n1-authoring-notes.md) distinguish source preparation from
   authored, independently reviewed and published coverage. The separate 妖
   exception below remains unchanged. This is not yet a delivered N1 study set.
+  The twelve-card pilot adds 幹・氏・扱・乃・凹・凸・矛・鷹・彗・漱・栞・莉;
+  its [acceptance record](n1-reviews/pilot-native-single-import-acceptance.md)
+  distinguishes local bounded owner-testing acceptance from publication.
+  The current tree has 16 source members plus 妖, not complete N1 coverage.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee
