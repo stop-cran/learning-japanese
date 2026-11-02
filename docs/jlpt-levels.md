@@ -25,12 +25,14 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   its [acceptance record](n1-reviews/pilot-native-single-import-acceptance.md)
   distinguishes local bounded owner-testing acceptance from publication.
   The published pilot and four-card [batch 002](n1-sources/batch-002-publication.json)
-  deliver sixteen additions: 20 source members plus 妖, not complete N1 coverage.
+  delivered sixteen additions at that checkpoint, not complete N1 coverage.
   Three-card [batch 003](n1-sources/batch-003-progress.json), 苗・畔・畝,
-  is textually review-closed after serial independent two-family reviews and
-  original-session confirmations, but remains unpublished and does not increase
-  delivered coverage. Android/integration/publication gates remain pending;
-  there are still 1,212 additions to deliver.
+  is now [published and verified](n1-sources/batch-003-publication.json) after
+  independent two-family review, original-session confirmations and fresh
+  Android/integration/publication checks. Together they deliver **19 additions**:
+  23 source members plus 妖, with **1,209 additions still to deliver**.
+  Three-card [batch 004](n1-sources/batch-004-progress.json), 杉・桐・柳,
+  is only a local unreviewed draft and does not increase delivered coverage.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee

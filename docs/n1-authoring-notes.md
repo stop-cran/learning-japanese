@@ -37,7 +37,34 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 003: textual review closed, unpublished
+## Batch 004: local draft, independent review pending
+
+The [frozen tree packet](n1-sources/batch-004-membership.json) is
+**杉・桐・柳**. Its [draft ledger](n1-sources/batch-004-progress.json)
+keeps all seven full metadata readings and selects four useful question keys.
+Three necessary new support articles, **桐・柳・川柳**, and one component
+backlink in existing **杉** form four reciprocal pairs, including one activated
+baseline-declared pair. The reused 杉 article preserves its identity, primary
+すぎ, sourced N2 level, title and original exclusion.
+
+Two packets preserve **23 complete JMdict families**, including the distinct
+川柳 poem/tree/tea families and reading/sense restrictions. The
+[external evidence](n1-sources/batch-004-external-evidence.json) identifies exact
+Japanese dictionary headings and unsuitable extractions rather than treating
+successful URLs as verification. [Pinned stroke receipts](n1-sources/batch-004-stroke-audit.json)
+verify 7/10/9 counts and exact reconversion. All three card glyphs and 卯 are
+present in the unchanged bundled font cmaps; 彡 is absent but already appears
+in baseline 形. This is not a fresh native visual check.
+
+**These are unreviewed local drafts, not delivered additions.** Validator,
+fresh manifest, vocabulary consistency, exact batch audit, archive-budget
+checks and 353 Python tests pass. No independent reviewer has been launched;
+two serial different-family initial reviews of the same frozen teaching,
+reconciliation, fresh non-skipped Android tests and combined-main/publication
+acceptance remain required. Published additions stay **19/1,228**,
+with **1,209 still to deliver**. No next batch or phone acceptance is claimed.
+
+## Batch 003: published and verified
 
 The next [frozen packet](n1-sources/batch-003-membership.json) is
 **苗・畔・畝**: young plants, paddy boundaries and raised planting rows.
@@ -59,7 +86,7 @@ separates exact dictionary headings from unsuccessful/misleading extractions.
 The [stroke receipt](n1-sources/batch-003-stroke-audit.json) verifies the
 original pinned SVG blobs, exact reconversion and 8/10/10 stroke counts.
 
-**These three cards are textually review-closed, not delivered additions.**
+**These three cards are published for bounded owner testing.**
 Independent `claude-opus-5.5` and `gpt-6.1-sol` reviews cover the same signed
 `6ce5676` teaching snapshot; both original sessions confirmed the exact
 two-pair correction at signed `b99945c`. All four processes and their internal
@@ -71,10 +98,15 @@ metadata. Other optional polish remains nonblocking, not manufactured defects.
 All ten assigned files are CLEAN across the three textual facets; this is not
 native-speaker or measured-learning certification.
 
-Fresh applicable Android checks and the combined-main/publication gates
-remain pending. None of these three characters is in
-the forty-character fallback set; no fresh native or phone check is claimed.
-Published additions remain **16/1,228**, with **1,212 still to deliver**.
+The [publication record](n1-sources/batch-003-publication.json) pins accepted
+`6526427` and [execution 014](n1-sources/execution-014.json) records fresh
+non-skipped RealContentTest 3/3 and RareHanTest 1/1 against this isolated
+content tree, 353 Python tests and combined-main acceptance. Terminal receipt
+`c7b7bdc` has green CI `41521646661`; its exact immutable GitHub ZIP preserves
+all 8,103 runtime hashes within the unchanged budgets. None of these three
+characters is in the forty-character fallback set; no fresh native or phone
+check is claimed. Published additions are **19/1,228**, with **1,209 still
+to deliver**.
 
 ## Batch 002: published and verified
 

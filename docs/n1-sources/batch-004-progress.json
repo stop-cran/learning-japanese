@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "batch": "004",
+  "baseCommit": "c7b7bdcfb509b13b119fa8a85fdd2adb0878775d",
+  "membership": ["杉", "桐", "柳"],
+  "status": "draft-not-independently-reviewed",
+  "drafted": ["杉", "桐", "柳"],
+  "reviewClosed": [],
+  "published": [],
+  "sourceSnapshot": "docs/n1-source-snapshot.json",
+  "dictionaryPackets": [
+    {"selection": "batch-004-lexical-selection.json", "xml": "batch-004-jmdict.xml"},
+    {"selection": "batch-004-comparison-selection.json", "xml": "batch-004-comparisons-jmdict.xml"}
+  ],
+  "supportMappings": [
+    {"kanji": "杉", "article": "words/杉.md", "primaryReading": "すぎ", "entryIds": ["1373520"], "selectedSenses": [1], "newArticle": false, "status": "drafted-linked"},
+    {"kanji": "桐", "article": "words/桐.md", "primaryReading": "きり", "entryIds": ["1240710"], "selectedSenses": [1], "newArticle": true, "status": "drafted-linked"},
+    {"kanji": "柳", "article": "words/柳.md", "primaryReading": "やなぎ", "entryIds": ["1538490"], "selectedSenses": [1, 2], "newArticle": true, "status": "drafted-linked"},
+    {"kanji": "柳", "article": "words/川柳.md", "primaryReading": "せんりゅう", "entryIds": ["1390110"], "selectedSenses": [1], "newArticle": true, "status": "drafted-linked"}
+  ],
+  "requiredReciprocalPairs": [
+    ["杉", "words/杉.md"],
+    ["桐", "words/桐.md"],
+    ["柳", "words/柳.md"],
+    ["柳", "words/川柳.md"]
+  ],
+  "changedReusedPassages": [
+    {
+      "article": "words/杉.md",
+      "change": "Add the newly available component-card link in the existing single-character explanation. No factual or metadata rewrite.",
+      "before": "This is a single kanji with the native reading すぎ, not a compound to split into separate words.",
+      "after": "This is a single kanji, [杉](../kanji/杉.md), with the native reading すぎ, not a compound to split into separate words.",
+      "metadataChanges": "None: stable 杉 identity, primary すぎ, title Japanese cedar, easier sourced N2, declared 杉 and original 木 exclusion unchanged."
+    }
+  ],
+  "readingDispositions": [
+    {"kanji": "杉", "kind": "on", "reading": "サン", "selected": false, "sourceOnly": true, "entryIds": [], "reason": "Full source reading retained. Exact 字通 杉 heading also confirms サン, but no useful linked modern word example is established in this packet. The 杉松 URL returned only unrelated keyword content and is not evidence. Source-only here means a bounded teaching disposition, not a claim that the reading or compounds do not exist. 杉林 すぎばやし is a kun compound, not on evidence."},
+    {"kanji": "杉", "kind": "kun", "reading": "すぎ", "selected": true, "entryIds": ["1373520"], "article": "words/杉.md", "example": "杉 すぎ - Japanese cedar, Cryptomeria japonica", "reason": "Complete family has the exact standalone native noun, rare spelling 椙 and a kana-only スギ form. Reused article already teaches those restrictions/species and stays N2. A component backlink activates its baseline-declared pair without changing identity, reading, metadata or exclusions."},
+    {"kanji": "桐", "kind": "on", "reading": "トウ", "selected": false, "entryIds": ["1240720", "1586170"], "example": "桐油 とうゆ - tung oil; 梧桐 ごとう - Chinese parasol-tree", "reason": "Both complete compound families inspected. 桐油 and exact 精選版 とうゆ/きりあぶら headings establish material terminology and アブラギリ seed source, not oil from Paulownia tomentosa. 梧桐/青桐 family has no reading restrictions but a usual-kana flag; its species is Firmiana simplex. Recognition only, no new specialist support article just to add a key."},
+    {"kanji": "桐", "kind": "on", "reading": "ドウ", "selected": false, "entryIds": [], "example": "桐人 どうじん - paulownia wooden figure", "reason": "Exact public 字通 桐人 heading explicitly reads どうじん and defines a paulownia wooden figure, with a classical 塩鉄論 citation. It is not in the selected JMdict packet; provenance is external, not a fabricated JMdict family or modern frequency claim. Retain qualified recognition example, do not offer a classical-text prompt."},
+    {"kanji": "桐", "kind": "kun", "reading": "きり", "selected": true, "entryIds": ["1240710"], "article": "words/桐.md", "example": "桐 きり - paulownia", "reason": "Exact standalone native tree name and kana-only キリ form in full family. Digital Daijisen きり confirms the tree and familiar wood applications. Grade9 describes source classification, not exclusive name usage. New support has no inferred vocabulary level."},
+    {"kanji": "柳", "kind": "on", "reading": "リュウ", "selected": true, "entryIds": ["1390110"], "article": "words/川柳.md", "example": "川柳 せんりゅう - senryu", "reason": "Exact poem-family spelling/reading verified separately from the three tree/tea/historical families. 川's independently sourced セン plus 柳's リュウ yields the whole reading; the verse name's origin in 柄井川柳 is independently confirmed in the exact 精選版 and Nipponica headings, not inferred from river/willow semantics. Useful literary recognition without producing or quoting poems."},
+    {"kanji": "柳", "kind": "kun", "reading": "やなぎ", "selected": true, "entryIds": ["1538490"], "article": "words/柳.md", "example": "柳 やなぎ - willow", "reason": "Exact standalone tree noun. Full family covers Salix generally and a reading-restricted weeping-willow sense; ようりゅう is restricted to 楊柳 and is not offered for 柳. Separate astronomical りゅう family is not pooled into the plant noun."}
+  ],
+  "curatedProjection": [
+    {"kanji": "杉", "quizOnyomi": [], "quizKunyomi": ["すぎ"], "onKeys": [], "kunKeys": ["すぎ"]},
+    {"kanji": "桐", "quizOnyomi": [], "quizKunyomi": ["きり"], "onKeys": [], "kunKeys": ["きり"]},
+    {"kanji": "柳", "quizOnyomi": ["リュウ"], "quizKunyomi": ["やなぎ"], "onKeys": ["りゅう"], "kunKeys": ["やなぎ"]}
+  ],
+  "quizAudit": {
+    "杉": {"title": "Japanese cedar", "distractors": ["形", "村", "羽"], "labels": ["shape; form", "village", "feather; bird counter"], "reason": "Actual complete cards inspected. Shared 彡 and 木/panel shapes aid discrimination, but shape, a settlement and a feather/counting suffix are not cedar. Do not use tree/wood as a wrong answer."},
+    "桐": {"title": "paulownia", "distractors": ["同", "相", "村"], "labels": ["same, equal", "mutual; aspect", "village"], "reason": "Actual complete cards inspected. 同 is the right-hand outline; 相 and 村 share a tree-like left side. Sameness/equality, relation/aspect and village do not name paulownia; inspected crest/instrument/historical senses do not make those labels fit."},
+    "柳": {"title": "willow", "distractors": ["卵", "印", "相"], "labels": ["egg; ovum", "stamp; mark", "mutual; aspect"], "reason": "Actual complete cards inspected. Similar divided right-hand shapes or shared 木, but egg, stamp and relation/aspect do not mean willow. No tree, plant or wood synonym is curated as wrong."}
+  },
+  "wordQuizAudit": {
+    "newTitles": {"桐": "paulownia tree", "柳": "willow tree", "川柳": "senryu; humorous short verse"},
+    "directExclusions": [
+      {"word": "桐", "exclude": ["木", "植物", "植える"], "entryIds": ["1240710", "1534520", "1357300", "1357250"], "reason": "An unqualified tree or plant label can describe the tree. 植える's displayed plant lacks a visible verb marker and must be guarded directly, not transitively through 植物. Different specific tree species are not equivalents. No broad timber/material clique: the exact primary family names the tree, and the article identifies the material compound 桐材 explicitly."},
+      {"word": "柳", "exclude": ["木", "植物", "植える"], "entryIds": ["1538490", "1534520", "1357300", "1357250"], "reason": "Direct tree and unqualified plant-label safeguards, not taxonomy-based equivalence between every related plant word. Whole-family astronomical りゅう is distinguished; it does not turn the ordinary tree into every star/sky label."},
+      {"word": "川柳", "exclude": ["詩", "句", "俳句", "柳", "木", "植物", "植える", "茶", "お茶"], "entryIds": ["1390110", "1929950", "1243940", "1471900", "1811520", "2693770", "1538490", "1534520", "1357300", "1357250", "1422570"], "reason": "Poem/verse are broad fitting labels; the actual senryu dictionary gloss comic haiku motivates a conservative direct haiku guard without asserting identical Japanese traditions. Written-form-only meaning questions also admit the separate riverside-willow and tea senses even though the article's primary kana is せんりゅう: protect direct willow/tree/plant and both existing tea-titled cards. Tea pair exclusions are not transitive and exact-title deduplication between 茶/お茶 does not protect 川柳 against either."}
+    ],
+    "comparisons": "Actual complete existing 杉, 木, 植物, 植える, 材木, 木材, 材料, 川, 俳句, 詩, 句, 茶, お茶 and 植木 articles inspected. New 桐/柳 do not duplicate any existing article/alias found in bounded character searches. 植木 has an additional garden/pot restriction rather than an unqualified species or generic tree label; no unrestricted equivalence is asserted. No metadata changes on reused 杉, including its original 木 exclusion.",
+    "confusableInventory": "Searched docs/confusable-words.md for 杉/桐/柳 and cedar/paulownia/willow/poem/poetry/senryu; no applicable inventory row found. Absence of a row is not semantic certification.",
+    "legacyFallback": "Related baseline 木/形/村/羽/同/相/卵/印/材/川 have three existing curated default choices. No newly activated two-distractor default slot established; no legacy distractor edits."
+  },
+  "strokeDisposition": "Existing generate_strokes.py at pinned KanjiVG70a0b7ae generated all three files. Membership-order counts7/10/9 agree with frozen primary KANJIDIC2. Exact original SVG Git blobs and reconversions verified in batch-004-stroke-audit.json; raw SVG copies under external control/artifacts/batch-004-svg. No hand-edited geometry.",
+  "fontDisposition": "None of 杉/桐/柳 belongs to the frozen forty-character fallback set. Actual unchanged three bundled font hashes and cmaps checked: all three cards, 木 and 卯 present; 彡 absent in all three but already learner-visible as baseline 形's indexing radical/body. No new code point requiring fallback is introduced by this packet. Cmap presence is not visual certification; inherit pilot all40/160 only in unchanged production scope, not as fresh native acceptance. Fresh non-skipped RareHanTest remains a later acceptance gate.",
+  "compatibleClient": "Android f9b59a2 or later; old APKs ignore explicit curation and old8000-entry clients reject the collection.",
+  "acceptance": {
+    "initialReviews": "Pending: no reviewer launched, no independent verdicts or textual closure.",
+    "android": "Not run for this draft. Fresh non-skipped RealContentTest/RareHanTest and actual combined-main acceptance remain required after textual review. No app edit or new native/device claim.",
+    "phone": "Physical-phone/general-release acceptance explicitly outstanding; not a new veto on bounded owner testing.",
+    "publication": "Local draft only. Published19/1228 additions and remaining1209 unchanged; unreviewed content or a branch containing it must not be pushed."
+  },
+  "nextAction": "Local validator/manifest/batch audit/vocabulary/budget and353Python tests passed. Normally sign a local recoverable draft with manifest and exact evidence, then yield to a fresh coordinator for SAME batch004 independent serial two-family review on one frozen snapshot. Preserve reports before corrections and reuse original sessions for bounded confirmations; do not start batch005 or publish unreviewed teaching."
+}
