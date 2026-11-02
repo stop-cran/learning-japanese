@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 004: local draft, independent review pending
+## Batch 004: textual review closed, unpublished
 
 The [frozen tree packet](n1-sources/batch-004-membership.json) is
 **杉・桐・柳**. Its [draft ledger](n1-sources/batch-004-progress.json)
@@ -56,13 +56,24 @@ verify 7/10/9 counts and exact reconversion. All three card glyphs and 卯 are
 present in the unchanged bundled font cmaps; 彡 is absent but already appears
 in baseline 形. This is not a fresh native visual check.
 
-**These are unreviewed local drafts, not delivered additions.** Validator,
-fresh manifest, vocabulary consistency, exact batch audit, archive-budget
-checks and 353 Python tests pass. No independent reviewer has been launched;
-two serial different-family initial reviews of the same frozen teaching,
-reconciliation, fresh non-skipped Android tests and combined-main/publication
-acceptance remain required. Published additions stay **19/1,228**,
-with **1,209 still to deliver**. No next batch or phone acceptance is claimed.
+**These are textually review-closed local cards, not delivered additions.**
+Independent `claude-opus-5.5` and `gpt-6.1-sol` initial reviews covered the same
+signed `bfea505` teaching snapshot. Both read all seven teaching files and
+both complete dictionary packets; an original-Claude-session supplement
+completed its initially omitted required お茶 comparison. All three actual
+processes and internal tool calls were serial. The complete original reports,
+optional dispositions and unequal comparison/live-source limits remain in the
+[reconciliation](n1-reviews/batch-004-reconciliation.json). No actionable
+in-scope defect was established and teaching did not change. All seven files
+are CLEAN across the three textual facets, with reused 杉 limited to its
+changed-backlink integration; this is not exhaustive quiz or native-speaker
+certification.
+
+Validator, fresh manifest, vocabulary consistency, exact source/baseline/batch
+and review-execution audits, archive-budget checks and 353 Python tests pass.
+Fresh non-skipped Android tests and combined-main/publication acceptance
+remain required. Published additions stay **19/1,228**, with **1,209 still
+to deliver**. No next batch or fresh native/phone acceptance is claimed.
 
 ## Batch 003: published and verified
 

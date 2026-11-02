@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "batch": "004",
+  "status": "textual-review-closed-local-unpublished",
+  "baseCommit": "c7b7bdcfb509b13b119fa8a85fdd2adb0878775d",
+  "initialSnapshot": "bfea5052387e2327dac4e365ec11ccca1289b914",
+  "reviewedTeachingSnapshot": "bfea5052387e2327dac4e365ec11ccca1289b914",
+  "snapshotSignature": "G",
+  "teachingChangesAfterInitialReviews": 0,
+  "scope": {
+    "newKanji": ["杉", "桐", "柳"],
+    "newSupportArticles": ["words/桐.md", "words/柳.md", "words/川柳.md"],
+    "changedReusedPassages": ["words/杉.md:23 component backlink only; complete context read, all metadata and other text unchanged"],
+    "facets": ["correctness", "scoped coverage", "textual phone comprehensibility"],
+    "dictionaryFamilies": 23,
+    "fullReadingDispositions": 7,
+    "curatedOfferedKeys": 4,
+    "sourceOnlyOfferedKeys": 0,
+    "requiredReciprocalPairs": 4,
+    "activatedBaselineDeclaredPairs": 1
+  },
+  "reviewers": [
+    {
+      "model": "claude-opus-5.5",
+      "sessionId": "52ea8b65-46a9-4c12-9fb0-44dd7309ed47",
+      "initialReport": "batch-004-initial-claude.md",
+      "initialExecution": "batch-004-initial-claude-execution.json",
+      "initialToolCalls": 31,
+      "initialScopeLimit": "All seven teaching files, both complete dictionary packets, raw character records, all seven distractor cards, 川 card and seven required comparison words returned completely. Initially omitted the explicitly required お茶 comparison; this was disclosed and completed in the original-session supplement. 材木/木材/材料/植木 were suggested if needed and were not read. Four live dictionary fetches; report discloses three length-limited pages, not complete-page inspection. Needed headings returned; no live 柳 page claim.",
+      "supplementReport": "batch-004-supplement-claude.md",
+      "supplementExecution": "batch-004-supplement-claude-execution.json",
+      "supplementToolCalls": 3,
+      "supplementScope": "Own initial report and previously omitted complete お茶 article. Same teaching snapshot; no changed-passage confirmation or new independent initial review. Earlier full 川柳/family reads inherited rather than repeated.",
+      "supplementResult": "No new finding or verdict change. Explicit direct 川柳/お茶 pair confirmed; initial optional suggestions and evidence limits retained."
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "sessionId": "0ce6c03b-b989-49a6-bc87-450750f40fe0",
+      "initialReport": "batch-004-initial-gpt.md",
+      "initialExecution": "batch-004-initial-gpt-execution.json",
+      "initialToolCalls": 43,
+      "initialScopeLimit": "All seven teaching files, both full dictionary packets in bounded ranges, raw character records, all seven distractor cards, 川 card and all twelve named existing comparison articles returned completely. Five actual live dictionary fetches. Oversized 川柳 response recovered through saved-output lines1-150, including exact relevant headings and the Nipponica short-poem section; unread page tail disclosed. README approach/format ranges also inspected.",
+      "result": "All seven files CLEAN across the three assigned facets; no findings or optional suggestions. No correction or confirmation required because teaching did not change."
+    }
+  ],
+  "process": {
+    "maximumActiveReviewerProcesses": 1,
+    "allThreeProcessExitCodes": [0, 0, 0],
+    "internalToolOverlaps": [0, 0, 0],
+    "unfinishedTools": 0,
+    "actualExitBeforeEachNextLaunch": true,
+    "teachingUnchangedDuringAllReviews": true,
+    "initialPromptsIdentical": true,
+    "initialBlindness": "Both initial sessions received the same snapshot, seven files, dictionary access and rubric. No other reports, progress rationale, author external observations or adjudication were returned. Complete first report persisted before the second launch; second report persisted before supplementary work. Supplement read only the original reviewer's own report.",
+    "modelSelection": "Installed CLI1.0.105 help/config catalog inspected during execution016; both explicit IDs present. Actual assistant/tool/model events and usage agree with requested families, no Auto substitution. Full help capture preserved externally at control/inputs/copilot-help-execution-016.txt.",
+    "availableTools": ["view", "glob", "rg", "web_fetch"],
+    "disabled": "Shell, edits, delegation and builtin MCPs unavailable. Owner GH_TOKEN absent at each launch. No nested agent, parallel reviewer, Android or resource-heavy command overlapped reviewer executions.",
+    "readReceipts": "All assigned teaching returned fully and matches frozen Git content. All local view returns match requested text. Exact per-call requests, return hashes, counts and limitations are retained. Unequal comparison/live-source read depth is not erased by the supplement; no general family ranking or comprehension claim.",
+    "reportPreservation": "Three complete original final reports preserved unchanged as LF UTF-8. Report/raw-execution hashes verified separately. Internal reasoning and opaque provider fields are not exported.",
+    "monitoringLimit": "A lightweight mid-GPT live JSONL read encountered an incomplete final line while the process was writing. No review failed or restarted; final complete JSONL parsed successfully after actual exit. First launch running/output confirmation was observed from growing redirected output. No repeated-read loop.",
+    "usageLimit": "Original-session supplementary usage may be cumulative session totals, not isolated-turn spending."
+  },
+  "findings": [],
+  "optional": [
+    {
+      "origin": "claude-optional-1",
+      "location": "kanji/柳.md:42",
+      "claim": "Replace the vague 印 has a simpler left side comparison with an explicit lacks木/right-part comparison.",
+      "status": "optional",
+      "disposition": "Not adopted. Existing sentence gives a correct non-exhaustive visual distinction, alongside the clearer 卵/相 contrasts and actual linked 印 card. No consequential false statement established."
+    },
+    {
+      "origin": "claude-optional-2",
+      "location": "words/杉.md:9, unchanged baseline metadata",
+      "claim": "Add 植物/植える exclusions to make the reused tree article consistent with new 桐/柳 guards.",
+      "status": "optional",
+      "disposition": "Not adopted in this backlink-only reuse. These baseline word candidates and titles already coexisted before the new kanji card; no word-quiz availability or metadata change is introduced. Preserve original exclusions and the limited integration verdict rather than silently extending it into complete unchanged-word quiz certification. New 桐/柳/川柳 direct safeguards remain required and present. Broader baseline quiz completeness is not claimed."
+    },
+    {
+      "origin": "claude-optional-3",
+      "location": "kanji/桐.md:41 and words/桐.md:32",
+      "claim": "Mention the usually-kana flag on 梧桐/あおぎり.",
+      "status": "optional",
+      "disposition": "Not adopted. The word occurs only in a qualified botanical spelling contrast, not the Common words section, selected prompts or an assertion of ordinary written frequency. Frozen family1586170 and its flag remain available; no unrestricted common-spelling claim is made."
+    }
+  ],
+  "coordinatorClarifications": [
+    "Claude's supplement refers to the 川柳 exclusion as front-matter line7; actual declaration is line8. Original report preserved, no teaching change needed.",
+    "Do not adopt the supplement's stronger neither-title-could-fit wording as general quiz certification: written 川柳 has an independently evidenced かわやなぎ tea sense even though the article's primary reading is せんりゅう. Existing direct exclusions against BOTH 茶 and お茶 correctly protect written-form-only tasks; equal tea labels and the 川柳/茶 pair do not imply this other pair.",
+    "No optional item is silently promoted to a new correctness defect, and no absence of findings is interpreted as exhaustive corpus or live-quiz safety."
+  ],
+  "modelContributions": {
+    "verifiedUniqueActionableInitialFindings": "None from either family; no quota manufactured.",
+    "claudeOnly": "Three nonblocking observations retained above; no teaching correction adopted. Initial omitted required comparison was completed transparently in original session, not credited as blind initial coverage.",
+    "gptOnly": "Broader full-body comparison reads, live 柳 heading inspection and explicit source-restriction/reading-key justification; no unique actionable defect.",
+    "shared": "All seven readings accounted for, four offered keys suitable, no source-only key offered, correct tree/species versus verse/homograph distinctions, meaningful wrong options and four reciprocal pairs.",
+    "limits": "Equivalent observations compared across findings, optional and limits. This sample supports no general model ranking, equal-read-depth claim or native-speaker certification."
+  },
+  "finalTextualVerdict": "All seven assigned files CLEAN on correctness, scoped coverage and textual comprehensibility; reused 杉 limited to changed-backlink integration. No consequential in-scope textual claim remains unresolved. Reviewed teaching remains exactly the original signed bfea505 snapshot, with zero correction diff.",
+  "acceptanceLimits": "Textual closure only, local and unpublished. Fresh non-skipped RealContentTest/RareHanTest, current-main combined-tree validation, normal signed acceptance/integration, owner-scoped fast-forward push, remote/green CI/every immutable public ZIP runtime hash and unchanged budget acceptance remain pending. Public19/1228 additions and remaining1209 unchanged. No batch005 started. Accepted pilot native/all40/160 evidence inherited only in documented unchanged production scope; no fresh native/font/physical-phone claim. Compatible Androidf9b59a2+ required; physical-phone/general-release acceptance explicitly outstanding, not a new veto on bounded owner testing."
+}

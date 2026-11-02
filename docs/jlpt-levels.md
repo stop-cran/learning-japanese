@@ -32,7 +32,9 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   Android/integration/publication checks. Together they deliver **19 additions**:
   23 source members plus 妖, with **1,209 additions still to deliver**.
   Three-card [batch 004](n1-sources/batch-004-progress.json), 杉・桐・柳,
-  is only a local unreviewed draft and does not increase delivered coverage.
+  is [textually review-closed](n1-reviews/batch-004-reconciliation.json) on the
+  same signed snapshot across two model families, but remains local and
+  unpublished; it does not increase delivered coverage.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee
