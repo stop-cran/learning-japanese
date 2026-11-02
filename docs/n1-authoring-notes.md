@@ -65,7 +65,11 @@ retain actual models, process exits, full returned-packet receipts and the
 limited accidental exposure to unrelated N2 review snippets. All consequential
 in-scope textual findings are resolved; this is not native-speaker certification.
 
-**The pilot is locally accepted for bounded owner testing; publication is separate.**
+**The pilot is published and verified for bounded owner testing** at
+`bfd2526ed943c065ff25043b483782de50b7f60d`; the
+[publication record](n1-sources/pilot-publication.json) pins green CI and
+the exact public ZIP's 8,080 runtime hashes. Twelve additions are delivered,
+**1,216 remain**; full N1 coverage is not claimed.
 The [single-import native retry](n1-reviews/pilot-native-single-import-acceptance.md)
 has terminal per-case status 0 for the combined N1 selection, meaning, curated
 reading, drawing, article/system-Back and offline routes. Actual production
@@ -85,8 +89,9 @@ The [updated estimate](n1-sources/pilot-accepted-recalibration.json) records
 the nine-support-word pilot and 47.100–49.312-MiB retained capacity sensitivities,
 not forecasts. At the maximum later cap, the floor remains 83 batches / 166
 initial assignments, plus the already necessary separate pilot curation pair
-and further confirmations. Complete normal signed current-main integration,
-CI and exact immutable-ZIP gates before delivery or later batches.
+and further confirmations. The first publication's CI lacked the documented
+fontTools dependency; its failure and the narrow green correction are preserved.
+The next coordinator starts one bounded later batch after this delivery checkpoint.
 
 ### Earlier pilot preparation and gate history
 
