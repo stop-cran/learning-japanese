@@ -31,13 +31,13 @@
   ],
   "counts": {
     "words": 201,
-    "scenes": 397,
+    "scenes": 396,
     "preserved_images": 118,
-    "new_images": 279,
+    "new_images": 278,
     "new_primary_images": 83,
-    "quiz_eligible_scenes": 275,
+    "quiz_eligible_scenes": 274,
     "article_only_scenes": 122,
-    "image_bytes": 10659250
+    "image_bytes": 10631848
   },
   "provider": "Azure OpenAI",
   "generation_model": "gpt-image-2.5-sunburst",
@@ -64,7 +64,7 @@
     "generation_invocations records outer generation attempts, not every internal rate-limit retry or a verified billing count.",
     "Physical-phone behavior and learning effectiveness are not certified by this visual review."
   ],
-  "updated_at": "2026-10-20T15:11:37.400Z",
+  "updated_at": "2026-11-02",
   "retired_requests": [
     {
       "request": {
@@ -117,6 +117,57 @@
         }
       ],
       "original_png_produced": false
+    }
+  ],
+  "retired_scenes": [
+    {
+      "word": "ぶらぶら",
+      "id": "taskless-idling",
+      "sense": "Spending time without a particular task",
+      "image": "images/ぶらぶら--taskless-idling.webp",
+      "primary": false,
+      "description": "Two panels show a person lounging in an armchair and then leaning idly at a window, with no task underway.",
+      "quiz_eligible": false,
+      "sha256": "d62ac2a45d2a0adc3195e8d605b72b5399977761c7a981a60cde6c3512fb62bc",
+      "bytes": 27402,
+      "article_sha256": "26bd79b3cda57ec01929124b9cb045977b1f857a25d2edd0e00f77494d0b485d",
+      "basis": "The at-home example and loafing-without-working phrase teach idle time whose evaluation comes from context.",
+      "origin": "new_generation",
+      "generation_scene": "An adult lounging casually at home, shifting between an armchair and a nearby window with nothing in hand and no activity underway. Comfortable neutral mood, no judgmental symbols, text or illness.",
+      "request_prompt_sha256": "958986359dabe895414dbb670ce192136290182492fc040aee163d31ca7fced5",
+      "original_png_sha256": "ec918f032ede6f1c1c24a5fab37a0d6f49fd6120710170f6a68c85761d5c74e1",
+      "generated_at": "2026-10-20T10:32:22.122657+00:00",
+      "generation_invocations": [
+        {
+          "startedAt": "2026-10-20T10:31:22.328451+00:00"
+        }
+      ],
+      "stored_format": {
+        "format": "WEBP",
+        "width": 512,
+        "height": 512,
+        "quality": 80,
+        "method": 6
+      },
+      "prior_advisory_reviews": [
+        {
+          "verdict": "ACCEPT",
+          "imageSha256": "d62ac2a45d2a0adc3195e8d605b72b5399977761c7a981a60cde6c3512fb62bc",
+          "model": "gpt-6-astra",
+          "note": "The sequence of inactive resting poses supports idling. Verified reverse exclusions from ごろごろ and だらだら; the remaining close のんびり picture is article-only. Promote."
+        }
+      ],
+      "advisory_review": {
+        "verdict": "ARTICLE_ONLY",
+        "imageSha256": "d62ac2a45d2a0adc3195e8d605b72b5399977761c7a981a60cde6c3512fb62bc",
+        "reviewer": "Copilot CLI, direct inspection of all three stored burabura images",
+        "date": "2026-11-02",
+        "articleSha256": "26bd79b3cda57ec01929124b9cb045977b1f857a25d2edd0e00f77494d0b485d",
+        "note": "The cushioned armchair, soft furnishings and sunlit window plausibly suggest softness, warmth or relaxation. Nothing distinctly establishes aimless idling. Retain the caption-supported article illustration but exclude it from both picture quiz directions; the existing supported child with dangling feet and motion arcs is a clearer quiz cue."
+      },
+      "owner_review": "On 2026-11-02 the owner reported softness, warmth and relaxation associations and subsequently confirmed complete removal rather than article-only retention. This does not certify the other illustrations or a measured learning result.",
+      "retired_at": "2026-11-02",
+      "retirement_reason": "Removed the stored image and its runtime and authoring scene entries at the owner's request. Dangling legs and strolling remain illustrated; idling remains explained in the word article. This historical record is not an active image reference."
     }
   ],
   "scenes": [
@@ -9954,43 +10005,6 @@
         "imageSha256": "7143f19df5a39e1c6edadd96a735c8a8cdf2a3fe336f4e347f0515b3e63bb85b",
         "model": "gpt-6-astra",
         "note": "The ordinary walking association with allowed てくてく remains even though のんびり is now article-only. Retain article-only."
-      },
-      "owner_review": "not_yet_recorded"
-    },
-    {
-      "word": "ぶらぶら",
-      "id": "taskless-idling",
-      "sense": "Spending time without a particular task",
-      "image": "images/ぶらぶら--taskless-idling.webp",
-      "primary": false,
-      "description": "Two panels show a person lounging in an armchair and then leaning idly at a window, with no task underway.",
-      "quiz_eligible": true,
-      "sha256": "d62ac2a45d2a0adc3195e8d605b72b5399977761c7a981a60cde6c3512fb62bc",
-      "bytes": 27402,
-      "article_sha256": "26bd79b3cda57ec01929124b9cb045977b1f857a25d2edd0e00f77494d0b485d",
-      "basis": "The at-home example and loafing-without-working phrase teach idle time whose evaluation comes from context.",
-      "origin": "new_generation",
-      "generation_scene": "An adult lounging casually at home, shifting between an armchair and a nearby window with nothing in hand and no activity underway. Comfortable neutral mood, no judgmental symbols, text or illness.",
-      "request_prompt_sha256": "958986359dabe895414dbb670ce192136290182492fc040aee163d31ca7fced5",
-      "original_png_sha256": "ec918f032ede6f1c1c24a5fab37a0d6f49fd6120710170f6a68c85761d5c74e1",
-      "generated_at": "2026-10-20T10:32:22.122657+00:00",
-      "generation_invocations": [
-        {
-          "startedAt": "2026-10-20T10:31:22.328451+00:00"
-        }
-      ],
-      "stored_format": {
-        "format": "WEBP",
-        "width": 512,
-        "height": 512,
-        "quality": 80,
-        "method": 6
-      },
-      "advisory_review": {
-        "verdict": "ACCEPT",
-        "imageSha256": "d62ac2a45d2a0adc3195e8d605b72b5399977761c7a981a60cde6c3512fb62bc",
-        "model": "gpt-6-astra",
-        "note": "The sequence of inactive resting poses supports idling. Verified reverse exclusions from ごろごろ and だらだら; the remaining close のんびり picture is article-only. Promote."
       },
       "owner_review": "not_yet_recorded"
     },

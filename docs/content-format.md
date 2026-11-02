@@ -223,8 +223,10 @@ The completed #45 collection is recorded in [onomatopoeia-scene-images.json](ono
 すべすべ, とぼとぼ, のんびり and ぺらぺら. Their articles and other word-practice modes remain available.
 Every new output has a hash-pinned advisory observation; prior owner acceptance applies only to the original 120 images.
 These are collection-snapshot counts, not schema limits or proof of learning effectiveness.
-The later ぶかぶか addition and ぷにぷに paw-pad companion bring the current collection to 201 catalogs and 397 illustrations;
-their separately recorded source bases and visual reviews do not change the original #45 snapshot or imply owner approval.
+The later ぶかぶか addition and ぷにぷに paw-pad companion brought the collection to 201 catalogs and 397 illustrations.
+The owner-requested removal of the ambiguous ぶらぶら idling picture leaves 396 active illustrations; its generation and review
+history remain under `retired_scenes` in the provenance record, not in the runtime catalog or authoring plan.
+These later changes do not change the original #45 snapshot or imply owner approval of other images.
 
 ## Strokes file
 
