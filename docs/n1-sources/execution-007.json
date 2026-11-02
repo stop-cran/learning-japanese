@@ -43,7 +43,8 @@
     "requiredPacketTextReturnedInFull": true,
     "reviewClosedScope": "New curation metadata/teaching/support diffs only; original initial teaching reviews remain preserved. Three facets assessed separately; all consequential current textual findings resolved.",
     "record": "../n1-reviews/pilot-curation-reconciliation.json",
-    "limits": "Claude's accidental unrelated-N2-report search exposure and report count inaccuracies remain disclosed without altering originals. GPT initial review had no prior-report exposure. Full returned ranges and hashes do not certify comprehension. No native-speaker, native-runtime or phone certification."
+    "limits": "Claude's accidental unrelated-N2-report search exposure and report count inaccuracies remain disclosed without altering originals. GPT initial review had no prior-report exposure. Full returned ranges and hashes do not certify comprehension. No native-speaker, native-runtime or phone certification.",
+    "evidenceHashCorrection": "The closure check caught that the export helper labelled an LF-normalized report hash as the byte hash even though Windows write_text preserved the report as CRLF. The shell's subsequent commit command still ran after the assertion, so dd08fe1 preserves that failed-check state. Corrected the four execution records to store actual untouched report byte hashes as reportSha256 and the original LF hashes separately as reportLfSha256; fixed the helper. Complete original report bytes and signed history remain unchanged. Exact byte/LF hashes and serial read receipts are reverified before the final recoverable checkpoint."
   },
   "validation": {
     "validatorErrors": 0,
