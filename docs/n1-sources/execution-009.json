@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "execution": 9,
+  "batch": "002",
+  "startingHead": "560c9dd37103852ef8ddf07cd3b740a975243de1",
+  "startingWorktrees": "Dedicated content and Android worktrees clean. git fetch origin succeeded; HEAD...origin/main was 0/0. No canonical dirty checkout accessed.",
+  "scope": "One new four-card batch after the closed published pilot. Useful source-backed draft checkpoint, not a second pilot, accepted batch or publication.",
+  "membership": ["稲", "穂", "桑", "芋"],
+  "frozenMembership": "batch-002-membership.json",
+  "implementation": {
+    "newKanji": 4,
+    "newStrokes": 4,
+    "newSupportArticles": ["稲穂", "水稲", "桑", "芋"],
+    "changedReusedArticles": ["稲"],
+    "reusedChange": "One component-link insertion only; complete metadata and remaining body preserved.",
+    "completeDictionaryFamilies": 19,
+    "fullReadingDispositions": 10,
+    "curatedOfferedKeys": 6,
+    "sourceOnlyOfferedKeys": 0,
+    "requiredReciprocalPairs": 6,
+    "activatedBaselineDeclaredPairs": 1,
+    "newDirectWordExclusions": [["芋", "くだらない"], ["芋", "屑"]],
+    "metadata": "Full source on/kun lists and order preserved, with separate exact quiz subsets. All ten entries have their own reading-table row and qualified disposition.",
+    "strokeEvidence": "batch-002-stroke-audit.json",
+    "sourceIntegrity": "All five frozen input files matched n1-source-snapshot.json hashes. JMdict decompressed hash also matched. Three selected packets independently re-extracted in check mode matched exactly. Four raw SVG Git blobs matched source-index inventory and production converter reconversion matched generated strokes.",
+    "mechanicalAudit": "tools/audit_n1_batch.py --batch 002 compares the exact batch base runtime, only recorded additions and exact reused-passage edits, source-row/full-reading metadata, source-backed lexical spelling/reading restrictions, links and curated keys. Ten unit tests cover payload deltas and lexical restrictions; not an automated linguistic gate.",
+    "pilot": "Unchanged and closed. Preserved historical reviews/native evidence; no repeated pilot review/native attempt.",
+    "originalFreeze": "source-index statusAtFreeze, baseline inventory, source membership and all previous evidence untouched."
+  },
+  "validation": {
+    "validatorErrors": 0,
+    "pythonTests": {"passed": 353, "failures": 0, "errors": 0},
+    "vocabularyConsistency": "Passed; existing 2122/2431 reviewed-prompt pilot coverage unchanged.",
+    "manifestFresh": true,
+    "contentVersion": "6c3d6fbec6799a6c",
+    "mechanicalAudit": "batch-002-draft-audit.json",
+    "initialLocalBudget": {"entries": 8112, "retainedBytes": 43393153, "inflatedBytes": 43661114, "localZipBytes": 29767877},
+    "finalCheckpointLocalBudget": {"entries": 8112, "retainedBytes": 43393153, "inflatedBytes": 43661436, "localZipBytes": 29767999},
+    "budgetLimitChanges": false,
+    "limits": "Local draft checks, not combined-main publication, exact public ZIP verification or CI. The initial local budget predates final contributor-document edits; the final checkpoint budget is recorded separately."
+  },
+  "review": {
+    "initialReviewersLaunched": 0,
+    "status": "not-started",
+    "required": "Two serial isolated read-only headless CLI reviewers, different actual model families, same frozen new teaching snapshot; include four support words and changed reused 稲 passage. Preserve original reports before fixes.",
+    "catalogAccess": "Supplied actual CLI help/config captures inspected, including available-tools/session-id/model options and claude-opus-5.5/gpt-6.1-sol catalog entries. These are candidate available families, not a claim that either reviewed this draft."
+  },
+  "android": {
+    "expectedCommit": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+    "worktree": "Not edited; no Gradle/emulator/native work started.",
+    "status": "Fresh batch RealContentTest/RareHanTest and any justified focused checks remain pending.",
+    "fontScope": "No batch member is among the frozen forty all-font fallback targets. Inherited pilot evidence is unchanged, not claimed as a fresh four-card native run."
+  },
+  "publication": {
+    "pushed": false,
+    "batchPublishedAdditions": 0,
+    "projectPublishedAdditions": 12,
+    "remainingAdditions": 1216,
+    "compatibleClient": "Android f9b59a2 or later; old APKs ignore curation and old 8000-entry clients reject the collection.",
+    "phoneAcceptance": "Physical-phone/general-release acceptance explicitly outstanding; not a new veto on bounded owner testing."
+  },
+  "checkpoint": "Normally signed local draft commit and control progress record identify the exact recoverable snapshot. Do not push this branch before the new teaching is review-closed. Resume this same batch, not another batch.",
+  "nextAction": "Review this frozen four-card draft independently across two serial model families, reconcile precise findings, perform final applicable Android/content/manifest/budget checks, integrate current main non-rewriting, and publish/verify only accepted content."
+}

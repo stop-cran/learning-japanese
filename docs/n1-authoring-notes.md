@@ -37,6 +37,38 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 002: unpublished draft
+
+The next [frozen packet](n1-sources/batch-002-membership.json) is deliberately
+small: **稲・穂・桑・芋**, an agriculture/plant comparison rather than an
+alphabetical slice. Four new support articles, **稲穂・水稲・桑・芋**, and the
+single component-link addition in existing **稲** form six reciprocal pairs.
+The [draft ledger](n1-sources/batch-002-progress.json) retains all ten full
+reading dispositions, six selected question keys, three wrong meaning choices
+per card and two direct word-quiz exclusions. The reused 稲 article keeps its
+primary いね and sourced N3 vocabulary level.
+
+Three dictionary packets retain **19 complete applicable JMdict families**,
+including spelling/reading restrictions and comparison senses.
+[Pinned stroke verification](n1-sources/batch-002-stroke-audit.json) checks
+each original SVG Git blob, exact reconversion and the 14/15/10/6 counts.
+No stroke geometry was edited manually.
+
+**These four cards are drafts, not reviewed or delivered additions.** The
+published count remains twelve additions, with 1,216 still to deliver.
+Two serial different-family initial reviews, reconciliation, fresh applicable
+Android checks and verified publication remain required. No reviewer or
+native acceptance is implied by the mechanical audit.
+
+For later bounded packets, run `python -B tools/audit_n1_batch.py --batch 002`
+with that packet's ledger. It compares the whole runtime payload against the
+exact batch base and permits only its listed additions and exact reused-passage
+edits; it also checks source metadata, full reading dispositions, dictionary
+pair restrictions, reciprocal links, curated projections and labels.
+The earlier `audit_n1_pilot.py` intentionally remains pilot-bounded: its
+runtime-addition check is not applicable to a tree containing later drafts.
+Neither audit establishes linguistic correctness.
+
 ## Pilot
 
 ### Current pilot acceptance checkpoint

@@ -22,6 +22,10 @@ This repository contains original notes plus data derived from open dictionary p
   teaching/review/acceptance progress. Its five bounded JMdict packets retain 84 complete
   selected families, including comparisons and restrictions; selected teaching uses do not
   assert that every sense or spelling in a family is ordinary or interchangeable.
+  The unpublished [N1 batch 002 draft](docs/n1-sources/batch-002-progress.json)
+  retains 19 complete applicable families in three further bounded packets from
+  the same frozen JMdict bytes. Original examples and labelled shape mnemonics
+  are teaching text, not additional dictionary evidence or historical derivations.
   The [N4 word-pair index](docs/n4-word-sources.tsv) and [N3 primary-word index](docs/n3-word-sources.tsv) identify matching
   JMdict entries for the selected spellings and readings; not every sense of those entries applies to an article.
   The N3 index identifies a non-exhaustive selection of primary teaching senses and distinguishes new articles from two reused ones.

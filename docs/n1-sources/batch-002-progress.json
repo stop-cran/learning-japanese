@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "batch": "002",
+  "baseCommit": "560c9dd37103852ef8ddf07cd3b740a975243de1",
+  "membership": ["稲", "穂", "桑", "芋"],
+  "status": "draft-not-independently-reviewed",
+  "drafted": ["稲", "穂", "桑", "芋"],
+  "reviewClosed": [],
+  "published": [],
+  "publishedCommit": null,
+  "sourceSnapshot": "docs/n1-source-snapshot.json",
+  "dictionaryPackets": [
+    {"selection": "batch-002-lexical-selection.json", "xml": "batch-002-jmdict.xml"},
+    {"selection": "batch-002-comparison-selection.json", "xml": "batch-002-comparisons-jmdict.xml"},
+    {"selection": "batch-002-quiz-selection.json", "xml": "batch-002-quiz-jmdict.xml"}
+  ],
+  "supportMappings": [
+    {"kanji": "稲", "article": "words/稲.md", "primaryReading": "いね", "entryIds": ["1167820"], "selectedSenses": [1], "newArticle": false, "status": "drafted-linked"},
+    {"kanji": "稲", "article": "words/稲穂.md", "primaryReading": "いなほ", "entryIds": ["1167920"], "selectedSenses": [1], "newArticle": true, "status": "drafted-linked"},
+    {"kanji": "穂", "article": "words/稲穂.md", "primaryReading": "いなほ", "entryIds": ["1167920"], "selectedSenses": [1], "newArticle": true, "status": "drafted-linked"},
+    {"kanji": "稲", "article": "words/水稲.md", "primaryReading": "すいとう", "entryIds": ["1371310"], "selectedSenses": [1], "newArticle": true, "status": "drafted-linked"},
+    {"kanji": "桑", "article": "words/桑.md", "primaryReading": "くわ", "entryIds": ["1247060"], "selectedSenses": [1], "newArticle": true, "status": "drafted-linked"},
+    {"kanji": "芋", "article": "words/芋.md", "primaryReading": "いも", "entryIds": ["1167960"], "selectedSenses": [1, 2, 3], "newArticle": true, "status": "drafted-linked"}
+  ],
+  "requiredReciprocalPairs": [
+    ["稲", "words/稲.md"],
+    ["稲", "words/稲穂.md"],
+    ["穂", "words/稲穂.md"],
+    ["稲", "words/水稲.md"],
+    ["桑", "words/桑.md"],
+    ["芋", "words/芋.md"]
+  ],
+  "changedReusedPassages": [
+    {
+      "article": "words/稲.md",
+      "change": "Only add the component link at the first 稲 in How the kanji combine.",
+      "before": "稲 represents the whole native noun いね.",
+      "after": "[稲](../kanji/稲.md) represents the whole native noun いね.",
+      "metadataChanges": "None: identity, primary いね, title, sourced N3 and tags are unchanged."
+    }
+  ],
+  "readingDispositions": [
+    {"kanji": "稲", "kind": "on", "reading": "トウ", "selected": true, "entryIds": ["1371310"], "article": "words/水稲.md", "example": "水稲 すいとう - wetland rice", "reason": "Verified agricultural compound; 水 supplies スイ and 稲 トウ. A useful crop distinction is taught in its own support article, explicitly labelled agriculture vocabulary."},
+    {"kanji": "稲", "kind": "on", "reading": "テ", "selected": false, "entryIds": [], "sourceOnly": true, "reason": "Full character metadata preserved. No lexical example established in the inspected families; not offered and not assigned another character's kana."},
+    {"kanji": "稲", "kind": "kun", "reading": "いね", "selected": true, "entryIds": ["1167820"], "article": "words/稲.md", "example": "稲 いね - rice plant", "reason": "Standalone native plant noun in the verified existing article. Primary reading and easier N3 vocabulary label preserved; katakana re_nokanji alternative is not transported as another kanji reading."},
+    {"kanji": "稲", "kind": "kun", "reading": "いな-", "selected": true, "entryIds": ["1167920", "1514780"], "article": "words/稲穂.md", "example": "稲穂 いなほ - head of rice", "reason": "Bound rice-plant form in the verified full compound, with 穂 ほ independently established. The dash is a boundary marker; no invented standalone いな noun."},
+    {"kanji": "穂", "kind": "on", "reading": "スイ", "selected": false, "entryIds": ["1779070"], "example": "出穂 しゅっすい - emergence of grain heads", "reason": "Verified crop-stage vocabulary retained for recognition. The small packet selects ほ in the grain-head support article instead; no rarity, invalidity or obsolescence inferred from missing priorities."},
+    {"kanji": "穂", "kind": "kun", "reading": "ほ", "selected": true, "entryIds": ["1514780", "1167920"], "article": "words/稲穂.md", "example": "稲穂 いなほ; 穂 ほ", "reason": "Verified native grain-head noun, also allocated transparently in 稲穂. Full family includes tip, wave crest and grafting scion; all four senses inspected and acknowledged. Outdated 穗 spelling is not recommended as the current teaching form."},
+    {"kanji": "桑", "kind": "on", "reading": "ソウ", "selected": false, "entryIds": ["1247070"], "example": "桑園 そうえん - mulberry plantation", "reason": "Verified cultivation term available in the table. Select standalone くわ instead of adding a plantation article solely to create a second prompt; no unsupported frequency claim."},
+    {"kanji": "桑", "kind": "kun", "reading": "くわ", "selected": true, "entryIds": ["1247060"], "article": "words/桑.md", "example": "桑 くわ - mulberry tree", "reason": "Exact native plant name and full sole sense verified. Katakana クワ has re_nokanji; kana spelling is explained without inventing personal-name readings."},
+    {"kanji": "芋", "kind": "on", "reading": "ウ", "selected": false, "entryIds": ["1772660"], "example": "海芋 かいう - calla", "reason": "Verified specialized plant name, usually kana; 海 supplies カイ and 芋 ウ. Not substituted into food いも. Recognition evidence does not justify a separate quiz/support article in this packet."},
+    {"kanji": "芋", "kind": "kun", "reading": "いも", "selected": true, "entryIds": ["1167960", "1005930", "1299220", "1550780"], "article": "words/芋.md", "example": "芋 いも; じゃが芋 じゃがいも; 里芋 さといも; 薩摩芋 さつまいも", "reason": "Native food category, not one species or a strict botanical category. Full family includes derogatory yokel and dismissive dud senses. Usually-kana flags, rare alternate 薯/藷 spellings, katakana re_nokanji, search-only potato aliases and the かんしょ restriction to 甘薯/甘藷 were inspected; not unrestricted reading substitutions."}
+  ],
+  "curatedProjection": [
+    {"kanji": "稲", "quizOnyomi": ["トウ"], "quizKunyomi": ["いね", "いな-"], "onKeys": ["とう"], "kunKeys": ["いね", "いな"]},
+    {"kanji": "穂", "quizOnyomi": [], "quizKunyomi": ["ほ"], "onKeys": [], "kunKeys": ["ほ"]},
+    {"kanji": "桑", "quizOnyomi": [], "quizKunyomi": ["くわ"], "onKeys": [], "kunKeys": ["くわ"]},
+    {"kanji": "芋", "quizOnyomi": [], "quizKunyomi": ["いも"], "onKeys": [], "kunKeys": ["いも"]}
+  ],
+  "quizAudit": {
+    "稲": {"title": "rice plant", "distractors": ["移", "秒", "秋"], "labels": ["shift; transfer", "second as a time unit", "autumn"], "reason": "Shared 禾 shapes but not plant names or grain meanings."},
+    "穂": {"title": "grain-bearing head", "distractors": ["積", "想", "息"], "labels": ["pile up", "thought; conception", "breath"], "reason": "Related dense/心 outlines; none names a grain head, tip, wave crest or grafting shoot."},
+    "桑": {"title": "mulberry", "distractors": ["森", "友", "茶"], "labels": ["forest; woods", "friend", "tea"], "reason": "Contrasting tree/hand/plant outlines. Mulberry is not a forest, friend or tea; a possible mulberry-leaf beverage does not make the plant character mean tea."},
+    "芋": {"title": "tuber; yam", "distractors": ["宇", "干", "字"], "labels": ["eaves; space", "dry; ebb", "written character"], "reason": "Confusable upper/lower outlines, not food nouns, yokels or worthless things."}
+  },
+  "wordQuizAudit": {
+    "newTitles": {"稲穂": "ear of rice", "水稲": "wetland rice", "桑": "mulberry tree", "芋": "tuber"},
+    "directExclusions": [
+      {"word": "芋", "exclude": ["くだらない", "屑"], "reason": "芋's secondary worthless-thing/dud sense makes a displayed worthless or trash label potentially defensible. Direct additive guards live only on the new card; existing exclusions are untouched.", "entryIds": ["1167960", "1184360", "1246510"]}
+    ],
+    "comparisons": "Inspected actual 稲, 米, ご飯, 木, くだらない, 屑 and 塵 articles, plus the full dictionary families. Rice plant, grain head, wetland crop category and food/meal labels are differentiated. 塵's material-garbage label is not automatically equated with every dud; no transitive exclusion clique is asserted. No potato/taro/sweet-potato article identity exists in the starting collection, so no duplicate is created.",
+    "confusableInventory": "Searched docs/confusable-words.md for 稲/穂/桑/芋 and rice/potato/tuber/mulberry; no applicable inventory row found. Inventory absence is not semantic proof.",
+    "legacyFallback": "Related baseline 米, 粒, 田, 飯, 耳, 頭, 刷, 掃 and 筆 already have three curated distractors. No two-distractor default slot activated by the new rice/head/food labels was established. No unrelated legacy edits made."
+  },
+  "strokeDisposition": "All four files generated by tools/generate_strokes.py at KanjiVG 70a0b7ae0c18ceb5cb358274b029cce0234a43bc; 14/15/10/6 strokes match frozen KANJIDIC2. No geometry edits or count exceptions.",
+  "fontDisposition": "None of these four characters is in the frozen forty-character all-font fallback set. Inherit the accepted pilot all40/160 probes only for that unchanged production font scope; fresh non-skipped RareHanTest is still required before acceptance.",
+  "compatibleClient": "Android f9b59a2 or later; old APKs ignore explicit curation and old 8000-entry clients reject the collection.",
+  "acceptance": {
+    "initialReviews": "Not started. Both different-family reviewers must cover the same complete frozen teaching snapshot serially, including all new support and the changed 稲 passage.",
+    "android": "Not run for this draft. Pilot native acceptance is preserved, not rebranded as a fresh batch test.",
+    "phone": "Physical-phone/general-release acceptance explicitly outstanding; not a blanket veto on bounded owner testing.",
+    "publication": "None. Do not push this draft or count these four additions as delivered."
+  },
+  "nextAction": "Freeze the validated draft in a normally signed local checkpoint, obtain two serial isolated different-family initial reviews, reconcile findings, run combined-tree/Android/publication checks and publish only review-closed content. A smaller draft checkpoint is not batch acceptance."
+}
