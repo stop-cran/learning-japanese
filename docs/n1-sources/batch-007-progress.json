@@ -10,7 +10,8 @@
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
     {"selection": "batch-007-lexical-selection.json", "xml": "batch-007-jmdict.xml"},
-    {"selection": "batch-007-comparison-selection.json", "xml": "batch-007-comparisons-jmdict.xml"}
+    {"selection": "batch-007-comparison-selection.json", "xml": "batch-007-comparisons-jmdict.xml"},
+    {"selection": "batch-007-guard-selection.json", "xml": "batch-007-guard-jmdict.xml"}
   ],
   "supportMappings": [
     {"kanji": "柚", "article": "words/柚.md", "primaryReading": "ゆず", "entryIds": ["1605750"], "selectedSenses": [1], "newArticle": true, "status": "draft-linked-unreviewed"},
@@ -41,8 +42,8 @@
   "wordQuizAudit": {
     "newTitles": {"柚": "yuzu tree; yuzu", "椿": "camellia tree; camellia flower"},
     "directExclusions": [
-      {"word": "柚", "exclude": ["木", "植物", "植える", "果物", "果実", "実"], "entryIds": ["1605750", "1534520", "1357300", "1357250", "1193060", "1192940", "1320810"], "reason": "Direct generic tree/plant/fruit safeguards including植える's bare Englishplant label, on the new article only. Sour culinary use does not stop yuzu beingfruit; no tree/fruit restriction invented just to distinguish English titles. Generic category coverage is not unrestricted Japanese synonymy, and pairs are not transitive."},
-      {"word": "椿", "exclude": ["木", "植物", "植える", "花"], "entryIds": ["1433810", "1534520", "1357300", "1357250", "1194500"], "reason": "Direct generic tree/plant/flower guards. Plant and bloom contexts make all four Englishlabels potentially fitting;植えるguard addresses display ambiguity, not a claim that the Japaneseverb equals the camellianoun. Neither茶nor油is excluded merely because tea belongs toCamellia orcamelliaoil is a product; these are not synonyms for椿つばき."}
+      {"word": "柚", "exclude": ["木", "植物", "植える", "果物", "果実", "実", "植木"], "entryIds": ["1605750", "1534520", "1357300", "1357250", "1193060", "1192940", "1320810", "1587970"], "reason": "Direct generic tree/plant/fruit safeguards including植える's bare Englishplant label, on the new article only. Sour culinary use does not stop yuzu beingfruit; no tree/fruit restriction invented just to distinguish English titles. Initial Claude review additionally identified the existing garden-tree/potted-plant label. Add that direct contextual-category guard conservatively because this article explicitly teaches a planted garden tree; not every yuzu is植木 and this is not unrestricted synonymy. Pairs are not transitive."},
+      {"word": "椿", "exclude": ["木", "植物", "植える", "花", "植木"], "entryIds": ["1433810", "1534520", "1357300", "1357250", "1194500", "1587970"], "reason": "Direct generic tree/plant/flower guards. Plant and bloom contexts make all four Englishlabels potentially fitting;植えるguard addresses display ambiguity, not a claim that the Japaneseverb equals the camellianoun. Add direct植木guard conservatively after initial Claude finding and full1587970inspection: garden-tree/potted-plant can describe the planted garden camellia context. Not every camellia is cultivated, and the family is not an unrestricted synonym. Neither茶nor油is excluded merely because tea belongs toCamellia orcamelliaoil is a product; these are not synonyms for椿つばき."}
     ],
     "comparisons": "Actual complete木/植物/植える/果物/果実/実/花/茶/油/植木/大木/桜/お茶read. Lastfourprovide extra legacycategory scope context, not newly taught support or review-closed baseline teaching. All14completecomparisonfamilies and all16lexicalfamilies inspected. Exact runtime filename check found no existingyuzu/camellia/citrusaliasarticle to reuse; no duplicate identity. Existing generic terms retain fullmetadata/easierlevels/primaryreadings/exclusions unchanged.",
     "confusableInventory": "Searched complete docs/confusable-words.md for柚/椿/yuzu/citron/camellia/fruit/flower/plant: no matching row. This negative navigation result is not semantic certification.",
