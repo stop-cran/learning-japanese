@@ -29,7 +29,7 @@ RAW_HTML = re.compile(r"<\s*/?\s*(script|iframe|style|object|embed|img|a|div|spa
 KANJI_REQUIRED = ["kanji", "title", "jlpt", "tags", "strokes", "radical", "radicalNumber", "onyomi", "kunyomi"]
 WORD_REQUIRED = ["word", "reading", "title", "type", "kanji", "tags"]
 WORD_TYPES = {"kango", "wago", "jukujikun", "gairaigo"}
-KANJI_LISTS = ("tags", "onyomi", "kunyomi", "distractors")
+KANJI_LISTS = ("tags", "onyomi", "kunyomi", "distractors", "quizOnyomi", "quizKunyomi")
 WORD_LISTS = ("kanji", "tags", "quiz_exclusions", "quiz_distractors")
 MAX_QUIZ_DISTRACTORS = 3
 MAX_IMAGE_BYTES = 100 * 1024
@@ -60,6 +60,9 @@ def parse(path: Path):
     after_marker = text.find("\n", end + 1)
     body = text[after_marker + 1:].lstrip("\n") if after_marker >= 0 else ""
     fields = parse_android_header(header)
+    if path.parent.name == "kanji":
+        for key in ("quizOnyomi", "quizKunyomi"):
+            check_word_list_declaration(path, header, key)
     if path.parent.name == "words":
         suffix = text[end + 4:after_marker] if after_marker >= 0 else text[end + 4:]
         if suffix.strip(KOTLIN_WHITESPACE) and (
@@ -175,7 +178,7 @@ def check_android_front_matter(path: Path, fields: dict | None, meta: dict) -> N
         err(path, "Android front matter requires 'key: value' on each non-comment header line")
         return
     if path.parent.name == "kanji":
-        known = KANJI_REQUIRED + ["phonetic", "distractors"]
+        known = KANJI_REQUIRED + ["phonetic", "distractors", "quizOnyomi", "quizKunyomi"]
     elif path.parent.name == "words":
         known = WORD_REQUIRED + ["jlpt", "quiz_exclusions", "quiz_distractors", "image", "image_scene"]
     else:
@@ -271,6 +274,29 @@ def check_body(path: Path, meta: dict, body: str) -> None:
             if reading.replace(".", "").replace("-", "") not in text and not (
                     okurigana and meta["kanji"] + okurigana in text):
                 err(path, f"kunyomi '{reading}' is not explained in the body (add a row to ## Readings)")
+    reading_start = next((number for number, level, title in headings if level == 2 and title == "Readings"), -1)
+    reading_end = next((number for number, level, _ in headings if number > reading_start and level <= 2), len(body.splitlines()))
+    rows = [line.strip().strip("|").split("|") for number, line in visible
+            if reading_start < number < reading_end and line.strip().startswith("|")]
+    for key in ("quizOnyomi", "quizKunyomi"):
+        readings = meta.get(key)
+        if not isinstance(readings, list):
+            continue
+        for reading in readings:
+            if not isinstance(reading, str):
+                continue
+            examples = [row for row in rows if row[0].strip(" *`") == reading]
+            linked = []
+            for row in examples:
+                for target in LINK.findall("|".join(row[2:])):
+                    if re.match(r"[a-z][a-z0-9+.-]*:", target, re.I) or target.startswith("#"):
+                        continue
+                    file_part = unquote(target.split("#", 1)[0])
+                    candidate = (path.parent / file_part).resolve()
+                    if candidate.parent == (ROOT / "words").resolve() and candidate.suffix == ".md" and candidate.is_file():
+                        linked.append(candidate)
+            if not linked:
+                err(path, f"{key} '{reading}' needs its own ## Readings table row linking a word example")
 
 
 def check_links(path: Path, body: str) -> None:
@@ -389,6 +415,14 @@ def check_kanji(path: Path, meta: dict, titles: dict,
         for reading in meta[key]:
             if not KANA.match(reading):
                 err(path, f"{key} entry is not kana: {reading}")
+    for key, full in (("quizOnyomi", "onyomi"), ("quizKunyomi", "kunyomi")):
+        if key not in meta:
+            continue
+        selected = meta[key]
+        if len(selected) != len(set(selected)) or any(
+                reading not in meta[full] or not KANA.fullmatch(reading)
+                or not reading.replace(".", "").replace("-", "") for reading in selected):
+            err(path, f"'{key}' must contain distinct nonempty kana readings from '{full}'")
     title = meta["title"].strip().lower()
     if title in titles:
         err(path, f"duplicate title '{meta['title']}' (also {titles[title]})")

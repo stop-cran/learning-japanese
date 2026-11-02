@@ -43,6 +43,9 @@ does not establish linguistic correctness. Read a real card alongside the format
    Every `kunyomi` entry must be explained in `## Readings`: a row giving at least one real word (written form, kana, short gloss) or, for a prefix, suffix or
    bound stem, an example compound and what the part means. Check each word in a dictionary (e.g. 明るむ あかるむ "grow light" is real) and mark rare or
    literary readings as such. Do not drop a reading from the metadata because it is rare. `tools/validate.py` enforces this for N5 and N4 cards.
+   Optional `quizOnyomi` / `quizKunyomi` curate exact raw-string subsets separately; omission is legacy full-list behavior and `[]`
+   disables that kind. Each selected entry needs its own reading row and linked word example, plus editorial dictionary/allocation/usefulness
+   verification. Links alone do not prove readings. See the format contract; older APKs ignore curation and must be upgraded first.
 3. Body sections in order: heading `# 字 — title` and a facts line (strokes, key, JLPT, and phonetic only when a verified component is known); `## Meaning and origin`; `## Readings`
    (table: reading, on/kun, typical words with kana); `## Common words`; `## Notes` (look-alikes, differences, special readings).
 4. Origin: name the components and the idea of their composition. Hedge with "commonly explained" or "debated" where scholars disagree;
