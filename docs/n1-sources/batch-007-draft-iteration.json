@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "batch": "007",
+  "execution": 26,
+  "stage": "pre-freeze-authoring",
+  "initialDiagnostic": {
+    "command": "python -X utf8 -B ..\\control\\audit-batch-007-draft.py",
+    "shellId": "batch007-draft-tests",
+    "exitCode": 1,
+    "failure": "New-runtime-Han cmap assertion failed before draft stroke/font/audit records were saved or Python tests started.",
+    "introducedRuntimeHan": ["柚", "椿", "榴"],
+    "newMissingBundledCharacter": "榴",
+    "codePoint": "U+69B4",
+    "source": "Optional alternate spelling 海石榴 in words/椿.md, not required primary spelling 椿 or any full metadata reading.",
+    "baselineMissingButAlreadyVisible": ["椒", "氵"],
+    "scope": "Actual initial brush-font cmap contained both new card characters but not 榴. Not a measured native rendering failure or claim that all system fallbacks lack this glyph. Frozen all40 font evidence does not include 榴."
+  },
+  "disposition": "Before signed snapshot/review, omit the unnecessary additional spelling 海石榴 from this bounded beginner-facing plant explanation. Keep 山茶 because it explains the important さんちゃ spelling/sense restriction; primary 椿/つばき and every full metadata reading remain unchanged. Preserve complete raw family1433810, including 海石榴, in the frozen dictionary packet; no source bytes or source evidence removed.",
+  "validationPolicy": "Unchanged assertion still requires every newly introduced runtime Han to be present in all three unchanged bundled cmaps. No font/app/guard change, invented visual evidence or inherited acceptance for 榴. Final audit will verify the remaining new characters 柚/椿 only; existing 椒/氵 are not new fallback acceptance.",
+  "limits": "Uncommitted authoring iteration, not an interrupted independent review or published defect. No fresh native/device test attempted. A future lesson that actually teaches 海石榴 still needs its own newly introduced glyph disposition."
+}

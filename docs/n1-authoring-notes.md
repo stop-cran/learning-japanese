@@ -37,7 +37,50 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 006: textual review closed, local and unpublished
+## Batch 007: bounded local draft, not independently reviewed
+
+The [frozen packet](n1-sources/batch-007-membership.json) is **柚・椿**.
+Both have useful native plant nouns alongside more specialized source readings;
+this is not an alphabetical slice or a claim that grade-9 characters are only
+personal names. Two necessary new support articles, **柚・椿**, provide two
+reciprocal pairs. Neither character activates a baseline-declared word pair,
+and no reused article or baseline metadata is changed.
+
+The [draft ledger](n1-sources/batch-007-progress.json) retains all **seven**
+full readings in order, selecting only **ゆず・つばき** as question keys.
+ジク and チュン remain explicitly source-only; the other on readings have
+qualified recognition examples without unnecessary new word articles.
+Two frozen packets preserve **30 complete JMdict families**, including
+spelling/reading/sense restrictions, archaic forms and comparison identities.
+The [external evidence](n1-sources/batch-007-external-evidence.json) separates
+actual dictionary headings from two failed culinary lookups and an irrelevant
+successful page extraction. Yuzu is not equated with every English "citron";
+椿's mountain-tea and incident uses are not imported into native つばき.
+Ten direct new-word guards cover fitting generic tree, plant, fruit and
+flower labels, not transitive synonym groups.
+
+The [pre-freeze iteration](n1-sources/batch-007-draft-iteration.json) records
+an initial glyph-audit failure: the optional spelling 海石榴 introduced 榴,
+outside both the bundled cmaps and the accepted forty-target fallback
+evidence. That unnecessary alias was omitted from learner text, not from
+the complete source family; the unchanged audit still checks every new
+runtime character. This is not a native rendering failure or new fallback
+acceptance. Pinned strokes use 9/13 source strokes with no manual geometry.
+The [draft audit](n1-sources/batch-007-draft-audit.json) and
+[execution 026](n1-sources/execution-026.json) record 353 passing Python tests,
+validator/vocabulary/manifest checks, exact source/baseline membership and
+reading/link integrity, and local budgets. Both new card glyphs are in all
+three unchanged bundled cmaps; existing 椒/氵 omissions are not newly accepted
+fallbacks. These local checks do not replace the remaining acceptance gates.
+
+These are **unreviewed local drafts, not delivered additions**.
+Two independent blind model-family reviews, reconciliation, fresh non-skipped
+Android tests and combined-main/publication/CI/exact immutable ZIP acceptance
+remain pending. Published additions stay **27/1,228; 1,201 remain to deliver**.
+No batch 008 has started. Compatible Android `f9b59a2` or later is required;
+physical-phone/general-release acceptance is explicitly outstanding.
+
+## Batch 006: published and verified
 
 The [frozen packet](n1-sources/batch-006-membership.json) is **栗・梨**,
 chosen to bound source-only reading and lexical work rather than continue
@@ -75,12 +118,19 @@ is unchanged, not native-speaker or exhaustive quiz certification.
 [review-closed audit](n1-sources/batch-006-review-closed-audit.json) record the
 bounded textual closure and local checks.
 
-This is **local textual closure**, not delivered content. Fresh non-skipped
-Android checks and combined-main/publication/CI/exact immutable ZIP acceptance
-remain required.
-Published additions remain **25/1,228; 1,203 remain to deliver**.
-No batch 007 has started. Compatible Android `f9b59a2` or later remains
-required; physical-phone/general-release acceptance is explicitly outstanding.
+The preceding paragraphs describe its earlier textual checkpoint.
+Batch 006 is now **published for bounded owner testing**.
+[Execution 025](n1-sources/execution-025.json) and the
+[publication record](n1-sources/batch-006-publication.json) preserve the exact
+parent Android recovery, all four fresh named cases without skips, normal
+signed acceptance `9d05d18`, green CI and every immutable public ZIP runtime
+hash within unchanged budgets. Terminal receipts were published at
+`7b9f503`; historical permission denial, original review overlap and incorrect
+serial claim remain preserved, not rebranded as compliant.
+Published additions are **27/1,228; 1,201 remain to deliver**.
+Batch 007's unreviewed local drafts above do not change that count.
+Compatible Android `f9b59a2` or later remains required;
+physical-phone/general-release acceptance is explicitly outstanding.
 
 ## Batch 005: published and verified
 

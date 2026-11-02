@@ -51,6 +51,15 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   explicitly outstanding, not inferred from bounded owner-testing delivery.
   Its supporting words have no level inferred from these N1 kanji; reused
   松・梅・梅雨 retain their independently sourced N3 vocabulary levels.
+  Two-card [batch 006](n1-sources/batch-006-publication.json), 栗・梨,
+  subsequently passed its exact parent Android recovery and signed
+  combined-main/CI/immutable-ZIP publication gates, reaching **27 published
+  additions; 1,201 still to deliver** at `7b9f503`.
+  [Batch 007](n1-sources/batch-007-progress.json), 柚・椿, contains only
+  **unreviewed local drafts** and does not increase delivered coverage.
+  Its supporting words likewise have no vocabulary level inferred from
+  their kanji. The compatible-client and outstanding physical-phone/
+  general-release qualifications above remain unchanged.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee
