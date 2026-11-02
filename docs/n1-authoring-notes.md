@@ -37,6 +37,34 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 006: bounded local draft, not independently reviewed
+
+The [frozen packet](n1-sources/batch-006-membership.json) is **栗・梨**,
+chosen to bound source-only reading and lexical work rather than continue
+alphabetically. Both have a useful native tree/food noun, while 栗's grade-9
+classification and additional readings need separate treatment. The
+[draft ledger](n1-sources/batch-006-progress.json) retains all six source
+readings in order and selects only **くり・なし** as question keys.
+Three 栗 readings remain explicitly source-only; 梨's リ has the verified
+recognition example 梨園 without a new theatre article or question.
+
+Two necessary new word articles, **栗・梨**, give two reciprocal pairs;
+neither character activates a baseline-declared pair. No reused article
+or metadata is changed. Four frozen packets contain **18 complete JMdict
+families**. The [external evidence](n1-sources/batch-006-external-evidence.json)
+distinguishes actual dictionary headings from unsuitable initial Weblio
+extraction, tree/nut/fruit and colour senses, and 梨's nonexclusive species
+scope. Sixteen direct new-word exclusions guard fitting generic tree,
+plant, fruit/nut, timber and brown labels; these are not transitive cliques.
+
+This is a **local unreviewed draft**, not delivered content. Two serial
+different-family independent initial reviews on one frozen snapshot,
+evidence-based reconciliation, fresh non-skipped Android checks and
+combined-main/publication/CI/exact immutable ZIP acceptance remain required.
+Published additions remain **25/1,228; 1,203 remain to deliver**.
+No batch 007 has started. Compatible Android `f9b59a2` or later remains
+required; physical-phone/general-release acceptance is explicitly outstanding.
+
 ## Batch 005: published and verified
 
 The [next frozen packet](n1-sources/batch-005-membership.json) is
@@ -99,7 +127,7 @@ validator, vocabulary consistency, manifest freshness and exact source,
 baseline, membership, reading and link audits. The historical denial and
 original review limitations remain intact.
 **Published additions are 25/1,228; 1,203 remain to deliver.**
-No batch 006 has started. Compatible Android `f9b59a2` or later is required;
+Batch 006's later draft is recorded separately above. Compatible Android `f9b59a2` or later is required;
 physical-phone/general-release acceptance remains explicitly outstanding.
 
 ## Batch 004: published and verified

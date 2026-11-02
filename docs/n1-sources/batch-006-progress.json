@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "batch": "006",
+  "baseCommit": "45d973442c19e0a0b73e9fe7fece453fdb066536",
+  "membership": ["栗", "梨"],
+  "status": "draft-not-independently-reviewed",
+  "drafted": ["栗", "梨"],
+  "reviewClosed": [],
+  "published": [],
+  "sourceSnapshot": "docs/n1-source-snapshot.json",
+  "dictionaryPackets": [
+    {"selection": "batch-006-lexical-selection.json", "xml": "batch-006-jmdict.xml"},
+    {"selection": "batch-006-comparison-selection.json", "xml": "batch-006-comparisons-jmdict.xml"},
+    {"selection": "batch-006-supplement-selection.json", "xml": "batch-006-supplement-jmdict.xml"},
+    {"selection": "batch-006-notes-selection.json", "xml": "batch-006-notes-jmdict.xml"}
+  ],
+  "supportMappings": [
+    {"kanji": "栗", "article": "words/栗.md", "primaryReading": "くり", "entryIds": ["1246880"], "selectedSenses": [1], "newArticle": true, "status": "drafted-linked"},
+    {"kanji": "梨", "article": "words/梨.md", "primaryReading": "なし", "entryIds": ["1549860"], "selectedSenses": [1], "newArticle": true, "status": "drafted-linked"}
+  ],
+  "requiredReciprocalPairs": [
+    ["栗", "words/栗.md"],
+    ["梨", "words/梨.md"]
+  ],
+  "changedReusedPassages": [],
+  "readingDispositions": [
+    {"kanji": "栗", "kind": "on", "reading": "リツ", "selected": false, "sourceOnly": true, "entryIds": [], "reason": "Complete KANJIDIC2 character record preserves this on reading in source order. No modern lexical allocation selected or established in this packet. Preserve as explicitly source-only lookup information; do not infer a modern word from a kana substring or treat chestnutくり as an on example. This does not claim that no historical or specialist example exists."},
+    {"kanji": "栗", "kind": "on", "reading": "リ", "selected": false, "sourceOnly": true, "entryIds": [], "reason": "Complete KANJIDIC2 character record preserves this on reading. No modern lexical allocation selected or established here; explicitly source-only lookup and no question. It is not justified by the unrelated 梨リ or by a personal-name guess. No claim of absence from every dictionary or historical use."},
+    {"kanji": "栗", "kind": "kun", "reading": "くり", "selected": true, "entryIds": ["1246880"], "article": "words/栗.md", "example": "栗 くり - chestnut tree; chestnut", "reason": "Exact standalone native noun with no reading restrictions; kana-onlyクリ is marked re_nokanji, not an independently allocated kanji reading. JMdict's usually-kana flag is preserved in teaching. Actual Japanese noun heading confirms tree/nut and other cultivated chestnuts; grade9 classification is not evidence that the noun is name-only. Useful food/tree recognition, no frequency ranking or inferred word JLPT."},
+    {"kanji": "栗", "kind": "kun", "reading": "おののく", "selected": false, "sourceOnly": true, "entryIds": ["1390130"], "reason": "Retain exact undotted full KANJIDIC2 reading; explicitly source-only and not a food reading. Complete JMdict trembling family has戦く/慄く and usually-kana flag, not栗く. This contrast verifies the separate verb without fabricating a written boundary or claiming that its family proves a modern栗 spelling. No concrete modern栗 allocation established here, so no support article/question is manufactured."},
+    {"kanji": "梨", "kind": "on", "reading": "リ", "selected": false, "entryIds": ["1549880"], "example": "梨園 りえん - theatrical world, especially kabuki", "reason": "Complete exact family has soleりえん reading; inspected source梨リ and actual existing園エン give a regular compound, not a substring allocation. Public exactりえん heading confirms theatrical world especially kabuki, with a separate literal garden sense. Retained as recognition example, not labelled rare/nonexistent. No new theatre support article or question needed for this bounded fruit/tree lesson; explicit empty quizOnyomi is intentional."},
+    {"kanji": "梨", "kind": "kun", "reading": "なし", "selected": true, "entryIds": ["1549860"], "article": "words/梨.md", "example": "梨 なし - pear tree; pear", "reason": "Exact native noun in complete family;梨子 is rare spelling andナシ kana-only. Preserve usually-kana qualification, not an invented meaning split by script. Japanese dictionary confirms tree/fruit and broader Western/wild pear use; JMdict'sesp.Pyrus qualification is not an exclusive species restriction. Useful food/tree recognition with a directly linked article; no inferred word level."}
+  ],
+  "curatedProjection": [
+    {"kanji": "栗", "quizOnyomi": [], "quizKunyomi": ["くり"], "onKeys": [], "kunKeys": ["くり"]},
+    {"kanji": "梨", "quizOnyomi": [], "quizKunyomi": ["なし"], "onKeys": [], "kunKeys": ["なし"]}
+  ],
+  "quizAudit": {
+    "栗": {"title": "chestnut", "distractors": ["西", "要", "相"], "labels": ["west", "necessity; essentials", "mutual; aspect"], "reason": "Complete actual cards inspected. 西/要 share an upper-block resemblance;相 shares木. Direction, necessity and relation/aspect are neither chestnut, chestnut wood nor its colour abbreviation. No generic tree/wood, nut, brown or trembling wrong option."},
+    "梨": {"title": "pear tree", "distractors": ["利", "村", "相"], "labels": ["benefit; advantage", "village", "mutual; aspect"], "reason": "Complete actual cards inspected. 利 is the upper visible block;村/相 share木. Benefit, village and relation/aspect do not mean pear tree or pear fruit. Shape mnemonic is explicitly not historical construction."}
+  },
+  "wordQuizAudit": {
+    "newTitles": {"栗": "chestnut tree; chestnut", "梨": "pear tree; pear"},
+    "directExclusions": [
+      {"word": "栗", "exclude": ["木", "植物", "植える", "果物", "果実", "実", "木材", "材木", "茶色", "茶色い"], "entryIds": ["1246880", "1534520", "1357300", "1357250", "1193060", "1192940", "1320810", "1534660", "1296660", "1422720", "1983730", "1758540"], "reason": "Direct generic tree/plant guards including植える's bare Englishplant label, generic fruit/nut labels including実, and independent timber guards for attested栗wood sense. 果物's food category is not every botanical fruit, but its bare Englishfruit label is conservatively separated from the edible chestnut fruit. Exact Japanese栗 sense3 abbreviates栗色, so both existingbrown labels need their own direct pair; neither guard is inferred transitively through木 or茶色. No runtimeナッツ/木の実/マロン/褐色 article exists; do not claim those absent cards are guarded."},
+      {"word": "梨", "exclude": ["木", "植物", "植える", "果物", "果実", "実"], "entryIds": ["1549860", "1534520", "1357300", "1357250", "1193060", "1192940", "1320810"], "reason": "Direct generic tree/plant/fruit safeguards on the new article. Generic categories admit pear tree/fruit but do not make all members synonyms. No transitive clique and no indiscriminate exclusion of other fruit species or specific garden/large-tree labels."}
+    ],
+    "comparisons": "Actual complete木/植物/植える/果物/果実/実/木材/材木/茶色/茶色い/植木/大木/桃/無し inspected, together with all selected full applicable families. Final scope check adds the complete無しfamily before draft freeze; not falsely counted in initial selection. No existing栗/梨article was found; metadata candidates for both empty. Existing titles/identities/primary readings/easier sourced levels/original exclusions remain unchanged. Proper names and crest uses are not by themselves generic lexical synonyms.",
+    "confusableInventory": "Searched complete docs/confusable-words.md for栗/梨/chestnut/pear/nut/brown. No applicable row established; Englishsubstringpear matchesappearance only. This negative navigation result is not semantic certification.",
+    "legacyFallback": "Actual西/要/相/利/村 and generic木 already each have three curated distractors. No new two-choice default fallback or ordinary semantic overlap with their selected wrong answers was established. No baseline metadata edit."
+  },
+  "strokeDisposition": "Generated by existing tools/generate_strokes.py at pinned70a0b7ae; counts10/11 agree with complete KANJIDIC2 records. No geometry edited manually. Exact SVG/blob/reconversion/font receipts recorded separately before draft checkpoint.",
+  "fontDisposition": "Exact bundled-font hashes unchanged;栗/梨and all11namedcomponents/comparisons present in all3cmaps. Only newly introduced runtimeHan are栗/梨, so no new missing bundled glyph or fallback target. See batch-006-stroke-audit.json. Cmaps are not fresh native/device/visual acceptance; inherit all40/160pilot only for unchanged production scope.",
+  "compatibleClient": "Androidf9b59a2 or later; oldAPKs ignore explicit curation and old8000-entry clients reject the collection.",
+  "acceptance": {
+    "initialReviews": "Pending: no reviewer launched, no independent textual facet closed.",
+    "android": "Pending fresh batch acceptance; dedicatedAndroid unchanged atf9b59a2. Earlier accepted batch005 run is not evidence against this new draft.",
+    "phone": "Physical-phone/general-release acceptance explicitly outstanding; not a new veto on bounded owner testing.",
+    "publication": "Local unreviewed draft only, not pushed; project delivered25/1228 and remaining1203 unchanged."
+  },
+  "nextAction": "Freeze validated signed draft/source evidence for a fresh coordinator, then two serial blind different-family initial reviews on SAME frozen snapshot. Preserve all original reports/process limits and reconcile before fresh Android/current-main/publication acceptance. No batch007 or second runner."
+}
