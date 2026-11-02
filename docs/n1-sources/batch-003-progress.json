@@ -3,14 +3,15 @@
   "batch": "003",
   "baseCommit": "fd75a6730bfd863202df1f4782ace9eb433f0e05",
   "membership": ["苗", "畔", "畝"],
-  "status": "draft-not-independently-reviewed",
+  "status": "initial-reviews-complete-corrections-awaiting-confirmation",
   "drafted": ["苗", "畔", "畝"],
   "reviewClosed": [],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
     {"selection": "batch-003-lexical-selection.json", "xml": "batch-003-jmdict.xml"},
-    {"selection": "batch-003-comparison-selection.json", "xml": "batch-003-comparisons-jmdict.xml"}
+    {"selection": "batch-003-comparison-selection.json", "xml": "batch-003-comparisons-jmdict.xml"},
+    {"selection": "batch-003-review-supplement-selection.json", "xml": "batch-003-review-supplement-jmdict.xml"}
   ],
   "supportMappings": [
     {"kanji": "苗", "article": "words/苗.md", "primaryReading": "なえ", "entryIds": ["1490470"], "selectedSenses": [1, 2], "newArticle": true, "status": "drafted-linked"},
@@ -68,7 +69,7 @@
   "wordQuizAudit": {
     "newTitles": {"苗": "seedling; young plant", "育苗": "seedling raising", "苗代": "rice-seedling bed", "畔": "paddy-field ridge", "湖畔": "lakeside; lakefront", "畝": "raised planting ridge; rib"},
     "directExclusions": [
-      {"word": "苗", "exclude": ["芽", "植物", "木"], "reason": "Sprout/shoot labels can describe early plant growth; plant and tree are broad labels that can fit a seedling, including a young tree. Exact direct guards on new card, not a claim that all uses of these words are interchangeable.", "entryIds": ["1490470", "1490500", "1197710", "1357300", "1534520"]},
+      {"word": "苗", "exclude": ["芽", "植物", "木", "植える", "稲"], "reason": "Sprout/shoot labels can describe early plant growth; plant and tree are broad labels that can fit a seedling, including a young tree. Initial GPT F1 identified the separate unqualified plant label on 植える: noun/verb intent is invisible in English choices and the existing shared 植物 edge is not transitive. Claude's optional rice-plant concern was adopted as a narrow guard: 苗's explicit second sense is rice seedling, which also satisfies the displayed rice plant label. Exact direct guards on the new card only, not unrestricted synonymy or a blanket taxonomy rule.", "entryIds": ["1490470", "1490500", "1197710", "1357300", "1534520", "1357250", "1167820"]},
       {"word": "育苗", "exclude": ["育てる"], "reason": "Displayed raise-or-nurture label can fit seedling raising. A noun/suru versus native verb distinction alone does not disambiguate bare English answers.", "entryIds": ["1160750", "1160570"]},
       {"word": "苗代", "exclude": ["田", "田んぼ"], "reason": "A rice nursery can be a rice field. Prevent broad rice-field/rice-paddy labels from being used against this narrow nursery term, without claiming every paddy is a seedling bed.", "entryIds": ["1490490", "1442730", "1442840"]},
       {"word": "畔", "exclude": ["畝", "道"], "reason": "The two ridge labels overlap in bare English although their agricultural functions differ. 畔 also abbreviates the field path, making road/way a potentially fitting broad displayed label. Direct pairs only; existing articles/exclusions untouched.", "entryIds": ["1250980", "1374420", "1454080"]},
@@ -82,10 +83,10 @@
   "fontDisposition": "None of 苗/畔/畝 is in the frozen forty-character all-font fallback set. Inherit accepted all40/160 pilot evidence only for unchanged production font scope, not as fresh native acceptance. Fresh non-skipped RareHanTest remains a later batch acceptance gate.",
   "compatibleClient": "Android f9b59a2 or later; old APKs ignore explicit curation and old 8000-entry clients reject the collection.",
   "acceptance": {
-    "initialReviews": "Not started. Both different-family reviewers must cover every assigned file on the same frozen draft snapshot, with serial isolated processes and serial read-only tools.",
+    "initialReviews": "Complete: claude-opus-5.5 and gpt-6.1-sol independently reviewed the same signed 6ce5676 teaching snapshot. Both isolated processes exited 0 serially; complete original reports and model/read receipts preserved. No internal tool overlap in either run. One minor GPT displayed-label safeguard and one Claude optional-origin rice-plant safeguard adopted on new 苗 only; original-session bounded confirmations pending.",
     "android": "Not run for batch 003. Dedicated Android tree remains clean at f9b59a2; fresh applicable non-skipped tests required after textual closure.",
     "phone": "Physical-phone/general-release acceptance explicitly outstanding; not a new veto on bounded owner testing.",
     "publication": "Unpublished local draft only. Six support articles and three kanji are not delivered coverage; project published additions remain 16/1228, remaining 1212."
   },
-  "nextAction": "Freeze a normally signed local draft with fresh manifest and mechanical receipts, preserve checkpoint and yield. Fresh coordinator runs two serial different-family initial reviews on that exact snapshot, reconciles and confirms fixes before batch acceptance/publication. Never push the unreviewed branch."
+  "nextAction": "Validate and normally sign the exact two-direct-pair correction with fresh manifest. Resume both original reviewer sessions serially for bounded changed-passage confirmation; preserve original reports and limits. Textual closure is not Android/combined-main/publication acceptance. Do not select batch 004 or push before all acceptance gates."
 }
