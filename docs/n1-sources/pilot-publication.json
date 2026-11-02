@@ -1,7 +1,22 @@
 {
   "schemaVersion": 1,
   "batch": "pilot",
-  "status": "locally-accepted-awaiting-signed-publication",
+  "status": "first-push-archive-passed-ci-missing-fonttools-correction",
+  "firstPublicationAttempt": {
+    "commit": "362d306cf3822a44662f421936e0eae16533f199",
+    "remoteMainVerified": true,
+    "ciRun": 41506726368,
+    "ciConclusion": "failure",
+    "cause": "CI installed pyyaml/pillow/requests but the N1 source-freeze/audit test imports also require fontTools. Local environment had it, so 340 local tests passed; hosted discovery failed two module imports. Add the already documented authoring dependency to CI, without weakening tests.",
+    "immutableArchiveManifestEqual": true,
+    "verifiedRuntimeHashes": 8080,
+    "archiveSha256": "d0e32895f81d3757f1ea8ed1d598302aecd1d9f91137a185d0d40846cb405aec",
+    "zipEntries": 8101,
+    "compressedBytes": 30326905,
+    "inflatedBytes": 43660725,
+    "retainedBytes": 43393072,
+    "deliveryCounted": false
+  },
   "authoredSnapshot": "b43173e10f158f59df49137394e1ebbfb0821393",
   "reviewedTeachingSnapshot": "bb448a25c522e9703d43e87216320c48a9121f1c",
   "nativeArchiveSnapshot": "79360e975ccf54cb484994ddc2632b2c7dabc6b1",
