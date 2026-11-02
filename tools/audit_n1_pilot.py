@@ -103,6 +103,7 @@ def audit(root):
         ("pilot-comparison-selection.json", "pilot-comparisons-jmdict.xml"),
         ("pilot-label-selection.json", "pilot-label-jmdict.xml"),
         ("pilot-curation-comparison-selection.json", "pilot-curation-comparisons-jmdict.xml"),
+        ("pilot-curation-followup-selection.json", "pilot-curation-followup-jmdict.xml"),
     ):
         selection = json.loads((evidence / selection_name).read_text(encoding="utf-8"))
         entries = ET.parse(evidence / packet_name).getroot().findall("entry")
