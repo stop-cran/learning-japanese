@@ -37,7 +37,41 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 007: textually review-closed, local and unpublished
+## Batch 008: local unreviewed draft
+
+The [frozen packet](n1-sources/batch-008-membership.json) is **楓・楠**.
+Two necessary new support articles provide two reciprocal pairs; neither
+character activates a baseline-declared word pair. No reused teaching or
+baseline metadata changes. The [ledger](n1-sources/batch-008-progress.json)
+retains all **eight** source readings and selects **かえで・くす・くすのき**.
+The two camphor-tree readings share one lexical identity, not independent
+transfer or mastery evidence.
+
+Two pinned packets preserve **52 complete JMdict families**. 楓's native
+maple sense is distinguished from the separately indexed sweetgum noun ふう;
+楠's four on readings remain explicitly source-only rather than being
+manufactured from 石楠花 or name readings. Actual broader tree, plant and
+material labels motivate twelve direct new-word safeguards, with conservative
+contextual guards qualified separately from unrestricted synonym claims.
+The [external evidence](n1-sources/batch-008-external-evidence.json) distinguishes
+the irrelevant surname/place-name 楠 page from the verified native 樟・楠
+headings. The unnecessary alternate spelling containing 槭 stays in the full
+dictionary family, not learner text: it would introduce a new missing-cmap
+character outside the existing forty-target evidence.
+
+Both new cards use thirteen pinned generated strokes, without manual
+geometry. New native spellings retain source metadata and dictionary-verified
+allocations; supporting words have no vocabulary level inferred
+from their kanji. This is **local unreviewed teaching, not delivery**.
+Two serial blind different-family initial reviews, reconciliation and fresh
+Android/current-main/publication gates remain pending. Published coverage
+is **29/1,228; 1,199 remain to deliver**.
+The [draft audit](n1-sources/batch-008-draft-audit.json) and
+[execution record](n1-sources/execution-030.json) distinguish 353 passing Python
+tests and exact source/baseline/link/reading/font/stroke/local-budget checks
+from the still-pending independent and publication acceptance gates.
+
+## Batch 007: published and verified
 
 The [frozen packet](n1-sources/batch-007-membership.json) is **柚・椿**.
 Both have useful native plant nouns alongside more specialized source readings;
@@ -93,11 +127,16 @@ verification remain disclosed; coordinator verification supplies the exact
 snapshot, not a successful canonical-repository read by the reviewer.
 
 All four files are now CLEAN across the three textual facets, with no
-consequential in-scope unresolved claim. These are **review-closed local
-articles, not delivered additions**. Fresh non-skipped Android tests and
-combined-main/publication/CI/exact immutable ZIP acceptance remain pending.
-Published additions stay **27/1,228; 1,201 remain to deliver**.
-No batch 008 has started. Compatible Android `f9b59a2` or later is required;
+consequential in-scope unresolved claim. They subsequently passed the exact
+parent Android recovery, current-main, CI and immutable public ZIP gates in
+the [publication record](n1-sources/batch-007-publication.json).
+The historical execution denial and qualified original review disagreement
+remain preserved; neither is rewritten as fresh coordinator Android execution
+or initial reviewer agreement. All four Android cases passed without skips
+and every runtime archive hash was verified under unchanged guards.
+Terminal publication at `ef4b03b` delivered **29/1,228 additions;
+1,199 remain to deliver**. Batch 008's local drafts above do not increase
+that count. Compatible Android `f9b59a2` or later is required;
 physical-phone/general-release acceptance is explicitly outstanding.
 
 ## Batch 006: published and verified
@@ -148,7 +187,8 @@ hash within unchanged budgets. Terminal receipts were published at
 `7b9f503`; historical permission denial, original review overlap and incorrect
 serial claim remain preserved, not rebranded as compliant.
 Published additions are **27/1,228; 1,201 remain to deliver**.
-Batch 007's unpublished local articles above do not change that count.
+These are batch 006's historical publication counts; subsequent accepted
+batch 007 coverage is recorded above.
 Compatible Android `f9b59a2` or later remains required;
 physical-phone/general-release acceptance is explicitly outstanding.
 

@@ -56,16 +56,23 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   combined-main/CI/immutable-ZIP publication gates, reaching **27 published
   additions; 1,201 still to deliver** at `7b9f503`.
   [Batch 007](n1-sources/batch-007-progress.json), 柚・椿, is now
-  **textually review-closed but local and unpublished** after two blind
+  **published and verified for bounded owner testing** after two blind
   model-family reviews and both original-session correction confirmations.
   Its [reconciliation](n1-reviews/batch-007-reconciliation.json) preserves
   the qualified garden-tree quiz finding, two conservative direct guards,
   optional dispositions and actual read/process limits.
-  Fresh Android and publication acceptance remain pending; this does not
-  increase delivered coverage.
+  Its [publication record](n1-sources/batch-007-publication.json) preserves
+  exact parent Android recovery, current-main/CI and every immutable public
+  ZIP runtime hash, including the historical execution denial.
+  Terminal `ef4b03b` delivered **29 additions; 1,199 still to deliver**.
   Its supporting words likewise have no vocabulary level inferred from
   their kanji. The compatible-client and outstanding physical-phone/
   general-release qualifications above remain unchanged.
+  [Batch 008](n1-sources/batch-008-progress.json), 楓・楠, has
+  **local unreviewed drafts** with full reading and source dispositions.
+  Its two necessary supporting words have no vocabulary level inferred
+  from their kanji. These drafts do not increase published coverage;
+  two-family review and subsequent acceptance gates remain pending.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee

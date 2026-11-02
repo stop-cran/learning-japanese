@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "batch": "008",
+  "baseCommit": "ef4b03beee924e114161fca5ff9e4839dfe3cc5a",
+  "membership": ["楓", "楠"],
+  "status": "draft-not-independently-reviewed",
+  "drafted": ["楓", "楠"],
+  "reviewClosed": [],
+  "published": [],
+  "sourceSnapshot": "docs/n1-source-snapshot.json",
+  "dictionaryPackets": [
+    {"selection": "batch-008-lexical-selection.json", "xml": "batch-008-jmdict.xml"},
+    {"selection": "batch-008-comparison-selection.json", "xml": "batch-008-comparisons-jmdict.xml"}
+  ],
+  "supportMappings": [
+    {"kanji": "楓", "article": "words/楓.md", "primaryReading": "かえで", "entryIds": ["2061900"], "selectedSenses": [1], "newArticle": true, "status": "draft-not-independently-reviewed"},
+    {"kanji": "楠", "article": "words/楠.md", "primaryReading": "くすのき", "entryIds": ["1460720"], "selectedSenses": [1], "newArticle": true, "status": "draft-not-independently-reviewed"}
+  ],
+  "requiredReciprocalPairs": [["楓", "words/楓.md"], ["楠", "words/楠.md"]],
+  "changedReusedPassages": [],
+  "readingDispositions": [
+    {
+      "kanji": "楓", "kind": "on", "reading": "フウ", "selected": false,
+      "entryIds": ["2034430", "2564680"],
+      "example": "楓葉 ふうよう - maple leaf; separately楓ふう - Formosan sweetgum",
+      "reason": "Complete single-characterふうfamily2564680 directly establishes allocation independently of a kana substring; KANJIDIC2 supplies its on classification. Complete compound2034430 and existing葉ヨウsupport楓葉's maple-leaf meaning. Actual Daijisenふうheading explicitly distinguishesかえで. Retain recognition and lexical disambiguation, not a freely interchangeable reading or a frequency claim. This native-maple lesson does not need a second plant article or an on question merely because a dictionary contains the noun."
+    },
+    {
+      "kanji": "楓", "kind": "kun", "reading": "かえで", "selected": true,
+      "entryIds": ["2061900"], "article": "words/楓.md",
+      "example": "楓 かえで - maple tree",
+      "reason": "Complete unrestricted native single-character pair directly establishes allocation and selectedAcerplant sense. Seisenbanかえでsense1corroborates plant/garden/autumn-leaf use. Full raw alternative spelling槭樹remains evidence, not another source row needing its own article; nonessential alias omitted from runtime to avoid introducing an uninspected missing-cmap character. Archaicかえるでfamily2859188is preserved but is not imported into current metadata or quiz. No word JLPT inferred from kanji or spelling priority."
+    },
+    {
+      "kanji": "楠", "kind": "on", "reading": "ナン", "selected": false,
+      "sourceOnly": true, "entryIds": [],
+      "reason": "Exact KANJIDIC2 entry/order retained as source-only lookup information; no modern Japanese lexical allocation established in this bounded packet. Complete石楠花family1629540provides the wholeしゃくなげreading, not an independently evidenced楠ナンword. No fabricated compound, absence/frequency claim or name question."
+    },
+    {
+      "kanji": "楠", "kind": "on", "reading": "ダン", "selected": false,
+      "sourceOnly": true, "entryIds": [],
+      "reason": "Exact KANJIDIC2 entry/order retained as explicitly source-only; no modern word example established in this bounded lesson. Neitherpinyinnan2nor visible南nor a surname supplies Japaneseダンallocation. No question, invented rarity claim or universal nonexistence claim."
+    },
+    {
+      "kanji": "楠", "kind": "on", "reading": "ゼン", "selected": false,
+      "sourceOnly": true, "entryIds": [],
+      "reason": "Exact KANJIDIC2 entry/order retained as explicitly source-only; no modern lexical example established here. A successful楠page principally returned surnames/places and no useful character-reading entry; it is not promoted to corroboration. No question or fabricated compound."
+    },
+    {
+      "kanji": "楠", "kind": "on", "reading": "ネン", "selected": false,
+      "sourceOnly": true, "entryIds": [],
+      "reason": "Exact KANJIDIC2 entry/order retained as explicitly source-only; no modern lexical example established here. Complete relevant families and the actual native樟・楠headings do not establish this separate on allocation. No dropped metadata, manufactured example or universal claim of nonexistence."
+    },
+    {
+      "kanji": "楠", "kind": "kun", "reading": "くす", "selected": true,
+      "entryIds": ["1460720"], "article": "words/楠.md",
+      "example": "楠 くす - camphor tree; alternative native reading",
+      "reason": "Full family1460720allowsくすforboth楠/樟without restriction; actual Daijisen and Seisenbanくすheadings explicitly give the same plant noun. Selected for useful spelling/alternate-reading recognition, not because a surname or substring resembles it. The linked primaryくすのきarticle explicitly teachesくすand both allowed spellings; two offered stems are repetition of one lexical identity, not independent transfer/mastery evidence. Usually-kana flag concerns spelling, not rarity of either pronunciation."
+    },
+    {
+      "kanji": "楠", "kind": "kun", "reading": "くすのき", "selected": true,
+      "entryIds": ["1460720"], "article": "words/楠.md",
+      "example": "楠 くすのき - camphor tree; camphorwood",
+      "reason": "Complete native family1460720directly spells the entire reading with one character and supports plant/materialsense1. Actual Seisenbanくすのき【樟・楠】corroborates evergreen plant, alternate spelling and wood use. The entireのきbelongs to this native noun even though no separate木is written. Select a useful directly verified noun, not nanori, an inferred word level or priority-based frequency."
+    }
+  ],
+  "curatedProjection": [
+    {"kanji": "楓", "quizOnyomi": [], "quizKunyomi": ["かえで"], "onKeys": [], "kunKeys": ["かえで"]},
+    {"kanji": "楠", "quizOnyomi": [], "quizKunyomi": ["くす", "くすのき"], "onKeys": [], "kunKeys": ["くす", "くすのき"]}
+  ],
+  "quizAudit": {
+    "楓": {"title": "maple", "distractors": ["風", "村", "相"], "labels": ["wind; style", "village", "mutual; aspect"], "reason": "Actual complete comparison cards inspected. Visible風is a shape comparison, not a maple or sweetgum sense. Village and mutual/aspect are semantically wrong for the target plant. All three default alternatives are curated; no exact title collision or newly triggered generic-wood fallback repair is established."},
+    "楠": {"title": "camphor tree", "distractors": ["南", "村", "相"], "labels": ["south", "village", "mutual; aspect"], "reason": "Actual complete cards inspected. Visible南is a shape component, not the native camphor-tree meaning; village and mutual/aspect likewise do not name the plant. Three curated default options; no unrestricted inference from mnemonic to meaning."}
+  },
+  "wordQuizAudit": {
+    "directExclusions": [
+      {"word": "楓", "exclude": ["紅葉", "木", "植物", "植える", "植木"], "reason": "Actual紅葉article/families teachもみじmaple despite primaryこうようand displayedautumnlabel; protect the written-form/secondary-sense overlap rather than declaring the maple reading incorrect. 木/植物are broader plant labels; 植える's bareEnglishplantalsohasnoun ambiguity. 植木guard is conservative for the authoredgardencontext and actualgarden-tree/potted-plant senses, not an unrestricted synonym or a claim that every taxonomic relation requires an exclusion."},
+      {"word": "楠", "exclude": ["木", "植物", "植える", "植木", "木材", "材木", "材料"], "reason": "Actual existing headers/bodies and complete families inspected. Protect broadtree/wood/plantlabels, Englishplantnoun/verb ambiguity and conservatively thegarden-treecontext. Native楠familyalsohascamphorwood: direct木材/材木andmaterialslabelguards protect the material interpretation without claiming all timber/materials are camphorwood. Direct pairs only; not transitive and no blanket botanical clique."}
+    ],
+    "confusableInventory": "Complete docs/confusable-words.md inspected through357; no named楓/楠row. Broader taxonomy/material guards are explicit author choices, not a finding retrospectively attributed to that inventory.",
+    "nonExclusions": "Other named tree species have different actual labels and identities; no pairwise synonym established solely from plants/trees tags. 大木large-treecategory was inspected but neither assigned noun itself specifies large size; no direct ambiguity guard is asserted as mandatory. Maple and camphor tree are not synonyms. 樟has no existing article to pair. 樟脳denotes the substance, not the whole plant or its wood.",
+    "limits": "Bounded semantic audit, not exhaustive live-quiz certification; model review may establish additional consequential pairs."
+  },
+  "authorInspection": {
+    "completeLexicalFamilies": 39,
+    "completeComparisonFamilies": 13,
+    "completeComparisonArticles": ["words/紅葉.md", "words/木.md", "words/植物.md", "words/植木.md", "words/植える.md", "words/木材.md", "words/材木.md", "words/材料.md", "words/大木.md"],
+    "completeShapeComparisonCards": ["kanji/風.md", "kanji/南.md", "kanji/村.md", "kanji/相.md"],
+    "limits": "Full source families inspected before teaching; author inspection is not independent review. No actual prior accepted batch reopened; no baseline teaching passage changed."
+  },
+  "compatibleClient": "Androidf9b59a2+; oldAPKs ignore curated subsets and old8000-entryclients rejectcollection.",
+  "phoneAcceptance": "Explicitly outstanding; no new native/visual/device/physical-phone/general-release claim.",
+  "publishedAdditions": 29,
+  "remainingAdditions": 1199,
+  "nextAction": "Validate full source/baseline/reading/link/font/stroke/budget invariants and freeze a signed local unreviewed snapshot. Obtain two serial blind model-family initial reviews on that same snapshot before reconciliation, freshAndroid/current-main/publication acceptance. No batch009.",
+  "limits": "Draft teaching and author evidence only. No independent reviewer has launched; draft additions do not increase delivered coverage. Historical pilot native/all40/160font evidence applies only to unchanged production scope."
+}
