@@ -3,7 +3,7 @@
   "batch": "002",
   "baseCommit": "560c9dd37103852ef8ddf07cd3b740a975243de1",
   "membership": ["稲", "穂", "桑", "芋"],
-  "status": "draft-not-independently-reviewed",
+  "status": "independent-initial-reviews-preserved-fixes-awaiting-confirmation",
   "drafted": ["稲", "穂", "桑", "芋"],
   "reviewClosed": [],
   "published": [],
@@ -66,7 +66,9 @@
   "wordQuizAudit": {
     "newTitles": {"稲穂": "ear of rice", "水稲": "wetland rice", "桑": "mulberry tree", "芋": "tuber"},
     "directExclusions": [
-      {"word": "芋", "exclude": ["くだらない", "屑"], "reason": "芋's secondary worthless-thing/dud sense makes a displayed worthless or trash label potentially defensible. Direct additive guards live only on the new card; existing exclusions are untouched.", "entryIds": ["1167960", "1184360", "1246510"]}
+      {"word": "芋", "exclude": ["くだらない", "屑"], "reason": "芋's secondary worthless-thing/dud sense makes a displayed worthless or trash label potentially defensible. Direct additive guards live only on the new card; existing exclusions are untouched.", "entryIds": ["1167960", "1184360", "1246510"]},
+      {"word": "水稲", "exclude": ["稲"], "reason": "Narrow safeguard for the broad rice-plant answer: wetland rice is a kind of rice plant, so the bare broad English label can fit either written choice. Does not assert unrestricted Japanese interchangeability.", "entryIds": ["1371310", "1167820"]},
+      {"word": "桑", "exclude": ["木"], "reason": "Apply the same reviewed category-label safeguard to mulberry tree versus tree; wood. Direct pair only, not a blanket rule for all botanical categories or a new synonym claim.", "entryIds": ["1247060", "1534520"]}
     ],
     "comparisons": "Inspected actual 稲, 米, ご飯, 木, くだらない, 屑 and 塵 articles, plus the full dictionary families. Rice plant, grain head, wetland crop category and food/meal labels are differentiated. 塵's material-garbage label is not automatically equated with every dud; no transitive exclusion clique is asserted. No potato/taro/sweet-potato article identity exists in the starting collection, so no duplicate is created.",
     "confusableInventory": "Searched docs/confusable-words.md for 稲/穂/桑/芋 and rice/potato/tuber/mulberry; no applicable inventory row found. Inventory absence is not semantic proof.",
@@ -76,7 +78,7 @@
   "fontDisposition": "None of these four characters is in the frozen forty-character all-font fallback set. Inherit the accepted pilot all40/160 probes only for that unchanged production font scope; fresh non-skipped RareHanTest is still required before acceptance.",
   "compatibleClient": "Android f9b59a2 or later; old APKs ignore explicit curation and old 8000-entry clients reject the collection.",
   "acceptance": {
-    "initialReviews": "Not started. Both different-family reviewers must cover the same complete frozen teaching snapshot serially, including all new support and the changed 稲 passage.",
+    "initialReviews": "Complete original reports preserved for claude-opus-5.5 and gpt-6.1-sol on 9fee517; reviewer processes exited serially. Claude internally overlapped two small card reads once despite the serial-only prompt; exact deviation retained, not claimed compliant. Corrected mnemonic and two narrow direct quiz safeguards await original-session confirmation.",
     "android": "Not run for this draft. Pilot native acceptance is preserved, not rebranded as a fresh batch test.",
     "phone": "Physical-phone/general-release acceptance explicitly outstanding; not a blanket veto on bounded owner testing.",
     "publication": "None. Do not push this draft or count these four additions as delivered."
