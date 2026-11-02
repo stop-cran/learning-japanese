@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 006: bounded local draft, not independently reviewed
+## Batch 006: textual review closed, local and unpublished
 
 The [frozen packet](n1-sources/batch-006-membership.json) is **栗・梨**,
 chosen to bound source-only reading and lexical work rather than continue
@@ -57,10 +57,27 @@ extraction, tree/nut/fruit and colour senses, and 梨's nonexclusive species
 scope. Sixteen direct new-word exclusions guard fitting generic tree,
 plant, fruit/nut, timber and brown labels; these are not transitive cliques.
 
-This is a **local unreviewed draft**, not delivered content. Two serial
-different-family independent initial reviews on one frozen snapshot,
-evidence-based reconciliation, fresh non-skipped Android checks and
-combined-main/publication/CI/exact immutable ZIP acceptance remain required.
+Independent `claude-opus-5.5` and `gpt-6.1-sol` initial reviews covered the same
+normally signed `8602dc7` snapshot: all four teaching files, all 18 complete
+families, seven actual kanji comparisons and fourteen word comparisons.
+Both processes exited before the next launch. One initial Claude group of
+four teaching reads overlapped, contradicting its original serial claim;
+the original report is preserved unchanged. An original-session supplement
+reread those four files serially and acknowledges the breach without claiming
+retroactive compliance. GPT's internal calls were serial.
+
+The [reconciliation](n1-reviews/batch-006-reconciliation.json) retains all
+three complete reports, actual model/read/process receipts and three optional
+dispositions. No actionable defect was established; all four files are CLEAN
+across correctness, scoped coverage and textual comprehensibility. Teaching
+is unchanged, not native-speaker or exhaustive quiz certification.
+[Execution 023](n1-sources/execution-023.json) and the
+[review-closed audit](n1-sources/batch-006-review-closed-audit.json) record the
+bounded textual closure and local checks.
+
+This is **local textual closure**, not delivered content. Fresh non-skipped
+Android checks and combined-main/publication/CI/exact immutable ZIP acceptance
+remain required.
 Published additions remain **25/1,228; 1,203 remain to deliver**.
 No batch 007 has started. Compatible Android `f9b59a2` or later remains
 required; physical-phone/general-release acceptance is explicitly outstanding.

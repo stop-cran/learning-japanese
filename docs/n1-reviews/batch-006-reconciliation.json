@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "batch": "006",
+  "status": "textual-review-closed-local-unpublished",
+  "baseCommit": "45d973442c19e0a0b73e9fe7fece453fdb066536",
+  "initialSnapshot": "8602dc702dccc11de5fbcccace4ba204fafb930e",
+  "reviewedTeachingSnapshot": "8602dc702dccc11de5fbcccace4ba204fafb930e",
+  "snapshotSignature": "G",
+  "teachingChangesAfterInitialReviews": 0,
+  "scope": {
+    "newKanji": ["栗", "梨"],
+    "newSupportArticles": ["words/栗.md", "words/梨.md"],
+    "changedReusedPassages": [],
+    "facets": ["correctness", "scoped coverage", "textual phone comprehensibility"],
+    "dictionaryFamilies": 18,
+    "fullReadingDispositions": 6,
+    "curatedOfferedKeys": 2,
+    "sourceOnlyDispositions": 3,
+    "sourceOnlyOfferedKeys": 0,
+    "requiredReciprocalPairs": 2,
+    "activatedBaselineDeclaredPairs": 0,
+    "directNewWordExclusionPairs": 16
+  },
+  "reviewers": [
+    {
+      "model": "claude-opus-5.5",
+      "sessionId": "6a29a1f4-e009-453c-9249-2ffcc1841e36",
+      "initialReport": "batch-006-initial-claude.md",
+      "initialExecution": "batch-006-initial-claude-execution.json",
+      "initialToolCalls": 37,
+      "initialScope": "All four complete teaching files, four full dictionary packets/18 families, complete raw KANJIDIC2 records, all seven actual kanji comparisons and fourteen existing word comparisons, format40-157. Four independent live Kotobank fetches returned relevant Seisenban栗/梨/梨園 and Daijisen/Seisenban栗色 headings, plus Daijisen梨character heading. No required local read truncated.",
+      "processDeviation": "ONE initial group of FOUR teaching view calls overlapped: THREE starts while another call was active, SIX overlapping pairs, maximum FOUR simultaneous tools. Original report incorrectly claims all calls serial. Exact execution receipt and unchanged original report preserved; not compliant initial internal serialization.",
+      "supplementReport": "batch-006-supplement-claude.md",
+      "supplementExecution": "batch-006-supplement-claude-execution.json",
+      "supplementToolCalls": 5,
+      "supplementScope": "Own bounded task and all four unchanged teaching files reread one call per response in original session. Original dictionary/comparison/public-source inspection inherited, not fetched or reread again. No new initial review or teaching correction.",
+      "supplementResult": "Acknowledges original process deviation and incorrect serial claim; confirms all four three-facet verdicts, both keys and both reciprocal pairs. Adds one nonblocking cultural expansion. Serial supplement cannot undo the initial breach."
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "sessionId": "289a8f24-8006-4d8a-9115-eb3544a802e9",
+      "initialReport": "batch-006-initial-gpt.md",
+      "initialExecution": "batch-006-initial-gpt-execution.json",
+      "initialToolCalls": 40,
+      "initialScope": "All four complete teaching files, four complete dictionary packets/18 families with comparisons packet split into bounded ranges, complete raw KANJIDIC2 records, all seven actual kanji and fourteen existing word comparisons, format40-157. Four independent live Kotobank fetches of same relevant headings; additional READMEapproach526-EOF and targeted confusable search. No required local truncation or internal tool overlap.",
+      "result": "All four assigned files CLEAN on all three textual facets; no findings or optional suggestions. Explicit two-key suitability and source-only/allocation distinction."
+    }
+  ],
+  "process": {
+    "maximumActiveReviewerProcesses": 1,
+    "allThreeProcessExitCodes": [0, 0, 0],
+    "internalOverlappingStarts": [3, 0, 0],
+    "initialClaudeOverlappingGroups": 1,
+    "initialClaudeMaximumConcurrentTools": 4,
+    "initialClaudeOverlappingPairs": 6,
+    "unfinishedTools": 0,
+    "actualExitBeforeEachNextLaunch": true,
+    "teachingUnchangedDuringAllReviews": true,
+    "initialPromptsIdentical": true,
+    "initialBlindness": "Both initial reviewers received the same snapshot, four teaching files, dictionaries/comparisons and three-facet rubric. Actual returned scope contains no other reports, progress rationale, external-evidence observations or adjudication. First complete report archived before next launch; second archived before supplementary prompt. Supplement is original Claude session only.",
+    "modelSelection": "Current installed CLI help and helpconfig inspected duringexecution023 and preserved in siblingcontrol/batch-006-current-help.txt andbatch-006-current-config-help.txt. Explicit advertised IDs agree with actual assistant/tool model events and usage; no Auto substitution.",
+    "availableTools": ["view", "glob", "rg", "web_fetch"],
+    "disabled": "Shell, edits, delegation and builtin MCPs unavailable; tool-eventgrep is read-onlyrg alias. OwnerGH_TOKEN absent at each launch. No nested agent, second runner, other reviewer, Android or heavy command overlapped reviewer executions.",
+    "readReceipts": "Requested paths/ranges, exact returned text checks, returned hashes/counts, actual model/session IDs, internal overlap timestamps and actual process exits retained. Complete local scope audited by union of returned ranges and teaching matched frozen Git. Returned bytes do not prove comprehension.",
+    "reportPreservation": "Three complete original final reports preserved unchanged as LFUTF8; exact report and raw execution hashes verified. Private reasoning and opaque provider fields not exported.",
+    "usageLimit": "Resumed-session usage can include cumulative totals and is not isolated-turn spending."
+  },
+  "findings": [],
+  "optional": [
+    {
+      "origin": "claude-initial-optional-1",
+      "location": "kanji/栗.md:22",
+      "claim": "Name the jinmeiyo list when explaining name-use classification.",
+      "status": "optional",
+      "disposition": "Not adopted. Current standalone English explicitly explains that source name-use classification does not make the useful native noun a personal name. Frozen complete KANJIDIC2 record gives grade9. A Japanese administrative label adds terminology but fixes no demonstrated misunderstanding."
+    },
+    {
+      "origin": "claude-initial-optional-2",
+      "location": "kanji/梨.md:30,41",
+      "claim": "Add elegant/literary register and the literal pear-orchard sense of梨園.",
+      "status": "optional",
+      "disposition": "Not adopted. Current row correctly narrows the recognition example to theatricalworld,especiallykabuki, leaves it out of questions and warns against translating every occurrence literally. Coordinator independently inspected Seisenbanりえん1/2 and Nipponica雅称. These support the optional addition but do not invalidate the scoped example or create an exclusive-sense claim."
+    },
+    {
+      "origin": "claude-supplement-optional-3",
+      "location": "words/梨.md:35",
+      "claim": "Mention theありのみ euphemism arising fromなし/無し association.",
+      "status": "optional",
+      "disposition": "Not adopted. Coordinator inspected Seisenbanなしsupplementarynote2, which supports the cultural association. Exact teaching says the fruit and negative word are lexically unrelated and that shared pronunciation does not give梨the negative meaning; it does not deny later wordplay or euphemism. This is post-initial optional expansion, not a unique blind-review discovery or a missing prerequisite."
+    }
+  ],
+  "coordinatorClarifications": [
+    "The original Claude one-call-at-a-time claim is contradicted by actual tool starts and corrected only in the separately preserved supplement. No claim of full initial serialization or retroactive compliance.",
+    "Source-only means no established modern allocation selected in this bounded packet, not that every historical/specialist dictionary lacks an example. Full metadata/order remain intact. JMdict1390130 is not proof of a modern栗spelling; neither report is adopted as a universal absence claim.",
+    "Priority flags do not independently establish spelling frequency or comparative usefulness. Both selected keys are independently justified whole native nouns; the high-priority wording in the Claude report is not promoted into a frequency claim.",
+    "Snapshot identity, raw source hashes and unchanged teaching are coordinator-verified; reviewers had no shell for independent Git verification.",
+    "Both initial reviewers and coordinator inspected the relevant public dictionary headings. Empty Daijisen definition bodies for栗and梨園 remain disclosed; relevant Seisenban bodies supply the evidence. No unused historical glyph analysis adopted."
+  ],
+  "modelContributions": {
+    "verifiedUniqueActionableInitialFindings": "None from either family; no quota manufactured.",
+    "claudeOnly": "Two initial nonblocking polish/expansion observations and one later optional cultural observation retained, none adopted. Operational overlap is not a linguistic discovery.",
+    "gptOnly": "No unique actionable defect. Precise whole-noun allocation and broader pear/sense qualifications overlap the other report's supporting observations.",
+    "shared": "All six full readings explained; onlyくり/なしoffered and suitable. Three栗source-only dispositions and retained梨リcompound correctly distinguished. Tree/nut/wood/colour and pear-species qualifications source-backed, six defensibly wrong kanji choices, sixteen direct word guards and both reciprocal pairs.",
+    "limits": "Compared equivalent observations across findings, optional, supporting assessment and limits, not labels alone. Same actual initial teaching/dictionary/comparison set but unequal fetched/range/context depth and initial internal overlap remain disclosed. No general family ranking or native-speaker certification."
+  },
+  "finalTextualVerdict": "All four assigned teaching files CLEAN on correctness, scopedcoverage and textualcomprehensibility. No actionable defect or consequential in-scope unresolved claim. Teaching remains exactly normallysigned8602dc7 with zero correction diff.",
+  "acceptanceLimits": "Textual closure only, local and unpublished. Fresh non-skipped RealContentTest/RareHanTest, current-main combined validation, normal signed acceptance/integration, owner-scoped fast-forward push, actual greenremoteCI and every immutable public ZIP runtimehash/budget check pending. Published25/1228 and remaining1203 unchanged. No007started. Acceptedpilotnative/all40/160fonts inherited only in unchangedproductionscope; no fresh native/font/phone claim. Compatible Androidf9b59a2+ required; physicalphone/generalreleaseacceptance explicitlyoutstanding,notanewbounded-owner-testingveto."
+}
