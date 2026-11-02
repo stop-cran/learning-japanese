@@ -37,11 +37,11 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 005: textual review closed, local and unpublished
+## Batch 005: published and verified
 
 The [next frozen packet](n1-sources/batch-005-membership.json) is
 **松・桃・梅**. Six full metadata readings remain in source order, with
-six proposed useful question keys. Three necessary new support articles,
+six approved useful question keys. Three necessary new support articles,
 **桃・白桃・松竹梅**, and three component backlinks in existing
 **松・梅・梅雨** form seven reciprocal pairs, including all three activated
 baseline-declared pairs. Reused identities, primary readings, sourced N3
@@ -78,11 +78,29 @@ All nine files are CLEAN across the three textual facets, with reused
 native-speaker or exhaustive quiz certification.
 [Execution 019](n1-sources/execution-019.json) and the
 [review-closed audit](n1-sources/batch-005-review-closed-audit.json) record
-textual closure and exact local checks, not publication. Fresh non-skipped
-Android checks and combined-main/remote CI/exact public ZIP acceptance still
-follow. **Published additions remain 22/1,228; 1,206 remain to deliver.**
-No batch 006 has started; physical-phone/general-release acceptance remains
-explicitly outstanding.
+textual closure and exact local checks, not publication by those checkpoints.
+
+**These three cards are now published for bounded owner testing.**
+[Execution 020](n1-sources/execution-020.json) preserves the historical
+pre-execution Android permission denial. The
+[parent recovery](n1-sources/batch-005-parent-android-recovery.json) records
+the exact command's successful approval-capable run: exit 0, 41 tasks executed,
+RealContentTest 3/3 and RareHanTest 1/1 with no skips, failures or errors.
+[Execution 021](n1-sources/execution-021.json) inspected the complete build log
+and all four named XML cases, verified source/artifact hashes and this sibling
+content root, and preserved that provenance rather than claiming a coordinator
+rerun or relaxing the gate. Runtime remained exactly the reviewed `29b2b475`.
+
+The [publication record](n1-sources/batch-005-publication.json) pins normally
+signed accepted `c02086e`, green CI `41532631695` and the actual immutable
+GitHub ZIP: all **8,121 runtime hashes** verified within unchanged archive,
+per-file and path budgets. Fresh combined-main checks passed 353 Python tests,
+validator, vocabulary consistency, manifest freshness and exact source,
+baseline, membership, reading and link audits. The historical denial and
+original review limitations remain intact.
+**Published additions are 25/1,228; 1,203 remain to deliver.**
+No batch 006 has started. Compatible Android `f9b59a2` or later is required;
+physical-phone/general-release acceptance remains explicitly outstanding.
 
 ## Batch 004: published and verified
 
@@ -124,7 +142,8 @@ RealContentTest 3/3 and RareHanTest 1/1 against this isolated sibling tree,
 353 Python tests, validator, vocabulary consistency, fresh manifest and exact
 source/baseline/membership/reading/link audits on the combined current-main tree.
 Reviewed teaching remains exactly `bfea505`; no integration correction was
-needed. Published additions are **22/1,228**, with **1,206 still to deliver**.
+needed. At that checkpoint, published additions were **22/1,228**, with
+**1,206 still to deliver**.
 No next batch or fresh native/phone acceptance is claimed. Compatible Android
 `f9b59a2` or later remains required; physical-phone/general-release acceptance
 is explicitly outstanding.

@@ -35,16 +35,20 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   is [published and verified](n1-sources/batch-004-publication.json) after
   independent two-family review on the same signed snapshot, fresh non-skipped
   Android checks and combined-main/CI/exact immutable ZIP acceptance.
-  The combined published count is **22 additions**: 26 source members plus 妖,
-  with **1,206 additions still to deliver**. Compatible Android `f9b59a2` or
-  later is required; physical-phone/general-release acceptance remains
-  explicitly outstanding, not inferred from bounded owner-testing delivery.
+  At that checkpoint the published count was **22 additions**: 26 source
+  members plus 妖, with **1,206 additions still to deliver**.
   Three-card [batch 005](n1-sources/batch-005-progress.json), 松・桃・梅,
-  is **textual-review-closed locally**, not additional delivered coverage.
+  is now [published and verified](n1-sources/batch-005-publication.json).
   The [reconciliation](n1-reviews/batch-005-reconciliation.json) retains both
   blind model-family reports, original-session supplement, optional dispositions
-  and the disclosed initial internal read overlap. Teaching is unchanged;
-  fresh Android/integration/publication acceptance is still pending.
+  and the disclosed initial internal read overlap. Teaching is unchanged.
+  The historical Android permission denial is preserved; exact-command
+  parent recovery passed all four named cases without skips, then current-main,
+  CI and every immutable public ZIP runtime hash were verified.
+  The combined published count is **25 additions**: 29 source members plus 妖,
+  with **1,203 additions still to deliver**. Compatible Android `f9b59a2` or
+  later is required; physical-phone/general-release acceptance remains
+  explicitly outstanding, not inferred from bounded owner-testing delivery.
   Its supporting words have no level inferred from these N1 kanji; reused
   松・梅・梅雨 retain their independently sourced N3 vocabulary levels.
 
