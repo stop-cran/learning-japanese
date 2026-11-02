@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 004: textual review closed, unpublished
+## Batch 004: published and verified
 
 The [frozen tree packet](n1-sources/batch-004-membership.json) is
 **杉・桐・柳**. Its [draft ledger](n1-sources/batch-004-progress.json)
@@ -56,7 +56,7 @@ verify 7/10/9 counts and exact reconversion. All three card glyphs and 卯 are
 present in the unchanged bundled font cmaps; 彡 is absent but already appears
 in baseline 形. This is not a fresh native visual check.
 
-**These are textually review-closed local cards, not delivered additions.**
+**These three cards are published for bounded owner testing.**
 Independent `claude-opus-5.5` and `gpt-6.1-sol` initial reviews covered the same
 signed `bfea505` teaching snapshot. Both read all seven teaching files and
 both complete dictionary packets; an original-Claude-session supplement
@@ -69,11 +69,18 @@ are CLEAN across the three textual facets, with reused 杉 limited to its
 changed-backlink integration; this is not exhaustive quiz or native-speaker
 certification.
 
-Validator, fresh manifest, vocabulary consistency, exact source/baseline/batch
-and review-execution audits, archive-budget checks and 353 Python tests pass.
-Fresh non-skipped Android tests and combined-main/publication acceptance
-remain required. Published additions stay **19/1,228**, with **1,209 still
-to deliver**. No next batch or fresh native/phone acceptance is claimed.
+The [publication record](n1-sources/batch-004-publication.json) pins accepted
+`05bb0e1`, green CI `41526080210` and the actual immutable GitHub ZIP:
+all **8,112 runtime hashes** verified within unchanged archive/per-file/path
+budgets. [Execution 017](n1-sources/execution-017.json) records fresh non-skipped
+RealContentTest 3/3 and RareHanTest 1/1 against this isolated sibling tree,
+353 Python tests, validator, vocabulary consistency, fresh manifest and exact
+source/baseline/membership/reading/link audits on the combined current-main tree.
+Reviewed teaching remains exactly `bfea505`; no integration correction was
+needed. Published additions are **22/1,228**, with **1,206 still to deliver**.
+No next batch or fresh native/phone acceptance is claimed. Compatible Android
+`f9b59a2` or later remains required; physical-phone/general-release acceptance
+is explicitly outstanding.
 
 ## Batch 003: published and verified
 

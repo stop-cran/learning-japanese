@@ -29,12 +29,16 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   Three-card [batch 003](n1-sources/batch-003-progress.json), 苗・畔・畝,
   is now [published and verified](n1-sources/batch-003-publication.json) after
   independent two-family review, original-session confirmations and fresh
-  Android/integration/publication checks. Together they deliver **19 additions**:
-  23 source members plus 妖, with **1,209 additions still to deliver**.
+  Android/integration/publication checks. At that checkpoint they delivered
+  **19 additions**: 23 source members plus 妖, with **1,209 still to deliver**.
   Three-card [batch 004](n1-sources/batch-004-progress.json), 杉・桐・柳,
-  is [textually review-closed](n1-reviews/batch-004-reconciliation.json) on the
-  same signed snapshot across two model families, but remains local and
-  unpublished; it does not increase delivered coverage.
+  is [published and verified](n1-sources/batch-004-publication.json) after
+  independent two-family review on the same signed snapshot, fresh non-skipped
+  Android checks and combined-main/CI/exact immutable ZIP acceptance.
+  The combined published count is **22 additions**: 26 source members plus 妖,
+  with **1,206 additions still to deliver**. Compatible Android `f9b59a2` or
+  later is required; physical-phone/general-release acceptance remains
+  explicitly outstanding, not inferred from bounded owner-testing delivery.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee
