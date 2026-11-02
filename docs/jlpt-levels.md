@@ -39,6 +39,10 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   with **1,206 additions still to deliver**. Compatible Android `f9b59a2` or
   later is required; physical-phone/general-release acceptance remains
   explicitly outstanding, not inferred from bounded owner-testing delivery.
+  Three-card [batch 005](n1-sources/batch-005-progress.json), 松・桃・梅,
+  is a local **unreviewed draft**, not additional delivered coverage.
+  Its supporting words have no level inferred from these N1 kanji; reused
+  松・梅・梅雨 retain their independently sourced N3 vocabulary levels.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee

@@ -37,6 +37,38 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 005: local draft, not independently reviewed
+
+The [next frozen packet](n1-sources/batch-005-membership.json) is
+**松・桃・梅**. Six full metadata readings remain in source order, with
+six proposed useful question keys. Three necessary new support articles,
+**桃・白桃・松竹梅**, and three component backlinks in existing
+**松・梅・梅雨** form seven reciprocal pairs, including all three activated
+baseline-declared pairs. Reused identities, primary readings, sourced N3
+levels and all original metadata remain unchanged. 梅雨 still has primary
+つゆ and explicitly teaches alternate ばいう; a link does not allocate
+つゆ to 梅.
+
+The [draft ledger](n1-sources/batch-005-progress.json) records every reading,
+support and quiz disposition. Three packets retain **26 complete JMdict
+families**; the [external evidence](n1-sources/batch-005-external-evidence.json)
+separates exact dictionary headings, 桃's pink abbreviation, 白桃's separate
+readings and an unnecessary cultivar-date disagreement. Fourteen direct
+new-word exclusions protect fitting tree/plant/fruit/peach and pink labels;
+they are not transitive synonym groups.
+
+[Pinned stroke receipts](n1-sources/batch-005-stroke-audit.json) verify
+8/10/10 strokes, original SVG blobs and exact reconversion. All three
+glyphs are present in the unchanged bundled font cmaps. 氵 is absent but
+already appears in baseline 海; this is not fresh native visual acceptance.
+[Execution 018](n1-sources/execution-018.json) and the
+[draft audit](n1-sources/batch-005-draft-audit.json) record local checks,
+not independent review or publication. All nine teaching files still need
+two serial blind different-family reviews on the same frozen snapshot,
+followed by reconciliation, fresh non-skipped Android checks and combined-main/
+remote CI/exact public ZIP acceptance. **Published additions remain
+22/1,228; 1,206 remain to deliver.** No batch 006 has started.
+
 ## Batch 004: published and verified
 
 The [frozen tree packet](n1-sources/batch-004-membership.json) is

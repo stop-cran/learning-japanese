@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "batch": "005",
+  "baseCommit": "79051b8b3eff3396505fc567cc3caec31e6f43ae",
+  "membership": ["松", "桃", "梅"],
+  "status": "draft-not-independently-reviewed",
+  "drafted": ["松", "桃", "梅"],
+  "reviewClosed": [],
+  "published": [],
+  "sourceSnapshot": "docs/n1-source-snapshot.json",
+  "dictionaryPackets": [
+    {"selection": "batch-005-lexical-selection.json", "xml": "batch-005-jmdict.xml"},
+    {"selection": "batch-005-comparison-selection.json", "xml": "batch-005-comparisons-jmdict.xml"},
+    {"selection": "batch-005-supplement-selection.json", "xml": "batch-005-supplement-jmdict.xml"}
+  ],
+  "supportMappings": [
+    {"kanji": "松", "article": "words/松.md", "primaryReading": "まつ", "entryIds": ["1349860"], "selectedSenses": [1, 2], "newArticle": false, "status": "drafted-linked"},
+    {"kanji": "松", "article": "words/松竹梅.md", "primaryReading": "しょうちくばい", "entryIds": ["1349920"], "selectedSenses": [1, 2], "newArticle": true, "status": "drafted-linked"},
+    {"kanji": "桃", "article": "words/桃.md", "primaryReading": "もも", "entryIds": ["1448290"], "selectedSenses": [1], "newArticle": true, "status": "drafted-linked"},
+    {"kanji": "桃", "article": "words/白桃.md", "primaryReading": "はくとう", "entryIds": ["1475340"], "selectedSenses": [1], "newArticle": true, "status": "drafted-linked"},
+    {"kanji": "梅", "article": "words/梅.md", "primaryReading": "うめ", "entryIds": ["1473460"], "selectedSenses": [1, 2], "newArticle": false, "status": "drafted-linked"},
+    {"kanji": "梅", "article": "words/梅雨.md", "primaryReading": "つゆ", "entryIds": ["1582960"], "selectedSenses": [1, 2], "newArticle": false, "status": "drafted-linked"},
+    {"kanji": "梅", "article": "words/松竹梅.md", "primaryReading": "しょうちくばい", "entryIds": ["1349920"], "selectedSenses": [1, 2], "newArticle": true, "status": "drafted-linked"}
+  ],
+  "requiredReciprocalPairs": [
+    ["松", "words/松.md"],
+    ["松", "words/松竹梅.md"],
+    ["桃", "words/桃.md"],
+    ["桃", "words/白桃.md"],
+    ["梅", "words/梅.md"],
+    ["梅", "words/梅雨.md"],
+    ["梅", "words/松竹梅.md"]
+  ],
+  "changedReusedPassages": [
+    {
+      "article": "words/松.md",
+      "change": "Link newly available component card at the existing substantive introduction.",
+      "before": "松 is a single character read まつ in the native tree name. The visible tree component helps recognize the spelling, but the other component is not a separately spoken word within まつ.",
+      "after": "[松](../kanji/松.md) is a single character read まつ in the native tree name. The visible tree component helps recognize the spelling, but the other component is not a separately spoken word within まつ.",
+      "metadataChanges": "None: stable identity, primaryまつ, original title, sourced N3 and all metadata preserved."
+    },
+    {
+      "article": "words/梅.md",
+      "change": "Link newly available component card; preserve existing native noun and fruit/species explanation.",
+      "before": "梅 writes the whole native noun うめ; there is no multi-kanji compound. The same character appears in 梅干し (うめぼし), pickled ume. Recognizing the character helps connect the tree, its blossoms, and foods made from its fruit.",
+      "after": "[梅](../kanji/梅.md) writes the whole native noun うめ; there is no multi-kanji compound. The same character appears in 梅干し (うめぼし), pickled ume. Recognizing the character helps connect the tree, its blossoms, and foods made from its fruit.",
+      "metadataChanges": "None: stable identity, primaryうめ, original title, sourced N3 and all metadata preserved."
+    },
+    {
+      "article": "words/梅雨.md",
+      "change": "Link newly available 梅 component at the existing introduction; original explanation already distinguishes regularばいう from whole-wordつゆ.",
+      "before": "梅 means \"plum,\" and [雨](../kanji/雨.md) means \"rain.\"",
+      "after": "[梅](../kanji/梅.md) means \"plum,\" and [雨](../kanji/雨.md) means \"rain.\"",
+      "metadataChanges": "None: stable identity, primaryつゆ, original title, sourced N3, jukujikun type and all metadata preserved. The alternateばいう remains explicitly taught, not substituted for the primary reading."
+    }
+  ],
+  "readingDispositions": [
+    {"kanji": "松", "kind": "on", "reading": "ショウ", "selected": true, "entryIds": ["1349920"], "article": "words/松竹梅.md", "example": "松竹梅 しょうちくばい - pine-bamboo-ume grouping; three-tier labels", "reason": "Complete family has the exact spelling and sole whole-word reading with no restrictions. Source 松ショウ, existing 竹チク and source 梅バイ combine regularly; existing standalone plant articles independently teach the ranking senses. Useful recognition of a cultural/ordering expression, not a frequency or historical-origin claim."},
+    {"kanji": "松", "kind": "kun", "reading": "まつ", "selected": true, "entryIds": ["1349860"], "article": "words/松.md", "example": "松 まつ - pine tree; highest tier", "reason": "Exact standalone native noun with separate plant and highest-tier senses. Kana-onlyマツ is not an alternate kanji-pair allocation. Reuse preserves primary reading/easier sourcedN3 and existing body except the component link."},
+    {"kanji": "桃", "kind": "on", "reading": "トウ", "selected": true, "entryIds": ["1475340"], "article": "words/白桃.md", "example": "白桃 はくとう - white peach", "reason": "Complete exact white-peach family, no restrictions. Existing 白ハク plus source 桃トウ gives the wholeはくとう, not a substring guess from nativeもも. Japanese dictionary confirms exactはくとう heading/cultivar and distinguishesしろもも ornamental/yamamomo uses; the new support does not pool those into the selected food reading."},
+    {"kanji": "桃", "kind": "kun", "reading": "もも", "selected": true, "entryIds": ["1448290"], "article": "words/桃.md", "example": "桃 もも - peach tree; peach", "reason": "Exact native noun in complete family, plus independent Daijisen tree/edible-fruit heading. Kana-onlyモモ is separate spelling evidence, not proof for every kanji reading. Daijisen's桃色 abbreviation motivates a directピンク quiz guard; unrelated historical/cotton/crest senses do not become invented example prompts."},
+    {"kanji": "梅", "kind": "on", "reading": "バイ", "selected": true, "entryIds": ["1582960", "1349920"], "article": "words/梅雨.md", "example": "梅雨 ばいう - East Asian rainy season", "reason": "Full family explicitly listsばいう alongside whole-wordつゆ, with no spelling restrictions; 雨ウ is independently sourced and source梅バイ yields regularばいう. The actual existing article teaches both and already explains the allocation; link explicitly labels the alternate reading without changing primaryつゆ. 松竹梅 gives a second regularバイ context, but no second question key is manufactured."},
+    {"kanji": "梅", "kind": "kun", "reading": "うめ", "selected": true, "entryIds": ["1473460"], "article": "words/梅.md", "example": "梅 うめ - ume tree; fruit", "reason": "Complete native noun includes plant and lowest-tier senses, alternate楳 spelling, obsoleteむめ and kana-onlyウメ. Preserve all character metadata in source order; word-level obsoleteむめ is not a new character key or a reason to alter primaryうめ. Actual reused article already distinguishes ume from generic English plum and remains sourcedN3."}
+  ],
+  "curatedProjection": [
+    {"kanji": "松", "quizOnyomi": ["ショウ"], "quizKunyomi": ["まつ"], "onKeys": ["しょう"], "kunKeys": ["まつ"]},
+    {"kanji": "桃", "quizOnyomi": ["トウ"], "quizKunyomi": ["もも"], "onKeys": ["とう"], "kunKeys": ["もも"]},
+    {"kanji": "梅", "quizOnyomi": ["バイ"], "quizKunyomi": ["うめ"], "onKeys": ["ばい"], "kunKeys": ["うめ"]}
+  ],
+  "quizAudit": {
+    "松": {"title": "pine tree", "distractors": ["公", "村", "相"], "labels": ["public, official", "village", "mutual; aspect"], "reason": "Complete actual cards inspected. The right-hand公 shape and shared木 in村/相 aid discrimination; public/official, a settlement and relation/aspect are neither pine nor the conventional top-tier label. No generic tree/wood or highest/best wrong answer."},
+    "桃": {"title": "peach", "distractors": ["兆", "村", "相"], "labels": ["trillion; omen", "village", "mutual; aspect"], "reason": "Complete actual cards inspected. Right-hand兆 and shared木 structures support visual discrimination, but trillion/omen, a village and relation/aspect do not mean peach, pink, cotton boll or a peach-shaped crest. Do not select generic fruit or colour labels as wrong answers."},
+    "梅": {"title": "ume; Japanese apricot", "distractors": ["毎", "海", "相"], "labels": ["every, each", "sea, ocean", "mutual; aspect"], "reason": "Complete actual cards inspected. 毎 and 海 share a visible component;相 shares木. Every/each, sea/ocean and relation/aspect do not mean ume or the lowest-tier label. No generic plant/plum/lowest wrong answer."}
+  },
+  "wordQuizAudit": {
+    "newTitles": {"桃": "peach tree; peach", "白桃": "white peach", "松竹梅": "pine-bamboo-ume grouping; three-tier labels"},
+    "directExclusions": [
+      {"word": "桃", "exclude": ["木", "植物", "植える", "果物", "果実", "実", "ピンク"], "entryIds": ["1448290", "1534520", "1357300", "1357250", "1193060", "1192940", "1320810", "1107140", "1448330"], "reason": "Direct generic tree/plant/fruit guards, including植える's displayed plant without a visible verb marker and実's ordinary fruit sense. Exclusions are not transitive through植物 or果物. Exact Daijisen桃 sense2 supplies a separateピンク safeguard; it is not inferred solely from the compound桃色. Different specific plant species/桜 are not indiscriminately declared equivalent."},
+      {"word": "白桃", "exclude": ["桃", "木", "植物", "植える", "果物", "果実", "実"], "entryIds": ["1475340", "1448290", "1534520", "1357300", "1357250", "1193060", "1192940", "1320810"], "reason": "White peach directly admits peach and generic plant/tree/fruit labels. Exact-title deduplication between果物/果実 does not guard this pair, nor does excluding桃 automatically exclude those generic labels. The distinct ornamentalしろもも botanical use reinforces tree/plant guards, not a claim that白桃 means any white flower or every colour white."}
+    ],
+    "comparisons": "Actual complete松/梅/梅雨/竹/木/植物/植える/果物/果実/実/ピンク/桜 and最高/上等/一流/高級/位/級/段/段階/レベル inspected, plus full frozen comparison families. 松竹梅 names the whole grouping/ordered label set, not just one tier or any generic rank; no exclusion clique over every rank word established. A sake brand or musical work title is a proper-name use, not by itself a generic lexical synonym. No newフルーツ article exists; do not pretend its mention in果物 is a runtime card.",
+    "confusableInventory": "Searched complete docs/confusable-words.md for松/桃/梅 andpine/peach/plum/fruit/grade: no applicable row. Absence of an inventory row is not semantic certification.",
+    "legacyFallback": "Actual公/村/相/兆/毎/海 each already has three curated distractors. Newly selected card labels do not activate a two-choice default fallback on those comparison cards. No baseline distractor or exclusion changes."
+  },
+  "strokeDisposition": "Generated by existing tools/generate_strokes.py at pinned70a0b7ae; counts8/10/10 agree with full KANJIDIC2 source. No geometry edited manually. Exact original SVG blob/reconversion/font receipts are recorded separately before draft checkpoint.",
+  "fontDisposition": "Actual unchanged bundled font hashes/cmaps checked in batch-005-stroke-audit.json. All three new card glyphs and木/公/兆/毎/目/寸/白/竹/雨 present in all three fonts. 氵 absent but already learner-visible in baseline海 and many earlier cards; no new fallback code point introduced. None of the three cards is in the frozen forty-character fallback inventory. Cmap presence is not visual acceptance. Inherit pilot all40/160 only in unchanged production scope; fresh non-skipped Android remains a later batch-acceptance gate.",
+  "compatibleClient": "Android f9b59a2 or later; old APKs ignore explicit curation and old8000-entry clients reject the collection.",
+  "acceptance": {
+    "initialReviews": "Not launched. Both independent blind model-family reviews across all nine teaching files and every changed reused passage remain mandatory on one frozen snapshot.",
+    "android": "Pending for this batch; dedicated Android unchanged. No new emulator/device/native acceptance claimed.",
+    "phone": "Physical-phone/general-release acceptance explicitly outstanding; not a new veto on bounded owner testing.",
+    "publication": "Unreviewed local draft only. Published count remains22/1228,remaining1206; no unreviewed content or descendant commit may be pushed."
+  },
+  "nextAction": "Freeze normally signed draft with source/check receipts, then yield. Fresh coordinator resumes SAME005 for two serial blind different-family reviews, evidence reconciliation and original-session confirmations as needed; fresh Android, final combined-main and exact publication/CI/public ZIP acceptance follow textual closure. Do not start006."
+}
