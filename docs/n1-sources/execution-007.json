@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "execution": 7,
+  "date": "2026-11-02",
+  "batch": "pilot",
+  "startingHead": "b43143f797097f1e31d2ae5e241ec37fbe3020f6",
+  "startingWorktree": "Clean dedicated content/n1-kanji. origin/main fetched and remained a634731. No original canonical checkout accessed or modified.",
+  "status": "substantive-checkpoint-continue-same-pilot-native-acceptance",
+  "implementation": {
+    "kanji": ["幹", "氏", "扱", "乃", "凹", "凸", "矛", "鷹", "彗", "漱", "栞", "莉"],
+    "curationRecord": "pilot-curated-readings.json",
+    "fullMetadataEntriesPreserved": 47,
+    "sourceOnlyFullEntriesPreserved": 15,
+    "offeredCuratedKeys": 19,
+    "offeredSourceOnlyKeys": 0,
+    "newSupportThisExecution": ["幹", "凹凸", "矛", "鷹揚"],
+    "distinctNewPilotSupportTotal": 9,
+    "reusedPilotSupportTotal": 8,
+    "requiredReciprocalPairs": 19,
+    "newReusedPassages": "Explicit separate 氏/うじ noun recognition, preserving primary し and easier sourced level; link newly available 凹凸 in でこぼこ.",
+    "sourceListsOrderAndGeometryUnchanged": true,
+    "dictionaryFamiliesTotal": 84,
+    "newCompleteComparisonFamilies": 18,
+    "newCompleteFollowupFamilies": 10,
+    "newDirectExclusionPairsAfterInitialReview": 7
+  },
+  "sourceVerification": {
+    "allFiveOriginalInputHashesVerified": true,
+    "kanjidic2AndJmdictDecompressedHashesVerified": true,
+    "newDownloadsOrSubstitutions": false,
+    "completeFamilies": "Existing hash-checking extract_n1_jmdict.py generated complete comparison and follow-up packets; coordinator inspected all entries, including unrelated exact-spelling homographs and restrictions.",
+    "external": "Actual Kotobank 精選版 日本国語大辞典 鷹揚 and 氏 headings inspected; scoped paraphrases and extraction limits recorded in pilot-curated-readings.json.",
+    "historicalFreezeCommand": "freeze_n1_sources.py --check rejected the Android HEAD because its immutable preparation check requires original 2bc0234, while the explicitly authorized prerequisite worktree is now f9b59a2. No frozen evidence was overwritten and no check was weakened; all actual raw/compressed/decompressed source hashes were separately verified. This expected historical-environment mismatch is not a new linguistic or native blocker."
+  },
+  "review": {
+    "initialSnapshot": "b43173e10f158f59df49137394e1ebbfb0821393",
+    "correctedTeachingSnapshot": "bb448a25c522e9703d43e87216320c48a9121f1c",
+    "bothNormalSignatureStatuses": "G",
+    "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+    "originalSessionsReusedForConfirmation": true,
+    "maximumSimultaneousReviewers": 1,
+    "observedToolOverlaps": 0,
+    "requiredPacketTextReturnedInFull": true,
+    "reviewClosedScope": "New curation metadata/teaching/support diffs only; original initial teaching reviews remain preserved. Three facets assessed separately; all consequential current textual findings resolved.",
+    "record": "../n1-reviews/pilot-curation-reconciliation.json",
+    "limits": "Claude's accidental unrelated-N2-report search exposure and report count inaccuracies remain disclosed without altering originals. GPT initial review had no prior-report exposure. Full returned ranges and hashes do not certify comprehension. No native-speaker, native-runtime or phone certification."
+  },
+  "validation": {
+    "validatorErrors": 0,
+    "pythonTests": {"passed": 340, "failures": 0, "errors": 0},
+    "vocabularyConsistency": "Passed; existing grammar vocabulary pilot coverage remains 2122/2431 reviewed prompts, not a new whole-corpus coverage claim.",
+    "manifestFreshAgainstCorrectedTeachingCommit": true,
+    "contentVersion": "92c2025be954cf03",
+    "baselineKanjiMetadataPreserved": 985,
+    "baselineWordMetadataPreserved": 4942,
+    "baselineStrokeHashesPreserved": 985,
+    "audit": "pilot-curation-audit.json",
+    "zipEntries": 8101,
+    "retainedBytes": 43393072,
+    "inflatedBytes": 43659106,
+    "estimatedLocalCompressedBytes": 29779700,
+    "guardChanges": false,
+    "androidWorktree": "Clean at f9b59a2bc5a203c6b4de26be50021a4c720dc22c; no Android code/test sources/assets modified in this execution.",
+    "freshAndroidChecksThisExecution": false
+  },
+  "publication": {
+    "teachingPushed": false,
+    "publishedAdditions": 0,
+    "remainingUndeliveredAdditions": 1228,
+    "remainingUndraftedAdditions": 1216,
+    "issueUpdate": "https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6585313702",
+    "issueIdentity": "stop-cran, verified via process-scoped owner GH_TOKEN; global gh account unchanged.",
+    "lastPublishedN1Commit": null
+  },
+  "nextExecution": {
+    "stage": "same-pilot-complete-archive-native-acceptance",
+    "action": "Do not repeat closed curation initial reviews. Preserve the old N1PilotAcceptanceTest.kt/hash and create a clearly named retry fixture. Import the full exact Git archive once through production ContentSync, assert actual accepted Room metadata/counts/problems, and obtain terminal per-case status 0 for N1 selection, meaning, curated reading, drawing, article, system Back and offline routes. Run fresh relevant Android tests with zero skips against this content worktree.",
+    "environment": "Use the proven read-only API35 N3_Acceptance_20261029 emulator with host GPU and Vulkan disabled, explicit unoccupied emulator-5580, no heap/guard increases, one Gradle worker and in-process compiler. Do not overlap Gradle/reviewer/native heavy work. Stop only the owned emulator afterward.",
+    "inheritedEvidence": "Prior all40/four-family glyph inspection and seven screenshots; unchanged production font code. This execution did not rerun or expand that evidence.",
+    "phoneAcceptance": "Explicitly outstanding, not a blanket veto on bounded owner-testing publication under the approved checklist.",
+    "afterNative": "Refresh the accepted pilot support/footprint/effort estimate and owner-testing compatible-client disposition, then normal signed current-main integration, validation, owner fast-forward push, CI and exact immutable-ZIP verification. No later batch before accepted pilot publication/checkpoint."
+  }
+}

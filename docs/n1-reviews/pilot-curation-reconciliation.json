@@ -1,7 +1,32 @@
 {
   "schemaVersion": 1,
   "batch": "pilot",
-  "status": "corrected-awaiting-bounded-original-session-confirmations",
+  "status": "textual-curation-review-closed-native-pilot-acceptance-outstanding",
+  "correctedSnapshot": "bb448a25c522e9703d43e87216320c48a9121f1c",
+  "confirmations": [
+    {
+      "model": "claude-opus-5.5",
+      "sessionId": "d90c9731-f6b2-45f1-bbae-51d04f7d8c6b",
+      "report": "pilot-curation-confirmation-claude.md",
+      "execution": "pilot-curation-confirmation-claude-execution.json",
+      "processExit": 0,
+      "toolCalls": 6,
+      "observedToolOverlaps": 0,
+      "allSixPacketsReturnedCompletely": true,
+      "result": "F1/F2 resolved; optional changes accepted; all changed files CLEAN on all three textual facets."
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "sessionId": "a7d23965-9a6f-4ec1-9778-9d8b15b2cc64",
+      "report": "pilot-curation-confirmation-gpt.md",
+      "execution": "pilot-curation-confirmation-gpt-execution.json",
+      "processExit": 0,
+      "toolCalls": 6,
+      "observedToolOverlaps": 0,
+      "allSixPacketsReturnedCompletely": true,
+      "result": "Seven proposed direct pairs independently supported by supplied exact articles/families; all changed files CLEAN on all three textual facets."
+    }
+  ],
   "initialSnapshot": "b43173e10f158f59df49137394e1ebbfb0821393",
   "baseCommit": "b43143f",
   "scope": "Twelve kanji curation/changed-passage integrations, four complete new support words and changed reused 氏/でこぼこ passages. Original teaching reviews at 6855b42 remain preserved and are not replaced.",
@@ -32,30 +57,30 @@
     "claudeExitedBeforeGptStarted": true,
     "teachingUnchangedDuringBothReviews": true,
     "actualModelsVerified": "Both provider usage metrics and assistant/model execution events match the explicitly requested models.",
-    "toolRestriction": "Only view/glob/rg(web tool name grep in Claude execution)/web_fetch were available. Editing, shell, delegation and MCP servers disabled; no owner token passed.",
+    "toolRestriction": "Only view/glob/rg (exposed as grep in Claude execution)/web_fetch were available. Editing, shell, delegation and MCP servers disabled; no owner token passed.",
     "failedLaunch": "pilot-curation-rejected-launch.json",
-    "limits": "Claude's late documentation search accidentally returned 43 unrelated N2 review snippets plus the content-format schema line. Exact execution receipt contains no N1 review snippet, contrary to its report's broader description. Preserve the report unchanged and disclose this exposure; no other current pilot review or author adjudication was returned. GPT initial review had no such exposure. Supplied facts are not independent upstream retrieval; GPT additionally retrieved the actual 莉 Kanjipedia entry."
+    "limits": "Claude's late documentation search accidentally returned 43 unrelated N2 review snippets plus the content-format schema line. Exact execution receipt contains no N1 review snippet, contrary to its report's broader description. Preserve the report unchanged and disclose this exposure; no other current pilot review or author adjudication was returned. GPT initial review had no such exposure. Supplied facts are not independent upstream retrieval; GPT additionally retrieved the actual 莉 Kanjipedia entry. Both confirmations were serial six-read bounded follow-ups in the original sessions with no teaching edits during execution. Claude confirmation says eight new exclusion IDs, but the exact diff contains seven new direct pairs (five 凹凸, two 幹); preserve the report and use the exact audited count. Confirmation usage files contain cumulative session metrics, not isolated-turn costs."
   },
   "findings": [
     {
       "id": "claude-F1",
-      "status": "partially resolved",
+      "status": "resolved",
       "severity": "minor",
       "facet": "scoped coverage / quiz ambiguity",
       "claim": "凹凸 disparity overlaps 差's difference/gap answer.",
       "evidence": "Actual words/差.md body and label; JMdict 1291070 sense 1 versus 1179280 sense 2.",
       "action": "Added the direct 凹凸/差 exclusion. Also independently inspected the four weaker candidates rather than inferring a clique: 違い 1158870 sense 1 and 相違 1400820 sense 1 overlap abstract difference/disparity; ぶつぶつ 1011200 sense 2 names raised small bumps; 粗い 1396910 sense 1 overlaps surface roughness. Added those four direct pairs. Their primary readings, spellings and full family restrictions remain distinct.",
-      "remaining": "Bounded changed-passage confirmation in original reviewer sessions."
+      "confirmation": "Both original reviewer sessions accepted each corrected direct pair and established no regression at bb448a2."
     },
     {
       "id": "claude-F2",
-      "status": "partially resolved",
+      "status": "resolved",
       "severity": "minor",
       "facet": "scoped coverage / quiz ambiguity",
       "claim": "幹 backbone overlaps 柱's mainstay answer.",
       "evidence": "Actual words/柱.md figurative team-mainstay example; JMdict 1426480 sense 2 versus 1577640 sense 2.",
       "action": "Added direct 幹/柱 exclusion. Independently inspected optional 地盤: its supporting-base label and family 1421420 senses 2-3 overlap 幹's figurative base/foundation, so added that direct pair too. Not a claim that either comparison names a literal tree trunk.",
-      "remaining": "Bounded changed-passage confirmation in original reviewer sessions."
+      "confirmation": "Both original reviewer sessions accepted both corrected direct pairs and established no regression at bb448a2."
     },
     {
       "id": "claude-optional-example",
@@ -83,10 +108,11 @@
   },
   "acceptance": {
     "pilotReviewClosed": false,
+    "textualCurationReviewClosed": true,
     "publishedAdditions": 0,
     "remainingAdditions": 1228,
     "phoneAcceptance": "Explicitly outstanding, not inferred from emulator checks and not a new blanket veto on bounded owner-testing publication.",
     "generalReleaseAcceptance": "Outstanding",
-    "next": "Confirm bounded corrections, then checkpoint this same pilot for complete-archive production-ContentSync-once native acceptance and normal publication gates."
+    "next": "Resume the same pilot for complete-archive production-ContentSync-once native acceptance, updated accepted-pilot estimate/owner-testing disposition, and normal signed integration/publication/CI/immutable-ZIP gates. Do not start later batches or repeat completed textual initial reviews."
   }
 }

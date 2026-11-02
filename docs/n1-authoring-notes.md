@@ -39,6 +39,47 @@ will be retained in each batch before lexical authoring.
 
 ## Pilot
 
+### Current curation checkpoint
+
+The same twelve-card pilot now has explicit, source-backed
+[quiz subsets](n1-sources/pilot-curated-readings.json): **19 offered keys**,
+with **zero source-only keys offered**, while all **47 full metadata entries**
+and their order remain unchanged. The separately published
+[curated-reading prerequisite](n1-reviews/curated-reading-prerequisite.json)
+is delivered and CI-green; compatible Android `f9b59a2` is required because
+older APKs ignore the optional fields.
+
+Four necessary support articles, **幹・凹凸・矛・鷹揚**, bring the pilot to
+**nine distinct new support articles, eight reused articles and 19 reciprocal
+kanji/support pairs**. The reused 氏 article explicitly distinguishes the
+うじ noun from its unchanged primary し suffix identity. No vocabulary level
+is inferred from kanji membership.
+
+Two serial independent curation/support-diff reviews used actual
+`claude-opus-5.5` and `gpt-6.1-sol` at `b43173e`, preserving the original
+teaching reviews below. Seven source-verified direct quiz exclusions and
+two optional wording clarifications were confirmed in both original sessions
+at corrected teaching snapshot `bb448a2`. The complete
+[reports and reconciliation](n1-reviews/pilot-curation-reconciliation.json)
+retain actual models, process exits, full returned-packet receipts and the
+limited accidental exposure to unrelated N2 review snippets. All consequential
+in-scope textual findings are resolved; this is not native-speaker certification.
+
+**The pilot is still not accepted or published.** Complete-archive native
+selection/meaning/curated-reading/drawing/article/system-Back/offline acceptance
+must use production ContentSync once, not the older fixture's redundant preflight
+parse. The previous all-40/four-family glyph inspection is inherited honestly.
+Physical-phone/general-release acceptance is explicitly outstanding; approved
+issue #60 permits that distinction for bounded owner testing, not fabricated
+phone evidence. Refresh the accepted-pilot estimate and complete normal
+integration, CI and exact immutable-ZIP gates before later batches.
+
+### Earlier pilot preparation and gate history
+
+The following preserves the earlier five-support-word checkpoint and its
+then-undelivered reading prerequisite as historical evidence, not current
+blockers or current support counts.
+
 The frozen [12-character pilot](n1-sources/pilot-membership.json) is
 **幹・氏・扱・乃・凹・凸・矛・鷹・彗・漱・栞・莉**. Its assignments deliberately
 mix existing-compound reuse, bound forms, primary-reading identity risks,
