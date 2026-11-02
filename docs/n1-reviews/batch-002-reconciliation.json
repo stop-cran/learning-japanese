@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "batch": "002",
+  "status": "textual-review-closed-local-unpublished",
+  "baseCommit": "560c9dd37103852ef8ddf07cd3b740a975243de1",
+  "initialSnapshot": "9fee5174f695d5cbc1a45752e633c9622b011e38",
+  "correctedTeachingSnapshot": "0a5f2e23862c44df3a79c342fbcd5e5c1d376d29",
+  "scope": {
+    "newKanji": ["稲", "穂", "桑", "芋"],
+    "newSupportArticles": ["words/稲穂.md", "words/水稲.md", "words/桑.md", "words/芋.md"],
+    "changedReusedPassages": ["words/稲.md:24 component-link integration only"],
+    "facets": ["correctness", "scoped coverage", "textual phone comprehensibility"],
+    "dictionaryFamilies": 19,
+    "fullReadingDispositions": 10,
+    "curatedOfferedKeys": 6,
+    "requiredReciprocalPairs": 6
+  },
+  "reviewers": [
+    {
+      "model": "claude-opus-5.5",
+      "sessionId": "8874e554-4ed2-44fa-b630-7975053bd5b5",
+      "initialReport": "batch-002-initial-claude.md",
+      "initialExecution": "batch-002-initial-claude-execution.json",
+      "initialExitCode": 0,
+      "initialToolCalls": 25,
+      "initialInternalToolOverlaps": 1,
+      "initialScopeLimit": "All nine assigned teaching files, three complete dictionary packets and complete raw metadata returned. Distractor titles/readings searched but their bodies not read; comparison depth is narrower than GPT's. Original report discloses its scope.",
+      "confirmationReport": "batch-002-confirmation-claude.md",
+      "confirmationExecution": "batch-002-confirmation-claude-execution.json",
+      "confirmationExitCode": 0,
+      "confirmationToolCalls": 4,
+      "confirmationInternalToolOverlaps": 0,
+      "confirmationResult": "Both findings resolved; adopted optional safeguard confirmed; three changed files CLEAN on all three facets, no consequential in-scope textual claim unresolved."
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "sessionId": "dab7f423-7aa1-47a2-9e38-30d10afbaab4",
+      "initialReport": "batch-002-initial-gpt.md",
+      "initialExecution": "batch-002-initial-gpt-execution.json",
+      "initialExitCode": 0,
+      "initialToolCalls": 39,
+      "initialInternalToolOverlaps": 0,
+      "initialScopeLimit": "All nine assigned teaching files, three complete dictionary packets, complete raw metadata, all twelve distractor bodies and ten comparison/candidate bodies returned; not exhaustive corpus validation.",
+      "confirmationReport": "batch-002-confirmation-gpt.md",
+      "confirmationExecution": "batch-002-confirmation-gpt-execution.json",
+      "confirmationExitCode": 0,
+      "confirmationToolCalls": 4,
+      "confirmationInternalToolOverlaps": 0,
+      "confirmationResult": "All three corrections independently supported; three changed files CLEAN on all three facets, no consequential in-scope textual claim unresolved. Original no-finding result is not proof the two broad-label risks were absent."
+    }
+  ],
+  "process": {
+    "maximumActiveReviewerProcesses": 1,
+    "initialClaudeExitedBeforeInitialGptStarted": true,
+    "confirmationClaudeExitedBeforeConfirmationGptStarted": true,
+    "teachingUnchangedDuringEachReview": true,
+    "initialPromptsIdentical": true,
+    "confirmationPromptsIdentical": true,
+    "initialBlindness": "Both initial sessions received the same explicit snapshot, scope, dictionary access and rubric. Neither execution returned the other report or author progress/adjudication. Initial reports were preserved before teaching fixes.",
+    "actualIdentity": "Requested models match assistant/model events, tools-updated events and provider usage metrics. No Auto substitution.",
+    "availableTools": ["view", "glob", "rg", "web_fetch"],
+    "disabled": "Editing, shell, delegation and builtin MCP servers unavailable. No owner token supplied to any reviewer process.",
+    "internalDeviation": "Claude initial review overlapped views of kanji/桑.md and kanji/芋.md once, despite the serial-only prompt. This is a real process breach, not a fully compliant run; both small complete returns and exact overlap are preserved. Other reads and both bounded original-session confirmations were serial. No extra reviewer process or nested agent was launched.",
+    "readReceipts": "All requested view text/ranges were returned exactly in all four executions, with no truncation markers. This establishes returned bytes, not comprehension. Broader comparison depth is unequal; do not rank model families from this packet.",
+    "reportPreservation": "Four complete original final reports preserved as UTF-8 LF bytes with verified SHA-256 receipts; no report rewritten. Claude initial report's opening says three defects but enumerates two finding IDs; retain the discrepancy and reconcile those two claims plus its optional observations.",
+    "consoleExportFailure": "The first archive helper wrote the complete Claude report and execution record successfully, then its optional console print hit Windows cp1252 UnicodeEncodeError. The second reviewer still launched only after first process exit and report persistence. Subsequent helper invocations used PYTHONIOENCODING=utf-8. No lost or repeated review.",
+    "usageLimit": "Original-session confirmation usage files can contain cumulative session totals; not isolated-turn cost estimates."
+  },
+  "findings": [
+    {
+      "id": "claude-F1",
+      "severity": "minor",
+      "facet": "correctness / visual-shape comprehensibility",
+      "status": "resolved",
+      "claim": "稲 mnemonic mentions only 日 under the claw-like strokes and leaves the adjacent vertical unexplained.",
+      "location": "kanji/稲.md:24",
+      "adjudication": "The original sentence is not an explicit exhaustive stroke decomposition, but the omitted vertical is a useful localized clarification. Verified against the actual pinned SVG, not reviewer knowledge alone.",
+      "evidence": "KanjiVG 07a32.svg at 70a0b7ae0c18ceb5cb358274b029cce0234a43bc: g6 element 旧 contains left 丨 in g7 (stroke 10) and right 日 in g8 (strokes 11-14). SVG SHA-256 f59928ed72095b2484a04046a74a50454b4a319511b56a58aefbfc4af7bc1a98; preserved source matches the batch stroke audit.",
+      "action": "Mnemonic now says 旧 (a vertical stroke to the left of 日). It remains a modern-shape mnemonic, with no history/phonetic assertion or geometry change.",
+      "confirmation": "Both original sessions confirmed corrected teaching at 0a5f2e2; no regression."
+    },
+    {
+      "id": "claude-F2",
+      "severity": "minor",
+      "facet": "scoped coverage / displayed word-quiz labels",
+      "status": "resolved",
+      "claim": "The broad rice-plant answer can fit both 稲 and the narrower 水稲.",
+      "location": "words/水稲.md:4,8 and words/稲.md:4",
+      "evidence": "Full JMdict 1371310 sense 1 wet-land rice and 1167820 sense 1 rice plant; actual displayed titles and 水稲's explicit broader-plant comparison.",
+      "adjudication": "Adopt a narrow direct guard for these actual displayed labels rather than claiming unrestricted synonymy or using a universal taxonomy-exclusion rule.",
+      "action": "Add quiz_exclusions: [稲] only to the new 水稲 article. Existing 稲 metadata, primary reading, N3 level and original exclusions remain unchanged.",
+      "confirmation": "Both original sessions supported the pair. Claude explicitly cleared its corresponding reused-稲 coverage verdict."
+    },
+    {
+      "id": "claude-optional-sang-moku",
+      "severity": "nonblocking",
+      "facet": "displayed word-quiz labels",
+      "status": "resolved",
+      "optionalOrigin": true,
+      "claim": "Mulberry tree can also satisfy the broader tree; wood answer.",
+      "evidence": "Full JMdict 1247060 sense 1 mulberry (tree), 1534520 sense 1 tree/shrub/bush and sense 2 restricted wood; actual 桑 and 木 titles and bodies.",
+      "action": "Apply the same narrow safeguard consistently: quiz_exclusions: [木] only on new 桑. Preserve its optional-origin severity rather than crediting it as a third initial defect.",
+      "confirmation": "Both original sessions supported the direct pair and retained the plant-category distinction."
+    }
+  ],
+  "optional": [
+    {"claim": "Move 桑園 out of the Common words list because no priority flag establishes frequency.", "status": "optional", "disposition": "Not adopted. The reading example is valid and the article already avoids a rarity/commonness assertion about it; missing priority is not frequency evidence."},
+    {"claim": "Add おかぼ as another 陸稲 reading.", "status": "optional", "disposition": "Not adopted. The existing りくとう comparison is valid; this bounded packet is not exhaustive alternate-reading teaching."},
+    {"claim": "JMdict explicitly marks 芋's yokel sense derogatory but does not flag its dud sense dismissive.", "status": "optional", "disposition": "Not adopted. Dismissive is the teaching explanation of a worthless/dud sense, not a claim that JMdict carries that exact register tag. No stronger usage rule is inferred."}
+  ],
+  "modelContributions": {
+    "initialClaudeOnly": "Mnemonic vertical and rice-plant broad-label risk; also optional 桑/木 broad-label safeguard. Compare optional/limits as well as finding IDs; only two numbered defects in the report.",
+    "initialGptOnly": "No actionable unique finding established; wider actual distractor/comparison-body inspection.",
+    "shared": "All ten full metadata readings accounted for, six selected keys suitable, secondary senses and reciprocal links checked within actual read scope.",
+    "limits": "Confirmations validate supplied corrections, not blind independent discoveries. This sample is not a general model benchmark."
+  },
+  "finalTextualVerdict": "All nine assigned files CLEAN on correctness, scoped coverage and textual comprehensibility after original-session confirmations; reused 稲 limited to changed-link integration. No consequential in-scope textual claim remains unresolved.",
+  "acceptanceLimits": "Textual closure only. Fresh batch Android RealContentTest/RareHanTest, current-main integration/revalidation, normal accepted publication, green CI and exact immutable ZIP acceptance remain pending. No new native or physical-phone evidence; accepted pilot native/font scope is inherited unchanged. Physical-phone/general-release acceptance explicitly outstanding. Four local additions are not delivered."
+}

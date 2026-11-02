@@ -25,8 +25,8 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   its [acceptance record](n1-reviews/pilot-native-single-import-acceptance.md)
   distinguishes local bounded owner-testing acceptance from publication.
   The published pilot has 16 source members plus 妖, not complete N1 coverage.
-  The next four-card [batch 002](n1-sources/batch-002-progress.json) is an
-  unpublished draft and does not increase delivered coverage.
+  The next four-card [batch 002](n1-sources/batch-002-progress.json) is
+  textually review-closed but unpublished and does not increase delivered coverage.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee

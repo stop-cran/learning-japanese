@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 002: unpublished draft
+## Batch 002: textual review closed, unpublished
 
 The next [frozen packet](n1-sources/batch-002-membership.json) is deliberately
 small: **稲・穂・桑・芋**, an agriculture/plant comparison rather than an
@@ -45,7 +45,7 @@ alphabetical slice. Four new support articles, **稲穂・水稲・桑・芋**, 
 single component-link addition in existing **稲** form six reciprocal pairs.
 The [draft ledger](n1-sources/batch-002-progress.json) retains all ten full
 reading dispositions, six selected question keys, three wrong meaning choices
-per card and two direct word-quiz exclusions. The reused 稲 article keeps its
+per card and four direct word-quiz exclusions. The reused 稲 article keeps its
 primary いね and sourced N3 vocabulary level.
 
 Three dictionary packets retain **19 complete applicable JMdict families**,
@@ -54,11 +54,19 @@ including spelling/reading restrictions and comparison senses.
 each original SVG Git blob, exact reconversion and the 14/15/10/6 counts.
 No stroke geometry was edited manually.
 
-**These four cards are drafts, not reviewed or delivered additions.** The
-published count remains twelve additions, with 1,216 still to deliver.
-Two serial different-family initial reviews, reconciliation, fresh applicable
-Android checks and verified publication remain required. No reviewer or
-native acceptance is implied by the mechanical audit.
+**These four cards are textually review-closed, not delivered additions.**
+Original initial reviews by `claude-opus-5.5` and `gpt-6.1-sol` cover the same
+frozen `9fee517` teaching; both original sessions confirmed the bounded
+corrections at `0a5f2e2`. The [reconciliation](n1-reviews/batch-002-reconciliation.json)
+preserves complete reports, actual read scopes, two minor findings, the adopted
+optional safeguard and limitations. Reviewer processes were serial; Claude's
+initial overlapping pair of small card reads was a disclosed process breach,
+not rewritten as compliant execution. Both confirmations used serial reads.
+
+The published count remains twelve additions, with 1,216 still to deliver.
+Fresh applicable Android checks, combined-main integration/revalidation and
+verified publication remain required. Neither textual review nor the mechanical
+audit implies new native or physical-phone acceptance.
 
 For later bounded packets, run `python -B tools/audit_n1_batch.py --batch 002`
 with that packet's ledger. It compares the whole runtime payload against the
