@@ -126,6 +126,44 @@ class ValidateTests(unittest.TestCase):
         self.check_card(self.kanji_path)
         self.assertEqual([], validate.errors)
 
+    def test_curated_readings_allow_empty_or_linked_exact_subsets(self):
+        (self.root / "words" / "日曜.md").touch()
+        body = KANJI_BODY.replace("ひ (sun)", "| ニチ | on | [日曜](../words/日曜.md) にちよう - Sunday |\nひ (sun)")
+        self.write("kanji/日.md", KANJI_HEADER + "\nquizOnyomi: [ニチ]\nquizKunyomi: []", body)
+        self.check_card(self.kanji_path)
+        self.assertEqual([], validate.errors)
+        self.write("kanji/日.md", KANJI_HEADER + "\nquizOnyomi: []\nquizKunyomi: []", KANJI_BODY)
+        self.check_card(self.kanji_path)
+        self.assertEqual([], validate.errors)
+
+    def test_curated_readings_reject_malformed_or_non_subset_declarations(self):
+        for declaration in (
+                "quizOnyomi: ニチ", "quizOnyomi: null", "quizOnyomi: [ニチ, ニチ]",
+                "quizOnyomi: [にち]", "quizKunyomi: [か]", "quizOnyomi: ['']",
+                "quizOnyomi: [ニチ]\nquizOnyomi: []", "'quizOnyomi': []",
+                " quizOnyomi: []", "quizOnyomi: [] # hidden"):
+            with self.subTest(declaration=declaration):
+                validate.errors.clear()
+                self.write("kanji/日.md", KANJI_HEADER + "\n" + declaration, KANJI_BODY)
+                meta, _ = validate.parse(self.kanji_path)
+                if meta is not None:
+                    validate.check_kanji(self.kanji_path, meta, {})
+                self.assertTrue(validate.errors)
+
+    def test_curated_example_must_be_in_its_reading_row_not_elsewhere_or_in_code(self):
+        (self.root / "words" / "日曜.md").touch()
+        row = "| ニチ | on | [日曜](../words/日曜.md) にちよう - Sunday |"
+        for misplaced in (
+                KANJI_BODY + row,
+                KANJI_BODY.replace("ひ (sun)", "```\n" + row + "\n```\nひ (sun)"),
+                KANJI_BODY.replace("ひ (sun)", "| ニチ | on | [dictionary](https://example.com/日) |\nひ (sun)"),
+                KANJI_BODY.replace("ひ (sun)", row.replace("ニチ", "ジツ") + "\nひ (sun)")):
+            with self.subTest(body=misplaced):
+                validate.errors.clear()
+                self.write("kanji/日.md", KANJI_HEADER + "\nquizOnyomi: [ニチ]", misplaced)
+                self.check_card(self.kanji_path)
+                self.assert_error("needs its own ## Readings table row")
+
     def test_app_optional_fields_do_not_weaken_authoring_requirements(self):
         for path, header, required, checker in (
                 (self.kanji_path, "kanji: 日\ntitle: sun, day", validate.KANJI_REQUIRED,

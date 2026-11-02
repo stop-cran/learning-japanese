@@ -58,6 +58,7 @@ Mapping-shaped opening blocks are checked as metadata; use `***` for an opening 
 | `radical`, `radicalNumber` | The key (radical) and its classical number (1–214). |
 | `phonetic` | Optional; a verified phonetic component. Omission means it is not supplied, not necessarily that the character has none. |
 | `onyomi`, `kunyomi` | Lists in kana; kunyomi uses `.` before okurigana and `-` for affixes. |
+| `quizOnyomi`, `quizKunyomi` | Optional ordered exact-string subsets of the corresponding full lists. Omit for legacy full-list questions; `[]` disables that kind. See [curated reading questions](#curated-reading-questions). |
 | `distractors` | The app can omit this field, but authored cards must supply at least two distinct, plausible wrong options with existing cards; never include the card itself. |
 
 ### Quiz authoring
@@ -70,6 +71,28 @@ produce two defensible answers. Keep useful semantic comparisons in the body eve
 Editorial review must check the displayed titles against the target's ordinary meanings, not merely look for duplicate strings.
 This behavior was checked in [QuizBuilder](https://github.com/stop-cran/kanji-cards-android/blob/8c130a25bdb4e444a80a2f78ef0d11b04bddc12f/app/src/main/java/io/github/stopcran/kanji/core/quiz/QuizBuilder.kt);
 larger quizzes or a changed app can still require fallback choices. The validator checks structure, not semantic ambiguity.
+
+### Curated reading questions
+
+Keep complete sourced `onyomi` / `kunyomi` metadata and its order, including rare readings. Use the optional quiz lists to select
+useful question material independently: declare each once with an unquoted, unindented key and an inline list of distinct,
+nonempty kana strings exactly as written in the matching full list, including script, dots and dashes. Simple quotes around
+values are allowed; quoted keys, duplicates, indentation, block lists, nulls and malformed lists are not.
+For example, `quizOnyomi: []` disables on'yomi questions without erasing any dictionary metadata.
+
+Each selected reading must have its own `## Readings` table row (reading in the first column, on/kun in the second),
+with a relative link to an existing `words/*.md` example in a later column. The raw reading label may have simple emphasis
+or backticks. This new check applies only to explicit quiz selections, not every legacy full reading.
+The linked word is structural navigation evidence, **not** proof that this character supplies that reading, that a dictionary
+supports the spelling/reading pair, or that the use is common. Check those claims independently against actual dictionary entries
+and restrictions; do not infer per-character readings from a substring of the whole word's kana.
+Record why rare, name-only or otherwise unsuitable source readings are not selected in the batch's editorial evidence.
+
+The app retains the existing three-distinct-stems-per-kind cap and curated order; readings sharing a stem are still one card.
+Excluded formerly started reading keys retain their progress but stop entering normal and extra queues.
+All full readings remain protected against wrong-answer use for that kanji, while distractor candidates use selected quiz lists.
+This requires a compatible updated APK: old clients ignore the optional fields and still ask full readings.
+This transport addition does not authorize or require bulk curation of existing levels.
 
 ## Word article
 
