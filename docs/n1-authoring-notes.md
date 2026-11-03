@@ -37,6 +37,33 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 015: tree and resin draft, not reviewed
+
+The [frozen batch 015](n1-sources/batch-015-membership.json) contains **樹**
+and one necessary supporting article, 樹脂 (じゅし), resin. Its
+[draft ledger](n1-sources/batch-015-progress.json) preserves both source
+readings and selects only **ジュ**. The native spelling 樹/き is explained
+as a dictionary-recognized alternative to 木/き; the material sense's
+restriction to 木 is kept separate from broader character glosses.
+No duplicate native-tree article or vocabulary level inferred from kanji
+is added.
+
+Four complete dictionary packets retain 234 families, including all
+185 families with a 樹 spelling, their restrictions and all senses.
+The [native evidence](n1-sources/batch-015-external-evidence.json) distinguishes
+natural and synthetic resin and preserves failed or irrelevant lookups.
+The new material article has four direct quiz safeguards, including 脂's
+separate やに resin identity. One reciprocal pair is required; no reused
+article or baseline metadata is changed.
+
+This is **unreviewed local draft work**, not delivered coverage.
+Two blind model-family initial reviews, reconciliation and fresh acceptance/
+publication gates remain pending. Batch 014's
+[verified terminal publication](n1-sources/batch-014-publication.json)
+delivered **41 additions; 1,187 still to deliver** at `3055447`.
+Compatible Android `f9b59a2` or later is required; physical-phone/
+general-release acceptance remains explicitly outstanding.
+
 ## Batch 014: anatomical reading review closed, publication pending
 
 The [frozen batch 014](n1-sources/batch-014-membership.json) contains **椎**
