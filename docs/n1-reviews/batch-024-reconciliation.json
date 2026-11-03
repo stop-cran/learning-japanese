@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "batch": "024",
+  "status": "textual-review-closed-pending-fresh-acceptance",
+  "authoredSnapshot": "9281b9c2b8a6d2c87480514533037c30a5d20602",
+  "reviewedTeachingSnapshot": "9281b9c2b8a6d2c87480514533037c30a5d20602",
+  "scope": "Complete new kanji/鯛.md and necessary words/鯛.md; all three textual facets, two full frozen packets/81 families, six actual kanji and six actual word comparisons, complete current general/scoped instructions and assigned format/source policy. No reused teaching changed.",
+  "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+  "originalReports": ["batch-024-initial-claude.md", "batch-024-initial-gpt.md"],
+  "originalExecutions": ["batch-024-initial-claude-execution.json", "batch-024-initial-gpt-execution.json"],
+  "verdicts": {
+    "kanji/鯛.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+    "words/鯛.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"}
+  },
+  "findings": [],
+  "unresolvedConsequentialClaims": [],
+  "optional": [
+    {
+      "id": "C-O1",
+      "reviewer": "claude-opus-5.5",
+      "status": "optional",
+      "file": "kanji/鯛.md:48",
+      "proposal": "Explicitly mention 調 also has the character reading チョウ.",
+      "adjudication": "Verified in actual kanji/調.md onyomi and row, and full JMdict1956690ちょう music/style/tax senses. Existing linked comparison already exposes it. This note contrasts visible components/meanings, and 鯛 on-reading questions are explicitly disabled. No learning defect established by leaving this additional link implicit; no teaching change."
+    },
+    {
+      "id": "C-O2",
+      "reviewer": "claude-opus-5.5",
+      "status": "optional",
+      "file": "kanji/鯛.md:40; words/鯛.md:26",
+      "proposal": "Add that 真鯛 is usually written in kana, マダイ.",
+      "adjudication": "Exact full JMdict1364140 has usually-kana sense and マダイ re_nokanji; recognition spelling 真鯛/まだい is unrestricted. Current text makes no claim that kanji spelling is usual and already teaches kana variants for the primary noun. Useful optional expansion, not an incorrect spelling or necessary scoped-coverage fix; no teaching change."
+    }
+  ],
+  "processDeviationDisposition": {
+    "status": "preserved-with-explicit-correction",
+    "maximumActiveReviewerProcesses": 1,
+    "reviewerProcesses": "Both exited0; first complete report and actual execution were archived before second launch. Same unchanged signed snapshot; no author edits during either review.",
+    "actualToolCalls": [34, 34],
+    "observedInternalOverlappingStarts": [1, 0],
+    "observedXmlRangeLimitViolations": [0, 0],
+    "detail": "Claude started the 85-line scoped instruction read and 107-line content-format read at09:39:47.386Z before both finished (09:39:47.394Z/.397Z). This violates the one-call instruction. Its original final claim of no tool overlap is contradicted by execution evidence and is NOT adopted. All assigned ranges nevertheless returned fully, with no unfinished/failed/truncated tools. GPT had zero observed internal overlaps. Claude duplicated one boundary line per XML packet, with no missing range or >200-line call. No false serial-internal/equal-depth/comprehension certification.",
+    "remedy": "Keep complete original report unchanged and record observed process precisely here and in the audit. No content finding or missing read requires another full initial review or unnecessary original-session confirmation."
+  },
+  "sourceDisposition": "Coordinator and both initial reviewers inspected the complete supplied frozen families. JMdict1411550 supports 鯛/たい sea bream especially Pagrus major/porgy and usually-kana spelling;1364140 supports 真鯛/まだい;1629600 supports たい焼き/鯛焼き shaped bean-paste sweet and separate search-only forms;1243270 supports 金目鯛 splendid alfonsino. All sourcedチョウ/たい and order retained; onlyたい selected with own linked row. Source-onlyチョウ is bounded to this lesson, not nonexistence. Raw KANJIDIC red-snapper gloss remains separately archived, not an unrestricted English equivalence. No name-only restriction inferred from grade9; no historical/phonetic claim inferred from modern parts.",
+  "externalEvidence": "Both independently fetched canonical Kotobank556223 and actually received Seisenban marine-fish/particularlymadai/food body. Simplified extraction omitted Daijisen/Jitsu bodies; their exact facts and rawHTML hash were supplied identically, not independently retrieved by either reviewer. Raw coordinator HTML remains outsideGit/runtime; no unavailable gaiji used as origin proof.",
+  "modelContributionComparison": "No actionable unique or shared teaching defects established in this matched sample. Two Claude optional expansions; GPT optional none. Both verified same central reading/spelling/meaning/quiz distinctions. Process/read differences and supplied source limits preclude any general model ranking.",
+  "changedTeaching": [],
+  "originalSessionBoundedFollowups": 0,
+  "nativePending": [],
+  "fontDisposition": "All14 displayed Han in unchangedthreebundledcmaps; no new missing-codepoint target. Cmap inclusion is not native rendering certification. Accepted pilot/all40/160 evidence inherited within unchanged production scope only.",
+  "android": "No fresh024 Gradle or native execution. Dedicated Android cleanunchangedf9b59a2; prior023XML not reused. Fresh non-skipped024Android3+1 and all combined-main/publication gates pending.",
+  "coordinatorProbeLimit": "First read-only execution-coverage console print hit Windowscp1252 UnicodeEncodeError after eight Claude guidance rows; original reports/JSON unchanged. Narrow identical receipt inspection with explicitUTF8 succeeded. No source/edit/permission failure hidden.",
+  "catalogCopyDisposition": "Original currentCLI config/help catalog retained byte-exact in control. Git config-help copy removes only blank EOF lines after ordinary staged whitespace check identified one; no catalog/model content changed. Initial signing command did not run because preceding whitespace check failed.",
+  "limits": "Textual scoped closure only, not publication or complete N1 coverage. All assigned local bytes returned is not comprehension/equal-depth/native-speaker certification. Larger quiz/fallback algorithm not certified. Physical-phone/general-release acceptance explicitly outstanding; compatibleAndroidf9b59a2+ required, not blanket bounded-owner-testing veto. 50/1228published,1178remaining; local51notdelivery. Final whole-set reconciliation remains incomplete.",
+  "nextAction": "Sign textual-closure evidence locally and checkpoint SAME024, then fresh non-skipped Android3+1 and all latestmain combined-tree/signing/owner-fastforward/CI/everyimmutablepublicZIPhash gates before publication or025."
+}
