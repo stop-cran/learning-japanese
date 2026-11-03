@@ -47,11 +47,23 @@ independent content review or a new published card.
 
 The frozen KANJIDIC2 gloss is "phoenix"; the applicable JMdict families
 distinguish the **peng**, a giant mythical bird, from 鳳凰's fenghuang.
-The raw gloss remains intact. Exact Japanese dictionary headings and usage
-must be inspected before adopting a teaching correction. Full **ホウ** and
-**おおとり** metadata remain in source order; the shared おおとり family does
-not permit unrestricted bird-spelling substitution or the performer spelling
-大トリ. Useful support and curated question material remain unselected.
+The raw gloss remains intact. The subsequent
+[qualified-source record](n1-sources/batch-040-dictionary-evidence.json)
+preserves seven exact Japanese dictionary sections and their inspection
+ranges/hashes. Daijisen distinguishes the 鵬 of *Zhuangzi* from 鳳 referring
+to 鳳凰; Kanjipedia independently documents 鵬 as an imaginary giant bird,
+with **ホウ** and lexical **おおとり**. Full metadata remain in source order.
+The shared おおとり family does not permit unrestricted bird-spelling
+substitution or the performer spelling 大トリ.
+
+Only **鵬 (ほう)** is proposed as necessary support and selected on-reading
+material. おおとり is a documented lexical alternate, proposed for recognition
+rather than a second question; it is not name-only or invalid. The word-level
+ぼう variant does not change the frozen sole on-reading. 鵬翼 and 鵬程 are
+verified alternative literary anchors, not mandatory additions or ordinary
+aviation/travel vocabulary. A historical literary 鵬程 example supports that
+use, not invented casual collocations. These are author proposals, not
+independently reviewed teaching or a vocabulary-level assignment.
 
 No declared baseline 鵬 pair was found. Existing bird and wing comparisons
 were inspected unchanged; 翼's article teaches つばさ, not 鵬翼 ほうよく.
