@@ -37,7 +37,42 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 033: pig textually review-closed, not published
+## Batch 034: wild boar drafted, not independently reviewed
+
+The [frozen batch 034](n1-sources/batch-034-membership.json) adds **猪**
+and one necessary 猪 (いのしし) article. All three readings remain in source
+order: チョ, い and いのしし. Only いのしし is selected; チョ has verified
+compound recognition, while the separately attested い noun is archaic.
+The grade-9 name-use classification does not make the animal noun name-only.
+No supporting-word vocabulary level is inferred from the kanji.
+
+The [draft ledger](n1-sources/batch-034-progress.json) records 60 complete
+frozen dictionary families in two packets, three reading dispositions and
+one reciprocal pair. There are no activated baseline word pairs or reused
+teaching edits. All original metadata, geometry and the two accepted
+tiger/monkey safeguards remain preserved. Actual raw Digital Daijisen
+headings were inspected because simplified extraction returned Wikipedia
+or omitted definitions; those unsuccessful extractions are not evidence.
+
+The [draft audit](n1-sources/batch-034-draft-audit.json) verifies source
+membership, baseline/runtime preservation, links, readings, pinned 11-stroke
+reconversion and unchanged budgets. All 17 displayed Han were audited:
+16 occur in all three bundled cmaps; 犭 already appears in exact-base cards.
+This does not constitute fresh native rendering or physical-phone acceptance.
+361 Python tests, validation and manifest regeneration passed.
+Two serial blind different-family reviews, fresh Android and combined-main
+publication gates remain pending. No unreviewed content is published.
+
+Batch 033 is now [published and verified](n1-sources/batch-033-publication.json)
+at terminal `5f4ee985`: **60 additions delivered; 1,168 remain**.
+The local batch-034 draft is not another delivered addition.
+Compatible Android `f9b59a2` or later is required; physical-phone/general-release
+acceptance and final whole-set reconciliation remain outstanding.
+
+## Batch 033: historical textual closure checkpoint
+
+The account below preserves the pre-publication checkpoint; the publication
+record linked above supersedes its pending publication gates and totals.
 
 The [frozen batch 033](n1-sources/batch-033-membership.json) adds **豚**
 and one necessary 豚 (ぶた) word article. The existing N5 豚肉 (ぶたにく)
