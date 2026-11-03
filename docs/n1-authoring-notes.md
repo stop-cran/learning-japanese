@@ -49,10 +49,18 @@ All four on-readings and the native へび remain in frozen source order.
 Existing N2 蛇口 (じゃぐち) is the one declared baseline activation candidate;
 its identity, vocabulary level and コック exclusion remain unchanged.
 Necessary 蛇 (へび) and 蛇行 (だこう) support articles are proposed, not created.
-委蛇 (いい／いだ) is flagged obsolete; its exact construction/allocation,
-the ヤ reading and the character's hard-drinker gloss still need precise
-Japanese dictionary evidence. The standalone snake family does not itself
-give a drunk-person sense. An apparent 蛇スープ/えびスープ source discrepancy
+The [qualified dictionary evidence](n1-sources/batch-037-dictionary-evidence.json)
+now records seven exact Japanese entry/range/hash receipts. Daijisen assigns
+蛇口 to ジャ and 蛇行 to ダ; じゃこう is a documented alternative, not an error.
+委蛇 (いい／いだ), flagged obsolete in frozen JMdict, has ト・タル/classical
+タリ constructions; Kanjipedia's character examples support 蛇's イ allocation.
+It remains recognition-only. The frozen ヤ remains explicitly source-only:
+no confidently allocated word was established, not a universal absence claim.
+Kanjipedia's differing タ/イ inventory does not replace the frozen イ/ヤ.
+Daijisen's separate じゃ lexical sense documents a heavy drinker, shortened
+from 蛇之助; its historical quotation does not alone prove obsolete usage.
+This is not ordinary へび meaning a drunk person. Actual quiz-label checks
+still precede any safeguard. An apparent 蛇スープ/えびスープ source discrepancy
 is retained but excluded from proposed teaching, not silently corrected.
 
 Batch 036 is [published and verified](n1-sources/batch-036-publication.json)

@@ -3,7 +3,29 @@
   "batch": "037",
   "baseCommit": "8a8b5384b40c3a4ed33bd02e4ef90e71f30b3ec1",
   "membership": ["蛇"],
-  "status": "source-prepared-not-drafted",
+  "status": "source-qualified-not-drafted",
+  "externalDictionaryEvidence": "batch-037-dictionary-evidence.json",
+  "qualifiedReadingSelectionCandidates": {
+    "quizOnyomi": ["ジャ", "ダ"],
+    "quizKunyomi": ["へび"],
+    "status": "Source-verified candidates only; no runtime curation or draft exists."
+  },
+  "sourceEvidenceValidation": {
+    "execution": 150,
+    "audit": "batch-037-qualified-source-audit.json",
+    "frozenInputHashesVerified": 5,
+    "decompressedDictionaryHashesVerified": 2,
+    "freshExactDictionaryExtractions": 3,
+    "distinctFrozenFamilies": 116,
+    "externalRawDictionaryReceiptsVerified": 7,
+    "runtimeChanges": 0,
+    "runtimeManifestEqualToPublishedBase": true,
+    "extractionUnitTests": {"passed": 5, "failures": 0, "errors": 0},
+    "testLog": "control/logs/execution-150-extraction-tests-discovery.txt",
+    "historicalFailedSelectorLog": "control/logs/execution-150-extraction-tests.txt",
+    "failedSelectorDisposition": "Direct tools.test_extract_n1_jmdict module import could not resolve the sibling extract_n1_jmdict import. Repository-standard unittest discovery passed all five cases; no dependency installation or test/code change.",
+    "limits": "Source-evidence audit, not card authoring, independent linguistic closure, fresh Android/native or publication."
+  },
   "drafted": [],
   "reviewClosed": [],
   "published": [],
@@ -35,7 +57,7 @@
       "evidence": ["1323350", "1323370", "1323380", "1623480"],
       "observation": "Standalone蛇 hasじゃ as well asへび; the sense note associatesじゃ more with serpents/large snakes, not an absolute restriction. Existing蛇口じゃぐち provides mixed on/native support;口くち voices toぐち, notこう. 蛇行 also recordsじゃこう alongsideだこう; priority differences alone do not establish frequency or invalidity.",
       "proposedSupport": "words/蛇口.md",
-      "status": "candidate-for-curation-not-authored"
+      "status": "source-verified-candidate-not-authored"
     },
     {
       "reading": "ダ",
@@ -43,23 +65,23 @@
       "evidence": ["1323380", "1323390", "1430010", "1553040", "2846378"],
       "observation": "蛇行だこう and蛇足だそく are concrete candidates. 長蛇の列ちょうだのれつ supplies a non-initial example;竜頭蛇尾りゅうとうだび includes voiced尾. Do not infer an unrestrictedジャ/ダ swap. 委蛇いだ belongs to an obsolete term, not the everyday anchor.",
       "proposedSupport": "words/蛇行.md",
-      "status": "candidate-for-curation-pending-exact-allocation-and-usefulness"
+      "status": "source-verified-candidate-not-authored"
     },
     {
       "reading": "イ",
       "type": "on",
       "evidence": ["2846378"],
-      "observation": "委蛇 has readingsいい andいだ, alternate spellings逶迤/逶迱, obsolete-term flag and taru-adjective/to-adverb functions. Exact Japanese headword/construction and allocation still need verification. Do not presentいい as modern good or manufacture an everyday example.",
+      "observation": "委蛇 has readingsいい andいだ, alternate spellings逶迤/逶迱, obsolete-term flag and taru-adjective/to-adverb functions. Exact Daijisen headings verifyト・タル and classicalタリ; Kanjipedia's character下つき examples explicitly assign蛇 in委蛇イイ/イダ. Recognition-onlyイ, not modern goodいい or aな-adjective; no everyday example manufactured.",
       "proposedSupport": null,
-      "status": "recognition-candidate-not-selected-pending-exact-source"
+      "status": "source-verified-recognition-only-not-selected"
     },
     {
       "reading": "ヤ",
       "type": "on",
       "evidence": [],
-      "observation": "Full KANJIDIC2ヤ must be retained. No defensibleヤ allocation was established in the108-family inspection. Product-name沙羅曼蛇サラマンダ does not supportヤ. A kana substring in another character or a scientific whole-word reading is not evidence. Qualified character-dictionary-only disposition is a candidate, not a claim that no example exists anywhere.",
+      "observation": "Full KANJIDIC2ヤ must be retained. No defensibleヤ allocation was established in the108-family inspection or the exact Japanese entries inspected. Kanjipedia instead lists outside-tableタ/イ alongsideジャ/ダ; that differing inventory does not authorize droppingヤ or addingタ to this frozen metadata. Product-name沙羅曼蛇サラマンダ does not supportヤ. Qualified character-dictionary-only information, not a claim that no example exists anywhere.",
       "proposedSupport": null,
-      "status": "unresolved-source-reading-not-selected"
+      "status": "frozen-character-source-only-not-selected"
     },
     {
       "reading": "へび",
@@ -67,7 +89,7 @@
       "evidence": ["1323350"],
       "observation": "Exact standalone蛇へび snake noun is verified in the complete family. ヘビ has re_nokanji;くちなわ and obsoleteへみ are separate lexical readings outside this character's frozen metadata. Do not add them to metadata or silently claim every snake species is usually written in kanji.",
       "proposedSupport": "words/蛇.md",
-      "status": "candidate-for-curation-not-authored"
+      "status": "source-verified-candidate-not-authored"
     }
   ],
   "supportMappingsPending": [
@@ -92,7 +114,7 @@
       "primaryReading": "だこう",
       "kind": "necessary-new-candidate-not-created",
       "dictionary": "1323380",
-      "observation": "Noun/intransitiveする verb; meandering/snaking/zigzagging. Exact usage/allocation and sensible contrast vocabulary need source verification before authoring. No word level inferred."
+      "observation": "Noun/intransitiveする verb; meandering/snaking/zigzagging. Exact Daijisen and Kanjipedia headings supportだこう and river/road usage; Daijisen also cross-refersじゃこう toだこう. Sensible comparison vocabulary and actual quiz labels still need inspection. No word level inferred."
     }
   ],
   "requiredReciprocalPairsPending": [
@@ -106,7 +128,7 @@
   "sourceQualifications": [
     {
       "evidence": ["1323350", "1572250", "1372660", "1645170", "1786370"],
-      "observation": "KANJIDIC2 includes hard drinker, but inspected standalone蛇1323350 has only snake/serpent senses. 蟒/蟒蛇/蠎うわばみ1572250 has colloquial heavy-drinker sense and usually-kana flags. These do not establish that ordinaryへび means a drunk person. Exact Japanese dictionary evidence is needed before explaining the character-level figurative gloss or setting direct quiz guards; drinking habit, current intoxication and alcohol-use disorder are distinct."
+      "observation": "KANJIDIC2 includes hard drinker, but inspected standalone蛇1323350 has only snake/serpent senses. Exact Daijisenじゃ lexical sense2 supplies heavy drinker, shortened from蛇之助, with a historical quotation; its separateへび animal entry does not supply that sense. 蟒/蟒蛇/蠎うわばみ1572250 is a separate usually-kana identity. Do not call the recordedじゃ sense obsolete solely from its quotation or infer ordinaryへび drunk-person use. Drinking habit, current intoxication and alcohol-use disorder remain distinct. Actual displayed-label audit still precedes any direct quiz guard."
     },
     {
       "evidence": ["1623480", "2859061", "2264970", "1528190"],
@@ -134,7 +156,7 @@
   ],
   "lookupLimits": [
     "words/竜.md was checked and does not exist; no article or fresh dictionary lookup is inferred from that failed path read.",
-    "No external Japanese dictionary lookup in this execution. Register,ヤ,委蛇 attachment/allocation and hard-drinker explanations remain explicitly pending.",
+    "Execution149 made no external lookup. Execution150 inspected seven exact Japanese dictionary raw ranges; full receipts and extraction/search failures are in batch-037-dictionary-evidence.json. ヤ remains frozen source-only without a confidently allocated word, not proof of universal absence.",
     "No final distractor selection, meaning-quiz safety certification, support authoring, curation, stroke conversion or new glyph acceptance."
   ],
   "publishedAdditions": 63,
@@ -149,5 +171,5 @@
     "limits": "Source-only audit and extraction tests, not draft/independent linguistic review/fresh Android/native/publication."
   },
   "limits": "Source-only checkpoint. No runtime content, manifest, draft, independent review, fresh Android/native, public archive or publication changes. Full source order and accepted baseline exceptions preserved. CompatibleAndroidf9b59a2+; inheritedpilot/all40/160 scope unchanged; physical-phone/general-release acceptance explicitly outstanding. Overall1228 expansion and final whole-set acceptance incomplete.",
-  "nextAction": "Resume SAME037. Verify exact Japanese dictionary headings for蛇/へび/じゃ/ダ/イ/ヤ,委蛇いい/いだ construction and character-level hard-drinker gloss. Resolve qualified five-reading dispositions and curatedジャ/ダ/へび candidate subsets without dropping/reordering metadata. Verify necessary蛇へび and蛇行だこう support, compare actual lexical neighbors/quiz labels and all baseline candidates; preserve existingN2蛇口 identity/level/reading/コック exclusion and add only its required component link. Record all three proposed reciprocal pairs, useful on/native allocation and exact baseline. Generate pinned086c7.svg blobb60582bd2742fa577862cb522f9107f9bb97aff8 through existingconverter, reconcile11strokes; audit all authored/reused Han and new fallback/native dispositions. Author only this bounded card/necessary support, then validator/buildmanifest/source/baseline/readings/links/strokes/fonts/budget/Python and signed unreviewed draft checkpoint. Two serial blind different-family initial reviews and original confirmations as needed; fresh non-skippedAndroid and every combined-main/signing/owner-fastforward/greenCI/immutablepublicZIPhash gate before publication or038. No reviewer/unreviewedpush/secondrunner/permissionworkaround/signingretry/guardheaprelaxation."
+  "nextAction": "Resume SAME037 source-qualified, not drafted. Use seven exact Japanese dictionary receipts in batch-037-dictionary-evidence.json and116 complete frozen families. ジャ/ダ/へび source-verified selection candidates; イ recognition-only委蛇いい/いだ withト・タル/classicalタリ; ヤ explicitly frozen source-only, no universal absence claim orタ substitution. Heavy-drinker gloss is separately documentedじゃ sense2, shortened from蛇之助; no ordinaryへび drunk-person or unsupported obsolete/frequency claim. Inspect actual lexical neighbors/full comparison families and displayed quiz labels before choosing direct guards; preserveN2蛇口 identity/level/reading/コック exclusion and add only component link. Author one蛇 and necessary蛇へび/蛇行だこう support, acknowledge validじゃこう, enumerate three reciprocalpairs including baseline蛇口. Generate pinned086c7.svg blobb60582bd2742fa577862cb522f9107f9bb97aff8 via existingconverter; reconcile11strokes and all authored/reusedHan/font/native dispositions. Validate source/baseline/readings/links/strokes/fonts/Python/manifest/budget and normally sign unreviewed draft. Two serial blind different-family reviews and confirmations, fresh non-skippedAndroid and every combined-main/signing/owner-fastforward/greenCI/immutablepublicZIPhash gate before publication or038. No unreviewedpush/secondrunner/permissionworkaround/signingretry/guardheaprelaxation."
 }
