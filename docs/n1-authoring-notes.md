@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 021: silkworm locally accepted, publication pending
+## Batch 021: silkworm published and verified
 
 The [frozen batch 021](n1-sources/batch-021-membership.json) contains **蚕**
 and one necessary support article, 蚕 (かいこ), silkworm. Its
@@ -73,11 +73,15 @@ records 353 Python tests, frozen-source/baseline/reading/link/pinned-stroke/font
 checks, manifest freshness and unchanged budgets. Latest main was already
 integrated; runtime is unchanged from the recovered Android check.
 
-This is **locally accepted, not yet published**. Published coverage remains
-47 additions, with 1,181 still to deliver until green CI and every immutable
-public ZIP runtime hash are verified. Physical-phone/general-release
-acceptance is explicitly outstanding; compatible Android `f9b59a2` or later
-is required. Cmap checks do not establish a new native or phone pass.
+The [publication record](n1-sources/batch-021-publication.json) records
+accepted signed commit `f479944`, green CI `41601039760` and all 8,189
+immutable public ZIP runtime hashes, with manifest version
+`964691d97d61fa10`. All unchanged publishing guards pass.
+This is **published and verified for bounded owner testing**:
+**48 additions; 1,180 still to deliver**, with 52 named source members plus
+the separate 妖 exception. Physical-phone/general-release acceptance is
+explicitly outstanding; compatible Android `f9b59a2` or later is required.
+Cmap checks do not establish a new native or phone pass.
 
 ## Batch 020: butterfly published and verified
 

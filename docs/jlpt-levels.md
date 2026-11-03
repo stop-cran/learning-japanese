@@ -141,6 +141,19 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   The compatible-client and outstanding physical-phone/general-release
   qualifications remain unchanged; this is not complete N1 coverage.
 
+  [Batch 021](n1-sources/batch-021-publication.json), 蚕, is
+  **published and verified for bounded owner testing** with one necessary
+  silkworm word article, not an inferred N1 vocabulary assignment.
+  All four full source readings and their order are preserved; only かいこ
+  is offered with its own linked support. Recognition and source-only
+  dispositions remain distinct. Two-family review, recovered fresh
+  non-skipped Android, combined-main checks, green CI and all 8,189 immutable
+  public ZIP runtime hashes passed at accepted `f479944`.
+  Published coverage is **48 additions; 1,180 still to deliver**:
+  52 named source members plus the separate 妖 exception.
+  Compatible-client and outstanding physical-phone/general-release
+  qualifications remain unchanged; whole-set reconciliation is pending.
+
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee
 about every character that could appear in the exam. Earlier-level knowledge is still needed for higher-level study.
