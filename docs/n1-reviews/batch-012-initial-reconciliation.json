@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "batch": "012",
+  "authoredSnapshot": "42e9732b305f1a83f4e5bf3a86a78fbb538c9350",
+  "status": "localized-corrections-pending-original-session-confirmation",
+  "initialModels": ["claude-opus-5.5", "gpt-6.1-sol"],
+  "initialReports": ["batch-012-initial-claude.md", "batch-012-initial-gpt.md"],
+  "findings": [
+    {
+      "id": "C1",
+      "reviewer": "claude-opus-5.5",
+      "facet": "comprehensibility",
+      "severity": "minor",
+      "location": "kanji/桂.md:22",
+      "status": "partially resolved",
+      "claim": "In other words is ambiguous between other vocabulary and English reformulation.",
+      "adjudication": "Valid localized clarity issue, not an incorrect plant identity. Replaced with In other vocabulary. Original-session confirmation pending.",
+      "evidence": "Actual learner sentence; Daijisen/Seisenban 桂 has distinct character, native plant and kei noun headings.",
+      "confidence": "high"
+    },
+    {
+      "id": "C2",
+      "reviewer": "claude-opus-5.5",
+      "facet": "correctness",
+      "severity": "minor",
+      "location": "kanji/桂.md:46",
+      "status": "partially resolved",
+      "claim": "The extra far-right stroke wording miscounts the extra component in 掛.",
+      "adjudication": "Valid modern-shape issue: far-right 卜 has two strokes. Replaced with extra two-stroke component at the far right, avoiding a new optional glyph. Source geometry and metadata unchanged. Original-session confirmation pending.",
+      "evidence": "Existing kanji/掛.md explicitly identifies far-right 卜; 11 strokes consist of hand-side3, stacked earth6, far-right2.",
+      "confidence": "high"
+    }
+  ],
+  "optional": [
+    {"reviewer": "claude-opus-5.5", "observation": "Expand Chinese 桂 reference.", "status": "optional", "adjudication": "Current character/compound versus selected Japanese plant distinction is sufficient; broader Chinese-reference context need not be exhaustive."},
+    {"reviewer": "claude-opus-5.5", "observation": "Add Japanese Judas tree English alias.", "status": "optional", "adjudication": "Selected scientific identity and katsura gloss are accurate; source alias retained in full families."},
+    {"reviewer": "claude-opus-5.5", "observation": "Explicit katakana tendency for go ケイマ.", "status": "optional", "adjudication": "Full1821380 retains sense-local usually-kana flag; recognition gloss is not a frequency or unrestricted spelling claim."},
+    {"reviewer": "claude-opus-5.5", "observation": "Replace shape-only classification with sourced phonetic classification.", "status": "optional", "adjudication": "Current deliberately unclassified mnemonic is permitted and not a claim that no historical analysis exists; no history expansion required."},
+    {"reviewer": "claude-opus-5.5", "observation": "Use perched in the treetop instead of at a branch tip.", "status": "optional", "adjudication": "Existing branch-tip translation is within the actual noun sense and preserves contrasted focus; no established naturalness defect."}
+  ],
+  "reviewLimitReconciliation": [
+    "Claude's no word/reading pair exists statement is stronger than evidence. Only no pair established in inspected families/heads is supported; the teaching already uses that bounded qualification. No global nonexistence claim accepted.",
+    "Claude did not open kanji/楠.md; coordinator inspected the actual card and primary word link. Ask originals to confirm this bounded linked passage, not reopen accepted 楠 teaching.",
+    "GPT reported no defect including shape wording; acceptance follows the precise observable evidence, not majority vote. Claude's two actionable findings are unique in these two initial reports; GPT has no unique actionable finding in this sample.",
+    "Both initial processes exited0 serially; actual models and zero internal overlaps archived. Supplied snapshot identity is coordinator-verified, not independently Git-verified by reviewers. Full returned text is byte availability, not comprehension or equal depth.",
+    "Native/physical-phone/general-release acceptance is not performed by this textual review. Fresh Android and publication gates remain pending."
+  ],
+  "coordinatorExternalCheck": {
+    "url": "https://kotobank.jp/word/%E6%A1%82-45398",
+    "retrieved": "2026-11-03",
+    "scope": "6500-character excerpt includes actual Daijisen/Seisenban separate headings and relevant senses. Later historical/encyclopedia material truncated, not used.",
+    "handling": "Claim-specific paraphrase only; original proprietary entries not archived."
+  }
+}
