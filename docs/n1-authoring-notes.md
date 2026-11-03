@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 038: mythical-bird textual review closed, native acceptance pending
+## Batch 038: mythical-bird combined-tree acceptance, publication pending
 
 Batch 038 now has one **鳳** card and one necessary **鳳凰（ほうおう）**
 support article, without an inferred vocabulary level. Full ホウ・フウ order
@@ -54,9 +54,12 @@ SVG converts to 14 strokes with the existing generator, with exact
 reconversion recorded in the [stroke/font audit](n1-sources/batch-038-stroke-audit.json).
 All 14 Han in the two authored files and all 79 across the ten unchanged
 comparison articles were checked against the three pinned bundled fonts.
-**凰 is newly introduced and absent from all three cmaps:** actual supported
-native fallback/visual inspection is still required before acceptance.
-Cmap absence alone is not a glyph failure.
+**凰 is newly introduced and absent from all three cmaps:** actual bounded
+native fallback and original-reviewer visual acceptance now pass in the
+[native record](n1-reviews/batch-038-native-acceptance.json). The character
+is readable and distinct from 皇, 鳳 and 風 under four configured production
+families, but uses the same unidentified Gothic-like system fallback raster,
+not four bundled font designs. Cmap absence alone is not a glyph failure.
 
 The [mechanical draft audit](n1-sources/batch-038-draft-audit.json) checks
 exact source membership, baseline preservation, mappings, readings, runtime
@@ -80,9 +83,23 @@ tests, content/vocabulary checks, unchanged manifest, source/baseline/link/
 reading/stroke/font audit and original budgets pass. No teaching correction
 or unnecessary textual follow-up was made.
 
-New-glyph native/visual evidence, fresh non-skipped Android and
-combined-main/publication gates remain pending; textual review is not native
-or physical-phone acceptance.
+Two native terminal cases pass with no skips: one full production import
+offline, reciprocal/system-back navigation and 16 native glyph probes.
+The exact complete archive imports once with 1,050 kanji, 5,007 words,
+70 N1-labelled cards, zero problems and accepted-reading parser epoch 1.
+Eight original-Claude visual returns support bounded readability; their
+900×2000 bytes are separately archived from the 1080×2400 sources.
+Offscreen article/table contents, including horizontal clipping, are not
+certified.
+
+Fresh named Android tests pass 3+1 with no failures, errors or skips.
+The [combined-tree acceptance audit](n1-sources/batch-038-acceptance-audit.json)
+rechecks their exact XML/log/root/timestamp/hash evidence against unchanged
+runtime, without rerunning resolved native/Android gates. Fresh 361 Python
+tests, content checks, pilot vocabulary coverage (2,122/2,431), manifest,
+source/baseline/link/reading/stroke/font audit and original budgets pass after
+latest-main integration. Normal signing, owner publication, exact green CI
+and every immutable public ZIP runtime hash remain pending.
 Published coverage is still **64 additions; 1,164 to deliver**.
 Compatible Android `f9b59a2` or later is required; physical-phone/
 general-release acceptance remains explicitly outstanding.
