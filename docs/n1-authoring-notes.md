@@ -37,6 +37,40 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 029: bear textually review-closed, not published
+
+The [frozen batch 029](n1-sources/batch-029-membership.json) adds **熊**
+and one necessary 熊 (くま) word article. Both full readings remain in
+source order; only くま is selected. ユウ has the specialized 熊胆
+(ゆうたん) recognition example, not an animal-noun question or a medical
+recommendation. The animal meaning, kana spelling, cub voicing and lexicalized
+rake name are distinguished from English verbal "bear." No word level is
+inferred from the kanji.
+
+The [ledger](n1-sources/batch-029-progress.json) retains 113 complete
+lexical/comparison families, one reciprocal pair, zero baseline activations
+and one direct animal-category guard. The
+[reconciliation](n1-reviews/batch-029-reconciliation.json) preserves both
+blind different-family initial reports: no actionable defect, two optional
+alternate-reading/repetition suggestions and unchanged teaching. The alternate
+熊胆 heading is observed in both reports, not a unique model discovery.
+All assigned local ranges returned completely. Reviewer processes exited
+serially; Claude issued two bounded XML reads together (one overlapping
+start), while GPT had none. Both independently inspected 熊胆; only GPT
+independently fetched the 熊 animal entry. Exact process and source limits
+remain explicit rather than claiming equal-depth or wholly serial tool work.
+
+Batch 028 is [published and verified](n1-sources/batch-028-publication.json)
+at terminal `d7c6c89`: **55 additions delivered; 1,173 still to deliver**.
+Local batch 029 does not increase that count. Fresh 353 Python tests,
+source/baseline/link/reading/stroke/font/manifest/budget checks passed.
+Of 26 displayed Han, 25 are in all three unchanged bundled cmaps;
+灬 is already displayed in the exact baseline 火/熱/照/点 cards.
+This is not new native certification. Fresh Android/combined-main/CI/public-ZIP
+gates remain pending. Compatible Android `f9b59a2` or later is required;
+physical-phone/general-release acceptance remains explicitly outstanding.
+Earlier sections retain their historical checkpoint states.
+
 ## Batch 028: turtle/tortoise textually review-closed, not published
 
 The [frozen batch 028](n1-sources/batch-028-membership.json) adds **亀**
