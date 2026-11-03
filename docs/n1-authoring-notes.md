@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 011: bounded draft, independent review pending
+## Batch 011: textual review closure checkpoint
 
 The [frozen packet](n1-sources/batch-011-membership.json) is **梓・橘**,
 two remaining grade-9 plant characters with printing, botanical naming,
@@ -62,9 +62,29 @@ the optional runtime spellings were replaced with kana and English descriptions,
 while the complete dictionary spellings remain in contributor evidence.
 Source readings and selected questions are unchanged; no font or guard is modified.
 
-These are **unreviewed local drafts**, not delivered additions. Two serial
-blind different-family initial reviews, reconciliation, fresh applicable
-Android checks and combined-main/CI/immutable-ZIP publication remain required.
+Both blind model-family initials reviewed all four teaching files, all 71
+complete families and the assigned twelve word/eight kanji comparisons on
+signed `69f0b3b`. The
+[reconciliation](n1-reviews/batch-011-reconciliation.json) preserves both
+original reports, actual model/process/read receipts and six optional
+observations; neither reviewer established an actionable defect.
+Coordinator lookup corroborates the broader ordinary-bow sense of 梓弓
+without invalidating the selected spirit-bow example. Incense wording,
+additional botanical aliases and historical shape analysis remain optional
+expansions, not mandatory corrections. Teaching is unchanged, so no changed-
+passage confirmation is claimed or needed.
+Both reviewer processes exited before successive launches, with zero observed
+internal tool overlaps. Claude searched the confusable inventory; GPT recovered
+its complete text after truncation and obtained citrus dictionary bodies through
+raw HTML. GPT's denied `.git/HEAD` view is preserved, not represented as
+independent Git verification or retried through another tool.
+
+These cards are **locally textually review-closed**, not delivered additions.
+The [review audit](n1-sources/batch-011-review-audit.json) preserves fresh
+353 Python tests, exact source/baseline/reading/link/stroke/cmap checks,
+manifest freshness and unchanged local archive budgets.
+Fresh applicable Android checks and actual combined-main/CI/immutable-ZIP
+publication remain required.
 Published coverage stays **35/1,228; 1,193 still to deliver** after
 [batch 010's verified publication](n1-sources/batch-010-publication.json).
 Supporting-word levels are not inferred from kanji. Compatible Android

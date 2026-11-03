@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "batch": "011",
+  "status": "textual-review-closed-local-unpublished",
+  "baseCommit": "1575d6a1423577bc3d36a5c3039e1e43cfa494f6",
+  "initialSnapshot": "69f0b3bd995c6071c1845a4e550c117d4233ae7d",
+  "reviewedTeachingSnapshot": "69f0b3bd995c6071c1845a4e550c117d4233ae7d",
+  "scope": {
+    "newKanji": ["梓", "橘"],
+    "newSupportArticles": ["words/梓.md", "words/橘.md"],
+    "changedReusedPassages": [],
+    "facets": ["correctness", "scoped coverage", "textual phone comprehensibility"],
+    "completeInitialDictionaryFamilies": 71,
+    "completeWordComparisons": ["木", "植物", "植える", "植木", "果物", "果実", "実", "柚", "花", "香り", "印刷", "出版"],
+    "completeKanjiComparisons": ["木", "辛", "新", "村", "橋", "商", "相", "矛"],
+    "fullReadingDispositions": 4,
+    "curatedOfferedKeys": 2,
+    "sourceOnlyOfferedKeys": 0,
+    "requiredReciprocalPairs": 2,
+    "activatedBaselineDeclaredPairs": 0,
+    "directNewWordExclusionPairs": 12,
+    "teachingChangesAfterInitialSnapshot": "None; all runtime teaching, metadata, identities, full reading order/subsets, examples, translations, guards, links, strokes and manifest preserved."
+  },
+  "reviewers": [
+    {
+      "model": "claude-opus-5.5",
+      "sessionId": "5afdbb3a-8fbc-4b8e-a684-27e8e2aa2eca",
+      "initialReport": "batch-011-initial-claude.md",
+      "initialExecution": "batch-011-initial-claude-execution.json",
+      "initialToolCalls": 44,
+      "initialResult": "All four teaching files CLEAN across all three facets; no actionable finding. Six optional observations retained below.",
+      "scopeLimits": "All assigned teaching/full71families/12word+8kanjicomparisons fully returned. Confusable inventory searched, not fully read. Four live dictionary URLs; complete citrus encyclopedia across two fetches, no displayed Daijisen body claimed. Additional bow entry not retrieved by reviewer. Git identity/cleanliness supplied, not independently verified."
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "sessionId": "159c6e67-d031-4397-bdf3-e119d1b13cff",
+      "initialReport": "batch-011-initial-gpt.md",
+      "initialExecution": "batch-011-initial-gpt-execution.json",
+      "initialToolCalls": 59,
+      "initialResult": "All four teaching files CLEAN across all three facets; no actionable finding or optional expansion.",
+      "scopeLimits": "All assigned teaching/full71families/12word+8kanjicomparisons fully returned. Confusable inventory fully recovered after initial truncation; source snapshot also fully returned. Raw HTML recovered citrus dictionary bodies omitted by simplified extraction. Failed view of .git/HEAD preserved; no shell retry or independent Git verification claimed."
+    }
+  ],
+  "process": {
+    "maximumActiveReviewerProcesses": 1,
+    "processExitCodes": [0, 0],
+    "internalOverlappingStarts": [0, 0],
+    "unfinishedTools": 0,
+    "actualFirstProcessExitAndOriginalReportPersistenceBeforeSecondLaunch": true,
+    "snapshotUnchangedDuringReviews": true,
+    "initialPromptsIdentical": true,
+    "initialBlindness": "Same bounded task/snapshot/source access; no other reports or author progress/rationale/adjudication read. Both complete original reports and execution/model/read receipts preserved before reconciliation.",
+    "modelSelection": "Current installed CLI help and help config captured in sibling control/copilot-help-execution-040.txt and copilot-config-help-execution-040.txt. Explicit advertised IDs match actual execution and usage identities; no Auto substitution.",
+    "availableTools": ["view", "glob", "rg", "web_fetch"],
+    "disabled": "No shell/editing/delegation/builtin MCP, owner token inheritance, author agents, nested trees, second runner or concurrent Gradle/native work.",
+    "readReceipts": "All mandatory assigned teaching/families/comparisons returned completely; availability is not comprehension. Unequal inventory and upstream extraction depth retained.",
+    "observedLimits": "GPT requested .git/HEAD through view and received failure; identity remained supplied, with no circumvention. GPT initial inventory truncation recovered through bounded reads. Claude unverified broader bow observation is optional, not a hidden teaching blocker."
+  },
+  "findings": [],
+  "optional": [
+    {
+      "origin": "claude-initial",
+      "claim": "Mention plain azusa-wood bow as well as spirit bow for 梓弓.",
+      "status": "optional",
+      "evidence": "Coordinator independently fetched https://kotobank.jp/word/%E6%A2%93%E5%BC%93-424851 on 2026-11-03. Actual Seisenban あずさゆみ [1]① names an azusa-wood bow used in hunting and ritual; [1]② names the medium's small spirit-summoning bow. Daijisen heading had no extracted body. Frozen JMdict1152860 explicitly supports the selected spirit-bow sense and woods.",
+      "disposition": "Not adopted. Broader observation corroborated, but teaching selects a genuine ritual sense without claiming it is the only sense or restricting all historical bows to rituals. The independent report expressly classified expansion as optional; not turned into a mandatory defect."
+    },
+    {
+      "origin": "claude-initial",
+      "claim": "Use incense rather than perfume in the final 橘 recognition contrast.",
+      "status": "optional",
+      "evidence": "Actual Seisenban 橘 senses⑥/⑦ name an aromatic wood and 薫物. Coordinator inspected the complete relevant heading/body on 2026-11-03; reviewer likewise records precise incense senses.",
+      "disposition": "Not adopted. Learner text already says fragrance-related historical uses, selects the plant, and makes no liquid-perfume, ingredient, modern-use or general-fragrance equivalence claim. Incense is more specific editorial wording, not an established consequential mistranslation."
+    },
+    {
+      "origin": "claude-initial",
+      "claim": "Expand the 商 lower-enclosure shape comparison.",
+      "status": "optional",
+      "disposition": "Not adopted. Existing comparison accurately distinguishes absence of 木 and meaning; no missing prerequisite established."
+    },
+    {
+      "origin": "claude-initial",
+      "claim": "Simplify contributor-style source-only wording in reading notes.",
+      "status": "optional",
+      "disposition": "Not adopted. Notes explicitly explain selected questions and independently verified unselected uses. Both reviewers find textual comprehensibility CLEAN."
+    },
+    {
+      "origin": "claude-initial",
+      "claim": "Add debated historical phonetic analyses for 梓.",
+      "status": "optional",
+      "disposition": "Not adopted. Conservative structure-unclassified metadata and explicitly labelled modern-shape mnemonic make no historical claim; exhaustive etymology out of scope."
+    },
+    {
+      "origin": "claude-initial",
+      "claim": "Mention the noncitrus からたちばな alias of 橘.",
+      "status": "optional",
+      "evidence": "Actual Seisenban native heading sense③ independently inspected by coordinator confirms the separate plant alias.",
+      "disposition": "Not adopted. The lesson selects and qualifies tachibana citrus, already distinguishing historical and other naming uses rather than claiming exhaustive botanical identity."
+    }
+  ],
+  "modelContributions": {
+    "shared": "Both initials independently support all four full metadata readings, two native plant questions, Japanese versus Chinese/tree/printing layers, modern versus historical citrus, pairwise quiz guards and all four complete teaching files.",
+    "claude": "Optional broader bow and incense observations add useful precision to the evidence record; neither established an actionable teaching defect. All six optional observations preserved and adjudicated.",
+    "gpt": "Independent raw HTML retrieval recovered citrus dictionary headings/body unavailable in simplified extraction; complete inventory recovery and precise allocation/quiz checks corroborate bounded closure.",
+    "limits": "Equivalent observations across findings, optional, limits and explanatory notes compared; no exclusive discovery credited merely because labelled differently. Same sample but unequal inventory/source depth; not a general model ranking or native-speaker/learning-effectiveness certification."
+  },
+  "finalTextualVerdict": "All four teaching files CLEAN across correctness, scoped coverage and textual comprehensibility on unchanged signed69f0b3b. No actionable defect or consequential unresolved in-scope claim; no confirmation necessary because no teaching changed.",
+  "acceptanceLimits": "Local textual closure only. Fresh non-skipped Android, actual combined-current-main validation, normal signed acceptance/owner fast-forward push, green CI and every immutable public ZIP runtime hash pending. Published35/1228 and remaining1193 unchanged. CompatibleAndroidf9b59a2+; acceptedpilotnative/all40/160fonts inherited only unchanged production scope. Physical-phone/general-release explicitly outstanding, not a new bounded-owner-testing veto. No012 or secondrunner."
+}

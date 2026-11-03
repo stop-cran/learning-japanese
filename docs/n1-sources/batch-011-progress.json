@@ -3,9 +3,9 @@
   "batch": "011",
   "baseCommit": "1575d6a1423577bc3d36a5c3039e1e43cfa494f6",
   "membership": ["梓", "橘"],
-  "status": "draft-not-independently-reviewed",
+  "status": "textual-review-closed-local-unpublished",
   "drafted": ["梓", "橘"],
-  "reviewClosed": [],
+  "reviewClosed": ["梓", "橘"],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
@@ -18,13 +18,13 @@
     {
       "kanji": "梓", "article": "words/梓.md", "primaryReading": "あずさ",
       "entryIds": ["1152850"], "selectedSenses": [1],
-      "newArticle": true, "status": "draft-not-independently-reviewed",
+      "newArticle": true, "status": "textual-review-closed-local-unpublished",
       "recognitionSenses": "Full family senses2-6 retained: alternate tree identifications, unrestricted printing block, abbreviated bow/medium. Seisenban adds historical Noh accompaniment. Native plant lesson does not universalize catalpa or treat printing as restricted to shi."
     },
     {
       "kanji": "橘", "article": "words/橘.md", "primaryReading": "たちばな",
       "entryIds": ["1226460"], "selectedSenses": [1],
-      "newArticle": true, "status": "draft-not-independently-reviewed",
+      "newArticle": true, "status": "textual-review-closed-local-unpublished",
       "externalSenseSupplement": "Actual Seisenban native heading distinguishes older edible mandarins, modern bitter/sour wild tachibana, alternate plant, flower, crest, named fragrant wood/blended fragrance, place, and separately family-name uses. Not claimed all present in single-sense JMdict plant family."
     }
   ],
@@ -104,9 +104,15 @@
   },
   "strokeAndFontAudit": "batch-011-stroke-audit.json",
   "review": {
-    "initialSnapshot": null, "initialReports": [], "confirmationReports": [],
-    "nextGate": "Two serial blind different-model-family initials on one signed frozen snapshot, all four teaching files, complete assigned families and actual comparisons, all three facets. Preserve actual reports/process/model/read limitations; reconcile precisely, bounded original-session confirmations as needed.",
-    "limits": "No independent reviewer launched or review-closed addition."
+    "initialSnapshot": "69f0b3bd995c6071c1845a4e550c117d4233ae7d",
+    "reviewedTeachingSnapshot": "69f0b3bd995c6071c1845a4e550c117d4233ae7d",
+    "initialReports": ["../n1-reviews/batch-011-initial-claude.md", "../n1-reviews/batch-011-initial-gpt.md"],
+    "confirmationReports": [],
+    "reconciliation": "../n1-reviews/batch-011-reconciliation.json",
+    "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+    "result": "All4teachingfiles/all3facets CLEAN in both blind initials; six optional Claude observations adjudicated without teaching changes. Actual44/59toolcalls, process exits0 and internaloverlap0/0 preserved. Full71families/12word+8kanjicomparisons returned for both.",
+    "nextGate": "Fresh same-batch non-skipped Android, combined-current-main acceptance, normal signed owner publication, green CI and every immutable public ZIP runtime hash.",
+    "limits": "Local textual closure, not publication. GPT .git/HEAD view denial and recovered inventory truncation preserved; Claude inventory searched, not fully read. Supplied identity differs from independently verified Git evidence. No fresh native/device/physical-phone/general-release acceptance; no012."
   },
   "delivery": {
     "publishedAdditionsBeforeBatch": 35, "remainingAdditionsBeforeBatch": 1193,
