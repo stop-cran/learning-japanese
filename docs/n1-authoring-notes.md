@@ -37,11 +37,11 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 015: tree and resin draft, not reviewed
+## Batch 015: tree and resin review closed, publication pending
 
 The [frozen batch 015](n1-sources/batch-015-membership.json) contains **樹**
 and one necessary supporting article, 樹脂 (じゅし), resin. Its
-[draft ledger](n1-sources/batch-015-progress.json) preserves both source
+[batch ledger](n1-sources/batch-015-progress.json) preserves both source
 readings and selects only **ジュ**. The native spelling 樹/き is explained
 as a dictionary-recognized alternative to 木/き; the material sense's
 restriction to 木 is kept separate from broader character glosses.
@@ -56,9 +56,24 @@ The new material article has four direct quiz safeguards, including 脂's
 separate やに resin identity. One reciprocal pair is required; no reused
 article or baseline metadata is changed.
 
-This is **unreviewed local draft work**, not delivered coverage.
-Two blind model-family initial reviews, reconciliation and fresh acceptance/
-publication gates remain pending. Batch 014's
+This is **textually review-closed local work**, not delivered coverage.
+The [reconciliation](n1-reviews/batch-015-reconciliation.json) preserves both
+blind model-family initial reports on the unchanged signed teaching.
+Neither established an actionable defect. Five optional suggestions were
+adjudicated against the exact native bodies and complete frozen families;
+the original Claude session clarified that its naturalness limit meant no
+corpus/native-speaker check, not a consequential text-level uncertainty.
+
+The [review audit](n1-sources/batch-015-review-audit.json) verifies serial
+reviewer process exits and complete assigned text returned. It preserves
+Claude's original one internal read overlap and three overlong XML ranges,
+plus one limited read overlap in the dependent follow-up. The six bounded
+XML tail rechecks were individually awaited and at most 200 lines each.
+The original inaccurate range-limit claim was expressly withdrawn, not
+rewritten as compliant initial review. No teaching or geometry was changed,
+and no full packet rereview or native certification is claimed.
+
+Fresh Android/combined-main/publication gates remain pending. Batch 014's
 [verified terminal publication](n1-sources/batch-014-publication.json)
 delivered **41 additions; 1,187 still to deliver** at `3055447`.
 Compatible Android `f9b59a2` or later is required; physical-phone/
