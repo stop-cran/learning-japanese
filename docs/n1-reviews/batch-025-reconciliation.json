@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "batch": "025",
+  "status": "textual-review-closed-pending-fresh-acceptance",
+  "authoredSnapshot": "ac1f369155a89974341c4b4c9a66a57502e068d9",
+  "reviewedTeachingSnapshot": "ac1f369155a89974341c4b4c9a66a57502e068d9",
+  "scope": "Complete new kanji/鯨.md and necessary words/鯨.md and words/捕鯨.md; correctness, scoped coverage and textual phone comprehensibility. All three complete frozen packets/98 families, six actual kanji and eleven actual word comparisons, current general/scoped instructions and assigned format/source policy. No reused teaching changed.",
+  "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+  "originalReports": ["batch-025-initial-claude.md", "batch-025-initial-gpt.md"],
+  "originalExecutions": ["batch-025-initial-claude-execution.json", "batch-025-initial-gpt-execution.json"],
+  "verdicts": {
+    "kanji/鯨.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+    "words/鯨.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+    "words/捕鯨.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"}
+  },
+  "findings": [],
+  "unresolvedConsequentialClaims": [],
+  "optional": [
+    {
+      "id": "C-O1",
+      "reviewer": "claude-opus-5.5",
+      "status": "optional",
+      "file": "words/捕鯨.md:28,36",
+      "proposal": "Add native near-synonyms 鯨取り/くじらとり and 鯨漁/くじらりょう to avoid a possible exclusive interpretation of くじら.",
+      "adjudication": "Full frozen JMdict2839676 and2839684 attest these nouns and whaling senses; latter family flags some spelling aliases rare. Current sentence contrasts the complete wordほげい with the invalid pronunciationほくじら, not every word containing鯨. The 鯨 article explicitly givesくじらにく. Neither reviewer establishes a false unrestricted rule. Optional expansion, no teaching change or newly invented frequency claim."
+    },
+    {
+      "id": "C-O2",
+      "reviewer": "claude-opus-5.5",
+      "status": "optional",
+      "file": "kanji/捕.md",
+      "proposal": "Possible backlink to 捕鯨 from existing 捕 card.",
+      "adjudication": "Actual unchanged 捕 card already supplies useful linked 捕まえる; no baseline word declares the newly added鯨. Required pairs鯨/鯨 and鯨/捕鯨 already link both ways. 捕鯨 links both its components. Additional backlink is optional and outside necessary baseline activation; no existing teaching changed."
+    },
+    {
+      "id": "C-O3",
+      "reviewer": "claude-opus-5.5",
+      "status": "withdrawn",
+      "file": "words/捕鯨.md:30; words/釣り.md",
+      "proposal": "Low-risk note on no 捕鯨/釣り exclusion; explicitly not a recommendation.",
+      "adjudication": "JMdict1514180 whale-fishing gloss does not turn1434040 fishing-by-angling sense into whaling. Actual釣り title is fishing; angling and body specifiesangling; 捕鯨 contrasts it expressly. Both reports find no required guard. This tentative observation establishes no actionable omission; three conservative direct broader-label guards remain unchanged."
+    },
+    {
+      "id": "C-O4",
+      "reviewer": "claude-opus-5.5",
+      "status": "optional",
+      "file": "words/鯨.md:15; kanji/鯨.md:22",
+      "proposal": "Daijisen's abbreviation of 鯨尺 is not taught.",
+      "adjudication": "Exact supplied Daijisenくじら sense2 supports this secondary abbreviation. It is outside the stated animal/activity objective, not a missing prerequisite or incorrect whale sense. No expansion."
+    }
+  ],
+  "processDeviationDisposition": {
+    "status": "preserved-with-explicit-limits",
+    "maximumActiveReviewerProcesses": 1,
+    "reviewerProcesses": "Both exited0; complete first report/execution archived before second launch on same unchanged signed snapshot. No author edits while either reviewer ran.",
+    "actualToolCalls": [44, 47],
+    "observedInternalOverlappingStarts": [1, 0],
+    "observedXmlRangeLimitViolations": [0, 0],
+    "detail": "Claude's scoped-instructions and content-format reads overlapped, violating the one-call instruction. Its original report self-discloses this lapse. All assigned local text returned fully, with no unfinished tools or missing XML range. GPT had zero observed internal overlaps. GPT whaling lookup returned oversized redirected output and later encyclopedia pagination rather than requested dictionary headings; these are lookup limits, not independent confirmation. Reports and raw execution receipts remain unchanged.",
+    "remedy": "Preserve actual process deviation and source depth without false all-internal-serial/equal-depth/comprehension certification. No missing assigned local evidence or content finding warrants a repeated full initial or unnecessary original-session follow-up."
+  },
+  "sourceDisposition": "Exact JMdict1253270 supports native鯨/くじら, usualkana and クジラ re_nokanji.1253290 restrictsげいにく/くじらにく to鯨肉 andクジラにく toクジラ肉.2846155 contains both archaicいさな andいさ in ONE separate lexical family, withいさ restricted to鯨; Claude's wording about their spellings is not taken as evidence of separate entry IDs.1514180 supports whaling activity noun, not an inferred suru class. Fullゲイ/くじら source/order preserved and both selected with own linked examples. RawKANJIDIC historicaljlpt is not the modern N1 membership authority; named frozen community source remains authoritative. No nanori, inferred wordlevels, taxonomy, policy or historical/phonetic origin claims added.",
+  "externalEvidence": "Both received identical neutral actual-entry facts/provenance for Daijisen/Seisenban whale/whaling. Claude did not independently fetch either page. GPT whale fetch actually returned Daijisen character/いさな and Seisenban animal definitions; omitted Daijisen animal body remains supplied. GPT whaling fetches returned redirected oversized output/encyclopedia material; exact Daijisen/Seisenban activity headings remained supplied and independently corroborated only by its frozenJMdict reading. No successful-but-irrelevant page treated as verification. Raw coordinatorHTML hashes verified separately; no unavailable gaiji used.",
+  "modelContributionComparison": "No unique/shared actionable teaching defect established in this matched sample. Claude supplied four optional/tentative observations; GPT none, but its checks cover equivalent compound-reading and backlink/angling concerns. Three optional expansions and one withdrawn non-recommendation retained. Unequal upstream retrieval and process depth preclude general model ranking.",
+  "changedTeaching": [],
+  "originalSessionBoundedFollowups": 0,
+  "nativePending": [],
+  "fontDisposition": "All24displayedHan audited;23inunchangedthreebundledcmaps. Sole missing氵 is exactbase-visible in涼 and earlier005/007 records, not new fallback target or freshnativecertification. Original overinclusive initialaudit preserved. Inherit acceptedpilot/all40/160 only unchanged production scope.",
+  "android": "No fresh025Gradle/native execution; dedicatedAndroidcleanunchangedf9b59a2. No024XMLreuse. Fresh non-skipped025Android3+1/currentmain/publication pending.",
+  "limits": "Bounded textual closure, not publication, native-speaker/physical-phone certification, larger-quiz/fallback certification or completeN1coverage. Assigned byte coverage/hashes do not establish comprehension or equal fresh-read depth.51/1228published,1177remaining;local52notdelivery. CompatibleAndroidf9b59a2+ required; physical-phone/general-release explicitlyoutstanding, not blanketowner-testingveto. Finalwhole-setreconciliation pending.",
+  "nextAction": "Sign textual closure evidence locally/checkpoint SAME025; then fresh non-skipped Android3+1 and all latestmain combined-tree/signing/ownerfastforward/greenCI/every immutable public ZIP runtime hash gates before publication or026."
+}
