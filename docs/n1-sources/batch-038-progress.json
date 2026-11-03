@@ -4,6 +4,30 @@
   "baseCommit": "3d7e04f9dd9766407b9f27c3711adba620505e8b",
   "membership": ["鳳"],
   "status": "source-prepared-not-drafted",
+  "externalDictionaryEvidence": "batch-038-dictionary-evidence.json",
+  "qualifiedReadingSelectionCandidates": {
+    "quizOnyomi": ["ホウ"],
+    "quizKunyomi": [],
+    "status": "Source-verified candidates only; no runtime curation or draft exists."
+  },
+  "qualifiedSourceStatus": "source-qualified-not-drafted",
+  "sourceEvidenceValidation": {
+    "execution": 158,
+    "audit": "batch-038-qualified-source-audit.json",
+    "frozenInputHashesVerified": 5,
+    "decompressedDictionaryHashesVerified": 2,
+    "freshExactDictionaryExtractions": 3,
+    "distinctFrozenFamilies": 45,
+    "externalRawDictionaryReceiptsVerified": 6,
+    "runtimeChanges": 0,
+    "runtimeManifestEqualToPublishedBase": true,
+    "extractionUnitTests": {"passed": 5, "failures": 0, "errors": 0},
+    "testLog": "control/logs/execution-158-extraction-tests.txt",
+    "validatorLog": "control/logs/execution-158-validate.txt",
+    "manifestLog": "control/logs/execution-158-manifest.txt",
+    "contentVersion": "2793bdf7fa3bb180",
+    "limits": "Exact source-evidence/baseline audit and unchanged runtime validation, not card authoring, independent linguistic closure, fresh Android/native or publication."
+  },
   "drafted": [],
   "reviewClosed": [],
   "published": [],
@@ -72,21 +96,28 @@
     {
       "reading": "ホウ",
       "kind": "on",
-      "status": "pending-exact-Japanese-allocation-and-usefulness",
+      "status": "useful-source-verified-candidate-not-authored",
       "article": "words/鳳凰.md",
       "evidence": ["1518400", "1518370"],
-      "qualification": "Compoundほうおう and standalone rareほう support navigation; no curated metadata or support article authored yet."
+      "qualification": "Exact Kanjipedia character/compound and Daijisen headings supportホウ in proposed鳳凰ほうおう. Standaloneほう remains explicitly rare in frozen JMdict. No curated metadata/support article/word level authored."
     },
     {
       "reading": "フウ",
       "kind": "on",
-      "status": "source-only-candidate-pending-external-lookup",
+      "status": "qualified-character-source-only-not-selected",
       "article": null,
       "evidence": ["frozen KANJIDIC2鳳"],
-      "qualification": "No confidently allocatedフウ example established in all34 extracted lexical families. This bounded search does not prove absence elsewhere or invalidity; retain exact metadata order."
+      "qualification": "No confidently allocatedフウ example established in all34 extracted lexical families or inspected named Japanese sections. Kanjipedia's凡ハン→フウ describes the component, not a鳳フウ word; itsホウ/ブウ inventory does not replace frozenホウ/フウ. No absence/invalidity claim; retain exact metadata order."
     }
   ],
   "nanoriBoundary": "Frozen鳳 has no kun and recordsおおとり under nanori, while JMdict2267700 independently recognizes the lexical spelling. Explain this distinction if useful without adding/reclassifying source metadata or starting a personal-name course.",
+  "qualifiedSourceDispositions": {
+    "historicalInitialPendingObservations": "The lexical/comparison groups above preserve execution157's initial hypotheses and pending questions, not current blockers resolved by the separately linked exact-entry evidence.",
+    "maleFemale": "Exact Daijisen鳳凰 and Kanjipedia character/compound entries support traditionally male鳳 and female凰; do not make that a universal modern depiction/sex rule.",
+    "phoenixTranslation": "Use Chinese phoenix/fenghuang; exact Daijisenフェニックス sense1 documents the separate Egyptian/rebirth account. Do not infer ash-rebirth for鳳凰 or assert that contextual/fantasy usage never overlaps.",
+    "lexicalOotori": "Recognized lexical鳳おおとり, not merely a personal name. Other dictionaries call it kun but frozen nanori/emptykun remains unchanged. Exact大取/大鳥 headings and frozen2732830/2267700 distinguish last performer.",
+    "sourceOnlyFuu": "Source-only disposition now justified for this bounded inspection; no confidently allocatedフウ word, not universal absence or invalidity. No invented phonetic allocation from凡."
+  },
   "baselineCandidatePairs": [],
   "requiredReciprocalPairsPending": [["鳳", "words/鳳凰.md"]],
   "supportStatus": "Proposed one necessary鳳凰ほうおう article is absent; no word level inferred.凰 is absent from the exact named source, so its raw record may support compound explanation but not an extra kanji addition.",
@@ -105,5 +136,5 @@
   "projectPublishedAdditions": 64,
   "remainingAdditions": 1164,
   "limits": "Source-only checkpoint, not drafted/reviewed/published. Full source order and both exact accepted虎/猿 guards preserved. No fresh Android/native/publicCI/ZIP/phone claim. CompatibleAndroidf9b59a2+; inherited pilot/all40/160 unchanged production scope only. Physical-phone/general-release outstanding, not a bounded-owner-testing veto. Overall1228 expansion and final whole-set acceptance incomplete.",
-  "nextAction": "Resume SAME038. Verify exact Japanese鳳/鳳凰/フウ headings, qualified male/female and Chinese-versus-Western phoenix distinction, allocation/usefulness and lexicalおおとり boundary against frozen45 complete families. Then source-verified necessary鳳凰 support, actual comparisons/quizlabels, three semantically wrong distractors and justified direct guards; preserve fullホウ/フウ and emptykun source order, no inferred wordlevel or凰 addition. Generate pinnedSVG with existingconverter, reconcile14strokes and audit all authored/reusedHan/fonts/newfallbacknative. Validator/buildmanifest/source/baseline/link/readings/strokes/fonts/budget/Python before normal signed draft. Two serial blind different-family independent reviews and necessary original confirmations; fresh non-skippedAndroid and all latestmain/combined-tree/signing/ownerfastforward/greenCI/everyimmutablepublicZIPhash gates before publication or039. No unreviewedpush, authoragents, secondrunner, permissionworkaround, signingretry or guard/heap changes."
+  "nextAction": "Resume SAME038 qualified-source, not drafted/reviewed/published. Six exact raw Japanese entry/range/hash receipts now supportホウ in proposed鳳凰ほうおう, qualified traditional male/female pairing and Chinesephoenix-versus-Egyptian/rebirth distinction. Lexicalおおとり is recognized independently, not name-only; preserve frozen nanori/emptykun and fullホウ/フウ order. フウ remains narrowly character-source-only/unselected, not invalid or universally absent; Kanjipedia's component凡フウ and differingブウ inventory are not鳳 allocation or permission to replace metadata. Core7/130 and comparison11/253 freshly inspected; lexical34 complete inspection inherited157, union45/no new families. Preserve original preparation, unrelated/partial lookup limits and both exact虎/猿 guards. Next inspect actual comparison cards/quiz labels and necessary source-verified鳳凰 support examples, then author one card/one support/three semantically wrong distractors and justified direct guards; no inferred wordlevel or凰 addition. Generate pinnedSVG with existingconverter, reconcile14strokes and audit all authored/reusedHan/fonts/newfallbacknative. Validator/buildmanifest/source/baseline/link/readings/strokes/fonts/budget/Python before normal signed draft. Two serial blind different-family independent reviews and necessary original confirmations; fresh non-skippedAndroid and all latestmain/combined-tree/signing/ownerfastforward/greenCI/everyimmutablepublicZIPhash gates before publication or039. No unreviewedpush, authoragents, secondrunner, permissionworkaround, signingretry or guard/heap changes."
 }

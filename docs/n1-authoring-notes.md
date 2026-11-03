@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 038: mythical-bird source preparation only
+## Batch 038: mythical-bird qualified-source preparation only
 
 The [frozen batch 038](n1-sources/batch-038-membership.json) selects **鳳**,
 source row 1218, with grade-9/name-use classification, 14 source strokes and
@@ -47,14 +47,35 @@ coordinator inspection of 34 lexical and 11 disjoint comparison JMdict
 families. The seven-family core overlaps lexical evidence.
 
 One necessary 鳳凰（ほうおう）support article is proposed, not authored.
-The exact Japanese reading/allocation evidence, historical male/female
-qualification and Chinese-versus-Western phoenix distinction remain pending.
+Six [exact dictionary entry/range/hash receipts](n1-sources/batch-038-dictionary-evidence.json)
+now support ホウ allocation in that compound and the qualified traditional
+male 鳳 / female 凰 explanation. This does not require every modern motif
+to depict two separate birds or assign a fixed sex to a fictional character.
+Use **Chinese phoenix / fenghuang** without importing the Egyptian/Western
+phoenix's rebirth-from-ashes account; contextual or fantasy overlap is not
+categorically ruled out. The exact Daijisen compound also records a crest
+depicting the bird, supporting a scoped decorative-motif explanation.
 JMdict recognizes lexical 鳳（おおとり）, although KANJIDIC2 places おおとり
 under nanori rather than kun; do not silently change metadata classification.
-No confidently allocated フウ example was established in this bounded packet,
-not proof that it is invalid or absent elsewhere. The search-only 鳳蓮草
+Daijisen and Kanjipedia call it kun; this is not evidence that it is name-only.
+The separate 大取（り）/大トリ last-performer entry does not make 鳳 its
+ordinary spelling. No confidently allocated フウ example was established in
+the bounded packet or inspected Japanese sections, not proof that it is
+invalid or absent elsewhere. Kanjipedia lists ホウ・ブウ; its origin
+paragraph's 凡（ハン→フウ） concerns the component, not an allocated 鳳
+reading example. Preserve frozen ホウ・フウ and the empty kun list, with
+only ホウ proposed for practice; do not manufacture a フウ anchor.
+The search-only 鳳蓮草
 spinach spelling and irregular species spellings are not teaching anchors.
 凰 is not an addition in the frozen named set.
+
+The complete core seven and comparison eleven families were freshly read;
+the full 34-family lexical inspection is inherited from execution 157,
+not claimed as a fresh whole reread. Distinct membership remains 45.
+Original partial, unrelated and failed lookups are retained explicitly;
+downloaded full pages are not claimed as fully inspected. Actual comparison
+cards/quiz labels, support examples, strokes and all authored Han/font checks
+still precede a draft.
 
 No runtime, manifest, stroke, independent review, fresh Android/native or
 publication change is claimed. Published coverage remains **64 additions;
