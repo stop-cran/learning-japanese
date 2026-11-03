@@ -37,6 +37,33 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 010: local draft, independent review pending
+
+The [frozen packet](n1-sources/batch-010-membership.json) is **笹・椋**,
+two grade-9 plant characters with complementary bamboo/category and tree/bird
+risks. Two necessary support articles supply two reciprocal pairs; neither
+character activates a baseline-declared pair. No reused teaching or baseline
+metadata is changed.
+
+The [draft ledger](n1-sources/batch-010-progress.json) preserves all **three**
+source readings and selects **ささ・むく**. 椋's リョウ is independently
+attested in the character-dictionary compound 椋樹 and retained for recognition,
+not declared source-only or nonexistent because JMdict lacks that compound.
+Three packets preserve **73 complete JMdict families**. The
+[external record](n1-sources/batch-010-external-evidence.json) distinguishes
+actually returned definitions from empty headings and an initial wrong-headword
+redirect. Teaching qualifies the bamboo/sheath distinction, old court-language
+alcohol sense and muku tree/fruit/abbreviated-starling uses.
+Sixteen direct word safeguards address those actual senses and broader labels,
+not a plant/fruit/bird synonym clique.
+
+These are **local unreviewed drafts**, not delivered additions. Both independent
+model-family initials, reconciliation, fresh applicable Android and combined-main/
+CI/immutable-ZIP publication gates remain pending. Published coverage stays
+**33/1,228; 1,195 still to deliver**. Supporting-word levels are not inferred
+from their kanji. Compatible-client and outstanding physical-phone/general-release
+qualifications remain unchanged.
+
 ## Batch 009: published and verified
 
 The [frozen packet](n1-sources/batch-009-membership.json) is **杏・李**,
