@@ -37,7 +37,37 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 038: mythical-bird qualified-source preparation only
+## Batch 038: mythical-bird local draft, not review-closed
+
+Batch 038 now has one **鳳** card and one necessary **鳳凰（ほうおう）**
+support article, without an inferred vocabulary level. Full ホウ・フウ order
+and the empty kun list remain unchanged; only ホウ is selected with its own
+linked example. Traditional male/female pairing, lexical おおとり and the
+Chinese-versus-Western phoenix distinction are qualified in the teaching.
+One reciprocal pair and a conservative direct 鳳凰/鳥 quiz-label guard are
+recorded; no baseline article is changed and no 凰 kanji card is added.
+
+The three kanji distractors are 風, 鶴 and 鷹, with their actual titles and
+complete articles inspected. Six existing word articles support comparison
+and the original picture/cloth-pattern examples. The full pinned 82-line
+SVG converts to 14 strokes with the existing generator, with exact
+reconversion recorded in the [stroke/font audit](n1-sources/batch-038-stroke-audit.json).
+All 14 Han in the two authored files and all 79 across the ten unchanged
+comparison articles were checked against the three pinned bundled fonts.
+**凰 is newly introduced and absent from all three cmaps:** actual supported
+native fallback/visual inspection is still required before acceptance.
+Cmap absence alone is not a glyph failure.
+
+The [mechanical draft audit](n1-sources/batch-038-draft-audit.json) checks
+exact source membership, baseline preservation, mappings, readings, runtime
+changes and budgets. It does not establish linguistic closure. Two serial
+blind different-family reviews, reconciliation, new-glyph native evidence,
+fresh non-skipped Android and combined-main/publication gates remain pending.
+Published coverage is still **64 additions; 1,164 to deliver**.
+Compatible Android `f9b59a2` or later is required; physical-phone/
+general-release acceptance remains explicitly outstanding.
+
+### Preserved qualified-source preparation
 
 The [frozen batch 038](n1-sources/batch-038-membership.json) selects **鳳**,
 source row 1218, with grade-9/name-use classification, 14 source strokes and
@@ -46,7 +76,8 @@ The [source ledger](n1-sources/batch-038-progress.json) records complete
 coordinator inspection of 34 lexical and 11 disjoint comparison JMdict
 families. The seven-family core overlaps lexical evidence.
 
-One necessary 鳳凰（ほうおう）support article is proposed, not authored.
+At the preceding source checkpoint, one necessary 鳳凰（ほうおう）support
+article was proposed, not authored.
 Six [exact dictionary entry/range/hash receipts](n1-sources/batch-038-dictionary-evidence.json)
 now support ホウ allocation in that compound and the qualified traditional
 male 鳳 / female 凰 explanation. This does not require every modern motif
@@ -75,10 +106,10 @@ not claimed as a fresh whole reread. Distinct membership remains 45.
 Original partial, unrelated and failed lookups are retained explicitly;
 downloaded full pages are not claimed as fully inspected. Actual comparison
 cards/quiz labels, support examples, strokes and all authored Han/font checks
-still precede a draft.
+were still pending at that source-only checkpoint.
 
-No runtime, manifest, stroke, independent review, fresh Android/native or
-publication change is claimed. Published coverage remains **64 additions;
+That source-only checkpoint claimed no runtime, manifest, stroke, independent
+review, fresh Android/native or publication change. Published coverage remains **64 additions;
 1,164 still to deliver** after batch 037. Preserve the compatible-client
 and outstanding physical-phone/general-release qualifications.
 
