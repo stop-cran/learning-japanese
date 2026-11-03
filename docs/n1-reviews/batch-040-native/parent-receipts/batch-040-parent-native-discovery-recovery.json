@@ -1,0 +1,28 @@
+{
+  "batch": "040",
+  "checkpoint": 178,
+  "verifiedAt": "2026-11-04T00:35:40.1326864+01:00",
+  "executionShellId": "batch040-native-discovery-parent-approval",
+  "commandDisposition": "Approval-capable parent executed EXACT execution178 denied device/port inspection while runner stopped; no permission/configuration changes or alternative invocation.",
+  "exitCode": 1,
+  "result": "Actual ownership guard failed: emulator ports occupied; do not launch.",
+  "adbDevices": [
+    {"serial": "emulator-5556", "state": "device", "ownedByThisRecovery": false},
+    {"serial": "emulator-5572", "state": "offline", "ownedByThisRecovery": false},
+    {"serial": "emulator-5580", "state": "offline", "ownedByThisRecovery": false}
+  ],
+  "occupiedPorts": [5580, 5581],
+  "readOnlyOwnershipInspectionShellId": "80",
+  "ownerProcess": {
+    "pid": 9224,
+    "parentPid": 2964,
+    "createdAtLocal": "2026-11-04T00:35:18+01:00",
+    "executable": "C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk\\emulator\\qemu\\windows-x86_64\\qemu-system-x86_64.exe",
+    "avd": "Ru_Pilot_Eligibility_API29_20261103",
+    "arguments": "-avd Ru_Pilot_Eligibility_API29_20261103 -port 5580 -no-snapshot-load -no-snapshot-save -no-boot-anim",
+    "ownedByThisRecovery": false
+  },
+  "disposition": "Remain blocked at SAME040. No emulator launched, device modified, process stopped, alternative port selected, native fixture/build/review or publication performed. Offline adb state does not make another task's emulator safe to stop.",
+  "freshAndroidEvidence": "Successful fresh execution177 named3+1 remains valid at unchanged clean f5a9e442/f9b59a2; no rerun or old039 evidence reuse.",
+  "nextAction": "Recheck fresh device/port ownership after the other task releases 5580/5581. Then recover SAME040 with the unchanged gates and exactly one runner. Original execution178 permission denial remains preserved; this receipt records a new actual resource collision, not a successful native gate."
+}
