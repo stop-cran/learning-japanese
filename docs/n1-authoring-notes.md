@@ -37,6 +37,35 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 031: monkey local draft, not reviewed or published
+
+The [frozen batch 031](n1-sources/batch-031-membership.json) adds **猿**
+and activates the component link in the existing N3 猿 (さる) article.
+No new support word or vocabulary level is added. Both full readings remain
+in source order; only さる is selected. 類人猿 (るいじんえん), "ape,"
+supplies compound recognition for エン. Broad animal usage, the Monkey sign
+written 申, compound voicing in 日本猿 and insulting person uses are kept
+distinct.
+
+The [draft ledger](n1-sources/batch-031-progress.json) records 177 complete
+dictionary families in three bounded packets, two reading dispositions and
+one activated reciprocal pair. A narrow additive 猿/馬鹿 exclusion addresses
+the existing derogatory fool/idiot sense in an uncontextualized word quiz.
+All other reused metadata, easier levels, titles, readings and prose remain
+unchanged. This author decision and the new teaching still need two serial
+blind model-family reviews; validation alone is not linguistic acceptance.
+The 13 generated strokes match the pinned SVG reconversion. All 20 Han in the
+new/changed files were audited: 18 occur in all three bundled font cmaps;
+missing 犭 and 袁 already appear in the exact-base 犬 and 園 cards,
+respectively. No new fallback code point or native certification is claimed.
+Fresh Android and combined-main/publication gates remain pending.
+
+Batch 030 is now [published and verified](n1-sources/batch-030-publication.json)
+at terminal `b7dd333`: **57 additions delivered; 1,171 still to deliver**.
+This draft does not increase those counts. Compatible Android `f9b59a2` or
+later is required; physical-phone/general-release acceptance remains
+explicitly outstanding. Earlier sections retain their historical states.
+
 ## Batch 030: tiger textually review-closed, not published
 
 The [frozen batch 030](n1-sources/batch-030-membership.json) adds **虎**
