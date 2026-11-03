@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 037: snake locally accepted, publication pending
+## Batch 037: snake published for bounded owner testing
 
 The [frozen batch 037](n1-sources/batch-037-membership.json) contains only
 **蛇**, source row 970. Its [source ledger](n1-sources/batch-037-progress.json)
@@ -98,8 +98,15 @@ Two actual native terminal cases verify the single full import, glyph probes,
 offline support routes, reciprocal navigation and system Back. Eight images
 received dependent original-Claude visual confirmation; returned images were
 downscaled, and offscreen table/full-article contents remain unverified.
-Normal signing, owner publication, exact green CI and immutable-public-ZIP
-verification remain pending; this is not another delivered addition.
+[Normal signed owner publication](n1-sources/batch-037-publication.json)
+at accepted `a1871eac` passed exact green CI and immutable-public-ZIP
+verification: all **8,238 runtime hashes**, manifest equality and unchanged
+archive guards. This delivers **64 additions; 1,164 remain**, with
+1,049 kanji, 5,006 words and 69 N1-labelled cards (68 named source members
+plus the separate 妖 exception). Two necessary support words bring the
+project's new-support total to 64; one reused support article changed.
+Terminal evidence-only publication and its own CI/archive/issue receipts
+are recorded in the live coordinator checkpoint; no teaching is changed.
 Compatible-client and outstanding physical-phone/general-release limits
 remain unchanged. Batch 038 has not started.
 

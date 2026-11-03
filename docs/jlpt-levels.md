@@ -174,6 +174,21 @@ An API `null`, a missing entry, or a network failure does not authorize an infer
 and document any exception below. If evidence still conflicts, leave the decision unresolved rather than silently choosing a number.
 Historical KANJIDIC levels are not modern N-numbers: [old Level 4 corresponds to N5, and old Level 3 to N4](https://www.jlpt.jp/e/faq/index.html#anchor13).
 
+  [Batch 037](n1-sources/batch-037-publication.json), 蛇, is
+  **published and verified for bounded owner testing**, after the intervening
+  batches. All four on-readings and へび remain in source order; practice
+  selects ジャ・ダ・へび, with recognition-only イ and qualified source-only ヤ.
+  Two necessary support words have no vocabulary level inferred from the
+  kanji; reused N2 蛇口 retains its identity and level.
+  Original two-family review, confirmations, bounded native fallback/visual
+  evidence and fresh non-skipped Android checks are retained with their limits.
+  Combined-main checks, green CI and all **8,238 immutable-public-ZIP runtime
+  hashes** passed at accepted `a1871eac`. Published coverage is **64 additions;
+  1,164 still to deliver**: 68 named source members plus the separate 妖
+  exception. Compatible Android `f9b59a2` or later and outstanding
+  physical-phone/general-release qualifications remain explicit.
+  This is not complete N1 coverage.
+
 ## Documented exceptions
 
 | Kanji | Repository label | Evidence and reason |
