@@ -37,6 +37,32 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 016: chrysanthemum draft, independent review pending
+
+The [frozen batch 016](n1-sources/batch-016-membership.json) contains **菊**
+and one necessary supporting plant-noun article, 菊 (きく). Its
+[draft ledger](n1-sources/batch-016-progress.json) preserves the single
+source on-reading **キク** and explicitly empty kun list. Actual native
+dictionary headings independently establish that the standalone noun uses
+an on-reading; no native reading or vocabulary level is inferred.
+
+Four full dictionary packets retain 152 families, including all 96
+families containing 菊. Main-word spelling flags are kept distinct from
+compound flags. The [native evidence](n1-sources/batch-016-external-evidence.json)
+qualifies ornamental/food uses and historical or specialist secondary senses.
+Seventeen conservative direct word guards protect broad plant labels and
+documented secondary overlaps, not unrestricted equivalence or frequency.
+One reciprocal pair is required; no baseline article is edited.
+
+This is **unreviewed local teaching**, not another published addition.
+The [draft audit](n1-sources/batch-016-draft-audit.json) and
+[stroke/font record](n1-sources/batch-016-stroke-audit.json) retain source,
+baseline, reading, link, pinned-geometry and cmap checks. Two serial blind
+different-family initial reviews, reconciliation, fresh Android and
+combined-main/CI/immutable-public-ZIP gates remain pending. Published
+coverage remains **42 additions; 1,186 still to deliver**.
+Physical-phone/general-release acceptance remains explicitly outstanding.
+
 ## Batch 015: tree and resin published and verified
 
 The [frozen batch 015](n1-sources/batch-015-membership.json) contains **樹**
