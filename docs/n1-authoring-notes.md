@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 009: textual review closed; publication pending
+## Batch 009: published and verified
 
 The [frozen packet](n1-sources/batch-009-membership.json) is **杏・李**,
 two grade-9 fruit/tree characters with different lower components.
@@ -82,11 +82,22 @@ had serial internal tools; Claude's confirmation had one approximately
 seriality assertion is withdrawn in a bounded original-session supplement.
 This disclosed deviation is not rewritten as perfect serial execution.
 
-These are **locally textually review-closed**, not additional delivered coverage.
-Fresh Android and combined-main/CI/immutable-public-ZIP acceptance remain pending.
-Published coverage remains **31/1,228; 1,197 still to deliver**.
-Supporting-word levels are not inferred from their kanji; physical-phone
-and general-release acceptance remain explicitly outstanding.
+These two cards are now **published and verified for bounded owner testing**.
+[Execution 035](n1-sources/execution-035.json) and the
+[acceptance audit](n1-sources/batch-009-acceptance-audit.json) preserve fresh
+RealContentTest 3/3 and RareHanTest 1/1, with no failures, errors or skips,
+against this dedicated sibling checkout. The actual combined-main tree passed
+353 Python tests, validation, unchanged pilot-stage vocabulary consistency,
+manifest freshness and exact source/baseline/reading/link/font/stroke audits.
+The [publication record](n1-sources/batch-009-publication.json) preserves
+normally signed acceptance `add0c53`, green CI `41552908004` and all
+**8,145 runtime hashes** from the exact immutable public ZIP within unchanged
+archive, per-file and path budgets. Reviewed teaching remains unchanged.
+Published coverage is **33/1,228; 1,195 still to deliver**.
+Supporting-word levels are not inferred from their kanji. Compatible Android
+`f9b59a2` or later is required; accepted pilot native/font evidence is inherited
+only for unchanged production scope, not a fresh device or visual pass.
+Physical-phone and general-release acceptance remain explicitly outstanding.
 
 ## Batch 008: published and verified
 
