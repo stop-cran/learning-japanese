@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "batch": "030",
+  "initialSnapshot": "ad2a00e2028444fc42e599a538d6e5eddd629fea",
+  "status": "correction-authored-pending-original-session-confirmations",
+  "finding": {
+    "id": "G1",
+    "severity": "minor",
+    "facet": "correctness; word-quiz ambiguity",
+    "claim": "Animal-focused article prose does not contextualize the actual Japanese-to-English quiz showing only 虎. A competing a-drunk label is defensible from its colloquial secondary sense.",
+    "evidence": ["batch-030-jmdict.xml:26-31,1267610sense2", "batch-030-comparisons-jmdict.xml:292-323,1372660sense1", "Nikkokuとら【虎】[1]noun4", "docs/content-format.md:133-148", "words/酔っ払い.md:4,9"],
+    "remedy": "Add quiz_exclusions:[酔っ払い] to words/虎.md; preserve all identities, labels, levels, readings, prose and original 酔っ払い/酔う exclusion.",
+    "confidence": "high",
+    "origin": "Inherited omission exposed by bounded comparison audit, tightly coupled to this secondary-sense teaching; not caused by the component link.",
+    "status": "partially resolved",
+    "pending": "Both original sessions confirm exact changed metadata and affected regression boundaries."
+  },
+  "equivalentInitialObservations": {
+    "claude": "Optional direct 虎/酔っ払い exclusion; same underlying observation as GPT G1.",
+    "gpt": "Minor actionable direct-pair ambiguity.",
+    "disagreement": "Claude treats tiger as clearly best despite recognized alternate meaning; precise visible operation has no animal context and contract accepts ordinary secondary meanings, so coordinator adopts the narrow safeguard.",
+    "uniqueModelFinding": false,
+    "sharedFinding": "The same overlap appears anywhere in both original reports; differing label/severity is not a unique discovery."
+  },
+  "coordinatorEvidence": "Targeted full1267610family/full1372650and1372660families, actual虎/酔っ払い/酔う articles, raw虎劇酔metadata, allthree kanji distractors and direct currentNikkoku upstream body inspected. No fresh full136family linguistic reread claimed; preserve execution119 author inspection and initial returned-range evidence.",
+  "tooling": "Existing audit rejected every reused metadata change and could not apply two recorded edits to one article. Extend exact-replacement grouping, permitting only explicit strictly additive distinct exclusions; eight focused tests added. No app/quiz algorithm change or general metadata relaxation.",
+  "limits": "Not yet textual closure, freshAndroid, native, publication, physical-phone or complete project acceptance. Initial process overlap and source-access limits retained."
+}

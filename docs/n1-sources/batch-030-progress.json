@@ -49,6 +49,11 @@
       "article": "words/虎.md",
       "before": "虎 represents the whole native noun とら.",
       "after": "[虎](../kanji/虎.md) represents the whole native noun とら."
+    },
+    {
+      "article": "words/虎.md",
+      "before": "tags: [wago, noun, animals]\n",
+      "after": "tags: [wago, noun, animals]\nquiz_exclusions: [酔っ払い]\n"
     }
   ],
   "readingDispositions": [
@@ -108,7 +113,13 @@
     }
   },
   "wordQuizAudit": {
-    "directExclusions": [],
+    "directExclusions": [
+      {
+        "word": "虎",
+        "exclude": ["酔っ払い"],
+        "reason": "JMdict1267610sense2/Nikkoku noun4 give drunk-person meaning. An uncontextualized Japanese-to-English quiz can offer 酔っ払い's a drunk label; animal-focused article prose does not contextualize that displayed question. Direct pair only; existing 酔っ払い/酔う safeguard unchanged."
+      }
+    ],
     "comparisonArticles": [
       "words/動物.md",
       "words/猫.md",
@@ -122,7 +133,7 @@
       "kanji/鳥.md",
       "kanji/風.md"
     ],
-    "confusableInventory": "Existing inventory notation and bounded虎/tiger/drunk searches inspected. No word title or exclusion changed and no new word quiz identity is introduced. The original animal-focused N3 word and its existing quiz behavior are preserved; known colloquial drunk-person sense is separately noted on the new kanji. No new animal-category exclusion clique or unrelated historical quiz repair.",
+    "confusableInventory": "Bounded inventory虎/tiger/drunk searches found no listed pair. Both independent reports identify 虎/酔っ払い overlap, though Claude calls it optional and GPT minor. Exact dictionary senses and uncontextualized visible quiz establish one narrow additive guard. No animal-category clique, transitive guard or title/identity change.",
     "limits": "Bounded actual labels and applicable ordinary senses; not exhaustive live-quiz certification."
   },
   "fullFamilyInspection": {

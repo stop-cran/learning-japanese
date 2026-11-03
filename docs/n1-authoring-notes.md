@@ -37,12 +37,13 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 030: tiger local draft, not reviewed or published
+## Batch 030: tiger review correction, not yet closed or published
 
 The [frozen batch 030](n1-sources/batch-030-membership.json) adds **虎**
 and activates the component link in the existing 虎 (とら) article.
-That word retains its N3 vocabulary label, identity, full metadata and
-teaching; only the reciprocal link changes. No new word article is needed.
+That word retains its N3 vocabulary label, identity, readings and teaching.
+The reciprocal link and one narrowly justified additive quiz exclusion change;
+no new word article is needed.
 Both sourced readings remain in order; only とら is selected. コ has
 the verified 虎穴 (こけつ) recognition example, with literal tiger-den
 and figurative dangerous-place meanings separated from English "lion's den."
@@ -53,8 +54,20 @@ lexical/comparison families, both reading dispositions and one activated
 baseline/reciprocal pair. The eight strokes are generated at the pinned
 KanjiVG revision. Of 14 displayed Han, 13 are in all three unchanged bundled
 cmaps; 虍 already appears in the exact baseline 劇 card. This is not new
-native or phone certification. Independent two-family review and fresh
+native or phone certification. Two blind model-family initial reviews both
+identified the 虎/酔っ払い secondary-sense overlap: Claude called it optional,
+whereas GPT established a minor ambiguity in an uncontextualized word quiz.
+Animal-focused article prose does not contextualize a quiz showing only 虎.
+The direct exclusion is added on 虎; 酔っ払い/酔う remains unchanged.
+Original-session changed-passage confirmation and fresh
 Android/combined-main/publication gates remain pending.
+
+The batch audit now applies all recorded exact replacements for a reused
+article together. Its only permitted metadata exception is an explicitly
+recorded, distinct, strictly additive `quiz_exclusions` safeguard; every
+original exclusion and other metadata field must remain unchanged.
+This is grounded in batch 030's inherited secondary-sense finding, not
+permission to rewrite existing cards or widen exclusions transitively.
 
 Batch 029 is now [published and verified](n1-sources/batch-029-publication.json)
 at terminal `625cc32`: **56 additions delivered; 1,172 still to deliver**.
