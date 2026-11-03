@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "batch": "035",
+  "baseCommit": "e8176eb94b3d0b2fd5ddebd5d8f957833ff5ff18",
+  "membership": ["鹿"],
+  "status": "source-prepared-not-drafted",
+  "drafted": [],
+  "reviewClosed": [],
+  "published": [],
+  "sourceSnapshot": "docs/n1-source-snapshot.json",
+  "dictionaryPackets": [
+    {"selection": "batch-035-lexical-selection.json", "xml": "batch-035-jmdict.xml"},
+    {"selection": "batch-035-comparison-selection.json", "xml": "batch-035-comparisons-jmdict.xml"}
+  ],
+  "extractedDistinctFamilies": 202,
+  "authorInspection": {
+    "completeCoreFamilies": 9,
+    "corePacket": "batch-035-core-jmdict.xml",
+    "coreReturnedRange": [1, 271],
+    "completeComparisonFamilies": 9,
+    "comparisonReturnedRange": [1, 265],
+    "remainingLexicalFamiliesPending": 184,
+    "limits": "Core packet overlaps lexical packet; 18 distinct families inspected, not 211 extracted families. All 4079 lexical lines are preserved but not claimed fully read. No independent reviewer has run."
+  },
+  "proposedSupportMappings": [
+    {
+      "kanji": "鹿",
+      "article": "words/鹿.md",
+      "primaryReading": "しか",
+      "entryIds": ["1319030"],
+      "selectedSenses": [1],
+      "newArticle": true,
+      "status": "source-verified-candidate-not-drafted",
+      "evidence": "Full entry supports written鹿/しか with no reading restriction; シカ has re_nokanji and is a separate kana spelling, not an alternative reading of written鹿. Sense is deer/cervid, especially sika deer; no sex restriction. No usually-kana flag in this entry; do not import猪's flag. No vocabulary level established."
+    },
+    {
+      "kanji": "鹿",
+      "article": "words/馬鹿.md",
+      "primaryReading": "ばか",
+      "entryIds": ["1601260", "1471660"],
+      "selectedSenses": [1, 2, 3],
+      "newArticle": false,
+      "status": "existing-complete-article-inspected-link-change-pending",
+      "evidence": "Actual baseline article and complete applicable families inspected. Source marks whole馬鹿 spelling ateji and senses usually kana. Existing N3 level, wago identity, full reading, title and metadata must remain intact. Link鹿 at its substantive existing animal comparison; do not invent鹿=か allocation inばか."
+    }
+  ],
+  "requiredReciprocalPairsPending": [
+    ["鹿", "words/鹿.md"],
+    ["鹿", "words/馬鹿.md"]
+  ],
+  "changedReusedPassagesPending": [
+    {
+      "article": "words/馬鹿.md",
+      "before": "[馬](../kanji/馬.md) means horse and 鹿 means deer",
+      "after": "[馬](../kanji/馬.md) means horse and [鹿](../kanji/鹿.md) means deer",
+      "limits": "Proposed exact component-link change only; not applied. Both directions must be reviewed when authored."
+    }
+  ],
+  "readingCandidates": [
+    {
+      "kanji": "鹿",
+      "kind": "on",
+      "reading": "ロク",
+      "status": "disposition-pending-full-family-and-allocation-inspection",
+      "entryIds": ["2860945"],
+      "observation": "Full鹿茸ろくじょう entry is velvet antler/pilose antler used in traditional Chinese medicine, not generic deer or evidence of everyday usefulness. Whole kana does not independently prove constituent allocation. Preserve full sourceロク; inspect additional full families/exact character-reading evidence before choosing recognition or source-only wording."
+    },
+    {
+      "kanji": "鹿",
+      "kind": "kun",
+      "reading": "しか",
+      "status": "source-verified-useful-selection-candidate",
+      "entryIds": ["1319030"],
+      "proposedArticle": "words/鹿.md",
+      "observation": "Whole native animal noun directly supportsしか. Selection still requires authored own reading row and actual reciprocal article."
+    },
+    {
+      "kanji": "鹿",
+      "kind": "kun",
+      "reading": "か",
+      "status": "disposition-pending-complete-family-inspection",
+      "entryIds": ["2873068", "1866430"],
+      "observation": "Standalone鹿か entry explicitly archaic. 鹿の子かのこ has cloth/dapple/mochi senses and an archaic original fawn sense; do not teach fawn as its unqualified modern primary meaning or infer rarity of all compoundか from the standalone flag. 馬鹿 ateji is not per-character allocation evidence."
+    }
+  ],
+  "additionalInspectedLexicalBoundaries": [
+    {
+      "entryId": "2203180",
+      "observation": "獣/猪/鹿しし includes archaic meat-animal sense and abbreviated hunting sense. KANJIDIC2鹿 listsしし as nanori, not one of the three on/kun metadata readings. No added metadata or personal-name course."
+    },
+    {
+      "entryId": "2203220",
+      "observation": "鹿/鹿肉かのしし separates poetical venison from archaic deer. Dictionary recognition does not justify adding a useful modern reading question."
+    },
+    {
+      "entryId": "2873067",
+      "observation": "鹿かせぎ is explicitly archaic and not in the frozen on/kun lists. Do not add/reorder metadata."
+    }
+  ],
+  "comparisonDisposition": {
+    "rawCharacterElements": ["鹿", "麓", "麗", "鏡"],
+    "unavailableComparisonCards": ["kanji/麓.md", "kanji/麗.md", "kanji/鏡.md"],
+    "observation": "Direct file reads confirmed these comparison cards do not exist in this exact base; cannot use them as curated distractors or relative links. Metadata and nine comparison dictionary families are evidence only, not permission to broaden batch membership.",
+    "pending": "Select three actual existing semantically wrong card labels and inspect complete applicable meanings/cards. Inspect actual selected support comparison articles and confusable inventory before word title/exclusions. No quiz disposition closed yet."
+  },
+  "strokeAndFont": "Pinned inventory exists; actual SVG download/conversion/count reconciliation and whole-authored-text Han audit pending. No runtime geometry generated or native/font acceptance inferred.",
+  "baselineMetadataExceptions": {
+    "words/虎.md": ["酔っ払い"],
+    "words/猿.md": ["馬鹿"]
+  },
+  "publishedAdditions": 61,
+  "remainingAdditions": 1167,
+  "validation": {
+    "preparationAudit": "batch-035-preparation-audit.json",
+    "extractionUnitTests": {"passed": 5, "failures": 0, "errors": 0},
+    "runtimeManifestEqualToPublishedBase": true,
+    "contentVersion": "4bc59e1112f9afcf",
+    "limits": "Source-only checks, not teaching validation or fresh Android acceptance. No runtime file edited; no manifest regeneration needed."
+  },
+  "review": "Not launched; future two serial blind different-family initials and evidence reconciliation after one frozen draft.",
+  "android": "Dedicated clean f9b59a2; no runtime changed, no fresh test or native result claimed. Prior034 acceptance remains historical.",
+  "compatibleClient": "Android f9b59a2 or later; old APKs ignore curation.",
+  "phoneAcceptance": "Physical-phone/general-release explicitly outstanding, not a bounded owner-testing veto.",
+  "nextAction": "Resume same035; inspect remaining184 full lexical families in bounded ranges, resolve exactロク/か allocation and useful support, then author one鹿 card/necessary鹿 word/exact馬鹿 link, pinned strokes, curated keys, complete baseline/link/reading/font audits. Freeze signed unreviewed draft before independent review. No036 or unreviewed push.",
+  "limits": "Substantive source-preparation checkpoint only. No draft, linguistic batch closure, independent review, new native certification, fresh Android acceptance, CI/public ZIP or publication. Existing source-index statusAtFreeze stays immutable."
+}

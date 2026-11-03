@@ -37,7 +37,35 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 034: wild boar drafted, not independently reviewed
+## Batch 035: deer source preparation, not drafted
+
+The [frozen batch 035](n1-sources/batch-035-membership.json) contains only
+**鹿**. Its [source-preparation ledger](n1-sources/batch-035-progress.json)
+preserves 202 complete frozen JMdict families: 193 lexical families and nine
+comparison families. Nine core lexical families and all nine comparison
+families were inspected; the other 184 lexical families remain explicitly
+pending. Extraction and hashes are not full linguistic review.
+
+The initial inspection verifies 鹿/しか as a useful native animal noun and
+identifies the existing N3 馬鹿 article's required component-link activation.
+馬鹿 is whole-word ateji, not evidence that 鹿 supplies か in ばか.
+Standalone 鹿/か is archaic; 鹿の子/かのこ has separate pattern, cloth,
+mochi and archaic fawn senses. Full ロク/しか/か source order is frozen,
+but final reading dispositions, support, quiz choices and teaching remain
+pending. No card, support article, stroke file or runtime manifest changes
+have been made in this source checkpoint.
+
+Batch 034 is now [published and verified](n1-sources/batch-034-publication.json)
+at terminal `e8176eb`: **61 additions delivered; 1,167 remain**.
+Batch 035 is not another delivered addition. Resume the same bounded batch
+for remaining family inspection and authoring before independent review;
+compatible-client and outstanding physical-phone/general-release limits
+remain unchanged.
+
+## Batch 034: historical draft checkpoint
+
+The account below preserves the pre-review checkpoint; its publication
+record linked above supersedes the pending gates and totals.
 
 The [frozen batch 034](n1-sources/batch-034-membership.json) adds **猪**
 and one necessary 猪 (いのしし) article. All three readings remain in source
