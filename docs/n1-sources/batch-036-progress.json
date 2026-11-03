@@ -3,28 +3,33 @@
   "batch": "036",
   "baseCommit": "285df83ebf69859f1032dc30c44b9f4be06f5486",
   "membership": ["獣"],
-  "status": "source-prepared-not-drafted",
-  "drafted": [],
+  "status": "validated-local-draft-not-independently-reviewed",
+  "drafted": ["獣"],
   "reviewClosed": [],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
     {"selection": "batch-036-lexical-selection.json", "xml": "batch-036-jmdict.xml"},
-    {"selection": "batch-036-comparison-selection.json", "xml": "batch-036-comparison-jmdict.xml"}
+    {"selection": "batch-036-comparison-selection.json", "xml": "batch-036-comparison-jmdict.xml"},
+    {"selection": "batch-036-draft-comparison-selection.json", "xml": "batch-036-draft-comparisons-jmdict.xml"}
   ],
-  "extractedDistinctFamilies": 139,
+  "extractedDistinctFamilies": 167,
   "authorInspection": {
     "lexicalFamilies": 124,
     "comparisonFamilies": 15,
-    "distinctCompleteFamilies": 139,
+    "distinctCompleteFamilies": 167,
+    "draftComparisonFamilies": 28,
+    "draftComparisonInspectedSpan": [1,915],
+    "draftComparisonBoundedReads": 5,
     "remainingExtractedFamiliesPending": 0,
     "lexicalReturnedRanges": [[1,400],[401,800],[801,1200],[1201,1600],[1601,1931]],
     "comparisonReturnedRanges": [[1,240],[241,481]],
     "coreReturnedRange": [1,194],
     "coreFamilies": 9,
-    "limits": "Complete packets returned untruncated and coordinator-inspected, including entry boundaries across ranges. Core9 are already in lexical124, not extra distinct families. This is source inspection, not independent review, certification of every scientific/name gloss, frequency evidence or a claim of equal reviewer comprehension."
+    "limits": "Original execution144 full139-family inspection preserved, not claimed as a fresh145 lexical reread. Execution145 freshly read complete core9/194lines (overlap), originalcomparison15/481lines and supplemental28/915lines, with all entry boundaries. Distinct union167; no independent review, frequency or certification of every incidental scientific/name gloss inferred."
   },
   "sourceReadingOrder": {"onyomi": ["ジュウ"], "kunyomi": ["けもの","けだもの"]},
+  "sourcePreparationFieldsHistorical": "provisionalReadingDispositions/supportMappingsPending/requiredReciprocalPairsPending/quizDispositionsPending and preparationValidation preserve execution144 observations; final execution145 fields supersede their pending status.",
   "provisionalReadingDispositions": [
     {
       "reading": "ジュウ",
@@ -87,10 +92,40 @@
     "preserveExistingMetadata": true
   },
   "baselineMetadataExceptions": {"words/虎.md":["酔っ払い"],"words/猿.md":["馬鹿"]},
-  "strokeAndFont": "No SVG downloaded or geometry generated at this source-only checkpoint. Exact frozen canonical07363.svg blob80d4d034d410c11cd1422e6a7119fc2f661c37ec and16source strokes retained for later conversion. No new text/native/phone certification.",
+  "strokeAndFont": "Complete pinned canonical07363.svg inspected; existing converter generates16strokes. Exact blob/count/reconversion and whole authoredtext font audit recorded in batch-036-stroke-audit.json. No native or phone certification inferred.",
+  "supportMappings": [
+    {"kanji":"獣","article":"words/獣.md","primaryReading":"けもの","newArticle":true,"entryIds":["1335590"],"selectedSense":"beast/animal; alternateけだもの and abusive person warning qualified by exact Daijisen"},
+    {"kanji":"獣","article":"words/獣医.md","primaryReading":"じゅうい","newArticle":true,"entryIds":["1335610"],"selectedSense":"veterinarian; person/profession, not field"}
+  ],
+  "requiredReciprocalPairs": [["獣","words/獣.md"],["獣","words/獣医.md"]],
+  "changedReusedPassages": [],
+  "readingDispositions": [
+    {"kanji":"獣","kind":"on","reading":"ジュウ","selected":true,"article":"words/獣医.md","entryIds":["1335590","1335610","1159710"],"reason":"Full獣family attestsじゅう; full医family attestsい medical-practitioner suffix; exact獣医family/Daijisenheading corroborateじゅうい. Selected useful profession compound, not inferred from kana substring alone."},
+    {"kanji":"獣","kind":"kun","reading":"けもの","selected":true,"article":"words/獣.md","entryIds":["1335590","1636790"],"reason":"Exact standalone beast/animal spelling-reading pair; primary native noun and attested animal-trail compound. Selected with linked whole-word support and category qualifications."},
+    {"kanji":"獣","kind":"kun","reading":"けだもの","selected":false,"sourceOnly":false,"article":"words/獣.md","entryIds":["1335590"],"reason":"Attested alternate animal reading; not obsolete/unmatched/insult-only. Daijisen additionally documents abusive person sense. Recognition row and samearticle alternate explanation retained; this bounded quiz selects the primary animal nounけもの rather than a second alternate key. This editorial subset is not a comparative frequency or blanket usefulness rule."}
+  ],
+  "curatedProjection": [
+    {"kanji":"獣","quizOnyomi":["ジュウ"],"quizKunyomi":["けもの"],"onKeys":["じゅう"],"kunKeys":["けもの"]}
+  ],
+  "quizAudit": {
+    "獣":{"title":"beast; animal","distractors":["単","戦","営"],"labels":["single; simple","battle","conduct business; manage"],"reason":"All actual cards/full frozen character meanings inspected. Dot-capped/dense-box shape comparisons; each wronglabel is semantically distinct from animal/beast. No legacy two-choice animal/beast synonym discovered in scoped title navigation; larger random quizzes remain unaudited."}
+  },
+  "wordQuizAudit": {
+    "directExclusions": [
+      {"word":"獣","exclude":["動物","家畜","熊","牛","犬","猪","猿","猫","虎","豚","象","馬","鹿","鼠","兎"],"reason":"Conservative direct general-beast/category-versus-animal-label safeguards: actual15articles and complete applicable families inspected. 獣ordinaryanimal sense admits these mammal referents; do not rely on preexisting animal/exclusion chains. These edges do not claim species names are synonyms or wild/domestic categories identical."}
+    ],
+    "newTitles":[{"word":"獣","title":"beast"},{"word":"獣医","title":"veterinarian"}],
+    "comparisons":"No existing獣/獣医or kanaalias article found. 動物 broadanimal and家畜domestic category have direct safeguards; actual15named animal/categoryarticles inspected. Medical医者/医師 actualtitles/completefamilies/ordinaryhuman roles distinct from precise veterinarian; no synonymguard added. No existing獣医師 article. CW073 and full candidateinventory reviewed; no transitiveprotections assumed.",
+    "limits":"Bounded displayed-label/ordinarysense audit, not exhaustive livequiz safety. Specialist abbreviations/personinsults do not establish animal-name synonym cliques."
+  },
+  "externalEvidence": "batch-036-external-evidence.json",
+  "review": "Pending two serial blind different-family initial reviews on the signed new draft; source inspection is not independent review.",
+  "android": "Fresh batch036 RealContentTest3/RareHanTest1 not run; no035XML reuse.",
+  "compatibleClient": "Android f9b59a2 or later; old APKs ignore curation.",
+  "phoneAcceptance": "Physical-phone/general-release explicitly outstanding, not a bounded owner-testing veto.",
   "publishedAdditions": 62,
   "remainingAdditions": 1166,
-  "validation": {
+  "preparationValidation": {
     "preparationAudit": "batch-036-preparation-audit.json",
     "runtimeChanges": 0,
     "extractionUnitTests": {"passed": 5, "failures": 0, "errors": 0},
@@ -99,6 +134,30 @@
     "contentVersion": "84e87a049b12e5bd",
     "limits": "Source-only audit and extraction tests, not draft/independent linguistic review/fresh Android/native/publication."
   },
-  "nextAction": "Resume SAME036 from this complete139-family source inspection. Inspect exact Japanese dictionary headings forけもの/けだもの/register and usefulジュウ examples; settle three qualified reading dispositions and explicit curated subsets. Inspect necessary獣/獣医 support context and comparison/confusable/full lexicon families, including医 allocation. Author one獣 card and only needed support, no inferred word levels. Preserve identities/exclusions; check all activated/all-mapped reciprocal links and exact baseline. Generate pinned16strokes through existingtool; audit all authored/reused Han and new fallback glyphs. Run validator/buildmanifest/source/baseline/reading/link/font/stroke/budget/Python checks and freeze signed unreviewed draft. Then two serial blind different-family initials, original-session confirmations as needed, fresh non-skipped Android and all combined-main/publication gates. No037/unreviewedpush/secondrunner.",
-  "limits": "Substantive source-preparation checkpoint only. All139 selected complete families inspected by author, not independently reviewed. No draft/runtime/stroke edit, curation acceptance, new native/phone certification, fresh Android gate, CI/public ZIP or publication. Original source-indexstatusAtFreeze remains immutable. Overall1228expansion and final whole-set acceptance incomplete."
+  "validation": {
+    "draftAudit": "batch-036-draft-audit.json",
+    "validator": "0 errors",
+    "manifestFresh": true,
+    "runtimeChanges": 4,
+    "contentVersion": "fdd8fc37ca74d4f4",
+    "pythonSuite": {"passed":361,"failures":0,"errors":0},
+    "pythonTestLog": "control/logs/execution-145-python-tests.txt",
+    "vocabularyValidator": "passed: existing tools/validate_grammar_vocabulary.py",
+    "vocabularyLog": "control/logs/execution-145-vocabulary.txt",
+    "correctedCommandFailure": "Initial post-suite command named nonexistent check_grammar_vocabulary.py and exited2. No dependency install or workaround; corrected to existing validate_grammar_vocabulary.py, passed. Full361suite repeated and passing log persisted.",
+    "frozenInputHashesVerified":5,
+    "decompressedHashesVerified":2,
+    "freshDistinctPacketExtractions":3,
+    "dictionaryFamilies":167,
+    "baseline": {"kanji":985,"words":4942,"strokes":985},
+    "reciprocalPairs":2,
+    "activatedBaselinePairs":0,
+    "newTextHanAudited":36,
+    "newTextHanInAllThreeFonts":36,
+    "newMissingBundledGlyphs":[],
+    "budgets": "8255 entries;29977021 compressed;44054408 inflated;43786125 retained bytes: below all authorized ceilings",
+    "limits": "Local mechanical/source/font audit, not independent linguistic review/fresh Android/native/phone/CI/ZIP/publication."
+  },
+  "nextAction": "Resume SAME036 signed unreviewed onecard/twosupport draft for two serial blind different-family initials on identical snapshot, full applicable167-family/source/allnewteaching/comparison scope. Preserve original sourceinspection and exact rawDaijisen heading evidence; reconcile precise findings and original-session confirmations if needed. Then freshAndroid3+1/currentmain/normal signing/ownerfastforward/greenCI/everyimmutablepublicZIPhash gates before037. No unreviewedpush/secondrunner.",
+  "limits": "Local unreviewed draft only; public62/1228 and1166remaining unchanged. All167selected families author-inspected across144/145, not independently reviewed. Threefull ordered readings/twoselectedkeys/tworeciprocalpairs/15conservative directguards; no inferred wordlevels or existingmetadata/body changes. Original source-indexstatusAtFreeze immutable; exactaccepted tiger/monkeyguards preserved. Native/font/phone evidence limited to unchanged inheritedpilot/all40/160 scope; freshAndroid/CI/publicZIP/publication and overallwhole-set acceptance pending."
 }

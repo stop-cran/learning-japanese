@@ -37,7 +37,42 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 035: deer source preparation, not drafted
+## Batch 036: beast draft, not independently reviewed
+
+The [frozen batch 036](n1-sources/batch-036-membership.json) contains only
+**獣** and needs two support articles: 獣 (けもの) and 獣医 (じゅうい).
+Its [draft ledger](n1-sources/batch-036-progress.json) preserves all three
+source readings in order; questions select ジュウ and けもの.
+The alternate けだもの is genuinely attested for animals, not unmatched,
+obsolete or insult-only. Exact Digital Daijisen headings also document its
+abusive person sense. The alternate is explained on the same lexical article,
+not duplicated or hidden by changing full metadata.
+
+The source packet has 167 distinct complete JMdict families: the original
+139 inspected at execution 144 and 28 supplemental comparisons inspected
+at execution 145. Core families overlap rather than add to that count.
+The [external evidence](n1-sources/batch-036-external-evidence.json) records
+actual raw dictionary headings because simplified extraction omitted the
+definitions. Dictionary inclusion is not a usage-frequency ranking.
+
+There are two required reciprocal pairs, no activated baseline pairs and
+no reused article edits. Fifteen conservative direct word-quiz guards protect
+the general beast label against animal/category labels; they do not make
+different species synonyms. No vocabulary level is inferred from the kanji.
+Pinned 16-stroke conversion and whole authored-text font checks are recorded
+separately from independent linguistic or native acceptance.
+
+Batch 035 is [published and verified](n1-sources/batch-035-publication.json)
+at terminal `285df83`: **62 additions delivered; 1,166 remain**.
+This local draft is not another delivered addition. Two serial blind
+different-family reviews and fresh Android/combined-main/publication gates
+remain pending; compatible-client and outstanding physical-phone/general-release
+limits are unchanged.
+
+## Batch 035: historical deer source preparation
+
+The original source-only account below is historical; its publication record
+above supersedes the pending status and totals without erasing that checkpoint.
 
 The [frozen batch 035](n1-sources/batch-035-membership.json) contains only
 **鹿**. Its [source-preparation ledger](n1-sources/batch-035-progress.json)
