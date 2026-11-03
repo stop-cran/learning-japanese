@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 039: many-reading goose source preparation
+## Batch 039: many-reading goose qualified-source preparation
 
 Batch 039 freezes **鴻**, source row 1219, without creating a card or support
 article. Its [membership](n1-sources/batch-039-membership.json) selects one
@@ -51,13 +51,33 @@ comparison families, fully coordinator-inspected. It distinguishes the
 usually-kana ひしくい species noun, shared おおとり spellings, figurative
 鴻鵠/鴻毛 candidates, poetic/historical compounds and the ホンモン product
 name. Frozen taxonomy and proverb translations are evidence to qualify,
-not independently certified teaching. ゴウ and おおがり have no confidently
-allocated examples in this bounded packet; that does not establish
-invalidity or absence elsewhere.
+not independently certified teaching. The original frozen packet did not
+establish ゴウ or おおがり anchors; absence there was not invalidity.
 
-Exact Japanese dictionary headings, allocation/register/usefulness,
-necessary support selection, quiz labels, pinned stroke conversion and
-new-Han font inspection remain pending. There are no declared baseline
+The [exact Japanese evidence](n1-sources/batch-039-dictionary-evidence.json)
+now qualifies all five readings without changing metadata. Actual Daijisen
+**大雁／鴻（おおがり）** verifies an alternate name for ヒシクイ and, separately,
+ガチョウ; this reading is lexical recognition, not merely source-only.
+Kanjipedia and Daijisen support コウ in **鴻鵠（こうこく）**, large birds
+figuratively representing great persons, with an attested proverb context.
+The proposed support is one native **鴻（ひしくい）** article and one
+**鴻鵠** article, not a required additional 鴻毛 article. Practice would
+select コウ・ひしくい; おおとり and おおがり remain documented but unselected.
+ゴウ is narrowly character-source-only in this bounded inspection, not
+invalid, universally absent or name-only.
+
+Usually-kana spelling does not make ひしくい a rare pronunciation. Current
+scientific taxonomy remains unverified and excluded from proposed teaching.
+The shared おおとり spelling family does not license unrestricted substitution
+of 鴻 for 鳳凰, and the frozen proverb's phoenix gloss is not established
+component taxonomy. The exact Japanese proverb uses large birds as its
+metaphor. No everyday-frequency or vocabulary-level claim follows.
+
+Eleven named external entry sections and both complete frozen packets
+were freshly coordinator-inspected for this qualification; whole downloaded
+HTML pages and independent reviewer retrieval are not claimed. Actual
+support/comparison quiz labels, link accounting, teaching, pinned stroke
+conversion and new-Han font inspection remain pending. There are no declared baseline
 鴻 word pairs. Existing 鳥, 鳳凰 and 紅 articles were inspected unchanged;
 a missing 江 card was not counted as a read. The mechanical source audit
 preserves baseline metadata/geometry, both accepted tiger/monkey guards
