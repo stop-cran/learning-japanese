@@ -37,6 +37,35 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 039: many-reading goose source preparation
+
+Batch 039 freezes **鴻**, source row 1219, without creating a card or support
+article. Its [membership](n1-sources/batch-039-membership.json) selects one
+grade-9, five-reading character after comparing the frozen 鴻 and 鵬 records;
+this is not alphabetical selection. Full コウ・ゴウ and
+おおとり・ひしくい・おおがり order is preserved.
+
+The [source ledger](n1-sources/batch-039-progress.json) records all 17 complete
+lexical families containing 鴻 at any written position and 20 disjoint
+comparison families, fully coordinator-inspected. It distinguishes the
+usually-kana ひしくい species noun, shared おおとり spellings, figurative
+鴻鵠/鴻毛 candidates, poetic/historical compounds and the ホンモン product
+name. Frozen taxonomy and proverb translations are evidence to qualify,
+not independently certified teaching. ゴウ and おおがり have no confidently
+allocated examples in this bounded packet; that does not establish
+invalidity or absence elsewhere.
+
+Exact Japanese dictionary headings, allocation/register/usefulness,
+necessary support selection, quiz labels, pinned stroke conversion and
+new-Han font inspection remain pending. There are no declared baseline
+鴻 word pairs. Existing 鳥, 鳳凰 and 紅 articles were inspected unchanged;
+a missing 江 card was not counted as a read. The mechanical source audit
+preserves baseline metadata/geometry, both accepted tiger/monkey guards
+and the complete current runtime manifest. It is not independent review,
+native acceptance or publication. Published coverage remains **65 additions;
+1,163 still to deliver**, with compatible Android and outstanding
+physical-phone/general-release qualifications unchanged.
+
 ## Batch 038: mythical-bird published with bounded native acceptance
 
 Batch 038 now has one **鳳** card and one necessary **鳳凰（ほうおう）**
