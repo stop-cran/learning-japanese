@@ -37,11 +37,11 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 014: anatomical reading draft, not reviewed or published
+## Batch 014: anatomical reading review closed, publication pending
 
 The [frozen batch 014](n1-sources/batch-014-membership.json) contains **椎**
 and one necessary anatomical support article, 椎骨 (ついこつ), vertebra.
-Its [draft ledger](n1-sources/batch-014-progress.json) preserves all four
+Its [batch ledger](n1-sources/batch-014-progress.json) preserves all four
 source readings in order and selects only **ツイ**. スイ and う.つ remain
 explicitly source-only within this bounded lesson; 椎/つち is a verified
 rare spelling of the mallet noun, not a rare pronunciation claim.
@@ -55,9 +55,22 @@ required reciprocal pair and one direct broad-bone quiz safeguard.
 No baseline metadata or reused teaching is changed; no word level is
 inferred from the kanji level.
 
-This is **local unreviewed work**, not delivered coverage. Two serial blind
-different-family initial reviews, evidence-based reconciliation and fresh
-app/combined-main/publication gates remain pending. Published additions
+This is **textually review-closed local work**, not delivered coverage.
+The [reconciliation](n1-reviews/batch-014-reconciliation.json) preserves both
+blind model-family initials and both original-session confirmations.
+Claude's localized tree-spelling omission and GPT's missing source-only
+character gloss were corrected: the tree word is usually written in kana
+according to JMdict, and Jitsu gives うつ "strike; hit with a mallet" without
+establishing an ordinary modern spelling with that exact boundary.
+The optional rare-mallet-spelling wording was also clarified.
+Full metadata, order, quiz selections, supporting word and geometry are unchanged.
+
+The [review audit](n1-sources/batch-014-review-audit.json) confirms serial
+reviewer process exits and complete returned assigned text, but preserves the
+initial internal parallel-call violations (1/32 overlapping starts).
+Both bounded dependent confirmations ran internally serially (0/0);
+this does not retroactively certify strict initial process compliance.
+Fresh Android/combined-main/publication gates remain pending. Published additions
 remain **40; 1,188 still to deliver**. Compatible Android `f9b59a2` or later
 is required; physical-phone/general-release acceptance remains explicitly
 outstanding. The older batch descriptions below retain their checkpoint
