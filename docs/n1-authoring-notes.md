@@ -37,6 +37,36 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 018: local cocoon draft
+
+The [frozen batch 018](n1-sources/batch-018-membership.json) contains **繭**
+and one necessary standalone support article, 繭 (まゆ). No existing article
+is changed. The [draft ledger](n1-sources/batch-018-progress.json) preserves
+ケン・まゆ・きぬ in full source order and offers only まゆ.
+The native Daijisen character heading explicitly assigns ケン to 繭糸;
+that silk-production example is retained for recognition, not an extra quiz.
+The source-only きぬ disposition acknowledges JMdict's whole-word
+繭糸/きぬいと record without inferring ordinary standalone 繭/きぬ
+spelling or character allocation from a kana substring.
+
+Four complete packets retain **44 dictionary families**, including all
+nineteen containing 繭. The teaching separates the cocoon covering, insect,
+pupa and silk material, and distinguishes the eyebrow homophone 眉.
+The [draft audit](n1-sources/batch-018-draft-audit.json) verifies exact source
+membership, preserved baseline metadata/geometry, one reciprocal support
+pair and the regenerated manifest. The
+[stroke/font record](n1-sources/batch-018-stroke-audit.json) verifies the
+pinned eighteen-stroke conversion and all twelve learner-visible Han
+characters in all three unchanged bundled fonts; there is no new
+outside-subset glyph. Cmap checks are not fresh native or phone evidence.
+
+This is **unreviewed local teaching**, not another published addition.
+Both independent model-family reviews, evidence-based reconciliation,
+fresh Android and combined-main/CI/immutable-public-ZIP acceptance remain
+pending. Published coverage stays **44 additions; 1,184 still to deliver**.
+The compatible-client and outstanding physical-phone/general-release
+qualifications remain unchanged.
+
 ## Batch 017: firefly published and verified
 
 The [frozen batch 017](n1-sources/batch-017-membership.json) contains **蛍**,
