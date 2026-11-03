@@ -2,51 +2,260 @@
   "schemaVersion": 1,
   "batch": "012",
   "baseCommit": "7ec38f8f0eb5a02f3b1322629975365592ec56dd",
-  "membership": ["桂", "梢"],
-  "status": "textual-review-closed-local-unpublished",
-  "drafted": ["桂", "梢"],
-  "reviewClosed": ["桂", "梢"],
-  "published": [],
+  "membership": [
+    "桂",
+    "梢"
+  ],
+  "status": "published-verified-bounded-owner-testing",
+  "drafted": [
+    "桂",
+    "梢"
+  ],
+  "reviewClosed": [
+    "桂",
+    "梢"
+  ],
+  "published": [
+    "桂",
+    "梢"
+  ],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
-    {"selection": "batch-012-lexical-selection.json", "xml": "batch-012-jmdict.xml"},
-    {"selection": "batch-012-comparison-selection.json", "xml": "batch-012-comparisons-jmdict.xml"},
-    {"selection": "batch-012-notes-selection.json", "xml": "batch-012-notes-jmdict.xml"},
-    {"selection": "batch-012-supplement-selection.json", "xml": "batch-012-supplement-jmdict.xml"}
+    {
+      "selection": "batch-012-lexical-selection.json",
+      "xml": "batch-012-jmdict.xml"
+    },
+    {
+      "selection": "batch-012-comparison-selection.json",
+      "xml": "batch-012-comparisons-jmdict.xml"
+    },
+    {
+      "selection": "batch-012-notes-selection.json",
+      "xml": "batch-012-notes-jmdict.xml"
+    },
+    {
+      "selection": "batch-012-supplement-selection.json",
+      "xml": "batch-012-supplement-jmdict.xml"
+    }
   ],
   "supportMappings": [
-    {"kanji": "桂", "article": "words/桂.md", "primaryReading": "かつら", "entryIds": ["1250890"], "selectedSenses": [1], "newArticle": true, "status": "textual-review-closed-local-unpublished", "recognition": "Exact single-character plant identity; separate1921970 kei shogi abbreviation retained. Broader aromatic-tree/moon/rotary-cutting/place/surname senses from actual native dictionary are recognition context, not asserted as all present in1250890."},
-    {"kanji": "梢", "article": "words/梢.md", "primaryReading": "こずえ", "entryIds": ["1349980"], "selectedSenses": [1], "newArticle": true, "status": "textual-review-closed-local-unpublished", "recognition": "Whole-character treetop/branch-tip identity with rare alternative杪 spelling. No word pair with梢/くすのき established; no manufactured camphor example."}
+    {
+      "kanji": "桂",
+      "article": "words/桂.md",
+      "primaryReading": "かつら",
+      "entryIds": [
+        "1250890"
+      ],
+      "selectedSenses": [
+        1
+      ],
+      "newArticle": true,
+      "status": "published-verified-bounded-owner-testing",
+      "recognition": "Exact single-character plant identity; separate1921970 kei shogi abbreviation retained. Broader aromatic-tree/moon/rotary-cutting/place/surname senses from actual native dictionary are recognition context, not asserted as all present in1250890."
+    },
+    {
+      "kanji": "梢",
+      "article": "words/梢.md",
+      "primaryReading": "こずえ",
+      "entryIds": [
+        "1349980"
+      ],
+      "selectedSenses": [
+        1
+      ],
+      "newArticle": true,
+      "status": "published-verified-bounded-owner-testing",
+      "recognition": "Whole-character treetop/branch-tip identity with rare alternative杪 spelling. No word pair with梢/くすのき established; no manufactured camphor example."
+    }
   ],
-  "requiredReciprocalPairs": [["桂", "words/桂.md"], ["梢", "words/梢.md"]],
+  "requiredReciprocalPairs": [
+    [
+      "桂",
+      "words/桂.md"
+    ],
+    [
+      "梢",
+      "words/梢.md"
+    ]
+  ],
   "changedReusedPassages": [],
   "readingDispositions": [
-    {"kanji": "桂", "kind": "on", "reading": "ケイ", "selected": false, "entryIds": ["1921970", "1821380", "1250930", "1255590"], "example": "桂 けい - shogi knight abbreviation; 桂馬 けいま; 桂皮 けいひ; 月桂樹 げっけいじゅ", "reason": "Exact1921970 whole-character pair and actual Daijisenケイ heading establish allocation independently of substring inference. Non-name shogi/cinnamon/laurel compounds useful for recognition, not source-only. This bounded plant-name lesson selectsかつら without adding support solely to generate another reading key; Go kana-only alternative and field/sense-local flags retained."},
-    {"kanji": "桂", "kind": "kun", "reading": "かつら", "selected": true, "entryIds": ["1250890"], "article": "words/桂.md", "example": "桂 かつら - katsura tree", "reason": "Exact whole-character lexical pair directly establishes allocation. Single plant sense identifies Cercidiphyllum japonicum; katakana alternative is kana-only. Actual native dictionary supplies deciduous habit and broader naming layers. No priority-derived frequency assertion or vocabulary level inferred from the kanji."},
-    {"kanji": "梢", "kind": "on", "reading": "ショウ", "selected": false, "entryIds": ["1525440", "1525450", "1525460", "2558800"], "example": "末梢 まっしょう - tip; end; minor details; 末梢神経 まっしょうしんけい - peripheral nerve", "reason": "Actual Daijisenしょう character heading explicitly gives末梢 and梢頭; matched compound headword confirms pronunciation and extension. Full JMdict retains twig/end/minor-details senses, anatomical field and alternate樹杪 spelling. Valid recognition, not source-only; select native tree-tip noun rather than add medical/periphery support solely for an on question."},
-    {"kanji": "梢", "kind": "kun", "reading": "こずえ", "selected": true, "entryIds": ["1349980"], "article": "words/梢.md", "example": "梢 こずえ - treetop; branch tip", "reason": "Exact whole-character pair establishes allocation; actual Daijisen and Seisenban explain tree/branch extremity. Rare-spelling flag belongs to杪, not梢 or the pronunciation. Not every tree part, anatomical peripheral structure or figurative minor matter."},
-    {"kanji": "梢", "kind": "kun", "reading": "くすのき", "selected": false, "sourceOnly": true, "entryIds": [], "reason": "Preserve frozen KANJIDIC2 entry in source order. All44 lexical families with either assigned character inspected, along with actual native/character heads; no lexical梢/くすのき pair established. Neither use the kana substring of another compound nor substitute梢 into independently documented楠/樟1460720. Explicit lookup-only disposition, not proof the source reading is invalid or nonexistent in every dictionary."}
+    {
+      "kanji": "桂",
+      "kind": "on",
+      "reading": "ケイ",
+      "selected": false,
+      "entryIds": [
+        "1921970",
+        "1821380",
+        "1250930",
+        "1255590"
+      ],
+      "example": "桂 けい - shogi knight abbreviation; 桂馬 けいま; 桂皮 けいひ; 月桂樹 げっけいじゅ",
+      "reason": "Exact1921970 whole-character pair and actual Daijisenケイ heading establish allocation independently of substring inference. Non-name shogi/cinnamon/laurel compounds useful for recognition, not source-only. This bounded plant-name lesson selectsかつら without adding support solely to generate another reading key; Go kana-only alternative and field/sense-local flags retained."
+    },
+    {
+      "kanji": "桂",
+      "kind": "kun",
+      "reading": "かつら",
+      "selected": true,
+      "entryIds": [
+        "1250890"
+      ],
+      "article": "words/桂.md",
+      "example": "桂 かつら - katsura tree",
+      "reason": "Exact whole-character lexical pair directly establishes allocation. Single plant sense identifies Cercidiphyllum japonicum; katakana alternative is kana-only. Actual native dictionary supplies deciduous habit and broader naming layers. No priority-derived frequency assertion or vocabulary level inferred from the kanji."
+    },
+    {
+      "kanji": "梢",
+      "kind": "on",
+      "reading": "ショウ",
+      "selected": false,
+      "entryIds": [
+        "1525440",
+        "1525450",
+        "1525460",
+        "2558800"
+      ],
+      "example": "末梢 まっしょう - tip; end; minor details; 末梢神経 まっしょうしんけい - peripheral nerve",
+      "reason": "Actual Daijisenしょう character heading explicitly gives末梢 and梢頭; matched compound headword confirms pronunciation and extension. Full JMdict retains twig/end/minor-details senses, anatomical field and alternate樹杪 spelling. Valid recognition, not source-only; select native tree-tip noun rather than add medical/periphery support solely for an on question."
+    },
+    {
+      "kanji": "梢",
+      "kind": "kun",
+      "reading": "こずえ",
+      "selected": true,
+      "entryIds": [
+        "1349980"
+      ],
+      "article": "words/梢.md",
+      "example": "梢 こずえ - treetop; branch tip",
+      "reason": "Exact whole-character pair establishes allocation; actual Daijisen and Seisenban explain tree/branch extremity. Rare-spelling flag belongs to杪, not梢 or the pronunciation. Not every tree part, anatomical peripheral structure or figurative minor matter."
+    },
+    {
+      "kanji": "梢",
+      "kind": "kun",
+      "reading": "くすのき",
+      "selected": false,
+      "sourceOnly": true,
+      "entryIds": [],
+      "reason": "Preserve frozen KANJIDIC2 entry in source order. All44 lexical families with either assigned character inspected, along with actual native/character heads; no lexical梢/くすのき pair established. Neither use the kana substring of another compound nor substitute梢 into independently documented楠/樟1460720. Explicit lookup-only disposition, not proof the source reading is invalid or nonexistent in every dictionary."
+    }
   ],
   "curatedProjection": [
-    {"kanji": "桂", "quizOnyomi": [], "quizKunyomi": ["かつら"], "onKeys": [], "kunKeys": ["かつら"]},
-    {"kanji": "梢", "quizOnyomi": [], "quizKunyomi": ["こずえ"], "onKeys": [], "kunKeys": ["こずえ"]}
+    {
+      "kanji": "桂",
+      "quizOnyomi": [],
+      "quizKunyomi": [
+        "かつら"
+      ],
+      "onKeys": [],
+      "kunKeys": [
+        "かつら"
+      ]
+    },
+    {
+      "kanji": "梢",
+      "quizOnyomi": [],
+      "quizKunyomi": [
+        "こずえ"
+      ],
+      "onKeys": [],
+      "kunKeys": [
+        "こずえ"
+      ]
+    }
   ],
   "quizAudit": {
-    "桂": {"title": "katsura tree", "distractors": ["柱", "村", "掛"], "labels": ["pillar; post", "village", "hang"], "reason": "Complete actual cards and applicable complete exact comparison families inspected, including柱's musical/shape/count senses and掛's bound/credit/duty senses. None is an ordinary katsura/aromatic-tree/moon/shogi-piece meaning. Comparable wooden/stacked shapes, not a general wood/tree answer. All existing cards have three curated choices; no new default fallback defect established."},
-    "梢": {"title": "treetop; branch tip", "distractors": ["消", "晴", "深"], "labels": ["extinguish; erase", "clear skies", "deep"], "reason": "Actual complete cards inspected, plus applicable exact families including晴's ceremonial and深's historical prefix/lateness uses. None means tree tip/end/periphery/boatman. Related right shapes supply visual comparisons. Broad枝/末/先 meanings deliberately not wrong choices. Existing comparison/broad-overlap cards all have three curated choices; no baseline metadata change."}
+    "桂": {
+      "title": "katsura tree",
+      "distractors": [
+        "柱",
+        "村",
+        "掛"
+      ],
+      "labels": [
+        "pillar; post",
+        "village",
+        "hang"
+      ],
+      "reason": "Complete actual cards and applicable complete exact comparison families inspected, including柱's musical/shape/count senses and掛's bound/credit/duty senses. None is an ordinary katsura/aromatic-tree/moon/shogi-piece meaning. Comparable wooden/stacked shapes, not a general wood/tree answer. All existing cards have three curated choices; no new default fallback defect established."
+    },
+    "梢": {
+      "title": "treetop; branch tip",
+      "distractors": [
+        "消",
+        "晴",
+        "深"
+      ],
+      "labels": [
+        "extinguish; erase",
+        "clear skies",
+        "deep"
+      ],
+      "reason": "Actual complete cards inspected, plus applicable exact families including晴's ceremonial and深's historical prefix/lateness uses. None means tree tip/end/periphery/boatman. Related right shapes supply visual comparisons. Broad枝/末/先 meanings deliberately not wrong choices. Existing comparison/broad-overlap cards all have three curated choices; no baseline metadata change."
+    }
   },
   "wordQuizAudit": {
     "directExclusions": [
-      {"word": "桂", "exclude": ["木", "植物", "植える", "植木"], "reason": "Actual complete articles and matching families inspected. Broad tree/plant English labels can fit the species;植える has bare ambiguous plant title. Garden-tree label receives conservative contextual direct guard, not universal substitution. Different species and wig are not synonyms/exclusions."},
-      {"word": "梢", "exclude": ["枝", "端", "先", "末", "先端", "頂上", "トップ"], "reason": "Direct broad branch/tip/end/top safeguards from actual articles and complete families, not a transitive clique. Branch vs its extremity are distinct, but barebranch/twig deserves conservative guard;端/先端 have ordinary tip labels,末 and先 also spatial-tip secondary senses. Summit/top andtop/leading-position labels can fit a treetop's highest position without makingこずえ universal for mountains/rankings. Exact seven pairs, preserve old metadata/exclusions."}
+      {
+        "word": "桂",
+        "exclude": [
+          "木",
+          "植物",
+          "植える",
+          "植木"
+        ],
+        "reason": "Actual complete articles and matching families inspected. Broad tree/plant English labels can fit the species;植える has bare ambiguous plant title. Garden-tree label receives conservative contextual direct guard, not universal substitution. Different species and wig are not synonyms/exclusions."
+      },
+      {
+        "word": "梢",
+        "exclude": [
+          "枝",
+          "端",
+          "先",
+          "末",
+          "先端",
+          "頂上",
+          "トップ"
+        ],
+        "reason": "Direct broad branch/tip/end/top safeguards from actual articles and complete families, not a transitive clique. Branch vs its extremity are distinct, but barebranch/twig deserves conservative guard;端/先端 have ordinary tip labels,末 and先 also spatial-tip secondary senses. Summit/top andtop/leading-position labels can fit a treetop's highest position without makingこずえ universal for mountains/rankings. Exact seven pairs, preserve old metadata/exclusions."
+      }
     ],
     "confusableInventory": "docs/confusable-words.md reviewed introduction/candidate notation and scoped searches for assigned characters and tree/tip/end clusters; no named桂/梢 cluster. Not a claim of freshly reading the whole inventory.",
-    "comparisonArticles": ["words/木.md", "words/植物.md", "words/植える.md", "words/植木.md", "words/枝.md", "words/先.md", "words/端.md", "words/末.md", "words/先端.md", "words/頂上.md", "words/トップ.md", "words/楠.md"],
-    "comparisonKanji": ["kanji/柱.md", "kanji/村.md", "kanji/掛.md", "kanji/消.md", "kanji/晴.md", "kanji/深.md", "kanji/末.md", "kanji/先.md", "kanji/枝.md", "kanji/木.md"],
+    "comparisonArticles": [
+      "words/木.md",
+      "words/植物.md",
+      "words/植える.md",
+      "words/植木.md",
+      "words/枝.md",
+      "words/先.md",
+      "words/端.md",
+      "words/末.md",
+      "words/先端.md",
+      "words/頂上.md",
+      "words/トップ.md",
+      "words/楠.md"
+    ],
+    "comparisonKanji": [
+      "kanji/柱.md",
+      "kanji/村.md",
+      "kanji/掛.md",
+      "kanji/消.md",
+      "kanji/晴.md",
+      "kanji/深.md",
+      "kanji/末.md",
+      "kanji/先.md",
+      "kanji/枝.md",
+      "kanji/木.md"
+    ],
     "limits": "Scoped meaning-label and actual secondary-sense inspection, not whole-corpus/live-quiz safety certification. Failed absent佳/肖/削/端 card reads do not count as inspected articles or support."
   },
   "fullFamilyInspection": {
-    "lexicalFamilies": 44, "comparisonFamilies": 25, "notesFamilies": 9, "supplementFamilies": 10,
+    "lexicalFamilies": 44,
+    "comparisonFamilies": 25,
+    "notesFamilies": 9,
+    "supplementFamilies": 10,
     "totalFamilies": 88,
     "scope": "All four extracted packets fully returned and author-inspected. Restrictions, kana-only/search-only/rare flags and all senses retained, including桂魚けつぎょ whole-word spelling, specialty game/medical families and separate company identity. Not an independent review or unrestricted character-reading inference."
   },
@@ -56,7 +265,10 @@
   "authoredSnapshot": "42e9732b305f1a83f4e5bf3a86a78fbb538c9350",
   "reviewedTeachingSnapshot": "2670d1d4eb8f98877eed0f3ed3a03dbee4231d56",
   "independentReview": {
-    "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+    "models": [
+      "claude-opus-5.5",
+      "gpt-6.1-sol"
+    ],
     "initialReports": 2,
     "originalSessionConfirmations": 2,
     "reconciliation": "../n1-reviews/batch-012-reconciliation.json",
@@ -64,6 +276,11 @@
     "verdict": "All four teaching files CLEAN across correctness, scoped coverage and textual comprehensibility after two localized 桂 corrections.",
     "process": "Four reviewer processes exited0 serially, with zero observed internal tool overlaps; complete assigned initial and confirmation text returned. Claude denied Git HEAD view and partial continued fetches retained. Byte availability not comprehension or equal depth."
   },
-  "publication": "Not published; local drafts do not reduce1191remaining/37published.",
-  "limits": "Textual review closed only; fresh012 Android/current-main acceptance/signing/ownerfastforward/greenCI/everyimmutablepublicZIPhash remain pending. CompatibleAndroidf9b59a2+; inherited acceptedpilotnative/all40/160fonts only unchanged scope. Physical-phone/general-release explicitly outstanding."
+  "publication": "Accepted owner-testing publication verified; terminal receipt commit pending.",
+  "limits": "Physical-phone/general-release acceptance explicitly outstanding, not a new bounded-owner-testing veto.",
+  "publishedAdditions": 39,
+  "remainingAdditions": 1189,
+  "publicationRecord": "batch-012-publication.json",
+  "publishedCommit": "1ec2a387f79da00b01c4f938d0196f582c3caba7",
+  "nextAction": "Publish contributor-only receipts, verify terminal remoteSHA/CI/everyimmutablepublicZIPruntimehash, update issue60 and checkpoint/yield before013. Whole project incomplete."
 }
