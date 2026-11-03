@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 020: butterfly review closed, publication pending
+## Batch 020: butterfly published and verified
 
 The [frozen batch 020](n1-sources/batch-020-membership.json) contains **蝶**
 and one necessary supporting article, 蝶 (ちょう), butterfly. Its sole
@@ -70,9 +70,12 @@ records 353 Python tests, source/baseline/reading/link/pinned-stroke/font checks
 manifest freshness and unchanged archive budgets. Latest main was already
 integrated; no runtime change required repeating the recovered Android checks.
 
-Normal signed publication, green CI and exact immutable public ZIP
-verification remain pending. Published coverage remains
-**46 additions; 1,182 still to deliver**. Compatible Android `f9b59a2` or
+The [publication record](n1-sources/batch-020-publication.json) records
+accepted signed commit `e3eeeb3`, green CI `41597325069` and every
+immutable public ZIP runtime hash (8,186), with manifest version
+`1021a2b2a00be884`. All unchanged publishing guards pass.
+Published coverage is **47 additions; 1,181 still to deliver**.
+Compatible Android `f9b59a2` or
 later is required; physical-phone/general-release acceptance remains
 explicitly outstanding, not inferred from source, cmap or JVM checks.
 

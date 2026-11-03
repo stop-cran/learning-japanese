@@ -129,6 +129,18 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   The compatible-client and outstanding physical-phone/general-release
   qualifications remain unchanged; whole-set reconciliation is pending.
 
+  [Batch 020](n1-sources/batch-020-publication.json), 蝶, is
+  **published and verified for bounded owner testing** with one necessary
+  butterfly word article; its vocabulary level is not inferred from the
+  kanji. The full sole on-reading is preserved and selected with linked
+  support. Two-family review, recovered fresh non-skipped Android,
+  combined-main checks, green CI and every immutable public ZIP runtime
+  hash passed at accepted `e3eeeb3`.
+  Published coverage is **47 additions; 1,181 still to deliver**:
+  51 named source members plus the separate 妖 exception.
+  The compatible-client and outstanding physical-phone/general-release
+  qualifications remain unchanged; this is not complete N1 coverage.
+
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee
 about every character that could appear in the exam. Earlier-level knowledge is still needed for higher-level study.
