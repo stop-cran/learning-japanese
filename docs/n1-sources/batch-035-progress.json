@@ -2,87 +2,97 @@
   "schemaVersion": 1,
   "batch": "035",
   "baseCommit": "e8176eb94b3d0b2fd5ddebd5d8f957833ff5ff18",
-  "membership": ["鹿"],
-  "status": "source-prepared-not-drafted",
-  "drafted": [],
+  "membership": [
+    "鹿"
+  ],
+  "status": "validated-local-unreviewed-draft-pending-signing",
+  "drafted": [
+    "鹿"
+  ],
   "reviewClosed": [],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
-    {"selection": "batch-035-lexical-selection.json", "xml": "batch-035-jmdict.xml"},
-    {"selection": "batch-035-comparison-selection.json", "xml": "batch-035-comparisons-jmdict.xml"}
+    {
+      "selection": "batch-035-lexical-selection.json",
+      "xml": "batch-035-jmdict.xml"
+    },
+    {
+      "selection": "batch-035-comparison-selection.json",
+      "xml": "batch-035-comparisons-jmdict.xml"
+    },
+    {
+      "selection": "batch-035-draft-comparison-selection.json",
+      "xml": "batch-035-draft-comparisons-jmdict.xml"
+    }
   ],
-  "extractedDistinctFamilies": 202,
+  "extractedDistinctFamilies": 211,
   "authorInspection": {
-    "completeCoreFamilies": 9,
-    "corePacket": "batch-035-core-jmdict.xml",
-    "coreReturnedRange": [1, 271],
-    "completeComparisonFamilies": 9,
-    "comparisonReturnedRange": [1, 265],
-    "remainingLexicalFamiliesPending": 184,
-    "limits": "Core packet overlaps lexical packet; 18 distinct families inspected, not 211 extracted families. All 4079 lexical lines are preserved but not claimed fully read. No independent reviewer has run."
+    "lexicalFamilies": 193,
+    "originalComparisonFamilies": 9,
+    "draftComparisonFamilies": 9,
+    "distinctCompleteFamilies": 211,
+    "remainingLexicalFamiliesPending": 0,
+    "lexicalReturnedRanges": [
+      [
+        1,
+        400
+      ],
+      [
+        401,
+        800
+      ],
+      [
+        801,
+        1200
+      ],
+      [
+        1201,
+        1600
+      ],
+      [
+        1601,
+        2000
+      ],
+      [
+        2001,
+        2400
+      ],
+      [
+        2401,
+        2800
+      ],
+      [
+        2801,
+        3200
+      ],
+      [
+        3201,
+        3600
+      ],
+      [
+        3601,
+        4079
+      ]
+    ],
+    "comparisonReturnedRanges": [
+      [
+        1,
+        265
+      ]
+    ],
+    "draftComparisonReturnedRanges": [
+      [
+        1,
+        210
+      ],
+      [
+        211,
+        381
+      ]
+    ],
+    "limits": "All actual ranges returned untruncated and coordinator-inspected. Core9 overlap lexical packet, not additional families. This is not independent review or equal reviewer comprehension."
   },
-  "proposedSupportMappings": [
-    {
-      "kanji": "鹿",
-      "article": "words/鹿.md",
-      "primaryReading": "しか",
-      "entryIds": ["1319030"],
-      "selectedSenses": [1],
-      "newArticle": true,
-      "status": "source-verified-candidate-not-drafted",
-      "evidence": "Full entry supports written鹿/しか with no reading restriction; シカ has re_nokanji and is a separate kana spelling, not an alternative reading of written鹿. Sense is deer/cervid, especially sika deer; no sex restriction. No usually-kana flag in this entry; do not import猪's flag. No vocabulary level established."
-    },
-    {
-      "kanji": "鹿",
-      "article": "words/馬鹿.md",
-      "primaryReading": "ばか",
-      "entryIds": ["1601260", "1471660"],
-      "selectedSenses": [1, 2, 3],
-      "newArticle": false,
-      "status": "existing-complete-article-inspected-link-change-pending",
-      "evidence": "Actual baseline article and complete applicable families inspected. Source marks whole馬鹿 spelling ateji and senses usually kana. Existing N3 level, wago identity, full reading, title and metadata must remain intact. Link鹿 at its substantive existing animal comparison; do not invent鹿=か allocation inばか."
-    }
-  ],
-  "requiredReciprocalPairsPending": [
-    ["鹿", "words/鹿.md"],
-    ["鹿", "words/馬鹿.md"]
-  ],
-  "changedReusedPassagesPending": [
-    {
-      "article": "words/馬鹿.md",
-      "before": "[馬](../kanji/馬.md) means horse and 鹿 means deer",
-      "after": "[馬](../kanji/馬.md) means horse and [鹿](../kanji/鹿.md) means deer",
-      "limits": "Proposed exact component-link change only; not applied. Both directions must be reviewed when authored."
-    }
-  ],
-  "readingCandidates": [
-    {
-      "kanji": "鹿",
-      "kind": "on",
-      "reading": "ロク",
-      "status": "disposition-pending-full-family-and-allocation-inspection",
-      "entryIds": ["2860945"],
-      "observation": "Full鹿茸ろくじょう entry is velvet antler/pilose antler used in traditional Chinese medicine, not generic deer or evidence of everyday usefulness. Whole kana does not independently prove constituent allocation. Preserve full sourceロク; inspect additional full families/exact character-reading evidence before choosing recognition or source-only wording."
-    },
-    {
-      "kanji": "鹿",
-      "kind": "kun",
-      "reading": "しか",
-      "status": "source-verified-useful-selection-candidate",
-      "entryIds": ["1319030"],
-      "proposedArticle": "words/鹿.md",
-      "observation": "Whole native animal noun directly supportsしか. Selection still requires authored own reading row and actual reciprocal article."
-    },
-    {
-      "kanji": "鹿",
-      "kind": "kun",
-      "reading": "か",
-      "status": "disposition-pending-complete-family-inspection",
-      "entryIds": ["2873068", "1866430"],
-      "observation": "Standalone鹿か entry explicitly archaic. 鹿の子かのこ has cloth/dapple/mochi senses and an archaic original fawn sense; do not teach fawn as its unqualified modern primary meaning or infer rarity of all compoundか from the standalone flag. 馬鹿 ateji is not per-character allocation evidence."
-    }
-  ],
   "additionalInspectedLexicalBoundaries": [
     {
       "entryId": "2203180",
@@ -97,30 +107,222 @@
       "observation": "鹿かせぎ is explicitly archaic and not in the frozen on/kun lists. Do not add/reorder metadata."
     }
   ],
-  "comparisonDisposition": {
-    "rawCharacterElements": ["鹿", "麓", "麗", "鏡"],
-    "unavailableComparisonCards": ["kanji/麓.md", "kanji/麗.md", "kanji/鏡.md"],
-    "observation": "Direct file reads confirmed these comparison cards do not exist in this exact base; cannot use them as curated distractors or relative links. Metadata and nine comparison dictionary families are evidence only, not permission to broaden batch membership.",
-    "pending": "Select three actual existing semantically wrong card labels and inspect complete applicable meanings/cards. Inspect actual selected support comparison articles and confusable inventory before word title/exclusions. No quiz disposition closed yet."
-  },
-  "strokeAndFont": "Pinned inventory exists; actual SVG download/conversion/count reconciliation and whole-authored-text Han audit pending. No runtime geometry generated or native/font acceptance inferred.",
+  "strokeAndFont": "Pinned11stroke SVG inspectedcompletely; exactblob/count/reconversion and wholeauthored/reusedtext19Han checks persistedinbatch-035-stroke-audit.json.",
   "baselineMetadataExceptions": {
-    "words/虎.md": ["酔っ払い"],
-    "words/猿.md": ["馬鹿"]
+    "words/虎.md": [
+      "酔っ払い"
+    ],
+    "words/猿.md": [
+      "馬鹿"
+    ]
   },
   "publishedAdditions": 61,
   "remainingAdditions": 1167,
   "validation": {
-    "preparationAudit": "batch-035-preparation-audit.json",
-    "extractionUnitTests": {"passed": 5, "failures": 0, "errors": 0},
-    "runtimeManifestEqualToPublishedBase": true,
-    "contentVersion": "4bc59e1112f9afcf",
-    "limits": "Source-only checks, not teaching validation or fresh Android acceptance. No runtime file edited; no manifest regeneration needed."
+    "validatorErrors": 0,
+    "manifestFresh": true,
+    "contentVersion": "81c1ebb8eab28aac",
+    "pythonTests": {
+      "passed": 361,
+      "failures": 0,
+      "errors": 0
+    },
+    "pythonLog": "control/logs/execution-140-python-tests.txt",
+    "pythonLogSha256": "7c21ec610d15a4115a8a03089809bd35a10f63c9f63ed3530b3e85a75319a914",
+    "vocabularyConsistency": "2122/2431 reviewed prompts; unchanged incomplete pilot stage.",
+    "vocabularyLog": "control/logs/execution-140-vocabulary.txt",
+    "vocabularyLogSha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38",
+    "localBudget": {
+      "files": 8236,
+      "entries": 8251,
+      "retainedBytes": 43774092,
+      "inflatedBytes": 44042375,
+      "localZipBytes": 29970768,
+      "listeningTaskMediaBytes": 5893602
+    },
+    "sourceAndBaseline": "Fivefrozeninputs/twodecompressedhashes/threefreshcompletefamilypacketextractions/fourrawcharacterelements. Original985kanji4942words985strokesmetadata/geometry preserved except exact accepted虎[酔っ払い] and猿[馬鹿] guards. Exact-base runtimepreserved outside three newpayloads and sole馬鹿componentlink. 62localadditions/threefullorderedreadings/oneofferedkey/tworeciprocalpairs/onebaselineactivation/onedirectdeer-animalguard.",
+    "fontAndStroke": "Exactpinned11stroke blob/count/reconversion. 19whole-fileHan includingreusedtext/18inallthreeunchangedcmaps; inherited广foundinexactbase displaytext. No newfallbacknativepending, nativeorphonecertification."
   },
-  "review": "Not launched; future two serial blind different-family initials and evidence reconciliation after one frozen draft.",
-  "android": "Dedicated clean f9b59a2; no runtime changed, no fresh test or native result claimed. Prior034 acceptance remains historical.",
+  "review": "Not launched; future two serial blind different-family initials on one frozen signed draft, including complete support/reused passage/source/actualcomparisons and allthreefacets.",
+  "android": "Clean dedicatedf9b59a2; no fresh035Android/native acceptance. Old034XML not acceptance for changedruntime.",
   "compatibleClient": "Android f9b59a2 or later; old APKs ignore curation.",
   "phoneAcceptance": "Physical-phone/general-release explicitly outstanding, not a bounded owner-testing veto.",
-  "nextAction": "Resume same035; inspect remaining184 full lexical families in bounded ranges, resolve exactロク/か allocation and useful support, then author one鹿 card/necessary鹿 word/exact馬鹿 link, pinned strokes, curated keys, complete baseline/link/reading/font audits. Freeze signed unreviewed draft before independent review. No036 or unreviewed push.",
-  "limits": "Substantive source-preparation checkpoint only. No draft, linguistic batch closure, independent review, new native certification, fresh Android acceptance, CI/public ZIP or publication. Existing source-index statusAtFreeze stays immutable."
+  "nextAction": "Freeze validatedsignedunreviewed035draft, then SAME035 serialblindtwo-family initials/reconciliation; freshAndroid/newfallbacknative/combinedmain/signing/ownerpush/greenCI/everyimmutablepublicZIPhash later. No036/unreviewedpush/secondrunner.",
+  "limits": "Coordinator draft, not independentreview/textualclosure/native/phone/currentmainacceptance or publication. Public61/1228/1167remaining unchanged; finalwhole-set/overallproject incomplete.",
+  "sourcePreparationHistory": {
+    "savedCommit": "43a51d220d82ffd7c0eaa3314830c2e7912307e9",
+    "status": "source-prepared-not-drafted",
+    "authorInspection": {
+      "completeCoreFamilies": 9,
+      "corePacket": "batch-035-core-jmdict.xml",
+      "coreReturnedRange": [
+        1,
+        271
+      ],
+      "completeComparisonFamilies": 9,
+      "comparisonReturnedRange": [
+        1,
+        265
+      ],
+      "remainingLexicalFamiliesPending": 184,
+      "limits": "Core packet overlaps lexical packet; 18 distinct families inspected, not 211 extracted families. All 4079 lexical lines are preserved but not claimed fully read. No independent reviewer has run."
+    },
+    "preparationAudit": "batch-035-preparation-audit.json",
+    "limits": "Historical18 inspected/184pending source checkpoint preserved; superseded only by this coordinator's later actual full packet reads. No independent review implied."
+  },
+  "supportMappings": [
+    {
+      "kanji": "鹿",
+      "article": "words/鹿.md",
+      "primaryReading": "しか",
+      "entryIds": [
+        "1319030"
+      ],
+      "selectedSenses": [
+        1
+      ],
+      "newArticle": true,
+      "status": "drafted-not-independently-reviewed",
+      "recognition": "Direct whole native animal noun; no usually-kana flag in this family. シカre_nokanji is a kana spelling, not a reading assigned to written鹿. No word level inferred."
+    },
+    {
+      "kanji": "鹿",
+      "article": "words/馬鹿.md",
+      "primaryReading": "ばか",
+      "entryIds": [
+        "1601260",
+        "1471660"
+      ],
+      "selectedSenses": [
+        1,
+        2,
+        3
+      ],
+      "newArticle": false,
+      "status": "exact-component-link-drafted-not-independently-reviewed",
+      "recognition": "Existing N3 identity/reading/title/type/exclusions preserved. Whole spelling ateji; no allocation鹿=か fromばか. New kanji common-word row reciprocates the required baseline pair."
+    }
+  ],
+  "requiredReciprocalPairs": [
+    [
+      "鹿",
+      "words/鹿.md"
+    ],
+    [
+      "鹿",
+      "words/馬鹿.md"
+    ]
+  ],
+  "changedReusedPassages": [
+    {
+      "article": "words/馬鹿.md",
+      "before": "[馬](../kanji/馬.md) means horse and 鹿 means deer",
+      "after": "[馬](../kanji/馬.md) means horse and [鹿](../kanji/鹿.md) means deer"
+    }
+  ],
+  "readingDispositions": [
+    {
+      "kanji": "鹿",
+      "kind": "on",
+      "reading": "ロク",
+      "selected": false,
+      "sourceOnly": false,
+      "entryIds": [
+        "2663000"
+      ],
+      "example": "神鹿しんろく shrine deer/messengers of gods",
+      "reason": "ActualDaijisen character音ロク animal-sense section explicitly supplies神鹿; fullJMdict corroborates word/reading/sense. Recognition example not an unsupported substring allocation. No blanketcompoundrarity or everydayfrequency claim; excluded from this standalone animal-noun lesson's prompts, not deleted from fullmetadata."
+    },
+    {
+      "kanji": "鹿",
+      "kind": "kun",
+      "reading": "しか",
+      "selected": true,
+      "sourceOnly": false,
+      "entryIds": [
+        "1319030"
+      ],
+      "article": "words/鹿.md",
+      "example": "鹿しか deer",
+      "reason": "Complete unrestricted written鹿/しか animal identity with no sex restriction and no usuallykanaflag; directwholeword allocation, actualDaijisenしかgeneraldeer/sika sense corroborates. Own reading row linked to necessary article, reciprocal pair verified."
+    },
+    {
+      "kanji": "鹿",
+      "kind": "kun",
+      "reading": "か",
+      "selected": false,
+      "sourceOnly": false,
+      "entryIds": [
+        "2873068",
+        "1866430"
+      ],
+      "example": "鹿か archaic deer; 鹿の子かのこ dappled cloth/pattern",
+      "reason": "Directwhole archaic standaloneか family and exactDaijisenか古名 heading establish reading independently. Compound鹿の子 cloth/pattern/mochi senses distinct from archaic originalfawn sense; do not generalize standalonearchaicflag to allcompounduses. Full鹿毛family2077830 and exactDaijisen〈か〉鹿毛 corroborate additional moderncompoundrecognition without inventing allocation in馬鹿. Not selected; no extra support article needed for this recognition row."
+    }
+  ],
+  "curatedProjection": [
+    {
+      "kanji": "鹿",
+      "quizOnyomi": [],
+      "quizKunyomi": [
+        "しか"
+      ],
+      "onKeys": [],
+      "kunKeys": [
+        "しか"
+      ]
+    }
+  ],
+  "quizAudit": {
+    "鹿": {
+      "title": "deer",
+      "distractors": [
+        "席",
+        "庭",
+        "底"
+      ],
+      "labels": [
+        "seat; place",
+        "garden; yard",
+        "bottom; base"
+      ],
+      "reason": "All three complete existing cards inspected plus complete applicable standalone/homograph families. Similar upper广shape, different lowerparts. 席seat/place/post/mat, 庭garden/yard/field, 底bottom/depth/limit/geometry/type senses do not mean deer. Three actual curated choices avoid defaultfourthfallback. All three older cards already have three distractors; no new semanticambiguity established there. 不available麓麗鏡 are not used as distractors/links or extra members."
+    }
+  },
+  "wordQuizAudit": {
+    "directExclusions": [
+      {
+        "word": "鹿",
+        "exclude": [
+          "動物"
+        ],
+        "reason": "Conservative direct displayeddeer/animal-label safeguard for the specificnewnoun, consistent with the accepted034wildboar precedent. Not lexicalequivalence, a transitiveclique or a universalhypernymrule."
+      }
+    ],
+    "comparisonArticles": [
+      "words/馬鹿.md",
+      "words/馬.md",
+      "words/動物.md",
+      "words/山.md",
+      "words/見る.md"
+    ],
+    "comparisonKanji": [
+      "kanji/席.md",
+      "kanji/庭.md",
+      "kanji/底.md"
+    ],
+    "confusableInventory": "Exact鹿/deer/cervid/fawn searches acrossinventory and currentwordarticles establish no existingdeer synonym article or deercluster. 馬鹿's other comparisons/exclusions stayunchanged, including accepted猿[馬鹿]. Animal/horse and allnewselectedcomparisons readcompletely. No dog/bear/horsesynonym claims or unverified new animalcollocations.",
+    "limits": "Bounded actuallabels/ordinarysecondarysenses, not exhaustive livequiz safety."
+  },
+  "fullFamilyInspection": {
+    "lexicalFamilies": 193,
+    "comparisonFamilies": 18,
+    "totalFamilies": 211,
+    "scope": "All4079lexical/265originalcomparison/381draftcomparison lines author-inspected through complete exact ranges; full aliases/restrictions/senseflags preserved.",
+    "navigationLimits": "Rare鹿驚scarecrow/葦鹿sea-lion/鹿尾菜hijiki/鹿蹄草plant spellings are not readingallocation proof. Speciesfamilies, search-onlyaliases, organization/place names and馬鹿expressions notextraauthoring. 馴鹿となかい andrareじゅんろく separatefamilies, 鹿垣ししがき versusarchaicしがき, 鹿子かこ/かごarchaic, 鹿毛horsecolor, 鹿の子cloth/pattern/mochi/originalarchaicfawn andmathematics底/山suffix/homographs inspected. Sensitive/derogatory/dialect/archaicproverbs leftasevidence; no spellingsuppliedjusttosatisfykey. 鹿茸technicalvelvetantler, 鹿砦military, 神鹿shrine, 逐鹿powercompetition andhistorical鹿鳴館contexts keptdistinct; select神鹿recognitiononly, notallロクcommons. No metadata/nanori additions or identityduplication."
+  },
+  "mechanicalDraftAudit": "batch-035-draft-audit.json",
+  "strokeAndFontAudit": "batch-035-stroke-audit.json",
+  "externalEvidence": "batch-035-external-evidence.json",
+  "fontDisposition": "19whole-fileHan/18inallthreeunchangedbundledcmaps; inherited广alreadydisplayedexactbase. Cmapabsence notglyphfailure; nonewfallbacknativepending. Inheritacceptedpilot/all40/160 onlyunchangedproduction scope, notnewnative/phonecertification."
 }
