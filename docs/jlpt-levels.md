@@ -154,6 +154,18 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   Compatible-client and outstanding physical-phone/general-release
   qualifications remain unchanged; whole-set reconciliation is pending.
 
+  [Batch 023](n1-sources/batch-023-publication.json), 鮎, is
+  **published and verified for bounded owner testing**, following batch 022.
+  All four full readings remain in source order; only あゆ is offered.
+  Its necessary support article has no vocabulary level inferred from kanji.
+  Two-family textual review, bounded native 广/鯰 fallback inspection,
+  fresh non-skipped Android and combined-main checks passed. Green CI
+  and all 8,195 immutable public ZIP runtime hashes were verified at
+  signed acceptance `5fa725f`. Published coverage is **50 additions;
+  1,178 still to deliver**: 54 named source members plus separate 妖.
+  The compatible-client and outstanding physical-phone/general-release
+  qualifications remain unchanged; whole-set reconciliation is pending.
+
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee
 about every character that could appear in the exam. Earlier-level knowledge is still needed for higher-level study.

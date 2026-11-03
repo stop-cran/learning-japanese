@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 023: sweetfish textual review closed, native and publication pending
+## Batch 023: sweetfish published and verified
 
 The [frozen batch 023](n1-sources/batch-023-membership.json) contains **鮎**
 and one necessary support article, 鮎 (あゆ), sweetfish/ayu. Its
@@ -54,8 +54,8 @@ One reciprocal support pair and one direct 鮎/魚 category safeguard are
 recorded, with no activated baseline pair, reused teaching change or inferred
 vocabulary level. Pinned 16-stroke geometry and original baseline preservation
 are checked mechanically. The displayed 广 and 鯰 forms are absent from the
-bundled font cmaps; their supported-native disposition must be established
-before publication, not inferred from cmap absence or previous unrelated tests.
+bundled font cmaps; their bounded supported-native disposition is now recorded
+separately, not inferred from cmap absence or previous unrelated tests.
 
 Both blind initial reviewers, actual `claude-opus-5.5` and `gpt-6.1-sol`,
 reviewed the same signed teaching snapshot `43428b8`: both articles, all
@@ -77,10 +77,32 @@ at its existing pilot stage and source/baseline/reading/link/stroke/font/budget
 audits passed. Neither 广 nor 鯰 belongs to the inherited 40-character
 fallback target set; no exact prior native disposition for them was established.
 
-This is **textually review-closed, local and unpublished**, not an additional
-published card. The 广/鯰 native gate, fresh Android and combined-main/CI/exact
-public-ZIP gates remain pending.
-Published coverage stays **49 additions; 1,179 still to deliver**.
+This batch is **published and verified for bounded owner testing**.
+The [native acceptance](n1-reviews/batch-023-native-acceptance.json) retains
+two actual terminal-status-0 cases, sixteen glyph/look-alike probes and one
+complete production import per article attempt. Original-Claude directly
+inspected five final screenshots in its original session: seven serial calls,
+no actionable visual defect. 广 and 鯰 are legible and distinct in all four
+configured families, with Gothic-like fallback rather than four bundled
+designs. Offscreen table cells and the continuing row remain unverified.
+The initial punctuation-selector failure and exact one-line harness-only fix,
+both execution denials and parent recovery remain preserved.
+
+The [combined-tree audit](n1-sources/batch-023-acceptance-audit.json) verifies
+fresh Android 3+1 with no failures, errors or skips, 353 Python tests and
+all source/baseline/reading/link/stroke/font/manifest/budget checks. Latest
+main added only localization instructions through a normal signed merge;
+N1 teaching and runtime stayed unchanged, so successful native/Android
+checks were not redundantly repeated.
+
+The [publication record](n1-sources/batch-023-publication.json) retains
+signed acceptance `5fa725f`, green CI `41611151264` and every **8,195 runtime
+hash** in the exact immutable public ZIP. All unchanged guards passed:
+8,216 entries, 30,473,634 compressed bytes, 43,943,856 inflated bytes and
+43,675,573 retained bytes. Published coverage is **50 additions; 1,178 still
+to deliver**: 54 named source members plus the separate 妖 exception.
+Compatible Android `f9b59a2` or later is required. No new session/drawing
+retest or physical-phone evidence is claimed.
 Physical-phone/general-release acceptance remains explicitly outstanding.
 
 ## Batch 021: silkworm published and verified
