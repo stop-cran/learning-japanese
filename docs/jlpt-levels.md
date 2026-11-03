@@ -88,6 +88,19 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   public ZIP runtime hash at accepted `add0c53`: **33 additions; 1,195 still to deliver**.
   Supporting-word levels are not inferred from their kanji; compatible-client
   and outstanding physical-phone/general-release qualifications remain unchanged.
+  [Batch 011](n1-sources/batch-011-publication.json), 梓・橘, is
+  **published and verified for bounded owner testing**, following
+  [batch 010](n1-sources/batch-010-publication.json).
+  Both blind model-family initials reviewed the same unchanged teaching;
+  their [reconciliation](n1-reviews/batch-011-reconciliation.json) retains
+  all original findings, optional dispositions and actual read/process limits.
+  Fresh non-skipped Android, combined-main, green CI and all immutable public
+  ZIP runtime hashes passed at accepted `84bdf2a`.
+  Published coverage is **37 additions; 1,191 still to deliver**:
+  41 named source members plus the separate 妖 exception.
+  Supporting words have no vocabulary level inferred from their kanji.
+  Compatible-client and outstanding physical-phone/general-release
+  qualifications remain unchanged; this is not complete N1 coverage.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee

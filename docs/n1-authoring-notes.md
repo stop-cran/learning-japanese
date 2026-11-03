@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 011: textual review closure checkpoint
+## Batch 011: published and verified
 
 The [frozen packet](n1-sources/batch-011-membership.json) is **梓・橘**,
 two remaining grade-9 plant characters with printing, botanical naming,
@@ -79,17 +79,23 @@ its complete text after truncation and obtained citrus dictionary bodies through
 raw HTML. GPT's denied `.git/HEAD` view is preserved, not represented as
 independent Git verification or retried through another tool.
 
-These cards are **locally textually review-closed**, not delivered additions.
-The [review audit](n1-sources/batch-011-review-audit.json) preserves fresh
-353 Python tests, exact source/baseline/reading/link/stroke/cmap checks,
-manifest freshness and unchanged local archive budgets.
-Fresh applicable Android checks and actual combined-main/CI/immutable-ZIP
-publication remain required.
-Published coverage stays **35/1,228; 1,193 still to deliver** after
-[batch 010's verified publication](n1-sources/batch-010-publication.json).
+These cards are **published and verified for bounded owner testing**.
+The [review audit](n1-sources/batch-011-review-audit.json) preserves textual
+closure separately from [execution 041](n1-sources/execution-041.json) and its
+[acceptance audit](n1-sources/batch-011-acceptance-audit.json): fresh
+RealContentTest 3/3 and RareHanTest 1/1, with zero failures, errors or skips,
+against the dedicated sibling content checkout. The actual combined-main tree
+passed 353 Python tests, validation, unchanged pilot-stage vocabulary consistency,
+manifest freshness and exact source/baseline/reading/link/stroke/cmap audits.
+The [publication record](n1-sources/batch-011-publication.json) preserves
+normally signed acceptance `84bdf2a`, green CI `41561580072` and all
+**8,157 runtime hashes** from the exact immutable public ZIP, within unchanged
+archive, per-file and path budgets. Reviewed teaching remains unchanged.
+Published coverage is **37/1,228; 1,191 still to deliver**.
 Supporting-word levels are not inferred from kanji. Compatible Android
-`f9b59a2` or later is required; physical-phone/general-release acceptance
-remains explicitly outstanding.
+`f9b59a2` or later is required; accepted pilot native/all40/160font evidence
+is inherited only for unchanged production scope, not a fresh native or visual
+pass. Physical-phone/general-release acceptance remains explicitly outstanding.
 
 ## Batch 010: textual review closure checkpoint (historical)
 

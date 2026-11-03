@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "execution": 41,
   "batch": "011",
-  "stage": "combined-tree-locally-accepted-before-publication",
+  "stage": "published-verified-bounded-owner-testing",
   "startingHead": "fefbf6a92cfcf6298632082242b538ce3a474442",
   "authoredSnapshot": "69f0b3bd995c6071c1845a4e550c117d4233ae7d",
   "reviewedTeachingSnapshot": "69f0b3bd995c6071c1845a4e550c117d4233ae7d",
@@ -10,7 +10,11 @@
   "scope": "Accept and publish the same review-closed bounded011, without starting012.",
   "integration": "Fresh normal fetch/merge origin/main already up to date at 1575d6a1423577bc3d36a5c3039e1e43cfa494f6 before Android and again before combined-tree validation. Reviewed runtime and original review evidence unchanged.",
   "validationRecord": "batch-011-acceptance-audit.json",
-  "pythonTests": {"passed": 353, "failures": 0, "errors": 0},
+  "pythonTests": {
+    "passed": 353,
+    "failures": 0,
+    "errors": 0
+  },
   "validatorErrors": 0,
   "manifestFresh": true,
   "contentVersion": "f5cd92541851b122",
@@ -19,7 +23,27 @@
   "review": "Both original blind reports and actual-model/process/read receipts preserved and freshly hash-verified. All4 teaching files, full71 families,12word+8kanji comparisons assigned to both families. Both CLEAN across all3 textual facets; six optional observations adjudicated without teaching changes. Actual process exits0, internaloverlaps0/0. GPT denied Git view and recovered inventory truncation retained; Claude inventory searched only. Availability is not comprehension, equal depth or native review.",
   "sourceAndBaseline": "Five frozen input hashes/two decompressed dictionaries/four exact family extractions/two raw character records; all985 baseline kanji/4942 words/985 strokes preserved. Exact37 additions/41 named members plus separate妖; all4 full readings/sourceorder/two selected keys/two reciprocal pairs/12 direct guards/pinned11+16stroke SVG blobs and reconversion verified.",
   "fontScope": "All30 learner-visible Han covered in all3 unchanged bundled font cmaps. Accepted pilot native/all40/160fonts inherited only unchanged production scope; no fresh native/device/visual/phone check.",
-  "publication": {"published": false, "publishedAdditionsBeforeBatch": 35, "remainingAdditionsBeforeBatch": 1193},
-  "acceptanceLimits": "Normal signed acceptance, owner fast-forward push, greenCI and every immutable public ZIP runtime hash pending. CompatibleAndroidf9b59a2+ required. Physical-phone/general-release acceptance explicitly outstanding, not a new bounded-owner-testing veto.",
-  "nextAction": "Normal signed acceptance and bounded owner-testing publication if remote/CI/archive gates pass; checkpoint and yield before012."
+  "publication": {
+    "published": true,
+    "acceptedCommit": "84bdf2a05753acc0745a5cbcabf6223165456a70",
+    "ciRun": 41561580072,
+    "ciConclusion": "success",
+    "counts": {
+      "batchPublishedAdditions": 2,
+      "projectPublishedAdditions": 37,
+      "remainingAdditions": 1191,
+      "currentKanji": 1022,
+      "currentWords": 4979,
+      "n1Labelled": 42,
+      "namedSourceMembersPresent": 41,
+      "separateExceptionPreserved": "妖",
+      "batchNewNecessarySupportWords": 2,
+      "projectNewNecessarySupportWords": 37
+    },
+    "immutableArchiveRecord": "batch-011-publication.json",
+    "nextAction": "Publish contributor-only receipts, verify terminal remoteSHA/CI/everyimmutablepublicZIPruntimehash, update issue60 and checkpoint/yield before012. Whole project incomplete."
+  },
+  "acceptanceLimits": "Physical-phone/general-release acceptance explicitly outstanding, not a new bounded-owner-testing veto. CompatibleAndroidf9b59a2+ required.",
+  "nextAction": "Publish contributor-only receipts, verify terminal remoteSHA/CI/everyimmutablepublicZIPruntimehash, update issue60 and checkpoint/yield before012. Whole project incomplete.",
+  "publicationRecord": "batch-011-publication.json"
 }
