@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 017: firefly draft, not reviewed or published
+## Batch 017: firefly textually review-closed, native gate pending
 
 The [frozen batch 017](n1-sources/batch-017-membership.json) contains **蛍**,
 one necessary animal-noun article and a single component link in the existing
@@ -61,9 +61,20 @@ needs system fallback. **Native inspection of that newly introduced spelling
 is outstanding and required before publication**. The pilot's forty-target
 font evidence does not cover it.
 
-This is **unreviewed local teaching**. Independent two-family review,
-fresh Android and combined-main/CI/immutable-public-ZIP acceptance remain
-pending. The preceding [batch 016 publication](n1-sources/batch-016-publication.json)
+This is **textually review-closed local teaching**, not published content.
+The [reconciliation](n1-reviews/batch-017-reconciliation.json) preserves two
+blind different-family initials on the same unchanged signed snapshot, all
+three teaching files and all 72 dictionary families. Neither established an
+actionable defect; four optional observations remain nonblocking. A bounded
+original-Claude confirmation withdraws its mistaken dynamic-body inference
+after inspecting the actual static Daijisen character and noun entries.
+The [review audit](n1-sources/batch-017-review-audit.json) records serial
+reviewer process exits and complete assigned returned ranges. Claude's initial
+six-comparison-read overlap and GPT's truncated optional inventory introduction
+remain disclosed; later serial work does not retroactively establish strict
+initial compliance. Fresh Android, the new **螢 native inspection**, and
+combined-main/CI/immutable-public-ZIP acceptance remain pending.
+The preceding [batch 016 publication](n1-sources/batch-016-publication.json)
 delivered **43 additions; 1,185 still to deliver**. Draft 017 does not reduce
 that published remainder. Compatible-client and outstanding physical-phone/
 general-release qualifications remain unchanged.
