@@ -37,6 +37,36 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 040: peng source preparation, not drafted
+
+[Batch 040](n1-sources/batch-040-progress.json) freezes **鵬**, source row
+1220, for a bounded mythical-bird and source-gloss check. All **25 distinct
+complete JMdict families** were coordinator-inspected: nine lexical families
+and sixteen disjoint comparison families. This is source preparation, not
+independent content review or a new published card.
+
+The frozen KANJIDIC2 gloss is "phoenix"; the applicable JMdict families
+distinguish the **peng**, a giant mythical bird, from 鳳凰's fenghuang.
+The raw gloss remains intact. Exact Japanese dictionary headings and usage
+must be inspected before adopting a teaching correction. Full **ホウ** and
+**おおとり** metadata remain in source order; the shared おおとり family does
+not permit unrestricted bird-spelling substitution or the performer spelling
+大トリ. Useful support and curated question material remain unselected.
+
+No declared baseline 鵬 pair was found. Existing bird and wing comparisons
+were inspected unchanged; 翼's article teaches つばさ, not 鵬翼 ほうよく.
+The pinned nineteen-stroke SVG is an inventory candidate only: conversion,
+newly displayed glyphs, independent reviews and fresh acceptance gates remain
+pending. The [preparation audit](n1-sources/batch-040-preparation-audit.json)
+checks frozen inputs, full-family membership and exact baseline/runtime
+preservation, not linguistic certification.
+
+Accepted [batch 039](n1-sources/batch-039-publication.json) remains published
+at terminal `3c1735f`: **66 additions delivered; 1,162 remain**. This
+source-only checkpoint changes no runtime card or manifest and makes no new
+Android/native/phone claim. Compatible Android `f9b59a2` or later remains
+required; physical-phone/general-release acceptance is explicitly outstanding.
+
 ## Batch 039: many-reading goose unreviewed local draft
 
 Batch 039 now drafts **鴻**, source row 1219, with two necessary support
