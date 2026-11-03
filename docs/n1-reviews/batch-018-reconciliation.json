@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "batch": "018",
+  "status": "textual-review-closed-local-unpublished",
+  "authoredSnapshot": "39810853a39c033015ec11b9a317484e239eb41e",
+  "reviewedTeachingSnapshot": "39810853a39c033015ec11b9a317484e239eb41e",
+  "sourceAndProcessAudit": "../n1-sources/batch-018-review-audit.json",
+  "scope": {
+    "teaching": ["kanji/繭.md", "words/繭.md"],
+    "facets": ["correctness", "scoped coverage", "textual phone comprehensibility"],
+    "fullDictionaryFamilies": 44,
+    "comparisonWords": 3,
+    "comparisonKanji": 5,
+    "changedReusedTeaching": []
+  },
+  "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+  "originalReports": ["batch-018-initial-claude.md", "batch-018-initial-gpt.md", "batch-018-bounded-claude.md"],
+  "findings": [],
+  "sourceAccessReconciliation": [
+    {
+      "id": "C-L1",
+      "status": "withdrawn",
+      "claim": "The fetched pages show no Daijisen character entry; attribution should instead name the separate 繭糸 headword.",
+      "disposition": "Initial simplified extraction omitted the actual character heading. Coordinator and own-original-Claude targeted raw fetch at offset64000 expose named Digital Daijisenけん【繭】［漢字項目］, onケン/kunまゆ and explicit繭糸underケン. The original absence statement and proposed attribution rewording are withdrawn. Original reports remain unchanged.",
+      "evidence": "https://kotobank.jp/word/%E7%B9%AD-137237; original bounded-Claude report/execution; preserved external-evidence raw artifact/hash."
+    }
+  ],
+  "optional": [
+    {
+      "id": "C-O1",
+      "status": "withdrawn",
+      "claim": "Replace the Daijisen character-example attribution with the separate compound headword attribution.",
+      "disposition": "Same underlying source-access hypothesis as C-L1, not a second defect. Actual character entry directly supports unchanged wording."
+    },
+    {
+      "id": "C-O2",
+      "status": "withdrawn",
+      "claim": "Add the additional 繭糸 sense 'cocoons and thread'.",
+      "disposition": "The selected recognition gloss 'thread from cocoons' is explicitly supported. Another specialist sense is outside necessary standalone-noun coverage; original reviewer withdraws the expansion request."
+    },
+    {
+      "id": "C-O3",
+      "status": "withdrawn",
+      "claim": "Cite 字通's 会意 analysis.",
+      "disposition": "Historical derivation is not required for the clearly labelled modern-shape mnemonic. Source gaiji limits remain; no etymology is introduced to manufacture closure. Original reviewer withdraws the expansion request."
+    }
+  ],
+  "contributionComparison": "Matched snapshot/rubric/source access. Neither initial established an actionable defect. Both independently verified full readings/curation, standalone identity, compound recognition, covering/insect/material distinctions, mnemonic, natural examples and actual default distractor labels. GPT's useful precise Daijisen character-heading retrieval resolved the initial Claude source-access uncertainty; own-original-Claude independently confirmed that heading in a bounded dependent follow-up. Equivalent observations anywhere in reports are shared, not unique merely by label. No general model ranking or equal-depth/native certification.",
+  "verdicts": {
+    "kanji/繭.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+    "words/繭.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"}
+  },
+  "unresolvedConsequentialClaims": [],
+  "readingQualification": "All3fullsourcedentries/order preserved; onlyまゆoffered with own linked row and exact standalone1525690pair. ケンexplicitly allocated in Daijisen繭糸example, retained as specialist recognition not selected. Source-onlyきぬmeans character lookup with no normal standalone spelling/allocation established, NOT absence of compound evidence: full1592710includes繭糸/きぬいと and search-only1525730notpromoted. Reviewer shorthand 'KANJIDIC2-only' is not adopted as a whole-word absence claim. Teaching explicitly acknowledges full-word evidence.",
+  "quizQualification": "Three inspected curated wrong labels for default task; no direct new word exclusion established against actual糸/絹/巣labels/secondarysenses. Historical字通wadding/callus not imported as modern ordinary label. No larger-quiz/fallbackalgorithm/fullcorpussemanticcertification.",
+  "confirmationDisposition": "No teaching correction or diff. Own-original-Claude dependent follow-up reads own original report and targeted static Daijisen heading; remaining verdicts carried from initial complete assigned reads. No full44familyrereview.",
+  "process": "Three isolated processes exit0 serially; originals archived before each next launch. Actual32/37/3tools, internal overlapping starts1/0/0. Claude initial two teaching views together violates internalserialinstruction and self-disclosed. All assigned teaching/metadata/44families/8comparisons/complete guidance returned; XML ranges<=200lines. InitialClaude overlaps XML boundaryline200 in two packets, no gaps or oversizedtails. Bounded report counts2substantivecalls; raw3includes task-file view. GPT first oversized web response retained; subsequent bounded raw fetch returned relevant headings.",
+  "processDeviationDisposition": "InitialClaude two-teaching-read overlap remains historical; dependent serial confirmation does not retroactively establish compliance. Actual reviewer processes never overlap. Preserve original report and execution rather than repeat full packets to manufacture clean process. Complete assigned returned text and precise source reconciliation establish bounded textual closure, not comprehension or perfect execution.",
+  "nativePending": [],
+  "android": "Fresh018RealContentTest3/RareHanTest1 pending; unchangedclean dedicatedf9b59a2. No fresh018native/device/Gradle attempt or old017XMLreuse.",
+  "limits": "Coordinator verifies signed local snapshot, frozen input/packet hashes, exact returned assigned ranges and process identities; reviewers do not independently verify Git/upstream bytes. Returned text/hashes do not prove comprehension, equal depth, frequency, native-speaker certification or learning effectiveness. Historical1/0/0overlap and originalsourceaccessgap preserved. Pitchaccent/gaiji/fullcorpus/largerquiz not certified. All12newtextHan covered in unchanged3fonts; cmaps not new native/phone evidence. Inheritedpilot/native/all40/160fontscope unchanged. Fresh018Android/currentmain/CI/everyimmutablepublicZIPhash pending. Physical-phone/general-release explicitly outstanding, not a bounded-owner-testing veto."
+}

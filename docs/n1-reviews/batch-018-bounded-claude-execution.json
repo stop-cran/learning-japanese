@@ -1,0 +1,222 @@
+{
+  "snapshot": "39810853a39c033015ec11b9a317484e239eb41e",
+  "requestedModel": "claude-opus-5.5",
+  "completedAt": "2026-11-03T07:13:10.3441442+01:00",
+  "launcherPid": 2700,
+  "startedAt": "2026-11-03T07:12:42.0610483+01:00",
+  "exitCode": 0,
+  "sessionId": "121f363d-99f4-4da0-8a8c-d57072fa4995",
+  "actualModels": [
+    "claude-opus-5.5"
+  ],
+  "usageCurrentModel": "claude-opus-5.5",
+  "reportSha256": "902bc6023f57d48eff9679de51fea69a8218247e39563c136f26adf0f19e0a23",
+  "rawExecutionSha256": "18866e62805de21f2151cfe7fa4ee60f9d2a54fea8899fbba9786509b3561859",
+  "rawExecutionLocation": "Sibling control/batch-018-bounded-claude.jsonl",
+  "availableTools": [
+    "view",
+    "glob",
+    "rg",
+    "web_fetch"
+  ],
+  "configurationEvidence": [
+    {
+      "infoType": "configuration",
+      "message": "Disabled tools: create, dynamic_workflows_manage, edit, fetch_copilot_cli_documentation, list_agents, list_powershell, powershell, read_agent, read_powershell, run_dynamic_workflow, semantic_code_search, session_store_sql, skill, sql, stop_powershell, task, write_agent"
+    },
+    {
+      "model": "claude-opus-5.5"
+    }
+  ],
+  "toolCalls": [
+    {
+      "name": "view",
+      "arguments": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-018-bounded-claude-prompt.txt"
+      },
+      "startedAt": "2026-11-03T06:12:46.891Z",
+      "model": "claude-opus-5.5",
+      "completedAt": "2026-11-03T06:12:46.896Z",
+      "success": true,
+      "returnedCharacters": 1769,
+      "returnedLines": 5,
+      "returnedSha256": "9de7a505afbd46bb46c83aaa745c1380bf87d08559e3799353b413576630010b",
+      "truncationOrLimitMarker": false,
+      "exactRequestedTextContainedInResult": true
+    },
+    {
+      "name": "view",
+      "arguments": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-reviews\\batch-018-initial-claude.md"
+      },
+      "startedAt": "2026-11-03T06:12:49.353Z",
+      "model": "claude-opus-5.5",
+      "completedAt": "2026-11-03T06:12:49.362Z",
+      "success": true,
+      "returnedCharacters": 4518,
+      "returnedLines": 51,
+      "returnedSha256": "6b8cff1ac3bee0db5a1fb87ca1f93467f3878e3b10b67f9b2671a692b6458f30",
+      "truncationOrLimitMarker": false,
+      "exactRequestedTextContainedInResult": true
+    },
+    {
+      "name": "web_fetch",
+      "arguments": {
+        "url": "https://kotobank.jp/word/%E7%B9%AD-137237",
+        "raw": true,
+        "start_index": 64000,
+        "max_length": 8000
+      },
+      "startedAt": "2026-11-03T06:12:51.197Z",
+      "model": "claude-opus-5.5",
+      "completedAt": "2026-11-03T06:12:51.327Z",
+      "success": true,
+      "returnedCharacters": 8182,
+      "returnedLines": 109,
+      "returnedSha256": "4df3a4b87d3c182b45de955f1f0b6c1fd16c768ac0c61548e1838db5b483a6fb",
+      "truncationOrLimitMarker": true
+    }
+  ],
+  "observedToolOverlaps": [],
+  "unfinishedTools": [],
+  "usage": {
+    "totalPremiumRequestCost": 30,
+    "totalUserRequests": 2,
+    "totalNanoAiu": 148544520000,
+    "aiCreditsStatus": "complete",
+    "tokenDetails": {
+      "input": {
+        "tokenCount": 78
+      },
+      "cache_read": {
+        "tokenCount": 1902916
+      },
+      "cache_write": {
+        "tokenCount": 162994
+      },
+      "output": {
+        "tokenCount": 14479
+      }
+    },
+    "totalApiDurationMs": 157420,
+    "sessionStartTime": "2026-11-03T06:07:37.262Z",
+    "codeChanges": {
+      "linesAdded": 0,
+      "linesRemoved": 0,
+      "filesModifiedCount": 0,
+      "filesModified": []
+    },
+    "modelMetrics": {
+      "claude-opus-5.5": {
+        "requests": {
+          "count": 36,
+          "cost": 30
+        },
+        "usage": {
+          "inputTokens": 2065988,
+          "outputTokens": 14479,
+          "cacheReadTokens": 1902916,
+          "cacheWriteTokens": 162994,
+          "reasoningTokens": 6753
+        },
+        "cacheExpiresAt": "2026-11-03T06:17:51.348Z",
+        "totalNanoAiu": 148544520000,
+        "aiCreditsStatus": "complete",
+        "tokenDetails": {
+          "input": {
+            "tokenCount": 78
+          },
+          "cache_read": {
+            "tokenCount": 1902916
+          },
+          "cache_write": {
+            "tokenCount": 162994
+          },
+          "output": {
+            "tokenCount": 14479
+          }
+        }
+      }
+    },
+    "agentMetrics": {
+      "main": {
+        "totalApiDurationMs": 157420,
+        "totalNanoAiu": 148544520000,
+        "modelMetrics": {
+          "claude-opus-5.5": {
+            "requests": {
+              "count": 36,
+              "cost": 30
+            },
+            "usage": {
+              "inputTokens": 2065988,
+              "outputTokens": 14479,
+              "cacheReadTokens": 1902916,
+              "cacheWriteTokens": 162994,
+              "reasoningTokens": 6753
+            },
+            "totalNanoAiu": 148544520000,
+            "tokenDetails": {
+              "input": {
+                "tokenCount": 78
+              },
+              "cache_read": {
+                "tokenCount": 1902916
+              },
+              "cache_write": {
+                "tokenCount": 162994
+              },
+              "output": {
+                "tokenCount": 14479
+              }
+            }
+          }
+        }
+      }
+    },
+    "providerModelMetrics": [
+      {
+        "provider": {
+          "id": "copilot",
+          "label": "GitHub Copilot",
+          "kind": "copilot"
+        },
+        "modelId": "claude-opus-5.5",
+        "metrics": {
+          "requests": {
+            "count": 36,
+            "cost": 30
+          },
+          "usage": {
+            "inputTokens": 2065988,
+            "outputTokens": 14479,
+            "cacheReadTokens": 1902916,
+            "cacheWriteTokens": 162994,
+            "reasoningTokens": 6753
+          },
+          "totalNanoAiu": 148544520000,
+          "aiCreditsStatus": "complete",
+          "tokenDetails": {
+            "input": {
+              "tokenCount": 78
+            },
+            "cache_read": {
+              "tokenCount": 1902916
+            },
+            "cache_write": {
+              "tokenCount": 162994
+            },
+            "output": {
+              "tokenCount": 14479
+            }
+          }
+        },
+        "modelDisplayName": "Claude Opus 5.5"
+      }
+    ],
+    "currentModel": "claude-opus-5.5",
+    "lastCallInputTokens": 91775,
+    "lastCallOutputTokens": 1816
+  },
+  "limits": "Original final report preserved as LF UTF-8 without editorial changes. Returned ranges/hashes establish bytes, not comprehension. Supplied dictionary packets are not fresh upstream retrieval. Provider reasoning is not exported."
+}

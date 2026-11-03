@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 018: local cocoon draft
+## Batch 018: cocoon textually review-closed
 
 The [frozen batch 018](n1-sources/batch-018-membership.json) contains **繭**
 and one necessary standalone support article, 繭 (まゆ). No existing article
@@ -60,10 +60,17 @@ pinned eighteen-stroke conversion and all twelve learner-visible Han
 characters in all three unchanged bundled fonts; there is no new
 outside-subset glyph. Cmap checks are not fresh native or phone evidence.
 
-This is **unreviewed local teaching**, not another published addition.
-Both independent model-family reviews, evidence-based reconciliation,
-fresh Android and combined-main/CI/immutable-public-ZIP acceptance remain
-pending. Published coverage stays **44 additions; 1,184 still to deliver**.
+Both blind model-family initial reviews covered the same signed snapshot,
+both teaching files, all forty-four families and the actual comparison cards.
+The [reconciliation](n1-reviews/batch-018-reconciliation.json) preserves the
+original reports, Claude's initial paired-read deviation and a bounded
+original-session confirmation of the actual Daijisen character heading.
+No teaching correction was needed; the proposed source-attribution change
+and optional specialist/history expansions were withdrawn.
+
+This is **textually review-closed local teaching**, not another published
+addition. Fresh Android and combined-main/CI/immutable-public-ZIP acceptance
+remain pending. Published coverage stays **44 additions; 1,184 still to deliver**.
 The compatible-client and outstanding physical-phone/general-release
 qualifications remain unchanged.
 
