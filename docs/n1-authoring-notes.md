@@ -37,6 +37,37 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 026: crane draft, not reviewed or published
+
+The [frozen batch 026](n1-sources/batch-026-membership.json) adds **鶴**
+and one necessary word article, 鶴 (つる), in a local unreviewed draft.
+Both full readings remain in source order; only つる is selected. カク
+has a qualified 鶴翼 (かくよく) recognition example, not a quiz key.
+The [ledger](n1-sources/batch-026-progress.json) records all 57 complete
+lexical/comparison families, one reciprocal pair, no activated baseline
+pair and two direct category-label exclusions. No vocabulary level is inferred.
+
+The raw KANJIDIC2 crane/stork glosses remain preserved. Actual modern
+dictionary entries establish the ordinary crane noun separately from
+コウノトリ, stork; poetic たず and origami おりづる are qualified rather
+than silently added to the metadata. The [external evidence](n1-sources/batch-026-external-evidence.json)
+distinguishes inspected dictionary sections from empty headings and preserves
+raw-download provenance without claiming identical simplified output.
+
+The [draft audit](n1-sources/batch-026-draft-audit.json) verifies exact source
+membership, baseline/runtime preservation, reading/link dispositions and
+archive budgets. The [stroke/font record](n1-sources/batch-026-stroke-audit.json)
+verifies pinned 21-stroke geometry and all 13 displayed Han in all three
+unchanged bundled cmaps. These checks are not new native or phone evidence.
+Two serial blind model-family reviews, reconciliation, fresh non-skipped
+Android and combined-main/publication gates remain pending.
+
+Batch 025 is [published and verified](n1-sources/batch-025-publication.json):
+**52 additions delivered; 1,176 still to deliver**. This new local draft
+does not increase published coverage. Compatible Android `f9b59a2` or later
+is required; physical-phone/general-release acceptance remains explicitly
+outstanding, not a blanket veto on bounded owner testing.
+
 ## Batch 024: sea-bream draft, not reviewed or published
 
 The [frozen batch 024](n1-sources/batch-024-membership.json) adds **鯛**
