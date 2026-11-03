@@ -37,6 +37,33 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 014: anatomical reading draft, not reviewed or published
+
+The [frozen batch 014](n1-sources/batch-014-membership.json) contains **椎**
+and one necessary anatomical support article, 椎骨 (ついこつ), vertebra.
+Its [draft ledger](n1-sources/batch-014-progress.json) preserves all four
+source readings in order and selects only **ツイ**. スイ and う.つ remain
+explicitly source-only within this bounded lesson; 椎/つち is a verified
+rare spelling of the mallet noun, not a rare pronunciation claim.
+
+The source places しい under nanori, but complete JMdict families and
+[actual native plant entries](n1-sources/batch-014-external-evidence.json)
+independently establish 椎/しい and 椎茸/しいたけ as non-name lexical uses.
+The draft explains that distinction without adding or reclassifying raw
+metadata. Its four complete dictionary packets retain 117 families, one
+required reciprocal pair and one direct broad-bone quiz safeguard.
+No baseline metadata or reused teaching is changed; no word level is
+inferred from the kanji level.
+
+This is **local unreviewed work**, not delivered coverage. Two serial blind
+different-family initial reviews, evidence-based reconciliation and fresh
+app/combined-main/publication gates remain pending. Published additions
+remain **40; 1,188 still to deliver**. Compatible Android `f9b59a2` or later
+is required; physical-phone/general-release acceptance remains explicitly
+outstanding. The older batch descriptions below retain their checkpoint
+scope; batch 013's actual publication is recorded in its
+[accepted receipt](n1-sources/batch-013-publication.json).
+
 ## Batch 013: textual review closed, publication pending
 
 The [frozen packet](n1-sources/batch-013-membership.json) contains **榛**,
