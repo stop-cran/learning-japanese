@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "batch": "021",
+  "status": "textual-review-closed-local-unpublished",
+  "authoredSnapshot": "296b6cc3bc9447def9a8fde835360d5a59bd9a39",
+  "reviewedTeachingSnapshot": "296b6cc3bc9447def9a8fde835360d5a59bd9a39",
+  "sourceAndProcessAudit": "../n1-sources/batch-021-review-audit.json",
+  "catalogCopyDisposition": "The original current model catalog remains byte-exact at control/copilot-model-catalog-execution-082.txt, with its raw SHA-256 in the review audit. Only its Git copy drops one blank EOF line to pass the ordinary whitespace check. No report or model catalog text changed. The first pre-signing command stopped at that whitespace check, before any commit/signing invocation.",
+  "scope": {
+    "teaching": ["kanji/蚕.md", "words/蚕.md"],
+    "facets": ["correctness", "scoped coverage", "textual phone comprehensibility"],
+    "fullDictionaryFamilies": 64,
+    "comparisonWords": 8,
+    "comparisonKanji": 4,
+    "changedReusedTeaching": []
+  },
+  "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+  "originalReports": ["batch-021-initial-claude.md", "batch-021-initial-gpt.md"],
+  "findings": [],
+  "sourceAccessReconciliation": [],
+  "optional": [
+    {
+      "id": "C-O1",
+      "status": "optional",
+      "claim": "Mention the older spelling 蠶, as the firefly card mentions its older form.",
+      "disposition": "Complete JMdict1304000 records the alternate spelling with an outdated-kanji flag at batch-021-jmdict.xml:25-28. It is not selected or needed for the standalone modern noun and no exhaustive spelling claim is taught. Omit this nonblocking expansion; adding an older glyph would create a separate rendering obligation, not prove a current textual defect."
+    },
+    {
+      "id": "C-O2",
+      "status": "optional",
+      "claim": "Add the unvoiced 春蚕 variant はるこ.",
+      "disposition": "The actual Digital Daijisenはるご body explicitly says はることも; Seisenban corroborates it. Both initial reviewers inspected those bodies. The article already supplies the voiced bound example supporting sourceこ, explains that voicing and gives the separate whole-wordしゅんさん reading. It does not claim these exhaust all variants. Optional expansion, not a missing selected reading or invalid example."
+    },
+    {
+      "id": "C-O3",
+      "status": "optional",
+      "claim": "Add JMdict1473740 to the word article's source list for 買う.",
+      "disposition": "The complete applicable family is preserved in batch-021-supplement-jmdict.xml:3-54 and read by both reviewers. Its buying sense supports the explicit animal-keeping versus buying distinction. The article already identifies JMdict as a dictionary, links the actual 買う article and does not claim its listed IDs exhaust every comparison. Optional citation precision; no missing consequential evidence."
+    }
+  ],
+  "contributionComparison": "Same snapshot, rubric and source access. Neither initial established an actionable defect or consequential uncertainty. Both independently verified the full reading dispositions, linked selected noun, historical/boundこ, larva-versus-moth qualification, examples, mnemonic and actual quiz labels. Claude uniquely proposed three nonblocking spelling/variant/citation expansions; GPT supplied none. Their shared source and qualification observations remain shared regardless of report section or label. No general model ranking or equal-depth/native certification.",
+  "verdicts": {
+    "kanji/蚕.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+    "words/蚕.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"}
+  },
+  "unresolvedConsequentialClaims": [],
+  "readingQualification": "Full サン/テン/かいこ/こ and order preserved. Onlyかいこ selected with its own linked example and reciprocal support; expliciton[]. Exact1304000 supports the written noun; itsカイコ alternative is kana-only. 養蚕1547140 supportsサン recognition. テン is explicitly unallocated source-only lookup information, not guessed from天蚕てんさん. Actual Daijisenこ/春ご and春蚕はるご plusしゅんさん bodies support the voiced bound example; Seisenban supports older standaloneこ. No ordinary standaloneこ substitution, unrestricted compound allocation, frequency or etymology claim.",
+  "quizQualification": "Actual 天heaven-sky/春spring-season/蛍firefly labels are semantically wrong for silkworm; all comparison cards already have three curated distractors. 虫 is deliberately not a kanji wrong choice, and direct word蚕/虫 guard addresses the broader-category overlap. Cocoon, mulberry tree, silk/thread, firefly and animal-keeping/buying comparisons do not establish another direct synonym pair. No transitive clique, larger-quiz or full-corpus certification.",
+  "confirmationDisposition": "No teaching correction or consequential uncertainty remains. Preserve both initial reports unchanged; no original-session follow-up or repeated64-family review is necessary for optional expansion.",
+  "processDeviationDisposition": "Reviewer processes exited serially and the complete first report was archived before the second launch. InitialClaude nevertheless batched three groups of comparison reads, with seven observed overlapping starts; its original self-disclosure is preserved. This violates the internal one-call instruction and is NOT reported as compliant serial tool work. GPT used individually awaited calls with zero observed overlap. All mandatory local ranges actually returned without XML range violations; this establishes byte coverage, not comprehension or perfect process compliance. Do not repeat review to manufacture a clean execution history.",
+  "nativePending": [],
+  "android": "Fresh021RealContentTest3/RareHanTest1 pending; unchanged clean dedicatedf9b59a2. No fresh021native/device/Gradle attempt or prior020XMLreuse.",
+  "limits": "Coordinator verifies signed snapshot, frozen input/packet hashes, actual models/process exits and exact returned assigned ranges; reviewers do not independently verify Git/upstream frozen bytes. Claude did not independently count families, while exact packet extraction and GPT's report support64 complete families. Returned bytes do not prove comprehension, equal depth, frequency, native-speaker certification or learning effectiveness. Original7/0internal overlaps preserved. Scoped confusable-inventory search, empty unrelated dictionary sections and image gaiji do not certify their unavailable content. All15newtextHan covered in unchanged3fonts; cmaps are not new native/phone evidence. Inheritedpilot/native/all40/160fontscope unchanged. Fresh021Android/currentmain/CI/everyimmutablepublicZIPhash pending. Physical-phone/general-release explicitly outstanding, not a bounded-owner-testing veto."
+}
