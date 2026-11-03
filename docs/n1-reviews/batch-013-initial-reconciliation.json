@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "batch": "013",
+  "authoredSnapshot": "f093f464c35423f728e3a0e756bee358b061d65c",
+  "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+  "originalReports": ["batch-013-initial-claude.md", "batch-013-initial-gpt.md"],
+  "scope": {
+    "teaching": ["kanji/榛.md", "words/榛.md"],
+    "facets": ["correctness", "scoped coverage", "textual phone comprehensibility"],
+    "dictionaryFamilies": 41,
+    "comparisonWords": 7,
+    "comparisonKanji": 4,
+    "changedReusedTeaching": []
+  },
+  "findings": [
+    {
+      "id": "G1",
+      "severity": "minor",
+      "facet": "scoped coverage/navigation",
+      "location": "words/榛.md:20",
+      "status": "unresolved",
+      "claim": "The substantive introduction of 実 (み) explains its nut sense but omits navigation to the existing companion article.",
+      "remedy": "Link that occurrence as [実](実.md) (み), preserving all other teaching and metadata.",
+      "evidence": "Actual words/実.md has primary readingみ and the applicable fruit/nut/seed sense. Scoped instructions require links at substantive introductions. Coordinator verified the complete actual article, not filename alone.",
+      "confidence": "high",
+      "contribution": "Unique to GPT anywhere in the blind initial reports; Claude established no defect."
+    }
+  ],
+  "optional": [
+    {
+      "id": "C-O1",
+      "location": "kanji/榛.md:30",
+      "status": "optional",
+      "suggestion": "Show the full archaic compound spelling if its second character displays.",
+      "disposition": "Do not introduce the optional unbundled 莽 glyph: all three unchanged cmaps lack it, per preserved font decision. Existing kana, composition and encoded dictionary link supply bounded recognition; exact complete family stays in contributor evidence. This is not a requirement for a font prerequisite or a selected reading question.",
+      "evidence": "batch-013-external-evidence.json fontDecision; complete JMdict2843048 and actual Seisenbanしんぼう/しんもう definitions. Claude explicitly labels this optional and did not inspect font support."
+    },
+    {
+      "id": "C-O2",
+      "status": "optional",
+      "suggestion": "Mention unrelated はしばみ homophones.",
+      "disposition": "No expansion needed for the bounded plant noun. Complete families2222390/2848515 remain evidence, not proof of a learner-visible ambiguity in the written榛 task."
+    },
+    {
+      "id": "C-O3",
+      "status": "optional",
+      "suggestion": "Mention はりのき as an alternative reading of 榛の木.",
+      "disposition": "Actual Daijisen supports the alternative, but the lesson does not claim はんのき is exclusive. Preserve bounded recognition instead of adding an unselected reading course."
+    }
+  ],
+  "contributionComparison": "Same frozen snapshot/rubric/source access. GPT uniquely established the localized companion link omission; Claude uniquely supplied three optional observations, not defects. No general model ranking, equal comprehension or native certification inferred.",
+  "limits": "Both complete originals and execution receipts preserved before fixes. Reviewers used supplied snapshot identities and frozen dictionary packets, not fresh upstream XML retrieval. Scoped inventory searches and empty/gaiji source sections retained as limitations. Local textual review is not fresh Android/native/phone/publication acceptance.",
+  "nextAction": "Apply only G1 navigation link, validate/regenerate manifest, normally sign the exact correction, then confirm the bounded actual diff with both original sessions."
+}
