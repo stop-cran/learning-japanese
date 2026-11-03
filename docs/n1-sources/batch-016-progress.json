@@ -2,43 +2,100 @@
   "schemaVersion": 1,
   "batch": "016",
   "baseCommit": "90ad6ca5c4635ed12aa6de4e968eab369acdb91f",
-  "membership": ["菊"],
-  "status": "draft-not-independently-reviewed",
-  "drafted": ["菊"],
-  "reviewClosed": [],
+  "membership": [
+    "菊"
+  ],
+  "status": "textual-review-closed-local-unpublished",
+  "drafted": [
+    "菊"
+  ],
+  "reviewClosed": [
+    "菊"
+  ],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
-    {"selection": "batch-016-lexical-selection.json", "xml": "batch-016-jmdict.xml"},
-    {"selection": "batch-016-comparison-selection.json", "xml": "batch-016-comparisons-jmdict.xml"},
-    {"selection": "batch-016-notes-selection.json", "xml": "batch-016-notes-jmdict.xml"},
-    {"selection": "batch-016-supplement-selection.json", "xml": "batch-016-supplement-jmdict.xml"}
+    {
+      "selection": "batch-016-lexical-selection.json",
+      "xml": "batch-016-jmdict.xml"
+    },
+    {
+      "selection": "batch-016-comparison-selection.json",
+      "xml": "batch-016-comparisons-jmdict.xml"
+    },
+    {
+      "selection": "batch-016-notes-selection.json",
+      "xml": "batch-016-notes-jmdict.xml"
+    },
+    {
+      "selection": "batch-016-supplement-selection.json",
+      "xml": "batch-016-supplement-jmdict.xml"
+    }
   ],
   "supportMappings": [
     {
-      "kanji": "菊", "article": "words/菊.md", "primaryReading": "きく",
-      "entryIds": ["1226210"], "selectedSenses": [1], "newArticle": true,
-      "status": "draft-not-independently-reviewed",
+      "kanji": "菊",
+      "article": "words/菊.md",
+      "primaryReading": "きく",
+      "entryIds": [
+        "1226210"
+      ],
+      "selectedSenses": [
+        1
+      ],
+      "newArticle": true,
+      "status": "textual-review-closed-local-unpublished",
       "recognition": "Exact standalone character/word pair establishes whole-character allocation without kana-substring inference. Daijisen separate character heading and Seisenban noun opening explicitly classify it as on. Full JMdict family retains kana-only alternative キク; no usually-kana flag on main sense and no vocabulary level inferred."
     }
   ],
-  "requiredReciprocalPairs": [["菊", "words/菊.md"]],
+  "requiredReciprocalPairs": [
+    [
+      "菊",
+      "words/菊.md"
+    ]
+  ],
   "changedReusedPassages": [],
   "readingDispositions": [
     {
-      "kanji": "菊", "kind": "on", "reading": "キク", "selected": true,
-      "entryIds": ["1226210", "1226220"], "article": "words/菊.md",
+      "kanji": "菊",
+      "kind": "on",
+      "reading": "キク",
+      "selected": true,
+      "entryIds": [
+        "1226210",
+        "1226220"
+      ],
+      "article": "words/菊.md",
       "example": "菊 きく - chrysanthemum; 菊の花 きくのはな - chrysanthemum flower",
       "reason": "Exact standalone lexical identity with independent explicit character-sound classification in native dictionaries. Useful ornamental plant noun, not a priority-based frequency assertion. Complete single raw on entry preserved; no kun entries or nanori added."
     }
   ],
   "curatedProjection": [
-    {"kanji": "菊", "quizOnyomi": ["キク"], "quizKunyomi": [], "onKeys": ["きく"], "kunKeys": []}
+    {
+      "kanji": "菊",
+      "quizOnyomi": [
+        "キク"
+      ],
+      "quizKunyomi": [],
+      "onKeys": [
+        "きく"
+      ],
+      "kunKeys": []
+    }
   ],
   "quizAudit": {
     "菊": {
-      "title": "chrysanthemum", "distractors": ["米", "薬", "秋"],
-      "labels": ["rice grain", "medicinal drug", "autumn"],
+      "title": "chrysanthemum",
+      "distractors": [
+        "米",
+        "薬",
+        "秋"
+      ],
+      "labels": [
+        "rice grain",
+        "medicinal drug",
+        "autumn"
+      ],
       "reason": "Actual full 米/薬/秋 cards and complete relevant dictionary families inspected. Rice grain is not a chrysanthemum; traditional medicinal use does not define the flower as a general medicinal drug; autumn is the season, not the plant. Visual cues contrast internal 米, common grass top on 薬 and grain-shaped left side of 秋. All three and broad 花/草 already have three curated wrong answers; no newly activated default four-choice fallback defect established. No blanket medicinal or exclusive autumn-blooming claim."
     }
   },
@@ -46,24 +103,66 @@
     "directExclusions": [
       {
         "word": "菊",
-        "exclude": ["花", "草", "植物", "植える", "植木", "グラス", "模様", "柄", "パターン", "型", "色", "カラー", "紐", "コード", "綱", "縄", "九"],
+        "exclude": [
+          "花",
+          "草",
+          "植物",
+          "植える",
+          "植木",
+          "グラス",
+          "模様",
+          "柄",
+          "パターン",
+          "型",
+          "色",
+          "カラー",
+          "紐",
+          "コード",
+          "綱",
+          "縄",
+          "九"
+        ],
         "reason": "Six broad plant/English-label safeguards: flower; herbaceous vegetation; plant; English noun/verb plant; potted plant; グラス separate grass identity. Four pattern guards protect native-dictionary motif/crest sense against broad pattern labels. Two color guards protect traditional color-scheme sense. Four cord guards protect specific chrysanthemum-shaped cord use, despite code/chord and rope senses elsewhere. 九 guards exactly the native-dictionary regional market code, not 九つ or 九日 expressions. Conservative direct pairs, not transitive cliques, equal register or unrestricted synonymy; uncommon secondary guards do not claim modern frequency."
       }
     ],
     "confusableInventory": "Introduction/notation read; scoped 菊/chrysanthemum/花/植物/植木/草 search found no named cluster. Actual displayed-label and Japanese occurrence searches narrowed the comparison articles; no full-corpus semantic certification.",
     "comparisonArticles": [
-      "words/花.md", "words/草.md", "words/植物.md", "words/植える.md", "words/植木.md",
-      "words/グラス.md", "words/模様.md", "words/柄.md", "words/パターン.md", "words/型.md",
-      "words/色.md", "words/カラー.md", "words/紐.md", "words/コード.md", "words/綱.md",
-      "words/縄.md", "words/九.md", "words/挿す.md"
+      "words/花.md",
+      "words/草.md",
+      "words/植物.md",
+      "words/植える.md",
+      "words/植木.md",
+      "words/グラス.md",
+      "words/模様.md",
+      "words/柄.md",
+      "words/パターン.md",
+      "words/型.md",
+      "words/色.md",
+      "words/カラー.md",
+      "words/紐.md",
+      "words/コード.md",
+      "words/綱.md",
+      "words/縄.md",
+      "words/九.md",
+      "words/挿す.md"
     ],
-    "comparisonKanji": ["kanji/米.md", "kanji/薬.md", "kanji/秋.md", "kanji/花.md", "kanji/草.md"],
+    "comparisonKanji": [
+      "kanji/米.md",
+      "kanji/薬.md",
+      "kanji/秋.md",
+      "kanji/花.md",
+      "kanji/草.md"
+    ],
     "incidentalExistingExample": "挿す contains an existing chrysanthemum-cutting sentence but declares only 挿 in metadata. Full actual article and applicable family inspected; not a newly activated declared 菊 pair. No backlink obligation for every incidental mention and no baseline rewrite.",
     "otherLabelNavigation": "No baseline chrysanthemum word identity or anus/crest article found in scoped titles/filenames; no support invented for historical or anatomical meanings. Exact-type pattern and cord guards are deliberately conservative and remain subject to independent review.",
     "limits": "Scoped source/label audit; not empirical live-quiz safety or an exhaustive current-sense corpus review."
   },
   "fullFamilyInspection": {
-    "lexicalFamilies": 96, "comparisonFamilies": 22, "notesFamilies": 9, "supplementFamilies": 25, "totalFamilies": 152,
+    "lexicalFamilies": 96,
+    "comparisonFamilies": 22,
+    "notesFamilies": 9,
+    "supplementFamilies": 25,
+    "totalFamilies": 152,
     "scope": "All four complete packets actually returned and author-inspected. Retain every alias, restriction, kana-only/search-only/rare/register marker and sense. No re_nokanji kana assigned as a written reading. Secondary meanings of compounds not automatically allocated to bare 菊. 菊花 both full readings and 白菊 voicing verified; 春菊 distinct edible leafy plant, not inferred seasonality. Full Jitsu body not extracted, so no historical/phonetic classification taught."
   },
   "mechanicalDraftAudit": "batch-016-draft-audit.json",
@@ -75,21 +174,33 @@
     "validatorErrors": 0,
     "manifestFresh": true,
     "contentVersion": "dcd273460422a798",
-    "pythonTests": {"passed": 353, "failures": 0, "errors": 0},
-    "pythonLog": "control/logs/execution-058-python-tests.txt",
-    "pythonLogSha256": "6544f6cc70f7610145cf6cf64ec67b84e56a00eb9d3659975217d1050e4a2f88",
+    "pythonTests": {
+      "passed": 353,
+      "failures": 0,
+      "errors": 0
+    },
+    "pythonLog": "control/batch-016-review-python-tests.txt",
+    "pythonLogSha256": "2ee7f6aaa2c9133a41e7db6a1d765a047de8b04fdbce3381cfd246b58a1d7a72",
     "vocabularyConsistency": "2122/2431 reviewed prompts; unchanged incomplete pilot stage, not complete.",
     "localBudget": {
-      "files": 8181, "entries": 8196,
-      "retainedBytes": 43616103, "inflatedBytes": 43884386,
-      "localZipBytes": 29888349, "listeningTaskMediaBytes": 5893602
+      "files": 8181,
+      "entries": 8196,
+      "retainedBytes": 43616103,
+      "inflatedBytes": 43884386,
+      "localZipBytes": 29888349,
+      "listeningTaskMediaBytes": 5893602
     },
-    "sourceAndBaseline": "Five frozen inputs/two decompressed hashes/four exact fresh extractions/one raw character verified; original985kanji/4942words/985strokes preserved; exact43addition membership includes one unreviewed draft. Only three runtime files added relative to accepted015base.",
+    "sourceAndBaseline": "Fresh review-closure audit verifies5frozeninputs/2decompressedhashes/4exactextractions/rawcharacter/original985kanji+4942words+985strokes/fullreading/link/pinnedstroke/all27Hancmapdispositions/exact43additionmembership. Runtime unchanged from signed teaching; draft43 is not published.",
     "android": "Dedicated clean unchanged f9b59a2; no fresh016 Android/native attempt or oldXMLreuse."
   },
   "publishedAdditions": 42,
   "remainingAdditions": 1186,
-  "review": "Not started; two serial blind different-family initial reviews on one signed frozen snapshot and bounded reconciliation required.",
-  "limits": "Draft only, not independent teaching review, fresh Android/native/phone acceptance or publication. Pilot native/all40/160font evidence inherited only unchanged production scope. Physical-phone/general-release explicitly outstanding.",
-  "nextAction": "Freeze signed validated unreviewed016 draft and yield for same016 independent review; no017 or unreviewed push."
+  "authoredSnapshot": "ddeba95b6075bba7a2070c5fa4f94de0c800ada4",
+  "reviewedTeachingSnapshot": "ddeba95b6075bba7a2070c5fa4f94de0c800ada4",
+  "reviewRecord": "../n1-reviews/batch-016-reconciliation.json",
+  "reviewAudit": "batch-016-review-audit.json",
+  "review": "Two serial blind different-family initials, claude-opus-5.5 and gpt-6.1-sol, on the same unchanged signed snapshot. Both teaching files/all3facets CLEAN, no actionable defect. Three Claude optional observations remain nonblocking; original-Claude dependent bounded confirmation completes its missing historical guidance tail and confirms all3optional dispositions.",
+  "processDisposition": "Actual54/55/5tools; three processes exit0 serially and each original archived before next launch. Internaloverlaps1/0/0, XMLrangeviolations0/0/0. Claude initial instructions1-200of218and two instruction reads together preserved; dependent201-218tail completion is not retroactive initial compliance. Both initials returned all152families/23comparisons/bothteaching; no repeated whole-packet review.",
+  "limits": "Textual/source/mechanical closure, not fresh016 Android/native/phone acceptance or publication. Returned ranges/hashes do not prove comprehension/equal depth/frequency/live-quiz safety/native certification. Original process/guidance deviations preserved. Pilot native/all40/160font evidence inherited only unchanged production scope. Physical-phone/general-release explicitly outstanding.",
+  "nextAction": "Fresh coordinator resumes SAME016 fresh non-skipped Android3+1 and combined-main/CI/immutable-public-ZIP publication gates; no017 or unaccepted push."
 }

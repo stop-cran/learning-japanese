@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 016: chrysanthemum draft, independent review pending
+## Batch 016: chrysanthemum review closed, publication pending
 
 The [frozen batch 016](n1-sources/batch-016-membership.json) contains **菊**
 and one necessary supporting plant-noun article, 菊 (きく). Its
@@ -54,11 +54,19 @@ Seventeen conservative direct word guards protect broad plant labels and
 documented secondary overlaps, not unrestricted equivalence or frequency.
 One reciprocal pair is required; no baseline article is edited.
 
-This is **unreviewed local teaching**, not another published addition.
+This is **textually review-closed local teaching**, not another published addition.
 The [draft audit](n1-sources/batch-016-draft-audit.json) and
 [stroke/font record](n1-sources/batch-016-stroke-audit.json) retain source,
-baseline, reading, link, pinned-geometry and cmap checks. Two serial blind
-different-family initial reviews, reconciliation, fresh Android and
+baseline, reading, link, pinned-geometry and cmap checks. The
+[reconciliation](n1-reviews/batch-016-reconciliation.json) preserves two blind
+different-family initial reports on the same unchanged signed teaching,
+with no actionable defect. Three optional suggestions remain nonblocking.
+An original-Claude bounded confirmation completes its missing historical
+guidance tail and confirms those dispositions, without a full packet rereview.
+The [review audit](n1-sources/batch-016-review-audit.json) preserves actual
+serial process exits, complete assigned teaching/family/comparison returns,
+and the initial instruction-read overlap and guidance omission. Later tail
+completion is not retroactive process compliance. Fresh Android and
 combined-main/CI/immutable-public-ZIP gates remain pending. Published
 coverage remains **42 additions; 1,186 still to deliver**.
 Physical-phone/general-release acceptance remains explicitly outstanding.
