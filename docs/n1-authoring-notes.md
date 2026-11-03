@@ -37,6 +37,34 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 028: turtle/tortoise draft, not reviewed or published
+
+The [frozen batch 028](n1-sources/batch-028-membership.json) adds **亀**
+and one necessary native-noun support article in a local unreviewed draft.
+All four readings remain in source order; only かめ is selected.
+キ has a verified 亀裂 (きれつ), "crack; fissure; rift," recognition
+example. キュウ and キン remain source-only within this lesson, not
+claimed absent from dictionaries or offered as animal-noun alternatives.
+The broad animal meaning includes aquatic turtles and land tortoises.
+The unexpected 乙 indexing radical stays separate from the animal meaning
+and the explicitly labelled modern-shape mnemonic.
+
+The [ledger](n1-sources/batch-028-progress.json) preserves 108 complete
+lexical/comparison JMdict families, all reading dispositions, one reciprocal
+pair and a direct animal-category quiz guard. No baseline component pair
+is activated, no reused teaching changes and no vocabulary level is inferred.
+The [external evidence](n1-sources/batch-028-external-evidence.json) records
+actual sections, simplified-extraction omissions and an excluded wrong-entry
+redirect. Source/draft checks are not independent review or native evidence.
+
+Batch 027 is [published and verified](n1-sources/batch-027-publication.json)
+at terminal `55ca3c1`: **54 additions delivered; 1,174 still to deliver**.
+This draft does not increase that count. Two serial blind different-family
+reviews, reconciliation and fresh Android/combined-main/publication gates
+remain pending. Compatible Android `f9b59a2` or later and the explicitly
+outstanding physical-phone/general-release status remain unchanged.
+Earlier sections retain their historical checkpoint states.
+
 ## Batch 027: pigeon/dove draft, not reviewed or published
 
 The [frozen batch 027](n1-sources/batch-027-membership.json) adds **鳩**
