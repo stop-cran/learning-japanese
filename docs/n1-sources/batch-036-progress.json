@@ -3,7 +3,7 @@
   "batch": "036",
   "baseCommit": "285df83ebf69859f1032dc30c44b9f4be06f5486",
   "membership": ["獣"],
-  "status": "validated-local-draft-not-independently-reviewed",
+  "status": "initial-reviews-complete-corrections-pending-confirmation",
   "drafted": ["獣"],
   "reviewClosed": [],
   "published": [],
@@ -11,13 +11,16 @@
   "dictionaryPackets": [
     {"selection": "batch-036-lexical-selection.json", "xml": "batch-036-jmdict.xml"},
     {"selection": "batch-036-comparison-selection.json", "xml": "batch-036-comparison-jmdict.xml"},
-    {"selection": "batch-036-draft-comparison-selection.json", "xml": "batch-036-draft-comparisons-jmdict.xml"}
+    {"selection": "batch-036-draft-comparison-selection.json", "xml": "batch-036-draft-comparisons-jmdict.xml"},
+    {"selection": "batch-036-review-comparison-selection.json", "xml": "batch-036-review-comparisons-jmdict.xml"}
   ],
-  "extractedDistinctFamilies": 167,
+  "extractedDistinctFamilies": 168,
   "authorInspection": {
     "lexicalFamilies": 124,
     "comparisonFamilies": 15,
-    "distinctCompleteFamilies": 167,
+    "distinctCompleteFamilies": 168,
+    "reviewCorrectionFamilies": 1,
+    "reviewCorrectionInspectedSpan": [1,29],
     "draftComparisonFamilies": 28,
     "draftComparisonInspectedSpan": [1,915],
     "draftComparisonBoundedReads": 5,
@@ -112,7 +115,7 @@
   },
   "wordQuizAudit": {
     "directExclusions": [
-      {"word":"獣","exclude":["動物","家畜","熊","牛","犬","猪","猿","猫","虎","豚","象","馬","鹿","鼠","兎"],"reason":"Conservative direct general-beast/category-versus-animal-label safeguards: actual15articles and complete applicable families inspected. 獣ordinaryanimal sense admits these mammal referents; do not rely on preexisting animal/exclusion chains. These edges do not claim species names are synonyms or wild/domestic categories identical."}
+      {"word":"獣","exclude":["動物","家畜","熊","牛","犬","猪","猿","猫","虎","豚","象","馬","鹿","鼠","兎","生き物"],"reason":"Original15directguards retained. InitialClaude found additional creature-label overlap: actual生き物 article and complete frozen1378590 include living creature/animal senses. Added direct獣/生き物 only, not transitive protection through生物 or a species-synonym clique."}
     ],
     "newTitles":[{"word":"獣","title":"beast"},{"word":"獣医","title":"veterinarian"}],
     "comparisons":"No existing獣/獣医or kanaalias article found. 動物 broadanimal and家畜domestic category have direct safeguards; actual15named animal/categoryarticles inspected. Medical医者/医師 actualtitles/completefamilies/ordinaryhuman roles distinct from precise veterinarian; no synonymguard added. No existing獣医師 article. CW073 and full candidateinventory reviewed; no transitiveprotections assumed.",

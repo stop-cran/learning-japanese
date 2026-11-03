@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "batch": "036",
+  "execution": 146,
+  "initialSnapshot": "47edd129ece0c36d7d5eaf50d1d097dfd544994f",
+  "status": "source-backed-corrections-pending-original-session-confirmation",
+  "findings": [
+    {
+      "id": "C1",
+      "initialReviewer": "claude-opus-5.5",
+      "facet": "scoped coverage",
+      "severity": "Minor",
+      "evidence": "Actual supplied Daijisen けだもの heading marks 獣 with ▽. Newly retrieved actual notation guide section5 explicitly defines ▽ as a reading outside the Joyo table. The unmarked けもの headword supplies the contrast.",
+      "correction": "Both teaching files now identify the outside-table spelling/reading and explicitly separate this from rarity or obsolescence. No 'default in every context', frequency ranking, invalid pronunciation or insult-only rule added.",
+      "disagreement": "GPT initial found no defect in its assigned scope. The precise omission is adopted as a localized useful spelling clarification, not a universal demand for Joyo labels on every reading."
+    },
+    {
+      "id": "C2",
+      "initialReviewer": "claude-opus-5.5",
+      "facet": "quiz-label coverage",
+      "severity": "Minor",
+      "evidence": "Actual words/生き物.md title is living thing; creature; its ordinary animal contexts and complete frozen JMdict1378590 living creature/animal senses overlap the new beast noun. Original167-family packet did not include this family.",
+      "correction": "Add only direct 獣/生き物 exclusion. Preserve 生き物's existing N3 identity/metadata/body and its separate 生物 exclusion; do not infer transitive protection or species synonym cliques.",
+      "disagreement": "GPT initial accepted original15guards without independently extending its assigned comparison inventory to 生き物. This is additional scoped coverage, not proof that it rejected the same observation."
+    }
+  ],
+  "newExternalSource": {
+    "url": "https://www.weblio.jp/shogakukan.jsp#5",
+    "rawArtifact": "control/artifacts/batch-036-daijisen-notation.html",
+    "sha256": "69abeedbd8b63e3ef010ad9fb8662b29bce2e199ae06303d7dfdb8d9176241f3",
+    "inspectedRange": [700,712],
+    "exactEvidenceLocation": "line707; section5 [2] 常用漢字",
+    "retrieval": "Coordinator curl actual complete public HTML, 2026-11-03; inspected bounded actual guide section, not entire HTML. Earlier simplified web_fetch omitted the notation; its successful extraction was not verification.",
+    "limits": "Notation supports outside-table status, not comparative frequency or pronunciation rarity. Original reviewers receive supplied raw bytes with provenance; no independent upstream retrieval is inferred."
+  },
+  "newFrozenFamily": {
+    "selection": "batch-036-review-comparison-selection.json",
+    "packet": "batch-036-review-comparisons-jmdict.xml",
+    "entryIds": ["1378590"],
+    "sha256": "ce17ced7ee46d9a64b15d1d3196b6f863ffca17343244d8d0a26536d2129ca8d",
+    "completeInspectedRange": [1,29],
+    "restriction": "生きもの is search-only; actual 生き物/いきもの primary pair is retained. All four senses and spelling/reading flags inspected.",
+    "count": "Original167 complete families unchanged; disjoint one correction family yields168. No fresh coordinator reread of original1931lines claimed."
+  },
+  "optionalDispositions": [
+    {"item":"Explain English vet before contrasting veteran","status":"optional","decision":"Existing sentence explicitly teaches the English abbreviation; no factual defect or required Japanese vocabulary expansion."},
+    {"item":"Change my dog's illness to the dog's illness","status":"optional","decision":"Japanese often leaves possession implicit; current natural contextual translation is permissible, not a necessary correction."},
+    {"item":"Use wild animal instead of beast in translation","status":"optional","decision":"Current beast translation matches scoped gloss without adding a lexical wild-only restriction."},
+    {"item":"Add old form, archaicしし or radical-name recognition","status":"optional","decision":"Not necessary for the bounded three-source-reading objective; no added glyph or historical scope."}
+  ],
+  "limits": "Two independent blind initial reports are preserved unchanged with actual process evidence. Initial Claude has one internal parallel tool overlap; GPT has zero. This correction record is coordinator adjudication, not another blind review. Original-session confirmations, fresh Android, current-main/CI/public ZIP and whole-set acceptance remain pending."
+}
