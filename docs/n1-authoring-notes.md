@@ -37,11 +37,11 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 023: sweetfish draft, not reviewed or published
+## Batch 023: sweetfish textual review closed, native and publication pending
 
 The [frozen batch 023](n1-sources/batch-023-membership.json) contains **鮎**
 and one necessary support article, 鮎 (あゆ), sweetfish/ayu. Its
-[draft ledger](n1-sources/batch-023-progress.json) preserves all four
+[batch ledger](n1-sources/batch-023-progress.json) preserves all four
 metadata readings in source order and selects only **あゆ**. The complete
 28 lexical/comparison families and exact external dictionary evidence
 distinguish the Japanese fish noun from the character's catfish sense.
@@ -57,9 +57,29 @@ are checked mechanically. The displayed 广 and 鯰 forms are absent from the
 bundled font cmaps; their supported-native disposition must be established
 before publication, not inferred from cmap absence or previous unrelated tests.
 
-This is **an unreviewed local draft**, not an additional published card.
-Independent serial two-family review, reconciliation, applicable native/fresh
-Android and combined-main/CI/exact public-ZIP gates remain pending.
+Both blind initial reviewers, actual `claude-opus-5.5` and `gpt-6.1-sol`,
+reviewed the same signed teaching snapshot `43428b8`: both articles, all
+28 complete dictionary families, five kanji/five word comparisons and all
+three textual facets. Neither established an actionable defect or consequential
+textual uncertainty. The [reconciliation](n1-reviews/batch-023-reconciliation.json)
+preserves both original reports and four nonblocking Claude suggestions;
+teaching remains unchanged without unnecessary confirmation reviews.
+
+Reviewer processes exited serially and the first report was archived before
+the second launch. Actual internal overlapping starts were **1/0**: Claude
+read two bounded guidance passages together despite the one-call instruction.
+The [execution audit](n1-sources/batch-023-review-audit.json) preserves that
+deviation, zero XML range violations and complete returned assigned ranges;
+returned bytes are not comprehension or native certification.
+
+Fresh 353 Python tests, validator, unchanged manifest, vocabulary consistency
+at its existing pilot stage and source/baseline/reading/link/stroke/font/budget
+audits passed. Neither 广 nor 鯰 belongs to the inherited 40-character
+fallback target set; no exact prior native disposition for them was established.
+
+This is **textually review-closed, local and unpublished**, not an additional
+published card. The 广/鯰 native gate, fresh Android and combined-main/CI/exact
+public-ZIP gates remain pending.
 Published coverage stays **49 additions; 1,179 still to deliver**.
 Physical-phone/general-release acceptance remains explicitly outstanding.
 
