@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "batch": "013",
+  "status": "textual-review-closed-local-unpublished",
+  "authoredSnapshot": "f093f464c35423f728e3a0e756bee358b061d65c",
+  "reviewedTeachingSnapshot": "474412610a4449b78490bd4455e8bb7fee198909",
+  "initialReconciliation": "batch-013-initial-reconciliation.json",
+  "sourceAndProcessAudit": "../n1-sources/batch-013-review-audit.json",
+  "scope": {
+    "teaching": ["kanji/榛.md", "words/榛.md"],
+    "facets": ["correctness", "scoped coverage", "textual phone comprehensibility"],
+    "fullDictionaryFamilies": 41,
+    "comparisonWords": 7,
+    "comparisonKanji": 4,
+    "changedReusedTeaching": [],
+    "confirmationExtra": "Actual words/実.md, primary readingみ and applicable fruit/nut/seed sense."
+  },
+  "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+  "originalReports": [
+    "batch-013-initial-claude.md",
+    "batch-013-initial-gpt.md",
+    "batch-013-confirmation-claude.md",
+    "batch-013-confirmation-gpt.md"
+  ],
+  "findings": [
+    {
+      "id": "G1",
+      "severity": "minor",
+      "facet": "scoped coverage/navigation",
+      "location": "words/榛.md:20",
+      "status": "resolved",
+      "remedy": "Linked the substantive 実 (み) introduction to the existing companion article, without changing its visible label, sense or sentence.",
+      "evidence": "Exact correction diff and both original-session confirmations; target metadataみ and plant-fruit/nut/seed explanation independently reread by both.",
+      "confidence": "high",
+      "severityQualification": "Claude confirmation calls it navigation polish/comprehensibility; retained as minor scoped navigation omission under the repository linking contract, not a Japanese correctness defect."
+    }
+  ],
+  "optional": "All three initial Claude observations remain optional, with source-backed bounded dispositions in the initial reconciliation. Full archaic spelling not added because optional莽 lacks all three bundled cmaps; kana/composition/encoded source link and complete contributor family retained. Unrelated homophones and はりのき need no expansion for this scoped lesson.",
+  "contributionComparison": "Same initial snapshot, rubric and source access. G1 unique to GPT anywhere in initial reports. Claude uniquely offered three nonblocking observations; no general model ranking or equal depth/comprehension claimed.",
+  "verdicts": {
+    "kanji/榛.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+    "words/榛.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"}
+  },
+  "unresolvedConsequentialClaims": [],
+  "readingQualification": "All four raw source readings and order preserved; onlyはしばみ selected. ハン on classification attributed to source, not reconstructed from whole-word kana. Hazel/alder and historical identities distinguished; no source-only reading offered.",
+  "process": "Initial Claude32calls/GPT38; original-session confirmations5/5. Each actual process exited0 and first report was archived before next launch; actual models match requests; internal overlaps0/0/0/0. Full originals/raw hashes/session/model/read/process receipts preserved without rewriting. Mandatory assigned local text fully returned in both initials and both confirmations.",
+  "limits": "Frozen supplied XML and task snapshot identities are not independent upstream retrieval or Git verification. Both inventory audits were scoped; GPT additionally viewed1-120. Empty字通/Daijisen compound body and gaiji sections not evidence. Local helper first compared rawGitCRLF to normalized text and failed; normalization fixed the receipt assertion, no additional teaching edit or weakened requirement. Returned ranges/hashes prove available bytes, not comprehension, equal depth, live-quiz safety, phone readability or native-speaker certification. Local textual closure is not fresh013Android/currentmain/publicationCI/immutableZIP acceptance. Accepted pilot native/all40/160font evidence inherited only unchanged production scope; physicalphone/generalrelease outstanding."
+}

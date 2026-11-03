@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 013: bounded draft, independent review pending
+## Batch 013: textual review closed, publication pending
 
 The [frozen packet](n1-sources/batch-013-membership.json) contains **榛**,
 one grade-9 character bounded by hazel/alder homographs and reading-layer
@@ -56,8 +56,17 @@ An optional unbundled character in the archaic vegetation compound is omitted
 from runtime text, while its exact spelling/family remains in contributor
 evidence and its dictionary link. No font or archive guard changes.
 
-This is a **local unreviewed draft**, not published coverage. Two serial blind
-different-family initial reviews, reconciliation and fresh batch acceptance
+This batch is **textually review-closed locally**, not published coverage.
+The [reconciliation](n1-reviews/batch-013-reconciliation.json) preserves two
+serial blind different-family initial reports and both original-session
+confirmations. GPT established one minor navigation omission: the substantive
+実 (み) introduction now links the existing fruit/nut/substance companion.
+Both reviewers confirmed the exact link-only correction; all other teaching,
+metadata, exclusions and geometry are unchanged. Three Claude observations
+remain optional, not expansion requirements.
+The [review audit](n1-sources/batch-013-review-audit.json) verifies actual model,
+process and returned-text receipts, source/baseline preservation and local
+budgets. Fresh Android and combined-main/CI/immutable-public-ZIP acceptance
 remain pending. Published coverage stays **39/1,228; 1,189 remaining**.
 Supporting-word levels are not inferred from kanji. Compatible Android
 `f9b59a2` or later is required; physical-phone/general-release acceptance is
