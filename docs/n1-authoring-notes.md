@@ -37,7 +37,34 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 012: textual review closed, publication pending
+## Batch 013: bounded draft, independent review pending
+
+The [frozen packet](n1-sources/batch-013-membership.json) contains **榛**,
+one grade-9 character bounded by hazel/alder homographs and reading-layer
+complexity. Its necessary supporting article teaches はしばみ, Asian hazel;
+the old alder name はり and established 榛の木 はんのき remain distinct.
+All four source readings and their order are preserved; only **はしばみ**
+is selected for questions. The source's ハン on classification is explicitly
+attributed, not reconstructed from the whole word's kana.
+
+The [draft ledger](n1-sources/batch-013-progress.json) records **41 complete
+JMdict families** across four packets, one reciprocal pair, four direct
+broader-label safeguards and no changed reused article or baseline metadata.
+The [external evidence](n1-sources/batch-013-external-evidence.json) identifies
+actual native dictionary headings and preserves failed navigation limits.
+An optional unbundled character in the archaic vegetation compound is omitted
+from runtime text, while its exact spelling/family remains in contributor
+evidence and its dictionary link. No font or archive guard changes.
+
+This is a **local unreviewed draft**, not published coverage. Two serial blind
+different-family initial reviews, reconciliation and fresh batch acceptance
+remain pending. Published coverage stays **39/1,228; 1,189 remaining**.
+Supporting-word levels are not inferred from kanji. Compatible Android
+`f9b59a2` or later is required; physical-phone/general-release acceptance is
+explicitly outstanding, with pilot native/font evidence inherited only for
+unchanged production scope.
+
+## Batch 012: published and verified
 
 The [frozen packet](n1-sources/batch-012-membership.json) is **桂・梢**:
 a tree name with aromatic-tree, shogi and homophone layers, contrasted with a
@@ -57,7 +84,7 @@ not a transitive synonym clique. Optional ancillary spelling and water-form
 literals outside the bundled cmaps were omitted from runtime text, with full
 source spellings retained in contributor evidence and no font or guard changes.
 
-These cards are **textually review-closed but not published**.
+These cards are **published and verified for bounded owner testing**.
 The [reconciliation](n1-reviews/batch-012-reconciliation.json) preserves two
 serial blind different-family initial reports and both original-session
 confirmations. Two minor issues in 桂 were corrected: ambiguous English
@@ -65,8 +92,10 @@ confirmations. Two minor issues in 桂 were corrected: ambiguous English
 component. All four teaching files are CLEAN in the bounded textual scope.
 Actual execution receipts retain the denied Claude Git HEAD view and partial
 dictionary fetches; returned text is not comprehension or native acceptance.
-Fresh Android/current-main acceptance and normal publication/CI/immutable ZIP
-gates remain pending. Published coverage stays **37/1,228; 1,191 remaining**.
+The [publication record](n1-sources/batch-012-publication.json) retains the
+exact parent-approved discovery recovery, fresh non-skipped Android cases,
+combined-main validation, green CI and every immutable public ZIP runtime
+hash at terminal `0410011`. Published coverage is **39/1,228; 1,189 remaining**.
 Supporting-word levels are not inferred from their kanji. Compatible Android
 `f9b59a2` or later is required; physical-phone/general-release acceptance
 remains explicitly outstanding. Prior pilot native/font evidence is inherited
