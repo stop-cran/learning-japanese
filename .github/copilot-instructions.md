@@ -155,6 +155,27 @@ Send concrete corrections or guidance gaps to [repository issues](https://github
 When a user corrects the agent, a rule wrongly blocks reasonable work, conflicting sources require the user's resolution, or the user supplies missing guidance, offer to record that feedback.
 Keep that offer opt-in and at most once per session unless a distinct failure mode appears. Do not create an issue without authorization.
 
+## Translation editions: source and correction boundaries
+
+The EN edition remains English. For the [Russian edition](https://github.com/stop-cran/learning-japanese-ru),
+use the [checkpoint plan](https://github.com/stop-cran/learning-japanese-ru/blob/main/docs/IMPLEMENTATION-PLAN.md):
+complete reviewed RU instructions and a small real pilot precede broad translation.
+
+- Re-enumerate active instructions/agents and normative references at the source revision adopted for a translation;
+  a fixed old checklist can miss new/rescoped guidance. The [RU instruction-plan review](https://github.com/stop-cran/learning-japanese-ru/issues/1#issuecomment-6599291063)
+  established this gap and inherited scoped coverage gaps for grammar/counters/scenes/curriculum.
+- Treat reviewed EN text/source evidence as a reliable base, not infallible truth or Russian approval. Translate the
+  teaching rule rather than English-dependent comparisons: `words/待つ.md`'s "wait for" contrast may disappear in RU,
+  but awaited-person `を` and waiting-place `で` guidance must not. Verify useful new Russian clarifications separately.
+- A shared generator change must test the current EN reader against newly generated EN content, not merely an old
+  static fixture; RU fail-closed versioning must not inadvertently break live EN packages. See [EN #61](https://github.com/stop-cran/learning-japanese/issues/61).
+
+For this localization project, the user has requested ongoing methodological capture. In the same correction batch,
+put verified reusable content/format findings into the relevant EN/shared or RU instructions, with a finding/evidence
+reference and scoped invariant; put app mechanisms in app instructions. Fix/re-review the defect and affected regressions,
+not just its documentation. Amend the implementation plan when dependencies or next-step scope change. Pending hypotheses
+and unperformed pilot/device tests remain explicit; no manufactured finding quota or universal rule from one anecdote.
+
 ## Editing cards (any file under `kanji/`, `words/`, `articles/`, `strokes/`)
 
 After every content edit, before committing: `python tools/validate.py` and `python tools/build_manifest.py`, and commit the regenerated
@@ -166,6 +187,11 @@ disappears, and cards that reference it fail to parse). Then check pairs in [doc
 
 For each revision of the review rules, add a rule grounded in an observed failure, retire one that has not proved useful, or resolve a demonstrated conflict. Record the evidence and add/remove/regroup decision in the commit or PR and a short entry below. Do not add speculative process.
 
+- **2026-11-03 - Translation boundaries (add/resolve conflict):** [RU #1](https://github.com/stop-cran/learning-japanese-ru/issues/1#issuecomment-6599291063)
+  found that a fixed six-file checklist could miss future instruction changes and inherited path-scope gaps.
+  The actual `待つ` English comparison shows why removing an audience-specific comparison must not remove its Japanese rule.
+  [EN #61](https://github.com/stop-cran/learning-japanese/issues/61#issuecomment-6599265727) clarifies current-reader/new-manifest
+  compatibility. Record these mechanisms and the user's requested pilot correction loop without claiming future integration passed.
 - **2026-10-04 - Initial guide (add):** Records the agreed lessons from the [article revisions](https://github.com/stop-cran/learning-japanese/commit/0a813d9d1e3c180edd7c9691cfeffc93806711d8) and independent review/reconciliation: explicit attachment guidance, careful rare-spelling evidence, calibrated severity, and scope-aware closure. The limits above remain outside this guide's guarantees.
 - **2026-10-08 - Card expansion (add/regroup):** The 134-card N4 expansion and the request for facet-separated, three-model review
   require explicit coverage assignments and a matched shared sample for contribution comparisons. Preserve blind initial findings and
