@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 021: silkworm unreviewed draft
+## Batch 021: silkworm locally accepted, publication pending
 
 The [frozen batch 021](n1-sources/batch-021-membership.json) contains **蚕**
 and one necessary support article, 蚕 (かいこ), silkworm. Its
@@ -57,11 +57,27 @@ activated; the necessary new support pair links both ways. Existing accepted
 繭 and 桑 teaching is unchanged. Source checks, generated strokes and font
 cmaps are not independent review or phone evidence.
 
-This is **not published or review-closed**. Published coverage remains
-47 additions, with 1,181 still to deliver. Two serial blind model-family
-reviews, reconciliation and fresh Android/current-main/CI/immutable-ZIP
-publication gates remain pending. Physical-phone/general-release acceptance
-is explicitly outstanding; compatible Android `f9b59a2` or later is required.
+Both blind different-family initial reviews covered the same frozen teaching,
+all 64 families and the actual comparison cards. The
+[reconciliation](n1-reviews/batch-021-reconciliation.json) preserves both
+complete original reports, three nonblocking optional dispositions and the
+initial Claude internal read overlaps (7, versus GPT's 0). Reviewer processes
+exited serially; the internal overlap is not reported as strict compliance.
+No actionable defect or consequential unresolved claim remains.
+
+The exact execution083 Gradle permission denial and parent exact-command
+recovery are retained. Fresh RealContentTest 3/3 and RareHanTest 1/1 passed
+without errors, failures or skips against this sibling checkout. The
+[combined-tree acceptance audit](n1-sources/batch-021-acceptance-audit.json)
+records 353 Python tests, frozen-source/baseline/reading/link/pinned-stroke/font
+checks, manifest freshness and unchanged budgets. Latest main was already
+integrated; runtime is unchanged from the recovered Android check.
+
+This is **locally accepted, not yet published**. Published coverage remains
+47 additions, with 1,181 still to deliver until green CI and every immutable
+public ZIP runtime hash are verified. Physical-phone/general-release
+acceptance is explicitly outstanding; compatible Android `f9b59a2` or later
+is required. Cmap checks do not establish a new native or phone pass.
 
 ## Batch 020: butterfly published and verified
 
