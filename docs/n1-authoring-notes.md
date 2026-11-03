@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 019: mosquito draft, not reviewed or published
+## Batch 019: mosquito textually review-closed
 
 The [frozen batch 019](n1-sources/batch-019-membership.json) adds **蚊** and
 reuses the existing N2 word article 蚊 (か), adding only its substantive
@@ -50,9 +50,20 @@ to ブン; this medical recognition example is not a source-only reading.
 Four complete packets preserve 65 lexical/comparison/example families,
 including all 44 containing 蚊. Existing 虫 remains excluded against the
 mosquito word; the new kanji uses three distinct wrong labels, 文・枚・改.
-This is unreviewed authoring, not delivery: **45 additions are published,
-1,183 remain**, and independent two-family review, fresh Android and
-combined-main/publication gates remain pending for this draft.
+Both blind model-family initial reviews covered the same signed snapshot,
+the new card and complete reused article, all 65 families and eight actual
+comparison cards. The [reconciliation](n1-reviews/batch-019-reconciliation.json)
+retains both original reports and a bounded original-Claude confirmation.
+The modern short-reading source limitation and contextual counting-gloss
+suggestion were withdrawn; whole-word reading polish remains optional.
+No teaching change was needed. Claude's initial paired guidance reads remain
+a disclosed process deviation, not retroactively corrected by the follow-up.
+
+This is **textually review-closed local teaching**, not delivery:
+**45 additions are published, 1,183 remain**. Fresh batch 019 Android and
+combined-main/CI/immutable-public-ZIP gates remain pending. Compatible Android
+`f9b59a2` or later is required; physical-phone/general-release acceptance
+remains explicitly outstanding.
 
 ## Batch 018: cocoon textually review-closed
 

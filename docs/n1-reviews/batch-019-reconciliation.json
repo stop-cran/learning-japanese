@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "batch": "019",
+  "status": "textual-review-closed-local-unpublished",
+  "authoredSnapshot": "3e2bf34ee3b9621cbaec8713f2b157fdeb74c764",
+  "reviewedTeachingSnapshot": "3e2bf34ee3b9621cbaec8713f2b157fdeb74c764",
+  "sourceAndProcessAudit": "../n1-sources/batch-019-review-audit.json",
+  "scope": {
+    "teaching": ["kanji/蚊.md", "words/蚊.md"],
+    "facets": ["correctness", "scoped coverage", "textual phone comprehensibility"],
+    "fullDictionaryFamilies": 65,
+    "comparisonWords": 3,
+    "comparisonKanji": 5,
+    "changedReusedTeaching": ["words/蚊.md:25; exact substantive component link only; complete article reviewed"]
+  },
+  "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+  "originalReports": ["batch-019-initial-claude.md", "batch-019-initial-gpt.md", "batch-019-bounded-claude.md"],
+  "findings": [],
+  "sourceAccessReconciliation": [
+    {
+      "id": "C-L1",
+      "status": "withdrawn",
+      "claim": "The statement that ordinary modern か is not かあ is unsourced.",
+      "disposition": "Exact JMdict1196540 givesか/カ; actual Digital Daijisen and Seisenban noun headings giveか【蚊】. The latter's補助注記 explicitly discusses ancient音義 glossaries and reconstructed longカー, not ordinary present-day pronunciation. The card's modern qualification and existing source citation are supported. Own-original-Claude bounded confirmation withdraws the initial source limitation; original report is preserved.",
+      "evidence": "batch-019-jmdict.xml:3-25; https://kotobank.jp/word/%E8%9A%8A-456268, actual named dictionary headings and historical補助注記; original bounded-Claude report/execution; preserved raw f7f78de7d3c663a6f5acee6b620d715391f04df69751ad702f9ab284e04972f7.",
+      "confidence": "high"
+    }
+  ],
+  "optional": [
+    {
+      "id": "C-O1",
+      "status": "withdrawn",
+      "claim": "Expand 一匹's gloss from 'one' to 'one small creature'.",
+      "disposition": "words/蚊.md:19-21 already supplies a mosquito-counting example and explicitly identifies the small-creature counter. Own-original-Claude withdraws the suggestion; no facet defect."
+    },
+    {
+      "id": "C-O2",
+      "status": "optional",
+      "claim": "Explicitly label 蚊帳かや as a whole-word reading.",
+      "disposition": "Both articles display the complete word with its reading and gloss; neither divides the kana or uses it to assert per-character allocation. Digital Daijisen marks it難読 and full1590620 preserves alternate spelling/obsolete reading restrictions. Original reviewer confirms this is nonblocking polish, not a coverage defect. No teaching edit is made."
+    },
+    {
+      "id": "C-O3",
+      "status": "optional",
+      "claim": "Pinpoint the historical Seisenban long-pronunciation note in the citation.",
+      "disposition": "Added only in the dependent confirmation, not a unique blind-initial contribution. Existing page citation supports the modern reading; historical reconstruction is intentionally not taught. No additional historical prose or citation is required."
+    }
+  ],
+  "contributionComparison": "Matched snapshot, rubric and source access. Neither initial established an actionable defect. Both independently verified full source readings, curation, standalone identity, compound recognition, mnemonic, natural examples and actual default distractor labels. Both observed modern short pronunciation; GPT explicitly distinguished the historical note, while Claude initially left a low-stakes source limit and withdrew it after bounded own-session inspection. This is precise source clarification, not a unique defect or model ranking. Equivalent observations anywhere in either report remain shared. No equal-depth/native certification.",
+  "verdicts": {
+    "kanji/蚊.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+    "words/蚊.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"}
+  },
+  "unresolvedConsequentialClaims": [],
+  "readingQualification": "All2sourceentries/order preserved; onlyかoffered with own linked row and exact standalone1196540pair. ブン explicitly allocated by Daijisen's character heading to飛蚊症;1626600 establishes the whole medical word, recognition not selected and NOTsource-only. Full1590620 obsoleteぶんちょう and1536910 spelling/sense restrictions remain evidence, not unrestricted aliases. Katakanaカ is kana-only. No frequency/origin/name-use or medical causes/treatment claims.",
+  "quizQualification": "Three actual curated wrong labels文sentence-writing/枚flat-object-counter/改revise-reform avoid default four-choice fallback; ordinary secondary senses checked. Broader虫 is deliberately not a kanji distractor and existing word exclusion[虫] is preserved. Firefly and action labels are distinct; no extra direct word guard established. No transitive-exclusion or larger-quiz/full-corpus certification.",
+  "confirmationDisposition": "No teaching correction or diff. Own-original-Claude dependent follow-up reads original report and exact unchanged passages, freshly retrieves the Seisenban window and explicitly inherits Daijisen evidence from its initial read. No complete65family repeat review.",
+  "processDeviationDisposition": "InitialClaude paired guidance reads violate the internal one-call instruction; original self-disclosure and actual execution receipt remain intact. Dependent serial confirmation cannot retroactively establish compliance. Reviewer processes never overlap and each original report is archived before next launch. Do not repeat complete packets to manufacture clean process. Returned text/hash coverage establishes bytes, not comprehension or perfect execution.",
+  "nativePending": [],
+  "android": "Fresh019RealContentTest3/RareHanTest1 pending; unchangedclean dedicatedf9b59a2. No fresh019native/device/Gradle attempt or old018XMLreuse.",
+  "limits": "Coordinator verifies signed local snapshot, frozen input/packet hashes, exact returned assigned ranges and actual models/process exits; reviewers do not independently verify Git/upstream bytes. Returned text/hashes do not prove comprehension, equal depth, frequency, native-speaker certification or learning effectiveness. Original1/0/0internal overlaps and Claude source limitation remain historical. Gaiji/pitch accent/full inventory/larger quizzes not certified. All19newtextHan covered in unchanged3fonts; cmaps not new native/phone evidence. Inheritedpilot/native/all40/160fontscope unchanged. Fresh019Android/currentmain/CI/everyimmutablepublicZIPhash pending. Physical-phone/general-release explicitly outstanding, not a bounded-owner-testing veto."
+}
