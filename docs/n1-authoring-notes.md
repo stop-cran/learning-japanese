@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 017: firefly textually review-closed, native gate pending
+## Batch 017: firefly published and verified
 
 The [frozen batch 017](n1-sources/batch-017-membership.json) contains **蛍**,
 one necessary animal-noun article and a single component link in the existing
@@ -57,11 +57,13 @@ synonym claims. No incomplete historical gaiji rendering is used as etymology.
 The [stroke/font audit](n1-sources/batch-017-stroke-audit.json) verifies the
 pinned eleven-stroke conversion. All 27 Han characters in the teaching were
 checked against the unchanged bundled fonts: 26 are present; the older 螢
-needs system fallback. **Native inspection of that newly introduced spelling
-is outstanding and required before publication**. The pilot's forty-target
-font evidence does not cover it.
+needs system fallback. Its [bounded native acceptance](n1-reviews/batch-017-native-acceptance.json)
+now records eight probes across four configured production families: 螢 is
+readable and distinguishable from 蛍, with the same Gothic fallback rather
+than four distinct bundled older-form designs. The pilot's forty-target
+font evidence is not extended to cover it by assumption.
 
-This is **textually review-closed local teaching**, not published content.
+This is **published and verified for bounded owner testing**.
 The [reconciliation](n1-reviews/batch-017-reconciliation.json) preserves two
 blind different-family initials on the same unchanged signed snapshot, all
 three teaching files and all 72 dictionary families. Neither established an
@@ -72,12 +74,22 @@ The [review audit](n1-sources/batch-017-review-audit.json) records serial
 reviewer process exits and complete assigned returned ranges. Claude's initial
 six-comparison-read overlap and GPT's truncated optional inventory introduction
 remain disclosed; later serial work does not retroactively establish strict
-initial compliance. Fresh Android, the new **螢 native inspection**, and
-combined-main/CI/immutable-public-ZIP acceptance remain pending.
-The preceding [batch 016 publication](n1-sources/batch-016-publication.json)
-delivered **43 additions; 1,185 still to deliver**. Draft 017 does not reduce
-that published remainder. Compatible-client and outstanding physical-phone/
-general-release qualifications remain unchanged.
+initial compliance. Original-Claude dependent inspection of five native PNGs
+found no actionable viewport defect; it is not another blind source review.
+The original envelope, ambiguous-selector and ghosted-dialog attempts remain
+preserved separately from the final two genuine terminal-status-0 cases.
+The final attempt imported the entire exact archive through production
+ContentSync once and exercised offline article, reciprocal-link and Back routes.
+It does not claim a new meaning/drawing session or physical-phone test.
+
+The [publication record](n1-sources/batch-017-publication.json) preserves fresh
+non-skipped Android 3+1, combined-main source/baseline/reading/link/stroke/font
+checks, 353 Python tests, green CI and every immutable public ZIP runtime hash
+at accepted `becadff`. Published coverage is **44 additions; 1,184 still to
+deliver**: 48 named source members plus the separate 妖 exception. Supporting
+word levels are not inferred from kanji. Compatible Android `f9b59a2` or later
+is required; physical-phone/general-release acceptance remains explicitly
+outstanding. This is not complete N1 coverage.
 
 ## Batch 016: historical textual-closure checkpoint
 

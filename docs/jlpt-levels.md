@@ -102,6 +102,20 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   Compatible-client and outstanding physical-phone/general-release
   qualifications remain unchanged; this is not complete N1 coverage.
 
+  [Batch 017](n1-sources/batch-017-publication.json), 蛍, is
+  **published and verified for bounded owner testing** after the intervening
+  batches. Both sourced readings are preserved and selected; one necessary
+  support article and the existing N2 蛍光灯 component link were reviewed.
+  Two-family textual reconciliation and bounded native inspection of the older
+  螢 form retain their original process and failed-attempt limits.
+  Fresh non-skipped Android, combined-main checks, green CI and every immutable
+  public ZIP runtime hash passed at accepted `becadff`.
+  Published coverage is **44 additions; 1,184 still to deliver**:
+  48 named source members plus the separate 妖 exception.
+  Supporting-word levels are not inferred from kanji; compatible Android
+  `f9b59a2` or later and the outstanding physical-phone/general-release
+  qualifications remain explicit. This is not complete N1 coverage.
+
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee
 about every character that could appear in the exam. Earlier-level knowledge is still needed for higher-level study.
