@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 030: tiger review correction, not yet closed or published
+## Batch 030: tiger textually review-closed, not published
 
 The [frozen batch 030](n1-sources/batch-030-membership.json) adds **虎**
 and activates the component link in the existing 虎 (とら) article.
@@ -59,8 +59,15 @@ identified the 虎/酔っ払い secondary-sense overlap: Claude called it option
 whereas GPT established a minor ambiguity in an uncontextualized word quiz.
 Animal-focused article prose does not contextualize a quiz showing only 虎.
 The direct exclusion is added on 虎; 酔っ払い/酔う remains unchanged.
-Original-session changed-passage confirmation and fresh
-Android/combined-main/publication gates remain pending.
+Both original sessions confirmed the exact safeguard and preserved
+酔っ払い/酔う comparison; Claude withdrew its no-guard judgement.
+The [reconciliation](n1-reviews/batch-030-reconciliation.json) retains
+all four original reports. This is a shared observation, not a unique
+model discovery merely because the initial labels differed.
+The initial Claude run had one internal read overlap; later runs had none.
+All prescribed initial scope returned; supplied versus independently
+fetched dictionary evidence and bounded confirmation limits remain explicit.
+Fresh Android/combined-main/publication gates remain pending.
 
 The batch audit now applies all recorded exact replacements for a reused
 article together. Its only permitted metadata exception is an explicitly
@@ -68,6 +75,11 @@ recorded, distinct, strictly additive `quiz_exclusions` safeguard; every
 original exclusion and other metadata field must remain unchanged.
 This is grounded in batch 030's inherited secondary-sense finding, not
 permission to rewrite existing cards or widen exclusions transitively.
+Fresh 361 Python tests and source/baseline/link/reading/stroke/font/manifest/
+budget checks passed at the corrected teaching snapshot `ad82bdd`.
+The conservative whole-file Han check includes the new nonrendered
+exclusion metadata: 16 characters, 15 in all three bundled cmaps.
+The original learner-visible body and inherited 虍 disposition are unchanged.
 
 Batch 029 is now [published and verified](n1-sources/batch-029-publication.json)
 at terminal `625cc32`: **56 additions delivered; 1,172 still to deliver**.
