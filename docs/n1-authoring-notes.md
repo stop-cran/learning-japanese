@@ -37,7 +37,41 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 010: textual review closed, publication pending
+## Batch 011: bounded draft, independent review pending
+
+The [frozen packet](n1-sources/batch-011-membership.json) is **梓・橘**,
+two remaining grade-9 plant characters with printing, botanical naming,
+historical citrus and name-use risks. Two necessary plant-noun support articles
+provide two reciprocal pairs; neither activates a baseline-declared pair.
+No reused teaching or baseline metadata changes.
+
+The [draft ledger](n1-sources/batch-011-progress.json) preserves all **four**
+source readings in order and offers **あずさ・たちばな**. シ and キツ
+have actual printing/citrus examples and are retained for recognition, not
+declared source-only or inferred from names. Four frozen packets contain
+**71 complete JMdict families**. The
+[external evidence](n1-sources/batch-011-external-evidence.json) distinguishes
+actual native/on/character headings, empty extracted sections and a truncated
+encyclopedia overview. Teaching separates Japanese azusa-tree naming from the
+Chinese catalpa/printing layer and modern wild tachibana from older edible
+mandarin uses, without manufacturing universal species or substitution rules.
+Twelve direct word safeguards cover actual broader tree/plant/fruit/flower
+labels; different species and named historical perfumes are not a synonym clique.
+The first glyph audit caught ancillary 巫 and 枸 outside the bundled cmaps;
+the optional runtime spellings were replaced with kana and English descriptions,
+while the complete dictionary spellings remain in contributor evidence.
+Source readings and selected questions are unchanged; no font or guard is modified.
+
+These are **unreviewed local drafts**, not delivered additions. Two serial
+blind different-family initial reviews, reconciliation, fresh applicable
+Android checks and combined-main/CI/immutable-ZIP publication remain required.
+Published coverage stays **35/1,228; 1,193 still to deliver** after
+[batch 010's verified publication](n1-sources/batch-010-publication.json).
+Supporting-word levels are not inferred from kanji. Compatible Android
+`f9b59a2` or later is required; physical-phone/general-release acceptance
+remains explicitly outstanding.
+
+## Batch 010: textual review closure checkpoint (historical)
 
 The [frozen packet](n1-sources/batch-010-membership.json) is **笹・椋**,
 two grade-9 plant characters with complementary bamboo/category and tree/bird

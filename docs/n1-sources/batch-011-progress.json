@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "batch": "011",
+  "baseCommit": "1575d6a1423577bc3d36a5c3039e1e43cfa494f6",
+  "membership": ["梓", "橘"],
+  "status": "draft-not-independently-reviewed",
+  "drafted": ["梓", "橘"],
+  "reviewClosed": [],
+  "published": [],
+  "sourceSnapshot": "docs/n1-source-snapshot.json",
+  "dictionaryPackets": [
+    {"selection": "batch-011-lexical-selection.json", "xml": "batch-011-jmdict.xml"},
+    {"selection": "batch-011-comparison-selection.json", "xml": "batch-011-comparisons-jmdict.xml"},
+    {"selection": "batch-011-supplement-selection.json", "xml": "batch-011-supplement-jmdict.xml"},
+    {"selection": "batch-011-notes-selection.json", "xml": "batch-011-notes-jmdict.xml"}
+  ],
+  "supportMappings": [
+    {
+      "kanji": "梓", "article": "words/梓.md", "primaryReading": "あずさ",
+      "entryIds": ["1152850"], "selectedSenses": [1],
+      "newArticle": true, "status": "draft-not-independently-reviewed",
+      "recognitionSenses": "Full family senses2-6 retained: alternate tree identifications, unrestricted printing block, abbreviated bow/medium. Seisenban adds historical Noh accompaniment. Native plant lesson does not universalize catalpa or treat printing as restricted to shi."
+    },
+    {
+      "kanji": "橘", "article": "words/橘.md", "primaryReading": "たちばな",
+      "entryIds": ["1226460"], "selectedSenses": [1],
+      "newArticle": true, "status": "draft-not-independently-reviewed",
+      "externalSenseSupplement": "Actual Seisenban native heading distinguishes older edible mandarins, modern bitter/sour wild tachibana, alternate plant, flower, crest, named fragrant wood/blended fragrance, place, and separately family-name uses. Not claimed all present in single-sense JMdict plant family."
+    }
+  ],
+  "requiredReciprocalPairs": [["梓", "words/梓.md"], ["橘", "words/橘.md"]],
+  "changedReusedPassages": [],
+  "readingDispositions": [
+    {
+      "kanji": "梓", "kind": "on", "reading": "シ", "selected": false,
+      "entryIds": ["1152850", "1352580", "1880120", "1880430", "1881110"],
+      "example": "梓 し - printing block; 上梓 じょうし - publication; woodblock printing",
+      "reason": "Whole-character pair in full1152850 family directly establishes shi; its plant senses are reading-restricted while printing-block sense4 is not. Actual Daijisen shi headword and Seisenban shi/native-headword distinctions corroborate printing allocation; complete compounds have additional archival/carpentry layers. Valid useful recognition, not source-only or a name inference. Select native tree name for this bounded plant lesson rather than adding printing/publication support solely for an on question."
+    },
+    {
+      "kanji": "梓", "kind": "kun", "reading": "あずさ", "selected": true,
+      "entryIds": ["1152850", "1152860", "2577100"], "article": "words/梓.md",
+      "example": "梓 あずさ - azusa tree; 梓弓 あずさゆみ - spirit bow",
+      "reason": "Exact whole-character pair directly establishes allocation. Complete family distinguishes birch/catalpa/mallotus senses, reading-restricted abbreviation senses and unrestricted printing block. Actual Seisenban identifies current Japanese cherry-birch convention and older naming disagreement; no dictionary-order or priority-derived frequency assertion. Usually-kana flag belongs to sense1, not all senses or pronunciation. Selected support qualifies botanical identity and ritual abbreviations."
+    },
+    {
+      "kanji": "橘", "kind": "on", "reading": "キツ", "selected": false,
+      "entryIds": ["1212910", "2831569", "2611950", "2860807", "2861049", "2867237"],
+      "example": "柑橘類 かんきつるい - citrus; 柑橘 かんきつ - citrus",
+      "reason": "Actual Daijisen character heading explicitly lists kitsu and kankitsurui. Full JMdict families retain citrus/category/other plant/clan contexts; no inference from substring alone. Source search-only alternative spellings and rare/noncitrus terms not elevated to ordinary examples. Select independent tachibana plant reading for this bounded lesson, retain on citrus compounds for recognition; do not add an ancillary broad-category article merely to generate an on key."
+    },
+    {
+      "kanji": "橘", "kind": "kun", "reading": "たちばな", "selected": true,
+      "entryIds": ["1226460", "2842253", "2594720", "2189710"], "article": "words/橘.md",
+      "example": "橘 たちばな - tachibana orange/tree; 花橘 はなたちばな - blooming tachibana; tachibana flower",
+      "reason": "Exact single-character lexical pair establishes allocation, separate kana-only katakana alternative retained. Actual native dictionary broadens historical naming, flower/crest and named-fragrance uses without claiming all names are this species. Citrus plant is selected; surname/institution/poetical month/rare bird/other plant compounds are not extra questions or nanori. Whole-word karatachi/sudachi/kigawa readings do not establish new per-character metadata."
+    }
+  ],
+  "curatedProjection": [
+    {"kanji": "梓", "quizOnyomi": [], "quizKunyomi": ["あずさ"], "onKeys": [], "kunKeys": ["あずさ"]},
+    {"kanji": "橘", "quizOnyomi": [], "quizKunyomi": ["たちばな"], "onKeys": [], "kunKeys": ["たちばな"]}
+  ],
+  "quizAudit": {
+    "梓": {
+      "title": "azusa tree; printing block", "distractors": ["辛", "新", "村"],
+      "labels": ["spicy; painful", "new", "village"],
+      "reason": "Complete actual cards and all applicable exact comparison families inspected. 辛 is the visible right component, not tree/printing/bow/medium; 新 has related crossing strokes and axe shape, not a tree species or block; village is not an ordinary azusa meaning. All three have three existing curated wrong choices; no new target can fill default fallback. Place/personal names are different lexical uses, not an unrestricted village meaning."
+    },
+    "橘": {
+      "title": "tachibana orange", "distractors": ["橋", "商", "相"],
+      "labels": ["bridge", "commerce", "mutual; aspect"],
+      "reason": "Complete actual cards and full applicable families inspected, including secondary senses. Layered/boxed shapes supply comparisons, not citrus/flower/crest meanings. No general tree, orange, clan or fragrance label used as wrong choice. Actual cards all already have three curated choices, so no newly activated default fallback repair established."
+    }
+  },
+  "wordQuizAudit": {
+    "directExclusions": [
+      {
+        "word": "梓", "exclude": ["木", "植物", "植える", "植木"],
+        "reason": "Broad tree/wood and plant English labels can fit azusa; bare plant also has noun/verb ambiguity; garden-tree label receives a conservative contextual direct guard. Actual full source families and four complete older articles inspected. Direct pairs, not assertion of freely interchangeable Japanese scope."
+      },
+      {
+        "word": "橘", "exclude": ["木", "植物", "植える", "植木", "果物", "果実", "実", "花"],
+        "reason": "Tree/plant/garden context guards as above. Actual Seisenban historical edible-mandarin sense supports broader food-fruit guard despite modern wild bitter-fruit qualification. Botanical fruit and flower uses support each direct fruit/flower guard, not inference through another exclusion or universal dessert-fruit equation."
+      }
+    ],
+    "confusableInventory": "Complete docs/confusable-words.md inspected via1-180/181-357 with explicit158-181/305-357 continuations after tool truncation. No named azusa/tachibana cluster; none falsely attributed. Existing pairwise-not-transitive and English-label guidance applied.",
+    "nonExclusions": "No mutual 梓/橘 synonym established. Different citrus species such as 柚 not automatically excluded; generic tree/botanical/food guards are separate. Printing-block noun is a tool, not the activity 印刷 or 出版; no automatic tool/activity clique. Historical perfume/wood named Tachibana is an object/name, not general aroma noun 香り or におい. Full actual fragrance families and 香り body inspected. Bow/medium lexical articles absent, so no broken exclusion IDs or invented support. Reassess if independent review establishes a specific actual displayed-label collision.",
+    "limits": "Bounded author audit, not exhaustive live-quiz or native-speaker certification."
+  },
+  "authorInspection": {
+    "completeLexicalFamilies": 30,
+    "completeComparisonFamilies": 26,
+    "completeSupplementFamilies": 12,
+    "completeNotesFamilies": 3,
+    "completeComparisonArticles": ["words/木.md", "words/植物.md", "words/植える.md", "words/植木.md", "words/果物.md", "words/果実.md", "words/実.md", "words/柚.md", "words/花.md", "words/香り.md", "words/印刷.md", "words/出版.md"],
+    "completeShapeComparisonCards": ["kanji/木.md", "kanji/辛.md", "kanji/新.md", "kanji/村.md", "kanji/橋.md", "kanji/商.md", "kanji/相.md", "kanji/矛.md"],
+    "readRanges": {
+      "batch-011-jmdict.xml": ["1-300", "301-584 (EOF)"],
+      "batch-011-comparisons-jmdict.xml": ["1-290", "291-580", "581-812 (EOF)"],
+      "batch-011-supplement-jmdict.xml": ["1-362 (EOF)"],
+      "batch-011-notes-jmdict.xml": ["1-151 (EOF)"]
+    },
+    "limits": "Requested 蜜柑/オレンジ word articles were absent; not counted as read and not linked. Actual full dictionary families supplied their lexical distinctions. Initial invalid 弓 card link was caught by validator and corrected to plain spelling plus kana; absent card not counted read. First exact font audit failed on ancillary 巫/枸 glyphs before acceptance. Optional runtime spellings were replaced by kana/English descriptions; complete contributor dictionary spellings retained. No production font/guard change or claimed native verification. Author inspection is not either independent review."
+  },
+  "strokeAndFontAudit": "batch-011-stroke-audit.json",
+  "review": {
+    "initialSnapshot": null, "initialReports": [], "confirmationReports": [],
+    "nextGate": "Two serial blind different-model-family initials on one signed frozen snapshot, all four teaching files, complete assigned families and actual comparisons, all three facets. Preserve actual reports/process/model/read limitations; reconcile precisely, bounded original-session confirmations as needed.",
+    "limits": "No independent reviewer launched or review-closed addition."
+  },
+  "delivery": {
+    "publishedAdditionsBeforeBatch": 35, "remainingAdditionsBeforeBatch": 1193,
+    "draftsDoNotCountAsDelivered": true,
+    "compatibleClient": "Android f9b59a2 or later; older clients ignore curation.",
+    "nativeAndFontScope": "Accepted pilot native/all40/160 fonts inherited only for unchanged production scope, not fresh batch native/visual/device acceptance.",
+    "phoneAcceptance": "Physical-phone/general-release acceptance explicitly outstanding, not a new bounded-owner-testing veto."
+  }
+}
