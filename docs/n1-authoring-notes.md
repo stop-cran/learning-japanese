@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 010: local draft, independent review pending
+## Batch 010: textual review closed, publication pending
 
 The [frozen packet](n1-sources/batch-010-membership.json) is **笹・椋**,
 two grade-9 plant characters with complementary bamboo/category and tree/bird
@@ -57,9 +57,27 @@ alcohol sense and muku tree/fruit/abbreviated-starling uses.
 Sixteen direct word safeguards address those actual senses and broader labels,
 not a plant/fruit/bird synonym clique.
 
-These are **local unreviewed drafts**, not delivered additions. Both independent
-model-family initials, reconciliation, fresh applicable Android and combined-main/
-CI/immutable-ZIP publication gates remain pending. Published coverage stays
+Both blind model-family initials reviewed all four teaching files, all 73 complete
+families and the assigned actual comparisons on signed `6964071`. The
+[reconciliation](n1-reviews/batch-010-reconciliation.json) records a localized
+reading-restriction clarification: the short むく is restricted to 椋, whereas
+the longer むくのき is unrestricted across all four listed spellings, including
+椋 itself. Both original sessions confirmed the exact paragraph at `cdb179f`.
+The subsequent font audit found that explicitly listing ancillary 樸樹 introduced
+an unbundled glyph. The full spelling stays in contributor evidence; the final
+paragraph says **all** listed spellings and gives the already taught examples,
+without adding that unnecessary runtime alias. Both original sessions confirm
+the final teaching at signed `3e23d42`; all 32 learner-text Han remain covered
+by all three unchanged bundled fonts.
+Claude withdrew the initial "backwards" characterization and recalibrated the
+concern to comprehensibility; no reversed source restriction was established.
+All six reviewer processes exited serially. The final Claude confirmation
+discloses one internal two-read overlap; it is preserved, not claimed serial.
+Unchanged files inherit their initial review rather than a claimed fresh reread.
+
+These cards are **locally textually review-closed**, not delivered additions.
+Fresh applicable Android and combined-main/CI/immutable-ZIP publication gates
+remain pending. Published coverage stays
 **33/1,228; 1,195 still to deliver**. Supporting-word levels are not inferred
 from their kanji. Compatible-client and outstanding physical-phone/general-release
 qualifications remain unchanged.

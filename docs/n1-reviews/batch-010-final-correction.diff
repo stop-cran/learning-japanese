@@ -1,0 +1,49 @@
+diff --git a/docs/n1-sources/batch-010-restriction-evidence.json b/docs/n1-sources/batch-010-restriction-evidence.json
+index 960d231..b61282c 100644
+--- a/docs/n1-sources/batch-010-restriction-evidence.json
++++ b/docs/n1-sources/batch-010-restriction-evidence.json
+@@ -12,6 +12,7 @@
+   ],
+   "initialReviewHypothesis": "Claude flagged words/椋.md:26 as Minor correctness, alleging the restriction was backwards and learners might infer 椋 cannot be read むくのき. GPT established no defect on the same snapshot.",
+   "coordinatorAdjudication": "The original first sentence accurately described the short reading's restriction; it did not explicitly prohibit the longer reading for 椋. A reversed restriction is not established. Nevertheless, the following general warning left the unrestricted longer reading implicit. Make its application to 椋 explicit as a localized comprehensibility clarification rather than rewriting source metadata or the article's primary reading.",
+-  "change": "One paragraph in words/椋.md explicitly distinguishes restricted むく from unrestricted むくのき and names all four spellings. Primary reading, word type, identities, levels, full character readings/order, curation, labels, exclusions, examples, translations, links and strokes remain unchanged.",
+-  "limits": "Dictionary restriction evidence, not frequency, naturalness of every possible context, fresh upstream retrieval or physical-phone acceptance. Independent original-session confirmation remains pending when this record is authored."
++  "change": "One paragraph in words/椋.md explicitly distinguishes restricted むく from unrestricted むくのき, including its application to 椋 itself and the two previously taught longer spellings. Primary reading, word type, identities, levels, full character readings/order, curation, labels, exclusions, examples, translations, links and strokes remain unchanged.",
++  "fontFollowup": "Both original sessions confirmed the first correction at cdb179fff3c0c9fb186e2dec9554c70314b1e2ae. Subsequent exact font audit found that spelling out the ancillary 樸樹 alias introduced 樸, absent from bundled brush font. Remove the unnecessary alias from learner prose while retaining all four exact spellings and restrictions in licensed contributor evidence. The statement remains unrestricted across ALL listed spellings; no source reading or assertion is dropped, and no font/app guard is relaxed. Final bounded original-session confirmation follows.",
++  "limits": "Dictionary restriction evidence, not frequency, naturalness of every possible context, fresh upstream retrieval or physical-phone acceptance. First complete reports and historical font-audit failure remain preserved; final changed-passage confirmation is pending at authoring."
+ }
+diff --git a/manifest.json b/manifest.json
+index 1637da6..8f58baf 100644
+--- a/manifest.json
++++ b/manifest.json
+@@ -37,7 +37,7 @@
+   "audio/n5-swimming-day.ogg": "c52ff10edc98bcfc5cfcb4edb7962c46f6eb53c19e0d73e4ff344c56a5c1f1d4",
+   "audio/n5-weekend-plans.ogg": "782a7bbb6cf7439f1453bb1c139d14b2b07527bd7cc01bf6af91ade4abfdbb4f"
+  },
+- "contentVersion": "f772dac93ca902cf",
++ "contentVersion": "9bebaca785d8fff1",
+  "curriculum": {
+   "curriculum/grammar.json": "928f926fe495c3a1a07206391d0c8c60ba425008ba9d523199cd028455048579"
+  },
+@@ -5469,7 +5469,7 @@
+   "words/森.md": "8281b893d70c7dd0818dc31cd899edf0a1052094a631b8f126931b548aefe47d",
+   "words/森林.md": "0b3c437e0f428c8c660be0af2270fbec96cd512810500c1826fb3ea18055eea5",
+   "words/椀.md": "cfc94a257c6a96fae71917db544bb9c455c8e7bd334d251c2ed7786c24f7f27a",
+-  "words/椋.md": "7dc8e51d214a27a99f6a3c94eaa1be92ded663748d5cef38b0ac6d8f4c8eed4d",
++  "words/椋.md": "c53f9420d062b332cd948b239acfecbbfb0d1a9d7816597c8b5e0655b39737ef",
+   "words/植える.md": "aff5e06b808faa0e1b898f38d1b385a06e3a5bef8a33ee0d3d7e2136f330b06d",
+   "words/植木.md": "6fae35dd610c1055a7edd4a00148547a4dca72c1bd4b00c418d976874d88833c",
+   "words/植物.md": "1e81649469eaa9d39235d9cabfcdb423057d870ede7ce7dbdba2a57ca9f2f8cf",
+diff --git "a/words/\346\244\213.md" "b/words/\346\244\213.md"
+index 08150d3..6bf8ad7 100644
+--- "a/words/\346\244\213.md"
++++ "b/words/\346\244\213.md"
+@@ -23,7 +23,7 @@ The dictionaries also record 椋 for the tree's fruit and as an abbreviation of
+ 
+ [椋](../kanji/椋.md) writes むく as a whole. There is no compound to divide. In 椋の木, の connects the name to [木](木.md) (き), tree.
+ 
+-In the frozen family, the short reading むく is restricted to 椋 alone. The longer reading むくのき is unrestricted across its listed spellings, including 椋 itself as well as 椋木, 椋の木 and 樸樹. This article uses むく; the dictionary also permits 椋 to be read むくのき. Plant names are also often written in kana.
++In the frozen family, the short reading むく is restricted to 椋 alone. The longer reading むくのき is unrestricted across all its listed spellings, including 椋 itself as well as 椋木 and 椋の木. This article uses むく; the dictionary also permits 椋 to be read むくのき. Plant names are also often written in kana.
+ 
+ ## Synonyms and antonyms
+ 

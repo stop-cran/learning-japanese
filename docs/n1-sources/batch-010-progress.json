@@ -3,9 +3,9 @@
   "batch": "010",
   "baseCommit": "bcf11a6e5e1b51a13eec14fe77002dcb66e0131a",
   "membership": ["笹", "椋"],
-  "status": "draft-not-independently-reviewed",
+  "status": "textual-review-closed-local-unpublished",
   "drafted": ["笹", "椋"],
-  "reviewClosed": [],
+  "reviewClosed": ["笹", "椋"],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
@@ -17,12 +17,12 @@
     {
       "kanji": "笹", "article": "words/笹.md", "primaryReading": "ささ",
       "entryIds": ["1956300"], "selectedSenses": [1], "newArticle": true,
-      "status": "draft-not-independently-reviewed"
+      "status": "textual-review-closed-local-unpublished"
     },
     {
       "kanji": "椋", "article": "words/椋.md", "primaryReading": "むく",
       "entryIds": ["2216250"], "selectedSenses": [1], "newArticle": true,
-      "status": "draft-not-independently-reviewed",
+      "status": "textual-review-closed-local-unpublished",
       "externalSenseSupplement": "Actual Digital Daijisen/Seisenban むく entries also establish tree-fruit and abbreviated-starling senses, acknowledged and quiz-guarded; not asserted to occur in the tree-only JMdict family."
     }
   ],
@@ -102,9 +102,15 @@
   },
   "strokeAndFontAudit": "batch-010-stroke-audit.json",
   "review": {
-    "initialReports": [], "reconciliation": null,
-    "nextGate": "Two serial blind different-family initial reviews on one signed frozen snapshot, with complete new support and actual assigned comparisons, then evidence-based original-session confirmations as needed.",
-    "limits": "No reviewer launched or review closed at this draft checkpoint."
+    "initialSnapshot": "69640717b7ce459bfe121cc57efcf632ed450db8",
+    "firstCorrectionSnapshot": "cdb179fff3c0c9fb186e2dec9554c70314b1e2ae",
+    "reviewedTeachingSnapshot": "3e23d4207b36bf5b5884d47b211fa68374a7ff2e",
+    "initialReports": ["../n1-reviews/batch-010-initial-claude.md", "../n1-reviews/batch-010-initial-gpt.md"],
+    "confirmationReports": ["../n1-reviews/batch-010-confirmation-claude.md", "../n1-reviews/batch-010-confirmation-gpt.md"],
+    "finalConfirmationReports": ["../n1-reviews/batch-010-final-confirmation-claude.md", "../n1-reviews/batch-010-final-confirmation-gpt.md"],
+    "reconciliation": "../n1-reviews/batch-010-reconciliation.json",
+    "nextGate": "Fresh non-skipped Android, combined-current-main validation and normal signed owner-testing publication with CI and every immutable ZIP runtime hash verified.",
+    "limits": "Textual closure only; no publication or fresh native/physical-phone acceptance. Complete initial reads and bounded confirmations are distinct; correction snapshot identity comes from coordinator process/signature evidence."
   },
   "delivery": {
     "publishedAdditionsBeforeBatch": 33, "remainingAdditionsBeforeBatch": 1195,
