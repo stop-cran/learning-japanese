@@ -37,6 +37,31 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 030: tiger local draft, not reviewed or published
+
+The [frozen batch 030](n1-sources/batch-030-membership.json) adds **虎**
+and activates the component link in the existing 虎 (とら) article.
+That word retains its N3 vocabulary label, identity, full metadata and
+teaching; only the reciprocal link changes. No new word article is needed.
+Both sourced readings remain in order; only とら is selected. コ has
+the verified 虎穴 (こけつ) recognition example, with literal tiger-den
+and figurative dangerous-place meanings separated from English "lion's den."
+The animal and colloquial drunk-person senses remain distinct.
+
+The [draft ledger](n1-sources/batch-030-progress.json) records 136 complete
+lexical/comparison families, both reading dispositions and one activated
+baseline/reciprocal pair. The eight strokes are generated at the pinned
+KanjiVG revision. Of 14 displayed Han, 13 are in all three unchanged bundled
+cmaps; 虍 already appears in the exact baseline 劇 card. This is not new
+native or phone certification. Independent two-family review and fresh
+Android/combined-main/publication gates remain pending.
+
+Batch 029 is now [published and verified](n1-sources/batch-029-publication.json)
+at terminal `625cc32`: **56 additions delivered; 1,172 still to deliver**.
+This local draft does not increase the published count. Compatible Android
+`f9b59a2` or later is required; physical-phone/general-release acceptance
+remains explicitly outstanding. Earlier sections retain historical states.
+
 ## Batch 029: bear textually review-closed, not published
 
 The [frozen batch 029](n1-sources/batch-029-membership.json) adds **熊**
