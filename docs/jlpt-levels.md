@@ -78,10 +78,13 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   preserves fresh Android and combined-main/CI/immutable-ZIP acceptance at
   terminal `7d0fd6f`: **31 additions; 1,197 still to deliver**.
   [Batch 009](n1-sources/batch-009-progress.json), 杏・李, contains
-  **local unreviewed drafts** and two necessary native-noun support articles.
+  **local textually review-closed drafts** and two necessary plant-noun support articles.
   All six metadata readings are preserved; only あんず・すもも are offered.
-  Those drafts do not increase published coverage. Two-family review,
-  reconciliation, fresh Android and publication acceptance remain pending.
+  Its [reconciliation](n1-reviews/batch-009-reconciliation.json) preserves both
+  blind model-family initials, the source-backed 杏 lexical-origin correction,
+  both original-session confirmations and the disclosed confirmation-tool overlap.
+  Those drafts do not increase published coverage. Fresh Android and
+  combined-main/publication acceptance remain pending.
 
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee

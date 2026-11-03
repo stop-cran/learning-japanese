@@ -37,11 +37,11 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 009: local draft; independent review pending
+## Batch 009: textual review closed; publication pending
 
 The [frozen packet](n1-sources/batch-009-membership.json) is **杏・李**,
 two grade-9 fruit/tree characters with different lower components.
-Two necessary native-noun support articles provide two reciprocal pairs;
+Two necessary standalone plant-noun support articles provide two reciprocal pairs;
 neither character activates a baseline-declared pair. No reused article
 or baseline metadata is changed.
 
@@ -65,9 +65,25 @@ Both stroke files are generated at the pinned revision with seven strokes.
 The [draft audit](n1-sources/batch-009-draft-audit.json) checks exact
 dictionary extraction, source/baseline preservation, reading/link membership,
 stroke reconversion, unchanged font cmaps and local archive budgets.
-These are **unreviewed local drafts**, not additional delivered coverage.
-Two serial blind different-family reviews, reconciliation, fresh Android
-and combined-main/CI/immutable-public-ZIP acceptance remain pending.
+Both blind initial reviews covered all four teaching files, the full source
+families and assigned actual comparisons on signed `09e480a`.
+The [reconciliation](n1-reviews/batch-009-reconciliation.json) records one
+minor lexical-origin correction: あんず is Chinese-derived even though
+KANJIDIC2 lists it as kun. New 杏 word type/tag now uses kango, with the
+source-backed distinction explained in both affected pages at `8534b89`.
+Both original sessions confirm the precise correction without regressions.
+The [origin evidence](n1-sources/batch-009-origin-evidence.json) identifies
+the actual noun/history passages, not merely the plant's foreign origin.
+Full readings/order, quiz keys, identities, examples and exclusions stay.
+
+The five reviewer processes exited before successive launches. Both initials
+had serial internal tools; Claude's confirmation had one approximately
+7-ms view/fetch overlap. Its original report is preserved, and its inaccurate
+seriality assertion is withdrawn in a bounded original-session supplement.
+This disclosed deviation is not rewritten as perfect serial execution.
+
+These are **locally textually review-closed**, not additional delivered coverage.
+Fresh Android and combined-main/CI/immutable-public-ZIP acceptance remain pending.
 Published coverage remains **31/1,228; 1,197 still to deliver**.
 Supporting-word levels are not inferred from their kanji; physical-phone
 and general-release acceptance remain explicitly outstanding.
