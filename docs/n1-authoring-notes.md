@@ -37,6 +37,37 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 027: pigeon/dove draft, not reviewed or published
+
+The [frozen batch 027](n1-sources/batch-027-membership.json) adds **鳩**
+and one necessary word article, 鳩 (はと), in a local unreviewed draft.
+All four source readings remain in order; only はと is selected for questions.
+キュウ has a verified 鳩舎 (きゅうしゃ) recognition example. ク and
+あつ.める remain explicitly source-only within this lesson, not invented
+ordinary bird-name readings or a recommendation to replace 集める's spelling.
+The gathering sense in 鳩首 is separately supported by actual dictionary notes;
+grade-9 metadata does not make the ordinary noun a name-only reading.
+
+The [ledger](n1-sources/batch-027-progress.json) retains 70 complete
+JMdict lexical/comparison families, all four reading dispositions, one
+reciprocal pair and two direct bird/animal category-label safeguards.
+No baseline component pair is activated and no word level is inferred.
+The [external evidence](n1-sources/batch-027-external-evidence.json) distinguishes
+actual inspected definitions from empty extracted dictionary headings.
+The [draft audit](n1-sources/batch-027-draft-audit.json) verifies frozen
+inputs, exact baseline/runtime preservation, membership, readings, links
+and unchanged archive guards. The [stroke/font record](n1-sources/batch-027-stroke-audit.json)
+checks pinned 13-stroke geometry and all 28 displayed Han in all three
+unchanged bundled cmaps. These are not independent review or native evidence.
+
+Batch 026 is [published and verified](n1-sources/batch-026-publication.json)
+at terminal `bfd9820`: **53 additions delivered; 1,175 still to deliver**.
+Batch 027 does not increase that count. Two serial blind different-family
+reviews, reconciliation, fresh Android and combined-main/publication gates
+remain pending. Compatible Android `f9b59a2` or later is required;
+physical-phone/general-release acceptance is explicitly outstanding.
+Earlier sections below retain their historical checkpoint states.
+
 ## Batch 026: crane textually review-closed, not published
 
 The [frozen batch 026](n1-sources/batch-026-membership.json) adds **鶴**
