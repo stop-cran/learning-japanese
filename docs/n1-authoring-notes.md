@@ -37,14 +37,14 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 020: butterfly local draft, review pending
+## Batch 020: butterfly review closed, publication pending
 
 The [frozen batch 020](n1-sources/batch-020-membership.json) contains **蝶**
 and one necessary supporting article, 蝶 (ちょう), butterfly. Its sole
 sourced on-reading **チョウ** is selected; both full and curated kun lists
 are empty. The grade-9 classification is not a name-only restriction.
-The [draft ledger](n1-sources/batch-020-progress.json) distinguishes this
-unreviewed teaching from published coverage and preserves 96 complete
+The [batch ledger](n1-sources/batch-020-progress.json) distinguishes this
+review-closed teaching from published coverage and preserves 96 complete
 lexical/comparison families across four bounded packets.
 
 The support article has no vocabulary level inferred from its kanji.
@@ -54,10 +54,24 @@ uses the actual 葉・世・採 labels, not the broader overlapping 虫 category
 The historical kana spelling てふ and word forms ちょうちょう/ちょうちょ
 are separated from the modern single-character reading prompt.
 
-This is **local draft work only**. Two serial blind different-family
-reviews, reconciliation, fresh non-skipped Android checks, combined-main
-acceptance, normal signed publication, green CI and exact immutable public
-ZIP verification remain pending. Published coverage remains
+Both blind different-family initial reviews covered the same frozen teaching,
+all 96 families and actual comparison cards. The
+[reconciliation](n1-reviews/batch-020-reconciliation.json) preserves both
+complete original reports, five nonblocking optional dispositions and the
+initial Claude internal read overlaps (2, versus GPT's 0). No teaching
+correction or consequential unresolved claim remains; no unnecessary repeat
+review was performed.
+
+The exact execution079 Gradle permission denial is preserved alongside its
+parent exact-command recovery. Fresh RealContentTest 3/3 and RareHanTest 1/1
+passed without errors, failures or skips against this sibling checkout.
+The [combined-tree acceptance audit](n1-sources/batch-020-acceptance-audit.json)
+records 353 Python tests, source/baseline/reading/link/pinned-stroke/font checks,
+manifest freshness and unchanged archive budgets. Latest main was already
+integrated; no runtime change required repeating the recovered Android checks.
+
+Normal signed publication, green CI and exact immutable public ZIP
+verification remain pending. Published coverage remains
 **46 additions; 1,182 still to deliver**. Compatible Android `f9b59a2` or
 later is required; physical-phone/general-release acceptance remains
 explicitly outstanding, not inferred from source, cmap or JVM checks.
