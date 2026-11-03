@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 038: mythical-bird local draft, not review-closed
+## Batch 038: mythical-bird textual review closed, native acceptance pending
 
 Batch 038 now has one **鳳** card and one necessary **鳳凰（ほうおう）**
 support article, without an inferred vocabulary level. Full ホウ・フウ order
@@ -60,9 +60,29 @@ Cmap absence alone is not a glyph failure.
 
 The [mechanical draft audit](n1-sources/batch-038-draft-audit.json) checks
 exact source membership, baseline preservation, mappings, readings, runtime
-changes and budgets. It does not establish linguistic closure. Two serial
-blind different-family reviews, reconciliation, new-glyph native evidence,
-fresh non-skipped Android and combined-main/publication gates remain pending.
+changes and budgets. It does not establish linguistic closure.
+Two blind initial reviews, **Claude Opus 5.5** and **GPT-6.1 Sol**, reviewed
+the same unchanged signed teaching snapshot `e18a46a`. Their
+[reconciliation](n1-reviews/batch-038-reconciliation.json) establishes no
+actionable textual defect; four optional expansion groups remain nonblocking.
+Both complete original reports and actual model/read/process receipts are
+preserved. The first process exited and its report was archived before the
+second launch. Claude's one internal two-tool overlap is recorded, not
+misrepresented as serial tool compliance; GPT had none. Both used supplied
+dictionary evidence, not independently retrieved upstream sources.
+
+The [review audit](n1-sources/batch-038-review-audit.json) verifies returned
+ranges for both complete teaching files, all 45 distinct dictionary families,
+seven raw character records, ten comparison articles, guidance and six supplied
+Japanese entry ranges. The seven-family core overlaps the lexical packet and
+was not reread or counted separately by either reviewer. Fresh 361 Python
+tests, content/vocabulary checks, unchanged manifest, source/baseline/link/
+reading/stroke/font audit and original budgets pass. No teaching correction
+or unnecessary textual follow-up was made.
+
+New-glyph native/visual evidence, fresh non-skipped Android and
+combined-main/publication gates remain pending; textual review is not native
+or physical-phone acceptance.
 Published coverage is still **64 additions; 1,164 to deliver**.
 Compatible Android `f9b59a2` or later is required; physical-phone/
 general-release acceptance remains explicitly outstanding.
@@ -184,7 +204,7 @@ project's new-support total to 64; one reused support article changed.
 Terminal evidence-only publication and its own CI/archive/issue receipts
 are recorded in the live coordinator checkpoint; no teaching is changed.
 Compatible-client and outstanding physical-phone/general-release limits
-remain unchanged. Batch 038 has not started.
+remain unchanged. Batch 038 had not started at that publication checkpoint.
 
 ## Batch 036: historical beast textual review
 
