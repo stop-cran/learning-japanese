@@ -37,10 +37,10 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 039: many-reading goose qualified-source preparation
+## Batch 039: many-reading goose unreviewed local draft
 
-Batch 039 freezes **鴻**, source row 1219, without creating a card or support
-article. Its [membership](n1-sources/batch-039-membership.json) selects one
+Batch 039 now drafts **鴻**, source row 1219, with two necessary support
+articles, without independent acceptance or publication. Its [membership](n1-sources/batch-039-membership.json) selects one
 grade-9, five-reading character after comparing the frozen 鴻 and 鵬 records;
 this is not alphabetical selection. Full コウ・ゴウ and
 おおとり・ひしくい・おおがり order is preserved.
@@ -60,9 +60,10 @@ now qualifies all five readings without changing metadata. Actual Daijisen
 ガチョウ; this reading is lexical recognition, not merely source-only.
 Kanjipedia and Daijisen support コウ in **鴻鵠（こうこく）**, large birds
 figuratively representing great persons, with an attested proverb context.
-The proposed support is one native **鴻（ひしくい）** article and one
-**鴻鵠** article, not a required additional 鴻毛 article. Practice would
-select コウ・ひしくい; おおとり and おおがり remain documented but unselected.
+The authored support is one native **鴻（ひしくい）** article and one
+**鴻鵠** article, not a required additional 鴻毛 article. Practice selects
+コウ・ひしくい; both have their own linked reading rows.
+おおとり and おおがり remain documented but unselected.
 ゴウ is narrowly character-source-only in this bounded inspection, not
 invalid, universally absent or name-only.
 
@@ -76,13 +77,26 @@ metaphor. No everyday-frequency or vocabulary-level claim follows.
 Eleven named external entry sections and both complete frozen packets
 were freshly coordinator-inspected for this qualification; whole downloaded
 HTML pages and independent reviewer retrieval are not claimed. Actual
-support/comparison quiz labels, link accounting, teaching, pinned stroke
-conversion and new-Han font inspection remain pending. There are no declared baseline
-鴻 word pairs. Existing 鳥, 鳳凰 and 紅 articles were inspected unchanged;
-a missing 江 card was not counted as a read. The mechanical source audit
-preserves baseline metadata/geometry, both accepted tiger/monkey guards
-and the complete current runtime manifest. It is not independent review,
-native acceptance or publication. Published coverage remains **65 additions;
+support/comparison quiz labels and secondary senses are now inspected against
+the actual articles, with ten additional disjoint complete families (47 total).
+Two reciprocal pairs are accounted for, with no declared baseline 鴻 pairs.
+Direct generic-bird/animal/living-thing guards, the shared large-bird new-word
+pair and the magnanimous secondary-sense 鴻鵠/鷹揚 guard are recorded without
+changing existing cards or making exclusions transitive.
+
+The [draft audit](n1-sources/batch-039-draft-audit.json) and
+[stroke/font audit](n1-sources/batch-039-stroke-audit.json) record source
+identity, baseline preservation, exact pinned 17-stroke reconversion, whole
+authored Han/font inspection and local checks: 28 of 29 authored Han are in
+all three bundled fonts; only inherited 凰 is missing, with no new fallback
+glyph. This is not fresh native acceptance. The labelled modern-shape
+mnemonic is not etymology; vocabulary levels and current Latin taxonomy are
+not inferred. The native examples use ordinary kana spelling; 鴻鵠 uses the
+attested 鴻鵠の志 phrase rather than an invented casual collocation.
+Fresh independent reviews, any new fallback's supported native disposition,
+Android and combined-tree/public-archive gates remain pending. The original
+source-only audits remain historical, not current no-draft assertions.
+Published coverage remains **65 additions;
 1,163 still to deliver**, with compatible Android and outstanding
 physical-phone/general-release qualifications unchanged.
 

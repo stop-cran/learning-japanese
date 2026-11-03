@@ -3,16 +3,17 @@
   "batch": "039",
   "baseCommit": "29d6d9163153dd32787255056e969055f27f1fd5",
   "membership": ["鴻"],
-  "status": "source-prepared-not-drafted",
-  "drafted": [],
+  "status": "validated-local-draft-not-independently-reviewed",
+  "drafted": ["鴻"],
   "reviewClosed": [],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
     {"selection": "batch-039-lexical-selection.json", "xml": "batch-039-jmdict.xml"},
-    {"selection": "batch-039-comparison-selection.json", "xml": "batch-039-comparison-jmdict.xml"}
+    {"selection": "batch-039-comparison-selection.json", "xml": "batch-039-comparison-jmdict.xml"},
+    {"selection": "batch-039-support-comparison-selection.json", "xml": "batch-039-support-comparison-jmdict.xml"}
   ],
-  "extractedDistinctFamilies": 37,
+  "extractedDistinctFamilies": 47,
   "sourceReadingOrder": {
     "onyomi": ["コウ", "ゴウ"],
     "kunyomi": ["おおとり", "ひしくい", "おおがり"]
@@ -20,10 +21,12 @@
   "authorInspection": {
     "lexicalFamilies": 17,
     "comparisonFamilies": 20,
-    "distinctCompleteFamilies": 37,
+    "supplementalComparisonFamilies": 10,
+    "distinctCompleteFamilies": 47,
     "remainingExtractedFamiliesPending": 0,
     "lexicalReturnedRanges": [[1, 319]],
     "comparisonReturnedRanges": [[1, 280], [281, 554]],
+    "supplementalComparisonReturnedRanges": [[1, 229]],
     "limits": "All bounded packets returned and coordinator-inspected, including the split red-family boundary. Coordinator reads were parallel; no independent reviewer or serial reviewer-tool compliance is claimed. Complete returned text does not certify taxonomy, register, frequency or per-character reading allocation."
   },
   "lexicalDispositions": [
@@ -123,6 +126,42 @@
   ],
   "requiredReciprocalPairsPending": [],
   "existingArticleInspection": ["words/鳥.md", "words/鳳凰.md", "kanji/紅.md"],
+  "historicalPreparationFields": "The original lexical/comparison pending notes, readingDispositionsPending, supportCandidates, requiredReciprocalPairsPending, existingArticleInspection and zero-runtime preparation/qualified audits describe executions165/166. Current167 authoring decisions are below; original packets and source receipts remain intact.",
+  "supportMappings": [
+    {"kanji": "鴻", "article": "words/鴻.md", "newArticle": true, "primaryReading": "ひしくい", "entryIds": ["2157630"]},
+    {"kanji": "鴻", "article": "words/鴻鵠.md", "newArticle": true, "primaryReading": "こうこく", "entryIds": ["2843944"]}
+  ],
+  "requiredReciprocalPairs": [["鴻", "words/鴻.md"], ["鴻", "words/鴻鵠.md"]],
+  "changedReusedPassages": [],
+  "readingDispositions": [
+    {"kanji": "鴻", "kind": "on", "reading": "コウ", "selected": true, "article": "words/鴻鵠.md", "entryIds": ["2843944"], "reason": "Exact characterコウ plus compoundこうこく and counterpart鵠コク headings support allocation. Necessary literary/proverb recognition anchor, not a casual bird name or inferred vocabulary level."},
+    {"kanji": "鴻", "kind": "on", "reading": "ゴウ", "selected": false, "sourceOnly": true, "entryIds": [], "reason": "Frozen character reading retained. No confidently allocated word established in all17 lexical families and exact inspected character/compound headings; narrowly source-only, not invalid, globally absent or name-only."},
+    {"kanji": "鴻", "kind": "kun", "reading": "おおとり", "selected": false, "entryIds": ["2267700"], "reason": "Documented lexical large-bird/large-waterbird recognition; own unselected row. Shared spelling family does not authorize unrestricted phoenix substitution or a falsely matchedひしくい article link."},
+    {"kanji": "鴻", "kind": "kun", "reading": "ひしくい", "selected": true, "article": "words/鴻.md", "entryIds": ["2157630"], "reason": "Exact native bird noun and鴻 spelling; usually kana. Necessary bean-goose recognition anchor without adopting frozen Latin taxonomy."},
+    {"kanji": "鴻", "kind": "kun", "reading": "おおがり", "selected": false, "entryIds": [], "reason": "Exact Daijisen大雁／鴻 heading verifies alternateヒシクイ name and separateガチョウ sense. Lexical unselected own row, not source-only or a falseひしくい primary-reading link."}
+  ],
+  "curatedProjection": [
+    {"kanji": "鴻", "quizOnyomi": ["コウ"], "quizKunyomi": ["ひしくい"], "onKeys": ["こう"], "kunKeys": ["ひしくい"]}
+  ],
+  "quizAudit": {
+    "鴻": {
+      "title": "large bird; wild goose",
+      "distractors": ["紅", "鳴", "島"],
+      "labels": ["crimson; deep red", "animal call; ring", "island"],
+      "reason": "Complete existing kanji articles and actual titles inspected. Shape-related but semantically wrong: color, sounding action and island, not broad bird categories or other large-bird species."
+    }
+  },
+  "wordQuizAudit": {
+    "comparisonArticles": ["words/鳥.md", "words/鶴.md", "words/鷹.md", "words/鳳凰.md", "words/動物.md", "words/生き物.md", "words/生物.md", "words/小鳥.md", "words/ぴよぴよ.md", "words/ちゅんちゅん.md", "words/鷹揚.md", "words/偉大.md", "words/湖.md", "words/図鑑.md"],
+    "comparisonKanji": ["kanji/紅.md", "kanji/鳴.md", "kanji/島.md", "kanji/鳥.md", "kanji/鶴.md", "kanji/鷹.md", "kanji/鳳.md"],
+    "directExclusions": [
+      {"word": "鴻", "exclude": ["鳥", "動物", "生き物", "生物", "鴻鵠"], "reason": "The four actual generic labels include a bean goose. Pair鴻/鴻鵠 is conservatively excluded in both directions because鴻's ordinaryおおとり secondary identity overlaps large birds. No transitive bird clique."},
+      {"word": "鴻鵠", "exclude": ["鳥", "動物", "生き物", "生物", "鴻", "鷹揚"], "reason": "Generic bird/animal/organism labels cover large birds; direct new-word pair shares large-bird recognition. Frozen2843944's magnanimous-person secondary sense can fit actual鷹揚 magnanimous label, so guard that direct pair, not all greatness words."}
+    ],
+    "nonExclusions": "Crane, hawk/falcon and Chinese phoenix are distinct labels, not generic bird choices. Small bird contrasts large bird; chirping cards label sounds.偉大 is a greatness adjective rather than a bird/person noun; no claim of synonymy follows.湖/図鑑 support native example contexts, not quiz overlap. Existing exclusions unchanged.",
+    "confusableInventory": "Scoped inventory search after new titles found no鴻/鴻鵠/ひしくい/おおがり entry. Actual mapped labels, secondary senses, both completed word titles and all recorded direct choices inspected; source extraction is not frequency evidence.",
+    "supplementalDisposition": "Ten complete disjoint families:偉大1155920 adjective;湖1267280 noun and2087990 place-name suffix;図鑑1370370 illustrated/reference guide;小鳥1348530 smallbird;生き物1378590 with search-only生きもの;生物1379430 organism/biology versus1379440なまもの food;動物1451470 animal;鷹揚1608970 restricted readings plus generosity/composure senses. All read1-229; no food sense or suffix reading imported into examples."
+  },
   "qualifiedDictionaryEvidence": "batch-039-dictionary-evidence.json",
   "qualifiedReadingDispositionStatus": "All five full readings qualified in execution166; proposedコウ/ひしくい selection only. No runtime metadata or teaching authored.",
   "sourceEvidenceValidation": {
@@ -143,6 +182,7 @@
     "runtimeChanges": 0,
     "limits": "Source extraction, disposition membership and exact baseline/runtime preservation only; independent linguistic, native and publication acceptance remain pending."
   },
-  "limits": "Source-only checkpoint, not drafted/reviewed/published. Full five-reading order and both exact accepted tiger/monkey guards preserved. No selected quiz key, necessary support commitment, geometry, font audit, fresh Android/native, public CI/ZIP or phone claim. Public65/1228 and1163remaining unchanged. CompatibleAndroidf9b59a2+; pilot/all40/160 inherited unchanged-production scope only. Physical-phone/general-release explicitly outstanding, not a blanket owner-testing veto. Final whole-set acceptance pending.",
-  "nextAction": "Resume SAME039 qualified-source checkpoint, not040. Eleven exact Japanese named entry sections now verifyコウ in proposed鴻鵠こうこく, native鴻ひしくい usuallykana, lexicalおおとり largewaterbirds andおおがり alternateヒシクイ/separateガチョウ;ゴウ narrowlysource-only/notinvalid. Read batch-039-dictionary-evidence.json and preserve five full readings/order, both exact虎/猿guards and raw taxonomy/proverb evidence. Proposed necessary support is ONLY鴻ひしくい and鴻鵠こうこく;鴻毛 verifiedalternative/notrequired. Inspect actual comparison article labels/secondarysenses/exclusions, complete applicable new comparison families and every mapped reciprocal/activatedpair before drafting. Avoid unrestrictedphoenix substitution, currentAnser taxonomy, invented casual鴻鵠 collocations or inferredwordlevels. Each proposedselectedコウ/ひしくいneeds its own row/existinglinkedarticle;おおとり/おおがりneed qualifiedunselectedrows, not falselymatchingprimaryreadinglinks. Preserve modern-shape mnemonic/structure-unclassified unless deliberately adopting exacthistoricalevidence. Generate pinned17strokes with existing converter, audit all authored Han/fonts/fallbacks and source/baseline/links/readings/strokes/Python/validator/buildmanifest/budgets before normal signed unrevieweddraft. Two serial blind different-family initialreviews/justifiedoriginalconfirmations, fresh non-skipped Android/applicablenewfallbacknative, latestmainnormalmerge/combinedtree/normalsigning/ownerfastforward/greenCI/everyimmutablepublicZIPhash before publication or040. No unreviewedpush/authoragents/secondrunner/signingretry/permissionworkaround/heapguardchanges. Public65/1228;1163remaining;physicalphone/generalreleaseoutstanding."
+  "draftValidation": {"execution": 167, "audit": "batch-039-draft-audit.json", "strokeAndFontAudit": "batch-039-stroke-audit.json", "runtimeAdditions": 4, "changedBaselineRuntimeFiles": 0, "reviewersLaunched": 0},
+  "limits": "Local draft checkpoint, not independently reviewed or published. Full five-reading order and both exact accepted tiger/monkey guards preserved; two selected keys/two necessary support articles/two reciprocal pairs. Current taxonomy and exhaustive classical grammar not claimed. No fresh Android/native, public CI/ZIP or physical-phone claim. Public65/1228 and1163remaining unchanged. CompatibleAndroidf9b59a2+; pilot/all40/160 inherited unchanged-production scope only. New missing authored glyphs require supported native disposition before acceptance. Physical-phone/general-release explicitly outstanding, not a blanket owner-testing veto. Final whole-set acceptance pending.",
+  "nextAction": "Resume SAME039 signed validated UNREVIEWED local draft, not040. Freeze actual saved signedG snapshot for two SERIAL blind DIFFERENT-family initial reviews of allthreefacets, one鴻/two support words/fiveordered readings/twoselectedkeys/tworeciprocalpairs/actualquizlabels/directguards/47completefamilies/exact Japanese evidence ranges. Isolated read-only headless CLI, maximum1reviewer; preserve complete originals/actualmodels/toolranges/processlimitations and actual exit before next. No authorrationale or otherreport in initial prompts. Reconcile by precise evidence and original bounded confirmations for any fixes. Consult current stroke/font audit for newfallbacknativepending; actual supported production-family/glyph-lookalike/article/reciprocal/systemBack/offline/visual disposition and necessary originalreviewer confirmation remain before acceptance. Fresh non-skipped039AndroidRealContentTest3/RareHanTest1, latestmain normalnonrewritingmerge/combinedtree/source/baseline/exact虎猿guards/links/readings/strokes/fonts/Python/validator/vocabulary/manifest/originalbudgets/normalsigning/ownerfastforward/greenCI/everyexactimmutablepublicZIPruntimehash/terminalreceipt/issue60 before publication or040. Preserve historical165/166source-only records and167consoleencodingfailure/correction. No鵠/江/雁/鵬card, extra鴻毛 support, unreviewedpush/authoragents/secondrunner/permissionworkaround/signingretry/guardheapchange. Public65/1228;1163remaining;physicalphone/generalreleaseoutstanding."
 }
