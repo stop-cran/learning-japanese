@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "execution": 91,
+  "batch": "023",
+  "kind": "execution-permission",
+  "gate": "Fresh device/port ownership inspection before native glyph/article acceptance",
+  "attempts": 1,
+  "deniedCommand": "& C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe devices -l; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; $ports = @(Get-NetTCPConnection | Where-Object { $_.LocalPort -in 5580,5581 }); $ports | Select-Object LocalPort,State,OwningProcess; if ($ports.Count -ne 0) { throw 'Emulator ports occupied; do not launch' }; Get-Date -Format o",
+  "message": "Permission denied because no interactive user response was available. Retry in an interactive session so the user can approve it, or try an alternative that does not require this permission.",
+  "limits": "Denied before execution; exact trigger unknown. No actual device/port result, emulator launch, fixture installation/build, native result, screenshot or fresh Android XML. Historical017 parent recovery does not resolve this new023 denial. No glyph failure or missing-tool finding established.",
+  "disposition": "Preserve/report/yield; no retry, alternate invocation, permission/configuration change or disguised execution.",
+  "savedCommit": "392c176fe50512e306813ece23ac9b6490e5dca9",
+  "signature": "G",
+  "androidCommit": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "fixtureStatus": "Preserved017 original inspected only; no023 fixture created or installed.",
+  "evidencePath": "control/execution-091-permission-blocker.json",
+  "safeNextAction": "Approval-capable parent should resolve EXACT execution091 denied device/port ownership command without permission/configuration changes or disguised execution. Preserve denial. Resume SAME023 native disposition for displayed 广/鯰, not024: immediately verify actual devices/ports5580/5581 before owned read-only API35 hostGPU Vulkan-disabled emulator5580 launch. Prepare separately named minimal disposable fixture from preserved017 harness; originals unchanged. Full exact git archive through production ContentSync ONCE if imported; assert actual counts1035/4991/N155, version546601c956a5624b/problems0/accepted parser epoch. Obtain terminal per-case0, actual four-family glyph/lookalike and article visuals/offline/reciprocal routes/systemBack; visual inspection separate from raster assertions. Stop only owned emulator and clean exact temporary Android fixtures/assets. Then fresh non-skipped Android3+1 and all latestmain combined-tree/source/baseline/link/reading/stroke/font/Python353/manifest/budget/signing/owner-fastforward/greenCI/everyimmutablepublicZIPhash/terminalreceipt/issue60 gates. No retry/workaround,022 XML reuse, unaccepted push, heap/guard change or second runner. Physical-phone/generalrelease explicitly outstanding, not bounded-owner-testing veto.",
+  "issueUpdate": "https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6599440458"
+}

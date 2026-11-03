@@ -1,0 +1,694 @@
+{
+  "schemaVersion": 1,
+  "execution": 93,
+  "batch": "023",
+  "status": "bounded-native-visual-and-fresh-android-reconciled-local-unpublished",
+  "contentSnapshot": "392c176fe50512e306813ece23ac9b6490e5dca9",
+  "native": {
+    "schemaVersion": 1,
+    "checkpoint": 92,
+    "batch": "023",
+    "contentSnapshot": "392c176fe50512e306813ece23ac9b6490e5dca9",
+    "androidSnapshot": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+    "permissionRecovery": {
+      "execution091": "Exact denied discovery command separately approved/executed; original discovery receipt and denial retained.",
+      "execution092": "Exact denied fixture-copy/assemble command approved/executed by parent from dedicated content cwd in batch023-native-build-parent-approval. BUILD SUCCESSFUL in 57s; 74 actionable tasks: 9 executed, 65 up-to-date; exit0. Original denial retained. No execution permission, authentication, signing, heap or archive-guard changes.",
+      "nativeBuildLog": "control\\logs\\execution-092-native-build.txt",
+      "provenance": "control\\batch-023-parent-native-provenance.json"
+    },
+    "device": {
+      "serial": "emulator-5580",
+      "ownedProcessId": 5136,
+      "helperShellId": "batch023-parent-native-emulator",
+      "readiness": "control\\batch-023-parent-native-device-readiness.json",
+      "sdk": 35,
+      "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+      "heapGrowthLimit": "192m",
+      "heapSize": "576m",
+      "memory": "Requested2048MiB; emulator logged its own increase to2560MiB. No manual heap overrides.",
+      "transport": "Owned read-only API35 hostGPU/Vulkan-disabled helper; WiFi/data disabled. Exact complete enveloped archive through production ContentSync once per article attempt; synthetic source/HEAD, not live GitHub fetch.",
+      "operationalLimit": "Startup output includes graphics-context preemption/restore warnings. Correct boot/readiness and both final native cases were subsequently observed; do not claim an entirely warning-free emulator log.",
+      "stopped": true,
+      "cleanup": "control\\batch-023-parent-native-cleanup.json"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "log": "control\\logs\\batch-023-parent-native-attempt-1.txt",
+        "artifacts": "control\\artifacts\\batch-023-parent-native-attempt-1",
+        "originalFixtureSha256": "feea516183b61a7d51c9f5b5ef0a7328f16ff8d12286fbed95f612888c7f0150",
+        "articleTerminalCode": -2,
+        "glyphTerminalCode": 0,
+        "passed": false,
+        "finding": "Article opened successfully, but disposable fixture line192 expected an ASCII-hyphen word heading while the actual semantics tree uses an em dash. adb shell exit0 was not interpreted as native success.",
+        "disposition": "Original fixture, failure log, partial route/tree/screenshots and glyph evidence preserved without rewriting."
+      },
+      {
+        "attempt": 2,
+        "log": "control\\logs\\batch-023-parent-native-attempt-2.txt",
+        "artifacts": "control\\artifacts\\batch-023-parent-native-attempt-2",
+        "fixtureSha256": "5e204c9f15f8eaa58b5ddb6bf9f7870880f9ba9ea6391491bdf406d372a69b39",
+        "harnessOnlyChange": "Only line192 changed to await the unique word-heading prefix with substring=true, ignoring separator punctuation. Applied identically to prepared evidence fixture and temporary Android copy. Exact one-line-only diff verified; no teaching, production or other assertion changes.",
+        "rebuild": "Smallest :app:assembleDebugAndroidTest; BUILD SUCCESSFUL in54s,56tasks5executed/51up-to-date; updated instrumentation APK installed on the same verified owned helper.",
+        "rebuildLog": "control\\logs\\batch-023-parent-native-selector-build.txt",
+        "rawStatusCodes": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "articleCase": "fullSingleImportOfflineArticlesAndSystemBack",
+        "glyphCase": "componentsAndFishAcrossFourProductionFamilies",
+        "passed": 2,
+        "failures": 0,
+        "skips": 0,
+        "terminalResult": "OK (2 tests); both actual per-case terminal0, not adb exit-code proxy."
+      }
+    ],
+    "nativeImport": {
+      "contentVersion": "546601c956a5624b",
+      "archiveSha256": "68a4749e211ca8f0c834d004b3646bdbee6014d766e18dc5ce2878a16879dee3",
+      "archiveRequests": 1,
+      "importedKanji": 1035,
+      "importedWords": 4991,
+      "n1Cards": 55,
+      "problems": 0,
+      "acceptedReadingParserEpoch": 1,
+      "offline": true,
+      "componentAndCatfishVisible": true,
+      "reciprocalLinkAndSystemBack": true,
+      "artifactIndex": "control\\batch-023-parent-native-artifact-index.json",
+      "indexSha256": "d96b7893719dbfb4916b79106a4c13528d19db71b3992e5008e0b056c5c689d3",
+      "provenance": "control\\batch-023-parent-native-provenance.json",
+      "indexVisualInspectionField": "Collection-time field remains Pending intentionally; this later direct inspection record supersedes it without rewriting collected evidence."
+    },
+    "parentDirectVisualInspection": {
+      "imagesRead": [
+        "n1-023-selection.png",
+        "n1-023-kanji-catfish-readings.png",
+        "n1-023-kanji-component-notes.png",
+        "n1-023-word-catfish.png",
+        "n1-023-font-pairs.png"
+      ],
+      "observed": "Actual selection shows55 N1 cards. Native kanji Notes display the component comparison; native word article distinguishes Japanese ayu from the catfish sense and shows the catfish character. Four actual production Compose font rows display all four comparison characters legibly and distinctly, without tofu or dialog-animation overlays. Reciprocal/back screenshot hashes match the corresponding directly inspected article viewports.",
+      "viewportLimit": "Readings capture is horizontally scrolled to expose example/disposition columns; left reading-column text is partially offscreen and the long source-only row continues below the viewport. This is bounded viewport evidence, not a claim that every table cell fits simultaneously.",
+      "fontLimit": "Both new component and catfish characters have the same native Paint raster across all four configured families and look Gothic-like in actual Compose rows. Fallback face is not identified. Readability under four configured families does not establish four distinct bundled glyph designs.",
+      "independentReviewLimit": "Parent operational image inspection is not a substitute for the approved editorial two-family reviews or their original-session independent visual confirmation. Coordinator must obtain/persist that bounded serial confirmation before acceptance/publication."
+    },
+    "freshAndroid": {
+      "receipt": "control\\batch-023-parent-android-recovery.json",
+      "receiptSha256": "541cdfd872094e3ec14a3614a9f880fa2d8b62477f11bc488f770a3e4dc3209f",
+      "result": "Actual fresh RealContentTest3/RareHanTest1 after exact cleanup, zero failures/errors/skips; BUILD SUCCESSFUL3m10s,41tasks41executed; named UTC XML/hash/copy/real sibling root verified.",
+      "scope": "Tracked runtime exactly392c176 and Android cleanf9b59a2. Two listed untracked non-runtime batch023 native evidence files remain; whole content worktree is not yet clean. Reusable clean-worktree verifier unchanged."
+    },
+    "publication": false,
+    "phoneEvidence": false,
+    "sessionOrDrawingRetest": false,
+    "scope": "Verified parent operational native/build/fresh-Android recovery for SAME023 only. Coordinator evidence reconciliation, serial independent visual confirmation, normal latest-main integration and all combined-tree/signing/publication/terminal-CI/immutable-public-ZIP gates remain. Physical-phone/general-release explicitly outstanding; rollout49/1228 published,1179remaining."
+  },
+  "artifactIndex": {
+    "collectedAt": "2026-11-03T10:10:01.2673673+01:00",
+    "executionShellId": "batch023-parent-native-attempt-2",
+    "nativeLog": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\batch-023-parent-native-attempt-2.txt",
+    "nativeLogSha256": "8b0401c0e5f9235316a81f9df02697b577b16fd3c701c247903e6fc03de765fd",
+    "rawStatusCodes": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "cases": 2,
+    "passed": 2,
+    "failures": 0,
+    "skips": 0,
+    "files": [
+      {
+        "name": "n1-023-article-route.json",
+        "bytes": 677,
+        "sha256": "554546865e82ee9d88ebcc5dba5c9f4ac049160fac94b225c281ac554f731bc1"
+      },
+      {
+        "name": "n1-023-article-tree.txt",
+        "bytes": 1986,
+        "sha256": "4f82cf6a7325ff34bb5bc28b40d4dd8df3377b363c9f0cde207b44bd2d7450c8"
+      },
+      {
+        "name": "n1-023-backlink-kanji.png",
+        "bytes": 297482,
+        "sha256": "f71445d96487e5acde2e6c7b237816f33545096aad6f70c087cf2e80d11951c1"
+      },
+      {
+        "name": "n1-023-font-pairs.png",
+        "bytes": 109693,
+        "sha256": "6d762d6af28cee75a109b93085237387a5705274580824832f2f1e7a7e836055"
+      },
+      {
+        "name": "n1-023-font-raster.json",
+        "bytes": 3325,
+        "sha256": "4d058fd4bf82aa25257c8c1a5ac27ac263b9edc77b103e317e67cd1da387cd20"
+      },
+      {
+        "name": "n1-023-kanji-catfish-readings.png",
+        "bytes": 174716,
+        "sha256": "74c98c2c0b056f1cd648bb3d241a4b726157c9d8ccf65bd9d96f1aa4c348f7ff"
+      },
+      {
+        "name": "n1-023-kanji-component-notes.png",
+        "bytes": 297482,
+        "sha256": "f71445d96487e5acde2e6c7b237816f33545096aad6f70c087cf2e80d11951c1"
+      },
+      {
+        "name": "n1-023-selection.png",
+        "bytes": 121025,
+        "sha256": "220920961d587a8d98f27de9f544586e947578a43cc76b7bf259c2a8c9ae7e37"
+      },
+      {
+        "name": "n1-023-system-back-word.png",
+        "bytes": 314714,
+        "sha256": "225d300166528e0f17a3f81cc319586ccade31324593c980e9076a3a00ae06a4"
+      },
+      {
+        "name": "n1-023-word-catfish.png",
+        "bytes": 314714,
+        "sha256": "225d300166528e0f17a3f81cc319586ccade31324593c980e9076a3a00ae06a4"
+      },
+      {
+        "name": "N1Batch023NativeTest-accepted.kt",
+        "bytes": 13834,
+        "sha256": "5e204c9f15f8eaa58b5ddb6bf9f7870880f9ba9ea6391491bdf406d372a69b39"
+      }
+    ],
+    "route": {
+      "contentSnapshot": "392c176fe50512e306813ece23ac9b6490e5dca9",
+      "contentVersion": "546601c956a5624b",
+      "archiveRequests": 1,
+      "importedKanji": 1035,
+      "importedWords": 4991,
+      "problems": 0,
+      "n1Cards": 55,
+      "acceptedReadingParserEpoch": 1,
+      "transport": "Exact complete git archive with one top-level envelope through production ContentSync ONCE; synthetic source/HEAD",
+      "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+      "sdk": 35,
+      "phoneEvidence": false,
+      "sessionOrDrawingRetest": false,
+      "componentAndCatfishVisible": true,
+      "reciprocalLinkAndSystemBack": true,
+      "offline": true,
+      "passed": true
+    },
+    "raster": {
+      "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+      "sdk": 35,
+      "fontScale": 1,
+      "rows": [
+        {
+          "character": "广",
+          "font": "Gothic",
+          "hasGlyph": true,
+          "nativePaintRasterSha256": "1607300fa5177b51f881e0cf9427adee384bad5be02f3500b705e85240ad75b0"
+        },
+        {
+          "character": "店",
+          "font": "Gothic",
+          "hasGlyph": true,
+          "nativePaintRasterSha256": "acfae17f54c444b49ef288b519d1536402ffc43e490f855b3158eca2869a39ab"
+        },
+        {
+          "character": "鯰",
+          "font": "Gothic",
+          "hasGlyph": true,
+          "nativePaintRasterSha256": "e7632f99ff3bab584369141d94eada6aa00b70ed31af44aa44064be5585e08e7"
+        },
+        {
+          "character": "鮎",
+          "font": "Gothic",
+          "hasGlyph": true,
+          "nativePaintRasterSha256": "4f4185c75cedae12a3f6606d8f70e6dee5e166a73a1ef158c258228e70dcbe68"
+        },
+        {
+          "character": "广",
+          "font": "Mincho",
+          "hasGlyph": true,
+          "nativePaintRasterSha256": "1607300fa5177b51f881e0cf9427adee384bad5be02f3500b705e85240ad75b0"
+        },
+        {
+          "character": "店",
+          "font": "Mincho",
+          "hasGlyph": true,
+          "nativePaintRasterSha256": "a1448c3650ba59aac4df20341f52e7b13641327d72d68fa373552bb53eef70ab"
+        },
+        {
+          "character": "鯰",
+          "font": "Mincho",
+          "hasGlyph": true,
+          "nativePaintRasterSha256": "e7632f99ff3bab584369141d94eada6aa00b70ed31af44aa44064be5585e08e7"
+        },
+        {
+          "character": "鮎",
+          "font": "Mincho",
+          "hasGlyph": true,
+          "nativePaintRasterSha256": "05d5e69360ba75bbb166bc6b8576636d4d4c4d005e2bfc4df98cc31e3a8c159a"
+        },
+        {
+          "character": "广",
+          "font": "Textbook",
+          "hasGlyph": true,
+          "nativePaintRasterSha256": "1607300fa5177b51f881e0cf9427adee384bad5be02f3500b705e85240ad75b0"
+        },
+        {
+          "character": "店",
+          "font": "Textbook",
+          "hasGlyph": true,
+          "nativePaintRasterSha256": "7fe71942052488887d4fe3a4aba984964e50ef908f97867474af9f5171ea668d"
+        },
+        {
+          "character": "鯰",
+          "font": "Textbook",
+          "hasGlyph": true,
+          "nativePaintRasterSha256": "e7632f99ff3bab584369141d94eada6aa00b70ed31af44aa44064be5585e08e7"
+        },
+        {
+          "character": "鮎",
+          "font": "Textbook",
+          "hasGlyph": true,
+          "nativePaintRasterSha256": "da0f26ed5e8a2cf2c74e1aab5d68a93514203f4a859ca0064b720d635fc0ffd4"
+        },
+        {
+          "character": "广",
+          "font": "Brush",
+          "hasGlyph": true,
+          "nativePaintRasterSha256": "1607300fa5177b51f881e0cf9427adee384bad5be02f3500b705e85240ad75b0"
+        },
+        {
+          "character": "店",
+          "font": "Brush",
+          "hasGlyph": true,
+          "nativePaintRasterSha256": "92e31e5957157f700ce32042fca196a3cdb9886132ed5284d0b306a6962b80a7"
+        },
+        {
+          "character": "鯰",
+          "font": "Brush",
+          "hasGlyph": true,
+          "nativePaintRasterSha256": "e7632f99ff3bab584369141d94eada6aa00b70ed31af44aa44064be5585e08e7"
+        },
+        {
+          "character": "鮎",
+          "font": "Brush",
+          "hasGlyph": true,
+          "nativePaintRasterSha256": "d1066106188e3e76a6dffd630f8f77911f9a74d14692f946c217999e3d22e63f"
+        }
+      ],
+      "limits": "Sixteen native Paint probes and actual four production FontFamily Compose rows; visual inspection separate. Fallback face not identified; emulator, not phone."
+    },
+    "productionApkSha256": "0224e8e3f8c744a554da173ec20f133d5d00cb6b6226b001da5ea030856bd407",
+    "instrumentationApkSha256": "963ddce5b8a51d714c01e1423f7c1ea09a1f9ad3392d1da693103033c7c004fc",
+    "archiveSha256": "68a4749e211ca8f0c834d004b3646bdbee6014d766e18dc5ce2878a16879dee3",
+    "fixtureSha256": "5e204c9f15f8eaa58b5ddb6bf9f7870880f9ba9ea6391491bdf406d372a69b39",
+    "visualInspection": "Pending direct native image reads; successful assertions are not visual inspection"
+  },
+  "provenance": {
+    "verifiedAt": "2026-11-03T10:15:17.2570234+01:00",
+    "checkpoint": 92,
+    "batch": "023",
+    "exactOnlyHarnessChangeVerified": true,
+    "files": [
+      {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\execution-091-permission-blocker.json",
+        "bytes": 2963,
+        "sha256": "f3a27e8f07ebfaee9f7032a164748b90dbbc13ad5d79724d1ae779930f2de8f6"
+      },
+      {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\execution-092-permission-blocker.json",
+        "bytes": 6014,
+        "sha256": "186469f299c4da196a89bd36f33cb73ede0e66160d5c60b3068d548b4abb01b3"
+      },
+      {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-092-native-build.txt",
+        "bytes": 5530,
+        "sha256": "5d9cbc0f4d3aa0adab052f321e54932fd3570d92d94067acffc3b3c9dfa338f7"
+      },
+      {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\batch-023-parent-native-selector-build.txt",
+        "bytes": 4567,
+        "sha256": "29b575e6e13f254cc7a015059962d0cc9cee6f7948ff6f65b24629a7a0a25342"
+      },
+      {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\batch-023-parent-native-attempt-1.txt",
+        "bytes": 3790,
+        "sha256": "7a668c0f5752751cbb6dabaeaa95b4b1c4fae9953685bbacf2c3049161d65e13"
+      },
+      {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\batch-023-parent-native-attempt-2.txt",
+        "bytes": 1552,
+        "sha256": "8b0401c0e5f9235316a81f9df02697b577b16fd3c701c247903e6fc03de765fd"
+      },
+      {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-1\\N1Batch023NativeTest-original.kt",
+        "bytes": 13833,
+        "sha256": "feea516183b61a7d51c9f5b5ef0a7328f16ff8d12286fbed95f612888c7f0150"
+      },
+      {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\N1Batch023NativeTest-accepted.kt",
+        "bytes": 13834,
+        "sha256": "5e204c9f15f8eaa58b5ddb6bf9f7870880f9ba9ea6391491bdf406d372a69b39"
+      },
+      {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-023-parent-native-artifact-index.json",
+        "bytes": 7161,
+        "sha256": "d96b7893719dbfb4916b79106a4c13528d19db71b3992e5008e0b056c5c689d3"
+      },
+      {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-023-parent-native-device-readiness.json",
+        "bytes": 1457,
+        "sha256": "4b9a5749bb180d2d1da03ded754cede10838b57cee11886c78f7c6d9cbeeb296"
+      },
+      {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-023-parent-native-cleanup.json",
+        "bytes": 888,
+        "sha256": "2f3b6e8629f46d44f03d27859c56ec81735d0a7f70c3ea911797e69af6b615cd"
+      },
+      {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-023-parent-android-recovery.json",
+        "bytes": 3370,
+        "sha256": "541cdfd872094e3ec14a3614a9f880fa2d8b62477f11bc488f770a3e4dc3209f"
+      },
+      {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-023-392c176-envelope.zip",
+        "bytes": 30095698,
+        "sha256": "68a4749e211ca8f0c834d004b3646bdbee6014d766e18dc5ce2878a16879dee3"
+      }
+    ]
+  },
+  "android": {
+    "verifiedAt": "2026-11-03T10:14:42.0144616+01:00",
+    "checkpoint": 92,
+    "batch": "023",
+    "localContentHead": "392c176fe50512e306813ece23ac9b6490e5dca9",
+    "androidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+    "permissionRecovery": "Exact execution092 native-copy/build denial was separately resolved by approved parent execution. This fresh Android3+1 was not a denied Gradle recovery; parent ran it after native completion/cleanup while coordinator stopped. No permissions/configuration changes or022XML reuse.",
+    "shellId": "batch023-parent-fresh-android",
+    "exitCode": 0,
+    "buildResult": "BUILD SUCCESSFUL in 3m 10s",
+    "tasks": "41 actionable tasks: 41 executed",
+    "rerunTasks": true,
+    "oneWorker": true,
+    "parallel": false,
+    "notBefore": "2026-11-03T10:10:43.3988061+01:00",
+    "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\batch-023-parent-fresh-android.txt",
+    "logSha256": "a6291f1d86893c74563f9d40e623242e952df2b0dda6981893a1e36b77836ea6",
+    "tests": [
+      {
+        "name": "io.github.stopcran.kanji.core.RealContentTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "timestamp": "2026-11-03T09:11:49.481Z",
+        "caseNames": [
+          "hotelBookingDoesNotAcceptTheSchoolClassReadingWhenRepoPresent",
+          "completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent",
+          "parsesRealContentRepoWhenPresent"
+        ],
+        "sourcePath": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core\\build\\test-results\\test\\TEST-io.github.stopcran.kanji.core.RealContentTest.xml",
+        "artifactPath": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-RealContentTest.xml",
+        "sha256": "1a09266e93ff256c1ebe51017b06b016c2208b33eabef0c573f6c3b4f294f63a",
+        "fixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese"
+      },
+      {
+        "name": "io.github.stopcran.kanji.core.RareHanTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "timestamp": "2026-11-03T09:13:52.752Z",
+        "caseNames": [
+          "contentRareCharactersAreCoveredByBundledFont"
+        ],
+        "sourcePath": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\build\\test-results\\testDebugUnitTest\\TEST-io.github.stopcran.kanji.core.RareHanTest.xml",
+        "artifactPath": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-RareHanTest.xml",
+        "sha256": "a058378eb211aadfb7a8989923bb5099b4cf5dfb361be6f6b5a1f285fbf5ea23",
+        "fixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese"
+      }
+    ],
+    "androidClean": true,
+    "contentTrackedClean": true,
+    "untrackedContentEvidence": [
+      "docs/n1-reviews/batch-023-native/N1Batch023NativeTest.kt",
+      "docs/n1-reviews/batch-023-native/execution-092.json"
+    ],
+    "worktreesClean": false,
+    "runtimeScope": "Exact reviewed tracked392c176 runtime; only listed non-runtime untracked docs batch023 native evidence. Reusable clean-worktree helper unchanged; no false whole-checkout clean claim. Coordinator must persist/reconcile and revalidate combined-main runtime before publication.",
+    "exclusiveLockAvailable": true,
+    "scope": "Actual fresh023 Android3+1 only; not final combined-main/publication or full rollout acceptance."
+  },
+  "copiedEvidence": [
+    {
+      "path": "docs/n1-reviews/batch-023-native/parent-receipts/execution-091-permission-blocker.json",
+      "sha256": "f3a27e8f07ebfaee9f7032a164748b90dbbc13ad5d79724d1ae779930f2de8f6",
+      "bytes": 2963,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\execution-091-permission-blocker.json"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/parent-receipts/execution-092-permission-blocker.json",
+      "sha256": "186469f299c4da196a89bd36f33cb73ede0e66160d5c60b3068d548b4abb01b3",
+      "bytes": 6014,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\execution-092-permission-blocker.json"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/parent-receipts/execution-092-native-build.txt",
+      "sha256": "5d9cbc0f4d3aa0adab052f321e54932fd3570d92d94067acffc3b3c9dfa338f7",
+      "bytes": 5530,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-092-native-build.txt"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/parent-receipts/batch-023-parent-native-selector-build.txt",
+      "sha256": "29b575e6e13f254cc7a015059962d0cc9cee6f7948ff6f65b24629a7a0a25342",
+      "bytes": 4567,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\batch-023-parent-native-selector-build.txt"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/parent-receipts/batch-023-parent-native-attempt-1.txt",
+      "sha256": "7a668c0f5752751cbb6dabaeaa95b4b1c4fae9953685bbacf2c3049161d65e13",
+      "bytes": 3790,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\batch-023-parent-native-attempt-1.txt"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/parent-receipts/batch-023-parent-native-attempt-2.txt",
+      "sha256": "8b0401c0e5f9235316a81f9df02697b577b16fd3c701c247903e6fc03de765fd",
+      "bytes": 1552,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\batch-023-parent-native-attempt-2.txt"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/parent-receipts/N1Batch023NativeTest-original.kt",
+      "sha256": "feea516183b61a7d51c9f5b5ef0a7328f16ff8d12286fbed95f612888c7f0150",
+      "bytes": 13833,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-1\\N1Batch023NativeTest-original.kt"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/parent-receipts/N1Batch023NativeTest-accepted.kt",
+      "sha256": "5e204c9f15f8eaa58b5ddb6bf9f7870880f9ba9ea6391491bdf406d372a69b39",
+      "bytes": 13834,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\N1Batch023NativeTest-accepted.kt"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/parent-receipts/batch-023-parent-native-artifact-index.json",
+      "sha256": "d96b7893719dbfb4916b79106a4c13528d19db71b3992e5008e0b056c5c689d3",
+      "bytes": 7161,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-023-parent-native-artifact-index.json"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/parent-receipts/batch-023-parent-native-device-readiness.json",
+      "sha256": "4b9a5749bb180d2d1da03ded754cede10838b57cee11886c78f7c6d9cbeeb296",
+      "bytes": 1457,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-023-parent-native-device-readiness.json"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/parent-receipts/batch-023-parent-native-cleanup.json",
+      "sha256": "2f3b6e8629f46d44f03d27859c56ec81735d0a7f70c3ea911797e69af6b615cd",
+      "bytes": 888,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-023-parent-native-cleanup.json"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/parent-receipts/batch-023-parent-android-recovery.json",
+      "sha256": "541cdfd872094e3ec14a3614a9f880fa2d8b62477f11bc488f770a3e4dc3209f",
+      "bytes": 3370,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-023-parent-android-recovery.json"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-1/n1-023-article-route.json",
+      "sha256": "7d1f2afea08de692ef5ff8b6e34054d9f131823ebf5440ca4edb84c623c3883e",
+      "bytes": 563,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-1\\n1-023-article-route.json"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-1/n1-023-article-tree.txt",
+      "sha256": "928d53ac18ab7e07fd2a837ac4b512f8fff1e952d34ffa1f52ca6bab18d55815",
+      "bytes": 6550,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-1\\n1-023-article-tree.txt"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-1/n1-023-font-pairs.png",
+      "sha256": "6d762d6af28cee75a109b93085237387a5705274580824832f2f1e7a7e836055",
+      "bytes": 109693,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-1\\n1-023-font-pairs.png"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-1/n1-023-font-raster.json",
+      "sha256": "4d058fd4bf82aa25257c8c1a5ac27ac263b9edc77b103e317e67cd1da387cd20",
+      "bytes": 3325,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-1\\n1-023-font-raster.json"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-1/n1-023-kanji-catfish-readings.png",
+      "sha256": "11b490db45ef3fe4ca0430662fd0699be2e75d846103955040230feb78ff310d",
+      "bytes": 174428,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-1\\n1-023-kanji-catfish-readings.png"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-1/n1-023-kanji-component-notes.png",
+      "sha256": "45ebe9b8110e339ca0fca234175a0aa56e2e36be88b4c5fc10307aa8e704f2e8",
+      "bytes": 297123,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-1\\n1-023-kanji-component-notes.png"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-1/n1-023-selection.png",
+      "sha256": "2540a501ba38b100dfb3d93cd9b339a7110861831f6e603f8ca59253e640631a",
+      "bytes": 120651,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-1\\n1-023-selection.png"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-1/N1Batch023NativeTest-original.kt",
+      "sha256": "feea516183b61a7d51c9f5b5ef0a7328f16ff8d12286fbed95f612888c7f0150",
+      "bytes": 13833,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-1\\N1Batch023NativeTest-original.kt"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-2/n1-023-article-route.json",
+      "sha256": "554546865e82ee9d88ebcc5dba5c9f4ac049160fac94b225c281ac554f731bc1",
+      "bytes": 677,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\n1-023-article-route.json"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-2/n1-023-article-tree.txt",
+      "sha256": "4f82cf6a7325ff34bb5bc28b40d4dd8df3377b363c9f0cde207b44bd2d7450c8",
+      "bytes": 1986,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\n1-023-article-tree.txt"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-2/n1-023-backlink-kanji.png",
+      "sha256": "f71445d96487e5acde2e6c7b237816f33545096aad6f70c087cf2e80d11951c1",
+      "bytes": 297482,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\n1-023-backlink-kanji.png"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-2/n1-023-font-pairs.png",
+      "sha256": "6d762d6af28cee75a109b93085237387a5705274580824832f2f1e7a7e836055",
+      "bytes": 109693,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\n1-023-font-pairs.png"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-2/n1-023-font-raster.json",
+      "sha256": "4d058fd4bf82aa25257c8c1a5ac27ac263b9edc77b103e317e67cd1da387cd20",
+      "bytes": 3325,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\n1-023-font-raster.json"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-2/n1-023-kanji-catfish-readings.png",
+      "sha256": "74c98c2c0b056f1cd648bb3d241a4b726157c9d8ccf65bd9d96f1aa4c348f7ff",
+      "bytes": 174716,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\n1-023-kanji-catfish-readings.png"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-2/n1-023-kanji-component-notes.png",
+      "sha256": "f71445d96487e5acde2e6c7b237816f33545096aad6f70c087cf2e80d11951c1",
+      "bytes": 297482,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\n1-023-kanji-component-notes.png"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-2/n1-023-selection.png",
+      "sha256": "220920961d587a8d98f27de9f544586e947578a43cc76b7bf259c2a8c9ae7e37",
+      "bytes": 121025,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\n1-023-selection.png"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-2/n1-023-system-back-word.png",
+      "sha256": "225d300166528e0f17a3f81cc319586ccade31324593c980e9076a3a00ae06a4",
+      "bytes": 314714,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\n1-023-system-back-word.png"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-2/n1-023-word-catfish.png",
+      "sha256": "225d300166528e0f17a3f81cc319586ccade31324593c980e9076a3a00ae06a4",
+      "bytes": 314714,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\n1-023-word-catfish.png"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/attempt-2/N1Batch023NativeTest-accepted.kt",
+      "sha256": "5e204c9f15f8eaa58b5ddb6bf9f7870880f9ba9ea6391491bdf406d372a69b39",
+      "bytes": 13834,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\N1Batch023NativeTest-accepted.kt"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/parent-receipts/batch-023-parent-RealContentTest.xml",
+      "sha256": "1a09266e93ff256c1ebe51017b06b016c2208b33eabef0c573f6c3b4f294f63a",
+      "bytes": 781,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-RealContentTest.xml"
+    },
+    {
+      "path": "docs/n1-reviews/batch-023-native/parent-receipts/batch-023-parent-RareHanTest.xml",
+      "sha256": "a058378eb211aadfb7a8989923bb5099b4cf5dfb361be6f6b5a1f285fbf5ea23",
+      "bytes": 462,
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-RareHanTest.xml"
+    }
+  ],
+  "harnessOnlyDiff": [
+    [
+      192,
+      "            await(\"鮎 (あゆ) - sweetfish; ayu\")",
+      "            await(\"鮎 (あゆ)\", substring = true)"
+    ]
+  ],
+  "independentVisual": {
+    "report": "batch-023-visual-claude.md",
+    "execution": "batch-023-visual-claude-execution.json",
+    "model": "claude-opus-5.5",
+    "sessionId": "6da9e279-6b08-48d1-9f6a-56d90c7c23ba",
+    "reportSha256": "e5c00aa04f074f24bde7bebd2e6b78c752af940eb75f568219c5856db00ea5f9",
+    "rawExecutionSha256": "cac6635b2966731b6c3b67e6597e692d6f5ea8f99d173b7c7697935001feedea",
+    "toolCalls": 7,
+    "internalOverlaps": 0,
+    "unfinishedTools": [],
+    "imagesDirectlyReturned": [
+      "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\n1-023-font-pairs.png",
+      "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\n1-023-selection.png",
+      "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\n1-023-kanji-catfish-readings.png",
+      "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\n1-023-kanji-component-notes.png",
+      "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-023-parent-native-attempt-2\\n1-023-word-catfish.png"
+    ],
+    "result": "Original Claude directly saw five PNGs, no actionable visual defect; original correctness/coverage carried forward. Gothic-like component/catfish fallback readable/distinct in four configured families, not four bundled designs. Offscreen reading column/continuing row unverified.",
+    "optional": "Mid-word English and kana wrapping are nonblocking; original four optional suggestions remain optional. No runtime/teaching changes.",
+    "limits": "Dependent bounded visual confirmation, not another blind initial or fresh dictionary review. Returned images/process evidence do not certify comprehension or phone. Two-family blind textual coverage remains original Claude/GPT with original1/0 overlaps preserved."
+  },
+  "limits": "No new session/drawing retest or physical-phone/general-release acceptance. Latest-main combined-tree acceptance, signing/publication/terminal CI/every immutable public ZIP hash pending. Public49/1228;1179remaining. Native collection-time Pending field retained as historical, superseded only by this direct visual confirmation.",
+  "checkpointValidation": {
+    "pythonTests": {
+      "passed": 353,
+      "failures": 0,
+      "errors": 0
+    },
+    "validatorErrors": 0,
+    "manifestRegeneratedAndRuntimeByteIdentical": true,
+    "contentVersion": "546601c956a5624b",
+    "vocabularyConsistency": "2122/2431 reviewed prompts; unchanged pilot stage.",
+    "budget": {
+      "files": 8201,
+      "entries": 8216,
+      "retainedBytes": 43675573,
+      "inflatedBytes": 43943856,
+      "localZipBytes": 29919293,
+      "listeningTaskMediaBytes": 5893602
+    },
+    "scope": "Local evidence-only checkpoint; latestmain/publication/CI/publicZIP not performed."
+  }
+}
