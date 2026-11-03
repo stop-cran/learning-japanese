@@ -37,18 +37,24 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 037: snake source preparation, not drafted
+## Batch 037: snake draft, not reviewed or published
 
 The [frozen batch 037](n1-sources/batch-037-membership.json) contains only
 **蛇**, source row 970. Its [source ledger](n1-sources/batch-037-progress.json)
-records 108 complete lexical and eight disjoint comparison JMdict families,
-all coordinator-inspected in bounded ranges. The eight-family core overlaps
-lexical evidence; it does not increase the distinct count of 116.
+records 108 complete lexical, eight original comparison and 23 disjoint
+supplemental comparison JMdict families: **139 distinct families**.
+Execution 149's complete original inspection is inherited, not a fresh
+execution 151 lexical reread. The latter freshly inspected the complete core,
+original comparison and supplemental packets. The eight-family core overlaps
+lexical evidence; it does not increase the distinct count.
 All four on-readings and the native へび remain in frozen source order.
 
-Existing N2 蛇口 (じゃぐち) is the one declared baseline activation candidate;
-its identity, vocabulary level and コック exclusion remain unchanged.
-Necessary 蛇 (へび) and 蛇行 (だこう) support articles are proposed, not created.
+Existing N2 蛇口 (じゃぐち) is the one baseline activation, with only its
+substantive component backlink added; identity, vocabulary level and コック
+exclusion remain unchanged. Necessary 蛇 (へび) and 蛇行 (だこう) support
+articles are now drafted without inferred vocabulary levels. Three reciprocal
+pairs are recorded. Practice selects ジャ, ダ and へび with separate linked
+reading rows; the complete source inventory remains unchanged.
 The [qualified dictionary evidence](n1-sources/batch-037-dictionary-evidence.json)
 now records seven exact Japanese entry/range/hash receipts. Daijisen assigns
 蛇口 to ジャ and 蛇行 to ダ; じゃこう is a documented alternative, not an error.
@@ -59,15 +65,32 @@ no confidently allocated word was established, not a universal absence claim.
 Kanjipedia's differing タ/イ inventory does not replace the frozen イ/ヤ.
 Daijisen's separate じゃ lexical sense documents a heavy drinker, shortened
 from 蛇之助; its historical quotation does not alone prove obsolete usage.
-This is not ordinary へび meaning a drunk person. Actual quiz-label checks
-still precede any safeguard. An apparent 蛇スープ/えびスープ source discrepancy
-is retained but excluded from proposed teaching, not silently corrected.
+This is not ordinary へび meaning a drunk person. Actual full comparison cards,
+displayed labels and complete applicable families support six direct quiz
+safeguards: broad animal/creature/organism and separate drunk-label overlaps
+for 蛇, and broad bend/curve labels for 蛇行. These are not unrestricted synonym
+claims or transitive cliques. 虫・蚊・蛍 provide three distinct incorrect kanji
+labels. The apparent 蛇スープ/えびスープ source discrepancy is retained but
+excluded from teaching, not silently corrected.
+
+The [draft audit](n1-sources/batch-037-draft-audit.json) records exact source
+membership, frozen hashes, complete re-extractions, all original baseline
+metadata/geometry and the two accepted 虎/猿 guards. The
+[stroke/font audit](n1-sources/batch-037-stroke-audit.json) verifies the pinned
+eleven-stroke reconversion and all 31 Han in the complete new and changed
+articles. Thirty have glyphs in all three unchanged bundled fonts; **它 is
+new outside-subset teaching and still requires fresh native fallback
+acceptance**. The modern-shape mnemonic is not an etymology. Cmap checks
+and source hashes do not certify readability or linguistic correctness.
 
 Batch 036 is [published and verified](n1-sources/batch-036-publication.json)
 at terminal `8a8b538`: **63 additions delivered; 1,165 remain**.
-Batch 037 adds no runtime content, stroke file or manifest change yet.
-Source inspection is not independent review, final reading curation, native
-acceptance or publication. Compatible-client and outstanding physical-phone/
+Batch 037 is a validated local draft with regenerated manifest, 361 passing
+Python tests and unchanged archive guards, not another delivered addition.
+Two serial blind different-family reviews, evidence-based reconciliation,
+fresh Android/native checks and all current-main/CI/immutable-public-ZIP
+publication gates remain pending. No reviewer or publication was launched
+by this draft checkpoint. Compatible-client and outstanding physical-phone/
 general-release limits remain unchanged.
 
 ## Batch 036: historical beast textual review
