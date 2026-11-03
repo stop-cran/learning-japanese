@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 012: unreviewed draft checkpoint
+## Batch 012: textual review closed, publication pending
 
 The [frozen packet](n1-sources/batch-012-membership.json) is **桂・梢**:
 a tree name with aromatic-tree, shogi and homophone layers, contrasted with a
@@ -45,7 +45,7 @@ tree extremity and an additional source-only kun reading. Two necessary support
 articles supply two reciprocal pairs; no baseline-declared pair is activated
 and no reused article or baseline metadata is changed.
 
-The [draft ledger](n1-sources/batch-012-progress.json) preserves all five
+The [batch ledger](n1-sources/batch-012-progress.json) preserves all five
 metadata readings in order and selects **かつら・こずえ**. ケイ and ショウ
 have verified non-name recognition examples; 梢's くすのき remains explicit
 source-only lookup information without a manufactured camphor-tree example.
@@ -57,10 +57,16 @@ not a transitive synonym clique. Optional ancillary spelling and water-form
 literals outside the bundled cmaps were omitted from runtime text, with full
 source spellings retained in contributor evidence and no font or guard changes.
 
-These are **local drafts, not independently reviewed or published**.
-Two serial blind model-family initial reviews and evidence reconciliation,
-fresh Android/current-main acceptance and all normal publication/CI/immutable
-ZIP gates remain pending. Published coverage stays **37/1,228; 1,191 remaining**.
+These cards are **textually review-closed but not published**.
+The [reconciliation](n1-reviews/batch-012-reconciliation.json) preserves two
+serial blind different-family initial reports and both original-session
+confirmations. Two minor issues in 桂 were corrected: ambiguous English
+"In other words" and a one-stroke description of 掛's two-stroke far-right
+component. All four teaching files are CLEAN in the bounded textual scope.
+Actual execution receipts retain the denied Claude Git HEAD view and partial
+dictionary fetches; returned text is not comprehension or native acceptance.
+Fresh Android/current-main acceptance and normal publication/CI/immutable ZIP
+gates remain pending. Published coverage stays **37/1,228; 1,191 remaining**.
 Supporting-word levels are not inferred from their kanji. Compatible Android
 `f9b59a2` or later is required; physical-phone/general-release acceptance
 remains explicitly outstanding. Prior pilot native/font evidence is inherited

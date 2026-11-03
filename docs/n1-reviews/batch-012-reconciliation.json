@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "batch": "012",
+  "status": "textual-review-closed-local-unpublished",
+  "authoredSnapshot": "42e9732b305f1a83f4e5bf3a86a78fbb538c9350",
+  "reviewedTeachingSnapshot": "2670d1d4eb8f98877eed0f3ed3a03dbee4231d56",
+  "initialReconciliation": "batch-012-initial-reconciliation.json",
+  "sourceAndProcessAudit": "../n1-sources/batch-012-review-audit.json",
+  "scope": {
+    "teaching": ["kanji/桂.md", "kanji/梢.md", "words/桂.md", "words/梢.md"],
+    "facets": ["correctness", "scoped coverage", "textual phone comprehensibility"],
+    "fullDictionaryFamilies": 88,
+    "comparisonWords": 12,
+    "comparisonKanji": 10,
+    "changedReusedTeaching": [],
+    "confirmationExtra": "Actual kanji/楠.md linked reading passage; GPT also reread kanji/掛.md, Claude reused its complete initial read."
+  },
+  "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+  "originalReports": [
+    "batch-012-initial-claude.md",
+    "batch-012-initial-gpt.md",
+    "batch-012-confirmation-claude.md",
+    "batch-012-confirmation-gpt.md"
+  ],
+  "findings": [
+    {"id": "C1", "severity": "minor", "facet": "comprehensibility", "location": "kanji/桂.md:22", "status": "resolved", "remedy": "In other vocabulary replaces ambiguous In other words.", "evidence": "Exact two-line2670d1d diff and both original-session confirmations; separate native/character/noun source headings.", "confidence": "high"},
+    {"id": "C2", "severity": "minor", "facet": "correctness", "location": "kanji/桂.md:46", "status": "resolved", "remedy": "Extra two-stroke component at the far right replaces extra far-right stroke.", "evidence": "Existing 掛 component description and stroke composition; exact diff and both original-session confirmations. GPT explicitly acknowledges the initial miss.", "confidence": "high"}
+  ],
+  "optional": "All five initial Claude suggestions remain optional and evidence-adjudicated in preserved initial reconciliation. Neither confirmation establishes an expansion requirement.",
+  "contributionComparison": "Both families had the same initial snapshot, rubric and source access. Both minor actionable observations were unique to Claude anywhere in these initial reports; GPT initial had no findings/optional observations and missed the shape defect, explicitly acknowledged in confirmation. No general model ranking or equal-depth claim.",
+  "verdicts": {
+    "kanji/桂.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+    "kanji/梢.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+    "words/桂.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+    "words/梢.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"}
+  },
+  "unresolvedConsequentialClaims": [],
+  "sourceOnlyQualification": "梢くすのき remains a preserved source reading without an established lexical pair in inspected families/heads. Claude's original stronger no-pair-exists statement is not accepted as global nonexistence evidence; bounded teaching reaffirmed by both confirmations.",
+  "process": "Initial Claude52calls, GPT53; original-session Claude7, GPT8. Each exited0 before the next launch, actual returned models match requests, internal overlaps0/0/0/0. Full reports and raw hashes retained without rewriting.",
+  "limits": "Claude initial Git HEAD view denial preserved without outside-gitdir fallback; reviewers relied on supplied snapshot identities, coordinator verified. Both initial 桂 fetches partially returned then continued; gaiji/empty encyclopedia sections not evidence. Claude inventory searched only; GPT complete local views. Hashes/returned ranges establish byte availability, not comprehension, equal depth, live-quiz safety or native-speaker certification. Local textual closure is not fresh012Android/currentmain/publicationCI/immutableZIP acceptance. Physical-phone/general-release outstanding; accepted pilot/native/font evidence inherited only unchanged production scope."
+}

@@ -3,9 +3,9 @@
   "batch": "012",
   "baseCommit": "7ec38f8f0eb5a02f3b1322629975365592ec56dd",
   "membership": ["桂", "梢"],
-  "status": "draft-not-independently-reviewed",
+  "status": "textual-review-closed-local-unpublished",
   "drafted": ["桂", "梢"],
-  "reviewClosed": [],
+  "reviewClosed": ["桂", "梢"],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
@@ -15,8 +15,8 @@
     {"selection": "batch-012-supplement-selection.json", "xml": "batch-012-supplement-jmdict.xml"}
   ],
   "supportMappings": [
-    {"kanji": "桂", "article": "words/桂.md", "primaryReading": "かつら", "entryIds": ["1250890"], "selectedSenses": [1], "newArticle": true, "status": "draft-not-independently-reviewed", "recognition": "Exact single-character plant identity; separate1921970 kei shogi abbreviation retained. Broader aromatic-tree/moon/rotary-cutting/place/surname senses from actual native dictionary are recognition context, not asserted as all present in1250890."},
-    {"kanji": "梢", "article": "words/梢.md", "primaryReading": "こずえ", "entryIds": ["1349980"], "selectedSenses": [1], "newArticle": true, "status": "draft-not-independently-reviewed", "recognition": "Whole-character treetop/branch-tip identity with rare alternative杪 spelling. No word pair with梢/くすのき established; no manufactured camphor example."}
+    {"kanji": "桂", "article": "words/桂.md", "primaryReading": "かつら", "entryIds": ["1250890"], "selectedSenses": [1], "newArticle": true, "status": "textual-review-closed-local-unpublished", "recognition": "Exact single-character plant identity; separate1921970 kei shogi abbreviation retained. Broader aromatic-tree/moon/rotary-cutting/place/surname senses from actual native dictionary are recognition context, not asserted as all present in1250890."},
+    {"kanji": "梢", "article": "words/梢.md", "primaryReading": "こずえ", "entryIds": ["1349980"], "selectedSenses": [1], "newArticle": true, "status": "textual-review-closed-local-unpublished", "recognition": "Whole-character treetop/branch-tip identity with rare alternative杪 spelling. No word pair with梢/くすのき established; no manufactured camphor example."}
   ],
   "requiredReciprocalPairs": [["桂", "words/桂.md"], ["梢", "words/梢.md"]],
   "changedReusedPassages": [],
@@ -53,6 +53,17 @@
   "mechanicalDraftAudit": "batch-012-draft-audit.json",
   "strokeAndFontAudit": "batch-012-stroke-audit.json",
   "externalEvidence": "batch-012-external-evidence.json",
+  "authoredSnapshot": "42e9732b305f1a83f4e5bf3a86a78fbb538c9350",
+  "reviewedTeachingSnapshot": "2670d1d4eb8f98877eed0f3ed3a03dbee4231d56",
+  "independentReview": {
+    "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+    "initialReports": 2,
+    "originalSessionConfirmations": 2,
+    "reconciliation": "../n1-reviews/batch-012-reconciliation.json",
+    "audit": "batch-012-review-audit.json",
+    "verdict": "All four teaching files CLEAN across correctness, scoped coverage and textual comprehensibility after two localized 桂 corrections.",
+    "process": "Four reviewer processes exited0 serially, with zero observed internal tool overlaps; complete assigned initial and confirmation text returned. Claude denied Git HEAD view and partial continued fetches retained. Byte availability not comprehension or equal depth."
+  },
   "publication": "Not published; local drafts do not reduce1191remaining/37published.",
-  "limits": "Two serial blind model-family initials/reconciliation, fresh Android/current-main acceptance/signing/ownerfastforward/greenCI/everyimmutablepublicZIPhash remain pending. CompatibleAndroidf9b59a2+; inherited acceptedpilotnative/all40/160fonts only unchanged scope. Physical-phone/general-release explicitly outstanding."
+  "limits": "Textual review closed only; fresh012 Android/current-main acceptance/signing/ownerfastforward/greenCI/everyimmutablepublicZIPhash remain pending. CompatibleAndroidf9b59a2+; inherited acceptedpilotnative/all40/160fonts only unchanged scope. Physical-phone/general-release explicitly outstanding."
 }
