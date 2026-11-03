@@ -37,6 +37,23 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 019: mosquito draft, not reviewed or published
+
+The [frozen batch 019](n1-sources/batch-019-membership.json) adds **蚊** and
+reuses the existing N2 word article 蚊 (か), adding only its substantive
+component link. No new support article, word level, primary reading or
+exclusion is introduced. The [draft ledger](n1-sources/batch-019-progress.json)
+preserves both ブン and か, selecting only the native animal noun for practice.
+Digital Daijisen explicitly assigns 飛蚊症 (ひぶんしょう), seeing floaters,
+to ブン; this medical recognition example is not a source-only reading.
+
+Four complete packets preserve 65 lexical/comparison/example families,
+including all 44 containing 蚊. Existing 虫 remains excluded against the
+mosquito word; the new kanji uses three distinct wrong labels, 文・枚・改.
+This is unreviewed authoring, not delivery: **45 additions are published,
+1,183 remain**, and independent two-family review, fresh Android and
+combined-main/publication gates remain pending for this draft.
+
 ## Batch 018: cocoon textually review-closed
 
 The [frozen batch 018](n1-sources/batch-018-membership.json) contains **繭**
