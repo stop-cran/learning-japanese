@@ -37,6 +37,35 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 012: unreviewed draft checkpoint
+
+The [frozen packet](n1-sources/batch-012-membership.json) is **桂・梢**:
+a tree name with aromatic-tree, shogi and homophone layers, contrasted with a
+tree extremity and an additional source-only kun reading. Two necessary support
+articles supply two reciprocal pairs; no baseline-declared pair is activated
+and no reused article or baseline metadata is changed.
+
+The [draft ledger](n1-sources/batch-012-progress.json) preserves all five
+metadata readings in order and selects **かつら・こずえ**. ケイ and ショウ
+have verified non-name recognition examples; 梢's くすのき remains explicit
+source-only lookup information without a manufactured camphor-tree example.
+Four packets retain **88 complete JMdict families**. The
+[external evidence](n1-sources/batch-012-external-evidence.json) identifies
+the actual native/character/compound headings and their returned limits.
+Eleven direct word safeguards address broader tree/plant/branch/tip/top labels,
+not a transitive synonym clique. Optional ancillary spelling and water-form
+literals outside the bundled cmaps were omitted from runtime text, with full
+source spellings retained in contributor evidence and no font or guard changes.
+
+These are **local drafts, not independently reviewed or published**.
+Two serial blind model-family initial reviews and evidence reconciliation,
+fresh Android/current-main acceptance and all normal publication/CI/immutable
+ZIP gates remain pending. Published coverage stays **37/1,228; 1,191 remaining**.
+Supporting-word levels are not inferred from their kanji. Compatible Android
+`f9b59a2` or later is required; physical-phone/general-release acceptance
+remains explicitly outstanding. Prior pilot native/font evidence is inherited
+only for unchanged production scope, not a fresh native or visual pass.
+
 ## Batch 011: published and verified
 
 The [frozen packet](n1-sources/batch-011-membership.json) is **梓・橘**,
