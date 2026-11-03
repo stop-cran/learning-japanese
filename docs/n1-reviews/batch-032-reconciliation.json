@@ -1,0 +1,914 @@
+{
+  "schemaVersion": 1,
+  "batch": "032",
+  "execution": 128,
+  "status": "textual-review-closed-pending-fresh-acceptance",
+  "baseCommit": "9a2eeab0d8351dff212302b4f88ad4b505eeff05",
+  "authoredSnapshot": "2cbbb0b836a5a2363a175a0df7cd14f12c5f99fc",
+  "reviewedTeachingSnapshot": "23ce40fee3aea6718d56958c2b9f24e5d813bac7",
+  "membership": [
+    "鶏"
+  ],
+  "teachingScope": [
+    "kanji/鶏.md",
+    "words/鶏.md",
+    "words/鶏肉.md"
+  ],
+  "models": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "initialReports": [
+    "batch-032-initial-claude.md",
+    "batch-032-initial-gpt.md"
+  ],
+  "confirmationReports": [
+    "batch-032-confirm-claude.md",
+    "batch-032-confirm-gpt.md"
+  ],
+  "findings": [
+    {
+      "id": "C1",
+      "status": "resolved",
+      "severity": "minor",
+      "facet": "correctness/quiz metadata",
+      "file": "words/鶏.md:8",
+      "claim": "Missing direct鶏/鳥 guard for ordinary secondary chicken-meat use.",
+      "evidence": "JMdict1430250sense2 bird meat especially chicken meat, esp.鶏 not exclusive spelling restriction; actualwords/鳥.md39-42 chicken-meat note. Bare English chicken has food sense.",
+      "remedy": "Added鳥to new鶏exclusions only. Not generic animal-category equivalence or transitive meat/animal clique.",
+      "confirmation": "Both original sessions independently accept corrected direct pair; GPT narrows initial no-additional-guard conclusion against precise secondary evidence.",
+      "confidence": "high for scoped conservative label ambiguity; no measured live-quiz confusion claim"
+    },
+    {
+      "id": "G1",
+      "status": "resolved",
+      "severity": "minor",
+      "facet": "scoped coverage/navigation",
+      "file": "words/鶏.md:22,29",
+      "claim": "Substantive鳴くand肉explanations omit links to existing word support.",
+      "evidence": "Actual existing articles and scopedinstruction20-21 support animal call and onニク explanations.",
+      "remedy": "Added鳴く.mdand肉.mdlinks, unchanged wording/readings/examples.",
+      "confirmation": "Both original sessions find links correct and no regressions.",
+      "confidence": "high"
+    }
+  ],
+  "unresolvedConsequentialClaims": [],
+  "optional": [
+    {
+      "status": "optional",
+      "item": "Link飼うand new鶏word from reused鶏肉distinction; no new mandatory support mapping."
+    },
+    {
+      "status": "optional",
+      "item": "Usually-kana rooster/hen presentation and plainer zodiac wording."
+    },
+    {
+      "status": "optional",
+      "item": "Incidental baseline鳥backlinks and nondefault larger-kanji-quiz fallback caution; not an established default-four-choice defect."
+    }
+  ],
+  "modelContributionScope": {
+    "shared": "Both validate full source readings/allocation and drafted鶏/鶏肉guard; both confirm corrected teaching.",
+    "claudeUniqueInitial": "Direct鶏/鳥 secondary food-sense guard not established in GPT initial.",
+    "gptUniqueInitial": "Missing肉link;鳴くlink appears as optional in Claude initial so is shared observation, not unique discovery.",
+    "limits": "Same bounded sample; no general benchmark. Optional/findings/limits compared together."
+  },
+  "sourceAccess": {
+    "coordinator": "Complete task/checkpoint/issue/guidance/current teaching and precise1252990/1253020/1430250families and bird/call/meat articles inspected; complete131fresh lexical comprehension not claimed. Fresh exact dictionary extractions/hash comparisons verify bytes, not another linguistic review.",
+    "reviewers": "Both initials fully returned both packets and all assigned local teaching/comparisons/guidance. Claude independently fetched actual鶏entry only;養鶏supplied. GPT fetched both entries. RawcurlHTML retained not claimed fully read. Confirmations use three full supplied frozen families, no new web.",
+    "historicalConsoleError": "Post-success source-audit console-only inspection failed under cp1252 when printing Japanese; source audit completed and evidence persisted first. No content/source change or permission failure. Subsequent evidence uses JSON escaping."
+  },
+  "reviewProcesses": [
+    {
+      "label": "initial-claude",
+      "model": "claude-opus-5.5",
+      "sessionId": "69c9f7f8-e1ad-4c80-b15b-ae6fe4727d74",
+      "snapshot": "2cbbb0b836a5a2363a175a0df7cd14f12c5f99fc",
+      "startedAt": "2026-11-03T15:58:40.6248463+01:00",
+      "completedAt": "2026-11-03T16:01:35.4806956+01:00",
+      "exitCode": 0,
+      "toolCalls": 41,
+      "overlappingStarts": 1,
+      "mandatoryAssignedScopeFullyReturned": true,
+      "coverage": [
+        {
+          "path": "kanji\\鶏.md",
+          "requiredRange": [
+            1,
+            63
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\鶏.md",
+          "requiredRange": [
+            1,
+            49
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\鶏肉.md",
+          "requiredRange": [
+            1,
+            34
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\n1-sources\\batch-032-input-metadata.json",
+          "requiredRange": [
+            1,
+            12
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\n1-sources\\batch-032-jmdict.xml",
+          "requiredRange": [
+            1,
+            2352
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\n1-sources\\batch-032-comparisons-jmdict.xml",
+          "requiredRange": [
+            1,
+            470
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "kanji\\鳥.md",
+          "requiredRange": [
+            1,
+            47
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "kanji\\魚.md",
+          "requiredRange": [
+            1,
+            41
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "kanji\\駅.md",
+          "requiredRange": [
+            1,
+            41
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "kanji\\黒.md",
+          "requiredRange": [
+            1,
+            41
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\鳥.md",
+          "requiredRange": [
+            1,
+            42
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\肉.md",
+          "requiredRange": [
+            1,
+            41
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\卵.md",
+          "requiredRange": [
+            1,
+            34
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\飼う.md",
+          "requiredRange": [
+            1,
+            37
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\鳴く.md",
+          "requiredRange": [
+            1,
+            42
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\牛肉.md",
+          "requiredRange": [
+            1,
+            36
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\豚肉.md",
+          "requiredRange": [
+            1,
+            33
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": ".github\\copilot-instructions.md",
+          "requiredRange": [
+            1,
+            244
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": ".github\\instructions\\content-structure.instructions.md",
+          "requiredRange": [
+            1,
+            85
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\content-format.md",
+          "requiredRange": [
+            42,
+            148
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\jlpt-levels.md",
+          "requiredRange": [
+            1,
+            386
+          ],
+          "fullyReturned": true
+        }
+      ],
+      "failedCalls": [],
+      "partialCalls": [],
+      "xmlRangeLimitViolations": [],
+      "observedOverlaps": [
+        {
+          "starting": "toolu_013Aqhpy3U3b8qHAGZsRxjcP",
+          "alreadyActive": [
+            "toolu_01DgVfAZ1S2ftGA7CpMwaum6"
+          ]
+        }
+      ],
+      "webLookups": [
+        {
+          "name": "web_fetch",
+          "arguments": {
+            "url": "https://kotobank.jp/word/%E9%B6%8F-460974",
+            "max_length": 8000
+          },
+          "startedAt": "2026-11-03T15:00:41.231Z",
+          "model": "claude-opus-5.5",
+          "completedAt": "2026-11-03T15:00:41.510Z",
+          "success": true,
+          "returnedCharacters": 3011,
+          "returnedLines": 65,
+          "returnedSha256": "84c96a93e22868e9485089930efc25965053e1470c80a1bee9ccc3d1a4156c5c",
+          "truncationOrLimitMarker": false
+        }
+      ],
+      "reportSha256": "4c8b30cc56accf2a03d9ea52f211f6d698cc7f2ee15994a15e4787718a30e9b1",
+      "rawExecutionSha256": "d7d17181bad2bbdf80b66cdab323d08a20481e2a2149717ce4a3147f0a8fefd0"
+    },
+    {
+      "label": "initial-gpt",
+      "model": "gpt-6.1-sol",
+      "sessionId": "7573ed5c-990e-4a78-b64d-cdb8670f0079",
+      "snapshot": "2cbbb0b836a5a2363a175a0df7cd14f12c5f99fc",
+      "startedAt": "2026-11-03T16:01:42.6590683+01:00",
+      "completedAt": "2026-11-03T16:04:30.8748719+01:00",
+      "exitCode": 0,
+      "toolCalls": 46,
+      "overlappingStarts": 0,
+      "mandatoryAssignedScopeFullyReturned": true,
+      "coverage": [
+        {
+          "path": "kanji\\鶏.md",
+          "requiredRange": [
+            1,
+            63
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\鶏.md",
+          "requiredRange": [
+            1,
+            49
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\鶏肉.md",
+          "requiredRange": [
+            1,
+            34
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\n1-sources\\batch-032-input-metadata.json",
+          "requiredRange": [
+            1,
+            12
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\n1-sources\\batch-032-jmdict.xml",
+          "requiredRange": [
+            1,
+            2352
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\n1-sources\\batch-032-comparisons-jmdict.xml",
+          "requiredRange": [
+            1,
+            470
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "kanji\\鳥.md",
+          "requiredRange": [
+            1,
+            47
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "kanji\\魚.md",
+          "requiredRange": [
+            1,
+            41
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "kanji\\駅.md",
+          "requiredRange": [
+            1,
+            41
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "kanji\\黒.md",
+          "requiredRange": [
+            1,
+            41
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\鳥.md",
+          "requiredRange": [
+            1,
+            42
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\肉.md",
+          "requiredRange": [
+            1,
+            41
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\卵.md",
+          "requiredRange": [
+            1,
+            34
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\飼う.md",
+          "requiredRange": [
+            1,
+            37
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\鳴く.md",
+          "requiredRange": [
+            1,
+            42
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\牛肉.md",
+          "requiredRange": [
+            1,
+            36
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\豚肉.md",
+          "requiredRange": [
+            1,
+            33
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": ".github\\copilot-instructions.md",
+          "requiredRange": [
+            1,
+            244
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": ".github\\instructions\\content-structure.instructions.md",
+          "requiredRange": [
+            1,
+            85
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\content-format.md",
+          "requiredRange": [
+            42,
+            148
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\jlpt-levels.md",
+          "requiredRange": [
+            1,
+            386
+          ],
+          "fullyReturned": true
+        }
+      ],
+      "failedCalls": [],
+      "partialCalls": [],
+      "xmlRangeLimitViolations": [],
+      "observedOverlaps": [],
+      "webLookups": [
+        {
+          "name": "web_fetch",
+          "arguments": {
+            "url": "https://kotobank.jp/word/%E9%B6%8F-460974",
+            "max_length": 16000
+          },
+          "startedAt": "2026-11-03T15:03:36.080Z",
+          "model": "gpt-6.1-sol",
+          "completedAt": "2026-11-03T15:03:36.252Z",
+          "success": true,
+          "returnedCharacters": 3011,
+          "returnedLines": 65,
+          "returnedSha256": "84c96a93e22868e9485089930efc25965053e1470c80a1bee9ccc3d1a4156c5c",
+          "truncationOrLimitMarker": false
+        },
+        {
+          "name": "web_fetch",
+          "arguments": {
+            "url": "https://kotobank.jp/word/%E9%A4%8A%E9%B6%8F-145629",
+            "max_length": 6000
+          },
+          "startedAt": "2026-11-03T15:03:38.379Z",
+          "model": "gpt-6.1-sol",
+          "completedAt": "2026-11-03T15:03:38.534Z",
+          "success": true,
+          "returnedCharacters": 3778,
+          "returnedLines": 28,
+          "returnedSha256": "3d0d91a32a9bbbd827af6653ca4e395de8204a52d06d72a2fda4578ab4432ce8",
+          "truncationOrLimitMarker": false
+        }
+      ],
+      "reportSha256": "8d6ca09f14764c5617c40a64ef9b9941bc7b7e80f42626a86ef8d0f10dc7f693",
+      "rawExecutionSha256": "1a140e92d7d61e4d7004100aec6202bc3b23cfe841670e2b05c3d7b8954b315c"
+    },
+    {
+      "label": "confirm-claude",
+      "model": "claude-opus-5.5",
+      "sessionId": "69c9f7f8-e1ad-4c80-b15b-ae6fe4727d74",
+      "snapshot": "23ce40fee3aea6718d56958c2b9f24e5d813bac7",
+      "startedAt": "2026-11-03T16:06:32.3843922+01:00",
+      "completedAt": "2026-11-03T16:07:14.4820397+01:00",
+      "exitCode": 0,
+      "toolCalls": 12,
+      "overlappingStarts": 0,
+      "mandatoryAssignedScopeFullyReturned": true,
+      "coverage": [
+        {
+          "path": "words\\鶏.md",
+          "requiredRange": [
+            1,
+            49
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\鳥.md",
+          "requiredRange": [
+            1,
+            42
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\鳴く.md",
+          "requiredRange": [
+            1,
+            42
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\肉.md",
+          "requiredRange": [
+            1,
+            41
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "batch-032-correction.diff",
+          "requiredRange": [
+            1,
+            30
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\n1-reviews\\batch-032-initial-claude.md",
+          "requiredRange": [
+            1,
+            58
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\content-format.md",
+          "requiredRange": [
+            120,
+            148
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": ".github\\instructions\\content-structure.instructions.md",
+          "requiredRange": [
+            15,
+            22
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\n1-sources\\batch-032-jmdict.xml",
+          "requiredRange": [
+            95,
+            144
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\n1-sources\\batch-032-jmdict.xml",
+          "requiredRange": [
+            174,
+            213
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\n1-sources\\batch-032-jmdict.xml",
+          "requiredRange": [
+            302,
+            344
+          ],
+          "fullyReturned": true
+        }
+      ],
+      "failedCalls": [],
+      "partialCalls": [],
+      "xmlRangeLimitViolations": [],
+      "observedOverlaps": [],
+      "webLookups": [],
+      "reportSha256": "9c2ecdf6693dfbe1b51dde2312793f88d8e4001dbf5b09c3a725531a5deaf797",
+      "rawExecutionSha256": "584f5eaaa5851b8e1d8c8cafa04c34eaec75de7b41c75d9073c895b66e32423c"
+    },
+    {
+      "label": "confirm-gpt",
+      "model": "gpt-6.1-sol",
+      "sessionId": "7573ed5c-990e-4a78-b64d-cdb8670f0079",
+      "snapshot": "23ce40fee3aea6718d56958c2b9f24e5d813bac7",
+      "startedAt": "2026-11-03T16:07:21.5809309+01:00",
+      "completedAt": "2026-11-03T16:08:14.7428848+01:00",
+      "exitCode": 0,
+      "toolCalls": 13,
+      "overlappingStarts": 0,
+      "mandatoryAssignedScopeFullyReturned": true,
+      "coverage": [
+        {
+          "path": "words\\鶏.md",
+          "requiredRange": [
+            1,
+            49
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\鳥.md",
+          "requiredRange": [
+            1,
+            42
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\鳴く.md",
+          "requiredRange": [
+            1,
+            42
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "words\\肉.md",
+          "requiredRange": [
+            1,
+            41
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "batch-032-correction.diff",
+          "requiredRange": [
+            1,
+            30
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\n1-reviews\\batch-032-initial-gpt.md",
+          "requiredRange": [
+            1,
+            31
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\content-format.md",
+          "requiredRange": [
+            120,
+            148
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": ".github\\instructions\\content-structure.instructions.md",
+          "requiredRange": [
+            15,
+            22
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\n1-sources\\batch-032-jmdict.xml",
+          "requiredRange": [
+            95,
+            144
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\n1-sources\\batch-032-jmdict.xml",
+          "requiredRange": [
+            174,
+            213
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "docs\\n1-sources\\batch-032-jmdict.xml",
+          "requiredRange": [
+            302,
+            344
+          ],
+          "fullyReturned": true
+        }
+      ],
+      "failedCalls": [],
+      "partialCalls": [],
+      "xmlRangeLimitViolations": [],
+      "observedOverlaps": [],
+      "webLookups": [],
+      "reportSha256": "3b33085318bbfd473ffc5334621b0a8fd2a8ba42506d8d7193a1ca732e17c01c",
+      "rawExecutionSha256": "b59238e6e02add1825d5dca83c00b34c3d11d79c672786f96babf3459394117b"
+    }
+  ],
+  "processDeviationDisposition": {
+    "status": "preserved-with-explicit-limits",
+    "maximumActiveReviewerProcesses": 1,
+    "actualToolCalls": [
+      41,
+      46,
+      12,
+      13
+    ],
+    "observedInternalOverlappingStarts": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "observedXmlRangeLimitViolations": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "detail": "All four isolated processes exited0 serially; each complete report/execution archived before next process. Initial Claude has one observed internal overlap despite its original claim of wholly serial calls. Original report preserved verbatim, not rewritten to erase the contradiction. All requested local ranges fully returned; no failed/truncated/unfinished calls. Both bounded confirmations have zero observed overlaps. Confirmation supplied file counts49/42/42/41 differ from task48/42/41/36; GPT explicitly counted actual tails. Claude repeated approximate supplied counts, but actual whole-file returned coverage is verified.",
+    "remedy": "Preserve actual execution and self-report limits; no missing consequential scope warrants another full131-family reread."
+  },
+  "fontDisposition": "Final23 whole-fileHan/22 in all three unchanged bundledcmaps; missing炒already displayed in exact-base鶏肉. Inherit acceptedpilot/all40/160 only unchanged production scope; no new native/physical-phone certification.",
+  "nativePending": [],
+  "android": "Fresh032not run;031XML not reusable for corrected runtime.",
+  "validation": {
+    "batch": "032",
+    "baseCommit": "9a2eeab0d8351dff212302b4f88ad4b505eeff05",
+    "draftKanji": 1,
+    "newWords": 1,
+    "changedReusedArticles": 1,
+    "requiredReciprocalPairs": 2,
+    "activatedBaselinePairs": 1,
+    "readingDispositions": 3,
+    "curatedOfferedKeys": 2,
+    "sourceOnlyOfferedKeys": 0,
+    "dictionaryFamilies": 131,
+    "exactBaseRuntimePreservedOutsideRecordedChanges": true,
+    "manifestFresh": true,
+    "contentVersion": "32a5a18a74540a28",
+    "limits": "Fresh mechanical/source/cmap audit of corrected teaching; independent reports archived separately. No freshAndroid/native/CI/publicZIP/phone acceptance. Local59 not delivered. Both exact accepted tiger/monkey guards preserved; two new direct chicken exclusions.",
+    "stage": "corrected-teaching-source-audit-pending-review-evidence-closure",
+    "frozenInputHashesVerified": 5,
+    "decompressedDictionaryHashesVerified": 2,
+    "freshExactDictionaryExtractions": 2,
+    "dictionaryPackets": [
+      {
+        "path": "batch-032-jmdict.xml",
+        "families": 115,
+        "lines": 2352,
+        "sha256": "3d5850eb1e4c7f92563a5874e60cbc5113dc5f932a00f46db04e6f87cc3d5700"
+      },
+      {
+        "path": "batch-032-comparisons-jmdict.xml",
+        "families": 16,
+        "lines": 470,
+        "sha256": "71e6c8f02e298e904a6265ea80ad93df260df0058886f560b058dda0dc602cc6"
+      }
+    ],
+    "rawCharacterRecords": 3,
+    "originalBaselineMetadataAndStrokesPreserved": {
+      "kanji": 985,
+      "words": 4942,
+      "strokes": 985
+    },
+    "baselineMetadataExceptions": {
+      "words/虎.md": [
+        "酔っ払い"
+      ],
+      "words/猿.md": [
+        "馬鹿"
+      ]
+    },
+    "exactLocalAdditionMembership": [
+      "乃",
+      "亀",
+      "凸",
+      "凹",
+      "幹",
+      "彗",
+      "扱",
+      "杉",
+      "李",
+      "杏",
+      "松",
+      "柚",
+      "柳",
+      "栗",
+      "栞",
+      "桂",
+      "桃",
+      "桐",
+      "桑",
+      "梅",
+      "梓",
+      "梢",
+      "梨",
+      "椋",
+      "椎",
+      "椿",
+      "楓",
+      "楠",
+      "榛",
+      "樹",
+      "橘",
+      "氏",
+      "漱",
+      "熊",
+      "猿",
+      "畔",
+      "畝",
+      "矛",
+      "稲",
+      "穂",
+      "笹",
+      "繭",
+      "芋",
+      "苗",
+      "莉",
+      "菊",
+      "虎",
+      "蚊",
+      "蚕",
+      "蛍",
+      "蝶",
+      "鮎",
+      "鯉",
+      "鯛",
+      "鯨",
+      "鳩",
+      "鶏",
+      "鶴",
+      "鷹"
+    ],
+    "currentKanjiIncludingDrafts": 1044,
+    "currentWordsIncludingDrafts": 4999,
+    "n1LabelledIncludingDrafts": 64,
+    "sourceMembersPresentIncludingDrafts": 63,
+    "newDirectWordExclusionPairs": 2,
+    "strokeAndFontRecord": "batch-032-review-stroke-audit.json",
+    "newTextHanAudited": 23,
+    "newTextHanInAllThreeFonts": 22,
+    "inheritedMissingBundledGlyphs": [
+      "炒"
+    ],
+    "newFallbackNativePending": [],
+    "rawExternalDictionaryDownloads": [
+      {
+        "url": "https://kotobank.jp/word/%E9%B6%8F-460974",
+        "rawArtifact": "control/artifacts/batch-032-niwatori.html",
+        "rawSha256": "240760242bb613d217b7c0b9164816e81cc9c36f67dcc5e000fd8e1fc51a32e2",
+        "rawBytes": 230529,
+        "inspectedHeading": "Nikkokuにわとり【鶏・雞】and鶏の補助注記",
+        "scope": "Actual domestic-bird headword and shorterとり note inspected. Daijisen sections are archaicかけ/くたかけ, not theにわとりheadword. No origin, species history, dated farming or frequency claim imported."
+      },
+      {
+        "url": "https://kotobank.jp/word/%E9%A4%8A%E9%B6%8F-145629",
+        "rawArtifact": "control/artifacts/batch-032-youkei.html",
+        "rawSha256": "9a70cb4533b83da99b8a1d3f516228fbc805658ab920f5b4491ae6ae3e0dbdb2",
+        "rawBytes": 244037,
+        "inspectedHeading": "養鶏(ようけい), encyclopedia opening definition",
+        "scope": "Actual complete headword reading and chicken-farming definition inspected. Longer outdated economic/husbandry sections not adopted; no divided per-kanji dictionary reading heading claimed."
+      }
+    ],
+    "budget": {
+      "files": 8227,
+      "entries": 8242,
+      "retainedBytes": 43751351,
+      "inflatedBytes": 44019634,
+      "localZipBytes": 29958524,
+      "listeningTaskMediaBytes": 5893602
+    },
+    "android": "Dedicated clean unchangedf9b59a2; fresh032Android/native not run;031XML not reused for changed runtime.",
+    "review": "Source-only audit of corrected teaching; two original independent initial reports and two original-session confirmations preserved separately. This mechanical audit does not itself establish linguistic acceptance.",
+    "publishedAdditions": 58,
+    "remainingAdditions": 1170
+  },
+  "limits": "Textual closure only;58published/1170remaining, local59 not delivery. Fresh032Android/latestmain/CI/publicZIP pending. Compatiblef9b59a2+; physical-phone/general-release explicitly outstanding. Original reports/deviations/unequal source lookup depth and optional suggestions retained; no general model ranking.",
+  "nextAction": "Resume SAME032 fresh non-skipped Android RealContentTest3/RareHanTest1 on dedicatedf9b59a2, then latestmain normal non-rewriting integration and all combined-tree/source/baseline(two exact accepted exceptions)/link/reading/stroke/font/361Python/manifest/budget/normal-signing/owner-fastforward/greenCI/every immutable public ZIP runtime hash/terminal-receipt/issue60 gates. No031XML reuse,033,unreviewedpush or secondrunner. Actual permission/signing denial preserve/report/yield without retries/workarounds. CompatibleAndroidf9b59a2+; physical-phone/general-release explicitly outstanding, not blanket owner-testing veto. Overall rollout incomplete."
+}
