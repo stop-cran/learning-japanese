@@ -37,13 +37,23 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 040: peng source preparation, not drafted
+## Batch 040: peng draft, not independently reviewed
 
 [Batch 040](n1-sources/batch-040-progress.json) freezes **鵬**, source row
 1220, for a bounded mythical-bird and source-gloss check. All **25 distinct
 complete JMdict families** were coordinator-inspected: nine lexical families
 and sixteen disjoint comparison families. This is source preparation, not
-independent content review or a new published card.
+independent content review or a new published card. Execution 175 adds the
+bounded local draft [鵬](../kanji/鵬.md) and one necessary
+[鵬 (ほう)](../words/鵬.md) support article, without a vocabulary-level claim.
+Both source readings remain ordered; practice selects only ホウ. The
+おおとり row and word explanation retain its documented lexical alternate.
+Direct broad-category quiz guards are recorded individually; comparison
+articles remain unchanged. Draft validation and pinned stroke/font evidence
+are recorded separately from pending two-family review, fresh Android,
+applicable native/visual and combined-main publication acceptance.
+Four supplemental complete dictionary families cover 動物, 生き物 and the
+distinct せいぶつ／なまもの identities spelled 生物, for 29 families in all.
 
 The frozen KANJIDIC2 gloss is "phoenix"; the applicable JMdict families
 distinguish the **peng**, a giant mythical bird, from 鳳凰's fenghuang.
@@ -56,26 +66,28 @@ with **ホウ** and lexical **おおとり**. Full metadata remain in source ord
 The shared おおとり family does not permit unrestricted bird-spelling
 substitution or the performer spelling 大トリ.
 
-Only **鵬 (ほう)** is proposed as necessary support and selected on-reading
-material. おおとり is a documented lexical alternate, proposed for recognition
+Only **鵬 (ほう)** is drafted as necessary support and selected on-reading
+material. おおとり is a documented lexical alternate, retained for recognition
 rather than a second question; it is not name-only or invalid. The word-level
 ぼう variant does not change the frozen sole on-reading. 鵬翼 and 鵬程 are
 verified alternative literary anchors, not mandatory additions or ordinary
 aviation/travel vocabulary. A historical literary 鵬程 example supports that
-use, not invented casual collocations. These are author proposals, not
+use, not invented casual collocations. These are author decisions, not
 independently reviewed teaching or a vocabulary-level assignment.
 
 No declared baseline 鵬 pair was found. Existing bird and wing comparisons
 were inspected unchanged; 翼's article teaches つばさ, not 鵬翼 ほうよく.
-The pinned nineteen-stroke SVG is an inventory candidate only: conversion,
-newly displayed glyphs, independent reviews and fresh acceptance gates remain
-pending. The [preparation audit](n1-sources/batch-040-preparation-audit.json)
+The pinned nineteen-stroke SVG has been converted with the existing generator;
+the [draft audit](n1-sources/batch-040-draft-audit.json) and
+[stroke/font audit](n1-sources/batch-040-stroke-audit.json) record exact checks.
+Independent reviews and fresh acceptance gates remain pending.
+The historical [preparation audit](n1-sources/batch-040-preparation-audit.json)
 checks frozen inputs, full-family membership and exact baseline/runtime
 preservation, not linguistic certification.
 
 Accepted [batch 039](n1-sources/batch-039-publication.json) remains published
 at terminal `3c1735f`: **66 additions delivered; 1,162 remain**. This
-source-only checkpoint changes no runtime card or manifest and makes no new
+local unreviewed draft is not added to that delivered count and makes no new
 Android/native/phone claim. Compatible Android `f9b59a2` or later remains
 required; physical-phone/general-release acceptance is explicitly outstanding.
 

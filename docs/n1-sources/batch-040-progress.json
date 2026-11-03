@@ -3,16 +3,17 @@
   "batch": "040",
   "baseCommit": "3c1735f2d568e6677356684a35bf18a8c02b20ef",
   "membership": ["鵬"],
-  "status": "source-prepared-not-drafted",
-  "drafted": [],
+  "status": "drafted-not-independently-reviewed",
+  "drafted": ["鵬"],
   "reviewClosed": [],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
     {"selection": "batch-040-lexical-selection.json", "xml": "batch-040-jmdict.xml"},
-    {"selection": "batch-040-comparison-selection.json", "xml": "batch-040-comparison-jmdict.xml"}
+    {"selection": "batch-040-comparison-selection.json", "xml": "batch-040-comparison-jmdict.xml"},
+    {"selection": "batch-040-support-comparison-selection.json", "xml": "batch-040-support-comparison-jmdict.xml"}
   ],
-  "extractedDistinctFamilies": 25,
+  "extractedDistinctFamilies": 29,
   "qualifiedDictionaryEvidence": "batch-040-dictionary-evidence.json",
   "qualifiedSourceStage": "source-qualified-not-drafted",
   "preQualificationNotes": "The lexical/comparison pending notes, readingDispositionsPending and sourceGlossBoundary below preserve execution173's original hypotheses. Execution174 resolves the exact dictionary questions in qualifiedDictionaryEvidence; draft wording, support links, quiz guards and independent acceptance remain pending. They are not current claims that no source qualification was performed.",
@@ -152,6 +153,41 @@
   },
   "projectPublishedAdditions": 66,
   "remainingAdditions": 1162,
-  "limits": "Source-only checkpoint. No card, word, stroke, quiz-selection or manifest edit; no independent review, fresh Android/native, publication or physical-phone acceptance. Existing accepted039 publication remains intact. Compatible Android f9b59a2+ required; old8000-entry clients reject the collection. Physical-phone/general-release explicitly outstanding, not a blanket owner-testing veto. Final whole-set acceptance and1162 additions remain pending.",
-  "nextAction": "Resume SAME040, not041, after reading complete authorized request/checkpoint and scoped live records. Exact seven Japanese dictionary sections in batch-040-dictionary-evidence.json now qualify peng versusfenghuang, lexicalおおとりand allocatedホウ. Propose only鵬ほうas necessarysupport and quizOnyomi[ホウ]/quizKunyomi[];おおとりis documented alternate recognition, not invalid/name-only. Explain wordvariantぼうwithout changing soleonmetadata; keep original rawphoenixgloss. 鵬翼/鵬程/鵬程万里are verified literary alternatives, not mandatoryarticles or casualmodernwords. Inspect actualcomparisonlabels/ordinarysecondarysenses/directexclusions and complete any necessary additionalfamilies, all mappedreciprocal/activatedlinks before drafting. Existing翼つばさis comparison, notほうよくsupport; no朋/巨人card. Kanjipedia records鳥+phonetic朋analysis but modernshape mnemonic/structure-unclassifiedmayremain; no inventedmoon/friendetymology. Preserve19strokes/鳥196/grade9/fullホウandおおとりorder and both exact虎[酔っ払い]/猿[馬鹿]guards. Generate pinnedSVG with existingconverter, audit allauthoredHan/fonts/newfallbacks; validate/fullsourcebaseline/link/readings/strokes/Python/vocabulary/freshmanifest/budgets before normalsignedunrevieweddraft. Two serialblind different-family initials/allthreefacets/justifiedoriginalconfirmations, freshnon-skippedAndroid/applicablenativevisual, latestmainnormalmerge/combinedtree/normalsigning/ownerfastforward/greenCI/everyimmutablepublicZIPhash before publicationor041. No unreviewedpush/authoragents/secondrunner/permissionworkaround/signingretry/heapguardchanges. Public66/1228,1162remaining;physicalphone/generalreleaseoutstanding;overalltaskincomplete."
+  "historicalPreparationFields": "Original pending/proposed/source-only fields above preserve executions173/174, not the current draft. Current execution175 dispositions below supersede them without overwriting their evidence.",
+  "supportMappings": [
+    {"kanji": "鵬", "article": "words/鵬.md", "newArticle": true, "primaryReading": "ほう", "entryIds": ["2267690"], "status": "drafted-not-independently-reviewed"}
+  ],
+  "requiredReciprocalPairs": [["鵬", "words/鵬.md"]],
+  "changedReusedPassages": [],
+  "readingDispositions": [
+    {"kanji": "鵬", "kind": "on", "reading": "ホウ", "selected": true, "article": "words/鵬.md", "entryIds": ["2267690"], "reason": "Exact Daijisen and Kanjipedia character headings allocateホウ; exact standalone nounほう supplies necessary mythical-bird recognition support, not frequency or inferred vocabulary level."},
+    {"kanji": "鵬", "kind": "kun", "reading": "おおとり", "selected": false, "entryIds": ["2267700"], "reason": "Exact lexical alternate for the peng independently documented in Kanjipedia and Daijisen; own recognition row and word explanation. Same referent already taught withほう, so no duplicate question/support article. Not invalid/name-only/source-only; no false primary-reading link."}
+  ],
+  "curatedProjection": [
+    {"kanji": "鵬", "quizOnyomi": ["ホウ"], "quizKunyomi": [], "onKeys": ["ほう"], "kunKeys": []}
+  ],
+  "quizAudit": {
+    "鵬": {"title": "peng; giant mythical bird", "distractors": ["月", "鳴", "島"], "labels": ["moon, month", "animal call; ring", "island"], "reason": "Actual complete existing cards inspected: moon/month, sounding action and island are defensibly wrong for the mythical bird, with shape connections. Generic鳥 or another phoenix label is not a wrong-choice shortcut."}
+  },
+  "wordQuizAudit": {
+    "comparisonArticles": ["words/鳳凰.md", "words/鴻鵠.md", "words/鳥.md", "words/動物.md", "words/生き物.md", "words/生物.md", "words/翼.md", "words/月.md", "words/鴻.md", "words/鶴.md"],
+    "comparisonKanji": ["kanji/鳳.md", "kanji/月.md", "kanji/鳴.md", "kanji/島.md", "kanji/鳥.md"],
+    "directExclusions": [
+      {"word": "鵬", "exclude": ["鳥", "鴻鵠", "動物", "生き物", "生物", "鴻", "鶴"], "reason": "Direct broad-category/large-bird guards: a mythical peng can be described as a bird/largebird/animal/creature within its story. Do not require a real biological organism to use these story-category labels. Conservative鴻/鶴 guards account for the documentedおおとり spelling family's large-bird sense and Daijisen's explicit inclusion of cranes;鴻 itself teaches the large-bird alternate. Not a claim thatpeng is a crane/goose or that exclusions are transitive."}
+    ],
+    "nonExclusions": "鳳凰 is explicitly a different mythical identity, not a peng synonym; exact label includes fenghuang. 翼 names a wing rather than the whole bird;月 moon/month is not the bird. 鴻鵠's great-person secondary sense is retained but not assigned to鵬. No existing comparisons or exclusions are changed.",
+    "confusableInventory": "Complete candidate inventory throughline289 inspected; no exact鵬 candidate row. Actual primary and ordinary secondary meanings considered separately from English title strings.",
+    "candidatePathCorrection": "Attempted kanji/翼.md read returned nonexistent; actual words/翼.md exists and teachesつばさ. No翼card/distractor authored or assumed. Selected third distractor is the existing島 card.",
+    "supplementalDisposition": "Complete exact frozen families for動物,生き物 and both生物 readings retained. Theせいぶつ organism/biology identity is distinct fromなまもの rawfood/perishables; nofood reading imported into the bird lesson."
+  },
+  "draftValidation": {"execution": 175, "audit": "batch-040-draft-audit.json", "strokeAndFontAudit": "batch-040-stroke-audit.json", "runtimeAdditions": 3, "changedBaselineRuntimeFiles": 0, "reviewersLaunched": 0},
+  "draftAuthorInspection": {"execution": 175, "originalCompleteFamilies": 25, "supplementalCompleteFamilies": 4, "distinctCompleteFamilies": 29, "supplementalReturnedRanges": [[1, 95]], "pendingFamilies": 0, "limits": "Both original complete packets and four supplemental families coordinator-inspected, not independent review. Original authorInspection above remains the historical25-family receipt."},
+  "supplementalFamilyDispositions": [
+    {"entries": ["1378590"], "disposition": "Existing生き物いきもの livingthing/creature/animal identity; broad story-creature quiz guard. Alternate生きもの is search-only, not a second supported article."},
+    {"entries": ["1379430"], "disposition": "Existing生物せいぶつ livingthing/organism/creature identity; biology is a separate abbreviation sense. Broad story-creature quiz guard, not a claim that imaginarypeng is a living biological species."},
+    {"entries": ["1379440"], "disposition": "Separate生物なまもの rawfood/perishables identity; not selected support and no biologicalreading or foodmeaning imported into鵬."},
+    {"entries": ["1451470"], "disposition": "Existing動物どうぶつ animal identity; direct story-animal category guard, not an invented synonym or a new article."}
+  ],
+  "limits": "Signed local unreviewed draft only: one鵬card/one necessaryword/pinned19strokes. Rawphoenixgloss/fullreadings/source packets preserved; comparison articles unchanged. No independent content review/fresh040Android/native/visual/phone/publication claim. Published66/1228 and1162remaining unchanged. CompatibleAndroidf9b59a2+ required; physical-phone/general-release outstanding, not owner-testing veto. Full issue60 acceptance incomplete.",
+  "nextAction": "Resume SAME040 signed unreviewed draft, not041. Obtain two SERIAL blind different-family initials on one frozen signed snapshot covering both complete teaching articles,29completefamilies,rawmetadata,exact7Japanese source sections and actualcomparison/guard/reading/link scope; preserve originalreports/actualmodel/process/readlimits before fixes. Noauthoragents/nestedtasks/secondrunner. Reconcile consequential findings by exact evidence and reuse original sessions for justified changed-passage confirmations. Preserveホウandおおとり/order,selectedホウonly,wordほうwithぼうandlexicalおおとり,rawphoenixgloss,andboth exact虎/猿guards. Modernshape mnemonic is not historicalanalysis. Allrequiredpairs1/activatedbaseline0/directguards7 accounted. Fresh non-skipped040RealContent3/RareHan1 and applicable nativevisual gates remain, then latestmainnormalmerge/combinedsourcebaseline/link/readings/font/stroke/Python/vocabulary/manifest/budget/normalsigning/ownerfastforward/greenCI/everyimmutablepublicZIPhash/terminalissue receipts beforepublicationor041. No unreviewedpush/signingretry/permissionworkaround/heapguardchange. Public66/1228,1162remaining;physicalphone/generalreleaseoutstanding."
 }
