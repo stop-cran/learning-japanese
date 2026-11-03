@@ -37,6 +37,32 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 023: sweetfish draft, not reviewed or published
+
+The [frozen batch 023](n1-sources/batch-023-membership.json) contains **鮎**
+and one necessary support article, 鮎 (あゆ), sweetfish/ayu. Its
+[draft ledger](n1-sources/batch-023-progress.json) preserves all four
+metadata readings in source order and selects only **あゆ**. The complete
+28 lexical/comparison families and exact external dictionary evidence
+distinguish the Japanese fish noun from the character's catfish sense.
+The raw KANJIDIC2 English glosses remain preserved; the teaching gloss uses
+the exact JMdict species identity instead of generalizing to trout or smelt.
+Historical formation explanations are not adjudicated; the visible-shape
+mnemonic is explicitly not etymology.
+
+One reciprocal support pair and one direct 鮎/魚 category safeguard are
+recorded, with no activated baseline pair, reused teaching change or inferred
+vocabulary level. Pinned 16-stroke geometry and original baseline preservation
+are checked mechanically. The displayed 广 and 鯰 forms are absent from the
+bundled font cmaps; their supported-native disposition must be established
+before publication, not inferred from cmap absence or previous unrelated tests.
+
+This is **an unreviewed local draft**, not an additional published card.
+Independent serial two-family review, reconciliation, applicable native/fresh
+Android and combined-main/CI/exact public-ZIP gates remain pending.
+Published coverage stays **49 additions; 1,179 still to deliver**.
+Physical-phone/general-release acceptance remains explicitly outstanding.
+
 ## Batch 021: silkworm published and verified
 
 The [frozen batch 021](n1-sources/batch-021-membership.json) contains **蚕**
