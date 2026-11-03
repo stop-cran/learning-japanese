@@ -37,7 +37,35 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 036: beast textual review closed, not published
+## Batch 037: snake source preparation, not drafted
+
+The [frozen batch 037](n1-sources/batch-037-membership.json) contains only
+**蛇**, source row 970. Its [source ledger](n1-sources/batch-037-progress.json)
+records 108 complete lexical and eight disjoint comparison JMdict families,
+all coordinator-inspected in bounded ranges. The eight-family core overlaps
+lexical evidence; it does not increase the distinct count of 116.
+All four on-readings and the native へび remain in frozen source order.
+
+Existing N2 蛇口 (じゃぐち) is the one declared baseline activation candidate;
+its identity, vocabulary level and コック exclusion remain unchanged.
+Necessary 蛇 (へび) and 蛇行 (だこう) support articles are proposed, not created.
+委蛇 (いい／いだ) is flagged obsolete; its exact construction/allocation,
+the ヤ reading and the character's hard-drinker gloss still need precise
+Japanese dictionary evidence. The standalone snake family does not itself
+give a drunk-person sense. An apparent 蛇スープ/えびスープ source discrepancy
+is retained but excluded from proposed teaching, not silently corrected.
+
+Batch 036 is [published and verified](n1-sources/batch-036-publication.json)
+at terminal `8a8b538`: **63 additions delivered; 1,165 remain**.
+Batch 037 adds no runtime content, stroke file or manifest change yet.
+Source inspection is not independent review, final reading curation, native
+acceptance or publication. Compatible-client and outstanding physical-phone/
+general-release limits remain unchanged.
+
+## Batch 036: historical beast textual review
+
+The account below preserves its earlier textual checkpoint; the publication
+record above supersedes the pending delivery status without erasing evidence.
 
 The [frozen batch 036](n1-sources/batch-036-membership.json) contains only
 **獣** and needs two support articles: 獣 (けもの) and 獣医 (じゅうい).
