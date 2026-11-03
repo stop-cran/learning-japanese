@@ -37,7 +37,38 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 016: chrysanthemum review closed, publication pending
+## Batch 017: firefly draft, not reviewed or published
+
+The [frozen batch 017](n1-sources/batch-017-membership.json) contains **蛍**,
+one necessary animal-noun article and a single component link in the existing
+N2 vocabulary article 蛍光灯. Its metadata, level, reading and exclusions
+remain unchanged. The [draft ledger](n1-sources/batch-017-progress.json)
+records both full source readings, ケイ and ほたる, and two reciprocal pairs.
+Both readings are selected using exact lexical identities and the explicit
+native character heading, not a substring of a compound's pronunciation.
+
+Four complete dictionary packets retain 72 families. The
+[native source record](n1-sources/batch-017-external-evidence.json) separates
+the usually-kana noun, older 螢 spelling, firefly-family scope and historical
+secondary senses. Two direct word guards protect the broader 虫 label and
+the documented remaining-fire sense against 火; they are not unrestricted
+synonym claims. No incomplete historical gaiji rendering is used as etymology.
+
+The [stroke/font audit](n1-sources/batch-017-stroke-audit.json) verifies the
+pinned eleven-stroke conversion. All 27 Han characters in the teaching were
+checked against the unchanged bundled fonts: 26 are present; the older 螢
+needs system fallback. **Native inspection of that newly introduced spelling
+is outstanding and required before publication**. The pilot's forty-target
+font evidence does not cover it.
+
+This is **unreviewed local teaching**. Independent two-family review,
+fresh Android and combined-main/CI/immutable-public-ZIP acceptance remain
+pending. The preceding [batch 016 publication](n1-sources/batch-016-publication.json)
+delivered **43 additions; 1,185 still to deliver**. Draft 017 does not reduce
+that published remainder. Compatible-client and outstanding physical-phone/
+general-release qualifications remain unchanged.
+
+## Batch 016: historical textual-closure checkpoint
 
 The [frozen batch 016](n1-sources/batch-016-membership.json) contains **菊**
 and one necessary supporting plant-noun article, 菊 (きく). Its
