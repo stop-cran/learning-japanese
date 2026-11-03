@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "batch": "014",
+  "authoredSnapshot": "ba95ac3fb68c4cc9a6d9c6e3c96faa956898af1b",
+  "status": "corrections-pending-original-session-confirmation",
+  "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+  "originalReports": ["batch-014-initial-claude.md", "batch-014-initial-gpt.md"],
+  "findings": [
+    {
+      "id": "C1",
+      "reviewer": "claude-opus-5.5",
+      "severity": "minor",
+      "facet": "scoped coverage",
+      "location": "kanji/椎.md:35",
+      "status": "partially resolved",
+      "claim": "Chinquapin lexical note omits the usual-kana spelling tendency while the mushroom note includes it.",
+      "evidence": "Complete frozen JMdict2183460 usual-kana sense flag, with しい and kana-onlyシイ; not inferred from an unverified Daijisen notation symbol.",
+      "remedy": "Add scoped JMdict-attributed usually-kana note in the existing additional lexical reading paragraph.",
+      "confidence": "high",
+      "impactQualification": "Localized spelling guidance, not an incorrect reading or strict spelling prohibition."
+    },
+    {
+      "id": "G1",
+      "reviewer": "gpt-6.1-sol",
+      "severity": "minor",
+      "facet": "scoped coverage",
+      "location": "kanji/椎.md:33",
+      "status": "partially resolved",
+      "claim": "Source-only う.つ disclaimer omits the character meaning, leaving promised lookup information incomplete.",
+      "evidence": "Actual Jitsu 椎 raw HTML 字訓/訓義2 independently retrieved by GPT and then coordinator; exact bounded provenance in batch-014-review-external-evidence.json.",
+      "remedy": "Add attributed strike/hit-with-mallet character gloss and linked Jitsu evidence, retaining the exact-boundary/modern-example qualification and disabled kun quiz.",
+      "confidence": "high",
+      "impactQualification": "Localized lookup omission; no invented modern 椎つ form or metadata error established."
+    }
+  ],
+  "optional": [
+    {
+      "id": "C-O1",
+      "status": "optional",
+      "claim": "Mallet row's alongside phrasing may ambiguously distribute the rare-spelling qualification.",
+      "disposition": "Adopt neutral alternative-spellings wording naming only 椎 as rare. Do not use suggested usual spellings claim without frequency evidence."
+    },
+    {
+      "id": "C-O2",
+      "status": "optional",
+      "claim": "Add 脊髄 vocabulary to spinal-cord contrast.",
+      "disposition": "No expansion needed to distinguish vertebra from spinal cord. Existing negative English contrast remains clear."
+    },
+    {
+      "id": "C-O3",
+      "status": "optional",
+      "claim": "Mention シイノキ.",
+      "disposition": "Existing plant explanation and precise しい/シイ spelling note sufficient; additional synonym unnecessary."
+    }
+  ],
+  "contributionComparison": "Same snapshot/rubric/source access. C1 unique to Claude and G1 unique to GPT anywhere in originals, including optional/limits/per-file notes. Both correctly distinguished rare spelling, plant/nanori identity, vertebra versus whole backbone and figurative幹. No general model ranking/equal depth inferred.",
+  "processLimits": "Actual reviewer processes exited0 serially, first report archived before second launch. Internal overlap counts Claude1/GPT32; both original reports self-disclose violation of one-call rule. This is not strict internally serial compliance. Full original execution reports retained. Bounded original-session correction confirmations will explicitly require serial calls; no full repeated-read loop or rewritten initial evidence.",
+  "limits": "Independent textual hypotheses require precise evidence and confirmation; neither initials nor coordinator retrieval establish phone/native/visual/frequency certification. All source metadata and curation unchanged."
+}
