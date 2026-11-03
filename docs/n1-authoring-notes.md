@@ -37,10 +37,10 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 026: crane draft, not reviewed or published
+## Batch 026: crane textually review-closed, not published
 
 The [frozen batch 026](n1-sources/batch-026-membership.json) adds **鶴**
-and one necessary word article, 鶴 (つる), in a local unreviewed draft.
+and one necessary word article, 鶴 (つる), in a local textually review-closed batch.
 Both full readings remain in source order; only つる is selected. カク
 has a qualified 鶴翼 (かくよく) recognition example, not a quiz key.
 The [ledger](n1-sources/batch-026-progress.json) records all 57 complete
@@ -59,8 +59,17 @@ membership, baseline/runtime preservation, reading/link dispositions and
 archive budgets. The [stroke/font record](n1-sources/batch-026-stroke-audit.json)
 verifies pinned 21-stroke geometry and all 13 displayed Han in all three
 unchanged bundled cmaps. These checks are not new native or phone evidence.
-Two serial blind model-family reviews, reconciliation, fresh non-skipped
-Android and combined-main/publication gates remain pending.
+The [reconciliation](n1-reviews/batch-026-reconciliation.json) preserves both
+blind different-family initial reports: no actionable defect, three optional
+shape/style/navigation proposals, unchanged teaching. All assigned local
+ranges returned completely. Reviewer processes exited serially, but Claude
+issued three concurrent guidance reads (two overlapping starts); GPT had
+none. The original reports and actual model/read/process limits are retained.
+Both independently fetched the crane/poetic/stork dictionary sections; GPT
+also fetched the two compound definitions, while Claude used identical supplied
+facts and frozen families for those. These are not equal-depth or native
+certification. Fresh non-skipped Android and combined-main/publication gates
+remain pending.
 
 Batch 025 is [published and verified](n1-sources/batch-025-publication.json):
 **52 additions delivered; 1,176 still to deliver**. This new local draft
