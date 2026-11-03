@@ -116,6 +116,19 @@ For **kanji**, use the community sets exposed by [kanjiapi.dev](https://kanjiapi
   `f9b59a2` or later and the outstanding physical-phone/general-release
   qualifications remain explicit. This is not complete N1 coverage.
 
+  [Batch 019](n1-sources/batch-019-publication.json), 蚊, is
+  **published and verified for bounded owner testing**, following
+  [batch 018](n1-sources/batch-018-publication.json).
+  Both full readings are preserved; only か is offered. The existing N2
+  mosquito word retains its identity, level, reading and exclusion; only
+  its component link changes. Two-family review, recovered fresh non-skipped
+  Android, combined-main checks, green CI and every immutable public ZIP
+  runtime hash passed at accepted `78ef50d`.
+  Published coverage is **46 additions; 1,182 still to deliver**:
+  50 named source members plus the separate 妖 exception.
+  The compatible-client and outstanding physical-phone/general-release
+  qualifications remain unchanged; whole-set reconciliation is pending.
+
 Record the retrieved set and date when expanding coverage. Compare characters, not just counts. Existing cards for a level count
 toward its coverage; do not create duplicate cards. Complete coverage of a level means all characters in its named source set, not an official guarantee
 about every character that could appear in the exam. Earlier-level knowledge is still needed for higher-level study.

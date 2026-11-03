@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 019: mosquito textually review-closed
+## Batch 019: mosquito published and verified
 
 The [frozen batch 019](n1-sources/batch-019-membership.json) adds **蚊** and
 reuses the existing N2 word article 蚊 (か), adding only its substantive
@@ -59,13 +59,25 @@ suggestion were withdrawn; whole-word reading polish remains optional.
 No teaching change was needed. Claude's initial paired guidance reads remain
 a disclosed process deviation, not retroactively corrected by the follow-up.
 
-This is **textually review-closed local teaching**, not delivery:
-**45 additions are published, 1,183 remain**. Fresh batch 019 Android and
-combined-main/CI/immutable-public-ZIP gates remain pending. Compatible Android
-`f9b59a2` or later is required; physical-phone/general-release acceptance
-remains explicitly outstanding.
+This is **published and verified for bounded owner testing**. The
+[acceptance audit](n1-sources/batch-019-acceptance-audit.json) preserves the
+exact execution 075 Gradle denial and parent-approved execution of that command:
+fresh RealContentTest 3/3 and RareHanTest 1/1, zero errors, failures or skips,
+with exact XML/log hashes, timestamps and the dedicated sibling root verified.
+The fresh normal main merge was already up to date. Reviewed runtime is
+unchanged; 353 Python tests, validation, manifest freshness, exact source/
+baseline/reading/link/stroke/font audits and unchanged budgets passed.
+The [publication record](n1-sources/batch-019-publication.json) records signed
+accepted `78ef50d`, green CI `41593736884` and every **8,183 runtime hash**
+from its exact immutable public ZIP. All nineteen learner-visible Han are
+covered in the unchanged bundled cmaps; inherited pilot/native/all40/160font
+scope is not a fresh native or phone pass.
+**46 additions are published, 1,182 remain**. Compatible Android `f9b59a2`
+or later is required; physical-phone/general-release acceptance remains
+explicitly outstanding. Whole-set reconciliation and overall completion
+remain pending.
 
-## Batch 018: cocoon textually review-closed
+## Batch 018: cocoon published and verified
 
 The [frozen batch 018](n1-sources/batch-018-membership.json) contains **繭**
 and one necessary standalone support article, 繭 (まゆ). No existing article
@@ -96,11 +108,14 @@ original-session confirmation of the actual Daijisen character heading.
 No teaching correction was needed; the proposed source-attribution change
 and optional specialist/history expansions were withdrawn.
 
-This is **textually review-closed local teaching**, not another published
-addition. Fresh Android and combined-main/CI/immutable-public-ZIP acceptance
-remain pending. Published coverage stays **44 additions; 1,184 still to deliver**.
+This is **published and verified for bounded owner testing**. Its
+[publication record](n1-sources/batch-018-publication.json) preserves the
+exact execution 071 Gradle denial and parent recovery, fresh non-skipped
+Android 3+1 cases, combined-main checks, green CI and all 8,181 immutable
+public ZIP runtime hashes at terminal `6855aed`.
+At that checkpoint **45 additions were published; 1,183 remained**.
 The compatible-client and outstanding physical-phone/general-release
-qualifications remain unchanged.
+qualifications remain unchanged; this is not complete N1 coverage.
 
 ## Batch 017: firefly published and verified
 
