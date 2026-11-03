@@ -37,6 +37,30 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 038: mythical-bird source preparation only
+
+The [frozen batch 038](n1-sources/batch-038-membership.json) selects **鳳**,
+source row 1218, with grade-9/name-use classification, 14 source strokes and
+ordered ホウ・フウ readings; its frozen kun list is empty.
+The [source ledger](n1-sources/batch-038-progress.json) records complete
+coordinator inspection of 34 lexical and 11 disjoint comparison JMdict
+families. The seven-family core overlaps lexical evidence.
+
+One necessary 鳳凰（ほうおう）support article is proposed, not authored.
+The exact Japanese reading/allocation evidence, historical male/female
+qualification and Chinese-versus-Western phoenix distinction remain pending.
+JMdict recognizes lexical 鳳（おおとり）, although KANJIDIC2 places おおとり
+under nanori rather than kun; do not silently change metadata classification.
+No confidently allocated フウ example was established in this bounded packet,
+not proof that it is invalid or absent elsewhere. The search-only 鳳蓮草
+spinach spelling and irregular species spellings are not teaching anchors.
+凰 is not an addition in the frozen named set.
+
+No runtime, manifest, stroke, independent review, fresh Android/native or
+publication change is claimed. Published coverage remains **64 additions;
+1,164 still to deliver** after batch 037. Preserve the compatible-client
+and outstanding physical-phone/general-release qualifications.
+
 ## Batch 037: snake published for bounded owner testing
 
 The [frozen batch 037](n1-sources/batch-037-membership.json) contains only
