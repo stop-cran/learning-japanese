@@ -37,6 +37,44 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 033: pig textually review-closed, not published
+
+The [frozen batch 033](n1-sources/batch-033-membership.json) adds **豚**
+and one necessary 豚 (ぶた) word article. The existing N5 豚肉 (ぶたにく)
+article changes only its component backlink. Both full source readings,
+トン and ぶた, remain in order; only ぶた is selected. 養豚 (ようとん)
+supplies compound recognition without an extra support article or a claim
+that the unselected reading is rare.
+
+Both blind model-family initials established no actionable defect in the
+unchanged teaching and accepted the two drafted direct word-quiz guards:
+豚/豚肉 for the ordinary pork sense and 豚/ぶうぶう for the child-language
+pig noun. Digital Daijisen's actual noun definition supports the latter;
+JMdict's car-only noun sense does not negate that separate evidence.
+The [reconciliation](n1-reviews/batch-033-reconciliation.json) preserves
+both original reports, three nonblocking suggestions and actual execution
+receipts. All assigned teaching, 160 complete dictionary families, raw
+metadata, three kanji/eight word comparisons and current guidance returned.
+Both reviewer processes and their internal tool calls were serial.
+Claude relied on supplied external evidence; GPT independently fetched the
+豚 and 養豚 entries and directly inspected the supplied raw Daijisen section.
+Returned text and model agreement are not linguistic or native certification.
+No teaching change or unnecessary confirmation was required.
+
+The [fresh audit](n1-sources/batch-033-review-audit.json) verifies 361 Python
+tests, validation, unchanged manifest, exact source/baseline/link/reading
+checks, pinned 11-stroke reconversion and archive budgets. All 22 displayed
+Han were audited: 20 occur in all three unchanged bundled cmaps; missing
+炒 and 豕 already appear in exact-base cards. Inherited pilot/font evidence
+is limited to unchanged production scope, not new native acceptance.
+The two earlier reviewed baseline guards, 虎/酔っ払い and 猿/馬鹿, remain
+preserved. Fresh batch-033 Android, latest-main integration, signing,
+owner publication, green CI and every immutable public ZIP runtime hash
+remain pending. Public coverage stays **59 additions; 1,169 to deliver**;
+local drafted coverage is not delivery. Compatible Android `f9b59a2` or
+later is required; physical-phone/general-release acceptance and final
+whole-set reconciliation remain explicitly outstanding.
+
 ## Batch 031: monkey published and verified for bounded owner testing
 
 The [frozen batch 031](n1-sources/batch-031-membership.json) adds **猿**
