@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 031: monkey textually review-closed, not published
+## Batch 031: monkey published and verified for bounded owner testing
 
 The [frozen batch 031](n1-sources/batch-031-membership.json) adds **猿**
 and activates the component link in the existing N3 猿 (さる) article.
@@ -68,13 +68,23 @@ The 13 generated strokes match the pinned SVG reconversion. All 20 Han in the
 new/changed files were audited: 18 occur in all three bundled font cmaps;
 missing 犭 and 袁 already appear in the exact-base 犬 and 園 cards,
 respectively. No new fallback code point or native certification is claimed.
-Fresh Android and combined-main/publication gates remain pending.
+The [acceptance audit](n1-sources/batch-031-acceptance-audit.json) preserves
+the original execution-125 permission denial and exact parent recovery:
+all three RealContentTest cases and one RareHanTest case passed without
+failures, errors or skips against this dedicated content checkout.
+The fresh combined-main checks passed 361 Python tests, validation,
+vocabulary consistency, exact baseline/source/link/reading/stroke/font
+audits and manifest/archive budgets. Both reviewed additive baseline
+quiz guards, 虎/酔っ払い and 猿/馬鹿, remain explicit exceptions.
 
-Batch 030 is now [published and verified](n1-sources/batch-030-publication.json)
-at terminal `b7dd333`: **57 additions delivered; 1,171 still to deliver**.
-This local textual closure does not increase those counts. Compatible Android `f9b59a2` or
-later is required; physical-phone/general-release acceptance remains
-explicitly outstanding. Earlier sections retain their historical states.
+The [publication record](n1-sources/batch-031-publication.json) verifies
+normal signed owner publication at accepted `29775f9`, green CI and all
+8,218 runtime hashes in the exact immutable public ZIP. This delivers
+**58 additions; 1,170 still to deliver**: 1,043 kanji, 4,998 word articles,
+63 N1 labels and 62 named-source members plus the separate 妖 exception.
+Compatible Android `f9b59a2` or later is required; physical-phone/general-release
+acceptance and final whole-set reconciliation remain explicitly outstanding.
+Earlier sections retain their historical states.
 
 ## Batch 030: tiger textually review-closed, not published
 
