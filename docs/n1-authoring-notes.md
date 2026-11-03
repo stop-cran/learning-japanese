@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 015: tree and resin review closed, publication pending
+## Batch 015: tree and resin published and verified
 
 The [frozen batch 015](n1-sources/batch-015-membership.json) contains **樹**
 and one necessary supporting article, 樹脂 (じゅし), resin. Its
@@ -56,7 +56,7 @@ The new material article has four direct quiz safeguards, including 脂's
 separate やに resin identity. One reciprocal pair is required; no reused
 article or baseline metadata is changed.
 
-This is **textually review-closed local work**, not delivered coverage.
+These cards are **published and verified for bounded owner testing**.
 The [reconciliation](n1-reviews/batch-015-reconciliation.json) preserves both
 blind model-family initial reports on the unchanged signed teaching.
 Neither established an actionable defect. Five optional suggestions were
@@ -73,11 +73,26 @@ The original inaccurate range-limit claim was expressly withdrawn, not
 rewritten as compliant initial review. No teaching or geometry was changed,
 and no full packet rereview or native certification is claimed.
 
-Fresh Android/combined-main/publication gates remain pending. Batch 014's
-[verified terminal publication](n1-sources/batch-014-publication.json)
-delivered **41 additions; 1,187 still to deliver** at `3055447`.
+The [acceptance audit](n1-sources/batch-015-acceptance-audit.json) records
+353 passing Python tests, exact frozen inputs and full dictionary extractions,
+baseline/reading/link/stroke/font preservation and unchanged reviewed runtime.
+Fresh Android RealContentTest (3 cases) and RareHanTest (1 case) passed with
+no failures, errors or skips against this dedicated content checkout.
+The original execution denial and the parent's exact-command recovery are
+preserved separately; unchanged successful tests were not repeated.
+
+The [publication receipt](n1-sources/batch-015-publication.json) records
+normally signed acceptance `8c79b81`, green CI and verification of every
+**8,172 runtime hash** in its immutable public ZIP. All original archive
+guards passed: 8,193 entries, 30,436,446 compressed bytes, 43,875,726 inflated
+bytes and 43,607,443 retained bytes. Published coverage is now
+**42 additions; 1,186 still to deliver**. Earlier batch descriptions below
+retain their historical checkpoint scope; their publication ledgers govern
+actual delivery.
 Compatible Android `f9b59a2` or later is required; physical-phone/
-general-release acceptance remains explicitly outstanding.
+general-release acceptance remains explicitly outstanding. Pilot native
+and all-40/160-font evidence is inherited only for unchanged production,
+not claimed as fresh visual or phone testing.
 
 ## Batch 014: anatomical reading review closed, publication pending
 

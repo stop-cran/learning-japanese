@@ -2,72 +2,165 @@
   "schemaVersion": 1,
   "batch": "015",
   "baseCommit": "3055447e02e723bb4741787dd6d61c51191bd54c",
-  "membership": ["樹"],
-  "status": "textual-review-closed-local-unpublished",
-  "drafted": ["樹"],
-  "reviewClosed": ["樹"],
-  "published": [],
+  "membership": [
+    "樹"
+  ],
+  "status": "published-verified-bounded-owner-testing",
+  "drafted": [
+    "樹"
+  ],
+  "reviewClosed": [
+    "樹"
+  ],
+  "published": [
+    "樹"
+  ],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
-    {"selection": "batch-015-lexical-selection.json", "xml": "batch-015-jmdict.xml"},
-    {"selection": "batch-015-comparison-selection.json", "xml": "batch-015-comparisons-jmdict.xml"},
-    {"selection": "batch-015-notes-selection.json", "xml": "batch-015-notes-jmdict.xml"},
-    {"selection": "batch-015-supplement-selection.json", "xml": "batch-015-supplement-jmdict.xml"}
+    {
+      "selection": "batch-015-lexical-selection.json",
+      "xml": "batch-015-jmdict.xml"
+    },
+    {
+      "selection": "batch-015-comparison-selection.json",
+      "xml": "batch-015-comparisons-jmdict.xml"
+    },
+    {
+      "selection": "batch-015-notes-selection.json",
+      "xml": "batch-015-notes-jmdict.xml"
+    },
+    {
+      "selection": "batch-015-supplement-selection.json",
+      "xml": "batch-015-supplement-jmdict.xml"
+    }
   ],
   "supportMappings": [
     {
       "kanji": "樹",
       "article": "words/樹脂.md",
       "primaryReading": "じゅし",
-      "entryIds": ["1330370"],
-      "selectedSenses": [1],
+      "entryIds": [
+        "1330370"
+      ],
+      "selectedSenses": [
+        1
+      ],
       "newArticle": true,
-      "status": "textual-review-closed-local-unpublished",
+      "status": "published-verified-bounded-owner-testing",
       "recognition": "Exact unrestricted resin/rosin noun and reading. Actual native じゅ‐し head supports ジュ/シ allocation; existing 脂 シ metadata preserved. Native resin bodies distinguish natural and synthetic usage. No word level inferred from N1 kanji."
     }
   ],
-  "requiredReciprocalPairs": [["樹", "words/樹脂.md"]],
+  "requiredReciprocalPairs": [
+    [
+      "樹",
+      "words/樹脂.md"
+    ]
+  ],
   "changedReusedPassages": [],
   "readingDispositions": [
     {
-      "kanji": "樹", "kind": "on", "reading": "ジュ", "selected": true,
-      "entryIds": ["1330370"], "article": "words/樹脂.md",
+      "kanji": "樹",
+      "kind": "on",
+      "reading": "ジュ",
+      "selected": true,
+      "entryIds": [
+        "1330370"
+      ],
+      "article": "words/樹脂.md",
       "example": "樹脂 じゅし - resin",
       "reason": "Full unrestricted JMdict family plus actual native segmented じゅ‐し heading establish allocation. Useful material-description compound, not a claim of frequency or official vocabulary level."
     },
     {
-      "kanji": "樹", "kind": "kun", "reading": "き", "selected": false,
-      "entryIds": ["1534520", "1591090", "1599640", "2006090", "2006100"],
+      "kanji": "樹",
+      "kind": "kun",
+      "reading": "き",
+      "selected": false,
+      "entryIds": [
+        "1534520",
+        "1591090",
+        "1599640",
+        "2006090",
+        "2006100"
+      ],
       "example": "樹 き - tree or shrub; alternative spelling of native 木 き",
       "reason": "Exact one-character spelling/reading in full1534520 establishes non-name native use; no rare-spelling flag invented from missing priorities. Material and clapper senses restricted to 木. Full lexical inspection includes 樹々きぎ, rare並樹なみき and 樹蜂きばち/樹雨きさめ; not falsely source-only or absent. Lesson prioritizes ジュ compounds and recognition of native spelling; no duplicate of existing木/き article solely to create another question."
     }
   ],
   "curatedProjection": [
-    {"kanji": "樹", "quizOnyomi": ["ジュ"], "quizKunyomi": [], "onKeys": ["じゅ"], "kunKeys": []}
+    {
+      "kanji": "樹",
+      "quizOnyomi": [
+        "ジュ"
+      ],
+      "quizKunyomi": [],
+      "onKeys": [
+        "じゅ"
+      ],
+      "kunKeys": []
+    }
   ],
   "quizAudit": {
     "樹": {
       "title": "tree; establish",
-      "distractors": ["村", "時", "持"],
-      "labels": ["village", "time, hour", "hold, have"],
+      "distractors": [
+        "村",
+        "時",
+        "持"
+      ],
+      "labels": [
+        "village",
+        "time, hour",
+        "hold, have"
+      ],
       "reason": "All three complete cards and applicable full village/time/hold families inspected. Settlement, time and holding/possessing are not tree/establishment meanings. Shared 寸/寺-like shapes support visual comparisons, not semantic equivalence. Broad 木/立 not used; both and 植/林/森 already have three curated wrong choices, so no new default fallback change established."
     }
   },
   "wordQuizAudit": {
     "directExclusions": [
       {
-        "word": "樹脂", "exclude": ["脂", "プラスチック", "ビニール", "ナイロン"],
+        "word": "樹脂",
+        "exclude": [
+          "脂",
+          "プラスチック",
+          "ビニール",
+          "ナイロン"
+        ],
         "reason": "脂 has a separate verified やに resin family despite primaryあぶら article. Native synthetic-resin bodies and fullplastic/vinyl families establish overlapping material labels; native World Encyclopedia classifies nylon molding polymers among engineering plastics. Specific nylon versus broad synthetic resin needs a conservative direct guard, not a rule making allresins nylon. Each direct pair protected symmetrically; oldexclusions unchanged. ゴム/ガム material families inspected: rubber/plantgum not blanket resin synonyms; no cluster/transitive guard manufactured."
       }
     ],
     "confusableInventory": "Introduction/notation and scoped 樹/tree/resin/plastic/脂 search read; no named inventory cluster. Not a full fresh inventory review.",
-    "comparisonArticles": ["words/木.md", "words/脂.md", "words/プラスチック.md", "words/ビニール.md", "words/ナイロン.md", "words/ゴム.md", "words/ガム.md", "words/汁.md", "words/オイル.md", "words/松.md"],
-    "comparisonKanji": ["kanji/木.md", "kanji/立.md", "kanji/植.md", "kanji/林.md", "kanji/森.md", "kanji/村.md", "kanji/時.md", "kanji/持.md", "kanji/脂.md"],
+    "comparisonArticles": [
+      "words/木.md",
+      "words/脂.md",
+      "words/プラスチック.md",
+      "words/ビニール.md",
+      "words/ナイロン.md",
+      "words/ゴム.md",
+      "words/ガム.md",
+      "words/汁.md",
+      "words/オイル.md",
+      "words/松.md"
+    ],
+    "comparisonKanji": [
+      "kanji/木.md",
+      "kanji/立.md",
+      "kanji/植.md",
+      "kanji/林.md",
+      "kanji/森.md",
+      "kanji/村.md",
+      "kanji/時.md",
+      "kanji/持.md",
+      "kanji/脂.md"
+    ],
     "otherLabelNavigation": "Scoped resin/rosin/plastic/sap/fat/grease/material title and runtime-body search. No baseline resin article to duplicate. Juice/sap, rubber/gum and oil labels inspected without making unrestricted chemistry synonymy claims.",
     "limits": "Scoped actual displayed-label/ordinary-sense audit, not full-corpus or empirical live-quiz certification."
   },
   "fullFamilyInspection": {
-    "lexicalFamilies": 185, "comparisonFamilies": 25, "notesFamilies": 9, "supplementFamilies": 15, "totalFamilies": 234,
+    "lexicalFamilies": 185,
+    "comparisonFamilies": 25,
+    "notesFamilies": 9,
+    "supplementFamilies": 15,
+    "totalFamilies": 234,
     "scope": "All four packets fully returned and author-inspected. Lexical ranges1-650/651-1300/1301-1950/1951-2600/2601-3225; comparison1-420/421-815; notes1-273; supplement1-450/451-629. Full restrictions/search-only/kana-only/rare/archaic/jukujikun/name labels and all senses retained. Tree/native noun versus material restriction, establishment, resin and natural/synthetic material families checked. No kana-substring allocation or promotion of search-only forms such as 樹陰こかげ; company names and irregular whole-tree names remain evidence, not teaching or extra quiz keys."
   },
   "validation": {
@@ -80,22 +173,34 @@
     "pythonLog": "control/logs/execution-054-python-tests.txt",
     "pythonLogSha256": "504c4bae827475044d7d4a914946e23d878a69c13ff1ed1d32687544fa12fe0e",
     "vocabularyConsistency": "2122/2431 reviewed prompts, unchanged incomplete pilot stage; not complete.",
-    "localBudget": {"files": 8178, "entries": 8193, "retainedBytes": 43607443, "inflatedBytes": 43875726, "localZipBytes": 29883669, "listeningTaskMediaBytes": 5893602},
+    "localBudget": {
+      "files": 8178,
+      "entries": 8193,
+      "retainedBytes": 43607443,
+      "inflatedBytes": 43875726,
+      "localZipBytes": 29883669,
+      "listeningTaskMediaBytes": 5893602
+    },
     "fonts": "All20finalnew-teachingHan present in all3unchangedbundledcmaps; optionalstandalonehandradicalfirstfailure preserved/corrected. Not freshnative/visual/phoneacceptance.",
     "strokes": "16 strokes; exactpinnedSVGblob/count/reconversion verified."
   },
   "mechanicalDraftAudit": "batch-015-draft-audit.json",
   "strokeAndFontAudit": "batch-015-stroke-audit.json",
   "externalEvidence": "batch-015-external-evidence.json",
-  "publishedAdditions": 41,
-  "remainingAdditions": 1187,
+  "publishedAdditions": 42,
+  "remainingAdditions": 1186,
   "authoredSnapshot": "8b6e4c7233ba6a47b6d7408f733136bdde138da5",
   "reviewedTeachingSnapshot": "8b6e4c7233ba6a47b6d7408f733136bdde138da5",
   "reviewRecord": "../n1-reviews/batch-015-reconciliation.json",
   "reviewAudit": "batch-015-review-audit.json",
-  "reviewModels": ["claude-opus-5.5", "gpt-6.1-sol"],
+  "reviewModels": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
   "review": "Two serial blind different-family initials on unchanged signed teaching, both files/all3facets CLEAN. No actionable defect; five Claude optional suggestions adjudicated. One dependent original-Claude bounded follow-up clarifies text-level naturalness and rechecks only affected XML tails. No teaching correction or full rereview.",
   "reviewProcessLimits": "Actual63/74/11calls; reviewerprocesses exit0 and originals archived before next launch. Internal overlaps1/0/1; originalClaude3overlongXMLranges226/216/230 preserved and inaccurate <=200 claim expressly withdrawn. Bounded6XMLtailcallsindividuallyawaited/<=200; not retroactive strict initial/follow-up compliance. Complete mandatory assigned text returned; bytes not comprehension.",
-  "limits": "Textual review closed, not delivered coverage. Fresh015Android/currentmain/publicationCI/everyimmutablepublicZIPruntimehash pending; no oldXMLreuse or fresh native/phone claim. Original review-process deviations preserved. CompatibleAndroidf9b59a2+; accepted pilot native/all40/160font evidence inherited only unchanged production scope. Physical-phone/general-release outstanding.",
-  "nextAction": "Fresh coordinator resumes SAME015 non-skipped Android3+1 and combined-main/source/baseline/link/reading/font/stroke/Python/manifest/budget/signing/ownerfastforward/greenCI/immutablepublicZIP acceptance. No016 before015verifiedpublication; no signingbypass/permissionretryarounddenial/secondrunner."
+  "limits": "Bounded source/textual/mechanical/JVM/combined-main/CI/public-ZIP acceptance verified; see batch-015-publication.json. Original overlap1/0/1 and XML range violations3/0/0 retained, not retroactively compliant. Pilot native/all40/160fonts inherited only unchanged production; no fresh native/visual/phone certification. Physical-phone/general-release explicitly outstanding, not a bounded-owner-testing veto. Overall rollout and final reconciliation incomplete.",
+  "nextAction": "Verify terminal receipt commit CI/public ZIP and issue60; checkpoint/yield before016; overall project incomplete.",
+  "publishedCommit": "8c79b81d686748450f7c3471806c1bc1a32f6f4f",
+  "publicationRecord": "batch-015-publication.json"
 }
