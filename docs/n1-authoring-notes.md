@@ -37,7 +37,42 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 008: local textual review closed; publication pending
+## Batch 009: local draft; independent review pending
+
+The [frozen packet](n1-sources/batch-009-membership.json) is **杏・李**,
+two grade-9 fruit/tree characters with different lower components.
+Two necessary native-noun support articles provide two reciprocal pairs;
+neither character activates a baseline-declared pair. No reused article
+or baseline metadata is changed.
+
+The [ledger](n1-sources/batch-009-progress.json) preserves all **six**
+metadata readings in source order and offers **あんず・すもも**.
+杏's キョウ and アン remain useful compound-recognition information,
+including both readings of 杏仁豆腐, without adding a kernel or dessert
+article merely to generate a question. コウ is explicitly source-only;
+李's リ is demonstrated by 李下 and its proverb, not by an inferred
+personal-name reading. Question selection is separate from validity.
+
+Two frozen packets preserve **66 complete JMdict families**. The
+[external evidence](n1-sources/batch-009-external-evidence.json) records
+actual headings and extraction limitations. The teaching distinguishes
+apricot from ume despite overlapping English labels, and qualifies
+すもも's broader botanical scope rather than making one species universal.
+Sixteen direct word safeguards protect actual broader fruit/tree labels
+and conservative ume/garden-tree overlaps, not a botanical synonym clique.
+
+Both stroke files are generated at the pinned revision with seven strokes.
+The [draft audit](n1-sources/batch-009-draft-audit.json) checks exact
+dictionary extraction, source/baseline preservation, reading/link membership,
+stroke reconversion, unchanged font cmaps and local archive budgets.
+These are **unreviewed local drafts**, not additional delivered coverage.
+Two serial blind different-family reviews, reconciliation, fresh Android
+and combined-main/CI/immutable-public-ZIP acceptance remain pending.
+Published coverage remains **31/1,228; 1,197 still to deliver**.
+Supporting-word levels are not inferred from their kanji; physical-phone
+and general-release acceptance remain explicitly outstanding.
+
+## Batch 008: published and verified
 
 The [frozen packet](n1-sources/batch-008-membership.json) is **楓・楠**.
 Two necessary new support articles provide two reciprocal pairs; neither
@@ -62,7 +97,7 @@ character outside the existing forty-target evidence.
 Both new cards use thirteen pinned generated strokes, without manual
 geometry. New native spellings retain source metadata and dictionary-verified
 allocations; supporting words have no vocabulary level inferred
-from their kanji. This is **local unreviewed teaching, not delivery**.
+from their kanji.
 Two serial blind different-family initial reviews and both original-session
 confirmations are [reconciled](n1-reviews/batch-008-reconciliation.json).
 Claude identified a minor unclear reference to a maple-tree example in the
@@ -72,12 +107,15 @@ defect and independently confirmed the exact correction without regression.
 Optional expansions remain nonblocking and unadopted. Four actual review
 processes exited successfully with no observed internal tool overlaps;
 unequal inventory/live-source read depth is disclosed, not a model ranking.
-Fresh Android/current-main/publication gates remain pending. Published coverage
-is **29/1,228; 1,199 remain to deliver**.
+The [publication record](n1-sources/batch-008-publication.json) preserves
+fresh non-skipped Android, current-main, green CI and every immutable public
+ZIP runtime hash at terminal `7d0fd6f`. Published coverage is
+**31/1,228; 1,197 remain to deliver**.
 The [draft audit](n1-sources/batch-008-draft-audit.json) and
 [execution record](n1-sources/execution-030.json) distinguish 353 passing Python
 tests and exact source/baseline/link/reading/font/stroke/local-budget checks
-from textual closure and the still-pending publication acceptance gates.
+from textual closure and the later completed bounded owner-testing
+publication gates. Physical-phone/general-release acceptance is not inferred.
 
 ## Batch 007: published and verified
 
