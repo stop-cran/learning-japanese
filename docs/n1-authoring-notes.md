@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 036: beast draft, not independently reviewed
+## Batch 036: beast textual review closed, not published
 
 The [frozen batch 036](n1-sources/batch-036-membership.json) contains only
 **獣** and needs two support articles: 獣 (けもの) and 獣医 (じゅうい).
@@ -48,15 +48,23 @@ obsolete or insult-only. Exact Digital Daijisen headings also document its
 abusive person sense. The alternate is explained on the same lexical article,
 not duplicated or hidden by changing full metadata.
 
-The source packet has 167 distinct complete JMdict families: the original
+The initial source packet has 167 distinct complete JMdict families: the original
 139 inspected at execution 144 and 28 supplemental comparisons inspected
 at execution 145. Core families overlap rather than add to that count.
 The [external evidence](n1-sources/batch-036-external-evidence.json) records
 actual raw dictionary headings because simplified extraction omitted the
 definitions. Dictionary inclusion is not a usage-frequency ranking.
+Both blind model-family initials read that same signed snapshot. The
+[reconciliation](n1-reviews/batch-036-reconciliation.json) preserves all four
+original reports and the two original-session correction confirmations.
+The source-backed corrections explain that writing 獣 for けだもの is outside
+Joyo reading guidance, not a rare or obsolete pronunciation, and add the direct
+獣/生き物 creature-label safeguard. One disjoint complete comparison family
+brings the reviewed union to **168**, not another fresh read of the original
+167. The actual Daijisen notation guide verifies its ▽ mark.
 
 There are two required reciprocal pairs, no activated baseline pairs and
-no reused article edits. Fifteen conservative direct word-quiz guards protect
+no reused article edits. Sixteen conservative direct word-quiz guards protect
 the general beast label against animal/category labels; they do not make
 different species synonyms. No vocabulary level is inferred from the kanji.
 Pinned 16-stroke conversion and whole authored-text font checks are recorded
@@ -64,10 +72,15 @@ separately from independent linguistic or native acceptance.
 
 Batch 035 is [published and verified](n1-sources/batch-035-publication.json)
 at terminal `285df83`: **62 additions delivered; 1,166 remain**.
-This local draft is not another delivered addition. Two serial blind
-different-family reviews and fresh Android/combined-main/publication gates
-remain pending; compatible-client and outstanding physical-phone/general-release
-limits are unchanged.
+This textually closed local batch is not another delivered addition.
+Fresh Android/combined-main/publication gates remain pending; compatible-client
+and outstanding physical-phone/general-release limits are unchanged.
+The initial Claude process had one internal tool overlap and a partial
+Wiktionary retrieval; both are preserved, not claimed as serial/full lookup.
+Its confirmation inherited the original two dictionary excerpts, while GPT
+freshly reread them. All changed teaching, new family and notation-guide
+confirmation reads returned completely. These are textual checks, not
+native-speaker certification or physical-phone evidence.
 
 ## Batch 035: historical deer source preparation
 
