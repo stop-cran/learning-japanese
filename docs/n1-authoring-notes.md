@@ -37,6 +37,32 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 021: silkworm unreviewed draft
+
+The [frozen batch 021](n1-sources/batch-021-membership.json) contains **蚕**
+and one necessary support article, 蚕 (かいこ), silkworm. Its
+[draft ledger](n1-sources/batch-021-progress.json) preserves all four source
+readings in their original order. Only **かいこ** is selected for questions;
+サン in 養蚕 and older/bound こ in 春蚕 remain recognition material, while
+テン is explicitly source-only without an allocated teaching example.
+The animal, cocoon, silk material and broader insect category are distinguished.
+The support article has no vocabulary level inferred from its kanji and adds
+one direct 蚕/虫 quiz safeguard.
+
+The four bounded packets preserve 64 complete frozen JMdict families,
+including all 48 with an 蚕-containing spelling. Historical standalone and
+broader moth senses are kept separate from the ordinary larva lesson.
+No existing baseline word declares 蚕, so no baseline component pair is
+activated; the necessary new support pair links both ways. Existing accepted
+繭 and 桑 teaching is unchanged. Source checks, generated strokes and font
+cmaps are not independent review or phone evidence.
+
+This is **not published or review-closed**. Published coverage remains
+47 additions, with 1,181 still to deliver. Two serial blind model-family
+reviews, reconciliation and fresh Android/current-main/CI/immutable-ZIP
+publication gates remain pending. Physical-phone/general-release acceptance
+is explicitly outstanding; compatible Android `f9b59a2` or later is required.
+
 ## Batch 020: butterfly published and verified
 
 The [frozen batch 020](n1-sources/batch-020-membership.json) contains **蝶**
