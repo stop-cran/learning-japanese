@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "batch": "036",
+  "baseCommit": "285df83ebf69859f1032dc30c44b9f4be06f5486",
+  "membership": ["獣"],
+  "status": "source-prepared-not-drafted",
+  "drafted": [],
+  "reviewClosed": [],
+  "published": [],
+  "sourceSnapshot": "docs/n1-source-snapshot.json",
+  "dictionaryPackets": [
+    {"selection": "batch-036-lexical-selection.json", "xml": "batch-036-jmdict.xml"},
+    {"selection": "batch-036-comparison-selection.json", "xml": "batch-036-comparison-jmdict.xml"}
+  ],
+  "extractedDistinctFamilies": 139,
+  "authorInspection": {
+    "lexicalFamilies": 124,
+    "comparisonFamilies": 15,
+    "distinctCompleteFamilies": 139,
+    "remainingExtractedFamiliesPending": 0,
+    "lexicalReturnedRanges": [[1,400],[401,800],[801,1200],[1201,1600],[1601,1931]],
+    "comparisonReturnedRanges": [[1,240],[241,481]],
+    "coreReturnedRange": [1,194],
+    "coreFamilies": 9,
+    "limits": "Complete packets returned untruncated and coordinator-inspected, including entry boundaries across ranges. Core9 are already in lexical124, not extra distinct families. This is source inspection, not independent review, certification of every scientific/name gloss, frequency evidence or a claim of equal reviewer comprehension."
+  },
+  "sourceReadingOrder": {"onyomi": ["ジュウ"], "kunyomi": ["けもの","けだもの"]},
+  "provisionalReadingDispositions": [
+    {
+      "reading": "ジュウ",
+      "type": "on",
+      "evidence": ["1335590","1335610","2095820","1699880"],
+      "observation": "Full獣 family explicitly listsじゅう as well as native readings. 獣医じゅうい is veterinarian; 獣医師じゅういし has the same professional sense; 獣医学じゅういがく is the field. Do not substitute the field for the person.",
+      "proposedSupport": "words/獣医.md",
+      "status": "candidate-for-curation-not-authored"
+    },
+    {
+      "reading": "けもの",
+      "type": "kun",
+      "evidence": ["1335590","1636790"],
+      "observation": "Full獣 family supports beast/brute/animal withけもの. 獣道けものみち supports an animal trail. The slang anthropomorphic-animal sense is restricted toケモノ; it must not be generalized to every spelling/reading.",
+      "proposedSupport": "words/獣.md",
+      "status": "candidate-for-curation-not-authored"
+    },
+    {
+      "reading": "けだもの",
+      "type": "kun",
+      "evidence": ["1335590"],
+      "observation": "Exact same獣 family explicitly supportsけだもの. No archaic, rare-reading or usually-kana flag is attached to its ordinary first sense. This is NOT an unmatched dictionary-only reading. Fine-grained present-day register/person-insult andけもの contrast still require exact Japanese dictionary evidence before a teaching restriction or curation decision.",
+      "proposedSupport": "Candidate alternate reading on words/獣.md; do not create a duplicate lexical identity without necessity.",
+      "status": "qualified-teaching-and-curation-pending-exact-register-evidence"
+    }
+  ],
+  "inspectedBoundaries": [
+    {
+      "entryIds": ["2203180","2203190","2764070"],
+      "observation": "獣しし is a separate archaic meat-animal family plus abbreviated hunting sense. 獣狩りししがり is an attested hunting noun. 獣鍋ししなべ is in the boar stew family, butいのししなべ is restricted to猪鍋. Do not addしし to frozen on/kun metadata or infer a new reading allocation from an unrestricted substring."
+    },
+    {
+      "entryIds": ["1398870","2862973"],
+      "observation": "Including old-form獸 finds one extra complete family beyond獣-only123: 双蹄獸そうていじゅう (cloven-hoofed animal). 獸耳 is explicitly search-only in the slang獣耳 family, not a natural modern example. KANJIDIC2 records reciprocal獣/獸 variants; any old-form display requires its own whole-text font audit. No historical derivation or native glyph acceptance is inferred."
+    },
+    {
+      "entryIds": ["1225970","1571010","1161420"],
+      "observation": "Rare spellings食蟻獣ありくい and膃肭獣おっとせい do not allocateジュウ; the whole words are usually kana. 一角獣 includes unicorn, narwhal andqilin senses, so it is not a simple universally mythical-animal example."
+    },
+    {
+      "entryIds": ["1534040","1537420","1796240","2846637","1699910","2452180"],
+      "observation": "猛獣 emphasizes fierce animals; 野獣 is wild beast/brute; 鳥獣 is birds and wild animals; 獣畜 includes wild/domestic animals andlivestock. 獣類 has mammals gloss, while獣脚類 istheropods. These individual uses do not establish a universalwild-only or taxonomic mammal-only restriction for every compound containing獣."
+    },
+    {
+      "entryIds": ["1639070","1200280","2869509"],
+      "observation": "海獣かいじゅう (marine mammal) and怪獣かいじゅう (monster) are different identities. The dictionary's獣眼 description of supposed cruelty is not biological/personality evidence and is excluded from proposed teaching."
+    }
+  ],
+  "baselineCandidatePairs": [],
+  "supportMappingsPending": [
+    {"kanji": "獣", "article": "words/獣.md", "primaryReading": "けもの", "status": "necessary-support-candidate-not-created"},
+    {"kanji": "獣", "article": "words/獣医.md", "primaryReading": "じゅうい", "status": "necessary-support-candidate-not-created"}
+  ],
+  "requiredReciprocalPairsPending": [["獣","words/獣.md"],["獣","words/獣医.md"]],
+  "existingArticlesInspected": ["words/動物.md","words/犬.md","words/熊.md","words/猪.md","words/鹿.md","kanji/単.md","kanji/戦.md","kanji/営.md"],
+  "quizDispositionsPending": {
+    "kanjiDistractorCandidates": ["単","戦","営"],
+    "basis": "All three actual cards read; full frozen character records support distinct single/simple, battle andbusiness meanings. Shape comparisons only, not yet an authored quiz set.",
+    "wordOverlap": "動物's visible titleanimal overlaps獣's dictionaryanimal gloss. Animal-specific titles and secondary meanings, plus all relevant confusable pairs, still require exact direct-pair review against the actual new title; existing animal guards are not transitive protection.",
+    "preserveExistingMetadata": true
+  },
+  "baselineMetadataExceptions": {"words/虎.md":["酔っ払い"],"words/猿.md":["馬鹿"]},
+  "strokeAndFont": "No SVG downloaded or geometry generated at this source-only checkpoint. Exact frozen canonical07363.svg blob80d4d034d410c11cd1422e6a7119fc2f661c37ec and16source strokes retained for later conversion. No new text/native/phone certification.",
+  "publishedAdditions": 62,
+  "remainingAdditions": 1166,
+  "validation": {
+    "preparationAudit": "batch-036-preparation-audit.json",
+    "runtimeChanges": 0,
+    "extractionUnitTests": {"passed": 5, "failures": 0, "errors": 0},
+    "extractionTestLog": "control/logs/execution-144-extraction-tests.txt",
+    "runtimeManifestEqualToPublishedBase": true,
+    "contentVersion": "84e87a049b12e5bd",
+    "limits": "Source-only audit and extraction tests, not draft/independent linguistic review/fresh Android/native/publication."
+  },
+  "nextAction": "Resume SAME036 from this complete139-family source inspection. Inspect exact Japanese dictionary headings forけもの/けだもの/register and usefulジュウ examples; settle three qualified reading dispositions and explicit curated subsets. Inspect necessary獣/獣医 support context and comparison/confusable/full lexicon families, including医 allocation. Author one獣 card and only needed support, no inferred word levels. Preserve identities/exclusions; check all activated/all-mapped reciprocal links and exact baseline. Generate pinned16strokes through existingtool; audit all authored/reused Han and new fallback glyphs. Run validator/buildmanifest/source/baseline/reading/link/font/stroke/budget/Python checks and freeze signed unreviewed draft. Then two serial blind different-family initials, original-session confirmations as needed, fresh non-skipped Android and all combined-main/publication gates. No037/unreviewedpush/secondrunner.",
+  "limits": "Substantive source-preparation checkpoint only. All139 selected complete families inspected by author, not independently reviewed. No draft/runtime/stroke edit, curation acceptance, new native/phone certification, fresh Android gate, CI/public ZIP or publication. Original source-indexstatusAtFreeze remains immutable. Overall1228expansion and final whole-set acceptance incomplete."
+}
