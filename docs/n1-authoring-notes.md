@@ -37,6 +37,37 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 024: sea-bream draft, not reviewed or published
+
+The [frozen batch 024](n1-sources/batch-024-membership.json) adds **鯛**
+and one necessary support article, 鯛 (たい), sea bream, in a local
+unreviewed draft. Both complete source readings, チョウ and たい, remain
+in order; only たい is selected, with its own linked reading row.
+The [ledger](n1-sources/batch-024-progress.json) distinguishes this draft
+from the **50 published additions; 1,178 still to deliver** after batch 023.
+
+All 71 applicable lexical families and ten comparison families are retained
+and author-inspected. They support the sea-bream noun, voiced まだい compound,
+and the distinction between fish and fish-shaped たい焼き. Names containing
+鯛 do not all designate sea bream; the raw source's English "red snapper"
+gloss is preserved separately, not generalized into an unrestricted translation.
+The [external evidence](n1-sources/batch-024-external-evidence.json) records
+actual dictionary headings, the initial URL redirect and omitted simplified
+page sections. Unavailable historical gaiji are not evidence for an origin claim.
+
+The [draft audit](n1-sources/batch-024-draft-audit.json) verifies frozen inputs,
+exact dictionary extractions, original baseline preservation, all prior runtime,
+one reciprocal pair, no activated baseline pair and one direct 鯛/魚 quiz guard.
+The [stroke/font record](n1-sources/batch-024-stroke-audit.json) verifies
+19 generated pinned strokes and all 14 displayed Han in all three unchanged
+bundled cmaps. This is not new native or physical-phone evidence.
+353 Python tests, structural validation, manifest freshness and local budgets
+pass. Vocabulary coverage remains the existing incomplete pilot stage.
+Two serial blind model-family reviews, reconciliation, fresh non-skipped
+Android checks and combined-main/publication gates remain pending.
+No word level is inferred; compatible-client and outstanding physical-phone/
+general-release qualifications remain unchanged.
+
 ## Batch 023: sweetfish published and verified
 
 The [frozen batch 023](n1-sources/batch-023-membership.json) contains **鮎**
