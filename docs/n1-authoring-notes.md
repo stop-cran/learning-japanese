@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 037: snake draft, not reviewed or published
+## Batch 037: snake locally accepted, publication pending
 
 The [frozen batch 037](n1-sources/batch-037-membership.json) contains only
 **蛇**, source row 970. Its [source ledger](n1-sources/batch-037-progress.json)
@@ -52,7 +52,7 @@ All four on-readings and the native へび remain in frozen source order.
 Existing N2 蛇口 (じゃぐち) is the one baseline activation, with only its
 substantive component backlink added; identity, vocabulary level and コック
 exclusion remain unchanged. Necessary 蛇 (へび) and 蛇行 (だこう) support
-articles are now drafted without inferred vocabulary levels. Three reciprocal
+articles are now reviewed without inferred vocabulary levels. Three reciprocal
 pairs are recorded. Practice selects ジャ, ダ and へび with separate linked
 reading rows; the complete source inventory remains unchanged.
 The [qualified dictionary evidence](n1-sources/batch-037-dictionary-evidence.json)
@@ -66,9 +66,9 @@ Kanjipedia's differing タ/イ inventory does not replace the frozen イ/ヤ.
 Daijisen's separate じゃ lexical sense documents a heavy drinker, shortened
 from 蛇之助; its historical quotation does not alone prove obsolete usage.
 This is not ordinary へび meaning a drunk person. Actual full comparison cards,
-displayed labels and complete applicable families support six direct quiz
+displayed labels and complete applicable families support eight direct quiz
 safeguards: broad animal/creature/organism and separate drunk-label overlaps
-for 蛇, and broad bend/curve labels for 蛇行. These are not unrestricted synonym
+for 蛇, and broad bend/curve/wandering/unsteadiness labels for 蛇行. These are not unrestricted synonym
 claims or transitive cliques. 虫・蚊・蛍 provide three distinct incorrect kanji
 labels. The apparent 蛇スープ/えびスープ source discrepancy is retained but
 excluded from teaching, not silently corrected.
@@ -78,20 +78,30 @@ membership, frozen hashes, complete re-extractions, all original baseline
 metadata/geometry and the two accepted 虎/猿 guards. The
 [stroke/font audit](n1-sources/batch-037-stroke-audit.json) verifies the pinned
 eleven-stroke reconversion and all 31 Han in the complete new and changed
-articles. Thirty have glyphs in all three unchanged bundled fonts; **它 is
-new outside-subset teaching and still requires fresh native fallback
-acceptance**. The modern-shape mnemonic is not an etymology. Cmap checks
+articles. Thirty have glyphs in all three unchanged bundled fonts; **它 has
+fresh bounded native fallback acceptance** in the
+[native record](n1-reviews/batch-037-native-acceptance.json). Its system fallback
+is readable and distinct, not four bundled designs or an identified face.
+The modern-shape mnemonic is not an etymology. Cmap checks
 and source hashes do not certify readability or linguistic correctness.
 
 Batch 036 is [published and verified](n1-sources/batch-036-publication.json)
 at terminal `8a8b538`: **63 additions delivered; 1,165 remain**.
-Batch 037 is a validated local draft with regenerated manifest, 361 passing
-Python tests and unchanged archive guards, not another delivered addition.
-Two serial blind different-family reviews, evidence-based reconciliation,
-fresh Android/native checks and all current-main/CI/immutable-public-ZIP
-publication gates remain pending. No reviewer or publication was launched
-by this draft checkpoint. Compatible-client and outstanding physical-phone/
-general-release limits remain unchanged.
+Batch 037 has [combined-tree local acceptance](n1-sources/batch-037-acceptance-audit.json),
+361 passing Python tests, unchanged runtime manifest and archive guards,
+two serial blind different-family reviews with original-session confirmations,
+and [evidence-based reconciliation](n1-reviews/batch-037-reconciliation.json).
+Two findings are resolved; three optional groups and the original process,
+source-access, disagreement and launcher-bound snapshot limitations remain.
+Fresh Android checks passed three real-content cases and one rare-Han case.
+Two actual native terminal cases verify the single full import, glyph probes,
+offline support routes, reciprocal navigation and system Back. Eight images
+received dependent original-Claude visual confirmation; returned images were
+downscaled, and offscreen table/full-article contents remain unverified.
+Normal signing, owner publication, exact green CI and immutable-public-ZIP
+verification remain pending; this is not another delivered addition.
+Compatible-client and outstanding physical-phone/general-release limits
+remain unchanged. Batch 038 has not started.
 
 ## Batch 036: historical beast textual review
 
