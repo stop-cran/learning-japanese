@@ -37,10 +37,10 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 028: turtle/tortoise draft, not reviewed or published
+## Batch 028: turtle/tortoise textually review-closed, not published
 
 The [frozen batch 028](n1-sources/batch-028-membership.json) adds **亀**
-and one necessary native-noun support article in a local unreviewed draft.
+and one necessary native-noun support article in a local textually review-closed batch.
 All four readings remain in source order; only かめ is selected.
 キ has a verified 亀裂 (きれつ), "crack; fissure; rift," recognition
 example. キュウ and キン remain source-only within this lesson, not
@@ -59,9 +59,18 @@ redirect. Source/draft checks are not independent review or native evidence.
 
 Batch 027 is [published and verified](n1-sources/batch-027-publication.json)
 at terminal `55ca3c1`: **54 additions delivered; 1,174 still to deliver**.
-This draft does not increase that count. Two serial blind different-family
-reviews, reconciliation and fresh Android/combined-main/publication gates
-remain pending. Compatible Android `f9b59a2` or later and the explicitly
+This local batch does not increase that count. The
+[reconciliation](n1-reviews/batch-028-reconciliation.json) preserves both
+blind different-family initial reports: no actionable defect, four optional
+taxonomy/navigation/attribution/order proposals, unchanged teaching. All
+assigned local ranges returned completely. Reviewer processes exited
+serially, but Claude issued four concurrent guidance reads (three overlapping
+starts); GPT had none. Original reports and actual model/read/process limits
+remain preserved. Both independently fetched the actual Nikkoku animal/crack
+definitions; simplified Daijisen/Jitsu bodies were absent, so their raw
+reading lists remain supplied evidence, not independent reviewer retrieval.
+Fresh Android/combined-main/publication gates remain pending.
+Compatible Android `f9b59a2` or later and the explicitly
 outstanding physical-phone/general-release status remain unchanged.
 Earlier sections retain their historical checkpoint states.
 
