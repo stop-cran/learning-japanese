@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 038: mythical-bird combined-tree acceptance, publication pending
+## Batch 038: mythical-bird published with bounded native acceptance
 
 Batch 038 now has one **鳳** card and one necessary **鳳凰（ほうおう）**
 support article, without an inferred vocabulary level. Full ホウ・フウ order
@@ -98,9 +98,14 @@ rechecks their exact XML/log/root/timestamp/hash evidence against unchanged
 runtime, without rerunning resolved native/Android gates. Fresh 361 Python
 tests, content checks, pilot vocabulary coverage (2,122/2,431), manifest,
 source/baseline/link/reading/stroke/font audit and original budgets pass after
-latest-main integration. Normal signing, owner publication, exact green CI
-and every immutable public ZIP runtime hash remain pending.
-Published coverage is still **64 additions; 1,164 to deliver**.
+latest-main integration. The normally signed accepted commit `de06fc0c`
+is owner-published with exact green CI and all **8,241** runtime hashes
+verified in its immutable public ZIP. Original archive budgets, safe paths
+and per-file limits pass; contributor-only evidence remains excluded.
+The [publication record](n1-sources/batch-038-publication.json) preserves
+these receipts. Terminal evidence publication is checked separately before
+the coordinator yields; no batch 039 is started here.
+Published coverage is now **65 additions; 1,163 to deliver**.
 Compatible Android `f9b59a2` or later is required; physical-phone/
 general-release acceptance remains explicitly outstanding.
 
