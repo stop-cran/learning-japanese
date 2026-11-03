@@ -37,20 +37,20 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 040: peng draft, not independently reviewed
+## Batch 040: peng textual review closed, acceptance pending
 
 [Batch 040](n1-sources/batch-040-progress.json) freezes **鵬**, source row
 1220, for a bounded mythical-bird and source-gloss check. All **25 distinct
 complete JMdict families** were coordinator-inspected: nine lexical families
-and sixteen disjoint comparison families. This is source preparation, not
-independent content review or a new published card. Execution 175 adds the
+and sixteen disjoint comparison families. This initial source preparation was
+not independent content review or publication. Execution 175 adds the
 bounded local draft [鵬](../kanji/鵬.md) and one necessary
 [鵬 (ほう)](../words/鵬.md) support article, without a vocabulary-level claim.
 Both source readings remain ordered; practice selects only ホウ. The
 おおとり row and word explanation retain its documented lexical alternate.
 Direct broad-category quiz guards are recorded individually; comparison
 articles remain unchanged. Draft validation and pinned stroke/font evidence
-are recorded separately from pending two-family review, fresh Android,
+are recorded separately from two-family review, pending fresh Android,
 applicable native/visual and combined-main publication acceptance.
 Four supplemental complete dictionary families cover 動物, 生き物 and the
 distinct せいぶつ／なまもの identities spelled 生物, for 29 families in all.
@@ -72,22 +72,34 @@ rather than a second question; it is not name-only or invalid. The word-level
 ぼう variant does not change the frozen sole on-reading. 鵬翼 and 鵬程 are
 verified alternative literary anchors, not mandatory additions or ordinary
 aviation/travel vocabulary. A historical literary 鵬程 example supports that
-use, not invented casual collocations. These are author decisions, not
-independently reviewed teaching or a vocabulary-level assignment.
+use, not invented casual collocations. Both independent initial reviewers
+accepted this bounded teaching; no vocabulary-level assignment is inferred.
 
 No declared baseline 鵬 pair was found. Existing bird and wing comparisons
 were inspected unchanged; 翼's article teaches つばさ, not 鵬翼 ほうよく.
 The pinned nineteen-stroke SVG has been converted with the existing generator;
 the [draft audit](n1-sources/batch-040-draft-audit.json) and
 [stroke/font audit](n1-sources/batch-040-stroke-audit.json) record exact checks.
-Independent reviews and fresh acceptance gates remain pending.
+The [textual reconciliation](n1-reviews/batch-040-reconciliation.json)
+preserves two blind different-family initial reviews on signed `baa525f`,
+with no actionable defect and four nonblocking optional groups. Both complete
+reports and actual model/process/read evidence remain intact: 39/44 tool
+calls, zero internal overlaps and zero XML-range violations. All assigned
+teaching, 29 complete families, raw metadata, comparisons, guidance and seven
+supplied Japanese sections returned. GPT's missing auxiliary source-file
+lookup and irrelevant simplified web extractions remain explicit limits;
+the coordinator separately reverified exact frozen membership and hashes.
+The sourced phonetic explanation is valid optional enrichment, not a reason
+to call the labelled mnemonic incorrect. Teaching is unchanged; no follow-up
+review was needed. Fresh Android and applicable native/visual/combined-main
+publication gates remain pending.
 The historical [preparation audit](n1-sources/batch-040-preparation-audit.json)
 checks frozen inputs, full-family membership and exact baseline/runtime
 preservation, not linguistic certification.
 
 Accepted [batch 039](n1-sources/batch-039-publication.json) remains published
 at terminal `3c1735f`: **66 additions delivered; 1,162 remain**. This
-local unreviewed draft is not added to that delivered count and makes no new
+local textually review-closed draft is not added to that delivered count and makes no new
 Android/native/phone claim. Compatible Android `f9b59a2` or later remains
 required; physical-phone/general-release acceptance is explicitly outstanding.
 
