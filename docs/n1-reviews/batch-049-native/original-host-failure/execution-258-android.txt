@@ -1,0 +1,42 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:compileKotlin
+> Task :core:compileJava NO-SOURCE
+> Task :core:processResources NO-SOURCE
+> Task :core:classes UP-TO-DATE
+> Task :core:jar
+> Task :core:compileTestFixturesKotlin
+> Task :core:compileTestFixturesJava NO-SOURCE
+> Task :core:processTestFixturesResources
+> Task :core:testFixturesClasses
+> Task :core:testFixturesJar
+
+> Task :core:compileTestKotlin
+w: file:///C:/Users/stop-/n1-kanji-workspace/kanji-cards-android/core/src/test/kotlin/io/github/stopcran/kanji/core/GrammarGroupsTest.kt:37:25 Redundant creation of Json format. Creating instances for each usage can be slow.
+w: file:///C:/Users/stop-/n1-kanji-workspace/kanji-cards-android/core/src/test/kotlin/io/github/stopcran/kanji/core/counters/CountersTest.kt:178:45 Redundant creation of Json format. Creating instances for each usage can be slow.
+
+> Task :core:compileTestJava NO-SOURCE
+> Task :core:processTestResources
+> Task :core:testClasses
+
+> Task :core:test
+
+RealContentTest > parsesRealContentRepoWhenPresent FAILED
+    java.lang.OutOfMemoryError at StringUTF16.java:169
+
+3 tests completed, 1 failed
+
+> Task :core:test FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':core:test'.
+> There were failing tests. See the report at: file:///C:/Users/stop-/n1-kanji-workspace/kanji-cards-android/core/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 1m 16s
+8 actionable tasks: 8 executed
