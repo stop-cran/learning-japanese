@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "execution": 325,
+  "batch": "056",
+  "status": "native-retry2-compiled-pending-execution",
+  "startingHead": "d17c398fea5149187a2e6bd7336c062b30cb62e0",
+  "scope": "SAME056 separately named retry2 selector audit, harness repair, serial compilation and signed durable checkpoint only. No native launch, reviewer, publication,057 or second runner.",
+  "recordedAt": "2026-11-04T22:30:29.358019+00:00",
+  "preparation": "docs\\n1-sources\\batch-056-native-retry2-preparation.json",
+  "preparationSha256": "479b0f8442c2d56089b3b4726d06e73d2bfda34cc0f355c5614bc51df3faf95b",
+  "compilation": {
+    "status": "compiled-not-executed",
+    "exitCode": 0,
+    "result": "BUILD SUCCESSFUL in 58s;56 actionable tasks:7 executed,49 up-to-date",
+    "log": "docs\\n1-reviews\\batch-056-native\\retry2-compile.txt",
+    "logSha256": "dae0e1fc79f52fc6e9a0f8961318c8195773ff3356c630ef37fafc2fe560363b",
+    "launcher": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\run-325-native-compile.ps1",
+    "launcherSha256": "b6959923c00a9d0ac4cef1b93a24951c1c32af401d1927e1622d71b107bac1f1",
+    "command": ".\\gradlew.bat :app:assembleDebugAndroidTest --no-daemon --no-parallel --max-workers=1 '-Pkotlin.compiler.execution.strategy=in-process'",
+    "apk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-056-retry2-native-test.apk",
+    "apkSha256": "93aa8d938ef1f5318f9ea0a963e08317cfb6aa85c5e6609ea638e157fe447ed4",
+    "apkBytes": 31901755,
+    "packagedExactOriginalArchiveVerified": true,
+    "bothRetry2ClassDescriptorsAndMethodsPresent": true,
+    "oldClassDescriptorsAbsent": true,
+    "temporaryAndroidSourceAndAssetRemoved": true,
+    "androidWhollyClean": true,
+    "hostTestInitScriptUsed": false,
+    "nativeOrEmulatorStarted": false
+  },
+  "checks": [
+    {
+      "check": "validate",
+      "exitCode": 0,
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-325-validate.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+    },
+    {
+      "check": "manifest",
+      "exitCode": 0,
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-325-manifest.txt",
+      "sha256": "aa9f2e320cf0ca694cd009ef065de955290cffd9dd13b479c0c93913cd08d44a"
+    }
+  ],
+  "selectorAudit": {
+    "staticCompleteArticleSelectors": 65,
+    "captureSteps": 40,
+    "existingNavigationControls": 5,
+    "actualTreeExampleRegressions": [
+      {
+        "oldSubstring": "人材が乏しい",
+        "oldCount": 2,
+        "exactText": "人材が乏しい。 (じんざいがとぼしい。) — There is a shortage of capable people.",
+        "exactCount": 1
+      },
+      {
+        "oldSubstring": "乏しい経験",
+        "oldCount": 2,
+        "exactText": "乏しい経験 (とぼしいけいけん) — limited experience",
+        "exactCount": 1
+      },
+      {
+        "oldSubstring": "乏しい生活",
+        "oldCount": 1,
+        "exactText": "乏しい生活 (とぼしいせいかつ) — an impoverished life",
+        "exactCount": 1
+      }
+    ],
+    "method": "All article-route show/await/section/inline calls classified against complete three articles. Static Markdown subset projection inspected against actual production parser/renderer; not a native-tree acceptance claim.",
+    "firstAuditSchemaCorrection": "First coordinator audit stopped at original322 index's sourceArtifacts key (retry1 index uses files). Explicit per-index schema corrected; no test assertion or source evidence modified. Subsequent full audit passed.",
+    "harness": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\audit-325-retry2.py",
+    "harnessSha256": "ea08b861695361e3a84ffed92172e9284d3aea9c671db847c580107b579d5c8e",
+    "diff": "docs\\n1-reviews\\batch-056-native\\retry2-from-retry1.diff",
+    "diffSha256": "b8145205c696827e598994d31125629ed8f203ede47786046ed84055b404dac1",
+    "assertionInvariant": "Byte-equivalent retry1 fixture after precisely the declared seven call/class changes plus generic helper rename; all original imports, ContentSync once, full archive, glyph/meaning/both reading/drawing/Full projection/reciprocal/Back/offline assertions retained."
+  },
+  "parentCleanupRecoveryArchive": "docs\\n1-reviews\\batch-056-native\\execution-324-parent-cleanup-recovery.json",
+  "parentCleanupRecoveryArchiveSha256": "f0ddae1b411ba22731109044116f3e38c19f3aaa73fb0156e0e18625b8d3937e",
+  "original322And324ArtifactHashesReverified": true,
+  "original322TerminalFailures": 2,
+  "original324GlyphCase0": 1,
+  "original324ArticleCaseMinus2": 1,
+  "original324Limits": "Overall native failed. 15 source PNGs preserved, four coordinator direct image requests inherited; no fresh image inspection or independent visual acceptance. Native192m576m unchanged. Parent cleanup recovery resolves exact postrun verification only, not native failure.",
+  "accepted320ArtifactHashesReverifiedNotRerun": true,
+  "runtimeEditsMade": false,
+  "nativeExecuted": false,
+  "nativeAcceptance": false,
+  "independentVisualAcceptance": false,
+  "reviewersLaunched": 0,
+  "publicationAttempted": false,
+  "stagedWhitespaceCheck": "Only immutable raw adb/emulator/Gradle output and unified-diff context whitespace flagged. Preserved exact bytes/hashes; authored Kotlin and JSON have no whitespace findings.",
+  "publishedAdditions": 82,
+  "remainingAdditions": 1146,
+  "nextAction": "SAME056 compiled retry2 native EXECUTION next, not057/publication/new blind reviews. Read docs/n1-sources/execution-325.json and batch-056-native-retry2-preparation.json. Use frozen control/artifacts/n1-batch-056-retry2-native-test.apk with N1Batch056Retry2GlyphTest and N1Batch056Retry2ArticleTest; exact original full fddfae35 envelope retained. Five whole-example exact article-body/non-table targets replace substring selectors; 65 complete-article static selectors incl40 capture steps and three actual-tree example regressions audited. Original322 BOTH terminal-2 and324 glyph0/article-2 remain immutable failures, not acceptance. Parent resolved ONLY324 exact denied postrun verification; recovery separately archived, denial retained. Retry2 compiled, NOT native executed. All assertions/captures/routes unchanged except declared targets/names. Fresh adb/device and ALL local/remote5580-5581 connection/PID ownership immediately before read-only N3_Acceptance_20261029 API35 hostGPU Vulkan-disabled helper at explicit emulator-5580; full SDK emulator flags -port5580 -read-only -no-snapshot -no-window -no-audio -gpu host -feature -Vulkan -memory2048 -cores2. Record actual owned parent/QEMU and stop ONLY owned helper. 040 alternate-port exception NOT inherited. No production/content/font/heap/archive-guard changes. Full original archive through production ContentSync ONCE/no duplicate preflight/reduced archive; require1068kanji5027words88N1/cb85043f73a606f3/problems0/epoch1 and Lite+Full ordered ボウ/とぼ.しいとも.しい, curatedボウとぼ.しい, normalizedぼうとぼしい. Require BOTH terminalcase0/no skips/rawlogs/actual direct PNG inspection; actual丿饉飢饉/乏久反乃 readability, complete乏しい貧乏 articles, two reciprocal pairs/four directions, systemBack/offline, meaning/BOTHcuratedGood persistent grades/four touch-reference strokes/ungraded trace/recall miss/persistedDrawAgain. Raster hashes are not readability/fallback-face identification; offline reference/recallmiss not MLKit or correct human recall. Accepted320 Android3+1 hashes reverified, NOT rerun absent new concern. After nativePASS use ORIGINAL two different-family reviewer sessions SERIALly for bounded dependent visuals, not newblindinitials. Preserve all original review/source/read-depth/lookup/optional limits and ともしいfrequency/register UNVERIFIED/not claimed. Then latestmain normal nonrewriting merge, all combined source/baseline/exactguards/reading-link-stroke-font/Python/vocabulary/validator/freshmanifest/18000entries42MiBcompressed80MiBinflated56MiBretained budgets/normal signing/owner fastforward/exactpublicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 BEFORE057. Actual permission denial/signing wait: preserve exact command/error, report/yield; no retry/workaround. Original049 HOST512MiB OOM/1GiB HOST-only qualification retained; native192m576m unchanged. Preserve FULL live history. Published82/1228,1146remaining. CompatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding. Overall project incomplete.",
+  "limits": "Static projection of this bounded Markdown subset, inspected against production Markdown.kt/MarkdownView.kt, is not a fresh native semantics tree or UI acceptance. Actual prior tree proves three example targets, including both two-match ambiguities. Remaining complete article selectors have one static text block each, not a live visibility guarantee. Prior glyph case0 and article-2 remain overall failed; no new native/independent visual/phone acceptance."
+}

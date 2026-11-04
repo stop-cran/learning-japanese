@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "execution": 324,
+  "batch": "056",
+  "status": "native-retry1-glyph-pass-article-failed-blocked-postrun-verification",
+  "recordedAt": "2026-11-04T22:23:40.012948+00:00",
+  "startingHead": "d17c398fea5149187a2e6bd7336c062b30cb62e0",
+  "scope": "SAME056 compiled retry1 native execution, direct evidence inspection and durable checkpoint only; no057, second runner, blind review rerun or publication.",
+  "nativeExecution": {
+    "execution": 324,
+    "batch": "056",
+    "attempt": 2,
+    "variant": "retry1",
+    "startedAt": "2026-11-04T23:18:26.3443080+01:00",
+    "serial": "emulator-5580",
+    "contentSnapshot": "fddfae3526b27d1deea8aabdb202b9a9168f0214",
+    "androidSnapshot": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+    "appApk": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\build\\outputs\\apk\\debug\\app-debug.apk",
+    "appApkSha256": "0224e8e3f8c744a554da173ec20f133d5d00cb6b6226b001da5ea030856bd407",
+    "testApk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-056-retry1-native-test.apk",
+    "testApkSha256": "c89a59d0309ffe633dd8172bbc2f1701df8fbf58e9b195f4f4bb7fecd889e156",
+    "fixtureSha256": "46008f1b47f165cd0e8fa1bc00f0ef864803b23945d76e6e24037e251a0e5363",
+    "archiveSha256": "8523808488b4123133ba6885761f650d30b37ec0e210fe4f17f84291cec41073",
+    "nativeExecuted": true,
+    "passed": false,
+    "failure": "Native acceptance did not pass; raw result/artifacts preserved.",
+    "prelaunch": {
+      "connections": [],
+      "devices": "List of devices attached\r\nemulator-5556          device product:sdk_gphone64_x86_64 model:sdk_gphone64_x86_64 device:emu64xa transport_id:15\r\n\r\n",
+      "verifiedAt": "2026-11-04T23:18:27.2711527+01:00"
+    },
+    "parentEmulatorPid": 568,
+    "emulatorArguments": [
+      "-avd",
+      "N3_Acceptance_20261029",
+      "-port",
+      "5580",
+      "-read-only",
+      "-no-snapshot",
+      "-no-window",
+      "-no-audio",
+      "-gpu",
+      "host",
+      "-feature",
+      "-Vulkan",
+      "-memory",
+      "2048",
+      "-cores",
+      "2"
+    ],
+    "qemuPid": 25712,
+    "listeners": [
+      {
+        "LocalPort": 5581,
+        "OwningProcess": 25712
+      },
+      {
+        "LocalPort": 5580,
+        "OwningProcess": 25712
+      },
+      {
+        "LocalPort": 5581,
+        "OwningProcess": 25712
+      },
+      {
+        "LocalPort": 5580,
+        "OwningProcess": 25712
+      }
+    ],
+    "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+    "heapGrowth": "192m",
+    "heapSize": "576m",
+    "meminfo": "MemTotal:        2532900 kB",
+    "network": "Active default network: none",
+    "adbExitCode": 0,
+    "terminalSuccessCases": 1,
+    "artifacts": [
+      "n1-056-adjective-poverty.png",
+      "n1-056-adjective-scope.png",
+      "n1-056-article-route.json",
+      "n1-056-article-tree.txt",
+      "n1-056-font-pairs.png",
+      "n1-056-font-raster.json",
+      "n1-056-kanji-alternate-reading.png",
+      "n1-056-kanji-curation.png",
+      "n1-056-kanji-drawing-variant.png",
+      "n1-056-kanji-frequency-boundary.png",
+      "n1-056-kanji-kun-reading.png",
+      "n1-056-kanji-lookalikes.png",
+      "n1-056-kanji-mnemonic.png",
+      "n1-056-kanji-on-reading.png",
+      "n1-056-kanji-poverty-overlap.png",
+      "n1-056-kanji-radical.png",
+      "n1-056-kanji-shortage.png",
+      "n1-056-selection.png"
+    ],
+    "exactError": "\r\nPSMessageDetails      : \r\nException             : System.Management.Automation.RuntimeException: Native acceptance did not pass; raw result/artifacts preserved.\r\nTargetObject          : Native acceptance did not pass; raw result/artifacts preserved.\r\nCategoryInfo          : OperationStopped: (Native acceptance d…rtifacts preserved.:String) [], RuntimeException\r\nFullyQualifiedErrorId : Native acceptance did not pass; raw result/artifacts preserved.\r\nErrorDetails          : \r\nInvocationInfo        : System.Management.Automation.InvocationInfo\r\nScriptStackTrace      : at <ScriptBlock>, C:\\Users\\stop-\\n1-kanji-workspace\\control\\run-324-native.ps1: line 104\r\n                        at <ScriptBlock>, <No file>: line 2\r\nPipelineIterationInfo : {}\r\n\r\n",
+    "errorPosition": "At C:\\Users\\stop-\\n1-kanji-workspace\\control\\run-324-native.ps1:104 char:32\r\n+ … t.passed) { throw 'Native acceptance did not pass; raw result/artifac …\r\n+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+    "stopAdbExitCode": 0,
+    "ownedHelperStopped": true,
+    "ownedQemuStopped": true,
+    "completedAt": "2026-11-04T23:21:49.0865193+01:00"
+  },
+  "nativeRawLog": "docs\\n1-reviews\\batch-056-native\\attempt-2-retry1\\instrumentation.txt",
+  "rawLogSha256": "c94eec55c037b2a69df6520cd8891401bd8a061e11db399d80cea3deeb443aa6",
+  "terminalCases": [
+    {
+      "class": "N1Batch056Retry1GlyphTest",
+      "status": 0
+    },
+    {
+      "class": "N1Batch056Retry1ArticleTest",
+      "status": -2
+    }
+  ],
+  "durationSeconds": 64.995,
+  "productionImportEvidence": {
+    "contentSnapshot": "fddfae3526b27d1deea8aabdb202b9a9168f0214",
+    "contentVersion": "cb85043f73a606f3",
+    "archiveRequests": 1,
+    "importedKanji": 1068,
+    "importedWords": 5027,
+    "problems": 0,
+    "n1Cards": 88,
+    "acceptedReadingParserEpoch": 1,
+    "fullOnyomi": [
+      "ボウ"
+    ],
+    "fullKunyomi": [
+      "とぼ.しい",
+      "とも.しい"
+    ],
+    "quizOnKeys": [
+      "ぼう"
+    ],
+    "quizKunKeys": [
+      "とぼしい"
+    ],
+    "transport": "Exact full git envelope through production ContentSync ONCE; synthetic source/HEAD",
+    "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+    "sdk": 35,
+    "fixture": "Other N1 meanings/readings postponed; 乏 meaning and both curated keys due. Two historical good 乏 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.",
+    "phoneEvidence": false,
+    "passed": false
+  },
+  "glyphEvidence": {
+    "individualPaintProbes": 28,
+    "wholeWordRasterProbes": 4,
+    "productionComposeRows": 4,
+    "glyphCasePassed": true,
+    "directCoordinatorImageRequests": [
+      "n1-056-font-pairs.png",
+      "n1-056-kanji-on-reading.png",
+      "n1-056-kanji-kun-reading.png",
+      "n1-056-adjective-poverty.png"
+    ],
+    "observation": "Four actual production rows show distinguishable乏久反乃 and readable丿/饉/飢饉 with no blank/replacement box. Both reading-example screenshots show selected examples; table is horizontally scrolled, first reading column partly outside viewport with scroll guidance visible. Adjective screenshot shows meaning, three kana/English examples and grammatical attachment prose.",
+    "limits": "Only four direct image requests; remaining images not inspected. Native raster hashes alone do not prove readability. No actual fallback-face identification, independent visual approval or phone evidence."
+  },
+  "failure": {
+    "class": "N1Batch056Retry1ArticleTest",
+    "status": -2,
+    "location": "N1Batch056Retry1NativeTest.kt:275,446,482",
+    "claim": "Substring 人材が乏しい matches complete Meaning example bullet AND Synonyms comparison; expected1 actual2.",
+    "remedy": "Separate retry2 fixture: complete exact bullet/section-aware selectors, audit all remaining example/comparison duplicates including乏しい経験. Preserve original assertion count and route coverage; no arbitrary first/last.",
+    "limits": "Test-harness ambiguity; not an established teaching defect. Full route, second support article, meaning/readings/drawing/Full projection/back completion not reached."
+  },
+  "artifactIndex": "docs\\n1-reviews\\batch-056-native\\execution-324-artifact-index.json",
+  "artifactIndexSha256": "63716908b2fdad6d5050c93c64d76d67c4ce117db2db6ac1e09fd951ec3d30f4",
+  "sourcePngCount": 15,
+  "nativeLauncher": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\run-324-native.ps1",
+  "nativeLauncherSha256": "120ea67c5fc7b7b32e7deb5f593e7acff2d11f2fb8a58d9183d0e26f5a072fe8",
+  "original322FailuresRetained": true,
+  "runtimeEditsMade": false,
+  "harnessEditsAfterFailure": false,
+  "nativeAcceptance": false,
+  "independentVisualAcceptance": false,
+  "reviewersLaunched": 0,
+  "publicationAttempted": false,
+  "newEvidenceCommitted": false,
+  "blocker": {
+    "schemaVersion": 1,
+    "execution": 324,
+    "batch": "056",
+    "kind": "execution-permission",
+    "gate": "Post-failed-native read-only dedicated-worktree/device/owned-helper cleanup verification",
+    "attempts": 1,
+    "deniedCommand": "git --no-pager status --short; git -C C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android --no-pager status --short; & C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe devices -l; $owned=@(Get-Process -Id 568,25712 -ErrorAction SilentlyContinue); Write-Output \"OwnedProcessesRemaining=$($owned.Count)\"; $owned | Select-Object Id,ProcessName",
+    "message": "Permission denied because no interactive user response was available. Retry in an interactive session so the user can approve it, or try an alternative that does not require this permission.",
+    "limits": "Compound read-only command denied before execution; trigger not exposed. Launcher already recorded both owned processes stopped. No later git/device/process inventory obtained. Native article failure is separate from permission denial.",
+    "disposition": "Preserve/report/yield without retry, alternate invocation, permission/configuration change, disguised execution or weakened gate. No further reviewer/build/native/signing/publication.",
+    "savedCommit": "d17c398fea5149187a2e6bd7336c062b30cb62e0",
+    "signature": "G for starting HEAD only; new324 evidence uncommitted, not signed closure.",
+    "safeNextAction": "Resume SAME056 only after approval-capable parent resolves EXACT execution324 denied post-native read-only worktree/device/owned-PID verification; preserve denial without retry, alternate invocation, permission/configuration change or disguised execution. No057/secondrunner/publication. Read docs/n1-sources/execution-324.json and batch-056-native/attempt-2-retry1 plus artifact index. Attempt2 retry1 actually ran BOTH cases: glyph terminal0, article terminal-2,64.995s; overall FAILED. Original322 both terminal-2 remains immutable; original323 retry1 fixture/APK/envelope unchanged. 28singlecharacterPaint probes and4wholewordrasters now passed; direct coordinator font PNG read shows four production rows with distinguishable乏久反乃 and readable丿饉飢饉/no blank-or-box on API35; actual fallback face not identified, not phone or independent visual acceptance. Full productionContentSyncONCE again succeeded1068kanji5027words88N1/problems0/cb85043f73a606f3/epoch1; Lite orderedボウ/とぼ.しいとも.しい and exact curated normalizedぼうとぼしい passed before route failed. Retry1 exact ancestor-qualified BOTH Readings examples and first Commonwords乏しい link succeeded. New harness ambiguity: show 人材が乏しい matches BOTH complete Meaning bullet and Synonyms comparison. Actual raw tree/log preserved. Also audit remaining string selectors including乏しい経験 against complete articles/tree BEFORE separately named retry2: use exact complete bullet/section-aware semantic targets; no arbitrary first/last globally or removed assertions. Do not interpret this harness failure as a teaching defect. No production/teaching/font/heap/archiveguard change authorized. Native questions/drawing/Full projection/support2/back/offline completion still pending. Preserve failed fixture/APK/rawlog/15sourcePNGs;4direct image requests only, no claim all images inspected. Launcher recorded owned568/25712 stopped/emu kill0; denied subsequent inventory returned NO fresh git/device/process result. Unowned5556 untouched. Accepted320Android3+1 remains accepted, not rerun. After parent recovery, bounded retry2 harness repair/compile then fresh allconnection/ownership-verified same5580 API35hostGPU/Vulkan-disabled native retry/fullContentSyncONCE/no duplicate preflight. Require both terminal0/no skips and all original meaning/BOTHcurated+persistentGood/4reference-touchdraw/trace/recallmiss/persistedDrawAgain/fullarticles/twopairsfourdirections/SystemBack/offline assertions. After nativePASS ORIGINAL twofamily sessions serial dependentvisual confirmations, NOT newblindinitials; original review/source/optional/lookup limits remain. Then all latestmain nonrewritingmerge/combined acceptance/normal signing/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPhash/terminalreceipts/ownerissue60 BEFORE057. Preserve FULLlivehistory. Published82/1228,1146remaining; compatibleAndroidf9b59a2+ required;phone/generalrelease/whole-set outstanding. Overall incomplete.",
+    "recordedAt": "2026-11-04T22:23:40.012948+00:00"
+  },
+  "nextAction": "Resume SAME056 only after approval-capable parent resolves EXACT execution324 denied post-native read-only worktree/device/owned-PID verification; preserve denial without retry, alternate invocation, permission/configuration change or disguised execution. No057/secondrunner/publication. Read docs/n1-sources/execution-324.json and batch-056-native/attempt-2-retry1 plus artifact index. Attempt2 retry1 actually ran BOTH cases: glyph terminal0, article terminal-2,64.995s; overall FAILED. Original322 both terminal-2 remains immutable; original323 retry1 fixture/APK/envelope unchanged. 28singlecharacterPaint probes and4wholewordrasters now passed; direct coordinator font PNG read shows four production rows with distinguishable乏久反乃 and readable丿饉飢饉/no blank-or-box on API35; actual fallback face not identified, not phone or independent visual acceptance. Full productionContentSyncONCE again succeeded1068kanji5027words88N1/problems0/cb85043f73a606f3/epoch1; Lite orderedボウ/とぼ.しいとも.しい and exact curated normalizedぼうとぼしい passed before route failed. Retry1 exact ancestor-qualified BOTH Readings examples and first Commonwords乏しい link succeeded. New harness ambiguity: show 人材が乏しい matches BOTH complete Meaning bullet and Synonyms comparison. Actual raw tree/log preserved. Also audit remaining string selectors including乏しい経験 against complete articles/tree BEFORE separately named retry2: use exact complete bullet/section-aware semantic targets; no arbitrary first/last globally or removed assertions. Do not interpret this harness failure as a teaching defect. No production/teaching/font/heap/archiveguard change authorized. Native questions/drawing/Full projection/support2/back/offline completion still pending. Preserve failed fixture/APK/rawlog/15sourcePNGs;4direct image requests only, no claim all images inspected. Launcher recorded owned568/25712 stopped/emu kill0; denied subsequent inventory returned NO fresh git/device/process result. Unowned5556 untouched. Accepted320Android3+1 remains accepted, not rerun. After parent recovery, bounded retry2 harness repair/compile then fresh allconnection/ownership-verified same5580 API35hostGPU/Vulkan-disabled native retry/fullContentSyncONCE/no duplicate preflight. Require both terminal0/no skips and all original meaning/BOTHcurated+persistentGood/4reference-touchdraw/trace/recallmiss/persistedDrawAgain/fullarticles/twopairsfourdirections/SystemBack/offline assertions. After nativePASS ORIGINAL twofamily sessions serial dependentvisual confirmations, NOT newblindinitials; original review/source/optional/lookup limits remain. Then all latestmain nonrewritingmerge/combined acceptance/normal signing/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPhash/terminalreceipts/ownerissue60 BEFORE057. Preserve FULLlivehistory. Published82/1228,1146remaining; compatibleAndroidf9b59a2+ required;phone/generalrelease/whole-set outstanding. Overall incomplete.",
+  "publishedAdditions": 82,
+  "remainingAdditions": 1146,
+  "issueUpdate": "https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6643669749"
+}

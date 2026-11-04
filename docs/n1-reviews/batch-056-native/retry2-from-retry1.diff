@@ -1,0 +1,64 @@
+--- N1Batch056Retry1NativeTest.kt
++++ N1Batch056Retry2NativeTest.kt
+@@ -51,7 +51,7 @@
+     assertTrue(Build.HARDWARE in setOf("ranchu", "goldfish"))
+ }
+ 
+-class N1Batch056Retry1GlyphTest {
++class N1Batch056Retry2GlyphTest {
+     @get:Rule val rule = createAndroidComposeRule<ComponentActivity>()
+ 
+     @Test fun scarcityLookalikesAndRadicalFamineFallbackAcrossFourProductionFamilies() {
+@@ -141,7 +141,7 @@
+     }
+ }
+ 
+-class N1Batch056Retry1ArticleTest {
++class N1Batch056Retry2ArticleTest {
+     @get:Rule val rule = createEmptyComposeRule()
+     private lateinit var app: KanjiApp
+     private lateinit var scenario: ActivityScenario<MainActivity>
+@@ -267,14 +267,14 @@
+             show("short outlines", "kanji-lookalikes")
+             show("three-stroke count", "kanji-drawing-variant")
+             section("Common words")
+-            inline(await(commonWord("乏しい とぼしい — scarce; meagre")), "乏しい")
++            inline(await(articleBullet("乏しい とぼしい — scarce; meagre")), "乏しい")
+             await("乏しい (とぼしい)", substring = true)
+             section("Meaning")
+             show("people with needed skills", "adjective-scope")
+             show("financial sense", "adjective-poverty")
+-            show("人材が乏しい", "adjective-people-example")
+-            show("乏しい経験", "adjective-experience-example")
+-            show("乏しい生活", "adjective-poverty-example")
++            show(articleBullet("人材が乏しい。 (じんざいがとぼしい。) — There is a shortage of capable people."), "adjective-people-example")
++            show(articleBullet("乏しい経験 (とぼしいけいけん) — limited experience"), "adjective-experience-example")
++            show(articleBullet("乏しい生活 (とぼしいせいかつ) — an impoverished life"), "adjective-poverty-example")
+             show("without な", "adjective-attachment")
+             show("The negative", "adjective-inflection")
+             section("How the kanji combine")
+@@ -297,12 +297,12 @@
+             show("not a person's worth", "adjective-human-boundary")
+             back()
+             await("Common words")
+-            inline(await(commonWord("貧乏 びんぼう — poverty; being poor")), "貧乏")
++            inline(await(articleBullet("貧乏 びんぼう — poverty; being poor")), "貧乏")
+             await("貧乏 (びんぼう)", substring = true)
+             section("Meaning")
+             show("It is a noun", "poverty-grammar")
+-            show("学生のころは貧乏でした", "poverty-student-example")
+-            show("貧乏な家庭で育ちました", "poverty-household-example")
++            show(articleBullet("学生のころは貧乏でした。 (がくせいのころはびんぼうでした。) — I was poor when I was a student."), "poverty-student-example")
++            show(articleBullet("貧乏な家庭で育ちました。 (びんぼうなかていでそだちました。) — I grew up in a poor household."), "poverty-household-example")
+             show("do not add な", "poverty-attachment")
+             show("intransitive", "poverty-suru")
+             section("How the kanji combine")
+@@ -452,7 +452,7 @@
+             hasAnyAncestor(SemanticsMatcher.keyIsDefined(SemanticsProperties.HorizontalScrollAxisRange))
+     }
+ 
+-    private fun commonWord(text: String): SemanticsMatcher {
++    private fun articleBullet(text: String): SemanticsMatcher {
+         return hasText(text) and hasAnyAncestor(hasTestTag("article-body")) and
+             !hasAnyAncestor(SemanticsMatcher.keyIsDefined(SemanticsProperties.HorizontalScrollAxisRange))
+     }
