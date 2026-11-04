@@ -37,7 +37,53 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 055: textual review closed, unpublished
+## Batch 056: source prepared, not drafted
+
+The [membership](n1-sources/batch-056-membership.json) freezes **乏**, source
+row **10**, as one evidence-bounded addition. The
+[preparation ledger](n1-sources/batch-056-progress.json) records author inspection
+of **46 complete frozen lexical families**, **nine comparison families**, eight
+raw character elements and 13 actual existing articles. This is source
+preparation, not independent content review or runtime authoring.
+
+Full ordered **ボウ / とぼ.しい・とも.しい**, canonical **丿 (4)**, grade 8
+and primary **four** / alternate **three** stroke-count annotations remain
+separate. The exact adjective family establishes both とぼしい and ともしい;
+missing priority flags do not establish that the latter is archaic or rare.
+Proposed minimal support is **乏しい（とぼしい）** plus **貧乏（びんぼう）**,
+with **欠乏（けつぼう）** an alternative, not an automatic third article.
+None has an existing matching word article. Japanese-source qualification,
+constituent ボウ allocation, register and final practice selections remain pending.
+
+The comparison evidence preserves overlap with **貧しい・少ない・不足**;
+do not manufacture strict money-versus-resources compartments. There are no
+activated baseline declared pairs. Current 貧乏 mentions in 貧しい and 金持ち
+are comparison passages, not automatic reciprocal-link obligations. No support,
+new quiz exclusion, reading queue or link ownership is finalized.
+
+Next SAME056: source qualification, minimal support and actual quiz labels,
+pinned SVG/count reconciliation, all authored-Han/font checks, then a normally
+signed local draft and two serial blind different-model-family reviews.
+Runtime remains unchanged; published coverage is **82/1,228; 1,146 remaining**.
+No batch057, accepted055 test/review rerun or unreviewed content publication.
+Physical-phone/general-release and whole-set acceptance remain outstanding.
+
+## Batch 055: accepted bounded owner-testing publication
+
+The [publication record](n1-sources/batch-055-publication.json) records signed
+accepted `37586858eefef6b9d07c14cd4efd77a9afa12576`, green CI `41913785373`
+and all **8,293 immutable public ZIP runtime hashes** verified. Terminal
+`9b5e9fd9f596801eb78078ab14e4c4b35973479d` published its receipts.
+Published coverage is **82 additions; 1,146 remaining**: 1,067 kanji /
+5,025 word articles / 87 N1 labels, including 86 named source members and 妖.
+Curated **ジョウ** and the necessary historical 丞相 support are unchanged.
+Accepted fresh Android 3+1, two native terminal case-0 results and both original
+visual confirmations retain their exact provenance and limits in that record;
+none is claimed as new batch056 evidence. Original archive guards and
+compatible Android `f9b59a2` or later remain required. Physical-phone,
+general-release and whole-set acceptance are explicitly outstanding.
+
+### Historical local textual review closure
 
 Both blind initial reviews of signed teaching snapshot
 `a532c4d436726e6eeb46ff78cc3dc1a039d6f19e` are archived:
