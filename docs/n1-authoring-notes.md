@@ -37,7 +37,36 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 054: local unreviewed runtime draft
+## Batch 054: local textual review closed; native acceptance pending
+
+The [reconciliation](n1-reviews/batch-054-reconciliation.json) preserves
+independent **claude-opus-5.5** and **gpt-6.1-sol** initial reports on signed
+`4fb51498f6912169499456031380ce2353373397`. Both complete articles,
+**且** and **且つ**, are CLEAN separately for correctness, scoped coverage
+and textual comprehensibility. No actionable teaching defect was established;
+five Claude optional suggestions were adjudicated as nonblocking and not
+adopted. GPT proposed none. Teaching and manifest bytes are unchanged.
+
+Both processes exited serially and the complete first report was archived
+before the second launch. Actual **56/55 calls** returned all **32 assigned
+resources** for each reviewer, including all **31 frozen dictionary families**,
+eight raw character records, actual comparison articles, five archived
+Japanese dictionary page sections and the pinned SVG. Claude made **one
+internal two-read overlap** despite the serial-tool instruction; GPT made none.
+Neither had failed or truncated reads. Original reports and the deviation
+remain intact; returned bytes do not prove comprehension or equal review depth.
+
+The [fresh mechanical audit](n1-sources/batch-054-review-source-audit.json)
+checks preservation, links, readings, geometry, all **8,290 runtime hashes**
+and unchanged archive guards. **苟** still requires actual supported-native
+fallback/readability inspection. Next are fresh non-skipped Android **3+1**
+checks, supported-native routes and original-reviewer visual confirmations,
+then combined-main validation and publication acceptance.
+Published additions remain **80/1,228; 1,148 remaining**. Compatible Android
+`f9b59a2` or later is required; physical-phone/general-release and whole-set
+acceptance remain outstanding.
+
+### Historical local unreviewed runtime draft
 
 The [draft audit](n1-sources/batch-054-draft-audit.json) and
 [execution 299](n1-sources/execution-299.json) record one **且** card,
