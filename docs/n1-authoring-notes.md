@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 045: source preparation only
+## Batch 045: qualified source only
 
 [Batch 045](n1-sources/batch-045-progress.json) bounds the next addition to
 **巳**, frozen source row 300, on accepted published base `a4f16c4`.
@@ -48,24 +48,43 @@ Full source readings are on **シ** and kun **み**; three strokes, grade 9
 and canonical radical **己 (49)** are preserved. 己 and 已 remain separate
 comparison characters, not additional batch members or replacement IDs.
 
-The standalone JMdict family includes both み and し: シ must not be
-mislabelled source-only merely because the minimal proposed support noun
-uses み. Exact Japanese heading/allocation/usefulness evidence and practice
-selection remain pending. The calendar families distinguish the Snake sign,
+The [dictionary evidence](n1-sources/batch-045-dictionary-evidence.json)
+records **nine exact dictionary entries and one attributed editorial section
+across eight raw pages**, not ten independent dictionaries or full-page reads.
+Daijisen and Kanjipedia verify standalone **巳 み**, and explicitly allocate
+**シ** in **上巳 じょうし**; Daijisen also verifies its alternative じょうみ.
+The standalone JMdict family includes both み and し: シ is genuinely
+corroborated recognition, not source-only, obsolete or name-only.
+One necessary `words/巳.md` sign article and sole kun practice are proposed,
+not authored; no festival article is needed merely to offer another key.
+The calendar families distinguish the Snake sign,
 the living animal 蛇, the twelve-sign set and the sixty-term cycle.
 Year expressions retain whole-word alternatives and spelling restrictions;
 search-only へび年/ヘビ年 are not ordinary example spellings.
-Historical hour alternatives do not establish a universal 9–11 a.m.
-conversion. 巳の日's frozen archaic label is recorded, not generalized
+The actual Daijisen み entry permits approximately 10 a.m., an interval
+around that time, or 10 a.m.–noon: no universal 9–11 a.m. conversion.
+Lunar month four is not simply Gregorian April. 巳の日's frozen archaic
+label is recorded, not generalized
 to every contemporary cultural use. 辰巳's southeast sense is not
 standalone 巳's historical south-southeast sense.
 
-The [preparation audit](n1-sources/batch-045-preparation-audit.json)
+The complete pinned target SVG has three paths, inside a variant 己
+radical group. Its unchanged-converter candidate is saved outside runtime
+content. Separate pinned 己/已 SVGs and the attributed look-alike editorial
+support a modern third-stroke **upper-start** distinction, not different
+bottom finishing endpoints or an all-font/native acceptance claim.
+Kanjipedia's radical-image filename `48.png` is an asset name, not authority
+to replace frozen canonical **己 (49)**. Prefer a labelled modern-shape
+mnemonic and `structure-unclassified` rather than claim a settled origin.
+
+The [qualified-source audit](n1-sources/batch-045-qualified-source-audit.json)
 checks exact inputs, complete re-extraction, baseline safeguards and
-unchanged runtime hashes. No teaching, necessary support identity,
-quiz key, historical origin, converted geometry, independent linguistic
-review or native/phone acceptance is claimed. Continue qualification
-within this same batch before drafting; do not begin 046.
+unchanged runtime hashes; the historical
+[preparation audit](n1-sources/batch-045-preparation-audit.json) is byte-preserved.
+No teaching, runtime practice metadata, independent linguistic review or
+native/phone acceptance is claimed. Continue the same batch's final
+support/comparison/actual quiz-label audit and signed unreviewed draft,
+then every review and delivery gate; do not begin 046.
 Published coverage remains **71 additions; 1,157 still to deliver**.
 
 ## Batch 044: local unreviewed draft
