@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "execution": 334,
+  "batch": "057",
+  "status": "fresh-android-passed-pending-native-visual-and-publication",
+  "startingHead": "acc397033503a38aa88506fc3ad966761793db72",
+  "androidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "recordedAt": "2026-11-05T00:42:47.992797+01:00",
+  "scope": "SAME057 fresh RealContentTest3+RareHanTest1 and signed local evidence checkpoint only; no native, reviewer, runtime publication,058 or second runner.",
+  "startedAt": "2026-11-04T23:39:05.516914+00:00",
+  "exitCode": 0,
+  "command": "$ErrorActionPreference = 'Stop'\n$control = $PSScriptRoot\n$app = Join-Path (Split-Path $control -Parent) 'kanji-cards-android'\n$runner = Get-Content -LiteralPath (Join-Path $control 'runner.json') -Raw | ConvertFrom-Json\nif ($runner.status -ne 'running' -or $runner.sessionId -ne 'edd414ec-03fe-428c-bf4e-3110862f7d4e') {\n    throw 'Unexpected supervisor session.'\n}\n$ancestor = $PID\n$supervisorIsAncestor = $false\nfor ($i = 0; $i -lt 10 -and $ancestor -gt 0; $i++) {\n    if ($ancestor -eq $runner.pid) { $supervisorIsAncestor = $true; break }\n    $process = Get-CimInstance Win32_Process -Filter \"ProcessId=$ancestor\"\n    if (-not $process) { break }\n    $ancestor = $process.ParentProcessId\n}\nif (-not $supervisorIsAncestor) { throw 'Recorded supervisor is not this coordinator ancestor.' }\n$env:JAVA_HOME = 'C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot'\n$env:ANDROID_HOME = 'C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk'\nSet-Location $app\n$started = [DateTimeOffset]::UtcNow\n$started.ToString('o') | Set-Content -LiteralPath (Join-Path $control 'batch-057-android-start.txt') -Encoding utf8NoBOM\nWrite-Output \"FRESH057_STARTED=$($started.ToString('o'))\"\nWrite-Output \"CONTENT_ROOT=$([IO.Path]::GetFullPath((Join-Path (Join-Path $app 'core') '..\\..\\learning-japanese')))\"\n& .\\gradlew.bat :core:test --tests 'io.github.stopcran.kanji.core.RealContentTest' :app:testDebugUnitTest --tests 'io.github.stopcran.kanji.core.RareHanTest' --no-daemon --no-parallel --max-workers=1 --rerun-tasks '-Pkotlin.compiler.execution.strategy=in-process' --init-script C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-049-host-integration-heap.init.gradle 2>&1 |\n    Tee-Object -FilePath (Join-Path $control 'logs\\execution-334-android.txt')\n$result = $LASTEXITCODE\n$result | Set-Content -LiteralPath (Join-Path $control 'logs\\execution-334-android-exit.txt') -Encoding utf8NoBOM\nWrite-Output \"FRESH057_EXIT=$result\"\nexit $result\n",
+  "environment": {
+    "JAVA_HOME": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot",
+    "ANDROID_HOME": "C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk"
+  },
+  "oneWorker": true,
+  "parallel": false,
+  "rerunTasks": true,
+  "hostMemoryQualification": "Existing control-only init changes solely :core Test maxHeapSize to1GiB; original049 default512MiB HOST OOM retained. No native guest/app heap, source, assertion, font or archive guard change.",
+  "hostInitSha256": "ff2d68bd18491590f7cb38da7807d6ff40153e1dfbaef0cd744e50f4ccea742d",
+  "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-334-android.txt",
+  "logSha256": "616ab8b592886a6eac86a61dfb590f0c91e231b12abe25a138000570d3cc7a81",
+  "tests": [
+    {
+      "name": "io.github.stopcran.kanji.core.RealContentTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-04T23:40:27.161Z",
+      "caseNames": [
+        "hotelBookingDoesNotAcceptTheSchoolClassReadingWhenRepoPresent",
+        "completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent",
+        "parsesRealContentRepoWhenPresent"
+      ],
+      "sourcePath": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core\\build\\test-results\\test\\TEST-io.github.stopcran.kanji.core.RealContentTest.xml",
+      "artifactPath": "docs\\n1-reviews\\batch-057-android\\batch-057-RealContentTest.xml",
+      "sha256": "b154712fe42a43e380a1339ed308c99a3df4f0414ca59f12dc47b2a052da68f2",
+      "fixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese",
+      "testImplementation": "core\\src\\test\\kotlin\\io\\github\\stopcran\\kanji\\core\\RealContentTest.kt",
+      "testImplementationSha256": "4f019673d77a6899e435afc8d071794564e78f6148cf3019456184eb72ef2188"
+    },
+    {
+      "name": "io.github.stopcran.kanji.core.RareHanTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-04T23:42:41.914Z",
+      "caseNames": [
+        "contentRareCharactersAreCoveredByBundledFont"
+      ],
+      "sourcePath": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\build\\test-results\\testDebugUnitTest\\TEST-io.github.stopcran.kanji.core.RareHanTest.xml",
+      "artifactPath": "docs\\n1-reviews\\batch-057-android\\batch-057-RareHanTest.xml",
+      "sha256": "89062690fbbc58a8170f7db788443988c6033d0f3713b819b2a46e4ae90e60ad",
+      "fixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese",
+      "testImplementation": "app\\src\\test\\java\\io\\github\\stopcran\\kanji\\core\\RareHanTest.kt",
+      "testImplementationSha256": "1409e85428837864409dce7f4ea371611d8a92839d4d0e86258e4c0a0a5a15ed"
+    }
+  ],
+  "contentVersion": "47f11f7f539a1d55",
+  "reviewedTeachingSnapshot": "acc397033503a38aa88506fc3ad966761793db72",
+  "runtimeUnchangedFromTextualReconciliation": true,
+  "reconciliationSha256": "d8fafa5688be110e435c43a578c05e53003d923c1a735b16722395be779d2f63",
+  "publishedAdditions": 83,
+  "remainingAdditions": 1145,
+  "nativeOrVisualAcceptanceClaimed": false,
+  "publicationAttempted": false,
+  "nextAction": "Resume SAME057 normally signed LOCAL fresh-Android checkpoint334; fresh AndroidRealContentTest3/RareHanTest1 accepted with zero failures/errors/skips, no rerun absent new concern. NEXT bounded gate: prepare and compile same057 exact-full-archive supported-native fixture, then execute productionContentSyncONCE/selection-meaning-curatedreading-drawing-article-SystemBack-offline-visual and actual serial original-session visual confirmations. Inspect SAME057 source/progress for exact current counts, keys, glyphs and support routes; do not copy056 facts. Fresh device/5580-5581 ownership immediately before known read-only API35 hostGPU/Vulkan-disabled helper;040 port exception NOT inherited. No guest/app heap, font, production assertion or archive guard changes. Record actual ownedPID/serial/directPNG/per-case terminal0 and exact temporary cleanup; stop only owned helper. Original blind aef958a3 reviews and historical52/0internal overlaps/noncompliance remain immutable; both original-session bounded confirmations accepted single wording clarification, not repaired initials or strict process acceptance. Then latestmain normal nonrewriting integration/allcombinedvalidation/source-baseline-reading-link-font-stroke/Python/vocab/validator/freshmanifest/originalbudgets/normalsigning/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 BEFOREdelivery or058. No accepted056 rerun absent new concern, no058/secondrunner/concurrentheavywork/signingretry/permissionworkaround. Published83/1228,1145remaining; compatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding.",
+  "limits": "Fresh Android integration only: four newly executed named cases against actual sibling checkout, fresh XML timestamps/root/manifest verified; no failures/errors/skips or old XML reuse. Not native glyph readability, drawing, production ContentSync, phone, publication or whole-set acceptance. Runtime teaching and original reports unchanged. 368 Python/source/baseline/readings/links/font/stroke/validator/vocabulary/manifest/budget checks inherited333, not freshly rerun334. Original Claude52internal overlaps and contradicted self-claim remain historical noncompliance; strict original process contract not accepted. Bounded confirmations do not repair initial history or prove full independent fresh194-family rereads. No native/reviewer/push/058/second runner or supervisor changes.",
+  "inheritedTextualLimits": "Textual reconciliation only. Original blind two-family reports at aef958a3 and their full range audits inherited unchanged. Original Claude52internaloverlaps and contradicted self-claim remain historical noncompliance; strict original process acceptance not claimed. Both actual original sessions fresh-read one identical bounded dossier serially, zero overlapping calls, and accepted the changed passage; not new independent blind initials or full194family rereads. Reviewer agreement does not prove original wording false: documented historical derivation and modern verb identity differ. The practical implication is removed without adjudicating that stronger allegation. Supplied dictionary nodes not fresh upstream retrieval. Returned byte equality proves full return, not comprehension. No freshAndroid/native/visual/currentmain/publication/physicalphone/generalrelease/whole-set acceptance. Vocabulary consistency pass 2122/2431 pilot is not complete coverage. Original guards and unchanged optional hypotheses retained.",
+  "archivedArtifacts": [
+    {
+      "path": "docs\\n1-reviews\\batch-057-android\\batch-057-RealContentTest.xml",
+      "sha256": "b154712fe42a43e380a1339ed308c99a3df4f0414ca59f12dc47b2a052da68f2"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-057-android\\batch-057-RareHanTest.xml",
+      "sha256": "89062690fbbc58a8170f7db788443988c6033d0f3713b819b2a46e4ae90e60ad"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-057-android\\gradle.txt",
+      "sha256": "9afe03b929fe90ffd9e96a56a3aea66ee41578ad27bf8f735769dadc73562d43",
+      "normalization": "UTF-8 LF and trailing line whitespace removed only; complete raw log retained at log with logSha256."
+    }
+  ],
+  "evidenceArchivalCorrection": "Initial staged diff --check rejected Gradle's trailing space in its daemon notice before git commit/signing was invoked. Normalized archived Gradle text only (LF and trailing line whitespace); original complete raw log/hash retained in control. No test rerun, signing retry, source change or altered test result."
+}
