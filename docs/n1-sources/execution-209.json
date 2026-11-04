@@ -1,0 +1,186 @@
+{
+  "execution": 209,
+  "startingHead": "519e8070a6d470142bf3f99326d0e441acabed1f",
+  "startedAt": "2026-11-04T05:23:55.349800+01:00",
+  "scope": "One risk/evidence-bounded044 source-inspection checkpoint; no045/runtime authoring/reviewer/Android/native/publication/second runner.",
+  "status": "source-prepared-not-drafted",
+  "startingCheckpointTiming": "Saved after the complete authorized request including final persisted checkpoint and approved issue, read-only guidance/helper/live-state/clean signed dedicated-head inspection; before fetch/merge/source changes.",
+  "schemaVersion": 1,
+  "batch": "044",
+  "stage": "signed-contributor-source-checkpoint-pending",
+  "currentMainFetchedAndEqualToBase": true,
+  "originMain": "519e8070a6d470142bf3f99326d0e441acabed1f",
+  "integration": "Normal git fetch origin and git merge --no-edit origin/main returned already up to date; accepted043 published base unchanged.",
+  "sourceVerification": {
+    "schemaVersion": 1,
+    "execution": 209,
+    "batch": "044",
+    "stage": "source-prepared-not-drafted",
+    "baseCommit": "519e8070a6d470142bf3f99326d0e441acabed1f",
+    "membership": [
+      "亥"
+    ],
+    "sourceRow": 17,
+    "exactFrozenNamedMembershipAndRowVerified": true,
+    "exactFrozenKanjiVGInventoryRecordVerified": true,
+    "frozenInputHashesVerified": 5,
+    "decompressedDictionaryHashesVerified": 2,
+    "freshExactDictionaryExtractions": 2,
+    "packets": [
+      {
+        "path": "batch-044-jmdict.xml",
+        "families": 17,
+        "lines": 295,
+        "sha256": "911e1ae78b6f8819cca2fc41cbdfe6d88faade01678eed0ab93c2e81c1fedfd9"
+      },
+      {
+        "path": "batch-044-comparison-jmdict.xml",
+        "families": 19,
+        "lines": 572,
+        "sha256": "d5a54b263aed195c2a2a5efca50dca59faec346843a46b63bd97e0934250ff4d"
+      }
+    ],
+    "distinctCompleteFamilies": 36,
+    "authorInspection": {
+      "lexicalFamilies": 17,
+      "comparisonFamilies": 19,
+      "distinctCompleteFamilies": 36,
+      "remainingExtractedFamiliesPending": 0,
+      "lexicalReturnedRanges": [
+        [
+          1,
+          160
+        ],
+        [
+          161,
+          295
+        ]
+      ],
+      "comparisonReturnedRanges": [
+        [
+          1,
+          195
+        ],
+        [
+          196,
+          390
+        ],
+        [
+          391,
+          572
+        ]
+      ],
+      "rawCharacterRecords": 7,
+      "rawCharacterRecordReturnedRanges": [
+        [
+          1,
+          160
+        ]
+      ],
+      "rawCharacterRecordReadBoundary": "The complete input-metadata JSON was returned within the requested1-160 range; its seven raw XML elements are escaped complete strings, not160 XML lines.",
+      "completeExistingArticlesRead": [
+        "kanji/猪.md",
+        "words/猪.md",
+        "kanji/豚.md",
+        "words/豚.md",
+        "kanji/刻.md",
+        "words/時刻.md",
+        "words/年.md"
+      ],
+      "candidateNavigation": "No current 亥 card/strokes or baseline declared word pair. Exact current word-file navigation found only 猪/豚/年/時刻 among the selected spellings. Current kanji navigation found 猪/豚/刻, not 核/骸/戌/亠/亥. A current whole-tree 亥/text and title-substring search returned no 亥 occurrence and the actual 猪/豚 labels; incidental board/pigeon hits are not sign overlaps. This is navigation, not a semantic or frequency certification.",
+      "limits": "All36 complete frozen families, seven raw character elements and seven actual existing articles returned and coordinator-inspected. Parallel coordinator read batching is not reviewer serialization evidence. No fresh Japanese dictionary heading, independent linguistic review, frequency or native-rendering certification."
+    },
+    "originalBaselineMetadataAndStrokesPreserved": {
+      "kanji": 985,
+      "words": 4942,
+      "strokes": 985
+    },
+    "baselineMetadataExceptions": {
+      "words/虎.md": [
+        "酔っ払い"
+      ],
+      "words/猿.md": [
+        "馬鹿"
+      ]
+    },
+    "runtimeManifestEqualToPublishedBase": true,
+    "manifestFresh": true,
+    "allRuntimePayloadHashesVerified": 8257,
+    "contentVersion": "e86891b100028fa9",
+    "baselineCandidatePairs": [],
+    "fullReadingOrderPreserved": {
+      "onyomi": [
+        "ガイ",
+        "カイ"
+      ],
+      "kunyomi": [
+        "い"
+      ]
+    },
+    "runtimeChanges": 0,
+    "publishedAdditions": 70,
+    "remainingAdditions": 1158,
+    "limits": "Source preparation and coordinator inspection only; no Japanese dictionary heading verification, selected quiz key, committed necessary support identity, word-level assignment, teaching draft, independent review, converted strokes, native/font/phone acceptance, new publication or increase in delivered additions.70/1228 additions delivered;1158 remain."
+  },
+  "checks": {
+    "extractionTests": {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_extract_n1_jmdict.py"
+      ],
+      "exitCode": 0,
+      "logSha256": "46a59d823d772c3809446eba836399e2612ba33924b6c71abe8e15b736b8f4b7",
+      "passed": 5
+    },
+    "contentValidation": {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "tools\\validate.py"
+      ],
+      "exitCode": 0,
+      "logSha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "errors": 0
+    },
+    "manifestGeneration": {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "tools\\build_manifest.py"
+      ],
+      "exitCode": 0,
+      "logSha256": "6e19e6bf3629fca1a90b8b8f219b24685c6dfb70b705b6d7dd69e0da189676d6",
+      "unchanged": true
+    },
+    "sourceAudit": {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\stop-\\n1-kanji-workspace\\control\\execution-209-source.py",
+        "audit"
+      ],
+      "exitCode": 0,
+      "logSha256": "1c0b01fede7528b12d12241f4fea85a815009e6d4ae4bd34f44b2285b25d4255"
+    }
+  },
+  "nextAction": "Continue the same bounded044 亥: inspect and preserve exact reputable Japanese character/word headings for ガイ/カイ/い, the twelfth sign and precise historical-time qualifications; independently qualify allocation/usefulness and choose minimal support. Retrieve and verify pinned04ea5.svg geometry, reconcile six strokes through the unchanged converter, then draft only after consequential claims are resolved or explicitly source-only. Preserve full on ガイ,カイ and kunい order, original metadata and all accepted history. No045, unreviewed teaching push or rerun of043 publication. Subsequent teaching needs two serial blind different-family reviews on one signed snapshot and all existing acceptance/publication gates.",
+  "limitations": "Source preparation and coordinator inspection only; no Japanese dictionary heading verification, selected quiz key, committed necessary support identity, word-level assignment, teaching draft, independent review, converted strokes, native/font/phone acceptance, new publication or increase in delivered additions.70/1228 additions delivered;1158 remain.",
+  "reviewExecution": "No reviewer launched; no teaching snapshot exists yet.",
+  "publication": "Local source-only checkpoint; no push or increase in delivered additions.",
+  "lifecycle": "Saved signed SHA and verified owner issue receipt belong in external checkpoint209 after signing/readback; supervisor runner files unchanged."
+}

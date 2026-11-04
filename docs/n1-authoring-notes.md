@@ -37,6 +37,28 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 044: source preparation only
+
+[Batch 044](n1-sources/batch-044-progress.json) bounds the next addition to
+**亥**, frozen source row 17. Its [membership](n1-sources/batch-044-membership.json)
+and complete source packets retain **17 lexical and 19 disjoint comparison
+families**, seven raw character records and inspection of seven actual existing
+articles. Full source readings remain on **ガイ, カイ** and kun **い**, in that
+order; six strokes, radical 亠 (8) and grade 9 are preserved. No practice key or
+support article is selected yet. Exact Japanese heading qualification and
+pinned geometry inspection are the next bounded work, not claimed here.
+
+The sign-versus-animal distinction needs comparison with accepted 猪 and 豚;
+the twelve-sign cycle must not be conflated with every sense/reading of 干支.
+Historical hour, direction and lunar-month senses retain their local register
+labels. The packet supplies alternative historical hour intervals, not a
+universal modern-clock conversion. No カイ compound occurs in these 17 lexical
+families; that is not proof of global lexical absence or permission to erase
+the sourced reading. The [preparation audit](n1-sources/batch-044-preparation-audit.json)
+checks exact frozen inputs, complete re-extraction, baseline safeguards and
+unchanged runtime hashes. It is not independent linguistic or native acceptance.
+Published coverage remains **70 additions; 1,158 still to deliver**.
+
 ## Batch 043: local unreviewed draft
 
 [Batch 043](n1-sources/batch-043-progress.json) bounds the next addition to
