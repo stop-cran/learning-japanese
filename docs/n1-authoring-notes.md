@@ -37,7 +37,48 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 051: source preparation only
+## Batch 051: qualified sources, not drafted
+
+The [qualified-source record](n1-sources/batch-051-dictionary-evidence.json)
+and [audit](n1-sources/batch-051-qualified-source-audit.json) add six exact
+Japanese dictionary sections from four externally saved raw pages.
+Daijisen and Nikkoku qualify **もんめ** as the traditional mass unit;
+Daijisen and Nipponica explicitly mention pearl use, so the mass sense is
+not labelled wholly obsolete. Keep the frozen JMdict mass spelling
+restriction **匁** rather than generalizing the combined 匁／文目 heading.
+Historical silver-money uses stay separate, with no fixed yen or universal
+ryō conversion and no detailed current legal claim.
+
+Kanjipedia explicitly lists **もんめ・め**. Nikkoku identifies shortened
+目（め）, and Daijisen's number-attached suffix gives 百目. Together with
+the complete frozen 百匁 family, these qualify bounded shortened-reading
+recognition, not an unrestricted number paradigm. A separate Japanese
+百匁 headword was not found: machine-generated examples, missing pages
+and 百目 pages about a yōkai are not unit-heading evidence. Proposed
+practice is only **もんめ**, preserving both full readings and their order;
+one necessary standalone mass-unit word article remains unauthored.
+
+The entire pinned four-path SVG was inspected and verified against its
+Git blob before unchanged-converter generation of an **external-only**
+candidate. Its 勹 group contains strokes 1–2 and agrees with canonical
+radical 20; the nested 丿 alternate-index annotation does not replace it.
+Kanjipedia and Nipponica give different historical formation accounts;
+neither is adopted. Use `structure-unclassified` and a labelled
+modern-shape mnemonic, not a component-based etymology.
+All three unchanged bundled font cmaps cover 匁, but lack the candidate
+component characters **勹・乂・丿**. This is a future native-fallback
+obligation if those components are written, not proof of glyph failure
+or readable rendering. Eleven candidate characters were checked; a future
+draft must audit every character it actually introduces.
+
+No runtime draft, independent review, Android/native run or publication
+occurred. The full source/baseline audit, exact 21-family re-extraction
+and all 8,278 runtime hashes remain preserved; the original preparation
+audit is byte-preserved. Published coverage is still **77/1,228 additions;
+1,151 remaining**. Continue the same 051 draft/review/acceptance cycle,
+not 052.
+
+### Retained source preparation
 
 The [membership](n1-sources/batch-051-membership.json) freezes **匁**,
 source row 122, against published `6af98cb717755690a9ca793e5454a96ebd7a8f9f`.
