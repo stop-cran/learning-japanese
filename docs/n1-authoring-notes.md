@@ -37,6 +37,45 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 049: source preparation only
+
+[Batch 049](n1-sources/batch-049-progress.json) selects only **丑**,
+frozen source row 2, on accepted published base `e91eec0`.
+Selection compared 丑's 19 complete lexical families and two source readings
+with 辰's 26 families and three readings; it was not source-order selection.
+A navigation probe of 戊 was rejected because it is outside the frozen named set.
+The [membership](n1-sources/batch-049-membership.json) preserves full
+**チュウ / うし**, four strokes, grade 9 and canonical radical **一 (1)**.
+The packet retains **19 lexical and 19 disjoint comparison families**,
+seven complete raw character records and coordinator inspection of seventeen
+actual existing articles. No baseline declared word pair is activated.
+
+The source dispositions separate the second/Ox sign from the existing animal
+noun 牛 (うし), whose sourced N3 vocabulary level and direct 牛肉 exclusion
+remain unchanged. Calendar compounds are whole-word candidates until exact
+Japanese headings establish allocation; the raw 丁丑 reading ひのとのうし
+is retained rather than silently normalized. Historical north-northeast differs
+from 丑寅's northeast; competing hour mappings and the twelfth lunar month
+must not become one universal modern interval or Gregorian December.
+Night expressions retain broad versus clock-specific senses, rare ateji and
+search-only spelling flags. Seasonal day expressions do not make every
+丑の日 a summer-only date or 土用 a synonym of Saturday.
+No historical ritual instruction is selected.
+
+Standalone sign support, practice keys, distractors, direct exclusions and
+any substantive link changes remain unselected. The
+[preparation audit](n1-sources/batch-049-preparation-audit.json) checks exact
+frozen inputs/re-extractions, source membership, baseline invariants and
+unchanged runtime hashes; it is not linguistic or native acceptance.
+Next qualify Japanese headings, radical/shape and pinned SVG before drafting
+the same 049. No runtime teaching, geometry, reviewer, Android/native run or
+push occurs at this checkpoint. Batch 048 is already published and verified
+for bounded owner testing, not reopened by the historical draft section below.
+Published coverage remains **75 additions; 1,153 still to deliver**.
+Physical-phone/general-release and whole-set acceptance remain outstanding.
+Earlier sections retain historical checkpoint wording; their publication
+ledgers record subsequent acceptance.
+
 ## Batch 048: local unreviewed draft
 
 [Batch 048](n1-sources/batch-048-progress.json) bounds the next addition to
