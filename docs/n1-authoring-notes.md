@@ -37,7 +37,47 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 055: validated local UNREVIEWED draft
+## Batch 055: textual review closed, unpublished
+
+Both blind initial reviews of signed teaching snapshot
+`a532c4d436726e6eeb46ff78cc3dc1a039d6f19e` are archived:
+[Claude Opus 5.5](n1-reviews/batch-055-initial-claude.md) and
+[GPT-6.1 Sol](n1-reviews/batch-055-initial-gpt.md). Each found **CLEAN**
+correctness, scoped coverage and textual comprehensibility separately for
+the complete **丞** and **丞相** articles. The
+[reconciliation](n1-reviews/batch-055-reconciliation.json) establishes no
+actionable teaching defect; four optional expansions were not adopted.
+The tentative 役人 comparison was adjudicated without a new exclusion:
+its broad official category does not establish an equivalent office label.
+No teaching change or correction confirmation was needed.
+
+Both processes exited serially and the complete first report/execution
+receipt was archived before the second launch. Actual **42/44 tool calls**
+returned all **26 assigned resources** for each, including all **14 complete
+frozen families**, nine raw character records, seven comparison kanji,
+six comparison words, both archived Daijisen sections and the pinned SVG.
+**Claude made two internal two-call overlaps; GPT made none.** Neither
+had failed or truncated reads. Strict internal serialization was not fully
+achieved; original deviations remain recorded. Returned bytes do not prove
+comprehension, equal review depth or native-speaker certification.
+
+The [fresh mechanical audit](n1-sources/batch-055-review-source-audit.json)
+preserves baseline metadata/geometry and exact original safeguards, all
+**8,293 runtime hashes**, **19 authored Han** in all three bundled cmaps,
+the unchanged manifest **66fa8fda924b856d** and original archive budgets.
+Validator and manifest checks are fresh; **368 Python tests** and vocabulary
+receipts are inherited from execution 308 on unchanged runtime, not new tests.
+Older **しょうじょう** constituent allocation remains **UNVERIFIED** and
+excluded from positive teaching and practice; no missing lexical example
+is manufactured for the two source-only kun readings.
+
+Next SAME055: fresh Android **3+1**, supported-native/visual/drawing/
+article/Back/offline checks, exact full-envelope ContentSync once per attempt,
+then current-main integration and publication acceptance. No content was pushed;
+published coverage remains **81/1,228; 1,147 remaining**. Physical-phone,
+general-release and whole-set acceptance remain outstanding.
+
+### Historical validated local UNREVIEWED draft
 
 The [membership](n1-sources/batch-055-membership.json) still freezes **丞**,
 source row **6**, one bounded addition. Source preparation/qualification at
