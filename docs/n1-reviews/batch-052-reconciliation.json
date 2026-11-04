@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "execution": 282,
+  "batch": "052",
+  "status": "textual-review-closed-pending-fresh-android-native-and-publication",
+  "authoredSnapshot": "c7aeff7cf02165bbc1ddd33384faf645920fe2bf",
+  "reviewedTeachingSnapshot": "c7aeff7cf02165bbc1ddd33384faf645920fe2bf",
+  "teachingScope": [
+    "kanji/弐.md",
+    "words/二.md"
+  ],
+  "changedReusedPassages": [
+    "words/二.md:25",
+    "words/二.md:36"
+  ],
+  "models": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "initialReports": [
+    "batch-052-initial-claude.md",
+    "batch-052-initial-gpt.md"
+  ],
+  "reviewProcesses": [
+    {
+      "label": "initial-claude",
+      "model": "claude-opus-5.5",
+      "snapshot": "c7aeff7cf02165bbc1ddd33384faf645920fe2bf",
+      "sessionId": "78592329-26fa-4c54-aa96-e6bff3a769ec",
+      "startedAt": "2026-11-04T16:42:42.5037253+01:00",
+      "completedAt": "2026-11-04T16:45:12.4834688+01:00",
+      "exitCode": 0,
+      "toolCalls": 29,
+      "observedInternalOverlaps": [
+        {
+          "starting": "toolu_019TMm2gPA3nwUiVvuHtRRVg",
+          "alreadyActive": [
+            "toolu_01DPk19ZKeyC6amaR43UAApk"
+          ]
+        }
+      ],
+      "reportSha256": "648fb12f72ff279cbdab3a5d5a854be46f3e2ce51f7ba5d53919d6881e73e797",
+      "rawExecutionSha256": "efcdec24ae27bf4ef9980ed9f3e64400d2ef25dfb823bc677923cc7e8a15ccad",
+      "executionRecordSha256": "09a12c5eb5046f3547bc4c53e4254d458b09b01bdd06f40a2280e2bf461dcc90"
+    },
+    {
+      "label": "initial-gpt",
+      "model": "gpt-6.1-sol",
+      "snapshot": "c7aeff7cf02165bbc1ddd33384faf645920fe2bf",
+      "sessionId": "0ef2bb14-7846-423b-a39d-f50d6559b9fb",
+      "startedAt": "2026-11-04T16:45:16.4591627+01:00",
+      "completedAt": "2026-11-04T16:47:07.0093979+01:00",
+      "exitCode": 0,
+      "toolCalls": 29,
+      "observedInternalOverlaps": [],
+      "reportSha256": "91e80adce324494e12e520c8a4b676ce7d383fee1234fb2fc1a8d715f6332e3c",
+      "rawExecutionSha256": "5219710c39c70d55574910a0ce359742505103b3574a39723d617ceb1617fcc8",
+      "executionRecordSha256": "73079d308d5315bf4c072410d498e9909e835c1c8498c5e82a1b07ed26f062d6"
+    }
+  ],
+  "returnedRangeCoverage": [
+    {
+      "label": "initial-claude",
+      "assignedResources": 23,
+      "allAssignedRangesReturned": true,
+      "unreturnedLines": {},
+      "truncatedCalls": [],
+      "boundary": "Exact byte containment, not comprehension."
+    },
+    {
+      "label": "initial-gpt",
+      "assignedResources": 23,
+      "allAssignedRangesReturned": true,
+      "unreturnedLines": {},
+      "truncatedCalls": [],
+      "boundary": "Exact byte containment, not comprehension."
+    }
+  ],
+  "verdicts": {
+    "kanji/弐.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "words/二.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    }
+  },
+  "findings": [],
+  "optional": [
+    {
+      "id": "052-O1",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Add the source's error/alteration-prevention reason for formal numeral spelling.",
+      "decision": "Not adopted: bounded documentary use is already explained; no necessary distinction omitted."
+    },
+    {
+      "id": "052-O2",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Add Kanjipedia outside-Joyo reading markers for ジ/ふた/ふたつ.",
+      "decision": "Not adopted: practice selection and obsolete/documentary/source-only qualifications are explicit; no new classification needed."
+    },
+    {
+      "id": "052-O3",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Larger quizzes can fall back to overlapping formal-two/two labels.",
+      "decision": "Existing known conditional app limitation, not new default-four-choice defect. Target and affected二/双 have three curated wrongs; no false all-pool assurance or unrelated app redesign."
+    }
+  ],
+  "unresolvedConsequentialClaims": [],
+  "teachingChanged": false,
+  "confirmationsNeeded": false,
+  "processDeviationDisposition": "Claude first two teaching views overlapped; self-disclosed and retained, not falsely reported strictly serial. Reviewer processes themselves exited serially. All assigned ranges returned. GPT no internal overlap.",
+  "contributions": "No actionable unique/shared defect established. Claude alone supplied three optional groups; GPT supporting discussion also covers fallback and curation. No general model ranking or native certification.",
+  "sourceAudit": "docs/n1-sources/batch-052-review-source-audit.json",
+  "nextAction": "Resume SAME052 signed local textual closure; no repeated blind initials/053/secondrunner. Read batch052reconciliation/two originalreports/execution282 and full livehistory. Bothinitials CLEANallthreefacets for complete弐and reused二/bothactualdeltas; no contentfix, threeClaude optionalgroupsnotadopted. 29/29tools,23/23assignedresources each complete; oneClaude internalfirstread overlap versus zeroGPT preserved. Reuse original session78592329-26fa-4c54-aa96-e6bff3a769ec claude-opus-5.5 and 0ef2bb14-7846-423b-a39d-f50d6559b9fb gpt-6.1-sol for bounded serial native visual confirmations. Fresh non-skipped RealContentTest3+RareHanTest1 in dedicatedAndroidf9b59a2; JDK17/SDK/oneworker/noparallel/nodaemon/reruntasks/quoted in-process compiler. Preserve049512MiBHOSTTestOOM and boundedcontrol-only1GiBHOSTTest headroom,NOTnativeheaprelaxation; inspectfreshXMLcasecounts/names/timestamps/root/errors/failures/skips. Then applicable supported-native exactcompleteGitenvelope productionContentSyncONCE perarticleattempt, no duplicateparserpreflight/reducedarchive/heap/fontguardchange. Assert1064kanji/5021words/84N1labels/contentVersion601a0fb709961e28/schema1en-ja/problems0/acceptedepoch1/fullニ,ジ/ふた.つ,そえ/soleニ/emptykun. Freshdevice/5580,5581ownership immediatelybefore knownAPI35read-onlyhostGPU/Vulkan-disabledhelper; 0405584exceptionNOTinherited. RecordactualownedPID/serial,terminalpercase0/noskips/directPNG;弐式武三and authored弋fallback/readability/meaning/curatedreading/drawing/article/reciprocal/SystemBack/offline/boundedserialORIGINALvisualconfirmations; exacttemporaryfixturecleanup/stoponlyownedhelper. Then latestmain normalnonrewritingmerge/allcombinedsourcebaseline/readings/links/geometry/fonts/Python/vocabulary/validator/freshmanifest/originalbudgets/normalsigning/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 BEFOREdelivery. Actualpermissiondenial/signingwait preserve/report/yield,no retry/workaround. Published78/1228,1150remain;compatibleAndroidf9b59a2+;physicalphone/generalrelease/whole-setoutstanding.",
+  "limits": "Two actual different-family blind initials on unchanged signedc7aeff7, complete new弐 and complete reused二 including both additions, all16frozenfamilies/ninecomparisonarticles/rawcharacterrecords/fourarchivedpages/SVG. Both29calls, all23assignedresources returned without truncation/failedtools; bytes do not prove comprehension. Processes exited serially and first original report archived before next launch. Claude had ONE internal two-view overlap in its first teaching read, explicitly self-disclosed; GPT zero. Strict internal serialization was therefore NOT fully achieved. No fictional compliant rerun. No teaching defects or consequential unresolved positive claims established. Three Claude optional groups, no GPT optional; no teaching changes/confirmations needed. Source-onlyそえ has no independently verified lexicalexample; 弐つ lacks separate Japanese wholeheading, both honestly qualified outside practice. No legalmandate/frequency/settledformation/unrestrictedsubstitution. Fresh282 mechanical sources/baseline/readings/links/geometry/fonts/manifest/8283runtimehashes/budgets; Python368/validator/vocabulary receipt inheritance from281 explicitly distinguished from fresh tests. No fresh upstream retrieval/native-speaker certification/Android/native/visual/current-main/publication. Authored16Han/15allthreecmaps;弋fallback readability and all required native routes pending. CompatibleAndroidf9b59a2+; physicalphone/generalrelease/whole-set outstanding. Published78/1228,1150remaining."
+}
