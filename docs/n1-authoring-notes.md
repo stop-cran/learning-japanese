@@ -37,43 +37,56 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 055: local source qualification, not drafted
+## Batch 055: validated local UNREVIEWED draft
 
-The [membership](n1-sources/batch-055-membership.json) freezes **丞**, source
-row 6, against published `9807dd24799280f70602ef52a31eb2e09cb36103`.
-The [source ledger](n1-sources/batch-055-progress.json) records inspection of
-**12 complete frozen JMdict families** (three lexical / nine comparison),
-nine raw character records and ten actual existing articles. The raw-metadata
-return truncated within 蒸 and was recovered separately; this is not an
-uninterrupted full-file-read claim.
+The [membership](n1-sources/batch-055-membership.json) still freezes **丞**,
+source row **6**, one bounded addition. Source preparation/qualification at
+`55e38131` / `e5446a76` remains historical evidence, not independent review.
+Before runtime drafting, normal signed merge `c2004b72` integrated main
+`998eca51`. Its 号・番・目 articles are preserved byte-for-byte, with no
+overlapping teaching conflict. The original source-preparation base remains
+recorded separately; the mechanical draft base is the integrated tree.
 
-Full **ジョウ・ショウ / すく.う・たす.ける**, six strokes and canonical **一1**
-remain intact. **丞相** is a potential single support article, not finalized
-teaching. The [Japanese evidence](n1-sources/batch-055-dictionary-evidence.json)
-now verifies primary **じょうしょう**, older whole-word **しょうじょう**,
-the ancient Chinese minister and Chinese-style-title senses, and the explicit
-helping contribution of both characters. Daijisen's character entry supports
-ジョウ with 丞相; constituent allocation of the older reading remains
-**UNVERIFIED**, not a selected practice key. Neither ordinary 救う nor
-助ける licenses an invented 丞 spelling.
+The [draft ledger](n1-sources/batch-055-progress.json) and
+[audit](n1-sources/batch-055-draft-audit.json) record one 丞 card, one necessary
+**丞相（じょうしょう）** support article and **six generated strokes**.
+Full ordered **ジョウ・ショウ / すく.う・たす.ける**, grade 9 and canonical
+**一 (1)** remain intact. Practice selects only **ジョウ**, with its own
+linked row. The [Japanese evidence](n1-sources/batch-055-dictionary-evidence.json)
+establishes that allocation and the helping contribution of both components.
+Older whole-word **しょうじょう** is recognized without an **UNVERIFIED**
+constituent allocation; the two kun readings remain qualified source-only
+lookup information. Ordinary 救う/助ける do not license invented 丞 spellings.
 
-The actual pinned 3,178-byte SVG matches its frozen Git blob, identifies bottom
-一 as radical, and converts with the unchanged converter to six external
-candidate strokes. Candidate cmap checks are not native readability acceptance;
-the final authored-Han audit must follow the actual draft. No runtime stroke
-file, reading selection, quiz exclusion, independent review or publication is asserted.
-The existing 助 answer's help meaning must not become a defensible wrong option.
+All **14 complete frozen families** were inspected at author stage: the
+original three lexical/nine comparison families and two additional
+[office-title comparisons](n1-sources/batch-055-draft-comparison-jmdict.xml).
+The historical-title example is an original role description with full kana
+and translation, not a purported quotation or contemporary office claim.
+There is **one reciprocal support pair/two directed links**, a substantive
+link to existing 相, and no activated baseline pair or reused runtime edit.
+Three direct word guards against 大臣・首相・総理大臣 are conservative
+translation-overlap safeguards, not transitive closure or interchangeable offices.
+The three curated 蒸・乗・水 labels and all **12** legacy short-card fallback
+labels were checked. Overlapping 助 already has three distinct wrong choices.
 
-Next is the same055 support/draft gate, including any actually used
-historical cross-reference families, a natural example, exact title comparisons,
-all distractors/fallbacks, reciprocal ownership and final authored-Han/font checks.
-Main subsequently advanced to `998eca51`
-with 号・番・目 and manifest changes only; source evidence stays tied to its
-verified base. Fetch and normally merge latest main before drafting, then
-revalidate the combined tree; this is not acceptance of upstream teaching.
-Published coverage remains **81/1,228;
-1,147 remaining**. Compatible Android `f9b59a2` or later is required;
-physical-phone/general-release and whole-set acceptance remain outstanding.
+The unchanged stroke generator's output equals the qualified pinned SVG
+conversion after normal text LF normalization; its Windows CRLF is preserved,
+not a geometry edit. All **19 final authored Han** are present in all three
+bundled font cmaps. That is not native readability, drawing or phone acceptance.
+The final checks record **368 Python tests**, validator **0 errors**, the
+existing **2122/2431 pilot-stage** vocabulary limit, fresh manifest
+**66fa8fda924b856d**, all **8,293 runtime hashes**, original baseline preservation
+and unchanged archive guards: **8,315 entries**, **43,962,576 retained** /
+**44,230,914 inflated** / **30,070,428 local ZIP bytes**.
+
+Next is SAME055's **two serial blind different-model-family reviews** of one
+normally signed complete teaching snapshot, then reconciliation and fresh
+Android/native/visual/current-main/publication gates. This draft is not pushed,
+review-closed or published. Published coverage stays **81/1,228; 1,147 remaining**;
+draft counts **1,067 kanji / 5,025 words / 87 N1 labels** are not delivered counts.
+Compatible Android `f9b59a2` or later is required; physical-phone/general-release
+and whole-set acceptance remain outstanding. No056 before accepted055 publication.
 
 ## Batch 054: accepted bounded owner-testing publication
 

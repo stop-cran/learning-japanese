@@ -1,16 +1,24 @@
 {
   "schemaVersion": 1,
   "batch": "055",
-  "baseCommit": "9807dd24799280f70602ef52a31eb2e09cb36103",
+  "baseCommit": "c2004b726e5086f811a8ef238d78da3c0285dd54",
+  "sourcePreparationBaseCommit": "9807dd24799280f70602ef52a31eb2e09cb36103",
   "membership": ["丞"],
-  "status": "bounded-source-qualified-not-drafted",
+  "status": "validated-local-unreviewed-draft",
+  "draftExecution": 308,
+  "draftBaseIntegration": {
+    "sourceQualificationSnapshot": "e5446a76dec02e49fb4acd148d7f71b1d5787dbc",
+    "upstream": "998eca51e8d6620a4e60f7b66fdb8c1ff515a545",
+    "merge": "c2004b726e5086f811a8ef238d78da3c0285dd54",
+    "disposition": "Normal signed merge before drafting, no conflict. Exact upstream 号/番/目 preserved. Baseline for mechanical draft delta updated in both membership and progress, with original preparation base retained separately. No fresh full linguistic review of unrelated upstream additions claimed."
+  },
   "sourceQualification": {
     "execution": 307,
     "evidence": "batch-055-dictionary-evidence.json",
     "scope": "Japanese historical-title/primary-reading/component-meaning qualification and pinned six-stroke external candidate; candidate-only cmap audit. No runtime draft or final practice selection.",
-    "historicalFields": "The original lexical/comparison/reading dispositions and pendingGates below record preparation at execution306; the linked execution307 evidence supplies current qualified claims, unresolved allocation and nextAction without erasing that preparation history."
+    "historicalFields": "The lexical/comparison dispositions and authorInspection below retain execution306 preparation observations, not current pending-gate assertions. Signed55e38131 and e5446a76 preserve exact earlier decisions. Current draft reading dispositions/support/quiz/link fields and pendingGates supersede those preparation hypotheses; qualification evidence remains unchanged."
   },
-  "drafted": [],
+  "drafted": ["丞"],
   "reviewClosed": [],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
@@ -27,6 +35,10 @@
     {
       "selection": "batch-055-comparison-selection.json",
       "xml": "batch-055-comparison-jmdict.xml"
+    },
+    {
+      "selection": "batch-055-draft-comparison-selection.json",
+      "xml": "batch-055-draft-comparison-jmdict.xml"
     }
   ],
   "sourceReadingOrder": {
@@ -93,28 +105,41 @@
   ],
   "readingDispositions": [
     {
+      "kanji": "丞",
       "reading": "ジョウ",
-      "type": "on",
-      "status": "candidate-not-qualified",
-      "evidence": "丞相じょうしょう and prefixed title families are historical whole-word candidates. Verify per-character allocation and usefulness before selecting a linked reading row."
+      "kind": "on",
+      "selected": true,
+      "sourceOnly": false,
+      "article": "words/丞相.md",
+      "entryIds": ["1885990"],
+      "reason": "Daijisen character heading explicitly supplies ジョウ and 丞相; compound heading separately splits じょう‐しょう. Useful bounded historical recognition with its own linked reading row, not a modern everyday-frequency claim."
     },
     {
+      "kanji": "丞",
       "reading": "ショウ",
-      "type": "on",
-      "status": "candidate-not-qualified",
-      "evidence": "丞相しょうじょう is an attested dictionary whole-word alternative, not yet proof of per-character or historical-layer allocation. No practice decision."
+      "kind": "on",
+      "selected": false,
+      "sourceOnly": true,
+      "entryIds": ["1885990"],
+      "reason": "Full frozen metadata preserved in order. Older whole-word 丞相しょうじょう is verified, but exact constituent allocation remains UNVERIFIED and is not taught or offered as a separate key. Source-only here describes this card's character-level disposition, not a denial of the attested alternative."
     },
     {
+      "kanji": "丞",
       "reading": "すく.う",
-      "type": "kun",
-      "status": "character-dictionary-only-pending-qualification",
-      "evidence": "Frozen KANJIDIC2 explicitly lists it. No matching 丞 lexical model in the three complete all-position JMdict families; ordinary救う is a different spelling. No universal nonexistence conclusion."
+      "kind": "kun",
+      "selected": false,
+      "sourceOnly": true,
+      "entryIds": [],
+      "reason": "Frozen KANJIDIC2 character-dictionary lookup metadata. No exact 丞 lexical model in the three complete all-position frozen families; ordinary 救う cannot establish this spelling. No invented 丞う or universal nonexistence/rarity claim."
     },
     {
+      "kanji": "丞",
       "reading": "たす.ける",
-      "type": "kun",
-      "status": "character-dictionary-only-pending-qualification",
-      "evidence": "Frozen KANJIDIC2 explicitly lists it. No matching 丞 lexical model in the three complete all-position JMdict families; ordinary助ける is a different spelling. No universal nonexistence conclusion."
+      "kind": "kun",
+      "selected": false,
+      "sourceOnly": true,
+      "entryIds": [],
+      "reason": "Full source reading retained; Daijisen independently confirms character-level たすける. No 丞 lexical model established in the inspected packet. Ordinary 助ける is a comparison, not a 丞 spelling model; no invented 丞ける or universal nonexistence claim."
     }
   ],
   "baselineCandidatePairs": [],
@@ -123,15 +148,73 @@
     "primaryReadingCandidate": "じょうしょう",
     "reused": [],
     "requiredPairsNotFinalized": ["kanji/丞.md <-> words/丞相.md"],
-    "limits": "Candidate only. If accepted, word metadata must include丞 and相 and link both existing cards at substantive component introductions; inspect additional reciprocal ownership requirements rather than assuming every mention needs a backlink."
+    "limits": "Historical preparation candidate record. The current supportMappings below finalize only a LOCAL UNREVIEWED draft, not review-closed coverage."
+  },
+  "supportMappings": [
+    {
+      "kanji": "丞",
+      "article": "words/丞相.md",
+      "newArticle": true,
+      "primaryReading": "じょうしょう",
+      "entryIds": ["1885990"],
+      "selectedSenses": [1, 2],
+      "reason": "One necessary historical-title article supports the verified ジョウ allocation; no inferred vocabulary JLPT label, no additional right/left title articles."
+    }
+  ],
+  "requiredReciprocalPairs": [["丞", "words/丞相.md"]],
+  "changedReusedPassages": [],
+  "curatedProjection": [
+    {
+      "kanji": "丞",
+      "quizOnyomi": ["ジョウ"],
+      "quizKunyomi": [],
+      "onKeys": ["じょう"],
+      "kunKeys": []
+    }
+  ],
+  "quizAudit": {
+    "丞": {
+      "title": "assist; aid",
+      "distractors": ["蒸", "乗", "水"],
+      "labels": ["steam; sultry heat", "ride; board", "water"],
+      "reason": "Actual complete articles and frozen character meanings inspected. Steam/cooking/humidity, riding/boarding and mathematical multiplication/powers, and water do not denote assistance or a historical assisting minister. Visual resemblance is separate from semantic wrongness. 助 overlaps help/rescue and is deliberately not a distractor."
+    }
+  },
+  "wordQuizAudit": {
+    "title": "grand chancellor (ancient China)",
+    "directExclusions": [
+      {
+        "word": "丞相",
+        "exclude": ["大臣", "首相", "総理大臣"],
+        "reason": "Conservative direct guards for functional minister/chancellor/prime-minister English translation overlap with the historical high office, despite distinct period-specific usage. Actual bodies and full families inspected. These are three direct pairs, not transitive closure or unrestricted Japanese substitution."
+      }
+    ],
+    "otherCandidates": "Actual 役人 body denotes a government official/public administration, a broad category rather than an equivalent grand-chancellor office; no direct exclusion established. Help/helper/assistance labels refer to the component meaning, not the complete historical office. No 宰相 or 補佐 article exists. No other matching chancellor/minister answer label found in all current word metadata.",
+    "confusableInventory": "Current docs/confusable-words.md has no 丞/相/minister/chancellor/help/assist match in the scoped inventory query. Its pairwise/nontransitive contract applied; no candidate row asserts an additional title pair."
+  },
+  "linkOwnership": {
+    "selectedReciprocalPairs": [["丞", "words/丞相.md"]],
+    "activatedBaselinePairs": [],
+    "substantiveExistingComponentLinks": [["words/丞相.md", "kanji/相.md"]],
+    "disposition": "One newly selected support owner 丞, two directed reciprocal links. The support article also substantively links existing component 相; no new support ownership or reverse link from every existing component/incidental mention is imposed. No baseline declared 丞 pair."
+  },
+  "draftInspection": {
+    "lexicalFamiliesFreshlyRead": 3,
+    "preparationComparisonFamiliesFreshlyRead": 9,
+    "additionalCompleteFamiliesFreshlyRead": ["1401820", "2612940"],
+    "totalDistinctCompleteFamilies": 14,
+    "additionalFamilyClaims": "総理大臣 means prime minister as head of cabinet government. 唐名 sense1 establishes Chinese-name historical office context; only sense2 is archaic and restricted to からな. No alias sense or speculative historical chronology taught.",
+    "actualArticlesFreshlyRead": ["kanji/且.md", "words/且つ.md", "kanji/相.md", "kanji/蒸.md", "kanji/承.md", "kanji/乗.md", "kanji/水.md", "kanji/助.md", "words/大臣.md", "words/首相.md", "words/総理大臣.md", "words/助ける.md", "words/救う.md", "words/役人.md"],
+    "japaneseEvidence": "Freshly inspected stripped text of exact stored Daijisen sections lines1750-1810 for both entries; raw bytes/hashes retained from307. Source-qualified claims unchanged.",
+    "example": "Original plain historical role-description 丞相は君主を助けて国の政治を行った with complete kana and English translation; not an invented ordinary workplace collocation, not an attributed historical quotation or named event. Its assistance/state-affairs content follows the exact Daijisen definition and frozen JMdict sense1.",
+    "limits": "Coordinator author checks, not independent review. No fresh full review of unrelated upstream teaching or existing articles' incidental dictionary families. Initial selection file's provisional 唐名 ID was corrected to frozen exact2612940 before extraction; only the correct complete family was generated and used."
   },
   "pendingGates": [
-    "Exact Japanese historical-title/register and per-character reading qualification; decide minimum support and source-only treatment without manufacturing ordinary examples.",
-    "Complete any actually used historical cross-reference/title-comparison families and actual articles; finalize labels, direct exclusions and legacy fallback safeguards.",
-    "Fetch and verify pinned KanjiVG70a0b7ae04e1e.svg blobc88f152bdb1ffb7383c7bfda1cdab3564a744dbf/3178 inventory bytes; inspect radical/shape, unchanged converter and six-stroke agreement. Inventory is not downloaded SVG.",
-    "Audit every new authored Han against all actual bundled fonts; cmap membership is not supported-native readability. No geometry/font/native results asserted.",
-    "Draft and freeze one signed teaching snapshot; two serial blind different-family initials, reconcile evidence and necessary original-session confirmations.",
-    "Fresh applicable non-skipped Android/native/visual checks, combined-current-main validation, normal signed owner fast-forward publication, terminal green CI and every immutable public ZIP runtime hash before delivery."
+    "Freeze the validated local draft as a normally signed UNREVIEWED snapshot; execution-308.json records the actual check receipts and audit. Saved SHA/signature/issue receipt belong to the external control checkpoint, avoiding self-referential commit hashes.",
+    "Two serial blind different-actual-model-family initials on the same signed complete teaching snapshot; reconcile precise evidence and confirm necessary fixes with original reviewers where possible.",
+    "Fresh applicable non-skipped Android/native/visual checks and full archive through production ContentSync once per attempt; cmap membership is not native/phone acceptance.",
+    "Latest-main integration and combined-tree validation; normal signed owner fast-forward publication, remote SHA, actual terminal green CI and every immutable public ZIP runtime hash before counting delivery."
   ],
-  "limits": "Source-only local checkpoint. Twelve complete extracted families inspected, not independent review. No runtime edits, final curation/support/exclusions, SVG/geometry/font/native/physical-phone/general-release acceptance or055 publication. Delivered coverage remains81/1228,1147remaining;1066kanji5024words86N1labels85named-source members plus separate妖. Compatible Androidf9b59a2+ required; whole-set incomplete."
+  "nextAction": "Resume SAME055 at two SERIAL blind actual different-model-family read-only initial reviews of the same normally signed complete teaching snapshot, all three facets across 丞 and 丞相 plus curated readings/quiz/link decisions. Archive each full report and verify actual process exit before starting the next; inspect available execution evidence for serial internal calls and disclose limits. Reconcile evidence, confirm necessary fixes, then fresh Android3+1/native/visual/full-archive-once/current-main/publication gates. No056 or unreviewed content push.",
+  "limits": "LOCAL UNREVIEWED runtime draft, not independent linguistic/native/phone/general-release/whole-set acceptance or055 publication. Delivered coverage remains81/1228,1147remaining; draft counts1067kanji5025words87N1labels86named-source members plus separate妖 are not published counts. Compatible Androidf9b59a2+ required."
 }
