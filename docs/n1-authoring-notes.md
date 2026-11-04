@@ -37,6 +37,49 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 050: source preparation only
+
+[Batch 050](n1-sources/batch-050-progress.json) selects only **辰**,
+frozen source row **1070**, on published base `b189ed6`.
+The [membership](n1-sources/batch-050-membership.json) records the fresh
+complexity comparison: 辰 has 26 complete lexical families and three
+source readings, versus 竜's 174 families and five readings.
+Navigation probes 戌 and 龍 are outside the frozen named set and are not
+selected. Neither source-order position nor a shared reading establishes
+membership or a need for another card.
+
+The packet preserves full **シン / ジン / たつ**, seven strokes,
+grade 9 and canonical radical **辰 (161)**. Coordinator inspection covers
+**26 lexical and 17 disjoint comparison families**, eight complete raw
+character records and fifteen actual existing articles.
+There is no activated baseline declared word pair.
+Existing 農 and 震 contain substantive 辰-shaped component descriptions;
+any future link-only edits must be assigned explicitly in initial reviews.
+The incidental branch sequence in 午 does not require broad backlink work.
+
+The dispositions distinguish the Dragon sign from the creature 竜/龍,
+historical 辰 east-southeast from 辰巳 southeast, the twelve signs from
+sixty calendar combinations, and lunar month three from Gregorian March.
+The source retains competing historical hour mappings.
+Whole-word 壬辰 じんしん and 時辰 じしん do **not** by themselves establish
+辰's ジン allocation; exact Japanese character/compound evidence remains
+pending. No reading is dropped or labelled obsolete/name-only by assumption.
+辰砂/辰沙 preserve the spelling restriction on しんさ; 辰星's multiple
+astronomical senses remain separate rather than becoming a universal gloss.
+
+Standalone 辰 たつ support is a candidate, not an authored article.
+Practice keys, wrong choices, direct word exclusions and links remain
+unselected. No extra dragon, astronomy, historical or mineral article is
+committed; support-word levels are not inferred from N1 kanji.
+The [preparation audit](n1-sources/batch-050-preparation-audit.json)
+checks exact frozen inputs, complete re-extraction, original baseline
+invariants and unchanged runtime hashes. It is not independent linguistic,
+font, native or publication acceptance. Japanese-heading qualification,
+pinned SVG inspection, authoring and all subsequent gates remain.
+Published coverage stays **76 / 1,228**, with **1,152 remaining**.
+Batch 049 is not reopened; physical-phone, general-release and whole-set
+acceptance remain explicitly outstanding.
+
 ## Batch 049: published for bounded owner testing
 
 The [publication receipt](n1-sources/batch-049-publication.json) records accepted
