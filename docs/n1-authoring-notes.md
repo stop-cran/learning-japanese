@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 052: source preparation, not a teaching draft
+## Batch 052: qualified sources, not a teaching draft
 
 The [membership](n1-sources/batch-052-membership.json) freezes **弐**,
 source row 323, against published `77e9ccf2b86dce58abc09e5eb3c399e79320fe37`.
@@ -54,8 +54,20 @@ but that does not make every family reading an ordinary reading of each
 spelling. 弐つ（ふたつ） has an old/legal-document usage note;
 弐心's **じしん** has an obsolete-reading flag. Archaic 副弐（ふくじ）
 does not establish **そえ** merely through its English backup gloss.
-Exact Japanese character/documentary-use headings and all individual
-reading dispositions remain to be qualified.
+The [qualified-source record](n1-sources/batch-052-dictionary-evidence.json)
+now retains six inspected Japanese dictionary sections across four raw
+pages. Daijisen explicitly gives **に【二／弐】**, the documentary
+alternative-spelling note, and **弐心（じしん／にしん）**. Kanjipedia
+corroborates ニ・ジ and ふたつ. Proposed practice is **ニ only**, with
+empty kun practice; all four raw readings remain intact.
+
+**そえ** remains explicitly source-only lookup information: KANJIDIC2
+lists it, but no lexical example is established here. Jitsu's **そえる**
+and supplement/secondary senses provide related character-dictionary
+context, not an exact modern **弐（そえ）** word or productive inflection.
+The exact **弐つ（ふたつ）** spelling and old/legal-document note are
+verified in the complete frozen JMdict entry, not an independently acquired
+Japanese whole-headword entry. These limits must survive drafting.
 
 Existing **二（に）** is a genuine same-family reuse candidate, not an
 automatic reason to create a duplicate word article for 弐. A future narrow
@@ -67,13 +79,20 @@ comparisons are not extra assignments; no legal mandate, current frequency
 or historical formation is inferred.
 
 There are no baseline declared 弐/word pairs or existing 弐 teaching
-occurrences. Pinned SVG content, visible-radical reconciliation, generated
-strokes and candidate-font inspection are still pending. No runtime card,
-independent review, Android/native run or publication occurs here.
+occurrences. Proposed support is one narrow **二（に）** reuse note, with
+the future 弐-card/二-word pair linked in both directions; no duplicate
+word identity is needed. The full pinned six-path SVG was inspected:
+canonical 弋 consists of stroke 2 and strokes 5–6; the alternative Nelson
+一 is stroke 1 and inner 二 is strokes 3–4. Conversion is an external
+candidate only, using the unchanged converter. Candidate font coverage is
+mechanical evidence, not native readability; standalone 弋 and any other
+missing candidate glyphs need supported-native inspection if actually used.
+The future entire authored/changed text still needs its own font audit.
+No runtime card, independent review, Android/native run or publication occurs here.
 Published batch 051 remains delivered: **78/1,228 additions; 1,150 remaining**,
 with **1,063 kanji / 5,021 words / 83 N1 labels**. Compatible Android
 `f9b59a2` or later is required; physical-phone/general-release and whole-set
-acceptance remain outstanding. Continue the same 052 qualification cycle.
+acceptance remain outstanding. Continue the same 052 bounded draft cycle.
 
 ## Batch 051: retained textual-closure checkpoint
 
