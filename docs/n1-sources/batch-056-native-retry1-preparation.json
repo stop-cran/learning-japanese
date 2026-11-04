@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "execution": 323,
+  "batch": "056",
+  "status": "native-retry1-compiled-pending-execution",
+  "fixture": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-reviews\\batch-056-native\\N1Batch056Retry1NativeTest.kt",
+  "fixtureSha256": "46008f1b47f165cd0e8fa1bc00f0ef864803b23945d76e6e24037e251a0e5363",
+  "originalFixture": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-reviews\\batch-056-native\\N1Batch056NativeTest.kt",
+  "originalFixtureSha256": "318503821443f969fc0d1a676c9137d39a6f81af68b30be5503b442307b89510",
+  "originalTestApk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-056-fddfae35-native-test.apk",
+  "originalTestApkSha256": "2c73f2fff853d6b238b844ff080ffb8f217665d53716fcb761cb0fea06ecab2d",
+  "archive": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-056-fddfae35-envelope.zip",
+  "archiveSha256": "8523808488b4123133ba6885761f650d30b37ec0e210fe4f17f84291cec41073",
+  "fixtureDiff": "docs\\n1-reviews\\batch-056-native\\retry1-from-original.diff",
+  "fixtureDiffSha256": "01f148c96637594559189ba40aa37d5a1645868d7b6329f92608798f33f63aef",
+  "apiEvidence": {
+    "url": "https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/android-15.0.0_r1/graphics/java/android/graphics/Paint.java",
+    "entry": "Paint.hasGlyph(String), Javadoc immediately before method",
+    "inspection": "Actual method and complete adjacent Javadoc retrieved at character offset 122000, not a search summary or beginning of page.",
+    "quote": "In the case of multiple characters, the method returns true if there is a single glyph representing the ligature.",
+    "fallbackQualification": "The Javadoc explicitly says checking includes the entire fallback chain.",
+    "conclusion": "False for ordinary two-character 飢饉 does not establish missing characters or unreadability. Probe seven individual characters per family and separately render the complete word."
+  },
+  "selectorEvidence": {
+    "sourceTree": "docs\\n1-reviews\\batch-056-native\\attempt-1\\n1-056-article-tree.txt",
+    "sourceTreeSha256": "28dc58eb337fb4e746300dd295ce87de382d07d07fb1c1edab6c3614712737aa",
+    "productionImplementation": "LazyMarkdownView uses article-body; RenderTable supplies HorizontalScrollAxisRange; Common words list Text has no horizontal ancestor.",
+    "selectors": [
+      {
+        "text": "貧乏 びんぼう — poverty; being poor",
+        "horizontalTableAncestor": true,
+        "matchedNodeIds": [
+          365
+        ],
+        "count": 1
+      },
+      {
+        "text": "貧乏 びんぼう — poverty; being poor",
+        "horizontalTableAncestor": false,
+        "matchedNodeIds": [
+          464
+        ],
+        "count": 1
+      },
+      {
+        "text": "乏しい とぼしい — scarce; meagre",
+        "horizontalTableAncestor": true,
+        "matchedNodeIds": [
+          371
+        ],
+        "count": 1
+      },
+      {
+        "text": "乏しい とぼしい — scarce; meagre",
+        "horizontalTableAncestor": false,
+        "matchedNodeIds": [
+          459
+        ],
+        "count": 1
+      }
+    ],
+    "operation": "Exact full text plus article-body ancestor and presence/absence of horizontal table ancestor; called after respective Readings/Common words section jump. No global first/last selection.",
+    "limits": "Regression against archived actual tree and static production inspection only; new native execution still required."
+  },
+  "glyphAssertions": {
+    "individualCharacters": [
+      "乏",
+      "久",
+      "反",
+      "乃",
+      "丿",
+      "饉",
+      "飢"
+    ],
+    "families": [
+      "Gothic",
+      "Mincho",
+      "Textbook",
+      "Brush"
+    ],
+    "singleCharacterHasGlyphAndDistinctNonblankRasterProbes": 28,
+    "completeWord": "飢饉",
+    "completeWordRasterProbes": 4,
+    "wholeWordAssertion": "Both character-advance regions must contain ink inside the complete-word raster.",
+    "composeScreenshot": "n1-056-font-pairs.png retained with original four production rows, including 丿, 饉 and 飢饉.",
+    "limits": "No new native result or actual readability claim. Raster hashes/nonblank checks cannot certify readability or identify fallback face."
+  },
+  "acceptedAndroid320ArtifactHashesReverifiedWithoutRerun": true,
+  "original322ArtifactHashesReverified": true,
+  "original322TerminalFailures": 2,
+  "original322TerminalSuccesses": 0,
+  "parentCleanupRecovery": "control/batch-056-parent-cleanup-verification-recovery.json; executed shell1 due absent stopped PIDs, not denial or native success",
+  "runtimeUnchanged": true,
+  "nativeExecuted": false,
+  "limits": "Bounded test-harness repair only. No teaching/production/font/heap/archive-guard change, duplicate parser preflight, reduced archive, reviewer, publication or057. All original route/question/drawing/offline assertions retained. Native retry, direct image inspection, original serial dependent visual confirmations and publication gates remain pending.",
+  "compilation": {
+    "status": "compiled-not-executed",
+    "exitCode": 0,
+    "result": "BUILD SUCCESSFUL in 1m 4s;56 actionable tasks:7 executed,49 up-to-date",
+    "log": "docs\\n1-reviews\\batch-056-native\\retry1-compile.txt",
+    "logSha256": "b3b9f2a441decae59af49eabf87d38dedb5abbdece094a2b37980d0505fb3090",
+    "launcher": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\run-323-native-compile.ps1",
+    "launcherSha256": "f27b546fc3420370fb80603db74f389f2a77efce1af0064ee20f9d71c7465262",
+    "command": ".\\gradlew.bat :app:assembleDebugAndroidTest --no-daemon --no-parallel --max-workers=1 '-Pkotlin.compiler.execution.strategy=in-process'",
+    "apk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-056-retry1-native-test.apk",
+    "apkSha256": "c89a59d0309ffe633dd8172bbc2f1701df8fbf58e9b195f4f4bb7fecd889e156",
+    "apkBytes": 31901543,
+    "packagedExactOriginalArchiveVerified": true,
+    "bothRetryClassDescriptorsAndMethodsPresent": true,
+    "oldClassDescriptorsAbsent": true,
+    "temporaryAndroidSourceAndAssetRemoved": true,
+    "androidWhollyClean": true,
+    "hostTestInitScriptUsed": false,
+    "nativeOrEmulatorStarted": false
+  },
+  "checks": [
+    {
+      "check": "validate",
+      "exitCode": 0,
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-323-validate.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+    },
+    {
+      "check": "manifest",
+      "exitCode": 0,
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-323-manifest.txt",
+      "sha256": "aa9f2e320cf0ca694cd009ef065de955290cffd9dd13b479c0c93913cd08d44a"
+    }
+  ],
+  "nextAction": "Resume SAME056 compiled retry1 native EXECUTION, not057 or publication. Read docs/n1-sources/execution-323.json and batch-056-native-retry1-preparation.json. Use N1Batch056Retry1GlyphTest and N1Batch056Retry1ArticleTest from frozen control/artifacts/n1-batch-056-retry1-native-test.apk; exact original full fddfae35 envelope retained. Original322 BOTH terminal-2/ZERO0/31.496s and five uninspected source PNGs remain immutable failures. Original postrun verification denial separately parent-resolved with actual shell1 due absent stopped PIDs, NOT native success. Paint.hasGlyph documented single-glyph/ligature contract now verified; retry retains28 single-character probes (乏久反乃丿饉飢 across four production families) plus4 whole飢饉 nonblank rasters with both character regions. Readings-table and Commonwords BOTH duplicate examples/links now exact-text/ancestor qualified; original actual-tree regression4selectors each1node, compiled but NOT live-native proven. Actual丿/饉/飢饉Compose screenshot/readability still required. Freshdevice/ALL local-and-remote5580-5581connections-and-ownership immediatelybefore known API35 N3_Acceptance_20261029 helper with fullSDKemulator -port5580 -read-only -no-snapshot -no-window -no-audio -gpu host -feature -Vulkan -memory2048 -cores2; explicit emulator-5580/ownedparent-and-QEMUPIDs.040alternate-portexceptionNOTinherited. Preserve192m576m native heaps;049HOST512MiB TestOOM/1GiBHOST-only qualification unchanged, no hostinit for nativecompile. ProductionContentSyncONCE perarticleattempt/no parserpreflight/no reducedarchive; assert1068kanji5027words88N1/cb85043f73a606f3/problems0/epoch1/LiteANDfull orderedボウ/とぼ.しいとも.しい/curatedボウとぼ.しい/keysぼうとぼしい. Require BOTH terminalcase0/no skips/rawlogs/actual direct PNG inspections, meaning/BOTHcuratedquestions+persistentGood/fourreference-touchstrokes/ungradedtrace/recallmiss/persistedDrawAgain/full乏しい貧乏articles/twopairsfourdirections/SystemBack/offline/all original teaching-coverage assertions. Exact temporary cleanup/stopONLYownedhelper. No teaching/production/font/heap/archiveguard changes or assertion removal. Raster/nonblank is not readability or fallbackface identification; reference-touch/offlinegeometry/recallmiss is notMLKitrecognition/correcthumanrecall. Accepted320freshAndroid3+1/artifacthashes reverified, NOT rerun absentnewconcern; no newblindinitials. After nativePASS reuse ORIGINAL reviewer sessions SERIALly for bounded dependent visuals; retain original reports/65-68calls/zerooverlaps/39resources/Claude14vsactual15words/failedfreshlookup/threeoptionalnotadopted. ともしいfrequency/register remainUNVERIFIEDandNOTclaimed. Then latestmain normalnonrewritingmerge/allcombinedsource-baseline-exactguards/readings-links-strokes-fonts/Python/vocabulary/validator/freshmanifest/original18000entry42MiBcompressed80MiBinflated56MiBretainedbudgets/normalsigning/ownerfastforward/exactpublicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 BEFORE057. Actualpermissiondenial/signingwait preserveexactcommand-error/report/yield,no retry/workaround. Preserve FULLlivehistory. Published82/1228,1146remaining; compatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding. Overall project incomplete.",
+  "recordedAt": "2026-11-04T22:16:21.276221+00:00",
+  "parentRecoveryArchive": "docs\\n1-reviews\\batch-056-native\\execution-322-parent-cleanup-recovery.json",
+  "parentRecoveryArchiveSha256": "3fc02e41672069d1547b18591892d6987659b3f24948cf2d3cfaadcd91518262"
+}

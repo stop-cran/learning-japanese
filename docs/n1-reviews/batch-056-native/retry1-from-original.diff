@@ -1,0 +1,142 @@
+--- N1Batch056NativeTest.kt
++++ N1Batch056Retry1NativeTest.kt
+@@ -51,7 +51,7 @@
+     assertTrue(Build.HARDWARE in setOf("ranchu", "goldfish"))
+ }
+ 
+-class N1Batch056GlyphTest {
++class N1Batch056Retry1GlyphTest {
+     @get:Rule val rule = createAndroidComposeRule<ComponentActivity>()
+ 
+     @Test fun scarcityLookalikesAndRadicalFamineFallbackAcrossFourProductionFamilies() {
+@@ -78,7 +78,7 @@
+         val rows = JSONArray()
+         for ((index, typeface) in typefaces.withIndex()) {
+             val hashes = mutableSetOf<String>()
+-            for (char in listOf("乏", "久", "反", "乃", "丿", "饉", "飢饉")) {
++            for (char in listOf("乏", "久", "反", "乃", "丿", "饉", "飢")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+                     it.textSize = 96f
+@@ -99,7 +99,33 @@
+                     .put("hasGlyph", true).put("nativePaintRasterSha256", hash))
+                 image.recycle()
+             }
+-        }
++            val word = "飢饉"
++            val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
++                it.typeface = typeface
++                it.textSize = 96f
++                it.textLocale = java.util.Locale.JAPAN
++            }
++            // hasGlyph tests multi-character ligatures, not ordinary word coverage.
++            val image = Bitmap.createBitmap(256, 128, Bitmap.Config.ARGB_8888)
++            Canvas(image).drawText(word, 8f, 104f, paint)
++            val pixels = IntArray(image.width * image.height)
++            image.getPixels(pixels, 0, image.width, 0, 0, image.width, image.height)
++            for (position in word.indices) {
++                val left = (8f + paint.measureText(word, 0, position)).toInt()
++                val right = kotlin.math.ceil(8f + paint.measureText(word, 0, position + 1)).toInt()
++                assertTrue("Word raster bounds $word ${fonts[index]}", left >= 0 && right <= image.width && left < right)
++                assertTrue("Blank word character ${word[position]} ${fonts[index]}",
++                    (0 until image.height).any { y -> (left until right).any { x -> pixels[y * image.width + x] != 0 } })
++            }
++            val bytes = java.nio.ByteBuffer.allocate(pixels.size * 4)
++                .also { it.asIntBuffer().put(pixels) }.array()
++            val hash = MessageDigest.getInstance("SHA-256").digest(bytes)
++                .joinToString("") { "%02x".format(it) }
++            rows.put(JSONObject().put("word", word).put("font", fonts[index].name)
++                .put("renderedCharactersNonblank", word.length).put("nativePaintRasterSha256", hash))
++            image.recycle()
++        }
++        assertEquals(32, rows.length())
+         rule.waitForIdle()
+         rule.onAllNodesWithText(text).assertCountEquals(4)
+         for (index in fonts.indices) rule.onAllNodesWithText(text)[index].assertIsDisplayed()
+@@ -109,12 +135,13 @@
+         File(context.getExternalFilesDir(null), "n1-056-font-raster.json").writeText(JSONObject()
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+             .put("fontScale", context.resources.configuration.fontScale).put("rows", rows)
+-            .put("limits", "Twenty-eight native Paint probes and four production Compose rows; visual inspection separate. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
++            .put("individualGlyphProbes", 28).put("wholeWordRasterProbes", 4)
++            .put("limits", "Twenty-eight single-character native Paint probes, four complete-word nonblank raster probes and four production Compose rows; actual 丿/饉/飢饉 readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
+             .toString(2))
+     }
+ }
+ 
+-class N1Batch056ArticleTest {
++class N1Batch056Retry1ArticleTest {
+     @get:Rule val rule = createEmptyComposeRule()
+     private lateinit var app: KanjiApp
+     private lateinit var scenario: ActivityScenario<MainActivity>
+@@ -231,8 +258,8 @@
+             show("overlapping uses", "kanji-poverty-overlap")
+             show("Modern-shape mnemonic", "kanji-mnemonic")
+             section("Readings")
+-            show("poverty; being poor", "kanji-on-reading")
+-            show("scarce; meagre", "kanji-kun-reading")
++            show(readingExample("貧乏 びんぼう — poverty; being poor"), "kanji-on-reading")
++            show(readingExample("乏しい とぼしい — scarce; meagre"), "kanji-kun-reading")
+             show("an alternate reading", "kanji-alternate-reading")
+             show("This card practices", "kanji-curation")
+             show("not a second linked article", "kanji-frequency-boundary")
+@@ -240,7 +267,7 @@
+             show("short outlines", "kanji-lookalikes")
+             show("three-stroke count", "kanji-drawing-variant")
+             section("Common words")
+-            inline(await("とぼしい — scarce; meagre", substring = true), "乏しい")
++            inline(await(commonWord("乏しい とぼしい — scarce; meagre")), "乏しい")
+             await("乏しい (とぼしい)", substring = true)
+             section("Meaning")
+             show("people with needed skills", "adjective-scope")
+@@ -270,7 +297,7 @@
+             show("not a person's worth", "adjective-human-boundary")
+             back()
+             await("Common words")
+-            inline(await("びんぼう — poverty; being poor", substring = true), "貧乏")
++            inline(await(commonWord("貧乏 びんぼう — poverty; being poor")), "貧乏")
+             await("貧乏 (びんぼう)", substring = true)
+             section("Meaning")
+             show("It is a noun", "poverty-grammar")
+@@ -411,8 +438,23 @@
+     }
+ 
+     private fun await(text: String, substring: Boolean = false): SemanticsNodeInteraction {
+-        rule.waitUntil(30_000) { rule.onAllNodesWithText(text, substring = substring).fetchSemanticsNodes().isNotEmpty() }
+-        return rule.onNodeWithText(text, substring = substring)
++        return await(hasText(text, substring = substring))
++    }
++
++    private fun await(matcher: SemanticsMatcher): SemanticsNodeInteraction {
++        rule.waitUntil(30_000) { rule.onAllNodes(matcher).fetchSemanticsNodes().isNotEmpty() }
++        rule.onAllNodes(matcher).assertCountEquals(1)
++        return rule.onNode(matcher)
++    }
++
++    private fun readingExample(text: String): SemanticsMatcher {
++        return hasText(text) and hasAnyAncestor(hasTestTag("article-body")) and
++            hasAnyAncestor(SemanticsMatcher.keyIsDefined(SemanticsProperties.HorizontalScrollAxisRange))
++    }
++
++    private fun commonWord(text: String): SemanticsMatcher {
++        return hasText(text) and hasAnyAncestor(hasTestTag("article-body")) and
++            !hasAnyAncestor(SemanticsMatcher.keyIsDefined(SemanticsProperties.HorizontalScrollAxisRange))
+     }
+ 
+     private fun click(text: String) = click(await(text))
+@@ -431,9 +473,13 @@
+     }
+ 
+     private fun show(selector: String, step: String) {
++        show(hasText(selector, substring = true), step)
++    }
++
++    private fun show(matcher: SemanticsMatcher, step: String) {
+         val body = rule.onNodeWithTag("article-body")
+-        body.performScrollToNode(hasText(selector, substring = true))
+-        val target = await(selector, substring = true)
++        body.performScrollToNode(matcher)
++        val target = await(matcher)
+         target.performScrollTo()
+         val viewport = body.fetchSemanticsNode()
+         val cell = target.fetchSemanticsNode()
