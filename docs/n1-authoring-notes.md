@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 049: source preparation only
+## Batch 049: qualified source, not drafted
 
 [Batch 049](n1-sources/batch-049-progress.json) selects only **丑**,
 frozen source row 2, on accepted published base `e91eec0`.
@@ -67,9 +67,34 @@ any substantive link changes remain unselected. The
 [preparation audit](n1-sources/batch-049-preparation-audit.json) checks exact
 frozen inputs/re-extractions, source membership, baseline invariants and
 unchanged runtime hashes; it is not linguistic or native acceptance.
-Next qualify Japanese headings, radical/shape and pinned SVG before drafting
-the same 049. No runtime teaching, geometry, reviewer, Android/native run or
-push occurs at this checkpoint. Batch 048 is already published and verified
+The subsequent [qualified evidence](n1-sources/batch-049-dictionary-evidence.json)
+and [audit](n1-sources/batch-049-qualified-source-audit.json) resolve eight exact
+Japanese dictionary sections on seven saved raw pages. Daijisen and Kanjipedia
+qualify standalone うし; Daijisen qualifies whole 丑年 うしどし. Daijisen's
+explicit 丁丑 character example plus the actual Nikkoku heading ていちゅう
+qualify チュウ allocation; Nikkoku 辛丑 しんちゅう corroborates calendar use.
+Nikkoku's alternative ひのとうし differs from frozen JMdict ひのとのうし:
+both remain recorded, without a silent source correction. Inline recognition
+can use ていちゅう without selecting that alternative or another word article.
+
+The proposed minimum is one `words/丑.md` sign article, sole うし practice and
+`quizOnyomi: []`, retaining full チュウ / うし metadata. Omission from practice
+is a bounded usefulness decision, not an obsolete, invalid or name-only label.
+Final titles, three wrong labels, direct 丑/牛 overlap guard and substantive
+links remain for the draft checkpoint; 牛/牛肉 is not a transitive exclusion.
+The historical hour alternatives and lunar-month boundary are qualified;
+traditional 北北東 and the dictionary's thirty-degree bearing are not
+silently equated to an exact modern sixteen-point compass bearing.
+丑寅 うしとら is independently qualified as northeast.
+
+The complete pinned four-path SVG was inspected before generating an external
+converter candidate, not a runtime stroke file. Its general-radical 一 group
+is the middle horizontal, stroke 3. Use a labelled modern-shape mnemonic and
+`structure-unclassified`; no historical or phonetic account is selected.
+Candidate font checks establish cmap presence only, not native readability.
+No runtime teaching, reviewer, Android/native run or push occurs at this
+checkpoint. Next finalize support/quiz/link choices and draft the same 049,
+then complete every review and delivery gate. Batch 048 is already published and verified
 for bounded owner testing, not reopened by the historical draft section below.
 Published coverage remains **75 additions; 1,153 still to deliver**.
 Physical-phone/general-release and whole-set acceptance remain outstanding.
