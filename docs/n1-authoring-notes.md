@@ -37,7 +37,40 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 050: qualified sources, not drafted
+## Batch 050: local unreviewed draft
+
+The qualified sources now support one necessary **辰 たつ** sign article,
+one kanji card and **seven exact pinned-converter strokes**. Full
+シン・ジン / たつ metadata and order are preserved; only たつ is selected
+for practice. The ジン row explicitly retains the source-only lexical
+allocation limit instead of inventing an example. No vocabulary level
+is inferred from the N1 kanji.
+
+The actual three wrong labels are 農 / agriculture; farming,
+震 / quake; tremble, and 長 / long, chief. Their ordinary secondary
+senses do not make those labels answers to the Dragon-sign question.
+There is no standalone 竜/龍 word card and no established direct
+word-label collision requiring an exclusion. The one declared 辰 pair
+links both ways; there are no baseline declared pairs to activate.
+Only the substantive component introductions in **both 農 and 震**
+gain a link. Both exact deltas belong in the initial review scope.
+
+The [draft audit](n1-sources/batch-050-draft-audit.json) records complete
+frozen-source re-extraction, baseline/metadata/reading/link checks,
+all runtime hashes, generated geometry, whole-authored-text font cmaps
+and combined-tree checks. The [stroke audit](n1-sources/batch-050-stroke-audit.json)
+keeps actual missing cmap characters and their native-fallback obligations:
+32 of 34 Han characters across both new and both changed articles occur
+in all three fonts; **厂 and 氵** need supported-native readability evidence.
+All 368 Python tests, validator, vocabulary check, fresh manifest and local
+archive budgets pass; all **8,278 runtime hashes** match. These are draft
+checks, not linguistic or native acceptance. No independent review, Android/native run,
+push or publication is claimed. Next is the same signed snapshot's two
+serial blind different-model-family initial reviews, including both
+reused deltas; all reconciliation/native/integration/publication gates
+remain. Do not start 051 or reopen accepted 049.
+
+### Retained source qualification
 
 The [qualified-source record](n1-sources/batch-050-dictionary-evidence.json)
 adds eight exact Japanese dictionary/encyclopedia sections from seven saved
@@ -59,9 +92,9 @@ adopted. All three packaged cmaps cover nine of ten candidate characters;
 Cmap absence is not a glyph failure, and no native result is claimed here.
 Historical hour alternatives, traditional bearing versus modern
 compass points, 辰巳 southeast and lunar-month boundaries remain explicit.
-Final titles, wrong choices, direct word guards, exact 農/震 link deltas
-and every authored-glyph check remain draft work. No teaching or runtime
-acceptance is claimed; published coverage is unchanged.
+Those source-stage candidate checks are now followed by the unreviewed
+draft above. No teaching or runtime acceptance is claimed; published
+coverage is unchanged.
 
 [Batch 050](n1-sources/batch-050-progress.json) selects only **辰**,
 frozen source row **1070**, on published base `b189ed6`.
@@ -78,7 +111,7 @@ grade 9 and canonical radical **辰 (161)**. Coordinator inspection covers
 character records and fifteen actual existing articles.
 There is no activated baseline declared word pair.
 Existing 農 and 震 contain substantive 辰-shaped component descriptions;
-any future link-only edits must be assigned explicitly in initial reviews.
+the two link-only edits must be assigned explicitly in initial reviews.
 The incidental branch sequence in 午 does not require broad backlink work.
 
 The dispositions distinguish the Dragon sign from the creature 竜/龍,
@@ -91,15 +124,15 @@ No reading is dropped or labelled obsolete/name-only by assumption.
 辰砂/辰沙 preserve the spelling restriction on しんさ; 辰星's multiple
 astronomical senses remain separate rather than becoming a universal gloss.
 
-Standalone 辰 たつ support and sole-kun practice are proposed, not authored.
-Final wrong choices, direct word exclusions and links remain unselected.
+Standalone 辰 たつ support and sole-kun practice were proposed at the
+source stage and are now authored in the unreviewed local draft.
 No extra dragon, astronomy, historical or mineral article is
 committed; support-word levels are not inferred from N1 kanji.
 The [preparation audit](n1-sources/batch-050-preparation-audit.json)
 checks exact frozen inputs, complete re-extraction, original baseline
 invariants and unchanged runtime hashes. It is not independent linguistic,
 font, native or publication acceptance. Japanese-heading and SVG qualification
-now have the bounded evidence above; authoring and all subsequent gates remain.
+now have the bounded evidence above; all post-draft acceptance gates remain.
 Published coverage stays **76 / 1,228**, with **1,152 remaining**.
 Batch 049 is not reopened; physical-phone, general-release and whole-set
 acceptance remain explicitly outstanding.
