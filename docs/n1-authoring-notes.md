@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 046: source preparation only
+## Batch 046: qualified source, not drafted
 
 [Batch 046](n1-sources/batch-046-progress.json) bounds the next addition to
 **酉**, frozen source row 1105, on accepted published base `d76f2dd`.
@@ -49,18 +49,29 @@ strokes, grade 9 and canonical radical **酉 (164)** are preserved.
 
 The source packet distinguishes the Rooster sign from the living bird 鳥
 and domestic chicken 鶏, and retains their food senses for later quiz review.
-Calendar compounds are recognition candidates, not yet per-character
-allocation or practice decisions. The historical hour has multiple dictionary
+The [dictionary evidence](n1-sources/batch-046-dictionary-evidence.json)
+records eight exact Japanese dictionary sections across seven raw pages.
+Standalone **酉 とり** is verified; the character heading explicitly allocates
+**ユウ** in **辛酉 しんゆう**, also read **かのととり**.
+One necessary `words/酉.md` sign article and sole kun practice are proposed,
+not authored. ユウ remains corroborated recognition, not source-only,
+obsolete or name-only. The historical hour has multiple dictionary
 mappings; its west and lunar-eighth-month senses do not make 酉 a replacement
 for ordinary 西 or Gregorian August. Raw KANJIDIC2 radical-name
-**ひよりのとり** differs from JMdict's **ひよみのとり**; exact Japanese
-headings must be qualified before teaching either account.
-Shared radical shapes and alcohol associations are not established etymology.
+**ひよりのとり** differs from the verified Japanese heading **ひよみのとり**;
+preserve the raw string rather than silently correcting it or teaching it as
+established. **とりへん** is verified as a positional component name.
+The alcohol sense of the whole expression 日読みの酉 does not make the
+standalone sign noun an ordinary word for alcohol.
+Pinned KanjiVG geometry verifies seven paths and an external unchanged-converter
+candidate, plus six-path 西 for modern-shape comparison. Its extra interior
+horizontal is not proof of historical derivation from 西.
 
-No teaching draft, selected quiz key, necessary-word commitment, converted
-geometry, independent review, fresh native/phone acceptance or publication
+No teaching draft, runtime practice metadata, independent review,
+fresh native/phone acceptance or publication
 is claimed. Published coverage remains **72 additions; 1,156 still to deliver**.
-Continue qualification of the same 046 before drafting; do not begin 047.
+Continue the same 046 with the final support/quiz-label audit and validated
+signed unreviewed draft; do not begin 047.
 
 ## Batch 045: local unreviewed draft
 
