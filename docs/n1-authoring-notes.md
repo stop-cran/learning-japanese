@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 048: qualified source, not drafted
+## Batch 048: local unreviewed draft
 
 [Batch 048](n1-sources/batch-048-progress.json) bounds the next addition to
 **寅**, frozen source row 256, on accepted published base `3b2f689`.
@@ -45,7 +45,10 @@ The [membership](n1-sources/batch-048-membership.json) fixes one character
 after a fresh comparison of 寅 (12), 丑 (19) and 辰 (26) complete
 lexical-family workloads. The frozen packets retain **12 lexical and 14
 disjoint comparison families**, seven complete raw character records and
-coordinator inspection of twenty actual existing articles. Full source
+preparation-stage coordinator inspection of twenty actual existing articles.
+This draft execution reread all 26 families, seven raw records, nine actual
+existing articles, all eight qualified Japanese sections and the full SVG.
+Full source
 readings **イン / とら**, eleven strokes, grade 9 and canonical radical
 **宀 (40)** are preserved.
 
@@ -58,16 +61,18 @@ mappings. The [qualified-source evidence](n1-sources/batch-048-dictionary-eviden
 records eight exact Japanese dictionary sections across seven raw pages.
 Daijisen explicitly gives 甲寅 (こういん); the actual Nikkoku 甲寅
 heading corroborates term 51 and きのえとら. イン is qualified calendar
-recognition, omitted from proposed practice by bounded usefulness choice,
+recognition, omitted from practice by bounded usefulness choice,
 not invalid, obsolete or name-only. Full イン / とら metadata remains.
-One standalone とら sign article and sole-kun practice are proposed,
-not yet authored.
+One necessary standalone とら sign article and sole-kun practice are now
+drafted; no vocabulary JLPT level is inferred.
 
 Daijisen's ウ冠 (うかんむり) heading and the complete pinned eleven-path
-SVG qualify the visible 宀 top radical. An unchanged-converter candidate
-is external to runtime. All three bundled fonts cover 寅 but lack standalone
-宀, already present in accepted cards such as 安. Carry its system-fallback
-readability into fresh native/visual acceptance; cmap checks are not that
+SVG qualify the visible 宀 top radical. Runtime geometry is generated
+with the unchanged converter and equals that pinned candidate. All three
+bundled fonts cover 寅 but lack standalone 宀 and 氵 in the authored
+text, including the changed 演 article. Both occur in accepted base
+content; the whole comparison audit also flags 虍 and 黃. Carry their
+system-fallback readability into fresh native/visual acceptance; cmap checks are not that
 acceptance. Kanjipedia's additional つつしむ is recorded as
 an external inventory difference, not silently added to frozen readings
 or illustrated with an invented word. Its historical formation account
@@ -75,21 +80,28 @@ is not selected for teaching. Traditional 東北東 remains distinct from
 丑寅's northeast; Daijisen's thirty-degree description must not become
 an exact modern sixteen-point compass equivalence.
 
-There is no baseline declared word pair or existing standalone sign-support
-article. A new `words/寅.md` is qualified necessary-support selection,
-not yet teaching; its final level, title, actual quiz labels and guards
-remain for the draft checkpoint.
-The substantive 寅-shaped mnemonic in the existing N3 演 article needs
-a bounded link decision during drafting; 午's incidental branch sequence
-does not by itself require a backlink. Neither existing article changes
-at this checkpoint. The historical
+At the accepted base there was no declared word pair or standalone sign-support
+article. The new `words/寅.md` gives two translated examples, a direct
+虎 quiz guard and one reciprocal pair with the new kanji card. No
+transitive 寅/酔っ払い guard is inferred; original 虎/酔っ払い and
+猿/馬鹿 guards remain unchanged. Actual kanji choices 演 / 黄 / 申
+mean perform/stage, yellow and humbly say; 申's additional Monkey sign
+does not identify the Tiger. Full applicable character records, dictionary
+families and actual displayed labels support the bounded quiz audit.
+The substantive 寅-shaped mnemonic in the existing N3 演 article gains
+only a component link; its performance teaching and metadata are untouched.
+午's incidental branch sequence does not by itself require a backlink.
+The historical
 [preparation audit](n1-sources/batch-048-preparation-audit.json) stays byte-preserved;
 the [qualified-source audit](n1-sources/batch-048-qualified-source-audit.json)
 adds exact Japanese sections, pinned SVG/converter and candidate font receipts
 to fresh source/re-extraction, baseline and unchanged runtime checks.
-No teaching draft, independent review, runtime geometry, native/phone
-acceptance or publication is asserted. Next draft the same 048 after
-the remaining support/quiz/link audit; do not start 049. Accepted 047
+The [draft audit](n1-sources/batch-048-draft-audit.json) records the current
+source/baseline/readings/links/geometry/font, validation and archive checks.
+This is an unreviewed local teaching draft, not linguistic acceptance,
+native/phone acceptance or publication. Next conduct the same 048's
+two serial blind different-model-family reviews on its signed snapshot;
+fresh Android/native and publication gates still follow. Do not start 049. Accepted 047
 is not reopened. Published coverage
 remains **74 additions; 1,154 still to deliver**, not complete N1 coverage.
 Earlier sections below retain their historical draft-stage wording;
