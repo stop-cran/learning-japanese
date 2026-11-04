@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "execution": 275,
+  "checkpoint": 275,
+  "batch": "051",
+  "status": "blocked",
+  "stage": "batch-051-fresh-android-permission-blocked",
+  "startingHead": "0f09626b27f6e8214d22c076665dab3188822730",
+  "reviewedTeachingSnapshot": "ca54f1e910522d76f42732fa10ee1a8a6ef1359f",
+  "androidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "scope": "SAME051 fresh Android RealContentTest3/RareHanTest1, followed by bounded native preparation/acceptance as feasible. No052, repeated blind initials, publication before remaining gates, or second runner.",
+  "blocker": {
+    "kind": "tool-permission-denied-before-execution",
+    "attempts": 1,
+    "deniedCommand": "python -B C:\\Users\\stop-\\n1-kanji-workspace\\control\\checkpoint-275.py start; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; $env:JAVA_HOME='C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot'; $env:ANDROID_HOME='C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk'; Set-Location C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android; $started=Get-Date; Write-Output \"FRESH051_STARTED=$($started.ToString('o'))\"; Write-Output \"CORE_CONTENT_ROOT=$([IO.Path]::GetFullPath((Join-Path (Join-Path (Get-Location) 'core') '..\\..\\learning-japanese')))\"; .\\gradlew.bat :core:test --tests 'io.github.stopcran.kanji.core.RealContentTest' :app:testDebugUnitTest --tests 'io.github.stopcran.kanji.core.RareHanTest' --no-daemon --no-parallel --max-workers=1 --rerun-tasks '-Pkotlin.compiler.execution.strategy=in-process' --init-script C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-049-host-integration-heap.init.gradle 2>&1 | Tee-Object -FilePath C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-275-android.txt; $result=$LASTEXITCODE; Write-Output \"FRESH051_EXIT=$result\"; exit $result",
+    "message": "Permission denied because no interactive user response was available. Retry in an interactive session so the user can approve it, or try an alternative that does not require this permission.",
+    "executionStarted": false,
+    "startingScopeWriteExecuted": false,
+    "expectedLogCreated": false,
+    "trigger": "Unknown; the tool denial does not identify a particular argument or subcommand.",
+    "disposition": "Preserve, report and yield. No retry, alternate invocation, permission/configuration change or workaround."
+  },
+  "verified": {
+    "dedicatedWorktreesCleanBeforeAttempt": true,
+    "contentStartingSignature": "G",
+    "androidTestSourcesResolveSiblingContent": true,
+    "resolvedContentRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese",
+    "hostOnlyInitScriptInspected": "control/batch-049-host-integration-heap.init.gradle",
+    "hostOnlyCoreTestMaxHeap": "1g",
+    "nativeHeapOrArchiveGuardsChanged": false,
+    "freshAndroidTestsExecuted": 0,
+    "freshAndroidXmlAcceptanceClaimed": false,
+    "nativeOrVisualAcceptanceClaimed": false,
+    "teachingChanged": false,
+    "publicationAttempted": false
+  },
+  "publishedAdditions": 77,
+  "remainingAdditions": 1151,
+  "lastPublishedCommit": "6af98cb717755690a9ca793e5454a96ebd7a8f9f",
+  "nextAction": "An approval-capable parent must resolve the exact execution275 denied command; this unattended coordinator must not retry or work around it. Resume SAME051 at fresh non-skipped RealContentTest3/RareHanTest1 using inspected HOST-only1GiB init headroom and the known JDK17/SDK/serial flags. Inspect fresh XML names/counts/errors/failures/skips/timestamps and actual dedicated sibling root. Preserve all checkpoint274 textual/source/process limitations and subsequent supported-native/font/visual/full-archive/combined-main/signing/owner-publication/CI/exact public ZIP gates. Do not start052 or publish before acceptance.",
+  "limits": "Execution blocker, not Android test failure or acceptance. The denied invocation also contained the planned early starting-state write, so that write did not execute; read-only progress inspection confirmed checkpoint274 and absent execution275StartingState afterward. The actual blocked state is saved separately after the denial. No fresh Gradle log/XML/native/visual/current-main/publication acceptance. Prior368tests and two-family textual closure remain historical and unchanged, including disclosed initial internal overlap/HTML recovery and Japanese heading limits. Authored勹 fallback remains native-pending. CompatibleAndroidf9b59a2+ required; physical-phone/general-release and whole-set acceptance remain outstanding."
+}
