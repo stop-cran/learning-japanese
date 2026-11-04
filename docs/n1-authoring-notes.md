@@ -37,7 +37,45 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 054: local textual review closed; native acceptance pending
+## Batch 054: accepted bounded owner-testing publication
+
+The [publication record](n1-sources/batch-054-publication.json) records signed
+accepted merge `ffe45e9fc6eba82e4e0e6c3f53608d916a791eba`, green CI
+`41901290268` and its immutable public ZIP: all **8,290 runtime hashes** match,
+**8,312 entries**, with the original archive budgets unchanged. Published
+coverage is **81/1,228; 1,147 remaining**: 1,066 kanji / 5,024 word articles /
+86 N1 labels, including 85 named-source members and the separate 妖 exception.
+The one new **且つ** article is necessary kanji support, not an N1 vocabulary deck.
+
+The [combined acceptance](n1-sources/batch-054-acceptance-audit.json) records
+**368 Python tests**, source/baseline/exact membership, all reading dispositions,
+reciprocal links, generated strokes, all 19 authored Han/font checks, vocabulary,
+validator, fresh manifest and budget checks. Four upstream-only articles
+九・四・回・度 were preserved verbatim from current main; the only merge conflict
+was the regenerated manifest. Batch054 teaching and its practice selections
+are unchanged. Full ショ・ソ・ショウ / か.つ metadata remains; only か.つ is offered.
+The comparative register claim remains UNVERIFIED and omitted.
+
+Accepted Android **3+1**, native **two terminal case-0** results and both original
+reviewer visual confirmations were reverified, not rerun. The
+[native record](n1-reviews/batch-054-native-acceptance.json) retains the actual
+tested version `fa89fc674144b377`; merged publication uses `8846e9a9dc29d24c`.
+The original full envelope passed production ContentSync once. Actual meaning
+choices used cedar/chicken/mosquito, not the authored 目・日・助 trio.
+Curated かつ and drawing grades were persisted; drawing was geometry-only
+reference tracing and a recall miss, not ML Kit recognition or human recall success.
+
+Both visual confirmations used **24 serial calls / 18 returned PNGs** each,
+without overlaps or failed/truncated calls. Source 1080 × 2400 captures were
+returned at 900 × 2000; both byte sets remain separate. Clipped table columns
+and hidden text are not full-article/all-cell certification. 苟 rendered readably
+in a shared fallback style; its actual face is unknown, not four bundled designs.
+Compatible Android `f9b59a2` or later is required. Physical-phone/general-release
+and whole-set acceptance remain outstanding. Terminal publication receipts
+are verified separately before yielding; no batch055 starts in this checkpoint.
+The earlier local checkpoints below are historical.
+
+### Historical local textual review closure
 
 The [reconciliation](n1-reviews/batch-054-reconciliation.json) preserves
 independent **claude-opus-5.5** and **gpt-6.1-sol** initial reports on signed
