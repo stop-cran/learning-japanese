@@ -37,6 +37,38 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 051: source preparation only
+
+The [membership](n1-sources/batch-051-membership.json) freezes **匁**,
+source row 122, against published `6af98cb717755690a9ca793e5454a96ebd7a8f9f`.
+It is a bounded mass-unit, shortened-reading and spelling-restriction case,
+selected after comparing remaining candidates rather than source order.
+The [source ledger](n1-sources/batch-051-progress.json) records coordinator
+inspection of all **21 complete frozen JMdict families**: three lexical
+families / 63 lines and eighteen comparison families / 676 lines. Nine
+complete raw character records and nine actual existing articles were also
+inspected. The initial escaped 目 metadata line was truncated; targeted
+recovery returned it and the remaining 匁/勹 records completely.
+
+Full metadata remains empty on'yomi and ordered **もんめ・め**, four strokes,
+canonical **勹 (20)** and source grade 9. The mass sense in JMdict 1536280
+is restricted to 匁, unlike the family's historical-money sense; its 文目
+alternative must not be generalized to mass. 百匁 has whole readings
+ひゃくもんめ / ひゃくめ with separate archaic-sense and irregular-kana
+annotations. Exact Japanese headings must still qualify the shortened
+reading, usable number forms, spelling and present-day/register boundaries.
+No historical money conversion, etymology, legal status or frequency is
+inferred from those records. Existing 文/目 articles are not unit-support
+articles merely because their characters or readings resemble 文目.
+
+No runtime card, support word, quiz selection, SVG conversion or font/native
+acceptance is created here. There are no baseline declared 匁 word pairs or
+current 匁/もんめ teaching occurrences. A single necessary standalone
+mass-unit article is only a candidate, pending source qualification.
+Published coverage remains **77/1,228 additions; 1,151 remaining**.
+Continue the same 051 source gate before drafting, independent review and
+fresh acceptance; no 052, second runner or premature publication.
+
 ## Batch 050: published for bounded owner testing
 
 The [combined acceptance audit](n1-sources/batch-050-acceptance-audit.json)
