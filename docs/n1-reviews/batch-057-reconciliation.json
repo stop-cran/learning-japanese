@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "execution": 333,
+  "batch": "057",
+  "status": "textual-review-closed-pending-fresh-android-native-and-publication",
+  "authoredSnapshot": "aef958a3bccd96044d0af50e2da74b1b8cfe20da",
+  "reviewedTeachingSnapshot": {
+    "baseCommit": "7ec4ad733cabe460d726bbb12bc479528c7c051e",
+    "originalTeachingSnapshot": "aef958a3bccd96044d0af50e2da74b1b8cfe20da",
+    "description": "7ec4ad73 plus the exact single-sentence diff below and regenerated manifest; no other runtime changes.",
+    "files": {
+      "kanji/企.md": "efd8e7fa2ced1503862ac6999b8f02c0587e9c6c90fe1efd6f89abebd81f225a",
+      "words/企てる.md": "f4fb62804f6100392b41ae026ccb85867cc3eaf2dd123e1751228bb7214297a9",
+      "words/企業.md": "15d244329441b223aa2cc4053dc168f01dfb80e1498408a7c1be742a322dbf0d",
+      "manifest.json": "66459a3b1284f472165493c4ccf46bd4f168508109def4115d41593f8fe16ded",
+      "strokes/企.json": "326a596dec6ad695e45b9594d34887fe0afd49533f3441df08892b3f5fa8a89b"
+    },
+    "manifestContentVersion": "47f11f7f539a1d55",
+    "packetSha256": "39af915813eb12cb120d0d04c3891f0bfc7ef358275a00bbdf9d48b308c7c700"
+  },
+  "initialReviewRecord": "batch-057-initial-review-checkpoint.json",
+  "initialReviewRecordSha256": "0e9f26573a7c9c939e8b717135c70d621ee32bcb3809c8a2480870badd096e24",
+  "teachingScope": [
+    "kanji/企.md",
+    "words/企てる.md",
+    "words/企業.md:27 component link; full context read"
+  ],
+  "models": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "confirmations": [
+    {
+      "label": "confirm-claude",
+      "model": "claude-opus-5.5",
+      "sessionId": "9afffb68-5649-4bf8-9dd7-c4a39170c20c",
+      "startedAt": "2026-11-05T00:32:11.8988550+01:00",
+      "completedAt": "2026-11-05T00:32:37.3752945+01:00",
+      "exitCode": 0,
+      "freshCalls": 1,
+      "overlappingStarts": 0,
+      "completeDossierByteHashVerified": true,
+      "report": "batch-057-confirm-claude.md",
+      "reportSha256": "58bb46a396f2996ff1ac4d370bdb78166f606c6eb62feba3f236be2331663c9d",
+      "execution": "batch-057-confirm-claude-execution.json",
+      "executionSha256": "4cd81780f3b8229980a3902a93672da486d23b81d01d983e919dd391ec6d8460",
+      "rawExecutionSha256": "3a182ab081049c78630e90cd9de473e2e040f6058195ad57d1b51e6af9e1ab48"
+    },
+    {
+      "label": "confirm-gpt",
+      "model": "gpt-6.1-sol",
+      "sessionId": "94ee22aa-3d37-4463-9eb3-92e84fb8ebba",
+      "startedAt": "2026-11-05T00:32:56.4669975+01:00",
+      "completedAt": "2026-11-05T00:33:17.7427890+01:00",
+      "exitCode": 0,
+      "freshCalls": 1,
+      "overlappingStarts": 0,
+      "completeDossierByteHashVerified": true,
+      "report": "batch-057-confirm-gpt.md",
+      "reportSha256": "c4b9ea0e3aecdf5b79b7762036e4d294e01db0c3a42a276c5d28bbf49d83d28d",
+      "execution": "batch-057-confirm-gpt-execution.json",
+      "executionSha256": "dbd5e7dd3e127d86980da9f70b8fc16a53b0a43085526354016c1c392220fba3",
+      "rawExecutionSha256": "19966467855170d4bde7e19758d90290091f53c7bb475e300af36263c6db569a"
+    }
+  ],
+  "reviewClosed": true,
+  "runtimePublished": false,
+  "findings": [
+    {
+      "id": "057-F1",
+      "status": "resolved",
+      "severity": "minor",
+      "facets": [
+        "correctness",
+        "comprehensibility"
+      ],
+      "file": "words/企てる.md",
+      "lines": [
+        32,
+        52,
+        54
+      ],
+      "origin": "initial-claude",
+      "claim": "Current planning/standing noncompound sentence could imply historical standing derivation is absent.",
+      "evidence": "Actual Daijisen and Nikkoku extracts explicitly deriveくわだてる from olderくわたつ tiptoeing; JMdict's archaic sense is separately scoped.",
+      "disagreement": "GPT reports no defect. Documented historical derivation does not itself settle what the current synchronic sentence asserts. No vote-based adjudication.",
+      "proposedBoundedRemedy": "Clarify learning it as one ichidan verb without a planning/standing word-formation denial; original-session changed-passage confirmation after any authorized edit.",
+      "confidence": "High on documented derivation; moderate on learner impact and whether current sentence contradicts it.",
+      "adjudication": "Minor practical ambiguity removed, not a finding that synchronic noncompound teaching necessarily contradicts documented historical derivation. Teach one ichidan verb without the unnecessary planning/standing formation denial; no new origin claim.",
+      "remedy": "words/企てる.md32: Learnくわだてる as one ichidan verb meaning plan;attempt.",
+      "confirmations": [
+        "confirm-claude",
+        "confirm-gpt"
+      ],
+      "originalDisagreementPreserved": true
+    }
+  ],
+  "optional": [
+    {
+      "id": "057-O1",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Potential further guards with工夫/プログラム/努める.",
+      "evidenceStatus": "Unestablished hypotheses, not authorized equivalence conclusions or required guards."
+    },
+    {
+      "id": "057-O2",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Align often/usually kana wording; mention historical tiptoe connection.",
+      "evidenceStatus": "Editorial expansion/polish, distinct from disputed057-F1."
+    },
+    {
+      "id": "057-O3",
+      "origin": "initial-gpt",
+      "status": "optional",
+      "claim": "Add an example of an actual attempt.",
+      "evidenceStatus": "Nonblocking expansion; second taught sense already explicitly explained."
+    }
+  ],
+  "processDeviation": {
+    "status": "partially resolved",
+    "reviewer": "initial-claude",
+    "observedOverlappingStarts": 52,
+    "otherReviewerOverlappingStarts": 0,
+    "originalSelfClaim": "Each response made one tool call and waited.",
+    "disposition": "Both original-session source/finding confirmations used one complete dossier view with0overlaps. Claude explicitly corrects its false original serial-tool claim. This resolves the bounded follow-up operation, not irreversible initial history. No rerun/rebranding of initial blind reports or equal-fresh-read claim.",
+    "historicalNoncomplianceRetained": true,
+    "strictInitialContractAccepted": false,
+    "boundedRemediationComplete": true
+  },
+  "archiveHelperCorrection": "batch-057-confirmation-audit-correction.json",
+  "archiveCopies": [
+    {
+      "source": "control/batch-057-confirmation-task.txt",
+      "sourceSha256": "39af915813eb12cb120d0d04c3891f0bfc7ef358275a00bbdf9d48b308c7c700",
+      "archive": "docs/n1-reviews/batch-057-confirmation-task.txt",
+      "archiveSha256": "deaf004c66aeba749c9b48cf8f8c7807b2eba7b7dd5a0c598d81cdf1f3dc3660",
+      "normalization": "CRCRLF/CRLF to LF, whitespace-only lines cleared and final blank lines removed for Git archival; original returned-byte hash retained separately."
+    },
+    {
+      "source": "control/batch-057-confirmation-freeze.json",
+      "sourceSha256": "53f015f28707056c9dfdc887072f40655dc4d1334200bd9ad0dee4ae7de4edd3",
+      "archive": "docs/n1-reviews/batch-057-confirmation-freeze.json",
+      "archiveSha256": "7d8e181fac6790c44865919510fb6c75ec242a938fe4a4dad69aa4143940fe66",
+      "normalization": "CRCRLF/CRLF to LF, whitespace-only lines cleared and final blank lines removed for Git archival; original returned-byte hash retained separately."
+    },
+    {
+      "source": "control/copilot-help-execution-333.txt",
+      "sourceSha256": "427498c72f968f03b2981889c0dcef2298c18a481b5645f5a8ccd938943661e7",
+      "archive": "docs/n1-reviews/batch-057-copilot-help-execution-333.txt",
+      "archiveSha256": "427498c72f968f03b2981889c0dcef2298c18a481b5645f5a8ccd938943661e7",
+      "normalization": "CRCRLF/CRLF to LF, whitespace-only lines cleared and final blank lines removed for Git archival; original returned-byte hash retained separately."
+    },
+    {
+      "source": "control/copilot-model-settings-execution-333.txt",
+      "sourceSha256": "197cb397d23b1aeb3f1ffcda3c100e8b497b1cfea5325ca6209731de43bbebfb",
+      "archive": "docs/n1-reviews/batch-057-copilot-model-settings-execution-333.txt",
+      "archiveSha256": "17dd5141a159ac99c871d267b5628008d9c63879caba0fc07ece0c7a2124ad2d",
+      "normalization": "CRCRLF/CRLF to LF, whitespace-only lines cleared and final blank lines removed for Git archival; original returned-byte hash retained separately."
+    }
+  ],
+  "checks": [
+    {
+      "command": "python -B tools\\validate.py",
+      "exitCode": 0,
+      "result": "0 errors"
+    },
+    {
+      "command": "python -B tools\\build_manifest.py",
+      "exitCode": 0,
+      "result": "8300 runtime files;47f11f7f539a1d55"
+    },
+    {
+      "command": "python -X utf8 -B -m unittest discover -s tools -p test_*.py",
+      "exitCode": 0,
+      "tests": 368,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "seconds": 42.636,
+      "rawLog": "control/logs/execution-333-python-tests.txt",
+      "rawLogSha256": "c75a305ebeaaae7bf863e6e8da042bd9eab840e96eb0041193a4e425ddd1be5b"
+    },
+    {
+      "command": "python -X utf8 -B tools\\grammar_vocabulary.py check",
+      "exitCode": 0,
+      "result": "2122/2431 reviewed prompts;stage=pilot. Consistency, not full coverage."
+    },
+    {
+      "command": "python -X utf8 -B control\\execution-333-audit.py",
+      "exitCode": 0,
+      "audit": "batch-057-reconciliation-audit.json",
+      "sha256": "2081fbc8fced8b92092cc858b32ff585ddcefe8656e98da4ccb585a44ab498c9"
+    },
+    {
+      "command": "git --no-pager diff --check",
+      "exitCode": 0
+    }
+  ],
+  "nextAction": "Resume SAME057 at normally signed LOCAL textual-reconciliation checkpoint333, NOT runtime publication. Read complete request/finalcheckpoint/approved issue and current live keys; preserve FULL history. Original aef958a3 blind initial reports immutable. Current企てる.md32 replaces the unnecessary planning/standing noncompound denial with one-ichidan-verb learning guidance; no historical claim added. 057-F1 practical ambiguity resolved by precise wording/source evidence and BOTH original sessions claude-opus-5.5(9afffb68-5649-4bf8-9dd7-c4a39170c20c) and gpt-6.1-sol(94ee22aa-3d37-4463-9eb3-92e84fb8ebba), each one complete17KBdossier view, zerooverlap, exited0 SERIAL; firstreport/archive before secondlaunch. Original52/0internal overlaps remain HISTORICAL NONCOMPLIANCE, not repaired initials or strict-contract acceptance. Claude explicitly retracts its original false serial-tool self-claim. Bounded source/finding remediation complete; no new blind194family read claimed. Additive audit correction preserves first archive-helper false newline-containment flag/cp1252 print failure; actual returned UTF8 hash EXACTLY equals fullrawpacket, so no truncation/review failure. Three optional groups retained; no extra exclusions from unestablished工夫/プログラム/努める hypotheses. Fresh368Python/validator/vocabulary/freshmanifest47f11f7f539a1d55/full194exactextractions/frozen5+decompressed2hashes/baseline985+4942+985/2reciprocalpairs4directions/1activatedpair/3orderedreadings2curatedkeys/11directguards/52Han3cmaps/pinned6strokegeometry/originalbudgets passed. No other runtime edit. Next bounded gate: FRESH non-skipped AndroidRealContentTest3/RareHanTest1 against THIS siblingcheckout; inspect freshXML cases/counts/errors/failures/skips/root/timestamps. Then applicable same057 native exactfullgitarchive productionContentSyncONCE/selection-meaning-curatedreading-drawing-article-SystemBack-offline-visual and latestmain normal nonrewriting integration/allcombinedvalidation/baseline-source-reading-link-font-stroke/Python/vocab/validator/freshmanifest/originalbudgets/normalsigning/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 BEFOREdelivery or058. No accepted056 rerun absent new concern, no058/secondrunner/concurrentheavywork/signingretry/permissionworkaround. Published83/1228,1145remaining; compatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding.",
+  "limits": "Textual reconciliation only. Original blind two-family reports at aef958a3 and their full range audits inherited unchanged. Original Claude52internaloverlaps and contradicted self-claim remain historical noncompliance; strict original process acceptance not claimed. Both actual original sessions fresh-read one identical bounded dossier serially, zero overlapping calls, and accepted the changed passage; not new independent blind initials or full194family rereads. Reviewer agreement does not prove original wording false: documented historical derivation and modern verb identity differ. The practical implication is removed without adjudicating that stronger allegation. Supplied dictionary nodes not fresh upstream retrieval. Returned byte equality proves full return, not comprehension. No freshAndroid/native/visual/currentmain/publication/physicalphone/generalrelease/whole-set acceptance. Vocabulary consistency pass 2122/2431 pilot is not complete coverage. Original guards and unchanged optional hypotheses retained.",
+  "exactTeachingDiff": "batch-057-confirmation-diff.json",
+  "exactTeachingDiffSha256": "d67c88b1d7f2f6bd0233f09f0a6dae9295c35f288a38c3aad0078ddb949eafb0"
+}

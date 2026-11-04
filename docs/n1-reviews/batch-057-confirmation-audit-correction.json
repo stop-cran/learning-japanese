@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "execution": 333,
+  "kind": "Coordinator archive-helper verification correction; not a reviewer/tool failure.",
+  "originalRecord": "batch-057-confirm-claude-execution.json",
+  "originalRecordSha256": "4cd81780f3b8229980a3902a93672da486d23b81d01d983e919dd391ec6d8460",
+  "originalFlag": {
+    "exactCompleteDossierReturned": false
+  },
+  "correctedFlag": {
+    "exactCompleteDossierReturned": true
+  },
+  "evidence": "Actual single successful view returnedSha256 equals the entire raw UTF-8 dossier SHA256 exactly. No truncation. Initial containment helper normalized Windows newlines asymmetrically and incorrectly flagged false; raw bytes equality is decisive.",
+  "returnedSha256": "39af915813eb12cb120d0d04c3891f0bfc7ef358275a00bbdf9d48b308c7c700",
+  "additionalFailure": "Archive helper saved the original complete report and execution record, then console printing failed under cp1252. It did not interrupt the reviewer (exit0), truncate evidence or change teaching. Helper stdout now UTF-8; GPT archive completed successfully.",
+  "disposition": "Preserve original report/execution record unchanged and this additive correction. No reviewer rerun."
+}
