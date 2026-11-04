@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 049: local unreviewed draft
+## Batch 049: textual review closed; native acceptance pending
 
 [Batch 049](n1-sources/batch-049-progress.json) selects only **丑**,
 frozen source row 2, on accepted published base `e91eec0`.
@@ -117,13 +117,32 @@ link edits, without changing repository tooling or permitting extra edits.
 An intermediate external-adapter indentation error was corrected before the
 successful audit; neither failed attempt is an acceptance.
 
-This checkpoint is a local, normally signed **unreviewed draft**, not
-publication. Next run the same 049 snapshot through two serial blind reviews
-from different actual model families, covering both new articles and both
-exact link diffs, then reconcile evidence. Every fresh Android/native/visual,
-latest-main and publication gate remains. No reviewer, Android/native run,
-push or batch 050 occurs here. Batch 048 is already published and verified
-for bounded owner testing, not reopened by the historical draft section below.
+The [textual reconciliation](n1-reviews/batch-049-reconciliation.json) now
+closes two blind initial reviews on signed draft `0e73a41`, using actual
+`claude-opus-5.5` and `gpt-6.1-sol`. Both reviewed the two new articles and
+both exact 寅 link changes from the start, returning separate correctness,
+scoped-coverage and comprehensibility verdicts for all four scopes.
+No actionable defect or consequential unresolved claim was established.
+Four Claude optional groups remain nonblocking and were not adopted; no
+teaching changes or repeat confirmations were needed.
+
+The [review audit](n1-sources/batch-049-review-audit.json) preserves both
+complete original reports and execution receipts: serial process exits,
+39/38 tool calls, zero internal overlaps or XML-range violations, and all
+24 assigned resources returned per reviewer. Returned bytes do not prove
+comprehension. The first report was archived before the second launch.
+A launcher-wrapper failure occurred before Copilot started; its record is
+preserved, and it was not a reviewer or a permission denial. Claude fetched
+the pinned SVG independently; GPT fetched the actual Nikkoku 丁丑 entry.
+The supplied seven dictionary pages are not independent fresh retrievals.
+
+This is local **textual closure**, not publication or native acceptance.
+Fresh combined-tree checks still pass all 368 Python tests and all 8,275
+runtime hashes without a teaching or manifest change. Every fresh
+Android/native/visual, latest-main and publication gate remains. No
+Android/native run, push or batch 050 occurs here. Batch 048 is already
+published and verified for bounded owner testing, not reopened by the
+historical draft section below.
 Published coverage remains **75 additions; 1,153 still to deliver**.
 Physical-phone/general-release and whole-set acceptance remain outstanding.
 Earlier sections retain historical checkpoint wording; their publication
