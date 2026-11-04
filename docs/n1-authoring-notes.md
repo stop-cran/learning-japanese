@@ -37,15 +37,17 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 043: qualified source checkpoint, not drafted
+## Batch 043: local unreviewed draft
 
 [Batch 043](n1-sources/batch-043-progress.json) bounds the next addition to
-**麟**, frozen source row 1226. The coordinator inspected **25 complete
-frozen JMdict families**: 13 lexical families across all spelling positions
-and 12 disjoint comparison families, plus six complete raw character
-records and four existing articles. The [membership](n1-sources/batch-043-membership.json)
-and [preparation audit](n1-sources/batch-043-preparation-audit.json) distinguish
-this evidence checkpoint from a teaching draft or acceptance.
+**麟**, frozen source row 1226, with one necessary **麒麟 きりん** word
+article and 24-stroke geometry from the existing converter. The coordinator
+inspected **50 complete frozen JMdict families**: 13 lexical, 12 initial
+comparison and 25 additional disjoint comparison families, plus six raw
+character records, 18 actual word articles and three kanji distractor
+articles. The [membership](n1-sources/batch-043-membership.json) and historical
+[preparation audit](n1-sources/batch-043-preparation-audit.json) remain intact.
+This is author inspection, not independent review or publication.
 
 The frozen full metadata remains **リン**, with no kun-reading. Radical 鹿 (198),
 grade 9 and both source stroke-count annotations, **24 then 23**, are retained.
@@ -53,12 +55,14 @@ The [dictionary evidence](n1-sources/batch-043-dictionary-evidence.json)
 records seven exact Japanese source sections and the pinned SVG. Its
 verified blob has 24 paths, matching the primary count. Kanjipedia separately
 labels a 23-stroke old form; this does not identify the exact glyph intended
-by KANJIDIC2's unlabelled alternate annotation. Conversion remains pending.
+by KANJIDIC2's unlabelled alternate annotation. The converted geometry
+matches the pinned 24-path SVG; alternate evidence is not silently discarded.
 Kanjipedia attributes a 鹿 plus phonetic 粦 analysis to Shinjigen; adopting
 that analysis is optional, not permission to invent component history.
 
-麒麟 きりん is the principal support candidate, not an adopted article or
-practice key. Its giraffe sense is usually kana; the separate qilin sense
+麒麟 きりん is the sole support article, with only **リン** offered for
+practice and its own linked reading-table row. Its giraffe sense is usually
+kana; the separate qilin sense
 does not carry that flag. The archaic extraordinary-horse sense is restricted
 to alternate 騏驎 in the frozen entry. 麒麟児 names a child prodigy;
 botanical names, astronomical usage and the proverb have their own
@@ -66,16 +70,37 @@ restrictions, not a general rule that every compound means giraffe or genius.
 Exact Japanese headings now corroborate キ plus リン allocation and both
 animal identities. Daijisen additionally recognizes a gifted-person sense
 of bare 麒麟, broader than the young-person 麒麟児 compound; retain that
-source distinction when inspecting quiz choices. One necessary 麒麟 きりん
-article and sole リン practice are proposed, not drafted or review-closed.
+source distinction when inspecting quiz choices. The word has no inferred
+vocabulary level and does not invent a casual gifted-person example.
 Usual-kana spelling applies to the giraffe sense, not a claim that the
 pronunciation is rare. Kanjipedia's additional kun きりん differs from the
 frozen empty kun list: document it without silently adding a practice key.
 
-No declared baseline 麟 pair or current 麒麟/きりん word filename was found.
-No runtime card, stroke or manifest changed, and no reviewer or Android/native
-process ran. Resume the same 043 with final support/comparison/quiz-label
-inspection and existing-converter generation before a signed teaching draft.
+No baseline 麟 pair was activated. The sole new support pair is reciprocal;
+no out-of-batch 麒 card was added. Eleven direct word-choice guards cover
+four broad animal/creature labels, six person/individual labels and 鴻鵠's
+great-person sense. 人物's ordinary talented-person secondary sense was
+inspected, not dismissed because its title differs. Abstract 才能/能 and
+adjectival 偉大 are not person nouns; 鹿 and 鳳凰 are distinct identities.
+These guards are direct pairs, not transitive synonym cliques, and all
+existing comparison articles remain unchanged. The actual kanji distractors
+鹿/米/舞 have distinct meanings and already have three choices of their own.
+
+The [draft audit](n1-sources/batch-043-draft-audit.json) records source,
+baseline, exact tiger/monkey safeguards, metadata/readings, links, geometry,
+whole authored/comparison Han and font coverage, validator/manifest,
+Python/vocabulary and unchanged archive-budget checks. It is not linguistic
+certification. **23 of 28 authored Han** are present in every bundled font.
+New **粦・騏・驎・麒** and inherited **凰** require actual supported-native
+fallback/readability and visual evidence before publication; inherited
+comparison-only **广** also remains applicable. Cmap absence is neither a
+demonstrated tofu failure nor a fallback pass. The initial reused zero-new-glyph
+audit assertion exposed these four additions; they remain explicit pending
+gates, not removed teaching or a silent font-acceptance claim.
+Resume this same 043 at the signed unreviewed snapshot for
+serial blind two-family reviews; fresh applicable Android/native/visual,
+combined-main and publication checks still belong to later checkpoints.
+No reviewer or Android/native process ran during drafting; nothing was pushed.
 Accepted [batch 042](n1-sources/batch-042-publication.json) remains published
 at terminal `be775040`: **69 additions delivered; 1,159 remain**.
 Physical-phone/general-release qualifications remain outstanding; this local
