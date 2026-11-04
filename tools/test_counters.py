@@ -85,6 +85,19 @@ class CounterTests(unittest.TestCase):
             card["readingAnswers"] = bad
             self.assertTrue(self.validate(old, "hon"))
 
+    def test_neutral_gloss_alias_and_conflicting_legacy_gloss(self):
+        card = dict(id="hon-pen-1", kind="plain", text="ペンが三{}あります。", translation="Три ручки.",
+                    noun="ペン", phrase="三本", reading="さんぼん", good=["本", "三本"],
+                    kana=["さんぼん"], distractors=["匹", "冊", "回"])
+        data = dict(schemaVersion=1, id="hon", counter="本", reading="ほん", title="Длинные предметы",
+                    level=5, cards=[card])
+        self.assertEqual([], self.validate(data, "hon"))
+        card["en"] = "Three pens."
+        self.assertTrue(any("both" in error for error in self.validate(data, "hon")))
+        del card["en"]
+        card["translation"] = ""
+        self.assertTrue(self.validate(data, "hon"))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -8,6 +8,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from content_language import read_language
+
 ROOT = Path(__file__).resolve().parent.parent
 FOLDERS = ["kanji", "words", "articles", "strokes", "counters", "grammar"]
 SCHEMA_VERSION = 1
@@ -18,6 +20,7 @@ def sha256(path: Path) -> str:
 
 
 def build_manifest(root: Path) -> dict:
+    language = read_language(root)
     files = {}
     for folder in FOLDERS:
         for path in sorted((root / folder).glob("*")):
@@ -68,9 +71,10 @@ def build_manifest(root: Path) -> dict:
         if entries:
             payloads[key] = entries
     combined = hashlib.sha256(
-        json.dumps(payloads if len(payloads) > 1 else files, sort_keys=True, ensure_ascii=False).encode("utf-8")
+        json.dumps({**payloads, **language}, sort_keys=True, ensure_ascii=False).encode("utf-8")
     ).hexdigest()
-    return {"schemaVersion": SCHEMA_VERSION, "contentVersion": combined[:16], **payloads}
+    schema = SCHEMA_VERSION if language["baseLanguage"] == "en" else 2
+    return {"schemaVersion": schema, "contentVersion": combined[:16], **language, **payloads}
 
 
 def main() -> None:
