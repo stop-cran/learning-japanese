@@ -1,0 +1,197 @@
+{
+  "execution": 245,
+  "startingHead": "3b2f689972f009604f8f2950d6588a760a2b740f",
+  "startedAt": "2026-11-04T09:39:06.991591+01:00",
+  "scope": "One risk/evidence-bounded048 source-inspection checkpoint; no049/runtime authoring/reviewer/Android/native/publication/second runner.",
+  "status": "source-prepared-not-drafted",
+  "startingCheckpointTiming": "Saved after entire authorized request including final persisted checkpoint, entire approved issue and read-only guidance/helper/clean signed dedicated-head inspection; before fetch/merge/source changes.",
+  "schemaVersion": 1,
+  "batch": "048",
+  "stage": "signed-contributor-source-checkpoint-pending",
+  "currentMainFetchedAndEqualToBase": true,
+  "originMain": "3b2f689972f009604f8f2950d6588a760a2b740f",
+  "integration": "Normal git fetch origin and git merge --no-edit origin/main returned already up to date; accepted047 published base unchanged.",
+  "sourceVerification": {
+    "schemaVersion": 1,
+    "execution": 245,
+    "batch": "048",
+    "stage": "source-prepared-not-drafted",
+    "baseCommit": "3b2f689972f009604f8f2950d6588a760a2b740f",
+    "membership": [
+      "寅"
+    ],
+    "sourceRow": 256,
+    "exactFrozenNamedMembershipAndRowVerified": true,
+    "exactFrozenKanjiVGInventoryRecordVerified": true,
+    "frozenInputHashesVerified": 5,
+    "decompressedDictionaryHashesVerified": 2,
+    "freshExactDictionaryExtractions": 2,
+    "packets": [
+      {
+        "path": "batch-048-jmdict.xml",
+        "families": 12,
+        "lines": 225,
+        "sha256": "a174a58a424c6c68d0befebbbf99cd9af8f94bdfd9ee86e0e26c4cb3a15add11"
+      },
+      {
+        "path": "batch-048-comparison-jmdict.xml",
+        "families": 14,
+        "lines": 398,
+        "sha256": "eec449558e03c5cb5beeb28b0338046aeadddd2111bd63a873388945653fb04d"
+      }
+    ],
+    "distinctCompleteFamilies": 26,
+    "authorInspection": {
+      "lexicalFamilies": 12,
+      "comparisonFamilies": 14,
+      "distinctCompleteFamilies": 26,
+      "remainingExtractedFamiliesPending": 0,
+      "lexicalReturnedRanges": [
+        [
+          1,
+          225
+        ]
+      ],
+      "comparisonReturnedRanges": [
+        [
+          1,
+          200
+        ],
+        [
+          201,
+          398
+        ]
+      ],
+      "rawCharacterRecords": 7,
+      "rawCharacterRecordReturnedRanges": [
+        [
+          1,
+          160
+        ]
+      ],
+      "rawCharacterRecordReadBoundary": "Complete input-metadata JSON returned within1-160; seven escaped raw XML elements are complete records, not160 XML lines.",
+      "completeExistingArticlesRead": [
+        "kanji/虎.md",
+        "words/虎.md",
+        "kanji/演.md",
+        "kanji/黄.md",
+        "kanji/申.md",
+        "kanji/午.md",
+        "kanji/卯.md",
+        "words/卯.md",
+        "kanji/酉.md",
+        "words/酉.md",
+        "kanji/巳.md",
+        "words/巳.md",
+        "kanji/亥.md",
+        "words/亥.md",
+        "words/酔っ払い.md",
+        "kanji/年.md",
+        "kanji/東.md",
+        "kanji/北.md",
+        "words/年.md",
+        "words/時刻.md"
+      ],
+      "candidateNavigation": "Fresh complete-family counts 寅12/丑19/辰26 and current card/stroke/standalone-word absence checked for all three; source-index metadata inspected. Whole current kanji/word text search found 寅 in 午's branch sequence and 演's explicit modern-shape mnemonic; both complete articles read. No 寅 baseline declared word pair, standalone 干支/十二支/東北/黄/申 article, or 寅 card/strokes exists. Existing 虎 is the animal word with sourced N3 level and approved direct 酔っ払い exclusion. 演/黄/申 are candidate comparisons only, not selected distractors.",
+      "limits": "All26 complete frozen families, seven raw character elements and20 actual existing articles returned and coordinator-inspected. Parallel coordinator read batching is not reviewer serialization evidence. No fresh Japanese dictionary heading, independent linguistic review, frequency or native-rendering certification. Incidental compounds in unchanged comparison articles were not all re-extracted; no fresh complete review of those articles is asserted."
+    },
+    "originalBaselineMetadataAndStrokesPreserved": {
+      "kanji": 985,
+      "words": 4942,
+      "strokes": 985
+    },
+    "baselineMetadataExceptions": {
+      "words/虎.md": [
+        "酔っ払い"
+      ],
+      "words/猿.md": [
+        "馬鹿"
+      ]
+    },
+    "runtimeManifestEqualToPublishedBase": true,
+    "manifestFresh": true,
+    "allRuntimePayloadHashesVerified": 8269,
+    "contentVersion": "4ca64c255449dba4",
+    "baselineCandidatePairs": [],
+    "fullReadingOrderPreserved": {
+      "onyomi": [
+        "イン"
+      ],
+      "kunyomi": [
+        "とら"
+      ]
+    },
+    "runtimeChanges": 0,
+    "publishedAdditions": 74,
+    "remainingAdditions": 1154,
+    "limits": "Source preparation only. No Japanese heading verification, frequency/etymology claim, selected reading practice, teaching draft, independent review, converted/runtime geometry, glyph readability, Android/native/physical-phone acceptance or new publication. Coordinator parallel reads are not reviewer serialization evidence. Published coverage remains74/1228 additions with1154 outstanding; accepted047 is not reopened."
+  },
+  "checks": {
+    "extractionTests": {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_extract_n1_jmdict.py"
+      ],
+      "exitCode": 0,
+      "logSha256": "46a59d823d772c3809446eba836399e2612ba33924b6c71abe8e15b736b8f4b7",
+      "passed": 5
+    },
+    "contentValidation": {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "tools\\validate.py"
+      ],
+      "exitCode": 0,
+      "logSha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "errors": 0
+    },
+    "manifestGeneration": {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "tools\\build_manifest.py"
+      ],
+      "exitCode": 0,
+      "logSha256": "34fd30a1ead6353c08529c7bb46acb30693a863c0c45d63117d62e59b0cc9bd1",
+      "unchanged": true
+    },
+    "sourceAudit": {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\stop-\\n1-kanji-workspace\\control\\execution-245-source.py",
+        "audit"
+      ],
+      "exitCode": 0,
+      "logSha256": "398956ccddd8282b5d9fc4881bd0514bf8f97b40a28e4387ed40c0f35c98080d"
+    }
+  },
+  "nextAction": "Continue the same048 寅 with exact Japanese standalone/character and calendar-compound headings; qualify イン allocation/usefulness, とら sign/animal boundary, historical time/direction/lunar-month senses, 宀 radical naming and modern shape. Inspect pinned eleven-path SVG and candidate fonts, then decide necessary support, reciprocal/component links and curated keys before a signed teaching draft. Do not launch reviewers until a frozen teaching snapshot; no049 before048 review, applicable fresh Android/native/integration/publication gates and checkpoint.",
+  "limitations": "Source preparation only. No Japanese heading verification, frequency/etymology claim, selected reading practice, teaching draft, independent review, converted/runtime geometry, glyph readability, Android/native/physical-phone acceptance or new publication. Coordinator parallel reads are not reviewer serialization evidence. Published coverage remains74/1228 additions with1154 outstanding; accepted047 is not reopened.",
+  "sourceAuditReuse": {
+    "template": "control/execution-209-source.py",
+    "sha256": "91a676913d826227b28202e9b8d0e25e0e6d9215870766452fa126c9da6fd006",
+    "adapter": "control/execution-245-source.py",
+    "adapterSha256": "89ee3ef7aef476a9fcacccbde6cd6b1927258dc31b8f00739df0c724a45f1271",
+    "boundary": "Guarded explicit identity/count/comparison replacements, same complete extraction/baseline/runtime audit; no runtime tool edits."
+  },
+  "reviewExecution": "No reviewer launched; no teaching snapshot exists yet.",
+  "publication": "Local source-only checkpoint; no push or increase in delivered additions.",
+  "lifecycle": "Saved signed SHA and owner issue readback receipt belong in external checkpoint245 after signing; supervisor runner files unchanged."
+}

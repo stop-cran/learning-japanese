@@ -37,6 +37,41 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 048: source preparation only
+
+[Batch 048](n1-sources/batch-048-progress.json) bounds the next addition to
+**寅**, frozen source row 256, on accepted published base `3b2f689`.
+The [membership](n1-sources/batch-048-membership.json) fixes one character
+after a fresh comparison of 寅 (12), 丑 (19) and 辰 (26) complete
+lexical-family workloads. The frozen packets retain **12 lexical and 14
+disjoint comparison families**, seven complete raw character records and
+coordinator inspection of twenty actual existing articles. Full source
+readings **イン / とら**, eleven strokes, grade 9 and canonical radical
+**宀 (40)** are preserved.
+
+The packet distinguishes the Tiger sign from the existing animal noun
+`words/虎.md`, also とら, whose sourced N3 level and approved 酔っ払い
+exclusion remain untouched. Standalone 寅's historical east-northeast sense
+differs from 丑寅 (うしとら), northeast. Its first-lunar-month sense is
+not Gregorian January; the historical hour has competing dictionary
+mappings. Five complete calendar-compound families offer イン candidates,
+but kana substrings do not establish per-character allocation. Exact
+Japanese headings, usefulness and practice selections remain pending.
+
+There is no baseline declared word pair or existing standalone sign-support
+article. A new `words/寅.md` is a candidate, not yet selected teaching.
+The substantive 寅-shaped mnemonic in the existing N3 演 article needs
+a bounded link decision during drafting; 午's incidental branch sequence
+does not by itself require a backlink. Neither existing article changes
+at this checkpoint. The [preparation audit](n1-sources/batch-048-preparation-audit.json)
+records exact source/re-extraction, baseline and unchanged runtime checks.
+No teaching draft, independent review, converted geometry, native/phone
+acceptance or publication is asserted. Next qualify the same 048 before
+drafting; do not start 049. Accepted 047 is not reopened. Published coverage
+remains **74 additions; 1,154 still to deliver**, not complete N1 coverage.
+Earlier sections below retain their historical draft-stage wording;
+their batch publication ledgers identify subsequent acceptance.
+
 ## Batch 047: local unreviewed draft
 
 [Batch 047](n1-sources/batch-047-progress.json) bounds the next addition to
