@@ -1,0 +1,54 @@
+--- N1Batch052NativeTest.kt
++++ N1Batch052NativeScrollTest.kt
+@@ -51,7 +51,7 @@
+     assertTrue(Build.HARDWARE in setOf("ranchu", "goldfish"))
+ }
+ 
+-class N1Batch052GlyphTest {
++class N1Batch052ScrollGlyphTest {
+     @get:Rule val rule = createAndroidComposeRule<ComponentActivity>()
+ 
+     @Test fun formalTwoLookalikesAndRadicalFallbackAcrossFourProductionFamilies() {
+@@ -114,7 +114,7 @@
+     }
+ }
+ 
+-class N1Batch052ArticleTest {
++class N1Batch052ScrollArticleTest {
+     @get:Rule val rule = createEmptyComposeRule()
+     private lateinit var app: KanjiApp
+     private lateinit var scenario: ActivityScenario<MainActivity>
+@@ -230,6 +230,9 @@
+             show("not a replacement", "kanji-documentary-boundary")
+             show("Modern-shape mnemonic", "kanji-mnemonic")
+             section("Readings")
++            show("the linked article explains both spellings", "kanji-on-reading")
++            show("弐心（じしん; also にしん）", "kanji-ji-reading")
++            show("弐つ（ふたつ）", "kanji-futatsu-reading")
+             show("source-only reading retained", "kanji-source-only-reading")
+             show("Only ニ is selected", "kanji-curation")
+             show("does not establish a modern word", "kanji-source-only-boundary")
+@@ -375,8 +378,21 @@
+     }
+ 
+     private fun show(selector: String, step: String) {
+-        rule.onNodeWithTag("article-body").performScrollToNode(hasText(selector, substring = true))
+-        await(selector, substring = true).performScrollTo().assertIsDisplayed()
++        val body = rule.onNodeWithTag("article-body")
++        body.performScrollToNode(hasText(selector, substring = true))
++        val target = await(selector, substring = true)
++        target.performScrollTo()
++        val viewport = body.fetchSemanticsNode()
++        val cell = target.fetchSemanticsNode()
++        val top = viewport.positionInRoot.y
++        val bottom = top + viewport.size.height
++        if (cell.positionInRoot.y < top || cell.positionInRoot.y + cell.size.height > bottom) {
++            body.performSemanticsAction(SemanticsActions.ScrollBy) {
++                it(0f, cell.positionInRoot.y - top - 16f)
++            }
++            rule.waitForIdle()
++        }
++        target.assertIsDisplayed()
+         capture(step)
+     }
+ 
