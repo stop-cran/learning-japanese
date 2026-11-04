@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 043: source preparation only
+## Batch 043: qualified source checkpoint, not drafted
 
 [Batch 043](n1-sources/batch-043-progress.json) bounds the next addition to
 **麟**, frozen source row 1226. The coordinator inspected **25 complete
@@ -47,11 +47,15 @@ records and four existing articles. The [membership](n1-sources/batch-043-member
 and [preparation audit](n1-sources/batch-043-preparation-audit.json) distinguish
 this evidence checkpoint from a teaching draft or acceptance.
 
-The full reading remains **リン**, with no kun-reading. Radical 鹿 (198),
+The frozen full metadata remains **リン**, with no kun-reading. Radical 鹿 (198),
 grade 9 and both source stroke-count annotations, **24 then 23**, are retained.
-The pinned SVG has not been downloaded or converted; its geometry must be
-reconciled before authoring. Shared component readings are not yet a
-verified historical or phonetic explanation.
+The [dictionary evidence](n1-sources/batch-043-dictionary-evidence.json)
+records seven exact Japanese source sections and the pinned SVG. Its
+verified blob has 24 paths, matching the primary count. Kanjipedia separately
+labels a 23-stroke old form; this does not identify the exact glyph intended
+by KANJIDIC2's unlabelled alternate annotation. Conversion remains pending.
+Kanjipedia attributes a 鹿 plus phonetic 粦 analysis to Shinjigen; adopting
+that analysis is optional, not permission to invent component history.
 
 麒麟 きりん is the principal support candidate, not an adopted article or
 practice key. Its giraffe sense is usually kana; the separate qilin sense
@@ -59,12 +63,19 @@ does not carry that flag. The archaic extraordinary-horse sense is restricted
 to alternate 騏驎 in the frozen entry. 麒麟児 names a child prodigy;
 botanical names, astronomical usage and the proverb have their own
 restrictions, not a general rule that every compound means giraffe or genius.
-Exact Japanese headings, allocation, useful modern contexts, final support
-identity and displayed-label safeguards remain pending.
+Exact Japanese headings now corroborate キ plus リン allocation and both
+animal identities. Daijisen additionally recognizes a gifted-person sense
+of bare 麒麟, broader than the young-person 麒麟児 compound; retain that
+source distinction when inspecting quiz choices. One necessary 麒麟 きりん
+article and sole リン practice are proposed, not drafted or review-closed.
+Usual-kana spelling applies to the giraffe sense, not a claim that the
+pronunciation is rare. Kanjipedia's additional kun きりん differs from the
+frozen empty kun list: document it without silently adding a practice key.
 
 No declared baseline 麟 pair or current 麒麟/きりん word filename was found.
 No runtime card, stroke or manifest changed, and no reviewer or Android/native
-process ran. Resume the same 043 with dictionary and geometry qualification.
+process ran. Resume the same 043 with final support/comparison/quiz-label
+inspection and existing-converter generation before a signed teaching draft.
 Accepted [batch 042](n1-sources/batch-042-publication.json) remains published
 at terminal `be775040`: **69 additions delivered; 1,159 remain**.
 Physical-phone/general-release qualifications remain outstanding; this local
