@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 042: unreviewed local draft
+## Batch 042: local textual review closed; acceptance pending
 
 The bounded 雛 draft adds one kanji card, one necessary word article and
 18-stroke geometry converted from the pinned SVG. It preserves all five
@@ -55,10 +55,27 @@ word-choice safeguards are recorded in the
 levels and the tiger/monkey safeguards remain unchanged. Mechanical draft
 checks cover all 34 authored Han characters; 33 are in every bundled font,
 while the inherited radical glyph 隹 still needs applicable native/fallback
-confirmation. They do not establish independent linguistic review, Android/native or
-physical-phone acceptance. This draft is not review-closed or published.
-Resume with serial blind two-family independent review of the frozen signed
-snapshot; public delivery remains **68 additions, 1,160 remaining**.
+confirmation. They do not establish Android/native or physical-phone acceptance.
+
+Two blind, different-family initial reviewers assessed the same signed
+`79091e7` teaching snapshot. Both found no actionable teaching defect; their
+[reconciliation](n1-reviews/batch-042-reconciliation.json) retains three optional
+groups, complete original reports and source-based qualifications. Teaching
+is unchanged, so no changed-passage confirmation was necessary. Exact execution
+records verify all 41 assigned resources returned, including all 67 families,
+24 comparison cards/articles and seven supplied Japanese dictionary sections.
+The processes exited serially, with Claude's report archived before GPT started.
+Claude's first two teaching reads overlapped once; the recorded 55/54 calls
+and 1/0 internal overlaps do not establish strict tool serialization.
+Supplied-source inspection is not independent upstream retrieval or proof
+of comprehension. The original report's compressed usually-kana summary is
+qualified against the actual entries: only the bird sense for ひな, both
+bird and novice senses for ひよこ. The teaching already states this correctly.
+Two failed launcher starts are preserved separately from successful reviews.
+
+Fresh non-skipped Android, applicable native/article/visual acceptance and
+combined-main publication gates remain pending. This is local textual
+closure, not publication; public delivery remains **68 additions, 1,160 remaining**.
 
 ## Batch 042: historical source-preparation checkpoint
 
