@@ -1,0 +1,90 @@
+{
+  "checkpoint": 289,
+  "batch": "053",
+  "verifiedAt": "2026-11-04T18:20:18.801217+01:00",
+  "savedCommit": "f1b5c635b90ba6c3d221deca64a8bad3b4232178",
+  "signature": "G",
+  "publishedAdditions": 79,
+  "remainingAdditions": 1149,
+  "originalBlocker": {
+    "schemaVersion": 1,
+    "execution": 289,
+    "batch": "053",
+    "status": "blocked",
+    "recordedAt": "2026-11-04T18:18:10.057587+01:00",
+    "savedCommit": "f1b5c635b90ba6c3d221deca64a8bad3b4232178",
+    "signature": "G",
+    "contentWorktreeClean": true,
+    "blocker": "Actual WinError5 permission denial replacing progress.json; owner/supervisor intervention required. Denied operation not retried.",
+    "failedCommand": "python -X utf8 -B ..\\control\\execution-289-finish.py checkpoint",
+    "exactErrorLog": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-289-checkpoint-permission-error.txt",
+    "liveCheckpoint": 288,
+    "liveStatus": "continue",
+    "proposedCheckpoint": 289,
+    "proposedStatus": "continue",
+    "liveProgressSha256": "4bcf1028152e30a7954df21bf95274b2306d2f0a812f7ac4bdc3e21aa7d07c88",
+    "preservedProposedProgress": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\execution-289-progress.tmp",
+    "preservedProposedProgressSha256": "eb269689014765abd87104db352e6d43c68214c57a800e9a2fbdb64a7d80e10b",
+    "fullHistoricalKeysAndValuesPreservedInBoth": true,
+    "terminalSuccessReceiptCreated": false,
+    "issueUpdate": {
+      "schemaVersion": 1,
+      "execution": 289,
+      "batch": "053",
+      "recordedAt": "2026-11-04T18:17:53.681157+01:00",
+      "globalIdentityBefore": "romanko-ms",
+      "globalIdentityAfter": "romanko-ms",
+      "author": "stop-cran",
+      "authorAndBodyVerified": true,
+      "url": "https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6637163948",
+      "savedCommit": "f1b5c635b90ba6c3d221deca64a8bad3b4232178",
+      "bodySha256": "a6e88bf26827e6af769089c784ea3a3cc12fe9d334279f18fed3ec59800808bd",
+      "scope": "Permission blocker report only; local source qualification signed, terminal progress replacement denied. No retry or push."
+    },
+    "publishedAdditions": 79,
+    "remainingAdditions": 1149,
+    "overallProjectComplete": false,
+    "nextAction": "Yield on actual permission denial. Owner/supervisor must resolve progress.json replacement access, then inspect live/proposed state and signed source commit before completing terminal persistence. Do not retry around permissions, blindly repeat commit/comment, start draft,054 or another runner."
+  },
+  "preservedProposedProgress": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\execution-289-parent-preserved-proposed-progress.json",
+  "persistedProgressSha256": "eb269689014765abd87104db352e6d43c68214c57a800e9a2fbdb64a7d80e10b",
+  "fullHistoricalKeysAndValuesPreserved": true,
+  "actualOperation": "Same pathlib.Path.replace/os.replace from original failed line170, executed once through parent after runner/supervisor stopped and exclusive runner.lock acquired; no ACL/attributes/auth/policy changes or alternative write method.",
+  "cause": "Windows WinError5 at original replacement. Files have ordinary Archive attributes, not read-only. Exact cause unproven; do not claim a permission configuration or confirmed reader race.",
+  "parentPreflight": "First parent attempt stopped BEFORE backup/replacement at exact issue-body comparison because GitHub returned CRLF versus local LF. Read back exact comment/owner/body; normalized only CRLF and verified original local body SHA. No failed parent atomic replacement occurred.",
+  "checks": [
+    {
+      "check": "qualification-audit",
+      "command": "python -X utf8 -B ..\\control\\execution-289-audit.py audit",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-289-qualification-audit.txt",
+      "logSha256": "aeade3505e714a59fd2226cd328f9959c14badb1e8f249cb0f291921b5bda613",
+      "exitCode": 0
+    },
+    {
+      "check": "extraction-tests",
+      "command": "python -X utf8 -B -m unittest discover -s tools -p test_extract_n1_jmdict.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-289-extraction-tests.txt",
+      "logSha256": "f7dc1c65d9bf1c31f1cb9a0be1fc0c0840290cbe7f978a8864c6557dbd2fbb5e",
+      "exitCode": 0
+    },
+    {
+      "check": "validate",
+      "command": "python -X utf8 -B tools\\validate.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-289-validate.txt",
+      "logSha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "exitCode": 0
+    },
+    {
+      "check": "manifest",
+      "command": "python -X utf8 -B tools\\build_manifest.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-289-manifest.txt",
+      "logSha256": "5fe4b4372c0bfd4d1ab9f04814b56241df11a0c306abc8d1559fff3b7917a1af",
+      "exitCode": 0
+    }
+  ],
+  "samePreparedPayloadPersisted": true,
+  "runtimeChanges": false,
+  "permissionIssueReadBackVerified": "https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6637163948",
+  "nextAction": "Same053: author a bounded丙draft with fullorderedヘイ/ひのえ,fivestrokes,一1; proposedpracticebothreadings and two necessarysupportarticles丙へい/丙午ひのえうま with exactsense/alternatereading/calendarboundaries. Copy unchangedconverteroutput only through generatedruntimeflow; use structure-unclassified/labelledmodernshapemnemonic,noadjudicatedorigin. Enumerate2selected丙pairs/4directedlinks plusword丙午->existing午componentlink; no baselinepairs or implicit病ownership. Inspectactualtitles/ordinarysecondarysenses/threewronglabels/legacyfallbacks/confusablewords/directexclusions and allauthoredHanfonts. PreserveIDs/metadata/easierlevels/originalexclusions and虎酔っ払い/猿馬鹿guards. Validate/buildfreshmanifest and boundedmechanicalaudit; normallysignedLOCALunrevieweddraftonly. Then two serialblinddifferentactualmodel-familyreviews/samefrozenteaching, evidence-basedreconciliation, freshnon-skippedAndroid/native/originalvisualconfirmations and latestmain/combinedchecks/signing/ownerfastforward/CI/exactpublicZIPgates beforedelivery. No054,authoragent,secondrunner or accepted052reruns. Public79/1228,1149remaining;compatibleAndroidf9b59a2+ required;physicalphone/generalrelease/whole-setoutstanding.",
+  "overallProjectComplete": false
+}

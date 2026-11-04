@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "execution": 161,
+  "batch": "038",
+  "observedFailure": "Initial checkpoint helper asserted that derived batch-038-initial-*-execution.json bytes matched rawExecutionSha256. Assertion failed before checkpoint/blocker/comment writes.",
+  "evidence": "Existing execution-summary receipt explicitly identifies rawExecutionLocation as control/batch-038-initial-*.jsonl; execution160 checkpoint helper verifies those exact raw files.",
+  "resolution": "Compare original control JSONL bytes to rawExecutionSha256, not the derived summary JSON. Original summaries, reports, raw executions and teaching unchanged.",
+  "failedCommand": "python -B C:\\Users\\stop-\\n1-kanji-workspace\\control\\checkpoint-execution-161.py && & C:\\Users\\stop-\\n1-kanji-workspace\\control\\post-execution-161-blocker.ps1",
+  "failedAssertion": "hashlib.sha256((folder / f\"batch-038-{row['label']}-execution.json\").read_bytes()).hexdigest() == row['rawExecutionSha256']",
+  "limits": "Checkpoint verification-helper correction only. No native ownership-command retry, alternate invocation, permission/configuration change, new acceptance or publication."
+}

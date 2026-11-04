@@ -99,7 +99,8 @@ class SceneTests(unittest.TestCase):
     def test_separate_text_hash_map_changes_version_only_when_scene_content_changes(self):
         (self.root / "words" / "a.md").write_bytes(b"word\r\n")
         before = build_manifest.build_manifest(self.root)
-        old_payload = {"files": before["files"], "images": before["images"]}
+        old_payload = {"files": before["files"], "images": before["images"],
+                       "baseLanguage": "en", "targetLanguage": "ja"}
         old_version = hashlib.sha256(json.dumps(old_payload, sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:16]
         self.assertEqual(old_version, before["contentVersion"])
         self.assertNotIn("scenes", before)

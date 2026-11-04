@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "execution": 161,
+  "batch": "038",
+  "kind": "execution-permission",
+  "gate": "Fresh device/port ownership inspection before native glyph/article acceptance",
+  "attempts": 1,
+  "deniedCommand": "& C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe devices -l; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; $ports = @(Get-NetTCPConnection | Where-Object { $_.LocalPort -in 5580,5581 }); $ports | Select-Object LocalPort,State,OwningProcess; if ($ports.Count -ne 0) { throw 'Emulator ports occupied; do not launch' }; Get-Date -Format o",
+  "message": "Permission denied because no interactive user response was available. Retry in an interactive session so the user can approve it, or try an alternative that does not require this permission.",
+  "limits": "Denied before execution; exact trigger not exposed. No fresh adb/port result, emulator, fixture/archive/build, native/visual result or fresh Android XML. Not a glyph failure, missing-tool finding or Gradle denial. Historical037 parent recovery does not resolve this new038 denial.",
+  "disposition": "Preserve/report/yield; no retry, alternate invocation, permission/configuration change or disguised execution.",
+  "savedCommit": "a0d0f84cfedfbd018f851475d8cafd06c52acc5c",
+  "signature": "G",
+  "androidCommit": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "fixtureStatus": "Preserved017/023/037 patterns inspected only; no038 fixture created or installed.",
+  "checkpointVerificationCorrection": "control/execution-161-verification-correction.json; initial helper compared raw JSONL hash with derived execution-summary JSON. Failed before persistence/comment; corrected exact raw location from existing execution receipt. Original evidence unchanged.",
+  "evidencePath": "control/execution-161-permission-blocker.json",
+  "safeNextAction": "Approval-capable parent should resolve EXACT execution161 denied device/port ownership command without permission/configuration changes or disguised execution. Preserve denial. Resume SAME038 signedG local unpublished a0d0f84, unchanged reviewed teaching e18a46a; no039 or second runner. No038 fixture/archive/build exists. Verify fresh actual devices/ports5580/5581 immediately before owned read-only API35 hostGPU/Vulkan-disabled emulator5580 launch; historical037 discovery is not current ownership. Prepare separately named bounded fixture from preserved017/023/037 harnesses; originals unchanged. Full exact signedHEAD git archive envelope through production ContentSync ONCE, without duplicate preflight parse, payload reduction or heap/guard change: assert1050kanji/5007words/70N1/versionac3f4e4da89adf35/problems0/accepted reading parser epoch. Obtain actual terminal per-case0/no skips, four-production-family凰/lookalike probes, PNGs and direct visual disposition; offline鳳/鳳凰 reciprocal/systemBack routes and necessary bounded original-reviewer visual confirmation. Stop only owned emulator and clean exact temporary Android sources/assets. Then fresh038 non-skipped RealContentTest3/RareHanTest1 with known explicit JDK17/SDK in same shell, one worker/no parallel/rerun/in-process compiler; inspect new XML names/counts/errors/failures/skips/root/timestamps. Latestmain normal non-rewriting merge and all combined-tree/source/baseline/both exact tiger-monkey guards/links/readings/strokes/fonts/Python/manifest/originalbudgets/normal signing/owner fast-forward/remoteSHA/greenCI/every immutable public ZIP runtime hash/terminal receipt/issue60 gates remain before publication or039. No denial retry/alternative/workaround,037 XML reuse, unaccepted push, author agents or second runner. Public64/1228 and1164remaining unchanged; compatibleAndroidf9b59a2+; physical-phone/general-release explicitly outstanding, not a blanket bounded-owner-testing veto.",
+  "recordedAt": "2026-11-03T21:45:51.335644+01:00",
+  "issueUpdate": "https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6615020986"
+}

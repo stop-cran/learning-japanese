@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "batch": "030",
+  "authoredSnapshot": "ad2a00e2028444fc42e599a538d6e5eddd629fea",
+  "reviewedTeachingSnapshot": "ad82bdd4cd7bb365bebd05b2a48e9a8bf4620cfd",
+  "status": "textual-review-closed-pending-fresh-acceptance",
+  "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+  "scope": "Both blind initials: whole newkanji虎/whole reusedN3words虎, all136completeJMdictfamilies2306+731lines, fullraw虎劇酔metadata, threeactualkanji/sixactualwordcomparisons and currentguidance; correctness/scopedcoverage/textualphonecomprehensibility. Both original-session dependent confirmations: exact additive wordheader diff/current虎酔っ払い酔う/three relevant complete families/exclusioncontract. Not new native/phone certification.",
+  "originalReports": [
+    "batch-030-initial-claude.md",
+    "batch-030-initial-gpt.md",
+    "batch-030-confirm-claude.md",
+    "batch-030-confirm-gpt.md"
+  ],
+  "verdicts": {
+    "kanji/虎.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN", "scope": "Both complete blind initial reviews; unchanged in correction."},
+    "words/虎.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN", "scope": "Both complete initials and both original-session exact changed-header confirmations."}
+  },
+  "findings": [
+    {
+      "id": "G1",
+      "severity": "minor",
+      "facet": "correctness; word-quiz ambiguity",
+      "status": "resolved",
+      "claim": "A wordquiz showing only虎 gives no animal context, so competing 酔っ払い title a drunk;drunkenness is defensible from虎's colloquial drunk-person sense.",
+      "passage": "words/虎.md:1-9;words/酔っ払い.md:4,9",
+      "evidence": ["JMdict1267610sense2,batch-030-jmdict.xml:26-31", "JMdict1372660sense1,batch-030-comparisons-jmdict.xml:292-323", "Nikkokuとら【虎】[1]noun4", "docs/content-format.md:133-148"],
+      "remedy": "One direct additive quiz_exclusions:[酔っ払い] on words/虎.md; original酔っ払い/酔うguard and all identities/labels/levels/readings/prose unchanged.",
+      "confirmedSnapshot": "ad82bdd4cd7bb365bebd05b2a48e9a8bf4620cfd",
+      "confirmations": ["batch-030-confirm-claude.md", "batch-030-confirm-gpt.md"],
+      "confidence": "high",
+      "origin": "Inherited omission exposed by this secondary-sense/comparison task, not caused by link edit."
+    }
+  ],
+  "disagreements": [
+    {
+      "claim": "Whether the shared虎/酔っ払いoverlap requires a guard.",
+      "initialClaude": "Optional; tiger clearly best given animal-focused article.",
+      "initialGPT": "Minor actionable; no animal context in displayed quiz.",
+      "coordinator": "Exact visible operation and dictionary-supported ordinary secondary sense establish narrow direct-pair ambiguity; article-only scope does not disambiguate unseen prose.",
+      "reconciliation": "Claude's no-guard judgement withdrawn in own-session confirmation; underlying overlap resolved by both original sessions.",
+      "status": "resolved"
+    }
+  ],
+  "optional": [],
+  "unresolvedConsequentialClaims": [],
+  "contributionComparison": {
+    "shared": ["Both complete original reports identify the same虎/酔っ払いsecondary-sense overlap, in Optional versus Findings."],
+    "uniqueVerifiedFindings": [],
+    "qualifiedContribution": "GPT supplies actionable visible-quiz reasoning; this is not a unique underlying discovery because Claude already reports the overlap. No general model ranking or equal-depth claim.",
+    "unsupportedNotAdopted": "Claude confirmation's more-frequent-sense wording was not sourced as a frequency measurement and is not adopted in teaching or adjudication; lexical sense existence and visible operation suffice."
+  },
+  "processDeviationDisposition": {
+    "status": "preserved-with-explicit-limits",
+    "maximumActiveReviewerProcesses": 1,
+    "reviewerProcesses": "Four reviewer invocations exited0serially; each complete report/execution archived before next launch. Initials same frozen signedad2a00e; no edits during reviews. Original sessions resumed serially on frozen signedad82bdd. No authoragents/pool/nestedtasks.",
+    "actualToolCalls": [40, 42, 9, 10],
+    "observedInternalOverlappingStarts": [1, 0, 0, 0],
+    "observedXmlRangeLimitViolations": [0, 0, 0, 0],
+    "detail": "Claudeinitial generalcontentstructure and canonicalformat views started together once, self-disclosed; all returned. Other invocations individually awaited all calls. Required assigned ranges audited independently, not inferred from hashes or requested paths.",
+    "confirmationBoundaryLimit": "Claudeconfirmation comparison253-323 omitted openingentry1372650line252, already present in original fullpacket in same retained session; GPTfreshconfirmation separately read252-253. All relevant senses/restrictions complete; no manufactured freshfullread.",
+    "remedy": "Preserve original breach/coverage limits; no missing consequential evidence warrants another full136family reread."
+  },
+  "sourceAccess": {
+    "initialClaude": "Complete supplied frozen families and identical neutral external facts; no independent upstream lookup.",
+    "initialGPT": "Complete supplied frozen families plus actual independent Kotobank虎and虎穴headings/bodies.",
+    "confirmations": "Relevant frozen families reread; no fresh upstream lookup. Initial independentGPTlookup remains historical.",
+    "coordinator": "Targeted complete relevantfamilies/currentaffectedarticles/rawmetadata and actualNikkoku虎noun1/4 body; execution119 fullfamily authorinspection preserved, not repeated or rebranded.",
+    "limits": "Empty Daijisen/Jitsu虎headings, searchbutton and copyright-only extractions not counted; rawHTML preserved separately, not fully read."
+  },
+  "correctionAndTooling": {
+    "teachingDiff": "batch-030-correction-teaching.diff",
+    "baselineException": "words/虎.md adds only directquiz_exclusions:[酔っ払い], beside existing reviewedcomponentlink. All other original985kanji4942words985strokesmetadata/geometry preserved.",
+    "auditChange": "Group recorded exact reused replacements perarticle. Permit only explicit distinct strictly additive exclusions; reject othermetadatachanges/removal/duplicates/unrecordedprose. Eight added tests,18focused/361fullPython passed. No app/quizalgorithm change.",
+    "futureBaselineInvariant": "Later whole-baseline audits must carry this exact reviewed additive虎exclusion as an explicit exception, never replace baselineinventory or relax othermetadata."
+  },
+  "nativePending": [],
+  "fontDisposition": "Unchanged learner-visible body:14Han/13inallthreebundledcmaps. Conservative wholefilecheck including newnonrendered exclusionmetadata:16Han/15covered. Missing虍alreadydisplayedinexactbase劇. No newfallback/nativecertification; inheritacceptedpilot/all40/160only actualunchangedproduction scope.",
+  "android": "Dedicated cleanunchangedf9b59a2; no fresh030Android/native and no029XMLreuse.",
+  "publishedAdditions": 56,
+  "remainingAdditions": 1172,
+  "compatibleClient": "Androidf9b59a2+; olderclientsignorecuration/exclusionsandold8000entryclientsrejectcollection.",
+  "phoneAcceptance": "Physical-phone/general-release explicitly outstanding, not a blanket bounded-owner-testing veto.",
+  "limits": "Textualclosureonly, localunpublished. Initialprocess/sourceaccessdifferences retained. Validator/modelagreement/hashrangecoverage not native-speaker, realquiz, measuredlearning or phonecertification. Fresh030Android/currentmain/normal signing/ownerfastforward/greenCI/everyimmutablepublicZIPhash gates pending. Remaining1172additions/finalwhole-set incomplete.",
+  "nextAction": "Resume SAME030 fresh non-skipped RealContentTest3/RareHanTest1 against dedicatedAndroidf9b59a2, then freshlatestmainnormalmerge/allcombined-tree/source/baseline(exact虎exclusionexception)/link/readings/strokes/fonts/361Python/validator/vocab/manifest/budget/normal signing/ownerfastforward/remoteSHA/greenCI/everyimmutablepublicZIP hash/terminalreceipt/issue60 gates. Preserve original reports and full live history; no031/unacceptedpush/secondrunner. Any actual permission denial or signingwait preserve/report/yield without retry/workaround."
+}

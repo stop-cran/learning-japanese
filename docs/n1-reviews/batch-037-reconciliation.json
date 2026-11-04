@@ -1,0 +1,1410 @@
+{
+  "schemaVersion": 1,
+  "batch": "037",
+  "execution": 152,
+  "status": "textual-review-closed-pending-native-and-fresh-acceptance",
+  "baseCommit": "8a8b5384b40c3a4ed33bd02e4ef90e71f30b3ec1",
+  "authoredSnapshot": "0e725a59afec03a258b4b78998c4a385c7fe3081",
+  "reviewedTeachingSnapshot": "3ddad580eadfea6b2a492c69cb6be12c57d334e2",
+  "membership": [
+    "蛇"
+  ],
+  "teachingScope": [
+    "kanji/蛇.md",
+    "words/蛇.md",
+    "words/蛇行.md",
+    "words/蛇口.md"
+  ],
+  "models": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "initialReports": [
+    "batch-037-initial-claude.md",
+    "batch-037-initial-gpt.md"
+  ],
+  "confirmationReports": [
+    "batch-037-confirmation-claude.md",
+    "batch-037-confirmation-gpt.md"
+  ],
+  "verdicts": {
+    "kanji/蛇.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "words/蛇.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "words/蛇行.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "words/蛇口.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    }
+  },
+  "findings": [
+    {
+      "id": "C1",
+      "origin": "initial-claude",
+      "severity": "Minor",
+      "facet": "comprehensibility",
+      "status": "resolved",
+      "claim": "Frozen-source/metadata jargon and unnamed character dictionary lengthen reading guidance.",
+      "remedy": "Name KANJIDIC2/JMdict/Kanjipedia, shortenイ cell and explain source-only absence as no verified example here; preserve complete order and classical/recognition qualifiers.",
+      "evidence": "Original/new exact diff, complete2846378 family, supplied Kanjipedia50-130 and Daijisen委蛇1730-1800.",
+      "confidence": "High for localized wording improvement; GPT initial did not establish a defect.",
+      "confirmation": "Both original sessions accept revised passages with no actionable regression.",
+      "reviewedTeachingSnapshot": "3ddad580eadfea6b2a492c69cb6be12c57d334e2"
+    },
+    {
+      "id": "C2",
+      "origin": "initial-claude",
+      "severity": "Minor",
+      "facet": "correctness/quiz-label ambiguity",
+      "status": "resolved",
+      "claim": "Uncontextual English meandering/zigzagging can overlap aimless wandering/unsteady weaving labels.",
+      "remedy": "Add direct蛇行/うろうろ and蛇行/ふらふら exclusions without rewriting lexical distinctions or asserting Japanese synonymy.",
+      "evidence": "Actual comparison titles/articles and complete JMdict1001060/1011060/1323380 families; existingうろうろ/ふらふら pair does not transitively protect蛇行.",
+      "confidence": "Medium for English-label ambiguity; conservative narrow safeguard.",
+      "disagreement": "GPT initial found no additional required pair. Both original confirmations accept narrower protection; this is not retrospective blind initial agreement or proof of universal synonymy.",
+      "confirmation": "Both original sessions accept exact guards.",
+      "reviewedTeachingSnapshot": "3ddad580eadfea6b2a492c69cb6be12c57d334e2"
+    }
+  ],
+  "unresolvedConsequentialClaims": [],
+  "optional": [
+    {
+      "status": "optional",
+      "origin": "initial-claude",
+      "claim": "Replace mnemonic with Kanjipedia historical classification.",
+      "disposition": "Not needed; expressly labeled modern-shape mnemonic/structure-unclassified retained. No speculative expansion into origin/phonetic teaching."
+    },
+    {
+      "status": "optional",
+      "origin": "initial-claude",
+      "claim": "Tighten ordinaryへび versus drunk-person wording.",
+      "disposition": "Already distinguishes the separateじゃ reading and habit/current intoxication/diagnosis; no actionable defect demonstrated."
+    },
+    {
+      "status": "optional",
+      "origin": "confirmation-claude",
+      "claim": "Polish redundant this/used-here, residual explained source-only term, and add comparison entry IDs.",
+      "disposition": "Nonblocking; current source-only term explicitly bounded, source links and full evidence retained. No further teaching churn."
+    }
+  ],
+  "modelContributionScope": {
+    "verifiedClaudeUnique": [
+      "Localized reading-note clarity",
+      "Conservative motion-label ambiguity guards"
+    ],
+    "verifiedGPTUnique": "Fresh relevant raw Daijisen蛇口/へびくち entry verification resolves initialClaude stated lookup limitation, not a new defect.",
+    "shared": "Both initials accept full reading allocations/qualifications, support/link/baseline preservation and natural examples. Both confirmations accept corrections.",
+    "limits": "Matched bounded sample only; initial label necessity differs, independent upstream lookup depth unequal. Not a general model benchmark."
+  },
+  "reviewProcesses": [
+    {
+      "label": "initial-claude",
+      "model": "claude-opus-5.5",
+      "sessionId": "4b2f06f5-7f02-4d45-9356-2143594f39dd",
+      "snapshot": "0e725a59afec03a258b4b78998c4a385c7fe3081",
+      "startedAt": "2026-11-03T19:54:38.9885483+01:00",
+      "completedAt": "2026-11-03T19:59:47.1741641+01:00",
+      "exitCode": 0,
+      "toolCalls": 62,
+      "overlappingStarts": 1,
+      "boundedAssignedScopeFullyReturned": true,
+      "coverage": [
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\蛇.md",
+          "requiredRange": [
+            1,
+            78
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\蛇.md",
+          "requiredRange": [
+            1,
+            58
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\蛇行.md",
+          "requiredRange": [
+            1,
+            60
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\蛇口.md",
+          "requiredRange": [
+            1,
+            40
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-037-input-metadata.json",
+          "requiredRange": [
+            1,
+            15
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-037-jmdict.xml",
+          "requiredRange": [
+            1,
+            2079
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-037-comparison-jmdict.xml",
+          "requiredRange": [
+            1,
+            324
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-037-draft-comparisons-jmdict.xml",
+          "requiredRange": [
+            1,
+            815
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\虫.md",
+          "requiredRange": [
+            1,
+            43
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\蚊.md",
+          "requiredRange": [
+            1,
+            49
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\蛍.md",
+          "requiredRange": [
+            1,
+            50
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\口.md",
+          "requiredRange": [
+            1,
+            44
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\行.md",
+          "requiredRange": [
+            1,
+            47
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\曲る.md",
+          "requiredRange": [
+            1,
+            34
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\カーブ.md",
+          "requiredRange": [
+            1,
+            35
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\曲線.md",
+          "requiredRange": [
+            1,
+            33
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\曲げる.md",
+          "requiredRange": [
+            1,
+            40
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\うろうろ.md",
+          "requiredRange": [
+            1,
+            33
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\ふらふら.md",
+          "requiredRange": [
+            1,
+            32
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\ぐるぐる.md",
+          "requiredRange": [
+            1,
+            34
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\動物.md",
+          "requiredRange": [
+            1,
+            33
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\生き物.md",
+          "requiredRange": [
+            1,
+            44
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\生物.md",
+          "requiredRange": [
+            1,
+            34
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\獣.md",
+          "requiredRange": [
+            1,
+            65
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\酔っ払い.md",
+          "requiredRange": [
+            1,
+            49
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\コック.md",
+          "requiredRange": [
+            1,
+            57
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\水道.md",
+          "requiredRange": [
+            1,
+            32
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\.github\\copilot-instructions.md",
+          "requiredRange": [
+            1,
+            244
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\.github\\instructions\\content-structure.instructions.md",
+          "requiredRange": [
+            1,
+            85
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\jlpt-levels.md",
+          "requiredRange": [
+            1,
+            386
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\content-format.md",
+          "requiredRange": [
+            42,
+            148
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-snake.html",
+          "requiredRange": [
+            1760,
+            1860
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-ii.html",
+          "requiredRange": [
+            1730,
+            1800
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-dakou.html",
+          "requiredRange": [
+            1735,
+            1800
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-kanjipedia-snake.html",
+          "requiredRange": [
+            50,
+            130
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-janosuke.html",
+          "requiredRange": [
+            1765,
+            1778
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-kanjipedia-faucet.html",
+          "requiredRange": [
+            56,
+            80
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-kanjipedia-dakou.html",
+          "requiredRange": [
+            56,
+            80
+          ],
+          "fullyReturned": true
+        }
+      ],
+      "observedOverlaps": [
+        {
+          "starting": "toolu_01RfCH7DfxCPJhivWfCTDPkV",
+          "alreadyActive": [
+            "toolu_01K41dXGSamcVUAz6BBBPaS8"
+          ]
+        }
+      ],
+      "xmlRangeLimitViolations": [],
+      "reportSha256": "a0cd5c14e51caed351b49cb84aeee0097006c0eb1970d5bb5dd0932def1d55ca",
+      "rawExecutionSha256": "4e5ce99c1a77cdb0287b5cf776d9c3b2ff129046cb4f3d01688306b887970fd3",
+      "lookupLimits": [
+        {
+          "name": "view",
+          "arguments": {
+            "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\.git\\HEAD"
+          },
+          "success": false,
+          "truncationOrLimitMarker": false
+        },
+        {
+          "name": "web_fetch",
+          "arguments": {
+            "url": "https://www.weblio.jp/content/蛇口",
+            "max_length": 6000
+          },
+          "success": true,
+          "truncationOrLimitMarker": true
+        }
+      ]
+    },
+    {
+      "label": "initial-gpt",
+      "model": "gpt-6.1-sol",
+      "sessionId": "e1a3aee8-d706-4691-8f05-fac63b924b2c",
+      "snapshot": "0e725a59afec03a258b4b78998c4a385c7fe3081",
+      "startedAt": "2026-11-03T19:59:55.3580037+01:00",
+      "completedAt": "2026-11-03T20:03:55.1875609+01:00",
+      "exitCode": 0,
+      "toolCalls": 64,
+      "overlappingStarts": 0,
+      "boundedAssignedScopeFullyReturned": true,
+      "coverage": [
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\蛇.md",
+          "requiredRange": [
+            1,
+            78
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\蛇.md",
+          "requiredRange": [
+            1,
+            58
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\蛇行.md",
+          "requiredRange": [
+            1,
+            60
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\蛇口.md",
+          "requiredRange": [
+            1,
+            40
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-037-input-metadata.json",
+          "requiredRange": [
+            1,
+            15
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-037-jmdict.xml",
+          "requiredRange": [
+            1,
+            2079
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-037-comparison-jmdict.xml",
+          "requiredRange": [
+            1,
+            324
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-037-draft-comparisons-jmdict.xml",
+          "requiredRange": [
+            1,
+            815
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\虫.md",
+          "requiredRange": [
+            1,
+            43
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\蚊.md",
+          "requiredRange": [
+            1,
+            49
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\蛍.md",
+          "requiredRange": [
+            1,
+            50
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\口.md",
+          "requiredRange": [
+            1,
+            44
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\行.md",
+          "requiredRange": [
+            1,
+            47
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\曲る.md",
+          "requiredRange": [
+            1,
+            34
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\カーブ.md",
+          "requiredRange": [
+            1,
+            35
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\曲線.md",
+          "requiredRange": [
+            1,
+            33
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\曲げる.md",
+          "requiredRange": [
+            1,
+            40
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\うろうろ.md",
+          "requiredRange": [
+            1,
+            33
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\ふらふら.md",
+          "requiredRange": [
+            1,
+            32
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\ぐるぐる.md",
+          "requiredRange": [
+            1,
+            34
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\動物.md",
+          "requiredRange": [
+            1,
+            33
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\生き物.md",
+          "requiredRange": [
+            1,
+            44
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\生物.md",
+          "requiredRange": [
+            1,
+            34
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\獣.md",
+          "requiredRange": [
+            1,
+            65
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\酔っ払い.md",
+          "requiredRange": [
+            1,
+            49
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\コック.md",
+          "requiredRange": [
+            1,
+            57
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\水道.md",
+          "requiredRange": [
+            1,
+            32
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\.github\\copilot-instructions.md",
+          "requiredRange": [
+            1,
+            244
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\.github\\instructions\\content-structure.instructions.md",
+          "requiredRange": [
+            1,
+            85
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\jlpt-levels.md",
+          "requiredRange": [
+            1,
+            386
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\content-format.md",
+          "requiredRange": [
+            42,
+            148
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-snake.html",
+          "requiredRange": [
+            1760,
+            1860
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-ii.html",
+          "requiredRange": [
+            1730,
+            1800
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-dakou.html",
+          "requiredRange": [
+            1735,
+            1800
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-kanjipedia-snake.html",
+          "requiredRange": [
+            50,
+            130
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-janosuke.html",
+          "requiredRange": [
+            1765,
+            1778
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-kanjipedia-faucet.html",
+          "requiredRange": [
+            56,
+            80
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-kanjipedia-dakou.html",
+          "requiredRange": [
+            56,
+            80
+          ],
+          "fullyReturned": true
+        }
+      ],
+      "observedOverlaps": [],
+      "xmlRangeLimitViolations": [],
+      "reportSha256": "c73c893595f36b1734c359d30f2c604bb8c4ffa6a21b486a083bc6711b71c06b",
+      "rawExecutionSha256": "e1ec244def83951aa51efc5463b5a4c0cf93e91f5c756bb2f0326e4dc712d512",
+      "lookupLimits": [
+        {
+          "name": "web_fetch",
+          "arguments": {
+            "url": "https://www.weblio.jp/content/%E8%9B%87%E5%8F%A3",
+            "max_length": 14000
+          },
+          "success": true,
+          "truncationOrLimitMarker": true
+        },
+        {
+          "name": "web_fetch",
+          "arguments": {
+            "url": "https://www.weblio.jp/content/%E3%81%98%E3%82%83%E3%81%90%E3%81%A1",
+            "max_length": 6000
+          },
+          "success": true,
+          "truncationOrLimitMarker": true
+        },
+        {
+          "name": "web_fetch",
+          "arguments": {
+            "url": "https://www.weblio.jp/content/%E8%9B%87%E5%8F%A3",
+            "raw": true,
+            "start_index": 90000,
+            "max_length": 12000
+          },
+          "success": true,
+          "truncationOrLimitMarker": true
+        },
+        {
+          "name": "web_fetch",
+          "arguments": {
+            "url": "https://www.weblio.jp/content/%E8%9B%87%E5%8F%A3",
+            "raw": true,
+            "start_index": 48000,
+            "max_length": 16000
+          },
+          "success": true,
+          "truncationOrLimitMarker": true
+        }
+      ]
+    },
+    {
+      "label": "confirmation-claude",
+      "model": "claude-opus-5.5",
+      "sessionId": "4b2f06f5-7f02-4d45-9356-2143594f39dd",
+      "snapshot": "3ddad580eadfea6b2a492c69cb6be12c57d334e2",
+      "startedAt": "2026-11-03T20:08:14.0798023+01:00",
+      "completedAt": "2026-11-03T20:09:07.7532862+01:00",
+      "exitCode": 0,
+      "toolCalls": 12,
+      "overlappingStarts": 0,
+      "boundedAssignedScopeFullyReturned": true,
+      "coverage": [
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\蛇.md",
+          "requiredRange": [
+            1,
+            79
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\蛇行.md",
+          "requiredRange": [
+            1,
+            60
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\うろうろ.md",
+          "requiredRange": [
+            1,
+            33
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\ふらふら.md",
+          "requiredRange": [
+            1,
+            32
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-037-draft-comparisons-jmdict.xml",
+          "requiredRange": [
+            1,
+            109
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-037-core-jmdict.xml",
+          "requiredRange": [
+            1,
+            201
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-reviews\\batch-037-initial-claude.md",
+          "requiredRange": [
+            1,
+            111
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-037-teaching-correction.diff",
+          "requiredRange": [
+            1,
+            47
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-kanjipedia-snake.html",
+          "requiredRange": [
+            50,
+            130
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-ii.html",
+          "requiredRange": [
+            1730,
+            1800
+          ],
+          "fullyReturned": true
+        }
+      ],
+      "observedOverlaps": [],
+      "xmlRangeLimitViolations": [],
+      "reportSha256": "49fdb89cec8d8fa5ff0e38b339a47fb700e329d4d61f54d07f13ef4f6f57295a",
+      "rawExecutionSha256": "a5b6d883444ba906d7ef3859e282c8dd95f75d6625fa16de138514efc4a45561",
+      "lookupLimits": []
+    },
+    {
+      "label": "confirmation-gpt",
+      "model": "gpt-6.1-sol",
+      "sessionId": "e1a3aee8-d706-4691-8f05-fac63b924b2c",
+      "snapshot": "3ddad580eadfea6b2a492c69cb6be12c57d334e2",
+      "startedAt": "2026-11-03T20:09:16.3193867+01:00",
+      "completedAt": "2026-11-03T20:10:47.8439827+01:00",
+      "exitCode": 0,
+      "toolCalls": 12,
+      "overlappingStarts": 0,
+      "boundedAssignedScopeFullyReturned": true,
+      "coverage": [
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\蛇.md",
+          "requiredRange": [
+            1,
+            79
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\蛇行.md",
+          "requiredRange": [
+            1,
+            60
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\うろうろ.md",
+          "requiredRange": [
+            1,
+            33
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\ふらふら.md",
+          "requiredRange": [
+            1,
+            32
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-037-draft-comparisons-jmdict.xml",
+          "requiredRange": [
+            1,
+            109
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-037-core-jmdict.xml",
+          "requiredRange": [
+            1,
+            201
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-reviews\\batch-037-initial-gpt.md",
+          "requiredRange": [
+            1,
+            36
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-037-teaching-correction.diff",
+          "requiredRange": [
+            1,
+            47
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-kanjipedia-snake.html",
+          "requiredRange": [
+            50,
+            130
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-037-ii.html",
+          "requiredRange": [
+            1730,
+            1800
+          ],
+          "fullyReturned": true
+        }
+      ],
+      "observedOverlaps": [],
+      "xmlRangeLimitViolations": [],
+      "reportSha256": "156d3c3f9f18d99bc4615591d1d41a52b157bf30b2f8fc70921aa19d118c19de",
+      "rawExecutionSha256": "75b7dd3e866bbb7c8733ae09f86e1a38dea9e3a5773edfef3cda4a1040eb7bd5",
+      "lookupLimits": []
+    }
+  ],
+  "processDeviationDisposition": {
+    "maximumActiveReviewerProcesses": 1,
+    "actualToolCalls": [
+      62,
+      64,
+      12,
+      12
+    ],
+    "observedInternalOverlappingStarts": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "observedXmlRangeLimitViolations": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "detail": "Four isolated processes exited0 serially, each original report archived before next launch. All assigned initial teaching/139families/rawmetadata/comparisons/guidance/suppliedHTML ranges fully returned; XML ranges<=200lines. Claude initial self-disclosed one overlap between XML1-200 and201-400, not serial internal-tool compliance. Failed .git/HEAD probe and partial Weblio lookup retained. GPT initial four partial page calls retained: simplified pages omitted definitions, targeted raw slice independently returned both complete Daijisen faucet/へびくち entries before truncation elsewhere. Neither whole-page read nor equal independent lookup claimed. Both original confirmations freshly returned all bounded changed teaching/comparisons/11overlappingfamilies/two supplied raw ranges; no new distinct family. Common confirmation task omitted revised SHA; launcher checked exact signed3ddad580 and process receipts bind it, reviewers disclosed inability to verify and used exact diff/post-images. Not reviewer-verified Git correspondence."
+  },
+  "nativePending": [
+    "它"
+  ],
+  "validation": {
+    "batch": "037",
+    "baseCommit": "8a8b5384b40c3a4ed33bd02e4ef90e71f30b3ec1",
+    "draftKanji": 1,
+    "newWords": 2,
+    "changedReusedArticles": 1,
+    "requiredReciprocalPairs": 3,
+    "activatedBaselinePairs": 1,
+    "readingDispositions": 5,
+    "curatedOfferedKeys": 3,
+    "sourceOnlyOfferedKeys": 0,
+    "dictionaryFamilies": 139,
+    "exactBaseRuntimePreservedOutsideRecordedChanges": true,
+    "manifestFresh": true,
+    "contentVersion": "2793bdf7fa3bb180",
+    "limits": "Mechanical/source/cmap draft only; local64notdelivered. No independentreview/freshAndroid/native/CI/publicZIP/phoneacceptance. Exactaccepted虎/猿guards preserved; original116familyinspection inherited, fresh151core/comparison/supplement explicitly separated.",
+    "schemaVersion": 1,
+    "execution": 152,
+    "stage": "fresh-source-audit-pending-review-evidence-closure",
+    "frozenInputHashesVerified": 5,
+    "decompressedDictionaryHashesVerified": 2,
+    "freshExactDictionaryExtractions": 4,
+    "dictionaryPackets": [
+      {
+        "path": "batch-037-jmdict.xml",
+        "families": 108,
+        "lines": 2079,
+        "sha256": "925726030e5605a275cdc92afc40f9f6f22ef61838be66d2bb63362ce69d6719"
+      },
+      {
+        "path": "batch-037-comparison-jmdict.xml",
+        "families": 8,
+        "lines": 324,
+        "sha256": "d06e7623179a84656057783df4ad89aeecf250e1552001eec0d4677b010f6b9a"
+      },
+      {
+        "path": "batch-037-draft-comparisons-jmdict.xml",
+        "families": 23,
+        "lines": 815,
+        "sha256": "ee15424c7a373c1ace67a4d169ae1231a5c9ddcfb6419bfa7a303b9df3b9f22f"
+      }
+    ],
+    "overlappingCorePacket": {
+      "families": 8,
+      "lines": 201,
+      "sha256": "3920f5ea60b463c2ebb11dab8f5f8c3e427ed3789fe154df7429ab4be7fd6948"
+    },
+    "exactCompleteSnakeLexicalFamilies": 108,
+    "rawCharacterRecords": 6,
+    "originalBaselineMetadataAndStrokesPreserved": {
+      "kanji": 985,
+      "words": 4942,
+      "strokes": 985
+    },
+    "baselineMetadataExceptions": {
+      "words/虎.md": [
+        "酔っ払い"
+      ],
+      "words/猿.md": [
+        "馬鹿"
+      ]
+    },
+    "exactLocalAdditionMembership": [
+      "乃",
+      "亀",
+      "凸",
+      "凹",
+      "幹",
+      "彗",
+      "扱",
+      "杉",
+      "李",
+      "杏",
+      "松",
+      "柚",
+      "柳",
+      "栗",
+      "栞",
+      "桂",
+      "桃",
+      "桐",
+      "桑",
+      "梅",
+      "梓",
+      "梢",
+      "梨",
+      "椋",
+      "椎",
+      "椿",
+      "楓",
+      "楠",
+      "榛",
+      "樹",
+      "橘",
+      "氏",
+      "漱",
+      "熊",
+      "猪",
+      "猿",
+      "獣",
+      "畔",
+      "畝",
+      "矛",
+      "稲",
+      "穂",
+      "笹",
+      "繭",
+      "芋",
+      "苗",
+      "莉",
+      "菊",
+      "虎",
+      "蚊",
+      "蚕",
+      "蛇",
+      "蛍",
+      "蝶",
+      "豚",
+      "鮎",
+      "鯉",
+      "鯛",
+      "鯨",
+      "鳩",
+      "鶏",
+      "鶴",
+      "鷹",
+      "鹿"
+    ],
+    "currentKanjiIncludingDrafts": 1049,
+    "currentWordsIncludingDrafts": 5006,
+    "n1LabelledIncludingDrafts": 69,
+    "sourceMembersPresentIncludingDrafts": 68,
+    "newDirectWordExclusionPairs": 8,
+    "exactWordChoiceLabels": [
+      {
+        "word": "蛇",
+        "label": "snake; serpent",
+        "choices": [
+          {
+            "word": "動物",
+            "label": "animal"
+          },
+          {
+            "word": "生き物",
+            "label": "living thing; creature"
+          },
+          {
+            "word": "生物",
+            "label": "living thing; organism; biology"
+          },
+          {
+            "word": "酔っ払い",
+            "label": "a drunk; drunkenness"
+          }
+        ]
+      },
+      {
+        "word": "蛇行",
+        "label": "meandering; snaking; zigzagging",
+        "choices": [
+          {
+            "word": "曲る",
+            "label": "turn; bend"
+          },
+          {
+            "word": "カーブ",
+            "label": "curve; bend; curveball"
+          },
+          {
+            "word": "うろうろ",
+            "label": "wandering restlessly; hanging about"
+          },
+          {
+            "word": "ふらふら",
+            "label": "unsteady; wandering without thinking"
+          }
+        ]
+      }
+    ],
+    "strokeAndFontRecord": "batch-037-review-stroke-audit.json",
+    "newTextHanAudited": 31,
+    "newTextHanInAllThreeFonts": 30,
+    "inheritedMissingBundledGlyphs": [],
+    "newFallbackNativePending": [
+      "它"
+    ],
+    "rawExternalDictionaryDownloadsVerified": [
+      {
+        "id": "daijisen-snake",
+        "url": "https://www.weblio.jp/content/蛇",
+        "authority": "Digital Daijisen",
+        "inspectedRanges": [
+          [
+            1760,
+            1830
+          ],
+          [
+            1830,
+            1860
+          ]
+        ],
+        "headings": [
+          "じゃ【蛇】 character entry",
+          "じゃ【蛇】 lexical entry",
+          "だ【蛇】",
+          "へび【蛇】"
+        ],
+        "evidence": "Character entry explicitly assigns蛇口/蛇腹 toジャ and蛇行/蛇足 toダ; listsへび as kun. Separateじゃ noun has large-snake sense1 and heavy-drinker sense2, the latter shortened from蛇之助 with a historical quotation. Theへび entry defines the animal, not a heavy drinker. Theだ lexical entry cross-refers toじゃ.",
+        "limits": "No modern frequency or productive unrestricted substitution rule established. Historical quotation is not proof that the heavy-drinker sense is obsolete, or neutral/current everydayへび. Character and lexical entries must remain separate.",
+        "rawArtifact": "control/artifacts/batch-037-snake.html",
+        "rawSha256": "bbf6a8ecd18a1823e18634d4da9308baf348ef71888d3f06fc52cc7739fe547a",
+        "rawBytes": 1138425
+      },
+      {
+        "id": "daijisen-ii",
+        "url": "https://www.weblio.jp/content/委蛇",
+        "authority": "Digital Daijisen",
+        "inspectedRanges": [
+          [
+            1730,
+            1800
+          ]
+        ],
+        "headings": [
+          "い‐い〔ヰ‐〕【委▽蛇】",
+          "い‐だ〔ヰ‐〕【委蛇／×逶×迱】"
+        ],
+        "evidence": "Both headings markト・タル and classicalタリ; reciprocalいい/いだ glosses describe a winding continuation. Theいい entry gives aとして continuation; theいだ entry givesたる before a path noun. These support recognition of the construction, not ordinary goodいい or aな-adjective.",
+        "limits": "Frozen JMdict2846378 marks the family obsolete. Daijisen does not itself give a frequency ranking. The▽ and× symbols are spelling/reading notation, not rarity evidence; no inference from historicalヰ to modern raw metadata.",
+        "rawArtifact": "control/artifacts/batch-037-ii.html",
+        "rawSha256": "f6f0a11d06d48e7a8d24a260a65dc839ab934e9a473fc7639db6c656bfbc97f6",
+        "rawBytes": 179183
+      },
+      {
+        "id": "daijisen-dakou",
+        "url": "https://www.weblio.jp/content/蛇行",
+        "authority": "Digital Daijisen",
+        "inspectedRanges": [
+          [
+            1735,
+            1800
+          ]
+        ],
+        "headings": [
+          "じゃ‐こう〔‐カウ〕【蛇行】",
+          "だ‐こう〔‐カウ〕【蛇行】"
+        ],
+        "evidence": "じゃこう名スル cross-refers toだこう. Mainだこう名スル entry separates a winding left-right course (including roads/driving) and a meandering river. This independently supports the frozen full family's intransitiveする use and river/road teaching contexts.",
+        "limits": "Selectingだこう as article primary reading must not callじゃこう invalid. No generic claim that every English wander or every single turn is蛇行. Historicalカウ does not replace currentこう.",
+        "rawArtifact": "control/artifacts/batch-037-dakou.html",
+        "rawSha256": "f1fe4e199cb411a6c894d43dfc654bab3e8703757af927778709055f69fc76fb",
+        "rawBytes": 249638
+      },
+      {
+        "id": "kanjipedia-snake",
+        "url": "https://www.kanjipedia.jp/kanji/0002995800",
+        "authority": "Japan Kanji Aptitude Testing Foundation / Kanjipedia",
+        "inspectedRanges": [
+          [
+            50,
+            130
+          ]
+        ],
+        "headings": [
+          "蛇 (漢字一字)"
+        ],
+        "evidence": "Exact character heading has11strokes; onジャ/ダ and outside-tableタ/イ, kunへび. The下つき examples explicitly place蛇 second in委蛇イイ/イダ, providing character-dictionary allocation evidence forイ beyond an isolated kana substring. Listed蛇口ジャぐち and蛇行ダコウ support selected on anchors. Two meanings cover animal and snake-shaped things.",
+        "limits": "Itsタ/イ versus frozen KANJIDICイ/ヤ inventory differs. Preserve frozenジャ/ダ/イ/ヤ without addingタ, deletingヤ or implying a universal inventory. No confidently verifiedヤ example. Origin paragraph was returned but no new historical/phonetic claim is adopted; keep the proposed mnemonic policy.",
+        "rawArtifact": "control/artifacts/batch-037-kanjipedia-snake.html",
+        "rawSha256": "9c629a23d97b143a80332badda33536f4018745552a00d7910691ac853c6663e",
+        "rawBytes": 12434
+      },
+      {
+        "id": "daijisen-janosuke",
+        "url": "https://www.weblio.jp/content/蛇之助",
+        "authority": "Digital Daijisen",
+        "inspectedRanges": [
+          [
+            1765,
+            1778
+          ]
+        ],
+        "headings": [
+          "じゃ‐の‐すけ【蛇×之助】"
+        ],
+        "evidence": "Exact lexical heading defines a heavy drinker and connects its usage to the legendary serpent and sake. Together with the separateじゃ sense2 this supplies a precise explanation for KANJIDIC's hard-drinker gloss.",
+        "limits": "This is a separate whole expression, not a necessary support article or per-character reading assignment. No retelling or etymology is adopted beyond the dictionary's stated cross-reference; do not generalize to medical alcohol-use disorder or present intoxication.",
+        "rawArtifact": "control/artifacts/batch-037-janosuke.html",
+        "rawSha256": "5c6e64fb63c52d252726ae99818fc9ba0378a3a2182b4a5ab308d18359f984a3",
+        "rawBytes": 183065
+      },
+      {
+        "id": "kanjipedia-faucet",
+        "url": "https://www.kanjipedia.jp/kotoba/0002996600",
+        "authority": "Japan Kanji Aptitude Testing Foundation / Kanjipedia",
+        "inspectedRanges": [
+          [
+            56,
+            80
+          ]
+        ],
+        "headings": [
+          "蛇口 / ジャぐち"
+        ],
+        "evidence": "Exact written heading and mixed-script reading name the water-flow control fitting. Alongside the characterジャ grouping, this supports蛇ジャ and口 nativeぐち in the existing household word.",
+        "limits": "Do not restrict all faucets to metal or adopt an invented design origin. ExistingN2 identity, reading, level andコック exclusion remain unchanged.",
+        "rawArtifact": "control/artifacts/batch-037-kanjipedia-faucet.html",
+        "rawSha256": "610492e4b7d52d3455a2ea6b4f257b35e7042828b195a7dbba409f3cf089162a",
+        "rawBytes": 5966
+      },
+      {
+        "id": "kanjipedia-dakou",
+        "url": "https://www.kanjipedia.jp/kotoba/0002997400",
+        "authority": "Japan Kanji Aptitude Testing Foundation / Kanjipedia",
+        "inspectedRanges": [
+          [
+            56,
+            80
+          ]
+        ],
+        "headings": [
+          "蛇行 / ダコウ"
+        ],
+        "evidence": "Roads and rivers continuing in snake-like S-shaped bends; motion and driving uses attested. In combination with Daijisen's explicitダ group, this supplies useful source-verified allocation and contexts.",
+        "limits": "No cause such as intoxication or geology inferred from the examples; all word senses/alternate reading remain from the complete frozen family.",
+        "rawArtifact": "control/artifacts/batch-037-kanjipedia-dakou.html",
+        "rawSha256": "a7f4edf98f12110506cc117f55ebbe92b120b9e7b4612db83607808535c76b61",
+        "rawBytes": 6017
+      }
+    ],
+    "budget": {
+      "files": 8244,
+      "entries": 8259,
+      "retainedBytes": 43798374,
+      "inflatedBytes": 44066657,
+      "localZipBytes": 29983549,
+      "listeningTaskMediaBytes": 5893602
+    },
+    "android": {
+      "commit": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+      "status": "fresh-batch-checks-pending"
+    },
+    "review": {
+      "status": "pending-two-serial-blind-model-families",
+      "reviewersLaunched": 0
+    },
+    "publishedAdditions": 63,
+    "remainingAdditions": 1165
+  },
+  "limits": "Textual closure only, not publication. Public63/1165remain unchanged. All139 source families retained/re-extracted mechanically; coordinator fresh bounded motion families/comparison articles inspected, not a fresh whole139 linguistic reread. NEW它 nativefallback/readability/viewport outstanding, not inherited all40/pilot. Original1/0/0/0overlaps, failedGitprobe, partial mixed-page lookups, GPT relevant raw slice, and confirmationSHAomission retained. Both exact accepted虎[酔っ払い]/猿[馬鹿]baseline guards preserved. Physicalphone/generalrelease/freshAndroid/currentmain/CI/publicZIP pending. Initial audit correction attempts failed missing lowercase source-only marker; explicit meaning retained and lowercase marker restored, no audit weakening. Final full audit saved successfully but console cp1252 failed; UTF8 rerun verified identical output, no signing attempted before passing. No permission denial, signing retry, amendment, push or second runner.",
+  "nextAction": "Resume SAME037 signed textual closure; NEW它 bounded supported-native fallback/readability/viewport gate is outstanding. Preserve originals and obtain actual terminal native cases/screenshots/visual inspection on known owned API35 emulator after fresh device/port safety inspection; full exact archive through production ContentSync ONCE, no duplicate parse/reduction/heapguard changes. Then fresh non-skipped RealContentTest3/RareHanTest1 with verified JDK17/SDK, one worker/no parallel/in-process compiler; inspect actual fresh XML/root/timestamps. Complete latest-main normal non-rewriting integration/source/baseline/link/readings/strokes/fonts/361Python/validator/vocabulary/manifest/unchangedbudgets/signing/ownerfastforward/remoteSHA/greenCI/everyimmutablepublicZIPmanifesthash/terminalreceipt/issue60 gates before publication or038. Actual permission denial/signing wait preserve/report/yield without retries/workarounds/configuration changes. Public63/1228 and1165remaining unchanged; compatibleAndroidf9b59a2+; physical-phone/general-release explicitly outstanding, not blanket bounded owner-testing veto. No038/unacceptedpush/authoragent/secondrunner.",
+  "nativeVisualFollowup": {
+    "execution": 155,
+    "record": "batch-037-native-acceptance.json",
+    "report": "batch-037-visual-claude.md",
+    "status": "bounded-native-visual-and-freshAndroid-reconciled-local-unpublished",
+    "scope": "OriginalClaude same-session bounded dependent native visual confirmation; two-family textual closure inherited, runtime unchanged.",
+    "result": "No actionable visual defect. Original Claude directly viewed eight actual PNGs; actualmodelclaude-opus-5.5/10calls/0overlaps/0unfinished. Complete prompt/own confirmation and eight native image payloads verified. 它 readable/distinct from宅;蛇/蚊 distinguishable under all4configuredfamilies. Same Gothic-like fallback 它 raster, unidentified face/not4bundleddesigns. Table horizontal clipping/offscreen continuations and full article contents not certified.",
+    "native": "Two actual terminal0/no skips/16hasGlyphprobes/fullproductionContentSyncONCE1049kanji/5006words/69N1/version2793bdf7fa3bb180/problems0/epoch1; offline support/reciprocal/systemBack.",
+    "android": "Fresh parent037 RealContentTest3/RareHanTest1 exact XML cases/timestamps/hashes/siblingroot verified; zero failures/errors/skips.",
+    "limits": "Earlier pending fields retain original textual-closure/collection history; dated155 followup supersedes only nativevisual/freshAndroid gate. All originalreports/processlimits unchanged. Phone/generalrelease/latestmain/publication/CI/publicZIP outstanding."
+  }
+}

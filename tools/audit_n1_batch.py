@@ -47,6 +47,24 @@ def base_file(root, commit, name):
         ["git", "--no-pager", "show", f"{commit}:{name}"], cwd=root).decode("utf-8")
 
 
+def reused_changes(old, new, rows, exclusions=None):
+    expected = old
+    for row in rows:
+        require(expected.count(row["before"]) == 1,
+                "Reused passage must match exactly once")
+        expected = expected.replace(row["before"], row["after"], 1)
+    require(expected == new, "Reused passage exceeds recorded exact edits")
+    before = yaml.safe_load(old.split("---", 2)[1])
+    after = yaml.safe_load(new.split("---", 2)[1])
+    if exclusions is not None:
+        previous = before.get("quiz_exclusions", [])
+        require(len(exclusions) == len(set(exclusions))
+                and set(previous) < set(exclusions),
+                "Reused exclusions must be distinct additive safeguards")
+        before["quiz_exclusions"] = exclusions
+    require(before == after, "Reused metadata changed outside recorded exclusions")
+
+
 def audit(root, batch):
     require(len(batch) == 3 and batch.isascii() and batch.isdigit(),
             "Batch must be a three-digit number")
@@ -83,14 +101,14 @@ def audit(root, batch):
                  for kind, suffix in (("kanji", "md"), ("strokes", "json"))} | new_words
     changes = {r["article"] for r in ledger["changedReusedPassages"]}
     runtime_delta(before, current, additions, changes)
-    for row in ledger["changedReusedPassages"]:
-        old = base_file(root, commit, row["article"])
-        new = (root / row["article"]).read_text(encoding="utf-8")
-        require(old.count(row["before"]) == 1
-                and old.replace(row["before"], row["after"], 1) == new,
-                f"Reused passage exceeds recorded exact edit: {row['article']}")
-        require(yaml.safe_load(old.split("---", 2)[1]) == metadata(root, row["article"]),
-                f"Reused metadata changed: {row['article']}")
+    for name in changes:
+        rows = [r for r in ledger["changedReusedPassages"] if r["article"] == name]
+        exclusion_rows = [r for r in ledger["wordQuizAudit"]["directExclusions"]
+                          if f"words/{r['word']}.md" == name]
+        require(len(exclusion_rows) <= 1, "Duplicate reused exclusion decision")
+        reused_changes(base_file(root, commit, name),
+                       (root / name).read_text(encoding="utf-8"), rows,
+                       exclusion_rows[0]["exclude"] if exclusion_rows else None)
     families = {}
     for packet in ledger["dictionaryPackets"]:
         selection = json.loads((folder / packet["selection"]).read_text(encoding="utf-8"))

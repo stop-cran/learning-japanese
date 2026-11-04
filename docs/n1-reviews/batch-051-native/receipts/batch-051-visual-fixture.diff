@@ -1,0 +1,28 @@
+--- N1Batch051NativeTest.kt
++++ N1Batch051NativeLinkTest.kt
+@@ -237,7 +237,7 @@
+             show("similar outlines do not give", "kanji-lookalikes")
+             show("not a fixed conversion", "kanji-money-boundary")
+             section("Common words")
+-            inline(await("匁 もんめ — monme", substring = true), "匁")
++            inline(await("匁 もんめ — monme, a traditional mass unit", substring = true), "匁")
+             await("匁 (もんめ)", substring = true)
+             section("Meaning")
+             show("1匁は3.75グラムです", "word-conversion")
+@@ -362,6 +362,7 @@
+     private fun click(text: String) = click(await(text))
+ 
+     private fun click(node: SemanticsNodeInteraction) {
++        rule.waitUntil(30_000) { !node.fetchSemanticsNode().config.contains(SemanticsProperties.Disabled) }
+         if (node.onAncestors().filter(hasScrollAction()).fetchSemanticsNodes().isNotEmpty()) node.performScrollTo()
+         node.assertIsDisplayed().assertIsEnabled().performClick()
+     }
+@@ -399,6 +400,8 @@
+         rule.waitForIdle()
+         val automation = InstrumentationRegistry.getInstrumentation().uiAutomation
+         automation.waitForIdle(500, 5_000)
++        android.os.SystemClock.sleep(1_000)
++        rule.waitForIdle()
+         val bitmap = requireNotNull(automation.takeScreenshot())
+         File(app.getExternalFilesDir(null), "n1-051-$step.png").outputStream().use {
+             assertTrue(bitmap.compress(Bitmap.CompressFormat.PNG, 100, it))

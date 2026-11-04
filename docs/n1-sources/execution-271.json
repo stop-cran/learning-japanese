@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "execution": 271,
+  "batch": "051",
+  "recordedAt": "2026-11-04T14:22:21.206414+01:00",
+  "status": "source-prepared-not-drafted",
+  "baseCommit": "6af98cb717755690a9ca793e5454a96ebd7a8f9f",
+  "membership": [
+    "匁"
+  ],
+  "sourceRow": 122,
+  "sourceAudit": "batch-051-preparation-audit.json",
+  "sourceAuditSha256": "ee3b22ce717dec56e3f6dcc87c4fdb75ea3de85945d87b310c5eea16cedc4133",
+  "sourceAuditImplementation": {
+    "adapter": "control/execution-271-source.py",
+    "adapterSha256": "d51a8983b07e88346e9da93324607e9edc9a66b6b23e9454bfd331f2e1cf0319",
+    "reusedAudit": "control/execution-209-source.py",
+    "reusedAuditSha256": "91a676913d826227b28202e9b8d0e25e0e6d9215870766452fa126c9da6fd006",
+    "scope": "Complete existing frozen-input/exact-family-extraction/raw-metadata/membership/baseline/exclusions/runtime-manifest and all-payload-hash audit with explicit051 identities/counts; no runtime-tool change."
+  },
+  "integration": {
+    "originMain": "6af98cb717755690a9ca793e5454a96ebd7a8f9f",
+    "startingHead": "6af98cb717755690a9ca793e5454a96ebd7a8f9f",
+    "fetchAndNonRewritingMerge": "Fresh fetch; already up to date; no conflicts or teaching change."
+  },
+  "authorInspection": {
+    "lexicalFamilies": 3,
+    "comparisonFamilies": 18,
+    "distinctCompleteFamilies": 21,
+    "remainingExtractedFamiliesPending": 0,
+    "lexicalReturnedRanges": [
+      [
+        1,
+        63
+      ]
+    ],
+    "comparisonReturnedRanges": [
+      [
+        1,
+        170
+      ],
+      [
+        171,
+        340
+      ],
+      [
+        341,
+        510
+      ],
+      [
+        511,
+        676
+      ]
+    ],
+    "rawCharacterRecords": 9,
+    "rawCharacterRecordReturnedRanges": [
+      [
+        1,
+        53
+      ],
+      [
+        54,
+        54
+      ],
+      [
+        55,
+        55
+      ],
+      [
+        56,
+        58
+      ]
+    ],
+    "rawCharacterRecordReadBoundary": "First1-58 metadata request truncated inside escaped 目XML on line54. Complete line54, complete 匁 line55 and final 勹/closing lines56-58 were subsequently returned. The last request was56-60 but actualEOF is58; no line59 was returned. The first six complete records through 包 were returned before truncation. These are JSON lines, not XML lines; overlap is disclosed, not parallel reviewer work.",
+    "completeExistingArticlesRead": [
+      "kanji/久.md",
+      "kanji/文.md",
+      "kanji/目.md",
+      "kanji/包.md",
+      "words/グラム.md",
+      "words/目.md",
+      "words/文.md",
+      "words/包む.md",
+      "words/円.md"
+    ],
+    "candidateNavigation": "All eight guarded probes and family counts are recorded in membership selectionReason. Source-member/card/standalone-word presence was inspected; no absent probe was assumed to belong to the named set. Current kanji/words/articles searches found no 匁 or もんめ teaching occurrence. Baseline declared 匁word pairs are empty. Missing unit cards/words are not authoring assignments. Actual 包む primaryつつむ differs from its separateくるむ family; 文word primaryぶん and 目word primaryめ are not historical unit-support articles.",
+    "limits": "All21 complete frozen families, nine raw character records and nine existing articles returned and coordinator-inspected. Parallel coordinator calls are not reviewer serialization evidence. No fresh Japanese dictionary heading, per-character shortened-reading allocation, unit-history/legal-status/frequency/etymology or native-rendering certification. Complete applicable families for every incidental word in unchanged comparison articles were not freshly extracted; no fresh full review of those articles is asserted."
+  },
+  "checks": [
+    {
+      "check": "source-audit",
+      "command": "python -X utf8 -B ..\\control\\execution-271-source.py audit",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-271-source-audit.txt",
+      "sha256": "e0da28f662fc4c1c5c1129f0f10853e99e50f45e041c245b8e2ed1eb380fd676",
+      "exitCode": 0
+    },
+    {
+      "check": "extraction-tests",
+      "command": "python -X utf8 -B -m unittest discover -s tools -p test_extract_n1_jmdict.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-271-extraction-tests.txt",
+      "sha256": "f7dc1c65d9bf1c31f1cb9a0be1fc0c0840290cbe7f978a8864c6557dbd2fbb5e",
+      "exitCode": 0
+    },
+    {
+      "check": "validate",
+      "command": "python -X utf8 -B tools\\validate.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-271-validate.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "exitCode": 0
+    },
+    {
+      "check": "manifest",
+      "command": "python -X utf8 -B tools\\build_manifest.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-271-manifest.txt",
+      "sha256": "c7c1df53efc9cc64cf6e886261a3908125e6781256fe0b1b4e237c5c351d8d80",
+      "exitCode": 0
+    }
+  ],
+  "sourceReadingOrder": {
+    "onyomi": [],
+    "kunyomi": [
+      "もんめ",
+      "め"
+    ]
+  },
+  "baselineMetadataExceptions": {
+    "words/虎.md": [
+      "酔っ払い"
+    ],
+    "words/猿.md": [
+      "馬鹿"
+    ]
+  },
+  "allRuntimePayloadHashesVerified": 8278,
+  "runtimeManifestFreshAndUnchanged": true,
+  "contentVersion": "3f68693b2b5631e2",
+  "runtimeChanges": 0,
+  "reviewersLaunched": 0,
+  "freshAndroidOrNativeClaimed": false,
+  "preliminarySourceCommit": "15edf210f2e28b17c633b40366720da0f4a7aeaf",
+  "readReceiptCorrection": "Non-rewriting followup corrects requested56-60 to actual returned56-58/EOF in the source read receipt; initial15edf210 remains intact. No family, teaching, reading, runtime or validation assertion changed.",
+  "publishedAdditions": 77,
+  "remainingAdditions": 1151,
+  "acquisitionBoundary": "Complete14838-line authorized request through actualEOF, including final checkpoint, acquired before task action. Approved issue initial read truncated at122; full121-122 recovered before ledger/notes/validation. Initial starting-state wording calling that earlier issue acquisition complete is qualified here. Initial metadata1-58 read truncated at54 and explicitly recovered. A cp1252 status-print error and a read-only shell-quoting navigation error preceded successful UTF8/direct reads; neither was permission denial, source mutation or evidence verification.",
+  "nextAction": "Resume SAME051 source-prepared 匁 at the saved signed local checkpoint, not a draft/publication. Read complete authorized request/final checkpoint and scoped live history; preserve full progress. Qualify actual Japanese 匁もんめ/め and 百匁ひゃくもんめ/ひゃくめ headings, mass versus historical silver money, 匁-only mass spelling versus 文目 family alternative, exact shortened-reading/count/register boundaries. No unrestricted め, fixed yen conversion, obsolete-mass/legal-status/frequency or game-name etymology claim without evidence. Keep full emptyonyomi/orderedもんめ,め and grade9/fourstrokes/canonical勹20. Fetch/inspect pinnedKanjiVG70a0b7ae05301SVG/blob77687be8f5aa72fe17b2a3457133dca9e9ca48af/2720bytes/fourpaths, reconcile visible radical/shape before unchanged-converter candidate; audit applicable candidate glyphs, cmap is not readability. Threelexical63lines/eighteencomparison676lines=21completefamilies, nine rawrecords and nine actual oldarticles coordinator-inspected; initial目metadata truncation recovered54/55/56-58actualEOF. Existing文primaryぶん/目eye/包むprimaryつつむ are not monme support; no baseline declaredpair/current匁occurrence. One standalone mass-supportarticle is only candidate, no support/quizkeys selected or inferred vocabularyJLPT. Nine actual oldarticles/rawsource dispositions in051ledger; no incidental-family exhaustive review asserted. All5frozeninputs/2decompressedhashes/fresh21families/baseline985kanji4942words985strokes/exactoriginal虎[酔っ払い]and猿[馬鹿]guards/runtime8278hashes/manifest3f68693b2b5631e2 preserved. Fiveextractiontests/validator/unchangedfreshmanifest passed; no runtime edit/reviewer/Android/native/push/publication/052/secondrunner. After source qualification: necessary draft, all reading/quiz/title/link/geometry/font audits; two serialblind actualdifferent-family initials on same frozen teaching/allnewandchangedpassages, one active reviewer and serial internaltools; archive actual process/read/report evidence then reconcile. Applicable freshnon-skippedAndroid/native/originalvisual/current-main/allcombinedchecks/normalsigning/ownerfastforward/terminalgreenCI/everyimmutablepublicZIPruntimehash/unchangedbudgets before countingdelivery. No signingretry/permissionworkaround; preserve exact failure/report/yield. Published77/1228;1151remain;1062kanji/5020words/82N1labels/81namedmembers plus separate妖. CompatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding. No052.",
+  "limits": "Source-preparation checkpoint only, not qualified Japanese headings, teaching, review, native or publication. Complete21frozenfamilies/ninerawcharacterrecords/nineexistingarticles inspected with the disclosed metadata truncation recovery. Full emptyon/もんめ,め order and originalbaseline/guards/runtime preserved. Source evidence does not establish frequency, per-character shortening, kokuji history, exact legal status, current unit usage or all-era money conversions. No glyph failure/readability claim or generated geometry. All later draft/two-family review/fresh Android/native/current-main/publication gates pending. Published77/1228;1151remain. CompatibleAndroidf9b59a2+; physicalphone/generalrelease/whole-set outstanding."
+}

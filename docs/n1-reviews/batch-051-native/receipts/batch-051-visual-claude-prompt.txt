@@ -1,0 +1,72 @@
+You are original claude-opus-5.5 reviewer, same session b90bb59d-8135-4296-afb4-60732512ce23.
+Your initial report: C:\Users\stop-\n1-kanji-workspace\learning-japanese\docs\n1-reviews\batch-051-initial-claude.md
+Your textual confirmation: C:\Users\stop-\n1-kanji-workspace\learning-japanese\docs\n1-reviews\batch-051-confirmation-claude.md
+SAME051 bounded ORIGINAL-session dependent visual confirmation, not a new blind initial.
+Current HEAD cec76575d6e2b15560144ff118cc4261ba1881de; teaching unchanged from revised reviewed ca54f1e910522d76f42732fa10ee1a8a6ef1359f.
+Native envelope ceb79db1221d139629c60aa703a87a3b66923c93 differs only in contributor evidence.
+Use ONLY SERIAL view calls: ONE tool call per response, await completion. Never parallelize even text reads.
+Read this task, YOUR complete initial report and YOUR complete textual confirmation report (paths below); do NOT read the other reviewer's report.
+Read complete current kanji and word in separate responses:
+C:\Users\stop-\n1-kanji-workspace\learning-japanese\kanji\匁.md
+C:\Users\stop-\n1-kanji-workspace\learning-japanese\words\匁.md
+Read accepted disposable native fixture lines180-335 in one call:
+C:\Users\stop-\n1-kanji-workspace\learning-japanese\docs\n1-reviews\batch-051-native\N1Batch051NativeLinkTest.kt
+Actual teaching diff ca54f1e910522d76f42732fa10ee1a8a6ef1359f..cec76575d6e2b15560144ff118cc4261ba1881de for kanji/words/articles/strokes/manifest is EMPTY, verified by coordinator.
+Exact disposable harness diff, no teaching/production/acceptance-assertion changes:
+--- N1Batch051NativeTest.kt
++++ N1Batch051NativeLinkTest.kt
+@@ -237,7 +237,7 @@
+             show("similar outlines do not give", "kanji-lookalikes")
+             show("not a fixed conversion", "kanji-money-boundary")
+             section("Common words")
+-            inline(await("匁 もんめ — monme", substring = true), "匁")
++            inline(await("匁 もんめ — monme, a traditional mass unit", substring = true), "匁")
+             await("匁 (もんめ)", substring = true)
+             section("Meaning")
+             show("1匁は3.75グラムです", "word-conversion")
+@@ -362,6 +362,7 @@
+     private fun click(text: String) = click(await(text))
+ 
+     private fun click(node: SemanticsNodeInteraction) {
++        rule.waitUntil(30_000) { !node.fetchSemanticsNode().config.contains(SemanticsProperties.Disabled) }
+         if (node.onAncestors().filter(hasScrollAction()).fetchSemanticsNodes().isNotEmpty()) node.performScrollTo()
+         node.assertIsDisplayed().assertIsEnabled().performClick()
+     }
+@@ -399,6 +400,8 @@
+         rule.waitForIdle()
+         val automation = InstrumentationRegistry.getInstrumentation().uiAutomation
+         automation.waitForIdle(500, 5_000)
++        android.os.SystemClock.sleep(1_000)
++        rule.waitForIdle()
+         val bitmap = requireNotNull(automation.takeScreenshot())
+         File(app.getExternalFilesDir(null), "n1-051-$step.png").outputStream().use {
+             assertTrue(bitmap.compress(Bitmap.CompressFormat.PNG, 100, it))
+
+Actually view EACH of these SIXTEEN accepted attempt4 PNGs singly, ONE PER RESPONSE:
+C:\Users\stop-\n1-kanji-workspace\control\artifacts\batch-051-parent-native-attempt-4\n1-051-font-pairs.png
+C:\Users\stop-\n1-kanji-workspace\control\artifacts\batch-051-parent-native-attempt-4\n1-051-selection.png
+C:\Users\stop-\n1-kanji-workspace\control\artifacts\batch-051-parent-native-attempt-4\n1-051-kanji-radical.png
+C:\Users\stop-\n1-kanji-workspace\control\artifacts\batch-051-parent-native-attempt-4\n1-051-kanji-mnemonic.png
+C:\Users\stop-\n1-kanji-workspace\control\artifacts\batch-051-parent-native-attempt-4\n1-051-kanji-shortened-reading.png
+C:\Users\stop-\n1-kanji-workspace\control\artifacts\batch-051-parent-native-attempt-4\n1-051-kanji-lookalikes.png
+C:\Users\stop-\n1-kanji-workspace\control\artifacts\batch-051-parent-native-attempt-4\n1-051-word-conversion.png
+C:\Users\stop-\n1-kanji-workspace\control\artifacts\batch-051-parent-native-attempt-4\n1-051-word-components.png
+C:\Users\stop-\n1-kanji-workspace\control\artifacts\batch-051-parent-native-attempt-4\n1-051-system-back-word.png
+C:\Users\stop-\n1-kanji-workspace\control\artifacts\batch-051-parent-native-attempt-4\n1-051-meaning-question.png
+C:\Users\stop-\n1-kanji-workspace\control\artifacts\batch-051-parent-native-attempt-4\n1-051-meaning-feedback.png
+C:\Users\stop-\n1-kanji-workspace\control\artifacts\batch-051-parent-native-attempt-4\n1-051-curated-reading-question.png
+C:\Users\stop-\n1-kanji-workspace\control\artifacts\batch-051-parent-native-attempt-4\n1-051-curated-reading-feedback.png
+C:\Users\stop-\n1-kanji-workspace\control\artifacts\batch-051-parent-native-attempt-4\n1-051-drawing-trace.png
+C:\Users\stop-\n1-kanji-workspace\control\artifacts\batch-051-parent-native-attempt-4\n1-051-drawing-feedback.png
+C:\Users\stop-\n1-kanji-workspace\control\artifacts\batch-051-parent-native-attempt-4\n1-051-drawing-recall-feedback.png
+Check visible readability and distinction of 匁久文包勹丿 in four actual production rows. 匁久文包 each four rasters; 勹丿 one Gothic-like fallback across families, exact face unknown. Readability matters, not four fallback designs.
+Check radical勹20/fourstrokes/hooked-outline and crossing strokes as explicitly modern mnemonic, not etymology; mass3.75g/current pearl specialty versus historical silver money/no modern conversion.
+Check full emptyon/orderedもんめ,め versus sole selectedkunもんめ; qualified 百匁ひゃくめ irregular-kana/archaic whole expression, shortened目unit noteye and not free numeral paradigm. Exact Japanese 百匁 whole heading remains unverified, not claimed.
+Check reciprocal article/word/SystemBack, conversion/reading and visible meaning/curated reading feedback, trace geometry feedback and recall-miss UI. Distinguish your visible observations from supplied operational results.
+Preserve original initials38/40calls, one Claude internalguidanceoverlap and partial1876HTMLgap/false self-report, later originalsession recovery/correction; GPT truncated1888 recovered initially. Both textual confirmations9/9 strictly serial. Minor omitted irregular-kana/目 clarification resolved, unsupported usually withdrawn, six optional groups not adopted; not a new blind review or model benchmark.
+Operational evidence supplied by coordinator, NOT tests run by you: original nativecompile permission denial retained, parent EXACT command passed1m2s56tasks9executed47uptodate. Genuine attempt1 Article-2/Glyph0/25.656s reading-table/Commonwords ambiguity; attempt2 Article-2/Glyph0/56.36s transientLoading/disabledStart. Attempt3 two terminalcase0/56.536s/functionallypassed but drawingPNGs staleLoading/Checking; preserve, not accepted visual evidence. Acceptedattempt4 two terminalcase0/no skips75.175s. Variant only precise link selector, boundedwaitenabled before unchangedassert and1000ms compositor settle/Composeidle. No production/teaching/assertion/heap/guard change.
+Full exact Gitenvelope through productionContentSync ONCE perarticleattempt imported1063kanji/5021words/N183/contentVersiona90e66e16d24c25d/problems0/acceptedepoch1/fullrawemptyon/fullkunもんめ,め/emptyquizOn/solequizKunもんめ. Unique disposable source/duefixtures/twohistoricalmeaninglogs unlockdrawing; no drawingstate seeded/notownerprogress. Actual meaningcorrectfeedback, curatedもんめ question/noめoption and persistedkungrade3; fourtouch-injected exactreference strokes; ungradedtraceWellDrawn; recall I don't remember/persistedDrawgrade onNext; offlinereciprocalBack. 24Paintprobes. Actual drawing ONLY offline geometry fallback, modelunavailable, NOT MLKit recognition/realcorrectrecall/negativegeometry/reverse-order testing.
+Freshsame051275Android3+1 exactnames/source-copyhashes/UTC/dedicatedroot reverified, not rerun or050reuse. Original275denial and parent exact275obsolete274assertion failure retained; separatelyapprovedcurrent275recovery accepted. Original049default512MiBHOSTTestOOM/bounded1GiBHOSTcoreTestheadroom retained, NOT used for native. Guestappheaps192m576m/archiveguards unchanged.
+All ownedhelpersstopped/exacttempsremoved/appclean; otherownerdevices untouched. API35fingerprint google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys/read-only2048MiB2cores/hostGPU/Vulkan-disabled.
+Parent16directPNGreads/eightadditionalhash-equivalentviewports NOT extra independentreads. Readingtable rightedge clipped in initialview/firstcolumn afterhorizontal scroll; do not certify hidden columns/fullarticle. Trace retains first-use downloading-model message; subsequent feedback says modelunavailable/strokeshapesonly. Actual returned image tool may resize; do not claim original byte identity/dimensions/hashes without evidence.
+Return complete Snapshot/Scope/Verdicts/Findings/Optional/Limits report; enumerate actual PNG reads/text ranges, distinguish inherited textualCLEAN from boundedvisual. No finding quota. No edits, shell, delegation, retries, source search or tools beyond view. Physicalphone/native-speaker/generalrelease/currentmain/publication/whole-set remain unperformed. Return final report, not task_complete. ONE tool call per response.

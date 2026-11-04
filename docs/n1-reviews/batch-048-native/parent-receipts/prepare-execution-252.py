@@ -1,0 +1,66 @@
+from pathlib import Path
+
+c = Path(__file__).resolve().parent
+old = "46e073816162fa756dbd19c87dd380ad0dc81ec3"
+head = "66211c0f70abdc92f565bebb095e6c18344bde52"
+
+
+def generate(source, target, changes):
+    s = (c / source).read_text(encoding="utf-8")
+    for before, after in changes:
+        assert before in s, (source, before)
+        s = s.replace(before, after)
+    path = c / target
+    assert not path.exists(), path
+    path.write_text(s, encoding="utf-8")
+
+
+common = [("243", "252"), ("047", "048"), (old, head)]
+generate("verify-execution-243-recovery.py", "verify-execution-252-recovery.py", common + [
+    ("4ca64c255449dba4", "019d8515d222414a"),
+    ("RabbitSign", "TigerSign"), ("rabbitSignRadicalAndFallbacks", "tigerSignRadicalAndFallbacks"),
+    ("[1, 1059, 5017, 79, 0, 1]", "[1, 1060, 5018, 80, 0, 1]"),
+    ('["ボウ", "モウ"]', '["イン"]'), ('["う"]', '["とら"]'),
+    ("9c82a13afc9192f55b7d30248d28267125ade91b7a816a3090800cb028d4c2a7",
+     "470498d0e616d6b8318224bce2ed848bf763a1d1cf05e268d61b98044a607996"),
+    ('"卯卵印柳東卩旁"', '"寅演黄申宀氵虍黃"'), ('"卩旁"', '"宀氵虍黃"'),
+    ("== 516", "== 20980"), ("46e0738-envelope", "66211c0-envelope"),
+    ("len(raster[\"rows\"]) == 28", "len(raster[\"rows\"]) == 32"),
+    ('"glyphProbes": 28', '"glyphProbes": 32'),
+    ('"originalReportsAndRawExecutionsVerified": 2', '"originalReportsAndRawExecutionsVerified": 4'),
+    ("Five characters have four styles; 卩/旁 share fallback styles per character",
+     "Four characters have four styles; 宀/氵/虍/黃 share fallback styles per character"),
+    ("28probes, two original reports and fresh240Android", "32probes, four original reports and fresh249Android"),
+])
+generate("run-batch-047-visual.ps1", "run-batch-048-visual.ps1", [
+    ("047", "048"), (old, head),
+    ("7c7d6839-e647-4495-bdc4-feb224373fee", "80a82572-cc26-4d43-b490-52fbc401e296"),
+])
+generate("validate-execution-243.py", "validate-execution-252.py", [("243", "252")])
+generate("post-execution-243.ps1", "post-execution-252.ps1", [("243", "252")])
+prompt = r"""SAME048 bounded ORIGINAL-session dependent visual confirmation, not a new blind initial review.
+Frozen tracked content 66211c0f70abdc92f565bebb095e6c18344bde52; unchanged teaching ac944d9e66a6aeb4f8272f89a6fe1b40d87b47c9. Sole untracked accepted non-runtime native fixture below.
+You are original Claude reviewer session 80a82572-cc26-4d43-b490-52fbc401e296. Read your complete initial and supplement reports, each separately:
+C:\Users\stop-\n1-kanji-workspace\learning-japanese\docs\n1-reviews\batch-048-initial-claude.md
+C:\Users\stop-\n1-kanji-workspace\learning-japanese\docs\n1-reviews\batch-048-supplement-claude.md
+Preserve two blind actual different-family initials34/33calls plus original-session supplements3/3calls, zero internal overlaps or XML range violations. Initial common task incorrectly called 演 unchanged and omitted exact delta; supplements explicitly closed line24 component link, not retroactive blind coverage. Your two optional groups remain nonblocking; no teaching fix. Eight supplied Japanese sections across seven pages, not fresh upstream retrieval. Coordinator alone freshly inspected pinned86lineSVG geometry; do not claim you did.
+Use ONLY SERIAL view calls, ONE tool call per response, and await each result. No edits, shell, delegation, parallel wrapper, source retries or files. Return full report in final answer, not task_complete.
+Read THREE complete current teaching files, each in its OWN RESPONSE:
+C:\Users\stop-\n1-kanji-workspace\learning-japanese\kanji\寅.md
+C:\Users\stop-\n1-kanji-workspace\learning-japanese\words\寅.md
+C:\Users\stop-\n1-kanji-workspace\learning-japanese\kanji\演.md
+Only 演 line24 is changed, adding [寅](寅.md) to the unchanged modern-shape mnemonic; other 演 teaching not reopened.
+Read native fixture lines140-275 only:
+C:\Users\stop-\n1-kanji-workspace\learning-japanese\docs\n1-reviews\batch-048-native\N1Batch048NativeTest.kt
+Then actually view EACH of these TEN accepted PNGs singly, ONE PER RESPONSE:
+"""
+for name in ("font-pairs", "selection", "kanji-radical", "kanji-mnemonic",
+             "kanji-reading-disposition", "kanji-lookalikes", "reused-en-mnemonic",
+             "word-sign-example", "word-components", "word-sign-boundary"):
+    prompt += str(c / "artifacts" / "batch-048-parent-native-attempt-1" / f"n1-048-{name}.png") + "\n"
+prompt += """Assess visible readability/distinct glyphs 寅演黄申宀氵虍黃 in four actual production family rows; shared fallback acceptable if readable/distinguishable, not necessarily four designs. Especially check roof宀/radical40/firstthree strokes, 演water/黄top/申throughstroke distinctions, mnemonic versus etymology, fullイン/とら versus sole selectedkunとら, verifiedインcalendar recognition not obsolete/name-only, 甲寅こういん/きのえとら, twelve-sign vs sixty-term senses/かんしlimit, animal虎vs寅and nontransferabledrunkard sense, historicalhour3-5am/4-6am, traditionalENE vs 丑寅NE, firstlunarmonthnotGregorianJanuary. Check actual changed演componentlink and mnemonic clarity. Flag demonstrated blocking defects; distinguish optional horizontal-table clipping and unseen passages. Initial radical PNG has a keyboard overlay at bottom; assess actual visible metadata rather than certifying hidden content.
+Supplied operational evidence, not independently verified by you: unchanged original fixture attempt1 two terminalcase0/no skips,32hasGlyphprobes; 寅演黄申 each four raster styles, 宀氵虍黃 each shared Gothic-like systemfallback across families, exactface unknown/not four bundleddesigns. Full exact Git envelope productionContentSync ONCE imported1060kanji/5018words/N180/019d8515d222414a/problems0/epoch1/fullrawonイン/fullkunとら/emptyquizOn/solequizKunとら. Offline reciprocal/SystemBack and changed演to寅route/SystemBack passed. TEN additional hash-equivalent viewports only: kanji-historical-boundary=kanji-lookalikes; kanji-direction-boundary=kanji-lookalikes; word-cycle-example=word-sign-example; word-calendar-boundary=word-sign-example; backlink-kanji=kanji-mnemonic; reused-en-link-target=kanji-mnemonic; system-back-word=word-components; word-compound-reading=word-components; word-historical-boundary=word-sign-boundary; word-animal-comparison=word-sign-boundary. These are not additional independently seen images or a quiz screenshot. Fresh249Android3+1 verified separately, no rerun. Own20980stopped/exacttemporaryAndroidcleanup; no other devices modified. ActualAPI35fingerprint google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys;requested2048MiB automatic2560MiB/appheap192m576m. Parent10acceptedPNGreads operational, NOT your independentvisual.
+Return complete Snapshot/Scope/Verdicts/Findings/Optional/Limits report; list actual PNG reads and text ranges. Separate inherited textual CLEAN from bounded visual verdicts. No invented fresh source/Git/hash/dimensions verification, native meaning/reading/drawing sessions, phone/native-speaker/generalrelease/currentmain/CI/publicZIP claim. No optional quota; stop when no consequential in-scope defect remains. STRICTLY ONE TOOL CALL PER RESPONSE INCLUDING TEXT FILES.
+"""
+(c / "batch-048-visual-prompt.txt").write_text(prompt, encoding="utf-8")
+print("Prepared bounded original visual followup and recovered-evidence verifier.")

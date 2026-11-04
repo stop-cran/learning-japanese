@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "execution": 283,
+  "batch": "052",
+  "status": "fresh-android-passed-pending-native-visual-and-publication",
+  "startingHead": "b2baadae32878715b7488e4ef169da04acd7e30e",
+  "androidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "recordedAt": "2026-11-04T17:00:25.359165+01:00",
+  "scope": "SAME052 fresh Android RealContentTest3+RareHanTest1 integration checkpoint only; no native, reviewer, publication,053 or second runner.",
+  "startedAt": "2026-11-04T15:55:33.369371+00:00",
+  "exitCode": 0,
+  "command": ".\\gradlew.bat :core:test --tests 'io.github.stopcran.kanji.core.RealContentTest' :app:testDebugUnitTest --tests 'io.github.stopcran.kanji.core.RareHanTest' --no-daemon --no-parallel --max-workers=1 --rerun-tasks '-Pkotlin.compiler.execution.strategy=in-process' --init-script C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-049-host-integration-heap.init.gradle",
+  "environment": {
+    "JAVA_HOME": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot",
+    "ANDROID_HOME": "C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk"
+  },
+  "oneWorker": true,
+  "parallel": false,
+  "rerunTasks": true,
+  "hostMemoryQualification": "Original049 default512MiB HOST core Test OOM retained. Existing control-only init changes solely :core Test maxHeapSize to1GiB. No native guest/app heap, source, assertion, font or archive-guard change.",
+  "hostInitSha256": "ff2d68bd18491590f7cb38da7807d6ff40153e1dfbaef0cd744e50f4ccea742d",
+  "initialLaunchFailure": {
+    "schemaVersion": 1,
+    "execution": 283,
+    "batch": "052",
+    "command": "& ..\\control\\run-283-android.ps1",
+    "shellId": "batch052-android-283",
+    "exitCode": 1,
+    "failure": "MethodInvocationException at run-283-android.ps1:4. Exception calling Open with4arguments: The process cannot access the file C:\\Users\\stop-\\n1-kanji-workspace\\control\\runner.lock because it is being used by another process.",
+    "startingScopeWriteExecuted": false,
+    "gradleExecuted": false,
+    "gradleLogCreated": false,
+    "diagnosis": "Coordinator incorrectly copied a parent-only exclusive runner.lock acquisition into its child launcher. Read-only inspection verified runner.json running/session128a5525-c04f-4041-95d3-b2f88a09e263/PID16764 and actual ancestry currenttool23768->copilot8528->supervisor16764. Lock is intentionally held by this execution's own supervisor, not evidence of a second runner.",
+    "disposition": "Correct own launcher precondition to require the recorded running supervisor/session and verify its PID is this coordinator ancestor. Do not edit/delete/unlock runner.lock or modify supervisor-owned files/processes. This is a genuine sharing-violation/precondition bug, not an actual tool permission denial, signing wait or policy/configuration change. Fresh tests have not run yet; original failure retained.",
+    "currentDisposition": "Corrected same-session ancestor guard passed, then fresh Gradle ran successfully. Original precondition failure remains historical; no lock was edited/deleted/unlocked, no actual permission denial or signing wait occurred."
+  },
+  "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-283-android.txt",
+  "logSha256": "44f9dc51b01f4b7ee4b0db7341760b703e67f8822d6f780281da6be3da91f733",
+  "tests": [
+    {
+      "name": "io.github.stopcran.kanji.core.RealContentTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-04T15:57:05.440Z",
+      "caseNames": [
+        "completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent",
+        "hotelBookingDoesNotAcceptTheSchoolClassReadingWhenRepoPresent",
+        "parsesRealContentRepoWhenPresent"
+      ],
+      "sourcePath": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core\\build\\test-results\\test\\TEST-io.github.stopcran.kanji.core.RealContentTest.xml",
+      "artifactPath": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-052-RealContentTest.xml",
+      "sha256": "bd6d836845d206a9fc06f778fb2f41494f4c824a6de66df7b506a6683895b16e",
+      "fixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese"
+    },
+    {
+      "name": "io.github.stopcran.kanji.core.RareHanTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-04T16:00:17.043Z",
+      "caseNames": [
+        "contentRareCharactersAreCoveredByBundledFont"
+      ],
+      "sourcePath": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\build\\test-results\\testDebugUnitTest\\TEST-io.github.stopcran.kanji.core.RareHanTest.xml",
+      "artifactPath": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-052-RareHanTest.xml",
+      "sha256": "32182fabb2f5aa91ac3c4f45c01410e5d34df9f041303d28910d348d77681610",
+      "fixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese"
+    }
+  ],
+  "contentVersion": "601a0fb709961e28",
+  "runtimeUnchangedFromReviewedTeaching": true,
+  "publishedAdditions": 78,
+  "remainingAdditions": 1150,
+  "nativeOrVisualAcceptanceClaimed": false,
+  "publicationAttempted": false,
+  "nextAction": "Resume SAME052 supported-native acceptance from signed local fresh-Android checkpoint. Do not repeat accepted Android3+1 absent new concern. Preserve original textual reviews/limits and049 HOSTOOM qualification. Exact complete Git envelope through production ContentSync ONCE per article attempt;1064kanji/5021words/84N1/contentVersion601a0fb709961e28/schema1en-ja/problems0/epoch1/full orderedニ,ジ/ふた.つ,そえ/soleニ/emptykun. Fresh device and5580/5581ownership before known read-onlyAPI35 helper; no040portexception. Meaning/curatedreading/drawing/article/reciprocal/SystemBack/offline/弐式武三and authored弋fallback/readability, rawterminalcase0/no skips/directPNGs; original Claude78592329-26fa-4c54-aa96-e6bff3a769ec then GPT0ef2bb14-7846-423b-a39d-f50d6559b9fb serial dependent visual confirmations. Preserve failures, exact variant diffs, actualPID/serial and exacttemp cleanup/stoponlyownedhelper. Then latestmain normalmerge/allcombinedchecks/originalbudgets/normalsigning/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 before delivery. No053/secondrunner/repeatedblindinitials/heapfontguardchanges. Permissiondenial/signingwait preserve/report/yield,no retry/workaround. Published78/1228,1150remain;compatibleAndroidf9b59a2+ required;physicalphone/generalrelease/whole-set outstanding.",
+  "limits": "Fresh Android integration only, not native glyph/readability/drawing/ContentSync/phone/publication or whole-set acceptance. Tests resolve actual sibling content and all four executed without skips; no copied old XML. Runtime and both original textual reports unchanged. No content/Android source edits, reviewer/native launch, push,053 or second runner.",
+  "buildResult": "BUILD SUCCESSFUL in 4m 47s;41 actionable tasks:41 executed",
+  "shellId": "batch052-android-283-corrected",
+  "archivedArtifacts": [
+    {
+      "path": "docs\\n1-reviews\\batch-052-android\\gradle.txt",
+      "sha256": "44f9dc51b01f4b7ee4b0db7341760b703e67f8822d6f780281da6be3da91f733"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-052-android\\batch-052-RealContentTest.xml",
+      "sha256": "bd6d836845d206a9fc06f778fb2f41494f4c824a6de66df7b506a6683895b16e"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-052-android\\batch-052-RareHanTest.xml",
+      "sha256": "32182fabb2f5aa91ac3c4f45c01410e5d34df9f041303d28910d348d77681610"
+    }
+  ],
+  "inheritedTextualLimits": "Two actual different-family blind initials on unchanged signedc7aeff7, complete new弐 and complete reused二 including both additions, all16frozenfamilies/ninecomparisonarticles/rawcharacterrecords/fourarchivedpages/SVG. Both29calls, all23assignedresources returned without truncation/failedtools; bytes do not prove comprehension. Processes exited serially and first original report archived before next launch. Claude had ONE internal two-view overlap in its first teaching read, explicitly self-disclosed; GPT zero. Strict internal serialization was therefore NOT fully achieved. No fictional compliant rerun. No teaching defects or consequential unresolved positive claims established. Three Claude optional groups, no GPT optional; no teaching changes/confirmations needed. Source-onlyそえ has no independently verified lexicalexample; 弐つ lacks separate Japanese wholeheading, both honestly qualified outside practice. No legalmandate/frequency/settledformation/unrestrictedsubstitution. Fresh282 mechanical sources/baseline/readings/links/geometry/fonts/manifest/8283runtimehashes/budgets; Python368/validator/vocabulary receipt inheritance from281 explicitly distinguished from fresh tests. No fresh upstream retrieval/native-speaker certification/Android/native/visual/current-main/publication. Authored16Han/15allthreecmaps;弋fallback readability and all required native routes pending. CompatibleAndroidf9b59a2+; physicalphone/generalrelease/whole-set outstanding. Published78/1228,1150remaining."
+}

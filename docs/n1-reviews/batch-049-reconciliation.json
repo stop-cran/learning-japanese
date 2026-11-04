@@ -1,0 +1,835 @@
+{
+  "schemaVersion": 1,
+  "execution": 257,
+  "batch": "049",
+  "status": "native-visual-closed-pending-combined-publication",
+  "baseCommit": "e91eec0c92dcbc0f084fb9df8ac66d7546dc9681",
+  "authoredSnapshot": "0e73a4115a1f747ef7370efdb5ef271e5ecdfe94",
+  "reviewedTeachingSnapshot": "0e73a4115a1f747ef7370efdb5ef271e5ecdfe94",
+  "membership": [
+    "丑"
+  ],
+  "teachingScope": [
+    "kanji/丑.md",
+    "words/丑.md",
+    "kanji/寅.md:62 link only",
+    "words/寅.md:52 link only"
+  ],
+  "models": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "initialReports": [
+    "batch-049-initial-claude.md",
+    "batch-049-initial-gpt.md"
+  ],
+  "confirmationReports": [
+    "batch-049-visual-claude.md"
+  ],
+  "verdicts": {
+    "kanji/丑.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "words/丑.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "kanji/寅.md:62 changed passage": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "words/寅.md:52 changed passage": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    }
+  },
+  "findings": [],
+  "unresolvedConsequentialClaims": [],
+  "optional": [
+    {
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Add native alternate reading of丁丑 for symmetry with寅's recognition example.",
+      "evidence": "JMdict2562440ひのとのうし differs from Nikkokuひのとうし; both support selectedていちゅう.",
+      "disposition": "Not adopted. This recognition-only row need not exhaust all compound readings. Preserve raw discrepancy without teaching an unqualified correction;ていちゅう suffices."
+    },
+    {
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Add traditional qualifier to丑寅 direction mention.",
+      "evidence": "JMdict1860000 marks archaic; suppliedKanjipedia gives北東 without that label.",
+      "disposition": "Not adopted. Both new passages already place the direction comparison within historical/older usage and reject ordinary navigation substitutes. No demonstrated overclaim."
+    },
+    {
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Add土用の丑の日 recognition as a familiar present-day phrase.",
+      "evidence": "Complete frozen lexical family2429430 supports the compound, but no exact Japanese heading was qualified for new teaching and this review establishes no frequency ranking.",
+      "disposition": "Not adopted. Useful possible expansion, not necessary standalone-sign support; do not expand the batch or infer a broad commonness claim."
+    },
+    {
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Specify KanjiVG stroke data rather than stroke diagram and refine top-bar wording.",
+      "evidence": "PinnedSVG marks middlecrossbarstroke3 as一; runtime diagram has no radical highlight. Top horizontal is part of bentstroke1, not a separate stroke.",
+      "disposition": "Not adopted. Current text explicitly identifies middle crossbar and bent top-and-right stroke; it does not promise highlighting or an independent top stroke. Comparison describes shape, not an incorrect stroke count or etymology."
+    }
+  ],
+  "modelContributionScope": {
+    "verifiedUniqueDefects": [],
+    "shared": "No actionable defect on common bounded teaching snapshot.",
+    "claudeOptionalGroups": [
+      "Alternate calendar reading",
+      "Traditional direction qualifier",
+      "Seasonal recognition expansion",
+      "Two shape/diagram wording refinements"
+    ],
+    "gptOptional": [],
+    "unsupportedSuggestions": [],
+    "sharedLimits": [
+      "Nonexhaustive fallback inventory",
+      "Supplied dictionary pages",
+      "Native/phone not performed"
+    ],
+    "limits": "Compared equivalent observations throughout findings/optional/limits/supporting conclusions, not labels alone. No verified unique defect or general model benchmark. Same task/snapshot/assigned sources, different independently fetched supplemental source."
+  },
+  "reviewProcesses": [
+    {
+      "label": "initial-claude",
+      "model": "claude-opus-5.5",
+      "sessionId": "91d3d776-3bc6-4f71-9e40-049257c10a01",
+      "snapshot": "0e73a4115a1f747ef7370efdb5ef271e5ecdfe94",
+      "startedAt": "2026-11-04T11:22:37.7392773+01:00",
+      "completedAt": "2026-11-04T11:25:23.7745449+01:00",
+      "exitCode": 0,
+      "toolCalls": 39,
+      "overlappingStarts": 0,
+      "boundedAssignedScopeFullyReturned": true,
+      "coverage": [
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\丑.md",
+          "requiredRange": [
+            1,
+            75
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\丑.md",
+          "requiredRange": [
+            1,
+            63
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-049-input-metadata.json",
+          "requiredRange": [
+            1,
+            57
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-049-jmdict.xml",
+          "requiredRange": [
+            1,
+            369
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-049-comparison-jmdict.xml",
+          "requiredRange": [
+            1,
+            553
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\牛.md",
+          "requiredRange": [
+            1,
+            35
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\年.md",
+          "requiredRange": [
+            1,
+            36
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\寅.md",
+          "requiredRange": [
+            1,
+            63
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\牛.md",
+          "requiredRange": [
+            1,
+            41
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\五.md",
+          "requiredRange": [
+            1,
+            40
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\互.md",
+          "requiredRange": [
+            1,
+            44
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\土.md",
+          "requiredRange": [
+            1,
+            44
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\寅.md",
+          "requiredRange": [
+            1,
+            75
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\.github\\copilot-instructions.md",
+          "requiredRange": [
+            1,
+            259
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\.github\\instructions\\content-structure.instructions.md",
+          "requiredRange": [
+            1,
+            85
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\jlpt-levels.md",
+          "requiredRange": [
+            1,
+            401
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\content-format.md",
+          "requiredRange": [
+            1,
+            180
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-049-ushi.html",
+          "requiredRange": [
+            1768,
+            1802
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-049-ushidoshi.html",
+          "requiredRange": [
+            1823,
+            1845
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-049-kotobank-teichu.html",
+          "requiredRange": [
+            1343,
+            1364
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-049-kotobank-shinchu.html",
+          "requiredRange": [
+            1343,
+            1364
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-049-kanjipedia-character.html",
+          "requiredRange": [
+            52,
+            145
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-049-kanjipedia-word.html",
+          "requiredRange": [
+            50,
+            77
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-049-kanjipedia-ushitora.html",
+          "requiredRange": [
+            50,
+            77
+          ],
+          "fullyReturned": true
+        }
+      ],
+      "observedOverlaps": [],
+      "xmlRangeLimitViolations": [],
+      "lookupLimits": [],
+      "reportSha256": "60685392bf5ef508c6c9226d1525403bfdf5679f5d6d691a258d067fd2da64f1",
+      "rawExecutionSha256": "5d5fdd3db7641c89ce092848f7c8cde9c05637eb4b6cb5e357bbd7ddfa44ea7f",
+      "webFetchCalls": [
+        {
+          "url": "https://raw.githubusercontent.com/KanjiVG/kanjivg/70a0b7ae0c18ceb5cb358274b029cce0234a43bc/kanji/04e11.svg",
+          "raw": true,
+          "max_length": 5000
+        }
+      ]
+    },
+    {
+      "label": "initial-gpt",
+      "model": "gpt-6.1-sol",
+      "sessionId": "91d3d776-3bc6-4f71-9e40-049257610a02",
+      "snapshot": "0e73a4115a1f747ef7370efdb5ef271e5ecdfe94",
+      "startedAt": "2026-11-04T11:25:29.6908939+01:00",
+      "completedAt": "2026-11-04T11:28:02.7845925+01:00",
+      "exitCode": 0,
+      "toolCalls": 38,
+      "overlappingStarts": 0,
+      "boundedAssignedScopeFullyReturned": true,
+      "coverage": [
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\丑.md",
+          "requiredRange": [
+            1,
+            75
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\丑.md",
+          "requiredRange": [
+            1,
+            63
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-049-input-metadata.json",
+          "requiredRange": [
+            1,
+            57
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-049-jmdict.xml",
+          "requiredRange": [
+            1,
+            369
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-049-comparison-jmdict.xml",
+          "requiredRange": [
+            1,
+            553
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\牛.md",
+          "requiredRange": [
+            1,
+            35
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\年.md",
+          "requiredRange": [
+            1,
+            36
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\寅.md",
+          "requiredRange": [
+            1,
+            63
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\牛.md",
+          "requiredRange": [
+            1,
+            41
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\五.md",
+          "requiredRange": [
+            1,
+            40
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\互.md",
+          "requiredRange": [
+            1,
+            44
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\土.md",
+          "requiredRange": [
+            1,
+            44
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\寅.md",
+          "requiredRange": [
+            1,
+            75
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\.github\\copilot-instructions.md",
+          "requiredRange": [
+            1,
+            259
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\.github\\instructions\\content-structure.instructions.md",
+          "requiredRange": [
+            1,
+            85
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\jlpt-levels.md",
+          "requiredRange": [
+            1,
+            401
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\content-format.md",
+          "requiredRange": [
+            1,
+            180
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-049-ushi.html",
+          "requiredRange": [
+            1768,
+            1802
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-049-ushidoshi.html",
+          "requiredRange": [
+            1823,
+            1845
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-049-kotobank-teichu.html",
+          "requiredRange": [
+            1343,
+            1364
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-049-kotobank-shinchu.html",
+          "requiredRange": [
+            1343,
+            1364
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-049-kanjipedia-character.html",
+          "requiredRange": [
+            52,
+            145
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-049-kanjipedia-word.html",
+          "requiredRange": [
+            50,
+            77
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-049-kanjipedia-ushitora.html",
+          "requiredRange": [
+            50,
+            77
+          ],
+          "fullyReturned": true
+        }
+      ],
+      "observedOverlaps": [],
+      "xmlRangeLimitViolations": [],
+      "lookupLimits": [],
+      "reportSha256": "8af5485f3ceb0f2eeedd23e4e0d7412921d5aa4f5f4de04995dbc9cb5f067d54",
+      "rawExecutionSha256": "dbf329a30a84601d6fc05c66a6e0cf1e7af39e46f876c5e12dcad7654adb2e41",
+      "webFetchCalls": [
+        {
+          "url": "https://kotobank.jp/word/%E4%B8%81%E4%B8%91-2064778",
+          "max_length": 6000
+        }
+      ]
+    }
+  ],
+  "supplementProcesses": [],
+  "processDeviationDisposition": {
+    "maximumActiveReviewerProcesses": 1,
+    "actualToolCalls": [
+      39,
+      38
+    ],
+    "observedInternalOverlappingStarts": [
+      0,
+      0
+    ],
+    "observedXmlRangeLimitViolations": [
+      0,
+      0
+    ],
+    "detail": "Each complete original report archived after actual exit before next reviewer launch. Both exact reused-link changes assigned initially and separately judged by each reviewer. No supplements, editing tools, shell tools, delegation or nested agents.",
+    "prelaunchFailures": [
+      {
+        "record": "batch-049-prelaunch-failure.txt",
+        "detail": "One PSScriptRoot wrapper binding failure before starting Copilot; direct launcher corrected. Intentional invalid-model probe is catalog validation, not a reviewer/permission denial."
+      }
+    ]
+  },
+  "validation": {
+    "batch": "049",
+    "baseCommit": "e91eec0c92dcbc0f084fb9df8ac66d7546dc9681",
+    "draftKanji": 1,
+    "newWords": 1,
+    "changedReusedArticles": 2,
+    "requiredReciprocalPairs": 1,
+    "activatedBaselinePairs": 0,
+    "readingDispositions": 2,
+    "curatedOfferedKeys": 1,
+    "sourceOnlyOfferedKeys": 0,
+    "dictionaryFamilies": 38,
+    "exactBaseRuntimePreservedOutsideRecordedChanges": true,
+    "manifestFresh": true,
+    "contentVersion": "1a13e8e6d637bc5b",
+    "limits": "Fresh mechanical source/baseline/link/reading/stroke/font/hash audit, not a new linguistic or native acceptance. Two independent initial reviews recorded separately; publication and physical-phone/general-release pending.",
+    "schemaVersion": 1,
+    "execution": 257,
+    "stage": "source-audit-complete-native-and-fresh-android-pending",
+    "frozenInputHashesVerified": 5,
+    "decompressedDictionaryHashesVerified": 2,
+    "freshExactDictionaryExtractions": 2,
+    "dictionaryPackets": [
+      {
+        "path": "batch-049-jmdict.xml",
+        "families": 19,
+        "lines": 369,
+        "sha256": "f041b1b8064a34f11d74cf8642a1fc6f9f579db46dd459dc8c469ce7feb0ba89"
+      },
+      {
+        "path": "batch-049-comparison-jmdict.xml",
+        "families": 19,
+        "lines": 553,
+        "sha256": "2a1b00f8f653e34eed85462b6e5b05e3bf3d992de66e2e2ace418840ad962a8e"
+      }
+    ],
+    "rawCharacterRecords": 7,
+    "originalBaselineMetadataAndStrokesPreserved": {
+      "kanji": 985,
+      "words": 4942,
+      "strokes": 985
+    },
+    "baselineMetadataExceptions": {
+      "words/虎.md": [
+        "酔っ払い"
+      ],
+      "words/猿.md": [
+        "馬鹿"
+      ]
+    },
+    "exactLocalAdditionMembership": [
+      "丑",
+      "乃",
+      "亀",
+      "亥",
+      "凸",
+      "凹",
+      "卯",
+      "寅",
+      "巳",
+      "幹",
+      "彗",
+      "扱",
+      "杉",
+      "李",
+      "杏",
+      "松",
+      "柚",
+      "柳",
+      "栗",
+      "栞",
+      "桂",
+      "桃",
+      "桐",
+      "桑",
+      "梅",
+      "梓",
+      "梢",
+      "梨",
+      "椋",
+      "椎",
+      "椿",
+      "楓",
+      "楠",
+      "榛",
+      "樹",
+      "橘",
+      "氏",
+      "漱",
+      "熊",
+      "猪",
+      "猿",
+      "獣",
+      "畔",
+      "畝",
+      "矛",
+      "稲",
+      "穂",
+      "笹",
+      "繭",
+      "芋",
+      "苗",
+      "莉",
+      "菊",
+      "虎",
+      "蚊",
+      "蚕",
+      "蛇",
+      "蛍",
+      "蝶",
+      "豚",
+      "酉",
+      "隼",
+      "雛",
+      "鮎",
+      "鯉",
+      "鯛",
+      "鯨",
+      "鳩",
+      "鳳",
+      "鴻",
+      "鵬",
+      "鶏",
+      "鶴",
+      "鷹",
+      "鹿",
+      "麟"
+    ],
+    "currentKanjiIncludingDrafts": 1061,
+    "currentWordsIncludingDrafts": 5019,
+    "n1LabelledIncludingDrafts": 81,
+    "sourceMembersPresentIncludingDrafts": 80,
+    "authoredTextHan": 25,
+    "authoredTextHanInAllThreeFonts": 23,
+    "newFallbackNativePending": [],
+    "externalNamedEntryReceiptsVerified": 8,
+    "exactWordChoiceLabels": [
+      {
+        "word": "丑",
+        "label": "Ox zodiac sign",
+        "excludedWord": "牛",
+        "excludedLabel": "cattle; cow"
+      }
+    ],
+    "budget": {
+      "files": 8282,
+      "entries": 8297,
+      "retainedBytes": 43913684,
+      "inflatedBytes": 44182022,
+      "localZipBytes": 30043438,
+      "listeningTaskMediaBytes": 5893602
+    },
+    "pythonTests": {
+      "passed": 368,
+      "failures": 0,
+      "errors": 0
+    },
+    "validationLogs": {
+      "python-tests": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-257-python-tests.txt",
+        "sha256": "db17f0fcfa23fb7a2df4706cf6ea3309c72b2906f4526e9b9a203c62f5718ca0",
+        "exitCode": 0
+      },
+      "validate": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-257-validate.txt",
+        "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+        "exitCode": 0
+      },
+      "vocabulary": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-257-vocabulary.txt",
+        "sha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38",
+        "exitCode": 0
+      },
+      "manifest": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-257-manifest.txt",
+        "sha256": "79d751cf84a14f04b1690b5a9bbe34d64667be44e02f98161087d7e3f39f5c28",
+        "exitCode": 0
+      },
+      "budget": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-257-budget.txt",
+        "sha256": "818c4961bd4447459453af7f83c90d3180aacadec6995d9de5727828b1bb982f",
+        "exitCode": 0
+      }
+    },
+    "publishedAdditions": 75,
+    "remainingAdditions": 1153,
+    "reviewersLaunched": 2,
+    "freshAndroidOrNativeClaimed": false,
+    "allRuntimePayloadHashesVerified": 8275,
+    "declaredCurrentPairs": [
+      [
+        "丑",
+        "words/丑.md"
+      ]
+    ],
+    "nativeFontDisposition": {
+      "authoredHan": 25,
+      "authoredHanInAllThreeBundledFonts": 23,
+      "authoredMissingGlyphs": [
+        "宀",
+        "氵"
+      ],
+      "newMissingGlyphsAcrossAuthoredAndComparisons": [],
+      "comparisonMissingGlyphs": [
+        "宀",
+        "氵",
+        "牜"
+      ],
+      "requiredGate": "Supported-native丑/五/互/土 shape distinctions, all authored fallback glyphs and fullarchiveContentSyncONCE/article/reciprocal/SystemBack/offline routes with bounded independent visual acceptance remain required before publication. Cmap/inheritedoccurrence is not readability; productionfonts/heaps/guards unchanged."
+    },
+    "historicalSourceReceiptsPreserved": {
+      "batch-049-preparation-audit.json": "71625420cf550c8d86e3742c0289409b8d5031bcfc2e2e7fead5dd9e6f537d95",
+      "batch-049-qualified-source-audit.json": "3add36ed83bc2ec7b8094dea94f9fcf3446301e15673ecd928121838cc094bf4",
+      "batch-049-dictionary-evidence.json": "8b6cb5d681e41ffe8bfc7c09f5fd04b5549a4aea3454ed7e84f1c271e4871038",
+      "batch-049-input-metadata.json": "5ffd68d5bec745be2f280429955d4fee2b8d34314ac5d0f2acc4dc25c0c628af",
+      "batch-049-membership.json": "0e28a13a96589520b5211508abbc85146af23f0ab95edb4a094442e6d567f6d2",
+      "batch-049-jmdict.xml": "f041b1b8064a34f11d74cf8642a1fc6f9f579db46dd459dc8c469ce7feb0ba89",
+      "batch-049-comparison-jmdict.xml": "2a1b00f8f653e34eed85462b6e5b05e3bf3d992de66e2e2ace418840ad962a8e",
+      "batch-049-lexical-selection.json": "5204a766ebc8eda92459ee45e64913a5fdcabd872cc53b63acfd74c604d3da91",
+      "batch-049-comparison-selection.json": "614688227c960e914daa54128b8120c08b1433daa44980834bf4cc6d7bb622b8"
+    },
+    "qualifiedSourceSectionsReverified": {
+      "sections": 8,
+      "distinctRawPages": 7,
+      "geometryPaths": 4,
+      "boundary": "Fresh coordinator exact-section/fullSVG reads plus unchanged qualification-audit prefix verifies ranges/markers/hashes/geometry/candidate without obsolete preparation side effects. Not fresh retrieval or independent review.",
+      "implementationSha256": "74c6a68f9c90e2f85a277af87f835c62317696400e5085654f685a351c37f7f5"
+    },
+    "runtimePayloadAdditions": [
+      "kanji/丑.md",
+      "words/丑.md",
+      "strokes/丑.json"
+    ],
+    "runtimePayloadChanges": [
+      "kanji/寅.md",
+      "words/寅.md"
+    ],
+    "combinedMain": {
+      "mergedCommit": "5f460b85b391404e7da01be0a0cded78243b7538",
+      "signedMerge": "dae3cf76ebb9b566a6357770c0435b6349472389",
+      "language": {
+        "schemaVersion": 1,
+        "baseLanguage": "en",
+        "targetLanguage": "ja"
+      },
+      "boundary": "Normal merge, no content baseline redefinition. Language scalars alter contentVersion but not runtime file hashes outside the exact recorded delta. New tooling increases test count; previous361 remains historical."
+    },
+    "auditImplementation": {
+      "adapter": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\audit-batch-049-review.py",
+      "reusedCompleteAudit": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\audit-batch-040-draft.py",
+      "reusedAuditSha256": "c2e3b797524189b272a5f9a59cc72f88bd4242fe2fae8e9db4909ba80df18313",
+      "scope": "Explicit049 identities/counts and exact two寅linkdeltas; complete frozen inputs/re-extraction/baseline/membership/reading/link/stroke/all-authoredfont/log checks plus everyruntimehash/currentdeclaredpair. Git's accepted寅 blobs useCRLF while read_text normalizesLF; this adapter normalizes old text before exact comparison, matching manifest hashing and accepted format. Initial strict comparison failure retained in execution log; no extra teaching edit allowed. No repository-tool change or teaching acceptance."
+    }
+  },
+  "nativeVisualAcceptancePending": false,
+  "limits": "Bounded recovered API35 native and original-reviewer visual evidence, not publication or whole-set/general-release/physical-phone acceptance. Two original blind different-family initials39/38calls/zerooverlaps/zeroXMLrangeviolations/all24assignedresources each retained. No teaching edits or repeated blind reviews/native tests. OriginalClaude followup18calls strictly serial,11actual PNG returns resized1080x2400to900x2000; returned image bytes separately archived. Supplied operational results are coordinator-verified, not independently executed by reviewer. Reading-table right edge clipped with horizontal-scroll hint; bottom input toolbar in first radical image; viewport/selection-chip edges are nonblocking polish, not whole-column/whole-article/quiz/drawing certification. Four original optionalClaude groups remain nondefects/not adopted. No fresh source-page/SVG linguistic read or native-speaker check. Original frozen source/calendar-alternate distinction and prior qualified geometry evidence retained, not new unresolved teaching defects. Fallback宀氵牜 readable, same Gothic-like fallback across rows, actual face unknown; not four bundled designs. Original512MiB HOST OOM and1GiB HOST-only retry retained; native192m/576m and guards unchanged.",
+  "nextAction": "SAME049 native/visual evidence closed at checkpoint260; do not start050 or repeat accepted blind initials, Android3+1/native2/visual absent new concern. Teaching remains0e73a411, full rawチュウ/うし order, emptyon/solekunうし, direct牛guard, both original虎猿guards, onepair/zerobaselineactivations, exactboth寅linkdeltas/fourpinnedstrokes retained. OriginalClaude dependentvisual18serialcalls/0overlaps/11actualPNGs; fourprioroptional groups and current viewport polish are nondefects. Sharedfallback宀氵牜readable/actualfaceunknown/notfourbundleddesigns; 丑五互土fourstyles. Preserve originalHOST512MiBOOM and boundedHOST-only1GiBretry, nativeguestapp192m576m/guardsunchanged. NEXT bounded checkpoint: fresh latestorigin/main fetch/normalnonrewritingmerge, resolve and review any substantive teaching conflict; full combined frozen-source/baseline/bothguards/membership/reading/link/stroke/font/Python368/vocabulary/validator/freshmanifest/originalarchivebudgets validation. Normal signed accepted commit, owner-scoped fastforward push/publicSHA/actualterminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipt/ownerissue60 required before publication count or050. No signing/permission bypass; on actual denial or signing wait preserve/report/yield. Public75/1228,1153remaining. CompatibleAndroidf9b59a2+ required; oldclients ignore curation and8000entryclientsreject. Physicalphone/generalrelease/whole-set acceptance explicitly outstanding.",
+  "nativeAcceptance": "batch-049-native-acceptance.json",
+  "nativeVisualAdjudication": {
+    "findings": [],
+    "unresolvedConsequentialClaimsWithinBoundedVisualScope": [],
+    "status": "resolved-within-bounded-native-visual-scope",
+    "processDeviation": "None observed:18viewcalls,zerooverlaps,allcomplete,11actualimagebinaryreturns.",
+    "optional": [
+      "Horizontal table column clipping with explicit scroll hint; full disposition repeats selected reading.",
+      "Input-method bottom toolbar in first radical capture, subsequent capture exposes row.",
+      "Scrollable selection chips/viewport edge clipping and small inherited gap after氵; readable within assigned scope."
+    ],
+    "reportQualification": "The report's final 'source re-verification ... geometry limits stay open' denotes no fresh certification, not a new unresolved linguistic claim. Existing precise source qualification, raw alternate discrepancy and textual closure remain accepted. No consequential claim is reclassified CLEAN merely from screenshot hashes.",
+    "fallbackDisposition": "宀氵牜 readable/distinguishable shared Gothic-like fallback across four rows; actual face unknown/notfourbundleddesigns. 丑五互土fourdifferentrasters/readable in each productionfamily.",
+    "limits": "Bounded recovered API35 native and original-reviewer visual evidence, not publication or whole-set/general-release/physical-phone acceptance. Two original blind different-family initials39/38calls/zerooverlaps/zeroXMLrangeviolations/all24assignedresources each retained. No teaching edits or repeated blind reviews/native tests. OriginalClaude followup18calls strictly serial,11actual PNG returns resized1080x2400to900x2000; returned image bytes separately archived. Supplied operational results are coordinator-verified, not independently executed by reviewer. Reading-table right edge clipped with horizontal-scroll hint; bottom input toolbar in first radical image; viewport/selection-chip edges are nonblocking polish, not whole-column/whole-article/quiz/drawing certification. Four original optionalClaude groups remain nondefects/not adopted. No fresh source-page/SVG linguistic read or native-speaker check. Original frozen source/calendar-alternate distinction and prior qualified geometry evidence retained, not new unresolved teaching defects. Fallback宀氵牜 readable, same Gothic-like fallback across rows, actual face unknown; not four bundled designs. Original512MiB HOST OOM and1GiB HOST-only retry retained; native192m/576m and guards unchanged.",
+    "returnedImageDisposition": "All11original1080x2400PNGs returned resized900x2000; separately archived exact decoded tool-return bytes differ from originals. Reviewer saw returned versions, not full-resolution originals."
+  },
+  "historicalTextualClosureLimits": "Textual closure only, not fresh049Android/native/visual/current-main/CI/publicZIP/physical-phone acceptance or publication. Two independent blind actualclaude-opus-5.5/gpt-6.1-sol initials on one unchanged signed snapshot, covering BOTH new articles and BOTH exact寅linkdeltas from the start. Both processes exited serially; first complete report archived after exit before second launch. Actual39/38calls, zero internal overlaps, XMLrangeviolations, unfinished, failed or truncated calls. All24assignedresources fully returned per initial; returned bytes do not prove comprehension. Eight supplied Japanese sections across seven raw pages: three Daijisenうし/ちゅう/丑年, two Nikkoku丁丑/辛丑, three Kanjipedia character/うし/うしとら; not eight independent dictionaries or whole-page reads. Both frozen packets fully returned:19lexical+19comparison distinctfamilies; seven rawcharacter records and eight actual comparisonarticles, of which two have link-only changes. Claude additionally fetched pinnedKanjiVGSVG; GPT fetched actualKotobank丁丑. No corpus-frequency/native-speaker certification or exhaustive fallback-quiz audit; authored examples assessed linguistically, not independently attested. Coordinator inspected full54lineSVG confirming middlecrossbar一stroke3 and4total, plus eight exact supplied Japanese sections; source/conversion hashes reaudited. Authored/touched25Han,23inallthreebundledcmaps; authoredfallback宀/氵 and compared牜 require applicable supported-native/font/visual disposition. Cmap and inherited occurrence are not readability. No teaching fixes or confirmations needed; Claude four optional groups not adopted as defects. The report's absence of a word-level source means no established level in this batch, not proof no vocabulary source exists anywhere. One launcher wrapper failure occurred before Copilot start and was corrected directly; intentional invalid-model catalog probe failed validation, neither was a reviewer or permission denial. Responsive-stream inspection once hit an incomplete JSON line; later complete archive verified. CompatibleAndroidf9b59a2+ required; oldclients ignore curation and8000entryclients reject collection. Physical-phone/general-release explicitly outstanding, not bounded owner-testing veto. Public75/1228,1153remaining; whole-set pending."
+}

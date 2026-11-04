@@ -1,7 +1,7 @@
 import unittest
 import xml.etree.ElementTree as ET
 
-from audit_n1_batch import lexical_pair, runtime_delta
+from audit_n1_batch import lexical_pair, reused_changes, runtime_delta
 
 
 class N1BatchRuntimeDeltaTest(unittest.TestCase):
@@ -38,6 +38,48 @@ class N1BatchRuntimeDeltaTest(unittest.TestCase):
         self.after["files"]["words/a.md"] = "a"
         with self.assertRaisesRegex(ValueError, "Changed baseline"):
             runtime_delta(self.before, self.after, {"kanji/x.md"}, {"words/a.md"})
+
+
+class N1BatchReusedChangesTest(unittest.TestCase):
+    def setUp(self):
+        self.old = "---\nword: A\nreading: a\nquiz_exclusions: [B]\n---\nA is a noun.\n"
+        self.rows = [{"before": "A is a noun.", "after": "[A](../kanji/A.md) is a noun."}]
+        self.new = self.old.replace("A is a noun.", self.rows[0]["after"])
+
+    def test_accepts_legacy_link_only_edit(self):
+        reused_changes(self.old, self.new, self.rows)
+
+    def test_accepts_multiple_exact_edits_and_additive_exclusions(self):
+        self.rows.append({"before": "quiz_exclusions: [B]", "after": "quiz_exclusions: [B, C]"})
+        reused_changes(self.old, self.new.replace("[B]", "[B, C]"), self.rows, ["B", "C"])
+
+    def test_accepts_first_recorded_exclusion(self):
+        old = self.old.replace("quiz_exclusions: [B]\n", "")
+        new = old.replace("reading: a\n", "reading: a\nquiz_exclusions: [C]\n")
+        reused_changes(old, new, [{"before": "reading: a\n",
+                                  "after": "reading: a\nquiz_exclusions: [C]\n"}], ["C"])
+
+    def test_rejects_unrecorded_metadata_change(self):
+        rows = [{"before": "reading: a", "after": "reading: b"}]
+        with self.assertRaisesRegex(ValueError, "metadata changed"):
+            reused_changes(self.old, self.old.replace("reading: a", "reading: b"), rows)
+
+    def test_rejects_removed_original_exclusion(self):
+        rows = [{"before": "[B]", "after": "[C]"}]
+        with self.assertRaisesRegex(ValueError, "additive safeguards"):
+            reused_changes(self.old, self.old.replace("[B]", "[C]"), rows, ["C"])
+
+    def test_rejects_duplicate_exclusion(self):
+        with self.assertRaisesRegex(ValueError, "additive safeguards"):
+            reused_changes(self.old, self.new, self.rows, ["B", "B"])
+
+    def test_rejects_unrecorded_prose(self):
+        with self.assertRaisesRegex(ValueError, "exact edits"):
+            reused_changes(self.old, self.new + "Extra prose.\n", self.rows)
+
+    def test_rejects_ambiguous_replacement(self):
+        with self.assertRaisesRegex(ValueError, "exactly once"):
+            reused_changes(self.old + "A is a noun.\n", self.new, self.rows)
 
 
 class N1BatchLexicalPairTest(unittest.TestCase):

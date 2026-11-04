@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "execution": 153,
+  "batch": "037",
+  "kind": "execution-permission",
+  "gate": "Fresh device and port ownership inspection before batch037 native fallback acceptance",
+  "attempts": 1,
+  "deniedCommand": "& C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe devices -l; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; $ports = @(Get-NetTCPConnection | Where-Object { $_.LocalPort -in 5580,5581 }); $ports | Select-Object LocalPort,State,OwningProcess; if ($ports.Count -ne 0) { throw 'Emulator ports occupied; do not launch' }; Get-Date -Format o",
+  "message": "Permission denied because no interactive user response was available. Retry in an interactive session so the user can approve it, or try an alternative that does not require this permission.",
+  "limits": "Denied before execution; exact permission trigger not exposed. No fresh adb inventory or port result, emulator launch, new fixture, native build/test, screenshot, visual acceptance or fresh unit XML. No glyph failure or missing tool established.",
+  "disposition": "Preserve/report/yield. No retry, alternate ownership invocation, disguised execution, permission/configuration changes, old XML reuse, gate weakening or publication.",
+  "savedCommit": "c7ada33b6917a8af9a4ae14809d470b222929bca",
+  "signature": "G",
+  "reviewedTeachingSnapshot": "3ddad580eadfea6b2a492c69cb6be12c57d334e2",
+  "androidCommit": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "completedBeforeDenial": "Entire request decoded (8343 lines, SHA256 5e729c0bec770cd913af0b5608f249fa50bd9a7aec68c8dc91476c61f5c67a44) and full final checkpoint JSON parsed; approved issue read. Historical checkpoint records not all freshly linguistically rereviewed. Current037 ledger, reconciliation/audit core, execution152 and all four complete original reports inspected. Original process overlaps, partial source lookups, initial disagreement and confirmation snapshot-verification limitations preserved. Dedicated content clean signedG c7ada33 and Android clean f9b59a2 verified. Starting scope saved early preserving full live history. Read native017/023 harness patterns, Android guidance and actual current snake teaching. No teaching, original evidence, runner or Android files changed; no reviewer or heavy process launched.",
+  "safeNextAction": "Approval-capable parent should resolve the EXACT denied execution153 device/port inspection without permission/configuration changes or disguised execution. Preserve this denial and resume SAME037, not038. Ownership evidence is time-sensitive: inspect actual devices and5580/5581 immediately before owned read-only API35 hostGPU/Vulkan-disabled launch. Prepare separate minimal037 fixture preserving017/023 originals. Exact signed c7ada33 full envelope Git archive must traverse production ContentSync ONCE; assert2793bdf7fa3bb180/1049kanji/5006words/69N1/problems0/accepted parser epoch. Obtain fresh native terminal per-case0, four production font-family lookalike probes for new component, actual PNG inspection and snake article viewport/reciprocal/systemBack/offline evidence. No preflight double parse, reduced archive or heap/guard relaxation. Stop only owned emulator and clean exact temporary assets. Then fresh037 RealContentTest3/RareHanTest1 with explicit verified JDK17/SDK in same one-worker shell, fresh XML/root/timestamps, and latestmain normalmerge/allcombined validation/signing/ownerfastforward/greenCI/every public ZIP runtime hash/terminal/issue gates before delivery. Public63/remaining1165 unchanged; physical-phone/general-release outstanding, not bounded-owner-testing veto. No retry/workaround,036XML reuse, unaccepted push,038 or second runner.",
+  "recordedAt": "2026-11-03T20:18:38.402084+01:00",
+  "issueUpdate": "https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6613255577",
+  "issueReceipt": "control/execution-153-issue-receipt.json"
+}

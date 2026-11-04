@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "batch": "026",
+  "status": "textual-review-closed-pending-fresh-acceptance",
+  "authoredSnapshot": "e6c59b6b80af44320f5a5cfe0a8cf0961643b8c1",
+  "reviewedTeachingSnapshot": "e6c59b6b80af44320f5a5cfe0a8cf0961643b8c1",
+  "scope": "Complete kanji/鶴.md and necessary words/鶴.md; correctness, scoped coverage and textual phone comprehensibility. All57 complete frozen families in three packets, four actual comparison kanji, six actual comparison words and current assigned guidance. No reused teaching changed.",
+  "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+  "originalReports": ["batch-026-initial-claude.md", "batch-026-initial-gpt.md"],
+  "originalExecutions": ["batch-026-initial-claude-execution.json", "batch-026-initial-gpt-execution.json"],
+  "verdicts": {
+    "kanji/鶴.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"},
+    "words/鶴.md": {"correctness": "CLEAN", "scopedCoverage": "CLEAN", "comprehensibility": "CLEAN"}
+  },
+  "findings": [],
+  "unresolvedConsequentialClaims": [],
+  "optional": [
+    {
+      "id": "C-O1",
+      "reviewer": "claude-opus-5.5",
+      "status": "optional",
+      "file": "kanji/鶴.md:42",
+      "proposal": "Sharpen the 確 comparison with its shared visible part and カク reading, without a phonetic-origin claim.",
+      "adjudication": "Actual 確 article retains カク and the shape comparison already distinguishes 石-left from 鳥-right. This is nonblocking mnemonic expansion, not an established defect or etymology. No new component glyph or reading claim added."
+    },
+    {
+      "id": "C-O2",
+      "reviewer": "claude-opus-5.5",
+      "status": "optional",
+      "file": "words/鶴.md:32",
+      "proposal": "Drop the hiragana rendering of クレーン.",
+      "adjudication": "The pronunciation is correct and the actual katakana loanword remains explicit, supported by fullJMdict1045280. Redundant kana is optional style, not an incorrect spelling or lexical classification. Preserve unchanged teaching."
+    },
+    {
+      "id": "C-O3",
+      "reviewer": "claude-opus-5.5",
+      "status": "optional",
+      "file": "kanji/鶴.md:38",
+      "proposal": "Add navigation from 折り鶴 to 折る or 折.",
+      "adjudication": "Actual 折る/おる article is the folding/breaking verb, not an おりづる word article. This incidental compound has complete spelling/reading evidence and no mapped support pair requiring an additional backlink. Optional constituent navigation, not a substitute lexical link or missing required reciprocal pair."
+    }
+  ],
+  "processDeviationDisposition": {
+    "status": "preserved-with-explicit-limits",
+    "maximumActiveReviewerProcesses": 1,
+    "reviewerProcesses": "Both exited0; complete first original report/execution archived before second launch on SAME unchanged signed snapshot. No author edits while either reviewer ran.",
+    "actualToolCalls": [31, 34],
+    "observedInternalOverlappingStarts": [2, 0],
+    "observedXmlRangeLimitViolations": [0, 0],
+    "detail": "Claude issued three guidance reads together: scoped instructions, content-format42-148 and JLPT1-160. Two overlapping starts against the one-call rule are observed and self-disclosed in its unchanged report. All assigned local ranges returned completely, no failed/truncated/unfinished tools. GPT had zero observed internal overlaps. This is serial reviewer processes, not fully serial internal calls.",
+    "remedy": "Preserve original process deviation; no false all-internal-serial or equal-depth certification. No missing assigned evidence, consequential claim or correction warrants a repeated full initial or unnecessary original-session confirmation."
+  },
+  "sourceDisposition": "FullJMdict1434130 establishes unrestricted鶴/つる crane-family noun, withツル re_nokanji kept distinct.1784750 recognizes both折り鶴/折鶴 withおりづる.2855588 is a separate poeticたず/たづ family, not a new metadata reading.2858035 supports specificカク allocation in鶴翼 military formation/literal wings, not unrestricted substitution.2079550 ordinary stork and rare2199110鸛鶴 do not turn普通つる into current stork synonym. Fullカク/つる/order/grade8/radical196 preserved. No nanori, inferred word level, name course, taxonomy or historical/phonetic-origin claim added.",
+  "externalEvidence": "Both initials received identical neutral actual-entry facts and coordinator rawHTML provenance for鶴/鶴翼/折鶴. Both independently fetched鶴 and returned identical relevant Daijisen crane/poetic and Seisenban crane-versus-stork bodies. GPT additionally fetched actual Seisenban鶴翼 literal/formation and折鶴 paper/crest definitions; empty Daijisen sections were not evidence. Claude relied on supplied facts plus full frozenJMdict for the latter two. Coordinator verified the actual returned headings/bodies from preserved raw executions. RawHTML hashes and simplified-return hashes are distinct; no unavailable gaiji or fresh EDRDG download claimed.",
+  "modelContributionComparison": "No unique/shared actionable teaching defect established in this matched two-file/all-three-facet sample. Claude supplied three optional expansion/style/navigation proposals; GPT supplied none. Equivalent compound-reading, shape and required-link observations across complete reports were considered. Unequal upstream lookup and internal process depth preclude general model ranking or equal-depth certification.",
+  "changedTeaching": [],
+  "originalSessionBoundedFollowups": 0,
+  "nativePending": [],
+  "fontDisposition": "All13 displayed Han in allthree unchangedbundledcmaps; no new missing glyph. Inherit acceptedpilot/all40/160 only unchanged production scope, not fresh native/phone certification.",
+  "android": "No fresh026 Gradle/native execution; dedicatedAndroidcleanunchangedf9b59a2. No025XMLreuse. Fresh non-skipped026Android3+1/latestmain/publication pending.",
+  "limits": "Bounded textual closure, not publication, native-speaker/physical-phone certification, larger-quiz/fallback certification or completeN1coverage. Required byte coverage/hashes do not establish comprehension or equal fresh-read depth.52/1228published,1176remaining;local53notdelivery. CompatibleAndroidf9b59a2+ required; physical-phone/general-release explicitlyoutstanding, not blanketowner-testingveto. Finalwhole-setreconciliation pending.",
+  "nextAction": "Sign textual closure evidence locally/checkpoint SAME026; then fresh non-skipped Android3+1 and all latestmain combined-tree/signing/ownerfastforward/greenCI/every immutable public ZIP runtime hash gates before publication or027."
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.github.stopcran.kanji.core.RealContentTest" tests="3" skipped="0" failures="1" errors="0" timestamp="2026-11-04T10:40:42.901Z" hostname="TRAIN" time="9.575">
+  <properties/>
+  <testcase name="hotelBookingDoesNotAcceptTheSchoolClassReadingWhenRepoPresent" classname="io.github.stopcran.kanji.core.RealContentTest" time="0.074"/>
+  <testcase name="completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent" classname="io.github.stopcran.kanji.core.RealContentTest" time="4.375"/>
+  <testcase name="parsesRealContentRepoWhenPresent" classname="io.github.stopcran.kanji.core.RealContentTest" time="5.126">
+    <failure message="java.lang.OutOfMemoryError: Java heap space" type="java.lang.OutOfMemoryError">java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.lang.StringUTF16.compress(StringUTF16.java:169)
+	at java.base/java.lang.StringUTF16.newString(StringUTF16.java:1173)
+	at java.base/java.lang.String.substring(String.java:2715)
+	at kotlinx.serialization.json.internal.StringJsonLexer.consumeKeyString(StringJsonLexer.kt:105)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeStringKey(StreamingJsonDecoder.kt:332)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeObjectIndex(StreamingJsonDecoder.kt:227)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeElementIndex(StreamingJsonDecoder.kt:178)
+	at io.github.stopcran.kanji.core.content.GrammarOption$$serializer.deserialize(Models.kt:185)
+	at io.github.stopcran.kanji.core.content.GrammarOption$$serializer.deserialize(Models.kt:185)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at kotlinx.serialization.encoding.CompositeDecoder.decodeSerializableElement$default(Decoding.kt:539)
+	at kotlinx.serialization.internal.CollectionLikeSerializer.readElement(CollectionSerializers.kt:80)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.readElement$default(CollectionSerializers.kt:51)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.merge(CollectionSerializers.kt:36)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.deserialize(CollectionSerializers.kt:43)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at io.github.stopcran.kanji.core.content.GrammarExercise$$serializer.deserialize(Models.kt:166)
+	at io.github.stopcran.kanji.core.content.GrammarExercise$$serializer.deserialize(Models.kt:166)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at kotlinx.serialization.encoding.CompositeDecoder.decodeSerializableElement$default(Decoding.kt:539)
+	at kotlinx.serialization.internal.CollectionLikeSerializer.readElement(CollectionSerializers.kt:80)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.readElement$default(CollectionSerializers.kt:51)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.merge(CollectionSerializers.kt:36)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

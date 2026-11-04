@@ -1,0 +1,1296 @@
+{
+  "schemaVersion": 1,
+  "coordinatorAuditCorrection": {
+    "path": "Sibling control/execution-168-review-audit-correction.json",
+    "failure": "Initial original-word comparison mixed Git CRLF with normalized read_text LF and stopped before writing closure records.",
+    "resolution": "Normalize comparison text only; complete coverage/process/source reconciliation then passed. Original reports and content bytes unchanged."
+  },
+  "execution": 168,
+  "batch": "039",
+  "status": "textual-review-closed-pending-native-and-fresh-acceptance",
+  "baseCommit": "29d6d9163153dd32787255056e969055f27f1fd5",
+  "authoredSnapshot": "9b21ba549417d25c54183a37e4f5cc35a2689638",
+  "reviewedTeachingSnapshot": "1133566c7a738c2f13b4b67afc4974fcba834c19",
+  "membership": [
+    "鴻"
+  ],
+  "teachingScope": [
+    "kanji/鴻.md",
+    "words/鴻.md",
+    "words/鴻鵠.md"
+  ],
+  "models": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "initialReports": [
+    "batch-039-initial-claude.md",
+    "batch-039-initial-gpt.md"
+  ],
+  "confirmationReports": [
+    "batch-039-confirmation-claude.md",
+    "batch-039-confirmation-gpt.md"
+  ],
+  "verdicts": {
+    "kanji/鴻.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "words/鴻.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "words/鴻鵠.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    }
+  },
+  "findings": [
+    {
+      "id": "C1",
+      "origin": "initial-claude",
+      "severity": "minor",
+      "facet": "scopedCoverage",
+      "file": "kanji/鴻.md",
+      "lines": [
+        22,
+        29
+      ],
+      "status": "withdrawn",
+      "claim": "Omission of the source-backed 江 phonetic origin might imply denial of a sound component.",
+      "evidence": "Kanjipedia鴻89-96 gives鳥+音符江; content-structure item4 permits labelled modern-shape mnemonic/structure-unclassified.",
+      "reconciliation": "Current disclaimer refers to its memory aid, not an absence of a historical phonetic component. Author deliberately adopts no historical analysis. Original Claude explicitly withdrew defect in dependent confirmation; historical expansion optional.",
+      "confidence": "High in source reading; original reviewer medium in required teaching impact."
+    },
+    {
+      "id": "G1",
+      "origin": "initial-gpt",
+      "severity": "minor",
+      "facet": "correctness",
+      "file": "words/鴻鵠.md",
+      "lines": [
+        4,
+        8,
+        15
+      ],
+      "status": "resolved",
+      "claim": "Large birds label can fit existing crane card; generic bird guard does not protect direct pair.",
+      "evidence": "Kanjipedia鴻鵠45-99 largebirds; Daijisenおおとり1755-1810 explicitlyツル; actual鶴 titlecrane(bird).",
+      "remedy": "Added鶴 to existing direct exclusions; no label/reading/body change or reciprocal metadata edit needed.",
+      "reconciliation": "Both original-session confirmations accept exact one-line fix without changed-passage regression.",
+      "confidence": "Medium-high original overlap; high correctly declared direct protection."
+    }
+  ],
+  "unresolvedConsequentialClaims": [],
+  "optional": [
+    {
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Add sourced historical/phonetic explanation.",
+      "disposition": "Valid source, permitted scope choice; do not turn labelled mnemonic into an unintended history claim."
+    },
+    {
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Add偉大directguard.",
+      "disposition": "Great-person noun versus greatness adjective remains partial overlap hypothesis; original Claude confirmation nonblocking, original GPT none."
+    },
+    {
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Include full classical proverb and reading.",
+      "disposition": "Existing source-attested phrase with translation answers literary recognition scope; no exhaustive classical-grammar requirement."
+    },
+    {
+      "origin": "initial-claude and confirmation-claude",
+      "status": "optional",
+      "claim": "Discuss Englishphoenix translations/possible鳳凰label overlap.",
+      "disposition": "Exact accepted text distinguishes species/mythological referents. Frozen expression gloss is not unrestricted lexical equivalence; later Claude explicitly no defect. Hypothesis retained, not frequency/taxonomy proof."
+    }
+  ],
+  "modelContributionScope": {
+    "verifiedUniqueDefects": [
+      {
+        "model": "gpt-6.1-sol",
+        "finding": "G1directcrane-labelguard"
+      }
+    ],
+    "shared": "Both accept source reading order/allocated selected keys/lexical boundaries/attestedphrase; both original confirmations accept G1fix.",
+    "unsupportedSuggestions": [
+      "C1required historical-origin expansion withdrawn; source itself remains valid."
+    ],
+    "limits": "Matched bounded sample, not general model ranking. Compare findings and optional/limits together; Claude broad optionalgreatness guard does not mention crane."
+  },
+  "reviewProcesses": [
+    {
+      "label": "initial-claude",
+      "model": "claude-opus-5.5",
+      "sessionId": "4e3768ab-58a4-46de-a768-3c04a97677ad",
+      "snapshot": "9b21ba549417d25c54183a37e4f5cc35a2689638",
+      "startedAt": "2026-11-03T22:50:53.7121740+01:00",
+      "completedAt": "2026-11-03T22:54:30.4373805+01:00",
+      "exitCode": 0,
+      "toolCalls": 54,
+      "overlappingStarts": 0,
+      "boundedAssignedScopeFullyReturned": true,
+      "coverage": [
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\鴻.md",
+          "requiredRange": [
+            1,
+            70
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鴻.md",
+          "requiredRange": [
+            1,
+            51
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鴻鵠.md",
+          "requiredRange": [
+            1,
+            62
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-039-input-metadata.json",
+          "requiredRange": [
+            1,
+            17
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-039-jmdict.xml",
+          "requiredRange": [
+            1,
+            319
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-039-comparison-jmdict.xml",
+          "requiredRange": [
+            1,
+            554
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-039-support-comparison-jmdict.xml",
+          "requiredRange": [
+            1,
+            229
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鳥.md",
+          "requiredRange": [
+            1,
+            42
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鶴.md",
+          "requiredRange": [
+            1,
+            36
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鷹.md",
+          "requiredRange": [
+            1,
+            34
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鳳凰.md",
+          "requiredRange": [
+            1,
+            56
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\動物.md",
+          "requiredRange": [
+            1,
+            33
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\生き物.md",
+          "requiredRange": [
+            1,
+            44
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\生物.md",
+          "requiredRange": [
+            1,
+            34
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\小鳥.md",
+          "requiredRange": [
+            1,
+            34
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\ぴよぴよ.md",
+          "requiredRange": [
+            1,
+            32
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\ちゅんちゅん.md",
+          "requiredRange": [
+            1,
+            31
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鷹揚.md",
+          "requiredRange": [
+            1,
+            44
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\偉大.md",
+          "requiredRange": [
+            1,
+            35
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\湖.md",
+          "requiredRange": [
+            1,
+            33
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\図鑑.md",
+          "requiredRange": [
+            1,
+            33
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\紅.md",
+          "requiredRange": [
+            1,
+            50
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\鳴.md",
+          "requiredRange": [
+            1,
+            51
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\島.md",
+          "requiredRange": [
+            1,
+            43
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\鳥.md",
+          "requiredRange": [
+            1,
+            47
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\鶴.md",
+          "requiredRange": [
+            1,
+            46
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\鷹.md",
+          "requiredRange": [
+            1,
+            47
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\鳳.md",
+          "requiredRange": [
+            1,
+            70
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\.github\\copilot-instructions.md",
+          "requiredRange": [
+            1,
+            244
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\.github\\instructions\\content-structure.instructions.md",
+          "requiredRange": [
+            1,
+            85
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\jlpt-levels.md",
+          "requiredRange": [
+            1,
+            401
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\content-format.md",
+          "requiredRange": [
+            42,
+            148
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-kou.html",
+          "requiredRange": [
+            1760,
+            1840
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-hishikui.html",
+          "requiredRange": [
+            1740,
+            1785
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-oogari.html",
+          "requiredRange": [
+            1733,
+            1774
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-koukoku.html",
+          "requiredRange": [
+            1740,
+            1810
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-koumou.html",
+          "requiredRange": [
+            1750,
+            1810
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-ootori.html",
+          "requiredRange": [
+            1755,
+            1810
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-kanjipedia-kou.html",
+          "requiredRange": [
+            45,
+            160
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-kanjipedia-koukoku.html",
+          "requiredRange": [
+            45,
+            99
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-kanjipedia-koukoku-kokorozashi.html",
+          "requiredRange": [
+            45,
+            99
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-kanjipedia-koku.html",
+          "requiredRange": [
+            55,
+            145
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-kanjipedia-proverb.html",
+          "requiredRange": [
+            45,
+            99
+          ],
+          "fullyReturned": true
+        }
+      ],
+      "observedOverlaps": [],
+      "xmlRangeLimitViolations": [],
+      "reportSha256": "c916053bfedd34fbfcf55bd19833df206fa249111729d102cf83d894f58ba839",
+      "rawExecutionSha256": "1b9b8418fa5a0a3ad8211b5a238d6b2aa6ecf18141bfcfe1a5cd6d793fcd2556",
+      "lookupLimits": []
+    },
+    {
+      "label": "initial-gpt",
+      "model": "gpt-6.1-sol",
+      "sessionId": "3c867214-22a0-41bf-9ed8-b14c1c52d533",
+      "snapshot": "9b21ba549417d25c54183a37e4f5cc35a2689638",
+      "startedAt": "2026-11-03T22:54:43.4999199+01:00",
+      "completedAt": "2026-11-03T22:58:54.2444888+01:00",
+      "exitCode": 0,
+      "toolCalls": 53,
+      "overlappingStarts": 0,
+      "boundedAssignedScopeFullyReturned": true,
+      "coverage": [
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\鴻.md",
+          "requiredRange": [
+            1,
+            70
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鴻.md",
+          "requiredRange": [
+            1,
+            51
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鴻鵠.md",
+          "requiredRange": [
+            1,
+            62
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-039-input-metadata.json",
+          "requiredRange": [
+            1,
+            17
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-039-jmdict.xml",
+          "requiredRange": [
+            1,
+            319
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-039-comparison-jmdict.xml",
+          "requiredRange": [
+            1,
+            554
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-039-support-comparison-jmdict.xml",
+          "requiredRange": [
+            1,
+            229
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鳥.md",
+          "requiredRange": [
+            1,
+            42
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鶴.md",
+          "requiredRange": [
+            1,
+            36
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鷹.md",
+          "requiredRange": [
+            1,
+            34
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鳳凰.md",
+          "requiredRange": [
+            1,
+            56
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\動物.md",
+          "requiredRange": [
+            1,
+            33
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\生き物.md",
+          "requiredRange": [
+            1,
+            44
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\生物.md",
+          "requiredRange": [
+            1,
+            34
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\小鳥.md",
+          "requiredRange": [
+            1,
+            34
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\ぴよぴよ.md",
+          "requiredRange": [
+            1,
+            32
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\ちゅんちゅん.md",
+          "requiredRange": [
+            1,
+            31
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鷹揚.md",
+          "requiredRange": [
+            1,
+            44
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\偉大.md",
+          "requiredRange": [
+            1,
+            35
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\湖.md",
+          "requiredRange": [
+            1,
+            33
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\図鑑.md",
+          "requiredRange": [
+            1,
+            33
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\紅.md",
+          "requiredRange": [
+            1,
+            50
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\鳴.md",
+          "requiredRange": [
+            1,
+            51
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\島.md",
+          "requiredRange": [
+            1,
+            43
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\鳥.md",
+          "requiredRange": [
+            1,
+            47
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\鶴.md",
+          "requiredRange": [
+            1,
+            46
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\鷹.md",
+          "requiredRange": [
+            1,
+            47
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\鳳.md",
+          "requiredRange": [
+            1,
+            70
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\.github\\copilot-instructions.md",
+          "requiredRange": [
+            1,
+            244
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\.github\\instructions\\content-structure.instructions.md",
+          "requiredRange": [
+            1,
+            85
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\jlpt-levels.md",
+          "requiredRange": [
+            1,
+            401
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\content-format.md",
+          "requiredRange": [
+            42,
+            148
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-kou.html",
+          "requiredRange": [
+            1760,
+            1840
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-hishikui.html",
+          "requiredRange": [
+            1740,
+            1785
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-oogari.html",
+          "requiredRange": [
+            1733,
+            1774
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-koukoku.html",
+          "requiredRange": [
+            1740,
+            1810
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-koumou.html",
+          "requiredRange": [
+            1750,
+            1810
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-ootori.html",
+          "requiredRange": [
+            1755,
+            1810
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-kanjipedia-kou.html",
+          "requiredRange": [
+            45,
+            160
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-kanjipedia-koukoku.html",
+          "requiredRange": [
+            45,
+            99
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-kanjipedia-koukoku-kokorozashi.html",
+          "requiredRange": [
+            45,
+            99
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-kanjipedia-koku.html",
+          "requiredRange": [
+            55,
+            145
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-kanjipedia-proverb.html",
+          "requiredRange": [
+            45,
+            99
+          ],
+          "fullyReturned": true
+        }
+      ],
+      "observedOverlaps": [],
+      "xmlRangeLimitViolations": [],
+      "reportSha256": "5da2f95d319cbab4b97035367c58892b29b732e951e50447632041a5c2c99f2d",
+      "rawExecutionSha256": "5d61da0a63e47590013e4ec1b94cd1421b4f62dffb4fda4610c66f9694bfee17",
+      "lookupLimits": []
+    },
+    {
+      "label": "confirmation-claude",
+      "model": "claude-opus-5.5",
+      "sessionId": "4e3768ab-58a4-46de-a768-3c04a97677ad",
+      "snapshot": "1133566c7a738c2f13b4b67afc4974fcba834c19",
+      "startedAt": "2026-11-03T23:01:58.2587164+01:00",
+      "completedAt": "2026-11-03T23:02:52.0395104+01:00",
+      "exitCode": 0,
+      "toolCalls": 10,
+      "overlappingStarts": 1,
+      "boundedAssignedScopeFullyReturned": true,
+      "coverage": [
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鴻鵠.md",
+          "requiredRange": [
+            1,
+            62
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鶴.md",
+          "requiredRange": [
+            1,
+            36
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\content-format.md",
+          "requiredRange": [
+            128,
+            148
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-kanjipedia-koukoku.html",
+          "requiredRange": [
+            45,
+            99
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-ootori.html",
+          "requiredRange": [
+            1755,
+            1810
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\鴻.md",
+          "requiredRange": [
+            1,
+            70
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\.github\\instructions\\content-structure.instructions.md",
+          "requiredRange": [
+            40,
+            47
+          ],
+          "fullyReturned": true
+        }
+      ],
+      "observedOverlaps": [
+        {
+          "starting": "toolu_015aReHrHNwYDA6riGfxZyp5",
+          "alreadyActive": [
+            "toolu_01EPn8rVyWftgjzGnWTyTy8S"
+          ]
+        }
+      ],
+      "xmlRangeLimitViolations": [],
+      "reportSha256": "ca2d53bdfe10da9bbb4cad190285ce32a335b446531d8ba3077f7ab10873076e",
+      "rawExecutionSha256": "40fa99febc98f8afa2e45505744cdbfe7da7479d36240d77f501daaf2bf9b8e1",
+      "lookupLimits": []
+    },
+    {
+      "label": "confirmation-gpt",
+      "model": "gpt-6.1-sol",
+      "sessionId": "3c867214-22a0-41bf-9ed8-b14c1c52d533",
+      "snapshot": "1133566c7a738c2f13b4b67afc4974fcba834c19",
+      "startedAt": "2026-11-03T23:03:02.2734306+01:00",
+      "completedAt": "2026-11-03T23:04:01.7507043+01:00",
+      "exitCode": 0,
+      "toolCalls": 7,
+      "overlappingStarts": 0,
+      "boundedAssignedScopeFullyReturned": true,
+      "coverage": [
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鴻鵠.md",
+          "requiredRange": [
+            1,
+            62
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\鶴.md",
+          "requiredRange": [
+            1,
+            36
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\content-format.md",
+          "requiredRange": [
+            128,
+            148
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-kanjipedia-koukoku.html",
+          "requiredRange": [
+            45,
+            99
+          ],
+          "fullyReturned": true
+        },
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-039-ootori.html",
+          "requiredRange": [
+            1755,
+            1810
+          ],
+          "fullyReturned": true
+        }
+      ],
+      "observedOverlaps": [],
+      "xmlRangeLimitViolations": [],
+      "reportSha256": "b37e719bf55b97205bcedbcc17a12804b43e64d83eae16676dcbf0cda7ebfe7f",
+      "rawExecutionSha256": "2535f99996fceecbb37efbfef10147d2d8d360d61a5f34a89b4902ad11cb8de5",
+      "lookupLimits": []
+    }
+  ],
+  "processDeviationDisposition": {
+    "maximumActiveReviewerProcesses": 1,
+    "actualToolCalls": [
+      54,
+      53,
+      10,
+      7
+    ],
+    "observedInternalOverlappingStarts": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "observedXmlRangeLimitViolations": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "detail": "Four isolated read-only processes exited0 serially, each complete report archived before next launch. Actual models and same-session confirmations verified. Both blind initials cover3teaching/47families/8rawcharacters/21comparisons/guidance/11suppliedHTML sections. Both initials and GPT confirmation have0internal overlaps; Claude confirmation's glob/view overlap preserved, not serial internal-tool compliance. Origin-rule reread limits explicit."
+  },
+  "validation": {
+    "batch": "039",
+    "baseCommit": "29d6d9163153dd32787255056e969055f27f1fd5",
+    "draftKanji": 1,
+    "newWords": 2,
+    "changedReusedArticles": 0,
+    "requiredReciprocalPairs": 2,
+    "activatedBaselinePairs": 0,
+    "readingDispositions": 5,
+    "curatedOfferedKeys": 2,
+    "sourceOnlyOfferedKeys": 0,
+    "dictionaryFamilies": 47,
+    "exactBaseRuntimePreservedOutsideRecordedChanges": true,
+    "manifestFresh": true,
+    "contentVersion": "c4a6ef110afd61ee",
+    "limits": "Local draft checkpoint, not independently reviewed or published. Full five-reading order and both exact accepted tiger/monkey guards preserved; two selected keys/two necessary support articles/two reciprocal pairs. Current taxonomy and exhaustive classical grammar not claimed. No fresh Android/native, public CI/ZIP or physical-phone claim. Public65/1228 and1163remaining unchanged. CompatibleAndroidf9b59a2+; pilot/all40/160 inherited unchanged-production scope only. New missing authored glyphs require supported native disposition before acceptance. Physical-phone/general-release explicitly outstanding, not a blanket owner-testing veto. Final whole-set acceptance pending. Mechanical source/baseline/cmap audit, not linguistic closure. Historical no-draft audits intentionally not re-executed against this later draft.",
+    "schemaVersion": 1,
+    "execution": 168,
+    "stage": "fresh-source-audit-pending-review-evidence-closure",
+    "frozenInputHashesVerified": 5,
+    "decompressedDictionaryHashesVerified": 2,
+    "freshExactDictionaryExtractions": 3,
+    "dictionaryPackets": [
+      {
+        "path": "batch-039-jmdict.xml",
+        "families": 17,
+        "lines": 319,
+        "sha256": "3ecbbb797f49c92145b4134207cb4d1953025c9b167f3a38ee6c1eced02ac410"
+      },
+      {
+        "path": "batch-039-comparison-jmdict.xml",
+        "families": 20,
+        "lines": 554,
+        "sha256": "de3765d3825eb468bd6376125d9b9363b86096b079e7e26f5a04744ed59292de"
+      },
+      {
+        "path": "batch-039-support-comparison-jmdict.xml",
+        "families": 10,
+        "lines": 229,
+        "sha256": "897b70fd5e99acb9f204a167344d19883f4d30186da45204635bb083e35d250d"
+      }
+    ],
+    "rawCharacterRecords": 8,
+    "originalBaselineMetadataAndStrokesPreserved": {
+      "kanji": 985,
+      "words": 4942,
+      "strokes": 985
+    },
+    "baselineMetadataExceptions": {
+      "words/虎.md": [
+        "酔っ払い"
+      ],
+      "words/猿.md": [
+        "馬鹿"
+      ]
+    },
+    "exactLocalAdditionMembership": [
+      "乃",
+      "亀",
+      "凸",
+      "凹",
+      "幹",
+      "彗",
+      "扱",
+      "杉",
+      "李",
+      "杏",
+      "松",
+      "柚",
+      "柳",
+      "栗",
+      "栞",
+      "桂",
+      "桃",
+      "桐",
+      "桑",
+      "梅",
+      "梓",
+      "梢",
+      "梨",
+      "椋",
+      "椎",
+      "椿",
+      "楓",
+      "楠",
+      "榛",
+      "樹",
+      "橘",
+      "氏",
+      "漱",
+      "熊",
+      "猪",
+      "猿",
+      "獣",
+      "畔",
+      "畝",
+      "矛",
+      "稲",
+      "穂",
+      "笹",
+      "繭",
+      "芋",
+      "苗",
+      "莉",
+      "菊",
+      "虎",
+      "蚊",
+      "蚕",
+      "蛇",
+      "蛍",
+      "蝶",
+      "豚",
+      "鮎",
+      "鯉",
+      "鯛",
+      "鯨",
+      "鳩",
+      "鳳",
+      "鴻",
+      "鶏",
+      "鶴",
+      "鷹",
+      "鹿"
+    ],
+    "currentKanjiIncludingDrafts": 1051,
+    "currentWordsIncludingDrafts": 5009,
+    "n1LabelledIncludingDrafts": 71,
+    "sourceMembersPresentIncludingDrafts": 70,
+    "newDirectWordExclusionPairs": 11,
+    "exactWordChoiceLabels": [
+      {
+        "word": "鴻",
+        "label": "bean goose",
+        "excludedWord": "鳥",
+        "excludedLabel": "bird"
+      },
+      {
+        "word": "鴻",
+        "label": "bean goose",
+        "excludedWord": "動物",
+        "excludedLabel": "animal"
+      },
+      {
+        "word": "鴻",
+        "label": "bean goose",
+        "excludedWord": "生き物",
+        "excludedLabel": "living thing; creature"
+      },
+      {
+        "word": "鴻",
+        "label": "bean goose",
+        "excludedWord": "生物",
+        "excludedLabel": "living thing; organism; biology"
+      },
+      {
+        "word": "鴻",
+        "label": "bean goose",
+        "excludedWord": "鴻鵠",
+        "excludedLabel": "large birds; great person"
+      },
+      {
+        "word": "鴻鵠",
+        "label": "large birds; great person",
+        "excludedWord": "鳥",
+        "excludedLabel": "bird"
+      },
+      {
+        "word": "鴻鵠",
+        "label": "large birds; great person",
+        "excludedWord": "動物",
+        "excludedLabel": "animal"
+      },
+      {
+        "word": "鴻鵠",
+        "label": "large birds; great person",
+        "excludedWord": "生き物",
+        "excludedLabel": "living thing; creature"
+      },
+      {
+        "word": "鴻鵠",
+        "label": "large birds; great person",
+        "excludedWord": "生物",
+        "excludedLabel": "living thing; organism; biology"
+      },
+      {
+        "word": "鴻鵠",
+        "label": "large birds; great person",
+        "excludedWord": "鴻",
+        "excludedLabel": "bean goose"
+      },
+      {
+        "word": "鴻鵠",
+        "label": "large birds; great person",
+        "excludedWord": "鷹揚",
+        "excludedLabel": "magnanimous; composed"
+      },
+      {
+        "word": "鴻鵠",
+        "label": "large birds; great person",
+        "excludedWord": "鶴",
+        "excludedLabel": "crane (bird)"
+      }
+    ],
+    "strokeAndFontRecord": "batch-039-review-stroke-audit.json",
+    "authoredTextHan": 29,
+    "authoredTextHanInAllThreeFonts": 28,
+    "allAuthoredAndComparisonHan": 148,
+    "inheritedMissingBundledGlyphs": [
+      "凰"
+    ],
+    "newFallbackNativePending": [],
+    "externalNamedEntryReceiptsVerified": 11,
+    "publishedAdditions": 65,
+    "remainingAdditions": 1163,
+    "budget": {
+      "files": 8251,
+      "entries": 8266,
+      "retainedBytes": 43821244,
+      "inflatedBytes": 44089527,
+      "localZipBytes": 29995279,
+      "listeningTaskMediaBytes": 5893602
+    },
+    "pythonTests": {
+      "passed": 361,
+      "failures": 0,
+      "errors": 0
+    },
+    "validationLogs": {
+      "python-tests": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-168-python-tests.txt",
+        "sha256": "4bb93bcdf59dafbc93c26ea771f4c43a730272687c5b0a378afc48a37d3de363",
+        "exitCode": 0
+      },
+      "validate": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-168-validate.txt",
+        "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+        "exitCode": 0
+      },
+      "vocabulary": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-168-vocabulary.txt",
+        "sha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38",
+        "exitCode": 0
+      },
+      "manifest": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-168-manifest.txt",
+        "sha256": "c9902228e1b4ae4b6ab6c585fd643f7041cde6998685b79262e2fda8ee617c9b",
+        "exitCode": 0
+      },
+      "budget": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-168-budget.txt",
+        "sha256": "f8cf27ee41149df6d8fb8fa786f5406e923cd4c8f6285a1811f182724b4910fa",
+        "exitCode": 0
+      }
+    },
+    "reviewersLaunched": 0,
+    "freshAndroidOrNativeClaimed": false,
+    "authorAuditCorrection": {
+      "path": "control/execution-167-audit-correction.json",
+      "sha256": "dd795de504e5b38d2e31fc4c17206b315c436975d48d5d4624434792bf1832f8",
+      "status": "Original failed contains-character/exact-spelling assertion retained; corrected complete source-family audit passed."
+    },
+    "generationConsoleFailure": "Initial standard generator UnicodeEncodeError on cp1252 after writing file; actual exception/command preserved in control/execution-167-console-encoding-correction.json. Ordinary process-scoped UTF-8 continuation and exact pinned JSON equality checked; no permission/signing failure or workaround."
+  },
+  "nativePending": [],
+  "nativeVisualAcceptancePending": true,
+  "limits": "Textual closure only; no fresh039Android/native/currentmain/CI/publicZIP/phone acceptance or publication. Two blind different-family initials on same snapshot and both original-session dependent confirmations. All assigned initials returned; hashes establish bytes, not comprehension. Supplied frozen dictionary evidence only. Actual54/53/10/7calls and0/0/1/0overlaps retained; Claude confirmation self-disclosed glob/view overlap. Confirmation prompt targeted content-structure40-47, not actual origin rule50-55; Claude explicitly relied on full initial guidance/context for that rule. No fresh origin-rule reread claimed. Original C1coverage finding withdrawn under the actual explicit labelled-mnemonic contract; source's historical explanation still valid, not adopted or disproved. G1direct crane/large-bird quiz guard resolved; no unrestricted substitution or transitive clique claimed. No new missing authored glyph, inherited凰 only; actual039native/viewport evidence pending. Pilot/all40/160 unchangedproduction scope only. Both exact虎/猿baseline guards and165/166/167source/console/audit/range correction histories preserved. Remaining1163additions and final whole-set acceptance pending; phone/generalrelease explicitly outstanding.",
+  "nextAction": "Resume SAME039 textual closure at saved signed evidence HEAD, reviewed teaching1133566c7a738c2f13b4b67afc4974fcba834c19. No040 or publication before fresh acceptance. Preserve all four original reports and actual54/53/10/7calls,0/0/1/0internal overlaps; Claude confirmation inherited origin-rule text after mistakenly targeted40-47 range. C1origin withdrawn as defect, optional source-backed expansion; G1direct crane guard resolved by BOTH original reviewers. No consequential textual claim remains. No new missing authored glyph; inherited凰 disposition is prior038 evidence, not fresh039 acceptance. Fresh non-skipped039RealContentTest3/RareHanTest1 against actual dedicated sibling with explicit verifiedJDK17/SDK, one worker, no parallel, rerun tasks and quoted in-process compiler; inspect fresh XML names/root/time/counts/skips/errors/failures. Obtain actual applicable039native/article/reciprocal/systemBack/offline/visual evidence; preserve original native fixtures, full exact signed Git archive through productionContentSyncONCE when imported, no duplicate preflight parse or payload reduction, fresh device/port safety check before owned read-onlyAPI35hostGPU/Vulkan-disabled emulator. Actual terminalcase0 and images separate from automated assertions; clean exact temporary assets/sources and stop only owned emulator. Necessary original bounded visual confirmation before acceptance. Then latestmain normalnonrewritingmerge/source/baseline/both exact虎猿guards/readings/links/strokes/fonts/361Python/validator/vocabulary/freshmanifest/originalbudgets/normal signing/owner fastforward/remoteSHA/greenCI/everyimmutablepublicZIPruntimehash/terminalreceipt/ownerissue60 before publication or040. Actual permission denial or signing wait preserve/report/yield, no retries/workarounds/configuration changes. No鵠/江/雁/鵬card, extra鴻毛 support, author agents, secondrunner, unreviewedpush, heap/guardchanges. Public65/1228,1163remaining; compatibleAndroidf9b59a2+; physicalphone/generalrelease explicitly outstanding.",
+  "nativeVisualFollowup": {
+    "execution": 171,
+    "record": "batch-039-native-acceptance.json",
+    "report": "batch-039-visual-claude.md",
+    "status": "bounded-native-visual-and-freshAndroid-reconciled-local-unpublished",
+    "scope": "OriginalClaude same-session bounded visual; two-family textualclosure inherited, runtimeunchanged.",
+    "result": "No actionable visual defect in ten actual image returns. OriginalClaude actualclaude-opus-5.5/14successfulserialcalls/0overlaps/0unfinished; two ownreports, exact195-244fixture range and tenviews verified.",
+    "native": "Failedattempt1terminal0/-2 preserved; soleline214awaitCommonwords instead of offscreenArticlecontents. Acceptedattempt2terminal0/0,noskips;16hasGlyphprobes/fourdistinctstylesPER鴻鵠紅鳴;fullContentSyncONCE1051kanji/5009words/71N1/versionc4a6ef110afd61ee/problems0/epoch1;offline/two reciprocal links/systemBack.",
+    "android": "Freshsame039RealContentTest3/RareHanTest1 exactXMLnames/timestamps/sourcecopyhashes/fixtureRoot verified; errors/failures/skips0, clean dedicatedAndroid. No171unit/native rerun.",
+    "limits": "Earlier pending fields remain textualclosure/collection history. Dated171supersedes only bounded nativevisual/freshAndroid gate; original reports/process/source limits unchanged. Original1080x2400 and returned900x2000 separate; clipped/offscreen table/fullarticles notcertified. Publication/currentmain/CI/publicZIP/phone outstanding."
+  }
+}
