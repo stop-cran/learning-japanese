@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "execution": 279,
+  "batch": "052",
+  "recordedAt": "2026-11-04T16:19:17.986450+01:00",
+  "status": "source-prepared-not-drafted",
+  "baseCommit": "77e9ccf2b86dce58abc09e5eb3c399e79320fe37",
+  "membership": [
+    "弐"
+  ],
+  "sourceRow": 323,
+  "sourceAudit": "batch-052-preparation-audit.json",
+  "sourceAuditSha256": "ac9cf52cfccb5609cef5b29a37959906ea413fb69cbc57b9debc6881c02ba314",
+  "sourceAuditImplementation": {
+    "adapter": "control/execution-279-source.py",
+    "adapterSha256": "c85a9c98296c0deafa2de7080b61bbccbe6d17e27e06b1dcd510798665cf84e0",
+    "reusedAudit": "control/execution-209-source.py",
+    "reusedAuditSha256": "91a676913d826227b28202e9b8d0e25e0e6d9215870766452fa126c9da6fd006",
+    "scope": "Complete existing frozen-input/exact-family-extraction/raw-metadata/membership/baseline/exclusions/runtime-manifest and all-payload-hash audit with explicit052 identities/counts; no runtime-tool change."
+  },
+  "integration": {
+    "originMain": "77e9ccf2b86dce58abc09e5eb3c399e79320fe37",
+    "startingHead": "77e9ccf2b86dce58abc09e5eb3c399e79320fe37",
+    "fetchAndNonRewritingMerge": "Fresh fetch; already up to date; no conflicts or teaching change."
+  },
+  "authorInspection": {
+    "lexicalFamilies": 6,
+    "comparisonFamilies": 10,
+    "distinctCompleteFamilies": 16,
+    "remainingExtractedFamiliesPending": 0,
+    "lexicalReturnedRanges": [
+      [
+        1,
+        158
+      ]
+    ],
+    "comparisonReturnedRanges": [
+      [
+        1,
+        170
+      ],
+      [
+        171,
+        328
+      ]
+    ],
+    "rawCharacterRecords": 9,
+    "rawCharacterRecordRequestedRanges": [
+      [
+        1,
+        55
+      ],
+      [
+        56,
+        62
+      ]
+    ],
+    "rawCharacterRecordReadBoundary": "The first response returns the complete header/index and five complete escaped XML records 一/壱/三/参/式 through line55. The second returns 二/弐/武/弋 and the closing braces through actualEOF61. No truncation marker or recovery gap; requested line62 is beyond actualEOF and is not counted as returned.",
+    "completeExistingArticlesRead": [
+      "kanji/二.md",
+      "kanji/式.md",
+      "kanji/武.md",
+      "kanji/一.md",
+      "kanji/三.md",
+      "kanji/参.md",
+      "words/二.md",
+      "words/二つ.md",
+      "words/式.md"
+    ],
+    "candidateNavigation": "All eight guarded probes and family counts are recorded in membership. Current kanji/words/articles searches found no 弐/弍/貳/貮 occurrence. Baseline declared 弐word pairs are empty. Existing words/二.md primaryにN5 matches the shared numeral family; words/二つ.md primaryふたつN5 is a different spelling of the native count. Neither currently teaches 弐. Missing formal-number/comparison cards are not extra assignments.",
+    "limits": "All16 complete frozen families, nine raw character records and nine existing articles returned and coordinator-inspected. Parallel coordinator calls are not reviewer serialization evidence. No Japanese dictionary/legal-document heading, per-character rare-reading allocation, frequency, etymology or native-rendering certification. Complete applicable families for every incidental word in unchanged comparison articles were not freshly extracted; no full re-review of those articles is asserted."
+  },
+  "checks": [
+    {
+      "check": "source-audit",
+      "command": "python -X utf8 -B ..\\control\\execution-279-source.py audit",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-279-source-audit.txt",
+      "sha256": "94be189c4ea4994fab7f1477d4789a3f38ca40cbe2df35bd5ca9df9d9380391e",
+      "exitCode": 0
+    },
+    {
+      "check": "extraction-tests",
+      "command": "python -X utf8 -B -m unittest discover -s tools -p test_extract_n1_jmdict.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-279-extraction-tests.txt",
+      "sha256": "f7dc1c65d9bf1c31f1cb9a0be1fc0c0840290cbe7f978a8864c6557dbd2fbb5e",
+      "exitCode": 0
+    },
+    {
+      "check": "validate",
+      "command": "python -X utf8 -B tools\\validate.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-279-validate.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "exitCode": 0
+    },
+    {
+      "check": "manifest",
+      "command": "python -X utf8 -B tools\\build_manifest.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-279-manifest.txt",
+      "sha256": "2d96b7738e3c21d5877a88fa37a8daafa5e5eb14e611cae59f0d6bc32ed29ab9",
+      "exitCode": 0
+    }
+  ],
+  "sourceReadingOrder": {
+    "onyomi": [
+      "ニ",
+      "ジ"
+    ],
+    "kunyomi": [
+      "ふた.つ",
+      "そえ"
+    ]
+  },
+  "baselineMetadataExceptions": {
+    "words/虎.md": [
+      "酔っ払い"
+    ],
+    "words/猿.md": [
+      "馬鹿"
+    ]
+  },
+  "frozenInputHashesVerified": 5,
+  "decompressedDictionaryHashesVerified": 2,
+  "allRuntimePayloadHashesVerified": 8281,
+  "runtimeManifestFreshAndUnchanged": true,
+  "contentVersion": "a90e66e16d24c25d",
+  "runtimeChanges": 0,
+  "reviewersLaunched": 0,
+  "freshAndroidOrNativeClaimed": false,
+  "publishedAdditions": 78,
+  "remainingAdditions": 1150,
+  "currentCounts": {
+    "kanji": 1063,
+    "words": 5021,
+    "n1Labels": 83,
+    "namedSourceMembers": 82,
+    "separateException": "妖"
+  },
+  "acquisitionBoundary": "Complete15296-line authorized request through actualEOF/final closing brace acquired before task action, including historical reports/limits. Prior compaction retains1-9000acquisition; current coordinator acquired9001-15296. BeyondEOF requests15341/15521/15701returned errors and are not extra evidence. Complete approved issue reacquired1-129. No source/reviewer truncation or new tool-permission denial.",
+  "dictionaryAttribution": "Copyright James William Breen and EDRDG; CC BY-SA4.0; frozen source versions/hashes/license references in docs/n1-source-snapshot.json.",
+  "nextAction": "Resume SAME052 source-prepared 弐 at the saved normally signed LOCAL checkpoint; not a runtime draft/publication. Read complete authorized request/finalcheckpoint and scoped live keys; preserve FULL history. Six lexical158lines plus ten comparison328lines=16complete frozenJMdictfamilies, nine rawKANJIDIC2records and nine actual existingarticles coordinator-inspected. No readtruncation; metadata1-55/56-61actualEOF, requested62notreturned. Exact frozenmember/sourceRow323; fullorderedニ,ジ/ふた.つ,そえ/grade8/sixstrokes/canonical弋56 versus alternativeNelson1 preserved. Qualify actualJapanese 弐ニformalspelling/documentaryuse, ジ/弐心じしんobsolete-reading versus otherreadings, 弐つふたつold/legal-document spelling and そえ. No sixfamilyそえexample; 副弐ふくじsecondary/backup gloss is NOTそえevidence. No unrestrictedalias/reading substitution, modernlegalmandate/frequency/fraudhistory/etymology claim. Existing 二にN5 is same1461140numeralfamily reusecandidate; inspect narrow alternative-spelling/backlink rather than automatically duplicating 弐wordarticle. Preserve 二identity/reading/level/writtenkanji[二]; 二つふたつN5 remains ordinary nativecount,not proof that弐つis everyday. No supportedit/quizsubsetfinalized. Do not make 二two and 弐two competing defensibleanswers via differenttitlewording; inspect exactkanji/supportlabels/allsecondarysenses and any directguards. No baseline declared弐pair/current弐occurrence; explicitlyenumerate all chosen support/activated/reciprocalpairs including any二reuse. Fetch/inspect pinnedKanjiVG70a0b7ae05f10SVG/blobce4c1e63aee4718397fbec58107d49ffbbc956a8/3270bytes/sixpaths expected, reconcilecanonicalradical/visibleoutline before unchangedconverter; allnewHanfontaudit/actualnativefallback ifneeded. Cmap/inventory notreadability. No053 orsecondrunner. All5frozeninputs/2decompressedhashes/fresh16familyextraction/baseline985kanji4942words985strokes/exactoriginal虎[酔っ払い]/猿[馬鹿]guards/runtime8281hashes/unchangedfresha90e66e16d24c25dmanifest pass; fiveextractiontests/validatorpass. No accepted051reviews/Android/native rerun or newpublication. Afterqualification/draft: two serialblind differentactualfamily initials samefrozenteaching/allnewchangedsupport; oneactivereviewer/serialinternaltools/archiveactualprocess-model-readlimits/originalreports/evidencereconciliation. Applicable freshnon-skippedAndroid/native/originalvisual/latestmainnormalmerge/allcombinedchecks/originalbudgets/normalsigning/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 BEFORE countingdelivery. Preserve049HOSTOOM/approved1GiBHOST-onlyheadroom, notnativeheapincrease. No permissionworkaround/signingretry; preserve/report/yield. Public78/1228,1150remaining;1063kanji5021words83N1labels82namedmembersplusseparate妖; compatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-setoutstanding. Overalltaskincomplete.",
+  "limits": "Source preparation only, not draft, independent review, native rendering or publication. All raw metadata/order and baseline/exclusion/runtime invariants remain unchanged. No Japanese/legal-heading verification, frequency/etymology claim, selected quiz keys or finalized support edits. No reviewer/Android/native/push/publication/053/secondrunner. Published78/1228,1150remaining; compatible Androidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding."
+}
