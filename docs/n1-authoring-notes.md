@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 046: qualified source, not drafted
+## Batch 046: local unreviewed draft
 
 [Batch 046](n1-sources/batch-046-progress.json) bounds the next addition to
 **酉**, frozen source row 1105, on accepted published base `d76f2dd`.
@@ -53,8 +53,8 @@ The [dictionary evidence](n1-sources/batch-046-dictionary-evidence.json)
 records eight exact Japanese dictionary sections across seven raw pages.
 Standalone **酉 とり** is verified; the character heading explicitly allocates
 **ユウ** in **辛酉 しんゆう**, also read **かのととり**.
-One necessary `words/酉.md` sign article and sole kun practice are proposed,
-not authored. ユウ remains corroborated recognition, not source-only,
+One necessary `words/酉.md` sign article and sole kun practice are drafted,
+not independently reviewed. ユウ remains corroborated recognition, not source-only,
 obsolete or name-only. The historical hour has multiple dictionary
 mappings; its west and lunar-eighth-month senses do not make 酉 a replacement
 for ordinary 西 or Gregorian August. Raw KANJIDIC2 radical-name
@@ -63,15 +63,29 @@ preserve the raw string rather than silently correcting it or teaching it as
 established. **とりへん** is verified as a positional component name.
 The alcohol sense of the whole expression 日読みの酉 does not make the
 standalone sign noun an ordinary word for alcohol.
-Pinned KanjiVG geometry verifies seven paths and an external unchanged-converter
-candidate, plus six-path 西 for modern-shape comparison. Its extra interior
+Pinned KanjiVG geometry verifies seven paths; the runtime strokes are generated
+with the unchanged converter and exactly match the qualified external candidate.
+Six-path 西 supplies a modern-shape comparison. 酉's extra interior
 horizontal is not proof of historical derivation from 西.
 
-No teaching draft, runtime practice metadata, independent review,
-fresh native/phone acceptance or publication
-is claimed. Published coverage remains **72 additions; 1,156 still to deliver**.
-Continue the same 046 with the final support/quiz-label audit and validated
-signed unreviewed draft; do not begin 047.
+The [draft audit](n1-sources/batch-046-draft-audit.json) and
+[stroke/font audit](n1-sources/batch-046-stroke-audit.json) cover the three
+runtime additions, fresh manifest, exact source membership, all baseline
+metadata/strokes and authored-Han font coverage. The preparation and
+qualified-source receipts remain byte-preserved historical records.
+One reciprocal pair, 酉 / `words/酉.md`, is required; no baseline pair is
+activated and no existing runtime article changes. Complete actual 配, 曲
+and 画 cards supply three wrong kanji labels. Direct 酉/鳥 and 酉/鶏 word
+guards conservatively protect the sign/associated-animal labels; 酉/西
+protects the historical west sense. These are direct pairs, not transitive
+synonym claims. Existing exclusions and both original 虎/酔っ払い and
+猿/馬鹿 safeguards are unchanged.
+
+Two serial blind different-family initial reviews, evidence-based reconciliation,
+fresh non-skipped Android, applicable native/visual checks and all combined-main
+publication gates remain pending. Font cmap presence is not native readability
+or physical-phone acceptance. Do not push this unreviewed draft or begin 047.
+Published coverage remains **72 additions; 1,156 still to deliver**.
 
 ## Batch 045: local unreviewed draft
 
