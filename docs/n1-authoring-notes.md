@@ -37,7 +37,42 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 050: local unreviewed draft
+## Batch 050: textual review closed; native acceptance pending
+
+Two blind, read-only initials using actual **claude-opus-5.5** and
+**gpt-6.1-sol** reviewed the same signed draft `cc51de4`.
+Both complete new articles and **both exact 農/震 component-link additions**
+were assigned from the start and separately judged CLEAN for correctness,
+scoped coverage and textual comprehensibility. No actionable defect or
+consequential unsupported teaching claim was established. The explicitly
+source-only ジン row still has no verified lexical allocation; closure does
+not convert that disclosed limit into a verified usage.
+
+The [reconciliation](n1-reviews/batch-050-reconciliation.json) preserves both
+complete original reports and one Claude optional wording/voicing group,
+not adopted. No teaching change or repeat confirmation was necessary.
+The reviewers exited serially, with **34/36 tool calls**, zero internal
+tool overlaps and zero XML-range violations. Each initial metadata call
+truncated within the final 龍 element; targeted recovery completed it.
+All **21 assigned resources** were returned after recovery, not every
+individual call untruncated. Exact returned prefixes/ranges and process
+receipts establish byte coverage, not comprehension. Both reviewers used
+the supplied dictionary pages; neither freshly retrieved them upstream.
+Claude's reused-passage line citations are off by one; both actual deltas
+are at line 22. Original reports remain unchanged.
+
+The [fresh review audit](n1-sources/batch-050-review-audit.json) records
+368 passing Python tests, validator/vocabulary/manifest/budget checks,
+complete source/baseline/reading/link/stroke/font checks and all
+**8,278 runtime hashes**. Teaching and runtime are unchanged.
+Fresh non-skipped Android 3+1, supported-native shape/fallback readability,
+full-archive single production import, article/reciprocal/Back/offline
+routes and bounded independent visual review remain next. Latest-main,
+combined checks and publication gates follow, not precede, that acceptance.
+The batch remains local and unpublished: **76/1,228 additions delivered;
+1,152 remaining**. No 051 or reopening of accepted 049.
+
+### Retained draft evidence
 
 The qualified sources now support one necessary **辰 たつ** sign article,
 one kanji card and **seven exact pinned-converter strokes**. Full
@@ -63,12 +98,10 @@ keeps actual missing cmap characters and their native-fallback obligations:
 32 of 34 Han characters across both new and both changed articles occur
 in all three fonts; **厂 and 氵** need supported-native readability evidence.
 All 368 Python tests, validator, vocabulary check, fresh manifest and local
-archive budgets pass; all **8,278 runtime hashes** match. These are draft
-checks, not linguistic or native acceptance. No independent review, Android/native run,
-push or publication is claimed. Next is the same signed snapshot's two
-serial blind different-model-family initial reviews, including both
-reused deltas; all reconciliation/native/integration/publication gates
-remain. Do not start 051 or reopen accepted 049.
+archive budgets passed at the draft checkpoint; all **8,278 runtime hashes**
+matched. Those historical checks were not linguistic or native acceptance.
+The textual closure above now follows that draft; Android/native,
+integration and publication acceptance remain pending.
 
 ### Retained source qualification
 
