@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "execution": 302,
+  "batch": "054",
+  "status": "native-fixture-compiled-pending-execution",
+  "scope": "SAME054 bounded native fixture/full Git envelope preparation and compilation; no055, second runner, blind review rerun or publication.",
+  "startingHead": "b957500752f3f62f5228706db9f1ea6d4a17d0ed",
+  "androidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "recordedAt": "2026-11-04T20:22:14.621863+01:00",
+  "reviewedTeachingSnapshot": "4fb51498f6912169499456031380ce2353373397",
+  "preparation": "docs/n1-sources/batch-054-native-preparation.json",
+  "preparationSha256": "eca7e6f266a6bdc33cf80ad67e8a5c69070bb7639827b04d154788b18578de59",
+  "compilation": {
+    "status": "compiled-not-executed",
+    "exitCode": 0,
+    "result": "BUILD SUCCESSFUL in 1m 25s;56 actionable tasks:9 executed,47 up-to-date",
+    "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-302-native-compile.txt",
+    "logSha256": "c684b4f12b408d7e25876ae246e42cc06e9c036835247d17d46af8dc4701dccf",
+    "archivedLog": "docs\\n1-reviews\\batch-054-native\\compile.txt",
+    "startedAt": "2026-11-04T20:20:01.1751009+01:00",
+    "command": ".\\gradlew.bat :app:assembleDebugAndroidTest --no-daemon --no-parallel --max-workers=1 '-Pkotlin.compiler.execution.strategy=in-process'",
+    "buildLauncher": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\run-302-native-compile.ps1",
+    "buildLauncherSha256": "0aa82c229864d6a3248653daf87edd082a669e877930db610078abc2f270a8b6",
+    "hostTestInitScriptUsed": false,
+    "nativeOrEmulatorStarted": false,
+    "temporaryAndroidSourceAndAssetRemoved": true,
+    "androidWorktreeClean": true,
+    "apks": [
+      {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\build\\outputs\\apk\\androidTest\\debug\\app-debug-androidTest.apk",
+        "frozenPath": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-054-b9575007-native-test.apk",
+        "sha256": "e49f3deb3de98608edb83aa4ff3da52d17d29133d71ab2d8d7c1db776be349ba",
+        "bytes": 31439047,
+        "packagedExactFullArchiveSha256": "c9b63ab3d11774a4aaf740b2ac932bbbe8cd381c39ebadbedc01f0db8167d5dd",
+        "bothSelectedClassDescriptorsAndMethodsPresent": true,
+        "limits": "Successful Kotlin/Dex build and exact APK package membership, NOT native test execution."
+      }
+    ],
+    "checks": [
+      {
+        "check": "validate",
+        "exitCode": 0,
+        "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-302-validate.txt",
+        "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+      },
+      {
+        "check": "manifest",
+        "exitCode": 0,
+        "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-302-manifest.txt",
+        "sha256": "7a3fd8359a86acfd3339ee6c937c038d8a98dc57675960debd0eda494cfa0f91"
+      }
+    ],
+    "evidenceWhitespaceQualification": {
+      "fullStagedChangeCheckExitCode": 2,
+      "exactOutput": "docs/n1-reviews/batch-054-native/compile.txt:2: trailing whitespace.\n+Daemon will be stopped at the end of the build \ndocs/n1-reviews/batch-054-native/fixture-from-052.diff:6: trailing whitespace.\n+ \ndocs/n1-reviews/batch-054-native/fixture-from-052.diff:12: trailing whitespace.\n+ \ndocs/n1-reviews/batch-054-native/fixture-from-052.diff:16: trailing whitespace.\n+ \ndocs/n1-reviews/batch-054-native/fixture-from-052.diff:64: trailing whitespace.\n+ \ndocs/n1-reviews/batch-054-native/fixture-from-052.diff:70: trailing whitespace.\n+ \n",
+      "scope": "One raw Gradle daemon-status trailing space and five standard unified-diff blank-context prefixes. No Kotlin/runtime whitespace defect.",
+      "disposition": "Preserve exact original raw build log and canonical difflib output; scoped check excludes only these two immutable evidence artifacts.",
+      "changeCheckExcludingTwoRawArtifactsExitCode": 0,
+      "rawArtifactHashesVerified": true,
+      "signingAttemptedBeforeResolution": false
+    }
+  },
+  "runtimeUnchanged": true,
+  "freshAndroid301RetainedWithoutRerun": true,
+  "nativeExecuted": false,
+  "reviewersLaunched": 0,
+  "publicationAttempted": false,
+  "publishedAdditions": 80,
+  "remainingAdditions": 1148,
+  "nextAction": "Resume SAME054 native EXECUTION from signed LOCAL compiled-fixture checkpoint302; no055/secondrunner. Do not repeat accepted301freshAndroid3+1/blindinitials/accepted053checks. Read docs/n1-sources/execution-302.json and batch-054-native-preparation.json; separate docs/n1-reviews/batch-054-native/N1Batch054NativeTest.kt compiled; exact full signedb957500752f3f62f5228706db9f1ea6d4a17d0ed Git envelope control/artifacts/n1-batch-054-b9575007-envelope.zip and frozen matching n1-batch-054-b9575007-native-test.apk. 8312entries/all8290runtimehashes/schema1en-ja/fa89fc674144b377/originalbudgets verified. Compilation is NOT native/visual acceptance; no emulator/device inspection or launch performed302. Freshdevice/5580-5581ownership IMMEDIATELYbefore knownread-onlyAPI35 N3_Acceptance_20261029 helper; fullSDKemulator -port5580 -read-only -no-snapshot -no-window -no-audio -gpu host -feature -Vulkan -memory2048 -cores2; explicit emulator-5580/ownedPID. Preserve actual192m576m guest/app heaps;040portexceptionNOTinherited. ProductionContentSyncONCE perarticleattempt/no duplicateparserpreflight/no reducedarchive; assert1066kanji5024words86N1/problems0/acceptedepoch1/fullorderedショソショウ/か.つ in Lite AND Full projections/on[]kun[か.つ]/normalizedかつ. Require two actualterminalcase0/no skips/rawlogs/directPNGs;20Paintprobes/fourproductionrows且目日助苟; especiallyactual苟fallback/readability/archaicこうしょ/source-onlyソショウ/separatewholewordかりそめ. N1selection/meaningfeedback/curatedKunquestionandpersistedGood/fivegeneratedreference-touchstrokes/ungradedtrace/recallmiss/persistedDrawgrade/offline/fullarticle/onepairtwodirections/SystemBack/attestedlecture-and-conditionexamples/i-and-naattachment/boundedframes/substitution/parallelaction/nounlisting. Currentselectorstrings staticallyverified, NOT runtime-proven. Duplicate source-onlycells use tablecapture, not ambiguoussingle selector. Inherited052outer-scroll reveal/preciseCommonwordsselector/enabledstatewait/1000mscompositorsettle retained. Exacttemporarycleanup/stopONLYownedhelper; preserveallfailures/exactnamedvariants/noassertion-production-teaching-heap-font-guardrelaxation. Then ORIGINALClaude1bed2f69-6d63-4a81-91f7-05f664ff3030 followed serially by GPT572484bf-b4d8-4206-94b6-d046f9157dc7 boundeddependentnativevisual confirmations with actualmodels/exits/returnedranges/PNGs/limits; NOT newblindinitials. OriginalClaude56calls/oneinternaloverlap and GPT55calls/zero preserved, 32assignedresources each. Comparative register claim UNVERIFIEDandOMITTED. Preserveorderedfullreadings/oneかつsupport/onepairtwodirections/ninedirectguards/noinferredwordlevel. Original049HOST512MiBTestOOM/existing1GiBHOSTcoreTest qualification retained; NOhostinit nativecompile/no guestheap authorization. Cmapabsence not glyphfailure; fallbackstylesmaycoincide/faceunidentified. Reference-touch/offlinegeometry/recallmiss notMLKitrecognition/correcthumanrecall. Then latestmainnormalnonrewritingmerge/allcombinedsource-baseline-exactguards/readings/links/strokes/fonts/Python/vocabulary/validator/freshmanifest/originalbudgets/normalsigning/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 BEFOREdelivery. Actualpermissiondenial/signingwait preserveexactcommand-error/report/yield,no retry/workaround. Preserve FULLlivehistory, not scopedrequest replacement. Published80/1228,1148remaining;compatibleAndroidf9b59a2+ required;physicalphone/generalrelease/whole-set outstanding.",
+  "limits": "Static fixture/archive preparation, NOT native execution/readability/independentvisual/phone/publication. No duplicate parser preflight/reduced archive/heap-font-guard changes. All selectors statically checked, not runtime-proven. 苟missingthreecmaps: fallback may share styles; face not identified. Glyphhashes cannot certify readability. Reference touches/recall miss do not prove MLKit recognition or human recall. Original initialClaude56calls/oneinternaloverlap and GPT55calls/zero retained; comparative register claim UNVERIFIED and omitted. Original049HOST512MiBTestOOM/existing1GiBHOSTcoreTest qualification retained; nohostinit for nativecompile/no guestheap authorization. Accepted301fresh3+1 exactsource/copyhashes retained, not rerun. Fresh5580/5581ownership mandatory immediatelybefore native launch;040exception not inherited. No emulator/reviewer/push/055/secondrunner. Published80/1228,1148remaining;Androidf9b59a2+ required;physicalphone/generalrelease/whole-set outstanding. Serial native-test APK compilation passed; no native/emulator execution, screenshots or independent visual acceptance."
+}

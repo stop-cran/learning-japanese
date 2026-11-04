@@ -37,6 +37,145 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 054: accepted bounded owner-testing publication
+
+The [publication record](n1-sources/batch-054-publication.json) records signed
+accepted merge `ffe45e9fc6eba82e4e0e6c3f53608d916a791eba`, green CI
+`41901290268` and its immutable public ZIP: all **8,290 runtime hashes** match,
+**8,312 entries**, with the original archive budgets unchanged. Published
+coverage is **81/1,228; 1,147 remaining**: 1,066 kanji / 5,024 word articles /
+86 N1 labels, including 85 named-source members and the separate 妖 exception.
+The one new **且つ** article is necessary kanji support, not an N1 vocabulary deck.
+
+The [combined acceptance](n1-sources/batch-054-acceptance-audit.json) records
+**368 Python tests**, source/baseline/exact membership, all reading dispositions,
+reciprocal links, generated strokes, all 19 authored Han/font checks, vocabulary,
+validator, fresh manifest and budget checks. Four upstream-only articles
+九・四・回・度 were preserved verbatim from current main; the only merge conflict
+was the regenerated manifest. Batch054 teaching and its practice selections
+are unchanged. Full ショ・ソ・ショウ / か.つ metadata remains; only か.つ is offered.
+The comparative register claim remains UNVERIFIED and omitted.
+
+Accepted Android **3+1**, native **two terminal case-0** results and both original
+reviewer visual confirmations were reverified, not rerun. The
+[native record](n1-reviews/batch-054-native-acceptance.json) retains the actual
+tested version `fa89fc674144b377`; merged publication uses `8846e9a9dc29d24c`.
+The original full envelope passed production ContentSync once. Actual meaning
+choices used cedar/chicken/mosquito, not the authored 目・日・助 trio.
+Curated かつ and drawing grades were persisted; drawing was geometry-only
+reference tracing and a recall miss, not ML Kit recognition or human recall success.
+
+Both visual confirmations used **24 serial calls / 18 returned PNGs** each,
+without overlaps or failed/truncated calls. Source 1080 × 2400 captures were
+returned at 900 × 2000; both byte sets remain separate. Clipped table columns
+and hidden text are not full-article/all-cell certification. 苟 rendered readably
+in a shared fallback style; its actual face is unknown, not four bundled designs.
+Compatible Android `f9b59a2` or later is required. Physical-phone/general-release
+and whole-set acceptance remain outstanding. Terminal publication receipts
+are verified separately before yielding; no batch055 starts in this checkpoint.
+The earlier local checkpoints below are historical.
+
+### Historical local textual review closure
+
+The [reconciliation](n1-reviews/batch-054-reconciliation.json) preserves
+independent **claude-opus-5.5** and **gpt-6.1-sol** initial reports on signed
+`4fb51498f6912169499456031380ce2353373397`. Both complete articles,
+**且** and **且つ**, are CLEAN separately for correctness, scoped coverage
+and textual comprehensibility. No actionable teaching defect was established;
+five Claude optional suggestions were adjudicated as nonblocking and not
+adopted. GPT proposed none. Teaching and manifest bytes are unchanged.
+
+Both processes exited serially and the complete first report was archived
+before the second launch. Actual **56/55 calls** returned all **32 assigned
+resources** for each reviewer, including all **31 frozen dictionary families**,
+eight raw character records, actual comparison articles, five archived
+Japanese dictionary page sections and the pinned SVG. Claude made **one
+internal two-read overlap** despite the serial-tool instruction; GPT made none.
+Neither had failed or truncated reads. Original reports and the deviation
+remain intact; returned bytes do not prove comprehension or equal review depth.
+
+The [fresh mechanical audit](n1-sources/batch-054-review-source-audit.json)
+checks preservation, links, readings, geometry, all **8,290 runtime hashes**
+and unchanged archive guards. **苟** still requires actual supported-native
+fallback/readability inspection. Next are fresh non-skipped Android **3+1**
+checks, supported-native routes and original-reviewer visual confirmations,
+then combined-main validation and publication acceptance.
+Published additions remain **80/1,228; 1,148 remaining**. Compatible Android
+`f9b59a2` or later is required; physical-phone/general-release and whole-set
+acceptance remain outstanding.
+
+### Historical local unreviewed runtime draft
+
+The [draft audit](n1-sources/batch-054-draft-audit.json) and
+[execution 299](n1-sources/execution-299.json) record one **且** card,
+one necessary **且つ（かつ）** support article and five strokes generated
+from the qualified pinned SVG by the unchanged converter. Full source
+**ショ・ソ・ショウ / か.つ** order is preserved; only **か.つ** is selected
+for practice. There is one selected reciprocal pair, no baseline activations
+and no changed reused runtime article.
+
+The support article uses the two inspected dictionary example frames rather
+than inventing a broad attachment or register rule. Its nine direct
+exclusions protect actual additive labels and secondary senses; they do not
+form a transitive clique. The three kanji distractors are **目・日・助**.
+All twelve short-card legacy fallback labels were compared at author stage.
+The final authored Han audit explicitly retains **苟** as requiring native
+fallback/readability inspection; font cmap coverage is not rendering acceptance.
+The unverified comparative register claim is omitted, not converted into a
+formal-only or written-only prohibition.
+
+This is a **validated, local UNREVIEWED draft**, not published coverage.
+Two serial blind model-family reviews of the same frozen teaching and all
+applicable Android/native/visual/current-main/publication gates remain.
+Published additions stay **80/1,228; 1,148 remaining**. Physical-phone,
+general-release and whole-set acceptance remain outstanding.
+
+### Historical source qualification
+
+The [membership](n1-sources/batch-054-membership.json) selects **且**,
+frozen source row 3, against published `672266d5`. The
+[source ledger](n1-sources/batch-054-progress.json) records inspection of
+**24 complete frozen JMdict families**: six lexical / 160 lines and
+18 comparison / 663 lines, eight raw character records and sixteen actual
+existing articles. Full **ショ・ソ・ショウ / か.つ**, five strokes and
+canonical **一 (1)** remain intact.
+
+The minimal support candidate is **且つ（かつ）**, also spelled 且 and
+marked usually kana. **暫且（ざんしょ）** is obsolete and
+**苟且（こうしょ）** archaic; **苟且（かりそめ）** belongs to a
+separate whole-word family and does not allocate ソ to 且.
+The [qualified source evidence](n1-sources/batch-054-dictionary-evidence.json)
+now verifies the exact Japanese headings and additive constructions.
+Daijisen and Kanjipedia allocate **ショ** through **苟且（こうしょ）**;
+it remains archaic recognition, not proposed practice. **ソ・ショウ**
+remain explicitly limited source-only metadata, not invented word examples.
+Proposed practice is on `[]` / kun `[か.つ]`, with one new support article
+and one reciprocal pair; none is runtime metadata yet.
+
+Existing また・しかも・更に and other connective articles expose overlapping
+quiz labels; their distinct spellings, senses, easier levels and exclusions
+must remain intact. Seven additional complete frozen families and ten actual
+additive articles were inspected, bringing the extracted packet to **31 distinct
+families**. Nine direct word-guard proposals remain subject to the final draft
+title audit; they are not a transitive exclusion clique.
+
+The full pinned five-path SVG matches its inventory blob and was converted
+outside runtime content by the unchanged converter. Candidate font cmaps are
+mechanical evidence only: **苟** is absent from all three bundled fonts and
+requires actual fallback inspection if retained. Every final authored Han and
+native readability still need checking. An explicit comparative register claim remains **unverified**:
+failed or irrelevant navigation is retained, not treated as an inspected lesson.
+Do not repeat that search loop or invent a formal-only rule; acquire exact
+evidence if available or keep the draft's teaching claim narrowly additive.
+Historical preparation-ledger pending fields remain distinguishable from this
+later qualification.
+
+At that source-only checkpoint there were no runtime teaching, manifest,
+independent review, fresh Android/native check or publication changes.
+Published coverage stayed **80/1,228; 1,148 remaining**.
+Compatible Android `f9b59a2` or later and outstanding physical-phone,
+general-release and whole-set qualifications remain unchanged.
+
 ## Batch 053: accepted bounded owner-testing publication
 
 The [publication record](n1-sources/batch-053-publication.json) records signed

@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "execution": 301,
+  "batch": "054",
+  "status": "fresh-android-passed-pending-native-visual-and-publication",
+  "startingHead": "2500120842f5ed6db9382dc0f6848b7811487623",
+  "androidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "recordedAt": "2026-11-04T20:16:38.340996+01:00",
+  "scope": "SAME054 fresh RealContentTest3+RareHanTest1 only; no native, reviewer, publication,055 or second runner.",
+  "startedAt": "2026-11-04T19:11:36.369880+00:00",
+  "exitCode": 0,
+  "command": "$ErrorActionPreference = 'Stop'\n$control = $PSScriptRoot\n$app = Join-Path (Split-Path $control -Parent) 'kanji-cards-android'\n$runner = Get-Content -LiteralPath (Join-Path $control 'runner.json') -Raw | ConvertFrom-Json\nif ($runner.status -ne 'running' -or $runner.sessionId -ne '78806fa2-ac12-44a1-be5f-467a959f847a') {\n    throw 'Unexpected supervisor session.'\n}\n$ancestor = $PID\n$supervisorIsAncestor = $false\nfor ($i = 0; $i -lt 10 -and $ancestor -gt 0; $i++) {\n    if ($ancestor -eq $runner.pid) { $supervisorIsAncestor = $true; break }\n    $process = Get-CimInstance Win32_Process -Filter \"ProcessId=$ancestor\"\n    if (-not $process) { break }\n    $ancestor = $process.ParentProcessId\n}\nif (-not $supervisorIsAncestor) { throw 'Recorded supervisor is not this coordinator ancestor.' }\n$env:JAVA_HOME = 'C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot'\n$env:ANDROID_HOME = 'C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk'\nSet-Location $app\n$started = [DateTimeOffset]::UtcNow\n$started.ToString('o') | Set-Content -LiteralPath (Join-Path $control 'batch-054-android-start.txt') -Encoding utf8NoBOM\nWrite-Output \"FRESH054_STARTED=$($started.ToString('o'))\"\nWrite-Output \"CONTENT_ROOT=$([IO.Path]::GetFullPath((Join-Path (Join-Path $app 'core') '..\\..\\learning-japanese')))\"\n& .\\gradlew.bat :core:test --tests 'io.github.stopcran.kanji.core.RealContentTest' :app:testDebugUnitTest --tests 'io.github.stopcran.kanji.core.RareHanTest' --no-daemon --no-parallel --max-workers=1 --rerun-tasks '-Pkotlin.compiler.execution.strategy=in-process' --init-script C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-049-host-integration-heap.init.gradle 2>&1 |\n    Tee-Object -FilePath (Join-Path $control 'logs\\execution-301-android.txt')\n$result = $LASTEXITCODE\n$result | Set-Content -LiteralPath (Join-Path $control 'logs\\execution-301-android-exit.txt') -Encoding utf8NoBOM\nWrite-Output \"FRESH054_EXIT=$result\"\nexit $result\n",
+  "environment": {
+    "JAVA_HOME": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot",
+    "ANDROID_HOME": "C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk"
+  },
+  "oneWorker": true,
+  "parallel": false,
+  "rerunTasks": true,
+  "hostMemoryQualification": "Original049 default512MiB HOST core Test OOM retained. Existing control-only init changes solely :core Test maxHeapSize to1GiB. No native guest/app heap, source, assertion, font or archive-guard change.",
+  "hostInitSha256": "ff2d68bd18491590f7cb38da7807d6ff40153e1dfbaef0cd744e50f4ccea742d",
+  "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-301-android.txt",
+  "logSha256": "e6836dd9a59492325ad71a0130635a1ff4a43fb4c67c22cfdd345982b4e16690",
+  "tests": [
+    {
+      "name": "io.github.stopcran.kanji.core.RealContentTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-04T19:13:25.071Z",
+      "caseNames": [
+        "hotelBookingDoesNotAcceptTheSchoolClassReadingWhenRepoPresent",
+        "completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent",
+        "parsesRealContentRepoWhenPresent"
+      ],
+      "sourcePath": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core\\build\\test-results\\test\\TEST-io.github.stopcran.kanji.core.RealContentTest.xml",
+      "artifactPath": "docs\\n1-reviews\\batch-054-android\\batch-054-RealContentTest.xml",
+      "sha256": "2350499ab833b1aa3ccfbf149b1e5faa76a770d129bcbfbc0a957ca7d58d4697",
+      "fixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese",
+      "testImplementation": "core\\src\\test\\kotlin\\io\\github\\stopcran\\kanji\\core\\RealContentTest.kt",
+      "testImplementationSha256": "4f019673d77a6899e435afc8d071794564e78f6148cf3019456184eb72ef2188"
+    },
+    {
+      "name": "io.github.stopcran.kanji.core.RareHanTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-04T19:16:31.269Z",
+      "caseNames": [
+        "contentRareCharactersAreCoveredByBundledFont"
+      ],
+      "sourcePath": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\build\\test-results\\testDebugUnitTest\\TEST-io.github.stopcran.kanji.core.RareHanTest.xml",
+      "artifactPath": "docs\\n1-reviews\\batch-054-android\\batch-054-RareHanTest.xml",
+      "sha256": "be9de106118b9472a733ce1f84b8307f2ab29d6aa6d5e3a454ced3311b956ab9",
+      "fixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese",
+      "testImplementation": "app\\src\\test\\java\\io\\github\\stopcran\\kanji\\core\\RareHanTest.kt",
+      "testImplementationSha256": "1409e85428837864409dce7f4ea371611d8a92839d4d0e86258e4c0a0a5a15ed"
+    }
+  ],
+  "contentVersion": "fa89fc674144b377",
+  "reviewedTeachingSnapshot": "4fb51498f6912169499456031380ce2353373397",
+  "runtimeUnchangedFromReviewedTeaching": true,
+  "publishedAdditions": 80,
+  "remainingAdditions": 1148,
+  "nativeOrVisualAcceptanceClaimed": false,
+  "publicationAttempted": false,
+  "nextAction": "Resume SAME054 normally signed LOCAL fresh-Android checkpoint; do not repeat accepted Android3+1 or blind initials/accepted053 work; no055/secondrunner. Both original textual reviews and their limitations unchanged; no teaching fix. Preserve full orderedショ/ソ/ショウ/か.つ, on[]/kun[か.つ], archaicショ苟且こうしょ, source-onlyソショウ, separatewholewordかりそめ, one且つかつsupport/onepairtwodirections/ninedirectguards/noinferredwordlevel. Comparative register claim remains UNVERIFIED and omitted. Original049 default512MiB HOST Test OOM retained; existing1GiB HOST-only core Test init is NOT native heap authorization. NEXT bounded checkpoint supported-native exactcompleteGitenvelope productionContentSyncONCE perarticleattempt; no duplicateparserpreflight/reducedarchive/heap-font-guardchanges. Assert1066kanji5024words86N1/fa89fc674144b377/schema1en-ja/problems0/epoch1/full3on1kun/on[]kun[か.つ]normalizedかつ. Freshdevice/5580-5581ownership immediatelybefore knownread-onlyAPI35hostGPU/Vulkan-disabledhelper;040portexceptionNOTinherited. ActualownedPID/serial/percaseterminal0/no skips/directPNGs; 且目日助 and especially苟actualfallback/readability, meaning/curatedreading/drawing/article/reciprocal/SystemBack/offline and originalserialvisual confirmations, exacttemporarycleanup/stoponlyownedhelper. Then latestmainnormalnonrewritingmerge/allcombinedsource-baseline-exactguards/readings/links/strokes/fonts/Python/vocabulary/validator/freshmanifest/originalbudgets/normalsigning/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 BEFOREdelivery. Actualpermissiondenial/signingwait preserveexactcommand-error/report/yield,no retry/workaround. Published80/1228,1148remaining;compatibleAndroidf9b59a2+required;physicalphone/generalrelease/whole-setoutstanding.",
+  "limits": "Fresh Android integration only, not native glyph/readability/drawing/ContentSync/phone/publication or whole-set acceptance. Actual sibling root and all four newly executed cases verified; zero failures/errors/skips and no old XML reuse. Runtime and original reports unchanged. Python368/vocabulary inherited299; source/baseline/guards/readings/links/geometry/all19Han/8290hashes/budgets/validator/manifest audit inherited300, not freshly rerun301. Original review limitations retained separately: Claude one internal overlap, GPT zero, no fictional compliance rerun. 苟 actual supported-native fallback/readability remains mandatory. No content/Android source edits, native/reviewer launch, push,055 or second runner.",
+  "inheritedTextualLimits": "Two actual different-family blind initials on the same signed4fb5149; complete two teaching articles, all31frozenfamilies/eightrawcharacterrecords/threecomparisonkanji/twelvecomparisonwords/fivearchivedJapanese-page sections/pinnedSVG. All32assigned resources returned completely for both; bytes do not prove comprehension or equal fresh-read depth. Processes exited serially and first complete original report archived before next launch. Claude56calls/ONE internal two-view overlap; GPT55calls/zero overlaps. Neither had failed or truncated reads. Strict internal serialization NOT fully achieved; original deviation preserved, no fictional rerun. No teaching defect/consequential unresolved positive claim established. Five Claude optional suggestions not adopted; GPT none. No teaching change or correction confirmation needed. Supplied archived dictionaries, not fresh retrieval/native-speaker certification. Comparative register claim remains UNVERIFIED and explicitly excluded, not converted into a register ban. Default choice assessment from metadata/documented behavior, not executed live choices; larger/changed pools not certified. Coordinator freshly inspected same full31families/fivearchivedpage sections/twoteaching/threecomparisonkanji/twelvecomparisonwords/eightrawrecords/SVG; own rawJSON ranges1-6/7-10/11-13 returned without reported truncation. Fresh300mechanical frozen sources/baseline/exactoriginalguards/readings/links/geometry/all19authoredHan/freshmanifest8290hashes/budgets/validator. Python368/vocabulary inherited299, not fresh300tests. 苟absent in allthreebundledcmaps: actualsupported-nativefallback/readability remains mandatory. No Android/native/visual/current-main/publication/physical-phone/general-release/whole-set acceptance. Published80/1228,1148remaining; compatibleAndroidf9b59a2+ required.",
+  "archivedArtifacts": [
+    {
+      "path": "docs\\n1-reviews\\batch-054-android\\batch-054-RealContentTest.xml",
+      "sha256": "2350499ab833b1aa3ccfbf149b1e5faa76a770d129bcbfbc0a957ca7d58d4697"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-054-android\\batch-054-RareHanTest.xml",
+      "sha256": "be9de106118b9472a733ce1f84b8307f2ab29d6aa6d5e3a454ced3311b956ab9"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-054-android\\gradle.txt",
+      "sha256": "e6836dd9a59492325ad71a0130635a1ff4a43fb4c67c22cfdd345982b4e16690"
+    }
+  ]
+}
