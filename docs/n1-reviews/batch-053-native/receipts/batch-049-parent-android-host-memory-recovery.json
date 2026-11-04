@@ -1,0 +1,16 @@
+{
+  "batch": "049",
+  "checkpoint": 258,
+  "originalExactCommandExecuted": true,
+  "originalExitCode": 1,
+  "originalResult": "BUILD FAILED in 1m 16s; RealContentTest 3 cases, 1 actual Java heap space failure; RareHanTest not run.",
+  "originalFailedCase": "parsesRealContentRepoWhenPresent",
+  "originalFailureXmlSha256": "2152368a7938cdcff7736aeb9ed13ed75a083399b0b74c42e5d791c310787da0",
+  "originalFailureLogSha256": "70d55f8ab0fd9deabef895d2fe72d96d1537ce6ca9eb710bf046bd4776a01f2b",
+  "originalArtifacts": "control\\artifacts\\batch-049-parent-android-original-failure",
+  "evidence": "Unchanged RealContentTest.parsesRealContentRepoWhenPresent loads all non-.git files, including 341584872 bytes of docs. Failure occurred deserializing grammar after content parsing in the 512MiB default host test JVM. The native runtime archive excludes documentation; no native memory failure has been observed for049.",
+  "boundedRecovery": "Rerun unchanged three RealContentTest and one RareHanTest with all original Gradle flags plus a control-only init script setting only the :core host Test JVM maxHeapSize to1GiB. No test source, assertion, selector, native/app heap, archive guard, runtime content, permission, signing or repository configuration change.",
+  "initScript": "control\\batch-049-host-integration-heap.init.gradle",
+  "availableHostMemoryMiBBeforeRetry": 3990,
+  "limits": "Original failed gate remains preserved, not reclassified as permission denial or success. This is host-only test-fixture headroom for accumulating non-runtime review documentation, not proof of device memory acceptance. Exact full-archive native acceptance with original guest/app heap and guards remains mandatory."
+}
