@@ -37,6 +37,35 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 047: source preparation, not drafted
+
+[Batch 047](n1-sources/batch-047-progress.json) bounds the next addition to
+**卯**, frozen source row 130, on accepted published base `ab874b6`.
+The [membership](n1-sources/batch-047-membership.json) fixes one character
+after a complexity comparison of 辰・卯・丑・寅, not source-order selection.
+The complete frozen packets retain **22 lexical and 17 disjoint comparison
+families**, seven raw character records and coordinator inspection of nineteen
+actual existing articles. Full source readings **ボウ・モウ / う**, five
+strokes, grade 9 and canonical radical **卩 (26)** are preserved.
+
+The packet separates the Rabbit sign from the living animal noun
+`words/兎.md` (うさぎ), restricted year readings and search-only spellings.
+Standalone 卯 has a second-lunar-month sense; the whole word 卯月 (うづき)
+names the fourth lunar month. Neither is simply a Gregorian month number.
+JMdict supplies standalone ぼう and calendar-compound candidates, but exact
+Japanese allocation and usefulness remain pending. No モウ word example is
+established by this packet; that is not proof of invalidity or name-only use.
+卵・柳・印 supply inspected shape/component comparisons, not etymology.
+
+One sign article is a proposal, not authored support or selected practice.
+No baseline declared word pair is activated, no runtime content changes,
+and no teaching/reviewer/native/publication acceptance is claimed.
+The [preparation audit](n1-sources/batch-047-preparation-audit.json)
+checks exact source bytes and complete re-extractions, baseline invariants
+and unchanged runtime hashes. Continue Japanese qualification and the same
+047 before drafting; do not begin 048. Published coverage remains
+**73 additions; 1,155 still to deliver**, not complete N1 coverage.
+
 ## Batch 046: local unreviewed draft
 
 [Batch 046](n1-sources/batch-046-progress.json) bounds the next addition to
