@@ -37,7 +37,31 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 050: source preparation only
+## Batch 050: qualified sources, not drafted
+
+The [qualified-source record](n1-sources/batch-050-dictionary-evidence.json)
+adds eight exact Japanese dictionary/encyclopedia sections from seven saved
+raw pages. Actual 辰 たつ and 辰年 たつどし headings qualify the sign and
+year expression; the character entry's explicit 戊辰 ぼしん example and
+separate compound heading qualify シン without substring allocation.
+Full **シン / ジン / たつ** remains unchanged. ジン has no independently
+verified lexical example in this bounded evidence: retain it as explicitly
+qualified character-source lookup information, not an invented example or
+an invalid/obsolete/name-only reading claim. Proposed practice selects only
+たつ with one necessary standalone sign article; no extra calendar article.
+
+The complete pinned **seven-path SVG** was inspected before external
+unchanged-converter candidate generation. Its general-radical group is
+the whole 辰 (161), not the visible 厂 group. Use a labelled modern-shape
+mnemonic and `structure-unclassified`; no historical/phonetic account is
+adopted. All three packaged cmaps cover nine of ten candidate characters;
+**厂 is absent** and needs actual fallback/readability evidence if authored.
+Cmap absence is not a glyph failure, and no native result is claimed here.
+Historical hour alternatives, traditional bearing versus modern
+compass points, 辰巳 southeast and lunar-month boundaries remain explicit.
+Final titles, wrong choices, direct word guards, exact 農/震 link deltas
+and every authored-glyph check remain draft work. No teaching or runtime
+acceptance is claimed; published coverage is unchanged.
 
 [Batch 050](n1-sources/batch-050-progress.json) selects only **辰**,
 frozen source row **1070**, on published base `b189ed6`.
@@ -62,20 +86,20 @@ historical 辰 east-southeast from 辰巳 southeast, the twelve signs from
 sixty calendar combinations, and lunar month three from Gregorian March.
 The source retains competing historical hour mappings.
 Whole-word 壬辰 じんしん and 時辰 じしん do **not** by themselves establish
-辰's ジン allocation; exact Japanese character/compound evidence remains
-pending. No reading is dropped or labelled obsolete/name-only by assumption.
+辰's ジン allocation; that lexical allocation remains explicitly unverified.
+No reading is dropped or labelled obsolete/name-only by assumption.
 辰砂/辰沙 preserve the spelling restriction on しんさ; 辰星's multiple
 astronomical senses remain separate rather than becoming a universal gloss.
 
-Standalone 辰 たつ support is a candidate, not an authored article.
-Practice keys, wrong choices, direct word exclusions and links remain
-unselected. No extra dragon, astronomy, historical or mineral article is
+Standalone 辰 たつ support and sole-kun practice are proposed, not authored.
+Final wrong choices, direct word exclusions and links remain unselected.
+No extra dragon, astronomy, historical or mineral article is
 committed; support-word levels are not inferred from N1 kanji.
 The [preparation audit](n1-sources/batch-050-preparation-audit.json)
 checks exact frozen inputs, complete re-extraction, original baseline
 invariants and unchanged runtime hashes. It is not independent linguistic,
-font, native or publication acceptance. Japanese-heading qualification,
-pinned SVG inspection, authoring and all subsequent gates remain.
+font, native or publication acceptance. Japanese-heading and SVG qualification
+now have the bounded evidence above; authoring and all subsequent gates remain.
 Published coverage stays **76 / 1,228**, with **1,152 remaining**.
 Batch 049 is not reopened; physical-phone, general-release and whole-set
 acceptance remain explicitly outstanding.
