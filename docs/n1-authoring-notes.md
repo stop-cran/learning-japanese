@@ -37,6 +37,32 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 054: local source preparation, not drafted
+
+The [membership](n1-sources/batch-054-membership.json) selects **且**,
+frozen source row 3, against published `672266d5`. The
+[source ledger](n1-sources/batch-054-progress.json) records inspection of
+**24 complete frozen JMdict families**: six lexical / 160 lines and
+18 comparison / 663 lines, eight raw character records and sixteen actual
+existing articles. Full **ショ・ソ・ショウ / か.つ**, five strokes and
+canonical **一 (1)** remain intact.
+
+The minimal support candidate is **且つ（かつ）**, also spelled 且 and
+marked usually kana. **暫且（ざんしょ）** is obsolete and
+**苟且（こうしょ）** archaic; **苟且（かりそめ）** belongs to a
+separate whole-word family and does not allocate ソ to 且.
+Japanese reading/construction/register qualification remains pending.
+Existing また・しかも・更に and other connective articles expose overlapping
+quiz labels; their distinct spellings, senses, easier levels and exclusions
+must remain intact. Four additional connective families still need extraction
+before final support-title/exclusion decisions. No curation or exclusions
+are finalized, and shape mentions do not assign support ownership.
+
+No runtime teaching, manifest, independent review, fresh Android/native check
+or publication changes. Published coverage stays **80/1,228; 1,148 remaining**.
+Compatible Android `f9b59a2` or later and outstanding physical-phone,
+general-release and whole-set qualifications remain unchanged.
+
 ## Batch 053: accepted bounded owner-testing publication
 
 The [publication record](n1-sources/batch-053-publication.json) records signed
