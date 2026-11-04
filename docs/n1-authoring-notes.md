@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 045: qualified source only
+## Batch 045: local unreviewed draft
 
 [Batch 045](n1-sources/batch-045-progress.json) bounds the next addition to
 **巳**, frozen source row 300, on accepted published base `a4f16c4`.
@@ -55,8 +55,8 @@ Daijisen and Kanjipedia verify standalone **巳 み**, and explicitly allocate
 **シ** in **上巳 じょうし**; Daijisen also verifies its alternative じょうみ.
 The standalone JMdict family includes both み and し: シ is genuinely
 corroborated recognition, not source-only, obsolete or name-only.
-One necessary `words/巳.md` sign article and sole kun practice are proposed,
-not authored; no festival article is needed merely to offer another key.
+One necessary `words/巳.md` sign article and sole kun practice are now drafted,
+not independently reviewed; no festival article is needed merely to offer another key.
 The calendar families distinguish the Snake sign,
 the living animal 蛇, the twelve-sign set and the sixty-term cycle.
 Year expressions retain whole-word alternatives and spelling restrictions;
@@ -69,8 +69,9 @@ to every contemporary cultural use. 辰巳's southeast sense is not
 standalone 巳's historical south-southeast sense.
 
 The complete pinned target SVG has three paths, inside a variant 己
-radical group. Its unchanged-converter candidate is saved outside runtime
-content. Separate pinned 己/已 SVGs and the attributed look-alike editorial
+radical group. The runtime stroke file is generated with the unchanged
+converter and matches the qualified external candidate exactly.
+Separate pinned 己/已 SVGs and the attributed look-alike editorial
 support a modern third-stroke **upper-start** distinction, not different
 bottom finishing endpoints or an all-font/native acceptance claim.
 Kanjipedia's radical-image filename `48.png` is an asset name, not authority
@@ -78,13 +79,27 @@ to replace frozen canonical **己 (49)**. Prefer a labelled modern-shape
 mnemonic and `structure-unclassified` rather than claim a settled origin.
 
 The [qualified-source audit](n1-sources/batch-045-qualified-source-audit.json)
-checks exact inputs, complete re-extraction, baseline safeguards and
-unchanged runtime hashes; the historical
+records the earlier exact inputs, complete re-extraction, baseline safeguards
+and unchanged runtime hashes; the historical
 [preparation audit](n1-sources/batch-045-preparation-audit.json) is byte-preserved.
-No teaching, runtime practice metadata, independent linguistic review or
-native/phone acceptance is claimed. Continue the same batch's final
-support/comparison/actual quiz-label audit and signed unreviewed draft,
-then every review and delivery gate; do not begin 046.
+The [draft audit](n1-sources/batch-045-draft-audit.json) and
+[stroke/font audit](n1-sources/batch-045-stroke-audit.json) check the current
+three runtime additions and fresh manifest. One reciprocal pair,
+巳 / `words/巳.md`, is required; no baseline word pair is activated and
+no existing teaching passage changes. Actual existing 包, 巻 and 記
+provide three semantically wrong kanji choices. The direct 巳/蛇 word
+guard conservatively protects the displayed Snake-sign/animal labels;
+it is not a claim that the Japanese nouns are interchangeable.
+Both original 虎/酔っ払い and 猿/馬鹿 safeguards remain unchanged.
+
+The draft retains full シ/み metadata, selects only み, and supplies
+qualified historical hour/direction/month recognition rather than ordinary
+scheduling examples. Native 巳/己/已 and radical/font readability remain
+unverified; cmap checks and pre-existing occurrences are not native evidence.
+Two serial blind different-model-family initial reviews, evidence-based
+reconciliation, fresh non-skipped Android, applicable native/visual checks
+and all combined-main/publication gates remain pending. Do not push this
+unreviewed draft, reopen accepted 044 or begin 046.
 Published coverage remains **71 additions; 1,157 still to deliver**.
 
 ## Batch 044: local unreviewed draft
