@@ -37,7 +37,36 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 053: local unreviewed draft
+## Batch 053: accepted bounded owner-testing publication
+
+The [publication record](n1-sources/batch-053-publication.json) records signed
+accepted commit `381996ab63d54bec6e39f7ba58be2655ae71b53a`, green CI
+`41887646248` and its immutable public ZIP: all **8,287 runtime hashes** match,
+**8,309 entries**, original archive budgets unchanged. Published coverage is
+now **80/1,228; 1,148 remaining**: 1,065 kanji / 5,023 word articles /
+85 N1 labels, including 84 named-source members and the separate 妖 exception.
+The two new word articles are necessary kanji support, not an N1 vocabulary deck.
+
+Both original independent textual reviews and dependent visual confirmations
+are closed with no actionable teaching defect. Their complete reports and
+process limitations remain in the [reconciliation](n1-reviews/batch-053-reconciliation.json).
+Fresh combined-tree **368 Python tests**, source/baseline/membership,
+readings/links/strokes/fonts, vocabulary, validator and manifest checks passed.
+Accepted Android **3+1** and native **two terminal case-0** results were
+reverified without rerunning them. The full archive passed production
+ContentSync once; the actual reading session exercised both curated kinds.
+Actual meaning wrong labels differed from the authored trio; the observed
+choices had one defensible answer, not certification of every quiz pool.
+
+The [native record](n1-reviews/batch-053-native-acceptance.json) preserves
+21 distinct viewports, clipped-table limits and geometry-only drawing:
+reference touches and a recall miss are not ML Kit recognition or human
+successful recall. Compatible Android `f9b59a2` or later is required.
+Physical-phone/general-release and whole-set acceptance remain outstanding.
+Terminal publication receipts are recorded separately before the next batch.
+The earlier draft and preparation checkpoints below are historical.
+
+### Retained local unreviewed draft
 
 The [draft ledger](n1-sources/batch-053-progress.json) now records **丙** and
 exactly two necessary support articles, **丙（へい）** and **丙午（ひのえうま）**.
