@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 047: qualified source, not drafted
+## Batch 047: local unreviewed draft
 
 [Batch 047](n1-sources/batch-047-progress.json) bounds the next addition to
 **卯**, frozen source row 130, on accepted published base `ab874b6`.
@@ -61,19 +61,38 @@ raw-source-only without an independently established word; no invented example,
 invalidity claim or historical reading-class assertion is authorized.
 卵・柳・印 supply inspected shape/component comparisons, not etymology.
 
-Exact standalone う headings qualify one proposed sign article and sole-kun
-practice; neither is authored or enabled. Full ボウ・モウ / う metadata remains.
+Exact standalone う headings support one necessary sign article and sole-kun
+practice in the local draft. Full ボウ・モウ / う metadata remains.
 Daijisen 節旁 and the raw 卩 record agree on ふしづくり; the entire pinned
-five-path SVG confirms the right-side 卩 and an unchanged-converter candidate
-stays outside runtime. This is not font, visual or native acceptance.
-No baseline declared word pair is activated, no runtime content changes,
-and no teaching/reviewer/native/publication acceptance is claimed.
+five-path SVG confirms the right-side 卩. Runtime geometry is generated with
+the unchanged converter and must exactly match the qualified external candidate.
+This is not visual or native acceptance. No baseline declared word pair is
+activated and no existing runtime article changes.
 The [preparation audit](n1-sources/batch-047-preparation-audit.json)
 checks exact source bytes and complete re-extractions, baseline invariants
 and unchanged runtime hashes; its historical bytes are preserved by the
 [qualified audit](n1-sources/batch-047-qualified-source-audit.json).
-Final quiz-label, level and reciprocal-link decisions precede the same 047
-draft; two independent model-family reviews and native/publication gates remain.
+The draft adds only `kanji/卯.md`, `words/卯.md` and `strokes/卯.json`.
+No vocabulary level is inferred from the N1 kanji. One required reciprocal
+pair connects the new kanji and sign article. Actual 卵, 柳 and 印 cards
+provide three wrong kanji labels after their full meanings were checked;
+the generic mark/sign of 印 is not the Rabbit branch. Direct 卯/兎 and
+卯/東 word guards protect associated-animal and historical-east overlap
+without asserting synonymy or transitive exclusions. Existing exclusions,
+including 虎/酔っ払い and 猿/馬鹿, remain unchanged.
+
+The [draft audit](n1-sources/batch-047-draft-audit.json) and
+[stroke/font audit](n1-sources/batch-047-stroke-audit.json) record source,
+baseline, exact membership, reading/link, manifest, budget and font checks.
+Fresh complete frozen-family, selected Japanese-section and actual comparison
+reads are distinguished from inherited historical receipts. Of 23 authored Han
+characters, 21 occur in all three bundled fonts; 卩 and the source-link label's
+旁 require fallback, with 旁 new to the exact base. Those glyphs require explicit
+supported-native/visual disposition before publication, not a font substitution
+or an inferred acceptance. Font cmap presence is not native readability.
+This is an unpublished, independently unreviewed
+draft; two serial blind different-model-family reviews, reconciliation,
+fresh Android and applicable native/visual/integration/publication gates remain.
 Do not begin 048. Published coverage remains
 **73 additions; 1,155 still to deliver**, not complete N1 coverage.
 
