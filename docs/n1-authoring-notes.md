@@ -37,26 +37,42 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 044: source preparation only
+## Batch 044: qualified source checkpoint
 
 [Batch 044](n1-sources/batch-044-progress.json) bounds the next addition to
 **亥**, frozen source row 17. Its [membership](n1-sources/batch-044-membership.json)
 and complete source packets retain **17 lexical and 19 disjoint comparison
 families**, seven raw character records and inspection of seven actual existing
 articles. Full source readings remain on **ガイ, カイ** and kun **い**, in that
-order; six strokes, radical 亠 (8) and grade 9 are preserved. No practice key or
-support article is selected yet. Exact Japanese heading qualification and
-pinned geometry inspection are the next bounded work, not claimed here.
+order; six strokes, radical 亠 (8) and grade 9 are preserved.
+The [dictionary evidence](n1-sources/batch-044-dictionary-evidence.json) now
+records five exact Japanese entry sections across four raw pages, not five
+independent dictionaries or full-page inspections. One necessary **亥 い**
+sign-noun article and sole kun practice are proposed, not authored. ガイ is
+independently allocated in 辛亥 しんがい and 癸亥 きがい but remains recognition-only;
+カイ is retained as frozen-KANJIDIC2-only and unselected, without an invented
+example or a claim that its omission elsewhere invalidates it.
 
 The sign-versus-animal distinction needs comparison with accepted 猪 and 豚;
 the twelve-sign cycle must not be conflated with every sense/reading of 干支.
 Historical hour, direction and lunar-month senses retain their local register
 labels. The packet supplies alternative historical hour intervals, not a
-universal modern-clock conversion. No カイ compound occurs in these 17 lexical
+universal modern-clock conversion. Daijisen's actual い entry permits both a
+two-hour interval around 10 p.m. and one following 10 p.m.; use a qualified
+historical explanation, not a universal 9–11 p.m. rule. Its historical kana
+ゐ is not a new modern reading, and lunar month ten is not simply October.
+The pinned SVG has six paths, including the top 亠 group. A non-runtime
+candidate from the unchanged converter is audited separately; no drawable
+card or native tracing result is claimed.
+No カイ compound occurs in these 17 lexical
 families; that is not proof of global lexical absence or permission to erase
 the sourced reading. The [preparation audit](n1-sources/batch-044-preparation-audit.json)
 checks exact frozen inputs, complete re-extraction, baseline safeguards and
 unchanged runtime hashes. It is not independent linguistic or native acceptance.
+The [qualified-source audit](n1-sources/batch-044-qualified-source-audit.json)
+adds exact entry/range/hash and geometry checks without replacing that
+historical preparation receipt. Final support choices, quiz safeguards,
+teaching, two-family review and acceptance/publication gates remain pending.
 Published coverage remains **70 additions; 1,158 still to deliver**.
 
 ## Batch 043: local unreviewed draft
