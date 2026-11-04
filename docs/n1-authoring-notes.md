@@ -37,6 +37,31 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 046: source preparation only
+
+[Batch 046](n1-sources/batch-046-progress.json) bounds the next addition to
+**酉**, frozen source row 1105, on accepted published base `d76f2dd`.
+Its [membership](n1-sources/batch-046-membership.json) and complete frozen
+packets retain **16 lexical and 17 disjoint comparison families**, seven
+raw character records and coordinator inspection of sixteen actual existing
+articles. Full source readings are on **ユウ** and kun **とり**; seven
+strokes, grade 9 and canonical radical **酉 (164)** are preserved.
+
+The source packet distinguishes the Rooster sign from the living bird 鳥
+and domestic chicken 鶏, and retains their food senses for later quiz review.
+Calendar compounds are recognition candidates, not yet per-character
+allocation or practice decisions. The historical hour has multiple dictionary
+mappings; its west and lunar-eighth-month senses do not make 酉 a replacement
+for ordinary 西 or Gregorian August. Raw KANJIDIC2 radical-name
+**ひよりのとり** differs from JMdict's **ひよみのとり**; exact Japanese
+headings must be qualified before teaching either account.
+Shared radical shapes and alcohol associations are not established etymology.
+
+No teaching draft, selected quiz key, necessary-word commitment, converted
+geometry, independent review, fresh native/phone acceptance or publication
+is claimed. Published coverage remains **72 additions; 1,156 still to deliver**.
+Continue qualification of the same 046 before drafting; do not begin 047.
+
 ## Batch 045: local unreviewed draft
 
 [Batch 045](n1-sources/batch-045-progress.json) bounds the next addition to
