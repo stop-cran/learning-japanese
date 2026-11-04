@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 056: source prepared, not drafted
+## Batch 056: source qualified, not drafted
 
 The [membership](n1-sources/batch-056-membership.json) freezes **乏**, source
 row **10**, as one evidence-bounded addition. The
@@ -52,18 +52,41 @@ separate. The exact adjective family establishes both とぼしい and ともし
 missing priority flags do not establish that the latter is archaic or rare.
 Proposed minimal support is **乏しい（とぼしい）** plus **貧乏（びんぼう）**,
 with **欠乏（けつぼう）** an alternative, not an automatic third article.
-None has an existing matching word article. Japanese-source qualification,
-constituent ボウ allocation, register and final practice selections remain pending.
+None has an existing matching word article. The bounded
+[dictionary evidence](n1-sources/batch-056-dictionary-evidence.json) now verifies
+the exact Japanese adjective and compound headings, predicate/adnominal
+constructions and constituent ボウ allocation. The two proposed supports are
+selected for the next draft, not installed runtime articles.
+
+Daijisen independently recognizes **ともしい** with the same insufficiency
+and poverty senses, alongside separate historically illustrated senses.
+Its present-day relative frequency/register remains **UNVERIFIED**: neither
+those other senses' classical examples nor absent JMdict priority supports
+calling the insufficiency reading archaic or rare. Retain a separate recognition
+row without falsely linking to a primary ともしい article. Proposed practice
+is ボウ and とぼ.しい; final curation still needs the actual reviewed draft.
 
 The comparison evidence preserves overlap with **貧しい・少ない・不足**;
 do not manufacture strict money-versus-resources compartments. There are no
 activated baseline declared pairs. Current 貧乏 mentions in 貧しい and 金持ち
-are comparison passages, not automatic reciprocal-link obligations. No support,
-new quiz exclusion, reading queue or link ownership is finalized.
+are comparison passages, not automatic reciprocal-link obligations. Support
+scope is two words; final quiz exclusions, reading queue and installed link
+ownership remain pending.
 
-Next SAME056: source qualification, minimal support and actual quiz labels,
-pinned SVG/count reconciliation, all authored-Han/font checks, then a normally
-signed local draft and two serial blind different-model-family reviews.
+The exact pinned four-path SVG is acquired and converted outside runtime with
+the unchanged converter. Canonical top 丿 and four primary strokes agree;
+the alternate three-stroke annotation remains source metadata, not another
+accepted order. All three bundled fonts contain 乏 but lack 丿 and the
+source-only SVG label 丶. Retain the canonical radical; fresh RareHan/native
+fallback readability remains required. Candidate cmap checks are not native
+readability evidence, and 丶 need not enter learner prose.
+The [qualification audit](n1-sources/batch-056-qualification-audit.json)
+records hashes, conversion, bounded font scope and unchanged runtime.
+
+Next SAME056: fetch/normal merge latest main before drafting, finalize actual
+quiz labels/direct guards and reciprocal links, audit all final authored Han,
+then freeze a normally signed local draft for two serial blind
+different-model-family reviews.
 Runtime remains unchanged; published coverage is **82/1,228; 1,146 remaining**.
 No batch057, accepted055 test/review rerun or unreviewed content publication.
 Physical-phone/general-release and whole-set acceptance remain outstanding.

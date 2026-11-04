@@ -1,0 +1,199 @@
+{
+  "execution": 317,
+  "batch": "056",
+  "startingHead": "81774f5c41235ecb327397d71680fcb754ff0cc4",
+  "startedAt": "2026-11-04T22:23:24.510142+01:00",
+  "scope": "Bounded same056 Japanese dictionary/reading/support and pinned stroke geometry qualification with candidate-font audit; no runtime draft, reviewer, Android/native, publication or second runner.",
+  "status": "bounded-source-qualified-not-drafted",
+  "requestRead": {
+    "sha256": "47030a119319e1056a2744b7ce6a0885dfc1ff518879e089e8a7a749bc196649",
+    "lines": 11562,
+    "boundary": "Complete request acquired before context compaction; operative opening and final checkpoint reacquired afterwards. Complete approved issue and actual repository/scoped instructions acquired; no fresh semantic re-review of every historical execution."
+  },
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-04T22:28:07.041368+01:00",
+  "sourcePreparationSnapshot": "81774f5c41235ecb327397d71680fcb754ff0cc4",
+  "runtimeBase": "9b5e9fd9f596801eb78078ab14e4c4b35973479d",
+  "membership": [
+    "乏"
+  ],
+  "evidence": "batch-056-dictionary-evidence.json",
+  "evidenceSha256": "31d7e4d109b31d12e29de844287156ea67bd77182128b98b866eb3416bbd8678",
+  "audit": "batch-056-qualification-audit.json",
+  "auditSha256": "2af053377000be70a70b5ea7c9d2cb550ca07f87f27674de183aa30368f9f6f7",
+  "checks": [
+    {
+      "check": "source-audit",
+      "command": "python -B -X utf8 ..\\control\\execution-317.py audit",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-317-source-audit.txt",
+      "sha256": "11cbe86e4d32358b809e5636f8219c91920292bf9e7f7850cd4fa74a3438732a",
+      "exitCode": 0
+    },
+    {
+      "check": "extraction-tests",
+      "command": "python -B -X utf8 -m unittest discover -s tools -p test_extract_n1_jmdict.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-317-extraction-tests.txt",
+      "sha256": "f7dc1c65d9bf1c31f1cb9a0be1fc0c0840290cbe7f978a8864c6557dbd2fbb5e",
+      "exitCode": 0
+    },
+    {
+      "check": "validate",
+      "command": "python -B -X utf8 tools\\validate.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-317-validate.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "exitCode": 0
+    },
+    {
+      "check": "manifest",
+      "command": "python -B -X utf8 tools\\build_manifest.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-317-manifest.txt",
+      "sha256": "43e52403004d32ab2f291d674199daccb2c9c5d6a74f56a682c46523dab75a73",
+      "exitCode": 0
+    }
+  ],
+  "runtimeChanges": 0,
+  "freshManifestUnchanged": true,
+  "contentVersion": "66fa8fda924b856d",
+  "runtimeHashesVerified": 8293,
+  "frozenInputHashesVerified": 5,
+  "decompressedDictionaryHashesVerified": 2,
+  "completeFamiliesReextracted": 55,
+  "baselinePreserved": {
+    "kanji": 985,
+    "words": 4942,
+    "strokes": 985
+  },
+  "sourceReadingOrder": {
+    "kanji": "乏",
+    "strokes": 4,
+    "strokeCountAnnotations": [
+      {
+        "count": 4,
+        "attributes": {}
+      },
+      {
+        "count": 3,
+        "attributes": {}
+      }
+    ],
+    "grade": "8",
+    "radicalNumber": 4,
+    "radical": "丿",
+    "onyomi": [
+      "ボウ"
+    ],
+    "kunyomi": [
+      "とぼ.しい",
+      "とも.しい"
+    ],
+    "meanings": [
+      "destitution",
+      "scarce",
+      "limited"
+    ]
+  },
+  "readingDispositions": [
+    {
+      "reading": "ボウ",
+      "type": "on",
+      "disposition": "Qualified useful practice candidate through proposed 貧乏びんぼう. Character entry plus split compound heading establish allocation; a separate linked reading row is still required in the eventual draft."
+    },
+    {
+      "reading": "とぼ.しい",
+      "type": "kun",
+      "disposition": "Qualified useful practice candidate through proposed primary 乏しいとぼしい, with exact dictionary spelling, adjective class and predicate/adnominal patterns."
+    },
+    {
+      "reading": "とも.しい",
+      "type": "kun",
+      "disposition": "Retain full ordered metadata and an explicit alternate-reading row. Recognition-only proposal, not source-only non-lexical information: an exact lexical example is verified. Do not select a separate practice key without its own suitable linked primary-reading example; no rarity/archaic/frequency assertion."
+    }
+  ],
+  "supportDisposition": {
+    "selectedForNextDraft": [
+      {
+        "article": "words/乏しい.md",
+        "primaryReading": "とぼしい",
+        "type": "wago",
+        "kanji": [
+          "乏"
+        ],
+        "entryIds": [
+          "1584130"
+        ]
+      },
+      {
+        "article": "words/貧乏.md",
+        "primaryReading": "びんぼう",
+        "type": "kango",
+        "kanji": [
+          "貧",
+          "乏"
+        ],
+        "entryIds": [
+          "1490900"
+        ]
+      }
+    ],
+    "reason": "Two useful lexical identities suffice for the proposed on and primary kun practice keys. No existing matching article can be reused. These are necessary kanji supports, not an N1 vocabulary-list delivery; omit unsourced word JLPT levels.",
+    "notSelected": "欠乏けつぼう remains a verified alternative, not a third required article. No new support is needed for an alternate pronunciation of the same adjective.",
+    "requiredReciprocalPairs": [
+      [
+        "乏",
+        "乏しい"
+      ],
+      [
+        "乏",
+        "貧乏"
+      ]
+    ],
+    "additionalSubstantiveComponentLink": [
+      "貧",
+      "貧乏"
+    ],
+    "limits": "Authoring scope selection only. No runtime article, installed ownership/link, final title, exclusion or reading-queue selection exists yet."
+  },
+  "candidateFontDisposition": "乏 and the other13 candidate Han are present in all three bundled subsets; 丿 and 丶 are absent in all three. Canonical radical 丿 must be retained, so its system-font fallback remains an explicit fresh RareHan/native readability obligation. 丶 is only an SVG group label at this checkpoint and need not enter learner prose. Do not equate cmap absence with a blank system glyph or claim fallback acceptance before native evidence.",
+  "geometry": {
+    "rawSha256": "59eb4243955b84fa8e1f97095e38ed608045348f0d2227fa4ff65eba4fe7acaf",
+    "verifiedGitBlob": "fbbe870444f6d9a79116535bf0f61c9461607c88",
+    "actualPaths": 4,
+    "actualBytes": 2686,
+    "actualLines": 58,
+    "converterCandidate": {
+      "path": "control/artifacts/batch-056-stroke-candidate.json",
+      "sha256": "f0bf467e0597d575f5f08b936e37e840d4b342beb1e450403e8f91fee712829e",
+      "bytes": 1111,
+      "converter": "tools/generate_strokes.py",
+      "converterSha256": "6993834d66221d23399547e5a17771d2d638dc68b2d08d47e9875ddc2c932081",
+      "strokeCount": 4,
+      "pointsPerStroke": 16,
+      "runtimeFileCreated": false
+    }
+  },
+  "sourceAuditImplementation": {
+    "execution-317.py": {
+      "path": "control/execution-317.py",
+      "sha256": "5a39ec883cb8532c0b9679f4c0f2f392d5e90f7edd8b4f8f5f23fe525c7c0a45"
+    },
+    "finish-execution-317.py": {
+      "path": "control/finish-execution-317.py",
+      "sha256": "599ec85cbcaaac52c83b61130f0ad16f5c7e4d648033eb5eb377a7c7257805fd"
+    },
+    "execution-316-source.py": {
+      "path": "control/execution-316-source.py",
+      "sha256": "79d8524d3387fadd3be056dbda0aa83a82f36e3a76b0863cbb0908a49581a185"
+    },
+    "execution-209-source.py": {
+      "path": "control/execution-209-source.py",
+      "sha256": "91a676913d826227b28202e9b8d0e25e0e6d9215870766452fa126c9da6fd006"
+    }
+  },
+  "reviewersLaunched": 0,
+  "freshAndroidOrNativeClaimed": false,
+  "runtimePublished": false,
+  "publishedAdditions": 82,
+  "remainingAdditions": 1146,
+  "nextAction": "Resume SAME056乏, source-qualified only, at local signed checkpoint317; no runtime draft/publication. Read complete authorized request/finalcheckpoint and approvedissue; scoped currentlivekeys, preserve FULL history. Resume SAME056 for a bounded runtime draft: fetch/normal merge latest main first and inspect the exact delta. Use necessary 乏しいとぼしい plus 貧乏びんぼう support; full ボウ/とぼ.しい/とも.しい order and source metadata unchanged. Propose practice ボウ and とぼ.しい only; give recognized とも.しい its own qualified row without a false primary-reading link or unsupported rarity claim. Complete actual final titles/direct guards, all three wrong kanji choices/legacy fallbacks and two reciprocal pairs plus 貧 component link; use the verified four-path converter candidate, audit every final authored Han and validate/regenerate manifest. Bundled fonts lack canonical radical丿 and source-only丶: retain metadata and explicitly verify necessary fallback in fresh RareHan/native evidence, not cmap alone. Freeze a normally signed LOCAL UNREVIEWED teaching snapshot for two serial blind different-model-family complete-content reviews. No057 or runtime publication before all applicable fresh Android/native/current-main/combined-tree/signing/owner-fast-forward/greenCI/exact public ZIP acceptance gates. Exact frozenrow10; grade8/canonical丿4/primary4strokes plus alternate3 annotation retained. PinnedSVG70a0b7ae04e4f/blobfbbe870444f6d9a79116535bf0f61c9461607c88/2686bytes/4paths and unchangedconvertercandidate control/artifacts/batch-056-stroke-candidate.json sha256f0bf467e0597d575f5f08b936e37e840d4b342beb1e450403e8f91fee712829e verified. Three actual Daijisen sections verified/rawhashes retained in batch-056-dictionary-evidence.json; exactともしい lexicalalternate+sameinsufficiency/poverty independentlyconfirmed, NOTsource-onlynonlexical; frequency/register UNVERIFIED, no archaic/rare claim. No▽interpretation withoutnotationguide. Selectedsupportscope2 not installed/finalqueue. Directguard candidates乏しい/貧しい,乏しい/少ない, 乏しい/不足,貧乏/貧しい and乏しい/貧乏; finalactualtitles/bothdirections/fullordinarysense audit stillpending, nottransitiveclique. No forced moneyonly/resourcesonly distinction. No baseline declared乏pair; current incidentalcomparisons notmandatorybacklinks. No separate欠乏supportneeded. Preserve baselinelevels/primaryreadings/exclusions including exact虎[酔っ払い]/猿[馬鹿]; no inventedwordJLPTlevels/history/phonetics. Fresh5frozeninputs/2decompressedhashes/exact55familyreextraction/originalbaseline985kanji4942words985strokes/all8293runtimehashes/5extractiontests/validator/unchangedfresh66fa8fda924b856dmanifestpass. Freshreadboundary5completefamilies/5actualarticles/3boundedJapanesesections/58lineSVG; full55families/8rawrecords/13articlepreparation inherited316 notfreshfullreread. Finaldraft allauthoredHan check, then same signedteaching/allnewchangedsupport/all3facets two serialblind differentactualmodel-family initials; actualCLIcatalog/modelidentity/oneactivereviewer/serialinternaltools/completeoriginalreports/actualread-processlimits/evidencebasedreconciliation/originalsessionconfirmationswhenjustified. Applicable freshnon-skippedAndroid/native/originalvisual/latestmainnormalmerge/allcombinedchecks/originalbudgets/normalsigning/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 BEFOREdelivery. No accepted055 review/Android/native rerun absentnewconcern. Public82/1228,1146remaining;1067kanji5025words87N1labels86namedmembersplus妖;compatibleAndroidf9b59a2+ required;physicalphone/generalrelease/whole-setoutstanding. No057/authoragents/concurrentheavywork/secondrunner/signingretry/permissionworkaround. Overallprojectincomplete.",
+  "limits": "Coordinator source qualification, not independent linguistic review. Full55-family/eight-character/13-article preparation is inherited from execution316; this execution freshly reads five complete frozen families, five actual articles, three bounded Japanese dictionary sections and complete58-line SVG. ともしい frequency/register remain UNVERIFIED and excluded from teaching claims. No runtime draft, final curation, reviewer, fresh Android/native, publication or second runner. Published82/1228 with1146remaining; physical-phone/general-release and whole-set acceptance outstanding."
+}
