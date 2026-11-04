@@ -5,8 +5,8 @@
   "membership": [
     "企"
   ],
-  "status": "source-prepared-not-drafted",
-  "drafted": [],
+  "status": "local-unreviewed-runtime-draft",
+  "drafted": ["企"],
   "reviewClosed": [],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
@@ -18,6 +18,10 @@
     {
       "selection": "batch-057-comparison-selection.json",
       "xml": "batch-057-comparison-jmdict.xml"
+    },
+    {
+      "selection": "batch-057-draft-comparison-selection.json",
+      "xml": "batch-057-draft-comparison-jmdict.xml"
     }
   ],
   "sourceReadingOrder": {
@@ -415,7 +419,124 @@
       "requiredReciprocalPairIfSelected": true
     }
   ],
-  "pendingReadingDisposition": "たくら.む is independently recognized by exact企むたくらむ family, with a usual-kana annotation, not unattested/automatically archaic. Recognition versus useful quiz practice and a separate support identity remain open; no quizOnyomi/quizKunyomi installed.",
-  "nextAction": "SAME057: qualify exact Japanese企/企てる/企む/企業 headings and reading allocation/register/attachment. Select minimum useful support and curated practice; preserve all three full entries/order and reusable企業 identity/N3/会社 guard. Verify pinned SVG/count and all final authored Han/fonts; then draft only after latest-main merge and finalize actual labels/direct guards, one activated baseline pair and every selected reciprocal support pair. No058 or publication before all review/acceptance gates.",
-  "limits": "Source preparation only: runtime unchanged, no draft, curation, support installation, generated geometry, font/native acceptance, independent review or publication. Published83/1228 with1145remaining; compatible Androidf9b59a2+ required; physical-phone/general-release and whole-set acceptance outstanding."
+  "pendingReadingDisposition": "Resolved for this unreviewed draft: preserve all three full readings/order; practiceキ through existing primary企業きぎょう andくわだ.てる through new primary企てるくわだてる. Exact企むたくらむ is a separate godan verb with usual-kana annotation and a tendency toward dubious plans, not archaic/unattested. Its own plain recognition row is not a falsely relabelledくわだてる link. No separate support article is needed for an unselected recognition example.",
+  "sourcePreparationFields": "authorInspection, lexicalDispositions, comparisonDispositions, baselineCandidatePairs and supportCandidates above preserve execution330's historical pre-draft findings/questions. The draft decisions below and dictionary evidence resolve the selected subset; historical candidate/pending wording is not current acceptance.",
+  "supportMappings": [
+    {
+      "kanji": "企",
+      "article": "words/企業.md",
+      "primaryReading": "きぎょう",
+      "newArticle": false,
+      "entryIds": ["1218190"],
+      "senses": [1],
+      "disposition": "Reuse primary identity and independently sourced N3 unchanged; only add the substantive企 component link. Both activated baseline pair and selected reciprocal support pair."
+    },
+    {
+      "kanji": "企",
+      "article": "words/企てる.md",
+      "primaryReading": "くわだてる",
+      "newArticle": true,
+      "entryIds": ["1218120"],
+      "senses": [1, 2],
+      "disposition": "Necessary native-reading support, transitive ichidan; no inferred vocabulary level. Planning/attempting use, not the separately archaic tiptoe sense."
+    }
+  ],
+  "requiredReciprocalPairs": [
+    ["企", "words/企業.md"],
+    ["企", "words/企てる.md"]
+  ],
+  "changedReusedPassages": [
+    {
+      "article": "words/企業.md",
+      "before": "企 carries a planning or undertaking association;",
+      "after": "[企](../kanji/企.md) carries a planning or undertaking association;",
+      "reason": "Activate the sole baseline declared企 pair at its substantive component introduction; preserve all existing teaching, reading, N3 level, company guards and業 link."
+    }
+  ],
+  "readingDispositions": [
+    {
+      "kanji": "企",
+      "kind": "on",
+      "reading": "キ",
+      "selected": true,
+      "sourceOnly": false,
+      "article": "words/企業.md",
+      "entryIds": ["1218190"],
+      "reason": "Useful business-enterprise noun. Exact Daijisen character heading listsキ and企業 among planning compounds; separateき‐ぎょう compound heading and existing業ギョウ support per-character allocation, not just a kana substring."
+    },
+    {
+      "kanji": "企",
+      "kind": "kun",
+      "reading": "くわだ.てる",
+      "selected": true,
+      "sourceOnly": false,
+      "article": "words/企てる.md",
+      "entryIds": ["1218120"],
+      "reason": "Exact frozen spelling/reading and Japanese headword support the printed boundary and transitive ichidan class. Planning and attempts, with possible deliberate/weighty/dubious tone, are useful recognition/practice; no absolute bad-intentions rule. The archaic flag belongs to the separate tiptoe sense."
+    },
+    {
+      "kanji": "企",
+      "kind": "kun",
+      "reading": "たくら.む",
+      "selected": false,
+      "sourceOnly": false,
+      "entryIds": ["1218140"],
+      "reason": "Exact企むたくらむ family and Japanese heading confirm a separate godan verb. JMdict says usually kana; retain a qualified own recognition row without a second support article or kanji-reading question. 日本国語大辞典 says often dubious, not exclusively; no claim that the pronunciation itself is rare or archaic, and no inferred interpretation of the unexplained▽ mark."
+    }
+  ],
+  "curatedProjection": [
+    {
+      "kanji": "企",
+      "quizOnyomi": ["キ"],
+      "quizKunyomi": ["くわだ.てる"],
+      "onKeys": ["き"],
+      "kunKeys": ["くわだてる"],
+      "compatibleClient": "Android f9b59a2 or later; old APKs ignore explicit curation."
+    }
+  ],
+  "quizAudit": {
+    "企": {
+      "title": "plan; undertake",
+      "distractors": ["危", "休", "全"],
+      "labels": ["danger", "rest", "whole; complete"],
+      "reason": "All three actual complete cards inspected. 危 danger/fear/unease,休 rest/absence and全 wholeness/completeness do not denote企 planning/attempting. Six-stroke/roof-like visual cues are memory comparisons, not proof of semantic equivalence or shared radical. Existing計/図/承/意/試 labels overlap planning, undertaking, intention or attempts; each already has three curated choices, so no default four-choice fallback repair is needed there.",
+      "limits": "Default four-choice and actual legacy-fallback label audit, not exhaustive safety of every larger/random/live pool."
+    }
+  },
+  "wordQuizAudit": {
+    "directExclusions": [
+      {
+        "word": "企てる",
+        "exclude": ["計画", "予定", "プラン", "設計", "計", "引き受ける", "案", "提案", "言い出す", "試す", "試し"],
+        "reason": "Direct safeguards for displayed planning/proposal labels and ordinary undertaking/trying senses. Complete actual articles and applicable full frozen families inspected. 計画/予定/プラン/設計/計 overlap the bare plan label;案/提案/言い出す overlap the propose sense of企てる;引き受ける overlaps undertake;試す/試し have trying/try senses overlapping attempt even though testing and planning are not equivalent in every context. These eleven direct pairs are not a transitive clique or an unrestricted substitution rule."
+      }
+    ],
+    "existingGuardsPreserved": [
+      {"word": "企業", "exclude": ["会社"]},
+      {"word": "商社", "exclude": ["会社", "企業"]}
+    ],
+    "candidateNavigation": "Current title scan for planning/design/undertaking/attempt/proposal/trying/intention and actual neighboring cards, plus confusable-words inventory. Title strings alone are navigation. Land/plot, plants, computer programs, test examinations and generic intentions are not automatically identical to the new verb; no unrelated titles or baseline guards changed.",
+    "limits": "Bounded author quiz audit; independent review and actual app acceptance remain pending."
+  },
+  "draftInspection": {
+    "inheritedSourcePreparation": "Execution330 inspected all183 complete source/comparison families, seven raw character records and17 actual existing articles. This execution does not claim a fresh full linguistic reread of those183 families.",
+    "freshCompleteFamilies": ["1218110", "1218120", "1218130", "1218140", "1218150", "1218160", "1218180", "1218190", "1198550", "1223750", "1239320", "1239330", "1252090", "1347080", "1366410", "1366420", "1394770", "1543240", "1580640", "1600660", "2149890", "2153730", "2177790", "2185000", "1115900", "1154770", "1220210", "1252050", "1264080", "1312250", "1312260", "1386020", "1436320", "1601520", "2817380"],
+    "freshPacketRanges": [
+      {"packet": "batch-057-jmdict.xml", "ranges": [[1, 220]], "limits": "Eight complete entries through1218190; following partial entries not counted as inspected."},
+      {"packet": "batch-057-comparison-jmdict.xml", "ranges": [[1, 220], [221, 443]], "completeFamilies": 16},
+      {"packet": "batch-057-draft-comparison-jmdict.xml", "ranges": [[1, 180], [181, 349]], "completeFamilies": 11},
+      {"packet": "batch-057-kanjidic2.xml", "ranges": [[1, 200]], "limits": "Complete企/危 records; partial休 not counted as a complete fresh record."}
+    ],
+    "freshCompleteArticles": [
+      "kanji/乏.md", "kanji/危.md", "kanji/休.md", "kanji/全.md", "kanji/意.md", "kanji/試.md", "kanji/図.md", "kanji/承.md", "kanji/計.md",
+      "words/企業.md", "words/設計.md", "words/引き受ける.md", "words/計画.md", "words/予定.md", "words/プラン.md", "words/計.md", "words/試す.md", "words/試し.md", "words/案.md", "words/提案.md", "words/言い出す.md", "words/商社.md",
+      "kanji/業.md", "kanji/人.md", "kanji/止.md"
+    ],
+    "freshJapaneseEvidence": "Four exact Kotobank pages fetched; complete actual Digital Daijisen and精選版日本国語大辞典 article nodes inspected with publisher, heading and sense boundaries. Initial simplified Weblio responses omitted definitions or selected unrelated Wikipedia material; those were not accepted as verification. Raw HTML retrieved independently by coordinator into external control cache; exact article-node parser then exposed the missing dictionary definitions. No claim of independent reviewer upstream access.",
+    "sourceLimits": "Daijisen企 confirmsキ/くわだてる and企業 allocation, notたくらむ rarity. Exact企む heading confirmsたくらむ separately; unexplained▽ not interpreted. 企業 page also contains historical起業-likeする use in a different dictionary; unchanged existing article explicitly teaches the enterprise noun, not exhaustive historical senses. 字通 origin claims are not imported; modern-shape mnemonic only.",
+    "examples": "Two ordinary original examples and translations, not dictionary quotations or corpus-frequency claims: new business planning and suspicion about an unspecified plan. Frozen JMdict explicitly recognizes business undertakings; Japanese definitions support planning/attempting and transitiveを. No invented exotic spelling/collocation or harmful scenario is needed.",
+    "limits": "Coordinator author inspection only, not independent linguistic/native-speaker approval, empirical learning proof, native readability or phone acceptance."
+  },
+  "nextAction": "SAME057: normally sign this LOCAL UNREVIEWED teaching/source/manifest snapshot after draft checks, then obtain two SERIAL blind different-actual-model-family complete-content initial reviews on that same signed snapshot, including企/企てる and exact企業 link diff, all three facets and dictionary access. Preserve process/read limits, reconcile evidence and confirm substantive fixes with original sessions. Then all applicable fresh Android/native/visual/current-main/combined-tree/signing/owner-push/CI/immutable-ZIP/issue receipts before bounded owner-testing delivery or058.",
+  "limits": "LOCAL UNREVIEWED runtime draft only. Published83/1228 with1145remaining; the new企 addition and企てる support are not delivered. Compatible Androidf9b59a2+ required. No independent review, fresh Android/native acceptance, publication,058 or second runner; physical-phone/general-release and whole-set acceptance remain outstanding."
 }

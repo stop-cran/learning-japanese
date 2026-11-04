@@ -37,7 +37,50 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 057: source preparation, not a runtime draft
+## Batch 057: local unreviewed runtime draft
+
+The [draft ledger](n1-sources/batch-057-progress.json) now records **企**,
+one necessary **企てる（くわだてる）** article without an inferred word level,
+and the sole substantive component-link addition in existing
+**企業（きぎょう）**, whose independent **N3** level and original safeguards
+are unchanged. Both selected support pairs link both ways; **企 / 企業**
+is also the one activated baseline pair.
+
+Full ordered **キ / くわだ.てる・たくら.む**, grade 8, canonical **人 (9)**
+and **six strokes** remain intact. Practice selects **キ / くわだ.てる**;
+the separately attested godan verb **企む（たくらむ）** has its own plain
+recognition row. Its usual-kana spelling is not an obsolete-pronunciation
+claim or a false link to primary くわだてる. The
+[Japanese evidence](n1-sources/batch-057-dictionary-evidence.json) verifies
+the exact character/verb/compound headings, allocation, attachment and
+qualified scheming tendency without an absolute bad-intentions rule.
+
+The unchanged pinned converter generated all six strokes from the verified
+**2,966-byte** SVG. The [audit](n1-sources/batch-057-draft-audit.json)
+checks exact membership, **194 complete frozen families** (183 original plus
+11 additional comparisons), every runtime hash, original baseline metadata
+and geometry, two practice keys, two reciprocal pairs, eleven direct word
+guards and the original archive budgets. All **52 authored/reused-article
+Han characters** have cmap entries in all three actual bundled subsets;
+this is not native readability evidence.
+
+Fresh normal fetch/merge was already up to date before drafting.
+The local draft passed **368 Python tests**, validation, vocabulary
+consistency and manifest freshness at **c16988151f0d2d9c**.
+It adds three runtime files and changes only the existing 企業 link;
+**8,296** existing runtime hashes remain unchanged.
+
+Next SAME057: two serial blind different-model-family content reviews of
+one normally signed teaching snapshot, all three facets across both complete
+new articles and the actual reused passage. Reconciliation and applicable
+fresh Android/native/visual/current-main/combined-tree/publication gates
+remain. **No runtime push or independent acceptance** is claimed.
+Published coverage stays **83/1,228; 1,145 remaining**; local
+**1,069 kanji / 5,028 words / 89 N1 labels** include this unpublished addition.
+Compatible Android `f9b59a2` or later is required; physical-phone,
+general-release and whole-set acceptance remain outstanding. No batch058.
+
+### Historical source preparation
 
 The [membership](n1-sources/batch-057-membership.json) freezes **企**, source
 row **27**, as one evidence-bounded addition. The

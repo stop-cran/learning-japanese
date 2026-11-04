@@ -1,0 +1,360 @@
+{
+  "execution": 331,
+  "batch": "057",
+  "startingHead": "a3edef2d787e35180fd482946c2429b259d42d04",
+  "startedAt": "2026-11-04T23:09:41.704332+00:00",
+  "scope": "SAME057 exact reading/support qualification and validated local draft checkpoint; no reviewer, Android/native, publication,058 or second runner.",
+  "requestRead": {
+    "sha256": "fbded17e8fe418745468dd44b28d4376eda4ab85545b81c2a04efc7eae4053b8",
+    "lines": 12331,
+    "completeFileLoadedAndCheckpointParsed": true,
+    "limits": "Entire request consumed and complete embedded checkpoint parsed. Operative contract/final330checkpoint and approved issue inspected directly; no fresh semantic re-review of every historical execution record claimed."
+  },
+  "status": "validated-local-unreviewed-runtime-draft",
+  "worktrees": "Dedicated content clean signedG a3edef2d; dedicated Android clean, no changes or heavy work launched.",
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-04T23:18:10.335452+00:00",
+  "runtimeBase": "e8dc74eba6a783552f069593c6fc1d3849986293",
+  "membership": [
+    "企"
+  ],
+  "sourceRow": 27,
+  "sourceEvidence": "batch-057-dictionary-evidence.json",
+  "sourceEvidenceSha256": "f3b707d9f6dd39d2796d88d433ad152d82c8e85897623d0a1e20e5cf6dd7871e",
+  "audit": "batch-057-draft-audit.json",
+  "auditSha256": "6fa84c7272b0cb04d0b96c9c75e9be161b27b0c7cdba210bbe3a9ba067858b5e",
+  "checks": [
+    {
+      "command": "git fetch origin; git merge --no-edit origin/main",
+      "exitCode": 0,
+      "result": "Already up to date; no substantive merge delta before drafting."
+    },
+    {
+      "command": "python -X utf8 -B tools\\generate_strokes.py",
+      "exitCode": 0,
+      "result": "企:6strokes,unchanged pinned generator; matched verified SVG conversion."
+    },
+    {
+      "command": "python -X utf8 -B -m unittest discover -s tools -p test_*.py",
+      "exitCode": 0,
+      "tests": 368,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "seconds": 36.78,
+      "rawLog": "control/logs/execution-331-python-tests.txt",
+      "rawLogSha256": "6dc735516804e7abe1e56ea61bda9b574dfef8d363bff99887e3bdaa5f58f684"
+    },
+    {
+      "command": "python -X utf8 -B tools\\validate.py",
+      "exitCode": 0,
+      "result": "0 error(s)."
+    },
+    {
+      "command": "python -X utf8 -B tools\\grammar_vocabulary.py check",
+      "exitCode": 0,
+      "result": "2122/2431 reviewed prompts;stage=pilot. Consistency pass, not whole-corpus coverage."
+    },
+    {
+      "command": "python -X utf8 -B tools\\build_manifest.py",
+      "exitCode": 0,
+      "result": "8300 runtime files;c16988151f0d2d9c."
+    },
+    {
+      "command": "python -X utf8 -B ..\\control\\execution-331-audit.py",
+      "exitCode": 0,
+      "result": "Exact194frozenfamilies/5frozen2decompressedhashes/all8300runtimehashes/originalbaseline/links/readings/SVG/fonts/originalbudgets pass."
+    },
+    {
+      "command": "git --no-pager diff --check",
+      "exitCode": 0,
+      "result": "No whitespace errors."
+    }
+  ],
+  "actualDraftCounts": {
+    "kanji": 1069,
+    "words": 5028,
+    "n1Labels": 89,
+    "unpublishedBatchAdditions": 1
+  },
+  "runtimeAdditions": [
+    "kanji/企.md",
+    "strokes/企.json",
+    "words/企てる.md"
+  ],
+  "changedReusedRuntimePayloads": [
+    "words/企業.md"
+  ],
+  "runtimePayloadHashesVerified": 8300,
+  "oldRuntimePayloadHashesUnchanged": 8296,
+  "contentVersion": "c16988151f0d2d9c",
+  "fullReadingsPreserved": true,
+  "sourceReadingOrder": {
+    "onyomi": [
+      "キ"
+    ],
+    "kunyomi": [
+      "くわだ.てる",
+      "たくら.む"
+    ]
+  },
+  "readingDispositions": 3,
+  "offeredKeys": [
+    "き",
+    "くわだてる"
+  ],
+  "recognizedUnselected": [
+    "たくら.む"
+  ],
+  "selectedReciprocalPairs": 2,
+  "directedSelectedLinks": 4,
+  "activatedBaselinePairs": 1,
+  "directWordExclusions": 11,
+  "kanjiDistractors": [
+    "危",
+    "休",
+    "全"
+  ],
+  "legacyFallbackLabelsInspected": 12,
+  "actualAuthoredHanFonts": {
+    "characters": [
+      "中",
+      "予",
+      "事",
+      "人",
+      "企",
+      "休",
+      "会",
+      "何",
+      "作",
+      "働",
+      "元",
+      "入",
+      "全",
+      "典",
+      "出",
+      "動",
+      "医",
+      "危",
+      "受",
+      "器",
+      "国",
+      "地",
+      "場",
+      "大",
+      "定",
+      "小",
+      "工",
+      "引",
+      "彼",
+      "提",
+      "新",
+      "日",
+      "本",
+      "案",
+      "業",
+      "機",
+      "止",
+      "活",
+      "版",
+      "王",
+      "画",
+      "療",
+      "社",
+      "精",
+      "言",
+      "計",
+      "設",
+      "試",
+      "語",
+      "起",
+      "辞",
+      "選"
+    ],
+    "count": 52,
+    "fonts": [
+      {
+        "path": "app/src/main/res/font/kanji_brush.ttf",
+        "sha256": "8da5c86e251f6efa0f81fc32bd6e67a5d81d21da26cd6c2b3fa4bb92a7692954",
+        "missing": []
+      },
+      {
+        "path": "app/src/main/res/font/kanji_mincho.ttf",
+        "sha256": "168007ae94a45262cdcbe6ca940b70d3aba27a3399362a68f723e1445ac9596d",
+        "missing": []
+      },
+      {
+        "path": "app/src/main/res/font/kanji_textbook.ttf",
+        "sha256": "c37ea201be60dc5707693a14f93c1999f815cc6c54c0e63930606d0c598a50ab",
+        "missing": []
+      }
+    ],
+    "missingUnion": [],
+    "limits": "Actual final authored/reused article Han and current bundled font cmaps only; not a native readability/fallback-face/phone acceptance claim."
+  },
+  "geometry": {
+    "rawRuntimeSha256": "326a596dec6ad695e45b9594d34887fe0afd49533f3441df08892b3f5fa8a89b",
+    "normalizedSha256": "5c7a78fbdeb4ec2a3f3d6a708fc59b1256008a11466c48e39f58ededd2d293b6",
+    "rawSvgSha256": "2c2bff3a445a47edceb1174080630593ec6faec2cfc712a1805ba7674b5692be",
+    "gitBlob": "f3de6a127c93b832727576d7bc8c69583d31b483",
+    "strokes": 6,
+    "pointsPerStroke": 16,
+    "unchangedConverter": true,
+    "equalToVerifiedPinnedSvgConversion": true
+  },
+  "budget": {
+    "files": 8307,
+    "entries": 8322,
+    "retainedBytes": 43979550,
+    "inflatedBytes": 44247888,
+    "localZipBytes": 30079964,
+    "listeningTaskMediaBytes": 5893602
+  },
+  "coordinatorInspection": {
+    "inheritedSourcePreparation": "Execution330 inspected all183 complete source/comparison families, seven raw character records and17 actual existing articles. This execution does not claim a fresh full linguistic reread of those183 families.",
+    "freshCompleteFamilies": [
+      "1218110",
+      "1218120",
+      "1218130",
+      "1218140",
+      "1218150",
+      "1218160",
+      "1218180",
+      "1218190",
+      "1198550",
+      "1223750",
+      "1239320",
+      "1239330",
+      "1252090",
+      "1347080",
+      "1366410",
+      "1366420",
+      "1394770",
+      "1543240",
+      "1580640",
+      "1600660",
+      "2149890",
+      "2153730",
+      "2177790",
+      "2185000",
+      "1115900",
+      "1154770",
+      "1220210",
+      "1252050",
+      "1264080",
+      "1312250",
+      "1312260",
+      "1386020",
+      "1436320",
+      "1601520",
+      "2817380"
+    ],
+    "freshPacketRanges": [
+      {
+        "packet": "batch-057-jmdict.xml",
+        "ranges": [
+          [
+            1,
+            220
+          ]
+        ],
+        "limits": "Eight complete entries through1218190; following partial entries not counted as inspected."
+      },
+      {
+        "packet": "batch-057-comparison-jmdict.xml",
+        "ranges": [
+          [
+            1,
+            220
+          ],
+          [
+            221,
+            443
+          ]
+        ],
+        "completeFamilies": 16
+      },
+      {
+        "packet": "batch-057-draft-comparison-jmdict.xml",
+        "ranges": [
+          [
+            1,
+            180
+          ],
+          [
+            181,
+            349
+          ]
+        ],
+        "completeFamilies": 11
+      },
+      {
+        "packet": "batch-057-kanjidic2.xml",
+        "ranges": [
+          [
+            1,
+            200
+          ]
+        ],
+        "limits": "Complete企/危 records; partial休 not counted as a complete fresh record."
+      }
+    ],
+    "freshCompleteArticles": [
+      "kanji/乏.md",
+      "kanji/危.md",
+      "kanji/休.md",
+      "kanji/全.md",
+      "kanji/意.md",
+      "kanji/試.md",
+      "kanji/図.md",
+      "kanji/承.md",
+      "kanji/計.md",
+      "words/企業.md",
+      "words/設計.md",
+      "words/引き受ける.md",
+      "words/計画.md",
+      "words/予定.md",
+      "words/プラン.md",
+      "words/計.md",
+      "words/試す.md",
+      "words/試し.md",
+      "words/案.md",
+      "words/提案.md",
+      "words/言い出す.md",
+      "words/商社.md",
+      "kanji/業.md",
+      "kanji/人.md",
+      "kanji/止.md"
+    ],
+    "freshJapaneseEvidence": "Four exact Kotobank pages fetched; complete actual Digital Daijisen and精選版日本国語大辞典 article nodes inspected with publisher, heading and sense boundaries. Initial simplified Weblio responses omitted definitions or selected unrelated Wikipedia material; those were not accepted as verification. Raw HTML retrieved independently by coordinator into external control cache; exact article-node parser then exposed the missing dictionary definitions. No claim of independent reviewer upstream access.",
+    "sourceLimits": "Daijisen企 confirmsキ/くわだてる and企業 allocation, notたくらむ rarity. Exact企む heading confirmsたくらむ separately; unexplained▽ not interpreted. 企業 page also contains historical起業-likeする use in a different dictionary; unchanged existing article explicitly teaches the enterprise noun, not exhaustive historical senses. 字通 origin claims are not imported; modern-shape mnemonic only.",
+    "examples": "Two ordinary original examples and translations, not dictionary quotations or corpus-frequency claims: new business planning and suspicion about an unspecified plan. Frozen JMdict explicitly recognizes business undertakings; Japanese definitions support planning/attempting and transitiveを. No invented exotic spelling/collocation or harmful scenario is needed.",
+    "limits": "Coordinator author inspection only, not independent linguistic/native-speaker approval, empirical learning proof, native readability or phone acceptance."
+  },
+  "reviewersLaunched": 0,
+  "freshAndroidOrNativeClaimed": false,
+  "runtimePushed": false,
+  "publishedAdditions": 83,
+  "remainingAdditions": 1145,
+  "signing": "Normally signed local freeze is the next operation; actual signature/SHA receipt is recorded externally in progress.json after successful signing. No bypass or signing retry authorized.",
+  "implementation": {
+    "execution-331.py": {
+      "path": "control/execution-331.py",
+      "sha256": "bdd33b3422ccbcb42da3de48ebcf4bd659cfe03860f841505a5b78dc50588ffb"
+    },
+    "execution-331-sources.py": {
+      "path": "control/execution-331-sources.py",
+      "sha256": "466f28d69433fd3bdcf265b271d8f5a9b8b975fa1ecee7f368fc33a9b63a6815"
+    },
+    "execution-331-audit.py": {
+      "path": "control/execution-331-audit.py",
+      "sha256": "61b44babdca46b22d599d8c698ebb890f7b40d85a52d087403b2fe5d92eaacfe"
+    },
+    "finish-execution-331.py": {
+      "path": "control/finish-execution-331.py",
+      "sha256": "4b996d636fed0a5cedf67b4d7fc7dcf83ce84e688d8adbafe49f7f543d36889e"
+    }
+  },
+  "nextAction": "Resume SAME057 at normally signed LOCAL UNREVIEWED teaching snapshot recorded in batch057DraftCheckpoint; not runtime publication. Read complete authorized request/finalcheckpoint/approvedissue and scoped currentlivekeys; preserve FULL live history. Exact企sourceRow27; fullorderedキ / くわだ.てる・たくら.む, grade8,canonical人9,sixstrokes preserved. Selectedキ/くわだ.てる keysき/くわだてる; separate exact企むたくらむ godan-mu usual-kana recognition row, NOT archaic/unattested/source-only, no falseくわだてる link or silent metadata omission. New企てる primaryくわだてる has no inferredJLPTlevel; reusable企業primaryきぎょう independentlyN3 unchangedmetadata/会社guard/業link, sole exactsubstantive企link edit. Two reciprocalpairs/fourdirections, oneactivatedbaseline企/企業pair. ElevenDIRECT newwordguards, nottransitive; threewrongkanjichoices危/休/全; original12legacyfallback labels and計/図/承/意/試 threechoiceprotectors inspected. ExactJapanese企/企てる/企む/企業headings/definitions/nodeboundaries and readingallocation/class/usage qualified in batch-057-dictionary-evidence.json, rawcache control/inputs/batch-057. InitialWeblio simplifications failed to expose exactentries and were NOT verification; rawKotobankarticleparser did. たくらむ dubiousness is a tendency,notabsolute; do not make all企てる uses malicious or archaic. 企てる tiptoe sense alonearchaic. 企業historicalするsense separatefromscopedcurrentnoun. Onlymodernshapemnemonic; no fabricatedetymology/frequency/finance/legal/institutionalclaim. All194 exactfrozenfamilies (183sourceprep+11draftcomparisons), fresh35completefamilies/25actualexistingarticles/fourJapaneseheadwordpages/twoactualarticlenodesperpage inspected331; original183sourceinspection inherited330, notfresh194linguisticread. VerifiedSVG04f01/blobf3de6a127c93b832727576d7bc8c69583d31b483/2966bytes/SHA2c2bff3a445a47edceb1174080630593ec6faec2cfc712a1805ba7674b5692be; unchangedstandardconverter6strokes/16pointseach, parsedgeometryequal, CRLFnormalizationexplicit. All52authored/reusedHan inall3bundledcmaps; NOTnativefontacceptance. Three runtimeadditions企card/企stroke/企てるword; onechanged企業payload; all8300runtimehashesverified,8296oldunchanged; baseline985kanji4942words985strokes/exact虎[酔っ払い]/猿[馬鹿]preserved. Full368Python/validator/vocabulary/freshmanifestc16988151f0d2d9c/5frozen2decompressedhashes/194exactfamilyextractions/membership/baseline/link/readings/geometry/fonts/originalbudgets passed. Next: TWO SERIAL BLIND DIFFERENT actualmodel-family complete-content INITIALreviews SAMEsignedteaching 企/企てる/actual企業linkdiff/all3facets, completeapplicabledictionaries/exactsourceaccess. Inspect CURRENTCLIhelp/catalog; actualmodelidentity/read-onlyavailabletools, ONEactivereviewer, serialinternaltools, actualprocessexit and completeoriginalreport/archive BEFORE nextlaunch; noeditsfrozen snapshotduringreview. Noauthorrationale/otherreportinblindprompts. Preserve read/processlimits; evidencebasedreconciliation, originalsessionboundedconfirmationswhenjustified; no manufacturedfindingquota. Then applicable FRESH non-skippedAndroidRealContent3/RareHan1/nativefullgitarchiveproductionContentSyncONCE/selection/meaning/curatedreading/drawing/article/systemBack/offline/visual/currentmainnormalnonrewritingmerge/combinedtree/sourcebaseline-reading-link-font-stroke/Python/vocab/validator/freshmanifest/originalbudgets/normalsigning/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 BEFOREdelivery or058. Noaccepted056Android/native/review rerun absentnewconcern. Published83/1228,1145remaining; currentLOCALdraft1069kanji5028words89N1labels includesONEUNPUBLISHEDaddition. CompatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-setoutstanding. No058/authoragents/concurrentheavywork/secondrunner/signingretry/permissionworkaround. Overallprojectincomplete.",
+  "limits": "LOCAL UNREVIEWED runtime draft only. Published83/1228 with1145remaining; the new企 addition and企てる support are not delivered. Compatible Androidf9b59a2+ required. No independent review, fresh Android/native acceptance, publication,058 or second runner; physical-phone/general-release and whole-set acceptance remain outstanding."
+}
