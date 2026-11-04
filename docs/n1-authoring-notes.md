@@ -37,7 +37,33 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 054: bounded source qualification, not drafted
+## Batch 054: local unreviewed runtime draft
+
+The [draft audit](n1-sources/batch-054-draft-audit.json) and
+[execution 299](n1-sources/execution-299.json) record one **且** card,
+one necessary **且つ（かつ）** support article and five strokes generated
+from the qualified pinned SVG by the unchanged converter. Full source
+**ショ・ソ・ショウ / か.つ** order is preserved; only **か.つ** is selected
+for practice. There is one selected reciprocal pair, no baseline activations
+and no changed reused runtime article.
+
+The support article uses the two inspected dictionary example frames rather
+than inventing a broad attachment or register rule. Its nine direct
+exclusions protect actual additive labels and secondary senses; they do not
+form a transitive clique. The three kanji distractors are **目・日・助**.
+All twelve short-card legacy fallback labels were compared at author stage.
+The final authored Han audit explicitly retains **苟** as requiring native
+fallback/readability inspection; font cmap coverage is not rendering acceptance.
+The unverified comparative register claim is omitted, not converted into a
+formal-only or written-only prohibition.
+
+This is a **validated, local UNREVIEWED draft**, not published coverage.
+Two serial blind model-family reviews of the same frozen teaching and all
+applicable Android/native/visual/current-main/publication gates remain.
+Published additions stay **80/1,228; 1,148 remaining**. Physical-phone,
+general-release and whole-set acceptance remain outstanding.
+
+### Historical source qualification
 
 The [membership](n1-sources/batch-054-membership.json) selects **且**,
 frozen source row 3, against published `672266d5`. The
@@ -77,8 +103,9 @@ evidence if available or keep the draft's teaching claim narrowly additive.
 Historical preparation-ledger pending fields remain distinguishable from this
 later qualification.
 
-No runtime teaching, manifest, independent review, fresh Android/native check
-or publication changes. Published coverage stays **80/1,228; 1,148 remaining**.
+At that source-only checkpoint there were no runtime teaching, manifest,
+independent review, fresh Android/native check or publication changes.
+Published coverage stayed **80/1,228; 1,148 remaining**.
 Compatible Android `f9b59a2` or later and outstanding physical-phone,
 general-release and whole-set qualifications remain unchanged.
 
