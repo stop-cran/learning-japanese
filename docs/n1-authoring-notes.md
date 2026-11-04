@@ -37,7 +37,30 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 042: chick and festival-doll source preparation
+## Batch 042: unreviewed local draft
+
+The bounded 雛 draft adds one kanji card, one necessary word article and
+18-stroke geometry converted from the pinned SVG. It preserves all five
+full readings and offers only **ひな・ひよこ**, with a separate linked
+reading-table row and example for each. スウ is technical recognition in
+post-hatching 育雛; ス and ジュ retain explicit source-only qualifications.
+The word article keeps bird/doll/novice senses and usual-kana flags local to
+their readings rather than presenting unrestricted substitution.
+
+The coordinator inspected another **24 complete disjoint frozen families**
+and the actual additional comparison cards: **67 families total**, not
+67 supporting words. One support mapping, one reciprocal pair and 14 direct
+word-choice safeguards are recorded in the
+[draft ledger](n1-sources/batch-042-progress.json). Baseline articles, easier
+levels and the tiger/monkey safeguards remain unchanged. Mechanical draft
+checks cover all 34 authored Han characters; 33 are in every bundled font,
+while the inherited radical glyph 隹 still needs applicable native/fallback
+confirmation. They do not establish independent linguistic review, Android/native or
+physical-phone acceptance. This draft is not review-closed or published.
+Resume with serial blind two-family independent review of the frozen signed
+snapshot; public delivery remains **68 additions, 1,160 remaining**.
+
+## Batch 042: historical source-preparation checkpoint
 
 [Batch 042](n1-sources/batch-042-progress.json) freezes **雛**, source row
 1168, for one evidence-bounded addition. All **43 complete frozen JMdict
