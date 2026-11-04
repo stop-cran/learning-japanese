@@ -37,6 +37,37 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 045: source preparation only
+
+[Batch 045](n1-sources/batch-045-progress.json) bounds the next addition to
+**巳**, frozen source row 300, on accepted published base `a4f16c4`.
+Its [membership](n1-sources/batch-045-membership.json) and complete frozen
+packets retain **16 lexical and 16 disjoint comparison families**, six raw
+character records and inspection of nine actual existing articles.
+Full source readings are on **シ** and kun **み**; three strokes, grade 9
+and canonical radical **己 (49)** are preserved. 己 and 已 remain separate
+comparison characters, not additional batch members or replacement IDs.
+
+The standalone JMdict family includes both み and し: シ must not be
+mislabelled source-only merely because the minimal proposed support noun
+uses み. Exact Japanese heading/allocation/usefulness evidence and practice
+selection remain pending. The calendar families distinguish the Snake sign,
+the living animal 蛇, the twelve-sign set and the sixty-term cycle.
+Year expressions retain whole-word alternatives and spelling restrictions;
+search-only へび年/ヘビ年 are not ordinary example spellings.
+Historical hour alternatives do not establish a universal 9–11 a.m.
+conversion. 巳の日's frozen archaic label is recorded, not generalized
+to every contemporary cultural use. 辰巳's southeast sense is not
+standalone 巳's historical south-southeast sense.
+
+The [preparation audit](n1-sources/batch-045-preparation-audit.json)
+checks exact inputs, complete re-extraction, baseline safeguards and
+unchanged runtime hashes. No teaching, necessary support identity,
+quiz key, historical origin, converted geometry, independent linguistic
+review or native/phone acceptance is claimed. Continue qualification
+within this same batch before drafting; do not begin 046.
+Published coverage remains **71 additions; 1,157 still to deliver**.
+
 ## Batch 044: local unreviewed draft
 
 [Batch 044](n1-sources/batch-044-progress.json) bounds the next addition to
