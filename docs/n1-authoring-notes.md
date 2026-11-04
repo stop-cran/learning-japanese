@@ -37,7 +37,30 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 056: source qualified, not drafted
+## Batch 056: local unreviewed runtime draft
+
+The local draft now adds **乏** and its two necessary support articles
+**乏しい（とぼしい）** and **貧乏（びんぼう）**, without inferred vocabulary
+levels or changes to existing runtime articles. Full ordered readings remain
+unchanged; practice selects **ボウ** and **とぼ.しい**, while **とも.しい**
+has its own qualified recognition row without a false primary-reading link.
+Two support pairs link both ways, and 貧乏 links its existing 貧 component.
+The [draft ledger](n1-sources/batch-056-progress.json) records nine direct
+word-quiz safeguards, three semantically wrong kanji choices, legacy fallback
+inspection and nine additional complete comparison families.
+
+The standard converter generated the pinned four-stroke model; CRLF output
+is compared with the earlier LF candidate after newline normalization.
+Fresh all-authored-Han cmap checks and structural/source audits are mechanical,
+not independent linguistic or native acceptance. Canonical **丿** and **饉**
+(in the justified existing-word exclusion 飢饉) require fresh bounded native
+fallback checks; no new 饉 card is added. The local snapshot must
+receive two serial blind different-model-family reviews before acceptance;
+no new content is published. Published coverage remains **82/1,228;
+1,146 remaining**, with compatible-client, phone/general-release and
+whole-set qualifications unchanged.
+
+### Historical source qualification
 
 The [membership](n1-sources/batch-056-membership.json) freezes **乏**, source
 row **10**, as one evidence-bounded addition. The
@@ -83,11 +106,11 @@ readability evidence, and 丶 need not enter learner prose.
 The [qualification audit](n1-sources/batch-056-qualification-audit.json)
 records hashes, conversion, bounded font scope and unchanged runtime.
 
-Next SAME056: fetch/normal merge latest main before drafting, finalize actual
+The source-qualified checkpoint's next step was to fetch/normal merge latest main before drafting, finalize actual
 quiz labels/direct guards and reciprocal links, audit all final authored Han,
 then freeze a normally signed local draft for two serial blind
 different-model-family reviews.
-Runtime remains unchanged; published coverage is **82/1,228; 1,146 remaining**.
+Runtime was unchanged at that source-only checkpoint; published coverage was **82/1,228; 1,146 remaining**.
 No batch057, accepted055 test/review rerun or unreviewed content publication.
 Physical-phone/general-release and whole-set acceptance remain outstanding.
 
