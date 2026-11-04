@@ -37,6 +37,48 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 057: source preparation, not a runtime draft
+
+The [membership](n1-sources/batch-057-membership.json) freezes **企**, source
+row **27**, as one evidence-bounded addition. The
+[preparation ledger](n1-sources/batch-057-progress.json) records coordinator
+inspection of **167 complete frozen lexical families**, **16 disjoint comparison
+families**, seven full raw character records and 17 actual existing articles.
+This is source preparation, not independent review or authored coverage.
+
+Full ordered **キ / くわだ.てる・たくら.む**, canonical **人 (9)**,
+grade 8 and **six** strokes remain preserved. The exact native families
+distinguish ichidan **企てる（くわだてる）** from godan **企む（たくらむ）**.
+The former's tiptoe sense alone is marked archaic; the latter's usual-kana
+annotation is not evidence that its pronunciation is obsolete or invalid.
+Exact Japanese headwords, allocation, useful examples and register
+qualification remain the next bounded step, not established by this packet.
+
+Proposed minimal support is the existing **企業（きぎょう）**, retaining
+its independent **N3** vocabulary level and direct **会社** guard, plus a
+necessary new **企てる** article without an inferred vocabulary level.
+No exact native-verb article exists. The recognition/practice disposition of
+**たくら.む** remains open; it must not be hidden, relabelled as
+くわだてる or called unattested. Additional **企画** and enterprise derivatives
+are inspected alternatives, not automatic support requirements.
+
+Adding the card will activate one baseline declared pair, **企 / 企業**.
+Its substantive component link and reciprocal support link are pending;
+incidental mentions in パイプ・中小・会社・商社 do not create four additional
+ownership obligations. Actual **計・図・承** planning/undertaking labels
+overlap the proposed meaning and are not safe wrong answers.
+Final title, three wrong choices, affected fallback choices and any necessary
+direct word guards must be checked against the actual draft.
+
+The exact pinned KanjiVG inventory identifies **04f01.svg**, blob
+`f3de6a127c93b832727576d7bc8c69583d31b483`, **2,966 bytes**.
+Inventory is not downloaded geometry or native rendering evidence.
+SVG conversion/count reconciliation and all final authored-Han/font checks
+remain pending. No runtime content, manifest version or published count
+changes at this checkpoint: **83/1,228 additions delivered; 1,145 remaining**.
+Compatible Android `f9b59a2` or later is required; physical-phone,
+general-release and whole-set acceptance remain outstanding.
+
 ## Batch 056: local unreviewed runtime draft
 
 The local draft now adds **乏** and its two necessary support articles
