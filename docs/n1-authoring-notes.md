@@ -37,7 +37,22 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 050: native and visual evidence closed; publication pending
+## Batch 050: published for bounded owner testing
+
+The [combined acceptance audit](n1-sources/batch-050-acceptance-audit.json)
+and [publication ledger](n1-sources/batch-050-publication.json) record signed
+accepted commit `5391847e65b1484d0789f5cdbcceba4ab87c3e58`. A fresh
+fetch and normal merge found main already integrated, with no teaching changes.
+All 368 Python tests, validator, vocabulary consistency, fresh manifest,
+frozen-source membership, baseline readings/levels/exclusions, exact links,
+stroke conversion, font dispositions and unchanged budgets pass.
+[CI run 41835434229](https://github.com/stop-cran/learning-japanese/actions/runs/41835434229)
+completed successfully. Its immutable public ZIP matches the manifest and
+all **8,278 runtime hashes**: 8,300 entries, 30,608,068 compressed bytes,
+44,190,545 inflated bytes and 43,922,207 retained bytes. Contributor evidence
+is excluded; safe paths and per-file limits pass. Terminal evidence-commit
+CI/ZIP and owner issue readback are recorded by the execution checkpoint
+before the next batch; this ledger cannot embed its own eventual commit SHA.
 
 The [native acceptance record](n1-reviews/batch-050-native-acceptance.json)
 and [execution 269](n1-sources/execution-269.json) preserve the recovered
@@ -78,10 +93,11 @@ and physical phones are not certified. Twelve additional hash-equivalent
 viewports are not extra independent reads. Exact temporary cleanup and
 owned-helper shutdown receipts are retained; the Android worktree is clean.
 
-**Next:** normal latest-main integration and all combined-tree publication
-gates, normal signing, owner fast-forward push, actual terminal green CI and
-every immutable public-ZIP runtime hash. Batch 050 is still unpublished;
-**76/1,228 additions delivered, 1,152 remaining**. No batch 051 begins here.
+**Published:** **77/1,228 additions delivered, 1,151 remaining**, including
+batch 050's 辰 card, generated strokes, necessary 辰 word article and the
+two reviewed 農/震 component links. Current totals are 1,062 kanji,
+5,020 words and 82 N1-labelled cards: 81 named source members plus 妖.
+No batch 051 begins in this checkpoint.
 Compatible Android `f9b59a2` or later remains required; physical-phone,
 general-release and whole-set acceptance remain explicitly outstanding.
 
