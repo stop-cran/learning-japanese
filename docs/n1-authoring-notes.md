@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 054: local source preparation, not drafted
+## Batch 054: bounded source qualification, not drafted
 
 The [membership](n1-sources/batch-054-membership.json) selects **且**,
 frozen source row 3, against published `672266d5`. The
@@ -51,12 +51,31 @@ The minimal support candidate is **且つ（かつ）**, also spelled 且 and
 marked usually kana. **暫且（ざんしょ）** is obsolete and
 **苟且（こうしょ）** archaic; **苟且（かりそめ）** belongs to a
 separate whole-word family and does not allocate ソ to 且.
-Japanese reading/construction/register qualification remains pending.
+The [qualified source evidence](n1-sources/batch-054-dictionary-evidence.json)
+now verifies the exact Japanese headings and additive constructions.
+Daijisen and Kanjipedia allocate **ショ** through **苟且（こうしょ）**;
+it remains archaic recognition, not proposed practice. **ソ・ショウ**
+remain explicitly limited source-only metadata, not invented word examples.
+Proposed practice is on `[]` / kun `[か.つ]`, with one new support article
+and one reciprocal pair; none is runtime metadata yet.
+
 Existing また・しかも・更に and other connective articles expose overlapping
 quiz labels; their distinct spellings, senses, easier levels and exclusions
-must remain intact. Four additional connective families still need extraction
-before final support-title/exclusion decisions. No curation or exclusions
-are finalized, and shape mentions do not assign support ownership.
+must remain intact. Seven additional complete frozen families and ten actual
+additive articles were inspected, bringing the extracted packet to **31 distinct
+families**. Nine direct word-guard proposals remain subject to the final draft
+title audit; they are not a transitive exclusion clique.
+
+The full pinned five-path SVG matches its inventory blob and was converted
+outside runtime content by the unchanged converter. Candidate font cmaps are
+mechanical evidence only: **苟** is absent from all three bundled fonts and
+requires actual fallback inspection if retained. Every final authored Han and
+native readability still need checking. An explicit comparative register claim remains **unverified**:
+failed or irrelevant navigation is retained, not treated as an inspected lesson.
+Do not repeat that search loop or invent a formal-only rule; acquire exact
+evidence if available or keep the draft's teaching claim narrowly additive.
+Historical preparation-ledger pending fields remain distinguishable from this
+later qualification.
 
 No runtime teaching, manifest, independent review, fresh Android/native check
 or publication changes. Published coverage stays **80/1,228; 1,148 remaining**.

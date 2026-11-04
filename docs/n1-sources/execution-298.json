@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "execution": 298,
+  "batch": "054",
+  "recordedAt": "2026-11-04T19:50:03.788236+01:00",
+  "status": "bounded-source-qualified-with-register-limit-not-drafted",
+  "startingHead": "294a4505a3e88b743b0217067649d81e4d32aa4c",
+  "lastPublishedCommit": "672266d5fffae425e608cdfa5a631ac147d1d08c",
+  "membership": [
+    "且"
+  ],
+  "sourceRow": 3,
+  "sourceEvidence": "batch-054-dictionary-evidence.json",
+  "sourceEvidenceSha256": "cd06f29e36069742be8ba26655ae4a7e5f240bde2710efaec2d8dcb201eb6c53",
+  "qualifiedSourceAudit": "batch-054-qualified-source-audit.json",
+  "qualifiedSourceAuditSha256": "2db266d865dd872b98e86a3241e5fd6d0a83cfee9bbb4ed0bebdfa78a2090368",
+  "sourceAuditImplementation": {
+    "path": "control/execution-298-audit.py",
+    "sha256": "752081f8399fb0b7ff04e73130e63870a5c76695e45a4a176a673b9198acef49",
+    "priorAudit": "control/execution-297-source.py",
+    "priorAuditRestoredExactly": true,
+    "scope": "Five exact scoped page receipts, all31 complete frozen extractions, all source reading dispositions, pinned SVG/blob/count, unchanged converter external candidate,33candidateHan actual bundled cmaps, original baseline/exclusion/runtime-manifest preservation."
+  },
+  "checks": [
+    {
+      "check": "source-audit",
+      "command": [
+        "C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\stop-\\n1-kanji-workspace\\control\\execution-298-audit.py",
+        "audit"
+      ],
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-298-source-audit.txt",
+      "sha256": "5445c04ee55d7b45d5d9af04bae95cae2de69be0a744469b4ef9b5b543a3e55f",
+      "exitCode": 0
+    },
+    {
+      "check": "extraction-tests",
+      "command": [
+        "C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_extract_n1_jmdict.py"
+      ],
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-298-extraction-tests.txt",
+      "sha256": "f7dc1c65d9bf1c31f1cb9a0be1fc0c0840290cbe7f978a8864c6557dbd2fbb5e",
+      "exitCode": 0
+    },
+    {
+      "check": "validate",
+      "command": [
+        "C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "tools\\validate.py"
+      ],
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-298-validate.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "exitCode": 0
+    },
+    {
+      "check": "manifest",
+      "command": [
+        "C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "tools\\build_manifest.py"
+      ],
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-298-manifest.txt",
+      "sha256": "4393752cc1966427c2bfc35c86e7675f143d8d11b233b42c8e5bee987dd2b929",
+      "exitCode": 0
+    }
+  ],
+  "qualificationInspection": {
+    "execution": 298,
+    "newCompleteFamilies": 7,
+    "totalExtractedDistinctFamilies": 31,
+    "additiveReturnedRanges": [
+      [
+        1,
+        96
+      ]
+    ],
+    "additiveFollowupReturnedRanges": [
+      [
+        1,
+        94
+      ]
+    ],
+    "freshCompleteExistingArticles": [
+      "words/しかも.md",
+      "words/更に.md",
+      "words/また.md",
+      "words/それに.md",
+      "words/そのうえ.md",
+      "words/それと.md",
+      "words/そして.md",
+      "words/そうして.md",
+      "words/それから.md",
+      "words/そのほか.md"
+    ],
+    "freshLexicalReturnedRanges": [
+      [
+        1,
+        160
+      ]
+    ],
+    "otherPriorComparisonFamilies": "Inherited complete24-family inspection at297; only selected comparison ranges were reread here, not a fresh full31-family linguistic review.",
+    "dictionaryPages": 5,
+    "onReadingDisposition": "ショ allocated by actual character entry plus archaic苟且こうしょ. ソ/ショウ remain bounded source-only; no invented examples or allocation from related俎/祖/組/かりそめ.",
+    "supportAndLinks": "One proposed且つかつ article and one reciprocal且/且つ pair, baseline pairs empty. No ownership assigned by incidental shape mentions.",
+    "quiz": "Nine direct且つword-guard proposals in evidence record; no runtime metadata or transitive clique. Noそれから exclusion established within inspected sequential scope.",
+    "register": "UNVERIFIED explicit comparative register claim. Failed/challenge/irrelevant navigation preserved; omit categorical spoken/written restriction unless later exact evidence is inspected.",
+    "geometry": "Full58line pinnedSVG inspected, fivepaths, canonical一1, unchangedconverter external candidate only.",
+    "fontScope": "33 explicit candidate/source/comparison characters; 苟 is missing from all three bundled fonts and needs actual native fallback inspection if retained. No final runtime prose exists, so every final authoredHan and native readability remain unaudited.",
+    "limits": "Coordinator source qualification, not independent linguistic review or native acceptance. Earlier preparation fields above remain historical pending-state receipts."
+  },
+  "practiceProposal": {
+    "quizOnyomi": [],
+    "quizKunyomi": [
+      "か.つ"
+    ]
+  },
+  "necessarySupportProposals": [
+    {
+      "article": "words/且つ.md",
+      "entryId": "1208840",
+      "primaryReading": "かつ",
+      "writtenKanji": [
+        "且"
+      ],
+      "type": "wago",
+      "proposedTitle": "and; moreover",
+      "vocabularyLevel": "No level selected or inferred.",
+      "status": "One minimal support proposal only; no runtime draft or duplicate kana article."
+    }
+  ],
+  "directExclusionProposals": 9,
+  "registerCorroborationClaimed": false,
+  "actualNativeFallbackClaimed": false,
+  "candidateFontMissing": [
+    "苟"
+  ],
+  "everyFinalAuthoredHanAuditClaimed": false,
+  "frozenInputHashesVerified": 5,
+  "decompressedDictionaryHashesVerified": 2,
+  "originalBaselineMetadataAndStrokesPreserved": {
+    "kanji": 985,
+    "words": 4942,
+    "strokes": 985
+  },
+  "baselineMetadataExceptions": {
+    "words/虎.md": [
+      "酔っ払い"
+    ],
+    "words/猿.md": [
+      "馬鹿"
+    ]
+  },
+  "allRuntimePayloadHashesVerified": 8287,
+  "runtimeManifestFreshAndUnchanged": true,
+  "contentVersion": "ba2d74eac9ea12e1",
+  "runtimeChanges": 0,
+  "reviewersLaunched": 0,
+  "freshAndroidOrNativeClaimed": false,
+  "publishedAdditions": 80,
+  "remainingAdditions": 1148,
+  "currentCounts": {
+    "kanji": 1065,
+    "words": 5023,
+    "n1Labels": 85,
+    "namedSourceMembers": 84,
+    "separateException": "妖"
+  },
+  "nextAction": "Resume SAME054 bounded runtime-draft checkpoint from qualified sources with explicit register limit. Do not repeat failed URL/search loops: acquire a real register passage only if available, otherwise make an explicit narrow no-register-prohibition disposition; no invented formal-only rule. All31 complete frozen families extracted; original24 inherited inspected, sevennew and ten actual additive articles freshly inspected. Propose minimal且 card plus ONEwords/且つ.md primaryかつ; fullショ/ソ/ショウ/か.つ order preserved, on[]/kun[か.つ], ショ archaic苟且こうしょ recognition and ソ/ショウsource-only. Nine directwordguard proposals need final actual-title/confusable audit, no transitiveclique; noそれからguard established in inspectedscope. Enumerate ONEreciprocalpair; inspect kanji title/threewronglabels/legacyfallbacks/everyfinalauthoredHan. Pinned5pathSVG/blob and unchangedconverter externalcandidate qualified;33candidateHanfontscope finds苟missing from all3bundledfonts. If retained, inspect actualnativefallback/readability before acceptance; cmapnotfinaltext/nativeacceptance. Preservebaseline/exclusions and exact虎[酔っ払い]/猿[馬鹿]. No055. Two serialblind differentactualmodel-family initials samefrozenteaching/allchangedsupport and applicablefreshAndroid/native/latestmainnormalmerge/allcombinedchecks/originalbudgets/normalsigning/ownerfastforward/publicSHA/greenCI/everyimmutablepublicZIPhash remain later. No secondrunner/signingretry/permissionworkaround.",
+  "limits": "Bounded source-only coordinator qualification with explicit register/final-draft limits and pending actual苟fallback. No runtime edits, independent review, selected quiz metadata, frequency/etymology certification, Android/native/phone/general-release acceptance or054publication. Published80/1228,1148remaining;1065kanji5023words85N1labels84namedmembers plus separate妖. CompatibleAndroidf9b59a2+ required; whole-set incomplete."
+}
