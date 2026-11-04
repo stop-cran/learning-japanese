@@ -37,7 +37,32 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 041: falcon source qualified, not drafted
+## Batch 041: falcon draft, not independently reviewed
+
+The bounded [draft ledger](n1-sources/batch-041-progress.json) now records
+one 隼 card and one necessary はやぶさ word article, with ten strokes generated
+from the pinned KanjiVG revision. All three readings remain in source order;
+practice selects only はやぶさ. シュン has an archaic-compound recognition row;
+ジュン is qualified character-source information without a selected lexical
+anchor, not an invalid or name-only reading.
+
+The coordinator inspected **25 complete frozen families**, including seven
+additional broad-category and secondary-person comparisons. One reciprocal
+pair and five direct word-quiz safeguards are recorded. Existing comparison
+articles, their easier levels/readings and both accepted tiger/monkey guards
+remain unchanged. The shape mnemonic is not etymology; the bird-name
+explanation does not impose exclusive hawk/falcon taxonomy.
+
+This is a **local unreviewed draft**, not another published addition.
+Two-family independent review, fresh applicable Android/native/visual and
+combined-main/publication gates remain pending. Published progress remains
+67/1,228 additions, with 1,161 remaining. Physical-phone/general-release
+acceptance remains explicitly outstanding.
+
+### Preserved source qualification
+
+The following source-stage observations preserve executions 182/183.
+Their pending proposals describe those earlier snapshots, not the current draft.
 
 [Batch 041](n1-sources/batch-041-progress.json) freezes **隼**, source row
 1164, as one evidence-bounded addition. The coordinator inspected all
@@ -90,19 +115,19 @@ from per-character reading allocation, and kana-only spacecraft はやぶさ
 from the native bird noun. Exact 速 そく is a gear suffix here, not source
 evidence for 速い はやい or a はやぶさ etymology.
 
-No declared baseline 隼 pair was found. Runtime cards, strokes and manifest
-are unchanged; SVG conversion, independent teaching review and fresh native
-acceptance have not started. Source inputs, exact packets, all original
+No declared baseline 隼 pair was found. At the source-only checkpoint, runtime
+cards, strokes and manifest were unchanged; SVG conversion, independent teaching
+review and fresh native acceptance had not started. Source inputs, exact packets, all original
 metadata/strokes (with the two previously reviewed word exclusions) and every
 current runtime hash are audited separately. Source-only extraction tests do
 not certify linguistic correctness.
 
 Accepted [batch 040](n1-sources/batch-040-publication.json) is published at
 terminal `a93d39d`: **67 additions delivered; 1,161 remain**. The older batch
-narratives below preserve their earlier local checkpoints; this source-only
-batch does not increase the delivered count or claim phone/general-release
-acceptance. Continue the same 041 from the qualified-source checkpoint with
-bounded support/comparison inspection before drafting; no batch 042 or second runner.
+narratives below preserve their earlier local checkpoints. The current local
+draft does not increase the delivered count or claim phone/general-release
+acceptance. Continue the same 041 with serial blind independent review of the
+signed draft; no batch 042 or second runner.
 
 ## Batch 040: peng textual review closed, acceptance pending
 
