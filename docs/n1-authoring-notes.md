@@ -37,7 +37,55 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 050: textual review closed; native acceptance pending
+## Batch 050: native and visual evidence closed; publication pending
+
+The [native acceptance record](n1-reviews/batch-050-native-acceptance.json)
+and [execution 269](n1-sources/execution-269.json) preserve the recovered
+native/Android evidence and both original-session visual confirmations.
+The original compile permission denial remains historical. Genuine native
+attempts 1 and 2 failed on an uncomposed paragraph and an ambiguous selector;
+their logs, fixtures and artifacts are retained. The separate accepted
+fixture adds an explicit scroll before the unchanged ジン assertion and
+narrows the 辰巳 selector. No production, teaching, heap or guard changed.
+Attempt 3 has two terminal case-zero results, no skips, in 35.722 seconds.
+The full archive passes through production ContentSync once per article
+attempt: 1,062 kanji, 5,020 words, 82 N1 cards, no problems, reading epoch 1,
+full ordered シン・ジン / たつ and empty on / sole たつ practice. Offline
+reciprocal navigation, both 農/震 component links and System Back pass.
+Fresh execution-267 Android 3+1 XML names, timestamps and source/copy hashes
+were reverified, not rerun or replaced by batch-049 results. The historical
+512-MiB host-test OOM and bounded 1-GiB host-only headroom remain distinct
+from unchanged native guest/app heaps; that host init was not used for native.
+
+Original **claude-opus-5.5**, then **gpt-6.1-sol**, each inspected the same
+twelve accepted screenshots after reading their own original report,
+unchanged teaching and actual diff. Their processes exited serially; the
+first report was archived before the second launch. Each made **19 serial
+view calls**, with zero overlaps, failures or truncations, returning twelve
+actual image payloads. Complete reports and read receipts are preserved.
+These are dependent visual confirmations, not new blind initial reviews
+or reviewer-executed native tests. Source PNGs are 1,080 × 2,400; the view
+tool returned 900 × 2,000 PNGs. Both byte sets and their separate hashes and
+dimensions are archived, not falsely equated.
+
+No actionable visual defect was established. 辰/農/震/長 are distinguishable
+in four production font rows; 28 Paint probes support four raster styles
+for those characters and one shared Gothic-like fallback for 厂/氵/已.
+That fallback is readable, but its actual face is unknown, not four bundled
+designs. The reading table's right edge and initial bottom input toolbar
+limit the viewports; hidden columns, whole articles, quiz/drawing sessions
+and physical phones are not certified. Twelve additional hash-equivalent
+viewports are not extra independent reads. Exact temporary cleanup and
+owned-helper shutdown receipts are retained; the Android worktree is clean.
+
+**Next:** normal latest-main integration and all combined-tree publication
+gates, normal signing, owner fast-forward push, actual terminal green CI and
+every immutable public-ZIP runtime hash. Batch 050 is still unpublished;
+**76/1,228 additions delivered, 1,152 remaining**. No batch 051 begins here.
+Compatible Android `f9b59a2` or later remains required; physical-phone,
+general-release and whole-set acceptance remain explicitly outstanding.
+
+### Retained textual closure
 
 Two blind, read-only initials using actual **claude-opus-5.5** and
 **gpt-6.1-sol** reviewed the same signed draft `cc51de4`.
@@ -50,7 +98,7 @@ not convert that disclosed limit into a verified usage.
 
 The [reconciliation](n1-reviews/batch-050-reconciliation.json) preserves both
 complete original reports and one Claude optional wording/voicing group,
-not adopted. No teaching change or repeat confirmation was necessary.
+not adopted. No teaching fix or changed-text confirmation was necessary.
 The reviewers exited serially, with **34/36 tool calls**, zero internal
 tool overlaps and zero XML-range violations. Each initial metadata call
 truncated within the final 龍 element; targeted recovery completed it.
@@ -65,9 +113,10 @@ The [fresh review audit](n1-sources/batch-050-review-audit.json) records
 368 passing Python tests, validator/vocabulary/manifest/budget checks,
 complete source/baseline/reading/link/stroke/font checks and all
 **8,278 runtime hashes**. Teaching and runtime are unchanged.
-Fresh non-skipped Android 3+1, supported-native shape/fallback readability,
+At that textual checkpoint, fresh non-skipped Android 3+1, supported-native shape/fallback readability,
 full-archive single production import, article/reciprocal/Back/offline
-routes and bounded independent visual review remain next. Latest-main,
+routes and bounded independent visual review remained next; the evidence
+checkpoint above now closes those gates. Latest-main,
 combined checks and publication gates follow, not precede, that acceptance.
 The batch remains local and unpublished: **76/1,228 additions delivered;
 1,152 remaining**. No 051 or reopening of accepted 049.

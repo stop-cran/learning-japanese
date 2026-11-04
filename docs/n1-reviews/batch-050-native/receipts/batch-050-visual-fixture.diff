@@ -1,0 +1,19 @@
+--- N1Batch050NativeTest.kt
++++ N1Batch050NativeScrollTest.kt
+@@ -199,6 +199,7 @@
+             rule.onNodeWithTag("article-body").performScrollToNode(hasText("Only たつ is selected", substring = true))
+             await("Only たつ is selected", substring = true).performScrollTo().assertIsDisplayed()
+             capture("kanji-reading-disposition")
++            rule.onNodeWithTag("article-body").performScrollToNode(hasText("ジン is preserved", substring = true))
+             await("ジン is preserved", substring = true).performScrollTo().assertIsDisplayed()
+             capture("kanji-source-only-limit")
+             section("Notes")
+@@ -210,7 +211,7 @@
+             capture("kanji-long-comparison")
+             await("Older uses include", substring = true).performScrollTo().assertIsDisplayed()
+             capture("kanji-historical-boundary")
+-            await("辰巳", substring = true).performScrollTo().assertIsDisplayed()
++            await("辰巳 (たつみ), southeast", substring = true).performScrollTo().assertIsDisplayed()
+             capture("kanji-direction-boundary")
+             section("Common words")
+             inline(await("辰 たつ — Dragon zodiac sign"), "辰")
