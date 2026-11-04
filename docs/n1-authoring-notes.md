@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 041: falcon draft, not independently reviewed
+## Batch 041: falcon textual review closed, not published
 
 The bounded [draft ledger](n1-sources/batch-041-progress.json) now records
 one 隼 card and one necessary はやぶさ word article, with ten strokes generated
@@ -53,9 +53,18 @@ articles, their easier levels/readings and both accepted tiger/monkey guards
 remain unchanged. The shape mnemonic is not etymology; the bird-name
 explanation does not impose exclusive hawk/falcon taxonomy.
 
-This is a **local unreviewed draft**, not another published addition.
-Two-family independent review, fresh applicable Android/native/visual and
-combined-main/publication gates remain pending. Published progress remains
+Both blind initial model-family reviews found no actionable defect in the
+same frozen teaching snapshot, `75b4ae8`. The
+[reconciliation](n1-reviews/batch-041-reconciliation.json) preserves both
+complete reports, four nonblocking optional groups and actual process limits.
+The two reviewer processes ran serially; Claude's one overlapping pair of
+bounded XML reads is disclosed, not reported as strict tool serialization.
+Both assigned scopes returned completely. Source access was supplied frozen
+evidence, not independent upstream retrieval. Teaching remains unchanged.
+
+This is **local textual closure**, not another published addition.
+Fresh applicable Android/native/visual and combined-main/publication gates
+remain pending. Published progress remains
 67/1,228 additions, with 1,161 remaining. Physical-phone/general-release
 acceptance remains explicitly outstanding.
 
