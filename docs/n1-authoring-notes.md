@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 049: qualified source, not drafted
+## Batch 049: local unreviewed draft
 
 [Batch 049](n1-sources/batch-049-progress.json) selects only **丑**,
 frozen source row 2, on accepted published base `e91eec0`.
@@ -62,8 +62,8 @@ search-only spelling flags. Seasonal day expressions do not make every
 丑の日 a summer-only date or 土用 a synonym of Saturday.
 No historical ritual instruction is selected.
 
-Standalone sign support, practice keys, distractors, direct exclusions and
-any substantive link changes remain unselected. The
+At source preparation, standalone support, practice keys, distractors,
+direct exclusions and link changes were still unselected. The
 [preparation audit](n1-sources/batch-049-preparation-audit.json) checks exact
 frozen inputs/re-extractions, source membership, baseline invariants and
 unchanged runtime hashes; it is not linguistic or native acceptance.
@@ -77,24 +77,52 @@ Nikkoku's alternative ひのとうし differs from frozen JMdict ひのとのう
 both remain recorded, without a silent source correction. Inline recognition
 can use ていちゅう without selecting that alternative or another word article.
 
-The proposed minimum is one `words/丑.md` sign article, sole うし practice and
+The draft now supplies one `words/丑.md` sign article, sole うし practice and
 `quizOnyomi: []`, retaining full チュウ / うし metadata. Omission from practice
 is a bounded usefulness decision, not an obsolete, invalid or name-only label.
-Final titles, three wrong labels, direct 丑/牛 overlap guard and substantive
-links remain for the draft checkpoint; 牛/牛肉 is not a transitive exclusion.
+The kanji and word titles are **Ox zodiac sign**. Three wrong labels are
+五 **five**, 互 **mutual** and 土 **earth, soil**, checked against actual
+comparison cards and applicable frozen families. A conservative direct
+丑/牛 word guard protects associated-animal label overlap; 牛/牛肉 is not
+a transitive exclusion. Existing 牛's reading, N3 vocabulary level and
+original 牛肉 guard remain unchanged. The one required reciprocal pair
+is 丑 ↔ `words/丑.md`; no baseline declared pair is activated. Both existing
+寅 articles receive only a narrow link at their substantive 丑寅 comparison.
+These exact link diffs belong in the initial reviews, not a reopening of 048.
 The historical hour alternatives and lunar-month boundary are qualified;
 traditional 北北東 and the dictionary's thirty-degree bearing are not
 silently equated to an exact modern sixteen-point compass bearing.
 丑寅 うしとら is independently qualified as northeast.
 
-The complete pinned four-path SVG was inspected before generating an external
-converter candidate, not a runtime stroke file. Its general-radical 一 group
-is the middle horizontal, stroke 3. Use a labelled modern-shape mnemonic and
+The complete pinned four-path SVG was inspected before generating the runtime
+stroke file with the unchanged converter; it equals the qualified external
+candidate exactly. Its general-radical 一 group is the middle horizontal,
+stroke 3. The draft uses a labelled modern-shape mnemonic and
 `structure-unclassified`; no historical or phonetic account is selected.
-Candidate font checks establish cmap presence only, not native readability.
-No runtime teaching, reviewer, Android/native run or push occurs at this
-checkpoint. Next finalize support/quiz/link choices and draft the same 049,
-then complete every review and delivery gate. Batch 048 is already published and verified
+Fresh draft inspection covers all 38 complete families, seven raw character
+records, eight actual pre-existing articles, all eight qualified Japanese
+sections and the full SVG. Full authored/touched-text font checks find 23 of
+25 Han characters in all three unchanged fonts; inherited 宀/氵 require an
+explicit supported-native/visual disposition. Cmap presence is not readability.
+
+The [draft audit](n1-sources/batch-049-draft-audit.json) records complete
+baseline preservation, exact membership/reading/link/geometry checks and all
+**8,275 runtime hashes**. Current main `5f460b8` was merged normally at
+signed `dae3cf7`, including language-metadata tooling. Combined-tree validation,
+vocabulary consistency, manifest regeneration, archive budgets and **368 Python
+tests** pass; EN remains schema 1 with explicit en/ja language fields.
+The initial exact reused-text audit detected Git CRLF versus `read_text` LF;
+the external adapter normalizes line endings before enforcing the exact two
+link edits, without changing repository tooling or permitting extra edits.
+An intermediate external-adapter indentation error was corrected before the
+successful audit; neither failed attempt is an acceptance.
+
+This checkpoint is a local, normally signed **unreviewed draft**, not
+publication. Next run the same 049 snapshot through two serial blind reviews
+from different actual model families, covering both new articles and both
+exact link diffs, then reconcile evidence. Every fresh Android/native/visual,
+latest-main and publication gate remains. No reviewer, Android/native run,
+push or batch 050 occurs here. Batch 048 is already published and verified
 for bounded owner testing, not reopened by the historical draft section below.
 Published coverage remains **75 additions; 1,153 still to deliver**.
 Physical-phone/general-release and whole-set acceptance remain outstanding.
