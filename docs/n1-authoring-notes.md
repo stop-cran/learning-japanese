@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 041: falcon source preparation, not drafted
+## Batch 041: falcon source qualified, not drafted
 
 [Batch 041](n1-sources/batch-041-progress.json) freezes **隼**, source row
 1164, as one evidence-bounded addition. The coordinator inspected all
@@ -55,8 +55,30 @@ metadata does not make it name-only. A single はやぶさ support article is a
 candidate, not yet authored. 鷹隼 ようしゅん is explicitly archaic in JMdict;
 it must not become a "common words" anchor merely to force on-reading practice.
 No ジュン word anchor was established in the inspected lexical families.
-Exact Japanese character/word headings, allocation, qualified lookup-only
-wording and final quiz subsets remain pending.
+At the preparation checkpoint, exact Japanese character/word headings,
+allocation, qualified lookup-only wording and final quiz subsets were pending.
+
+Execution 183's [dictionary evidence](n1-sources/batch-041-dictionary-evidence.json)
+now qualifies those reading proposals from five exact named Japanese source
+sections. Daijisen and Kanjipedia independently list both on-readings and
+はやぶさ. Daijisen marks ジュン as a conventional reading classification,
+not name-only or measured commonness. The exact 鷹隼 ようしゅん entry in
+Nihon Kokugo Daijiten supplies the hawk-and-falcon noun and historical evidence;
+the archaic flag remains specifically JMdict's. Keep シュン as recognition-only
+and ジュン as qualified character-dictionary information, each in its own row.
+The proposed quiz lists are **empty on / はやぶさ kun**, not metadata deletion.
+Only one necessary native noun article is proposed; no archaic compound article
+is needed merely to populate practice.
+
+The native noun sources distinguish a particular falcon from broader collective
+use. Neither every occurrence's exact species nor an exclusive contrast with
+鷹 is established. Actual 鷹 and 鳥 word labels support two proposed direct
+guards; additional broad-category and secondary-person labels still need their
+own full-family/quiz inspection at draft time. Kanjipedia's source-specific
+origin analysis and alternative 鶻 spelling are recorded, not required
+learner material or an excuse to expand the font/etymology scope.
+The original lookup failures and misleading simplified Weblio extraction remain
+explicit; successful raw headings, not URL success alone, support qualification.
 
 Accepted 鷹 already teaches **hawk; falcon**. Do not manufacture an exclusive
 hawk-versus-falcon distinction or use that label as a wrong falcon answer.
@@ -79,8 +101,8 @@ Accepted [batch 040](n1-sources/batch-040-publication.json) is published at
 terminal `a93d39d`: **67 additions delivered; 1,161 remain**. The older batch
 narratives below preserve their earlier local checkpoints; this source-only
 batch does not increase the delivered count or claim phone/general-release
-acceptance. Continue the same 041 with exact Japanese source qualification
-before drafting; no batch 042 or second runner.
+acceptance. Continue the same 041 from the qualified-source checkpoint with
+bounded support/comparison inspection before drafting; no batch 042 or second runner.
 
 ## Batch 040: peng textual review closed, acceptance pending
 
