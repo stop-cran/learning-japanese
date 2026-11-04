@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 048: source preparation only
+## Batch 048: qualified source, not drafted
 
 [Batch 048](n1-sources/batch-048-progress.json) bounds the next addition to
 **寅**, frozen source row 256, on accepted published base `3b2f689`.
@@ -54,20 +54,43 @@ The packet distinguishes the Tiger sign from the existing animal noun
 exclusion remain untouched. Standalone 寅's historical east-northeast sense
 differs from 丑寅 (うしとら), northeast. Its first-lunar-month sense is
 not Gregorian January; the historical hour has competing dictionary
-mappings. Five complete calendar-compound families offer イン candidates,
-but kana substrings do not establish per-character allocation. Exact
-Japanese headings, usefulness and practice selections remain pending.
+mappings. The [qualified-source evidence](n1-sources/batch-048-dictionary-evidence.json)
+records eight exact Japanese dictionary sections across seven raw pages.
+Daijisen explicitly gives 甲寅 (こういん); the actual Nikkoku 甲寅
+heading corroborates term 51 and きのえとら. イン is qualified calendar
+recognition, omitted from proposed practice by bounded usefulness choice,
+not invalid, obsolete or name-only. Full イン / とら metadata remains.
+One standalone とら sign article and sole-kun practice are proposed,
+not yet authored.
+
+Daijisen's ウ冠 (うかんむり) heading and the complete pinned eleven-path
+SVG qualify the visible 宀 top radical. An unchanged-converter candidate
+is external to runtime. All three bundled fonts cover 寅 but lack standalone
+宀, already present in accepted cards such as 安. Carry its system-fallback
+readability into fresh native/visual acceptance; cmap checks are not that
+acceptance. Kanjipedia's additional つつしむ is recorded as
+an external inventory difference, not silently added to frozen readings
+or illustrated with an invented word. Its historical formation account
+is not selected for teaching. Traditional 東北東 remains distinct from
+丑寅's northeast; Daijisen's thirty-degree description must not become
+an exact modern sixteen-point compass equivalence.
 
 There is no baseline declared word pair or existing standalone sign-support
-article. A new `words/寅.md` is a candidate, not yet selected teaching.
+article. A new `words/寅.md` is qualified necessary-support selection,
+not yet teaching; its final level, title, actual quiz labels and guards
+remain for the draft checkpoint.
 The substantive 寅-shaped mnemonic in the existing N3 演 article needs
 a bounded link decision during drafting; 午's incidental branch sequence
 does not by itself require a backlink. Neither existing article changes
-at this checkpoint. The [preparation audit](n1-sources/batch-048-preparation-audit.json)
-records exact source/re-extraction, baseline and unchanged runtime checks.
-No teaching draft, independent review, converted geometry, native/phone
-acceptance or publication is asserted. Next qualify the same 048 before
-drafting; do not start 049. Accepted 047 is not reopened. Published coverage
+at this checkpoint. The historical
+[preparation audit](n1-sources/batch-048-preparation-audit.json) stays byte-preserved;
+the [qualified-source audit](n1-sources/batch-048-qualified-source-audit.json)
+adds exact Japanese sections, pinned SVG/converter and candidate font receipts
+to fresh source/re-extraction, baseline and unchanged runtime checks.
+No teaching draft, independent review, runtime geometry, native/phone
+acceptance or publication is asserted. Next draft the same 048 after
+the remaining support/quiz/link audit; do not start 049. Accepted 047
+is not reopened. Published coverage
 remains **74 additions; 1,154 still to deliver**, not complete N1 coverage.
 Earlier sections below retain their historical draft-stage wording;
 their batch publication ledgers identify subsequent acceptance.
