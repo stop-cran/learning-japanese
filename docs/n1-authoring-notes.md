@@ -37,7 +37,31 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 053: qualified source, not drafted
+## Batch 053: local unreviewed draft
+
+The [draft ledger](n1-sources/batch-053-progress.json) now records **丙** and
+exactly two necessary support articles, **丙（へい）** and **丙午（ひのえうま）**.
+Both full readings remain in source order and both are selected for practice.
+Two selected 丙 support pairs link both ways; 丙午 also links its existing 午
+component without assigning that N5 card new support ownership.
+No supporting-word vocabulary level is inferred.
+
+The card uses a labelled modern-shape mnemonic and `structure-unclassified`;
+the pinned unchanged converter supplies five runtime strokes. The actual
+wrong labels are 内 “within, inner”, 肉 “meat; flesh” and 病 “illness”.
+The ledger distinguishes their author-stage semantic check from unperformed
+native quiz acceptance and records the specific word-title/guard decisions.
+The label and calendar examples are original explanatory examples, not corpus
+attestations or independent transfer evidence.
+
+This is **unreviewed local teaching**, not accepted or published content.
+Two serial blind different-model-family reviews, reconciliation, fresh
+Android/native/visual checks and all integrated publication gates remain.
+Published coverage stays **79/1,228; 1,149 remaining**. Compatible Android
+`f9b59a2` or later and outstanding physical-phone, general-release and
+whole-set qualifications remain unchanged.
+
+### Retained qualified-source checkpoint (before drafting)
 
 The [qualified-source record](n1-sources/batch-053-dictionary-evidence.json)
 inspects eight named Japanese dictionary sections across seven raw pages.
