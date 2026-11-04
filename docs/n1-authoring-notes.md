@@ -37,7 +37,40 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 042: local textual review closed; acceptance pending
+## Batch 043: source preparation only
+
+[Batch 043](n1-sources/batch-043-progress.json) bounds the next addition to
+**麟**, frozen source row 1226. The coordinator inspected **25 complete
+frozen JMdict families**: 13 lexical families across all spelling positions
+and 12 disjoint comparison families, plus six complete raw character
+records and four existing articles. The [membership](n1-sources/batch-043-membership.json)
+and [preparation audit](n1-sources/batch-043-preparation-audit.json) distinguish
+this evidence checkpoint from a teaching draft or acceptance.
+
+The full reading remains **リン**, with no kun-reading. Radical 鹿 (198),
+grade 9 and both source stroke-count annotations, **24 then 23**, are retained.
+The pinned SVG has not been downloaded or converted; its geometry must be
+reconciled before authoring. Shared component readings are not yet a
+verified historical or phonetic explanation.
+
+麒麟 きりん is the principal support candidate, not an adopted article or
+practice key. Its giraffe sense is usually kana; the separate qilin sense
+does not carry that flag. The archaic extraordinary-horse sense is restricted
+to alternate 騏驎 in the frozen entry. 麒麟児 names a child prodigy;
+botanical names, astronomical usage and the proverb have their own
+restrictions, not a general rule that every compound means giraffe or genius.
+Exact Japanese headings, allocation, useful modern contexts, final support
+identity and displayed-label safeguards remain pending.
+
+No declared baseline 麟 pair or current 麒麟/きりん word filename was found.
+No runtime card, stroke or manifest changed, and no reviewer or Android/native
+process ran. Resume the same 043 with dictionary and geometry qualification.
+Accepted [batch 042](n1-sources/batch-042-publication.json) remains published
+at terminal `be775040`: **69 additions delivered; 1,159 remain**.
+Physical-phone/general-release qualifications remain outstanding; this local
+source checkpoint does not change delivery or acceptance.
+
+## Batch 042: historical textual-stage checkpoint
 
 The bounded 雛 draft adds one kanji card, one necessary word article and
 18-stroke geometry converted from the pinned SVG. It preserves all five
