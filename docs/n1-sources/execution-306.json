@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "execution": 306,
+  "batch": "055",
+  "recordedAt": "2026-11-04T21:06:01.220936+01:00",
+  "status": "source-prepared-not-drafted",
+  "baseCommit": "9807dd24799280f70602ef52a31eb2e09cb36103",
+  "membership": [
+    "丞"
+  ],
+  "sourceRow": 6,
+  "sourceAudit": "batch-055-preparation-audit.json",
+  "sourceAuditSha256": "82de7caee26126afe7b17332424366bf4eb10b26843bd13cf594b9c834dbd840",
+  "sourceAuditImplementation": {
+    "adapter": "control/execution-306-source.py",
+    "adapterSha256": "7bc90b0885d1539297d6edfdcb77c8a408ac3f5cf85aa33f49b33af51e26e445",
+    "reusedAudit": "control/execution-209-source.py",
+    "reusedAuditSha256": "91a676913d826227b28202e9b8d0e25e0e6d9215870766452fa126c9da6fd006",
+    "scope": "Existing frozen-input/exact-family-extraction/raw-metadata/membership/baseline/exclusions/runtime-manifest and all-payload-hash audit with explicit055 identities/counts; no runtime-tool change."
+  },
+  "integration": {
+    "startingOriginMain": "9807dd24799280f70602ef52a31eb2e09cb36103",
+    "startingHead": "9807dd24799280f70602ef52a31eb2e09cb36103",
+    "fetchAndNonRewritingMerge": "Initial fresh fetch/ff-only merge already up to date. Later origin/main advanced; equality assertion caught this before any commit/signing command ran.",
+    "observedOriginMainAtCheckpoint": "998eca51e8d6620a4e60f7b66fdb8c1ff515a545",
+    "lateUpstreamPaths": [
+      "kanji/号.md",
+      "kanji/番.md",
+      "kanji/目.md",
+      "manifest.json"
+    ],
+    "upstreamCommits": [
+      "998eca51e8d6620a4e60f7b66fdb8c1ff515a545 Merge latest main with reviewed numbering comparison",
+      "a20d961f7e4e80ec462555bdbdd3612de4ab8efe Compare numbering and ordinal uses of ban, gou and me"
+    ],
+    "upstreamTeachingOverlap": false,
+    "disposition": "Source-only local checkpoint retains verified base. Fetch/normal merge currentmain before drafting and regenerate/revalidate combined content; no changed-upstream acceptance claimed."
+  },
+  "authorInspection": {
+    "lexicalFamilies": 3,
+    "comparisonFamilies": 9,
+    "distinctCompleteFamilies": 12,
+    "remainingExtractedFamiliesPending": 0,
+    "lexicalReturnedRanges": [
+      [
+        1,
+        64
+      ]
+    ],
+    "comparisonReturnedRanges": [
+      [
+        1,
+        145
+      ],
+      [
+        146,
+        270
+      ]
+    ],
+    "rawCharacterRecords": 9,
+    "rawCharacterRecordRequestedRanges": [
+      [
+        1,
+        55
+      ],
+      [
+        55,
+        55
+      ],
+      [
+        56,
+        65
+      ]
+    ],
+    "rawCharacterRecordReadBoundary": "First request returned complete lines1-54 and truncated 蒸 within55; exact55 recovered separately, then56-59 through actualEOF. Complete raw 一/救/助/承/丞/乗/蒸/臣/相 elements, header and index record inspected. This was not an uninterrupted full-file return.",
+    "completeExistingArticlesRead": [
+      "kanji/蒸.md",
+      "kanji/承.md",
+      "kanji/乗.md",
+      "kanji/助.md",
+      "kanji/相.md",
+      "kanji/臣.md",
+      "words/助ける.md",
+      "words/救う.md",
+      "words/大臣.md",
+      "words/首相.md"
+    ],
+    "candidateNavigation": "Fresh all-position frozen spelling/reading-form extraction finds exactly three 丞 families. Exact filename checks found no 丞相/右丞相/左丞相/宰相/補佐 word article; complete current-word text scan found no 丞 occurrence. Existing 蒸 has a shape-only mnemonic, not reading allocation or support ownership. kanji/救.md was requested but does not exist; its absent card is not an inspected article. Baseline declared 丞 pairs are empty.",
+    "limits": "All12 extracted complete families, nine raw character records and ten actual existing articles coordinator-inspected. Parallel coordinator calls are not reviewer serialization. No fresh Japanese dictionary heading, historical layer/allocation confirmation, name-reading course, frequency claim, native-speaker certification or rendering acceptance. Unchanged articles' incidental examples and all cross-reference families were not re-extracted. 総理大臣 is available but its body has not been freshly inspected; if used for a support comparison/exclusion, acquire the complete family and actual body before finalizing."
+  },
+  "checks": [
+    {
+      "check": "source-audit",
+      "command": "python -X utf8 -B ..\\control\\execution-306-source.py audit",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-306-source-audit.txt",
+      "sha256": "4e237fc45791610d6281ed3f33f50c87bf295ac96da1de030048274b209d27d1",
+      "exitCode": 0
+    },
+    {
+      "check": "extraction-tests",
+      "command": "python -X utf8 -B -m unittest discover -s tools -p test_extract_n1_jmdict.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-306-extraction-tests.txt",
+      "sha256": "f7dc1c65d9bf1c31f1cb9a0be1fc0c0840290cbe7f978a8864c6557dbd2fbb5e",
+      "exitCode": 0
+    },
+    {
+      "check": "validate",
+      "command": "python -X utf8 -B tools\\validate.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-306-validate.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "exitCode": 0
+    },
+    {
+      "check": "manifest",
+      "command": "python -X utf8 -B tools\\build_manifest.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-306-manifest.txt",
+      "sha256": "8d2e0c970f1c22985c64f4d65f9cb7e02ffa6e6f0a6238ac4eea2c15261e7cb7",
+      "exitCode": 0
+    }
+  ],
+  "sourceReadingOrder": {
+    "onyomi": [
+      "ジョウ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "すく.う",
+      "たす.ける"
+    ]
+  },
+  "baselineMetadataExceptions": {
+    "words/虎.md": [
+      "酔っ払い"
+    ],
+    "words/猿.md": [
+      "馬鹿"
+    ]
+  },
+  "frozenInputHashesVerified": 5,
+  "decompressedDictionaryHashesVerified": 2,
+  "allRuntimePayloadHashesVerified": 8290,
+  "runtimeManifestFreshAndUnchanged": true,
+  "contentVersion": "8846e9a9dc29d24c",
+  "runtimeChanges": 0,
+  "reviewersLaunched": 0,
+  "freshAndroidOrNativeClaimed": false,
+  "publishedAdditions": 81,
+  "remainingAdditions": 1147,
+  "currentCounts": {
+    "kanji": 1066,
+    "words": 5024,
+    "n1Labels": 86,
+    "namedSourceMembers": 85,
+    "separateException": "妖"
+  },
+  "acquisitionBoundary": "Inherited summary records full12340-line authorized request including final305 acquired before action. Operative header/final105 lines reacquired now. Approved issue129lines and actual repository instructions reacquired during source preparation, after initial packet extraction; final isolated truncated lines122/212 recovered after source dispositions and before signing. Starting acquisition wording is broader than this observed order; this record preserves the exact boundary. No runtime authored.",
+  "dictionaryAttribution": "Copyright James William Breen and EDRDG; CC BY-SA4.0; frozen versions/hashes/license references in docs/n1-source-snapshot.json.",
+  "nextAction": "Resume SAME055 source-prepared 丞 at normally signed LOCAL source checkpoint; no runtime draft/publication. Main advanced duringprep to998eca51e8d6620a4e60f7b66fdb8c1ff515a545 (号/番/目 bodies+manifestonly); sourcecheckpoint still verifies9807dd2 runtime, notchangedupstreamteaching. Fetch/normalmerge latestmain BEFOREdraft, inspect exactdiff/nooverlap andregenerate/revalidatecombinedtree; preserve sourcebase provenance. Read complete authorized request/finalcheckpoint and approvedissue; inspect scoped live keys and preserve FULL history. Exact frozenmember/sourceRow6;12 complete frozenJMdictfamilies (3lexical64lines/9comparison270lines), 9rawKANJIDIC2records and10actualarticles coordinator-inspected. Rawmetadata truncated within蒸55, recovered exact55 then56-59EOF; absentkanji救 is not an inspectedarticle. Retain fullジョウ/ショウ/すく.う/たす.ける order,6strokes,canonical一1,grade9;nanorioutofscope. Next bounded gate Japanese exact丞/丞相 headings, historical title/register/context and constituent onreading allocation. 丞相じょうしょう/しょうじょう candidate ONEsupportwords/丞相.md primaryじょうしょう notfinalized; bothsenseshistorical ancientChina grandchancellor and Chinese-style minister title, notneutralmoderncabinetrole. 右丞相うじょうしょう/うしょうじょう and左丞相さじょうしょう/さしょうじょう are recognitioncandidates, notextraautomaticarticles. If named extract applicable右大臣/左大臣/唐名 families and Japanese evidence. No kun lexicalmodel in all3frozen丞families;普通救う/助ける do notlicense丞う/丞ける. Qualify source-only readings without dropping metadata or universalnonexistence/rarity claims. No curation or selectedkeyfinalized; avoid questionmaterial lacking ownverifiedlinkedreadingrow. Existing word丞相/右丞相/左丞相/宰相/補佐 absent; no currentwordbody丞 and baselinepairs0. Final supportlabel/titlebothdirections versus大臣/首相 and anyactuallyused総理大臣 requires evidence/directguards; 総理大臣body/family notfreshlyread. Preserve大臣primaryだいじん;おとど is separatefamily; itsarchaic residenceflag notall-senseflag. 助help;rescue overlapsnewhelpmeaning, notdefensiblewronganswer; check actual3newdistractors andaffectedlegacyfallbacks. No transitiveexclusionclique. 蒸shape-onlymnemonic notsupportownership/phoneticetymology. Enumerate allfinalselected/activated/reciprocalpairs; eventual丞相metadata丞+相 andsubstantivebothkanjilinks, no incidentalbacklinkmandate. Fetch/verify pinnedKanjiVG70a0b7ae04e1e.svg/blobc88f152bdb1ffb7383c7bfda1cdab3564a744dbf/3178inventorybytes; inspectradical/outline andunchangedconverter6paths beforedrawable. InventorynotSVG. Audit allnewauthoredHanactualbundledfonts; cmapnotnative readability; no inventedhistory/frequency. 5frozeninputs/2decompressedhashes/exact12families/baseline985kanji4942words985strokes/虎[酔っ払い]/猿[馬鹿]/all8290runtimehashes/unchangedfresh8846e9a9dc29d24cmanifest pass; 5extractiontests/validatorpass. No accepted054review/Android/native rerun absentnewconcern. Then bounded draft; two serialblind differentactualmodel-family initials same signedteaching/allnewchangedsupport/all3facets;currentCLIcatalog/modelidentity/oneactivereviewer/serialinternaltools/completeoriginalreports/actualread-processlimits/evidencebasedreconciliation/originalsessionconfirmationwhenjustified. Fresh applicable non-skippedAndroid/native/originalvisual/latestmainnormalmerge/allcombinedchecks/originalbudgets/normalsigning/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 BEFOREdelivery. Preserve049HOSTOOM/approved1GiBHOST-onlyheadroom, notnativeheapincrease. No056/authoragents/concurrentheavywork/secondrunner/signingretry/permissionworkaround. Actualdenial/signingwait preserveexactcommand-error/report/yield. Public81/1228,1147remaining; 1066kanji5024words86N1labels85namedmembersplusseparate妖;compatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-setoutstanding. Overallprojectincomplete.",
+  "limits": "Source-only local checkpoint. Twelve complete extracted families inspected, not independent review. No runtime edits, final curation/support/exclusions, SVG/geometry/font/native/physical-phone/general-release acceptance or055 publication. Delivered coverage remains81/1228,1147remaining;1066kanji5024words86N1labels85named-source members plus separate妖. Compatible Androidf9b59a2+ required; whole-set incomplete."
+}

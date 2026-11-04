@@ -37,6 +37,34 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 055: local source preparation only
+
+The [membership](n1-sources/batch-055-membership.json) freezes **丞**, source
+row 6, against published `9807dd24799280f70602ef52a31eb2e09cb36103`.
+The [source ledger](n1-sources/batch-055-progress.json) records inspection of
+**12 complete frozen JMdict families** (three lexical / nine comparison),
+nine raw character records and ten actual existing articles. The raw-metadata
+return truncated within 蒸 and was recovered separately; this is not an
+uninterrupted full-file-read claim.
+
+Full **ジョウ・ショウ / すく.う・たす.ける**, six strokes and canonical **一1**
+remain intact. **丞相** is a potential single support article, not finalized
+teaching: its two whole-word readings and historical senses need Japanese
+heading/context and per-character qualification. Neither ordinary 救う nor
+助ける licenses an invented 丞 spelling. No runtime draft, reading selection,
+quiz exclusion, SVG conversion, independent review or publication is asserted.
+The existing 助 answer's help meaning must not become a defensible wrong option.
+
+Next is the same055 qualification/support gate, including any actually used
+historical cross-reference families, exact title comparisons, pinned SVG and
+eventual authored-Han/font checks. Main subsequently advanced to `998eca51`
+with 号・番・目 and manifest changes only; source evidence stays tied to its
+verified base. Fetch and normally merge latest main before drafting, then
+revalidate the combined tree; this is not acceptance of upstream teaching.
+Published coverage remains **81/1,228;
+1,147 remaining**. Compatible Android `f9b59a2` or later is required;
+physical-phone/general-release and whole-set acceptance remain outstanding.
+
 ## Batch 054: accepted bounded owner-testing publication
 
 The [publication record](n1-sources/batch-054-publication.json) records signed
