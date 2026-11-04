@@ -37,6 +37,51 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 041: falcon source preparation, not drafted
+
+[Batch 041](n1-sources/batch-041-progress.json) freezes **隼**, source row
+1164, as one evidence-bounded addition. The coordinator inspected all
+**18 complete JMdict families**: seven containing 隼 in any spelling position
+and eleven disjoint exact comparison families. Seven complete raw KANJIDIC2
+character records and nine existing comparison articles were also inspected.
+The [membership](n1-sources/batch-041-membership.json) and
+[preparation audit](n1-sources/batch-041-preparation-audit.json) separate
+source inspection from teaching acceptance. 鷲, 鳶 and 鷺 were tentative
+navigation candidates absent from the frozen named set, not added scope.
+
+All source readings remain ordered: **シュン, ジュン; はやぶさ**.
+The ordinary native falcon noun has usual-kana notation; grade-9/name-use
+metadata does not make it name-only. A single はやぶさ support article is a
+candidate, not yet authored. 鷹隼 ようしゅん is explicitly archaic in JMdict;
+it must not become a "common words" anchor merely to force on-reading practice.
+No ジュン word anchor was established in the inspected lexical families.
+Exact Japanese character/word headings, allocation, qualified lookup-only
+wording and final quiz subsets remain pending.
+
+Accepted 鷹 already teaches **hawk; falcon**. Do not manufacture an exclusive
+hawk-versus-falcon distinction or use that label as a wrong falcon answer.
+鳥 is the broader category. Any new support needs direct applicable quiz
+guards, not transitive assumptions. 隹 is the canonical radical; comparisons
+with 集's 木 base, 十 and 準 do not establish a historical or phonetic origin.
+The complete packets also distinguish historical 隼人 and plant-name 隼人瓜
+from per-character reading allocation, and kana-only spacecraft はやぶさ
+from the native bird noun. Exact 速 そく is a gear suffix here, not source
+evidence for 速い はやい or a はやぶさ etymology.
+
+No declared baseline 隼 pair was found. Runtime cards, strokes and manifest
+are unchanged; SVG conversion, independent teaching review and fresh native
+acceptance have not started. Source inputs, exact packets, all original
+metadata/strokes (with the two previously reviewed word exclusions) and every
+current runtime hash are audited separately. Source-only extraction tests do
+not certify linguistic correctness.
+
+Accepted [batch 040](n1-sources/batch-040-publication.json) is published at
+terminal `a93d39d`: **67 additions delivered; 1,161 remain**. The older batch
+narratives below preserve their earlier local checkpoints; this source-only
+batch does not increase the delivered count or claim phone/general-release
+acceptance. Continue the same 041 with exact Japanese source qualification
+before drafting; no batch 042 or second runner.
+
 ## Batch 040: peng textual review closed, acceptance pending
 
 [Batch 040](n1-sources/batch-040-progress.json) freezes **鵬**, source row
