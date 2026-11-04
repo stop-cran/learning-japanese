@@ -37,7 +37,45 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 041: falcon textual review closed, not published
+## Batch 042: chick and festival-doll source preparation
+
+[Batch 042](n1-sources/batch-042-progress.json) freezes **雛**, source row
+1168, for one evidence-bounded addition. All **43 complete frozen JMdict
+families** were coordinator-inspected: 36 lexical families across all spelling
+positions and seven disjoint comparisons. Five raw character records and six
+existing bird/doll/child articles were inspected. The
+[membership](n1-sources/batch-042-membership.json) and
+[preparation audit](n1-sources/batch-042-preparation-audit.json) keep this
+source-only work separate from teaching acceptance.
+
+Full readings remain **スウ・ス・ジュ; ひな・ひよこ**, with 18 strokes,
+radical 隹 (172) and grade 9. The exact ひな family has bird and festival-doll
+senses; the separate ひよこ family has bird and novice senses. Shared 雛
+spelling does not authorize unrestricted sense transfer. Bird-sense usual-kana
+notation does not make the doll sense usually kana; the search-only ひよっ子
+form is not ordinary spelling evidence. Small birds are not necessarily young
+birds, and domestic chicken is not the entire chick category.
+
+育雛 いくすう and 鳳雛 ほうすう are possible スウ anchors, not accepted
+practice yet. Exact Japanese headings, allocation, register and useful examples
+remain pending, especially the ambiguous equipment gloss in 育雛器. No lexical
+ス or ジュ anchor was established in this packet; preserve the readings without
+calling them invalid or name-only. Festival voicing, botanical names, technical
+terms and promising-person idioms retain their own boundaries. No mandatory
+extra support articles or historical/phonetic explanation has been adopted.
+
+No declared baseline 雛 pair or existing 雛 word article was found. Runtime
+cards, strokes and manifest remain unchanged. All source/baseline/runtime
+mechanical checks and the extraction tests are recorded separately; they do
+not establish linguistic correctness or native rendering acceptance.
+Resume the same 042 with exact dictionary qualification before drafting.
+
+Accepted [batch 041](n1-sources/batch-041-publication.json) is published at
+terminal `035d6b0`: **68 additions delivered; 1,160 remain**. This new source
+checkpoint does not increase delivery or claim physical-phone/general-release
+acceptance. The older 041 narrative below preserves its textual-stage snapshot.
+
+## Batch 041: historical textual-stage checkpoint
 
 The bounded [draft ledger](n1-sources/batch-041-progress.json) now records
 one 隼 card and one necessary はやぶさ word article, with ten strokes generated
