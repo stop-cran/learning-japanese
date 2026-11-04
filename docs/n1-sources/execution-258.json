@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "execution": 258,
+  "checkpoint": 258,
+  "batch": "049",
+  "status": "blocked",
+  "stage": "batch-049-fresh-android-permission-blocked",
+  "startingHead": "8c05539af2d40b3b0e2740b6510a6ac2c2627d67",
+  "reviewedTeachingSnapshot": "0e73a4115a1f747ef7370efdb5ef271e5ecdfe94",
+  "androidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "scope": "Fresh Android RealContentTest3/RareHanTest1 acceptance for the same textually review-closed batch049; no repeated initial review, native launch, publication, batch050 or second runner.",
+  "blocker": {
+    "kind": "tool-permission-denied-before-execution",
+    "attempts": 1,
+    "deniedCommand": "$env:JAVA_HOME = 'C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot'; $env:ANDROID_HOME = 'C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk'; Set-Location 'C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android'; $started = (Get-Date).ToUniversalTime().ToString('o'); Write-Output \"Execution258 Android start UTC $started\"; .\\gradlew.bat :core:test --tests 'io.github.stopcran.kanji.core.RealContentTest' :app:testDebugUnitTest --tests 'io.github.stopcran.kanji.core.RareHanTest' --no-daemon --no-parallel --max-workers=1 --rerun-tasks '-Pkotlin.compiler.execution.strategy=in-process' *> 'C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-258-android.txt'; $result = $LASTEXITCODE; Get-Content 'C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-258-android.txt' -Tail 35; Write-Output \"Execution258 Android exit $result\"; exit $result",
+    "message": "Permission denied because no interactive user response was available. Retry in an interactive session so the user can approve it, or try an alternative that does not require this permission.",
+    "executionStarted": false,
+    "expectedLogCreated": false,
+    "trigger": "Unknown; the denial does not identify a particular argument or subcommand.",
+    "disposition": "Preserve, report and yield. No retry, alternate invocation, permission/configuration change or workaround."
+  },
+  "verified": {
+    "dedicatedWorktreesCleanBeforeAttempt": true,
+    "dedicatedWorktreesUnchangedImmediatelyAfterDenial": true,
+    "contentStartingSignature": "G",
+    "androidTestSourcesResolveSiblingContent": true,
+    "resolvedContentRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese",
+    "freshAndroidTestsExecuted": 0,
+    "freshAndroidXmlAcceptanceClaimed": false,
+    "nativeOrVisualAcceptanceClaimed": false,
+    "teachingChanged": false,
+    "publicationAttempted": false
+  },
+  "publishedAdditions": 75,
+  "remainingAdditions": 1153,
+  "lastPublishedCommit": "e91eec0c92dcbc0f084fb9df8ac66d7546dc9681",
+  "nextAction": "An approval-capable parent must resolve the exact execution258 denied command, without retries or workarounds by this unattended coordinator. Resume SAME049 at fresh non-skipped RealContentTest3/RareHanTest1; verify fresh XML case names, counts, timestamps, zero errors/failures/skips and actual dedicated sibling root. Preserve textual closure and all subsequent supported-native/font/visual/full-archive/combined-main/publication gates recorded at checkpoint257. Do not start050 or publish before acceptance.",
+  "limits": "This records an execution blocker, not Android test failure or acceptance. No Gradle log was created and no fresh XML was accepted. Prior successful tests remain historical. Two-family textual closure is unchanged; native/visual, latest-main integration, CI and exact public ZIP acceptance remain pending. Compatible Android f9b59a2+ required; physical-phone/general-release and whole-set acceptance remain outstanding."
+}
