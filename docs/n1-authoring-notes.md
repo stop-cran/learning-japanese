@@ -37,7 +37,24 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 049: textual review closed; native acceptance pending
+## Batch 049: published for bounded owner testing
+
+The [publication receipt](n1-sources/batch-049-publication.json) records accepted
+commit `228d5fa`, published recovery head `8af945e`, green content CI
+`41820500539` and all **8,275 runtime hashes** in the exact immutable public ZIP.
+Both original GitHub server-error request IDs remain historical evidence.
+One authorized ordinary owner-scoped fast-forward succeeded after service
+backoff and fresh unchanged-main verification; no authorization, signing,
+permission or archive guard was changed. Accepted teaching/runtime bytes were
+unchanged, so reviewers, Android and native checks were not repeated.
+
+This brings bounded published additions to **76 / 1,228**, with **1,152 remaining**.
+The [native acceptance](n1-reviews/batch-049-native-acceptance.json) and original
+review reports retain their viewport, fallback-face and source-inspection limits,
+including the host-only memory retry. Compatible Android `f9b59a2` or later is
+required. Physical-phone, general-release and whole-set acceptance remain
+explicitly outstanding. Final evidence-commit CI/archive and owner issue readback
+are recorded externally before checkpointing for batch 050.
 
 [Batch 049](n1-sources/batch-049-progress.json) selects only **丑**,
 frozen source row 2, on accepted published base `e91eec0`.
