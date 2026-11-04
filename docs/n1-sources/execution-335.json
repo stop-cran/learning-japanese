@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "execution": 335,
+  "batch": "057",
+  "status": "native-compiled-pending-execution",
+  "startingHead": "d9712bf9a2c03f3fae51c2f751481a05affbc0f9",
+  "scope": "SAME057 exact-full-archive supported-native fixture preparation, serial compilation and signed durable checkpoint only. No native launch, reviewer, runtime publication,058 or second runner.",
+  "recordedAt": "2026-11-04T23:48:56.470896+00:00",
+  "preparation": "docs\\n1-sources\\batch-057-native-preparation.json",
+  "preparationSha256": "f0376edf1bef520913edd0148ce53f5eff235374e16ce2f0be6978d63e776149",
+  "contentVersion": "47f11f7f539a1d55",
+  "fixture": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-reviews\\batch-057-native\\N1Batch057NativeTest.kt",
+  "fixtureSha256": "5b284404e3237e952f0363a3b8ea98a457ca0ae547c847af8d2d4c727dc7166d",
+  "archive": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-057-d9712bf9-envelope.zip",
+  "archiveSha256": "d0cf6e00c4fa5e65fe861060b4849436802f68011217130c984ced20251affc5",
+  "compilation": {
+    "status": "compiled-not-executed",
+    "exitCode": 0,
+    "result": "BUILD SUCCESSFUL in59s;56 tasks:9 executed,47 up-to-date",
+    "log": "docs\\n1-reviews\\batch-057-native\\compile.txt",
+    "logSha256": "48d77da30e51e1dc087d1a07ff429adbf32eb4d092ab2ddf55ebf572e578a10f",
+    "rawLog": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-335-native-compile.txt",
+    "rawLogSha256": "876245ff2595ed64a9054c1cafe9c0f0fcbbc11072fa6c1b8b4e598aff44483c",
+    "normalization": "Archive UTF-8 LF/trailing-whitespace normalization only; complete raw log retained.",
+    "launcher": "docs\\n1-reviews\\batch-057-native\\preparation-receipts\\run-335-native-compile.ps1",
+    "command": ".\\gradlew.bat :app:assembleDebugAndroidTest --no-daemon --no-parallel --max-workers=1 '-Pkotlin.compiler.execution.strategy=in-process'",
+    "apk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-057-native-test.apk",
+    "apkSha256": "245aec1280a35c41cc3a32c04a4818ffb5dc88aee7707af50e857d7c733ef250",
+    "apkBytes": 31458049,
+    "packagedExactFullArchiveVerified": true,
+    "bothBatch057ClassDescriptorsAndMethodsPresent": true,
+    "oldBatch056ClassDescriptorsAbsent": true,
+    "temporaryAndroidSourceAndAssetRemoved": true,
+    "androidWhollyClean": true,
+    "JAVA_HOME": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot",
+    "ANDROID_HOME": "C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk",
+    "hostTestInitScriptUsed": false,
+    "nativeOrEmulatorStarted": false
+  },
+  "checks": [
+    {
+      "check": "validate",
+      "exitCode": 0,
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-335-validate.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+    },
+    {
+      "check": "manifest",
+      "exitCode": 0,
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-335-manifest.txt",
+      "sha256": "37118d78b618dc5b43dd8d12bde5041cdcf0011fe1a13969690383a2cfe20359"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs\\n1-reviews\\batch-057-native\\compile.txt",
+      "bytes": 4522,
+      "sha256": "48d77da30e51e1dc087d1a07ff429adbf32eb4d092ab2ddf55ebf572e578a10f"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-057-native\\fixture-from-056-retry2.diff",
+      "bytes": 23154,
+      "sha256": "b86b02cf253261b337973c31d4f8a1f28f34666439c101fdf936537a4cf90b6d"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-057-native\\N1Batch057NativeTest.kt",
+      "bytes": 29742,
+      "sha256": "5b284404e3237e952f0363a3b8ea98a457ca0ae547c847af8d2d4c727dc7166d"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-057-native\\preparation-receipts\\finish-335.py",
+      "bytes": 17288,
+      "sha256": "430b4af01d824e4bd490e217407b547a320636b5051139c09dfdcbf569980783"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-057-native\\preparation-receipts\\prepare-335-native.py",
+      "bytes": 22092,
+      "sha256": "a766a690075a34e473167c56e8154cd39899644ac0a496d899c18090a5273a83"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-057-native\\preparation-receipts\\run-335-native-compile.ps1",
+      "bytes": 3839,
+      "sha256": "d208360ce14b276d92e51f08da70d3c877bb378beafaba0a06a157d6b0e14dcb"
+    },
+    {
+      "path": "docs\\n1-sources\\batch-057-native-preparation.json",
+      "bytes": 35340,
+      "sha256": "f0376edf1bef520913edd0148ce53f5eff235374e16ce2f0be6978d63e776149"
+    }
+  ],
+  "selectorAudit": {
+    "completeArticleSelectors": 54,
+    "articleCaptureSteps": 32,
+    "method": "All article-route show/await/section/inline calls classified against three complete current articles. Static Markdown subset projection checked against actual production Markdown parser, not a native-tree or visibility claim.",
+    "originalHarness": "docs\\n1-reviews\\batch-056-native\\N1Batch056Retry2NativeTest.kt",
+    "originalHarnessSha256": "e41bba023629f7910427f723c8cb14c34936222d100865fc115e14cebf9b0338"
+  },
+  "accepted334AndroidRetainedWithoutRerun": true,
+  "originalInitialReportHashesUnchanged": {
+    "docs/n1-reviews/batch-057-initial-claude.md": "7d3cdbf38d7c0ca65c9f4c19ec45d493a1157465e23f3e05ae88a219410b2277",
+    "docs/n1-reviews/batch-057-initial-gpt.md": "0693ee5eb0a4d96bfc84952d0bdbd817034939416a2ee6beae0f529e1bc9e24f"
+  },
+  "precompileInspectionCorrection": "Coordinator diff inspection caught that inherited fixed256px word bitmap cannot contain three full-width glyphs of企てる at96px. Allocate ceil(Paint.measureText(word))+16 before compiling; retain per-character nonblank and bounds assertions. Nested-loop indentation corrected. Original056 fixture/archive unchanged. No native run or failure occurred.",
+  "runtimeEditsMade": false,
+  "nativeExecuted": false,
+  "nativeAcceptance": false,
+  "independentVisualAcceptance": false,
+  "reviewersLaunched": 0,
+  "publicationAttempted": false,
+  "publishedAdditions": 83,
+  "remainingAdditions": 1145,
+  "nextAction": "SAME057 normally signed compiled native-preparation checkpoint335. NEXT bounded gate: execute frozen control/artifacts/n1-batch-057-native-test.apk with N1Batch057GlyphTest and N1Batch057ArticleTest against exact complete signedd9712bf9 envelope; read docs/n1-sources/execution-335.json and batch-057-native-preparation.json. Fresh adb/device and ALL local/remote5580-5581 connection/PID ownership immediately before known read-only N3_Acceptance_20261029 API35 hostGPU Vulkan-disabled helper at explicit emulator-5580; use full SDK emulator flags -port5580 -read-only -no-snapshot -no-window -no-audio -gpu host -feature -Vulkan -memory2048 -cores2. Record actual owned parent/QEMU and stop ONLY owned helper. 040 alternate-port exception NOT inherited. No production/content/font/guest-app-heap/archive-guard changes. Full archive through productionContentSyncONCE with1069kanji5028words89N1/47f11f7f539a1d55/problems0/epoch1; Lite+Full orderedキ/くわだ.てる,たくら.む and curatedキ/くわだ.てる, normalizedき/くわだてる; excludeたくらむ as a wrong option. Require BOTH terminalcase0/no skips/rawlogs/actual direct PNG inspection of企全危休人止業/企業/企てる in four production font rows, new企てる and reused企業 articles/two reciprocal pairs/four directions/SystemBack/offline/meaning/BOTHcuratedGood persistent grades/six touch-reference strokes/ungraded trace/recall miss/persistedDrawAgain. 28 singlePaint+8 fullword probes planned; complete-word bitmap measured, not fixed256px. 54 complete-article static selectors/32 article capture steps audited, NOT native acceptance. Rasterhashes not readability/fallback-face identification; offline reference/recallmiss not MLKit or correct human recall. Accepted334 Android3+1 retained without rerun absent new concern. After nativePASS use ORIGINAL two different-family reviewer sessions SERIALly for bounded dependent visuals, not new blind initials. Preserve original aef958a3 blind reports, Claude52 internal overlaps/noncompliance and bounded confirmation limits; strict original process contract not accepted. Then latestmain normal nonrewriting integration/allcombined source-baseline-reading-link-font-stroke/Python/vocab/validator/freshmanifest/original 18000entries42MiBcompressed80MiBinflated56MiBretained budgets/normal signing/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 BEFOREdelivery or058. Actual permission denial/signing wait: preserve exact command/error, report/yield; no retry/workaround. No056rerun/058/secondrunner/concurrentheavywork/supervisor changes. Preserve FULL live history. Published83/1228,1145remaining; compatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding.",
+  "limits": "Static fixture/archive preparation, not native execution or visibility/readability/independent visual/phone/publication acceptance. Every article-route selector resolves to one block in the bounded static Markdown projection, not a fresh native semantics tree. Entire original full Git envelope retained; production ContentSync called ONCE, no duplicate parse/reduced archive, no production/font/guest-app-heap/archive-guard changes. Seven single-character probes per font and both complete support words; raster hashes do not identify fallback face or certify readability. Reference touches/recall miss do not prove MLKit recognition or human recall. Original056 failures/retry history untouched. Accepted334 Android3+1 retained without rerun; historical049 host-only Test heap qualification unchanged. Original057 blind reports, Claude52 overlaps/noncompliance and bounded confirmation limits remain immutable; strict original process contract not accepted. No native/reviewer/push/058/second runner or supervisor changes. Fresh5580/5581 ownership inspection mandatory immediately before future launch;040exception not inherited. Published83/1228,1145remaining; compatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding.",
+  "evidenceArchivalCorrection": "Initial staged diff --check rejected whitespace-only CONTEXT lines in the standard unified-diff evidence before git commit/signing was invoked. Regenerated the same fixture diff with zero context; no fixture/archive/APK/runtime change, test rerun or signing retry. Generator and preparation receipts updated consistently."
+}

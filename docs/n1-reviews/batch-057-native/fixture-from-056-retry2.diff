@@ -1,0 +1,329 @@
+--- docs/n1-reviews/batch-056-native/N1Batch056Retry2NativeTest.kt
++++ docs/n1-reviews/batch-057-native/N1Batch057NativeTest.kt
+@@ -49 +49 @@
+-private fun disposable056() {
++private fun disposable057() {
+@@ -54 +54 @@
+-class N1Batch056Retry2GlyphTest {
++class N1Batch057GlyphTest {
+@@ -57,2 +57,2 @@
+-    @Test fun scarcityLookalikesAndRadicalFamineFallbackAcrossFourProductionFamilies() {
+-        disposable056()
++    @Test fun planningLookalikesAndSupportWordsAcrossFourProductionFamilies() {
++        disposable057()
+@@ -61 +61 @@
+-        val text = "乏 久 反 乃 丿 饉 飢饉"
++        val text = "企 全 危 休 人 止 業 企業 企てる"
+@@ -65 +65 @@
+-                    Text("Batch 056: scarcity / look-alikes / fallback")
++                    Text("Batch 057: planning / look-alikes / support")
+@@ -70 +70 @@
+-                    Text("Compare 乏 with 久, 反 and 乃. Inspect radical 丿 and 饉 in 飢饉; shared fallback need not give four different designs.", fontSize = 18.sp)
++                    Text("Compare 企 with 全, 危 and 休; inspect radical 人, lower 止 and both support words. Shared fallback need not give four different designs.", fontSize = 18.sp)
+@@ -81 +81 @@
+-            for (char in listOf("乏", "久", "反", "乃", "丿", "饉", "飢")) {
++            for (char in listOf("企", "全", "危", "休", "人", "止", "業")) {
+@@ -102,27 +102,28 @@
+-            val word = "飢饉"
+-            val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+-                it.typeface = typeface
+-                it.textSize = 96f
+-                it.textLocale = java.util.Locale.JAPAN
+-            }
+-            // hasGlyph tests multi-character ligatures, not ordinary word coverage.
+-            val image = Bitmap.createBitmap(256, 128, Bitmap.Config.ARGB_8888)
+-            Canvas(image).drawText(word, 8f, 104f, paint)
+-            val pixels = IntArray(image.width * image.height)
+-            image.getPixels(pixels, 0, image.width, 0, 0, image.width, image.height)
+-            for (position in word.indices) {
+-                val left = (8f + paint.measureText(word, 0, position)).toInt()
+-                val right = kotlin.math.ceil(8f + paint.measureText(word, 0, position + 1)).toInt()
+-                assertTrue("Word raster bounds $word ${fonts[index]}", left >= 0 && right <= image.width && left < right)
+-                assertTrue("Blank word character ${word[position]} ${fonts[index]}",
+-                    (0 until image.height).any { y -> (left until right).any { x -> pixels[y * image.width + x] != 0 } })
+-            }
+-            val bytes = java.nio.ByteBuffer.allocate(pixels.size * 4)
+-                .also { it.asIntBuffer().put(pixels) }.array()
+-            val hash = MessageDigest.getInstance("SHA-256").digest(bytes)
+-                .joinToString("") { "%02x".format(it) }
+-            rows.put(JSONObject().put("word", word).put("font", fonts[index].name)
+-                .put("renderedCharactersNonblank", word.length).put("nativePaintRasterSha256", hash))
+-            image.recycle()
+-        }
+-        assertEquals(32, rows.length())
++            for (word in listOf("企業", "企てる")) {
++                val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
++                    it.typeface = typeface
++                    it.textSize = 96f
++                    it.textLocale = java.util.Locale.JAPAN
++                }
++                // hasGlyph tests multi-character ligatures, not ordinary word coverage.
++                val image = Bitmap.createBitmap(kotlin.math.ceil(paint.measureText(word)).toInt() + 16, 128, Bitmap.Config.ARGB_8888)
++                Canvas(image).drawText(word, 8f, 104f, paint)
++                val pixels = IntArray(image.width * image.height)
++                image.getPixels(pixels, 0, image.width, 0, 0, image.width, image.height)
++                for (position in word.indices) {
++                    val left = (8f + paint.measureText(word, 0, position)).toInt()
++                    val right = kotlin.math.ceil(8f + paint.measureText(word, 0, position + 1)).toInt()
++                    assertTrue("Word raster bounds $word ${fonts[index]}", left >= 0 && right <= image.width && left < right)
++                    assertTrue("Blank word character ${word[position]} ${fonts[index]}",
++                        (0 until image.height).any { y -> (left until right).any { x -> pixels[y * image.width + x] != 0 } })
++                }
++                val bytes = java.nio.ByteBuffer.allocate(pixels.size * 4)
++                    .also { it.asIntBuffer().put(pixels) }.array()
++                val hash = MessageDigest.getInstance("SHA-256").digest(bytes)
++                    .joinToString("") { "%02x".format(it) }
++                rows.put(JSONObject().put("word", word).put("font", fonts[index].name)
++                    .put("renderedCharactersNonblank", word.length).put("nativePaintRasterSha256", hash))
++                image.recycle()
++            }
++        }
++        assertEquals(36, rows.length())
+@@ -132 +133 @@
+-        File(context.getExternalFilesDir(null), "n1-056-font-pairs.png").outputStream().use {
++        File(context.getExternalFilesDir(null), "n1-057-font-pairs.png").outputStream().use {
+@@ -135 +136 @@
+-        File(context.getExternalFilesDir(null), "n1-056-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-057-font-raster.json").writeText(JSONObject()
+@@ -138,2 +139,2 @@
+-            .put("individualGlyphProbes", 28).put("wholeWordRasterProbes", 4)
+-            .put("limits", "Twenty-eight single-character native Paint probes, four complete-word nonblank raster probes and four production Compose rows; actual 丿/饉/飢饉 readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
++            .put("individualGlyphProbes", 28).put("wholeWordRasterProbes", 8)
++            .put("limits", "Twenty-eight single-character native Paint probes, eight complete-word nonblank raster probes and four production Compose rows; actual 企/全/危/休/人/止/業/企業/企てる readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
+@@ -144 +145 @@
+-class N1Batch056Retry2ArticleTest {
++class N1Batch057ArticleTest {
+@@ -149,2 +150,2 @@
+-    @Test fun fullSingleImportOfflineScarcityArticlesMeaningBothCuratedReadingsDrawingAndSystemBack() {
+-        disposable056()
++    @Test fun fullSingleImportOfflinePlanningArticlesMeaningBothCuratedReadingsDrawingAndSystemBack() {
++        disposable057()
+@@ -153,2 +154,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-056-${UUID.randomUUID()}", "main")
+-        val head = "fddfae3526b27d1deea8aabdb202b9a9168f0214"
++        val source = RepoSource("acceptance-fixture", "n1-057-${UUID.randomUUID()}", "main")
++        val head = "d9712bf9a2c03f3fae51c2f751481a05affbc0f9"
+@@ -162 +163 @@
+-                    instrumentation.context.assets.open("n1-batch-056-fddfae35-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-057-d9712bf9-envelope.zip")
+@@ -177,2 +178,2 @@
+-        assertEquals(1068, updated.kanji)
+-        assertEquals(5027, updated.words)
++        assertEquals(1069, updated.kanji)
++        assertEquals(5028, updated.words)
+@@ -181 +182 @@
+-        assertEquals("cb85043f73a606f3", meta.contentVersion)
++        assertEquals("47f11f7f539a1d55", meta.contentVersion)
+@@ -189,10 +190,10 @@
+-        assertEquals(88, n1.size)
+-        val scarcity = n1.single { it.kanji == "乏" }
+-        assertEquals(listOf("ボウ"), scarcity.onyomi.splitSep())
+-        assertEquals(listOf("とぼ.しい", "とも.しい"), scarcity.kunyomi.splitSep())
+-        assertNotNull(scarcity.quizOnyomi)
+-        assertNotNull(scarcity.quizKunyomi)
+-        assertEquals(listOf("ボウ"), scarcity.quizOnyomi?.splitSep())
+-        assertEquals(listOf("とぼ.しい"), scarcity.quizKunyomi?.splitSep())
+-        assertEquals(listOf("ぼう"), scarcity.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(listOf("とぼしい"), scarcity.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(89, n1.size)
++        val planning = n1.single { it.kanji == "企" }
++        assertEquals(listOf("キ"), planning.onyomi.splitSep())
++        assertEquals(listOf("くわだ.てる", "たくら.む"), planning.kunyomi.splitSep())
++        assertNotNull(planning.quizOnyomi)
++        assertNotNull(planning.quizKunyomi)
++        assertEquals(listOf("キ"), planning.quizOnyomi?.splitSep())
++        assertEquals(listOf("くわだ.てる"), planning.quizKunyomi?.splitSep())
++        assertEquals(listOf("き"), planning.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(listOf("くわだてる"), planning.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -212 +213 @@
+-                        if (card.kanji == "乏") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "企") now - 60_000 else now + 30L * 86_400_000,
+@@ -218 +219 @@
+-                            if (card.kanji == "乏" && ((kind == ReadingKind.On && key == "ぼう") || (kind == ReadingKind.Kun && key == "とぼしい"))) now - 60_000
++                            if (card.kanji == "企" && ((kind == ReadingKind.On && key == "き") || (kind == ReadingKind.Kun && key == "くわだてる"))) now - 60_000
+@@ -225 +226 @@
+-                    0, source.id, "jlpt-n1", "乏", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "企", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -235,4 +236,4 @@
+-            .put("fullOnyomi", JSONArray(scarcity.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(scarcity.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(scarcity.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(scarcity.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("fullOnyomi", JSONArray(planning.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(planning.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(planning.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(planning.toReadingCard().quizKeys(ReadingKind.Kun)))
+@@ -241 +242 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 乏 meaning and both curated keys due. Two historical good 乏 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 企 meaning and both curated keys due. Two historical good 企 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -248 +249 @@
+-            await("N1 · 88 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 89 cards").performScrollTo().assertIsDisplayed()
+@@ -251,2 +252,2 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("乏")
+-            click("scarce; lacking")
++            rule.onNode(hasSetTextAction()).performTextReplacement("企")
++            click("plan; undertake")
+@@ -254 +255 @@
+-            await("no. 4)", substring = true).performScrollTo().assertIsDisplayed()
++            await("no. 9)", substring = true).performScrollTo().assertIsDisplayed()
+@@ -257,2 +258 @@
+-            show("not having enough", "kanji-shortage")
+-            show("overlapping uses", "kanji-poverty-overlap")
++            show("企 concerns planning", "kanji-meaning")
+@@ -261,3 +261,3 @@
+-            show(readingExample("貧乏 びんぼう — poverty; being poor"), "kanji-on-reading")
+-            show(readingExample("乏しい とぼしい — scarce; meagre"), "kanji-kun-reading")
+-            show("an alternate reading", "kanji-alternate-reading")
++            show(readingExample("企業 きぎょう — business enterprise; company"), "kanji-on-reading")
++            show(readingExample("企てる くわだてる — plan; attempt"), "kanji-kun-reading")
++            show(readingExample("企む たくらむ — scheme; often written たくらむ"), "kanji-recognition-reading")
+@@ -265 +264,0 @@
+-            show("not a second linked article", "kanji-frequency-boundary")
+@@ -267,2 +266,3 @@
+-            show("short outlines", "kanji-lookalikes")
+-            show("three-stroke count", "kanji-drawing-variant")
++            show("They are not two interchangeable", "kanji-conjugation")
++            show("The source indexes", "kanji-lookalike-radicals")
++            show("neither has the planning meaning", "kanji-distractors")
+@@ -270,2 +270,2 @@
+-            inline(await(articleBullet("乏しい とぼしい — scarce; meagre")), "乏しい")
+-            await("乏しい (とぼしい)", substring = true)
++            inline(await(articleBullet("企てる くわだてる — plan; attempt")), "企てる")
++            await("企てる (くわだてる)", substring = true)
+@@ -273,7 +273,4 @@
+-            show("people with needed skills", "adjective-scope")
+-            show("financial sense", "adjective-poverty")
+-            show(articleBullet("人材が乏しい。 (じんざいがとぼしい。) — There is a shortage of capable people."), "adjective-people-example")
+-            show(articleBullet("乏しい経験 (とぼしいけいけん) — limited experience"), "adjective-experience-example")
+-            show(articleBullet("乏しい生活 (とぼしいせいかつ) — an impoverished life"), "adjective-poverty-example")
+-            show("without な", "adjective-attachment")
+-            show("The negative", "adjective-inflection")
++            show("It is a transitive ichidan verb", "verb-grammar")
++            show(articleBullet("新しい事業を企てています。 (あたらしいじぎょうをくわだてています。) — We are planning a new business venture."), "verb-business-example")
++            show(articleBullet("彼らは何かを企てているようです。 (かれらはなにかをくわだてているようです。) — They seem to be plotting something."), "verb-plot-example")
++            show("does not establish that the attempt succeeded", "verb-success-boundary")
+@@ -281,3 +278,2 @@
+-            show("supplies the insufficiency", "adjective-component")
+-            show("not a two-kanji", "adjective-okurigana")
+-            inline(await("supplies the insufficiency", substring = true), "乏")
++            show("supplies くわだ", "verb-component")
++            inline(await("supplies くわだ", substring = true), "企")
+@@ -286,4 +282,4 @@
+-            show("Modern-shape mnemonic", "adjective-backlink-kanji")
+-            back()
+-            await("supplies the insufficiency", substring = true).assertIsDisplayed()
+-            capture("system-back-adjective")
++            show("Modern-shape mnemonic", "verb-backlink-kanji")
++            back()
++            await("supplies くわだ", substring = true).assertIsDisplayed()
++            capture("system-back-verb")
+@@ -291,3 +287,2 @@
+-            show("different grammar", "adjective-shortage-comparison")
+-            show("extensive experience", "adjective-abundance-attachment")
+-            show("exclusively about money", "adjective-poor-overlap")
++            show("not restricted to bad intentions", "verb-register")
++            show("accepting responsibility", "verb-undertake-boundary")
+@@ -295,3 +290,2 @@
+-            show("not necessarily complete absence", "adjective-absence-boundary")
+-            show("not a rule forbidding", "adjective-small-amount-overlap")
+-            show("not a person's worth", "adjective-human-boundary")
++            show("not the contracted form", "verb-separate-godan")
++            show("archaic tiptoe sense", "verb-archaic-sense-boundary")
+@@ -300,2 +294,2 @@
+-            inline(await(articleBullet("貧乏 びんぼう — poverty; being poor")), "貧乏")
+-            await("貧乏 (びんぼう)", substring = true)
++            inline(await(articleBullet("企業 きぎょう — business enterprise; company")), "企業")
++            await("企業 (きぎょう)", substring = true)
+@@ -303,5 +297,4 @@
+-            show("It is a noun", "poverty-grammar")
+-            show(articleBullet("学生のころは貧乏でした。 (がくせいのころはびんぼうでした。) — I was poor when I was a student."), "poverty-student-example")
+-            show(articleBullet("貧乏な家庭で育ちました。 (びんぼうなかていでそだちました。) — I grew up in a poor household."), "poverty-household-example")
+-            show("do not add な", "poverty-attachment")
+-            show("intransitive", "poverty-suru")
++            show("businesses as economic organizations", "enterprise-scope")
++            show(articleBullet("この企業は医療機器を作っています。 (このきぎょうはいりょうききをつくっています。) - This company makes medical equipment."), "enterprise-product-example")
++            show(articleBullet("地元の企業で働きたいです。 (じもとのきぎょうではたらきたいです。) - I want to work for a local business."), "enterprise-work-example")
++            show("uses で for the organization", "enterprise-particle")
+@@ -309,3 +302,2 @@
+-            show("contributes lack or insufficiency", "poverty-components")
+-            show("ビン + ボウ", "poverty-reading-allocation")
+-            inline(await("contributes lack or insufficiency", substring = true), "乏")
++            show("carries a planning or undertaking association", "enterprise-components-reading")
++            inline(await("carries a planning or undertaking association", substring = true), "企")
+@@ -314,4 +306,4 @@
+-            show("Modern-shape mnemonic", "poverty-backlink-kanji")
+-            back()
+-            await("contributes lack or insufficiency", substring = true).assertIsDisplayed()
+-            capture("system-back-poverty")
++            show("Modern-shape mnemonic", "enterprise-backlink-kanji")
++            back()
++            await("carries a planning or undertaking association", substring = true).assertIsDisplayed()
++            capture("system-back-enterprise")
+@@ -319,3 +311,2 @@
+-            show("needs no な", "poverty-adjective-comparison")
+-            show("insufficient resources", "poverty-scarcity-overlap")
+-            show("different attachment", "poverty-wealthy-comparison")
++            show("overlaps strongly", "enterprise-company-overlap")
++            show("production facility", "enterprise-factory-boundary")
+@@ -323,3 +314,2 @@
+-            show("not low prices", "poverty-sense-boundary")
+-            show("character or generosity", "poverty-human-boundary")
+-            show("long final vowel", "poverty-pronunciation")
++            show("does not inherently mean a giant corporation", "enterprise-size-boundary")
++            show("not any undertaking such as a household chore", "enterprise-startup-boundary")
+@@ -336 +326 @@
+-            assertEquals("乏", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("企", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -338 +328 @@
+-            click("scarce; lacking")
++            click("plan; undertake")
+@@ -340 +330 @@
+-            assertEquals("乏", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("企", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -350 +340 @@
+-                assertEquals("乏", question.card.kanji)
++                assertEquals("企", question.card.kanji)
+@@ -352 +342 @@
+-                val key = if (question.question.kind == ReadingKind.On) "ぼう" else "とぼしい"
++                val key = if (question.question.kind == ReadingKind.On) "き" else "くわだてる"
+@@ -354 +344 @@
+-                assertFalse(question.question.options.any { it.key == "ともしい" })
++                assertFalse(question.question.options.any { it.key == "たくらむ" })
+@@ -362 +352 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "乏" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "企" &&
+@@ -371,4 +361,4 @@
+-            await("scarce; lacking").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "乏") })
+-            assertEquals(listOf("ボウ"), card.onyomi.splitSep())
+-            assertEquals(listOf("とぼ.しい", "とも.しい"), card.kunyomi.splitSep())
++            await("plan; undertake").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "企") })
++            assertEquals(listOf("キ"), card.onyomi.splitSep())
++            assertEquals(listOf("くわだ.てる", "たくら.む"), card.kunyomi.splitSep())
+@@ -377,2 +367,2 @@
+-            assertEquals(listOf("ボウ"), card.quizOnyomi?.splitSep())
+-            assertEquals(listOf("とぼ.しい"), card.quizKunyomi?.splitSep())
++            assertEquals(listOf("キ"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("くわだ.てる"), card.quizKunyomi?.splitSep())
+@@ -380 +370 @@
+-            assertEquals(4, strokes.length())
++            assertEquals(6, strokes.length())
+@@ -397 +387 @@
+-            rule.onNode(hasContentDescription("4 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("6 strokes drawn", substring = true)).assertExists()
+@@ -402 +392 @@
+-                    it.kanji == "乏" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "企" && it.mode == StudyMode.Draw.name }
+@@ -413 +403 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "乏" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "企" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -426,2 +416,2 @@
+-            File(app.getExternalFilesDir(null), "n1-056-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-056-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-057-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-057-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -521 +511 @@
+-        File(app.getExternalFilesDir(null), "n1-056-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-057-$step.png").outputStream().use {
