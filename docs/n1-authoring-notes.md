@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 055: local source preparation only
+## Batch 055: local source qualification, not drafted
 
 The [membership](n1-sources/batch-055-membership.json) freezes **丞**, source
 row 6, against published `9807dd24799280f70602ef52a31eb2e09cb36103`.
@@ -49,15 +49,25 @@ uninterrupted full-file-read claim.
 
 Full **ジョウ・ショウ / すく.う・たす.ける**, six strokes and canonical **一1**
 remain intact. **丞相** is a potential single support article, not finalized
-teaching: its two whole-word readings and historical senses need Japanese
-heading/context and per-character qualification. Neither ordinary 救う nor
-助ける licenses an invented 丞 spelling. No runtime draft, reading selection,
-quiz exclusion, SVG conversion, independent review or publication is asserted.
+teaching. The [Japanese evidence](n1-sources/batch-055-dictionary-evidence.json)
+now verifies primary **じょうしょう**, older whole-word **しょうじょう**,
+the ancient Chinese minister and Chinese-style-title senses, and the explicit
+helping contribution of both characters. Daijisen's character entry supports
+ジョウ with 丞相; constituent allocation of the older reading remains
+**UNVERIFIED**, not a selected practice key. Neither ordinary 救う nor
+助ける licenses an invented 丞 spelling.
+
+The actual pinned 3,178-byte SVG matches its frozen Git blob, identifies bottom
+一 as radical, and converts with the unchanged converter to six external
+candidate strokes. Candidate cmap checks are not native readability acceptance;
+the final authored-Han audit must follow the actual draft. No runtime stroke
+file, reading selection, quiz exclusion, independent review or publication is asserted.
 The existing 助 answer's help meaning must not become a defensible wrong option.
 
-Next is the same055 qualification/support gate, including any actually used
-historical cross-reference families, exact title comparisons, pinned SVG and
-eventual authored-Han/font checks. Main subsequently advanced to `998eca51`
+Next is the same055 support/draft gate, including any actually used
+historical cross-reference families, a natural example, exact title comparisons,
+all distractors/fallbacks, reciprocal ownership and final authored-Han/font checks.
+Main subsequently advanced to `998eca51`
 with 号・番・目 and manifest changes only; source evidence stays tied to its
 verified base. Fetch and normally merge latest main before drafting, then
 revalidate the combined tree; this is not acceptance of upstream teaching.

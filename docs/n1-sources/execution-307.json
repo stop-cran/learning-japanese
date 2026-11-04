@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "execution": 307,
+  "batch": "055",
+  "recordedAt": "2026-11-04T21:11:27.944693+01:00",
+  "status": "bounded-source-qualified-not-drafted",
+  "sourcePreparationSnapshot": "55e38131d5dccac72d766aeb3792cd4b1cb64d6c",
+  "runtimeBase": "9807dd24799280f70602ef52a31eb2e09cb36103",
+  "membership": [
+    "丞"
+  ],
+  "sourceRow": 6,
+  "dictionaryEvidence": "batch-055-dictionary-evidence.json",
+  "dictionaryEvidenceSha256": "11fad84038cbccb101df4fb5f11857ac8d23e40497edb1c0e46245f8f3828ca7",
+  "qualificationAudit": "batch-055-qualification-audit.json",
+  "qualificationAuditSha256": "e893e92de41737aea7cb54a7a3ee7fb7f2f27627f09dd65436e6efdbc49eaf78",
+  "implementation": {
+    "path": "control/execution-307.py",
+    "sha256": "4a3cfbd422931dc6375533dae45294fdb827ec459519a3650583558aadd929b3"
+  },
+  "checks": [
+    {
+      "check": "qualification-audit",
+      "command": "python -X utf8 -B ..\\control\\execution-307.py audit",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-307-qualification-audit.txt",
+      "sha256": "84c5ec057dba80d532afa23e9d01aa2eb2a1d9911046c8928daa38af3bb4b31b",
+      "exitCode": 0
+    },
+    {
+      "check": "extraction-tests",
+      "command": "python -X utf8 -B -m unittest discover -s tools -p test_extract_n1_jmdict.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-307-extraction-tests.txt",
+      "sha256": "46a59d823d772c3809446eba836399e2612ba33924b6c71abe8e15b736b8f4b7",
+      "exitCode": 0
+    },
+    {
+      "check": "validate",
+      "command": "python -X utf8 -B tools\\validate.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-307-validate.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "exitCode": 0
+    },
+    {
+      "check": "manifest",
+      "command": "python -X utf8 -B tools\\build_manifest.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-307-manifest.txt",
+      "sha256": "8d2e0c970f1c22985c64f4d65f9cb7e02ffa6e6f0a6238ac4eea2c15261e7cb7",
+      "exitCode": 0
+    }
+  ],
+  "runtimeChanges": 0,
+  "allRuntimePayloadHashesVerified": 8290,
+  "contentVersion": "8846e9a9dc29d24c",
+  "candidateOnlyHan": 13,
+  "bundledFontsChecked": 3,
+  "missingCandidateHan": [],
+  "reviewersLaunched": 0,
+  "freshAndroidOrNativeClaimed": false,
+  "sourceAcquisition": "Actual raw Japanese pages acquired with timestamp/hash, selected Daijisen sections inspected after stripping markup; other dictionaries on those pages are not treated as Daijisen. Full66-line pinnedSVG inspected. Complete64-line lexical packet and actual相 article freshly read. Original nine comparison-family inspection inherited, not repeated. Full authorized request acquired before compaction; approved issue and repository/scoped instructions freshly acquired. Normative references read in relevant bounded ranges, not whole-file coverage.",
+  "integration": {
+    "freshOriginMain": "998eca51e8d6620a4e60f7b66fdb8c1ff515a545",
+    "upstreamOnlyPaths": [
+      "kanji/号.md",
+      "kanji/番.md",
+      "kanji/目.md",
+      "manifest.json"
+    ],
+    "merged": false,
+    "disposition": "Source-only verified runtime base preserved. Fetch/normal merge latestmain before drafting and regenerate/revalidate combined content; no changed-upstream teaching acceptance."
+  },
+  "publishedAdditions": 81,
+  "remainingAdditions": 1147,
+  "nextAction": "Resume SAME055: fetch/normal merge latest main before runtime drafting and revalidate the combined tree. Primary 丞相じょうしょう historical support and six-stroke candidate are source-qualified. Keep older しょうじょう constituent allocation UNVERIFIED unless separately established; no practice key finalized. Complete any actually used cross-reference families, natural example, title/exclusion/distractor/legacy-fallback checks and reciprocal ownership; then author one bounded draft, audit all final authored Han and freeze a normally signed teaching snapshot for two serial blind different-model-family reviews. No056 before accepted055 publication.",
+  "limits": "Coordinator source qualification, not independent linguistic review. Initial12-family/full-baseline inspection is inherited from execution306; this execution freshly reads the64-line lexical packet, actual 相 article, actual Japanese source sections and complete66-line SVG. No fresh full reread of the other nine comparison families claimed. No runtime edits, final curation, reviewer, Android/native, publication or second runner. Main integration remains pending before drafting. Published coverage81/1228,1147remaining; physical-phone/general-release and whole-set acceptance outstanding."
+}
