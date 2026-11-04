@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "execution": 268,
+  "checkpoint": 268,
+  "batch": "050",
+  "status": "blocked",
+  "stage": "batch-050-native-prepared-compile-permission-blocked",
+  "recordedAt": "2026-11-04T13:25:30.411078+01:00",
+  "startingHead": "c537b733c125be56897f8edda4d4c276ccf00cd7",
+  "reviewedTeachingSnapshot": "cc51de4e28b159b76956009a479dad19882093ab",
+  "androidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "scope": "SAME050 minimal native fixture/exact frozen full archive preparation; no teaching, host-test rerun, reviewer, emulator, publication or051.",
+  "blocker": {
+    "kind": "tool-permission-denied-before-execution",
+    "attempts": 1,
+    "deniedCommand": "$env:JAVA_HOME = 'C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot'; $env:ANDROID_HOME = 'C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk'; $fixture = 'C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\src\\androidTest\\java\\io\\github\\stopcran\\kanji\\ui\\N1Batch050NativeTest.kt'; $asset = 'C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\src\\androidTest\\assets\\n1-batch-050-c537b73-envelope.zip'; if ((Test-Path $fixture) -or (Test-Path $asset)) { throw 'Refusing to overwrite existing native fixture or asset' }; New-Item -ItemType Directory -Force (Split-Path $fixture), (Split-Path $asset) | Out-Null; $result = 1; try { Copy-Item 'C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-reviews\\batch-050-native\\N1Batch050NativeTest.kt' $fixture; Copy-Item 'C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-050-c537b73-envelope.zip' $asset; Set-Location 'C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android'; Get-Date -Format o | Set-Content 'C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-268-native-compile-start.txt'; & .\\gradlew.bat :app:assembleDebugAndroidTest --no-daemon --no-parallel --max-workers=1 '-Pkotlin.compiler.execution.strategy=in-process' 2>&1 | Tee-Object 'C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-268-native-compile.txt'; $result = $LASTEXITCODE; $result | Set-Content 'C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-268-native-compile-exit.txt' } finally { if (Test-Path $fixture) { Remove-Item -LiteralPath $fixture }; if (Test-Path $asset) { Remove-Item -LiteralPath $asset } }; exit $result",
+    "message": "Permission denied because no interactive user response was available. Retry in an interactive session so the user can approve it, or try an alternative that does not require this permission.",
+    "executionStarted": false,
+    "expectedLogsCreated": false,
+    "trigger": "Unknown; tool response did not identify an argument or subcommand.",
+    "disposition": "Preserve, report and yield to approval-capable parent; no retry/disguise/configuration change/workaround."
+  },
+  "nativePreparation": {
+    "record": "docs/n1-sources/batch-050-native-preparation.json",
+    "sha256": "89badd5a84cd36377f725230de7981eae078a9f589c33e7f2045bbd7a0121006",
+    "fixture": "docs/n1-reviews/batch-050-native/N1Batch050NativeTest.kt",
+    "fixtureSha256": "e7e5c2705bfe99b328d8fcc91b989a2b30da06cce1b1d3f2ec00a92985612cfc",
+    "archive": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-050-c537b73-envelope.zip",
+    "archiveSha256": "01c712cb29d9a74574a1f60b4847948634c9c759e21e3895fe7af1ba3977fb19",
+    "zipEntries": 8300,
+    "compressedBytes": 30226268,
+    "inflatedBytes": 44190545,
+    "retainedBytes": 43922207,
+    "runtimeHashesVerified": 8278,
+    "priorNativeFixturesUnchanged": 15,
+    "nativeExecuted": false,
+    "compiled": false,
+    "plannedNativePaintProbes": 28
+  },
+  "parentAndroidRecovery": {
+    "verifiedAt": "2026-11-04T13:16:55.1843832+01:00",
+    "checkpoint": 267,
+    "batch": "050",
+    "localContentHead": "c537b733c125be56897f8edda4d4c276ccf00cd7",
+    "androidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+    "permissionRecovery": "EXACT denied267 command executed by approval-capable parent without permission/repository configuration changes. Explicit inspected control-only049init1GiB :core HOST Test JVM retained; original049512MiBHOST OOM preserved. Test sources/selectors/assertions/native guest-app heap/archive guards unchanged; no049XML reuse.",
+    "shellId": "batch050-android-parent-approval",
+    "exitCode": 0,
+    "buildResult": "BUILD SUCCESSFUL in 3m 52s",
+    "tasks": "41 actionable tasks: 41 executed",
+    "oneWorker": true,
+    "parallel": false,
+    "rerunTasks": true,
+    "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-267-android-tests.txt",
+    "tests": [
+      {
+        "name": "io.github.stopcran.kanji.core.RealContentTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "timestamp": "2026-11-04T12:14:13.767Z",
+        "caseNames": [
+          "hotelBookingDoesNotAcceptTheSchoolClassReadingWhenRepoPresent",
+          "completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent",
+          "parsesRealContentRepoWhenPresent"
+        ],
+        "sourcePath": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core\\build\\test-results\\test\\TEST-io.github.stopcran.kanji.core.RealContentTest.xml",
+        "artifactPath": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-050-parent-RealContentTest.xml",
+        "sha256": "cd5f8e00267e24e07766a71f03eb86f04cdf3538dc47f446e5221af0ba3390c9",
+        "fixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese"
+      },
+      {
+        "name": "io.github.stopcran.kanji.core.RareHanTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "timestamp": "2026-11-04T12:16:45.306Z",
+        "caseNames": [
+          "contentRareCharactersAreCoveredByBundledFont"
+        ],
+        "sourcePath": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\build\\test-results\\testDebugUnitTest\\TEST-io.github.stopcran.kanji.core.RareHanTest.xml",
+        "artifactPath": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\batch-050-parent-RareHanTest.xml",
+        "sha256": "a14517e3c59fd0d626baa29d52d0cf5aeb4936104fad365700c2362b6347dd17",
+        "fixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese"
+      }
+    ],
+    "worktreesClean": true,
+    "exclusiveLockAvailable": true,
+    "scope": "Fresh Android gate only; not publication or complete rollout acceptance."
+  },
+  "parentAndroidRecoveryReverifiedWithoutRerun": true,
+  "parentAndroidProvenanceHashesVerified": 7,
+  "checks": [
+    {
+      "check": "validate",
+      "exitCode": 0,
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-268-validate.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+    },
+    {
+      "check": "manifest",
+      "exitCode": 0,
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-268-manifest.txt",
+      "sha256": "c7c1df53efc9cc64cf6e886261a3908125e6781256fe0b1b4e237c5c351d8d80"
+    }
+  ],
+  "verified": {
+    "androidWorktreeCleanBeforeAndAfterDenial": true,
+    "reviewedRuntimeUnchanged": true,
+    "manifestFreshAndUnchanged": true,
+    "temporarySourcesOrAssetsInstalled": false,
+    "compileOrNativeStarted": false,
+    "reviewersLaunched": 0,
+    "publicationAttempted": false,
+    "secondRunnerCreated": false
+  },
+  "publishedAdditions": 76,
+  "remainingAdditions": 1152,
+  "lastPublishedCommit": "b189ed637bf27f388b0ac8f3e8b31aee634504cc",
+  "nextAction": "Approval-capable parent must resolve EXACT execution268 denied native compile command in docs/n1-sources/execution-268.json; unattended coordinator must not retry/disguise/change policy. SAME050 fixture now docs/n1-reviews/batch-050-native/N1Batch050NativeTest.kt; control/artifacts/n1-batch-050-c537b73-envelope.zip frozen from signedc537b733c125be56897f8edda4d4c276ccf00cd7, SHA25601c712cb29d9a74574a1f60b4847948634c9c759e21e3895fe7af1ba3977fb19;8300entries/all8278runtimehashes/schema1en-ja/version3f68693b2b5631e2 and originalbyteguards verified. Compile denied BEFORE execution: no temp source/asset/logs/build/native/device/reviewer. Parent fresh050Android3+1 remains satisfied; names/sourcecopyhashes/UTC/dedicatedroot/provenance reverified268, no rerun absent new concern/no049XMLreuse. Retain049512MiBHOSTfailure and inspected control-only1GiB :core HOST Test init; no native heap/font/guard changes. After parent compile, same050 fresh5580/5581ownership immediately before known owned read-onlyAPI35hostGPU/Vulkan-disabled2048MiB2corehelper; 0405584exception NOT inherited. Exact full envelope through productionContentSyncONCE perarticleattempt, 1062kanji/5020words/82N1/problems0/acceptedreadingepoch/fullorderedシンジン/たつ/emptyon/solekunたつ. Require28Paintprobes/fourproductionrows辰農震長厂氵已, directPNGs/radical161/article/onekanji-wordpair/BOTH exact農震componentlinkroutes/SystemBack/offline/terminalrawcase0/noskips, exact temporarycleanup and onlyownedhelperstop. Then bounded SERIAL ORIGINAL050claude-opus-5.5 sessiona2420434-b696-4453-a105-153ff1917d98 and gpt-6.1-sol sessionb31569e2-f1c5-4148-92c4-01d0c2d0bd68 visual confirmations with originalfindings/diff; no repeatedblindinitials. Fallback styles may coincide;actualfaceunknown;34authoredHan/32all3cmaps is not nativeacceptance. Textualclosure77813feca2fbedc81a4437249d2b9c6fe471b8a5/teachingcc51de4e28b159b76956009a479dad19882093ab unchanged; ジン explicitlysource-only unverifiedallocation,43families/onepair/zerobaselineactivations/both虎猿guards preserved. Latestmain normalnonrewritingmerge/allcombined source/baseline/reading/link/stroke/font/Python/vocab/validator/freshmanifest/originalbudgets/normalsigning/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipt/ownerissue60 remain before publication or051. Published76/1228,1152remaining;compatibleAndroidf9b59a2+;phone/generalrelease/whole-set outstanding. No051/secondrunner/signingbypass. Preserve full live history.",
+  "limits": "Static fixture/exact frozen full Git ZIP preparation only; compilation and native execution recorded separately if performed. No duplicate parser preflight, reduced archive, heap/font/guard changes, reviewer, publication or051. Parent fresh0503+1 XML/sourcecopy hashes/names/UTC/dedicatedroot reverified, not rerun or049reuse. Prior15nativefixtures unchanged. Authored34Han/32bundledcmaps are not native acceptance; authored厂/氵 and compared已 explicitly probed. Fallback families may coincide; actual fallback face unknown. Fresh5580/5581ownership required immediately before launch;040exception not inherited. Terminal raw per-case0/no skips/directPNGs and serial original-reviewer visual confirmations remain required. No full-column/whole-article/quiz/drawing/physical-phone/general-release acceptance asserted. Published76/1228,1152remaining. Compile attempt actually denied before execution, not a Kotlin/Gradle failure. No compiled fixture/native/visual acceptance asserted."
+}
