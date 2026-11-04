@@ -37,7 +37,43 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 053: source preparation only
+## Batch 053: qualified source, not drafted
+
+The [qualified-source record](n1-sources/batch-053-dictionary-evidence.json)
+inspects eight named Japanese dictionary sections across seven raw pages.
+Exact **丙（へい）** is a third-rank/class label; **丙（ひのえ）**
+is the third heavenly stem. Exact **丙午（ひのえうま）**, also **へいご**,
+combines that stem with the Horse branch and is term 43 in the sixty-term
+cycle. Ten stems, twelve branches and sixty combined terms remain distinct.
+The frozen contract-label sense is restricted to へい; the newly inspected
+Japanese entries corroborate rank, not a mandatory legal convention.
+
+Proposed practice selects both **ヘイ / ひのえ**, with exactly two necessary
+new support articles: **丙（へい）** and **丙午（ひのえうま）**. No vocabulary
+level is inferred from the N1 kanji. These are qualified proposals, not
+authored cards or runtime selections. Both 丙 support pairs must link both
+ways; the new 丙午 article must also link the existing 午 component, without
+silently assigning or rewriting that N5 card. Alternate へいご recognition
+must not be presented as the primary reading of a linked ひのえうま model.
+Final quiz titles, wrong choices, exclusions and full authored-Han inspection
+remain draft-stage work.
+
+The entire pinned five-path SVG agrees with canonical **一 (1)** and the
+frozen stroke count: the top bar is stroke 1; the 内-like group is strokes
+2–5, with its inner descending stroke reaching the top bar. The unchanged
+converter's candidate remains outside runtime content. Shinjigen's fish-tail
+and Jitsu's pedestal/shaft-foot origin accounts are not adjudicated: use a
+labelled modern-shape mnemonic and `structure-unclassified`, not a settled
+origin or phonetic claim. Of 18 candidate characters, **冂** is absent from
+all three bundled fonts; supported-native fallback readability remains
+necessary if it appears in the future teaching. The other 17 have cmap
+entries in all three fonts, not native-readability acceptance.
+No runtime teaching, manifest, independent review, Android/native acceptance
+or publication is changed. Published coverage stays **79/1,228; 1,149 remaining**.
+Compatible Android `f9b59a2` or later and the outstanding physical-phone,
+general-release and whole-set qualifications remain unchanged.
+
+### Retained source-preparation checkpoint
 
 The [membership](n1-sources/batch-053-membership.json) selects **丙**,
 frozen source row 5, against published `e16c95b3`. The
