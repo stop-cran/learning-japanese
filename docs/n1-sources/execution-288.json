@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "execution": 288,
+  "batch": "053",
+  "recordedAt": "2026-11-04T18:06:43.812642+01:00",
+  "status": "source-prepared-not-drafted",
+  "baseCommit": "e16c95b3edc55975b7a2c7985bf730425baa2f83",
+  "membership": [
+    "丙"
+  ],
+  "sourceRow": 5,
+  "sourceAudit": "batch-053-preparation-audit.json",
+  "sourceAuditSha256": "3c802ff9560ddc45d2dcc97419794bca557a0dc87b3b4f263995c955ee4a5c9a",
+  "sourceAuditImplementation": {
+    "adapter": "control/execution-288-source.py",
+    "adapterSha256": "678ab83118a804201a0688ca0bfa56127d350688097564a94fd6a33b835ea4c0",
+    "reusedAudit": "control/execution-209-source.py",
+    "reusedAuditSha256": "91a676913d826227b28202e9b8d0e25e0e6d9215870766452fa126c9da6fd006",
+    "scope": "Existing frozen-input/exact-family-extraction/raw-metadata/membership/baseline/exclusions/runtime-manifest and all-payload-hash audit with explicit053 identities/counts; no runtime-tool change."
+  },
+  "integration": {
+    "originMain": "e16c95b3edc55975b7a2c7985bf730425baa2f83",
+    "startingHead": "e16c95b3edc55975b7a2c7985bf730425baa2f83",
+    "fetchAndNonRewritingMerge": "Fresh fetch; already up to date; no conflicts or teaching change."
+  },
+  "authorInspection": {
+    "lexicalFamilies": 11,
+    "comparisonFamilies": 22,
+    "distinctCompleteFamilies": 33,
+    "remainingExtractedFamiliesPending": 0,
+    "lexicalReturnedRanges": [
+      [
+        1,
+        195
+      ]
+    ],
+    "comparisonReturnedRanges": [
+      [
+        1,
+        170
+      ],
+      [
+        171,
+        340
+      ],
+      [
+        341,
+        510
+      ],
+      [
+        511,
+        687
+      ]
+    ],
+    "rawCharacterRecords": 9,
+    "rawCharacterRecordRequestedRanges": [
+      [
+        1,
+        49
+      ],
+      [
+        50,
+        53
+      ],
+      [
+        54,
+        59
+      ]
+    ],
+    "rawCharacterRecordReadBoundary": "Complete59-line JSON through actualEOF, including index/header and all nine escaped complete KANJIDIC2 records 一/乙/甲/三/丁/内/肉/病/丙. No source-packet truncation or recovery gap.",
+    "completeExistingArticlesRead": [
+      "kanji/病.md",
+      "kanji/内.md",
+      "kanji/肉.md",
+      "kanji/三.md",
+      "kanji/一.md",
+      "words/三.md",
+      "words/内.md",
+      "words/肉.md"
+    ],
+    "candidateNavigation": "Exact all-position spelling/reading-form scan of frozen JMdict found 丙11/且6/丘42/屯23/寸93 families. Current kanji/words/articles 丙 search found only kanji/病.md's mnemonic. Missing 甲/乙/丁/干支/十干 articles were checked rather than presumed present. Baseline declared 丙 pairs are empty; no existing standalone 丙 word identity to reuse.",
+    "limits": "All33 complete frozen families, nine raw character records and eight actual existing articles returned and coordinator-inspected. Parallel coordinator calls do not establish reviewer serialization. No fresh Japanese dictionary heading, native-speaker judgment, current frequency, historical derivation or rendering acceptance. Complete families for incidental examples in unchanged comparison articles were not freshly extracted; those articles are not certified by this bounded inspection."
+  },
+  "checks": [
+    {
+      "check": "source-audit",
+      "command": "python -X utf8 -B ..\\control\\execution-288-source.py audit",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-288-source-audit.txt",
+      "sha256": "325024739992e2064fb8176e1fb86ce1f696638e5ca8576b49c536cc27547fc6",
+      "exitCode": 0
+    },
+    {
+      "check": "extraction-tests",
+      "command": "python -X utf8 -B -m unittest discover -s tools -p test_extract_n1_jmdict.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-288-extraction-tests.txt",
+      "sha256": "f7dc1c65d9bf1c31f1cb9a0be1fc0c0840290cbe7f978a8864c6557dbd2fbb5e",
+      "exitCode": 0
+    },
+    {
+      "check": "validate",
+      "command": "python -X utf8 -B tools\\validate.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-288-validate.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "exitCode": 0
+    },
+    {
+      "check": "manifest",
+      "command": "python -X utf8 -B tools\\build_manifest.py",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-288-manifest.txt",
+      "sha256": "5fe4b4372c0bfd4d1ab9f04814b56241df11a0c306abc8d1559fff3b7917a1af",
+      "exitCode": 0
+    }
+  ],
+  "sourceReadingOrder": {
+    "onyomi": [
+      "ヘイ"
+    ],
+    "kunyomi": [
+      "ひのえ"
+    ]
+  },
+  "baselineMetadataExceptions": {
+    "words/虎.md": [
+      "酔っ払い"
+    ],
+    "words/猿.md": [
+      "馬鹿"
+    ]
+  },
+  "frozenInputHashesVerified": 5,
+  "decompressedDictionaryHashesVerified": 2,
+  "allRuntimePayloadHashesVerified": 8283,
+  "runtimeManifestFreshAndUnchanged": true,
+  "contentVersion": "601a0fb709961e28",
+  "runtimeChanges": 0,
+  "reviewersLaunched": 0,
+  "freshAndroidOrNativeClaimed": false,
+  "publishedAdditions": 79,
+  "remainingAdditions": 1149,
+  "currentCounts": {
+    "kanji": 1064,
+    "words": 5021,
+    "n1Labels": 84,
+    "namedSourceMembers": 83,
+    "separateException": "妖"
+  },
+  "acquisitionBoundary": "Complete authorized request through actualEOF13532/final287checkpoint acquired before action;1-8760 inherited via compaction,8761-13532 returned currently. Approved issue fully acquired before compaction. Actual repository guidance and clean signed dedicated heads/live scoped history inspected; fresh fetch/normal merge already up to date. Full live history preserved.",
+  "dictionaryAttribution": "Copyright James William Breen and EDRDG; CC BY-SA4.0; frozen source versions/hashes/license references in docs/n1-source-snapshot.json.",
+  "nextAction": "Resume SAME053 source-prepared 丙 at normally signed LOCAL checkpoint; no runtime draft/publication. Read complete authorized request/finalcheckpoint and scoped live keys; preserve FULL live history. All33 complete frozenJMdictfamilies (11lexical195lines/22comparison687lines), nine rawKANJIDIC2records and eight existingarticles coordinator-inspected without source truncation. Exact frozenmember/sourceRow5; fullヘイ/ひのえ/fivestrokes/canonical一1 preserved. Next bounded gate exactJapanese 丙へい third-rank/class/contract-party versus 丙ひのえ thirdheavenlystem, plus proposed 丙午ひのえうま support/alternateへいご. Standalone rank sense stagrへい; calendar especiallyひのえ; do not collapse tenstems/twelvebranches/sixtytermcycle, equate 丙 with ordinary quantity三, invent frequency/legalmandate/formation or reading interchange. No existing丙word; zero baseline declared supportpairs. Candidate minimal two-word support 丙へい and 丙午ひのえうま, 丙種へいしゅ alternative not automatic third; no supportedit/quizsubsetfinalized. Existing 病 has labelled modern-shape丙mnemonic only, not lexicalownership/verifiedphoneticformation. Preserve actualbaseline metadata/levels/IDs/exclusions and exact虎[酔っ払い]/猿[馬鹿]guards; enumerate all eventual selected/activated/reciprocalpairs and inspect actual titles/secondarysenses/fallbacks. Fetch/inspect pinnedKanjiVG70a0b7ae04e19SVG/blob e75b27e64f2ac6c8b57fbe7e0466e5e6feb47d25/2880inventorybytes/fivepaths expected, reconcileoutline/radical before unchangedconverter; allnewHanfontaudit/nativefallback ifneeded. Inventory/cmap not readability. All5frozeninputs/2decompressedhashes/exact33families/baseline985kanji4942words985strokes/bothoriginalguards/all8283runtimehashes/unchangedfresh601a0fb709961e28manifest pass; fiveextractiontests/validatorpass. No accepted052reviews/Android/native rerun. Afterqualification/draft two serialblind differentactualmodel-family initials samefrozenteaching/allnewchangedsupport;oneactivereviewer/serialinternaltools/preservecompleteoriginalreports/actualprocess-model-readlimits/evidencereconciliation/originalsessionconfirmations whenjustified. Applicable freshnon-skippedAndroid/native/originalvisual/latestmainnormalmerge/allcombinedchecks/originalbudgets/normalsigning/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 BEFOREdelivery. Preserve049HOSTOOM/approved1GiBHOST-onlyheadroom, notnativeheapincrease. No054/authoragents/concurrentheavywork/secondrunner/signingretry/permissionworkaround; actualdenial/signingwait preserveexactcommand-error/report/yield. Public79/1228,1149remaining;1064kanji5021words84N1labels83namedmembersplusseparate妖; compatibleAndroidf9b59a2+ required;physicalphone/generalrelease/whole-setoutstanding. Overalltaskincomplete.",
+  "limits": "Source preparation only; all33 frozen families/nine raw records/eight existing articles inspected. No Japanese dictionary qualification, finalized support/practice, runtime draft, independent review, font/native/physical-phone acceptance or publication. No current-frequency, legal-mandate, historical-formation or unrestricted reading/substitution claim. Published79/1228,1149remaining; compatible Androidf9b59a2+ required; physical-phone/general-release and whole-set acceptance outstanding."
+}

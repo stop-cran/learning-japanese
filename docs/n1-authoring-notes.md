@@ -37,6 +37,34 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 053: source preparation only
+
+The [membership](n1-sources/batch-053-membership.json) selects **丙**,
+frozen source row 5, against published `e16c95b3`. The
+[source ledger](n1-sources/batch-053-progress.json) records inspection of
+**33 complete frozen JMdict families**: 11 lexical / 195 lines and
+22 comparison / 687 lines, nine raw character records and eight existing
+articles. Full **ヘイ / ひのえ**, five strokes and canonical **一 (1)**
+remain intact. No runtime draft, quiz selection or support edit is made.
+
+The standalone family's rank/class/contract-party sense is restricted to
+**へい**; its separate calendar sense says especially **ひのえ**.
+Candidate support is **丙（へい）** and **丙午（ひのえうま）**, subject
+to exact Japanese dictionary qualification and a minimal-support decision.
+丙午 also has the documented reading へいご; neither a shared spelling
+nor a kana substring establishes unrestricted interchange. The ten stems,
+twelve animal branches and sixty-term cycle must not be conflated.
+
+There are no baseline declared 丙/word pairs or existing 丙 word article.
+The existing 病 card mentions 丙 only in a labelled modern-shape mnemonic;
+that is not lexical support or evidence of historical formation. 三's
+quantity meaning must not be treated as an automatically safe wrong answer
+for a third-rank title. Pinned SVG inspection, font/native acceptance,
+independent reviews and all publication gates remain pending.
+Published coverage stays **79/1,228; 1,149 remaining**. Compatible Android
+`f9b59a2` or later is required; physical-phone/general-release and whole-set
+acceptance remain outstanding.
+
 ## Batch 052: published and verified for bounded owner testing
 
 The [publication record](n1-sources/batch-052-publication.json) closes **弐**
