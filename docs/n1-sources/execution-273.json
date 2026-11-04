@@ -1,0 +1,362 @@
+{
+  "execution": 273,
+  "startingHead": "5dc4f6f0fbedea9ba5230ee34406c5ad5a8acfce",
+  "startedAt": "2026-11-04T14:31:54.583161+01:00",
+  "scope": "SAME051 bounded monme draft, exact support/reading/link/font/geometry/quiz audits, local signed unreviewed freeze only. No052/reviewer/Android/native/push/secondrunner.",
+  "status": "validated-local-draft-not-independently-reviewed",
+  "startingCheckpointTiming": "After clean dedicated-head, current ledger and instructions inspection; before source/content changes. Full request byte-read and JSON parsed; historical portions not all displayed in model context, current final checkpoint displayed.",
+  "schemaVersion": 1,
+  "batch": "051",
+  "sourceQualificationSnapshot": "5dc4f6f0fbedea9ba5230ee34406c5ad5a8acfce",
+  "checks": [
+    {
+      "check": "python-tests",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_*.py"
+      ],
+      "exitCode": 0,
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-273-python-tests.txt",
+      "sha256": "b670e9efc1a6d87b17f82bfdd838d3f8c41586db5ca1135be3f3b53c5a8a0e1c"
+    },
+    {
+      "check": "validate",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "tools\\validate.py"
+      ],
+      "exitCode": 0,
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-273-validate.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+    },
+    {
+      "check": "vocabulary",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "tools\\grammar_vocabulary.py",
+        "check"
+      ],
+      "exitCode": 0,
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-273-vocabulary.txt",
+      "sha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38"
+    },
+    {
+      "check": "manifest",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "tools\\build_manifest.py"
+      ],
+      "exitCode": 0,
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-273-manifest.txt",
+      "sha256": "d5db67f4762033c8c5068f59fb7be702dbc1541cb1a80cac192f22f3d448250e"
+    },
+    {
+      "check": "budget",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-B",
+        "tools\\check_content_budget.py"
+      ],
+      "exitCode": 0,
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-273-budget.txt",
+      "sha256": "3c1a13d828ca23c0c91f3bc0bdc4ecc015c8e745aa750cbd43fc652abb52151a"
+    }
+  ],
+  "sourceAndDraftAudit": {
+    "batch": "051",
+    "baseCommit": "6af98cb717755690a9ca793e5454a96ebd7a8f9f",
+    "draftKanji": 1,
+    "newWords": 1,
+    "changedReusedArticles": 0,
+    "requiredReciprocalPairs": 1,
+    "activatedBaselinePairs": 0,
+    "readingDispositions": 2,
+    "curatedOfferedKeys": 1,
+    "sourceOnlyOfferedKeys": 0,
+    "dictionaryFamilies": 21,
+    "exactBaseRuntimePreservedOutsideRecordedChanges": true,
+    "manifestFresh": true,
+    "contentVersion": "b511d5f2cc6c042b",
+    "limits": "Local unreviewed draft only, not linguistic/native/publication acceptance. Fresh coordinator reads of all21complete frozenfamilies, six exactJapanese sections/fourpreservedrawpages, wholepinnedSVG, complete current久/文/包/グラム and raw匁/勹 character records. Other sevenrawrecords/fiveexistingarticles retain271inspection provenance, not all freshly reread. Historical271/272 receipts unchanged. Source dictionaries support characterめand shortening; no independently verified separateJapanese百匁heading, unrestrictedめparadigm, fixedmoneyconversion, currentlegal scope, frequencyranking or settledformation claim. Cmap/geometry and inheritedoccurrences are mechanical, not supported-native readability or phone acceptance. No reviewer/Android/native/push/publication/052/secondrunner.",
+    "schemaVersion": 1,
+    "execution": 273,
+    "stage": "validated-local-draft-not-independently-reviewed",
+    "frozenInputHashesVerified": 5,
+    "decompressedDictionaryHashesVerified": 2,
+    "freshExactDictionaryExtractions": 2,
+    "dictionaryPackets": [
+      {
+        "path": "batch-051-jmdict.xml",
+        "families": 3,
+        "lines": 63,
+        "sha256": "a72e5503662177ce365be987256a5e7416a53d9e62b27f383cd7a8336bd841b5"
+      },
+      {
+        "path": "batch-051-comparison-jmdict.xml",
+        "families": 18,
+        "lines": 676,
+        "sha256": "c25af05c814cec971ef9324a982c05b86f6d09b4a45a2b9db8cb3224727077f0"
+      }
+    ],
+    "rawCharacterRecords": 9,
+    "originalBaselineMetadataAndStrokesPreserved": {
+      "kanji": 985,
+      "words": 4942,
+      "strokes": 985
+    },
+    "baselineMetadataExceptions": {
+      "words/虎.md": [
+        "酔っ払い"
+      ],
+      "words/猿.md": [
+        "馬鹿"
+      ]
+    },
+    "exactLocalAdditionMembership": [
+      "丑",
+      "乃",
+      "亀",
+      "亥",
+      "凸",
+      "凹",
+      "匁",
+      "卯",
+      "寅",
+      "巳",
+      "幹",
+      "彗",
+      "扱",
+      "杉",
+      "李",
+      "杏",
+      "松",
+      "柚",
+      "柳",
+      "栗",
+      "栞",
+      "桂",
+      "桃",
+      "桐",
+      "桑",
+      "梅",
+      "梓",
+      "梢",
+      "梨",
+      "椋",
+      "椎",
+      "椿",
+      "楓",
+      "楠",
+      "榛",
+      "樹",
+      "橘",
+      "氏",
+      "漱",
+      "熊",
+      "猪",
+      "猿",
+      "獣",
+      "畔",
+      "畝",
+      "矛",
+      "稲",
+      "穂",
+      "笹",
+      "繭",
+      "芋",
+      "苗",
+      "莉",
+      "菊",
+      "虎",
+      "蚊",
+      "蚕",
+      "蛇",
+      "蛍",
+      "蝶",
+      "豚",
+      "辰",
+      "酉",
+      "隼",
+      "雛",
+      "鮎",
+      "鯉",
+      "鯛",
+      "鯨",
+      "鳩",
+      "鳳",
+      "鴻",
+      "鵬",
+      "鶏",
+      "鶴",
+      "鷹",
+      "鹿",
+      "麟"
+    ],
+    "currentKanjiIncludingDrafts": 1063,
+    "currentWordsIncludingDrafts": 5021,
+    "n1LabelledIncludingDrafts": 83,
+    "sourceMembersPresentIncludingDrafts": 82,
+    "authoredTextHan": 6,
+    "authoredTextHanInAllThreeFonts": 5,
+    "newFallbackNativePending": [],
+    "externalNamedEntryReceiptsVerified": 6,
+    "exactWordChoiceLabels": [],
+    "budget": {
+      "files": 8288,
+      "entries": 8303,
+      "retainedBytes": 43928085,
+      "inflatedBytes": 44196423,
+      "localZipBytes": 30051518,
+      "listeningTaskMediaBytes": 5893602
+    },
+    "pythonTests": {
+      "passed": 368,
+      "failures": 0,
+      "errors": 0
+    },
+    "validationLogs": {
+      "python-tests": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-273-python-tests.txt",
+        "sha256": "b670e9efc1a6d87b17f82bfdd838d3f8c41586db5ca1135be3f3b53c5a8a0e1c",
+        "exitCode": 0
+      },
+      "validate": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-273-validate.txt",
+        "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+        "exitCode": 0
+      },
+      "vocabulary": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-273-vocabulary.txt",
+        "sha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38",
+        "exitCode": 0
+      },
+      "manifest": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-273-manifest.txt",
+        "sha256": "d5db67f4762033c8c5068f59fb7be702dbc1541cb1a80cac192f22f3d448250e",
+        "exitCode": 0
+      },
+      "budget": {
+        "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-273-budget.txt",
+        "sha256": "3c1a13d828ca23c0c91f3bc0bdc4ecc015c8e745aa750cbd43fc652abb52151a",
+        "exitCode": 0
+      }
+    },
+    "publishedAdditions": 77,
+    "remainingAdditions": 1151,
+    "reviewersLaunched": 0,
+    "freshAndroidOrNativeClaimed": false,
+    "allRuntimePayloadHashesVerified": 8281,
+    "declaredCurrentPairs": [
+      [
+        "匁",
+        "words/匁.md"
+      ]
+    ],
+    "nativeFontDisposition": {
+      "authoredHan": 6,
+      "authoredHanInAllThreeBundledFonts": 5,
+      "authoredMissingGlyphs": [
+        "勹"
+      ],
+      "comparisonMissingGlyphs": [
+        "丿",
+        "勹"
+      ],
+      "requiredGate": "Supported-native readability of authored勹 plus匁/久/文/包 comparisons; exact fullarchiveContentSyncONCE/article/reciprocal/reading/drawing/SystemBack/offline and bounded independent visual acceptance before publication. Cmap and inheritedoccurrence are not native/phone evidence. Fonts/guards/heaps unchanged."
+    },
+    "historicalSourceReceiptsPreserved": {
+      "batch-051-preparation-audit.json": "ee3b22ce717dec56e3f6dcc87c4fdb75ea3de85945d87b310c5eea16cedc4133",
+      "batch-051-qualified-source-audit.json": "3b529fb29768743e96d2b85e07737f37961f49f93ac574c2c18a56c6f69edd6d",
+      "batch-051-dictionary-evidence.json": "6a77801449d62fcda6c30fe4de2f7a0ae409cecb9909fee49c7521b2e7993f11",
+      "batch-051-input-metadata.json": "5fbb46d8861a1a1d015900081793935de7697717a1e180cb0c2fdeaf01480097",
+      "batch-051-membership.json": "28be2c4c3fef4771954d37607a550dcb0d00806ca31bbff8f510a948eae56966",
+      "batch-051-jmdict.xml": "a72e5503662177ce365be987256a5e7416a53d9e62b27f383cd7a8336bd841b5",
+      "batch-051-comparison-jmdict.xml": "c25af05c814cec971ef9324a982c05b86f6d09b4a45a2b9db8cb3224727077f0",
+      "batch-051-lexical-selection.json": "b1517862cc217e81c71b4d6ec9dea60ade9d4e9fada610182033055951817ed6",
+      "batch-051-comparison-selection.json": "3f499b2d1b49817c83c4b8aeee3664482a9090990229457f630d900fbacb77b2"
+    },
+    "qualifiedSourceSectionsReverified": {
+      "sections": 6,
+      "distinctRawPages": 4,
+      "geometryPaths": 4,
+      "implementationSha256": "31b85a857eb146cb1091f31f87b0a4830e5c1cca66909ffafddbf8a234f32780",
+      "boundary": "Unchanged272audit prefix rechecks exact range/marker/hash/geometry/candidate. Saved exactsections and wholeSVG freshly coordinator-read; no fresh retrieval/independent review."
+    },
+    "runtimePayloadAdditions": [
+      "kanji/匁.md",
+      "words/匁.md",
+      "strokes/匁.json"
+    ],
+    "runtimePayloadChanges": [],
+    "combinedMain": {
+      "mergedCommit": "6af98cb717755690a9ca793e5454a96ebd7a8f9f",
+      "boundary": "Fresh fetch/normalmerge already up to date; no baseline redefinition. ENschema1/en/ja retained."
+    },
+    "auditImplementation": {
+      "adapter": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\audit-batch-051-draft.py",
+      "sha256": "9963c6f2ab77670314e4ad357d643123b8743a6026f376bc7a0e6f7bd6ca295f",
+      "reusedCompleteAudit": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\audit-batch-040-draft.py",
+      "reusedAuditSha256": "c2e3b797524189b272a5f9a59cc72f88bd4242fe2fae8e9db4909ba80df18313",
+      "scope": "Explicit051 identities/counts; all frozeninputs/re-extraction/baseline/membership/readings/links/geometry/wholeauthoredfont/log checks plus everyruntimehash/currentdeclaredpair. GitCRLF normalized consistently with manifest text contract; no repositorytool change."
+    }
+  },
+  "integration": "Fresh normal fetch/merge already up to date at accepted050 terminal; no baseline redefinition.",
+  "operationalCorrections": [
+    {
+      "scope": "Coordinator-only audit adapter",
+      "failure": "Initial exact raw-character assertion failed because adapter expected円, but frozen packet contains升.",
+      "remedy": "Corrected adapter to exact frozen nine-character set including升; no packet/tool/runtime change, weakened assertion or source re-extraction under another hash.",
+      "result": "Second actual audit passed complete exact extraction/metadata and all remaining invariants."
+    }
+  ],
+  "acquisitionBoundary": "After clean dedicated-head, current ledger and instructions inspection; before source/content changes. Full request byte-read and JSON parsed; historical portions not all displayed in model context, current final checkpoint displayed.",
+  "auditHelpers": {
+    "prepare-batch-051-draft.py": {
+      "path": "control/prepare-batch-051-draft.py",
+      "sha256": "788695b8b9e3c07bda9537991c2174a30aaeb8d4f72b35a42bd876c5e2a611f5"
+    },
+    "audit-batch-051-draft.py": {
+      "path": "control/audit-batch-051-draft.py",
+      "sha256": "9963c6f2ab77670314e4ad357d643123b8743a6026f376bc7a0e6f7bd6ca295f"
+    },
+    "execution-273-finish.py": {
+      "path": "control/execution-273-finish.py",
+      "sha256": "8d76f55b57cc014740241181de225ebef8ca61e1d1563775046317c00b31659d"
+    },
+    "audit-batch-040-draft.py": {
+      "path": "control/audit-batch-040-draft.py",
+      "sha256": "c2e3b797524189b272a5f9a59cc72f88bd4242fe2fae8e9db4909ba80df18313"
+    },
+    "execution-272-audit.py": {
+      "path": "control/execution-272-audit.py",
+      "sha256": "31b85a857eb146cb1091f31f87b0a4830e5c1cca66909ffafddbf8a234f32780"
+    },
+    "validate-batch-050-draft.py": {
+      "path": "control/validate-batch-050-draft.py",
+      "sha256": "8f863d4e14aaafccdd7c6a99b330487b0b887958925aa593813ae53ffe5c1b60"
+    }
+  },
+  "nextAction": "Resume SAME051 from signed local unreviewed monme draft. Two SERIAL blind read-only different-actual-model-family initial reviews on the SAME frozen snapshot, covering correctness/scopedcoverage/comprehensibility of BOTH complete new articles and their exact source evidence. No reused teaching delta. Preserve full emptyon/orderedもんめ,め; soleもんめpractice and necessary standalone mass article, qualified archaic百匁ひゃくめ/ひゃくもんめ recognition with disclosed Japanese whole-heading limit, canonical勹20 and modernshape-only mnemonic. Inspect title/threeactual wrong久文包/wholewordguards and one reciprocal pair. Reconcile precise evidence and confirm justified changes with original sessions. Then fresh non-skipped Android3+1, applicable supported-native fullarchiveContentSyncONCE/glyph/visual/article/reading/drawing/Back/offline acceptance and latestmain/allcombined/signing/ownerpush/terminalgreenCI/everyimmutablepublicZIPruntimehash/originalbudget gates. No unreviewed push,052,secondrunner. Published77/1228;1151remain. CompatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding. Actual permission denial/signingwait: preserve/report/yield, no retry/workaround.",
+  "limits": "Local unreviewed draft only, not linguistic/native/publication acceptance. Fresh coordinator reads of all21complete frozenfamilies, six exactJapanese sections/fourpreservedrawpages, wholepinnedSVG, complete current久/文/包/グラム and raw匁/勹 character records. Other sevenrawrecords/fiveexistingarticles retain271inspection provenance, not all freshly reread. Historical271/272 receipts unchanged. Source dictionaries support characterめand shortening; no independently verified separateJapanese百匁heading, unrestrictedめparadigm, fixedmoneyconversion, currentlegal scope, frequencyranking or settledformation claim. Cmap/geometry and inheritedoccurrences are mechanical, not supported-native readability or phone acceptance. No reviewer/Android/native/push/publication/052/secondrunner.",
+  "publication": "Local validated unreviewed teaching only. Normal signature/SHA and owner issue readback externally recorded after commit. No push/reviewer/Android/native/052/secondrunner."
+}
