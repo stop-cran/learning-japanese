@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 061: textual review closed; native fixture compiled
+## Batch 061: native assertions passed; independent visual checks pending
 
 The [frozen membership](n1-sources/batch-061-membership.json) selects **俳**
 (source row 54) for one evidence-bounded packet. The
@@ -102,10 +102,27 @@ checks, offline routes and System Back. All **three reciprocal pairs**
 Its **58 static article selectors / 31 article capture steps**, 44 single-glyph
 probes including actual **人/亻**, eight whole-word probes for **俳句/俳優**
 and four production font rows are preparation, not native readability evidence.
-Native execution is the next separate checkpoint, requiring fresh device/port
-ownership checks, terminal results for both cases and direct PNG inspection.
-Native, original-session serial visual, combined-main and publication gates
-remain; this is not delivered teaching or phone acceptance.
+The [execution376 record](n1-sources/execution-376.json) preserves both native
+cases with individual terminal status **0**, no skips, in **108.92 seconds**.
+The exact full archive imports once through production ContentSync with the
+counts/version above, zero problems and reading-parser epoch 1. Full/Lite
+ハイ / no kun, curated ハイ / no kun, persistent Good reading grade,
+meaning, all three reciprocal pairs in six directions, System Back/offline,
+ten-stroke reference trace/ungraded practice and recall-miss grade persistence pass.
+The [artifact index](n1-reviews/batch-061-native/execution-376-artifact-index.json)
+pins **40 source PNGs** and complete raw logs/route/raster receipts.
+Twelve direct coordinator image inspections show readable/distinct glyphs
+in four production font rows, including actual **人/亻**, and readable sampled
+article, selection, reading and drawing screens. The actual **亻** fallback
+is readable on API35; its face is not identified. Sideways-scroll tables clip
+offscreen columns and are not complete-table visual reads. Reference-touch
+trace and recall miss are not MLKit recognition or correct human recall.
+Fresh 5580/5581 ownership checks passed; owned parent **1528** / QEMU **11340**
+stopped with `adb emu kill` exit 0. A separate inventory confirms both absent,
+both dedicated worktrees clean and unrelated emulator-5556 still present.
+Production code/fonts/guest-app heaps/archive guards are unchanged.
+Original-session serial independent visual, combined-main and publication
+gates remain; this is not delivered teaching or physical-phone acceptance.
 Published coverage stays **87/1,228 additions; 1,141 remain**; the 89
 necessary supporting-word additions are unchanged. Accepted batch060 evidence
 and its historical limits remain intact, without redundant checks.
