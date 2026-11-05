@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 068: local unreviewed draft
+## Batch 068: textual review closed; runtime acceptance pending
 
 The bounded draft adds **儀**, its exact pinned fifteen-stroke geometry and
 eight narrow reused navigation changes. Existing **儀式（ぎしき）**,
@@ -64,9 +64,24 @@ The reused-passage helper now normalizes CRLF like manifest text hashing;
 regressions retain exact-edit and metadata protection. No teaching or
 baseline metadata is changed to work around that mismatch.
 
-This checkpoint is **local and unreviewed**, not published or review-closed.
-Two serial blind different-family content reviews and all later acceptance
-gates remain pending. The last accepted publication remains `72f99d82`:
+Two blind initial reviews of signed `5bfb668d`, using actual
+**Claude Opus 5.5** and **GPT-6.1 Sol**, covered the complete new card,
+all eight changed reused passages in context, 146 complete lexical families
+and ten raw character records. Both identified one minor omission: formal
+suffix 儀 needed its typical self/own-side scope and humble nuance.
+The [reconciliation](n1-reviews/batch-068-reconciliation.json) records the
+source-backed correction at signed `80f5f424`, including
+私儀（わたくしぎ）, “as for me,” and both original-session confirmations.
+All initial assigned ranges were returned with serial internal tools.
+Claude's first confirmation read its report and diff concurrently; that
+historical violation is preserved alongside a bounded, single-read repair,
+not relabelled as compliant. Exact returned bytes do not prove comprehension.
+
+This checkpoint is **textually review-closed only**, not runtime-accepted
+or published. Fresh non-skipped Android, native/font/visual, combined-main,
+CI and exact immutable public ZIP gates remain pending. The new 私 in the
+qualified example is present in all three pinned bundled font cmaps;
+that is not native-rendering evidence. The last accepted publication remains `72f99d82`:
 **94/1,228 additions published; 1,134 remain**. The 95 published necessary
 support additions are not an N1 vocabulary deck. Compatible Android
 `f9b59a2+` is required; native, physical-phone, general-release and whole-set
