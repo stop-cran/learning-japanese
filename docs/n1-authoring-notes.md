@@ -37,7 +37,16 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 058: textual review closed; fresh Android/native gates pending
+## Batch 058: textual review closed; fresh Android execution blocked
+
+The [execution 344 record](n1-sources/execution-344.json) preserves the
+single required fresh Android command's **permission denial before execution**:
+interactive approval was unavailable. No fresh start/log/exit artifacts or
+test results were produced, and existing batch057 XML is not batch058
+acceptance. No retry, alternate invocation or permission change was attempted.
+An approval-capable parent must resolve that exact denied command before
+resuming SAME058. Native, visual and publication gates remain pending;
+textual closure and the historical process qualifications below are unchanged.
 
 The [textual reconciliation](n1-reviews/batch-058-reconciliation.json)
 preserves bounded dependent confirmations in **both original reviewer sessions**
