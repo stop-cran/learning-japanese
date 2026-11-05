@@ -37,7 +37,28 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 058: bounded original-session native visuals reconciled
+## Batch 058: combined-tree acceptance
+
+The [execution 349 audit](n1-sources/batch-058-acceptance-audit.json) records a
+fresh fetch and normal merge of current main `c064f0c7` (already ancestral;
+no conflicts or teaching/runtime delta). All **368 Python tests**, validation,
+vocabulary consistency, manifest freshness and original archive budgets pass.
+The mechanical audit re-extracted all 68 frozen families and checked baseline
+985 kanji / 4,942 words / 985 strokes, all **8,303 runtime hashes**, exact
+85 local additions, both reading dispositions, three reciprocal pairs in six
+directions, pinned five-stroke geometry and actual authored-Han font cmaps.
+Dictionary re-extraction is not a new linguistic review.
+
+Original two-family reports and dependent confirmations, fresh execution345
+Android **3+1** results, both execution347 terminal native cases and all
+**55 indexed native artifacts** were reverified without rerunning accepted
+work. Initial Claude process noncompliance remains explicit; bounded remediation
+does not retroactively satisfy that initial contract. The visual, drawing,
+phone and whole-set limitations below remain unchanged. This local acceptance
+still requires normal signing, owner fast-forward publication, green exact-SHA
+CI and every immutable public ZIP runtime hash before delivery or batch059.
+
+### Bounded original-session native visuals reconciled
 
 The [execution 348 checkpoint](n1-sources/execution-348.json) and
 [bounded native acceptance](n1-reviews/batch-058-native-acceptance.json) preserve
