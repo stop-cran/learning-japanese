@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "execution": 367,
+  "batch": "060",
+  "status": "native-assertions-passed-pending-independent-visual",
+  "recordedAt": "2026-11-05T03:36:02.187172+00:00",
+  "startingHead": "3baaf2863e54a7f403723e2958330bc1d4f9674d",
+  "scope": "SAME060 compiled native fixture execution, direct evidence inspection and durable signed local checkpoint only. No reviewer, runtime publication,061 or second runner.",
+  "reviewedTeachingSnapshot": "ea1dac1a6fd2c452db9cf602442e1f287ff95c67",
+  "nativeExecution": {
+    "execution": 367,
+    "batch": "060",
+    "attempt": 1,
+    "startedAt": "2026-11-05T04:30:58.4128429+01:00",
+    "serial": "emulator-5580",
+    "contentSnapshot": "99d8ace026aaf5cf76b4adada34b14e969d10d4e",
+    "androidSnapshot": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+    "appApk": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\build\\outputs\\apk\\debug\\app-debug.apk",
+    "appApkSha256": "0224e8e3f8c744a554da173ec20f133d5d00cb6b6226b001da5ea030856bd407",
+    "testApk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-060-native-test.apk",
+    "testApkSha256": "f73f2d3e8024e1b59fe661b21ff7dc63c9db7ff4293349a68562c8f1edd10409",
+    "fixtureSha256": "b6d57ac41001c9dd6962c66a2cca68e15bdccef6438301d19c76d148c48d9444",
+    "archiveSha256": "4211cc7830550b467ec39b7b9ffa31b3729cdcc66a6ca3c9d46e54faf73128f6",
+    "nativeExecuted": true,
+    "passed": true,
+    "failure": null,
+    "prelaunch": {
+      "verifiedAt": "2026-11-05T04:30:59.4253113+01:00",
+      "connections": [],
+      "devices": "List of devices attached\r\nemulator-5556          device product:sdk_gphone64_x86_64 model:sdk_gphone64_x86_64 device:emu64xa transport_id:15\r\n\r\n"
+    },
+    "parentEmulatorPid": 11792,
+    "emulatorArguments": [
+      "-avd",
+      "N3_Acceptance_20261029",
+      "-port",
+      "5580",
+      "-read-only",
+      "-no-snapshot",
+      "-no-window",
+      "-no-audio",
+      "-gpu",
+      "host",
+      "-feature",
+      "-Vulkan",
+      "-memory",
+      "2048",
+      "-cores",
+      "2"
+    ],
+    "qemuPid": 25572,
+    "listeners": [
+      {
+        "LocalPort": 5581,
+        "OwningProcess": 25572
+      },
+      {
+        "LocalPort": 5580,
+        "OwningProcess": 25572
+      },
+      {
+        "LocalPort": 5581,
+        "OwningProcess": 25572
+      },
+      {
+        "LocalPort": 5580,
+        "OwningProcess": 25572
+      }
+    ],
+    "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+    "heapGrowth": "192m",
+    "heapSize": "576m",
+    "meminfo": "MemTotal:        2532900 kB",
+    "network": "Active default network: none",
+    "adbExitCode": 0,
+    "terminalSuccessCases": 2,
+    "artifacts": [
+      "n1-060-article-route.json",
+      "n1-060-article-tree.txt",
+      "n1-060-curated-On-feedback.png",
+      "n1-060-curated-On-question.png",
+      "n1-060-drawing-feedback.png",
+      "n1-060-drawing-recall-feedback.png",
+      "n1-060-drawing-trace.png",
+      "n1-060-font-pairs.png",
+      "n1-060-font-raster.json",
+      "n1-060-kanji-curation.png",
+      "n1-060-kanji-lodging-boundary.png",
+      "n1-060-kanji-lower-lookalikes.png",
+      "n1-060-kanji-meaning.png",
+      "n1-060-kanji-mnemonic.png",
+      "n1-060-kanji-on-reading.png",
+      "n1-060-kanji-person-lookalike.png",
+      "n1-060-kanji-radical.png",
+      "n1-060-kanji-recognition-on.png",
+      "n1-060-kanji-suffix-boundary.png",
+      "n1-060-materials-forwardlink-word.png",
+      "n1-060-materials-forwardlink.png",
+      "n1-060-meaning-feedback.png",
+      "n1-060-meaning-question.png",
+      "n1-060-selection.png",
+      "n1-060-system-back-materials.png",
+      "n1-060-system-back-word-materials.png",
+      "n1-060-system-back-word-pavilion.png",
+      "n1-060-word-antonym-boundary.png",
+      "n1-060-word-backlink-pavilion.png",
+      "n1-060-word-broader-restaurant.png",
+      "n1-060-word-components-readings.png",
+      "n1-060-word-eatery-overlap.png",
+      "n1-060-word-facilities-boundary.png",
+      "n1-060-word-food-example.png",
+      "n1-060-word-homophone.png",
+      "n1-060-word-inn-boundary.png",
+      "n1-060-word-meal-example.png",
+      "n1-060-word-meaning-qualification.png",
+      "n1-060-word-place-particle.png"
+    ],
+    "stopAdbExitCode": 0,
+    "ownedHelperStopped": true,
+    "ownedQemuStopped": true,
+    "completedAt": "2026-11-05T04:34:52.3523855+01:00"
+  },
+  "terminalCases": [
+    {
+      "class": "N1Batch060ArticleTest",
+      "test": "fullSingleImportOfflinePavilionTwoReciprocalPairsOnOnlyDrawingAndSystemBack",
+      "status": 0
+    },
+    {
+      "class": "N1Batch060GlyphTest",
+      "test": "pavilionLookalikesAndThreeFallbackComponentsAcrossFourProductionFamilies",
+      "status": 0
+    }
+  ],
+  "durationSeconds": 88.09,
+  "failedCases": 0,
+  "skippedCases": 0,
+  "nativeRawLog": "docs\\n1-reviews\\batch-060-native\\attempt-1\\instrumentation.txt",
+  "rawLogSha256": "b39bd3310155f5a6a73d06cc4cdc92a203ded6480641d7ca7550e6b6a43662dc",
+  "productionImportEvidence": {
+    "contentSnapshot": "99d8ace026aaf5cf76b4adada34b14e969d10d4e",
+    "contentVersion": "dbf047f0c2e6cd56",
+    "archiveRequests": 1,
+    "importedKanji": 1072,
+    "importedWords": 5031,
+    "problems": 0,
+    "n1Cards": 92,
+    "acceptedReadingParserEpoch": 1,
+    "fullOnyomi": [
+      "テイ",
+      "チン"
+    ],
+    "fullKunyomi": [],
+    "quizOnKeys": [
+      "てい"
+    ],
+    "quizKunKeys": [],
+    "transport": "Exact full git envelope through production ContentSync ONCE; synthetic source/HEAD",
+    "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+    "sdk": 35,
+    "fixture": "Other N1 meanings/readings postponed; 亭 meaning and sole curated on key due; explicit no-kun. Two historical good 亭 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.",
+    "phoneEvidence": false,
+    "passed": true,
+    "reciprocalLinkAndSystemBack": true,
+    "meaningQuestionAndFeedback": true,
+    "soleCuratedOnQuestionAndPersistedGradeNoKun": true,
+    "touchInjectedReferenceStrokes": 9,
+    "drawingTraceThenRecall": true,
+    "drawingGradeRecordedOnNext": true,
+    "offline": true
+  },
+  "reciprocalPairs": [
+    [
+      "亭",
+      "料亭"
+    ],
+    [
+      "料",
+      "料亭"
+    ]
+  ],
+  "directedReciprocalTransitions": 4,
+  "glyphEvidence": {
+    "individualPaintProbes": 52,
+    "wholeWordRasterProbes": 4,
+    "productionComposeRows": 4,
+    "directCoordinatorImageRequests": [
+      "n1-060-font-pairs.png",
+      "n1-060-kanji-mnemonic.png",
+      "n1-060-word-components-readings.png",
+      "n1-060-materials-forwardlink.png",
+      "n1-060-curated-On-feedback.png",
+      "n1-060-drawing-feedback.png",
+      "n1-060-selection.png",
+      "n1-060-curated-On-question.png",
+      "n1-060-word-meaning-qualification.png",
+      "n1-060-word-backlink-pavilion.png",
+      "n1-060-kanji-lower-lookalikes.png"
+    ],
+    "observation": "Four production font rows show distinct readable亭停京享高 and readable actual亠亻冖丁小子口料/料亭, no blank/replacement boxes. Actual亠/亻/冖 fallback components remain readable across rows; their face is not identified. N1 selection shows92cards. Curated question/feedback showsテイ as sole keyed answer, matching persistent-grade and no-kun assertions; feedback retains full lookupテイ/チン. Word meaning, both original example sentences, food/place attachment, both linked components, restaurant/eatery/inn boundaries and kanji mnemonic/lookalike prose display readably. Paragraph kana wraps within available width without text loss. Reused料 forwardlink and亭 backlink are visible. Reading tables explicitly instruct sideways scrolling and have horizontally clipped offscreen cells; these screenshots do not prove a complete table was visible at once. Drawing shows nine numbered reference strokes/matching touch trace/practice-only/handwriting-model-unavailable qualification.",
+    "limits": "Eleven direct coordinator image inspections only; remaining PNGs not coordinator-inspected. Actual fallback face not identified. Not independent visual approval or physical-phone evidence; native raster hashes alone do not prove readability. No claim that all table columns are simultaneously visible."
+  },
+  "artifactIndex": "docs\\n1-reviews\\batch-060-native\\execution-367-artifact-index.json",
+  "artifactIndexSha256": "cd61b8a515af2c425af5670f07f1b26e3aa1e045c565e82db90cfc488df9139f",
+  "sourcePngCount": 36,
+  "postrunVerification": {
+    "execution": 367,
+    "verifiedAt": "2026-11-05T04:35:00.9498221+01:00",
+    "ownedProcessesRemaining": 0,
+    "devices": "List of devices attached\r\nemulator-5556          device product:sdk_gphone64_x86_64 model:sdk_gphone64_x86_64 device:emu64xa transport_id:15\r\n\r\n",
+    "contentStatus": [],
+    "androidStatus": [],
+    "contentHead": "3baaf2863e54a7f403723e2958330bc1d4f9674d",
+    "androidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c"
+  },
+  "accepted365AndroidRetainedWithoutRerun": true,
+  "original366ArtifactsAndOriginalReportHashesReverified": true,
+  "runtimeEditsMade": false,
+  "harnessEditsAfterExecution": false,
+  "nativeExecuted": true,
+  "nativeAssertionsPassed": true,
+  "nativeAcceptance": false,
+  "independentVisualAcceptance": false,
+  "reviewersLaunched": 0,
+  "publicationAttempted": false,
+  "publishedAdditions": 86,
+  "remainingAdditions": 1142,
+  "nextAction": "SAME060 signed native-assertions checkpoint367. BOTH named native cases PASSED terminal0/no skips/88.09s on owned read-onlyAPI35 emulator-5580 parent11792/QEMU25572, stopped emukill0; separate postrun verified bothPIDs absent/dedicatedworktrees clean/unrelatedemulator5556 still present. Read docs/n1-sources/execution-367.json and batch-060-native/execution-367-artifact-index.json/attempt-1. ProductionContentSyncONCE exact full99d8ace0 envelope1072kanji5031words92N1/dbf047f0c2e6cd56/problems0/epoch1; Lite+Full full orderedテイチン/emptykun, curatedテイ/[], normalizedてい/no-kun. BOTHpairs亭-料亭/料-料亭 inFOURdirections/SystemBack/offline/meaning/solecuratedOnGoodpersistentgrade/no-kunlog/ninetouch-reference-strokes/ungradedtrace/recallmiss/persistedDrawAgain ALLpassed. 52singlePaint+4wholewordprobes/fourproductionfontrows passed; 36sourcePNGs archived/11coordinatorDirectImageReads. Actual亭停京享高 distinct, 亠亻冖丁小子口料/料亭 readable in fourfontrows/no blankboxes onAPI35; actual亠亻冖 fallback readable, face notidentified. Paragraph kana wraps without lost text; readingtables explicitly horizontally scrollable and clipped offscreen cells not fulltable visualreads. Drawing handwritingmodel unavailable: reference-touch shape trace/recallmiss, NOTMLKit or correcthumanrecall. OtherPNGs notcoordinator-inspected; independentvisualacceptance pending. NEXTboundedgate: reuse ORIGINAL Claude34dbb43d-2a7f-4fa9-9e45-00c50c1281a1 and GPT8130aa10-a2af-44b9-80ca-28fb1662eb6c sessions SERIALly for bounded dependent visuals of same unchangedea1dac1a teaching/exact nativeevidence; actual modelcatalog/help identity/read-onlyview configuration/onecallperresponse/tooloverlap audit/terminalexit+archive BEFOREsecondlaunch. No new blindinitials or accepted365Android3+1/native367 rerun absent new concern. Preserve original reports/363textualclosure/originalClaude060-P1/P2 process noncompliance; supervised dependent lexical remediation is NOTretroactive strictinitialacceptance. Then latestmain normalnonrewriting integration/allcombined source-baseline-reading-link-font-stroke/Python/vocab/validator/freshmanifest/original18000entries42MiBcompressed80MiBinflated56MiBretainedbudgets/normal signing/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 BEFOREdelivery or061. Original364permissiondenial and049HOST512MiBOOM remainhistorical; qualifiedhost-only1GiBinit unchanged. Actualpermissiondenial/signingwait: preserveexactcommand/error, report/yield; no retry/workaround. No059rerun/061/secondrunner/concurrentheavywork/supervisorchanges. PreserveFULLlivehistory. Published86/1228,1142remain; compatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding. Overallproject incomplete.",
+  "limits": "Native assertions passed with separate cleanup inventory; independent visual/batch acceptance and phone acceptance pending. Unique disposable source/syntheticHEAD/full production archive import; due-state fixture/reference-touch trace/recallmiss not learning efficacy/human recall/MLKit evidence. No teaching or runtime changes/reviewer/publication/061. Original Claude060-P1/P2 process noncompliance and bounded confirmation limits remain; strict historical process acceptance not claimed. Original364 permission denial and049 host-only heap qualification preserved. Overall project incomplete."
+}

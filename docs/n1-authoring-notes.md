@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 060: native fixture compiled; execution pending
+## Batch 060: native assertions passed; independent visuals pending
 
 The [frozen membership](n1-sources/batch-060-membership.json) selects **亭**
 (source row 21) for one evidence-bounded packet. Its
@@ -100,14 +100,36 @@ Prepared coverage uses production ContentSync **once**, full ordered
 **料/料亭** reciprocal pairs, System Back, offline routes, meaning,
 persisted on-reading feedback and nine-stroke drawing. **45 static selectors /
 27 article capture steps**, **52** single-glyph probes (including actual
-**亠・亻・冖**) and **4** whole-word raster probes are prepared, not executed.
+**亠・亻・冖**) and **4** whole-word raster probes were prepared.
 Static inspection corrected an exact-heading punctuation mismatch and a
 duplicate look-alike in the generated draft before compilation; the final
 fixture asserts thirteen distinct intended glyphs.
 
-Native execution/readability, independent visual checks, combined-main
-acceptance and publication remain pending; this is a signed local evidence
-checkpoint, not delivered content. Published coverage remains
+The [execution367 record](n1-sources/execution-367.json) preserves both native
+cases' individual **terminal status 0**, no skips, in **88.09 seconds**.
+Production ContentSync imported the exact full archive once, with the expected
+counts, contentVersion, zero problems and accepted reading-parser epoch 1.
+Meaning, sole curated テイ question and persisted Good grade, no kun log,
+both reciprocal pairs in four directions, System Back/offline routes and
+nine-stroke touch-reference trace/ungraded practice/recall-miss grade
+persistence passed.
+
+The [native artifact index](n1-reviews/batch-060-native/execution-367-artifact-index.json)
+pins **36 direct PNGs**, raw logs and route/raster receipts. Eleven coordinator
+image inspections show distinct readable 亭・停・京・享・高, actual
+亠・亻・冖 fallback components and 料亭 across four production font rows,
+plus readable sampled article, selection, reading and drawing screens.
+Remaining PNGs await the original reviewers' bounded dependent visual checks.
+Fallback faces were not identified; sideways-scroll reading tables do not
+show every column at once. This is not phone, MLKit or human-recall evidence.
+Fresh 5580/5581 ownership checks preceded the owned read-only API35 helper
+(parent **11792**, QEMU **25572**); `adb emu kill` returned 0 and a separate
+postrun inventory confirmed both processes absent, both dedicated worktrees
+clean and unrelated emulator-5556 still present.
+
+Independent visual checks, combined-main acceptance and publication remain
+pending; this is a local evidence checkpoint, not delivered content.
+Published coverage remains
 **86/1,228 additions; 1,142 remain**.
 Compatible Android `f9b59a2+`, outstanding physical-phone/general-release
 acceptance and all batch059 historical limits remain unchanged.
