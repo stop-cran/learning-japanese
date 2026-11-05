@@ -37,7 +37,37 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 073: local unreviewed runtime draft
+## Batch 073: textual review closed; not published
+
+The [textual reconciliation](n1-reviews/batch-073-reconciliation.json) preserves
+independent blind initial reviews by **Claude Opus 5.5** and **GPT-6.1 Sol**
+on signed teaching snapshot `c8c2a0ba7dfc794feac5362fcfefa41e8d33ee5a`.
+Both reviewed complete **克**, the exact **克服** component link and the new
+**服** sentence for correctness, scoped coverage and phone-text comprehensibility.
+Both returned all **19 assigned local ranges**, including all **25 distinct
+complete JMdict families** and **eight raw character records**. Actual reviewer
+processes and internal tools were serial; Claude exited and its complete
+report/execution/coverage archive was saved before GPT launched.
+
+No teaching correction was required. Claude's optional shape/克明 additions
+are nonblocking. Its historical enemy-submission observation does not contradict
+the unchanged modern qualification that 克服 is **not a general word** for
+territorial conquest; neither the teaching nor this review asserts historical
+nonexistence. Original reports, public-page truncations and the assignment's
+line-23 versus actual line-24 link location are preserved explicitly.
+
+Fresh checks passed **372 Python tests without skips**, validation, vocabulary
+consistency, manifest freshness, all **8,346 runtime hashes**, source membership,
+baseline metadata/strokes, both mapped reciprocal pairs and original budgets.
+The [execution record](n1-sources/execution-482.json) retains exact receipts.
+This is **one textually review-closed row, zero accepted/published batch-073
+rows**, not native-app or physical-phone evidence. Fresh Android, isolated
+**儿** fallback, drawing, N1 routes and visual confirmation remain next gates.
+Published coverage remains **99/1,228 additions; 1,129 remain**. No push or
+batch 074 was attempted; compatible Android `f9b59a2+` and outstanding
+physical-phone/general-release/whole-set acceptance remain unchanged.
+
+### Historical unreviewed draft checkpoint
 
 The [source packet](n1-sources/batch-073-progress.json) bounds the next batch
 to **克**, frozen source row 82. Complete applicable evidence contains
