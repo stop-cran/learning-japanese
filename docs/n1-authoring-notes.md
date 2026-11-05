@@ -37,6 +37,49 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 068: source prepared; not drafted
+
+The [frozen batch](n1-sources/batch-068-membership.json) selects **儀**, exact
+remaining source row 77. Its [source ledger](n1-sources/batch-068-progress.json)
+retains **134 complete applicable JMdict families**, twelve comparison families
+and ten raw character records, all inspected by the coordinator. The
+[public-entry evidence](n1-sources/batch-068-source-evidence.json) separates
+returned definitions from attribution-only sections, uninspected gaiji and
+the failed `お辞儀` lookup. This is not independent content review.
+
+The proposal preserves the sole **ギ** reading and empty kun list, with one
+**ぎ** practice key. Existing **儀式（ぎしき）**, **礼儀（れいぎ）**,
+**行儀（ぎょうぎ）** and **お辞儀（おじぎ）** supply useful support without
+new articles. Preserve their N2/N3 word levels, primary readings, identities
+and exclusions. Ceremony/formal conduct does not explain every compound:
+the source also supports matter/case uses and nonceremonial
+地球儀（ちきゅうぎ）, an Earth globe. Dictionary semantic glosses and irregular
+whole-word readings do not add unsourced character readings.
+
+All four baseline 儀-word pairs would activate. The all-mapped plan enumerates
+**eight reciprocal pairs in sixteen directions**, including the reused
+式・礼・行・辞 cards: four missing 儀 component links, four counterpart
+backlinks, and four new-card links complete the already existing directions.
+No pair is hidden by treating baseline reuse as automatically complete.
+No runtime links have been edited at this checkpoint.
+
+The [preparation audit](n1-sources/batch-068-preparation-audit.json) verifies
+frozen inputs, complete dictionary re-extraction, baseline preservation and
+all **8,329 unchanged runtime hashes**. Fifteen exact pinned SVG paths agree
+with KANJIDIC2; conversion remains pending. The
+[font preparation](n1-sources/batch-068-font-preparation.json) inventories
+81 Han code points across affected existing articles and proposed shapes.
+儀・義・人 occur in all three bundled cmaps; standalone 亻 and four pre-existing
+component forms do not. This is not a glyph failure or native readability
+acceptance; the actual draft and later native checks must verify their scope.
+
+This is a **local source-only checkpoint**, not a draft, review closure or
+publication. The latest accepted 067 publication remains `72f99d82`:
+**94/1,228 additions published; 1,134 remain**. The 95 necessary support
+additions already published are not an N1 vocabulary deck. Compatible
+Android `f9b59a2+` is required; physical-phone, general-release and whole-set
+acceptance remain outstanding.
+
 ## Batch 067: published for bounded owner testing
 
 The [combined acceptance](n1-sources/batch-067-acceptance-audit.json) freshly
