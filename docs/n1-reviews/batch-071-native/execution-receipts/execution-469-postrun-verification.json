@@ -1,0 +1,50 @@
+{
+  "observedAt": "2026-11-05T22:03:33.7166960+01:00",
+  "contentHead": "9c0614c566d8051a85423ff05e477da6c57b293f",
+  "contentStatus": [],
+  "androidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "androidStatus": [],
+  "devices": "List of devices attached\r\nemulator-5556          device product:sdk_gphone64_x86_64 model:sdk_gphone64_x86_64 device:emu64xa transport_id:15\r\n\r\n",
+  "ownedProcessesRemaining": 0,
+  "preexistingEmulators": [
+    {
+      "ProcessId": 10668,
+      "ParentProcessId": 16608,
+      "Name": "emulator.exe",
+      "CommandLine": "\"C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk\\emulator\\emulator.exe\" -avd Pixel_9 -port 5556 -no-snapshot-load -no-snapshot-save"
+    },
+    {
+      "ProcessId": 18200,
+      "ParentProcessId": 10668,
+      "Name": "qemu-system-x86_64.exe",
+      "CommandLine": "C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk\\emulator\\qemu\\windows-x86_64\\qemu-system-x86_64.exe -avd Pixel_9 -port 5556 -no-snapshot-load -no-snapshot-save"
+    }
+  ],
+  "connections": [
+    {
+      "LocalAddress": "127.0.0.1",
+      "RemoteAddress": "127.0.0.1",
+      "LocalPort": 46507,
+      "RemotePort": 5581,
+      "State": 3,
+      "OwningProcess": 9520
+    },
+    {
+      "LocalAddress": "127.0.0.1",
+      "RemoteAddress": "127.0.0.1",
+      "LocalPort": 5580,
+      "RemotePort": 46276,
+      "State": 11,
+      "OwningProcess": 0
+    }
+  ],
+  "connectionOwners": [
+    {
+      "ProcessId": 9520,
+      "ParentProcessId": 9360,
+      "Name": "adb.exe",
+      "CommandLine": "adb -L tcp:5037 fork-server server --reply-fd 700"
+    }
+  ],
+  "earlierConnectionObservation": "After shutdown: shared adb9520 SYN_SENT to5581 and OS PID0 TIME_WAIT local5580; no helper/listener. Neither shared adb nor owner emulator modified."
+}
