@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 066: source prepared; no runtime draft
+## Batch 066: local unreviewed draft; not published
 
 The [frozen batch](n1-sources/batch-066-membership.json) selects **僚**, source
 row 75. Its [source ledger](n1-sources/batch-066-progress.json) records
@@ -47,7 +47,8 @@ coordinator. [Public-entry evidence](n1-sources/batch-066-source-evidence.json)
 distinguishes returned definitions from gaiji-dependent history, attribution-only
 sections and later truncated encyclopedic material.
 
-Preserve full **リョウ** and the empty kun list. Proposed practice reuses
+The local draft preserves full **リョウ** and the empty kun list; explicit
+curation offers one **りょう** key and no kun keys. Practice reuses
 **同僚（どうりょう）**, retaining its sourced **N3** word level and identity;
 no new support article or N1 vocabulary level is necessary. Work association
 does not require personal friendship or an absolute equal-rank rule.
@@ -55,13 +56,21 @@ The official sense, as in 官僚（かんりょう）, also remains visible in t
 source disposition. Dictionary recognition does not establish a frequency
 ranking, and specialized staff/organization families are not a support quota.
 
-The next draft needs the missing 僚 component link in 同僚 and the existing
+The draft adds only the missing 僚 component link in 同僚 and the existing
 同 card's compound backlink: **two mapped pairs in four directions**, including
-the reused kanji. The exact pinned SVG has been downloaded and inspected;
-fourteen source paths agree with KANJIDIC2, but geometry has not been generated.
-Final quiz/fallback, font, independent review and Android/native acceptance
-remain pending. No runtime content changed and nothing from batch 066 is
-published. Coverage remains **92 additions; 1,136 still to deliver**.
+the reused kanji. Existing metadata, N3 word level, readings and teaching remain
+unchanged. Fourteen paths from the exact pinned SVG are converted by the
+unchanged generator; no geometry is hand-edited.
+
+The [draft audit](n1-sources/batch-066-draft-audit.json) records exact frozen
+dictionary re-extraction, full reading/curation coverage, all mapped links,
+quiz labels and legacy fallback dispositions, baseline preservation, manifest
+hashes, archive budget and affected-article Han cmaps. These are author and
+mechanical checks, not independent review or native glyph/drawing acceptance.
+The next checkpoint requires two serial blind model-family initial reviews of
+the same signed draft, followed by evidence-based reconciliation and the
+Android/native/current-main/CI/exact-public-ZIP gates. Nothing from batch 066
+is published. Coverage remains **92 additions; 1,136 still to deliver**.
 
 ## Batch 065: published for bounded owner testing
 
