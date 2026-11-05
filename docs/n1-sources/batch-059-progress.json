@@ -3,15 +3,16 @@
   "batch": "059",
   "baseCommit": "633f60022b4c42d5f3a6fa83f85465c39729cedd",
   "membership": ["享"],
-  "status": "source-prepared-not-drafted",
-  "drafted": [],
+  "status": "local-unreviewed-runtime-draft",
+  "drafted": ["享"],
   "reviewClosed": [],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
     {"selection": "batch-059-lexical-selection.json", "xml": "batch-059-jmdict.xml"},
     {"selection": "batch-059-comparison-selection.json", "xml": "batch-059-comparison-jmdict.xml"},
-    {"selection": "batch-059-supportComparison-selection.json", "xml": "batch-059-support-comparison-jmdict.xml"}
+    {"selection": "batch-059-supportComparison-selection.json", "xml": "batch-059-support-comparison-jmdict.xml"},
+    {"selection": "batch-059-draft-comparison-selection.json", "xml": "batch-059-draft-comparison-jmdict.xml"}
   ],
   "sourceReadingOrder": {
     "onyomi": ["キョウ", "コウ"],
@@ -62,9 +63,9 @@
       "kanji": "享",
       "reading": "キョウ",
       "kind": "on",
-      "proposedSelected": true,
+      "selected": true,
       "sourceOnly": false,
-      "articleCandidate": "words/享受.md",
+      "article": "words/享受.md",
       "entryIds": ["1233280"],
       "reason": "Useful contemporary receiving/enjoyment compound. Full KANJIDIC2, exact Japanese キョウ character heading and きょうじゅ word heading plus independently sourced 受 ジュ support the allocation, not only a kana substring. A future selection needs its own reading row and linked authored support."
     },
@@ -72,7 +73,7 @@
       "kanji": "享",
       "reading": "コウ",
       "kind": "on",
-      "proposedSelected": false,
+      "selected": false,
       "sourceOnly": true,
       "entryIds": [],
       "reason": "Preserve the exact second full on-reading. 字通 independently recognizes コウ, but no suitable modern linked example was established in the twenty-six inspected frozen lexical families. Qualified source-only lookup disposition, not a claim that the reading is invalid or absent from every dictionary/word."
@@ -81,7 +82,7 @@
       "kanji": "享",
       "reading": "う.ける",
       "kind": "kun",
-      "proposedSelected": false,
+      "selected": false,
       "sourceOnly": false,
       "recognitionOnly": true,
       "entryIds": ["1329590", "1855490", "1888070"],
@@ -154,8 +155,98 @@
     "wordNeighborsRead": ["受ける", "受け取る", "もらう", "楽しむ", "楽しみ", "味わう", "遊ぶ", "恩恵", "利益", "教授"],
     "disposition": "No final title or exclusions chosen or installed. Final draft must inspect the exact receiving/enjoyment label in both directions, including ordinary secondary senses. Semantic comparisons do not automatically require changing existing articles."
   },
-  "geometry": "Pinned 04eab.svg inventory identifies blob 278b64c4cd60d4470f8594f35f3f6489e49049c0, 3511 bytes. This checkpoint does not download/convert it or certify stroke/font/native behavior. Eight source strokes and canonical 亠 radical8 are preserved.",
+  "draftInspection": {
+    "execution": 351,
+    "sourceCheckpoint": "8f8d2e25e3c33c9b09f642500752459b5fd934ca",
+    "freshCompleteFamilies": 54,
+    "packetRanges": {
+      "batch-059-jmdict.xml": [[1, 210], [211, 400], [401, 530]],
+      "batch-059-comparison-jmdict.xml": [[1, 220], [221, 437]],
+      "batch-059-support-comparison-jmdict.xml": [[1, 165], [166, 314]],
+      "batch-059-draft-comparison-jmdict.xml": [[1, 206]],
+      "batch-059-kanjidic2.xml": [[1, 205], [206, 411]]
+    },
+    "freshCompleteExistingArticles": [
+      "kanji/受.md", "kanji/承.md", "kanji/楽.md", "kanji/利.md", "kanji/頂.md",
+      "kanji/京.md", "kanji/厚.md", "kanji/高.md", "kanji/丘.md",
+      "words/恩恵.md", "words/利益.md", "words/楽しむ.md", "words/楽しみ.md",
+      "words/味わう.md", "words/遊ぶ.md", "words/受ける.md", "words/受け取る.md",
+      "words/受け取り.md", "words/もらう.md", "words/いただく.md", "words/頂戴.md",
+      "words/得る.md", "words/教授.md", "words/受付.md", "words/領収.md", "words/涼む.md"
+    ],
+    "japaneseEvidence": "Exact Japanese headings inspected in execution350 and preserved in batch-059-source-evidence.json; inherited supplied evidence, not fresh351 upstream retrieval.",
+    "confusableInventory": "CW013/CW014 receiving/viewpoint cues and CW029 pleasure cues inspected alongside exact receiving/enjoyment title search and actual articles. No direct inventory entry for 享受; no automatic transitive clique.",
+    "limits": "Coordinator inspection, not independent review. Full54 packets/five raw character records returned without truncation. Confusable inventory initial broad read truncated; only relevant exact search rows and format rules relied on. Unrelated claims in unchanged existing articles not freshly verified."
+  },
+  "supportMappings": [
+    {"kanji": "享", "article": "words/享受.md", "primaryReading": "きょうじゅ", "newArticle": true, "entryIds": ["1233280"], "selectedSenses": [1]},
+    {"kanji": "受", "article": "words/享受.md", "primaryReading": "きょうじゅ", "newArticle": true, "entryIds": ["1233280"], "selectedSenses": [1]}
+  ],
+  "requiredReciprocalPairs": [["享", "words/享受.md"], ["受", "words/享受.md"]],
+  "changedReusedPassages": [
+    {
+      "article": "kanji/受.md",
+      "before": "- 受験 じゅけん — sitting an examination",
+      "after": "- 受験 じゅけん — sitting an examination\n- [享受](../words/享受.md) きょうじゅ — enjoyment of benefits or rights",
+      "reason": "Forward link for the existing component owner of the one necessary support word; all metadata and other teaching unchanged."
+    }
+  ],
+  "curatedProjection": [
+    {"kanji": "享", "quizOnyomi": ["キョウ"], "quizKunyomi": [], "onKeys": ["きょう"], "kunKeys": []}
+  ],
+  "quizAudit": {
+    "享": {
+      "title": "enjoy; receive benefits",
+      "distractors": ["京", "厚", "高"],
+      "labels": ["capital", "thick; cordial", "high, expensive"],
+      "reason": "Three existing shape-neighbor cards have distinct ordinary meanings. 京's capital/numeral senses, 厚's thickness/kindness and 高's height/price/quantity do not mean receiving/enjoying benefits. Kindness provided is not the receiving act. No absent孝 card used.",
+      "legacySemanticNeighbors": ["受", "承", "楽", "利", "頂"],
+      "legacyDisposition": "All five inspected receiving/enjoyment neighbors already have three authored distractors; no default fourth-slot fallback repair established. Remaining two-choice cards are recorded by draft audit; their meanings do not overlap this receiving/enjoyment character. Larger pools and live quiz safety not certified."
+    }
+  },
+  "wordQuizAudit": {
+    "word": "享受",
+    "title": "enjoyment of benefits or rights",
+    "directExclusions": [
+      {
+        "word": "享受",
+        "exclude": ["楽しむ", "楽しみ", "味わう", "遊ぶ", "受ける", "受け取る", "受け取り", "もらう", "いただく", "頂戴", "得る"],
+        "reason": "Direct conservative guards in both quiz directions: broad enjoyment/pleasure/appreciation labels can fit experiencing benefits, and broad receipt/acquisition labels can fit receiving rights or benefits. Humble receiving is a register-marked overlap, not an unrestricted synonym. Existing exclusions among neighbors do not protect any of these eleven new pairs."
+      }
+    ],
+    "pairEvidence": [
+      {"neighbor": "楽しむ", "entry": "1207270", "sense": 1, "overlap": "to enjoy; taking pleasure in an experience"},
+      {"neighbor": "楽しみ", "entry": "1207250", "sense": 1, "overlap": "enjoyment or pleasure; anticipation sense is not transferred"},
+      {"neighbor": "味わう", "entry": "1527010", "sense": 2, "overlap": "appreciating or enjoying, beyond food"},
+      {"neighbor": "遊ぶ", "entry": "1542160", "sense": 1, "overlap": "enjoying oneself; conservative broad enjoyment-label protection, not equal argument structure"},
+      {"neighbor": "受ける", "entry": "1329590", "sense": 1, "overlap": "receiving; unwelcome/colloquial senses not transferred"},
+      {"neighbor": "受け取る", "entry": "1329650", "sense": 1, "overlap": "receiving or accepting, separate from interpretation"},
+      {"neighbor": "受け取り", "entry": "1329770", "sense": 1, "overlap": "the receiving action; not the paper document"},
+      {"neighbor": "もらう", "entry": "1535910", "sense": 1, "overlap": "receiving; no claim that its auxiliary or disease uses equal享受"},
+      {"neighbor": "いただく", "entry": "1587290", "sense": 1, "overlap": "receiving humbly; actual displayed label inspected"},
+      {"neighbor": "頂戴", "entry": "1430230", "sense": 1, "overlap": "receiving humbly, not its familiar request construction"},
+      {"neighbor": "得る", "entry": "1588760", "sense": 1, "overlap": "obtaining or gaining rights/benefits; possibility auxiliary excluded from comparison"}
+    ],
+    "notExcluded": [
+      {"neighbors": ["恩恵", "利益"], "reason": "Name the benefit/profit/interests, not the act of receiving/enjoying it; qualified new title preserves this distinction."},
+      {"neighbors": ["受付", "領収"], "reason": "Actual reception/application handling and receipt-of-payment labels do not denote enjoying rights or benefits. General English receive search match alone is insufficient."},
+      {"neighbors": ["涼む"], "reason": "Cooling oneself or enjoying cool air is a specified activity, not receiving benefits/rights; no broad-enjoy substring guard inferred."},
+      {"neighbors": ["教授"], "reason": "Same kana but different professor/instruction meanings; no homophone-only exclusion."}
+    ],
+    "limits": "Bounded author semantic audit of actual labels and complete relevant families, not whole-pool/live-quiz certification or unrestricted synonymy."
+  },
+  "draftTeachingDispositions": {
+    "rawGlosses": "Full source meanings preserved separately, including broad受ける-associated glosses. Teaching selects receiving/enjoyment and exact attested spelling contexts; does not teach answering a phone or taking an exam with享 as an unrestricted modern spelling.",
+    "wordLevel": "No jlpt or jlpt-n1 vocabulary tag assigned to享受 from its kanji.",
+    "examples": "Original learner sentences built on the source-attested自由を享受する and benefits-of-technology contexts. No quotation of a full dictionary definition, frequency ranking or financial-only claim.",
+    "origin": "Explicit modern-shape mnemonic only; structure-unclassified and no phonetic field.",
+    "draftComparisonDispositions": [
+      {"entries": ["1430230", "1587290"], "reason": "Full humble-receiving families inspected with kana/search-only/rare-spelling and per-sense register qualifications intact; eating/request/leadership senses not imported into享受."},
+      {"entries": ["1454500", "1588760"], "reason": "Both得る reading families inspected; ordinaryえる acquisition supports direct guard, not literaryうる equivalence or auxiliary possibility."}
+    ]
+  },
+  "geometry": "Actual pinned3511-byte04eab.svg/blob278b64c4cd60d4470f8594f35f3f6489e49049c0 verified and passed through unchanged tools/generate_strokes.py:convert; eight strokes/16 points each. Full evidence in batch-059-stroke-evidence.json. Native drawing/font/phone acceptance not inferred.",
   "publishedAdditions": 85,
   "remainingAdditions": 1143,
-  "limits": "Source preparation only: runtime unchanged, no draft, curation installation, generated geometry, final font/native inspection, independent review or publication. Compatible Android f9b59a2+ required; physical-phone/general-release and whole-set acceptance outstanding. All previously accepted batch058 evidence and original process limits retained without redundant reruns."
+  "limits": "Local unreviewed runtime draft only. One new kanji/support/stroke, one narrowly changed reused component owner, full ordered metadata and explicit practice subset preserved. Independent two-family review, fresh Android/native/visual/current-main/publication gates pending. Published85/1228 and remaining1143 unchanged. Compatible Android f9b59a2+ required; physical-phone/general-release and whole-set acceptance outstanding. Accepted058 evidence and original process limits retained without redundant reruns."
 }

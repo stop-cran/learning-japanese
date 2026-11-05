@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 059: source preparation, not drafted
+## Batch 059: local unreviewed draft
 
 The [frozen membership](n1-sources/batch-059-membership.json) selects **享**
 (source row 20) for one evidence-bounded packet. The
@@ -45,19 +45,36 @@ The [frozen membership](n1-sources/batch-059-membership.json) selects **享**
 readings in order: **キョウ・コウ / う.ける**. Coordinator inspection covered
 **50 complete frozen JMdict families**, five raw KANJIDIC2 character records
 and nineteen actual existing articles, with bounded returned ranges recorded.
-This is source preparation, not independent content review or delivered teaching.
+Execution351 adds a local draft, not independent review or delivered teaching.
+Four additional complete receiving/acquisition comparison families supplement
+those original fifty; all 54 were inspected in bounded fresh returns.
 
-The prospective minimum support is a new **享受（きょうじゅ）** article for
-キョウ. Existing **教授（きょうじゅ）** is a different lexical identity.
-コウ remains qualified lookup information without a selected lexical example;
-享ける is an attested recognition spelling, not an unmatched reading or a
-general replacement for every 受ける sense. Exact Japanese headings and the
-failed 享ける URL lookup are distinguished in the
-[source evidence](n1-sources/batch-059-source-evidence.json).
-Final practice selection, titles, direct quiz safeguards, two reciprocal
-享受 component pairs, generated strokes, fonts, two-family review and
-Android/native/publication gates remain pending. Runtime content and the
-published **85/1,228 additions; 1,143 remaining** are unchanged.
+One necessary new **享受（きょうじゅ）** article supports the selected キョウ
+reading without an inferred vocabulary level. Existing **教授（きょうじゅ）**
+remains a different lexical identity. コウ is qualified source-only lookup
+information; 享ける is an attested recognition spelling, illustrated by
+生を享ける（せいをうける）, not a general replacement for every 受ける sense.
+Full **キョウ・コウ / う.ける** metadata and order remain unchanged;
+practice selects only **キョウ**, with an explicit empty kun subset.
+Exact Japanese headings and the failed spelling URL lookup remain separately
+recorded in the [source evidence](n1-sources/batch-059-source-evidence.json).
+
+Both **享/享受** and **受/享受** link in both directions. The reused 受 card
+only gains its forward support link; its metadata is unchanged. Three existing
+shape-neighbor distractors and eleven direct conservative word-quiz guards
+are recorded in the ledger, not treated as unrestricted synonym rules.
+The [stroke evidence](n1-sources/batch-059-stroke-evidence.json) verifies the
+actual pinned 3,511-byte SVG/blob and unchanged conversion to eight strokes.
+The [draft audit](n1-sources/batch-059-draft-audit.json) checks 49 displayed Han
+across the complete new and changed articles. All three bundled font cmaps
+cover 47; **亠 and 厂** require system fallback inspection. Cmap absence is
+not itself a glyph failure, and no new native or phone evidence is claimed.
+
+Two-family review, fresh Android/native/visual and combined-main publication
+gates remain pending. Published coverage stays **85/1,228; 1,143 remaining**;
+the local draft is not counted as delivered. Compatible Android `f9b59a2+`
+is required; physical-phone/general-release and whole-set acceptance remain
+explicitly outstanding.
 
 ## Batch 058: published for bounded owner testing
 
