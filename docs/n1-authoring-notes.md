@@ -37,6 +37,30 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 073: source prepared, not drafted
+
+The [source packet](n1-sources/batch-073-progress.json) bounds the next batch
+to **克**, frozen source row 82. Complete applicable evidence contains
+**22 lexical /7 comparison family occurrences, 25 distinct JMdict families**,
+and eight full raw character records. These are coordinator source reads,
+not independent review or accepted teaching.
+
+Reuse actual **克服** こくふく for selected **コク**; no new support article
+is necessary. Preserve **か.つ** as qualified reference information, with
+rare-spelling **克つ** and the attested self-control phrase **己に克つ**
+おのれにかつ; rarity concerns the standalone spelling, not pronunciation.
+The [public-source record](n1-sources/batch-073-source-evidence.json) separates
+the inspected verb sense from an irrelevant redirect and failed phrase URL.
+The future draft needs an exact **克服** component link and a narrow **服**
+reciprocal example: two all-mapped pairs/four directions, including the
+already-present word-to-服 link. Preserve all easier metadata and levels.
+
+No runtime draft, stroke conversion, reviewer, Android/native check or
+publication has occurred for 073. Earlier deferred source rows stay pending.
+Published coverage remains **99/1,228 additions; 1,129 remain**. Compatible
+Android `f9b59a2+`, the original review/publication gates and outstanding
+physical-phone/general-release/whole-set acceptance remain unchanged.
+
 ## Batch 072: published for bounded owner testing
 
 The [publication record](n1-sources/batch-072-publication.json) verifies normally
