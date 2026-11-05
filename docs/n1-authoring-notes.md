@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 060: textual review closed; fresh Android results archived
+## Batch 060: native fixture compiled; execution pending
 
 The [frozen membership](n1-sources/batch-060-membership.json) selects **亭**
 (source row 21) for one evidence-bounded packet. Its
@@ -86,9 +86,29 @@ Existing batch059 XML was not reused, and Gradle was not rerun for archival.
 The original denial and host-only heap qualification remain historical;
 no guest/app heap, assertion, runtime or archive guard changed.
 
-Native preparation/run, visual checks, combined-main acceptance and publication
-remain pending; this is a signed local evidence checkpoint, not delivered
-content. Published coverage remains **86/1,228 additions; 1,142 remain**.
+The [native preparation](n1-sources/batch-060-native-preparation.json) freezes
+the complete signed `99d8ace0` Git envelope: **8,331 entries / 8,309 runtime
+hashes**, contentVersion `dbf047f0c2e6cd56`, **1,072 kanji / 5,031 words /
+92 N1-labelled cards**. Existing budgets and manifest equality pass.
+The two test classes compile serially with one worker; the APK contains the
+exact full archive. Temporary Android source/assets were removed.
+The [execution366 record](n1-sources/execution-366.json) retains provenance,
+the fixture diff and compilation receipts.
+
+Prepared coverage uses production ContentSync **once**, full ordered
+テイ・チン / no kun and curated テイ / no kun, both **亭/料亭** and
+**料/料亭** reciprocal pairs, System Back, offline routes, meaning,
+persisted on-reading feedback and nine-stroke drawing. **45 static selectors /
+27 article capture steps**, **52** single-glyph probes (including actual
+**亠・亻・冖**) and **4** whole-word raster probes are prepared, not executed.
+Static inspection corrected an exact-heading punctuation mismatch and a
+duplicate look-alike in the generated draft before compilation; the final
+fixture asserts thirteen distinct intended glyphs.
+
+Native execution/readability, independent visual checks, combined-main
+acceptance and publication remain pending; this is a signed local evidence
+checkpoint, not delivered content. Published coverage remains
+**86/1,228 additions; 1,142 remain**.
 Compatible Android `f9b59a2+`, outstanding physical-phone/general-release
 acceptance and all batch059 historical limits remain unchanged.
 

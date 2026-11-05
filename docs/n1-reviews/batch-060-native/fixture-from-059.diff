@@ -1,0 +1,252 @@
+--- docs/n1-reviews/batch-059-native/N1Batch059NativeTest.kt
++++ docs/n1-reviews/batch-060-native/N1Batch060NativeTest.kt
+@@ -49 +49 @@
+-private fun disposable059() {
++private fun disposable060() {
+@@ -54 +54 @@
+-class N1Batch059GlyphTest {
++class N1Batch060GlyphTest {
+@@ -57,2 +57,2 @@
+-    @Test fun benefitsLookalikesAndTwoFallbackRadicalsAcrossFourProductionFamilies() {
+-        disposable059()
++    @Test fun pavilionLookalikesAndThreeFallbackComponentsAcrossFourProductionFamilies() {
++        disposable060()
+@@ -61 +61 @@
+-        val text = "享 京 厚 高 亠 厂 子 口 受 享受"
++        val text = "亭 停 京 享 高 亠 亻 冖 丁 小 子 口 料 料亭"
+@@ -65 +65 @@
+-                    Text("Batch 059: benefits / look-alikes / fallback radicals")
++                    Text("Batch 060: pavilion / look-alikes / fallback components")
+@@ -70 +70 @@
+-                    Text("Compare 享 with 京, 厚 and 高. Inspect actual 亠 and 厂 fallback glyphs, 子 versus 小-shaped bases and both 享受 components. Shared fallback need not give four different designs.", fontSize = 18.sp)
++                    Text("Compare 亭 with 停, 京, 享 and 高. Inspect actual 亠, 亻 and 冖 fallback glyphs, 丁 versus 小 and 子 bases, and both 料亭 components. Shared fallback need not give four different designs.", fontSize = 18.sp)
+@@ -81 +81 @@
+-            for (char in listOf("享", "京", "厚", "高", "亠", "厂", "子", "口", "受")) {
++            for (char in listOf("亭", "停", "京", "享", "高", "亠", "亻", "冖", "丁", "小", "子", "口", "料")) {
+@@ -102 +102 @@
+-            for (word in listOf("享受")) {
++            for (word in listOf("料亭")) {
+@@ -129 +129 @@
+-        assertEquals(40, rows.length())
++        assertEquals(56, rows.length())
+@@ -133 +133 @@
+-        File(context.getExternalFilesDir(null), "n1-059-font-pairs.png").outputStream().use {
++        File(context.getExternalFilesDir(null), "n1-060-font-pairs.png").outputStream().use {
+@@ -136 +136 @@
+-        File(context.getExternalFilesDir(null), "n1-059-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-060-font-raster.json").writeText(JSONObject()
+@@ -139,2 +139,2 @@
+-            .put("individualGlyphProbes", 36).put("wholeWordRasterProbes", 4)
+-            .put("limits", "Thirty-six single-character native Paint probes including actual 亠 and 厂, four complete-word nonblank raster probes and four production Compose rows; actual 享/京/厚/高/亠/厂/子/口/受/享受 readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
++            .put("individualGlyphProbes", 52).put("wholeWordRasterProbes", 4)
++            .put("limits", "Fifty-two single-character native Paint probes including actual 亠, 亻 and 冖, four complete-word nonblank raster probes and four production Compose rows; actual 亭/停/京/享/高/亠/亻/冖/丁/小/子/口/料/料亭 readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
+@@ -145 +145 @@
+-class N1Batch059ArticleTest {
++class N1Batch060ArticleTest {
+@@ -150,2 +150,2 @@
+-    @Test fun fullSingleImportOfflineBenefitsTwoReciprocalPairsOnOnlyDrawingAndSystemBack() {
+-        disposable059()
++    @Test fun fullSingleImportOfflinePavilionTwoReciprocalPairsOnOnlyDrawingAndSystemBack() {
++        disposable060()
+@@ -154,2 +154,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-059-${UUID.randomUUID()}", "main")
+-        val head = "911431dad205cf031e1df9f561a47748c060439b"
++        val source = RepoSource("acceptance-fixture", "n1-060-${UUID.randomUUID()}", "main")
++        val head = "99d8ace026aaf5cf76b4adada34b14e969d10d4e"
+@@ -163 +163 @@
+-                    instrumentation.context.assets.open("n1-batch-059-911431da-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-060-99d8ace0-envelope.zip")
+@@ -178,2 +178,2 @@
+-        assertEquals(1071, updated.kanji)
+-        assertEquals(5030, updated.words)
++        assertEquals(1072, updated.kanji)
++        assertEquals(5031, updated.words)
+@@ -182 +182 @@
+-        assertEquals("1f1ad78479e9c1f4", meta.contentVersion)
++        assertEquals("dbf047f0c2e6cd56", meta.contentVersion)
+@@ -190,10 +190,10 @@
+-        assertEquals(91, n1.size)
+-        val benefits = n1.single { it.kanji == "享" }
+-        assertEquals(listOf("キョウ", "コウ"), benefits.onyomi.splitSep())
+-        assertEquals(listOf("う.ける"), benefits.kunyomi.splitSep())
+-        assertNotNull(benefits.quizOnyomi)
+-        assertNotNull(benefits.quizKunyomi)
+-        assertEquals(listOf("キョウ"), benefits.quizOnyomi?.splitSep())
+-        assertEquals(emptyList<String>(), benefits.quizKunyomi?.splitSep())
+-        assertEquals(listOf("きょう"), benefits.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(emptyList<String>(), benefits.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(92, n1.size)
++        val pavilion = n1.single { it.kanji == "亭" }
++        assertEquals(listOf("テイ", "チン"), pavilion.onyomi.splitSep())
++        assertEquals(emptyList<String>(), pavilion.kunyomi.splitSep())
++        assertNotNull(pavilion.quizOnyomi)
++        assertNotNull(pavilion.quizKunyomi)
++        assertEquals(listOf("テイ"), pavilion.quizOnyomi?.splitSep())
++        assertEquals(emptyList<String>(), pavilion.quizKunyomi?.splitSep())
++        assertEquals(listOf("てい"), pavilion.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(emptyList<String>(), pavilion.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -213 +213 @@
+-                        if (card.kanji == "享") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "亭") now - 60_000 else now + 30L * 86_400_000,
+@@ -219 +219 @@
+-                            if (card.kanji == "享" && (kind == ReadingKind.On && key == "きょう")) now - 60_000
++                            if (card.kanji == "亭" && (kind == ReadingKind.On && key == "てい")) now - 60_000
+@@ -226 +226 @@
+-                    0, source.id, "jlpt-n1", "享", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "亭", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -236,4 +236,4 @@
+-            .put("fullOnyomi", JSONArray(benefits.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(benefits.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(benefits.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(benefits.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("fullOnyomi", JSONArray(pavilion.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(pavilion.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(pavilion.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(pavilion.toReadingCard().quizKeys(ReadingKind.Kun)))
+@@ -242 +242 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 享 meaning and sole curated on key due; explicit no-kun. Two historical good 享 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 亭 meaning and sole curated on key due; explicit no-kun. Two historical good 亭 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -249 +249 @@
+-            await("N1 · 91 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 92 cards").performScrollTo().assertIsDisplayed()
+@@ -252,2 +252,2 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("享")
+-            click("enjoy; receive benefits")
++            rule.onNode(hasSetTextAction()).performTextReplacement("亭")
++            click("pavilion; restaurant building")
+@@ -258 +258 @@
+-            show("享 connects receiving something", "kanji-meaning")
++            show("亭 can refer to a pavilion", "kanji-meaning")
+@@ -261,5 +261,4 @@
+-            show(readingExample("享受 きょうじゅ - enjoyment of benefits or rights"), "kanji-on-reading")
+-            show(readingExample("Source-only lookup reading here; no suitable modern word example was established in the inspected dictionary families."), "kanji-source-only-on")
+-            show(readingExample("享ける うける - receive (recognition spelling); 生を享ける せいをうける, \"be born\""), "kanji-recognition-kun")
+-            show("Practice selects キョウ.", "kanji-curation")
+-            show("享ける is an attested spelling", "kanji-recognition-boundaries")
++            show(readingExample("料亭 りょうてい - traditional Japanese restaurant, especially an upscale one"), "kanji-on-reading")
++            show(readingExample("亭 ちん - a small pavilion for viewing or resting, for example in a garden; recognition example"), "kanji-recognition-on")
++            show("Practice selects テイ.", "kanji-curation")
++            show("Those suffix senses use てい", "kanji-suffix-boundary")
+@@ -267,3 +266,3 @@
+-            show(articleBullet("Distinguish 京, \"capital\": its bottom is 小-shaped, whereas 享 ends in 子. 厚 has a 厂 overhang and a 日-shaped box above 子; 享 instead starts with 亠 above 口."), "kanji-lookalikes-fallback")
+-            show(articleBullet("受 is the broader receiving/undergoing character. Learn the whole word and spelling rather than substituting either character mechanically."), "kanji-receiving-boundary")
+-            show(articleBullet("享年 names age at death, not someone's current age or a general wish for a long life."), "kanji-age-boundary")
++            show(articleBullet("停, \"halt; stopping,\" adds the person-shaped 亻 on the left of 亭. A restaurant or pavilion is not the stopping action."), "kanji-person-lookalike")
++            show(articleBullet("京, \"capital,\" ends in 小, and 享, \"enjoy; receive benefits,\" ends in 子. 亭 instead has the covered 丁-shaped lower part."), "kanji-lower-lookalikes")
++            show(articleBullet("料亭 is not the lodging word 旅館 りょかん. Nor does every restaurant use 亭 in its name."), "kanji-lodging-boundary")
+@@ -271,2 +270,2 @@
+-            inline(await(articleBullet("享受 きょうじゅ - enjoyment of benefits or rights")), "享受")
+-            await("享受 (きょうじゅ) - enjoyment of benefits or rights")
++            inline(await(articleBullet("料亭 りょうてい - traditional Japanese restaurant, especially an upscale one")), "料亭")
++            await("料亭 (りょうてい) — traditional Japanese restaurant")
+@@ -274,4 +273,4 @@
+-            show("享受 means receiving something as one's own", "word-meaning-attachment")
+-            show(articleBullet("私たちは自由を享受しています。 (わたしたちはじゆうをきょうじゅしています。) - We enjoy freedom."), "word-freedom-example")
+-            show(articleBullet("私たちは科学技術の恩恵を享受しています。 (わたしたちはかがくぎじゅつのおんけいをきょうじゅしています。) - We enjoy the benefits of science and technology."), "word-benefits-example")
+-            show("Useful forms include", "word-forms")
++            show("料亭 is a traditional Japanese restaurant", "word-meaning-qualification")
++            show(articleBullet("昨夜、料亭で食事をしました。（さくや、りょうていで しょくじを しました。）— Last night, I had a meal at a traditional Japanese restaurant."), "word-meal-example")
++            show(articleBullet("この料亭の料理はおいしいです。（この りょうていの りょうりは おいしいです。）— The food at this traditional Japanese restaurant is delicious."), "word-food-example")
++            show("Use で for eating there", "word-place-particle")
+@@ -279,2 +278,2 @@
+-            show("Their related meanings reinforce", "word-components-readings")
+-            inline(await("Their related meanings reinforce", substring = true), "享")
++            show("Read it as a modifier-plus-place compound", "word-components-readings")
++            inline(await("Read it as a modifier-plus-place compound", substring = true), "亭")
+@@ -283,5 +282,5 @@
+-            show("Practice selects キョウ.", "word-backlink-benefits")
+-            back()
+-            await("Their related meanings reinforce", substring = true).assertIsDisplayed()
+-            capture("system-back-word-benefits")
+-            inline(await("Their related meanings reinforce", substring = true), "受")
++            show("Practice selects テイ.", "word-backlink-pavilion")
++            back()
++            await("Read it as a modifier-plus-place compound", substring = true).assertIsDisplayed()
++            capture("system-back-word-pavilion")
++            inline(await("Read it as a modifier-plus-place compound", substring = true), "料")
+@@ -290,3 +289,3 @@
+-            show(articleBullet("享受 きょうじゅ — enjoyment of benefits or rights"), "receiving-forwardlink")
+-            inline(await(articleBullet("享受 きょうじゅ — enjoyment of benefits or rights")), "享受")
+-            await("享受 (きょうじゅ) - enjoyment of benefits or rights")
++            show(articleBullet("料亭 りょうてい — traditional Japanese restaurant, especially an upscale one"), "materials-forwardlink")
++            inline(await(articleBullet("料亭 りょうてい — traditional Japanese restaurant, especially an upscale one")), "料亭")
++            await("料亭 (りょうてい) — traditional Japanese restaurant")
+@@ -294 +293 @@
+-            show("rather than merely playing or feeling happy", "receiving-forwardlink-word")
++            show("not as the general word for Japanese food", "materials-forwardlink-word")
+@@ -297,4 +296,4 @@
+-            capture("system-back-receiving")
+-            back()
+-            await("Their related meanings reinforce", substring = true).assertIsDisplayed()
+-            capture("system-back-word-receiving")
++            capture("system-back-materials")
++            back()
++            await("Read it as a modifier-plus-place compound", substring = true).assertIsDisplayed()
++            capture("system-back-word-materials")
+@@ -302,2 +301,4 @@
+-            show("Neither is freely interchangeable", "word-enjoying-receiving-boundaries")
+-            show("not a single antonym", "word-benefit-contrast")
++            show(articleBullet("レストラン is a broader restaurant word, especially associated with Western-style dining; the actual cuisine and naming vary."), "word-broader-restaurant")
++            show(articleBullet("食堂 しょくどう can mean a dining hall or cafeteria, or an ordinary eatery. That is a different emphasis from 料亭, not a rule that their possible referents can never overlap."), "word-eatery-overlap")
++            show(articleBullet("旅館 りょかん names a traditional Japanese inn: overnight lodging rather than the restaurant category. An inn may serve meals without making the two words synonyms."), "word-inn-boundary")
++            show(articleBullet("There is no direct antonym."), "word-antonym-boundary")
+@@ -305,2 +306,2 @@
+-            show("rather than merely playing or feeling happy", "word-recreation-boundary")
+-            show("Do not confuse it with 教授", "word-homophone")
++            show("not as the general word for Japanese food", "word-facilities-boundary")
++            show("The different spelling 涼亭", "word-homophone")
+@@ -317 +318 @@
+-            assertEquals("享", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("亭", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -319 +320 @@
+-            click("enjoy; receive benefits")
++            click("pavilion; restaurant building")
+@@ -321 +322 @@
+-            assertEquals("享", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("亭", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -331 +332 @@
+-                assertEquals("享", question.card.kanji)
++                assertEquals("亭", question.card.kanji)
+@@ -334,2 +335,2 @@
+-                val key = "きょう"
+-                assertFalse(question.question.options.any { it.key in setOf("こう", "うける") })
++                val key = "てい"
++                assertFalse(question.question.options.any { it.key in setOf("ちん") })
+@@ -345 +346 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "享" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "亭" &&
+@@ -352 +353 @@
+-                    it.kanji == "享" && it.mode == ReadingKind.Kun.mode.name }
++                    it.kanji == "亭" && it.mode == ReadingKind.Kun.mode.name }
+@@ -358,4 +359,4 @@
+-            await("enjoy; receive benefits").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "享") })
+-            assertEquals(listOf("キョウ", "コウ"), card.onyomi.splitSep())
+-            assertEquals(listOf("う.ける"), card.kunyomi.splitSep())
++            await("pavilion; restaurant building").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "亭") })
++            assertEquals(listOf("テイ", "チン"), card.onyomi.splitSep())
++            assertEquals(emptyList<String>(), card.kunyomi.splitSep())
+@@ -364 +365 @@
+-            assertEquals(listOf("キョウ"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("テイ"), card.quizOnyomi?.splitSep())
+@@ -367 +368 @@
+-            assertEquals(8, strokes.length())
++            assertEquals(9, strokes.length())
+@@ -384 +385 @@
+-            rule.onNode(hasContentDescription("8 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("9 strokes drawn", substring = true)).assertExists()
+@@ -389 +390 @@
+-                    it.kanji == "享" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "亭" && it.mode == StudyMode.Draw.name }
+@@ -400 +401 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "享" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "亭" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -413,2 +414,2 @@
+-            File(app.getExternalFilesDir(null), "n1-059-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-059-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-060-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-060-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -508 +509 @@
+-        File(app.getExternalFilesDir(null), "n1-059-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-060-$step.png").outputStream().use {
