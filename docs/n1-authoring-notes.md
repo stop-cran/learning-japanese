@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 063: textual and fresh Android checks closed; native fixture compiled
+## Batch 063: native assertions passed; independent visual confirmation pending
 
 The [frozen membership](n1-sources/batch-063-membership.json) selects **倣**
 (source row 59). The [source ledger](n1-sources/batch-063-progress.json)
@@ -88,8 +88,8 @@ All **34** article Han were audited against three unchanged bundled fonts;
 **亻・傚** require fallback. The latter is an existing rare spelling in the
 reused N2 article, not new kanji metadata. Both are outside the special
 RareHan ranges, so its automated test cannot certify their rendering.
-The later native/visual gate must inspect the reused spelling too; previous
-人/亻 native evidence is inherited, not a fresh batch 063 test.
+The native/visual gate must inspect the reused spelling too; before execution
+396, previous 人/亻 native evidence was inherited, not a fresh batch 063 test.
 The [initial-review checkpoint](n1-reviews/batch-063-initial-review-checkpoint.json)
 archives independent **Claude Opus 5.5** and **GPT-6.1 Sol** reports on signed
 draft `ddad655f71c06e7cb2c749de18596863a800a73d`. Both processes exited
@@ -131,8 +131,34 @@ The native fixture specifically includes **倣・放・方・付・人・亻・�
 **模倣** and **倣う**. Static Markdown matches and nonblank-raster plans do not
 certify actual fallback readability. Fresh device/5580–5581 ownership checks,
 both terminal native case-0 results, direct PNG inspection, original-session
-serial visual confirmation and combined-main/publication gates remain next.
-No native launch, new reviewer or runtime publication occurred here;
+serial visual confirmation and combined-main/publication gates were next at
+checkpoint 395; no native launch occurred in that preparation checkpoint.
+
+The [execution 396 receipt](n1-sources/execution-396.json) now records both named
+native cases passing with **terminal case status 0**, no skips, in **114.805 s**.
+The exact full archive passed through production ContentSync **once** with
+the expected counts, content version, parser epoch and zero problems.
+Both curated reading kinds persisted Good grades; both reciprocal pairs,
+System Back, offline routes, meaning and ten-stroke drawing assertions passed.
+Fresh ownership checks established read-only API 35 helper `emulator-5580`,
+parent **26180 / QEMU 4200**; both exited after `emu kill`, independently checked.
+The unrelated `emulator-5556` remained present. Residual post-stop TCP states
+are recorded, not misreported as an entirely empty port inventory.
+
+All **45 source PNGs** and complete logs are archived in the
+[artifact index](n1-reviews/batch-063-native/execution-396-artifact-index.json).
+The coordinator directly requested **14 images / 12 distinct byte hashes**.
+Four production font rows show readable, distinguishable target glyphs and
+both words, including actual **亻・傚** fallback; fallback faces were not
+identified. Paragraph kana wraps without lost text. The reading table
+explicitly supports sideways scrolling; the captured shifted viewport clips
+the first column, so this is not a full-table visual read. The on-reading,
+kun-reading and imitation-backlink captures have identical bytes.
+Drawing used reference-touch shapes and a recall miss with the handwriting
+model unavailable: this is not MLKit or successful human-recall evidence.
+Other captures were not coordinator-inspected. Original-session serial
+independent visual confirmations and combined-main/publication gates remain
+next. No new reviewer or runtime publication occurred in execution 396;
 physical-phone/general-release and whole-set acceptance remain outstanding.
 Published batch 062 remains verified at `54fd8ff4`:
 **89 additions delivered; 1,139 remaining**. Physical-phone/general-release
