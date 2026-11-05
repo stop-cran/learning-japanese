@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 063: bounded local draft; independent review pending
+## Batch 063: initial reviews archived; bounded serial confirmation pending
 
 The [frozen membership](n1-sources/batch-063-membership.json) selects **倣**
 (source row 59). The [source ledger](n1-sources/batch-063-progress.json)
@@ -90,9 +90,26 @@ reused N2 article, not new kanji metadata. Both are outside the special
 RareHan ranges, so its automated test cannot certify their rendering.
 The later native/visual gate must inspect the reused spelling too; previous
 人/亻 native evidence is inherited, not a fresh batch 063 test.
-The next checkpoint should obtain two serial blind model-family initial
-reviews on the same normally signed draft. No reviewer, fresh Android/native
-run or publication occurs in this draft checkpoint.
+The [initial-review checkpoint](n1-reviews/batch-063-initial-review-checkpoint.json)
+archives independent **Claude Opus 5.5** and **GPT-6.1 Sol** reports on signed
+draft `ddad655f71c06e7cb2c749de18596863a800a73d`. Both processes exited
+successfully and serially; the first complete report archive preceded the
+second launch. Both returned all **40 assigned ranges across 36 distinct
+files**, including the **35 complete JMdict families**, six raw character
+records and full SVG/generated JSON. Both found the three scoped teaching
+files **CLEAN** across correctness, scoped coverage and text comprehensibility.
+Five Claude suggestions remain optional and are not adopted; GPT reported none.
+
+Strict initial process compliance is **not accepted**: Claude requested the
+lexical XML ranges **1–140 and 141–258** together once, causing one overlapping
+tool start. Finding **063-P1** remains open for two supervised, separately
+exiting, single-range confirmations in the original Claude session.
+GPT had no overlapping starts; neither review exceeded the guidance/XML
+range cap or had failed tools. Complete returned bytes are not proof of
+comprehension and do not erase the original process violation. Teaching is
+unchanged and is **not review-closed or published**. The execution-390 checks
+are inherited, not fresh tests; Android/native/visual/current-main/publication,
+physical-phone/general-release and whole-set gates remain outstanding.
 Published batch 062 remains verified at `54fd8ff4`:
 **89 additions delivered; 1,139 remaining**. Physical-phone/general-release
 and whole-set acceptance remain outstanding.
