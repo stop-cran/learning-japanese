@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 060: combined acceptance complete; publication pending
+## Batch 060: published for bounded owner testing
 
 The [frozen membership](n1-sources/batch-060-membership.json) selects **亭**
 (source row 21) for one evidence-bounded packet. Its
@@ -153,9 +153,16 @@ validator, manifest freshness, frozen sources, baseline preservation, exact
 strokes, font cmaps and original archive budgets. All **8,309 runtime hashes**
 match; accepted Android/native and reviewer evidence was independently
 reverified rather than rerun. Runtime teaching is unchanged from `ea1dac1a`.
-Publication and exact public CI/archive acceptance remain pending.
-Published coverage remains
-**86/1,228 additions; 1,142 remain**.
+The [publication record](n1-sources/batch-060-publication.json) records normal
+signed fast-forward publication at `7097643bc160103db05e80fc686888cd13313c95`.
+Exact-SHA CI [41964226361](https://github.com/stop-cran/learning-japanese/actions/runs/41964226361)
+passed. The immutable public ZIP matches every **8,309 runtime hashes**:
+**8,331 entries / 30,654,171 compressed / 44,269,593 inflated /
+44,001,255 retained bytes**, within unchanged publishing guards.
+Published coverage is now **87/1,228 additions; 1,141 remain**,
+with **1,072 kanji / 5,031 words / 92 N1 labels / 91 named-source members**
+and the separate 妖 exception. The 89 necessary support-word additions are
+not the deferred N1 vocabulary deck. Batch061 has not started.
 Compatible Android `f9b59a2+`, outstanding physical-phone/general-release
 acceptance and all batch059 historical limits remain unchanged.
 
