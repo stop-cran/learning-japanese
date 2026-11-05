@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 063: initial reviews archived; bounded serial confirmation pending
+## Batch 063: textual and fresh Android checks closed; native fixture compiled
 
 The [frozen membership](n1-sources/batch-063-membership.json) selects **倣**
 (source row 59). The [source ledger](n1-sources/batch-063-progress.json)
@@ -102,14 +102,38 @@ Five Claude suggestions remain optional and are not adopted; GPT reported none.
 
 Strict initial process compliance is **not accepted**: Claude requested the
 lexical XML ranges **1–140 and 141–258** together once, causing one overlapping
-tool start. Finding **063-P1** remains open for two supervised, separately
-exiting, single-range confirmations in the original Claude session.
+tool start. Finding **063-P1** received its bounded remedy through two supervised,
+separately exiting, single-range confirmations in the original Claude session;
+the [reconciliation](n1-reviews/batch-063-reconciliation.json) preserves both
+reports and resolves that remedy, not the historical strict-process violation.
 GPT had no overlapping starts; neither review exceeded the guidance/XML
 range cap or had failed tools. Complete returned bytes are not proof of
 comprehension and do not erase the original process violation. Teaching is
-unchanged and is **not review-closed or published**. The execution-390 checks
-are inherited, not fresh tests; Android/native/visual/current-main/publication,
-physical-phone/general-release and whole-set gates remain outstanding.
+unchanged and **textually review-closed, not published**. The execution-390 checks
+are inherited, not fresh tests.
+The [execution 394 receipt](n1-sources/execution-394.json) independently verifies
+the parent-recovered fresh **RealContentTest 3 / RareHanTest 1** results, with
+zero failures, errors or skips. The original execution-393 permission denial
+remains separate historical evidence.
+
+The [execution 395 preparation receipt](n1-sources/execution-395.json) freezes
+the complete signed `53ecd117` Git envelope and compiles the two batch-specific
+native test classes. All **8,317 runtime hashes / 8,339 ZIP entries** and the
+unchanged byte budgets pass; the packaged APK contains the exact archive.
+Content version remains `c19b742b7e6320a7`, with **1,075 kanji / 5,033 words /
+95 N1 labels**. The temporary Android source and asset were removed.
+Prepared coverage includes both **ホウ / なら.う** readings, both reciprocal
+**倣/模倣** and **倣/倣う** pairs in four directions, meaning, ten-stroke
+trace/recall, offline routes and System Back. **56 static article selectors /
+34 article capture steps**, **44 individual glyph / 8 whole-word raster probes**
+and four production font rows are prepared, not native acceptance.
+The native fixture specifically includes **倣・放・方・付・人・亻・模・木・傚・習・攵**,
+**模倣** and **倣う**. Static Markdown matches and nonblank-raster plans do not
+certify actual fallback readability. Fresh device/5580–5581 ownership checks,
+both terminal native case-0 results, direct PNG inspection, original-session
+serial visual confirmation and combined-main/publication gates remain next.
+No native launch, new reviewer or runtime publication occurred here;
+physical-phone/general-release and whole-set acceptance remain outstanding.
 Published batch 062 remains verified at `54fd8ff4`:
 **89 additions delivered; 1,139 remaining**. Physical-phone/general-release
 and whole-set acceptance remain outstanding.

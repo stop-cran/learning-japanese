@@ -1,0 +1,274 @@
+--- docs/n1-reviews/batch-062-native/N1Batch062NativeTest.kt
++++ docs/n1-reviews/batch-063-native/N1Batch063NativeTest.kt
+@@ -49 +49 @@
+-private fun disposable062() {
++private fun disposable063() {
+@@ -54 +54 @@
+-class N1Batch062GlyphTest {
++class N1Batch063GlyphTest {
+@@ -57,2 +57,2 @@
+-    @Test fun salaryLookalikesAndPersonFallbackAcrossFourProductionFamilies() {
+-        disposable062()
++    @Test fun imitationLookalikesAndPersonFallbackAcrossFourProductionFamilies() {
++        disposable063()
+@@ -61 +61 @@
+-        val text = "俸 棒 奉 借 付 人 亻 木 給 糸 合 俸給"
++        val text = "倣 放 方 付 人 亻 模 木 傚 習 攵 模倣 倣う"
+@@ -65 +65 @@
+-                    Text("Batch 062: salary / look-alikes / person fallback")
++                    Text("Batch 063: imitation / look-alikes / person fallback")
+@@ -70 +70 @@
+-                    Text("Compare 俸 with 棒, 奉, 借 and 付. Inspect actual 人 versus 亻, 木 versus 亻, 給 with 糸 and 合, and both characters in 俸給. Shared fallback need not give four different designs.", fontSize = 18.sp)
++                    Text("Compare 倣 with 放, 方 and 付. Inspect 人 versus 亻, 模 with 木, reused rare 傚 and 習, and both words 模倣 and 倣う. Shared fallback need not give four different designs.", fontSize = 18.sp)
+@@ -81 +81 @@
+-            for (char in listOf("俸", "棒", "奉", "借", "付", "人", "亻", "木", "給", "糸", "合")) {
++            for (char in listOf("倣", "放", "方", "付", "人", "亻", "模", "木", "傚", "習", "攵")) {
+@@ -102 +102 @@
+-            for (word in listOf("俸給")) {
++            for (word in listOf("模倣", "倣う")) {
+@@ -129 +129 @@
+-        assertEquals(48, rows.length())
++        assertEquals(52, rows.length())
+@@ -133 +133 @@
+-        File(context.getExternalFilesDir(null), "n1-062-font-pairs.png").outputStream().use {
++        File(context.getExternalFilesDir(null), "n1-063-font-pairs.png").outputStream().use {
+@@ -136 +136 @@
+-        File(context.getExternalFilesDir(null), "n1-062-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-063-font-raster.json").writeText(JSONObject()
+@@ -139,2 +139,2 @@
+-            .put("individualGlyphProbes", 44).put("wholeWordRasterProbes", 4)
+-            .put("limits", "Forty-four single-character native Paint probes including actual 人 and 亻, four complete-word nonblank raster probes and four production Compose rows; actual 俸/棒/奉/借/付/人/亻/木/給/糸/合/俸給 readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
++            .put("individualGlyphProbes", 44).put("wholeWordRasterProbes", 8)
++            .put("limits", "Forty-four single-character native Paint probes including actual 人 and 亻, eight complete-word nonblank raster probes and four production Compose rows; actual 倣/放/方/付/人/亻/模/木/傚/習/攵/模倣/倣う readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
+@@ -145 +145 @@
+-class N1Batch062ArticleTest {
++class N1Batch063ArticleTest {
+@@ -150,2 +150,2 @@
+-    @Test fun fullSingleImportOfflineSalaryTwoReciprocalPairsOnOnlyDrawingAndSystemBack() {
+-        disposable062()
++    @Test fun fullSingleImportOfflineImitationTwoReciprocalPairsBothReadingsDrawingAndSystemBack() {
++        disposable063()
+@@ -154,2 +154,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-062-${UUID.randomUUID()}", "main")
+-        val head = "e157d58c5bdb9fc2d58d7043fdf0429d36f5c040"
++        val source = RepoSource("acceptance-fixture", "n1-063-${UUID.randomUUID()}", "main")
++        val head = "53ecd11711804be900ca95f9f1018942910aecec"
+@@ -163 +163 @@
+-                    instrumentation.context.assets.open("n1-batch-062-e157d58c-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-063-53ecd117-envelope.zip")
+@@ -178,2 +178,2 @@
+-        assertEquals(1074, updated.kanji)
+-        assertEquals(5032, updated.words)
++        assertEquals(1075, updated.kanji)
++        assertEquals(5033, updated.words)
+@@ -182 +182 @@
+-        assertEquals("545c56b5d4b4e8ef", meta.contentVersion)
++        assertEquals("c19b742b7e6320a7", meta.contentVersion)
+@@ -190,10 +190,10 @@
+-        assertEquals(94, n1.size)
+-        val salary = n1.single { it.kanji == "俸" }
+-        assertEquals(listOf("ホウ"), salary.onyomi.splitSep())
+-        assertEquals(emptyList<String>(), salary.kunyomi.splitSep())
+-        assertNotNull(salary.quizOnyomi)
+-        assertNotNull(salary.quizKunyomi)
+-        assertEquals(listOf("ホウ"), salary.quizOnyomi?.splitSep())
+-        assertEquals(emptyList<String>(), salary.quizKunyomi?.splitSep())
+-        assertEquals(listOf("ほう"), salary.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(emptyList<String>(), salary.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(95, n1.size)
++        val imitation = n1.single { it.kanji == "倣" }
++        assertEquals(listOf("ホウ"), imitation.onyomi.splitSep())
++        assertEquals(listOf("なら.う"), imitation.kunyomi.splitSep())
++        assertNotNull(imitation.quizOnyomi)
++        assertNotNull(imitation.quizKunyomi)
++        assertEquals(listOf("ホウ"), imitation.quizOnyomi?.splitSep())
++        assertEquals(listOf("なら.う"), imitation.quizKunyomi?.splitSep())
++        assertEquals(listOf("ほう"), imitation.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(listOf("ならう"), imitation.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -213 +213 @@
+-                        if (card.kanji == "俸") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "倣") now - 60_000 else now + 30L * 86_400_000,
+@@ -219 +219 @@
+-                            if (card.kanji == "俸" && (kind == ReadingKind.On && key == "ほう")) now - 60_000
++                            if (card.kanji == "倣" && ((kind == ReadingKind.On && key == "ほう") || (kind == ReadingKind.Kun && key == "ならう"))) now - 60_000
+@@ -226 +226 @@
+-                    0, source.id, "jlpt-n1", "俸", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "倣", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -236,4 +236,4 @@
+-            .put("fullOnyomi", JSONArray(salary.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(salary.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(salary.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(salary.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("fullOnyomi", JSONArray(imitation.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(imitation.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(imitation.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(imitation.toReadingCard().quizKeys(ReadingKind.Kun)))
+@@ -242 +242 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 俸 meaning and sole curated on key due; explicit no-kun. Two historical good 俸 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 倣 meaning and both curated on/kun keys due. Two historical good 倣 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -249 +249 @@
+-            await("N1 · 94 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 95 cards").performScrollTo().assertIsDisplayed()
+@@ -252,2 +252,2 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("俸")
+-            click("salary; stipend")
++            rule.onNode(hasSetTextAction()).performTextReplacement("倣")
++            click("imitate; emulate")
+@@ -258,2 +258,2 @@
+-            show("俸 concerns salary or a stipend", "kanji-meaning")
+-            show("but is not restricted to government employment.", "kanji-employment-boundary")
++            show("倣 concerns imitating or following an existing model.", "kanji-meaning")
++            show("The model need not be a teacher giving lessons.", "kanji-model-boundary")
+@@ -260,0 +261 @@
++            show("or a claim that 放's", "kanji-origin-boundary")
+@@ -262,2 +263,3 @@
+-            show(readingExample("俸給 ほうきゅう — salary; pay"), "kanji-on-reading")
+-            show("pronounced ぽう, not ぼう", "kanji-no-kun-and-annual-reading")
++            show(readingExample("模倣 もほう — imitation; copying"), "kanji-on-reading")
++            show(readingExample("倣う ならう — imitate; follow an example"), "kanji-kun-reading")
++            show("In 倣う, 倣 writes なら and う is okurigana.", "kanji-kana-boundary")
+@@ -265,4 +267,3 @@
+-            show(articleBullet("棒, \"rod; stick,\" has 木 on the left instead of 亻. Write 年俸 for annual salary; JMdict marks 年棒 as irregular kanji usage."), "kanji-spelling-boundary")
+-            show(articleBullet("借, \"borrow; rent,\" and 付, \"attach,\" share 亻 but have different right sides. Neither names a salary."), "kanji-lookalikes")
+-            show(articleBullet("年俸 specifies an annual basis or a year's salary, not necessarily a single yearly payment. The word alone does not establish a payment schedule."), "kanji-payment-schedule")
+-            show(articleBullet("Historical 俸禄 ほうろく means a retainer's stipend. That historical use does not make modern 俸給 a payment in rice."), "kanji-historical-boundary")
++            show(articleBullet("倣う marks the model with に: 前例に倣う, \"follow a precedent.\" 習う, also ならう, concerns learning under instruction: 先生にピアノを習う (せんせいにピアノをならう), \"take piano lessons from a teacher.\" The skill takes を; the shared sound does not make these words interchangeable."), "kanji-particle-contrast")
++            show(articleBullet("放, \"release,\" lacks the left-hand 亻. 方, \"direction, method,\" is only part of 放, not the whole right side of 倣."), "kanji-lookalikes")
++            show(articleBullet("付, \"attach,\" shares 亻 but has a different right side. Keep the entire shape in view rather than identifying a kanji by its radical alone."), "kanji-radical-boundary")
+@@ -270,4 +271,3 @@
+-            show(articleBullet("年俸 ねんぽう — annual salary"), "kanji-annual-compound")
+-            show(articleBullet("減俸 げんぽう — salary reduction"), "kanji-reduction-compound")
+-            inline(await(articleBullet("俸給 ほうきゅう — salary; pay, especially for public employees")), "俸給")
+-            await("俸給 (ほうきゅう) — salary; pay")
++            show(articleBullet("前例に倣う ぜんれいにならう — follow a precedent"), "kanji-precedent")
++            inline(await(articleBullet("模倣 もほう — imitation; copying")), "模倣")
++            await("模倣 (もほう) - imitation; copying")
+@@ -275,4 +275,4 @@
+-            show("It is not a government-only synonym of salary.", "salary-employment-boundary")
+-            show(articleBullet("俸給を受け取っています。 (ほうきゅうをうけとっています。) — I receive a salary."), "salary-receiving-example")
+-            show(articleBullet("俸給が上がりました。 (ほうきゅうがあがりました。) — My salary went up."), "salary-increase-example")
+-            show("The second reports an increase, not a change of occupation.", "salary-example-explanation")
++            show("模倣する is a transitive verb: the model being imitated takes を.", "imitation-transitivity")
++            show(articleBullet("子供は大人の話し方を模倣します。 (こどもはおとなのはなしかたをもほうします。) - Children imitate adults' ways of speaking."), "imitation-speech-example")
++            show(articleBullet("この絵は、有名な作品を模倣したものです。 (このえは、ゆうめいなさくひんをもほうしたものです。) - This picture is an imitation of a famous work."), "imitation-work-example")
++            show("Forms include 模倣します, 模倣しない and 模倣して.", "imitation-forms")
+@@ -280,2 +280,2 @@
+-            show("Keep both long vowels.", "salary-components")
+-            inline(await("The on readings are ホウ + キュウ: ほうきゅう.", substring = true), "俸")
++            show("The on readings here are モ + ホウ: もほう.", "imitation-components")
++            inline(await("模 contributes modeling or copying, and 倣 imitation.", substring = true), "倣")
+@@ -284,5 +284,23 @@
+-            show("pronounced ぽう, not ぼう", "salary-backlink")
+-            back()
+-            await("Keep both long vowels.", substring = true).assertIsDisplayed()
+-            capture("system-back-salary-stipend")
+-            inline(await("The on readings are ホウ + キュウ: ほうきゅう.", substring = true), "給")
++            show(readingExample("模倣 もほう — imitation; copying"), "imitation-backlink")
++            back()
++            await("The on readings here are モ + ホウ: もほう.", substring = true).assertIsDisplayed()
++            capture("system-back-imitation")
++            section("Synonyms and antonyms")
++            show("do not transfer that construction to 模倣する.", "imitation-particle-contrast")
++            show("copying a sheet or file is not necessarily", "imitation-copy-boundary")
++            section("Distinctive meaning")
++            show("Two people can look alike without either copying the other.", "imitation-resemblance")
++            show("do not translate every occurrence as fraud or plagiarism.", "imitation-judgment")
++            back()
++            await("Common words")
++            inline(await(articleBullet("倣う ならう — follow a model or precedent")), "倣う")
++            await("倣う (ならう) - imitate; follow an example")
++            section("Meaning")
++            show("Use に for the model:", "follow-model-particle")
++            show(articleBullet("先輩のやり方に倣いました。 (せんぱいのやりかたにならいました。) - I followed my senior colleague's way of doing it."), "follow-colleague-example")
++            show(articleBullet("前例に倣って、この方法を使います。 (ぜんれいにならって、このほうほうをつかいます。) - Following the precedent, we will use this method."), "follow-precedent-example")
++            show("Its forms include 倣います, 倣わない, 倣って and 倣った.", "follow-godan-forms")
++            show("does not justify mechanically using を.", "follow-transitivity-boundary")
++            section("How the kanji combine")
++            show("傚う and 慣らう are marked rare spellings", "follow-spelling-boundary")
++            inline(await("writes なら, followed by う.", substring = true), "倣")
+@@ -290,4 +308,7 @@
+-            section("Common words")
+-            show(articleBullet("俸給 ほうきゅう — salary; pay, especially for public employees"), "pay-forwardlink")
+-            inline(await(articleBullet("俸給 ほうきゅう — salary; pay, especially for public employees")), "俸給")
+-            await("俸給 (ほうきゅう) — salary; pay")
++            section("Readings")
++            show(readingExample("倣う ならう — imitate; follow an example"), "follow-backlink")
++            back()
++            await("writes なら, followed by う.", substring = true).assertIsDisplayed()
++            capture("system-back-follow")
++            section("Synonyms and antonyms")
++            show("倣う specifically brings a model or example into view.", "follow-synonyms")
+@@ -295,14 +316,2 @@
+-            show("not as a rule forbidding its use for company employees.", "pay-forwardlink-salary")
+-            back()
+-            await("Common words")
+-            capture("system-back-pay")
+-            back()
+-            await("Keep both long vowels.", substring = true).assertIsDisplayed()
+-            capture("system-back-salary-pay")
+-            section("Synonyms and antonyms")
+-            show("overlap this employment-pay sense.", "salary-synonyms")
+-            show("specifies a monthly salary.", "salary-monthly-boundary")
+-            show("sources other than employment.", "salary-income-boundary")
+-            section("Distinctive meaning")
+-            show("not as a rule forbidding its use for company employees.", "salary-employment-guide")
+-            show("The word alone does not tell you the payment interval", "salary-document-boundary")
++            show("習う, also ならう, means learning under instruction.", "follow-learning-contrast")
++            show("does not make the two written identities interchangeable.", "follow-identity-boundary")
+@@ -319 +328 @@
+-            assertEquals("俸", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("倣", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -321 +330 @@
+-            click("salary; stipend")
++            click("imitate; emulate")
+@@ -323 +332 @@
+-            assertEquals("俸", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("倣", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -329 +338 @@
+-            repeat(1) {
++            repeat(2) {
+@@ -333 +342 @@
+-                assertEquals("俸", question.card.kanji)
++                assertEquals("倣", question.card.kanji)
+@@ -335,2 +344 @@
+-                assertEquals(ReadingKind.On, question.question.kind)
+-                val key = "ほう"
++                val key = if (question.question.kind == ReadingKind.On) "ほう" else "ならう"
+@@ -347 +355 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "俸" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "倣" &&
+@@ -351,5 +359 @@
+-            assertEquals(setOf(ReadingKind.On), answeredKinds)
+-            assertFalse(runBlocking {
+-                app.db.reviews().allLog().any { it.sourceId == source.id &&
+-                    it.kanji == "俸" && it.mode == ReadingKind.Kun.mode.name }
+-            })
++            assertEquals(setOf(ReadingKind.On, ReadingKind.Kun), answeredKinds)
+@@ -360,2 +364,2 @@
+-            await("salary; stipend").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "俸") })
++            await("imitate; emulate").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "倣") })
+@@ -363 +367 @@
+-            assertEquals(emptyList<String>(), card.kunyomi.splitSep())
++            assertEquals(listOf("なら.う"), card.kunyomi.splitSep())
+@@ -367 +371 @@
+-            assertEquals(emptyList<String>(), card.quizKunyomi?.splitSep())
++            assertEquals(listOf("なら.う"), card.quizKunyomi?.splitSep())
+@@ -391 +395 @@
+-                    it.kanji == "俸" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "倣" && it.mode == StudyMode.Draw.name }
+@@ -402 +406 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "俸" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "倣" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -410 +414 @@
+-                .put("soleCuratedOnQuestionAndPersistedGradeNoKun", true)
++                .put("bothCuratedReadingsAndPersistedGoodGrades", true)
+@@ -415,2 +419,2 @@
+-            File(app.getExternalFilesDir(null), "n1-062-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-062-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-063-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-063-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -510 +514 @@
+-        File(app.getExternalFilesDir(null), "n1-062-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-063-$step.png").outputStream().use {
