@@ -37,7 +37,48 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 073: textual review closed; not published
+## Batch 074: source prepared; not drafted
+
+The [source packet](n1-sources/batch-074-progress.json) bounds the next batch
+to **免**, frozen source row 83, after batch 073's verified publication.
+Complete evidence retains **173 lexical /8 comparison /5 support-comparison
+family occurrences**, with **182 distinct complete JMdict families** and
+eight raw KANJIDIC2 character records. These are coordinator source reads,
+not independent review or accepted teaching.
+
+Reuse actual **免許** めんきょ and **免税** めんぜい, preserving their
+easier vocabulary levels, identities and existing exclusions. Propose only
+the necessary native support **免れる**, primary まぬがれる, without
+inferring a vocabulary level. Preserve full source reading order
+**メン /まぬか.れる /まぬが.れる**; practice proposes メン and
+まぬが.れる, not duplicate variant questions for one verb.
+Both native pronunciations are valid: nonselection is not a rarity or
+incorrectness claim. The [public-source record](n1-sources/batch-074-source-evidence.json)
+also preserves JMdict's transitive versus Nikkoku's intransitive classification.
+Teach the actual **unwelcome event を免れる** construction and ichidan forms,
+not an unqualified classification or an absolute 逃れる/免れる division.
+
+The proposed all-mapped link plan has **five pairs/ten directions**,
+including baseline 許 and 税. Three directions already exist; the future
+draft needs both word-to-免 component links, one narrow 許 reciprocal
+example and the new card/support links. The pinned KanjiVG source has
+eight paths matching the dictionary; no geometry has been converted.
+The [preparation audit](n1-sources/batch-074-preparation-audit.json) verifies
+all frozen hashes, unchanged runtime payloads and baseline metadata.
+Its 60 proposed/affected Han are in all three bundled cmaps except 儿;
+cmap evidence is preliminary, not rendering acceptance.
+The future actual draft must be inventoried again, including isolated 儿
+fallback, before its later Android/native/visual gates.
+
+This checkpoint has **zero batch-074 drafted, review-closed or published
+rows**. Published coverage stays **100/1,228 additions; 1,128 remain**:
+1,085 kanji, 5,042 words and 105 N1-labelled cards. The 100 published
+necessary supports are not an N1 vocabulary deck. No runtime content,
+manifest or app code changes here; no reviewer, Android/native check,
+push or batch 075. Compatible Android `f9b59a2+` is required;
+physical-phone, general-release and whole-set acceptance remain outstanding.
+
+## Batch 073: historical textual checkpoint before publication
 
 The [textual reconciliation](n1-reviews/batch-073-reconciliation.json) preserves
 independent blind initial reviews by **Claude Opus 5.5** and **GPT-6.1 Sol**
