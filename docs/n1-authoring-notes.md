@@ -37,7 +37,33 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 065: source preparation only
+## Batch 065: native fixture compiled; execution still pending
+
+[Execution 418](n1-sources/execution-418.json) prepares the exact full signed
+`ee672744` Git archive, version `6a940651167e0e94`: **1,077 kanji, 5,036 words,
+97 N1 cards**. All **8,324 runtime hashes / 8,346 ZIP entries** pass the original
+archive budgets. The separately named fixture compiles with one worker and
+no HOST-only heap init; its APK contains the exact archive and both test classes.
+Temporary Android sources/assets are removed, leaving that worktree clean.
+
+The [preparation record](n1-sources/batch-065-native-preparation.json) audits
+86 static article selectors and eight directed transitions: all three mapped
+reciprocal pairs and the 倹約/倹しい comparison in both directions. Planned checks
+retain full ケン・つま.しい・つづまやか, offer only ケン and つま.しい,
+and exercise meaning, both reading grades, ten reference strokes, recall,
+offline navigation and System Back. Forty-eight individual glyph probes and
+eight word-raster probes cover 倹/儉/険/験/値, radical shapes and both support words.
+Compilation and matching selectors are **not native or visual acceptance**.
+
+The accepted checkpoint-417 Android results remain unchanged, including the
+original permission denial, actual 1-GiB HOST OOM and separately qualified
+HOST-only 2-GiB retry. That init is not used for native builds; guest/app heaps
+and production guards are unchanged. Next is separate native execution with
+fresh device/port ownership, then original-session serial visual confirmations
+and combined-main publication gates. No emulator, reviewer or publication ran
+here. Published coverage remains **91 additions; 1,137 still to deliver**.
+
+### Historical source preparation
 
 The [frozen batch](n1-sources/batch-065-membership.json) selects **倹**, source
 row 62, as one evidence-bounded spelling/reading packet, not a fifteen-card

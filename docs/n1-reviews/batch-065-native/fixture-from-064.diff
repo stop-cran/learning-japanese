@@ -1,0 +1,353 @@
+--- docs/n1-reviews/batch-064-native/N1Batch064NativeTest.kt
++++ docs/n1-reviews/batch-065-native/N1Batch065NativeTest.kt
+@@ -49 +49 @@
+-private fun disposable064() {
++private fun disposable065() {
+@@ -54 +54 @@
+-class N1Batch064GlyphTest {
++class N1Batch065GlyphTest {
+@@ -57,2 +57,2 @@
+-    @Test fun investigationLookalikesAndRadicalVariantsAcrossFourProductionFamilies() {
+-        disposable064()
++    @Test fun frugalityLookalikesOlderFormAndRadicalsAcrossFourProductionFamilies() {
++        disposable065()
+@@ -61 +61 @@
+-        val text = "偵 貞 停 低 値 人 亻 探 手 扌 探偵 刑事"
++        val text = "倹 儉 険 験 値 人 亻 阝 馬 約 糸 勺 倹約 倹しい"
+@@ -65 +65 @@
+-                    Text("Batch 064: investigation / look-alikes / radical variants")
++                    Text("Batch 065: thrift / look-alikes / older form / radicals")
+@@ -70 +70 @@
+-                    Text("Compare 偵 with 貞, 停, 低 and 値. Inspect 人 versus 亻, 手 versus 扌 in 探, and both words 探偵 and 刑事. Shared fallback need not give four different designs.", fontSize = 18.sp)
++                    Text("Compare 倹 with 儉, 険, 験 and 値; inspect 人/亻, 阝, 馬 and 約 with 糸/勺. Read 倹約 and 倹しい. Shared fallback need not give four different designs.", fontSize = 18.sp)
+@@ -81 +81 @@
+-            for (char in listOf("偵", "貞", "停", "低", "値", "人", "亻", "探", "手", "扌")) {
++            for (char in listOf("倹", "儉", "険", "験", "値", "人", "亻", "阝", "馬", "約", "糸", "勺")) {
+@@ -102 +102 @@
+-            for (word in listOf("探偵", "刑事")) {
++            for (word in listOf("倹約", "倹しい")) {
+@@ -129 +129 @@
+-        assertEquals(48, rows.length())
++        assertEquals(56, rows.length())
+@@ -133 +133 @@
+-        File(context.getExternalFilesDir(null), "n1-064-font-pairs.png").outputStream().use {
++        File(context.getExternalFilesDir(null), "n1-065-font-pairs.png").outputStream().use {
+@@ -136 +136 @@
+-        File(context.getExternalFilesDir(null), "n1-064-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-065-font-raster.json").writeText(JSONObject()
+@@ -139,2 +139,2 @@
+-            .put("individualGlyphProbes", 40).put("wholeWordRasterProbes", 8)
+-            .put("limits", "Forty single-character native Paint probes including actual 人/亻 and 手/扌, eight complete-word nonblank raster probes and four production Compose rows; actual 偵/貞/停/低/値/人/亻/探/手/扌/探偵/刑事 readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
++            .put("individualGlyphProbes", 48).put("wholeWordRasterProbes", 8)
++            .put("limits", "Forty-eight single-character native Paint probes including older 儉 and actual 人/亻/阝/馬/糸/勺, eight complete-word nonblank raster probes and four production Compose rows; actual 倹/儉/険/験/値/人/亻/阝/馬/約/糸/勺/倹約/倹しい readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
+@@ -145 +145 @@
+-class N1Batch064ArticleTest {
++class N1Batch065ArticleTest {
+@@ -150,2 +150,2 @@
+-    @Test fun fullSingleImportOfflineInvestigationTwoPairsComparisonOnOnlyDrawingAndSystemBack() {
+-        disposable064()
++    @Test fun fullSingleImportOfflineFrugalityThreePairsBothCuratedReadingsDrawingAndSystemBack() {
++        disposable065()
+@@ -154,2 +154,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-064-${UUID.randomUUID()}", "main")
+-        val head = "bf6204e5b4e4c64f340dcd8db65b2924b869cc45"
++        val source = RepoSource("acceptance-fixture", "n1-065-${UUID.randomUUID()}", "main")
++        val head = "ee672744235275d321b4bfb33a6efe0286444594"
+@@ -163 +163 @@
+-                    instrumentation.context.assets.open("n1-batch-064-bf6204e5-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-065-ee672744-envelope.zip")
+@@ -178,2 +178,2 @@
+-        assertEquals(1076, updated.kanji)
+-        assertEquals(5034, updated.words)
++        assertEquals(1077, updated.kanji)
++        assertEquals(5036, updated.words)
+@@ -182 +182 @@
+-        assertEquals("ae05977ba66f42f5", meta.contentVersion)
++        assertEquals("6a940651167e0e94", meta.contentVersion)
+@@ -190,10 +190,10 @@
+-        assertEquals(96, n1.size)
+-        val investigation = n1.single { it.kanji == "偵" }
+-        assertEquals(listOf("テイ"), investigation.onyomi.splitSep())
+-        assertEquals(emptyList<String>(), investigation.kunyomi.splitSep())
+-        assertNotNull(investigation.quizOnyomi)
+-        assertNotNull(investigation.quizKunyomi)
+-        assertEquals(listOf("テイ"), investigation.quizOnyomi?.splitSep())
+-        assertEquals(emptyList<String>(), investigation.quizKunyomi?.splitSep())
+-        assertEquals(listOf("てい"), investigation.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(emptyList<String>(), investigation.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(97, n1.size)
++        val frugality = n1.single { it.kanji == "倹" }
++        assertEquals(listOf("ケン"), frugality.onyomi.splitSep())
++        assertEquals(listOf("つま.しい", "つづまやか"), frugality.kunyomi.splitSep())
++        assertNotNull(frugality.quizOnyomi)
++        assertNotNull(frugality.quizKunyomi)
++        assertEquals(listOf("ケン"), frugality.quizOnyomi?.splitSep())
++        assertEquals(listOf("つま.しい"), frugality.quizKunyomi?.splitSep())
++        assertEquals(listOf("けん"), frugality.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(listOf("つましい"), frugality.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -213 +213 @@
+-                        if (card.kanji == "偵") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "倹") now - 60_000 else now + 30L * 86_400_000,
+@@ -219 +219 @@
+-                            if (card.kanji == "偵" && (kind == ReadingKind.On && key == "てい")) now - 60_000
++                            if (card.kanji == "倹" && ((kind == ReadingKind.On && key == "けん") || (kind == ReadingKind.Kun && key == "つましい"))) now - 60_000
+@@ -226 +226 @@
+-                    0, source.id, "jlpt-n1", "偵", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "倹", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -236,4 +236,4 @@
+-            .put("fullOnyomi", JSONArray(investigation.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(investigation.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(investigation.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(investigation.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("fullOnyomi", JSONArray(frugality.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(frugality.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(frugality.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(frugality.toReadingCard().quizKeys(ReadingKind.Kun)))
+@@ -242 +242 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 偵 meaning and sole curated on key due; explicit no-kun. Two historical good 偵 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 倹 meaning and both curated reading keys due. Full source-only つづまやか retained, not offered. Two historical good 倹 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -249 +249 @@
+-            await("N1 · 96 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 97 cards").performScrollTo().assertIsDisplayed()
+@@ -252,2 +252,2 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("偵")
+-            click("spy; covert investigation")
++            rule.onNode(hasSetTextAction()).performTextReplacement("倹")
++            click("frugal; thrifty")
+@@ -255 +255 @@
+-            await("no. 9)", substring = true).performScrollTo().assertIsDisplayed()
++            await("as left-hand 亻", substring = true).performScrollTo().assertIsDisplayed()
+@@ -258,4 +258,2 @@
+-            show("偵 concerns finding out hidden information", "kanji-meaning")
+-            show("Learn 偵 through compounds", "kanji-compound-boundary")
+-            show("Modern-shape mnemonic:", "kanji-mnemonic")
+-            show("etymology or an explanation based on 貞's meaning.", "kanji-origin-boundary")
++            show("倹 concerns thrift", "kanji-meaning")
++            show("Modern-shape mnemonic, not etymology:", "kanji-mnemonic")
+@@ -263,2 +261,4 @@
+-            show(readingExample("探偵 たんてい — detective; investigator"), "kanji-on-reading")
+-            show("No kun reading is supplied", "kanji-no-kun")
++            show(readingExample("倹約 けんやく — thrift; frugality"), "kanji-on-reading")
++            show(readingExample("倹しい つましい — frugal; modest in one's living; usually written in kana"), "kanji-kun-reading")
++            show(readingExample("source-only character-dictionary reading associated with frugality or restraint; no verified practical word spelled with 倹 is supplied here"), "kanji-source-only")
++            show("The full source lists and their order are retained.", "kanji-curation-boundary")
+@@ -266,3 +266,3 @@
+-            show(articleBullet("A 探偵 may be a private investigator; 刑事 けいじ specifically names a police detective in its person sense. The shared English word \"detective\" does not make these identical job labels."), "kanji-role-contrast")
+-            show(articleBullet("停, \"halt; stopping,\" shares 亻 and テイ but has a different right side, with a roof-like top and a long lower hook."), "kanji-stop-lookalike")
+-            show(articleBullet("低, \"low,\" and 値, \"value; price,\" also share 亻. Compare the entire right side, not just the radical or a boxed outline."), "kanji-other-lookalikes")
++            show("Compare the similar right-hand shapes", "kanji-lookalikes")
++            show("倹しい is つましい, not つつましい.", "kanji-pronunciation-boundary")
++            show("The older form of 倹 is 儉", "kanji-older-form")
+@@ -270,4 +270,3 @@
+-            show(articleBullet("探偵小説 たんていしょうせつ — detective story"), "kanji-detective-story")
+-            show(articleBullet("偵察 ていさつ — scouting; reconnaissance"), "kanji-reconnaissance")
+-            inline(await(articleBullet("探偵 たんてい — detective; investigator")), "探偵")
+-            await("探偵 (たんてい) - detective; secret investigation")
++            show(articleBullet("倹約家 (けんやくか) — a thrifty person"), "kanji-frugal-person")
++            inline(await(articleBullet("倹約 けんやく — thrift; frugality")), "倹約")
++            await("倹約 (けんやく) — thrift; frugality")
+@@ -275,5 +274,4 @@
+-            show("私立探偵 (しりつたんてい)", "detective-role")
+-            show(articleBullet("探偵に調査を頼みました。 (たんていにちょうさをたのみました。) - I asked a detective to carry out an investigation."), "detective-request-example")
+-            show(articleBullet("探偵小説を読むのが好きです。 (たんていしょうせつをよむのがすきです。) - I like reading detective stories."), "detective-fiction-example")
+-            show("In the first example, に marks the person asked", "detective-particles-and-activity")
+-            show("including the transitive する form 探偵する.", "detective-suru-boundary")
++            show("倹約 means avoiding wasteful spending", "thrift-meaning")
++            show(articleBullet("小遣いを倹約しています。 (こづかいをけんやくしています。) — I am economizing on my spending money."), "thrift-verb-example")
++            show(articleBullet("倹約な生活を送っています。 (けんやくなせいかつをおくっています。) — I lead a frugal life."), "thrift-adjective-example")
++            show("With する, the expenditure being reduced takes を.", "thrift-attachment")
+@@ -281,2 +279,2 @@
+-            show("The on readings are タン + テイ: たんてい.", "detective-components")
+-            inline(await("contributes searching or probing", substring = true), "偵")
++            show("The on readings combine as ケン + ヤク: けんやく.", "thrift-reading-allocation")
++            inline(await("contributes reduction or restraint here.", substring = true), "倹")
+@@ -285,8 +283,8 @@
+-            show(readingExample("探偵 たんてい — detective; investigator"), "detective-backlink")
+-            back()
+-            await("contributes searching or probing", substring = true).assertIsDisplayed()
+-            capture("system-back-detective")
+-            inline(await("contributes searching or probing", substring = true), "探")
+-            await("探 — search")
+-            await("no. 64)", substring = true).performScrollTo().assertIsDisplayed()
+-            capture("search-radical")
++            show(readingExample("倹約 けんやく — thrift; frugality"), "thrift-person-backlink")
++            back()
++            await("contributes reduction or restraint here.", substring = true).assertIsDisplayed()
++            capture("system-back-thrift-person")
++            inline(await("contributes reduction or restraint here.", substring = true), "約")
++            await("Article contents")
++            await("Key (radical):", substring = true).performScrollTo().assertIsDisplayed()
++            capture("agreement-radical")
+@@ -294,2 +292,2 @@
+-            show("Searching does not itself say that the thing has been found.", "search-meaning")
+-            show("imagine the hand-side 扌 searching", "search-mnemonic")
++            show("約 has two particularly useful jobs", "agreement-two-uses")
++            show("This recalls the promise meaning only", "agreement-mnemonic")
+@@ -297,3 +295,3 @@
+-            show("The examples select the two kun readings", "search-on-boundary")
+-            show(readingExample("探す さがす — look for; seek"), "search-reading-sagasu")
+-            show(readingExample("探る さぐる — feel around; investigate"), "search-reading-saguru")
++            show(readingExample("約束 やくそく — promise; 予約 よやく — reservation"), "agreement-on-reading")
++            show(readingExample("約 やく — approximately"), "agreement-approximate-reading")
++            show("The source's kun readings remain", "agreement-source-boundary")
+@@ -301,2 +299,2 @@
+-            show("this is a spelling tendency, not an absolute separation.", "search-spelling-boundary")
+-            show("Their right sides are different:", "search-lookalikes")
++            show("約束を守る", "agreement-promise-example")
++            show("Identify 約 by its relatively simple 勺", "agreement-lookalikes")
+@@ -304,4 +302,5 @@
+-            show(articleBullet("探す さがす — search for"), "search-common-sagasu")
+-            show(articleBullet("探る さぐる — feel around for; probe"), "search-common-saguru")
+-            inline(await(articleBullet("探偵 たんてい — detective; investigator (探 is タン here)")), "探偵")
+-            await("探偵 (たんてい) - detective; secret investigation")
++            show(articleBullet("約束 やくそく — promise; arrangement"), "agreement-common-promise")
++            show(articleBullet("予約 よやく — reservation; booking"), "agreement-common-reservation")
++            show(articleBullet("約 やく — about; approximately, before a quantity"), "agreement-common-approximation")
++            inline(await(articleBullet("倹約 けんやく — thrift; frugality")), "倹約")
++            await("倹約 (けんやく) — thrift; frugality")
+@@ -309,6 +308,6 @@
+-            show("The on readings are タン + テイ: たんてい.", "search-backlink")
+-            back()
+-            await(articleBullet("探偵 たんてい — detective; investigator (探 is タン here)")).assertIsDisplayed()
+-            capture("system-back-search")
+-            back()
+-            await("contributes searching or probing", substring = true).assertIsDisplayed()
++            show("The on readings combine as ケン + ヤク: けんやく.", "thrift-agreement-backlink")
++            back()
++            await(articleBullet("倹約 けんやく — thrift; frugality")).assertIsDisplayed()
++            capture("system-back-agreement")
++            back()
++            await("contributes reduction or restraint here.", substring = true).assertIsDisplayed()
+@@ -316,5 +315,7 @@
+-            show("not a rule that every occurrence of 探偵 excludes police.", "detective-police-boundary")
+-            show("None of these three by itself names the detective.", "detective-other-words")
+-            show("There is no single useful antonym", "detective-antonym-boundary")
+-            inline(await("not a rule that every occurrence of 探偵 excludes police.", substring = true), "刑事")
+-            await("刑事 (けいじ) - police detective; criminal matters")
++            show("節約 also readily describes saving electricity or time", "thrift-conservation-boundary")
++            show("spending less does not guarantee that the difference is saved.", "thrift-saving-boundary")
++            section("Distinctive meaning")
++            show("倹約 does not inherently call someone a miser.", "thrift-stinginess-boundary")
++            show("neither is an unrestricted replacement for the other.", "thrift-economy-boundary")
++            inline(await("describes frugal or modest living as an い-adjective.", substring = true), "倹しい")
++            await("倹しい (つましい) — frugal; modest in one's living")
+@@ -322,4 +323,4 @@
+-            show("刑事 has two related uses:", "police-two-senses")
+-            show(articleBullet("刑事が目撃者に話を聞いています。 (けいじがもくげきしゃにはなしをきいています。) - A detective is talking to a witness."), "police-witness-example")
+-            show(articleBullet("これは刑事事件です。 (これはけいじじけんです。) - This is a criminal case."), "police-criminal-case-example")
+-            show("it does not mean \"a detective's incident.\"", "police-legal-boundary")
++            show("つましい describes living without extravagance", "modest-meaning-spelling")
++            show(articleBullet("二人はつましい暮らしをしています。 (ふたりはつましいくらしをしています。) — The two of them lead a modest life."), "modest-living-example")
++            show(articleBullet("私たちの生活はつましいですが、満足しています。 (わたしたちのせいかつはつましいですが、まんぞくしています。) — Our life is modest, but we are content."), "modest-content-example")
++            show("It is an い-adjective:", "modest-attachment")
+@@ -327 +328,24 @@
+-            show("刑 contributes criminal punishment", "police-components")
++            show("supplies つま, with しい as the written ending", "modest-reading-boundary")
++            show("JMdict also recognizes 約しい", "modest-spelling-flag")
++            inline(await("supplies つま, with しい as the written ending", substring = true), "倹")
++            await("Article contents")
++            section("Common words")
++            inline(await(articleBullet("倹しい つましい — frugal; modest in one's living; usually written つましい")), "倹しい")
++            await("倹しい (つましい) — frugal; modest in one's living")
++            section("How the kanji combine")
++            show("supplies つま, with しい as the written ending", "modest-person-backlink")
++            back()
++            await(articleBullet("倹しい つましい — frugal; modest in one's living; usually written つましい")).assertIsDisplayed()
++            capture("system-back-person-modest")
++            back()
++            await("supplies つま, with しい as the written ending", substring = true).assertIsDisplayed()
++            section("Synonyms and antonyms")
++            show("Compare 倹約する", "modest-thrift-contrast")
++            show("Do not manufacture a strict behavior-versus-lifestyle split", "modest-pronunciation-overlap")
++            inline(await("Compare 倹約する", substring = true), "倹約")
++            await("倹約 (けんやく) — thrift; frugality")
++            section("Meaning")
++            show("With する, the expenditure being reduced takes を.", "modest-thrift-backlink")
++            back()
++            await("Compare 倹約する", substring = true).assertIsDisplayed()
++            capture("system-back-modest-thrift")
+@@ -329,15 +353,4 @@
+-            show("Neither use means \"criminal\" as a noun naming the person", "police-criminal-person-boundary")
+-            section("Synonyms and antonyms")
+-            show("it is not an opposite kind of police officer.", "police-role-comparison")
+-            inline(await("it is not an opposite kind of police officer.", substring = true), "探偵")
+-            await("探偵 (たんてい) - detective; secret investigation")
+-            section("Synonyms and antonyms")
+-            show("not a rule that every occurrence of 探偵 excludes police.", "police-comparison-backlink")
+-            back()
+-            await("it is not an opposite kind of police officer.", substring = true).assertIsDisplayed()
+-            capture("system-back-police")
+-            back()
+-            await("not a rule that every occurrence of 探偵 excludes police.", substring = true).assertIsDisplayed()
+-            section("Distinctive meaning")
+-            show("English \"detective\" can describe a police officer", "detective-role-summary")
+-            show("The compound alone does not say that an investigation succeeds.", "detective-success-boundary")
++            show("つましい does not itself say", "modest-judgment-boundary")
++            show("Nor does つましい mean", "modest-simple-boundary")
++            back()
++            await("describes frugal or modest living as an い-adjective.", substring = true).assertIsDisplayed()
+@@ -354 +367 @@
+-            assertEquals("偵", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("倹", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -356 +369 @@
+-            click("spy; covert investigation")
++            click("frugal; thrifty")
+@@ -358 +371 @@
+-            assertEquals("偵", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("倹", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -364 +377 @@
+-            repeat(1) {
++            repeat(2) {
+@@ -368 +381 @@
+-                assertEquals("偵", question.card.kanji)
++                assertEquals("倹", question.card.kanji)
+@@ -370,2 +383 @@
+-                assertEquals(ReadingKind.On, question.question.kind)
+-                val key = "てい"
++                val key = if (question.question.kind == ReadingKind.On) "けん" else "つましい"
+@@ -382 +394 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "偵" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "倹" &&
+@@ -386 +398 @@
+-            assertEquals(setOf(ReadingKind.On), answeredKinds)
++            assertEquals(setOf(ReadingKind.On, ReadingKind.Kun), answeredKinds)
+@@ -389 +401 @@
+-                    it.kanji == "偵" && it.mode == ReadingKind.Kun.mode.name }
++                    it.kanji == "倹" && it.mode == ReadingKind.Kun.mode.name && it.reading == "つづまやか" }
+@@ -395,4 +407,4 @@
+-            await("spy; covert investigation").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "偵") })
+-            assertEquals(listOf("テイ"), card.onyomi.splitSep())
+-            assertEquals(emptyList<String>(), card.kunyomi.splitSep())
++            await("frugal; thrifty").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "倹") })
++            assertEquals(listOf("ケン"), card.onyomi.splitSep())
++            assertEquals(listOf("つま.しい", "つづまやか"), card.kunyomi.splitSep())
+@@ -401,2 +413,2 @@
+-            assertEquals(listOf("テイ"), card.quizOnyomi?.splitSep())
+-            assertEquals(emptyList<String>(), card.quizKunyomi?.splitSep())
++            assertEquals(listOf("ケン"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("つま.しい"), card.quizKunyomi?.splitSep())
+@@ -404 +416 @@
+-            assertEquals(11, strokes.length())
++            assertEquals(10, strokes.length())
+@@ -421 +433 @@
+-            rule.onNode(hasContentDescription("11 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("10 strokes drawn", substring = true)).assertExists()
+@@ -426 +438 @@
+-                    it.kanji == "偵" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "倹" && it.mode == StudyMode.Draw.name }
+@@ -437 +449 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "偵" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "倹" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -445 +457 @@
+-                .put("soleCuratedOnQuestionAndPersistedGradeNoKun", true)
++                .put("bothCuratedReadingsAndPersistedGrades", true)
+@@ -450,2 +462,2 @@
+-            File(app.getExternalFilesDir(null), "n1-064-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-064-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-065-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-065-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -545 +557 @@
+-        File(app.getExternalFilesDir(null), "n1-064-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-065-$step.png").outputStream().use {
