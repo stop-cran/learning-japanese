@@ -37,6 +37,32 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 066: source prepared; no runtime draft
+
+The [frozen batch](n1-sources/batch-066-membership.json) selects **僚**, source
+row 75. Its [source ledger](n1-sources/batch-066-progress.json) records
+**40 complete applicable JMdict families and seven comparison families**,
+six raw character records and ten actual existing articles inspected by the
+coordinator. [Public-entry evidence](n1-sources/batch-066-source-evidence.json)
+distinguishes returned definitions from gaiji-dependent history, attribution-only
+sections and later truncated encyclopedic material.
+
+Preserve full **リョウ** and the empty kun list. Proposed practice reuses
+**同僚（どうりょう）**, retaining its sourced **N3** word level and identity;
+no new support article or N1 vocabulary level is necessary. Work association
+does not require personal friendship or an absolute equal-rank rule.
+The official sense, as in 官僚（かんりょう）, also remains visible in the
+source disposition. Dictionary recognition does not establish a frequency
+ranking, and specialized staff/organization families are not a support quota.
+
+The next draft needs the missing 僚 component link in 同僚 and the existing
+同 card's compound backlink: **two mapped pairs in four directions**, including
+the reused kanji. The exact pinned SVG has been downloaded and inspected;
+fourteen source paths agree with KANJIDIC2, but geometry has not been generated.
+Final quiz/fallback, font, independent review and Android/native acceptance
+remain pending. No runtime content changed and nothing from batch 066 is
+published. Coverage remains **92 additions; 1,136 still to deliver**.
+
 ## Batch 065: published for bounded owner testing
 
 [Batch 065](n1-sources/batch-065-publication.json), **倹**, adds necessary
