@@ -37,7 +37,28 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 058: combined-tree acceptance
+## Batch 058: published for bounded owner testing
+
+The [publication record](n1-sources/batch-058-publication.json) records normal
+signed fast-forward publication of **丘**, one necessary **砂丘（さきゅう）**
+support article and three narrowly changed reused articles at
+`f6d192dba8862a4cb9097410ff630c2ee74aa55e`. Exact-SHA CI
+[41948701571](https://github.com/stop-cran/learning-japanese/actions/runs/41948701571)
+passed. The immutable public ZIP matches every **8,303 runtime hashes** and
+the generated manifest, contentVersion `5e8f3e7e39ea187a`: **8,325 entries**,
+30,645,238 compressed / 44,253,753 inflated / 43,985,415 retained bytes.
+All original budgets and per-file/path checks pass; contributor evidence
+remains in Git and outside the app archive.
+
+Published coverage is now **85/1,228 additions; 1,143 remain**. Current content
+contains **1,070 kanji / 5,029 words / 90 N1-labelled cards**, including 89
+named-source members and the separate 妖 exception. The 87 added words are
+necessary kanji support, not delivery of the deferred N1 vocabulary deck.
+Android `f9b59a2+` is required. Physical-phone, general-release and whole-set
+acceptance remain outstanding; original review-process limitations are not
+relabelled as compliant. Batch059 has not started.
+
+### Combined-tree acceptance
 
 The [execution 349 audit](n1-sources/batch-058-acceptance-audit.json) records a
 fresh fetch and normal merge of current main `c064f0c7` (already ancestral;
@@ -55,8 +76,10 @@ Android **3+1** results, both execution347 terminal native cases and all
 work. Initial Claude process noncompliance remains explicit; bounded remediation
 does not retroactively satisfy that initial contract. The visual, drawing,
 phone and whole-set limitations below remain unchanged. This local acceptance
-still requires normal signing, owner fast-forward publication, green exact-SHA
-CI and every immutable public ZIP runtime hash before delivery or batch059.
+required normal signing, owner fast-forward publication, green exact-SHA CI
+and every immutable public ZIP runtime hash; the publication record above
+supplies those receipts, followed by a separately verified terminal evidence
+commit.
 
 ### Bounded original-session native visuals reconciled
 
@@ -90,11 +113,11 @@ remain outstanding. Initial Claude's three overlapping tool starts remain
 historical noncompliance; the zero-overlap dependent reviews do not retroactively
 certify the initial process contract.
 
-This is a signed **local evidence checkpoint**, not runtime publication.
+Execution348 was a signed **local evidence checkpoint**, not runtime publication.
 Accepted execution345 Android and execution347 native results were not rerun.
-**Next SAME058:** latest-main integration, all combined-tree acceptance and
+**Then-next SAME058:** latest-main integration, all combined-tree acceptance and
 normal signing/owner push/green CI/every immutable public ZIP runtime-hash gates
-before delivery or batch059. Published coverage remains **84/1,228; 1,144
+before delivery or batch059. Published coverage then remained **84/1,228; 1,144
 remaining**, with compatible Android `f9b59a2+` required.
 
 ### Native assertion checkpoint (execution 347)
