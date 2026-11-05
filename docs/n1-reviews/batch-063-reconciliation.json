@@ -1,0 +1,557 @@
+{
+  "schemaVersion": 1,
+  "execution": 392,
+  "batch": "063",
+  "status": "textual-review-closed-awaiting-fresh-android",
+  "reviewedTeachingSnapshot": "ddad655f71c06e7cb2c749de18596863a800a73d",
+  "teachingChanged": false,
+  "reviewClosed": true,
+  "textualReviewClosed": true,
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "strictInitialProcessContractAccepted": false,
+  "originalInitialReview": "batch-063-initial-review-checkpoint.json",
+  "originalInitialReviewSha256": "60d799983d410c0b99c0894baec6c0ffb6d440214aea2a833977db54aaf58225",
+  "initialModels": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "initialProcessCalls": [
+    58,
+    57
+  ],
+  "initialHistoricalOverlaps": [
+    1,
+    0
+  ],
+  "initialHistoricalMultiToolResponses": [
+    1,
+    0
+  ],
+  "initialReportsAndExecutionsUnmodified": true,
+  "dependentOriginalSession": "80bc3198-c572-419d-b7a1-2df6ec8475c5",
+  "dependentTurns": [
+    {
+      "launcherPid": 6408,
+      "startedAt": "2026-11-05T07:39:10.0962147+01:00",
+      "sessionId": "80bc3198-c572-419d-b7a1-2df6ec8475c5",
+      "snapshot": "ddad655f71c06e7cb2c749de18596863a800a73d",
+      "completedAt": "2026-11-05T07:39:35.2127929+01:00",
+      "exitCode": 0,
+      "requestedModel": "claude-opus-5.5",
+      "teachingSnapshot": "ddad655f71c06e7cb2c749de18596863a800a73d",
+      "dependentNotBlind": true,
+      "actualModels": [
+        "claude-opus-5.5"
+      ],
+      "usageCurrentModel": "claude-opus-5.5",
+      "availableTools": [
+        "view"
+      ],
+      "toolCalls": [
+        {
+          "name": "view",
+          "arguments": {
+            "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-063-jmdict.xml",
+            "view_range": [
+              1,
+              140
+            ]
+          },
+          "startedAt": "2026-11-05T06:39:15.739Z",
+          "completedAt": "2026-11-05T06:39:15.752Z",
+          "success": true,
+          "returnedCharacters": 3467,
+          "returnedLines": 140,
+          "returnedSha256": "69a1a071bcd66affd5afb8999ed1f0629a15bae1a477eecb24ad441666f42aee",
+          "exactRequestedTextContainedInResult": true,
+          "truncationOrLimitMarker": false
+        }
+      ],
+      "multiToolResponses": [],
+      "observedToolOverlaps": [],
+      "unfinishedTools": [],
+      "reportSha256": "6d51ec41b43cca9bc3571d69f319dd73466ebc804dd33927463fd090bf894cf7",
+      "rawExecutionSha256": "c923b1b65e1c21b9ec0f679b1d1b4ed9853290ea56bf05fce862fddedf236c40",
+      "rawExecutionLocation": "Sibling control/batch-063-dependent-claude-turn1.jsonl",
+      "promptSha256": "80b51ba6b5a3e0f8230765d7684816813ab3c9afe3521bc900cf1240d4e48a35",
+      "configurationEvidence": [
+        {
+          "infoType": "configuration",
+          "message": "Disabled tools: create, dynamic_workflows_manage, edit, fetch_copilot_cli_documentation, glob, grep, list_agents, list_powershell, powershell, read_agent, read_powershell, run_dynamic_workflow, semantic_code_search, session_store_sql, skill, sql, stop_powershell, task, web_fetch, write_agent"
+        },
+        {
+          "model": "claude-opus-5.5"
+        }
+      ],
+      "usage": {
+        "totalPremiumRequestCost": 30,
+        "totalUserRequests": 2,
+        "totalNanoAiu": 223072200000,
+        "aiCreditsStatus": "complete",
+        "tokenDetails": {
+          "input": {
+            "tokenCount": 126
+          },
+          "cache_read": {
+            "tokenCount": 3741915
+          },
+          "cache_write": {
+            "tokenCount": 222471
+          },
+          "output": {
+            "tokenCount": 18474
+          }
+        },
+        "totalApiDurationMs": 209293,
+        "sessionStartTime": "2026-11-05T06:28:54.908Z",
+        "codeChanges": {
+          "linesAdded": 0,
+          "linesRemoved": 0,
+          "filesModifiedCount": 0,
+          "filesModified": []
+        },
+        "modelMetrics": {
+          "claude-opus-5.5": {
+            "requests": {
+              "count": 60,
+              "cost": 30
+            },
+            "usage": {
+              "inputTokens": 3964512,
+              "outputTokens": 18474,
+              "cacheReadTokens": 3741915,
+              "cacheWriteTokens": 222471,
+              "reasoningTokens": 6992
+            },
+            "cacheExpiresAt": "2026-11-05T06:44:15.775Z",
+            "totalNanoAiu": 223072200000,
+            "aiCreditsStatus": "complete",
+            "tokenDetails": {
+              "input": {
+                "tokenCount": 126
+              },
+              "cache_read": {
+                "tokenCount": 3741915
+              },
+              "cache_write": {
+                "tokenCount": 222471
+              },
+              "output": {
+                "tokenCount": 18474
+              }
+            }
+          }
+        },
+        "agentMetrics": {
+          "main": {
+            "totalApiDurationMs": 209293,
+            "totalNanoAiu": 223072200000,
+            "modelMetrics": {
+              "claude-opus-5.5": {
+                "requests": {
+                  "count": 60,
+                  "cost": 30
+                },
+                "usage": {
+                  "inputTokens": 3964512,
+                  "outputTokens": 18474,
+                  "cacheReadTokens": 3741915,
+                  "cacheWriteTokens": 222471,
+                  "reasoningTokens": 6992
+                },
+                "totalNanoAiu": 223072200000,
+                "tokenDetails": {
+                  "input": {
+                    "tokenCount": 126
+                  },
+                  "cache_read": {
+                    "tokenCount": 3741915
+                  },
+                  "cache_write": {
+                    "tokenCount": 222471
+                  },
+                  "output": {
+                    "tokenCount": 18474
+                  }
+                }
+              }
+            }
+          }
+        },
+        "providerModelMetrics": [
+          {
+            "provider": {
+              "id": "copilot",
+              "label": "GitHub Copilot",
+              "kind": "copilot"
+            },
+            "modelId": "claude-opus-5.5",
+            "metrics": {
+              "requests": {
+                "count": 60,
+                "cost": 30
+              },
+              "usage": {
+                "inputTokens": 3964512,
+                "outputTokens": 18474,
+                "cacheReadTokens": 3741915,
+                "cacheWriteTokens": 222471,
+                "reasoningTokens": 6992
+              },
+              "totalNanoAiu": 223072200000,
+              "aiCreditsStatus": "complete",
+              "tokenDetails": {
+                "input": {
+                  "tokenCount": 126
+                },
+                "cache_read": {
+                  "tokenCount": 3741915
+                },
+                "cache_write": {
+                  "tokenCount": 222471
+                },
+                "output": {
+                  "tokenCount": 18474
+                }
+              }
+            },
+            "modelDisplayName": "Claude Opus 5.5"
+          }
+        ],
+        "currentModel": "claude-opus-5.5",
+        "lastCallInputTokens": 115293,
+        "lastCallOutputTokens": 1689
+      },
+      "limits": "Original final report retained without editorial changes. One exact source range freshly returned in this dependent turn; other original evidence retained, not freshly reread. Returned bytes do not certify comprehension. Initial063-P1 is not erased."
+    },
+    {
+      "snapshot": "ddad655f71c06e7cb2c749de18596863a800a73d",
+      "sessionId": "80bc3198-c572-419d-b7a1-2df6ec8475c5",
+      "startedAt": "2026-11-05T07:39:41.1206874+01:00",
+      "launcherPid": 25892,
+      "requestedModel": "claude-opus-5.5",
+      "exitCode": 0,
+      "completedAt": "2026-11-05T07:40:05.8586657+01:00",
+      "teachingSnapshot": "ddad655f71c06e7cb2c749de18596863a800a73d",
+      "dependentNotBlind": true,
+      "actualModels": [
+        "claude-opus-5.5"
+      ],
+      "usageCurrentModel": "claude-opus-5.5",
+      "availableTools": [
+        "view"
+      ],
+      "toolCalls": [
+        {
+          "name": "view",
+          "arguments": {
+            "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-063-jmdict.xml",
+            "view_range": [
+              141,
+              258
+            ]
+          },
+          "startedAt": "2026-11-05T06:39:46.379Z",
+          "completedAt": "2026-11-05T06:39:46.391Z",
+          "success": true,
+          "returnedCharacters": 3078,
+          "returnedLines": 118,
+          "returnedSha256": "f201797f55e6b68b26f170a673919f55c153ebe2f9710eaac6fa843c51a592ed",
+          "exactRequestedTextContainedInResult": true,
+          "truncationOrLimitMarker": false
+        }
+      ],
+      "multiToolResponses": [],
+      "observedToolOverlaps": [],
+      "unfinishedTools": [],
+      "reportSha256": "cf3e819d69ebf7b1d6eb30c2cdb1b0eb86928a87d1e8aa9e12bf9d8faf399573",
+      "rawExecutionSha256": "cac4d1fcd2c54acf95dfbdab945a6ca67c8b25ca7d2030dd78ffb8a6693a5560",
+      "rawExecutionLocation": "Sibling control/batch-063-dependent-claude-turn2.jsonl",
+      "promptSha256": "03f6d17fe559f93a483f693d6eeeac3ad27eccf271baee52671021750d6c9f0e",
+      "configurationEvidence": [
+        {
+          "infoType": "configuration",
+          "message": "Disabled tools: create, dynamic_workflows_manage, edit, fetch_copilot_cli_documentation, glob, grep, list_agents, list_powershell, powershell, read_agent, read_powershell, run_dynamic_workflow, semantic_code_search, session_store_sql, skill, sql, stop_powershell, task, web_fetch, write_agent"
+        },
+        {
+          "model": "claude-opus-5.5"
+        }
+      ],
+      "usage": {
+        "totalPremiumRequestCost": 45,
+        "totalUserRequests": 3,
+        "totalNanoAiu": 236712920000,
+        "aiCreditsStatus": "complete",
+        "tokenDetails": {
+          "input": {
+            "tokenCount": 132
+          },
+          "cache_read": {
+            "tokenCount": 3980256
+          },
+          "cache_write": {
+            "tokenCount": 232018
+          },
+          "output": {
+            "tokenCount": 20523
+          }
+        },
+        "totalApiDurationMs": 229176,
+        "sessionStartTime": "2026-11-05T06:28:54.908Z",
+        "codeChanges": {
+          "linesAdded": 0,
+          "linesRemoved": 0,
+          "filesModifiedCount": 0,
+          "filesModified": []
+        },
+        "modelMetrics": {
+          "claude-opus-5.5": {
+            "requests": {
+              "count": 62,
+              "cost": 45
+            },
+            "usage": {
+              "inputTokens": 4212406,
+              "outputTokens": 20523,
+              "cacheReadTokens": 3980256,
+              "cacheWriteTokens": 232018,
+              "reasoningTokens": 7358
+            },
+            "cacheExpiresAt": "2026-11-05T06:44:46.409Z",
+            "totalNanoAiu": 236712920000,
+            "aiCreditsStatus": "complete",
+            "tokenDetails": {
+              "input": {
+                "tokenCount": 132
+              },
+              "cache_read": {
+                "tokenCount": 3980256
+              },
+              "cache_write": {
+                "tokenCount": 232018
+              },
+              "output": {
+                "tokenCount": 20523
+              }
+            }
+          }
+        },
+        "agentMetrics": {
+          "main": {
+            "totalApiDurationMs": 229176,
+            "totalNanoAiu": 236712920000,
+            "modelMetrics": {
+              "claude-opus-5.5": {
+                "requests": {
+                  "count": 62,
+                  "cost": 45
+                },
+                "usage": {
+                  "inputTokens": 4212406,
+                  "outputTokens": 20523,
+                  "cacheReadTokens": 3980256,
+                  "cacheWriteTokens": 232018,
+                  "reasoningTokens": 7358
+                },
+                "totalNanoAiu": 236712920000,
+                "tokenDetails": {
+                  "input": {
+                    "tokenCount": 132
+                  },
+                  "cache_read": {
+                    "tokenCount": 3980256
+                  },
+                  "cache_write": {
+                    "tokenCount": 232018
+                  },
+                  "output": {
+                    "tokenCount": 20523
+                  }
+                }
+              }
+            }
+          }
+        },
+        "providerModelMetrics": [
+          {
+            "provider": {
+              "id": "copilot",
+              "label": "GitHub Copilot",
+              "kind": "copilot"
+            },
+            "modelId": "claude-opus-5.5",
+            "metrics": {
+              "requests": {
+                "count": 62,
+                "cost": 45
+              },
+              "usage": {
+                "inputTokens": 4212406,
+                "outputTokens": 20523,
+                "cacheReadTokens": 3980256,
+                "cacheWriteTokens": 232018,
+                "reasoningTokens": 7358
+              },
+              "totalNanoAiu": 236712920000,
+              "aiCreditsStatus": "complete",
+              "tokenDetails": {
+                "input": {
+                  "tokenCount": 132
+                },
+                "cache_read": {
+                  "tokenCount": 3980256
+                },
+                "cache_write": {
+                  "tokenCount": 232018
+                },
+                "output": {
+                  "tokenCount": 20523
+                }
+              }
+            },
+            "modelDisplayName": "Claude Opus 5.5"
+          }
+        ],
+        "currentModel": "claude-opus-5.5",
+        "lastCallInputTokens": 124840,
+        "lastCallOutputTokens": 1928
+      },
+      "limits": "Original final report retained without editorial changes. One exact source range freshly returned in this dependent turn; other original evidence retained, not freshly reread. Returned bytes do not certify comprehension. Initial063-P1 is not erased.",
+      "priorProcessExitAndCompleteArchiveBeforeLaunch": true
+    }
+  ],
+  "serialProcessExitAndCompleteArchiveBeforeNextLaunch": true,
+  "verdicts": {
+    "kanji/倣.md:complete": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "words/模倣.md:complete": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "words/倣う.md:changed line29 and coupled context": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    }
+  },
+  "verdictProvenance": "Two independent initial model families on identical frozen teaching; original Claude confirms unchanged conclusions in two bounded dependent turns. Eleven lexical families freshly reread, not the whole dossier. GPT initial remains independent and was not repeated.",
+  "findings": [],
+  "processFindings": [
+    {
+      "id": "063-P1",
+      "status": "resolved",
+      "kind": "reviewer-internal-serialization",
+      "origin": "initial-claude",
+      "evidence": [
+        {
+          "messageId": "57bb5773-4a85-41a0-a766-a6f4dd3061e6",
+          "requests": [
+            {
+              "toolCallId": "toolu_01J2gvtTo8PkYA55GSggXAKK",
+              "name": "view",
+              "arguments": {
+                "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-063-jmdict.xml",
+                "view_range": [
+                  1,
+                  140
+                ]
+              },
+              "type": "function",
+              "intentionSummary": "view the file at C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-063-jmdict.xml.",
+              "toolTitle": "Viewing file"
+            },
+            {
+              "toolCallId": "toolu_01WHTM1uyhYDcqsx4xf1GYr7",
+              "name": "view",
+              "arguments": {
+                "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-063-jmdict.xml",
+                "view_range": [
+                  141,
+                  258
+                ]
+              },
+              "type": "function",
+              "intentionSummary": "view the file at C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-sources\\batch-063-jmdict.xml.",
+              "toolTitle": "Viewing file"
+            }
+          ]
+        }
+      ],
+      "impact": "One response requested lexical XML1-140 and141-258 together, producing one overlapping start. Complete returns do not satisfy the strict serialization contract.",
+      "remedy": "Two dependent original-session supervised single-range turns with process exit/archive between turns. Preserve original violation; no retroactive strict initial acceptance.",
+      "confidence": "High; actual raw event audit and reviewer self-disclosure.",
+      "historicalViolationPreserved": true,
+      "retroactiveStrictCompliance": false,
+      "resolution": "Two supervised original-session dependent processes each made exactly one successful complete view of the original lexical ranges1-140 and141-258, exited0 and were fully archived before the next process. Retained teaching conclusions confirmed unchanged. Initial one-response/two-view/one-overlap violation remains historical."
+    }
+  ],
+  "optional": [
+    {
+      "id": "063-O1",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Add historical phonetic analysis for 放.",
+      "disposition": "Not adopted. Current explicitly modern-shape mnemonic/structure-unclassified does not deny a historical phonetic analysis; unreconciled gaiji/historical evidence and SVG annotation are not a reason to expand this lesson."
+    },
+    {
+      "id": "063-O2",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Add a 俸 look-alike note.",
+      "disposition": "Not adopted. Existing three relevant shape contrasts are correct and sufficient. No demonstrated learner-impact omission or quiz ambiguity."
+    },
+    {
+      "id": "063-O3",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Mention 倣う/習う shared origin.",
+      "disposition": "Not adopted. Current practical contrast does not assert unrelated origins; historical expansion is not needed to explain the different modern constructions."
+    },
+    {
+      "id": "063-O4",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Mention rare spelling 摸倣.",
+      "disposition": "Not adopted. Selected 模倣/もほう identity is accurate, and the complete rare-spelling evidence is retained. No requirement to teach every dictionary alternative."
+    },
+    {
+      "id": "063-O5",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Link existing 真似 article's incidental 模倣 mention.",
+      "disposition": "Not adopted. Unchanged incidental word mention is not a mapped word-to-kanji pair; both required reciprocal pairs/four directed links exist. Avoid unrelated baseline rewriting."
+    },
+    {
+      "id": "063-O6",
+      "origin": "dependent-claude-turn2",
+      "status": "optional",
+      "claim": "Add 模倣品 or 模倣犯 as an example of a critical context.",
+      "disposition": "Not adopted. Current useful/practice/entertainment/criticism explanation is qualified and correct; selected source senses do not require an additional compound or support article."
+    }
+  ],
+  "sourceReconciliation": {
+    "range1": "Complete1533700 supports 模倣/もほう transitiveする and rare摸倣; partial1599680 confirmsならう and rare傚う/慣らう. Usually-kana completion explicitly deferred, not inferred.",
+    "range2": "Completion1599680 verifies usually-kana flag and imitation/emulation sense;1889380 directly supports前例に倣う. Remaining restricted/irregular/search-only compounds neither contradict teaching nor create metadata readings.",
+    "allocationQualification": "JMdict whole-word identity alone does not establish per-kanji allocation. Retained six KANJIDIC2 records, actual Daijisen readings and individual linked examples establish ホウ/なら.う; retained raw模record givesモ.",
+    "teachingAndQuiz": "No new substantive defect. Two reciprocal pairs/four directed links and eight direct exclusions retained; named default-four-choice surfaces only, not larger/random/live pools."
+  },
+  "sourceLookupLimits": "Both freshly retrieved the same three Kotobank pages. Frozen complete XML is supplied evidence. Actual Daijisen 倣/倣う and Seisenban 模倣 definitions support the teaching. Attribution-only Daijisen/Jitsu/Britannica 模倣 headings are not verified definitions. Historical gaiji/additional readings not adopted. All exact lookup arguments/return markers retained in execution records.",
+  "freshValidation": "Both dependent model/report/raw/exact-one-tool/range/content/hash/process-exit/archival-order audits; original initial reports/executions/coverage unchanged against HEAD; all40 original assigned-resource hashes and exact runtime equality. No teaching/tool-code edit or test rerun.",
+  "inheritedSourceAudit": {
+    "path": "docs/n1-sources/batch-063-draft-audit.json",
+    "sha256": "ed7fad084e37e5e9030fbbee1f84e33830de71e796883f543ebe54f5e6deb351"
+  },
+  "usageQualification": "Resumed-session usage files contain cumulative original-session metrics, not isolated turn costs.",
+  "operationalObservations": [
+    "Initial whole request output exceeded tool return limit; entire bytes subsequently acquired and complete embedded checkpoint parsed, with operative text/final checkpoint inspected in bounded ranges. Historical middle not freshly semantically re-reviewed.",
+    "Initial live progress display hit local cp1252 UnicodeEncodeError; later utf-8 display and complete JSON parse succeeded. No permission failure or data change.",
+    "One guessed helper execution-391.py was absent; exact existing prepare/checkpoint helpers then inspected. Initial issue range request beyond EOF returned no evidence; final lines119-129 subsequently inspected."
+  ],
+  "nextAction": "SAME063 fresh Android RealContentTest3 and RareHanTest1 against dedicated sibling content, then archive exact fresh XML/provenance and normally signed local checkpoint. Teaching remains ddad655f71c06e7cb2c749de18596863a800a73d and is textually review-closed: original actual claude-opus-5.5/gpt-6.1-sol independent initials plus two separately exiting supervised original-Claude dependent turns, each exactly ONE view of lexicalXML1-140 then141-258, exit0 and complete archive before next launch. Historical063-P1 one two-view response/one overlapping start remains noncompliant; strict initial process NOT retroactively accepted. Bounded remedy resolved; no teaching defect. Six optional suggestions not adopted (five initial; dependent critical-context compound illustration). No new blind reviewer absent changed teaching/new concern. Preserve FULL live history and all original evidence. Use verified JDK17/SDK, one Gradle worker/no-parallel/in-process compiler/rerun-tasks; inspect exact named3+1/no failures/errors/skips and fresh timestamps/actual sibling root, not062 XML. Prior390368Python/validator/manifestc19b742b7e6320a7/8317runtimehashes/source/baseline/link/readings/stroke/cmap/budget inherited unchanged, not fresh392 tests. After freshAndroid still require exact-fullarchive productionContentSyncONCE/nativeglyph/selection/meaning/curatedreading/drawing/articles/SystemBack/offline/visual/currentmain normalmerge/combinedchecks/normal signing/ownerfastforward/publicSHA/greenCI/everyimmutablepublicZIPhash before publication or064. Native must inspect reused傚 and倣/模 and人/亻 and倣/放 distinction; prior radical rendering inherited only. Inspect native device/port ownership freshly; no occupied-owner-device interference. Published89/1228,1139remaining; local draft90 NOT delivered. CompatibleAndroidf9b59a2+ required; physical-phone/general-release/whole-set outstanding. No unreviewed push,064,second runner,signing retry,permission workaround or concurrent heavy work.",
+  "limits": "Textual closure only, not runtime/publication acceptance. Initial Claude063-P1 is preserved as historical noncompliance; dependent remedy is not retroactive strict initial acceptance. Two turns freshly reread only11 lexical families; other24 complete families/six raw character records/geometry/comparison/quiz/link/guidance evidence retained from initials. Returned bytes do not certify comprehension. Attribution-only/gaiji/source limits inherited. No fresh Android/native/font/visual/current-main/phone/general-release/whole-set acceptance. Prior390 checks inherited unchanged, not rerun392."
+}
