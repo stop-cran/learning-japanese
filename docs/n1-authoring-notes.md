@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 063: native assertions passed; independent visual confirmation pending
+## Batch 063: bounded native/visual checks reconciled; integration pending
 
 The [frozen membership](n1-sources/batch-063-membership.json) selects **倣**
 (source row 59). The [source ledger](n1-sources/batch-063-progress.json)
@@ -160,6 +160,29 @@ Other captures were not coordinator-inspected. Original-session serial
 independent visual confirmations and combined-main/publication gates remain
 next. No new reviewer or runtime publication occurred in execution 396;
 physical-phone/general-release and whole-set acceptance remain outstanding.
+
+The [execution 397 receipt](n1-sources/execution-397.json) closes the bounded
+[native visual supplement](n1-reviews/batch-063-native-acceptance.json).
+Original **Claude Opus 5.5 / GPT-6.1 Sol** sessions ran serially and exited 0;
+the complete first report and execution archive preceded the second launch.
+Each used view-only tools, one call per response, with no overlapping starts,
+failed tools or truncated returns. Each freshly read the three teaching files,
+four fixture ranges, terminal log, route receipt and **25 PNG names / 20
+distinct source byte hashes**. Their approximately 19 visually distinct
+returned states are not a competing byte count. Both found no actionable
+teaching defect. Claude's wrapping/spacing/chip and drawing-wording suggestions
+remain optional, not content fixes or expanded Android scope.
+
+The coordinator additionally inspected the font rows and two reading-table
+viewports. **kanji-meaning** exposes both complete reading rows; the shifted
+**kanji-on-reading** viewport clips their left labels. This new direct evidence
+does not rewrite execution 396's narrower inspection. Actual **亻・傚** fallback
+and **倣/放** remain readable in all four rows. Existing textual/source judgments
+are inherited, not a fresh dictionary audit. Native/Android checks were not
+rerun; reference-touch tracing and recall miss are not MLKit or human-recall
+acceptance. Historical **063-P1** remains noncompliant, not retroactively repaired.
+No teaching changed and nothing was pushed. Latest-main integration, combined
+validation and exact public SHA/CI/immutable-ZIP acceptance are the next gate.
 Published batch 062 remains verified at `54fd8ff4`:
 **89 additions delivered; 1,139 remaining**. Physical-phone/general-release
 and whole-set acceptance remain outstanding.

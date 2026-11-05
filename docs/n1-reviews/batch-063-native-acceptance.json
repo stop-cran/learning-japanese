@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "execution": 397,
+  "batch": "063",
+  "status": "bounded-native-visual-accepted-awaiting-integration",
+  "evidenceHead": "6d616d75cb15a0d574e28545c89ef45e3bcd85cb",
+  "reviewedTeachingSnapshot": "ddad655f71c06e7cb2c749de18596863a800a73d",
+  "teachingChanged": false,
+  "dependentNotBlind": true,
+  "reviewRecords": [
+    {
+      "family": "claude",
+      "model": "claude-opus-5.5",
+      "sessionId": "80bc3198-c572-419d-b7a1-2df6ec8475c5",
+      "report": "batch-063-visual-claude.md",
+      "reportSha256": "c3f90000879208cef245f9ad3698c981dbcd0bac5f3fa881cc9185c915195578",
+      "executionRecord": "batch-063-visual-claude-execution.json",
+      "toolCalls": 37,
+      "assignedPngNamesReturned": 25,
+      "distinctSourceImageHashes": 20,
+      "failedTools": 0,
+      "overlaps": 0,
+      "multiToolResponses": 0
+    },
+    {
+      "family": "gpt",
+      "model": "gpt-6.1-sol",
+      "sessionId": "65373d23-fce9-455e-a51f-5bd7c89b5d17",
+      "report": "batch-063-visual-gpt.md",
+      "reportSha256": "204b2b6a54ea0f2984b0284b972846549110309cc41e2f61777244cf13052af3",
+      "executionRecord": "batch-063-visual-gpt-execution.json",
+      "toolCalls": 35,
+      "assignedPngNamesReturned": 25,
+      "distinctSourceImageHashes": 20,
+      "failedTools": 0,
+      "overlaps": 0,
+      "multiToolResponses": 0
+    }
+  ],
+  "serialProcessExitAndCompleteArchiveBeforeNextLaunch": true,
+  "verdicts": {
+    "kanji/倣.md:complete": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "boundedComprehensibility": "CLEAN"
+    },
+    "words/模倣.md:complete": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "boundedComprehensibility": "CLEAN"
+    },
+    "words/倣う.md:line29 and tightly coupled context": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "boundedComprehensibility": "CLEAN"
+    }
+  },
+  "findings": [],
+  "optional": [
+    {
+      "id": "063-V1",
+      "status": "optional",
+      "origin": "visual-claude",
+      "claim": "Rare 傚う wraps between 傚 andう in one viewport.",
+      "disposition": "No text loss or learning defect established; natural small-screen wrapping, not adopted."
+    },
+    {
+      "id": "063-V2",
+      "status": "optional",
+      "origin": "visual-claude",
+      "claim": "Extra visual space before comma after亻.",
+      "disposition": "Rendered inline spacing, no content defect; not adopted."
+    },
+    {
+      "id": "063-V3",
+      "status": "optional",
+      "origin": "visual-claude",
+      "claim": "Rightmost chip clipped in selection row.",
+      "disposition": "App viewport surface, no demonstrated inaccessible selection or content defect; no app edit in scope."
+    },
+    {
+      "id": "063-V4",
+      "status": "optional",
+      "origin": "visual-claude",
+      "claim": "Drawing feedback uses both not-graded and graded-by-stroke-shapes-only wording.",
+      "disposition": "App wording outside content scope. Practice-only/model-unavailable limits retained; not claimed as MLKit or graded human recall."
+    }
+  ],
+  "duplicateAssignedSourceGroups": [
+    [
+      "n1-063-kanji-meaning.png",
+      "n1-063-kanji-model-boundary.png"
+    ],
+    [
+      "n1-063-imitation-components.png",
+      "n1-063-imitation-particle-contrast.png",
+      "n1-063-imitation-copy-boundary.png"
+    ],
+    [
+      "n1-063-imitation-work-example.png",
+      "n1-063-imitation-speech-example.png"
+    ],
+    [
+      "n1-063-follow-learning-contrast.png",
+      "n1-063-follow-spelling-boundary.png"
+    ]
+  ],
+  "imageCountQualification": "25 individually successful view calls/20distinctsourcehashes per reviewer; both described approximately19 visually distinct returned states. Byte counts verified by coordinator, not reviewer. Reports preserved unchanged.",
+  "coordinatorFreshDirectImages": [
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-reviews\\batch-063-native\\attempt-1\\n1-063-font-pairs.png",
+      "sha256": "529993aa058f426c3f9439ccab697e95081e7266988cd2fdf7815c9544f3ab09"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-reviews\\batch-063-native\\attempt-1\\n1-063-kanji-meaning.png",
+      "sha256": "efe0df44f83bb7f8779dcf7f86073749d55c01367318416ddfe278c801798236"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-reviews\\batch-063-native\\attempt-1\\n1-063-kanji-on-reading.png",
+      "sha256": "a1a9d1c248c2bb009f7414422cb6fae932817b6f933ce0f1179e1d6703645987"
+    }
+  ],
+  "coordinatorObservation": "Four rows show readable distinct targets including actual亻/傚 and倣/放. Newly inspected kanji-meaning shows complete two reading rows includingホウ/なら.う and both linked examples; shifted kanji-on-reading clips leftlabels. Prior396 limited direct-image description stays historical, not silently rewritten.",
+  "nativeExecutionEvidence": "docs/n1-sources/execution-396.json",
+  "nativeTerminalCases": 2,
+  "nativeTerminalStatus": 0,
+  "nativeRerun": false,
+  "accepted394AndroidRerun": false,
+  "nativeAcceptance": true,
+  "independentVisualAcceptance": true,
+  "strictInitialProcessContractAccepted": false,
+  "runtimePublished": false,
+  "integrationAccepted": false,
+  "nextAction": "SAME063 bounded current-main integration and publication gate. Signed local397 native/visual closure follows unchanged ddad655f teaching: originalClaude80bc3198/GPT65373d23 dependent visual processes BOTHexit0, actualclaude-opus-5.5/gpt-6.1-sol, view-only, onecallperresponse, zerooverlaps/failedtools/truncations. Each25PNGnames/20distinctsourcehashes, full3teachingfiles/fourfixture ranges/terminal log/route. Exact reports and audits docs/n1-reviews/batch-063-visual-*. No actionable content defect; inheritedtext/newpixels/supplied396native distinct. Fullreadingtable visible in kanji-meaning; shiftedonreading clipsleftlabels. Fourfontrows actual亻/傚 and倣/放 readable. Original063-P1 remains historical noncompliance, NOTretroactive strictinitialacceptance. Accepted394Android3+1/native396two terminal0 cases NOT rerun absent new concern. NEXT fetch latestorigin/main, normalnonrewriting merge if needed, regenerate derivedoutput and revalidate ACTUALcombinedtree: source/baseline/membership/readings/reciprocallinks/font/stroke/fullPython/vocab/validator/freshmanifest/18000entries42MiBcompressed80MiBinflated56MiBretained. Substantive merged teaching needs originalreviewer confirmation. Normal signing then authorized owner fastforwardpush/publicSHA/terminalgreenCI/EVERYimmutablepublicZIP runtimeentryhash/budgets/ownerissue60 and durable receipts BEFOREdelivery or064. Do not equate local closure with delivery. No new blindinitials,062rerun,064,secondrunner,supervisorchanges or concurrentheavywork. Actual permissiondenial/signingwait: preserveexactcommand/error, report/yield; no retry/workaround. PreserveFULLlivehistory and393denial/049hostheapqualification. Published89/1228,1139remain; localdraft90 NOTdelivered. CompatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding. Overallproject incomplete.",
+  "limits": "Bounded emulator native/visual acceptance only; integration and public delivery remain pending. 25 PNG names per reviewer have20 distinct source byte hashes, not25 independent scenes; both reports estimated19 visually distinct returned states without hashing. Retain reports verbatim; exact20 source hashes take precedence for byte counts, visual sameness is separate. Source1080x2400 returned900x2000. Readingtable fully visible in kanji-meaning screenshot, shifted viewport clips left labels in kanji-on-reading; no whole-article/allfontscale certification. Source/35family/sixcharacter/8exclusion judgments inherited, no fresh dictionary retrieval. No persisted new meaning grade; both curatedOn/KunGood and DrawAgain persistence supplied from396fixture. Reference-touch trace/modelunavailable/recallmiss notMLKit or humanrecall. Actualfallbackfaces/physicalphone/generalrelease/whole-set/currentmain/publication unverified. Historical063-P1 and393permissiondenial retained; later serial confirmation is not retroactive strictacceptance."
+}
