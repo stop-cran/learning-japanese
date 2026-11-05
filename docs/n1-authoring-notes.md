@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 061: local unreviewed draft
+## Batch 061: textual review closed; fresh Android execution blocked
 
 The [frozen membership](n1-sources/batch-061-membership.json) selects **俳**
 (source row 54) for one evidence-bounded packet. The
@@ -72,9 +72,17 @@ All **368 Python tests** pass. The 33 Han characters in the new/changed
 articles are present in the three bundled fonts except **亻**, which requires
 system fallback; cmap checks are not native readability evidence.
 
-This is **unreviewed local teaching**, not publication or native/phone
-acceptance. Two serial blind model-family initials on the frozen signed
-snapshot and all later reconciliation/acceptance/publication gates remain.
+The [textual reconciliation](n1-reviews/batch-061-reconciliation.json)
+closes both model families' teaching review on unchanged snapshot
+`2567f5e7b3888f2df3ed560f618341266b471902`. Initial Claude process
+noncompliance remains historical; four supervised dependent lexical turns
+are prospective remediation, not retroactive initial compliance.
+The [execution373 receipt](n1-sources/execution-373.json) records the exact
+fresh Android command denied before execution. No new start/log/exit artifact
+exists; batch060 XML is not batch061 acceptance. Resume only through an
+approval-capable parent resolving that exact command, without retrying around
+the denial or changing permissions. Native, visual, combined-main and
+publication gates remain; this is not delivered teaching or phone acceptance.
 Published coverage stays **87/1,228 additions; 1,141 remain**; the 89
 necessary supporting-word additions are unchanged. Accepted batch060 evidence
 and its historical limits remain intact, without redundant checks.
