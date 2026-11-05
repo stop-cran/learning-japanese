@@ -37,7 +37,40 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 068: textual review closed; runtime acceptance pending
+## Batch 069: source preparation only
+
+The [frozen batch](n1-sources/batch-069-membership.json) continues with **儒**,
+source row 78, at the existing one-character evidence-bounded size.
+Earlier deferred rows remain pending; this is not a claim that all preceding
+source rows are complete. The [source ledger](n1-sources/batch-069-progress.json)
+retains **32 applicable complete JMdict families**, eleven comparison-family
+occurrences (**41 distinct families** after two overlaps), and nine complete
+raw character records, all inspected by the coordinator.
+
+No existing article supplies 儒 support. One necessary **儒教（じゅきょう）**
+article is proposed, without an inferred vocabulary level. The sole sourced
+**ジュ** and empty kun list remain intact, with one proposed **じゅ** key.
+Confucian thought and scholars are the practical focus, not every teacher,
+religion or historical scholar. The [public-source evidence](n1-sources/batch-069-source-evidence.json)
+preserves bounded extraction limits and supports a qualified 儒学 comparison:
+scholarly emphasis does not create an absolute religion/philosophy divide.
+Whole-word Cynic-school and ateji animal senses do not redefine every 儒 compound.
+
+Both proposed written-kanji pairs, **儒–儒教** and **教–儒教**, are enumerated
+in four directions. The only reused passage proposed is one Common words
+backlink in 教; its N4 metadata and existing readings remain unchanged.
+Pinned sixteen-path SVG evidence and source-stage cmap inventory do not
+constitute converted strokes, native readability or drawing acceptance.
+
+This is **local source preparation**, not a runtime draft, independent review
+or publication. Batch 068's [verified publication](n1-sources/batch-068-publication.json)
+remains the latest delivery at terminal `f9e0511f`:
+**95/1,228 additions published; 1,133 remain**. The 95 necessary support
+additions already published are not an N1 vocabulary deck. Compatible Android
+`f9b59a2+` is required; physical-phone, general-release and whole-set acceptance
+remain outstanding. All later review and publication gates still apply.
+
+## Batch 068: textual review closed checkpoint (historical)
 
 The bounded draft adds **儀**, its exact pinned fifteen-stroke geometry and
 eight narrow reused navigation changes. Existing **儀式（ぎしき）**,
