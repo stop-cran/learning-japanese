@@ -444,7 +444,8 @@ def records():
         row["status"] = publication["status"]
     save(S / "batch-071-progress.json", ledger)
     execution = load(S / "execution-471.json")
-    execution.update(status=publication["status"], publicationRecord="batch-071-publication.json",
+    execution.update(status=publication["status"], publishedAdditions=98, remainingAdditions=1130,
+                     publicationRecord="batch-071-publication.json",
                      publication={"acceptedCommit": head, "ciRun": ci["databaseId"], "counts": publication["counts"]})
     save(S / "execution-471.json", execution)
     for path in (C / "artifacts" / "batch-071-accepted-ci.json",
