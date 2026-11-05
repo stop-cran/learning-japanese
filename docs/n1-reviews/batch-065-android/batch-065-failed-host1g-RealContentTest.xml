@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.github.stopcran.kanji.core.RealContentTest" tests="3" skipped="0" failures="1" errors="0" timestamp="2026-11-05T12:49:54.184Z" hostname="TRAIN" time="17.307">
+  <properties/>
+  <testcase name="hotelBookingDoesNotAcceptTheSchoolClassReadingWhenRepoPresent" classname="io.github.stopcran.kanji.core.RealContentTest" time="0.089"/>
+  <testcase name="completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent" classname="io.github.stopcran.kanji.core.RealContentTest" time="6.485"/>
+  <testcase name="parsesRealContentRepoWhenPresent" classname="io.github.stopcran.kanji.core.RealContentTest" time="10.733">
+    <failure message="java.lang.OutOfMemoryError: Java heap space" type="java.lang.OutOfMemoryError">java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.lang.StringUTF16.compress(StringUTF16.java:169)
+	at java.base/java.lang.StringUTF16.newString(StringUTF16.java:1173)
+	at java.base/java.lang.String.substring(String.java:2715)
+	at java.base/java.lang.String.subSequence(String.java:2747)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.substring(AbstractJsonLexer.kt:304)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.consumeStringLenient(AbstractJsonLexer.kt:472)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeDouble(StreamingJsonDecoder.kt:445)
+	at kotlinx.serialization.internal.DoubleSerializer.deserialize(Primitives.kt:117)
+	at kotlinx.serialization.internal.DoubleSerializer.deserialize(Primitives.kt:113)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at kotlinx.serialization.encoding.CompositeDecoder.decodeSerializableElement$default(Decoding.kt:539)
+	at kotlinx.serialization.internal.CollectionLikeSerializer.readElement(CollectionSerializers.kt:80)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.readElement$default(CollectionSerializers.kt:51)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.merge(CollectionSerializers.kt:36)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.deserialize(CollectionSerializers.kt:43)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at kotlinx.serialization.encoding.CompositeDecoder.decodeSerializableElement$default(Decoding.kt:539)
+	at kotlinx.serialization.internal.CollectionLikeSerializer.readElement(CollectionSerializers.kt:80)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.readElement$default(CollectionSerializers.kt:51)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.merge(CollectionSerializers.kt:36)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.deserialize(CollectionSerializers.kt:43)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at io.github.stopcran.kanji.core.content.Stroke$$serializer.deserialize(Models.kt:88)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
