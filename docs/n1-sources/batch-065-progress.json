@@ -5,11 +5,13 @@
   "membership": [
     "倹"
   ],
-  "status": "local-unreviewed-draft",
+  "status": "textually-review-closed-awaiting-fresh-android",
   "drafted": [
     "倹"
   ],
-  "reviewClosed": [],
+  "reviewClosed": [
+    "倹"
+  ],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "sourceReadingOrder": {
@@ -628,5 +630,53 @@
       "阝"
     ],
     "limits": "Complete four-article Han cmap audit, not native rendering/fallback/drawing or phone evidence."
+  },
+  "initialReviewCheckpoint": {
+    "execution": 415,
+    "snapshot": "5da89bd73eff6a195ee0004762e6eced2b77c15c",
+    "models": [
+      "claude-opus-5.5",
+      "gpt-6.1-sol"
+    ],
+    "reports": [
+      "../n1-reviews/batch-065-initial-claude.md",
+      "../n1-reviews/batch-065-initial-gpt.md"
+    ],
+    "qualification": "Claude 倹しい quiz NEEDS FIX resolved by bounded correction; GPT initial no-required-guard assessment preserved."
+  },
+  "textualReviewCheckpoint": {
+    "execution": 415,
+    "snapshot": "45c275e7c041d8486705ab860a31f34e51ac7a70",
+    "textualReviewClosed": true,
+    "reconciliation": "../n1-reviews/batch-065-reconciliation.json",
+    "confirmedCorrections": [
+      "C1 direct display guard",
+      "C2 optional frequency-neutral spelling"
+    ],
+    "checks": {
+      "validatorErrors": 0,
+      "focusedTests": 82,
+      "focusedFailures": 0,
+      "focusedErrors": 0,
+      "focusedCommand": "python -B -m unittest discover -s tools -p test_validate.py",
+      "originalDraftFullPythonTests": 368,
+      "originalDraftTestsNotFreshlyRerun": true,
+      "manifestFresh": true,
+      "contentVersion": "6a940651167e0e94",
+      "runtimeHashesVerified": 8324,
+      "manifestSha256": "5bd9d1a36a56e0af37a6a548e8e8c371ae07f1d2a227a926839dff7ca68fd91d",
+      "localBudgetPassed": true,
+      "localBudgetEvidence": "batch-065-local-budget-execution-415.txt",
+      "localBudgetEvidenceSha256": "de2e6ae69530d69670c50dea1640c5d88d4d050ab474feea33132495df6cb379",
+      "allOriginalDraftMetadataPreservedExceptOneDirectExclusion": true,
+      "unchangedSupportAndReusedPassageByteEqual": true,
+      "allMappedReciprocalPairs": 3,
+      "directedLinks": 6,
+      "baselineLimits": "Exact changes audited against signed draft; its full985-kanji/4942-word/985-stroke baseline audit remains inherited, not independently rerun.",
+      "freshAndroidNativePhone": "Not performed. Next checkpoint gate; no older checks relabelled fresh."
+    },
+    "runtimeAccepted": false,
+    "runtimePublished": false,
+    "limits": "Textual closure only. Fresh Android/native/current-main/CI/immutable-ZIP delivery, physical-phone/general-release and whole-set acceptance remain outstanding. Compatible Androidf9b59a2+ required. No066 or second runner."
   }
 }
