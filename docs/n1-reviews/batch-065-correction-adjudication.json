@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "execution": 415,
+  "batch": "065",
+  "initialSnapshot": "5da89bd73eff6a195ee0004762e6eced2b77c15c",
+  "independentModels": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "initialReportsPreservedBeforeEdits": true,
+  "initialSerialExitAndArchiveVerified": true,
+  "finding": {
+    "id": "C1",
+    "source": "batch-065-initial-claude.md",
+    "severity": "minor",
+    "facet": "correctness/quiz metadata",
+    "status": "partially resolved",
+    "claim": "The unqualified modest; humble answer on 謙虚 could be accepted for 倹しい's qualified modest-living label.",
+    "decision": "Add one conservative direct 倹しい/謙虚 display guard. Do not claim lexical equivalence, shared Japanese senses or unrestricted substitution.",
+    "evidence": [
+      "words/倹しい.md:4 qualified frugal; modest in one's living versus words/謙虚.md:4 unqualified modest; humble.",
+      "Actual Seisenban 倹しい sense2 remains living-context plain/restrained; it does not establish a humble-attitude sense.",
+      "words/謙虚.md:16,42 explicitly describes humble attitude rather than a dwelling. The already qualified new title reduces, but does not remove, ambiguity of an unqualified English modest distractor.",
+      "words/地味.md:9,36 provides a directly inspected cross-attitude/living modest-label guard precedent, not a transitive exclusion rule."
+    ],
+    "confidence": "medium; conservative displayed-English guard, not demonstrated live-quiz failure",
+    "gptDifference": "GPT established no additional guard. Its original CLEAN verdict is preserved, not retrospectively changed or treated as a vote.",
+    "pending": "Original-session changed-passage confirmation."
+  },
+  "optional": [
+    {
+      "id": "C2",
+      "source": "Claude optional spelling note",
+      "status": "partially resolved",
+      "decision": "Replace often spelled with with the kanji spelling at the two 慎ましい mentions.",
+      "evidence": "Complete frozen JMdict2009010 recognizes 慎ましい but marks both senses usually kana; no frequency measurement supports often.",
+      "pending": "Original-session regression confirmation."
+    },
+    {
+      "id": "C3",
+      "status": "optional",
+      "decision": "No 謙遜 guard added: actual modesty; self-deprecation title concerns attitude; no consequential missing direct pair established."
+    },
+    {
+      "id": "C4",
+      "status": "optional",
+      "decision": "No historical phonetic expansion; explicitly non-etymological mnemonic and structure-unclassified remain within scope."
+    }
+  ],
+  "checks": {
+    "validatorErrors": 0,
+    "manifestRegenerated": true,
+    "contentVersion": "6a940651167e0e94",
+    "focusedCommand": "python -B -m unittest discover -s tools -p test_validate.py",
+    "focusedTests": 82,
+    "failures": 0,
+    "errors": 0,
+    "gitDiffCheck": "passed",
+    "limits": "Observed coordinator command results; original draft368-test audit retained. Fresh Android/native/current-main/CI/immutable-ZIP acceptance not performed."
+  },
+  "limits": "Local corrected frozen snapshot pending confirmation only. No runtime publication or phone evidence; published91 and remaining1137 unchanged."
+}
