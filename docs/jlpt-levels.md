@@ -189,6 +189,18 @@ Historical KANJIDIC levels are not modern N-numbers: [old Level 4 corresponds to
   physical-phone/general-release qualifications remain explicit.
   This is not complete N1 coverage.
 
+  [Batch 063](n1-sources/batch-063-publication.json), 倣, is
+  **published and verified for bounded owner testing**, after the intervening
+  batches. Full ホウ・なら.う and both practice selections are preserved.
+  Necessary support 模倣 has no vocabulary level inferred from kanji; reused
+  倣う retains its identity and metadata. Two-family review and bounded native
+  acceptance retain their historical process and evidence limits. Fresh
+  combined-main checks, green CI and all **8,317 immutable public ZIP runtime
+  hashes** passed at signed acceptance `d656fe9d`. Published coverage is
+  **90 additions; 1,138 still to deliver**: 94 named source members plus
+  separate 妖. Compatible Android `f9b59a2` or later is required;
+  physical-phone/general-release and whole-set acceptance remain outstanding.
+
 ## Documented exceptions
 
 | Kanji | Repository label | Evidence and reason |

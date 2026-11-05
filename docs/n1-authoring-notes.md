@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 063: combined-main checks accepted; publication pending
+## Batch 063: published and verified for bounded owner testing
 
 The [frozen membership](n1-sources/batch-063-membership.json) selects **倣**
 (source row 59). The [source ledger](n1-sources/batch-063-progress.json)
@@ -181,9 +181,9 @@ and **倣/放** remain readable in all four rows. Existing textual/source judgme
 are inherited, not a fresh dictionary audit. Native/Android checks were not
 rerun; reference-touch tracing and recall miss are not MLKit or human-recall
 acceptance. Historical **063-P1** remains noncompliant, not retroactively repaired.
-No teaching changed and nothing was pushed. Latest-main integration, combined
-validation and exact public SHA/CI/immutable-ZIP acceptance are the next gate.
-Published batch 062 remains verified at `54fd8ff4`:
+At checkpoint 397 no teaching changed and nothing was pushed. Latest-main
+integration, combined validation and exact public SHA/CI/immutable-ZIP acceptance
+were the next gate. Published batch 062 remained verified at `54fd8ff4`:
 **89 additions delivered; 1,139 remaining**. Physical-phone/general-release
 and whole-set acceptance remain outstanding.
 
@@ -191,8 +191,8 @@ The [execution 398 combined-tree audit](n1-sources/batch-063-acceptance-audit.js
 freshly verifies the actual integrated tree. Latest main `54fd8ff4` was already
 ancestral; a normal non-rewriting merge made no teaching or runtime changes.
 All **368 Python tests**, validator, vocabulary consistency, manifest freshness
-and unchanged archive budgets pass. Exact addition membership is 90 local
-additions, not 90 published additions. All **8,317 runtime hashes**, baseline
+and unchanged archive budgets pass. Before publication, exact addition membership
+was 90 local additions, not 90 published additions. All **8,317 runtime hashes**, baseline
 metadata/readings/levels/exclusions/strokes, both reading dispositions, two
 reciprocal pairs/four directed links and the activated baseline pair pass.
 The 35 complete frozen dictionary families were mechanically re-extracted,
@@ -200,8 +200,22 @@ not linguistically re-reviewed. Pinned geometry and all three bundled font
 cmaps were checked again. Original reports, dependent confirmations, native
 artifact hashes and fresh Android XML were reverified without rerunning
 accepted Android/native checks or claiming retroactive strict process
-compliance. Normal signing, owner fast-forward publication, terminal green CI
-and every immutable public ZIP runtime hash remain required before delivery.
+compliance.
+
+The [publication receipt](n1-sources/batch-063-publication.json) records normal
+signed acceptance `d656fe9d`, the owner fast-forward push, green CI **41987035886**
+and the exact immutable public ZIP: **8,339 entries**, **30,665,486 compressed /
+44,289,629 inflated / 44,021,291 retained bytes**, all 8,317 runtime hashes
+matching manifest `c19b742b7e6320a7`. Original budgets are unchanged and
+contributor-only evidence is excluded. Published coverage is now **90 additions;
+1,138 remaining**, with **1,075 kanji / 5,033 words / 95 N1 labels**:
+94 named-source members plus separate 妖. This batch adds one necessary support
+word, for 91 project-wide, not an N1 vocabulary deck. Both full readings and
+their practice subsets are retained; existing 倣う keeps its identity, reading
+and metadata. Terminal evidence has unchanged runtime and requires its own
+green CI and exact public ZIP verification before checkpoint 398 closes.
+Compatible Android `f9b59a2` or later remains required. Physical-phone,
+general-release and whole-set acceptance remain explicitly outstanding.
 
 ## Batch 062: bounded native/visual checks reconciled; publication pending
 
