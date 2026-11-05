@@ -37,16 +37,27 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 058: textual review closed; fresh Android execution blocked
+## Batch 058: textual review closed; fresh Android passed
 
 The [execution 344 record](n1-sources/execution-344.json) preserves the
 single required fresh Android command's **permission denial before execution**:
-interactive approval was unavailable. No fresh start/log/exit artifacts or
-test results were produced, and existing batch057 XML is not batch058
-acceptance. No retry, alternate invocation or permission change was attempted.
-An approval-capable parent must resolve that exact denied command before
-resuming SAME058. Native, visual and publication gates remain pending;
-textual closure and the historical process qualifications below are unchanged.
+interactive approval was unavailable. That attempt produced no fresh results;
+existing batch057 XML was not accepted for batch058. An approval-capable parent
+subsequently executed the **exact denied command once**, with no permission,
+selector, assertion or runtime changes. The [execution 345 archive](n1-sources/execution-345.json)
+preserves the original recovery/provenance receipts, fresh XML and complete
+Gradle log. The build exited **0**, with **41 tasks executed**. All **three
+named RealContentTest cases and one RareHanTest case** passed, with zero
+failures, errors or skips.
+
+Archival verification independently checked all six provenance hashes, both
+original XML/source-copy hashes, exact case names, timestamps after the actual
+start and the dedicated sibling content root. Both worktrees were initially
+clean; teaching remains unchanged at `58b53fd3`. No Gradle rerun was needed.
+The existing qualified **host-only** core Test 1-GiB init is unchanged;
+the original host 512-MiB OOM and permission denial remain historical evidence,
+not new failures or native acceptance. Guest/app heaps and archive guards
+are unchanged. Native, visual and publication gates remain pending.
 
 The [textual reconciliation](n1-reviews/batch-058-reconciliation.json)
 preserves bounded dependent confirmations in **both original reviewer sessions**
@@ -70,10 +81,11 @@ disposition is **partially resolved**: bounded remediation is complete, but
 the original strict internal-serialization contract is not retroactively
 accepted. Textual closure does not erase original reports or process evidence.
 
-Next SAME058 is **fresh non-skipped Android RealContentTest / RareHanTest**,
-then separate full-archive single-import native/visual, combined-main and
-publication gates. No fresh Android/native acceptance, runtime push or
-batch059 is claimed. Published coverage remains **84/1,228; 1,144 remaining**.
+Next SAME058 is **exact-full-archive native fixture preparation and serial
+compilation**, followed separately by production single-import native/visual,
+combined-main and publication gates. Fresh Android acceptance is bounded to
+the four cases above; no native acceptance, runtime push or batch059 is
+claimed. Published coverage remains **84/1,228; 1,144 remaining**.
 Compatible Android `f9b59a2+` is required; physical-phone/general-release
 and whole-set acceptance remain outstanding.
 
