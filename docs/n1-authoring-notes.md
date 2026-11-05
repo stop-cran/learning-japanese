@@ -37,7 +37,42 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 058: native fixture compiled; execution pending
+## Batch 058: native assertions passed; independent visuals pending
+
+The [execution 347 checkpoint](n1-sources/execution-347.json) records both
+compiled native cases passing with individual terminal status **0**, no skips,
+in **102.361 seconds** on the owned read-only API35 helper. Production
+ContentSync imported the exact full `00491ddd` envelope **once**: **1,070 kanji /
+5,029 words / 90 N1 cards**, contentVersion `5e8f3e7e39ea187a`, zero problems
+and reading-parser epoch 1. Full and Lite readings, both curated keys and
+persisted Good grades passed. Meaning, all three reciprocal pairs in six
+directions, System Back, offline routes, five reference-touch strokes,
+ungraded trace and a persisted drawing recall-miss grade passed.
+
+The [artifact index](n1-reviews/batch-058-native/execution-347-artifact-index.json)
+preserves complete raw logs, direct PNGs, route/raster receipts and exact
+launcher/cleanup provenance. Ten coordinator image inspections show readable,
+distinct 丘/兵/近/共 and readable 一/砂/山/丘/砂丘 in all four production font
+rows, the N1 count, both reading questions/feedback, reused 丘 examples,
+new 砂丘 component links and drawing feedback without blank/replacement boxes.
+Other captures await the original reviewers' bounded dependent visual checks.
+Raster hashes do not identify fallback faces or certify readability; the
+offline reference trace and recall miss are not MLKit or human-recall evidence.
+
+Fresh prelaunch inventory found 5580/5581 free; only owned parent **25124** /
+QEMU **19420** was launched and stopped with `adb emu kill` exit 0. A separate
+postrun inventory confirmed both processes absent, both dedicated worktrees
+clean and unrelated emulator-5556 unchanged. Production code, fonts, guest/app
+heaps and archive guards were unchanged; accepted execution345 Android results
+were not rerun. No reviewer, runtime publication or batch059 was started.
+**Next SAME058:** serial dependent visual confirmations in the two original
+reviewer sessions, then combined-main acceptance and publication gates.
+Initial Claude process noncompliance remains historical, not retroactively
+accepted. Published coverage remains **84/1,228; 1,144 remaining**; compatible
+Android `f9b59a2+` is required. Phone/general-release and whole-set acceptance
+remain outstanding.
+
+### Native preparation (execution 346)
 
 The [execution 346 checkpoint](n1-sources/execution-346.json) prepares and
 compiles the exact-full-archive native fixture without launching a device.
