@@ -1,0 +1,16 @@
+Coordinator-preserved tool output from publish437 (exit 1).
+Invocation: C:\Users\stop-\n1-kanji-workspace\control\push-batch-060.ps1
+Failing native command: git -C C:\Users\stop-\n1-kanji-workspace\learning-japanese -c credential.helper= -c "credential.helper=!gh auth git-credential" push origin HEAD:main
+Signed local HEAD: 917f55ed01cbe2677f2293848e88ecda83a333f9
+Owner identity was verified by the helper before its push; scoped token cleared in finally.
+
+remote: fatal error in commit_refs
+To https://github.com/stop-cran/learning-japanese.git
+ ! [remote rejected]   HEAD -> main (failure)
+error: failed to push some refs to 'https://github.com/stop-cran/learning-japanese.git'
+Exception: C:\Users\stop-\n1-kanji-workspace\control\push-batch-060.ps1:20
+Normal owner push failed; preserve exact failure
+
+Read-only postfailure checks: git ls-remote and GitHub git/ref/heads/main both return f0b318eb058efa8081db770f12aa15963af7ff79. Local content is clean, HEAD signature G; global gh identity remains romanko-ms. Repository is neither archived nor disabled.
+No HTTP 403, permission denial, signing wait, branch-protection rejection or integration race was reported. Server-side cause is unverified.
+Coordinator decision: one bounded retry of the identical authorized normal signed owner fast-forward; no credential, policy, ref, signing or permission changes. A second failure yields a blocked checkpoint, not a retry loop.

@@ -97,7 +97,7 @@ Blind initial families **claude-opus-5.5 / gpt-6.1-sol** reviewed the same signe
 
 Accepted **433 fresh Android3 RealContentTest+1 RareHanTest/no skips** and **435 two native terminalcase0/138.141s** independently reverified, not rerun. Exact full archive productionContentSync **once**: **1,079kanji/5,037words/99N1**, problems0, `{m.VERSION}`, epoch1. Full+Liteソウ/emptyKun; normalizedそう Good persisted/noKunLog; mapped links/comparison routes/three complete articles/SystemBack/offline/N1selection/meaning/13reference-touch strokes/ungradedtrace/recallmiss/persistedDrawAgain. Four production rows readable/distinguishable for僧増値倍人亻曽侶/僧侶/坊さん. Not MLKit, successful human recall, ownerprogress, fallback-face identification or phone evidence.
 
-Historical permission denials/HOST OOMs retained; qualified **HOST-only2GiB** init NEVER used in native. No app/guest heap, production guard, permissions or app code changed. No redundant reviewers/Gradle/native runs.
+Historical permission denials/HOST OOMs retained; qualified **HOST-only2GiB** init NEVER used in native. No app/guest heap, production guard, permissions or app code changed. No redundant reviewers/Gradle/native runs. First normal owner push received server-side `fatal error in commit_refs`; remote main was verified unchanged. One identical normal retry succeeded; both attempts retained, no permission/signing bypass, changed credentials/policy, force push or retry loop. Server-side cause remains unverified.
 
 Accepted CI [{publication['ci']['databaseId']}](https://github.com/stop-cran/learning-japanese/actions/runs/{publication['ci']['databaseId']}) and terminal CI [{ci['databaseId']}](https://github.com/stop-cran/learning-japanese/actions/runs/{ci['databaseId']}) green. **Both immutable public ZIPs verify every8,329 runtime hash**, manifest `{m.VERSION}`. Terminal **{archive['zipEntries']:,}entries /{archive['compressedBytes']:,}compressed /{archive['inflatedBytes']:,}inflated /{archive['retainedBytes']:,}retained bytes** pass unchanged18,000entries/42MiB/80MiB/56MiB; contributor evidence excluded.
 
@@ -109,6 +109,35 @@ Compatible **stop-cran/kanji-cards-android#125 (`f9b59a2`+)** required. **Physic
     assert not path.exists()
     path.write_text(text, encoding="utf-8")
     print("Exact terminal owner issue update prepared.")
+
+
+def push_history():
+    rows = []
+    for number in (1, 2):
+        source = L / f"execution-437-push-attempt-{number}.txt"
+        target = D / source.name
+        assert not target.exists()
+        shutil.copyfile(source, target)
+        rows.append({"attempt": number, "log": target.relative_to(R).as_posix(),
+                     "sha256": sha(target), "succeeded": number == 2})
+    record = {
+        "firstFailure": "GitHub remote fatal error in commit_refs; HEAD -> main (failure).",
+        "firstFailureLogProvenance": "Coordinator-preserved tool output, not a separately captured raw subprocess stream.",
+        "postFailureRemoteVerified": m.BASE,
+        "permissionOrSigningDenialObserved": False,
+        "boundedIdenticalNormalRetrySucceeded": True,
+        "serverSideCause": "unverified",
+        "attempts": rows,
+        "limits": "No credential/policy/signing/ref changes or force push; original failure preserved.",
+    }
+    publication = load(S / "batch-067-publication.json")
+    publication["publicationPushHistory"] = record
+    save(S / "batch-067-publication.json", publication)
+    execution = load(S / "execution-437.json")
+    execution["publicationPushHistory"] = record
+    save(S / "execution-437.json", execution)
+    shutil.copyfile(Path(__file__), D / Path(__file__).name)
+    print("Both normal push attempts preserved; remote rejection cause not inferred.")
 
 
 def finish():
@@ -177,4 +206,4 @@ def finish():
 
 
 if __name__ == "__main__":
-    {"records": records, "comment": comment, "finish": finish}[sys.argv[1]]()
+    {"records": records, "push-history": push_history, "comment": comment, "finish": finish}[sys.argv[1]]()

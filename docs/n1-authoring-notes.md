@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 067: combined-tree acceptance; publication pending
+## Batch 067: published for bounded owner testing
 
 The [combined acceptance](n1-sources/batch-067-acceptance-audit.json) freshly
 checks the current-main tree, all 94 project additions, baseline preservation,
@@ -47,7 +47,16 @@ The [execution record](n1-sources/execution-437.json) inherits the passing
 Android/native gates and bounded visual confirmations without redundant runs.
 The original Claude two-receipt read overlap and subsequent serial repair
 remain disclosed; this is not an all-internal-reads-serial review execution.
-Normal signed publication, CI and exact public ZIP verification are next.
+
+The [publication record](n1-sources/batch-067-publication.json) verifies normally
+signed accepted commit `917f55ed`, green CI and every runtime hash in its exact
+immutable public ZIP. The initial server-side `commit_refs` rejection left
+remote main unchanged; one identical normal owner push subsequently succeeded.
+Both attempts are preserved, without a permission/signing bypass or force push.
+Published scope is **94/1,228 additions; 1,134 remain**: **1,079 kanji /
+5,037 words / 99 N1-labelled cards**, including 95 necessary support additions,
+not an N1 vocabulary deck. This batch adds 僧, generated strokes and 僧侶, with
+the reused 坊さん comparison link. No 侶 card or next batch is added.
 Physical-phone, general-release and whole-set acceptance remain outstanding.
 
 ## Batch 067: native preparation checkpoint (historical)
