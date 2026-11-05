@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "execution": 352,
+  "batch": "059",
+  "status": "initial-reviews-complete-pending-minor-wording-reconciliation",
+  "reviewedTeachingSnapshot": "9c79f7dbabcc2309891d2b4ab5ed87d53c8bbb98",
+  "teachingScope": [
+    "kanji/享.md:complete",
+    "words/享受.md:complete",
+    "kanji/受.md:one added Common words link; complete context read"
+  ],
+  "models": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "reviewProcesses": [
+    {
+      "label": "initial-claude",
+      "model": "claude-opus-5.5",
+      "snapshot": "9c79f7dbabcc2309891d2b4ab5ed87d53c8bbb98",
+      "sessionId": "57374784-d547-43db-a93d-6d3bc5f93f30",
+      "startedAt": "2026-11-05T02:49:30.4525369+01:00",
+      "completedAt": "2026-11-05T02:53:04.2087311+01:00",
+      "exitCode": 0,
+      "toolCalls": 55,
+      "observedInternalOverlaps": [],
+      "allAssignedRangesReturned": true,
+      "assignedResources": 38,
+      "reportSha256": "0dee7add0e8ed2c936932171dac69c247e8ca4893526468c0d02a47645fc2ecb",
+      "rawExecutionSha256": "57d1e85cd745edc7ee1730eda034b3b24b8b0b5b504bc4c1c577e3129756a6bb",
+      "executionRecordSha256": "d677849b5ae6c79488dc4088e7471f8fe71cef7ee3f586f5de6119daeb59cba6",
+      "multiToolResponses": [],
+      "coverageRecordSha256": "4867ac3e573d01b1c11157f1ecfaaf8b58a06511d57e55ff273e262c80451f22",
+      "failedCalls": [],
+      "limitedReturns": [
+        {
+          "name": "web_fetch",
+          "arguments": {
+            "url": "https://kotobank.jp/word/%E4%BA%AB-477603",
+            "max_length": 8000
+          }
+        },
+        {
+          "name": "web_fetch",
+          "arguments": {
+            "max_length": 6000,
+            "url": "https://kotobank.jp/word/%E4%BA%AB%E5%8F%97-478286"
+          }
+        }
+      ]
+    },
+    {
+      "label": "initial-gpt",
+      "model": "gpt-6.1-sol",
+      "snapshot": "9c79f7dbabcc2309891d2b4ab5ed87d53c8bbb98",
+      "sessionId": "345c7cb4-b120-41ce-b1ed-425003c6f4a5",
+      "startedAt": "2026-11-05T02:53:18.3778671+01:00",
+      "completedAt": "2026-11-05T02:55:51.2283932+01:00",
+      "exitCode": 0,
+      "toolCalls": 55,
+      "observedInternalOverlaps": [],
+      "allAssignedRangesReturned": true,
+      "assignedResources": 38,
+      "reportSha256": "b75b22d82897df8ca6be1c354f5de0a0f96dc12fa252c4e3eb3302ac9c316242",
+      "rawExecutionSha256": "fe245cf792aedea72ec0331611d2771f7d745794e149a0abb43ae821a73b7848",
+      "executionRecordSha256": "b1d164a4f2dcfbf8447b8a049d313429b7e42731834a21ce920da75c06a1e5c4",
+      "multiToolResponses": [],
+      "coverageRecordSha256": "f000c0903c6229d0498531c4b27cd6be1a7d93cd01c7caeed7db47fb0715caf1",
+      "failedCalls": [],
+      "limitedReturns": []
+    }
+  ],
+  "serialReviewerProcessesVerified": true,
+  "firstCompleteArchiveBeforeSecondLaunch": true,
+  "internalOverlappingStarts": [
+    0,
+    0
+  ],
+  "multiToolResponses": [
+    0,
+    0
+  ],
+  "reviewClosed": false,
+  "teachingChanged": false,
+  "published": false,
+  "verdicts": {
+    "claude-opus-5.5": {
+      "kanji/享.md": {
+        "correctness": "NEEDS FIX",
+        "scopedCoverage": "CLEAN",
+        "textComprehensibility": "NEEDS FIX"
+      },
+      "words/享受.md": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "textComprehensibility": "CLEAN"
+      },
+      "kanji/受.md:added link": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "textComprehensibility": "CLEAN"
+      }
+    },
+    "gpt-6.1-sol": {
+      "kanji/享.md": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "textComprehensibility": "CLEAN"
+      },
+      "words/享受.md": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "textComprehensibility": "CLEAN"
+      },
+      "kanji/受.md:added link": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "textComprehensibility": "CLEAN"
+      }
+    }
+  },
+  "findings": [
+    {
+      "id": "059-F1",
+      "origin": "initial-claude",
+      "status": "unresolved",
+      "severity": "Minor",
+      "facets": [
+        "comprehensibility",
+        "correctness under a plausible misreading"
+      ],
+      "file": "kanji/享.md",
+      "lines": [
+        32,
+        32
+      ],
+      "claim": "'receive; recognize 生を享ける' can be read as assigning recognize as a second English gloss.",
+      "impact": "A table reader can confuse the recognition-only teaching instruction with a lexical meaning.",
+      "evidence": [
+        "kanji/享.md:32 has an imperative recognize inside the word/gloss table column without an explicit label.",
+        "kanji/享.md:36 clarifies recognition intent; it does not remove the table's local ambiguity.",
+        "Complete JMdict1329590 in batch-059-jmdict.xml:175-296 supports receive/life/talent/succession, not recognize.",
+        "Complete JMdict1888070 in batch-059-jmdict.xml:314-332 supports 生を享ける/せいをうける/be born."
+      ],
+      "coordinatorDisposition": "Verified localized clarity defect, not an established erroneous Japanese reading or deliberate recognize gloss. Accept the narrow label correction rather than infer a larger lexical error.",
+      "remedy": "Label recognition spelling explicitly before the attested 生を享ける example; preserve source metadata, example and practice subset.",
+      "confidence": "High for table ambiguity and absence of a recognize gloss in the inspected family.",
+      "disagreement": "GPT's complete initial report is CLEAN and makes no equivalent observation. No vote-based adjudication; preserve both original reports.",
+      "closureGate": "Narrow fix, regenerated manifest and bounded serial original-session confirmations."
+    }
+  ],
+  "optional": [
+    {
+      "id": "059-O1",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Add a 高 look-alike note.",
+      "disposition": "Not adopted at this checkpoint; three wrong choices and existing 京/厚 notes are sound. Nonblocking expansion."
+    },
+    {
+      "id": "059-O2",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Add appreciating beauty/art as a 享受 context.",
+      "disposition": "Not adopted; useful freedom/benefits examples already support the stated bounded teaching. Nonblocking expansion."
+    },
+    {
+      "id": "059-O3",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Add JMdict1233280 to reused受source tail.",
+      "disposition": "Not adopted; the new linked article already cites the exact family. Nonblocking traceability polish."
+    }
+  ],
+  "comparisonBoundary": "One verified useful localized observation unique to Claude in this shared sample; GPT no actionable finding. Compared findings, optional notes, limits and supporting sections. Not a general model-quality benchmark.",
+  "largerQuizPoolObservation": "Claude noted possible享/楽overlap in larger/random pools, explicitly not a default four-choice collision because both have three curated distractors. Retain as untested scope limitation, not a new demonstrated defect or algorithm request.",
+  "sourceLookupLimits": {
+    "initialClaude": "Actual8000/6000characterweb_fetchwindows. Reviewer reports truncation after relevant dictionary entries; not a whole-page read. Supplied frozen XML distinct from fresh Kotobank retrieval.",
+    "initialGpt": "Actual18000characterweb_fetchwindows; reviewer reports relevant headings/publishers exposed without truncation. Historical gaiji not independently decoded."
+  },
+  "coordinatorHarnessLimits": "First combined read-only status command exited1 without output; rerun as smaller probes succeeded. First live reviewer PID probe used an absent JSONL pid field and failed before later checks; responsive growing execution evidence and terminal process receipts verify execution. First staging inventory assertion rejected a path because a helper stripped the initial porcelain status space; raw status parsing corrected before any staging/commit. No permission denial, policy change, signing workaround or hidden retry.",
+  "validationProvenance": "Fresh exact report/raw-execution/model/range/hash/response-serialization/process-order/frozen-teaching checks only. Original351 Python/content/source/baseline/link/readings/stroke/font-cmap/manifest/budget receipts inherited unchanged, not freshly rerun352.",
+  "nextAction": "Resume SAME059 from normally signed LOCAL INITIAL-REVIEW-EVIDENCE checkpoint352; no060/publication. Read complete request/final checkpoint/approved issue and scoped live keys; preserveFULLhistory. Frozen teaching9c79f7dbabcc2309891d2b4ab5ed87d53c8bbb98 unchanged. Both blind different actual families completed0SERIAL: claude-opus-5.5 session57374784-d547-43db-a93d-6d3bc5f93f30 and gpt-6.1-sol session345c7cb4-b120-41ce-b1ed-425003c6f4a5. FirstCOMPLETEarchive/coverage beforesecondlaunch. Each55calls/38assignedlocalresources/54completeJMdictfamilies/5rawcharacters/8comparisonkanji/17comparisonwords/fullSVG/guidance; allassignedrangesreturned; ZEROinternaloverlap andZEROmultitoolresponses. BothfreshsameKotobankpages; Claude8000/6000charwindows partialafterrelevantentries; GPT18000windows. Preservecompleteoriginalreports/hashes/rawJSONL/source/readlimits. ONEverifiedMinor059-F1fromClaude: kanji享line32 'receive; recognize 生を享ける' is intendedrecognitioninstruction butcanreadasunsupportedsecondglossrecognize; NOTestablishedwrongJapanese/spelling. GPTCLEANwithnomatchingobservation. NEXTnarrowclarityfix ONLY row32 to 'receive (recognition spelling); 生を享ける ...' or equallyexplicitlabel; validate/buildmanifest/freezeexactdiff, thenTWOORIGINALSESSIONboundedSERIALconfirmations of actualchangedrow/owncontext/exactsource1329590+1888070 andoriginalfinding. ONEtoolcallperresponse, actualexit/archivebeforenext. No freshblindfullreview or growingdossier. ReconcileF1resolvedONLYafterfix/confirmations; reviewClosedcurrentlyFALSE. ThreeClaudeoptionals(高lookalikenote,art/beautyexpansion,受sourcetail) NONBLOCKINGandnotadopted; larger享/楽quizpoolobservation isexistingboundedlimitation, notdemonstrateddefaultdefect. Preserve享sourceRow20/fullorderedキョウコウ/う.ける/grade8/亠8/eightstrokes; onlyキョウpracticeownlinked享受primaryきょうじゅ;quizKunyomi[]; explicitrecognizedコウsourceonly/real享けるrecognition; nofrequency/spelling-substitution/etymologyguess. New享受noinferredwordlevel/11DIRECTguards/教授differentidentity; twoALLmappedreciprocalpairs享享受+受享受/fourdirections/existing受ONLYforwardlink; threewrong京厚高/11legacyfallbacklabels. 49actualHan/47bundledcovered+亠厂nativefallbackpending. Prior351368Python/validator/vocabulary/freshmanifest7b4dd6fa8fe9435b/54exactfamilies/5frozen2XMLhashes/fullbaseline/all8306runtimehashes/8302oldunchanged/8pinnedstrokes/originalbudgets INHERITEDunchanged,notrerun352. AFTERtextualclosure FRESHnon-skippedAndroidRealContent3/RareHan1/fullgitarchiveproductionContentSyncONCE/nativeglyphandlookalikefallback/selection/meaning/curatedreading/drawing/bothreciprocalpairs/article/SystemBack/offline/visual/latestmainnormalnonrewritingmerge/allcombinedchecks/originalbudgets/normalsigning/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 BEFOREdelivery/060. Published85/1228,1143remaining; LOCAL1071kanji5030words91N1labels90namedmembersplus妖includesONEunpublishedaddition/oneunpublishedsupport. CompatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-setoutstanding. Accepted058retainedwithoutredundantreruns. Noauthoragents/concurrentheavywork/secondrunner/signingretry/permissionworkaround. Overallprojectincomplete.",
+  "limits": "Local initial-review evidence only, not review-closed or published teaching. One minor table-label ambiguity requires a narrow correction and original-session confirmations. GPT established no defect; preserve that disagreement. Returned ranges/hashes establish bytes, not comprehension. Both actual models, serial process exit, first archive before second launch, zero internal overlaps and zero multi-tool responses verified. No fresh Android/native/font/visual/current-main/publication/phone/general-release/whole-set acceptance. Prior351 validation inherited unchanged."
+}
