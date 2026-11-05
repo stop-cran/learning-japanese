@@ -37,7 +37,49 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 069: textual review closed; runtime acceptance pending
+## Batch 070: source prepared; no runtime draft
+
+The [frozen batch](n1-sources/batch-070-membership.json) selects **償**,
+source row 79, after batch 069's
+[verified publication](n1-sources/batch-069-publication.json).
+Earlier deferred rows remain pending. The one-character bound reflects
+**77 applicable complete JMdict families**, not a quota of fifteen cards.
+Thirteen comparison-family occurrences include two overlaps, yielding
+**88 distinct complete families**. The coordinator inspected all of them,
+seven complete raw character records and eleven actual existing articles.
+This is source preparation, not independent review.
+
+The [source ledger](n1-sources/batch-070-progress.json) proposes both
+**ショウ** and **つぐな.う**, retaining the full frozen order.
+Two necessary new support articles, **補償（ほしょう）** and
+**償う（つぐなう）**, would give each selected reading its own linked row.
+Neither word receives a vocabulary level inferred from 償.
+The complete 償う family also records つぐのう; that whole-word alternative
+does not authorize adding a new character-metadata reading.
+The [public evidence](n1-sources/batch-070-source-evidence.json)
+distinguishes compensation for losses from making amends for wrongdoing,
+without pretending that those uses, 補う, or legal compensation categories
+have absolute semantic boundaries.
+
+The proposed all-selected-support audit enumerates three reciprocal pairs
+and six directed links: 償–償う, 償–補償 and 補–補償.
+No frozen baseline word pair is activated. The reused changes are one
+Common words backlink in 補 and a link on the already substantive 補償
+comparison in 補う; their easier metadata and original exclusions stay intact.
+Loss-covering senses of 補う, 埋める and カバー motivate direct proposed
+word-quiz guards, not a transitive exclusion clique.
+The pinned SVG's identity/count and bundled-font cmaps are source-stage
+checks only; conversion and actual-text/native visual acceptance remain later gates.
+
+There are **zero drafted, review-closed or published batch-070 rows**.
+The next checkpoint is the same batch's bounded runtime draft and normally
+signed **local unreviewed** snapshot, not review, publication or batch 071.
+Published coverage remains **96/1,228 additions; 1,132 remain**.
+The 96 published necessary support additions are not an N1 vocabulary deck.
+Compatible Android `f9b59a2+` is required; physical-phone, general-release
+and whole-set acceptance remain outstanding.
+
+## Batch 069: textual review closed checkpoint (historical)
 
 The [frozen batch](n1-sources/batch-069-membership.json) continues with **儒**,
 source row 78, at the existing one-character evidence-bounded size.
