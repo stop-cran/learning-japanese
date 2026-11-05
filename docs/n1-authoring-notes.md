@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 064: source prepared, not drafted
+## Batch 064: local unreviewed draft
 
 The [frozen membership](n1-sources/batch-064-membership.json) selects **偵**
 (source row 66), with eleven strokes, canonical **人**, no. 9, visible **亻**,
@@ -49,28 +49,49 @@ articles. The [public-entry evidence](n1-sources/batch-064-source-evidence.json)
 distinguishes returned definitions from attribution-only headings and historical
 gaiji gaps. Those are source checks, not independent teaching review.
 
-One necessary **探偵（たんてい）** article is proposed, not authored.
+One necessary **探偵（たんてい）** article is now drafted.
 Its detective/investigator sense and separate detective-work/secret-investigation
-sense must remain distinct. A private investigator is a useful context,
+sense remain distinct, including the dictionary's transitive する use.
+A private investigator is a useful context,
 not an absolute rule excluding every police use. Existing **刑事（けいじ）**
-has both police-detective and criminal-matters senses; preserve its N3 identity
-and consider the direct detective-label quiz guard. Broader investigation labels
-also need the final activity-sense audit rather than an assumed synonym clique.
+has both police-detective and criminal-matters senses; its N3 identity is
+preserved. Four direct conservative quiz guards on the new article protect
+**刑事・調査・調べる・探る**, including activity-sense label overlap,
+rather than assuming an exclusion clique through the existing 探る list.
 The separate slang **でか** family is not a replacement primary reading.
 
-Both planned **偵/探偵** and existing **探/探偵** reciprocal pairs are
-enumerated, including the bounded future N3 探 backlink. No existing declared
+Both **偵/探偵** and existing **探/探偵** reciprocal pairs now link
+in both directions, including one bounded new common-word line on N3 探.
+Its metadata, full source readings, easier level and existing examples are
+unchanged. The primary batch tool checks the new-character pair; the
+supplement explicitly checks the existing-component pair too.
+No existing declared
 偵 support pair was found. Obsolete **偵知**, baseball-specific **偵察要員**,
 the **名探偵/迷探偵** pun, specialist compounds and a work title remain
 separately qualified source evidence, not extra practical articles.
 Historical dictionary 字訓 do not add kun-readings to the frozen metadata.
 No word level is inferred from this N1 kanji.
 
-The [preparation audit](n1-sources/batch-064-preparation-audit.json)
+The [historical preparation audit](n1-sources/batch-064-preparation-audit.json)
 checks exact membership/input hashes, complete extraction, unchanged baseline
 metadata/strokes and every unchanged runtime manifest hash.
-Stroke download/conversion, actual draft/quiz/font audits, two-family review,
-Android/native checks and publication are still pending.
+The [draft audit](n1-sources/batch-064-draft-audit.json) repeats those checks
+on the actual draft and verifies all four directed mapped links.
+Full **テイ / empty kun** metadata is preserved; only **てい** is offered,
+with its own linked reading row. Curated wrong meanings **停・低・値**
+are stopping, lowering/height and value/price, not investigative synonyms.
+All eleven existing low-distractor labels were inspected; no new
+default-four-choice collision was established.
+
+The [stroke evidence](n1-sources/batch-064-stroke-evidence.json) pins the
+canonical eleven-stroke SVG/blob and unchanged converter. All **28** Han
+in the three complete new/changed articles were checked against all three
+unchanged bundled font cmaps. **亻・扌** require fallback, including the
+unchanged hand-side explanation inside the changed 探 article; **偵・貞**
+occur in all three. Neither cmap result is native rendering certification.
+The future native/visual gate must inspect actual 偵/貞 and look-alikes
+停/低/値 plus 人/亻 and 手/扌; prior radical evidence remains inherited.
+Two-family review, fresh Android/native checks and publication are pending.
 Published coverage remains **90 additions; 1,138 remaining**, not 91.
 
 ## Batch 063: published and verified for bounded owner testing

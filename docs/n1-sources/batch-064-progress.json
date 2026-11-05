@@ -3,8 +3,8 @@
   "batch": "064",
   "baseCommit": "d00bf868466437d39b0330a383de8448686b502d",
   "membership": ["偵"],
-  "status": "source-prepared-not-drafted",
-  "drafted": [],
+  "status": "local-unreviewed-draft",
+  "drafted": ["偵"],
   "reviewClosed": [],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
@@ -48,7 +48,45 @@
     "limits": "All 33 complete frozen families and seven complete raw character elements returned without truncation in the recorded ranges; 17 complete actual existing articles read. Three successful Japanese dictionary wrappers expose the specific entries qualified in source evidence. Coordinator inspection only, not independent review or certification of unrelated unchanged claims. No final title, curation, exclusions, stroke conversion or native/font certification."
   },
   "baselineCandidatePairs": [],
-  "currentDeclaredWordPairs": [],
+  "currentDeclaredWordPairs": [
+    {"article": "words/探偵.md", "word": "探偵", "primaryReading": "たんてい"}
+  ],
+  "draftInspection": {
+    "execution": 400,
+    "sourceCheckpoint": "d31939184e312c857913cbb6b8534cbea951d950",
+    "originalPacketsPreserved": true,
+    "lexicalFamilies": 23,
+    "comparisonFamilies": 10,
+    "distinctCompleteFamilies": 33,
+    "remainingExtractedFamiliesPending": 0,
+    "lexicalReturnedRanges": [[1, 185], [186, 369]],
+    "comparisonReturnedRanges": [[1, 140], [141, 274]],
+    "rawCharacterReturnedRanges": [[1, 170], [171, 335], [336, 492]],
+    "completeExistingArticlesRead": [
+      "kanji/探.md", "kanji/停.md", "kanji/低.md", "kanji/値.md",
+      "words/刑事.md", "words/調査.md", "words/調べる.md", "words/探る.md",
+      "words/警官.md", "words/警察.md", "words/研究.md", "words/検査.md",
+      "words/検討.md", "words/チェック.md"
+    ],
+    "publicEvidence": "Fresh exact 偵 and 探偵 Kotobank headings/definitions inspected with the qualifications in batch-064-source-evidence.json. 字通 explicitly gives テイ and investigative/spy senses; 精選版 distinguishes the activity and person, and Nipponica qualifies non-police occupational use as a tendency. Daijisen attribution-only sections and historical gaiji gaps remain unverified. Complete newly authored sentences are ordinary illustrative examples, not claimed verbatim attestations.",
+    "limits": "Coordinator draft inspection only, not independent review or certification of unchanged comparison claims."
+  },
+  "supportMappings": [
+    {
+      "kanji": "偵",
+      "article": "words/探偵.md",
+      "primaryReading": "たんてい",
+      "entryIds": ["1418380"],
+      "newArticle": true,
+      "selectedSenses": "Detective/investigator person; separately detective work/secret investigation including transitive suru. No word level inferred."
+    }
+  ],
+  "requiredReciprocalPairs": [["偵", "words/探偵.md"]],
+  "allMappedReciprocalPairs": [
+    ["偵", "words/探偵.md"],
+    ["探", "words/探偵.md"]
+  ],
+  "reciprocalAuditScope": "The existing batch tool checks the one new-character support pair. The draft supplement additionally checks the existing 探 component in this same new support, so both mapped pairs and all four directed links are required and audited. No new kanji membership is assigned to 探.",
   "proposedSupportMapping": [
     {
       "kanji": "偵",
@@ -64,13 +102,17 @@
   ],
   "readingDispositions": [
     {
+      "kanji": "偵",
       "kind": "on",
       "reading": "テイ",
       "proposedQuizSelection": true,
+      "selected": true,
       "example": "探偵 たんてい",
       "entryId": "1418380",
-      "reason": "Useful detective/investigator compound, supported by complete family, both character records and exact public character entry. A future explicit selection requires its own linked reading-table row.",
-      "status": "source-verified-proposal-not-drafted-or-independently-reviewed"
+      "entryIds": ["1418380"],
+      "article": "words/探偵.md",
+      "reason": "Useful detective/investigator compound, supported by complete family, both character records and exact public character entry. The explicit selection now has its own linked reading-table row.",
+      "status": "drafted-source-verified-awaiting-independent-review"
     }
   ],
   "emptyReadingKind": {
@@ -95,7 +137,59 @@
       "status": "pending-draft"
     }
   ],
-  "changedReusedPassages": [],
+  "curatedProjection": [
+    {
+      "kanji": "偵",
+      "quizOnyomi": ["テイ"],
+      "quizKunyomi": [],
+      "onKeys": ["てい"],
+      "kunKeys": []
+    }
+  ],
+  "changedReusedPassages": [
+    {
+      "article": "kanji/探.md",
+      "before": "- 探る さぐる — feel around for; probe",
+      "after": "- 探る さぐる — feel around for; probe\n- [探偵](../words/探偵.md) たんてい — detective; investigator (探 is タン here)"
+    }
+  ],
+  "quizAudit": {
+    "偵": {
+      "title": "spy; covert investigation",
+      "distractors": ["停", "低", "値"],
+      "labels": ["halt; stopping", "low; lower in height", "value; price"],
+      "reason": "Complete actual cards and frozen character records inspected. 停 and 低 share 亻 and テイ, while 値 shares 亻 and a vertically boxed right side; stopping, height/lowering and value/price are not the target's investigative/spy meanings.",
+      "rejected": "査/調/究 and compound partner 探 have overlapping investigative senses. Shared readings or radicals do not make those meanings wrong.",
+      "legacyFallback": "Draft supplement enumerates all current cards with fewer than three curated distractors and checks displayed labels; no investigation/spy collision established for the default four-choice operation. Larger/random/live pools unverified."
+    }
+  },
+  "wordQuizAudit": {
+    "newTitle": {"word": "探偵", "title": "detective; secret investigation"},
+    "directExclusions": [
+      {"word": "探偵", "exclude": ["刑事", "調査", "調べる", "探る"]}
+    ],
+    "pairDecisions": [
+      {
+        "neighbors": ["刑事"],
+        "disposition": "Direct detective-label overlap. A private/police tendency does not make generic detective a safely wrong answer; preserve the existing N3 article and its separate criminal-matters sense."
+      },
+      {
+        "neighbors": ["調査", "調べる", "探る"],
+        "disposition": "Direct conservative safeguards for investigation labels and 探る's actual probing/spying sense against the new activity sense. Broad investigation need not be covert, but can include covert investigation. Noun/verb differences do not by themselves remove uncontextualized label ambiguity; no transitive guard inferred through 探る's existing list."
+      },
+      {
+        "neighbors": ["警官", "警察"],
+        "disposition": "Actual police-officer/police labels are not generic synonyms for detective/private investigator or secret investigation. Related roles and potential individual overlap alone do not establish another direct edge. This is not a claim that 探偵 categorically excludes police."
+      },
+      {
+        "neighbors": ["研究", "検査", "検討", "チェック"],
+        "disposition": "Actual research, condition-testing inspection, proposal consideration and checking uses inspected as navigation. Their displayed labels do not name a detective or specifically secret investigation. No additional overlap defect established; not unrestricted semantic disjointness or whole-pool certification."
+      }
+    ],
+    "confusableInventory": "Notation/contract read; exact 偵/探偵/刑事/調査/探る/検査 search found no listed candidate. Whole current title searches were navigation, not a linguistic scan of every word.",
+    "originalExclusionsPreserved": true,
+    "limits": "Bounded conservative label audit, not whole-corpus/live-quiz uniqueness or a substitution rule."
+  },
   "plannedReusedPassages": [
     {
       "article": "kanji/探.md",
@@ -141,12 +235,22 @@
     "path": "kanji/05075.svg",
     "gitBlob": "c561382a241676980af9b302c779a7a99807e5a0",
     "dictionaryStrokeCount": 11,
-    "status": "inventory-verified-svg-download-conversion-and-count-reconciliation-pending",
+    "status": "pinned-svg-generated-count-reconciled-local-draft",
+    "evidence": "batch-064-stroke-evidence.json",
     "required": "Generate using unchanged pinned tools/generate_strokes.py; never hand-edit geometry. Inventory availability is not stroke or drawing acceptance."
   },
   "fontPreparation": {
     "required": "Audit every Han in the actual new/changed draft, including 人/亻 and 貞, against all three unchanged bundled fonts. Cmap presence/absence is not native rendering certification. Inspect the actual glyphs and look-alike distinctions at the native/visual gate.",
-    "status": "pending-actual-draft"
+    "status": "actual-draft-cmap-audit-in-batch-064-draft-audit.json-native-pending"
+  },
+  "fontDisposition": {
+    "audit": "batch-064-draft-audit.json",
+    "authoredHanCount": 28,
+    "bundledMissingUnion": ["亻", "扌"],
+    "disposition": "All28 Han in the three complete new/changed articles audited against three unchanged bundled font cmaps.26 occur in all three, including 偵/貞; 亻 and existing 探's 扌 do not. Cmap presence is not native rendering certification and absence is not a glyph failure.",
+    "inheritedEvidence": "Prior063 native evidence records readable 人/亻. Existing hand-side examples and earlier pilot fallback evidence remain historical, not a fresh064 run or a proven fallback-face identity.",
+    "rareHanMechanism": "Read unchanged Android f9b59a2 RareHan.kt and RareHanTest.kt. Both missing characters are basic CJK outside the special RareHan ranges; therefore that test alone cannot establish their fallback rendering. No app defect established by cmap absence.",
+    "pending": "Fresh064 Android/native/visual checks must inspect actual 偵/貞 and 停/低/値 look-alikes plus 人/亻 and 手/扌 in the changed existing 探 article. Physical-phone/general-release and whole-set acceptance remain outstanding."
   },
   "lexicalDispositions": [
     {
@@ -232,6 +336,6 @@
       "disposition": "探す and 捜す share さがす in one transitive godan family, with a desired/lost spelling tendency and a separate searching-through sense. Their actual existing N4/N2 articles are not duplicate supports for テイ and do not supply standalone さがす for 偵."
     }
   ],
-  "nextAction": "SAME064 author bounded 偵 and one necessary 探偵 support with the exact existing 探 reciprocal backlink. Preserve all existing metadata/levels/exclusions and full テイ/empty-kun source lists. Settle actual detective/activity label guards, including direct 刑事; select three defensibly wrong existing kanji meanings, generate pinned eleven-stroke geometry, audit both mapped reciprocal pairs and every draft Han/font, validate/build manifest and normally sign a local unreviewed snapshot. Then obtain two serial blind different-family reviews on the same frozen snapshot; no unreviewed push.",
-  "limits": "Source preparation and coordinator inspection only; no runtime content authored, independent review, stroke conversion, final quiz/font audit, Android/native/phone acceptance or publication. Batch063 remains the latest delivered coverage:90 additions,1138remaining,1075kanji5033words95N1labels94namedmembers plus separate妖. Physical-phone/general-release and whole-set acceptance remain outstanding; compatible Android f9b59a2+ required."
+  "nextAction": "SAME064 obtain two serial blind different-actual-model-family initial reviews on the same normally signed local draft snapshot. Assign complete new 偵/探偵, exact existing 探 backlink and both mapped component pairs across correctness/scoped coverage/phone comprehensibility. Check actual catalog and model evidence; one active reviewer with serial tools. Preserve complete reports and process/read limits, reconcile by evidence and reuse sessions for bounded confirmations if needed. No unreviewed push,065 or second runner.",
+  "limits": "Local unreviewed draft only, not independent linguistic review, Android/native/phone acceptance or publication. Batch063 remains the latest delivered coverage:90 additions,1138remaining,1075kanji5033words95N1labels94namedmembers plus separate妖. The local 偵/探偵 additions do not reduce published remaining additions. Physical-phone/general-release and whole-set acceptance remain outstanding; compatible Android f9b59a2+ required."
 }
