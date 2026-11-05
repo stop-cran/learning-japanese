@@ -37,7 +37,38 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 058: initial textual reviews; process reconciliation pending
+## Batch 058: textual review closed; fresh Android/native gates pending
+
+The [textual reconciliation](n1-reviews/batch-058-reconciliation.json)
+preserves bounded dependent confirmations in **both original reviewer sessions**
+on unchanged teaching. Both actual models retain **CLEAN** correctness,
+scoped coverage and text comprehensibility for all five teaching files;
+no actionable finding or consequential unresolved teaching claim remains
+within that scope. No teaching edit was needed. Claude's three suggestions
+remain optional, not new requirements.
+
+Each confirmation freshly read the five complete teaching files, both primary
+JMdict families and the complete raw 丘 record, plus its own original report
+and coordinator-supplied empty teaching diff/baseline diff. Other initial
+comparison, source-family, SVG and public-page inspection is inherited,
+not a repeated full fresh review. Exact event audits confirm **10 view-only
+calls each, one per response, zero overlaps**, terminal serial process exits
+and the first complete archive before the second launch.
+
+The initial Claude **three overlaps in two responses remain historical
+noncompliance**. Both follow-ups explicitly preserve that limit. The process
+disposition is **partially resolved**: bounded remediation is complete, but
+the original strict internal-serialization contract is not retroactively
+accepted. Textual closure does not erase original reports or process evidence.
+
+Next SAME058 is **fresh non-skipped Android RealContentTest / RareHanTest**,
+then separate full-archive single-import native/visual, combined-main and
+publication gates. No fresh Android/native acceptance, runtime push or
+batch059 is claimed. Published coverage remains **84/1,228; 1,144 remaining**.
+Compatible Android `f9b59a2+` is required; physical-phone/general-release
+and whole-set acceptance remain outstanding.
+
+### Historical initial-review checkpoint
 
 The [original initial-review record](n1-reviews/batch-058-initial-review-checkpoint.json)
 preserves blind **Claude Opus 5.5 / GPT-6.1 Sol** reports on the same signed
@@ -92,11 +123,11 @@ and changes three reused payloads; **8,297** old runtime hashes remain
 unchanged. The source-preparation questions below are historical, not
 unresolved claims of draft acceptance.
 
-Next SAME058: resolve the recorded process deviation with bounded serial
+At that checkpoint, next SAME058 was to resolve the process deviation with bounded serial
 original-session confirmation, preserving the original initial history.
 Fresh Android,
 full-archive native/visual, combined-main and publication gates remain.
-**No review closure, native acceptance or runtime push** is claimed. Published
+That initial checkpoint claimed **no review closure, native acceptance or runtime push**. Published
 coverage remains **84/1,228; 1,144 still to deliver**; local
 **1,070 kanji / 5,029 words / 90 N1 labels** include this unpublished
 addition. Compatible Android `f9b59a2` or later is required; physical-phone,
