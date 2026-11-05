@@ -37,6 +37,44 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 067: source prepared; not drafted or published
+
+The [frozen batch](n1-sources/batch-067-membership.json) selects **僧**,
+source row 76. Its [source ledger](n1-sources/batch-067-progress.json)
+separates **106 complete applicable JMdict families**, seven comparison
+families and six raw character records from proposed teaching decisions.
+The coordinator inspected those complete packets, the actual existing
+坊さん and 寺 articles, and three proposed distractor cards.
+[Public-entry evidence](n1-sources/batch-067-source-evidence.json) retains
+the actual returned headings and the attribution-only, gaiji and extraction
+limits; no independent review is claimed.
+
+The proposal preserves the sole sourced **ソウ** reading and empty kun list,
+with one **そう** practice key. Necessary support **僧侶（そうりょ）**
+has no existing article; its spelling, reading and Buddhist noun sense were
+checked in the complete family. Keep both 僧 and the not-yet-carded 侶 in its
+word metadata, without inferring an N1 vocabulary level. Existing N2
+**坊さん（ぼうさん）** overlaps its religious sense and retains its identity,
+reading, level and original exclusions. Matching exact answer titles can
+retain the app's existing deduplication; register alone does not make these
+words safe distractors for one another.
+
+There are no activated baseline/current declared 僧-word pairs. The proposed
+support has **one currently cardable reciprocal pair in two directions**;
+the future 侶 pair is explicitly deferred until that card exists, not silently
+omitted. Extended 小僧 senses, specialist anatomical terms, collective meanings
+and historically broader religious usage are retained in source dispositions,
+not multiplied into unnecessary support articles or new character readings.
+The exact pinned SVG's thirteen paths agree with KANJIDIC2; conversion and
+native drawing/font acceptance have not been performed.
+
+This checkpoint changes contributor evidence only. Runtime authoring, two
+serial model-family reviews, Android/native, combined-main and publication
+gates remain pending for 067. The latest accepted
+[066 publication](n1-sources/batch-066-publication.json) remains `f0b318eb`:
+**93 published additions; 1,135 still to deliver**, not complete N1 coverage.
+Physical-phone/general-release and whole-set acceptance remain outstanding.
+
 ## Batch 066: textual review closed; not published
 
 The [frozen batch](n1-sources/batch-066-membership.json) selects **僚**, source
