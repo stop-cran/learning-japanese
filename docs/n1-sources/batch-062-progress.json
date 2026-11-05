@@ -3,17 +3,19 @@
   "batch": "062",
   "baseCommit": "42f144c76f013bedc392b201c5be7eed35083b88",
   "membership": ["俸"],
-  "status": "source-prepared-not-drafted",
-  "drafted": [],
+  "status": "local-unreviewed-draft",
+  "drafted": ["俸"],
   "reviewClosed": [],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
     {"selection": "batch-062-lexical-selection.json", "xml": "batch-062-jmdict.xml"},
-    {"selection": "batch-062-comparison-selection.json", "xml": "batch-062-comparison-jmdict.xml"}
+    {"selection": "batch-062-comparison-selection.json", "xml": "batch-062-comparison-jmdict.xml"},
+    {"selection": "batch-062-quiz-comparison-selection.json", "xml": "batch-062-quiz-comparison-jmdict.xml"}
   ],
   "sourceReadingOrder": {"onyomi": ["ホウ"], "kunyomi": []},
   "authorInspection": {
+    "stage": "Historical source-preparation inspection at execution379; current draft inspection is recorded separately below.",
     "lexicalFamilies": 16,
     "comparisonFamilies": 22,
     "distinctCompleteFamilies": 38,
@@ -31,7 +33,121 @@
     "limits": "All 38 complete frozen families and six complete raw character elements returned without truncation in the recorded ranges; twelve complete actual existing articles read. Three successful exact Japanese pages inspected with heading-specific extraction limitations separately recorded. Coordinator inspection only. No final title/curation/exclusions/distractors, complete historical analysis, stroke conversion or font/native certification; unrelated unchanged article claims are not freshly certified."
   },
   "baselineCandidatePairs": [],
-  "currentDeclaredWordPairs": [],
+  "currentDeclaredWordPairs": [
+    {"article": "words/俸給.md", "word": "俸給", "primaryReading": "ほうきゅう"}
+  ],
+  "draftInspection": {
+    "execution": 380,
+    "sourceCheckpoint": "0f959cfaebac16f6103a292a2f9c9a507fdd2689",
+    "originalPacketsPreserved": true,
+    "lexicalFamilies": 16,
+    "comparisonFamilies": 22,
+    "additionalQuizFamilies": 4,
+    "distinctCompleteFamilies": 42,
+    "lexicalReturnedRanges": [[1, 140], [141, 280]],
+    "comparisonReturnedRanges": [[1, 200], [201, 400], [401, 600]],
+    "additionalQuizReturnedRanges": [[1, 180]],
+    "rawCharacterReturnedRanges": [[1, 235], [236, 480]],
+    "completeExistingArticlesRead": [
+      "kanji/棒.md", "kanji/給.md", "kanji/借.md", "kanji/付.md",
+      "words/給料.md", "words/給与.md", "words/月給.md", "words/収入.md",
+      "words/支給.md", "words/代金.md", "words/料金.md", "words/小遣い.md",
+      "words/支払.md", "words/払う.md", "words/支払う.md", "words/領収.md",
+      "words/サラリーマン.md"
+    ],
+    "publicEvidence": "The same three exact Japanese entries in batch-062-source-evidence.json were freshly fetched. The actual character/annual-pay headings and Seisenban 俸給 definition support the scoped claims; Daijisen 俸給 remains heading-only. Character-page historical gaiji content was truncated and is not adopted as historical evidence.",
+    "confusableInventory": "Read inventory introduction and searched salary/wage/income/stipend/remuneration/earnings/pay and exact 給料/給与/月給/俸給. No matching candidate row; this is not whole-inventory semantic certification.",
+    "limits": "Coordinator inspection of complete bounded families, actual current articles and returned public definitions; not independent review, whole-pool live-quiz certification or native/phone evidence."
+  },
+  "supportMappings": [
+    {
+      "kanji": "俸", "article": "words/俸給.md", "primaryReading": "ほうきゅう",
+      "entryIds": ["1515280"], "selectedSenses": [1], "newArticle": true,
+      "status": "local-unreviewed-draft"
+    },
+    {
+      "kanji": "給", "article": "words/俸給.md", "primaryReading": "ほうきゅう",
+      "entryIds": ["1515280"], "selectedSenses": [1], "newArticle": true,
+      "status": "local-unreviewed-draft"
+    }
+  ],
+  "requiredReciprocalPairs": [["俸", "words/俸給.md"], ["給", "words/俸給.md"]],
+  "unavailableMappedPairs": [],
+  "readingDispositions": [
+    {
+      "kanji": "俸", "reading": "ホウ", "kind": "on", "selected": true,
+      "sourceOnly": false, "article": "words/俸給.md", "entryIds": ["1515280"],
+      "reason": "The sole frozen on-reading is confirmed by the actual Digital Daijisen character heading. Exact 俸給/ほうきゅう has no spelling/reading restriction in the complete frozen family; sourced 給 キュウ supplies the second component. The word directly teaches the salary meaning and has its own linked reading row. No kun/nanori or extra 字訓 imported; ポウ in 年俸 is compound pronunciation, not additional raw metadata."
+    }
+  ],
+  "curatedProjection": [
+    {"kanji": "俸", "quizOnyomi": ["ホウ"], "quizKunyomi": [], "onKeys": ["ほう"], "kunKeys": []}
+  ],
+  "changedReusedPassages": [
+    {
+      "article": "kanji/給.md",
+      "before": "- 給食 きゅうしょく — meal service, such as a school lunch service",
+      "after": "- 給食 きゅうしょく — meal service, such as a school lunch service\n- [俸給](../words/俸給.md) ほうきゅう — salary; pay, especially for public employees"
+    }
+  ],
+  "quizAudit": {
+    "俸": {
+      "title": "salary; stipend",
+      "distractors": ["棒", "借", "付"],
+      "labels": ["rod; stick", "borrow, rent", "attach"],
+      "reason": "棒 shares the visible 奉-like right side but has 木, and its complete lexical family covers rod/stick, line/dash and monotone speech, not salary. 借 and 付 share 亻 but name borrowing/renting and attachment. The actual current character articles were read. Neither money-related borrowing nor employment-related attachment makes the target mean those actions.",
+      "rejected": "給 pay/bestow and 払 pay are not safe salary/pay distractors. No absent 奉 card is referenced. Three curated choices avoid default four-choice fallback.",
+      "legacyFallback": "Eleven current cards have fewer than three distractors: 人/休/何/入/出/口/女/日/月/男/買. Their actual displayed labels do not name salary/stipend; worker/person and purchasing/payment associations are not general synonymy. No change justified. Larger/random/live pools unverified."
+    }
+  },
+  "wordQuizAudit": {
+    "newTitle": {"word": "俸給", "title": "salary; pay"},
+    "directExclusions": [
+      {"word": "俸給", "exclude": ["給料", "給与", "月給", "収入", "支給", "支払", "払う", "支払う", "代金"]}
+    ],
+    "pairDecisions": [
+      {
+        "neighbors": ["給料", "給与"],
+        "disposition": "Direct salary/pay overlap in complete frozen families and actual current labels/bodies. Different public/private associations do not make competing salary answers safe. Each direct guard is on the new word; no transitive assumption."
+      },
+      {
+        "neighbors": ["月給", "収入"],
+        "disposition": "Conservative direct salary/income label guards. A salary can be monthly and can be income, although neither general 俸給 nor 収入 fixes a monthly basis, and not all income is salary. Existing 月給 exclusions do not protect these new pairs transitively."
+      },
+      {
+        "neighbors": ["支給", "支払", "代金"],
+        "disposition": "Conservative direct broad payment/provision-label safeguards: actual current labels mention payment or provision, and source families permit payment. This is not a teaching claim that the Japanese words are interchangeable: 俸給 names remuneration, 支給 its provision, 支払 a payment, and 代金 an amount owed in exchange. Guard the underspecified English labels rather than manufacture absolute compartments."
+      },
+      {
+        "neighbors": ["払う", "支払う"],
+        "disposition": "Both actual displayed labels are bare pay, which can be interpreted as the English noun in an uncontextualized choice even though the Japanese words are verbs. Exact-title deduplication between these two does not protect 俸給/pay. Add each direct pair without changing the existing teaching."
+      },
+      {
+        "neighbors": ["料金", "小遣い", "サラリーマン", "領収"],
+        "disposition": "No new guard: fees/fare charged for use, personal spending allowance, a salaried employee and the receipt action are not names for salary in the inspected actual articles. Shared money/work topics are not by themselves reason for an exclusion clique. Whole-pool semantic certification is not claimed."
+      }
+    ],
+    "originalExclusionsPreserved": true,
+    "limits": "Direct conservative label guards, not legal payroll definitions, unrestricted substitution or proof of every random/live quiz's uniqueness."
+  },
+  "additionalQuizDispositions": [
+    {
+      "entries": ["1310130", "1594480"],
+      "disposition": "Complete 支給 and 支払/支払い families support the broad payment/provision comparison. Both exact current articles inspected; no spelling/reading/level change. Exclusions guard labels, not equivalence between remuneration and its provision/payment."
+    },
+    {
+      "entries": ["1501620", "1310300"],
+      "disposition": "Complete 払う and 支払う families retain financial and other senses, rare 掃う and search-only 仕払う separately. Their actual titles pay are ambiguous English labels next to salary/pay; no new reading, spelling, ateji or frequency lesson is added."
+    }
+  ],
+  "fontDisposition": {
+    "audit": "batch-062-draft-audit.json",
+    "authoredHanCount": 30,
+    "bundledMissingUnion": ["亻"],
+    "disposition": "All 29 other Han in the three new/changed articles, including 俸/奉/棒/給, occur in all three unchanged bundled font cmaps. The actual radical variant 亻 is not in those subsets; do not erase it or call cmap absence a rendering failure.",
+    "inheritedEvidence": "docs/n1-reviews/batch-061-native-acceptance.json glyphObservation records actual 人/亻 readable and distinct on the prior API35 native run. This is explicitly inherited evidence, not a fresh062 test or a known fallback-face identity.",
+    "pending": "Applicable fresh062 RealContentTest/RareHanTest and native article/reading/drawing/Back/offline acceptance after textual review. No physical-phone/general-release acceptance inferred."
+  },
   "lexicalDispositions": [
     {
       "entries": ["1515280"],
@@ -84,7 +200,8 @@
       "disposition": "付 has separate dated/effective づけ and attached/furnished-with つき/づき families, with kana-only katakana ツキ and luck sense qualifications. These are comparison evidence only; no allocation of those readings to 俸."
     }
   ],
-  "proposedTeaching": {
+  "sourcePreparationProposal": {
+    "stage": "Historical proposal before execution380 authoring; final draft decisions appear in supportMappings, readingDispositions and quizAudit above.",
     "kanji": "俸",
     "meaning": "salary/stipend association; no final quiz title yet",
     "sourceMetadata": "Ten strokes; canonical 人 no.9, visible 亻; grade8; full ホウ and no kun retained.",
@@ -97,5 +214,5 @@
     "shape": "Prefer a labelled modern-shape mnemonic unless a narrow phonetic claim is deliberately sourced and reviewed. No source-metadata additions from another dictionary's 字訓.",
     "pending": "Exact title, three defensibly wrong existing distractors, final source-linked examples, direct word exclusions, canonical pinned SVG conversion/count, all newly introduced Han font audit, two-family review, Android/native, integrated-main/CI/public ZIP acceptance."
   },
-  "limits": "Local source preparation only; zero runtime changes, drafted/review-closed/published rows or accepted reading keys. Published additions remain88/1228, remaining1140. Physical-phone/general-release and whole-set acceptance remain outstanding."
+  "limits": "Local unreviewed runtime draft only: one new kanji, one necessary word, generated ten-stroke geometry and one existing 給 backlink. 42 complete families preserved; full metadata order unchanged; one proposed offered reading key. No independent review, fresh Android/native run or publication. Published additions remain88/1228, remaining1140. Physical-phone/general-release and whole-set acceptance remain outstanding."
 }
