@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 064: textually review-closed; fresh Android checks pending
+## Batch 064: textually review-closed; native fixture compiled, execution pending
 
 The [frozen membership](n1-sources/batch-064-membership.json) selects **偵**
 (source row 66), with eleven strokes, canonical **人**, no. 9, visible **亻**,
@@ -102,9 +102,28 @@ in the three complete new/changed articles were checked against all three
 unchanged bundled font cmaps. **亻・扌** require fallback, including the
 unchanged hand-side explanation inside the changed 探 article; **偵・貞**
 occur in all three. Neither cmap result is native rendering certification.
-The future native/visual gate must inspect actual 偵/貞 and look-alikes
+The pending native/visual gate must inspect actual 偵/貞 and look-alikes
 停/低/値 plus 人/亻 and 手/扌; prior radical evidence remains inherited.
-Textual review is closed; fresh Android/native checks and publication are pending.
+The [fresh Android archival checkpoint](n1-sources/execution-404.json)
+independently verifies all three RealContentTest cases and the RareHanTest case
+with no failures, errors or skips. The original execution403 permission denial
+and the parent's subsequent exact-command recovery remain separate evidence.
+
+The [native preparation](n1-sources/batch-064-native-preparation.json)
+freezes the full signed `bf6204e5` Git envelope, preserving all **8,320**
+runtime hashes and original publishing budgets. Its compiled test APK
+contains that exact archive and both batch064 test classes. Prepared routes
+cover complete teaching passages in **偵・探偵・探・刑事**, both mapped
+reciprocal pairs in four directions, the **刑事/探偵** comparison in both
+directions, System Back, offline behavior, meaning, the sole curated **てい**
+question with an explicitly empty kun set, and eleven-stroke drawing.
+**79 static selectors / 46 article capture steps**, **40** individual glyph
+probes, **eight** whole-word probes and four production font rows are prepared,
+not executed. Temporary Android source/assets were removed after compilation.
+Static selectors and raster hashes cannot certify readability or identify
+fallback faces; reference-touch tracing and a recall miss do not prove ML Kit
+recognition or correct human recall. Native execution, original-session serial
+visual confirmation, combined-main acceptance and publication remain pending.
 Published coverage remains **90 additions; 1,138 remaining**, not 91.
 
 ## Batch 063: published and verified for bounded owner testing
