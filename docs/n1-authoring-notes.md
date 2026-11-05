@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 060: textual review closed; fresh Android execution blocked
+## Batch 060: textual review closed; fresh Android results archived
 
 The [frozen membership](n1-sources/batch-060-membership.json) selects **亭**
 (source row 21) for one evidence-bounded packet. Its
@@ -74,15 +74,21 @@ on unchanged teaching snapshot `ea1dac1a`, using **claude-opus-5.5** and
 historical noncompliance; supervised dependent lexical remediation is not
 retroactive strict initial acceptance.
 
-The [execution364 blocker](n1-sources/execution-364.json) preserves the exact
-fresh Android command's permission denial **before execution**. No start,
-Gradle log, exit receipt or fresh XML was created. Existing batch059 XML
-is not batch060 acceptance. No retry, alternative invocation or permission
-change was attempted. An approval-capable parent must resolve that exact
-denial before fresh non-skipped RealContentTest **3** / RareHanTest **1**
-can be accepted. Native preparation/run, visual checks, combined-main
-acceptance and publication remain pending; this is a local evidence checkpoint,
-not delivered content. Published coverage remains **86/1,228 additions; 1,142 remain**.
+The [execution364 blocker](n1-sources/execution-364.json) preserves the original
+permission denial **before execution**. An approval-capable parent subsequently
+ran that exact command once against clean content `52be1804` and Android
+`f9b59a2`, completing **41 executed tasks** successfully. The
+[execution365 archive](n1-sources/execution-365.json) independently verifies
+all six provenance hashes, source/copied XML equality, four exact named cases,
+fresh timestamps after the actual start and the dedicated sibling content root:
+RealContentTest **3** / RareHanTest **1**, with no failures, errors or skips.
+Existing batch059 XML was not reused, and Gradle was not rerun for archival.
+The original denial and host-only heap qualification remain historical;
+no guest/app heap, assertion, runtime or archive guard changed.
+
+Native preparation/run, visual checks, combined-main acceptance and publication
+remain pending; this is a signed local evidence checkpoint, not delivered
+content. Published coverage remains **86/1,228 additions; 1,142 remain**.
 Compatible Android `f9b59a2+`, outstanding physical-phone/general-release
 acceptance and all batch059 historical limits remain unchanged.
 
