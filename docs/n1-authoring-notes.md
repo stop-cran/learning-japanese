@@ -37,7 +37,50 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 065: native checks passed; independent visuals still pending
+## Batch 065: published for bounded owner testing
+
+[Batch 065](n1-sources/batch-065-publication.json), **倹**, adds necessary
+support **倹約 / 倹しい** and the existing 約 common-word backlink. Reviewed
+teaching `45c275e7`, textual closure `ae36905b` and bounded visual closure
+`848a25e0` precede normally signed accepted publication `1f2da73c`.
+Fresh main was already ancestral; no substantive teaching merge occurred.
+
+The [combined acceptance audit](n1-sources/batch-065-acceptance-audit.json)
+records **368 Python tests**, validator, vocabulary consistency, manifest
+freshness, frozen source bytes, 24 mechanically re-extracted full dictionary
+families, exact 92-addition membership, preserved baseline metadata/strokes,
+all readings, three reciprocal pairs in six directions, both support
+comparisons, pinned geometry and affected Han font cmaps. Its first audit
+found the current exclusion ledger still describing the draft before C1:
+teaching and both confirmations already included 倹しい/謙虚. Only that
+ledger and rationale were synchronized; the failed audit and passing exact
+rerun remain archived. No teaching or new linguistic decision changed.
+
+The [visual reconciliation](n1-reviews/batch-065-visual-reconciliation.json)
+retains Claude's original two internal overlaps as **nonconformant**, with
+five serial original-session recovery calls rereading exactly four affected
+resources. GPT's 44 calls were serial; reviewer processes exited serially.
+Both families received 30 distinct bounded images; returned image hashes
+establish access, not comprehension. Unseen article/table regions and actual
+fallback faces remain unverified. Accepted Android 3+1/no-skip and native
+two-case terminal-0 evidence were reverified without redundant reruns.
+Original HOST memory/permission failures and the qualified HOST-only 2-GiB
+init remain distinct; no guest/app heap, archive guard or permission changed.
+
+Accepted [CI 42038166121](https://github.com/stop-cran/learning-japanese/actions/runs/42038166121)
+is green. Its immutable public ZIP verifies **all 8,324 runtime hashes**,
+manifest `6a940651167e0e94`, **8,346 entries / 30,676,197 compressed /
+44,308,916 inflated / 44,040,578 retained bytes**, within unchanged guards.
+Terminal evidence publication is checked separately in the control checkpoint
+and issue receipt.
+
+Published coverage is **92 additions; 1,136 still to deliver**: 1,077 kanji,
+5,036 words, 97 N1-labelled cards, 96 named-source members plus separate 妖.
+Two necessary support additions bring the project total to 94, **not an N1
+vocabulary deck**. Compatible Android `f9b59a2` or later is required;
+physical-phone, general-release and whole-set acceptance remain outstanding.
+
+### Historical batch 065 native execution: checkpoint 419
 
 [Execution 419](n1-sources/execution-419.json) runs both compiled cases to
 individual terminal status **0**, with no skips, in **148.883 s**. Production
@@ -62,10 +105,10 @@ Owned emulator parent **21240 / QEMU 5416** exit after `emu kill`; independent
 postrun checks retain the pre-existing `emulator-5556`, clean worktrees and no
 owned process or port listener. Shared adb's SYN probes and an OS TIME_WAIT
 connection are recorded, not killed or misreported as empty ports.
-Next are bounded dependent visual confirmations in the two original reviewer
-sessions, then latest-main integration and all publication gates. No reviewer
-or runtime publication ran here. Published coverage remains **91 additions;
-1,137 still to deliver**.
+At checkpoint 419, bounded dependent visual confirmations in the two original
+reviewer sessions and latest-main publication gates were still next. No
+reviewer or runtime publication ran in that execution. Its historical
+published coverage was **91 additions; 1,137 still to deliver**.
 
 ### Historical native preparation
 
