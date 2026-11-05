@@ -358,5 +358,185 @@ def evidence():
     print("Combined acceptance and inherited evidence archived; publication pending.")
 
 
+def verified(phase):
+    head = git("rev-parse", "HEAD")
+    assert git("ls-remote", "origin", "refs/heads/main").split()[0] == head
+    assert git("log", "-1", "--format=%G?") == "G" and not git("status", "--porcelain")
+    ci = load(C / "artifacts" / f"batch-068-{phase}-ci.json")
+    archive = load(C / "artifacts" / f"content-{head[:7]}-acceptance.json")
+    assert ci["headSha"] == head and ci["status"] == "completed" and ci["conclusion"] == "success"
+    assert ci["jobs"] and all(j["conclusion"] == "success" for j in ci["jobs"])
+    assert archive["commit"] == head and archive["contentVersion"] == VERSION
+    assert archive["verifiedRuntimeHashes"] == 8331
+    assert all(archive[key] for key in ("manifestEqual", "allPublishingBudgetsPassed",
+                                       "contributorEvidenceExcluded", "perFileLimitsAndSafePathsPassed"))
+    assert sha(C / "artifacts" / f"content-{head[:7]}.zip") == archive["sha256"]
+    unchanged()
+    return head, ci, archive
+
+
+def records():
+    head, ci, archive = verified("accepted")
+    acceptance = load(S / "batch-068-acceptance-audit.json")
+    publication = {
+        "schemaVersion": 1, "execution": 446, "batch": "068", "membership": ["儀"],
+        "status": "published-verified-bounded-owner-testing", "recordedAt": now(),
+        "baseCommit": BASE, "authoredSnapshot": "5bfb668dae3b2acd99720d88a15e5fc2feb397ae",
+        "reviewedTeachingSnapshot": TEACHING,
+        "textualClosureSnapshot": "c5af362d7af0ad1f0e5070169d5caae65d4d985e",
+        "visualClosureSnapshot": START, "latestMainIntegrated": acceptance["latestMainIntegrated"],
+        "acceptedCommit": head, "integratedCommit": head, "publishedCommit": head,
+        "normalSignatureStatus": "G; normal owner-scoped fast-forward; no bypass/amendment/force push.",
+        "reviewRecord": "../n1-reviews/batch-068-reconciliation.json",
+        "nativeVisualRecord": "../n1-reviews/batch-068-visual-reconciliation.json",
+        "validation": acceptance, "ci": ci, "immutablePublicArchive": archive,
+        "counts": {
+            "batchPublishedAdditions": 1, "projectPublishedAdditions": 95, "remainingAdditions": 1133,
+            "currentKanji": 1080, "currentWords": 5037, "n1Labelled": 100, "namedSourceMembersPresent": 99,
+            "separateExceptionPreserved": "妖", "batchNewNecessarySupportWords": 0,
+            "projectNewNecessarySupportWords": 95, "batchChangedReusedArticles": 8,
+            "requiredReciprocalPairs": 8, "activatedBaselinePairs": 4,
+        },
+        "compatibleClient": "Androidf9b59a2+ required; old clients ignore curation.",
+        "publicationIdentity": "stop-cran process-scoped token; global romanko-ms unchanged.",
+        "phoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeSetAcceptance": "outstanding", "limits": acceptance["limits"],
+        "nextAction": "Verify terminal evidence commit/CI/public ZIP/ownerissue60; checkpoint and yield before069.",
+    }
+    assert not (S / "batch-068-publication.json").exists()
+    save(S / "batch-068-publication.json", publication)
+    ledger = load(S / "batch-068-progress.json")
+    ledger["prePublicationCheckpoint"] = {
+        key: ledger[key] for key in ("status", "nextAction", "limits")}
+    ledger.update(
+        status=publication["status"], published=ledger["membership"],
+        publishedAdditions=95, remainingAdditions=1133, publishedCommit=head,
+        publicationRecord="batch-068-publication.json", acceptanceRecord="batch-068-acceptance-audit.json",
+        pendingGates=[], nextAction=publication["nextAction"], limits=publication["limits"],
+    )
+    for row in ledger["supportMappings"]:
+        row["status"] = publication["status"]
+    save(S / "batch-068-progress.json", ledger)
+    execution = load(S / "execution-446.json")
+    execution.update(status=publication["status"], publicationRecord="batch-068-publication.json",
+                     publication={"acceptedCommit": head, "ciRun": ci["databaseId"], "counts": publication["counts"]})
+    save(S / "execution-446.json", execution)
+    for path in (C / "artifacts" / "batch-068-accepted-ci.json",
+                 C / "artifacts" / f"content-{head[:7]}-acceptance.json",
+                 L / "execution-446-accepted-push.txt"):
+        shutil.copyfile(path, D / path.name)
+    shutil.copyfile(Path(__file__), D / Path(__file__).name)
+    p = load(C / "progress.json")
+    p["stage"] = "batch-068-accepted-publication-verified-pending-terminal-evidence"
+    p["execution446AcceptedPush"] = {"commit": head, "ciAndArchiveVerified": True}
+    save(C / "progress.json", p)
+    print("Accepted remote/greenCI/public8331hashes verified; terminal records prepared.")
+
+
+def comment():
+    head, ci, archive = verified("terminal")
+    publication = load(S / "batch-068-publication.json")
+    body = f"""**Batch 068 (儀) is published and verified for bounded owner testing.** No batch 069 started.
+
+Adds one kanji and its pinned generated 15-stroke file; no new support words. Four existing support words **儀式 (ぎしき), 礼儀 (れいぎ), 行儀 (ぎょうぎ), お辞儀 (おじぎ)** plus four counterpart kanji **式・礼・行・辞** receive eight narrow reciprocal-link passages. All **eight mapped pairs / 16 directions** checked, including the four activated baseline pairs; existing identities, readings, easier levels and exclusions preserved.
+
+Initial frozen teaching `5bfb668dae3b2acd99720d88a15e5fc2feb397ae`; suffix-scope correction reviewed at `{TEACHING}`; textual closure `{publication['textualClosureSnapshot']}`, bounded visual closure `{START}`. Fresh main `{publication['latestMainIntegrated']}` already ancestral: no substantive merge or teaching/tool changes. Normally signed accepted/integrated runtime `{publication['acceptedCommit']}`, terminal evidence/remote main `{head}`. Both normal owner fast-forwards; global romanko-ms unchanged.
+
+Fresh combined gates: **372 Python tests**, validator, vocabulary consistency (**2,122/2,431 reviewed pilot prompts**, not complete coverage), fresh manifest `{VERSION}`; exact frozen input hashes and **146 full-family mechanical re-extractions**, ten raw character records; exact **95 additions**, baseline **985 kanji / 4,942 words / 985 strokes** with only preserved reviewed 虎/猿/丘/山 exceptions; source readings/order/curation, all mapped links, reproduced pinned geometry and affected Han cmaps. Mechanical hashes establish bytes, not linguistic comprehension.
+
+Independent initial **claude-opus-5.5 / gpt-6.1-sol** reviews share the frozen snapshot, complete nine-file teaching scope and three facets. Shared minor suffix finding resolved with typical self/own-side attachment, humble nuance and sourced **私儀 (わたくしぎ)**; original-session confirmations retained. **Original441 Claude13ms overlap between own-report/diff reads remains disclosed**, followed by its one-call serial repair; not relabelled fully serial. Dependent visual confirmations445 were fully serial, each41single calls and20assigned PNGs, complete nine teaching files and696line fixture/log/route. All40actual returned900x2000payloads archived separately from1080x2400sources: **20/127 capture scope, not full-PNG acceptance**. All eight reused changed passages and revised suffix note assigned explicitly. No consequential in-scope defect remains established; optional polish not expanded.
+
+Accepted442 fresh **RealContentTest3 + RareHanTest1, no skips**, and444 native **two terminal-status-0 cases /272.859s** reverified, not redundantly rerun. Exact full Git envelope through production **ContentSync once** imported **1,080 kanji /5,037 words /100N1**, problems0, epoch1. Full+Liteギ/emptyKun; sole normalizedぎ Good persisted/noKunLog. Nine complete article prose/example projections98selectors; all mapped links/SystemBack/offline/N1selection/actual meaning feedback/15reference-stroke touch/ungradedtrace/recallmiss/persistedDrawAgain. Four readable production font rows with 儀義億優倍人亻式礼辞行亍弋彳礻 and all four support words;60singlePaint+16wholewordraster probes. Owned emulator stopped; no owner device modified. Native API35 emulator is **not phone evidence**.
+
+Accepted [CI {publication['ci']['databaseId']}](https://github.com/stop-cran/learning-japanese/actions/runs/{publication['ci']['databaseId']}) and terminal [CI {ci['databaseId']}](https://github.com/stop-cran/learning-japanese/actions/runs/{ci['databaseId']}) green. **Both immutable public ZIPs verify every8,331 runtime hash** and the exact manifest. Terminal ZIP SHA256 `{archive['sha256']}`: **{archive['zipEntries']:,} entries / {archive['compressedBytes']:,} compressed / {archive['inflatedBytes']:,} inflated / {archive['retainedBytes']:,} retained bytes**, within unchanged18,000entries/42MiB/80MiB/56MiB guards; safe paths/per-file limits pass, contributor evidence excluded.
+
+Published **95/1,228 additions;1,133 remain**. Current **1,080 kanji /5,037 words /100N1-labelled /99named-source members plus separate妖**. The project95 necessary support additions are **not an N1 vocabulary deck**.
+
+**Limits:** bounded viewport checks, not all127screenshots; sideways table clipping has an explicit scroll hint, without certification of every offset. Actual meaning choices differ from authored億/優/倍, whose native presentation is not certified. No actual fallback-face identification, MLKit/human handwriting or successful human recall. Original dictionary retrieval/gaiji/read-depth limits, permission denials, HOST OOMs and textual overlap/repair retained; qualified HOST-only2GiBinit NEVER nativebuilds. No app/guest heap, production guard, permissions, app code or learning algorithm changed.
+
+Compatible **stop-cran/kanji-cards-android#125 (`f9b59a2`+)** required; **physical-phone/general-release/whole-set acceptance remains outstanding**. Durable `docs/n1-sources/batch-068-publication.json`, `batch-068-acceptance-audit.json`, `execution-446.json` and original source/review/native records retained. Exact terminal CI/ZIP/issue receipts are in control artifacts. Checkpoint446 status **continue**, yield before one bounded069source-preparation checkpoint; overall project incomplete.
+"""
+    path = C / "execution-446-issue-body.txt"
+    assert not path.exists()
+    path.write_text(body, encoding="utf-8")
+    print("Exact terminal owner issue update prepared.")
+
+
+def finish():
+    head, ci, archive = verified("terminal")
+    p = load(C / "progress.json")
+    original = load(L / "before-progress-execution446.json")
+    receipt = load(C / "execution-446-issue-receipt.json")
+    expected = (C / "execution-446-issue-body.txt").read_text(encoding="utf-8")
+    assert receipt["user"]["login"] == "stop-cran"
+    assert receipt["body"].replace("\r\n", "\n").rstrip() == expected.replace("\r\n", "\n").rstrip()
+    remote = json.loads(subprocess.check_output(
+        ["gh", "api", f"repos/stop-cran/learning-japanese/issues/comments/{receipt['id']}"],
+        text=True, encoding="utf-8"))
+    assert remote["body"] == receipt["body"] and remote["user"]["login"] == "stop-cran"
+    assert subprocess.check_output(["gh", "api", "user", "--jq", ".login"], text=True).strip() == "romanko-ms"
+    assert not (S / "batch-069-progress.json").exists()
+    publication = load(S / "batch-068-publication.json")
+    next_action = (
+        f"Batch068 fully published/terminalCI/publicZIP/ownerissue verified at {head}; yield before069. "
+        "NEXT fresh coordinator: read complete request/final checkpoint/scoped live keys; preserve FULL history. "
+        "Verify dedicated clean signed heads/freshmain, then ONE evidence-bounded069source-preparation checkpoint below15 "
+        "from exact remaining source rows. No runtime draft or later gates in that source checkpoint. "
+        "Preserve frozen sources/baseline identities/levels/fullreading order/exclusions and reviewed虎/猿/丘/山 exceptions; "
+        "inspect complete applicable dictionary families, actual necessary support, every reading disposition/practical curated row, "
+        "activated and all-mapped reciprocal pairs, pinned strokes and every new Han font disposition. "
+        "Later stages retain two serial blind different-family reviewers/serial internal tools/bounded original-session confirmations/"
+        "non-skippedAndroid/native/currentmain/normal signing/ownerfastforward/greenCI/EVERYimmutableZIPhash/originalbudgets. "
+        "No unreviewed push/authoragents/concurrentheavywork/secondrunner/signingretry/permissionworkaround. Preserve/report/yield on denials. "
+        "Published95/1228,remaining1133;1080kanji5037words100N1labels99namedmembers plus妖;95necessarysupport additions NOTN1vocabulary. "
+        "Preserve068original441Claude13ms two-text-call overlap and one-call original-session repair;445allserial40actualpayloads "
+        "fromsame20of127captures, complete9files/696linefixture, all8changedpassages/revised私儀note; not freshblind/allPNG coverage. "
+        "Inherit442Android3+1 and444native2terminal0/272.859s honestly; no redundant heavy work absentnewconcern. "
+        "Preserve source/read-depth/retrieval, sidewaysviewport, authored-choice/fallback-face/MLKit/humanrecall, "
+        "HOST-only2GiBinitNEVERnativebuilds, historicaldenials/OOMs/pushfailures/full livehistory. "
+        "CompatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding. Overallproject incomplete."
+    )
+    publication.update(finalPublishedCommit=head, remoteMainVerified=head, terminalCi=ci,
+                       terminalImmutablePublicArchive=archive, issueUpdate=receipt["html_url"],
+                       batchFinalizationComplete=True, nextBatchStarted=False, nextAction=next_action)
+    p.update(checkpoint=446, status="continue", stage="batch-068-published-verified-before-069",
+             lastPublishedCommit=head, remainingAdditions=1133, blocker=None, nextAction=next_action)
+    p["batch068PublicationCheckpoint"] = publication
+    p["execution446StartingState"]["status"] = "bounded-publication-checkpoint-complete"
+    p["unmetAcceptanceGates"][0] = "Remaining1133source-bounded additions not authored/review-closed/published; later batches retain all source/review/reading/link/baseline/font/Android/native/currentmain/CI/publicZIP gates."
+    allowed = {"checkpoint", "status", "stage", "lastPublishedCommit", "remainingAdditions",
+               "blocker", "nextAction", "unmetAcceptanceGates"}
+    assert original.keys() <= p.keys()
+    assert all(p[k] == value for k, value in original.items() if k not in allowed)
+    result = {
+        "schemaVersion": 1, "execution": 446, "checkpoint": 446, "batch": "068",
+        "savedCommit": head, "signature": "G", "remoteMainVerified": head,
+        "dedicatedWorktreesClean": True, "reviewedTeachingRuntimeToolsUnchanged": True,
+        "freshPythonTestsPassed": 372, "acceptedAndroidCasesReverified": 4,
+        "acceptedNativeTerminalCasesReverified": 2, "runtimeHashesPerArchive": 8331,
+        "acceptedCi": publication["ci"]["databaseId"], "terminalCi": ci["databaseId"],
+        "bothImmutablePublicArchivesVerified": True, "originalGuardsUnchanged": True,
+        "allOriginalHistoricalRootKeysPreservedExactly": True, "issueUpdate": receipt["html_url"],
+        "ownerAuthorAndBodyVerified": True, "globalIdentityUnchanged": True,
+        "textualProcessExceptionAndSerialRepairPreserved": True,
+        "publishedAdditions": 95, "remainingAdditions": 1133, "runtimePublished": True,
+        "phoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False,
+        "verifiedAt": now(), "nextAction": next_action,
+    }
+    save(C / "execution-446-final-verification.json", result)
+    save(C / "batch-068-publication-checkpoint.json", publication)
+    p["execution446CoordinatorCheckpoint"] = {**result, "status": "continue"}
+    p["batch068PublicationIssueReceipt"] = {
+        "url": receipt["html_url"], "author": "stop-cran", "bodyVerified": True,
+        "commentId": receipt["id"], "publishedCommit": head, "runtimePublished": True}
+    save(C / "progress.json", p)
+    assert load(C / "progress.json") == p
+    print(json.dumps({key: result[key] for key in (
+        "checkpoint", "savedCommit", "issueUpdate", "publishedAdditions", "remainingAdditions",
+        "allOriginalHistoricalRootKeysPreservedExactly", "wholeProjectComplete")}, indent=2))
+
+
 if __name__ == "__main__":
-    {"start": start, "source-audit": source_audit, "validate": validate, "evidence": evidence}[sys.argv[1]]()
+    {"start": start, "source-audit": source_audit, "validate": validate, "evidence": evidence,
+     "records": records, "comment": comment, "finish": finish}[sys.argv[1]]()
