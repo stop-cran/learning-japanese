@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "batch": "072",
+  "inspectedOn": "2026-11-05",
+  "access": "Coordinator public web_fetch and one curl.exe raw-HTML retrieval to recover an actually omitted dictionary section; not independent-reviewer retrieval.",
+  "entries": [
+    {
+      "requestedUrl":"https://kotobank.jp/word/充",
+      "returnedUrl":"https://kotobank.jp/word/充-526205",
+      "dictionary":"普及版 字通",
+      "heading":"充 常用漢字6画",
+      "evidence":"Actual Jitsu character entry gives ジュウ, native glosses including あてる and みたす, and fullness/allocation meanings. The Daijisen heading is present but its definition was absent from simplified extraction. The Jitsu entry also includes a historical derivation and gaiji.",
+      "decision":"Keep exact frozen KANJIDIC2 readings and order. The card may give a labelled modern-shape mnemonic, canonical 儿10 and structure-unclassified; do not adopt uninspected gaiji, a phonetic classification, or historical derivation from the SVG annotations.",
+      "limits":"Public Jitsu lists additional native readings; their recognition does not invalidate the frozen metadata or authorize expanding it. Gaiji images were not inspected. No new historical or frequency claim."
+    },
+    {
+      "requestedUrl":"https://kotobank.jp/word/当てる",
+      "returnedUrl":"https://kotobank.jp/word/当てる-425784",
+      "dictionary":"デジタル大辞泉; 精選版 日本国語大辞典",
+      "heading":"あ・てる【当てる／充てる／宛てる】; あ・てる【当・中・充・宛】",
+      "evidence":"Simplified web_fetch returned the full relevant Nikkoku family but omitted Daijisen's definition. An exact raw-HTML curl retrieval returned the Daijisen heading at line1356 and full definition at1359. Sense3c explicitly marks 充てる for using part of a whole for a purpose, with leisure-to-reading and bonus-to-travel-expenses examples. Other senses include contact, guessing, work assignment and addressing correspondence. Nikkoku's section二 likewise covers purpose/use and assignments.",
+      "decision":"Use the exact frozen standalone 充てるあてる family1334270 and explicit Daijisen spelling-local sense together. Proposed ordinary constructions are resourceを + purposeに + 充てる, with kana and English. Compare existing 当てる's contact/guessing teaching, without falsely claiming that the broad あてる family never overlaps allocation. Distinguish allocation from saving a resource untouched.",
+      "rawRetrieval":{"path":"C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-072-ateru-public.html","method":"curl.exe --fail --silent --show-error --location; exact public URL, no authentication","inspectedLines":[1356,1359,1388,1391]},
+      "limits":"Raw HTML remains outside runtime content and Git. The missing simplified section was not treated as an absent dictionary sense; the actual retrieved heading/definition was inspected. No claim that all spellings freely substitute in all senses or that dictionaries measure usage frequency."
+    },
+    {
+      "requestedUrl":"https://kotobank.jp/word/満たす",
+      "returnedUrl":"https://kotobank.jp/word/満たす-638376",
+      "dictionary":"精選版 日本国語大辞典",
+      "heading":"みた・す【満・充】",
+      "evidence":"The actual entry recognizes both written kanji, transitive filling, achieving and satisfying senses, and a 条件をみたす example. Frozen JMdict1526670 independently gives exact 充たすみたす with a rarely-used-kanji-form flag on that spelling, not the pronunciation;1855580 includes 条件を充たす.",
+      "decision":"Retain a qualified み.たす reference row with real 充たすみたす and usual spelling 満たす. Do not claim the reading or spelling nonexistent; do not add a quiz key/rare-spelling article simply because the dictionary recognizes it.",
+      "limits":"Simplified extraction omits Daijisen's definition on this page. Only the actually returned Nikkoku content and complete pinned families support this disposition. No rare-pronunciation claim or absolute spelling partition."
+    },
+    {
+      "requestedUrl":"https://kotobank.jp/word/拡充-460323",
+      "returnedUrl":"https://kotobank.jp/word/拡充-460323",
+      "dictionary":"デジタル大辞泉; 精選版 日本国語大辞典; 普及版 字通",
+      "heading":"かく‐じゅう【拡充】",
+      "evidence":"Daijisen describes broadening organizations or facilities and making them substantial. Nikkoku explicitly distinguishes broader older expansion uses from modern organizational/equipment expansion and enrichment. Jitsu's gloss combines broadening and filling. The exact unrestricted frozen family1205190 givesかくじゅう and transitive noun/suru expansion.",
+      "decision":"Reuse the complete existing 拡充 article and its actual primary reading/sense; add only 充's substantive component link. Frozen 拡カク/充ジュウ records support allocation. No new on-support article or invented quantitative frequency claim is necessary.",
+      "limits":"The7000-character response includes all three relevant dictionary entries but not the complete footer; historical gaiji are not inspected or adopted as teaching. Existing source priority flags are not a new measured frequency claim."
+    },
+    {
+      "requestedUrl":"https://kotobank.jp/word/充当",
+      "returnedUrl":"https://kotobank.jp/word/充当-527346",
+      "dictionary":"デジタル大辞泉; 精選版 日本国語大辞典; 普及版 字通",
+      "heading":"じゅう‐とう【充当】",
+      "evidence":"Daijisen's general sense assigns personnel or resources to a purpose/use; its second sense is debt-payment allocation. Nikkoku and Jitsu confirm the general assignment association. The page links 充てる to the actually inspected 当てる family page.",
+      "decision":"Keep the actual general allocation meaning separate from the specialized legal sense. Additional 充当 support is unnecessary because the on key already has 拡充; no legal explanation or new word article is adopted.",
+      "limits":"The6000-character response includes the relevant dictionary sections, not the complete footer. Its broad related-word list is not proof of unrestricted synonym substitution or a direct quiz-exclusion clique."
+    }
+  ],
+  "failedOrIrrelevantLookups": [
+    {"url":"https://kotobank.jp/word/充てる","result":"404","disposition":"Not evidence of nonexistence; actual parent あてる entry was then inspected, including raw Daijisen spelling-local sense3c."},
+    {"url":"https://dictionary.goo.ne.jp/word/充てる/","result":"No such host is known (os error11001)","disposition":"No dictionary evidence obtained from this host. No retry around the failure or claim of Goo verification."}
+  ],
+  "frozenEvidence": {
+    "sourceSnapshot":"docs/n1-source-snapshot.json",
+    "lexicalFamilies":"batch-072-jmdict.xml",
+    "comparisonFamilies":"batch-072-comparison-jmdict.xml",
+    "quizBoundaryFamilies":"batch-072-quiz-jmdict.xml",
+    "rawCharacterRecords":"batch-072-kanjidic2.xml",
+    "attribution":"JMdict/KANJIDIC2: James William Breen and EDRDG, CC BY-SA4.0; KanjiVG: Ulrich Apel and contributors, CC BY-SA3.0; Unicode17.0.0: Unicode License V3. See source snapshot, NOTICE and docs/UNICODE-LICENSE.txt.",
+    "limits":"Complete parsed families retain aliases, restrictions, flags and sense-local notes. Reserialized XML is not a byte-identical compressed-source slice, a frequency measurement or independent review."
+  },
+  "limits":"Source preparation/coordinator inspection only. No authored examples, independent review, etymological certification, live-quiz safety, font readability or physical-phone evidence."
+}

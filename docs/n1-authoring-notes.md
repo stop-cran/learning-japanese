@@ -37,7 +37,55 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 071: textual review closed; Android/native gates outstanding
+## Batch 072: source preparation only
+
+The [frozen batch](n1-sources/batch-072-membership.json) selects **充**,
+source row 81, after batch 071's
+[verified publication](n1-sources/batch-071-publication.json).
+The one-character bound reflects **84 applicable complete lexical families**,
+not a quota of fifteen. Fifteen comparison and ten quiz-boundary family
+occurrences include eight overlaps: **101 distinct complete families**.
+The coordinator inspected them all, eleven raw character records and
+21 complete existing articles; this is not independent content review.
+
+The [source ledger](n1-sources/batch-072-progress.json) retains all three
+metadata readings in order: **ジュウ; あ.てる, み.たす**.
+It proposes the existing N2 **拡充（かくじゅう）** for the on key and one
+necessary new support, **充てる（あてる）**, for allocation to a purpose.
+The latter receives no vocabulary level inferred from its kanji.
+**充たす（みたす）** is a real but rare spelling of usual 満たす:
+retain a qualified reference row, not a claim of rare pronunciation or a
+fabricated word. It is not proposed for reading questions.
+
+The [public evidence](n1-sources/batch-072-source-evidence.json)
+records the actual Daijisen spelling-local allocation sense, recovered
+from raw HTML after simplified extraction omitted it, and distinguishes
+that evidence from failed lookups. The existing homophone 当てる is
+not the same written support identity; its broader allotting sense
+also prevents an absolute claim of semantic separation.
+Five direct proposed word-quiz guards cover inspected allocation/devotion
+overlaps, not a transitive synonym clique or all storage/reserve words.
+
+The baseline 拡充 component pair activates one link-only reused change.
+Across both mapped supports, there are **two reciprocal pairs / four
+directed links**. The other written component, **拡**, has no kanji
+card: preserve its metadata, without a broken link or expanded membership.
+Pinned six-stroke SVG identity/count and proposed-text font cmaps are
+source-stage checks; conversion and actual-text/native visual acceptance
+remain later gates. The [font inventory](n1-sources/batch-072-font-preparation.json)
+checks 48 proposed Han code points against all three pinned cmaps.
+充 and 拡 are present; isolated 亠, 儿 and 厶 require later inspection
+of actual system-fallback rendering, not an assumption of glyph failure.
+
+There are **zero drafted, review-closed or published batch-072 rows**.
+The next checkpoint is the bounded runtime draft and normally signed
+**local unreviewed** snapshot, not review, publication or batch 073.
+Published coverage remains **98/1,228 additions; 1,130 remain**, with
+99 necessary published support additions, not an N1 vocabulary deck.
+Compatible Android `f9b59a2+` is required; physical-phone, general-release
+and whole-set acceptance remain outstanding.
+
+## Batch 071: historical textual checkpoint before later acceptance
 
 The [frozen batch](n1-sources/batch-071-membership.json) selects **允**,
 source row 80, after batch 070's
