@@ -37,7 +37,46 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 072: local unreviewed runtime draft
+## Batch 072: textual review closed; native acceptance pending
+
+The same signed teaching snapshot `5544e65205879a67b9fc7a127bb6ef4a15152069`
+received independent initial reviews from **Claude Opus 5.5**
+(`claude-opus-5.5`) and **GPT-6.1 Sol** (`gpt-6.1-sol`), serially.
+Both reviewed complete **充** and necessary **充てる**, plus the exact
+link-only reused **拡充** passage, for correctness, scoped coverage and
+phone-text comprehensibility. Both found no actionable defect; no teaching
+fix was required. The [reconciliation](n1-reviews/batch-072-reconciliation.json)
+preserves complete original reports, actual sessions/models, optional
+suggestions and source limitations.
+
+Both processes exited normally, with the first report/execution/coverage
+archived before the second launch; all internal tool calls were also serial.
+Each received all **30 assigned ranges**, including **26 complete applicable
+JMdict families** and **11 full raw character records**. This narrower shared
+review packet does not mean all 101 source families were independently read.
+Simplified public extraction omitted Daijisen definitions; reviewers inspected
+the allocation sense in the same supplied coordinator HTML, not a fresh
+independent upstream retrieval of that section. The public 拡充 response
+truncated after the relevant Daijisen/Nikkoku definitions.
+
+The [execution record](n1-sources/execution-474.json) records 372 passing Python
+tests without skips, validation, vocabulary consistency, fresh manifest and
+all 8,344 runtime hashes, exact baseline/membership/reading/link audits,
+six-stroke reconversion equality and all three bundled font cmaps for the
+50 actual affected Han code points. These are not native drawing or rendering
+evidence. The next checkpoint is fresh dedicated Android real-content and
+rare-Han tests, followed by bounded native/visual inspection, including isolated
+亠/儿/厶 fallback and N1 navigation, reading, meaning, drawing, Back and offline
+routes. Combined-main, signing, owner fast-forward, CI and exact immutable ZIP
+acceptance remain later gates; no publication or batch 073 was attempted.
+
+This is **one textually review-closed row, zero accepted/published batch-072
+rows**. Published coverage remains **98/1,228 additions; 1,130 remain**, with
+99 necessary published supports, not an N1 vocabulary deck. Compatible
+Android `f9b59a2+` is required; physical-phone, general-release and whole-set
+acceptance remain outstanding.
+
+### Historical local unreviewed runtime draft
 
 The bounded draft adds **充** and the necessary **充てる（あてる）**
 support article, plus the exact component-link-only change in existing
