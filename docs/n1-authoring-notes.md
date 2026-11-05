@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 062: textual review closed; native fixture compiled
+## Batch 062: native assertions passed; dependent visual confirmation pending
 
 The [frozen membership](n1-sources/batch-062-membership.json) selects **俸**
 (source row 56) for one evidence-bounded packet. The
@@ -99,10 +99,37 @@ drawing, both **俸/俸給** and **給/俸給** pairs in four directions, System
 and offline routes. **46 static article selectors / 28 article capture steps**,
 44 single-glyph probes including actual **人/亻**, four **俸給** word probes
 and four production font rows are preparation, not native-readability acceptance.
-The next checkpoint executes the fixture after fresh device/port ownership
-inspection. Native execution and original-session serial dependent visual
-confirmation remain separate and pending.
-Native, integration and public-archive gates remain pending.
+The [execution 386 record](n1-sources/execution-386.json) preserves both native
+cases passing with individual terminal status **0**, no skips, in **96.065 s**
+on owned read-only API35 `emulator-5580`. The exact full archive imports
+through production ContentSync **once**, with the expected counts, version,
+zero problems and reading-parser epoch 1. Full/Lite ordered **ホウ / no kun**,
+curated **ホウ / []**, normalized **ほう / no kun**, persisted Good reading
+grade, meaning, both reciprocal pairs in four directions, System Back/offline
+routes and ten-stroke reference trace/ungraded practice/recall-miss grade
+persistence pass.
+
+The [artifact index](n1-reviews/batch-062-native/execution-386-artifact-index.json)
+retains **37 PNGs** and complete raw execution/route/raster receipts.
+Twelve coordinator image requests cover **ten distinct image hashes**:
+the reading/no-kun and receiving/increase pairs have identical bytes.
+Sampled screens show readable examples, long-vowel and employment guidance,
+both component links, the reused 給 forward link, meaning/reading feedback
+and drawing. Four production font rows display distinct **俸・棒・奉・借・付・
+人・亻・木・給・糸・合 / 俸給** without blank/replacement boxes; actual
+**亻** fallback is readable, but its face is unidentified. **44 single-glyph
+and four whole-word raster probes** pass; hashes alone do not prove readability.
+Sideways-scroll reading tables clip offscreen columns; these are not complete
+table visual reads. Reference-touch tracing and recall-miss persistence are
+not MLKit recognition or correct human recall.
+
+Fresh port/device ownership checks precede launch. Owned parent **17500** /
+QEMU **24596** stop with `adb emu kill` exit 0; a separate postrun inventory
+confirms both absent, both dedicated worktrees clean and unrelated
+`emulator-5556` still present. No teaching/runtime/font/guest-app heap or archive
+guard changes, redundant Android384 run, reviewer or publication occur here.
+Original-session serial dependent visual confirmation, integration and
+public-archive gates remain pending.
 Published coverage stays **88 additions; 1,140 to deliver**. No batch 063,
 runtime publication or physical-phone/general-release acceptance is claimed.
 
