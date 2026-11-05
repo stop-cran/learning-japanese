@@ -3,15 +3,16 @@
   "batch": "063",
   "baseCommit": "54fd8ff471eec7c98a83860ae94b92a673cf05bd",
   "membership": ["倣"],
-  "status": "source-prepared-not-drafted",
-  "drafted": [],
+  "status": "local-unreviewed-draft",
+  "drafted": ["倣"],
   "reviewClosed": [],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
     {"selection": "batch-063-lexical-selection.json", "xml": "batch-063-jmdict.xml"},
     {"selection": "batch-063-comparison-selection.json", "xml": "batch-063-comparison-jmdict.xml"},
-    {"selection": "batch-063-quiz-comparison-selection.json", "xml": "batch-063-quiz-comparison-jmdict.xml"}
+    {"selection": "batch-063-quiz-comparison-selection.json", "xml": "batch-063-quiz-comparison-jmdict.xml"},
+    {"selection": "batch-063-written-copy-selection.json", "xml": "batch-063-written-copy-jmdict.xml"}
   ],
   "sourceReadingOrder": {
     "onyomi": ["ホウ"],
@@ -48,8 +49,128 @@
     }
   ],
   "currentDeclaredWordPairs": [
-    {"article": "words/倣う.md", "word": "倣う", "primaryReading": "ならう"}
+    {"article": "words/倣う.md", "word": "倣う", "primaryReading": "ならう"},
+    {"article": "words/模倣.md", "word": "模倣", "primaryReading": "もほう"}
   ],
+  "draftInspection": {
+    "execution": 390,
+    "sourceCheckpoint": "5935b5db1e3d852523ec0d1d07d1ec7441acfa94",
+    "originalPacketsPreserved": true,
+    "lexicalFamilies": 11,
+    "comparisonFamilies": 16,
+    "quizComparisonFamilies": 6,
+    "additionalWrittenCopyFamilies": 2,
+    "distinctCompleteFamilies": 35,
+    "lexicalReturnedRanges": [[1, 140], [141, 270]],
+    "comparisonReturnedRanges": [[1, 180], [181, 360], [361, 525]],
+    "quizComparisonReturnedRanges": [[1, 120], [121, 215]],
+    "writtenCopyInspection": "Complete two-entry file returned by view without truncation.",
+    "rawCharacterReturnedRanges": [[1, 170], [171, 300], [301, 455]],
+    "completeExistingArticlesRead": [
+      "words/倣う.md", "words/習う.md", "words/真似.md", "words/真似る.md",
+      "words/コピー.md", "words/写す.md", "words/複写.md", "words/従う.md",
+      "words/書き取り.md", "words/清書.md", "kanji/放.md", "kanji/方.md",
+      "kanji/付.md", "kanji/似.md", "kanji/写.md", "kanji/則.md", "kanji/俸.md"
+    ],
+    "publicEvidence": "Fresh exact 倣/倣う/模倣 Kotobank entries inspected with the same heading qualifications as batch-063-source-evidence.json. Daijisen 倣 explicitly gives ホウ/ならう/模倣; Daijisen 倣う gives 前例に倣う; Seisenban 模倣 gives imitation of behavior/attitudes and an art example. Daijisen 模倣 remains attribution-only; 字通 history has gaiji gaps and is not adopted. The newly authored complete sentences are ordinary illustrative examples, not claimed verbatim attestations.",
+    "confusableInventory": "Read inventory introduction and searched exact 模倣/真似/倣う/コピー/写す/複写 and imitation/copy/emulate cues. No matching candidate row. Actual title search also inspected model/resemblance/following neighbors; navigation is not a full semantic-pool audit.",
+    "limits": "Coordinator inspection only, not independent review, native-speaker certification, usage-frequency measurement, live-option sampling or native/phone evidence. Historical source inspection remains separately recorded."
+  },
+  "supportMappings": [
+    {
+      "kanji": "倣", "article": "words/倣う.md", "primaryReading": "ならう",
+      "entryIds": ["1599680"], "selectedSenses": [1], "newArticle": false,
+      "status": "local-unreviewed-draft",
+      "preservation": "Actual N2 identity/metadata/reading/title/tags/four original exclusions unchanged; one component link only."
+    },
+    {
+      "kanji": "倣", "article": "words/模倣.md", "primaryReading": "もほう",
+      "entryIds": ["1533700"], "selectedSenses": [1], "newArticle": true,
+      "status": "local-unreviewed-draft",
+      "level": "Unestablished; no vocabulary jlpt inferred from kanji."
+    }
+  ],
+  "requiredReciprocalPairs": [["倣", "words/倣う.md"], ["倣", "words/模倣.md"]],
+  "unavailableMappedPairs": [
+    {"kanji": "模", "article": "words/模倣.md", "reason": "No 模 card; written metadata retained without a broken link or second kanji addition."}
+  ],
+  "readingDispositions": [
+    {
+      "kanji": "倣", "reading": "ホウ", "kind": "on", "selected": true,
+      "sourceOnly": false, "article": "words/模倣.md", "entryIds": ["1533700"],
+      "reason": "Frozen source on-reading retained in order; actual Daijisen character entry explicitly gives ホウ and 模倣. Complete frozen family verifies 模倣/もほう without spelling/reading restrictions; raw 模 record has モ. Own linked reading row supplies useful imitation vocabulary. No extra 倣 reading imported from historical/irregular forms."
+    },
+    {
+      "kanji": "倣", "reading": "なら.う", "kind": "kun", "selected": true,
+      "sourceOnly": false, "article": "words/倣う.md", "entryIds": ["1599680"],
+      "reason": "Frozen reading and written okurigana boundary retained; exact existing 倣う/ならう and its model に construction are verified by the complete JMdict family and actual Daijisen entry. Own linked reading row preserves the N2 word identity and explains usually-kana spelling. Different instructional 習う is contrasted, not substituted."
+    }
+  ],
+  "curatedProjection": [
+    {"kanji": "倣", "quizOnyomi": ["ホウ"], "quizKunyomi": ["なら.う"], "onKeys": ["ほう"], "kunKeys": ["ならう"]}
+  ],
+  "changedReusedPassages": [
+    {
+      "article": "words/倣う.md",
+      "before": "倣 writes なら, followed by う. The dictionary marks this word as",
+      "after": "[倣](../kanji/倣.md) writes なら, followed by う. The dictionary marks this word as"
+    }
+  ],
+  "quizAudit": {
+    "倣": {
+      "title": "imitate; emulate",
+      "distractors": ["放", "方", "付"],
+      "labels": ["release", "direction, method", "attach"],
+      "reason": "Actual current cards inspected: 放 lacks left 亻 and names release/emission, 方 is only part of the right side and names direction/method, 付 shares 亻 but names attachment. Full target source meanings are emulate/imitate, not these three operations. A model may present a method; that relationship does not make imitation mean method itself.",
+      "rejected": "写 copy/photograph and 則 rule/follow a model overlap; 似 resemble is a useful conceptual contrast but not curated as a safely wrong imitation-related answer. 倉 has no card. No absent-card distractor or phonetic/origin assertion imported.",
+      "legacyFallback": "Eleven existing cards have fewer than three curated distractors; actual labels checked by draft audit. None names imitation/emulation. Existing 写/似/則 already have three choices. No default-four-choice collision established; larger/random/live pools unverified."
+    }
+  },
+  "wordQuizAudit": {
+    "newTitle": {"word": "模倣", "title": "imitation; copying"},
+    "directExclusions": [
+      {"word": "模倣", "exclude": ["真似", "真似る", "倣う", "コピー", "写す", "複写", "書き取り", "清書"]}
+    ],
+    "pairDecisions": [
+      {
+        "neighbors": ["真似", "真似る", "倣う"],
+        "disposition": "Direct imitation/emulation label and sense overlap. Noun/verb differences and model に versus object を do not make competing uncontextualized English imitation answers safe. Each edge is declared on new 模倣; existing exclusions are preserved without transitive assumptions."
+      },
+      {
+        "neighbors": ["コピー", "写す", "複写"],
+        "disposition": "Actual displayed copy/copying labels and complete families establish overlap. 写す also explicitly includes imitation/modeling after. Photocopy/document examples and other senses do not make generic copying a wrong answer for these words. Conservative direct safeguards, not unrestricted Japanese interchangeability."
+      },
+      {
+        "neighbors": ["書き取り", "清書"],
+        "disposition": "Additional direct conservative written-copying/fair-copy label safeguards after reading both actual articles and complete frozen families. Broad English copying can be accepted for their copying activities; dictation and neat rewriting have more specific aims, but those distinctions are not supplied by an uncontextualized copying choice. This does not claim that 模倣 always names dictation or fair rewriting."
+      },
+      {
+        "neighbors": ["従う", "似る"],
+        "disposition": "No new guard established: actual obey/follow/comply and resemble labels concern compliance/following or similarity without necessarily imitating. Shared English follow between 倣う and 従う does not make a transitive exclusion clique around 模倣."
+      }
+    ],
+    "originalExclusionsPreserved": true,
+    "limits": "Bounded conservative label audit, not whole-corpus/live-quiz uniqueness or a substitution rule."
+  },
+  "additionalWrittenCopyDispositions": [
+    {
+      "entries": ["1378240"],
+      "disposition": "清書/せいしょ is a noun/transitive-suru fair or clean copy; actual existing article teaches neat rewriting. A direct guard protects generic copying labels without altering this existing narrower identity."
+    },
+    {
+      "entries": ["1589970"],
+      "disposition": "書き取り and 書取 share かきとり; complete family includes copying from writing, kanji production from kana and spoken dictation. The first sense matters beyond the leading dictation label. Add a direct guard rather than infer one through 複写."
+    }
+  ],
+  "fontDisposition": {
+    "audit": "batch-063-draft-audit.json",
+    "authoredHanCount": 34,
+    "bundledMissingUnion": ["亻", "傚"],
+    "disposition": "All34 Han in the three new/changed articles audited against three unchanged bundled font cmaps.32 occur in all three; 亻 and original reused rare spelling 傚 do not. Cmap absence is not a glyph failure, and cmap presence is not native rendering certification. No spelling or metadata is erased to hide fallback.",
+    "inheritedEvidence": "batch-062-native-acceptance.json records readable 人/亻 on prior API35 native checks. Explicitly inherited, not fresh063 evidence or a proven fallback-face identity.",
+    "rareHanMechanism": "Read unchanged Android f9b59a2 RareHan.kt and RareHanTest.kt. Both missing characters are basic CJK, outside the special RareHan ranges; therefore that test alone cannot establish their fallback rendering. No app defect established by cmap absence.",
+    "pending": "Fresh063 Android/native/visual checks must include actual 倣/模 and 人/亻 plus original reused 傚/倣/放 distinction; physical-phone/general-release acceptance remains outstanding."
+  },
   "lexicalDispositions": [
     {
       "entries": ["1599680"],
@@ -155,6 +276,7 @@
     }
   ],
   "supportPlan": {
+    "stage": "Historical source-preparation proposal; final draft mappings/decisions recorded above.",
     "reuse": [{"article": "words/倣う.md", "word": "倣う", "reading": "ならう", "levelToPreserve": 2}],
     "necessaryAdditions": [{"article": "words/模倣.md", "word": "模倣", "reading": "もほう", "entry": "1533700", "level": "Unestablished; do not infer from kanji."}],
     "requiredReciprocalPairs": [
@@ -165,6 +287,7 @@
     "incidentalMention": "真似's existing plain 模倣 mention does not by itself create another required component pair or authorize unrelated body rewriting."
   },
   "quizPlan": {
+    "stage": "Historical source-preparation proposal; final draft quizAudit/wordQuizAudit recorded above.",
     "candidateKanjiTitle": "imitate; emulate",
     "candidateWrongMeanings": ["放: release", "方: direction, method", "付: attach"],
     "candidateWordTitle": "imitation; copying",
@@ -173,13 +296,11 @@
     "status": "Proposals only, not accepted metadata or final semantic certification. Inspect the final displayed titles, direct exclusions and fallback surface in the draft/review gates."
   },
   "pending": [
-    "Author one new 倣 card, one necessary 模倣 support article and the exact reused 倣う component link; preserve full metadata order, existing identities/levels/readings/exclusions and separate all historical readings/register claims.",
-    "Generate strokes from the pinned KanjiVG revision, reconcile ten strokes, and audit all newly exposed Han/component glyphs against actual fonts and native rendering.",
-    "Validate and regenerate the runtime manifest, then normally sign a local unreviewed snapshot; do not push unreviewed teaching.",
     "Obtain two serial blind different-model-family initial reviews on that same frozen snapshot; reconcile source-backed findings and justified original-session confirmations.",
     "Run applicable fresh non-skipped Android/native, combined-main, signing, owner fast-forward publication, CI and exact immutable ZIP/hash/budget gates."
   ],
   "publishedAdditions": 89,
   "remainingAdditions": 1139,
-  "limits": "Local source preparation only; zero runtime changes, drafted/review-closed/published rows or accepted reading keys. Published additions remain89/1228, remaining1139. Physical-phone/general-release and whole-set acceptance remain outstanding."
+  "nextAction": "SAME063 two serial blind different-model-family initial reviews of the normally signed local draft containing execution-390.json; include all three scoped articles/exact reused diff,35 complete families and source/reading/quiz/link/font/geometry evidence. No unreviewed push,064 or second runner.",
+  "limits": "Local unreviewed draft only, not independent review or publication. Both practical readings are proposed for the queue, not yet accepted. Published additions remain89/1228, remaining1139. Fresh063 Android/native, physical-phone/general-release and whole-set acceptance remain outstanding."
 }

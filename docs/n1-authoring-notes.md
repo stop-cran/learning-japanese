@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 063: bounded source preparation; no runtime draft
+## Batch 063: bounded local draft; independent review pending
 
 The [frozen membership](n1-sources/batch-063-membership.json) selects **倣**
 (source row 59). The [source ledger](n1-sources/batch-063-progress.json)
@@ -46,16 +46,16 @@ visible **亻**. Coordinator inspection covers **33 complete frozen JMdict
 families**, six raw character records and **21 actual existing articles**.
 The [public-entry evidence](n1-sources/batch-063-source-evidence.json) separates
 actual definitions from attribution-only sections and mechanical examples.
-This is preparation, not independent review or a runtime draft.
+Those source checks remain historical coordinator evidence, not independent review.
 
 Existing **倣う（ならう）** is a genuine reusable N2 identity, not a new
-article or a word to relabel N1. Preserve its metadata and exclusions; its
-substantive component introduction needs the new 倣 link. Its **model に**
+article or a word to relabel N1. Its metadata and exclusions are preserved;
+its substantive component introduction now links 倣. Its **model に**
 construction differs from instructional **習う**, whose skill takes **を**.
-One necessary **模倣（もほう）** support article is proposed for ホウ,
+One necessary **模倣（もほう）** support article is now drafted for ホウ,
 with no vocabulary level inferred from kanji. The actual character entry
 explicitly gives 模倣 as an example; a kana substring alone is not allocation
-evidence. Both mapped **倣/倣う** and **倣/模倣** pairs need reciprocal
+evidence. Both mapped **倣/倣う** and **倣/模倣** pairs now have reciprocal
 links. **模** has no card, so retain its written metadata without a broken
 link or an extra kanji addition.
 
@@ -68,11 +68,32 @@ direct pairs rather than transitive exclusion assumptions; **写す** has an
 explicit imitation sense beyond its copying/photography label.
 Existing 写・似・則 already have three curated wrong answers.
 
-The next checkpoint should draft this same bounded packet, generate pinned
-strokes, audit new glyphs/links/reading rows and normally sign a local
-unreviewed snapshot before the two serial blind model-family reviews.
-No reviewer, Android/native run, runtime edit or publication occurs in this
-source checkpoint. Published batch 062 remains verified at `54fd8ff4`:
+The draft retains full metadata order and selects both useful readings through
+their own linked rows. Its three curated wrong meanings are **放・方・付**,
+not the overlapping copy/model meanings of 写 or 則.
+Eight direct conservative word-label guards include the six proposed
+imitation/copying neighbors and **書き取り・清書**, whose actual written-copying
+and fair-copy uses can also fit a bare English copying choice.
+The two additional complete frozen families bring the packet to **35**;
+this is not an unrestricted Japanese synonym clique.
+The exact reused 倣う diff is one component link; its N2 metadata and original
+exclusions remain untouched.
+
+The [stroke evidence](n1-sources/batch-063-stroke-evidence.json) pins the canonical
+ten-stroke SVG/blob and unchanged converter. The
+[draft audit](n1-sources/batch-063-draft-audit.json) separates mechanical
+source/baseline/link/reading/geometry and full article-Han cmap checks from
+independent linguistic or native acceptance.
+All **34** article Han were audited against three unchanged bundled fonts;
+**亻・傚** require fallback. The latter is an existing rare spelling in the
+reused N2 article, not new kanji metadata. Both are outside the special
+RareHan ranges, so its automated test cannot certify their rendering.
+The later native/visual gate must inspect the reused spelling too; previous
+人/亻 native evidence is inherited, not a fresh batch 063 test.
+The next checkpoint should obtain two serial blind model-family initial
+reviews on the same normally signed draft. No reviewer, fresh Android/native
+run or publication occurs in this draft checkpoint.
+Published batch 062 remains verified at `54fd8ff4`:
 **89 additions delivered; 1,139 remaining**. Physical-phone/general-release
 and whole-set acceptance remain outstanding.
 
