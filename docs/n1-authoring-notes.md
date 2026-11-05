@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 060: native assertions passed; independent visuals pending
+## Batch 060: bounded native visuals reconciled; integration pending
 
 The [frozen membership](n1-sources/batch-060-membership.json) selects **亭**
 (source row 21) for one evidence-bounded packet. Its
@@ -119,16 +119,34 @@ pins **36 direct PNGs**, raw logs and route/raster receipts. Eleven coordinator
 image inspections show distinct readable 亭・停・京・享・高, actual
 亠・亻・冖 fallback components and 料亭 across four production font rows,
 plus readable sampled article, selection, reading and drawing screens.
-Remaining PNGs await the original reviewers' bounded dependent visual checks.
+The [execution368 reconciliation](n1-reviews/batch-060-native-acceptance.json)
+records original-session **claude-opus-5.5**, then **gpt-6.1-sol**, each viewing
+all **19 distinct** screenshot representatives serially. The other seventeen
+source PNGs are byte-equivalent copies, not additional independent views.
+Their complete reports and actual **900 x 2000** model-visible payloads are
+preserved separately from the **1080 x 2400** sources. Both executions exited
+0, with no overlapping calls or multi-tool responses; each complete report
+and execution audit was archived before the next reviewer started.
+A one-image original-Claude clarification supplies its omitted explicit
+four-font glyph observations, without replacing the original report.
+Neither family established a new actionable teaching or visible-task defect.
+Actual meaning choices were mulberry / enjoy; receive benefits /
+pavilion; restaurant building / firefly, not the authored distractor trio.
+Actual reading choices were ヘイ / テイ / キョウ / バイ; lookup feedback
+retains テイ・チン without adding a practice key.
 Fallback faces were not identified; sideways-scroll reading tables do not
-show every column at once. This is not phone, MLKit or human-recall evidence.
+show every column at once, and 停's native link route was not exercised.
+This is not phone, MLKit or human-recall evidence. Original Claude **060-P1/P2**
+process noncompliance remains historical, not retroactively accepted.
 Fresh 5580/5581 ownership checks preceded the owned read-only API35 helper
 (parent **11792**, QEMU **25572**); `adb emu kill` returned 0 and a separate
 postrun inventory confirmed both processes absent, both dedicated worktrees
 clean and unrelated emulator-5556 still present.
 
-Independent visual checks, combined-main acceptance and publication remain
-pending; this is a local evidence checkpoint, not delivered content.
+The [execution368 record](n1-sources/execution-368.json) retains the accepted
+Android/native results without rerunning them. Bounded independent visual
+confirmation is closed; combined-main acceptance and publication remain
+pending. This is a local evidence checkpoint, not delivered content.
 Published coverage remains
 **86/1,228 additions; 1,142 remain**.
 Compatible Android `f9b59a2+`, outstanding physical-phone/general-release

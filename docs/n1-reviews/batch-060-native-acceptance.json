@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "execution": 368,
+  "batch": "060",
+  "status": "bounded-native-visual-reconciled-pending-combined-main-publication",
+  "snapshot": "8f9bad077f40cac9a31523a27d192accc59dcd0d",
+  "reviewedTeachingSnapshot": "ea1dac1a6fd2c452db9cf602442e1f287ff95c67",
+  "nativeEvidence": "n1-sources/execution-367.json",
+  "nativeEvidenceSha256": "fc10ec753f45ed6228638ad6c00fbeea7292bf994e2018220f4eee59e8a9a997",
+  "textualReconciliation": "batch-060-reconciliation.json",
+  "textualReconciliationSha256": "58a91574d90a71dbfc24d701f381955e5dbb9b0bdc1240078840e7c5159b2c6c",
+  "reviewers": [
+    {
+      "model": "claude-opus-5.5",
+      "sessionId": "34dbb43d-2a7f-4fa9-9e45-00c50c1281a1",
+      "report": "batch-060-visual-claude.md",
+      "reportSha256": "aabd5d14a5afd7264b8da5ab65d675321a8dd178c374a84f0f81cdba1b493935",
+      "execution": "batch-060-visual-claude-execution.json",
+      "executionSha256": "015eb6d6a223a60202eab52f7ef92206a57acd861ac8e569675b10e213d57027",
+      "toolCalls": 29,
+      "imagePayloads": 19,
+      "overlaps": 0,
+      "multiToolResponses": 0,
+      "exitCode": 0,
+      "startedAt": "2026-11-05T04:39:19.0649245+01:00",
+      "completedAt": "2026-11-05T04:41:30.5668010+01:00",
+      "freshScope": "Own initial report, complete亭/料亭/料/停, fixture54-148/150-270/271-430,19distinctPNGpayloads; Claude also own latest supervised lexical confirmation."
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "sessionId": "8130aa10-a2af-44b9-80ca-28fb1662eb6c",
+      "report": "batch-060-visual-gpt.md",
+      "reportSha256": "4def2c00d797f822d84c30339a2abe7473817ebd5ac17df550df4b3f6f6427dd",
+      "execution": "batch-060-visual-gpt-execution.json",
+      "executionSha256": "e9efd5adeb886f69e5a6d4172e80ede633153157b263ddefb80347e636c361e0",
+      "toolCalls": 28,
+      "imagePayloads": 19,
+      "overlaps": 0,
+      "multiToolResponses": 0,
+      "exitCode": 0,
+      "startedAt": "2026-11-05T04:41:41.8291163+01:00",
+      "completedAt": "2026-11-05T04:43:36.3005937+01:00",
+      "freshScope": "Own initial report, complete亭/料亭/料/停, fixture54-148/150-270/271-430,19distinctPNGpayloads; Claude also own latest supervised lexical confirmation."
+    },
+    {
+      "model": "claude-opus-5.5",
+      "sessionId": "34dbb43d-2a7f-4fa9-9e45-00c50c1281a1",
+      "report": "batch-060-visual-claude-glyph.md",
+      "reportSha256": "fcc57b2e3d4884399d61b5e8355b16baca08574690bddc31bfdfc933d0e53afb",
+      "execution": "batch-060-visual-claude-glyph-execution.json",
+      "executionSha256": "c97d9988edd8e7489814351ed16967326286d98fb023730b14a0d42c44eeca54",
+      "toolCalls": 1,
+      "imagePayloads": 1,
+      "overlaps": 0,
+      "multiToolResponses": 0,
+      "exitCode": 0,
+      "startedAt": "2026-11-05T04:44:02.7710924+01:00",
+      "completedAt": "2026-11-05T04:44:35.6598670+01:00",
+      "freshScope": "Exactly one font-pairs PNG; original visual report's other judgments and limits inherited unchanged."
+    }
+  ],
+  "verdicts": {
+    "kanji/亭.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "words/料亭.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "kanji/料.md:added-link": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "kanji/停.md:added-link-text-only": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    }
+  },
+  "findings": [],
+  "newActionableDefects": [],
+  "reportingGap": {
+    "status": "resolved",
+    "kind": "omitted-specific-glyph-observations",
+    "evidence": "Original Claude visual report retained19reads but omitted specific four-font observations. One-image original-session clarification explicitly confirms every assigned glyph in all four rows. Original report unchanged."
+  },
+  "optional": [
+    {
+      "origin": "claude",
+      "status": "optional",
+      "claim": "Drawing stroke label9 sits near the hook.",
+      "disposition": "Nonblocking app-rendering observation; no established teaching or glyph defect and no unrelated UI change."
+    },
+    {
+      "origin": "claude",
+      "status": "optional",
+      "claim": "Food-example and place-particle captures show the same visible content.",
+      "disposition": "Overlapping viewport coverage, not byte equivalence: their source hashes are different. No additional independent scene/coverage claim."
+    }
+  ],
+  "coordinatorAdjudication": [
+    "Both reviews retain inherited textual correctness/coverage with new bounded screenshot comprehension evidence. No new actionable defect established; no teaching edits.",
+    "亭/料亭 and料addedlink are visually sampled. 停addedlink is textually reviewed only; no native route proof claimed.",
+    "Claude's original completeチンrow wording is bounded to the visible example text. The left reading label is clipped; no whole-row/table certification.",
+    "Glyph clarification closes a report omission only, not a linguistic fix, new blind review or historical process repair.",
+    "Static links/screenshots do not prove taps or persistence. Independently reverified367 raw terminal results and fixture/route establish those operational facts.",
+    "Actual meaning choices differ from authored wrong-choice trio. All displayed choices and reading feedback inspected, no ambiguous answer established.",
+    "Original060-P1/P2 remain partially resolved: supervised remediation complete but original strict process violations irreversible."
+  ],
+  "glyphObservation": "Fourproductionfontrows亭停京享高 distinct; actual亠亻冖丁小子口料料亭 readable/no blankboxes. Textbook thinner/lowercontrast but readable; fallbackfaceunknown.",
+  "pngAccounting": {
+    "sourceFiles": 36,
+    "distinctSourceHashes": 19,
+    "equivalentCopies": 17,
+    "sourceDimensions": [
+      1080,
+      2400
+    ],
+    "returnedDimensions": [
+      900,
+      2000
+    ],
+    "actualReturnedPayloadCopies": 39,
+    "exactSourceBytesReturned": false
+  },
+  "nativeAssertionsPassed": true,
+  "boundedIndependentVisualAcceptance": true,
+  "strictHistoricalProcessContractAccepted": false,
+  "wholeArticlePixelCoverage": false,
+  "physicalPhoneAcceptance": false,
+  "generalReleaseAcceptance": false,
+  "publicationAttempted": false,
+  "wholeSetAcceptance": false,
+  "limits": "Dependent original-session visual confirmation, not new blind initial or fresh upstream dictionary review. Supplied operations hash/XML/log-verified by coordinator, not reviewer-executed. Drawing reference-touch trace/recallmiss not MLKit or successful human recall. Unseen cells/pixels,停native route and unidentified fallback face remain limits. Cumulative usage is not current-turn cost. Historical process noncompliance remains explicit."
+}
