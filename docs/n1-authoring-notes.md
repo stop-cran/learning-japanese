@@ -37,6 +37,35 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 060: source preparation only
+
+The [frozen membership](n1-sources/batch-060-membership.json) selects **亭**
+(source row 21) for one evidence-bounded packet. Its
+[source ledger](n1-sources/batch-060-progress.json) retains ordered
+**テイ・チン / no kun**, nine strokes and canonical **亠**, no. 8.
+Coordinator inspection covers **51 complete frozen JMdict families**,
+six complete raw KANJIDIC2 character records and seventeen actual existing
+articles. This is source inspection, not independent content review.
+
+The proposed minimum support is one new **料亭（りょうてい）** article,
+without a vocabulary level inferred from its kanji. Practice would select
+テイ; **亭（ちん）**, a garden pavilion, is independently attested and
+retained for recognition, not mislabelled as an unmatched source-only reading.
+The [Japanese evidence](n1-sources/batch-060-source-evidence.json) separates
+actual character/word headings from attribution-only sections. The full
+亭 family's performer/restaurant-name suffix senses are restricted to
+**てい**, not interchangeable with **ちん**.
+
+No existing word declares 亭. Prospective reciprocal pairs are **亭/料亭**
+and **料/料亭**; the existing 停 shape-mnemonic mention is a separate narrow
+link candidate. Restaurant-label overlap, building/height meanings and
+reading-specific suffixes still need final draft/quiz adjudication.
+The pinned SVG inventory is not downloaded geometry or native rendering proof.
+There is **no runtime draft, independent review or publication** at this
+checkpoint. Published coverage remains **86/1,228 additions; 1,142 remain**.
+Compatible Android `f9b59a2+`, outstanding physical-phone/general-release
+acceptance and all batch059 historical limits remain unchanged.
+
 ## Batch 059: published for bounded owner testing
 
 The [publication record](n1-sources/batch-059-publication.json) records normal
