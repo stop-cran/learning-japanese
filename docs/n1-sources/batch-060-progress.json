@@ -3,8 +3,8 @@
   "batch": "060",
   "baseCommit": "48d7110f893a2700dce2f73c5f14653b19b1a14d",
   "membership": ["亭"],
-  "status": "source-prepared-not-drafted",
-  "drafted": [],
+  "status": "local-unreviewed-runtime-draft",
+  "drafted": ["亭"],
   "reviewClosed": [],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
@@ -68,7 +68,7 @@
       "sourceOnly": false,
       "article": "words/料亭.md",
       "entryIds": ["1554300"],
-      "reason": "Useful restaurant vocabulary. Exact Japanese テイ character heading with 料亭 example, full 料亭/りょうてい family and independently sourced 料 リョウ support allocation, not only a kana substring. A future selection needs its own reading row and linked authored support."
+      "reason": "Useful restaurant vocabulary. Exact Japanese テイ character heading with 料亭 example, full 料亭/りょうてい family and independently sourced 料 リョウ support allocation, not only a kana substring. Selected in its own reading row with linked authored 料亭 support."
     },
     {
       "kanji": "亭",
@@ -144,6 +144,74 @@
     "expectedDictionaryStrokes": 9,
     "status": "Inventory only; SVG not downloaded or converted. Verify pinned bytes, unchanged converter and actual path count before drawing acceptance. Never hand-edit geometry."
   },
-  "independentReview": "Not started. Both actual model families must independently inspect one future signed teaching snapshot, all new support and changed reused passages, across correctness, scoped coverage and phone comprehensibility; one active reviewer with serial internal tools.",
-  "limits": "Source preparation only: runtime unchanged, no draft, installed curation, generated geometry, final font/native inspection, independent review or publication. Proposed practice uses テイ only and no kun, but full テイ/チン order remains unchanged. Compatible Android f9b59a2+ required; physical-phone/general-release and whole-set acceptance outstanding. All accepted batch059 evidence and original process limits retained without redundant reruns."
+  "draftInspection": {
+    "execution": 361,
+    "sourceCheckpoint": "38cf5e64ac41b65d194fd4137193ef0996c941f0",
+    "inheritedSourceInspection": "Complete 51 frozen JMdict families, six raw character elements and seventeen existing articles inspected in execution360; exact packets and Japanese heading qualifications retained, not claimed as fresh361 upstream retrieval or full fresh semantic review.",
+    "freshCompleteLexicalFamilies": 16,
+    "freshCompleteComparisonFamilies": ["1145310", "1358550", "1554310", "1633260", "1929870", "2253570"],
+    "freshCompleteRawCharacters": ["亭", "料"],
+    "freshCompleteExistingArticles": ["kanji/料.md", "kanji/停.md", "kanji/京.md", "kanji/享.md", "words/食堂.md", "words/レストラン.md"],
+    "confusableInventory": "Notation and candidate contract read; targeted 料亭/食堂/レストラン/料理屋/飲食店/restaurant/cafeteria/dining search found only CW104's buffet/English-Viking cue. No direct restaurant contrast entry or transitive exclusion inferred.",
+    "limits": "Coordinator inspection only. Exact source packets are mechanically reverified against frozen bytes; hashes and inherited reports do not certify new linguistic review."
+  },
+  "supportMappings": [
+    {"kanji": "亭", "article": "words/料亭.md", "primaryReading": "りょうてい", "newArticle": true, "entryIds": ["1554300"], "selectedSenses": [1], "status": "local-unreviewed-runtime-draft"},
+    {"kanji": "料", "article": "words/料亭.md", "primaryReading": "りょうてい", "newArticle": true, "entryIds": ["1554300"], "selectedSenses": [1], "status": "local-unreviewed-runtime-draft"}
+  ],
+  "requiredReciprocalPairs": [["亭", "words/料亭.md"], ["料", "words/料亭.md"]],
+  "changedReusedPassages": [
+    {
+      "article": "kanji/料.md",
+      "before": "- [料理](../words/料理.md) りょうり — cooking, cuisine, a prepared dish",
+      "after": "- [料理](../words/料理.md) りょうり — cooking, cuisine, a prepared dish\n- [料亭](../words/料亭.md) りょうてい — traditional Japanese restaurant, especially an upscale one",
+      "reason": "One forward support-word link for the existing component owner; all metadata and other teaching unchanged."
+    },
+    {
+      "article": "kanji/停.md",
+      "before": "**Modern-shape mnemonic, not etymology:** Imagine the person-shaped 亻 stopping beside the tall 亭 block, with its roof-like top and long lower hook.",
+      "after": "**Modern-shape mnemonic, not etymology:** Imagine the person-shaped 亻 stopping beside the tall [亭](亭.md) block, with its roof-like top and long lower hook.",
+      "reason": "Link only at the existing substantive modern-shape mention; not new historical or phonetic evidence."
+    }
+  ],
+  "curatedProjection": [
+    {"kanji": "亭", "quizOnyomi": ["テイ"], "quizKunyomi": [], "onKeys": ["てい"], "kunKeys": []}
+  ],
+  "quizAudit": {
+    "亭": {
+      "title": "pavilion; restaurant building",
+      "distractors": ["停", "京", "享"],
+      "labels": ["halt; stopping", "capital", "enjoy; receive benefits"],
+      "reason": "Three existing shape neighbors. A stop/stopping action, national capital/numeral and receiving/enjoying benefits do not denote the pavilion or restaurant building. Character history or a building's use is not synonymy. Avoid 高's height association and 館's building/hall overlap.",
+      "legacyDisposition": "The three actual wrong-choice cards already have three authored distractors, as do the inspected building/garden/height neighbors in source preparation. All remaining two-choice labels are recorded in the draft audit; no default four-choice fallback repair established. Larger/random pools and live safety remain unverified."
+    }
+  },
+  "wordQuizAudit": {
+    "word": "料亭",
+    "title": "traditional Japanese restaurant",
+    "directExclusions": [
+      {"word": "料亭", "exclude": ["レストラン", "食堂"], "reason": "Direct conservative protections in both quiz directions. Broad restaurant fits 料亭; 食堂's separate restaurant/eatery sense can fit the traditional-Japanese-restaurant label even though its displayed title emphasizes cafeteria/dining hall. Do not rely on typical upscale versus everyday associations to certify a unique answer."}
+    ],
+    "pairEvidence": [
+      {"neighbor": "レストラン", "entry": "1145310", "sense": 1, "overlap": "Broad restaurant sense, especially Western-style but not a strict cuisine boundary."},
+      {"neighbor": "食堂", "entry": "1358550", "sense": 2, "overlap": "Restaurant/eatery sense beyond the cafeteria/dining-hall display label; protection is direct, not through レストラン."}
+    ],
+    "notExcluded": [
+      {"neighbors": ["旅館", "宿", "ホテル"], "reason": "Lodging/inn/hotel identities do not mean this restaurant category; a shared facility is not an overlapping displayed answer."},
+      {"neighbors": ["料理", "食卓"], "reason": "Cooking/cuisine/dishes and a dining table are not the restaurant establishment. Title navigation is not whole-pool certification."}
+    ],
+    "limits": "Bounded author semantic audit of actual relevant labels and complete applicable families; not unrestricted synonymy or whole-pool/live-quiz certification."
+  },
+  "draftTeachingDispositions": {
+    "rawMetadata": "Full テイ/チン order and empty kun preserved; no grade/level/stroke/radical change, nanori, historical classification or phonetic field invented.",
+    "recognition": "亭/ちん is a real pavilion noun, not unmatched/source-only/name-only. Performer/writer/restaurant-name suffix senses belong to てい. 涼亭 is an archaic same-kana pavilion word, not the restaurant spelling.",
+    "wordLevel": "No jlpt or jlpt-n1 vocabulary tag inferred for 料亭.",
+    "examples": "Original bounded meal/food learner sentences, not dictionary quotations or evidence of rare collocations. Exact whole-word sense is independently supported by frozen JMdict and the preserved Japanese heading evidence.",
+    "restaurantQualification": "Especially upscale and chiefly Japanese cuisine, without universal menu/facility/price/private-room/reservation/entertainment rules; not lodging.",
+    "origin": "Explicit modern-shape mnemonic only, with canonical 亠 radical, structure-unclassified and no historical or phonetic derivation."
+  },
+  "independentReview": "Not started. Two serial blind different-actual-model-family initial reviews must inspect the same signed teaching snapshot, complete new 亭/料亭 and actual changed 料/停 passages across correctness, scoped coverage and phone comprehensibility. One active reviewer, serial internal tools; retain original reports and actual read/process limits.",
+  "publishedAdditions": 86,
+  "remainingAdditions": 1142,
+  "limits": "LOCAL UNREVIEWED draft only. No independent review, fresh Android/native/font rendering acceptance, runtime push or publication. Practice selects only テイ with linked support; full テイ/チン order unchanged. Source-preparation prospective fields remain historical proposals; installed draft mappings/quiz decisions are explicit above. Compatible Android f9b59a2+ required; physical-phone/general-release and whole-set acceptance outstanding. Accepted059 evidence and original process limits retained without redundant reruns."
 }

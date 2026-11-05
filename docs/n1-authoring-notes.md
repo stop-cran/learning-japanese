@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 060: source preparation only
+## Batch 060: local unreviewed runtime draft
 
 The [frozen membership](n1-sources/batch-060-membership.json) selects **亭**
 (source row 21) for one evidence-bounded packet. Its
@@ -47,8 +47,8 @@ Coordinator inspection covers **51 complete frozen JMdict families**,
 six complete raw KANJIDIC2 character records and seventeen actual existing
 articles. This is source inspection, not independent content review.
 
-The proposed minimum support is one new **料亭（りょうてい）** article,
-without a vocabulary level inferred from its kanji. Practice would select
+The draft adds one necessary **料亭（りょうてい）** article,
+without a vocabulary level inferred from its kanji. Practice selects
 テイ; **亭（ちん）**, a garden pavilion, is independently attested and
 retained for recognition, not mislabelled as an unmatched source-only reading.
 The [Japanese evidence](n1-sources/batch-060-source-evidence.json) separates
@@ -56,13 +56,22 @@ actual character/word headings from attribution-only sections. The full
 亭 family's performer/restaurant-name suffix senses are restricted to
 **てい**, not interchangeable with **ちん**.
 
-No existing word declares 亭. Prospective reciprocal pairs are **亭/料亭**
-and **料/料亭**; the existing 停 shape-mnemonic mention is a separate narrow
-link candidate. Restaurant-label overlap, building/height meanings and
-reading-specific suffixes still need final draft/quiz adjudication.
-The pinned SVG inventory is not downloaded geometry or native rendering proof.
-There is **no runtime draft, independent review or publication** at this
-checkpoint. Published coverage remains **86/1,228 additions; 1,142 remain**.
+No baseline word declares 亭. Both **亭/料亭** and **料/料亭** link in
+both directions; existing 料 gains only its forward Common words link.
+Existing 停 gains only a link at its labelled modern-shape mnemonic.
+Three existing wrong choices, **停・京・享**, avoid the building/height
+overlaps of 館 and 高. Two direct conservative word-quiz guards protect
+**料亭/レストラン** and **料亭/食堂**, including 食堂's eatery sense
+beyond its cafeteria/dining-hall label; these are not unrestricted synonyms.
+
+The [stroke evidence](n1-sources/batch-060-stroke-evidence.json) and
+[draft audit](n1-sources/batch-060-draft-audit.json) record actual pinned
+SVG conversion and bounded mechanical checks separately from linguistic
+and native acceptance. **The runtime draft is local and unreviewed**:
+two serial blind different-model-family reviews must cover complete
+亭/料亭 and both actual reused diffs, across all three facets.
+Fresh Android/native/visual checks and combined-main/publication gates
+remain pending. Published coverage remains **86/1,228 additions; 1,142 remain**.
 Compatible Android `f9b59a2+`, outstanding physical-phone/general-release
 acceptance and all batch059 historical limits remain unchanged.
 
