@@ -1,0 +1,60 @@
+{
+  "checkpoint": 406,
+  "batch": "064",
+  "verifiedAt": "2026-11-05T09:40:02.0318451+01:00",
+  "savedContentHead": "7c617aacb6101d3229eeb8daa3ca68abce9c2542",
+  "androidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "originalPermissionBlocker": {
+    "schemaVersion": 1,
+    "execution": 406,
+    "batch": "064",
+    "kind": "execution-permission",
+    "gate": "Independent post-native dedicated-worktree/device/owned-PID/port verification",
+    "attempts": 1,
+    "deniedCommand": "$ErrorActionPreference='Stop'; $record=[ordered]@{execution=406;recordedAt=[DateTimeOffset]::Now.ToString('o');contentHead=(git rev-parse HEAD);contentStatus=@(git status --porcelain);androidHead=(git -C C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android rev-parse HEAD);androidStatus=@(git -C C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android status --porcelain)}; $record.devices=(& C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe devices -l | Out-String); if($LASTEXITCODE -ne 0){throw 'adb inventory failed'}; $owned=@(Get-Process -Id 11024,14968 -ErrorAction SilentlyContinue); $record.ownedProcessesRemaining=$owned.Count; $record.connections=@(Get-NetTCPConnection -ErrorAction Stop | Where-Object {$_.LocalPort -in 5580,5581 -or $_.RemotePort -in 5580,5581} | Select-Object LocalAddress,RemoteAddress,LocalPort,RemotePort,State,OwningProcess); $record | ConvertTo-Json -Depth 6 | Set-Content C:\\Users\\stop-\\n1-kanji-workspace\\control\\execution-406-postrun-verification.json -Encoding utf8NoBOM; $record | ConvertTo-Json -Depth 6",
+    "message": "Permission denied because no interactive user response was available. Retry in an interactive session so the user can approve it, or try an alternative that does not require this permission.",
+    "limits": "Denied before execution; exact trigger unavailable. Native cases passed and launcher records owned-helper/QEMU stopped, but independent postrun status/device/process/port verification did not execute. Not a native/test/glyph/signing failure.",
+    "disposition": "Preserve/report/yield; no retry or alternate command, no permission/configuration changes.",
+    "savedStartingCommit": "3222f60a83b844d09b47d63bb533316a34307faf",
+    "safeNextAction": "Approval-capable parent should resolve EXACT execution406 denied post-native read-only dedicated-worktree/device/ownedPID11024+14968/local+remote5580-5581 verification command, preserving denial; no retry, alternative invocation, permission/configuration change or disguised execution. SAME064 only; no065 or second runner. Read docs/n1-sources/execution-406.json and batch-064-native/execution-406-artifact-index.json/attempt-1. Both named cases actually PASSED terminal0/no skips/160.379s, exact fullbf6204e5 Git envelope productionContentSyncONCE 1076kanji5034words96N1/ae05977ba66f42f5/problems0/epoch1. Full+Lite orderedテイ/emptykun, explicit curated subsets and soleてい/noKunLog; both mappedpairs偵-探偵/探-探偵 fourdirections and 刑事-探偵 comparison bothdirections/SystemBack/offline/meaning/soleOnGoodpersisted/elevenreferencetouchstrokes/ungradedtrace/recallmiss/persistedDrawAgain passed. Owned read-only API35emulator5580 parent11024/QEMU14968 reportedly stopped by launcher emukill0; independent postrun verification DENIED, so no independent cleanup/shared-device preservation claim. 40singlePaint+8wholewordprobes passed; 55PNGs archived, only2direct coordinator image inspections. Fourproductionfontrows readable 偵貞停低値人亻探手扌/探偵/刑事 without blankboxes; Textbook探偵 wraps betweencharacters; actualfallbackfaces notidentified. Detectiveparticles/activityparagraph wraps legibly; not fullarticle/screenshots inspection. Rasterhashes notreadability; drawingreference/recallmiss notMLKit/correcthumanrecall. After exact parentcleanup recovery archive it separately; do NOT rerun passed native or accepted404Android3+1 absentnewconcern. Then bounded dependent originalClaude28a561c9-9201-40a9-a3a1-c9e37c6d168a and GPT1d30e91b-c5ed-4bd0-8d74-2177b9fbb0d7 visuals SERIALly, not blindinitials. Preserve402textualclosure/originalreports/read-depth/lookup/citation/process limits. Latestmain normalnonrewriting integration/allcombinedsource-baseline-reading-link-font-stroke/Python/vocab/validator/freshmanifest/originalbudgets/normalsigning/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 stillrequired BEFOREdelivery or065. Published90/1228,1138remain; localdraft91 NOTdelivered; compatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding.",
+    "recordedAt": "2026-11-05T09:37:58.751897+01:00",
+    "issueUpdate": "https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6653549899",
+    "savedCommit": "7c617aacb6101d3229eeb8daa3ca68abce9c2542",
+    "signature": "G"
+  },
+  "exactParentExecution": "Parent executed EXACT406 denied command once after Set-Location to its original dedicated content working directory. Actual exit0, both worktrees wholly clean; adb only pre-existing emulator5556/device; owned11024/14968 absent. No device/helper modified. No native or accepted404Android rerun; no permission/configuration change/alternative invocation.",
+  "parentToolExitCode": 0,
+  "postrunVerificationPath": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\execution-406-postrun-verification.json",
+  "postrunVerificationSha256": "cb1ed24b7e8ad4c973fbb79a85d1c95f4c468dcffac1310afce738080ea00946",
+  "postrunVerification": {
+    "execution": 406,
+    "recordedAt": "2026-11-05T09:39:25.2270078+01:00",
+    "contentHead": "7c617aacb6101d3229eeb8daa3ca68abce9c2542",
+    "contentStatus": [],
+    "androidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+    "androidStatus": [],
+    "devices": "List of devices attached\r\nemulator-5556          device product:sdk_gphone64_x86_64 model:sdk_gphone64_x86_64 device:emu64xa transport_id:15\r\n\r\n",
+    "ownedProcessesRemaining": 0,
+    "connections": [
+      {
+        "LocalAddress": "127.0.0.1",
+        "RemoteAddress": "127.0.0.1",
+        "LocalPort": 9377,
+        "RemotePort": 5581,
+        "State": 3,
+        "OwningProcess": 9520
+      }
+    ]
+  },
+  "portQualification": "Actual inventory was NOT empty: 127.0.0.1:9377 ->127.0.0.1:5581, State numeric3, OwningProcess9520. Preserved exactly; parent did not identify/modify its owner or claim all5580/5581 connections cleared. Future emulator launch MUST use fresh full local+remote5580/5581 guard and honor actual expiry; no inherited port-free authorization.",
+  "nativeResult": {
+    "terminalCase0": 2,
+    "rawLogSha256": "a4fca3b0cbba47b2e9888612ecebdf140be12fcc47b0620d62676e464c42d97a",
+    "durationSeconds": 160.379,
+    "coordinatorDirectPngReads": 2,
+    "parentDirectPngReads": 0,
+    "independentVisualAcceptance": false,
+    "sourcePngs": 55
+  },
+  "pending": "SAME064406 native originalattempt1 actually2case0/no skips160.379s, frozen fullbf6204e5 productionContentSyncONCE1076kanji5034words96N1/ae05977ba66f42f5/prob0/epoch1. Full+Liteテイ/emptykun, curatedsoleてい/noKunLog, both mappedpairs偵探偵+探探偵/fourdirections and刑事探偵comparisonbothdirections/SystemBack/offline/meaning/soleOnGoodpersisted/11reference-touchstrokes/ungradedtrace/recallmiss/persistedDrawAgain retained. Forty individualPaint/eightwordprobes; two coordinator image reads among55PNGs only, NO parent PNG inspection or independent visual acceptance. Actual fallbackfaces unidentified; Textbook探偵 wraps, fullarticle/screenshots not all visually inspected. Archive actual cleanup receipt separately and normally sign scoped native checkpoint; then ORIGINALClaude28a561c9-9201-40a9-a3a1-c9e37c6d168a andGPT1d30e91b-c5ed-4bd0-8d74-2177b9fbb0d7 dependentvisuals SERIALly, not blindinitials. Preserve402textualclosure/reports/process/read-depth/lookup/citationlimits; no retroactive strict initial-process acceptance. No native or accepted404Android rerun absent new concern. Latestmain normalnonrewriting integration/allcombinedchecks/originalbudgets/normalsigning/ownerfastforward/publicSHA/terminalgreenCI/everyimmutablepublicZIPruntimehash/terminalreceipts/ownerissue60 BEFOREdelivery/065. Published90/1228,1138remain/latest063d00bf868466437d39b0330a383de8448686b502d greenCI41987419904. Original049HOSTOOM/qualified1GiBHOSTonly/native192m576m/reference-touchNOTMLKit-correcthumanrecall/phone-generalrelease-wholesetlimits remain; overall incomplete."
+}

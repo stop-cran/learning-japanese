@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 064: native checks passed; postrun verification permission-blocked
+## Batch 064: native checks passed; parent cleanup recovery archived
 
 [Execution 406](n1-sources/execution-406.json) obtained both named native
 terminal status-0 cases without skips in 160.379 seconds. The exact full Git
@@ -55,8 +55,19 @@ The owned API35 helper on `emulator-5580` (parent 11024 / QEMU 14968) stopped
 according to the launcher's receipt. The separate postrun worktree, device,
 owned-PID and port verification command was permission-denied before execution.
 Its exact command/error is preserved; no retry or alternate command was used.
-Independent cleanup verification remains blocked. Original-session serial
-visual confirmations, integration and publication remain pending. Accepted
+The parent subsequently executed that exact command successfully; the original
+denial remains historical, not rewritten as a success.
+[Execution 407](n1-sources/execution-407.json) separately archives the exact
+parent recovery and verifies every original indexed artifact, all 55 PNG
+headers/dimensions and both named terminal status-0 results. The parent receipt
+records both dedicated worktrees clean, owned PIDs absent and only the
+pre-existing `emulator-5556` device. Its port inventory is **not empty**:
+`127.0.0.1:9377` to `127.0.0.1:5581`, numeric state 3, PID 9520.
+No all-ports-free claim or inherited launch authorization follows; any future
+launch requires a fresh full ownership guard. No device/process was changed,
+no native/Android check was rerun and no new image inspection is claimed.
+Original-session serial visual confirmations, integration and publication
+remain pending. Accepted
 execution-404 Android checks and original textual reviews are unchanged;
 no runtime publication or next batch is claimed.
 
