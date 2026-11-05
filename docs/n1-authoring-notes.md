@@ -37,6 +37,42 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 064: source prepared, not drafted
+
+The [frozen membership](n1-sources/batch-064-membership.json) selects **偵**
+(source row 66), with eleven strokes, canonical **人**, no. 9, visible **亻**,
+full on-reading **テイ** and no sourced kun-reading.
+The [source ledger](n1-sources/batch-064-progress.json) records coordinator
+inspection of **23 complete applicable JMdict families**, **ten complete
+comparison families**, seven raw character records and 17 actual existing
+articles. The [public-entry evidence](n1-sources/batch-064-source-evidence.json)
+distinguishes returned definitions from attribution-only headings and historical
+gaiji gaps. Those are source checks, not independent teaching review.
+
+One necessary **探偵（たんてい）** article is proposed, not authored.
+Its detective/investigator sense and separate detective-work/secret-investigation
+sense must remain distinct. A private investigator is a useful context,
+not an absolute rule excluding every police use. Existing **刑事（けいじ）**
+has both police-detective and criminal-matters senses; preserve its N3 identity
+and consider the direct detective-label quiz guard. Broader investigation labels
+also need the final activity-sense audit rather than an assumed synonym clique.
+The separate slang **でか** family is not a replacement primary reading.
+
+Both planned **偵/探偵** and existing **探/探偵** reciprocal pairs are
+enumerated, including the bounded future N3 探 backlink. No existing declared
+偵 support pair was found. Obsolete **偵知**, baseball-specific **偵察要員**,
+the **名探偵/迷探偵** pun, specialist compounds and a work title remain
+separately qualified source evidence, not extra practical articles.
+Historical dictionary 字訓 do not add kun-readings to the frozen metadata.
+No word level is inferred from this N1 kanji.
+
+The [preparation audit](n1-sources/batch-064-preparation-audit.json)
+checks exact membership/input hashes, complete extraction, unchanged baseline
+metadata/strokes and every unchanged runtime manifest hash.
+Stroke download/conversion, actual draft/quiz/font audits, two-family review,
+Android/native checks and publication are still pending.
+Published coverage remains **90 additions; 1,138 remaining**, not 91.
+
 ## Batch 063: published and verified for bounded owner testing
 
 The [frozen membership](n1-sources/batch-063-membership.json) selects **倣**
