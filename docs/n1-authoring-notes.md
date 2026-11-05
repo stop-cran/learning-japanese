@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 063: bounded native/visual checks reconciled; integration pending
+## Batch 063: combined-main checks accepted; publication pending
 
 The [frozen membership](n1-sources/batch-063-membership.json) selects **倣**
 (source row 59). The [source ledger](n1-sources/batch-063-progress.json)
@@ -186,6 +186,22 @@ validation and exact public SHA/CI/immutable-ZIP acceptance are the next gate.
 Published batch 062 remains verified at `54fd8ff4`:
 **89 additions delivered; 1,139 remaining**. Physical-phone/general-release
 and whole-set acceptance remain outstanding.
+
+The [execution 398 combined-tree audit](n1-sources/batch-063-acceptance-audit.json)
+freshly verifies the actual integrated tree. Latest main `54fd8ff4` was already
+ancestral; a normal non-rewriting merge made no teaching or runtime changes.
+All **368 Python tests**, validator, vocabulary consistency, manifest freshness
+and unchanged archive budgets pass. Exact addition membership is 90 local
+additions, not 90 published additions. All **8,317 runtime hashes**, baseline
+metadata/readings/levels/exclusions/strokes, both reading dispositions, two
+reciprocal pairs/four directed links and the activated baseline pair pass.
+The 35 complete frozen dictionary families were mechanically re-extracted,
+not linguistically re-reviewed. Pinned geometry and all three bundled font
+cmaps were checked again. Original reports, dependent confirmations, native
+artifact hashes and fresh Android XML were reverified without rerunning
+accepted Android/native checks or claiming retroactive strict process
+compliance. Normal signing, owner fast-forward publication, terminal green CI
+and every immutable public ZIP runtime hash remain required before delivery.
 
 ## Batch 062: bounded native/visual checks reconciled; publication pending
 
