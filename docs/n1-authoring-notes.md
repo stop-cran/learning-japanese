@@ -37,7 +37,46 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 058: native assertions passed; independent visuals pending
+## Batch 058: bounded original-session native visuals reconciled
+
+The [execution 348 checkpoint](n1-sources/execution-348.json) and
+[bounded native acceptance](n1-reviews/batch-058-native-acceptance.json) preserve
+the original Claude Opus 5.5 and GPT-6.1 Sol sessions' dependent visual reports.
+Both processes exited 0 serially; the first complete report and audit were
+archived before the second launch. Each used **36 view calls, one per response,
+zero overlaps**, returning all five teaching files, the assigned fixture ranges
+and **25 distinct image payloads**. These represent 43 source PNGs with 18
+byte-equivalent copies, not 43 independent visual observations. Both found no
+actionable defect across the three article-review facets; teaching is unchanged.
+
+The four font rows show distinct readable 丘/兵/近/共 and readable
+一/砂/山/丘/砂丘 without replacement boxes. Captured questions use meaning
+choices chrysanthemum / hill; knoll / pig; pork / turtle; tortoise, not the
+authored look-alikes. Both curated reading questions and drawing feedback are
+coherent. The drawing is reference-touch, ungraded practice with an unavailable
+handwriting model, followed by a persisted recall miss, **not MLKit recognition
+or successful human recall**. Original optional suggestions remain unadopted;
+mixed practice/grading app wording is an optional observation, not a new
+established content defect.
+
+Source images are 1080x2400; actual reviewer payloads are 900x2000 and are
+preserved separately. Horizontal reading-table offsets crop labels in some
+views. **Unseen cells and whole-article rendering remain UNVERIFIED**; source
+text is not a substitute for missing pixels. Eight coordinator image reads
+this execution supplement, rather than replace, the reviewers' provenance.
+Fallback-face identity, physical-phone/general-release and whole-set acceptance
+remain outstanding. Initial Claude's three overlapping tool starts remain
+historical noncompliance; the zero-overlap dependent reviews do not retroactively
+certify the initial process contract.
+
+This is a signed **local evidence checkpoint**, not runtime publication.
+Accepted execution345 Android and execution347 native results were not rerun.
+**Next SAME058:** latest-main integration, all combined-tree acceptance and
+normal signing/owner push/green CI/every immutable public ZIP runtime-hash gates
+before delivery or batch059. Published coverage remains **84/1,228; 1,144
+remaining**, with compatible Android `f9b59a2+` required.
+
+### Native assertion checkpoint (execution 347)
 
 The [execution 347 checkpoint](n1-sources/execution-347.json) records both
 compiled native cases passing with individual terminal status **0**, no skips,
@@ -55,7 +94,8 @@ launcher/cleanup provenance. Ten coordinator image inspections show readable,
 distinct 丘/兵/近/共 and readable 一/砂/山/丘/砂丘 in all four production font
 rows, the N1 count, both reading questions/feedback, reused 丘 examples,
 new 砂丘 component links and drawing feedback without blank/replacement boxes.
-Other captures await the original reviewers' bounded dependent visual checks.
+Other captures awaited the original reviewers' bounded dependent visual checks
+at that checkpoint; execution348 above supplies the bounded confirmation.
 Raster hashes do not identify fallback faces or certify readability; the
 offline reference trace and recall miss are not MLKit or human-recall evidence.
 
@@ -65,8 +105,8 @@ postrun inventory confirmed both processes absent, both dedicated worktrees
 clean and unrelated emulator-5556 unchanged. Production code, fonts, guest/app
 heaps and archive guards were unchanged; accepted execution345 Android results
 were not rerun. No reviewer, runtime publication or batch059 was started.
-**Next SAME058:** serial dependent visual confirmations in the two original
-reviewer sessions, then combined-main acceptance and publication gates.
+**Then-next SAME058:** serial dependent visual confirmations in the two original
+reviewer sessions, now recorded above; combined-main publication gates remain.
 Initial Claude process noncompliance remains historical, not retroactively
 accepted. Published coverage remains **84/1,228; 1,144 remaining**; compatible
 Android `f9b59a2+` is required. Phone/general-release and whole-set acceptance
