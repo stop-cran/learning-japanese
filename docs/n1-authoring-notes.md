@@ -37,6 +37,48 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 061: local unreviewed draft
+
+The [frozen membership](n1-sources/batch-061-membership.json) selects **俳**
+(source row 54) for one evidence-bounded packet. The
+[ledger](n1-sources/batch-061-progress.json) retains the sole source
+on-reading **ハイ**, no kun, ten strokes and canonical **人**, no. 9,
+appearing as **亻**. Coordinator inspection covers **45 complete frozen
+JMdict families**, seven complete raw character records and seventeen actual
+existing articles; this is not independent review.
+
+The draft reuses **俳句（はいく）** and **俳優（はいゆう）** without
+changing their N2/N3 vocabulary levels, primary readings, titles or exclusions.
+No supporting article is added. Both activated baseline pairs link in both
+directions; **優/俳優** is included in the all-mapped reciprocal scope and
+gains only its missing forward link. **句** has a word article but no kanji
+card, so its written metadata remains intact without a broken card link.
+
+The source packet preserves **俳徊** as a search-only spelling of 徘徊,
+not an ordinary example, and keeps organization names and haikai's historical/
+poetical senses separate. The [public-source evidence](n1-sources/batch-061-source-evidence.json)
+records actual headings and failed/partial extraction limits. A labelled
+modern-shape mnemonic does not adopt a historical or phonetic derivation.
+Proposed practice selects ハイ with both linked support words. The three
+curated wrong meanings, **非・悲・借**, avoid 優's actor sense and
+芸/演's performance meanings.
+
+The [stroke record](n1-sources/batch-061-stroke-evidence.json) verifies the
+exact pinned SVG blob and unchanged converter, with ten strokes and sixteen
+points per stroke. The [draft audit](n1-sources/batch-061-draft-audit.json)
+checks all **8,311 runtime hashes**, original baseline preservation, all three
+reciprocal pairs, the single offered reading key and unchanged archive budgets.
+All **368 Python tests** pass. The 33 Han characters in the new/changed
+articles are present in the three bundled fonts except **亻**, which requires
+system fallback; cmap checks are not native readability evidence.
+
+This is **unreviewed local teaching**, not publication or native/phone
+acceptance. Two serial blind model-family initials on the frozen signed
+snapshot and all later reconciliation/acceptance/publication gates remain.
+Published coverage stays **87/1,228 additions; 1,141 remain**; the 89
+necessary supporting-word additions are unchanged. Accepted batch060 evidence
+and its historical limits remain intact, without redundant checks.
+
 ## Batch 060: published for bounded owner testing
 
 The [frozen membership](n1-sources/batch-060-membership.json) selects **亭**
