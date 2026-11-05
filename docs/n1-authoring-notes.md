@@ -37,7 +37,28 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 064: textually review-closed; native fixture compiled, execution pending
+## Batch 064: native checks passed; postrun verification permission-blocked
+
+[Execution 406](n1-sources/execution-406.json) obtained both named native
+terminal status-0 cases without skips in 160.379 seconds. The exact full Git
+archive imported once through production ContentSync: 1,076 kanji, 5,034
+words, 96 N1 cards, zero problems, version `ae05977ba66f42f5`, parser epoch 1.
+The sole curated on-reading, explicit no-kun disposition, both reciprocal
+pairs, comparison routes, offline/System Back and persisted reading/drawing
+grades passed. Forty glyph probes and eight whole-word raster probes passed;
+55 PNGs and the original logs are [indexed](n1-reviews/batch-064-native/execution-406-artifact-index.json).
+Only two images received direct coordinator inspection, not independent
+visual acceptance. Reference-touch tracing and a recall miss do not establish
+ML Kit recognition or correct human recall.
+
+The owned API35 helper on `emulator-5580` (parent 11024 / QEMU 14968) stopped
+according to the launcher's receipt. The separate postrun worktree, device,
+owned-PID and port verification command was permission-denied before execution.
+Its exact command/error is preserved; no retry or alternate command was used.
+Independent cleanup verification remains blocked. Original-session serial
+visual confirmations, integration and publication remain pending. Accepted
+execution-404 Android checks and original textual reviews are unchanged;
+no runtime publication or next batch is claimed.
 
 The [frozen membership](n1-sources/batch-064-membership.json) selects **偵**
 (source row 66), with eleven strokes, canonical **人**, no. 9, visible **亻**,
