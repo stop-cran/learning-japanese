@@ -37,17 +37,24 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 059: textual review closed; fresh Android execution blocked
+## Batch 059: fresh Android accepted; native preparation pending
 
 Execution353 closed the textual reconciliation on teaching snapshot
 `769293c824dc41abb9386e76c4dd5f8c676e48e0`; the original reports and historical
 Claude confirmation overlap remain preserved, not retroactively made compliant.
-The [execution354 blocker](n1-sources/execution-354.json) records one permission
-denial before the fresh Android command executed. No start/log/exit artifacts
-were created; previous batch058 XML is not batch059 acceptance. An
-approval-capable parent must resolve that exact execution gate without a retry
-around the denial or a permission-policy change. Native, visual and publication
-gates remain pending; this batch is still unpublished.
+The [execution354 blocker](n1-sources/execution-354.json) preserves the original
+permission denial before execution. The parent subsequently ran that exact
+command once with approval, without changing permission policy or test assertions.
+[Execution355](n1-sources/execution-355.json) independently verifies and archives
+the fresh **RealContentTest 3 + RareHanTest 1** results: no failures, errors or
+skips, exact named cases, timestamps after the actual start, source/copy hashes
+and the dedicated sibling content root. Previous batch058 XML is not reused.
+All six provenance hashes match; the qualified host-only 1-GiB test init is
+unchanged, with no guest/app heap or archive-guard increase. No Gradle rerun was
+needed. This is a signed local evidence checkpoint, not runtime publication.
+Native fixture preparation, actual glyph/route checks, original reviewers'
+serial dependent visual confirmation and combined-main publication gates remain
+pending; physical-phone/general-release and whole-set acceptance are outstanding.
 
 The [frozen membership](n1-sources/batch-059-membership.json) selects **享**
 (source row 20) for one evidence-bounded packet. The
