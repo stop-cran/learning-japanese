@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 062: bounded salary-character draft, not reviewed or published
+## Batch 062: textual review closed; fresh Android execution blocked
 
 The [frozen membership](n1-sources/batch-062-membership.json) selects **俸**
 (source row 56) for one evidence-bounded packet. The
@@ -64,9 +64,23 @@ curated wrong meanings. Direct salary/income/payment label guards are
 declared on the new word, not inferred through existing exclusions.
 The [draft audit](n1-sources/batch-062-draft-audit.json) records exact runtime,
 source, baseline, link, geometry and font-cmap checks separately from
-linguistic review. This is an unreviewed local draft, not independent review,
-native/phone acceptance or new publication. The two-family review and all
-app, integration and public-archive gates remain outstanding.
+linguistic review. The draft audit itself is not independent review,
+native/phone acceptance or new publication.
+
+The [textual reconciliation](n1-reviews/batch-062-reconciliation.json) closes
+the unchanged teaching snapshot `38ab6072` after independent Claude/GPT
+initial reviews and two bounded original-Claude dependent confirmations.
+Initial process violations and citation corrections remain preserved;
+dependent remediation is not retroactive strict initial-process acceptance.
+
+The [execution 383 receipt](n1-sources/execution-383.json) records one permission
+denial **before** the fresh Android command executed. No start, log or exit
+artifact was created; existing batch 061 XML is not batch 062 acceptance.
+The exact command and full live checkpoint are preserved for an
+approval-capable parent. No retry or permission workaround was attempted.
+All fresh Android, native, integration and public-archive gates remain pending.
+Published coverage stays **88 additions; 1,140 to deliver**. No batch 063,
+runtime publication or physical-phone/general-release acceptance is claimed.
 
 ## Batch 061: bounded native/visual checks reconciled; publication pending
 
