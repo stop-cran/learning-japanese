@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "execution": 428,
+  "batch": "066",
+  "status": "bounded-visual-confirmation-closed-awaiting-integration",
+  "evidenceHead": "b37c5ad6ffb5ab62cf4525b50afe4e2a6cdd011b",
+  "reviewedTeachingSnapshot": "6c23db00d2d14ec6d0a3537a1ef72b273e3d55e7",
+  "dependentNotBlind": true,
+  "models": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "reviewScope": "Complete new 僚, words/同僚.md:28 component link and kanji/同.md:36 common-word addition. Three facets per file; complete reused files read as context. Nineteen distinct captured scenes per model; complete own initial reports/523line fixture/log/route.",
+  "allReviewerProcessesSerialAndExited": true,
+  "allInternalReadsSerial": true,
+  "verdicts": {
+    "kanji/僚.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "boundedVisualComprehensibility": "CLEAN"
+    },
+    "words/同僚.md:28 component link": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "boundedVisualComprehensibility": "CLEAN"
+    },
+    "kanji/同.md:36 common-word addition": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "boundedVisualComprehensibility": "CLEAN"
+    }
+  },
+  "findings": [],
+  "reportErrata": [
+    {
+      "id": "V1",
+      "status": "resolved",
+      "claim": "Initial Claude explanation assumed three authored distractors eliminate fallback in the actual stack.",
+      "evidence": "Actual meaning-question shows enjoy/receive benefits, vertebra/chinquapin, crane (bird), colleague. QuizBuilder.kt:16-24 resolves authored IDs only against its supplied pool.",
+      "disposition": "Claude explicitly corrects its original inference in the visual report. Both models independently inspect actual displayed labels and find them wrong for 僚. Original report preserved; native presentation of authored 療/像/値 is not certified, and larger/live pools remain unverified."
+    },
+    {
+      "id": "V2",
+      "status": "withdrawn",
+      "claim": "Claude describes the font-pairs Mincho row as the same sans face as Gothic.",
+      "evidence": "Coordinator direct view of original n1-066-font-pairs.png shows clearly serifed Mincho 同/口 and other differentiated forms versus Gothic; GPT makes no same-sans claim.",
+      "disposition": "The visual style description is not adopted. Actual fallback face remains unidentified; all four rows readable/distinguishable. No content/metadata/font change or consequential unresolved claim; original report unchanged.",
+      "confidence": "high for visible serif difference, unverified for actual font identity"
+    }
+  ],
+  "optional": [
+    {
+      "status": "optional",
+      "decision": "Claude mid-word kana wrapping and crowded stroke-number spacing are nonblocking app polish, not in-scope content defects. No Android changes or new issues."
+    },
+    {
+      "status": "optional",
+      "decision": "Original optional extra compounds/phonetic detail/extra reused row/equal-rank sense remain optional; no teaching expansion manufactured."
+    }
+  ],
+  "observations": [
+    "All nine assigned glyphs and 同僚 readable/distinguishable across four production rows; no blank/replacement boxes. Person亻 versusillness疒 and 像/値 right components remain distinct.",
+    "Complementary pixels show complete new meanings/mnemonic disclaimer, radical facts, linked リョウ example and comparison notes; reused component link and common-word addition, coworker examples/particle/plural/rank boundaries are visible.",
+    "Table horizontal clipping occurs with explicit sideways-scroll hint and complementary captures. Not a demonstrated inaccessible row; simultaneous whole-row visibility is not certified.",
+    "Actual On question/feedback shows リョウ versusホウ/ヨウ/リュウ; sole normalizedりょう persisted and no Kun log from supplied fixture assertions. Meaning grade was not newly persisted: Back before Next.",
+    "Navigation/SystemBack transitions and persisted grades are native fixture/log evidence, not proof from screenshot filenames. Both component pairs/four directions are covered by passed fixture."
+  ],
+  "payloadAccounting": {
+    "sourceCaptureNames": 41,
+    "distinctSourceHashes": 19,
+    "claudePayloads": 19,
+    "gptPayloads": 19,
+    "totalArchivedReturnedPayloads": 38,
+    "sourceDimensions": [
+      1080,
+      2400
+    ],
+    "actualReturnedDimensions": [
+      900,
+      2000
+    ],
+    "boundary": "Exact source/model-visible bytes separately preserved. Hashes/ranges establish access, not comprehension. Reviewers estimated dimensions; coordinator checks actual PNG headers."
+  },
+  "modelContributionComparison": {
+    "sharedScope": "Same snapshot, three teaching scopes/all facets, nineteen identical distinct scenes, own original report/complete native fixture/log/route.",
+    "shared": "No actionable content/rendering defect established; visible reading/meaning choices, glyph distinctions, changed links and legible teaching accepted with viewport/phone limits.",
+    "additionalVerifiedClaudeDefects": [],
+    "additionalVerifiedGPTDefects": [],
+    "qualification": "No general model ranking; Claude corrects its own original fallback inference, while the same-sans observation is unsupported."
+  },
+  "inheritedEvidence": {
+    "textual": "batch-066-reconciliation.json / signed4c0a3b6f, retained unchanged",
+    "android": "execution-425.json fresh3+1 retained without rerun",
+    "native": "execution-427.json both terminal0/no skips93.971s retained without rerun",
+    "sourceLimits": "Original frozenXML/publiclookup/truncation/heading-only/gaiji limits retained. No fresh dictionary retrieval.",
+    "failures": "Historical permission denials/HOST OOMs retained. HOST-only2GiB initialization NEVER used in native builds."
+  },
+  "checks": {
+    "validate": {
+      "path": "docs\\n1-reviews\\batch-066-visual-validate-execution-428.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+    },
+    "manifest": {
+      "path": "docs\\n1-reviews\\batch-066-visual-manifest-execution-428.txt",
+      "sha256": "6bf19f81356f11b32f9922fe420db7ca5db5746c7f83e1daf2fbb0bb514c9d9c"
+    },
+    "budget": {
+      "path": "docs\\n1-reviews\\batch-066-visual-budget-execution-428.txt",
+      "sha256": "7f0e3447aece88e8058ef931149b1361435b2333fd82e4c9013679340dd441c6"
+    }
+  },
+  "boundedIndependentVisualConfirmation": true,
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "limits": "No established actionable defect in bounded reviewed content/scenes, not complete native/phone certification. Complementary captures show the reviewed teaching, but unshown viewport portions/simultaneous whole-table visibility remain unverified. Actual fallback faces, every-phone readability, physical-phone/general-release/current-main/whole-set/publication remain unverified. No MLKit, human successful recall, negative geometry tests or successful model download inferred. Original source/retrieval limits remain. Compatible Androidf9b59a2+ required.",
+  "nextAction": "SAME066 signed bounded visual checkpoint428: ORIGINAL Claude9db759dd and GPT81338bd1 dependent confirmations complete; both30calls entirelyserial,19distinct sourcePNG each/38actual returned900x2000payloads from41sourcecapture names, complete3teachingfiles/523linefixture/log/route. Read docs\\n1-sources\\execution-428.json and docs\\n1-reviews\\batch-066-visual-reconciliation.json. No actionable defect established; no teaching/app changes. Preserve original reports, limited viewport/table/fallbackface/MLKit/humanrecall/phone qualifications. Claude Mincho-style description withdrawn by coordinator direct pixels (serifs visible, face identity unverified); initial distractor no-filler inference corrected: observed N1 meaning options differ from authored 療/像/値, all visibly wrong for僚. Authored-choice native presentation NOT certified. Accepted427native2terminal0/93.971s and425freshAndroid3+1 inherited without rerun; no redundant reviewer/native/Gradle absentnewconcern. Historicaldenials/HOSTOOMs retained; qualifiedHOST-only2GiBinit NEVER nativebuilds. NEXT bounded checkpoint: freshfetchlatestorigin/main/nonrewritingintegration as needed, allactualcombinedsource-membership/baseline/reading/link/font/stroke/Python/vocab/validator/freshmanifest and original18000entries42MiBcompressed80MiBinflated56MiBretainedbudget gates; normal signing/ownerfastforward/publicSHA/terminalgreenCI/EVERYimmutablepublicZIP runtimehash/budgets/ownerissue60 BEFOREdelivery or067. Permissiondenial/signingwait: preserve precise failure and yield, no retry/workaround/secondrunner/concurrentheavywork/supervisorchanges. PreserveFULLlivehistory. Published92/1228,1136remain/latest06544645f54; local066 NOTdelivered. CompatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding. Overallproject incomplete."
+}
