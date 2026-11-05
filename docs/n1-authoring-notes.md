@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 060: bounded native visuals reconciled; integration pending
+## Batch 060: combined acceptance complete; publication pending
 
 The [frozen membership](n1-sources/batch-060-membership.json) selects **亭**
 (source row 21) for one evidence-bounded packet. Its
@@ -145,8 +145,15 @@ clean and unrelated emulator-5556 still present.
 
 The [execution368 record](n1-sources/execution-368.json) retains the accepted
 Android/native results without rerunning them. Bounded independent visual
-confirmation is closed; combined-main acceptance and publication remain
-pending. This is a local evidence checkpoint, not delivered content.
+confirmation is closed. The [combined acceptance audit](n1-sources/batch-060-acceptance-audit.json)
+records a fresh fetch and normal merge of current main `48d7110f` (already
+ancestral, no conflicts), **368 Python tests**, vocabulary consistency,
+validator, manifest freshness, frozen sources, baseline preservation, exact
+87-addition local membership, every reading, both reciprocal pairs, generated
+strokes, font cmaps and original archive budgets. All **8,309 runtime hashes**
+match; accepted Android/native and reviewer evidence was independently
+reverified rather than rerun. Runtime teaching is unchanged from `ea1dac1a`.
+Publication and exact public CI/archive acceptance remain pending.
 Published coverage remains
 **86/1,228 additions; 1,142 remain**.
 Compatible Android `f9b59a2+`, outstanding physical-phone/general-release
