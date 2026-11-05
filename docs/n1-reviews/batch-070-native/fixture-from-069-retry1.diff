@@ -1,0 +1,387 @@
+--- docs/n1-reviews/batch-069-native/N1Batch069NativeRetry1Test.kt
++++ docs/n1-reviews/batch-070-native/N1Batch070NativeTest.kt
+@@ -49 +49 @@
+-private fun disposable069() {
++private fun disposable070() {
+@@ -54 +54 @@
+-class N1Batch069Retry1GlyphTest {
++class N1Batch070GlyphTest {
+@@ -57,2 +57,2 @@
+-    @Test fun confucianLookalikesAndRadicalVariantsAcrossFourProductionFamilies() {
+-        disposable069()
++    @Test fun recompenseLookalikesAndRadicalVariantsAcrossFourProductionFamilies() {
++        disposable070()
+@@ -61 +61 @@
+-        val text = "儒 需 儀 僧 優 人 亻 教 攴 攵 子 考 校 木 儒教"
++        val text = "償 賞 儀 僧 億 人 亻 補 衣 衤 礻 甫 捕 手 扌 初 複 保 証 埋 損 害 償う 補償 補う"
+@@ -65 +65 @@
+-                    Text("Batch 069: Confucian / look-alikes / radical variants")
++                    Text("Batch 070: recompense / look-alikes / radical variants")
+@@ -70 +70 @@
+-                    Text("Inspect 儒 versus 需/儀/僧/優, 人 versus standalone 亻, 儒教 and 教 with 子/攴/攵 plus 考/校/木. Fallback families may coincide.", fontSize = 18.sp)
++                    Text("Inspect 償/賞 and 人/亻; 補 has 衣 as 衤, not 礻. Compare 捕/扌 and 初/複. Check all three words. Fallback families may coincide.", fontSize = 18.sp)
+@@ -81 +81 @@
+-            for (char in listOf("儒", "需", "儀", "僧", "優", "人", "亻", "教", "攴", "攵", "子", "考", "校", "木")) {
++            for (char in listOf("償", "賞", "儀", "僧", "億", "人", "亻", "補", "衣", "衤", "礻", "甫", "捕", "手", "扌", "初", "複", "保", "証", "埋", "損", "害")) {
+@@ -102 +102 @@
+-            for (word in listOf("儒教")) {
++            for (word in listOf("償う", "補償", "補う")) {
+@@ -129 +129 @@
+-        assertEquals(60, rows.length())
++        assertEquals(100, rows.length())
+@@ -133 +133 @@
+-        File(context.getExternalFilesDir(null), "n1-069-font-pairs.png").outputStream().use {
++        File(context.getExternalFilesDir(null), "n1-070-font-pairs.png").outputStream().use {
+@@ -136 +136 @@
+-        File(context.getExternalFilesDir(null), "n1-069-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-070-font-raster.json").writeText(JSONObject()
+@@ -139,2 +139,2 @@
+-            .put("individualGlyphProbes", 56).put("wholeWordRasterProbes", 4)
+-            .put("limits", "Fifty-six single-character native Paint probes including 人/standalone亻 and actual 攴/攵, four whole-word nonblank raster probes and four production Compose rows. Actual readability requires visual inspection; emulator not phone; fallback face not identified.")
++            .put("individualGlyphProbes", 88).put("wholeWordRasterProbes", 12)
++            .put("limits", "Native single-character Paint probes including 人/亻 and 衣/衤/礻 plus twelve whole-word rasters and four production Compose rows. Actual readability requires visual inspection; emulator not phone; fallback face not identified.")
+@@ -145 +145 @@
+-class N1Batch069Retry1ArticleTest {
++class N1Batch070ArticleTest {
+@@ -150,2 +150,2 @@
+-    @Test fun fullSingleImportOfflineConfucianTwoReciprocalPairsOnOnlyDrawingAndSystemBack() {
+-        disposable069()
++    @Test fun fullSingleImportOfflineRecompenseThreeReciprocalPairsBothReadingsDrawingAndSystemBack() {
++        disposable070()
+@@ -154,2 +154,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-069-${UUID.randomUUID()}", "main")
+-        val head = "e245739783dbc2ebe33ee164b8cfa718d670551b"
++        val source = RepoSource("acceptance-fixture", "n1-070-${UUID.randomUUID()}", "main")
++        val head = "fce81d63caba02c311d9d87ba955002ec79fc4c9"
+@@ -163 +163 @@
+-                    instrumentation.context.assets.open("n1-batch-069-e2457397-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-070-fce81d63-envelope.zip")
+@@ -178,2 +178,2 @@
+-        assertEquals(1081, updated.kanji)
+-        assertEquals(5038, updated.words)
++        assertEquals(1082, updated.kanji)
++        assertEquals(5040, updated.words)
+@@ -182 +182 @@
+-        assertEquals("83ed94552dd1a9ce", meta.contentVersion)
++        assertEquals("a9867cc4b455639a", meta.contentVersion)
+@@ -190,10 +190,10 @@
+-        assertEquals(101, n1.size)
+-        val confucian = n1.single { it.kanji == "儒" }
+-        assertEquals(listOf("ジュ"), confucian.onyomi.splitSep())
+-        assertEquals(emptyList<String>(), confucian.kunyomi.splitSep())
+-        assertNotNull(confucian.quizOnyomi)
+-        assertNotNull(confucian.quizKunyomi)
+-        assertEquals(listOf("ジュ"), confucian.quizOnyomi?.splitSep())
+-        assertEquals(emptyList<String>(), confucian.quizKunyomi?.splitSep())
+-        assertEquals(listOf("じゅ"), confucian.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(emptyList<String>(), confucian.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(102, n1.size)
++        val recompense = n1.single { it.kanji == "償" }
++        assertEquals(listOf("ショウ"), recompense.onyomi.splitSep())
++        assertEquals(listOf("つぐな.う"), recompense.kunyomi.splitSep())
++        assertNotNull(recompense.quizOnyomi)
++        assertNotNull(recompense.quizKunyomi)
++        assertEquals(listOf("ショウ"), recompense.quizOnyomi?.splitSep())
++        assertEquals(listOf("つぐな.う"), recompense.quizKunyomi?.splitSep())
++        assertEquals(listOf("しょう"), recompense.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(listOf("つぐなう"), recompense.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -213 +213 @@
+-                        if (card.kanji == "儒") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "償") now - 60_000 else now + 30L * 86_400_000,
+@@ -219 +219 @@
+-                            if (card.kanji == "儒" && (kind == ReadingKind.On && key == "じゅ")) now - 60_000
++                            if (card.kanji == "償" && ((kind == ReadingKind.On && key == "しょう") || (kind == ReadingKind.Kun && key == "つぐなう"))) now - 60_000
+@@ -226 +226 @@
+-                    0, source.id, "jlpt-n1", "儒", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "償", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -236,4 +236,4 @@
+-            .put("fullOnyomi", JSONArray(confucian.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(confucian.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(confucian.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(confucian.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("fullOnyomi", JSONArray(recompense.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(recompense.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(recompense.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(recompense.toReadingCard().quizKeys(ReadingKind.Kun)))
+@@ -242 +242 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 儒 meaning and sole curated on key due; explicit no-kun. Two historical good 儒 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 償 meaning and both curated on/kun keys due. Two historical good 償 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -249 +249 @@
+-            await("N1 · 101 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 102 cards").performScrollTo().assertIsDisplayed()
+@@ -252,4 +252,4 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("儒")
+-            click("Confucian; Confucian scholar")
+-            await("儒 — Confucian; Confucian scholar")
+-            show(articleBullet("Strokes: 16 · Key (radical): 人 (as 亻, no. 9) · JLPT: N1 (community list)"), "kanji-01")
++            rule.onNode(hasSetTextAction()).performTextReplacement("償")
++            click("recompense; make amends")
++            await("償 — recompense; make amends")
++            show(articleBullet("Strokes: 17 · Key (radical): 人 (as 亻, no. 9) · JLPT: N1 (community list)"), "kanji-01")
+@@ -257,2 +257,2 @@
+-            show(articleBullet("儒 concerns Confucian thought and its scholars. 儒教 じゅきょう means Confucianism, the tradition of teachings associated with 孔子（こうし）, Confucius. 儒 is not a general label for every teacher or religious believer."), "kanji-03")
+-            show(articleBullet("The visible parts are 亻, the side form of 人, and 需 on the right. Modern-shape mnemonic: picture a person beside layers of study notes. This is an invented visual memory aid, not a historical or phonetic explanation."), "kanji-04")
++            show(articleBullet("償 concerns making up for a loss, recompensing someone or making amends. 補償 ほしょう is compensation for loss; 償う つぐなう can describe compensating for a loss or atoning for wrongdoing. Not every use implies that someone committed a crime."), "kanji-03")
++            show(articleBullet("The visible parts are 亻, the side form of 人, and 賞 on the right. Modern-shape mnemonic: picture a person handing over something valuable to make good a loss. This is a visual memory aid, not a historical or phonetic explanation."), "kanji-04")
+@@ -260,4 +260,6 @@
+-            show(readingExample("儒教 じゅきょう — Confucianism"), "kanji-11")
+-            show(articleBullet("The frozen character dictionary gives ジュ and no kun reading."), "kanji-12")
+-            section("Common words")
+-            show(articleBullet("儒教 じゅきょう — Confucianism"), "kanji-14")
++            show(readingExample("補償 ほしょう — compensation for loss"), "kanji-11")
++            show(readingExample("償う つぐなう — make amends; compensate for loss"), "kanji-14")
++            show(articleBullet("In 償う, the kanji represents つぐな and う is okurigana. Both sourced readings are retained and selected for reading questions."), "kanji-15")
++            section("Common words")
++            show(articleBullet("補償 ほしょう — compensation for loss"), "kanji-17")
++            show(articleBullet("償う つぐなう — make amends; compensate for loss"), "kanji-18")
+@@ -265,7 +267,7 @@
+-            show(articleBullet("儒学（じゅがく）also means Confucianism, with emphasis on its scholarly aspect. It often overlaps with 儒教; do not impose an absolute religion-versus-philosophy divide."), "kanji-16")
+-            show(articleBullet("In older scholarly usage, 儒 can extend to a learned person more generally. Learn the whole word and context rather than treating \"Confucian\" as an exceptionless translation in every compound."), "kanji-17")
+-            show(articleBullet("儀, \"ceremony; formal conduct,\" 僧, \"Buddhist monk; priest,\" and 優, \"gentle; superior,\" also have 亻 but different right-hand shapes. A shared component does not make their meanings interchangeable."), "kanji-18")
+-            show(articleBullet("Metadata: KANJIDIC2. Word pairs: JMdict, entries 1329450, 1329470 and 1329510. Usage: Daijisen and Nikkoku, 儒; Nipponica, 儒学."), "kanji-19")
+-            section("Common words")
+-            inline(await(articleBullet("儒教 じゅきょう — Confucianism")), "儒教", 0)
+-            await("儒教 (じゅきょう) — Confucianism")
++            show(articleBullet("賞 also has ショウ, but its prize or reward meaning does not make 賞 and 償 interchangeable. Notice the extra 亻 in 償."), "kanji-20")
++            show(articleBullet("補, \"supplement; make good,\" overlaps in supplying what is missing. Learn the whole word rather than dividing compensation and supplementation into absolute categories."), "kanji-21")
++            show(articleBullet("儀, \"ceremony; formal conduct,\" 僧, \"Buddhist monk; priest,\" and 億, \"hundred million,\" share 亻 but have different right-hand shapes."), "kanji-22")
++            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Word pairs: JMdict, entries 1346020 and 1514650. Usage: Daijisen and Nikkoku, 償う; Nikkoku, 補償."), "kanji-23")
++            section("Common words")
++            inline(await(articleBullet("償う つぐなう — make amends; compensate for loss")), "償う", 0)
++            await("償う (つぐなう) - make amends; compensate for loss")
+@@ -273,6 +275,6 @@
+-            show(articleBullet("儒教 is Confucianism, the tradition of teachings associated with 孔子（こうし）, Confucius. It is a noun naming that particular tradition, not religion or education in general."), "word1-02")
+-            show(articleBullet("歴史の授業で儒教について学びました。 (れきしのじゅぎょうでじゅきょうについてまなびました。) — I learned about Confucianism in history class."), "word1-03")
+-            show(articleBullet("この本は儒教の考え方を紹介しています。 (このほんはじゅきょうのかんがえかたをしょうかいしています。) — This book introduces Confucian ideas."), "word1-04")
+-            show(articleBullet("儒教について学ぶ（じゅきょうについてまなぶ）means \"learn about Confucianism\"; studying a tradition does not itself mean following it."), "word1-05")
+-            section("How the kanji combine")
+-            show(articleBullet("儒 contributes Confucian thought or its scholars, and 教 contributes teaching or doctrine. This is a modifier + head compound: Confucian teachings. The on readings combine as ジュ + キョウ → じゅきょう."), "word1-07")
++            show(articleBullet("償う is a transitive godan verb: make up for a loss or debt, or make amends for wrongdoing. The loss, debt or wrongdoing being made up for takes を. Compensation can involve money or goods; making amends can also involve actions."), "word1-02")
++            show(articleBullet("彼は損害を償いました。 (かれはそんがいをつぐないました。) - He compensated for the damage."), "word1-03")
++            show(articleBullet("彼は自分の過ちを償おうとしています。 (かれはじぶんのあやまちをつぐなおうとしています。) - He is trying to make amends for his mistake."), "word1-04")
++            show(articleBullet("Forms include 償います (つぐないます), 償わない (つぐなわない), 償った (つぐなった), and 償って (つぐなって)."), "word1-05")
++            section("How the kanji combine")
++            show(articleBullet("償 contributes making good a loss or making amends. つぐな is represented by the kanji; う is okurigana. The compound reading ショウ does not replace つぐな in this verb."), "word1-07")
+@@ -280,6 +282,7 @@
+-            show(articleBullet("儒学（じゅがく）also means Confucianism, often emphasizing its scholarly aspect. The words overlap; they are not an absolute division between religion and secular philosophy. 宗教 しゅうきょう means religion more broadly, and 思想 しそう means thought or ideology, not specifically Confucianism. There is no simple everyday antonym for the name of this tradition."), "word1-09")
+-            section("Distinctive meaning")
+-            show(articleBullet("教 does not make 儒教 a word for school teaching in general. Use 儒教の思想（じゅきょうのしそう）, \"Confucian thought,\" when describing its ideas. The word names a tradition; it does not by itself state a person's nationality, beliefs or degree of commitment."), "word1-11")
+-            show(articleBullet("Dictionary: JMdict, entry 1329510. Usage: World Encyclopedia, 儒教; Nipponica, 儒学."), "word1-12")
+-            section("How the kanji combine")
+-            inline(await(articleBullet("儒 contributes Confucian thought or its scholars, and 教 contributes teaching or doctrine. This is a modifier + head compound: Confucian teachings. The on readings combine as ジュ + キョウ → じゅきょう.")), "儒", 0)
++            show(articleBullet("補償 (ほしょう), used with する, focuses on compensation for loss. 補う (おぎなう) is broader supplementation or making up for a shortage; the words can overlap in loss contexts. Apologizing is not necessarily the same as making amends, and there is no single opposite that reverses both the compensation and atonement senses."), "word1-09")
++            section("Distinctive meaning")
++            show(articleBullet("償う does not always imply moral guilt: 損害 (そんがい), damage or loss, can be its object. Conversely, making amends for a mistake need not mean simply paying money. Context determines what would count as making good the harm."), "word1-11")
++            show(articleBullet("The dictionary also records 償う as つぐのう. Nikkoku identifies つぐなう as the form much used today; this article teaches つぐなう rather than treating every recorded pronunciation as the modern default."), "word1-12")
++            show(articleBullet("Dictionary: JMdict, entry 1346020. Usage and alternate reading: Daijisen and Nikkoku, 償う."), "word1-13")
++            section("How the kanji combine")
++            inline(await(articleBullet("償 contributes making good a loss or making amends. つぐな is represented by the kanji; う is okurigana. The compound reading ショウ does not replace つぐな in this verb.")), "償", 0)
+@@ -288,7 +291,37 @@
+-            show(readingExample("儒教 じゅきょう — Confucianism"), "word1-new-kanji-backlink")
+-            back()
+-            await("儒教  Confucianism")
+-            section("How the kanji combine")
+-            inline(await(articleBullet("儒 contributes Confucian thought or its scholars, and 教 contributes teaching or doctrine. This is a modifier + head compound: Confucian teachings. The on readings combine as ジュ + キョウ → じゅきょう.")), "教", 53)
+-            await("教 — teach, instruct")
+-            show(articleBullet("Strokes: 11 · Key (radical): 攴 (right-side shape 攵, no. 66) · JLPT: N4 (community list)"), "component1-01")
++            show(readingExample("償う つぐなう — make amends; compensate for loss"), "word1-new-kanji-backlink")
++            back()
++            await(articleBullet("償 contributes making good a loss or making amends. つぐな is represented by the kanji; う is okurigana. The compound reading ショウ does not replace つぐな in this verb.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("system-back-word1-kanji")
++            back()
++            await(articleBullet("償う つぐなう — make amends; compensate for loss")).assertIsDisplayed()
++            section("Common words")
++            capture("system-back-kanji-word1")
++            section("Common words")
++            inline(await(articleBullet("補償 ほしょう — compensation for loss")), "補償", 0)
++            await("補償 (ほしょう) - compensation for loss")
++            section("Meaning")
++            show(articleBullet("補償 is compensation that makes good a loss. It is a noun and forms a transitive verb with する. With 補償する, the loss being compensated for takes を."), "word2-02")
++            show(articleBullet("会社は事故による損害を補償しました。 (かいしゃはじこによるそんがいをほしょうしました。) - The company compensated for the damage caused by the accident."), "word2-03")
++            show(articleBullet("私たちは補償を求めています。 (わたしたちはほしょうをもとめています。) - We are seeking compensation."), "word2-04")
++            show(articleBullet("In the second example, 補償 is the noun object of 求める (もとめる), \"seek.\" Seeking compensation does not mean that it has already been paid."), "word2-05")
++            section("How the kanji combine")
++            show(articleBullet("補 contributes supplying what is missing; 償 contributes recompense or making good a loss. The near-synonymous parts reinforce the idea of making up for a loss. 補 supplies ホ and 償 supplies ショウ in ほしょう."), "word2-07")
++            section("Synonyms and antonyms")
++            show(articleBullet("償う (つぐなう) can mean compensating for a loss or making amends. 補う (おぎなう) is broader: it can also mean supplementing an explanation. 保証 (ほしょう), \"guarantee; warranty,\" is a different word despite the shared pronunciation. A promise or warranty is not itself compensation paid for a loss. There is no single everyday antonym covering every compensation context."), "word2-09")
++            section("Distinctive meaning")
++            show(articleBullet("This article focuses on practical compensation for loss, not the separate psychological or technical uses. Legal sources can distinguish particular types of 補償 from damages, but ordinary use can be broader; do not infer that 補償 always excludes damages or automatically establishes someone's liability. Whether compensation is owed or paid depends on the actual circumstances and conditions."), "word2-11")
++            show(articleBullet("Dictionary: JMdict, entry 1514650. Scope: Nikkoku and World Encyclopedia, 補償."), "word2-12")
++            section("How the kanji combine")
++            inline(await(articleBullet("補 contributes supplying what is missing; 償 contributes recompense or making good a loss. The near-synonymous parts reinforce the idea of making up for a loss. 補 supplies ホ and 償 supplies ショウ in ほしょう.")), "償", 41)
++            await("Article contents")
++            section("Readings")
++            show(readingExample("補償 ほしょう — compensation for loss"), "word2-new-kanji-backlink")
++            back()
++            await(articleBullet("補 contributes supplying what is missing; 償 contributes recompense or making good a loss. The near-synonymous parts reinforce the idea of making up for a loss. 補 supplies ホ and 償 supplies ショウ in ほしょう.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("system-back-word2-kanji")
++            section("How the kanji combine")
++            inline(await(articleBullet("補 contributes supplying what is missing; 償 contributes recompense or making good a loss. The near-synonymous parts reinforce the idea of making up for a loss. 補 supplies ホ and 償 supplies ショウ in ほしょう.")), "補", 0)
++            await("補 — supplement; make good")
++            show(articleBullet("Strokes: 12 · Key (radical): 衣 (no. 145) · JLPT: N2 (community list)"), "component1-01")
+@@ -296,2 +329,3 @@
+-            show(articleBullet("教 concerns teaching and instruction; in some compounds it also concerns a doctrine or faith. The everyday verb 教える includes telling someone information, not just teaching a lesson."), "component1-03")
+-            show(articleBullet("Modern-shape mnemonic: notice 子 within the left side and picture a child following a teacher's pointing gesture on the right. This is an invented memory scene, not a claim about the origin of 攵."), "component1-04")
++            show(articleBullet("補 concerns supplying what is missing, supplementing or making good a shortage. 候補 こうほ names a candidate, while 補う おぎなう directly expresses supplementing or compensating."), "component1-03")
++            show(articleBullet("Modern-shape mnemonic, not etymology: Imagine a new patch, the right-hand 甫-shaped block, supplying a missing part of a garment 衤. This is a mnemonic rather than a claim about the component's historical role."), "component1-04")
++            show(articleBullet("The indexing radical 衣 appears as left-hand 衤, not the similar-looking 礻."), "component1-05")
+@@ -299,9 +333,7 @@
+-            show(readingExample("教室 きょうしつ (classroom), 教科書 きょうかしょ (textbook)"), "component1-11")
+-            show(readingExample("教える おしえる (teach; tell)"), "component1-14")
+-            show(readingExample("教わる おそわる (be taught; learn from someone)"), "component1-17")
+-            section("Common words")
+-            show(articleBullet("教える おしえる — teach; tell someone information"), "component1-19")
+-            show(articleBullet("教わる おそわる — be taught, learn from someone"), "component1-20")
+-            show(articleBullet("教室 きょうしつ — classroom"), "component1-21")
+-            show(articleBullet("教科書 きょうかしょ — textbook"), "component1-22")
+-            show(articleBullet("儒教 じゅきょう — Confucianism"), "component1-23")
++            show(readingExample("候補 こうほ - candidate; possible choice"), "component1-12")
++            show(readingExample("補う おぎなう - supplement; make up for"), "component1-15")
++            section("Common words")
++            show(articleBullet("候補 こうほ - candidate; possible choice"), "component1-17")
++            show(articleBullet("補う おぎなう - supplement; make up for"), "component1-18")
++            show(articleBullet("補償 ほしょう - compensation for loss"), "component1-19")
++            show(articleBullet("補充 ほじゅう - replenishment; refilling"), "component1-20")
+@@ -309,17 +341,57 @@
+-            show(articleBullet("教える views the exchange from the instructor's side; 教わる views it from the learner's side. The verb is not limited to school: a person can 教える a name or an address."), "component1-25")
+-            show(articleBullet("考 has a similar upper-left outline, but lacks 子 and 攵. 校 is another school-related character with a different left-hand component, 木."), "component1-26")
+-            show(articleBullet("Metadata: KANJIDIC2, 2026-10-08 (EDRDG; CC BY-SA 4.0)."), "component1-27")
+-            section("Common words")
+-            inline(await(articleBullet("儒教 じゅきょう — Confucianism")), "儒教", 0)
+-            await("儒教 (じゅきょう) — Confucianism")
+-            section("How the kanji combine")
+-            show(articleBullet("儒 contributes Confucian thought or its scholars, and 教 contributes teaching or doctrine. This is a modifier + head compound: Confucian teachings. The on readings combine as ジュ + キョウ → じゅきょう."), "word1-legacy-backlink")
+-            back()
+-            await("Common words")
+-            capture("system-back-component1")
+-            back()
+-            await("How the kanji combine")
+-            capture("system-back-word1-component")
+-            back()
+-            await("Common words")
+-            capture("system-back-kanji-word1")
++            show(articleBullet("Compare 捕, capture: its left-hand 扌 differs from the clothing form 衤 in 補."), "component1-22")
++            show(articleBullet("補う is a transitive godan verb, not an adjective meaning enough. Learn 候補 as a whole word rather than expecting the two character glosses to reproduce every modern use."), "component1-23")
++            show(articleBullet("Metadata: KANJIDIC2, 2026-10-21 snapshot. Word pairs: JMdict, entries 1272730, 1514460, 1514580."), "component1-24")
++            section("Common words")
++            inline(await(articleBullet("補償 ほしょう - compensation for loss")), "補償", 0)
++            await("Article contents")
++            section("How the kanji combine")
++            capture("word2-legacy-backlink")
++            back()
++            await(articleBullet("補償 ほしょう - compensation for loss")).assertIsDisplayed()
++            section("Common words")
++            capture("system-back-component1-word2")
++            section("Common words")
++            inline(await(articleBullet("補う おぎなう - supplement; make up for")), "補う", 0)
++            await("補う (おぎなう) - make up for; supplement")
++            section("Meaning")
++            show(articleBullet("補う means supplying something missing, making up a shortage or loss, or supplementing something insufficient. It is a transitive godan verb. The shortage, lack, or material being supplemented takes を."), "comparison-02")
++            show(articleBullet("足りない生活費をアルバイトで補っています。 (たりないせいかつひをアルバイトでおぎなっています。) - I make up the shortfall in living expenses with a part-time job."), "comparison-03")
++            show(articleBullet("図を使って説明を補いました。 (ずをつかってせつめいをおぎないました。) - I supplemented the explanation with a diagram."), "comparison-04")
++            show(articleBullet("Forms include 補います (おぎないます), 補わない (おぎなわない), 補った (おぎなった), and 補って (おぎなって)."), "comparison-05")
++            section("How the kanji combine")
++            show(articleBullet("補 contributes supplying what is missing. おぎな is represented by the kanji and う is okurigana. The compound reading ホ does not replace おぎな in this verb."), "comparison-07")
++            section("Synonyms and antonyms")
++            show(articleBullet("埋める (うめる) also covers filling a gap or making up a loss. 足す (たす) and 加える (くわえる) describe adding; 補う makes the insufficiency or missing part important. 補充 (ほじゅう) is replenishment; 補足 (ほそく) is supplementation."), "comparison-09")
++            section("Distinctive meaning")
++            show(articleBullet("The supplement need not be money or a physical patch. The diagram example adds information that the explanation lacks. English \"compensate\" here does not automatically mean paying legal damages: 補償する (ほしょうする) is the relevant comparison for compensation or reparation."), "comparison-11")
++            show(articleBullet("Dictionary: JMdict, entry 1514460, sense 1; compare 1524500 sense 4, 1514580, 1514700 and 1514650."), "comparison-12")
++            section("How the kanji combine")
++            inline(await(articleBullet("補 contributes supplying what is missing. おぎな is represented by the kanji and う is okurigana. The compound reading ホ does not replace おぎな in this verb.")), "補", 0)
++            await("Article contents")
++            section("Readings")
++            capture("comparison-component-backlink")
++            back()
++            await(articleBullet("補 contributes supplying what is missing. おぎな is represented by the kanji and う is okurigana. The compound reading ホ does not replace おぎな in this verb.")).assertIsDisplayed()
++            section("Distinctive meaning")
++            capture("system-back-comparison-component")
++            section("Distinctive meaning")
++            inline(await(articleBullet("The supplement need not be money or a physical patch. The diagram example adds information that the explanation lacks. English \"compensate\" here does not automatically mean paying legal damages: 補償する (ほしょうする) is the relevant comparison for compensation or reparation.")), "補償", 195)
++            await("Article contents")
++            section("Distinctive meaning")
++            capture("comparison-compensation-target")
++            back()
++            await(articleBullet("The supplement need not be money or a physical patch. The diagram example adds information that the explanation lacks. English \"compensate\" here does not automatically mean paying legal damages: 補償する (ほしょうする) is the relevant comparison for compensation or reparation.")).assertIsDisplayed()
++            section("Distinctive meaning")
++            capture("system-back-comparison-compensation")
++            back()
++            await(articleBullet("補う おぎなう - supplement; make up for")).assertIsDisplayed()
++            section("Common words")
++            capture("system-back-component1-comparison")
++            back()
++            await(articleBullet("補 contributes supplying what is missing; 償 contributes recompense or making good a loss. The near-synonymous parts reinforce the idea of making up for a loss. 補 supplies ホ and 償 supplies ショウ in ほしょう.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("system-back-word2-component1")
++            back()
++            await(articleBullet("補償 ほしょう — compensation for loss")).assertIsDisplayed()
++            section("Common words")
++            capture("system-back-kanji-word2")
+@@ -334 +406 @@
+-            assertEquals("儒", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("償", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -336 +408 @@
+-            click("Confucian; Confucian scholar")
++            click("recompense; make amends")
+@@ -338 +410 @@
+-            assertEquals("儒", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("償", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -344 +416 @@
+-            repeat(1) {
++            repeat(2) {
+@@ -348 +420 @@
+-                assertEquals("儒", question.card.kanji)
++                assertEquals("償", question.card.kanji)
+@@ -350,2 +422 @@
+-                assertEquals(ReadingKind.On, question.question.kind)
+-                val key = "じゅ"
++                val key = if (question.question.kind == ReadingKind.On) "しょう" else "つぐなう"
+@@ -362 +433 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "儒" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "償" &&
+@@ -366,5 +437 @@
+-            assertEquals(setOf(ReadingKind.On), answeredKinds)
+-            assertFalse(runBlocking {
+-                app.db.reviews().allLog().any { it.sourceId == source.id &&
+-                    it.kanji == "儒" && it.mode == ReadingKind.Kun.mode.name }
+-            })
++            assertEquals(setOf(ReadingKind.On, ReadingKind.Kun), answeredKinds)
+@@ -375,4 +442,4 @@
+-            await("Confucian; Confucian scholar").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "儒") })
+-            assertEquals(listOf("ジュ"), card.onyomi.splitSep())
+-            assertEquals(emptyList<String>(), card.kunyomi.splitSep())
++            await("recompense; make amends").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "償") })
++            assertEquals(listOf("ショウ"), card.onyomi.splitSep())
++            assertEquals(listOf("つぐな.う"), card.kunyomi.splitSep())
+@@ -381,2 +448,2 @@
+-            assertEquals(listOf("ジュ"), card.quizOnyomi?.splitSep())
+-            assertEquals(emptyList<String>(), card.quizKunyomi?.splitSep())
++            assertEquals(listOf("ショウ"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("つぐな.う"), card.quizKunyomi?.splitSep())
+@@ -384 +451 @@
+-            assertEquals(16, strokes.length())
++            assertEquals(17, strokes.length())
+@@ -401 +468 @@
+-            rule.onNode(hasContentDescription("16 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("17 strokes drawn", substring = true)).assertExists()
+@@ -406 +473 @@
+-                    it.kanji == "儒" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "償" && it.mode == StudyMode.Draw.name }
+@@ -417 +484 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "儒" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "償" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -425 +492 @@
+-                .put("soleCuratedOnQuestionAndPersistedGradeNoKun", true)
++                .put("bothCuratedKindsAndPersistedGrades", true)
+@@ -430,2 +497,2 @@
+-            File(app.getExternalFilesDir(null), "n1-069-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-069-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-070-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-070-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -524 +591 @@
+-        File(app.getExternalFilesDir(null), "n1-069-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-070-$step.png").outputStream().use {
