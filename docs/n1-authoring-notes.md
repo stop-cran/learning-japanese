@@ -37,7 +37,20 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 067: native fixture compiled; not executed or published
+## Batch 067: combined-tree acceptance; publication pending
+
+The [combined acceptance](n1-sources/batch-067-acceptance-audit.json) freshly
+checks the current-main tree, all 94 project additions, baseline preservation,
+113 dictionary families, reading/link/stroke/font dispositions, 8,329 runtime
+hashes and the unchanged archive budgets. All 368 Python tests pass.
+The [execution record](n1-sources/execution-437.json) inherits the passing
+Android/native gates and bounded visual confirmations without redundant runs.
+The original Claude two-receipt read overlap and subsequent serial repair
+remain disclosed; this is not an all-internal-reads-serial review execution.
+Normal signed publication, CI and exact public ZIP verification are next.
+Physical-phone, general-release and whole-set acceptance remain outstanding.
+
+## Batch 067: native preparation checkpoint (historical)
 
 The [textual reconciliation](n1-reviews/batch-067-reconciliation.json) closes
 both serial independent initial reviews on the unchanged teaching snapshot.
