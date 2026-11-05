@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 062: textual review closed; fresh Android execution blocked
+## Batch 062: textual review closed; fresh Android checks archived
 
 The [frozen membership](n1-sources/batch-062-membership.json) selects **俸**
 (source row 56) for one evidence-bounded packet. The
@@ -73,12 +73,24 @@ initial reviews and two bounded original-Claude dependent confirmations.
 Initial process violations and citation corrections remain preserved;
 dependent remediation is not retroactive strict initial-process acceptance.
 
-The [execution 383 receipt](n1-sources/execution-383.json) records one permission
-denial **before** the fresh Android command executed. No start, log or exit
-artifact was created; existing batch 061 XML is not batch 062 acceptance.
-The exact command and full live checkpoint are preserved for an
-approval-capable parent. No retry or permission workaround was attempted.
-All fresh Android, native, integration and public-archive gates remain pending.
+The [execution 383 receipt](n1-sources/execution-383.json) preserves the original
+permission denial **before** execution; no start, log or exit artifact existed
+at that checkpoint. The approval-capable parent subsequently executed that
+exact command once on unchanged content `19615619` and Android `f9b59a2`:
+**exit 0, 3m49s, 41 tasks executed**. The
+[execution 384 archival receipt](n1-sources/execution-384.json) independently
+verifies **RealContentTest 3 + RareHanTest 1**, zero failures/errors/skips,
+the exact named cases, post-start timestamps, six provenance hashes,
+source/copy XML hashes and the dedicated sibling content root. Batch 061 XML
+is not reused as batch 062 acceptance. No redundant Gradle run, permission
+workaround, test/assertion change, guest/app heap or archive-guard increase
+was made. The qualified host-only 1-GiB core-test setting and original
+host-OOM history remain explicit in the evidence.
+
+The next checkpoint prepares an exact full-archive native fixture through
+production ContentSync once, with native execution and original-session
+serial dependent visual confirmation still separate and pending.
+Native, integration and public-archive gates remain pending.
 Published coverage stays **88 additions; 1,140 to deliver**. No batch 063,
 runtime publication or physical-phone/general-release acceptance is claimed.
 
