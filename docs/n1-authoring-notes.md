@@ -37,7 +37,51 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 058: source preparation only
+## Batch 058: local unreviewed runtime draft
+
+The [draft ledger](n1-sources/batch-058-progress.json) records **丘**, with
+both full sourced readings **キュウ / おか** preserved and selected.
+The new **砂丘（さきゅう）** support article has no inferred vocabulary
+level; alternate **しゃきゅう** and irregular **沙丘** are qualified without
+an invented frequency ranking. Existing **丘（おか）** retains its primary
+reading, independent **N3** level, title and original **坂** exclusion.
+Only its substantive component link and an additive **山** guard change.
+
+All **three selected reciprocal pairs** link both ways, including the
+existing **砂** card's new sand-dune link. The **山** card receives a third
+safe default wrong answer, **木**, so the new hill answer cannot fill its
+legacy random fourth slot. Other metadata and prose on those two reused
+kanji cards remain unchanged. The new card uses **兵 / 近 / 共**, not the
+overlapping mountain/slope labels, as its three wrong choices.
+
+The [draft audit](n1-sources/batch-058-draft-audit.json) checks all **68
+complete frozen families** (65 inherited source families plus three
+additional comparisons), exact source membership, baseline invariants,
+all **8,303 runtime hashes**, two practice keys, the six directed selected
+links and five direct word guards. The unchanged pinned converter generated
+**five strokes** from the verified **2,786-byte** SVG. All **37 Han
+characters** in the complete new/changed articles have cmap entries in
+all three bundled subsets; this is not native readability evidence.
+
+Fresh normal fetch/merge was already up to date before drafting.
+The local draft passed **368 Python tests**, validation, vocabulary
+consistency, manifest freshness and the original archive budgets.
+Its content version is **5e8f3e7e39ea187a**. It adds three runtime files
+and changes three reused payloads; **8,297** old runtime hashes remain
+unchanged. The source-preparation questions below are historical, not
+unresolved claims of draft acceptance.
+
+Next SAME058: two serial blind different-model-family content reviews
+of one signed snapshot, covering all three facets across both complete
+new articles and every reused passage/metadata change. Fresh Android,
+full-archive native/visual, combined-main and publication gates remain.
+**No independent acceptance or runtime push** is claimed. Published
+coverage remains **84/1,228; 1,144 still to deliver**; local
+**1,070 kanji / 5,029 words / 90 N1 labels** include this unpublished
+addition. Compatible Android `f9b59a2` or later is required; physical-phone,
+general-release and whole-set acceptance remain outstanding. No batch059.
+
+### Historical source preparation
 
 The [source ledger](n1-sources/batch-058-progress.json) freezes **丘**,
 one remaining source member, at published batch057 base `c064f0c7`.
