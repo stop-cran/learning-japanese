@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 062: native assertions passed; dependent visual confirmation pending
+## Batch 062: bounded native/visual checks reconciled; publication pending
 
 The [frozen membership](n1-sources/batch-062-membership.json) selects **俸**
 (source row 56) for one evidence-bounded packet. The
@@ -128,8 +128,39 @@ QEMU **24596** stop with `adb emu kill` exit 0; a separate postrun inventory
 confirms both absent, both dedicated worktrees clean and unrelated
 `emulator-5556` still present. No teaching/runtime/font/guest-app heap or archive
 guard changes, redundant Android384 run, reviewer or publication occur here.
-Original-session serial dependent visual confirmation, integration and
-public-archive gates remain pending.
+That execution's independent visual gate remained pending.
+
+The [execution 387 visual acceptance](n1-reviews/batch-062-native-acceptance.json)
+now reconciles dependent confirmations in the **original Claude Opus 5.5 and
+GPT-6.1 Sol sessions**, on unchanged teaching `38ab6072`. Actual process
+evidence verifies **28 / 27 serial view calls**, one per response, zero
+overlaps, terminal exit 0 and the complete first report/archive before the
+second launch. Each reviewer inspected **17 distinct native PNGs** covering
+the 37 captures' exact hash groups, the complete three teaching files, three
+bounded fixture ranges and the terminal/route receipts. Original and actual
+model-visible **900×2000** image payloads are preserved separately from the
+**1080×2400** sources; hashes verify bytes, not comprehension.
+
+Both reports establish no actionable defect across correctness, scoped
+coverage and comprehensibility within their bounded visible scope. Four font
+rows show readable, distinguishable target/look-alike/component glyphs and
+both 俸給 characters. The complete visible meaning options are **tiger /
+salary; stipend / mosquito / hill; knoll**, not the authored distractor set;
+the reading choices are **ホウ / チョウ / オウ / ヨウ**. The intended answers
+and feedback are unambiguous. Meaning feedback exits before Next, so it
+does **not** establish a newly persisted meaning grade. The sole curated
+reading Good and drawing Again persistence remain separately asserted.
+The source text, exposed article paragraphs, reciprocal navigation and
+explicitly ungraded reference tracing remain consistent.
+
+Horizontal table crops, unseen viewports, the unidentified fallback face,
+source-lookup limits and emulator-only evidence remain explicit. Claude's
+original process deviations and five optional suggestions are retained;
+the dependent visual confirmations do not grant retroactive strict
+initial-process acceptance. No teaching fix, accepted Android/native rerun
+or new runtime publication was required. Current-main integration, combined
+acceptance checks, normal signing/publication, terminal CI and exact public
+ZIP hash/budget verification remain the next gate.
 Published coverage stays **88 additions; 1,140 to deliver**. No batch 063,
 runtime publication or physical-phone/general-release acceptance is claimed.
 
