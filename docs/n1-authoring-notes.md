@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 060: local unreviewed runtime draft
+## Batch 060: textual review closed; fresh Android execution blocked
 
 The [frozen membership](n1-sources/batch-060-membership.json) selects **亭**
 (source row 21) for one evidence-bounded packet. Its
@@ -67,11 +67,22 @@ beyond its cafeteria/dining-hall label; these are not unrestricted synonyms.
 The [stroke evidence](n1-sources/batch-060-stroke-evidence.json) and
 [draft audit](n1-sources/batch-060-draft-audit.json) record actual pinned
 SVG conversion and bounded mechanical checks separately from linguistic
-and native acceptance. **The runtime draft is local and unreviewed**:
-two serial blind different-model-family reviews must cover complete
-亭/料亭 and both actual reused diffs, across all three facets.
-Fresh Android/native/visual checks and combined-main/publication gates
-remain pending. Published coverage remains **86/1,228 additions; 1,142 remain**.
+and native acceptance. The [textual reconciliation](n1-reviews/batch-060-reconciliation.json)
+closes all three facets for complete 亭/料亭 and both actual reused diffs
+on unchanged teaching snapshot `ea1dac1a`, using **claude-opus-5.5** and
+**gpt-6.1-sol**. Original Claude process findings **060-P1/P2** remain
+historical noncompliance; supervised dependent lexical remediation is not
+retroactive strict initial acceptance.
+
+The [execution364 blocker](n1-sources/execution-364.json) preserves the exact
+fresh Android command's permission denial **before execution**. No start,
+Gradle log, exit receipt or fresh XML was created. Existing batch059 XML
+is not batch060 acceptance. No retry, alternative invocation or permission
+change was attempted. An approval-capable parent must resolve that exact
+denial before fresh non-skipped RealContentTest **3** / RareHanTest **1**
+can be accepted. Native preparation/run, visual checks, combined-main
+acceptance and publication remain pending; this is a local evidence checkpoint,
+not delivered content. Published coverage remains **86/1,228 additions; 1,142 remain**.
 Compatible Android `f9b59a2+`, outstanding physical-phone/general-release
 acceptance and all batch059 historical limits remain unchanged.
 
