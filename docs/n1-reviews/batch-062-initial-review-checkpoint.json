@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "execution": 381,
+  "batch": "062",
+  "status": "initial-reviews-complete-pending-bounded-serial-confirmation",
+  "reviewedTeachingSnapshot": "38ab6072d2041325142c54cf54be5d126928eb31",
+  "teachingScope": [
+    "kanji/俸.md:complete",
+    "words/俸給.md:complete",
+    "kanji/給.md:added Common words line37 and coupled context"
+  ],
+  "models": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "reviewProcesses": [
+    {
+      "label": "initial-claude",
+      "model": "claude-opus-5.5",
+      "snapshot": "38ab6072d2041325142c54cf54be5d126928eb31",
+      "sessionId": "1d12b838-18c9-407a-b065-fc6e8fe44480",
+      "startedAt": "2026-11-05T06:18:48.1653483+01:00",
+      "completedAt": "2026-11-05T06:22:21.6292632+01:00",
+      "exitCode": 0,
+      "toolCalls": 58,
+      "observedInternalOverlaps": [
+        {
+          "starting": "toolu_01HqGJxBcWPQLPSEnUhwrXri",
+          "alreadyActive": [
+            "toolu_01FhXvGegCo2UWD86fqBT72c"
+          ]
+        }
+      ],
+      "allAssignedRangesReturned": true,
+      "assignedResources": 29,
+      "reportSha256": "4841782659ffe2f9cf641c140cd63229ed19223233380f82350ebb9807ff23c7",
+      "rawExecutionSha256": "ab197c170f029f76a5013820876d0e369d2005279ea991f7b7f13dba11b7c648",
+      "executionRecordSha256": "624d4131d133dca24466dda4f628cf7111c7aedffe77de66325ce89669c3076e",
+      "multiToolResponses": [
+        {
+          "messageId": "407fd1f6-6f0f-4080-b7cf-7e76885d5f7e",
+          "requests": [
+            {
+              "toolCallId": "toolu_01FhXvGegCo2UWD86fqBT72c",
+              "name": "view",
+              "arguments": {
+                "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\俸給.md",
+                "view_range": [
+                  1,
+                  53
+                ]
+              },
+              "type": "function",
+              "intentionSummary": "view the file at C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\俸給.md.",
+              "toolTitle": "Viewing file"
+            },
+            {
+              "toolCallId": "toolu_01HqGJxBcWPQLPSEnUhwrXri",
+              "name": "view",
+              "arguments": {
+                "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\給.md",
+                "view_range": [
+                  1,
+                  45
+                ]
+              },
+              "type": "function",
+              "intentionSummary": "view the file at C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\給.md.",
+              "toolTitle": "Viewing file"
+            }
+          ]
+        }
+      ],
+      "oversizedXmlOrGuidanceReads": [
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\content-format.md",
+          "range": [
+            1261,
+            1405
+          ],
+          "inclusiveLines": 145
+        }
+      ],
+      "coverageRecordSha256": "612d767ba847e5aeef716cfd4d22958473071567ff9a2aa1a40cb7591bbfdc44",
+      "failedCalls": [],
+      "lookups": [
+        {
+          "arguments": {
+            "url": "https://kotobank.jp/word/%E4%BF%B8-626915",
+            "max_length": 5000
+          },
+          "success": true,
+          "truncationMarker": true
+        },
+        {
+          "arguments": {
+            "max_length": 4000,
+            "url": "https://kotobank.jp/word/%E5%B9%B4%E4%BF%B8-596057"
+          },
+          "success": true,
+          "truncationMarker": false
+        },
+        {
+          "arguments": {
+            "max_length": 5000,
+            "url": "https://kotobank.jp/word/%E4%BF%B8%E7%B5%A6-131879"
+          },
+          "success": true,
+          "truncationMarker": false
+        }
+      ]
+    },
+    {
+      "label": "initial-gpt",
+      "model": "gpt-6.1-sol",
+      "snapshot": "38ab6072d2041325142c54cf54be5d126928eb31",
+      "sessionId": "38b783dc-e2cf-4226-8786-e207effbde13",
+      "startedAt": "2026-11-05T06:22:27.4134346+01:00",
+      "completedAt": "2026-11-05T06:24:45.5801622+01:00",
+      "exitCode": 0,
+      "toolCalls": 59,
+      "observedInternalOverlaps": [],
+      "allAssignedRangesReturned": true,
+      "assignedResources": 29,
+      "reportSha256": "2454ff0cbe0203e6a87d0b578e710feed37f4caab554c26f5d41c905050a5cc6",
+      "rawExecutionSha256": "224dc9f9d59831f60cb7aa050099b400b719e0dc49d0da88d994ef196734f906",
+      "executionRecordSha256": "602597608d093103acc62fc2e874874ff5dc9f223963bc24700d219eb0bbc5e4",
+      "multiToolResponses": [],
+      "oversizedXmlOrGuidanceReads": [],
+      "coverageRecordSha256": "eb282b5789fa7333960af5af9a3f162cea731a86ad491d7c4eeafcddd9558b18",
+      "failedCalls": [],
+      "lookups": [
+        {
+          "arguments": {
+            "url": "https://kotobank.jp/word/%E4%BF%B8-626915",
+            "max_length": 20000
+          },
+          "success": true,
+          "truncationMarker": false
+        },
+        {
+          "arguments": {
+            "url": "https://kotobank.jp/word/%E5%B9%B4%E4%BF%B8-596057",
+            "max_length": 20000
+          },
+          "success": true,
+          "truncationMarker": false
+        },
+        {
+          "arguments": {
+            "url": "https://kotobank.jp/word/%E4%BF%B8%E7%B5%A6-131879",
+            "max_length": 20000
+          },
+          "success": true,
+          "truncationMarker": false
+        }
+      ]
+    }
+  ],
+  "serialReviewerProcessesVerified": true,
+  "firstCompleteArchiveBeforeSecondLaunch": true,
+  "internalOverlappingStarts": [
+    1,
+    0
+  ],
+  "multiToolResponses": [
+    1,
+    0
+  ],
+  "oversizedXmlOrGuidanceReads": [
+    1,
+    0
+  ],
+  "strictInitialProcessContractAccepted": false,
+  "reviewClosed": false,
+  "teachingChanged": false,
+  "published": false,
+  "verdicts": {
+    "claude-opus-5.5": {
+      "kanji/俸.md": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "textComprehensibility": "CLEAN"
+      },
+      "words/俸給.md": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "textComprehensibility": "CLEAN"
+      },
+      "kanji/給.md:changed line37": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "textComprehensibility": "CLEAN"
+      }
+    },
+    "gpt-6.1-sol": {
+      "kanji/俸.md": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "textComprehensibility": "CLEAN"
+      },
+      "words/俸給.md": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "textComprehensibility": "CLEAN"
+      },
+      "kanji/給.md:changed line37": {
+        "correctness": "CLEAN",
+        "scopedCoverage": "CLEAN",
+        "textComprehensibility": "CLEAN"
+      }
+    }
+  },
+  "findings": [],
+  "processFindings": [
+    {
+      "id": "062-P1",
+      "status": "unresolved",
+      "kind": "reviewer-internal-serialization",
+      "origin": "initial-claude",
+      "evidence": [
+        {
+          "messageId": "407fd1f6-6f0f-4080-b7cf-7e76885d5f7e",
+          "requests": [
+            {
+              "toolCallId": "toolu_01FhXvGegCo2UWD86fqBT72c",
+              "name": "view",
+              "arguments": {
+                "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\俸給.md",
+                "view_range": [
+                  1,
+                  53
+                ]
+              },
+              "type": "function",
+              "intentionSummary": "view the file at C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\words\\俸給.md.",
+              "toolTitle": "Viewing file"
+            },
+            {
+              "toolCallId": "toolu_01HqGJxBcWPQLPSEnUhwrXri",
+              "name": "view",
+              "arguments": {
+                "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\給.md",
+                "view_range": [
+                  1,
+                  45
+                ]
+              },
+              "type": "function",
+              "intentionSummary": "view the file at C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\給.md.",
+              "toolTitle": "Viewing file"
+            }
+          ]
+        }
+      ],
+      "impact": "One response requested complete俸給 and給 views together, producing one overlapping start. Complete returns do not satisfy the strict serialization contract.",
+      "remedy": "Dependent original-session supervised single-resource turns, first俸給 then給, with process exit/archive between turns. Preserve original violation; no retroactive strict initial acceptance.",
+      "confidence": "High; actual raw event audit and reviewer self-disclosure."
+    },
+    {
+      "id": "062-P2",
+      "status": "unresolved",
+      "kind": "inclusive-read-bound",
+      "origin": "initial-claude",
+      "evidence": [
+        {
+          "path": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\content-format.md",
+          "range": [
+            1261,
+            1405
+          ],
+          "inclusiveLines": 145
+        }
+      ],
+      "impact": "One145-line guidance read exceeds140 cap by five; contrary to the report's all-ranges-within140 claim. Complete returned guidance bytes do not erase process noncompliance or establish a teaching defect.",
+      "remedy": "Preserve exact observed limit and report discrepancy; bounded followups below140 lines. No whole-guidance reread to manufacture retroactive compliance.",
+      "confidence": "High; exact call-argument/inclusive-bound audit."
+    }
+  ],
+  "optional": [
+    {
+      "id": "062-O1",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Clarify rice transition in historical俸禄 note.",
+      "disposition": "Not adopted. Current text explicitly denies extending the historical stipend into a modern rice-pay definition; complete family2836654 supports rice given as salary. No consequential false modern claim established; an extra historical transition is nonblocking."
+    },
+    {
+      "id": "062-O2",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Call給料 the usual everyday word.",
+      "disposition": "Not adopted. Reviewer itself marks the register claim unverified. Different JMdict priority flags do not by themselves establish register or frequency; current qualified official-pay association is source-supported."
+    },
+    {
+      "id": "062-O3",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Explicitly label compound relationship reinforcing near-synonyms.",
+      "disposition": "Not adopted. Existing component contributions and provided-for-work explanation make the relationship comprehensible; GPT explicitly finds it adequate. No actionable omission demonstrated, and no new categorical analysis adopted."
+    },
+    {
+      "id": "062-O4",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Add historical phonetic奉 explanation.",
+      "disposition": "Not adopted. Explicit modern-shape mnemonic and structure-unclassified deliberately avoid an unverified historical claim. SVG annotation is not historical certification."
+    },
+    {
+      "id": "062-O5",
+      "origin": "initial-claude",
+      "status": "optional",
+      "claim": "Link existing月給 mention in給.",
+      "disposition": "Not adopted. Unchanged incidental comparison is outside the added俸給 line; both required reciprocal pairs/four directed links exist. No unrelated easier-card rewrite."
+    }
+  ],
+  "comparisonBoundary": "Both complete reports compared across findings, optionals, supporting checks and limits. Five Claude optional observations, GPT none; no established teaching disagreement or general model benchmark. GPT additionally inspected納める as a justified bounded quiz neighbor, not equal fresh-read depth.",
+  "sourceLookupLimits": "Both freshly retrieved the same three Kotobank pages. Frozen complete XML is supplied evidence. Claude character-page extraction truncated at5000 characters; relevant modern definitions preceded the cut. Attribution-only Daijisen/Jitsu/Britannica俸給 headings are not verified definitions. Actual Seisenban broader company-employee definition supports bounded usage. Historical gaiji/additional readings not adopted. Full individual lookup arguments/markers retained.",
+  "validationProvenance": "Fresh report/model/raw-execution/hash/range/process-order/response-serialization/inclusive-bound/blind-read audits and exact unchanged-runtime comparison only. Prior380368Python/source/baseline/link/readings/stroke/cmap/manifest/budget receipts inherited unchanged, not freshly rerun381. No teaching or tool-code edit.",
+  "nextAction": "SAME062 bounded DEPENDENT confirmation in ORIGINAL Claude session 1d12b838-18c9-407a-b065-fc6e8fe44480, not a new blind review. Read full request/final checkpoint/approved issue and preserve FULL live history. Initial actual claude-opus-5.5 and gpt-6.1-sol reports/executions/coverage are archived under docs/n1-reviews/batch-062-initial-*. Both processes exited0 serially; first complete archive preceded second launch. Both all three teaching files/all three facets CLEAN, no actionable teaching finding, but strict process NOT accepted. 062-P1 Claude one two-view response/one overlapping start for words/俸給.md1-53 and kanji/給.md1-45. 062-P2 last guidance call content-format.md1261-1405 was145 inclusive lines despite140 cap and report's contrary claim. GPT zero overlaps/multi-responses/oversized reads. All29 assigned resources returned fully in each review, including42 complete JMdict families,6 raw character records and completeSVG. NEXT supervise exactly ONE resource per resumed Claude turn: supply original report and exact process findings/unchanged actual teaching diff; read complete words/俸給.md1-53 and confirm its teaching/source/link/quiz conclusions, wait for exit and archive; THEN separate resumed turn read complete kanji/給.md1-45 and confirm changed line37/coupled context. No broad rereview, nested agents or repeatGPT absent changed teaching/new concern. Preserve initial noncompliance; dependent remediation is not retroactive strict initial acceptance. Historical145-line unrelated guidance return was complete; do not reread all guidance to erase it. Reconcile based on evidence. Five Claude suggestions optional/not adopted (rice transition; unsourced everyday-register comparison; explicit relationship label; historical phonetic note; unchanged月給 link). Public lookup attribution-only/historical-gaiji/truncation limits preserved. Teaching stays signed38ab6072d2041325142c54cf54be5d126928eb31: soleホウ selected, noKun, one new俸 card/俸給 support/one給 backlink/generated10-stroke geometry/two reciprocal pairs/fourlinks/nine direct word exclusions. No new vocabulary level inferred. Prior380368Python/validator/manifest545c56b5d4b4e8ef/8314runtimehashes/baseline9854942985/source/readings/links/stroke/cmap/budget receipts inherited unchanged, not fresh381 tests. After textual closure require fresh non-skipped AndroidRealContent3RareHan1/fullarchive productionContentSyncONCE/nativeglyph/selection/meaning/curatedreading/drawing/articles/SystemBack/offline/visual/currentmain normalmerge/combinedchecks/normal signing/ownerfastforward/publicSHA/greenCI/everyimmutablepublicZIPhash gates before publication or063. Published88/1228,1140remaining/89necessarysupportwords; local draft89/90 NOT delivered. CompatibleAndroidf9b59a2+ required; physical-phone/general-release/whole-set outstanding. No unreviewed push,063,second runner,signing retry, permission workaround or concurrent heavy work.",
+  "limits": "Evidence-only local checkpoint; textual closure pending bounded original-session confirmation. Both blind initial families found no actionable teaching defect, but Claude violated one-call serialization once and the140-line guidance bound once; strict initial process not accepted. All assigned bytes/ranges returned, which does not certify comprehension. No fresh Android/native/font/visual/current-main/publication/phone/general-release/whole-set acceptance. Prior380 receipts inherited."
+}
