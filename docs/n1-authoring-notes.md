@@ -37,7 +37,17 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 059: local unreviewed draft
+## Batch 059: textual review closed; fresh Android execution blocked
+
+Execution353 closed the textual reconciliation on teaching snapshot
+`769293c824dc41abb9386e76c4dd5f8c676e48e0`; the original reports and historical
+Claude confirmation overlap remain preserved, not retroactively made compliant.
+The [execution354 blocker](n1-sources/execution-354.json) records one permission
+denial before the fresh Android command executed. No start/log/exit artifacts
+were created; previous batch058 XML is not batch059 acceptance. An
+approval-capable parent must resolve that exact execution gate without a retry
+around the denial or a permission-policy change. Native, visual and publication
+gates remain pending; this batch is still unpublished.
 
 The [frozen membership](n1-sources/batch-059-membership.json) selects **享**
 (source row 20) for one evidence-bounded packet. The
@@ -70,8 +80,8 @@ across the complete new and changed articles. All three bundled font cmaps
 cover 47; **亠 and 厂** require system fallback inspection. Cmap absence is
 not itself a glyph failure, and no new native or phone evidence is claimed.
 
-Two-family review, fresh Android/native/visual and combined-main publication
-gates remain pending. Published coverage stays **85/1,228; 1,143 remaining**;
+Two-family textual review is closed; fresh Android/native/visual and combined-main
+publication gates remain pending. Published coverage stays **85/1,228; 1,143 remaining**;
 the local draft is not counted as delivered. Compatible Android `f9b59a2+`
 is required; physical-phone/general-release and whole-set acceptance remain
 explicitly outstanding.
