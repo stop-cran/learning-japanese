@@ -3,8 +3,8 @@
   "batch": "069",
   "baseCommit": "f9e0511fa6bf2b4f280110b591d813c630da6566",
   "membership": ["儒"],
-  "status": "source-prepared-not-drafted",
-  "drafted": [],
+  "status": "local-unreviewed-draft",
+  "drafted": ["儒"],
   "reviewClosed": [],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
@@ -56,12 +56,12 @@
       "kind": "on",
       "reading": "ジュ",
       "proposedQuizSelection": true,
-      "selected": false,
+      "selected": true,
       "sourceOnly": false,
       "example": "儒教 じゅきょう — Confucianism",
       "entryIds": ["1329510"],
       "article": "words/儒教.md",
-      "reason": "Sole frozen source reading. The necessary new exact support identity will supply its own linked reading-table row. Source metadata and order remain intact, with no kun/nanori or additional metadata from semantic dictionary glosses. selected=false records that no runtime draft or final selection yet exists; proposedQuizSelection=true is the source-stage recommendation."
+      "reason": "Sole frozen source reading, now selected in the actual draft with its own linked 儒教 row. Full character metadata, exact unrestricted 儒教 じゅきょう family and public headings jointly support allocation and usefulness; not a kana-substring inference. Source metadata and order remain intact, with no kun/nanori or additional metadata from semantic dictionary glosses. The source-stage selected=false remains at signed source checkpoint 1f2ee0ed; this is author selection, not independent review closure."
     }
   ],
   "proposedCuratedProjection": {
@@ -150,6 +150,65 @@
     "svg": "Pinned 05112.svg has sixteen stroke paths; generation and actual drawing acceptance remain pending.",
     "font": "Source-stage bundled-cmap inventory is separate evidence. Re-inventory actual authored text and run later non-skipped RareHan/native/visual checks."
   },
-  "nextAction": "Author only 儒, its pinned generated geometry, necessary 儒教 and one narrow 教 backlink; preserve sole ジュ, no kun, complete source order and all baseline metadata/exclusions. Validate and regenerate manifest, audit actual meaning/reading/word/fallback/links/fonts, then normally sign LOCAL UNREVIEWED draft; do not push. Later two-family serial review, Android/native/current-main/CI/exact-public-ZIP gates remain required before070.",
-  "limits": "Source preparation only; zero runtime changes and zero drafted/review-closed/published069 rows. Proposed curation/support/links/titles are not final teaching acceptance. Coordinator inspection is not independent review. Public-source extraction limits remain explicit. Android/native/font/current-main/CI/publicZIP/physical-phone/general-release/whole-set gates remain outstanding for069. Compatible Androidf9b59a2+ required. Published95/1228,1133remain;95 necessary support additions already published are not an N1 vocabulary deck. Historical denial and optional-helper parent disposition are retained; no required source/review/publication gate is waived."
+  "sourceCheckpoint": "1f2ee0ed0c814ae327767a71cc5b80a6109b15db",
+  "supportMappings": [
+    {
+      "kanji": "儒",
+      "article": "words/儒教.md",
+      "primaryReading": "じゅきょう",
+      "newArticle": true,
+      "entryIds": ["1329510"],
+      "selectedSenses": "Confucianism; unrestricted noun sense1",
+      "wordLevel": "No independently sourced vocabulary level; jlpt omitted."
+    }
+  ],
+  "requiredReciprocalPairs": [["儒", "words/儒教.md"]],
+  "allMappedReciprocalPairs": [
+    ["儒", "words/儒教.md"],
+    ["教", "words/儒教.md"]
+  ],
+  "directedLinks": [
+    {"from": "kanji/儒.md", "to": "words/儒教.md", "status": "present"},
+    {"from": "words/儒教.md", "to": "kanji/儒.md", "status": "present"},
+    {"from": "words/儒教.md", "to": "kanji/教.md", "status": "present"},
+    {"from": "kanji/教.md", "to": "words/儒教.md", "status": "present"}
+  ],
+  "changedReusedPassages": [
+    {
+      "article": "kanji/教.md",
+      "before": "- 教科書 きょうかしょ — textbook\n",
+      "after": "- 教科書 きょうかしょ — textbook\n- [儒教](../words/儒教.md) じゅきょう — Confucianism\n",
+      "reason": "Only a reciprocal Common words backlink. All N4 metadata and existing prose preserved."
+    }
+  ],
+  "curatedProjection": [
+    {
+      "kanji": "儒",
+      "quizOnyomi": ["ジュ"],
+      "quizKunyomi": [],
+      "onKeys": ["じゅ"],
+      "kunKeys": []
+    }
+  ],
+  "quizAudit": {
+    "儒": {
+      "title": "Confucian; Confucian scholar",
+      "distractors": ["儀", "僧", "優"],
+      "labels": ["ceremony; formal conduct", "Buddhist monk; priest", "gentle; superior"],
+      "reason": "All three actual titles and full source records inspected. Formal conduct/matter/instrument, Buddhist clergy, and gentleness/excellence/performers do not mean Confucian thought/scholars. Contextual association with ritual or religion is not synonymy. Three curated wrong labels fill the default four-choice quiz.",
+      "limits": "Coordinator semantic judgment, not live quiz/native acceptance; larger/random pools remain unverified."
+    }
+  },
+  "wordQuizAudit": {
+    "title": "Confucianism",
+    "directExclusions": [],
+    "reason": "No existing Confucian answer/identity found by complete metadata navigation and targeted body search. Actual 宗教, 思想 and 学問 bodies and complete applicable families inspected; religion, thought/ideology and academic learning are broader categories, not synonyms for this particular named tradition. Confusable inventory has no selected-word/Confucian match. No unjustified direct exclusion or vocabulary-level inference added."
+  },
+  "draftArtifacts": {
+    "audit": "batch-069-draft-audit.json",
+    "strokeEvidence": "batch-069-stroke-evidence.json",
+    "execution": "execution-449.json"
+  },
+  "nextAction": "SAME069: independently review signed local unreviewed teaching snapshot across two different actual model families, serial isolated read-only CLI executions on the same frozen snapshot; include 儒, 儒教 and the exact 教 backlink. Preserve complete initial reports and actual model/read/process limits, then reconcile evidence-based findings with bounded original-session confirmations as needed. Do not edit the frozen snapshot during review or push unreviewed content. Android/native/current-main/CI/exact-public-ZIP and all later publication gates remain required before070.",
+  "limits": "Local unreviewed069 draft only: one kanji/stroke, one necessary support article and one narrow 教 backlink. Source-stage proposals above remain historical; actual runtime selections/mappings and draft audits are separate. Coordinator inspection is not independent review. Public-source extraction limits remain explicit. Android/native/font/current-main/CI/publicZIP/physical-phone/general-release/whole-set gates remain outstanding for069. Compatible Androidf9b59a2+ required. Published95/1228,1133remain;95 necessary support additions already published are not an N1 vocabulary deck. Historical denial and optional-helper parent disposition are retained; no required gate waived."
 }
