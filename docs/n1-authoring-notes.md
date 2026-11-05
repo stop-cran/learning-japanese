@@ -37,7 +37,53 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 059: bounded native visuals reconciled; publication pending
+## Batch 059: published for bounded owner testing
+
+The [publication record](n1-sources/batch-059-publication.json) records normal
+signed fast-forward publication of **享**, one necessary **享受（きょうじゅ）**
+support article and one narrowly added reused **受** link at
+`bdcad7c4b0aec217f42a0fdb880f7a364a49f34f`. Exact-SHA CI
+[41956940974](https://github.com/stop-cran/learning-japanese/actions/runs/41956940974)
+passed. The immutable public ZIP matches every **8,306 runtime hashes** and
+the generated manifest, contentVersion `1f1ad78479e9c1f4`: **8,328 entries**,
+30,649,796 compressed / 44,261,811 inflated / 43,993,473 retained bytes.
+All original budgets and per-file/path checks pass; contributor evidence
+remains in Git and outside the app archive.
+
+Published coverage is now **86/1,228 additions; 1,142 remain**. Current content
+contains **1,071 kanji / 5,030 words / 91 N1-labelled cards**, including 90
+named-source members and the separate 妖 exception. The 88 added words are
+necessary kanji support, not delivery of the deferred N1 vocabulary deck.
+Android `f9b59a2+` is required. Physical-phone, general-release and whole-set
+acceptance remain outstanding. Historical Claude confirmation noncompliance
+remains explicit; bounded remediation is not retroactive strict acceptance.
+Batch060 has not started at this publication checkpoint.
+
+### Combined-tree acceptance
+
+The [execution359 audit](n1-sources/batch-059-acceptance-audit.json) records a
+fresh fetch and normal merge of current main `633f6002` (already ancestral;
+no conflicts or teaching/runtime delta). All **368 Python tests**, validation,
+vocabulary consistency, manifest freshness and original archive budgets pass.
+The mechanical audit re-extracted all 54 frozen families and checked baseline
+985 kanji / 4,942 words / 985 strokes, all **8,306 runtime hashes**, exact
+86 local additions, all three reading dispositions, two reciprocal pairs in
+four directions, eleven direct word exclusions, pinned eight-stroke geometry
+and actual authored-Han font cmaps. Dictionary re-extraction is not a new
+linguistic review.
+
+Original two-family reports and dependent confirmations, fresh execution355
+Android **3+1** results, both execution357 terminal native cases and all
+**48 indexed native artifacts** were reverified without rerunning accepted
+work. Original blind reviews used 55 calls each without overlap; Claude's first
+confirmation later had one overlapping/multi-tool response, preserved with its
+bounded serial follow-up. **059-F1 is resolved**; three optional suggestions
+were not adopted. Native visual/drawing, phone and whole-set limits below
+remain unchanged. Normal signing, owner fast-forward publication, green
+exact-SHA CI and every immutable public ZIP runtime hash are recorded, followed
+by a separately verified terminal evidence commit.
+
+### Historical bounded original-session native visuals
 
 [Execution358](n1-sources/execution-358.json) reuses the original Claude and GPT
 reviewer sessions serially for dependent visual confirmation of unchanged
@@ -63,12 +109,12 @@ neither a complete table nor every article pixel is certified. The fallback
 face is unidentified. Static links do not independently prove navigation;
 the four transitions and System Back rely on the accepted native assertions.
 
-This is a signed local evidence checkpoint only. No teaching/runtime change,
-Android/native rerun or publication is made. Combined-current-main integration,
-all publication checks, signed owner fast-forward, green CI and every immutable
-public ZIP runtime hash remain the next gate. Compatible Android `f9b59a2+`
-is required; physical-phone/general-release and whole-set acceptance remain
-outstanding.
+That was a signed local evidence checkpoint only, without teaching/runtime
+changes, Android/native reruns or publication. Combined-current-main integration,
+publication checks, signed owner fast-forward, green CI and every immutable
+public ZIP runtime hash were then the next gate; the publication record above
+supplies those receipts. Compatible Android `f9b59a2+` is required;
+physical-phone/general-release and whole-set acceptance remain outstanding.
 
 ### Historical native execution checkpoint
 
