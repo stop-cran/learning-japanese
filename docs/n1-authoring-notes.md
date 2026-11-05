@@ -64,11 +64,22 @@ tests without skips, validation, vocabulary consistency, fresh manifest and
 all 8,344 runtime hashes, exact baseline/membership/reading/link audits,
 six-stroke reconversion equality and all three bundled font cmaps for the
 50 actual affected Han code points. These are not native drawing or rendering
-evidence. The next checkpoint is fresh dedicated Android real-content and
-rare-Han tests, followed by bounded native/visual inspection, including isolated
-亠/儿/厶 fallback and N1 navigation, reading, meaning, drawing, Back and offline
-routes. Combined-main, signing, owner fast-forward, CI and exact immutable ZIP
-acceptance remain later gates; no publication or batch 073 was attempted.
+evidence. [Fresh Android acceptance](n1-sources/execution-475.json) subsequently
+passed all three RealContentTest cases and the RareHanTest case without skips.
+
+The [native preparation](n1-sources/execution-476.json) compiles both acceptance
+cases with the exact full signed `92f3c2ef` Git archive: 1,084 kanji, 5,042 words,
+104 N1-labelled cards and all 8,344 runtime hashes, within unchanged budgets.
+The fixture prepares both complete new articles, the exact reused component
+paragraph, all three reading dispositions, Full/Lite transport, both curated
+reading modes, two reciprocal pairs/four directions, six-stroke tracing and
+recall, and 51 distinct Han including isolated 亠/儿/厶 across four production
+font families. Compilation is not native execution or visual acceptance.
+The next checkpoint executes the fixture on an ownership-checked disposable
+API35 helper and inspects its actual images before serial dependent visual
+confirmation by the original reviewers. Combined-main, signing, owner
+fast-forward, CI and exact immutable ZIP acceptance remain later gates;
+no publication or batch 073 was attempted.
 
 This is **one textually review-closed row, zero accepted/published batch-072
 rows**. Published coverage remains **98/1,228 additions; 1,130 remain**, with

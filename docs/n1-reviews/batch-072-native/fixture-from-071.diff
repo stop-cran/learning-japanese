@@ -1,0 +1,299 @@
+--- docs\n1-reviews\batch-071-native\N1Batch071NativeTest.kt
++++ docs\n1-reviews\batch-072-native\N1Batch072NativeTest.kt
+@@ -49 +49 @@
+-private fun disposable071() {
++private fun disposable072() {
+@@ -54 +54 @@
+-class N1Batch071GlyphTest {
++class N1Batch072GlyphTest {
+@@ -57,2 +57,2 @@
+-    @Test fun permissionLookalikesAndIsolatedRadicalsAcrossFourProductionFamilies() {
+-        disposable071()
++    @Test fun allotmentLookalikesAndIsolatedRadicalsAcrossFourProductionFamilies() {
++        disposable072()
+@@ -61 +61 @@
+-        val text = "允 元 兄 去 公 先 許 儿 厶 口 土 可 免 写 得 応 成 承 撮 楽 決 真 知 納 認 賛 雅 允可"
++        val text = "充 允 元 兄 先 亠 儿 厶 口 土 拡 当 満 一 予 件 伸 余 備 割 加 図 増 大 子 定 小 展 広 延 張 指 振 援 支 旅 暇 書 条 注 発 縮 育 蓄 設 読 費 部 配 長 館 充てる 拡充"
+@@ -65 +65 @@
+-                    Text("Batch 071: permission / look-alikes / isolated radicals")
++                    Text("Batch 072: allotment / look-alikes / isolated radicals")
+@@ -70 +70 @@
+-                    Text("Inspect 允/元/兄/去 and standalone 儿/厶. Compare 公/先, 口/土 and the whole word 允可. Fallback families may coincide.", fontSize = 18.sp)
++                    Text("Inspect 充/允/元/兄/先 and isolated 亠/儿/厶. Compare 拡/当/満 and both whole words. Fallback families may coincide.", fontSize = 18.sp)
+@@ -81 +81 @@
+-            for (char in listOf("允", "元", "兄", "去", "公", "先", "許", "儿", "厶", "口", "土", "可", "免", "写", "得", "応", "成", "承", "撮", "楽", "決", "真", "知", "納", "認", "賛", "雅")) {
++            for (char in listOf("充", "允", "元", "兄", "先", "亠", "儿", "厶", "口", "土", "拡", "当", "満", "一", "予", "件", "伸", "余", "備", "割", "加", "図", "増", "大", "子", "定", "小", "展", "広", "延", "張", "指", "振", "援", "支", "旅", "暇", "書", "条", "注", "発", "縮", "育", "蓄", "設", "読", "費", "部", "配", "長", "館")) {
+@@ -102 +102 @@
+-            for (word in listOf("允可")) {
++            for (word in listOf("充てる", "拡充")) {
+@@ -129 +129 @@
+-        assertEquals(112, rows.length())
++        assertEquals(212, rows.length())
+@@ -133 +133 @@
+-        File(context.getExternalFilesDir(null), "n1-071-font-pairs.png").outputStream().use {
++        File(context.getExternalFilesDir(null), "n1-072-font-pairs.png").outputStream().use {
+@@ -136 +136 @@
+-        File(context.getExternalFilesDir(null), "n1-071-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-072-font-raster.json").writeText(JSONObject()
+@@ -139,2 +139,2 @@
+-            .put("individualGlyphProbes", 108).put("wholeWordRasterProbes", 4)
+-            .put("limits", "Native Paint probes for all authored Han plus 公/先 including actual isolated 儿/厶 and 口/土; four whole-word rasters and four production Compose rows. Actual readability requires visual inspection; emulator not phone; fallback face not identified.")
++            .put("individualGlyphProbes", 204).put("wholeWordRasterProbes", 8)
++            .put("limits", "Native Paint probes cover actual authored Han and isolated 亠/儿/厶; eight whole-word rasters and four production Compose rows. Actual readability requires visual inspection; emulator not phone; fallback face not identified.")
+@@ -145 +145 @@
+-class N1Batch071ArticleTest {
++class N1Batch072ArticleTest {
+@@ -150,2 +150,2 @@
+-    @Test fun fullSingleImportOfflinePermissionReciprocalPairOnOnlyDrawingAndSystemBack() {
+-        disposable071()
++    @Test fun fullSingleImportOfflineAllotmentTwoReciprocalPairsBothReadingsDrawingAndSystemBack() {
++        disposable072()
+@@ -154,2 +154,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-071-${UUID.randomUUID()}", "main")
+-        val head = "f6ff96a109f3e7b6a67f41e6b9ee214962c9a39f"
++        val source = RepoSource("acceptance-fixture", "n1-072-${UUID.randomUUID()}", "main")
++        val head = "92f3c2ef6edbeb8dd7b6e7f37227cab8a3e20891"
+@@ -163 +163 @@
+-                    instrumentation.context.assets.open("n1-batch-071-f6ff96a1-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-072-92f3c2ef-envelope.zip")
+@@ -178,2 +178,2 @@
+-        assertEquals(1083, updated.kanji)
+-        assertEquals(5041, updated.words)
++        assertEquals(1084, updated.kanji)
++        assertEquals(5042, updated.words)
+@@ -182 +182 @@
+-        assertEquals("05002d6e68a4eb89", meta.contentVersion)
++        assertEquals("900e3a2130afc56b", meta.contentVersion)
+@@ -190,10 +190,10 @@
+-        assertEquals(103, n1.size)
+-        val permission = n1.single { it.kanji == "允" }
+-        assertEquals(listOf("イン"), permission.onyomi.splitSep())
+-        assertEquals(listOf("じょう", "まこと.に", "ゆるす"), permission.kunyomi.splitSep())
+-        assertNotNull(permission.quizOnyomi)
+-        assertNotNull(permission.quizKunyomi)
+-        assertEquals(listOf("イン"), permission.quizOnyomi?.splitSep())
+-        assertEquals(emptyList<String>(), permission.quizKunyomi?.splitSep())
+-        assertEquals(listOf("いん"), permission.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(emptyList<String>(), permission.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(104, n1.size)
++        val allotment = n1.single { it.kanji == "充" }
++        assertEquals(listOf("ジュウ"), allotment.onyomi.splitSep())
++        assertEquals(listOf("あ.てる", "み.たす"), allotment.kunyomi.splitSep())
++        assertNotNull(allotment.quizOnyomi)
++        assertNotNull(allotment.quizKunyomi)
++        assertEquals(listOf("ジュウ"), allotment.quizOnyomi?.splitSep())
++        assertEquals(listOf("あ.てる"), allotment.quizKunyomi?.splitSep())
++        assertEquals(listOf("じゅう"), allotment.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(listOf("あてる"), allotment.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -213 +213 @@
+-                        if (card.kanji == "允") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "充") now - 60_000 else now + 30L * 86_400_000,
+@@ -219 +219 @@
+-                            if (card.kanji == "允" && (kind == ReadingKind.On && key == "いん")) now - 60_000
++                            if (card.kanji == "充" && ((kind == ReadingKind.On && key == "じゅう") || (kind == ReadingKind.Kun && key == "あてる"))) now - 60_000
+@@ -226 +226 @@
+-                    0, source.id, "jlpt-n1", "允", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "充", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -236,6 +236,6 @@
+-            .put("fullOnyomi", JSONArray(permission.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(permission.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(permission.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(permission.toReadingCard().quizKeys(ReadingKind.Kun)))
+-            .put("liteQuizOnyomi", JSONArray(requireNotNull(permission.quizOnyomi).splitSep()))
+-            .put("liteQuizKunyomi", JSONArray(requireNotNull(permission.quizKunyomi).splitSep()))
++            .put("fullOnyomi", JSONArray(allotment.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(allotment.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(allotment.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(allotment.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("liteQuizOnyomi", JSONArray(requireNotNull(allotment.quizOnyomi).splitSep()))
++            .put("liteQuizKunyomi", JSONArray(requireNotNull(allotment.quizKunyomi).splitSep()))
+@@ -244 +244 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 允 meaning and sole curated on key due; explicit no-kun with full source kun retained. Two historical good 允 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 充 meaning and both curated on/kun keys due; source-only み.たす retained but not offered. Two historical good 充 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -251 +251 @@
+-            await("N1 · 103 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 104 cards").performScrollTo().assertIsDisplayed()
+@@ -254,4 +254,4 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("允")
+-            click("permit; sincerity")
+-            await("允 — permit; sincerity")
+-            show(articleBullet("Strokes: 4 · Key (radical): 儿 (no. 10) · JLPT: N1 (community list)"), "kanji-01")
++            rule.onNode(hasSetTextAction()).performTextReplacement("充")
++            click("allot; fill")
++            await("充 — allot; fill")
++            show(articleBullet("Strokes: 6 · Key (radical): 儿 (no. 10) · JLPT: N1 (community list)"), "kanji-01")
+@@ -259,2 +259,2 @@
+-            show(articleBullet("允 has permission and sincerity associations. In 允可 いんか, it contributes permitting or assenting. This is a useful recognition word for formal or older writing, not the default way to ask permission in conversation. The source classifies 允 as a name-use character; that does not make every use a personal name."), "kanji-03")
+-            show(articleBullet("The modern shape has 厶 above two leg-like strokes, 儿, the indexing radical. Modern-shape mnemonic: picture someone standing beneath a sign granting permission. This is a visual memory aid, not a historical derivation or a phonetic analysis."), "kanji-04")
++            show(articleBullet("充 concerns filling, making sufficient, or allotting something to a purpose. In 拡充 かくじゅう, it contributes making provision more substantial; 充てる あてる means allocating a resource to a use."), "kanji-03")
++            show(articleBullet("The modern shape has an upper 亠 and 厶-like middle above the two leg-like strokes 儿, the indexing radical. Modern-shape mnemonic: picture someone standing beneath a sign showing where to allot supplies. This is a visual memory aid, not a historical derivation or a phonetic analysis."), "kanji-04")
+@@ -262,10 +262,7 @@
+-            show(readingExample("イン"), "kanji-09")
+-            show(readingExample("允可 いんか — permission; assent"), "kanji-11")
+-            show(readingExample("じょう"), "kanji-12")
+-            show(readingExample("source-only for this quiz: 雅楽允 うたのじょう — a historical official in the court-music bureau"), "kanji-14")
+-            show(readingExample("まこと.に"), "kanji-15")
+-            show(readingExample("source-only: classical/adverbial lookup gloss, \"truly; indeed\"; no ordinary modern written example is taught here"), "kanji-17")
+-            show(readingExample("ゆるす"), "kanji-18")
+-            show(readingExample("source-only: character-dictionary gloss, \"permit\"; not a model for spelling the everyday verb with 允"), "kanji-20")
+-            show(articleBullet("All four sourced readings remain in their original order, but reading questions select only イン. The historical office-title use of じょう is real, not merely a personal-name reading. The last two rows preserve dictionary lookup information without inventing modern word spellings. The dot in まこと.に is the source's okurigana notation; ゆるす is preserved without a dot."), "kanji-21")
+-            show(articleBullet("For the everyday verb \"allow; forgive,\" learn 許す ゆるす. Its written form and range of meanings are not automatically transferable to 允."), "kanji-22")
++            show(readingExample("ジュウ"), "kanji-09")
++            show(readingExample("拡充 かくじゅう — expansion; strengthening"), "kanji-11")
++            show(readingExample("あ.てる"), "kanji-12")
++            show(readingExample("充てる あてる — allocate; earmark"), "kanji-14")
++            show(readingExample("み.たす"), "kanji-15")
++            show(readingExample("source-only for this quiz: 充たす みたす — fill; satisfy; rare spelling of usual 満たす"), "kanji-17")
++            show(articleBullet("All three sourced readings remain in order. Reading questions select ジュウ and あ.てる, not み.たす. The rarity concerns the spelling 充たす, not the pronunciation みたす. For example, 条件を充たす (じょうけんをみたす) means \"satisfy the conditions\"; normally write 条件を満たす."), "kanji-18")
+@@ -273 +270,2 @@
+-            show(articleBullet("允可 いんか — permission; assent, for recognition in formal or older writing"), "kanji-24")
++            show(articleBullet("拡充 かくじゅう — expansion; strengthening, as of facilities or services"), "kanji-20")
++            show(articleBullet("充てる あてる — allocate time, money, or another resource to a purpose"), "kanji-21")
+@@ -275,5 +273,4 @@
+-            show(articleBullet("元, \"origin, former,\" has two horizontal lines above its legs; 兄, \"older brother,\" has a square 口. Neither has 允's upper 厶 shape."), "kanji-26")
+-            show(articleBullet("去, \"leave, elapse,\" has 土 above 厶 rather than 厶 above 儿."), "kanji-27")
+-            show(articleBullet("許, \"permit; forgive,\" overlaps in meaning, but these are not interchangeable spellings in every word."), "kanji-28")
+-            show(articleBullet("Name readings are outside this card's practice scope. Do not use the quiz subset as a complete guide to reading personal names."), "kanji-29")
+-            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Words: JMdict, entries 1627840 and 2857093. Reading and meaning qualifications: Daijisen and Jitsu, 允; Nikkoku, 雅楽允."), "kanji-30")
++            show(articleBullet("允 has 厶 directly above 儿; 充 has an additional upper 亠 shape."), "kanji-23")
++            show(articleBullet("元 has two horizontal lines above its legs, 兄 a square 口, and 先 a different crossed upper shape. Compare the whole outline."), "kanji-24")
++            show(articleBullet("当てる あてる covers hitting, holding against, and guessing correctly. Use 充てる for the resource-allocation sense taught here, not as a replacement spelling for those contact or guessing uses. The broader あてる family also has allotting uses; this is not an absolute division of every sense between the spellings."), "kanji-25")
++            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Words: JMdict, entries 1205190, 1334270, 1526670 and 1855580. Meaning and spelling: Jitsu, 充; Daijisen and Nikkoku, あてる."), "kanji-26")
+@@ -281,2 +278,2 @@
+-            inline(await(articleBullet("允可 いんか — permission; assent, for recognition in formal or older writing")), "允可", 0)
+-            await("允可 (いんか) - permission; assent")
++            inline(await(articleBullet("充てる あてる — allocate time, money, or another resource to a purpose")), "充てる", 0)
++            await("充てる (あてる) - allocate; earmark")
+@@ -284,4 +281,4 @@
+-            show(articleBullet("允可 means permission or assent: accepting a request or allowing something. It is a noun and can form a transitive verb with する. Learn it primarily for recognizing formal or older writing, rather than as a default conversational request."), "word-02")
+-            show(articleBullet("允可を得る (いんかをえる) - obtain permission."), "word-03")
+-            show(articleBullet("This pattern is attested in an 1868 governmental text cited by Nikkoku; it is shown here in dictionary form, not as a quotation of the whole historical sentence. 允可 is the permission obtained; を marks it as the object of 得る (える), \"obtain.\" The example does not mean \"give permission.\""), "word-04")
+-            show(articleBullet("JMdict also glosses the word as \"compliance.\" Read that with the surrounding request or permission context, not as a universal substitute for every kind of obedience."), "word-05")
++            show(articleBullet("充てる means allocating or devoting a resource to a particular purpose. Use resource を + purpose に + 充てる: the resource can be time or money. It is a transitive ichidan verb: 充てます (あてます), 充てた (あてた), 充てない (あてない)."), "word-new-02")
++            show(articleBullet("余暇を読書に充てています。 (よかをどくしょにあてています。) - I devote my spare time to reading."), "word-new-03")
++            show(articleBullet("ボーナスの一部を旅費に充てました。 (ボーナスのいちぶをりょひにあてました。) - I allocated part of my bonus to travel expenses."), "word-new-04")
++            show(articleBullet("The point is what the resource is used or earmarked for, not simply that it is kept unused in reserve."), "word-new-05")
+@@ -289 +286 @@
+-            show(articleBullet("允 contributes permitting or assenting, and 可 contributes approval or acceptability. The near-synonymous parts reinforce the permission idea. The on readings are イン + カ, giving いんか."), "word-07")
++            show(articleBullet("充 represents the native stem あ in this allocation verb; てる is okurigana and changes with conjugation. This is one written kanji, not a compound. Its filling/allotting association is a memory aid, not a derivation of the word."), "word-new-07")
+@@ -291 +288,2 @@
+-            show(articleBullet("許可 (きょか), \"permission; authorization,\" is a more practical general-purpose word for permission. 許す (ゆるす) can mean \"allow\" but also \"forgive\"; 允可 does not automatically cover that entire range. 承認 (しょうにん), \"approval; recognition,\" can overlap in an approval context. There is no single everyday antonym that fits every permission or assent situation."), "word-09")
++            show(articleBullet("割り当てる (わりあてる), \"assign; allot,\" overlaps in allocating work or resources. 配る (くばる) foregrounds distributing things or placing personnel; 振る (ふる) can mean assigning work to someone. These are related uses, not freely interchangeable constructions."), "word-new-09")
++            show(articleBullet("当てる, also あてる, is the spelling to learn for hitting a target, holding something against a surface, or guessing correctly. Dictionaries also record allotting uses in the broader あてる family, so do not treat these spellings as having completely separate meanings in every context."), "word-new-10")
+@@ -293,2 +291,2 @@
+-            show(articleBullet("Recognizing this word does not mean you need to use it in ordinary conversation. For example, 写真を撮ってもいいですか (しゃしんをとってもいいですか), \"May I take a photograph?\", asks for permission without using 允可. Nor is 允可 restricted here to one legal procedure or permission from an emperor: the dictionary definition is broader than any one historical example."), "word-11")
+-            show(articleBullet("Dictionary: JMdict, entry 1627840. Definition and attested construction: Daijisen and Nikkoku, 允可."), "word-12")
++            show(articleBullet("In 余暇を読書に充てる (よかをどくしょにあてる), the time is devoted to reading. English \"set aside\" can instead suggest saving something untouched: 蓄える (たくわえる) concerns storing or accumulating, not this verb's resource-for-purpose relation. There is no single opposite that reverses all uses of 充てる."), "word-new-12")
++            show(articleBullet("Dictionary: JMdict, entry 1334270; comparisons 1207880, 1448860, 1472990, 1361330 and 1596860. Usage and spelling: Daijisen and Nikkoku, あてる, especially Daijisen's 充てる allocation sense."), "word-new-13")
+@@ -296 +294 @@
+-            inline(await(articleBullet("允 contributes permitting or assenting, and 可 contributes approval or acceptability. The near-synonymous parts reinforce the permission idea. The on readings are イン + カ, giving いんか.")), "允", 0)
++            inline(await(articleBullet("充 represents the native stem あ in this allocation verb; てる is okurigana and changes with conjugation. This is one written kanji, not a compound. Its filling/allotting association is a memory aid, not a derivation of the word.")), "充", 0)
+@@ -299,3 +297,3 @@
+-            show(readingExample("允可 いんか — permission; assent"), "word-new-kanji-backlink")
+-            back()
+-            await(articleBullet("允 contributes permitting or assenting, and 可 contributes approval or acceptability. The near-synonymous parts reinforce the permission idea. The on readings are イン + カ, giving いんか.")).assertIsDisplayed()
++            show(readingExample("拡充 かくじゅう — expansion; strengthening"), "word-new-kanji-backlink")
++            back()
++            await(articleBullet("充 represents the native stem あ in this allocation verb; てる is okurigana and changes with conjugation. This is one written kanji, not a compound. Its filling/allotting association is a memory aid, not a derivation of the word.")).assertIsDisplayed()
+@@ -303,3 +301,3 @@
+-            capture("system-back-word-kanji")
+-            back()
+-            await(articleBullet("允可 いんか — permission; assent, for recognition in formal or older writing")).assertIsDisplayed()
++            capture("word-new-system-back-word-kanji")
++            back()
++            await(articleBullet("充てる あてる — allocate time, money, or another resource to a purpose")).assertIsDisplayed()
+@@ -307 +305,19 @@
+-            capture("system-back-kanji-word")
++            capture("word-new-system-back-kanji-word")
++            section("Common words")
++            inline(await(articleBullet("拡充 かくじゅう — expansion; strengthening, as of facilities or services")), "拡充", 0)
++            await("拡充 (かくじゅう) - expansion; strengthening")
++            section("How the kanji combine")
++            show(articleBullet("拡 contributes widening, and 充 filling or making sufficient. Their related contributions suggest both broader provision and greater substance. The on readings are カク + ジュウ. This is a meaning aid, not a history of the characters."), "word-reused-06")
++            section("How the kanji combine")
++            inline(await(articleBullet("拡 contributes widening, and 充 filling or making sufficient. Their related contributions suggest both broader provision and greater substance. The on readings are カク + ジュウ. This is a meaning aid, not a history of the characters.")), "充", 28)
++            await("Article contents")
++            section("Readings")
++            show(readingExample("拡充 かくじゅう — expansion; strengthening"), "word-reused-kanji-backlink")
++            back()
++            await(articleBullet("拡 contributes widening, and 充 filling or making sufficient. Their related contributions suggest both broader provision and greater substance. The on readings are カク + ジュウ. This is a meaning aid, not a history of the characters.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("word-reused-system-back-word-kanji")
++            back()
++            await(articleBullet("拡充 かくじゅう — expansion; strengthening, as of facilities or services")).assertIsDisplayed()
++            section("Common words")
++            capture("word-reused-system-back-kanji-word")
+@@ -316 +332 @@
+-            assertEquals("允", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("充", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -318 +334 @@
+-            click("permit; sincerity")
++            click("allot; fill")
+@@ -320 +336 @@
+-            assertEquals("允", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("充", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -326 +342 @@
+-            repeat(1) {
++            repeat(2) {
+@@ -330 +346 @@
+-                assertEquals("允", question.card.kanji)
++                assertEquals("充", question.card.kanji)
+@@ -332,2 +348,2 @@
+-                assertEquals(ReadingKind.On, question.question.kind)
+-                val key = "いん"
++                val key = if (question.question.kind == ReadingKind.On) "じゅう" else "あてる"
++                assertNotEquals("みたす", question.question.correctKey)
+@@ -344 +360 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "允" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "充" &&
+@@ -348 +364 @@
+-            assertEquals(setOf(ReadingKind.On), answeredKinds)
++            assertEquals(setOf(ReadingKind.On, ReadingKind.Kun), answeredKinds)
+@@ -351,2 +367,2 @@
+-            assertEquals(1, done.answered)
+-            assertEquals(1, done.correct)
++            assertEquals(2, done.answered)
++            assertEquals(2, done.correct)
+@@ -355 +371 @@
+-                    it.kanji == "允" && it.mode == ReadingKind.Kun.mode.name }
++                    it.kanji == "充" && it.mode == ReadingKind.Kun.mode.name && it.reading == "みたす" }
+@@ -357 +373 @@
+-            capture("curated-on-only-done")
++            capture("curated-both-done")
+@@ -362,4 +378,4 @@
+-            await("permit; sincerity").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "允") })
+-            assertEquals(listOf("イン"), card.onyomi.splitSep())
+-            assertEquals(listOf("じょう", "まこと.に", "ゆるす"), card.kunyomi.splitSep())
++            await("allot; fill").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "充") })
++            assertEquals(listOf("ジュウ"), card.onyomi.splitSep())
++            assertEquals(listOf("あ.てる", "み.たす"), card.kunyomi.splitSep())
+@@ -368,2 +384,2 @@
+-            assertEquals(listOf("イン"), card.quizOnyomi?.splitSep())
+-            assertEquals(emptyList<String>(), card.quizKunyomi?.splitSep())
++            assertEquals(listOf("ジュウ"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("あ.てる"), card.quizKunyomi?.splitSep())
+@@ -375 +391 @@
+-            assertEquals(4, strokes.length())
++            assertEquals(6, strokes.length())
+@@ -392 +408 @@
+-            rule.onNode(hasContentDescription("4 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("6 strokes drawn", substring = true)).assertExists()
+@@ -397 +413 @@
+-                    it.kanji == "允" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "充" && it.mode == StudyMode.Draw.name }
+@@ -408 +424 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "允" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "充" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -416 +432 @@
+-                .put("soleCuratedOnPersistedGoodNoKunAndDone", true)
++                .put("bothCuratedKindsPersistedGoodNoMitasuAndDone", true)
+@@ -421,2 +437,2 @@
+-            File(app.getExternalFilesDir(null), "n1-071-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-071-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-072-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-072-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -515 +531 @@
+-        File(app.getExternalFilesDir(null), "n1-071-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-072-$step.png").outputStream().use {
