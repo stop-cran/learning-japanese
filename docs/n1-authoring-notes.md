@@ -81,8 +81,24 @@ confirmation was manufactured; byte/range receipts do not certify comprehension.
 
 Validator, unchanged manifest `a9ecc100b6c1335c`, all 8,326 runtime hashes and
 local budgets pass again. The draft's 368 Python-test result is inherited,
-not freshly rerun. Fresh Android, native/visual, current-main, CI and exact
-public-ZIP gates remain next. Nothing from batch 066 is published.
+not freshly rerun. [Fresh Android acceptance](n1-sources/execution-425.json)
+archives all three RealContentTest cases and RareHanTest with no skips.
+Its qualified HOST-only memory setting is not used in native builds.
+
+The [native preparation](n1-sources/batch-066-native-preparation.json) freezes
+the exact full signed `175fdf3f` Git archive: **1,078 kanji / 5,036 words /
+98 N1 cards**, version `a9ecc100b6c1335c`, all **8,326 runtime hashes** verified,
+with unchanged publishing limits. The [compiled fixture](n1-sources/execution-426.json)
+plans both mapped pairs in four directions, complete three-article inspection,
+N1 selection, meaning, sole curated リョウ, fourteen-stroke trace/recall,
+System Back and offline operation. Its 54 static selectors and 32 article
+captures are not native acceptance; 36 individual-glyph and four whole-word
+raster probes do not establish readability or fallback-face identity.
+Serial compilation passed without a HOST heap init; the APK contains the exact
+archive, and temporary Android source/assets were removed.
+
+Native execution, original-session serial visual confirmations, current-main,
+CI and exact public-ZIP gates remain next. Nothing from batch 066 is published.
 Coverage remains **92 additions; 1,136 still to deliver**.
 
 ## Batch 065: published for bounded owner testing

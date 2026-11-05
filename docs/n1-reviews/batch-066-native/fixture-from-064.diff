@@ -1,0 +1,301 @@
+--- docs/n1-reviews/batch-064-native/N1Batch064NativeTest.kt
++++ docs/n1-reviews/batch-066-native/N1Batch066NativeTest.kt
+@@ -49 +49 @@
+-private fun disposable064() {
++private fun disposable066() {
+@@ -54 +54 @@
+-class N1Batch064GlyphTest {
++class N1Batch066GlyphTest {
+@@ -57,2 +57,2 @@
+-    @Test fun investigationLookalikesAndRadicalVariantsAcrossFourProductionFamilies() {
+-        disposable064()
++    @Test fun colleagueLookalikesAndRadicalVariantsAcrossFourProductionFamilies() {
++        disposable066()
+@@ -61 +61 @@
+-        val text = "偵 貞 停 低 値 人 亻 探 手 扌 探偵 刑事"
++        val text = "僚 療 像 値 人 亻 疒 同 口 同僚"
+@@ -65 +65 @@
+-                    Text("Batch 064: investigation / look-alikes / radical variants")
++                    Text("Batch 066: colleague / look-alikes / radical variants")
+@@ -70 +70 @@
+-                    Text("Compare 偵 with 貞, 停, 低 and 値. Inspect 人 versus 亻, 手 versus 扌 in 探, and both words 探偵 and 刑事. Shared fallback need not give four different designs.", fontSize = 18.sp)
++                    Text("Compare 僚 with 療, 像 and 値. Inspect 人 versus 亻 and the illness frame 疒; also inspect 同, 口 and the word 同僚. Shared fallback need not give four different designs.", fontSize = 18.sp)
+@@ -81 +81 @@
+-            for (char in listOf("偵", "貞", "停", "低", "値", "人", "亻", "探", "手", "扌")) {
++            for (char in listOf("僚", "療", "像", "値", "人", "亻", "疒", "同", "口")) {
+@@ -102 +102 @@
+-            for (word in listOf("探偵", "刑事")) {
++            for (word in listOf("同僚")) {
+@@ -129 +129 @@
+-        assertEquals(48, rows.length())
++        assertEquals(40, rows.length())
+@@ -133 +133 @@
+-        File(context.getExternalFilesDir(null), "n1-064-font-pairs.png").outputStream().use {
++        File(context.getExternalFilesDir(null), "n1-066-font-pairs.png").outputStream().use {
+@@ -136 +136 @@
+-        File(context.getExternalFilesDir(null), "n1-064-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-066-font-raster.json").writeText(JSONObject()
+@@ -139,2 +139,2 @@
+-            .put("individualGlyphProbes", 40).put("wholeWordRasterProbes", 8)
+-            .put("limits", "Forty single-character native Paint probes including actual 人/亻 and 手/扌, eight complete-word nonblank raster probes and four production Compose rows; actual 偵/貞/停/低/値/人/亻/探/手/扌/探偵/刑事 readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
++            .put("individualGlyphProbes", 36).put("wholeWordRasterProbes", 4)
++            .put("limits", "Thirty-six single-character native Paint probes including actual 人/亻 and standalone 疒, four complete-word nonblank raster probes and four production Compose rows; actual 僚/療/像/値/人/亻/疒/同/口/同僚 readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
+@@ -145 +145 @@
+-class N1Batch064ArticleTest {
++class N1Batch066ArticleTest {
+@@ -150,2 +150,2 @@
+-    @Test fun fullSingleImportOfflineInvestigationTwoPairsComparisonOnOnlyDrawingAndSystemBack() {
+-        disposable064()
++    @Test fun fullSingleImportOfflineColleagueTwoReciprocalPairsOnOnlyDrawingAndSystemBack() {
++        disposable066()
+@@ -154,2 +154,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-064-${UUID.randomUUID()}", "main")
+-        val head = "bf6204e5b4e4c64f340dcd8db65b2924b869cc45"
++        val source = RepoSource("acceptance-fixture", "n1-066-${UUID.randomUUID()}", "main")
++        val head = "175fdf3f1605f231e27a9de19a7c18c4a02cb20d"
+@@ -163 +163 @@
+-                    instrumentation.context.assets.open("n1-batch-064-bf6204e5-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-066-175fdf3f-envelope.zip")
+@@ -178,2 +178,2 @@
+-        assertEquals(1076, updated.kanji)
+-        assertEquals(5034, updated.words)
++        assertEquals(1078, updated.kanji)
++        assertEquals(5036, updated.words)
+@@ -182 +182 @@
+-        assertEquals("ae05977ba66f42f5", meta.contentVersion)
++        assertEquals("a9ecc100b6c1335c", meta.contentVersion)
+@@ -190,10 +190,10 @@
+-        assertEquals(96, n1.size)
+-        val investigation = n1.single { it.kanji == "偵" }
+-        assertEquals(listOf("テイ"), investigation.onyomi.splitSep())
+-        assertEquals(emptyList<String>(), investigation.kunyomi.splitSep())
+-        assertNotNull(investigation.quizOnyomi)
+-        assertNotNull(investigation.quizKunyomi)
+-        assertEquals(listOf("テイ"), investigation.quizOnyomi?.splitSep())
+-        assertEquals(emptyList<String>(), investigation.quizKunyomi?.splitSep())
+-        assertEquals(listOf("てい"), investigation.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(emptyList<String>(), investigation.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(98, n1.size)
++        val colleague = n1.single { it.kanji == "僚" }
++        assertEquals(listOf("リョウ"), colleague.onyomi.splitSep())
++        assertEquals(emptyList<String>(), colleague.kunyomi.splitSep())
++        assertNotNull(colleague.quizOnyomi)
++        assertNotNull(colleague.quizKunyomi)
++        assertEquals(listOf("リョウ"), colleague.quizOnyomi?.splitSep())
++        assertEquals(emptyList<String>(), colleague.quizKunyomi?.splitSep())
++        assertEquals(listOf("りょう"), colleague.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(emptyList<String>(), colleague.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -213 +213 @@
+-                        if (card.kanji == "偵") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "僚") now - 60_000 else now + 30L * 86_400_000,
+@@ -219 +219 @@
+-                            if (card.kanji == "偵" && (kind == ReadingKind.On && key == "てい")) now - 60_000
++                            if (card.kanji == "僚" && (kind == ReadingKind.On && key == "りょう")) now - 60_000
+@@ -226 +226 @@
+-                    0, source.id, "jlpt-n1", "偵", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "僚", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -236,4 +236,4 @@
+-            .put("fullOnyomi", JSONArray(investigation.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(investigation.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(investigation.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(investigation.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("fullOnyomi", JSONArray(colleague.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(colleague.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(colleague.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(colleague.toReadingCard().quizKeys(ReadingKind.Kun)))
+@@ -242 +242 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 偵 meaning and sole curated on key due; explicit no-kun. Two historical good 偵 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 僚 meaning and sole curated on key due; explicit no-kun. Two historical good 僚 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -249 +249 @@
+-            await("N1 · 96 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 98 cards").performScrollTo().assertIsDisplayed()
+@@ -252,2 +252,2 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("偵")
+-            click("spy; covert investigation")
++            rule.onNode(hasSetTextAction()).performTextReplacement("僚")
++            click("colleague")
+@@ -255 +255 @@
+-            await("no. 9)", substring = true).performScrollTo().assertIsDisplayed()
++            await("as 亻, no. 9)", substring = true).performScrollTo().assertIsDisplayed()
+@@ -258,4 +258,3 @@
+-            show("偵 concerns finding out hidden information", "kanji-meaning")
+-            show("Learn 偵 through compounds", "kanji-compound-boundary")
+-            show("Modern-shape mnemonic:", "kanji-mnemonic")
+-            show("etymology or an explanation based on 貞's meaning.", "kanji-origin-boundary")
++            show("僚 concerns a colleague or associate sharing work or a role", "kanji-meaning")
++            show("It also appears with an official sense", "kanji-official-sense")
++            show("Modern-shape mnemonic, not etymology:", "kanji-mnemonic")
+@@ -263,2 +262 @@
+-            show(readingExample("探偵 たんてい — detective; investigator"), "kanji-on-reading")
+-            show("No kun reading is supplied", "kanji-no-kun")
++            show(readingExample("同僚 どうりょう — coworker; colleague"), "kanji-on-reading")
+@@ -266,3 +264,3 @@
+-            show(articleBullet("A 探偵 may be a private investigator; 刑事 けいじ specifically names a police detective in its person sense. The shared English word \"detective\" does not make these identical job labels."), "kanji-role-contrast")
+-            show(articleBullet("停, \"halt; stopping,\" shares 亻 and テイ but has a different right side, with a roof-like top and a long lower hook."), "kanji-stop-lookalike")
+-            show(articleBullet("低, \"low,\" and 値, \"value; price,\" also share 亻. Compare the entire right side, not just the radical or a boxed outline."), "kanji-other-lookalikes")
++            show(articleBullet("同僚 identifies a work relationship, not necessarily a personal friendship. Do not derive a rigid equal-rank requirement from 同."), "kanji-role-boundary")
++            show(articleBullet("療 shares the elaborate right-hand shape but has the illness frame 疒 and concerns treatment or healing, not a colleague."), "kanji-healing-lookalike")
++            show(articleBullet("像 and 値 also have 亻 on the left; inspect the different right-hand components rather than relying on the radical alone."), "kanji-other-lookalikes")
+@@ -270,4 +268,3 @@
+-            show(articleBullet("探偵小説 たんていしょうせつ — detective story"), "kanji-detective-story")
+-            show(articleBullet("偵察 ていさつ — scouting; reconnaissance"), "kanji-reconnaissance")
+-            inline(await(articleBullet("探偵 たんてい — detective; investigator")), "探偵")
+-            await("探偵 (たんてい) - detective; secret investigation")
++            show(articleBullet("官僚 かんりょう — bureaucrat; government official"), "kanji-common-official")
++            inline(await(articleBullet("同僚 どうりょう — coworker; colleague")), "同僚")
++            await("同僚 (どうりょう) - coworker; colleague")
+@@ -275,5 +272,4 @@
+-            show("私立探偵 (しりつたんてい)", "detective-role")
+-            show(articleBullet("探偵に調査を頼みました。 (たんていにちょうさをたのみました。) - I asked a detective to carry out an investigation."), "detective-request-example")
+-            show(articleBullet("探偵小説を読むのが好きです。 (たんていしょうせつをよむのがすきです。) - I like reading detective stories."), "detective-fiction-example")
+-            show("In the first example, に marks the person asked", "detective-particles-and-activity")
+-            show("including the transitive する form 探偵する.", "detective-suru-boundary")
++            show("同僚 is a noun for a coworker or colleague.", "coworker-meaning")
++            show(articleBullet("同僚と昼ご飯を食べました。 (どうりょうとひるごはんをたべました。) - I had lunch with a colleague."), "coworker-lunch-example")
++            show(articleBullet("困ったときは同僚に相談します。 (こまったときはどうりょうにそうだんします。) - When I have a problem, I consult a coworker."), "coworker-consult-example")
++            show("The second example uses に for the person consulted.", "coworker-particle-plural")
+@@ -281,2 +277,2 @@
+-            show("The on readings are タン + テイ: たんてい.", "detective-components")
+-            inline(await("contributes searching or probing", substring = true), "偵")
++            show("The on readings ドウ + リョウ give どうりょう.", "coworker-reading-allocation")
++            inline(await("contributes sameness or sharing", substring = true), "僚")
+@@ -285,8 +281,8 @@
+-            show(readingExample("探偵 たんてい — detective; investigator"), "detective-backlink")
+-            back()
+-            await("contributes searching or probing", substring = true).assertIsDisplayed()
+-            capture("system-back-detective")
+-            inline(await("contributes searching or probing", substring = true), "探")
+-            await("探 — search")
+-            await("no. 64)", substring = true).performScrollTo().assertIsDisplayed()
+-            capture("search-radical")
++            show(readingExample("同僚 どうりょう — coworker; colleague"), "coworker-colleague-backlink")
++            back()
++            await("contributes sameness or sharing", substring = true).assertIsDisplayed()
++            capture("system-back-coworker-colleague")
++            inline(await("contributes sameness or sharing", substring = true), "同")
++            await("同 — same, equal")
++            await("Key (radical):", substring = true).performScrollTo().assertIsDisplayed()
++            capture("same-radical")
+@@ -294,2 +290,2 @@
+-            show("Searching does not itself say that the thing has been found.", "search-meaning")
+-            show("imagine the hand-side 扌 searching", "search-mnemonic")
++            show("同 conveys sameness, equality, or agreement.", "same-meaning")
++            show("Modern-shape mnemonic:", "same-mnemonic")
+@@ -297,3 +293,2 @@
+-            show("The examples select the two kun readings", "search-on-boundary")
+-            show(readingExample("探す さがす — look for; seek"), "search-reading-sagasu")
+-            show(readingExample("探る さぐる — feel around; investigate"), "search-reading-saguru")
++            show(readingExample("同時 どうじ — same time; 同意 どうい — agreement"), "same-on-reading")
++            show(readingExample("同じ おなじ — same"), "same-kun-reading")
+@@ -301,2 +296,2 @@
+-            show("this is a spelling tendency, not an absolute separation.", "search-spelling-boundary")
+-            show("Their right sides are different:", "search-lookalikes")
++            show("Before an ordinary noun, use 同じ directly:", "same-attachment")
++            show("Distinguish the outer frame", "same-lookalikes")
+@@ -304,4 +299,5 @@
+-            show(articleBullet("探す さがす — search for"), "search-common-sagasu")
+-            show(articleBullet("探る さぐる — feel around for; probe"), "search-common-saguru")
+-            inline(await(articleBullet("探偵 たんてい — detective; investigator (探 is タン here)")), "探偵")
+-            await("探偵 (たんてい) - detective; secret investigation")
++            show(articleBullet("同じ おなじ — same"), "same-common-same")
++            show(articleBullet("同時 どうじ — same time; 同時に どうじに — simultaneously"), "same-common-time")
++            show(articleBullet("同意 どうい — agreement; consent"), "same-common-agreement")
++            inline(await(articleBullet("同僚 どうりょう — coworker; colleague")), "同僚")
++            await("同僚 (どうりょう) - coworker; colleague")
+@@ -309,6 +305,6 @@
+-            show("The on readings are タン + テイ: たんてい.", "search-backlink")
+-            back()
+-            await(articleBullet("探偵 たんてい — detective; investigator (探 is タン here)")).assertIsDisplayed()
+-            capture("system-back-search")
+-            back()
+-            await("contributes searching or probing", substring = true).assertIsDisplayed()
++            show("The on readings ドウ + リョウ give どうりょう.", "same-coworker-backlink")
++            back()
++            await(articleBullet("同僚 どうりょう — coworker; colleague")).assertIsDisplayed()
++            capture("system-back-same-coworker")
++            back()
++            await("contributes sameness or sharing", substring = true).assertIsDisplayed()
+@@ -316,12 +312,3 @@
+-            show("not a rule that every occurrence of 探偵 excludes police.", "detective-police-boundary")
+-            show("None of these three by itself names the detective.", "detective-other-words")
+-            show("There is no single useful antonym", "detective-antonym-boundary")
+-            inline(await("not a rule that every occurrence of 探偵 excludes police.", substring = true), "刑事")
+-            await("刑事 (けいじ) - police detective; criminal matters")
+-            section("Meaning")
+-            show("刑事 has two related uses:", "police-two-senses")
+-            show(articleBullet("刑事が目撃者に話を聞いています。 (けいじがもくげきしゃにはなしをきいています。) - A detective is talking to a witness."), "police-witness-example")
+-            show(articleBullet("これは刑事事件です。 (これはけいじじけんです。) - This is a criminal case."), "police-criminal-case-example")
+-            show("it does not mean \"a detective's incident.\"", "police-legal-boundary")
+-            section("How the kanji combine")
+-            show("刑 contributes criminal punishment", "police-components")
++            show("仲間 (なかま) is a companion or member of the same group more broadly.", "coworker-companion-boundary")
++            show("友人 (ゆうじん) is a friend", "coworker-friend-boundary")
++            show("上司 (じょうし)", "coworker-superior-boundary")
+@@ -329,15 +316 @@
+-            show("Neither use means \"criminal\" as a noun naming the person", "police-criminal-person-boundary")
+-            section("Synonyms and antonyms")
+-            show("it is not an opposite kind of police officer.", "police-role-comparison")
+-            inline(await("it is not an opposite kind of police officer.", substring = true), "探偵")
+-            await("探偵 (たんてい) - detective; secret investigation")
+-            section("Synonyms and antonyms")
+-            show("not a rule that every occurrence of 探偵 excludes police.", "police-comparison-backlink")
+-            back()
+-            await("it is not an opposite kind of police officer.", substring = true).assertIsDisplayed()
+-            capture("system-back-police")
+-            back()
+-            await("not a rule that every occurrence of 探偵 excludes police.", substring = true).assertIsDisplayed()
+-            section("Distinctive meaning")
+-            show("English \"detective\" can describe a police officer", "detective-role-summary")
+-            show("The compound alone does not say that an investigation succeeds.", "detective-success-boundary")
++            show("同僚 presents someone as a fellow worker.", "coworker-rank-boundary")
+@@ -354 +327 @@
+-            assertEquals("偵", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("僚", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -356 +329 @@
+-            click("spy; covert investigation")
++            click("colleague")
+@@ -358 +331 @@
+-            assertEquals("偵", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("僚", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -368 +341 @@
+-                assertEquals("偵", question.card.kanji)
++                assertEquals("僚", question.card.kanji)
+@@ -371 +344 @@
+-                val key = "てい"
++                val key = "りょう"
+@@ -382 +355 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "偵" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "僚" &&
+@@ -389 +362 @@
+-                    it.kanji == "偵" && it.mode == ReadingKind.Kun.mode.name }
++                    it.kanji == "僚" && it.mode == ReadingKind.Kun.mode.name }
+@@ -395,3 +368,3 @@
+-            await("spy; covert investigation").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "偵") })
+-            assertEquals(listOf("テイ"), card.onyomi.splitSep())
++            await("colleague").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "僚") })
++            assertEquals(listOf("リョウ"), card.onyomi.splitSep())
+@@ -401 +374 @@
+-            assertEquals(listOf("テイ"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("リョウ"), card.quizOnyomi?.splitSep())
+@@ -404 +377 @@
+-            assertEquals(11, strokes.length())
++            assertEquals(14, strokes.length())
+@@ -421 +394 @@
+-            rule.onNode(hasContentDescription("11 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("14 strokes drawn", substring = true)).assertExists()
+@@ -426 +399 @@
+-                    it.kanji == "偵" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "僚" && it.mode == StudyMode.Draw.name }
+@@ -437 +410 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "偵" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "僚" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -450,2 +423,2 @@
+-            File(app.getExternalFilesDir(null), "n1-064-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-064-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-066-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-066-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -545 +518 @@
+-        File(app.getExternalFilesDir(null), "n1-064-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-066-$step.png").outputStream().use {
