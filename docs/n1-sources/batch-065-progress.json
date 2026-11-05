@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "batch": "065",
+  "baseCommit": "0fe60920ee7e2de1504edb44e673aa370d928a17",
+  "membership": ["倹"],
+  "status": "source-prepared-not-drafted",
+  "drafted": [],
+  "reviewClosed": [],
+  "published": [],
+  "sourceSnapshot": "docs/n1-source-snapshot.json",
+  "sourceReadingOrder": {"onyomi": ["ケン"], "kunyomi": ["つま.しい", "つづまやか"]},
+  "dictionaryPackets": [
+    {"selection": "batch-065-lexical-selection.json", "xml": "batch-065-jmdict.xml"},
+    {"selection": "batch-065-comparison-selection.json", "xml": "batch-065-comparison-jmdict.xml"}
+  ],
+  "authorInspection": {
+    "lexicalFamilies": 15,
+    "comparisonFamilies": 9,
+    "distinctCompleteFamilies": 24,
+    "remainingExtractedFamiliesPending": 0,
+    "lexicalReturnedRanges": [[1, 244]],
+    "comparisonReturnedRanges": [[1, 283]],
+    "rawCharacterRecords": 6,
+    "rawCharacterReturnedRanges": [[1, 220], [221, 436]],
+    "completeExistingArticlesRead": ["words/節約.md", "words/経済.md", "words/けち.md", "words/貯金.md", "words/贅沢.md", "words/地味.md", "kanji/約.md", "kanji/険.md", "kanji/験.md", "kanji/値.md"],
+    "candidateNavigation": "Complete current-word metadata scan found no declared 倹 pair. Exact 倹約/倹しい/つましい paths absent, as are 質素/慎ましい/約やか/浪費. Title substring navigation returned20 candidates, including irrelevant plain/complain substrings; not a semantic review of all5034 words. Targeted confusable-inventory search returned no match. 検 card is absent, so it is not an available distractor, although its complete raw record is preserved as a shape comparison.",
+    "limits": "All24 complete frozen families and six complete raw character elements returned without truncation; ten actual existing articles read. Four public dictionary returns are bounded and qualified in source-evidence. Coordinator inspection only; final support texts, quiz titles/guards, drawings and fonts still pending."
+  },
+  "baselineCandidatePairs": [],
+  "currentDeclaredWordPairs": [],
+  "proposedSupportMapping": [
+    {
+      "kanji": "倹",
+      "article": "words/倹約.md",
+      "word": "倹約",
+      "primaryReading": "けんやく",
+      "entryId": "1256010",
+      "newArticleNecessary": true,
+      "selectedSenses": "Thrift/frugality focused on avoiding wasteful spending; noun, transitive suru and な-adjective uses. No absolute money-only rule.",
+      "readingAllocation": "Separate frozen character records give 倹 ケン and 約 ヤク; exact whole family and public compound heading give けんやく.",
+      "levelDisposition": "Necessary support only; no vocabulary level inferred from the N1 character."
+    },
+    {
+      "kanji": "倹",
+      "article": "words/倹しい.md",
+      "word": "倹しい",
+      "primaryReading": "つましい",
+      "entryId": "1255980",
+      "newArticleNecessary": true,
+      "selectedSenses": "Frugal/modest living adjective, normally written つましい. Teach the exact 倹しい spelling as recognition support, not as preferred everyday orthography.",
+      "readingAllocation": "Frozen source つま.しい and exact public つまし・い【倹しい】 agree on boundary; whole JMdict family supplies つましい.",
+      "levelDisposition": "No vocabulary level inferred. Draft may use the kana-headed つましい identity instead if its complete article teaches the kanji spelling and required navigation; freeze that actual choice before review, not both duplicates."
+    }
+  ],
+  "readingDispositions": [
+    {
+      "kanji": "倹", "kind": "on", "reading": "ケン", "proposedQuizSelection": true,
+      "example": "倹約 けんやく", "entryId": "1256010",
+      "reason": "Useful spending-related compound supported by separate character records, complete family and actual public entry. Future selected row requires its own linked support."
+    },
+    {
+      "kanji": "倹", "kind": "kun", "reading": "つま.しい", "proposedQuizSelection": true,
+      "example": "倹しい つましい", "entryId": "1255980",
+      "reason": "Useful exact adjective reading, with explicit usual-kana qualification and living-context example. Dictionary spelling recognition does not by itself establish frequency; do not manufacture a neutral writing recommendation or copy the rare flag on 約しい."
+    },
+    {
+      "kanji": "倹", "kind": "kun", "reading": "つづまやか", "proposedQuizSelection": false,
+      "reason": "Preserve the undotted character-dictionary reading as source-only lookup information. 字通 gives that 字訓, but applicable frozen JMdict has no 倹 spelling for the whole word; separate 約やか does not establish it. No invented 倹やか boundary or example, and no deletion/reordering of source metadata."
+    }
+  ],
+  "proposedCuratedProjection": {"quizOnyomi": ["ケン"], "quizKunyomi": ["つま.しい"], "onKeys": ["けん"], "kunKeys": ["つま"]},
+  "plannedReciprocalPairs": [
+    {"kanji": "倹", "article": "words/倹約.md", "wordReading": "けんやく", "status": "pending-draft"},
+    {"kanji": "約", "article": "words/倹約.md", "wordReading": "けんやく", "status": "pending-draft", "requirement": "Existing 約 receives a bounded compound backlink; preserve all metadata, N3 level and existing full reading lists. New compound's substantive 約 introduction links back."},
+    {"kanji": "倹", "article": "words/倹しい.md", "wordReading": "つましい", "status": "pending-actual-support-identity"}
+  ],
+  "plannedReusedPassages": [
+    {"article": "kanji/約.md", "boundedChange": "Add 倹約 けんやく as a common-word backlink, without rewriting easier-card teaching or curation.", "status": "pending-draft-and-independent-review"}
+  ],
+  "quizPreparation": {
+    "candidateKanjiTitle": "frugal; thrifty",
+    "candidateDistractors": [
+      {"kanji": "険", "actualTitle": "steep; perilous", "reason": "Similar right-hand shape and ケン, but ordinary modern danger/terrain senses differ from thrift; older 字通 interchange explicitly remains historical."},
+      {"kanji": "験", "actualTitle": "test; verify", "reason": "Similar right-hand shape and ケン, with 馬 instead of 亻; actual test/effect senses do not mean thrift."},
+      {"kanji": "値", "actualTitle": "value; price", "reason": "Same left-hand 亻 but right-hand 直. Price/value is not the practice of frugality."}
+    ],
+    "unavailableDistractor": "検 has no current card; do not reference it as an existing option.",
+    "wordTitleAndGuards": "Final support titles remain unfrozen. Direct 倹約/節約 overlap established by actual spending senses. Proposed adjective has frugal/plain living overlap with 倹約 and 地味; inspect final labels in both directions. 経済's complete family additionally has thrift, although the current article foregrounds economy/economics. けち is evaluative stinginess, not automatically identical to sensible frugality. Do not make a clique, suppress secondary senses or manufacture mutually exclusive rules; add only justified direct guards after final-title inspection.",
+    "pendingNeighborInspection": ["words/謙虚.md", "words/謙遜.md", "words/無地.md", "words/簡単.md", "words/単純.md"],
+    "legacyFallback": "Actual low-distractor kanji/default four-choice pool must be audited at draft; source preparation is not a closed live-quiz audit.",
+    "confusableInventory": "Notation/contract read and targeted search returned no candidates. No new/reworded word title yet."
+  },
+  "lexicalDispositions": [
+    {"entries": ["1256010"], "disposition": "Necessary 倹約 support with noun/suru/な uses; selected spending sense, not the macroeconomic system."},
+    {"entries": ["1255980"], "disposition": "Necessary つましい reading support with exact 倹しい spelling. Whole word usually kana; 約しい alone carries rare-kanji-form annotation. Use living-context examples and retain the separate identity of つつましい."},
+    {"entries": ["1255970"], "disposition": "Standalone 倹 けん recognized as economy/thrift. Historical public examples do not make it a preferred modern standalone support; compound 倹約 supplies practical teaching."},
+    {"entries": ["1256000", "1386220", "1640680"], "disposition": "倹素 economical/simple, 節倹 economy/thrift with both transitive/intransitive suru, and 恭倹 respectfulness/modesty retained distinctly. No unsupported register or absolute synonym/frequency claims; no extra articles needed."},
+    {"entries": ["1256020"], "disposition": "倹約家 けんやくか means a thrifty person, not automatically a miser. Useful optional short combination, not another mandatory article."},
+    {"entries": ["1814470"], "disposition": "倹吝/慳吝 けんりん explicitly obsolete greedy/stingy term. Retain raw flags; not a modern common-word example or new kunyomi."},
+    {"entries": ["1240980", "1871070", "2030600", "2044200"], "disposition": "勤倹, 勤倹の風, 勤倹力行 and 勤倹貯蓄 combine diligence, thrift, work/saving context. Do not reduce every occurrence to a bare unqualified industry gloss; no four additional support articles."},
+    {"entries": ["2046290"], "disposition": "質素倹約 is simplicity/frugality; useful context but not proof that all modest behavior entails saving money."},
+    {"entries": ["2252680"], "disposition": "倹約令 is an expenditure-regulating/sumptuary edict. Historical/legal vocabulary is outside this practical support scope."},
+    {"entries": ["2834556"], "disposition": "温良恭倹譲 is a phrase originally said of Confucius. Retain full phrase and source note; no universal character-by-character semantic compartments or philosophy lesson."}
+  ],
+  "comparisonDispositions": [
+    {"entries": ["1251320"], "disposition": "経済 has economy/economics, personal finances and thrift senses. Existing N4 article selected first two; do not assert the full word never means economizing or count a new unrelated economy rewrite."},
+    {"entries": ["1320710"], "disposition": "質素 has simple/plain and modest/frugal/reserved senses. No current article, so no missing-link remedy or extra article required solely for comparison."},
+    {"entries": ["1386350"], "disposition": "節約 saves time/money/resources, transitive suru; actual N3 article covers that breadth. Spending overlap with 倹約 warrants a direct guard, not an absolute non-overlap rule."},
+    {"entries": ["1427170"], "disposition": "貯金 putting money aside/depositing differs from reducing expenditure. Separate baseball wins-in-the-bank sense is retained but outside the household teaching comparison."},
+    {"entries": ["1560800", "1573150"], "disposition": "浪費 and 贅沢 provide waste/extravagance contrast. 贅沢 also has indulgence, lavish adverbial use and excessive-demand senses; do not reduce every luxury to morally bad spending."},
+    {"entries": ["2009010"], "disposition": "慎ましい/rare 虔しい つつましい is a separate kana-usual adjective: modest/reserved and frugal/simple senses can overlap つましい. Do not manufacture a strict behavior-versus-lifestyle split or confuse the two pronunciations."},
+    {"entries": ["2234080"], "disposition": "けち/ケチ family includes stinginess, shabby/petty and bad-luck senses. 吝嗇 is search-only with an occasional-spelling note. Current N3 article selects evaluative stinginess; dictionary frugal gloss alone does not prove unrestricted substitution with neutral saving."},
+    {"entries": ["2456600"], "disposition": "約やか/つづまやか has concise, humble/frugal and modest senses. It is not a frozen 倹 word spelling and cannot validate whole-kanji つづまやか allocation."}
+  ],
+  "strokePreparation": {
+    "revision": "70a0b7ae0c18ceb5cb358274b029cce0234a43bc",
+    "path": "kanji/05039.svg",
+    "gitBlob": "5f6c5fe755c2f29a14eff4adc73aeb094ebb7dbd",
+    "dictionaryStrokeCount": 10,
+    "status": "inventory-only-not-downloaded-or-generated",
+    "required": "Use unchanged pinned tools/generate_strokes.py; reconcile exact SVG/count and never hand-edit geometry. Modern 倹 ten strokes must not be confused with old 儉 fifteen."
+  },
+  "fontPreparation": {
+    "status": "pending-actual-draft-Han-audit",
+    "required": "Audit all actual authored Han including 人/亻, 倹/儉 if taught and the actual look-alikes against three unchanged bundled fonts. Cmap results are not native glyph acceptance. Prior all40/160 pilot results remain inherited, not freshly repeated."
+  },
+  "nextAction": "SAME065: read source packet/ledger/evidence, settle exact necessary support identities/titles and direct guards, author bounded 倹 draft and 約 backlink, pinned stroke conversion, all-reading/activated+all-mapped reciprocal/font/baseline audits, validator/manifest/tests and normally signed local unreviewed snapshot. Then two serial blind actual model-family initial reviews; no runtime push before all review/Android/native/current-main/CI/public-ZIP gates. No066 or second runner.",
+  "publishedAdditions": 91,
+  "remainingAdditions": 1137,
+  "limits": "Source preparation only; zero runtime changes, zero drafted/review-closed/published065 rows. Proposed curation and quiz choices are not final acceptance. All24 frozen-family interpretations are coordinator inspection, not independent review. Public definitions, gaiji, truncation and spelling limits remain explicit. Android/native/fonts/current-main/CI/publicZIP/physical-phone/general-release/whole-set acceptance outstanding for065. Compatible Androidf9b59a2+ required. No N1 vocabulary deck claimed; historical064 acceptance/process limits unchanged."
+}

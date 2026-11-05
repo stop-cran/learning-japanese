@@ -37,6 +37,33 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 065: source preparation only
+
+The [frozen batch](n1-sources/batch-065-membership.json) selects **倹**, source
+row 62, as one evidence-bounded spelling/reading packet, not a fifteen-card
+quota. Its [preparation ledger](n1-sources/batch-065-progress.json) records
+**15 complete applicable JMdict families and nine comparison families**,
+six raw character records and ten actual existing articles inspected by the
+coordinator. The [public-entry evidence](n1-sources/batch-065-source-evidence.json)
+qualifies actual returned definitions, the redirected character URL,
+attribution-only sections and truncated related-word lists.
+
+Full source **ケン・つま.しい・つづまやか** and order remain frozen.
+Proposed practice uses **倹約（けんやく）** and the exact **倹しい（つましい）**
+adjective, normally written in kana. The rare spelling flag on **約しい**
+does not make the pronunciation archaic. Undotted **つづまやか** remains
+character-dictionary lookup information: separate **約やか** is not evidence
+that 倹 normally writes that entire word. Necessary support identities,
+titles and direct quiz guards remain to be frozen in the actual draft.
+Spending-related 倹約 overlaps 節約; modest living, stinginess and the economy
+must not be separated by invented absolute rules. Existing 約 will need a
+bounded reciprocal compound backlink without changing its N3 metadata.
+
+No runtime card, stroke or support article has been authored here; no
+independent review, fresh Android/native/font acceptance or publication is
+claimed. Published coverage remains **91 additions; 1,137 still to deliver**.
+The next checkpoint authors this same bounded batch, not batch 066.
+
 ## Batch 064: native checks passed; parent cleanup recovery archived
 
 [Execution 406](n1-sources/execution-406.json) obtained both named native
