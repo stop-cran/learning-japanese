@@ -3,10 +3,25 @@
   "batch": "064",
   "baseCommit": "d00bf868466437d39b0330a383de8448686b502d",
   "membership": ["偵"],
-  "status": "local-unreviewed-draft",
+  "status": "initial-reviews-complete-pending-navigation-correction",
   "drafted": ["偵"],
   "reviewClosed": [],
   "published": [],
+  "initialReviewCheckpoint": {
+    "execution": 401,
+    "snapshot": "400ba5ea60299cf4b77f6f9ffbf66cae8f061db3",
+    "models": ["claude-opus-5.5", "gpt-6.1-sol"],
+    "record": "../n1-reviews/batch-064-initial-review-checkpoint.json",
+    "reports": [
+      "../n1-reviews/batch-064-initial-claude.md",
+      "../n1-reviews/batch-064-initial-gpt.md"
+    ],
+    "assignedTeachingVerdicts": "Both complete new articles and the changed existing 探 common-word line are CLEAN across correctness, scoped coverage and text comprehensibility in both initial reports.",
+    "pendingFinding": "064-N1: minor navigation omission at words/刑事.md:28. Its substantive 探偵 comparison should link the newly available article. The coordinator accepts this finding under the existing substantive-comparison link rule; a bounded link-only correction and original-reviewer confirmation remain pending.",
+    "teachingChanged": false,
+    "reviewClosed": false,
+    "limits": "Textual initial reviews only. No fresh Android/native/visual/current-main/publication or physical-phone acceptance. Prior execution400 automated checks are inherited, not rerun."
+  },
   "sourceSnapshot": "docs/n1-source-snapshot.json",
   "dictionaryPackets": [
     {"selection": "batch-064-lexical-selection.json", "xml": "batch-064-jmdict.xml"},
@@ -201,7 +216,8 @@
   "incidentalMentionDisposition": {
     "article": "words/刑事.md",
     "text": "探偵 (たんてい) can refer to a detective such as a private investigator.",
-    "reason": "Actual existing comparison is compatible with the inspected evidence. The article does not declare 偵 and is not a mapped support pair, so an incidental comparison link is optional, not a required component backlink. Preserve its N3 metadata, primary けいじ and criminal-matters sense."
+    "reason": "Historical source-preparation disposition: actual existing comparison is compatible with the inspected evidence. The article does not declare 偵 and is not a mapped support pair, so the author initially considered this link optional.",
+    "reviewDisposition": "Superseded by accepted initial-review finding064-N1. This is a substantive comparison, not merely an incidental mention; the general link-at-substantive-comparison rule applies independently of component-pair requirements. Add only [探偵](探偵.md) at the existing comparison, preserving all wording and N3 metadata, primary けいじ and criminal-matters sense. Correction and bounded original-reviewer confirmation pending."
   },
   "quizPreparation": {
     "candidateKanjiTitle": "spy; covert investigation",
