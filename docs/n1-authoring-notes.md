@@ -37,7 +37,40 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 059: native fixture compiled; native execution pending
+## Batch 059: native assertions passed; independent visuals pending
+
+[Execution357](n1-sources/execution-357.json) runs the frozen compiled fixture
+against the exact full `911431da` envelope on an owned read-only API35 helper.
+Both named cases finish with **terminal status 0**, no skips, in **101.725 s**.
+Production `ContentSync` imports once: **1,071 kanji / 5,030 words / 91 N1**,
+version `1f1ad78479e9c1f4`, zero problems, reading-parser epoch 1. Full and
+Lite projections preserve ordered **キョウ・コウ / う.ける**; practice offers
+only **きょう**, records its Good grade and produces no kun-reading log.
+Both **享/享受** and **受/享受** work in four directions with System Back,
+offline meaning/reading sessions and eight-stroke drawing reference tracing.
+The trace remains ungraded; the subsequent recall miss persists Draw Again.
+This is not MLKit recognition, correct human recall or owner-progress evidence.
+
+The [artifact index](n1-reviews/batch-059-native/execution-357-artifact-index.json)
+pins the raw terminal log, route/raster receipts and **35 screenshots**.
+Eleven direct coordinator image inspections show readable, distinguishable
+**享・京・厚・高**, actual **亠/厂** fallback radicals and **子・口・受/享受**
+in four production font rows, with no blank/replacement boxes. The fallback
+face is not identified; raster hashes alone are not readability evidence.
+Inspected word paragraphs/examples and reciprocal entries remain readable.
+Reading tables explicitly support horizontal scrolling; captures with offscreen
+columns are not evidence that the whole table was visible simultaneously.
+The owned helper (parent **21032**, QEMU **17756**, `emulator-5580`) stopped
+with `emu kill` exit 0. A separate inventory confirms both PIDs absent,
+both dedicated worktrees unchanged and unrelated `emulator-5556` still present.
+
+This is a signed local native-evidence checkpoint, not runtime publication.
+The original two reviewer sessions' serial dependent visual confirmations,
+combined-main validation and publication remain pending. Accepted execution355
+Android results and historical review/process limits are retained unchanged;
+physical-phone/general-release and whole-set acceptance remain outstanding.
+
+### Historical preparation checkpoint
 
 [Execution356](n1-sources/execution-356.json) prepares and serially compiles
 the exact full `911431da` Git envelope with production `ContentSync` called
