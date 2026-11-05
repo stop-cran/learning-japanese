@@ -37,7 +37,40 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 059: native assertions passed; independent visuals pending
+## Batch 059: bounded native visuals reconciled; publication pending
+
+[Execution358](n1-sources/execution-358.json) reuses the original Claude and GPT
+reviewer sessions serially for dependent visual confirmation of unchanged
+`769293c8` teaching. Actual models are **claude-opus-5.5** and **gpt-6.1-sol**.
+Each exits 0 after **29 view calls / 20 distinct screenshot payloads**, with
+**zero overlapping starts or multi-tool responses**. Claude's complete report
+and execution audit are archived before GPT starts. The original reports,
+earlier Claude confirmation overlap and its bounded source follow-up remain
+unchanged; this does not retroactively establish strict historical compliance.
+
+Both [Claude](n1-reviews/batch-059-visual-claude.md) and
+[GPT](n1-reviews/batch-059-visual-gpt.md) find no new actionable teaching or
+visible-task defect; **059-F1 remains resolved**. Their
+[bounded acceptance record](n1-reviews/batch-059-native-acceptance.json)
+separates inherited lexical judgments, newly inspected pixels and the supplied
+execution357 operational results. All **35 source screenshots / 20 distinct
+hashes / 15 equivalent copies** are accounted for. Actual model-visible
+**900×2000** PNG payloads are preserved separately from **1080×2400** sources.
+Four production font rows show readable, distinguishable **享・京・厚・高**
+and readable **亠・厂・子・口・受/享受**, without blank/replacement boxes.
+The recognition example text is visible, but its left reading label is cropped;
+neither a complete table nor every article pixel is certified. The fallback
+face is unidentified. Static links do not independently prove navigation;
+the four transitions and System Back rely on the accepted native assertions.
+
+This is a signed local evidence checkpoint only. No teaching/runtime change,
+Android/native rerun or publication is made. Combined-current-main integration,
+all publication checks, signed owner fast-forward, green CI and every immutable
+public ZIP runtime hash remain the next gate. Compatible Android `f9b59a2+`
+is required; physical-phone/general-release and whole-set acceptance remain
+outstanding.
+
+### Historical native execution checkpoint
 
 [Execution357](n1-sources/execution-357.json) runs the frozen compiled fixture
 against the exact full `911431da` envelope on an owned read-only API35 helper.
