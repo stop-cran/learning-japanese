@@ -1,0 +1,464 @@
+--- docs/n1-reviews/batch-067-native/N1Batch067NativeTest.kt
++++ docs/n1-reviews/batch-068-native/N1Batch068NativeTest.kt
+@@ -49 +49 @@
+-private fun disposable067() {
++private fun disposable068() {
+@@ -54 +54 @@
+-class N1Batch067GlyphTest {
++class N1Batch068GlyphTest {
+@@ -57,2 +57,2 @@
+-    @Test fun buddhistClergyLookalikesAndRadicalVariantsAcrossFourProductionFamilies() {
+-        disposable067()
++    @Test fun ceremonyLookalikesAndRadicalVariantsAcrossFourProductionFamilies() {
++        disposable068()
+@@ -61 +61 @@
+-        val text = "僧 増 値 倍 人 亻 曽 侶 僧侶 坊さん"
++        val text = "儀 義 億 優 倍 人 亻 式 礼 辞 行 亍 弋 彳 礻 儀式 礼儀 行儀 お辞儀"
+@@ -65 +65 @@
+-                    Text("Batch 067: Buddhist clergy / look-alikes / radical variants")
++                    Text("Batch 068: ceremony / look-alikes / radical variants")
+@@ -68 +68 @@
+-                        Text(text, fontFamily = font.family(), fontSize = 24.sp, lineHeight = 34.sp)
++                        Text(text, fontFamily = font.family(), fontSize = 18.sp, lineHeight = 26.sp)
+@@ -70 +70 @@
+-                    Text("Compare 僧 with 増, 値 and 倍. Inspect 人 versus 亻, the right-hand 曽 and the support character 侶; also inspect 僧侶 and 坊さん. Shared fallback need not give four different designs.", fontSize = 18.sp)
++                    Text("Inspect 儀 versus 義/億/優/倍, 人 versus 亻, all four mapped words and actual fallback components 亍/弋/彳/礻. Fallback families may coincide.", fontSize = 18.sp)
+@@ -81 +81 @@
+-            for (char in listOf("僧", "増", "値", "倍", "人", "亻", "曽", "侶")) {
++            for (char in listOf("儀", "義", "億", "優", "倍", "人", "亻", "式", "礼", "辞", "行", "亍", "弋", "彳", "礻")) {
+@@ -102 +102 @@
+-            for (word in listOf("僧侶", "坊さん")) {
++            for (word in listOf("儀式", "礼儀", "行儀", "お辞儀")) {
+@@ -129 +129 @@
+-        assertEquals(40, rows.length())
++        assertEquals(76, rows.length())
+@@ -133 +133 @@
+-        File(context.getExternalFilesDir(null), "n1-067-font-pairs.png").outputStream().use {
++        File(context.getExternalFilesDir(null), "n1-068-font-pairs.png").outputStream().use {
+@@ -136 +136 @@
+-        File(context.getExternalFilesDir(null), "n1-067-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-068-font-raster.json").writeText(JSONObject()
+@@ -139,2 +139,2 @@
+-            .put("individualGlyphProbes", 32).put("wholeWordRasterProbes", 8)
+-            .put("limits", "Thirty-two single-character native Paint probes including actual 人/亻 and standalone 曽/侶, eight complete-word nonblank raster probes and four production Compose rows; actual 僧/増/値/倍/人/亻/曽/侶/僧侶/坊さん readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
++            .put("individualGlyphProbes", 60).put("wholeWordRasterProbes", 16)
++            .put("limits", "Sixty single-character native Paint probes including 人/亻 and actual fallback components 亍/弋/彳/礻, sixteen whole-word nonblank raster probes and four production Compose rows. Actual readability requires visual inspection; emulator not phone; fallback face not identified.")
+@@ -145 +145 @@
+-class N1Batch067ArticleTest {
++class N1Batch068ArticleTest {
+@@ -150,2 +150,2 @@
+-    @Test fun fullSingleImportOfflineBuddhistClergyReciprocalComparisonOnOnlyDrawingAndSystemBack() {
+-        disposable067()
++    @Test fun fullSingleImportOfflineCeremonyEightReciprocalPairsOnOnlyDrawingAndSystemBack() {
++        disposable068()
+@@ -154,2 +154,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-067-${UUID.randomUUID()}", "main")
+-        val head = "a45ce3014661487bf16977260daa5ca23e001663"
++        val source = RepoSource("acceptance-fixture", "n1-068-${UUID.randomUUID()}", "main")
++        val head = "7ca40a695d8e01f4176f4afcca91b1e4d2d6c0b0"
+@@ -163 +163 @@
+-                    instrumentation.context.assets.open("n1-batch-067-a45ce301-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-068-7ca40a69-envelope.zip")
+@@ -178 +178 @@
+-        assertEquals(1079, updated.kanji)
++        assertEquals(1080, updated.kanji)
+@@ -182 +182 @@
+-        assertEquals("68c767f176e68882", meta.contentVersion)
++        assertEquals("ddef65b637fe2f85", meta.contentVersion)
+@@ -190,10 +190,10 @@
+-        assertEquals(99, n1.size)
+-        val clergy = n1.single { it.kanji == "僧" }
+-        assertEquals(listOf("ソウ"), clergy.onyomi.splitSep())
+-        assertEquals(emptyList<String>(), clergy.kunyomi.splitSep())
+-        assertNotNull(clergy.quizOnyomi)
+-        assertNotNull(clergy.quizKunyomi)
+-        assertEquals(listOf("ソウ"), clergy.quizOnyomi?.splitSep())
+-        assertEquals(emptyList<String>(), clergy.quizKunyomi?.splitSep())
+-        assertEquals(listOf("そう"), clergy.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(emptyList<String>(), clergy.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(100, n1.size)
++        val ceremony = n1.single { it.kanji == "儀" }
++        assertEquals(listOf("ギ"), ceremony.onyomi.splitSep())
++        assertEquals(emptyList<String>(), ceremony.kunyomi.splitSep())
++        assertNotNull(ceremony.quizOnyomi)
++        assertNotNull(ceremony.quizKunyomi)
++        assertEquals(listOf("ギ"), ceremony.quizOnyomi?.splitSep())
++        assertEquals(emptyList<String>(), ceremony.quizKunyomi?.splitSep())
++        assertEquals(listOf("ぎ"), ceremony.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(emptyList<String>(), ceremony.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -213 +213 @@
+-                        if (card.kanji == "僧") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "儀") now - 60_000 else now + 30L * 86_400_000,
+@@ -219 +219 @@
+-                            if (card.kanji == "僧" && (kind == ReadingKind.On && key == "そう")) now - 60_000
++                            if (card.kanji == "儀" && (kind == ReadingKind.On && key == "ぎ")) now - 60_000
+@@ -226 +226 @@
+-                    0, source.id, "jlpt-n1", "僧", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "儀", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -236,4 +236,4 @@
+-            .put("fullOnyomi", JSONArray(clergy.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(clergy.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(clergy.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(clergy.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("fullOnyomi", JSONArray(ceremony.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(ceremony.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(ceremony.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(ceremony.toReadingCard().quizKeys(ReadingKind.Kun)))
+@@ -242 +242 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 僧 meaning and sole curated on key due; explicit no-kun. Two historical good 僧 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 儀 meaning and sole curated on key due; explicit no-kun. Two historical good 儀 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -249 +249 @@
+-            await("N1 · 99 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 100 cards").performScrollTo().assertIsDisplayed()
+@@ -252,2 +252,38 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("僧")
+-            click("Buddhist monk; priest")
++            rule.onNode(hasSetTextAction()).performTextReplacement("儀")
++            click("ceremony; formal conduct")
++            await("儀 — ceremony; formal conduct")
++            show(articleBullet("Strokes: 15 · Key (radical): 人 (as 亻, no. 9) · JLPT: N1 (community list)"), "kanji-01")
++            section("Meaning and origin")
++            show(articleBullet("儀 appears in words for ceremonies and formal conduct: 儀式 ぎしき is a ceremony or ritual, while 礼儀 れいぎ concerns manners or etiquette. Learn the whole word rather than translating every 儀 as \"ceremony.\""), "kanji-03")
++            show(articleBullet("The visible parts are 亻, the side form of 人, and 義 on the right. Modern-shape mnemonic: picture a person standing beside an elaborate ceremonial pattern. This is a visual memory aid, not a historical explanation of the character."), "kanji-04")
++            section("Readings")
++            show(readingExample("儀式 ぎしき — ceremony; 礼儀 れいぎ — manners; etiquette"), "kanji-11")
++            show(articleBullet("The frozen character dictionary gives ギ and no kun reading. The same ギ occurs in 行儀 ぎょうぎ, \"manners; behavior,\" and お辞儀 おじぎ, \"bow; bowing.\""), "kanji-12")
++            section("Common words")
++            show(articleBullet("儀式 ぎしき — ceremony; rite; ritual"), "kanji-14")
++            show(articleBullet("礼儀 れいぎ — manners; etiquette"), "kanji-15")
++            show(articleBullet("行儀 ぎょうぎ — manners; behavior"), "kanji-16")
++            show(articleBullet("お辞儀 おじぎ — bow; bowing"), "kanji-17")
++            section("Notes")
++            show(articleBullet("儀 also has a \"matter; affair; case\" branch. In formal letters and notices, this suffix typically follows a noun referring to oneself or one's own side, adding a humble nuance: 私儀（わたくしぎ）, \"as for me.\" This is a formal written use, not an ordinary conversational suffix."), "kanji-19")
++            show(articleBullet("Not all compounds concern conduct: 地球儀（ちきゅうぎ）is an Earth globe, a model of the Earth, not a ceremony."), "kanji-20")
++            show(articleBullet("式 overlaps in the ceremony sense; 礼 overlaps in manners and also names a bow. These are useful comparisons, not interchangeable characters."), "kanji-21")
++            show(articleBullet("義 alone lacks the left-hand 亻. It also has the reading ギ, but its meanings include righteousness and meaning; a shared sound does not make the spellings interchangeable."), "kanji-22")
++            show(articleBullet("億, \"hundred million,\" 優, \"gentle; superior,\" and 倍, \"multiple; double,\" share 亻 but have different right-hand shapes."), "kanji-23")
++            show(articleBullet("Metadata: KANJIDIC2. Word pairs: JMdict, entries 1224690, 1224700, 1557470, 1281890, 1002030, 1311150, 1421000 and 1956040. Usage: Nikkoku, 儀; Nikkoku, 地球儀."), "kanji-24")
++            section("Common words")
++            inline(await(articleBullet("儀式 ぎしき — ceremony; rite; ritual")), "儀式", 0)
++            await("儀式 (ぎしき) - ceremony; rite; ritual")
++            section("Meaning")
++            show(articleBullet("儀式 is a ceremony or ritual carried out according to an established form. It is a noun and can describe religious observances or other ceremonial acts."), "word1-02")
++            show(articleBullet("神社で伝統的な儀式を見ました。 (じんじゃででんとうてきなぎしきをみました。) - I watched a traditional ceremony at a Shinto shrine."), "word1-03")
++            show(articleBullet("儀式は静かに始まりました。 (ぎしきはしずかにはじまりました。) - The ceremony began quietly."), "word1-04")
++            section("How the kanji combine")
++            show(articleBullet("儀 concerns ceremony or formal observance; 式 concerns a form, method, or ceremony. Their on readings combine as ギ + シキ. The two characters reinforce the idea of a prescribed ceremonial form."), "word1-06")
++            section("Synonyms and antonyms")
++            show(articleBullet("式 (しき) also names a ceremony, as well as a formula or style in other contexts. 勤め (つとめ) has a religious-service sense in addition to work or duty. Its ordinary employment meaning is not a synonym of 儀式."), "word1-08")
++            section("Distinctive meaning")
++            show(articleBullet("English \"service\" can describe a religious ceremony, but it can also mean customer service or help. 儀式 covers the ceremonial use, not every サービス. Context, rather than the English spelling alone, establishes which sense is intended."), "word1-10")
++            show(articleBullet("Dictionary: JMdict, entry 1224700, sense 1; compare 1240810."), "word1-11")
++            section("How the kanji combine")
++            inline(await(articleBullet("儀 concerns ceremony or formal observance; 式 concerns a form, method, or ceremony. Their on readings combine as ギ + シキ. The two characters reinforce the idea of a prescribed ceremonial form.")), "儀", 0)
+@@ -255,2 +291,7 @@
+-            await("as 亻, no. 9)", substring = true).performScrollTo().assertIsDisplayed()
+-            capture("kanji-radical")
++            section("Readings")
++            show(readingExample("儀式 ぎしき — ceremony; 礼儀 れいぎ — manners; etiquette"), "word1-new-kanji-backlink")
++            back()
++            section("How the kanji combine")
++            inline(await(articleBullet("儀 concerns ceremony or formal observance; 式 concerns a form, method, or ceremony. Their on readings combine as ギ + シキ. The two characters reinforce the idea of a prescribed ceremonial form.")), "式", 42)
++            await("式 — ceremony; formula")
++            show(articleBullet("Strokes: 6 · Key (radical): 弋 (no. 56) · JLPT: N3 (community list)"), "component1-01")
+@@ -258,6 +299,9 @@
+-            show("僧 usually refers to a Buddhist monk or priest.", "kanji-meaning")
+-            show("The visible parts are 亻", "kanji-components")
+-            show("Modern-shape mnemonic:", "kanji-mnemonic")
+-            section("Readings")
+-            show(readingExample("僧侶 そうりょ — Buddhist priest; monk"), "kanji-on-reading")
+-            show("The frozen character dictionary gives ソウ and no kun reading.", "kanji-compound-reading-boundary")
++            show(articleBullet("式 can name a ceremony, a formula, or an established form or method. An 入学式 にゅうがくしき is a school entrance ceremony; a 数式 すうしき is a mathematical expression. In 形式 けいしき, the focus is form or format. These are word-specific meanings, not one English translation that fits everywhere."), "component1-03")
++            show(articleBullet("Modern-shape mnemonic: picture 工 fitted inside the long slanting, hooked 弋 shape, like a small pattern held in place. This is a way to remember the modern layout, not a verified account of its origin."), "component1-04")
++            section("Readings")
++            show(readingExample("形式 けいしき — format; 入学式 にゅうがくしき — school entrance ceremony"), "component1-11")
++            section("Common words")
++            show(articleBullet("形式 けいしき — form; format"), "component1-13")
++            show(articleBullet("入学式 にゅうがくしき — school entrance ceremony"), "component1-14")
++            show(articleBullet("数式 すうしき — mathematical expression; formula"), "component1-15")
++            show(articleBullet("儀式 ぎしき — ceremony; rite; ritual"), "component1-16")
+@@ -265,7 +309,19 @@
+-            show(articleBullet("僧 そう can also abbreviate the Buddhist community, or sangha, in religious usage. The context distinguishes this collective sense from an individual monk."), "kanji-collective-sense")
+-            show(articleBullet("The English gloss \"priest\" does not make 僧 a general translation for clergy of every religion. Compounds can have wider uses; learn the whole word."), "kanji-religious-scope")
+-            show(articleBullet("増, \"increase,\" has 土 on the left instead of 亻. 値, \"value; price,\" and 倍, \"multiple; double,\" share 亻 but have different right-hand shapes."), "kanji-lookalikes")
+-            section("Common words")
+-            show(articleBullet("高僧 こうそう — a high-ranking or highly respected Buddhist priest"), "kanji-common-high-priest")
+-            inline(await(articleBullet("僧侶 そうりょ — Buddhist priest; monk")), "僧侶")
+-            await("僧侶 (そうりょ) - Buddhist priest; monk")
++            show(articleBullet("試 contains the entire 式 shape beside 言, but means testing or trying. 代 contains 弋 beside a person component, without 工. 工 alone lacks the surrounding strokes. These comparisons help recognition; they do not establish phonetic relationships."), "component1-18")
++            show(articleBullet("Sources: KANJIDIC2; JMdict, entries 1319060, 1250310, 1465910, 1373070."), "component1-19")
++            section("Common words")
++            inline(await(articleBullet("儀式 ぎしき — ceremony; rite; ritual")), "儀式", 0)
++            await("儀式 (ぎしき) - ceremony; rite; ritual")
++            section("How the kanji combine")
++            show(articleBullet("儀 concerns ceremony or formal observance; 式 concerns a form, method, or ceremony. Their on readings combine as ギ + シキ. The two characters reinforce the idea of a prescribed ceremonial form."), "word1-legacy-backlink")
++            back()
++            await("Common words")
++            capture("system-back-component1")
++            back()
++            await("How the kanji combine")
++            capture("system-back-word1-component")
++            back()
++            await("Common words")
++            capture("system-back-kanji-word1")
++            section("Common words")
++            inline(await(articleBullet("礼儀 れいぎ — manners; etiquette")), "礼儀", 0)
++            await("礼儀 (れいぎ) - manners; etiquette")
+@@ -273,6 +329,13 @@
+-            show("僧侶 is a Buddhist priest or monk.", "clergy-meaning")
+-            show(articleBullet("彼は僧侶です。 (かれはそうりょです。) - He is a Buddhist priest."), "clergy-person-example")
+-            show(articleBullet("お寺で僧侶の話を聞きました。 (おてらでそうりょのはなしをききました。) - I listened to a Buddhist priest's talk at the temple."), "clergy-temple-example")
+-            section("How the kanji combine")
+-            show("僧 ソウ supplies the Buddhist monk or priest meaning;", "clergy-reading-allocation")
+-            inline(await("僧 ソウ supplies the Buddhist monk or priest meaning;", substring = true), "僧")
++            show(articleBullet("礼儀 is a noun for manners, courtesy, or etiquette: conduct that shows appropriate consideration or respect in a social setting."), "word2-02")
++            show(articleBullet("子どもに食事の礼儀を教えます。 (こどもにしょくじのれいぎをおしえます。) - I teach children table manners."), "word2-03")
++            show(articleBullet("人の家では礼儀を守りましょう。 (ひとのいえではれいぎをまもりましょう。) - Let's observe good manners in other people's homes."), "word2-04")
++            show(articleBullet("礼儀を守る means observing etiquette. 礼儀正しい (れいぎただしい) means well-mannered or courteous; use the full expression rather than assuming the noun alone is an い-adjective."), "word2-05")
++            section("How the kanji combine")
++            show(articleBullet("礼 contributes courtesy or respectful conduct, and 儀 contributes ceremony or form. Together they express the forms of considerate, socially appropriate behavior. The on readings are レイ + ギ."), "word2-07")
++            section("Synonyms and antonyms")
++            show(articleBullet("マナー overlaps with manners or etiquette. 丁寧 (ていねい) describes politeness or care and can also apply to how work is done. 失礼 (しつれい), discourtesy or rudeness, provides a useful contrast in social conduct."), "word2-09")
++            section("Distinctive meaning")
++            show(articleBullet("礼儀 is not merely grammar or a collection of polite verb endings. It can concern greetings, eating, listening, or conduct as a guest. What counts as appropriate depends on the people and situation; the word itself does not establish one universal rule. In a sentence about 礼儀, identify the specific behavior rather than assuming an unexplained cultural requirement."), "word2-11")
++            show(articleBullet("Dictionary: JMdict, entry 1557470, sense 1."), "word2-12")
++            section("How the kanji combine")
++            inline(await(articleBullet("礼 contributes courtesy or respectful conduct, and 儀 contributes ceremony or form. Together they express the forms of considerate, socially appropriate behavior. The on readings are レイ + ギ.")), "儀", 50)
+@@ -281,4 +344,46 @@
+-            show(readingExample("僧侶 そうりょ — Buddhist priest; monk"), "clergy-kanji-backlink")
+-            back()
+-            await("僧 ソウ supplies the Buddhist monk or priest meaning;", substring = true).assertIsDisplayed()
+-            capture("system-back-clergy-kanji")
++            show(readingExample("儀式 ぎしき — ceremony; 礼儀 れいぎ — manners; etiquette"), "word2-new-kanji-backlink")
++            back()
++            section("How the kanji combine")
++            inline(await(articleBullet("礼 contributes courtesy or respectful conduct, and 儀 contributes ceremony or form. Together they express the forms of considerate, socially appropriate behavior. The on readings are レイ + ギ.")), "礼", 0)
++            await("礼 — bow; thanks")
++            show(articleBullet("Strokes: 5 · Key (radical): 示 (as 礻, no. 113) · JLPT: N3 (community list)"), "component2-01")
++            section("Meaning and origin")
++            show(articleBullet("礼 belongs to the language of respect: a bow, good manners, or an expression of gratitude. 御礼 おれい means thanks; the same word can be written お礼. The polite wording does not make 礼 itself an honorific prefix."), "component2-03")
++            show(articleBullet("Modern-shape mnemonic: beside 礻, imagine the bent stroke on the right as a person bending in a bow. This is only a memory picture for the modern form."), "component2-04")
++            section("Readings")
++            show(readingExample("礼 れい — bow; thanks; 御礼 おれい — thanks"), "component2-11")
++            show(readingExample("失礼 しつれい — discourtesy; an \"excuse me\" expression"), "component2-14")
++            show(articleBullet("The source also lists ライ; no kun reading is supplied."), "component2-15")
++            section("Common words")
++            show(articleBullet("御礼 おれい — thanks; gratitude"), "component2-17")
++            show(articleBullet("礼 れい — bow; manners; thanks"), "component2-18")
++            show(articleBullet("失礼 しつれい — discourtesy; excuse me"), "component2-19")
++            show(articleBullet("礼儀 れいぎ — manners; etiquette"), "component2-20")
++            section("Notes")
++            show(articleBullet("礼をする (れいをする) means \"make a bow.\" 失礼します (しつれいします), \"excuse me,\" is a courtesy expression, not an announcement that one intends to be rude."), "component2-22")
++            show(articleBullet("神, 祖, and 福 also begin with 礻. Identify 礼 by its much simpler right-hand stroke rather than treating the whole group as one meaning."), "component2-23")
++            show(articleBullet("Word evidence: JMdict, entries 1270810, 1557450, 1320230."), "component2-24")
++            section("Common words")
++            inline(await(articleBullet("礼儀 れいぎ — manners; etiquette")), "礼儀", 0)
++            await("礼儀 (れいぎ) - manners; etiquette")
++            section("How the kanji combine")
++            show(articleBullet("礼 contributes courtesy or respectful conduct, and 儀 contributes ceremony or form. Together they express the forms of considerate, socially appropriate behavior. The on readings are レイ + ギ."), "word2-legacy-backlink")
++            back()
++            await("Common words")
++            capture("system-back-component2")
++            back()
++            await("How the kanji combine")
++            capture("system-back-word2-component")
++            back()
++            await("Common words")
++            capture("system-back-kanji-word2")
++            section("Common words")
++            inline(await(articleBullet("行儀 ぎょうぎ — manners; behavior")), "行儀", 0)
++            await("行儀 (ぎょうぎ) - manners; behavior")
++            section("Meaning")
++            show(articleBullet("行儀 is a noun for manners or behavior, especially how someone conducts themselves around others. Learn it in 行儀がいい, \"well-mannered,\" and 行儀が悪い (ぎょうぎがわるい), \"badly behaved; ill-mannered.\""), "word3-02")
++            show(articleBullet("子どもたちは行儀よく座っていました。 (こどもたちはぎょうぎよくすわっていました。) - The children were sitting nicely."), "word3-03")
++            show(articleBullet("食事中に大声で騒ぐのは行儀が悪いです。 (しょくじちゅうにおおごえでさわぐのはぎょうぎがわるいです。) - Making a loud commotion during a meal is bad manners."), "word3-04")
++            show(articleBullet("行儀よく modifies an action. Before a noun, 行儀のいい子 (ぎょうぎのいいこ) means \"a well-behaved child.\""), "word3-05")
++            section("How the kanji combine")
++            show(articleBullet("行 concerns conduct or actions here, rather than going to a destination. 儀 contributes forms or standards of behavior. Together they name the manner in which someone behaves. The readings are ギョウ + ギ."), "word3-07")
+@@ -286,4 +391,51 @@
+-            show("坊さん (ぼうさん), also お坊さん (おぼうさん),", "clergy-register-comparison")
+-            show("神父 (しんぷ), a Catholic priest,", "clergy-catholic-boundary")
+-            inline(await("坊さん (ぼうさん), also お坊さん (おぼうさん),", substring = true), "坊さん")
+-            await("坊さん (ぼうさん) - Buddhist priest; monk")
++            show(articleBullet("礼儀 (れいぎ) also concerns manners, with attention to courtesy and social etiquette. The words overlap, but 行儀 is useful for concrete conduct such as sitting or eating."), "word3-09")
++            show(articleBullet("態度 (たいど) describes attitude or manner of dealing with someone more broadly."), "word3-10")
++            section("Distinctive meaning")
++            show(articleBullet("行儀 itself does not mean \"good manners\": the evaluation comes from いい or 悪い. Likewise, お行儀 (おぎょうぎ) adds the prefix お without changing the basic noun into an adjective. The contrasting evaluations, not two separate nouns, express good versus bad behavior."), "word3-12")
++            show(articleBullet("Dictionary: JMdict, entry 1281890, sense 1."), "word3-13")
++            section("How the kanji combine")
++            inline(await(articleBullet("行 concerns conduct or actions here, rather than going to a destination. 儀 contributes forms or standards of behavior. Together they name the manner in which someone behaves. The readings are ギョウ + ギ.")), "儀", 72)
++            await("Article contents")
++            section("Readings")
++            show(readingExample("儀式 ぎしき — ceremony; 礼儀 れいぎ — manners; etiquette"), "word3-new-kanji-backlink")
++            back()
++            section("How the kanji combine")
++            inline(await(articleBullet("行 concerns conduct or actions here, rather than going to a destination. 儀 contributes forms or standards of behavior. Together they name the manner in which someone behaves. The readings are ギョウ + ギ.")), "行", 0)
++            await("行 — go")
++            show(articleBullet("Strokes: 6 · Key (radical): 行 (no. 144) · JLPT: N5 (community list)"), "component3-01")
++            section("Meaning and origin")
++            show(articleBullet("行 is commonly explained as a pictograph of a crossroads: the oldest forms show two roads crossing. The left and right halves later became independent components, 彳 (a step, as in 待 and 径) and 亍. From \"road\" the meanings extend to \"go\", \"travel\" and \"carry out\" (おこなう), and then to \"a line or row\" (as in a line of text, 一行 いちぎょう) and \"a business\" (as in 銀行, bank). Because 行 is its own radical, it is both a key and a character."), "component3-03")
++            section("Readings")
++            show(readingExample("旅行 りょこう, 銀行 ぎんこう, 運行 うんこう, 急行 きゅうこう"), "component3-10")
++            show(readingExample("行事 ぎょうじ, 行間 ぎょうかん, 一行 いちぎょう (one line)"), "component3-13")
++            show(readingExample("行脚 あんぎゃ, 行灯 あんどん (rare, from older Chinese readings)"), "component3-16")
++            show(readingExample("行く いく, 行き先 いきさき, 行き方 いきかた"), "component3-19")
++            show(readingExample("行く ゆく (literary or set phrases: 行く年 ゆくとし, 行方 ゆくえ)"), "component3-22")
++            show(readingExample("行う おこなう (to carry out, hold an event)"), "component3-25")
++            section("Common words")
++            show(articleBullet("行く いく — to go"), "component3-27")
++            show(articleBullet("旅行 りょこう — trip, travel"), "component3-28")
++            show(articleBullet("銀行 ぎんこう — bank"), "component3-29")
++            show(articleBullet("行儀 ぎょうぎ — manners; behavior"), "component3-30")
++            section("Notes")
++            show(articleBullet("The kun reading is い.く in everyday speech; ゆく is literary or fixed (行方 ゆくえ, 行く末 ゆくすえ). 行 plus 〜き gives 行き (bound for): 東京行き とうきょうゆき／とうきょういき."), "component3-32")
++            show(articleBullet("行く is irregular in the て／た form: 行って, 行った (not 行いて)."), "component3-33")
++            show(articleBullet("Special on readings: コウ is the usual one in compounds (旅行, 銀行), ギョウ is for \"line/event\" (行事), アン for a few Buddhist or old words."), "component3-34")
++            show(articleBullet("Related: 来 (come, the opposite direction of travel in deixis) and 出 (go out)."), "component3-35")
++            section("Common words")
++            inline(await(articleBullet("行儀 ぎょうぎ — manners; behavior")), "行儀", 0)
++            await("行儀 (ぎょうぎ) - manners; behavior")
++            section("How the kanji combine")
++            show(articleBullet("行 concerns conduct or actions here, rather than going to a destination. 儀 contributes forms or standards of behavior. Together they name the manner in which someone behaves. The readings are ギョウ + ギ."), "word3-legacy-backlink")
++            back()
++            await("Common words")
++            capture("system-back-component3")
++            back()
++            await("How the kanji combine")
++            capture("system-back-word3-component")
++            back()
++            await("Common words")
++            capture("system-back-kanji-word3")
++            section("Common words")
++            inline(await(articleBullet("お辞儀 おじぎ — bow; bowing")), "お辞儀", 0)
++            await("お辞儀 (おじぎ) - bow; bowing")
+@@ -291,5 +443,9 @@
+-            show("坊さん is a familiar, respectful way of referring to a Buddhist priest or monk.", "bousan-meaning")
+-            show(articleBullet("お寺で坊さんの話を聞きました。 (おてらでぼうさんのはなしをききました。) - I listened to a Buddhist priest's talk at the temple."), "bousan-temple-example")
+-            show(articleBullet("お坊さんに道を尋ねました。 (おぼうさんにみちをたずねました。) - I asked a Buddhist priest for directions."), "bousan-directions-example")
+-            section("How the kanji combine")
+-            show("坊 contributes ボウ; さん is the familiar honorific suffix, not another kanji.", "bousan-formation")
++            show(articleBullet("お辞儀 is a bow or bowing. Use お辞儀をする or お辞儀する for the action. The person bowed to can take に."), "word4-02")
++            show(articleBullet("先生にお辞儀をしました。 (せんせいにおじぎをしました。) - I bowed to the teacher."), "word4-03")
++            show(articleBullet("彼は深くお辞儀をして、部屋を出ました。 (かれはふかくおじぎをして、へやをでました。) - He bowed deeply and left the room."), "word4-04")
++            show(articleBullet("The expression describes the bodily gesture; its purpose can be a greeting, thanks, respect, or an apology."), "word4-05")
++            section("How the kanji combine")
++            show(articleBullet("The spelling 御辞儀 also represents おじぎ: 御 writes the prefix お. In お辞儀, that prefix is written in kana. The base 辞儀 has the on-readings ジ + ギ; 辞 has speech-related associations and 儀 concerns formal conduct. Learn the established bowing meaning rather than a literal translation such as \"refusal ceremony.\""), "word4-07")
++            show(articleBullet("The kango grouping describes the base 辞儀, not the origin of the Japanese prefix."), "word4-08")
++            section("Synonyms and antonyms")
++            show(articleBullet("礼 (れい) also names a bow, as in 礼をする (れいをする). 礼儀 (れいぎ) concerns manners or etiquette more generally, not one particular bow."), "word4-10")
+@@ -297,17 +453,40 @@
+-            show("坊さん also has a familiar \"boy\" sense.", "bousan-boy-boundary")
+-            section("Synonyms and antonyms")
+-            show("僧侶 (そうりょ) is a more formal Buddhist-clergy term.", "bousan-changed-comparison")
+-            inline(await("僧侶 (そうりょ) is a more formal Buddhist-clergy term.", substring = true), "僧侶")
+-            await("僧侶 (そうりょ) - Buddhist priest; monk")
+-            section("How the kanji combine")
+-            show("僧 ソウ supplies the Buddhist monk or priest meaning;", "bousan-clergy-backlink")
+-            back()
+-            await("僧侶 (そうりょ) is a more formal Buddhist-clergy term.", substring = true).assertIsDisplayed()
+-            capture("system-back-bousan-clergy")
+-            back()
+-            await("坊さん (ぼうさん), also お坊さん (おぼうさん),", substring = true).assertIsDisplayed()
+-            capture("system-back-clergy-bousan")
+-            section("Distinctive meaning")
+-            show("Use 僧侶 for the religious person,", "clergy-person-temple-boundary")
+-            back()
+-            await("Common words")
++            show(articleBullet("Do not assume that every お辞儀 expresses gratitude: the gesture's social meaning depends on the situation. Nor does the polite prefix prescribe one correct angle or duration for every occasion. This article teaches the word and its basic construction, not a complete etiquette system."), "word4-12")
++            show(articleBullet("Dictionary: JMdict, entry 1002030, sense 1; compare 1733730 and 1557450, sense 3."), "word4-13")
++            section("How the kanji combine")
++            inline(await(articleBullet("The spelling 御辞儀 also represents おじぎ: 御 writes the prefix お. In お辞儀, that prefix is written in kana. The base 辞儀 has the on-readings ジ + ギ; 辞 has speech-related associations and 儀 concerns formal conduct. Learn the established bowing meaning rather than a literal translation such as \"refusal ceremony.\"")), "儀", 178)
++            await("Article contents")
++            section("Readings")
++            show(readingExample("儀式 ぎしき — ceremony; 礼儀 れいぎ — manners; etiquette"), "word4-new-kanji-backlink")
++            back()
++            section("How the kanji combine")
++            inline(await(articleBullet("The spelling 御辞儀 also represents おじぎ: 御 writes the prefix お. In お辞儀, that prefix is written in kana. The base 辞儀 has the on-readings ジ + ギ; 辞 has speech-related associations and 儀 concerns formal conduct. Learn the established bowing meaning rather than a literal translation such as \"refusal ceremony.\"")), "辞", 140)
++            await("辞 — words; resign")
++            show(articleBullet("Strokes: 13 · Key (radical): 辛 (no. 160) · JLPT: N3 (community list)"), "component4-01")
++            section("Meaning and origin")
++            show(articleBullet("辞 has a word-related branch, seen in 辞書 じしょ, \"dictionary,\" and a leaving-a-position branch, seen in 辞める やめる, \"resign.\" Keep both meanings available instead of trying to translate every compound with one English gloss."), "component4-03")
++            show(articleBullet("Modern-shape mnemonic: imagine the left 舌-shaped part delivering words beside the tall 辛 on the right. This labels visible shapes for memory only; it does not establish their historical roles."), "component4-04")
++            section("Readings")
++            show(readingExample("辞書 じしょ — dictionary; 辞任 じにん — resignation"), "component4-11")
++            show(readingExample("辞める やめる — resign; quit a job"), "component4-14")
++            section("Common words")
++            show(articleBullet("辞書 じしょ — dictionary"), "component4-16")
++            show(articleBullet("辞める やめる — resign; leave a job"), "component4-17")
++            show(articleBullet("辞任 じにん — resignation from a position"), "component4-18")
++            show(articleBullet("お辞儀 おじぎ — bow; bowing"), "component4-19")
++            section("Notes")
++            show(articleBullet("辞める concerns giving up a position, not every action translated \"stop.\" The left 舌 begins with strokes resembling 千; the right 辛 includes a 立-like upper shape. 新 has a partially similar upright arrangement but a different right side."), "component4-21")
++            show(articleBullet("Dictionary: JMdict, entries 1318970, 1318950, 1319000."), "component4-22")
++            section("Common words")
++            inline(await(articleBullet("お辞儀 おじぎ — bow; bowing")), "お辞儀", 0)
++            await("お辞儀 (おじぎ) - bow; bowing")
++            section("How the kanji combine")
++            show(articleBullet("The spelling 御辞儀 also represents おじぎ: 御 writes the prefix お. In お辞儀, that prefix is written in kana. The base 辞儀 has the on-readings ジ + ギ; 辞 has speech-related associations and 儀 concerns formal conduct. Learn the established bowing meaning rather than a literal translation such as \"refusal ceremony.\""), "word4-legacy-backlink")
++            back()
++            await("Common words")
++            capture("system-back-component4")
++            back()
++            await("How the kanji combine")
++            capture("system-back-word4-component")
++            back()
++            await("Common words")
++            capture("system-back-kanji-word4")
+@@ -322 +501 @@
+-            assertEquals("僧", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("儀", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -324 +503 @@
+-            click("Buddhist monk; priest")
++            click("ceremony; formal conduct")
+@@ -326 +505 @@
+-            assertEquals("僧", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("儀", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -336 +515 @@
+-                assertEquals("僧", question.card.kanji)
++                assertEquals("儀", question.card.kanji)
+@@ -339 +518 @@
+-                val key = "そう"
++                val key = "ぎ"
+@@ -350 +529 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "僧" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "儀" &&
+@@ -357 +536 @@
+-                    it.kanji == "僧" && it.mode == ReadingKind.Kun.mode.name }
++                    it.kanji == "儀" && it.mode == ReadingKind.Kun.mode.name }
+@@ -363,3 +542,3 @@
+-            await("Buddhist monk; priest").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "僧") })
+-            assertEquals(listOf("ソウ"), card.onyomi.splitSep())
++            await("ceremony; formal conduct").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "儀") })
++            assertEquals(listOf("ギ"), card.onyomi.splitSep())
+@@ -369 +548 @@
+-            assertEquals(listOf("ソウ"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("ギ"), card.quizOnyomi?.splitSep())
+@@ -372 +551 @@
+-            assertEquals(13, strokes.length())
++            assertEquals(15, strokes.length())
+@@ -389 +568 @@
+-            rule.onNode(hasContentDescription("13 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("15 strokes drawn", substring = true)).assertExists()
+@@ -394 +573 @@
+-                    it.kanji == "僧" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "儀" && it.mode == StudyMode.Draw.name }
+@@ -405 +584 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "僧" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "儀" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -418,2 +597,2 @@
+-            File(app.getExternalFilesDir(null), "n1-067-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-067-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-068-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-068-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -490 +669 @@
+-    private fun inline(node: SemanticsNodeInteraction, label: String) {
++    private fun inline(node: SemanticsNodeInteraction, label: String, offset: Int) {
+@@ -495,2 +674 @@
+-        val offset = text.indexOf(label)
+-        assertTrue("Missing $label in $text", offset >= 0)
++        assertTrue("Wrong linked offset $offset for $label in $text", offset >= 0 && text.substring(offset).startsWith(label))
+@@ -513 +691 @@
+-        File(app.getExternalFilesDir(null), "n1-067-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-068-$step.png").outputStream().use {
