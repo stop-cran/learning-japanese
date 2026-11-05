@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 1,
+  "execution": 402,
+  "batch": "064",
+  "status": "textually-review-closed-awaiting-fresh-android",
+  "reviewedTeachingSnapshot": "ff6eb7893344b806bf517ebd41bf19089bed5021",
+  "originalTeachingSnapshot": "400ba5ea60299cf4b77f6f9ffbf66cae8f061db3",
+  "originalInitialReview": "batch-064-initial-review-checkpoint.json",
+  "originalInitialReviewSha256": "c2120e17adc2d148e188ec9729f2aaedc38f4f6942ebb1d7bcd6c5a45d9d279e",
+  "initialReportsAndExecutionsUnmodified": true,
+  "initialModels": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "strictInitialProcessContractAccepted": true,
+  "reviewClosed": true,
+  "textualReviewClosed": true,
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "confirmationProcesses": [
+    {
+      "sessionId": "28a561c9-9201-40a9-a3a1-c9e37c6d168a",
+      "requestedModel": "claude-opus-5.5",
+      "actualModels": [
+        "claude-opus-5.5"
+      ],
+      "snapshot": "ff6eb7893344b806bf517ebd41bf19089bed5021",
+      "startedAt": "2026-11-05T09:00:02.9107166+01:00",
+      "completedAt": "2026-11-05T09:00:32.7182871+01:00",
+      "exitCode": 0,
+      "launcherPid": 10872,
+      "dependentNotBlind": true,
+      "reportSha256": "78fc096d561b257f794e9aefa84c92866ca26478f072f4c14928d5d7a6a74d7d",
+      "rawExecutionSha256": "6e71deb7b364d0386b4ccbea9aa272e1c09c841e1b4410c38d33b509ca310685",
+      "rawExecutionLocation": "Sibling control/batch-064-confirmation-claude.jsonl",
+      "observedToolOverlaps": [],
+      "multiToolResponses": [],
+      "unfinishedTools": [],
+      "report": "batch-064-confirmation-claude.md",
+      "executionRecord": "batch-064-confirmation-claude-execution.json",
+      "executionRecordSha256": "110dc69e153631393236461ab5489b04e20917c3963f5247ba51d2a92e82d44c",
+      "requiredReads": 6,
+      "allRequiredTextReturned": true,
+      "toolCalls": 6,
+      "limits": "Dependent original-session confirmation. Usage file counters are cumulative session metrics, not this turn's incremental effort. Exact text returns establish bytes, not comprehension."
+    },
+    {
+      "sessionId": "1d30e91b-c5ed-4bd0-8d74-2177b9fbb0d7",
+      "requestedModel": "gpt-6.1-sol",
+      "actualModels": [
+        "gpt-6.1-sol"
+      ],
+      "snapshot": "ff6eb7893344b806bf517ebd41bf19089bed5021",
+      "startedAt": "2026-11-05T09:00:40.6003730+01:00",
+      "completedAt": "2026-11-05T09:01:09.1220778+01:00",
+      "exitCode": 0,
+      "launcherPid": 19036,
+      "dependentNotBlind": true,
+      "reportSha256": "0afc467369219438ef288f596b3d9138edaf7e5226304f91df6761e4b2642de7",
+      "rawExecutionSha256": "c5be67aea147917e3d1fa6c6424e99662a26629e18ce8577f173610d49e2485f",
+      "rawExecutionLocation": "Sibling control/batch-064-confirmation-gpt.jsonl",
+      "observedToolOverlaps": [],
+      "multiToolResponses": [],
+      "unfinishedTools": [],
+      "report": "batch-064-confirmation-gpt.md",
+      "executionRecord": "batch-064-confirmation-gpt-execution.json",
+      "executionRecordSha256": "26e99bd4c2e13da02ae3fdc0ae01d3639c8ac65bfaa30649a6ed155459aef27d",
+      "requiredReads": 6,
+      "allRequiredTextReturned": true,
+      "toolCalls": 6,
+      "limits": "Dependent original-session confirmation. Usage file counters are cumulative session metrics, not this turn's incremental effort. Exact text returns establish bytes, not comprehension."
+    }
+  ],
+  "serialReviewerProcessesVerified": true,
+  "firstCompleteArchiveBeforeSecondLaunch": true,
+  "correction": {
+    "finding": "064-N1",
+    "severity": "minor",
+    "facet": "scoped coverage/navigation",
+    "article": "words/刑事.md",
+    "line": 28,
+    "status": "resolved",
+    "before": "探偵 (たんてい) can refer",
+    "after": "[探偵](探偵.md) (たんてい) can refer",
+    "claim": "Substantive comparison now links the actual 探偵 article; its reverse 刑事 link already existed.",
+    "evidence": "Exact byte replacement, both actual articles and both bounded original-session confirmations.",
+    "confidence": "high",
+    "allTeachingWordingAndMetadataPreserved": true,
+    "scopeQualification": "General substantive-comparison rule, not an additional component reciprocal pair."
+  },
+  "verdicts": {
+    "kanji/偵.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "words/探偵.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "kanji/探.md:added common-word line": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "words/刑事.md:comparison link": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    }
+  },
+  "verdictProvenance": "Original three scopes inherit the two blind initial reviews; correction and coupled target/reverse route receive both dependent confirmations. No broad fresh rereview claimed.",
+  "findings": [
+    {
+      "id": "064-N1",
+      "severity": "minor",
+      "facet": "scoped coverage/navigation",
+      "file": "words/刑事.md",
+      "lines": [
+        28,
+        28
+      ],
+      "claim": "Substantive 探偵 comparison is unlinked after adding its real article.",
+      "impact": "Learner cannot navigate from the existing police-detective comparison to the new private-investigator article.",
+      "remedy": "Change only 探偵 to [探偵](探偵.md) in the existing comparison; preserve all wording and metadata.",
+      "evidence": [
+        "Complete words/刑事.md read by coordinator and both initial reviewers.",
+        ".github/instructions/content-structure.instructions.md: link an existing card at the substantive introduction or comparison.",
+        "words/探偵.md:34 already supplies the reverse 刑事 comparison link."
+      ],
+      "confidence": "high",
+      "reportedBy": [
+        "claude-opus-5.5"
+      ],
+      "status": "resolved",
+      "acceptedByCoordinator": true,
+      "qualification": "Not a required component reciprocal pair; the separate general substantive-comparison rule still applies. No linguistic claim is contradicted.",
+      "priorDisposition": "Author source preparation called the comparison incidental/optional. Preserved as historical and explicitly superseded in batch-064-progress.json.",
+      "resolution": "Link-only correction at signed ff6eb789; both original-session confirmations establish no regression."
+    }
+  ],
+  "optional": [
+    {
+      "id": "064-O1",
+      "status": "optional",
+      "source": "Claude",
+      "claim": "Note shared テイ for 低.",
+      "disposition": "Not adopted; existing look-alike wording is true and full-reading metadata is untouched."
+    },
+    {
+      "id": "064-O2",
+      "status": "optional",
+      "source": "Claude",
+      "claim": "Explain 読むのが好き or add 探偵する sentence.",
+      "disposition": "Not adopted; natural examples/translations and the noun/transitive-suru distinction are already supported; no necessary teaching rule established missing."
+    },
+    {
+      "id": "064-O3",
+      "status": "optional",
+      "source": "Claude",
+      "claim": "Existing 探 table could gain タン row and plain 探る could link.",
+      "disposition": "Not adopted; unchanged existing explanation outside required new-support component navigation. No bulk easier-deck curation or unrelated repair."
+    }
+  ],
+  "modelContributionComparison": {
+    "commonSample": "Same snapshot, assigned teaching/facets,30 ranges,33 complete lexical families,7 raw characters and dictionary access.",
+    "shared": "All three assigned teaching scopes CLEAN across all three textual facets; no established reading/meaning/quiz/required-component-link defect.",
+    "verifiedUsefulUniqueClaude": [
+      "064-N1"
+    ],
+    "verifiedUsefulUniqueGpt": [],
+    "comparisonMethod": "Compared findings, optional, supporting conclusions and limits, not labels alone. GPT includes no equivalent missing刑事 link observation.",
+    "unsupportedSuggestions": [],
+    "limits": "Bounded sample only, not a general model ranking, equal reasoning-depth claim or native-speaker certification."
+  },
+  "correctionTask": "batch-064-confirmation-task.txt",
+  "correctionTaskSha256": "c6f45a83a1da2e2b11698e42450731787d0acad742d30134c24bb88b8c05231b",
+  "runtimeDiff": "batch-064-correction-runtime.diff",
+  "runtimeDiffSha256": "ac686c5b7cd5785229cb10c09af58a509d2b95834d96bd7d4e68eef98b13020a",
+  "freshChecks": {
+    "validatorErrors": 0,
+    "pythonTests": 368,
+    "pythonFailures": 0,
+    "pythonErrors": 0,
+    "pythonLog": "../n1-sources/execution-402-python-tests.txt",
+    "pythonLogSha256": "c669472e9d14f5255f4fec42ba4d76fa17b4e4ea38a1d9423f27d794a1e41658",
+    "pythonTestSeconds": 65.107,
+    "testOutputQualification": "Synthetic media/retry fixture output is not new authorized media generation.",
+    "manifestFresh": true,
+    "contentVersion": "ae05977ba66f42f5",
+    "runtimeHashesVerified": 8320,
+    "hashesByManifestMap": {
+      "audio": 36,
+      "curriculum": 1,
+      "files": 7469,
+      "images": 398,
+      "listening": 36,
+      "listeningTaskAudio": 128,
+      "listeningTaskImages": 11,
+      "listeningTasks": 40,
+      "scenes": 201
+    },
+    "exactLinkOnlyCorrection": true,
+    "reciprocalComparisonRoute": true,
+    "batchAudit": {
+      "batch": "064",
+      "baseCommit": "d00bf868466437d39b0330a383de8448686b502d",
+      "draftKanji": 1,
+      "newWords": 1,
+      "changedReusedArticles": 2,
+      "requiredReciprocalPairs": 1,
+      "activatedBaselinePairs": 0,
+      "readingDispositions": 1,
+      "curatedOfferedKeys": 1,
+      "sourceOnlyOfferedKeys": 0,
+      "dictionaryFamilies": 33,
+      "exactBaseRuntimePreservedOutsideRecordedChanges": true,
+      "manifestFresh": true,
+      "contentVersion": "ae05977ba66f42f5",
+      "limits": "Mechanical draft audit, not lexical-allocation/naturalness verification, independent review, native/phone acceptance or publication."
+    },
+    "allMappedReciprocalPairs": 2,
+    "mappedDirectedLinks": 4,
+    "localBudget": {
+      "files": 8327,
+      "entries": 8342,
+      "retainedBytes": 44029340,
+      "inflatedBytes": 44297678,
+      "localZipBytes": 30107045,
+      "listeningTaskMediaBytes": 5893602
+    }
+  },
+  "inheritedChecks": {
+    "validatorErrors": 0,
+    "manifestFresh": true,
+    "contentVersion": "abbe6f4737e5a879",
+    "runtimeHashesVerified": 8320,
+    "baselinePreserved": {
+      "kanji": 985,
+      "words": 4942,
+      "strokes": 985
+    },
+    "newBaselineMetadataExceptions": [],
+    "exactFrozenDictionaryFamilies": 33,
+    "frozenInputHashes": 5,
+    "decompressedDictionaryHashes": 2,
+    "pythonTests": 368,
+    "pythonFailures": 0,
+    "pythonErrors": 0,
+    "pythonLog": "docs/n1-sources/execution-400-python-tests.txt",
+    "pythonLogSha256": "0df01e131621b8bb858b7a925d5b11d3257b0bbabc96e31e857809d4913509f6",
+    "testOutputQualification": "Synthetic media/retry fixture output is not new authorized media generation.",
+    "grammarVocabularyConsistency": "Actual tools/grammar_vocabulary.py check passed; existing pilot gaps retained, not repaired or counted as new work.",
+    "localBudget": {
+      "files": 8327,
+      "entries": 8342,
+      "retainedBytes": 44029327,
+      "inflatedBytes": 44297665,
+      "localZipBytes": 30107036,
+      "listeningTaskMediaBytes": 5893602
+    },
+    "fontQualification": {
+      "audit": "batch-064-draft-audit.json",
+      "authoredHanCount": 28,
+      "bundledMissingUnion": [
+        "亻",
+        "扌"
+      ],
+      "disposition": "All28 Han in the three complete new/changed articles audited against three unchanged bundled font cmaps.26 occur in all three, including 偵/貞; 亻 and existing 探's 扌 do not. Cmap presence is not native rendering certification and absence is not a glyph failure.",
+      "inheritedEvidence": "Prior063 native evidence records readable 人/亻. Existing hand-side examples and earlier pilot fallback evidence remain historical, not a fresh064 run or a proven fallback-face identity.",
+      "rareHanMechanism": "Read unchanged Android f9b59a2 RareHan.kt and RareHanTest.kt. Both missing characters are basic CJK outside the special RareHan ranges; therefore that test alone cannot establish their fallback rendering. No app defect established by cmap absence.",
+      "pending": "Fresh064 Android/native/visual checks must inspect actual 偵/貞 and 停/低/値 look-alikes plus 人/亻 and 手/扌 in the changed existing 探 article. Physical-phone/general-release and whole-set acceptance remain outstanding."
+    },
+    "dedicatedAndroidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+    "dedicatedAndroidClean": true
+  },
+  "inheritedQualification": "Prior execution400 source/baseline/dictionary/font/grammar checks remain historical, not rerun by this bounded correction audit. Current full manifest, batch exact-delta, both mapped pairs and local budget are freshly checked above. A subsequent fresh368-test Python run also passed and its complete log is archived; the final validator/manifest rerun retained0 errors and the same contentVersion.",
+  "operationalObservations": [
+    "A read-only exploratory source-status.json lookup found no such file; immutable source-index.json remains historical and untouched. No source loss, permission denial or workaround.",
+    "Original reports are unedited. One-based reverse-link line references differ (Claude says34, GPT says35); the actual link is at35. This is report metadata, not a content or navigation defect."
+  ],
+  "nextAction": "SAME064 fresh non-skipped Android RealContentTest3 and RareHanTest1 against this dedicated content tree; preserve fresh XML/results in a normally signed local evidence checkpoint. Use specified JDK17/SDK, one Gradle worker and in-process Kotlin. No concurrent reviewer/native/Gradle work. Do not start065 or publish. Subsequent full-archive single production ContentSync native/visual/current-main/CI/public-ZIP gates remain.",
+  "limits": "Textual closure only. No fresh Android/native/font/visual/current-main/publication/physical-phone/general-release/whole-set acceptance. Compatible Android f9b59a2+ required. Published90/1228,1138remaining; local91 is not delivered.",
+  "recordedAt": "2026-11-05T09:03:10.582677+01:00"
+}

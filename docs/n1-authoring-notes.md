@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 064: local unreviewed draft
+## Batch 064: textually review-closed; fresh Android checks pending
 
 The [frozen membership](n1-sources/batch-064-membership.json) selects **偵**
 (source row 66), with eleven strokes, canonical **人**, no. 9, visible **亻**,
@@ -72,6 +72,19 @@ separately qualified source evidence, not extra practical articles.
 Historical dictionary 字訓 do not add kun-readings to the frozen metadata.
 No word level is inferred from this N1 kanji.
 
+Both [blind initial reviews](n1-reviews/batch-064-initial-review-checkpoint.json)
+used the same signed draft, with actual **Claude Opus 5.5** and **GPT-6.1 Sol**
+strictly serially. Claude identified one minor navigation omission: the
+substantive 探偵 comparison in existing 刑事 lacked its new article link.
+The author's historical optional-link disposition is preserved and superseded;
+the general comparison-link rule applies independently of component pairs.
+Signed correction `ff6eb789` adds only that Markdown link, preserving every
+visible word and all metadata. Both original sessions then confirmed the
+correction serially, with six bounded reads each and no observed internal
+tool overlap. The [reconciliation](n1-reviews/batch-064-reconciliation.json)
+preserves complete reports, actual models/process exits, exact diff and
+optional suggestions without claiming another blind review.
+
 The [historical preparation audit](n1-sources/batch-064-preparation-audit.json)
 checks exact membership/input hashes, complete extraction, unchanged baseline
 metadata/strokes and every unchanged runtime manifest hash.
@@ -91,7 +104,7 @@ unchanged hand-side explanation inside the changed 探 article; **偵・貞**
 occur in all three. Neither cmap result is native rendering certification.
 The future native/visual gate must inspect actual 偵/貞 and look-alikes
 停/低/値 plus 人/亻 and 手/扌; prior radical evidence remains inherited.
-Two-family review, fresh Android/native checks and publication are pending.
+Textual review is closed; fresh Android/native checks and publication are pending.
 Published coverage remains **90 additions; 1,138 remaining**, not 91.
 
 ## Batch 063: published and verified for bounded owner testing
