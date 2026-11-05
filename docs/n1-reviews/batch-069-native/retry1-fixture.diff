@@ -1,0 +1,30 @@
+diff --git "a/C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-reviews\\batch-069-native\\N1Batch069NativeTest.kt" "b/C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-reviews\\batch-069-native\\N1Batch069NativeRetry1Test.kt"
+index 063fa9f0..bfd41530 100644
+--- "a/C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-reviews\\batch-069-native\\N1Batch069NativeTest.kt"
++++ "b/C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-reviews\\batch-069-native\\N1Batch069NativeRetry1Test.kt"
+@@ -51,7 +51,7 @@ private fun disposable069() {
+     assertTrue(Build.HARDWARE in setOf("ranchu", "goldfish"))
+ }
+
+-class N1Batch069GlyphTest {
++class N1Batch069Retry1GlyphTest {
+     @get:Rule val rule = createAndroidComposeRule<ComponentActivity>()
+
+     @Test fun confucianLookalikesAndRadicalVariantsAcrossFourProductionFamilies() {
+@@ -142,7 +142,7 @@ class N1Batch069GlyphTest {
+     }
+ }
+
+-class N1Batch069ArticleTest {
++class N1Batch069Retry1ArticleTest {
+     @get:Rule val rule = createEmptyComposeRule()
+     private lateinit var app: KanjiApp
+     private lateinit var scenario: ActivityScenario<MainActivity>
+@@ -287,6 +287,7 @@ class N1Batch069ArticleTest {
+             section("Readings")
+             show(readingExample("儒教 じゅきょう — Confucianism"), "word1-new-kanji-backlink")
+             back()
++            await("儒教  Confucianism")
+             section("How the kanji combine")
+             inline(await(articleBullet("儒 contributes Confucian thought or its scholars, and 教 contributes teaching or doctrine. This is a modifier + head compound: Confucian teachings. The on readings combine as ジュ + キョウ → じゅきょう.")), "教", 53)
+             await("教 — teach, instruct")
