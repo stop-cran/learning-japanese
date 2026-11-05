@@ -37,6 +37,45 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 063: bounded source preparation; no runtime draft
+
+The [frozen membership](n1-sources/batch-063-membership.json) selects **倣**
+(source row 59). The [source ledger](n1-sources/batch-063-progress.json)
+preserves full **ホウ / なら.う**, ten strokes and canonical **人**, no. 9,
+visible **亻**. Coordinator inspection covers **33 complete frozen JMdict
+families**, six raw character records and **21 actual existing articles**.
+The [public-entry evidence](n1-sources/batch-063-source-evidence.json) separates
+actual definitions from attribution-only sections and mechanical examples.
+This is preparation, not independent review or a runtime draft.
+
+Existing **倣う（ならう）** is a genuine reusable N2 identity, not a new
+article or a word to relabel N1. Preserve its metadata and exclusions; its
+substantive component introduction needs the new 倣 link. Its **model に**
+construction differs from instructional **習う**, whose skill takes **を**.
+One necessary **模倣（もほう）** support article is proposed for ホウ,
+with no vocabulary level inferred from kanji. The actual character entry
+explicitly gives 模倣 as an example; a kana substring alone is not allocation
+evidence. Both mapped **倣/倣う** and **倣/模倣** pairs need reciprocal
+links. **模** has no card, so retain its written metadata without a broken
+link or an extra kanji addition.
+
+The complete packets retain rare **見倣う・摸倣・傚う・慣らう**, irregular
+**倣岸・右へ習え**, search-only forms and the restricted idiom readings
+without promoting them into everyday examples or extra 倣 metadata.
+The public dictionary's additional historical **ぼほう** for 模倣 does not
+invalidate selected **もほう**. Proposed copying/imitation quiz guards require
+direct pairs rather than transitive exclusion assumptions; **写す** has an
+explicit imitation sense beyond its copying/photography label.
+Existing 写・似・則 already have three curated wrong answers.
+
+The next checkpoint should draft this same bounded packet, generate pinned
+strokes, audit new glyphs/links/reading rows and normally sign a local
+unreviewed snapshot before the two serial blind model-family reviews.
+No reviewer, Android/native run, runtime edit or publication occurs in this
+source checkpoint. Published batch 062 remains verified at `54fd8ff4`:
+**89 additions delivered; 1,139 remaining**. Physical-phone/general-release
+and whole-set acceptance remain outstanding.
+
 ## Batch 062: bounded native/visual checks reconciled; publication pending
 
 The [frozen membership](n1-sources/batch-062-membership.json) selects **俸**
