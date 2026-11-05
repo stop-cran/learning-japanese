@@ -37,6 +37,28 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 059: source preparation, not drafted
+
+The [frozen membership](n1-sources/batch-059-membership.json) selects **享**
+(source row 20) for one evidence-bounded packet. The
+[source ledger](n1-sources/batch-059-progress.json) retains all three metadata
+readings in order: **キョウ・コウ / う.ける**. Coordinator inspection covered
+**50 complete frozen JMdict families**, five raw KANJIDIC2 character records
+and nineteen actual existing articles, with bounded returned ranges recorded.
+This is source preparation, not independent content review or delivered teaching.
+
+The prospective minimum support is a new **享受（きょうじゅ）** article for
+キョウ. Existing **教授（きょうじゅ）** is a different lexical identity.
+コウ remains qualified lookup information without a selected lexical example;
+享ける is an attested recognition spelling, not an unmatched reading or a
+general replacement for every 受ける sense. Exact Japanese headings and the
+failed 享ける URL lookup are distinguished in the
+[source evidence](n1-sources/batch-059-source-evidence.json).
+Final practice selection, titles, direct quiz safeguards, two reciprocal
+享受 component pairs, generated strokes, fonts, two-family review and
+Android/native/publication gates remain pending. Runtime content and the
+published **85/1,228 additions; 1,143 remaining** are unchanged.
+
 ## Batch 058: published for bounded owner testing
 
 The [publication record](n1-sources/batch-058-publication.json) records normal
@@ -56,7 +78,7 @@ named-source members and the separate 妖 exception. The 87 added words are
 necessary kanji support, not delivery of the deferred N1 vocabulary deck.
 Android `f9b59a2+` is required. Physical-phone, general-release and whole-set
 acceptance remain outstanding; original review-process limitations are not
-relabelled as compliant. Batch059 has not started.
+relabelled as compliant. At that publication checkpoint, batch059 had not started.
 
 ### Combined-tree acceptance
 
