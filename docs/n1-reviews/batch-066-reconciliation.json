@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "execution": 424,
+  "batch": "066",
+  "status": "textually-review-closed-awaiting-fresh-android",
+  "originalTeachingSnapshot": "6c23db00d2d14ec6d0a3537a1ef72b273e3d55e7",
+  "reviewedTeachingSnapshot": "6c23db00d2d14ec6d0a3537a1ef72b273e3d55e7",
+  "initialModels": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "serialReviewerProcessesVerified": true,
+  "firstCompleteArchiveBeforeSecondLaunch": true,
+  "initialReportsAndExecutionsUnmodified": true,
+  "processes": {
+    "claude": {
+      "sessionId": "9db759dd-1a9d-4c7f-b3ab-049af5686bc4",
+      "requestedModel": "claude-opus-5.5",
+      "actualModels": [
+        "claude-opus-5.5"
+      ],
+      "snapshot": "6c23db00d2d14ec6d0a3537a1ef72b273e3d55e7",
+      "startedAt": "2026-11-05T15:04:03.0349780+01:00",
+      "completedAt": "2026-11-05T15:06:31.5182787+01:00",
+      "exitCode": 0,
+      "reportSha256": "c4f3683158ef3af617e9cabc8e857051f4590583dea98c6d87d2d5a89472c088",
+      "rawExecutionSha256": "8ad32467f41b6f081a127d4bf3f9977cf42a48537f896694beeca1f7f5fa4f3d",
+      "rawExecutionLocation": "Sibling control/batch-066-initial-claude.jsonl",
+      "report": "batch-066-initial-claude.md",
+      "execution": "batch-066-initial-claude-execution.json",
+      "executionSha256": "57b386ae5606eee5125d284a5400ee24c678bccada7406fb1470b9df1266c097",
+      "coverage": "batch-066-initial-claude-coverage.json",
+      "coverageSha256": "52848ebeb3cb46e7ad0779f6a6ca60c9f0ba0f4224fdad8141e1513f31bf9432",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 39,
+      "observedToolOverlaps": [],
+      "multiToolResponses": 0
+    },
+    "gpt": {
+      "sessionId": "81338bd1-836a-4b79-9fc6-69d90c5d00ab",
+      "requestedModel": "gpt-6.1-sol",
+      "actualModels": [
+        "gpt-6.1-sol"
+      ],
+      "snapshot": "6c23db00d2d14ec6d0a3537a1ef72b273e3d55e7",
+      "startedAt": "2026-11-05T15:06:36.8824618+01:00",
+      "completedAt": "2026-11-05T15:08:24.3743395+01:00",
+      "exitCode": 0,
+      "reportSha256": "2a19cdb2230a59cf325a252a28c79678b7b733e9946bb534d4044582266fcbfe",
+      "rawExecutionSha256": "ba935431a61c2e78ff302aaf8173a61ee544ee23ee1d308242793fba56971004",
+      "rawExecutionLocation": "Sibling control/batch-066-initial-gpt.jsonl",
+      "report": "batch-066-initial-gpt.md",
+      "execution": "batch-066-initial-gpt-execution.json",
+      "executionSha256": "0e3bd18d0eec6fa62900a246d7db6a4d00271e8bc4b3b0c3c845a511069561f5",
+      "coverage": "batch-066-initial-gpt-coverage.json",
+      "coverageSha256": "f07527d1405f12b3ed48963b9519586b5d96f4a76ef57caacc6f2309b44f4539",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 38,
+      "observedToolOverlaps": [],
+      "multiToolResponses": 0
+    }
+  },
+  "textualReviewClosed": true,
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "verdicts": {
+    "kanji/僚.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "words/同僚.md:28 component link": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "kanji/同.md:36 common-word line": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    }
+  },
+  "findings": [],
+  "optional": [
+    {
+      "id": "C1",
+      "status": "optional",
+      "source": "Claude optional",
+      "claim": "Add 閣僚 as another official-sense example.",
+      "decision": "Not adopted: 官僚 already gives that sense; another compound/support article is not required."
+    },
+    {
+      "id": "C2",
+      "status": "optional",
+      "source": "Claude optional",
+      "claim": "Add source-backed phonetic/structural history later.",
+      "decision": "Not adopted: labelled modern-shape mnemonic and structure-unclassified are deliberate, valid scope. Gaiji history is not fully inspected; no new etymological claim."
+    },
+    {
+      "id": "C3",
+      "status": "optional",
+      "source": "Claude optional",
+      "claim": "Add 同僚 to 同's ドウ reading row too.",
+      "decision": "Not adopted: existing common-word backlink already completes the mapped pair; no need to change another reused passage."
+    },
+    {
+      "id": "C4",
+      "status": "optional",
+      "source": "Claude optional, unchanged teaching",
+      "claim": "Mention 同僚's secondary same-role/rank sense.",
+      "decision": "Not adopted: present workplace explanation is source-supported and does not promise a complete sense inventory. No rigid equal-rank rule is taught."
+    }
+  ],
+  "confirmationDisposition": "No teaching corrections or consequential unresolved findings; no manufactured dependent confirmation. Retain original sessions for later actual native visuals or substantive diffs.",
+  "modelContributionComparison": {
+    "commonSample": "Same signed snapshot, three teaching scopes/all three facets,24 equal assigned ranges,47 complete JMdict families,6 raw records and identical three public URLs.",
+    "shared": "No actionable defect established; complete reading/curation, two reciprocal pairs, displayed quiz labels and bounded legacy fallbacks accepted.",
+    "additionalVerifiedClaudeDefects": [],
+    "additionalVerifiedGPTDefects": [],
+    "qualification": "Claude's four optional observations remain optional; no general ranking, equal comprehension or native-speaker certification inferred."
+  },
+  "sourceAndProcessLimits": [
+    "All24 assigned ranges fully returned to both models;39 Claude and38 GPT tool calls were serial with no observed overlaps or multi-tool responses. Byte/range evidence does not establish comprehension.",
+    "Frozen XML is supplied evidence, not fresh upstream retrieval. Both reviewers fetched all three identical public URLs.",
+    "Claude's initial 僚/同僚/官僚 web returns were truncated; a bounded continuation of 同僚 was fetched. Complete preceding named definitions support the teaching; later mixed encyclopedic material is not claimed read.",
+    "GPT's three larger public returns had no truncation marker. 官僚 Daijisen attribution alone was not a definition for either reviewer; actual Nikkoku and frozen JMdict support the selected gloss.",
+    "Historical image gaiji and 字通 semantic 字訓 remain separate from frozen Japanese readings; no history/frequency claim added.",
+    "Claude explicitly did not inspect the unassigned named-source membership file. Coordinator freshly rechecked exact frozen source membership/row75; this is mechanical source evidence, not that reviewer's independent inspection.",
+    "Scope is default four-choice curated quiz plus eleven legacy fallback cards; larger/random/live pools and source-frequency measurement remain unverified.",
+    "One coordinator read-only diagnostic printed a Japanese historical status under cp1252 and raised UnicodeEncodeError after its membership checks printed. It changed no file and affected no reviewer; structured evidence uses UTF-8/ASCII-safe output.",
+    "First coordinator closure assertion allowed only rg as the search event name and stopped before writing closure. Claude's CLI exposes the enabled read-only search as grep, while GPT exposes rg. Exact event inspection confirms only view/web_fetch and these search tools; no shell/edit/delegation tool ran. Both original execution records remain unchanged.",
+    "The first precommit whitespace check rejected a trailing blank line in generated CLI catalog output before signing ran. Raw CLI outputs are retained in control; contributor copies trim terminal whitespace only. Reports and reviewer execution evidence are not reformatted.",
+    "No Android/native/phone evidence created; textual readability does not certify rendering, system fallback faces or drawing."
+  ],
+  "checks": {
+    "validatorErrors": 0,
+    "manifestFresh": true,
+    "contentVersion": "a9ecc100b6c1335c",
+    "runtimeHashesVerified": 8326,
+    "manifestSha256": "fca0574602e568000cfcf79e8fa261f8032f9947e4a0ff1639f04f026acd4b58",
+    "allTeachingAndGeometryUnchangedFromSignedReviewedDraft": true,
+    "allAssignedResourceHashesUnchanged": true,
+    "sourceMembershipAndExactReadingRowRechecked": 75,
+    "allMappedReciprocalPairs": 2,
+    "directedLinks": 4,
+    "localBudgetPassed": true,
+    "budget": {
+      "entries": 8348,
+      "compressedBytes": 30115805,
+      "inflatedBytes": 44314523,
+      "retainedBytes": 44046185
+    },
+    "draftFullPythonTests": 368,
+    "draftFullPythonTestsFreshlyRerun": false,
+    "baselinePreservation": "Inherited signed423 full baseline audit; no runtime/metadata changes in424.",
+    "androidNativePhone": "Not performed this execution; fresh Android/native gates next.",
+    "logs": {
+      "validate": {
+        "path": "batch-066-local-validate-execution-424.txt",
+        "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+      },
+      "manifest": {
+        "path": "batch-066-local-manifest-execution-424.txt",
+        "sha256": "6bf19f81356f11b32f9922fe420db7ca5db5746c7f83e1daf2fbb0bb514c9d9c"
+      },
+      "budget": {
+        "path": "batch-066-local-budget-execution-424.txt",
+        "sha256": "7f0e3447aece88e8058ef931149b1361435b2333fd82e4c9013679340dd441c6"
+      }
+    }
+  },
+  "nextAction": "SAME066: fresh dedicated Android RealContentTest3 and RareHanTest1 against this reviewed content; use verified JDK17/SDK, one Gradle worker and in-process compiler. Inspect exact XML counts/no skips. Preserve actual permission/memory failures and qualified prior HOST-only evidence without retrying around denials. Then bounded native preparation/run and serial original-session visual confirmations, current-main/CI/exact-public-ZIP gates. No runtime push before acceptance, no067 or second runner.",
+  "limits": "Textual review closed only: one new kanji/stroke, zero new support words and two narrow reused passages. No fresh Android/native/physical-phone/current-main-publication/CI/public-ZIP acceptance. Compatible Androidf9b59a2+ required; general release and whole-set outstanding. Published92/1228 and remaining1136 unchanged;94 historical support additions are not an N1 vocabulary deck."
+}

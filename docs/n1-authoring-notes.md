@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 066: local unreviewed draft; not published
+## Batch 066: textual review closed; not published
 
 The [frozen batch](n1-sources/batch-066-membership.json) selects **僚**, source
 row 75. Its [source ledger](n1-sources/batch-066-progress.json) records
@@ -65,12 +65,25 @@ unchanged generator; no geometry is hand-edited.
 The [draft audit](n1-sources/batch-066-draft-audit.json) records exact frozen
 dictionary re-extraction, full reading/curation coverage, all mapped links,
 quiz labels and legacy fallback dispositions, baseline preservation, manifest
-hashes, archive budget and affected-article Han cmaps. These are author and
-mechanical checks, not independent review or native glyph/drawing acceptance.
-The next checkpoint requires two serial blind model-family initial reviews of
-the same signed draft, followed by evidence-based reconciliation and the
-Android/native/current-main/CI/exact-public-ZIP gates. Nothing from batch 066
-is published. Coverage remains **92 additions; 1,136 still to deliver**.
+hashes, archive budget and affected-article Han cmaps. These remain author and
+mechanical checks, not native glyph/drawing acceptance.
+
+The [textual reconciliation](n1-reviews/batch-066-reconciliation.json) closes
+two blind initial reviews of signed snapshot `6c23db00`, by actual
+**claude-opus-5.5** and **gpt-6.1-sol**. Both cover the complete new card and
+the actual two changed reused passages across all three facets, with no
+actionable defect established. All 24 assigned ranges returned, including
+47 complete JMdict families and six raw character records. Reviewer processes
+exited serially; their 39/38 tool calls had no observed internal overlaps.
+Complete original reports, differing public-fetch truncation limits and four
+optional observations remain preserved. No teaching correction or unnecessary
+confirmation was manufactured; byte/range receipts do not certify comprehension.
+
+Validator, unchanged manifest `a9ecc100b6c1335c`, all 8,326 runtime hashes and
+local budgets pass again. The draft's 368 Python-test result is inherited,
+not freshly rerun. Fresh Android, native/visual, current-main, CI and exact
+public-ZIP gates remain next. Nothing from batch 066 is published.
+Coverage remains **92 additions; 1,136 still to deliver**.
 
 ## Batch 065: published for bounded owner testing
 
