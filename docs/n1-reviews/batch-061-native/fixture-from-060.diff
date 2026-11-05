@@ -1,0 +1,271 @@
+--- docs/n1-reviews/batch-060-native/N1Batch060NativeTest.kt
++++ docs/n1-reviews/batch-061-native/N1Batch061NativeTest.kt
+@@ -49 +49 @@
+-private fun disposable060() {
++private fun disposable061() {
+@@ -54 +54 @@
+-class N1Batch060GlyphTest {
++class N1Batch061GlyphTest {
+@@ -57,2 +57,2 @@
+-    @Test fun pavilionLookalikesAndThreeFallbackComponentsAcrossFourProductionFamilies() {
+-        disposable060()
++    @Test fun haikuActorLookalikesAndPersonFallbackAcrossFourProductionFamilies() {
++        disposable061()
+@@ -61 +61 @@
+-        val text = "亭 停 京 享 高 亠 亻 冖 丁 小 子 口 料 料亭"
++        val text = "俳 非 悲 借 優 人 亻 昔 心 句 憂 俳句 俳優"
+@@ -65 +65 @@
+-                    Text("Batch 060: pavilion / look-alikes / fallback components")
++                    Text("Batch 061: haiku and actor / look-alikes / person fallback")
+@@ -70 +70 @@
+-                    Text("Compare 亭 with 停, 京, 享 and 高. Inspect actual 亠, 亻 and 冖 fallback glyphs, 丁 versus 小 and 子 bases, and both 料亭 components. Shared fallback need not give four different designs.", fontSize = 18.sp)
++                    Text("Compare 俳 with 非, 悲, 借 and 優. Inspect actual 人 versus 亻, 非 versus 昔, 心 and 憂, and both words 俳句 and 俳優. Shared fallback need not give four different designs.", fontSize = 18.sp)
+@@ -81 +81 @@
+-            for (char in listOf("亭", "停", "京", "享", "高", "亠", "亻", "冖", "丁", "小", "子", "口", "料")) {
++            for (char in listOf("俳", "非", "悲", "借", "優", "人", "亻", "昔", "心", "句", "憂")) {
+@@ -102 +102 @@
+-            for (word in listOf("料亭")) {
++            for (word in listOf("俳句", "俳優")) {
+@@ -129 +129 @@
+-        assertEquals(56, rows.length())
++        assertEquals(52, rows.length())
+@@ -133 +133 @@
+-        File(context.getExternalFilesDir(null), "n1-060-font-pairs.png").outputStream().use {
++        File(context.getExternalFilesDir(null), "n1-061-font-pairs.png").outputStream().use {
+@@ -136 +136 @@
+-        File(context.getExternalFilesDir(null), "n1-060-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-061-font-raster.json").writeText(JSONObject()
+@@ -139,2 +139,2 @@
+-            .put("individualGlyphProbes", 52).put("wholeWordRasterProbes", 4)
+-            .put("limits", "Fifty-two single-character native Paint probes including actual 亠, 亻 and 冖, four complete-word nonblank raster probes and four production Compose rows; actual 亭/停/京/享/高/亠/亻/冖/丁/小/子/口/料/料亭 readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
++            .put("individualGlyphProbes", 44).put("wholeWordRasterProbes", 8)
++            .put("limits", "Forty-four single-character native Paint probes including actual 人 and 亻, eight complete-word nonblank raster probes and four production Compose rows; actual 俳/非/悲/借/優/人/亻/昔/心/句/憂/俳句/俳優 readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
+@@ -145 +145 @@
+-class N1Batch060ArticleTest {
++class N1Batch061ArticleTest {
+@@ -150,2 +150,2 @@
+-    @Test fun fullSingleImportOfflinePavilionTwoReciprocalPairsOnOnlyDrawingAndSystemBack() {
+-        disposable060()
++    @Test fun fullSingleImportOfflineHaikuActorThreeReciprocalPairsOnOnlyDrawingAndSystemBack() {
++        disposable061()
+@@ -154,2 +154,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-060-${UUID.randomUUID()}", "main")
+-        val head = "99d8ace026aaf5cf76b4adada34b14e969d10d4e"
++        val source = RepoSource("acceptance-fixture", "n1-061-${UUID.randomUUID()}", "main")
++        val head = "f891cb1e0b43c4fefcb31da16f28f3159b49aea4"
+@@ -163 +163 @@
+-                    instrumentation.context.assets.open("n1-batch-060-99d8ace0-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-061-f891cb1e-envelope.zip")
+@@ -178 +178 @@
+-        assertEquals(1072, updated.kanji)
++        assertEquals(1073, updated.kanji)
+@@ -182 +182 @@
+-        assertEquals("dbf047f0c2e6cd56", meta.contentVersion)
++        assertEquals("d01d660cc41262fe", meta.contentVersion)
+@@ -190,10 +190,10 @@
+-        assertEquals(92, n1.size)
+-        val pavilion = n1.single { it.kanji == "亭" }
+-        assertEquals(listOf("テイ", "チン"), pavilion.onyomi.splitSep())
+-        assertEquals(emptyList<String>(), pavilion.kunyomi.splitSep())
+-        assertNotNull(pavilion.quizOnyomi)
+-        assertNotNull(pavilion.quizKunyomi)
+-        assertEquals(listOf("テイ"), pavilion.quizOnyomi?.splitSep())
+-        assertEquals(emptyList<String>(), pavilion.quizKunyomi?.splitSep())
+-        assertEquals(listOf("てい"), pavilion.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(emptyList<String>(), pavilion.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(93, n1.size)
++        val performer = n1.single { it.kanji == "俳" }
++        assertEquals(listOf("ハイ"), performer.onyomi.splitSep())
++        assertEquals(emptyList<String>(), performer.kunyomi.splitSep())
++        assertNotNull(performer.quizOnyomi)
++        assertNotNull(performer.quizKunyomi)
++        assertEquals(listOf("ハイ"), performer.quizOnyomi?.splitSep())
++        assertEquals(emptyList<String>(), performer.quizKunyomi?.splitSep())
++        assertEquals(listOf("はい"), performer.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(emptyList<String>(), performer.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -213 +213 @@
+-                        if (card.kanji == "亭") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "俳") now - 60_000 else now + 30L * 86_400_000,
+@@ -219 +219 @@
+-                            if (card.kanji == "亭" && (kind == ReadingKind.On && key == "てい")) now - 60_000
++                            if (card.kanji == "俳" && (kind == ReadingKind.On && key == "はい")) now - 60_000
+@@ -226 +226 @@
+-                    0, source.id, "jlpt-n1", "亭", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "俳", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -236,4 +236,4 @@
+-            .put("fullOnyomi", JSONArray(pavilion.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(pavilion.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(pavilion.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(pavilion.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("fullOnyomi", JSONArray(performer.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(performer.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(performer.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(performer.toReadingCard().quizKeys(ReadingKind.Kun)))
+@@ -242 +242 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 亭 meaning and sole curated on key due; explicit no-kun. Two historical good 亭 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 俳 meaning and sole curated on key due; explicit no-kun. Two historical good 俳 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -249 +249 @@
+-            await("N1 · 92 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 93 cards").performScrollTo().assertIsDisplayed()
+@@ -252,2 +252,2 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("亭")
+-            click("pavilion; restaurant building")
++            rule.onNode(hasSetTextAction()).performTextReplacement("俳")
++            click("haiku; actor")
+@@ -255 +255 @@
+-            await("no. 8)", substring = true).performScrollTo().assertIsDisplayed()
++            await("no. 9)", substring = true).performScrollTo().assertIsDisplayed()
+@@ -258,2 +258,2 @@
+-            show("亭 can refer to a pavilion", "kanji-meaning")
+-            show("Modern-shape mnemonic, not etymology", "kanji-mnemonic")
++            show("俳 connects two useful vocabulary families", "kanji-meaning")
++            show("Modern-shape mnemonic:", "kanji-mnemonic")
+@@ -261,4 +261,2 @@
+-            show(readingExample("料亭 りょうてい - traditional Japanese restaurant, especially an upscale one"), "kanji-on-reading")
+-            show(readingExample("亭 ちん - a small pavilion for viewing or resting, for example in a garden; recognition example"), "kanji-recognition-on")
+-            show("Practice selects テイ.", "kanji-curation")
+-            show("Those suffix senses use てい", "kanji-suffix-boundary")
++            show(readingExample("俳句 はいく — haiku; 俳優 はいゆう — actor; actress"), "kanji-on-reading")
++            show("The source metadata lists no kun reading.", "kanji-no-kun")
+@@ -266,3 +264,4 @@
+-            show(articleBullet("停, \"halt; stopping,\" adds the person-shaped 亻 on the left of 亭. A restaurant or pavilion is not the stopping action."), "kanji-person-lookalike")
+-            show(articleBullet("京, \"capital,\" ends in 小, and 享, \"enjoy; receive benefits,\" ends in 子. 亭 instead has the covered 丁-shaped lower part."), "kanji-lower-lookalikes")
+-            show(articleBullet("料亭 is not the lodging word 旅館 りょかん. Nor does every restaurant use 亭 in its name."), "kanji-lodging-boundary")
++            show(articleBullet("The right-hand 非 does not make these words mean \"not a poem\" or \"not an actor.\" A visible component is not a word-by-word translation rule."), "kanji-component-boundary")
++            show(articleBullet("悲 has 非 above 心, rather than a person-shaped component on the left. 借 shares 亻 but has 昔 on the right, not 非."), "kanji-lookalikes")
++            show(articleBullet("In 俳優, 優 also has a performer-related use; translating it as \"gentle\" does not explain the occupation."), "kanji-performer-boundary")
++            show(articleBullet("The traditional Japanese haiku pattern concerns Japanese sound units, not seventeen English syllables. The linked 俳句 article explains the form and its qualifications."), "kanji-mora-boundary")
+@@ -270,2 +269,2 @@
+-            inline(await(articleBullet("料亭 りょうてい - traditional Japanese restaurant, especially an upscale one")), "料亭")
+-            await("料亭 (りょうてい) — traditional Japanese restaurant")
++            inline(await(articleBullet("俳句 はいく — haiku, a short poetic form")), "俳句")
++            await("俳句 (はいく) - haiku")
+@@ -273,4 +272,4 @@
+-            show("料亭 is a traditional Japanese restaurant", "word-meaning-qualification")
+-            show(articleBullet("昨夜、料亭で食事をしました。（さくや、りょうていで しょくじを しました。）— Last night, I had a meal at a traditional Japanese restaurant."), "word-meal-example")
+-            show(articleBullet("この料亭の料理はおいしいです。（この りょうていの りょうりは おいしいです。）— The food at this traditional Japanese restaurant is delicious."), "word-food-example")
+-            show("Use で for eating there", "word-place-particle")
++            show("Free-form and nonseasonal haiku also exist", "haiku-form-qualification")
++            show(articleBullet("春の俳句を作りました。 (はるのはいくをつくりました。) - I composed a spring haiku."), "haiku-composing-example")
++            show(articleBullet("この俳句には春の季語が入っています。 (このはいくにははるのきごがはいっています。) - This haiku contains a spring seasonal word."), "haiku-season-example")
++            show("A mora is a timing unit", "haiku-mora-definition")
+@@ -278,2 +277,2 @@
+-            show("Read it as a modifier-plus-place compound", "word-components-readings")
+-            inline(await("Read it as a modifier-plus-place compound", substring = true), "亭")
++            show("The on readings combine as はい + く.", "haiku-components")
++            inline(await("The on readings combine as はい + く.", substring = true), "俳")
+@@ -282,5 +281,27 @@
+-            show("Practice selects テイ.", "word-backlink-pavilion")
+-            back()
+-            await("Read it as a modifier-plus-place compound", substring = true).assertIsDisplayed()
+-            capture("system-back-word-pavilion")
+-            inline(await("Read it as a modifier-plus-place compound", substring = true), "料")
++            show("The source metadata lists no kun reading.", "haiku-backlink")
++            back()
++            await("The on readings combine as はい + く.", substring = true).assertIsDisplayed()
++            capture("system-back-haiku")
++            section("Synonyms and antonyms")
++            show("names a person rather than a poem.", "haiku-comparison")
++            section("Distinctive meaning")
++            show("Do not define every haiku as seventeen English syllables", "haiku-distinctive")
++            back()
++            await("Common words")
++            inline(await(articleBullet("俳優 はいゆう — actor; actress")), "俳優")
++            await("俳優 (はいゆう) - actor")
++            section("Meaning")
++            show("the word is not inherently restricted to men.", "actor-gender-boundary")
++            show(articleBullet("彼女は映画で活躍する俳優です。 (かのじょはえいがでかつやくするはいゆうです。) - She is an actor active in films."), "actor-film-example")
++            show(articleBullet("子どものころから俳優になりたかったです。 (こどものころからはいゆうになりたかったです。) - I have wanted to become an actor since childhood."), "actor-childhood-example")
++            show("好きな俳優 (すきなはいゆう)", "actor-noun-attachment")
++            section("How the kanji combine")
++            show("The on-readings are ハイ + ユウ.", "actor-components")
++            inline(await("contributes an entertainer or performer in this compound.", substring = true), "俳")
++            await("Article contents")
++            section("Readings")
++            show("The source metadata lists no kun reading.", "actor-backlink")
++            back()
++            await("The on-readings are ハイ + ユウ.", substring = true).assertIsDisplayed()
++            capture("system-back-actor-performer")
++            inline(await("also has an actor-related use here", substring = true), "優")
+@@ -289,3 +310,3 @@
+-            show(articleBullet("料亭 りょうてい — traditional Japanese restaurant, especially an upscale one"), "materials-forwardlink")
+-            inline(await(articleBullet("料亭 りょうてい — traditional Japanese restaurant, especially an upscale one")), "料亭")
+-            await("料亭 (りょうてい) — traditional Japanese restaurant")
++            show(articleBullet("俳優 はいゆう — actor"), "superior-forwardlink")
++            inline(await(articleBullet("俳優 はいゆう — actor")), "俳優")
++            await("俳優 (はいゆう) - actor")
+@@ -293 +314 @@
+-            show("not as the general word for Japanese food", "materials-forwardlink-word")
++            show("not automatically a football player or music-playback device", "superior-forwardlink-actor")
+@@ -296,4 +317,4 @@
+-            capture("system-back-materials")
+-            back()
+-            await("Read it as a modifier-plus-place compound", substring = true).assertIsDisplayed()
+-            capture("system-back-word-materials")
++            capture("system-back-superior")
++            back()
++            await("The on-readings are ハイ + ユウ.", substring = true).assertIsDisplayed()
++            capture("system-back-actor-superior")
+@@ -301,4 +322 @@
+-            show(articleBullet("レストラン is a broader restaurant word, especially associated with Western-style dining; the actual cuisine and naming vary."), "word-broader-restaurant")
+-            show(articleBullet("食堂 しょくどう can mean a dining hall or cafeteria, or an ordinary eatery. That is a different emphasis from 料亭, not a rule that their possible referents can never overlap."), "word-eatery-overlap")
+-            show(articleBullet("旅館 りょかん names a traditional Japanese inn: overnight lodging rather than the restaurant category. An inn may serve meals without making the two words synonyms."), "word-inn-boundary")
+-            show(articleBullet("There is no direct antonym."), "word-antonym-boundary")
++            show("the occupations are not synonyms.", "actor-occupation-boundary")
+@@ -306,2 +324 @@
+-            show("not as the general word for Japanese food", "word-facilities-boundary")
+-            show("The different spelling 涼亭", "word-homophone")
++            show("It does not by itself say whether the person is famous", "actor-status-boundary")
+@@ -318 +335 @@
+-            assertEquals("亭", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("俳", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -320 +337 @@
+-            click("pavilion; restaurant building")
++            click("haiku; actor")
+@@ -322 +339 @@
+-            assertEquals("亭", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("俳", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -332 +349 @@
+-                assertEquals("亭", question.card.kanji)
++                assertEquals("俳", question.card.kanji)
+@@ -335,2 +352,2 @@
+-                val key = "てい"
+-                assertFalse(question.question.options.any { it.key in setOf("ちん") })
++                val key = "はい"
++                assertFalse(question.question.options.any { it.key.isBlank() })
+@@ -346 +363 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "亭" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "俳" &&
+@@ -353 +370 @@
+-                    it.kanji == "亭" && it.mode == ReadingKind.Kun.mode.name }
++                    it.kanji == "俳" && it.mode == ReadingKind.Kun.mode.name }
+@@ -359,3 +376,3 @@
+-            await("pavilion; restaurant building").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "亭") })
+-            assertEquals(listOf("テイ", "チン"), card.onyomi.splitSep())
++            await("haiku; actor").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "俳") })
++            assertEquals(listOf("ハイ"), card.onyomi.splitSep())
+@@ -365 +382 @@
+-            assertEquals(listOf("テイ"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("ハイ"), card.quizOnyomi?.splitSep())
+@@ -368 +385 @@
+-            assertEquals(9, strokes.length())
++            assertEquals(10, strokes.length())
+@@ -385 +402 @@
+-            rule.onNode(hasContentDescription("9 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("10 strokes drawn", substring = true)).assertExists()
+@@ -390 +407 @@
+-                    it.kanji == "亭" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "俳" && it.mode == StudyMode.Draw.name }
+@@ -401 +418 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "亭" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "俳" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -414,2 +431,2 @@
+-            File(app.getExternalFilesDir(null), "n1-060-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-060-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-061-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-061-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -509 +526 @@
+-        File(app.getExternalFilesDir(null), "n1-060-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-061-$step.png").outputStream().use {

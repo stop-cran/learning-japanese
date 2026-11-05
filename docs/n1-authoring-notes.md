@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 061: textual review closed; fresh Android passed
+## Batch 061: textual review closed; native fixture compiled
 
 The [frozen membership](n1-sources/batch-061-membership.json) selects **俳**
 (source row 54) for one evidence-bounded packet. The
@@ -88,9 +88,24 @@ RealContentTest **3** / RareHanTest **1**, with no failures, errors or skips.
 Batch060 XML was not reused, and Gradle was not rerun for archival.
 The original denial and host-only heap qualification remain historical;
 no guest/app heap, assertion, runtime or archive guard changed.
-Native preparation is the next separate checkpoint. Native, visual,
-combined-main and publication gates remain; this is not delivered teaching
-or phone acceptance.
+The [execution375 checkpoint](n1-sources/execution-375.json) prepares and
+compiles the [batch-specific native fixture](n1-sources/batch-061-native-preparation.json)
+against the exact full `f891cb1e` Git archive: **8,311 verified runtime hashes /
+8,333 ZIP entries**, version `d01d660cc41262fe`, **1,073 kanji / 5,031 words /
+93 N1 cards**. Existing archive guards pass without changes.
+The APK contains the exact archive and both batch061 test classes; temporary
+Android source/assets were removed and its dedicated worktree is clean.
+The fixture imports through production ContentSync once, with planned
+**ハイ / no kun**, meaning/reading feedback, ten-stroke trace and recall-miss
+checks, offline routes and System Back. All **three reciprocal pairs**
+(**俳/俳句**, **俳/俳優**, **優/俳優**) are covered in six directions.
+Its **58 static article selectors / 31 article capture steps**, 44 single-glyph
+probes including actual **人/亻**, eight whole-word probes for **俳句/俳優**
+and four production font rows are preparation, not native readability evidence.
+Native execution is the next separate checkpoint, requiring fresh device/port
+ownership checks, terminal results for both cases and direct PNG inspection.
+Native, original-session serial visual, combined-main and publication gates
+remain; this is not delivered teaching or phone acceptance.
 Published coverage stays **87/1,228 additions; 1,141 remain**; the 89
 necessary supporting-word additions are unchanged. Accepted batch060 evidence
 and its historical limits remain intact, without redundant checks.
