@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "execution": 416,
+  "checkpoint": 416,
+  "batch": "065",
+  "startingHead": "ae36905bbb7f3a0693e354d37b2d7841c3f9ebfc",
+  "androidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "scope": "SAME065 fresh focused Android3+1 and exact evidence archival, normal signed local checkpoint only. No native/reviewer/runtime publication/066/second runner.",
+  "recordedAt": "2026-11-05T12:47:07.155196+00:00",
+  "authorization": {
+    "requestSha256": "06a404d61c1f6e0560d8756f2a4cf624b321b845f34aa04bd0eb60cef01b92a3",
+    "characters": 1725875,
+    "lines": 22515,
+    "completeFileLoadedAndCheckpointParsed": true,
+    "limits": "Entire request acquired and full embedded checkpoint parsed. Operative contract, complete final415 checkpoint and approved issue inspected directly. Historical middle acquired/parsed, not freshly semantically re-reviewed."
+  },
+  "testImplementationsAndHostInit": [
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core\\src\\test\\kotlin\\io\\github\\stopcran\\kanji\\core\\RealContentTest.kt",
+      "sha256": "4f019673d77a6899e435afc8d071794564e78f6148cf3019456184eb72ef2188"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\src\\test\\java\\io\\github\\stopcran\\kanji\\core\\RareHanTest.kt",
+      "sha256": "1409e85428837864409dce7f4ea371611d8a92839d4d0e86258e4c0a0a5a15ed"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-049-host-integration-heap.init.gradle",
+      "sha256": "ff2d68bd18491590f7cb38da7807d6ff40153e1dfbaef0cd744e50f4ccea742d"
+    }
+  ],
+  "preexistingXmlNotFreshAcceptance": [
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core\\build\\test-results\\test\\TEST-io.github.stopcran.kanji.core.RealContentTest.xml",
+      "sha256": "2378b9a0252759ed4922594ca4ddf7d45a74efe66435f8a85f2acc3cd3b57478",
+      "timestamp": "2026-11-05T08:12:52.731Z"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\build\\test-results\\testDebugUnitTest\\TEST-io.github.stopcran.kanji.core.RareHanTest.xml",
+      "sha256": "153279667e644c1aa85150b23c406010dd3b5083f43e80f0129554f356dd98bc",
+      "timestamp": "2026-11-05T08:18:27.534Z"
+    }
+  ],
+  "contentVersion": "6a940651167e0e94",
+  "manifestSha256": "5bd9d1a36a56e0af37a6a548e8e8c371ae07f1d2a227a926839dff7ca68fd91d",
+  "reconciliationSha256": "cf4bfe07a65ad8fd0ee5ee940c32441f9207f86a2aff143e398f63768ec7594c",
+  "fixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese",
+  "hostInitQualification": "Inherited049 HOST-only1GiB core Test heap. Original512MiB HOST OOM preserved; no guest/app heap or production guard change.",
+  "status": "blocked-before-fresh-android-execution-permission",
+  "blocker": {
+    "kind": "execution-permission",
+    "gate": "Fresh batch065 Android RealContentTest3 and RareHanTest1",
+    "attempts": 1,
+    "deniedCommand": "$ErrorActionPreference = 'Stop'; $env:JAVA_HOME = 'C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot'; $env:ANDROID_HOME = 'C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk'; Set-Location C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android; $started=[DateTimeOffset]::UtcNow; $started.ToString('o') | Set-Content -LiteralPath C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-065-android-start.txt -Encoding utf8NoBOM; Write-Output \"FRESH065_STARTED=$($started.ToString('o'))\"; Write-Output \"CONTENT_ROOT=$([IO.Path]::GetFullPath((Join-Path (Join-Path (Get-Location) 'core') '..\\..\\learning-japanese')))\"; & .\\gradlew.bat :core:test --tests 'io.github.stopcran.kanji.core.RealContentTest' :app:testDebugUnitTest --tests 'io.github.stopcran.kanji.core.RareHanTest' --no-daemon --no-parallel --max-workers=1 --rerun-tasks '-Pkotlin.compiler.execution.strategy=in-process' --init-script C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-049-host-integration-heap.init.gradle 2>&1 | Tee-Object -FilePath C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-416-android.txt; $result=$LASTEXITCODE; $result | Set-Content -LiteralPath C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-416-android-exit.txt -Encoding utf8NoBOM; Write-Output \"FRESH065_EXIT=$result\"; exit $result",
+    "message": "Permission denied because no interactive user response was available. Retry in an interactive session so the user can approve it, or try an alternative that does not require this permission.",
+    "disposition": "Preserve/report/yield. No retry, alternative invocation, permission/configuration change, old XML reuse or weakened gate."
+  },
+  "runtimePublished": false,
+  "publicationAttempted": false,
+  "freshTestsAccepted": false,
+  "noFreshArtifacts": [
+    "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-065-android-start.txt",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-416-android.txt",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-416-android-exit.txt"
+  ],
+  "nextAction": "SAME065 blocked before fresh Android execution. Approval-capable parent must resolve exact denied command preserved in control/execution-416-permission-blocker.json without permission/configuration changes or retry around denial. Preserve full live history and original denial. Fresh RealContentTest3/RareHanTest1/XML archive/normal signature gate remains; old064 XML is not065 acceptance. No native/publication/066/second runner. Physical-phone/general-release/whole-set outstanding.",
+  "limits": "Required command denied before execution; no fresh start/log/exit/XML or actual test failure. Old XML not reused. No workaround/retry or production/content change."
+}
