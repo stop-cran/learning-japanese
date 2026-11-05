@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "execution": 457,
+  "batch": "070",
+  "recordedAt": "2026-11-05T20:21:46.425288+01:00",
+  "stage": "local-unreviewed-draft",
+  "baseCommit": "caf2eebf5d8274adbd68e67349f4d12fffedbb30",
+  "sourceCheckpoint": "edf7db71ce6ffd808f83284e3ce05f203a16f801",
+  "authorization": {
+    "requestSha256": "939459ed9d4fe8b01042c0dab94ece6cf47533ed7c55f4c5ea7036812f067c45",
+    "characters": 1979411,
+    "lines": 26346,
+    "completeFileLoadedAndCheckpointParsed": true,
+    "limits": "Entire request acquired and complete embedded checkpoint parsed; operative contract, final456 checkpoint and complete approved issue inspected directly. Historical middle acquired/parsed, not freshly semantically re-reviewed."
+  },
+  "membership": [
+    "償"
+  ],
+  "sourceRow": 79,
+  "runtimeAdditions": [
+    "kanji/償.md",
+    "strokes/償.json",
+    "words/償う.md",
+    "words/補償.md"
+  ],
+  "changedReusedArticles": [
+    "kanji/補.md",
+    "words/補う.md"
+  ],
+  "runtimeHashes": {
+    "kanji/償.md": "32470b603df00f8d005071228656b092a39afc7f7909e6516f6a29f73a1bbbc7",
+    "words/償う.md": "bec6972e5da7fe736b373bef6ef815c66da5a08fbeabe6fabd524664e2e83ea3",
+    "words/補償.md": "143810833eb387c6ae57435ddd7b945c0d0f35bdaef7cad40fbd5ae3d2164a99",
+    "kanji/補.md": "3c4c2622752a4de56aece8cacc38485bd54e09336cd583a48d05fa44c9c12d94",
+    "words/補う.md": "3387355643b8b37024c0fae6b2520ba777004ccea5f5343e5ecdc997237b4074",
+    "strokes/償.json": "c00047d29d3471f9d03e5519a46e995eab6a2c42086a9688e33c516ad1f754e7"
+  },
+  "manifestContentVersion": "a9867cc4b455639a",
+  "checks": {
+    "validateReturnCode": 0,
+    "manifestFresh": true,
+    "targetedAuditRegressionTestsPassed": 34,
+    "testSkips": 0,
+    "contentBudgetReturnCode": 0,
+    "audit": "batch-070-draft-audit.json",
+    "auditSha256": "0f911db1a8058a3ab70c875a82938a62e846dce69c0ff8cf8860810bd83b3c71"
+  },
+  "fullValidationReceipts": [
+    {
+      "command": [
+        "C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "tools\\validate.py"
+      ],
+      "returncode": 0,
+      "stdout": "0 error(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "tools\\build_manifest.py"
+      ],
+      "returncode": 0,
+      "stdout": "manifest.json: 8338 files incl. 398 images, 201 scene catalogs, 36 listening passages, 1 curriculum catalogs, 40 listening tasks, version a9867cc4b455639a\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_audit_n1_*.py"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "..................................\n----------------------------------------------------------------------\nRan 34 tests in 0.005s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "tools\\check_content_budget.py"
+      ],
+      "returncode": 0,
+      "stdout": "{'files': 8345, 'entries': 8360, 'retainedBytes': 44081342, 'inflatedBytes': 44349680, 'localZipBytes': 30133596, 'listeningTaskMediaBytes': 5893602}\n",
+      "stderr": ""
+    }
+  ],
+  "interruptedChecks": [
+    {
+      "attempt": 1,
+      "result": "Draft audit stopped at offered-key ledger mismatch: kunKeys recorded the distinct stem つぐな rather than the normalized full reading key つぐなう.",
+      "remedy": "Correct the draft ledger's kunKeys to match the unchanged production reading-key mirror. Preserve the separate source-preparation offeredDistinctStems field as historical stem information. No source or runtime reading changed.",
+      "retry": "Full draft audit rerun after the ledger correction; final outcome recorded by successful audit evidence."
+    }
+  ],
+  "sourceArtifacts": {
+    "batch-070-comparison-jmdict.xml": "795864cc6e017c0aa327415ec38d00597129d92b1411ea8fc13a0c2bd1d2db78",
+    "batch-070-comparison-selection.json": "ab56c1b755ca578273dbd20b935bf44d1831095924cd5c840299af86fffd084c",
+    "batch-070-draft-audit.json": "0f911db1a8058a3ab70c875a82938a62e846dce69c0ff8cf8860810bd83b3c71",
+    "batch-070-font-preparation.json": "5a7f4d73d436bc6c10f0a8bc48a0cdfc639349750c76bacc72a7b5af105040fc",
+    "batch-070-input-metadata.json": "faba06591ad6b806153741931cdb40cf454e5a56762f38afee4a5cc2e64a0754",
+    "batch-070-jmdict.xml": "493e4b287a241fcad67af69f0f1a61904f52ba3a6d089e0d76cc41ae8a5caae2",
+    "batch-070-kanjidic2.xml": "8312fefc73efd22c031ded4e9d6cc0ba7b1e34d360e44409556f34f8a8359e2d",
+    "batch-070-lexical-selection.json": "9b3b08a46d32fd383ed7abf3748ecd5f51c562919862d90bb03bf5ef314f63ea",
+    "batch-070-membership.json": "eca960f6b63ba610420ef2c64738792d915154cb7b13dd764c399703b1b9af9b",
+    "batch-070-preparation-audit.json": "a17445b63277ab05d0441bf631bc407cf5b456e873d7fccd83ffb02cf5983ee8",
+    "batch-070-progress.json": "25416e2a983cd288259b0abac72952389926fec2c92fad121482e6286d0f87f6",
+    "batch-070-source-evidence.json": "2fde0946a05460e86eba7c3283addc044367dd975baf1e3d969d4e9e0b906b30",
+    "batch-070-stroke-evidence.json": "0593af459114f0f4bbf45dfbc1d6adcf0721c493bac30ada124eee1a2bd62ba1"
+  },
+  "durableRecipe": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\draft-batch-070.py",
+    "sha256": "b73ddf35fdbd88b833f0047e542321bde483c990aed40939a2ee1bb82cdff55c",
+    "origin": "Bounded helper reusing production converter/audit/extraction/manifest helpers and inspected prior batch069 draft and batch070 source audit patterns."
+  },
+  "reviewersLaunched": 0,
+  "androidNativeRuns": 0,
+  "publicationAttempted": false,
+  "publishedAdditions": 96,
+  "remainingAdditions": 1132,
+  "lastPublishedCommit": "caf2eebf5d8274adbd68e67349f4d12fffedbb30",
+  "nextAction": "SAME070 freeze this normally signed LOCAL UNREVIEWED draft; obtain two serial blind initial reviews from different actual model families on the same snapshot. Cover complete 償, both support articles, changed 補/補う passages in context, every reading, choices and phone-text comprehensibility, with common bounded dictionary access and read-only tools. Preserve full reports, actual model/session/tool limits, then adjudicate evidence. No Android/native, publication or071 until textual review closes.",
+  "limits": "Local UNREVIEWED draft only: one drafted070 row, zero review-closed or published070 rows. Coordinator audits are not independent review or teaching acceptance. Frozen membership and all baseline identities/readings/levels/exclusions remain unchanged. Two serial blind different-family textual reviews, Android/native/font/visual/current-main/normal-signing/owner-fast-forward/CI/every immutable ZIP hash/original budgets remain later gates. Androidf9b59a2+ required; physical-phone/general-release/whole-set acceptance outstanding. Published96/1228,1132remain;96published necessary supports are not an N1 vocabulary deck. Historical denials/OOMs/failed native attempts and full live history preserved."
+}

@@ -37,7 +37,38 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 070: source prepared; no runtime draft
+## Batch 070: local unreviewed runtime draft
+
+The [draft audit](n1-sources/batch-070-draft-audit.json) records one drafted
+**償** card, its generated **17-stroke** geometry and two necessary support
+articles, **償う（つぐなう）** and **補償（ほしょう）**. Both complete sourced
+readings remain in their original order, with two selected keys and separate
+linked table rows. Neither supporting word has an inferred vocabulary level.
+The three all-mapped reciprocal pairs have all six directed links, including
+the reused 補 counterpart. The only other reused change links the existing
+補償 comparison in 補う; metadata and original exclusions stay unchanged.
+Seven direct word-quiz guards cover the two new words and established
+loss-covering senses of 補う, 埋める and カバー, not a transitive clique.
+
+The exact pinned KanjiVG SVG is converted with the unchanged production tool,
+not hand-edited geometry. The audit checks source membership, full reading
+order, dictionary restrictions, baseline metadata/strokes, exact reused
+passages, manifest hashes, three curated wrong labels and the actual-text
+three-font cmap inventory. These checks are not independent linguistic
+review, live-quiz safety or native/phone readability acceptance.
+
+There are **zero review-closed or published batch-070 rows**. This checkpoint
+is a normally signed **local UNREVIEWED** snapshot only. The next checkpoint
+is two serial blind initial content reviews from different actual model
+families on that same frozen snapshot, followed by evidence-based
+reconciliation. Android/native/font/visual/current-main/publication gates
+remain later work; no reviewer or Android/native run is launched here.
+Published coverage remains **96/1,228 additions; 1,132 remain**, with
+96 published necessary support additions, not an N1 vocabulary deck.
+Compatible Android `f9b59a2+` is required; physical-phone, general-release
+and whole-set acceptance remain outstanding.
+
+### Historical source preparation
 
 The [frozen batch](n1-sources/batch-070-membership.json) selects **償**,
 source row 79, after batch 069's
@@ -71,8 +102,8 @@ word-quiz guards, not a transitive exclusion clique.
 The pinned SVG's identity/count and bundled-font cmaps are source-stage
 checks only; conversion and actual-text/native visual acceptance remain later gates.
 
-There are **zero drafted, review-closed or published batch-070 rows**.
-The next checkpoint is the same batch's bounded runtime draft and normally
+At the source-preparation checkpoint there were **zero drafted, review-closed
+or published batch-070 rows**. Its next checkpoint was the bounded runtime draft and normally
 signed **local unreviewed** snapshot, not review, publication or batch 071.
 Published coverage remains **96/1,228 additions; 1,132 remain**.
 The 96 published necessary support additions are not an N1 vocabulary deck.
