@@ -37,6 +37,31 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 058: source preparation only
+
+The [source ledger](n1-sources/batch-058-progress.json) freezes **丘**,
+one remaining source member, at published batch057 base `c064f0c7`.
+All **42 complete lexical families**, **23 disjoint comparison families**
+and **nine raw KANJIDIC2 character records** were inspected. Full
+**キュウ / おか**, grade 8, canonical **一 (1)** and **five strokes**
+are preserved in the source evidence, not yet installed as a character card.
+
+Existing **丘（おか）** is a useful exact support candidate; its independent
+**N3** level, primary reading and **坂** exclusion must remain unchanged.
+Potential new **砂丘（さきゅう）** would support キュウ without an inferred
+word level. The complete family retains alternate しゃきゅう and irregular
+沙丘; dictionary order does not establish a rarity ranking. The
+[Japanese evidence](n1-sources/batch-058-source-evidence.json) identifies
+the actual returned headings and the encyclopedia-only extraction limit.
+Neither 比丘（びく） nor archaic 丘（つかさ） changes the full source readings.
+
+Mountain/slope labels and legacy fallback choices need deliberate quiz
+review, not title-string comparison. All selected reciprocal pairs must
+include reused articles and the existing 砂 card if 砂丘 is authored.
+No runtime draft, final curation, geometry, font/native acceptance,
+independent review or new publication is claimed here.
+Published coverage remains **84 additions; 1,144 still to deliver**.
+
 ## Batch 057: local unreviewed runtime draft
 
 The [draft ledger](n1-sources/batch-057-progress.json) now records **企**,
