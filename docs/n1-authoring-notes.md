@@ -37,7 +37,28 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 058: local unreviewed runtime draft
+## Batch 058: initial textual reviews; process reconciliation pending
+
+The [original initial-review record](n1-reviews/batch-058-initial-review-checkpoint.json)
+preserves blind **Claude Opus 5.5 / GPT-6.1 Sol** reports on the same signed
+`58b53fd31b6d55baba32c049fba62ac739feb004` teaching snapshot.
+Both report **CLEAN** correctness, scoped coverage and textual comprehensibility
+for all five new/changed teaching files, with no actionable teaching finding.
+Exact returned-range audits cover all **26 assigned local resources** for each,
+including **68 complete JMdict families / 11 raw character records**.
+Both independently fetched the bounded public dictionary pages; original
+partial-page and recovered local-read limits remain in their reports.
+
+The reviewer processes exited serially, and the complete first original report
+was archived before the second launch. However, Claude's execution shows
+**three overlapping tool-start events in two responses**, explicitly disclosed
+in its report; GPT shows none. This violates the internal one-call instruction.
+The history is preserved, not rebranded as strict process acceptance.
+The next checkpoint is bounded serial original-session confirmation and
+process reconciliation, **not publication or another blind full-dossier review**.
+Three nonblocking Claude suggestions remain optional; no teaching edit was
+needed or made here. Prior draft validation is inherited on unchanged runtime,
+not freshly rerun by this documentation-only checkpoint.
 
 The [draft ledger](n1-sources/batch-058-progress.json) records **丘**, with
 both full sourced readings **キュウ / おか** preserved and selected.
@@ -71,11 +92,11 @@ and changes three reused payloads; **8,297** old runtime hashes remain
 unchanged. The source-preparation questions below are historical, not
 unresolved claims of draft acceptance.
 
-Next SAME058: two serial blind different-model-family content reviews
-of one signed snapshot, covering all three facets across both complete
-new articles and every reused passage/metadata change. Fresh Android,
+Next SAME058: resolve the recorded process deviation with bounded serial
+original-session confirmation, preserving the original initial history.
+Fresh Android,
 full-archive native/visual, combined-main and publication gates remain.
-**No independent acceptance or runtime push** is claimed. Published
+**No review closure, native acceptance or runtime push** is claimed. Published
 coverage remains **84/1,228; 1,144 still to deliver**; local
 **1,070 kanji / 5,029 words / 90 N1 labels** include this unpublished
 addition. Compatible Android `f9b59a2` or later is required; physical-phone,
