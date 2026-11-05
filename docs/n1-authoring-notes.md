@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 061: textual review closed; fresh Android execution blocked
+## Batch 061: textual review closed; fresh Android passed
 
 The [frozen membership](n1-sources/batch-061-membership.json) selects **俳**
 (source row 54) for one evidence-bounded packet. The
@@ -77,12 +77,20 @@ closes both model families' teaching review on unchanged snapshot
 `2567f5e7b3888f2df3ed560f618341266b471902`. Initial Claude process
 noncompliance remains historical; four supervised dependent lexical turns
 are prospective remediation, not retroactive initial compliance.
-The [execution373 receipt](n1-sources/execution-373.json) records the exact
-fresh Android command denied before execution. No new start/log/exit artifact
-exists; batch060 XML is not batch061 acceptance. Resume only through an
-approval-capable parent resolving that exact command, without retrying around
-the denial or changing permissions. Native, visual, combined-main and
-publication gates remain; this is not delivered teaching or phone acceptance.
+The [execution373 receipt](n1-sources/execution-373.json) preserves the exact
+fresh Android command denied before execution. An approval-capable parent
+subsequently ran that exact command once against clean content `f75afec0`
+and Android `f9b59a2`, completing **41 executed tasks** successfully.
+The [execution374 archive](n1-sources/execution-374.json) independently verifies
+all six provenance hashes, source/copied XML equality, four exact named cases,
+fresh timestamps after the actual start and the dedicated sibling content root:
+RealContentTest **3** / RareHanTest **1**, with no failures, errors or skips.
+Batch060 XML was not reused, and Gradle was not rerun for archival.
+The original denial and host-only heap qualification remain historical;
+no guest/app heap, assertion, runtime or archive guard changed.
+Native preparation is the next separate checkpoint. Native, visual,
+combined-main and publication gates remain; this is not delivered teaching
+or phone acceptance.
 Published coverage stays **87/1,228 additions; 1,141 remain**; the 89
 necessary supporting-word additions are unchanged. Accepted batch060 evidence
 and its historical limits remain intact, without redundant checks.
