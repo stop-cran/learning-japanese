@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "execution": 412,
+  "batch": "064",
+  "scope": "Coordinator acceptance-helper corrections only; no teaching, manifest, reader, native, review or permission change.",
+  "observedFailures": [
+    {
+      "phase": "evidence verification",
+      "error": "FileNotFoundError for descriptive rawExecutionLocation 'Sibling control\\batch-064-confirmation-claude.jsonl'.",
+      "resolution": "Resolve the known preserved confirmation report basename under the actual sibling control directory and verify the original recorded raw hash."
+    },
+    {
+      "phase": "Python result verification",
+      "error": "Assertion that the combined output ended with OK failed because buffered fixture output follows unittest's successful summary.",
+      "resolution": "Require the actual Ran 368 tests ... OK summary and test runner exit0; retain complete original output, including trailing fixture output."
+    },
+    {
+      "phase": "publication evidence records",
+      "error": "KeyError pendingGates after publication JSON had been saved; the batch ledger did not previously declare that optional key.",
+      "resolution": "Preserve the actual historical status/nextAction/limits, add the current empty pendingGates list explicitly, and resume only after verifying the single partial publication record against exact accepted SHA/CI/archive receipts. No accepted commit or original ledger history was replaced."
+    }
+  ],
+  "artifacts": {
+    "acceptanceHelper": "execution-412.py",
+    "correctedPublicationHelper": "execution-412-publication.py",
+    "limits": "Original failed invocations remain in the execution log. Helper repairs do not constitute new linguistic or native acceptance."
+  }
+}
