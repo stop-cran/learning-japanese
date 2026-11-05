@@ -1,0 +1,261 @@
+--- docs/n1-reviews/batch-061-native/N1Batch061NativeTest.kt
++++ docs/n1-reviews/batch-062-native/N1Batch062NativeTest.kt
+@@ -49 +49 @@
+-private fun disposable061() {
++private fun disposable062() {
+@@ -54 +54 @@
+-class N1Batch061GlyphTest {
++class N1Batch062GlyphTest {
+@@ -57,2 +57,2 @@
+-    @Test fun haikuActorLookalikesAndPersonFallbackAcrossFourProductionFamilies() {
+-        disposable061()
++    @Test fun salaryLookalikesAndPersonFallbackAcrossFourProductionFamilies() {
++        disposable062()
+@@ -61 +61 @@
+-        val text = "俳 非 悲 借 優 人 亻 昔 心 句 憂 俳句 俳優"
++        val text = "俸 棒 奉 借 付 人 亻 木 給 糸 合 俸給"
+@@ -65 +65 @@
+-                    Text("Batch 061: haiku and actor / look-alikes / person fallback")
++                    Text("Batch 062: salary / look-alikes / person fallback")
+@@ -70 +70 @@
+-                    Text("Compare 俳 with 非, 悲, 借 and 優. Inspect actual 人 versus 亻, 非 versus 昔, 心 and 憂, and both words 俳句 and 俳優. Shared fallback need not give four different designs.", fontSize = 18.sp)
++                    Text("Compare 俸 with 棒, 奉, 借 and 付. Inspect actual 人 versus 亻, 木 versus 亻, 給 with 糸 and 合, and both characters in 俸給. Shared fallback need not give four different designs.", fontSize = 18.sp)
+@@ -81 +81 @@
+-            for (char in listOf("俳", "非", "悲", "借", "優", "人", "亻", "昔", "心", "句", "憂")) {
++            for (char in listOf("俸", "棒", "奉", "借", "付", "人", "亻", "木", "給", "糸", "合")) {
+@@ -102 +102 @@
+-            for (word in listOf("俳句", "俳優")) {
++            for (word in listOf("俸給")) {
+@@ -129 +129 @@
+-        assertEquals(52, rows.length())
++        assertEquals(48, rows.length())
+@@ -133 +133 @@
+-        File(context.getExternalFilesDir(null), "n1-061-font-pairs.png").outputStream().use {
++        File(context.getExternalFilesDir(null), "n1-062-font-pairs.png").outputStream().use {
+@@ -136 +136 @@
+-        File(context.getExternalFilesDir(null), "n1-061-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-062-font-raster.json").writeText(JSONObject()
+@@ -139,2 +139,2 @@
+-            .put("individualGlyphProbes", 44).put("wholeWordRasterProbes", 8)
+-            .put("limits", "Forty-four single-character native Paint probes including actual 人 and 亻, eight complete-word nonblank raster probes and four production Compose rows; actual 俳/非/悲/借/優/人/亻/昔/心/句/憂/俳句/俳優 readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
++            .put("individualGlyphProbes", 44).put("wholeWordRasterProbes", 4)
++            .put("limits", "Forty-four single-character native Paint probes including actual 人 and 亻, four complete-word nonblank raster probes and four production Compose rows; actual 俸/棒/奉/借/付/人/亻/木/給/糸/合/俸給 readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
+@@ -145 +145 @@
+-class N1Batch061ArticleTest {
++class N1Batch062ArticleTest {
+@@ -150,2 +150,2 @@
+-    @Test fun fullSingleImportOfflineHaikuActorThreeReciprocalPairsOnOnlyDrawingAndSystemBack() {
+-        disposable061()
++    @Test fun fullSingleImportOfflineSalaryTwoReciprocalPairsOnOnlyDrawingAndSystemBack() {
++        disposable062()
+@@ -154,2 +154,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-061-${UUID.randomUUID()}", "main")
+-        val head = "f891cb1e0b43c4fefcb31da16f28f3159b49aea4"
++        val source = RepoSource("acceptance-fixture", "n1-062-${UUID.randomUUID()}", "main")
++        val head = "e157d58c5bdb9fc2d58d7043fdf0429d36f5c040"
+@@ -163 +163 @@
+-                    instrumentation.context.assets.open("n1-batch-061-f891cb1e-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-062-e157d58c-envelope.zip")
+@@ -178,2 +178,2 @@
+-        assertEquals(1073, updated.kanji)
+-        assertEquals(5031, updated.words)
++        assertEquals(1074, updated.kanji)
++        assertEquals(5032, updated.words)
+@@ -182 +182 @@
+-        assertEquals("d01d660cc41262fe", meta.contentVersion)
++        assertEquals("545c56b5d4b4e8ef", meta.contentVersion)
+@@ -190,10 +190,10 @@
+-        assertEquals(93, n1.size)
+-        val performer = n1.single { it.kanji == "俳" }
+-        assertEquals(listOf("ハイ"), performer.onyomi.splitSep())
+-        assertEquals(emptyList<String>(), performer.kunyomi.splitSep())
+-        assertNotNull(performer.quizOnyomi)
+-        assertNotNull(performer.quizKunyomi)
+-        assertEquals(listOf("ハイ"), performer.quizOnyomi?.splitSep())
+-        assertEquals(emptyList<String>(), performer.quizKunyomi?.splitSep())
+-        assertEquals(listOf("はい"), performer.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(emptyList<String>(), performer.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(94, n1.size)
++        val salary = n1.single { it.kanji == "俸" }
++        assertEquals(listOf("ホウ"), salary.onyomi.splitSep())
++        assertEquals(emptyList<String>(), salary.kunyomi.splitSep())
++        assertNotNull(salary.quizOnyomi)
++        assertNotNull(salary.quizKunyomi)
++        assertEquals(listOf("ホウ"), salary.quizOnyomi?.splitSep())
++        assertEquals(emptyList<String>(), salary.quizKunyomi?.splitSep())
++        assertEquals(listOf("ほう"), salary.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(emptyList<String>(), salary.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -213 +213 @@
+-                        if (card.kanji == "俳") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "俸") now - 60_000 else now + 30L * 86_400_000,
+@@ -219 +219 @@
+-                            if (card.kanji == "俳" && (kind == ReadingKind.On && key == "はい")) now - 60_000
++                            if (card.kanji == "俸" && (kind == ReadingKind.On && key == "ほう")) now - 60_000
+@@ -226 +226 @@
+-                    0, source.id, "jlpt-n1", "俳", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "俸", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -236,4 +236,4 @@
+-            .put("fullOnyomi", JSONArray(performer.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(performer.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(performer.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(performer.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("fullOnyomi", JSONArray(salary.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(salary.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(salary.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(salary.toReadingCard().quizKeys(ReadingKind.Kun)))
+@@ -242 +242 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 俳 meaning and sole curated on key due; explicit no-kun. Two historical good 俳 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 俸 meaning and sole curated on key due; explicit no-kun. Two historical good 俸 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -249 +249 @@
+-            await("N1 · 93 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 94 cards").performScrollTo().assertIsDisplayed()
+@@ -252,2 +252,2 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("俳")
+-            click("haiku; actor")
++            rule.onNode(hasSetTextAction()).performTextReplacement("俸")
++            click("salary; stipend")
+@@ -258 +258,2 @@
+-            show("俳 connects two useful vocabulary families", "kanji-meaning")
++            show("俸 concerns salary or a stipend", "kanji-meaning")
++            show("but is not restricted to government employment.", "kanji-employment-boundary")
+@@ -261,2 +262,2 @@
+-            show(readingExample("俳句 はいく — haiku; 俳優 はいゆう — actor; actress"), "kanji-on-reading")
+-            show("The source metadata lists no kun reading.", "kanji-no-kun")
++            show(readingExample("俸給 ほうきゅう — salary; pay"), "kanji-on-reading")
++            show("pronounced ぽう, not ぼう", "kanji-no-kun-and-annual-reading")
+@@ -264,4 +265,4 @@
+-            show(articleBullet("The right-hand 非 does not make these words mean \"not a poem\" or \"not an actor.\" A visible component is not a word-by-word translation rule."), "kanji-component-boundary")
+-            show(articleBullet("悲 has 非 above 心, rather than a person-shaped component on the left. 借 shares 亻 but has 昔 on the right, not 非."), "kanji-lookalikes")
+-            show(articleBullet("In 俳優, 優 also has a performer-related use; translating it as \"gentle\" does not explain the occupation."), "kanji-performer-boundary")
+-            show(articleBullet("The traditional Japanese haiku pattern concerns Japanese sound units, not seventeen English syllables. The linked 俳句 article explains the form and its qualifications."), "kanji-mora-boundary")
++            show(articleBullet("棒, \"rod; stick,\" has 木 on the left instead of 亻. Write 年俸 for annual salary; JMdict marks 年棒 as irregular kanji usage."), "kanji-spelling-boundary")
++            show(articleBullet("借, \"borrow; rent,\" and 付, \"attach,\" share 亻 but have different right sides. Neither names a salary."), "kanji-lookalikes")
++            show(articleBullet("年俸 specifies an annual basis or a year's salary, not necessarily a single yearly payment. The word alone does not establish a payment schedule."), "kanji-payment-schedule")
++            show(articleBullet("Historical 俸禄 ほうろく means a retainer's stipend. That historical use does not make modern 俸給 a payment in rice."), "kanji-historical-boundary")
+@@ -269,2 +270,4 @@
+-            inline(await(articleBullet("俳句 はいく — haiku, a short poetic form")), "俳句")
+-            await("俳句 (はいく) - haiku")
++            show(articleBullet("年俸 ねんぽう — annual salary"), "kanji-annual-compound")
++            show(articleBullet("減俸 げんぽう — salary reduction"), "kanji-reduction-compound")
++            inline(await(articleBullet("俸給 ほうきゅう — salary; pay, especially for public employees")), "俸給")
++            await("俸給 (ほうきゅう) — salary; pay")
+@@ -272,4 +275,4 @@
+-            show("Free-form and nonseasonal haiku also exist", "haiku-form-qualification")
+-            show(articleBullet("春の俳句を作りました。 (はるのはいくをつくりました。) - I composed a spring haiku."), "haiku-composing-example")
+-            show(articleBullet("この俳句には春の季語が入っています。 (このはいくにははるのきごがはいっています。) - This haiku contains a spring seasonal word."), "haiku-season-example")
+-            show("A mora is a timing unit", "haiku-mora-definition")
++            show("It is not a government-only synonym of salary.", "salary-employment-boundary")
++            show(articleBullet("俸給を受け取っています。 (ほうきゅうをうけとっています。) — I receive a salary."), "salary-receiving-example")
++            show(articleBullet("俸給が上がりました。 (ほうきゅうがあがりました。) — My salary went up."), "salary-increase-example")
++            show("The second reports an increase, not a change of occupation.", "salary-example-explanation")
+@@ -277,2 +280,2 @@
+-            show("The on readings combine as はい + く.", "haiku-components")
+-            inline(await("The on readings combine as はい + く.", substring = true), "俳")
++            show("Keep both long vowels.", "salary-components")
++            inline(await("The on readings are ホウ + キュウ: ほうきゅう.", substring = true), "俸")
+@@ -281,27 +284,5 @@
+-            show("The source metadata lists no kun reading.", "haiku-backlink")
+-            back()
+-            await("The on readings combine as はい + く.", substring = true).assertIsDisplayed()
+-            capture("system-back-haiku")
+-            section("Synonyms and antonyms")
+-            show("names a person rather than a poem.", "haiku-comparison")
+-            section("Distinctive meaning")
+-            show("Do not define every haiku as seventeen English syllables", "haiku-distinctive")
+-            back()
+-            await("Common words")
+-            inline(await(articleBullet("俳優 はいゆう — actor; actress")), "俳優")
+-            await("俳優 (はいゆう) - actor")
+-            section("Meaning")
+-            show("the word is not inherently restricted to men.", "actor-gender-boundary")
+-            show(articleBullet("彼女は映画で活躍する俳優です。 (かのじょはえいがでかつやくするはいゆうです。) - She is an actor active in films."), "actor-film-example")
+-            show(articleBullet("子どものころから俳優になりたかったです。 (こどものころからはいゆうになりたかったです。) - I have wanted to become an actor since childhood."), "actor-childhood-example")
+-            show("好きな俳優 (すきなはいゆう)", "actor-noun-attachment")
+-            section("How the kanji combine")
+-            show("The on-readings are ハイ + ユウ.", "actor-components")
+-            inline(await("contributes an entertainer or performer in this compound.", substring = true), "俳")
+-            await("Article contents")
+-            section("Readings")
+-            show("The source metadata lists no kun reading.", "actor-backlink")
+-            back()
+-            await("The on-readings are ハイ + ユウ.", substring = true).assertIsDisplayed()
+-            capture("system-back-actor-performer")
+-            inline(await("also has an actor-related use here", substring = true), "優")
++            show("pronounced ぽう, not ぼう", "salary-backlink")
++            back()
++            await("Keep both long vowels.", substring = true).assertIsDisplayed()
++            capture("system-back-salary-stipend")
++            inline(await("The on readings are ホウ + キュウ: ほうきゅう.", substring = true), "給")
+@@ -310,3 +291,3 @@
+-            show(articleBullet("俳優 はいゆう — actor"), "superior-forwardlink")
+-            inline(await(articleBullet("俳優 はいゆう — actor")), "俳優")
+-            await("俳優 (はいゆう) - actor")
++            show(articleBullet("俸給 ほうきゅう — salary; pay, especially for public employees"), "pay-forwardlink")
++            inline(await(articleBullet("俸給 ほうきゅう — salary; pay, especially for public employees")), "俸給")
++            await("俸給 (ほうきゅう) — salary; pay")
+@@ -314 +295 @@
+-            show("not automatically a football player or music-playback device", "superior-forwardlink-actor")
++            show("not as a rule forbidding its use for company employees.", "pay-forwardlink-salary")
+@@ -317,4 +298,4 @@
+-            capture("system-back-superior")
+-            back()
+-            await("The on-readings are ハイ + ユウ.", substring = true).assertIsDisplayed()
+-            capture("system-back-actor-superior")
++            capture("system-back-pay")
++            back()
++            await("Keep both long vowels.", substring = true).assertIsDisplayed()
++            capture("system-back-salary-pay")
+@@ -322 +303,3 @@
+-            show("the occupations are not synonyms.", "actor-occupation-boundary")
++            show("overlap this employment-pay sense.", "salary-synonyms")
++            show("specifies a monthly salary.", "salary-monthly-boundary")
++            show("sources other than employment.", "salary-income-boundary")
+@@ -324 +307,2 @@
+-            show("It does not by itself say whether the person is famous", "actor-status-boundary")
++            show("not as a rule forbidding its use for company employees.", "salary-employment-guide")
++            show("The word alone does not tell you the payment interval", "salary-document-boundary")
+@@ -335 +319 @@
+-            assertEquals("俳", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("俸", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -337 +321 @@
+-            click("haiku; actor")
++            click("salary; stipend")
+@@ -339 +323 @@
+-            assertEquals("俳", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("俸", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -349 +333 @@
+-                assertEquals("俳", question.card.kanji)
++                assertEquals("俸", question.card.kanji)
+@@ -352 +336 @@
+-                val key = "はい"
++                val key = "ほう"
+@@ -363 +347 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "俳" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "俸" &&
+@@ -370 +354 @@
+-                    it.kanji == "俳" && it.mode == ReadingKind.Kun.mode.name }
++                    it.kanji == "俸" && it.mode == ReadingKind.Kun.mode.name }
+@@ -376,3 +360,3 @@
+-            await("haiku; actor").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "俳") })
+-            assertEquals(listOf("ハイ"), card.onyomi.splitSep())
++            await("salary; stipend").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "俸") })
++            assertEquals(listOf("ホウ"), card.onyomi.splitSep())
+@@ -382 +366 @@
+-            assertEquals(listOf("ハイ"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("ホウ"), card.quizOnyomi?.splitSep())
+@@ -407 +391 @@
+-                    it.kanji == "俳" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "俸" && it.mode == StudyMode.Draw.name }
+@@ -418 +402 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "俳" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "俸" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -431,2 +415,2 @@
+-            File(app.getExternalFilesDir(null), "n1-061-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-061-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-062-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-062-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -526 +510 @@
+-        File(app.getExternalFilesDir(null), "n1-061-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-062-$step.png").outputStream().use {

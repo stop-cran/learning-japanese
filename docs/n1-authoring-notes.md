@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 062: textual review closed; fresh Android checks archived
+## Batch 062: textual review closed; native fixture compiled
 
 The [frozen membership](n1-sources/batch-062-membership.json) selects **俸**
 (source row 56) for one evidence-bounded packet. The
@@ -87,9 +87,21 @@ workaround, test/assertion change, guest/app heap or archive-guard increase
 was made. The qualified host-only 1-GiB core-test setting and original
 host-OOM history remain explicit in the evidence.
 
-The next checkpoint prepares an exact full-archive native fixture through
-production ContentSync once, with native execution and original-session
-serial dependent visual confirmation still separate and pending.
+The [execution 385 preparation receipt](n1-sources/execution-385.json)
+freezes the full signed `e157d58c` Git archive: **8,314 runtime hashes**,
+**8,336 ZIP entries**, unchanged byte budgets and content version
+`545c56b5d4b4e8ef` (**1,074 kanji / 5,032 words / 94 N1 cards**).
+The batch-specific fixture compiles with one Gradle worker and its APK
+contains the exact archive and both current test classes. Temporary Android
+source/assets are removed; production code and runtime content are unchanged.
+It prepares production ContentSync **once**, **ホウ / no kun**, ten-stroke
+drawing, both **俸/俸給** and **給/俸給** pairs in four directions, System Back
+and offline routes. **46 static article selectors / 28 article capture steps**,
+44 single-glyph probes including actual **人/亻**, four **俸給** word probes
+and four production font rows are preparation, not native-readability acceptance.
+The next checkpoint executes the fixture after fresh device/port ownership
+inspection. Native execution and original-session serial dependent visual
+confirmation remain separate and pending.
 Native, integration and public-archive gates remain pending.
 Published coverage stays **88 additions; 1,140 to deliver**. No batch 063,
 runtime publication or physical-phone/general-release acceptance is claimed.
