@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "execution": 377,
+  "batch": "061",
+  "status": "bounded-native-visual-reconciled-pending-combined-main-publication",
+  "snapshot": "f2267727d982589890b2f4ae0b17e82666337956",
+  "reviewedTeachingSnapshot": "2567f5e7b3888f2df3ed560f618341266b471902",
+  "nativeEvidence": "n1-sources/execution-376.json",
+  "nativeEvidenceSha256": "538bc76ec6fdbe1c9eaac259c7cf903318e564c91dc6ad2fb20597b3559813ee",
+  "textualReconciliation": "batch-061-reconciliation.json",
+  "textualReconciliationSha256": "c9f3ecf2a92f56da706269fc18536ee252624a15c8bd1d2149fe9460ec08693e",
+  "reviewers": [
+    {
+      "model": "claude-opus-5.5",
+      "sessionId": "537a357b-564b-433a-897c-1285b08defb2",
+      "report": "batch-061-visual-claude.md",
+      "reportSha256": "9b4b7ea79d12bbee36c5942407b5a816abf622b95b789a07b7a1a0990d51b04a",
+      "execution": "batch-061-visual-claude-execution.json",
+      "executionSha256": "df384bc59ea2900fff250cd9bdd6dcba45800f8ff1e59aa47ada5297b294cc38",
+      "toolCalls": 31,
+      "imagePayloads": 20,
+      "overlaps": 1,
+      "multiToolResponses": 1,
+      "exitCode": 0,
+      "startedAt": "2026-11-05T05:44:02.4020765+01:00",
+      "completedAt": "2026-11-05T05:46:49.2887808+01:00",
+      "freshScope": "Own initial report, complete俳/俳句/俳優/優, fixture54-148/150-270/271-350/351-430,20distinctPNGpayloads; Claude also own latest supervised lexical confirmation."
+    },
+    {
+      "model": "claude-opus-5.5",
+      "sessionId": "537a357b-564b-433a-897c-1285b08defb2",
+      "report": "batch-061-visual-claude-glyph.md",
+      "reportSha256": "22b469d3b70492c4e9e855507f6ea07209dc9186ea4632ad43cd37cb2d596ab2",
+      "execution": "batch-061-visual-claude-glyph-execution.json",
+      "executionSha256": "a4e54bc8e126dafa2a5956f4bc00d92805e51d1983bf331ce3e82234865cd3a6",
+      "toolCalls": 1,
+      "imagePayloads": 1,
+      "overlaps": 0,
+      "multiToolResponses": 0,
+      "exitCode": 0,
+      "startedAt": "2026-11-05T05:47:28.2594813+01:00",
+      "completedAt": "2026-11-05T05:48:01.3597828+01:00",
+      "freshScope": "Exactly one font-pairs PNG; original report's style description corrected."
+    },
+    {
+      "model": "claude-opus-5.5",
+      "sessionId": "537a357b-564b-433a-897c-1285b08defb2",
+      "report": "batch-061-visual-claude-selection.md",
+      "reportSha256": "c89f363eebf02206091fc00fba7795017062b3f537a4b3ce1162a66513064bf6",
+      "execution": "batch-061-visual-claude-selection-execution.json",
+      "executionSha256": "22aa969ec8c9dd3b6b5d028a691bc6d6d187df96b95fa83b809c3ee318b21ea8",
+      "toolCalls": 1,
+      "imagePayloads": 1,
+      "overlaps": 0,
+      "multiToolResponses": 0,
+      "exitCode": 0,
+      "startedAt": "2026-11-05T05:48:06.7917515+01:00",
+      "completedAt": "2026-11-05T05:48:33.5502768+01:00",
+      "freshScope": "Exactly one selection PNG; original visible selection judgment retained."
+    },
+    {
+      "model": "gpt-6.1-sol",
+      "sessionId": "89aec53d-9f60-44ad-9cd7-f859fe24d8fd",
+      "report": "batch-061-visual-gpt.md",
+      "reportSha256": "84c2b670783dc3c50b07510756cbb46f6dfa5892eb141931c4f562204c4a7aef",
+      "execution": "batch-061-visual-gpt-execution.json",
+      "executionSha256": "1a602b137467c9cf12895325c833948b7873ab7599fda56c861b829a78d5424f",
+      "toolCalls": 30,
+      "imagePayloads": 20,
+      "overlaps": 0,
+      "multiToolResponses": 0,
+      "exitCode": 0,
+      "startedAt": "2026-11-05T05:48:39.5934390+01:00",
+      "completedAt": "2026-11-05T05:50:41.9498923+01:00",
+      "freshScope": "Own initial report, complete俳/俳句/俳優/優, fixture54-148/150-270/271-350/351-430,20distinctPNGpayloads; Claude also own latest supervised lexical confirmation."
+    }
+  ],
+  "verdicts": {
+    "kanji/俳.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "words/俳句.md:changed-link-and-coupled-context": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "words/俳優.md:changed-link-and-coupled-context": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    },
+    "kanji/優.md:added-link-and-coupled-context": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "comprehensibility": "CLEAN"
+    }
+  },
+  "findings": [],
+  "newActionableDefects": [],
+  "processReconciliation": [
+    {
+      "id": "061-P3",
+      "status": "partially resolved",
+      "originalEvidence": "Claude visual report used one two-image response/font-pairs+selection, with one observed overlapping tool start. Original complete report/execution preserved. Archival assertion correctly failed and stopped subsequent launch.",
+      "remediation": "Two separately exiting original-session processes each had exactly ONE image view and zero overlaps/multi-tool responses. Both complete reports and audits archived before GPT launch. Prospective resource-bound remediation complete; original strict process violation irreversible."
+    }
+  ],
+  "reportCorrection": {
+    "status": "resolved",
+    "kind": "understated-font-style-differences",
+    "resolution": "Original Claude visual report said only Textbook was clearly different. One-image original-session clarification explicitly identifies four different stroke styles. Readability/distinguishability judgments retained; no teaching edit. Actual fallback face remains unknown."
+  },
+  "optional": [
+    {
+      "origin": "claude",
+      "status": "optional",
+      "claim": "One俳優 link wraps between its two characters.",
+      "disposition": "Nonblocking paragraph wrapping; no demonstrated teaching defect or unrelated UI change."
+    }
+  ],
+  "coordinatorAdjudication": [
+    "Both reviews retain inherited textual correctness/coverage with new bounded screenshot comprehension evidence. No new actionable defect established; no teaching edits.",
+    "Claude's complete-row wording is bounded by the separate actor-backlink capture showing the entireハイ row. The kanji-no-kun viewport clips the label and is not whole-table certification.",
+    "Claude's six-link visual prose is conservatively limited: native fixture/raw route proves six transitions; static screenshots corroborate selected page regions, not tap chronology or every intermediate landing.",
+    "GPT's source/destination separation and cropped-cell qualification are accepted. Static screenshot names and byte hashes do not prove comprehension.",
+    "Original061-P1/P2 remain historical per unchanged372 reconciliation. New061-P3 has prospective supervised remediation, not retroactive strict process acceptance.",
+    "No new actionable teaching finding unique to either family. Claude report-style correction and cosmetic optional do not establish a general model ranking."
+  ],
+  "glyphObservation": "Fourproductionfontrows俳非悲借優 distinct; actual人亻昔心句憂/俳句/俳優 readable/no blankboxes. Actual人/亻 and非/昔 distinct; fourstroke styles visible; fallbackfaceunknown.",
+  "actualMeaningOptions": [
+    "translate; explanation",
+    "silkworm",
+    "haiku; actor",
+    "tree; establish"
+  ],
+  "actualOnOptions": [
+    "ナイ",
+    "ハン",
+    "ツイ",
+    "ハイ"
+  ],
+  "pngAccounting": {
+    "sourceFiles": 40,
+    "distinctSourceHashes": 20,
+    "equivalentCopies": 20,
+    "sourceDimensions": [
+      1080,
+      2400
+    ],
+    "returnedDimensions": [
+      900,
+      2000
+    ],
+    "actualReturnedPayloadCopies": 42,
+    "exactSourceBytesReturned": false
+  },
+  "nativeAssertionsPassed": true,
+  "boundedIndependentVisualAcceptance": true,
+  "strictHistoricalProcessContractAccepted": false,
+  "strictFirstVisualProcessContractAccepted": false,
+  "prospectiveSupervisedRemediationAccepted": true,
+  "wholeArticlePixelCoverage": false,
+  "physicalPhoneAcceptance": false,
+  "generalReleaseAcceptance": false,
+  "publicationAttempted": false,
+  "wholeSetAcceptance": false,
+  "limits": "Dependent original-session visual confirmation, not new blind initial or fresh upstream dictionary review. Operational hashes/XML/logs reverified by coordinator, not reviewer-executed. Drawing reference-touch trace/recallmiss is not MLKit or successful human recall. Unseen cells/pixels and unidentified fallback face remain limits. Resumed-session usage is cumulative, not current-turn cost. Historical061-P1/P2/P3 process noncompliance remains explicit. No runtime publication, physical-phone/general-release or whole-set acceptance."
+}

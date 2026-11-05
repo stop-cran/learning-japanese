@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 061: native assertions passed; independent visual checks pending
+## Batch 061: bounded native/visual checks reconciled; publication pending
 
 The [frozen membership](n1-sources/batch-061-membership.json) selects **俳**
 (source row 54) for one evidence-bounded packet. The
@@ -121,8 +121,34 @@ Fresh 5580/5581 ownership checks passed; owned parent **1528** / QEMU **11340**
 stopped with `adb emu kill` exit 0. A separate inventory confirms both absent,
 both dedicated worktrees clean and unrelated emulator-5556 still present.
 Production code/fonts/guest-app heaps/archive guards are unchanged.
-Original-session serial independent visual, combined-main and publication
-gates remain; this is not delivered teaching or physical-phone acceptance.
+The [execution377 record](n1-sources/execution-377.json) and
+[bounded visual reconciliation](n1-reviews/batch-061-native-acceptance.json)
+preserve both original reviewer sessions' dependent visual reports on the same
+unchanged teaching. Each family inspected **20 distinct PNGs**, all four
+teaching files and the assigned native-fixture ranges. Both retain **CLEAN**
+correctness, scoped coverage and bounded comprehensibility judgments, without
+a new actionable teaching or visible-task defect.
+
+Claude's first visual response paired the font and selection reads, producing
+one actual overlap (**061-P3**). Its complete report and audit remain intact.
+Two later, separately exiting, single-image original-session turns rechecked
+those resources before GPT launched; this is prospective remediation, not
+retroactive process compliance. The glyph follow-up also corrects the
+original report's understated font-style differences: four different stroke
+styles remain readable and distinguishable, while the actual fallback face is
+unidentified. GPT's supplement has no overlapping or multi-tool responses.
+All **42 actual model-visible 900-by-2000 PNG payloads** are archived separately
+from the **40 source 1080-by-2400 files / 20 distinct hashes**.
+
+The actual meaning options are **translate; explanation**, **silkworm**,
+**haiku; actor**, and **tree; establish**, not the authored look-alike trio.
+The actual reading options are **ナイ・ハン・ツイ・ハイ**. Both complete
+visible tasks and feedback have one defensible answer. Cropped sideways-scroll
+table cells and unseen article portions are not whole-table/pixel acceptance;
+static screenshots do not prove tap chronology or persistence. Original
+061-P1/P2 and the new P3 breach stay explicit. Accepted Android374/native376
+results are reverified, not rerun. Combined-main and publication gates remain;
+this is not delivered teaching, physical-phone or general-release acceptance.
 Published coverage stays **87/1,228 additions; 1,141 remain**; the 89
 necessary supporting-word additions are unchanged. Accepted batch060 evidence
 and its historical limits remain intact, without redundant checks.
