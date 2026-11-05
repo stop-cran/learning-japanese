@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 074: source prepared; not drafted
+## Batch 074: local unreviewed draft
 
 The [source packet](n1-sources/batch-074-progress.json) bounds the next batch
 to **免**, frozen source row 83, after batch 073's verified publication.
@@ -70,13 +70,31 @@ cmap evidence is preliminary, not rendering acceptance.
 The future actual draft must be inventoried again, including isolated 儿
 fallback, before its later Android/native/visual gates.
 
-This checkpoint has **zero batch-074 drafted, review-closed or published
-rows**. Published coverage stays **100/1,228 additions; 1,128 remain**:
-1,085 kanji, 5,042 words and 105 N1-labelled cards. The 100 published
-necessary supports are not an N1 vocabulary deck. No runtime content,
-manifest or app code changes here; no reviewer, Android/native check,
-push or batch 075. Compatible Android `f9b59a2+` is required;
-physical-phone, general-release and whole-set acceptance remain outstanding.
+The later [draft audit](n1-sources/batch-074-draft-audit.json) records
+**one drafted row, zero review-closed or published batch-074 rows**:
+new 免 and necessary 免れる, both existing component links, and the narrow
+許 reciprocal example. All five mapped pairs now link both ways. The
+unchanged pinned converter generated eight strokes; full reading metadata
+and its order are preserved, with separate rows for both native variants.
+The new word has direct quiz guards against 助かる, 逃げる and 避ける,
+not an inferred transitive exclusion clique.
+
+The source-preparation statements above are historical proposals, not a
+claim that the source checkpoint already contained teaching or geometry.
+The actual draft's Han/font inventory and baseline/source/link/quiz checks
+are recorded in that draft audit. Cmap presence is not rendering acceptance;
+isolated 儿 still needs its later fallback inspection.
+
+Published coverage stays **100/1,228 additions; 1,128 remain**:
+1,085 published kanji, 5,042 published words and 105 published N1-labelled
+cards. The local draft has 1,086 kanji, 5,043 words and 106 N1-labelled cards.
+The 100 published necessary supports are not an N1 vocabulary deck.
+This is a signed **local unreviewed** checkpoint, not permission to push.
+No reviewer, Android/native check, publication or batch 075 is claimed.
+Two serial blind model-family reviews, reconciliation and all later
+Android/native/current-main/CI/exact-public-ZIP gates remain required.
+Compatible Android `f9b59a2+` is required; physical-phone, general-release
+and whole-set acceptance remain outstanding.
 
 ## Batch 073: historical textual checkpoint before publication
 

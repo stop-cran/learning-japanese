@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "execution": 489,
+  "batch": "074",
+  "recordedAt": "2026-11-05T23:52:56.331326+00:00",
+  "stage": "local-unreviewed-draft",
+  "baseCommit": "4e4173513e33061e35abf19d25be499c57b06978",
+  "sourceCheckpoint": "e7015f0656ecf8295897cc5a382bd3e314fb3f20",
+  "authorization": {
+    "requestSha256": "50fa5e54224caf94e366740149115308e2e4e788b84a035166d89327ad951364",
+    "completeFileLoadedAndCheckpointParsed": true,
+    "limits": "Entire request acquired and JSON checkpoint parsed; operative contract and final488 inspected. Historical middle loaded/parsed, not freshly semantically re-reviewed."
+  },
+  "worktrees": "Clean dedicated content signedG e7015f06 at start; freshly fetched main4e417351; clean dedicated Android signedG f9b59a2. Canonical repositories not accessed.",
+  "implemented": [
+    "One new免 card, source row83; fullメン/まぬか.れる/まぬが.れる preserved in source order.",
+    "Selectedメン/まぬが.れる with own linked rows; valid alternateまぬかれる expressly not rare/incorrect.",
+    "Necessary免れる primaryまぬがれる, no inferred vocabulary level; actualを construction/ichidan forms, no mandatory physical flight or rescuer, explicit dictionary classification disagreement.",
+    "Exact免許/免税 component links and one許 reciprocal example; all five mapped pairs/ten directions.",
+    "Three semantically distinct kanji distractors; three direct new-word guards; no transitive exclusion clique.",
+    "Eight strokes generated from exact pinned SVG using unchanged production converter; no manual geometry or app/tool/media changes."
+  ],
+  "audit": "batch-074-draft-audit.json",
+  "auditSha256": "f8fc4a9cbad789ac93b0412250794c7b6c40cfbb4339bfd77cea8d47620a68eb",
+  "auditSummary": {
+    "runtimePayloadHashesVerified": 8349,
+    "actualDraftCounts": {
+      "kanji": 1086,
+      "words": 5043,
+      "n1Labelled": 106,
+      "namedSourceMembersPresent": 105
+    },
+    "allMappedReciprocalPairs": 5,
+    "directedLinks": 10,
+    "readingDispositions": 3,
+    "curatedOfferedKeys": 2,
+    "sourceOnlyOfferedKeys": 0,
+    "frozenInputHashesVerified": 5,
+    "decompressedDictionaryHashesVerified": 2,
+    "freshExactDictionaryExtractions": 3,
+    "dictionaryFamilyOccurrences": 186,
+    "distinctCompleteFamilies": 182,
+    "completeRawCharacterRecordsVerified": 8,
+    "baselineMetadataAndStrokesChecked": {
+      "kanji": 985,
+      "words": 4942,
+      "strokes": 985
+    },
+    "manifestFresh": true,
+    "contentVersion": "c507eceeb764bc3f"
+  },
+  "fontDisposition": "Entire actual five-article text contains43 distinct Han; all present in each of three frozen bundled cmaps except isolated儿. No actual draft Han enters RareHan ranges. Cmaps are not native/visual acceptance; isolated儿 fallback still needs later inspection.",
+  "historicalRootKeysPreservedExactly": 1682,
+  "validationReceipts": [
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\720c4f4a-d4eb-4e5f-8acb-7ba936790096\\validate-489.txt",
+      "command": "python -B tools\\validate.py",
+      "status": "passed;0 errors",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "completeOutput": "0 error(s)\n"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\720c4f4a-d4eb-4e5f-8acb-7ba936790096\\targeted-tests-489.txt",
+      "command": "python -B -m unittest tools.test_audit_n1_batch tools.test_extract_n1_jmdict",
+      "status": "failed import-path invocation;no dependency missing;superseded by corrected process-local PYTHONPATH run",
+      "sha256": "c3216f0159d6e70284c837d5b464a92d7da64abaa45b9f171f0ffa0b2bde0fb3",
+      "completeOutput": "EE\n======================================================================\nERROR: test_audit_n1_batch (unittest.loader._FailedTest.test_audit_n1_batch)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_audit_n1_batch\nTraceback (most recent call last):\n  File \"C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 137, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\tools\\test_audit_n1_batch.py\", line 4, in <module>\n    from audit_n1_batch import lexical_pair, reused_changes, runtime_delta\nModuleNotFoundError: No module named 'audit_n1_batch'\n\n\n======================================================================\nERROR: test_extract_n1_jmdict (unittest.loader._FailedTest.test_extract_n1_jmdict)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_extract_n1_jmdict\nTraceback (most recent call last):\n  File \"C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 137, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\tools\\test_extract_n1_jmdict.py\", line 6, in <module>\n    from extract_n1_jmdict import extract\nModuleNotFoundError: No module named 'extract_n1_jmdict'\n\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nFAILED (errors=2)\n"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\720c4f4a-d4eb-4e5f-8acb-7ba936790096\\targeted-tests-corrected-489.txt",
+      "command": "PYTHONPATH=<repo>\\tools; python -B -m unittest tools.test_audit_n1_batch tools.test_extract_n1_jmdict",
+      "status": "27 passed;0 skips",
+      "sha256": "85e099026490cc6b2cfb6e4b55ed56a0c3f9ef4485e7d7f26e8f5e2f6daed162",
+      "completeOutput": "...........................\n----------------------------------------------------------------------\nRan 27 tests in 0.010s\n\nOK\n"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\720c4f4a-d4eb-4e5f-8acb-7ba936790096\\audit-tests-489.txt",
+      "command": "python -B -m unittest discover -s tools -p test_audit_n1_*.py",
+      "status": "34 passed;0 skips;overlaps the batch suite in the27-test command,not61 distinct tests",
+      "sha256": "d1e4d42c39ab7f04240fc17bd7b6cf963626350143f888e44dcec99b6f89560b",
+      "completeOutput": "..................................\n----------------------------------------------------------------------\nRan 34 tests in 0.006s\n\nOK\n"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\720c4f4a-d4eb-4e5f-8acb-7ba936790096\\vocabulary-489.txt",
+      "command": "python -B tools\\grammar_vocabulary.py check",
+      "status": "passed;pilot2122/2431,not full coverage",
+      "sha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38",
+      "completeOutput": "Vocabulary coverage: 2122/2431 reviewed prompts; stage=pilot\n"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\720c4f4a-d4eb-4e5f-8acb-7ba936790096\\budget-489.txt",
+      "command": "python -B tools\\check_content_budget.py",
+      "status": "passed;original budgets unchanged",
+      "sha256": "ec802358d4096c89e897695f33cc6862212e55f2b3781ef298128cd8e8a1c106",
+      "completeOutput": "{'files': 8356, 'entries': 8371, 'retainedBytes': 44109064, 'inflatedBytes': 44377402, 'localZipBytes': 30148761, 'listeningTaskMediaBytes': 5893602}\n"
+    }
+  ],
+  "correctedLocalDiagnostics": [
+    "First complete-request probe loaded/parsed all2195081characters/29435lines but cp1252 console failed while printing Unicode; later explicit UTF8 reads/progress succeeded. No incomplete acquisition represented as a fresh semantic reread of historical middle.",
+    "Initial control-helper baseline check appended entire inherited丘 exclusion list to existing坂, producing a duplicate坂 expectation. Corrected helper to require original exclusions be a subset and compare the exact inherited current list; no runtime metadata changed. Final audit passes all985kanji4942words985strokes.",
+    "Initial targeted unittest invocation omitted repositorytools import path and failed two module imports. Corrected process-local PYTHONPATH, no package install/tooling change; actual27tests passed. Original failed log retained.",
+    "Initial guessed core RareHan source path did not exist; glob found actual app paths; both complete RareHan and RareHanTest sources inspected read-only. No Android execution or source edit."
+  ],
+  "sourceReadLimits": {
+    "execution": 489,
+    "inheritedSourceInspection": "execution488 complete182-family/eight-character packet inspection retained unchanged in authorInspection/preparation audit; not claimed as a fresh full read here.",
+    "freshCompletePackets": [
+      "batch-074-comparison-jmdict.xml:1-279",
+      "batch-074-support-comparison-jmdict.xml:1-208"
+    ],
+    "freshSelectedLexicalRanges": [
+      [
+        327,
+        410
+      ],
+      [
+        1141,
+        1163
+      ],
+      [
+        2408,
+        2428
+      ]
+    ],
+    "freshRawCharacterRange": [
+      1,
+      85
+    ],
+    "freshPreservedPublicEvidence": "Actual Daijisen body in preserved HTML offsets65200-69000; classification evidence in complete source record inherited, not fresh upstream retrieval.",
+    "completeExistingArticlesRead": [
+      "words/免許.md",
+      "words/免税.md",
+      "words/助かる.md",
+      "words/逃げる.md",
+      "words/避ける.md",
+      "words/救う.md",
+      "words/救助.md",
+      "words/生存.md",
+      "kanji/許.md",
+      "kanji/税.md",
+      "kanji/兄.md",
+      "kanji/元.md",
+      "kanji/先.md",
+      "kanji/逃.md",
+      "kanji/放.md",
+      "kanji/允.md"
+    ],
+    "limits": "Coordinator only; packet/hash comparisons do not establish comprehension or independent review."
+  },
+  "publishedAdditions": 100,
+  "remainingAdditions": 1128,
+  "lastPublishedCommit": "4e4173513e33061e35abf19d25be499c57b06978",
+  "reviewersLaunched": 0,
+  "freshAndroidOrNativeClaimed": false,
+  "runtimePublished": false,
+  "phoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextAction": "SAME074 two serial blind different-family textual initial reviews of the future signed local snapshot; include full new免/免れる, both exact reused component links, narrow許 reciprocal example, complete applicable dictionary families, reading variants/を construction/classification qualification, all five mapped reciprocal pairs and direct quiz labels. Select actual models/catalog, read-only isolated CLI processes and serial internal tools; archive first report/process exit before second launch. Reconcile evidence and use original sessions for bounded confirmations. No publication/075. All later non-skippedAndroid/native/font/visual/currentmain/signing/ownerfastforward/CI/everyimmutableZIPhash/originalbudgets remain required; phone/generalrelease/whole-set outstanding.",
+  "limits": "LOCAL UNREVIEWED074 draft: one drafted, zero review-closed/published rows. Published100/1228,remaining1128;100 published necessary supports are not an N1 vocabulary deck. No reviewer, Android/native, app/tool/media change, push,075 or runner. CompatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding."
+}
