@@ -37,7 +37,42 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 068: source prepared; not drafted
+## Batch 068: local unreviewed draft
+
+The bounded draft adds **儀**, its exact pinned fifteen-stroke geometry and
+eight narrow reused navigation changes. Existing **儀式（ぎしき）**,
+**礼儀（れいぎ）**, **行儀（ぎょうぎ）** and **お辞儀（おじぎ）**
+supply all necessary support; no new word article or inferred word level is
+added. Their metadata and original exclusions remain unchanged.
+
+The [draft ledger](n1-sources/batch-068-progress.json) retains the complete
+source-stage proposals separately from the actual runtime decisions.
+The sole full and selected reading is **ギ**, with empty kun lists and one
+**ぎ** practice key. The new card distinguishes ceremony/formal conduct from
+the formal matter/case suffix and the nonceremonial Earth globe example.
+Its shape mnemonic makes no historical derivation claim.
+
+All **eight mapped reciprocal pairs / sixteen directions** now have links,
+including the reused 式・礼・行・辞 counterparts. The four word changes
+add only their missing 儀 component links; the four existing kanji gain
+one linked, kana-supplied Common words item each. No easier-deck metadata,
+primary reading or stable identity is changed.
+
+The first draft audit exposed a newline-only mismatch: the existing 行 Git
+blob uses CRLF, while recorded passages and Python text reads use LF.
+The reused-passage helper now normalizes CRLF like manifest text hashing;
+regressions retain exact-edit and metadata protection. No teaching or
+baseline metadata is changed to work around that mismatch.
+
+This checkpoint is **local and unreviewed**, not published or review-closed.
+Two serial blind different-family content reviews and all later acceptance
+gates remain pending. The last accepted publication remains `72f99d82`:
+**94/1,228 additions published; 1,134 remain**. The 95 published necessary
+support additions are not an N1 vocabulary deck. Compatible Android
+`f9b59a2+` is required; native, physical-phone, general-release and whole-set
+acceptance are not inferred from source, geometry or cmap checks.
+
+### Historical source-preparation checkpoint
 
 The [frozen batch](n1-sources/batch-068-membership.json) selects **儀**, exact
 remaining source row 77. Its [source ledger](n1-sources/batch-068-progress.json)

@@ -49,6 +49,25 @@ class N1BatchReusedChangesTest(unittest.TestCase):
     def test_accepts_legacy_link_only_edit(self):
         reused_changes(self.old, self.new, self.rows)
 
+    def test_accepts_crlf_baseline_with_lf_recorded_insertion(self):
+        rows = [{"before": "A is a noun.\n", "after": "A is a noun.\nA linked example.\n"}]
+        new = self.old.replace(rows[0]["before"], rows[0]["after"])
+        reused_changes(self.old.replace("\n", "\r\n"), new, rows)
+
+    def test_accepts_crlf_current_text(self):
+        reused_changes(self.old, self.new.replace("\n", "\r\n"), self.rows)
+
+    def test_crlf_does_not_hide_unrecorded_prose(self):
+        with self.assertRaisesRegex(ValueError, "exact edits"):
+            reused_changes(self.old.replace("\n", "\r\n"),
+                           self.new + "Extra prose.\n", self.rows)
+
+    def test_crlf_does_not_allow_metadata_change(self):
+        rows = [{"before": "reading: a\n", "after": "reading: b\n"}]
+        with self.assertRaisesRegex(ValueError, "metadata changed"):
+            reused_changes(self.old.replace("\n", "\r\n"),
+                           self.old.replace("reading: a", "reading: b"), rows)
+
     def test_accepts_multiple_exact_edits_and_additive_exclusions(self):
         self.rows.append({"before": "quiz_exclusions: [B]", "after": "quiz_exclusions: [B, C]"})
         reused_changes(self.old, self.new.replace("[B]", "[B, C]"), self.rows, ["B", "C"])

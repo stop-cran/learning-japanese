@@ -48,6 +48,8 @@ def base_file(root, commit, name):
 
 
 def reused_changes(old, new, rows, exclusions=None):
+    old = old.replace("\r\n", "\n")
+    new = new.replace("\r\n", "\n")
     expected = old
     for row in rows:
         require(expected.count(row["before"]) == 1,
