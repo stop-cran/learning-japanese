@@ -37,7 +37,30 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 072: source preparation only
+## Batch 072: local unreviewed runtime draft
+
+The bounded draft adds **充** and the necessary **充てる（あてる）**
+support article, plus the exact component-link-only change in existing
+N2 **拡充（かくじゅう）**. All three full readings remain in source order;
+practice selects ジュウ and あ.てる with separate linked rows. The rare
+spelling 充たす remains qualified reference information, not a rare-pronunciation
+claim. Five direct word-quiz guards preserve the inspected allocation overlaps.
+The [draft audit](n1-sources/batch-072-draft-audit.json) records the generated
+six-stroke geometry, both all-mapped reciprocal pairs, actual-text font
+inventory and baseline/runtime preservation.
+
+This is **one drafted row, zero review-closed or published batch-072 rows**.
+The next checkpoint is two serial blind initial content reviews from different
+actual model families on the same normally signed local snapshot, including
+the new support and changed reused passage. Android/native/fallback/visual,
+combined-main and publication gates remain pending. Isolated 亠, 儿 and 厶
+need actual native fallback inspection; cmap absence is not a glyph failure.
+Published coverage remains **98/1,228 additions; 1,130 remain**. The draft's
+support is not another published word or an N1 vocabulary-list claim.
+Compatible Android `f9b59a2+` is required; physical-phone, general-release
+and whole-set acceptance remain outstanding.
+
+### Historical source-preparation checkpoint
 
 The [frozen batch](n1-sources/batch-072-membership.json) selects **充**,
 source row 81, after batch 071's

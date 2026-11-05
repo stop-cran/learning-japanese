@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "execution": 473,
+  "batch": "072",
+  "recordedAt": "2026-11-05T22:38:42.863482+01:00",
+  "stage": "local-unreviewed-draft",
+  "baseCommit": "05dd4cc5b97e73abeecafb51b4c50daf9c7cfa02",
+  "sourceCheckpoint": "84aa5c9f8f36f6c8c412d131c894a398ffc6e6a8",
+  "authorization": "Entire request loaded and complete embedded checkpoint parsed; operative contract and final472 inspected. Historical middle loaded/parsed, not freshly semantically re-reviewed.",
+  "membership": [
+    "充"
+  ],
+  "sourceRow": 81,
+  "runtimeAdditions": [
+    "kanji/充.md",
+    "strokes/充.json",
+    "words/充てる.md"
+  ],
+  "changedReusedArticles": [
+    "words/拡充.md"
+  ],
+  "runtimeHashes": {
+    "kanji/充.md": "57a6a121e272eb0cbc09f00049e6b13301b5695bdd5b8639cbc91c78e4b3e723",
+    "strokes/充.json": "826d492ed5336f97e03c9c86f52381eb6b46ce2438b09c7112f553a5b91d0705",
+    "words/充てる.md": "004c919f53253c0632d54aa0aaadc1cb4cf4f6a68951d1acb94a443fdb17be1b",
+    "words/拡充.md": "a2c7f235dab268ca7948ae5d43aef989b4a7cad1814a67111849947c5ef87b3b"
+  },
+  "manifestContentVersion": "900e3a2130afc56b",
+  "checks": {
+    "validateReturnCode": 0,
+    "manifestFresh": true,
+    "targetedAuditRegressionTestsPassed": 34,
+    "testSkips": 0,
+    "contentBudgetReturnCode": 0,
+    "audit": "batch-072-draft-audit.json",
+    "auditSha256": "0750a2a1519f130fd833c8b0f7af87a8a9000427ed5d93b6342804f20f700363"
+  },
+  "fullValidationReceipts": [
+    {
+      "command": [
+        "C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "tools\\validate.py"
+      ],
+      "returncode": 0,
+      "stdout": "0 error(s)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "tools\\build_manifest.py"
+      ],
+      "returncode": 0,
+      "stdout": "manifest.json: 8344 files incl. 398 images, 201 scene catalogs, 36 listening passages, 1 curriculum catalogs, 40 listening tasks, version 900e3a2130afc56b\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_audit_n1_*.py"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "..................................\n----------------------------------------------------------------------\nRan 34 tests in 0.005s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\stop-\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "tools\\check_content_budget.py"
+      ],
+      "returncode": 0,
+      "stdout": "{'files': 8351, 'entries': 8366, 'retainedBytes': 44095853, 'inflatedBytes': 44364191, 'localZipBytes': 30141782, 'listeningTaskMediaBytes': 5893602}\n",
+      "stderr": ""
+    }
+  ],
+  "publicEvidence": "Fresh Jitsu充/Nikkokuあてる sections; Daijisen definition still absent from simplified extraction. Inspected preserved raw Daijisen exact allocation heading/sense; original hash and failed-lookup limits retained in preparation/source evidence. No uninspected gaiji or historical derivation adopted.",
+  "correctedDraftAuditAttempt": "First audit rejected the generated ledger's kunKeys:[あ], which confused distinct stem with complete normalized reading key. Corrected to あてる; source offeredDistinctStems:[あ] remains accurate. No runtime or production-helper change was needed.",
+  "sourceArtifacts": {
+    "batch-072-comparison-jmdict.xml": "f4b91cad7f32ba19e35532e92e5687119c8a6c09d5e1410c82832fc260303048",
+    "batch-072-comparison-selection.json": "8a82596d132d1b8932785f3ba0092e961cf9aa7bcde2a6ac6aaebe7f3ea82557",
+    "batch-072-draft-audit.json": "0750a2a1519f130fd833c8b0f7af87a8a9000427ed5d93b6342804f20f700363",
+    "batch-072-font-preparation.json": "402ea7b5d9f8198bdd35ec3154ce0b88632f3c0ad09248ceb0b64343163b24f3",
+    "batch-072-input-metadata.json": "c2c3ff108b59a90e8d1dc12f766adb62b1b8347a7bfc2835cb0f53cfdb10d81d",
+    "batch-072-jmdict.xml": "92dec09cb682e8447a47e110a60e51c27143ab6e335b273950a1efdcebe82102",
+    "batch-072-kanjidic2.xml": "965669e41c89331801ff34b096906f4230ee3d4168a3db24dca67331c7ffac34",
+    "batch-072-lexical-selection.json": "216ba9bb8a6d63238a62093f17230c4aa7fc75ad41b1f1f956cee60002cb7aca",
+    "batch-072-membership.json": "77ac4f7552e08849e047c96ae4f10b2b77022109f4ea5e4daef16ec6d9776f72",
+    "batch-072-preparation-audit.json": "be8bd66ea68c75221950e7e96ee64c66acd526caa8f977152c8bb8e2715e6434",
+    "batch-072-progress.json": "ca9e64f95851043c8ed670cb29389e590847fbee8ac2571cc2fc4541e68c0998",
+    "batch-072-quiz-jmdict.xml": "2d75fafeadd65e69ef08c8a97ff23dfbf4d07b9fc0c9bb815bfaeb26796a6665",
+    "batch-072-quiz-selection.json": "ab27424e1fed13c76d2c1aa82b800620592fbbaeeb2203aa7b136d011ad6b59b",
+    "batch-072-source-evidence.json": "a31eee91ccd68c4f522517f0e25beb6a45652d67e2096cc63a7dca41e88df687",
+    "batch-072-stroke-evidence.json": "170774afe06620ed417bbd3d3191f20e88cba1d84865468cef2dfafd2e167df0"
+  },
+  "durableRecipe": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\draft-batch-072.py",
+    "sha256": "1bf2b9a759a33e08a8ddd9873ee3972e65bf976f07fb972c7293fc53e8e35ca9",
+    "origin": "Bounded helper following inspected batch071 draft and batch072 source patterns; unchanged production converter/audit/extraction/manifest helpers."
+  },
+  "reviewersLaunched": 0,
+  "androidNativeRuns": 0,
+  "publicationAttempted": false,
+  "publishedAdditions": 98,
+  "remainingAdditions": 1130,
+  "lastPublishedCommit": "05dd4cc5b97e73abeecafb51b4c50daf9c7cfa02",
+  "nextAction": "SAME072 obtain two serial blind initial content reviews from different actual model families on this normally signed LOCAL UNREVIEWED snapshot. Cover complete 充 and necessary 充てる support, exact link-only reused 拡充 passage, all three reading dispositions, spelling/allocation boundaries, every choice/guard and phone-text comprehensibility; common bounded dictionary access, read-only tools, one active reviewer and serial internal reads. Preserve complete reports, actual model/session/tool/read-depth limits, then adjudicate evidence. Later Android/native gate must inspect isolated 亠/儿/厶 fallback plus drawing and N1 selection/meaning/curated-reading/article/Back/offline routes. No Android/native, publication or073 until textual review closes.",
+  "limits": "Local UNREVIEWED draft only: one drafted072 row, zero review-closed or published072 rows. Coordinator audits are not independent review or teaching acceptance. Frozen membership and all baseline identities/readings/levels/exclusions remain unchanged. Two serial blind different-family textual reviews, Android/native/font/visual/current-main/normal-signing/owner-fast-forward/CI/every immutable ZIP hash/original budgets remain later gates. Androidf9b59a2+ required; physical-phone/general-release/whole-set acceptance outstanding. Published98/1228,1130remain;99published necessary supports are not an N1 vocabulary deck. Historical denials/OOMs/failed lookups/read-depth limits and full live history preserved."
+}
