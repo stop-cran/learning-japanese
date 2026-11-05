@@ -37,7 +37,50 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 070: local unreviewed runtime draft
+## Batch 071: source preparation only
+
+The [frozen batch](n1-sources/batch-071-membership.json) selects **允**,
+source row 80, after batch 070's
+[verified publication](n1-sources/batch-070-publication.json).
+The [source ledger](n1-sources/batch-071-progress.json) retains all four
+readings in order: イン; じょう, まこと.に, ゆるす.
+It proposes only **イン** for recognition through one necessary support,
+**允可（いんか）**, with no inferred vocabulary level.
+The historical office-title example **雅楽允（うたのじょう）** remains
+reference-only, not a claim that じょう is nonexistent or merely a name.
+The other kun entries remain qualified lookup glosses, not invented modern
+spellings. Explicit `quizKunyomi: []` is proposed; old clients ignore it.
+
+The coordinator inspected five complete applicable JMdict families,
+19 comparison-family occurrences (one overlap; **23 distinct families**),
+six raw character records and 23 actual existing articles.
+The [public evidence](n1-sources/batch-071-source-evidence.json) separates
+actual permission and historical-office entries from failed/irrelevant
+lookups, dictionary recognition from frequency, and raw translations from
+the proposed neutral historical-title gloss.
+One mapped counterpart, **可**, has no current kanji card: retain it in
+word metadata, but do not add a broken link or expand this batch to create it.
+The current all-mapped plan therefore has **one reciprocal pair / two
+directed links**, no activated baseline pair and no reused-passage edit.
+Thirteen direct word-quiz guards are proposed from inspected permission,
+approval, assent and compliance senses, not a transitive synonym clique.
+The [source-stage font inventory](n1-sources/batch-071-font-preparation.json)
+checks 31 proposed Han code points against all three pinned cmaps.
+允 and 可 are present; isolated 儿 and 厶 require system fallback.
+That is not a glyph failure or readability acceptance: inspect their actual
+future article rendering at the later native/visual gate.
+
+This is a normally signed **local source-only checkpoint**, not a runtime
+draft, independent content review or publication. The next checkpoint is
+the bounded runtime draft and its source/reading/quiz/link/font/stroke audits.
+Both serial blind model-family reviews and all later Android/native,
+current-main, signing and publication gates remain outstanding.
+Published coverage stays **97/1,228 additions; 1,131 remain**, with
+98 necessary support additions, not an N1 vocabulary deck.
+Compatible Android `f9b59a2+` is required; physical-phone, general-release
+and whole-set acceptance remain outstanding.
+
+## Batch 070: historical local unreviewed runtime draft
 
 The [draft audit](n1-sources/batch-070-draft-audit.json) records one drafted
 **償** card, its generated **17-stroke** geometry and two necessary support
