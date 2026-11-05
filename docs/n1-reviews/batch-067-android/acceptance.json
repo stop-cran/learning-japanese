@@ -1,0 +1,179 @@
+{
+  "execution": 433,
+  "batch": "067",
+  "startingHead": "f1e5b99ab586ef63cf074c05a825a987ce0b3210",
+  "androidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "originMain": "f0b318eb058efa8081db770f12aa15963af7ff79",
+  "scope": "SAME067 fresh focused Android3+1, exact XML/provenance archival and normal signed local evidence checkpoint only; no native/reviewer/runtime publication/068/second runner.",
+  "recordedAt": "2026-11-05T15:24:07.929692+00:00",
+  "authorization": {
+    "requestSha256": "e3f1710152f4f360947bec74ea74fef6ae18dcd53fff61ec845d4c8e8161823d",
+    "characters": 1850318,
+    "lines": 24637,
+    "completeFileLoadedAndCheckpointParsed": true,
+    "limits": "Entire request acquired and complete embedded checkpoint parsed. Operative contract, complete final432 checkpoint and approved issue inspected directly; historical middle parsed, not freshly semantically re-reviewed."
+  },
+  "testImplementationsAndHostInit": [
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core\\src\\test\\kotlin\\io\\github\\stopcran\\kanji\\core\\RealContentTest.kt",
+      "sha256": "4f019673d77a6899e435afc8d071794564e78f6148cf3019456184eb72ef2188"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\src\\test\\java\\io\\github\\stopcran\\kanji\\core\\RareHanTest.kt",
+      "sha256": "1409e85428837864409dce7f4ea371611d8a92839d4d0e86258e4c0a0a5a15ed"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-065-host-integration-heap.init.gradle",
+      "sha256": "438159ae22b313e8196a0bc011f72a3b17300146b219c5ffcc779c540a64be24"
+    }
+  ],
+  "preexistingXmlNotFreshAcceptance": [
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core\\build\\test-results\\test\\TEST-io.github.stopcran.kanji.core.RealContentTest.xml",
+      "sha256": "262c1337d0c71a1c3a4498e83874901c6d6c332c1dd96ad204669400bc853ca4",
+      "timestamp": "2026-11-05T14:16:20.933Z"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\build\\test-results\\testDebugUnitTest\\TEST-io.github.stopcran.kanji.core.RareHanTest.xml",
+      "sha256": "0a9c6e09f06156b003ae8e5d2484b4a11946722ef4365130a76b961fc62009e8",
+      "timestamp": "2026-11-05T14:18:33.862Z"
+    }
+  ],
+  "manifestSha256": "c3da463f17ea3a83e1735bec0c535356b5cae488f741537f3454f3e6304dffe3",
+  "contentVersion": "68c767f176e68882",
+  "reconciliationSha256": "526d06c44b82e50194f0bf6651e488ece1a0cb65052b24c7ccf70f35457bb1ac",
+  "fixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese",
+  "fixtureResolution": [
+    {
+      "workingDirectory": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core",
+      "relativeRoot": "..\\..\\learning-japanese",
+      "resolvedRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese"
+    },
+    {
+      "workingDirectory": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app",
+      "relativeRoot": "..\\..\\learning-japanese",
+      "resolvedRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese"
+    }
+  ],
+  "command": [
+    ".\\gradlew.bat",
+    "--no-daemon",
+    "--no-parallel",
+    "--max-workers=1",
+    "--rerun-tasks",
+    "-I",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-065-host-integration-heap.init.gradle",
+    "-Pkotlin.compiler.execution.strategy=in-process",
+    ":core:cleanTest",
+    ":core:test",
+    "--tests",
+    "*RealContentTest",
+    ":app:cleanTestDebugUnitTest",
+    ":app:testDebugUnitTest",
+    "--tests",
+    "*RareHanTest"
+  ],
+  "environment": {
+    "JAVA_HOME": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot",
+    "ANDROID_HOME": "C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk"
+  },
+  "hostMemoryQualification": {
+    "coreTestMaxHeap": "2g",
+    "init": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-065-host-integration-heap.init.gradle",
+    "initSha256": "438159ae22b313e8196a0bc011f72a3b17300146b219c5ffcc779c540a64be24",
+    "priorQualification": {
+      "qualifiedInitPath": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-065-host-integration-heap.init.gradle",
+      "qualifiedInitSha256": "438159ae22b313e8196a0bc011f72a3b17300146b219c5ffcc779c540a64be24",
+      "hostCoreTestMaxHeap": "2g",
+      "reason": "Actual065 original1GiB HOST RealContentTest OOM after walking822392296bytesdocs. Same full fixture and assertions pass with HOST-only2GiB.",
+      "original049512MiBOomRetained": true,
+      "original0651GiBOomRetained": true,
+      "androidGuestOrProductionHeapChanged": false,
+      "archiveGuardsChanged": false,
+      "invariant": "Use qualified065 HOST-only2GiB init for subsequent same full-repo HOST integration gates; preserve original049/065 failures. Native builds/guest heaps/archive guards unchanged. Do not infer a production memory fix or proactively increase again."
+    },
+    "invariant": "Inherited explicitly qualified HOST-only2GiB full-repo integration; unchanged test/assertions. No guest/app heap, production guard, source or permission configuration changes; not native/production memory evidence."
+  },
+  "schemaVersion": 1,
+  "checkpoint": 433,
+  "status": "fresh-android-passed-local-evidence-awaiting-normal-signature",
+  "actualStart": "2026-11-05T15:24:14.699452+00:00",
+  "completedAt": "2026-11-05T15:28:50.9677651+00:00",
+  "exitCode": 0,
+  "reviewedTeachingSnapshot": "5cb2ea4bc804ac218b17d5c583d4fba95e60971c",
+  "buildResult": "BUILD SUCCESSFUL in 4m 35s",
+  "taskResult": "43 actionable tasks: 43 executed",
+  "oneWorker": true,
+  "parallel": false,
+  "rerunTasks": true,
+  "inProcessCompiler": true,
+  "rawProvenance": [
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\52c5ffd6-ea67-4fee-ae3b-dfb7be7edd00\\execution-433-android.txt",
+      "sha256": "cf36163db21c831f6d924fd3bbeba860eedb7a49515174c4e3c23497d0755144"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\52c5ffd6-ea67-4fee-ae3b-dfb7be7edd00\\execution-433-android-exit.txt",
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\52c5ffd6-ea67-4fee-ae3b-dfb7be7edd00\\execution-433-android-start.txt",
+      "sha256": "17fe34201ff5fc064b2e70c8ba95093481c1ff017144c158078537ba02c57a9b"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\52c5ffd6-ea67-4fee-ae3b-dfb7be7edd00\\execution-433-android-end.txt",
+      "sha256": "588cbb8314a2eaf9ae495f4825068edbd5ce9bd57c4d3c9e2192eeb7ecaf638c"
+    }
+  ],
+  "archivedGradleSha256": "5965e805cf9d9fa5723d343189f38add2269975e6c20593b1f77329df03fec59",
+  "archivedLogNormalization": "UTF8 LF and trailing line whitespace removed only; complete raw log/hash retained in control.",
+  "tests": [
+    {
+      "name": "io.github.stopcran.kanji.core.RealContentTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-05T15:25:37.848Z",
+      "caseNames": [
+        "hotelBookingDoesNotAcceptTheSchoolClassReadingWhenRepoPresent",
+        "completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent",
+        "parsesRealContentRepoWhenPresent"
+      ],
+      "sourcePath": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core\\build\\test-results\\test\\TEST-io.github.stopcran.kanji.core.RealContentTest.xml",
+      "archivedPath": "docs\\n1-reviews\\batch-067-android\\TEST-io.github.stopcran.kanji.core.RealContentTest.xml",
+      "sha256": "f1dd4bcdc07726320efcf22e3f85b4e09b5f5884f9e99c7f488856490c0befcc",
+      "fixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese"
+    },
+    {
+      "name": "io.github.stopcran.kanji.core.RareHanTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-05T15:28:46.042Z",
+      "caseNames": [
+        "contentRareCharactersAreCoveredByBundledFont"
+      ],
+      "sourcePath": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\build\\test-results\\testDebugUnitTest\\TEST-io.github.stopcran.kanji.core.RareHanTest.xml",
+      "archivedPath": "docs\\n1-reviews\\batch-067-android\\TEST-io.github.stopcran.kanji.core.RareHanTest.xml",
+      "sha256": "bb6ef72c0666c181b598e7d066b2bcab8d0e7f66ed8a93ac2c86e4551a260746",
+      "fixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese"
+    }
+  ],
+  "exactNamedCasesVerified": 4,
+  "runtimeManifestHashesVerified": 8329,
+  "manifestFresh": true,
+  "runtimeUnchanged": true,
+  "noAndroidSourceChanges": true,
+  "freshNativeOrVisualAcceptanceClaimed": false,
+  "runtimePublished": false,
+  "publicationAttempted": false,
+  "publishedAdditions": 93,
+  "remainingAdditions": 1135,
+  "localDraftAdditions": 94,
+  "nextAction": "SAME067: prepare the exact full git archive native fixture and compile serially using production ContentSync ONCE and the actual current manifest counts/contentVersion 68c767f176e68882. Do not reduce the archive, use the HOST test init in native builds, alter guest/app heap or relax production guards. Fresh Android RealContentTest3+RareHanTest1 is archived; no redundant Gradle or blind initial review absent a new concern. Preserve original432 review sessions for later serial dependent visual confirmations. Native run is a separate bounded checkpoint with fresh device/port ownership inspection and unchanged read-only API35 hostGPU/Vulkan-disabled settings; batch040 port override was batch-specific, not automatic permission for067. Inspect 僧/僧侶 and the changed 坊さん passage, required reciprocal/comparison routes and glyphs including 侶 and standalone 亻/曽, N1 selection, meaning/curated ソウ reading/drawing, complete articles, System Back and offline. Obtain terminal status0 for every selected case, not a summary. Then serial original-session visual confirmations, combined-latest-main validation, normal signed accepted commit, owner fast-forward push, green CI, exact immutable public ZIP/runtime hashes/budgets and owner issue60 receipt before068. No second runner or permission/signing workaround. Published93/1228, remaining1135 unchanged; local067 not delivered. Compatible Androidf9b59a2+ required; physical-phone/general-release/whole-set outstanding.",
+  "limits": "Fresh HOST Android3+1 only; not native/system-fallback/drawing/visual/physical-phone/current-main-publication/CI/public-ZIP or whole-set acceptance. Signed432 textual closure and 431 source/quiz/link/baseline/content checks inherited unchanged, not freshly rerun. Original permission failures and HOST512MiB/1GiB OOMs remain historical; no retry around denial, further memory increase or production/source/guest/app heap/guard changes.",
+  "helper": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\execution-433.py",
+  "helperSha256": "21c92c9e821adf1108f463c10b78de30f3cb1d88f526fe2bae2017b1287d8039"
+}
