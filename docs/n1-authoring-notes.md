@@ -37,7 +37,44 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 067: source prepared; not drafted or published
+## Batch 067: local unreviewed draft; not published
+
+The bounded draft adds **僧**, its pinned thirteen-stroke geometry and the
+necessary **僧侶（そうりょ）** support article. The only reused teaching
+change links 僧侶 at the existing comparison in **坊さん**; all its prose,
+N2 level, primary reading and original exclusions remain intact.
+The [draft ledger](n1-sources/batch-067-progress.json) retains the source-stage
+proposals separately from actual authored decisions. Both written kanji stay
+in 僧侶's metadata; no vocabulary level is inferred.
+
+The complete 113 frozen families and six character records were inspected
+again in this draft execution. The sole source reading **ソウ** is retained
+and selected, producing one **そう** key and no kun keys. The new word's
+exact answer title matches 坊さん, using existing exact-title deduplication
+rather than an invented occupation distinction. All mapped currently
+cardable pairs link in both directions; **侶** remains explicitly unavailable.
+
+The [draft audit](n1-sources/batch-067-draft-audit.json) checks exact source
+bytes/families, baseline metadata and geometry, actual curated/fallback
+labels, all 8,329 runtime hashes, reciprocal links and local archive budgets.
+The 24 Han code points in all three affected articles were checked against
+the three pinned bundled cmaps: only standalone **亻** is absent.
+That is not a glyph failure or actual native/phone readability evidence.
+Validation, vocabulary consistency and all **368 Python tests** pass;
+manifest content version is `68c767f176e68882`.
+
+This is a **local unreviewed draft**, not review closure or delivery.
+Two serial blind model-family reviews of the same frozen draft, Android/native,
+current-main, CI and exact immutable public ZIP gates remain outstanding.
+The [execution record](n1-sources/execution-431.json) preserves the denied
+historical-helper read without retry or policy changes, and the corrected
+audit-only newline comparison. Latest accepted publication remains
+`f0b318eb`: **93 published additions; 1,135 still to deliver**.
+The 95 locally added necessary support articles include this unreviewed one;
+they are not an N1 vocabulary deck. Physical-phone/general-release and
+whole-set acceptance remain outstanding.
+
+### Historical source-preparation checkpoint
 
 The [frozen batch](n1-sources/batch-067-membership.json) selects **僧**,
 source row 76. Its [source ledger](n1-sources/batch-067-progress.json)

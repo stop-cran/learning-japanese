@@ -5,8 +5,10 @@
   "membership": [
     "僧"
   ],
-  "status": "source-prepared-not-drafted",
-  "drafted": [],
+  "status": "local-unreviewed-draft",
+  "drafted": [
+    "僧"
+  ],
   "reviewClosed": [],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
@@ -117,6 +119,8 @@
       "kind": "on",
       "reading": "ソウ",
       "proposedQuizSelection": true,
+      "selected": true,
+      "sourceOnly": false,
       "example": "僧侶 そうりょ",
       "entryIds": [
         "1398240"
@@ -355,7 +359,7 @@
       "decision": "坊さん/お坊さん preserve familiar-respectful Buddhist-clergy senses and separate boy/other's-son senses. 御坊さん is search-only. Actual N2 坊さん primary reading, metadata and original exclusions stay unchanged; matching exact Buddhist priest; monk titles use existing deduplication."
     }
   ],
-  "requiredReciprocalPairs": [
+  "sourcePreparedReciprocalPairs": [
     {
       "kanjiArticle": "kanji/僧.md",
       "wordArticle": "words/僧侶.md",
@@ -409,11 +413,198 @@
     "sourceSvg": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\inputs\\n1-050e7-70a0b7ae.svg",
     "pinnedRevision": "70a0b7ae0c18ceb5cb358274b029cce0234a43bc",
     "expectedBlob": "02ff3c317161fb45e36421a09df5d1bd4fa8bb59",
-    "disposition": "Exact pinned SVG has thirteen paths, agreeing with frozen KANJIDIC2. Conversion is deferred to draft. Use 人 metadata and explain 亻. Prefer labelled modern-shape mnemonic/structure-unclassified; no historical or phonetic claim is needed.",
-    "generated": false,
+    "disposition": "Exact pinned SVG converted with unchanged production generator: thirteen paths agree with KANJIDIC2. 人 appears as 亻. Labelled modern-shape mnemonic only; native rendering/drawing remains pending.",
+    "generated": true,
     "nativeDrawingAccepted": false
   },
   "fontPlan": "Draft must inventory every actual affected-article Han code point, including new 僧/侶 and standalone 亻/曽 if used, against bundled cmaps and RareHanTest. Cmap presence/absence does not certify native rendering, fallback face or every-phone readability. No fresh font/native acceptance at source stage.",
-  "nextAction": "Resume SAME067 from signed source checkpoint: inspect exact complete evidence and proposed decisions; author only 僧, pinned generated stroke, necessary 僧侶 and justified reused link. Preserve source/metadata/order/baseline/exclusions, all mapped reciprocal pairs and no inferred vocabulary level. Validate, regenerate manifest, audit quiz/fallback/fonts and normally sign a local unreviewed frozen draft. Do not push. Then two serial blind different-family reviews on that snapshot, followed by applicable Android/native/current-main/CI/immutableZIP gates. No068 or second runner.",
-  "limits": "Source preparation only; zero runtime changes and zero drafted/review-closed/published067 rows. Proposed curation, support, titles and quiz choices are not final teaching acceptance. Coordinator inspection is not independent review. Public-definition, gaiji and extraction limits remain explicit. Android/native/font/current-main/CI/publicZIP/physical-phone/general-release/whole-set acceptance remains outstanding for067. Compatible Androidf9b59a2+ required. Published93/1228,1135remain;94 existing project support additions are not an N1 vocabulary deck. Historical066 review/process/native/visual limits remain unchanged."
+  "supportMappings": [
+    {
+      "kanji": "僧",
+      "article": "words/僧侶.md",
+      "primaryReading": "そうりょ",
+      "entryIds": [
+        "1398240"
+      ],
+      "newArticle": true,
+      "selectedSenses": "Buddhist priest or monk; individual or collective reference. Exact full one-spelling/one-reading noun family. No vocabulary level inferred."
+    }
+  ],
+  "requiredReciprocalPairs": [
+    [
+      "僧",
+      "words/僧侶.md"
+    ]
+  ],
+  "allMappedReciprocalPairs": [
+    [
+      "僧",
+      "words/僧侶.md"
+    ]
+  ],
+  "curatedProjection": [
+    {
+      "kanji": "僧",
+      "quizOnyomi": [
+        "ソウ"
+      ],
+      "quizKunyomi": [],
+      "onKeys": [
+        "そう"
+      ],
+      "kunKeys": []
+    }
+  ],
+  "changedReusedPassages": [
+    {
+      "article": "words/坊さん.md",
+      "before": "僧侶 (そうりょ) is a more formal Buddhist-clergy term.",
+      "after": "[僧侶](僧侶.md) (そうりょ) is a more formal Buddhist-clergy term.",
+      "scope": "One comparison navigation link only; preserve all wording and metadata including original exclusions and N2 level."
+    }
+  ],
+  "quizAudit": {
+    "僧": {
+      "title": "Buddhist monk; priest",
+      "distractors": [
+        "増",
+        "値",
+        "倍"
+      ],
+      "labels": [
+        "increase",
+        "value; price",
+        "multiple; double"
+      ],
+      "reason": "Actual complete cards and raw character records inspected. Three unrelated wrong meanings avoid default-four fill. 増 shares the right-hand visual shape; 値 and 倍 share the person radical."
+    }
+  },
+  "wordQuizAudit": {
+    "directExclusions": [],
+    "word": "僧侶",
+    "title": "Buddhist priest; monk",
+    "exactTitlePeer": "坊さん",
+    "reason": "The actual new title exactly matches 坊さん, so existing exact-title deduplication keeps them apart. No invented semantic distinction or redundant exclusion. Preserved original 坊さん boy-sense exclusions do not automatically transfer to 僧侶, which has no boy sense. 仏 names Buddha/an image/the deceased, not this clerical role; 寺 names a place.",
+    "limits": "Author inspection of actual display labels and relevant articles; not independent review, exhaustive whole-corpus semantic audit or live-quiz acceptance."
+  },
+  "draftInspection": {
+    "execution": 431,
+    "sourceCheckpoint": "3ee4db9dddb613daee42476e3a8209ed0ccd9715",
+    "lexicalReturnedRanges": [
+      [
+        1,
+        350
+      ],
+      [
+        351,
+        700
+      ],
+      [
+        701,
+        1050
+      ],
+      [
+        1051,
+        1400
+      ],
+      [
+        1401,
+        1716
+      ]
+    ],
+    "comparisonReturnedRanges": [
+      [
+        1,
+        172
+      ]
+    ],
+    "rawCharacterReturnedRanges": [
+      [
+        1,
+        210
+      ],
+      [
+        211,
+        406
+      ]
+    ],
+    "distinctCompleteFamilies": 113,
+    "completeExistingArticlesRead": [
+      "words/坊さん.md",
+      "words/寺.md",
+      "words/仏.md",
+      "kanji/増.md",
+      "kanji/値.md",
+      "kanji/倍.md"
+    ],
+    "publicEvidence": "Exact public headings/definitions preserved in batch-067-source-evidence.json from source coordinator430; no fresh web retrieval claimed here.",
+    "scope": "Complete new 僧 and necessary 僧侶, including both new translated examples; reused 坊さん comparison link only. No historical/phonetic/frequency claims added.",
+    "limits": "Coordinator author inspection only, not independent review or actual phone readability. Preserved public extraction/gaiji limits remain explicit."
+  },
+  "strokeDisposition": "batch-067-stroke-evidence.json",
+  "sourcePreparationLimits": "Source-stage proposals and source-only audit remain historical. Zero drafted/review-closed/published rows at source checkpoint3ee4db9d. See draftInspection and draft audit for the current unreviewed runtime changes.",
+  "nextAction": "SAME067: use the normally signed local unreviewed draft for two serial blind independent initial reviews with actual available different model families. Cover complete 僧/僧侶 and the exact changed 坊さん passage across all three facets on one frozen snapshot with equal source access. Reconcile evidence-based findings and confirm fixes with original sessions. Do not edit while reviewed or push before Android/native/current-main/CI/immutableZIP gates. No068 or second runner.",
+  "limits": "Local unreviewed067 draft only: one new kanji/stroke, one necessary new support word and one reused comparison link. No independent reviewer or fresh Android/native/phone acceptance. Cmap evidence is not native glyph evidence. Current-main/CI/immutable-public-ZIP/general-release/whole-set gates outstanding; compatible Androidf9b59a2+ required. Published93/1228 and remaining1135 unchanged;95 local necessary support additions are not an N1 vocabulary deck. Historical066 review/process/native/visual limits unchanged.",
+  "fontDisposition": {
+    "articles": [
+      "kanji/僧.md",
+      "words/僧侶.md",
+      "words/坊さん.md"
+    ],
+    "characters": [
+      "人",
+      "亻",
+      "侶",
+      "倍",
+      "値",
+      "僧",
+      "土",
+      "坊",
+      "増",
+      "子",
+      "寺",
+      "尋",
+      "小",
+      "少",
+      "年",
+      "彼",
+      "曽",
+      "父",
+      "男",
+      "神",
+      "聞",
+      "話",
+      "道",
+      "高"
+    ],
+    "count": 24,
+    "fonts": [
+      {
+        "path": "app/src/main/res/font/kanji_brush.ttf",
+        "sha256": "8da5c86e251f6efa0f81fc32bd6e67a5d81d21da26cd6c2b3fa4bb92a7692954",
+        "missing": [
+          "亻"
+        ]
+      },
+      {
+        "path": "app/src/main/res/font/kanji_mincho.ttf",
+        "sha256": "168007ae94a45262cdcbe6ca940b70d3aba27a3399362a68f723e1445ac9596d",
+        "missing": [
+          "亻"
+        ]
+      },
+      {
+        "path": "app/src/main/res/font/kanji_textbook.ttf",
+        "sha256": "c37ea201be60dc5707693a14f93c1999f815cc6c54c0e63930606d0c598a50ab",
+        "missing": [
+          "亻"
+        ]
+      }
+    ],
+    "missingUnion": [
+      "亻"
+    ],
+    "limits": "All Han in complete affected articles compared with pinned bundled cmaps; not native rendering/fallback/drawing or phone evidence.",
+    "nextNativeInspection": "Inspect actual 僧/侶 and standalone 亻/曽 in affected articles. Cmap presence is not readability certification, and absence is not a glyph failure."
+  }
 }
