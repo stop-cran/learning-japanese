@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "execution": 403,
+  "checkpoint": 403,
+  "batch": "064",
+  "status": "blocked-before-fresh-android-execution-permission",
+  "startingHead": "94fcbbe3426f9a957a1131dee97b7f1ff2381f3f",
+  "startingSignature": "G",
+  "androidHead": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "reviewedTeachingSnapshot": "ff6eb7893344b806bf517ebd41bf19089bed5021",
+  "recordedAt": "2026-11-05T08:08:57.027933+00:00",
+  "scope": "SAME064 fresh Android RealContentTest3/RareHanTest1, exact result archival and normally signed local evidence checkpoint only. No native preparation/run, reviewer, runtime publication,065 or second runner.",
+  "authorization": {
+    "requestSha256": "74bdec37c09175e371010d1778c3c34f5ef9adc25772f81f7b3afb486ef80ee0",
+    "characters": 1602790,
+    "lines": 20808,
+    "completeFileLoadedAndCheckpointParsed": true,
+    "limits": "Entire request acquired into memory and complete embedded checkpoint parsed; operative contract, final402 checkpoint and complete approved issue inspected directly. Historical middle acquired and parsed, not freshly semantically re-reviewed."
+  },
+  "blocker": {
+    "kind": "execution-permission",
+    "gate": "Fresh batch064 Android RealContentTest3 and RareHanTest1",
+    "attempts": 1,
+    "deniedCommand": "$ErrorActionPreference = 'Stop'; $env:JAVA_HOME = 'C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot'; $env:ANDROID_HOME = 'C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk'; Set-Location C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android; $started=[DateTimeOffset]::UtcNow; $started.ToString('o') | Set-Content -LiteralPath C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-064-android-start.txt -Encoding utf8NoBOM; Write-Output \"FRESH064_STARTED=$($started.ToString('o'))\"; Write-Output \"CONTENT_ROOT=$([IO.Path]::GetFullPath((Join-Path (Join-Path (Get-Location) 'core') '..\\..\\learning-japanese')))\"; & .\\gradlew.bat :core:test --tests 'io.github.stopcran.kanji.core.RealContentTest' :app:testDebugUnitTest --tests 'io.github.stopcran.kanji.core.RareHanTest' --no-daemon --no-parallel --max-workers=1 --rerun-tasks '-Pkotlin.compiler.execution.strategy=in-process' --init-script C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-049-host-integration-heap.init.gradle 2>&1 | Tee-Object -FilePath C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-403-android.txt; $result=$LASTEXITCODE; $result | Set-Content -LiteralPath C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-403-android-exit.txt -Encoding utf8NoBOM; Write-Output \"FRESH064_EXIT=$result\"; exit $result",
+    "message": "Permission denied because no interactive user response was available. Retry in an interactive session so the user can approve it, or try an alternative that does not require this permission.",
+    "disposition": "Preserve/report/yield. No retry, alternative invocation, permission/configuration change, old XML reuse or weakened gate."
+  },
+  "noFreshArtifacts": [
+    "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-064-android-start.txt",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-403-android.txt",
+    "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\execution-403-android-exit.txt"
+  ],
+  "preexistingXmlNotAccepted": [
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core\\build\\test-results\\test\\TEST-io.github.stopcran.kanji.core.RealContentTest.xml",
+      "sha256": "c16a83520bbd1de8543cac11f46138c3af35271383340d79247f970460dde4b7",
+      "name": "io.github.stopcran.kanji.core.RealContentTest",
+      "tests": "3",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-05T06:47:02.868Z",
+      "hostname": "TRAIN",
+      "time": "15.329",
+      "caseNames": [
+        "hotelBookingDoesNotAcceptTheSchoolClassReadingWhenRepoPresent",
+        "completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent",
+        "parsesRealContentRepoWhenPresent"
+      ],
+      "acceptedForBatch064": false,
+      "disposition": "Pre-existing batch063 XML, not fresh064 execution or acceptance."
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\build\\test-results\\testDebugUnitTest\\TEST-io.github.stopcran.kanji.core.RareHanTest.xml",
+      "sha256": "5e8dae5d34f73d3949a45c16d9715ece3ffbb8e318dc2ed813baf060f36dd1f5",
+      "name": "io.github.stopcran.kanji.core.RareHanTest",
+      "tests": "1",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-05T06:49:59.215Z",
+      "hostname": "TRAIN",
+      "time": "1.061",
+      "caseNames": [
+        "contentRareCharactersAreCoveredByBundledFont"
+      ],
+      "acceptedForBatch064": false,
+      "disposition": "Pre-existing batch063 XML, not fresh064 execution or acceptance."
+    }
+  ],
+  "testImplementations": [
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core\\src\\test\\kotlin\\io\\github\\stopcran\\kanji\\core\\RealContentTest.kt",
+      "sha256": "4f019673d77a6899e435afc8d071794564e78f6148cf3019456184eb72ef2188",
+      "fixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese"
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\src\\test\\java\\io\\github\\stopcran\\kanji\\core\\RareHanTest.kt",
+      "sha256": "1409e85428837864409dce7f4ea371611d8a92839d4d0e86258e4c0a0a5a15ed",
+      "fixtureRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese"
+    }
+  ],
+  "hostInit": {
+    "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-049-host-integration-heap.init.gradle",
+    "sha256": "ff2d68bd18491590f7cb38da7807d6ff40153e1dfbaef0cd744e50f4ccea742d",
+    "qualification": "Existing host-only :core Test1GiB setting; no guest/app heap, assertion, font or archive guard change.",
+    "executed": false
+  },
+  "reconciliationSha256": "7c1d423bc532ea968f1efbf258d229a30074702fc03ea031b91948279c899918",
+  "runtimeUnchangedFromTextualReconciliation": true,
+  "contentVersion": "ae05977ba66f42f5",
+  "publishedAdditions": 90,
+  "remainingAdditions": 1138,
+  "localDraftAdditions": 91,
+  "nativeOrVisualAcceptanceClaimed": false,
+  "publicationAttempted": false,
+  "nextAction": "SAME064 blocked BEFORE fresh Android execution at checkpoint403. Approval-capable parent must resolve the EXACT denied Gradle command preserved in control\\execution-403-permission-blocker.json and docs\\n1-sources\\execution-403.json without permission/configuration changes, disguised invocation or retry around the denial. Preserve original denial and FULL live history. Resume fresh non-skipped RealContentTest3/RareHanTest1 against dedicated sibling content with explicit specified JDK17/SDK, one worker/no-parallel/rerun-tasks/in-process compiler and unchanged qualified049 HOST-only1GiB init. Old063 XML is NOT064 acceptance. Textual closure94fcbbe3 and teachingff6eb789 unchanged; no reviewer needed absent new concern. Archive actual fresh XML, timestamps, exact case names, source/root hashes and result, sign normally, then checkpoint before separate native fixture preparation. Later exact-fullarchive production ContentSyncONCE/nativeglyph/selection/meaning/curatedreading/drawing/articles/SystemBack/offline/serial original-session visual/current-main normalmerge/combinedchecks/ownerfastforward/publicSHA/greenCI/every immutable public ZIP runtime hash gates remain. Inspect actual偵/貞 and停/低/値 plus人/亻 and手/扌 in existing探 at native gate with fresh port ownership. No native/reviewer/runtime publication/065/secondrunner, signing retry, permission workaround or concurrent heavy work. Published90/1228,1138remaining; local91 NOT delivered. CompatibleAndroidf9b59a2+ required; physical-phone/general-release/whole-set explicitly outstanding. Overall project incomplete.",
+  "limits": "Actual required command denied before execution; exact trigger not exposed. No fresh start/log/exit/XML, Gradle execution, test failure or missing-tool finding. Prior063 XML preserved, not accepted. No workaround/retry, reviewer, native, fetch/merge, teaching or runtime change. Prior402 automated checks inherited, not repeated403. No publication/phone/general-release/whole-set acceptance."
+}
