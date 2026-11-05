@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 071: local unreviewed runtime draft
+## Batch 071: textual review closed; Android/native gates outstanding
 
 The [frozen batch](n1-sources/batch-071-membership.json) selects **允**,
 source row 80, after batch 070's
@@ -78,13 +78,28 @@ quiz guards and preservation of the baseline and other runtime hashes.
 The support example uses the attested historical permission-obtaining
 construction in dictionary form; it is not an invented everyday collocation.
 
-This is a normally signed **local UNREVIEWED checkpoint**, not independent
-content review or publication. There is one drafted row and **zero
-review-closed or published batch-071 rows**. The next checkpoint is two
-serial blind initial content reviews from different actual model families
-on the same signed snapshot, covering both complete articles and their
-reading/choice/register/phone-text scope. All later Android/native/font,
-current-main, signing and publication gates remain outstanding.
+The [textual reconciliation](n1-reviews/batch-071-reconciliation.json)
+preserves independent initial **Claude Opus 5.5** and **GPT-6.1 Sol** reports
+on signed snapshot `1dc35214`, covering both complete articles, all reading
+dispositions, actual choices/guards and phone-text comprehensibility.
+Both returned all 35 assigned ranges and found no actionable defect;
+optional historical-detail and editorial suggestions remain nonblocking.
+The reviewer processes were serial, with complete reports archived before
+the next launch. Claude initially overlapped two small guidance reads;
+the original report/execution preserves that deviation. A same-session
+confirmation re-read those ranges serially without changing any verdict.
+That confirmation does not rewrite the initial execution or count as a
+third independent review. Teaching is unchanged.
+
+The [execution record](n1-sources/execution-466.json) retains 372 passing
+Python tests without skips, content/manifest/vocabulary/budget checks,
+exact frozen membership, baseline metadata/stroke preservation, all runtime
+hashes, reciprocal links and reconverted pinned geometry. The actual-text
+cmap recheck still leaves isolated 儿 and 厶 for later native inspection.
+There is **one textually review-closed row, zero accepted or published
+batch-071 rows**. Fresh Android, native/font/visual, current-main and
+publication gates remain outstanding; the next checkpoint starts with
+dedicated Android real-content and rare-Han checks, not another batch.
 Published coverage stays **97/1,228 additions; 1,131 remain**, with
 98 necessary support additions, not an N1 vocabulary deck.
 Compatible Android `f9b59a2+` is required; physical-phone, general-release
