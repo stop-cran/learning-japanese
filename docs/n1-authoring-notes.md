@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 073: source prepared, not drafted
+## Batch 073: local unreviewed runtime draft
 
 The [source packet](n1-sources/batch-073-progress.json) bounds the next batch
 to **克**, frozen source row 82. Complete applicable evidence contains
@@ -51,12 +51,22 @@ rare-spelling **克つ** and the attested self-control phrase **己に克つ**
 おのれにかつ; rarity concerns the standalone spelling, not pronunciation.
 The [public-source record](n1-sources/batch-073-source-evidence.json) separates
 the inspected verb sense from an irrelevant redirect and failed phrase URL.
-The future draft needs an exact **克服** component link and a narrow **服**
+The draft adds an exact **克服** component link and a narrow **服**
 reciprocal example: two all-mapped pairs/four directions, including the
-already-present word-to-服 link. Preserve all easier metadata and levels.
+already-present word-to-服 link. All easier metadata and levels are preserved.
 
-No runtime draft, stroke conversion, reviewer, Android/native check or
-publication has occurred for 073. Earlier deferred source rows stay pending.
+The new **克** card retains full **コク /か.つ** metadata in source order;
+practice selects only **コク** through existing **克服**, with explicit empty
+kun selection. Seven-stroke geometry is generated from the pinned KanjiVG
+SVG by the unchanged converter. The [draft audit](n1-sources/batch-073-draft-audit.json)
+and [execution record](n1-sources/execution-481.json) preserve source, exact
+runtime changes, actual-text fonts, baseline metadata, quiz and link checks.
+Bundled cmaps contain 克; isolated radical 儿 still needs later actual
+native fallback inspection. Cmap absence is not a glyph failure.
+
+This is **one drafted row, zero review-closed or published 073 rows**.
+No reviewer or fresh Android/native check has run for this checkpoint;
+no unreviewed content is pushed. Earlier deferred source rows stay pending.
 Published coverage remains **99/1,228 additions; 1,129 remain**. Compatible
 Android `f9b59a2+`, the original review/publication gates and outstanding
 physical-phone/general-release/whole-set acceptance remain unchanged.
