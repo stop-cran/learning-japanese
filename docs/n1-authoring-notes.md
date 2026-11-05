@@ -37,6 +37,27 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 062: salary-character source preparation, not a draft
+
+The [frozen membership](n1-sources/batch-062-membership.json) selects **俸**
+(source row 56) for one evidence-bounded packet. The
+[source ledger](n1-sources/batch-062-progress.json) retains the complete frozen
+**ホウ / no kun**, ten strokes and **人**, no. 9, visible **亻**.
+Coordinator inspection covers **38 complete JMdict families**, six raw
+KANJIDIC2 records and twelve actual existing articles. No current article
+declares 俸, so one necessary **俸給（ほうきゅう）** support article is
+proposed; it has not been written or assigned a vocabulary level.
+
+The [exact public-entry evidence](n1-sources/batch-062-source-evidence.json)
+keeps official-pay associations separate from a government-only rule, annual
+salary from an installment schedule, and **年俸（ねんぽう）** from the
+incorrect pronunciation ねんぼう. The packet preserves irregular **年棒**,
+historical/archaic stipend senses and search-only **俸祿米** without promoting
+them into ordinary examples. Proposed support requires both **俸/俸給** and
+**給/俸給** reciprocal links and an actual salary-label ambiguity audit.
+This checkpoint changes no runtime content and claims no independent review,
+stroke/font/native acceptance or new publication.
+
 ## Batch 061: bounded native/visual checks reconciled; publication pending
 
 The [frozen membership](n1-sources/batch-061-membership.json) selects **俳**
