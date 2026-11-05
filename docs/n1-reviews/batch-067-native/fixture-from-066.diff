@@ -1,0 +1,267 @@
+--- docs/n1-reviews/batch-066-native/N1Batch066NativeTest.kt
++++ docs/n1-reviews/batch-067-native/N1Batch067NativeTest.kt
+@@ -49 +49 @@
+-private fun disposable066() {
++private fun disposable067() {
+@@ -54 +54 @@
+-class N1Batch066GlyphTest {
++class N1Batch067GlyphTest {
+@@ -57,2 +57,2 @@
+-    @Test fun colleagueLookalikesAndRadicalVariantsAcrossFourProductionFamilies() {
+-        disposable066()
++    @Test fun buddhistClergyLookalikesAndRadicalVariantsAcrossFourProductionFamilies() {
++        disposable067()
+@@ -61 +61 @@
+-        val text = "僚 療 像 値 人 亻 疒 同 口 同僚"
++        val text = "僧 増 値 倍 人 亻 曽 侶 僧侶 坊さん"
+@@ -65 +65 @@
+-                    Text("Batch 066: colleague / look-alikes / radical variants")
++                    Text("Batch 067: Buddhist clergy / look-alikes / radical variants")
+@@ -70 +70 @@
+-                    Text("Compare 僚 with 療, 像 and 値. Inspect 人 versus 亻 and the illness frame 疒; also inspect 同, 口 and the word 同僚. Shared fallback need not give four different designs.", fontSize = 18.sp)
++                    Text("Compare 僧 with 増, 値 and 倍. Inspect 人 versus 亻, the right-hand 曽 and the support character 侶; also inspect 僧侶 and 坊さん. Shared fallback need not give four different designs.", fontSize = 18.sp)
+@@ -81 +81 @@
+-            for (char in listOf("僚", "療", "像", "値", "人", "亻", "疒", "同", "口")) {
++            for (char in listOf("僧", "増", "値", "倍", "人", "亻", "曽", "侶")) {
+@@ -102 +102 @@
+-            for (word in listOf("同僚")) {
++            for (word in listOf("僧侶", "坊さん")) {
+@@ -133 +133 @@
+-        File(context.getExternalFilesDir(null), "n1-066-font-pairs.png").outputStream().use {
++        File(context.getExternalFilesDir(null), "n1-067-font-pairs.png").outputStream().use {
+@@ -136 +136 @@
+-        File(context.getExternalFilesDir(null), "n1-066-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-067-font-raster.json").writeText(JSONObject()
+@@ -139,2 +139,2 @@
+-            .put("individualGlyphProbes", 36).put("wholeWordRasterProbes", 4)
+-            .put("limits", "Thirty-six single-character native Paint probes including actual 人/亻 and standalone 疒, four complete-word nonblank raster probes and four production Compose rows; actual 僚/療/像/値/人/亻/疒/同/口/同僚 readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
++            .put("individualGlyphProbes", 32).put("wholeWordRasterProbes", 8)
++            .put("limits", "Thirty-two single-character native Paint probes including actual 人/亻 and standalone 曽/侶, eight complete-word nonblank raster probes and four production Compose rows; actual 僧/増/値/倍/人/亻/曽/侶/僧侶/坊さん readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
+@@ -145 +145 @@
+-class N1Batch066ArticleTest {
++class N1Batch067ArticleTest {
+@@ -150,2 +150,2 @@
+-    @Test fun fullSingleImportOfflineColleagueTwoReciprocalPairsOnOnlyDrawingAndSystemBack() {
+-        disposable066()
++    @Test fun fullSingleImportOfflineBuddhistClergyReciprocalComparisonOnOnlyDrawingAndSystemBack() {
++        disposable067()
+@@ -154,2 +154,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-066-${UUID.randomUUID()}", "main")
+-        val head = "175fdf3f1605f231e27a9de19a7c18c4a02cb20d"
++        val source = RepoSource("acceptance-fixture", "n1-067-${UUID.randomUUID()}", "main")
++        val head = "a45ce3014661487bf16977260daa5ca23e001663"
+@@ -163 +163 @@
+-                    instrumentation.context.assets.open("n1-batch-066-175fdf3f-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-067-a45ce301-envelope.zip")
+@@ -178,2 +178,2 @@
+-        assertEquals(1078, updated.kanji)
+-        assertEquals(5036, updated.words)
++        assertEquals(1079, updated.kanji)
++        assertEquals(5037, updated.words)
+@@ -182 +182 @@
+-        assertEquals("a9ecc100b6c1335c", meta.contentVersion)
++        assertEquals("68c767f176e68882", meta.contentVersion)
+@@ -190,10 +190,10 @@
+-        assertEquals(98, n1.size)
+-        val colleague = n1.single { it.kanji == "僚" }
+-        assertEquals(listOf("リョウ"), colleague.onyomi.splitSep())
+-        assertEquals(emptyList<String>(), colleague.kunyomi.splitSep())
+-        assertNotNull(colleague.quizOnyomi)
+-        assertNotNull(colleague.quizKunyomi)
+-        assertEquals(listOf("リョウ"), colleague.quizOnyomi?.splitSep())
+-        assertEquals(emptyList<String>(), colleague.quizKunyomi?.splitSep())
+-        assertEquals(listOf("りょう"), colleague.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(emptyList<String>(), colleague.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(99, n1.size)
++        val clergy = n1.single { it.kanji == "僧" }
++        assertEquals(listOf("ソウ"), clergy.onyomi.splitSep())
++        assertEquals(emptyList<String>(), clergy.kunyomi.splitSep())
++        assertNotNull(clergy.quizOnyomi)
++        assertNotNull(clergy.quizKunyomi)
++        assertEquals(listOf("ソウ"), clergy.quizOnyomi?.splitSep())
++        assertEquals(emptyList<String>(), clergy.quizKunyomi?.splitSep())
++        assertEquals(listOf("そう"), clergy.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(emptyList<String>(), clergy.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -213 +213 @@
+-                        if (card.kanji == "僚") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "僧") now - 60_000 else now + 30L * 86_400_000,
+@@ -219 +219 @@
+-                            if (card.kanji == "僚" && (kind == ReadingKind.On && key == "りょう")) now - 60_000
++                            if (card.kanji == "僧" && (kind == ReadingKind.On && key == "そう")) now - 60_000
+@@ -226 +226 @@
+-                    0, source.id, "jlpt-n1", "僚", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "僧", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -236,4 +236,4 @@
+-            .put("fullOnyomi", JSONArray(colleague.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(colleague.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(colleague.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(colleague.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("fullOnyomi", JSONArray(clergy.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(clergy.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(clergy.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(clergy.toReadingCard().quizKeys(ReadingKind.Kun)))
+@@ -242 +242 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 僚 meaning and sole curated on key due; explicit no-kun. Two historical good 僚 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 僧 meaning and sole curated on key due; explicit no-kun. Two historical good 僧 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -249 +249 @@
+-            await("N1 · 98 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 99 cards").performScrollTo().assertIsDisplayed()
+@@ -252,2 +252,2 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("僚")
+-            click("colleague")
++            rule.onNode(hasSetTextAction()).performTextReplacement("僧")
++            click("Buddhist monk; priest")
+@@ -258,3 +258,3 @@
+-            show("僚 concerns a colleague or associate sharing work or a role", "kanji-meaning")
+-            show("It also appears with an official sense", "kanji-official-sense")
+-            show("Modern-shape mnemonic, not etymology:", "kanji-mnemonic")
++            show("僧 usually refers to a Buddhist monk or priest.", "kanji-meaning")
++            show("The visible parts are 亻", "kanji-components")
++            show("Modern-shape mnemonic:", "kanji-mnemonic")
+@@ -262 +262,2 @@
+-            show(readingExample("同僚 どうりょう — coworker; colleague"), "kanji-on-reading")
++            show(readingExample("僧侶 そうりょ — Buddhist priest; monk"), "kanji-on-reading")
++            show("The frozen character dictionary gives ソウ and no kun reading.", "kanji-compound-reading-boundary")
+@@ -264,3 +265,3 @@
+-            show(articleBullet("同僚 identifies a work relationship, not necessarily a personal friendship. Do not derive a rigid equal-rank requirement from 同."), "kanji-role-boundary")
+-            show(articleBullet("療 shares the elaborate right-hand shape but has the illness frame 疒 and concerns treatment or healing, not a colleague."), "kanji-healing-lookalike")
+-            show(articleBullet("像 and 値 also have 亻 on the left; inspect the different right-hand components rather than relying on the radical alone."), "kanji-other-lookalikes")
++            show(articleBullet("僧 そう can also abbreviate the Buddhist community, or sangha, in religious usage. The context distinguishes this collective sense from an individual monk."), "kanji-collective-sense")
++            show(articleBullet("The English gloss \"priest\" does not make 僧 a general translation for clergy of every religion. Compounds can have wider uses; learn the whole word."), "kanji-religious-scope")
++            show(articleBullet("増, \"increase,\" has 土 on the left instead of 亻. 値, \"value; price,\" and 倍, \"multiple; double,\" share 亻 but have different right-hand shapes."), "kanji-lookalikes")
+@@ -268,3 +269,3 @@
+-            show(articleBullet("官僚 かんりょう — bureaucrat; government official"), "kanji-common-official")
+-            inline(await(articleBullet("同僚 どうりょう — coworker; colleague")), "同僚")
+-            await("同僚 (どうりょう) - coworker; colleague")
++            show(articleBullet("高僧 こうそう — a high-ranking or highly respected Buddhist priest"), "kanji-common-high-priest")
++            inline(await(articleBullet("僧侶 そうりょ — Buddhist priest; monk")), "僧侶")
++            await("僧侶 (そうりょ) - Buddhist priest; monk")
+@@ -272,4 +273,3 @@
+-            show("同僚 is a noun for a coworker or colleague.", "coworker-meaning")
+-            show(articleBullet("同僚と昼ご飯を食べました。 (どうりょうとひるごはんをたべました。) - I had lunch with a colleague."), "coworker-lunch-example")
+-            show(articleBullet("困ったときは同僚に相談します。 (こまったときはどうりょうにそうだんします。) - When I have a problem, I consult a coworker."), "coworker-consult-example")
+-            show("The second example uses に for the person consulted.", "coworker-particle-plural")
++            show("僧侶 is a Buddhist priest or monk.", "clergy-meaning")
++            show(articleBullet("彼は僧侶です。 (かれはそうりょです。) - He is a Buddhist priest."), "clergy-person-example")
++            show(articleBullet("お寺で僧侶の話を聞きました。 (おてらでそうりょのはなしをききました。) - I listened to a Buddhist priest's talk at the temple."), "clergy-temple-example")
+@@ -277,2 +277,2 @@
+-            show("The on readings ドウ + リョウ give どうりょう.", "coworker-reading-allocation")
+-            inline(await("contributes sameness or sharing", substring = true), "僚")
++            show("僧 ソウ supplies the Buddhist monk or priest meaning;", "clergy-reading-allocation")
++            inline(await("僧 ソウ supplies the Buddhist monk or priest meaning;", substring = true), "僧")
+@@ -281,23 +281,13 @@
+-            show(readingExample("同僚 どうりょう — coworker; colleague"), "coworker-colleague-backlink")
+-            back()
+-            await("contributes sameness or sharing", substring = true).assertIsDisplayed()
+-            capture("system-back-coworker-colleague")
+-            inline(await("contributes sameness or sharing", substring = true), "同")
+-            await("同 — same, equal")
+-            await("Key (radical):", substring = true).performScrollTo().assertIsDisplayed()
+-            capture("same-radical")
+-            section("Meaning and origin")
+-            show("同 conveys sameness, equality, or agreement.", "same-meaning")
+-            show("Modern-shape mnemonic:", "same-mnemonic")
+-            section("Readings")
+-            show(readingExample("同時 どうじ — same time; 同意 どうい — agreement"), "same-on-reading")
+-            show(readingExample("同じ おなじ — same"), "same-kun-reading")
+-            section("Notes")
+-            show("Before an ordinary noun, use 同じ directly:", "same-attachment")
+-            show("Distinguish the outer frame", "same-lookalikes")
+-            section("Common words")
+-            show(articleBullet("同じ おなじ — same"), "same-common-same")
+-            show(articleBullet("同時 どうじ — same time; 同時に どうじに — simultaneously"), "same-common-time")
+-            show(articleBullet("同意 どうい — agreement; consent"), "same-common-agreement")
+-            inline(await(articleBullet("同僚 どうりょう — coworker; colleague")), "同僚")
+-            await("同僚 (どうりょう) - coworker; colleague")
++            show(readingExample("僧侶 そうりょ — Buddhist priest; monk"), "clergy-kanji-backlink")
++            back()
++            await("僧 ソウ supplies the Buddhist monk or priest meaning;", substring = true).assertIsDisplayed()
++            capture("system-back-clergy-kanji")
++            section("Synonyms and antonyms")
++            show("坊さん (ぼうさん), also お坊さん (おぼうさん),", "clergy-register-comparison")
++            show("神父 (しんぷ), a Catholic priest,", "clergy-catholic-boundary")
++            inline(await("坊さん (ぼうさん), also お坊さん (おぼうさん),", substring = true), "坊さん")
++            await("坊さん (ぼうさん) - Buddhist priest; monk")
++            section("Meaning")
++            show("坊さん is a familiar, respectful way of referring to a Buddhist priest or monk.", "bousan-meaning")
++            show(articleBullet("お寺で坊さんの話を聞きました。 (おてらでぼうさんのはなしをききました。) - I listened to a Buddhist priest's talk at the temple."), "bousan-temple-example")
++            show(articleBullet("お坊さんに道を尋ねました。 (おぼうさんにみちをたずねました。) - I asked a Buddhist priest for directions."), "bousan-directions-example")
+@@ -305,6 +295,3 @@
+-            show("The on readings ドウ + リョウ give どうりょう.", "same-coworker-backlink")
+-            back()
+-            await(articleBullet("同僚 どうりょう — coworker; colleague")).assertIsDisplayed()
+-            capture("system-back-same-coworker")
+-            back()
+-            await("contributes sameness or sharing", substring = true).assertIsDisplayed()
++            show("坊 contributes ボウ; さん is the familiar honorific suffix, not another kanji.", "bousan-formation")
++            section("Distinctive meaning")
++            show("坊さん also has a familiar \"boy\" sense.", "bousan-boy-boundary")
+@@ -312,3 +299,11 @@
+-            show("仲間 (なかま) is a companion or member of the same group more broadly.", "coworker-companion-boundary")
+-            show("友人 (ゆうじん) is a friend", "coworker-friend-boundary")
+-            show("上司 (じょうし)", "coworker-superior-boundary")
++            show("僧侶 (そうりょ) is a more formal Buddhist-clergy term.", "bousan-changed-comparison")
++            inline(await("僧侶 (そうりょ) is a more formal Buddhist-clergy term.", substring = true), "僧侶")
++            await("僧侶 (そうりょ) - Buddhist priest; monk")
++            section("How the kanji combine")
++            show("僧 ソウ supplies the Buddhist monk or priest meaning;", "bousan-clergy-backlink")
++            back()
++            await("僧侶 (そうりょ) is a more formal Buddhist-clergy term.", substring = true).assertIsDisplayed()
++            capture("system-back-bousan-clergy")
++            back()
++            await("坊さん (ぼうさん), also お坊さん (おぼうさん),", substring = true).assertIsDisplayed()
++            capture("system-back-clergy-bousan")
+@@ -316 +311 @@
+-            show("同僚 presents someone as a fellow worker.", "coworker-rank-boundary")
++            show("Use 僧侶 for the religious person,", "clergy-person-temple-boundary")
+@@ -327 +322 @@
+-            assertEquals("僚", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("僧", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -329 +324 @@
+-            click("colleague")
++            click("Buddhist monk; priest")
+@@ -331 +326 @@
+-            assertEquals("僚", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("僧", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -341 +336 @@
+-                assertEquals("僚", question.card.kanji)
++                assertEquals("僧", question.card.kanji)
+@@ -344 +339 @@
+-                val key = "りょう"
++                val key = "そう"
+@@ -355 +350 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "僚" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "僧" &&
+@@ -362 +357 @@
+-                    it.kanji == "僚" && it.mode == ReadingKind.Kun.mode.name }
++                    it.kanji == "僧" && it.mode == ReadingKind.Kun.mode.name }
+@@ -368,3 +363,3 @@
+-            await("colleague").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "僚") })
+-            assertEquals(listOf("リョウ"), card.onyomi.splitSep())
++            await("Buddhist monk; priest").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "僧") })
++            assertEquals(listOf("ソウ"), card.onyomi.splitSep())
+@@ -374 +369 @@
+-            assertEquals(listOf("リョウ"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("ソウ"), card.quizOnyomi?.splitSep())
+@@ -377 +372 @@
+-            assertEquals(14, strokes.length())
++            assertEquals(13, strokes.length())
+@@ -394 +389 @@
+-            rule.onNode(hasContentDescription("14 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("13 strokes drawn", substring = true)).assertExists()
+@@ -399 +394 @@
+-                    it.kanji == "僚" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "僧" && it.mode == StudyMode.Draw.name }
+@@ -410 +405 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "僚" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "僧" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -423,2 +418,2 @@
+-            File(app.getExternalFilesDir(null), "n1-066-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-066-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-067-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-067-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -518 +513 @@
+-        File(app.getExternalFilesDir(null), "n1-066-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-067-$step.png").outputStream().use {

@@ -37,7 +37,39 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 067: local unreviewed draft; not published
+## Batch 067: native fixture compiled; not executed or published
+
+The [textual reconciliation](n1-reviews/batch-067-reconciliation.json) closes
+both serial independent initial reviews on the unchanged teaching snapshot.
+The [fresh Android record](n1-sources/execution-433.json) retains three
+RealContentTest cases and one RareHanTest case with no failures or skips.
+Those are host checks, not native or physical-phone acceptance.
+
+The [native preparation](n1-sources/batch-067-native-preparation.json) freezes
+the exact full `a45ce301` Git archive: **1,079 kanji / 5,037 words / 99 N1
+cards**, content version `68c767f176e68882`. Every one of its **8,329 runtime
+hashes** and the original archive budgets pass. The disposable fixture
+compiles with one worker, without the host-test heap override; its APK
+contains the exact archive and both selected test cases. Temporary Android
+source and assets were removed, leaving that worktree clean.
+
+The [execution record](n1-sources/execution-434.json) preserves **49 static
+article selectors**, **28 planned article captures**, and four directed
+routes: 僧–僧侶 reciprocal links and 僧侶–坊さん comparisons. The prepared
+cases use production ContentSync once, check sole curated ソウ and empty
+kun lists, and exercise thirteen-stroke reference tracing and recall.
+The glyph case plans 32 individual probes and eight whole-word raster probes
+across four production font families, including standalone 亻, 曽 and 侶.
+These are compiled assertions, not executed results or readability evidence.
+
+Next are native execution with fresh device/port ownership, bounded serial
+visual confirmations in the original reviewer sessions, then combined-main,
+signing, CI and exact immutable public ZIP acceptance. **93 additions remain
+published; 1,135 remain to deliver.** Batch 067 is still local. Compatible
+Android `f9b59a2+` is required; physical-phone/general-release and whole-set
+acceptance remain outstanding.
+
+### Historical local unreviewed draft
 
 The bounded draft adds **僧**, its pinned thirteen-stroke geometry and the
 necessary **僧侶（そうりょ）** support article. The only reused teaching
