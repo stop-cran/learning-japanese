@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 069: local unreviewed draft
+## Batch 069: textual review closed; runtime acceptance pending
 
 The [frozen batch](n1-sources/batch-069-membership.json) continues with **儒**,
 source row 78, at the existing one-character evidence-bounded size.
@@ -66,7 +66,25 @@ SVG; the [stroke evidence](n1-sources/batch-069-stroke-evidence.json) and
 baseline/link/reading checks and actual-text cmap inventory from still-pending
 native readability and drawing acceptance.
 
-This is a **local unreviewed draft**, not independent review or publication.
+The [textual reconciliation](n1-reviews/batch-069-reconciliation.json) preserves
+complete independent initial reports from **Claude Opus 5.5** and **GPT-6.1 Sol**
+on signed snapshot `f5061bcd`. Both reviewers covered the complete new 儒 and
+儒教 articles and the actual added 教 passage across correctness, scoped
+coverage and phone-text comprehensibility. Both found no actionable defect.
+All nineteen assigned ranges, including all 41 distinct complete dictionary
+families, were returned to both. Reviewer processes and internal tool calls
+were serial; each complete report was archived before the next launch.
+These byte/range receipts establish access, not comprehension or certification.
+
+Claude's suggestion to add a scholar-word example is **optional**, not a
+missing reading or necessary support article. Its named-list verification
+limit is retained: the coordinator separately checked the exact frozen raw
+response/hash and source row 78, rather than treating KANJIDIC2's old JLPT
+field as the community-source evidence. Both reports retain bounded public
+page extraction and native/phone limits. No teaching changes were needed,
+so no changed-passage confirmation was requested.
+
+This is **textual closure only**, not Android/native acceptance or publication.
 The [source checkpoint](n1-sources/execution-448.json) preserves the earlier
 proposals separately from the actual draft decisions.
 Batch 068's [verified publication](n1-sources/batch-068-publication.json)
@@ -74,7 +92,8 @@ remains the latest delivery at terminal `f9e0511f`:
 **95/1,228 additions published; 1,133 remain**. The 95 necessary support
 additions already published are not an N1 vocabulary deck. Compatible Android
 `f9b59a2+` is required; physical-phone, general-release and whole-set acceptance
-remain outstanding. All later review and publication gates still apply.
+remain outstanding. Fresh Android, native/font/visual, combined-main, signing,
+CI and exact immutable public ZIP gates still apply before batch 070.
 
 ## Batch 068: textual review closed checkpoint (historical)
 
