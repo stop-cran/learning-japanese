@@ -37,7 +37,42 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 072: textual review closed; native acceptance pending
+## Batch 072: combined-tree acceptance
+
+The [combined acceptance record](n1-sources/batch-072-acceptance-audit.json)
+closes local acceptance of **充**, necessary **充てる**, and the exact reused
+**拡充** component link. Fresh main `05dd4cc5` was already ancestral; teaching,
+tools and runtime remained identical to the reviewed snapshot. Fresh checks
+passed **372 Python tests without skips**, validation, vocabulary consistency,
+manifest freshness, all **8,344 runtime hashes**, original archive budgets,
+baseline preservation and exact **99-addition** membership. Mechanical source
+checks reproduced **101 distinct complete JMdict families /109 occurrences**,
+11 raw character records, all three reading dispositions, two reciprocal
+pairs/four directions, pinned six-stroke geometry and actual-text font cmaps.
+These byte checks are not a fresh linguistic review.
+
+[Native acceptance](n1-sources/execution-477.json) passed both named cases with
+terminal status 0 in **100.843 seconds**. Production ContentSync imported the
+full signed Git archive once: **1,084 kanji /5,042 words /104 N1-labelled
+cards**, no problems, reading-parser epoch 1. Both curated reading kinds
+persisted Good grades; source-only み.たす remained transported but unoffered.
+The [dependent visual confirmation](n1-reviews/batch-072-visual-reconciliation.json)
+records serial original Claude/GPT sessions, each receiving 24 assigned images,
+the complete 536-line fixture, log, route and three complete context files.
+The 48 returned image payloads cover 24 unique source captures among 44
+archived PNG files; 20 duplicates are not new visual inspections. No
+actionable teaching/rendering defect was established. Complementary table
+views expose all reading labels/examples despite horizontal clipping; actual
+fallback-face identity, every viewport/device, human handwriting/recall and
+physical-phone acceptance are not established. Original limitations remain.
+
+Android 475, native 477 and visual 478 evidence was hash/provenance-checked,
+not redundantly rerun. Normal signed publication, green CI and every exact
+immutable public ZIP hash remain required before counting this local
+acceptance as delivery. Compatible Android `f9b59a2+` is required;
+physical-phone, general-release and whole-set acceptance remain outstanding.
+
+### Historical textual checkpoint before later acceptance
 
 The same signed teaching snapshot `5544e65205879a67b9fc7a127bb6ef4a15152069`
 received independent initial reviews from **Claude Opus 5.5**
