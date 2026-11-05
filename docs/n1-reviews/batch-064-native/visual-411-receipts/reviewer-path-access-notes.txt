@@ -1,0 +1,40 @@
+N1 sequential rollout: reviewer file-access preflight
+
+Diagnosed 2026-11-05 from original reviewer session metadata, launcher410,
+actual denial logs and authoritative `copilot help permissions`.
+
+The original reviewer cwd is:
+C:\Users\stop-\n1-kanji-workspace\learning-japanese
+Required shared tasks and frozen inputs are in the sibling directory:
+C:\Users\stop-\n1-kanji-workspace\control
+
+--allow-all-tools approves tools, NOT access to paths outside the session cwd.
+--no-ask-user cannot answer an extra path approval request. Resuming an existing
+session may retain its original cwd. Coordinator access is not reviewer access.
+The task, runner and reviewer-session locks all allowed exclusive read/open;
+the observed failure was a CLI approval denial, not a Windows sharing error.
+
+User authorized this scoped correction and continuation at
+2026-11-05T12:46:10.432+01:00. For N1 reviewer launches requiring these inputs,
+explicitly pass:
+--add-dir C:\Users\stop-\n1-kanji-workspace\control
+Keep the intended dedicated content worktree cwd. Validate original-session cwd,
+every assigned absolute input path, and required scoped grants before launching.
+Do not assume the coordinator's --add-dir grant propagates to nested reviewers.
+This directory is authorized for the scoped rollout only; no home/root grant,
+--allow-all-paths, global settings, ACL changes or managed-policy changes.
+--add-dir also trusts configuration under that directory: inspect for .github
+skills/agents before adding a previously unknown directory.
+
+First verify the ORIGINAL reviewer actually completes the exact shared-task view.
+Do not substitute a prompt copy, parent read or alternate path as review evidence.
+Retain existing one-view-per-response/read-only/serial-review constraints.
+Record actual launch arguments and successful tool result. On a new denial,
+preserve/report/yield; diagnose its actual type instead of restarting blindly.
+
+Preserve historical408/409/410 denials and original strict-coverage FALSE.
+A successful new bounded confirmation does not retroactively accept those runs.
+Use new evidence names, archive reports and process audits, and do not overwrite
+earlier logs. Reuse accepted Android/native gates unless new concerns require a
+rerun. Windows OS sharing errors, CLI tool approvals, CLI path approvals and
+managed-policy denials are distinct failure classes; do not conflate them.
