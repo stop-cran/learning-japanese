@@ -37,7 +37,26 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 072: combined-tree acceptance
+## Batch 072: published for bounded owner testing
+
+The [publication record](n1-sources/batch-072-publication.json) verifies normally
+signed accepted/runtime commit `8b385b89919ef904af6dfdb4b8a8f4fdb79ca775`,
+[green CI 42121818907](https://github.com/stop-cran/learning-japanese/actions/runs/42121818907),
+and every **8,344 runtime hash** in its immutable public ZIP. The archive has
+**8,366 entries /30,706,323 compressed /44,364,191 inflated /44,095,853 retained
+bytes**, within unchanged 18,000-entry /42-MiB /80-MiB /56-MiB publishing
+guards; contributor evidence remains in Git, excluded from runtime archives.
+Terminal evidence publication receives its own CI/ZIP verification before
+checkpoint closure. No teaching or tool integration change was needed.
+
+Published coverage is **99/1,228 additions; 1,129 remain**. Current content
+contains **1,084 kanji /5,042 words /104 N1-labelled cards**, including 103
+named-source members plus the separate 妖 exception. The 100 necessary
+support additions are not an N1 vocabulary deck. Batch 073 has not started.
+Compatible Android `f9b59a2+` is required; physical-phone, general-release and
+whole-set acceptance remain outstanding.
+
+### Combined-tree acceptance
 
 The [combined acceptance record](n1-sources/batch-072-acceptance-audit.json)
 closes local acceptance of **充**, necessary **充てる**, and the exact reused
@@ -67,10 +86,9 @@ fallback-face identity, every viewport/device, human handwriting/recall and
 physical-phone acceptance are not established. Original limitations remain.
 
 Android 475, native 477 and visual 478 evidence was hash/provenance-checked,
-not redundantly rerun. Normal signed publication, green CI and every exact
-immutable public ZIP hash remain required before counting this local
-acceptance as delivery. Compatible Android `f9b59a2+` is required;
-physical-phone, general-release and whole-set acceptance remain outstanding.
+not redundantly rerun. The publication record above closes the subsequent
+normal signing, owner fast-forward, CI and immutable ZIP gates; this does not
+establish physical-phone, general-release or whole-set acceptance.
 
 ### Historical textual checkpoint before later acceptance
 
