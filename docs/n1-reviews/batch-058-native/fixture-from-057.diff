@@ -1,0 +1,275 @@
+--- docs/n1-reviews/batch-057-native/N1Batch057NativeTest.kt
++++ docs/n1-reviews/batch-058-native/N1Batch058NativeTest.kt
+@@ -49 +49 @@
+-private fun disposable057() {
++private fun disposable058() {
+@@ -54 +54 @@
+-class N1Batch057GlyphTest {
++class N1Batch058GlyphTest {
+@@ -57,2 +57,2 @@
+-    @Test fun planningLookalikesAndSupportWordsAcrossFourProductionFamilies() {
+-        disposable057()
++    @Test fun hillLookalikesRadicalAndSupportWordsAcrossFourProductionFamilies() {
++        disposable058()
+@@ -61 +61 @@
+-        val text = "企 全 危 休 人 止 業 企業 企てる"
++        val text = "丘 兵 近 共 一 砂 山 丘 砂丘"
+@@ -65 +65 @@
+-                    Text("Batch 057: planning / look-alikes / support")
++                    Text("Batch 058: hill / look-alikes / radical / support")
+@@ -70 +70 @@
+-                    Text("Compare 企 with 全, 危 and 休; inspect radical 人, lower 止 and both support words. Shared fallback need not give four different designs.", fontSize = 18.sp)
++                    Text("Compare 丘 with 兵, 近 and 共; inspect radical 一, both components of 砂丘 and contextual 山. Shared fallback need not give four different designs.", fontSize = 18.sp)
+@@ -81 +81 @@
+-            for (char in listOf("企", "全", "危", "休", "人", "止", "業")) {
++            for (char in listOf("丘", "兵", "近", "共", "一", "砂", "山")) {
+@@ -102 +102 @@
+-            for (word in listOf("企業", "企てる")) {
++            for (word in listOf("丘", "砂丘")) {
+@@ -133 +133 @@
+-        File(context.getExternalFilesDir(null), "n1-057-font-pairs.png").outputStream().use {
++        File(context.getExternalFilesDir(null), "n1-058-font-pairs.png").outputStream().use {
+@@ -136 +136 @@
+-        File(context.getExternalFilesDir(null), "n1-057-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-058-font-raster.json").writeText(JSONObject()
+@@ -140 +140 @@
+-            .put("limits", "Twenty-eight single-character native Paint probes, eight complete-word nonblank raster probes and four production Compose rows; actual 企/全/危/休/人/止/業/企業/企てる readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
++            .put("limits", "Twenty-eight single-character native Paint probes, eight complete-word nonblank raster probes and four production Compose rows; actual 丘/兵/近/共/一/砂/山/丘/砂丘 readability requires separate visual inspection. Emulator, not phone. Fallback styles may coincide; actual fallback face not identified.")
+@@ -145 +145 @@
+-class N1Batch057ArticleTest {
++class N1Batch058ArticleTest {
+@@ -150,2 +150,2 @@
+-    @Test fun fullSingleImportOfflinePlanningArticlesMeaningBothCuratedReadingsDrawingAndSystemBack() {
+-        disposable057()
++    @Test fun fullSingleImportOfflineHillThreeReciprocalPairsBothCuratedReadingsDrawingAndSystemBack() {
++        disposable058()
+@@ -154,2 +154,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-057-${UUID.randomUUID()}", "main")
+-        val head = "d9712bf9a2c03f3fae51c2f751481a05affbc0f9"
++        val source = RepoSource("acceptance-fixture", "n1-058-${UUID.randomUUID()}", "main")
++        val head = "00491dddddaa65467b0f7ad474689e054a00f5f4"
+@@ -163 +163 @@
+-                    instrumentation.context.assets.open("n1-batch-057-d9712bf9-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-058-00491ddd-envelope.zip")
+@@ -178,2 +178,2 @@
+-        assertEquals(1069, updated.kanji)
+-        assertEquals(5028, updated.words)
++        assertEquals(1070, updated.kanji)
++        assertEquals(5029, updated.words)
+@@ -182 +182 @@
+-        assertEquals("47f11f7f539a1d55", meta.contentVersion)
++        assertEquals("5e8f3e7e39ea187a", meta.contentVersion)
+@@ -190,10 +190,10 @@
+-        assertEquals(89, n1.size)
+-        val planning = n1.single { it.kanji == "企" }
+-        assertEquals(listOf("キ"), planning.onyomi.splitSep())
+-        assertEquals(listOf("くわだ.てる", "たくら.む"), planning.kunyomi.splitSep())
+-        assertNotNull(planning.quizOnyomi)
+-        assertNotNull(planning.quizKunyomi)
+-        assertEquals(listOf("キ"), planning.quizOnyomi?.splitSep())
+-        assertEquals(listOf("くわだ.てる"), planning.quizKunyomi?.splitSep())
+-        assertEquals(listOf("き"), planning.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(listOf("くわだてる"), planning.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(90, n1.size)
++        val hill = n1.single { it.kanji == "丘" }
++        assertEquals(listOf("キュウ"), hill.onyomi.splitSep())
++        assertEquals(listOf("おか"), hill.kunyomi.splitSep())
++        assertNotNull(hill.quizOnyomi)
++        assertNotNull(hill.quizKunyomi)
++        assertEquals(listOf("キュウ"), hill.quizOnyomi?.splitSep())
++        assertEquals(listOf("おか"), hill.quizKunyomi?.splitSep())
++        assertEquals(listOf("きゅう"), hill.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(listOf("おか"), hill.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -213 +213 @@
+-                        if (card.kanji == "企") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "丘") now - 60_000 else now + 30L * 86_400_000,
+@@ -219 +219 @@
+-                            if (card.kanji == "企" && ((kind == ReadingKind.On && key == "き") || (kind == ReadingKind.Kun && key == "くわだてる"))) now - 60_000
++                            if (card.kanji == "丘" && ((kind == ReadingKind.On && key == "きゅう") || (kind == ReadingKind.Kun && key == "おか"))) now - 60_000
+@@ -226 +226 @@
+-                    0, source.id, "jlpt-n1", "企", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "丘", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -236,4 +236,4 @@
+-            .put("fullOnyomi", JSONArray(planning.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(planning.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(planning.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(planning.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("fullOnyomi", JSONArray(hill.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(hill.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(hill.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(hill.toReadingCard().quizKeys(ReadingKind.Kun)))
+@@ -242 +242 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 企 meaning and both curated keys due. Two historical good 企 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 丘 meaning and both curated keys due. Two historical good 丘 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -249 +249 @@
+-            await("N1 · 89 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 90 cards").performScrollTo().assertIsDisplayed()
+@@ -252,2 +252,2 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("企")
+-            click("plan; undertake")
++            rule.onNode(hasSetTextAction()).performTextReplacement("丘")
++            click("hill; knoll")
+@@ -255 +255 @@
+-            await("no. 9)", substring = true).performScrollTo().assertIsDisplayed()
++            await("no. 1)", substring = true).performScrollTo().assertIsDisplayed()
+@@ -258 +258 @@
+-            show("企 concerns planning", "kanji-meaning")
++            show("丘 means a hill or knoll", "kanji-meaning")
+@@ -261,4 +261,3 @@
+-            show(readingExample("企業 きぎょう — business enterprise; company"), "kanji-on-reading")
+-            show(readingExample("企てる くわだてる — plan; attempt"), "kanji-kun-reading")
+-            show(readingExample("企む たくらむ — scheme; often written たくらむ"), "kanji-recognition-reading")
+-            show("This card practices", "kanji-curation")
++            show(readingExample("砂丘 さきゅう - sand dune"), "kanji-on-reading")
++            show(readingExample("丘 おか - hill; rising ground"), "kanji-kun-reading")
++            show("Both sourced readings", "kanji-curation")
+@@ -266,3 +265,3 @@
+-            show("They are not two interchangeable", "kanji-conjugation")
+-            show("The source indexes", "kanji-lookalike-radicals")
+-            show("neither has the planning meaning", "kanji-distractors")
++            show(articleBullet("山 means mountain and can also describe a hill in context. 坂 focuses on a slope or inclined road; it can be part of a hill."), "kanji-landform-boundaries")
++            show("岡 is another dictionary spelling", "kanji-spelling-names")
++            show("Distinguish the five-stroke", "kanji-lookalike")
+@@ -270,2 +269,2 @@
+-            inline(await(articleBullet("企てる くわだてる — plan; attempt")), "企てる")
+-            await("企てる (くわだてる)", substring = true)
++            inline(await(articleBullet("丘 おか - hill; rising ground")), "丘")
++            await("丘 (おか)", substring = true)
+@@ -273,4 +272,4 @@
+-            show("It is a transitive ichidan verb", "verb-grammar")
+-            show(articleBullet("新しい事業を企てています。 (あたらしいじぎょうをくわだてています。) — We are planning a new business venture."), "verb-business-example")
+-            show(articleBullet("彼らは何かを企てているようです。 (かれらはなにかをくわだてているようです。) — They seem to be plotting something."), "verb-plot-example")
+-            show("does not establish that the attempt succeeded", "verb-success-boundary")
++            show("丘 is a hill or raised area", "hill-word-meaning")
++            show(articleBullet("丘の上に小さな家があります。 (おかのうえにちいさないえがあります。) - There is a small house on the hill."), "hill-house-example")
++            show(articleBullet("あの丘に登ると、海が見えます。 (あのおかにのぼると、うみがみえます。) - If you climb that hill, you can see the sea."), "hill-climb-example")
++            show("The first example locates", "hill-example-roles")
+@@ -278,2 +277,2 @@
+-            show("supplies くわだ", "verb-component")
+-            inline(await("supplies くわだ", substring = true), "企")
++            show("represents the whole native noun", "hill-native-component")
++            inline(await("represents the whole native noun", substring = true), "丘")
+@@ -282,4 +281,4 @@
+-            show("Modern-shape mnemonic", "verb-backlink-kanji")
+-            back()
+-            await("supplies くわだ", substring = true).assertIsDisplayed()
+-            capture("system-back-verb")
++            show("Modern-shape mnemonic", "hill-backlink-kanji")
++            back()
++            await("represents the whole native noun", substring = true).assertIsDisplayed()
++            capture("system-back-hill")
+@@ -287,2 +286 @@
+-            show("not restricted to bad intentions", "verb-register")
+-            show("accepting responsibility", "verb-undertake-boundary")
++            show("universal numerical height boundary", "hill-comparisons")
+@@ -290,2 +288 @@
+-            show("not the contracted form", "verb-separate-godan")
+-            show("archaic tiptoe sense", "verb-archaic-sense-boundary")
++            show("not height as an abstract measurement", "hill-height-boundary")
+@@ -294,2 +291,2 @@
+-            inline(await(articleBullet("企業 きぎょう — business enterprise; company")), "企業")
+-            await("企業 (きぎょう)", substring = true)
++            inline(await(articleBullet("砂丘 さきゅう - sand dune")), "砂丘")
++            await("砂丘 (さきゅう) - sand dune")
+@@ -297,4 +294,4 @@
+-            show("businesses as economic organizations", "enterprise-scope")
+-            show(articleBullet("この企業は医療機器を作っています。 (このきぎょうはいりょうききをつくっています。) - This company makes medical equipment."), "enterprise-product-example")
+-            show(articleBullet("地元の企業で働きたいです。 (じもとのきぎょうではたらきたいです。) - I want to work for a local business."), "enterprise-work-example")
+-            show("uses で for the organization", "enterprise-particle")
++            show("a raised accumulation of sand formed by wind", "dune-meaning")
++            show(articleBullet("砂丘を歩きました。 (さきゅうをあるきました。) - We walked across the sand dunes."), "dune-walk-example")
++            show(articleBullet("砂丘の上から海が見えます。 (さきゅうのうえからうみがみえます。) - You can see the sea from the top of the dune."), "dune-view-example")
++            show("を marks the area traversed", "dune-particles-number")
+@@ -302,2 +299,9 @@
+-            show("carries a planning or undertaking association", "enterprise-components-reading")
+-            inline(await("carries a planning or undertaking association", substring = true), "企")
++            show("modifier-plus-head combination", "dune-components-readings")
++            inline(await("modifier-plus-head combination", substring = true), "丘")
++            await("Article contents")
++            section("Readings")
++            show("Both sourced readings", "dune-backlink-hill")
++            back()
++            await("modifier-plus-head combination", substring = true).assertIsDisplayed()
++            capture("system-back-dune-hill")
++            inline(await("modifier-plus-head combination", substring = true), "砂")
+@@ -306,4 +310,13 @@
+-            show("Modern-shape mnemonic", "enterprise-backlink-kanji")
+-            back()
+-            await("carries a planning or undertaking association", substring = true).assertIsDisplayed()
+-            capture("system-back-enterprise")
++            show("砂 names sand", "dune-backlink-sand")
++            section("Common words")
++            inline(await(articleBullet("砂丘 さきゅう - sand dune")), "砂丘")
++            await("砂丘 (さきゅう) - sand dune")
++            section("Distinctive meaning")
++            show("not any patch or grain of sand", "sand-forwardlink-dune")
++            back()
++            await("Common words")
++            capture("system-back-sand")
++            back()
++            await("modifier-plus-head combination", substring = true).assertIsDisplayed()
++            capture("system-back-dune-sand")
++            show("JMdict also lists しゃきゅう", "dune-alternatives")
+@@ -311,2 +324 @@
+-            show("overlaps strongly", "enterprise-company-overlap")
+-            show("production facility", "enterprise-factory-boundary")
++            show("not exact synonyms or a set of antonyms", "dune-geography-boundaries")
+@@ -314,2 +326 @@
+-            show("does not inherently mean a giant corporation", "enterprise-size-boundary")
+-            show("not any undertaking such as a household chore", "enterprise-startup-boundary")
++            show("not any patch or grain of sand", "dune-material-boundary")
+@@ -326 +337 @@
+-            assertEquals("企", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("丘", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -328 +339 @@
+-            click("plan; undertake")
++            click("hill; knoll")
+@@ -330 +341 @@
+-            assertEquals("企", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("丘", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -340 +351 @@
+-                assertEquals("企", question.card.kanji)
++                assertEquals("丘", question.card.kanji)
+@@ -342 +353 @@
+-                val key = if (question.question.kind == ReadingKind.On) "き" else "くわだてる"
++                val key = if (question.question.kind == ReadingKind.On) "きゅう" else "おか"
+@@ -344 +355 @@
+-                assertFalse(question.question.options.any { it.key == "たくらむ" })
++                assertEquals(1, question.question.options.count { it.key == key })
+@@ -352 +363 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "企" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "丘" &&
+@@ -361,4 +372,4 @@
+-            await("plan; undertake").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "企") })
+-            assertEquals(listOf("キ"), card.onyomi.splitSep())
+-            assertEquals(listOf("くわだ.てる", "たくら.む"), card.kunyomi.splitSep())
++            await("hill; knoll").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "丘") })
++            assertEquals(listOf("キュウ"), card.onyomi.splitSep())
++            assertEquals(listOf("おか"), card.kunyomi.splitSep())
+@@ -367,2 +378,2 @@
+-            assertEquals(listOf("キ"), card.quizOnyomi?.splitSep())
+-            assertEquals(listOf("くわだ.てる"), card.quizKunyomi?.splitSep())
++            assertEquals(listOf("キュウ"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("おか"), card.quizKunyomi?.splitSep())
+@@ -370 +381 @@
+-            assertEquals(6, strokes.length())
++            assertEquals(5, strokes.length())
+@@ -387 +398 @@
+-            rule.onNode(hasContentDescription("6 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("5 strokes drawn", substring = true)).assertExists()
+@@ -392 +403 @@
+-                    it.kanji == "企" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "丘" && it.mode == StudyMode.Draw.name }
+@@ -403 +414 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "企" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "丘" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -416,2 +427,2 @@
+-            File(app.getExternalFilesDir(null), "n1-057-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-057-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-058-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-058-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -511 +522 @@
+-        File(app.getExternalFilesDir(null), "n1-057-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-058-$step.png").outputStream().use {

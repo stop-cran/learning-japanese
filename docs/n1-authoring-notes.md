@@ -37,7 +37,38 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 058: textual review closed; fresh Android passed
+## Batch 058: native fixture compiled; execution pending
+
+The [execution 346 checkpoint](n1-sources/execution-346.json) prepares and
+compiles the exact-full-archive native fixture without launching a device.
+The [preparation record](n1-sources/batch-058-native-preparation.json) verifies
+all **8,303 runtime hashes / 8,325 ZIP entries** and the unchanged publishing
+budgets at `00491ddd`, manifest `5e8f3e7e39ea187a`: **1,070 kanji / 5,029 words /
+90 N1 cards**. The compiled APK contains both batch058 test classes and that
+exact archive; production ContentSync is called **once**, without a duplicate
+preflight import or reduced archive.
+
+The fixture covers both curated readings, the new 砂丘 and reused 丘 articles,
+the changed 砂 entry and **all three reciprocal pairs in six directions**,
+System Back, offline routes, meaning and five-stroke drawing. Static inspection
+checks **60 article selectors / 32 article capture steps** against four complete
+articles. It caught an ambiguous heading/footer substring before compilation;
+the fixture now selects the exact complete 砂丘 heading. The planned 28 glyph
+and eight whole-word raster probes require actual native execution and direct
+visual inspection; byte hashes and compilation are not readability evidence.
+
+Compilation passed with one worker and no concurrent heavy work. Temporary
+Android source/asset were removed and the dedicated Android worktree is clean.
+The accepted execution345 Android results below remain unchanged without a
+rerun. **Next SAME058 is native execution**, with a fresh device/5580–5581
+ownership check, both terminal case0 results, direct PNG inspection and exact
+cleanup; then original-session serial visual confirmations and combined-main
+publication gates. No native acceptance, runtime publication or batch059 is
+claimed. Published coverage remains **84/1,228; 1,144 remaining**; compatible
+Android `f9b59a2+` is required. Physical-phone/general-release and whole-set
+acceptance remain outstanding.
+
+### Textual closure and fresh Android acceptance
 
 The [execution 344 record](n1-sources/execution-344.json) preserves the
 single required fresh Android command's **permission denial before execution**:
@@ -81,9 +112,9 @@ disposition is **partially resolved**: bounded remediation is complete, but
 the original strict internal-serialization contract is not retroactively
 accepted. Textual closure does not erase original reports or process evidence.
 
-Next SAME058 is **exact-full-archive native fixture preparation and serial
-compilation**, followed separately by production single-import native/visual,
-combined-main and publication gates. Fresh Android acceptance is bounded to
+The preparation checkpoint above follows this fresh Android archive.
+Production single-import native/visual, combined-main and publication gates
+remain pending. Fresh Android acceptance is bounded to
 the four cases above; no native acceptance, runtime push or batch059 is
 claimed. Published coverage remains **84/1,228; 1,144 remaining**.
 Compatible Android `f9b59a2+` is required; physical-phone/general-release
