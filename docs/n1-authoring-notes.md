@@ -37,7 +37,26 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 059: fresh Android accepted; native preparation pending
+## Batch 059: native fixture compiled; native execution pending
+
+[Execution356](n1-sources/execution-356.json) prepares and serially compiles
+the exact full `911431da` Git envelope with production `ContentSync` called
+once, not a reduced archive or duplicate parser preflight. All **8,306 runtime
+hashes / 8,328 ZIP entries** and the original byte budgets pass. The fixture
+uses **1,071 kanji / 5,030 words / 91 N1 cards**, content version
+`1f1ad78479e9c1f4`, full ordered **キョウ・コウ / う.ける** metadata and
+practice **キョウ / no kun**. Both **享/享受** and **受/享受** are exercised
+in four directions with System Back, meaning, persisted on-reading feedback,
+eight-stroke reference tracing and offline routes. **44 static selectors /
+26 article capture steps**, 36 single-glyph probes including actual **亠/厂**
+and four full-word probes are prepared, not native acceptance. The compiled
+APK contains both current test classes and the exact archive; temporary Android
+source/assets were removed and the dedicated Android worktree is clean.
+The [preparation record](n1-sources/batch-059-native-preparation.json) preserves
+hashes, the prior-fixture diff and compilation receipts. No emulator or reviewer
+was launched. Actual fallback readability, per-case native results, original
+reviewers' serial visual confirmations and combined-main publication remain
+pending; physical-phone/general-release and whole-set acceptance are outstanding.
 
 Execution353 closed the textual reconciliation on teaching snapshot
 `769293c824dc41abb9386e76c4dd5f8c676e48e0`; the original reports and historical
