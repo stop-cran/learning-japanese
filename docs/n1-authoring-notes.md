@@ -37,7 +37,37 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 065: native fixture compiled; execution still pending
+## Batch 065: native checks passed; independent visuals still pending
+
+[Execution 419](n1-sources/execution-419.json) runs both compiled cases to
+individual terminal status **0**, with no skips, in **148.883 s**. Production
+ContentSync imports the full archive once: **1,077 kanji / 5,036 words / 97 N1**,
+version `6a940651167e0e94`, zero problems and reading-parser epoch 1. Full/Lite
+source readings stay ordered; only curated **けん / つましい** are offered and
+graded. All three mapped pairs in six directions, the support comparison in
+both directions, complete four-article semantics, System Back/offline,
+meaning, both persisted reading grades, ten reference touch strokes,
+ungraded tracing and a persisted drawing miss pass.
+
+The 48 individual glyph and eight whole-word raster probes pass. Four direct
+coordinator PNG inspections show readable, distinguishable 倹/儉/険/験/値,
+人/亻/阝/馬/約/糸/勺 and 倹約/倹しい across four production font rows,
+legible support attachment paragraphs and the source-only reading explanation.
+The horizontally scrolled reading table clips the left edge of its first
+column in that capture; its scrolling hint remains visible. This is not a
+complete screenshot review, identification of fallback faces, phone evidence,
+ML Kit recognition or correct human recall.
+
+Owned emulator parent **21240 / QEMU 5416** exit after `emu kill`; independent
+postrun checks retain the pre-existing `emulator-5556`, clean worktrees and no
+owned process or port listener. Shared adb's SYN probes and an OS TIME_WAIT
+connection are recorded, not killed or misreported as empty ports.
+Next are bounded dependent visual confirmations in the two original reviewer
+sessions, then latest-main integration and all publication gates. No reviewer
+or runtime publication ran here. Published coverage remains **91 additions;
+1,137 still to deliver**.
+
+### Historical native preparation
 
 [Execution 418](n1-sources/execution-418.json) prepares the exact full signed
 `ee672744` Git archive, version `6a940651167e0e94`: **1,077 kanji, 5,036 words,
