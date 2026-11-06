@@ -37,7 +37,60 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 074: local unreviewed draft
+## Batch 074: published for bounded owner testing
+
+The [publication record](n1-sources/batch-074-publication.json) closes **免**
+and necessary **免れる**, with exact reused component links in **免許**
+and **免税** and the narrow **許** example. All five mapped pairs link both
+ways. Existing easier word levels and metadata are unchanged; three direct
+new-word quiz exclusions do not create an exclusion clique.
+
+The [textual reconciliation](n1-reviews/batch-074-reconciliation.json) and
+[dependent visual reconciliation](n1-reviews/batch-074-visual-reconciliation.json)
+retain original **claude-opus-5.5 / gpt-6.1-sol** reports and exact scope.
+Both blind initial reviews returned all 26 assigned ranges on the same
+signed teaching snapshot. Initial Claude's one concurrent small 兄/元 read
+remains disclosed; subsequent original-session confirmations and both visual
+passes were internally serial, and all reviewer processes exited serially.
+No actionable teaching or rendering defect remained within the bounded scope.
+The visual confirmations are not new blind initial reviews.
+
+Fresh combined acceptance passed **372 Python tests without skips**, validation,
+pilot vocabulary consistency (2,122/2,431 reviewed prompts, not full coverage),
+manifest freshness, frozen sources, 182 distinct complete dictionary families,
+eight raw character records, baseline metadata/strokes, all mapped links,
+generated geometry, authored-Han cmaps and original archive guards.
+The [acceptance audit](n1-sources/batch-074-acceptance-audit.json) preserves
+the initial helper font-field error and corrected audit without runtime edits.
+Full **メン /まぬか.れる /まぬが.れる** source order is unchanged.
+Both native pronunciations are valid; selecting only まぬが.れる for practice
+avoids duplicate variant questions, not a purported rare or incorrect form.
+
+Inherited fresh Android **3 RealContentTest + 1 RareHanTest** cases passed
+without skips. Native attempt 3 passed both named cases with terminal status 0
+in 128.836 seconds: one production ContentSync import of the complete signed
+Git archive, both curated reading kinds persisted, all five reciprocal pairs,
+System Back/offline/N1 routes and reference-touch drawing. All 43 authored Han,
+including isolated 儿, were readable across four production font families.
+The 57 original PNGs contain 32 unique byte streams, not 57 independent scenes;
+returned images and static routes are not every-viewport, fallback-face,
+human-handwriting, physical-phone or measured-learning evidence.
+Original capture-loss and prelaunch ownership-refusal attempts remain archived.
+
+Normally signed runtime acceptance `bf5b20bf11dd394326b02ff38288c6ae6b6d3e6f`
+was owner-fast-forwarded to main. Its exact CI is green and its immutable
+public ZIP preserves every **8,349 runtime hash**, with 8,371 entries,
+30,713,642 compressed / 44,377,402 inflated / 44,109,064 retained bytes.
+Contributor evidence stays in Git, outside runtime ZIPs.
+
+Published coverage is **101/1,228 additions; 1,127 remain**:
+1,086 kanji, 5,043 words and 106 N1-labelled cards, with 105 named-source
+members plus the separate 妖 exception. The 101 necessary support articles
+are not an N1 vocabulary deck. Compatible Android `f9b59a2+` is required;
+physical-phone, general-release and whole-set acceptance remain outstanding.
+Batch 075 has not started.
+
+### Historical local unreviewed draft checkpoint
 
 The [source packet](n1-sources/batch-074-progress.json) bounds the next batch
 to **免**, frozen source row 83, after batch 073's verified publication.
