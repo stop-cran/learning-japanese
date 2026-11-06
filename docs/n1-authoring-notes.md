@@ -37,7 +37,59 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 075: text review closed; native acceptance pending
+## Batch 075: published for bounded owner testing
+
+The [publication record](n1-sources/batch-075-publication.json) closes **典**
+and necessary **香典** こうでん, with ten exact reused passages, four activated
+baseline pairs and **twelve all-mapped reciprocal pairs /24 directions**.
+Both **テン・デン** are selected; full **テン・デン /ふみ・のり** source order
+remains unchanged, with the qualified lookup readings retained but unoffered.
+The preserved textual/source checkpoints below describe their earlier state,
+not the current publication status.
+
+The [acceptance audit](n1-sources/batch-075-acceptance-audit.json) records fresh
+current-main validation: **372 Python tests, no skips**, validator, vocabulary
+consistency (2,122/2,431 reviewed pilot prompts, not full coverage), fresh
+manifest `2759d7b13c89eb8f`, frozen inputs, **196 distinct complete JMdict
+families /198 occurrences**, twelve raw character records, baseline metadata
+and geometry, all four reading dispositions and exact pinned eight-stroke
+conversion. All **8,352 runtime hashes** and unchanged archive budgets pass.
+The freshly fetched main was already ancestral; no teaching/tool merge
+changes required new review.
+
+Execution 499's **RealContentTest three cases /RareHanTest one case**, no skips,
+and execution 501's **two named native terminal-status-0 cases**, no skips,
+are retained and hash-reverified, not rerun. Production ContentSync imported
+the complete signed archive **once**: **1,087 kanji /5,044 words /107 N1**,
+zero problems, accepted parser epoch 1. Actual two on-keys persist correct
+feedback/Done without kun logs; all twelve reciprocal pairs, System Back,
+offline routes and eight reference-injected strokes followed by ungraded
+trace/recall Again pass. This is not human handwriting, successful recall,
+MLKit, a new persisted meaning grade or physical-phone evidence.
+
+The [bounded visual reconciliation](n1-reviews/batch-075-visual-reconciliation.json)
+accepts all scoped surfaces and **117 Han** across four production families,
+including **亅・厂・奠・艹**, with no actionable defect. All four reviewer
+processes exited sequentially. Original Claude concurrent reads and GPT's
+partial-image/repeated-read history remain disclosed: Claude's subsequent
+single-packet correction does not erase the breach; GPT's **27 inherited
+and 24 fresh recovery images** complete the 51-image scope, not 51 fresh reads.
+The **111 source PNGs /51 unique captures /60 duplicates** are not 111 fresh
+scenes. Complementary horizontally scrolled tables expose the targets;
+fallback-face identity and every-phone readability are not certified.
+
+Normally signed accepted/integrated runtime `06b8ae57` is owner-fast-forward
+published; its exact CI is green and immutable public ZIP verifies every
+runtime hash: **8,374 entries /30,718,400 compressed /44,386,043 inflated
+/44,117,705 retained bytes**, within unchanged 18,000 /42 MiB /80 MiB /56 MiB
+guards. Terminal evidence publication is checked separately in the checkpoint.
+Published coverage is **102/1,228 additions; 1,126 remain**, with **107
+N1-labelled cards /106 named-source members plus separate 妖**. The 102
+necessary supports are not an N1 vocabulary deck. Compatible Android
+`f9b59a2+` is required; physical-phone, general-release and whole-set
+acceptance remain outstanding. No batch 076 started here.
+
+### Preserved textual checkpoint
 
 The bounded runtime draft now adds **典**, its pinned eight-stroke
 geometry and only necessary **香典** こうでん. Full metadata keeps
