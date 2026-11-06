@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 080: review-closed; combined-tree acceptance passed
+## Batch 080: published for bounded owner testing
 
 Batch **冴**, source row 89, adds the necessary **冴える** (さえる) article,
 not an N1 vocabulary expansion. The [textual reconciliation](n1-reviews/batch-080-reconciliation.json)
@@ -95,11 +95,23 @@ Owned emulator 5580 parent 11976/QEMU 1240 stopped; owner 5556 was untouched.
 HOST-only 2-GiB initialization never entered native builds; no app/guest heap,
 archive guard, learning algorithm or permission policy changed.
 
-Publication still requires the normally signed owner fast-forward, exact green
-CI and every runtime hash in the immutable public ZIP. Compatible Android
-`f9b59a2`+ is required. Physical-phone, general-release and whole-set acceptance
-remain **outstanding**; original source/review/process/denial/OOM/viewport limits
-are retained.
+The [publication record](n1-sources/batch-080-publication.json) pins normally
+signed accepted/integrated runtime `83297b19`, owner-scoped normal fast-forward,
+green CI **42190454216** and the exact immutable public ZIP. Every **8,366
+runtime hash** and the manifest `4572f7b1d0d95059` match; safe paths, per-file
+limits and contributor-evidence exclusion pass. The archive has **8,388 entries**,
+30,738,977 compressed /44,422,563 inflated /44,154,225 retained bytes under
+unchanged 18,000-entry /42-MiB compressed /80-MiB inflated /56-MiB retained
+guards. Terminal evidence CI/ZIP/owner-issue receipts are recorded separately
+in the durable checkpoint.
+
+Published coverage is **107 additions; 1,121 remaining**, with **106 necessary
+support additions**, not an N1 vocabulary deck. Current counts are 1,092 kanji,
+5,048 words, 112 N1 labels, 111 named-source members plus separate 妖.
+Compatible Android `f9b59a2`+ is required. Physical-phone, general-release and
+whole-set acceptance remain **outstanding**; original source/review/process/
+denial/OOM/viewport limits are retained. Optional historical session recipes
+were not accessed; there was no new permission denial or next-batch work.
 
 ## Batch 079: published for bounded owner testing
 
