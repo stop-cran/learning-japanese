@@ -37,6 +37,37 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 077: source-prepared, not drafted
+
+The [source packet](n1-sources/batch-077-progress.json) freezes **冒**,
+source row 86, after batch 076's verified publication. It retains **40
+distinct complete JMdict families** (29 lexical and 11 comparison) and two
+raw character records, inspected by the coordinator, not independently
+reviewed. Reuse actual **冒険** ぼうけん with its N3 word level intact;
+propose only necessary **冒す** おかす for the native reading, without
+inferring a word level.
+
+Keep full **ボウ /おか.す** and propose both useful practice keys. The
+[dictionary evidence](n1-sources/batch-077-source-evidence.json) separates
+braving danger from passive disease harm, desecration and taking a surname.
+侵す and 冒す overlap in harmful-effect uses: the practical
+危険を冒す /罪を犯す contrast is not a universal spelling partition.
+Three all-mapped reciprocal pairs include older **険**, not only the new
+card's links; the proposed reused edits are navigation only.
+
+The pinned SVG has **nine paths**, matching the dictionary, but is not yet
+converted or drawing-accepted. Preserve classical radical **冂13**, not
+the separately recorded Nelson 日72. Both **冂** and inherited **阝**
+are absent from all three main font cmaps and outside RareHan ranges;
+that is a later native/visual inspection obligation, not a demonstrated
+missing glyph. The 35-Han proposed-text inventory must be repeated on
+the eventual complete runtime draft.
+
+This checkpoint adds **no runtime content** and closes no review gate.
+Published coverage remains **103/1,228 additions; 1,125 remain**.
+Compatible Android `f9b59a2+` is required; physical-phone, general-release
+and whole-set acceptance remain outstanding.
+
 ## Batch 076: published for bounded owner testing
 
 The [publication record](n1-sources/batch-076-publication.json) closes **兼**

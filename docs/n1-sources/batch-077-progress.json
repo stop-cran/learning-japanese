@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "batch": "077",
+  "baseCommit": "da5364e9cc72885b8fe08a4bf187e79721f595df",
+  "membership": ["冒"],
+  "status": "source-prepared-not-drafted",
+  "drafted": [],
+  "reviewClosed": [],
+  "published": [],
+  "sourceSnapshot": "docs/n1-source-snapshot.json",
+  "sourceReadingOrder": {
+    "onyomi": ["ボウ"],
+    "kunyomi": ["おか.す"]
+  },
+  "dictionaryPackets": [
+    {
+      "selection": "batch-077-lexical-selection.json",
+      "xml": "batch-077-jmdict.xml"
+    },
+    {
+      "selection": "batch-077-comparison-selection.json",
+      "xml": "batch-077-comparison-jmdict.xml"
+    }
+  ],
+  "authorInspection": {
+    "lexicalFamilies": 29,
+    "comparisonFamilies": 11,
+    "dictionaryFamilyOccurrences": 40,
+    "distinctCompleteFamilies": 40,
+    "lexicalReturnedRanges": [[1, 180], [181, 360], [361, 524]],
+    "comparisonReturnedRanges": [[1, 195], [196, 388]],
+    "rawCharacterRecords": 2,
+    "rawCharacterReturnedRanges": [[1, 170]],
+    "remainingExtractedFamiliesPending": 0,
+    "completeExistingArticlesRead": [
+      "words/冒険.md",
+      "kanji/険.md",
+      "kanji/日.md",
+      "kanji/目.md",
+      "kanji/官.md",
+      "kanji/犯.md",
+      "words/害.md",
+      "words/壊す.md",
+      "words/損害.md",
+      "words/被害.md",
+      "words/攻める.md",
+      "words/危険.md",
+      "words/危ない.md"
+    ],
+    "candidateNavigation": "Complete current metadata scan finds exactly words/冒険.md declaring 冒 and only that same-primaryぼうけん candidate. No existing primaryおかす word article. Immutable baseline candidates agree. Exact spelling/reading/senses inspected, not filename reuse.",
+    "limits": "Coordinator received all listed complete packet/article ranges. No independent review, fresh native rendering, linguistic certification or exhaustive whole-corpus semantic audit."
+  },
+  "baselineCandidatePairs": [
+    {
+      "kanji": "冒",
+      "article": "words/冒険.md",
+      "word": "冒険",
+      "primaryReading": "ぼうけん",
+      "status": "source-inspected-runtime-link-pending"
+    }
+  ],
+  "currentDeclaredWordPairs": ["words/冒険.md"],
+  "proposedSupportMapping": [
+    {
+      "kanji": "冒",
+      "word": "冒険",
+      "article": "words/冒険.md",
+      "primaryReading": "ぼうけん",
+      "entryId": "1519830",
+      "newArticleNecessary": false,
+      "allWrittenKanji": ["冒", "険"],
+      "preservedWordJlpt": 3,
+      "selectedSenses": "Adventure and risky venture; existing examples/meaning unchanged.",
+      "readingAllocation": "Exact complete family and independent Daijisen character entry place 冒険 under ボウ; raw 険ケン confirms the other component, rather than a kana-substring guess."
+    },
+    {
+      "kanji": "冒",
+      "word": "冒す",
+      "article": "words/冒す.md",
+      "primaryReading": "おかす",
+      "entryId": "1519820",
+      "newArticleNecessary": true,
+      "allWrittenKanji": ["冒"],
+      "preservedWordJlpt": null,
+      "selectedSenses": "Brave danger/take a risk, with 危険を冒す and transitive を. Briefly distinguish passive disease/chemical harm, desecration and taking a surname; no absolute homophone compartment rule.",
+      "readingAllocation": "Exact 冒す/おかす family, visible す ending, raw おか.す and independent Daijisen おか・す heading. No inferred constituent reading or fabricated alias."
+    }
+  ],
+  "readingDispositions": [
+    {
+      "kanji": "冒",
+      "kind": "on",
+      "reading": "ボウ",
+      "proposedQuizSelection": true,
+      "selected": true,
+      "sourceOnly": false,
+      "entryIds": ["1519830"],
+      "article": "words/冒険.md",
+      "reason": "Useful existing N3 adventure/risky-venture support with exact primary reading and independent character allocation. Own linked reading row required."
+    },
+    {
+      "kanji": "冒",
+      "kind": "kun",
+      "reading": "おか.す",
+      "proposedQuizSelection": true,
+      "selected": true,
+      "sourceOnly": false,
+      "entryIds": ["1519820", "1868850"],
+      "article": "words/冒す.md",
+      "reason": "Useful native braving-risk construction. New support is necessary because no primaryおかす article exists; preserved full raw entry needs its own linked row with exact okurigana."
+    }
+  ],
+  "proposedCuratedProjection": {
+    "kanji": "冒",
+    "quizOnyomi": ["ボウ"],
+    "quizKunyomi": ["おか.す"],
+    "onKeys": ["ぼう"],
+    "kunKeys": ["おかす"],
+    "limits": "Mechanical mirror of pinned production key normalization, not app execution. Both full lists retain source order."
+  },
+  "proposedReciprocalPairs": [
+    ["冒", "words/冒険.md"],
+    ["冒", "words/冒す.md"],
+    ["険", "words/冒険.md"]
+  ],
+  "proposedNavigationEdits": [
+    {
+      "article": "words/冒険.md",
+      "before": "冒 contributes braving or venturing, while",
+      "after": "[冒](../kanji/冒.md) contributes braving or venturing, while",
+      "purpose": "Only activated baseline pair; preserve all metadata, N3 word level, examples and existing 険 component link."
+    },
+    {
+      "article": "kanji/険.md",
+      "before": "冒険 ぼうけん names an adventure or venture.",
+      "after": "[冒険](../words/冒険.md) ぼうけん names an adventure or venture.",
+      "purpose": "Missing older-component reciprocal link at the existing substantive introduction. No teaching or metadata rewrite."
+    }
+  ],
+  "proposedWordQuizAudit": {
+    "newTitle": "brave danger; take a risk",
+    "directExclusions": [
+      {
+        "word": "冒す",
+        "exclude": ["冒険", "壊す", "害", "損害", "被害"],
+        "reason": "Adventure/risky-venture overlap plus broad damage/harm labels can answer the source's secondary disease/chemical-harm sense. Direct conservative label guards, not transitive synonym classes; no baseline exclusions removed or metadata rewritten."
+      }
+    ],
+    "comparisonDisposition": "危険 and 危ない evaluate danger rather than undertaking risk; 攻める's initiative/attack meaning is not an unrestricted braving synonym. Homophones 侵す/犯す have no current word articles. Preserve all related existing titles and source-local senses. Confirm actual final visible labels and ordinary secondary senses in independent review.",
+    "inventory": "docs/confusable-words.md notation/quiz contract consulted; no exact 冒す/冒険/おかす/harm-family entry found. Inventory absence is not clearance; actual current labels, complete candidate articles and full applicable families inspected."
+  },
+  "proposedKanjiQuizAudit": {
+    "title": "brave danger; venture",
+    "distractors": [
+      {
+        "kanji": "日",
+        "title": "sun, day",
+        "reason": "Upper-outline visual cue, but sun/day is not braving, harm, assuming a surname or the covering/opening branch."
+      },
+      {
+        "kanji": "目",
+        "title": "eye",
+        "reason": "Lower-outline visual cue, but eye/sight/item/ordinal meanings are not 冒's meanings; face as a verb is not the physical face or eye."
+      },
+      {
+        "kanji": "官",
+        "title": "government official",
+        "reason": "Stacked outline comparison; official/government or anatomical organ sense does not mean braving risk."
+      }
+    ],
+    "legacyFallback": "Metadata scan finds no related danger/risk/harm/damage/venture/defy/dare/assume/violate/bravery/face meaning card with fewer than three curated distractors. 日 still has two, but new 冒 is not a defensible sun/day synonym, so no unrelated fallback repair. Semantic independent review still pending."
+  },
+  "proposedTeachingConstraints": [
+    "Preserve exact full ボウ / おか.す metadata and order; two dispositions/two offered keys, with separate own linked rows.",
+    "Use structure-unclassified and a labelled modern-shape mnemonic. Classical radical is 冂13, not raw alternative Nelson 日72. Explain the upper outer outline without claiming sun-plus-eye etymology or adopting SVG phon annotations as proof.",
+    "Core braving-risk sense is transitive and takes danger/difficulty with を; godan forms 冒しますおかします, 冒しておかして and 冒さないおかさない are not an ichidan pattern.",
+    "Do not teach passive 病に冒される as voluntarily taking a risk, or all 冒 compounds as risk-taking. Keep homophone distinctions qualified and spellings/senses separate.",
+    "New 冒す gets no word jlpt absent independent evidence; preserve existing 冒険N3, easier card levels, all original exclusions and the documented historical exceptions.",
+    "Reinventory final complete runtime Han text; native/visual check must include both 冂 and inherited 阝, which all three main cmaps lack outside RareHan ranges.",
+    "Later independent review covers complete examples, translations, construction roles/polarity, labels, links and phone comprehensibility; source preparation is not its substitute."
+  ],
+  "pinnedStrokePreparation": "batch-077-stroke-evidence.json",
+  "fontPreparation": "batch-077-font-preparation.json",
+  "sourceEvidence": "batch-077-source-evidence.json",
+  "preparationAudit": "batch-077-preparation-audit.json",
+  "publishedAdditions": 103,
+  "remainingAdditions": 1125,
+  "nextAction": "Same077 bounded runtime draft only: new 冒 plus necessary 冒す, two exact navigation-only reused changes, pinned converter, exact baseline/link/reading/quiz/font audits, validator and regenerated manifest, then normal signed LOCAL UNREVIEWED freeze. No reviewers, Android/native, publication or078 in that draft checkpoint.",
+  "limits": "No runtime draft, independent review, fresh Android/native acceptance, phone evidence or publication. Source proposals are not accepted teaching; original full-project gates and archive guards remain unchanged."
+}
