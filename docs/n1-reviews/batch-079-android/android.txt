@@ -1,0 +1,69 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:compileKotlin
+> Task :core:compileJava NO-SOURCE
+> Task :core:processResources NO-SOURCE
+> Task :core:classes UP-TO-DATE
+> Task :core:jar
+> Task :core:compileTestFixturesKotlin
+> Task :core:compileTestFixturesJava NO-SOURCE
+> Task :core:processTestFixturesResources
+> Task :core:testFixturesClasses
+> Task :core:testFixturesJar
+
+> Task :core:compileTestKotlin
+w: file:///C:/Users/stop-/n1-kanji-workspace/kanji-cards-android/core/src/test/kotlin/io/github/stopcran/kanji/core/GrammarGroupsTest.kt:37:25 Redundant creation of Json format. Creating instances for each usage can be slow.
+w: file:///C:/Users/stop-/n1-kanji-workspace/kanji-cards-android/core/src/test/kotlin/io/github/stopcran/kanji/core/counters/CountersTest.kt:178:45 Redundant creation of Json format. Creating instances for each usage can be slow.
+
+> Task :core:compileTestJava NO-SOURCE
+> Task :core:processTestResources
+> Task :core:testClasses
+> Task :core:test
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:generateDebugBuildConfig
+> Task :app:checkDebugAarMetadata
+> Task :app:processDebugNavigationResources
+> Task :app:compileDebugNavigationResources
+> Task :app:generateDebugResValues
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:mergeDebugResources
+> Task :app:packageDebugResources
+> Task :app:parseDebugLocalResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:processDebugResources
+> Task :app:kspDebugKotlin
+> Task :app:compileDebugKotlin
+w: file:///C:/Users/stop-/n1-kanji-workspace/kanji-cards-android/app/src/main/java/io/github/stopcran/kanji/ui/KanaStudyViewModel.kt:119:17 Redundant creation of Json format. Creating instances for each usage can be slow.
+
+> Task :app:javaPreCompileDebug
+> Task :app:compileDebugJavaWithJavac
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:kspDebugUnitTestKotlin
+> Task :app:compileDebugUnitTestKotlin
+w: file:///C:/Users/stop-/n1-kanji-workspace/kanji-cards-android/app/src/test/java/io/github/stopcran/kanji/data/SceneImagesTest.kt:36:24 Redundant creation of Json format. Creating instances for each usage can be slow.
+
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:packageDebugUnitTestForUnitTest
+> Task :app:processDebugUnitTestManifest
+> Task :app:generateDebugUnitTestConfig
+> Task :app:processDebugJavaRes
+> Task :app:processDebugUnitTestJavaRes
+> Task :app:testDebugUnitTest
+
+BUILD SUCCESSFUL in 5m 14s
+41 actionable tasks: 41 executed
