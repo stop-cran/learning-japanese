@@ -1,0 +1,222 @@
+commit 1c1b7bf42cc91d820a93169f1088dc647ac51c0d
+Author:     Roman Konstantinovskiy <stop-cran@list.ru>
+AuthorDate: Fri Nov 6 13:44:12 2026 +0100
+Commit:     Roman Konstantinovskiy <stop-cran@list.ru>
+CommitDate: Fri Nov 6 14:19:49 2026 +0100
+
+    Load publishable content in real-corpus test fixtures
+    
+    Share export-ignore selection, reject excluded manifest dependencies, and preserve contributor evidence and all parser assertions. Add focused loader regressions. Refs #130.
+    
+    Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>
+    (cherry picked from commit 751c471a03cd0c82e38a61a155739c3692a24f68)
+
+diff --git a/.github/copilot-instructions.md b/.github/copilot-instructions.md
+index 27d5e23..04bcd87 100644
+--- a/.github/copilot-instructions.md
++++ b/.github/copilot-instructions.md
+@@ -118,6 +118,9 @@ ambiguous wording, reword the user-facing text instead of flipping the logic.
+ - N2 nearly exhausted entry headroom while byte budgets still passed. Count directories/skipped ZIP entries and coordinate the content
+   publishing guard with `SafeZip` (see `docs/DESIGN.md`); more entry capacity does not relax byte limits or upgrade installed APKs.
+   Complete-archive integration fixtures must honor Git `export-ignore` too, rather than zip contributor evidence that never ships.
++- Real-corpus fixtures share `PublishableContentFixture`: use NUL-delimited Git publication selection and reject excluded manifest
++  dependencies before loading the corpus. Walking all non-`.git` files retained 1.56 GiB of contributor evidence and exhausted a
++  2 GiB test heap (#130); preserve that evidence in Git rather than deleting it or raising heap limits as documentation grows.
+ - Sync diagnostics are not rejected-card counts: optional metadata warnings keep their owning cards.
+   Report distinct rejected files with explicit units, and count retained Listening catalogs from the accepted cache, excluding unsupported placeholders.
+ - Counter reading metadata belongs to the displayed canonical phrase, not every counter in legacy `kana`.
+diff --git a/core/src/test/kotlin/io/github/stopcran/kanji/core/PublishableContentFixture.kt b/core/src/test/kotlin/io/github/stopcran/kanji/core/PublishableContentFixture.kt
+new file mode 100644
+index 0000000..0037bae
+--- /dev/null
++++ b/core/src/test/kotlin/io/github/stopcran/kanji/core/PublishableContentFixture.kt
+@@ -0,0 +1,29 @@
++package io.github.stopcran.kanji.core
++
++import java.io.File
++import kotlinx.serialization.json.Json
++import kotlinx.serialization.json.JsonObject
++import kotlinx.serialization.json.jsonObject
++
++internal object PublishableContentFixture {
++    fun load(root: File): Map<String, ByteArray> {
++        val git = ProcessBuilder("git", "-C", root.absolutePath, "ls-files", "-c", "-o",
++            "--exclude-standard", "-z", "--", ":(exclude,attr:export-ignore)")
++            .redirectError(ProcessBuilder.Redirect.INHERIT).start()
++        val output = git.inputStream.use { it.readBytes() }
++        check(git.waitFor() == 0) { "git ls-files failed for publication fixture: $root" }
++        val paths = decodePaths(output).toSet()
++        check("manifest.json" in paths) { "Publication fixture excludes manifest.json" }
++        val manifestBytes = File(root, "manifest.json").readBytes()
++        val manifest = Json.parseToJsonElement(manifestBytes.decodeToString()).jsonObject
++        val required = manifest.values.filterIsInstance<JsonObject>().flatMap { it.keys }.toSet()
++        val missing = required - paths
++        check(missing.isEmpty()) { "Publication fixture excludes manifest dependencies: ${missing.sorted()}" }
++        return paths.associateWith { path ->
++            if (path == "manifest.json") manifestBytes else File(root, path).readBytes()
++        }
++    }
++
++    fun decodePaths(output: ByteArray): List<String> =
++        output.decodeToString().split('\u0000').filter { it.isNotEmpty() }
++}
+diff --git a/core/src/test/kotlin/io/github/stopcran/kanji/core/PublishableContentFixtureTest.kt b/core/src/test/kotlin/io/github/stopcran/kanji/core/PublishableContentFixtureTest.kt
+new file mode 100644
+index 0000000..bb8f50f
+--- /dev/null
++++ b/core/src/test/kotlin/io/github/stopcran/kanji/core/PublishableContentFixtureTest.kt
+@@ -0,0 +1,111 @@
++package io.github.stopcran.kanji.core
++
++import java.io.File
++import kotlinx.serialization.json.JsonObject
++import kotlinx.serialization.json.JsonPrimitive
++import org.junit.Assert.assertArrayEquals
++import org.junit.Assert.assertEquals
++import org.junit.Assert.assertThrows
++import org.junit.Assert.assertTrue
++import org.junit.Rule
++import org.junit.Test
++import org.junit.rules.TemporaryFolder
++
++class PublishableContentFixtureTest {
++    @get:Rule
++    val temporary = TemporaryFolder()
++
++    @Test
++    fun keepsTrackedAndUntrackedPublicationFilesWithoutReadingContributorEvidence() {
++        val root = repository()
++        write(root, "manifest.json", """{"files":{"kanji/\u65e5.md":"hash"}}""")
++        val kanji = "kanji/\u65e5.md"
++        write(root, kanji, "tracked kanji")
++        git(root, "add", "--", "manifest.json", kanji, ".gitattributes")
++        write(root, "words/extra word.md", "unmanifested local addition")
++        write(root, ".gitignore", "ignored/\n")
++        write(root, "ignored/local.bin", "ignored local data")
++        write(root, "docs/reviews/nested/evidence.txt", "preserved evidence")
++        write(root, "tools/local.py", "contributor tool")
++        write(root, ".github/workflows/test.yml", "contributor workflow")
++        git(root, "add", "--", "docs", "tools", ".github")
++
++        val files = PublishableContentFixture.load(root)
++
++        assertEquals(setOf("manifest.json", kanji, "words/extra word.md", ".gitattributes", ".gitignore"), files.keys)
++        assertArrayEquals("tracked kanji".toByteArray(), files.getValue(kanji))
++        assertArrayEquals("unmanifested local addition".toByteArray(), files.getValue("words/extra word.md"))
++        assertEquals("preserved evidence", File(root, "docs/reviews/nested/evidence.txt").readText())
++    }
++
++    @Test
++    fun rejectsExportIgnoredDependenciesInEveryManifestMap() {
++        val root = repository()
++        val path = "docs/required.json"
++        write(root, path, "{}")
++        for (section in listOf("files", "images", "scenes", "listening", "audio", "curriculum",
++            "listeningTasks", "listeningTaskAudio", "listeningTaskImages")) {
++            write(root, "manifest.json", JsonObject(mapOf(
++                section to JsonObject(mapOf(path to JsonPrimitive("hash"))),
++            )).toString())
++            val error = assertThrows(IllegalStateException::class.java) {
++                PublishableContentFixture.load(root)
++            }
++            assertTrue(section, error.message.orEmpty().contains(path))
++        }
++    }
++
++    @Test
++    fun rejectsExportIgnoredManifest() {
++        val root = repository()
++        write(root, "manifest.json", """{"files":{}}""")
++        File(root, ".gitattributes").appendText("/manifest.json export-ignore\n")
++        val error = assertThrows(IllegalStateException::class.java) {
++            PublishableContentFixture.load(root)
++        }
++        assertTrue(error.message.orEmpty().contains("excludes manifest.json"))
++    }
++
++    @Test
++    fun failsWhenGitCannotListTheRepository() {
++        val root = temporary.newFolder()
++        write(root, "manifest.json", """{"files":{}}""")
++        val error = assertThrows(IllegalStateException::class.java) {
++            PublishableContentFixture.load(root)
++        }
++        assertTrue(error.message.orEmpty().contains("git ls-files failed"))
++    }
++
++    @Test
++    fun preservesUnicodeSpacesAndEmbeddedLineBreaksInNulDelimitedPaths() {
++        val paths = listOf("kanji/\u65e5.md", "words/with space.md", "articles/line\nbreak\tname.md")
++        val output = (paths.joinToString("\u0000") + "\u0000").toByteArray()
++        assertEquals(paths, PublishableContentFixture.decodePaths(output))
++    }
++
++    private fun repository(): File = temporary.newFolder().also { root ->
++        git(root, "init", "--quiet")
++        write(root, ".gitattributes", """
++            /docs export-ignore
++            /docs/** export-ignore
++            /tools export-ignore
++            /tools/** export-ignore
++            /.github export-ignore
++            /.github/** export-ignore
++        """.trimIndent() + "\n")
++    }
++
++    private fun write(root: File, path: String, text: String) {
++        File(root, path).also {
++            it.parentFile.mkdirs()
++            it.writeText(text)
++        }
++    }
++
++    private fun git(root: File, vararg arguments: String) {
++        val command = ProcessBuilder(listOf("git", "-C", root.absolutePath) + arguments)
++            .redirectErrorStream(true).start()
++        val output = command.inputStream.use { it.readBytes().decodeToString() }
++        assertEquals(output, 0, command.waitFor())
++    }
++}
+diff --git a/core/src/test/kotlin/io/github/stopcran/kanji/core/RealContentTest.kt b/core/src/test/kotlin/io/github/stopcran/kanji/core/RealContentTest.kt
+index baa202c..0680774 100644
+--- a/core/src/test/kotlin/io/github/stopcran/kanji/core/RealContentTest.kt
++++ b/core/src/test/kotlin/io/github/stopcran/kanji/core/RealContentTest.kt
+@@ -44,11 +44,7 @@ class RealContentTest {
+     fun completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent() {
+         val root = File("../../learning-japanese")
+         assumeTrue(File(root, "manifest.json").exists())
+-        val git = ProcessBuilder("git", "-C", root.absolutePath, "ls-files", "-c", "-o",
+-            "--exclude-standard", "-z", "--", ":(exclude,attr:export-ignore)").start()
+-        val tracked = git.inputStream.readBytes().decodeToString().split('\u0000').filter { it.isNotEmpty() }
+-        assertEquals(0, git.waitFor())
+-        val files = tracked.associateWith { File(root, it).readBytes() }.toMutableMap()
++        val files = PublishableContentFixture.load(root).toMutableMap()
+         val tone = requireNotNull(javaClass.getResourceAsStream("/listening-short-tone.ogg")).use { it.readBytes() }
+         val task = approvedTask(taskFixture().task.copy(id = "test-only-content-import", exposureId = "test-only-content-import"), tone, 250)
+         val path = "listening-tasks/${task.task.id}.json"
+@@ -114,8 +110,7 @@ class RealContentTest {
+     fun parsesRealContentRepoWhenPresent() {
+         val root = File("../../learning-japanese")
+         assumeTrue(File(root, "manifest.json").exists())
+-        val files = root.walkTopDown().filter { it.isFile && !it.path.contains(".git") }
+-            .associate { it.relativeTo(root).invariantSeparatorsPath to it.readBytes() }
++        val files = PublishableContentFixture.load(root)
+         val parsed = ContentParser.parse(files)
+         assertEquals(emptyList<String>(), parsed.problems)
+         assertTrue(parsed.kanji.size >= 20)
+diff --git a/docs/DESIGN.md b/docs/DESIGN.md
+index 69e0ffd..d74558d 100644
+--- a/docs/DESIGN.md
++++ b/docs/DESIGN.md
+@@ -823,6 +823,11 @@ Testing seams: network goes through `ContentHttp` (tests use a fake), feature st
+ UI tests (`ComposeUiTest`) run on Robolectric for the stateless pieces (answer feedback, article toggle, page chrome). Static analysis is Detekt
+ with a baseline (`config/detekt`); new code must add no findings, and the baseline should only shrink.
+ 
++Real-corpus JVM fixtures load the complete publishable working tree through Git's `export-ignore` selection, including non-ignored
++local additions, rather than eagerly retaining contributor documentation. Both direct parsing and mixed-archive compatibility use
++the same test-only loader; it fails on Git errors or excluded manifest dependencies before reading the corpus. Every existing parser
++assertion and archive budget remains in force. Contributor source/review evidence stays in Git and local checkouts (#130).
++
+ ### Local progress evidence
+ 
+ Room v8 adds Grammar sets and response details without resetting existing progress; its migration clears only sync metadata to reimport

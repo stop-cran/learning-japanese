@@ -1,0 +1,25 @@
+Independent plan review for Android issue130
+Reviewer: loader-plan-review, general-purpose subagent; actual model identifier unavailable.
+Snapshots: Android0f60c8e82f82687b84fba2d8936f29d142e574a6; contentb9eb2fb52b6619c1810cc68e5da3ebbcddd6175b.
+Verdict: implementable; no blocking design defect.
+Read-only scope: issue and plan, Android instructions/applicable DESIGN, complete RealContentTest, Manifest model, content attributes/budget checker/manifest shapes. No builds or fresh size calculation.
+
+Findings and parent reconciliation before implementation:
+1. Unicode/space cases alone do not prove NUL-delimited parsing. RESOLVED IN PLAN:
+   add synthetic embedded-newline/tab output case portable on Windows.
+2. Missing-dependency checks must cover all top-level path maps, especially
+   curriculum/listeningTasks/listeningTaskAudio/listeningTaskImages JsonElement maps.
+   RESOLVED IN PLAN: enumerate every object-valued top-level section as the
+   existing content budget checker does; regression iterates all nine current maps.
+3. Include unmanifested nonignored runtime addition. RESOLVED IN PLAN:
+   positive fixture asserts actual untracked extra bytes are loaded.
+4. Preserve separate stderr diagnostics and fail on nonzero Git exit before
+   reading selected files. RESOLVED IN PLAN: inherit stderr, consume stdout,
+   check completion before reading manifest/corpus; no fallback or skip.
+5. Read only manifest before coverage validation. ACCEPTED implementation invariant.
+Optional bounded Git timeout: DEFERRED; local ls-files with inherited stderr
+and drained stdout is the existing mechanism, no need to add process policy here.
+
+No evidence deletion, production change, assertion removal or memory-limit change.
+Proceed with isolated implementation and focused regressions, then fresh3+1 gate
+and independent diff review. A passing fixture is not native/phone acceptance.

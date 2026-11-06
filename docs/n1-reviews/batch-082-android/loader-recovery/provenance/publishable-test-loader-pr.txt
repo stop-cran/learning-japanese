@@ -1,0 +1,23 @@
+## Change
+
+Fixes #130.
+
+Both real-corpus tests now use the same test-only publication fixture loader, matching the existing Git `export-ignore` selection. All contributor documentation remains intact; all original parser assertions, runtime files, production code, archive limits and memory settings are preserved.
+
+The loader rejects Git failures and excluded manifest dependencies before reading the corpus. Five regressions cover nested contributor exclusions, tracked/untracked publication files (including unmanifested additions), all nine manifest path maps, excluded manifests, failed Git enumeration and NUL-delimited Unicode/space/newline/tab paths.
+
+## Independent reviews and reconciliation
+
+- Independent plan review: implementable. Reconciled NUL-delimiter coverage, all manifest namespaces and unmanifested untracked bytes before implementation; owner record: https://github.com/stop-cran/kanji-cards-android/issues/130#issuecomment-6684766932.
+- Independent final code review: no significant issues found. Reviewer inspected all five changed/new files and saved XML; did not rerun tests. Both reviewers' exact model identifiers were unavailable.
+
+## Validation
+
+- Fresh five loader regressions + three RealContent tests + one RareHan test: PASS, no failures/errors/skips, `41 actionable tasks: 41 executed`, unchanged qualified HOST-only2GiB init. Tested against complete content snapshot b9eb2fb52b6619c1810cc68e5da3ebbcddd6175b.
+- Full standard-heap `-PcoreOnly :core:check`: PASS,9m47s, no heap override.
+- `lintDebug :core:verifyJvmBoundary`: PASS.
+- Initial `detekt` run reproduced two pre-existing `ComposeUiTest` findings, also present in baseline main CI https://github.com/stop-cran/kanji-cards-android/actions/runs/41849632967. Following explicit authorization to unblock #130, six existing page/feedback tests were moved unchanged into `PageChromeTest`, and one long string literal was split without changing its value. All27 original test method bodies were mechanically compared (normalizing CRLF and that adjacent literal split).
+- Final `detekt`, `lintDebug`, and both affected UI test classes PASS:21ComposeUiTest+6PageChromeTest, zero failures/errors/skips. No rule suppressions, baseline changes or production edits.
+- No emulator or physical-phone test: test-source/documentation changes only, no production/UI changes.
+
+N1 batch082 resumes only after actual green CI, normal signed integration and verified compatible test-only baseline adoption; this PR does not claim native/phone/whole-rollout acceptance.

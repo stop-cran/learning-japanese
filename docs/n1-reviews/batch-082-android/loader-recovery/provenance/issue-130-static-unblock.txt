@@ -1,0 +1,7 @@
+Following the owner's13:57request to finish issue130, the existing static-analysis blocker is resolved on the same isolated PR131 branch. There were no Git conflicts or unrelated uncommitted changes to shelve; other worktrees were left intact.
+
+Signed follow-up e46106de88892b6886f38199b5ca20f2134b27f6 moves six existing page/feedback tests from ComposeUiTest into PageChromeTest and splits the overlong string literal without changing its value. A mechanical comparison verifies all27 original method bodies are preserved (only CRLF and that adjacent literal split normalized). No production edits, Detekt suppressions or baseline changes.
+
+Actual final local gate:detekt+bothaffectedUItestclasses+lintDebug passed4m55s; ComposeUiTest21+PageChromeTest6, zero failures/errors/skips. Earlier nine loader/corpus/font tests and fullcorecheck remain passing; no loader changes since those checks.
+
+Awaiting exact updated PR CI before normal integration and same082 baseline recovery. Earlier failedCI/logs remain historical evidence, not current acceptance.
