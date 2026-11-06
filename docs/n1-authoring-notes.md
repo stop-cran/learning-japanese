@@ -37,10 +37,10 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 079: textually review-closed, runtime acceptance pending
+## Batch 079: published for bounded owner testing
 
-The [source packet](n1-sources/batch-079-progress.json) covers **冠**, source
-row 88, with necessary **王冠** おうかん and reused **冠** かんむり.
+The [publication record](n1-sources/batch-079-publication.json) closes **冠**,
+source row 88, with necessary **王冠** おうかん and reused **冠** かんむり.
 The [reconciliation](n1-reviews/batch-079-reconciliation.json) preserves two
 blind initial reviews on signed draft `0f7f20e9`: Claude Opus 5.5 and GPT-6.1
 Sol, each receiving the same complete **177-family** packet and five raw
@@ -58,16 +58,57 @@ Both full/curated readings **カン / かんむり**, three wrong choices, direc
 quiz safeguards and all **three mapped reciprocal pairs /six directions**
 are textually closed. New 王冠 has no inferred vocabulary level; reused 冠
 retains its primary reading and eight exclusions. Nine strokes exactly match
-the pinned converter/SVG. All 372 Python tests pass without skips, along with
-content, vocabulary, manifest, baseline/link/source audits and local budgets.
+the pinned converter/SVG. The [combined-tree acceptance](n1-sources/batch-079-acceptance-audit.json)
+records 372 Python tests without skips, content and vocabulary checks
+(2,122/2,431 reviewed pilot prompts, not full coverage), manifest freshness,
+five frozen inputs, two decompressed dictionaries, all 177 complete families,
+five raw character records, baseline/link/source audits, exact **106 additions**,
+pinned geometry, all 35 scoped Han cmaps and unchanged publishing budgets.
+Fresh main was already ancestral; integration changed no teaching or tools.
 
-This is a **local textual checkpoint, not publication**. Fresh Android tests,
-native drawing/routes and all 35 actual Han characters, including exact
-**冖 / 宀** fallback, remain later gates. Cmap absence is not glyph failure.
-Durable helpers use the approved control workspace and committed evidence;
-optional historical session helpers were not accessed. Published coverage
-remains **105 additions; 1,123 remaining**. No batch 080, fresh Android/native,
-physical-phone or general-release acceptance is claimed.
+Accepted [HOST checks](n1-sources/execution-532.json) have three RealContentTest
+cases and one RareHanTest case, no skips. Accepted
+[native evidence](n1-sources/execution-534.json) has two named terminal-status-0
+cases. Their hashes/provenance were reverified, not rerun. Production
+ContentSync imported the full signed `3fdc0bf9` archive **once**: 1,091 kanji,
+5,047 words, 111 N1 labels, zero problems, accepted parser epoch 1.
+Full/Lite raw and curated readings agree; both new reading grades are 3,
+Done 2/2. All three pairs/six directions, system Back and offline routes pass.
+Actual meaning choices were exempt/superfluous/frugal, not the full authored
+冗/完/守 trio; no newly persisted meaning grade is claimed. Nine injected
+reference paths, ungraded tracing, shape-only comparison and give-up recall
+grade 1 are not human handwriting, successful recall or MLKit evidence.
+Owned emulator 5580 parent 2004/QEMU 6712 stopped; shared 5556 untouched.
+
+The [visual reconciliation](n1-reviews/batch-079-visual-reconciliation.json)
+retains accepted original-session Claude Opus 5.5 and GPT-6.1 Sol confirmations,
+each receiving the same packet and **29 unique PNG groups /57 originals
+/28 byte aliases**. Source images are 1080x2400; model-visible images are
+900x2000. The original Claude run remains rejected for 25 tool overlaps and
+two multitool responses. One finite 31-turn serial replay passed; Claude
+explicitly used its own summary for resources 1–17 and live resources 18–30.
+GPT subsequently completed the packet/images serially. Both accepted executions
+exited before the next reviewer; all four assigned scopes have no actionable
+defect. Complete original reports, payloads and read-depth limits remain.
+
+All **35 actual Han /four production families**, including exact **冖 / 宀**,
+are readable in bounded captures; actual fallback face remains unknown.
+Complementary horizontal reading-table states show both examples, not every
+column in one frame. The 140 individual and eight whole-word native Paint
+assertion/hash records are not 148 PNG inspections. The final tree is transient
+loading, not loaded-state persistence proof. HOST-only 2-GiB initialization
+never entered native builds; no app/guest heap or guard changed.
+
+Normally signed owner-scoped fast-forward publication, green CI and the exact
+immutable public ZIP verify **all 8,363 runtime hashes**, manifest
+`a01eb85b17601ac0`, safe paths/per-file limits and contributor-evidence exclusion
+under the unchanged 18,000-entry /42-MiB compressed /80-MiB inflated /56-MiB
+retained guards. Durable helpers use control and committed/approved inputs;
+optional historical session recipes were not accessed. Published coverage is
+**106 additions; 1,122 remaining**, with 105 necessary support additions,
+not an N1 vocabulary deck. Compatible Android `f9b59a2`+ remains required.
+Physical-phone, general-release and whole-set acceptance are **outstanding**.
+Checkpoint before batch 080; no batch 080 or second runner started.
 
 ## Batch 078: published for bounded owner testing
 
