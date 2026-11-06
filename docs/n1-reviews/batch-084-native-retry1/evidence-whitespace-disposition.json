@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "execution": 586,
+  "batch": "084",
+  "status": "verbatim-diff-context-preserved",
+  "paths": [
+    "docs/n1-reviews/batch-084-native/fixture-from-corrected-083.diff",
+    "docs/n1-reviews/batch-084-native-retry1/fixture-from-corrected-083.diff"
+  ],
+  "observedLinesPerFile": [5, 11, 15, 79, 85],
+  "reason": "git diff --cached --check identifies the unified-diff marker for an unchanged empty context line as trailing whitespace. Preserve these exact generated evidence bytes rather than altering the archived diffs. Source/diff hashes remain in the original and Retry1 fixture-verification records.",
+  "validation": "Run the staged whitespace check on every other evidence file; exclude only these two verbatim unified-diff records. Original Gradle logs are archived with lossless gzip.",
+  "limits": "This disposition changes no teaching, test assertion, source geometry, manifest, production behavior or acceptance gate. Both native compilations passed; no emulator/native case or phone acceptance has run."
+}
