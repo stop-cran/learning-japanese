@@ -1,0 +1,712 @@
+--- docs/n1-reviews/batch-085-native/N1Batch085NativeTest.kt
++++ docs/n1-reviews/batch-086-native/N1Batch086NativeTest.kt
+@@ -50,22 +50,22 @@
+ import java.util.UUID
+ 
+-private fun disposable085() {
++private fun disposable086() {
+     assertEquals("true", InstrumentationRegistry.getArguments().getString("n1Disposable"))
+     assertTrue(Build.HARDWARE in setOf("ranchu", "goldfish"))
+ }
+ 
+-class N1Batch085GlyphTest {
++class N1Batch086GlyphTest {
+     @get:Rule val rule = createAndroidComposeRule<ComponentActivity>()
+ 
+-    @Test fun concentrationLookalikesAndRadicalFallbacksAcrossFourProductionFamilies() {
+-        disposable085()
++    @Test fun commonplaceLookalikesAndRadicalFallbacksAcrossFourProductionFamilies() {
++        disposable086()
+         val context = InstrumentationRegistry.getInstrumentation().targetContext
+         val fonts = listOf(KanjiFont.Gothic, KanjiFont.Mincho, KanjiFont.Textbook, KanjiFont.Brush)
+-        val pages = listOf("中 付 冗 冫 冷 准 凍 凝 凹 力 努 固 堅 夢 夫 工 度 心 息 意 懲 気 注 液", "濃 点 焦 熱 疑 的 目 硬 肩 血 衣 装 見 隹 集", "凝 疑 准 冗 凹 冫 隹 凍 固 硬 凝固 凝る 凝らす")
++        val pages = listOf("丶 丸 九 使 例 全 几 凡 凹 判 前 号 味 図 地 平 意 明 書 概 注 確 筆 解", "記 認 説 読 論 辞 鍵", "凡 丸 九 凹 几 丶 平凡 凡例 凡そ 凡て")
+         val page = mutableStateOf(0)
+         rule.setContent {
+             MaterialTheme {
+                 Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+-                    Text("Batch 085: concentration / look-alikes / radical fallback")
++                    Text("Batch 086: commonplace / look-alikes / radical fallback")
+                     Text("Panel ${page.value + 1} / ${pages.size}")
+                     fonts.forEach { font ->
+@@ -73,5 +73,5 @@
+                         Text(pages[page.value], fontFamily = font.family(), fontSize = 18.sp, lineHeight = 26.sp)
+                     }
+-                    Text("Inspect all 39 scoped Han; focused 凝/疑/准/冗/凹, 冫/隹. Fallback families may coincide.", fontSize = 16.sp)
++                    Text("Inspect all 31 scoped Han; focused 凡/丸/九/凹, 丶/几. Fallback families may coincide.", fontSize = 16.sp)
+                 }
+             }
+@@ -84,5 +84,5 @@
+         for ((index, typeface) in typefaces.withIndex()) {
+             val hashes = mutableSetOf<String>()
+-            for (char in listOf("中", "付", "冗", "冫", "冷", "准", "凍", "凝", "凹", "力", "努", "固", "堅", "夢", "夫", "工", "度", "心", "息", "意", "懲", "気", "注", "液", "濃", "点", "焦", "熱", "疑", "的", "目", "硬", "肩", "血", "衣", "装", "見", "隹", "集")) {
++            for (char in listOf("丶", "丸", "九", "使", "例", "全", "几", "凡", "凹", "判", "前", "号", "味", "図", "地", "平", "意", "明", "書", "概", "注", "確", "筆", "解", "記", "認", "説", "読", "論", "辞", "鍵")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+@@ -105,5 +105,5 @@
+                 image.recycle()
+             }
+-            for (word in listOf("凝固", "凝る", "凝らす")) {
++            for (word in listOf("平凡", "凡例", "凡そ", "凡て")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+@@ -132,5 +132,5 @@
+             }
+         }
+-        assertEquals(168, rows.length())
++        assertEquals(140, rows.length())
+         for (index in pages.indices) {
+             rule.runOnIdle { page.value = index }
+@@ -138,28 +138,28 @@
+             rule.onAllNodesWithText(pages[index]).assertCountEquals(4)
+             for (fontIndex in fonts.indices) rule.onAllNodesWithText(pages[index])[fontIndex].assertIsDisplayed()
+-            File(context.getExternalFilesDir(null), "n1-085-font-panel-${index + 1}.png").outputStream().use {
++            File(context.getExternalFilesDir(null), "n1-086-font-panel-${index + 1}.png").outputStream().use {
+                 assertTrue(rule.onRoot().captureToImage().asAndroidBitmap().compress(Bitmap.CompressFormat.PNG, 100, it))
+             }
+         }
+-        File(context.getExternalFilesDir(null), "n1-085-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-086-font-raster.json").writeText(JSONObject()
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+             .put("fontScale", context.resources.configuration.fontScale).put("rows", rows)
+-            .put("individualGlyphProbes", 156).put("wholeWordRasterProbes", 12).put("panels", 3)
+-            .put("limits", "39 actual scoped Han including exact 冫/隹 fallback inspection, four production families, three bounded Compose panels and twelve whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
++            .put("individualGlyphProbes", 124).put("wholeWordRasterProbes", 16).put("panels", 3)
++            .put("limits", "31 actual scoped Han including exact 丶/几 fallback inspection, four production families, three bounded Compose panels and sixteen whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
+             .toString(2))
+     }
+ }
+ 
+-class N1Batch085ArticleTest {
++class N1Batch086ArticleTest {
+     @get:Rule val rule = createEmptyComposeRule()
+     private lateinit var app: KanjiApp
+     private lateinit var scenario: ActivityScenario<MainActivity>
+ 
+-    @Test fun fullSingleImportOfflineConcentrationFourReciprocalPairsCuratedOnAndKunDrawingAndSystemBack() {
+-        disposable085()
++    @Test fun fullSingleImportOfflineCommonplaceSevenReciprocalPairsTwoOnKeysNoKunDrawingAndSystemBack() {
++        disposable086()
+         val instrumentation = InstrumentationRegistry.getInstrumentation()
+         app = instrumentation.targetContext.applicationContext as KanjiApp
+-        val source = RepoSource("acceptance-fixture", "n1-085-${UUID.randomUUID()}", "main")
+-        val head = "1d2e329035789b160e495a7518d64183f799233e"
++        val source = RepoSource("acceptance-fixture", "n1-086-${UUID.randomUUID()}", "main")
++        val head = "6667318d9d5bdf8ec8c899db64395e2955612432"
+         assertTrue(app.settings.setSource("https://github.com/${source.id}", source.branch))
+         var archiveRequests = 0
+@@ -169,5 +169,5 @@
+                 source.commitZipUrl(head) -> {
+                     archiveRequests++
+-                    instrumentation.context.assets.open("n1-batch-085-1d2e3290-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-086-6667318d-envelope.zip")
+                 }
+                 else -> error("Unexpected fixture request: $url")
+@@ -184,9 +184,9 @@
+         val updated = result as SyncResult.Updated
+         assertEquals(1, archiveRequests)
+-        assertEquals(1108, updated.kanji)
+-        assertEquals(5063, updated.words)
++        assertEquals(1109, updated.kanji)
++        assertEquals(5064, updated.words)
+         assertTrue(updated.problems.toString(), updated.problems.isEmpty())
+         val meta = requireNotNull(runBlocking { app.db.content().meta(source.id) })
+-        assertEquals("0c514711ae8d3212", meta.contentVersion)
++        assertEquals("86e8cb13aa72ecd0", meta.contentVersion)
+         assertEquals(0, meta.problems)
+         assertNull(meta.grammarProblem)
+@@ -196,18 +196,18 @@
+         assertEquals(ContentParser.KANJI_READING_PARSER_EPOCH, meta.kanjiReadingParserEpoch)
+         val n1 = runBlocking { app.db.content().kanjiLite(source.id).filter { it.jlpt == 1 } }
+-        assertEquals(117, n1.size)
+-        val concentration = n1.single { it.kanji == "凝" }
+-        assertEquals(listOf("准", "冗", "凹"), concentration.distractors.splitSep())
+-        assertEquals(listOf("ギョウ"), concentration.onyomi.splitSep())
+-        assertEquals(listOf("こ.る", "こ.らす", "こご.らす", "こご.らせる", "こご.る"), concentration.kunyomi.splitSep())
+-        assertNotNull(concentration.quizOnyomi)
+-        assertNotNull(concentration.quizKunyomi)
+-        assertEquals(listOf("ギョウ"), concentration.quizOnyomi?.splitSep())
+-        assertEquals(listOf("こ.る", "こ.らす"), concentration.quizKunyomi?.splitSep())
+-        assertEquals(listOf("ぎょう"), concentration.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(listOf("こる"), concentration.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(118, n1.size)
++        val commonplace = n1.single { it.kanji == "凡" }
++        assertEquals(listOf("丸", "九", "凹"), commonplace.distractors.splitSep())
++        assertEquals(listOf("ボン", "ハン"), commonplace.onyomi.splitSep())
++        assertEquals(listOf("およ.そ", "おうよ.そ", "すべ.て"), commonplace.kunyomi.splitSep())
++        assertNotNull(commonplace.quizOnyomi)
++        assertNotNull(commonplace.quizKunyomi)
++        assertEquals(listOf("ボン", "ハン"), commonplace.quizOnyomi?.splitSep())
++        assertEquals(emptyList<String>(), commonplace.quizKunyomi?.splitSep())
++        assertEquals(listOf("ぼん", "はん"), commonplace.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(emptyList<String>(), commonplace.toReadingCard().quizKeys(ReadingKind.Kun))
+         val expectedMeanings = mapOf(
+-            "凝" to "congeal; become absorbed", "准" to "quasi-; associate rank",
+-            "冗" to "superfluous; redundant", "凹" to "concave; sunken",
++            "凡" to "commonplace; mediocre", "丸" to "round; circle",
++            "九" to "nine", "凹" to "concave; sunken",
+         )
+         val all = runBlocking { app.db.content().kanjiLite(source.id) }
+@@ -215,15 +215,25 @@
+         for ((poolName, pool) in listOf("N1" to n1, "All" to all)) {
+             val cards = pool.map { QuizCard(it.kanji, it.title, it.tags.splitSep(), it.distractors.splitSep()) }
+-            val target = cards.single { it.kanji == "凝" }
+-            assertEquals(listOf("准", "冗", "凹"), target.distractors)
+-            assertEquals(expectedMeanings, cards.filter { it.kanji in expectedMeanings }.associate { it.kanji to it.title })
+-            val options = QuizBuilder.options(target, cards, kotlin.random.Random(595))
++            val target = cards.single { it.kanji == "凡" }
++            assertEquals(listOf("丸", "九", "凹"), target.distractors)
++            val options = QuizBuilder.options(target, cards, kotlin.random.Random(604))
+             assertEquals(4, options.size)
+-            assertEquals(expectedMeanings, options.associate { it.kanji to it.title })
++            if (poolName == "All") {
++                assertEquals(expectedMeanings, options.associate { it.kanji to it.title })
++            } else {
++                assertEquals(setOf("凡", "凹"), cards.filter { it.kanji in expectedMeanings }.map { it.kanji }.toSet())
++                assertTrue(options.any { it.kanji == "凹" })
++                assertEquals(2, options.count { it.kanji !in expectedMeanings })
++            }
+             checkedPools.put(poolName, JSONObject().put("poolSize", pool.size)
+                 .put("options", JSONArray().also { rows ->
+                     options.forEach { rows.put(JSONObject().put("kanji", it.kanji).put("title", it.title)) }
+-                }).put("allThreeCuratedAvailable", true).put("defaultFourNoPadding", true))
+-        }
++                }).put("availableCuratedCount", cards.count { it.kanji in target.distractors })
++                .put("fallbackOptions", options.count { it.kanji !in expectedMeanings }))
++        }
++        val importedLegend = requireNotNull(runBlocking { app.db.content().word(source.id, "凡例") })
++        assertEquals(listOf("注", "説明", "解説", "メモ", "筆記", "はじめに", "概論", "鍵"), importedLegend.quizExclusions.splitSep())
++        assertEquals("はんれい", importedLegend.reading)
++        assertNull(importedLegend.jlpt)
+         val now = System.currentTimeMillis()
+         app.settings.sync.lastCheckMs = now
+@@ -239,5 +249,5 @@
+                     app.db.reviews().putState(ReviewStateEntity(
+                         source.id, "jlpt-n1", card.kanji, StudyMode.Quiz.name, "Review", 30.0, 5.0,
+-                        if (card.kanji == "凝") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "凡") now - 60_000 else now + 30L * 86_400_000,
+                         now - 2L * 86_400_000, 3, 0,
+                     ))
+@@ -245,5 +255,5 @@
+                         app.db.reviews().putState(ReviewStateEntity(
+                             source.id, "jlpt-n1", card.kanji, kind.mode.name, "Review", 30.0, 5.0,
+-                            if (card.kanji == "凝" && key == (if (kind == ReadingKind.On) "ぎょう" else "こる")) now - 60_000
++                            if (card.kanji == "凡" && kind == ReadingKind.On && key in setOf("ぼん", "はん")) now - 60_000
+                             else now + 30L * 86_400_000,
+                             now - 2L * 86_400_000, 3, 0, reading = key,
+@@ -252,5 +262,5 @@
+                 }
+                 for (days in 1..2) app.db.reviews().putLog(ReviewLogEntity(
+-                    0, source.id, "jlpt-n1", "凝", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "凡", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+                 ))
+             }
+@@ -260,16 +270,17 @@
+         val evidence = JSONObject().put("contentSnapshot", head).put("contentVersion", meta.contentVersion)
+             .put("archiveRequests", archiveRequests).put("importedKanji", updated.kanji).put("importedWords", updated.words)
++            .put("directWordGuardCount", importedLegend.quizExclusions.splitSep().size)
+             .put("problems", updated.problems.size).put("n1Cards", n1.size)
+             .put("acceptedReadingParserEpoch", meta.kanjiReadingParserEpoch)
+-            .put("fullOnyomi", JSONArray(concentration.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(concentration.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(concentration.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(concentration.toReadingCard().quizKeys(ReadingKind.Kun)))
+-            .put("liteQuizOnyomi", JSONArray(requireNotNull(concentration.quizOnyomi).splitSep()))
+-            .put("liteQuizKunyomi", JSONArray(requireNotNull(concentration.quizKunyomi).splitSep()))
++            .put("fullOnyomi", JSONArray(commonplace.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(commonplace.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(commonplace.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(commonplace.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("liteQuizOnyomi", JSONArray(requireNotNull(commonplace.quizOnyomi).splitSep()))
++            .put("liteQuizKunyomi", JSONArray(requireNotNull(commonplace.quizKunyomi).splitSep()))
+             .put("productionBuilderN1AndAllExactChoices", checkedPools)
+             .put("transport", "Exact full git envelope through production ContentSync ONCE; synthetic source/HEAD")
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+-            .put("fixture", "Other N1 meanings/readings postponed; 凝 meaning and curated onぎょう/kunこる due. Selectedこ.らす shares normalizedこる, not independent queued mastery. Two historical good 凝 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 凡 meaning and exactly onぼん/はん due; explicit kun[] gives no questions. Two historical good 凡 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+             .put("phoneEvidence", false).put("passed", false)
+         scenario = ActivityScenario.launch(MainActivity::class.java)
+@@ -278,155 +289,179 @@
+             click("N1")
+             rule.waitUntil(30_000) { app.settings.stack.value == "jlpt-n1" }
+-            await("N1 · 117 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 118 cards").performScrollTo().assertIsDisplayed()
+             capture("selection")
+             click("Browse all kanji")
+-            rule.onNode(hasSetTextAction()).performTextReplacement("凝")
+-            click("congeal; become absorbed")
+-            await("凝 — congeal; become absorbed")
+-            show(articleBullet("Strokes: 16 · Key (radical): 冫 (the two-stroke ice radical at left, no. 15) · JLPT: N1 (community list)"), "kanji-01")
++            rule.onNode(hasSetTextAction()).performTextReplacement("凡")
++            click("commonplace; mediocre")
++            await("凡 — commonplace; mediocre")
++            show(articleBullet("Strokes: 3 · Key (radical): 几 (no. 16) · JLPT: N1 (community list)"), "kanji-01")
+             section("Meaning and origin")
+-            show(articleBullet("凝 connects congealing or stiffness with concentrated attention. 凝固 ぎょうこ names coagulation or solidification; 凝る こる can describe stiff muscles or becoming absorbed in a hobby. The word and construction determine which meaning applies."), "kanji-03")
+-            show(articleBullet("Modern-shape mnemonic, not etymology: imagine the two marks of 冫 beside 疑 as someone pausing so intently that they seem frozen in place. This is an invented memory scene, not a historical or phonetic explanation."), "kanji-04")
++            show(articleBullet("凡 can express being ordinary or unremarkable, as in 平凡 へいぼん. It also has a broader general or overall association, used in 凡例 はんれい, a book's explanatory conventions or a map's legend. Do not translate every occurrence as \"mediocre.\""), "kanji-03")
++            show(articleBullet("Modern-shape mnemonic, not etymology: imagine the 几-shaped frame with one ordinary dot 丶 inside. This is a memory aid for the current shape, not a historical derivation or a claim about a phonetic component."), "kanji-04")
+             section("Readings")
+-            show(readingExample("ギョウ"), "kanji-09")
+-            show(readingExample("凝固 ぎょうこ — coagulation; solidification"), "kanji-11")
+-            show(readingExample("こ.る"), "kanji-12")
+-            show(readingExample("凝る こる — become stiff; get absorbed in; be elaborate"), "kanji-14")
+-            show(readingExample("こ.らす"), "kanji-15")
+-            show(readingExample("凝らす こらす — concentrate; apply effort"), "kanji-17")
+-            show(readingExample("こご.らす"), "kanji-18")
+-            show(readingExample("凝らす こごらす — cause to congeal; freeze; a separately recorded reading, not the linked article's primary こらす"), "kanji-20")
+-            show(readingExample("こご.らせる"), "kanji-21")
+-            show(readingExample("凝らせる こごらせる — cause to congeal; freeze; written ending らせる"), "kanji-23")
+-            show(readingExample("こご.る"), "kanji-24")
+-            show(readingExample("凝る こごる — congeal; jell; usually written in kana as こごる"), "kanji-26")
+-            show(articleBullet("The three こご readings are dictionary-verified recognition material, not additional readings of every example above. In particular, shoulder stiffness and enthusiasm in the linked 凝る article use こる, not こごる. The written ending of 凝らす is らす in both こらす and こごらす."), "kanji-27")
+-            section("Common words")
+-            show(articleBullet("凝固 ぎょうこ — coagulation; solidification"), "kanji-29")
+-            show(articleBullet("凝る こる — become stiff; get absorbed in"), "kanji-30")
+-            show(articleBullet("凝らす こらす — concentrate; apply effort"), "kanji-31")
+-            show(articleBullet("肩が凝る（かたがこる）— have stiff shoulders"), "kanji-32")
+-            show(articleBullet("工夫を凝らす（くふうをこらす）— exercise one's ingenuity"), "kanji-33")
++            show(readingExample("ボン"), "kanji-09")
++            show(readingExample("平凡 へいぼん — ordinary; unremarkable"), "kanji-11")
++            show(readingExample("ハン"), "kanji-12")
++            show(readingExample("凡例 はんれい — explanatory notes; legend"), "kanji-14")
++            show(readingExample("およ.そ"), "kanji-15")
++            show(readingExample("凡そ およそ — approximately; generally; usually written in kana"), "kanji-17")
++            show(readingExample("おうよ.そ"), "kanji-18")
++            show(readingExample("Preserved exactly from KANJIDIC2; no verified modern word example is supplied here."), "kanji-20")
++            show(readingExample("すべ.て"), "kanji-21")
++            show(readingExample("凡て すべて — everything; a rare kanji spelling of the word taught under 全て"), "kanji-23")
++            show(articleBullet("The two on-readings are selected for reading practice. The native readings remain recognition or lookup information here. In particular, the source-only おうよ.そ is not silently changed to おおよ.そ or treated as a verified word. In 凡そ and 凡て, the final そ and て are written outside the kanji."), "kanji-24")
++            section("Common words")
++            show(articleBullet("平凡 へいぼん — ordinary; unremarkable"), "kanji-26")
++            show(articleBullet("凡例 はんれい — explanatory notes; legend"), "kanji-27")
++            show(articleBullet("For recognition, 凡そ corresponds to usually-kana およそ. The rare spelling 凡て corresponds to 全て すべて; the pronunciation and the ordinary kana word are not thereby rare."), "kanji-28")
+             section("Notes")
+-            show(articleBullet("Contrast activity + に凝る with 工夫 + を凝らす. The first describes becoming absorbed; the second describes applying ingenuity. They are not interchangeable verb endings."), "kanji-35")
+-            show(articleBullet("凝った（こった）, as in 凝った衣装（こったいしょう）, \"an elaborate outfit,\" is an inflected form of こる, not a new character reading."), "kanji-36")
+-            show(articleBullet("凍 concerns freezing, 固 firmness or hardening, and 硬 hardness or stiffness. These meanings overlap with parts of 凝's range; do not treat them as unrelated simply because the shapes differ."), "kanji-37")
+-            show(articleBullet("For shape comparison, 准 has 隹 beside 冫; 凝 has the more complex 疑-shaped right side. 冗 has a cover-like top, and 凹 has an inward dip. None means congealing or absorption."), "kanji-38")
+-            show(articleBullet("Metadata: KANJIDIC2, database 2026-306, 2026-11-02 (EDRDG; CC BY-SA 4.0). Words: JMdict, entries 1238990, 1239000, 1239010, 1239020, 1239060, 1239070, 1239120, 1309500 and 1636550. Usage: Digital Daijisen: 凝る, 凝らす and 凝固."), "kanji-39")
+-            section("Common words")
+-            show(articleBullet("凝固 ぎょうこ — coagulation; solidification"), "solidify-forward")
+-            inline(await(articleBullet("凝固 ぎょうこ — coagulation; solidification")), "凝固", 0)
+-            await("Article contents")
+-            await("凝固 (ぎょうこ) — coagulation; solidification")
++            show(articleBullet("Read 凡例 as はんれい, not ぼんれい. The same pronunciation also belongs to 判例 (はんれい), \"judicial precedent,\" which is a different word."), "kanji-30")
++            show(articleBullet("丸 concerns roundness or a circle, and 九 means nine. Compare the position of the dot and the long outer stroke rather than treating these similar shapes as interchangeable."), "kanji-31")
++            show(articleBullet("凹 describes a concave or sunken shape, not mediocrity."), "kanji-32")
++            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Word pairs: JMdict, entries 1507910, 1523690, 1523450 and 1595730. Reading allocation: Digital Daijisen, 凡."), "kanji-33")
++            section("Common words")
++            show(articleBullet("平凡 へいぼん — ordinary; unremarkable"), "ordinary-forward")
++            inline(await(articleBullet("平凡 へいぼん — ordinary; unremarkable")), "平凡", 0)
++            await("Article contents")
++            await("平凡 (へいぼん) - ordinary; unremarkable")
++            section("How the kanji combine")
++            show(articleBullet("平 has an ordinary or level association here; 凡 (ボン) contributes common or ordinary. The overlapping contributions reinforce the idea of not standing out: ヘイ + ボン."), "ordinary-component")
++            inline(await(articleBullet("平 has an ordinary or level association here; 凡 (ボン) contributes common or ordinary. The overlapping contributions reinforce the idea of not standing out: ヘイ + ボン.")), "平", 0)
++            await("Article contents")
++            await("平 — flat; peaceful")
++            section("Common words")
++            show(articleBullet("平凡 へいぼん — ordinary; unremarkable"), "ordinary-changed-reused")
++            inline(await(articleBullet("平凡 へいぼん — ordinary; unremarkable")), "平凡", 0)
++            await("Article contents")
++            await("平凡 (へいぼん) - ordinary; unremarkable")
++            back()
++            await(articleBullet("平凡 へいぼん — ordinary; unremarkable")).assertIsDisplayed()
++            section("Common words")
++            capture("ordinary-back-to-reused-kanji")
++            back()
++            await(articleBullet("平 has an ordinary or level association here; 凡 (ボン) contributes common or ordinary. The overlapping contributions reinforce the idea of not standing out: ヘイ + ボン.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("ordinary-back-to-word")
++            section("How the kanji combine")
++            show(articleBullet("平 has an ordinary or level association here; 凡 (ボン) contributes common or ordinary. The overlapping contributions reinforce the idea of not standing out: ヘイ + ボン."), "ordinary-reverse")
++            inline(await(articleBullet("平 has an ordinary or level association here; 凡 (ボン) contributes common or ordinary. The overlapping contributions reinforce the idea of not standing out: ヘイ + ボン.")), "凡", 45)
++            await("Article contents")
++            section("Readings")
++            show(readingExample("ボン"), "ordinary-kanji-backlink")
++            back()
++            await(articleBullet("平 has an ordinary or level association here; 凡 (ボン) contributes common or ordinary. The overlapping contributions reinforce the idea of not standing out: ヘイ + ボン.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("ordinary-system-back-to-word")
++            back()
++            await(articleBullet("平凡 へいぼん — ordinary; unremarkable")).assertIsDisplayed()
++            section("Common words")
++            capture("ordinary-system-back-to-kanji")
++            section("Common words")
++            show(articleBullet("凡例 はんれい — explanatory notes; legend"), "legend-forward")
++            inline(await(articleBullet("凡例 はんれい — explanatory notes; legend")), "凡例", 0)
++            await("Article contents")
++            await("凡例 (はんれい) — explanatory notes; legend")
++            await("凡例 (はんれい) — explanatory notes; legend")
+             section("Meaning")
+-            show(articleBullet("凝固 names coagulation or solidification. With する, it describes a material congealing or becoming solid; the material takes が."), "solidify-02")
+-            show(articleBullet("血液が凝固する。（けつえきがぎょうこする。）— Blood coagulates."), "solidify-03")
+-            show(articleBullet("It also names a change to the solid state, including water becoming ice. The English translation depends on the material: blood coagulates; a liquid can solidify. Not every 凝固 is water freezing."), "solidify-04")
+-            section("How the kanji combine")
+-            show(articleBullet("凝 contributes congealing and 固 firmness or hardening. Their related meanings reinforce the solidifying idea. Read ギョウ + コ; learn the established scientific uses as whole-word meanings."), "solidify-06")
++            show(articleBullet("凡例 names explanatory conventions or usage notes, often at the beginning of a dictionary or another reference book. It can explain how to read entries, abbreviations or symbols. On a map or diagram, it means the legend explaining the symbols, not a legendary story."), "legend-02")
++            show(articleBullet("辞書を使う前に、凡例を読んでください。 (じしょをつかうまえに、はんれいをよんでください。) — Please read the usage notes before using the dictionary."), "legend-03")
++            show(articleBullet("地図の凡例で、記号の意味を確認しました。 (ちずのはんれいで、きごうのいみをかくにんしました。) — I checked the meanings of the symbols in the map's legend."), "legend-04")
++            show(articleBullet("Both examples use the noun: 凡例を読む (はんれいをよむ), \"read the explanatory notes,\" and 地図の凡例 (ちずのはんれい), \"a map's legend.\""), "legend-05")
++            section("How the kanji combine")
++            show(articleBullet("凡 contributes a general or overall scope here, not a judgment of mediocrity. 例 contributes conventions or established usage, not only an individual example. Together, they concern the conventions for using or interpreting the material. The on-readings are ハン + レイ: はんれい. This association helps remember the word; it is not a historical derivation."), "legend-07")
+             section("Synonyms and antonyms")
+-            show(articleBullet("固まる（かたまる）, \"harden; solidify,\" overlaps in a material becoming firm. 凍る（こおる）, \"freeze,\" is useful for water or a surface freezing over. 冷凍（れいとう）concerns freezing or frozen storage, rather than every kind of coagulation."), "solidify-08")
++            show(articleBullet("説明 (せつめい), \"explanation,\" and 解説 (かいせつ), \"explanation; commentary,\" are broader. 注 (ちゅう) is an annotation that may explain a particular passage. A 凡例 explains conventions for the work or its symbols; it need not be a separate note on each difficult word. There is no useful direct antonym."), "legend-09")
+             section("Distinctive meaning")
+-            show(articleBullet("凝固 is useful in descriptions of materials and blood. It is not the term for mental concentration: compare 集中（しゅうちゅう）. The physical process is not necessarily a change to ice, and this vocabulary explanation does not provide medical advice."), "solidify-10")
+-            show(articleBullet("Dictionary: JMdict, entry 1239120. Usage and the blood example: Digital Daijisen: 凝固."), "solidify-11")
+-            section("How the kanji combine")
+-            show(articleBullet("凝 contributes congealing and 固 firmness or hardening. Their related meanings reinforce the solidifying idea. Read ギョウ + コ; learn the established scientific uses as whole-word meanings."), "solid-kanji")
+-            inline(await(articleBullet("凝 contributes congealing and 固 firmness or hardening. Their related meanings reinforce the solidifying idea. Read ギョウ + コ; learn the established scientific uses as whole-word meanings.")), "固", 29)
+-            await("Article contents")
+-            await("固 — firm; harden")
+-            section("Common words")
+-            show(articleBullet("凝固 ぎょうこ — coagulation; solidification"), "solid-changed-bullet")
+-            inline(await(articleBullet("凝固 ぎょうこ — coagulation; solidification")), "凝固", 0)
+-            await("Article contents")
+-            await("凝固 (ぎょうこ) — coagulation; solidification")
+-            back()
+-            await(articleBullet("凝固 ぎょうこ — coagulation; solidification")).assertIsDisplayed()
+-            section("Common words")
+-            capture("solid-back-to-reused-kanji")
+-            back()
+-            await(articleBullet("凝 contributes congealing and 固 firmness or hardening. Their related meanings reinforce the solidifying idea. Read ギョウ + コ; learn the established scientific uses as whole-word meanings.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("solid-back-to-word")
+-            section("How the kanji combine")
+-            show(articleBullet("凝 contributes congealing and 固 firmness or hardening. Their related meanings reinforce the solidifying idea. Read ギョウ + コ; learn the established scientific uses as whole-word meanings."), "solidify-reverse")
+-            inline(await(articleBullet("凝 contributes congealing and 固 firmness or hardening. Their related meanings reinforce the solidifying idea. Read ギョウ + コ; learn the established scientific uses as whole-word meanings.")), "凝", 0)
++            show(articleBullet("Do not use 凡例 for every introductory paragraph, example or personal memo. A book's はじめに, \"introduction; preface,\" may discuss its purpose without giving the usage conventions that a 凡例 provides. Context determines whether English \"usage notes,\" \"explanatory notes,\" \"legend\" or \"key\" fits."), "legend-11")
++            show(articleBullet("The homophone 判例 (はんれい) means a judicial precedent, not a map legend. Learn the whole spelling and reading rather than choosing ボン merely because it occurs in 平凡 (へいぼん)."), "legend-12")
++            show(articleBullet("Dictionary: JMdict, entry 1523690, senses 1–2; Digital Daijisen, 凡例."), "legend-13")
++            section("How the kanji combine")
++            show(articleBullet("凡 contributes a general or overall scope here, not a judgment of mediocrity. 例 contributes conventions or established usage, not only an individual example. Together, they concern the conventions for using or interpreting the material. The on-readings are ハン + レイ: はんれい. This association helps remember the word; it is not a historical derivation."), "legend-component")
++            inline(await(articleBullet("凡 contributes a general or overall scope here, not a judgment of mediocrity. 例 contributes conventions or established usage, not only an individual example. Together, they concern the conventions for using or interpreting the material. The on-readings are ハン + レイ: はんれい. This association helps remember the word; it is not a historical derivation.")), "例", 77)
++            await("Article contents")
++            await("例 — example; precedent")
++            section("Common words")
++            show(articleBullet("凡例 はんれい — explanatory notes; legend"), "legend-changed-reused")
++            inline(await(articleBullet("凡例 はんれい — explanatory notes; legend")), "凡例", 0)
++            await("Article contents")
++            await("凡例 (はんれい) — explanatory notes; legend")
++            back()
++            await(articleBullet("凡例 はんれい — explanatory notes; legend")).assertIsDisplayed()
++            section("Common words")
++            capture("legend-back-to-reused-kanji")
++            back()
++            await(articleBullet("凡 contributes a general or overall scope here, not a judgment of mediocrity. 例 contributes conventions or established usage, not only an individual example. Together, they concern the conventions for using or interpreting the material. The on-readings are ハン + レイ: はんれい. This association helps remember the word; it is not a historical derivation.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("legend-back-to-word")
++            section("How the kanji combine")
++            show(articleBullet("凡 contributes a general or overall scope here, not a judgment of mediocrity. 例 contributes conventions or established usage, not only an individual example. Together, they concern the conventions for using or interpreting the material. The on-readings are ハン + レイ: はんれい. This association helps remember the word; it is not a historical derivation."), "legend-reverse")
++            inline(await(articleBullet("凡 contributes a general or overall scope here, not a judgment of mediocrity. 例 contributes conventions or established usage, not only an individual example. Together, they concern the conventions for using or interpreting the material. The on-readings are ハン + レイ: はんれい. This association helps remember the word; it is not a historical derivation.")), "凡", 0)
+             await("Article contents")
+             section("Readings")
+-            show(readingExample("ギョウ"), "solidify-kanji-backlink")
+-            back()
+-            await(articleBullet("凝 contributes congealing and 固 firmness or hardening. Their related meanings reinforce the solidifying idea. Read ギョウ + コ; learn the established scientific uses as whole-word meanings.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("solidify-system-back-to-word")
+-            back()
+-            await(articleBullet("凝固 ぎょうこ — coagulation; solidification")).assertIsDisplayed()
+-            section("Common words")
+-            capture("solidify-system-back-to-kanji")
+-            section("Common words")
+-            show(articleBullet("凝る こる — become stiff; get absorbed in"), "absorbed-forward")
+-            inline(await(articleBullet("凝る こる — become stiff; get absorbed in")), "凝る", 0)
+-            await("Article contents")
+-            await("凝る (こる) — become stiff; get absorbed")
+-            section("Meaning")
+-            show(articleBullet("凝る has three useful branches: muscles becoming stiff, becoming absorbed in an activity, and putting elaborate care into details."), "absorbed-02")
+-            show(articleBullet("肩が凝る。（かたがこる。）— My shoulders get stiff."), "absorbed-03")
+-            show(articleBullet("ゴルフに凝っています。（ゴルフにこっています。）— I'm really into golf."), "absorbed-04")
+-            show(articleBullet("凝った衣装（こったいしょう）— an elaborate outfit"), "absorbed-05")
+-            show(articleBullet("In the first pattern, the stiff body part takes が. In the hobby pattern, the activity takes に. This is an intransitive godan verb despite ending in る: 凝ります（こります）, 凝って（こって）, 凝らない（こらない）. 凝った is its た-form; before a noun it can mean \"elaborate.\" Do not add な as if 凝った were a na-adjective."), "absorbed-06")
+-            section("How the kanji combine")
+-            show(articleBullet("凝 writes こ in this native verb; る is the written ending. Its stiffness and absorption associations help connect the uses, but one English gloss does not predict every construction."), "absorbed-08")
+-            section("Synonyms and antonyms")
+-            show(articleBullet("熱中（ねっちゅう）and 夢中（むちゅう）overlap in absorption. 集中（しゅうちゅう）focuses on concentration and need not imply enthusiasm for a hobby."), "absorbed-10")
+-            show(articleBullet("凝らす（こらす）is transitive in expressions such as 工夫を凝らす（くふうをこらす）, \"exercise one's ingenuity.\" Do not simply replace the に in ゴルフに凝る with を."), "absorbed-11")
+-            section("Distinctive meaning")
+-            show(articleBullet("凝る is not the general adjective \"hard\": 硬い（かたい）describes hardness or stiffness. Nor must getting absorbed in a hobby be a problem. The elaborate-detail use can praise care and craftsmanship."), "absorbed-13")
+-            show(articleBullet("This article's primary reading is こる. Dictionaries separately record 凝る こごる, \"congeal; jell,\" usually written in kana, and しこる, \"stiffen; harden.\" Do not read the shoulder and golf examples as こごる or しこる. Daijisen also records gathering or cold-induced solidification under こる; the three practical branches above are not an exhaustive definition."), "absorbed-14")
+-            show(articleBullet("Dictionary: JMdict, entries 1239070, 1238990, 1239060, 1594250 and 1636550. Usage and example constructions: Digital Daijisen: 凝る."), "absorbed-15")
+-            section("How the kanji combine")
+-            show(articleBullet("凝 writes こ in this native verb; る is the written ending. Its stiffness and absorption associations help connect the uses, but one English gloss does not predict every construction."), "absorbed-reverse")
+-            inline(await(articleBullet("凝 writes こ in this native verb; る is the written ending. Its stiffness and absorption associations help connect the uses, but one English gloss does not predict every construction.")), "凝", 0)
++            show(readingExample("ボン"), "legend-kanji-backlink")
++            back()
++            await(articleBullet("凡 contributes a general or overall scope here, not a judgment of mediocrity. 例 contributes conventions or established usage, not only an individual example. Together, they concern the conventions for using or interpreting the material. The on-readings are ハン + レイ: はんれい. This association helps remember the word; it is not a historical derivation.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("legend-system-back-to-word")
++            back()
++            await(articleBullet("凡例 はんれい — explanatory notes; legend")).assertIsDisplayed()
++            section("Common words")
++            capture("legend-system-back-to-kanji")
++            section("Common words")
++            show(articleBullet("For recognition, 凡そ corresponds to usually-kana およそ. The rare spelling 凡て corresponds to 全て すべて; the pronunciation and the ordinary kana word are not thereby rare."), "approximate-forward")
++            inline(await(articleBullet("For recognition, 凡そ corresponds to usually-kana およそ. The rare spelling 凡て corresponds to 全て すべて; the pronunciation and the ordinary kana word are not thereby rare.")), "およそ", 48)
++            await("Article contents")
++            await("およそ - approximately; generally")
++            section("How the kanji combine")
++            show(articleBullet("The word is usually written in kana. 凡そ is a recognized kanji spelling, but the practical unit to learn is the whole adverb およそ. It is not a loanword or a phrase requiring an extra particle before the number."), "approximate-reverse")
++            inline(await(articleBullet("The word is usually written in kana. 凡そ is a recognized kanji spelling, but the practical unit to learn is the whole adverb およそ. It is not a loanword or a phrase requiring an extra particle before the number.")), "凡", 37)
+             await("Article contents")
+             section("Readings")
+-            show(readingExample("ギョウ"), "absorbed-kanji-backlink")
+-            back()
+-            await(articleBullet("凝 writes こ in this native verb; る is the written ending. Its stiffness and absorption associations help connect the uses, but one English gloss does not predict every construction.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("absorbed-system-back-to-word")
+-            back()
+-            await(articleBullet("凝る こる — become stiff; get absorbed in")).assertIsDisplayed()
+-            section("Common words")
+-            capture("absorbed-system-back-to-kanji")
+-            section("Common words")
+-            show(articleBullet("凝らす こらす — concentrate; apply effort"), "effort-forward")
+-            inline(await(articleBullet("凝らす こらす — concentrate; apply effort")), "凝らす", 0)
+-            await("Article contents")
+-            await("凝らす (こらす) — concentrate; apply effort")
+-            section("Meaning")
+-            show(articleBullet("凝らす directs concentrated attention or effort. Learn it with established objects marked by を, rather than using it for every English \"focus.\""), "effort-02")
+-            show(articleBullet("目を凝らして見ました。（めをこらしてみました。）— I looked closely, straining my eyes."), "effort-03")
+-            show(articleBullet("工夫を凝らしました。（くふうをこらしました。）— I exercised my ingenuity."), "effort-04")
+-            show(articleBullet("目を凝らす（めをこらす）concerns looking intently. 工夫を凝らす （くふうをこらす）concerns inventive effort, not staring at an idea. The verb is transitive and godan: 凝らします（こらします）, 凝らして（こらして）, 凝らさない（こらさない）."), "effort-05")
+-            section("How the kanji combine")
+-            show(articleBullet("凝 writes こ here, with らす as the written ending. This is one native verb, not a compound of separate words for \"concentration\" and \"doing.\""), "effort-07")
+-            section("Synonyms and antonyms")
+-            show(articleBullet("集中（しゅうちゅう）overlaps in focusing attention. 注ぐ（そそぐ）can describe devoting energy or attention. Their objects and particles must still fit the particular expression."), "effort-09")
+-            show(articleBullet("凝る（こる）instead describes stiffness, absorption, or elaborate care: compare ゴルフに凝る, \"be really into golf,\" with 工夫を凝らす, \"exercise one's ingenuity.\" The latter takes 工夫 as its object."), "effort-10")
+-            section("Distinctive meaning")
+-            show(articleBullet("The object affects the translation. 息を凝らす（いきをこらす）means \"hold one's breath,\" not \"stare at one's breath.\""), "effort-12")
+-            show(articleBullet("The same spelling has a separately recorded reading こごらす, including \"cause to congeal; freeze.\" This article teaches こらす. 凝らせる can be the potential form こらせる of this godan verb; the dictionary verb 凝らせる こごらせる, \"cause to congeal,\" is a different reading. The homophone 懲らす（こらす）means \"punish; chastise,\" not concentrate."), "effort-13")
+-            show(articleBullet("Dictionary: JMdict, entries 1239010, 1239000, 1239020, 1309500, 2572530, 2835904 and 1428180. Usage: Digital Daijisen: 凝らす."), "effort-14")
+-            section("How the kanji combine")
+-            show(articleBullet("凝 writes こ here, with らす as the written ending. This is one native verb, not a compound of separate words for \"concentration\" and \"doing.\""), "effort-reverse")
+-            inline(await(articleBullet("凝 writes こ here, with らす as the written ending. This is one native verb, not a compound of separate words for \"concentration\" and \"doing.\"")), "凝", 0)
++            show(readingExample("ボン"), "approximate-kanji-backlink")
++            back()
++            await(articleBullet("The word is usually written in kana. 凡そ is a recognized kanji spelling, but the practical unit to learn is the whole adverb およそ. It is not a loanword or a phrase requiring an extra particle before the number.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("approximate-system-back-to-word")
++            back()
++            await(articleBullet("For recognition, 凡そ corresponds to usually-kana およそ. The rare spelling 凡て corresponds to 全て すべて; the pronunciation and the ordinary kana word are not thereby rare.")).assertIsDisplayed()
++            section("Common words")
++            capture("approximate-system-back-to-kanji")
++            section("Common words")
++            show(articleBullet("For recognition, 凡そ corresponds to usually-kana およそ. The rare spelling 凡て corresponds to 全て すべて; the pronunciation and the ordinary kana word are not thereby rare."), "everything-forward")
++            inline(await(articleBullet("For recognition, 凡そ corresponds to usually-kana およそ. The rare spelling 凡て corresponds to 全て すべて; the pronunciation and the ordinary kana word are not thereby rare.")), "全て", 89)
++            await("Article contents")
++            await("全て (すべて) - everything; all")
++            section("How the kanji combine")
++            show(articleBullet("全 contributes wholeness or entirety. It writes the native word すべて with て as okurigana. JMdict marks the word as usually written in kana, so すべて is an important spelling to recognize too."), "everything-component")
++            inline(await(articleBullet("全 contributes wholeness or entirety. It writes the native word すべて with て as okurigana. JMdict marks the word as usually written in kana, so すべて is an important spelling to recognize too.")), "全", 0)
++            await("Article contents")
++            await("全 — whole; complete")
++            section("Common words")
++            show(articleBullet("全て すべて — everything; usually すべて"), "everything-changed-reused")
++            inline(await(articleBullet("全て すべて — everything; usually すべて")), "全て", 0)
++            await("Article contents")
++            await("全て (すべて) - everything; all")
++            back()
++            await(articleBullet("全て すべて — everything; usually すべて")).assertIsDisplayed()
++            section("Common words")
++            capture("everything-back-to-reused-kanji")
++            back()
++            await(articleBullet("全 contributes wholeness or entirety. It writes the native word すべて with て as okurigana. JMdict marks the word as usually written in kana, so すべて is an important spelling to recognize too.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("everything-back-to-word")
++            section("How the kanji combine")
++            show(articleBullet("JMdict also records 凡て (すべて) as a rare kanji spelling. That spelling qualification does not make the pronunciation すべて rare."), "everything-reverse")
++            inline(await(articleBullet("JMdict also records 凡て (すべて) as a rare kanji spelling. That spelling qualification does not make the pronunciation すべて rare.")), "凡", 20)
+             await("Article contents")
+             section("Readings")
+-            show(readingExample("ギョウ"), "effort-kanji-backlink")
+-            back()
+-            await(articleBullet("凝 writes こ here, with らす as the written ending. This is one native verb, not a compound of separate words for \"concentration\" and \"doing.\"")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("effort-system-back-to-word")
+-            back()
+-            await(articleBullet("凝らす こらす — concentrate; apply effort")).assertIsDisplayed()
+-            section("Common words")
+-            capture("effort-system-back-to-kanji")
++            show(readingExample("ボン"), "everything-kanji-backlink")
++            back()
++            await(articleBullet("JMdict also records 凡て (すべて) as a rare kanji spelling. That spelling qualification does not make the pronunciation すべて rare.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("everything-system-back-to-word")
++            back()
++            await(articleBullet("For recognition, 凡そ corresponds to usually-kana およそ. The rare spelling 凡て corresponds to 全て すべて; the pronunciation and the ordinary kana word are not thereby rare.")).assertIsDisplayed()
++            section("Common words")
++            capture("everything-system-back-to-kanji")
+             back()
+             await("Search kanji, meaning or reading")
+@@ -434,20 +469,23 @@
+             await("Meaning quiz")
+             evidence.put("reciprocalLinkAndSystemBack", true)
+-                .put("mappedReciprocalPairs", 4).put("directedLinkTransitions", 8)
+-                .put("completeArticleProjections", 4).put("changedReusedBullets", 1)
++                .put("mappedReciprocalPairs", 7).put("directedLinkTransitions", 14)
++                .put("completeArticleProjections", 2).put("changedReusedArticles", 6)
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Meaning quiz"))))
+             rule.waitUntil(30_000) { (model("quiz:") as? QuizViewModel)?.ui is QuizUi.Question }
+             val quiz = model("quiz:") as QuizViewModel
+             val meaning = quiz.ui as QuizUi.Question
+-            assertEquals("凝", meaning.card.kanji)
++            assertEquals("凡", meaning.card.kanji)
+             val expectedMeanings = mapOf(
+-                "凝" to "congeal; become absorbed",
+-                "准" to "quasi-; associate rank",
+-                "冗" to "superfluous; redundant",
++                "凡" to "commonplace; mediocre",
++                "丸" to "round; circle",
++                "九" to "nine",
+                 "凹" to "concave; sunken",
+             )
+             assertEquals(4, meaning.options.size)
+-            assertEquals(expectedMeanings, meaning.options.associate { it.kanji to it.title })
+-            assertEquals(listOf("准", "冗", "凹"), meaning.card.distractors.splitSep())
++            assertTrue(meaning.options.all { option -> n1.any { it.kanji == option.kanji && it.title == option.title } })
++            assertTrue(meaning.options.any { it.kanji == "凹" })
++            assertEquals(2, meaning.options.count { it.kanji !in expectedMeanings })
++            assertEquals("commonplace; mediocre", meaning.options.single { it.kanji == "凡" }.title)
++            assertEquals(listOf("丸", "九", "凹"), meaning.card.distractors.splitSep())
+             for (option in meaning.options) await(option.title).assertIsDisplayed()
+             evidence.put("exactDefaultMeaningOptions", JSONArray().also { options ->
+@@ -455,36 +493,39 @@
+                     options.put(JSONObject().put("kanji", option.kanji).put("title", option.title))
+                 }
+-            }).put("exactCuratedChoicesWithoutFallback", true)
++            }).put("actualN1CuratedAvailable", 1).put("actualN1FallbackOptions", 2)
++                .put("meaningChoiceVisualAdjudicationRequired", true)
+             capture("meaning-question")
+-            click("congeal; become absorbed")
++            click("commonplace; mediocre")
+             await("Correct!")
+-            assertEquals("凝", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("凡", (quiz.ui as QuizUi.Answer).card.kanji)
+             capture("meaning-feedback")
+             back()
+             await("Meaning quiz")
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Readings (on'yomi and kun'yomi)"))))
+-            val answeredKinds = mutableSetOf<ReadingKind>()
++            val answeredKeys = mutableSetOf<String>()
+             repeat(2) {
+                 rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Question }
+                 val reading = model("kreading:") as KanjiReadingViewModel
+                 val question = reading.ui as ReadingUi.Question
+-                assertEquals("凝", question.card.kanji)
+-                assertTrue("Duplicate target reading kind", answeredKinds.add(question.question.kind))
+-                val key = if (question.question.kind == ReadingKind.On) "ぎょう" else "こる"
++                assertEquals("凡", question.card.kanji)
++                assertEquals(ReadingKind.On, question.question.kind)
++                val key = question.question.correctKey
++                assertTrue(key in setOf("ぼん", "はん"))
++                assertTrue("Duplicate target reading key", answeredKeys.add(key))
+                 assertEquals(key, question.question.correctKey)
+                 assertFalse(question.question.options.any { it.key.isBlank() })
+                 assertEquals(1, question.question.options.count { it.key == key })
+-                capture("curated-${question.question.kind}-question")
++                capture("curated-${key}-question")
+                 click(question.question.options.single { it.key == key }.label)
+                 await(if (question.question.kind == ReadingKind.On) "Correct! — on'yomi" else "Correct! — kun'yomi")
+                 assertTrue((reading.ui as ReadingUi.Answer).correct)
+-                capture("curated-${question.question.kind}-feedback")
++                capture("curated-${key}-feedback")
+                 click("Next")
+                 rule.waitUntil(30_000) { runBlocking {
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "凝" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "凡" &&
+                         log.mode == question.question.kind.mode.name && log.reading == key && log.grade == 3 }
+                 } }
+             }
+-            assertEquals(setOf(ReadingKind.On, ReadingKind.Kun), answeredKinds)
++            assertEquals(setOf("ぼん", "はん"), answeredKeys)
+             rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Done }
+             val done = (model("kreading:") as KanjiReadingViewModel).ui as ReadingUi.Done
+@@ -492,23 +533,24 @@
+             assertEquals(2, done.correct)
+             val readingLogs = runBlocking {
+-                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "凝" &&
++                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "凡" &&
+                     it.mode in setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name) }
+             }
+             assertEquals(2, readingLogs.size)
+-            assertEquals(setOf("ぎょう", "こる"), readingLogs.map { it.reading }.toSet())
+-            capture("curated-on-kun-done")
++            assertEquals(setOf("ぼん", "はん"), readingLogs.map { it.reading }.toSet())
++            assertTrue(readingLogs.all { it.mode == ReadingKind.On.mode.name })
++            capture("curated-two-on-no-kun-done")
+             back()
+             await("Meaning quiz")
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Drawing"))))
+             await("Trace the kanji for")
+-            await("congeal; become absorbed").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "凝") })
+-            assertEquals(listOf("准", "冗", "凹"), card.distractors.splitSep())
+-            assertEquals(listOf("ギョウ"), card.onyomi.splitSep())
+-            assertEquals(listOf("こ.る", "こ.らす", "こご.らす", "こご.らせる", "こご.る"), card.kunyomi.splitSep())
++            await("commonplace; mediocre").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "凡") })
++            assertEquals(listOf("丸", "九", "凹"), card.distractors.splitSep())
++            assertEquals(listOf("ボン", "ハン"), card.onyomi.splitSep())
++            assertEquals(listOf("およ.そ", "おうよ.そ", "すべ.て"), card.kunyomi.splitSep())
+             assertNotNull(card.quizOnyomi)
+             assertNotNull(card.quizKunyomi)
+-            assertEquals(listOf("ギョウ"), card.quizOnyomi?.splitSep())
+-            assertEquals(listOf("こ.る", "こ.らす"), card.quizKunyomi?.splitSep())
++            assertEquals(listOf("ボン", "ハン"), card.quizOnyomi?.splitSep())
++            assertEquals(emptyList<String>(), card.quizKunyomi?.splitSep())
+             evidence.put("fullProjectionOnyomi", JSONArray(card.onyomi.splitSep()))
+                 .put("fullProjectionKunyomi", JSONArray(card.kunyomi.splitSep()))
+@@ -516,5 +558,5 @@
+                 .put("fullProjectionQuizKunyomi", JSONArray(requireNotNull(card.quizKunyomi).splitSep()))
+             val strokes = JSONObject(requireNotNull(card.strokesJson)).getJSONArray("strokes")
+-            assertEquals(16, strokes.length())
++            assertEquals(3, strokes.length())
+             capture("drawing-trace")
+             val pad = rule.onNode(hasContentDescription("Drawing area for the kanji", substring = true))
+@@ -533,10 +575,10 @@
+                 }
+             }
+-            rule.onNode(hasContentDescription("16 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("3 strokes drawn", substring = true)).assertExists()
+             click("Check")
+             await("Practice only: this attempt is not graded.")
+             assertFalse(runBlocking {
+                 app.db.reviews().allLog().any { it.sourceId == source.id &&
+-                    it.kanji == "凝" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "凡" && it.mode == StudyMode.Draw.name }
+             })
+             await("Correct strokes").performScrollTo().assertIsDisplayed()
+@@ -549,5 +591,5 @@
+             click("Next")
+             rule.waitUntil(30_000) { runBlocking {
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "凝" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "凡" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+             } }
+             back()
+@@ -557,11 +599,11 @@
+             assertEquals(1, archiveRequests)
+             evidence.put("meaningQuestionAndFeedback", true)
+-                .put("bothCuratedKindsPersistedGoodAndDone", true)
++                .put("bothCuratedOnKeysPersistedGoodAndDone", true)
+                 .put("touchInjectedReferenceStrokes", strokes.length())
+                 .put("drawingTraceThenRecall", true).put("drawingGradeRecordedOnNext", true)
+                 .put("offline", true).put("passed", true)
+         } finally {
+-            File(app.getExternalFilesDir(null), "n1-085-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-085-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-086-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-086-article-tree.txt").writeText(rule.onRoot().printToString())
+             scenario.close()
+         }
+@@ -656,5 +698,5 @@
+         rule.waitForIdle()
+         val bitmap = requireNotNull(automation.takeScreenshot())
+-        File(app.getExternalFilesDir(null), "n1-085-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-086-$step.png").outputStream().use {
+             assertTrue(bitmap.compress(Bitmap.CompressFormat.PNG, 100, it))
+         }
