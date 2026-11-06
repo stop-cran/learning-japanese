@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "execution": 599,
+  "batch": "085",
+  "status": "published-verified-bounded-owner-testing",
+  "startingState": {
+    "execution": 599,
+    "batch": "085",
+    "startedAt": "2026-11-06T21:22:27.850535+00:00",
+    "startingHead": "10973c302b99840138fc1ec6e2e098d3aad3bac6",
+    "androidHead": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+    "freshOriginMain": "97a16b0027b05c0528d78971dd3b17cce17d8056",
+    "scope": "SAME085 normal signed owner fast-forward publication, exact public CI/ZIP, durable ledgers and checkpoint. No086; no new native/reviewer/HOST absent change.",
+    "request": {
+      "sha256": "fa4914459084debc03dd0c718d3247fed0f64e4f0359e6023f9b1a6043c6b69a",
+      "bytes": 2963483,
+      "characters": 2942571,
+      "lines": 38879,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request loaded and checkpoint decoded; operative contract, entire approved issue and final598 inspected directly. Historical middle parsed, not freshly semantically re-reviewed. Initial summary print hit cp1252; bounded direct UTF-8 reads followed."
+    },
+    "runnerLockRole": "Live parent19008 verified in ancestry/session; no child opens/acquires/deletes/unlocks runner.lock.",
+    "artifactPathPreflight": "Approved workspace inputs/control helpers and committed source/review evidence only; no optional historical-session artifact accessed.",
+    "ancestryPids": [
+      6776,
+      16548,
+      18992,
+      11760,
+      19008,
+      30364,
+      31588,
+      28600
+    ],
+    "actualNewPermissionDenials": []
+  },
+  "publicationRecord": "batch-085-publication.json",
+  "acceptedCommit": "10973c302b99840138fc1ec6e2e098d3aad3bac6",
+  "counts": {
+    "batchPublishedAdditions": 1,
+    "projectPublishedAdditions": 112,
+    "remainingAdditions": 1116,
+    "currentKanji": 1108,
+    "currentWords": 5063,
+    "n1Labelled": 117,
+    "namedSourceMembersPresent": 122,
+    "separateExceptionPreserved": "\u5996",
+    "batchNewNecessarySupportWords": 3,
+    "projectNewNecessarySupportWords": 114,
+    "batchChangedReusedArticles": 1,
+    "allMappedReciprocalPairs": 4,
+    "mappedDirectedLinks": 8,
+    "activatedBaselinePairs": 0,
+    "separateEarlierLevelSourceMembers": [
+      "\u4fdd",
+      "\u6848",
+      "\u6d3e",
+      "\u7b2c",
+      "\u7b56",
+      "\u7d50"
+    ],
+    "earlierPlacementsCountedAsIssue60AcceptedBatches": false
+  },
+  "ci": {
+    "conclusion": "success",
+    "databaseId": 42296301401,
+    "headSha": "10973c302b99840138fc1ec6e2e098d3aad3bac6",
+    "jobs": [
+      {
+        "completedAt": "2026-11-06T21:24:51Z",
+        "conclusion": "success",
+        "databaseId": 128162317760,
+        "name": "validate",
+        "startedAt": "2026-11-06T21:23:20Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-11-06T21:23:22Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-11-06T21:23:21Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T21:24:12Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-11-06T21:23:22Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T21:24:12Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "startedAt": "2026-11-06T21:24:12Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T21:24:16Z",
+            "conclusion": "success",
+            "name": "Run pip install pyyaml pillow requests fonttools",
+            "number": 4,
+            "startedAt": "2026-11-06T21:24:12Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T21:24:30Z",
+            "conclusion": "success",
+            "name": "Run python -m unittest discover -s tools -p \"test_*.py\"",
+            "number": 5,
+            "startedAt": "2026-11-06T21:24:16Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T21:24:45Z",
+            "conclusion": "success",
+            "name": "Run python tools/validate.py",
+            "number": 6,
+            "startedAt": "2026-11-06T21:24:30Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T21:24:47Z",
+            "conclusion": "success",
+            "name": "Run python tools/check_content_budget.py",
+            "number": 7,
+            "startedAt": "2026-11-06T21:24:45Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T21:24:48Z",
+            "conclusion": "success",
+            "name": "Run python tools/grammar_vocabulary.py check",
+            "number": 8,
+            "startedAt": "2026-11-06T21:24:47Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T21:24:49Z",
+            "conclusion": "success",
+            "name": "Run python tools/build_manifest.py",
+            "number": 9,
+            "startedAt": "2026-11-06T21:24:48Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T21:24:49Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 17,
+            "startedAt": "2026-11-06T21:24:49Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T21:24:49Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 18,
+            "startedAt": "2026-11-06T21:24:49Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T21:24:49Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 19,
+            "startedAt": "2026-11-06T21:24:49Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/stop-cran/learning-japanese/actions/runs/42296301401/job/128162317760"
+      }
+    ],
+    "status": "completed",
+    "workflowName": "Validate content"
+  },
+  "immutablePublicArchive": {
+    "commit": "10973c302b99840138fc1ec6e2e098d3aad3bac6",
+    "url": "https://api.github.com/repos/stop-cran/learning-japanese/zipball/10973c302b99840138fc1ec6e2e098d3aad3bac6",
+    "sha256": "6f2a1e17b42a9fa03b48faeaf56d4a917cf4db36c01389a6c0d474b3b0becbf7",
+    "manifestEqual": true,
+    "contentVersion": "0c514711ae8d3212",
+    "verifiedRuntimeHashes": 8413,
+    "zipEntries": 8435,
+    "compressedBytes": 30806485,
+    "inflatedBytes": 44542010,
+    "retainedBytes": 44273672,
+    "listeningTaskMediaBytes": 5893602,
+    "allPublishingBudgetsPassed": true,
+    "contributorEvidenceExcluded": true,
+    "perFileLimitsAndSafePathsPassed": true
+  },
+  "inheritedAcceptanceRecord": "execution-598.json",
+  "runtimeBytesUnchanged": true,
+  "runtimePublished": true,
+  "parentLockTouched": false,
+  "optionalHistoricalSessionHelpersAccessed": false,
+  "actualNewPermissionDenials": [],
+  "newReviewNativeHostRuns": 0,
+  "limits": [
+    "Dependent ORIGINAL-session confirmations, not new blind initial reviews or reviewer-run native tests. Original593 initial reports and exact effort-guard confirmations remain verbatim; original source/lookup/read-depth/family/denial/process limitations and optional dispositions retained.",
+    "Same complete source/provenance packet plus15 full-frame sheets representing87 originals and8 focused original-path PNGs per family, one resource per child turn,50 terminal child exits total. No parallel reviewer or nested tools. Actual model, returned resource payload and dimensions audited, not comprehension certification.",
+    "Contact sheets1800x2720 returned1324x2000; original-path PNGs1080x2400 returned900x2000. Not87 full-resolution original reads. Fine kana, link underlines, Brush strokes and overlapping drawing numbers have limited detail. Claude explicitly reports a resumed context summary; compaction event types retained in process audit, not equal retained-context certification.",
+    "39 scoped Han across four production families and three whole words readable in observed panels, including \u51ab/\u96b9 and \u51dd/\u7591/\u51c6/\u5197/\u51f9/\u51cd/\u56fa/\u786c. Appearance/style and hasGlyph/cmap/raster evidence do not identify fallback faces or certify other devices. Historical all40 fallback inspection inherited, not repeated.",
+    "Article scroll-state pixels collectively show reviewed explanations and examples. Signposted horizontal tables shift target cells; all columns are not visible simultaneously. Ordinary viewport edges are not demonstrated content loss. Only the added \u56fa bullet is freshly reviewed; no whole-baseline rewrite or new exhaustive heading/scale certification.",
+    "Q1 direct effort exclusion remains resolved textually/configurationally; no live \u51dd\u3089\u3059/\u52aa\u529b pair execution appears in these captures.32 direct guards are not transitive cliques or universal corpus safety. Exact default four kanji choices N1/All builder and N1 UI covered; All UI/custom/padded/partial/larger/random pools remain uncertified.",
+    "Full six metadata readings/order retained; selected\u30ae\u30e7\u30a6/\u3053.\u308b/\u3053.\u3089\u3059 yields only scheduled\u304e\u3087\u3046/\u3053\u308b. Both kinds offered/persistedGood/done in supplied native evidence; selected\u3053.\u3089\u3059 shares normalized\u3053\u308b, not independent queued mastery.",
+    "Two named native596 cases terminal0/no skips, full production ContentSync ONCE1108kanji5063words117N1/zeroProblems/version0c514711ae8d3212/acceptedRoomparserEpoch1, four reciprocal pairs/eight directions/SystemBack/offline and persistence are supplied execution evidence, not established by still pixels alone.",
+    "Fresh594 HOST4 zero-skips and compiled595/native596 inherited without repetition. Qualified TESTONLY Android1c1b7bf4 atop unchanged productionf9b59a2 is not latest app main. No fresh native/HOST run or app/guest heap/guard change in597.",
+    "16 reference-INJECTED touch strokes, trace/reference feedback, recall give-up/reveal and supplied grade persistence are not human handwriting, successful recall, every stroke direction or MLKit/model-download/physical-phone evidence. Offline handwriting model unavailable is shown honestly.",
+    "Claude's thumbnail spacing hypothesis is unverified cosmetic optional; its effort-13 no-gap observation was expressly corrected because that frame lacks the sentence. No consequential scoped learning defect established. Original polish remains optional; shared practice/shape-grading wording does not authorize unrelated app edits.",
+    "Coordinator separately verifies manifest freshness and every8413 runtime hash; neither reviewer independently authenticates Git/source/hash/manifest or upstream retrieval. No native-speaker, corpus, measured-learning-effectiveness, equal fresh-read-depth or model-ranking claim.",
+    "Latest-main normal integration, substantive changed-teaching review, combined checks, normal signed owner fast-forward push, exact remote/terminal CI/every immutable public ZIP runtime hash and original archive/media/path budgets remain mandatory. Physical-phone/general-release/whole-set outstanding; published111/1228 and1117remaining unchanged;085notdelivered/no086.",
+    "Parent19008 owns runner.lock throughout child lifetime; no child opens/acquires/deletes/unlocks it. Approved control/committed source packets only; no optional historical-session helper access, policy change, actual new permission denial or second runner."
+  ],
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false,
+  "terminalLocalValidation": [
+    {
+      "path": "docs/n1-reviews/batch-085-publication-599/validate-599.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "exitCode": 0
+    },
+    {
+      "path": "docs/n1-reviews/batch-085-publication-599/manifest-599.txt",
+      "sha256": "b586be2a84d4b6f75d1837c1b7e276f7deb16d8b3bd6151940db624ed2b6cf5a",
+      "exitCode": 0
+    },
+    {
+      "path": "docs/n1-reviews/batch-085-publication-599/budget-599.txt",
+      "sha256": "c3b4551c05d7fbd43516fdfd08d124af61b35b990f5bdceafe17cc88ea409b6b",
+      "exitCode": 0
+    }
+  ]
+}
