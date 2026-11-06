@@ -1,0 +1,342 @@
+--- docs\n1-reviews\batch-079-native\N1Batch079NativeTest.kt
++++ docs\n1-reviews\batch-080-native\N1Batch080NativeTest.kt
+@@ -50 +50 @@
+-private fun disposable079() {
++private fun disposable080() {
+@@ -55 +55 @@
+-class N1Batch079GlyphTest {
++class N1Batch080GlyphTest {
+@@ -58,2 +58,2 @@
+-    @Test fun crownLookalikesAndCoverRoofFallbacksAcrossFourProductionFamilies() {
+-        disposable079()
++    @Test fun clarityLookalikesAndIceWaterFallbacksAcrossFourProductionFamilies() {
++        disposable080()
+@@ -62 +62 @@
+-        val pages = listOf("一 世 住 元 冖 冗 冠 前 名 国 土 城 外 子 宀 守 完 寸 工 帽 技 最 栓 様", "流 玉 王 瓶 生 界 蓋 術 金 題 高", "冠 冗 完 守 冖 宀 元 寸 王 王冠 冠たる 世界 帽子 蓋 栓")
++        val pages = listOf("上 今 優 光 冫 冱 冴 冷 凍 器 字 寒 手 日 明 次 氵 汗 河 澄 牙 用 目 眠", "覚 輝 透 通 鋭 頭", "冴 次 汗 河 冫 氵 冱 牙 冴える 冱える 冴寒 頭 目 眠 冷 凍")
+@@ -67 +67 @@
+-                    Text("Batch 079: crown / look-alikes / cover and roof fallback")
++                    Text("Batch 080: clarity / look-alikes / ice and water fallback")
+@@ -73 +73 @@
+-                    Text("Inspect all 35 scoped Han; focused 冠/冗/完/守/元/寸, 冖 and 宀. Fallback families may coincide.", fontSize = 16.sp)
++                    Text("Inspect all 30 scoped Han; focused 冴/次/汗/河/牙, 冫/冱/氵. Fallback families may coincide.", fontSize = 16.sp)
+@@ -84 +84 @@
+-            for (char in listOf("一", "世", "住", "元", "冖", "冗", "冠", "前", "名", "国", "土", "城", "外", "子", "宀", "守", "完", "寸", "工", "帽", "技", "最", "栓", "様", "流", "玉", "王", "瓶", "生", "界", "蓋", "術", "金", "題", "高")) {
++            for (char in listOf("上", "今", "優", "光", "冫", "冱", "冴", "冷", "凍", "器", "字", "寒", "手", "日", "明", "次", "氵", "汗", "河", "澄", "牙", "用", "目", "眠", "覚", "輝", "透", "通", "鋭", "頭")) {
+@@ -105 +105 @@
+-            for (word in listOf("冠", "王冠")) {
++            for (word in listOf("冴える")) {
+@@ -132 +132 @@
+-        assertEquals(148, rows.length())
++        assertEquals(124, rows.length())
+@@ -138 +138 @@
+-            File(context.getExternalFilesDir(null), "n1-079-font-panel-${index + 1}.png").outputStream().use {
++            File(context.getExternalFilesDir(null), "n1-080-font-panel-${index + 1}.png").outputStream().use {
+@@ -142 +142 @@
+-        File(context.getExternalFilesDir(null), "n1-079-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-080-font-raster.json").writeText(JSONObject()
+@@ -145,2 +145,2 @@
+-            .put("individualGlyphProbes", 140).put("wholeWordRasterProbes", 8).put("panels", 3)
+-            .put("limits", "35 actual scoped Han including exact 冖/宀 fallback inspection, four production families, three bounded Compose panels and eight whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
++            .put("individualGlyphProbes", 120).put("wholeWordRasterProbes", 4).put("panels", 3)
++            .put("limits", "30 actual scoped Han including exact 冫/冱/氵 fallback inspection, four production families, three bounded Compose panels and four whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
+@@ -151 +151 @@
+-class N1Batch079ArticleTest {
++class N1Batch080ArticleTest {
+@@ -156,2 +156,2 @@
+-    @Test fun fullSingleImportOfflineCrownThreeReciprocalPairsBothReadingsDrawingAndSystemBack() {
+-        disposable079()
++    @Test fun fullSingleImportOfflineClarityOneReciprocalPairCuratedKunDrawingAndSystemBack() {
++        disposable080()
+@@ -160,2 +160,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-079-${UUID.randomUUID()}", "main")
+-        val head = "3fdc0bf952e299060b5a07ac372bb6d926595a4c"
++        val source = RepoSource("acceptance-fixture", "n1-080-${UUID.randomUUID()}", "main")
++        val head = "0d2c9aee6de9e4f430935b38e31228db4bd47908"
+@@ -169 +169 @@
+-                    instrumentation.context.assets.open("n1-batch-079-3fdc0bf9-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-080-0d2c9aee-envelope.zip")
+@@ -184,2 +184,2 @@
+-        assertEquals(1091, updated.kanji)
+-        assertEquals(5047, updated.words)
++        assertEquals(1092, updated.kanji)
++        assertEquals(5048, updated.words)
+@@ -188 +188 @@
+-        assertEquals("a01eb85b17601ac0", meta.contentVersion)
++        assertEquals("4572f7b1d0d95059", meta.contentVersion)
+@@ -196,10 +196,10 @@
+-        assertEquals(111, n1.size)
+-        val crown = n1.single { it.kanji == "冠" }
+-        assertEquals(listOf("カン"), crown.onyomi.splitSep())
+-        assertEquals(listOf("かんむり"), crown.kunyomi.splitSep())
+-        assertNotNull(crown.quizOnyomi)
+-        assertNotNull(crown.quizKunyomi)
+-        assertEquals(listOf("カン"), crown.quizOnyomi?.splitSep())
+-        assertEquals(listOf("かんむり"), crown.quizKunyomi?.splitSep())
+-        assertEquals(listOf("かん"), crown.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(listOf("かんむり"), crown.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(112, n1.size)
++        val clarity = n1.single { it.kanji == "冴" }
++        assertEquals(listOf("ゴ", "コ"), clarity.onyomi.splitSep())
++        assertEquals(listOf("さ.える", "こお.る", "ひ.える"), clarity.kunyomi.splitSep())
++        assertNotNull(clarity.quizOnyomi)
++        assertNotNull(clarity.quizKunyomi)
++        assertEquals(emptyList<String>(), clarity.quizOnyomi?.splitSep())
++        assertEquals(listOf("さ.える"), clarity.quizKunyomi?.splitSep())
++        assertEquals(emptyList<String>(), clarity.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(listOf("さえる"), clarity.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -219 +219 @@
+-                        if (card.kanji == "冠") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "冴") now - 60_000 else now + 30L * 86_400_000,
+@@ -225 +225 @@
+-                            if (card.kanji == "冠" && ((kind == ReadingKind.On && key == "かん") || (kind == ReadingKind.Kun && key == "かんむり"))) now - 60_000
++                            if (card.kanji == "冴" && kind == ReadingKind.Kun && key == "さえる") now - 60_000
+@@ -232 +232 @@
+-                    0, source.id, "jlpt-n1", "冠", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "冴", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -242,6 +242,6 @@
+-            .put("fullOnyomi", JSONArray(crown.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(crown.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(crown.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(crown.toReadingCard().quizKeys(ReadingKind.Kun)))
+-            .put("liteQuizOnyomi", JSONArray(requireNotNull(crown.quizOnyomi).splitSep()))
+-            .put("liteQuizKunyomi", JSONArray(requireNotNull(crown.quizKunyomi).splitSep()))
++            .put("fullOnyomi", JSONArray(clarity.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(clarity.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(clarity.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(clarity.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("liteQuizOnyomi", JSONArray(requireNotNull(clarity.quizOnyomi).splitSep()))
++            .put("liteQuizKunyomi", JSONArray(requireNotNull(clarity.quizKunyomi).splitSep()))
+@@ -250 +250 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 冠 meaning and both complete curated keys かん/かんむり due. Two historical good 冠 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 冴 meaning and sole curated kun key さえる due. Explicit empty on list. Two historical good 冴 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -257 +257 @@
+-            await("N1 · 111 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 112 cards").performScrollTo().assertIsDisplayed()
+@@ -260,4 +260,4 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("冠")
+-            click("crown; peerless")
+-            await("冠 — crown; peerless")
+-            show(articleBullet("Strokes: 9 · Key (radical): 冖 (the cover-like upper part, no. 14) · JLPT: N1 (community list)"), "kanji-01")
++            rule.onNode(hasSetTextAction()).performTextReplacement("冴")
++            click("clear; sharp-minded")
++            await("冴 — clear; sharp-minded")
++            show(articleBullet("Strokes: 7 · Key (radical): 冫 (the two left-hand strokes, no. 15) · JLPT: N1 (community list)"), "kanji-01")
+@@ -265,2 +265,2 @@
+-            show(articleBullet("冠 means a crown or ceremonial head covering, and can also express being foremost or peerless. 冠 (かんむり) names the headgear; 王冠 (おうかん) is a royal crown and also a crown-type bottle cap. Learn each complete word rather than translating every 冠 compound as a physical crown."), "kanji-03")
+-            show(articleBullet("Modern-shape mnemonic: imagine the cover-like 冖 as a crown over 元, with 寸 at the lower right to hold it in place. This is an invented memory aid, not a historical explanation or a verified phonetic analysis."), "kanji-04")
++            show(articleBullet("Learn 冴 through 冴える (さえる): to be clear-headed or alert, or vivid and clear in appearance or sound. The verb can also describe deft performance. An older sense concerns intense cold; coldness is not implied whenever someone is clear-headed."), "kanji-03")
++            show(articleBullet("Modern-shape mnemonic: imagine the cold 冫 beside the fang-like 牙 (きば) shape as a reminder of a crisp, keen mind. This is an invented memory aid, not a historical derivation or verified phonetic analysis."), "kanji-04")
+@@ -268,5 +268,12 @@
+-            show(articleBullet("Both complete source readings are selected for practice. The native noun かんむり and the compound reading カン have separate examples."), "kanji-06")
+-            show(readingExample("カン"), "kanji-10")
+-            show(readingExample("王冠 おうかん — royal crown; crown-type bottle cap"), "kanji-12")
+-            show(readingExample("かんむり"), "kanji-13")
+-            show(readingExample("冠 かんむり — crown; ceremonial cap"), "kanji-15")
++            show(articleBullet("All five source readings remain below in source order. Only さ.える is selected for reading practice; there are no selected on questions."), "kanji-06")
++            show(readingExample("ゴ"), "kanji-10")
++            show(readingExample("冴寒 (ごかん) — extreme cold; a dictionary-attested rare term, for recognition rather than practice"), "kanji-12")
++            show(readingExample("コ"), "kanji-13")
++            show(readingExample("source-only lookup information; no exact non-name word example established in the inspected families"), "kanji-15")
++            show(readingExample("さ.える"), "kanji-16")
++            show(readingExample("冴える さえる — be clear-headed; be vivid"), "kanji-18")
++            show(readingExample("こお.る"), "kanji-19")
++            show(readingExample("source-only lookup information; do not treat the ordinary spelling 凍る (こおる) as evidence for a word written with 冴"), "kanji-21")
++            show(readingExample("ひ.える"), "kanji-22")
++            show(readingExample("source-only lookup information; 冷える (ひえる) is a separate spelling and does not establish a 冴 example"), "kanji-24")
++            show(articleBullet("The source-only rows preserve character-dictionary information, not recommended spellings to invent in everyday writing. They do not claim that no example exists anywhere."), "kanji-25")
+@@ -274,2 +281,3 @@
+-            show(articleBullet("冠 かんむり — crown; ceremonial cap; also a top component of a kanji"), "kanji-17")
+-            show(articleBullet("王冠 おうかん — royal crown; crown-type bottle cap"), "kanji-18")
++            show(articleBullet("冴える さえる — be clear-headed; be vivid"), "kanji-27")
++            show(articleBullet("頭が冴える (あたまがさえる) — be clear-headed"), "kanji-28")
++            show(articleBullet("目が冴える (めがさえる) — be wide awake; be unable to sleep"), "kanji-29")
+@@ -277,3 +285,3 @@
+-            show(articleBullet("The \"peerless\" meaning belongs to the reading かん, not the native noun かんむり. Recognize the formal expression 世界に冠たる (せかいにかんたる), \"foremost in the world,\" used before a noun."), "kanji-20")
+-            show(articleBullet("In kanji terminology, かんむり names a top component: 宀 is called うかんむり. 冠 itself has 冖, without the upper dot of 宀 in 完 and 守. 冗 shares the cover-like top but has a much simpler lower part; 完 contains 元 below its roof, while 守 contains 寸. These are shape comparisons, not claims of a shared origin."), "kanji-21")
+-            show(articleBullet("Metadata: KANJIDIC2. Dictionary: JMdict, entries 1577620 and 1181450. Reading and meaning branches: Digital Daijisen: 冠."), "kanji-22")
++            show(articleBullet("目が冴える concerns wakefulness, not eyes visibly shining. 冴えない (さえない) can describe something lacklustre, disappointing or unappealing; it is not always a literal absence of visual clarity or a judgement about intelligence."), "kanji-31")
++            show(articleBullet("Compare the two left-hand marks with 次, whose right side is different. 汗 and 河 have three left-hand water dots, 氵, rather than 冫. The grade-9 source classification concerns name-use kanji, but 冴える is not a name-only word. Personal-name readings are outside this card's scope."), "kanji-32")
++            show(articleBullet("Metadata: KANJIDIC2. Word evidence: JMdict, entries 1297050, 1877830, 1911790, 2576510 and 2679180. Usage: Digital Daijisen: 冴える. Character reading: 字通: 冴."), "kanji-33")
+@@ -281,2 +289,2 @@
+-            show(articleBullet("冠 かんむり — crown; ceremonial cap; also a top component of a kanji"), "冠-forward-13")
+-            inline(await(articleBullet("冠 かんむり — crown; ceremonial cap; also a top component of a kanji")), "冠", 0)
++            show(articleBullet("冴える さえる — be clear-headed; be vivid"), "word-forward-21")
++            inline(await(articleBullet("冴える さえる — be clear-headed; be vivid")), "冴える", 0)
+@@ -284 +292 @@
+-            await("冠 (かんむり) - crown; ceremonial cap")
++            await("冴える (さえる) — be clear-headed; be vivid")
+@@ -286,3 +294,4 @@
+-            show(articleBullet("冠, read かんむり here, names a crown or diadem, and also traditional ceremonial headgear worn by courtiers or Shinto clergy. It does not mean every everyday hat."), "冠-02")
+-            show(articleBullet("王様は金の冠をかぶっていました。 (おうさまはきんのかんむりをかぶっていました。) - The king was wearing a gold crown."), "冠-03")
+-            show(articleBullet("In kanji terminology, かんむり is a component at the top of a character. For example, 宀 is called うかんむり; this use is not a physical item of clothing."), "冠-04")
++            show(articleBullet("冴える describes mental clarity or alertness, and a crisp, vivid quality in sights, colours or sounds. Learn the whole expression with its subject: 頭が冴える (あたまがさえる) means to be clear-headed; 目が冴える (めがさえる) means to be wide awake, often when you would rather sleep."), "word-02")
++            show(articleBullet("今日は頭が冴えています。 (きょうはあたまがさえています。) — I feel clear-headed today."), "word-03")
++            show(articleBullet("目が冴えて眠れません。 (めがさえてねむれません。) — I'm wide awake and can't sleep."), "word-04")
++            show(articleBullet("This is an intransitive ichidan verb: the subject takes が. Forms include 冴えます (さえます), 冴えた (さえた), 冴えて (さえて) and 冴えない (さえない). 冴えている can describe an existing alert state. The examples adapt dictionary examples to polite endings."), "word-05")
+@@ -290 +299,2 @@
+-            show(articleBullet("This is one kanji with the native reading かんむり. Learn the whole pronunciation rather than dividing it into separate sound values. The same written character also has other readings with different uses."), "冠-06")
++            show(articleBullet("冴 supplies the clarity meaning in this single-kanji native verb. In the written form 冴える, 冴 represents さ and the following える completes さえる. The conjugation stem is さえ, including the written え. It is not a compound assembled from on readings."), "word-07")
++            show(articleBullet("JMdict also records 冱える (さえる) as a rarely used kanji spelling. That spelling flag does not make the pronunciation さえる rare."), "word-08")
+@@ -292 +302,2 @@
+-            show(articleBullet("帽子 (ぼうし) is the broader everyday hat or cap word. 冠 can also refer to a name or title attached to a program or event, including named sponsorship; 名前 (なまえ) is not restricted to that use."), "冠-08")
++            show(articleBullet("覚める (さめる) focuses on waking or regaining awareness: 目が覚める (めがさめる) means \"wake up,\" whereas 目が冴える describes wakefulness. 澄む (すむ) and 透き通る (すきとおる) overlap for clear sound, but physical transparency is not a universal meaning of 冴える."), "word-10")
++            show(articleBullet("For an opposite evaluation, 冴えない can mean \"lacklustre\" or \"unsatisfactory,\" depending on what is being described; it is not a single antonym for every sense."), "word-11")
+@@ -294,2 +305,3 @@
+-            show(articleBullet("The source list's English \"first; best\" belongs to the separate reading かん, not かんむり. Recognize 冠たる (かんたる), \"foremost; peerless,\" as in 世界に冠たる技術 (せかいにかんたるぎじゅつ), \"world-leading technology.\" This is supplementary reading-specific teaching, not a new meaning pronounced かんむり."), "冠-10")
+-            show(articleBullet("Dictionary: JMdict, entry 1577620, senses 1-3 and 6; supplementary sense 5 is restricted to かん. Usage: Digital Daijisen, 冠, separate かん and かんむり entries."), "冠-11")
++            show(articleBullet("冴える can describe deft technique or a well-executed performance, not only mental alertness. It does not generally mean a permanent high intelligence score, nor does 目が冴える mean eyes lighting up with happiness."), "word-13")
++            show(articleBullet("The negative 冴えない often concerns a disappointing result, an unappealing appearance or a subdued condition rather than literal blur. An older, somewhat old-fashioned sense of 冴える is \"become intensely cold.\" For ordinary cooling, learn 冷える (ひえる); for freezing, 凍る (こおる). Those verbs are not alternative pronunciations of the 冴える taught here."), "word-14")
++            show(articleBullet("Dictionary: JMdict, entries 1297050, 1911790, 2576510 and 2679180. Usage and example bases: Digital Daijisen: 冴える, especially sense 5; clarity, performance and negative uses in senses 2–7."), "word-15")
+@@ -297,2 +309,2 @@
+-            show(articleBullet("This is one kanji with the native reading かんむり. Learn the whole pronunciation rather than dividing it into separate sound values. The same written character also has other readings with different uses."), "冠-reverse-21")
+-            inline(await(articleBullet("This is one kanji with the native reading かんむり. Learn the whole pronunciation rather than dividing it into separate sound values. The same written character also has other readings with different uses.")), "kanji", 12)
++            show(articleBullet("冴 supplies the clarity meaning in this single-kanji native verb. In the written form 冴える, 冴 represents さ and the following える completes さえる. The conjugation stem is さえ, including the written え. It is not a compound assembled from on readings."), "word-reverse-33")
++            inline(await(articleBullet("冴 supplies the clarity meaning in this single-kanji native verb. In the written form 冴える, 冴 represents さ and the following える completes さえる. The conjugation stem is さえ, including the written え. It is not a compound assembled from on readings.")), "冴", 0)
+@@ -301,3 +313,3 @@
+-            show(readingExample("かんむり"), "冠-kanji-backlink")
+-            back()
+-            await(articleBullet("This is one kanji with the native reading かんむり. Learn the whole pronunciation rather than dividing it into separate sound values. The same written character also has other readings with different uses.")).assertIsDisplayed()
++            show(readingExample("さ.える"), "kanji-backlink")
++            back()
++            await(articleBullet("冴 supplies the clarity meaning in this single-kanji native verb. In the written form 冴える, 冴 represents さ and the following える completes さえる. The conjugation stem is さえ, including the written え. It is not a compound assembled from on readings.")).assertIsDisplayed()
+@@ -305,3 +317,3 @@
+-            capture("冠-system-back-to-word")
+-            back()
+-            await(articleBullet("冠 かんむり — crown; ceremonial cap; also a top component of a kanji")).assertIsDisplayed()
++            capture("system-back-to-word")
++            back()
++            await(articleBullet("冴える さえる — be clear-headed; be vivid")).assertIsDisplayed()
+@@ -309,51 +321 @@
+-            capture("冠-system-back-to-kanji")
+-            section("Common words")
+-            show(articleBullet("王冠 おうかん — royal crown; crown-type bottle cap"), "王冠-forward-22")
+-            inline(await(articleBullet("王冠 おうかん — royal crown; crown-type bottle cap")), "王冠", 0)
+-            await("Article contents")
+-            await("王冠 (おうかん) — royal crown; bottle cap")
+-            section("Meaning")
+-            show(articleBullet("王冠 is a royal crown, worn as a sign of royal status. It can also name a crown awarded as an honor. A separate everyday-object sense is a crown-shaped metal bottle cap, such as the closure on a beer bottle."), "王冠-02")
+-            show(articleBullet("王は王冠をかぶっています。 (おうはおうかんをかぶっています。) — The king is wearing a crown."), "王冠-03")
+-            show(articleBullet("瓶の王冠を外しました。 (びんのおうかんをはずしました。) — I removed the bottle's crown cap."), "王冠-04")
+-            show(articleBullet("The second sentence concerns a bottle closure, not royal headgear. Use the context to choose the English meaning."), "王冠-05")
+-            section("How the kanji combine")
+-            show(articleBullet("王 means \"king; ruler,\" and 冠 means \"crown.\" This is a modifier + head compound: a ruler's crown. The on readings are オウ + カン. The bottle-cap sense extends the name to an object shaped like a crown; it is not a miniature item of royal clothing."), "王冠-07")
+-            section("Synonyms and antonyms")
+-            show(articleBullet("冠 (かんむり) is the broader crown or ceremonial-headgear word. 帽子 (ぼうし) means a hat or cap, not specifically a royal crown. For containers, 蓋 (ふた) is a broader lid or cap word, while 栓 (せん) can mean a stopper or plug. These words overlap for some closures, but are not interchangeable for every object. There is no useful single opposite noun."), "王冠-09")
+-            section("Distinctive meaning")
+-            show(articleBullet("王冠 does not name every lid or screw cap: the bottle sense concerns the crown-type metal closure. For the royal object, use かぶる for putting it on and かぶっている for wearing it. Do not transfer the separate 冠たる (かんたる), \"peerless,\" use of 冠 to 王冠."), "王冠-11")
+-            show(articleBullet("Dictionary: JMdict, entry 1181450, senses 1-2. Usage and bottle-cap sense: Digital Daijisen: 王冠, おうかん general-word entry."), "王冠-12")
+-            section("How the kanji combine")
+-            show(articleBullet("王 means \"king; ruler,\" and 冠 means \"crown.\" This is a modifier + head compound: a ruler's crown. The on readings are オウ + カン. The bottle-cap sense extends the name to an object shaped like a crown; it is not a miniature item of royal clothing."), "王冠-reverse-31")
+-            inline(await(articleBullet("王 means \"king; ruler,\" and 冠 means \"crown.\" This is a modifier + head compound: a ruler's crown. The on readings are オウ + カン. The bottle-cap sense extends the name to an object shaped like a crown; it is not a miniature item of royal clothing.")), "冠", 27)
+-            await("Article contents")
+-            section("Readings")
+-            show(readingExample("カン"), "王冠-kanji-backlink")
+-            back()
+-            await(articleBullet("王 means \"king; ruler,\" and 冠 means \"crown.\" This is a modifier + head compound: a ruler's crown. The on readings are オウ + カン. The bottle-cap sense extends the name to an object shaped like a crown; it is not a miniature item of royal clothing.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("王冠-system-back-to-word")
+-            section("How the kanji combine")
+-            show(articleBullet("王 means \"king; ruler,\" and 冠 means \"crown.\" This is a modifier + head compound: a ruler's crown. The on readings are オウ + カン. The bottle-cap sense extends the name to an object shaped like a crown; it is not a miniature item of royal clothing."), "王冠-王-32")
+-            inline(await(articleBullet("王 means \"king; ruler,\" and 冠 means \"crown.\" This is a modifier + head compound: a ruler's crown. The on readings are オウ + カン. The bottle-cap sense extends the name to an object shaped like a crown; it is not a miniature item of royal clothing.")), "王", 0)
+-            await("Article contents")
+-            await("王 — king")
+-            section("Common words")
+-            show(articleBullet("王冠 おうかん — royal crown; also a crown-type bottle cap"), "王-counterpart-33")
+-            inline(await(articleBullet("王冠 おうかん — royal crown; also a crown-type bottle cap")), "王冠", 0)
+-            await("Article contents")
+-            section("How the kanji combine")
+-            show(articleBullet("王 means \"king; ruler,\" and 冠 means \"crown.\" This is a modifier + head compound: a ruler's crown. The on readings are オウ + カン. The bottle-cap sense extends the name to an object shaped like a crown; it is not a miniature item of royal clothing."), "王冠-王-component-backlink")
+-            back()
+-            await(articleBullet("王冠 おうかん — royal crown; also a crown-type bottle cap")).assertIsDisplayed()
+-            section("Common words")
+-            capture("王冠-王-system-back-to-component")
+-            back()
+-            await(articleBullet("王 means \"king; ruler,\" and 冠 means \"crown.\" This is a modifier + head compound: a ruler's crown. The on readings are オウ + カン. The bottle-cap sense extends the name to an object shaped like a crown; it is not a miniature item of royal clothing.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("王冠-王-system-back-from-component")
+-            back()
+-            await(articleBullet("王冠 おうかん — royal crown; crown-type bottle cap")).assertIsDisplayed()
+-            section("Common words")
+-            capture("王冠-system-back-to-kanji")
++            capture("system-back-to-kanji")
+@@ -365 +327 @@
+-                .put("mappedReciprocalPairs", 3).put("directedLinkTransitions", 6)
++                .put("mappedReciprocalPairs", 1).put("directedLinkTransitions", 2)
+@@ -369 +331 @@
+-            assertEquals("冠", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("冴", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -371 +333 @@
+-            click("crown; peerless")
++            click("clear; sharp-minded")
+@@ -373 +335 @@
+-            assertEquals("冠", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("冴", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -379 +341 @@
+-            repeat(2) {
++            repeat(1) {
+@@ -383 +345 @@
+-                assertEquals("冠", question.card.kanji)
++                assertEquals("冴", question.card.kanji)
+@@ -385 +347,2 @@
+-                val key = if (question.question.kind == ReadingKind.On) "かん" else "かんむり"
++                assertEquals(ReadingKind.Kun, question.question.kind)
++                val key = "さえる"
+@@ -396 +359 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "冠" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "冴" &&
+@@ -400 +363 @@
+-            assertEquals(setOf(ReadingKind.On, ReadingKind.Kun), answeredKinds)
++            assertEquals(setOf(ReadingKind.Kun), answeredKinds)
+@@ -403,2 +366,2 @@
+-            assertEquals(2, done.answered)
+-            assertEquals(2, done.correct)
++            assertEquals(1, done.answered)
++            assertEquals(1, done.correct)
+@@ -406 +369 @@
+-                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "冠" &&
++                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "冴" &&
+@@ -409,3 +372,3 @@
+-            assertEquals(2, readingLogs.size)
+-            assertEquals(setOf("かん", "かんむり"), readingLogs.map { it.reading }.toSet())
+-            capture("curated-both-done")
++            assertEquals(1, readingLogs.size)
++            assertEquals(setOf("さえる"), readingLogs.map { it.reading }.toSet())
++            capture("curated-kun-done")
+@@ -416,4 +379,4 @@
+-            await("crown; peerless").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "冠") })
+-            assertEquals(listOf("カン"), card.onyomi.splitSep())
+-            assertEquals(listOf("かんむり"), card.kunyomi.splitSep())
++            await("clear; sharp-minded").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "冴") })
++            assertEquals(listOf("ゴ", "コ"), card.onyomi.splitSep())
++            assertEquals(listOf("さ.える", "こお.る", "ひ.える"), card.kunyomi.splitSep())
+@@ -422,2 +385,2 @@
+-            assertEquals(listOf("カン"), card.quizOnyomi?.splitSep())
+-            assertEquals(listOf("かんむり"), card.quizKunyomi?.splitSep())
++            assertEquals(emptyList<String>(), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("さ.える"), card.quizKunyomi?.splitSep())
+@@ -429 +392 @@
+-            assertEquals(9, strokes.length())
++            assertEquals(7, strokes.length())
+@@ -446 +409 @@
+-            rule.onNode(hasContentDescription("9 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("7 strokes drawn", substring = true)).assertExists()
+@@ -451 +414 @@
+-                    it.kanji == "冠" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "冴" && it.mode == StudyMode.Draw.name }
+@@ -462 +425 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "冠" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "冴" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -470 +433 @@
+-                .put("bothCuratedKindsPersistedGoodAndDone", true)
++                .put("soleCuratedKunPersistedGoodAndDone", true)
+@@ -475,2 +438,2 @@
+-            File(app.getExternalFilesDir(null), "n1-079-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-079-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-080-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-080-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -569 +532 @@
+-        File(app.getExternalFilesDir(null), "n1-079-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-080-$step.png").outputStream().use {
