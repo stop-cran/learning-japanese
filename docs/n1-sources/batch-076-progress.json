@@ -3,8 +3,9 @@
   "batch": "076",
   "baseCommit": "1ee375280d2b778fa66046627f1b19c3bcb55eec",
   "membership": ["兼"],
-  "status": "source-prepared-not-drafted",
-  "drafted": [],
+  "status": "local-unreviewed-draft",
+  "sourceCheckpoint": "374afc8351359036f57fdc1c45397edb85743eb4",
+  "drafted": ["兼"],
   "reviewClosed": [],
   "published": [],
   "sourceSnapshot": "docs/n1-source-snapshot.json",
@@ -135,8 +136,99 @@
   },
   "fontPreparation":"batch-076-font-preparation.json",
   "sourceEvidence":"batch-076-source-evidence.json",
+  "supportMappings": [
+    {
+      "kanji": "兼", "article": "words/兼ねる.md", "primaryReading": "かねる",
+      "entryIds": ["1256520"], "newArticle": false,
+      "reason": "Exact native verb spelling/reading and visible okurigana; combined functions/posts. Preserve N2 vocabulary metadata and original exclusions.",
+      "status": "local-unreviewed-draft"
+    },
+    {
+      "kanji": "兼", "article": "words/兼任.md", "primaryReading": "けんにん",
+      "entryIds": ["1256670"], "newArticle": true,
+      "reason": "Necessary contemporary on-reading support; exact whole-word family and Daijisen character entry independently places兼任 underケン. No vocabulary level inferred.",
+      "status": "local-unreviewed-draft"
+    }
+  ],
+  "requiredReciprocalPairs": [
+    ["兼", "words/兼ねる.md"], ["兼", "words/兼任.md"]
+  ],
+  "allMappedReciprocalPairs": [
+    ["兼", "words/兼ねる.md"], ["兼", "words/兼任.md"], ["任", "words/兼任.md"]
+  ],
+  "directedLinks": [
+    {"from":"kanji/兼.md","to":"words/兼ねる.md","reading":"かねる"},
+    {"from":"words/兼ねる.md","to":"kanji/兼.md","reading":"かねる"},
+    {"from":"kanji/兼.md","to":"words/兼任.md","reading":"けんにん"},
+    {"from":"words/兼任.md","to":"kanji/兼.md","reading":"けんにん"},
+    {"from":"kanji/任.md","to":"words/兼任.md","reading":"けんにん"},
+    {"from":"words/兼任.md","to":"kanji/任.md","reading":"けんにん"}
+  ],
+  "changedReusedPassages": [
+    {
+      "article": "words/兼ねる.md",
+      "before": "兼 concerns combining or serving in more than one capacity;",
+      "after": "[兼](../kanji/兼.md) concerns combining or serving in more than one capacity;"
+    },
+    {
+      "article": "words/兼ねる.md",
+      "before": "兼任する (けんにんする) describes holding concurrent posts.",
+      "after": "[兼任](兼任.md)する (けんにんする) describes holding concurrent posts."
+    },
+    {
+      "article": "kanji/任.md",
+      "before": "- 任せる まかせる — leave a matter to someone\n",
+      "after": "- 任せる まかせる — leave a matter to someone\n- [兼任](../words/兼任.md) けんにん — holding concurrent posts\n"
+    }
+  ],
+  "curatedProjection": [
+    {
+      "kanji":"兼","quizOnyomi":["ケン"],"quizKunyomi":["か.ねる"],
+      "onKeys":["けん"],"kunKeys":["かねる"],
+      "legacyFullKunKeys":["かねる"],
+      "limits":"Mechanical mirror, not native execution or two distinct kun mastery events."
+    }
+  ],
+  "quizAudit": {
+    "兼": {
+      "title": "combine; concurrent roles",
+      "distractors": ["典", "具", "曲"],
+      "labels": ["reference texts; rules; ceremony", "tools; ingredients", "bend; musical piece"],
+      "reason": "Visually related shapes; none of these displayed meanings describes combining roles, the conjunction or the separate beforehand branch."
+    }
+  },
+  "wordQuizAudit": {
+    "directExclusions": [
+      {
+        "word":"兼任","exclude":["兼ねる"],
+        "labels":["combine roles; cannot readily do"],
+        "reason":"Existing verb includes the exact concurrent-post sense. One direct safeguard, not a transitive exclusion clique."
+      }
+    ],
+    "addedOrRewordedTitles": [{"word":"兼任","title":"holding concurrent posts"}],
+    "comparisonDisposition": "Actual 勤める employment, 務める serving a role and 就任 taking office do not require concurrent posts. Preserve their labels and exclusions; do not broaden safeguards solely for shared work tags. 兼務 and 掛け持ち are recognized related expressions but have no runtime article.",
+    "confusableInventory": "Searched complete docs/confusable-words.md for兼/concurrent/roles/post; no matching candidate cluster. Actual current word titles screened for combine, concurrent, role, post, position, dual, simultaneous, job and duty; exact related articles and applicable complete dictionary families inspected.",
+    "limits": "Coordinator semantic audit, not live-quiz safety certification or unrestricted substitution."
+  },
+  "draftAuthorInspection": {
+    "execution":505,
+    "freshCompletePackets":[
+      {"path":"batch-076-jmdict.xml","ranges":[[1,230],[231,460],[461,690],[691,920],[921,1150],[1151,1382]]},
+      {"path":"batch-076-comparison-jmdict.xml","ranges":[[1,145]]},
+      {"path":"batch-076-kanjidic2.xml","ranges":[[1,220],[221,425]]}
+    ],
+    "distinctCompleteFamilies":75,
+    "dictionaryFamilyOccurrences":75,
+    "rawCharacterRecords":5,
+    "completeExistingArticlesRead":["words/兼ねる.md","words/勤める.md","words/務める.md","words/就任.md","kanji/任.md","kanji/典.md","kanji/具.md","kanji/曲.md"],
+    "freshPublicSources":"Complete applicable Daijisen character and lexical sections for兼 and short兼任 section returned from Weblio; complete Daijisen/Nikkoku sections for兼ねる returned from Kotobank. Later aggregator sections not used. Sources and claim boundaries match batch-076-source-evidence.json.",
+    "limits":"Fresh coordinator inspection, not independent review, frequency measurement, native-speaker certification or phone acceptance. Raw packet rows/hashes alone do not prove comprehension."
+  },
+  "draftAudit": "batch-076-draft-audit.json",
+  "runtimeDraftExecution": "execution-505.json",
   "remainingGates":"Runtime draft and exact draft-wide Han/link/metadata audit; normal signed local freeze; two serial blind different-family textual reviews and bounded confirmations; fresh non-skipped Android/native, actual font/article/drawing/routes, independent visual evidence; combined-main checks, signing, owner fast-forward publication, green CI, exact immutable ZIP hashes and unchanged budgets.",
   "publishedAdditions":102,
   "remainingAdditions":1126,
-  "limits":"Only source preparation. No new runtime teaching, prompt, stroke file, review-closed card or public delivery. Physical-phone, general-release and whole-set acceptance outstanding."
+  "nextAction":"SAME076 two serial blind different-family initial textual reviews on the normally signed local runtime snapshot. Review complete new兼/兼任, exact changed兼ねる and任 passages, all75distinctcompletefamilies/5rawcharacters, all3rawreadings and offeredけん/かねる only, actual labels/direct guard and all3mappedpairs/6directions. Use actual current CLI catalog/models, isolated read-only headless processes and serial internal tools; initial prompts blind to other reports and author adjudication. Persist full first report and actual process exit before starting second; do not edit the frozen snapshot during review. Reconcile by precise evidence and bounded original-session confirmations. No publication/077. Later fresh non-skippedAndroid/native/font/article/visual/currentmain/signing/ownerfastforward/greenCI/EVERYimmutableZIPhash/originalbudgets remain. Preserve historical process/permission/OOM/read-depth limits and all baseline identities/readings/levels/exclusions plus reviewed虎/猿/丘/山exceptions. CompatibleAndroidf9b59a2+ required;physicalphone/generalrelease/whole-setoutstanding.",
+  "limits":"LOCAL UNREVIEWED076 draft: one drafted, zero review-closed or published rows. Published102/1228,remaining1126;102publishednecessarysupportsNOTN1vocabulary. No reviewer, Android/native run, app/tool/media change, push,077 or second runner. Source-preparation proposals and inspection remain historical evidence, not acceptance. Every later quality gate remains; physical-phone/general-release/whole-set outstanding."
 }

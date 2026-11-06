@@ -37,7 +37,27 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 076: source preparation only
+## Batch 076: local unreviewed draft
+
+The bounded runtime draft adds **兼**, necessary **兼任** けんにん and
+the pinned ten-stroke conversion. It adds only two navigation links to
+existing **兼ねる** and one Common words bullet to older **任**.
+All **three all-mapped pairs /six directions** are present; the existing
+N2 word's metadata and original exclusions are unchanged. The new word has
+no inferred vocabulary level and directly excludes 兼ねる for their
+overlapping role meanings.
+
+Full **ケン /か.ねる・-か.ねる** order remains intact. Selected ケン and
+か.ねる each have an own linked row; the valid kana-preferred difficulty
+suffix has a separate qualified row but no duplicate reading key.
+The actual draft, its full Han inventory, source/baseline/link/quiz audits
+and limits are recorded in [execution 505](n1-sources/execution-505.json).
+This is **one drafted, zero review-closed or published** batch-076 cards.
+Two serial blind different-family reviews are next; no new Android/native
+or physical-phone acceptance is claimed. Published coverage stays
+**102/1,228; 1,126 remain**. No unreviewed content is pushed.
+
+### Preserved source-preparation checkpoint
 
 The [source packet](n1-sources/batch-076-progress.json) freezes **兼**,
 source row 85, after batch 075's verified publication. It retains **75
