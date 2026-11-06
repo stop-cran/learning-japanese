@@ -1,0 +1,292 @@
+--- docs\n1-reviews\batch-080-native\N1Batch080NativeTest.kt
++++ docs\n1-reviews\batch-081-native\N1Batch081NativeTest.kt
+@@ -50 +50 @@
+-private fun disposable080() {
++private fun disposable081() {
+@@ -55 +55 @@
+-class N1Batch080GlyphTest {
++class N1Batch081GlyphTest {
+@@ -58,2 +58,2 @@
+-    @Test fun clarityLookalikesAndIceWaterFallbacksAcrossFourProductionFamilies() {
+-        disposable080()
++    @Test fun smeltingLookalikesAndIceWaterFallbacksAcrossFourProductionFamilies() {
++        disposable081()
+@@ -62 +62 @@
+-        val pages = listOf("上 今 優 光 冫 冱 冴 冷 凍 器 字 寒 手 日 明 次 氵 汗 河 澄 牙 用 目 眠", "覚 輝 透 通 鋭 頭", "冴 次 汗 河 冫 氵 冱 牙 冴える 冱える 冴寒 頭 目 眠 冷 凍")
++        val pages = listOf("世 事 典 冫 冶 台 大 女 始 字 学 属 氵 治 溶 界 百 研 科 究 精 術 製 通", "金 鋳 錬 鍛 陶", "冶 治 台 始 冫 氵 冶金 金 鋳 錬 鍛 陶 溶")
+@@ -67 +67 @@
+-                    Text("Batch 080: clarity / look-alikes / ice and water fallback")
++                    Text("Batch 081: smelting / look-alikes / ice and water fallback")
+@@ -73 +73 @@
+-                    Text("Inspect all 30 scoped Han; focused 冴/次/汗/河/牙, 冫/冱/氵. Fallback families may coincide.", fontSize = 16.sp)
++                    Text("Inspect all 29 scoped Han; focused 冶/治/台/始, 冫/氵. Fallback families may coincide.", fontSize = 16.sp)
+@@ -84 +84 @@
+-            for (char in listOf("上", "今", "優", "光", "冫", "冱", "冴", "冷", "凍", "器", "字", "寒", "手", "日", "明", "次", "氵", "汗", "河", "澄", "牙", "用", "目", "眠", "覚", "輝", "透", "通", "鋭", "頭")) {
++            for (char in listOf("世", "事", "典", "冫", "冶", "台", "大", "女", "始", "字", "学", "属", "氵", "治", "溶", "界", "百", "研", "科", "究", "精", "術", "製", "通", "金", "鋳", "錬", "鍛", "陶")) {
+@@ -105 +105 @@
+-            for (word in listOf("冴える")) {
++            for (word in listOf("冶金")) {
+@@ -132 +132 @@
+-        assertEquals(124, rows.length())
++        assertEquals(120, rows.length())
+@@ -138 +138 @@
+-            File(context.getExternalFilesDir(null), "n1-080-font-panel-${index + 1}.png").outputStream().use {
++            File(context.getExternalFilesDir(null), "n1-081-font-panel-${index + 1}.png").outputStream().use {
+@@ -142 +142 @@
+-        File(context.getExternalFilesDir(null), "n1-080-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-081-font-raster.json").writeText(JSONObject()
+@@ -145,2 +145,2 @@
+-            .put("individualGlyphProbes", 120).put("wholeWordRasterProbes", 4).put("panels", 3)
+-            .put("limits", "30 actual scoped Han including exact 冫/冱/氵 fallback inspection, four production families, three bounded Compose panels and four whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
++            .put("individualGlyphProbes", 116).put("wholeWordRasterProbes", 4).put("panels", 3)
++            .put("limits", "29 actual scoped Han including exact 冫/氵 fallback inspection, four production families, three bounded Compose panels and four whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
+@@ -151 +151 @@
+-class N1Batch080ArticleTest {
++class N1Batch081ArticleTest {
+@@ -156,2 +156,2 @@
+-    @Test fun fullSingleImportOfflineClarityOneReciprocalPairCuratedKunDrawingAndSystemBack() {
+-        disposable080()
++    @Test fun fullSingleImportOfflineSmeltingTwoReciprocalPairsCuratedOnDrawingAndSystemBack() {
++        disposable081()
+@@ -160,2 +160,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-080-${UUID.randomUUID()}", "main")
+-        val head = "0d2c9aee6de9e4f430935b38e31228db4bd47908"
++        val source = RepoSource("acceptance-fixture", "n1-081-${UUID.randomUUID()}", "main")
++        val head = "95a87783e4be501c4b2b788d6906f6cc76b3c751"
+@@ -169 +169 @@
+-                    instrumentation.context.assets.open("n1-batch-080-0d2c9aee-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-081-95a87783-envelope.zip")
+@@ -184,2 +184,2 @@
+-        assertEquals(1092, updated.kanji)
+-        assertEquals(5048, updated.words)
++        assertEquals(1093, updated.kanji)
++        assertEquals(5049, updated.words)
+@@ -188 +188 @@
+-        assertEquals("4572f7b1d0d95059", meta.contentVersion)
++        assertEquals("f1dd5d8b9d2ff535", meta.contentVersion)
+@@ -196,10 +196,10 @@
+-        assertEquals(112, n1.size)
+-        val clarity = n1.single { it.kanji == "冴" }
+-        assertEquals(listOf("ゴ", "コ"), clarity.onyomi.splitSep())
+-        assertEquals(listOf("さ.える", "こお.る", "ひ.える"), clarity.kunyomi.splitSep())
+-        assertNotNull(clarity.quizOnyomi)
+-        assertNotNull(clarity.quizKunyomi)
+-        assertEquals(emptyList<String>(), clarity.quizOnyomi?.splitSep())
+-        assertEquals(listOf("さ.える"), clarity.quizKunyomi?.splitSep())
+-        assertEquals(emptyList<String>(), clarity.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(listOf("さえる"), clarity.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(113, n1.size)
++        val smelting = n1.single { it.kanji == "冶" }
++        assertEquals(listOf("ヤ"), smelting.onyomi.splitSep())
++        assertEquals(listOf("い.る"), smelting.kunyomi.splitSep())
++        assertNotNull(smelting.quizOnyomi)
++        assertNotNull(smelting.quizKunyomi)
++        assertEquals(listOf("ヤ"), smelting.quizOnyomi?.splitSep())
++        assertEquals(emptyList<String>(), smelting.quizKunyomi?.splitSep())
++        assertEquals(listOf("や"), smelting.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(emptyList<String>(), smelting.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -219 +219 @@
+-                        if (card.kanji == "冴") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "冶") now - 60_000 else now + 30L * 86_400_000,
+@@ -225 +225 @@
+-                            if (card.kanji == "冴" && kind == ReadingKind.Kun && key == "さえる") now - 60_000
++                            if (card.kanji == "冶" && kind == ReadingKind.On && key == "や") now - 60_000
+@@ -232 +232 @@
+-                    0, source.id, "jlpt-n1", "冴", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "冶", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -242,6 +242,6 @@
+-            .put("fullOnyomi", JSONArray(clarity.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(clarity.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(clarity.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(clarity.toReadingCard().quizKeys(ReadingKind.Kun)))
+-            .put("liteQuizOnyomi", JSONArray(requireNotNull(clarity.quizOnyomi).splitSep()))
+-            .put("liteQuizKunyomi", JSONArray(requireNotNull(clarity.quizKunyomi).splitSep()))
++            .put("fullOnyomi", JSONArray(smelting.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(smelting.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(smelting.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(smelting.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("liteQuizOnyomi", JSONArray(requireNotNull(smelting.quizOnyomi).splitSep()))
++            .put("liteQuizKunyomi", JSONArray(requireNotNull(smelting.quizKunyomi).splitSep()))
+@@ -250 +250 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 冴 meaning and sole curated kun key さえる due. Explicit empty on list. Two historical good 冴 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 冶 meaning and sole curated on key や due. Explicit empty kun list. Two historical good 冶 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -257 +257 @@
+-            await("N1 · 112 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 113 cards").performScrollTo().assertIsDisplayed()
+@@ -260,3 +260,3 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("冴")
+-            click("clear; sharp-minded")
+-            await("冴 — clear; sharp-minded")
++            rule.onNode(hasSetTextAction()).performTextReplacement("冶")
++            click("smelt; work metals")
++            await("冶 — smelt; work metals")
+@@ -265,2 +265,2 @@
+-            show(articleBullet("Learn 冴 through 冴える (さえる): to be clear-headed or alert, or vivid and clear in appearance or sound. The verb can also describe deft performance. An older sense concerns intense cold; coldness is not implied whenever someone is clear-headed."), "kanji-03")
+-            show(articleBullet("Modern-shape mnemonic: imagine the cold 冫 beside the fang-like 牙 (きば) shape as a reminder of a crisp, keen mind. This is an invented memory aid, not a historical derivation or verified phonetic analysis."), "kanji-04")
++            show(articleBullet("冶 concerns smelting and working metals. Learn it through 冶金 (やきん), metallurgy: the science and technology of obtaining and working metals. Not every use is literal metalworking: 陶冶 (とうや) can mean cultivation or training, for example of character or abilities."), "kanji-03")
++            show(articleBullet("Modern-shape mnemonic: imagine the two cold 冫 marks beside a 台-shaped work stand where metal is being shaped. This is an invented memory aid, not a historical derivation or a verified explanation of the sound."), "kanji-04")
+@@ -268,12 +268,6 @@
+-            show(articleBullet("All five source readings remain below in source order. Only さ.える is selected for reading practice; there are no selected on questions."), "kanji-06")
+-            show(readingExample("ゴ"), "kanji-10")
+-            show(readingExample("冴寒 (ごかん) — extreme cold; a dictionary-attested rare term, for recognition rather than practice"), "kanji-12")
+-            show(readingExample("コ"), "kanji-13")
+-            show(readingExample("source-only lookup information; no exact non-name word example established in the inspected families"), "kanji-15")
+-            show(readingExample("さ.える"), "kanji-16")
+-            show(readingExample("冴える さえる — be clear-headed; be vivid"), "kanji-18")
+-            show(readingExample("こお.る"), "kanji-19")
+-            show(readingExample("source-only lookup information; do not treat the ordinary spelling 凍る (こおる) as evidence for a word written with 冴"), "kanji-21")
+-            show(readingExample("ひ.える"), "kanji-22")
+-            show(readingExample("source-only lookup information; 冷える (ひえる) is a separate spelling and does not establish a 冴 example"), "kanji-24")
+-            show(articleBullet("The source-only rows preserve character-dictionary information, not recommended spellings to invent in everyday writing. They do not claim that no example exists anywhere."), "kanji-25")
++            show(articleBullet("Both source readings remain below. Only ヤ is selected for reading practice."), "kanji-06")
++            show(readingExample("ヤ"), "kanji-10")
++            show(readingExample("冶金 やきん — metallurgy"), "kanji-12")
++            show(readingExample("い.る"), "kanji-13")
++            show(readingExample("source-only character-dictionary lookup information; no exact modern word example written 冶る was established in the inspected families"), "kanji-15")
++            show(articleBullet("The source-only row is not a recommendation to invent everyday spellings. 鋳る (いる), \"cast metal,\" is a separately documented spelling, not proof of a word written 冶る. Keeping this reading for lookup does not claim that no such example exists anywhere."), "kanji-16")
+@@ -281,3 +275,2 @@
+-            show(articleBullet("冴える さえる — be clear-headed; be vivid"), "kanji-27")
+-            show(articleBullet("頭が冴える (あたまがさえる) — be clear-headed"), "kanji-28")
+-            show(articleBullet("目が冴える (めがさえる) — be wide awake; be unable to sleep"), "kanji-29")
++            show(articleBullet("冶金 やきん — metallurgy"), "kanji-18")
++            show(articleBullet("冶金学 (やきんがく) — metallurgy as a science"), "kanji-19")
+@@ -285,3 +278,4 @@
+-            show(articleBullet("目が冴える concerns wakefulness, not eyes visibly shining. 冴えない (さえない) can describe something lacklustre, disappointing or unappealing; it is not always a literal absence of visual clarity or a judgement about intelligence."), "kanji-31")
+-            show(articleBullet("Compare the two left-hand marks with 次, whose right side is different. 汗 and 河 have three left-hand water dots, 氵, rather than 冫. The grade-9 source classification concerns name-use kanji, but 冴える is not a name-only word. Personal-name readings are outside this card's scope."), "kanji-32")
+-            show(articleBullet("Metadata: KANJIDIC2. Word evidence: JMdict, entries 1297050, 1877830, 1911790, 2576510 and 2679180. Usage: Digital Daijisen: 冴える. Character reading: 字通: 冴."), "kanji-33")
++            show(articleBullet("Compare 治, \"govern; heal\": its left side has three water strokes, 氵, rather than 冶's two strokes, 冫. 始, \"begin,\" has 女 on the left. Sharing the 台-shaped right side does not make these characters interchangeable."), "kanji-21")
++            show(articleBullet("鍛冶 (かじ), \"blacksmithing; blacksmith,\" has a special whole-word reading. Do not extract ジ from its final kana and add it to 冶's on readings. The dictionaries also document the separate reading たんや for 鍛冶."), "kanji-22")
++            show(articleBullet("For general melting or dissolving, compare 溶 and 溶かす (とかす). 冶 is not the ordinary spelling to substitute into a sentence about melting butter or dissolving sugar."), "kanji-23")
++            show(articleBullet("Metadata: KANJIDIC2. Word evidence: JMdict, entries 1536310, 1536320, 1655600, 1419150 and 1587780. Character readings and senses: Digital Daijisen and 字通: 冶."), "kanji-24")
+@@ -289,2 +283,2 @@
+-            show(articleBullet("冴える さえる — be clear-headed; be vivid"), "word-forward-21")
+-            inline(await(articleBullet("冴える さえる — be clear-headed; be vivid")), "冴える", 0)
++            show(articleBullet("冶金 やきん — metallurgy"), "word-forward-15")
++            inline(await(articleBullet("冶金 やきん — metallurgy")), "冶金", 0)
+@@ -292 +286 @@
+-            await("冴える (さえる) — be clear-headed; be vivid")
++            await("冶金 (やきん) — metallurgy")
+@@ -294,4 +288,4 @@
+-            show(articleBullet("冴える describes mental clarity or alertness, and a crisp, vivid quality in sights, colours or sounds. Learn the whole expression with its subject: 頭が冴える (あたまがさえる) means to be clear-headed; 目が冴える (めがさえる) means to be wide awake, often when you would rather sleep."), "word-02")
+-            show(articleBullet("今日は頭が冴えています。 (きょうはあたまがさえています。) — I feel clear-headed today."), "word-03")
+-            show(articleBullet("目が冴えて眠れません。 (めがさえてねむれません。) — I'm wide awake and can't sleep."), "word-04")
+-            show(articleBullet("This is an intransitive ichidan verb: the subject takes が. Forms include 冴えます (さえます), 冴えた (さえた), 冴えて (さえて) and 冴えない (さえない). 冴えている can describe an existing alert state. The examples adapt dictionary examples to polite endings."), "word-05")
++            show(articleBullet("冶金 is metallurgy: the science and technology of extracting metals from raw materials and working them into useful materials and forms. It includes more than simply melting something. It is a technical noun."), "word-02")
++            show(articleBullet("大学で冶金を学んでいます。 (だいがくでやきんをまなんでいます。) — I am studying metallurgy at university."), "word-03")
++            show(articleBullet("冶金について研究しています。 (やきんについてけんきゅうしています。) — I am doing research on metallurgy."), "word-04")
++            show(articleBullet("冶金を学ぶ (やきんをまなぶ) means \"study metallurgy\"; 冶金について (やきんについて) means \"about metallurgy.\""), "word-05")
+@@ -299,2 +293 @@
+-            show(articleBullet("冴 supplies the clarity meaning in this single-kanji native verb. In the written form 冴える, 冴 represents さ and the following える completes さえる. The conjugation stem is さえ, including the written え. It is not a compound assembled from on readings."), "word-07")
+-            show(articleBullet("JMdict also records 冱える (さえる) as a rarely used kanji spelling. That spelling flag does not make the pronunciation さえる rare."), "word-08")
++            show(articleBullet("冶 (ヤ) contributes smelting or working metal. 金 (キン) means metal here, not money or gold alone. The relationship is action plus object: working metal. The whole noun names the technical field, not just one operation. This is a meaning aid, not an account of the word's historical formation."), "word-07")
+@@ -302,2 +295 @@
+-            show(articleBullet("覚める (さめる) focuses on waking or regaining awareness: 目が覚める (めがさめる) means \"wake up,\" whereas 目が冴える describes wakefulness. 澄む (すむ) and 透き通る (すきとおる) overlap for clear sound, but physical transparency is not a universal meaning of 冴える."), "word-10")
+-            show(articleBullet("For an opposite evaluation, 冴えない can mean \"lacklustre\" or \"unsatisfactory,\" depending on what is being described; it is not a single antonym for every sense."), "word-11")
++            show(articleBullet("冶金学 (やきんがく) specifically names metallurgy as a science. 金属 (きんぞく) means the material \"metal,\" not the field that studies and processes it. 製錬 and 精錬 (both せいれん) concern smelting or refining: related processes rather than the whole discipline. There is no useful everyday opposite of the field's name."), "word-09")
+@@ -305,3 +297,3 @@
+-            show(articleBullet("冴える can describe deft technique or a well-executed performance, not only mental alertness. It does not generally mean a permanent high intelligence score, nor does 目が冴える mean eyes lighting up with happiness."), "word-13")
+-            show(articleBullet("The negative 冴えない often concerns a disappointing result, an unappealing appearance or a subdued condition rather than literal blur. An older, somewhat old-fashioned sense of 冴える is \"become intensely cold.\" For ordinary cooling, learn 冷える (ひえる); for freezing, 凍る (こおる). Those verbs are not alternative pronunciations of the 冴える taught here."), "word-14")
+-            show(articleBullet("Dictionary: JMdict, entries 1297050, 1911790, 2576510 and 2679180. Usage and example bases: Digital Daijisen: 冴える, especially sense 5; clarity, performance and negative uses in senses 2–7."), "word-15")
++            show(articleBullet("冶金 belongs in scientific, educational and industrial contexts. It does not mean making money, and it is not limited to gold. 錬金術 (れんきんじゅつ), \"alchemy,\" is a different term, not a synonym for modern metallurgy."), "word-11")
++            show(articleBullet("Use 溶かす (とかす) when describing an action such as melting butter or dissolving sugar; 冶金 names the metalworking field and its technology, not any act of making something liquid."), "word-12")
++            show(articleBullet("Dictionary: JMdict, entry 1536310; related entries 1536320, 1243040, 1380250 and 1559970. Scope: 世界大百科事典: 冶金."), "word-13")
+@@ -309,2 +301,2 @@
+-            show(articleBullet("冴 supplies the clarity meaning in this single-kanji native verb. In the written form 冴える, 冴 represents さ and the following える completes さえる. The conjugation stem is さえ, including the written え. It is not a compound assembled from on readings."), "word-reverse-33")
+-            inline(await(articleBullet("冴 supplies the clarity meaning in this single-kanji native verb. In the written form 冴える, 冴 represents さ and the following える completes さえる. The conjugation stem is さえ, including the written え. It is not a compound assembled from on readings.")), "冴", 0)
++            show(articleBullet("冶 (ヤ) contributes smelting or working metal. 金 (キン) means metal here, not money or gold alone. The relationship is action plus object: working metal. The whole noun names the technical field, not just one operation. This is a meaning aid, not an account of the word's historical formation."), "word-reverse-25")
++            inline(await(articleBullet("冶 (ヤ) contributes smelting or working metal. 金 (キン) means metal here, not money or gold alone. The relationship is action plus object: working metal. The whole noun names the technical field, not just one operation. This is a meaning aid, not an account of the word's historical formation.")), "冶", 0)
+@@ -313,3 +305,3 @@
+-            show(readingExample("さ.える"), "kanji-backlink")
+-            back()
+-            await(articleBullet("冴 supplies the clarity meaning in this single-kanji native verb. In the written form 冴える, 冴 represents さ and the following える completes さえる. The conjugation stem is さえ, including the written え. It is not a compound assembled from on readings.")).assertIsDisplayed()
++            show(readingExample("ヤ"), "kanji-backlink")
++            back()
++            await(articleBullet("冶 (ヤ) contributes smelting or working metal. 金 (キン) means metal here, not money or gold alone. The relationship is action plus object: working metal. The whole noun names the technical field, not just one operation. This is a meaning aid, not an account of the word's historical formation.")).assertIsDisplayed()
+@@ -318,2 +310,20 @@
+-            back()
+-            await(articleBullet("冴える さえる — be clear-headed; be vivid")).assertIsDisplayed()
++            section("How the kanji combine")
++            show(articleBullet("冶 (ヤ) contributes smelting or working metal. 金 (キン) means metal here, not money or gold alone. The relationship is action plus object: working metal. The whole noun names the technical field, not just one operation. This is a meaning aid, not an account of the word's historical formation."), "gold-forward-26")
++            inline(await(articleBullet("冶 (ヤ) contributes smelting or working metal. 金 (キン) means metal here, not money or gold alone. The relationship is action plus object: working metal. The whole noun names the technical field, not just one operation. This is a meaning aid, not an account of the word's historical formation.")), "金", 45)
++            await("Article contents")
++            await("金 — gold, money")
++            section("Common words")
++            show(articleBullet("冶金 やきん — metallurgy"), "gold-reverse-27")
++            inline(await(articleBullet("冶金 やきん — metallurgy")), "冶金", 0)
++            await("Article contents")
++            await("冶金 (やきん) — metallurgy")
++            back()
++            await(articleBullet("冶金 やきん — metallurgy")).assertIsDisplayed()
++            section("Common words")
++            capture("system-back-to-gold")
++            back()
++            await(articleBullet("冶 (ヤ) contributes smelting or working metal. 金 (キン) means metal here, not money or gold alone. The relationship is action plus object: working metal. The whole noun names the technical field, not just one operation. This is a meaning aid, not an account of the word's historical formation.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("system-back-to-word-from-gold")
++            back()
++            await(articleBullet("冶金 やきん — metallurgy")).assertIsDisplayed()
+@@ -327 +337 @@
+-                .put("mappedReciprocalPairs", 1).put("directedLinkTransitions", 2)
++                .put("mappedReciprocalPairs", 2).put("directedLinkTransitions", 4)
+@@ -331 +341 @@
+-            assertEquals("冴", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("冶", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -333 +343 @@
+-            click("clear; sharp-minded")
++            click("smelt; work metals")
+@@ -335 +345 @@
+-            assertEquals("冴", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("冶", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -345 +355 @@
+-                assertEquals("冴", question.card.kanji)
++                assertEquals("冶", question.card.kanji)
+@@ -347,2 +357,2 @@
+-                assertEquals(ReadingKind.Kun, question.question.kind)
+-                val key = "さえる"
++                assertEquals(ReadingKind.On, question.question.kind)
++                val key = "や"
+@@ -359 +369 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "冴" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "冶" &&
+@@ -363 +373 @@
+-            assertEquals(setOf(ReadingKind.Kun), answeredKinds)
++            assertEquals(setOf(ReadingKind.On), answeredKinds)
+@@ -369 +379 @@
+-                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "冴" &&
++                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "冶" &&
+@@ -373,2 +383,2 @@
+-            assertEquals(setOf("さえる"), readingLogs.map { it.reading }.toSet())
+-            capture("curated-kun-done")
++            assertEquals(setOf("や"), readingLogs.map { it.reading }.toSet())
++            capture("curated-on-done")
+@@ -379,4 +389,4 @@
+-            await("clear; sharp-minded").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "冴") })
+-            assertEquals(listOf("ゴ", "コ"), card.onyomi.splitSep())
+-            assertEquals(listOf("さ.える", "こお.る", "ひ.える"), card.kunyomi.splitSep())
++            await("smelt; work metals").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "冶") })
++            assertEquals(listOf("ヤ"), card.onyomi.splitSep())
++            assertEquals(listOf("い.る"), card.kunyomi.splitSep())
+@@ -385,2 +395,2 @@
+-            assertEquals(emptyList<String>(), card.quizOnyomi?.splitSep())
+-            assertEquals(listOf("さ.える"), card.quizKunyomi?.splitSep())
++            assertEquals(listOf("ヤ"), card.quizOnyomi?.splitSep())
++            assertEquals(emptyList<String>(), card.quizKunyomi?.splitSep())
+@@ -414 +424 @@
+-                    it.kanji == "冴" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "冶" && it.mode == StudyMode.Draw.name }
+@@ -425 +435 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "冴" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "冶" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -433 +443 @@
+-                .put("soleCuratedKunPersistedGoodAndDone", true)
++                .put("soleCuratedOnPersistedGoodAndDone", true)
+@@ -438,2 +448,2 @@
+-            File(app.getExternalFilesDir(null), "n1-080-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-080-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-081-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-081-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -532 +542 @@
+-        File(app.getExternalFilesDir(null), "n1-080-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-081-$step.png").outputStream().use {
