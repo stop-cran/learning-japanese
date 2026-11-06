@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "execution": 611,
+  "batch": "087",
+  "status": "textually-review-closed-awaiting-fresh-android",
+  "originalTeachingSnapshot": "f6391022356073dd3e53437be30885f9a09857d9",
+  "reviewedTeachingSnapshot": "f6391022356073dd3e53437be30885f9a09857d9",
+  "teachingChangedAfterInitialReviews": false,
+  "reviewedRuntimeHashes": {
+    "kanji/凪.md": "e4fb9d932c671f476afe7d660133f8c6debe18425584bba39164bc27895340cc",
+    "words/凪.md": "e0a07afbe91e8a50237884cf996d41ea569f13bcf1744b46df21d09cb88dcde0",
+    "words/凪ぐ.md": "edd5b5c81296e2a626dfdfdc48f82bb97181d7fccc6d724273413693b154bdb6",
+    "strokes/凪.json": "8544f85ddb327fb6f977cf284ddc78b7f5b5ea41ca095333c45f36d3dab40a71",
+    "manifest.json": "5b61811837ad98256fe6787d4d2e5c4b1c2d8ebbc4957c59e96f868d7033d5e4"
+  },
+  "initialModels": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "processes": {
+    "claude": {
+      "launcherPid": 20268,
+      "sessionId": "2308e256-e5c9-494d-8e53-805f94ff6314",
+      "startedAt": "2026-11-06T23:58:59.563901+01:00",
+      "completedAt": "2026-11-07T00:00:27.884495+01:00",
+      "exitCode": 0,
+      "requestedModel": "claude-opus-5.5",
+      "actualModels": [
+        "claude-opus-5.5"
+      ],
+      "snapshot": "f6391022356073dd3e53437be30885f9a09857d9",
+      "reportSha256": "a1ec88bd31e739230a1d406e1f8b54cd145ec29c5aecb51b86d7afdbe70f9840",
+      "rawExecutionSha256": "25b3c5052d04804bfc926b74c5ed287e2e9e5c8750d02b7b9fb013d9829090c6",
+      "report": "batch-087-initial-claude.md",
+      "execution": "batch-087-initial-claude-execution.json",
+      "coverage": "batch-087-initial-claude-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0
+    },
+    "gpt": {
+      "launcherPid": 21564,
+      "sessionId": "d08a2c70-c89c-4b1f-a38c-311b6245ad29",
+      "startedAt": "2026-11-07T00:00:32.587563+01:00",
+      "completedAt": "2026-11-07T00:01:27.337544+01:00",
+      "exitCode": 0,
+      "requestedModel": "gpt-6.1-sol",
+      "actualModels": [
+        "gpt-6.1-sol"
+      ],
+      "snapshot": "f6391022356073dd3e53437be30885f9a09857d9",
+      "reportSha256": "ee761f0b6155bcf381b382f4a16aebd869838ea9aa28812903441bb5abe1da76",
+      "rawExecutionSha256": "084c3a213057c996cda04ed898569f93ea915654ec41075809aa2a97885dbada",
+      "report": "batch-087-initial-gpt.md",
+      "execution": "batch-087-initial-gpt-execution.json",
+      "coverage": "batch-087-initial-gpt-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0
+    }
+  },
+  "serialReviewerProcessesVerified": true,
+  "eachOriginalReportArchivedBeforeNextLaunch": true,
+  "allInternalToolsSerial": true,
+  "allAssignedRangesReturned": true,
+  "initialPacketBytes": 146190,
+  "initialPacketLines": 2830,
+  "initialDistinctCompleteFamilies": 25,
+  "rawCharacterRecords": 5,
+  "completeArticleBodiesSupplied": 16,
+  "newArticleBodies": 3,
+  "changedReusedBodies": 0,
+  "originalSessionSupplements": 0,
+  "verdicts": {
+    "kanji/凪.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "words/凪.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "words/凪ぐ.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    }
+  },
+  "findings": [],
+  "hypothesisDispositions": [
+    {
+      "claim": "N1-only fallback could produce an overlapping calm/quiet label",
+      "reportedBy": [
+        "Claude hypothesis",
+        "GPT Limits"
+      ],
+      "status": "unresolved",
+      "category": "pending-native-production-acceptance-not-article-defect",
+      "evidence": "Actual N4風 is excluded from N1; three curated slots are only fully available in All. No actual fallback run is claimed.",
+      "decision": "No invented textual fix or universal safety claim. Required actual N1/All production choices remain a native gate before runtime acceptance/publication."
+    },
+    {
+      "claim": "Oldclient ignores wordquizguards",
+      "reportedBy": [
+        "Claude hypothesis",
+        "GPT Limits"
+      ],
+      "status": "resolved",
+      "resolution": "Existing documented compatibleclient prerequisitef9b59a2+ remains mandatory. This does not certify oldclient pools."
+    },
+    {
+      "claim": "Potential figurative emotional uses could qualify the not-composure wording",
+      "reportedBy": [
+        "Claude hypothesis"
+      ],
+      "status": "withdrawn",
+      "confidence": "high for scoped disposition, not corpus-wide impossibility",
+      "evidence": "JMdict1459650 weathernoun and1459660 weatherverb versus separate2859999feelings和ぐ; actual Daijisen modern sense1凪ぐ versus sense2和ぐ. words凪:41-45 says not a GENERAL equivalent and focuses HERE on wind/sea; words凪ぐ:44-48 explicitly teaches modernweather and ordinaryweather spelling.",
+      "decision": "No current sentence forbids all figurative creativity. No corpus evidence establishes a defect; preserve the hypothesis without manufacturing a rule or expanding the assignment."
+    },
+    {
+      "claim": "Whole-corpus kanjititle uniqueness not independently verified by reviewer",
+      "reportedBy": [
+        "Claude Limits"
+      ],
+      "status": "resolved",
+      "resolution": "Coordinator fresh allactualkanjititle scan finds calm seas;lull exactly once; validator0errors, batchaudit and exactruntimehashes pass. Not retroactive reviewer-independentGitverification."
+    }
+  ],
+  "optionalDispositions": [
+    {
+      "claim": "Mention nounなぎ and verb凪ぎます stem kana overlap",
+      "reportedBy": [
+        "Claude"
+      ],
+      "status": "optional",
+      "decision": "No edit. Current distinct dictionaryforms plus full kana paradigm and noun comparison already explain the scoped contrast."
+    },
+    {
+      "claim": "Add comparison JMdict1589220 citation in凪ぐ article",
+      "reportedBy": [
+        "Claude"
+      ],
+      "status": "optional",
+      "decision": "No edit. Complete applicable family already in source/review evidence; no mandatory percomparison footercitation quota."
+    },
+    {
+      "claim": "CiteJitsu historical wind-abbreviation derivation",
+      "reportedBy": [
+        "Claude"
+      ],
+      "status": "optional",
+      "decision": "No edit. Current clearly labelled mnemonic is not a historicalclaim. Supplied imageplaceholder limits do not authorize an expanded etymology."
+    },
+    {
+      "claim": "Smooth nounversusなadjective wording",
+      "reportedBy": [
+        "Claude"
+      ],
+      "status": "optional",
+      "decision": "No edit. Existing 凪です with kana and explicit noun explanation is comprehensible; no actionable defect established."
+    }
+  ],
+  "modelContributionComparison": {
+    "shared": "Bothinitials accepted all3completearticles, bothrawkunentries/separateexamples, no inventedon, modernweather/feelings/classicalboundary, 3wrongkanjilabels,7directguards,2mappedpairs and source/compatibility/nativefallbacklimits.",
+    "claudeUnique": "Unprovedfigurativeusagehypothesis and4optionalpolish/expansioncategories; none established mandatoryfix. Wholecorpusuniquenesslimit checkedmechanically. N1fallback/oldclientobservations equivalent toGPTLimits, not unique.",
+    "gptUnique": "No uniqueverifieddefect; detailed per-filefacetedverdicts and dictionaryfamily enumeration, substantive conclusions shared.",
+    "limits": "Common matchedsnapshot/task/sourceaccess; no defectquota or generalmodelranking. Allsectionsincludinghypotheses/optional/limits compared; labeldifferences do not create uniquecontribution."
+  },
+  "actionableRemainingTeachingFindings": 0,
+  "consequentialUnresolvedTeachingFindings": 0,
+  "textualReviewClosed": true,
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "mechanicalBatchAudit": {
+    "batch": "087",
+    "baseCommit": "6eaa018dcbcabe57d9e22ddf6b07c6b8ee2dfea6",
+    "draftKanji": 1,
+    "newWords": 2,
+    "changedReusedArticles": 0,
+    "requiredReciprocalPairs": 2,
+    "activatedBaselinePairs": 0,
+    "readingDispositions": 2,
+    "curatedOfferedKeys": 2,
+    "sourceOnlyOfferedKeys": 0,
+    "dictionaryFamilies": 25,
+    "exactBaseRuntimePreservedOutsideRecordedChanges": true,
+    "manifestFresh": true,
+    "contentVersion": "eb3a9413cccd4f57",
+    "limits": "Mechanical draft audit, not lexical-allocation/naturalness verification, independent review, native/phone acceptance or publication."
+  },
+  "runtimeHashesReverified": 8420,
+  "originalBaselineMetadataAndStrokesPreserved": {
+    "kanji": 985,
+    "words": 4942,
+    "strokes": 985
+  },
+  "freshFrozenLexicalPacketsVerified": 2,
+  "frozenInputHashesVerified": 5,
+  "allMappedReciprocalPairs": 2,
+  "directedLinksVerified": 4,
+  "directWordExclusionPairs": 7,
+  "actualHanCount": 21,
+  "nativeFontPending": [
+    "几"
+  ],
+  "checks": {
+    "validate": {
+      "path": "docs/n1-reviews/batch-087-textual-review-validate-611.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+    },
+    "manifest": {
+      "path": "docs/n1-reviews/batch-087-textual-review-manifest-611.txt",
+      "sha256": "ed99f8f8389004f833c7ecf3ae523dc2fb3d4cbbe82cbaf5ccbdfb18b7f23150"
+    },
+    "audit": {
+      "path": "docs/n1-reviews/batch-087-textual-review-audit-611.txt",
+      "sha256": "8be3cf4c062e89e138f15ed68fb759435fa6b7e018eae34d765c4f4b19fc7ae6"
+    },
+    "tests": {
+      "path": "docs/n1-reviews/batch-087-textual-review-tests-611.txt",
+      "sha256": "aeabcd29366d4e727ce8de4008c35ca0204509e4b504791faa0f66dbd4c8be9e"
+    }
+  },
+  "focusedTestsPassedThisCheckpoint": 34,
+  "newNativeOrAndroidClaimed": false,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "nextAction": "SAME087 fresh non-skipped sibling Android RealContentTest THREE cases and RareHanTest ONE case against THIS content tree; preserve exact XML/provenance and normally signed local evidence, then yield. Qualified TESTONLY Android1c1b7bf42cc91d820a93169f1088dc647ac51c0d atop unchanged productionf9b59a2 is not latest app main. Explicit JAVA_HOME=C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot and ANDROID_HOME=C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk in same shell, one Gradle worker and quoted '-Pkotlin.compiler.execution.strategy=in-process'. Parent19008 already owns runner.lock; NO child reacquisition/delete/unlock or parent recovery wrapper copy. Keep exact signed-head/checkpoint/wholly-clean-worktree/verified-parent-ancestry checks; preserve/report/yield actual new denial, signing hang or uncertain ownership. Textual087 closed with two serial blind families on unchanged f6391022; no actionable defect or consequential unresolved teaching claim. Both kun entries/order retained and selected: なぎ/な.ぐ; explicit on[]. Modern weather 凪ぐ and feelings 和ぐ/classical forms kept separate. Two all-mapped pairs/four directions, seven direct word guards, no changed reused teaching. Later native gate requires all21 scoped Han especially几, four production font families/system fallback, six-stroke drawing, two queuedkeysなぎ/なぐ, all three new article/SystemBack/offline routes and full archive production ContentSync ONCE with terminal case0; no guard or heap increase. N1 pool lacks N4風 and needs an actual production fallback check; All pool differs. Both original review sessions retained for dependent visuals, no new blind credit. All original source/baseline/link/reading/twofamily/native/currentmain-normalmerge/re-review/checks/normal-signing/owner-fastforward/terminalCI/EVERYimmutableZIPentryhash/original18000entries42MiBcompressed80MiBinflated56MiBretained/media/path/ownerissue gates remain. Published113/1228,1115remaining unchanged; physicalphone/generalrelease/whole-set outstanding. No088, native/reviewer/publication or second runner in next host checkpoint.",
+  "limits": [
+    "Textual closure only. Fresh non-skipped Android/native/fourfont/visual/combinedmain/signing/publication gates pending; runtime not accepted or published.",
+    "Both actual model families independently received identical146190byte2830line packet with25distinct completeJMdictfamilies,5rawcharacters,16completearticlebodies including3new and0changedreuseddiffs. Each returned one exact fullpacketview, no truncation/tooloverlap/unfinishedtool. Bytes do not prove comprehension or equivalent fresh-read depth.",
+    "Original reports preserved verbatim. No author adjudication or other report supplied to initial reviewers. No teaching fix needed; zero dependent textual confirmations, original sessions retained for later visuals.",
+    "PublicDaijisen/Jitsu/Nipponica/Paraglider text extracted by coordinator from committedHTML; formatting/links stripped, imageplaceholders retained. Not independentupstream retrieval, historical-glyphinspection or contemporaryfrequencymeasurement.",
+    "Both rawkunreadings/order preserved and selectedなぎ/な.ぐ; expliciton[]. Weather noun/modern gu-endingverb kept separate from feelings和ぐ and classical conjugation. No universal ban on creative figurativeusage or wordlevel/frequency inferred from character membership/grade9.",
+    "Twoallmappedpairs/fourdirections, noactivatedbaselinepair/reusedteaching. Sevendirectguards not transitivecliques or universal livepool safety. Allpool has3curatedwrongcards; N1 excludes N4風 and needs actualproductionfallbackcheck. Larger/random/custompools uncertified.",
+    "All21scopedHan especially几 missingmainbundledcmap needfreshnativefourfont/systemfallback legibility; cmapabsence notglyphfailure. Sixpinnedstrokes unchanged. Inheritedall40font evidence stayshistorical.",
+    "QualifiedTESTONLYAndroid1c1b7bf4 atop unchangedproductionf9b59a2 is not latestappmain. Compatibleclientf9b59a2+ required; oldclients ignorecuration/wordguards. Physicalphone/generalrelease/whole-set outstanding.",
+    "Published113/1228,1115acceptanceremainder unchanged. Sixseparate earlierN2sourcemembers保案派第策結 are not acceptedissue60 additions or candidates toduplicate/relevel.",
+    "Alloriginalnormalmerge/substantiveteachingreview/validation/normalsigning/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifestentryhash/original18000entries42MiBcompressed80MiBinflated56MiBretained/perfilemedia/safepaths/ownerissue gates remain; no guardincrease or algorithmchange.",
+    "Liveparent19008 retainsrunner.lock; nochildacquisition/delete/unlock. Approvedcontrolhelpers/committedsourcepackets/frozenworkspaceinputs only; nooptionalhistoricalsessionhelper access, policychange or actualnewpermissiondenial."
+  ]
+}
