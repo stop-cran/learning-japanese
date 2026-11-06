@@ -37,7 +37,28 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 075: source prepared, not drafted
+## Batch 075: local unreviewed runtime draft
+
+The bounded runtime draft now adds **典**, its pinned eight-stroke
+geometry and only necessary **香典** こうでん. Full metadata keeps
+テン・デン /ふみ・のり in source order; both on-readings have their own
+linked practice row and `quizKunyomi: []` leaves the qualified native
+lookup readings unoffered. Four exact reused component links and six
+older-kanji navigation edits complete twelve all-mapped reciprocal
+pairs, without changing old identities, levels, readings or exclusions.
+The three new-word exclusions are direct gift/contribution-label
+safeguards, not a transitive group.
+
+The source preparation described below remains historical evidence.
+Execution 497's [draft audit](n1-sources/batch-075-draft-audit.json)
+records actual runtime/source/quiz/link/baseline and complete scoped
+Han/cmap checks. Those checks are not independent linguistic review
+or native fallback acceptance. This checkpoint is **local and unreviewed**:
+no batch-075 row is review-closed or published. Both serial blind
+model-family reviews and all later acceptance/publication gates remain.
+Published coverage stays **101/1,228 additions; 1,127 remain**.
+
+### Preserved source preparation
 
 The [source packet](n1-sources/batch-075-progress.json) freezes **典**,
 source row 84, after batch 074's verified publication. Complete evidence
