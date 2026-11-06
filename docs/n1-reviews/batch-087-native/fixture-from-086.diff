@@ -1,0 +1,631 @@
+--- docs/n1-reviews/batch-086-native/N1Batch086NativeTest.kt
++++ N1Batch087NativeTest.kt
+@@ -50,22 +50,22 @@
+ import java.util.UUID
+ 
+-private fun disposable086() {
++private fun disposable087() {
+     assertEquals("true", InstrumentationRegistry.getArguments().getString("n1Disposable"))
+     assertTrue(Build.HARDWARE in setOf("ranchu", "goldfish"))
+ }
+ 
+-class N1Batch086GlyphTest {
++class N1Batch087GlyphTest {
+     @get:Rule val rule = createAndroidComposeRule<ComponentActivity>()
+ 
+-    @Test fun commonplaceLookalikesAndRadicalFallbacksAcrossFourProductionFamilies() {
+-        disposable086()
++    @Test fun calmSeaLookalikesAndRadicalFallbacksAcrossFourProductionFamilies() {
++        disposable087()
+         val context = InstrumentationRegistry.getInstrumentation().targetContext
+         val fonts = listOf(KanjiFont.Gothic, KanjiFont.Mincho, KanjiFont.Textbook, KanjiFont.Brush)
+-        val pages = listOf("丶 丸 九 使 例 全 几 凡 凹 判 前 号 味 図 地 平 意 明 書 概 注 確 筆 解", "記 認 説 読 論 辞 鍵", "凡 丸 九 凹 几 丶 平凡 凡例 凡そ 凡て")
++        val pages = listOf("今 冷 几 凡 凪 凹 化 和 夕 心 方 日 時 朝 止 海 着 穏 落 静 風", "凪 風 止 几 凡 凹 凪ぐ 朝凪 夕凪")
+         val page = mutableStateOf(0)
+         rule.setContent {
+             MaterialTheme {
+                 Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+-                    Text("Batch 086: commonplace / look-alikes / radical fallback")
++                    Text("Batch 087: calm seas / look-alikes / radical fallback")
+                     Text("Panel ${page.value + 1} / ${pages.size}")
+                     fonts.forEach { font ->
+@@ -73,5 +73,5 @@
+                         Text(pages[page.value], fontFamily = font.family(), fontSize = 18.sp, lineHeight = 26.sp)
+                     }
+-                    Text("Inspect all 31 scoped Han; focused 凡/丸/九/凹, 丶/几. Fallback families may coincide.", fontSize = 16.sp)
++                    Text("Inspect all 21 scoped Han; focused 凪/風/止/凡/凹, 几. Fallback families may coincide.", fontSize = 16.sp)
+                 }
+             }
+@@ -84,5 +84,5 @@
+         for ((index, typeface) in typefaces.withIndex()) {
+             val hashes = mutableSetOf<String>()
+-            for (char in listOf("丶", "丸", "九", "使", "例", "全", "几", "凡", "凹", "判", "前", "号", "味", "図", "地", "平", "意", "明", "書", "概", "注", "確", "筆", "解", "記", "認", "説", "読", "論", "辞", "鍵")) {
++            for (char in listOf("今", "冷", "几", "凡", "凪", "凹", "化", "和", "夕", "心", "方", "日", "時", "朝", "止", "海", "着", "穏", "落", "静", "風")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+@@ -105,5 +105,5 @@
+                 image.recycle()
+             }
+-            for (word in listOf("平凡", "凡例", "凡そ", "凡て")) {
++            for (word in listOf("凪", "凪ぐ")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+@@ -132,5 +132,5 @@
+             }
+         }
+-        assertEquals(140, rows.length())
++        assertEquals(92, rows.length())
+         for (index in pages.indices) {
+             rule.runOnIdle { page.value = index }
+@@ -138,28 +138,28 @@
+             rule.onAllNodesWithText(pages[index]).assertCountEquals(4)
+             for (fontIndex in fonts.indices) rule.onAllNodesWithText(pages[index])[fontIndex].assertIsDisplayed()
+-            File(context.getExternalFilesDir(null), "n1-086-font-panel-${index + 1}.png").outputStream().use {
++            File(context.getExternalFilesDir(null), "n1-087-font-panel-${index + 1}.png").outputStream().use {
+                 assertTrue(rule.onRoot().captureToImage().asAndroidBitmap().compress(Bitmap.CompressFormat.PNG, 100, it))
+             }
+         }
+-        File(context.getExternalFilesDir(null), "n1-086-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-087-font-raster.json").writeText(JSONObject()
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+             .put("fontScale", context.resources.configuration.fontScale).put("rows", rows)
+-            .put("individualGlyphProbes", 124).put("wholeWordRasterProbes", 16).put("panels", 3)
+-            .put("limits", "31 actual scoped Han including exact 丶/几 fallback inspection, four production families, three bounded Compose panels and sixteen whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
++            .put("individualGlyphProbes", 84).put("wholeWordRasterProbes", 8).put("panels", 2)
++            .put("limits", "21 actual scoped Han including exact 几 fallback inspection, four production families, two bounded Compose panels and eight whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
+             .toString(2))
+     }
+ }
+ 
+-class N1Batch086ArticleTest {
++class N1Batch087ArticleTest {
+     @get:Rule val rule = createEmptyComposeRule()
+     private lateinit var app: KanjiApp
+     private lateinit var scenario: ActivityScenario<MainActivity>
+ 
+-    @Test fun fullSingleImportOfflineCommonplaceSevenReciprocalPairsTwoOnKeysNoKunDrawingAndSystemBack() {
+-        disposable086()
++    @Test fun fullSingleImportOfflineCalmSeaTwoReciprocalPairsTwoKunKeysNoOnDrawingAndSystemBack() {
++        disposable087()
+         val instrumentation = InstrumentationRegistry.getInstrumentation()
+         app = instrumentation.targetContext.applicationContext as KanjiApp
+-        val source = RepoSource("acceptance-fixture", "n1-086-${UUID.randomUUID()}", "main")
+-        val head = "6667318d9d5bdf8ec8c899db64395e2955612432"
++        val source = RepoSource("acceptance-fixture", "n1-087-${UUID.randomUUID()}", "main")
++        val head = "404f507d5f9d3abe4e8bdc5e72bd41ea5607c521"
+         assertTrue(app.settings.setSource("https://github.com/${source.id}", source.branch))
+         var archiveRequests = 0
+@@ -169,5 +169,5 @@
+                 source.commitZipUrl(head) -> {
+                     archiveRequests++
+-                    instrumentation.context.assets.open("n1-batch-086-6667318d-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-087-404f507d-envelope.zip")
+                 }
+                 else -> error("Unexpected fixture request: $url")
+@@ -184,9 +184,9 @@
+         val updated = result as SyncResult.Updated
+         assertEquals(1, archiveRequests)
+-        assertEquals(1109, updated.kanji)
+-        assertEquals(5064, updated.words)
++        assertEquals(1110, updated.kanji)
++        assertEquals(5066, updated.words)
+         assertTrue(updated.problems.toString(), updated.problems.isEmpty())
+         val meta = requireNotNull(runBlocking { app.db.content().meta(source.id) })
+-        assertEquals("86e8cb13aa72ecd0", meta.contentVersion)
++        assertEquals("eb3a9413cccd4f57", meta.contentVersion)
+         assertEquals(0, meta.problems)
+         assertNull(meta.grammarProblem)
+@@ -196,18 +196,18 @@
+         assertEquals(ContentParser.KANJI_READING_PARSER_EPOCH, meta.kanjiReadingParserEpoch)
+         val n1 = runBlocking { app.db.content().kanjiLite(source.id).filter { it.jlpt == 1 } }
+-        assertEquals(118, n1.size)
+-        val commonplace = n1.single { it.kanji == "凡" }
+-        assertEquals(listOf("丸", "九", "凹"), commonplace.distractors.splitSep())
+-        assertEquals(listOf("ボン", "ハン"), commonplace.onyomi.splitSep())
+-        assertEquals(listOf("およ.そ", "おうよ.そ", "すべ.て"), commonplace.kunyomi.splitSep())
+-        assertNotNull(commonplace.quizOnyomi)
+-        assertNotNull(commonplace.quizKunyomi)
+-        assertEquals(listOf("ボン", "ハン"), commonplace.quizOnyomi?.splitSep())
+-        assertEquals(emptyList<String>(), commonplace.quizKunyomi?.splitSep())
+-        assertEquals(listOf("ぼん", "はん"), commonplace.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(emptyList<String>(), commonplace.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(119, n1.size)
++        val calmSea = n1.single { it.kanji == "凪" }
++        assertEquals(listOf("風", "凡", "凹"), calmSea.distractors.splitSep())
++        assertEquals(emptyList<String>(), calmSea.onyomi.splitSep())
++        assertEquals(listOf("なぎ", "な.ぐ"), calmSea.kunyomi.splitSep())
++        assertNotNull(calmSea.quizOnyomi)
++        assertNotNull(calmSea.quizKunyomi)
++        assertEquals(emptyList<String>(), calmSea.quizOnyomi?.splitSep())
++        assertEquals(listOf("なぎ", "な.ぐ"), calmSea.quizKunyomi?.splitSep())
++        assertEquals(emptyList<String>(), calmSea.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(listOf("なぎ", "なぐ"), calmSea.toReadingCard().quizKeys(ReadingKind.Kun))
+         val expectedMeanings = mapOf(
+-            "凡" to "commonplace; mediocre", "丸" to "round; circle",
+-            "九" to "nine", "凹" to "concave; sunken",
++            "凪" to "calm seas; lull", "風" to "wind; style",
++            "凡" to "commonplace; mediocre", "凹" to "concave; sunken",
+         )
+         val all = runBlocking { app.db.content().kanjiLite(source.id) }
+@@ -215,14 +215,14 @@
+         for ((poolName, pool) in listOf("N1" to n1, "All" to all)) {
+             val cards = pool.map { QuizCard(it.kanji, it.title, it.tags.splitSep(), it.distractors.splitSep()) }
+-            val target = cards.single { it.kanji == "凡" }
+-            assertEquals(listOf("丸", "九", "凹"), target.distractors)
+-            val options = QuizBuilder.options(target, cards, kotlin.random.Random(604))
++            val target = cards.single { it.kanji == "凪" }
++            assertEquals(listOf("風", "凡", "凹"), target.distractors)
++            val options = QuizBuilder.options(target, cards, kotlin.random.Random(613))
+             assertEquals(4, options.size)
+             if (poolName == "All") {
+                 assertEquals(expectedMeanings, options.associate { it.kanji to it.title })
+             } else {
+-                assertEquals(setOf("凡", "凹"), cards.filter { it.kanji in expectedMeanings }.map { it.kanji }.toSet())
++                assertEquals(setOf("凪", "凡", "凹"), cards.filter { it.kanji in expectedMeanings }.map { it.kanji }.toSet())
+                 assertTrue(options.any { it.kanji == "凹" })
+-                assertEquals(2, options.count { it.kanji !in expectedMeanings })
++                assertEquals(1, options.count { it.kanji !in expectedMeanings })
+             }
+             checkedPools.put(poolName, JSONObject().put("poolSize", pool.size)
+@@ -232,8 +232,12 @@
+                 .put("fallbackOptions", options.count { it.kanji !in expectedMeanings }))
+         }
+-        val importedLegend = requireNotNull(runBlocking { app.db.content().word(source.id, "凡例") })
+-        assertEquals(listOf("注", "説明", "解説", "メモ", "筆記", "はじめに", "概論", "鍵"), importedLegend.quizExclusions.splitSep())
+-        assertEquals("はんれい", importedLegend.reading)
+-        assertNull(importedLegend.jlpt)
++        val importedNoun = requireNotNull(runBlocking { app.db.content().word(source.id, "凪") })
++        val importedVerb = requireNotNull(runBlocking { app.db.content().word(source.id, "凪ぐ") })
++        assertEquals(listOf("穏やか", "静か"), importedNoun.quizExclusions.splitSep())
++        assertEquals(listOf("静まる", "止む", "落ち着く", "穏やか", "静か"), importedVerb.quizExclusions.splitSep())
++        assertEquals("なぎ", importedNoun.reading)
++        assertEquals("なぐ", importedVerb.reading)
++        assertNull(importedNoun.jlpt)
++        assertNull(importedVerb.jlpt)
+         val now = System.currentTimeMillis()
+         app.settings.sync.lastCheckMs = now
+@@ -249,5 +253,5 @@
+                     app.db.reviews().putState(ReviewStateEntity(
+                         source.id, "jlpt-n1", card.kanji, StudyMode.Quiz.name, "Review", 30.0, 5.0,
+-                        if (card.kanji == "凡") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "凪") now - 60_000 else now + 30L * 86_400_000,
+                         now - 2L * 86_400_000, 3, 0,
+                     ))
+@@ -255,5 +259,5 @@
+                         app.db.reviews().putState(ReviewStateEntity(
+                             source.id, "jlpt-n1", card.kanji, kind.mode.name, "Review", 30.0, 5.0,
+-                            if (card.kanji == "凡" && kind == ReadingKind.On && key in setOf("ぼん", "はん")) now - 60_000
++                            if (card.kanji == "凪" && kind == ReadingKind.Kun && key in setOf("なぎ", "なぐ")) now - 60_000
+                             else now + 30L * 86_400_000,
+                             now - 2L * 86_400_000, 3, 0, reading = key,
+@@ -262,5 +266,5 @@
+                 }
+                 for (days in 1..2) app.db.reviews().putLog(ReviewLogEntity(
+-                    0, source.id, "jlpt-n1", "凡", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "凪", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+                 ))
+             }
+@@ -270,17 +274,17 @@
+         val evidence = JSONObject().put("contentSnapshot", head).put("contentVersion", meta.contentVersion)
+             .put("archiveRequests", archiveRequests).put("importedKanji", updated.kanji).put("importedWords", updated.words)
+-            .put("directWordGuardCount", importedLegend.quizExclusions.splitSep().size)
++            .put("directWordGuardCount", importedNoun.quizExclusions.splitSep().size + importedVerb.quizExclusions.splitSep().size)
+             .put("problems", updated.problems.size).put("n1Cards", n1.size)
+             .put("acceptedReadingParserEpoch", meta.kanjiReadingParserEpoch)
+-            .put("fullOnyomi", JSONArray(commonplace.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(commonplace.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(commonplace.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(commonplace.toReadingCard().quizKeys(ReadingKind.Kun)))
+-            .put("liteQuizOnyomi", JSONArray(requireNotNull(commonplace.quizOnyomi).splitSep()))
+-            .put("liteQuizKunyomi", JSONArray(requireNotNull(commonplace.quizKunyomi).splitSep()))
++            .put("fullOnyomi", JSONArray(calmSea.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(calmSea.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(calmSea.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(calmSea.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("liteQuizOnyomi", JSONArray(requireNotNull(calmSea.quizOnyomi).splitSep()))
++            .put("liteQuizKunyomi", JSONArray(requireNotNull(calmSea.quizKunyomi).splitSep()))
+             .put("productionBuilderN1AndAllExactChoices", checkedPools)
+             .put("transport", "Exact full git envelope through production ContentSync ONCE; synthetic source/HEAD")
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+-            .put("fixture", "Other N1 meanings/readings postponed; 凡 meaning and exactly onぼん/はん due; explicit kun[] gives no questions. Two historical good 凡 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 凪 meaning and exactly kunなぎ/なぐ due; explicit on[] gives no questions. Two historical good 凪 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+             .put("phoneEvidence", false).put("passed", false)
+         scenario = ActivityScenario.launch(MainActivity::class.java)
+@@ -289,179 +293,92 @@
+             click("N1")
+             rule.waitUntil(30_000) { app.settings.stack.value == "jlpt-n1" }
+-            await("N1 · 118 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 119 cards").performScrollTo().assertIsDisplayed()
+             capture("selection")
+             click("Browse all kanji")
+-            rule.onNode(hasSetTextAction()).performTextReplacement("凡")
+-            click("commonplace; mediocre")
+-            await("凡 — commonplace; mediocre")
+-            show(articleBullet("Strokes: 3 · Key (radical): 几 (no. 16) · JLPT: N1 (community list)"), "kanji-01")
++            rule.onNode(hasSetTextAction()).performTextReplacement("凪")
++            click("calm seas; lull")
++            await("凪 — calm seas; lull")
++            show(articleBullet("Strokes: 6 · Key (radical): 几 (no. 16) · JLPT: N1 (community list)"), "kanji-01")
+             section("Meaning and origin")
+-            show(articleBullet("凡 can express being ordinary or unremarkable, as in 平凡 へいぼん. It also has a broader general or overall association, used in 凡例 はんれい, a book's explanatory conventions or a map's legend. Do not translate every occurrence as \"mediocre.\""), "kanji-03")
+-            show(articleBullet("Modern-shape mnemonic, not etymology: imagine the 几-shaped frame with one ordinary dot 丶 inside. This is a memory aid for the current shape, not a historical derivation or a claim about a phonetic component."), "kanji-04")
++            show(articleBullet("凪 concerns a lull in the wind and calm conditions at sea. The noun 凪 なぎ names the calm; the verb 凪ぐ なぐ describes the wind or sea becoming calm. This is not a general translation of every English use of \"calm.\""), "kanji-03")
++            show(articleBullet("Modern-shape mnemonic, not etymology: picture the outer frame of 風, \"wind,\" with 止, \"stop,\" inside: the wind has stopped. The indexing radical is 几, the frame, not the whole character 風."), "kanji-04")
++            show(articleBullet("Digital Daijisen identifies 凪 as a kokuji, a character created in Japan. The mnemonic above is a memory aid for its modern shape, not a detailed historical derivation."), "kanji-05")
+             section("Readings")
+-            show(readingExample("ボン"), "kanji-09")
+-            show(readingExample("平凡 へいぼん — ordinary; unremarkable"), "kanji-11")
+-            show(readingExample("ハン"), "kanji-12")
+-            show(readingExample("凡例 はんれい — explanatory notes; legend"), "kanji-14")
+-            show(readingExample("およ.そ"), "kanji-15")
+-            show(readingExample("凡そ およそ — approximately; generally; usually written in kana"), "kanji-17")
+-            show(readingExample("おうよ.そ"), "kanji-18")
+-            show(readingExample("Preserved exactly from KANJIDIC2; no verified modern word example is supplied here."), "kanji-20")
+-            show(readingExample("すべ.て"), "kanji-21")
+-            show(readingExample("凡て すべて — everything; a rare kanji spelling of the word taught under 全て"), "kanji-23")
+-            show(articleBullet("The two on-readings are selected for reading practice. The native readings remain recognition or lookup information here. In particular, the source-only おうよ.そ is not silently changed to おおよ.そ or treated as a verified word. In 凡そ and 凡て, the final そ and て are written outside the kanji."), "kanji-24")
++            show(readingExample("なぎ"), "kanji-10")
++            show(readingExample("凪 なぎ — calm at sea; lull"), "kanji-12")
++            show(readingExample("な.ぐ"), "kanji-13")
++            show(readingExample("凪ぐ なぐ — become calm (wind/sea)"), "kanji-15")
++            show(articleBullet("Both native readings are selected for practice. In 凪ぐ, 凪 writes な and the ending ぐ stays outside the kanji. No on-reading is supplied in the source metadata."), "kanji-16")
+             section("Common words")
+-            show(articleBullet("平凡 へいぼん — ordinary; unremarkable"), "kanji-26")
+-            show(articleBullet("凡例 はんれい — explanatory notes; legend"), "kanji-27")
+-            show(articleBullet("For recognition, 凡そ corresponds to usually-kana およそ. The rare spelling 凡て corresponds to 全て すべて; the pronunciation and the ordinary kana word are not thereby rare."), "kanji-28")
++            show(articleBullet("凪 なぎ — calm at sea; lull"), "kanji-18")
++            show(articleBullet("凪ぐ なぐ — become calm (wind/sea)"), "kanji-19")
++            show(articleBullet("For recognition, 朝凪 (あさなぎ) is the morning calm over the sea, and 夕凪 (ゆうなぎ) is the evening calm. These are whole-word readings."), "kanji-20")
+             section("Notes")
+-            show(articleBullet("Read 凡例 as はんれい, not ぼんれい. The same pronunciation also belongs to 判例 (はんれい), \"judicial precedent,\" which is a different word."), "kanji-30")
+-            show(articleBullet("丸 concerns roundness or a circle, and 九 means nine. Compare the position of the dot and the long outer stroke rather than treating these similar shapes as interchangeable."), "kanji-31")
+-            show(articleBullet("凹 describes a concave or sunken shape, not mediocrity."), "kanji-32")
+-            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Word pairs: JMdict, entries 1507910, 1523690, 1523450 and 1595730. Reading allocation: Digital Daijisen, 凡."), "kanji-33")
++            show(articleBullet("Distinguish the noun なぎ from the dictionary-form verb なぐ: 凪です (なぎです), \"it is calm at sea,\" versus 風が凪ぐ (かぜがなぐ), \"the wind dies down.\""), "kanji-22")
++            show(articleBullet("風 concerns wind or style, not the lull itself. 凡 has a dot inside its frame and concerns the ordinary or general; 凹 describes a concave or sunken shape."), "kanji-23")
++            show(articleBullet("Grade 9 is the source's name-use classification, not a claim that 凪 occurs only in names. The weather noun and verb above are not names."), "kanji-24")
++            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Word pairs: JMdict, entries 1459650, 1459660, 1696000 and 1739920. Usage: Digital Daijisen, 凪 and 凪ぐ."), "kanji-25")
+             section("Common words")
+-            show(articleBullet("平凡 へいぼん — ordinary; unremarkable"), "ordinary-forward")
+-            inline(await(articleBullet("平凡 へいぼん — ordinary; unremarkable")), "平凡", 0)
++            show(articleBullet("凪 なぎ — calm at sea; lull"), "noun-forward")
++            inline(await(articleBullet("凪 なぎ — calm at sea; lull")), "凪", 0)
+             await("Article contents")
+-            await("平凡 (へいぼん) - ordinary; unremarkable")
++            await("凪 (なぎ) — calm at sea; lull")
++            section("Meaning")
++            show(articleBullet("凪 is a noun for a lull in the wind, especially the calm conditions at sea when the wind has died down. It names a weather condition, not a person's composure."), "noun-02")
++            show(articleBullet("今日は凪です。 (きょうはなぎです。) — It is calm at sea today."), "noun-03")
++            show(articleBullet("夕凪の海は静かだった。 (ゆうなぎのうみはしずかだった。) — The sea was still in the evening calm."), "noun-04")
++            show(articleBullet("朝凪 (あさなぎ) means the morning calm over the sea; 夕凪 (ゆうなぎ) means the evening calm. A lull can be temporary; the word does not promise that the sea will remain calm all day."), "noun-05")
+             section("How the kanji combine")
+-            show(articleBullet("平 has an ordinary or level association here; 凡 (ボン) contributes common or ordinary. The overlapping contributions reinforce the idea of not standing out: ヘイ + ボン."), "ordinary-component")
+-            inline(await(articleBullet("平 has an ordinary or level association here; 凡 (ボン) contributes common or ordinary. The overlapping contributions reinforce the idea of not standing out: ヘイ + ボン.")), "平", 0)
+-            await("Article contents")
+-            await("平 — flat; peaceful")
+-            section("Common words")
+-            show(articleBullet("平凡 へいぼん — ordinary; unremarkable"), "ordinary-changed-reused")
+-            inline(await(articleBullet("平凡 へいぼん — ordinary; unremarkable")), "平凡", 0)
+-            await("Article contents")
+-            await("平凡 (へいぼん) - ordinary; unremarkable")
+-            back()
+-            await(articleBullet("平凡 へいぼん — ordinary; unremarkable")).assertIsDisplayed()
+-            section("Common words")
+-            capture("ordinary-back-to-reused-kanji")
+-            back()
+-            await(articleBullet("平 has an ordinary or level association here; 凡 (ボン) contributes common or ordinary. The overlapping contributions reinforce the idea of not standing out: ヘイ + ボン.")).assertIsDisplayed()
++            show(articleBullet("This is one native word written with 凪, not a multi-kanji compound. The whole character writes なぎ. Compare the related verb 凪ぐ (なぐ), \"become calm (wind/sea).\""), "noun-07")
++            section("Synonyms and antonyms")
++            show(articleBullet("穏やか (おだやか) and 静か (しずか) can describe calm sea conditions, but they are な-adjectives with broader uses. 凪 is a noun: 凪です (なぎです), rather than treating it as a な-adjective. 時化 (しけ), \"stormy weather at sea,\" is a contrasting noun; JMdict marks that word as usually written in kana."), "noun-09")
++            section("Distinctive meaning")
++            show(articleBullet("For a person's cool-headedness, 冷静 (れいせい) is more appropriate than using 凪 as a general equivalent of English \"calm.\" 凪 focuses here on wind and sea conditions. To describe the change into those conditions, use 凪ぐ, not the noun alone as a verb."), "noun-11")
++            show(articleBullet("Dictionary: JMdict, entries 1459650, 1696000, 1739920 and 1816340. Usage: Digital Daijisen and Nipponica, 凪."), "noun-12")
+             section("How the kanji combine")
+-            capture("ordinary-back-to-word")
+-            section("How the kanji combine")
+-            show(articleBullet("平 has an ordinary or level association here; 凡 (ボン) contributes common or ordinary. The overlapping contributions reinforce the idea of not standing out: ヘイ + ボン."), "ordinary-reverse")
+-            inline(await(articleBullet("平 has an ordinary or level association here; 凡 (ボン) contributes common or ordinary. The overlapping contributions reinforce the idea of not standing out: ヘイ + ボン.")), "凡", 45)
++            show(articleBullet("This is one native word written with 凪, not a multi-kanji compound. The whole character writes なぎ. Compare the related verb 凪ぐ (なぐ), \"become calm (wind/sea).\""), "noun-reverse")
++            inline(await(articleBullet("This is one native word written with 凪, not a multi-kanji compound. The whole character writes なぎ. Compare the related verb 凪ぐ (なぐ), \"become calm (wind/sea).\"")), "凪", 37)
+             await("Article contents")
+             section("Readings")
+-            show(readingExample("ボン"), "ordinary-kanji-backlink")
+-            back()
+-            await(articleBullet("平 has an ordinary or level association here; 凡 (ボン) contributes common or ordinary. The overlapping contributions reinforce the idea of not standing out: ヘイ + ボン.")).assertIsDisplayed()
++            show(readingExample("なぎ"), "noun-kanji-backlink")
++            back()
++            await(articleBullet("This is one native word written with 凪, not a multi-kanji compound. The whole character writes なぎ. Compare the related verb 凪ぐ (なぐ), \"become calm (wind/sea).\"")).assertIsDisplayed()
+             section("How the kanji combine")
+-            capture("ordinary-system-back-to-word")
+-            back()
+-            await(articleBullet("平凡 へいぼん — ordinary; unremarkable")).assertIsDisplayed()
++            capture("noun-system-back-to-word")
++            back()
++            await(articleBullet("凪 なぎ — calm at sea; lull")).assertIsDisplayed()
+             section("Common words")
+-            capture("ordinary-system-back-to-kanji")
++            capture("noun-system-back-to-kanji")
+             section("Common words")
+-            show(articleBullet("凡例 はんれい — explanatory notes; legend"), "legend-forward")
+-            inline(await(articleBullet("凡例 はんれい — explanatory notes; legend")), "凡例", 0)
++            show(articleBullet("凪ぐ なぐ — become calm (wind/sea)"), "verb-forward")
++            inline(await(articleBullet("凪ぐ なぐ — become calm (wind/sea)")), "凪ぐ", 0)
+             await("Article contents")
+-            await("凡例 (はんれい) — explanatory notes; legend")
+-            await("凡例 (はんれい) — explanatory notes; legend")
++            await("凪ぐ (なぐ) — become calm (wind/sea)")
+             section("Meaning")
+-            show(articleBullet("凡例 names explanatory conventions or usage notes, often at the beginning of a dictionary or another reference book. It can explain how to read entries, abbreviations or symbols. On a map or diagram, it means the legend explaining the symbols, not a legendary story."), "legend-02")
+-            show(articleBullet("辞書を使う前に、凡例を読んでください。 (じしょをつかうまえに、はんれいをよんでください。) — Please read the usage notes before using the dictionary."), "legend-03")
+-            show(articleBullet("地図の凡例で、記号の意味を確認しました。 (ちずのはんれいで、きごうのいみをかくにんしました。) — I checked the meanings of the symbols in the map's legend."), "legend-04")
+-            show(articleBullet("Both examples use the noun: 凡例を読む (はんれいをよむ), \"read the explanatory notes,\" and 地図の凡例 (ちずのはんれい), \"a map's legend.\""), "legend-05")
++            show(articleBullet("凪ぐ is an intransitive godan verb: the wind dies down or the sea becomes calm. The wind or sea is the subject, marked with が; this is not a verb for someone actively calming another person."), "verb-02")
++            show(articleBullet("夕方、風が凪いだ。 (ゆうがた、かぜがないだ。) — The wind died down in the evening."), "verb-03")
++            show(articleBullet("凪いだ海は静かだった。 (ないだうみはしずかだった。) — The sea was still after it had calmed."), "verb-04")
++            show(articleBullet("The ぐ ending changes as in other gu-ending godan verbs: 凪ぎます (なぎます), 凪がない (ながない), 凪いで (ないで), and 凪いだ (ないだ). In 凪いだ海 (ないだうみ), the past form describes the sea that has become calm."), "verb-05")
+             section("How the kanji combine")
+-            show(articleBullet("凡 contributes a general or overall scope here, not a judgment of mediocrity. 例 contributes conventions or established usage, not only an individual example. Together, they concern the conventions for using or interpreting the material. The on-readings are ハン + レイ: はんれい. This association helps remember the word; it is not a historical derivation."), "legend-07")
++            show(articleBullet("凪 supplies the calm-wind/sea association and writes な; ぐ is written outside the kanji. This is one native verb, not a multi-kanji compound. The related noun 凪 is read なぎ: 凪です (なぎです), \"it is calm at sea.\""), "verb-07")
+             section("Synonyms and antonyms")
+-            show(articleBullet("説明 (せつめい), \"explanation,\" and 解説 (かいせつ), \"explanation; commentary,\" are broader. 注 (ちゅう) is an annotation that may explain a particular passage. A 凡例 explains conventions for the work or its symbols; it need not be a separate note on each difficult word. There is no useful direct antonym."), "legend-09")
++            show(articleBullet("止む (やむ), \"cease; let up,\" can also describe wind stopping. 静まる (しずまる), \"quiet down; subside,\" is broader than this weather verb. Neither is an unrestricted replacement in every sentence. The noun 時化 (しけ), \"stormy weather at sea,\" provides a contrasting condition, not an opposite verb with the same conjugation."), "verb-09")
+             section("Distinctive meaning")
+-            show(articleBullet("Do not use 凡例 for every introductory paragraph, example or personal memo. A book's はじめに, \"introduction; preface,\" may discuss its purpose without giving the usage conventions that a 凡例 provides. Context determines whether English \"usage notes,\" \"explanatory notes,\" \"legend\" or \"key\" fits."), "legend-11")
+-            show(articleBullet("The homophone 判例 (はんれい) means a judicial precedent, not a map legend. Learn the whole spelling and reading rather than choosing ボン merely because it occurs in 平凡 (へいぼん)."), "legend-12")
+-            show(articleBullet("Dictionary: JMdict, entry 1523690, senses 1–2; Digital Daijisen, 凡例."), "legend-13")
++            show(articleBullet("This article teaches the modern weather verb 凪ぐ. Dictionaries distinguish 和ぐ (なぐ), for a mind or feelings becoming calm; do not transfer the example 心が和ぐ (こころがなぐ), \"one's heart becomes calm,\" to the ordinary weather spelling taught here. For regaining personal composure, 落ち着く (おちつく) is a useful broader comparison."), "verb-11")
++            show(articleBullet("Dictionary: JMdict, entries 1459660, 1459650, 1310640, 1594270, 1816340 and 2859999. Usage: Digital Daijisen, 凪ぐ／和ぐ, modern godan senses; the separate classical conjugation is not taught here."), "verb-12")
+             section("How the kanji combine")
+-            show(articleBullet("凡 contributes a general or overall scope here, not a judgment of mediocrity. 例 contributes conventions or established usage, not only an individual example. Together, they concern the conventions for using or interpreting the material. The on-readings are ハン + レイ: はんれい. This association helps remember the word; it is not a historical derivation."), "legend-component")
+-            inline(await(articleBullet("凡 contributes a general or overall scope here, not a judgment of mediocrity. 例 contributes conventions or established usage, not only an individual example. Together, they concern the conventions for using or interpreting the material. The on-readings are ハン + レイ: はんれい. This association helps remember the word; it is not a historical derivation.")), "例", 77)
+-            await("Article contents")
+-            await("例 — example; precedent")
+-            section("Common words")
+-            show(articleBullet("凡例 はんれい — explanatory notes; legend"), "legend-changed-reused")
+-            inline(await(articleBullet("凡例 はんれい — explanatory notes; legend")), "凡例", 0)
+-            await("Article contents")
+-            await("凡例 (はんれい) — explanatory notes; legend")
+-            back()
+-            await(articleBullet("凡例 はんれい — explanatory notes; legend")).assertIsDisplayed()
+-            section("Common words")
+-            capture("legend-back-to-reused-kanji")
+-            back()
+-            await(articleBullet("凡 contributes a general or overall scope here, not a judgment of mediocrity. 例 contributes conventions or established usage, not only an individual example. Together, they concern the conventions for using or interpreting the material. The on-readings are ハン + レイ: はんれい. This association helps remember the word; it is not a historical derivation.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("legend-back-to-word")
+-            section("How the kanji combine")
+-            show(articleBullet("凡 contributes a general or overall scope here, not a judgment of mediocrity. 例 contributes conventions or established usage, not only an individual example. Together, they concern the conventions for using or interpreting the material. The on-readings are ハン + レイ: はんれい. This association helps remember the word; it is not a historical derivation."), "legend-reverse")
+-            inline(await(articleBullet("凡 contributes a general or overall scope here, not a judgment of mediocrity. 例 contributes conventions or established usage, not only an individual example. Together, they concern the conventions for using or interpreting the material. The on-readings are ハン + レイ: はんれい. This association helps remember the word; it is not a historical derivation.")), "凡", 0)
++            show(articleBullet("凪 supplies the calm-wind/sea association and writes な; ぐ is written outside the kanji. This is one native verb, not a multi-kanji compound. The related noun 凪 is read なぎ: 凪です (なぎです), \"it is calm at sea.\""), "verb-reverse")
++            inline(await(articleBullet("凪 supplies the calm-wind/sea association and writes な; ぐ is written outside the kanji. This is one native verb, not a multi-kanji compound. The related noun 凪 is read なぎ: 凪です (なぎです), \"it is calm at sea.\"")), "凪", 0)
+             await("Article contents")
+             section("Readings")
+-            show(readingExample("ボン"), "legend-kanji-backlink")
+-            back()
+-            await(articleBullet("凡 contributes a general or overall scope here, not a judgment of mediocrity. 例 contributes conventions or established usage, not only an individual example. Together, they concern the conventions for using or interpreting the material. The on-readings are ハン + レイ: はんれい. This association helps remember the word; it is not a historical derivation.")).assertIsDisplayed()
++            show(readingExample("なぎ"), "verb-kanji-backlink")
++            back()
++            await(articleBullet("凪 supplies the calm-wind/sea association and writes な; ぐ is written outside the kanji. This is one native verb, not a multi-kanji compound. The related noun 凪 is read なぎ: 凪です (なぎです), \"it is calm at sea.\"")).assertIsDisplayed()
+             section("How the kanji combine")
+-            capture("legend-system-back-to-word")
+-            back()
+-            await(articleBullet("凡例 はんれい — explanatory notes; legend")).assertIsDisplayed()
++            capture("verb-system-back-to-word")
++            back()
++            await(articleBullet("凪ぐ なぐ — become calm (wind/sea)")).assertIsDisplayed()
+             section("Common words")
+-            capture("legend-system-back-to-kanji")
+-            section("Common words")
+-            show(articleBullet("For recognition, 凡そ corresponds to usually-kana およそ. The rare spelling 凡て corresponds to 全て すべて; the pronunciation and the ordinary kana word are not thereby rare."), "approximate-forward")
+-            inline(await(articleBullet("For recognition, 凡そ corresponds to usually-kana およそ. The rare spelling 凡て corresponds to 全て すべて; the pronunciation and the ordinary kana word are not thereby rare.")), "およそ", 48)
+-            await("Article contents")
+-            await("およそ - approximately; generally")
+-            section("How the kanji combine")
+-            show(articleBullet("The word is usually written in kana. 凡そ is a recognized kanji spelling, but the practical unit to learn is the whole adverb およそ. It is not a loanword or a phrase requiring an extra particle before the number."), "approximate-reverse")
+-            inline(await(articleBullet("The word is usually written in kana. 凡そ is a recognized kanji spelling, but the practical unit to learn is the whole adverb およそ. It is not a loanword or a phrase requiring an extra particle before the number.")), "凡", 37)
+-            await("Article contents")
+-            section("Readings")
+-            show(readingExample("ボン"), "approximate-kanji-backlink")
+-            back()
+-            await(articleBullet("The word is usually written in kana. 凡そ is a recognized kanji spelling, but the practical unit to learn is the whole adverb およそ. It is not a loanword or a phrase requiring an extra particle before the number.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("approximate-system-back-to-word")
+-            back()
+-            await(articleBullet("For recognition, 凡そ corresponds to usually-kana およそ. The rare spelling 凡て corresponds to 全て すべて; the pronunciation and the ordinary kana word are not thereby rare.")).assertIsDisplayed()
+-            section("Common words")
+-            capture("approximate-system-back-to-kanji")
+-            section("Common words")
+-            show(articleBullet("For recognition, 凡そ corresponds to usually-kana およそ. The rare spelling 凡て corresponds to 全て すべて; the pronunciation and the ordinary kana word are not thereby rare."), "everything-forward")
+-            inline(await(articleBullet("For recognition, 凡そ corresponds to usually-kana およそ. The rare spelling 凡て corresponds to 全て すべて; the pronunciation and the ordinary kana word are not thereby rare.")), "全て", 89)
+-            await("Article contents")
+-            await("全て (すべて) - everything; all")
+-            section("How the kanji combine")
+-            show(articleBullet("全 contributes wholeness or entirety. It writes the native word すべて with て as okurigana. JMdict marks the word as usually written in kana, so すべて is an important spelling to recognize too."), "everything-component")
+-            inline(await(articleBullet("全 contributes wholeness or entirety. It writes the native word すべて with て as okurigana. JMdict marks the word as usually written in kana, so すべて is an important spelling to recognize too.")), "全", 0)
+-            await("Article contents")
+-            await("全 — whole; complete")
+-            section("Common words")
+-            show(articleBullet("全て すべて — everything; usually すべて"), "everything-changed-reused")
+-            inline(await(articleBullet("全て すべて — everything; usually すべて")), "全て", 0)
+-            await("Article contents")
+-            await("全て (すべて) - everything; all")
+-            back()
+-            await(articleBullet("全て すべて — everything; usually すべて")).assertIsDisplayed()
+-            section("Common words")
+-            capture("everything-back-to-reused-kanji")
+-            back()
+-            await(articleBullet("全 contributes wholeness or entirety. It writes the native word すべて with て as okurigana. JMdict marks the word as usually written in kana, so すべて is an important spelling to recognize too.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("everything-back-to-word")
+-            section("How the kanji combine")
+-            show(articleBullet("JMdict also records 凡て (すべて) as a rare kanji spelling. That spelling qualification does not make the pronunciation すべて rare."), "everything-reverse")
+-            inline(await(articleBullet("JMdict also records 凡て (すべて) as a rare kanji spelling. That spelling qualification does not make the pronunciation すべて rare.")), "凡", 20)
+-            await("Article contents")
+-            section("Readings")
+-            show(readingExample("ボン"), "everything-kanji-backlink")
+-            back()
+-            await(articleBullet("JMdict also records 凡て (すべて) as a rare kanji spelling. That spelling qualification does not make the pronunciation すべて rare.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("everything-system-back-to-word")
+-            back()
+-            await(articleBullet("For recognition, 凡そ corresponds to usually-kana およそ. The rare spelling 凡て corresponds to 全て すべて; the pronunciation and the ordinary kana word are not thereby rare.")).assertIsDisplayed()
+-            section("Common words")
+-            capture("everything-system-back-to-kanji")
++            capture("verb-system-back-to-kanji")
+             back()
+             await("Search kanji, meaning or reading")
+@@ -469,15 +386,15 @@
+             await("Meaning quiz")
+             evidence.put("reciprocalLinkAndSystemBack", true)
+-                .put("mappedReciprocalPairs", 7).put("directedLinkTransitions", 14)
+-                .put("completeArticleProjections", 2).put("changedReusedArticles", 6)
++                .put("mappedReciprocalPairs", 2).put("directedLinkTransitions", 4)
++                .put("completeArticleProjections", 3).put("changedReusedArticles", 0)
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Meaning quiz"))))
+             rule.waitUntil(30_000) { (model("quiz:") as? QuizViewModel)?.ui is QuizUi.Question }
+             val quiz = model("quiz:") as QuizViewModel
+             val meaning = quiz.ui as QuizUi.Question
+-            assertEquals("凡", meaning.card.kanji)
++            assertEquals("凪", meaning.card.kanji)
+             val expectedMeanings = mapOf(
++                "凪" to "calm seas; lull",
++                "風" to "wind; style",
+                 "凡" to "commonplace; mediocre",
+-                "丸" to "round; circle",
+-                "九" to "nine",
+                 "凹" to "concave; sunken",
+             )
+@@ -485,7 +402,7 @@
+             assertTrue(meaning.options.all { option -> n1.any { it.kanji == option.kanji && it.title == option.title } })
+             assertTrue(meaning.options.any { it.kanji == "凹" })
+-            assertEquals(2, meaning.options.count { it.kanji !in expectedMeanings })
+-            assertEquals("commonplace; mediocre", meaning.options.single { it.kanji == "凡" }.title)
+-            assertEquals(listOf("丸", "九", "凹"), meaning.card.distractors.splitSep())
++            assertEquals(1, meaning.options.count { it.kanji !in expectedMeanings })
++            assertEquals("calm seas; lull", meaning.options.single { it.kanji == "凪" }.title)
++            assertEquals(listOf("風", "凡", "凹"), meaning.card.distractors.splitSep())
+             for (option in meaning.options) await(option.title).assertIsDisplayed()
+             evidence.put("exactDefaultMeaningOptions", JSONArray().also { options ->
+@@ -493,10 +410,10 @@
+                     options.put(JSONObject().put("kanji", option.kanji).put("title", option.title))
+                 }
+-            }).put("actualN1CuratedAvailable", 1).put("actualN1FallbackOptions", 2)
++            }).put("actualN1CuratedAvailable", 2).put("actualN1FallbackOptions", 1)
+                 .put("meaningChoiceVisualAdjudicationRequired", true)
+             capture("meaning-question")
+-            click("commonplace; mediocre")
++            click("calm seas; lull")
+             await("Correct!")
+-            assertEquals("凡", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("凪", (quiz.ui as QuizUi.Answer).card.kanji)
+             capture("meaning-feedback")
+             back()
+@@ -508,8 +425,8 @@
+                 val reading = model("kreading:") as KanjiReadingViewModel
+                 val question = reading.ui as ReadingUi.Question
+-                assertEquals("凡", question.card.kanji)
+-                assertEquals(ReadingKind.On, question.question.kind)
++                assertEquals("凪", question.card.kanji)
++                assertEquals(ReadingKind.Kun, question.question.kind)
+                 val key = question.question.correctKey
+-                assertTrue(key in setOf("ぼん", "はん"))
++                assertTrue(key in setOf("なぎ", "なぐ"))
+                 assertTrue("Duplicate target reading key", answeredKeys.add(key))
+                 assertEquals(key, question.question.correctKey)
+@@ -523,9 +440,9 @@
+                 click("Next")
+                 rule.waitUntil(30_000) { runBlocking {
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "凡" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "凪" &&
+                         log.mode == question.question.kind.mode.name && log.reading == key && log.grade == 3 }
+                 } }
+             }
+-            assertEquals(setOf("ぼん", "はん"), answeredKeys)
++            assertEquals(setOf("なぎ", "なぐ"), answeredKeys)
+             rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Done }
+             val done = (model("kreading:") as KanjiReadingViewModel).ui as ReadingUi.Done
+@@ -533,24 +450,24 @@
+             assertEquals(2, done.correct)
+             val readingLogs = runBlocking {
+-                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "凡" &&
++                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "凪" &&
+                     it.mode in setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name) }
+             }
+             assertEquals(2, readingLogs.size)
+-            assertEquals(setOf("ぼん", "はん"), readingLogs.map { it.reading }.toSet())
+-            assertTrue(readingLogs.all { it.mode == ReadingKind.On.mode.name })
+-            capture("curated-two-on-no-kun-done")
++            assertEquals(setOf("なぎ", "なぐ"), readingLogs.map { it.reading }.toSet())
++            assertTrue(readingLogs.all { it.mode == ReadingKind.Kun.mode.name })
++            capture("curated-two-kun-no-on-done")
+             back()
+             await("Meaning quiz")
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Drawing"))))
+             await("Trace the kanji for")
+-            await("commonplace; mediocre").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "凡") })
+-            assertEquals(listOf("丸", "九", "凹"), card.distractors.splitSep())
+-            assertEquals(listOf("ボン", "ハン"), card.onyomi.splitSep())
+-            assertEquals(listOf("およ.そ", "おうよ.そ", "すべ.て"), card.kunyomi.splitSep())
++            await("calm seas; lull").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "凪") })
++            assertEquals(listOf("風", "凡", "凹"), card.distractors.splitSep())
++            assertEquals(emptyList<String>(), card.onyomi.splitSep())
++            assertEquals(listOf("なぎ", "な.ぐ"), card.kunyomi.splitSep())
+             assertNotNull(card.quizOnyomi)
+             assertNotNull(card.quizKunyomi)
+-            assertEquals(listOf("ボン", "ハン"), card.quizOnyomi?.splitSep())
+-            assertEquals(emptyList<String>(), card.quizKunyomi?.splitSep())
++            assertEquals(emptyList<String>(), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("なぎ", "な.ぐ"), card.quizKunyomi?.splitSep())
+             evidence.put("fullProjectionOnyomi", JSONArray(card.onyomi.splitSep()))
+                 .put("fullProjectionKunyomi", JSONArray(card.kunyomi.splitSep()))
+@@ -558,5 +475,5 @@
+                 .put("fullProjectionQuizKunyomi", JSONArray(requireNotNull(card.quizKunyomi).splitSep()))
+             val strokes = JSONObject(requireNotNull(card.strokesJson)).getJSONArray("strokes")
+-            assertEquals(3, strokes.length())
++            assertEquals(6, strokes.length())
+             capture("drawing-trace")
+             val pad = rule.onNode(hasContentDescription("Drawing area for the kanji", substring = true))
+@@ -575,10 +492,10 @@
+                 }
+             }
+-            rule.onNode(hasContentDescription("3 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("6 strokes drawn", substring = true)).assertExists()
+             click("Check")
+             await("Practice only: this attempt is not graded.")
+             assertFalse(runBlocking {
+                 app.db.reviews().allLog().any { it.sourceId == source.id &&
+-                    it.kanji == "凡" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "凪" && it.mode == StudyMode.Draw.name }
+             })
+             await("Correct strokes").performScrollTo().assertIsDisplayed()
+@@ -591,5 +508,5 @@
+             click("Next")
+             rule.waitUntil(30_000) { runBlocking {
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "凡" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "凪" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+             } }
+             back()
+@@ -599,11 +516,11 @@
+             assertEquals(1, archiveRequests)
+             evidence.put("meaningQuestionAndFeedback", true)
+-                .put("bothCuratedOnKeysPersistedGoodAndDone", true)
++                .put("bothCuratedKunKeysPersistedGoodAndDone", true)
+                 .put("touchInjectedReferenceStrokes", strokes.length())
+                 .put("drawingTraceThenRecall", true).put("drawingGradeRecordedOnNext", true)
+                 .put("offline", true).put("passed", true)
+         } finally {
+-            File(app.getExternalFilesDir(null), "n1-086-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-086-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-087-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-087-article-tree.txt").writeText(rule.onRoot().printToString())
+             scenario.close()
+         }
+@@ -698,5 +615,5 @@
+         rule.waitForIdle()
+         val bitmap = requireNotNull(automation.takeScreenshot())
+-        File(app.getExternalFilesDir(null), "n1-086-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-087-$step.png").outputStream().use {
+             assertTrue(bitmap.compress(Bitmap.CompressFormat.PNG, 100, it))
+         }
