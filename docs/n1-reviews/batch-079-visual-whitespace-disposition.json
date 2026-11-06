@@ -1,0 +1,18 @@
+{
+  "execution": 535,
+  "batch": "079",
+  "fullStagedWhitespaceCheck": "Nonzero only for two verbatim evidence files.",
+  "preservedExceptions": [
+    {
+      "path": "docs/n1-reviews/batch-079-visual-source-packet.txt",
+      "reason": "Numbered source prefixes end in a space on original empty lines; the complete frozen packet was actually returned to both models and must not be retrospectively reformatted."
+    },
+    {
+      "path": "docs/n1-reviews/batch-079-visual-models-execution-535.txt",
+      "reason": "Verbatim installed CLI catalog includes a blank line at EOF; preserve the actual captured catalog."
+    }
+  ],
+  "otherStagedEvidence": "Required to pass targeted git diff --check before signing.",
+  "runtimeChanged": false,
+  "limits": "Evidence-format preservation only, not a waiver of runtime format, content validation or any publication guard."
+}
