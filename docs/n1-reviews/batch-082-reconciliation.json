@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "execution": 556,
+  "batch": "082",
+  "status": "textually-review-closed-awaiting-fresh-android",
+  "originalTeachingSnapshot": "b6bcc8f144cd781917abdb2ca510f663d1339a56",
+  "reviewedTeachingSnapshot": "b6bcc8f144cd781917abdb2ca510f663d1339a56",
+  "initialModels": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "processes": {
+    "claude": {
+      "sessionId": "1c5aebb9-9903-4567-a88a-5da4b472781d",
+      "launcherPid": 30400,
+      "requestedModel": "claude-opus-5.5",
+      "actualModels": [
+        "claude-opus-5.5"
+      ],
+      "snapshot": "b6bcc8f144cd781917abdb2ca510f663d1339a56",
+      "startedAt": "2026-11-06T11:23:54.717343+01:00",
+      "completedAt": "2026-11-06T11:25:03.168523+01:00",
+      "exitCode": 0,
+      "reportSha256": "bd8430a394525522cbdcd62383159a96d6bd246eab444f7f63154a4662226ae8",
+      "rawExecutionSha256": "bb7a0888eb83660aa9d3a68991d35fdbfea1fb5eb1c176e34e2495c94c46fe8f",
+      "report": "batch-082-initial-claude.md",
+      "execution": "batch-082-initial-claude-execution.json",
+      "coverage": "batch-082-initial-claude-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0
+    },
+    "gpt": {
+      "sessionId": "fd9a447c-6e9f-4874-a043-4851de97c996",
+      "launcherPid": 3408,
+      "requestedModel": "gpt-6.1-sol",
+      "actualModels": [
+        "gpt-6.1-sol"
+      ],
+      "snapshot": "b6bcc8f144cd781917abdb2ca510f663d1339a56",
+      "startedAt": "2026-11-06T11:25:06.656887+01:00",
+      "completedAt": "2026-11-06T11:25:35.715149+01:00",
+      "exitCode": 0,
+      "reportSha256": "73fe821c991cceeea94a0bfa920b4409d3fd53fe884b6f4e4b32fba08bf4a585",
+      "rawExecutionSha256": "a509fbd5e958f101ed7684e55709f99535f547c8dec123f74778c4c9ab4056ac",
+      "report": "batch-082-initial-gpt.md",
+      "execution": "batch-082-initial-gpt-execution.json",
+      "coverage": "batch-082-initial-gpt-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0
+    }
+  },
+  "serialReviewerProcessesVerified": true,
+  "eachReportArchivedBeforeNextLaunch": true,
+  "allInitialInternalToolsSerial": true,
+  "allAssignedRangesReturned": true,
+  "initialPacketBytes": 156618,
+  "initialPacketLines": 3084,
+  "initialDistinctCompleteFamilies": 36,
+  "initialFamilyOccurrences": 37,
+  "rawCharacterRecords": 7,
+  "initialComparisonBodiesSupplied": 17,
+  "completeArticleBodiesSupplied": 19,
+  "teachingChangesAfterReview": [],
+  "verdicts": {
+    "kanji/准.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "words/准教授.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "kanji/教.md:39 added bullet": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "words/助教授.md:16 first successor-name link": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    }
+  },
+  "findings": [],
+  "actionableRemainingFindings": 0,
+  "consequentialUnresolvedTeachingFindings": 0,
+  "hypothesisReconciliation": [
+    {
+      "id": "082-C1",
+      "reportedBy": [
+        "Claude initial optional quiz hypothesis"
+      ],
+      "claim": "Overlapping quasi/associate sense of準 can make准 a plausible larger-pool answer.",
+      "status": "optional",
+      "confidence": "high for present default four-choice scope",
+      "evidence": "Actual frozen准 has exactly three curated wrong choices集/進/難;準 has exactly three集/清/卒. Neither uses the other in the default-four quiz. Same準 body and default-pool limits supplied to both reviewers. Their semantic overlap is acknowledged in teaching, not used as a wrong choice.",
+      "remedy": "No unnecessary legacy edit. Preserve larger/random-pool limitation and do not curate准/準 as opposing meaning choices."
+    }
+  ],
+  "optional": [
+    {
+      "reportedBy": [
+        "Claude initial"
+      ],
+      "status": "optional",
+      "claim": "Add批准 to the reading row or准看護師/准尉 as further rank examples.",
+      "decision": "No expansion. Sole selectedジュン already has a necessary linked准教授 example;批准 is read/glossed in the meaning and Common words sections. Further rank families remain preserved in evidence, not required support articles."
+    }
+  ],
+  "modelContributionComparison": {
+    "shared": "Both reviewers found no established textual defect across both new articles and both narrow reused passages: rank/approval meanings, source reading/curation, original examples, role/history distinctions, spelling qualifications, three wrong choices, direct word guard and reciprocal/navigation links.",
+    "claudeOnlyVerifiedUseful": "Optional examples and explicitly conditional準 larger-pool concern retained; no unique actionable defect established.",
+    "gptOnlyVerifiedUseful": "No unique actionable defect established in this bounded sample.",
+    "limits": "Compared equivalent observations throughout findings/optional/limits. This is sample-specific evidence, not a model ranking or equal-comprehension claim."
+  },
+  "readDepthLimits": [
+    "Each reviewer received the same complete156618-byte/3084-line packet in one serial view; exact returned text audited independently of unmeasured report counts. Byte availability is not comprehension certification.",
+    "Packet contains nineteen complete article bodies: two new and seventeen unchanged comparison bodies, two of which contain the narrow changed reused passages. Claude scope wording counts17includingnew; original report preserved without correction. Actual packet/returned-byte audit establishes the supplied19body scope, not depth of comprehension.",
+    "All37family occurrences/36distinct and seven raw records supplied and exactly returned. Preliminary推/唯/誰 records do not imply those cards exist.",
+    "Public character/rank/reform observations are supplied coordinator evidence; no reviewer independent upstream retrieval or current-law audit. Preserve original source qualifications.",
+    "No independent reviewer Git/signature/hash/path/title-uniqueness check. Coordinator confirms frozen bytes, manifest, unique准 title and absent授 card; no native/phone evidence inferred."
+  ],
+  "textualReviewClosed": true,
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "mechanicalBatchAudit": {
+    "batch": "082",
+    "baseCommit": "1f317f0762513720709ab0ca215f19ff021ca596",
+    "draftKanji": 1,
+    "newWords": 1,
+    "changedReusedArticles": 2,
+    "requiredReciprocalPairs": 1,
+    "activatedBaselinePairs": 0,
+    "readingDispositions": 1,
+    "curatedOfferedKeys": 1,
+    "sourceOnlyOfferedKeys": 0,
+    "dictionaryFamilies": 36,
+    "exactBaseRuntimePreservedOutsideRecordedChanges": true,
+    "manifestFresh": true,
+    "contentVersion": "0739a82c9699f031",
+    "limits": "Mechanical draft audit, not lexical-allocation/naturalness verification, independent review, native/phone acceptance or publication."
+  },
+  "runtimeHashesReverified": 8372,
+  "manifestUnchangedFromFrozenSnapshot": true,
+  "newNativeOrAndroidClaimed": false,
+  "nativeFontPending": [
+    "冫",
+    "氵",
+    "辶",
+    "隹"
+  ],
+  "actualHanCount": 31,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "limits": "Textual closure only. No native font/drawing/routes, physical-phone, live random-quiz or learning-effectiveness evidence. Fresh non-skipped Android and all31Han/native gates remain. CompatibleAndroidf9b59a2+ required. Preserve historical source/reviewer/process/denial/OOM/read-depth limits, baseline exceptions and original guards; whole project incomplete."
+}
