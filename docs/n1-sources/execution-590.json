@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "execution": 590,
+  "batch": "084",
+  "status": "published-verified-bounded-owner-testing",
+  "startingState": {
+    "execution": 590,
+    "batch": "084",
+    "startedAt": "2026-11-06T19:36:54.841457+00:00",
+    "startingHead": "859116da55b84a38a0ca9c4ca210255b7c9772eb",
+    "androidHead": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+    "freshOriginMain": "106a36dd9617a0d0826a512da82ee1ed9bf9e34d",
+    "scope": "SAME084 signed owner publication, exact public CI/ZIP and durable ledgers/checkpoint only; no085 or fresh reviewer/native/HOST absent change.",
+    "request": {
+      "sha256": "b76df8be0735966d4d73abdbe4948b92f2315903047fd2a8e018dc514d5c8f25",
+      "bytes": 2886077,
+      "characters": 2866437,
+      "lines": 37729,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire file loaded and checkpoint decoded; operative contract, complete approved issue and final589 inspected. Historical middle parsed, not freshly semantically re-reviewed. Initial tail display hit local cp1252 encoding; final checkpoint subsequently read directly in full."
+    },
+    "runnerLockRole": "Live parent19008 verified in coordinator ancestry; no child lock open/acquisition/delete/unlock.",
+    "optionalHistoricalSessionHelpersAccessed": false,
+    "actualNewPermissionDenials": []
+  },
+  "publicationRecord": "batch-084-publication.json",
+  "acceptedCommit": "859116da55b84a38a0ca9c4ca210255b7c9772eb",
+  "counts": {
+    "batchPublishedAdditions": 1,
+    "projectPublishedAdditions": 111,
+    "remainingAdditions": 1117,
+    "currentKanji": 1107,
+    "currentWords": 5060,
+    "n1Labelled": 116,
+    "namedSourceMembersPresent": 121,
+    "separateExceptionPreserved": "\u5996",
+    "batchNewNecessarySupportWords": 1,
+    "projectNewNecessarySupportWords": 111,
+    "batchChangedReusedArticles": 0,
+    "allMappedReciprocalPairs": 1,
+    "mappedDirectedLinks": 2,
+    "activatedBaselinePairs": 0,
+    "separateEarlierLevelSourceMembers": [
+      "\u4fdd",
+      "\u6848",
+      "\u6d3e",
+      "\u7b2c",
+      "\u7b56",
+      "\u7d50"
+    ],
+    "earlierPlacementsCountedAsIssue60AcceptedBatches": false
+  },
+  "ci": {
+    "conclusion": "success",
+    "databaseId": 42281262215,
+    "headSha": "859116da55b84a38a0ca9c4ca210255b7c9772eb",
+    "jobs": [
+      {
+        "completedAt": "2026-11-06T19:38:58Z",
+        "conclusion": "success",
+        "databaseId": 128110522461,
+        "name": "validate",
+        "startedAt": "2026-11-06T19:37:32Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-11-06T19:37:34Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-11-06T19:37:33Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T19:38:21Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-11-06T19:37:34Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T19:38:21Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "startedAt": "2026-11-06T19:38:21Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T19:38:26Z",
+            "conclusion": "success",
+            "name": "Run pip install pyyaml pillow requests fonttools",
+            "number": 4,
+            "startedAt": "2026-11-06T19:38:21Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T19:38:41Z",
+            "conclusion": "success",
+            "name": "Run python -m unittest discover -s tools -p \"test_*.py\"",
+            "number": 5,
+            "startedAt": "2026-11-06T19:38:26Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T19:38:52Z",
+            "conclusion": "success",
+            "name": "Run python tools/validate.py",
+            "number": 6,
+            "startedAt": "2026-11-06T19:38:41Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T19:38:54Z",
+            "conclusion": "success",
+            "name": "Run python tools/check_content_budget.py",
+            "number": 7,
+            "startedAt": "2026-11-06T19:38:52Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T19:38:54Z",
+            "conclusion": "success",
+            "name": "Run python tools/grammar_vocabulary.py check",
+            "number": 8,
+            "startedAt": "2026-11-06T19:38:54Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T19:38:55Z",
+            "conclusion": "success",
+            "name": "Run python tools/build_manifest.py",
+            "number": 9,
+            "startedAt": "2026-11-06T19:38:54Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T19:38:56Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 17,
+            "startedAt": "2026-11-06T19:38:55Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T19:38:56Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 18,
+            "startedAt": "2026-11-06T19:38:56Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T19:38:56Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 19,
+            "startedAt": "2026-11-06T19:38:56Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/stop-cran/learning-japanese/actions/runs/42281262215/job/128110522461"
+      }
+    ],
+    "status": "completed",
+    "workflowName": "Validate content"
+  },
+  "immutablePublicArchive": {
+    "commit": "859116da55b84a38a0ca9c4ca210255b7c9772eb",
+    "url": "https://api.github.com/repos/stop-cran/learning-japanese/zipball/859116da55b84a38a0ca9c4ca210255b7c9772eb",
+    "sha256": "1dbe59e622df59ed09c5316066aa82992a92e77f27dc173f0f786cd07f49ae8c",
+    "manifestEqual": true,
+    "contentVersion": "8c3fa3ee6f2b1ebc",
+    "verifiedRuntimeHashes": 8408,
+    "zipEntries": 8430,
+    "compressedBytes": 30798016,
+    "inflatedBytes": 44526579,
+    "retainedBytes": 44258241,
+    "listeningTaskMediaBytes": 5893602,
+    "allPublishingBudgetsPassed": true,
+    "contributorEvidenceExcluded": true,
+    "perFileLimitsAndSafePathsPassed": true
+  },
+  "inheritedAcceptanceRecord": "execution-589.json",
+  "runtimeBytesUnchanged": true,
+  "runtimePublished": true,
+  "parentLockTouched": false,
+  "optionalHistoricalSessionHelpersAccessed": false,
+  "actualNewPermissionDenials": [],
+  "newReviewNativeHostRuns": 0,
+  "limits": [
+    "Dependent original-session visual confirmations plus focused native-pixel addenda, not new blind/source reviews or reviewer-executed native tests. Original initial/confirmation reports and historical source/lookup/read-depth/denial/OOM/process limitations retained.",
+    "Each family received complete same packet and25 direct original-path image payloads representing42captures by exact-byte aliases; not42 separate independent reads. Source1080x2400 returned900x2000. All56 child exits and54 successful views audited serially; bytes/receipt counts are not comprehension certification.",
+    "Lossless sourcepanel3 crop632x760 returned at original pixel dimensions/equivalent RGBA, no resampling/enlargement. Both original families resolved captured-panel\u51dc/\u51db recognition. Claude retains smaller-body/otherdensity/phone/everyfine-stroke uncertainty; do not convert this into full-scale/bodyfont certification or erase that distinction. No demonstrated misleading glyph; bounded recognition sufficient, not every stroke at every scale.",
+    "Claude says no native-font evidence on a device: read as no physical-device evidence; actual Android native emulator renders and two native cases are separately proven. Fallback-like appearance/raster convergence does not identify a face. Fine stroke-number labels and\u967a/\u9df9 details limited in downscaled fullframes; all28 recognized, not stroke-by-stroke certification.",
+    "Both article bodies collectively visible across scroll states, horizontal reading-table cells and wordwrap retained. Scroll snapshots do not show every heading simultaneously or every microscopic bottom-component detail. Route captures and exact-byte aliases not independent second captures/transitions.",
+    "Claude optional source-onlykun in feedback summary/trace grading wording/transient download notice overlap GPT resource observations or final limits; no unique required content fix. Full source metadata remains reference material; source-only kun not offered. App mechanisms unchanged.",
+    "Original C1 spellingpriority optional preference retained, C2\u6dbc\u3057\u3044 hypothesis withdrawn, C3 defaultresolved while larger/custom/random/padded/partial/reverse exposure remains unverified. AllUI not exercised; default N1 andAll builder IDs/titles asserted, actual N1UI visually inspected.",
+    "FreshHOST4zero-skips585/compile586/native587two terminal0 cases inherited, not rerun. TESTONLYAndroid1c1b7bf4 atop unchangedproductionf9. FullContentSyncONCE/1096kanji5053words116N1/zeroProblems/epoch1 and Full/Lite/readings/persistedgood are supplied execution evidence, not pixelsalone.",
+    "One reciprocalpair/twodirections/SystemBack/offline and persistence rely on native fixture/route/terminal, not screenshotsalone. Synthetic disposable source and seeded meaning logs are not owner progress; no drawing state preseeded.",
+    "15 injected reference strokes, shape-only feedback, recall give-up and saved grade are not human handwriting/MLKitrecognition/modeldownload/phone. Offline unavailablemodel disclosed; pending download status not success.",
+    "Latest-main integration/combined tests/normal signedownerpush/remoteCI/EVERY immutable publicZIP hash and originalarchiveguards remain required. Physicalphone/generalrelease/whole-set outstanding. No nextbatch, newHOST/native, optional historical-session artifact or parentlock access."
+  ],
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false,
+  "terminalLocalValidation": [
+    {
+      "path": "docs/n1-reviews/batch-084-publication-590/validate-590.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "exitCode": 0
+    },
+    {
+      "path": "docs/n1-reviews/batch-084-publication-590/manifest-590.txt",
+      "sha256": "6f20231f24d8af786220eb35e652ba138861562e974ddd72e53998e64a1d1c75",
+      "exitCode": 0
+    },
+    {
+      "path": "docs/n1-reviews/batch-084-publication-590/budget-590.txt",
+      "sha256": "66ce44f1869a6ae3ed01294d9361468b74936163cf348a247c7f866e437416f5",
+      "exitCode": 0
+    }
+  ]
+}
