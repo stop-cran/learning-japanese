@@ -37,6 +37,70 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 080: review-closed; combined-tree acceptance passed
+
+Batch **冴**, source row 89, adds the necessary **冴える** (さえる) article,
+not an N1 vocabulary expansion. The [textual reconciliation](n1-reviews/batch-080-reconciliation.json)
+retains two blind initial reviews and original-session supplements from Claude
+Opus 5.5 and GPT-6.1 Sol on unchanged teaching `3f883347`: **35 distinct initial
+families /36 occurrences**, two supplementary families, four complete raw
+character records and 21 comparison bodies. Original counting imprecision and
+source-access limits remain explicit. No teaching change or consequential
+unresolved scoped defect remains; conditional guard hypotheses were withdrawn,
+and further conservative guards, wording and citation polish remain optional.
+
+Full metadata **ゴ, コ /さ.える, こお.る, ひ.える** remains in source order.
+The explicit empty on selection and sole selected kun **さ.える** offer
+**さえる**. Five separate dispositions distinguish useful practice, rare
+recognition-only 冴寒 and qualified source-only information. The new word has
+no inferred JLPT level; no reused article is changed. All **one reciprocal
+pair /two directions**, three wrong kanji choices and 15 direct word safeguards
+are recorded.
+
+The [combined-tree acceptance](n1-sources/batch-080-acceptance-audit.json) records
+**372 Python tests without skips**, validator, vocabulary consistency
+(2,122/2,431 reviewed pilot prompts, not full coverage), manifest freshness,
+five frozen inputs, two decompressed dictionaries, full selected families/raw
+records, original 985-kanji/4,942-word/985-stroke baseline with documented
+exceptions, exact **107 local additions**, pinned seven-stroke geometry,
+all 30 actual Han cmaps and **8,366 runtime hashes** under unchanged budgets.
+Fresh main is already ancestral; no teaching/tool integration changes occur.
+
+Accepted [HOST evidence](n1-sources/execution-540.json) has three RealContentTest
+cases and one RareHanTest case without skips; [native evidence](n1-sources/execution-543.json)
+has two named terminal-status-0 cases. These receipts were reverified, not rerun.
+Production ContentSync imported the full signed `0d2c9aee` archive **once**:
+1,092 kanji, 5,048 words, 112 N1 labels, zero problems, parser epoch 1.
+Full/Lite full and curated readings agree; the sole kun good log and Done 1/1,
+actual meaning feedback, N1 selection, one pair/two directions, system Back
+and offline routes pass. The final semantics dump is loading, not settled-route
+or persistence proof. Seven injected reference paths, ungraded tracing,
+shape-only comparison and give-up recall grade 1 do not establish human
+handwriting, successful recall or MLKit recognition/download; the offline
+model is unavailable. The disposable schedule is not owner progress.
+
+The [dependent visual confirmations](n1-reviews/batch-080-visual-reconciliation.json)
+use the original two model families, serially: **28 host-dispatched children
+each**, one complete packet plus **26 distinct PNG groups /49 originals
+/23 byte aliases**, then a zero-tool final report. All children exit before
+the next family. Source 1080x2400 and returned 900x2000 payloads are preserved
+separately. Claude's resources 1–12 survive as its own compressed summary at
+final synthesis, not live original pixels. The initial overstrict byte-equality
+assertion and qualified recovery remain preserved, not a permission denial
+or rejected linguistic review. All 30 Han/four production families, including
+exact 冫/冱/氵, are readable in bounded captures; the fallback face is unknown.
+Complementary horizontal table states are not all columns in one frame.
+The 120 individual/four whole-word Paint assertions are not 124 PNG reads.
+Owned emulator 5580 parent 11976/QEMU 1240 stopped; owner 5556 was untouched.
+HOST-only 2-GiB initialization never entered native builds; no app/guest heap,
+archive guard, learning algorithm or permission policy changed.
+
+Publication still requires the normally signed owner fast-forward, exact green
+CI and every runtime hash in the immutable public ZIP. Compatible Android
+`f9b59a2`+ is required. Physical-phone, general-release and whole-set acceptance
+remain **outstanding**; original source/review/process/denial/OOM/viewport limits
+are retained.
+
 ## Batch 079: published for bounded owner testing
 
 The [publication record](n1-sources/batch-079-publication.json) closes **冠**,
