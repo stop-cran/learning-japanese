@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "execution": 581,
+  "batch": "083",
+  "status": "published-verified-bounded-owner-testing",
+  "startingState": {
+    "execution": 581,
+    "batch": "083",
+    "startedAt": "2026-11-06T17:37:11.143264+00:00",
+    "startingHead": "bbe7cb954260d96dbf44c526783aaff184f25bf4",
+    "androidHead": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+    "freshOriginMain": "21a5cb1328aadd437139a6b850f07298a2e2985d",
+    "scope": "SAME083 accepted signed owner publication, exact public CI/ZIP and durable ledgers/checkpoint only; no084 or new reviews/native absent change.",
+    "request": {
+      "sha256": "915919e3582b2c25e0335438a279205b3ca70754a9583168b4dcbdfc5db4acb9",
+      "characters": 2764205,
+      "lines": 36722,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request loaded and checkpoint decoded; operative contract, complete approved issue and final580 inspected. Historical middle parsed, not freshly semantically re-reviewed."
+    },
+    "runnerLockRole": "Live launcher19008 verified in ancestry; parent owns lock throughout child lifetime; no child lock access.",
+    "optionalHistoricalSessionHelpersAccessed": false,
+    "actualNewPermissionDenials": []
+  },
+  "publicationRecord": "batch-083-publication.json",
+  "acceptedCommit": "bbe7cb954260d96dbf44c526783aaff184f25bf4",
+  "counts": {
+    "batchPublishedAdditions": 1,
+    "projectPublishedAdditions": 110,
+    "remainingAdditions": 1118,
+    "currentKanji": 1095,
+    "currentWords": 5052,
+    "n1Labelled": 115,
+    "namedSourceMembersPresent": 114,
+    "separateExceptionPreserved": "\u5996",
+    "batchNewNecessarySupportWords": 2,
+    "projectNewNecessarySupportWords": 110,
+    "batchChangedReusedArticles": 0,
+    "allMappedReciprocalPairs": 2,
+    "mappedDirectedLinks": 4,
+    "activatedBaselinePairs": 0
+  },
+  "ci": {
+    "conclusion": "success",
+    "databaseId": 42263354670,
+    "headSha": "bbe7cb954260d96dbf44c526783aaff184f25bf4",
+    "jobs": [
+      {
+        "completedAt": "2026-11-06T17:39:02Z",
+        "conclusion": "success",
+        "databaseId": 128048769285,
+        "name": "validate",
+        "startedAt": "2026-11-06T17:37:39Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-11-06T17:37:40Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-11-06T17:37:40Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T17:38:21Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-11-06T17:37:40Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T17:38:21Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v5",
+            "number": 3,
+            "startedAt": "2026-11-06T17:38:21Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T17:38:27Z",
+            "conclusion": "success",
+            "name": "Run pip install pyyaml pillow requests fonttools",
+            "number": 4,
+            "startedAt": "2026-11-06T17:38:21Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T17:38:41Z",
+            "conclusion": "success",
+            "name": "Run python -m unittest discover -s tools -p \"test_*.py\"",
+            "number": 5,
+            "startedAt": "2026-11-06T17:38:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T17:38:57Z",
+            "conclusion": "success",
+            "name": "Run python tools/validate.py",
+            "number": 6,
+            "startedAt": "2026-11-06T17:38:41Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T17:38:59Z",
+            "conclusion": "success",
+            "name": "Run python tools/check_content_budget.py",
+            "number": 7,
+            "startedAt": "2026-11-06T17:38:57Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T17:38:59Z",
+            "conclusion": "success",
+            "name": "Run python tools/grammar_vocabulary.py check",
+            "number": 8,
+            "startedAt": "2026-11-06T17:38:59Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T17:39:00Z",
+            "conclusion": "success",
+            "name": "Run python tools/build_manifest.py",
+            "number": 9,
+            "startedAt": "2026-11-06T17:38:59Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T17:39:00Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v5",
+            "number": 17,
+            "startedAt": "2026-11-06T17:39:00Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T17:39:01Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 18,
+            "startedAt": "2026-11-06T17:39:00Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-06T17:39:01Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 19,
+            "startedAt": "2026-11-06T17:39:01Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/stop-cran/learning-japanese/actions/runs/42263354670/job/128048769285"
+      }
+    ],
+    "status": "completed",
+    "workflowName": "Validate content"
+  },
+  "immutablePublicArchive": {
+    "commit": "bbe7cb954260d96dbf44c526783aaff184f25bf4",
+    "url": "https://api.github.com/repos/stop-cran/learning-japanese/zipball/bbe7cb954260d96dbf44c526783aaff184f25bf4",
+    "sha256": "0dbd0c60be4484b191d5fb1b6dddd763abbd40aea2e817899234ff31ce2895f4",
+    "manifestEqual": true,
+    "contentVersion": "6dfe6a1e287ce5df",
+    "verifiedRuntimeHashes": 8376,
+    "zipEntries": 8398,
+    "compressedBytes": 30754151,
+    "inflatedBytes": 44448891,
+    "retainedBytes": 44180553,
+    "listeningTaskMediaBytes": 5893602,
+    "allPublishingBudgetsPassed": true,
+    "contributorEvidenceExcluded": true,
+    "perFileLimitsAndSafePathsPassed": true
+  },
+  "inheritedAcceptanceRecord": "execution-580.json",
+  "runtimeBytesUnchanged": true,
+  "runtimePublished": true,
+  "parentLockTouched": false,
+  "optionalHistoricalSessionHelpersAccessed": false,
+  "actualNewPermissionDenials": [],
+  "newReviewNativeHostRuns": 0,
+  "limits": [
+    "Dependent original-session visual confirmations, not new blind initial/source reviews or reviewer-executed native tests. Both original blind reports and choice confirmations retained; all inherited exact-source/citation/lookup/reading/denial/OOM/process limits remain.",
+    "Both families received complete same packet and31 direct original-path image payloads serially;56captures include25 exact-byte aliases, not56 independent reads. Source1080x2400 returned900x2000; no original-resolution or equal comprehension/retained-context claim. Complete per-turn observations retained.",
+    "Word-body headings/readings aboveMeaning not directly shown in captured frames. Full source reviewed; native fixture awaits exact headings at308/340 without assertIsDisplayed/capture of heading. Appbar titles, linked kana and wholewordpanels readable. No established rendering failure, but do not claim every heading directly visually confirmed.",
+    "Finaltree contains loading/All0 state, not settled-screen acceptance. Both reports note this; Claude's likely-cleanup-timing hypothesis not established: fixture dumps tree in finally before scenario.close. Stable selection PNG and earlier assertions/route prove bounded exercised state, not finaltree timing/cause.",
+    "Claude's opening074 label is an unsupported transcription typo; actualfinding083-NATIVE-574-CHOICE throughout reports/source/receipts. Original report preserved verbatim; no new074 finding or altered historical report.",
+    "Claude's shared-fallback shorthand supported only as appearance consistency; no fallback-face identification from raster/cmap/pixels. All30Han/fourfamilies and two wholewords readable; finehook/inline detail limited by resized view. Prior all40font inspection inherited.",
+    "Full default-four productionQuizBuilder N1 andAll asserted in578; actualN1UI labels independently inspected here. AllUI/custom/padded/partial/larger/reverse/random pools uncertified. \u51b4skill/excel-at secondary sense retained; actualclear/sharp-minded label wrong for\u51cc, not universally disjoint families.",
+    "Fresh577HOST4no-skips/compile and578two correctednative terminal0cases inherited, not rerun; TESTONLYAndroid1c1b7bf4 atop unchangedproductionf9, notlatestappmain. FullContentSyncONCE/8376hashes/1095kanji5052words115N1/version6dfe6a1e287ce5df/zeroProblems/epoch1, Full/Lite/sole\u308a\u3087\u3046\u3057\u306e\u3050/persistence supplied execution, not pixelsalone.",
+    "Two mapped reciprocalpairs/fourdirections, SystemBack/offline and source/persistence depend on supplied fixture/route/terminal, not screenshots alone. Filename forward can capture originating kanji, not prove a word destination.",
+    "Ten reference-injectedtouchstrokes/shapeonlyfeedback/giveuprecall/gradeonNext not humanhandwriting/successfulrecall/MLKit/modeldownload/phone. Offline unavailablemodel shown honestly; transient downloading notice not success.",
+    "Current-main integration/combined tests/normal signedownerpush/remoteCI/exactimmutableZIP and publication outstanding; physicalphone/generalrelease/whole-set acceptance outstanding. No newHOST/native/media/algorithm/otherbatch, optional historical helper or parentlock access."
+  ],
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false,
+  "terminalLocalValidation": [
+    {
+      "path": "docs/n1-reviews/batch-083-publication-581/validate-581.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5",
+      "exitCode": 0,
+      "runtimeManifestUnchanged": true
+    },
+    {
+      "path": "docs/n1-reviews/batch-083-publication-581/manifest-581.txt",
+      "sha256": "552a3819b63ad37139adbde22b4a1a2581d8a7585e8c5e44abfba1c550cceaf9",
+      "exitCode": 0,
+      "runtimeManifestUnchanged": true
+    },
+    {
+      "path": "docs/n1-reviews/batch-083-publication-581/budget-581.txt",
+      "sha256": "b9609b28097a088ac2af14352205f287738d241e4702076f74fea871cd1d9a4d",
+      "exitCode": 0,
+      "runtimeManifestUnchanged": true
+    }
+  ],
+  "diagnostics": [
+    "Published ledgers preserve entire prePublicationCheckpoint581 and prior nested receipts as historical; current support/font/choice dispositions explicitly updated to verified acceptance."
+  ]
+}
