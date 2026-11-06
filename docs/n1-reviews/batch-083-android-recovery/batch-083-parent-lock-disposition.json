@@ -1,0 +1,37 @@
+{
+  "verifiedAt": "2026-11-06T16:54:20.1635459+01:00",
+  "originalFailure": "Child attempted parent-only exclusive acquisition; zero tests ran. Original evidence retained, not retroaccepted.",
+  "operationalHelperDifference": "Archived checkpoint-571.py hash86e555 remains exact. Existing control copy hashf71d5a differs: finish correctly records contentTestedCommit null on zero-test block, preservedContentCommit, plus verify-blocked mode. Direct diff inspected before recovery; do not overwrite either or rerun helper. Failed wrapper and all archived evidence match original hashes.",
+  "ownership": "runner.ps1, not read-only supervise.ps1, owned the original lock. v100 exited before this parent recovery acquired exclusivity.",
+  "prevention": "Every launcher prompt now requires runner-lock-role-notes.txt. Normal child wrappers must retain checks without reacquiring the live parent lock.",
+  "lockImplementationUnchanged": true,
+  "qualifiedHostHeapUnchanged": true,
+  "freshGate": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-083-parent-android-recovery.json",
+  "scope": "HOST recovery only; signed archival, native, visual, integration and publication remain pending.",
+  "provenance": [
+    {
+      "sha256": "f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af",
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\runner.ps1"
+    },
+    {
+      "sha256": "067e33b37a4c6c1012bb909b02ad37850d03a216eb56cc287eee96da4f10fc0e",
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\runner-lock-role-notes.txt"
+    },
+    {
+      "sha256": "ea60490628d60ab35e06cb1b464aaa746b5cc62471f4dc42ac5a2b456c33f294",
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\run-571-parent-android.ps1"
+    },
+    {
+      "sha256": "096204fda7b2f72da55d418ae2529b31288f33765db60e89115de9472ef6240e",
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\verify-parent-android.ps1"
+    },
+    {
+      "sha256": "07932dc90c64f5ef55115c14ca4a388e33aa4cc461265a93c64eb3f661b1a37d",
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\recover-571-parent.ps1"
+    },
+    {
+      "sha256": "f71d5a28b33c06a275a2c51f00401d60a67bd3ba416dcfe0423e02e58d234484",
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\checkpoint-571.py"
+    }
+  ]
+}
