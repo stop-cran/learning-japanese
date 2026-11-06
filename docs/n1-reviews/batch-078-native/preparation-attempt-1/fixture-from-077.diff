@@ -1,0 +1,335 @@
+--- docs\n1-reviews\batch-077-native\N1Batch077NativeTest.kt
++++ docs\n1-reviews\batch-078-native\N1Batch078NativeTest.kt
+@@ -50 +50 @@
+-private fun disposable077() {
++private fun disposable078() {
+@@ -55 +55 @@
+-class N1Batch077GlyphTest {
++class N1Batch078GlyphTest {
+@@ -58,2 +58,2 @@
+-    @Test fun bravingRiskLookalikesAndRadicalFallbacksAcrossFourProductionFamilies() {
+-        disposable077()
++    @Test fun redundancyLookalikesAndCoverTableFallbacksAcrossFourProductionFamilies() {
++        disposable078()
+@@ -62 +62 @@
+-        val pages = listOf("供 侵 備 冂 冒 危 壊 好 子 官 害 山 店 必 損 攻 旅 日 準 物 犯 病 登 目", "罪 行 被 要 語 道 開 阜 阝 限 院 険 頭 馬 験", "冒 日 目 官 冂 阜 阝 険 犯 侵 冒険 冒す")
++        val pages = listOf("会 元 兄 先 冖 冗 几 口 嘘 引 当 性 本 火 炎 生 目 相 笑 見 言 記 許 調", "談 越 長", "冗 冖 几 元 兄 見 口 目 冗談 冗長 冗長性 談")
+@@ -67 +67 @@
+-                    Text("Batch 077: braving risk / look-alikes / radical fallback")
++                    Text("Batch 078: redundancy / look-alikes / cover and table fallback")
+@@ -73 +73 @@
+-                    Text("Inspect all 39 scoped Han; focused 冒/日/目/官, 冂 and 阜/阝. Fallback families may coincide.", fontSize = 16.sp)
++                    Text("Inspect all 27 scoped Han; focused 冗/元/兄/見, 冖 and 几. Fallback families may coincide.", fontSize = 16.sp)
+@@ -84 +84 @@
+-            for (char in listOf("供", "侵", "備", "冂", "冒", "危", "壊", "好", "子", "官", "害", "山", "店", "必", "損", "攻", "旅", "日", "準", "物", "犯", "病", "登", "目", "罪", "行", "被", "要", "語", "道", "開", "阜", "阝", "限", "院", "険", "頭", "馬", "験")) {
++            for (char in listOf("会", "元", "兄", "先", "冖", "冗", "几", "口", "嘘", "引", "当", "性", "本", "火", "炎", "生", "目", "相", "笑", "見", "言", "記", "許", "調", "談", "越", "長")) {
+@@ -105 +105 @@
+-            for (word in listOf("冒険", "冒す")) {
++            for (word in listOf("冗談")) {
+@@ -132 +132 @@
+-        assertEquals(164, rows.length())
++        assertEquals(112, rows.length())
+@@ -138 +138 @@
+-            File(context.getExternalFilesDir(null), "n1-077-font-panel-${index + 1}.png").outputStream().use {
++            File(context.getExternalFilesDir(null), "n1-078-font-panel-${index + 1}.png").outputStream().use {
+@@ -142 +142 @@
+-        File(context.getExternalFilesDir(null), "n1-077-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-078-font-raster.json").writeText(JSONObject()
+@@ -145,2 +145,2 @@
+-            .put("individualGlyphProbes", 156).put("wholeWordRasterProbes", 8).put("panels", 3)
+-            .put("limits", "39 scoped Han including metadata-only 攻 and pending 冂/阝 fallback inspection, four production families, three bounded Compose panels and eight whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
++            .put("individualGlyphProbes", 108).put("wholeWordRasterProbes", 4).put("panels", 3)
++            .put("limits", "27 actual scoped Han including exact 冖/几 fallback inspection, four production families, three bounded Compose panels and four whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
+@@ -151 +151 @@
+-class N1Batch077ArticleTest {
++class N1Batch078ArticleTest {
+@@ -156,2 +156,2 @@
+-    @Test fun fullSingleImportOfflineBravingRiskThreeReciprocalPairsBothReadingsDrawingAndSystemBack() {
+-        disposable077()
++    @Test fun fullSingleImportOfflineRedundancyTwoReciprocalPairsSoleOnReadingDrawingAndSystemBack() {
++        disposable078()
+@@ -160,2 +160,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-077-${UUID.randomUUID()}", "main")
+-        val head = "46dff1466ac9f3cf64b54e197c05088414939896"
++        val source = RepoSource("acceptance-fixture", "n1-078-${UUID.randomUUID()}", "main")
++        val head = "7fb6c46374f2464648130f2473fabcb9137bb7d4"
+@@ -169 +169 @@
+-                    instrumentation.context.assets.open("n1-batch-077-46dff146-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-078-7fb6c463-envelope.zip")
+@@ -184 +184 @@
+-        assertEquals(1089, updated.kanji)
++        assertEquals(1090, updated.kanji)
+@@ -188 +188 @@
+-        assertEquals("2944928c13e2165a", meta.contentVersion)
++        assertEquals("8e06edf2b0857b26", meta.contentVersion)
+@@ -196,10 +196,10 @@
+-        assertEquals(109, n1.size)
+-        val bravingRisk = n1.single { it.kanji == "冒" }
+-        assertEquals(listOf("ボウ"), bravingRisk.onyomi.splitSep())
+-        assertEquals(listOf("おか.す"), bravingRisk.kunyomi.splitSep())
+-        assertNotNull(bravingRisk.quizOnyomi)
+-        assertNotNull(bravingRisk.quizKunyomi)
+-        assertEquals(listOf("ボウ"), bravingRisk.quizOnyomi?.splitSep())
+-        assertEquals(listOf("おか.す"), bravingRisk.quizKunyomi?.splitSep())
+-        assertEquals(listOf("ぼう"), bravingRisk.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(listOf("おかす"), bravingRisk.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(110, n1.size)
++        val redundancy = n1.single { it.kanji == "冗" }
++        assertEquals(listOf("ジョウ"), redundancy.onyomi.splitSep())
++        assertEquals(emptyList<String>(), redundancy.kunyomi.splitSep())
++        assertNotNull(redundancy.quizOnyomi)
++        assertNotNull(redundancy.quizKunyomi)
++        assertEquals(listOf("ジョウ"), redundancy.quizOnyomi?.splitSep())
++        assertEquals(emptyList<String>(), redundancy.quizKunyomi?.splitSep())
++        assertEquals(listOf("じょう"), redundancy.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(emptyList<String>(), redundancy.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -219 +219 @@
+-                        if (card.kanji == "冒") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "冗") now - 60_000 else now + 30L * 86_400_000,
+@@ -225 +225 @@
+-                            if (card.kanji == "冒" && ((kind == ReadingKind.On && key == "ぼう") || (kind == ReadingKind.Kun && key == "おかす"))) now - 60_000
++                            if (card.kanji == "冗" && kind == ReadingKind.On && key == "じょう") now - 60_000
+@@ -232 +232 @@
+-                    0, source.id, "jlpt-n1", "冒", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "冗", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -242,6 +242,6 @@
+-            .put("fullOnyomi", JSONArray(bravingRisk.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(bravingRisk.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(bravingRisk.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(bravingRisk.toReadingCard().quizKeys(ReadingKind.Kun)))
+-            .put("liteQuizOnyomi", JSONArray(requireNotNull(bravingRisk.quizOnyomi).splitSep()))
+-            .put("liteQuizKunyomi", JSONArray(requireNotNull(bravingRisk.quizKunyomi).splitSep()))
++            .put("fullOnyomi", JSONArray(redundancy.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(redundancy.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(redundancy.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(redundancy.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("liteQuizOnyomi", JSONArray(requireNotNull(redundancy.quizOnyomi).splitSep()))
++            .put("liteQuizKunyomi", JSONArray(requireNotNull(redundancy.quizKunyomi).splitSep()))
+@@ -250 +250 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 冒 meaning and both complete curated readings due. Two historical good 冒 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 冗 meaning and sole curated on key じょう due; full and curated kun lists explicitly empty. Two historical good 冗 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -257 +257 @@
+-            await("N1 · 109 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 110 cards").performScrollTo().assertIsDisplayed()
+@@ -260,4 +260,4 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("冒")
+-            click("brave danger; venture")
+-            await("冒 — brave danger; venture")
+-            show(articleBullet("Strokes: 9 · Key (radical): 冂 (the outer outline of the upper part, no. 13) · JLPT: N1 (community list)"), "kanji-01")
++            rule.onNode(hasSetTextAction()).performTextReplacement("冗")
++            click("superfluous; redundant")
++            await("冗 — superfluous; redundant")
++            show(articleBullet("Strokes: 4 · Key (radical): 冖 (the cover-like upper part, no. 14) · JLPT: N1 (community list)"), "kanji-01")
+@@ -265,2 +265,2 @@
+-            show(articleBullet("冒 expresses braving danger or venturing despite difficulty in 冒す (おかす) and 冒険 (ぼうけん), \"adventure; risky venture.\" It is not a general label for anything dangerous: 危険 (きけん) names danger, while 危険を冒す (きけんをおかす) means taking a risk."), "kanji-03")
+-            show(articleBullet("Modern-shape mnemonic: picture an eye, 目, beneath a boxlike upper outline, looking ahead despite danger. This is a memory aid, not a historical sun-plus-eye explanation. The classical indexing radical is 冂, not 日, even though the upper shape can resemble 日."), "kanji-04")
++            show(articleBullet("冗 concerns what is superfluous or unnecessary, and wordiness. Learn the meaning of each compound: 冗談 (じょうだん) means \"joke; jest,\" not a long speech."), "kanji-03")
++            show(articleBullet("Modern-shape mnemonic: imagine a cover-like 冖 above a 几-shaped lower part, with more covering than needed. This is an invented memory aid, not a historical explanation or a verified phonetic analysis."), "kanji-04")
+@@ -268,5 +268,3 @@
+-            show(articleBullet("Both complete source readings are retained and selected for reading practice."), "kanji-06")
+-            show(readingExample("ボウ"), "kanji-10")
+-            show(readingExample("冒険 ぼうけん — adventure; risky venture"), "kanji-12")
+-            show(readingExample("おか.す"), "kanji-13")
+-            show(readingExample("冒す おかす — brave danger; 危険を冒す きけんをおかす — take a risk"), "kanji-15")
++            show(articleBullet("The complete source list has one on reading and no kun readings. ジョウ is selected for reading practice."), "kanji-06")
++            show(readingExample("ジョウ"), "kanji-10")
++            show(readingExample("冗談 じょうだん — joke; jest"), "kanji-12")
+@@ -274,3 +272,2 @@
+-            show(articleBullet("冒険 ぼうけん — adventure; risky venture"), "kanji-17")
+-            show(articleBullet("冒す おかす — brave danger; venture despite difficulty"), "kanji-18")
+-            show(articleBullet("冒頭 (ぼうとう) — beginning; opening"), "kanji-19")
++            show(articleBullet("冗談 じょうだん — joke; jest"), "kanji-14")
++            show(articleBullet("冗長 (じょうちょう) — wordy; long-winded"), "kanji-15")
+@@ -278,3 +275,3 @@
+-            show(articleBullet("Do not force the risk-taking gloss into every compound: 冒頭 names an opening, not an adventure. 冒す also has a harm/affliction sense: 病に冒される (やまいにおかされる), \"be afflicted by a disease,\" is passive, not someone choosing to take a risk."), "kanji-21")
+-            show(articleBullet("犯 also has the reading おか.す, but 犯す is used for committing an offense, as in 罪を犯す (つみをおかす), \"commit a crime.\" 侵す (おかす) concerns invading or infringing and can overlap with 冒す in harm/affliction uses. These are useful spelling distinctions, not perfectly separate meaning compartments. For shape comparison, 官 has a roof and a different connected lower outline; neither 官 nor 目 means braving danger."), "kanji-22")
+-            show(articleBullet("Metadata: KANJIDIC2. Dictionary: JMdict, entries 1519820, 1519830, 1519860, 1855070, 1868850, 1359800 and 1481550. Reading and meaning branches: Digital Daijisen: 冒; spelling overlap: Digital Daijisen: 冒す."), "kanji-23")
++            show(articleBullet("冗長性 (じょうちょうせい) means \"redundancy,\" including in technical contexts. Technical redundancy need not be a fault; do not translate every 冗 compound as \"useless.\" Likewise, calling something 冗談 does not guarantee that it is funny or harmless."), "kanji-17")
++            show(articleBullet("For shape comparison, 元 has two horizontal lines at the top, 兄 has 口, and 見 has 目. 冗 instead has the cover-like 冖 above a 几-shaped outline. These are visual contrasts, not claims that all the lower parts are identical."), "kanji-18")
++            show(articleBullet("Metadata: KANJIDIC2. Dictionary: JMdict, entries 1355480, 1355540, 1355580 and 1355590. Reading and meaning branches: Digital Daijisen: 冗."), "kanji-19")
+@@ -282,2 +279,2 @@
+-            show(articleBullet("冒す おかす — brave danger; venture despite difficulty"), "冒す-forward-14")
+-            inline(await(articleBullet("冒す おかす — brave danger; venture despite difficulty")), "冒す", 0)
++            show(articleBullet("冗談 じょうだん — joke; jest"), "冗談-forward-11")
++            inline(await(articleBullet("冗談 じょうだん — joke; jest")), "冗談", 0)
+@@ -285 +282 @@
+-            await("冒す (おかす) — brave danger; take a risk")
++            await("冗談 (じょうだん) - joke; jest")
+@@ -287,4 +284,4 @@
+-            show(articleBullet("冒す means braving danger or proceeding despite a known difficulty. In 危険を冒す (きけんをおかす), \"take a risk,\" を marks the danger being faced. It is a transitive verb, not a noun meaning an adventure."), "冒す-02")
+-            show(articleBullet("危険を冒して山に登りました。 (きけんをおかしてやまにのぼりました。) — I climbed the mountain despite the danger."), "冒す-03")
+-            show(articleBullet("危険を冒す必要はありません。 (きけんをおかすひつようはありません。) — There is no need to take a risk."), "冒す-04")
+-            show(articleBullet("The second sentence says that taking the risk is unnecessary; it does not say that the situation is safe."), "冒す-05")
++            show(articleBullet("冗談 is a joke or remark not meant seriously. It is a noun. Use 冗談を言う (じょうだんをいう), \"tell a joke; joke,\" rather than adding する as the default verb. 冗談です means \"I'm joking\" or \"It's a joke.\""), "冗談-02")
++            show(articleBullet("兄はよく冗談を言って、みんなを笑わせます。 (あにはよくじょうだんをいって、みんなをわらわせます。) - My older brother often makes jokes and makes everyone laugh."), "冗談-03")
++            show(articleBullet("「本当に引っ越すの？」「ううん、冗談だよ。」 (「ほんとうにひっこすの？」「ううん、じょうだんだよ。」) - \"Are you really moving?\" \"No, I'm joking.\""), "冗談-04")
++            show(articleBullet("冗談で言った (じょうだんでいった) means \"said it as a joke.\""), "冗談-05")
+@@ -292 +289 @@
+-            show(articleBullet("冒 writes おか, with す as okurigana. There is no second kanji to read as a compound. This is a godan verb: 冒します (おかします), 冒して (おかして), 冒さない (おかさない)."), "冒す-07")
++            show(articleBullet("冗 contributes something superfluous or not serious here, and 談 contributes talk. The compound names joking talk, not necessarily a long or wordy speech. The on readings are ジョウ + ダン."), "冗談-07")
+@@ -294 +291 @@
+-            show(articleBullet("冒険 (ぼうけん) is the related noun \"adventure; risky venture\"; 冒険する means to venture or have an adventure. 危険 (きけん) names danger, whether or not anyone chooses to face it. Avoiding danger contrasts with braving it, but 冒す has other senses too, so no single opposite covers every use."), "冒す-09")
++            show(articleBullet("ジョーク overlaps with \"joke.\" 嘘 (うそ) is a lie: a joking statement may be untrue, but the words describe different aspects of the communication. 本当 (ほんとう), \"true; real,\" contrasts with the pretended move in the exchange."), "冗談-09")
+@@ -296,3 +293,2 @@
+-            show(articleBullet("Do not translate every occurrence as voluntarily taking a risk. 病に冒される (やまいにおかされる), \"be afflicted by a disease,\" uses the passive of the harm/affliction sense. Here the person is affected by the illness, not choosing to brave it. This sense can also concern harmful chemicals. The dictionary also records desecrating something sacred and assuming someone else's surname; these are separate senses, not explanations of 危険を冒す."), "冒す-11")
+-            show(articleBullet("Two other verbs share the reading おかす. 犯す, written with 犯, is used in 罪を犯す (つみをおかす), \"commit a crime.\" 侵す concerns invading or infringing and also has a harm/affliction use overlapping with 冒す. Choose the spelling from the expression and meaning, not from the sound alone; this comparison is not an absolute division of every use."), "冒す-12")
+-            show(articleBullet("Dictionary: JMdict, entries 1519820 (senses 1–4), 1868850, 1855070, 1519830, 1218560, 1359800 and 1481550. Spelling and usage: Digital Daijisen: 冒す."), "冒す-13")
++            show(articleBullet("Calling a remark 冗談 describes it as a joke, but does not guarantee that listeners find it funny or harmless. Tone, relationship, and context matter. In its literal use, 冗談ではありません says \"I'm not joking / This is not a joke.\" Conversational 冗談じゃない (じょうだんじゃない) can also express indignant rejection: \"Give me a break!\""), "冗談-11")
++            show(articleBullet("Dictionary: JMdict, entry 1355540, sense 1; entry 2403910."), "冗談-12")
+@@ -300,2 +296,2 @@
+-            show(articleBullet("冒 writes おか, with す as okurigana. There is no second kanji to read as a compound. This is a godan verb: 冒します (おかします), 冒して (おかして), 冒さない (おかさない)."), "冒す-reverse-24")
+-            inline(await(articleBullet("冒 writes おか, with す as okurigana. There is no second kanji to read as a compound. This is a godan verb: 冒します (おかします), 冒して (おかして), 冒さない (おかさない).")), "冒", 0)
++            show(articleBullet("冗 contributes something superfluous or not serious here, and 談 contributes talk. The compound names joking talk, not necessarily a long or wordy speech. The on readings are ジョウ + ダン."), "冗談-reverse-20")
++            inline(await(articleBullet("冗 contributes something superfluous or not serious here, and 談 contributes talk. The compound names joking talk, not necessarily a long or wordy speech. The on readings are ジョウ + ダン.")), "冗", 0)
+@@ -304,3 +300,3 @@
+-            show(readingExample("ボウ"), "冒す-kanji-backlink")
+-            back()
+-            await(articleBullet("冒 writes おか, with す as okurigana. There is no second kanji to read as a compound. This is a godan verb: 冒します (おかします), 冒して (おかして), 冒さない (おかさない).")).assertIsDisplayed()
++            show(readingExample("ジョウ"), "冗談-kanji-backlink")
++            back()
++            await(articleBullet("冗 contributes something superfluous or not serious here, and 談 contributes talk. The compound names joking talk, not necessarily a long or wordy speech. The on readings are ジョウ + ダン.")).assertIsDisplayed()
+@@ -308,3 +304,6 @@
+-            capture("冒す-system-back-to-word")
+-            back()
+-            await(articleBullet("冒す おかす — brave danger; venture despite difficulty")).assertIsDisplayed()
++            capture("冗談-system-back-to-word")
++            section("How the kanji combine")
++            show(articleBullet("冗 contributes something superfluous or not serious here, and 談 contributes talk. The compound names joking talk, not necessarily a long or wordy speech. The on readings are ジョウ + ダン."), "冗談-談-21")
++            inline(await(articleBullet("冗 contributes something superfluous or not serious here, and 談 contributes talk. The compound names joking talk, not necessarily a long or wordy speech. The on readings are ジョウ + ダン.")), "談", 61)
++            await("Article contents")
++            await("談 — converse; consult")
+@@ -312,26 +311,2 @@
+-            capture("冒す-system-back-to-kanji")
+-            section("Common words")
+-            show(articleBullet("冒険 ぼうけん — adventure; risky venture"), "冒険-forward-25")
+-            inline(await(articleBullet("冒険 ぼうけん — adventure; risky venture")), "冒険", 0)
+-            await("Article contents")
+-            await("冒険 (ぼうけん) - adventure; risky venture")
+-            section("How the kanji combine")
+-            show(articleBullet("冒 contributes braving or venturing, while 険 contributes danger or difficulty. The relationship is roughly venturing into danger. The on readings are ボウ + ケン."), "冒険-07")
+-            section("How the kanji combine")
+-            show(articleBullet("冒 contributes braving or venturing, while 険 contributes danger or difficulty. The relationship is roughly venturing into danger. The on readings are ボウ + ケン."), "冒険-reverse-27")
+-            inline(await(articleBullet("冒 contributes braving or venturing, while 険 contributes danger or difficulty. The relationship is roughly venturing into danger. The on readings are ボウ + ケン.")), "冒", 0)
+-            await("Article contents")
+-            section("Readings")
+-            show(readingExample("ボウ"), "冒険-kanji-backlink")
+-            back()
+-            await(articleBullet("冒 contributes braving or venturing, while 険 contributes danger or difficulty. The relationship is roughly venturing into danger. The on readings are ボウ + ケン.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("冒険-system-back-to-word")
+-            section("How the kanji combine")
+-            show(articleBullet("冒 contributes braving or venturing, while 険 contributes danger or difficulty. The relationship is roughly venturing into danger. The on readings are ボウ + ケン."), "冒険-険-28")
+-            inline(await(articleBullet("冒 contributes braving or venturing, while 険 contributes danger or difficulty. The relationship is roughly venturing into danger. The on readings are ボウ + ケン.")), "険", 42)
+-            await("Article contents")
+-            show(articleBullet("Strokes: 11 · Key (radical): 阜 (as left-hand 阝, no. 170) · JLPT: N3 (community list)"), "険-fallback-01")
+-            section("Meaning and origin")
+-            show(articleBullet("険 occurs in steep or difficult terrain and in danger-related words. 険しい けわしい can describe a steep, rugged route; 危険 きけん means danger or dangerous. 冒険 ぼうけん names an adventure or venture."), "険-counterpart-30")
+-            inline(await(articleBullet("険 occurs in steep or difficult terrain and in danger-related words. 険しい けわしい can describe a steep, rugged route; 危険 きけん means danger or dangerous. 冒険 ぼうけん names an adventure or venture.")), "冒険", 147)
++            show(articleBullet("冗談 じょうだん — joke; jest"), "談-counterpart-22")
++            inline(await(articleBullet("冗談 じょうだん — joke; jest")), "冗談", 0)
+@@ -340,7 +315,7 @@
+-            show(articleBullet("冒 contributes braving or venturing, while 険 contributes danger or difficulty. The relationship is roughly venturing into danger. The on readings are ボウ + ケン."), "冒険-険-component-backlink")
+-            back()
+-            await(articleBullet("険 occurs in steep or difficult terrain and in danger-related words. 険しい けわしい can describe a steep, rugged route; 危険 きけん means danger or dangerous. 冒険 ぼうけん names an adventure or venture.")).assertIsDisplayed()
+-            section("Meaning and origin")
+-            capture("冒険-険-system-back-to-component")
+-            back()
+-            await(articleBullet("冒 contributes braving or venturing, while 険 contributes danger or difficulty. The relationship is roughly venturing into danger. The on readings are ボウ + ケン.")).assertIsDisplayed()
++            show(articleBullet("冗 contributes something superfluous or not serious here, and 談 contributes talk. The compound names joking talk, not necessarily a long or wordy speech. The on readings are ジョウ + ダン."), "冗談-談-component-backlink")
++            back()
++            await(articleBullet("冗談 じょうだん — joke; jest")).assertIsDisplayed()
++            section("Common words")
++            capture("冗談-談-system-back-to-component")
++            back()
++            await(articleBullet("冗 contributes something superfluous or not serious here, and 談 contributes talk. The compound names joking talk, not necessarily a long or wordy speech. The on readings are ジョウ + ダン.")).assertIsDisplayed()
+@@ -348,3 +323,3 @@
+-            capture("冒険-険-system-back-from-component")
+-            back()
+-            await(articleBullet("冒険 ぼうけん — adventure; risky venture")).assertIsDisplayed()
++            capture("冗談-談-system-back-from-component")
++            back()
++            await(articleBullet("冗談 じょうだん — joke; jest")).assertIsDisplayed()
+@@ -352 +327 @@
+-            capture("冒険-system-back-to-kanji")
++            capture("冗談-system-back-to-kanji")
+@@ -358 +333 @@
+-                .put("mappedReciprocalPairs", 3).put("directedLinkTransitions", 6)
++                .put("mappedReciprocalPairs", 2).put("directedLinkTransitions", 4)
+@@ -362 +337 @@
+-            assertEquals("冒", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("冗", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -364 +339 @@
+-            click("brave danger; venture")
++            click("superfluous; redundant")
+@@ -366 +341 @@
+-            assertEquals("冒", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("冗", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -372 +347 @@
+-            repeat(2) {
++            repeat(1) {
+@@ -376 +351 @@
+-                assertEquals("冒", question.card.kanji)
++                assertEquals("冗", question.card.kanji)
+@@ -378 +353,2 @@
+-                val key = if (question.question.kind == ReadingKind.On) "ぼう" else "おかす"
++                assertEquals(ReadingKind.On, question.question.kind)
++                val key = "じょう"
+@@ -389 +365 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "冒" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "冗" &&
+@@ -393 +369 @@
+-            assertEquals(setOf(ReadingKind.On, ReadingKind.Kun), answeredKinds)
++            assertEquals(setOf(ReadingKind.On), answeredKinds)
+@@ -396,2 +372,2 @@
+-            assertEquals(2, done.answered)
+-            assertEquals(2, done.correct)
++            assertEquals(1, done.answered)
++            assertEquals(1, done.correct)
+@@ -399 +375 @@
+-                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "冒" &&
++                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "冗" &&
+@@ -402,3 +378,4 @@
+-            assertEquals(2, readingLogs.size)
+-            assertEquals(setOf("ぼう", "おかす"), readingLogs.map { it.reading }.toSet())
+-            capture("curated-both-done")
++            assertEquals(1, readingLogs.size)
++            assertEquals(setOf("じょう"), readingLogs.map { it.reading }.toSet())
++            assertTrue(readingLogs.all { it.mode == ReadingKind.On.mode.name })
++            capture("curated-sole-on-done")
+@@ -409,4 +386,4 @@
+-            await("brave danger; venture").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "冒") })
+-            assertEquals(listOf("ボウ"), card.onyomi.splitSep())
+-            assertEquals(listOf("おか.す"), card.kunyomi.splitSep())
++            await("superfluous; redundant").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "冗") })
++            assertEquals(listOf("ジョウ"), card.onyomi.splitSep())
++            assertEquals(emptyList<String>(), card.kunyomi.splitSep())
+@@ -415,2 +392,2 @@
+-            assertEquals(listOf("ボウ"), card.quizOnyomi?.splitSep())
+-            assertEquals(listOf("おか.す"), card.quizKunyomi?.splitSep())
++            assertEquals(listOf("ジョウ"), card.quizOnyomi?.splitSep())
++            assertEquals(emptyList<String>(), card.quizKunyomi?.splitSep())
+@@ -422 +399 @@
+-            assertEquals(9, strokes.length())
++            assertEquals(4, strokes.length())
+@@ -439 +416 @@
+-            rule.onNode(hasContentDescription("9 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("4 strokes drawn", substring = true)).assertExists()
+@@ -444 +421 @@
+-                    it.kanji == "冒" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "冗" && it.mode == StudyMode.Draw.name }
+@@ -455 +432 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "冒" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "冗" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -463 +440 @@
+-                .put("bothCuratedKindsPersistedGoodAndDone", true)
++                .put("soleCuratedOnPersistedGoodAndDoneNoKun", true)
+@@ -468,2 +445,2 @@
+-            File(app.getExternalFilesDir(null), "n1-077-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-077-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-078-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-078-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -562 +539 @@
+-        File(app.getExternalFilesDir(null), "n1-077-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-078-$step.png").outputStream().use {
