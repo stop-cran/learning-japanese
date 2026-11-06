@@ -37,7 +37,63 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 077: source-prepared, not drafted
+## Batch 077: published for bounded owner testing
+
+The [publication record](n1-sources/batch-077-publication.json) closes **冒**
+and necessary **冒す** おかす. Existing **冒険** ぼうけん keeps its N3
+word level; only its component link and older **険**'s reciprocal link
+change. All **three mapped reciprocal pairs /six directions** and the one
+activated baseline pair are present. Full and selected **ボウ /おか.す**
+retain source order and offer **ぼう /おかす**. The support article has
+no inferred vocabulary level.
+
+The [acceptance audit](n1-sources/batch-077-acceptance-audit.json) records
+fresh combined-tree validation: **372 Python tests, no skips**, validator,
+vocabulary consistency (2,122/2,431 reviewed pilot prompts, not full coverage),
+fresh manifest `2944928c13e2165a`, five frozen inputs, **40 distinct complete
+JMdict families**, two raw character records, baseline metadata, pinned
+nine-stroke geometry, reading/quiz/link audits, 39 actual scoped Han cmaps
+and **8,358 runtime hashes**. Fresh main was already ancestral; no teaching
+or tool merge changes required additional review. The initial local audit's
+38-versus-39 inventory assertion and correction remain recorded: reviewed
+metadata-only 攻 adds the 39th character without changing teaching prose.
+
+The [text reconciliation](n1-reviews/batch-077-reconciliation.json) retains
+blind initial **claude-opus-5.5 /gpt-6.1-sol** reviews and serial original-session
+confirmations. One minor conservative direct **攻める** quiz safeguard
+was added to the new word and confirmed by both. GPT's disagreement that
+the earlier absence was necessarily defective remains explicit; this is
+not an unrestricted synonym claim. No consequential scoped teaching defect
+remains.
+
+The [visual reconciliation](n1-reviews/batch-077-visual-reconciliation.json)
+retains two serial, internally serial dependent confirmations, each reading
+the common source/fixture packet and **33 unique PNG groups covering 54
+originals through 21 exact-byte aliases**. Tool-returned images were
+900x2000, not the original 1080x2400. All 39 Han across four production
+families, focused look-alikes and both words are legible in these bounded
+captures; actual fallback faces and physical-phone rendering remain unknown.
+Optional おか-lure, alias and final loading-tree limitations are preserved.
+
+Accepted [HOST516](n1-sources/execution-516.json) **3+1 non-skipped cases**
+and [native518](n1-sources/execution-518.json) **two named terminal-status-0
+cases** were reverified, not rerun. Production ContentSync imported the full
+native Git envelope once: **1,089 kanji /5,046 words /109 N1**, zero problems.
+Both curated readings, all mapped links, System Back and offline routes pass.
+Nine reference-derived injected strokes, ungraded trace and recall Again
+are not human handwriting, successful recall or MLKit evidence. Actual
+meaning options were stackmates, not a fresh native exercise of the authored
+日/目/官 distractors; their textual audit remains applicable.
+
+The normally signed accepted publication has green CI and an immutable
+public ZIP verifying all 8,358 runtime hashes and unchanged archive guards.
+Terminal evidence publication is tracked separately in control. Published
+coverage is **104/1,228 additions; 1,124 remain**. The 104 necessary support
+articles are not N1 vocabulary expansion. Compatible Android `f9b59a2+`
+is required; physical-phone, general-release and whole-set acceptance remain
+outstanding. Earlier source/draft records below are historical.
+
+## Batch 077 source checkpoint (historical)
 
 The [source packet](n1-sources/batch-077-progress.json) freezes **冒**,
 source row 86, after batch 076's verified publication. It retains **40
