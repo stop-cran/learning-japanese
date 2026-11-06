@@ -1,0 +1,857 @@
+{
+  "execution": 543,
+  "batch": "080",
+  "startingHead": "4033c82b7c1e7b690ccb2c9b510e04820fe1ba1a",
+  "startedAt": "2026-11-06T08:11:23.012624+00:00",
+  "scope": "SAME080 native execution and durable local checkpoint only; no reviewer, publication,081 or second runner.",
+  "authorization": {
+    "requestSha256": "072f100914c316231a76491b579f9dc331a9ff631e8a02d0baaa310b02a2ba45",
+    "bytes": 2555863,
+    "lines": 33512,
+    "completeFileLoadedAndCheckpointParsed": true,
+    "limits": "Entire request loaded and checkpoint parsed; operative contract, complete issue and final checkpoint inspected. Historical middle parsed, not freshly semantically re-reviewed."
+  },
+  "artifactPathPreflight": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\authoring-artifact-path-notes.txt",
+  "optionalHistoricalHelpersAccessed": false,
+  "actualNewPermissionDenials": [],
+  "manifestSha256": "407c5e9ed547068869e17c94836c6a238e09a76cc609249aac4201bda0d50d3b",
+  "status": "continue",
+  "schemaVersion": 1,
+  "checkpoint": 543,
+  "stage": "native-passed-awaiting-independent-visual-confirmations",
+  "completedAt": "2026-11-06T08:18:25.514175+00:00",
+  "nativeExecution": {
+    "execution": 543,
+    "batch": "080",
+    "attempt": 1,
+    "startedAt": "2026-11-06T09:11:24.2209629+01:00",
+    "serial": "emulator-5580",
+    "contentSnapshot": "0d2c9aee6de9e4f430935b38e31228db4bd47908",
+    "androidSnapshot": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+    "coordinatorHead": "4033c82b7c1e7b690ccb2c9b510e04820fe1ba1a",
+    "appApk": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\build\\outputs\\apk\\debug\\app-debug.apk",
+    "appApkSha256": "0224e8e3f8c744a554da173ec20f133d5d00cb6b6226b001da5ea030856bd407",
+    "testApk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-080-native-test.apk",
+    "testApkSha256": "e60048520c9e75d0594793b43590f8458b0a9d9e6f2ecdfc5f1839cac39d9c52",
+    "fixtureSha256": "d48a61d95ac1e81b0aff0546d8bbdf5b12a5a90f70738d1af537e7b28bd2e456",
+    "archiveSha256": "5602a71fd0b5d0df77bbd9962300b3b047683f3ba28b04279986f2e30ff27384",
+    "nativeExecuted": true,
+    "passed": true,
+    "failure": null,
+    "hostHeapInitUsed": false,
+    "guestOrAppHeapChanged": false,
+    "guardsChanged": false,
+    "prelaunch": {
+      "connections": [],
+      "verifiedAt": "2026-11-06T09:11:25.2402411+01:00",
+      "devices": "List of devices attached\r\nemulator-5556          device product:sdk_gphone64_x86_64 model:sdk_gphone64_x86_64 device:emu64xa transport_id:15\r\n\r\n"
+    },
+    "preexistingEmulators": [
+      {
+        "ProcessId": 10668,
+        "ParentProcessId": 16608,
+        "Name": "emulator.exe",
+        "CommandLine": "\"C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk\\emulator\\emulator.exe\" -avd Pixel_9 -port 5556 -no-snapshot-load -no-snapshot-save"
+      },
+      {
+        "ProcessId": 18200,
+        "ParentProcessId": 10668,
+        "Name": "qemu-system-x86_64.exe",
+        "CommandLine": "C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk\\emulator\\qemu\\windows-x86_64\\qemu-system-x86_64.exe -avd Pixel_9 -port 5556 -no-snapshot-load -no-snapshot-save"
+      }
+    ],
+    "parentEmulatorPid": 11976,
+    "emulatorArguments": [
+      "-avd",
+      "N3_Acceptance_20261029",
+      "-port",
+      "5580",
+      "-read-only",
+      "-no-snapshot",
+      "-no-window",
+      "-no-audio",
+      "-gpu",
+      "host",
+      "-feature",
+      "-Vulkan",
+      "-memory",
+      "2048",
+      "-cores",
+      "2"
+    ],
+    "qemuPid": 1240,
+    "listeners": [
+      {
+        "LocalPort": 5581,
+        "OwningProcess": 1240
+      },
+      {
+        "LocalPort": 5580,
+        "OwningProcess": 1240
+      },
+      {
+        "LocalPort": 5581,
+        "OwningProcess": 1240
+      },
+      {
+        "LocalPort": 5580,
+        "OwningProcess": 1240
+      }
+    ],
+    "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+    "heapGrowth": "192m",
+    "heapSize": "576m",
+    "network": "Active default network: none",
+    "instrumentationCommand": "adb -s emulator-5580 shell am instrument -w -r -e n1Disposable true -e class io.github.stopcran.kanji.ui.N1Batch080GlyphTest,io.github.stopcran.kanji.ui.N1Batch080ArticleTest io.github.stopcran.kanji.test/androidx.test.runner.AndroidJUnitRunner",
+    "adbExitCode": 0,
+    "terminalSuccessCases": 2,
+    "terminalCases": [
+      {
+        "class": "io.github.stopcran.kanji.ui.N1Batch080ArticleTest",
+        "test": "fullSingleImportOfflineClarityOneReciprocalPairCuratedKunDrawingAndSystemBack",
+        "status": 0
+      },
+      {
+        "class": "io.github.stopcran.kanji.ui.N1Batch080GlyphTest",
+        "test": "clarityLookalikesAndIceWaterFallbacksAcrossFourProductionFamilies",
+        "status": 0
+      }
+    ],
+    "artifacts": [
+      "n1-080-article-route.json",
+      "n1-080-article-tree.txt",
+      "n1-080-curated-Kun-feedback.png",
+      "n1-080-curated-Kun-question.png",
+      "n1-080-curated-kun-done.png",
+      "n1-080-drawing-feedback.png",
+      "n1-080-drawing-recall-feedback.png",
+      "n1-080-drawing-trace.png",
+      "n1-080-font-panel-1.png",
+      "n1-080-font-panel-2.png",
+      "n1-080-font-panel-3.png",
+      "n1-080-font-raster.json",
+      "n1-080-kanji-01.png",
+      "n1-080-kanji-03.png",
+      "n1-080-kanji-04.png",
+      "n1-080-kanji-06.png",
+      "n1-080-kanji-10.png",
+      "n1-080-kanji-12.png",
+      "n1-080-kanji-13.png",
+      "n1-080-kanji-15.png",
+      "n1-080-kanji-16.png",
+      "n1-080-kanji-18.png",
+      "n1-080-kanji-19.png",
+      "n1-080-kanji-21.png",
+      "n1-080-kanji-22.png",
+      "n1-080-kanji-24.png",
+      "n1-080-kanji-25.png",
+      "n1-080-kanji-27.png",
+      "n1-080-kanji-28.png",
+      "n1-080-kanji-29.png",
+      "n1-080-kanji-31.png",
+      "n1-080-kanji-32.png",
+      "n1-080-kanji-33.png",
+      "n1-080-kanji-backlink.png",
+      "n1-080-meaning-feedback.png",
+      "n1-080-meaning-question.png",
+      "n1-080-selection.png",
+      "n1-080-system-back-to-kanji.png",
+      "n1-080-system-back-to-word.png",
+      "n1-080-word-02.png",
+      "n1-080-word-03.png",
+      "n1-080-word-04.png",
+      "n1-080-word-05.png",
+      "n1-080-word-07.png",
+      "n1-080-word-08.png",
+      "n1-080-word-10.png",
+      "n1-080-word-11.png",
+      "n1-080-word-13.png",
+      "n1-080-word-14.png",
+      "n1-080-word-15.png",
+      "n1-080-word-forward-21.png",
+      "n1-080-word-reverse-33.png"
+    ],
+    "stopAdbExitCode": 0,
+    "ownedHelperStopped": true,
+    "ownedQemuStopped": true,
+    "completedAt": "2026-11-06T09:16:03.2179888+01:00"
+  },
+  "articleRoute": {
+    "contentSnapshot": "0d2c9aee6de9e4f430935b38e31228db4bd47908",
+    "contentVersion": "4572f7b1d0d95059",
+    "archiveRequests": 1,
+    "importedKanji": 1092,
+    "importedWords": 5048,
+    "problems": 0,
+    "n1Cards": 112,
+    "acceptedReadingParserEpoch": 1,
+    "fullOnyomi": [
+      "ゴ",
+      "コ"
+    ],
+    "fullKunyomi": [
+      "さ.える",
+      "こお.る",
+      "ひ.える"
+    ],
+    "quizOnKeys": [],
+    "quizKunKeys": [
+      "さえる"
+    ],
+    "liteQuizOnyomi": [],
+    "liteQuizKunyomi": [
+      "さ.える"
+    ],
+    "transport": "Exact full git envelope through production ContentSync ONCE; synthetic source/HEAD",
+    "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+    "sdk": 35,
+    "fixture": "Other N1 meanings/readings postponed; 冴 meaning and sole curated kun key さえる due. Explicit empty on list. Two historical good 冴 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.",
+    "phoneEvidence": false,
+    "passed": true,
+    "reciprocalLinkAndSystemBack": true,
+    "mappedReciprocalPairs": 1,
+    "directedLinkTransitions": 2,
+    "fullProjectionOnyomi": [
+      "ゴ",
+      "コ"
+    ],
+    "fullProjectionKunyomi": [
+      "さ.える",
+      "こお.る",
+      "ひ.える"
+    ],
+    "fullProjectionQuizOnyomi": [],
+    "fullProjectionQuizKunyomi": [
+      "さ.える"
+    ],
+    "meaningQuestionAndFeedback": true,
+    "soleCuratedKunPersistedGoodAndDone": true,
+    "touchInjectedReferenceStrokes": 7,
+    "drawingTraceThenRecall": true,
+    "drawingGradeRecordedOnNext": true,
+    "offline": true
+  },
+  "nativeRasterRecords": {
+    "rows": 124,
+    "individualGlyphProbes": 120,
+    "wholeWordRasterProbes": 4,
+    "panels": 3,
+    "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-font-raster.json",
+    "sha256": "3dbdb1d3237e95b86077e6a43115a0f202e8931c72ed3fe08363e9914d3f955c"
+  },
+  "visualInspection": {
+    "execution": 543,
+    "batch": "080",
+    "inspector": "Coordinator, GPT-6.1 Sol",
+    "method": "Direct view tool reads of one original PNG per SHA-256-identical group. All 49 originals retained; 26 distinct byte groups viewed at original dimensions, without montage/crop substitution.",
+    "inspectedRepresentatives": [
+      "n1-080-curated-kun-done.png",
+      "n1-080-curated-Kun-feedback.png",
+      "n1-080-curated-Kun-question.png",
+      "n1-080-drawing-feedback.png",
+      "n1-080-drawing-recall-feedback.png",
+      "n1-080-drawing-trace.png",
+      "n1-080-font-panel-1.png",
+      "n1-080-font-panel-2.png",
+      "n1-080-font-panel-3.png",
+      "n1-080-kanji-01.png",
+      "n1-080-kanji-03.png",
+      "n1-080-kanji-06.png",
+      "n1-080-kanji-12.png",
+      "n1-080-kanji-21.png",
+      "n1-080-kanji-22.png",
+      "n1-080-kanji-27.png",
+      "n1-080-kanji-32.png",
+      "n1-080-kanji-backlink.png",
+      "n1-080-meaning-feedback.png",
+      "n1-080-meaning-question.png",
+      "n1-080-selection.png",
+      "n1-080-system-back-to-kanji.png",
+      "n1-080-system-back-to-word.png",
+      "n1-080-word-02.png",
+      "n1-080-word-10.png",
+      "n1-080-word-13.png"
+    ],
+    "observations": {
+      "fontPanels": "All 30 scoped Han visible across Gothic, Mincho, Textbook and Brush in three actual Compose panels. No blank/replacement boxes observed. Focused 冴/次/汗/河/牙 remain distinguishable; actual 冫 has two marks and 氵 three. 冱 and the whole words 冴える/冱える/冴寒 are readable. The three cmap-absent characters 冫/冱/氵 use readable fallback; the image does not identify a particular underlying fallback face.",
+      "selectionMeaning": "N1 selected, 112 cards. 冴 meaning question displays clear; sharp-minded as the key with permit; sincerity, broom; comet and peng; giant mythical bird as alternatives. Correct feedback and embedded article visible.",
+      "curatedReading": "One kun question offers さえる, with correct kun feedback and 1 of 1 session completion. Feedback retains the full source reading display; this is not evidence that excluded source readings were offered. Actual Full/Lite/key/log assertions are in the native route record.",
+      "articlesAndRoutes": "The captured states collectively expose both complete articles, their explanations/examples, source-only reading dispositions, comparison forms and source citations. Linked 冴える and reciprocal 冴 are visible. System Back states restore the word component section and kanji common-word section.",
+      "tableViewport": "The table explicitly says to scroll sideways. Left-aligned states expose all reading labels; horizontally shifted states expose complete explanatory cells. Some row labels or explanatory text are clipped in individual states, and some long English words wrap within a column. Combined captures and native selectors establish navigation to the content, not a single-frame all-columns claim or a general UI certification.",
+      "drawing": "Seven-stroke reference trace shown, followed by injected reference-stroke comparison and separate give-up recall feedback. Trace feedback says practice only and stroke shapes only, handwriting model not available. Reference outline and numbered correct-stroke diagram readable. This is not human freehand recognition or demonstrated recall."
+    },
+    "coordinatorBlockingVisualDefectEstablished": false,
+    "independentVisualAcceptance": false,
+    "limits": "Coordinator inspection only; two serial original-family independent visual confirmations still required. Native emulator API35, not physical phone. 120 per-character and four whole-word Paint assertions/raster hashes are not 124 independently viewed PNGs, a fallback-face identification or linguistic certification. Synthetic source/HEAD and disposable seeded review schedule, full production import once; no owner progress used. Offline handwriting model unavailable: injected reference trace/shape-only comparison/give-up recall do not establish MLKit recognition, human memory, phone acceptance or learning effectiveness. Existing source/read-depth/review/process/denial/OOM and general-release limits remain."
+  },
+  "imageIndex": {
+    "originalPngCount": 49,
+    "distinctByteGroups": 26,
+    "inspectionMethod": "Direct view tool reads of one original PNG per SHA-256-identical group. All 49 originals retained; 26 distinct byte groups viewed at original dimensions, without montage/crop substitution.",
+    "groups": [
+      {
+        "sha256": "93699029d2b91497bdaf559adca8198bdbbee63a4df37fb9d2f6886de65afe40",
+        "directlyViewedRepresentative": "n1-080-curated-kun-done.png",
+        "originals": [
+          "n1-080-curated-kun-done.png"
+        ]
+      },
+      {
+        "sha256": "dba36224095cbad82f0fa469f8d4be69f42da2ab66f69118c05fadbdf6699c7d",
+        "directlyViewedRepresentative": "n1-080-curated-Kun-feedback.png",
+        "originals": [
+          "n1-080-curated-Kun-feedback.png"
+        ]
+      },
+      {
+        "sha256": "58009858a4f231eba945867b8265920d021e71a3d0e53bee58435522bf215222",
+        "directlyViewedRepresentative": "n1-080-curated-Kun-question.png",
+        "originals": [
+          "n1-080-curated-Kun-question.png"
+        ]
+      },
+      {
+        "sha256": "1966fa665a46e53fcb87dcb9724fbf391ef87d594ab9dadc96149b28e746eddd",
+        "directlyViewedRepresentative": "n1-080-drawing-feedback.png",
+        "originals": [
+          "n1-080-drawing-feedback.png"
+        ]
+      },
+      {
+        "sha256": "9d40b6a9ce7a905e5db8bb94c6eca58afb452ef54f02b9809d997026a829833b",
+        "directlyViewedRepresentative": "n1-080-drawing-recall-feedback.png",
+        "originals": [
+          "n1-080-drawing-recall-feedback.png"
+        ]
+      },
+      {
+        "sha256": "42f21a62a809989096203b290f8c4efde3d511f1d8d07ec2f2f9ccc8a4a75787",
+        "directlyViewedRepresentative": "n1-080-drawing-trace.png",
+        "originals": [
+          "n1-080-drawing-trace.png"
+        ]
+      },
+      {
+        "sha256": "4773b288f59ee2b90a86e3297cdbb4afa7933e194e35fb879ea00ce36cfd6dba",
+        "directlyViewedRepresentative": "n1-080-font-panel-1.png",
+        "originals": [
+          "n1-080-font-panel-1.png"
+        ]
+      },
+      {
+        "sha256": "af82b8996a185ccc145c4bb137c48b425d4130524b25adacf36aa7e5c2ff2792",
+        "directlyViewedRepresentative": "n1-080-font-panel-2.png",
+        "originals": [
+          "n1-080-font-panel-2.png"
+        ]
+      },
+      {
+        "sha256": "e2b32ab5204c1ecb880bfb9b531340298ee3516a4b41480ce5937252d4845433",
+        "directlyViewedRepresentative": "n1-080-font-panel-3.png",
+        "originals": [
+          "n1-080-font-panel-3.png"
+        ]
+      },
+      {
+        "sha256": "aab9cae2e1b85559ed5f1a3b0dc686b3545529d960ce82d7620027893979af5d",
+        "directlyViewedRepresentative": "n1-080-kanji-01.png",
+        "originals": [
+          "n1-080-kanji-01.png"
+        ]
+      },
+      {
+        "sha256": "6bc63ceed934e9b3da78f327c35d616e8762d5b4b619b7c17fb5314dd4a4095d",
+        "directlyViewedRepresentative": "n1-080-kanji-03.png",
+        "originals": [
+          "n1-080-kanji-03.png",
+          "n1-080-kanji-04.png"
+        ]
+      },
+      {
+        "sha256": "1a19fd3106516695b549a1247f609561e53620e92e60183003601a49fee2f59b",
+        "directlyViewedRepresentative": "n1-080-kanji-06.png",
+        "originals": [
+          "n1-080-kanji-06.png",
+          "n1-080-kanji-10.png",
+          "n1-080-kanji-13.png",
+          "n1-080-kanji-16.png",
+          "n1-080-kanji-19.png"
+        ]
+      },
+      {
+        "sha256": "8d318f4e8c9d096d536dd38bec9bcfbae12959ca3b1a69a01f71c07edb0d695c",
+        "directlyViewedRepresentative": "n1-080-kanji-12.png",
+        "originals": [
+          "n1-080-kanji-12.png",
+          "n1-080-kanji-15.png",
+          "n1-080-kanji-18.png"
+        ]
+      },
+      {
+        "sha256": "5ed99220fd511da6426fada9629048f551e96c1fd15c4e192dd2030481c50a24",
+        "directlyViewedRepresentative": "n1-080-kanji-21.png",
+        "originals": [
+          "n1-080-kanji-21.png",
+          "n1-080-kanji-24.png",
+          "n1-080-kanji-25.png"
+        ]
+      },
+      {
+        "sha256": "6e2ed747e1777eb000daa2d7f721f3d6fa4745dfff806b4acf86b27204ef4c74",
+        "directlyViewedRepresentative": "n1-080-kanji-22.png",
+        "originals": [
+          "n1-080-kanji-22.png"
+        ]
+      },
+      {
+        "sha256": "8e25505280705e265a11d6c94a65b3742b02d622a0ece0b36c0d960ae7fcf241",
+        "directlyViewedRepresentative": "n1-080-kanji-27.png",
+        "originals": [
+          "n1-080-kanji-27.png",
+          "n1-080-kanji-28.png",
+          "n1-080-kanji-29.png",
+          "n1-080-kanji-31.png"
+        ]
+      },
+      {
+        "sha256": "edc2ff3e16c8d466cd71a2d4ff1ebf85f38a9f621485f3c8f5b23fbb7b7ac3b3",
+        "directlyViewedRepresentative": "n1-080-kanji-32.png",
+        "originals": [
+          "n1-080-kanji-32.png",
+          "n1-080-kanji-33.png",
+          "n1-080-word-forward-21.png"
+        ]
+      },
+      {
+        "sha256": "a33be1320a1831647f7bb274c2ba2f7fa85f9f2ab7f2bc8e70df29f52b56d706",
+        "directlyViewedRepresentative": "n1-080-kanji-backlink.png",
+        "originals": [
+          "n1-080-kanji-backlink.png"
+        ]
+      },
+      {
+        "sha256": "4ada73845bc664d9c0ac25ff2bc1717a67771095349c55684965d683478d6c5a",
+        "directlyViewedRepresentative": "n1-080-meaning-feedback.png",
+        "originals": [
+          "n1-080-meaning-feedback.png"
+        ]
+      },
+      {
+        "sha256": "a8b71a9673ee2a54d08b19d91b88ec7b130767b47a53346d784c9a986f509997",
+        "directlyViewedRepresentative": "n1-080-meaning-question.png",
+        "originals": [
+          "n1-080-meaning-question.png"
+        ]
+      },
+      {
+        "sha256": "6585755a89e332597ec6f2d2a79a2dc5bcfd0023673df71b91d0fbf11eaa56fe",
+        "directlyViewedRepresentative": "n1-080-selection.png",
+        "originals": [
+          "n1-080-selection.png"
+        ]
+      },
+      {
+        "sha256": "9441c8c9e9d8bcce44b0a6e597b4177f95d0255a7eb5e4cdb6d8673f0071108d",
+        "directlyViewedRepresentative": "n1-080-system-back-to-kanji.png",
+        "originals": [
+          "n1-080-system-back-to-kanji.png"
+        ]
+      },
+      {
+        "sha256": "c8c12adc89488278f0c1e2f54ff119ab729489071d1818e052d9080e12dbc5ed",
+        "directlyViewedRepresentative": "n1-080-system-back-to-word.png",
+        "originals": [
+          "n1-080-system-back-to-word.png",
+          "n1-080-word-07.png",
+          "n1-080-word-08.png",
+          "n1-080-word-reverse-33.png"
+        ]
+      },
+      {
+        "sha256": "14c16f0ccb6e3f9825bcc5eaaa840c6485ea7e5602cfae99389785c3281370d2",
+        "directlyViewedRepresentative": "n1-080-word-02.png",
+        "originals": [
+          "n1-080-word-02.png",
+          "n1-080-word-03.png",
+          "n1-080-word-04.png",
+          "n1-080-word-05.png"
+        ]
+      },
+      {
+        "sha256": "6703506c7b932149f4fff33752213825299231ab1d346c9d57e613e7df00025b",
+        "directlyViewedRepresentative": "n1-080-word-10.png",
+        "originals": [
+          "n1-080-word-10.png",
+          "n1-080-word-11.png"
+        ]
+      },
+      {
+        "sha256": "59a3a40afb6d6f1bb7e0ee5cbe5a628973df08a8c72def18b1437baac8a2459f",
+        "directlyViewedRepresentative": "n1-080-word-13.png",
+        "originals": [
+          "n1-080-word-13.png",
+          "n1-080-word-14.png",
+          "n1-080-word-15.png"
+        ]
+      }
+    ]
+  },
+  "archivedReceipts": [
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\adb-operations.txt",
+      "sha256": "39cc540570a2daa13607e5032c9aa83310220c0a416939238380b03b259ccc4c",
+      "bytes": 3414,
+      "originalSha256": "52611f6b1980cdd852a57a8be810e16d280b332b50de5af94d8bbae3a435c1a3",
+      "compressedRaw": "docs\\n1-reviews\\batch-080-native\\attempt-1\\adb-operations.raw.txt.gz",
+      "compressedRawSha256": "23c1032d443aa05c95e4036378727d2a0a58eb03ab92dd66258ff2666d1aab35"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\emulator-stderr.txt",
+      "sha256": "8ef5ece2e885aa6480c6a3c91067dc376ab25eb318b7abe6de202bbe267b730d",
+      "bytes": 147
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\emulator-stdout.txt",
+      "sha256": "4704f67f7ac7eb27039d167ad51fffc05ba0c0354a43eb2decd93add63a9cfca",
+      "bytes": 12130,
+      "originalSha256": "0302585e0c57893a816cfdec9b1b4f9204725da160d6659f4fc23f63f9916939",
+      "compressedRaw": "docs\\n1-reviews\\batch-080-native\\attempt-1\\emulator-stdout.raw.txt.gz",
+      "compressedRawSha256": "7a0844cf55a306162eece2e5bb2c22e2129f7988ef553e6978099c38944a9d76"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\execution.json",
+      "sha256": "d36a40b751ee8afbd5ffb9d09c02add487fe5f1c1fa125635275e80dce22160d",
+      "bytes": 5288
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\instrumentation.txt",
+      "sha256": "9222c53bb1d15e3fbaa73cbf1a7d154c2bae26c4f5adb11d6aba196e92bd33a5",
+      "bytes": 1659
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-article-route.json",
+      "sha256": "12b8f3a2c3d0c83b3598bbd9e7ffd692c24be00f353d1a85aea8d23a1c4379cd",
+      "bytes": 1565
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-article-tree.txt",
+      "sha256": "cb631874313d88a2e15fe76f9c792ca258ce984d9da8f7465a928671e5f95021",
+      "bytes": 3242
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-curated-kun-done.png",
+      "sha256": "93699029d2b91497bdaf559adca8198bdbbee63a4df37fb9d2f6886de65afe40",
+      "bytes": 56836
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-curated-Kun-feedback.png",
+      "sha256": "dba36224095cbad82f0fa469f8d4be69f42da2ab66f69118c05fadbdf6699c7d",
+      "bytes": 184643
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-curated-Kun-question.png",
+      "sha256": "58009858a4f231eba945867b8265920d021e71a3d0e53bee58435522bf215222",
+      "bytes": 93340
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-drawing-feedback.png",
+      "sha256": "1966fa665a46e53fcb87dcb9724fbf391ef87d594ab9dadc96149b28e746eddd",
+      "bytes": 218142
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-drawing-recall-feedback.png",
+      "sha256": "9d40b6a9ce7a905e5db8bb94c6eca58afb452ef54f02b9809d997026a829833b",
+      "bytes": 207994
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-drawing-trace.png",
+      "sha256": "42f21a62a809989096203b290f8c4efde3d511f1d8d07ec2f2f9ccc8a4a75787",
+      "bytes": 122996
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-font-panel-1.png",
+      "sha256": "4773b288f59ee2b90a86e3297cdbb4afa7933e194e35fb879ea00ce36cfd6dba",
+      "bytes": 213925
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-font-panel-2.png",
+      "sha256": "af82b8996a185ccc145c4bb137c48b425d4130524b25adacf36aa7e5c2ff2792",
+      "bytes": 130345
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-font-panel-3.png",
+      "sha256": "e2b32ab5204c1ecb880bfb9b531340298ee3516a4b41480ce5937252d4845433",
+      "bytes": 175688
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-font-raster.json",
+      "sha256": "3dbdb1d3237e95b86077e6a43115a0f202e8931c72ed3fe08363e9914d3f955c",
+      "bytes": 23792
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-01.png",
+      "sha256": "aab9cae2e1b85559ed5f1a3b0dc686b3545529d960ce82d7620027893979af5d",
+      "bytes": 256920
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-03.png",
+      "sha256": "6bc63ceed934e9b3da78f327c35d616e8762d5b4b619b7c17fb5314dd4a4095d",
+      "bytes": 237427
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-04.png",
+      "sha256": "6bc63ceed934e9b3da78f327c35d616e8762d5b4b619b7c17fb5314dd4a4095d",
+      "bytes": 237427
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-06.png",
+      "sha256": "1a19fd3106516695b549a1247f609561e53620e92e60183003601a49fee2f59b",
+      "bytes": 194191
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-10.png",
+      "sha256": "1a19fd3106516695b549a1247f609561e53620e92e60183003601a49fee2f59b",
+      "bytes": 194191
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-12.png",
+      "sha256": "8d318f4e8c9d096d536dd38bec9bcfbae12959ca3b1a69a01f71c07edb0d695c",
+      "bytes": 195387
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-13.png",
+      "sha256": "1a19fd3106516695b549a1247f609561e53620e92e60183003601a49fee2f59b",
+      "bytes": 194191
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-15.png",
+      "sha256": "8d318f4e8c9d096d536dd38bec9bcfbae12959ca3b1a69a01f71c07edb0d695c",
+      "bytes": 195387
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-16.png",
+      "sha256": "1a19fd3106516695b549a1247f609561e53620e92e60183003601a49fee2f59b",
+      "bytes": 194191
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-18.png",
+      "sha256": "8d318f4e8c9d096d536dd38bec9bcfbae12959ca3b1a69a01f71c07edb0d695c",
+      "bytes": 195387
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-19.png",
+      "sha256": "1a19fd3106516695b549a1247f609561e53620e92e60183003601a49fee2f59b",
+      "bytes": 194191
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-21.png",
+      "sha256": "5ed99220fd511da6426fada9629048f551e96c1fd15c4e192dd2030481c50a24",
+      "bytes": 216993
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-22.png",
+      "sha256": "6e2ed747e1777eb000daa2d7f721f3d6fa4745dfff806b4acf86b27204ef4c74",
+      "bytes": 216221
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-24.png",
+      "sha256": "5ed99220fd511da6426fada9629048f551e96c1fd15c4e192dd2030481c50a24",
+      "bytes": 216993
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-25.png",
+      "sha256": "5ed99220fd511da6426fada9629048f551e96c1fd15c4e192dd2030481c50a24",
+      "bytes": 216993
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-27.png",
+      "sha256": "8e25505280705e265a11d6c94a65b3742b02d622a0ece0b36c0d960ae7fcf241",
+      "bytes": 306009
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-28.png",
+      "sha256": "8e25505280705e265a11d6c94a65b3742b02d622a0ece0b36c0d960ae7fcf241",
+      "bytes": 306009
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-29.png",
+      "sha256": "8e25505280705e265a11d6c94a65b3742b02d622a0ece0b36c0d960ae7fcf241",
+      "bytes": 306009
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-31.png",
+      "sha256": "8e25505280705e265a11d6c94a65b3742b02d622a0ece0b36c0d960ae7fcf241",
+      "bytes": 306009
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-32.png",
+      "sha256": "edc2ff3e16c8d466cd71a2d4ff1ebf85f38a9f621485f3c8f5b23fbb7b7ac3b3",
+      "bytes": 306016
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-33.png",
+      "sha256": "edc2ff3e16c8d466cd71a2d4ff1ebf85f38a9f621485f3c8f5b23fbb7b7ac3b3",
+      "bytes": 306016
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-kanji-backlink.png",
+      "sha256": "a33be1320a1831647f7bb274c2ba2f7fa85f9f2ab7f2bc8e70df29f52b56d706",
+      "bytes": 194471
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-meaning-feedback.png",
+      "sha256": "4ada73845bc664d9c0ac25ff2bc1717a67771095349c55684965d683478d6c5a",
+      "bytes": 182287
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-meaning-question.png",
+      "sha256": "a8b71a9673ee2a54d08b19d91b88ec7b130767b47a53346d784c9a986f509997",
+      "bytes": 102359
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-selection.png",
+      "sha256": "6585755a89e332597ec6f2d2a79a2dc5bcfd0023673df71b91d0fbf11eaa56fe",
+      "bytes": 102583
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-system-back-to-kanji.png",
+      "sha256": "9441c8c9e9d8bcce44b0a6e597b4177f95d0255a7eb5e4cdb6d8673f0071108d",
+      "bytes": 306200
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-system-back-to-word.png",
+      "sha256": "c8c12adc89488278f0c1e2f54ff119ab729489071d1818e052d9080e12dbc5ed",
+      "bytes": 330143
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-word-02.png",
+      "sha256": "14c16f0ccb6e3f9825bcc5eaaa840c6485ea7e5602cfae99389785c3281370d2",
+      "bytes": 341674
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-word-03.png",
+      "sha256": "14c16f0ccb6e3f9825bcc5eaaa840c6485ea7e5602cfae99389785c3281370d2",
+      "bytes": 341674
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-word-04.png",
+      "sha256": "14c16f0ccb6e3f9825bcc5eaaa840c6485ea7e5602cfae99389785c3281370d2",
+      "bytes": 341674
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-word-05.png",
+      "sha256": "14c16f0ccb6e3f9825bcc5eaaa840c6485ea7e5602cfae99389785c3281370d2",
+      "bytes": 341674
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-word-07.png",
+      "sha256": "c8c12adc89488278f0c1e2f54ff119ab729489071d1818e052d9080e12dbc5ed",
+      "bytes": 330143
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-word-08.png",
+      "sha256": "c8c12adc89488278f0c1e2f54ff119ab729489071d1818e052d9080e12dbc5ed",
+      "bytes": 330143
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-word-10.png",
+      "sha256": "6703506c7b932149f4fff33752213825299231ab1d346c9d57e613e7df00025b",
+      "bytes": 356063
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-word-11.png",
+      "sha256": "6703506c7b932149f4fff33752213825299231ab1d346c9d57e613e7df00025b",
+      "bytes": 356063
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-word-13.png",
+      "sha256": "59a3a40afb6d6f1bb7e0ee5cbe5a628973df08a8c72def18b1437baac8a2459f",
+      "bytes": 353378
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-word-14.png",
+      "sha256": "59a3a40afb6d6f1bb7e0ee5cbe5a628973df08a8c72def18b1437baac8a2459f",
+      "bytes": 353378
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-word-15.png",
+      "sha256": "59a3a40afb6d6f1bb7e0ee5cbe5a628973df08a8c72def18b1437baac8a2459f",
+      "bytes": 353378
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-word-forward-21.png",
+      "sha256": "edc2ff3e16c8d466cd71a2d4ff1ebf85f38a9f621485f3c8f5b23fbb7b7ac3b3",
+      "bytes": 306016
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\n1-080-word-reverse-33.png",
+      "sha256": "c8c12adc89488278f0c1e2f54ff119ab729489071d1818e052d9080e12dbc5ed",
+      "bytes": 330143
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\attempt-1\\N1Batch080NativeTest.kt",
+      "sha256": "d48a61d95ac1e81b0aff0546d8bbdf5b12a5a90f70738d1af537e7b28bd2e456",
+      "bytes": 35829
+    }
+  ],
+  "rawAttemptsAndOriginalPngBytesPreserved": true,
+  "productionSingleArchiveImport": true,
+  "exactRuntimeHashesVerified": 8366,
+  "originalArchiveBudgetsReverified": true,
+  "runtimeUnchanged": true,
+  "runtimePublished": false,
+  "independentVisualReviewersLaunched": 0,
+  "inheritedTextualReview": "df0bab41616b2d8db5c03c2ebfc32aa213a75c80",
+  "inheritedFreshHostChecks": "execution540 RealContentTest THREE + RareHanTest ONE, no skips; no rerun",
+  "inheritedNativeCompile": "execution541 BUILD SUCCESSFUL in 1m17s; execution542 hash/receipt verification; no rebuild",
+  "originalReviewerSessions": {
+    "claude-opus-5.5": "a3b94466-63e4-4403-a67d-3249751e5a1b",
+    "gpt-6.1-sol": "27fb4006-7e5d-4d5c-aabb-c8316fb8f334"
+  },
+  "otherOwnerEmulator": "Preexisting emulator5556/PIDs10668+18200 remained connected; all mutating adb operations explicitly addressed owned5580 only.",
+  "publishedAdditions": 106,
+  "remainingAdditions": 1122,
+  "lastPublishedCommit": "b120125ae5cdbfe9f3bcb1b0a7ae8a61e422ec8d",
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false,
+  "nextAction": "SAME080 two SERIAL original-family independent VISUAL confirmations only, then persist/yield before integration/publication/081. Use signed native evidence at execution543 savedCommit and docs\\n1-sources\\execution-543.json, actual original attempt-1 PNGs, visual-inspection-execution-543.json and image-index-execution-543.json. Original ClaudeOpus5.5 session a3b94466-63e4-4403-a67d-3249751e5a1b and GPT6.1Sol session27fb4006-7e5d-4d5c-aabb-c8316fb8f334 where possible; actual catalog/model/process evidence and complete reports required, at mostONE active reviewer, no edits to frozen snapshot during reviews. Fresh543 native TWO named cases terminal0/no skips on owned read-only API35 emulator-5580 parent11976/qemu1240, both stopped; owner5556 untouched. Production ContentSync exact full signed0d2c9aee envelope ONCE:1092kanji5048words112N1/contentVersion4572f7b1d0d95059/zeroProblems/acceptedepoch1. Full+Lite full readings ゴ,コ / さ.える,こお.る,ひ.える intact; explicit no on quiz and sole selected さ.える/offeredさえる/good log and one-question Done asserted. Complete冴/冴える, onepair/twodirections/SystemBack/N1selection/meaning/sevenstroke reference trace then giveuprecall/offline passed.49originalPNGs/26distinctbytegroups directly coordinator viewed; all30Han/fourproductionfamilies in three Compose panels including actual 冫/冱/氵 fallback readable;120individual+4wholeword Paint assertion/hash records not124PNGreads or fallback-face proof. Table horizontal states collectively show labels/explanations, no single-frameallcolumns claim. Offline handwritingmodel unavailable; injected trace/shape-only comparison/giveuprecall NOT recognition, humanmemory or phone. Inherit fresh540HOST3+1/no skips and successful541 native compile without rerun absent new concern; HOST-only2GiBinit NEVER native, no app/guestheap/archiveguard change. Preserve source/lookup/citation/read-depth/review/process/denial/OOM/viewport/MLKit/phone/generalrelease/whole-set limits. Durablecontrol helpers and committedpackets/approvedinputs only; optional historical session recipes skipped. No secondrunner/authoragent/concurrentheavywork/unreviewedpush/signingretry/permissionworkaround. Actual new denial or signinghang preserve/report/yield. Later combined-currentmain non-rewritingintegration/revalidation/normalsigning/ownerfastforward/publicSHA/terminalgreenCI/EVERYimmutableZIP runtimehash/original budgets/terminalreceipts/ownerissue60 mandatory before081. Published106/1228,remaining1122/latest079b120125ae5cdbfe9f3bcb1b0a7ae8a61e422ec8d; draft107 NOT delivered. CompatibleAndroidf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding.",
+  "limits": "Coordinator inspection only; two serial original-family independent visual confirmations still required. Native emulator API35, not physical phone. 120 per-character and four whole-word Paint assertions/raster hashes are not 124 independently viewed PNGs, a fallback-face identification or linguistic certification. Synthetic source/HEAD and disposable seeded review schedule, full production import once; no owner progress used. Offline handwriting model unavailable: injected reference trace/shape-only comparison/give-up recall do not establish MLKit recognition, human memory, phone acceptance or learning effectiveness. Existing source/read-depth/review/process/denial/OOM and general-release limits remain.",
+  "freshContentChecks": {
+    "validatorErrors": 0,
+    "manifestRegeneratedUnchanged": true,
+    "receipts": [
+      {
+        "path": "docs\\n1-reviews\\batch-080-native\\execution-543-validate.txt",
+        "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+      },
+      {
+        "path": "docs\\n1-reviews\\batch-080-native\\execution-543-manifest.txt",
+        "sha256": "483d363b5e6d24f401940309b0bdfbfb8b09a885bfabd62f499d6174abfeba80"
+      }
+    ]
+  },
+  "archivedExecutionRecipes": [
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\execution-543-receipts\\execution-543.py",
+      "sha256": "0af6be638ac2289b99d3b8c08b26d7d697732589665cf8783684008fdf3c52b8"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\execution-543-receipts\\finalize-execution-543.py",
+      "sha256": "d9bc964ed1b463b9fd75e9e1207907fd85e2b6d24bc36bce4355c91549aaa121"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\execution-543-receipts\\post-execution-543.ps1",
+      "sha256": "f57e0205f30e6a44bdfaf56e1e512bbb981e917d9493f38e33e32373823a2ec7"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\execution-543-receipts\\run-543-native.ps1",
+      "sha256": "e9696f6e88b8ce29d79ad589da74c279f80e4058f29e01d36e8a10ee53ca2cff"
+    }
+  ],
+  "diagnostics": [
+    "Initial complete request summary encountered cp1252 UnicodeEncodeError only while printing the final checkpoint; complete file already decoded and checkpoint parsed. Subsequent UTF8 reads completed before mutation.",
+    "Staged whitespace check identified terminal blank/trailing spaces in generated adb/emulator logs. Readable copies whitespace-normalized; exact original bytes retained in verified deterministic raw gzip and outside-Git attempt originals. Original PNG/JSON/instrumentation bytes unchanged."
+  ]
+}
