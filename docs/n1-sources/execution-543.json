@@ -839,7 +839,11 @@
     },
     {
       "path": "docs\\n1-reviews\\batch-080-native\\execution-543-receipts\\execution-543.py",
-      "sha256": "782e8894a724723638587cbed3ae9a1173af0f35dedef232a2a93d8cb8d64722"
+      "sha256": "e19dbf2d3ca3393a855bebd1edc1706af4714152f7372c01526eae96b4d3e241"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\execution-543-receipts\\final-checkpoint-summary-543.py",
+      "sha256": "c09ae741636a0de3e4225d53c63e9a3bcb5fd8ea87bca084d704c3083087f7fb"
     },
     {
       "path": "docs\\n1-reviews\\batch-080-native\\execution-543-receipts\\finalize-execution-543.py",
@@ -872,6 +876,8 @@
     "originalExecutionRecipe": "docs\\n1-reviews\\batch-080-native\\execution-543-receipts\\execution-543-before-receipt-fix.py",
     "originalExecutionRecipeSha256": "0af6be638ac2289b99d3b8c08b26d7d697732589665cf8783684008fdf3c52b8",
     "nativeRuntimeAndScreenshotEvidenceUnchanged": true,
-    "checkpointParentCheck": "Allow normally signed descendant evidence-fix commit while retaining exact original starting BASE ancestry and unchanged runtime assertions."
-  }
+    "checkpointParentCheck": "Allow normally signed descendant evidence-fix commit while retaining exact original starting BASE ancestry and unchanged runtime assertions.",
+    "summaryFieldCorrection": "Second checkpoint finalization stopped before saving progress because the top-level contentVersion summary was absent although the exact value was already in articleRoute. Copied the verified route value into the summary and made checkpoint read articleRoute directly. No native evidence, issue comment, acceptance result or original history changed."
+  },
+  "contentVersion": "4572f7b1d0d95059"
 }
