@@ -59,6 +59,42 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 086: textually reviewed; runtime acceptance pending
+
+**凡**, source row 95, and its necessary **凡例** (はんれい) support article
+passed bounded independent textual review on signed snapshot `f59c65fd`.
+The [reconciliation](n1-reviews/batch-086-reconciliation.json) preserves both
+blind Claude Opus 5.5 and GPT-6.1 Sol reports, all six exact reused-file diffs,
+and their evidence limits. The processes ran serially and exited normally;
+each returned the exact full common **215,474-byte / 4,300-line** packet in one
+serial view: two new articles, six bounded reused diffs, 71 distinct complete
+JMdict families and seven complete raw character records. Returned bytes do
+not certify comprehension or independent upstream retrieval.
+
+Both new articles and all six changed passages are CLEAN for correctness,
+scoped coverage and phone-text comprehensibility within this textual scope.
+No actionable defect or consequential unresolved teaching claim was established.
+The low-confidence 栞 quiz hypothesis was checked against actual displayed
+labels, full families and the existing article; shared book context alone
+does not establish an interchangeable answer. Other suggestions remain optional.
+Teaching did not change, so no dependent textual confirmation was necessary.
+
+All five source readings and their order remain intact. Only **ボン / ハン**
+are selected, with linked 平凡 / 凡例 examples; explicit kun `[]` excludes the
+unverified source-only **おうよ.そ** without normalizing or deleting it.
+Usually-kana 凡そ and rare-kanji-spelling 凡て are recognition aliases through
+stable およそ / 全て, not new word identities or rare-pronunciation claims.
+The seven mapped reciprocal pairs / fourteen directions, eight direct word
+guards and reused N2/N3 levels remain preserved.
+
+Fresh non-skipped Android checks, all 31 scoped Han and four-font native/visual
+checks (especially 丶 / 几), three-stroke drawing, reading/article/Back/offline
+routes, combined-main validation and every publication gate remain pending.
+Cmap absences are not glyph failures. This local textual checkpoint publishes
+nothing: **112 accepted additions; 1,116 remaining** are unchanged.
+Compatible Android `f9b59a2` or later is required; physical-phone,
+general-release and whole-set acceptance remain outstanding.
+
 ## Batch 083: textually reviewed; runtime acceptance pending
 
 Batch **凌**, source row 92, needs **凌ぐ** (しのぐ) and **凌駕** (りょうが)
