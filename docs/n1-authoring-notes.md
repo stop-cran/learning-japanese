@@ -37,6 +37,63 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 075: source prepared, not drafted
+
+The [source packet](n1-sources/batch-075-progress.json) freezes **典**,
+source row 84, after batch 074's verified publication. Complete evidence
+retains **174 lexical /24 comparison family occurrences**, representing
+**196 distinct complete JMdict families**, and twelve raw KANJIDIC2
+character records. All recorded ranges and twenty existing articles were
+returned to the coordinator; these source reads are not independent review.
+
+Reuse actual **典型** てんけい, **古典** こてん, **百科事典**
+ひゃっかじてん and **辞典** じてん, preserving their independently
+sourced easier levels, primary readings, identities and exclusions.
+Propose only necessary **香典** こうでん, a funeral condolence gift,
+usually money, without an inferred vocabulary level. Its alternate
+**香奠** has a spelling-local rare-form flag, not a rare-pronunciation
+claim. The [public-source evidence](n1-sources/batch-075-source-evidence.json)
+distinguishes actual dictionary bodies from omitted headings, irrelevant
+homograph redirects and the bounded raw-page retrieval.
+
+Preserve full **テン・デン /ふみ・のり** source order. Proposed practice
+selects both on-readings with their own linked examples, and no kun-reading.
+Retain **ふみ** explicitly as source-only lookup information in this lesson:
+the separate literary 文/書 family does not establish a 典 spelling.
+JMdict does recognize **典 のり** among rule/law spellings, but this
+packet selects no practical linked support for it. Nonselection is not a
+claim that either reading is nonexistent, incorrect or names-only.
+Dictionary compounds do not license a universal translation, voicing rule,
+historical origin or assignment of every shared-family sense to 典.
+
+The proposed all-mapped navigation has **twelve reciprocal pairs /24
+directions**, including every available component of the four reused words
+and 香典. Seven directions already exist; seventeen are planned through
+the new card/word, four exact component links and six narrow older-kanji
+navigation edits. Three direct new-word quiz safeguards concern the actual
+broad gift/contribution labels, not a transitive exclusion clique.
+
+The [preparation audit](n1-sources/batch-075-preparation-audit.json)
+verifies all frozen hashes, complete extractions, exact source membership,
+the original baseline metadata/strokes and all **8,349 unchanged runtime
+hashes**. The pinned **05178** SVG has eight ordered paths matching the
+dictionary; it has not been converted. Proposed/affected text contains
+127 Han. All three main bundled cmaps lack **奠**, plus pre-existing
+isolated **亅・厂・艹** in affected older articles. All are outside the
+RareHan ranges. Absence is not a glyph failure; the later actual-draft
+inventory and native/visual fallback inspection remain required.
+
+This is a signed **local source-preparation** checkpoint with zero batch-075
+drafted, review-closed or published rows. No runtime, app, tool, media,
+reviewer, fresh Android/native run, push or batch 076 is included.
+The next checkpoint authors only this bounded runtime draft. Two serial
+blind model-family reviews, reconciliation and all later acceptance/
+publication gates remain. Published coverage stays **101/1,228 additions;
+1,127 remain**: 1,086 kanji, 5,043 words and 106 N1-labelled cards.
+The 101 necessary supports are not an N1 vocabulary deck. Compatible
+Android `f9b59a2+` is required; physical-phone, general-release and whole-set
+acceptance remain outstanding.
+
 ## Batch 074: published for bounded owner testing
 
 The [publication record](n1-sources/batch-074-publication.json) closes **免**
@@ -88,7 +145,7 @@ Published coverage is **101/1,228 additions; 1,127 remain**:
 members plus the separate 妖 exception. The 101 necessary support articles
 are not an N1 vocabulary deck. Compatible Android `f9b59a2+` is required;
 physical-phone, general-release and whole-set acceptance remain outstanding.
-Batch 075 has not started.
+This publication preceded batch 075's source preparation above.
 
 ### Historical local unreviewed draft checkpoint
 

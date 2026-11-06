@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "batch": "075",
+  "inspectedOn": "2026-11-06",
+  "access": "Coordinator web_fetch and a separate public curl download, plus complete frozen dictionaries; not independent-reviewer retrieval.",
+  "entries": [
+    {
+      "requestedUrl": "https://kotobank.jp/word/典",
+      "returnedUrl": "https://kotobank.jp/word/典-102027",
+      "dictionary": "デジタル大辞泉; 精選版 日本国語大辞典",
+      "heading": "てん【典】",
+      "evidence": "Actual Daijisen body identifies a grand ceremony and a rule to follow. Nikkoku additionally identifies books recording truths or things to be observed. These independently support the ceremony/rule/text branches alongside actual 辞典, 古典 and 典型 families.",
+      "decision": "Propose title 'reference texts; rules; ceremony', with compound-specific explanations rather than one English substitution for every word. Preserve canonical 八 radical12 and eight strokes. Use structure-unclassified and only a labelled modern-shape mnemonic; no historical book-on-table origin or phonetic claim is established.",
+      "limits": "The Jitsu heading returned without its substantive entry; no historical derivation is adopted. A raw web_fetch range returned CSS and navigation, not additional dictionary evidence. The actual simplified Daijisen/Nikkoku sections above were returned."
+    },
+    {
+      "requestedUrl": "https://kotobank.jp/word/香典",
+      "returnedUrl": "https://kotobank.jp/word/香典-62819",
+      "dictionary": "デジタル大辞泉; 精選版 日本国語大辞典; 日本大百科全書",
+      "heading": "こう‐でん〔カウ‐〕【香典／香奠】",
+      "evidence": "Actual downloaded Daijisen article at character offsets65329-67196 defines money or goods offered before the deceased in place of incense or flowers and supplies 香典を供える. Nikkoku describes money and food contributing toward funeral costs. Nipponica identifies contemporary money-in-an-envelope practice while acknowledging regional noncash gifts.",
+      "decision": "Add only necessary 香典こうでん, title 'condolence money; funeral gift', as デン practice with exact 香コウ/典デン records and whole-word family1283090. Explain a funeral condolence gift, usually money; not incense itself or a generic present. Retain 香奠 as an alternate spelling; JMdict's rare-form flag belongs to that spelling, not to the pronunciation or the ordinary 香典 word. Explain 香's incense connection without inventing '典 means money' or a historical substitution rule. Propose 香典を用意しました and 香典を渡しました, each with full kana and English; public attestation directly supplies the separate 供える collocation.",
+      "limits": "Simplified extraction omitted the Daijisen body despite returning its heading. Raw web_fetch50000-66000 ended mid-body; the separate downloaded article was subsequently read in full after tag stripping. The long funeral-etiquette dictionary includes prescriptions and amounts, none adopted. No universal envelope, denomination, religion or regional-etiquette rules are proposed. Original public HTML stays in control logs, not runtime/Git."
+    }
+  ],
+  "irrelevantOrUnavailableEvidence": [
+    {
+      "url": "https://kotobank.jp/word/のり",
+      "result": "Redirected to のり-770633, predominantly seaweed, music and a personal name.",
+      "decision": "Not evidence for 典のり. Frozen JMdict1438050 separately lists 典 among the rule/law spellings; no all-senses allocation or practice article is inferred."
+    },
+    {
+      "url": "https://kotobank.jp/word/ふみ",
+      "result": "Redirected to ふみ-1106864, a personal-name biography.",
+      "decision": "Not evidence for a lexical 典ふみ word. Frozen KANJIDIC2 listsふみ as ja_kun, not nanori. Frozen JMdict1505080's literary 文/書ふみ is not spelled典 and cannot be relabelled as its support. Keepふみ explicitly source-only in this lesson without claiming nonexistence, everyday use, rarity or names-only status."
+    },
+    {
+      "path": "Android core/src/main/java/io/github/stopcran/kanji/core/content/RareHan.kt",
+      "result": "Guessed path did not exist.",
+      "decision": "No evidence from that path. Glob located actual app/ui/RareHan.kt and core/RareHanTest.kt, both subsequently read in full. No Android changes or executions."
+    }
+  ],
+  "frozenEvidence": {
+    "sourceSnapshot": "docs/n1-source-snapshot.json",
+    "lexicalFamilies": "batch-075-jmdict.xml",
+    "comparisonFamilies": "batch-075-comparison-jmdict.xml",
+    "rawCharacterRecords": "batch-075-kanjidic2.xml",
+    "attribution": "JMdict/KANJIDIC2: James William Breen and EDRDG, CC BY-SA4.0; KanjiVG: Ulrich Apel and contributors, CC BY-SA3.0; Unicode17.0.0: Unicode License V3. See source snapshot, NOTICE and docs/UNICODE-LICENSE.txt.",
+    "limits": "Reserialized complete XML retains aliases/restrictions/flags/senses; not a byte-identical source slice, frequency measurement, independent review or native acceptance."
+  },
+  "limits": "All decisions are source proposals. Future authoring must inventory actual complete new teaching, verify the recorded exact edits and rerun all later gates."
+}
