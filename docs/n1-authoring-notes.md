@@ -37,25 +37,37 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 079: source prepared, not drafted
+## Batch 079: textually review-closed, runtime acceptance pending
 
-The [source packet](n1-sources/batch-079-progress.json) bounds the next checkpoint
-to **冠**, source row 88. Its **158 complete lexical families**, 18 comparison
-families and one related family preserve all aliases, restrictions and senses.
-Existing **冠** かんむり retains its N2 vocabulary level, primary reading and
-eight exclusions. One necessary **王冠** おうかん article is proposed for
-**カン**; no vocabulary level is inferred. Both full readings remain in source
-order. Three mapped reciprocal pairs /six directions include older **王**.
+The [source packet](n1-sources/batch-079-progress.json) covers **冠**, source
+row 88, with necessary **王冠** おうかん and reused **冠** かんむり.
+The [reconciliation](n1-reviews/batch-079-reconciliation.json) preserves two
+blind initial reviews on signed draft `0f7f20e9`: Claude Opus 5.5 and GPT-6.1
+Sol, each receiving the same complete **177-family** packet and five raw
+character records. Actual process exits and internal tool calls were serial;
+returned bytes establish access, not equal comprehension.
 
-The [preparation audit](n1-sources/batch-079-preparation-audit.json) separates
-verified source bytes and proposed reading/link/quiz/font dispositions from
-runtime acceptance. Pinned nine-path SVG geometry is not yet converted.
-The durable recipe lives under the approved control workspace and is archived
-with the packet; optional historical session helpers are not required inputs.
-No runtime draft, independent review, fresh Android/native/font acceptance,
-publication or batch 080 is claimed. Published coverage remains **105 additions;
-1,123 remaining**. All later gates and physical-phone/general-release limits
-remain unchanged.
+Both original sessions confirmed bounded supplemental evidence without any
+teaching changes: exact community vocabulary row **N2:363** supports preserved
+冠 N2 metadata, and Daijisen's general-word sense 3 explicitly supports naming
+the bottle closure for its crown-like shape. These close evidence gaps, not
+demonstrated teaching errors. Original reports, seven optional suggestions and
+coordinator-versus-reviewer source-access limits remain preserved.
+
+Both full/curated readings **カン / かんむり**, three wrong choices, direct word
+quiz safeguards and all **three mapped reciprocal pairs /six directions**
+are textually closed. New 王冠 has no inferred vocabulary level; reused 冠
+retains its primary reading and eight exclusions. Nine strokes exactly match
+the pinned converter/SVG. All 372 Python tests pass without skips, along with
+content, vocabulary, manifest, baseline/link/source audits and local budgets.
+
+This is a **local textual checkpoint, not publication**. Fresh Android tests,
+native drawing/routes and all 35 actual Han characters, including exact
+**冖 / 宀** fallback, remain later gates. Cmap absence is not glyph failure.
+Durable helpers use the approved control workspace and committed evidence;
+optional historical session helpers were not accessed. Published coverage
+remains **105 additions; 1,123 remaining**. No batch 080, fresh Android/native,
+physical-phone or general-release acceptance is claimed.
 
 ## Batch 078: published for bounded owner testing
 
