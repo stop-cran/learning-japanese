@@ -1,0 +1,25 @@
+{
+  "execution": 571,
+  "attempt": "powershell run-571-android.ps1",
+  "shellId": "batch083-android-571",
+  "exitCode": 1,
+  "statement": "$lock = [IO.File]::Open((Join-Path $control 'runner.lock'), 'OpenOrCreate', 'ReadWrite', 'None')",
+  "exception": "MethodInvocationException, line5: Exception calling Open with 4 arguments: The process cannot access the file 'C:\\Users\\stop-\\n1-kanji-workspace\\control\\runner.lock' because it is being used by another process.",
+  "classification": "Windows sharing violation on supervisor-owned resource; not a missing source packet, content defect, failed test, or established access-policy denial.",
+  "cause": "Coordinator incorrectly reused a historical parent-runner exclusion check inside the already-running supervisor child.",
+  "supervisorObserved": {
+    "status": "running",
+    "detail": "Executing checkpoint 570; stage textually-review-closed-awaiting-fresh-android; batch 083.",
+    "pid": 9004,
+    "updatedAt": "2026-11-06T16:45:12.8352132+01:00",
+    "sessionId": "bb3b3736-672b-44f7-b9a6-8be9048f0c84",
+    "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\bb3b3736-672b-44f7-b9a6-8be9048f0c84\\output.jsonl"
+  },
+  "supervisorLockImplementation": "control/runner.ps1:115 opens runner.lock with FileShare.None",
+  "gradleStarted": false,
+  "testsRun": 0,
+  "attempts": 1,
+  "retriedUnlockedOrBypassed": false,
+  "supervisorEditedOrStopped": false,
+  "disposition": "Preserve/report/yield; parent disposition required before another child wrapper execution."
+}

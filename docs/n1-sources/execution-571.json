@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "execution": 571,
+  "batch": "083",
+  "status": "blocked-supervisor-lock-before-android",
+  "contentTestedCommit": null,
+  "preservedContentCommit": "677c9864340303be42a4bd77aa21d5229167ddb8",
+  "teachingSnapshot": "4b8bfcc4bc4fff4c73185a8cc6c27d4cb5736efc",
+  "androidHead": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+  "androidSignature": "G",
+  "freshOriginMain": "21a5cb1328aadd437139a6b850f07298a2e2985d",
+  "startingState": {
+    "execution": 571,
+    "batch": "083",
+    "startingHead": "677c9864340303be42a4bd77aa21d5229167ddb8",
+    "androidHead": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+    "freshOriginMain": "21a5cb1328aadd437139a6b850f07298a2e2985d",
+    "startedAt": "2026-11-06T15:46:47.322443+00:00",
+    "scope": "SAME083 fresh Android RealContentTest3+RareHanTest1, signed LOCAL evidence only; yield before native/visual/integration/publication/084.",
+    "authorization": {
+      "requestSha256": "a037d1853db127bb24743fb90a7febd689f507406b16e35dd40488f6bfe9f2fd",
+      "bytes": 2699211,
+      "characters": 2680375,
+      "lines": 35294,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request loaded/decoded and checkpoint parsed; operative contract, full approved issue and final checkpoint inspected directly. Historical middle parsed, not freshly semantically re-reviewed."
+    },
+    "artifactPathPreflight": {
+      "guide": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\authoring-artifact-path-notes.txt",
+      "durableHelper": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\checkpoint-571.py",
+      "optionalHistoricalSessionHelpersAccessed": false,
+      "actualNewPermissionDenials": []
+    },
+    "qualifiedHostInit": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-065-host-integration-heap.init.gradle",
+      "sha256": "438159ae22b313e8196a0bc011f72a3b17300146b219c5ffcc779c540a64be24",
+      "coreTestMaxHeap": "2g",
+      "unchangedFromAcceptedBatch082": true,
+      "productionGuestHeapOrArchiveGuardsChanged": false,
+      "neverForNative": true
+    },
+    "fixtureRoots": [
+      {
+        "module": "core",
+        "resolvedRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese"
+      },
+      {
+        "module": "app",
+        "resolvedRoot": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese"
+      }
+    ],
+    "manifestSha256": "e7840539ab7b0eca155f21b02e0932b35d42b3246199fe634b749c86751daab9",
+    "contentVersion": "a9faafdd68af3230",
+    "runtimeManifestHashesVerified": 8376
+  },
+  "actualAttemptExitCode": 1,
+  "gradleStarted": false,
+  "testCount": 0,
+  "tests": [],
+  "provenance": [
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\run-571-android.ps1",
+      "archive": "docs/n1-reviews/batch-083-android/run-571-android.ps1",
+      "sha256": "a95fca00144e91f3b237ae46158368ce85b384f58a0368027baa98eb94683961"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\checkpoint-571.py",
+      "archive": "docs/n1-reviews/batch-083-android/checkpoint-571.py",
+      "sha256": "86e555829d9b3d91249ce05b7e6d796273604b1bc7939d827199765bfe418379"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\docs\\n1-reviews\\batch-083-android\\execution-571-sharing-violation.json",
+      "archive": "docs/n1-reviews/batch-083-android/execution-571-sharing-violation.json",
+      "sha256": "44b86cea8c6ac62772ab4d17ec5218d23c0f4496420a72756c20d1d49497ef61"
+    }
+  ],
+  "diagnostic": {
+    "execution": 571,
+    "attempt": "powershell run-571-android.ps1",
+    "shellId": "batch083-android-571",
+    "exitCode": 1,
+    "statement": "$lock = [IO.File]::Open((Join-Path $control 'runner.lock'), 'OpenOrCreate', 'ReadWrite', 'None')",
+    "exception": "MethodInvocationException, line5: Exception calling Open with 4 arguments: The process cannot access the file 'C:\\Users\\stop-\\n1-kanji-workspace\\control\\runner.lock' because it is being used by another process.",
+    "classification": "Windows sharing violation on supervisor-owned resource; not a missing source packet, content defect, failed test, or established access-policy denial.",
+    "cause": "Coordinator incorrectly reused a historical parent-runner exclusion check inside the already-running supervisor child.",
+    "supervisorObserved": {
+      "status": "running",
+      "detail": "Executing checkpoint 570; stage textually-review-closed-awaiting-fresh-android; batch 083.",
+      "pid": 9004,
+      "updatedAt": "2026-11-06T16:45:12.8352132+01:00",
+      "sessionId": "bb3b3736-672b-44f7-b9a6-8be9048f0c84",
+      "log": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\logs\\bb3b3736-672b-44f7-b9a6-8be9048f0c84\\output.jsonl"
+    },
+    "supervisorLockImplementation": "control/runner.ps1:115 opens runner.lock with FileShare.None",
+    "gradleStarted": false,
+    "testsRun": 0,
+    "attempts": 1,
+    "retriedUnlockedOrBypassed": false,
+    "supervisorEditedOrStopped": false,
+    "disposition": "Preserve/report/yield; parent disposition required before another child wrapper execution."
+  },
+  "runtimeUnchanged": true,
+  "manifestSha256": "e7840539ab7b0eca155f21b02e0932b35d42b3246199fe634b749c86751daab9",
+  "contentVersion": "a9faafdd68af3230",
+  "runtimeManifestHashesVerified": 8376,
+  "optionalHistoricalSessionHelpersAccessed": false,
+  "actualNewPermissionDenials": [],
+  "actualNewResourceAccessFailures": [
+    "MethodInvocationException, line5: Exception calling Open with 4 arguments: The process cannot access the file 'C:\\Users\\stop-\\n1-kanji-workspace\\control\\runner.lock' because it is being used by another process."
+  ],
+  "publishedAdditions": 109,
+  "remainingAdditions": 1119,
+  "runtimePublished": false,
+  "newAndroidNativeOrPhysicalPhoneClaimed": false,
+  "nextAction": "SAME083 fresh Android gate NOT executed. Execution571 wrapper copied a historical parent-runner exclusive runner.lock check, but current supervisor PID9004 already owns that lock. The initial File.Open failed with a Windows sharing violation before Gradle, without reading/changing lock contents or launching tests. Preserve exact diagnostic and wrapper; do not retry/unlock/stop/change supervisor or its policies. Parent must disposition this unnecessary child acquisition before the next coordinator runs unchanged3RealContentTest+1RareHanTest with signedAndroid1c1b7bf4, verifiedJDK17/SDK/oneworker/approved2GiBHOSTinit. No new source/reviewer/test permission denial established; this is a runner-resource conflict and an overbroad wrapper preflight, not a missing mandatory input. All textual review/source/history preserved. Do not access historical session helpers. No native/visual/integration/publication/084; all original acceptance gates, heap/archiveguards remain. Published109/1228,remaining1119; physicalphone/generalrelease/whole-set outstanding.",
+  "limits": "Fresh Android gate remains unperformed, not passed/failed/skipped. Native/font/visual/current-main/integration/CI/immutableZIP/phone/generalrelease/whole-set remain unaccepted. No runtime, app, lock, supervisor, policy or heap/archiveguard changes."
+}
