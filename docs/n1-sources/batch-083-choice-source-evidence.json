@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "execution": 575,
+  "batch": "083",
+  "startingHead": "eb7e1b3781c707ef270b8a242c343e6cf388e2b9",
+  "finding": "083-NATIVE-574-CHOICE",
+  "status": "source-inspected-local-correction-not-independently-confirmed",
+  "sourceSnapshot": "docs/n1-source-snapshot.json",
+  "lexicalPacket": "batch-083-choice-jmdict.xml",
+  "lexicalSelection": "batch-083-choice-selection.json",
+  "characterPacket": "batch-083-choice-kanjidic2.xml",
+  "dictionaryAttribution": "Copyright James William Breen and EDRDG; CC BY-SA 4.0; repository NOTICE.",
+  "authorInspection": {
+    "model": "GPT-6.1 Sol (gpt-6.1-sol)",
+    "completeLexicalFamilies": 14,
+    "lexicalReturnedRanges": [[1, 220], [221, 412]],
+    "completeRawCharacterRecords": 4,
+    "characterReturnedRanges": [[1, 180], [181, 234]],
+    "completeCurrentArticlesRead": ["kanji/凌.md", "kanji/准.md", "kanji/冶.md", "kanji/冴.md", "words/冴える.md"],
+    "limits": "Coordinator inspection of complete frozen records and actual current bodies, not independent review, upstream retrieval, corpus frequency or native-speaker certification. Final packet line counts are checked by the correction audit."
+  },
+  "establishedFailure": {
+    "receipt": "docs/n1-sources/execution-574.json",
+    "raw": "docs/n1-reviews/batch-083-native/attempt-574/instrumentation.txt",
+    "articleTerminalStatus": -2,
+    "glyphTerminalStatus": 0,
+    "claim": "次 remains N3 and is absent from the N1 pool. Production selects the stack before resolving curated candidates; two available curated IDs leave a random fallback slot.",
+    "notClaimed": "The captured 麟 answer is not established ambiguous. This is a content/fixture availability defect, not an app regression or justification to change levels, pools or algorithms."
+  },
+  "correction": {
+    "file": "kanji/凌.md:13",
+    "before": "distractors: [准, 冶, 次]",
+    "after": "distractors: [准, 冶, 冴]",
+    "runtimeScope": "Exactly one metadata line plus generated manifest. All teaching prose, title, source readings/order, quiz readings, stroke geometry, supporting words, direct word exclusions and existing cards remain byte-identical after LF normalization.",
+    "shape": "All three alternatives share the two left-hand 冫 marks with 凌, with different right-hand shapes. No etymological or phonetic relationship is asserted.",
+    "preservedComparison": "次 remains a useful linked visual comparison in Notes; a body comparison need not also be a quiz option."
+  },
+  "semanticDecisions": [
+    {
+      "kanji": "凌",
+      "title": "endure; surpass",
+      "entryIds": ["1554200", "1606270"],
+      "decision": "Keep all three transitive 凌ぐ branches, including surviving and defy/slight, and the complete 凌駕 surpassing family. None supports the alternatives' actual labels as translations of 凌."
+    },
+    {
+      "kanji": "准",
+      "title": "quasi-; associate rank",
+      "entryIds": ["1341500", "1341510", "1341520", "2178020", "1483390"],
+      "decision": "Rank, approval, correspondence and model-after/imitate branches are recognized with their spelling flags intact. They do not make quasi-/associate rank a valid answer for 凌. Do not infer ordinary frequency of a rare spelling or silently erase that sense."
+    },
+    {
+      "kanji": "冶",
+      "title": "smelt; work metals",
+      "entryIds": ["1536300", "1536310", "1655600"],
+      "decision": "Retain melting/metallurgy and figurative training/cultivation as well as pottery/casting. Those secondary senses do not make the displayed smelt/work-metals label a meaning of 凌."
+    },
+    {
+      "kanji": "冴",
+      "title": "clear; sharp-minded",
+      "entryIds": ["1297050", "1297040", "1877830", "2576510"],
+      "decision": "The complete verb includes clarity, alertness, cheerfulness, deft performance/excel-at, satisfaction and an older intense-cold branch; the noun includes skillfulness, and negative uses are separately retained. Do not claim semantic compartments are disjoint or that 冴 has no excellence sense. Nevertheless clear/sharp-minded is not an ordinary translation of 凌's enduring/surpassing branches. This is an assessment of the actual displayed alternatives for a 凌 question, not unrestricted word synonymy or safety of every reverse/random-pool question."
+    }
+  ],
+  "guardDisposition": {
+    "requiredExactOptions": {"凌": "endure; surpass", "准": "quasi-; associate rank", "冶": "smelt; work metals", "冴": "clear; sharp-minded"},
+    "pools": ["complete N1", "All"],
+    "defaultChoiceCount": 4,
+    "currentLedger": "quizAudit updated; original proposedKanjiQuizAudit remains historical and is not an executable corrected guard.",
+    "wordGuards": "All 17 direct pairs remain unchanged; no word title, sense, exclusion or word candidate pool was changed.",
+    "historicalRecipes": "Original draft/review/HOST/native recipes, assertion snapshots, archives, APKs and all attempt574 bytes remain immutable. They refer to the old version/options and must not be rerun as corrected acceptance.",
+    "nextNativeFixture": "Create a separately named corrected fixture/archive/APKs after confirmations; assert all four IDs AND titles with no random substitute. Reinventory all actual Han: the metadata now adds 冴, so old 29-Han/116-raster scope is not current acceptance.",
+    "notCertified": "Custom, partial, larger or future pools; reversed questions for unrelated targets; every fallback choice in the repository; measured learning effectiveness."
+  },
+  "requiredNextGates": [
+    "Bounded confirmations from original serial Claude/GPT sessions using their original reports, this complete packet, the exact new signed snapshot and actual one-line runtime diff.",
+    "Fresh affected HOST checks and corrected full signed archive/native fixture/APKs; original failure and historical green checks remain tied to old bytes.",
+    "Both named corrected native cases terminal0 with no skips/-2/-3; new complete Han/four-font Paint/Compose PNG scope and direct changed-pixel inspection; independent original-family dependent visual confirmations.",
+    "All existing current-main integration, Python, vocabulary, exact direct guards, baseline/link/membership, original archive budgets, normally signed owner fast-forward, exact remote SHA, terminal green CI, every immutable ZIP runtime hash and issue60 gates before084."
+  ],
+  "limits": "LOCAL UNREVIEWED correction only. Finding remains partially resolved at coordinator/source level, not review-closed or runtime-accepted. No reviewer, HOST, compile, native, publication, physical-phone/general-release or whole-set acceptance claimed. Original source/reviewer/process/read-depth/viewport/fallback/MLKit/OOM/denial limits remain. Published109/1228, remaining1119 unchanged."
+}
