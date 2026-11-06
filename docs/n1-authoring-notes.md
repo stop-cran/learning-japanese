@@ -37,7 +37,7 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 075: local unreviewed runtime draft
+## Batch 075: text review closed; native acceptance pending
 
 The bounded runtime draft now adds **典**, its pinned eight-stroke
 geometry and only necessary **香典** こうでん. Full metadata keeps
@@ -49,13 +49,33 @@ pairs, without changing old identities, levels, readings or exclusions.
 The three new-word exclusions are direct gift/contribution-label
 safeguards, not a transitive group.
 
-The source preparation described below remains historical evidence.
+The [text reconciliation](n1-reviews/batch-075-reconciliation.json)
+retains independent Claude Opus 5.5 and GPT-6.1 Sol initial reports on
+the same signed draft `f5b70805`, covering both complete new articles
+and all ten changed reused passages. Both received all thirty assigned
+ranges, including 196 complete dictionary families and twelve raw
+character records. Neither established an actionable teaching defect;
+three Claude suggestions remain optional. No teaching changed.
+
+Reviewer processes were serial, with each complete report preserved
+before the next launch. **Claude's initial internal reads were not serial:**
+eight multi-tool responses produced thirty overlapping tool starts,
+contradicting its original report. The immutable execution record retains
+that deviation. Its original-session, single-resource confirmation
+explicitly corrects the false serial claim and confirms the bounded
+teaching with one actual read. It does not erase the initial history or
+claim a fresh complete-family rereview. GPT's initial tools were serial.
+Returned bytes and agreement are not comprehension or native certification.
+
 Execution 497's [draft audit](n1-sources/batch-075-draft-audit.json)
-records actual runtime/source/quiz/link/baseline and complete scoped
-Han/cmap checks. Those checks are not independent linguistic review
-or native fallback acceptance. This checkpoint is **local and unreviewed**:
-no batch-075 row is review-closed or published. Both serial blind
-model-family reviews and all later acceptance/publication gates remain.
+remains the complete scoped Han/cmap and baseline evidence; execution
+498 reruns the batch audit, all 372 Python tests, vocabulary consistency,
+manifest freshness and unchanged archive budgets. This is a **local
+text-review checkpoint**, not native acceptance or publication.
+Fresh non-skipped Android checks, actual fallback/article/drawing/routes
+for this batch, bounded independent visual review and all current-main/
+publication gates remain. In particular, inspect the actual scoped
+奠/亅/厂/艹 glyphs; cmap absence alone is not a failure.
 Published coverage stays **101/1,228 additions; 1,127 remain**.
 
 ### Preserved source preparation
