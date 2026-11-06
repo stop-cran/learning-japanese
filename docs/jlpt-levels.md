@@ -211,6 +211,29 @@ Historical KANJIDIC levels are not modern N-numbers: [old Level 4 corresponds to
 With the 分 exception, the repository's N5 study set has 80 characters. Keep the card's `jlpt`, its `jlpt-nX` tag, and its facts line
 in agreement. Reassess an exception if its cited evidence changes; do not overwrite it merely because the baseline still has no value.
 
+### N3/N2 supplementary study placements
+
+The [2026-11-06 supplementary source record](n3-n2-supplement-sources.json)
+compares all four pages of each JLPT Sensei list with published EN
+`1f317f0762513720709ab0ca215f19ff021ca596`. Both 367-character primary
+sets were complete; the additions below cover the secondary source as well.
+They are explicit **earlier-study placements**, not official omissions or a
+claim that the source disagreement has been resolved.
+
+| Kanji | Repository label | Evidence and disposition |
+| --- | --- | --- |
+| 的・誰・身・阪 | N3 | [JLPT Sensei N3](https://jlptsensei.com/jlpt-n3-kanji-list/) includes all four; the individual kanjiapi entries returned no JLPT level. |
+| 坊 | N2 | [JLPT Sensei N2](https://jlptsensei.com/jlpt-n2-kanji-list/) includes it; kanjiapi returned no JLPT level. |
+| 保・案・派・第・策・結 | N2 | JLPT Sensei includes them at N2; kanjiapi classifies them as N1. They are deliberately introduced earlier to cover the supplementary N2 set, without relabelling an existing card or erasing the contrary source evidence. |
+
+This gives **371 N3** and **374 N2** kanji: the original sets remain intact.
+N3 retains **念**, which belongs to the primary set but not Sensei's 370-entry
+N3 list. Higher-level study includes earlier knowledge; the six N1-source
+members above do not need duplicate N1-labelled cards. The
+[N1 coordination note](n1-authoring-notes.md#intervening-n3n2-study-placements)
+distinguishes membership and study labels from that project's acceptance gates.
+Vocabulary levels remain independent and unchanged.
+
 ## Vocabulary baseline
 
 Vocabulary levels are separate from kanji levels. For N5, N4, N3 and N2, use Stephen Kraus's
