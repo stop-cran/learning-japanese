@@ -1,0 +1,369 @@
+--- docs\n1-reviews\batch-073-native\N1Batch073NativeTest.kt
++++ docs\n1-reviews\batch-074-native\N1Batch074NativeTest.kt
+@@ -49 +49 @@
+-private fun disposable073() {
++private fun disposable074() {
+@@ -54 +54 @@
+-class N1Batch073GlyphTest {
++class N1Batch074GlyphTest {
+@@ -57,2 +57,2 @@
+-    @Test fun overcomeLookalikesAndIsolatedRadicalAcrossFourProductionFamilies() {
+-        disposable073()
++    @Test fun exemptionLookalikesAndIsolatedRadicalAcrossFourProductionFamilies() {
++        disposable074()
+@@ -61 +61 @@
+-        val text = "人 儿 元 兄 克 制 前 勝 口 古 困 女 己 彼 怖 恐 月 服 朝 決 洋 用 着 紙 解 話 難 克服"
++        val text = "任 使 儿 元 兄 先 免 助 午 去 取 口 可 品 商 年 幸 店 持 救 方 書 格 無 物 税 舌 見 言 訪 許 証 話 課 責 買 資 転 辞 逃 運 避 金 免れる 免許 免税"
+@@ -65 +65 @@
+-                    Text("Batch 073: overcome / look-alikes / isolated radical")
++                    Text("Batch 074: exemption / look-alikes / isolated radical")
+@@ -70 +70 @@
+-                    Text("Inspect 克/古/兄/元, isolated 儿 and 己/勝/服; all authored Han and 克服. Fallback families may coincide.", fontSize = 18.sp)
++                    Text("Inspect 免/兄/元/先, isolated 儿 and 許/税; all authored Han, 免れる/免許/免税. Fallback families may coincide.", fontSize = 18.sp)
+@@ -81 +81 @@
+-            for (char in listOf("人", "儿", "元", "兄", "克", "制", "前", "勝", "口", "古", "困", "女", "己", "彼", "怖", "恐", "月", "服", "朝", "決", "洋", "用", "着", "紙", "解", "話", "難")) {
++            for (char in listOf("任", "使", "儿", "元", "兄", "先", "免", "助", "午", "去", "取", "口", "可", "品", "商", "年", "幸", "店", "持", "救", "方", "書", "格", "無", "物", "税", "舌", "見", "言", "訪", "許", "証", "話", "課", "責", "買", "資", "転", "辞", "逃", "運", "避", "金")) {
+@@ -102 +102 @@
+-            for (word in listOf("克服")) {
++            for (word in listOf("免れる", "免許", "免税")) {
+@@ -129 +129 @@
+-        assertEquals(112, rows.length())
++        assertEquals(184, rows.length())
+@@ -133 +133 @@
+-        File(context.getExternalFilesDir(null), "n1-073-font-pairs.png").outputStream().use {
++        File(context.getExternalFilesDir(null), "n1-074-font-pairs.png").outputStream().use {
+@@ -136 +136 @@
+-        File(context.getExternalFilesDir(null), "n1-073-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-074-font-raster.json").writeText(JSONObject()
+@@ -139,2 +139,2 @@
+-            .put("individualGlyphProbes", 108).put("wholeWordRasterProbes", 4)
+-            .put("limits", "Native Paint probes cover all27 actual authored Han including isolated 儿; four whole-word rasters and four production Compose rows. Actual readability requires visual inspection; emulator not phone; fallback face not identified.")
++            .put("individualGlyphProbes", 172).put("wholeWordRasterProbes", 12)
++            .put("limits", "Native Paint probes cover all43 actual authored Han including isolated 儿; twelve whole-word rasters and four production Compose rows. Actual readability requires visual inspection; emulator not phone; fallback face not identified.")
+@@ -145 +145 @@
+-class N1Batch073ArticleTest {
++class N1Batch074ArticleTest {
+@@ -150,2 +150,2 @@
+-    @Test fun fullSingleImportOfflineOvercomeTwoReciprocalPairsOnOnlyDrawingAndSystemBack() {
+-        disposable073()
++    @Test fun fullSingleImportOfflineExemptionFiveReciprocalPairsBothReadingsDrawingAndSystemBack() {
++        disposable074()
+@@ -154,2 +154,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-073-${UUID.randomUUID()}", "main")
+-        val head = "5d322346c0c8bccdc36769d85f3fb23f4b5cbbee"
++        val source = RepoSource("acceptance-fixture", "n1-074-${UUID.randomUUID()}", "main")
++        val head = "4078c7d42e6bc2173c555e73d0bd39fb5d69eb08"
+@@ -163 +163 @@
+-                    instrumentation.context.assets.open("n1-batch-073-5d322346-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-074-4078c7d4-envelope.zip")
+@@ -178,2 +178,2 @@
+-        assertEquals(1085, updated.kanji)
+-        assertEquals(5042, updated.words)
++        assertEquals(1086, updated.kanji)
++        assertEquals(5043, updated.words)
+@@ -182 +182 @@
+-        assertEquals("1d8a4ee1a97c6bb5", meta.contentVersion)
++        assertEquals("c507eceeb764bc3f", meta.contentVersion)
+@@ -190,10 +190,10 @@
+-        assertEquals(105, n1.size)
+-        val overcome = n1.single { it.kanji == "克" }
+-        assertEquals(listOf("コク"), overcome.onyomi.splitSep())
+-        assertEquals(listOf("か.つ"), overcome.kunyomi.splitSep())
+-        assertNotNull(overcome.quizOnyomi)
+-        assertNotNull(overcome.quizKunyomi)
+-        assertEquals(listOf("コク"), overcome.quizOnyomi?.splitSep())
+-        assertEquals(emptyList<String>(), overcome.quizKunyomi?.splitSep())
+-        assertEquals(listOf("こく"), overcome.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(emptyList<String>(), overcome.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(106, n1.size)
++        val exemption = n1.single { it.kanji == "免" }
++        assertEquals(listOf("メン"), exemption.onyomi.splitSep())
++        assertEquals(listOf("まぬか.れる", "まぬが.れる"), exemption.kunyomi.splitSep())
++        assertNotNull(exemption.quizOnyomi)
++        assertNotNull(exemption.quizKunyomi)
++        assertEquals(listOf("メン"), exemption.quizOnyomi?.splitSep())
++        assertEquals(listOf("まぬが.れる"), exemption.quizKunyomi?.splitSep())
++        assertEquals(listOf("めん"), exemption.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(listOf("まぬがれる"), exemption.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -213 +213 @@
+-                        if (card.kanji == "克") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "免") now - 60_000 else now + 30L * 86_400_000,
+@@ -219 +219 @@
+-                            if (card.kanji == "克" && (kind == ReadingKind.On && key == "こく")) now - 60_000
++                            if (card.kanji == "免" && ((kind == ReadingKind.On && key == "めん") || (kind == ReadingKind.Kun && key == "まぬがれる"))) now - 60_000
+@@ -226 +226 @@
+-                    0, source.id, "jlpt-n1", "克", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "免", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -236,6 +236,6 @@
+-            .put("fullOnyomi", JSONArray(overcome.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(overcome.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(overcome.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(overcome.toReadingCard().quizKeys(ReadingKind.Kun)))
+-            .put("liteQuizOnyomi", JSONArray(requireNotNull(overcome.quizOnyomi).splitSep()))
+-            .put("liteQuizKunyomi", JSONArray(requireNotNull(overcome.quizKunyomi).splitSep()))
++            .put("fullOnyomi", JSONArray(exemption.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(exemption.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(exemption.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(exemption.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("liteQuizOnyomi", JSONArray(requireNotNull(exemption.quizOnyomi).splitSep()))
++            .put("liteQuizKunyomi", JSONArray(requireNotNull(exemption.quizKunyomi).splitSep()))
+@@ -244 +244 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 克 meaning and sole curated on key due; raw か.つ retained but explicit empty quiz kun. Two historical good 克 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 免 meaning and curated on and kun due; valid alternate まぬか.れる retained but not offered. Two historical good 免 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -251 +251 @@
+-            await("N1 · 105 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 106 cards").performScrollTo().assertIsDisplayed()
+@@ -254,4 +254,4 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("克")
+-            click("overcome")
+-            await("克 — overcome")
+-            show(articleBullet("Strokes: 7 · Key (radical): 儿 (no. 10) · JLPT: N1 (community list)"), "kanji-01")
++            rule.onNode(hasSetTextAction()).performTextReplacement("免")
++            click("exempt; be spared")
++            await("免 — exempt; be spared")
++            show(articleBullet("Strokes: 8 · Key (radical): 儿 (no. 10) · JLPT: N1 (community list)"), "kanji-01")
+@@ -259,2 +259,2 @@
+-            show(articleBullet("克 expresses overcoming or mastering something. In 克服 こくふく, the challenge can be a difficulty, illness, fear, or weakness."), "kanji-03")
+-            show(articleBullet("The modern shape has a 古-like top above the two leg-like strokes 儿, the indexing radical. Modern-shape mnemonic: picture that top standing firmly on two legs to overcome a difficulty. This is a memory aid, not a historical derivation or a phonetic analysis."), "kanji-04")
++            show(articleBullet("免 concerns exemption, release from an obligation, or being spared something unwelcome. 免税 めんぜい is tax exemption; 免れる まぬがれる means escaping harm or avoiding an unwelcome outcome. In 免許 めんきょ, learn the whole word as a license or official permission. The character also has a dismissal-from-office sense; one English gloss does not fit every compound."), "kanji-03")
++            show(articleBullet("The indexing radical 儿 appears in the two leg-like lower strokes. Modern-shape mnemonic: picture those legs stepping clear of an obligation under the hooked upper shape and box-like middle. This is an invented spelling aid, not a historical derivation or a phonetic analysis."), "kanji-04")
+@@ -262,7 +262,11 @@
+-            show(readingExample("コク"), "kanji-09")
+-            show(readingExample("克服 こくふく — overcoming; surmounting"), "kanji-11")
+-            show(readingExample("か.つ"), "kanji-12")
+-            show(readingExample("source-only for this quiz: 克つ かつ — overcome; prevail; rare spelling of the かつ verb; 己に克つ おのれにかつ — control oneself"), "kanji-14")
+-            show(articleBullet("Both sourced readings remain in the metadata. Reading questions select コク only. The rarity label concerns the standalone spelling 克つ, not the pronunciation かつ. The self-control expression 己に克つ illustrates the native reading without making every use of 勝つ interchangeable with 克つ."), "kanji-15")
+-            section("Common words")
+-            show(articleBullet("克服 こくふく — overcoming; surmounting a difficulty"), "kanji-17")
++            show(readingExample("メン"), "kanji-09")
++            show(readingExample("免許 めんきょ — license; 免税 めんぜい — tax exemption"), "kanji-11")
++            show(readingExample("まぬか.れる"), "kanji-12")
++            show(readingExample("source-only for this quiz: 免れる まぬかれる — escape harm; a valid alternate pronunciation of the verb below"), "kanji-14")
++            show(readingExample("まぬが.れる"), "kanji-15")
++            show(readingExample("免れる まぬがれる — escape harm; avoid an unwelcome outcome"), "kanji-17")
++            show(articleBullet("Both まぬかれる and まぬがれる are valid. Practice selects まぬがれる to avoid two variant questions for the same written verb; this does not label まぬかれる rare or incorrect. All sourced readings remain in their original metadata order. The dot marks where the written ending れる begins."), "kanji-18")
++            section("Common words")
++            show(articleBullet("免許 めんきょ — license; official permission"), "kanji-20")
++            show(articleBullet("免税 めんぜい — tax exemption; duty exemption"), "kanji-21")
++            show(articleBullet("免れる まぬがれる, also まぬかれる — escape harm; avoid an unwelcome outcome"), "kanji-22")
+@@ -270,10 +274,24 @@
+-            show(articleBullet("古 lacks the lower legs; 兄 has 口 above its legs, while 元 has two horizontal lines above them."), "kanji-19")
+-            show(articleBullet("勝 also concerns prevailing. Learn 勝つ かつ for winning a contest. 克つ appears in self-control uses such as 己に克つ; this is a useful spelling association, not an absolute division of every meaning between 克 and 勝."), "kanji-20")
+-            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Words: JMdict, entries 1285790, 1346150 and 1852770. Meaning and spelling: Daijisen, 克; Nikkoku, 勝つ・克つ."), "kanji-21")
+-            section("Common words")
+-            inline(await(articleBullet("克服 こくふく — overcoming; surmounting a difficulty")), "克服", 0)
+-            await("克服 (こくふく) - overcoming; surmounting")
+-            section("How the kanji combine")
+-            show(articleBullet("克 contributes overcoming or mastering, and 服 contributes submission or bringing under control here. The related ideas reinforce the meaning in コク + フク. 服 is not \"clothes\" in this compound."), "word-reused-07")
+-            section("How the kanji combine")
+-            inline(await(articleBullet("克 contributes overcoming or mastering, and 服 contributes submission or bringing under control here. The related ideas reinforce the meaning in コク + フク. 服 is not \"clothes\" in this compound.")), "克", 0)
++            show(articleBullet("兄, \"older brother,\" has 口 above its legs; 元, \"origin, former,\" has two horizontal lines. 先, \"previous; ahead,\" has a different upper shape."), "kanji-24")
++            show(articleBullet("許, \"permit; forgive,\" overlaps in permission-related meanings. It is not a freely interchangeable spelling of 免."), "kanji-25")
++            show(articleBullet("逃, \"escape; flee,\" overlaps in escape contexts. 免れる does not require physical flight: 責任を免れる (せきにんをまぬがれる) means \"evade responsibility.\""), "kanji-26")
++            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Words: JMdict, entries 1533130, 1533230 and 1584670. Meaning and pronunciation: Daijisen and Nikkoku, 免れる; Daijisen and Nikkoku, 免."), "kanji-27")
++            section("Common words")
++            inline(await(articleBullet("免れる まぬがれる, also まぬかれる — escape harm; avoid an unwelcome outcome")), "免れる", 0)
++            await("Article contents")
++            await("免れる (まぬがれる) — escape harm; avoid an unwelcome outcome")
++            section("Meaning")
++            show(articleBullet("免れる means escaping something unwelcome, such as injury or disaster, or avoiding a burden such as punishment or responsibility. The unwelcome event or responsibility takes を: けがを免れる, \"escape injury,\" and 責任を免れる (せきにんをまぬがれる), \"evade responsibility.\""), "免れる-02")
++            show(articleBullet("幸い、けがを免れました。 (さいわい、けがをまぬがれました。) — Fortunately, I escaped injury."), "免れる-03")
++            show(articleBullet("責任を免れることはできません。 (せきにんをまぬがれることはできません。) — You cannot evade responsibility."), "免れる-04")
++            show(articleBullet("This is an ichidan verb: replace the final る to form 免れます (まぬがれます), 免れた (まぬがれた), and 免れない (まぬがれない). The alternative pronunciation まぬかれる is also valid, with forms such as まぬかれます and まぬかれた. It is not a different written word."), "免れる-05")
++            section("How the kanji combine")
++            show(articleBullet("免 writes まぬが here, followed by れる as okurigana; with the alternate pronunciation it writes まぬか. There is no second kanji to combine. The ending れる is part of this verb, not a passive conjugation added to a verb called まぬが."), "免れる-07")
++            section("Synonyms and antonyms")
++            show(articleBullet("逃げる (にげる) can describe fleeing and also evading responsibility. 免れる need not involve running or moving away. 避ける (さける) overlaps in avoiding an unwelcome situation; the words are not unrestricted substitutes in every sentence."), "免れる-09")
++            show(articleBullet("助かる (たすかる) overlaps when someone survives or is spared harm, but it also describes receiving practical help. 救う (すくう) presents saving someone or something else; 免れる does not itself identify a rescuer. Suffering the harm is a contextual contrast, not a single fixed antonym for every use."), "免れる-10")
++            section("Distinctive meaning")
++            show(articleBullet("The injury example reports being spared harm; it does not say whether that happened through deliberate action, another person's help, or luck. Avoiding responsibility can instead be blameworthy. Do not infer either physical escape or approval from the verb alone."), "免れる-12")
++            show(articleBullet("Dictionaries differ in classification: JMdict calls this verb transitive, while Nikkoku calls it intransitive. Learn the attested unwelcome event を免れる construction directly rather than changing を to match an English gloss or treating one classification as universal."), "免れる-13")
++            show(articleBullet("Dictionary: JMdict, entry 1584670, senses 1-2. Pronunciation, construction and classification: Daijisen and Nikkoku, 免れる."), "免れる-14")
++            section("How the kanji combine")
++            inline(await(articleBullet("免 writes まぬが here, followed by れる as okurigana; with the alternate pronunciation it writes まぬか. There is no second kanji to combine. The ending れる is part of this verb, not a passive conjugation added to a verb called まぬが.")), "免", 0)
+@@ -282,27 +300,82 @@
+-            show(readingExample("克服 こくふく — overcoming; surmounting"), "word-kanji-backlink")
+-            back()
+-            await(articleBullet("克 contributes overcoming or mastering, and 服 contributes submission or bringing under control here. The related ideas reinforce the meaning in コク + フク. 服 is not \"clothes\" in this compound.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("system-back-word-kanji")
+-            section("How the kanji combine")
+-            inline(await(articleBullet("克 contributes overcoming or mastering, and 服 contributes submission or bringing under control here. The related ideas reinforce the meaning in コク + フク. 服 is not \"clothes\" in this compound.")), "服", 43)
+-            await("服 — clothing")
+-            section("Meaning and origin")
+-            show(articleBullet("服 is central to words for clothes. In other vocabulary it also relates to taking medicine or obeying; do not translate it as \"clothing\" in every compound. In 克服 こくふく, \"overcoming; surmounting,\" it contributes bringing under control, not clothes."), "clothing-reused-03")
+-            section("Meaning and origin")
+-            inline(await(articleBullet("服 is central to words for clothes. In other vocabulary it also relates to taking medicine or obeying; do not translate it as \"clothing\" in every compound. In 克服 こくふく, \"overcoming; surmounting,\" it contributes bringing under control, not clothes.")), "克服", 158)
+-            await("Article contents")
+-            section("How the kanji combine")
+-            show(articleBullet("克 contributes overcoming or mastering, and 服 contributes submission or bringing under control here. The related ideas reinforce the meaning in コク + フク. 服 is not \"clothes\" in this compound."), "clothing-word-backlink")
+-            back()
+-            await(articleBullet("服 is central to words for clothes. In other vocabulary it also relates to taking medicine or obeying; do not translate it as \"clothing\" in every compound. In 克服 こくふく, \"overcoming; surmounting,\" it contributes bringing under control, not clothes.")).assertIsDisplayed()
+-            section("Meaning and origin")
+-            capture("system-back-clothing-word")
+-            back()
+-            await(articleBullet("克 contributes overcoming or mastering, and 服 contributes submission or bringing under control here. The related ideas reinforce the meaning in コク + フク. 服 is not \"clothes\" in this compound.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("system-back-word-clothing")
+-            back()
+-            await(articleBullet("克服 こくふく — overcoming; surmounting a difficulty")).assertIsDisplayed()
+-            section("Common words")
+-            capture("system-back-kanji-word")
++            show(readingExample("まぬが.れる"), "免れる-kanji-backlink")
++            back()
++            await(articleBullet("免 writes まぬが here, followed by れる as okurigana; with the alternate pronunciation it writes まぬか. There is no second kanji to combine. The ending れる is part of this verb, not a passive conjugation added to a verb called まぬが.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("免れる-system-back-to-word")
++            back()
++            await(articleBullet("免れる まぬがれる, also まぬかれる — escape harm; avoid an unwelcome outcome")).assertIsDisplayed()
++            section("Common words")
++            capture("免れる-system-back-to-kanji")
++            section("Common words")
++            inline(await(articleBullet("免許 めんきょ — license; official permission")), "免許", 0)
++            await("Article contents")
++            await("免許 (めんきょ) - license; official permission")
++            section("How the kanji combine")
++            show(articleBullet("免 contributes release or exemption, and 許 contributes permitting. Together they concern granting authorization. This is a guide to the characters' meanings, not a claim about a particular modern licensing law. The readings are メン + キョ."), "免許-07")
++            section("How the kanji combine")
++            inline(await(articleBullet("免 contributes release or exemption, and 許 contributes permitting. Together they concern granting authorization. This is a guide to the characters' meanings, not a claim about a particular modern licensing law. The readings are メン + キョ.")), "免", 0)
++            await("Article contents")
++            section("Readings")
++            show(readingExample("まぬが.れる"), "免許-kanji-backlink")
++            back()
++            await(articleBullet("免 contributes release or exemption, and 許 contributes permitting. Together they concern granting authorization. This is a guide to the characters' meanings, not a claim about a particular modern licensing law. The readings are メン + キョ.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("免許-system-back-to-word")
++            section("How the kanji combine")
++            inline(await(articleBullet("免 contributes release or exemption, and 許 contributes permitting. Together they concern granting authorization. This is a guide to the characters' meanings, not a claim about a particular modern licensing law. The readings are メン + キョ.")), "許", 40)
++            await("Article contents")
++            await("許 — permit; forgive")
++            section("Common words")
++            show(articleBullet("免許 めんきょ — license; official permission"), "permit-example-18")
++            section("Common words")
++            inline(await(articleBullet("免許 めんきょ — license; official permission")), "免許", 0)
++            await("Article contents")
++            section("How the kanji combine")
++            show(articleBullet("免 contributes release or exemption, and 許 contributes permitting. Together they concern granting authorization. This is a guide to the characters' meanings, not a claim about a particular modern licensing law. The readings are メン + キョ."), "免許-component-backlink")
++            back()
++            await(articleBullet("免許 めんきょ — license; official permission")).assertIsDisplayed()
++            section("Common words")
++            capture("免許-system-back-to-component")
++            back()
++            await(articleBullet("免 contributes release or exemption, and 許 contributes permitting. Together they concern granting authorization. This is a guide to the characters' meanings, not a claim about a particular modern licensing law. The readings are メン + キョ.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("免許-system-back-from-component")
++            back()
++            await(articleBullet("免許 めんきょ — license; official permission")).assertIsDisplayed()
++            section("Common words")
++            capture("免許-system-back-to-kanji")
++            section("Common words")
++            inline(await(articleBullet("免税 めんぜい — tax exemption; duty exemption")), "免税", 0)
++            await("Article contents")
++            await("免税 (めんぜい) - tax exemption; duty exemption")
++            section("How the kanji combine")
++            show(articleBullet("免 contributes exemption or release; 税 names tax. The on readings メン + ゼイ form めんぜい. Here English \"duty\" means a tax, not a person's responsibility or assigned task."), "免税-07")
++            section("How the kanji combine")
++            inline(await(articleBullet("免 contributes exemption or release; 税 names tax. The on readings メン + ゼイ form めんぜい. Here English \"duty\" means a tax, not a person's responsibility or assigned task.")), "免", 0)
++            await("Article contents")
++            section("Readings")
++            show(readingExample("まぬが.れる"), "免税-kanji-backlink")
++            back()
++            await(articleBullet("免 contributes exemption or release; 税 names tax. The on readings メン + ゼイ form めんぜい. Here English \"duty\" means a tax, not a person's responsibility or assigned task.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("免税-system-back-to-word")
++            section("How the kanji combine")
++            inline(await(articleBullet("免 contributes exemption or release; 税 names tax. The on readings メン + ゼイ form めんぜい. Here English \"duty\" means a tax, not a person's responsibility or assigned task.")), "税", 36)
++            await("Article contents")
++            section("Common words")
++            inline(await(articleBullet("免税 めんぜい - tax exemption; duty exemption")), "免税", 0)
++            await("Article contents")
++            section("How the kanji combine")
++            show(articleBullet("免 contributes exemption or release; 税 names tax. The on readings メン + ゼイ form めんぜい. Here English \"duty\" means a tax, not a person's responsibility or assigned task."), "免税-component-backlink")
++            back()
++            await(articleBullet("免税 めんぜい - tax exemption; duty exemption")).assertIsDisplayed()
++            section("Common words")
++            capture("免税-system-back-to-component")
++            back()
++            await(articleBullet("免 contributes exemption or release; 税 names tax. The on readings メン + ゼイ form めんぜい. Here English \"duty\" means a tax, not a person's responsibility or assigned task.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("免税-system-back-from-component")
++            back()
++            await(articleBullet("免税 めんぜい — tax exemption; duty exemption")).assertIsDisplayed()
++            section("Common words")
++            capture("免税-system-back-to-kanji")
+@@ -313,0 +387 @@
++                .put("mappedReciprocalPairs", 5).put("directedLinkTransitions", 10)
+@@ -317 +391 @@
+-            assertEquals("克", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("免", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -319 +393 @@
+-            click("overcome")
++            click("exempt; be spared")
+@@ -321 +395 @@
+-            assertEquals("克", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("免", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -327 +401 @@
+-            repeat(1) {
++            repeat(2) {
+@@ -331 +405 @@
+-                assertEquals("克", question.card.kanji)
++                assertEquals("免", question.card.kanji)
+@@ -333,2 +407,2 @@
+-                assertEquals(ReadingKind.On, question.question.kind)
+-                val key = "こく"
++                val key = if (question.question.kind == ReadingKind.On) "めん" else "まぬがれる"
++                assertNotEquals("まぬかれる", question.question.correctKey)
+@@ -345 +419 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "克" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "免" &&
+@@ -349 +423 @@
+-            assertEquals(setOf(ReadingKind.On), answeredKinds)
++            assertEquals(setOf(ReadingKind.On, ReadingKind.Kun), answeredKinds)
+@@ -352,2 +426,2 @@
+-            assertEquals(1, done.answered)
+-            assertEquals(1, done.correct)
++            assertEquals(2, done.answered)
++            assertEquals(2, done.correct)
+@@ -356 +430 @@
+-                    it.kanji == "克" && it.mode == ReadingKind.Kun.mode.name }
++                    it.kanji == "免" && it.mode == ReadingKind.Kun.mode.name && it.reading == "まぬかれる" }
+@@ -358 +432 @@
+-            capture("curated-on-only-done")
++            capture("curated-both-done")
+@@ -363,4 +437,4 @@
+-            await("overcome").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "克") })
+-            assertEquals(listOf("コク"), card.onyomi.splitSep())
+-            assertEquals(listOf("か.つ"), card.kunyomi.splitSep())
++            await("exempt; be spared").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "免") })
++            assertEquals(listOf("メン"), card.onyomi.splitSep())
++            assertEquals(listOf("まぬか.れる", "まぬが.れる"), card.kunyomi.splitSep())
+@@ -369,2 +443,2 @@
+-            assertEquals(listOf("コク"), card.quizOnyomi?.splitSep())
+-            assertEquals(emptyList<String>(), card.quizKunyomi?.splitSep())
++            assertEquals(listOf("メン"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("まぬが.れる"), card.quizKunyomi?.splitSep())
+@@ -376 +450 @@
+-            assertEquals(7, strokes.length())
++            assertEquals(8, strokes.length())
+@@ -393 +467 @@
+-            rule.onNode(hasContentDescription("7 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("8 strokes drawn", substring = true)).assertExists()
+@@ -398 +472 @@
+-                    it.kanji == "克" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "免" && it.mode == StudyMode.Draw.name }
+@@ -409 +483 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "克" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "免" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -417 +491 @@
+-                .put("soleCuratedOnPersistedGoodNoKunAndDone", true)
++                .put("bothCuratedKindsPersistedGoodNoAlternateAndDone", true)
+@@ -422,2 +496,2 @@
+-            File(app.getExternalFilesDir(null), "n1-073-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-073-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-074-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-074-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -516 +590 @@
+-        File(app.getExternalFilesDir(null), "n1-073-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-074-$step.png").outputStream().use {
