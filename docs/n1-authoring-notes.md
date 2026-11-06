@@ -37,6 +37,37 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 078: source prepared, not drafted
+
+The [source packet](n1-sources/batch-078-progress.json) selects **冗**, source
+row 87, after batch 077's verified publication. It retains **78 distinct
+complete JMdict families** (79 occurrences across lexical, comparison and
+related packets), six complete raw character records and explicit decisions
+for every extracted family. The sole sourced reading **ジョウ** is proposed
+for practice through existing **冗談** じょうだん, whose N3 vocabulary level
+and examples remain unchanged. No new supporting word article is necessary.
+
+The [preparation audit](n1-sources/batch-078-preparation-audit.json) enumerates
+both mapped reciprocal pairs /four directions, two reused articles and one
+proposed additive direct 冗談/ユーモア quiz guard. Existing 洒落 and
+ふざける guards are preserved, not treated as transitive protection.
+The pinned canonical SVG has four paths matching KANJIDIC2; geometry has not
+been converted. The proposed/affected-text font inventory contains 29 Han:
+exact **冖 /几** lack glyphs in all three main bundled cmaps, outside
+RareHan ranges. This records a later native fallback-inspection requirement,
+not glyph failure or rendering acceptance.
+
+All 8,358 runtime payload hashes and manifest `2944928c13e2165a` remain
+unchanged. This is a normally signed local source checkpoint, not a runtime
+draft, independent review, fresh Android/native result or publication.
+Published coverage remains **104/1,228 additions; 1,124 remain**. The next
+checkpoint drafts this same bounded batch only; all original review,
+validation, native, publication and archive gates remain. Compatible Android
+`f9b59a2+` is required; physical-phone/general-release and whole-set acceptance
+remain outstanding. Reusable preparation code resides in the dedicated
+control workspace and is archived with this packet; optional historical
+session-state helpers are not required inputs.
+
 ## Batch 077: published for bounded owner testing
 
 The [publication record](n1-sources/batch-077-publication.json) closes **冒**
