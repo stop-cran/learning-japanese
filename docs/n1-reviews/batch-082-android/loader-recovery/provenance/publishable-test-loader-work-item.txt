@@ -1,0 +1,24 @@
+## Problem
+
+The N1 content rollout is paused at batch082. RealContentTest.parsesRealContentRepoWhenPresent eagerly reads every non-.git file in the sibling learning-japanese checkout, including approximately1.56GiB of contributor documentation, before parsing. It repeatedly exhausts the qualified2GiB HOST test heap even with5.45GiB of free physical RAM. This is not a production/device memory finding.
+
+The content repository's existing .gitattributes export-ignores docs/, tools/ and .github/ from GitHub source archives. They must remain intact in Git and local checkouts. RealContentTest.completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent already selects the publication files using Git's export-ignore attributes.
+
+Read-only inspection at content b9eb2fb52b6619c1810cc68e5da3ebbcddd6175b found8379publication files/44438578rawbytes, zero docs files, retaining all8372manifest-declared paths. Sizes are raw bytes, not compressed archive acceptance.
+
+## Proposed implementation
+
+- Extract one small test-only publication fixture loader from the existing mixed-archive selection and use it in both whole-corpus tests. Use git ls-files -c -o --exclude-standard -z -- :(exclude,attr:export-ignore), preserving Unicode and whitespace paths and non-ignored untracked local runtime additions.
+- Check Git command completion, surface failures as failures rather than skips, and never fall back to whole-working-tree traversal or manifest-only selection.
+- Check that manifest.json and every path declared by the manifest's top-level path maps are selected before reading fixture bytes. This detects incorrectly export-ignored runtime dependencies rather than silently testing reduced content.
+- Preserve every existing parser/curriculum/media/grammar assertion, every contributor source/review document, production code, parser epoch, schema, archive budget, guest heap and qualified HOST2GiB heap.
+- Add focused temporary-Git-repository regressions for export-ignored nested evidence, non-ignored untracked files, Unicode/space-containing paths, excluded declared dependencies and Git command failure. Tests must not require the external sibling corpus.
+- Add a short Android tooling gotcha documenting the proven fixture pitfall; record the test packaging invariant in DESIGN if necessary.
+
+## Validation and acceptance
+
+- Independent read-only plan review, with each actionable finding reconciled before implementation.
+- Work in a separate clean Android worktree; preserve the paused content and Android worktrees and full failed-run evidence.
+- Run focused loader regressions, then fresh named RealContentTest3+RareHanTest1 with original assertions, one worker, rerun-tasks and unchanged approved HOST-only2GiB init. No skips/failures/errors; record actual XML times/hashes and content snapshot.
+- Run applicable existing lint/static checks, independently review the final diff, reconcile, then normal signed commit/latest-main integration/scoped push and actual greenCI. No force push, signing bypass, blind heap increases or document deletion.
+- Post outcome as repository owner. A test-fixture fix does not imply phone/native/whole-set acceptance or complete the1228-addition rollout. Resume same082 only after verified compatible signed Android baseline adoption, preserving all later native/visual/publication gates.

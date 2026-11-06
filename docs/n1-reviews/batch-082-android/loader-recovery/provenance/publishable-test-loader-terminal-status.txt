@@ -1,0 +1,17 @@
+Implementation is published in PR https://github.com/stop-cran/kanji-cards-android/pull/131.
+Signed commit751c471a03cd0c82e38a61a155739c3692a24f68 is verified valid locally and by GitHub.
+Independent plan review was reconciled before implementation; independent final diff review found no significant issues.
+
+The original OOM is fixed in the reviewed test fixture:
+- Fresh loader5+RealContent3+RareHan1:9requiredtests passed, zero skips/failures/errors, unchanged2GiBHOST heap.
+- Full local core:check:367tests,0failures,0errors,5existing opt-in archive skips, no heap override.
+- Local lintDebug and JVM boundary checks passed.
+- Terminal PR CI42219978985:core SUCCESS, build FAILURE only at Detekt.
+  https://github.com/stop-cran/kanji-cards-android/actions/runs/42219978985
+- Remaining two Detekt findings are unchanged ComposeUiTest.kt LargeClassline81 and MaxLineLengthline345;
+  verified identical in pre-existing mainCI41849632967. No new suppressions or unrelated code changes.
+
+All documentation, parser assertions, runtime files, production code and memory/archive limits are preserved.
+No emulator/phone acceptance claimed. No merge over red CI.
+Issue130 stays open for merge/CI closure; N1 batch082 stays paused pending compatible signed baseline adoption.
+The loader issue is no longer an observed test-memory blocker on this fix; remaining integration prerequisite is the existing red static-analysis gate.
