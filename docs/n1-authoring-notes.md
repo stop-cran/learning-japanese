@@ -14,6 +14,28 @@ The [raw community response](n1-sources/community-list-20261102.json) contains
 documented 妖 exception. Expected final counts remain 2,213 kanji / 1,233
 N1-labelled cards, absent explicitly reconciled intervening changes.
 
+### Intervening N3/N2 study placements
+
+The [2026-11-06 N3/N2 supplement](n3-n2-supplement-sources.json) deliberately
+places frozen N1-source members **保・案・派・第・策・結** at N2, following the
+identified secondary source while retaining the conflicting N1 evidence.
+Reuse these stable cards as earlier-level knowledge; do not create duplicates
+or silently move them back to N1 to satisfy a batch audit.
+
+These are intervening source-membership dispositions, **not six accepted
+issue-60 batches**. The freeze, `statusAtFreeze`, historical remaining-work
+counters and publication/native receipts stay historical. The current N1
+batch auditor requires N1 labels for its active batch; these six must not be
+fed through that path as new N1 drafts. Future queue and whole-set
+reconciliation must account explicitly for their earlier placement and any
+still-required acceptance evidence.
+
+Absent other intervening changes, completing the frozen membership plus this
+supplement would yield **2,218 kanji / 1,227 N1-labelled cards**: five genuinely
+additional nonmembers, and six existing source members studied earlier.
+This conditional projection replaces neither the immutable freeze's nominal
+counts nor actual accepted/publication totals.
+
 The immutable [baseline inventory](n1-sources/baseline-inventory.json) records
 all 985 kanji, 4,942 word articles and 985 stroke files at
 `57dcc2aaedd8d6b0f141d5b4c3cb9c13f6f797b2`, including full card metadata,
