@@ -37,6 +37,87 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 081: published for bounded owner testing
+
+Batch **冶**, source row 90, adds necessary **冶金** (やきん, metallurgy),
+not an N1 vocabulary expansion. The only reused change is one reciprocal
+Common words bullet in 金. Full metadata **ヤ /い.る** remains in source
+order; selected on **ヤ** and explicit empty selected kun offer only **や**.
+The source-only kun explanation does not invent an ordinary modern 冶る,
+and whole-word 鍛冶かじ does not establish a ジ reading. No word level is inferred.
+
+The [textual reconciliation](n1-reviews/batch-081-reconciliation.json)
+retains blind Claude Opus 5.5 and GPT-6.1 Sol reviews of unchanged teaching
+`b7bf953d`: the same complete packet with **24 distinct complete JMdict
+families /25 occurrences**, five raw character records and nine comparison
+bodies. Supplied public-source observations are not independent reviewer
+retrieval; encyclopedia/Nipponica truncation and image-dependent etymology
+limits remain explicit. No consequential unresolved scoped teaching defect
+remains. Five wording/comparison/citation suggestions and the conditional
+溶 fallback concern are optional, not reasons for unrelated legacy edits.
+
+The [combined-tree acceptance](n1-sources/batch-081-acceptance-audit.json)
+records **372 Python tests without skips**, validator, vocabulary consistency
+(2,122/2,431 reviewed pilot prompts, not full coverage), fresh manifest
+`f1dd5d8b9d2ff535`, five frozen inputs, two decompressed dictionaries,
+complete selected families/raw records, baseline **985 kanji /4,942 words
+/985 strokes** with documented exceptions, exact **108 additions**, all
+reading dispositions, quiz safeguards, **two reciprocal pairs /four
+directions**, pinned seven-stroke geometry, 29 scoped Han cmaps and **8,369
+runtime hashes** under unchanged budgets. Fresh main was already ancestral;
+there were no teaching/tool integration changes.
+
+Accepted [HOST evidence](n1-sources/execution-549.json) has three RealContentTest
+cases and one RareHanTest case without skips; [native evidence](n1-sources/execution-551.json)
+has two named terminal-status-0 cases. These receipts and the compile evidence
+were reverified, not rerun. Production ContentSync imported the full signed
+`95a87783` archive **once**: **1,093 kanji /5,049 words /113 N1 labels**,
+zero problems, accepted parser epoch 1. Full/Lite full and curated readings
+agree; sole on good log and Done 1/1, N1 selection, actual meaning feedback,
+both reciprocal pairs, system Back and offline routes pass. The captured
+wrong meaning labels were two (formal numeral), chrysanthemum and moreover/
+also, not curated 治/台/始; the curated trio retains textual review, not
+captured-use or every-random-pool certification.
+
+The [dependent visual confirmations](n1-reviews/batch-081-visual-reconciliation.json)
+use the original model sessions serially: **27 host-dispatched children each**,
+one complete packet plus **25 distinct PNG groups /45 originals /20 byte
+aliases**, then a zero-tool final report. All children exited before the
+next family. Original 1080x2400 and returned 900x2000 payloads are preserved
+separately; Claude's resource-26 compressed-history disclosure remains explicit.
+All **29 Han /four production families**, including distinct 冫/氵, are
+readable in bounded emulator captures; faint prose 冫 is optional polish,
+and the fallback face is unknown. Complementary horizontal table states are
+not all columns in one frame. The 116 individual/four whole-word Paint
+assertions are not 120 PNG reads.
+
+The final semantics dump is loading, not settled-route/persistence proof.
+Seven injected reference paths, ungraded tracing, shape-only comparison and
+give-up recall grade 1 do not demonstrate human handwriting, successful
+recall or MLKit recognition/download; the offline model is unavailable.
+The disposable synthetic source and schedule are not owner progress.
+Owned emulator 5580 parent 18020/QEMU 28948 stopped; owner 5556 was untouched.
+HOST-only 2-GiB initialization never entered native builds; no app/guest heap,
+archive guard, learning algorithm or permission policy changed.
+
+The [publication record](n1-sources/batch-081-publication.json) pins normally
+signed accepted/integrated runtime `ca26c605`, owner-scoped normal fast-forward,
+green CI **42199854453** and the exact immutable public ZIP. Every **8,369
+runtime hash** and the manifest match; safe paths, per-file limits and
+contributor-evidence exclusion pass. The archive has **8,391 entries**,
+30,743,271 compressed /44,429,810 inflated /44,161,472 retained bytes under
+unchanged 18,000-entry /42-MiB compressed /80-MiB inflated /56-MiB retained
+guards. Terminal evidence CI/ZIP/owner-issue receipts are recorded separately
+in the durable checkpoint.
+
+Published coverage is **108 additions; 1,120 remaining**, with **107 necessary
+support additions**, not an N1 vocabulary deck. Current counts are 1,093 kanji,
+5,049 words, 113 N1 labels, 112 named-source members plus separate 妖.
+Compatible Android `f9b59a2`+ is required. Physical-phone, general-release and
+whole-set acceptance remain **outstanding**; original source/review/process/
+denial/OOM/viewport limits are retained. Optional historical session recipes
+were not accessed; there was no new permission denial. Yield before batch 082.
+
 ## Batch 080: published for bounded owner testing
 
 Batch **冴**, source row 89, adds the necessary **冴える** (さえる) article,
