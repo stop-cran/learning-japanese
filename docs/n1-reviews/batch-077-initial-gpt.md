@@ -1,0 +1,36 @@
+**Snapshot:** Supplied signed snapshot `0d6fe29033157a4417def2b503ad3d02e7cb43da`. Review used only the assigned packet; Git state, signature and hashes were not independently verified. Actual exposed model: **GPT-6.1 Sol (`gpt-6.1-sol`)**.
+
+**Scope:** One complete `view` read with `forceReadLargeFiles=true`, without ranges or parallel calls. The returned packet reached its final fallback/font paragraph; no truncation was indicated. Its stated size is 128,123 bytes/2,427 lines, not independently counted.
+
+Reviewed complete new `kanji\冒.md` and `words\冒す.md`; only the changed passages `words\冒険.md:24` and `kanji\険.md:22` received fresh verdicts. Read both older articles completely as context, plus all supplied comparison articles 日/目/官/犯/害/壊す/損害/被害/攻める/危険/危ない, all **40 complete JMdict families** (28 primary, 12 comparison), both complete raw KANJIDIC2 records, pinned SVG, generated geometry, diffs and supporting contracts.
+
+**Verdicts:**
+
+| Reviewed item | Correctness | Scoped coverage | Text comprehensibility |
+|---|---|---|---|
+| New `kanji\冒.md` | **UNVERIFIED**¹ | **CLEAN** | **CLEAN** |
+| New `words\冒す.md` | **CLEAN** | **CLEAN** | **CLEAN** |
+| Changed `words\冒険.md:24` link | **CLEAN** | **CLEAN** | **CLEAN** |
+| Changed `kanji\険.md:22` link | **CLEAN** | **CLEAN** | **CLEAN** |
+
+¹The linguistic and character-metadata checks establish no actionable defect. Exact membership in the **frozen community N1 list** remains unverified: the packet supplies its policy/count/date, but not the frozen membership record containing 冒. KANJIDIC2’s legacy `jlpt=1` is not a substitute.
+
+CLEAN means no actionable defect established within this bounded review, not exhaustive correctness.
+
+**Findings:** None demonstrated. The source-membership verification gap is recorded above and under Limits; it is not evidence that the N1 assignment is wrong.
+
+Supporting audit conclusions:
+
+- **Readings and allocation:** `kanji\冒.md:9–12,30–35` preserves the complete Japanese source sequence **ボウ, おか.す**, with exact selections `quizOnyomi: [ボウ]` and `quizKunyomi: [おか.す]`. Each has its own row and linked lexical example. JMdict supports 冒険・ぼうけん and 冒す・おかす; supplied Daijisen observations additionally support the ボウ allocation and おか・す boundary. Expected normalized offered keys are **ぼう / おかす**; actual quiz generation was not observed. The word correctly distinguishes written おか + okurigana す from a compound or a conjugational stem.
+- **Shape and indexing:** Nine strokes, grade 8 and classical radical **冂, no. 13** match the raw record. Nelson’s **72** is a different indexing system, not grounds to replace the classical radical with 日. SVG strokes 1–4 form the upper outline and strokes 5–9 the lower 目; supplied geometry is textually consistent with that sequence. The explicitly labelled modern mnemonic makes neither a historical derivation nor a phonetic claim. SVG annotations alone do not establish either.
+- **Meanings and examples:** `words\冒す.md:15–26,36–42` correctly handles transitivity, 危険を冒す, the mountain example, negative necessity, and godan 冒します／冒して／冒さない. Kana and translations fit the constructions. 病に冒される is correctly identified as passive affliction, not voluntary risk-taking. Chemical harm, desecration and surname assumption match separate dictionary branches; the article does not claim that dictionary recognition makes these equally common. 冒頭 is correctly separated from risk-taking. 犯す and 侵す are useful spelling comparisons without an unrestricted substitution rule or falsely disjoint meanings.
+- **Family evidence:** Complete spellings, readings, senses and flags were inspected. Search-only forms such as 寒冒 and 眩冒, rare/search-only 冒涜 variants, rare 冒険資本, and product/literary names were not promoted into ordinary teaching examples. The comparison families support examining harm and boldness branches rather than relying solely on titles.
+- **Quiz choices:** 日’s sun/day/time uses, 目’s sight/item/ordinal/experience/mesh uses, and 官’s official/government/organ uses do not supply defensible equivalents of 冒’s target gloss. The supplied legacy fallback labels—including 人 “person” and 入 “enter, put in”—establish no additional collision; English “face” here is a verb, not a physical-face noun.
+- **Direct exclusions:** All five new pairs with 冒険／壊す／害／損害／被害 are defensible safeguards when their actual bodies and secondary dictionary senses are considered: risky venturing for 冒険, harm/damage for the others. They do not create exclusions among those other words transitively. 危険 and 危ない describe danger or being at risk, rather than braving it. 攻める’s taking-on/boldness branches warrant comparison, but do not establish equivalence with “brave danger; take a risk”; no additional mandatory exclusion is demonstrated. Homophony alone supplies no exclusion requirement.
+- **All six link directions:** 冒→冒す (`kanji\冒.md:22,35,40`) and 冒す→冒 (`words\冒す.md:25`); 冒→冒険 (`kanji\冒.md:22,34,39`) and 冒険→冒 (`words\冒険.md:24`); 険→冒険 (`kanji\険.md:22`) and 冒険→険 (`words\冒険.md:24`) are present with appropriate readings. The two reused changes are navigation-only. They activate the existing component introduction without changing identities, readings, exclusions or baseline levels. In particular, 冒険 remains **N3**, 険 remains its community **N3**, and 冒す receives no inferred word level.
+
+**Optional:** None.
+
+**Limits:** Exact frozen-list membership requires evidence absent from this packet. No independent Git, signature/hash, upstream dictionary or source-list retrieval occurred; public dictionary observations are **coordinator-supplied evidence**, not my retrieval.
+
+This is textual review, not native-speaker, process, phone, font, drawing or route certification. The reported missing 冂/阝 font coverage remains unresolved device evidence. Geometry consistency is not successful native drawing. No live quiz execution or exhaustive quiz-safety claim is made; compatible-client behavior and broader acceptance remain outside this review. No edits were made.
