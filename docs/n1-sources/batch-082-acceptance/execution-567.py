@@ -414,6 +414,206 @@ def evidence():
     print("Combined-tree and inherited reviewer/HOST/native evidence accepted.")
 
 
+def verified(phase):
+    head = git("rev-parse", "HEAD")
+    assert git("ls-remote", "origin", "refs/heads/main").split()[0] == head
+    assert git("log", "-1", "--format=%G?") == "G" and not git("status", "--porcelain")
+    ci = load(C / "artifacts" / f"batch-082-{phase}-ci.json")
+    archive = load(C / "artifacts" / f"content-{head[:7]}-acceptance.json")
+    assert ci["headSha"] == head and ci["status"] == "completed" and ci["conclusion"] == "success"
+    assert ci["jobs"] and all(j["conclusion"] == "success" for j in ci["jobs"])
+    assert archive["commit"] == head and archive["contentVersion"] == VERSION
+    assert archive["verifiedRuntimeHashes"] == 8372
+    assert all(archive[k] for k in ("manifestEqual", "allPublishingBudgetsPassed",
+                                   "contributorEvidenceExcluded", "perFileLimitsAndSafePathsPassed"))
+    assert sha(C / "artifacts" / f"content-{head[:7]}.zip") == archive["sha256"]
+    unchanged()
+    return head, ci, archive
+
+
+def records():
+    head, ci, archive = verified("accepted")
+    assert not (S / "batch-082-publication.json").exists()
+    p = load(C / "progress.json")
+    result = load(S / "batch-082-acceptance-audit.json")
+    publication = {
+        "schemaVersion": 1, "execution": 567, "batch": "082", "membership": ["准"],
+        "status": "published-verified-bounded-owner-testing", "recordedAt": now(),
+        "baseCommit": BASE, "authoredSnapshot": "b6bcc8f144cd781917abdb2ca510f663d1339a56",
+        "reviewedTeachingSnapshot": TEACHING,
+        "correctedTextualEvidence": "execution-562.json",
+        "freshAndroidSnapshot": "e108bbeb0fcd4fda3837d955a652f662f72fdac1",
+        "nativeEnvelopeSnapshot": "e108bbeb0fcd4fda3837d955a652f662f72fdac1",
+        "nativeEvidenceSnapshot": "86c77107638e0adf2aa2752c50533124c389b371",
+        "visualClosureSnapshot": START, "latestMainIntegrated": BASE,
+        "acceptedCommit": head, "integratedCommit": head, "publishedCommit": head,
+        "normalSignatureStatus": "G; normal owner-scoped fast-forward; no bypass/amendment/force push.",
+        "reviewRecord": "../n1-reviews/batch-082-reconciliation.json",
+        "correctedTextualRecord": "../n1-reviews/batch-082-choice-reconciliation.json",
+        "nativeVisualRecord": "../n1-reviews/batch-082-corrected-visual/reconciliation.json",
+        "validation": result, "ci": ci, "immutablePublicArchive": archive,
+        "counts": {
+            "batchPublishedAdditions": 1, "projectPublishedAdditions": 109, "remainingAdditions": 1119,
+            "currentKanji": 1094, "currentWords": 5050, "n1Labelled": 114,
+            "namedSourceMembersPresent": 113, "separateExceptionPreserved": "妖",
+            "batchNewNecessarySupportWords": 1, "projectNewNecessarySupportWords": 108,
+            "batchChangedReusedArticles": 2, "allMappedReciprocalPairs": 2,
+            "mappedDirectedLinks": 4, "comparisonDirectedLinks": 2, "activatedBaselinePairs": 0,
+        },
+        "compatibleClient": "Android f9b59a2+ required; old clients ignore curation and8000-entry clients reject collection.",
+        "qualifiedAndroidHead": ANDROID,
+        "publicationIdentity": "stop-cran; process-scoped token only; global romanko-ms unchanged.",
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeSetAcceptance": "outstanding",
+        "limits": [
+            "Source082-V1 and bounded corrected-runtime visual acceptance complete; only exact default-four configuration with all valid N1/All candidates. Custom/partial/larger/future pools not certified.",
+            "Original initial/source/lookup/citation/readdepth/denial/OOM/process/viewport/fallback/MLKit limitations retained in linked records. Historical uncorrected runtime receipts are not corrected-runtime acceptance.",
+            "Qualified TEST-ONLY Android1c1b7bf4 preserves productionf9b59a2, not latestappmain. Nine HOST and two native cases inherited/reverified, not rerun here. No heap/guard increase.",
+            "Synthetic disposable API35/injected trace/shape-only/giveup recall is not humanmemory/handwriting/recognition/MLKitdownload/phone evidence. Fallback face and unobserved devices unknown.",
+            "372 Python tests passed; vocabulary2122/2431 pilot prompts is not full coverage. Bounded owner testing only; phone/generalrelease/whole-set outstanding.",
+        ],
+        "inheritedPrePublicationLimits": result["limits"],
+        "nextAction": "Verify terminal evidence commit CI/immutable ZIP/ownerissue60; persist continue checkpoint and yield before083.",
+    }
+    publication["textualClosureSnapshot"] = git("log", "-1", "--format=%H", "--", "docs/n1-sources/execution-562.json")
+    assert len(publication["textualClosureSnapshot"]) == 40
+    save(S / "batch-082-publication.json", publication)
+    ledger = load(S / "batch-082-progress.json")
+    ledger["prePublicationCheckpoint"] = {
+        k: copy.deepcopy(ledger[k]) for k in ("status", "published", "nextAction", "limits")}
+    ledger.update(
+        status=publication["status"], published=ledger["membership"],
+        publishedAdditions=109, remainingAdditions=1119, publishedCommit=head,
+        publicationRecord="batch-082-publication.json", pendingGates=[],
+        nextAction=publication["nextAction"], limits=publication["limits"],
+        fontDisposition="Corrected native565 and both-family visual566 accepted within documented scope; physical-phone/general-release acceptance outstanding.",
+    )
+    for row in ledger["supportMappings"]:
+        row["status"] = publication["status"]
+    save(S / "batch-082-progress.json", ledger)
+    execution = load(S / "execution-567.json")
+    execution.update(
+        status=publication["status"], publicationRecord="batch-082-publication.json",
+        publishedAdditions=109, remainingAdditions=1119,
+        publication={"acceptedCommit": head, "ciRun": ci["databaseId"], "counts": publication["counts"]},
+    )
+    save(S / "execution-567.json", execution)
+    for path in (
+        Path(__file__), C / "verify-execution-567.ps1", C / "post-execution-567.ps1",
+        C / "artifacts" / "batch-082-accepted-ci.json",
+        C / "artifacts" / f"content-{head[:7]}-acceptance.json",
+    ):
+        shutil.copyfile(path, D / path.name)
+    p["stage"] = "batch-082-published-accepted-awaiting-terminal-verification"
+    save(C / "progress.json", p)
+    print("Verified publication ledger and accepted immutable archive evidence persisted.")
+
+
+def comment():
+    head, ci, archive = verified("terminal")
+    publication = load(S / "batch-082-publication.json")
+    body = f"""Batch **082 (准)** is published and verified for bounded owner testing, with necessary support **准教授** and narrow reviewed links in existing 教 and 助教授.
+
+Authored snapshot `{publication['authoredSnapshot']}`; corrected teaching `{TEACHING}`; corrected text closure `{publication['textualClosureSnapshot']}`; visual closure `{START}`. Fresh main `{BASE}` was already ancestral (normal merge, no substantive integration changes). Normally signed accepted/integrated publication `{publication['acceptedCommit']}`; terminal evidence/remote main `{head}`. Both owner-scoped pushes are normal fast-forwards; global GitHub identity unchanged.
+
+**082-V1 resolved:** original N4/N3 curated choices were unavailable in the actual N1 pool, permitting fallback. The sole metadata correction supplies available **冴 / 冶 / 隼**. Corrected production question asserted exact four characters/titles, no 倣 and no fallback; both original model families confirmed source and corrected runtime. Rare 准える remains recognized; its rarity is not disproof of imitation. Acceptance is the **default-four configuration with all valid candidates**, not arbitrary custom/partial/larger/future pools. Historical uncorrected receipts and differing initial semantic calibrations remain preserved.
+
+Fresh combined-tree **372 Python tests**, validator, vocabulary consistency (**2122/2431 pilot prompts**, not full coverage), fresh manifest, exact source membership, full36distinct/37family-occurrence re-extraction, seven raw character records, baseline metadata/readings/levels/exclusions/strokes, all109 local additions, one reading disposition/soleじゅん key, two mapped reciprocal pairs/four directions plus comparison pair/two directions, pinned ten-stroke geometry and actual font cmaps passed. No content/tool change since corrected teaching required redundant native/reviewer runs.
+
+Inherited and hash-reverified corrected **HOST563: 3 RealContentTest + 1 RareHanTest + 5 fixture tests**, zero skips; **native565: both named cases terminal0**, zero skips. Qualified **TEST-ONLY Android `{ANDROID}`** preserves production `f9b59a2`; this is not latest-app-main qualification. Full signed archive through production ContentSync **ONCE: 1094 kanji / 5050 words / 114 N1, zero problems, accepted parser epoch1**. Full+Liteジュン/kun[] and soleじゅん; N1selection/meaning/curated reading/articles/six link directions/SystemBack/offline/ten injected reference strokes then give-up recall retained. **Not human memory/handwriting, MLKit recognition/download or phone evidence.** Owned emulator5580/PIDs25860+12960 stopped; no new native run, app/guest heap or guard increase.
+
+Both original families (**claude-opus-5.5**, **gpt-6.1-sol**) completed serial dependent corrected visual confirmations: 30 child processes each, all exited before the next; complete packet +28distinctPNGgroups covering51originalcaptures/23aliases. Returned1080x2400→900x2000, not source-byte equality or comprehension certification. Compacted-history read-depth limits, complete original reports, all source/lookup/citation/denial/OOM/viewport/fallback/MLKit limits remain. All34Han/fourfamilies/threeComposepanels distinguish 冫/氵/辶/隹 and new choices; fallback face unknown. No new blind initial or upstream retrieval claimed.
+
+Accepted CI [{publication['ci']['databaseId']}](https://github.com/stop-cran/learning-japanese/actions/runs/{publication['ci']['databaseId']}) and terminal CI [{ci['databaseId']}](https://github.com/stop-cran/learning-japanese/actions/runs/{ci['databaseId']}) green. Both immutable GitHub ZIPs preserve **all8372 runtime hashes** and manifest `{VERSION}`; terminal **{archive['zipEntries']}entries / {archive['compressedBytes']}compressed / {archive['inflatedBytes']}inflated / {archive['retainedBytes']}retained bytes**, within unchanged18000-entry/42MiB/80MiB/56MiB guards; contributor evidence excluded.
+
+Published **109/1228 additions; 1119 remain**. Current collection1094kanji/5050words/114N1 labels/113named-source members plus separate妖;108necessary support additions, **not an N1 vocabulary deck**. Compatible **stop-cran/kanji-cards-android#125 (`f9b59a2`+)** required; old clients ignore curation. **Physical-phone, general-release and whole-set acceptance outstanding.**
+
+Durable evidence: `docs/n1-sources/batch-082-publication.json`, `batch-082-acceptance-audit.json`, `execution-567.json`, corrected source/HOST/native/visual records. Checkpoint567 will persist `continue` and yield before083; no083 or secondrunner started. Complete live progress history preserved; only approved workspace inputs/committed evidence/control helpers accessed, no optional historical session recipe and no new permission denial.
+"""
+    target = L / "issue-567-body.txt"
+    assert not target.exists()
+    target.write_text(body, encoding="utf-8")
+    print("Prepared exact terminal publication issue update.")
+
+
+def finish():
+    head, ci, archive = verified("terminal")
+    p = load(C / "progress.json")
+    original = load(L / "progress-before-execution-567.json")
+    issue = load(L / "issue-567-verified.json")
+    created = load(L / "issue-567-created.json")
+    body = (L / "issue-567-body.txt").read_text(encoding="utf-8")
+    assert issue["id"] == created["id"] and issue["user"]["login"] == "stop-cran"
+    assert issue["body"].replace("\r\n", "\n").rstrip() == body.replace("\r\n", "\n").rstrip()
+    assert subprocess.check_output(["gh", "api", "user", "--jq", ".login"], text=True).strip() == "romanko-ms"
+    assert not (S / "batch-083-progress.json").exists()
+    ledger = load(S / "batch-082-progress.json")
+    assert ledger["membership"] == ledger["reviewClosed"] == ledger["published"] == ["准"]
+    assert ledger["publishedAdditions"] == 109 and ledger["remainingAdditions"] == 1119
+    accepted = load(S / "batch-082-publication.json")
+    next_action = (
+        f"Batch082 accepted/published/verified at {head}; yield before083. Fresh coordinator read complete authorized "
+        "request/finalcheckpoint and scoped live keys; preserve FULL live history. Verify dedicated clean signed heads/"
+        "latestmain, then ONE risk/evidence-bounded083 below15 from exact remaining frozen source rows. Preserve "
+        "baseline identities/levels/fullreadings/order/exclusions and exact虎/猿/丘/山/冗談 reviewedguards. Inspect "
+        "full applicable dictionary families, necessarysupport, curatedreading dispositions, allactivated+reciprocalpairs, "
+        "pinnedstrokes and allnewHanfonts. Two serialblind different-family initials, oneactive reviewer/serialinternaltools "
+        "and justified original-session confirmations; applicable nonskippedAndroid/native/currentmain checks. "
+        "Normal signing/nonrewritingintegration/ownerfastforward/greenCI/EVERYimmutableZIP runtimehash/original18000entries/"
+        "42MiBcompressed/80MiBinflated/56MiBretainedguards/verifiedownerissue60 mandatory. "
+        "Published109/1228,remaining1119;1094kanji5050words114N1labels113namedmembers plus separate妖;"
+        "108necessarysupportword additions NOTN1vocabulary.082-V1 corrected9ce870d1/defaultfour准冴冶隼 only; "
+        "custom/partial/larger/futurepools notcertified. Initial/sourcecorrection/correctedHOST563nine/nativenamed2terminal0/"
+        "visual566twooriginalfamilies accepted; no redundant reruns absent new concern. QualifiedTESTONLYAndroid1c1b7bf4/G "
+        "preserves productionf9b59a2, not latestappmain; no heap/guard increases. Preserve all original source/lookup/"
+        "citation/readdepth/denial/OOM/process/viewport/fallback/MLKit limits and historical uncorrected receipts. "
+        "SyntheticAPI35/reference-touch/giveup NOT humanrecall/recognition/phone. Physicalphone/generalrelease/whole-set "
+        "outstanding; compatibleAndroidf9b59a2+ required. Approvedworkspaceinputs/committedpackets/controlhelpers only; "
+        "no optionalhistoricalsessionrecipe access. Onecoordinator/oneactive reviewer/no secondrunner. Actualnewdenial/"
+        "signinghang preserve/report/yield withoutworkaround. Overallproject incomplete."
+    )
+    result = {
+        "schemaVersion": 1, "execution": 567, "checkpoint": 567, "batch": "082",
+        "savedCommit": head, "signature": "G", "status": "continue",
+        "stage": "batch-082-published-verified-before-083",
+        "evidence": "docs/n1-sources/execution-567.json",
+        "publicationRecord": "docs/n1-sources/batch-082-publication.json",
+        "acceptedCommit": accepted["acceptedCommit"], "remoteMainVerified": head,
+        "acceptedCi": accepted["ci"]["databaseId"], "terminalCi": ci["databaseId"],
+        "bothImmutablePublicArchivesVerified": True, "runtimeHashesPerArchive": 8372,
+        "contentVersion": VERSION, "terminalArchive": archive, "originalArchiveGuardsUnchanged": True,
+        "freshPythonTestsPassed": 372, "inheritedHostCasesReverified": 9,
+        "inheritedNativeTerminalCasesReverified": 2, "newHostNativeOrReviewerRun": False,
+        "runtimePublished": True, "dedicatedWorktreesClean": True, "reviewedRuntimeAndToolsUnchanged": True,
+        "qualifiedAndroidHead": ANDROID, "publishedAdditions": 109, "remainingAdditions": 1119,
+        "lastPublishedCommit": head, "physicalPhoneAcceptance": "outstanding",
+        "generalReleaseAcceptance": "outstanding", "wholeProjectComplete": False, "nextBatchStarted": False,
+        "issueUpdate": issue["html_url"], "ownerAuthorAndBodyVerified": True,
+        "globalIdentityUnchanged": True, "optionalHistoricalHelpersAccessed": False,
+        "actualNewPermissionDenials": [], "nextAction": next_action, "blocker": None, "verifiedAt": now(),
+    }
+    p["execution567StartingState"]["status"] = "bounded-publication-checkpoint-complete"
+    p.update(checkpoint=567, status="continue", stage=result["stage"], batch="082",
+             lastPublishedCommit=head, remainingAdditions=1119, blocker=None, nextAction=next_action)
+    p["unmetAcceptanceGates"][0] = (
+        "Remaining1119 source-bounded additions not authored/review-closed/published;later batches retain all original "
+        "source/review/reading/link/baseline/font/Android/native/currentmain/CI/publicZIP gates.")
+    allowed = {"checkpoint", "status", "stage", "batch", "lastPublishedCommit",
+               "remainingAdditions", "blocker", "nextAction", "unmetAcceptanceGates"}
+    assert original.keys() <= p.keys()
+    assert all(p[k] == value for k, value in original.items() if k not in allowed)
+    result["originalRootKeysCompared"] = len(original)
+    result["allOriginalHistoricalRootKeysPreservedExactly"] = True
+    result["changedRootFields"] = sorted(k for k in original if p[k] != original[k])
+    p["execution567CoordinatorCheckpoint"] = copy.deepcopy(result)
+    p["batch082PublicationCheckpoint"] = copy.deepcopy(result)
+    save(C / "progress.json", p)
+    assert load(C / "progress.json") == p
+    save(L / "final-verification-567.json", result)
+    print(json.dumps(result, ensure_ascii=True, indent=2))
+
+
 if __name__ == "__main__":
     {"start": start, "checks": checks, "checks-done": checks_done,
-     "source-audit": source_audit, "evidence": evidence}[sys.argv[1]]()
+     "source-audit": source_audit, "evidence": evidence, "records": records,
+     "comment": comment, "finish": finish}[sys.argv[1]]()
