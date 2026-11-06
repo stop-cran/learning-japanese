@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 1,
+  "execution": 574,
+  "batch": "083",
+  "status": "native-failed-exact-n1-choice-gate-correction-required",
+  "startingState": {
+    "execution": 574,
+    "batch": "083",
+    "startedAt": "2026-11-06T16:05:52.832805+00:00",
+    "startingHead": "cab46bf2e9c68cc3c7bf03479922a1ef89696bcb",
+    "androidHead": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+    "freshOriginMain": "21a5cb1328aadd437139a6b850f07298a2e2985d",
+    "scope": "SAME083 frozen native execution and direct PNG inspection, signed LOCAL evidence checkpoint; no reviewer/integration/publication/084.",
+    "request": {
+      "sha256": "2ac35f943f2da94018a3cf6f4ce42187d6fd7db673d8cd35c7a79fa54208407f",
+      "characters": 2675808,
+      "lines": 35717,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Operative contract, full approved issue and final checkpoint inspected directly; historical middle loaded/parsed, not freshly semantically re-reviewed."
+    },
+    "runtimeManifestHashesVerified": 8376,
+    "runnerLockRole": "Live parent PID19008 verified as coordinator ancestor; child never opens/reacquires/deletes/unlocks runner.lock.",
+    "optionalHistoricalSessionHelpersAccessed": false,
+    "actualNewPermissionDenials": []
+  },
+  "contentSnapshot": "d5dd7e9e04aa45af0befeb3fd9a9044488fc7a0a",
+  "teachingSnapshot": "4b8bfcc4bc4fff4c73185a8cc6c27d4cb5736efc",
+  "coordinatorHead": "cab46bf2e9c68cc3c7bf03479922a1ef89696bcb",
+  "androidHead": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+  "productionBaseline": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "nativeReceipt": {
+    "execution": 574,
+    "batch": "083",
+    "attempt": "574",
+    "startedAt": "2026-11-06T17:05:57.8379653+01:00",
+    "serial": "emulator-5580",
+    "contentSnapshot": "d5dd7e9e04aa45af0befeb3fd9a9044488fc7a0a",
+    "androidSnapshot": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+    "coordinatorHead": "cab46bf2e9c68cc3c7bf03479922a1ef89696bcb",
+    "appApk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-083-native-app.apk",
+    "appApkSha256": "0224e8e3f8c744a554da173ec20f133d5d00cb6b6226b001da5ea030856bd407",
+    "testApk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-083-native-test.apk",
+    "testApkSha256": "ad6c046c4fe153cc6f5e96936c0c4c38f38fca640c00f29295d6febafd7d615d",
+    "fixtureSha256": "ef27c9f7b21b768f982ebe87df9d710c028d2b50083c50a636787f8f03100023",
+    "archiveSha256": "bee61c31cd291c8a845ee7cc1721558ade79d014e368130c576d661732c097a6",
+    "nativeExecuted": true,
+    "passed": false,
+    "failure": "Native acceptance failed; raw results preserved.",
+    "hostHeapInitUsed": false,
+    "guestOrAppHeapChanged": false,
+    "guardsChanged": false,
+    "parentLockTouched": false,
+    "parentAncestry": [
+      {
+        "ProcessId": 27812,
+        "ParentProcessId": 4064,
+        "Name": "pwsh.exe"
+      },
+      {
+        "ProcessId": 4064,
+        "ParentProcessId": 19008,
+        "Name": "copilot.exe"
+      },
+      {
+        "ProcessId": 19008,
+        "ParentProcessId": 30364,
+        "Name": "pwsh.exe"
+      }
+    ],
+    "preexistingEmulators": [],
+    "prelaunch": {
+      "verifiedAt": "2026-11-06T17:05:59.7625909+01:00",
+      "devices": "List of devices attached\r\n\r\n",
+      "connections": []
+    },
+    "parentEmulatorPid": 4820,
+    "emulatorArguments": [
+      "-avd",
+      "N3_Acceptance_20261029",
+      "-port",
+      "5580",
+      "-read-only",
+      "-no-snapshot",
+      "-no-window",
+      "-no-audio",
+      "-gpu",
+      "host",
+      "-feature",
+      "-Vulkan",
+      "-memory",
+      "2048",
+      "-cores",
+      "2"
+    ],
+    "qemuPid": 6592,
+    "listeners": [
+      {
+        "LocalPort": 5581,
+        "OwningProcess": 6592
+      },
+      {
+        "LocalPort": 5580,
+        "OwningProcess": 6592
+      },
+      {
+        "LocalPort": 5581,
+        "OwningProcess": 6592
+      },
+      {
+        "LocalPort": 5580,
+        "OwningProcess": 6592
+      }
+    ],
+    "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+    "heapGrowth": "192m",
+    "heapSize": "576m",
+    "network": "Active default network: none",
+    "instrumentationCommand": "adb -s emulator-5580 shell am instrument -w -r -e n1Disposable true -e class io.github.stopcran.kanji.ui.N1Batch083GlyphTest,io.github.stopcran.kanji.ui.N1Batch083ArticleTest io.github.stopcran.kanji.test/androidx.test.runner.AndroidJUnitRunner",
+    "adbExitCode": 0,
+    "terminalSuccessCases": 1,
+    "artifacts": [
+      "n1-083-article-route.json",
+      "n1-083-article-tree.txt",
+      "n1-083-endure-word-02.png",
+      "n1-083-endure-word-03.png",
+      "n1-083-endure-word-04.png",
+      "n1-083-endure-word-05.png",
+      "n1-083-endure-word-07.png",
+      "n1-083-endure-word-09.png",
+      "n1-083-endure-word-10.png",
+      "n1-083-endure-word-12.png",
+      "n1-083-endure-word-13.png",
+      "n1-083-endure-word-forward-14.png",
+      "n1-083-endure-word-kanji-backlink.png",
+      "n1-083-endure-word-reverse-24.png",
+      "n1-083-endure-word-system-back-to-kanji.png",
+      "n1-083-endure-word-system-back-to-word.png",
+      "n1-083-font-panel-1.png",
+      "n1-083-font-panel-2.png",
+      "n1-083-font-panel-3.png",
+      "n1-083-font-raster.json",
+      "n1-083-kanji-01.png",
+      "n1-083-kanji-03.png",
+      "n1-083-kanji-04.png",
+      "n1-083-kanji-09.png",
+      "n1-083-kanji-11.png",
+      "n1-083-kanji-12.png",
+      "n1-083-kanji-14.png",
+      "n1-083-kanji-15.png",
+      "n1-083-kanji-17.png",
+      "n1-083-kanji-18.png",
+      "n1-083-kanji-20.png",
+      "n1-083-kanji-21.png",
+      "n1-083-kanji-22.png",
+      "n1-083-kanji-23.png",
+      "n1-083-selection.png",
+      "n1-083-surpass-word-02.png",
+      "n1-083-surpass-word-03.png",
+      "n1-083-surpass-word-04.png",
+      "n1-083-surpass-word-06.png",
+      "n1-083-surpass-word-08.png",
+      "n1-083-surpass-word-09.png",
+      "n1-083-surpass-word-11.png",
+      "n1-083-surpass-word-12.png",
+      "n1-083-surpass-word-13.png",
+      "n1-083-surpass-word-forward-25.png",
+      "n1-083-surpass-word-kanji-backlink.png",
+      "n1-083-surpass-word-reverse-35.png",
+      "n1-083-surpass-word-system-back-to-kanji.png",
+      "n1-083-surpass-word-system-back-to-word.png"
+    ],
+    "exactError": "\r\nPSMessageDetails      : \r\nException             : System.Management.Automation.RuntimeException: Native acceptance failed; raw results preserved.\r\nTargetObject          : Native acceptance failed; raw results preserved.\r\nCategoryInfo          : OperationStopped: (Native acceptance f\u2026 results preserved.:String) [], RuntimeException\r\nFullyQualifiedErrorId : Native acceptance failed; raw results preserved.\r\nErrorDetails          : \r\nInvocationInfo        : System.Management.Automation.InvocationInfo\r\nScriptStackTrace      : at <ScriptBlock>, C:\\Users\\stop-\\n1-kanji-workspace\\control\\run-574-native.ps1: line 133\r\n                        at <ScriptBlock>, <No file>: line 2\r\nPipelineIterationInfo : {}\r\n\r\n",
+    "errorPosition": "At C:\\Users\\stop-\\n1-kanji-workspace\\control\\run-574-native.ps1:133 char:9\r\n+         throw 'Native acceptance failed; raw results preserved.'\r\n+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+    "stopAdbExitCode": 0,
+    "ownedHelperStopped": true,
+    "ownedQemuStopped": true,
+    "completedAt": "2026-11-06T17:09:55.6160910+01:00"
+  },
+  "independentlyParsedTerminalCases": [
+    {
+      "class": "io.github.stopcran.kanji.ui.N1Batch083ArticleTest",
+      "test": "fullSingleImportOfflineEnduranceTwoReciprocalPairsCuratedOnAndKunDrawingAndSystemBack",
+      "status": -2
+    },
+    {
+      "class": "io.github.stopcran.kanji.ui.N1Batch083GlyphTest",
+      "test": "enduranceLookalikesAndRadicalFallbacksAcrossFourProductionFamilies",
+      "status": 0
+    }
+  ],
+  "nativeAcceptancePassed": false,
+  "nativeCases": 2,
+  "passedCases": 1,
+  "failedCases": 1,
+  "skippedCases": 0,
+  "nativeAdbExitCode": 0,
+  "adbZeroDoesNotMeanTestSuccess": true,
+  "productionImportAndCompletedRouteEvidence": {
+    "contentSnapshot": "d5dd7e9e04aa45af0befeb3fd9a9044488fc7a0a",
+    "contentVersion": "a9faafdd68af3230",
+    "archiveRequests": 1,
+    "importedKanji": 1095,
+    "importedWords": 5052,
+    "problems": 0,
+    "n1Cards": 115,
+    "acceptedReadingParserEpoch": 1,
+    "fullOnyomi": [
+      "\u30ea\u30e7\u30a6"
+    ],
+    "fullKunyomi": [
+      "\u3057\u306e.\u3050"
+    ],
+    "quizOnKeys": [
+      "\u308a\u3087\u3046"
+    ],
+    "quizKunKeys": [
+      "\u3057\u306e\u3050"
+    ],
+    "liteQuizOnyomi": [
+      "\u30ea\u30e7\u30a6"
+    ],
+    "liteQuizKunyomi": [
+      "\u3057\u306e.\u3050"
+    ],
+    "transport": "Exact full git envelope through production ContentSync ONCE; synthetic source/HEAD",
+    "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+    "sdk": 35,
+    "fixture": "Other N1 meanings/readings postponed; \u51cc meaning and curated on\u308a\u3087\u3046/kun\u3057\u306e\u3050 due. Two historical good \u51cc meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.",
+    "phoneEvidence": false,
+    "passed": false,
+    "reciprocalLinkAndSystemBack": true,
+    "mappedReciprocalPairs": 2,
+    "directedLinkTransitions": 4,
+    "completeArticleProjections": 3
+  },
+  "glyphProbes": {
+    "individual": 116,
+    "wholeWord": 8,
+    "fonts": 4,
+    "distinctHan": 29,
+    "allIndividualHasGlyph": true,
+    "distinctIndividualRasterHashesWithinEachFont": true
+  },
+  "directPngInspection": {
+    "reviewer": "Coordinator GPT-6.1 Sol (gpt-6.1-sol)",
+    "independentReviewer": false,
+    "files": [
+      "n1-083-font-panel-1.png",
+      "n1-083-font-panel-2.png",
+      "n1-083-font-panel-3.png",
+      "n1-083-kanji-21.png",
+      "n1-083-endure-word-05.png",
+      "n1-083-surpass-word-12.png"
+    ],
+    "savedPngCount": 46,
+    "notDirectlyInspectedPngCount": 40,
+    "observation": "All 29 Han across all four family panels and both whole words are visibly nonblank and distinguishable on this API35 render. \u51cc/\u9675/\u51c6/\u51b6/\u6b21 remain distinguishable; \u51ab/\u590c/\u961d/\u96b9 fallback glyphs readable, some fallback shapes coincide across families. Three inspected article frames have readable scoped notes, conjugation/transitivity and rare-spelling guidance; long surrounding content may extend beyond the viewport.",
+    "limits": "Only six listed PNGs directly inspected. Not all article screenshots, independent two-family visual confirmation, physical-phone readability, fallback-face identity or native-speaker certification."
+  },
+  "finding": {
+    "id": "083-NATIVE-574-CHOICE",
+    "severity": "minor",
+    "facet": "scoped coverage / live quiz curation",
+    "status": "unresolved",
+    "confidence": "high",
+    "publicationBlocking": true,
+    "file": "kanji/\u51cc.md:13",
+    "claim": "\u6b21 is N3, absent from the N1 option pool. Three configured distractors therefore do not yield the required exact reviewed N1 option set.",
+    "expectedOptions": {
+      "\u51cc": "endure; surpass",
+      "\u51c6": "quasi-; associate rank",
+      "\u51b6": "smelt; work metals",
+      "\u6b21": "next"
+    },
+    "actualOptions": {
+      "\u51c6": "quasi-; associate rank",
+      "\u51cc": "endure; surpass",
+      "\u51b6": "smelt; work metals",
+      "\u9e9f": "qilin; mythical animal"
+    },
+    "evidence": [
+      "Attempt instrumentation names article test with terminal -2 at N1Batch083NativeTest.kt:365, and prints exact expected/actual maps.",
+      "kanji/\u6b21.md:4 preserves jlpt3.",
+      "QuizViewModel.kt:91-97 filters cards with inStack(stack) and creates quizCards from that selected pool; ask at164-166 passes quizCards to QuizBuilder.",
+      "QuizBuilder.kt:16-28 resolves curated distractors only inside supplied pool, then fills from shuffled same-pool cards."
+    ],
+    "impact": "Only two reviewed curated distractors participate in N1; third is random fallback. This draw's \u9e9f label is not demonstrated semantically ambiguous, but it does not satisfy the exact reviewed-set acceptance gate.",
+    "remedy": "Source-verify and review an appropriate N1 third distractor, preserving \u6b21's easier level and app algorithms; update affected guards/fixture and rerun corrected snapshot gates. Do not simply weaken assertion or enlarge pool.",
+    "scope": "Content/fixture authoring assumption exposed by unchanged production behavior, not an established app regression."
+  },
+  "notReached": [
+    "meaning feedback",
+    "live curated on/kun questions and persisted logs",
+    "full card reading projection assertion",
+    "10-stroke tracing",
+    "recall drawing",
+    "final offline and persistence assertions"
+  ],
+  "artifacts": "docs/n1-reviews/batch-083-native/attempt-574",
+  "artifactIndexSha256": "34768b0e69f5ab2658eb3865c7024d11a6bee4b72f30aea05c11cc2bc4f4f34c",
+  "provenance": [
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\execution-574.py",
+      "archive": "docs/n1-reviews/batch-083-native/attempt-574/provenance/execution-574.py",
+      "sha256": "ea47029c512c5ae609d2a1be66eae91d86fae298dc970e5d6af385753c61dc8d"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\run-574-native.ps1",
+      "archive": "docs/n1-reviews/batch-083-native/attempt-574/provenance/run-574-native.ps1",
+      "sha256": "5feadb64b320e86ef3de41565c1af2317598fb98f905579740e40724ae4eb73e"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\runner-lock-role-notes.txt",
+      "archive": "docs/n1-reviews/batch-083-native/attempt-574/provenance/runner-lock-role-notes.txt",
+      "sha256": "067e33b37a4c6c1012bb909b02ad37850d03a216eb56cc287eee96da4f10fc0e"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\authoring-artifact-path-notes.txt",
+      "archive": "docs/n1-reviews/batch-083-native/attempt-574/provenance/authoring-artifact-path-notes.txt",
+      "sha256": "bbb5280ddf54bf52dcee5c86cd6e87b4262bf3a89bc9e2e077c4a5793a033419"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\src\\main\\java\\io\\github\\stopcran\\kanji\\ui\\QuizViewModel.kt",
+      "archive": "docs/n1-reviews/batch-083-native/attempt-574/provenance/QuizViewModel.kt",
+      "sha256": "0c8d3a99c98adf4a780f50b268feb8c8fbcb9c13bcad728a54700e5fe155d7ad"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core\\src\\main\\kotlin\\io\\github\\stopcran\\kanji\\core\\quiz\\QuizBuilder.kt",
+      "archive": "docs/n1-reviews/batch-083-native/attempt-574/provenance/QuizBuilder.kt",
+      "sha256": "abd46017c2aeee3de67865a7b1a614352bd368404ea67a80703e455d94ff37ce"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\learning-japanese\\kanji\\\u6b21.md",
+      "archive": "docs/n1-reviews/batch-083-native/attempt-574/provenance/\u6b21.md",
+      "sha256": "e9f00ffc8c6431001f63cbd68f16e6ab44e02a01f7c38859faa808a3e1aaf124"
+    }
+  ],
+  "runtimeManifestHashesVerified": 8376,
+  "runtimeChanged": false,
+  "runtimePublished": false,
+  "runtimeAccepted": false,
+  "hostChecksRerun": false,
+  "independentReviewersLaunched": 0,
+  "publishedAdditions": 109,
+  "remainingAdditions": 1119,
+  "lastPublishedCommit": "21a5cb1328aadd437139a6b850f07298a2e2985d",
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "optionalHistoricalSessionHelpersAccessed": false,
+  "actualNewPermissionDenials": [],
+  "limits": "Native attempt failed overall. Glyph case terminal0 is not full batch acceptance. Original source/reviewer/read-depth/OOM/fallback/MLKit/phone/publication limits retained. No teaching or production changes, no repeated HOST checks/reviews, no new denial. Original fixture/APKs/archive/reports retained unchanged.",
+  "nextGate": "SAME083 corrective source/quiz-choice checkpoint next; no084/publication. Read execution-574.json and immutable batch-083-native/attempt-574 receipts FIRST. Actual native glyph case terminal0, article case terminal-2 at exact meaning-options assertion: expected \u51cc/\u51c6/\u51b6/\u6b21, actual \u51c6/\u51cc/\u51b6/\u9e9f. \u6b21 is preserved N3 and absent from N1 quiz pool. Production QuizViewModel filters all by selected stack before QuizBuilder maps curated distractors, then fills from random same-pool candidates. This is a content/fixture curation assumption, NOT evidence of an app regression or an ambiguous answer in this draw. Do not weaken the assertion, enlarge the selected pool, change \u6b21's easier level, seed padding, alter quiz algorithms or approve random fallback as the reviewed set. Source-verify a defensibly wrong N1 third distractor using complete applicable frozen families/actual article, inspect ordinary secondary senses, audit both N1 and all-stack options and every affected direct guard, make smallest content correction with manifest/validator and normally signed LOCAL freeze. Preserve original initial reviews and obtain bounded changed-choice confirmations from original serial Claude/GPT sessions in batch-083-reconciliation.json, with actual diff/source evidence, then refresh affected HOST/full archive/native fixture/APK acceptance on corrected snapshot. Original failed fixture/APKs/archive/reports/attempt remain immutable. No fresh compile/HOST/initial review was done in574. Full import ONCE1095/5052/115/a9faafdd68af3230/zeroProblems/epoch1 and two reciprocal pairs/four directions/three complete article routes actually reached; reading quiz, meaning feedback, drawing and final persistence NOT reached. Six PNGs directly inspected (threefontpanels and kanji21/endure05/surpass12), all46 saved; do not claim all46 inspected. All29Han/fourfonts116individual+8wholeword Paint and glyph case passed, actual fallback panels readable; not phone/native-speaker/fallback-face identity certification. Need BOTH corrected named terminal0/no skips/no-2/-3 and direct changed PNG inspection, original serial two-family dependent visual confirmation BEFORE latest-main combined checks, normally signed integration/ownerfastforward/exactremote/terminalgreenCI/EVERYimmutableZIPhash/budgets/ownerissue60. Parent19008 lock lifetime remains untouched; fresh localANDremote5580/5581 includingTimeWait/device/PID/ancestry ownership before any retry, unchanged readonlyAVD/API35/hostGPU/-Vulkan/2048MiB2cores, owned-only cleanup. Prior owned4820/qemu6592 stopped. Approved control helpers/committed evidence only; preserve/report/yield actual new denial/signinghang. Published109/1228,remaining1119/latestpublic21a5cb1328aadd437139a6b850f07298a2e2985d unchanged;083 not delivered. Physicalphone/generalrelease/whole-set outstanding."
+}
