@@ -1,0 +1,83 @@
+[
+  {
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools",
+      "-p",
+      "test_*.py"
+    ],
+    "exitCode": 0,
+    "log": "docs/n1-sources/batch-082-acceptance/execution-567-python-tests.txt",
+    "sha256": "0cac230ce3c91a802a39a39e7057835463966c998f5260810f77ffca3259ef89"
+  },
+  {
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "-B",
+      "tools\\validate.py"
+    ],
+    "exitCode": 0,
+    "log": "docs/n1-sources/batch-082-acceptance/execution-567-validate.txt",
+    "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+  },
+  {
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "-B",
+      "tools\\build_manifest.py"
+    ],
+    "exitCode": 0,
+    "log": "docs/n1-sources/batch-082-acceptance/execution-567-manifest.txt",
+    "sha256": "5b61079aab0f20685269d8fbc8fd59837d3b1545d535ef6a435d9a15dfdb7a7c"
+  },
+  {
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "-B",
+      "tools\\grammar_vocabulary.py",
+      "check"
+    ],
+    "exitCode": 0,
+    "log": "docs/n1-sources/batch-082-acceptance/execution-567-vocabulary.txt",
+    "sha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38"
+  },
+  {
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "-B",
+      "tools\\check_content_budget.py"
+    ],
+    "exitCode": 0,
+    "log": "docs/n1-sources/batch-082-acceptance/execution-567-budget.txt",
+    "sha256": "18df0bc4b019fc2632c2f53f273f90294823eba13e5d75707334d0c285fcaf26"
+  },
+  {
+    "command": [
+      "python",
+      "-X",
+      "utf8",
+      "-B",
+      "tools\\audit_n1_batch.py",
+      "--batch",
+      "082"
+    ],
+    "exitCode": 0,
+    "log": "docs/n1-sources/batch-082-acceptance/execution-567-batch-audit.txt",
+    "sha256": "5677883c46a6bc5ecf232c0134cb86713ecd61d309f3e9f46e36504d2fab69d2"
+  }
+]
