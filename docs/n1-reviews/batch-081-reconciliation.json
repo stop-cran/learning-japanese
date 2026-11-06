@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "execution": 548,
+  "batch": "081",
+  "status": "textually-review-closed-awaiting-fresh-android",
+  "originalTeachingSnapshot": "b7bf953d137251f179a57128bb84bd70a37737c8",
+  "reviewedTeachingSnapshot": "b7bf953d137251f179a57128bb84bd70a37737c8",
+  "initialModels": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "processes": {
+    "claude": {
+      "sessionId": "5d197613-b9f7-4815-aa0f-25098fbf6825",
+      "launcherPid": 22540,
+      "requestedModel": "claude-opus-5.5",
+      "actualModels": [
+        "claude-opus-5.5"
+      ],
+      "snapshot": "b7bf953d137251f179a57128bb84bd70a37737c8",
+      "startedAt": "2026-11-06T10:09:34.574606+01:00",
+      "completedAt": "2026-11-06T10:11:04.546155+01:00",
+      "exitCode": 0,
+      "reportSha256": "dc8bc191602547d79206198b35daffd661f992e937fd3847663e97c3ffb5296a",
+      "rawExecutionSha256": "54d78ee3b62c7c3e5f4388d3335ad588243cc40f9545a105db78853797e26608",
+      "report": "batch-081-initial-claude.md",
+      "execution": "batch-081-initial-claude-execution.json",
+      "coverage": "batch-081-initial-claude-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0
+    },
+    "gpt": {
+      "sessionId": "44f703a8-cc19-4e68-bd98-8fa94688e781",
+      "launcherPid": 15932,
+      "requestedModel": "gpt-6.1-sol",
+      "actualModels": [
+        "gpt-6.1-sol"
+      ],
+      "snapshot": "b7bf953d137251f179a57128bb84bd70a37737c8",
+      "startedAt": "2026-11-06T10:11:09.016025+01:00",
+      "completedAt": "2026-11-06T10:11:46.351865+01:00",
+      "exitCode": 0,
+      "reportSha256": "878bdb5ca7ebbea697163c3c3d7cb1d50424a7642eb168481b88095b5bcea031",
+      "rawExecutionSha256": "a9afc342e71d2c7d458afff6ee4c0f460b4e36bd8784086d94c5e642fe2d0759",
+      "report": "batch-081-initial-gpt.md",
+      "execution": "batch-081-initial-gpt-execution.json",
+      "coverage": "batch-081-initial-gpt-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0
+    }
+  },
+  "serialReviewerProcessesVerified": true,
+  "eachReportArchivedBeforeNextLaunch": true,
+  "allInitialInternalToolsSerial": true,
+  "allAssignedRangesReturned": true,
+  "initialPacketBytes": 121246,
+  "initialPacketLines": 2288,
+  "initialDistinctCompleteFamilies": 24,
+  "initialFamilyOccurrences": 25,
+  "rawCharacterRecords": 5,
+  "initialComparisonBodiesSupplied": 9,
+  "teachingChangesAfterReview": [],
+  "verdicts": {
+    "kanji/冶.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "words/冶金.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "kanji/金.md:39 added bullet": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    }
+  },
+  "findings": [],
+  "actionableRemainingFindings": 0,
+  "consequentialUnresolvedTeachingFindings": 0,
+  "hypothesisReconciliation": [
+    {
+      "id": "081-C1",
+      "reportedBy": [
+        "Claude initial limits"
+      ],
+      "claim": "Overlapping melting label of溶 could be plausible if it enters a fallback pool.",
+      "status": "optional",
+      "confidence": "high for present default four-choice scope",
+      "evidence": "Actual frozen冶 has exactly three curated wrong choices治/台/始;溶 has exactly three浴/容/塔. Neither needs a fallback in the current default-four quiz. Same溶 body and the three-choice scope were supplied to both reviewers; GPT finds no established default-quiz defect. Larger random pools remain uncertified, not declared safe.",
+      "remedy": "No unnecessary legacy edit or invalid wrong choice. Retain the explicit larger/random-pool limitation; never choose溶 as a curated wrong answer for冶."
+    }
+  ],
+  "optional": [
+    {
+      "reportedBy": [
+        "Claude initial"
+      ],
+      "status": "optional",
+      "claim": "Simplify source-only character-dictionary and inspected families wording.",
+      "decision": "No edit. Exact lookup-only and limited spelling-evidence qualifications are explained immediately; neither reviewer establishes an actionable comprehension omission."
+    },
+    {
+      "reportedBy": [
+        "Claude initial"
+      ],
+      "status": "optional",
+      "claim": "Add irregular鍛治 spelling and explain regularヤ inたんや.",
+      "decision": "No expansion. Current card already distinguishes whole-wordかじ, separately documentedたんや and no inventedジ. Irregular spelling is preserved in full dictionary evidence, not needed as another teaching example."
+    },
+    {
+      "reportedBy": [
+        "Claude initial"
+      ],
+      "status": "optional",
+      "claim": "Add錬金術's money-making secondary sense.",
+      "decision": "No expansion. Current article already says冶金 does not mean making money; alchemy is only a comparison, not an exhaustive錬金術 article."
+    },
+    {
+      "reportedBy": [
+        "Claude initial"
+      ],
+      "status": "optional",
+      "claim": "Add technical to the reused金 reciprocal bullet.",
+      "decision": "No edit. Its precise metallurgy gloss and link lead to the complete technical explanation. No incorrect claim or missing prerequisite is demonstrated."
+    },
+    {
+      "reportedBy": [
+        "Claude initial"
+      ],
+      "status": "optional",
+      "claim": "Add KANJIDIC2 database version to learner citation.",
+      "decision": "No edit. The learner citation and durable exact source/version records serve separate roles; no evidence gap in this batch."
+    }
+  ],
+  "modelContributionComparison": {
+    "shared": "Both initial reviewers found no established defect across both new articles and the narrow reused bullet: meanings, source readings/curation, grammar/examples, three wrong choices, word labels and both reciprocal pairs.",
+    "claudeOnlyVerifiedUseful": "Optional wording/comparison expansions and explicitly conditional溶 fallback concern retained with current default-pool versus larger-pool limits; no unique actionable defect established.",
+    "gptOnlyVerifiedUseful": "No unique actionable defect established in this bounded sample.",
+    "limits": "Equivalent observations compared throughout findings/optional/limits. This is not a general model ranking, equal-comprehension claim or manufactured finding quota."
+  },
+  "readDepthLimits": [
+    "Each reviewer received the same complete121246-byte/2288-line packet in one serial view; exact returned text audited independently of their stated unmeasured counts. Byte availability is not comprehension certification.",
+    "Reports both identify nine comparison bodies,25family occurrences/24distinct and five raw records; preserve their original reports unchanged.",
+    "Public dictionary observations are supplied coordinator evidence; no reviewer independent upstream retrieval. Prior encyclopedia/Nipponica truncation and image-dependent etymology limits remain.",
+    "No independent reviewer Git/signature/hash/path/title-uniqueness check. Coordinator confirms frozen bytes, manifest and actual女.md path;始 raw record was not supplied and no fresh始 metadata review is claimed."
+  ],
+  "textualReviewClosed": true,
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "mechanicalBatchAudit": {
+    "batch": "081",
+    "baseCommit": "a7b119ed36adf7a3a92bba03700bc1c51f812bef",
+    "draftKanji": 1,
+    "newWords": 1,
+    "changedReusedArticles": 1,
+    "requiredReciprocalPairs": 1,
+    "activatedBaselinePairs": 0,
+    "readingDispositions": 2,
+    "curatedOfferedKeys": 1,
+    "sourceOnlyOfferedKeys": 0,
+    "dictionaryFamilies": 24,
+    "exactBaseRuntimePreservedOutsideRecordedChanges": true,
+    "manifestFresh": true,
+    "contentVersion": "f1dd5d8b9d2ff535",
+    "limits": "Mechanical draft audit, not lexical-allocation/naturalness verification, independent review, native/phone acceptance or publication."
+  },
+  "runtimeHashesReverified": 8369,
+  "manifestUnchangedFromFrozenSnapshot": true,
+  "newNativeOrAndroidClaimed": false,
+  "nativeFontPending": [
+    "冫",
+    "氵"
+  ],
+  "actualHanCount": 29,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "limits": "Textual closure only. No native font/drawing/routes, physical-phone, live random-quiz or learning-effectiveness evidence. Fresh non-skipped Android and all29Han/native gates remain. CompatibleAndroidf9b59a2+ required. Preserve historical source/reviewer/process/denial/OOM/read-depth limits, baseline exceptions and original guards; whole project incomplete."
+}
