@@ -1,0 +1,382 @@
+{
+  "execution": 561,
+  "batch": "082",
+  "androidSnapshot": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+  "productionBaseline": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "source": [
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core\\src\\main\\kotlin\\io\\github\\stopcran\\kanji\\core\\quiz\\QuizBuilder.kt",
+      "sha256": "abd46017c2aeee3de67865a7b1a614352bd368404ea67a80703e455d94ff37ce",
+      "range": [
+        13,
+        28
+      ],
+      "lines": [
+        {
+          "line": 13,
+          "text": " */"
+        },
+        {
+          "line": 14,
+          "text": "object QuizBuilder {"
+        },
+        {
+          "line": 15,
+          "text": "    fun options(target: QuizCard, all: List<QuizCard>, random: Random, count: Int = 4): List<QuizOption> {"
+        },
+        {
+          "line": 16,
+          "text": "        val byKanji = all.associateBy { it.kanji }"
+        },
+        {
+          "line": 17,
+          "text": "        val chosen = LinkedHashMap<String, QuizCard>()"
+        },
+        {
+          "line": 18,
+          "text": "        val usedTitles = hashSetOf(target.title)"
+        },
+        {
+          "line": 19,
+          "text": ""
+        },
+        {
+          "line": 20,
+          "text": "        fun tryAdd(c: QuizCard) {"
+        },
+        {
+          "line": 21,
+          "text": "            if (chosen.size < count - 1 && c.kanji != target.kanji && usedTitles.add(c.title)) chosen[c.kanji] = c"
+        },
+        {
+          "line": 22,
+          "text": "        }"
+        },
+        {
+          "line": 23,
+          "text": ""
+        },
+        {
+          "line": 24,
+          "text": "        target.distractors.mapNotNull { byKanji[it] }.forEach(::tryAdd)"
+        },
+        {
+          "line": 25,
+          "text": "        val others = all.filter { it.kanji != target.kanji }.shuffled(random)"
+        },
+        {
+          "line": 26,
+          "text": "        others.sortedByDescending { c -> c.tags.count { it in target.tags } }.forEach(::tryAdd)"
+        },
+        {
+          "line": 27,
+          "text": ""
+        },
+        {
+          "line": 28,
+          "text": "        return (chosen.values + target).map { QuizOption(it.kanji, it.title) }.shuffled(random)"
+        }
+      ],
+      "productionBytesUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\src\\main\\java\\io\\github\\stopcran\\kanji\\ui\\QuizViewModel.kt",
+      "sha256": "0c8d3a99c98adf4a780f50b268feb8c8fbcb9c13bcad728a54700e5fe155d7ad",
+      "range": [
+        89,
+        102
+      ],
+      "lines": [
+        {
+          "line": 89,
+          "text": "        sourceId = source.id"
+        },
+        {
+          "line": 90,
+          "text": "        stack = app.settings.stack.value"
+        },
+        {
+          "line": 91,
+          "text": "        val all = app.db.content().kanji(sourceId).inStack(stack)"
+        },
+        {
+          "line": 92,
+          "text": "        if (all.size < 2) {"
+        },
+        {
+          "line": 93,
+          "text": "            ui = QuizUi.Empty(\"No cards yet. Sync the content first (⚙ settings).\")"
+        },
+        {
+          "line": 94,
+          "text": "            return"
+        },
+        {
+          "line": 95,
+          "text": "        }"
+        },
+        {
+          "line": 96,
+          "text": "        cards = all.associateBy { it.kanji }"
+        },
+        {
+          "line": 97,
+          "text": "        quizCards = all.map { QuizCard(it.kanji, it.title, it.tags.splitSep(), it.distractors.splitSep()) }"
+        },
+        {
+          "line": 98,
+          "text": "        app.db.reviews().states(sourceId, stack, StudyMode.Quiz.name).forEach { states[it.kanji] = it.toSrs() }"
+        },
+        {
+          "line": 99,
+          "text": ""
+        },
+        {
+          "line": 100,
+          "text": "        val budget = app.db.newAllowance(app.settings, sourceId, Instant.now()).remaining"
+        },
+        {
+          "line": 101,
+          "text": "        val capacity = app.db.focusStatus(app.settings, sourceId, stack, all, System.currentTimeMillis())?.capacity"
+        },
+        {
+          "line": 102,
+          "text": "        val items = if (extra) {"
+        }
+      ],
+      "productionBytesUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\src\\main\\java\\io\\github\\stopcran\\kanji\\ui\\QuizViewModel.kt",
+      "sha256": "0c8d3a99c98adf4a780f50b268feb8c8fbcb9c13bcad728a54700e5fe155d7ad",
+      "range": [
+        156,
+        162
+      ],
+      "lines": [
+        {
+          "line": 156,
+          "text": "        val target = quizCards.first { it.kanji == card.kanji }"
+        },
+        {
+          "line": 157,
+          "text": "        ui = QuizUi.Question(card, QuizBuilder.options(target, quizCards, random), remaining, font)"
+        },
+        {
+          "line": 158,
+          "text": "    }"
+        },
+        {
+          "line": 159,
+          "text": ""
+        },
+        {
+          "line": 160,
+          "text": "    /** The study view is done: the same card is now tested. */"
+        },
+        {
+          "line": 161,
+          "text": "    fun startQuestion() {"
+        },
+        {
+          "line": 162,
+          "text": "        val s = ui as? QuizUi.Study ?: return"
+        }
+      ],
+      "productionBytesUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\app\\src\\main\\java\\io\\github\\stopcran\\kanji\\data\\SrsMapping.kt",
+      "sha256": "903975e5213ef450dc8762bd612631bd92090ed075362e56f473533e5877bec9",
+      "range": [
+        30,
+        37
+      ],
+      "lines": [
+        {
+          "line": 30,
+          "text": ""
+        },
+        {
+          "line": 31,
+          "text": "fun List<KanjiEntity>.stacks(): List<Stack> = Stacks.available(map { it.tags.splitSep() })"
+        },
+        {
+          "line": 32,
+          "text": ""
+        },
+        {
+          "line": 33,
+          "text": "/** The cards of [stackId]; an unknown or empty stack falls back to all cards. */"
+        },
+        {
+          "line": 34,
+          "text": "fun List<KanjiEntity>.inStack(stackId: String): List<KanjiEntity> {"
+        },
+        {
+          "line": 35,
+          "text": "    val stack = Stacks.find(stackId, stacks())"
+        },
+        {
+          "line": 36,
+          "text": "    return filter { stack.contains(it.tags.splitSep()) }"
+        },
+        {
+          "line": 37,
+          "text": "}"
+        }
+      ],
+      "productionBytesUnchanged": true
+    },
+    {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\kanji-cards-android\\core\\src\\main\\kotlin\\io\\github\\stopcran\\kanji\\core\\srs\\Stacks.kt",
+      "sha256": "1dfc0923a62ac2a74f1c89cf9640802d2c254c36c34de46e86b9664bdbcb2a4e",
+      "range": [
+        7,
+        29
+      ],
+      "lines": [
+        {
+          "line": 7,
+          "text": "data class Stack(val id: String, val label: String, val tag: String?) {"
+        },
+        {
+          "line": 8,
+          "text": "    fun contains(tags: List<String>) = tag == null || tag in tags"
+        },
+        {
+          "line": 9,
+          "text": "}"
+        },
+        {
+          "line": 10,
+          "text": ""
+        },
+        {
+          "line": 11,
+          "text": "object Stacks {"
+        },
+        {
+          "line": 12,
+          "text": "    const val ALL = \"all\""
+        },
+        {
+          "line": 13,
+          "text": "    val everything = Stack(ALL, \"All\", null)"
+        },
+        {
+          "line": 14,
+          "text": ""
+        },
+        {
+          "line": 15,
+          "text": "    private val known = listOf("
+        },
+        {
+          "line": 16,
+          "text": "        Stack(\"jlpt-n5\", \"N5\", \"jlpt-n5\"),"
+        },
+        {
+          "line": 17,
+          "text": "        Stack(\"jlpt-n4\", \"N4\", \"jlpt-n4\"),"
+        },
+        {
+          "line": 18,
+          "text": "        Stack(\"jlpt-n3\", \"N3\", \"jlpt-n3\"),"
+        },
+        {
+          "line": 19,
+          "text": "        Stack(\"jlpt-n2\", \"N2\", \"jlpt-n2\"),"
+        },
+        {
+          "line": 20,
+          "text": "        Stack(\"jlpt-n1\", \"N1\", \"jlpt-n1\"),"
+        },
+        {
+          "line": 21,
+          "text": "        everything,"
+        },
+        {
+          "line": 22,
+          "text": "        Stack(\"starter\", \"Starter\", \"starter\"),"
+        },
+        {
+          "line": 23,
+          "text": "    )"
+        },
+        {
+          "line": 24,
+          "text": ""
+        },
+        {
+          "line": 25,
+          "text": "    /** Available levels, All (even without cards), then thematic stacks. */"
+        },
+        {
+          "line": 26,
+          "text": "    fun available(cardTags: List<List<String>>): List<Stack> ="
+        },
+        {
+          "line": 27,
+          "text": "        known.filter { s -> s.tag == null || cardTags.any { s.contains(it) } }"
+        },
+        {
+          "line": 28,
+          "text": ""
+        },
+        {
+          "line": 29,
+          "text": "    fun find(id: String, stacks: List<Stack>): Stack = stacks.firstOrNull { it.id == id } ?: everything"
+        }
+      ],
+      "productionBytesUnchanged": true
+    }
+  ],
+  "capturedChoices": [
+    "whale",
+    "imitate; emulate",
+    "quasi-; associate rank",
+    "crown; peerless"
+  ],
+  "capturedWrongSourceCards": [
+    "鯨",
+    "倣",
+    "冠"
+  ],
+  "curatedChoices": [
+    {
+      "kanji": "集",
+      "jlpt": 4
+    },
+    {
+      "kanji": "進",
+      "jlpt": 3
+    },
+    {
+      "kanji": "難",
+      "jlpt": 3
+    }
+  ],
+  "establishedCause": "QuizViewModel.start filters the content list to the selected stack before constructing quizCards. QuizBuilder resolves curated IDs only in that list, then falls back to tag-similar cards. These three curated IDs cannot be used in the N1-only pool. This explains the captured mismatch without a new parser or curation-transport failure.",
+  "semanticEvidence": [
+    {
+      "path": "docs/n1-sources/batch-082-jmdict.xml",
+      "lines": [
+        63,
+        98
+      ],
+      "entry": "1341500",
+      "claim": "准える is a rarely used kanji form ofなぞらえる; usually-kana senses include pattern/model after, imitate. Recognition does not establish frequency, but rarity does not disprove possible semantic overlap."
+    },
+    {
+      "path": "docs/n1-sources/batch-082-source-evidence.json",
+      "claim": "Existing supplied public字通 observation hasなぞらえる. Not freshly independently retrieved."
+    }
+  ],
+  "status": "selection-path-established-semantic-impact-unresolved",
+  "runtimeAccepted": false,
+  "runtimeChanged": false,
+  "newTestsRun": false,
+  "decision": "No speculative content/algorithm change or downgrading of UNVERIFIED. Next bounded source-backed reconciliation retains publication gate and original disagreement.",
+  "limits": "Coordinator code inspection, not independent review of these new excerpts. Existing case success proves intended selection works, not alternative semantic uniqueness. No new native/phone test."
+}
