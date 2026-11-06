@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "execution": 592,
+  "batch": "085",
+  "initialAudit": {
+    "result": "AssertionError before writing final draft audit",
+    "cause": "The coordinator's new helper accounted for six separate earlier-N2 source members, but initially omitted five already-published non-N1-source main additions from the global baseline-set assertion.",
+    "observed": {
+      "acceptedIssue60PublishedAdditions": 111,
+      "currentAdditionsFromOriginalBaselineIncludingDraftAndSeparateMain": 123,
+      "unaccountedInInitialHelper": ["坊", "的", "誰", "身", "阪"],
+      "missingPublishedMembers": []
+    },
+    "evidence": "Exact published-base manifest 97a16b0027b05c0528d78971dd3b17cce17d8056 contains all eleven separate supplementary cards. Git history identifies normally integrated commit 3d656bff, Add sourced N3 and N2 supplementary kanji. Actual metadata preserves their N2/N3 placements.",
+    "resolution": "Correct the helper's exact global-set accounting, retain six named-source N2 members separately from five non-N1-source additions, and require every separate article already exists in the exact published base. The batch runtime-delta audit still rejects any unrecorded baseline change.",
+    "runtimeCorrectionRequired": false,
+    "acceptanceGateWeakened": false,
+    "permissionDenial": false
+  },
+  "readLimits": [
+    "A view of nonexistent words/趣向.md returned path-not-found; full frozen lexical family 1328970 is retained. No missing lexical-source claim or invented article.",
+    "A guessed batch-084-combined-audit.json path did not exist. The exact published base manifest and targeted git history supplied positive supplementary-main accounting instead. No historical session helper or denied path was accessed."
+  ]
+}
