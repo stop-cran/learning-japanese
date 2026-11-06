@@ -1,0 +1,50 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$workspace = Split-Path $control -Parent
+$content = Join-Path $workspace 'learning-japanese'
+$android = Join-Path $workspace 'kanji-cards-android'
+$log = Join-Path $control 'logs\4142c13f-de80-456f-93b8-d96894d3a217'
+$progress = Get-Content -LiteralPath (Join-Path $control 'progress.json') -Raw | ConvertFrom-Json
+if ($progress.checkpoint -ne 593 -or $progress.batch -ne '085' -or
+    $progress.stage -ne 'fresh-host-android-checks-running') { throw 'Checkpoint changed.' }
+foreach ($entry in @(
+    @($content, '29a533800ed0d45e6269991d4a19e3b134057d6a'),
+    @($android, '1c1b7bf42cc91d820a93169f1088dc647ac51c0d')
+)) {
+    if ((git -C $entry[0] rev-parse HEAD) -ne $entry[1] -or
+        (git -C $entry[0] status --porcelain) -or
+        (git -C $entry[0] log -1 --format='%G?') -ne 'G') {
+        throw "Unexpected signed or clean state: $($entry[0])"
+    }
+}
+$process = Get-CimInstance Win32_Process -Filter "ProcessId=$PID"
+$ancestry = @()
+while ($null -ne $process -and $ancestry.Count -lt 8) {
+    $command = $process.CommandLine
+    if ($command -match '-EncodedCommand ([A-Za-z0-9+/=]+)') {
+        $command = [Text.Encoding]::Unicode.GetString([Convert]::FromBase64String($Matches[1]))
+    }
+    $ancestry += [pscustomobject]@{pid=$process.ProcessId; parent=$process.ParentProcessId; command=$command}
+    $process = Get-CimInstance Win32_Process -Filter "ProcessId=$($process.ParentProcessId)"
+}
+$runner = $ancestry | Where-Object pid -eq 19008
+if (-not $runner -or $runner.command -notmatch 'n1-kanji-workspace\\control\\runner.ps1') {
+    throw 'Live parent launcher ownership not verified; no lock operation attempted.'
+}
+$ancestry | ConvertTo-Json -Depth 3 | Set-Content -LiteralPath (Join-Path $log 'android-runner-role.json') -Encoding utf8NoBOM
+$arguments = @(':core:test', '--tests', 'io.github.stopcran.kanji.core.RealContentTest',
+    ':app:testDebugUnitTest', '--tests', 'io.github.stopcran.kanji.core.RareHanTest',
+    '--no-daemon', '--no-parallel', '--max-workers=1', '--rerun-tasks',
+    '-Pkotlin.compiler.execution.strategy=in-process', '--init-script',
+    (Join-Path $control 'batch-065-host-integration-heap.init.gradle'))
+$arguments | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $log 'android-arguments.json') -Encoding utf8NoBOM
+$env:JAVA_HOME = 'C:\Program Files\Eclipse Adoptium\jdk-17.0.20.101-hotspot'
+$env:ANDROID_HOME = 'C:\Users\stop-\AppData\Local\Android\Sdk'
+Set-Location -LiteralPath $android
+[DateTimeOffset]::UtcNow.ToString('o') | Set-Content -LiteralPath (Join-Path $log 'android-start.txt')
+& .\gradlew.bat @arguments *> (Join-Path $log 'android.txt')
+$code = $LASTEXITCODE
+$code | Set-Content -LiteralPath (Join-Path $log 'android-exit.txt')
+[DateTimeOffset]::UtcNow.ToString('o') | Set-Content -LiteralPath (Join-Path $log 'android-end.txt')
+Get-Content -LiteralPath (Join-Path $log 'android.txt') -Tail 18
+exit $code
