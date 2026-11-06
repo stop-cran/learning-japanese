@@ -1,0 +1,96 @@
+--- docs/n1-reviews/batch-083-native/N1Batch083NativeTest.kt
++++ docs/n1-reviews/batch-083-native-corrected/N1Batch083CorrectedNativeTest.kt
+@@ -34,0 +35,2 @@
++import io.github.stopcran.kanji.core.quiz.QuizBuilder
++import io.github.stopcran.kanji.core.quiz.QuizCard
+@@ -50 +52 @@
+-private fun disposable083() {
++private fun disposable083Corrected() {
+@@ -55 +57 @@
+-class N1Batch083GlyphTest {
++class N1Batch083CorrectedGlyphTest {
+@@ -59 +61 @@
+-        disposable083()
++        disposable083Corrected()
+@@ -62 +64 @@
+-        val pages = listOf("上 作 傑 優 冫 冶 准 凌 前 台 回 売 夌 忍 慢 我 欠 次 行 超 越 追 過 阝", "陵 隹 雨 風 駕", "凌 陵 准 冶 次 冫 夌 阝 隹 凌ぐ 凌駕")
++        val pages = listOf("上 作 傑 優 冫 冴 冶 准 凌 前 台 回 売 夌 忍 慢 我 欠 次 行 超 越 追 過", "阝 陵 隹 雨 風 駕", "凌 陵 准 冶 冴 次 冫 夌 阝 隹 凌ぐ 凌駕")
+@@ -73 +75 @@
+-                    Text("Inspect all 29 scoped Han; focused 凌/陵/准/冶/次, 冫/夌/阝/隹. Fallback families may coincide.", fontSize = 16.sp)
++                    Text("Inspect all 30 scoped Han; focused 凌/陵/准/冶/冴/次, 冫/夌/阝/隹. Fallback families may coincide.", fontSize = 16.sp)
+@@ -84 +86 @@
+-            for (char in listOf("上", "作", "傑", "優", "冫", "冶", "准", "凌", "前", "台", "回", "売", "夌", "忍", "慢", "我", "欠", "次", "行", "超", "越", "追", "過", "阝", "陵", "隹", "雨", "風", "駕")) {
++            for (char in listOf("上", "作", "傑", "優", "冫", "冴", "冶", "准", "凌", "前", "台", "回", "売", "夌", "忍", "慢", "我", "欠", "次", "行", "超", "越", "追", "過", "阝", "陵", "隹", "雨", "風", "駕")) {
+@@ -132 +134 @@
+-        assertEquals(124, rows.length())
++        assertEquals(128, rows.length())
+@@ -138 +140 @@
+-            File(context.getExternalFilesDir(null), "n1-083-font-panel-${index + 1}.png").outputStream().use {
++            File(context.getExternalFilesDir(null), "n1-083-corrected-font-panel-${index + 1}.png").outputStream().use {
+@@ -142 +144 @@
+-        File(context.getExternalFilesDir(null), "n1-083-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-083-corrected-font-raster.json").writeText(JSONObject()
+@@ -145,2 +147,2 @@
+-            .put("individualGlyphProbes", 116).put("wholeWordRasterProbes", 8).put("panels", 3)
+-            .put("limits", "29 actual scoped Han including exact 冫/夌/阝/隹 fallback inspection, four production families, three bounded Compose panels and eight whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
++            .put("individualGlyphProbes", 120).put("wholeWordRasterProbes", 8).put("panels", 3)
++            .put("limits", "30 actual scoped Han including exact 冫/夌/阝/隹 fallback inspection, four production families, three bounded Compose panels and eight whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
+@@ -151 +153 @@
+-class N1Batch083ArticleTest {
++class N1Batch083CorrectedArticleTest {
+@@ -157 +159 @@
+-        disposable083()
++        disposable083Corrected()
+@@ -160,2 +162,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-083-${UUID.randomUUID()}", "main")
+-        val head = "d5dd7e9e04aa45af0befeb3fd9a9044488fc7a0a"
++        val source = RepoSource("acceptance-fixture", "n1-083-corrected-${UUID.randomUUID()}", "main")
++        val head = "867fe8bef228145ef0a6e48690941b0a0aa50336"
+@@ -169 +171 @@
+-                    instrumentation.context.assets.open("n1-batch-083-d5dd7e9e-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-083-corrected-867fe8be-envelope.zip")
+@@ -188 +190 @@
+-        assertEquals("a9faafdd68af3230", meta.contentVersion)
++        assertEquals("6dfe6a1e287ce5df", meta.contentVersion)
+@@ -198 +200 @@
+-        assertEquals(listOf("准", "冶", "次"), endurance.distractors.splitSep())
++        assertEquals(listOf("准", "冶", "冴"), endurance.distractors.splitSep())
+@@ -206,0 +209,19 @@
++        val expectedMeanings = mapOf(
++            "凌" to "endure; surpass", "准" to "quasi-; associate rank",
++            "冶" to "smelt; work metals", "冴" to "clear; sharp-minded",
++        )
++        val all = runBlocking { app.db.content().kanjiLite(source.id) }
++        val checkedPools = JSONObject()
++        for ((poolName, pool) in listOf("N1" to n1, "All" to all)) {
++            val cards = pool.map { QuizCard(it.kanji, it.title, it.tags.splitSep(), it.distractors.splitSep()) }
++            val target = cards.single { it.kanji == "凌" }
++            assertEquals(listOf("准", "冶", "冴"), target.distractors)
++            assertEquals(expectedMeanings, cards.filter { it.kanji in expectedMeanings }.associate { it.kanji to it.title })
++            val options = QuizBuilder.options(target, cards, kotlin.random.Random(577))
++            assertEquals(4, options.size)
++            assertEquals(expectedMeanings, options.associate { it.kanji to it.title })
++            checkedPools.put(poolName, JSONObject().put("poolSize", pool.size)
++                .put("options", JSONArray().also { rows ->
++                    options.forEach { rows.put(JSONObject().put("kanji", it.kanji).put("title", it.title)) }
++                }).put("allThreeCuratedAvailable", true).put("defaultFourNoPadding", true))
++        }
+@@ -248,0 +270 @@
++            .put("productionBuilderN1AndAllExactChoices", checkedPools)
+@@ -362 +384 @@
+-                "次" to "next",
++                "冴" to "clear; sharp-minded",
+@@ -366 +388 @@
+-            assertEquals(listOf("准", "冶", "次"), meaning.card.distractors.splitSep())
++            assertEquals(listOf("准", "冶", "冴"), meaning.card.distractors.splitSep())
+@@ -421 +443 @@
+-            assertEquals(listOf("准", "冶", "次"), card.distractors.splitSep())
++            assertEquals(listOf("准", "冶", "冴"), card.distractors.splitSep())
+@@ -479,2 +501,2 @@
+-            File(app.getExternalFilesDir(null), "n1-083-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-083-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-083-corrected-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-083-corrected-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -573 +595 @@
+-        File(app.getExternalFilesDir(null), "n1-083-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-083-corrected-$step.png").outputStream().use {

@@ -59,6 +59,45 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 083: textually reviewed; runtime acceptance pending
+
+Batch **凌**, source row 92, needs **凌ぐ** (しのぐ) and **凌駕** (りょうが)
+as supporting articles, not an N1 vocabulary deck. No reused teaching changed.
+The [textual reconciliation](n1-reviews/batch-083-reconciliation.json) preserves
+independent blind Claude Opus 5.5 and GPT-6.1 Sol reports on signed teaching
+`4b8bfcc4`. Both isolated processes exited normally and ran serially, each
+returning the exact complete common **166,941-byte /3,425-line** packet in one
+serial view: three new articles, fourteen unchanged comparison bodies,
+**42 distinct complete JMdict families /44 occurrences**, and eight complete
+raw character records. Returned bytes establish availability, not comprehension.
+Public-source observations remain supplied coordinator evidence; the truncated,
+image-dependent character entry is not historical or phonetic certification.
+
+All three articles are CLEAN for correctness, scoped coverage and phone-text
+comprehensibility within this bounded textual review. No actionable defect or
+consequential unresolved textual claim remains. Two optional suggestions about
+weather-phrase English and additional glosses were reconciled from exact
+dictionary evidence; teaching did not change.
+
+Full metadata **リョウ /しの.ぐ**, both selected linked rows, the two mapped
+reciprocal pairs/four directions, ten additional navigation directions, three
+wrong kanji choices and 17 direct word guards remain intact. Neither word has
+an inferred level; missing-card 駕 stays in word metadata. Mechanical audit,
+validator, fresh manifest equality and all **8,376 runtime hashes** pass.
+Textual closure is not runtime acceptance or publication: fresh non-skipped
+Android checks, all 29 scoped Han/four-font native and visual checks, combined
+current-main, normal signing, owner fast-forward, CI and exact immutable-ZIP
+acceptance remain required. Cmap absences 冫/夌/阝/隹 are pending inspection,
+not established glyph failures.
+
+The reusable helper is in approved `control` and archived with source evidence;
+no optional historical session helper was accessed or new denial encountered.
+Published coverage remains **109 additions; 1,119 remaining**, unchanged by this
+local review checkpoint. Compatible Android `f9b59a2`+ is required; current
+dedicated Android is signed `1c1b7bf4`. Physical-phone, general-release and
+whole-set acceptance remain **outstanding**, with original source/review/
+process/denial/OOM/read-depth/viewport limits and archive guards preserved.
+
 ## Batch 081: published for bounded owner testing
 
 Batch **冶**, source row 90, adds necessary **冶金** (やきん, metallurgy),

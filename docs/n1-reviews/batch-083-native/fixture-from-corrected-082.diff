@@ -1,0 +1,492 @@
+--- docs/n1-reviews/batch-082-native-corrected/N1Batch082CorrectedNativeTest.kt
++++ docs/n1-reviews/batch-083-native/N1Batch083NativeTest.kt
+@@ -48,22 +48,22 @@
+ import java.util.UUID
+ 
+-private fun disposable082Corrected() {
++private fun disposable083() {
+     assertEquals("true", InstrumentationRegistry.getArguments().getString("n1Disposable"))
+     assertTrue(Build.HARDWARE in setOf("ranchu", "goldfish"))
+ }
+ 
+-class N1Batch082CorrectedGlyphTest {
++class N1Batch083GlyphTest {
+     @get:Rule val rule = createAndroidComposeRule<ComponentActivity>()
+ 
+-    @Test fun associateRankLookalikesAndRadicalFallbacksAcrossFourProductionFamilies() {
+-        disposable082Corrected()
++    @Test fun enduranceLookalikesAndRadicalFallbacksAcrossFourProductionFamilies() {
++        disposable083()
+         val context = InstrumentationRegistry.getInstrumentation().targetContext
+         val fonts = listOf(KanjiFont.Gothic, KanjiFont.Mincho, KanjiFont.Textbook, KanjiFont.Brush)
+-        val pages = listOf("中 事 備 先 典 冫 冴 冶 准 助 十 基 大 女 学 彼 手 批 授 教 木 氵 準 生", "田 義 聞 講 辶 進 隹 隼 集 難", "准 冴 冶 隼 準 冫 氵 辶 隹 准教授")
++        val pages = listOf("上 作 傑 優 冫 冶 准 凌 前 台 回 売 夌 忍 慢 我 欠 次 行 超 越 追 過 阝", "陵 隹 雨 風 駕", "凌 陵 准 冶 次 冫 夌 阝 隹 凌ぐ 凌駕")
+         val page = mutableStateOf(0)
+         rule.setContent {
+             MaterialTheme {
+                 Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+-                    Text("Batch 082 corrected: associate rank / look-alikes / radical fallback")
++                    Text("Batch 083: endurance / look-alikes / radical fallback")
+                     Text("Panel ${page.value + 1} / ${pages.size}")
+                     fonts.forEach { font ->
+@@ -71,5 +71,5 @@
+                         Text(pages[page.value], fontFamily = font.family(), fontSize = 18.sp, lineHeight = 26.sp)
+                     }
+-                    Text("Inspect all 34 scoped Han; focused 准/冴/冶/隼/準, 冫/氵/辶/隹. Fallback families may coincide.", fontSize = 16.sp)
++                    Text("Inspect all 29 scoped Han; focused 凌/陵/准/冶/次, 冫/夌/阝/隹. Fallback families may coincide.", fontSize = 16.sp)
+                 }
+             }
+@@ -82,5 +82,5 @@
+         for ((index, typeface) in typefaces.withIndex()) {
+             val hashes = mutableSetOf<String>()
+-            for (char in listOf("中", "事", "備", "先", "典", "冫", "冴", "冶", "准", "助", "十", "基", "大", "女", "学", "彼", "手", "批", "授", "教", "木", "氵", "準", "生", "田", "義", "聞", "講", "辶", "進", "隹", "隼", "集", "難")) {
++            for (char in listOf("上", "作", "傑", "優", "冫", "冶", "准", "凌", "前", "台", "回", "売", "夌", "忍", "慢", "我", "欠", "次", "行", "超", "越", "追", "過", "阝", "陵", "隹", "雨", "風", "駕")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+@@ -103,5 +103,5 @@
+                 image.recycle()
+             }
+-            for (word in listOf("准教授")) {
++            for (word in listOf("凌ぐ", "凌駕")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+@@ -130,5 +130,5 @@
+             }
+         }
+-        assertEquals(140, rows.length())
++        assertEquals(124, rows.length())
+         for (index in pages.indices) {
+             rule.runOnIdle { page.value = index }
+@@ -136,28 +136,28 @@
+             rule.onAllNodesWithText(pages[index]).assertCountEquals(4)
+             for (fontIndex in fonts.indices) rule.onAllNodesWithText(pages[index])[fontIndex].assertIsDisplayed()
+-            File(context.getExternalFilesDir(null), "n1-082-corrected-font-panel-${index + 1}.png").outputStream().use {
++            File(context.getExternalFilesDir(null), "n1-083-font-panel-${index + 1}.png").outputStream().use {
+                 assertTrue(rule.onRoot().captureToImage().asAndroidBitmap().compress(Bitmap.CompressFormat.PNG, 100, it))
+             }
+         }
+-        File(context.getExternalFilesDir(null), "n1-082-corrected-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-083-font-raster.json").writeText(JSONObject()
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+             .put("fontScale", context.resources.configuration.fontScale).put("rows", rows)
+-            .put("individualGlyphProbes", 136).put("wholeWordRasterProbes", 4).put("panels", 3)
+-            .put("limits", "34 actual scoped Han including exact 冫/氵/辶/隹 fallback inspection, four production families, three bounded Compose panels and four whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
++            .put("individualGlyphProbes", 116).put("wholeWordRasterProbes", 8).put("panels", 3)
++            .put("limits", "29 actual scoped Han including exact 冫/夌/阝/隹 fallback inspection, four production families, three bounded Compose panels and eight whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
+             .toString(2))
+     }
+ }
+ 
+-class N1Batch082CorrectedArticleTest {
++class N1Batch083ArticleTest {
+     @get:Rule val rule = createEmptyComposeRule()
+     private lateinit var app: KanjiApp
+     private lateinit var scenario: ActivityScenario<MainActivity>
+ 
+-    @Test fun fullSingleImportOfflineAssociateRankReciprocalAndComparisonLinksCuratedOnDrawingAndSystemBack() {
+-        disposable082Corrected()
++    @Test fun fullSingleImportOfflineEnduranceTwoReciprocalPairsCuratedOnAndKunDrawingAndSystemBack() {
++        disposable083()
+         val instrumentation = InstrumentationRegistry.getInstrumentation()
+         app = instrumentation.targetContext.applicationContext as KanjiApp
+-        val source = RepoSource("acceptance-fixture", "n1-082-corrected-${UUID.randomUUID()}", "main")
+-        val head = "e108bbeb0fcd4fda3837d955a652f662f72fdac1"
++        val source = RepoSource("acceptance-fixture", "n1-083-${UUID.randomUUID()}", "main")
++        val head = "d5dd7e9e04aa45af0befeb3fd9a9044488fc7a0a"
+         assertTrue(app.settings.setSource("https://github.com/${source.id}", source.branch))
+         var archiveRequests = 0
+@@ -167,5 +167,5 @@
+                 source.commitZipUrl(head) -> {
+                     archiveRequests++
+-                    instrumentation.context.assets.open("n1-batch-082-corrected-e108bbeb-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-083-d5dd7e9e-envelope.zip")
+                 }
+                 else -> error("Unexpected fixture request: $url")
+@@ -182,9 +182,9 @@
+         val updated = result as SyncResult.Updated
+         assertEquals(1, archiveRequests)
+-        assertEquals(1094, updated.kanji)
+-        assertEquals(5050, updated.words)
++        assertEquals(1095, updated.kanji)
++        assertEquals(5052, updated.words)
+         assertTrue(updated.problems.toString(), updated.problems.isEmpty())
+         val meta = requireNotNull(runBlocking { app.db.content().meta(source.id) })
+-        assertEquals("d82e7fefe3898a70", meta.contentVersion)
++        assertEquals("a9faafdd68af3230", meta.contentVersion)
+         assertEquals(0, meta.problems)
+         assertNull(meta.grammarProblem)
+@@ -194,15 +194,15 @@
+         assertEquals(ContentParser.KANJI_READING_PARSER_EPOCH, meta.kanjiReadingParserEpoch)
+         val n1 = runBlocking { app.db.content().kanjiLite(source.id).filter { it.jlpt == 1 } }
+-        assertEquals(114, n1.size)
+-        val associateRank = n1.single { it.kanji == "准" }
+-        assertEquals(listOf("冴", "冶", "隼"), associateRank.distractors.splitSep())
+-        assertEquals(listOf("ジュン"), associateRank.onyomi.splitSep())
+-        assertEquals(emptyList<String>(), associateRank.kunyomi.splitSep())
+-        assertNotNull(associateRank.quizOnyomi)
+-        assertNotNull(associateRank.quizKunyomi)
+-        assertEquals(listOf("ジュン"), associateRank.quizOnyomi?.splitSep())
+-        assertEquals(emptyList<String>(), associateRank.quizKunyomi?.splitSep())
+-        assertEquals(listOf("じゅん"), associateRank.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(emptyList<String>(), associateRank.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(115, n1.size)
++        val endurance = n1.single { it.kanji == "凌" }
++        assertEquals(listOf("准", "冶", "次"), endurance.distractors.splitSep())
++        assertEquals(listOf("リョウ"), endurance.onyomi.splitSep())
++        assertEquals(listOf("しの.ぐ"), endurance.kunyomi.splitSep())
++        assertNotNull(endurance.quizOnyomi)
++        assertNotNull(endurance.quizKunyomi)
++        assertEquals(listOf("リョウ"), endurance.quizOnyomi?.splitSep())
++        assertEquals(listOf("しの.ぐ"), endurance.quizKunyomi?.splitSep())
++        assertEquals(listOf("りょう"), endurance.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(listOf("しのぐ"), endurance.toReadingCard().quizKeys(ReadingKind.Kun))
+         val now = System.currentTimeMillis()
+         app.settings.sync.lastCheckMs = now
+@@ -218,5 +218,5 @@
+                     app.db.reviews().putState(ReviewStateEntity(
+                         source.id, "jlpt-n1", card.kanji, StudyMode.Quiz.name, "Review", 30.0, 5.0,
+-                        if (card.kanji == "准") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "凌") now - 60_000 else now + 30L * 86_400_000,
+                         now - 2L * 86_400_000, 3, 0,
+                     ))
+@@ -224,5 +224,5 @@
+                         app.db.reviews().putState(ReviewStateEntity(
+                             source.id, "jlpt-n1", card.kanji, kind.mode.name, "Review", 30.0, 5.0,
+-                            if (card.kanji == "准" && kind == ReadingKind.On && key == "じゅん") now - 60_000
++                            if (card.kanji == "凌" && key == (if (kind == ReadingKind.On) "りょう" else "しのぐ")) now - 60_000
+                             else now + 30L * 86_400_000,
+                             now - 2L * 86_400_000, 3, 0, reading = key,
+@@ -231,5 +231,5 @@
+                 }
+                 for (days in 1..2) app.db.reviews().putLog(ReviewLogEntity(
+-                    0, source.id, "jlpt-n1", "准", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "凌", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+                 ))
+             }
+@@ -241,13 +241,13 @@
+             .put("problems", updated.problems.size).put("n1Cards", n1.size)
+             .put("acceptedReadingParserEpoch", meta.kanjiReadingParserEpoch)
+-            .put("fullOnyomi", JSONArray(associateRank.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(associateRank.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(associateRank.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(associateRank.toReadingCard().quizKeys(ReadingKind.Kun)))
+-            .put("liteQuizOnyomi", JSONArray(requireNotNull(associateRank.quizOnyomi).splitSep()))
+-            .put("liteQuizKunyomi", JSONArray(requireNotNull(associateRank.quizKunyomi).splitSep()))
++            .put("fullOnyomi", JSONArray(endurance.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(endurance.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(endurance.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(endurance.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("liteQuizOnyomi", JSONArray(requireNotNull(endurance.quizOnyomi).splitSep()))
++            .put("liteQuizKunyomi", JSONArray(requireNotNull(endurance.quizKunyomi).splitSep()))
+             .put("transport", "Exact full git envelope through production ContentSync ONCE; synthetic source/HEAD")
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+-            .put("fixture", "Other N1 meanings/readings postponed; 准 meaning and sole curated on key じゅん due. Source and quiz kun lists empty. Two historical good 准 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 凌 meaning and curated onりょう/kunしのぐ due. Two historical good 凌 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+             .put("phoneEvidence", false).put("passed", false)
+         scenario = ActivityScenario.launch(MainActivity::class.java)
+@@ -256,99 +256,92 @@
+             click("N1")
+             rule.waitUntil(30_000) { app.settings.stack.value == "jlpt-n1" }
+-            await("N1 · 114 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 115 cards").performScrollTo().assertIsDisplayed()
+             capture("selection")
+             click("Browse all kanji")
+-            rule.onNode(hasSetTextAction()).performTextReplacement("准")
+-            click("quasi-; associate rank")
+-            await("准 — quasi-; associate rank")
+-            show(articleBullet("Strokes: 10 · Key (radical): 冫 (no. 15) · JLPT: N1 (community list)"), "kanji-01")
++            rule.onNode(hasSetTextAction()).performTextReplacement("凌")
++            click("endure; surpass")
++            await("凌 — endure; surpass")
++            show(articleBullet("Strokes: 10 · Key (radical): 冫 (the two left-hand strokes, no. 15) · JLPT: N1 (community list)"), "kanji-01")
+             section("Meaning and origin")
+-            show(articleBullet("准 can mark a status corresponding to, but not fully the same as, a named rank. In 准教授 じゅんきょうじゅ, it helps name the established rank associate professor. Do not interpret it as a literal half-professor or a trainee awaiting automatic promotion."), "kanji-03")
+-            show(articleBullet("Another branch concerns approval: 批准 ひじゅん means ratification. Not every compound containing 准 is an associate rank."), "kanji-04")
+-            show(articleBullet("Modern-shape mnemonic, not etymology: picture the bird-shaped 隹 beside the two marks of 冫 as a bird standing beside a rank sign. This is an invented memory scene, not an explanation of the character's historical formation."), "kanji-05")
++            show(articleBullet("凌 has two useful branches: enduring or getting through a difficulty, and surpassing something else. In 凌ぐ (しのぐ), the context selects between these branches. 凌駕 (りょうが) concerns surpassing, not sheltering from bad weather."), "kanji-03")
++            show(articleBullet("Modern-shape mnemonic, not etymology: imagine the two 冫 marks as drops beside the right-hand 夌 shape, pictured as a barrier. Think of weathering the drops or getting beyond the barrier. This is an invented memory scene, not a historical derivation or a verified explanation of the sound."), "kanji-04")
+             section("Readings")
+-            show(readingExample("ジュン"), "kanji-10")
+-            show(readingExample("准教授 じゅんきょうじゅ — associate professor"), "kanji-12")
+-            show(articleBullet("This table covers the sole on-reading in the frozen KANJIDIC2 record; that record lists no kun-readings. Readings supplied by other dictionaries do not change this card's source metadata."), "kanji-13")
++            show(readingExample("リョウ"), "kanji-09")
++            show(readingExample("凌駕 りょうが — surpassing; outdoing"), "kanji-11")
++            show(readingExample("しの.ぐ"), "kanji-12")
++            show(readingExample("凌ぐ しのぐ — endure; surpass"), "kanji-14")
++            show(articleBullet("Both readings in the frozen KANJIDIC2 record are selected for practice. Its grade-9/name-use classification does not make these ordinary word readings personal-name readings; names are not taught here."), "kanji-15")
+             section("Common words")
+-            show(articleBullet("准教授 じゅんきょうじゅ — associate professor"), "kanji-15")
+-            show(articleBullet("批准 ひじゅん — ratification"), "kanji-16")
++            show(articleBullet("凌ぐ しのぐ — endure or pull through; surpass"), "kanji-17")
++            show(articleBullet("凌駕 りょうが — surpassing; outdoing, also with する"), "kanji-18")
+             section("Notes")
+-            show(articleBullet("準 shares ジュン and has related meanings, but its shape has 氵 at the upper left and 十 below. 准 has two left-hand 冫 marks and no lower 十."), "kanji-18")
+-            show(articleBullet("The spellings are not freely interchangeable in modern words: learn 準備 じゅんび (preparation), 基準 きじゅん (standard), and 批准 ひじゅん (ratification) as written. JMdict also recognizes 準教授 じゅんきょうじゅ; the current Japanese university title taught here is 准教授."), "kanji-19")
+-            show(articleBullet("For look-alikes, 集 has 木 below 隹, 進 has 辶, and 難 has a different, dense left-hand block. Their meanings are not associate rank or approval."), "kanji-20")
+-            show(articleBullet("Metadata: KANJIDIC2, database 2026-306, 2026-11-02 (EDRDG; CC BY-SA 4.0). Words: JMdict, entries 2178020, 1483390, 1341670 and 1591210. Character senses: Digital Daijisen: 准. Rank usage: Nipponica and 大学事典: 准教授."), "kanji-21")
++            show(articleBullet("凌ぐ is a ぐ-ending verb: しのぎます, しのいで, しのいだ. Do not confuse it with the separate verb 忍ぶ (しのぶ), which ends in ぶ."), "kanji-20")
++            show(articleBullet("陵 (りょう; みささぎ) has 阝 on the left rather than 凌's two 冫 strokes. Recognizing the rarer spelling 陵駕 (りょうが) does not make these characters freely interchangeable in other words."), "kanji-21")
++            show(articleBullet("Compare 准, \"quasi-; associate rank,\" with 隹 on the right; 冶, \"smelt; work metals,\" with 台; and 次, \"next,\" with 欠. Similar left-hand marks do not imply the same meaning."), "kanji-22")
++            show(articleBullet("Metadata: KANJIDIC2, database 2026-306, 2026-11-02 (EDRDG; CC BY-SA 4.0). Words: JMdict, entries 1554200, 1606270 and 1467450. Usage: Digital Daijisen: 凌ぐ and 凌駕."), "kanji-23")
+             section("Common words")
+-            show(articleBullet("准教授 じゅんきょうじゅ — associate professor"), "word-forward-13")
+-            inline(await(articleBullet("准教授 じゅんきょうじゅ — associate professor")), "准教授", 0)
++            show(articleBullet("凌ぐ しのぐ — endure or pull through; surpass"), "endure-word-forward-14")
++            inline(await(articleBullet("凌ぐ しのぐ — endure or pull through; surpass")), "凌ぐ", 0)
+             await("Article contents")
+-            await("准教授 (じゅんきょうじゅ) — associate professor")
++            await("凌ぐ (しのぐ) — endure; surpass")
+             section("Meaning")
+-            show(articleBullet("准教授 names an associate professor. In the Japanese university system, this is an established academic rank below 教授 きょうじゅ (professor), with teaching and research responsibilities. It does not mean a professor's personal helper."), "word-02")
+-            show(articleBullet("彼女は大学の准教授です。 (かのじょはだいがくのじゅんきょうじゅです。) — She is an associate professor at a university."), "word-03")
+-            show(articleBullet("田中准教授の講義を聞きました。 (たなかじゅんきょうじゅのこうぎをききました。) — I listened to Associate Professor Tanaka's lecture."), "word-04")
+-            show(articleBullet("The second example places the rank after a name. For respectful direct address, 田中先生 (たなかせんせい) can be appropriate; 先生 is not itself a statement of this particular academic rank."), "word-05")
++            show(articleBullet("凌ぐ can mean endure, keep out, or get through something difficult. It can also mean surpass or outdo someone or something in ability, degree or quality. Learn the whole phrase rather than assigning one English equivalent to every occurrence."), "endure-word-02")
++            show(articleBullet("風雨を凌ぐ (ふううをしのぐ) — shelter from wind and rain"), "endure-word-03")
++            show(articleBullet("前作を凌ぐ傑作 (ぜんさくをしのぐけっさく) — a masterpiece surpassing the previous work"), "endure-word-04")
++            show(articleBullet("These short phrases illustrate the two branches. The difficulty faced or the thing surpassed takes を. 凌ぐ is a transitive godan verb ending in ぐ: しのぎます, しのいで, しのいだ, しのがない."), "endure-word-05")
+             section("How the kanji combine")
+-            show(articleBullet("准 modifies the rank head 教授, marking the associate rank. Within 教授, 教 contributes teaching and 授 contributes imparting knowledge. The on-readings are ジュン + キョウ + ジュ. Learn the whole institutional title rather than translating it as \"half a professor.\""), "word-07")
++            show(articleBullet("凌 supplies the enduring or surpassing idea. The native verb is しのぐ: ぐ is written as okurigana, while 凌 represents しの-. The same word, not a different reading, has both meaning branches."), "endure-word-07")
+             section("Synonyms and antonyms")
+-            show(articleBullet("助教授 じょきょうじゅ is the former Japanese title replaced by 准教授 in April 2007. It remains relevant when reading older documents."), "word-09")
+-            show(articleBullet("助教 じょきょう, often translated \"assistant professor,\" is a separate rank, not an abbreviation of 准教授."), "word-10")
+-            show(articleBullet("助手 じょしゅ means assistant and has its own academic uses. It does not by itself identify someone as a 准教授."), "word-11")
+-            show(articleBullet("教授 きょうじゅ names the professor rank; 先生 せんせい is a broader designation or respectful form of address."), "word-12")
+-            show(articleBullet("These are role and title comparisons, not strict antonyms."), "word-13")
++            show(articleBullet("こらえる and 我慢 (がまん), with する, overlap in endurance. Their restraint uses do not all transfer to 凌ぐ. 凌駕 (りょうが), with する, overlaps with the surpassing branch, not with sheltering from the weather."), "endure-word-09")
++            show(articleBullet("忍ぶ (しのぶ) is a separate verb that can also mean endure. Its ending is ぶ, not 凌ぐ's ぐ: do not confuse しのいで with しのんで."), "endure-word-10")
+             section("Distinctive meaning")
+-            show(articleBullet("准教授 is a rank noun, not a verb meaning \"work as an associate professor.\" Use 准教授です (じゅんきょうじゅです) to state the role. The separate teaching/instruction sense of 教授する does not license 准教授する for having this job."), "word-15")
+-            show(articleBullet("The English label \"associate professor\" is useful, but rank systems and employment conditions differ between countries and institutions. Do not assume an exact international equivalence or an automatic future promotion. JMdict also lists the spelling 準教授 with the same reading; 准教授 is the current Japanese university title used here."), "word-16")
+-            show(articleBullet("Dictionary: JMdict, entry 2178020; comparisons 1237160, 1344540, 1344550, 1344650 and 1387990. Japanese rank and April 2007 reform: Nipponica and 大学事典: 准教授."), "word-17")
++            show(articleBullet("Getting through a difficulty does not by itself promise a permanent solution. Conversely, 凌ぐ is not restricted to brief emergencies. In a comparison, it means going above the other thing, not merely matching it. The weather phrase above expresses protection or endurance; the masterpiece phrase expresses comparative quality."), "endure-word-12")
++            show(articleBullet("Dictionary: JMdict, entry 1554200, senses 1–3; comparisons 2827352, 1196970, 1606270 and 1467450. Usage and short example phrases: Digital Daijisen: 凌ぐ, senses 2 and 4."), "endure-word-13")
+             section("How the kanji combine")
+-            show(articleBullet("准 modifies the rank head 教授, marking the associate rank. Within 教授, 教 contributes teaching and 授 contributes imparting knowledge. The on-readings are ジュン + キョウ + ジュ. Learn the whole institutional title rather than translating it as \"half a professor.\""), "word-reverse-27")
+-            inline(await(articleBullet("准 modifies the rank head 教授, marking the associate rank. Within 教授, 教 contributes teaching and 授 contributes imparting knowledge. The on-readings are ジュン + キョウ + ジュ. Learn the whole institutional title rather than translating it as \"half a professor.\"")), "准", 0)
++            show(articleBullet("凌 supplies the enduring or surpassing idea. The native verb is しのぐ: ぐ is written as okurigana, while 凌 represents しの-. The same word, not a different reading, has both meaning branches."), "endure-word-reverse-24")
++            inline(await(articleBullet("凌 supplies the enduring or surpassing idea. The native verb is しのぐ: ぐ is written as okurigana, while 凌 represents しの-. The same word, not a different reading, has both meaning branches.")), "凌", 0)
+             await("Article contents")
+             section("Readings")
+-            show(readingExample("ジュン"), "kanji-backlink")
+-            back()
+-            await(articleBullet("准 modifies the rank head 教授, marking the associate rank. Within 教授, 教 contributes teaching and 授 contributes imparting knowledge. The on-readings are ジュン + キョウ + ジュ. Learn the whole institutional title rather than translating it as \"half a professor.\"")).assertIsDisplayed()
++            show(readingExample("リョウ"), "endure-word-kanji-backlink")
++            back()
++            await(articleBullet("凌 supplies the enduring or surpassing idea. The native verb is しのぐ: ぐ is written as okurigana, while 凌 represents しの-. The same word, not a different reading, has both meaning branches.")).assertIsDisplayed()
+             section("How the kanji combine")
+-            capture("system-back-to-word")
++            capture("endure-word-system-back-to-word")
++            back()
++            await(articleBullet("凌ぐ しのぐ — endure or pull through; surpass")).assertIsDisplayed()
++            section("Common words")
++            capture("endure-word-system-back-to-kanji")
++            section("Common words")
++            show(articleBullet("凌駕 りょうが — surpassing; outdoing, also with する"), "surpass-word-forward-25")
++            inline(await(articleBullet("凌駕 りょうが — surpassing; outdoing, also with する")), "凌駕", 0)
++            await("Article contents")
++            await("凌駕 (りょうが) — surpass; outdo")
++            section("Meaning")
++            show(articleBullet("凌駕 names surpassing or outdoing another thing. It is a noun and a する-verb: 凌駕する, 凌駕します, 凌駕した, 凌駕しない. The thing surpassed takes を."), "surpass-word-02")
++            show(articleBullet("前作を凌駕する売れ行き (ぜんさくをりょうがするうれゆき) — sales surpassing those of the previous work"), "surpass-word-03")
++            show(articleBullet("Here the comparison concerns sales, not a claim that the new work is artistically better. The context determines the dimension being compared."), "surpass-word-04")
+             section("How the kanji combine")
+-            show(articleBullet("准 modifies the rank head 教授, marking the associate rank. Within 教授, 教 contributes teaching and 授 contributes imparting knowledge. The on-readings are ジュン + キョウ + ジュ. Learn the whole institutional title rather than translating it as \"half a professor.\""), "teach-forward-28")
+-            inline(await(articleBullet("准 modifies the rank head 教授, marking the associate rank. Within 教授, 教 contributes teaching and 授 contributes imparting knowledge. The on-readings are ジュン + キョウ + ジュ. Learn the whole institutional title rather than translating it as \"half a professor.\"")), "教", 68)
++            show(articleBullet("凌 contributes surpassing, read リョウ here. 駕 (ガ) also has a rising-above-others sense, documented with this compound. The two reinforce the surpassing idea; do not force 駕's separate vehicle meaning into a literal story about this word."), "surpass-word-06")
++            section("Synonyms and antonyms")
++            show(articleBullet("凌ぐ (しのぐ) overlaps in surpassing, but also has endurance and weather-protection uses that 凌駕 does not share. 優れる (すぐれる) describes excellence or superiority; it is an intransitive verb, so its grammar is not 凌駕する's object + を pattern."), "surpass-word-08")
++            show(articleBullet("上回る (うわまわる), \"exceed; surpass,\" also suits numerical comparisons. These related words are not unrestricted substitutes in every phrase."), "surpass-word-09")
++            section("Distinctive meaning")
++            show(articleBullet("凌駕する means going above the comparison target, not simply reaching the same level. Identify what is surpassed and in what respect. It is not a general expression for surviving a hardship."), "surpass-word-11")
++            show(articleBullet("陵駕 (りょうが) is also recognized, but JMdict marks that spelling as rarely used. This does not make the pronunciation りょうが rare or make 凌 and 陵 freely interchangeable elsewhere."), "surpass-word-12")
++            show(articleBullet("Dictionary: JMdict, entry 1606270; comparisons 1554200, 1539080 and 1352770. Usage and short example phrase: Digital Daijisen: 凌駕. 駕's contribution: Digital Daijisen: 駕, character-entry sense 2."), "surpass-word-13")
++            section("How the kanji combine")
++            show(articleBullet("凌 contributes surpassing, read リョウ here. 駕 (ガ) also has a rising-above-others sense, documented with this compound. The two reinforce the surpassing idea; do not force 駕's separate vehicle meaning into a literal story about this word."), "surpass-word-reverse-35")
++            inline(await(articleBullet("凌 contributes surpassing, read リョウ here. 駕 (ガ) also has a rising-above-others sense, documented with this compound. The two reinforce the surpassing idea; do not force 駕's separate vehicle meaning into a literal story about this word.")), "凌", 0)
+             await("Article contents")
+-            await("教 — teach, instruct")
++            section("Readings")
++            show(readingExample("リョウ"), "surpass-word-kanji-backlink")
++            back()
++            await(articleBullet("凌 contributes surpassing, read リョウ here. 駕 (ガ) also has a rising-above-others sense, documented with this compound. The two reinforce the surpassing idea; do not force 駕's separate vehicle meaning into a literal story about this word.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("surpass-word-system-back-to-word")
++            back()
++            await(articleBullet("凌駕 りょうが — surpassing; outdoing, also with する")).assertIsDisplayed()
+             section("Common words")
+-            show(articleBullet("准教授 じゅんきょうじゅ — associate professor"), "teach-reverse-29")
+-            inline(await(articleBullet("准教授 じゅんきょうじゅ — associate professor")), "准教授", 0)
+-            await("Article contents")
+-            await("准教授 (じゅんきょうじゅ) — associate professor")
+-            back()
+-            await(articleBullet("准教授 じゅんきょうじゅ — associate professor")).assertIsDisplayed()
+-            section("Common words")
+-            capture("system-back-to-teach")
+-            back()
+-            await(articleBullet("准 modifies the rank head 教授, marking the associate rank. Within 教授, 教 contributes teaching and 授 contributes imparting knowledge. The on-readings are ジュン + キョウ + ジュ. Learn the whole institutional title rather than translating it as \"half a professor.\"")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("system-back-to-word-from-teach")
+-            section("Synonyms and antonyms")
+-            show(articleBullet("助教授 じょきょうじゅ is the former Japanese title replaced by 准教授 in April 2007. It remains relevant when reading older documents."), "former-forward-30")
+-            inline(await(articleBullet("助教授 じょきょうじゅ is the former Japanese title replaced by 准教授 in April 2007. It remains relevant when reading older documents.")), "助教授", 0)
+-            await("Article contents")
+-            await("助教授 (じょきょうじゅ) - associate professor (former Japanese title)")
+-            section("Meaning")
+-            show(articleBullet("助教授 names a former Japanese university or college rank below 教授, professor. The Japanese rank was renamed 准教授 (じゅんきょうじゅ), associate professor, in April 2007. Read 助教授 in its historical or institutional context."), "successor-reverse-31")
+-            inline(await(articleBullet("助教授 names a former Japanese university or college rank below 教授, professor. The Japanese rank was renamed 准教授 (じゅんきょうじゅ), associate professor, in April 2007. Read 助教授 in its historical or institutional context.")), "准教授", 106)
+-            await("Article contents")
+-            await("准教授 (じゅんきょうじゅ) — associate professor")
+-            back()
+-            await(articleBullet("助教授 names a former Japanese university or college rank below 教授, professor. The Japanese rank was renamed 准教授 (じゅんきょうじゅ), associate professor, in April 2007. Read 助教授 in its historical or institutional context.")).assertIsDisplayed()
+-            section("Meaning")
+-            capture("system-back-to-former-title")
+-            back()
+-            await(articleBullet("助教授 じょきょうじゅ is the former Japanese title replaced by 准教授 in April 2007. It remains relevant when reading older documents.")).assertIsDisplayed()
+-            section("Synonyms and antonyms")
+-            capture("system-back-to-current-title")
+-            back()
+-            await(articleBullet("准教授 じゅんきょうじゅ — associate professor")).assertIsDisplayed()
+-            section("Common words")
+-            capture("system-back-to-kanji")
++            capture("surpass-word-system-back-to-kanji")
+             back()
+             await("Search kanji, meaning or reading")
+@@ -357,20 +350,19 @@
+             evidence.put("reciprocalLinkAndSystemBack", true)
+                 .put("mappedReciprocalPairs", 2).put("directedLinkTransitions", 4)
+-                .put("comparisonPairs", 1).put("comparisonLinkTransitions", 2)
++                .put("completeArticleProjections", 3)
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Meaning quiz"))))
+             rule.waitUntil(30_000) { (model("quiz:") as? QuizViewModel)?.ui is QuizUi.Question }
+             val quiz = model("quiz:") as QuizViewModel
+             val meaning = quiz.ui as QuizUi.Question
+-            assertEquals("准", meaning.card.kanji)
++            assertEquals("凌", meaning.card.kanji)
+             val expectedMeanings = mapOf(
++                "凌" to "endure; surpass",
+                 "准" to "quasi-; associate rank",
+-                "冴" to "clear; sharp-minded",
+                 "冶" to "smelt; work metals",
+-                "隼" to "falcon",
++                "次" to "next",
+             )
+             assertEquals(4, meaning.options.size)
+             assertEquals(expectedMeanings, meaning.options.associate { it.kanji to it.title })
+-            assertFalse(meaning.options.any { it.kanji == "倣" })
+-            assertEquals(listOf("冴", "冶", "隼"), meaning.card.distractors.splitSep())
++            assertEquals(listOf("准", "冶", "次"), meaning.card.distractors.splitSep())
+             for (option in meaning.options) await(option.title).assertIsDisplayed()
+             evidence.put("exactDefaultMeaningOptions", JSONArray().also { options ->
+@@ -380,7 +372,7 @@
+             }).put("exactCuratedChoicesWithoutFallback", true)
+             capture("meaning-question")
+-            click("quasi-; associate rank")
++            click("endure; surpass")
+             await("Correct!")
+-            assertEquals("准", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("凌", (quiz.ui as QuizUi.Answer).card.kanji)
+             capture("meaning-feedback")
+             back()
+@@ -388,12 +380,11 @@
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Readings (on'yomi and kun'yomi)"))))
+             val answeredKinds = mutableSetOf<ReadingKind>()
+-            repeat(1) {
++            repeat(2) {
+                 rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Question }
+                 val reading = model("kreading:") as KanjiReadingViewModel
+                 val question = reading.ui as ReadingUi.Question
+-                assertEquals("准", question.card.kanji)
++                assertEquals("凌", question.card.kanji)
+                 assertTrue("Duplicate target reading kind", answeredKinds.add(question.question.kind))
+-                assertEquals(ReadingKind.On, question.question.kind)
+-                val key = "じゅん"
++                val key = if (question.question.kind == ReadingKind.On) "りょう" else "しのぐ"
+                 assertEquals(key, question.question.correctKey)
+                 assertFalse(question.question.options.any { it.key.isBlank() })
+@@ -406,33 +397,33 @@
+                 click("Next")
+                 rule.waitUntil(30_000) { runBlocking {
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "准" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "凌" &&
+                         log.mode == question.question.kind.mode.name && log.reading == key && log.grade == 3 }
+                 } }
+             }
+-            assertEquals(setOf(ReadingKind.On), answeredKinds)
++            assertEquals(setOf(ReadingKind.On, ReadingKind.Kun), answeredKinds)
+             rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Done }
+             val done = (model("kreading:") as KanjiReadingViewModel).ui as ReadingUi.Done
+-            assertEquals(1, done.answered)
+-            assertEquals(1, done.correct)
++            assertEquals(2, done.answered)
++            assertEquals(2, done.correct)
+             val readingLogs = runBlocking {
+-                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "准" &&
++                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "凌" &&
+                     it.mode in setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name) }
+             }
+-            assertEquals(1, readingLogs.size)
+-            assertEquals(setOf("じゅん"), readingLogs.map { it.reading }.toSet())
+-            capture("curated-on-done")
++            assertEquals(2, readingLogs.size)
++            assertEquals(setOf("りょう", "しのぐ"), readingLogs.map { it.reading }.toSet())
++            capture("curated-on-kun-done")
+             back()
+             await("Meaning quiz")
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Drawing"))))
+             await("Trace the kanji for")
+-            await("quasi-; associate rank").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "准") })
+-            assertEquals(listOf("冴", "冶", "隼"), card.distractors.splitSep())
+-            assertEquals(listOf("ジュン"), card.onyomi.splitSep())
+-            assertEquals(emptyList<String>(), card.kunyomi.splitSep())
++            await("endure; surpass").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "凌") })
++            assertEquals(listOf("准", "冶", "次"), card.distractors.splitSep())
++            assertEquals(listOf("リョウ"), card.onyomi.splitSep())
++            assertEquals(listOf("しの.ぐ"), card.kunyomi.splitSep())
+             assertNotNull(card.quizOnyomi)
+             assertNotNull(card.quizKunyomi)
+-            assertEquals(listOf("ジュン"), card.quizOnyomi?.splitSep())
+-            assertEquals(emptyList<String>(), card.quizKunyomi?.splitSep())
++            assertEquals(listOf("リョウ"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("しの.ぐ"), card.quizKunyomi?.splitSep())
+             evidence.put("fullProjectionOnyomi", JSONArray(card.onyomi.splitSep()))
+                 .put("fullProjectionKunyomi", JSONArray(card.kunyomi.splitSep()))
+@@ -462,5 +453,5 @@
+             assertFalse(runBlocking {
+                 app.db.reviews().allLog().any { it.sourceId == source.id &&
+-                    it.kanji == "准" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "凌" && it.mode == StudyMode.Draw.name }
+             })
+             await("Correct strokes").performScrollTo().assertIsDisplayed()
+@@ -473,5 +464,5 @@
+             click("Next")
+             rule.waitUntil(30_000) { runBlocking {
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "准" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "凌" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+             } }
+             back()
+@@ -481,11 +472,11 @@
+             assertEquals(1, archiveRequests)
+             evidence.put("meaningQuestionAndFeedback", true)
+-                .put("soleCuratedOnPersistedGoodAndDone", true)
++                .put("bothCuratedKindsPersistedGoodAndDone", true)
+                 .put("touchInjectedReferenceStrokes", strokes.length())
+                 .put("drawingTraceThenRecall", true).put("drawingGradeRecordedOnNext", true)
+                 .put("offline", true).put("passed", true)
+         } finally {
+-            File(app.getExternalFilesDir(null), "n1-082-corrected-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-082-corrected-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-083-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-083-article-tree.txt").writeText(rule.onRoot().printToString())
+             scenario.close()
+         }
+@@ -580,5 +571,5 @@
+         rule.waitForIdle()
+         val bitmap = requireNotNull(automation.takeScreenshot())
+-        File(app.getExternalFilesDir(null), "n1-082-corrected-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-083-$step.png").outputStream().use {
+             assertTrue(bitmap.compress(Bitmap.CompressFormat.PNG, 100, it))
+         }

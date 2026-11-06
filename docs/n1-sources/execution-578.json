@@ -1,0 +1,436 @@
+{
+  "schemaVersion": 1,
+  "execution": 578,
+  "batch": "083",
+  "status": "corrected-native-passed-awaiting-original-family-visual-confirmation",
+  "startingState": {
+    "execution": 578,
+    "batch": "083",
+    "startedAt": "2026-11-06T16:40:09.461809+00:00",
+    "startingHead": "3b1f6ccb93834bb69ba53bce0c81f4d8079980a7",
+    "androidHead": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+    "freshOriginMain": "21a5cb1328aadd437139a6b850f07298a2e2985d",
+    "scope": "SAME083 corrected frozen native execution and direct PNG inspection, signed LOCAL evidence checkpoint; no reviewer/integration/publication/084.",
+    "request": {
+      "sha256": "1f3e22f738f247cc32282c35f05b597279daaddde882233bd1d5618c5a3025a8",
+      "characters": 2726745,
+      "lines": 36290,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request loaded and checkpoint parsed; operative contract, complete approved issue and final577 inspected directly. Historical middle parsed, not freshly semantically re-reviewed."
+    },
+    "runnerLockRole": "Live parent19008 verified in coordinator ancestry; no child lock open/acquire/delete/unlock.",
+    "optionalHistoricalSessionHelpersAccessed": false,
+    "actualNewPermissionDenials": []
+  },
+  "contentSnapshot": "867fe8bef228145ef0a6e48690941b0a0aa50336",
+  "teachingSnapshot": "7cc896f488ae5315046453777aae6768b9ff18e8",
+  "coordinatorHead": "3b1f6ccb93834bb69ba53bce0c81f4d8079980a7",
+  "androidHead": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+  "productionBaseline": "f9b59a2bc5a203c6b4de26be50021a4c720dc22c",
+  "nativeAcceptance": {
+    "execution": 578,
+    "status": "corrected-native-passed-awaiting-original-family-visual-confirmation",
+    "contentSnapshot": "867fe8bef228145ef0a6e48690941b0a0aa50336",
+    "teachingSnapshot": "7cc896f488ae5315046453777aae6768b9ff18e8",
+    "contentVersion": "6dfe6a1e287ce5df",
+    "androidHead": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+    "nativeReceipt": {
+      "execution": 578,
+      "batch": "083",
+      "attempt": "corrected-578",
+      "startedAt": "2026-11-06T17:40:09.9386042+01:00",
+      "serial": "emulator-5580",
+      "contentSnapshot": "867fe8bef228145ef0a6e48690941b0a0aa50336",
+      "androidSnapshot": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+      "coordinatorHead": "3b1f6ccb93834bb69ba53bce0c81f4d8079980a7",
+      "appApk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-083-corrected-577-native-app.apk",
+      "appApkSha256": "0224e8e3f8c744a554da173ec20f133d5d00cb6b6226b001da5ea030856bd407",
+      "testApk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-083-corrected-577-native-test.apk",
+      "testApkSha256": "4267d9e11f3b165fbba36c615a4e3fc267fbddf330f8f6a9b8f31dba6f525e11",
+      "fixtureSha256": "b497f60f2cffa7ead39fec48430b3d609f71957a58d3cc21493cdaf998ccf22e",
+      "archiveSha256": "f237301d3a51144356f9b77df20e829c56b5f040c1db8ae3dc7bc131ac428811",
+      "nativeExecuted": true,
+      "passed": true,
+      "failure": null,
+      "hostHeapInitUsed": false,
+      "guestOrAppHeapChanged": false,
+      "guardsChanged": false,
+      "parentLockTouched": false,
+      "parentAncestry": [
+        {
+          "ProcessId": 21584,
+          "ParentProcessId": 23096,
+          "Name": "pwsh.exe"
+        },
+        {
+          "ProcessId": 23096,
+          "ParentProcessId": 19008,
+          "Name": "copilot.exe"
+        },
+        {
+          "ProcessId": 19008,
+          "ParentProcessId": 30364,
+          "Name": "pwsh.exe"
+        }
+      ],
+      "preexistingEmulators": [],
+      "prelaunch": {
+        "verifiedAt": "2026-11-06T17:40:12.4267717+01:00",
+        "connections": [],
+        "devices": "List of devices attached\r\n\r\n"
+      },
+      "parentEmulatorPid": 20588,
+      "emulatorArguments": [
+        "-avd",
+        "N3_Acceptance_20261029",
+        "-port",
+        "5580",
+        "-read-only",
+        "-no-snapshot",
+        "-no-window",
+        "-no-audio",
+        "-gpu",
+        "host",
+        "-feature",
+        "-Vulkan",
+        "-memory",
+        "2048",
+        "-cores",
+        "2"
+      ],
+      "qemuPid": 27704,
+      "listeners": [
+        {
+          "LocalPort": 5581,
+          "OwningProcess": 27704
+        },
+        {
+          "LocalPort": 5580,
+          "OwningProcess": 27704
+        },
+        {
+          "LocalPort": 5581,
+          "OwningProcess": 27704
+        },
+        {
+          "LocalPort": 5580,
+          "OwningProcess": 27704
+        }
+      ],
+      "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+      "heapGrowth": "192m",
+      "heapSize": "576m",
+      "network": "Active default network: none",
+      "instrumentationCommand": "adb -s emulator-5580 shell am instrument -w -r -e n1Disposable true -e class io.github.stopcran.kanji.ui.N1Batch083CorrectedGlyphTest,io.github.stopcran.kanji.ui.N1Batch083CorrectedArticleTest io.github.stopcran.kanji.test/androidx.test.runner.AndroidJUnitRunner",
+      "adbExitCode": 0,
+      "terminalSuccessCases": 2,
+      "artifacts": [
+        "n1-083-corrected-article-route.json",
+        "n1-083-corrected-article-tree.txt",
+        "n1-083-corrected-curated-Kun-feedback.png",
+        "n1-083-corrected-curated-Kun-question.png",
+        "n1-083-corrected-curated-On-feedback.png",
+        "n1-083-corrected-curated-On-question.png",
+        "n1-083-corrected-curated-on-kun-done.png",
+        "n1-083-corrected-drawing-feedback.png",
+        "n1-083-corrected-drawing-recall-feedback.png",
+        "n1-083-corrected-drawing-trace.png",
+        "n1-083-corrected-endure-word-02.png",
+        "n1-083-corrected-endure-word-03.png",
+        "n1-083-corrected-endure-word-04.png",
+        "n1-083-corrected-endure-word-05.png",
+        "n1-083-corrected-endure-word-07.png",
+        "n1-083-corrected-endure-word-09.png",
+        "n1-083-corrected-endure-word-10.png",
+        "n1-083-corrected-endure-word-12.png",
+        "n1-083-corrected-endure-word-13.png",
+        "n1-083-corrected-endure-word-forward-14.png",
+        "n1-083-corrected-endure-word-kanji-backlink.png",
+        "n1-083-corrected-endure-word-reverse-24.png",
+        "n1-083-corrected-endure-word-system-back-to-kanji.png",
+        "n1-083-corrected-endure-word-system-back-to-word.png",
+        "n1-083-corrected-font-panel-1.png",
+        "n1-083-corrected-font-panel-2.png",
+        "n1-083-corrected-font-panel-3.png",
+        "n1-083-corrected-font-raster.json",
+        "n1-083-corrected-kanji-01.png",
+        "n1-083-corrected-kanji-03.png",
+        "n1-083-corrected-kanji-04.png",
+        "n1-083-corrected-kanji-09.png",
+        "n1-083-corrected-kanji-11.png",
+        "n1-083-corrected-kanji-12.png",
+        "n1-083-corrected-kanji-14.png",
+        "n1-083-corrected-kanji-15.png",
+        "n1-083-corrected-kanji-17.png",
+        "n1-083-corrected-kanji-18.png",
+        "n1-083-corrected-kanji-20.png",
+        "n1-083-corrected-kanji-21.png",
+        "n1-083-corrected-kanji-22.png",
+        "n1-083-corrected-kanji-23.png",
+        "n1-083-corrected-meaning-feedback.png",
+        "n1-083-corrected-meaning-question.png",
+        "n1-083-corrected-selection.png",
+        "n1-083-corrected-surpass-word-02.png",
+        "n1-083-corrected-surpass-word-03.png",
+        "n1-083-corrected-surpass-word-04.png",
+        "n1-083-corrected-surpass-word-06.png",
+        "n1-083-corrected-surpass-word-08.png",
+        "n1-083-corrected-surpass-word-09.png",
+        "n1-083-corrected-surpass-word-11.png",
+        "n1-083-corrected-surpass-word-12.png",
+        "n1-083-corrected-surpass-word-13.png",
+        "n1-083-corrected-surpass-word-forward-25.png",
+        "n1-083-corrected-surpass-word-kanji-backlink.png",
+        "n1-083-corrected-surpass-word-reverse-35.png",
+        "n1-083-corrected-surpass-word-system-back-to-kanji.png",
+        "n1-083-corrected-surpass-word-system-back-to-word.png"
+      ],
+      "stopAdbExitCode": 0,
+      "ownedHelperStopped": true,
+      "ownedQemuStopped": true,
+      "completedAt": "2026-11-06T17:45:08.7302677+01:00"
+    },
+    "independentlyParsedTerminalCases": [
+      {
+        "class": "io.github.stopcran.kanji.ui.N1Batch083CorrectedGlyphTest",
+        "test": "enduranceLookalikesAndRadicalFallbacksAcrossFourProductionFamilies",
+        "status": 0
+      },
+      {
+        "class": "io.github.stopcran.kanji.ui.N1Batch083CorrectedArticleTest",
+        "test": "fullSingleImportOfflineEnduranceTwoReciprocalPairsCuratedOnAndKunDrawingAndSystemBack",
+        "status": 0
+      }
+    ],
+    "nativeAcceptancePassed": true,
+    "passedCases": 2,
+    "failedCases": 0,
+    "skippedCases": 0,
+    "route": {
+      "contentSnapshot": "867fe8bef228145ef0a6e48690941b0a0aa50336",
+      "contentVersion": "6dfe6a1e287ce5df",
+      "archiveRequests": 1,
+      "importedKanji": 1095,
+      "importedWords": 5052,
+      "problems": 0,
+      "n1Cards": 115,
+      "acceptedReadingParserEpoch": 1,
+      "fullOnyomi": [
+        "\u30ea\u30e7\u30a6"
+      ],
+      "fullKunyomi": [
+        "\u3057\u306e.\u3050"
+      ],
+      "quizOnKeys": [
+        "\u308a\u3087\u3046"
+      ],
+      "quizKunKeys": [
+        "\u3057\u306e\u3050"
+      ],
+      "liteQuizOnyomi": [
+        "\u30ea\u30e7\u30a6"
+      ],
+      "liteQuizKunyomi": [
+        "\u3057\u306e.\u3050"
+      ],
+      "productionBuilderN1AndAllExactChoices": {
+        "N1": {
+          "poolSize": 115,
+          "options": [
+            {
+              "kanji": "\u51b4",
+              "title": "clear; sharp-minded"
+            },
+            {
+              "kanji": "\u51b6",
+              "title": "smelt; work metals"
+            },
+            {
+              "kanji": "\u51cc",
+              "title": "endure; surpass"
+            },
+            {
+              "kanji": "\u51c6",
+              "title": "quasi-; associate rank"
+            }
+          ],
+          "allThreeCuratedAvailable": true,
+          "defaultFourNoPadding": true
+        },
+        "All": {
+          "poolSize": 1095,
+          "options": [
+            {
+              "kanji": "\u51b6",
+              "title": "smelt; work metals"
+            },
+            {
+              "kanji": "\u51c6",
+              "title": "quasi-; associate rank"
+            },
+            {
+              "kanji": "\u51cc",
+              "title": "endure; surpass"
+            },
+            {
+              "kanji": "\u51b4",
+              "title": "clear; sharp-minded"
+            }
+          ],
+          "allThreeCuratedAvailable": true,
+          "defaultFourNoPadding": true
+        }
+      },
+      "transport": "Exact full git envelope through production ContentSync ONCE; synthetic source/HEAD",
+      "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+      "sdk": 35,
+      "fixture": "Other N1 meanings/readings postponed; \u51cc meaning and curated on\u308a\u3087\u3046/kun\u3057\u306e\u3050 due. Two historical good \u51cc meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.",
+      "phoneEvidence": false,
+      "passed": true,
+      "reciprocalLinkAndSystemBack": true,
+      "mappedReciprocalPairs": 2,
+      "directedLinkTransitions": 4,
+      "completeArticleProjections": 3,
+      "exactDefaultMeaningOptions": [
+        {
+          "kanji": "\u51b6",
+          "title": "smelt; work metals"
+        },
+        {
+          "kanji": "\u51cc",
+          "title": "endure; surpass"
+        },
+        {
+          "kanji": "\u51b4",
+          "title": "clear; sharp-minded"
+        },
+        {
+          "kanji": "\u51c6",
+          "title": "quasi-; associate rank"
+        }
+      ],
+      "exactCuratedChoicesWithoutFallback": true,
+      "fullProjectionOnyomi": [
+        "\u30ea\u30e7\u30a6"
+      ],
+      "fullProjectionKunyomi": [
+        "\u3057\u306e.\u3050"
+      ],
+      "fullProjectionQuizOnyomi": [
+        "\u30ea\u30e7\u30a6"
+      ],
+      "fullProjectionQuizKunyomi": [
+        "\u3057\u306e.\u3050"
+      ],
+      "meaningQuestionAndFeedback": true,
+      "bothCuratedKindsPersistedGoodAndDone": true,
+      "touchInjectedReferenceStrokes": 10,
+      "drawingTraceThenRecall": true,
+      "drawingGradeRecordedOnNext": true,
+      "offline": true
+    },
+    "glyphProbes": {
+      "individual": 120,
+      "wholeWord": 8,
+      "fonts": 4,
+      "distinctHan": 30,
+      "allIndividualHasGlyph": true,
+      "distinctIndividualRasterHashesWithinEachFont": true
+    },
+    "directPngInspection": {
+      "reviewer": "Coordinator GPT-6.1 Sol (gpt-6.1-sol)",
+      "independentReviewer": false,
+      "files": [
+        "n1-083-corrected-font-panel-1.png",
+        "n1-083-corrected-font-panel-2.png",
+        "n1-083-corrected-font-panel-3.png",
+        "n1-083-corrected-meaning-question.png",
+        "n1-083-corrected-meaning-feedback.png",
+        "n1-083-corrected-curated-On-question.png",
+        "n1-083-corrected-curated-On-feedback.png",
+        "n1-083-corrected-curated-Kun-question.png",
+        "n1-083-corrected-curated-Kun-feedback.png",
+        "n1-083-corrected-curated-on-kun-done.png",
+        "n1-083-corrected-drawing-trace.png",
+        "n1-083-corrected-drawing-feedback.png",
+        "n1-083-corrected-drawing-recall-feedback.png",
+        "n1-083-corrected-selection.png",
+        "n1-083-corrected-kanji-21.png",
+        "n1-083-corrected-endure-word-05.png",
+        "n1-083-corrected-surpass-word-12.png",
+        "n1-083-corrected-endure-word-system-back-to-kanji.png",
+        "n1-083-corrected-surpass-word-system-back-to-word.png"
+      ],
+      "savedPngCount": 56,
+      "directlyInspectedPngCount": 19,
+      "notDirectlyInspectedPngCount": 37,
+      "observation": "All 30 Han and both whole words visibly nonblank across four production families in three panels. \u51cc/\u9675/\u51c6/\u51b6/\u51b4/\u6b21 and \u51ab/\u590c/\u961d/\u96b9 distinguishable at captured size; fallback forms may coincide across families. Exact four meaning labels visible with endure;surpass correct. On\u30ea\u30e7\u30a6 and kun\u3057\u306e\u3050 questions/feedback and 2-of-2 completion legible. Ten-stroke drawing/reference feedback and giveup recall visible. Three sampled article frames and two Back frames show readable text and component/spelling guidance.",
+      "limits": "Only 19 listed PNGs directly inspected, not all56 or independent two-family visual confirmation. Captured viewport is not whole-article simultaneous visibility or physical-phone/native-speaker/fallback-face identity certification. Drawing screenshot explicitly says handwriting model unavailable; injected reference tracing and giveup are not human recognition or MLKit acceptance."
+    },
+    "artifactIndex": "docs/n1-reviews/batch-083-native-corrected/attempt-578/artifact-index.json",
+    "artifactIndexSha256": "108c1b45a07a6e388201cc2fcc93e1ed224aa236b41b3ee596873ec37d7d6b52",
+    "choiceFinding": {
+      "id": "083-NATIVE-574-CHOICE",
+      "status": "resolved",
+      "textualDisposition": "resolved in576",
+      "boundedRuntimeDisposition": "resolved in578",
+      "evidence": "Exact default-four ID/title sets now passed in production QuizBuilder on full imported N1 and All, and actual N1 UI question/feedback. Original574 failure remains immutable.",
+      "limits": "Independent visual confirmation and combined-tree publication acceptance remain. No All UI/custom/random/padded/partial/larger/reverse-pool safety claim."
+    },
+    "independentVisualConfirmation": "outstanding",
+    "runtimeAccepted": false,
+    "runtimePublished": false
+  },
+  "provenance": [
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\execution-578.py",
+      "archive": "docs/n1-reviews/batch-083-native-corrected/attempt-578/provenance/execution-578.py",
+      "sha256": "6b401537295a3dea9a5c7466c93bc9499327dd892872a9dc25ea36f31aff6af3"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\run-578-native.ps1",
+      "archive": "docs/n1-reviews/batch-083-native-corrected/attempt-578/provenance/run-578-native.ps1",
+      "sha256": "3eb27c2370a2d9e024c4259221d50fbbb69cae233d74c876e39dc77311a373f5"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\runner-lock-role-notes.txt",
+      "archive": "docs/n1-reviews/batch-083-native-corrected/attempt-578/provenance/runner-lock-role-notes.txt",
+      "sha256": "067e33b37a4c6c1012bb909b02ad37850d03a216eb56cc287eee96da4f10fc0e"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\authoring-artifact-path-notes.txt",
+      "archive": "docs/n1-reviews/batch-083-native-corrected/attempt-578/provenance/authoring-artifact-path-notes.txt",
+      "sha256": "bbb5280ddf54bf52dcee5c86cd6e87b4262bf3a89bc9e2e077c4a5793a033419"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\finalize-578-diff.py",
+      "archive": "docs/n1-reviews/batch-083-native-corrected/attempt-578/provenance/finalize-578-diff.py",
+      "sha256": "c6dd08bccafa9fa4138f11880c975d7e175738f7f8a7bfcdf83412da79f9bec2"
+    },
+    {
+      "source": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\finalize-578-artifacts.py",
+      "archive": "docs/n1-reviews/batch-083-native-corrected/attempt-578/provenance/finalize-578-artifacts.py",
+      "sha256": "30d95af900d0ad4ac2a3209c10ababeebf91bc35664cf2296fd6c312f2e7bc34"
+    }
+  ],
+  "runtimeManifestHashesVerified": 8376,
+  "runtimeChanged": false,
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "hostChecksRerun": false,
+  "independentReviewersLaunched": 0,
+  "publishedAdditions": 109,
+  "remainingAdditions": 1119,
+  "lastPublishedCommit": "21a5cb1328aadd437139a6b850f07298a2e2985d",
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false,
+  "parentLockTouched": false,
+  "optionalHistoricalSessionHelpersAccessed": false,
+  "actualNewPermissionDenials": [],
+  "inheritedNextGate577PreservedVerbatim": "SAME083 corrected native execution and direct PNG inspection NEXT, then persist/yield; no publication/084. Read execution-577.json and corrected-native fixture verification. Use NEW corrected frozen archive867fe8be/version6dfe6a1e287ce5df/8376hashes, N1Batch083CorrectedGlyphTest and N1Batch083CorrectedArticleTest, corrected577app/testAPKs with exact hashes; original573/574attempt/fixtures/APKs/reports immutable. Fresh HOST4 no-skips and corrected test compilation passed; do not repeat absent new concern. SignedAndroid1c1b7bf4/G TEST-ONLY harness atop unchangedproductionf9; HOSTinit NEVER native. Require terminal0 BOTH named corrected cases/no skips/no-2/-3. ProductionContentSyncONCE/1095kanji5052words115N1/zeroProblems/acceptedepoch1; exact imported N1 AND All QuizBuilder default4 IDs+titles\u51cc/\u51c6/\u51b6/\u51b4 all3curatedavailable/no padding, plus actual N1UI meaning/feedback; no selectedpool expansion/level/algorithm/assertion weakening. Full/Lite source+curated on\u30ea\u30e7\u30a6/kun\u3057\u306e.\u3050 and independently persisted sole\u308a\u3087\u3046/\u3057\u306e\u3050. Updated30Han incl\u51b4/120individual+8wholeword/fourfonts/Paint/directComposePNG/lookalikes\u51cc\u9675\u51c6\u51b6\u51b4\u6b21/\u51ab\u590c\u961d\u96b9; complete3articles/two reciprocalpairs/fourdirections/SystemBack/offline/selection/bothreadings/tenstroketrace/recall/persistence retained. Injectedtrace/giveup NOT humanrecognition/MLKit/phone. FreshlocalANDremote5580/5581 inclTimeWait/devices/PIDs/liveparentancestry immediately before ownedreadonlyAVD N3_Acceptance_20261029 API35/hostGPU/-Vulkan/2048MiB2cores explicitserialemulator-5580; no alternateport/shareddevice interference, owned-only cleanup. One heavy process, explicitJDK17+SDK/unchangedheaps/guards. Original serial two-family dependent VISUAL confirmations still required BEFORE latest-main normalmerge/combinedPython/validator/vocabulary/manifest/exact17guards/baseline/link/membership/originalbudgets/normal signedownerfastforward/exactremote/terminalgreenCI/EVERYimmutableZIPhash/verifiedownerissue60 BEFORE084. Textual083-NATIVE-574-CHOICE resolved by originalClaudeOpus5.5+GPT6.1Sol; runtime remains partiallyresolved/outstanding. \u51b4\u3048\u308b excel-at/skillfulness retained, actualclear;sharp-minded wrong for\u51cc; no universal synonym-disjointness/random/custom/padded/partial/larger/reversepool safety. All inherited gates and original limitations retained in evidence577/576/575/574. Parent19008 runner.lock untouched; approvedcontrolhelpers/committedsources only/nooptionalhistoricalsessionhelpers. Preserve/report/yield actualnewdenial/signinghang. Published109/1228,remaining1119/latestpublic21a5cb1328aadd437139a6b850f07298a2e2985d unchanged;083notdelivered. Physicalphone/generalrelease/whole-set outstanding.",
+  "limits": "Bounded emulator native pass, not batch publication acceptance or independent visual confirmation. No teaching/production changes. Original573/574/575/576/577 sources/fixtures/APKs/archive/reports, reviewer/lookup/read-depth/process/OOM/denial/viewport/fallback/MLKit/phone/publication limitations retained. No HOST or compile rerun absent new concern.",
+  "nextGate": "SAME083 original-family dependent VISUAL confirmations NEXT, then persist/yield; no publication/084. Signed corrected native578 evidence in docs/n1-sources/execution-578.json and batch-083-native-corrected/attempt-578: BOTH corrected named cases terminal0/no skips/no-2/-3, productionContentSyncONCE1095kanji5052words115N1/version6dfe6a1e287ce5df/zeroProblems/acceptedepoch1; exact default4 productionQuizBuilder N1 AND All IDs+titles\u51cc/\u51c6/\u51b6/\u51b4 all3curatedavailable/no padding, actualN1UI meaning/feedback; Full/Lite full+curated\u30ea\u30e7\u30a6/\u3057\u306e.\u3050 and independently persisted sole\u308a\u3087\u3046/\u3057\u306e\u3050; threearticles/tworeciprocalpairs/fourdirections/SystemBack/offline/selection/teninjectedstroketrace/recall/persistence passed. Updated30Han incl\u51b4,120individual+8wholeword/fourfonts/Paint/directComposePNG. Coordinator directly inspected19of56PNGs including all3fontpanels and changedmeaning/readings/drawing/threearticleframes/Back; not all56 nor independent confirmation. Reuse original ClaudeOpus5.5 sessionce6f8ba4-518e-42b8-b0ee-bd14d3b291e9 then GPT6.1Sol session574ee3ae-411e-4a83-b00f-89b69ac61d99 serially on same signed unchanged snapshot/boundedpacket with ownoriginalfindings/exactdiff/nativeprovenance/actualPNGreads; actualmodel/readdepth/tool/process-exit evidence; no new blindinitial review absent concern. FreshHOST4/compile577 and corrected578native need no repeat absent change/newconcern. Original573/574failedattempt/fixtures/APKs/archive/reports immutable. 083-NATIVE-574-CHOICE textual+boundedruntime resolved; independent visual/batch acceptance still outstanding. \u51b4\u3048\u308b skill/excel-at secondary sense retained, actualclear;sharp-minded label assessed, no universal synonym-disjointness/random/custom/padded/partial/larger/reversepool or AllUI safety claim. Injectedreference+giveup NOT humanrecognition/MLKit/phone; offline handwritingmodel unavailable shown honestly. API35readonlyhostGPU/-Vulkan/2048MiB2cores/serial5580 parent20588qemu27704 owned-only stopped, parent19008runner.lock untouched. No native rerun now; any future need requires fresh localANDremote5580/5581 includingTimeWait/devices/PIDs/liveparentancestry before launch/noalternateport/shareddeviceinterference/unchangedheapsguards. After serialVISUAL confirmations require latest-main normalmerge/combinedPython/validator/vocabulary/manifest/exact17guards/baseline/link/membership/originalbudgets/normal signedownerfastforward/exactremote/terminalgreenCI/EVERYimmutableZIPhash/verifiedownerissue60 BEFORE084. Approvedcontrolhelpers/committedsources only/nooptionalhistoricalsessionhelpers. Preserve/report/yield actualnewdenial/signinghang; all inherited source/reviewer/process/lookup/readdepth/viewport/fallback/MLKit/OOM/denial limitations retained. Published109/1228,remaining1119/latestpublic21a5cb1328aadd437139a6b850f07298a2e2985d unchanged;083notdelivered. Physicalphone/generalrelease/whole-set outstanding.",
+  "artifactPackagingNote": "Staged whitespace check flagged two original emulator stdout lines before signing ran. Archived that raw log losslessly as .txt.gz, preserving exact source bytes/hash; no evidence trimmed."
+}
