@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "batch": "079",
+  "baseCommit": "2a6777503de6c23c2ac5582b0265dd68d224f44c",
+  "membership": ["冠"],
+  "status": "source-prepared-not-drafted",
+  "drafted": [],
+  "reviewClosed": [],
+  "published": [],
+  "sourceSnapshot": "docs/n1-source-snapshot.json",
+  "sourceReadingOrder": {
+    "onyomi": ["カン"],
+    "kunyomi": ["かんむり"]
+  },
+  "dictionaryPackets": [
+    {"selection": "batch-079-lexical-selection.json", "xml": "batch-079-jmdict.xml"},
+    {"selection": "batch-079-comparison-selection.json", "xml": "batch-079-comparison-jmdict.xml"},
+    {"selection": "batch-079-related-selection.json", "xml": "batch-079-related-jmdict.xml"}
+  ],
+  "authorInspection": {
+    "lexicalFamilies": 158,
+    "comparisonFamilies": 18,
+    "relatedFamilies": 1,
+    "dictionaryFamilyOccurrences": 177,
+    "distinctCompleteFamilies": 177,
+    "lexicalReturnedRanges": [[1,250],[251,500],[501,800],[801,1100],[1101,1400],[1401,1700],[1701,2000],[2001,2300],[2301,2550],[2551,2804]],
+    "comparisonReturnedRanges": [[1,275],[276,538]],
+    "relatedReturnedRanges": [[1,44]],
+    "rawCharacterRecords": 5,
+    "rawCharacterReturnedRanges": [[1,190],[191,368]],
+    "remainingExtractedFamiliesPending": 0,
+    "completeExistingArticlesRead": [
+      "words/冠.md", "kanji/冗.md", "kanji/完.md", "kanji/守.md", "kanji/王.md",
+      "kanji/帽.md", "kanji/元.md", "words/帽子.md", "words/蓋.md", "words/栓.md",
+      "words/被る.md", "words/トップ.md", "words/最高.md", "words/王.md", "words/カバー.md"
+    ],
+    "candidateNavigation": "Complete current word-metadata scan finds exactly words/冠.md declaring冠. Its primaryかんむり and N2 vocabulary metadata are verified against1577620. No current王冠 article or same-primaryおうかん article was found. Otherかん homophones勘/缶 are not lexical reuses. The frozen baseline candidate agrees.",
+    "limits": "All listed complete ranges/articles returned to the coordinator. This is not independent review, frequency certification, full-corpus semantic audit or fresh native rendering evidence."
+  },
+  "baselineCandidatePairs": [
+    {"kanji":"冠","article":"words/冠.md","word":"冠","primaryReading":"かんむり","status":"source-inspected-runtime-link-pending"}
+  ],
+  "currentDeclaredWordPairs": ["words/冠.md"],
+  "proposedSupportMapping": [
+    {
+      "kanji":"冠","word":"冠","article":"words/冠.md","primaryReading":"かんむり",
+      "entryId":"1577620","newArticleNecessary":false,"allWrittenKanji":["冠"],
+      "preservedWordJlpt":2,
+      "selectedSenses":"Existing senses1-3 and6 retained; existing supplementary sense5 remains explicitlyかん-restricted, not part of the primaryかんむり meaning.",
+      "readingAllocation":"Single-character exact spelling/reading. Preserve the existing primary and all original exclusions; navigation-only link at its substantive component explanation."
+    },
+    {
+      "kanji":"冠","word":"王冠","article":"words/王冠.md","primaryReading":"おうかん",
+      "entryId":"1181450","newArticleNecessary":true,"allWrittenKanji":["王","冠"],
+      "wordJlptDisposition":"Omit: no independent vocabulary-level source established.",
+      "selectedSenses":"Sense1 royal crown/diadem, with sense2 bottle cap explicitly recognized. Public Daijisen distinguishes the metal closure on a beer bottle from the royal object; do not extend to every screw cap or every lid.",
+      "readingAllocation":"Daijisen'sカン character branch explicitly lists王冠; exact complete JMdict familyおうかん plus raw王オウ confirms both components, not a kana-substring inference."
+    }
+  ],
+  "readingDispositions": [
+    {
+      "kanji":"冠","kind":"on","reading":"カン","proposedQuizSelection":true,
+      "selected":false,"sourceOnly":false,"entryIds":["1181450"],
+      "article":"words/王冠.md",
+      "reason":"Useful ordinary crown compound with independently establishedカン allocation. Needs its own linked reading row and necessary support article in the later runtime draft."
+    },
+    {
+      "kanji":"冠","kind":"kun","reading":"かんむり","proposedQuizSelection":true,
+      "selected":false,"sourceOnly":false,"entryIds":["1577620"],
+      "article":"words/冠.md",
+      "reason":"Verified existing N2 primary word supplies the exact full raw reading. Do not select or introduce additional old alternate pronunciations from the complete family."
+    }
+  ],
+  "proposedCuratedProjection": {
+    "kanji":"冠","quizOnyomi":["カン"],"quizKunyomi":["かんむり"],
+    "onKeys":["かん"],"kunKeys":["かんむり"],
+    "limits":"Mechanical mirror of production key normalization only; no079 app execution. Both full lists and their order remain unchanged."
+  },
+  "proposedReciprocalPairs": [
+    ["冠","words/冠.md"],["冠","words/王冠.md"],["王","words/王冠.md"]
+  ],
+  "proposedDirectedLinkPlan": [
+    {"from":"kanji/冠.md","to":"words/冠.md","status":"planned"},
+    {"from":"words/冠.md","to":"kanji/冠.md","status":"planned"},
+    {"from":"kanji/冠.md","to":"words/王冠.md","status":"planned"},
+    {"from":"words/王冠.md","to":"kanji/冠.md","status":"planned"},
+    {"from":"kanji/王.md","to":"words/王冠.md","status":"planned"},
+    {"from":"words/王冠.md","to":"kanji/王.md","status":"planned"}
+  ],
+  "proposedChangedReusedPassages": [
+    {
+      "article":"words/冠.md",
+      "before":"This is one kanji with the native reading かんむり.",
+      "after":"This is one [kanji](../kanji/冠.md) with the native reading かんむり.",
+      "scope":"Navigation only; preserve primary reading, N2 level, examples and all eight exclusions."
+    },
+    {
+      "article":"kanji/王.md",
+      "before":"- 王国 おうこく — kingdom",
+      "after":"- 王国 おうこく — kingdom\n- [王冠](../words/王冠.md) おうかん — royal crown; also a crown-type bottle cap",
+      "scope":"Necessary older-kanji reciprocal support link; no metadata change or new constituent reading."
+    }
+  ],
+  "proposedKanjiQuizAudit": {
+    "title":"crown; peerless",
+    "distractors":[
+      {"kanji":"冗","title":"superfluous; redundant","reason":"Same冖 upper component; excess/wordiness is not crown/headgear or foremost rank."},
+      {"kanji":"完","title":"complete","reason":"Similar元 under a different upper radical; finishing/completeness is not crown or peerlessness."},
+      {"kanji":"守","title":"guard; obey","reason":"Similar寸 under宀; protection/obedience is not crown or foremost rank."}
+    ],
+    "legacyFallbackDisposition":"Existing related帽 already has three semantically distinct curated choices;冠's headgear sense does not enter its default fourth-slot fallback. Complete/guard/origin cards also have three choices. Title scan is navigation, not global semantic certification."
+  },
+  "proposedWordQuizAudit": {
+    "newArticle":"words/王冠.md",
+    "title":"royal crown; bottle cap",
+    "directExclusions":["冠","帽子","蓋","栓"],
+    "reason":"冠 shares the crown meaning. 帽子's displayed cap label is ambiguous;蓋 explicitly covers bottle caps, and栓 covers bottle closures. Conservative direct safeguards, not unrestricted synonyms or a transitive exclusion clique.",
+    "otherInspectedComparisons":"No王 guard: ruler is not the crown. Existingカバー is a broader protective covering with no crown or cap headword sense; mere physical covering does not establish a required direct guard here. Existing冠's最高/トップ etc. guards remain, but王冠 is not itself the separateかん-restricted peerless adjective.",
+    "confusableInventory":"Current docs/confusable-words.md searched for exact冠/王冠/帽子 and closure labels. No named crown row; general clothing operationCW020 supports retainingかぶる instead of着る.",
+    "limits":"Source-stage proposal for later independent review; actual draft labels and all ordinary senses must be rechecked."
+  },
+  "proposedHanText":"冠 冖 元 寸 冗 完 守 王 王冠 冠たる 世界 最高 帽子 蓋 栓 金 宀 王は王冠をかぶっています。瓶の王冠を外しました。かんむり ウかんむり",
+  "strokePlan":"Use unchanged tools/generate_strokes.py at frozen KanjiVG revision70a0b7ae0c18ceb5cb358274b029cce0234a43bc with approved input n1-051a0-70a0b7ae.svg. Nine ordered paths must match raw KANJIDIC2 count9; no conversion in source preparation.",
+  "pinnedStrokePreparation":"batch-079-stroke-evidence.json",
+  "fontPreparation":"batch-079-font-preparation.json",
+  "sourceEvidence":"batch-079-source-evidence.json",
+  "preparationAudit":"batch-079-preparation-audit.json",
+  "fontDisposition":"35 proposed/affected Han audited. Exact冖 and宀 absent from all three main bundled cmaps and outside RareHan ranges; later actual native fallback inspection required, not presumed glyph failure. Reinventory final complete runtime draft.",
+  "publishedAdditions":105,
+  "remainingAdditions":1123,
+  "nextAction":"Same079 bounded runtime draft only, then normally signed LOCAL UNREVIEWED freeze and yield before reviewers or other later gates.",
+  "limits":"Coordinator source preparation only; zero runtime files changed. No draft, offered key, independent reviewer, Android/native/font acceptance, review closure, publication or080 started. Preserve all original source/review/process/denial/OOM/phone limitations and archive guards. Physical-phone, general-release and whole-set acceptance remain outstanding."
+}

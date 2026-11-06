@@ -37,6 +37,26 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 079: source prepared, not drafted
+
+The [source packet](n1-sources/batch-079-progress.json) bounds the next checkpoint
+to **冠**, source row 88. Its **158 complete lexical families**, 18 comparison
+families and one related family preserve all aliases, restrictions and senses.
+Existing **冠** かんむり retains its N2 vocabulary level, primary reading and
+eight exclusions. One necessary **王冠** おうかん article is proposed for
+**カン**; no vocabulary level is inferred. Both full readings remain in source
+order. Three mapped reciprocal pairs /six directions include older **王**.
+
+The [preparation audit](n1-sources/batch-079-preparation-audit.json) separates
+verified source bytes and proposed reading/link/quiz/font dispositions from
+runtime acceptance. Pinned nine-path SVG geometry is not yet converted.
+The durable recipe lives under the approved control workspace and is archived
+with the packet; optional historical session helpers are not required inputs.
+No runtime draft, independent review, fresh Android/native/font acceptance,
+publication or batch 080 is claimed. Published coverage remains **105 additions;
+1,123 remaining**. All later gates and physical-phone/general-release limits
+remain unchanged.
+
 ## Batch 078: published for bounded owner testing
 
 The [publication record](n1-sources/batch-078-publication.json) closes **冗**
