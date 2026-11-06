@@ -725,7 +725,8 @@ def checkpoint():
                                        encoding="utf-8").strip()
     issue = load(LOG / "issue-response-562.json")
     assert issue["user"]["login"] == "stop-cran"
-    assert issue["body"].strip() == (LOG / "issue-body-562.txt").read_text(encoding="utf-8").strip()
+    expected_body = (LOG / "issue-body-562.txt").read_text(encoding="utf-8")
+    assert issue["body"].replace("\r\n", "\n").strip() == expected_body.replace("\r\n", "\n").strip()
     p = load(C / "progress.json")
     before = load(LOG / "progress-before-562.json")
     assert p["checkpoint"] == 561 and p["batch"] == "082"
