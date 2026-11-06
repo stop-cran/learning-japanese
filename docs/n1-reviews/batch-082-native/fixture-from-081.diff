@@ -1,0 +1,310 @@
+--- docs\n1-reviews\batch-081-native\N1Batch081NativeTest.kt
++++ docs\n1-reviews\batch-082-native\N1Batch082NativeTest.kt
+@@ -50 +50 @@
+-private fun disposable081() {
++private fun disposable082() {
+@@ -55 +55 @@
+-class N1Batch081GlyphTest {
++class N1Batch082GlyphTest {
+@@ -58,2 +58,2 @@
+-    @Test fun smeltingLookalikesAndIceWaterFallbacksAcrossFourProductionFamilies() {
+-        disposable081()
++    @Test fun associateRankLookalikesAndRadicalFallbacksAcrossFourProductionFamilies() {
++        disposable082()
+@@ -62 +62 @@
+-        val pages = listOf("世 事 典 冫 冶 台 大 女 始 字 学 属 氵 治 溶 界 百 研 科 究 精 術 製 通", "金 鋳 錬 鍛 陶", "冶 治 台 始 冫 氵 冶金 金 鋳 錬 鍛 陶 溶")
++        val pages = listOf("中 事 備 先 典 冫 准 助 十 基 大 女 学 彼 手 批 授 教 木 氵 準 生 田 義", "聞 講 辶 進 隹 集 難", "准 準 集 進 難 冫 氵 辶 隹 准教授")
+@@ -67 +67 @@
+-                    Text("Batch 081: smelting / look-alikes / ice and water fallback")
++                    Text("Batch 082: associate rank / look-alikes / radical fallback")
+@@ -73 +73 @@
+-                    Text("Inspect all 29 scoped Han; focused 冶/治/台/始, 冫/氵. Fallback families may coincide.", fontSize = 16.sp)
++                    Text("Inspect all 31 scoped Han; focused 准/準/集/進/難, 冫/氵/辶/隹. Fallback families may coincide.", fontSize = 16.sp)
+@@ -84 +84 @@
+-            for (char in listOf("世", "事", "典", "冫", "冶", "台", "大", "女", "始", "字", "学", "属", "氵", "治", "溶", "界", "百", "研", "科", "究", "精", "術", "製", "通", "金", "鋳", "錬", "鍛", "陶")) {
++            for (char in listOf("中", "事", "備", "先", "典", "冫", "准", "助", "十", "基", "大", "女", "学", "彼", "手", "批", "授", "教", "木", "氵", "準", "生", "田", "義", "聞", "講", "辶", "進", "隹", "集", "難")) {
+@@ -105 +105 @@
+-            for (word in listOf("冶金")) {
++            for (word in listOf("准教授")) {
+@@ -132 +132 @@
+-        assertEquals(120, rows.length())
++        assertEquals(128, rows.length())
+@@ -138 +138 @@
+-            File(context.getExternalFilesDir(null), "n1-081-font-panel-${index + 1}.png").outputStream().use {
++            File(context.getExternalFilesDir(null), "n1-082-font-panel-${index + 1}.png").outputStream().use {
+@@ -142 +142 @@
+-        File(context.getExternalFilesDir(null), "n1-081-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-082-font-raster.json").writeText(JSONObject()
+@@ -145,2 +145,2 @@
+-            .put("individualGlyphProbes", 116).put("wholeWordRasterProbes", 4).put("panels", 3)
+-            .put("limits", "29 actual scoped Han including exact 冫/氵 fallback inspection, four production families, three bounded Compose panels and four whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
++            .put("individualGlyphProbes", 124).put("wholeWordRasterProbes", 4).put("panels", 3)
++            .put("limits", "31 actual scoped Han including exact 冫/氵/辶/隹 fallback inspection, four production families, three bounded Compose panels and four whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
+@@ -151 +151 @@
+-class N1Batch081ArticleTest {
++class N1Batch082ArticleTest {
+@@ -156,2 +156,2 @@
+-    @Test fun fullSingleImportOfflineSmeltingTwoReciprocalPairsCuratedOnDrawingAndSystemBack() {
+-        disposable081()
++    @Test fun fullSingleImportOfflineAssociateRankReciprocalAndComparisonLinksCuratedOnDrawingAndSystemBack() {
++        disposable082()
+@@ -160,2 +160,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-081-${UUID.randomUUID()}", "main")
+-        val head = "95a87783e4be501c4b2b788d6906f6cc76b3c751"
++        val source = RepoSource("acceptance-fixture", "n1-082-${UUID.randomUUID()}", "main")
++        val head = "4f5812bc7f33e7996214661e7dbf5f8e765df849"
+@@ -169 +169 @@
+-                    instrumentation.context.assets.open("n1-batch-081-95a87783-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-082-4f5812bc-envelope.zip")
+@@ -184,2 +184,2 @@
+-        assertEquals(1093, updated.kanji)
+-        assertEquals(5049, updated.words)
++        assertEquals(1094, updated.kanji)
++        assertEquals(5050, updated.words)
+@@ -188 +188 @@
+-        assertEquals("f1dd5d8b9d2ff535", meta.contentVersion)
++        assertEquals("0739a82c9699f031", meta.contentVersion)
+@@ -196,10 +196,10 @@
+-        assertEquals(113, n1.size)
+-        val smelting = n1.single { it.kanji == "冶" }
+-        assertEquals(listOf("ヤ"), smelting.onyomi.splitSep())
+-        assertEquals(listOf("い.る"), smelting.kunyomi.splitSep())
+-        assertNotNull(smelting.quizOnyomi)
+-        assertNotNull(smelting.quizKunyomi)
+-        assertEquals(listOf("ヤ"), smelting.quizOnyomi?.splitSep())
+-        assertEquals(emptyList<String>(), smelting.quizKunyomi?.splitSep())
+-        assertEquals(listOf("や"), smelting.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(emptyList<String>(), smelting.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(114, n1.size)
++        val associateRank = n1.single { it.kanji == "准" }
++        assertEquals(listOf("ジュン"), associateRank.onyomi.splitSep())
++        assertEquals(emptyList<String>(), associateRank.kunyomi.splitSep())
++        assertNotNull(associateRank.quizOnyomi)
++        assertNotNull(associateRank.quizKunyomi)
++        assertEquals(listOf("ジュン"), associateRank.quizOnyomi?.splitSep())
++        assertEquals(emptyList<String>(), associateRank.quizKunyomi?.splitSep())
++        assertEquals(listOf("じゅん"), associateRank.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(emptyList<String>(), associateRank.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -219 +219 @@
+-                        if (card.kanji == "冶") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "准") now - 60_000 else now + 30L * 86_400_000,
+@@ -225 +225 @@
+-                            if (card.kanji == "冶" && kind == ReadingKind.On && key == "や") now - 60_000
++                            if (card.kanji == "准" && kind == ReadingKind.On && key == "じゅん") now - 60_000
+@@ -232 +232 @@
+-                    0, source.id, "jlpt-n1", "冶", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "准", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -242,6 +242,6 @@
+-            .put("fullOnyomi", JSONArray(smelting.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(smelting.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(smelting.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(smelting.toReadingCard().quizKeys(ReadingKind.Kun)))
+-            .put("liteQuizOnyomi", JSONArray(requireNotNull(smelting.quizOnyomi).splitSep()))
+-            .put("liteQuizKunyomi", JSONArray(requireNotNull(smelting.quizKunyomi).splitSep()))
++            .put("fullOnyomi", JSONArray(associateRank.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(associateRank.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(associateRank.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(associateRank.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("liteQuizOnyomi", JSONArray(requireNotNull(associateRank.quizOnyomi).splitSep()))
++            .put("liteQuizKunyomi", JSONArray(requireNotNull(associateRank.quizKunyomi).splitSep()))
+@@ -250 +250 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 冶 meaning and sole curated on key や due. Explicit empty kun list. Two historical good 冶 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 准 meaning and sole curated on key じゅん due. Source and quiz kun lists empty. Two historical good 准 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -257 +257 @@
+-            await("N1 · 113 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 114 cards").performScrollTo().assertIsDisplayed()
+@@ -260,4 +260,4 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("冶")
+-            click("smelt; work metals")
+-            await("冶 — smelt; work metals")
+-            show(articleBullet("Strokes: 7 · Key (radical): 冫 (the two left-hand strokes, no. 15) · JLPT: N1 (community list)"), "kanji-01")
++            rule.onNode(hasSetTextAction()).performTextReplacement("准")
++            click("quasi-; associate rank")
++            await("准 — quasi-; associate rank")
++            show(articleBullet("Strokes: 10 · Key (radical): 冫 (no. 15) · JLPT: N1 (community list)"), "kanji-01")
+@@ -265,2 +265,3 @@
+-            show(articleBullet("冶 concerns smelting and working metals. Learn it through 冶金 (やきん), metallurgy: the science and technology of obtaining and working metals. Not every use is literal metalworking: 陶冶 (とうや) can mean cultivation or training, for example of character or abilities."), "kanji-03")
+-            show(articleBullet("Modern-shape mnemonic: imagine the two cold 冫 marks beside a 台-shaped work stand where metal is being shaped. This is an invented memory aid, not a historical derivation or a verified explanation of the sound."), "kanji-04")
++            show(articleBullet("准 can mark a status corresponding to, but not fully the same as, a named rank. In 准教授 じゅんきょうじゅ, it helps name the established rank associate professor. Do not interpret it as a literal half-professor or a trainee awaiting automatic promotion."), "kanji-03")
++            show(articleBullet("Another branch concerns approval: 批准 ひじゅん means ratification. Not every compound containing 准 is an associate rank."), "kanji-04")
++            show(articleBullet("Modern-shape mnemonic, not etymology: picture the bird-shaped 隹 beside the two marks of 冫 as a bird standing beside a rank sign. This is an invented memory scene, not an explanation of the character's historical formation."), "kanji-05")
+@@ -268,6 +269,3 @@
+-            show(articleBullet("Both source readings remain below. Only ヤ is selected for reading practice."), "kanji-06")
+-            show(readingExample("ヤ"), "kanji-10")
+-            show(readingExample("冶金 やきん — metallurgy"), "kanji-12")
+-            show(readingExample("い.る"), "kanji-13")
+-            show(readingExample("source-only character-dictionary lookup information; no exact modern word example written 冶る was established in the inspected families"), "kanji-15")
+-            show(articleBullet("The source-only row is not a recommendation to invent everyday spellings. 鋳る (いる), \"cast metal,\" is a separately documented spelling, not proof of a word written 冶る. Keeping this reading for lookup does not claim that no such example exists anywhere."), "kanji-16")
++            show(readingExample("ジュン"), "kanji-10")
++            show(readingExample("准教授 じゅんきょうじゅ — associate professor"), "kanji-12")
++            show(articleBullet("This table covers the sole on-reading in the frozen KANJIDIC2 record; that record lists no kun-readings. Readings supplied by other dictionaries do not change this card's source metadata."), "kanji-13")
+@@ -275,2 +273,2 @@
+-            show(articleBullet("冶金 やきん — metallurgy"), "kanji-18")
+-            show(articleBullet("冶金学 (やきんがく) — metallurgy as a science"), "kanji-19")
++            show(articleBullet("准教授 じゅんきょうじゅ — associate professor"), "kanji-15")
++            show(articleBullet("批准 ひじゅん — ratification"), "kanji-16")
+@@ -278,4 +276,4 @@
+-            show(articleBullet("Compare 治, \"govern; heal\": its left side has three water strokes, 氵, rather than 冶's two strokes, 冫. 始, \"begin,\" has 女 on the left. Sharing the 台-shaped right side does not make these characters interchangeable."), "kanji-21")
+-            show(articleBullet("鍛冶 (かじ), \"blacksmithing; blacksmith,\" has a special whole-word reading. Do not extract ジ from its final kana and add it to 冶's on readings. The dictionaries also document the separate reading たんや for 鍛冶."), "kanji-22")
+-            show(articleBullet("For general melting or dissolving, compare 溶 and 溶かす (とかす). 冶 is not the ordinary spelling to substitute into a sentence about melting butter or dissolving sugar."), "kanji-23")
+-            show(articleBullet("Metadata: KANJIDIC2. Word evidence: JMdict, entries 1536310, 1536320, 1655600, 1419150 and 1587780. Character readings and senses: Digital Daijisen and 字通: 冶."), "kanji-24")
++            show(articleBullet("準 shares ジュン and has related meanings, but its shape has 氵 at the upper left and 十 below. 准 has two left-hand 冫 marks and no lower 十."), "kanji-18")
++            show(articleBullet("The spellings are not freely interchangeable in modern words: learn 準備 じゅんび (preparation), 基準 きじゅん (standard), and 批准 ひじゅん (ratification) as written. JMdict also recognizes 準教授 じゅんきょうじゅ; the current Japanese university title taught here is 准教授."), "kanji-19")
++            show(articleBullet("For look-alikes, 集 has 木 below 隹, 進 has 辶, and 難 has a different, dense left-hand block. Their meanings are not associate rank or approval."), "kanji-20")
++            show(articleBullet("Metadata: KANJIDIC2, database 2026-306, 2026-11-02 (EDRDG; CC BY-SA 4.0). Words: JMdict, entries 2178020, 1483390, 1341670 and 1591210. Character senses: Digital Daijisen: 准. Rank usage: Nipponica and 大学事典: 准教授."), "kanji-21")
+@@ -283,2 +281,2 @@
+-            show(articleBullet("冶金 やきん — metallurgy"), "word-forward-15")
+-            inline(await(articleBullet("冶金 やきん — metallurgy")), "冶金", 0)
++            show(articleBullet("准教授 じゅんきょうじゅ — associate professor"), "word-forward-13")
++            inline(await(articleBullet("准教授 じゅんきょうじゅ — associate professor")), "准教授", 0)
+@@ -286 +284 @@
+-            await("冶金 (やきん) — metallurgy")
++            await("准教授 (じゅんきょうじゅ) — associate professor")
+@@ -288,4 +286,4 @@
+-            show(articleBullet("冶金 is metallurgy: the science and technology of extracting metals from raw materials and working them into useful materials and forms. It includes more than simply melting something. It is a technical noun."), "word-02")
+-            show(articleBullet("大学で冶金を学んでいます。 (だいがくでやきんをまなんでいます。) — I am studying metallurgy at university."), "word-03")
+-            show(articleBullet("冶金について研究しています。 (やきんについてけんきゅうしています。) — I am doing research on metallurgy."), "word-04")
+-            show(articleBullet("冶金を学ぶ (やきんをまなぶ) means \"study metallurgy\"; 冶金について (やきんについて) means \"about metallurgy.\""), "word-05")
++            show(articleBullet("准教授 names an associate professor. In the Japanese university system, this is an established academic rank below 教授 きょうじゅ (professor), with teaching and research responsibilities. It does not mean a professor's personal helper."), "word-02")
++            show(articleBullet("彼女は大学の准教授です。 (かのじょはだいがくのじゅんきょうじゅです。) — She is an associate professor at a university."), "word-03")
++            show(articleBullet("田中准教授の講義を聞きました。 (たなかじゅんきょうじゅのこうぎをききました。) — I listened to Associate Professor Tanaka's lecture."), "word-04")
++            show(articleBullet("The second example places the rank after a name. For respectful direct address, 田中先生 (たなかせんせい) can be appropriate; 先生 is not itself a statement of this particular academic rank."), "word-05")
+@@ -293 +291 @@
+-            show(articleBullet("冶 (ヤ) contributes smelting or working metal. 金 (キン) means metal here, not money or gold alone. The relationship is action plus object: working metal. The whole noun names the technical field, not just one operation. This is a meaning aid, not an account of the word's historical formation."), "word-07")
++            show(articleBullet("准 modifies the rank head 教授, marking the associate rank. Within 教授, 教 contributes teaching and 授 contributes imparting knowledge. The on-readings are ジュン + キョウ + ジュ. Learn the whole institutional title rather than translating it as \"half a professor.\""), "word-07")
+@@ -295 +293,5 @@
+-            show(articleBullet("冶金学 (やきんがく) specifically names metallurgy as a science. 金属 (きんぞく) means the material \"metal,\" not the field that studies and processes it. 製錬 and 精錬 (both せいれん) concern smelting or refining: related processes rather than the whole discipline. There is no useful everyday opposite of the field's name."), "word-09")
++            show(articleBullet("助教授 じょきょうじゅ is the former Japanese title replaced by 准教授 in April 2007. It remains relevant when reading older documents."), "word-09")
++            show(articleBullet("助教 じょきょう, often translated \"assistant professor,\" is a separate rank, not an abbreviation of 准教授."), "word-10")
++            show(articleBullet("助手 じょしゅ means assistant and has its own academic uses. It does not by itself identify someone as a 准教授."), "word-11")
++            show(articleBullet("教授 きょうじゅ names the professor rank; 先生 せんせい is a broader designation or respectful form of address."), "word-12")
++            show(articleBullet("These are role and title comparisons, not strict antonyms."), "word-13")
+@@ -297,3 +299,3 @@
+-            show(articleBullet("冶金 belongs in scientific, educational and industrial contexts. It does not mean making money, and it is not limited to gold. 錬金術 (れんきんじゅつ), \"alchemy,\" is a different term, not a synonym for modern metallurgy."), "word-11")
+-            show(articleBullet("Use 溶かす (とかす) when describing an action such as melting butter or dissolving sugar; 冶金 names the metalworking field and its technology, not any act of making something liquid."), "word-12")
+-            show(articleBullet("Dictionary: JMdict, entry 1536310; related entries 1536320, 1243040, 1380250 and 1559970. Scope: 世界大百科事典: 冶金."), "word-13")
++            show(articleBullet("准教授 is a rank noun, not a verb meaning \"work as an associate professor.\" Use 准教授です (じゅんきょうじゅです) to state the role. The separate teaching/instruction sense of 教授する does not license 准教授する for having this job."), "word-15")
++            show(articleBullet("The English label \"associate professor\" is useful, but rank systems and employment conditions differ between countries and institutions. Do not assume an exact international equivalence or an automatic future promotion. JMdict also lists the spelling 準教授 with the same reading; 准教授 is the current Japanese university title used here."), "word-16")
++            show(articleBullet("Dictionary: JMdict, entry 2178020; comparisons 1237160, 1344540, 1344550, 1344650 and 1387990. Japanese rank and April 2007 reform: Nipponica and 大学事典: 准教授."), "word-17")
+@@ -301,2 +303,2 @@
+-            show(articleBullet("冶 (ヤ) contributes smelting or working metal. 金 (キン) means metal here, not money or gold alone. The relationship is action plus object: working metal. The whole noun names the technical field, not just one operation. This is a meaning aid, not an account of the word's historical formation."), "word-reverse-25")
+-            inline(await(articleBullet("冶 (ヤ) contributes smelting or working metal. 金 (キン) means metal here, not money or gold alone. The relationship is action plus object: working metal. The whole noun names the technical field, not just one operation. This is a meaning aid, not an account of the word's historical formation.")), "冶", 0)
++            show(articleBullet("准 modifies the rank head 教授, marking the associate rank. Within 教授, 教 contributes teaching and 授 contributes imparting knowledge. The on-readings are ジュン + キョウ + ジュ. Learn the whole institutional title rather than translating it as \"half a professor.\""), "word-reverse-27")
++            inline(await(articleBullet("准 modifies the rank head 教授, marking the associate rank. Within 教授, 教 contributes teaching and 授 contributes imparting knowledge. The on-readings are ジュン + キョウ + ジュ. Learn the whole institutional title rather than translating it as \"half a professor.\"")), "准", 0)
+@@ -305,3 +307,3 @@
+-            show(readingExample("ヤ"), "kanji-backlink")
+-            back()
+-            await(articleBullet("冶 (ヤ) contributes smelting or working metal. 金 (キン) means metal here, not money or gold alone. The relationship is action plus object: working metal. The whole noun names the technical field, not just one operation. This is a meaning aid, not an account of the word's historical formation.")).assertIsDisplayed()
++            show(readingExample("ジュン"), "kanji-backlink")
++            back()
++            await(articleBullet("准 modifies the rank head 教授, marking the associate rank. Within 教授, 教 contributes teaching and 授 contributes imparting knowledge. The on-readings are ジュン + キョウ + ジュ. Learn the whole institutional title rather than translating it as \"half a professor.\"")).assertIsDisplayed()
+@@ -311,2 +313,2 @@
+-            show(articleBullet("冶 (ヤ) contributes smelting or working metal. 金 (キン) means metal here, not money or gold alone. The relationship is action plus object: working metal. The whole noun names the technical field, not just one operation. This is a meaning aid, not an account of the word's historical formation."), "gold-forward-26")
+-            inline(await(articleBullet("冶 (ヤ) contributes smelting or working metal. 金 (キン) means metal here, not money or gold alone. The relationship is action plus object: working metal. The whole noun names the technical field, not just one operation. This is a meaning aid, not an account of the word's historical formation.")), "金", 45)
++            show(articleBullet("准 modifies the rank head 教授, marking the associate rank. Within 教授, 教 contributes teaching and 授 contributes imparting knowledge. The on-readings are ジュン + キョウ + ジュ. Learn the whole institutional title rather than translating it as \"half a professor.\""), "teach-forward-28")
++            inline(await(articleBullet("准 modifies the rank head 教授, marking the associate rank. Within 教授, 教 contributes teaching and 授 contributes imparting knowledge. The on-readings are ジュン + キョウ + ジュ. Learn the whole institutional title rather than translating it as \"half a professor.\"")), "教", 68)
+@@ -314 +316 @@
+-            await("金 — gold, money")
++            await("教 — teach, instruct")
+@@ -316,2 +318,2 @@
+-            show(articleBullet("冶金 やきん — metallurgy"), "gold-reverse-27")
+-            inline(await(articleBullet("冶金 やきん — metallurgy")), "冶金", 0)
++            show(articleBullet("准教授 じゅんきょうじゅ — associate professor"), "teach-reverse-29")
++            inline(await(articleBullet("准教授 じゅんきょうじゅ — associate professor")), "准教授", 0)
+@@ -319,3 +321,3 @@
+-            await("冶金 (やきん) — metallurgy")
+-            back()
+-            await(articleBullet("冶金 やきん — metallurgy")).assertIsDisplayed()
++            await("准教授 (じゅんきょうじゅ) — associate professor")
++            back()
++            await(articleBullet("准教授 じゅんきょうじゅ — associate professor")).assertIsDisplayed()
+@@ -323,3 +325,3 @@
+-            capture("system-back-to-gold")
+-            back()
+-            await(articleBullet("冶 (ヤ) contributes smelting or working metal. 金 (キン) means metal here, not money or gold alone. The relationship is action plus object: working metal. The whole noun names the technical field, not just one operation. This is a meaning aid, not an account of the word's historical formation.")).assertIsDisplayed()
++            capture("system-back-to-teach")
++            back()
++            await(articleBullet("准 modifies the rank head 教授, marking the associate rank. Within 教授, 教 contributes teaching and 授 contributes imparting knowledge. The on-readings are ジュン + キョウ + ジュ. Learn the whole institutional title rather than translating it as \"half a professor.\"")).assertIsDisplayed()
+@@ -327,3 +329,21 @@
+-            capture("system-back-to-word-from-gold")
+-            back()
+-            await(articleBullet("冶金 やきん — metallurgy")).assertIsDisplayed()
++            capture("system-back-to-word-from-teach")
++            section("Synonyms and antonyms")
++            show(articleBullet("助教授 じょきょうじゅ is the former Japanese title replaced by 准教授 in April 2007. It remains relevant when reading older documents."), "former-forward-30")
++            inline(await(articleBullet("助教授 じょきょうじゅ is the former Japanese title replaced by 准教授 in April 2007. It remains relevant when reading older documents.")), "助教授", 0)
++            await("Article contents")
++            await("助教授 (じょきょうじゅ) - associate professor (former Japanese title)")
++            section("Meaning")
++            show(articleBullet("助教授 names a former Japanese university or college rank below 教授, professor. The Japanese rank was renamed 准教授 (じゅんきょうじゅ), associate professor, in April 2007. Read 助教授 in its historical or institutional context."), "successor-reverse-31")
++            inline(await(articleBullet("助教授 names a former Japanese university or college rank below 教授, professor. The Japanese rank was renamed 准教授 (じゅんきょうじゅ), associate professor, in April 2007. Read 助教授 in its historical or institutional context.")), "准教授", 106)
++            await("Article contents")
++            await("准教授 (じゅんきょうじゅ) — associate professor")
++            back()
++            await(articleBullet("助教授 names a former Japanese university or college rank below 教授, professor. The Japanese rank was renamed 准教授 (じゅんきょうじゅ), associate professor, in April 2007. Read 助教授 in its historical or institutional context.")).assertIsDisplayed()
++            section("Meaning")
++            capture("system-back-to-former-title")
++            back()
++            await(articleBullet("助教授 じょきょうじゅ is the former Japanese title replaced by 准教授 in April 2007. It remains relevant when reading older documents.")).assertIsDisplayed()
++            section("Synonyms and antonyms")
++            capture("system-back-to-current-title")
++            back()
++            await(articleBullet("准教授 じゅんきょうじゅ — associate professor")).assertIsDisplayed()
+@@ -337,0 +358 @@
++                .put("comparisonPairs", 1).put("comparisonLinkTransitions", 2)
+@@ -341 +362 @@
+-            assertEquals("冶", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("准", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -343 +364 @@
+-            click("smelt; work metals")
++            click("quasi-; associate rank")
+@@ -345 +366 @@
+-            assertEquals("冶", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("准", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -355 +376 @@
+-                assertEquals("冶", question.card.kanji)
++                assertEquals("准", question.card.kanji)
+@@ -358 +379 @@
+-                val key = "や"
++                val key = "じゅん"
+@@ -369 +390 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "冶" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "准" &&
+@@ -379 +400 @@
+-                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "冶" &&
++                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "准" &&
+@@ -383 +404 @@
+-            assertEquals(setOf("や"), readingLogs.map { it.reading }.toSet())
++            assertEquals(setOf("じゅん"), readingLogs.map { it.reading }.toSet())
+@@ -389,4 +410,4 @@
+-            await("smelt; work metals").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "冶") })
+-            assertEquals(listOf("ヤ"), card.onyomi.splitSep())
+-            assertEquals(listOf("い.る"), card.kunyomi.splitSep())
++            await("quasi-; associate rank").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "准") })
++            assertEquals(listOf("ジュン"), card.onyomi.splitSep())
++            assertEquals(emptyList<String>(), card.kunyomi.splitSep())
+@@ -395 +416 @@
+-            assertEquals(listOf("ヤ"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("ジュン"), card.quizOnyomi?.splitSep())
+@@ -402 +423 @@
+-            assertEquals(7, strokes.length())
++            assertEquals(10, strokes.length())
+@@ -419 +440 @@
+-            rule.onNode(hasContentDescription("7 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("10 strokes drawn", substring = true)).assertExists()
+@@ -424 +445 @@
+-                    it.kanji == "冶" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "准" && it.mode == StudyMode.Draw.name }
+@@ -435 +456 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "冶" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "准" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -448,2 +469,2 @@
+-            File(app.getExternalFilesDir(null), "n1-081-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-081-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-082-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-082-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -542 +563 @@
+-        File(app.getExternalFilesDir(null), "n1-081-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-082-$step.png").outputStream().use {
