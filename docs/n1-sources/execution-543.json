@@ -834,8 +834,12 @@
   },
   "archivedExecutionRecipes": [
     {
-      "path": "docs\\n1-reviews\\batch-080-native\\execution-543-receipts\\execution-543.py",
+      "path": "docs\\n1-reviews\\batch-080-native\\execution-543-receipts\\execution-543-before-receipt-fix.py",
       "sha256": "0af6be638ac2289b99d3b8c08b26d7d697732589665cf8783684008fdf3c52b8"
+    },
+    {
+      "path": "docs\\n1-reviews\\batch-080-native\\execution-543-receipts\\execution-543.py",
+      "sha256": "782e8894a724723638587cbed3ae9a1173af0f35dedef232a2a93d8cb8d64722"
     },
     {
       "path": "docs\\n1-reviews\\batch-080-native\\execution-543-receipts\\finalize-execution-543.py",
@@ -846,6 +850,10 @@
       "sha256": "f57e0205f30e6a44bdfaf56e1e512bbb981e917d9493f38e33e32373823a2ec7"
     },
     {
+      "path": "docs\\n1-reviews\\batch-080-native\\execution-543-receipts\\repair-checkpoint-receipt-543.py",
+      "sha256": "391c7e3b17eb71830f23bd02bed7d9bc9d11f654e2617671dc939e7da64c3f86"
+    },
+    {
       "path": "docs\\n1-reviews\\batch-080-native\\execution-543-receipts\\run-543-native.ps1",
       "sha256": "e9696f6e88b8ce29d79ad589da74c279f80e4058f29e01d36e8a10ee53ca2cff"
     }
@@ -853,5 +861,17 @@
   "diagnostics": [
     "Initial complete request summary encountered cp1252 UnicodeEncodeError only while printing the final checkpoint; complete file already decoded and checkpoint parsed. Subsequent UTF8 reads completed before mutation.",
     "Staged whitespace check identified terminal blank/trailing spaces in generated adb/emulator logs. Readable copies whitespace-normalized; exact original bytes retained in verified deterministic raw gzip and outside-Git attempt originals. Original PNG/JSON/instrumentation bytes unchanged."
-  ]
+  ],
+  "checkpointReceiptDiagnostic": {
+    "nativeEvidenceCommit": "b8050da4105382e11fe6b5bb54b5cc6b2136d0e9",
+    "failure": "Python checkpoint receipt assertion used read_text universal-newline conversion, producing 1882 characters versus the exact 1890-character CRLF issue body. Owner/body POST and fresh readback checks had both passed.",
+    "remedy": "Compare UTF8-decoded original bytes without newline conversion; no repost, no relaxed equality and no native rerun.",
+    "ownerAndExactOriginalBodyReverified": true,
+    "originalBodyCharacters": 1890,
+    "issueUpdate": "https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6680476950",
+    "originalExecutionRecipe": "docs\\n1-reviews\\batch-080-native\\execution-543-receipts\\execution-543-before-receipt-fix.py",
+    "originalExecutionRecipeSha256": "0af6be638ac2289b99d3b8c08b26d7d697732589665cf8783684008fdf3c52b8",
+    "nativeRuntimeAndScreenshotEvidenceUnchanged": true,
+    "checkpointParentCheck": "Allow normally signed descendant evidence-fix commit while retaining exact original starting BASE ancestry and unchanged runtime assertions."
+  }
 }

@@ -313,11 +313,12 @@ def checkpoint():
     original = load(LOGS / "progress-before-543.json")
     evidence = load(EVIDENCE)
     receipt = load(LOGS / "issue-response-543.json")
-    body = (LOGS / "issue-body-543.txt").read_text(encoding="utf-8")
+    body = (LOGS / "issue-body-543.txt").read_bytes().decode("utf-8")
     assert receipt["user"]["login"] == "stop-cran" and receipt["body"] == body
     assert "issues/60#issuecomment-" in receipt["html_url"]
     assert not git("status", "--porcelain") and not git("status", "--porcelain", root=ANDROID)
-    assert git("rev-parse", "HEAD^") == BASE and git("log", "-1", "--format=%G?") == "G"
+    assert git("rev-parse", "HEAD") != BASE and git("merge-base", BASE, "HEAD") == BASE
+    assert git("log", "-1", "--format=%G?") == "G"
     assert sha(ROOT / "manifest.json") == evidence["manifestSha256"]
     assert not git("diff", BASE, "--", "kanji", "words", "articles", "strokes", "manifest.json")
     for row in evidence["archivedReceipts"]:
