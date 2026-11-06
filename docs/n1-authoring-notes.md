@@ -37,7 +37,72 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 076: local unreviewed draft
+## Batch 076: published for bounded owner testing
+
+The [publication record](n1-sources/batch-076-publication.json) closes **兼**
+and necessary **兼任** けんにん, with two exact navigation links in existing
+**兼ねる** and one Common words bullet in older **任**. All **three mapped
+reciprocal pairs /six directions** and the activated baseline pair are
+present. The new word has no inferred vocabulary level and directly excludes
+兼ねる for their overlapping role senses. Earlier draft/source checkpoints
+below remain historical, not the current publication status.
+
+The [acceptance audit](n1-sources/batch-076-acceptance-audit.json) records fresh
+combined-current-main validation: **372 Python tests, no skips**, validator,
+vocabulary consistency (2,122/2,431 reviewed pilot prompts, not full coverage),
+fresh manifest `8bd0a375668bee11`, five frozen inputs, **75 distinct complete
+JMdict families**, five raw character records, baseline metadata and geometry.
+All three reading dispositions, pinned ten-stroke conversion, mapped links,
+41 actual scoped Han cmaps, **8,355 runtime hashes** and original archive
+budgets pass. Fresh main was already ancestral; no teaching/tool merge
+changes required new review. The initial local acceptance-recipe selector
+failure and its bounded recovery are retained, not a content correction.
+
+The [text reconciliation](n1-reviews/batch-076-reconciliation.json) records
+blind initial **claude-opus-5.5 /gpt-6.1-sol** reviews of one frozen snapshot,
+both complete new articles and exact changed reused passages, all three
+facets. Initial and confirmation processes/internal reads were serial.
+One minor attachment-wording finding was resolved and confirmed by both
+original sessions: を can mark an additional post or two posts joined
+with と. Full **ケン /か.ねる・-か.ねる** order remains intact; curated
+**ケン /か.ねる** yields **けん /かねる**. The valid kana-preferred difficulty
+suffix has its own qualified row but no duplicate reading/mastery key.
+
+Execution 507's **RealContentTest three cases /RareHanTest one case**, no
+skips, and execution 509's **two named native terminal-status-0 cases**, no
+skips, are retained and hash-reverified, not rerun. Production ContentSync
+imports the full signed archive **once**: **1,088 kanji /5,045 words /108 N1**,
+zero problems, accepted parser epoch 1. Both curated kinds persist correct
+feedback/Done without duplicate suffix logs. Three pairs/six directions,
+System Back, offline routes, selection/meaning feedback and ten reference-
+injected strokes followed by ungraded trace/recall Again pass. This is not
+human handwriting, successful recall, MLKit, a new persisted meaning grade
+or physical-phone evidence. Only the owned emulator was stopped.
+
+The [bounded visual reconciliation](n1-reviews/batch-076-visual-reconciliation.json)
+accepts all scoped surfaces and **41 Han /four production families /two
+words**, with no actionable defect. Three reviewer processes exited serially.
+Original Claude's two concurrent PNG reads/one overlap remain noncompliant
+with its original flag false; the same-session serial two-image correction
+inherits the other 32, not a fresh all-serial review. GPT's 34 unique images
+and four text returns were serial without repeats/overlaps. **57 original
+captures /34 unique /23 duplicates** are not 57 fresh views. Complementary
+table viewports expose the targets; actual fallback-face identity and
+every-phone readability are not certified. The extra word-to-word link was
+visible but not separately native-traversed.
+
+Normally signed accepted/integrated runtime `80e40988` is owner-fast-forward
+published; its exact CI is green and immutable public ZIP verifies every
+runtime hash: **8,377 entries /30,723,215 compressed /44,394,859 inflated
+/44,126,521 retained bytes**, within unchanged 18,000 /42 MiB /80 MiB /56 MiB
+guards. Terminal evidence publication is checked separately in the checkpoint.
+Published coverage is **103/1,228 additions; 1,125 remain**, with **108
+N1-labelled cards /107 named-source members plus separate 妖**. The 103
+necessary supports are not an N1 vocabulary deck. Compatible Android
+`f9b59a2+` is required; physical-phone, general-release and whole-set
+acceptance remain outstanding. No batch 077 started here.
+
+### Preserved unreviewed draft checkpoint
 
 The bounded runtime draft adds **兼**, necessary **兼任** けんにん and
 the pinned ten-stroke conversion. It adds only two navigation links to
