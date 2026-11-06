@@ -37,7 +37,77 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
-## Batch 078: source prepared, not drafted
+## Batch 078: published for bounded owner testing
+
+The [publication record](n1-sources/batch-078-publication.json) closes **冗**
+with existing **冗談** じょうだん as its necessary support: **zero new word
+articles**. The word retains its N3 level and primary reading. Both mapped
+reciprocal pairs /four directions, including older **談**, and the activated
+baseline pair are complete. Full and curated **ジョウ** retain source order;
+kun is explicitly empty and the sole offered key is **じょう**. The additive
+direct 冗談/ユーモア quiz guard preserves existing safeguards without treating
+them as transitive.
+
+The [acceptance audit](n1-sources/batch-078-acceptance-audit.json) records
+fresh combined-tree validation: **372 Python tests, no skips**, validator,
+vocabulary consistency (2,122/2,431 reviewed pilot prompts, not full coverage),
+fresh manifest `8e06edf2b0857b26`, five frozen inputs and **78 distinct complete
+JMdict families /79 occurrences** (47 lexical, 26 comparison, six related).
+Six raw character records, the original 985-kanji /4,942-word /985-stroke
+baseline, exact **105 additions**, the sole reading disposition, pinned
+four-stroke geometry, both mapped pairs and **8,360 runtime hashes** were
+reverified. Reviewed historical metadata exceptions and this batch's additive
+word safeguard are explicit. Fresh main was already ancestral; integration
+changed no teaching or tools.
+
+The [text reconciliation](n1-reviews/batch-078-reconciliation.json) retains
+blind initial **claude-opus-5.5 /gpt-6.1-sol** reviews and serial original-session
+confirmations. Minor **078-C1** is resolved: qualify the literal polite
+negative and separately explain conversational 冗談じゃない as rejection.
+The unsupported extension of colloquial evidence to a polite remedy is
+withdrawn, not silently adopted. No consequential scoped teaching defect
+remains; optional suggestions stay optional.
+
+The [visual reconciliation](n1-reviews/batch-078-visual-reconciliation.json)
+retains two serial, internally serial dependent confirmations. Each reviewer
+received the common source/fixture packet and **24 unique PNG groups covering
+43 originals through 19 exact-byte aliases**. Actual tool-returned images
+were **900x2000**, not the original 1080x2400; returned bytes are preserved.
+All **27 actual scoped Han**, four production font families, focused
+**冖 /几 /冗 /元 /兄 /見 /口 /目** and whole-word 冗談 were readable in
+these bounded captures. Actual fallback face and physical-phone rendering
+remain unknown. Optional glossary/citation/stroke-label observations and the
+final transient loading-tree limitation remain recorded.
+
+Accepted [HOST evidence](n1-sources/execution-524.json) has **RealContentTest
+three cases +RareHanTest one case, zero skips**. Accepted
+[native evidence](n1-sources/execution-526.json) has **two named terminal-status-0
+cases**. Their hashes/provenance were reverified, not rerun. Production
+ContentSync imported the complete signed `7fb6c463` envelope **once**:
+1,090 kanji /5,046 words /110 N1, zero problems, accepted parser epoch 1.
+Full/Lite readings agree; sole じょう persisted Good and Done 1/1. Both
+mapped pairs/four directions, system Back, offline routes, selection and
+meaning feedback passed. Actual meaning choices were stackmates, not authored
+元/兄/見; no newly persisted meaning grade is claimed. Four reference-derived
+touch strokes, ungraded tracing and give-up recall Again are not human
+handwriting, successful recall or MLKit evidence. Only the owned emulator
+5580 was stopped; shared 5556 was untouched. HOST-only 2-GiB initialization
+never entered native builds; no app/guest heap or archive guard changed.
+
+Normally signed owner-scoped fast-forward publication, green CI and the exact
+immutable public ZIP verify all **8,360 runtime hashes**, manifest equality,
+safe paths, per-file limits and contributor-evidence exclusion under unchanged
+18,000-entry /42-MiB compressed /80-MiB inflated /56-MiB retained guards.
+Published **105/1,228 additions; 1,123 remain**: current **1,090 kanji /5,046
+words /110 N1-labelled /109 named-source members plus separate 妖**.
+The 104 necessary support additions are not the deferred N1 vocabulary deck.
+Compatible Android `f9b59a2+` is required; physical-phone, general-release and
+whole-set acceptance remain outstanding. Historical source/review/process/
+permission/OOM/lookup/read-depth limitations are preserved. Reusable helpers
+are in control and archived with this batch; optional prior-session recipes
+are not required inputs.
+
+## Batch 078 source checkpoint (historical)
 
 The [source packet](n1-sources/batch-078-progress.json) selects **冗**, source
 row 87, after batch 077's verified publication. It retains **78 distinct
