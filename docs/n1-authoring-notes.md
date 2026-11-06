@@ -37,6 +37,38 @@ compressed and decompressed hashes. Raw dictionary downloads remain outside
 runtime content and outside Git; selected complete applicable JMdict families
 will be retained in each batch before lexical authoring.
 
+## Batch 076: source preparation only
+
+The [source packet](n1-sources/batch-076-progress.json) freezes **兼**,
+source row 85, after batch 075's verified publication. It retains **75
+distinct complete JMdict families** (70 lexical and five comparison)
+and five raw character records, all inspected by the coordinator, not
+independently reviewed. Reuse actual **兼ねる** かねる with its N2 word
+level and original exclusions; propose only necessary **兼任** けんにん
+for the on-reading, without inferring a vocabulary level.
+
+Keep full **ケン /か.ねる・-か.ねる** source order. Proposed practice
+selects ケン and か.ねる; the valid suffix gets its own qualified row
+but not a duplicate normalized かねる question. The existing article
+already distinguishes combined functions/posts from the kana-preferred
+masu-stem difficulty construction and ～かねない possibility. These
+are not interchangeable translations or independent reading-mastery events.
+The [public-source evidence](n1-sources/batch-076-source-evidence.json)
+also verifies concurrent-post を and the separate beforehand branch.
+
+Three all-mapped reciprocal pairs include older **任**, not just the
+new card's two support links. The pinned source SVG has ten paths matching
+the dictionary, but is not yet converted or drawing-accepted. Its radical
+annotation places the 八 variant at the **top**; do not copy 典's
+bottom-strokes explanation. Proposed-text cmap evidence is not native glyph
+acceptance; reinventory the complete eventual draft.
+
+This checkpoint creates no runtime card or support article and claims no
+independent review, fresh Android/native acceptance or publication. Published
+coverage remains **102/1,228 additions; 1,126 remain**. Later quality gates,
+compatible Android `f9b59a2+` and outstanding physical-phone/general-release/
+whole-set qualifications remain unchanged.
+
 ## Batch 075: published for bounded owner testing
 
 The [publication record](n1-sources/batch-075-publication.json) closes **典**
