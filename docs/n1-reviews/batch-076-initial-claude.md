@@ -1,0 +1,63 @@
+I read the whole packet in one call and made no edits. I found one minor issue: in 兼任.md, line 16 says を marks "the additional post", but the example on line 20 uses を for both posts.
+
+**Snapshot**
+- Signed snapshot 3557596ad648e74a636196579b8e202c5ddfbfc3, read only as copied into `docs\n1-reviews\batch-076-initial-packet.txt`.
+- I did not check Git or upstream sources myself. The web dictionary observations in the packet came from the coordinator; I did not retrieve them.
+
+**Scope**
+- **Reviewer:** Claude Opus 5.5 (claude-opus-5.5), one initial read-only reviewer, no other agents.
+- **Read:** one `view` call with `forceReadLargeFiles=true` and no line range. No truncation marker appeared, and the text ran to the final fallback inventory. I did not count lines myself to confirm the stated 3101 lines.
+- **Fully reviewed:** new `kanji\兼.md` and `words\兼任.md`.
+- **Changed lines only:** `words\兼ねる.md` lines 26 and 30, and `kanji\任.md` line 38. I read the rest of both articles as context.
+- **Context:** the 典, 具, 曲, 勤める, 務める and 就任 articles; the batch JMdict and comparison XML; the five KANJIDIC2 records; the 兼 stroke JSON and pinned SVG; the guidance sections; and the fallback-label inventory.
+
+**Verdicts**
+- **兼.md:** correctness CLEAN; scoped coverage CLEAN; comprehensibility CLEAN.
+- **兼任.md:** correctness CLEAN; scoped coverage CLEAN; comprehensibility NEEDS FIX (minor).
+- **兼ねる.md line 26 (link to 兼):** correctness, coverage and comprehensibility all CLEAN.
+- **兼ねる.md line 30 (link to 兼任):** correctness, coverage and comprehensibility all CLEAN.
+- **任.md line 38 (兼任 bullet):** correctness, coverage and comprehensibility all CLEAN.
+
+**What checked out in 兼.md**
+- **Dictionary facts match KANJIDIC2:** 10 strokes, radical 八 (no. 12), grade 8 and community N1.
+- **Readings:** all three raw readings (ケン, か.ねる, -か.ねる) appear in the original order. Only ケン and か.ねる are selected for quizzes, and each of the three has its own reading row with a link.
+- **Shared かねる:** the article tells learners to treat the two かねる entries as one reading to practise, not two.
+- **Suffix use:** taught correctly. It attaches to the masu stem, is usually written in kana, and is negative without ない. ～かねない is taught as "might", not "can".
+- **Radical position:** the article says 八 sits at the top. The SVG agrees (the 八 group is marked as a top-position variant).
+- **Memory aid:** labelled as a modern-shape mnemonic, with no origin or sound-component claim.
+- **Other uses:** the role-joining use of 兼 (as in 首相兼外相) and the separate "beforehand" use (as in 兼題) are both accurate, and no frequency is claimed.
+- **Stroke data:** all 10 strokes in the JSON match the SVG's start and end points and stroke types. This does not show that the app draws them correctly.
+- **Wrong quiz choices:** 典 "reference texts; rules; ceremony", 具 "tools; ingredients" and 曲 "bend; musical piece" do not overlap with "combine; concurrent roles". That still holds with 具's "possess" and 曲's secondary meanings. None of the fallback labels conflict either.
+
+**What checked out in 兼任.md**
+- **Word and reading:** 兼任 けんにん matches JMdict entry 1256670 (noun, takes する, transitive).
+- **Kana and translations:** all correct.
+- **Meaning:** the article stresses one person holding several roles, and that "concurrent" does not mean doing two things at the same moment.
+- **就任:** the contrast is right. 就任する takes に and means taking office; 兼任する takes を.
+- **Other contrasts:** colleagues sharing one job, and 勤める meaning simply working for an employer, are handled correctly.
+- **No word level** is given or inferred.
+- **Quiz overlap with 兼ねる:** the direct exclusion between 兼任 and 兼ねる is justified by the overlapping titles ("holding concurrent posts" vs "combine roles; cannot readily do").
+- **Other comparison titles:** 勤める, 務める and 就任 have titles that do not need exclusions. 務める "serve as; play a role" is closest, but it does not mean holding posts at the same time.
+
+**Links and changed lines**
+- **All six link directions are present:** 兼 ↔ 兼ねる, 兼 ↔ 兼任, and 任 ↔ 兼任. Each relative path is correct.
+- **兼ねる.md:** its second link (line 30, to 兼任) is also present. Its JLPT level 2, reading, identity and original quiz exclusions are unchanged.
+
+**Findings**
+1. **Minor; comprehensibility and rule wording; `words\兼任.md` lines 16 and 20.**
+   - **Claim:** line 16 says to mark "the additional post" with を. Example 2 (社長と会長を兼任しています) puts を on both posts together, not on an additional one. A learner may not see how the example fits the rule. The Japanese itself is correct.
+   - **Remedy:** reword it, for example: "mark the post(s) held with を — an added post, or both posts joined with と."
+   - **Evidence:** JMdict gives "holding the additional post of". The coordinator-supplied Daijisen example is 首相が外相を―する. Compare those with example 2.
+   - **Confidence:** medium-high that the mismatch exists; the impact is low.
+
+**Optional**
+- **兼.md lines 62–64:** the note says 典 and 具 have spreading feet, but 兼 also has spreading lower strokes (strokes 9 and 10). It could state the real cue: 兼 has the 丷 shape on top and two long verticals running through, with no closed box.
+- **兼任.md lines 28–30:** 任 is described as "a post or duty" (a noun), while 兼 is called a modifier of how posts are held. A verb-plus-object reading fits that description just as well. Either word "serving in a post" or say the relation is a teaching simplification. This is low-confidence.
+- **兼任.md line 53:** the dictionary note could also cite 勤める (entry 1240825).
+
+**Limits**
+- Unique 兼 kanji title across the whole deck: not verified.
+- Whether `words\掛け持ち.md` or another article with a similar title exists (掛け持ち is in the comparison XML): not verified, so a possible quiz-exclusion need there is unresolved.
+- Wider quiz pools: only the supplied fallback labels were checked. I make no general quiz-safety claim.
+- The packet's 41-Han and font-coverage note was not checked and does not prove rendering. I did no native-speaker, phone, font, routing or drawing testing.
+- Curation requires Android f9b59a2 or later. Physical-phone, general-release and whole-set acceptance are still outstanding.
