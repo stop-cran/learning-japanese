@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.github.stopcran.kanji.core.RealContentTest" tests="3" skipped="0" failures="1" errors="0" timestamp="2026-11-06T10:30:22.669Z" hostname="TRAIN" time="22.406">
+  <properties/>
+  <testcase name="hotelBookingDoesNotAcceptTheSchoolClassReadingWhenRepoPresent" classname="io.github.stopcran.kanji.core.RealContentTest" time="0.092"/>
+  <testcase name="completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent" classname="io.github.stopcran.kanji.core.RealContentTest" time="5.636"/>
+  <testcase name="parsesRealContentRepoWhenPresent" classname="io.github.stopcran.kanji.core.RealContentTest" time="16.677">
+    <failure message="java.lang.OutOfMemoryError: Java heap space" type="java.lang.OutOfMemoryError">java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOfRange(Arrays.java:3822)
+	at java.base/java.lang.StringUTF16.newString(StringUTF16.java:1179)
+	at java.base/java.lang.StringBuilder.toString(StringBuilder.java:454)
+	at kotlin.text.StringsKt__StringsJVMKt.replace(StringsJVM.kt:105)
+	at kotlin.text.StringsKt__StringsJVMKt.replace$default(StringsJVM.kt:85)
+	at io.github.stopcran.kanji.core.content.FrontMatter.parse(FrontMatter.kt:10)
+	at io.github.stopcran.kanji.core.content.ContentParser.parseWord(ContentParser.kt:464)
+	at io.github.stopcran.kanji.core.content.ContentParser$TextContent.add(ContentParser.kt:104)
+	at io.github.stopcran.kanji.core.content.ContentParser.readText(ContentParser.kt:142)
+	at io.github.stopcran.kanji.core.content.ContentParser.parse(ContentParser.kt:28)
+	at io.github.stopcran.kanji.core.content.ContentParser.parse$default(ContentParser.kt:23)
+	at io.github.stopcran.kanji.core.RealContentTest.parsesRealContentRepoWhenPresent(RealContentTest.kt:119)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
