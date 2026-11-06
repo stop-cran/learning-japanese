@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "execution": 601,
+  "batch": "086",
+  "stage": "local-unreviewed-draft",
+  "sourceCheckpoint": "553348453ccd627801782e95e9c83ab9c5e73a7b",
+  "originalSourceEvidence": "batch-086-source-evidence.json",
+  "fullFamilyInspection": {
+    "lexicalPacket": "batch-086-jmdict.xml",
+    "ranges": [[1, 245], [246, 490], [491, 735], [736, 980]],
+    "completeFamilies": 49,
+    "comparisonPacket": "batch-086-comparison-jmdict.xml",
+    "comparisonRanges": [[1, 180], [181, 360]],
+    "completeComparisonFamilies": 12,
+    "supplementPacket": "batch-086-draft-comparison-jmdict.xml",
+    "supplementRanges": [[1, 220], [221, 440]],
+    "completeSupplementFamilies": 10,
+    "rawCharacterPackets": "One target plus six complete comparison character records, all freshly returned through EOF.",
+    "limits": "Author inspection, not independent review. Complete families inspected include restrictions, spelling-specific and sense-local labels. Extraction membership and hashes are audited separately; bytes do not certify comprehension."
+  },
+  "teachingDecisions": [
+    {
+      "entries": ["1507910", "1523690"],
+      "decision": "ボン in 平凡 and ハン in 凡例 have exact whole-word dictionary pairs and explicit per-character allocation in the actual Daijisen 凡 character heading. Both selected with their own linked reading row. No inferred N1 vocabulary level for new 凡例; reused 平凡 retains N2."
+    },
+    {
+      "entries": ["1523450", "1415050", "1595730"],
+      "decision": "凡そ およそ is usually written in kana. 凡て すべて is a rare kanji spelling, not a rare pronunciation. Recognize these through stable およそ N3 and 全て N3 with exact alias navigation; retain every original metadata/exclusion field. The different おおよそ family does not verify exact raw おうよ.そ."
+    },
+    {
+      "entries": [],
+      "decision": "Raw KANJIDIC2 おうよ.そ retained unchanged and explicitly source-only with no verified modern word example. A full frozen-JMdict reb scan finds no exact おうよそ; this does not prove a typo or impossibility. Explicit quizKunyomi[] prevents that question without changing full metadata/order."
+    },
+    {
+      "entries": ["1523690", "1478740", "1585230", "2713240"],
+      "decision": "凡例 is explanatory usage conventions/introductory notes or a map/drawing legend, not a generic mediocre example, judicial 判例, or every 例. Original teaching examples show dictionary usage notes and a map legend, with kana and English; no fabricated collocation for a supposed semantic partition."
+    }
+  ],
+  "directQuizGuards": [
+    {
+      "words": ["注", "説明", "解説"],
+      "entries": ["1426520", "1386460", "1199080"],
+      "reason": "Actual explanatory-note/explanation labels overlap; 説明's complete entry also includes legend. Declare all three direct pairs, not transitive protection through another word."
+    },
+    {
+      "words": ["メモ", "筆記"],
+      "entries": ["1133830", "1487800"],
+      "reason": "Broad note labels and recorded notes can be defensible for explanatory notes. Conservative label guards, not a claim that every personal memo or note-taking action is a 凡例."
+    },
+    {
+      "words": ["はじめに", "概論"],
+      "entries": ["1307520", "1204520"],
+      "reason": "Book-introduction/introductory remarks can overlap broad English answer labels; do not make all prefatory prose or field surveys interchangeable with usage conventions."
+    },
+    {
+      "words": ["鍵"],
+      "entries": ["1260490", "2247650"],
+      "reason": "Bare English key also denotes a symbol legend. This is English-label ambiguity, not evidence that Japanese かぎ normally denotes a map legend. Both full distinct reading families inspected; no identity change."
+    }
+  ],
+  "unselectedNeighbors": [
+    {
+      "word": "栞",
+      "entry": "1568040",
+      "reason": "Bookmark/guidebook is not itself the usage conventions or symbol legend. Shared book tags alone are not a synonym or exclusion rule."
+    },
+    {
+      "words": ["丸", "九", "凹"],
+      "entries": ["1216250", "2252570", "1578150", "2748010", "1179150", "2756450"],
+      "reason": "Full character records, actual displayed labels and complete standalone/homograph families inspected. Circle/roundness, nine and concave/sunken are not commonplace/mediocre. 丸's entirety and 凡's general/all associations are retained without denying either branch; those branches do not make the displayed circle label an answer to 凡."
+    }
+  ],
+  "publicReinspection": [
+    {
+      "url": "https://kotobank.jp/word/凡-449449",
+      "returnedCharacters": 11000,
+      "heading": "Digital Daijisen ぼん【凡】漢字項目",
+      "supports": "Explicit ボン→平凡 and ハン→凡例, general/overall association versus ordinary/mediocre.",
+      "limits": "Later Jitsu compound list truncated; historical image-dependent account not adopted as verified origin. Original committed raw page archive and prior qualifications retained."
+    },
+    {
+      "url": "https://kotobank.jp/word/凡例-118735",
+      "heading": "Digital Daijisen はん‐れい【凡例】; Seisen; library-dictionary conventions",
+      "supports": "Whole-word reading and reference-book editorial/usage conventions; JMdict separately verifies map/drawing legend.",
+      "limits": "Library dictionary heading says fifth edition while attribution says fourth; no edition/history conclusion drawn. Britannica pointer is not a new expansive definition."
+    }
+  ],
+  "allMappedLinks": "Seven pairs/fourteen directions across four selected articles, including kana/rare-spelling recognition aliases and reused baseline 平/例/全. Primary written support mappings and alias verification are distinct; no invented constituent allocation for an unrelated primary spelling.",
+  "baselineAndFontLimits": "All baseline metadata/readings/levels/exclusions/strokes and prior documented exceptions preserved. Exact final Han/cmaps and pinned converter output audited, not native glyph/fallback-face/drawing acceptance. No independent review, Android/native, physical phone, general release or publication here.",
+  "process": "Current coordinator23024 inherits live parent19008 protection. No runner.lock acquisition/deletion/unlock, optional historical-session helper access, new permission denial, reviewer or second runner.",
+  "nextGates": "Two serial blind different-family content reviews and original-session confirmations; fresh non-skipped Android/native/fourfont/visual checks; combined-main/signing/owner push/terminal CI/every immutable public ZIP hash and original budgets. Do not publish this draft or start087."
+}
