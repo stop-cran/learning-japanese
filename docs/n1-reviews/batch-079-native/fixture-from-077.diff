@@ -1,0 +1,343 @@
+--- docs\n1-reviews\batch-077-native\N1Batch077NativeTest.kt
++++ docs\n1-reviews\batch-079-native\N1Batch079NativeTest.kt
+@@ -50 +50 @@
+-private fun disposable077() {
++private fun disposable079() {
+@@ -55 +55 @@
+-class N1Batch077GlyphTest {
++class N1Batch079GlyphTest {
+@@ -58,2 +58,2 @@
+-    @Test fun bravingRiskLookalikesAndRadicalFallbacksAcrossFourProductionFamilies() {
+-        disposable077()
++    @Test fun crownLookalikesAndCoverRoofFallbacksAcrossFourProductionFamilies() {
++        disposable079()
+@@ -62 +62 @@
+-        val pages = listOf("供 侵 備 冂 冒 危 壊 好 子 官 害 山 店 必 損 攻 旅 日 準 物 犯 病 登 目", "罪 行 被 要 語 道 開 阜 阝 限 院 険 頭 馬 験", "冒 日 目 官 冂 阜 阝 険 犯 侵 冒険 冒す")
++        val pages = listOf("一 世 住 元 冖 冗 冠 前 名 国 土 城 外 子 宀 守 完 寸 工 帽 技 最 栓 様", "流 玉 王 瓶 生 界 蓋 術 金 題 高", "冠 冗 完 守 冖 宀 元 寸 王 王冠 冠たる 世界 帽子 蓋 栓")
+@@ -67 +67 @@
+-                    Text("Batch 077: braving risk / look-alikes / radical fallback")
++                    Text("Batch 079: crown / look-alikes / cover and roof fallback")
+@@ -73 +73 @@
+-                    Text("Inspect all 39 scoped Han; focused 冒/日/目/官, 冂 and 阜/阝. Fallback families may coincide.", fontSize = 16.sp)
++                    Text("Inspect all 35 scoped Han; focused 冠/冗/完/守/元/寸, 冖 and 宀. Fallback families may coincide.", fontSize = 16.sp)
+@@ -84 +84 @@
+-            for (char in listOf("供", "侵", "備", "冂", "冒", "危", "壊", "好", "子", "官", "害", "山", "店", "必", "損", "攻", "旅", "日", "準", "物", "犯", "病", "登", "目", "罪", "行", "被", "要", "語", "道", "開", "阜", "阝", "限", "院", "険", "頭", "馬", "験")) {
++            for (char in listOf("一", "世", "住", "元", "冖", "冗", "冠", "前", "名", "国", "土", "城", "外", "子", "宀", "守", "完", "寸", "工", "帽", "技", "最", "栓", "様", "流", "玉", "王", "瓶", "生", "界", "蓋", "術", "金", "題", "高")) {
+@@ -105 +105 @@
+-            for (word in listOf("冒険", "冒す")) {
++            for (word in listOf("冠", "王冠")) {
+@@ -132 +132 @@
+-        assertEquals(164, rows.length())
++        assertEquals(148, rows.length())
+@@ -138 +138 @@
+-            File(context.getExternalFilesDir(null), "n1-077-font-panel-${index + 1}.png").outputStream().use {
++            File(context.getExternalFilesDir(null), "n1-079-font-panel-${index + 1}.png").outputStream().use {
+@@ -142 +142 @@
+-        File(context.getExternalFilesDir(null), "n1-077-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-079-font-raster.json").writeText(JSONObject()
+@@ -145,2 +145,2 @@
+-            .put("individualGlyphProbes", 156).put("wholeWordRasterProbes", 8).put("panels", 3)
+-            .put("limits", "39 scoped Han including metadata-only 攻 and pending 冂/阝 fallback inspection, four production families, three bounded Compose panels and eight whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
++            .put("individualGlyphProbes", 140).put("wholeWordRasterProbes", 8).put("panels", 3)
++            .put("limits", "35 actual scoped Han including exact 冖/宀 fallback inspection, four production families, three bounded Compose panels and eight whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
+@@ -151 +151 @@
+-class N1Batch077ArticleTest {
++class N1Batch079ArticleTest {
+@@ -156,2 +156,2 @@
+-    @Test fun fullSingleImportOfflineBravingRiskThreeReciprocalPairsBothReadingsDrawingAndSystemBack() {
+-        disposable077()
++    @Test fun fullSingleImportOfflineCrownThreeReciprocalPairsBothReadingsDrawingAndSystemBack() {
++        disposable079()
+@@ -160,2 +160,2 @@
+-        val source = RepoSource("acceptance-fixture", "n1-077-${UUID.randomUUID()}", "main")
+-        val head = "46dff1466ac9f3cf64b54e197c05088414939896"
++        val source = RepoSource("acceptance-fixture", "n1-079-${UUID.randomUUID()}", "main")
++        val head = "3fdc0bf952e299060b5a07ac372bb6d926595a4c"
+@@ -169 +169 @@
+-                    instrumentation.context.assets.open("n1-batch-077-46dff146-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-079-3fdc0bf9-envelope.zip")
+@@ -184,2 +184,2 @@
+-        assertEquals(1089, updated.kanji)
+-        assertEquals(5046, updated.words)
++        assertEquals(1091, updated.kanji)
++        assertEquals(5047, updated.words)
+@@ -188 +188 @@
+-        assertEquals("2944928c13e2165a", meta.contentVersion)
++        assertEquals("a01eb85b17601ac0", meta.contentVersion)
+@@ -196,10 +196,10 @@
+-        assertEquals(109, n1.size)
+-        val bravingRisk = n1.single { it.kanji == "冒" }
+-        assertEquals(listOf("ボウ"), bravingRisk.onyomi.splitSep())
+-        assertEquals(listOf("おか.す"), bravingRisk.kunyomi.splitSep())
+-        assertNotNull(bravingRisk.quizOnyomi)
+-        assertNotNull(bravingRisk.quizKunyomi)
+-        assertEquals(listOf("ボウ"), bravingRisk.quizOnyomi?.splitSep())
+-        assertEquals(listOf("おか.す"), bravingRisk.quizKunyomi?.splitSep())
+-        assertEquals(listOf("ぼう"), bravingRisk.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(listOf("おかす"), bravingRisk.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(111, n1.size)
++        val crown = n1.single { it.kanji == "冠" }
++        assertEquals(listOf("カン"), crown.onyomi.splitSep())
++        assertEquals(listOf("かんむり"), crown.kunyomi.splitSep())
++        assertNotNull(crown.quizOnyomi)
++        assertNotNull(crown.quizKunyomi)
++        assertEquals(listOf("カン"), crown.quizOnyomi?.splitSep())
++        assertEquals(listOf("かんむり"), crown.quizKunyomi?.splitSep())
++        assertEquals(listOf("かん"), crown.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(listOf("かんむり"), crown.toReadingCard().quizKeys(ReadingKind.Kun))
+@@ -219 +219 @@
+-                        if (card.kanji == "冒") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "冠") now - 60_000 else now + 30L * 86_400_000,
+@@ -225 +225 @@
+-                            if (card.kanji == "冒" && ((kind == ReadingKind.On && key == "ぼう") || (kind == ReadingKind.Kun && key == "おかす"))) now - 60_000
++                            if (card.kanji == "冠" && ((kind == ReadingKind.On && key == "かん") || (kind == ReadingKind.Kun && key == "かんむり"))) now - 60_000
+@@ -232 +232 @@
+-                    0, source.id, "jlpt-n1", "冒", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "冠", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+@@ -242,6 +242,6 @@
+-            .put("fullOnyomi", JSONArray(bravingRisk.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(bravingRisk.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(bravingRisk.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(bravingRisk.toReadingCard().quizKeys(ReadingKind.Kun)))
+-            .put("liteQuizOnyomi", JSONArray(requireNotNull(bravingRisk.quizOnyomi).splitSep()))
+-            .put("liteQuizKunyomi", JSONArray(requireNotNull(bravingRisk.quizKunyomi).splitSep()))
++            .put("fullOnyomi", JSONArray(crown.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(crown.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(crown.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(crown.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("liteQuizOnyomi", JSONArray(requireNotNull(crown.quizOnyomi).splitSep()))
++            .put("liteQuizKunyomi", JSONArray(requireNotNull(crown.quizKunyomi).splitSep()))
+@@ -250 +250 @@
+-            .put("fixture", "Other N1 meanings/readings postponed; 冒 meaning and both complete curated readings due. Two historical good 冒 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; 冠 meaning and both complete curated keys かん/かんむり due. Two historical good 冠 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+@@ -257 +257 @@
+-            await("N1 · 109 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 111 cards").performScrollTo().assertIsDisplayed()
+@@ -260,4 +260,4 @@
+-            rule.onNode(hasSetTextAction()).performTextReplacement("冒")
+-            click("brave danger; venture")
+-            await("冒 — brave danger; venture")
+-            show(articleBullet("Strokes: 9 · Key (radical): 冂 (the outer outline of the upper part, no. 13) · JLPT: N1 (community list)"), "kanji-01")
++            rule.onNode(hasSetTextAction()).performTextReplacement("冠")
++            click("crown; peerless")
++            await("冠 — crown; peerless")
++            show(articleBullet("Strokes: 9 · Key (radical): 冖 (the cover-like upper part, no. 14) · JLPT: N1 (community list)"), "kanji-01")
+@@ -265,2 +265,2 @@
+-            show(articleBullet("冒 expresses braving danger or venturing despite difficulty in 冒す (おかす) and 冒険 (ぼうけん), \"adventure; risky venture.\" It is not a general label for anything dangerous: 危険 (きけん) names danger, while 危険を冒す (きけんをおかす) means taking a risk."), "kanji-03")
+-            show(articleBullet("Modern-shape mnemonic: picture an eye, 目, beneath a boxlike upper outline, looking ahead despite danger. This is a memory aid, not a historical sun-plus-eye explanation. The classical indexing radical is 冂, not 日, even though the upper shape can resemble 日."), "kanji-04")
++            show(articleBullet("冠 means a crown or ceremonial head covering, and can also express being foremost or peerless. 冠 (かんむり) names the headgear; 王冠 (おうかん) is a royal crown and also a crown-type bottle cap. Learn each complete word rather than translating every 冠 compound as a physical crown."), "kanji-03")
++            show(articleBullet("Modern-shape mnemonic: imagine the cover-like 冖 as a crown over 元, with 寸 at the lower right to hold it in place. This is an invented memory aid, not a historical explanation or a verified phonetic analysis."), "kanji-04")
+@@ -268,9 +268,8 @@
+-            show(articleBullet("Both complete source readings are retained and selected for reading practice."), "kanji-06")
+-            show(readingExample("ボウ"), "kanji-10")
+-            show(readingExample("冒険 ぼうけん — adventure; risky venture"), "kanji-12")
+-            show(readingExample("おか.す"), "kanji-13")
+-            show(readingExample("冒す おかす — brave danger; 危険を冒す きけんをおかす — take a risk"), "kanji-15")
+-            section("Common words")
+-            show(articleBullet("冒険 ぼうけん — adventure; risky venture"), "kanji-17")
+-            show(articleBullet("冒す おかす — brave danger; venture despite difficulty"), "kanji-18")
+-            show(articleBullet("冒頭 (ぼうとう) — beginning; opening"), "kanji-19")
++            show(articleBullet("Both complete source readings are selected for practice. The native noun かんむり and the compound reading カン have separate examples."), "kanji-06")
++            show(readingExample("カン"), "kanji-10")
++            show(readingExample("王冠 おうかん — royal crown; crown-type bottle cap"), "kanji-12")
++            show(readingExample("かんむり"), "kanji-13")
++            show(readingExample("冠 かんむり — crown; ceremonial cap"), "kanji-15")
++            section("Common words")
++            show(articleBullet("冠 かんむり — crown; ceremonial cap; also a top component of a kanji"), "kanji-17")
++            show(articleBullet("王冠 おうかん — royal crown; crown-type bottle cap"), "kanji-18")
+@@ -278,6 +277,6 @@
+-            show(articleBullet("Do not force the risk-taking gloss into every compound: 冒頭 names an opening, not an adventure. 冒す also has a harm/affliction sense: 病に冒される (やまいにおかされる), \"be afflicted by a disease,\" is passive, not someone choosing to take a risk."), "kanji-21")
+-            show(articleBullet("犯 also has the reading おか.す, but 犯す is used for committing an offense, as in 罪を犯す (つみをおかす), \"commit a crime.\" 侵す (おかす) concerns invading or infringing and can overlap with 冒す in harm/affliction uses. These are useful spelling distinctions, not perfectly separate meaning compartments. For shape comparison, 官 has a roof and a different connected lower outline; neither 官 nor 目 means braving danger."), "kanji-22")
+-            show(articleBullet("Metadata: KANJIDIC2. Dictionary: JMdict, entries 1519820, 1519830, 1519860, 1855070, 1868850, 1359800 and 1481550. Reading and meaning branches: Digital Daijisen: 冒; spelling overlap: Digital Daijisen: 冒す."), "kanji-23")
+-            section("Common words")
+-            show(articleBullet("冒す おかす — brave danger; venture despite difficulty"), "冒す-forward-14")
+-            inline(await(articleBullet("冒す おかす — brave danger; venture despite difficulty")), "冒す", 0)
++            show(articleBullet("The \"peerless\" meaning belongs to the reading かん, not the native noun かんむり. Recognize the formal expression 世界に冠たる (せかいにかんたる), \"foremost in the world,\" used before a noun."), "kanji-20")
++            show(articleBullet("In kanji terminology, かんむり names a top component: 宀 is called うかんむり. 冠 itself has 冖, without the upper dot of 宀 in 完 and 守. 冗 shares the cover-like top but has a much simpler lower part; 完 contains 元 below its roof, while 守 contains 寸. These are shape comparisons, not claims of a shared origin."), "kanji-21")
++            show(articleBullet("Metadata: KANJIDIC2. Dictionary: JMdict, entries 1577620 and 1181450. Reading and meaning branches: Digital Daijisen: 冠."), "kanji-22")
++            section("Common words")
++            show(articleBullet("冠 かんむり — crown; ceremonial cap; also a top component of a kanji"), "冠-forward-13")
++            inline(await(articleBullet("冠 かんむり — crown; ceremonial cap; also a top component of a kanji")), "冠", 0)
+@@ -285 +284 @@
+-            await("冒す (おかす) — brave danger; take a risk")
++            await("冠 (かんむり) - crown; ceremonial cap")
+@@ -287,6 +286,5 @@
+-            show(articleBullet("冒す means braving danger or proceeding despite a known difficulty. In 危険を冒す (きけんをおかす), \"take a risk,\" を marks the danger being faced. It is a transitive verb, not a noun meaning an adventure."), "冒す-02")
+-            show(articleBullet("危険を冒して山に登りました。 (きけんをおかしてやまにのぼりました。) — I climbed the mountain despite the danger."), "冒す-03")
+-            show(articleBullet("危険を冒す必要はありません。 (きけんをおかすひつようはありません。) — There is no need to take a risk."), "冒す-04")
+-            show(articleBullet("The second sentence says that taking the risk is unnecessary; it does not say that the situation is safe."), "冒す-05")
+-            section("How the kanji combine")
+-            show(articleBullet("冒 writes おか, with す as okurigana. There is no second kanji to read as a compound. This is a godan verb: 冒します (おかします), 冒して (おかして), 冒さない (おかさない)."), "冒す-07")
++            show(articleBullet("冠, read かんむり here, names a crown or diadem, and also traditional ceremonial headgear worn by courtiers or Shinto clergy. It does not mean every everyday hat."), "冠-02")
++            show(articleBullet("王様は金の冠をかぶっていました。 (おうさまはきんのかんむりをかぶっていました。) - The king was wearing a gold crown."), "冠-03")
++            show(articleBullet("In kanji terminology, かんむり is a component at the top of a character. For example, 宀 is called うかんむり; this use is not a physical item of clothing."), "冠-04")
++            section("How the kanji combine")
++            show(articleBullet("This is one kanji with the native reading かんむり. Learn the whole pronunciation rather than dividing it into separate sound values. The same written character also has other readings with different uses."), "冠-06")
+@@ -294 +292 @@
+-            show(articleBullet("冒険 (ぼうけん) is the related noun \"adventure; risky venture\"; 冒険する means to venture or have an adventure. 危険 (きけん) names danger, whether or not anyone chooses to face it. Avoiding danger contrasts with braving it, but 冒す has other senses too, so no single opposite covers every use."), "冒す-09")
++            show(articleBullet("帽子 (ぼうし) is the broader everyday hat or cap word. 冠 can also refer to a name or title attached to a program or event, including named sponsorship; 名前 (なまえ) is not restricted to that use."), "冠-08")
+@@ -296,6 +294,5 @@
+-            show(articleBullet("Do not translate every occurrence as voluntarily taking a risk. 病に冒される (やまいにおかされる), \"be afflicted by a disease,\" uses the passive of the harm/affliction sense. Here the person is affected by the illness, not choosing to brave it. This sense can also concern harmful chemicals. The dictionary also records desecrating something sacred and assuming someone else's surname; these are separate senses, not explanations of 危険を冒す."), "冒す-11")
+-            show(articleBullet("Two other verbs share the reading おかす. 犯す, written with 犯, is used in 罪を犯す (つみをおかす), \"commit a crime.\" 侵す concerns invading or infringing and also has a harm/affliction use overlapping with 冒す. Choose the spelling from the expression and meaning, not from the sound alone; this comparison is not an absolute division of every use."), "冒す-12")
+-            show(articleBullet("Dictionary: JMdict, entries 1519820 (senses 1–4), 1868850, 1855070, 1519830, 1218560, 1359800 and 1481550. Spelling and usage: Digital Daijisen: 冒す."), "冒す-13")
+-            section("How the kanji combine")
+-            show(articleBullet("冒 writes おか, with す as okurigana. There is no second kanji to read as a compound. This is a godan verb: 冒します (おかします), 冒して (おかして), 冒さない (おかさない)."), "冒す-reverse-24")
+-            inline(await(articleBullet("冒 writes おか, with す as okurigana. There is no second kanji to read as a compound. This is a godan verb: 冒します (おかします), 冒して (おかして), 冒さない (おかさない).")), "冒", 0)
++            show(articleBullet("The source list's English \"first; best\" belongs to the separate reading かん, not かんむり. Recognize 冠たる (かんたる), \"foremost; peerless,\" as in 世界に冠たる技術 (せかいにかんたるぎじゅつ), \"world-leading technology.\" This is supplementary reading-specific teaching, not a new meaning pronounced かんむり."), "冠-10")
++            show(articleBullet("Dictionary: JMdict, entry 1577620, senses 1-3 and 6; supplementary sense 5 is restricted to かん. Usage: Digital Daijisen, 冠, separate かん and かんむり entries."), "冠-11")
++            section("How the kanji combine")
++            show(articleBullet("This is one kanji with the native reading かんむり. Learn the whole pronunciation rather than dividing it into separate sound values. The same written character also has other readings with different uses."), "冠-reverse-21")
++            inline(await(articleBullet("This is one kanji with the native reading かんむり. Learn the whole pronunciation rather than dividing it into separate sound values. The same written character also has other readings with different uses.")), "kanji", 12)
+@@ -304,12 +301,12 @@
+-            show(readingExample("ボウ"), "冒す-kanji-backlink")
+-            back()
+-            await(articleBullet("冒 writes おか, with す as okurigana. There is no second kanji to read as a compound. This is a godan verb: 冒します (おかします), 冒して (おかして), 冒さない (おかさない).")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("冒す-system-back-to-word")
+-            back()
+-            await(articleBullet("冒す おかす — brave danger; venture despite difficulty")).assertIsDisplayed()
+-            section("Common words")
+-            capture("冒す-system-back-to-kanji")
+-            section("Common words")
+-            show(articleBullet("冒険 ぼうけん — adventure; risky venture"), "冒険-forward-25")
+-            inline(await(articleBullet("冒険 ぼうけん — adventure; risky venture")), "冒険", 0)
++            show(readingExample("かんむり"), "冠-kanji-backlink")
++            back()
++            await(articleBullet("This is one kanji with the native reading かんむり. Learn the whole pronunciation rather than dividing it into separate sound values. The same written character also has other readings with different uses.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("冠-system-back-to-word")
++            back()
++            await(articleBullet("冠 かんむり — crown; ceremonial cap; also a top component of a kanji")).assertIsDisplayed()
++            section("Common words")
++            capture("冠-system-back-to-kanji")
++            section("Common words")
++            show(articleBullet("王冠 おうかん — royal crown; crown-type bottle cap"), "王冠-forward-22")
++            inline(await(articleBullet("王冠 おうかん — royal crown; crown-type bottle cap")), "王冠", 0)
+@@ -317,6 +314,16 @@
+-            await("冒険 (ぼうけん) - adventure; risky venture")
+-            section("How the kanji combine")
+-            show(articleBullet("冒 contributes braving or venturing, while 険 contributes danger or difficulty. The relationship is roughly venturing into danger. The on readings are ボウ + ケン."), "冒険-07")
+-            section("How the kanji combine")
+-            show(articleBullet("冒 contributes braving or venturing, while 険 contributes danger or difficulty. The relationship is roughly venturing into danger. The on readings are ボウ + ケン."), "冒険-reverse-27")
+-            inline(await(articleBullet("冒 contributes braving or venturing, while 険 contributes danger or difficulty. The relationship is roughly venturing into danger. The on readings are ボウ + ケン.")), "冒", 0)
++            await("王冠 (おうかん) — royal crown; bottle cap")
++            section("Meaning")
++            show(articleBullet("王冠 is a royal crown, worn as a sign of royal status. It can also name a crown awarded as an honor. A separate everyday-object sense is a crown-shaped metal bottle cap, such as the closure on a beer bottle."), "王冠-02")
++            show(articleBullet("王は王冠をかぶっています。 (おうはおうかんをかぶっています。) — The king is wearing a crown."), "王冠-03")
++            show(articleBullet("瓶の王冠を外しました。 (びんのおうかんをはずしました。) — I removed the bottle's crown cap."), "王冠-04")
++            show(articleBullet("The second sentence concerns a bottle closure, not royal headgear. Use the context to choose the English meaning."), "王冠-05")
++            section("How the kanji combine")
++            show(articleBullet("王 means \"king; ruler,\" and 冠 means \"crown.\" This is a modifier + head compound: a ruler's crown. The on readings are オウ + カン. The bottle-cap sense extends the name to an object shaped like a crown; it is not a miniature item of royal clothing."), "王冠-07")
++            section("Synonyms and antonyms")
++            show(articleBullet("冠 (かんむり) is the broader crown or ceremonial-headgear word. 帽子 (ぼうし) means a hat or cap, not specifically a royal crown. For containers, 蓋 (ふた) is a broader lid or cap word, while 栓 (せん) can mean a stopper or plug. These words overlap for some closures, but are not interchangeable for every object. There is no useful single opposite noun."), "王冠-09")
++            section("Distinctive meaning")
++            show(articleBullet("王冠 does not name every lid or screw cap: the bottle sense concerns the crown-type metal closure. For the royal object, use かぶる for putting it on and かぶっている for wearing it. Do not transfer the separate 冠たる (かんたる), \"peerless,\" use of 冠 to 王冠."), "王冠-11")
++            show(articleBullet("Dictionary: JMdict, entry 1181450, senses 1-2. Usage and bottle-cap sense: Digital Daijisen: 王冠, おうかん general-word entry."), "王冠-12")
++            section("How the kanji combine")
++            show(articleBullet("王 means \"king; ruler,\" and 冠 means \"crown.\" This is a modifier + head compound: a ruler's crown. The on readings are オウ + カン. The bottle-cap sense extends the name to an object shaped like a crown; it is not a miniature item of royal clothing."), "王冠-reverse-31")
++            inline(await(articleBullet("王 means \"king; ruler,\" and 冠 means \"crown.\" This is a modifier + head compound: a ruler's crown. The on readings are オウ + カン. The bottle-cap sense extends the name to an object shaped like a crown; it is not a miniature item of royal clothing.")), "冠", 27)
+@@ -325,8 +332,8 @@
+-            show(readingExample("ボウ"), "冒険-kanji-backlink")
+-            back()
+-            await(articleBullet("冒 contributes braving or venturing, while 険 contributes danger or difficulty. The relationship is roughly venturing into danger. The on readings are ボウ + ケン.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("冒険-system-back-to-word")
+-            section("How the kanji combine")
+-            show(articleBullet("冒 contributes braving or venturing, while 険 contributes danger or difficulty. The relationship is roughly venturing into danger. The on readings are ボウ + ケン."), "冒険-険-28")
+-            inline(await(articleBullet("冒 contributes braving or venturing, while 険 contributes danger or difficulty. The relationship is roughly venturing into danger. The on readings are ボウ + ケン.")), "険", 42)
++            show(readingExample("カン"), "王冠-kanji-backlink")
++            back()
++            await(articleBullet("王 means \"king; ruler,\" and 冠 means \"crown.\" This is a modifier + head compound: a ruler's crown. The on readings are オウ + カン. The bottle-cap sense extends the name to an object shaped like a crown; it is not a miniature item of royal clothing.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("王冠-system-back-to-word")
++            section("How the kanji combine")
++            show(articleBullet("王 means \"king; ruler,\" and 冠 means \"crown.\" This is a modifier + head compound: a ruler's crown. The on readings are オウ + カン. The bottle-cap sense extends the name to an object shaped like a crown; it is not a miniature item of royal clothing."), "王冠-王-32")
++            inline(await(articleBullet("王 means \"king; ruler,\" and 冠 means \"crown.\" This is a modifier + head compound: a ruler's crown. The on readings are オウ + カン. The bottle-cap sense extends the name to an object shaped like a crown; it is not a miniature item of royal clothing.")), "王", 0)
+@@ -334,4 +341,4 @@
+-            show(articleBullet("Strokes: 11 · Key (radical): 阜 (as left-hand 阝, no. 170) · JLPT: N3 (community list)"), "険-fallback-01")
+-            section("Meaning and origin")
+-            show(articleBullet("険 occurs in steep or difficult terrain and in danger-related words. 険しい けわしい can describe a steep, rugged route; 危険 きけん means danger or dangerous. 冒険 ぼうけん names an adventure or venture."), "険-counterpart-30")
+-            inline(await(articleBullet("険 occurs in steep or difficult terrain and in danger-related words. 険しい けわしい can describe a steep, rugged route; 危険 きけん means danger or dangerous. 冒険 ぼうけん names an adventure or venture.")), "冒険", 147)
++            await("王 — king")
++            section("Common words")
++            show(articleBullet("王冠 おうかん — royal crown; also a crown-type bottle cap"), "王-counterpart-33")
++            inline(await(articleBullet("王冠 おうかん — royal crown; also a crown-type bottle cap")), "王冠", 0)
+@@ -340,13 +347,13 @@
+-            show(articleBullet("冒 contributes braving or venturing, while 険 contributes danger or difficulty. The relationship is roughly venturing into danger. The on readings are ボウ + ケン."), "冒険-険-component-backlink")
+-            back()
+-            await(articleBullet("険 occurs in steep or difficult terrain and in danger-related words. 険しい けわしい can describe a steep, rugged route; 危険 きけん means danger or dangerous. 冒険 ぼうけん names an adventure or venture.")).assertIsDisplayed()
+-            section("Meaning and origin")
+-            capture("冒険-険-system-back-to-component")
+-            back()
+-            await(articleBullet("冒 contributes braving or venturing, while 険 contributes danger or difficulty. The relationship is roughly venturing into danger. The on readings are ボウ + ケン.")).assertIsDisplayed()
+-            section("How the kanji combine")
+-            capture("冒険-険-system-back-from-component")
+-            back()
+-            await(articleBullet("冒険 ぼうけん — adventure; risky venture")).assertIsDisplayed()
+-            section("Common words")
+-            capture("冒険-system-back-to-kanji")
++            show(articleBullet("王 means \"king; ruler,\" and 冠 means \"crown.\" This is a modifier + head compound: a ruler's crown. The on readings are オウ + カン. The bottle-cap sense extends the name to an object shaped like a crown; it is not a miniature item of royal clothing."), "王冠-王-component-backlink")
++            back()
++            await(articleBullet("王冠 おうかん — royal crown; also a crown-type bottle cap")).assertIsDisplayed()
++            section("Common words")
++            capture("王冠-王-system-back-to-component")
++            back()
++            await(articleBullet("王 means \"king; ruler,\" and 冠 means \"crown.\" This is a modifier + head compound: a ruler's crown. The on readings are オウ + カン. The bottle-cap sense extends the name to an object shaped like a crown; it is not a miniature item of royal clothing.")).assertIsDisplayed()
++            section("How the kanji combine")
++            capture("王冠-王-system-back-from-component")
++            back()
++            await(articleBullet("王冠 おうかん — royal crown; crown-type bottle cap")).assertIsDisplayed()
++            section("Common words")
++            capture("王冠-system-back-to-kanji")
+@@ -362 +369 @@
+-            assertEquals("冒", (quiz.ui as QuizUi.Question).card.kanji)
++            assertEquals("冠", (quiz.ui as QuizUi.Question).card.kanji)
+@@ -364 +371 @@
+-            click("brave danger; venture")
++            click("crown; peerless")
+@@ -366 +373 @@
+-            assertEquals("冒", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("冠", (quiz.ui as QuizUi.Answer).card.kanji)
+@@ -376 +383 @@
+-                assertEquals("冒", question.card.kanji)
++                assertEquals("冠", question.card.kanji)
+@@ -378 +385 @@
+-                val key = if (question.question.kind == ReadingKind.On) "ぼう" else "おかす"
++                val key = if (question.question.kind == ReadingKind.On) "かん" else "かんむり"
+@@ -389 +396 @@
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "冒" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "冠" &&
+@@ -399 +406 @@
+-                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "冒" &&
++                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "冠" &&
+@@ -403 +410 @@
+-            assertEquals(setOf("ぼう", "おかす"), readingLogs.map { it.reading }.toSet())
++            assertEquals(setOf("かん", "かんむり"), readingLogs.map { it.reading }.toSet())
+@@ -409,4 +416,4 @@
+-            await("brave danger; venture").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "冒") })
+-            assertEquals(listOf("ボウ"), card.onyomi.splitSep())
+-            assertEquals(listOf("おか.す"), card.kunyomi.splitSep())
++            await("crown; peerless").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "冠") })
++            assertEquals(listOf("カン"), card.onyomi.splitSep())
++            assertEquals(listOf("かんむり"), card.kunyomi.splitSep())
+@@ -415,2 +422,2 @@
+-            assertEquals(listOf("ボウ"), card.quizOnyomi?.splitSep())
+-            assertEquals(listOf("おか.す"), card.quizKunyomi?.splitSep())
++            assertEquals(listOf("カン"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("かんむり"), card.quizKunyomi?.splitSep())
+@@ -444 +451 @@
+-                    it.kanji == "冒" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "冠" && it.mode == StudyMode.Draw.name }
+@@ -455 +462 @@
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "冒" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "冠" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+@@ -468,2 +475,2 @@
+-            File(app.getExternalFilesDir(null), "n1-077-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-077-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-079-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-079-article-tree.txt").writeText(rule.onRoot().printToString())
+@@ -562 +569 @@
+-        File(app.getExternalFilesDir(null), "n1-077-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-079-$step.png").outputStream().use {
