@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "execution": 570,
+  "batch": "083",
+  "status": "textually-review-closed-awaiting-fresh-android",
+  "originalTeachingSnapshot": "4b8bfcc4bc4fff4c73185a8cc6c27d4cb5736efc",
+  "reviewedTeachingSnapshot": "4b8bfcc4bc4fff4c73185a8cc6c27d4cb5736efc",
+  "initialModels": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "processes": {
+    "claude": {
+      "sessionId": "ce6f8ba4-518e-42b8-b0ee-bd14d3b291e9",
+      "launcherPid": 16728,
+      "requestedModel": "claude-opus-5.5",
+      "actualModels": [
+        "claude-opus-5.5"
+      ],
+      "snapshot": "4b8bfcc4bc4fff4c73185a8cc6c27d4cb5736efc",
+      "startedAt": "2026-11-06T16:39:54.678774+01:00",
+      "completedAt": "2026-11-06T16:41:13.630550+01:00",
+      "exitCode": 0,
+      "reportSha256": "43174b7e27148c7ff691817e7bdb87d423538105320df1b1617e9631b3b24ed8",
+      "rawExecutionSha256": "c72a6517ccdcec489655e512fda22f333610e6bad65e5c32311a977a55710722",
+      "report": "batch-083-initial-claude.md",
+      "execution": "batch-083-initial-claude-execution.json",
+      "coverage": "batch-083-initial-claude-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0
+    },
+    "gpt": {
+      "sessionId": "574ee3ae-411e-4a83-b00f-89b69ac61d99",
+      "launcherPid": 18864,
+      "requestedModel": "gpt-6.1-sol",
+      "actualModels": [
+        "gpt-6.1-sol"
+      ],
+      "snapshot": "4b8bfcc4bc4fff4c73185a8cc6c27d4cb5736efc",
+      "startedAt": "2026-11-06T16:41:20.409979+01:00",
+      "completedAt": "2026-11-06T16:42:03.157073+01:00",
+      "exitCode": 0,
+      "reportSha256": "0fea7ea787be91d65a8520a99c3f69625c07d57447c2b25aa32bb53c7d110216",
+      "rawExecutionSha256": "0bee4117db432edb89bbdb0623535404c8d9c0788e0c07e6a3ce4ac19bc65c7e",
+      "report": "batch-083-initial-gpt.md",
+      "execution": "batch-083-initial-gpt-execution.json",
+      "coverage": "batch-083-initial-gpt-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0
+    }
+  },
+  "serialReviewerProcessesVerified": true,
+  "eachReportArchivedBeforeNextLaunch": true,
+  "allInitialInternalToolsSerial": true,
+  "allAssignedRangesReturned": true,
+  "initialPacketBytes": 166941,
+  "initialPacketLines": 3425,
+  "initialDistinctCompleteFamilies": 42,
+  "initialFamilyOccurrences": 44,
+  "rawCharacterRecords": 8,
+  "initialComparisonBodiesSupplied": 14,
+  "completeArticleBodiesSupplied": 17,
+  "changedReusedPassages": [],
+  "teachingChangesAfterReview": [],
+  "verdicts": {
+    "kanji/凌.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "words/凌ぐ.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "words/凌駕.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    }
+  },
+  "findings": [],
+  "actionableRemainingFindings": 0,
+  "consequentialUnresolvedTeachingFindings": 0,
+  "optional": [
+    {
+      "id": "083-C1",
+      "reportedBy": [
+        "Claude initial optional"
+      ],
+      "claim": "Prefer keep out wind and rain over shelter from at words/凌ぐ.md:20.",
+      "status": "optional",
+      "decision": "No teaching edit.",
+      "evidence": "JMdict1554200 sense1 includes keep out rain; complete2832692 explicitly glosses weather expression as shelter oneself from the weather/protect against the elements. Supplied Daijisen sense2 attests風雨を凌ぐ. Both renderings fit this scoped phrase; shelter from does not assert that the verb is intransitive.",
+      "confidence": "high"
+    },
+    {
+      "id": "083-C2",
+      "reportedBy": [
+        "Claude initial optional"
+      ],
+      "claim": "Mention defy/slight from JMdict1554200 sense3 at words/凌ぐ.md:15-17.",
+      "status": "optional",
+      "decision": "No expansion.",
+      "evidence": "Exact complete family preserves these additional glosses alongside surpass/outdo/excel/eclipse. Article explicitly says can mean and teaches practical enduring/surpassing branches, not an exhaustive gloss inventory. No unrestricted substitution or claim denying other senses. Extra selected examples are not necessary for either frozen reading.",
+      "confidence": "high"
+    }
+  ],
+  "modelContributionComparison": {
+    "shared": "Both reports found no established textual defect across all three new articles, reading allocation/curation, conjugation/transitivity, attested phrases and translations, spelling/mnemonic qualifications, actual quiz labels/17directguards and reciprocal/navigation links.",
+    "claudeOnlyVerifiedUseful": "Two optional wording/coverage suggestions retained and adjudicated from exact family evidence; no unique actionable defect. Extra limits about target existence/title uniqueness checked mechanically by coordinator.",
+    "gptOnlyVerifiedUseful": "No unique actionable defect or expansion suggestion established.",
+    "limits": "Compared equivalent observations throughout findings/optional/limits. Sample-specific evidence, not a model ranking or equal-comprehension claim."
+  },
+  "readDepthLimits": [
+    "Both reviewers received the same166941-byte/3425-line packet in one successful serialview each. Exact full requested text is contained in both returned results; no truncation/overlap/unfinished tool. Returned bytes establish availability, not comprehension.",
+    "All44family occurrences/42distinct, eight complete raw records and17complete article bodies (three new/fourteen unchanged comparison) supplied and exactly returned. Source-preparation counts/read qualifications remain historical and are not rewritten.",
+    "Supplied coordinator public-source observations are not independent reviewer upstream retrieval. Character字通 extraction remains12000-character truncated/image-dependent; no historical/phonetic certification.",
+    "Reviewer snapshot/signature/link-target/title-uniqueness verification was not independent. Coordinator confirms frozen signedHEAD, fresh manifest/every8376runtimehash, uniquekanji title, existing台/欠 targets and absent駕card. No corpus-wide word-title semantic audit or fallback-pool certification."
+  ],
+  "textualReviewClosed": true,
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "mechanicalBatchAudit": {
+    "batch": "083",
+    "baseCommit": "21a5cb1328aadd437139a6b850f07298a2e2985d",
+    "draftKanji": 1,
+    "newWords": 2,
+    "changedReusedArticles": 0,
+    "requiredReciprocalPairs": 2,
+    "activatedBaselinePairs": 0,
+    "readingDispositions": 2,
+    "curatedOfferedKeys": 2,
+    "sourceOnlyOfferedKeys": 0,
+    "dictionaryFamilies": 42,
+    "exactBaseRuntimePreservedOutsideRecordedChanges": true,
+    "manifestFresh": true,
+    "contentVersion": "a9faafdd68af3230",
+    "limits": "Mechanical draft audit, not lexical-allocation/naturalness verification, independent review, native/phone acceptance or publication."
+  },
+  "runtimeHashesReverified": 8376,
+  "manifestUnchangedFromFrozenSnapshot": true,
+  "newNativeOrAndroidClaimed": false,
+  "nativeFontPending": [
+    "冫",
+    "夌",
+    "阝",
+    "隹"
+  ],
+  "actualHanCount": 29,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "limits": "Textual closure only; runtime acceptance/publication still pending. No new Android/native, font legibility, drawing, runtime routes, physical-phone, random-pool safety or measured learning-effectiveness evidence. Fresh non-skipped Android, all29Han/fourfonts native/visual checks, current-main/signed-integration/owner-fast-forward/CI/exact immutable ZIP gates remain. CompatibleAndroidf9b59a2+ required; current clean signedAndroid1c1b7bf4. Preserve all historical source/review/process/denial/OOM/read-depth/viewport limits, baseline exceptions and original archive guards. Published109/1228,remaining1119 unchanged; whole project incomplete."
+}
