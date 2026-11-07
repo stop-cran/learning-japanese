@@ -1,0 +1,720 @@
+{
+  "schemaVersion": 1,
+  "execution": 663,
+  "batch": "092",
+  "status": "native-passed-awaiting-independent-visual-confirmation",
+  "rawOutputWhitespace": {
+    "disposition": "Retain exact adb/emulator output bytes and hashes, including emitted trailing spaces/final blank lines. First staged whitespace check excluded adb output but reported two emitted emulator-stdout trailing spaces; no commit attempted. Check all remaining generated evidence separately from both raw logs.",
+    "paths": [
+      "docs/n1-reviews/batch-092-native/execution-663/adb-operations.txt",
+      "docs/n1-reviews/batch-092-native/execution-663/emulator-stdout.txt"
+    ]
+  },
+  "startingState": {
+    "execution": 663,
+    "batch": "092",
+    "startedAt": "2026-11-07T05:21:29.040163+00:00",
+    "startingHead": "e29406823d0dab6be1bc3ff78eea0d0af711b680",
+    "androidHead": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+    "scope": "SAME092 compiled native execution and actual PNG inspection; persist signed LOCAL evidence, then yield before independent visual confirmation/publication/093.",
+    "request": {
+      "sha256": "b050588e33556d593454a5e38964b22e8c5f554e1501d711fd4a92f87c46e4f4",
+      "bytes": 3540527,
+      "characters": 3515745,
+      "lines": 47669,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request loaded/JSON decoded; operative contract, complete issue and final662 inspected directly. Historical middle parsed, not freshly semantically re-reviewed."
+    },
+    "runnerLockRole": "Verified live parent19008 ancestry/session; no child lock acquisition/delete/unlock.",
+    "artifactPathPreflight": "Approved workspace inputs/committed packets and durable control helpers only; no historical session recipe access.",
+    "actualNewPermissionDenials": []
+  },
+  "executionReceipt": {
+    "execution": 663,
+    "batch": "092",
+    "startedAt": "2026-11-07T06:21:29.3708263+01:00",
+    "serial": "emulator-5580",
+    "contentSnapshot": "62c6d3e29b87d89a2027bcb3d063081de23c4320",
+    "androidSnapshot": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+    "coordinatorHead": "e29406823d0dab6be1bc3ff78eea0d0af711b680",
+    "appApk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-092-native-app.apk",
+    "appApkSha256": "0224e8e3f8c744a554da173ec20f133d5d00cb6b6226b001da5ea030856bd407",
+    "testApk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-092-native-test.apk",
+    "testApkSha256": "7d8a16bb9c0a197cd89e84dc8dadf171326c0b234e4a90b74a7b41e9404a1174",
+    "fixtureSha256": "0e0966e8188a1cd094003a0275df91a047f882ac2976a5ce7c910ac341982420",
+    "archiveSha256": "ecd5c65c94e168cb1333ced4aa9e8e3fa621ff27d1489d59e8c907d3ac2dad2e",
+    "nativeExecuted": true,
+    "passed": true,
+    "failure": null,
+    "guestOrAppHeapChanged": false,
+    "guardsChanged": false,
+    "parentLockTouched": false,
+    "launcherCommandMatches": true,
+    "parentAncestry": [
+      {
+        "ProcessId": 5156,
+        "ParentProcessId": 11500,
+        "Name": "pwsh.exe"
+      },
+      {
+        "ProcessId": 11500,
+        "ParentProcessId": 19008,
+        "Name": "copilot.exe"
+      },
+      {
+        "ProcessId": 19008,
+        "ParentProcessId": 30364,
+        "Name": "pwsh.exe"
+      }
+    ],
+    "preexistingEmulators": [],
+    "prelaunch": {
+      "connections": [],
+      "devices": "List of devices attached\r\n\r\n",
+      "verifiedAt": "2026-11-07T06:21:31.3884502+01:00"
+    },
+    "parentEmulatorPid": 25788,
+    "emulatorArguments": [
+      "-avd",
+      "N3_Acceptance_20261029",
+      "-port",
+      "5580",
+      "-read-only",
+      "-no-snapshot",
+      "-no-window",
+      "-no-audio",
+      "-gpu",
+      "host",
+      "-feature",
+      "-Vulkan",
+      "-memory",
+      "2048",
+      "-cores",
+      "2"
+    ],
+    "qemuPid": 4008,
+    "listeners": [
+      {
+        "LocalPort": 5581,
+        "OwningProcess": 4008
+      },
+      {
+        "LocalPort": 5580,
+        "OwningProcess": 4008
+      },
+      {
+        "LocalPort": 5581,
+        "OwningProcess": 4008
+      },
+      {
+        "LocalPort": 5580,
+        "OwningProcess": 4008
+      }
+    ],
+    "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+    "heapGrowth": "192m",
+    "heapSize": "576m",
+    "network": "Active default network: none",
+    "instrumentationCommand": "adb -s emulator-5580 shell am instrument -w -r -e n1Disposable true -e class io.github.stopcran.kanji.ui.N1Batch092GlyphTest,io.github.stopcran.kanji.ui.N1Batch092ArticleTest io.github.stopcran.kanji.test/androidx.test.runner.AndroidJUnitRunner",
+    "adbExitCode": 0,
+    "terminalSuccessCases": 2,
+    "artifacts": [
+      "n1-092-article-route.json",
+      "n1-092-article-tree.txt",
+      "n1-092-curated-one-kun-no-on-done.png",
+      "n1-092-curated-\u304b\u308b-feedback.png",
+      "n1-092-curated-\u304b\u308b-question.png",
+      "n1-092-drawing-feedback.png",
+      "n1-092-drawing-recall-feedback.png",
+      "n1-092-drawing-trace.png",
+      "n1-092-font-panel-1.png",
+      "n1-092-font-panel-2.png",
+      "n1-092-font-panel-3.png",
+      "n1-092-font-raster.json",
+      "n1-092-kanji-01.png",
+      "n1-092-kanji-03.png",
+      "n1-092-kanji-04.png",
+      "n1-092-kanji-09.png",
+      "n1-092-kanji-11.png",
+      "n1-092-kanji-12.png",
+      "n1-092-kanji-14.png",
+      "n1-092-kanji-15.png",
+      "n1-092-kanji-17.png",
+      "n1-092-kanji-18.png",
+      "n1-092-kanji-20.png",
+      "n1-092-kanji-21.png",
+      "n1-092-kanji-22.png",
+      "n1-092-kanji-24.png",
+      "n1-092-kanji-25.png",
+      "n1-092-kanji-26.png",
+      "n1-092-kanji-27.png",
+      "n1-092-karu-02.png",
+      "n1-092-karu-03.png",
+      "n1-092-karu-04.png",
+      "n1-092-karu-05.png",
+      "n1-092-karu-07.png",
+      "n1-092-karu-09.png",
+      "n1-092-karu-11.png",
+      "n1-092-karu-12.png",
+      "n1-092-karu-forward.png",
+      "n1-092-karu-kanji-backlink.png",
+      "n1-092-karu-reverse.png",
+      "n1-092-karu-system-back-to-kanji.png",
+      "n1-092-karu-system-back-to-word.png",
+      "n1-092-meaning-feedback.png",
+      "n1-092-meaning-question.png",
+      "n1-092-selection.png"
+    ],
+    "stopAdbExitCode": 0,
+    "ownedHelperStopped": true,
+    "ownedQemuStopped": true,
+    "completedAt": "2026-11-07T06:26:18.2931098+01:00"
+  },
+  "nativeRoute": {
+    "contentSnapshot": "62c6d3e29b87d89a2027bcb3d063081de23c4320",
+    "contentVersion": "8445a5717d080dcc",
+    "archiveRequests": 1,
+    "importedKanji": 1115,
+    "importedWords": 5070,
+    "directWordGuardCount": 2,
+    "problems": 0,
+    "n1Cards": 124,
+    "acceptedReadingParserEpoch": 1,
+    "fullOnyomi": [
+      "\u30ac\u30a4",
+      "\u30ab\u30a4"
+    ],
+    "fullKunyomi": [
+      "\u304b.\u308b"
+    ],
+    "quizOnKeys": [],
+    "quizKunKeys": [
+      "\u304b\u308b"
+    ],
+    "liteQuizOnyomi": [],
+    "liteQuizKunyomi": [
+      "\u304b.\u308b"
+    ],
+    "productionBuilderN1AndAllExactChoices": {
+      "N1": {
+        "poolSize": 124,
+        "options": [
+          {
+            "kanji": "\u5208",
+            "title": "mow; reap"
+          },
+          {
+            "kanji": "\u51f9",
+            "title": "concave; sunken"
+          },
+          {
+            "kanji": "\u4e43",
+            "title": "thereupon; possessive no"
+          },
+          {
+            "kanji": "\u51f8",
+            "title": "convex; protruding"
+          }
+        ],
+        "availableCuratedCount": 3,
+        "fallbackOptions": 0
+      },
+      "All": {
+        "poolSize": 1115,
+        "options": [
+          {
+            "kanji": "\u51f8",
+            "title": "convex; protruding"
+          },
+          {
+            "kanji": "\u5208",
+            "title": "mow; reap"
+          },
+          {
+            "kanji": "\u51f9",
+            "title": "concave; sunken"
+          },
+          {
+            "kanji": "\u4e43",
+            "title": "thereupon; possessive no"
+          }
+        ],
+        "availableCuratedCount": 3,
+        "fallbackOptions": 0
+      }
+    },
+    "transport": "Exact full git envelope through production ContentSync ONCE; synthetic source/HEAD",
+    "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+    "sdk": 35,
+    "fixture": "Other N1 meanings/readings postponed; only \u5208 meaning and kun\u304b\u308b due, no on keys. All three raw readings retained. Two historical good \u5208 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.",
+    "phoneEvidence": false,
+    "passed": true,
+    "reciprocalLinkAndSystemBack": true,
+    "mappedReciprocalPairs": 1,
+    "directedLinkTransitions": 2,
+    "activatedBaselinePairs": 1,
+    "completeArticleProjections": 2,
+    "changedReusedArticles": 1,
+    "exactDefaultMeaningOptions": [
+      {
+        "kanji": "\u51f8",
+        "title": "convex; protruding"
+      },
+      {
+        "kanji": "\u51f9",
+        "title": "concave; sunken"
+      },
+      {
+        "kanji": "\u5208",
+        "title": "mow; reap"
+      },
+      {
+        "kanji": "\u4e43",
+        "title": "thereupon; possessive no"
+      }
+    ],
+    "actualN1CuratedAvailable": 3,
+    "actualN1FallbackOptions": 0,
+    "meaningChoiceVisualAdjudicationRequired": true,
+    "fullProjectionOnyomi": [
+      "\u30ac\u30a4",
+      "\u30ab\u30a4"
+    ],
+    "fullProjectionKunyomi": [
+      "\u304b.\u308b"
+    ],
+    "fullProjectionQuizOnyomi": [],
+    "fullProjectionQuizKunyomi": [
+      "\u304b.\u308b"
+    ],
+    "meaningQuestionAndFeedback": true,
+    "onlyKunKaruNoOnPersistedGoodAndDone": true,
+    "touchInjectedReferenceStrokes": 4,
+    "drawingTraceThenRecall": true,
+    "drawingGradeRecordedOnNext": true,
+    "offline": true
+  },
+  "visualInspection": {
+    "snapshot": "6246dc622f7139c2a0e16d2e03847d6494391fae",
+    "archiveSnapshot": "62c6d3e29b87d89a2027bcb3d063081de23c4320",
+    "reviewer": "Coordinator, actual GPT-6.1 Sol (gpt-6.1-sol); not independent review",
+    "scope": "Native rendered content, all 16 scoped Han in four font selections, meaning/reading/drawing and both complete article routes.",
+    "inspectedOriginalPngs": [
+      {
+        "file": "n1-092-font-panel-1.png",
+        "sha256": "336bfce82a6b57e6837ad8ab4e741d0de909aa3b3661314c95434714a892f330"
+      },
+      {
+        "file": "n1-092-font-panel-2.png",
+        "sha256": "b114b2f488307c6c799089692bc78880e0ce97be6604c665bdff52c4e06c17f1"
+      },
+      {
+        "file": "n1-092-font-panel-3.png",
+        "sha256": "90ca68cc23ca2d7b283bb2cb256ee093d7631a4072d160cc9adb89463a42ac23"
+      },
+      {
+        "file": "n1-092-kanji-01.png",
+        "sha256": "40f25d3621af71406439ef6948cb7e4d7137294e98cad8f0c5e959eda0c58662"
+      },
+      {
+        "file": "n1-092-kanji-03.png",
+        "sha256": "83e811dcfeabafb69ba4a47f127a0700df2c974a65d95d92a391e68a87ac0827"
+      },
+      {
+        "file": "n1-092-kanji-09.png",
+        "sha256": "3617b42b6e42f92389c2f0ec07c665b4440381f1beb9b6fdf3e0868dffee4178"
+      },
+      {
+        "file": "n1-092-kanji-11.png",
+        "sha256": "a3fdd34a179414045771cc728bec31d8b5b2ca5aea6f817809d649253c2602ab"
+      },
+      {
+        "file": "n1-092-kanji-20.png",
+        "sha256": "3826f740be6af07a7f57204bfc30d22cf70db7676d3983fa384017c4fc59c1df"
+      },
+      {
+        "file": "n1-092-karu-02.png",
+        "sha256": "3d12f901ad7b17319fcdbb99a560156caed81be6f769c343b369326cb66eb663"
+      },
+      {
+        "file": "n1-092-karu-04.png",
+        "sha256": "2ae53fb36bed696cd51eb69d786def7842011cc099a721545518fb17fc1f9602"
+      },
+      {
+        "file": "n1-092-karu-07.png",
+        "sha256": "28172b963cd5b7b681d619198a4bc2f700eef161b777bb6b08fc98dbb77c2e36"
+      },
+      {
+        "file": "n1-092-selection.png",
+        "sha256": "f03f96871ace386447614bb60a147be43c81828b131f145639c23e77e12a2033"
+      },
+      {
+        "file": "n1-092-meaning-question.png",
+        "sha256": "2a927fb96dfa848507eaf667c9fee1eacd26d2cdf87946093bbfed64423e73cc"
+      },
+      {
+        "file": "n1-092-meaning-feedback.png",
+        "sha256": "993a66c57d9a8089cdc44127171eedf5704e5c2bc7863f4e498383c25897fc7e"
+      },
+      {
+        "file": "n1-092-curated-\u304b\u308b-question.png",
+        "sha256": "9ec7298751377c9c21d46ac73cfe7e140f41da9c894fbdf38c102e555e288204"
+      },
+      {
+        "file": "n1-092-curated-\u304b\u308b-feedback.png",
+        "sha256": "41c421c4dd758999ddae523fd57588570b96869266fcc190cea318220f8b1df3"
+      },
+      {
+        "file": "n1-092-curated-one-kun-no-on-done.png",
+        "sha256": "252d696a6cd3278e41fccd83cbc2a534c75fc3a6cb83c2684d5e94518b05d352"
+      },
+      {
+        "file": "n1-092-drawing-trace.png",
+        "sha256": "56735e8fd6c69500de57c1cc70ea239a7f24e8e7c82570863ed6c8f8488fc6af"
+      },
+      {
+        "file": "n1-092-drawing-feedback.png",
+        "sha256": "7cb033f4ea8586ad95e366637d392b0f699dbee10cab80383e2390450abb1c2a"
+      },
+      {
+        "file": "n1-092-drawing-recall-feedback.png",
+        "sha256": "df2dbffc6a43202e4e6ce70bc37bfa1d2944d7583aa9125a8e4d3caa2be82d5e"
+      },
+      {
+        "file": "n1-092-karu-forward.png",
+        "sha256": "3826f740be6af07a7f57204bfc30d22cf70db7676d3983fa384017c4fc59c1df"
+      },
+      {
+        "file": "n1-092-karu-kanji-backlink.png",
+        "sha256": "430449bf7c6458e3dd2a55d01928f2952b214a3decd8bd760005bea680bfc75a"
+      },
+      {
+        "file": "n1-092-karu-reverse.png",
+        "sha256": "28172b963cd5b7b681d619198a4bc2f700eef161b777bb6b08fc98dbb77c2e36"
+      },
+      {
+        "file": "n1-092-karu-system-back-to-kanji.png",
+        "sha256": "bc96ade7d5607f86af397922c5abd87fcb2200f1fff3d1997de64bad62f972be"
+      },
+      {
+        "file": "n1-092-karu-system-back-to-word.png",
+        "sha256": "28172b963cd5b7b681d619198a4bc2f700eef161b777bb6b08fc98dbb77c2e36"
+      }
+    ],
+    "capturedPngs": 42,
+    "individuallyInspectedPngs": 25,
+    "notSeparatelyInspectedPngs": 17,
+    "glyphDisposition": "All 16 scoped Han readable/distinguishable in three original Compose panels across Gothic/Mincho/Textbook/Brush. U+5202 is visible as two upright strokes with the right hook, not a replacement box; absence from all three bundled cmaps plus actual native display supports usable system fallback, not identification of its face. \u5208/\u5207/\u5200/\u5202/\u4e43/\u51f9/\u51f8 remain distinguishable; \u5208\u9664 legible across all four selections.",
+    "articleDisposition": "Complementary original views and passing native selector/scroll assertions cover both complete articles. Readings table is horizontally scrollable as instructed; left/right views complement one another, not simultaneous full-column visibility. Both \u5208\u9664 readings remain recognized/unselected without obsolete/source-only claims. Cutting-versus-harvesting boundaries, shape-only mnemonic and canonical\u5200/visible\u5202 distinction, kana, translations and reciprocal links remain readable.",
+    "quizDisposition": "Exactly one defensible mow/reap answer versus three visible curated wrong labels. Only kun \u304b\u308b offered; correct feedback and 1/1 Done visible. Full raw readings displayed in feedback are not extra offered keys.",
+    "routeDisposition": "Forward/backlink/System Back views visible; one all-mapped/baseline pair and two directions. N1 selection and offline persistence asserted.",
+    "drawingDisposition": "Four pinned strokes visible. Injected trace followed by recall give-up and persistence passed; model-unavailable/shape-only grading explicitly shown. Not human handwriting or successful MLKit recognition.",
+    "findings": [],
+    "limits": [
+      "Not a fresh linguistic/source review or two-family dependent visual closure.",
+      "Remaining 17 PNGs preserved but not separately visually inspected by this coordinator.",
+      "64 individual and four whole-word Paint probes are not separately inspected PNGs.",
+      "No physical phone, latest app-main, native-speaker or measured-learning acceptance."
+    ]
+  },
+  "runtime": {
+    "runtimeHashesVerified": 8434,
+    "contentVersion": "8445a5717d080dcc",
+    "manifestSha256": "0bf9e93f62ffbba940c97d5898c9bf8a71450904d3a22593b6c68829fc9004a7",
+    "archiveManifestEqual": true,
+    "manifestFreshAndUnchanged": true
+  },
+  "artifacts": [
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/adb-operations.txt",
+      "sha256": "3dfbf921ac21118ac7908ab25a9b020312468fd94c7c4f62c87dc42331622265",
+      "bytes": 72964
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/emulator-stderr.txt",
+      "sha256": "2cca8e893817ef378292bbd755d609c121ce8d463bd2949ae228e04adebcfe3a",
+      "bytes": 965
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/emulator-stdout.txt",
+      "sha256": "1c2114c1bbf98b27aa18ba9b232cdee62e45d4ac5b712bc3e1d02eb5fcb042f8",
+      "bytes": 11282
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/execution.json",
+      "sha256": "d89d13ebbbb197b2ecd8f8c84dcefb4be17d91ee4963ac9af0e087f07ae94205",
+      "bytes": 4352
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/instrumentation.txt",
+      "sha256": "f9dd36210f72c9f62f62f077000172dfef601b1d88dd388567f6760e8b5085d3",
+      "bytes": 1645
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-article-route.json",
+      "sha256": "6899be9b6ddbb3c2b2388562d00a7e32026f9614a4bc6aed3bccf964797c087b",
+      "bytes": 3048
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-article-tree.txt",
+      "sha256": "5812972c34c21fecb91d2d5b47c80074ae36f0bb8b405cc6edb36b81439aa7e3",
+      "bytes": 3244
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-curated-one-kun-no-on-done.png",
+      "sha256": "252d696a6cd3278e41fccd83cbc2a534c75fc3a6cb83c2684d5e94518b05d352",
+      "bytes": 56270
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-curated-\u304b\u308b-feedback.png",
+      "sha256": "41c421c4dd758999ddae523fd57588570b96869266fcc190cea318220f8b1df3",
+      "bytes": 189181
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-curated-\u304b\u308b-question.png",
+      "sha256": "9ec7298751377c9c21d46ac73cfe7e140f41da9c894fbdf38c102e555e288204",
+      "bytes": 92864
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-drawing-feedback.png",
+      "sha256": "7cb033f4ea8586ad95e366637d392b0f699dbee10cab80383e2390450abb1c2a",
+      "bytes": 212082
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-drawing-recall-feedback.png",
+      "sha256": "df2dbffc6a43202e4e6ce70bc37bfa1d2944d7583aa9125a8e4d3caa2be82d5e",
+      "bytes": 203853
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-drawing-trace.png",
+      "sha256": "56735e8fd6c69500de57c1cc70ea239a7f24e8e7c82570863ed6c8f8488fc6af",
+      "bytes": 120771
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-font-panel-1.png",
+      "sha256": "336bfce82a6b57e6837ad8ab4e741d0de909aa3b3661314c95434714a892f330",
+      "bytes": 138054
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-font-panel-2.png",
+      "sha256": "b114b2f488307c6c799089692bc78880e0ce97be6604c665bdff52c4e06c17f1",
+      "bytes": 108736
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-font-panel-3.png",
+      "sha256": "90ca68cc23ca2d7b283bb2cb256ee093d7631a4072d160cc9adb89463a42ac23",
+      "bytes": 134013
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-font-raster.json",
+      "sha256": "b86dbaa939d8fe1c10f3f6fd76472ba521f960f8b0f5c736835d4c5930741400",
+      "bytes": 13327
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-01.png",
+      "sha256": "40f25d3621af71406439ef6948cb7e4d7137294e98cad8f0c5e959eda0c58662",
+      "bytes": 245610
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-03.png",
+      "sha256": "83e811dcfeabafb69ba4a47f127a0700df2c974a65d95d92a391e68a87ac0827",
+      "bytes": 261614
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-04.png",
+      "sha256": "83e811dcfeabafb69ba4a47f127a0700df2c974a65d95d92a391e68a87ac0827",
+      "bytes": 261614
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-09.png",
+      "sha256": "3617b42b6e42f92389c2f0ec07c665b4440381f1beb9b6fdf3e0868dffee4178",
+      "bytes": 274385
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-11.png",
+      "sha256": "a3fdd34a179414045771cc728bec31d8b5b2ca5aea6f817809d649253c2602ab",
+      "bytes": 272162
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-12.png",
+      "sha256": "3617b42b6e42f92389c2f0ec07c665b4440381f1beb9b6fdf3e0868dffee4178",
+      "bytes": 274385
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-14.png",
+      "sha256": "a3fdd34a179414045771cc728bec31d8b5b2ca5aea6f817809d649253c2602ab",
+      "bytes": 272162
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-15.png",
+      "sha256": "3617b42b6e42f92389c2f0ec07c665b4440381f1beb9b6fdf3e0868dffee4178",
+      "bytes": 274385
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-17.png",
+      "sha256": "a3fdd34a179414045771cc728bec31d8b5b2ca5aea6f817809d649253c2602ab",
+      "bytes": 272162
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-18.png",
+      "sha256": "a3fdd34a179414045771cc728bec31d8b5b2ca5aea6f817809d649253c2602ab",
+      "bytes": 272162
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-20.png",
+      "sha256": "3826f740be6af07a7f57204bfc30d22cf70db7676d3983fa384017c4fc59c1df",
+      "bytes": 344523
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-21.png",
+      "sha256": "3826f740be6af07a7f57204bfc30d22cf70db7676d3983fa384017c4fc59c1df",
+      "bytes": 344523
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-22.png",
+      "sha256": "3826f740be6af07a7f57204bfc30d22cf70db7676d3983fa384017c4fc59c1df",
+      "bytes": 344523
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-24.png",
+      "sha256": "3826f740be6af07a7f57204bfc30d22cf70db7676d3983fa384017c4fc59c1df",
+      "bytes": 344523
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-25.png",
+      "sha256": "3826f740be6af07a7f57204bfc30d22cf70db7676d3983fa384017c4fc59c1df",
+      "bytes": 344523
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-26.png",
+      "sha256": "3826f740be6af07a7f57204bfc30d22cf70db7676d3983fa384017c4fc59c1df",
+      "bytes": 344523
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-kanji-27.png",
+      "sha256": "3826f740be6af07a7f57204bfc30d22cf70db7676d3983fa384017c4fc59c1df",
+      "bytes": 344523
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-karu-02.png",
+      "sha256": "3d12f901ad7b17319fcdbb99a560156caed81be6f769c343b369326cb66eb663",
+      "bytes": 315402
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-karu-03.png",
+      "sha256": "3d12f901ad7b17319fcdbb99a560156caed81be6f769c343b369326cb66eb663",
+      "bytes": 315402
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-karu-04.png",
+      "sha256": "2ae53fb36bed696cd51eb69d786def7842011cc099a721545518fb17fc1f9602",
+      "bytes": 315383
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-karu-05.png",
+      "sha256": "2ae53fb36bed696cd51eb69d786def7842011cc099a721545518fb17fc1f9602",
+      "bytes": 315383
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-karu-07.png",
+      "sha256": "28172b963cd5b7b681d619198a4bc2f700eef161b777bb6b08fc98dbb77c2e36",
+      "bytes": 329288
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-karu-09.png",
+      "sha256": "28172b963cd5b7b681d619198a4bc2f700eef161b777bb6b08fc98dbb77c2e36",
+      "bytes": 329288
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-karu-11.png",
+      "sha256": "28172b963cd5b7b681d619198a4bc2f700eef161b777bb6b08fc98dbb77c2e36",
+      "bytes": 329288
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-karu-12.png",
+      "sha256": "28172b963cd5b7b681d619198a4bc2f700eef161b777bb6b08fc98dbb77c2e36",
+      "bytes": 329288
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-karu-forward.png",
+      "sha256": "3826f740be6af07a7f57204bfc30d22cf70db7676d3983fa384017c4fc59c1df",
+      "bytes": 344523
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-karu-kanji-backlink.png",
+      "sha256": "430449bf7c6458e3dd2a55d01928f2952b214a3decd8bd760005bea680bfc75a",
+      "bytes": 274366
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-karu-reverse.png",
+      "sha256": "28172b963cd5b7b681d619198a4bc2f700eef161b777bb6b08fc98dbb77c2e36",
+      "bytes": 329288
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-karu-system-back-to-kanji.png",
+      "sha256": "bc96ade7d5607f86af397922c5abd87fcb2200f1fff3d1997de64bad62f972be",
+      "bytes": 344508
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-karu-system-back-to-word.png",
+      "sha256": "28172b963cd5b7b681d619198a4bc2f700eef161b777bb6b08fc98dbb77c2e36",
+      "bytes": 329288
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-meaning-feedback.png",
+      "sha256": "993a66c57d9a8089cdc44127171eedf5704e5c2bc7863f4e498383c25897fc7e",
+      "bytes": 188093
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-meaning-question.png",
+      "sha256": "2a927fb96dfa848507eaf667c9fee1eacd26d2cdf87946093bbfed64423e73cc",
+      "bytes": 100833
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/n1-092-selection.png",
+      "sha256": "f03f96871ace386447614bb60a147be43c81828b131f145639c23e77e12a2033",
+      "bytes": 102419
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/checkpoint-663.py",
+      "sha256": "911b5d0b871f687e0fd12c3615d32547f062b812a44436d657eec3bb361d6516",
+      "bytes": 2920
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/close-native-execution-663.py",
+      "sha256": "a67e9db63437df621fd1fb0fc5a42f4d1cc404f11aa46654c5ea7b818612c17b",
+      "bytes": 17348
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/run-663-native.ps1",
+      "sha256": "019198d5cf030ef5293a9cea3fb03783c64c7ae4992a2cba3b37fe39cc864221",
+      "bytes": 11374
+    },
+    {
+      "path": "docs/n1-reviews/batch-092-native/execution-663/visual-inspection.json",
+      "sha256": "e6a97d0c86fb0d4e261a8eff00c4eada7618195498d6b192500480fd7c30c78b"
+    }
+  ],
+  "textualReviewClosed": true,
+  "independentVisualConfirmation": "pending",
+  "originalReviewSessions": {
+    "claude-opus-5.5": "2f27854e-184a-4f54-8d7d-962197573318",
+    "gpt-6.1-sol": "4ff2dfd7-8eed-456f-8f4d-4acd64d2a820"
+  },
+  "freshOriginMain": "2186eda1bf306c7cc16c1ceca80d273dd893a0bd",
+  "runtimeChanged": false,
+  "runtimePublished": false,
+  "runtimeAccepted": false,
+  "parentLockTouched": false,
+  "optionalHistoricalSessionHelpersAccessed": false,
+  "actualNewPermissionDenials": [],
+  "independentReviewersLaunched": 0,
+  "publishedAdditions": 118,
+  "remainingAdditions": 1110,
+  "lastPublishedCommit": "2186eda1bf306c7cc16c1ceca80d273dd893a0bd",
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false,
+  "nextAction": "SAME092 serial dependent visual confirmations in ORIGINAL Claude session 2f27854e-184a-4f54-8d7d-962197573318 then ORIGINAL GPT session 4ff2dfd7-8eed-456f-8f4d-4acd64d2a820. Read docs/n1-sources/execution-663.json, archived actual PNGs/visual-inspection and original textual reports/limits. Use actual CLI catalog/tool support; one read-only reviewer at a time, wait for actual process exit and preserve complete reports. No new blind initial credit. Teaching6246dc62 unchanged. BOTH native cases terminal per-case0/no skips; full archive62c6d3e2 through productionContentSync ONCE:1115kanji/5070words/124N1/zeroProblems/contentVersion8445a5717d080dcc/acceptedRoom readingEpoch1. All16 scopedHan readable in THREE actualCompose panels across FOURproductionfont selections, especially fallbackU+5202;64individual+4wholewordPaint probes NOT separately viewed PNGs or identified fallbackface. Coordinator viewed25original PNGs; all42captured preserved, remaining17 not separately viewed. N1/All production choices exactly mow;reap vs \u4e43/\u51f9/\u51f8, all3curatedwrongcards/no fallback. ONLY kun\u304b\u308b offered/persistedGood/Done, NOon keys; raw on\u30ac\u30a4,\u30ab\u30a4 and kun\u304b.\u308b sourceorder retained in full/Lite. Both\u5208\u9664readings recognized/unselected, not sourceonly/obsolete. FOURpinnedstrokes injectedtrace/recall/persistence; BOTHcompletearticles/ONEallmappedbaselinepair/TWOdirections/SystemBack/offline/N1selection/meaning/reading/drawing. ReusedN3\u5208\u308b identity/reading/title/level/original\u5207\u308bguard preserved; componentlink and direct\u53ce\u7a6bguard only. Shapeonlymnemonic/\u5200-visible\u5202 distinction. Injectedtrace/giveup NOT humanhandwriting/MLKit/phone; actualUI shows modelunavailable/shapeonly. QualifiedTESTONLYAndroid1c1b7bf4 retains productionf9b59a2, NOT latestappmain. Owned5580helper25788/qemu4008 stopped. Parent19008 retains runner.lock; verifyliveancestry/session/checkpoint/exactsignedheads/whollyclean, NOchild reacquisition/delete/unlock. Approvedcontrol/committedpackets only, NOT optionalhistoricalsessionrecipes. Preserve/report/yield actualnewdenial/signinghang/uncertainownership. All originalsource/baseline/link/reading/twofamily/native/currentmainnormalmerge/changedteachingreview/combinedchecks/normalsigning/ownerfastforward/terminalgreenCI/EVERYimmutablepublicZIPruntimehash/original18000entries42MiBcompressed80MiBinflated56MiBretained/perfile-media-safepath/ownerissue gates remain. Published118/1228,1110remaining unchanged; physicalphone/generalrelease/whole-set outstanding. No093/runtimepublication."
+}
