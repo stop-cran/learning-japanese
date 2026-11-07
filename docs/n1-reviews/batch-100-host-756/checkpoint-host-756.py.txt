@@ -1,0 +1,41 @@
+"""Reuse the audited HOST-only archival/checkpoint recipe for the changed payload."""
+from pathlib import Path
+
+control = Path(__file__).resolve().parent
+template = control / "checkpoint-host-751.py"
+source = template.read_text(encoding="utf-8")
+for old, new in (
+    ("751", "756"),
+    ("750", "755"),
+    ("12e33cd8-512d-4229-8ca4-537b9d39e4de", "aa38782c-dc62-4837-83c2-e71b5d991c88"),
+    ("16438c41803783f09e39ced38ac71124cadc2174", "7ee42b03ff8b69f802742627c7f984b9785f20e9"),
+    ("82b45827a5bb4ae3", "606c836e4be33ba9"),
+):
+    source = source.replace(old, new)
+begin = source.index("    next_action = (\n", source.index("def finish():"))
+end = source.index("    checkpoint = {", begin)
+source = source[:begin] + '''    inherited = before["nextAction"]
+    pending = inherited[inherited.index("Then prepare actual full git archive"):]
+    next_action = (
+        f"SAME100 checkpoint756 signed LOCAL host evidence HEAD{head}, qualifiedAndroid{APP}. "
+        "Fresh changed-payload HOST3+1 passed RealContentTest3+RareHanTest1:4tests,"
+        "0failures/errors/skips; all XML after command start; maxworker1/noparallel/"
+        "inprocess/reruntasks/unchanged HOST-only2g. Read docs/n1-sources/execution-756.json "
+        "and docs/n1-reviews/batch-100-host-756/. All8453runtimehashes/version606c836e4be33ba9 "
+        "verified; runtime/manifest unchanged. Original755 semantic confirmations complete; "
+        "native/rendered enforcement still pending. NEXT SAME100 bounded fresh full-archive "
+        "productionContentSyncONCE fixture/APK preparation only, then checkpoint/yield. "
+        + pending
+    )
+''' + source[end:]
+source = source.replace(
+    '"checkpoint-host-756.py.txt"),',
+    '"checkpoint-host-756.py.txt"),\n'
+    '        (C / "checkpoint-host-751.py", "reused-checkpoint-host-751.py.txt"),'
+)
+source = source.replace(
+    '"textualAcceptanceComplete": True, "textualEvidence": "docs/n1-sources/execution-755.json",',
+    '"textualAcceptanceComplete": True, "textualEvidence": "docs/n1-sources/execution-755.json",\n'
+    '        "semanticCorrection": "N753-fallback-establish resolved semantically; native enforcement pending",'
+)
+exec(compile(source, str(template), "exec"), globals())

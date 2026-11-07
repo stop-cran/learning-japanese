@@ -1,0 +1,310 @@
+import copy
+from datetime import datetime, timezone
+import gzip
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import xml.etree.ElementTree as ET
+
+C = Path(__file__).resolve().parent
+R = C.parent / "learning-japanese"
+A = C.parent / "kanji-cards-android"
+SESSION = "12e33cd8-512d-4229-8ca4-537b9d39e4de"
+L = C / "logs" / SESSION
+BASE = "16438c41803783f09e39ced38ac71124cadc2174"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+D = R / "docs" / "n1-reviews" / "batch-100-host-751"
+EVIDENCE = R / "docs" / "n1-sources" / "execution-751.json"
+
+
+def load(path):
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def save(path, value):
+    assert not path.exists(), path
+    path.write_text(json.dumps(value, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+    assert load(path) == value
+
+
+def git(*args, root=R):
+    return subprocess.check_output(
+        ["git", "--no-pager", "-C", str(root), *args], encoding="utf-8"
+    ).strip()
+
+
+def context():
+    p = load(C / "progress.json")
+    assert (p["checkpoint"], p["status"], p["batch"]) == (750, "continue", "100")
+    runner = load(C / "runner.json")
+    assert (runner["status"], runner["sessionId"], runner["pid"]) == ("running", SESSION, 5920)
+    assert git("rev-parse", "HEAD", root=A) == APP
+    assert git("log", "-1", "--format=%G?", root=A) == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all", root=A)
+    return p
+
+
+def replace_progress(current, after, phase):
+    temporary = C / f"progress.json.751-{phase}.tmp"
+    save(temporary, after)
+    assert load(C / "progress.json") == current
+    os.replace(temporary, C / "progress.json")
+    assert load(C / "progress.json") == after
+
+
+def runtime():
+    manifest = load(R / "manifest.json")
+    binary_sections = {"images", "audio", "listeningTaskAudio", "listeningTaskImages"}
+    hashes = {}
+    for section_name, section in manifest.items():
+        if isinstance(section, dict):
+            for name, digest in section.items():
+                assert name not in hashes
+                data = (R / name).read_bytes()
+                if section_name not in binary_sections:
+                    data = data.replace(b"\r\n", b"\n")
+                assert hashlib.sha256(data).hexdigest() == digest, name
+                hashes[name] = digest
+    assert len(hashes) == 8453
+    assert manifest["contentVersion"] == "82b45827a5bb4ae3"
+    return {"contentVersion": manifest["contentVersion"], "runtimeHashesVerified": len(hashes),
+            "manifestSha256": sha(R / "manifest.json")}
+
+
+def start():
+    p = context()
+    assert git("rev-parse", "HEAD") == BASE and git("log", "-1", "--format=%G?") == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all")
+    assert p == load(L / "checkpoint-full.json")
+    request = L / "request.txt"
+    text = request.read_text(encoding="utf-8-sig")
+    marker = "Current execution checkpoint (complete historical state remains at checkpointHistory paths):"
+    embedded = json.loads(text.split(marker, 1)[1])
+    assert embedded["checkpoint"] == 750
+    assert embedded["execution750CoordinatorCheckpoint"]["savedCommit"] == BASE
+    save(L / "progress-before-751.json", p)
+    state = {
+        "execution": 751, "batch": "100", "startedAt": datetime.now(timezone.utc).isoformat(),
+        "startingHead": BASE, "androidHead": APP, "freshOriginMain": git("rev-parse", "origin/main"),
+        "scope": "SAME100 fresh qualified HOST RealContentTest3+RareHanTest1 and signed LOCAL evidence checkpoint only; no reviewer/native/publication/101.",
+        "request": {
+            "sha256": sha(request), "bytes": request.stat().st_size, "characters": len(text),
+            "lines": len(text.splitlines()), "completeFileLoadedAndCheckpointParsed": True,
+            "limits": "Entire request decoded and complete checkpoint parsed. Operative contract, complete approved issue and final750 inspected directly; historical middle parsed, not freshly semantically re-reviewed.",
+        },
+        "runnerPreflight": load(L / "preflight-751.json"),
+        "artifactPathPreflight": "Approved committed source/evidence, frozen workspace inputs and durable control helpers only; optional historical-session recipes not accessed.",
+        "actualNewPermissionDenials": [], **runtime(),
+    }
+    save(L / "starting-state-751.json", state)
+    after = copy.deepcopy(p)
+    assert "execution751StartingState" not in after
+    after["execution751StartingState"] = state
+    after["stage"] = "batch-100-fresh-android-host-checks-in-progress"
+    after["nextAction"] = "SAME100 execution751 fresh signed-head HOST3+1 only; preserve textual confirmations and all native/rendered/current-main/publication gates. No reviewer/native/publication/101 in this bounded checkpoint."
+    for k, v in p.items():
+        if k not in {"stage", "nextAction"}:
+            assert after[k] == v, k
+    replace_progress(p, after, "start")
+    print("Starting scope persisted with complete historical state preserved.")
+
+
+def archive():
+    p = context()
+    assert git("rev-parse", "HEAD") == BASE and git("log", "-1", "--format=%G?") == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all")
+    command = load(L / "host-751-command.json")
+    assert command["contentHead"] == BASE and command["androidHead"] == APP
+    start_time = datetime.fromisoformat(command["startedAt"])
+    assert (L / "host-751-exit.txt").read_text().strip() == "0"
+    log = L / "host-751.txt"
+    output = log.read_text(encoding="utf-8-sig")
+    assert "BUILD SUCCESSFUL" in output
+    assert "> Task :core:test\n" in output and "> Task :app:testDebugUnitTest\n" in output
+    specs = [
+        ("core", "test", "io.github.stopcran.kanji.core.RealContentTest", {
+            "hotelBookingDoesNotAcceptTheSchoolClassReadingWhenRepoPresent",
+            "completeMixedArchiveKeepsShortTaskAudioOutOfTheLegacyReaderWhenRepoPresent",
+            "parsesRealContentRepoWhenPresent",
+        }, A / "core" / "src" / "test" / "kotlin" / "io" / "github" / "stopcran" / "kanji" / "core" / "RealContentTest.kt"),
+        ("app", "testDebugUnitTest", "io.github.stopcran.kanji.core.RareHanTest", {
+            "contentRareCharactersAreCoveredByBundledFont",
+        }, A / "app" / "src" / "test" / "java" / "io" / "github" / "stopcran" / "kanji" / "core" / "RareHanTest.kt"),
+    ]
+    D.mkdir()
+    reports = []
+    for module, task, name, expected, test_source in specs:
+        source = A / module / "build" / "test-results" / task / f"TEST-{name}.xml"
+        tree = ET.parse(source).getroot()
+        assert int(tree.attrib["tests"]) == len(expected)
+        assert all(int(tree.attrib[k]) == 0 for k in ("failures", "errors", "skipped"))
+        cases = tree.findall("testcase")
+        assert {case.attrib["name"] for case in cases} == expected
+        assert all(not case.findall("skipped") and not case.findall("failure") and not case.findall("error") for case in cases)
+        timestamp = datetime.fromisoformat(tree.attrib["timestamp"].replace("Z", "+00:00"))
+        if timestamp.tzinfo is None:
+            timestamp = timestamp.replace(tzinfo=timezone.utc)
+        assert timestamp >= start_time
+        assert (A / module / ".." / ".." / "learning-japanese").resolve() == R
+        assert 'File("../../learning-japanese")' in test_source.read_text(encoding="utf-8")
+        target = D / source.name
+        target.write_bytes(source.read_bytes())
+        assert sha(target) == sha(source)
+        source_copy = D / test_source.name
+        source_copy.write_bytes(test_source.read_bytes())
+        reports.append({
+            "name": name, "tests": len(expected), "failures": 0, "errors": 0, "skipped": 0,
+            "timestamp": tree.attrib["timestamp"], "caseNames": sorted(expected),
+            "sourcePath": str(source), "archive": target.relative_to(R).as_posix(), "sha256": sha(target),
+            "fixtureRoot": str(R), "moduleWorkingDirectory": str(A / module),
+            "testSourceArchive": source_copy.relative_to(R).as_posix(), "testSourceSha256": sha(source_copy),
+        })
+    provenance = []
+    for source, name in [
+        (C / "preflight-751.ps1", "preflight-751.ps1.txt"),
+        (C / "run-batch-100-host-751.ps1", "run-batch-100-host-751.ps1.txt"),
+        (Path(__file__), "checkpoint-host-751.py.txt"),
+        (C / "batch-065-host-integration-heap.init.gradle", "host-only-2g.init.gradle.txt"),
+        (L / "preflight-751.json", "preflight-751.json"),
+        (L / "preflight-751-host.json", "preflight-751-host.json"),
+        (L / "host-751-command.json", "command.json"),
+        (L / "host-751-exit.txt", "exit.txt"),
+        (L / "host-751-end.txt", "end.txt"),
+    ]:
+        target = D / name
+        assert not target.exists()
+        target.write_bytes(source.read_bytes())
+        assert sha(target) == sha(source)
+        provenance.append({"source": str(source), "archive": target.relative_to(R).as_posix(), "sha256": sha(target)})
+    compressed = D / "gradle.txt.gz"
+    compressed.write_bytes(gzip.compress(log.read_bytes(), mtime=0))
+    assert gzip.decompress(compressed.read_bytes()) == log.read_bytes()
+    current_runtime = runtime()
+    for key, value in current_runtime.items():
+        assert p["execution751StartingState"][key] == value
+    evidence = {
+        "schemaVersion": 1, "execution": 751, "batch": "100",
+        "stage": "fresh-android-host-four-cases-passed-awaiting-native",
+        "recordedAt": datetime.now(timezone.utc).isoformat(),
+        "startingState": p["execution751StartingState"], "command": command,
+        "testedContentHead": BASE, "qualifiedAndroidHead": APP,
+        "exitCode": 0, "result": next(line for line in output.splitlines() if "BUILD SUCCESSFUL" in line),
+        "taskSummary": next(line for line in output.splitlines() if "actionable tasks:" in line),
+        "tests": reports, "totalTests": 4, "failures": 0, "errors": 0, "skipped": 0,
+        "allTestsFreshAfterCommandStart": True, "rerunTasks": True, "oneWorker": True,
+        "parallel": False, "compilerInProcess": True, "hostOnlyHeapInitUnchanged": True,
+        "fixtureProof": "Both unchanged tests resolve ../../learning-japanese from their module working directory to THIS dedicated content tree. Exact test sources and non-skipped fresh XML archived. No test working-directory override in inspected module builds.",
+        **current_runtime,
+        "hashContract": "Repository-standard CRLF-to-LF normalization for text; binary sections byte-for-byte.",
+        "provenance": provenance,
+        "buildLog": {"archive": compressed.relative_to(R).as_posix(), "sha256": sha(log), "gzipSha256": sha(compressed)},
+        "textualAcceptanceComplete": True, "textualEvidence": "docs/n1-sources/execution-750.json",
+        "freshHostTestsExecuted": True, "nativeExecuted": False, "nativeOrVisualAccepted": False,
+        "independentReviewersLaunched": 0, "independentRenderedReviewClosed": False,
+        "runtimeChanged": False, "manifestChanged": False, "runtimeAccepted": False, "runtimePublished": False,
+        "reviewClosed": [], "published": [], "parentLockTouched": False,
+        "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "publishedAdditions": 126, "remainingAdditions": 1102, "lastPublishedCommit": p["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False,
+        "nextAction": "SAME100 prepare bounded production ContentSync-ONCE native acceptance on the unchanged qualified Android head, then require actual N1/All meaning, curated reading, drawing, article/Back/offline, four-font/all-Han and rendered semantic acceptance before integration/publication. Preserve all inherited750 gates.",
+        "limits": "Fresh JVM host checks only, not emulator/phone acceptance, native rendered/semantic review, publication, whole batch review closure or full N1 completion. RareHan covers its designated rare-codepoint set, not actual rendering of all Han/fallback glyphs.",
+    }
+    save(EVIDENCE, evidence)
+    print(json.dumps({"tests": reports, **current_runtime, "result": evidence["result"]}, indent=2))
+
+
+def finish():
+    current = context()
+    before = load(L / "progress-before-751.json")
+    head = git("rev-parse", "HEAD")
+    assert head != BASE and git("log", "-1", "--format=%G?") == "G"
+    assert not git("status", "--porcelain", "--untracked-files=all")
+    changed = git("diff", "--name-only", BASE, head).splitlines()
+    assert changed and all(name.startswith("docs/n1-reviews/batch-100-host-751/")
+                           or name == "docs/n1-sources/execution-751.json" for name in changed)
+    evidence = load(EVIDENCE)
+    for record in evidence["provenance"] + evidence["tests"]:
+        assert sha(R / record["archive"]) == record["sha256"]
+    for record in evidence["tests"]:
+        assert sha(R / record["testSourceArchive"]) == record["testSourceSha256"]
+    assert evidence["buildLog"]["gzipSha256"] == sha(R / evidence["buildLog"]["archive"])
+    assert runtime()["manifestSha256"] == evidence["manifestSha256"]
+    posted, comment = load(L / "issue-751-posted.json"), load(L / "issue-751-reread.json")
+    body = C / "batch-100-host-751-issue-body.txt"
+    assert comment["user"]["login"] == "stop-cran" and comment["html_url"] == posted["url"]
+    assert comment["body"] == body.read_bytes().decode("utf-8") and sha(body) == posted["bodySha256"]
+    next_action = (
+        f"SAME100 checkpoint751 signed LOCAL host evidence HEAD{head}, qualifiedAndroid{APP}. "
+        "Fresh HOST3+1 passed RealContentTest3+RareHanTest1:4tests,0failures/errors/skips; fresh XML timestamps "
+        "after explicit command start; reruntasks/maxworker1/noparallel/inprocess/unchanged HOST-only2g. "
+        "Read docs/n1-sources/execution-751.json and docs/n1-reviews/batch-100-host-751/. "
+        "All8453 normalized runtime hashes verified/version82b45827a5bb4ae3; manifest/runtime unchanged. "
+        "NEXT SAME100 bounded productionContentSyncONCE native fixture/archive preparation at qualifiedbf30cdead, "
+        "then actual native acceptance and rendered review. Use committed accepted prior packets and durable "
+        "control helpers, NOT optional historicalsessionrecipes. Need current content archive, exact media/path/"
+        "entry/size guards and every runtime manifest hash; preserve old fixtures/hashes, named retry only if "
+        "needed, no reducedarchive/preparse+doubleimport/guardincrease. Require actual N1/All meaning pools/"
+        "ten direct NONTRANSITIVE guards, selectedソウ/つく.る, drawing, reference/article/Back/offline, "
+        "four-font/all-Han glyph rendering and independent rendered semantic/readability acceptance. "
+        "Recompute scope from current signed teaching; absence from cmap is NOT glyphfailure. Native fresh "
+        "owned-device/port/PID/readonlyAVD/fingerprint/192m checks before any launch; stop only owned helper. "
+        "Do not repeat textual initial reviews or confirmations: complete750 on44b5c4ee; original source-only "
+        "ショウ/けず.しける allocation remains explicitly UNVERIFIED/unselected. Conservative創/初 safeguard "
+        "is not proven historical live-quiz failure or universal synonym; no legacy設/初 edits. Reused創作N2/"
+        "作るN5 metadata and13/5 original guards, five all-mapped pairs/ten directions/one activated baseline "
+        "pair/three exact reused changes preserved. All currentmain nonrewritingintegration/changedteachingreview/"
+        "actualcombinedchecks/normalsigning/ownerfastforward/exactremoteSHA/terminalgreenCI/EVERYimmutableZIP"
+        "manifesthash/18000entry42MiBcompressed80MiBinflated56MiBretained/perfilepathmedia/verifiedownerissue "
+        "gates remain. No unreviewedpush/101/authoragent/concurrentheavywork/secondrunner/signingretry. "
+        "Verify clean exactsignedheads/freshmain/liveparentancestry/decodedlauncher/exactsession. Parent5920 "
+        "ownsrunner.lock throughout child lifetime: NOchild acquire/delete/unlock/readprobe. Preserve/report/"
+        "yield actualnewdenial/signinghang/uncertainownership. Published126/1228,1102acceptanceremainder/"
+        "lastpublished716c6101 unchanged; six earlierN2placements保案派第策結 remain separate, never "
+        "duplicate/relevel. Physicalphone/generalrelease/whole-set outstanding; batch NOT reviewclosed/"
+        "published; projectincomplete. Full checkpoint750 nextAction retained in history."
+    )
+    checkpoint = {
+        "schemaVersion": 1, "execution": 751, "checkpoint": 751, "batch": "100",
+        "status": "continue", "stage": "batch-100-fresh-android-host-passed-awaiting-native-preparation",
+        "recordedAt": datetime.now(timezone.utc).isoformat(),
+        "savedCommit": head, "signature": "G", "qualifiedAndroidHead": APP,
+        "testedContentHead": BASE, "evidence": "docs/n1-sources/execution-751.json",
+        "issueUpdate": posted["url"], "ownerIssueAuthorAndExactBodyVerified": True,
+        "freshHostTestsExecuted": True, "hostTests": 4, "failures": 0, "errors": 0, "skipped": 0,
+        **runtime(), "nativeExecuted": False, "independentReviewersLaunched": 0,
+        "textualAcceptanceComplete": True, "reviewClosed": [], "published": [],
+        "runtimeChanged": False, "manifestChanged": False, "runtimeAccepted": False, "runtimePublished": False,
+        "independentRenderedReviewClosed": False, "dedicatedWorktreesClean": True,
+        "parentLockTouched": False, "optionalHistoricalHelpersAccessed": False, "actualNewPermissionDenials": [],
+        "publishedAdditions": 126, "remainingAdditions": 1102, "lastPublishedCommit": before["lastPublishedCommit"],
+        "physicalPhoneAcceptance": "outstanding", "generalReleaseAcceptance": "outstanding",
+        "wholeProjectComplete": False, "nextBatchStarted": False, "nextAction": next_action,
+        "historicalRootKeysCompared": len(before), "allOriginalHistoricalValuesPreserved": True,
+    }
+    after = copy.deepcopy(current)
+    for key in ("historicalExecution750Before751Host", "execution751CoordinatorCheckpoint"):
+        assert key not in after
+    after["historicalExecution750Before751Host"] = {
+        key: before[key] for key in ("checkpoint", "status", "stage", "nextAction", "blocker")
+    }
+    after["execution751CoordinatorCheckpoint"] = checkpoint
+    after.update(checkpoint=751, status="continue", stage=checkpoint["stage"], nextAction=next_action, blocker=None)
+    for key, value in before.items():
+        if key not in {"checkpoint", "status", "stage", "nextAction", "blocker"}:
+            assert after[key] == value, key
+    save(L / "checkpoint-751.json", checkpoint)
+    replace_progress(current, after, "final")
+    print(json.dumps({"checkpoint": 751, "savedCommit": head, "issue": posted["url"],
+                      "historicalRootKeysPreserved": len(before), "status": "continue"}, indent=2))
+
+
+if __name__ == "__main__":
+    {"start": start, "archive": archive, "finish": finish}[sys.argv[1]]()
