@@ -1,0 +1,29 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$session = '80bb7faf-5416-4e2f-8a73-1eeb54b65f72'
+$runner = Get-Content "$control\runner.json" -Raw | ConvertFrom-Json
+if ($runner.status -ne 'running' -or $runner.pid -ne 19008 -or $runner.sessionId -ne $session) { throw 'Uncertain runner ownership' }
+$ancestry = @()
+$process = Get-CimInstance Win32_Process -Filter "ProcessId=$PID"
+while ($process -and $ancestry.Count -lt 12) {
+    $ancestry += $process.ProcessId
+    if ($process.ProcessId -eq $runner.pid) { break }
+    $process = Get-CimInstance Win32_Process -Filter "ProcessId=$($process.ParentProcessId)"
+}
+if (-not $process -or $process.ProcessId -ne $runner.pid) { throw 'Expected live parent missing from ancestry' }
+if ($process.CommandLine -notmatch '(?i)-EncodedCommand\s+(\S+)') { throw 'Expected encoded launcher' }
+$decoded = [Text.Encoding]::Unicode.GetString([Convert]::FromBase64String($Matches[1]))
+if (-not $decoded.Contains("& $control\runner.ps1")) { throw 'Wrong decoded launcher' }
+$scriptText = Get-Content "$control\runner.ps1" -Raw
+if (-not $scriptText.Contains("`$lock = [IO.File]::Open((Join-Path `$control 'runner.lock'), 'OpenOrCreate', 'ReadWrite', 'None')") -or -not $scriptText.Contains('$lock.Dispose()')) { throw 'Unexpected launcher lock lifetime contract' }
+[ordered]@{
+    execution = 677
+    sessionId = $session
+    verifiedAt = [DateTimeOffset]::Now.ToString('o')
+    ancestry = $ancestry
+    liveParentPid = $process.ProcessId
+    launcherSha256 = (Get-FileHash "$control\runner.ps1" -Algorithm SHA256).Hash.ToLowerInvariant()
+    parentLockRole = 'Live parent launcher owns runner.lock throughout child lifetime. Child does not acquire, delete or unlock it.'
+    lockTouched = $false
+} | ConvertTo-Json -Depth 8 | Set-Content "$control\logs\$session\preflight-677.json" -Encoding utf8NoBOM
+Write-Output 'Live launcher ancestry, exact session and parent-only lock role verified.'
