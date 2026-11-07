@@ -30,7 +30,7 @@ RAW_HTML = re.compile(r"<\s*/?\s*(script|iframe|style|object|embed|img|a|div|spa
 KANJI_REQUIRED = ["kanji", "title", "jlpt", "tags", "strokes", "radical", "radicalNumber", "onyomi", "kunyomi"]
 WORD_REQUIRED = ["word", "reading", "title", "type", "kanji", "tags"]
 WORD_TYPES = {"kango", "wago", "jukujikun", "gairaigo"}
-KANJI_LISTS = ("tags", "onyomi", "kunyomi", "distractors", "quizOnyomi", "quizKunyomi")
+KANJI_LISTS = ("tags", "onyomi", "kunyomi", "distractors", "quizOnyomi", "quizKunyomi", "quiz_exclusions")
 WORD_LISTS = ("kanji", "tags", "quiz_exclusions", "quiz_distractors")
 MAX_QUIZ_DISTRACTORS = 3
 MAX_IMAGE_BYTES = 100 * 1024
@@ -64,6 +64,7 @@ def parse(path: Path):
     if path.parent.name == "kanji":
         for key in ("quizOnyomi", "quizKunyomi"):
             check_word_list_declaration(path, header, key)
+        check_kanji_quiz_exclusions_declaration(path, header)
     if path.parent.name == "words":
         suffix = text[end + 4:after_marker] if after_marker >= 0 else text[end + 4:]
         if suffix.strip(KOTLIN_WHITESPACE) and (
@@ -174,12 +175,28 @@ def check_word_quiz_exclusions_declaration(path: Path, header: str) -> None:
     check_word_list_declaration(path, header, "quiz_exclusions")
 
 
+def check_kanji_quiz_exclusions_declaration(path: Path, header: str) -> None:
+    check_word_list_declaration(path, header, "quiz_exclusions")
+    # YAML decoding can conceal a quoted, escaped, tagged or anchored duplicate key.
+    try:
+        root = yaml.compose(header)
+    except (yaml.YAMLError, ValueError, RecursionError):
+        return  # The normal front-matter parse reports malformed YAML.
+    if not isinstance(root, yaml.MappingNode):
+        return
+    decoded = [key for key, _ in root.value
+               if isinstance(key, yaml.ScalarNode) and key.value == "quiz_exclusions"]
+    raw = word_declarations(header, "quiz_exclusions")
+    if len(decoded) != len(raw):
+        err(path, "'quiz_exclusions' must be a single top-level unquoted key with an inline list")
+
+
 def check_android_front_matter(path: Path, fields: dict | None, meta: dict) -> None:
     if fields is None:
         err(path, "Android front matter requires 'key: value' on each non-comment header line")
         return
     if path.parent.name == "kanji":
-        known = KANJI_REQUIRED + ["phonetic", "distractors", "quizOnyomi", "quizKunyomi"]
+        known = KANJI_REQUIRED + ["phonetic", "distractors", "quizOnyomi", "quizKunyomi", "quiz_exclusions"]
     elif path.parent.name == "words":
         known = WORD_REQUIRED + ["jlpt", "quiz_exclusions", "quiz_distractors", "image", "image_scene"]
     else:
@@ -454,6 +471,22 @@ def check_kanji(path: Path, meta: dict, titles: dict,
             distractors.add(other)
     if len(distractors) < 2:
         err(path, "'distractors' must include at least 2 distinct existing nonself kanji")
+    exclusions = meta.get("quiz_exclusions", [])
+    if len(exclusions) != len(set(exclusions)):
+        err(path, "'quiz_exclusions' must not contain repeated entries")
+    known_kanji = {other.stem for other in (ROOT / "kanji").glob("*.md")} if exclusions else set()
+    for other in exclusions:
+        if (len(other) != 1 or other in "/\\" or other.isspace()
+                or ord(other) < 32 or 127 <= ord(other) <= 159
+                or 0xD800 <= ord(other) <= 0xDFFF or 0xFDD0 <= ord(other) <= 0xFDEF
+                or ord(other) & 0xFFFF in (0xFFFE, 0xFFFF)):
+            err(path, f"quiz exclusion '{other}' must be a single non-control kanji ID")
+        elif other == meta["kanji"]:
+            err(path, "'quiz_exclusions' must not include the card itself")
+        elif other not in known_kanji:
+            err(path, f"quiz exclusion '{other}' has no card with that exact ID")
+        if other in distractors:
+            err(path, f"distractor '{other}' is also listed in 'quiz_exclusions'")
 
 
 def check_word(path: Path, meta: dict, known_words: set[str] | None = None) -> None:
