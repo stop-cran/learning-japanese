@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "execution": 730,
+  "batch": "099",
+  "status": "batch-099-textual-review-closed-awaiting-android-native",
+  "originalTeachingSnapshot": "70dfe3344d167e5152a3685b09689d73fa1cdab1",
+  "reviewedTeachingSnapshot": "70dfe3344d167e5152a3685b09689d73fa1cdab1",
+  "teachingChangedAfterInitialReviews": false,
+  "reviewedRuntimeHashes": {
+    "kanji/\u5270.md": "85556baf31fb26c3e24f6f031e5ce12f32562c02003053f9eba1c19fe2c1f4dd",
+    "words/\u904e\u5270.md": "5bbb9cb3bc88bbd50b52e5e1631a61f4e55225a4abb052a0cc01cd913afbdc78",
+    "kanji/\u904e.md": "66523e115ce8874a9ea39a7c728501384c966ced0a8d4c17656ea4d1c6c90080",
+    "strokes/\u5270.json": "f57b565aec86373386d4e97aa39b7406bdea298010924f912b7b7646bd37ab55",
+    "manifest.json": "36a233da65a3c83decf62f22ba2979ae0e55fc4718068554fe2f005844348d2e"
+  },
+  "initialModels": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "processes": {
+    "claude": {
+      "launcherPid": 14528,
+      "sessionId": "2ac79fdb-83fc-485d-8f64-6c5d7b473973",
+      "startedAt": "2026-11-07T15:54:15.958368+01:00",
+      "completedAt": "2026-11-07T15:55:49.142123+01:00",
+      "exitCode": 0,
+      "requestedModel": "claude-opus-5.5",
+      "actualModels": [
+        "claude-opus-5.5"
+      ],
+      "snapshot": "70dfe3344d167e5152a3685b09689d73fa1cdab1",
+      "reportSha256": "8a031d23f2834b83ef348ef2236b0d3cbd4e04908201980008af4b048b6c2c16",
+      "rawExecutionSha256": "70649330e0cfe140f43264abda2ea87bb0e3112af30cefecbe9739386ed12e1c",
+      "report": "batch-099-initial-claude.md",
+      "execution": "batch-099-initial-claude-execution.json",
+      "coverage": "batch-099-initial-claude-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0,
+      "exactFullPacketReturnedInFirstCall": true,
+      "unnecessarySerialTailReread": null,
+      "limits": "Actual complete returned bytes/ranges verified, not comprehension certification."
+    },
+    "gpt": {
+      "launcherPid": 22800,
+      "sessionId": "240faa46-7797-4c93-998e-af5db5677c98",
+      "startedAt": "2026-11-07T15:55:53.707246+01:00",
+      "completedAt": "2026-11-07T15:56:46.464983+01:00",
+      "exitCode": 0,
+      "requestedModel": "gpt-6.1-sol",
+      "actualModels": [
+        "gpt-6.1-sol"
+      ],
+      "snapshot": "70dfe3344d167e5152a3685b09689d73fa1cdab1",
+      "reportSha256": "b7d9984306b595d40cb0053e8ae4d339915b710d3825464ca215d0cea0d5f729",
+      "rawExecutionSha256": "6b9c2cc40d445870293019b684e1c55ee8adf377f107ca8b0a741dd79f86ecac",
+      "report": "batch-099-initial-gpt.md",
+      "execution": "batch-099-initial-gpt-execution.json",
+      "coverage": "batch-099-initial-gpt-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 2,
+      "observedToolOverlaps": 0,
+      "exactFullPacketReturnedInFirstCall": true,
+      "unnecessarySerialTailReread": [
+        3400,
+        3598
+      ],
+      "limits": "Actual complete returned bytes/ranges verified, not comprehension certification."
+    }
+  },
+  "serialReviewerProcessesVerified": true,
+  "allInternalToolsSerial": true,
+  "eachOriginalReportArchivedBeforeNextLaunch": true,
+  "allAssignedRangesReturned": true,
+  "initialPacketBytes": 174358,
+  "initialPacketLines": 3598,
+  "distinctCompleteFamilies": 66,
+  "familyOccurrences": 68,
+  "rawCharacterRecords": 9,
+  "completeArticleBodies": 15,
+  "newArticleBodies": 1,
+  "changedReusedPassages": 2,
+  "verdicts": {
+    "kanji/\u5270.md:1-51": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "words/\u904e\u5270.md:25": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    },
+    "kanji/\u904e.md:41": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN"
+    }
+  },
+  "findings": [],
+  "optionalDispositions": [
+    {
+      "reportedBy": "Claude",
+      "claim": "Name the character dictionary in line33.",
+      "status": "optional",
+      "decision": "No edit. Explicit dictionary links and actual heading already given in source line; source-only qualification is clear."
+    },
+    {
+      "reportedBy": "Claude",
+      "claim": "Add JMdict1196170 to reused\u904e source line.",
+      "status": "optional",
+      "decision": "No edit. Existing navigation-only change with linked actual\u904e\u5270article already carrying exact dictionary entry. No broken or false source claim established."
+    },
+    {
+      "reportedBy": "Claude; equivalent GPT shape assessment",
+      "claim": "Phonetic classification could be added.",
+      "status": "optional",
+      "decision": "No edit. Explicit mnemonic and structure-unclassified make no false denial. Undecoded historical gaiji and SVGtags not treated as sufficient to expand historical teaching."
+    }
+  ],
+  "hypothesisDispositions": [
+    {
+      "reportedBy": "Claude; equivalent GPT runtime limit",
+      "claim": "\u4f59 surplus meaning or shared\u4e57\u30b8\u30e7\u30a6 might appear in wider fallback/reading pools.",
+      "status": "unresolved",
+      "severity": "runtime gate, not a current default-four teaching defect",
+      "decision": "Three authored semantically wrong choices cover default four; full metadata remains wrong-option protected by compatible client. Actual N1/All and wider/custom/random/legacy fallback remain runtime gates, not certified or waived."
+    },
+    {
+      "reportedBy": "Both",
+      "claim": "Older APKs ignore curation.",
+      "status": "resolved",
+      "decision": "Known compatibility requirement retained. Updatedf9b59a2+ client required; not waived by this textual checkpoint."
+    }
+  ],
+  "reviewLimitDispositions": [
+    {
+      "reportedBy": "Claude",
+      "claim": "Could not map eleven paths; saw ten source/generated files.",
+      "status": "resolved",
+      "decision": "No teaching edit. Complete SVGandJSON were actually supplied. Coordinator counts11 numberedpaths/11 generatedstrokes and verifies exact prior regeneration evidence/hashes. GPT explicitly inspected11. Preserve original inconsistent Claude limit; no uniform-depth/native drawing claim.",
+      "svgPaths": 11,
+      "generatedStrokes": 11,
+      "priorStrokeAudit": "docs/n1-sources/batch-099-draft-stroke-audit.json",
+      "priorStrokeAuditSha256": "b6160b208d7211c3dc2c8e2ce276bd552a04a01684b5bd1938c8fe794b000cb1"
+    },
+    {
+      "reportedBy": "Claude",
+      "claim": "No level-source evidence in packet.",
+      "status": "resolved",
+      "decision": "Coordinator confirms\u5270membership in exact hash-verified frozen N1namedset. N2label is preserved baseline metadata, not newly inferred or re-sourced. Initial reviewer evidence limitation remains honest.",
+      "frozenNamedSourceSha256": "889faaefbec573e806f298766d2eee1300674c7b229bd973a35169cd2652cd73"
+    },
+    {
+      "reportedBy": "Claude",
+      "claim": "Line35 says unselected readings are not rare.",
+      "status": "withdrawn",
+      "decision": "Overbroad reviewer paraphrase, not actual teaching. Actual sentence says ordinary\u3042\u307e\u308a/\u3042\u307e\u308b are not made rare/invalid by exclusion; line31 explicitly qualifies\u5270\u3048as rare/dated. Both reports otherwise recognize this distinction.",
+      "actualText": "Only \u30b8\u30e7\u30a6 is selected for reading questions. The other readings remain reference information, not alternative pronunciations of \u904e\u5270. Their exclusion does not mean that ordinary \u3042\u307e\u308a or \u3042\u307e\u308b is rare or invalid."
+    },
+    {
+      "reportedBy": "Both",
+      "claim": "No manifest, archive, actual UI/native/font/phone verification in textual packet.",
+      "status": "unresolved",
+      "decision": "Not textual evidence. Coordinator reverified all8451currentpayloadhashes; all fresh native/Android/publication/immutableZIP and phone distinctions remain explicit pending gates, not reviewer certification."
+    }
+  ],
+  "modelContributionComparison": {
+    "shared": "Both assessed surplus/remainder boundmeaning, actual\u904e\u5270 identity/examples/translations and seven exclusions, allfour readings and source-only/spelling/register restrictions, allocation/curation, shape/mnemonic/strokes, allfourlinks/twoboundedreusedchanges, preservedN2metadata, threewronglabels and runtime/upstream/native limits. Equivalent differently labelled observations count as shared.",
+    "claudeUniqueVerifiedUseful": [],
+    "gptUniqueVerifiedUseful": [],
+    "claudeUniqueNonblocking": "Named-dictionary/additionalcitation/historicalclassification options; inconsistent missingpath count and overbroad line35 paraphrase preserved and adjudicated.",
+    "gptUniqueNonblocking": "Explicit independent report assertion of11paths; coordinator and original supplied files support it, not evidence of fresh upstream retrieval.",
+    "unsupportedMandatorySuggestions": "No mandatory textual fix, extra source-only lexical example, historical classification, new support article or exclusion established.",
+    "limits": "Matched sample/source access, not general model benchmark, equal-depth comprehension certification or native-speaker review."
+  },
+  "actionableRemainingTextualFindingGroups": 0,
+  "consequentialUnresolvedTeachingClaims": 0,
+  "textualReviewClosed": true,
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "dependentTextualConfirmation": "Not needed: no teaching edit or established textual defect. Original sessions retained for required later rendered confirmation.",
+  "mechanicalBatchAudit": {
+    "batch": "099",
+    "baseCommit": "d5a376ee2b014aae3c47c58eea47b327e44be6d2",
+    "draftKanji": 1,
+    "newWords": 0,
+    "changedReusedArticles": 2,
+    "requiredReciprocalPairs": 1,
+    "activatedBaselinePairs": 1,
+    "readingDispositions": 4,
+    "curatedOfferedKeys": 1,
+    "sourceOnlyOfferedKeys": 0,
+    "dictionaryFamilies": 66,
+    "exactBaseRuntimePreservedOutsideRecordedChanges": true,
+    "manifestFresh": true,
+    "contentVersion": "5408632b5aa1382c",
+    "limits": "Mechanical draft audit, not lexical-allocation/naturalness verification, independent review, native/phone acceptance or publication."
+  },
+  "runtimeHashesReverified": 8451,
+  "previousCompleteSourceBaselineFontStrokeAudit": "docs/n1-sources/batch-099-draft-audit.json",
+  "previousCompleteSourceBaselineFontStrokeAuditSha256": "c17fb6b1d675c1db67eacad2d565ad4ef1eeeffd4b7429ae2054502d53b1ee70",
+  "allMappedReciprocalPairs": 2,
+  "directedLinksVerified": 4,
+  "activatedBaselinePairs": 1,
+  "linkTargetsVerified": {
+    "words/\u4f59\u308b.md": "7c93c801279264dbceea611dfad5ad4fdd9d54c598075f67ed9c398d160e71d5",
+    "kanji/\u5200.md": "2838d7cd964f9b2f964e0454e4200ecfee48805f3d2800d34390405b2cec66b2",
+    "kanji/\u4e57.md": "8c6020f2795dae9c8a54633497be579080933e303adb8620a31f3ea685a18b9c",
+    "kanji/\u5263.md": "c72efeb02cd74c13319d300f817e29e64ace55efaf6285d786d06efa1e4a2daf",
+    "kanji/\u5247.md": "327bde33cc483b444d83afcd3526111e79b849c37adee7982649861df0f8096d"
+  },
+  "newDirectWordExclusionPairsAppliedInDraft": 0,
+  "actualHanCount": 12,
+  "nativeFontPending": [
+    "\u5202",
+    "\u5269"
+  ],
+  "checks": {
+    "validate": {
+      "path": "docs/n1-reviews/batch-099-textual-review-validate-730.txt.gz",
+      "sha256": "dd76aada4ef55266b8eee58e36c43e6d67081930e01bfe93819b93c207e67a09",
+      "uncompressedSha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+    },
+    "manifest": {
+      "path": "docs/n1-reviews/batch-099-textual-review-manifest-730.txt.gz",
+      "sha256": "9899faf888c52bf7a7d04493239584722d0860f953e6633c809b5ac326c6e4b4",
+      "uncompressedSha256": "8ef302b436b7d76c295c261d65955469aeb2d2610906b80ec36d3d78a52c1bb4"
+    },
+    "audit": {
+      "path": "docs/n1-reviews/batch-099-textual-review-audit-730.txt.gz",
+      "sha256": "237988fdf8e54dec17be8c00be74f85365e1aeaa09da11aba7d483a07f81e508",
+      "uncompressedSha256": "93260299492dd052c4bf57bcbbef0c1bd03a38fa63692e26e94b3710ac91871a"
+    },
+    "tests": {
+      "path": "docs/n1-reviews/batch-099-textual-review-tests-730.txt.gz",
+      "sha256": "e112a506ac44012eac06e6765905a757902e99b6fdc18b94d0bbe196aca49f80",
+      "uncompressedSha256": "08886243120727059e487f21678529cbccb21d2a8a2749ca6b24042c46f33685"
+    },
+    "vocabulary": {
+      "path": "docs/n1-reviews/batch-099-textual-review-vocabulary-730.txt.gz",
+      "sha256": "088a4551817c54df1b036894fde2238da20fccf86d44934145bd7a6f8778d969",
+      "uncompressedSha256": "b4fd453f32bade76949de7729921118d8538bdeea355dcfac7b8de6d5388eb38"
+    },
+    "budget": {
+      "path": "docs/n1-reviews/batch-099-textual-review-budget-730.txt.gz",
+      "sha256": "e44f563f3ef488f75583501a1b690a22cdc6a447aab0d2f8368a890de5f6fb1c",
+      "uncompressedSha256": "4a35429f2b1820f2960c7757014107e3eef5c5350cfb3fe2c7768e9ebc812152"
+    },
+    "whitespace": {
+      "path": "docs/n1-reviews/batch-099-textual-review-whitespace-730.txt.gz",
+      "sha256": "46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e",
+      "uncompressedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "staged-authored-whitespace": {
+      "path": "docs/n1-reviews/batch-099-staged-authored-whitespace-730.txt.gz",
+      "sha256": "46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e",
+      "uncompressedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "focusedTestsPassedThisCheckpoint": 43,
+  "freshAndroidOrNativeClaimed": false,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "nextAction": "SAME099 fresh non-skipped THREE RealContentTest and ONE RareHanTest against THIS sibling next; textual closure ONLY on signed70dfe334, NOT native or full batch acceptance. Actual ClaudeOpus5.5 original session2ac79fdb-83fc-485d-8f64-6c5d7b473973 and GPT6.1Sol original session240faa46-7797-4c93-998e-af5db5677c98 completed serial blind initial reviews on SAME174358byte/3598line packet:66distinct complete dictionary families/68occurrences, nine raw records,15complete articles including new\u5270 and exact reused\u904e\u5270/\u904e navigation changes. Both returned exact full packet in first serial view; Claude exactly ONEcall; GPT unnecessarily reread3400-3598 serially. No tool overlap/truncation/missinglines. Original complete reports/models/sessions/process/read limits archived. No actionable textual defect or consequential unresolved teaching claim; teaching unchanged, no dependent textual fix confirmation needed. Optional namedcharacterdictionary/newcitation/historicalclassification not adopted. Coordinator confirms ELEVEN suppliedSVG/generated paths, source membership and preserved N2metadata; original Claude inconsistent tenfiles/missingpaths limitation and overbroad unselectedreadings paraphrase preserved and corrected in reconciliation, not rewritten. Full\u30b8\u30e7\u30a6 and \u3042\u307e\u3064\u3055\u3048/\u3042\u307e.\u308a/\u3042\u307e.\u308b retained; only quizOnyomi[\u30b8\u30e7\u30a6], quizKunyomi[] selected. Three separate kun rows distinguish rare-spelling dated usually-kana\u5270\u3048, search-only\u5270\u308a with noun\u3042\u307e\u308a not\u3042\u3093\u307e\u308a, character-dictionary\u3042\u307e.\u308b with ordinary\u4f59\u308b, no invented\u5270\u308b. One existing\u904e\u5270\u304b\u3058\u3087\u3046 N2 support, originalSEVENexclusions unchanged; no new word/title/guard. TWO allmappedpairs/FOUR directions/ONE activatedbaselinepair. Use explicit JAVA_HOME=C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot and ANDROID_HOME=C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk in same shell, oneGradleworker and quoted '-Pkotlin.compiler.execution.strategy=in-process'; inspect terminal test cases and actual sibling path. Qualified TESTONLY Android1c1b7bf4 retains productionf9b59a2, NOT latest appmain. Then fresh fullarchive productionContentSync ONCE/native N1-All actual choices/\u3058\u3087\u3046 only and NO kun/elevenstroke drawing/complete\u5270 article/reused\u904e\u5270-\u904e links/SystemBack/offline/all12Han/fourfonts with fresh safe port/device ownership checks; \u5202/older\u5269cmap absences NOT glyph failure. Preserve exact fixture/hash and terminal percase0, no doubleparse, heap/archiveguard increase or shared-device interference. Original two model sessions need serial bounded rendered confirmations; current textual review certifies neither native/phone nor widercustom/random/fallback pools. All combined-current-main/nonrewritingmerge/changedteachingreview/checks/normalsigning/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifestentryhash/unchanged18000entry42MiBcompressed80MiBinflated56MiBretained/media/path/verifiedownerissue gates remain. Parent15692 retains runner.lock throughout child lifetime; NO child acquire/delete/unlock/readprobe. Approved control/committed evidence/frozen inputs only, no optional historical-session helper access. Preserve/report/yield actual new denial/signing hang/uncertain ownership. Published125/1228 and1103 acceptance remainder unchanged; six separate earlier placements not counted as accepted batches. Physicalphone/generalrelease/whole-set outstanding. No100, unreviewedpush or secondrunner.",
+  "limits": [
+    "TEXTUAL closure only, NOT full batch review closure, runtime acceptance or publication; reviewClosed/published arrays remain empty.",
+    "Both original reports/executions preserved. Each process returned its exact entire assigned packet in first call; Claude used exactly one call, GPT unnecessarily reread3400-3598 serially. No truncation/missinglines/overlap/unfinishedtool. Actual exit before next reviewer verified; returned bytes do not certify comprehension.",
+    "Both initial reviewers received the same66-family packet and exact two reused diffs, independently of other findings or author adjudication. Source counts mechanically verified; public text is coordinator-supplied committed extraction, not independent upstream retrieval.",
+    "Runtime and all8451 payload hashes unchanged; prior complete source/baseline/stroke/font audit is execution729, not relabelled as fresh full linguistic inspection.",
+    "Default-four three kanjichoices accepted textually. Actual N1/All and widercustom/random/legacy fallback pools remain runtime gates, not certified. Old APKs ignore curation.",
+    "Claude's original tenfiles/missing-eleven-paths limitation is inconsistent with supplied complete SVG/JSON. Coordinator freshly counts11 SVGpaths/11 numberedgeneratedrecords and rebinds exact prior regeneration audit; GPT explicitly inspected11. Original report preserved, not rebranded as uniform independent verification.",
+    "Claude overbroad paraphrase of line35 ('unselected readings are not rare or invalid') is not the actual claim. Actual text limits this to ordinary\u3042\u307e\u308a/\u3042\u307e\u308b and separately marks\u5270\u3048rare/dated; both reports retain the correct distinction elsewhere. No teaching defect established.",
+    "N1 named-source membership freshly confirmed from exact frozen bytes; N2 vocabulary metadata preserved, not a new inference or fresh source verification. No physicalphone or native evidence from textual review.",
+    "Fresh Android/RareHan/native/fourfonts/drawing/reading/N1-All/Back/offline/ContentSyncONCE and dependent original-session rendered review remain pending.",
+    "Qualified TESTONLY Android1c1b7bf4 retains productionf9b59a2, NOT latestappmain. Compatibleclientf9b59a2+ required; physicalphone/generalrelease/whole-set outstanding.",
+    "Published125/1228 and1103 acceptance remainder unchanged; six separate earlierN2source members\u4fdd\u6848\u6d3e\u7b2c\u7b56\u7d50 and separate\u5996exception retained. No100 or project completion.",
+    "All original combined-main/signing/ownerpush/terminalCI/EVERYimmutableZIPhash/originalbudgets/ownerissue gates remain. Parent lock untouched, no optional historical helper access or new permission denial."
+  ],
+  "whitespaceDiagnostic": {
+    "initialStagedCheckExitCode": 2,
+    "initialLog": "docs/n1-reviews/batch-099-lossless-capture-whitespace-730.txt.gz",
+    "initialLogSha256": "919b593dc25700b3930fbbf161c22a13dca2a3118cfbaa8a2516a5cd68d8f635",
+    "exactLosslessCaptureExceptions": {
+      "docs/n1-reviews/batch-099-cli-config-help-execution-730.txt": "54bf23cf77341c500c4a47e57e197f9814745c58b1a04ea09d727a9c81722c5e",
+      "docs/n1-reviews/batch-099-initial-packet.txt": "3fac89f34415b5151dd1149cf456ee6f3b758ae48ee14276a78e41f50916056c"
+    },
+    "disposition": "Preserve exact original reviewer packet and actual CLI help bytes. Authored files pass exact-path scoped check; no report/hash/runtime content edited.",
+    "scopedCommand": [
+      "git",
+      "--no-pager",
+      "diff",
+      "--cached",
+      "--check",
+      "--",
+      ".",
+      ":(exclude)docs\\n1-reviews\\batch-099-cli-config-help-execution-730.txt",
+      ":(exclude)docs\\n1-reviews\\batch-099-initial-packet.txt"
+    ]
+  }
+}
