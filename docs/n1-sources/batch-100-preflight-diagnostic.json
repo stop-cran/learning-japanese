@@ -1,0 +1,16 @@
+{
+  "execution": 745,
+  "kind": "coordinator-wrapper-depth-assumption",
+  "failedCommand": "pwsh -NoProfile -File control\\checks-source-745.ps1",
+  "actualError": "Unexpected coordinator session",
+  "stage": "preflight before source tests; zero test/build/native executions",
+  "cause": "Initial direct-tool preflight had the coordinator at ancestry[1]. The checks wrapper adds a PowerShell process, so the reused fixed array position identified a wrapper rather than the coordinator.",
+  "resolution": "Preserve original preflight; find exactly one copilot.exe in the actual ancestry whose parent is verified live launcher5920, then require this execution's exact session ID. Retain all launcher, decoded command, signed-head, clean-state and checkpoint checks.",
+  "freshDirectAncestry": [3520, 26872, 5920],
+  "verifiedCoordinatorPid": 26872,
+  "verifiedLiveLauncherPid": 5920,
+  "originalPreflight": "batch-100-preflight-745-original.ps1.txt",
+  "permissionDenial": false,
+  "parentLockTouched": false,
+  "limits": "Local preflight implementation defect, not permission or test failure. No lock acquire/delete/unlock/read-probe, policy change or acceptance waiver."
+}
