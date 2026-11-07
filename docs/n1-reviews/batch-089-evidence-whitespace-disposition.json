@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "execution": 629,
+  "batch": "089",
+  "command": "git --no-pager diff --cached --check",
+  "exitCode": 2,
+  "originalReceipt": "control/batch-089-textual-review-evidence-whitespace-629.txt",
+  "originalReceiptSha256": "82aad2f3cc0c30441ac4a188ed35d776f35c514e8e65adda5d7a02aa1b5a8e21",
+  "findings": [
+    {
+      "path": "docs/n1-reviews/batch-089-cli-config-help-execution-629.txt",
+      "count": 1,
+      "kind": "new blank line at EOF",
+      "disposition": "Preserve exact captured CLI help bytes as execution evidence."
+    },
+    {
+      "path": "docs/n1-reviews/batch-089-initial-packet.txt",
+      "count": 180,
+      "kind": "trailing whitespace",
+      "disposition": "Preserve the exact shared reviewed packet, including numbered blank article lines and supplied dictionary whitespace. Never edit a frozen packet after review."
+    }
+  ],
+  "otherPathsReported": [],
+  "runtimeChanged": false,
+  "limits": "Raw evidence whitespace is explicitly retained, not claimed to pass the unfiltered whitespace check. All other staged paths require a clean check."
+}

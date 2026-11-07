@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "execution": 629,
+  "batch": "089",
+  "status": "textually-review-closed-awaiting-fresh-android",
+  "originalTeachingSnapshot": "4b84608b5ca8889d45a176667975524f6645bd8d",
+  "reviewedTeachingSnapshot": "4b84608b5ca8889d45a176667975524f6645bd8d",
+  "teachingChangedAfterInitialReviews": false,
+  "reviewedRuntimeHashes": {
+    "kanji/凶.md": "6b6f0f4075d89df7876ec2c971f08d32822e9f8139de34f8f857bc4d41d644a7",
+    "words/凶作.md": "8f12b74b31a3f59cef0e2e9ec2c9f736441c2e9dafb2077fb017843b1919beb3",
+    "kanji/作.md": "079887f9201bce888893923bbe84ba5f7b970d1a7b19fa502299ffe0bb7ea5ae",
+    "strokes/凶.json": "e383c3fa8474e25147c0ddc8df521f6c4897009df108d123e412bc28ffbcf86e",
+    "manifest.json": "d07a23617f292f4474acaddd54d4081d5e798fc87cbb0b4f8d4be01802bff80b"
+  },
+  "initialModels": [
+    "claude-opus-5.5",
+    "gpt-6.1-sol"
+  ],
+  "processes": {
+    "claude": {
+      "launcherPid": 2628,
+      "sessionId": "a56b5dcb-9fed-4785-848e-41708f65598f",
+      "startedAt": "2026-11-07T02:18:12.255775+01:00",
+      "completedAt": "2026-11-07T02:19:42.292441+01:00",
+      "exitCode": 0,
+      "requestedModel": "claude-opus-5.5",
+      "actualModels": [
+        "claude-opus-5.5"
+      ],
+      "snapshot": "4b84608b5ca8889d45a176667975524f6645bd8d",
+      "reportSha256": "ae982369557b6186f0e253b02d24be187784cd8f335fd2db2c004702e4f39438",
+      "rawExecutionSha256": "6110078ad6a45cda16669dd0ba4e6a95e4770ad96758c622dcdbb807ccfd27f4",
+      "report": "batch-089-initial-claude.md",
+      "execution": "batch-089-initial-claude-execution.json",
+      "coverage": "batch-089-initial-claude-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0,
+      "firstCallExactFullPacketReturned": true,
+      "truncatedRedundantTailResponses": 0
+    },
+    "gpt": {
+      "launcherPid": 27332,
+      "sessionId": "3286add7-2824-4df6-933a-c8bba3890927",
+      "startedAt": "2026-11-07T02:19:45.886773+01:00",
+      "completedAt": "2026-11-07T02:20:37.304693+01:00",
+      "exitCode": 0,
+      "requestedModel": "gpt-6.1-sol",
+      "actualModels": [
+        "gpt-6.1-sol"
+      ],
+      "snapshot": "4b84608b5ca8889d45a176667975524f6645bd8d",
+      "reportSha256": "558e3901760b627a1da3fd43511da4f5ece67867999096664597bdd43427b409",
+      "rawExecutionSha256": "06e47f79e714867b061fea1e144bdda75da6c9f24f76be9c19950fa88ee2d88c",
+      "report": "batch-089-initial-gpt.md",
+      "execution": "batch-089-initial-gpt-execution.json",
+      "coverage": "batch-089-initial-gpt-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 4,
+      "observedToolOverlaps": 0,
+      "firstCallExactFullPacketReturned": true,
+      "truncatedRedundantTailResponses": 2
+    }
+  },
+  "serialReviewerProcessesVerified": true,
+  "eachOriginalReportArchivedBeforeNextLaunch": true,
+  "allInternalToolsSerial": true,
+  "allAssignedRangesReturned": true,
+  "initialPacketBytes": 173695,
+  "initialPacketLines": 3568,
+  "initialDistinctCompleteFamilies": 73,
+  "rawCharacterRecords": 6,
+  "completeArticleBodiesSupplied": 14,
+  "newArticleBodies": 2,
+  "changedReusedBodies": 1,
+  "originalSessionSupplements": 0,
+  "verdicts": {
+    "kanji/凶.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN",
+      "scope": "complete new article"
+    },
+    "words/凶作.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN",
+      "scope": "complete new article"
+    },
+    "kanji/作.md": {
+      "correctness": "CLEAN",
+      "scopedCoverage": "CLEAN",
+      "textComprehensibility": "CLEAN",
+      "scope": "additive navigation line44 only"
+    }
+  },
+  "findings": [],
+  "hypothesisDispositions": [
+    {
+      "claim": "Overlapping evil titles of凶and悪 may become extra choices in larger/changed quiz pools",
+      "reportedBy": [
+        "Claude Hypothesis; GPT Limits widerpool caveat"
+      ],
+      "status": "unresolved",
+      "category": "pending-native-production-acceptance-not-article-defect",
+      "evidence": "Actual凶distractors凡/凸/凹 are all N1-available; 悪alreadyhas意/急/思. No defaultmissing-slot or demonstratedbadquestion established. Both actualN1/All production and widercustompools not yet certified.",
+      "decision": "No inventedtextualfix. Mandatory nativeN1/All productionacceptance retained; widerchanged/custompools explicitlyuncertified."
+    },
+    {
+      "claim": "Whole-corpus kanjititle uniqueness not independently checked",
+      "reportedBy": [
+        "Claude Limits"
+      ],
+      "status": "resolved",
+      "resolution": "Coordinator fresh allactualkanjititle scan finds illfortune;evil exactlyonce. Validator0errors, originalbaseline metadata/strokes and everyruntimehash rechecked; not independentreviewer retrieval."
+    }
+  ],
+  "optionalDispositions": [
+    {
+      "claim": "Add strongerword comparison against不作 and cite凶cropfailure sense",
+      "reportedBy": [
+        "Claude Optional1"
+      ],
+      "status": "optional",
+      "decision": "Noedit. Current凶explains unfavorable agriculturaloutcome and凶作 explicitlyverypoor; difference from不作 is already scoped. No universal strength ordering introduced."
+    },
+    {
+      "claim": "Explain作crop/yield next to the new navigationline",
+      "reportedBy": [
+        "Claude Optional2"
+      ],
+      "status": "optional",
+      "decision": "Noedit. Newlinkedword article supplies verifiedcompound-specifichead sense. Existing作body outside additive navigation remains unchanged; no demonstrated teachinggap."
+    },
+    {
+      "claim": "Qualify凶器 as oftencrime/murderweapon",
+      "reportedBy": [
+        "Claude Optional3"
+      ],
+      "status": "optional",
+      "decision": "Noedit. Dangerous/lethalweapon matches fullJMdict1591540. No demonstrated incorrectrestriction or requirement for a newfrequencyclaim."
+    }
+  ],
+  "modelContributionComparison": {
+    "shared": "Bothinitials accepted complete凶/凶作 and additive作line, sole raw/selectedreading/emptykun, agriculturalnoun/verypooryield/notnecessaryzeroyield/famine/badwork, naturalexamples/translations, compound-specific作crop/yield, mnemonic,3wrongkanjilabels,1directguard,2mappedpairs andnative/quizpoollimitations.",
+    "claudeUnique": "Three optionalclarity/expansion proposals; no verifiedmandatorydefect. Explicitlargerpoolhypothesis overlapsGPTLimits, not a uniquediscovery.",
+    "gptUnique": "No uniqueverifiedteachingdefect. Transparently reported unnecessaryserialoverlappingtailreads/truncatedresponses; execution verifies completeinitialread and no missingassignedscope.",
+    "limits": "Common matchedsnapshot/task/sourceaccess; no defectquota or generalmodelranking. Allsectionsincludinghypotheses/optional/limits compared; labeldifferences do not create uniquecontribution."
+  },
+  "actionableRemainingTeachingFindings": 0,
+  "consequentialUnresolvedTeachingFindings": 0,
+  "textualReviewClosed": true,
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "mechanicalBatchAudit": {
+    "batch": "089",
+    "baseCommit": "703ebf5fba412aefdc516ea18b36658d227631d1",
+    "draftKanji": 1,
+    "newWords": 1,
+    "changedReusedArticles": 1,
+    "requiredReciprocalPairs": 1,
+    "activatedBaselinePairs": 0,
+    "readingDispositions": 1,
+    "curatedOfferedKeys": 1,
+    "sourceOnlyOfferedKeys": 0,
+    "dictionaryFamilies": 73,
+    "exactBaseRuntimePreservedOutsideRecordedChanges": true,
+    "manifestFresh": true,
+    "contentVersion": "c6562f11cb371053",
+    "limits": "Mechanical draft audit, not lexical-allocation/naturalness verification, independent review, native/phone acceptance or publication."
+  },
+  "runtimeHashesReverified": 8426,
+  "originalBaselineMetadataAndStrokesPreserved": {
+    "kanji": 985,
+    "words": 4942,
+    "strokes": 985
+  },
+  "freshFrozenLexicalPacketsVerified": 2,
+  "frozenInputHashesVerified": 5,
+  "completeRawCharacterRecordsVerified": 6,
+  "allMappedReciprocalPairs": 2,
+  "directedLinksVerified": 4,
+  "directWordExclusionPairs": 1,
+  "actualHanCount": 23,
+  "nativeFontPending": [
+    "乂",
+    "凵"
+  ],
+  "checks": {
+    "validate": {
+      "path": "docs/n1-reviews/batch-089-textual-review-validate-629.txt",
+      "sha256": "c87d0897e6616b01474906213df2ff35e9e0eeb5e6e86eaa0367145b271abcc5"
+    },
+    "manifest": {
+      "path": "docs/n1-reviews/batch-089-textual-review-manifest-629.txt",
+      "sha256": "d0ab15c8babac1f1c7eda0b89653d6e5ac0130f26d74b11a091704f09f696224"
+    },
+    "audit": {
+      "path": "docs/n1-reviews/batch-089-textual-review-audit-629.txt",
+      "sha256": "00a6df337fe0fbed239be1cf50d76c1ac2c41157f30d1b1561c62dec5f4a8777"
+    },
+    "tests": {
+      "path": "docs/n1-reviews/batch-089-textual-review-tests-629.txt",
+      "sha256": "3c7bfd25c6206bed6d6d93328a51d9d7d27172cdb7736a0645600963e3cfda0d"
+    }
+  },
+  "focusedTestsPassedThisCheckpoint": 43,
+  "diagnostics": [
+    "Initial coordinator catalog command copilot config help was an unknown-key error, not a denial or settings change. Correct copilot help config exposed and archived actual advertisedmodels; both executed identities verified.",
+    "GPT redundanttailread accounting retained as above; no missingassignedrange, concurrenttool, retry arounddenial or freshreviewrequired."
+  ],
+  "newNativeOrAndroidClaimed": false,
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "nextAction": "SAME089 fresh non-skipped sibling Android RealContentTest THREE cases and RareHanTest ONE case against THIS content tree; preserve exact XML/provenance and normally signed local evidence, then yield. Qualified TESTONLY Android1c1b7bf42cc91d820a93169f1088dc647ac51c0d atop unchanged productionf9b59a2 is not latest app main. Explicit JAVA_HOME=C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot and ANDROID_HOME=C:\\Users\\stop-\\AppData\\Local\\Android\\Sdk in same shell, one Gradle worker and quoted '-Pkotlin.compiler.execution.strategy=in-process'. Parent19008 already owns runner.lock; NO child reacquisition/delete/unlock or parent recovery wrapper copy. Keep exact signed-head/checkpoint/wholly-clean-worktree/verified-parent-ancestry checks; preserve/report/yield actual new denial, signing hang or uncertain ownership. Textual089 closed with two serial blind families on unchanged4b84608b; no actionable defect or consequential unresolved teaching claim. Sole raw/selected onキョウ, rawkun[]/explicitquizkun[]; own linked凶作 row, noun/agriculturalverypooryield not harvestverb/necessaryzeroyield/famine/badwork, compound-specific modifier+head作crop/yield. New凶/凶作 and exact additive作navigation reviewed; two allmappedpairs/four directions, one direct収穫guard. GPT made an exact unrestricted fullpacketread then three unnecessary serial overlapping tailreads; two tailresponses truncated, original execution/report retained. No missing assigned range, overlap, denial or teaching fix. Later native gate requires all23 scopedHan especially乂/凵, four production font families/system fallback, fourstroke drawing, singlequeuedkeyきょう, both new article/SystemBack/offline routes and full archive production ContentSync ONCE with terminal case0; no guard or heap increase. Actual N1/All production choices remain required despite allthree curated wrongcards being N1-available. Both original review sessions retained for dependent visuals, no new blind credit. All original source/baseline/link/reading/twofamily/native/currentmain-normalmerge/re-review/checks/normal-signing/owner-fastforward/terminalCI/EVERYimmutableZIPentryhash/original18000entries42MiBcompressed80MiBinflated56MiBretained/media/path/ownerissue gates remain. Published115/1228,1113remaining unchanged; physicalphone/generalrelease/whole-set outstanding. No090, native/reviewer/publication or second runner in next host checkpoint.",
+  "limits": [
+    "Textual closure only. Fresh non-skipped Android/native/fourfont/visual/combinedmain/signing/publication gates pending; runtime not accepted or published.",
+    "Both actual families independently received identical173695byte3568line packet with73completeJMdictfamilies,6rawcharacters and14completearticlebodies including2new and1changedreusednavigationdiff. Both firstcalls returned exact fullpacket, no truncation. Bytes do not prove comprehension or equivalent fresh-read depth.",
+    "GPT unnecessarily repeated three serial overlappingtailreads after the complete firstread; two redundantresponses truncated, finaltail exact. Originalreport and execution retain deviation. Fourserialcalls not one, no concurrenttools, missingassignedrange or denial. No repeat reviewer run or retroactive onecallclaim.",
+    "Original reports preserved verbatim before reconciliation. No author adjudication or other report supplied to initial reviewers. No teaching fix needed; zero dependent textual confirmations, original sessions retained for later visuals.",
+    "PublicDaijisen/Nikkoku/Jitsu/encyclopedia text supplied as coordinator extraction from committedHTML; formatting/links stripped, imageplaceholders retained. Not independentupstream retrieval, historical-glyphinspection, contemporaryfrequencymeasurement or verification of every historical/agronomic statement.",
+    "Sole raw/selected onキョウ and rawkun[]/explicitquizkun[] retained. Ownlinked凶作row, actual characterallocation, compound-specific作crop/yield. No extra readings from Jitsu glosses, wordlevel inference, numericalfailurethreshold or necessaryfamine/zeroyield claim.",
+    "Twoallmappedpairs/fourdirections including reused作; noactivatedbaselinepair. One direct収穫guard not a transitiveclique or universal livepool safety. Allthree curatedwrongcards N1-available; actualN1/All production and broader custom/randompools remain uncertified.",
+    "All23scopedHan especially乂/凵 missingmainbundledcmap needfreshnativefourfont/systemfallback legibility; cmapabsence notglyphfailure. Fourpinnedstrokes unchanged. Inheritedall40font evidence stayshistorical.",
+    "QualifiedTESTONLYAndroid1c1b7bf4 atop unchangedproductionf9b59a2 is not latestappmain. Compatibleclientf9b59a2+ required; oldclients ignorecuration/wordguards. Physicalphone/generalrelease/whole-set outstanding.",
+    "Published115/1228,1113acceptanceremainder unchanged. Sixseparate earlierN2sourcemembers保案派第策結 are not acceptedissue60 additions or candidates toduplicate/relevel; separate妖exception retained.",
+    "Alloriginalnormalmerge/substantiveteachingreview/validation/normalsigning/ownerfastforward/terminalgreenCI/EVERYimmutableZIPmanifestentryhash/original18000entries42MiBcompressed80MiBinflated56MiBretained/perfilemedia/safepaths/ownerissue gates remain; no guardincrease or algorithmchange.",
+    "Liveparent19008 retainsrunner.lock; nochildacquisition/delete/unlock. Approvedcontrolhelpers/committedsourcepackets/frozenworkspaceinputs only; nooptionalhistoricalsessionhelper access, policychange or actualnewpermissiondenial."
+  ]
+}
