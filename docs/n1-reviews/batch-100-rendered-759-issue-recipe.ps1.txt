@@ -1,0 +1,59 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\4f3eac0e-cc72-488a-9f72-edc9d3a24ce3"
+$content = "$control\..\learning-japanese"
+$android = "$control\..\kanji-cards-android"
+$bodyPath = "$control\batch-100-rendered-759-issue-body.txt"
+if ((Test-Path "$log\issue-759-posted.json") -or (Test-Path $bodyPath)) { throw 'Do not duplicate issue update' }
+$runner = [IO.File]::ReadAllText("$control\runner.json") | ConvertFrom-Json
+if ($runner.status -ne 'running' -or $runner.pid -ne 5920 -or
+    $runner.sessionId -ne '4f3eac0e-cc72-488a-9f72-edc9d3a24ce3') { throw 'Uncertain parent ownership' }
+$head = git -C $content rev-parse HEAD
+if ($LASTEXITCODE -ne 0 -or
+    (git -C $content rev-parse HEAD^) -ne 'cffdad1291d2acd847c669ab87c3c8b58572824f' -or
+    (git -C $content log -1 '--format=%G?') -ne 'G' -or
+    (git -C $content status --porcelain --untracked-files=all)) { throw 'Unexpected content signed/clean state' }
+if ((git -C $android rev-parse HEAD) -ne 'bf30cdead8515739bc0e671d57a54b9a3109dd46' -or
+    (git -C $android log -1 '--format=%G?') -ne 'G' -or
+    (git -C $android status --porcelain --untracked-files=all)) { throw 'Android changed' }
+$body = @"
+Checkpoint759, SAME batch100: both original-family rendered confirmations COMPLETE, saved at signed LOCAL evidence commit $head. This is not publication or full batch acceptance. Evidence: docs/n1-sources/execution-759.json and docs/n1-reviews/batch-100-rendered-759-reconciliation.json.
+
+Claude Opus5.5 (original4975f494 session) then GPT6.1Sol (originalc9e3c7f4 session) each returned CLEAN for correctness, scoped coverage and rendered comprehensibility of創 and all three reused changed passages. Both inspected actual22sampledlabels/all64projectedchoices, eleven direct symmetric NONTRANSITIVE guards and all21Han across four production-family panels. Default meaning options now show蚕 "silkworm", not樹 "tree; establish"; N753-fallback-establish is resolved semantically755/mechanically758/rendered759. N1 still has TWOcurated剣倹 plusfallback because験N4. No masking/releveling or universal future-pool claim.
+
+Both actual model identities and process exits0 verified, Claude exited before GPT started. Each made17 serial view calls: own historical reports, common232523-byte packet and15actualPNGs (11reduced contact sheets covering43route captures,3original font panels,1original meaning question). Zero internal overlaps/multitool responses. Complete reports/raw captures/read limits retained. Claude's original coverage assertion mishandled CRCRLF normalization despite an EXACT returned/file SHA match; direct raw-byte equality independently verified in a supplemental coverage receipt, original audit unchanged. No reviewer rerun, native rerun, new denial or weakened gate.
+
+Sixfullreadings/order and selectedソウ/つく.る preserved. Source-onlyショウ/けず.しける lexical allocation remains explicitlyUNVERIFIED/unselected. OriginalF1/C1-establish/H1-initial stay resolved; H1-wound stays withdrawn. 創/初 remains conservative, not a proven historical live failure/universal synonym. Optional shape explanation/wording/table-wrap polish remains nonblocking; no teaching edit made.
+
+Runtime/manifest unchanged this execution:606c836e4be33ba9, all8453runtime hashes verified. Existing756HOST3+1 and758corrected full-archive productionContentSyncONCE/two native terminal0 cases are inherited, not recounted. Pixels judge glyph readability, not exact fallback face. SystemBack/offline relies on758execution, not still-image proof. API35emulator is not a phone;12injectedstrokes/seeded due states/shape-only fallback are not MLKit or human mastery. No push, next batch, optional historical-session helper access or parent-lock access.
+
+NEXT bounded checkpoint: combined-current-main acceptance preparation and required fullPython/validator/manifest/vocabulary/baseline/membership/reading/link/quiz/font/stroke/archive/path/media/budget checks, then signedLOCAL evidence checkpoint. Inherit HOST/native only for exact unchanged runtime/Android; changed teaching/payload needs applicable fresh acceptance/review. Subsequent publication still requires normal signing, owner fast-forward, exactremoteSHA, terminalgreenCI and EVERYimmutableZIPmanifesthash within unchanged18000entries/42MiBcompressed80MiBinflated56MiBretained guards and verified owner issue update.
+
+Published126/1228, acceptance remainder1102, last published716c610153234e8d2240dcf528de3ef83b654b27 unchanged. Batch100 is not review-closed/published. Physical-phone/general-release/whole-set acceptance remains outstanding.
+"@
+[IO.File]::WriteAllText($bodyPath, $body + "`n", [Text.UTF8Encoding]::new($false))
+if ($env:GH_TOKEN -or $env:GITHUB_TOKEN) { throw 'Unexpected inherited token' }
+$globalIdentity = gh api user --jq .login
+if ($LASTEXITCODE -ne 0 -or $globalIdentity -cne 'romanko-ms') { throw 'Unexpected global identity' }
+try {
+    $env:GH_TOKEN = gh auth token --user stop-cran
+    if ($LASTEXITCODE -ne 0 -or -not $env:GH_TOKEN) { throw 'Owner credential unavailable' }
+    $login = gh api user --jq .login
+    if ($LASTEXITCODE -ne 0 -or $login -cne 'stop-cran') { throw 'Wrong command-scoped identity' }
+    $url = gh issue comment 60 --repo stop-cran/learning-japanese --body-file $bodyPath
+    if ($LASTEXITCODE -ne 0) { throw 'Issue update failed' }
+    $url = $url.Trim()
+    @{ url=$url; author=$login; bodySha256=(Get-FileHash $bodyPath).Hash.ToLowerInvariant() } |
+        ConvertTo-Json | Set-Content "$log\issue-759-posted.json" -Encoding utf8NoBOM
+    if ($url -notmatch '#issuecomment-(\d+)$') { throw 'Unexpected comment URL; preserve posted receipt' }
+    $raw = gh api "repos/stop-cran/learning-japanese/issues/comments/$($Matches[1])"
+    if ($LASTEXITCODE -ne 0) { throw 'Comment reread failed' }
+    $raw | Set-Content "$log\issue-759-reread.json" -Encoding utf8NoBOM
+    $comment = $raw | ConvertFrom-Json
+    if ($comment.user.login -cne 'stop-cran' -or $comment.body -cne [IO.File]::ReadAllText($bodyPath) -or
+        $comment.html_url -cne $url) { throw 'Exact owner/body verification failed' }
+    Write-Output "Verified owner update: $url"
+} finally {
+    $env:GH_TOKEN = $null
+}
+if ((gh api user --jq .login) -cne $globalIdentity) { throw 'Global identity changed' }
