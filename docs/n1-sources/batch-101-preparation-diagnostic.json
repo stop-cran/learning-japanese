@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "execution": 762,
+  "batch": "101",
+  "failure": "Initial packet audit compared raw local text bytes against normalized manifest hashes and stopped at articles/ability-and-perception.md.",
+  "cause": "The source-only audit incorrectly treated text hashes as byte-for-byte binary hashes. Production build_manifest.sha256 normalizes CRLF to LF for text. The generated manifest remained unchanged and validation had already passed.",
+  "remedy": "Reuse production build_manifest/sha256 for text, retain raw hashing for binary maps, and include curriculum in the complete manifest inventory. The separate Git diff still requires all runtime bytes to be unchanged from the signed base.",
+  "originalFailure": "batch-101-audit-762-initial-failed.txt.gz",
+  "limits": "Local audit implementation defect, not a content error, permission denial or acceptance waiver. Original failure retained; no unrelated article edited. Only the corrected packet audit and dependent whitespace check need rerunning; earlier successful source tests/validator/manifest/budget/vocabulary checks remain applicable because runtime/tooling bytes are unchanged."
+}
