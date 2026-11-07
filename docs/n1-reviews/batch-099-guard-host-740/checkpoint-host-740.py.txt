@@ -254,7 +254,7 @@ def finish():
     posted, comment = load(L / "issue-740-posted.json"), load(L / "issue-740-reread.json")
     body = C / "batch-099-host-740-issue-body.txt"
     assert comment["user"]["login"] == "stop-cran" and comment["html_url"] == posted["url"]
-    assert comment["body"] == body.read_text(encoding="utf-8") and sha(body) == posted["bodySha256"]
+    assert comment["body"] == body.read_bytes().decode("utf-8") and sha(body) == posted["bodySha256"]
     next_action = (
         f"SAME099 checkpoint740: signed LOCAL host evidence HEAD{head}, qualifiedAndroid{APP}. "
         "Fresh signed-current-head HOST passed RealContentTest3+RareHanTest1+two named ordinary/padding "
