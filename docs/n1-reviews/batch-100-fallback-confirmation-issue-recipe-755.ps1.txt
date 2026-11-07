@@ -1,0 +1,57 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\3387b072-29fd-4d56-b965-1735d60f1996"
+$content = "$control\..\learning-japanese"
+$android = "$control\..\kanji-cards-android"
+$bodyPath = "$control\batch-100-confirmation-755-issue-body.txt"
+if ((Test-Path "$log\issue-755-posted.json") -or (Test-Path $bodyPath)) { throw 'Do not duplicate issue update' }
+$runner = [IO.File]::ReadAllText("$control\runner.json") | ConvertFrom-Json
+if ($runner.status -ne 'running' -or $runner.pid -ne 5920 -or
+    $runner.sessionId -ne '3387b072-29fd-4d56-b965-1735d60f1996') { throw 'Uncertain parent ownership' }
+$head = git -C $content rev-parse HEAD
+if ($LASTEXITCODE -ne 0 -or
+    (git -C $content rev-parse HEAD^) -ne '8a55290e94993c1589fe936869cb1a99dfaef462' -or
+    (git -C $content log -1 '--format=%G?') -ne 'G' -or
+    (git -C $content status --porcelain --untracked-files=all)) { throw 'Unexpected content signed/clean state' }
+if ((git -C $android rev-parse HEAD) -ne 'bf30cdead8515739bc0e671d57a54b9a3109dd46' -or
+    (git -C $android log -1 '--format=%G?') -ne 'G' -or
+    (git -C $android status --porcelain --untracked-files=all)) { throw 'Android changed' }
+$body = @"
+Checkpoint 755, SAME batch100: both original-family exact-diff confirmations are complete and saved at signed LOCAL evidence commit $head. This is not published or full batch acceptance. Evidence: docs/n1-sources/execution-755.json and docs/n1-reviews/batch-100-fallback-confirmation-755-reconciliation.json.
+
+N753-fallback-establish is RESOLVED semantically, with changed-manifest enforcement still pending. Claude Opus5.5 (original4975f494 session) then GPT6.1Sol (originalc9e3c7f4 session) independently confirmed the exact new創-only direct樹 guard from full1330410樹立/1398640創立/1307550 and complete raw records. Both returned CLEAN for correctness, scoped coverage and text comprehensibility of創 and all three reused passages, and found no other actionable ambiguity among the23 sampled labels/all64 projected choices. This is not universal random-pool safety or fresh blind-review credit. Eleven direct symmetric NONTRANSITIVE pairs; no legacy樹/設/初 changes. N1 still has TWO available curated剣/倹 plus one fallback because験N4.
+
+Each reviewer exited0 before the next started; one full155372-byte/4510-line read each, zero internal overlaps, actual model/session evidence and complete original reports/captures/provenance preserved. Ten complete supplement families and23raw character records were supplied, not a new185/137family semantic reread or independent upstream retrieval. Original750 findings/history remain. Claude's optional off-by-one754source locations are qualified in the new reconciliation without rewriting historical754evidence.
+
+Runtime/manifest unchanged this execution:606c836e4be33ba9, all8453runtime hashes verified. Existing754Python/validator/budget/vocabulary/baseline/link checks remain inherited, not recounted. No Android/native run, image review, push, next batch, optional historical-session helper access or parent-lock access occurred. An unlaunched oversized route packet was preserved and replaced with an explicit bounded scalar/options projection before either reviewer ran; complete native source evidence remains unchanged.
+
+NEXT bounded checkpoint: fresh affected qualifiedAndroidbf30cdead HOST3RealContentTest+1RareHanTest, non-skipped reports against this content tree, then signed local evidence. Changed-payload full-archive productionContentSyncONCE native11pair/pool/drawing/reading/navigation/offline checks and21Han/four-font independent rendered semantic/readability acceptance remain mandatory. Original752/753archive/APKs/nativecase0 are historical, not acceptance of current payload. All combined-current-main integration, normal signing, owner fast-forward, terminal CI, exact immutable ZIP/hash/path/media/budget and issue-verification gates remain. No guard increases or signing retries.
+
+Published126/1228, acceptance remainder1102, last published716c610153234e8d2240dcf528de3ef83b654b27 unchanged. Batch100 is not review-closed/published. Source-onlyショウ/けず.しける allocation stays explicitlyUNVERIFIED/unselected. Physical-phone/general-release/whole-set acceptance remains outstanding.
+"@
+[IO.File]::WriteAllText($bodyPath, $body + "`n", [Text.UTF8Encoding]::new($false))
+if ($env:GH_TOKEN -or $env:GITHUB_TOKEN) { throw 'Unexpected inherited token' }
+$globalIdentity = gh api user --jq .login
+if ($LASTEXITCODE -ne 0 -or $globalIdentity -cne 'romanko-ms') { throw 'Unexpected global identity' }
+try {
+    $env:GH_TOKEN = gh auth token --user stop-cran
+    if ($LASTEXITCODE -ne 0 -or -not $env:GH_TOKEN) { throw 'Owner credential unavailable' }
+    $login = gh api user --jq .login
+    if ($LASTEXITCODE -ne 0 -or $login -cne 'stop-cran') { throw 'Wrong command-scoped identity' }
+    $url = gh issue comment 60 --repo stop-cran/learning-japanese --body-file $bodyPath
+    if ($LASTEXITCODE -ne 0) { throw 'Issue update failed' }
+    $url = $url.Trim()
+    @{ url=$url; author=$login; bodySha256=(Get-FileHash $bodyPath).Hash.ToLowerInvariant() } |
+        ConvertTo-Json | Set-Content "$log\issue-755-posted.json" -Encoding utf8NoBOM
+    if ($url -notmatch '#issuecomment-(\d+)$') { throw 'Unexpected comment URL; preserve posted receipt' }
+    $raw = gh api "repos/stop-cran/learning-japanese/issues/comments/$($Matches[1])"
+    if ($LASTEXITCODE -ne 0) { throw 'Comment reread failed' }
+    $raw | Set-Content "$log\issue-755-reread.json" -Encoding utf8NoBOM
+    $comment = $raw | ConvertFrom-Json
+    if ($comment.user.login -cne 'stop-cran' -or $comment.body -cne [IO.File]::ReadAllText($bodyPath) -or
+        $comment.html_url -cne $url) { throw 'Exact owner/body verification failed' }
+    Write-Output "Verified owner update: $url"
+} finally {
+    $env:GH_TOKEN = $null
+}
+if ((gh api user --jq .login) -cne $globalIdentity) { throw 'Global identity changed' }
