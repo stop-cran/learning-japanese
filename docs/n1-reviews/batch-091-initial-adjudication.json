@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "execution": 647,
+  "batch": "091",
+  "snapshot": "77e8735b1676a1b8542af10f5cadfd2373505ac2",
+  "initialProcesses": {
+    "claude": {
+      "launcherPid": 26568,
+      "sessionId": "075924f2-f60b-4ae0-bf3f-341db3dfbd74",
+      "startedAt": "2026-11-07T04:30:19.044216+01:00",
+      "completedAt": "2026-11-07T04:32:28.142572+01:00",
+      "exitCode": 0,
+      "requestedModel": "claude-opus-5.5",
+      "actualModels": [
+        "claude-opus-5.5"
+      ],
+      "snapshot": "77e8735b1676a1b8542af10f5cadfd2373505ac2",
+      "reportSha256": "1101902ba0302f22a844173f44541c0e29a942517cd145abd117b23f99334eee",
+      "rawExecutionSha256": "0856a424526cc12f837b94fb6c1062688e609d29c1ba65a794b7f39d7d00d307",
+      "report": "batch-091-initial-claude.md",
+      "execution": "batch-091-initial-claude-execution.json",
+      "coverage": "batch-091-initial-claude-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0,
+      "firstCallExactFullPacketReturned": true
+    },
+    "gpt": {
+      "launcherPid": 20412,
+      "sessionId": "8da57d75-100b-4996-acf7-f52b0b446472",
+      "startedAt": "2026-11-07T04:32:32.603032+01:00",
+      "completedAt": "2026-11-07T04:33:13.282755+01:00",
+      "exitCode": 0,
+      "requestedModel": "gpt-6.1-sol",
+      "actualModels": [
+        "gpt-6.1-sol"
+      ],
+      "snapshot": "77e8735b1676a1b8542af10f5cadfd2373505ac2",
+      "reportSha256": "89fcacd7506d7c28899a1781554b3bfb3fbd3658c88541b2a995aaa2b87971e1",
+      "rawExecutionSha256": "2f924f3e3ff1b4143ac15d6cd5d7ae00587deb246d1d98dfcd41e1f1cd83669e",
+      "report": "batch-091-initial-gpt.md",
+      "execution": "batch-091-initial-gpt-execution.json",
+      "coverage": "batch-091-initial-gpt-coverage.json",
+      "allAssignedRangesReturned": true,
+      "toolCalls": 1,
+      "observedToolOverlaps": 0,
+      "firstCallExactFullPacketReturned": true
+    }
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "reportedBy": [
+        "Claude"
+      ],
+      "severity": "minor",
+      "facet": "scoped coverage / quiz curation",
+      "file": "words/刃.md:4,8,30-34",
+      "claim": "English cutting edge can mean forefront; 先端 title tip; leading edge can overlap despite distinct physical Japanese meanings.",
+      "evidence": "Actual words/先端.md:4,17,37; complete JMdict1388110 sense2; direct unguarded labels in initial snapshot.",
+      "disagreement": "GPT initial explicitly found no additional guard established from physical comparison/shared topic. Preserve that assessment; this is English-label ambiguity rather than a physical synonym assertion.",
+      "decision": "Accept a conservative localized DIRECT先端 guard and one explicit physical-versus-figurative clarification. Not a claim that the initial full two-gloss label guarantees an ambiguous live question; production impact not measured. Same displayed-label precaution motivates existing端/縁guards.",
+      "status": "partially resolved",
+      "remaining": "Both original-session changed-passage confirmations pending."
+    }
+  ],
+  "hypotheses": [
+    {
+      "claim": "blade slang could overlapナイフ",
+      "reportedBy": [
+        "Claude"
+      ],
+      "status": "withdrawn",
+      "decision": "Not established as defect; ordinary primary physicalpart noun and wholetool contrast supported. No newナイフguard or clique; wider livepools uncertified."
+    },
+    {
+      "claim": "Blade-related injury gloss not directly established by supplied lexical definition",
+      "reportedBy": [
+        "Claude"
+      ],
+      "status": "resolved",
+      "decision": "Fresh exact Daijisen/Nikkoku刃傷entry supports injury with bladed implement; no teaching edit required.",
+      "evidence": "docs/n1-sources/batch-091-ninjou-supplement-647.json"
+    }
+  ],
+  "optional": [
+    {
+      "claim": "Kana topicは pronunciation/parsing note",
+      "reportedBy": [
+        "Claude"
+      ],
+      "status": "optional",
+      "decision": "No edit; readings use standard orthographic particles and translations are correct."
+    },
+    {
+      "claim": "歯 homophone note",
+      "reportedBy": [
+        "Claude"
+      ],
+      "status": "optional",
+      "decision": "No edit; written word/physicaltool context disambiguates; not a homophone course."
+    },
+    {
+      "claim": "刄 variant",
+      "reportedBy": [
+        "Claude"
+      ],
+      "status": "optional",
+      "decision": "No edit; bounded modern-form lesson does not need full variants."
+    },
+    {
+      "claim": "Furtherジンexamples such as凶刃",
+      "reportedBy": [
+        "Claude"
+      ],
+      "status": "optional",
+      "decision": "No edit; current verified recognition row is sufficient."
+    }
+  ],
+  "runtimePublished": false,
+  "runtimeAccepted": false,
+  "limits": "Both original full reports preserved before fix. Initial disagreement remains explicit, not vote-based adjudication; confirmations dependent, not new blind review."
+}
