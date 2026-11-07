@@ -1,0 +1,501 @@
+--- docs/n1-reviews/batch-098-native/N1Batch098NativeTest.kt
++++ N1Batch099NativeTest.kt
+@@ -52,22 +52,22 @@
+ import java.util.UUID
+ 
+-private fun disposable098() {
++private fun disposable099() {
+     assertEquals("true", InstrumentationRegistry.getArguments().getString("n1Disposable"))
+     assertTrue(Build.HARDWARE in setOf("ranchu", "goldfish"))
+ }
+ 
+-class N1Batch098GlyphTest {
++class N1Batch099GlyphTest {
+     @get:Rule val rule = createAndroidComposeRule<ComponentActivity>()
+ 
+-    @Test fun agentLookalikesAndScopedHanAcrossFourProductionFamilies() {
+-        disposable098()
++    @Test fun surplusLookalikesAndScopedHanAcrossFourProductionFamilies() {
++        disposable099()
+         val context = InstrumentationRegistry.getInstrumentation().targetContext
+         val fonts = listOf(KanjiFont.Gothic, KanjiFont.Mincho, KanjiFont.Textbook, KanjiFont.Brush)
+-        val pages = listOf("刀 刂 刈 則 削 剛 剤 推 斉 氵 洗 済", "濯 粘 薬 製 調 進 錠", "剤 済 剛 則 斉 刀 刂 氵 洗 洗剤 製剤 推進剤")
++        val pages = listOf("乗 余 刀 刂 則 剣 剩 剰 去 字 通 過", "剰 剩 乗 余 剣 則 刀 刂 過 過剰 剰え")
+         val page = mutableStateOf(0)
+         rule.setContent {
+             MaterialTheme {
+                 Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+-                    Text("Batch 098: agent / look-alikes / scoped Han")
++                    Text("Batch 099: surplus / look-alikes / scoped Han")
+                     Text("Panel ${page.value + 1} / ${pages.size}")
+                     fonts.forEach { font ->
+@@ -75,5 +75,5 @@
+                         Text(pages[page.value], fontFamily = font.family(), fontSize = 18.sp, lineHeight = 26.sp)
+                     }
+-                    Text("Inspect all 19 scoped Han; focused 剤/済/剛/則/斉/刀/刂/氵/洗. Fallback families may coincide.", fontSize = 16.sp)
++                    Text("Inspect all 12 scoped Han; focused 剰/剩/乗/余/剣/則/刀/刂/過. Fallback families may coincide.", fontSize = 16.sp)
+                 }
+             }
+@@ -86,5 +86,5 @@
+         for ((index, typeface) in typefaces.withIndex()) {
+             val hashes = mutableSetOf<String>()
+-            for (char in listOf("刀", "刂", "刈", "則", "削", "剛", "剤", "推", "斉", "氵", "洗", "済", "濯", "粘", "薬", "製", "調", "進", "錠")) {
++            for (char in listOf("乗", "余", "刀", "刂", "則", "剣", "剩", "剰", "去", "字", "通", "過")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+@@ -107,5 +107,5 @@
+                 image.recycle()
+             }
+-            for (word in listOf("洗剤", "推進剤")) {
++            for (word in listOf("過剰", "剰え")) {
+                 val paint = Paint(Paint.ANTI_ALIAS_FLAG).also {
+                     it.typeface = typeface
+@@ -134,5 +134,5 @@
+             }
+         }
+-        assertEquals(84, rows.length())
++        assertEquals(56, rows.length())
+         for (index in pages.indices) {
+             rule.runOnIdle { page.value = index }
+@@ -140,28 +140,28 @@
+             rule.onAllNodesWithText(pages[index]).assertCountEquals(4)
+             for (fontIndex in fonts.indices) rule.onAllNodesWithText(pages[index])[fontIndex].assertIsDisplayed()
+-            File(context.getExternalFilesDir(null), "n1-098-font-panel-${index + 1}.png").outputStream().use {
++            File(context.getExternalFilesDir(null), "n1-099-font-panel-${index + 1}.png").outputStream().use {
+                 assertTrue(rule.onRoot().captureToImage().asAndroidBitmap().compress(Bitmap.CompressFormat.PNG, 100, it))
+             }
+         }
+-        File(context.getExternalFilesDir(null), "n1-098-font-raster.json").writeText(JSONObject()
++        File(context.getExternalFilesDir(null), "n1-099-font-raster.json").writeText(JSONObject()
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+             .put("fontScale", context.resources.configuration.fontScale).put("rows", rows)
+-            .put("individualGlyphProbes", 76).put("wholeWordRasterProbes", 8).put("panels", 3)
+-            .put("limits", "19 actual scoped Han; 刂/氵 absent from all three bundled cmaps requires actual system fallback inspection, four production families, three bounded Compose panels and eight whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
++            .put("individualGlyphProbes", 48).put("wholeWordRasterProbes", 8).put("panels", 2)
++            .put("limits", "12 actual scoped Han; 刂/older剩 absent from all three bundled cmaps requires actual system fallback inspection, four production families, two bounded Compose panels and eight whole-word rasters. Hashes are not readability or fallback-face evidence. Actual PNG inspection required; emulator not phone.")
+             .toString(2))
+     }
+ }
+ 
+-class N1Batch098ArticleTest {
++class N1Batch099ArticleTest {
+     @get:Rule val rule = createEmptyComposeRule()
+     private lateinit var app: KanjiApp
+     private lateinit var scenario: ActivityScenario<MainActivity>
+ 
+-    @Test fun fullSingleImportOfflineAgentReusedSupportTwoReciprocalPairsOneOnNoKunTenStrokesAndSystemBack() {
+-        disposable098()
++    @Test fun fullSingleImportOfflineSurplusReusedSupportTwoReciprocalPairsOneOnNoKunElevenStrokesAndSystemBack() {
++        disposable099()
+         val instrumentation = InstrumentationRegistry.getInstrumentation()
+         app = instrumentation.targetContext.applicationContext as KanjiApp
+-        val source = RepoSource("acceptance-fixture", "n1-098-${UUID.randomUUID()}", "main")
+-        val head = "6cca181b977144603296506cfe0b9ed744e2d193"
++        val source = RepoSource("acceptance-fixture", "n1-099-${UUID.randomUUID()}", "main")
++        val head = "17a4bbb997c1940dc802cf4e97599c560009e4a7"
+         assertTrue(app.settings.setSource("https://github.com/${source.id}", source.branch))
+         var archiveRequests = 0
+@@ -171,5 +171,5 @@
+                 source.commitZipUrl(head) -> {
+                     archiveRequests++
+-                    instrumentation.context.assets.open("n1-batch-098-6cca181b-envelope.zip")
++                    instrumentation.context.assets.open("n1-batch-099-17a4bbb9-envelope.zip")
+                 }
+                 else -> error("Unexpected fixture request: $url")
+@@ -186,9 +186,9 @@
+         val updated = result as SyncResult.Updated
+         assertEquals(1, archiveRequests)
+-        assertEquals(1121, updated.kanji)
++        assertEquals(1122, updated.kanji)
+         assertEquals(5073, updated.words)
+         assertTrue(updated.problems.toString(), updated.problems.isEmpty())
+         val meta = requireNotNull(runBlocking { app.db.content().meta(source.id) })
+-        assertEquals("0cbdc2723b0433f2", meta.contentVersion)
++        assertEquals("5408632b5aa1382c", meta.contentVersion)
+         assertEquals(0, meta.problems)
+         assertNull(meta.grammarProblem)
+@@ -198,19 +198,19 @@
+         assertEquals(ContentParser.KANJI_READING_PARSER_EPOCH, meta.kanjiReadingParserEpoch)
+         val n1 = runBlocking { app.db.content().kanjiLite(source.id).filter { it.jlpt == 1 } }
+-        assertEquals(130, n1.size)
+-        val agent = n1.single { it.kanji == "剤" }
+-        assertEquals(listOf("済", "剛", "則"), agent.distractors.splitSep())
+-        assertEquals(listOf("ザイ", "スイ", "セイ"), agent.onyomi.splitSep())
+-        assertEquals(listOf("かる", "けず.る"), agent.kunyomi.splitSep())
+-        assertNotNull(agent.quizOnyomi)
+-        assertNotNull(agent.quizKunyomi)
+-        assertEquals(listOf("ザイ"), agent.quizOnyomi?.splitSep())
+-        assertEquals(emptyList<String>(), agent.quizKunyomi?.splitSep())
+-        assertEquals(listOf("ざい"), agent.toReadingCard().quizKeys(ReadingKind.On))
+-        assertEquals(emptyList<String>(), agent.toReadingCard().quizKeys(ReadingKind.Kun))
++        assertEquals(131, n1.size)
++        val surplus = n1.single { it.kanji == "剰" }
++        assertEquals(listOf("乗", "剣", "則"), surplus.distractors.splitSep())
++        assertEquals(listOf("ジョウ"), surplus.onyomi.splitSep())
++        assertEquals(listOf("あまつさえ", "あま.り", "あま.る"), surplus.kunyomi.splitSep())
++        assertNotNull(surplus.quizOnyomi)
++        assertNotNull(surplus.quizKunyomi)
++        assertEquals(listOf("ジョウ"), surplus.quizOnyomi?.splitSep())
++        assertEquals(emptyList<String>(), surplus.quizKunyomi?.splitSep())
++        assertEquals(listOf("じょう"), surplus.toReadingCard().quizKeys(ReadingKind.On))
++        assertEquals(emptyList<String>(), surplus.toReadingCard().quizKeys(ReadingKind.Kun))
+         val expectedMeanings = mapOf(
+-            "剤" to "medicinal preparation; chemical agent",
+-            "済" to "settle; finish",
+-            "剛" to "sturdy; unyielding strength",
++            "剰" to "remainder; surplus amount",
++            "乗" to "ride; board",
++            "剣" to "sword; double-edged blade",
+             "則" to "rule; follow a model",
+         )
+@@ -218,14 +218,14 @@
+         assertEquals(n1.map { it.kanji }.toSet(),
+             all.filter { "jlpt-n1" in it.tags.splitSep() }.map { it.kanji }.toSet())
+-        val curatedIds = listOf("済", "剛", "則")
+-        assertEquals(listOf("剛"), curatedIds.filter { id -> n1.any { it.kanji == id } })
++        val curatedIds = listOf("乗", "剣", "則")
++        assertEquals(listOf("剣"), curatedIds.filter { id -> n1.any { it.kanji == id } })
+         val boundedCustom = all.filter { it.kanji in expectedMeanings }
+-        val randomSubset = listOf(agent) +
+-            n1.filter { it.kanji != "剤" }.shuffled(kotlin.random.Random(722)).take(15)
++        val randomSubset = listOf(surplus) +
++            n1.filter { it.kanji != "剰" }.shuffled(kotlin.random.Random(732)).take(15)
+         val checkedPools = JSONArray()
+         for ((poolName, pool) in listOf("N1" to n1, "All" to all,
+             "boundedCustom" to boundedCustom, "randomN1Subset" to randomSubset)) {
+             val cards = pool.map { QuizCard(it.kanji, it.title, it.tags.splitSep(), it.distractors.splitSep()) }
+-            val target = cards.single { it.kanji == "剤" }
++            val target = cards.single { it.kanji == "剰" }
+             assertEquals(curatedIds, target.distractors)
+             val available = curatedIds.filter { id -> cards.any { it.kanji == id } }
+@@ -253,10 +253,10 @@
+         assertEquals(64, checkedPools.length())
+         val words = runBlocking { app.db.content().wordsLite(source.id) }.map { it.toCard() }
+-        val importedAgent = words.single { it.word == "洗剤" }
+-        assertEquals(listOf("せっけん"), importedAgent.quizExclusions)
+-        assertEquals("せんざい", importedAgent.reading)
+-        assertEquals(2, importedAgent.jlpt)
++        val importedSurplus = words.single { it.word == "過剰" }
++        assertEquals(listOf("余分", "超過", "オーバー", "あまり", "あんまり", "余る", "余裕"), importedSurplus.quizExclusions)
++        assertEquals("かじょう", importedSurplus.reading)
++        assertEquals(2, importedSurplus.jlpt)
+         val directGuardChecks = JSONArray()
+-        val guardPairs = listOf("洗剤" to "せっけん")
++        val guardPairs = importedSurplus.quizExclusions.map { "過剰" to it }
+         for ((leftId, rightId) in guardPairs) {
+             val left = words.single { it.word == leftId }
+@@ -285,5 +285,5 @@
+             }
+         }
+-        assertEquals(128, directGuardChecks.length())
++        assertEquals(896, directGuardChecks.length())
+         val now = System.currentTimeMillis()
+         app.settings.sync.lastCheckMs = now
+@@ -299,5 +299,5 @@
+                     app.db.reviews().putState(ReviewStateEntity(
+                         source.id, "jlpt-n1", card.kanji, StudyMode.Quiz.name, "Review", 30.0, 5.0,
+-                        if (card.kanji == "剤") now - 60_000 else now + 30L * 86_400_000,
++                        if (card.kanji == "剰") now - 60_000 else now + 30L * 86_400_000,
+                         now - 2L * 86_400_000, 3, 0,
+                     ))
+@@ -305,5 +305,5 @@
+                         app.db.reviews().putState(ReviewStateEntity(
+                             source.id, "jlpt-n1", card.kanji, kind.mode.name, "Review", 30.0, 5.0,
+-                            if (card.kanji == "剤" && (kind == ReadingKind.On && key == "ざい")) now - 60_000
++                            if (card.kanji == "剰" && (kind == ReadingKind.On && key == "じょう")) now - 60_000
+                             else now + 30L * 86_400_000,
+                             now - 2L * 86_400_000, 3, 0, reading = key,
+@@ -312,5 +312,5 @@
+                 }
+                 for (days in 1..2) app.db.reviews().putLog(ReviewLogEntity(
+-                    0, source.id, "jlpt-n1", "剤", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
++                    0, source.id, "jlpt-n1", "剰", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+                 ))
+             }
+@@ -320,17 +320,17 @@
+         val evidence = JSONObject().put("contentSnapshot", head).put("contentVersion", meta.contentVersion)
+             .put("archiveRequests", archiveRequests).put("importedKanji", updated.kanji).put("importedWords", updated.words)
+-            .put("newDirectWordGuardPairs", 0).put("preservedDirectWordGuardPairs", 1).put("directGuardBuilderChecks", directGuardChecks)
++            .put("newDirectWordGuardPairs", 0).put("preservedDirectWordGuardPairs", 7).put("directGuardBuilderChecks", directGuardChecks)
+             .put("problems", updated.problems.size).put("n1Cards", n1.size)
+             .put("acceptedReadingParserEpoch", meta.kanjiReadingParserEpoch)
+-            .put("fullOnyomi", JSONArray(agent.onyomi.splitSep()))
+-            .put("fullKunyomi", JSONArray(agent.kunyomi.splitSep()))
+-            .put("quizOnKeys", JSONArray(agent.toReadingCard().quizKeys(ReadingKind.On)))
+-            .put("quizKunKeys", JSONArray(agent.toReadingCard().quizKeys(ReadingKind.Kun)))
+-            .put("liteQuizOnyomi", JSONArray(requireNotNull(agent.quizOnyomi).splitSep()))
+-            .put("liteQuizKunyomi", JSONArray(requireNotNull(agent.quizKunyomi).splitSep()))
++            .put("fullOnyomi", JSONArray(surplus.onyomi.splitSep()))
++            .put("fullKunyomi", JSONArray(surplus.kunyomi.splitSep()))
++            .put("quizOnKeys", JSONArray(surplus.toReadingCard().quizKeys(ReadingKind.On)))
++            .put("quizKunKeys", JSONArray(surplus.toReadingCard().quizKeys(ReadingKind.Kun)))
++            .put("liteQuizOnyomi", JSONArray(requireNotNull(surplus.quizOnyomi).splitSep()))
++            .put("liteQuizKunyomi", JSONArray(requireNotNull(surplus.quizKunyomi).splitSep()))
+             .put("productionBuilderN1AndAllExactChoices", checkedPools)
+             .put("transport", "Exact full git envelope through production ContentSync ONCE; synthetic source/HEAD")
+             .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+-            .put("fixture", "Other N1 meanings/readings postponed; only 剤 meaning and onざい due; no kun keys. Full raw readings and explicit curation retained. Two historical good 剤 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
++            .put("fixture", "Other N1 meanings/readings postponed; only 剰 meaning and onじょう due; no kun keys. Full raw readings and explicit curation retained. Two historical good 剰 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.")
+             .put("phoneEvidence", false).put("passed", false)
+         scenario = ActivityScenario.launch(MainActivity::class.java)
+@@ -339,78 +339,72 @@
+             click("N1")
+             rule.waitUntil(30_000) { app.settings.stack.value == "jlpt-n1" }
+-            await("N1 · 130 cards").performScrollTo().assertIsDisplayed()
++            await("N1 · 131 cards").performScrollTo().assertIsDisplayed()
+             capture("selection")
+             click("Browse all kanji")
+-            rule.onNode(hasSetTextAction()).performTextReplacement("剤")
+-            click("medicinal preparation; chemical agent")
+-            await("剤 — medicinal preparation; chemical agent")
+-            show(articleBullet("Strokes: 10 · Key (radical): 刀 (no. 18), appearing as 刂 on the right · JLPT: N1 (community list)"), "kanji-01")
++            rule.onNode(hasSetTextAction()).performTextReplacement("剰")
++            click("remainder; surplus amount")
++            await("剰 — remainder; surplus amount")
++            show(articleBullet("Strokes: 11 · Key (radical): 刀 (no. 18), appearing as 刂 on the right · JLPT: N1 (community list)"), "kanji-01")
+             section("Meaning and origin")
+-            show(articleBullet("剤 is useful as a compound element for a medicinal preparation or chemical agent. 洗剤 せんざい means detergent or cleaning agent: this use is not limited to medicine that people take. Learn 剤 inside words rather than using it as a general standalone noun for any substance."), "kanji-03")
+-            show(articleBullet("Modern-shape mnemonic, not etymology: Picture the crossed strokes and lower bars of the 斉-shaped left block beside the blade-shaped 刂, as though a preparation were being carefully divided. This invented scene helps remember the modern shape; it is not a historical or phonetic explanation."), "kanji-04")
++            show(articleBullet("剰 concerns a surplus or remainder. 過剰 かじょう means excess: more than is needed or appropriate, not simply a large amount. Learn 剰 through compounds rather than treating it as an everyday standalone noun."), "kanji-03")
++            show(articleBullet("Modern-shape mnemonic, not etymology: Picture a compressed 乗-like block beside the blade-shaped 刂, as though cutting off a surplus. This invented scene is a memory aid for the modern shape, not a historical or phonetic explanation."), "kanji-04")
+             section("Readings")
+-            show(readingExample("ザイ"), "kanji-09")
+-            show(readingExample("洗剤 せんざい — detergent; cleaning agent"), "kanji-11")
+-            show(readingExample("スイ"), "kanji-12")
+-            show(readingExample("KANJIDIC2 source-only lookup reading; no verified modern word example is taught here."), "kanji-14", occurrence = 0, expectedCount = 3)
+-            show(readingExample("セイ"), "kanji-15")
+-            show(readingExample("KANJIDIC2 source-only lookup reading; no verified modern word example is taught here."), "kanji-17", occurrence = 1, expectedCount = 3)
+-            show(readingExample("かる"), "kanji-18")
+-            show(readingExample("KANJIDIC2 source-only lookup reading, retained without an okurigana dot; no verified word spelling is taught here."), "kanji-20")
+-            show(readingExample("けず.る"), "kanji-21")
+-            show(readingExample("KANJIDIC2 source-only lookup reading; no verified modern word example is taught here."), "kanji-23", occurrence = 2, expectedCount = 3)
+-            show(articleBullet("Only ザイ is selected for reading questions. The other four readings remain dictionary reference information, not interchangeable pronunciations of 洗剤. Not selecting a word example does not establish that a reading is invalid or obsolete."), "kanji-24")
+-            show(articleBullet("For ordinary かる, \"mow; trim,\" learn 刈る; for けずる, \"shave; sharpen; reduce,\" learn 削る. Those words do not establish 剤 as an alternative spelling."), "kanji-25")
++            show(readingExample("ジョウ"), "kanji-09")
++            show(readingExample("過剰 かじょう — excess; too much"), "kanji-11")
++            show(readingExample("あまつさえ"), "kanji-12")
++            show(readingExample("剰え あまつさえ — besides; to make matters worse. A rare kanji spelling of a dated adverb, usually written in kana and usually adding something negative. Recognition only."), "kanji-14")
++            show(readingExample("あま.り"), "kanji-15")
++            show(readingExample("KANJIDIC2 source-only lookup reading. JMdict lists 剰り あまり as a search-only spelling for lookup, not a recommended normal spelling; the noun means a remainder or surplus."), "kanji-17")
++            show(readingExample("あま.る"), "kanji-18")
++            show(readingExample("KANJIDIC2 source-only lookup reading. The character dictionary also lists あまる, but the ordinary verb taught here is 余る あまる — be left over; its spelling does not establish a modern 剰る example."), "kanji-20")
++            show(articleBullet("Only ジョウ is selected for reading questions. The other readings remain reference information, not alternative pronunciations of 過剰. Their exclusion does not mean that ordinary あまり or あまる is rare or invalid."), "kanji-21")
++            show(articleBullet("The source lists あまつさえ without an okurigana dot, but the rare lexical spelling above writes a final え. For the noun \"remainder,\" learn 余り あまり or kana あまり, not the search-only spelling 剰り. This noun sense is read あまり, not あんまり; the related adverbial uses are a separate learning point."), "kanji-22")
+             section("Common words")
+-            show(articleBullet("洗剤 せんざい — detergent; cleaning agent"), "kanji-27")
+-            show(articleBullet("薬剤 やくざい — medicine; chemical agent"), "kanji-28")
+-            show(articleBullet("錠剤 じょうざい — tablet; pill"), "kanji-29")
+-            show(articleBullet("調剤 ちょうざい — preparing or dispensing a prescription"), "kanji-30")
+-            show(articleBullet("These are recognition examples, not instructions about using a product or medicine."), "kanji-31")
++            show(articleBullet("過剰 かじょう — excess; too much"), "kanji-24")
++            show(articleBullet("余剰 よじょう — surplus; remainder"), "kanji-25")
++            show(articleBullet("剰余 じょうよ — surplus; remainder, including a mathematical remainder"), "kanji-26")
+             section("Notes")
+-            show(articleBullet("The indexing radical is 刀, visible here as right-hand 刂. 済, \"settle; finish,\" has a similar 斉-shaped block but adds left-hand 氵 instead. Check the side and shape of the extra strokes, not just the shared block."), "kanji-33")
+-            show(articleBullet("剛, \"sturdy; unyielding strength,\" and 則, \"rule; follow a model,\" also have right-hand 刂 but different left blocks and meanings."), "kanji-34")
+-            show(articleBullet("薬 also concerns medicine and chemicals. Its meanings overlap with 剤; do not treat them as mutually exclusive categories or assume that a compound containing either names something safe to ingest."), "kanji-35")
+-            show(articleBullet("製剤 せいざい, \"pharmaceutical formulation,\" does not demonstrate 剤's セイ: 剤 supplies ざい there. Likewise, in 推進剤 すいしんざい, \"propellant,\" the initial すい belongs to 推, not 剤."), "kanji-36")
+-            show(articleBullet("JMdict also records the whole word 粘剤 ねり, a material used in making Japanese paper. That whole-word spelling does not establish an independent ねり or り reading for 剤."), "kanji-37")
+-            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Word families: JMdict, entries 1296370, 1390950, 1538220, 1357120, 1429160, 2276330, 2569220 and 2837804. Reading allocation and usage: Digital Daijisen, 剤 and 洗剤."), "kanji-38")
++            show(articleBullet("The indexing radical is 刀, visible here as right-hand 刂. 乗, \"ride; board,\" has a similar dense block without that extra right-hand blade. 剣, \"sword; double-edged blade,\" and 則, \"rule; follow a model,\" share 刂 but have different left blocks."), "kanji-28")
++            show(articleBullet("余 also means surplus. The two characters' meanings overlap; do not invent a strict division between them. The useful distinction here is learning actual words and spellings."), "kanji-29")
++            show(articleBullet("The older form 剩 has 12 strokes; this card teaches the modern 11-stroke 剰. Recognizing the older form does not change this card's drawing target."), "kanji-30")
++            show(articleBullet("Metadata: KANJIDIC2, 2026-11-02 snapshot. Word families and spelling restrictions: JMdict, entries 1196170, 1355690, 1544260, 1580500, 1584930 and 1543910. Reading allocation and usage: Digital Daijisen, 剰 and 過剰; the separately headed 字通 entry on the 剰 page records the older form and its stroke count."), "kanji-31")
+             section("Common words")
+-            show(articleBullet("洗剤 せんざい — detergent; cleaning agent"), "senzai-forward")
+-            inline(await(articleBullet("洗剤 せんざい — detergent; cleaning agent")), "洗剤", 0)
++            show(articleBullet("過剰 かじょう — excess; too much"), "kajo-forward")
++            inline(await(articleBullet("過剰 かじょう — excess; too much")), "過剰", 0)
+             await("Article contents")
+-            await("洗剤 (せんざい) - detergent; cleaning agent")
++            await("過剰 (かじょう) - excess; too much")
+             section("How the kanji combine")
+-            show(articleBullet("洗 contributes washing, and 剤 an agent or preparation. The first character identifies the purpose of the second. The on readings are セン + ザイ."), "zai-reverse")
+-            inline(await(articleBullet("洗 contributes washing, and 剤 an agent or preparation. The first character identifies the purpose of the second. The on readings are セン + ザイ.")), "剤", 27)
++            show(articleBullet("過 contributes going beyond; 剰 contributes a remainder or surplus. The two ideas reinforce being beyond what is required. Their on readings are カ + ジョウ."), "jo-reverse")
++            inline(await(articleBullet("過 contributes going beyond; 剰 contributes a remainder or surplus. The two ideas reinforce being beyond what is required. Their on readings are カ + ジョウ.")), "剰", 28)
+             await("Article contents")
+             section("Readings")
+-            show(readingExample("ザイ"), "zai-kanji-backlink")
+-            back()
+-            await(articleBullet("洗 contributes washing, and 剤 an agent or preparation. The first character identifies the purpose of the second. The on readings are セン + ザイ.")).assertIsDisplayed()
++            show(readingExample("ジョウ"), "jo-kanji-backlink")
++            back()
++            await(articleBullet("過 contributes going beyond; 剰 contributes a remainder or surplus. The two ideas reinforce being beyond what is required. Their on readings are カ + ジョウ.")).assertIsDisplayed()
+             section("How the kanji combine")
+-            capture("zai-system-back-to-word")
++            capture("jo-system-back-to-word")
+             section("How the kanji combine")
+-            show(articleBullet("洗 contributes washing, and 剤 an agent or preparation. The first character identifies the purpose of the second. The on readings are セン + ザイ."), "sen-reverse")
+-            inline(await(articleBullet("洗 contributes washing, and 剤 an agent or preparation. The first character identifies the purpose of the second. The on readings are セン + ザイ.")), "洗", 0)
++            show(articleBullet("過 contributes going beyond; 剰 contributes a remainder or surplus. The two ideas reinforce being beyond what is required. Their on readings are カ + ジョウ."), "ka-reverse")
++            inline(await(articleBullet("過 contributes going beyond; 剰 contributes a remainder or surplus. The two ideas reinforce being beyond what is required. Their on readings are カ + ジョウ.")), "過", 0)
+             await("Article contents")
+-            await("洗 — wash")
++            await("過 — exceed; go beyond")
+             section("Common words")
+-            show(articleBullet("洗剤 せんざい — detergent; cleaning agent"), "sen-forward")
+-            inline(await(articleBullet("洗剤 せんざい — detergent; cleaning agent")), "洗剤", 0)
++            show(articleBullet("過剰 かじょう — excess; too much"), "ka-forward")
++            inline(await(articleBullet("過剰 かじょう — excess; too much")), "過剰", 0)
+             await("Article contents")
+             section("How the kanji combine")
+-            show(articleBullet("洗 contributes washing, and 剤 an agent or preparation. The first character identifies the purpose of the second. The on readings are セン + ザイ."), "senzai-component-return")
+-            back()
+-            await(articleBullet("洗剤 せんざい — detergent; cleaning agent")).assertIsDisplayed()
++            show(articleBullet("過 contributes going beyond; 剰 contributes a remainder or surplus. The two ideas reinforce being beyond what is required. Their on readings are カ + ジョウ."), "kajo-component-return")
++            back()
++            await(articleBullet("過剰 かじょう — excess; too much")).assertIsDisplayed()
+             section("Common words")
+-            capture("sen-system-back-to-kanji")
+-            back()
+-            await(articleBullet("洗 contributes washing, and 剤 an agent or preparation. The first character identifies the purpose of the second. The on readings are セン + ザイ.")).assertIsDisplayed()
++            capture("ka-system-back-to-kanji")
++            back()
++            await(articleBullet("過 contributes going beyond; 剰 contributes a remainder or surplus. The two ideas reinforce being beyond what is required. Their on readings are カ + ジョウ.")).assertIsDisplayed()
+             section("How the kanji combine")
+-            capture("sen-system-back-to-word")
+-            back()
+-            await(articleBullet("洗剤 せんざい — detergent; cleaning agent")).assertIsDisplayed()
++            capture("ka-system-back-to-word")
++            back()
++            await(articleBullet("過剰 かじょう — excess; too much")).assertIsDisplayed()
+             section("Common words")
+-            capture("senzai-system-back-to-zai")
++            capture("kajo-system-back-to-jo")
+             back()
+             await("Search kanji, meaning or reading")
+@@ -424,14 +418,14 @@
+             val quiz = model("quiz:") as QuizViewModel
+             val meaning = quiz.ui as QuizUi.Question
+-            assertEquals("剤", meaning.card.kanji)
++            assertEquals("剰", meaning.card.kanji)
+             assertEquals(4, meaning.options.size)
+             assertEquals(4, meaning.options.map { it.title }.toSet().size)
+-            assertEquals(1, meaning.options.count { it.kanji == "剤" })
++            assertEquals(1, meaning.options.count { it.kanji == "剰" })
+             assertTrue(meaning.options.all { option -> n1.any { it.kanji == option.kanji && it.title == option.title } })
+-            assertFalse(meaning.options.any { it.kanji == "済" })
+-            assertTrue(meaning.options.any { it.kanji == "剛" })
++            assertFalse(meaning.options.any { it.kanji == "乗" })
++            assertTrue(meaning.options.any { it.kanji == "剣" })
+             assertFalse(meaning.options.any { it.kanji == "則" })
+-            assertEquals("medicinal preparation; chemical agent", meaning.options.single { it.kanji == "剤" }.title)
+-            assertEquals(listOf("済", "剛", "則"), meaning.card.distractors.splitSep())
++            assertEquals("remainder; surplus amount", meaning.options.single { it.kanji == "剰" }.title)
++            assertEquals(listOf("乗", "剣", "則"), meaning.card.distractors.splitSep())
+             for (option in meaning.options) await(option.title).assertIsDisplayed()
+             evidence.put("exactDefaultMeaningOptions", JSONArray().also { options ->
+@@ -442,7 +436,7 @@
+                 .put("meaningChoiceVisualAdjudicationRequired", true)
+             capture("meaning-question")
+-            click("medicinal preparation; chemical agent")
++            click("remainder; surplus amount")
+             await("Correct!")
+-            assertEquals("剤", (quiz.ui as QuizUi.Answer).card.kanji)
++            assertEquals("剰", (quiz.ui as QuizUi.Answer).card.kanji)
+             capture("meaning-feedback")
+             back()
+@@ -454,8 +448,8 @@
+                 val reading = model("kreading:") as KanjiReadingViewModel
+                 val question = reading.ui as ReadingUi.Question
+-                assertEquals("剤", question.card.kanji)
++                assertEquals("剰", question.card.kanji)
+                 assertEquals(ReadingKind.On, question.question.kind)
+                 val key = question.question.correctKey
+-                assertTrue(key in setOf("ざい"))
++                assertTrue(key in setOf("じょう"))
+                 assertTrue("Duplicate target reading key", answeredKeys.add(key))
+                 assertEquals(key, question.question.correctKey)
+@@ -469,9 +463,9 @@
+                 click("Next")
+                 rule.waitUntil(30_000) { runBlocking {
+-                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "剤" &&
++                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "剰" &&
+                         log.mode == question.question.kind.mode.name && log.reading == key && log.grade == 3 }
+                 } }
+             }
+-            assertEquals(setOf("ざい"), answeredKeys)
++            assertEquals(setOf("じょう"), answeredKeys)
+             rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Done }
+             val done = (model("kreading:") as KanjiReadingViewModel).ui as ReadingUi.Done
+@@ -479,9 +473,9 @@
+             assertEquals(1, done.correct)
+             val readingLogs = runBlocking {
+-                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "剤" &&
++                app.db.reviews().allLog().filter { it.sourceId == source.id && it.kanji == "剰" &&
+                     it.mode in setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name) }
+             }
+             assertEquals(1, readingLogs.size)
+-            assertEquals(setOf("ざい"), readingLogs.map { it.reading }.toSet())
++            assertEquals(setOf("じょう"), readingLogs.map { it.reading }.toSet())
+             assertTrue(readingLogs.all { it.mode == ReadingKind.On.mode.name })
+             capture("curated-one-on-no-kun-done")
+@@ -490,12 +484,12 @@
+             click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Drawing"))))
+             await("Trace the kanji for")
+-            await("medicinal preparation; chemical agent").assertIsDisplayed()
+-            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "剤") })
+-            assertEquals(listOf("済", "剛", "則"), card.distractors.splitSep())
+-            assertEquals(listOf("ザイ", "スイ", "セイ"), card.onyomi.splitSep())
+-            assertEquals(listOf("かる", "けず.る"), card.kunyomi.splitSep())
++            await("remainder; surplus amount").assertIsDisplayed()
++            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "剰") })
++            assertEquals(listOf("乗", "剣", "則"), card.distractors.splitSep())
++            assertEquals(listOf("ジョウ"), card.onyomi.splitSep())
++            assertEquals(listOf("あまつさえ", "あま.り", "あま.る"), card.kunyomi.splitSep())
+             assertNotNull(card.quizOnyomi)
+             assertNotNull(card.quizKunyomi)
+-            assertEquals(listOf("ザイ"), card.quizOnyomi?.splitSep())
++            assertEquals(listOf("ジョウ"), card.quizOnyomi?.splitSep())
+             assertEquals(emptyList<String>(), card.quizKunyomi?.splitSep())
+             evidence.put("fullProjectionOnyomi", JSONArray(card.onyomi.splitSep()))
+@@ -504,5 +498,5 @@
+                 .put("fullProjectionQuizKunyomi", JSONArray(requireNotNull(card.quizKunyomi).splitSep()))
+             val strokes = JSONObject(requireNotNull(card.strokesJson)).getJSONArray("strokes")
+-            assertEquals(10, strokes.length())
++            assertEquals(11, strokes.length())
+             capture("drawing-trace")
+             val pad = rule.onNode(hasContentDescription("Drawing area for the kanji", substring = true))
+@@ -521,10 +515,10 @@
+                 }
+             }
+-            rule.onNode(hasContentDescription("10 strokes drawn", substring = true)).assertExists()
++            rule.onNode(hasContentDescription("11 strokes drawn", substring = true)).assertExists()
+             click("Check")
+             await("Practice only: this attempt is not graded.")
+             assertFalse(runBlocking {
+                 app.db.reviews().allLog().any { it.sourceId == source.id &&
+-                    it.kanji == "剤" && it.mode == StudyMode.Draw.name }
++                    it.kanji == "剰" && it.mode == StudyMode.Draw.name }
+             })
+             await("Correct strokes").performScrollTo().assertIsDisplayed()
+@@ -537,5 +531,5 @@
+             click("Next")
+             rule.waitUntil(30_000) { runBlocking {
+-                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "剤" && it.mode == StudyMode.Draw.name && it.grade == 1 }
++                app.db.reviews().allLog().any { it.sourceId == source.id && it.kanji == "剰" && it.mode == StudyMode.Draw.name && it.grade == 1 }
+             } }
+             back()
+@@ -545,11 +539,11 @@
+             assertEquals(1, archiveRequests)
+             evidence.put("meaningQuestionAndFeedback", true)
+-                .put("onlyOnZaiNoKunPersistedGoodAndDone", true)
++                .put("onlyOnJouNoKunPersistedGoodAndDone", true)
+                 .put("touchInjectedReferenceStrokes", strokes.length())
+                 .put("drawingTraceThenRecall", true).put("drawingGradeRecordedOnNext", true)
+                 .put("offline", true).put("passed", true)
+         } finally {
+-            File(app.getExternalFilesDir(null), "n1-098-article-route.json").writeText(evidence.toString(2))
+-            File(app.getExternalFilesDir(null), "n1-098-article-tree.txt").writeText(rule.onRoot().printToString())
++            File(app.getExternalFilesDir(null), "n1-099-article-route.json").writeText(evidence.toString(2))
++            File(app.getExternalFilesDir(null), "n1-099-article-tree.txt").writeText(rule.onRoot().printToString())
+             scenario.close()
+         }
+@@ -645,5 +639,5 @@
+         rule.waitForIdle()
+         val bitmap = requireNotNull(automation.takeScreenshot())
+-        File(app.getExternalFilesDir(null), "n1-098-$step.png").outputStream().use {
++        File(app.getExternalFilesDir(null), "n1-099-$step.png").outputStream().use {
+             assertTrue(bitmap.compress(Bitmap.CompressFormat.PNG, 100, it))
+         }
