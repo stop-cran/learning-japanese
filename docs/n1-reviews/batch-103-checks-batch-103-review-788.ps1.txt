@@ -1,0 +1,33 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$root = 'C:\Users\stop-\n1-kanji-workspace\learning-japanese'
+$android = 'C:\Users\stop-\n1-kanji-workspace\kanji-cards-android'
+$log = "$control\logs\d195583f-f80d-422a-9401-2a01567f444d"
+Set-Location $root
+& "$control\preflight-788.ps1"
+if ((git rev-parse HEAD).Trim() -ne '2a296c3f1cadca725b80274f7e312773f4c18ca8' -or
+    (git log -1 '--format=%G?').Trim() -ne 'G') { throw 'Unexpected content signed head' }
+if ((git -C $android rev-parse HEAD).Trim() -ne 'bf30cdead8515739bc0e671d57a54b9a3109dd46' -or
+    (git -C $android log -1 '--format=%G?').Trim() -ne 'G' -or
+    (git -C $android status --porcelain)) { throw 'Unexpected qualified Android state' }
+$progress = [IO.File]::ReadAllText("$control\progress.json") | ConvertFrom-Json
+if ($progress.checkpoint -ne 787 -or $progress.batch -ne '103' -or $progress.status -ne 'continue') { throw 'Unexpected checkpoint' }
+$env:PYTHONPATH = "$root\tools"
+python -X utf8 -B -m unittest test_freeze_n1_sources test_extract_n1_jmdict test_audit_n1_pilot test_audit_n1_batch *> "$log\tests-788.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Focused source tests failed' }
+python -X utf8 -B tools\validate.py *> "$log\validate-788.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Validator failed' }
+python -X utf8 -B tools\build_manifest.py *> "$log\manifest-788.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Manifest generation failed' }
+python -X utf8 -B tools\audit_n1_batch.py --batch 103 *> "$log\audit-788.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Existing batch audit failed' }
+python -X utf8 -B tools\check_content_budget.py *> "$log\budget-788.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Unchanged publication budgets failed' }
+python -X utf8 -B tools\grammar_vocabulary.py check *> "$log\vocabulary-788.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Vocabulary consistency failed' }
+git diff --check *> "$log\whitespace-788.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Whitespace check failed' }
+Get-Content "$log\tests-788.txt" -Tail 4
+Get-Content "$log\validate-788.txt" -Tail 2
+Get-Content "$log\budget-788.txt" -Tail 8
+Get-Content "$log\vocabulary-788.txt" -Tail 2
