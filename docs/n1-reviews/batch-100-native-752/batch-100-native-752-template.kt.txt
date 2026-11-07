@@ -1,0 +1,429 @@
+@@IMPORTS@@
+private fun disposable100() {
+    assertEquals("true", InstrumentationRegistry.getArguments().getString("n1Disposable"))
+    assertTrue(Build.HARDWARE in setOf("ranchu", "goldfish"))
+}
+
+@@GLYPH@@
+class N1Batch100ArticleTest {
+    @get:Rule val rule = createEmptyComposeRule()
+    private lateinit var app: KanjiApp
+    private lateinit var scenario: ActivityScenario<MainActivity>
+
+    @Test fun fullSingleImportCreationDirectGuardsTwoCuratedKeysFivePairsTwelveStrokesOfflineAndBack() {
+        disposable100()
+        val instrumentation = InstrumentationRegistry.getInstrumentation()
+        app = instrumentation.targetContext.applicationContext as KanjiApp
+        val source = RepoSource("acceptance-fixture", "n1-100-${UUID.randomUUID()}", "main")
+        val head = "@@HEAD@@"
+        assertTrue(app.settings.setSource("https://github.com/${source.id}", source.branch))
+        var archiveRequests = 0
+        val http = ContentHttp { url, _, _, _ ->
+            val input = when (url) {
+                "https://api.github.com/repos/${source.id}/commits/main" -> ByteArrayInputStream(head.toByteArray())
+                source.commitZipUrl(head) -> {
+                    archiveRequests++
+                    instrumentation.context.assets.open("@@ARCHIVE@@")
+                }
+                else -> error("Unexpected fixture request: $url")
+            }
+            object : ContentResponse {
+                override val code = 200
+                override val body = input
+                override fun header(name: String): String? = null
+                override fun close() = input.close()
+            }
+        }
+        val result = runBlocking { ContentSync(app.db, app.settings.sync, http).sync(source, force = true) }
+        assertTrue(result.toString(), result is SyncResult.Updated)
+        val updated = result as SyncResult.Updated
+        assertEquals(1, archiveRequests)
+        assertEquals(1123, updated.kanji)
+        assertEquals(5073, updated.words)
+        assertTrue(updated.problems.toString(), updated.problems.isEmpty())
+        val meta = requireNotNull(runBlocking { app.db.content().meta(source.id) })
+        assertEquals("@@VERSION@@", meta.contentVersion)
+        assertEquals(0, meta.problems)
+        assertNull(meta.grammarProblem)
+        assertNull(meta.listeningProblem)
+        assertNull(meta.grammarCurriculumProblem)
+        assertEquals(1, ContentParser.KANJI_READING_PARSER_EPOCH)
+        assertEquals(ContentParser.KANJI_READING_PARSER_EPOCH, meta.kanjiReadingParserEpoch)
+        assertEquals(1, ContentParser.KANJI_MEANING_PARSER_EPOCH)
+        assertEquals(ContentParser.KANJI_MEANING_PARSER_EPOCH, meta.kanjiMeaningParserEpoch)
+        val all = runBlocking { app.db.content().kanjiLite(source.id) }
+        val n1 = all.filter { it.jlpt == 1 }
+        assertEquals(132, n1.size)
+        assertEquals(n1.map { it.kanji }.toSet(),
+            all.filter { "jlpt-n1" in it.tags.splitSep() }.map { it.kanji }.toSet())
+        val target = n1.single { it.kanji == "創" }
+        val guards = listOf("作", "造", "始", "元", "原", "本", "緒", "産", "設", "初")
+        assertEquals(guards, target.quizExclusions.splitSep())
+        val observed = runBlocking { app.db.content().observeKanjiLite(source.id).first() }.single { it.kanji == "創" }
+        assertEquals(guards, observed.toQuizCard().quizExclusions)
+        val full = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "創") })
+        assertEquals(guards, full.quizExclusions.splitSep())
+        assertEquals(guards, full.toQuizCard().quizExclusions)
+        assertEquals(guards, runBlocking { app.db.content().kanji(source.id) }
+            .single { it.kanji == "創" }.toQuizCard().quizExclusions)
+        assertEquals(listOf("剣", "倹", "験"), target.distractors.splitSep())
+        assertEquals(listOf("ソウ", "ショウ"), target.onyomi.splitSep())
+        assertEquals(listOf("つく.る", "はじ.める", "きず", "けず.しける"), target.kunyomi.splitSep())
+        assertEquals(listOf("ソウ"), target.quizOnyomi?.splitSep())
+        assertEquals(listOf("つく.る"), target.quizKunyomi?.splitSep())
+        assertEquals(listOf("そう"), target.toReadingCard().quizKeys(ReadingKind.On))
+        assertEquals(listOf("つくる"), target.toReadingCard().quizKeys(ReadingKind.Kun))
+        val expectedMeanings = mapOf("創" to "originate; create", "剣" to "sword; double-edged blade",
+            "倹" to "frugal; thrifty", "験" to "test; verify")
+        val curatedIds = listOf("剣", "倹", "験")
+        assertTrue(curatedIds.all { id -> n1.any { it.kanji == id } })
+        val custom = all.filter { it.kanji in expectedMeanings }
+        val randomSubset = listOf(target) +
+            n1.filter { it.kanji != "創" }.shuffled(kotlin.random.Random(752)).take(15)
+        val choices = JSONArray()
+        for ((poolName, pool) in listOf("N1" to n1, "All" to all,
+            "boundedCustom" to custom, "randomN1Subset" to randomSubset)) {
+            val cards = pool.map { it.toQuizCard() }
+            val quizTarget = cards.single { it.kanji == "創" }
+            val available = curatedIds.filter { id -> cards.any { it.kanji == id } }
+            repeat(16) { seed ->
+                val options = QuizBuilder.options(quizTarget, cards, kotlin.random.Random(seed))
+                assertEquals(4, options.size)
+                assertEquals(4, options.map { it.title }.toSet().size)
+                assertEquals(1, options.count { it.kanji == "創" })
+                assertTrue(options.none { it.kanji in guards })
+                assertTrue(available.all { id -> options.any { it.kanji == id } })
+                assertTrue(options.all { o -> pool.any { it.kanji == o.kanji && it.title == o.title } })
+                if (available.size == 3) assertEquals(expectedMeanings, options.associate { it.kanji to it.title })
+                choices.put(JSONObject().put("pool", poolName).put("seed", seed)
+                    .put("poolMembershipInOrder", JSONArray(pool.map { it.kanji }))
+                    .put("options", JSONArray().also { rows ->
+                        options.forEach { rows.put(JSONObject().put("kanji", it.kanji).put("title", it.title)) }
+                    }))
+            }
+        }
+        assertEquals(64, choices.length())
+        val allCards = all.map { it.toQuizCard() }
+        val guardChecks = JSONArray()
+        for (excludedId in guards) {
+            val pair = allCards.filter { it.kanji in setOf("創", excludedId) }
+            assertEquals(2, pair.size)
+            for (quizTarget in pair) {
+                val excluded = pair.single { it.kanji != quizTarget.kanji }
+                repeat(16) { seed ->
+                    val sampled = pair + allCards.filter { it.kanji !in setOf("創", excludedId) }
+                        .shuffled(kotlin.random.Random(752 + seed)).take(seed)
+                    for ((poolName, pool) in listOf(
+                        "N1" to n1.map { it.toQuizCard() }, "All" to allCards,
+                        "boundedCustom" to (pair + allCards.filter { it.kanji in curatedIds }),
+                        "randomN1Subset752" to (pair + randomSubset.map { it.toQuizCard() }
+                            .filter { it.kanji !in setOf("創", excludedId) }),
+                        "sampledFiltered" to sampled, "pairOnly" to pair,
+                        "targetOutsidePool" to sampled.filter { it.kanji != quizTarget.kanji },
+                    )) {
+                        val options = QuizBuilder.options(quizTarget, pool, kotlin.random.Random(seed))
+                        assertEquals(1, options.count { it.kanji == quizTarget.kanji })
+                        assertFalse("Direct guard leaked $excludedId $poolName", options.any { it.kanji == excluded.kanji })
+                        assertTrue(options.size in 1..4)
+                        assertEquals(options.size, options.map { it.title }.toSet().size)
+                        assertTrue(options.all { it.kanji == quizTarget.kanji || pool.any { p -> p.kanji == it.kanji } })
+                        if (poolName == "pairOnly") assertEquals(1, options.size)
+                        guardChecks.put(JSONObject().put("target", quizTarget.kanji).put("excluded", excluded.kanji)
+                            .put("pool", poolName).put("seed", seed)
+                            .put("poolMembershipInOrder", JSONArray(pool.map { it.kanji }))
+                            .put("options", JSONArray(options.map { it.kanji })))
+                    }
+                }
+            }
+        }
+        assertEquals(2240, guardChecks.length())
+        val nontransitiveChecks = JSONArray()
+        for (left in guards) for (right in guards.filter { it != left }) repeat(16) { seed ->
+            val pair = allCards.filter { it.kanji in setOf(left, right) }
+            val leftCard = pair.single { it.kanji == left }
+            val rightCard = pair.single { it.kanji == right }
+            assertFalse(right in leftCard.quizExclusions || left in rightCard.quizExclusions)
+            val options = QuizBuilder.options(leftCard, pair, kotlin.random.Random(seed))
+            assertEquals(setOf(left, right), options.map { it.kanji }.toSet())
+            nontransitiveChecks.put(JSONObject().put("target", left).put("neighbor", right).put("seed", seed)
+                .put("options", JSONArray(options.map { it.kanji })))
+        }
+        assertEquals(1440, nontransitiveChecks.length())
+        val words = runBlocking { app.db.content().wordsLite(source.id) }.map { it.toCard() }
+        val preserved = mapOf(
+            "創作" to listOf("制作", "製作", "作製", "作成", "製造", "生産", "作る", "こしらえる", "作品", "小説", "嘘", "発明", "架空"),
+            "作る" to listOf("建てる", "製造", "建設", "建築", "生産"))
+        assertEquals("そうさく", words.single { it.word == "創作" }.reading)
+        assertEquals(2, words.single { it.word == "創作" }.jlpt)
+        assertEquals("つくる", words.single { it.word == "作る" }.reading)
+        assertEquals(5, words.single { it.word == "作る" }.jlpt)
+        val wordChecks = JSONArray()
+        for ((id, excludedIds) in preserved) {
+            val left = words.single { it.word == id }
+            assertEquals(excludedIds, left.quizExclusions)
+            for (excludedId in excludedIds) {
+                val right = words.single { it.word == excludedId }
+                for ((wordTarget, excluded) in listOf(left to right, right to left)) {
+                    val pool = listOf(wordTarget, excluded) + words.filter {
+                        it.word !in setOf(wordTarget.word, excluded.word) && it.title !in setOf(wordTarget.title, excluded.title) &&
+                            it.word !in wordTarget.quizExclusions && wordTarget.word !in it.quizExclusions
+                    }.take(12)
+                    for ((poolName, selected) in listOf("All" to words, "boundedCustom" to pool))
+                        for (direction in listOf(WordDirection.JpToEn, WordDirection.EnToJp)) repeat(16) { seed ->
+                            val options = WordQuizBuilder.options(wordTarget, selected, direction, kotlin.random.Random(seed))
+                            assertEquals(4, options.size)
+                            assertEquals(1, options.count { it.word == wordTarget.word })
+                            assertFalse(options.any { it.word == excluded.word })
+                            wordChecks.put(JSONObject().put("target", wordTarget.word).put("excluded", excluded.word)
+                                .put("pool", poolName).put("direction", direction.name).put("seed", seed)
+                                .put("options", JSONArray().also { rows ->
+                                    options.forEach { rows.put(JSONObject().put("word", it.word).put("label", it.label)) }
+                                }))
+                        }
+                }
+            }
+        }
+        assertEquals(2304, wordChecks.length())
+        val now = System.currentTimeMillis()
+        app.settings.sync.lastCheckMs = now
+        app.settings.setStartingGuideVisible(false)
+        app.settings.setDailyNewCards(50)
+        app.settings.setWeekPlan("FFFFFFF")
+        app.settings.setTraceNew(true)
+        app.settings.setVaryFonts(true)
+        app.settings.setStack("jlpt-n5")
+        runBlocking {
+            app.db.withTransaction {
+                n1.forEach { card ->
+                    app.db.reviews().putState(ReviewStateEntity(
+                        source.id, "jlpt-n1", card.kanji, StudyMode.Quiz.name, "Review", 30.0, 5.0,
+                        if (card.kanji == "創") now - 60_000 else now + 30L * 86_400_000,
+                        now - 2L * 86_400_000, 3, 0,
+                    ))
+                    for (kind in ReadingKind.entries) for (key in card.toReadingCard().quizKeys(kind))
+                        app.db.reviews().putState(ReviewStateEntity(
+                            source.id, "jlpt-n1", card.kanji, kind.mode.name, "Review", 30.0, 5.0,
+                            if (card.kanji == "創") now - 60_000 else now + 30L * 86_400_000,
+                            now - 2L * 86_400_000, 3, 0, reading = key,
+                        ))
+                }
+                for (days in 1..2) app.db.reviews().putLog(ReviewLogEntity(
+                    0, source.id, "jlpt-n1", "創", StudyMode.Quiz.name, 3, now - days * 86_400_000L,
+                ))
+            }
+        }
+        val connectivity = app.getSystemService(ConnectivityManager::class.java)
+        assertNull("Disable owned emulator Wi-Fi/data before offline acceptance", connectivity.activeNetwork)
+        val evidence = JSONObject().put("contentSnapshot", head).put("contentVersion", meta.contentVersion)
+            .put("archiveRequests", archiveRequests).put("importedKanji", updated.kanji).put("importedWords", updated.words)
+            .put("problems", updated.problems.size).put("n1Cards", n1.size)
+            .put("acceptedReadingParserEpoch", meta.kanjiReadingParserEpoch)
+            .put("acceptedMeaningParserEpoch", meta.kanjiMeaningParserEpoch)
+            .put("productionBuilderN1AndAllExactChoices", choices).put("kanjiDirectGuardChecks", guardChecks)
+            .put("nontransitiveNeighborChecks", nontransitiveChecks).put("preservedWordGuardChecks", wordChecks)
+            .put("fullOnyomi", JSONArray(target.onyomi.splitSep())).put("fullKunyomi", JSONArray(target.kunyomi.splitSep()))
+            .put("quizOnKeys", JSONArray(target.toReadingCard().quizKeys(ReadingKind.On)))
+            .put("quizKunKeys", JSONArray(target.toReadingCard().quizKeys(ReadingKind.Kun)))
+            .put("kanjiQuizExclusions", JSONArray(guards))
+            .put("fingerprint", Build.FINGERPRINT).put("sdk", Build.VERSION.SDK_INT)
+            .put("transport", "Exact full git archive through production ContentSync ONCE; synthetic source/HEAD")
+            .put("fixture", "Other N1 meanings/readings postponed; only創 meaning andそう/つくる due. Two historical good meaning logs unlock drawing. No drawing state seeded. Disposable source, not owner progress.")
+            .put("limits", "Sampled pools, not exhaustive future semantics. Conservative創/初 safeguard is not proven historical live failure/universal synonym. Source-only allocation remains UNVERIFIED/unselected. Raster hashes are not readability. Emulator, not phone.")
+            .put("phoneEvidence", false).put("passed", false)
+        scenario = ActivityScenario.launch(MainActivity::class.java)
+        try {
+            click("Kanji")
+            click("N1")
+            rule.waitUntil(30_000) { app.settings.stack.value == "jlpt-n1" }
+            await("N1 · 132 cards").performScrollTo().assertIsDisplayed()
+            capture("selection")
+            click("Browse all kanji")
+            rule.onNode(hasSetTextAction()).performTextReplacement("創")
+            click("originate; create")
+            await("創 — originate; create")
+@@ARTICLE@@
+            section("Common words")
+            val creativeWord = "創作 そうさく — creative production; original work; also fabrication"
+            val creativeParts = "創 contributes originating or creating, and 作 making. Their related ideas emphasize creation. The on readings are ソウ + サク. These associations are not a rule that every new object must be called 創作."
+            inline(await(articleBullet(creativeWord)), "創作", 0)
+            await("創作 (そうさく) - creative production; original work; fabrication")
+            section("How the kanji combine")
+            show(articleBullet(creativeParts), "sosaku-components")
+            inline(await(articleBullet(creativeParts)), "創", 0)
+            await("創 — originate; create")
+            back()
+            await(articleBullet(creativeParts)).assertIsDisplayed()
+            section("How the kanji combine")
+            inline(await(articleBullet(creativeParts)), "作", creativeParts.indexOf("作"))
+            await("作 — make, produce")
+            section("Common words")
+            show(articleBullet("創作 そうさく — creative production; original work"), "saku-new-reciprocal")
+            inline(await(articleBullet("創作 そうさく — creative production; original work")), "創作", 0)
+            await("創作 (そうさく) - creative production; original work; fabrication")
+            back()
+            await(articleBullet("創作 そうさく — creative production; original work")).assertIsDisplayed()
+            back()
+            await(articleBullet(creativeParts)).assertIsDisplayed()
+            back()
+            await(articleBullet(creativeWord)).assertIsDisplayed()
+            val creationWord = "創る つくる — create; creation-oriented spelling discussed in the 作る article"
+            inline(await(articleBullet(creationWord)), "創る", 0)
+            await("作る (つくる) — make; prepare")
+            section("Distinctive meaning")
+            val variants = "作る is the broad everyday spelling. The same reading also has 造る (つくる), typically for larger-scale building or manufacturing, and 創る, emphasizing creation. These are usage tendencies, not a rule that every object forces one spelling. For an ordinary meal, learn 作る."
+            show(articleBullet(variants), "tsukuru-spelling-boundaries")
+            inline(await(articleBullet(variants)), "創", variants.indexOf("創"))
+            await("創 — originate; create")
+            back()
+            await(articleBullet(variants)).assertIsDisplayed()
+            section("How the kanji combine")
+            val makeParts = "This is a single-kanji native verb: 作 supplies つく and the making meaning; る is okurigana. It is a godan verb: 作ります (つくります), 作って (つくって)."
+            show(articleBullet(makeParts), "tsukuru-primary-component")
+            inline(await(articleBullet(makeParts)), "作", makeParts.indexOf("作"))
+            await("作 — make, produce")
+            section("Common words")
+            inline(await(articleBullet("作る つくる — make; prepare")), "作る", 0)
+            await("作る (つくる) — make; prepare")
+            back()
+            await(articleBullet("作る つくる — make; prepare")).assertIsDisplayed()
+            back()
+            await(articleBullet(makeParts)).assertIsDisplayed()
+            section("Distinctive meaning")
+            inline(await(articleBullet(variants)), "造", variants.indexOf("造"))
+            await("造 — make; construct")
+            section("Common words")
+            val buildWord = "造る つくる - make; build; larger-scale making or brewing spelling in the 作る article"
+            show(articleBullet(buildWord), "zo-alternative-reciprocal")
+            inline(await(articleBullet(buildWord)), "造る", 0)
+            await("作る (つくる) — make; prepare")
+            back()
+            await(articleBullet(buildWord)).assertIsDisplayed()
+            back()
+            await(articleBullet(variants)).assertIsDisplayed()
+            back()
+            await(articleBullet(creationWord)).assertIsDisplayed()
+            back()
+            await("Search kanji, meaning or reading")
+            back()
+            await("Meaning quiz")
+            evidence.put("mappedReciprocalPairs", 5).put("directedLinkTransitions", 10)
+                .put("activatedBaselinePairs", 1).put("changedReusedArticles", 3).put("reciprocalLinkAndSystemBack", true)
+            click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Meaning quiz"))))
+            rule.waitUntil(30_000) { (model("quiz:") as? QuizViewModel)?.ui is QuizUi.Question }
+            val quiz = model("quiz:") as QuizViewModel
+            val meaning = quiz.ui as QuizUi.Question
+            assertEquals("創", meaning.card.kanji)
+            assertEquals(expectedMeanings, meaning.options.associate { it.kanji to it.title })
+            assertEquals(guards, meaning.card.toQuizCard().quizExclusions)
+            assertTrue(meaning.options.none { it.kanji in guards })
+            for (option in meaning.options) await(option.title).assertIsDisplayed()
+            evidence.put("exactDefaultMeaningOptions", JSONArray().also { rows ->
+                meaning.options.forEach { rows.put(JSONObject().put("kanji", it.kanji).put("title", it.title)) }
+            }).put("actualN1CuratedAvailable", 3).put("actualN1FallbackOptions", 0)
+            capture("meaning-question")
+            click("originate; create")
+            await("Correct!")
+            capture("meaning-feedback")
+            back()
+            await("Meaning quiz")
+            click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Readings (on'yomi and kun'yomi)"))))
+            val answeredKeys = mutableSetOf<String>()
+            repeat(2) {
+                rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Question }
+                val reading = model("kreading:") as KanjiReadingViewModel
+                val question = reading.ui as ReadingUi.Question
+                assertEquals("創", question.card.kanji)
+                val key = question.question.correctKey
+                assertTrue(key in setOf("そう", "つくる"))
+                assertEquals(if (key == "そう") ReadingKind.On else ReadingKind.Kun, question.question.kind)
+                assertTrue(answeredKeys.add(key))
+                assertEquals(1, question.question.options.count { it.key == key })
+                capture("curated-$key-question")
+                click(question.question.options.single { it.key == key }.label)
+                await(if (question.question.kind == ReadingKind.On) "Correct! — on'yomi" else "Correct! — kun'yomi")
+                assertTrue((reading.ui as ReadingUi.Answer).correct)
+                capture("curated-$key-feedback")
+                click("Next")
+                rule.waitUntil(30_000) { runBlocking {
+                    app.db.reviews().allLog().any { log -> log.sourceId == source.id && log.kanji == "創" &&
+                        log.mode == question.question.kind.mode.name && log.reading == key && log.grade == 3 }
+                } }
+            }
+            assertEquals(setOf("そう", "つくる"), answeredKeys)
+            rule.waitUntil(30_000) { (model("kreading:") as? KanjiReadingViewModel)?.ui is ReadingUi.Done }
+            val done = (model("kreading:") as KanjiReadingViewModel).ui as ReadingUi.Done
+            assertEquals(2, done.answered)
+            assertEquals(2, done.correct)
+            val logs = runBlocking { app.db.reviews().allLog().filter {
+                it.sourceId == source.id && it.kanji == "創" &&
+                    it.mode in setOf(ReadingKind.On.mode.name, ReadingKind.Kun.mode.name)
+            } }
+            assertEquals(2, logs.size)
+            assertEquals(answeredKeys, logs.map { it.reading }.toSet())
+            capture("curated-two-keys-done")
+            back()
+            await("Meaning quiz")
+            click(rule.onNode(hasText("Start") and hasAnyAncestor(hasText("Drawing"))))
+            await("Trace the kanji for")
+            await("originate; create").assertIsDisplayed()
+            val card = requireNotNull(runBlocking { app.db.content().kanjiCard(source.id, "創") })
+            assertEquals(listOf("ソウ", "ショウ"), card.onyomi.splitSep())
+            assertEquals(listOf("つく.る", "はじ.める", "きず", "けず.しける"), card.kunyomi.splitSep())
+            assertEquals(listOf("ソウ"), card.quizOnyomi?.splitSep())
+            assertEquals(listOf("つく.る"), card.quizKunyomi?.splitSep())
+            assertEquals(guards, card.quizExclusions.splitSep())
+            evidence.put("fullProjectionOnyomi", JSONArray(card.onyomi.splitSep()))
+                .put("fullProjectionKunyomi", JSONArray(card.kunyomi.splitSep()))
+                .put("fullProjectionQuizOnyomi", JSONArray(requireNotNull(card.quizOnyomi).splitSep()))
+                .put("fullProjectionQuizKunyomi", JSONArray(requireNotNull(card.quizKunyomi).splitSep()))
+            val strokes = JSONObject(requireNotNull(card.strokesJson)).getJSONArray("strokes")
+            assertEquals(12, strokes.length())
+            capture("drawing-trace")
+            val pad = rule.onNode(hasContentDescription("Drawing area for the kanji", substring = true))
+            pad.performScrollTo()
+            for (index in 0 until strokes.length()) {
+                val points = strokes.getJSONObject(index).getJSONArray("points")
+                pad.performTouchInput {
+                    fun point(i: Int): Offset {
+                        val pair = points.getJSONArray(i)
+                        return Offset(pair.getDouble(0).toFloat() * width / 109f,
+                            pair.getDouble(1).toFloat() * height / 109f)
+                    }
+                    down(point(0))
+                    for (i in 1 until points.length()) moveTo(point(i), delayMillis = 16)
+                    up()
+                }
+            }
+            rule.onNode(hasContentDescription("12 strokes drawn", substring = true)).assertExists()
+            click("Check")
+            await("Practice only: this attempt is not graded.")
+            assertFalse(runBlocking { app.db.reviews().allLog().any {
+                it.sourceId == source.id && it.kanji == "創" && it.mode == StudyMode.Draw.name
+            } })
+            await("Correct strokes").performScrollTo().assertIsDisplayed()
+            capture("drawing-feedback")
+            click("Next")
+            await("Draw the kanji for")
+            click("I don't remember")
+            await("Here is the kanji")
+            capture("drawing-recall-feedback")
+            click("Next")
+            rule.waitUntil(30_000) { runBlocking { app.db.reviews().allLog().any {
+                it.sourceId == source.id && it.kanji == "創" && it.mode == StudyMode.Draw.name && it.grade == 1
+            } } }
+            back()
+            await("Meaning quiz")
+            assertEquals("jlpt-n1", app.settings.stack.value)
+            assertNull(connectivity.activeNetwork)
+            assertEquals(1, archiveRequests)
+            evidence.put("meaningQuestionAndFeedback", true).put("twoCuratedKeysPersistedGoodAndDone", true)
+                .put("touchInjectedReferenceStrokes", strokes.length()).put("drawingTraceThenRecall", true)
+                .put("drawingGradeRecordedOnNext", true).put("offline", true).put("passed", true)
+        } finally {
+            File(app.getExternalFilesDir(null), "n1-100-article-route.json").writeText(evidence.toString(2))
+            File(app.getExternalFilesDir(null), "n1-100-article-tree.txt").writeText(rule.onRoot().printToString())
+            scenario.close()
+        }
+    }
+
+@@HELPERS@@

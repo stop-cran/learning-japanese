@@ -1,0 +1,49 @@
+import gzip
+import hashlib
+import json
+from pathlib import Path
+
+C = Path(__file__).resolve().parent
+R = C.parent / "learning-japanese"
+D = R / "docs" / "n1-reviews" / "batch-100-native-752"
+E = R / "docs" / "n1-sources" / "execution-752.json"
+source = C / "batch-100-native-752" / "N1Batch100NativeTest.kt"
+raw_archive = D / source.name
+compressed = D / (source.name + ".gz")
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+evidence = json.loads(E.read_text(encoding="utf-8"))
+assert sha(source) == evidence["preparation"]["fixtureSha256"] == sha(raw_archive)
+assert not compressed.exists()
+compressed.write_bytes(gzip.compress(source.read_bytes(), mtime=0))
+assert gzip.decompress(compressed.read_bytes()) == source.read_bytes()
+for item in evidence["provenance"]:
+    if item["archive"] == raw_archive.relative_to(R).as_posix():
+        item["archive"] = compressed.relative_to(R).as_posix()
+        item["sha256"] = sha(compressed)
+        item["sourceSha256"] = sha(source)
+        item["encoding"] = "lossless-gzip; compiled source bytes unchanged"
+helper = D / (Path(__file__).name + ".txt")
+assert not helper.exists()
+helper.write_bytes(Path(__file__).read_bytes())
+evidence["provenance"].append({
+    "source": str(Path(__file__)), "archive": helper.relative_to(R).as_posix(), "sha256": sha(helper),
+})
+evidence["packagingDiagnostic"] = {
+    "originalStagedWhitespaceCheckPassed": False,
+    "commitCommandExecutedOnFirstAttempt": False,
+    "finding": "Generated frozen fixture ends with an extra blank line. The staged evidence check caught it before git commit ran.",
+    "disposition": "Archive the exact already-compiled source losslessly gzipped, like the preserved diff/build log. Do not edit frozen source, change its hash, recompile merely for archival whitespace, or weaken staged whitespace checks.",
+    "compiledSourceSha256": sha(source),
+    "sourceArchive": compressed.relative_to(R).as_posix(),
+    "sourceArchiveSha256": sha(compressed),
+    "validationErrors": 0,
+    "manifestRegeneratedUnchanged": True,
+    "contentVersion": "82b45827a5bb4ae3",
+}
+E.write_text(json.dumps(evidence, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+print("Exact compiled source archived losslessly; original control fixture and all APK/receipt hashes unchanged.")

@@ -1,0 +1,59 @@
+param([string]$ReceiptName = 'preflight-752.json')
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$session = '64300922-351a-44cf-8d5e-fdd6d968a6b9'
+$runner = [IO.File]::ReadAllText("$control\runner.json") | ConvertFrom-Json
+if ($runner.status -ne 'running' -or $runner.sessionId -ne $session -or $runner.pid -ne 5920) {
+    throw 'Uncertain runner ownership; preserve and yield.'
+}
+$ancestry = @()
+$process = Get-CimInstance Win32_Process -Filter "ProcessId=$PID"
+while ($process -and $ancestry.Count -lt 12) {
+    $ancestry += $process.ProcessId
+    if ($process.ProcessId -eq $runner.pid) { break }
+    $process = Get-CimInstance Win32_Process -Filter "ProcessId=$($process.ParentProcessId)"
+}
+if (-not $process -or $process.ProcessId -ne $runner.pid) { throw 'Launcher missing from ancestry' }
+if ($process.CommandLine -notmatch '(?i)-EncodedCommand\s+(\S+)') { throw 'Unexpected launcher invocation' }
+$decoded = [Text.Encoding]::Unicode.GetString([Convert]::FromBase64String($Matches[1]))
+if (-not $decoded.Contains("& $control\runner.ps1")) { throw 'Wrong decoded launcher' }
+$hash = (Get-FileHash "$control\runner.ps1").Hash.ToLowerInvariant()
+if ($hash -ne 'f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af') {
+    throw 'Launcher changed'
+}
+$coordinator = $ancestry | ForEach-Object {
+    Get-CimInstance Win32_Process -Filter "ProcessId=$_"
+} | Where-Object { $_.Name -eq 'copilot.exe' -and $_.CommandLine.Contains("--session-id $session") }
+if (@($coordinator).Count -ne 1) { throw 'Wrong coordinator session' }
+$progress = [IO.File]::ReadAllText("$control\progress.json") | ConvertFrom-Json
+if ($progress.checkpoint -ne 751 -or $progress.batch -ne '100' -or $progress.status -ne 'continue') {
+    throw 'Checkpoint changed'
+}
+foreach ($spec in @(
+    @("$control\..\learning-japanese", '1f41316935a298fb9b8bcc0dc45b2a4b6c0a5175'),
+    @("$control\..\kanji-cards-android", 'bf30cdead8515739bc0e671d57a54b9a3109dd46')
+)) {
+    if ((git -C $spec[0] rev-parse HEAD) -ne $spec[1] -or $LASTEXITCODE -ne 0) { throw 'Unexpected head' }
+    if ((git -C $spec[0] log -1 '--format=%G?') -ne 'G' -or $LASTEXITCODE -ne 0) { throw 'Signature not verified' }
+    if ((git -C $spec[0] status --porcelain --untracked-files=all) -or $LASTEXITCODE -ne 0) {
+        throw 'Worktree not wholly clean'
+    }
+}
+$receipt = "$control\logs\$session\$ReceiptName"
+if (Test-Path -LiteralPath $receipt) { throw 'Do not overwrite preflight evidence' }
+[ordered]@{
+    execution = 752
+    sessionId = $session
+    verifiedAt = [DateTimeOffset]::UtcNow.ToString('o')
+    ancestry = $ancestry
+    liveParentPid = $process.ProcessId
+    coordinatorPid = $coordinator.ProcessId
+    decodedLauncherMatches = $true
+    launcherSha256 = $hash
+    checkpoint = 751
+    dedicatedWorktreesClean = $true
+    exactSignedHeadsVerified = $true
+    lockTouched = $false
+    parentLockRole = 'Live parent launcher owns runner.lock; no child acquire/delete/unlock/read-probe.'
+} | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $receipt -Encoding utf8NoBOM
+Write-Output 'Live launcher, checkpoint and wholly clean signed heads verified; parent lock untouched.'
