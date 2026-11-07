@@ -1,0 +1,39 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\34bc00a6-747c-4edf-a3f2-a116b65e8556"
+$content = "$control\..\learning-japanese"
+$bodyPath = "$control\batch-099-combined-743-issue-body.txt"
+if ((Test-Path "$log\issue-743-posted.json") -or (Test-Path "$log\issue-743-reread.json")) {
+    throw 'Issue response exists; inspect before repeating.'
+}
+$head = git -C $content rev-parse HEAD
+if ($LASTEXITCODE -ne 0) { throw 'Cannot read head' }
+& "$control\preflight-743.ps1" -ExpectedHead $head -ReceiptName 'preflight-743-issue.json'
+if ($LASTEXITCODE -ne 0) { throw 'Issue preflight failed' }
+if ($env:GH_TOKEN) { throw 'Unexpected inherited token' }
+$globalIdentity = gh api user --jq .login
+if ($LASTEXITCODE -ne 0 -or $globalIdentity -cne 'romanko-ms') { throw 'Global identity changed' }
+$body = [IO.File]::ReadAllText($bodyPath)
+$evidence = [IO.File]::ReadAllText("$content\docs\n1-sources\execution-743.json") | ConvertFrom-Json
+if (-not $evidence.runtimeAccepted -or $evidence.runtimePublished) { throw 'Unexpected acceptance stage' }
+try {
+    $env:GH_TOKEN = gh auth token --user stop-cran
+    if ($LASTEXITCODE -ne 0 -or -not $env:GH_TOKEN) { throw 'Owner credential unavailable' }
+    $login = gh api user --jq .login
+    if ($LASTEXITCODE -ne 0 -or $login -cne 'stop-cran') { throw 'Wrong command-scoped identity' }
+    @{ body=$body } | ConvertTo-Json | Set-Content "$log\issue-743-payload.json" -Encoding utf8NoBOM
+    gh api repos/stop-cran/learning-japanese/issues/60/comments --method POST --input "$log\issue-743-payload.json" > "$log\issue-743-posted.json"
+    if ($LASTEXITCODE -ne 0) { throw 'Issue post failed; preserve response before retry.' }
+    $posted = [IO.File]::ReadAllText("$log\issue-743-posted.json") | ConvertFrom-Json
+    gh api "repos/stop-cran/learning-japanese/issues/comments/$($posted.id)" > "$log\issue-743-reread.json"
+    if ($LASTEXITCODE -ne 0) { throw 'Issue reread failed' }
+    $receipt = [IO.File]::ReadAllText("$log\issue-743-reread.json") | ConvertFrom-Json
+    if ($receipt.user.login -cne 'stop-cran' -or $receipt.body -cne $body -or $receipt.id -ne $posted.id) {
+        throw 'Exact owner/body verification failed'
+    }
+    Write-Output $receipt.html_url
+} finally {
+    Remove-Item Env:GH_TOKEN -ErrorAction SilentlyContinue
+}
+$identity = gh api user --jq .login
+if ($LASTEXITCODE -ne 0 -or $identity -cne $globalIdentity) { throw 'Global account not preserved' }
