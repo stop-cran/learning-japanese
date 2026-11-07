@@ -1,0 +1,3 @@
+Sheet 07 visibly confirms the meaning options **“dissect; split open,” “sturdy; unyielding strength,” “mosquito,” “sword; double-edged blade”**, with the sword answer marked correct. The N1 selection screen shows **129 cards**, one meaning question due and two readings due. 真’s article visibly includes the added linked **真剣 しんけん — serious; earnest; also a real sword** entry.
+
+**No established defect at this reduced scale.** 真’s table is horizontally clipped with an explicit sideways-scroll hint; this capture alone does not demonstrate a link transition. Retained as dependent supplied API35-emulator evidence, not final acceptance.

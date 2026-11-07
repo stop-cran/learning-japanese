@@ -1,0 +1,3 @@
+Sheet 02 shows the kun-reading question **すぎ／つぐなう／つばき／つるぎ**, a numbered ten-stroke 剣 tracing guide, “Well drawn!” practice feedback, and a recall reveal with an empty drawing box. Feedback explicitly states **“Graded by stroke shapes only (handwriting model not available)”**; the trace capture shows model downloading, so this does not demonstrate MLKit recognition.
+
+The full mnemonic ending appears in the recall capture, resolving earlier viewport truncation. **No established defect at this reduced scale.** Retained as dependent supplied API35-emulator evidence, not human-handwriting validation or final acceptance.
