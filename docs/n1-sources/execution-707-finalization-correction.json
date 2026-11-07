@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "execution": 707,
+  "batch": "096",
+  "originalAcceptanceCommit": "7564b28d41574897272dbcc46be80447b9d3ffdf",
+  "originalHelperPreserved": "docs/n1-reviews/batch-096-combined-acceptance-707/accept-batch-096-combined-707.py",
+  "correctedHelper": "docs/n1-sources/execution-707-finalization-correction.py",
+  "diagnostic": "Final checkpoint comparison used Path.read_text, which normalized the Windows CRLF issue-body file to LF while GitHub JSON preserved CRLF. Raw file, posted body and independently fetched receipt were exactly equal: each2040 characters and9CRLF; both authors stop-cran. No issue edit/repost or weaker normalization-based equality is used. A diagnostic snippet initially had an unmatched parenthesis; corrected read-only inspection confirmed exact raw equality.",
+  "correction": "Read the body using read_bytes().decode('utf-8-sig'), preserving exact newlines. Keep exact author/body/id equality. Explicitly require the signed acceptance commit as parent of this evidence-only correction commit and preserve the original frozen teaching ancestor and exact changed-path allowlist.",
+  "issueUpdate": "https://github.com/stop-cran/learning-japanese/issues/60#issuecomment-6706174817",
+  "testsRerun": 0,
+  "runtimeChanged": false,
+  "runtimePublished": false,
+  "parentLockTouched": false,
+  "newPermissionDenials": [],
+  "acceptanceDisposition": "Fresh707 content/source/Python/Android checks remain applicable; correction concerns checkpoint receipt verification only. Original failed finalization and original helper remain preserved.",
+  "wholeProjectComplete": false
+}
