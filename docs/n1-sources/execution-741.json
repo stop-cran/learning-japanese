@@ -1,0 +1,369 @@
+{
+  "schemaVersion": 1,
+  "execution": 741,
+  "batch": "099",
+  "stage": "guard-native-mechanical-checks-passed-coordinator-rendered-inspection-done",
+  "recordedAt": "2026-11-07T17:56:32.846579+00:00",
+  "startingState": {
+    "execution": 741,
+    "batch": "099",
+    "startedAt": "2026-11-07T17:49:19.271723+00:00",
+    "startingHead": "0bf41ac087ce23f412e327c24af7abd33f0ec767",
+    "androidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+    "freshOriginMain": "2d3a3fa022d48aca6ea8a2ac629bd7ee66b85f9f",
+    "scope": "Execute exact compiled739 guard-aware native cases, preserve raw output and rendered evidence, signed LOCAL checkpoint only; no reviewer/publication/100.",
+    "request": {
+      "sha256": "b8f806fb2ac8d30b929b1c9016e8779646a21e5201abeec889a9cad1e6441093",
+      "bytes": 5103801,
+      "characters": 4971578,
+      "lines": 67275,
+      "completeFileLoadedAndCheckpointParsed": true,
+      "limits": "Entire request loaded and checkpoint parsed; operative contract, complete issue and final checkpoint inspected. Historical middle parsed, not freshly semantically re-reviewed."
+    },
+    "runnerPreflight": {
+      "execution": 741,
+      "sessionId": "b68eb478-ef01-44ab-acc3-d6c50273d5ab",
+      "verifiedAt": "2026-11-07T17:49:12.3304858+00:00",
+      "ancestry": [
+        30148,
+        30848,
+        5920
+      ],
+      "liveParentPid": 5920,
+      "decodedLauncherMatches": true,
+      "launcherSha256": "f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af",
+      "checkpoint": 740,
+      "dedicatedWorktreesClean": true,
+      "exactSignedHeadsVerified": true,
+      "lockTouched": false,
+      "parentLockRole": "Live parent launcher owns runner.lock; no child acquire/delete/unlock/read-probe."
+    },
+    "artifactPathPreflight": "Approved control and committed evidence only; no optional historical-session recipes accessed.",
+    "verifiedRuntimeHashes": 8451,
+    "actualNewPermissionDenials": []
+  },
+  "nativeExecution": {
+    "execution": 741,
+    "batch": "099",
+    "startedAt": "2026-11-07T17:49:41.6941232+00:00",
+    "serial": "emulator-5580",
+    "contentSnapshot": "749ea11b0c9a43d13577b104cd5fe33d9e864e62",
+    "androidSnapshot": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+    "coordinatorHead": "0bf41ac087ce23f412e327c24af7abd33f0ec767",
+    "appApk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-099-guard-739-app.apk",
+    "appApkSha256": "3d7b17f489842cc29903123d0238586e06042ccaa09f6e1bfbcb67402869b776",
+    "testApk": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\artifacts\\n1-batch-099-guard-739-test.apk",
+    "testApkSha256": "097245568f54c5894a666c00899f79ade6075ee99bdc99018dc93ac642a21eb3",
+    "fixtureSha256": "bf677691a603db45948f2daff569ec2ed34d67c99e6896fe48b223f3b2c2230d",
+    "archiveSha256": "a4fc236ac601ee7d3039efdf38b0c731cac759f9492de912a891478917718bc1",
+    "nativeExecuted": true,
+    "passed": true,
+    "failure": null,
+    "guestOrAppHeapChanged": false,
+    "guardsChanged": false,
+    "parentLockTouched": false,
+    "parentRole": {
+      "execution": 741,
+      "sessionId": "b68eb478-ef01-44ab-acc3-d6c50273d5ab",
+      "verifiedAt": "2026-11-07T18:49:43.4731537+01:00",
+      "ancestry": [
+        28636,
+        30848,
+        5920
+      ],
+      "liveParentPid": 5920,
+      "decodedLauncherMatches": true,
+      "launcherSha256": "f83fec8ee5ade731adbd00bfbfc48df8d2bd673afd12d0d4118fb17e4d66e9af",
+      "checkpoint": 740,
+      "dedicatedWorktreesClean": true,
+      "exactSignedHeadsVerified": true,
+      "lockTouched": false,
+      "parentLockRole": "Live parent launcher owns runner.lock; no child acquire/delete/unlock/read-probe."
+    },
+    "preexistingEmulators": [],
+    "prelaunch": {
+      "verifiedAt": "2026-11-07T17:49:46.5553349+00:00",
+      "devices": "List of devices attached\r\n\r\n",
+      "connections": []
+    },
+    "parentEmulatorPid": 16924,
+    "emulatorArguments": [
+      "-avd",
+      "N3_Acceptance_20261029",
+      "-port",
+      "5580",
+      "-read-only",
+      "-no-snapshot",
+      "-no-window",
+      "-no-audio",
+      "-gpu",
+      "host",
+      "-feature",
+      "-Vulkan",
+      "-memory",
+      "2048",
+      "-cores",
+      "2"
+    ],
+    "qemuPid": 28868,
+    "listeners": [
+      {
+        "LocalPort": 5581,
+        "OwningProcess": 28868
+      },
+      {
+        "LocalPort": 5580,
+        "OwningProcess": 28868
+      },
+      {
+        "LocalPort": 5581,
+        "OwningProcess": 28868
+      },
+      {
+        "LocalPort": 5580,
+        "OwningProcess": 28868
+      }
+    ],
+    "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+    "heapGrowth": "192m",
+    "heapSize": "576m",
+    "network": "Active default network: none",
+    "instrumentationCommand": "adb -s emulator-5580 shell am instrument -w -r -e n1Disposable true -e class io.github.stopcran.kanji.ui.N1Batch099GuardGlyphTest,io.github.stopcran.kanji.ui.N1Batch099GuardArticleTest io.github.stopcran.kanji.test/androidx.test.runner.AndroidJUnitRunner",
+    "adbExitCode": 0,
+    "terminalSuccessCases": 2,
+    "artifacts": [
+      "n1-099-article-route.json",
+      "n1-099-article-tree.txt",
+      "n1-099-curated-one-on-no-kun-done.png",
+      "n1-099-curated-\u3058\u3087\u3046-feedback.png",
+      "n1-099-curated-\u3058\u3087\u3046-question.png",
+      "n1-099-drawing-feedback.png",
+      "n1-099-drawing-recall-feedback.png",
+      "n1-099-drawing-trace.png",
+      "n1-099-font-panel-1.png",
+      "n1-099-font-panel-2.png",
+      "n1-099-font-raster.json",
+      "n1-099-jo-kanji-backlink.png",
+      "n1-099-jo-reverse.png",
+      "n1-099-jo-system-back-to-word.png",
+      "n1-099-ka-forward.png",
+      "n1-099-ka-reverse.png",
+      "n1-099-ka-system-back-to-kanji.png",
+      "n1-099-ka-system-back-to-word.png",
+      "n1-099-kajo-component-return.png",
+      "n1-099-kajo-forward.png",
+      "n1-099-kajo-system-back-to-jo.png",
+      "n1-099-kanji-01.png",
+      "n1-099-kanji-03.png",
+      "n1-099-kanji-04.png",
+      "n1-099-kanji-09.png",
+      "n1-099-kanji-11.png",
+      "n1-099-kanji-12.png",
+      "n1-099-kanji-14.png",
+      "n1-099-kanji-15.png",
+      "n1-099-kanji-17.png",
+      "n1-099-kanji-18.png",
+      "n1-099-kanji-20.png",
+      "n1-099-kanji-21.png",
+      "n1-099-kanji-22.png",
+      "n1-099-kanji-24.png",
+      "n1-099-kanji-25.png",
+      "n1-099-kanji-26.png",
+      "n1-099-kanji-28.png",
+      "n1-099-kanji-29.png",
+      "n1-099-kanji-30.png",
+      "n1-099-kanji-31.png",
+      "n1-099-meaning-feedback.png",
+      "n1-099-meaning-question.png",
+      "n1-099-selection.png"
+    ],
+    "stopAdbExitCode": 0,
+    "ownedHelperStopped": true,
+    "ownedQemuStopped": true,
+    "completedAt": "2026-11-07T17:54:47.8052183+00:00"
+  },
+  "nativeRouteSummary": {
+    "contentSnapshot": "749ea11b0c9a43d13577b104cd5fe33d9e864e62",
+    "contentVersion": "39eb4a86902c6dec",
+    "archiveRequests": 1,
+    "importedKanji": 1122,
+    "importedWords": 5073,
+    "newDirectWordGuardPairs": 0,
+    "preservedDirectWordGuardPairs": 7,
+    "problems": 0,
+    "n1Cards": 131,
+    "acceptedReadingParserEpoch": 1,
+    "acceptedMeaningParserEpoch": 1,
+    "kanjiQuizExclusions": [
+      "\u5197"
+    ],
+    "kanjiGuardLimits": "Both actual imported target orientations; seven pool scenarios and16 seeds. Sampled filtered pools, not exhaustive arbitrary-pool certification. Normal/padding production mapping separately requires HOST QuizViewModelTest.",
+    "fullOnyomi": [
+      "\u30b8\u30e7\u30a6"
+    ],
+    "fullKunyomi": [
+      "\u3042\u307e\u3064\u3055\u3048",
+      "\u3042\u307e.\u308a",
+      "\u3042\u307e.\u308b"
+    ],
+    "quizOnKeys": [
+      "\u3058\u3087\u3046"
+    ],
+    "quizKunKeys": [],
+    "liteQuizOnyomi": [
+      "\u30b8\u30e7\u30a6"
+    ],
+    "liteQuizKunyomi": [],
+    "transport": "Exact full git envelope through production ContentSync ONCE; synthetic source/HEAD",
+    "fingerprint": "google/sdk_gphone64_x86_64/emu64xa:15/AE3A.240806.036/12592187:user/release-keys",
+    "sdk": 35,
+    "fixture": "Other N1 meanings/readings postponed; only \u5270 meaning and on\u3058\u3087\u3046 due; no kun keys. Full raw readings and explicit curation retained. Two historical good \u5270 meaning logs unlock drawing. No drawing state seeded. Unique disposable source; not owner progress.",
+    "phoneEvidence": false,
+    "passed": true,
+    "reciprocalLinkAndSystemBack": true,
+    "mappedReciprocalPairs": 2,
+    "directedLinkTransitions": 4,
+    "activatedBaselinePairs": 1,
+    "completeArticleProjections": 1,
+    "changedReusedArticles": 2,
+    "exactDefaultMeaningOptions": [
+      {
+        "kanji": "\u5270",
+        "title": "remainder; surplus amount"
+      },
+      {
+        "kanji": "\u8c5a",
+        "title": "pig; pork"
+      },
+      {
+        "kanji": "\u5263",
+        "title": "sword; double-edged blade"
+      },
+      {
+        "kanji": "\u7e6d",
+        "title": "cocoon"
+      }
+    ],
+    "actualN1CuratedAvailable": 1,
+    "actualN1FallbackOptions": 2,
+    "meaningChoiceVisualAdjudicationRequired": true,
+    "fullProjectionOnyomi": [
+      "\u30b8\u30e7\u30a6"
+    ],
+    "fullProjectionKunyomi": [
+      "\u3042\u307e\u3064\u3055\u3048",
+      "\u3042\u307e.\u308a",
+      "\u3042\u307e.\u308b"
+    ],
+    "fullProjectionQuizOnyomi": [
+      "\u30b8\u30e7\u30a6"
+    ],
+    "fullProjectionQuizKunyomi": [],
+    "meaningQuestionAndFeedback": true,
+    "onlyOnJouNoKunPersistedGoodAndDone": true,
+    "touchInjectedReferenceStrokes": 11,
+    "drawingTraceThenRecall": true,
+    "drawingGradeRecordedOnNext": true,
+    "offline": true
+  },
+  "kanjiDirectGuardChecks": 224,
+  "guardTargetOrientations": 2,
+  "guardPoolScenarios": [
+    "All",
+    "N1",
+    "boundedCustom",
+    "pairOnly",
+    "randomN1Subset732",
+    "sampledFiltered",
+    "targetOutsidePool"
+  ],
+  "seedsPerTargetAndScenario": 16,
+  "capturedPoolMembershipAndOrder": true,
+  "productionSurplusChoiceChecks": 64,
+  "sampledUniqueKanjiTitlePairs": 35,
+  "preservedWordGuardChecks": 896,
+  "verifiedRuntimeHashes": 8451,
+  "manifestEqualToCompiled739Archive": true,
+  "inspection": {
+    "schemaVersion": 1,
+    "execution": 741,
+    "batch": "099",
+    "contentSnapshot": "749ea11b0c9a43d13577b104cd5fe33d9e864e62",
+    "coordinatorHead": "0bf41ac087ce23f412e327c24af7abd33f0ec767",
+    "qualifiedAndroidHead": "bf30cdead8515739bc0e671d57a54b9a3109dd46",
+    "reviewer": "Coordinator, GPT-6.1 Sol; not independent content-review credit",
+    "actualImagesViewed": {
+      "originalFontPanels": [
+        "n1-099-font-panel-1.png",
+        "n1-099-font-panel-2.png"
+      ],
+      "contactSheets": [
+        "sheet-01.png",
+        "sheet-02.png",
+        "sheet-03.png",
+        "sheet-04.png",
+        "sheet-05.png",
+        "sheet-06.png",
+        "sheet-07.png",
+        "sheet-08.png",
+        "sheet-09.png",
+        "sheet-10.png"
+      ],
+      "routeOriginalsRepresented": 39,
+      "totalOriginalPngs": 41,
+      "readDepth": "Two original font panels through the image tool and ten 1000x2260 contact sheets representing 39 route originals as thumbnails. Not 41 separate full-resolution reads."
+    },
+    "glyphInspection": {
+      "scope": "12 scoped Han, two words and four production families, exactly as named in font-raster.json and both panels.",
+      "observed": "All 12 Han and both words are readable. Modern surplus character and older form differ in their left block; ride lacks the right-hand blade; sword and rule have distinct left blocks. The blade radical is visible in all four rows. No blank, replacement box or materially misleading glyph established in this capture.",
+      "nativePaintIndividualProbes": 48,
+      "nativePaintWholeWordProbes": 8,
+      "fallbackFaceIdentified": false,
+      "limit": "Paint hasGlyph/nonblank/hash checks are not legibility or actual font-face identification. This is API35 emulator evidence, not physical-phone acceptance."
+    },
+    "routeInspection": [
+      "N1 selection displays 131 cards, one meaning due and one reading due. Meaning question and feedback are legible, with remainder; surplus amount correct and pig; pork / sword; double-edged blade / cocoon wrong. These displayed alternatives are semantically distinct.",
+      "The 64 captured production N1/All/custom builder outputs contain 35 unique kanji/title pairs. Their sampled distractors have distinct ordinary displayed senses from remainder/surplus. The formerly overlapping superfluous/redundant candidate does not occur in these 64 outputs. This is bounded semantic inspection, not proof for every possible pool or arbitrary seed.",
+      "Reading question offers only the curated on reading as correct; the wrong readings are distinct. Feedback and session-complete screenshots show the correct on reading and one of one answers correct. Full raw readings remain reference text in feedback, not additional queued kun questions.",
+      "Eleven numbered reference strokes, injected tracing and successful ungraded shape practice are visible. Recall gives up and displays the reference; it does not demonstrate successful recall or human handwriting. The offline handwriting model is unavailable, as disclosed by the UI.",
+      "The meaning, explicitly non-etymological shape mnemonic, four reading rows, source-only/spelling/curation qualifications, common words, older form and source notes render. Reciprocal links through the reused excess word and beyond kanji, and system Back returns, appear at their captured positions.",
+      "Reading tables explicitly instruct sideways scrolling and have complementary horizontal offsets. Some cell text lies outside individual captures; no claim that every character fits in one frame. The final notes distinguish noun remainder from the separately treated dated adverbial use."
+    ],
+    "guardDisposition": {
+      "mechanical": "Both imported target orientations, seven pool scenarios and 16 seeds per scenario pass the direct symmetric exclusion assertions, including pair-only and target-outside-pool. Pool membership and order are now captured.",
+      "scope": "224 sampled kanji guard cases, 64 existing surplus choice cases, 896 preserved word guard cases. Normal and padding ViewModel mappings separately passed six fresh HOST cases in execution740.",
+      "limits": "Not universal synonym detection, transitive exclusions, exhaustive pool certification or old-client protection. Original733 missing pool capture and Claude overlapping-tool deviation remain historical; these new results do not retroaccept them.",
+      "independentRenderedConfirmation": "Pending with original reviewer sessions; no independent reviewer launched in741."
+    },
+    "coordinatorObservedActionableDefect": false,
+    "independentRenderedReviewClosed": false,
+    "runtimeAccepted": false,
+    "runtimePublished": false,
+    "physicalPhoneAcceptance": "outstanding",
+    "generalReleaseAcceptance": "outstanding"
+  },
+  "artifactIndex": "docs/n1-reviews/batch-099-guard-native-741/artifact-index.json",
+  "artifactCount": 70,
+  "nativeExecuted": true,
+  "nativeMechanicalChecksPassed": true,
+  "freshHostAcceptance": "execution740: six tests, zero failures/errors/skips, retained unchanged.",
+  "independentReviewersLaunched": 0,
+  "independentRenderedReviewClosed": false,
+  "runtimeChanged": false,
+  "manifestChanged": false,
+  "runtimeAccepted": false,
+  "runtimePublished": false,
+  "original733734Retroaccepted": false,
+  "parentLockTouched": false,
+  "optionalHistoricalHelpersAccessed": false,
+  "actualNewPermissionDenials": [],
+  "publishedAdditions": 125,
+  "remainingAdditions": 1103,
+  "lastPublishedCommit": "d5a376ee2b014aae3c47c58eea47b327e44be6d2",
+  "physicalPhoneAcceptance": "outstanding",
+  "generalReleaseAcceptance": "outstanding",
+  "wholeProjectComplete": false,
+  "nextBatchStarted": false,
+  "nextAction": "SAME099 necessary ORIGINAL-session dependent rendered/guard confirmations SERIAL: Claude2ac79fdb opus5.5 then GPT240faa46 gpt6.1sol as necessary, bounded shared evidence. Preserve actual process exits and tool execution behavior. No new blind review credit, original733734 retroacceptance or repeated-read loop. All normal review/integration/acceptance/publication gates remain; no100/unreviewedpush.",
+  "limits": "API35 emulator, not phone. Sampled pools, not universal synonym detection. Full production import once; disposable seeded due state and injected strokes, not owner progress or human recall. Raw instrumentation and all41 PNGs preserved. Coordinator inspection is not independent review closure."
+}
