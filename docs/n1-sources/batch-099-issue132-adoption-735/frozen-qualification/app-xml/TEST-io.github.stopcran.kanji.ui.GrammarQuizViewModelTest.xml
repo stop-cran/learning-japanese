@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2026-11-07T16:51:55.282Z" hostname="TRAIN" time="1.548">
+  <properties/>
+  <testcase name="leavingKeepsPendingReviewsAndExtraPracticeStartsANewSession" classname="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" time="0.125"/>
+  <testcase name="articleReferencesCaptureDistinctTopicsBeforeContentAndSettingsChange" classname="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" time="0.07"/>
+  <testcase name="lookupPreservesChoiceDraftAnswerAndExportedSessionWithoutProgressMutations" classname="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" time="0.102"/>
+  <testcase name="typingDoesNotAcceptAnUnlistedExtension" classname="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" time="0.067"/>
+  <testcase name="singleEligibleExerciseIsAskableAndChangingScopeDoesNotChangeTheSessionSnapshot" classname="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" time="0.116"/>
+  <testcase name="repeatedNextCallbackCannotRecordOrCommitAFocusTwice" classname="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" time="0.139"/>
+  <testcase name="emptyNewScopeStillOffersOutOfScopeDueReviews" classname="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" time="0.074"/>
+  <testcase name="givingUpInEitherPresentationRecordsAnEmptyAgainNotTheDraft" classname="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" time="0.066"/>
+  <testcase name="wrongChoiceCanReturnAsTypingWithoutCreatingAnotherSchedule" classname="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" time="0.074"/>
+  <testcase name="rankedSessionMatchesHomeMixesDueReviewsAndCommitsOnlyItsBoundedNewGroup" classname="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" time="0.104"/>
+  <testcase name="familiarityAndWordArticlesAreSourceScopedSnapshotsAcrossSyncAndSourceChanges" classname="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" time="0.103"/>
+  <testcase name="choiceAndTypingRecordGoodAndGuessedChoiceRecordsHard" classname="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" time="0.106"/>
+  <testcase name="successfulPracticeConfirmationAddsNeitherLogNorResponseNorSrsRepetition" classname="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" time="0.092"/>
+  <testcase name="extraPracticeFiltersUnseenItemsButKeepsEarlyReviewsAndIgnoresTheDailyCap" classname="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" time="0.078"/>
+  <testcase name="typingTrimsAndNfkcNormalizesBothInputAndAcceptedAlternatives" classname="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" time="0.061"/>
+  <testcase name="pendingEpochBlocksRestrictedNewItemsButNotAllOrStartedExtraPractice" classname="io.github.stopcran.kanji.ui.GrammarQuizViewModelTest" time="0.17"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[System.logW: A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+java.lang.Throwable: Explicit termination method 'close' not called
+	at dalvik.system.CloseGuard.$$robo$$dalvik_system_CloseGuard$open(CloseGuard.java:221)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.robolectric.shadows.ShadowCloseGuard$CloseGuardReflector$$Reflector15.open(Unknown Source)
+	at org.robolectric.shadows.ShadowCloseGuard.open(ShadowCloseGuard.java:38)
+	at dalvik.system.CloseGuard.open(CloseGuard.java)
+	at android.database.sqlite.SQLiteConnection.$$robo$$android_database_sqlite_SQLiteConnection$__constructor__(SQLiteConnection.java:172)
+	at android.database.sqlite.SQLiteConnection.<init>(SQLiteConnection.java:163)
+	at android.database.sqlite.SQLiteConnection.$$robo$$android_database_sqlite_SQLiteConnection$open(SQLiteConnection.java:192)
+	at android.database.sqlite.SQLiteConnection.open(SQLiteConnection.java)
+	at android.database.sqlite.SQLiteConnectionPool.$$robo$$android_database_sqlite_SQLiteConnectionPool$openConnectionLocked(SQLiteConnectionPool.java:503)
+	at android.database.sqlite.SQLiteConnectionPool.openConnectionLocked(SQLiteConnectionPool.java)
+	at android.database.sqlite.SQLiteConnectionPool.$$robo$$android_database_sqlite_SQLiteConnectionPool$open(SQLiteConnectionPool.java:204)
+	at android.database.sqlite.SQLiteConnectionPool.open(SQLiteConnectionPool.java)
+	at android.database.sqlite.SQLiteConnectionPool.$$robo$$android_database_sqlite_SQLiteConnectionPool$open(SQLiteConnectionPool.java:196)
+	at android.database.sqlite.SQLiteConnectionPool.open(SQLiteConnectionPool.java)
+	at android.database.sqlite.SQLiteDatabase.$$robo$$android_database_sqlite_SQLiteDatabase$openInner(SQLiteDatabase.java:880)
+	at android.database.sqlite.SQLiteDatabase.openInner(SQLiteDatabase.java)
+	at android.database.sqlite.SQLiteDatabase.$$robo$$android_database_sqlite_SQLiteDatabase$open(SQLiteDatabase.java:865)
+	at android.database.sqlite.SQLiteDatabase.open(SQLiteDatabase.java)
+	at android.database.sqlite.SQLiteDatabase.$$robo$$android_database_sqlite_SQLiteDatabase$openDatabase(SQLiteDatabase.java:739)
+	at android.database.sqlite.SQLiteDatabase.openDatabase(SQLiteDatabase.java)
+	at android.database.sqlite.SQLiteDatabase.$$robo$$android_database_sqlite_SQLiteDatabase$createInMemory(SQLiteDatabase.java:920)
+	at android.database.sqlite.SQLiteDatabase.createInMemory(SQLiteDatabase.java)
+	at android.database.sqlite.SQLiteOpenHelper.$$robo$$android_database_sqlite_SQLiteOpenHelper$getDatabaseLocked(SQLiteOpenHelper.java:350)
+	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java)
+	at android.database.sqlite.SQLiteOpenHelper.$$robo$$android_database_sqlite_SQLiteOpenHelper$getWritableDatabase(SQLiteOpenHelper.java:298)
+	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java)
+	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getWritableOrReadableDatabase(FrameworkSQLiteOpenHelper.android.kt:224)
+	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.innerGetDatabase(FrameworkSQLiteOpenHelper.android.kt:167)
+	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getSupportDatabase(FrameworkSQLiteOpenHelper.android.kt:141)
+	at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper.getWritableDatabase(FrameworkSQLiteOpenHelper.android.kt:96)
+	at androidx.room.driver.SupportSQLiteDriver.open(SupportSQLiteDriver.android.kt:26)
+	at androidx.room.driver.SupportSQLiteConnectionPool.getSupportConnection(SupportSQLiteConnectionPool.android.kt:35)
+	at androidx.room.driver.SupportSQLiteConnectionPool.useConnection(SupportSQLiteConnectionPool.android.kt:42)
+	at androidx.room.RoomConnectionManager.useConnection(RoomConnectionManager.android.kt:126)
+	at androidx.room.RoomDatabase.useConnection$room_runtime_release(RoomDatabase.android.kt:593)
+	at androidx.room.util.DBUtil__DBUtil_androidKt$performSuspending$$inlined$compatCoroutineExecute$DBUtil__DBUtil_androidKt$1.invokeSuspend(DBUtil.android.kt:113)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+]]></system-err>
+</testsuite>

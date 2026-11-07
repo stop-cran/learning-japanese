@@ -1,0 +1,28 @@
+Title: Kanji meaning quiz: explicit semantic-pair exclusions through import, cache and filtered pools
+
+Authorization: Owner approved 2026-11-07: "Ok, approve, please proceed" after the proposed narrow prerequisite work item, independent review, implementation and sequential N1 resumption.
+
+Problem: N1 issue stop-cran/learning-japanese#60 batch099 is blocked at execution734 (content309189fc; teaching70dfe334; qualifiedAndroid1c1b7bf4). Native733 production randomN1Subset seeds4/7 show superfluous; redundant (冗) as a wrong option for remainder; surplus amount (剰). Frozen complete KANJIDIC2/JMdict entries and the original two model-family follow-ups support overlapping meanings. Distinct title strings and curated distractors do not protect arbitrary filtered pools.
+
+Scope and proposed contract:
+- Optional kanji front matter quiz_exclusions lists exact single-code-point kanji IDs. Omitted/empty preserves legacy behavior. Strict inline-string-list declaration; reject malformed/duplicate/shadowed/self/unsafe/non-character entries. Missing references are checked against the accepted full corpus after duplicate-title filtering, not the current selected pool; skip invalid referring cards with a clear problem, including dangling-reference cascades.
+- Either endpoint declaring a pair excludes co-occurrence in the meaning question: target versus distractor and among chosen distractors. Direct, symmetric, non-transitive; do not infer synonyms or transitive cliques. Check curated and tag/random fallback paths; fewer options are allowed without restoring excluded candidates, including target-only in a fully excluded pool consistent with existing word behavior.
+- Carry metadata through KanjiCard, Room cache/default-preserving migration, every slim DAO projection, import mapping and BOTH QuizViewModel normal and borrowed-padding mappings. Preserve stable IDs/source/stack, all schedules/logs, full readings and nullable curated readings, ordering, stroke data and unrelated metadata.
+- Source-scoped accepted parser epoch for meaning metadata forces reimport even at unchanged remote HEAD/contentVersion and launch throttle; advance only after successful transactional replacement, preserve prior snapshot/epoch on failure. Prefer explicit meaning epoch rather than mislabeling the reading epoch.
+- Update authoring validation/tests and both format/design contracts. Author only the evidenced narrow 剰/冗 declaration after the mechanism exists; no speculative bulk exclusions, title distortions, membership/level/readings changes or ignored compatibility fields.
+- Optional metadata remains readable by older clients but old clients do NOT enforce the new guard; document the required upgraded compatible client and bounded owner-testing scope honestly. Do not claim existing installed APKs fixed, universal semantic uniqueness, phone/general-release acceptance or a new mandatory schema migration protecting older readers.
+
+Implementation isolation:
+- Fresh app worktree/branch based on latest fetched main, currently e46106de. Preserve canonical dirty checkouts and paused N1 trees.
+- Independently review plan before implementation; reconcile and post owner comment. Independently review uncommitted implementation before normal signed publication and exact green CI.
+- Adopt only the approved narrow prerequisite onto the qualified frozen-production N1 branch as a normal signed backport, with exact delta and regression qualification; do not adopt unrelated newer production/localization behavior.
+- Content tools and docs changes integrate current main without overwriting existing N1 evidence. N1 coordinator completes/reviews actual content declaration and integrated native replay before delivering099.
+
+Acceptance:
+- Regression replays original saved randomN1Subset pools seeds4/7; prove pre-fix exposure and post-fix removal with the actual titles, both target orientations, one-sided declarations and target outside the supplied pool.
+- Curated and fallback candidates, filtered/tag/All pools, direct-not-transitive pairs, distractor-to-distractor pairs, undersized pools, missing curated IDs and unchanged omitted metadata behavior.
+- Strict parser and validator agreement for absent/empty/valid supplementary-plane kanji/malformed values, duplicate/shadowed declarations, bad IDs and missing/rejected references. Preserve word metadata semantics.
+- Real parse -> Room -> full/slim DAO -> QuizCard -> options mapping; normal and padding VM paths. Migration/reopen preserves existing progress and defaults. Unchanged-HEAD/contentVersion/throttle epoch success/failure tests, source isolation.
+- Existing targeted JVM suites, Detekt, lint and boundary/build checks. Existing N1 fresh corpus/font HOST gates at unchanged2g; native099 needs changed baseline replay and original reviewer dependent confirmations.
+- Preserve execution734 finding/raw reviewer audit. Claude's9tool-overlap starts contradict its serial-read claim: obtain only necessary compliant dependent confirmation and preserve the original report unchanged. No blind-review credit or repeated-read loop.
+- Sequential heavy stages and reviewers, exactlyone writer/atmostone reviewer. No native device/port/process interference; explicit owned-device checks. No signing bypass, force push, heap/archive-budget increase or unreviewed content publication.

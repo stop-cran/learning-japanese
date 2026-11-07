@@ -1,0 +1,9 @@
+Independent read-only review: general-purpose subagent; exact model unavailable. Verdict NEEDS ADJUSTMENT: main uses Room19 while frozen production uses17; independently assigning18 in a backport would create incompatible schema identities. Preserve17->18 language columns,18->19 accepted_source, then use SAME19->20 exclusion/meaning-epoch migration and same exported20 identity on both branches. Test frozen17->backport20->main20 reopen, not merely two independent upgrades.
+
+Reconciliation: accepted. Main implementation uses20. Frozen qualification carries only structural main17->19 migrations/entities/default columns required for SAME20 schema compatibility, plus the narrow guard; it does not activate locale/source-selection behavior or adopt unrelated production changes. Verify exact schema20 identity and actual database reopen across both applications. If that structural-only backport cannot be validated, stop rather than invent a divergent version.
+
+Also accepted: saved native733 fixture constructs four-field QuizCards; add metadata to actual fixture mapping before replay. Preserve exact original randomN1Subset membership/order/seeds4/7 and pre-fix output as regression data, not regenerated subsets. Target-only options match existing word behavior; no unrelated session redesign.
+
+Reviewer inspected plan/issue132, main DESIGN/parser/frontmatter/models/builder/Room/sync/VM/Words/migration-test setup, content validator and saved native fixture. No edits/tests/native execution or independent re-verification of dictionary claims. Serial tools reported; actual model unavailable.
+
+Implementation remains authorized by owner "Ok, approve, please proceed". Independent uncommitted code review, tests/static gates/normal signing/exact green CI, qualified frozen backport and necessary native/original-reviewer confirmation remain required before099 delivery.

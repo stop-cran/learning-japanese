@@ -1,0 +1,288 @@
+{
+  "base": "1c1b7bf42cc91d820a93169f1088dc647ac51c0d",
+  "preservedOldBranch": "n1/issue-130-test-loader",
+  "branch": "n1/issue-132-meaning-exclusions",
+  "uncommittedTree": "8d1d8345da7a862d133f08713d489670d8af67c4",
+  "mainCommit": "2edbf366a4a6fce594b2a6580bfc4252b98d3f6d",
+  "mainCleanAfterTemporaryTestHelperRemoval": true,
+  "exactAllowedChangedFiles": [
+    ".github\\copilot-instructions.md",
+    "app\\schemas\\io.github.stopcran.kanji.data.AppDatabase\\18.json",
+    "app\\schemas\\io.github.stopcran.kanji.data.AppDatabase\\19.json",
+    "app\\schemas\\io.github.stopcran.kanji.data.AppDatabase\\20.json",
+    "app\\src\\main\\java\\io\\github\\stopcran\\kanji\\KanjiApp.kt",
+    "app\\src\\main\\java\\io\\github\\stopcran\\kanji\\data\\ContentSync.kt",
+    "app\\src\\main\\java\\io\\github\\stopcran\\kanji\\data\\Database.kt",
+    "app\\src\\main\\java\\io\\github\\stopcran\\kanji\\data\\SrsMapping.kt",
+    "app\\src\\main\\java\\io\\github\\stopcran\\kanji\\ui\\QuizViewModel.kt",
+    "app\\src\\test\\java\\io\\github\\stopcran\\kanji\\data\\ContentSyncTest.kt",
+    "app\\src\\test\\java\\io\\github\\stopcran\\kanji\\data\\DatabaseMigrationTest.kt",
+    "app\\src\\test\\java\\io\\github\\stopcran\\kanji\\data\\GrammarCurriculumMigrationTest.kt",
+    "app\\src\\test\\java\\io\\github\\stopcran\\kanji\\data\\ListeningStudyTest.kt",
+    "app\\src\\test\\java\\io\\github\\stopcran\\kanji\\ui\\QuizViewModelTest.kt",
+    "core\\src\\main\\kotlin\\io\\github\\stopcran\\kanji\\core\\content\\ContentParser.kt",
+    "core\\src\\main\\kotlin\\io\\github\\stopcran\\kanji\\core\\content\\FrontMatter.kt",
+    "core\\src\\main\\kotlin\\io\\github\\stopcran\\kanji\\core\\content\\KanjiMeaningMetadata.kt",
+    "core\\src\\main\\kotlin\\io\\github\\stopcran\\kanji\\core\\content\\Models.kt",
+    "core\\src\\main\\kotlin\\io\\github\\stopcran\\kanji\\core\\quiz\\QuizBuilder.kt",
+    "core\\src\\test\\kotlin\\io\\github\\stopcran\\kanji\\core\\ContentTest.kt",
+    "core\\src\\test\\kotlin\\io\\github\\stopcran\\kanji\\core\\KanjiMeaningMetadataTest.kt",
+    "core\\src\\test\\kotlin\\io\\github\\stopcran\\kanji\\core\\QuizBuilderTest.kt",
+    "docs\\CONTENT-SCHEMA.md",
+    "docs\\DESIGN.md"
+  ],
+  "allProductionDiffsInspected": true,
+  "bridge": "Only sync_meta EN/ja default columns and unused accepted_source entity/table; no DAO, locale/source-selection/manifest-language/UI/resource adoption. Older migrations unchanged.",
+  "schemas": {
+    "17": {
+      "identity": "80df037c68b7911ce312bbdb70ea3fa7",
+      "sha256": "da8978c3c27e2d17b7b558cef5a2717b4d2fafb4690a11218bceead225a94bee",
+      "byteIdenticalToMain": true
+    },
+    "18": {
+      "identity": "49be7c788534f65d6a607b8fb2a1b805",
+      "sha256": "f276dc98c36bfc3cc05e69cdf6941b5d2a9d51601724ff1dbacf00017cd4d91d",
+      "byteIdenticalToMain": true
+    },
+    "19": {
+      "identity": "941c2651a9e34c589ff26ef1e19fde4e",
+      "sha256": "28fdd56d1eaa7c63f873972af42b91a276f53c99963457df929ac72d33c77b63",
+      "byteIdenticalToMain": true
+    },
+    "20": {
+      "identity": "39f8edf5a5a58d6c0a4ee0a3e7d55f00",
+      "sha256": "59b0a80b745f2ba1612af914a5bcca5bab9ac8a00e85e0cc23b98dfbb5173b49",
+      "byteIdenticalToMain": true
+    }
+  },
+  "tests": {
+    "core-xml": {
+      "tests": 53,
+      "cases": [
+        {
+          "suite": "io.github.stopcran.kanji.core.ContentTest",
+          "tests": 38,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "io.github.stopcran.kanji.core.KanjiMeaningMetadataTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "io.github.stopcran.kanji.core.QuizBuilderTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "io.github.stopcran.kanji.core.RealContentTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      ]
+    },
+    "app-xml": {
+      "tests": 92,
+      "cases": [
+        {
+          "suite": "io.github.stopcran.kanji.core.RareHanTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "io.github.stopcran.kanji.data.ContentSyncTest",
+          "tests": 29,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "io.github.stopcran.kanji.data.DatabaseMigrationTest",
+          "tests": 12,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "io.github.stopcran.kanji.data.GrammarCurriculumMigrationTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "io.github.stopcran.kanji.data.KanjiReadingMigrationTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "io.github.stopcran.kanji.data.KanjiReadingSyncTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "io.github.stopcran.kanji.data.ListeningStudyTest",
+          "tests": 12,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "io.github.stopcran.kanji.ui.CounterQuizViewModelTest",
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "io.github.stopcran.kanji.ui.GrammarQuizViewModelTest",
+          "tests": 16,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "io.github.stopcran.kanji.ui.QuizViewModelTest",
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      ]
+    },
+    "main-reopen-xml": {
+      "tests": 1,
+      "cases": [
+        {
+          "suite": "io.github.stopcran.kanji.data.Issue132CrossBranchReopenTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      ]
+    },
+    "fresh-host-core-xml": {
+      "tests": 3,
+      "cases": [
+        {
+          "suite": "io.github.stopcran.kanji.core.RealContentTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      ]
+    },
+    "fresh-host-app-xml": {
+      "tests": 1,
+      "cases": [
+        {
+          "suite": "io.github.stopcran.kanji.core.RareHanTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "hostQualifier": {
+    "init": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\batch-065-host-integration-heap.init.gradle",
+    "initSha256": "438159ae22b313e8196a0bc011f72a3b17300146b219c5ffcc779c540a64be24",
+    "coreHeap": "2g",
+    "maxWorkers": 1,
+    "rerunTasks": true,
+    "parallel": false,
+    "freshTests": 4,
+    "skipped": 0
+  },
+  "databases": {
+    "issue132-frozen17-to20.db": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\issue132-frozen17-to20.db",
+      "bytes": 299008,
+      "sha256": "6eee1b92514139ad60f59644f6a631f7e4d478cc796abf30cd8c5c39f727534a",
+      "identity": "39f8edf5a5a58d6c0a4ee0a3e7d55f00",
+      "integrity": "ok",
+      "sidecars": {
+        "-wal": false,
+        "-shm": false,
+        "-journal": false
+      },
+      "rowCounts": {
+        "kanji": 2,
+        "sync_meta": 2,
+        "review_state": 2,
+        "review_log": 2,
+        "accepted_source": 0
+      }
+    },
+    "issue132-main20-reopened.db": {
+      "path": "C:\\Users\\stop-\\n1-kanji-workspace\\control\\issue132-main20-reopened.db",
+      "bytes": 299008,
+      "sha256": "6eee1b92514139ad60f59644f6a631f7e4d478cc796abf30cd8c5c39f727534a",
+      "identity": "39f8edf5a5a58d6c0a4ee0a3e7d55f00",
+      "integrity": "ok",
+      "sidecars": {
+        "-wal": false,
+        "-shm": false,
+        "-journal": false
+      },
+      "rowCounts": {
+        "kanji": 2,
+        "sync_meta": 2,
+        "review_state": 2,
+        "review_log": 2,
+        "accepted_source": 0
+      }
+    }
+  },
+  "inspectionGeneratedEmptySidecarsRemoved": [
+    {
+      "database": "issue132-frozen17-to20.db",
+      "emptyWalBytes": 0,
+      "shmBytes": 32768
+    },
+    {
+      "database": "issue132-main20-reopened.db",
+      "emptyWalBytes": 0,
+      "shmBytes": 32768
+    }
+  ],
+  "corpus": {
+    "head": "309189fcda2723ddcf652a9ae5cba7c807d24872",
+    "clean": true,
+    "manifestSha256": "36a233da65a3c83decf62f22ba2979ae0e55fc4718068554fe2f005844348d2e",
+    "contentVersion": "5408632b5aa1382c"
+  },
+  "staticChecks": {
+    "detekt": "passed",
+    "coreJvmBoundary": "passed",
+    "gitDiffCheck": "passed"
+  },
+  "earlierFailuresPreserved": [
+    "issue132-frozen-host-targeted.log: optional export changed inferred JUnit return type; fixed with runBlocking<Unit>",
+    "issue132-crossbranch-main20-reopen.log: temporary helper used unsupported generic getApplication; corrected"
+  ],
+  "notRun": [
+    "native/device/emulator",
+    "release signing/build",
+    "GitHub publication/CI for frozen branch"
+  ],
+  "newCommits": false,
+  "pushes": false
+}
