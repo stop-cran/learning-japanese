@@ -1,0 +1,11 @@
+python -X utf8 -B control\prepare-batch-099-guard-native-737.py start
+Traceback (most recent call last):
+  File prepare-batch-099-guard-native-737.py, line 241, in <module>
+    {"start": start, "prepare": prepare}[sys.argv[1]]()
+  File prepare-batch-099-guard-native-737.py, line 81, in start
+    save(C / "progress.json", p)
+  File prepare-batch-099-guard-native-737.py, line 33, in save
+    temp.replace(path)
+  File pathlib.py, line 1376, in replace
+    os.replace(self, target)
+PermissionError: [WinError 5] Access is denied: 'C:\Users\stop-\n1-kanji-workspace\control\progress.json.737.tmp' -> 'C:\Users\stop-\n1-kanji-workspace\control\progress.json'
