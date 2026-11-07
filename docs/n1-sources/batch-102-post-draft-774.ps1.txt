@@ -1,0 +1,23 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$log = "$control\logs\9bcae3c2-8513-424c-b948-7868e1fd3719"
+& "$control\preflight-774.ps1"
+python -X utf8 -B "$control\checkpoint-draft-774.py" issue
+if ($LASTEXITCODE -ne 0) { throw 'Issue body preflight failed' }
+try {
+    $env:GH_TOKEN = (gh auth token --user stop-cran).Trim()
+    if ($LASTEXITCODE -ne 0 -or -not $env:GH_TOKEN) { throw 'Owner token unavailable' }
+    $who = gh api user --jq .login
+    if ($LASTEXITCODE -ne 0 -or $who.Trim() -ne 'stop-cran') { throw 'Wrong process-scoped publication identity' }
+    gh api --method POST repos/stop-cran/learning-japanese/issues/60/comments --input "$control\issue-request-774.json" > "$log\issue-774-created.json"
+    if ($LASTEXITCODE -ne 0) { throw 'Owner issue update failed' }
+    $posted = Get-Content "$log\issue-774-created.json" -Raw | ConvertFrom-Json
+    gh api "repos/stop-cran/learning-japanese/issues/comments/$($posted.id)" > "$log\issue-774-verified.json"
+    if ($LASTEXITCODE -ne 0) { throw 'Owner issue read-back failed' }
+    $verified = Get-Content "$log\issue-774-verified.json" -Raw | ConvertFrom-Json
+    $expected = Get-Content "$control\batch-102-draft-774-issue.txt" -Raw
+    if ($verified.user.login -ne 'stop-cran' -or $verified.body -cne $expected) { throw 'Owner issue identity/body mismatch' }
+    Write-Output $verified.html_url
+} finally {
+    Remove-Item Env:\GH_TOKEN -ErrorAction SilentlyContinue
+}
