@@ -1,0 +1,63 @@
+import gzip
+import hashlib
+import json
+from pathlib import Path
+import shutil
+
+C = Path(__file__).resolve().parent
+R = C.parent / "learning-japanese"
+T = R / "docs" / "n1-reviews" / "batch-101-rendered-769"
+L = C / "logs" / "3283cad3-fbaf-4988-8a3c-f220b9788257"
+evidence_path = R / "docs" / "n1-sources" / "execution-769.json"
+evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+assert "precommitValidation" not in evidence
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+for receipt in evidence["receipts"]:
+    path = R / receipt["archive"]
+    assert sha(path) == receipt["archiveSha256"]
+    if path.name not in {
+        "batch-101-rendered-769-packet.txt", "batch-101-rendered-769-cli-config.txt"
+    }:
+        continue
+    compressed = path.with_suffix(path.suffix + ".gz")
+    assert not compressed.exists()
+    compressed.write_bytes(gzip.compress(path.read_bytes(), mtime=0))
+    assert gzip.decompress(compressed.read_bytes()) == path.read_bytes()
+    receipt.update(archive=compressed.relative_to(R).as_posix(),
+                   archiveSha256=sha(compressed), losslessGzip=True)
+    path.unlink()
+
+for name in ["validate-precommit-769.txt", "manifest-precommit-769.txt"]:
+    source = L / name
+    text = source.read_text(encoding="utf-8-sig")
+    if name.startswith("validate"):
+        assert text.rstrip().endswith("0 error(s)")
+    else:
+        assert "8455 files" in text and "6e9b74967e21fc3c" in text
+    target = T / (name + ".gz")
+    assert not target.exists()
+    target.write_bytes(gzip.compress(source.read_bytes(), mtime=0))
+    assert gzip.decompress(target.read_bytes()) == source.read_bytes()
+    evidence["receipts"].append({
+        "source": str(source), "archive": target.relative_to(R).as_posix(),
+        "sourceSha256": sha(source), "archiveSha256": sha(target), "losslessGzip": True,
+    })
+recipe = T / (Path(__file__).name + ".txt")
+assert not recipe.exists()
+shutil.copyfile(Path(__file__), recipe)
+evidence["receipts"].append({
+    "source": str(Path(__file__)), "archive": recipe.relative_to(R).as_posix(),
+    "sourceSha256": sha(Path(__file__)), "archiveSha256": sha(recipe),
+})
+evidence["precommitValidation"] = {
+    "validatorErrors": 0, "manifestRegenerated": True, "manifestBytesUnchanged": True,
+    "contentVersion": "6e9b74967e21fc3c", "runtimeFiles": 8455,
+    "diagnostic": "First staged diff --check rejected preserved diff-context trailing spaces and CLI help trailing empty line before signing ran. Exact packet/help bytes now losslessly gzipped, not trimmed or rewritten. Reports and reviewed control packet unchanged.",
+}
+evidence_path.write_text(json.dumps(evidence, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+print("Preserved exact packet/help and validation logs losslessly; no reviewer input altered.")

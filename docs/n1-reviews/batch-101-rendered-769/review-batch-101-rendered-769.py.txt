@@ -1,0 +1,359 @@
+import base64
+import gzip
+import hashlib
+import io
+import json
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+from datetime import datetime, timezone
+import xml.etree.ElementTree as ET
+
+from PIL import Image
+
+C = Path(__file__).resolve().parent
+R = C.parent / "learning-japanese"
+A = C.parent / "kanji-cards-android"
+V = R / "docs" / "n1-reviews"
+N = V / "batch-101-native-768"
+L = C / "logs" / "3283cad3-fbaf-4988-8a3c-f220b9788257"
+HEAD = "69f542a1bc0b30ee0fba20f45f02aadcd9c30ce5"
+TEACHING = "7f275e0de16fe3a4588fac1845af5af80d487415"
+APP = "bf30cdead8515739bc0e671d57a54b9a3109dd46"
+PACKET = C / "batch-101-rendered-769-packet.txt"
+SESSIONS = {
+    "claude": ("claude-opus-5.5", "3bed863f-b19d-4de6-9a11-1ba15e409a84"),
+    "gpt": ("gpt-6.1-sol", "d82fb475-a4fb-4ea4-9da9-945d176127cd"),
+}
+IMAGES = [N / "native" / f"n1-101-font-panel-{i}.png" for i in range(1, 4)]
+IMAGES += [N / "contact-sheets" / f"sheet-{i:02d}.png" for i in range(1, 9)]
+IMAGES += [N / "native" / ("n1-101-" + name + ".png") for name in [
+    "meaning-question", "article-01", "article-07", "article-08", "article-13", "article-15",
+    "article-22", "koseki-components", "seiko-components", "sei-new-reciprocal",
+    "seki-counterpart-reciprocal", "curated-on-question", "curated-on-feedback",
+    "curated-one-key-done", "drawing-recall-feedback",
+]]
+
+
+def load(path):
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def save(path, data):
+    path.write_text(json.dumps(data, ensure_ascii=True, indent=2) + "\n", encoding="utf-8")
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def now():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def git(*args, root=R):
+    return subprocess.check_output(["git", "--no-pager", "-C", str(root), *args],
+                                   encoding="utf-8").rstrip("\r\n")
+
+
+def absent(pid):
+    result = subprocess.run(["pwsh", "-NoProfile", "-Command",
+                             f"if(Get-Process -Id {pid} -ErrorAction SilentlyContinue){{exit 1}}"])
+    return result.returncode == 0
+
+
+def frozen():
+    for root, expected in ((R, HEAD), (A, APP)):
+        assert git("rev-parse", "HEAD", root=root) == expected
+        assert git("log", "-1", "--format=%G?", root=root) == "G"
+        assert not git("status", "--porcelain", "--untracked-files=all", root=root)
+    state, runner = load(C / "progress.json"), load(C / "runner.json")
+    assert (state["checkpoint"], state["batch"], state["status"]) == (768, "101", "continue")
+    assert (runner["pid"], runner["sessionId"], runner["status"]) == (5920, L.name, "running")
+    assert not absent(5920)
+    assert not load(L / "preflight-769.json")["lockTouched"]
+    assert not git("diff", TEACHING, HEAD, "--",
+                   "kanji", "words", "articles", "strokes", "manifest.json", "tools")
+
+
+def prepare():
+    frozen()
+    before = load(C / "progress.json")
+    assert not PACKET.exists() and "execution769StartingState" not in before
+    raw = (L / "request.txt").read_bytes()
+    text = raw.decode("utf-8-sig")
+    embedded = json.loads(text.split(
+        "Current execution checkpoint (complete historical state remains at checkpointHistory paths):", 1)[1])
+    snapshot_checkpoint = dict(embedded["execution768CoordinatorCheckpoint"])
+    live_checkpoint = before["execution768CoordinatorCheckpoint"]
+    assert datetime.fromisoformat(snapshot_checkpoint["recordedAt"]) == datetime.fromisoformat(
+        live_checkpoint["recordedAt"])
+    snapshot_checkpoint["recordedAt"] = live_checkpoint["recordedAt"]
+    assert snapshot_checkpoint == live_checkpoint
+    shutil.copyfile(C / "progress.json", L / "progress-before-769.json")
+    state = {
+        "execution": 769, "batch": "101", "startedAt": now(), "startingHead": HEAD,
+        "androidHead": APP, "freshOriginMain": git("rev-parse", "origin/main"),
+        "scope": "SAME101 original Claude then original GPT serial dependent rendered confirmations and signed LOCAL evidence checkpoint only; no native rerun/publication/102.",
+        "request": {
+            "sha256": sha(L / "request.txt"), "bytes": len(raw), "characters": len(text),
+            "lines": len(text.splitlines()), "completeFileLoadedAndCheckpointParsed": True,
+            "limits": "Entire request decoded and complete checkpoint parsed before implementation. Operative contract, complete issue and final768 directly inspected; historical middle parsed, not freshly semantically re-reviewed. Two coordinator stdout encoding failures after successful full data loading retained.",
+        },
+        "runnerPreflight": load(L / "preflight-769.json"),
+        "artifactPathPreflight": "Approved committed source/evidence, frozen workspace inputs and durable control helpers only; optional historical-session recipes not accessed.",
+        "actualNewPermissionDenials": [],
+        "snapshotComparison": "Launcher rendered recordedAt as +01:00 and live JSON retains UTC; same instant verified, then all other checkpoint fields compared exactly. Historical values not rewritten.",
+    }
+    after = dict(before)
+    after["execution769StartingState"] = state
+    after["stage"] = "batch-101-original-session-dependent-rendered-confirmations"
+    temporary = C / "progress.json.769-start.tmp"
+    assert not temporary.exists()
+    save(temporary, after)
+    assert load(C / "progress.json") == before and load(temporary) == after
+    os.replace(temporary, C / "progress.json")
+    save(L / "starting-state-769.json", state)
+    for name, args in (("help", ["--help"]), ("config", ["help", "config"])):
+        result = subprocess.run([shutil.which("copilot"), *args], capture_output=True, check=True)
+        (C / f"batch-101-rendered-769-cli-{name}.txt").write_bytes(result.stdout)
+    catalog = (C / "batch-101-rendered-769-cli-config.txt").read_text(encoding="utf-8-sig")
+    assert all(f'"{model}"' in catalog for model, _ in SESSIONS.values())
+    for item in load(N / "artifact-index.json"):
+        assert sha(N / item["file"]) == item["storedSha256"], item["file"]
+    route = json.loads(gzip.decompress((N / "native" / "n1-101-article-route.json.gz").read_bytes()))
+    assert route["passed"] and len(route["productionBuilderN1AndAllExactChoices"]) == 64
+    assert len(route["kanjiDirectGuardChecks"]) == 2912
+    assert len(route["nontransitiveNeighborChecks"]) == 2496
+    assert len(route["preservedWordGuardChecks"]) == 896
+    native = load(R / "docs" / "n1-sources" / "execution-768.json")
+    pools = {}
+    choices = []
+    for entry in route["productionBuilderN1AndAllExactChoices"]:
+        pool = entry["pool"]
+        members = entry["poolMembershipInOrder"]
+        if pool in pools:
+            assert pools[pool] == members
+        pools[pool] = members
+        choices.append({k: v for k, v in entry.items() if k != "poolMembershipInOrder"})
+    guards = {}
+    for entry in route["kanjiDirectGuardChecks"]:
+        assert not (entry["target"] in entry["options"] and entry["excluded"] in entry["options"])
+        key = (entry["target"], entry["excluded"], entry["pool"])
+        guards[key] = guards.get(key, 0) + 1
+    compact = {k: v for k, v in route.items() if k not in {
+        "productionBuilderN1AndAllExactChoices", "kanjiDirectGuardChecks",
+        "nontransitiveNeighborChecks", "preservedWordGuardChecks",
+    }}
+    compact.update(
+        exactPoolsWithOrder=pools, all64ExactChoices=choices,
+        directGuardSummary=[dict(target=k[0], excluded=k[1], pool=k[2], checks=v)
+                            for k, v in guards.items()],
+        directGuardTotal=2912, nontransitiveNeighborTotal=2496, preservedWordGuardTotal=896,
+        rawRouteSha256=sha(N / "native" / "n1-101-article-route.json.gz"),
+        mechanicalLimits="All raw checks preserved in committed gzip; counts do not certify every legacy word label or unrestricted future choices.",
+    )
+    parts = [
+        f"DEPENDENT rendered follow-up; signed evidence HEAD {HEAD}; unchanged teaching {TEACHING}.",
+        "Not a new blind initial review. No other reviewer's report or coordinator visual opinions included. "
+        "Native assertions are supplied receipts, NOT reviewer-executed tests. "
+        "Known complete source families remain available in the original shared packet; do not claim a fresh full reread unless actually done.",
+    ]
+    sources = []
+
+    def add(path, body=None):
+        body = path.read_text(encoding="utf-8-sig") if body is None else body
+        parts.append(f"RESOURCE {path}; SHA256 {sha(path)}\n{body}")
+        sources.append({"path": str(path), "sha256": sha(path)})
+
+    for name in ["kanji/功.md", "words/功績.md", "words/成功.md", "kanji/成.md"]:
+        add(R / Path(name))
+    parts.append("EXACT ORIGINAL TEACHING DIFF:\n" + git(
+        "-c", "core.quotepath=false", "diff",
+        "b1da01c20d896866431670213d584c5ca056b096", TEACHING, "--", "kanji", "words"))
+    parts.append("TEACHING/RUNTIME DIFF FROM INITIAL REVIEW TO CURRENT HEAD (empty):\n" +
+                 git("diff", TEACHING, HEAD, "--",
+                     "kanji", "words", "articles", "strokes", "manifest.json", "tools"))
+    add(N / "contact-sheets" / "index.json")
+    add(N / "sampled-labels-and-host-delta.json")
+    parts.append("SUPPLIED NATIVE EXECUTION RECEIPT:\n" +
+                 json.dumps(native["nativeAttempt"], ensure_ascii=False, indent=2))
+    parts.append("EXACT 64 CHOICES, DEDUPLICATED POOL ORDER, GUARD RESULTS:\n" +
+                 json.dumps(compact, ensure_ascii=False, indent=2))
+    labels = load(N / "sampled-labels-and-host-delta.json")
+    new_labels = labels["newVersusHost766"]
+    assert len(new_labels) == 13
+    raw_dictionary = C / "inputs" / "n1-planning-kanjidic2.xml.gz"
+    assert sha(raw_dictionary) == "af0a499d62ac4413c614adcca360e2306490c3f64fccb3510fc7caa15f901bed"
+    xml = gzip.decompress(raw_dictionary.read_bytes())
+    assert hashlib.sha256(xml).hexdigest() == "9a000ef112b4bad8f1e6e3ca1f8e9f73ed84c93a5eae93dadfa1513081dc5db8"
+    records = {e.findtext("literal"): e for e in ET.fromstring(xml).findall("character")}
+    for char, title in new_labels:
+        path = R / "kanji" / (char + ".md")
+        add(path)
+        parts.append("COMPLETE FROZEN KANJIDIC2 CHARACTER RECORD, provenance " +
+                     str(raw_dictionary) + "; SHA256 " + sha(raw_dictionary) + "\n" +
+                     ET.tostring(records[char], encoding="unicode"))
+    parts.append("KNOWN COMPLETE SOURCE EVIDENCE (same original shared packet; no adjudication): " +
+                 str(C / "batch-101-initial-packet.txt") + "; SHA256 " +
+                 sha(C / "batch-101-initial-packet.txt") +
+                 ". Original 122 complete JMdict families, 18 raw character records and public dictionaries. "
+                 "Read as needed; inherited prior access is not a new fresh read.")
+    parts.append("VIEW ALL 26 PNGS IN ORDER, ONE CALL PER ASSISTANT MESSAGE:\n" +
+                 "\n".join(map(str, IMAGES)))
+    assert len(IMAGES) == 26 and len(set(IMAGES)) == 26
+    PACKET.write_text("\n\n".join(parts) + "\n", encoding="utf-8")
+    save(C / "batch-101-rendered-769-inputs.json", {
+        "snapshot": HEAD, "teachingSnapshot": TEACHING,
+        "packet": {"path": str(PACKET), "sha256": sha(PACKET),
+                   "bytes": PACKET.stat().st_size,
+                   "lines": len(PACKET.read_text(encoding="utf-8").splitlines())},
+        "sources": sources, "images": [{"path": str(p), "sha256": sha(p)} for p in IMAGES],
+        "originalCaptures": 34, "contactSheets": 8, "contactSheetRouteCaptures": 31,
+        "fontPanels": 3, "additionalOriginalResolutionRouteViews": 15,
+        "assignedPngViews": len(IMAGES),
+        "limits": "26 assigned views do not mean 34 separate original-resolution views. Full metadata/families inherited; 13 newly sampled label articles and full raw character records supplied here.",
+    })
+    print("Prepared", PACKET.stat().st_size, "bytes and", len(IMAGES), "PNG views", flush=True)
+
+
+def prompt(label, model, session):
+    return f"""DEPENDENT rendered confirmation in your ORIGINAL reviewer session {session}; requested actual model {model}.
+Evidence signed HEAD {HEAD}; unchanged teaching snapshot {TEACHING}. NOT a new blind initial review.
+Resource constraint: EXACTLY ONE view call per assistant message, including texts. Interpret each returned resource before next call; never batch or use a parallel wrapper. Only view is exposed; no shell, edits, delegation, other reports or coordinator visual opinions.
+FIRST read ONLY your own original report {V / ('batch-101-initial-' + label + '.md')}.
+In a SEPARATE assistant message read ENTIRE {PACKET} with forceReadLargeFiles=true, no range. Then view ALL26PNGs listed at its end IN ORDER, ONE call per message: THREE original font panels, EIGHT mapped contact sheets covering31routecaptures, FIFTEEN additional original-resolution route images. These represent34originalPNGcaptures, NOT34separately viewed originals or26independent renderings. Additional originals at {N / 'native'} available if legibility needs them. Disclose resizing/incomplete evidence. Never infer readability from hashes/hasGlyph/cmap.
+
+Assess COMPLETE new kanji\\功.md and EXACT reused words\\功績.md:28, words\\成功.md:28 and kanji\\成.md:38 navigation-only changes. Full reused articles are context, NOT full legacy rewrite assignment. Inherit OWN initial textual correctness/coverage unless captures/new evidence establish defect; reconcile OWN original runtime/fallback limits with ACTUAL evidence, no author verdict supplied. Known full original122JMdict families/18rawcharacterrecords/publicdictionary evidence accessible in original shared packet identified at end; access only as needed and distinguish inherited versus fresh reads. Thirteen newly sampled label articles/complete frozen raw character records are included.
+
+All19scopedHan across FOURproductionfonts Gothic/Mincho/Textbook/Brush in THREEpanels; especially功/加/幼/刀 and工/力. Distinguishability/readability rather than cosmetic uniformity;76individual+8wholewordPaintprobes NOT84viewedPNGs. Complete功 projection with Japanese/examples/translations and THREEreadingrows/qualifiers; horizontal reading-table scroll is intended, judge complementarycaptures rather than a static clippedcolumn. Identify actual missing evidence, not assumed visibility. Rawコウ/ク andkunいさお retained; ONLYquizOnyomi[コウ],quizKunyomi[] selected. Onlyこう offered/persistedGood/Done1of1, NOkun. Full reference readings infeedback NOTadditional offeredkeys. ク recognition supports religiouscompounds, not an exclusively/mainly religious frequencyclaim;いさお datedlexicalnoun NOTjustnanori. Merit/achievement/effect/effort distinctions; no etymology/frequency expansion.
+
+ACTUAL pictured defaultN1 options: 松 pine tree / 功 merit; achievement / 刀 sword; blade / 梨 pear tree. ONLYONE curatedwrongcard刀 is available, TWOproductionfallbacks松/梨; curated加N3/幼N2 unchanged, NOTpicturedN1choices. Assess actual64kanjibuilder records/16seeds/N1+All+boundedcustom+randomN1subset in packet including every distinct actual label/ordinary secondarymeaning:25unique native labels,13new vsHOST766. Guardlabel/provenance evidence remains in own initialpacket; directpairs績効果成達勝凱栄敬働業技工 are conservative, not universal synonyms. Check options against visibletarget and mutual ambiguity, not just stringdifference. Close fallback limit ONLY tested samples, not allfuturepools. GenericmeaningFallbackNeedsSemanticReview=true flags this task, NOTalready-proved defect.
+2912actual directkanjiguardchecks,2496nontransitiveneighborchecks and896preservedwordguardmechanicalchecks are supplied native receipts; do not certify every unchanged功績wordguard label: sixunsuppliedlegacytitles remain explicitlyUNVERIFIED/outside exactnavigationchanges. No silent broad wordsemanticpass from mechanicalcounts.
+
+N1selection133cards/meaningfeedback/reading/suppliedFIVEpinnedstrokes/injectedtrace/recall/persistence; drawing shape-only whenmodelunavailable is NOThumanhandwriting/successfulMLKit/phone. FOURallmappedpairs功-功績/績-功績/功-成功/成-成功,EIGHTdirections,TWOactivatedbaselinepairs,THREEexactreusedpassages/SystemBack/offline. Supplied fullarchive93540981 through productionContentSyncONCE imported1124kanji5073words133N1/zeroProblems/contentVersion6e9b74967e21fc3c/Roomreading+meaningEpoch1. TWOcases terminalpercase0/noskips; own helper5580stopped. These are supplied receipts NOTyourtests. QualifiedAndroid{APP} approvedpairguard+schemaonly, NOTlatestappmain. API35/defaultfontscale1 NOTphysicalphone.
+
+Return COMPLETE report: Snapshot;Scope(actual model/resources/images/provenance);Verdicts(correctness/scopedcoverage/renderedcomprehensibility EACH newarticle/exactreusedpassage, mark inheritedtextual conclusions);Findings(severity;facet;file/PNG:location;preciseclaim+impact;minimalremedy;evidence;confidence ornone);Optional;Limits.
+Reconcile OWN previous concerns with actual sampledoptions; preserve consequentialunresolvedin-scopeclaims asUNVERIFIED rather than CLEAN. Explain if evidence closes only testedconfigurations. No mandatory findingquota. No edits/questions/nextbatch. Combinedcurrentmainchecks/CI/publicZIP/publication/phone/generalrelease/whole-set gates remain.
+"""
+
+
+def run(label):
+    frozen()
+    if label == "gpt":
+        prior = load(C / "batch-101-rendered-769-claude-execution.json")
+        assert prior["exitCode"] == 0 and prior["allAssignedResourcesSuccessfullyReturned"]
+        assert absent(prior["launcherPid"])
+    model, session = SESSIONS[label]
+    prefix = C / f"batch-101-rendered-769-{label}"
+    raw = prefix.with_suffix(".jsonl")
+    assert not raw.exists()
+    task = prompt(label, model, session)
+    prefix.with_suffix(".prompt.txt").write_text(task, encoding="utf-8")
+    command = [shutil.which("copilot"), "-C", str(R), "--add-dir", str(C),
+               "--resume=" + session, "--model", model, "--no-ask-user",
+               "--allow-tool=view", "--available-tools=view", "--disable-builtin-mcps",
+               "--no-custom-instructions", "--output-format", "json",
+               "--log-dir", str(C / "review-logs" / prefix.name),
+               "--usage-output-file", str(prefix.with_suffix(".usage.json")), "-p", task]
+    env = os.environ.copy()
+    env.pop("GH_TOKEN", None)
+    env.pop("GITHUB_TOKEN", None)
+    started = now()
+    with raw.open("wb") as out, prefix.with_suffix(".stderr.txt").open("wb") as err:
+        process = subprocess.Popen(command, stdout=out, stderr=err, env=env)
+        save(prefix.with_suffix(".active.json"),
+             {"pid": process.pid, "sessionId": session, "model": model, "startedAt": started})
+        print("Started", label, process.pid, session, flush=True)
+        code = process.wait()
+    assert absent(process.pid)
+    events = [json.loads(line) for line in raw.read_text(encoding="utf-8-sig").splitlines() if line.strip()]
+    messages = [e["data"] for e in events if e["type"] == "assistant.message"]
+    prefix.with_suffix(".md").write_text(
+        (messages[-1].get("content", "") if messages else "No completed report.") + "\n", encoding="utf-8")
+    required = {str(PACKET), str(V / f"batch-101-initial-{label}.md"), *map(str, IMAGES)}
+    active, calls, overlaps, returned, images = set(), {}, [], set(), []
+    for event in events:
+        data = event.get("data", {})
+        if event["type"] == "tool.execution_start":
+            key = data["toolCallId"]
+            if active:
+                overlaps.append({"starting": key, "active": sorted(active)})
+            active.add(key)
+            calls[key] = {"name": data["toolName"], "arguments": data["arguments"],
+                          "startedAt": event["timestamp"]}
+        elif event["type"] == "tool.execution_complete":
+            key = data["toolCallId"]
+            active.discard(key)
+            call = calls[key]
+            result = data.get("result", {}).get("content", "")
+            result = result if isinstance(result, str) else json.dumps(result)
+            call.update(completedAt=event["timestamp"], success=data["success"],
+                        returnedCharacters=len(result),
+                        returnedSha256=hashlib.sha256(result.encode()).hexdigest(),
+                        truncationMarker=any(s in result for s in [
+                            "[Output truncated", "File too large to read", "<note>Content truncated",
+                            "Invalid view_range"]))
+            path = call["arguments"].get("path")
+            if path in required and data["success"] and not call["truncationMarker"]:
+                if path.endswith(".png"):
+                    payloads = data.get("result", {}).get("binaryResultsForLlm", [])
+                    assert len(payloads) == 1 and payloads[0]["mimeType"] == "image/png"
+                    payload = base64.b64decode(payloads[0]["data"], validate=True)
+                    with Image.open(io.BytesIO(payload)) as image:
+                        image.load()
+                        dimensions = list(image.size)
+                    with Image.open(path) as image:
+                        source_dimensions = list(image.size)
+                    images.append({"path": path, "sourceSha256": sha(Path(path)),
+                                   "sourceDimensions": source_dimensions,
+                                   "returnedSha256": hashlib.sha256(payload).hexdigest(),
+                                   "returnedDimensions": dimensions, "returnedBytes": len(payload)})
+                    returned.add(path)
+                else:
+                    norm = lambda text: text.replace("\r\n", "\n").rstrip()
+                    exact = norm(Path(path).read_text(encoding="utf-8-sig")) in norm(result)
+                    call["entireRequestedTextContained"] = exact
+                    if exact:
+                        returned.add(path)
+    usage = load(prefix.with_suffix(".usage.json")) if prefix.with_suffix(".usage.json").exists() else None
+    groupings = [len(m["toolRequests"]) for m in messages if m.get("toolRequests")]
+    record = {
+        "execution": 769, "batch": "101", "snapshot": HEAD, "teachingSnapshot": TEACHING,
+        "dependentOriginalSession": True, "newBlindReviewCredit": False,
+        "sessionId": session, "requestedModel": model,
+        "actualModels": sorted({m.get("model", "") for m in messages}),
+        "usageCurrentModel": usage.get("currentModel") if usage else None,
+        "launcherPid": process.pid, "startedAt": started, "completedAt": now(), "exitCode": code,
+        "actualProcessExitVerified": True, "toolCalls": list(calls.values()),
+        "observedToolOverlaps": overlaps, "unfinishedTools": sorted(active),
+        "requiredResources": sorted(required), "successfullyReturnedResources": sorted(returned),
+        "missingResources": sorted(required - returned),
+        "allAssignedResourcesSuccessfullyReturned": not (required - returned),
+        "exactlyOneViewPerToolBearingMessage": bool(groupings) and set(groupings) == {1},
+        "actualDecodedImageReturns": images, "rawSha256": sha(raw),
+        "reportSha256": sha(prefix.with_suffix(".md")), "usage": usage,
+        "availableTools": ["view"], "command": command,
+        "configurationEvidence": [e["data"] for e in events if e["type"] == "session.info"
+                                  and e["data"].get("infoType") == "configuration"],
+        "limits": "Payload/range audit establishes delivery, not comprehension. Actual report records visual observations and limitations.",
+    }
+    save(C / (prefix.name + "-execution.json"), record)
+    print(json.dumps({k: record[k] for k in [
+        "exitCode", "actualModels", "missingResources", "observedToolOverlaps"]}), flush=True)
+    assert code == 0 and record["actualModels"] == [model] and usage["currentModel"] == model
+    assert not active and not overlaps and not (required - returned)
+    assert record["exactlyOneViewPerToolBearingMessage"]
+    assert [image["path"] for image in images] == list(map(str, IMAGES))
+    frozen()
+
+
+if __name__ == "__main__":
+    if sys.argv[1] == "prepare":
+        prepare()
+    elif sys.argv[1] in SESSIONS:
+        run(sys.argv[1])
+    else:
+        raise ValueError(sys.argv[1])
