@@ -58,7 +58,13 @@
       "proposedRowText": "[励ます](../words/励ます.md) はげます — encourage; cheer someone on"
     }
   ],
-  "readingKeys": {"on": ["れい"], "kun": ["はげむ", "はげます"]},
+  "readingKeys": {"on": ["れい"], "kun": ["はげむ"]},
+  "readingProjectionCorrection787": {
+    "previousClaim": "Source-completion786 proposed three offered keys, incorrectly treating both はげ.む and はげ.ます as independent stems.",
+    "actualBehavior": "Qualified signed Android bf30cdead8515739bc0e671d57a54b9a3109dd46 core/src/main/kotlin/io/github/stopcran/kanji/core/reading/KanjiReadings.kt:28-29,57-61 groups by kana stem before the dot. Both kun entries share はげ, so only first-source-order はげむ is offered. On key れい is separate.",
+    "disposition": "Preserve complete metadata/source order and both quiz selections with independent linked rows. Explain same-stem grouping in the learner-visible card and record two actual offered keys. はげます remains full-source protected against wrong-answer use. No algorithm, SRS identity or source-reading change.",
+    "historicalEvidence": "Original786 source-completion audit, execution receipt and issue update remain immutable historical claims, not retroactively made correct. This correction must be included in both blind initial reviews and later actual Android/native acceptance."
+  },
   "sourceOnlyQualifications": [
     "All three frozen metadata readings are selected in source order. Nanori and other dictionaries' broader historical lists do not add practice keys.",
     "Original47-family observations remain unchanged. Dated voice-raising is a separate1557350 sense, not a flag on ordinary encouragement; historical transitive励む is not the modern teaching pattern.",

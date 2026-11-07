@@ -1,0 +1,37 @@
+$ErrorActionPreference = 'Stop'
+$control = $PSScriptRoot
+$root = 'C:\Users\stop-\n1-kanji-workspace\learning-japanese'
+$android = 'C:\Users\stop-\n1-kanji-workspace\kanji-cards-android'
+$log = "$control\logs\f8aa9dd7-e51a-4f7b-a40f-1f2f0f7154a3"
+Set-Location $root
+& "$control\preflight-787.ps1"
+if ((git rev-parse HEAD).Trim() -ne 'cd8ce525546909151199eebb924a9bdf0b225198' -or
+    (git log -1 '--format=%G?').Trim() -ne 'G') { throw 'Unexpected content signed head' }
+if ((git -C $android rev-parse HEAD).Trim() -ne 'bf30cdead8515739bc0e671d57a54b9a3109dd46' -or
+    (git -C $android log -1 '--format=%G?').Trim() -ne 'G' -or
+    (git -C $android status --porcelain)) { throw 'Android not wholly clean at qualified signed head' }
+$progress = [IO.File]::ReadAllText("$control\progress.json") | ConvertFrom-Json
+if ($progress.checkpoint -ne 786 -or $progress.batch -ne '103' -or $progress.status -ne 'continue' -or
+    $progress.stage -ne 'batch-103-runtime-draft-in-progress') { throw 'Unexpected checkpoint' }
+$env:PYTHONPATH = "$root\tools"
+python -X utf8 -B -m unittest test_freeze_n1_sources test_extract_n1_jmdict test_audit_n1_pilot test_audit_n1_batch *> "$log\source-tests-787.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Focused source tests failed' }
+python -X utf8 -B tools\validate.py *> "$log\validate-787.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Validator failed' }
+python -X utf8 -B tools\build_manifest.py *> "$log\manifest-787.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Manifest generation failed' }
+python -X utf8 -B tools\audit_n1_batch.py --batch 103 *> "$log\batch-audit-787.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Existing batch audit failed' }
+python -X utf8 -B "$control\draft-787.py" audit *> "$log\audit-787.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Exact draft/source/baseline/link/font audit failed' }
+python -X utf8 -B tools\check_content_budget.py *> "$log\budget-787.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Publishing budgets failed' }
+python -X utf8 -B tools\grammar_vocabulary.py check *> "$log\vocabulary-787.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Vocabulary consistency failed' }
+git diff --check *> "$log\whitespace-787.txt"
+if ($LASTEXITCODE -ne 0) { throw 'Whitespace check failed' }
+Get-Content "$log\source-tests-787.txt" -Tail 4
+Get-Content "$log\validate-787.txt" -Tail 2
+Get-Content "$log\budget-787.txt" -Tail 8
+Get-Content "$log\vocabulary-787.txt" -Tail 2
+Write-Output 'Local UNREVIEWED draft checks passed; no app/native execution or publication.'
